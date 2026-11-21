@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtoapplevol(1)"
 name: "ppmtoapplevol"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppmtoapplevol/"
 description: "ppmtoapplevol – convert a PPM into an Apple volume label image"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ppmtoapplevol &#8211; convert a PPM into an Apple volume label image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmtoapplevol</code> </p>

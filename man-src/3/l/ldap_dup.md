@@ -1,4 +1,5 @@
 ---
+
 title: "ldap_dup(3)"
 name: "ldap_dup"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldap_dup/"
 description: "ldap_dup, ldap_destroy, – Duplicate and destroy LDAP session handles"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ldap_dup, ldap_destroy, &#8211; Duplicate and destroy LDAP session handles </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>

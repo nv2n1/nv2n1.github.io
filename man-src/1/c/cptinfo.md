@@ -1,4 +1,5 @@
 ---
+
 title: "cptinfo(1)"
 name: "cptinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cptinfo/"
 description: "cptinfo – print summary information on GMT colour palette table (cpt) files."
 ---
 
-<h2 class="name">NAME</h2>
 <p> cptinfo &#8211; print summary information on GMT colour palette table (cpt) files. </p>
 <h2>SYNOPSIS</h2>
 <dl>

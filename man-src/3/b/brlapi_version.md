@@ -1,4 +1,5 @@
 ---
+
 title: "brlapi_version(3)"
 name: "brlapi_version"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-brlapi_version/"
 description: "Version of the BrlAPI library –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Version of the BrlAPI library &#8211; </p>
 <h3>Macros</h3>
 <p> #define <code>BRLAPI_RELEASE</code> &#8216;0.6.0&#8217; </p>

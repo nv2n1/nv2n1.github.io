@@ -1,4 +1,5 @@
 ---
+
 title: "osinfo-db-path(1)"
 name: "osinfo-db-path"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-osinfo-db-path/"
 description: "osinfo-db-path – Report database locations"
 ---
 
-<h2 class="name">NAME</h2>
 <p> osinfo-db-path &#8211; Report database locations </p>
 <h2>SYNOPSIS</h2>
 <p> osinfo-db-path [<font SIZE="-1">OPTIONS&#8230;</font>]</p>

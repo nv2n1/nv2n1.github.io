@@ -1,4 +1,5 @@
 ---
+
 title: "fts-config-get(1)"
 name: "fts-config-get"
 section: "1"
@@ -6,9 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-fts-config-get/"
 ---
 
-<h2>NAME</h2>
-
- fts-config-get
+fts-config-get
 
 <h2>SYNOPSIS</h2>
 

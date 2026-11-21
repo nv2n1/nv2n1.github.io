@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_rnd_refresh(3)"
 name: "gnutls_rnd_refresh"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_rnd_refresh/"
 description: "gnutls_rnd_refresh – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_rnd_refresh &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/crypto.h&gt;</code> </p>

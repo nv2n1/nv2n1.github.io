@@ -1,4 +1,5 @@
 ---
+
 title: "mlx5dv_devx_get_async_cmd_comp(3)"
 name: "mlx5dv_devx_get_async_cmd_comp"
 section: "3"
@@ -6,12 +7,7 @@ letter: "m"
 url: "/docs/linux/man/3-mlx5dv_devx_get_async_cmd_comp/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- mlx5dv_devx_create_cmd_comp - Create a command completion to be used for DEVX asynchronous commands. 
+mlx5dv_devx_create_cmd_comp - Create a command completion to be used for DEVX asynchronous commands. 
 
  mlx5dv_devx_destroy_cmd_comp - Destroy a devx command completion. 
 

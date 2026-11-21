@@ -1,4 +1,5 @@
 ---
+
 title: "luajittex(1)"
 name: "luajittex"
 section: "1"
@@ -6,7 +7,7 @@ letter: "l"
 url: "/docs/linux/man/1-luajittex/"
 description: "luatex, dviluatex, luahbtex, luajittex, texlua, texluac – An extended version of TeX using Lua as an embedded scripting language"
 ---
-<h2 class="name">NAME</h2>
+
 <p> luatex, dviluatex, luahbtex, luajittex, texlua, texluac - An extended version of TeX using Lua as an embedded scripting language </p>
 <h2>SYNOPSIS</h2>
 <p> <code>luatex</code> [<code>--lua=</code><i>FILE</i>] [<i>OPTION</i>]... [<i>TEXNAME</i>[<i></i><code>.tex</code>]] [<i>COMMANDS</i>] <br />

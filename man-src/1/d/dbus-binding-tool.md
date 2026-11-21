@@ -1,4 +1,5 @@
 ---
+
 title: "dbus-binding-tool(1)"
 name: "dbus-binding-tool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dbus-binding-tool/"
 description: "dbus-binding-tool – C language GLib bindings generation utility."
 ---
 
-<h2>NAME</h2>
 <p> dbus-binding-tool &#8211; C language GLib bindings generation utility.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dbus-binding-tool</code> [-<code>-force</code>] [-<code>-help</code>] [-<code>-ignore-unsupported</code>] [-<code>-mode=</code><i>pretty|glib-client|glib-server</i>] [-<code>-output=</code><i>file</i>] [-<code>-prefix=</code><i>symbol-prefix</i>] [-<code>-version</code>] [<i>file</i>&#8230;]</p>

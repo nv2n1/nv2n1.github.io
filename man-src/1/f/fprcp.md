@@ -1,4 +1,5 @@
 ---
+
 title: "fprcp(1)"
 name: "fprcp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fprcp/"
 description: "fprcp – Free Pascal windres preprocessor program."
 ---
 
-<h2>NAME</h2>
 <p> fprcp &#8211; Free Pascal windres preprocessor program. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fprcp -i file_name [-n] [-C] [-l PASCAL|C] [-p &lt;include_path&gt;] </code> </p>

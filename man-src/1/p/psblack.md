@@ -1,4 +1,5 @@
 ---
+
 title: "psblack(1)"
 name: "psblack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-psblack/"
 description: "psblack – PostScript filter."
 ---
 
-<h2>NAME</h2>
 <p> psblack &#8211; PostScript filter.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>psblack</code> <i>&lt; input_PostScript_file</i> <i>&gt; output_PostScript_file</i> </p>

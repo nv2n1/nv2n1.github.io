@@ -1,4 +1,5 @@
 ---
+
 title: "fribidi_shape(3)"
 name: "fribidi_shape"
 section: "3"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_shape/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- fribidi_shape - do bidi-aware shaping 
+fribidi_shape - do bidi-aware shaping 
 
 <h2>SYNOPSIS</h2>
 

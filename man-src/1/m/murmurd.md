@@ -1,4 +1,5 @@
 ---
+
 title: "murmurd(1)"
 name: "murmurd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-murmurd/"
 description: "murmurd – VoIP server."
 ---
 
-<h2>NAME</h2>
 <p> murmurd &#8211; VoIP server.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>murmurd</code> [<i>options</i>]</p>

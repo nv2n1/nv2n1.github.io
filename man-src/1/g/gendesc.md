@@ -1,4 +1,5 @@
 ---
+
 title: "gendesc(1)"
 name: "gendesc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gendesc/"
 description: "gendesc – Generate a test case description file"
 ---
 
-<h2>NAME</h2>
 <p> gendesc &#8211; Generate a test case description file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gendesc</code> [<code>-h</code>|<code>&#8211;help</code>] [<code>-v</code>|<code>&#8211;version</code>]</p>

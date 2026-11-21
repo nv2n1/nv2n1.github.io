@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-create-or-update-tags(1)"
 name: "euscale-create-or-update-tags"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euscale-create-or-update-tags/"
 description: "euscale-create-or-update-tags – Create or update one or more resource tags"
 ---
 
-<h2>NAME</h2>
 <p> euscale-create-or-update-tags &#8211; Create or update one or more resource tags</p>
 <h2>SYNOPSIS</h2>
 <p> euscale-create-or-update-tags <code>&#8211;tag</code> &quot;k=VALUE, id=VALUE, t=VALUE,</p>

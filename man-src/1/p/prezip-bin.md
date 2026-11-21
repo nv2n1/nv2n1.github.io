@@ -1,4 +1,5 @@
 ---
+
 title: "prezip-bin(1)"
 name: "prezip-bin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-prezip-bin/"
 description: "prezip-bin – prefix zip delta word list compressor/decompressor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> prezip-bin &#8211; prefix zip delta word list compressor/decompressor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>prezip-bin</code> [ <code>-V</code> | <code>-d</code> | <code>-z</code> ]</p>

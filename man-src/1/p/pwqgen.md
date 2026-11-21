@@ -1,4 +1,5 @@
 ---
+
 title: "pwqgen(1)"
 name: "pwqgen"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pwqgen/"
 description: "pwqgen – Generate quality controllable random passphrase"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>pwqgen</code> &#8211; Generate quality controllable random passphrase </p>
 <h2>SYNOPSIS</h2>
 <p> [<i>options</i> ]</p>

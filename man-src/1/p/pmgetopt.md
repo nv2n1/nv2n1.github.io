@@ -1,4 +1,5 @@
 ---
+
 title: "pmgetopt(1)"
 name: "pmgetopt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmgetopt/"
 description: "pmgetopt – Performance Co-Pilot shell script option parser"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmgetopt</code> &#8211; Performance Co-Pilot shell script option parser</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/pmgetopt</code> [<code>-c</code>|<code>&#8211;config</code> <i>file</i>] [<code>-p</code>|<code>&#8211;progname</code> <i>name</i>] [<code>-u</code>|<code>&#8211;usage</code>] [<code>&#8212;</code>] [<i>parameters</i>]</p>

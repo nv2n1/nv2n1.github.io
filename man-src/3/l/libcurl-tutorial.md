@@ -1,4 +1,5 @@
 ---
+
 title: "libcurl-tutorial(3)"
 name: "libcurl-tutorial"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libcurl-tutorial/"
 description: "libcurl-tutorial – libcurl programming tutorial"
 ---
 
-<h2>NAME</h2>
 <p> libcurl-tutorial &#8211; libcurl programming tutorial</p>
 <h2>Objective</h2>
 <p> This document attempts to describe the general principles and some basic approaches to consider when programming with libcurl. The text will focus mainly on the C interface but might apply fairly well on other interfaces as well as they usually follow the C one pretty closely. </p>

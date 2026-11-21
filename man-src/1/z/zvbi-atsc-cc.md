@@ -1,4 +1,5 @@
 ---
+
 title: "zvbi-atsc-cc(1)"
 name: "zvbi-atsc-cc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zvbi-atsc-cc/"
 description: "zvbi-atsc-cc – ATSC Closed Caption decoder"
 ---
 
-<h2>NAME</h2>
 <p> zvbi-atsc-cc &#8211; ATSC Closed Caption decoder</p>
 <h2>SYNOPSIS</h2>
 <p> <code>zvbi-atsc-cc [ options ] [-n] station name</code></p>

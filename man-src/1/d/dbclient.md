@@ -1,4 +1,5 @@
 ---
+
 title: "dbclient(1)"
 name: "dbclient"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dbclient/"
 description: "dbclient – lightweight SSH client"
 ---
 
-<h2>NAME</h2>
 <p> dbclient &#8211; lightweight SSH client</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dbclient</code> [<i>flag arguments</i>] [-p <i>port</i>] [-i <i>id</i>] [-L <i>l</i>:<i>h</i>:<i>p</i>] [-R <i>l</i>:<i>h</i>:<i>p</i>] [-l <i>user</i>] <i>host</i> [<i>more flags</i>] [<i>command</i>] </p>

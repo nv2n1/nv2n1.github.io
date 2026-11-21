@@ -1,4 +1,5 @@
 ---
+
 title: "getrichacl(1)"
 name: "getrichacl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-getrichacl/"
 description: "getrichacl – Get Rich Access Control Lists"
 ---
 
-<h2>NAME</h2>
 <p> getrichacl &#8211; Get Rich Access Control Lists</p>
 <h2>SYNOPSIS</h2>
 <p> <code>getrichacl</code> [<i>option</i>]&#8230; [<i>file</i>]&#8230;</p>

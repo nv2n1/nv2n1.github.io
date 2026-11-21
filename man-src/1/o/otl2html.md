@@ -1,4 +1,5 @@
 ---
+
 title: "otl2html(1)"
 name: "otl2html"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-otl2html/"
 description: "otl2html – converts vimoutliner outline to HTML"
 ---
 
-<h2 class="name">NAME</h2>
 <p> otl2html &#8211; converts vimoutliner outline to HTML </p>
 <h2>SYNOPSIS</h2>
 <p> <code>otl2html</code> [<i>filename</i>]</p>

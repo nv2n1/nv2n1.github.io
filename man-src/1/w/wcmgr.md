@@ -1,4 +1,5 @@
 ---
+
 title: "wcmgr(1)"
 name: "wcmgr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wcmgr/"
 description: "wcmgr – Webalizer (DNS) Cache file Manager"
 ---
 
-<h2>NAME</h2>
 <p> wcmgr &#8211; Webalizer (DNS) Cache file Manager</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wcmgr</code> [<i> option &#8230; </i>] <i>cache-file</i> </p>

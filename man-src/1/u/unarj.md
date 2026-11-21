@@ -1,4 +1,5 @@
 ---
+
 title: "unarj(1)"
 name: "unarj"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-unarj/"
 description: "unarj – Unarchive ARJ files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> unarj &#8211; Unarchive ARJ files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>unarj</code> [<i>options</i>]<i> files</i>&#8230;</p>

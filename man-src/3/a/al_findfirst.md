@@ -1,4 +1,5 @@
 ---
+
 title: "al_findfirst(3)"
 name: "al_findfirst"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-al_findfirst/"
 description: "al_findfirst – Low-level function for searching files. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> al_findfirst &#8211; Low-level function for searching files. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

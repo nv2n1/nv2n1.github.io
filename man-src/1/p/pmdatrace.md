@@ -1,4 +1,5 @@
 ---
+
 title: "pmdatrace(1)"
 name: "pmdatrace"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdatrace/"
 description: "pmdatrace – application-level transaction performance metrics domain agent"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdatrace</code> &#8211; application-level transaction performance metrics domain agent</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/trace/pmdatrace</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-A</code> <i>access</i>] [<code>-I</code> <i>port</i>] [<code>-M</code> <i>username</i>] [<code>-N</code> <i>buckets</i>] [<code>-T</code> <i>period</i>] [<code>-U</code> <i>units</i>] </p>

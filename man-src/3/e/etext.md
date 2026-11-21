@@ -1,4 +1,5 @@
 ---
+
 title: "etext(3)"
 name: "etext"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-etext/"
 description: "etext, edata, end – end of program segments"
 ---
 
-<h2 class="name">NAME</h2>
 <p> etext, edata, end &#8211; end of program segments </p>
 <h2>SYNOPSIS</h2>
 <pre>

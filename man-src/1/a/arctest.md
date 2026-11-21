@@ -1,4 +1,5 @@
 ---
+
 title: "arctest(1)"
 name: "arctest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-arctest/"
 description: "arctest – ARC Test Suite"
 ---
 
-<h2 class="name">NAME</h2>
 <p> arctest &#8211; ARC Test Suite</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>arctest</code> command tests basic ARC client and server setup. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "sord_validate(1)"
 name: "sord_validate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sord_validate/"
 description: "sord_validate – Validate RDF data"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>sord_validate &#8211; Validate RDF data</code></p>
 <h2>SYNOPSIS</h2>
 <p> sord_validate [OPTION]&#8230; INPUT&#8230; </p>

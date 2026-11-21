@@ -1,4 +1,5 @@
 ---
+
 title: "t1reencode(1)"
 name: "t1reencode"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-t1reencode/"
 description: "t1reencode – re-encode a PostScript Type 1 font"
 ---
 
-<h2 class="name">NAME</h2>
 <p> t1reencode &#8211; re-encode a PostScript Type 1 font </p>
 <h2>SYNOPSIS</h2>
 <p> <code>t1reencode</code> -e ENCODING [OPTIONS&#8230;] <i>font</i> [<i>outputfile</i>]</p>

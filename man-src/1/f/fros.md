@@ -1,4 +1,5 @@
 ---
+
 title: "fros(1)"
 name: "fros"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fros/"
 description: "fros – universal screencasting frontend with pluggable support for various backends"
 ---
 
-<h2>NAME</h2>
 <p> fros &#8211; universal screencasting frontend with pluggable support for various backends</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fros [-h] [&#8211;v] [&#8211;is-available]</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "git-merge-one-file(1)"
 name: "git-merge-one-file"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-merge-one-file/"
 description: "git-merge-one-file – The standard helper program to use with git-merge-index"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-merge-one-file &#8211; The standard helper program to use with git-merge-index </p>
 <h2>SYNOPSIS</h2>
 <pre>

@@ -1,4 +1,5 @@
 ---
+
 title: "audtty(1)"
 name: "audtty"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-audtty/"
 description: "audtty – Control Audacious from the command line with a friendly ncurses interface"
 ---
 
-<h2>NAME</h2>
 <p> audtty &#8211; Control Audacious from the command line with a friendly ncurses interface</p>
 <h2>SYNOPSIS</h2>
 <p> <code>audtty</code> [&lt;<code>&#8211;</code>|<code>+</code>&gt;ahlntV<code>]</code> [ <i>options</i> ]</p>

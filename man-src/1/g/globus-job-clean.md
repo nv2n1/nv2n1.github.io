@@ -1,4 +1,5 @@
 ---
+
 title: "globus-job-clean(1)"
 name: "globus-job-clean"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-globus-job-clean/"
 description: "globus-job-clean – Cancel and clean up a GRAM batch job"
 ---
 
-<h2 class="name">NAME</h2>
 <p> globus-job-clean &#8211; Cancel and clean up a GRAM batch job </p>
 <h2>SYNOPSIS</h2>
 <p> <code>globus-job-clean</code> [OPTIONS] <i>JOBID</i> </p>

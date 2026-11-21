@@ -1,4 +1,5 @@
 ---
+
 title: "syslinux(1)"
 name: "syslinux"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-syslinux/"
 description: "syslinux – install the SYSLINUX bootloader on a FAT filesystem"
 ---
 
-<h2 class="name">NAME</h2>
 <p> syslinux &#8211; install the <font SIZE="-1">SYSLINUX</font> bootloader on a FAT filesystem </p>
 <h2>SYNOPSIS</h2>
 <p> <code>syslinux</code> [<code>OPTIONS</code>] <i>device</i></p>

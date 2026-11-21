@@ -1,4 +1,5 @@
 ---
+
 title: "slimlock(1)"
 name: "slimlock"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-slimlock/"
 description: "slimlock – Unholy Screen Locker"
 ---
 
-<h2>NAME</h2>
 <p> <code>slimlock</code> &#8211; Unholy Screen Locker</p>
 <h2>SYNOPSIS</h2>
 <pre>

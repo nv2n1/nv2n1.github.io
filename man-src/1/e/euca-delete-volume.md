@@ -1,4 +1,5 @@
 ---
+
 title: "euca-delete-volume(1)"
 name: "euca-delete-volume"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-delete-volume/"
 description: "euca-delete-volume – Delete a volume"
 ---
 
-<h2>NAME</h2>
 <p> euca-delete-volume &#8211; Delete a volume</p>
 <h2>SYNOPSIS</h2>
 <p> euca-delete-volume [&#8211;show-empty-fields] [-U URL]</p>

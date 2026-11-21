@@ -1,4 +1,5 @@
 ---
+
 title: "ksflatten(1)"
 name: "ksflatten"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ksflatten/"
 description: "ksflatten — flatten a kickstart file"
 ---
 
-<h2>NAME</h2>
 <p> ksflatten &#8212; flatten a kickstart file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ksflatten</code> [<code>-c</code> | <code>&#8211;config INFILE</code>] [<code>-o</code> | <code>&#8211;output OUTFILE</code>] [<code>-v</code> | <code>&#8211;version VERSION</code>]</p>

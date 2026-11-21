@@ -1,4 +1,5 @@
 ---
+
 title: "rasls(1)"
 name: "rasls"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rasls/"
 description: "rasls – list information on rasterfiles"
 ---
 
-<h2>NAME</h2>
 <p> rasls &#8211; list information on rasterfiles</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rasls</code> [<code>-type</code>] [<code>-count</code>] [<code>-resolution</code>] [<code>-verbose</code>] [<code>-Version</code>] [<code>-ifmt </code><i>file_format</i>] [files]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "bmpanel2(1)"
 name: "bmpanel2"
 section: "1"
@@ -6,10 +7,7 @@ letter: "b"
 url: "/docs/linux/man/1-bmpanel2/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- bmpanel2 - X11 NETWM compliant panel (desktop switcher, taskbar, systray, clock, launcher, etc.) with themeing capabilities. 
+bmpanel2 - X11 NETWM compliant panel (desktop switcher, taskbar, systray, clock, launcher, etc.) with themeing capabilities. 
 
 <h2>SYNOPSIS</h2>
 

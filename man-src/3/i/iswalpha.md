@@ -1,4 +1,5 @@
 ---
+
 title: "iswalpha(3)"
 name: "iswalpha"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-iswalpha/"
 description: "iswalpha – test for alphabetic wide character"
 ---
 
-<h2 class="name">NAME</h2>
 <p> iswalpha &#8211; test for alphabetic wide character </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "jmap(1)"
 name: "jmap"
 section: "1"
@@ -6,7 +7,7 @@ letter: "j"
 url: "/docs/linux/man/1-jmap/"
 description: "jmap – Prints shared object memory maps or heap memory details for a process, core file, or remote debug server. This command is experimental and unsupported."
 ---
-<h2>NAME</h2>
+
 <p> jmap - Prints shared object memory maps or heap memory details for a process, core file, or remote debug server. This command is experimental and unsupported.  </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_now_utc(3)"
 name: "bson_append_now_utc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_append_now_utc/"
 description: "bson_append_now_utc() – The bson_append_now_utc() function is a helper to get the current date and time in UTC and append it to bson as a BSON_TYPE_DATE_TIME element."
 ---
 
-<h2>NAME</h2>
 <p> bson_append_now_utc() &#8211; The bson_append_now_utc() function is a helper to get the current date and time in UTC and append it to bson as a BSON_TYPE_DATE_TIME element.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

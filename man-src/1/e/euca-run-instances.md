@@ -1,4 +1,5 @@
 ---
+
 title: "euca-run-instances(1)"
 name: "euca-run-instances"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-run-instances/"
 description: "euca-run-instances – Launch instances of a machine image"
 ---
 
-<h2>NAME</h2>
 <p> euca-run-instances &#8211; Launch instances of a machine image</p>
 <h2>SYNOPSIS</h2>
 <p> euca-run-instances [-n MIN[-MAX]] [-g GROUP] [-k KEYPAIR]</p>

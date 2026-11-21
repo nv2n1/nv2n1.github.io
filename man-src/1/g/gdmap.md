@@ -1,4 +1,5 @@
 ---
+
 title: "gdmap(1)"
 name: "gdmap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gdmap/"
 description: "Graphical Disk Map"
 ---
 
-<h2>NAME</h2>
 <p> <code>Graphical Disk Map </p>
 <p> </code></p>
 <h2>SYNOPSIS</h2>

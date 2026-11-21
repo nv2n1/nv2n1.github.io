@@ -1,4 +1,5 @@
 ---
+
 title: "euca-import-keypair(1)"
 name: "euca-import-keypair"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-import-keypair/"
 description: "euca-import-keypair – Import a public RSA key as a new key pair"
 ---
 
-<h2>NAME</h2>
 <p> euca-import-keypair &#8211; Import a public RSA key as a new key pair</p>
 <h2>SYNOPSIS</h2>
 <p> euca-import-keypair <code>-f</code> FILE [&#8211;show-empty-fields] [-U URL]</p>

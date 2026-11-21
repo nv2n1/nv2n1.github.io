@@ -1,4 +1,5 @@
 ---
+
 title: "acl_free(3)"
 name: "acl_free"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-acl_free/"
 description: "acl_free – release memory allocated to an ACL data object"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_free</code> &#8211; release memory allocated to an ACL data object </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>

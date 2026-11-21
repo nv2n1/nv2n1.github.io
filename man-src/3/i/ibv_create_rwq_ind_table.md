@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_create_rwq_ind_table(3)"
 name: "ibv_create_rwq_ind_table"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ibv_create_rwq_ind_table/"
 description: "ibv_create_rwq_ind_table, ibv_destroy_rwq_ind_table – create or destroy a Receive Work Queue Indirection Table (RWQ IND TBL)."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ibv_create_rwq_ind_table, ibv_destroy_rwq_ind_table &#8211; create or destroy a Receive Work Queue Indirection Table (RWQ IND TBL). </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

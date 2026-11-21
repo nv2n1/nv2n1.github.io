@@ -1,4 +1,5 @@
 ---
+
 title: "flow-cat(1)"
 name: "flow-cat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flow-cat/"
 description: "flow-cat – Concatenate flow files"
 ---
 
-<h2>NAME</h2>
 <p> flow-cat &#8211; Concatenate flow files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>flow-cat</code> [ <code>-aghmp</code> ] [ <code>-b</code><i> big</i><code>|</code><i>little</i> ] [ <code>-C</code><i> comment</i> ] [ <code>-d</code><i> debug_level</i> ] [ <code>-o</code><i> filename</i> ] [ <code>-t</code><i> start_time</i> ] [ <code>-T</code><i> start_time</i> ] [ <code>-z</code><i> z_level</i> ] [ <i>file</i><code>|</code><i>directory</i><i>&#8230;</i> ]</p>

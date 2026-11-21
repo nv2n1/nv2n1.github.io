@@ -1,4 +1,5 @@
 ---
+
 title: "tv_grab_uk_rt(1)"
 name: "tv_grab_uk_rt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tv_grab_uk_rt/"
 description: "tv_grab_uk_rt – Grab TV listings for United Kingdom/Republic of Ireland"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tv_grab_uk_rt &#8211; Grab TV listings for United Kingdom/Republic of Ireland </p>
 <h2>SYNOPSIS</h2>
 <p> tv_grab_uk_rt &#8211;help </p>

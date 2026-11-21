@@ -1,4 +1,5 @@
 ---
+
 title: "perlamiga(1)"
 name: "perlamiga"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlamiga/"
 description: "perlamiga – Perl under AmigaOS 4.1"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perlamiga &#8211; Perl under AmigaOS 4.1 </p>
 <h2>NOTE</h2>
 <p> This is a port of Perl 5.22.1, it is a fresh port and not in any way compatible with my previous ports of Perl 5.8 and 5.16.3. This means you will need to reinstall / rebuild any third party modules you have installed. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "did(1)"
 name: "did"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-did/"
 description: "did – What did you do last week, month, year?"
 ---
 
-<h2>NAME</h2>
 <p> did &#8211; What did you do last week, month, year?</p>
 <h2>DESCRIPTION</h2>
 <p> Comfortably gather status report data (e.g. list of committed changes) for given week, month, quarter, year or selected date range. By default all available stats for this week are reported.</p>

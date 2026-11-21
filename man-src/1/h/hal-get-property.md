@@ -1,4 +1,5 @@
 ---
+
 title: "hal-get-property(1)"
 name: "hal-get-property"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hal-get-property/"
 description: "hal-get-property – get a property from a device object"
 ---
 
-<h2>NAME</h2>
 <p> hal-get-property &#8211; get a property from a device object</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hal-get-property</code> [options] </p>

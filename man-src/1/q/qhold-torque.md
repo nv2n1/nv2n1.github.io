@@ -1,4 +1,5 @@
 ---
+
 title: "qhold-torque(1)"
 name: "qhold-torque"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qhold-torque/"
 description: "qhold – hold pbs batch jobs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> qhold &#8211; hold pbs batch jobs </p>
 <h2>SYNOPSIS</h2>
 <p> qhold [-h hold_list] [-t array_range] job_identifier &#8230;</p>

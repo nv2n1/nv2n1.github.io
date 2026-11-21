@@ -1,4 +1,5 @@
 ---
+
 title: "xfce4-mouse-settings(1)"
 name: "xfce4-mouse-settings"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xfce4-mouse-settings/"
 description: "xfce4-mouse-settings – Mouse settings for Xfce"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xfce4-mouse-settings &#8211; Mouse settings for Xfce </p>
 <h2>DESCRIPTION</h2>
 <h3>Usage:</h3>

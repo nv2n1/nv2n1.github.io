@@ -1,4 +1,5 @@
 ---
+
 title: "tiffinfo(1)"
 name: "tiffinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tiffinfo/"
 description: "tiffinfo – print information about TIFF files"
 ---
 
-<h2>NAME</h2>
 <p> tiffinfo &#8211; print information about <font SIZE="-1">TIFF</font> files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tiffinfo</code> [ <i>options</i> ] <i>input.tif &#8230;</i></p>

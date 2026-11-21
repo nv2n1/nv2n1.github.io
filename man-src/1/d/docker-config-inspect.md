@@ -1,4 +1,5 @@
 ---
+
 title: "docker-config-inspect(1)"
 name: "docker-config-inspect"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-config-inspect/"
 description: "docker-config-inspect – Display detailed information on one or more configs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-config-inspect &#8211; Display detailed information on one or more configs </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker config inspect [OPTIONS] CONFIG [CONFIG&#8230;]</code> </p>

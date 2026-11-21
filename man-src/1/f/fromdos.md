@@ -1,4 +1,5 @@
 ---
+
 title: "fromdos(1)"
 name: "fromdos"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fromdos/"
 description: "tofrodos – Converts text files between DOS and Unix formats."
 ---
 
-<h2>NAME</h2>
 <p> tofrodos &#8211; Converts text files between DOS and Unix formats.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fromdos</code> [ <i>options</i> ] [file&#8230;]<br />

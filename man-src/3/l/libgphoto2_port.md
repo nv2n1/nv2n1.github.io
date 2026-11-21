@@ -1,4 +1,5 @@
 ---
+
 title: "libgphoto2_port(3)"
 name: "libgphoto2_port"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libgphoto2_port/"
 description: "libgphoto2_port – cross-platform port access library"
 ---
 
-<h2 class="name">NAME</h2>
 <p> libgphoto2_port &#8211; cross-platform port access library </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

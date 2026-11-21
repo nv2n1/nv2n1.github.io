@@ -1,4 +1,5 @@
 ---
+
 title: "aa_uninitmouse(3)"
 name: "aa_uninitmouse"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_uninitmouse/"
 description: "aa_uninitmouse – uninitialize the mouse driver."
 ---
 
-<h2>NAME</h2>
 <p> aa_uninitmouse &#8211; uninitialize the mouse driver.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "systasks(1)"
 name: "systasks"
 section: "1"
@@ -9,7 +10,7 @@ url: "/docs/linux/man/1-systasks/"
 <center> <font SIZE="+3">All Cver System tasks and Functions</font>
  </center>
 
-<h2>INTRO</h2>
+
 
  These man pages document every system task and system function recognized by Cver including those not implemented. System tasks and functions are mixed together and appear in alphabetical order. Similar tasks and system functions are intermixed. Functionally similar tasks and functions are combined into one section and alphabetized according to main task or function. 
 

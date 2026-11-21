@@ -1,4 +1,5 @@
 ---
+
 title: "gedit(1)"
 name: "gedit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gedit/"
 description: "gedit – text editor for the GNOME Desktop"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>gedit</code> &#8211; text editor for the GNOME Desktop</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gedit</code> [<i>OPTION</i>&#8230;] [<i>FILE</i>&#8230;] [+<i>LINE</i>[:<i>COLUMN</i>]]<br />

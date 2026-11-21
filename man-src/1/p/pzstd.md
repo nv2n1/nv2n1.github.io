@@ -1,4 +1,5 @@
 ---
+
 title: "pzstd(1)"
 name: "pzstd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pzstd/"
 description: "PZSTD – parallelised Zstandard compression, al la pigz"
 ---
 
-<h2 class="name">NAME</h2>
 <p> PZSTD &#8211; parallelised Zstandard compression, al la pigz </p>
 <h2>DESCRIPTION</h2>
 <h3>Usage:</h3>

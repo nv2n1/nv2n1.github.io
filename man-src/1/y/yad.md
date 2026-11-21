@@ -1,4 +1,5 @@
 ---
+
 title: "yad(1)"
 name: "yad"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-yad/"
 description: "yad – display GTK+ dialogs in shell scripts"
 ---
 
-<h2>NAME</h2>
 <p> yad &#8211; display GTK+ dialogs in shell scripts </p>
 <h2>SYNOPSIS</h2>
 <p> <code>yad</code> [<i>OPTIONS</i>] </p>

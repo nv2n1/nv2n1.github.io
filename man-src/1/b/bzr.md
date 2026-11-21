@@ -1,4 +1,5 @@
 ---
+
 title: "bzr(1)"
 name: "bzr"
 section: "1"
@@ -6,7 +7,7 @@ letter: "b"
 url: "/docs/linux/man/1-bzr/"
 description: "bzr – Bazaar next-generation distributed version control"
 ---
-<h2>NAME</h2>
+
 <p> bzr - Bazaar next-generation distributed version control  </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bzr</code> <i>command</i> [ <i>command_options</i> ] <br />

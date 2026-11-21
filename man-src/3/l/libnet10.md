@@ -1,4 +1,5 @@
 ---
+
 title: "libnet10(3)"
 name: "libnet10"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libnet10/"
 description: "libnet – \"libpwrite\" Network Routine Library"
 ---
 
-<h2>NAME</h2>
 <p> libnet &#8211; &quot;libpwrite&quot; Network Routine Library </p>
 <h2>DESCRIPTION</h2>
 <p> The Network Library provides a simple API for commonly used low-level network functions (mainly packet injection). Using libnet, it is easy to build and write arbitrary network packets. It provides a portable framework for low-level network packet writing and handling (use libnet in conjunction with libpcap and you can write some really cool stuff). Libnet includes packet creation at the IP layer and at the link layer as well as a host of supplementary and complementary functionality. </p>

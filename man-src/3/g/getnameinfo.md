@@ -1,4 +1,5 @@
 ---
+
 title: "getnameinfo(3)"
 name: "getnameinfo"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getnameinfo/"
 description: "getnameinfo – address-to-name translation in protocol-independent manner"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getnameinfo &#8211; address-to-name translation in protocol-independent manner </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

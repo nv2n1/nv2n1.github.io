@@ -1,4 +1,5 @@
 ---
+
 title: "git-fsck(1)"
 name: "git-fsck"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-fsck/"
 description: "git-fsck – Verifies the connectivity and validity of the objects in the database"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-fsck &#8211; Verifies the connectivity and validity of the objects in the database </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

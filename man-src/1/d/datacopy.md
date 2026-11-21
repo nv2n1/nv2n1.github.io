@@ -1,4 +1,5 @@
 ---
+
 title: "datacopy(1)"
 name: "datacopy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-datacopy/"
 description: "datacopy – move table data between two servers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>datacopy</code> &#8211; move table data between two servers </p>
 <h2>SYNOPSIS</h2>
 <p> [-<code>vdE</code> ] Br o &#8211;<code>t</code> | &#8211;<code>a</code> | &#8211;<code>c</code> <i>owner</i> Br c [-<code>b </code><i>batchsize</i> ] [-<code>p </code><i>packetsize</i> ] [-<code>S </code><i>server/username/password/database/table_or_view</i> ] [-<code>D </code><i>server/username/password/database/table</i> ] [-<code>T </code><i>textsize</i> ]</p>

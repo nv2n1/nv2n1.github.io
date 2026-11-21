@@ -1,4 +1,5 @@
 ---
+
 title: "perlxs(1)"
 name: "perlxs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlxs/"
 description: "perlxs – XS language reference manual"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perlxs &#8211; XS language reference manual </p>
 <h2>DESCRIPTION</h2>
 <h3>Introduction</h3>

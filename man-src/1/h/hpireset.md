@@ -1,4 +1,5 @@
 ---
+
 title: "hpireset(1)"
 name: "hpireset"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hpireset/"
 description: "hpireset – This sample openhpi application exercises HPI Reset Management APIs."
 ---
 
-<h2 class="name">NAME</h2>
 <p> hpireset &#8211; This sample openhpi application exercises HPI Reset Management APIs. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

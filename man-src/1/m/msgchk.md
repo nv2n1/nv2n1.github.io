@@ -1,4 +1,5 @@
 ---
+
 title: "msgchk(1)"
 name: "msgchk"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-msgchk/"
 description: "msgchk – check for messages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> msgchk &#8211; check for messages </p>
 <h2>SYNOPSIS</h2>
 <dl>

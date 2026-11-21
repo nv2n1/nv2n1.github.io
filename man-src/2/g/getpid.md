@@ -1,4 +1,5 @@
 ---
+
 title: "getpid(2)"
 name: "getpid"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-getpid/"
 description: "getpid, getppid – get process identification"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getpid, getppid &#8211; get process identification </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code><br />

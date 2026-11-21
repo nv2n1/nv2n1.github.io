@@ -1,4 +1,5 @@
 ---
+
 title: "qchkpt(1)"
 name: "qchkpt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qchkpt/"
 description: "qchkpt – checkpoint pbs batch jobs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> qchkpt &#8211; checkpoint pbs batch jobs </p>
 <h2>SYNOPSIS</h2>
 <p> qchkpt job_identifier &#8230;</p>

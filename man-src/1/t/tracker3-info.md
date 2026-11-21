@@ -1,4 +1,5 @@
 ---
+
 title: "tracker3-info(1)"
 name: "tracker3-info"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tracker3-info/"
 description: "tracker3-info – Retrieve all information available for a certain file."
 ---
 
-<h2 class="name">NAME</h2>
 <p> tracker3-info &#8211; Retrieve all information available for a certain file. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tracker3 info</code> [<i>options</i>&#8230;] &lt;<i>file1</i>&gt; [[<i>file2</i>] &#8230;]</p>

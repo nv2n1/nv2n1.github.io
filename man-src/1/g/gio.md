@@ -1,4 +1,5 @@
 ---
+
 title: "gio(1)"
 name: "gio"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gio/"
 description: "gio – GIO commandline tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gio &#8211; GIO commandline tool </p>
 <h2>SYNOPSIS</h2>
 <dl>

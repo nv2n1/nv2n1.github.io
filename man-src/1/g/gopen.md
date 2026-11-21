@@ -1,4 +1,5 @@
 ---
+
 title: "gopen(1)"
 name: "gopen"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gopen/"
 description: "gopen – open files"
 ---
 
-<h2>NAME</h2>
 <p> gopen &#8211; open files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gopen</code> [<code>-a</code> <i>application</i>] [<code>-o</code>] [<code>-p</code>] [<code>-NXHost</code> <i>hostname</i>] [<i>filename</i>]</p>

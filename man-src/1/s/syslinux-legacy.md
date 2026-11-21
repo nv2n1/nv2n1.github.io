@@ -1,4 +1,5 @@
 ---
+
 title: "syslinux-legacy(1)"
 name: "syslinux-legacy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-syslinux-legacy/"
 description: "syslinux – install the SYSLINUX bootloader on a FAT filesystem"
 ---
 
-<h2 class="name">NAME</h2>
 <p> syslinux &#8211; install the <font SIZE="-1">SYSLINUX</font> bootloader on a FAT filesystem </p>
 <h2>SYNOPSIS</h2>
 <p> <code>syslinux</code> [<code>-sfr</code>] [<code>-d</code> <i>directory</i>] [<code>-o</code> <i>offset</i>] <i>device</i></p>

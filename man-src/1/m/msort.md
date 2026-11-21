@@ -1,4 +1,5 @@
 ---
+
 title: "msort(1)"
 name: "msort"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-msort/"
 description: "msort – sort records in complex ways"
 ---
 
-<h2>NAME</h2>
 <p> msort &#8211; sort records in complex ways</p>
 <h2>SYNOPSIS</h2>
 <p> <code>msort</code> &lt;options&gt; [&lt;input file&gt;]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gram_protocol_unpack_status_update_message_with_extensions(3)"
 name: "globus_gram_protocol_unpack_status_update_message_with_extensions"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gram_protocol_unpack_status_update_message_with_e
 description: "Message Unpacking –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Message Unpacking &#8211; </p>
 <h3>Functions</h3>
 <p> int <code>globus_gram_protocol_unpack_job_request</code> (const globus_byte_t *query, globus_size_t querysize, int *job_state_mask, char **callback_url, char **description)<br />

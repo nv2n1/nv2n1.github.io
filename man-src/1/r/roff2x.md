@@ -1,4 +1,5 @@
 ---
+
 title: "roff2x(1)"
 name: "roff2x"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-roff2x/"
 description: "roff2x – transform roff code into x mode"
 ---
 
-<h2 class="name">NAME</h2>
 <p> roff2x &#8211; transform roff code into x mode </p>
 <h2>SYNOPSIS</h2>
 <p> [<i>groffer-option</i> &#8230; ] [ <code>&#8212;</code> ] [<i>filespec</i> &#8230; ] <code>-h</code> <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code> </p>

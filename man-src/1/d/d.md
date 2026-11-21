@@ -1,4 +1,5 @@
 ---
+
 title: "d(1)"
 name: "d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-d/"
 description: "d.zoom – Allows the user to change the current geographic region settings interactively, with a mouse."
 ---
 
-<h2>NAME</h2>
 <p> <i></i><code>d.zoom</code> &#8211; Allows the user to change the current geographic region settings interactively, with a mouse.</p>
 <h2>KEYWORDS</h2>
 <p> display</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "perlcheat(1)"
 name: "perlcheat"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlcheat/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlcheat - Perl 5 Cheat Sheet 
+perlcheat - Perl 5 Cheat Sheet 
 
 <h2>DESCRIPTION</h2>
 

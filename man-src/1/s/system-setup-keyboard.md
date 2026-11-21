@@ -1,4 +1,5 @@
 ---
+
 title: "system-setup-keyboard(1)"
 name: "system-setup-keyboard"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-system-setup-keyboard/"
 description: "system-setup-keyboard – xorg.conf keyboard layout daemon"
 ---
 
-<h2>NAME</h2>
 <p> system-setup-keyboard &#8211; xorg.conf keyboard layout daemon</p>
 <h2>SYNOPSIS</h2>
 <pre>

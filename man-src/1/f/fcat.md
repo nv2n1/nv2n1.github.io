@@ -1,4 +1,5 @@
 ---
+
 title: "fcat(1)"
 name: "fcat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fcat/"
 description: "fcat – Output the contents of a file based on its name."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>fcat </code>&#8211; Output the contents of a file based on its name. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

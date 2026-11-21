@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_rdf_address_reverse(3)"
 name: "ldns_rdf_address_reverse"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_rdf_address_reverse/"
 description: "ldns_rdf_address_reverse"
 ---
 
-<h2>NAME</h2>
 <p> ldns_rdf_address_reverse </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

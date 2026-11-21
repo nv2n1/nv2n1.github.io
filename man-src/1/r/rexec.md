@@ -1,4 +1,5 @@
 ---
+
 title: "rexec(1)"
 name: "rexec"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rexec/"
 description: "rexec — remote execution client for an exec server"
 ---
 
-<h2>NAME</h2>
 <p> rexec &#8212; remote execution client for an exec server</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rexec </code> [ <code>-abcdhns -l </code> username <code>-p </code> password ] host command</p>

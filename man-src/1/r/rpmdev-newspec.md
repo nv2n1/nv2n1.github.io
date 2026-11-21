@@ -1,4 +1,5 @@
 ---
+
 title: "rpmdev-newspec(1)"
 name: "rpmdev-newspec"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rpmdev-newspec/"
 description: "rpmdev-newspec – manual page for rpmdev-newspec version 2.2"
 ---
 
-<h2>NAME</h2>
 <p> rpmdev-newspec &#8211; manual page for rpmdev-newspec version 2.2</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rpmdev-newspec</code> [<i>option</i>]&#8230; [<i>appname</i>[<i>.spec</i>]]</p>

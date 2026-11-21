@@ -1,4 +1,5 @@
 ---
+
 title: "grdblend(1)"
 name: "grdblend"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grdblend/"
 description: "grdblend – Blend several partially over-lapping grids into one large grid"
 ---
 
-<h2>NAME</h2>
 <p> grdblend &#8211; Blend several partially over-lapping grids into one large grid</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grdblend</code> [ <i>blendfile</i> | <i>grid1</i> <i>grid2</i> &#8230; ] <i>outgrid</i> [ <i>increment</i> ] [ <i>region</i> ] [ <code>f</code>|<code>l</code>|<code>o</code>|<code>u</code> ] [ <i>nodata</i> ] [ ] [ <i>scale</i> ] [ [<i>level</i>] ] [ [<code>z</code>] ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-r</code> ] </p>

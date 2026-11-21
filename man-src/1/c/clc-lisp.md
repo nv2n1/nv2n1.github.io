@@ -1,4 +1,5 @@
 ---
+
 title: "clc-lisp(1)"
 name: "clc-lisp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-clc-lisp/"
 description: "clc-clbuild – invoke lisp with clbuild active"
 ---
 
-<h2 class="name">NAME</h2>
 <p> clc-clbuild &#8211; invoke lisp with clbuild active </p>
 <h2>SYNOPSIS</h2>
 <p> <code>clc-lisp</code> </p>

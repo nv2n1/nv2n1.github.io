@@ -1,4 +1,5 @@
 ---
+
 title: "ck_sequence(3)"
 name: "ck_sequence"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_sequence/"
 description: "ck_sequence_init ck_sequence_read_begin ck_sequence_read_retry ck_sequence_write_begin ck_sequence_write_end – sequence locks"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_sequence_init</code> <code>ck_sequence_read_begin</code> <code>ck_sequence_read_retry</code> <code>ck_sequence_write_begin</code> <code>ck_sequence_write_end</code> &#8211; sequence locks</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

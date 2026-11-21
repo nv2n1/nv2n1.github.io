@@ -1,4 +1,5 @@
 ---
+
 title: "ndb_select_all(1)"
 name: "ndb_select_all"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ndb_select_all/"
 description: "ndb_select_all – print rows from an NDB table"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ndb_select_all &#8211; print rows from an NDB table </p>
 <h2>SYNOPSIS</h2>
 <dl>

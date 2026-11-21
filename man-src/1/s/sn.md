@@ -1,4 +1,5 @@
 ---
+
 title: "sn(1)"
 name: "sn"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sn/"
 description: "sn – Digitally sign/verify/compare strongnames on CLR assemblies."
 ---
 
-<h2>NAME</h2>
 <p> sn &#8211; Digitally sign/verify/compare strongnames on CLR assemblies.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sn [-q | -quiet] [options] [parameters]</code></p>

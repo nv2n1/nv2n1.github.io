@@ -1,4 +1,5 @@
 ---
+
 title: "freight-clear-cache(1)"
 name: "freight-clear-cache"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-freight-clear-cache/"
 description: "freight-clear-cache – clears existing package repositories"
 ---
 
-<h2>NAME</h2>
 <p> <code>freight-clear-cache</code> &#8211; clears existing package repositories</p>
 <h2>SYNOPSIS</h2>
 <p> <code>freight clear-cache</code> [<code>-c</code> <i>conf</i>] [<code>-v</code>] [<code>-h</code>] [<i>manager</i>/<i>distro</i>][&#8230;]</p>

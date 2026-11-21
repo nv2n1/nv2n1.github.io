@@ -1,4 +1,5 @@
 ---
+
 title: "fts-transfer-status(1)"
 name: "fts-transfer-status"
 section: "1"
@@ -6,9 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-fts-transfer-status/"
 ---
 
-<h2>NAME</h2>
-
- fts-transfer-status
+fts-transfer-status
 
 <h2>SYNOPSIS</h2>
 

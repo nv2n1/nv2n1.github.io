@@ -1,4 +1,5 @@
 ---
+
 title: "cla_herpvgrw(3)"
 name: "cla_herpvgrw"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cla_herpvgrw/"
 description: "cla_herpvgrw.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cla_herpvgrw.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

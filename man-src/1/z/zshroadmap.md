@@ -1,4 +1,5 @@
 ---
+
 title: "zshroadmap(1)"
 name: "zshroadmap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zshroadmap/"
 description: "zshroadmap – informal introduction to the zsh manual The Zsh Manual, like the shell itself, is large and often complicated. This section of the manual provides some pointers to areas of the shell t..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> zshroadmap &#8211; informal introduction to the zsh manual The Zsh Manual, like the shell itself, is large and often complicated. This section of the manual provides some pointers to areas of the shell that are likely to be of particular interest to new users, and indicates where in the rest of the manual the documentation is to be found.</p>
 <h2>WHEN THE SHELL STARTS</h2>
 <p> When it starts, the shell reads commands from various files. These can be created or edited to customize the shell. See the section Startup/Shutdown Files in <i><a href="/docs/linux/man/1-zsh/">zsh</a></i>(1). </p>

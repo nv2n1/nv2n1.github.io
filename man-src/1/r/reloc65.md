@@ -1,4 +1,5 @@
 ---
+
 title: "reloc65(1)"
 name: "reloc65"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-reloc65/"
 description: "reloc65 – relocator for o65 object files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> reloc65 &#8211; relocator for o65 object files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>reloc65</code> [<i>OPTION</i>]&#8230; <i>FILE</i>&#8230; </p>

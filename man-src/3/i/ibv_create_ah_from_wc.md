@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_create_ah_from_wc(3)"
 name: "ibv_create_ah_from_wc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ibv_create_ah_from_wc/"
 description: "ibv_init_ah_from_wc, ibv_create_ah_from_wc – initialize or create an address handle (AH) from a work completion"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ibv_init_ah_from_wc, ibv_create_ah_from_wc &#8211; initialize or create an address handle (AH) from a work completion </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

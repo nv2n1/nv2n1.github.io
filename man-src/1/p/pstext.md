@@ -1,4 +1,5 @@
 ---
+
 title: "pstext(1)"
 name: "pstext"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pstext/"
 description: "pstext – Plot or typeset text on maps"
 ---
 
-<h2>NAME</h2>
 <p> pstext &#8211; Plot or typeset text on maps</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pstext</code> [ <i>textfiles</i> ] <i>parameters</i> <i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[/<i>zmin</i>/<i>zmax</i>][<code>r</code>] [ ] [<code>p</code>|<code>s</code>]<i>parameters</i> [ [<code>j</code>|<code>J</code>]<i>dx</i>[/<i>dy</i>][<code>v</code>[<i>pen</i>]] ] [ [<code>+a</code>[<i>angle</i>]][<code>+c</code>[<i>justify</i>]][<code>+f</code>[<i>font</i>]][<code>+h</code>][<code>+j</code>[<i>justify</i>]][<code>+l</code>] ] [ <i>color</i> ] [ ((<code>z</code>|<code>Z</code><i>parameters</i> ] [ ] [ ] [ ] [ ] [ ] [ ] [ <code>l</code>|<code>u</code> ] [ <code>o</code>|<code>O</code>|<code>c</code>|<code>C</code> ] [ [ <i>pen</i> ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ ] [ <code>-a</code><i>col</i>=<i>name</i>[&#8230;] ] [ <code>-c</code><i>copies</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-t</code><i>&lt;transp&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

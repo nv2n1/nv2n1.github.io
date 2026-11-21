@@ -1,4 +1,5 @@
 ---
+
 title: "iperf(1)"
 name: "iperf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-iperf/"
 description: "iperf – perform network throughput tests"
 ---
 
-<h2>NAME</h2>
 <p> iperf &#8211; perform network throughput tests</p>
 <h2>SYNOPSIS</h2>
 <p> <code>iperf -s [</code> <i>options</i> <code>]</code> </p>

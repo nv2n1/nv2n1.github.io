@@ -1,4 +1,5 @@
 ---
+
 title: "zonetab2pot(1)"
 name: "zonetab2pot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zonetab2pot/"
 description: "zonetab2pot.py – Converts a timezone list to a PO file template."
 ---
 
-<h2>NAME</h2>
 <p> zonetab2pot.py &#8211; Converts a timezone list to a PO file template.</p>
 <h2>SYNOPSIS</h2>
 <dl>

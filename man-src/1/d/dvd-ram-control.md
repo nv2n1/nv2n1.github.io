@@ -1,4 +1,5 @@
 ---
+
 title: "dvd-ram-control(1)"
 name: "dvd-ram-control"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dvd-ram-control/"
 description: "dev-ram-control – checks features of DVD-RAM discs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dev-ram-control &#8211; checks features of DVD-RAM discs</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dvd-ram-control</code> [-arre] [-awre] [-rdonly|-rdwr] <i>/dev/dvd</i> </p>

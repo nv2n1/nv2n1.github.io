@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_rr_list_push_rr(3)"
 name: "ldns_rr_list_push_rr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_rr_list_push_rr/"
 description: "ldns_rr_list_cat, ldns_rr_list_push_rr, ldns_rr_list_pop_rr"
 ---
 
-<h2>NAME</h2>
 <p> ldns_rr_list_cat, ldns_rr_list_push_rr, ldns_rr_list_pop_rr </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

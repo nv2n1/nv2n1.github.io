@@ -1,4 +1,5 @@
 ---
+
 title: "pmdbg(1)"
 name: "pmdbg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdbg/"
 description: "pmdbg – translate Performance Co-Pilot debug control flags"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdbg</code> &#8211; translate Performance Co-Pilot debug control flags</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmdbg</code> <i>code</i> &#8230;<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "mybashburn(1)"
 name: "mybashburn"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mybashburn/"
 description: "mybashburn – it can burn data cds/dvds and create mp3/ogg/flac."
 ---
 
-<h2>NAME</h2>
 <p> mybashburn &#8211; it can burn data cds/dvds and create mp3/ogg/flac.</p>
 <h2>DESCRIPTION</h2>
 <p> MyBashBurn is a Terminal User Interface (TUI) frontend based of the CD burning shell script called BashBurn for Linux; this originally does not have the best eye-candy CD-burning UI, nevertheless, mybashburn uses dialog boxes/functions which draws (using ncurses) windows onto the screen. MyBashBurn dialog boxes offer good functionality, and has very good capabilities of automatically finding dependencies and auto detecting devices CD/DVD RW. In short, do not reinvent the wheel &#8211; just let MyBashBurn do what you want it to do. </p>

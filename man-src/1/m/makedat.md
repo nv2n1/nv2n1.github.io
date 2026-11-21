@@ -1,4 +1,5 @@
 ---
+
 title: "makedat(1)"
 name: "makedat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-makedat/"
 description: "makedat – create GDBM/DB files for maildrop"
 ---
 
-<h2 class="name">NAME</h2>
 <p> makedat &#8211; create GDBM/DB files for maildrop </p>
 <h2>SYNOPSIS</h2>
 <dl>

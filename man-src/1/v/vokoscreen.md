@@ -1,4 +1,5 @@
 ---
+
 title: "vokoscreen(1)"
 name: "vokoscreen"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vokoscreen/"
 description: "vokoscreen – simple screencast creator"
 ---
 
-<h2>NAME</h2>
 <p> vokoscreen &#8211; simple screencast creator</p>
 <h2>SYNOPSIS</h2>
 <p> Usage: <code>vokoscreen</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ferm(1)"
 name: "ferm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ferm/"
 description: "ferm – a firewall rule parser for linux"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ferm &#8211; a firewall rule parser for linux </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ferm</code> <i>options</i> <i>inputfile</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_append_by_key(3)"
 name: "memcached_append_by_key"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memcached_append_by_key/"
 description: "memcached_append_by_key – Appending to or Prepending to data on the server"
 ---
 
-<h2>NAME</h2>
 <p> memcached_append_by_key &#8211; Appending to or Prepending to data on the server </p>
 <p> Appending or Prepending to data on the server</p>
 <h2>SYNOPSIS</h2>

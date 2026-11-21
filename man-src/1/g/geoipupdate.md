@@ -1,4 +1,5 @@
 ---
+
 title: "geoipupdate(1)"
 name: "geoipupdate"
 section: "1"
@@ -6,10 +7,7 @@ letter: "g"
 url: "/docs/linux/man/1-geoipupdate/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- geoipupdate - a program for updating the MaxMind GeoIP databases 
+geoipupdate - a program for updating the MaxMind GeoIP databases 
 
 <h2>SYNOPSIS</h2>
 

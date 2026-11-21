@@ -1,4 +1,5 @@
 ---
+
 title: "ares_set_servers(3)"
 name: "ares_set_servers"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ares_set_servers/"
 description: "ares_set_servers – Initialize an ares_channel name servers configuration"
 ---
 
-<h2>NAME</h2>
 <p> ares_set_servers &#8211; Initialize an ares_channel name servers configuration</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

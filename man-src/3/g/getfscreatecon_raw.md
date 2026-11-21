@@ -1,4 +1,5 @@
 ---
+
 title: "getfscreatecon_raw(3)"
 name: "getfscreatecon_raw"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getfscreatecon_raw/"
 description: "getfscreatecon, setfscreatecon – get or set the SELinux security context used for creating a new file system object"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getfscreatecon, setfscreatecon &#8211; get or set the SELinux security context used for creating a new file system object </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/selinux.h&gt;</code> </p>

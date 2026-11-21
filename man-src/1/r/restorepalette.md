@@ -1,4 +1,5 @@
 ---
+
 title: "restorepalette(1)"
 name: "restorepalette"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-restorepalette/"
 description: "restorepalette – set the color palette for textmode."
 ---
 
-<h2>NAME</h2>
 <p> restorepalette &#8211; set the color palette for textmode.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>restorepalette [</code><i>filename</i><code>]</code> </p>

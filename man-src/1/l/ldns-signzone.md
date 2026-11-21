@@ -1,4 +1,5 @@
 ---
+
 title: "ldns-signzone(1)"
 name: "ldns-signzone"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ldns-signzone/"
 description: "ldns-signzone – sign a zonefile with DNSSEC data"
 ---
 
-<h2>NAME</h2>
 <p> ldns-signzone &#8211; sign a zonefile with DNSSEC data</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ldns-signzone </code> [ <i>OPTIONS</i> ] <i>ZONEFILE</i> KEY [KEY [KEY] &#8230; ] </p>

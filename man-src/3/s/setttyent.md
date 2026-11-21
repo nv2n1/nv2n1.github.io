@@ -1,4 +1,5 @@
 ---
+
 title: "setttyent(3)"
 name: "setttyent"
 section: "3"
@@ -6,8 +7,9 @@ letter: "s"
 url: "/docs/linux/man/3-setttyent/"
 description: "getttyent, getttynam, setttyent, endttyent – get ttys file entry"
 ---
+
 <p>getttyent, getttynam, setttyent, endttyent &#8211; get ttys file entry </p>
-<h2>SYNOPSIS</h2>
+
 <p> <code>#include &lt;ttyent.h&gt;</code> </p>
 <p> <code>struct ttyent *getttyent(void);</code> </p>
 <p> <code>struct ttyent *getttynam(const char *</code><i>name</i><code>);</code> </p>

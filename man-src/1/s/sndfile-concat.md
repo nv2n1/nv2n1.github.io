@@ -1,4 +1,5 @@
 ---
+
 title: "sndfile-concat(1)"
 name: "sndfile-concat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sndfile-concat/"
 description: "sndfile-concat – concatenates two or more audio files"
 ---
 
-<h2>NAME</h2>
 <p> sndfile-concat &#8211; concatenates two or more audio files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sndfile-concat</code> infile1 infile2 &#8230;. outfile</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "libpgm(3)"
 name: "libpgm"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libpgm/"
 description: "libpgm – libnetpbm functions to read and write PGM image files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> libpgm &#8211; libnetpbm functions to read and write PGM image files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;netpbm/pgm.h&gt;</code> </p>

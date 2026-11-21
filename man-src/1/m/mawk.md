@@ -1,4 +1,5 @@
 ---
+
 title: "mawk(1)"
 name: "mawk"
 section: "1"
@@ -6,7 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-mawk/"
 description: "mawk – pattern scanning and text processing language"
 ---
-<h2 class="name">NAME</h2>
+
 <p> mawk - pattern scanning and text processing language </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mawk</code> [-<code>W </code><i>option</i>] [-<code>F </code><i>value</i>] [-<code>v </code><i>var=value</i>] [--] &#8216;program text&#8217; [file ...] <br />

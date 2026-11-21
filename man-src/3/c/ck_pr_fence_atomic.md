@@ -1,4 +1,5 @@
 ---
+
 title: "ck_pr_fence_atomic(3)"
 name: "ck_pr_fence_atomic"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_pr_fence_atomic/"
 description: "ck_pr_fence_atomic – enforce partial ordering of atomic read-modify-write operations"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_pr_fence_atomic</code> &#8211; enforce partial ordering of atomic read-modify-write operations</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

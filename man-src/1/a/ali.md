@@ -1,4 +1,5 @@
 ---
+
 title: "ali(1)"
 name: "ali"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ali/"
 description: "ali – list mail aliases"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ali &#8211; list mail aliases </p>
 <h2>SYNOPSIS</h2>
 <dl>

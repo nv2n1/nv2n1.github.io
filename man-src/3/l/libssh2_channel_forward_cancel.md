@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_channel_forward_cancel(3)"
 name: "libssh2_channel_forward_cancel"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_channel_forward_cancel/"
 description: "libssh2_channel_forward_cancel – cancel a forwarded TCP port"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_channel_forward_cancel &#8211; cancel a forwarded TCP port</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

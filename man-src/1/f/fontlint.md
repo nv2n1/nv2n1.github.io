@@ -1,4 +1,5 @@
 ---
+
 title: "fontlint(1)"
 name: "fontlint"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fontlint/"
 description: "fontlint – check a font"
 ---
 
-<h2>NAME</h2>
 <p> <code>fontlint &#8211; check a font</code></p>
 <h2>SYNOPSIS</h2>
 <p> <code>fontlint</code> <i>fontfile &#8230;</i></p>

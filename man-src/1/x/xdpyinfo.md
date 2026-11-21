@@ -1,4 +1,5 @@
 ---
+
 title: "xdpyinfo(1)"
 name: "xdpyinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xdpyinfo/"
 description: "xdpyinfo – display information utility for X"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xdpyinfo &#8211; display information utility for X </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xdpyinfo</code> [-display <i>displayname</i>] [-queryExtensions] [-ext <i>extension-name</i>] [-version]</p>

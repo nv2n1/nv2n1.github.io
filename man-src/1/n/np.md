@@ -1,4 +1,5 @@
 ---
+
 title: "np(1)"
 name: "np"
 section: "1"
@@ -6,9 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-np/"
 ---
 
-<h2>NAME</h2>
-
- new_proj - create a new project
+new_proj - create a new project
 
 <h2>SYNOPSIS</h2>
 

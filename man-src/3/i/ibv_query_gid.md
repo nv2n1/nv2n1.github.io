@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_query_gid(3)"
 name: "ibv_query_gid"
 section: "3"
@@ -6,12 +7,7 @@ letter: "i"
 url: "/docs/linux/man/3-ibv_query_gid/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- ibv_query_gid - query an InfiniBand port's GID table 
+ibv_query_gid - query an InfiniBand port's GID table 
 
 <h2>SYNOPSIS</h2>
 

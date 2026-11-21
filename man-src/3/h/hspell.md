@@ -1,4 +1,5 @@
 ---
+
 title: "hspell(3)"
 name: "hspell"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hspell/"
 description: "hspell – Hebrew spellchecker (C API)"
 ---
 
-<h2>NAME</h2>
 <p> hspell &#8211; Hebrew spellchecker (C API)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;hspell.h&gt;</code> </p>

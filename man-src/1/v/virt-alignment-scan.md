@@ -1,4 +1,5 @@
 ---
+
 title: "virt-alignment-scan(1)"
 name: "virt-alignment-scan"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-virt-alignment-scan/"
 description: "virt-alignment-scan – Check alignment of virtual machine partitions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> virt-alignment-scan &#8211; Check alignment of virtual machine partitions </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

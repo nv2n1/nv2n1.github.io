@@ -1,4 +1,5 @@
 ---
+
 title: "pw-dot(1)"
 name: "pw-dot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pw-dot/"
 description: "pw-dot – The PipeWire dot graph dump"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pw-dot &#8211; The PipeWire dot graph dump </p>
 <h2>SYNOPSIS</h2>
 <pre>

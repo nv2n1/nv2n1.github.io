@@ -1,4 +1,5 @@
 ---
+
 title: "latexdiff-rcs(1)"
 name: "latexdiff-rcs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-latexdiff-rcs/"
 description: "latexdiff-vc – wrapper script that calls latexdiff for different versions of a file under version management (CVS, RCS or SVN)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> latexdiff-vc &#8211; wrapper script that calls latexdiff for different versions of a file under version management (CVS, RCS or SVN) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>latexdiff-vc</code> [ <i>latexdiff-options</i> ] [ <i>latexdiff-vc-options</i> ] <code>-r</code> [<i>rev1</i>] [<code>-r</code> <i>rev2</i>] <i>file1.tex</i> [ <i>file2.tex</i> &#8230;] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "perlebcdic(1)"
 name: "perlebcdic"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlebcdic/"
 description: "perlebcdic – Considerations for running Perl on EBCDIC platforms"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perlebcdic &#8211; Considerations for running Perl on EBCDIC platforms </p>
 <h2>DESCRIPTION</h2>
 <p> An exploration of some of the issues facing Perl programmers on <font SIZE="-1">EBCDIC</font> based computers. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_get_rr_list_name_by_addr(3)"
 name: "ldns_get_rr_list_name_by_addr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_get_rr_list_name_by_addr/"
 description: "ldns_get_rr_list_addr_by_name, ldns_get_rr_list_name_by_addr"
 ---
 
-<h2>NAME</h2>
 <p> ldns_get_rr_list_addr_by_name, ldns_get_rr_list_name_by_addr </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

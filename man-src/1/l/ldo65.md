@@ -1,4 +1,5 @@
 ---
+
 title: "ldo65(1)"
 name: "ldo65"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ldo65/"
 description: "ldo65 – linker for o65 object files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ldo65 &#8211; linker for o65 object files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ldo65</code> [<i>OPTION</i>]&#8230; <i>FILE</i>&#8230; </p>

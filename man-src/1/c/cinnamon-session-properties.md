@@ -1,4 +1,5 @@
 ---
+
 title: "cinnamon-session-properties(1)"
 name: "cinnamon-session-properties"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cinnamon-session-properties/"
 description: "cinnamon-session-properties – Configure applications to start on login"
 ---
 
-<h2>NAME</h2>
 <p> cinnamon-session-properties &#8211; Configure applications to start on login</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cinnamon-session-properties</code></p>

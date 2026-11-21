@@ -1,4 +1,5 @@
 ---
+
 title: "nfstest_io(1)"
 name: "nfstest_io"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nfstest_io/"
 description: "nfstest_io – I/O tool"
 ---
 
-<h2>NAME</h2>
 <p> nfstest_io &#8211; I/O tool</p>
 <h2>SYNOPSIS</h2>
 <p> nfstest_io -d &lt;datadir&gt; [options]</p>

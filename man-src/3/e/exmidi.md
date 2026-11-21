@@ -1,4 +1,5 @@
 ---
+
 title: "exmidi(3)"
 name: "exmidi"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-exmidi/"
 description: "exmidi – Playing MIDI music. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> exmidi &#8211; Playing MIDI music. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

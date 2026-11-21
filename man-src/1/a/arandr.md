@@ -1,4 +1,5 @@
 ---
+
 title: "arandr(1)"
 name: "arandr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-arandr/"
 description: "arandr – visual front end for XRandR 1.2"
 ---
 
-<h2>NAME</h2>
 <p> arandr &#8211; visual front end for XRandR 1.2</p>
 <h2>SYNOPSIS</h2>
 <p> <code>arandr</code> [savedfile]</p>

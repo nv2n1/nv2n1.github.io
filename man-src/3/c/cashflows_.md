@@ -1,4 +1,5 @@
 ---
+
 title: "cashflows_(3)"
 name: "cashflows_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cashflows_/"
 description: "QuantLib::Bond – Base bond class."
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::Bond &#8211; Base bond class. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/bond.hpp&gt; </p>

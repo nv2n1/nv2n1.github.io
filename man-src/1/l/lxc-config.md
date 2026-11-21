@@ -1,4 +1,5 @@
 ---
+
 title: "lxc-config(1)"
 name: "lxc-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lxc-config/"
 description: "lxc-config – query LXC system configuration"
 ---
 
-<h2>NAME</h2>
 <p> lxc-config &#8211; query LXC system configuration</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lxc-config</code> [-l] [<i>item</i>]</p>

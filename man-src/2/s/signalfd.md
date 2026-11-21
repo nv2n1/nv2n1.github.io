@@ -1,4 +1,5 @@
 ---
+
 title: "signalfd(2)"
 name: "signalfd"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-signalfd/"
 description: "signalfd – create a file descriptor for accepting signals"
 ---
 
-<h2 class="name">NAME</h2>
 <p> signalfd &#8211; create a file descriptor for accepting signals </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/signalfd.h&gt;</code> </p>

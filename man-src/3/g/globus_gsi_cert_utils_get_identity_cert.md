@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gsi_cert_utils_get_identity_cert(3)"
 name: "globus_gsi_cert_utils_get_identity_cert"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gsi_cert_utils_get_identity_cert/"
 description: "Globus GSI Certificate Handling Utilities –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Globus GSI Certificate Handling Utilities &#8211; </p>
 <h3>Modules</h3>
 <p> <code>Activation</code> </p>

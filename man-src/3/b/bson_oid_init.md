@@ -1,4 +1,5 @@
 ---
+
 title: "bson_oid_init(3)"
 name: "bson_oid_init"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_oid_init/"
 description: "bson_oid_init() – Generates a new bson_oid_t using either context or the default bson_context_t."
 ---
 
-<h2>NAME</h2>
 <p> bson_oid_init() &#8211; Generates a new bson_oid_t using either context or the default bson_context_t.</p>
 <h2>SYNOPSIS</h2>
 <pre>

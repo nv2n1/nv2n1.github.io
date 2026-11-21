@@ -1,4 +1,5 @@
 ---
+
 title: "hdb_check_s4u2self(3)"
 name: "hdb_check_s4u2self"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hdb_check_s4u2self/"
 description: "HDB –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> HDB &#8211; </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;hdb.h&gt;</p>

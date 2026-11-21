@@ -1,4 +1,5 @@
 ---
+
 title: "co(1)"
 name: "co"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-co/"
 description: "co – check out RCS revisions"
 ---
 
-<h2>NAME</h2>
 <p> co &#8211; check out RCS revisions</p>
 <h2>SYNOPSIS</h2>
 <p> <code>co</code> [<i>options</i>]<i> file </i>&#8230;</p>

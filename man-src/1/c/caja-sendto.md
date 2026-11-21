@@ -1,4 +1,5 @@
 ---
+
 title: "caja-sendto(1)"
 name: "caja-sendto"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-caja-sendto/"
 description: "caja-sendto – convenience application to send a file via email or instant messenger"
 ---
 
-<h2>NAME</h2>
 <p> caja-sendto &#8211; convenience application to send a file via email or instant messenger</p>
 <h2>SYNOPSIS</h2>
 <p> <code>caja-sendto</code> [<i>OPTIONS</i> <i>|</i> <i>FILES&#8230;</i>]</p>

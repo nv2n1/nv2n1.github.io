@@ -1,4 +1,5 @@
 ---
+
 title: "pcp-atop(1)"
 name: "pcp-atop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pcp-atop/"
 description: "pcp-atop, pmatop – Advanced System and Process Monitor"
 ---
 
-<h2>NAME</h2>
 <p> <code>pcp-atop</code>, <code>pmatop</code> &#8211; Advanced System and Process Monitor</p>
 <h2>SYNOPSIS</h2>
 <p> Interactive Usage: </p>

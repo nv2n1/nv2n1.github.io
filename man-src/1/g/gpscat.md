@@ -1,4 +1,5 @@
 ---
+
 title: "gpscat(1)"
 name: "gpscat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpscat/"
 description: "gpscat – dump the output from a GPS"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gpscat &#8211; dump the output from a GPS </p>
 <h2>SYNOPSIS</h2>
 <dl>

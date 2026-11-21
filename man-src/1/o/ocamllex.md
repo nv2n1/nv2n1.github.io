@@ -1,4 +1,5 @@
 ---
+
 title: "ocamllex(1)"
 name: "ocamllex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ocamllex/"
 description: "ocamllex – The OCaml lexer generator"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ocamllex &#8211; The OCaml lexer generator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ocamllex</code> [ <code>-o</code><i>&nbsp;<wbr>output-file</i> ] [ <code>-ml</code> ] <i>filename.mll</i> </p>

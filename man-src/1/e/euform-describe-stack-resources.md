@@ -1,4 +1,5 @@
 ---
+
 title: "euform-describe-stack-resources(1)"
 name: "euform-describe-stack-resources"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euform-describe-stack-resources/"
 description: "euform-describe-stack-resources – List all of the resources in one or more stacks"
 ---
 
-<h2>NAME</h2>
 <p> euform-describe-stack-resources &#8211; List all of the resources in one or more stacks</p>
 <h2>SYNOPSIS</h2>
 <p> euform-describe-stack-resources [-n STACK] [-l RESOURCE] [-p RESOURCE]</p>

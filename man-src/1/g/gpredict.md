@@ -1,4 +1,5 @@
 ---
+
 title: "gpredict(1)"
 name: "gpredict"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpredict/"
 description: "gpredict – real-time satellite tracking and orbit prediction program"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gpredict &#8211; real-time satellite tracking and orbit prediction program</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gpredict</code> [<i>OPTION</i>]&#8230; </p>

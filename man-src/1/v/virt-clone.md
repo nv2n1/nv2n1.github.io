@@ -1,4 +1,5 @@
 ---
+
 title: "virt-clone(1)"
 name: "virt-clone"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-virt-clone/"
 description: "virt-clone – clone existing virtual machine images"
 ---
 
-<h2 class="name">NAME</h2>
 <p> virt-clone &#8211; clone existing virtual machine images </p>
 <h2>SYNOPSIS</h2>
 <p> <code>virt-clone</code> [<font SIZE="-1">OPTION</font>]&#8230;</p>

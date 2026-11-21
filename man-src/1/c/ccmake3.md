@@ -1,4 +1,5 @@
 ---
+
 title: "ccmake3(1)"
 name: "ccmake3"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ccmake3/"
 description: "ccmake – CMake Curses Dialog Command-Line Reference"
 ---
 
-<h2>NAME</h2>
 <p> ccmake &#8211; CMake Curses Dialog Command-Line Reference</p>
 <h2>SYNOPSIS</h2>
 <pre>

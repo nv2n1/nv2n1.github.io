@@ -1,4 +1,5 @@
 ---
+
 title: "hdb__put(3)"
 name: "hdb__put"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hdb__put/"
 description: "HDB –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> HDB &#8211; </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;hdb.h&gt;</p>

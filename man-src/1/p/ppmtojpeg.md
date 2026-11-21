@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtojpeg(1)"
 name: "ppmtojpeg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppmtojpeg/"
 description: "pnmtojpeg – convert PNM image to a JFIF (\"JPEG\") image"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pnmtojpeg &#8211; convert PNM image to a JFIF (&quot;JPEG&quot;) image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmtojpeg</code> [ <i>options</i> ] [ <i>filename</i> ] </p>

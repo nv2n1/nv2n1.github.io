@@ -1,4 +1,5 @@
 ---
+
 title: "cisco-decrypt(1)"
 name: "cisco-decrypt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cisco-decrypt/"
 description: "cisco-decrypt – decrypts an obfuscated Cisco vpn client pre-shared key"
 ---
 
-<h2>NAME</h2>
 <p> cisco-decrypt &#8211; decrypts an obfuscated Cisco vpn client pre-shared key</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cisco-decrypt</code> <i>&lt;obfuscated pre-shared key&gt; </i></p>

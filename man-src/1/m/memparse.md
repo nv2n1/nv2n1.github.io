@@ -1,4 +1,5 @@
 ---
+
 title: "memparse(1)"
 name: "memparse"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-memparse/"
 description: "memparse – libmemcached Documentation"
 ---
 
-<h2>NAME</h2>
 <p> memparse &#8211; libmemcached Documentation </p>
 <p> Copies files to a collection of memcached servers</p>
 <h2>SYNOPSIS</h2>

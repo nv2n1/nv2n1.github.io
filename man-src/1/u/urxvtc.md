@@ -1,4 +1,5 @@
 ---
+
 title: "urxvtc(1)"
 name: "urxvtc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-urxvtc/"
 description: "urxvtc – control the urxvtd daemon"
 ---
 
-<h2 class="name">NAME</h2>
 <p> urxvtc &#8211; control the urxvtd daemon </p>
 <h2>SYNOPSIS</h2>
 <p> <code>urxvtc</code> [same options as for urxvt]</p>

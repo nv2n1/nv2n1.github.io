@@ -1,4 +1,5 @@
 ---
+
 title: "fmtmsg(3)"
 name: "fmtmsg"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fmtmsg/"
 description: "fmtmsg – print formatted error messages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fmtmsg &#8211; print formatted error messages </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

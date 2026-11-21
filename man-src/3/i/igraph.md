@@ -1,4 +1,5 @@
 ---
+
 title: "igraph(3)"
 name: "igraph"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-igraph/"
 description: "igraph – a library for creating and manipulating graphs"
 ---
 
-<h2>NAME</h2>
 <p> igraph &#8211; a library for creating and manipulating graphs</p>
 <h2>DESCRIPTION</h2>
 <p> <code>igraph</code> is a library for creating and manipulating graphs. It is intended to be as powerful (ie. fast) as possible to enable the analysis of large graphs.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "less(1)"
 name: "less"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-less/"
 description: "less – opposite of more"
 ---
 
-<h2 class="name">NAME</h2>
 <p> less &#8211; opposite of more </p>
 <h2>SYNOPSIS</h2>
 <p> <code>less -?</code><br />

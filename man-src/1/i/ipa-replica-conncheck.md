@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-replica-conncheck(1)"
 name: "ipa-replica-conncheck"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-replica-conncheck/"
 description: "ipa-replica-conncheck – Check a replica-master network connection before installation"
 ---
 
-<h2>NAME</h2>
 <p> ipa-replica-conncheck &#8211; Check a replica-master network connection before installation</p>
 <h2>SYNOPSIS</h2>
 <p> ipa-replica-conncheck [<i>OPTION</i>]&#8230;</p>

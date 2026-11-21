@@ -1,4 +1,5 @@
 ---
+
 title: "sputoppm(1)"
 name: "sputoppm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sputoppm/"
 description: "sputoppm – convert an Atari uncompressed Spectrum file into a portable pixmap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sputoppm &#8211; convert an Atari uncompressed Spectrum file into a portable pixmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sputoppm</code> [<i>spufile</i>]</p>

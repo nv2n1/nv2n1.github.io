@@ -1,4 +1,5 @@
 ---
+
 title: "festival(1)"
 name: "festival"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-festival/"
 description: "festival – a text-to-speech system."
 ---
 
-<h2>NAME</h2>
 <p> festival &#8211; a text-to-speech system.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>festival </code> <i>[options]</i> <i>[file0]</i> <i>[file1]</i> <i>&#8230;</i> </p>

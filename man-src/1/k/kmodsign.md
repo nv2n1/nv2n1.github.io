@@ -1,4 +1,5 @@
 ---
+
 title: "kmodsign(1)"
 name: "kmodsign"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kmodsign/"
 description: "kmodsign – Kernel module signing tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> kmodsign &#8211; Kernel module signing tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>kmodsign</code> [<i>,-dpkD/</i>] <i>,&lt;hash algo&gt; &lt;key&gt; &lt;x509&gt; &lt;module&gt; /</i>[<i>,&lt;dest&gt;/</i>]</p>

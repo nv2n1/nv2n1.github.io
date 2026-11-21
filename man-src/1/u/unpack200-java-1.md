@@ -1,4 +1,5 @@
 ---
+
 title: "unpack200-java-1(1)"
 name: "unpack200-java-1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-unpack200-java-1/"
 description: "unpack200 – Transforms a packed file produced by pack200(1) into a JAR file for web deployment."
 ---
 
-<h2>NAME</h2>
 <p> unpack200 &#8211; Transforms a packed file produced by <a href="/docs/linux/man/1-pack200/">pack200</a>(1) into a JAR file for web deployment.</p>
 <h2>SYNOPSIS</h2>
 <pre>

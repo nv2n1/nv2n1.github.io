@@ -1,4 +1,5 @@
 ---
+
 title: "ffmpeg(1)"
 name: "ffmpeg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ffmpeg/"
 description: "ffmpeg – ffmpeg video converter"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ffmpeg &#8211; ffmpeg video converter </p>
 <h2>SYNOPSIS</h2>
 <p> ffmpeg [<i>global_options</i>] {[<i>input_file_options</i>] -i <i>input_url</i>} &#8230; {[<i>output_file_options</i>] <i>output_url</i>} &#8230;</p>

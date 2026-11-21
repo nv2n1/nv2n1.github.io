@@ -1,4 +1,5 @@
 ---
+
 title: "curve_(3)"
 name: "curve_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-curve_/"
 description: "QuantLib::FittedBondDiscountCurve::FittingMethod – Base fitting method used to construct a fitted bond discount curve."
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::FittedBondDiscountCurve::FittingMethod &#8211; Base fitting method used to construct a fitted bond discount curve. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/yield/fittedbonddiscountcurve.hpp&gt; </p>

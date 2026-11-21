@@ -1,4 +1,5 @@
 ---
+
 title: "tiff2bw(1)"
 name: "tiff2bw"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tiff2bw/"
 description: "tiff2bw – convert a color TIFF image to greyscale"
 ---
 
-<h2>NAME</h2>
 <p> tiff2bw &#8211; convert a color <font SIZE="-1">TIFF</font> image to greyscale</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tiff2bw</code> [ <i>options</i> ] <i>input.tif</i> <i>output.tif</i></p>

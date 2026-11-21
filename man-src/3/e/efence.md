@@ -1,4 +1,5 @@
 ---
+
 title: "efence(3)"
 name: "efence"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-efence/"
 description: "efence – Electric Fence Malloc Debugger"
 ---
 
-<h2>NAME</h2>
 <p> efence &#8211; Electric Fence Malloc Debugger</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

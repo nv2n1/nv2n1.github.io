@@ -1,4 +1,5 @@
 ---
+
 title: "arcwsrf(1)"
 name: "arcwsrf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-arcwsrf/"
 description: "arcwsrf – run WSRF query against service"
 ---
 
-<h2 class="name">NAME</h2>
 <p> arcwsrf &#8211; run WSRF query against service</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>arcwsrf</code> command issues WSRF resource property query to service specified by its URL. </p>

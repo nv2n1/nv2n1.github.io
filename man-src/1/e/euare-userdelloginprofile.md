@@ -1,4 +1,5 @@
 ---
+
 title: "euare-userdelloginprofile(1)"
 name: "euare-userdelloginprofile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-userdelloginprofile/"
 description: "euare-userdelloginprofile – Delete a user’s password"
 ---
 
-<h2>NAME</h2>
 <p> euare-userdelloginprofile &#8211; Delete a user&#8217;s password</p>
 <h2>SYNOPSIS</h2>
 <p> euare-userdelloginprofile [&#8211;as-account ACCOUNT] [-U URL]</p>

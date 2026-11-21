@@ -1,4 +1,5 @@
 ---
+
 title: "ck_ht_entry_key_length(3)"
 name: "ck_ht_entry_key_length"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_ht_entry_key_length/"
 description: "ck_ht_entry_key_length – returns the length of the key specified in the argument"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_ht_entry_key_length</code> &#8211; returns the length of the key specified in the argument</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

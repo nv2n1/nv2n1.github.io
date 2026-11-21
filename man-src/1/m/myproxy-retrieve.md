@@ -1,4 +1,5 @@
 ---
+
 title: "myproxy-retrieve(1)"
 name: "myproxy-retrieve"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-myproxy-retrieve/"
 description: "myproxy-retrieve – retrieve an end-entity credential"
 ---
 
-<h2>NAME</h2>
 <p> myproxy-retrieve &#8211; retrieve an end-entity credential</p>
 <h2>SYNOPSIS</h2>
 <p> <code>myproxy-retrieve</code> [ <i>options</i> ]</p>

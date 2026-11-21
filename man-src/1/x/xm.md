@@ -1,4 +1,5 @@
 ---
+
 title: "xm(1)"
 name: "xm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xm/"
 description: "xm – Xen management user interface"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xm &#8211; Xen management user interface </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xm</code> <i>subcommand</i> [<i>args</i>]</p>

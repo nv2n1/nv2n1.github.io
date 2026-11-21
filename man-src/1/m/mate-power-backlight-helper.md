@@ -1,4 +1,5 @@
 ---
+
 title: "mate-power-backlight-helper(1)"
 name: "mate-power-backlight-helper"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-power-backlight-helper/"
 description: "mate-power-backlight-helper – helper application for MATE’s power management backlight control"
 ---
 
-<h2>NAME</h2>
 <p> mate-power-backlight-helper &#8211; helper application for MATE&#8217;s power management backlight control</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-power-backlight-helper</code> [ <code>&#8211;help</code> ] [ <code>&#8211;set-brightness</code> ] [ <code>&#8211;get-brightness</code> ] [ <code>&#8211;get-max-brightness</code> ]</p>

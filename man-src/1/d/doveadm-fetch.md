@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-fetch(1)"
 name: "doveadm-fetch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-doveadm-fetch/"
 description: "doveadm-fetch – Fetch partial/full messages or message information"
 ---
 
-<h2>NAME</h2>
 <p> doveadm-fetch &#8211; Fetch partial/full messages or message information</p>
 <h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] [<code>-f</code> <i>formatter</i>] <code>fetch</code> [<code>-S</code> <i>socket_path</i>] <i>fields search_query</i><br />

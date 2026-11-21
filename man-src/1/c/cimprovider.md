@@ -1,4 +1,5 @@
 ---
+
 title: "cimprovider(1)"
 name: "cimprovider"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cimprovider/"
 description: "cimprovider – disable, enable, remove , group, list or display status of registered CIM providers or CIM provider modules"
 ---
 
-<h2>NAME</h2>
 <p> cimprovider &#8211; disable, enable, remove , group, list or display status of registered CIM providers or CIM provider modules</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cimprovider</code> <code>-d</code> <code>-m</code> module </p>

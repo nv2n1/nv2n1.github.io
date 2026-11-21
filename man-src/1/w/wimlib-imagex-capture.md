@@ -1,4 +1,5 @@
 ---
+
 title: "wimlib-imagex-capture(1)"
 name: "wimlib-imagex-capture"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wimlib-imagex-capture/"
 description: "wimlib-imagex-capture, wimlib-imagex-append – Create or append a WIM image"
 ---
 
-<h2>NAME</h2>
 <p> wimlib-imagex-capture, wimlib-imagex-append &#8211; Create or append a WIM image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wimlib-imagex capture</code> <i>SOURCE</i> <i>WIMFILE</i> [<i>IMAGE_NAME</i> [<i>IMAGE_DESCRIPTION</i>]] [<i>OPTION</i>&#8230;]<br />

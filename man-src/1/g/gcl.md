@@ -1,4 +1,5 @@
 ---
+
 title: "gcl(1)"
 name: "gcl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gcl/"
 description: "gcl – GCL Common Lisp interpreter/compiler"
 ---
 
-<h2>NAME</h2>
 <p> gcl &#8211; GCL Common Lisp interpreter/compiler</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gcl</code> [ <code>options</code> ] </p>

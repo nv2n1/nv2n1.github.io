@@ -1,4 +1,5 @@
 ---
+
 title: "mvl2lxt(1)"
 name: "mvl2lxt"
 section: "1"
@@ -6,11 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-mvl2lxt/"
 ---
 
-<h2>NAME</h2>
-
- 
-
- mvl2lxt - Coverts MVLSIM AET files to LXT
+mvl2lxt - Coverts MVLSIM AET files to LXT
 
 <h2>SYNTAX</h2>
 

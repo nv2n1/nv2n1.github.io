@@ -1,4 +1,5 @@
 ---
+
 title: "apt-ftparchive(1)"
 name: "apt-ftparchive"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-apt-ftparchive/"
 description: "apt-ftparchive – Utility to generate index files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> apt-ftparchive &#8211; Utility to generate index files </p>
 <h2>SYNOPSIS</h2>
 <dl>

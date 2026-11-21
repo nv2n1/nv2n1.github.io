@@ -1,4 +1,5 @@
 ---
+
 title: "mxmldoc(1)"
 name: "mxmldoc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mxmldoc/"
 description: "mxmldoc – mini-xml documentation generator"
 ---
 
-<h2>NAME</h2>
 <p> mxmldoc &#8211; mini-xml documentation generator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mxmldoc</code> &#8211;no-output [ <i>filename.xml</i> ] <i>source file(s)</i> ]<br />

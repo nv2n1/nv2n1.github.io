@@ -1,4 +1,5 @@
 ---
+
 title: "rcapid(1)"
 name: "rcapid"
 section: "1"
@@ -6,9 +7,7 @@ letter: "r"
 url: "/docs/linux/man/1-rcapid/"
 ---
 
-<h2>NAME</h2>
-
- rcapid - remote CAPI server
+rcapid - remote CAPI server
 
 <h2>SYNOPSIS</h2>
 

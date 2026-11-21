@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-ps(1)"
 name: "flatpak-ps"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flatpak-ps/"
 description: "flatpak-ps – Enumerate running instances"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flatpak-ps &#8211; Enumerate running instances </p>
 <h2>SYNOPSIS</h2>
 <dl>

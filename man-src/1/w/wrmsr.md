@@ -1,4 +1,5 @@
 ---
+
 title: "wrmsr(1)"
 name: "wrmsr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wrmsr/"
 description: "wrmsr – tool for writing CPU machine specific registers (MSR)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> wrmsr &#8211; tool for writing CPU machine specific registers (MSR) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>wrmsr [options] regno value</code></p>

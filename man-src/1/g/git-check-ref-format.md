@@ -1,4 +1,5 @@
 ---
+
 title: "git-check-ref-format(1)"
 name: "git-check-ref-format"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-check-ref-format/"
 description: "git-check-ref-format – Ensures that a reference name is well formed"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-check-ref-format &#8211; Ensures that a reference name is well formed </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

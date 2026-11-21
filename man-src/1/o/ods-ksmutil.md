@@ -1,4 +1,5 @@
 ---
+
 title: "ods-ksmutil(1)"
 name: "ods-ksmutil"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ods-ksmutil/"
 description: "ods-ksmutil – OpenDNSSEC zone and key management"
 ---
 
-<h2>NAME</h2>
 <p> <code>ods-ksmutil</code> &#8211; OpenDNSSEC zone and key management</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ods-ksmutil setup</code><br />

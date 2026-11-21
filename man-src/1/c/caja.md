@@ -1,4 +1,5 @@
 ---
+
 title: "caja(1)"
 name: "caja"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-caja/"
 description: "Caja – The MATE File Manager"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Caja &#8211; The MATE File Manager </p>
 <h2>SYNOPSIS</h2>
 <p> <code>caja [OPTIONS&#8230;] [URI&#8230;]</code></p>

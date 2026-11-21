@@ -1,4 +1,5 @@
 ---
+
 title: "sethostname(2)"
 name: "sethostname"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-sethostname/"
 description: "gethostname, sethostname – get/set hostname"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gethostname, sethostname &#8211; get/set hostname </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>

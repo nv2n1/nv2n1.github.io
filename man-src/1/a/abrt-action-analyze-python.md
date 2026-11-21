@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-action-analyze-python(1)"
 name: "abrt-action-analyze-python"
 section: "1"
@@ -6,10 +7,7 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-action-analyze-python/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- abrt-action-analyze-python - Calculate and save UUID and duplicate hash for a problem data directory DIR with Python crash data. 
+abrt-action-analyze-python - Calculate and save UUID and duplicate hash for a problem data directory DIR with Python crash data. 
 
 <h2>SYNOPSIS</h2>
 

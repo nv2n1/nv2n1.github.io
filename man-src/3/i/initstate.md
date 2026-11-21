@@ -1,4 +1,5 @@
 ---
+
 title: "initstate(3)"
 name: "initstate"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-initstate/"
 description: "random, srandom, initstate, setstate – random number generator"
 ---
 
-<h2 class="name">NAME</h2>
 <p> random, srandom, initstate, setstate &#8211; random number generator </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

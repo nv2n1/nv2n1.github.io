@@ -1,4 +1,5 @@
 ---
+
 title: "ares_free_string(3)"
 name: "ares_free_string"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ares_free_string/"
 description: "ares_free_string – Free strings allocated by ares functions"
 ---
 
-<h2>NAME</h2>
 <p> ares_free_string &#8211; Free strings allocated by ares functions</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

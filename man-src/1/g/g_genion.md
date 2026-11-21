@@ -1,4 +1,5 @@
 ---
+
 title: "g_genion(1)"
 name: "g_genion"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_genion/"
 description: "genion – generates mono atomic ions on energetically favorable positions"
 ---
 
-<h2>NAME</h2>
 <p> genion &#8211; generates mono atomic ions on energetically favorable positions </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

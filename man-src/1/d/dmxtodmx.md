@@ -1,4 +1,5 @@
 ---
+
 title: "dmxtodmx(1)"
 name: "dmxtodmx"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dmxtodmx/"
 description: "dmxtodmx – dmx configuration file parser and printer"
 ---
 
-<h2>NAME</h2>
 <p> dmxtodmx &#8211; dmx configuration file parser and printer</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dmxtodmx</code></p>

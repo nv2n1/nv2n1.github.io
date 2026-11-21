@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-keyring-daemon(1)"
 name: "gnome-keyring-daemon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnome-keyring-daemon/"
 description: "gnome-keyring-daemon – The gnome-keyring daemon"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gnome-keyring-daemon &#8211; The gnome-keyring daemon </p>
 <h2>SYNOPSIS</h2>
 <dl>

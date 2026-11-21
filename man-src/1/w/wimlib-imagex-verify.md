@@ -1,4 +1,5 @@
 ---
+
 title: "wimlib-imagex-verify(1)"
 name: "wimlib-imagex-verify"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wimlib-imagex-verify/"
 description: "wimlib-imagex-verify – Verify a WIM file"
 ---
 
-<h2>NAME</h2>
 <p> wimlib-imagex-verify &#8211; Verify a WIM file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wimlib-imagex verify</code> <i>WIMFILE</i> [<i>OPTION</i>&#8230;]</p>

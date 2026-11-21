@@ -1,4 +1,5 @@
 ---
+
 title: "gradient-convert(1)"
 name: "gradient-convert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gradient-convert/"
 description: "gradient-convert – convert gradients between formats"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gradient-convert &#8211; convert gradients between formats </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "tiffdump(1)"
 name: "tiffdump"
 section: "1"
@@ -6,9 +7,7 @@ letter: "t"
 url: "/docs/linux/man/1-tiffdump/"
 ---
 
-<h2>NAME</h2>
-
- tiffdump - print verbatim information about <font SIZE="-1">TIFF</font> files
+tiffdump - print verbatim information about <font SIZE="-1">TIFF</font> files
 
 <h2>SYNOPSIS</h2>
 

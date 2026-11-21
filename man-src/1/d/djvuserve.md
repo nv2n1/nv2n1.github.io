@@ -1,4 +1,5 @@
 ---
+
 title: "djvuserve(1)"
 name: "djvuserve"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-djvuserve/"
 description: "djvuserve – Generate indirect DjVu documents on the fly."
 ---
 
-<h2>NAME</h2>
 <p> djvuserve &#8211; Generate indirect DjVu documents on the fly. </p>
 <h2>DESCRIPTION</h2>
 <p> Program <code>djvuserve </code> is a <font SIZE="-1">CGI</font> program that can be executed by a <font SIZE="-1">HTTP </font> server for serving DjVu documents. This program is able to convert a bundled multi-page document into an indirect document on the fly. </p>

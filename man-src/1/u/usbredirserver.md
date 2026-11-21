@@ -1,4 +1,5 @@
 ---
+
 title: "usbredirserver(1)"
 name: "usbredirserver"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-usbredirserver/"
 description: "usbredirserver – exporting an USB device for use from another (virtual) machine"
 ---
 
-<h2>NAME</h2>
 <p> usbredirserver &#8211; exporting an USB device for use from another (virtual) machine</p>
 <h2>SYNOPSIS</h2>
 <p> <code>usbredirserver</code> [<i>-p|&#8211;port &lt;port&gt;</i>] [<i>-v|&#8211;verbose &lt;0-5&gt;</i>] <i>&lt;usbbus-usbaddr|vendorid:prodid&gt;</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pgmedge(1)"
 name: "pgmedge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pgmedge/"
 description: "pgmedge – edge-detect a portable graymap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pgmedge &#8211; edge-detect a portable graymap</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pgmedge</code> [<i>pgmfile</i>] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "euare-roledelpolicy(1)"
 name: "euare-roledelpolicy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-roledelpolicy/"
 description: "euare-roledelpolicy – Remove a policy from a role"
 ---
 
-<h2>NAME</h2>
 <p> euare-roledelpolicy &#8211; Remove a policy from a role</p>
 <h2>SYNOPSIS</h2>
 <p> euare-roledelpolicy <code>-p</code> POLICY [&#8211;as-account ACCOUNT] [-U URL]</p>

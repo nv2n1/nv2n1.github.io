@@ -1,4 +1,5 @@
 ---
+
 title: "mussh(1)"
 name: "mussh"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mussh/"
 description: "mussh – MUltihost SSH"
 ---
 
-<h2>NAME</h2>
 <p> mussh &#8211; MUltihost SSH</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mussh [</code> <i>OPTIONS</i> <code>] &lt;-h </code> <i>host&#8230;</i> <code>| -H </code> <i>hostfile</i> <code>&gt; [-c</code> <i>cmd</i> <code>] [-C </code> <i>scriptfile</i> <code>]</code></p>

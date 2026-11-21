@@ -1,4 +1,5 @@
 ---
+
 title: "uhd_find_devices(1)"
 name: "uhd_find_devices"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-uhd_find_devices/"
 description: "uhd_find_devices – USRP Hardware Driver Discovery Utility"
 ---
 
-<h2>NAME</h2>
 <p> uhd_find_devices &#8211; USRP Hardware Driver Discovery Utility</p>
 <h2>DESCRIPTION</h2>
 <p> Find UHD-supporting Software Radio Peripherals attached by USB, network or embedded configuration. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "makecol15_dither(3)"
 name: "makecol15_dither"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-makecol15_dither/"
 description: "makecol15_dither, makecol16_dither – Calculates a dithered 15 or 16-bit RGB value. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> makecol15_dither, makecol16_dither &#8211; Calculates a dithered 15 or 16-bit RGB value. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

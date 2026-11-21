@@ -1,4 +1,5 @@
 ---
+
 title: "plasmapkg2(1)"
 name: "plasmapkg2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-plasmapkg2/"
 description: "plasmapkg2 – Install, list, remove Plasma packages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> plasmapkg2 &#8211; Install, list, remove Plasma packages </p>
 <h2>SYNOPSIS</h2>
 <dl>

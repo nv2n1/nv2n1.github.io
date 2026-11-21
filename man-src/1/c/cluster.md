@@ -1,4 +1,5 @@
 ---
+
 title: "cluster(1)"
 name: "cluster"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cluster/"
 description: "cluster – find clusters in a graph and augment the graph with this information."
 ---
 
-<h2 class="name">NAME</h2>
 <p> cluster &#8211; find clusters in a graph and augment the graph with this information. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cluster</code> [<code>-v?</code>] [ <code>-C</code><i>k</i> ] [ <code>-c</code><i>k</i> ] [ <code>-o</code> <i>outfile</i> ] [ <i>files</i> ]</p>

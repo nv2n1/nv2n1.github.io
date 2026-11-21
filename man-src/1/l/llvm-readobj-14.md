@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-readobj-14(1)"
 name: "llvm-readobj-14"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-llvm-readobj-14/"
 description: "llvm-readobj – LLVM Object Reader"
 ---
 
-<h2 class="name">NAME</h2>
 <p> llvm-readobj &#8211; LLVM Object Reader </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-readobj</code> [<i>options</i>] [<i>input…</i>]</p>

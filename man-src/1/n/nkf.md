@@ -1,4 +1,5 @@
 ---
+
 title: "nkf(1)"
 name: "nkf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nkf/"
 description: "nkf – Network Kanji Filter"
 ---
 
-<h2 class="name">NAME</h2>
 <p> nkf &#8211; Network Kanji Filter </p>
 <h2>SYNOPSIS</h2>
 <p> nkf <code>[-butjnesliohrTVvwWJESZxXFfmMBOcdILg]</code> <code>[</code><i>file &#8230;</i><code>]</code></p>

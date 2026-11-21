@@ -1,4 +1,5 @@
 ---
+
 title: "npm-version(1)"
 name: "npm-version"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-npm-version/"
 description: "npm-version – Bump a package version"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>npm-version</code> &#8211; Bump a package version </p>
 <h3>Synopsis</h3>
 <dl>

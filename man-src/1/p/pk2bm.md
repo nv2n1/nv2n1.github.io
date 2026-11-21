@@ -1,4 +1,5 @@
 ---
+
 title: "pk2bm(1)"
 name: "pk2bm"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-pk2bm/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- pk2bm - create a bitmap from a TeX pkfont 
+pk2bm - create a bitmap from a TeX pkfont 
 
 <h2>SYNOPSIS:</h2>
 

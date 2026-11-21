@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-quota(1)"
 name: "doveadm-quota"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-doveadm-quota/"
 description: "doveadm-quota – Initialize/recalculate or show current quota usage"
 ---
 
-<h2>NAME</h2>
 <p> doveadm-quota &#8211; Initialize/recalculate or show current quota usage</p>
 <h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] [<code>-f</code> <i>formatter</i>] <code>quota</code> [<code>-S</code> <i>socket_path</i>] <i>command</i><br />

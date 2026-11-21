@@ -1,4 +1,5 @@
 ---
+
 title: "clufter-cib-revitalize(1)"
 name: "clufter-cib-revitalize"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-clufter-cib-revitalize/"
 description: "clufter – cib-revitalize"
 ---
 
-<h2>NAME</h2>
 <p> clufter &#8211; cib-revitalize</p>
 <h2>SYNOPSIS</h2>
 <p> <code>clufter</code> [<i>&lt;global option&gt; </i>&#8230;] <i>cib-revitalize </i>[<i>&lt;cmd option </i>&#8230;<i>&gt;</i>]</p>

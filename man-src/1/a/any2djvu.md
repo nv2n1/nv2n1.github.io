@@ -1,4 +1,5 @@
 ---
+
 title: "any2djvu(1)"
 name: "any2djvu"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-any2djvu/"
 description: "any2djvu – Convert .ps/.ps.gz/.pdf to .djvu"
 ---
 
-<h2>NAME</h2>
 <p> any2djvu &#8211; Convert .ps/.ps.gz/.pdf to .djvu </p>
 <h2>SYNOPSIS</h2>
 <p> <code>any2djvu</code> <i>url {filename(s)}</i></p>

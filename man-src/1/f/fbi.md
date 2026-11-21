@@ -1,4 +1,5 @@
 ---
+
 title: "fbi(1)"
 name: "fbi"
 section: "1"
@@ -8,7 +9,7 @@ description: "fbi – Linux framebuffer imageviewer # #"
 ---
 
 <p>#</p>
-<h2 class="name">NAME</h2>
+
 <p> fbi &#8211; Linux framebuffer imageviewer # # </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fbi</code> [<i>options</i>] <i>file &#8230;</i> # #</p>

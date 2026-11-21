@@ -1,4 +1,5 @@
 ---
+
 title: "getdns_convert_fqdn_to_dns_name(3)"
 name: "getdns_convert_fqdn_to_dns_name"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getdns_convert_fqdn_to_dns_name/"
 description: "getdns_convert, getdns_convert_dns_name_to_fqdn, getdns_convert_fqdn_to_dns_name — convert dname between presentation- and wire-format"
 ---
 
-<h2>NAME</h2>
 <p> <code>getdns_convert, </code> <code>getdns_convert_dns_name_to_fqdn, </code> <code>getdns_convert_fqdn_to_dns_name</code> &#8212; convert dname between presentation- and wire-format </p>
 <h2>LIBRARY</h2>
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>

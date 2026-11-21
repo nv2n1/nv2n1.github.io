@@ -1,4 +1,5 @@
 ---
+
 title: "yaml_to_db(1)"
 name: "yaml_to_db"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-yaml_to_db/"
 description: "yaml_to_db – convert a subset of YAML into fsdb"
 ---
 
-<h2 class="name">NAME</h2>
 <p> yaml_to_db &#8211; convert a subset of YAML into fsdb </p>
 <h2>SYNOPSIS</h2>
 <pre>

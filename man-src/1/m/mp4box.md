@@ -1,4 +1,5 @@
 ---
+
 title: "mp4box(1)"
 name: "mp4box"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mp4box/"
 description: "MP4Box – MPEG-4 Systems Toolbox"
 ---
 
-<h2>NAME</h2>
 <p> MP4Box &#8211; MPEG-4 Systems Toolbox</p>
 <h2>SYNOPSIS</h2>
 <p> <code>MP4Box</code> [options]<i>&nbsp;<wbr>file</i>&nbsp;<wbr>[options] </p>

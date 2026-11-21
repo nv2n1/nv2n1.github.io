@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-subnets(1)"
 name: "euca-describe-subnets"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-describe-subnets/"
 description: "euca-describe-subnets – Show information about one or more VPC subnets"
 ---
 
-<h2>NAME</h2>
 <p> euca-describe-subnets &#8211; Show information about one or more VPC subnets</p>
 <h2>SYNOPSIS</h2>
 <p> euca-describe-subnets [&#8211;show-empty-fields] [-U URL]</p>

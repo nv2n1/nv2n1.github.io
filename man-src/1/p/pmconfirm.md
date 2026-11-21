@@ -1,4 +1,5 @@
 ---
+
 title: "pmconfirm(1)"
 name: "pmconfirm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmconfirm/"
 description: "pmconfirm, pmmessage, pmquery – general purpose dialog box"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmconfirm</code>, <code>pmmessage</code>, <code>pmquery</code> &#8211; general purpose dialog box</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmconfirm</code> [<code>-c</code>] [<code>-b</code> <i>button-name</i>] [<code>-B</code> <i>default-button-name</i>] [<code>-t</code> <i>string</i>] [<code>-file</code> <i>filename</i>] [<code>-icon</code> <i>icontype</i>] [<code>-font</code> <i>font</i>] [<code>-header</code> <i>titlebar-string</i>] [<code>-useslider</code>] [<code>-noslider</code>] [<code>-noframe</code>] [<code>-exclusive</code>] </p>

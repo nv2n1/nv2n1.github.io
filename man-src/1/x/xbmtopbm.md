@@ -1,4 +1,5 @@
 ---
+
 title: "xbmtopbm(1)"
 name: "xbmtopbm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xbmtopbm/"
 description: "xbmtopbm – convert an X11 or X10 bitmap into a portable bitmap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xbmtopbm &#8211; convert an X11 or X10 bitmap into a portable bitmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xbmtopbm</code> [<i>bitmapfile</i>]</p>

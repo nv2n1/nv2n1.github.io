@@ -1,4 +1,5 @@
 ---
+
 title: "euform-list-stacks(1)"
 name: "euform-list-stacks"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euform-list-stacks/"
 description: "euform-list-stacks – List all running stacks"
 ---
 
-<h2>NAME</h2>
 <p> euform-list-stacks &#8211; List all running stacks</p>
 <h2>SYNOPSIS</h2>
 <p> euform-list-stacks [&#8211;show-empty-fields] [-U URL]</p>

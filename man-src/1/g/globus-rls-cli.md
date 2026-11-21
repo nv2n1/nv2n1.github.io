@@ -1,4 +1,5 @@
 ---
+
 title: "globus-rls-cli(1)"
 name: "globus-rls-cli"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-globus-rls-cli/"
 description: "globus-rls-cli – Globus Replica Location Service Command Line Interface"
 ---
 
-<h2>NAME</h2>
 <p> globus-rls-cli &#8211; Globus Replica Location Service Command Line Interface</p>
 <h2>SYNOPSIS</h2>
 <p> <code>globus-rls-cli</code> <i>command</i> [ <i>-c</i> ] [ <i>-d</i> ] [ <i>-h</i> ] [ <i>-i inputfile</i> ] [ <i>-l reslimit</i> ] [ <i>-s</i> ] [ <i>-t timeout</i> ] [ <i>-u</i> ] [ command ] <i>rls-server</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "x_system(1)"
 name: "x_system"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-x_system/"
 description: "x_system – A Cross-Over Error Analysis Tool"
 ---
 
-<h2>NAME</h2>
 <p> <code>x_system</code> &#8211; A Cross-Over Error Analysis Tool</p>
 <h2>INTRODUCTION</h2>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>The <code>x_system</code> was developed to aid in the task of gridding geophysical track data, e.g.<br />

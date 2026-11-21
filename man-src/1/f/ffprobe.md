@@ -1,4 +1,5 @@
 ---
+
 title: "ffprobe(1)"
 name: "ffprobe"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ffprobe/"
 description: "ffprobe – ffprobe media prober"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ffprobe &#8211; ffprobe media prober </p>
 <h2>SYNOPSIS</h2>
 <p> ffprobe [<i>options</i>] [<i>input_url</i>]</p>

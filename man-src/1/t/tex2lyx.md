@@ -1,4 +1,5 @@
 ---
+
 title: "tex2lyx(1)"
 name: "tex2lyx"
 section: "1"
@@ -6,7 +7,7 @@ letter: "t"
 url: "/docs/linux/man/1-tex2lyx/"
 description: "tex2lyx – translate well-behaved LaTeX into LyX"
 ---
-<h2>NAME</h2>
+
 <p> tex2lyx - translate well-behaved LaTeX into LyX  </p>
 <h2>SYNOPSIS</h2>
 <p> The simplest way to use <code>tex2lyx</code> is via the File-&gt;Import-&gt;LaTeX (plain) menu item in LyX. That runs <code>tex2lyx</code> on the given file and loads the resulting file into LyX. You should try that first, and call it from the command line only if you need to use more complicated options. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mingw32-crossreport(1)"
 name: "mingw32-crossreport"
 section: "1"
@@ -6,10 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-mingw32-crossreport/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- CrossReport - Analysis tool to help cross-compilation to Windows. 
+CrossReport - Analysis tool to help cross-compilation to Windows. 
 
 <h2>SYNOPSIS</h2>
 

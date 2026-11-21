@@ -1,4 +1,5 @@
 ---
+
 title: "ieee1284_release(3)"
 name: "ieee1284_release"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ieee1284_release/"
 description: "ieee1284_release – release a port"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ieee1284_release &#8211; release a port </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

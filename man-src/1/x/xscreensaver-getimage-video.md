@@ -1,4 +1,5 @@
 ---
+
 title: "xscreensaver-getimage-video(1)"
 name: "xscreensaver-getimage-video"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xscreensaver-getimage-video/"
 description: "xscreensaver-getimage-video – put a video frame on the root window"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xscreensaver-getimage-video &#8211; put a video frame on the root window </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xscreensaver-getimage-video</code> [-display <i>host:display.screen</i>] [&#8211;verbose] [&#8211;stdout]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fusioninventory-netdiscovery(1)"
 name: "fusioninventory-netdiscovery"
 section: "1"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-fusioninventory-netdiscovery/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- fusioninventory-netdiscovery - Standalone network discovery 
+fusioninventory-netdiscovery - Standalone network discovery 
 
 <h2>SYNOPSIS</h2>
 

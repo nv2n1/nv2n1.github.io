@@ -1,4 +1,5 @@
 ---
+
 title: "mkhtmlindex(1)"
 name: "mkhtmlindex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mkhtmlindex/"
 description: "mkhtmlindex – generate index files for HTML man pages"
 ---
 
-<h2>NAME</h2>
 <p> mkhtmlindex &#8211; generate index files for HTML man pages</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mkhtmlindex</code> <i>htmlmandir</i></p>

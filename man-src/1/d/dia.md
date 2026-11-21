@@ -1,4 +1,5 @@
 ---
+
 title: "dia(1)"
 name: "dia"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dia/"
 description: "dia – a diagram drawing program"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dia &#8211; a diagram drawing program </p>
 <h2>SYNOPSIS</h2>
 <dl>

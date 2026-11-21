@@ -1,4 +1,5 @@
 ---
+
 title: "aria_pack(1)"
 name: "aria_pack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-aria_pack/"
 description: "aria_pack – generate compressed, read-only Aria tables"
 ---
 
-<h2>NAME</h2>
 <p> aria_pack &#8211; generate compressed, read-only Aria tables</p>
 <h2>SYNOPSIS</h2>
 <p> <code>aria_pack</code> [<i>OPTIONS</i>] <i>filename</i>&#8230;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "bccmd(1)"
 name: "bccmd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bccmd/"
 description: "bccmd – Utility for the CSR BCCMD interface"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bccmd &#8211; Utility for the CSR BCCMD interface </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bccmd</code><br />

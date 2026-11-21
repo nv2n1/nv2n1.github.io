@@ -1,4 +1,5 @@
 ---
+
 title: "cmap_delete(3)"
 name: "cmap_delete"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cmap_delete/"
 description: "cmap_delete – Delete key/value pair from the CMAP service"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cmap_delete &#8211; Delete key/value pair from the CMAP service</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cmap.h&gt;</code> </p>

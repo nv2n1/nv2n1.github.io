@@ -1,4 +1,5 @@
 ---
+
 title: "libmemcached_examples(3)"
 name: "libmemcached_examples"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libmemcached_examples/"
 description: "libmemcached_examples – libmemcached Documentation"
 ---
 
-<h2>NAME</h2>
 <p> libmemcached_examples &#8211; libmemcached Documentation </p>
 <p> Examples for libmemcached</p>
 <h2>DESCRIPTION</h2>

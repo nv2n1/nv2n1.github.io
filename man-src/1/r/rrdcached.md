@@ -1,4 +1,5 @@
 ---
+
 title: "rrdcached(1)"
 name: "rrdcached"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rrdcached/"
 description: "rrdcached – Data caching daemon for rrdtool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rrdcached &#8211; Data caching daemon for rrdtool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rrdcached</code> [<code>-P</code>&nbsp;<wbr><i>permissions</i>] [<code>-l</code>&nbsp;<wbr><i>address</i>] [<code>-s</code>&nbsp;<wbr><i>group</i>] [<code>-w</code>&nbsp;<wbr><i>timeout</i>] [<code>-z</code>&nbsp;<wbr><i>delay</i>] [<code>-f</code>&nbsp;<wbr><i>timeout</i>] [<code>-p</code>&nbsp;<wbr><i>pid_file</i>] [<code>-t</code>&nbsp;<wbr><i>write_threads</i>] [<code>-j</code>&nbsp;<wbr><i>journal_dir</i>] [-F] [-g] [<code>-b</code>&nbsp;<wbr><i>base_dir</i>&nbsp;<wbr>[<code>-B</code>]]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "archmage(1)"
 name: "archmage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-archmage/"
 description: "archmage – CHM(Compiled HTML) Decompressor."
 ---
 
-<h2 class="name">NAME</h2>
 <p> archmage &#8211; CHM(Compiled HTML) Decompressor. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>archmage</code> <i>chmfile directory</i><br />

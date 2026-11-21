@@ -1,4 +1,5 @@
 ---
+
 title: "memkind_default(3)"
 name: "memkind_default"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memkind_default/"
 description: "memkind_default.h – default implementations for memkind operations. Note: This is EXEPRIMENTAL API. The functionality and the header file itself can be changed (including non-backward compatible ch..."
 ---
 
-<h2>NAME</h2>
 <p> memkind_default.h &#8211; default implementations for memkind operations.<br />
  Note: This is EXEPRIMENTAL API. The functionality and the header file itself can be changed (including non-backward compatible changes), or remove.</p>
 <h2>SYNOPSIS</h2>

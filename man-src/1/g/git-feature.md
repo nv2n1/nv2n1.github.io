@@ -1,4 +1,5 @@
 ---
+
 title: "git-feature(1)"
 name: "git-feature"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-feature/"
 description: "git-feature – Create/Merge feature branch"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-feature</code> &#8211; Create/Merge feature branch</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-feature</code> [-a|&#8211;alias branch_prefix] [finish] &lt;name&gt;</p>

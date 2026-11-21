@@ -1,4 +1,5 @@
 ---
+
 title: "gstream-save_input_approver(3)"
 name: "gstream-save_input_approver"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gstream-save_input_approver/"
 description: "save_input_approver"
 ---
 
-<h2>NAME</h2>
 <p> save_input_approver</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gstream.h">gstream.h</a>&gt;</code> </p>

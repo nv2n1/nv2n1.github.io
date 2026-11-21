@@ -1,4 +1,5 @@
 ---
+
 title: "mate-control-center(1)"
 name: "mate-control-center"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-control-center/"
 description: "mate-control-center – Configure MATE settings"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mate-control-center &#8211; Configure MATE settings </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-control-center</code> [<i>OPTION&#8230;</i>]</p>

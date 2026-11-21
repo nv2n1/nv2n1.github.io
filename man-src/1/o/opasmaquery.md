@@ -1,4 +1,5 @@
 ---
+
 title: "opasmaquery(1)"
 name: "opasmaquery"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-opasmaquery/"
 description: "opasmaquery"
 ---
 
-<h2>NAME</h2>
 <p> opasmaquery </p>
 <p> <code>(All)</code> Performs Intel(R) Omni-Path Architecture-defined SMA queries and displays the resulting response. Each query is issued directly to the SMA and does not involve SM interaction.</p>
 <h2>Syntax</h2>

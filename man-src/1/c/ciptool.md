@@ -1,4 +1,5 @@
 ---
+
 title: "ciptool(1)"
 name: "ciptool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ciptool/"
 description: "ciptool – Bluetooth Common ISDN Access Profile (CIP)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ciptool &#8211; Bluetooth Common ISDN Access Profile (CIP) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ciptool</code> [<i>OPTIONS</i>] <i>COMMANDS</i></p>

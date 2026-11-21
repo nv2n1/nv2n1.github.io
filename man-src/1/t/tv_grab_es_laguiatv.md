@@ -1,4 +1,5 @@
 ---
+
 title: "tv_grab_es_laguiatv(1)"
 name: "tv_grab_es_laguiatv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tv_grab_es_laguiatv/"
 description: "tv_grab_es_laguiatv – Alternative TV grabber for Spain."
 ---
 
-<h2 class="name">NAME</h2>
 <p> tv_grab_es_laguiatv &#8211; Alternative TV grabber for Spain. </p>
 <h2>SYNOPSIS</h2>
 <p> tv_grab_es_laguiatv &#8211;help </p>

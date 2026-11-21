@@ -1,4 +1,5 @@
 ---
+
 title: "futimens(3)"
 name: "futimens"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-futimens/"
 description: "utimensat, futimens – change file timestamps with nanosecond precision"
 ---
 
-<h2 class="name">NAME</h2>
 <p> utimensat, futimens &#8211; change file timestamps with nanosecond precision </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

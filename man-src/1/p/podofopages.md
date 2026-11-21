@@ -1,4 +1,5 @@
 ---
+
 title: "podofopages(1)"
 name: "podofopages"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-podofopages/"
 description: "podofopages – move and delete pages in a PDF document"
 ---
 
-<h2 class="name">NAME</h2>
 <p> podofopages &#8211; move and delete pages in a PDF document</p>
 <h2>SYNOPSIS</h2>
 <p> <code>podofopages</code> [&#8211;delete] [&#8211;move] [inputfile] [outputfile] </p>

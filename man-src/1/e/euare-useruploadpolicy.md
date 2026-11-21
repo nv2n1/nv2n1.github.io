@@ -1,4 +1,5 @@
 ---
+
 title: "euare-useruploadpolicy(1)"
 name: "euare-useruploadpolicy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-useruploadpolicy/"
 description: "euare-useruploadpolicy – Attach a policy to a user"
 ---
 
-<h2>NAME</h2>
 <p> euare-useruploadpolicy &#8211; Attach a policy to a user</p>
 <h2>SYNOPSIS</h2>
 <p> euare-useruploadpolicy <code>-p</code> POLICY (<code>-o</code> POLICY_CONTENT | <code>-f</code> FILE)</p>

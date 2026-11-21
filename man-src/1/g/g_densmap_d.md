@@ -1,4 +1,5 @@
 ---
+
 title: "g_densmap_d(1)"
 name: "g_densmap_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_densmap_d/"
 description: "g_densmap – calculates 2D planar or axial-radial density maps"
 ---
 
-<h2>NAME</h2>
 <p> g_densmap &#8211; calculates 2D planar or axial-radial density maps </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

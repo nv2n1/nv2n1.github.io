@@ -1,4 +1,5 @@
 ---
+
 title: "msguntypot(1)"
 name: "msguntypot"
 section: "1"
@@ -6,10 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-msguntypot/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- msguntypot - update po files when a typo is fixed in pot file 
+msguntypot - update po files when a typo is fixed in pot file 
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "xorg-x11-fonts-update-dirs(1)"
 name: "xorg-x11-fonts-update-dirs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xorg-x11-fonts-update-dirs/"
 description: "xorg-x11-fonts-update-dirs – update X11 font directories"
 ---
 
-<h2>NAME</h2>
 <p> xorg-x11-fonts-update-dirs &#8211; update X11 font directories</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xorg-x11-fonts-update-dirs [&#8211;skip-fontscale] [&#8211;need-ttmkfdir] path</code></p>

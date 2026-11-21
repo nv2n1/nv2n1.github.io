@@ -1,4 +1,5 @@
 ---
+
 title: "gsymcheck(1)"
 name: "gsymcheck"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gsymcheck/"
 description: "gsymcheck – gEDA/gaf Symbol Checker"
 ---
 
-<h2>NAME</h2>
 <p> gsymcheck &#8211; gEDA/gaf Symbol Checker</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gsymcheck</code> [-h] [-v] [-q] symbol1 [&#8230; symbolN]</p>

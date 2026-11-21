@@ -1,4 +1,5 @@
 ---
+
 title: "hashdeep(1)"
 name: "hashdeep"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hashdeep/"
 description: "hashdeep – Compute, compare, or audit multiple message digests"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hashdeep &#8211; Compute, compare, or audit multiple message digests</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hashdeep </code> -V | -h<br />

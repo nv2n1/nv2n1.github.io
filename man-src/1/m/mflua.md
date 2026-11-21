@@ -1,4 +1,5 @@
 ---
+
 title: "mflua(1)"
 name: "mflua"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mflua/"
 description: "mflua, mflua-nowin, mfluajit, mfluajit-nowin – implementation of META-FONT with Lua embedded for better extraction of information from METAFONT."
 ---
 
-<h2 class="name">NAME</h2>
 <p> mflua, mflua-nowin, mfluajit, mfluajit-nowin &#8211; implementation of META-FONT with Lua embedded for better extraction of information from METAFONT. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mflua</code> [<i>,OPTION/</i>]&#8230; [<i>,MFNAME/</i>[<i>,.mf/</i>]] [<i>,COMMANDS/</i>]<br />

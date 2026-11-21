@@ -1,4 +1,5 @@
 ---
+
 title: "pw-play(1)"
 name: "pw-play"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pw-play/"
 description: "pw-cat – Play and record media with PipeWire"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pw-cat &#8211; Play and record media with PipeWire </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

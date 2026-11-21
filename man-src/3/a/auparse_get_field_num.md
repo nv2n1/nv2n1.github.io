@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_get_field_num(3)"
 name: "auparse_get_field_num"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_get_field_num/"
 description: "auparse_get_field_num – get current field cursor location"
 ---
 
-<h2>NAME</h2>
 <p> auparse_get_field_num &#8211; get current field cursor location</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fmemopen(3)"
 name: "fmemopen"
 section: "3"
@@ -6,7 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-fmemopen/"
 description: "fmemopen – open memory as stream"
 ---
-<h2 class="name">NAME</h2>
+
 <p> fmemopen - open memory as stream </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "go-mod(1)"
 name: "go-mod"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-go-mod/"
 description: "go-mod – module maintenance"
 ---
 
-<h2 class="name">NAME</h2>
 <p> go-mod &#8211; module maintenance </p>
 <h2>SYNOPSIS</h2>
 <p> <code>go mod</code> <i>command</i> [<i>arguments</i>]</p>

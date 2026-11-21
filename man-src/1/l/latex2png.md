@@ -1,4 +1,5 @@
 ---
+
 title: "latex2png(1)"
 name: "latex2png"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-latex2png/"
 description: "latex2png – manual page for latex2png 1.1"
 ---
 
-<h2>NAME</h2>
 <p> latex2png &#8211; manual page for latex2png 1.1</p>
 <h2>DESCRIPTION</h2>
 <p> latex2png <code>&#8212;</code> Convert a LaTeX file to a PNG image </p>

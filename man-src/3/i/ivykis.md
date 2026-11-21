@@ -1,4 +1,5 @@
 ---
+
 title: "ivykis(3)"
 name: "ivykis"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ivykis/"
 description: "ivykis – library for asynchronous I/O readiness notification"
 ---
 
-<h2>NAME</h2>
 <p> ivykis &#8211; library for asynchronous I/O readiness notification</p>
 <h2>DESCRIPTION</h2>
 <p> ivykis is a library for asynchronous I/O readiness notification. It is a thin, portable wrapper around OS-provided mechanisms such as <code><a href="/docs/linux/man/2-epoll_create/">epoll_create</a></code>(2), <code>kqueue</code>(2), <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2), <code>poll</code>(7d) (/dev/poll) and <code>port_create</code>(3C). </p>

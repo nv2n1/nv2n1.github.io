@@ -1,4 +1,5 @@
 ---
+
 title: "finit_module(2)"
 name: "finit_module"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-finit_module/"
 description: "init_module, finit_module – load a kernel module"
 ---
 
-<h2 class="name">NAME</h2>
 <p> init_module, finit_module &#8211; load a kernel module </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "softhsm2-migrate(1)"
 name: "softhsm2-migrate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-softhsm2-migrate/"
 description: "softhsm2-migrate – SoftHSM v1 migration tool"
 ---
 
-<h2>NAME</h2>
 <p> softhsm2-migrate &#8211; SoftHSM v1 migration tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>softhsm2-migrate &#8211;db</code> <i>path</i> <code>&#8211;slot</code> <i>number</i> [<code>&#8211;pin</code> <i>PIN</i> <code>&#8211;no-public-key]</code></p>

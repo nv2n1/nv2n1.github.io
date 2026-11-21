@@ -1,4 +1,5 @@
 ---
+
 title: "dnsscope(1)"
 name: "dnsscope"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dnsscope/"
 description: "dnsscope – A PowerDNS nameserver debugging tool"
 ---
 
-<h2>NAME</h2>
 <p> dnsscope &#8211; A PowerDNS nameserver debugging tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dnsscope </code><i>[infile]</i></p>

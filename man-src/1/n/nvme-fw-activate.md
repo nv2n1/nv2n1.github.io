@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-fw-activate(1)"
 name: "nvme-fw-activate"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-fw-activate/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nvme-fw-activate - Used to verify and commit a firmware image. 
+nvme-fw-activate - Used to verify and commit a firmware image. 
 
 <h2>SYNOPSIS</h2>
 

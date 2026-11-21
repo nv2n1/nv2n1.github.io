@@ -1,4 +1,5 @@
 ---
+
 title: "modpods(1)"
 name: "modpods"
 section: "1"
@@ -6,10 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-modpods/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- modpods - print out paths for the standard modules 
+modpods - print out paths for the standard modules 
 
 <h2>DESCRIPTION</h2>
 

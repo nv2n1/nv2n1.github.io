@@ -1,4 +1,5 @@
 ---
+
 title: "aa_resize(3)"
 name: "aa_resize"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_resize/"
 description: "aa_resize – resize functions"
 ---
 
-<h2>NAME</h2>
 <p> aa_resize &#8211; resize functions</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

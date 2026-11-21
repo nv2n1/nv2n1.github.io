@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-documents(1)"
 name: "gnome-documents"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnome-documents/"
 description: "gnome-documents – A document manager application for GNOME"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gnome-documents &#8211; A document manager application for GNOME </p>
 <h2>SYNOPSIS</h2>
 <dl>

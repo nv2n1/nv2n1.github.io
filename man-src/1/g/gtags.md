@@ -1,4 +1,5 @@
 ---
+
 title: "gtags(1)"
 name: "gtags"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gtags/"
 description: "gtags – create tag files for global."
 ---
 
-<h2>NAME</h2>
 <p> gtags &#8211; create tag files for global.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gtags</code> [-ciIOqvw][-f <i>file</i>][-n <i>number</i>][<i>dbpath</i>] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "catgets(3)"
 name: "catgets"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-catgets/"
 description: "catgets – get message from a message catalog"
 ---
 
-<h2 class="name">NAME</h2>
 <p> catgets &#8211; get message from a message catalog </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

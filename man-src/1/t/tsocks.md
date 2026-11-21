@@ -1,4 +1,5 @@
 ---
+
 title: "tsocks(1)"
 name: "tsocks"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tsocks/"
 description: "tsocks – Shell wrapper to simplify the use of the"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>tsocks</code> &#8211; Shell wrapper to simplify the use of the </p>
 <p><a href="/docs/linux/man/8-tsocks/">tsocks</a>(8) library to transparently allow an application to use a SOCKS proxy</p>
 <h2>SYNOPSIS</h2>

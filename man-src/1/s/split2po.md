@@ -1,4 +1,5 @@
 ---
+
 title: "split2po(1)"
 name: "split2po"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-split2po/"
 description: "split2po – Creates a po file from two DocBook XML files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> split2po &#8211; Creates a po file from two DocBook XML files </p>
 <h2>SYNOPSIS</h2>
 <dl>

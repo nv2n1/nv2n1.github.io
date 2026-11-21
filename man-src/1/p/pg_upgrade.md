@@ -1,4 +1,5 @@
 ---
+
 title: "pg_upgrade(1)"
 name: "pg_upgrade"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pg_upgrade/"
 description: "pg_upgrade – upgrade a PostgreSQL server instance"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pg_upgrade &#8211; upgrade a PostgreSQL server instance </p>
 <h2>SYNOPSIS</h2>
 <dl>

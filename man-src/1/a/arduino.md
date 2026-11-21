@@ -1,4 +1,5 @@
 ---
+
 title: "arduino(1)"
 name: "arduino"
 section: "1"
@@ -6,9 +7,7 @@ letter: "a"
 url: "/docs/linux/man/1-arduino/"
 ---
 
-<h2>NAME</h2>
-
- arduino - An IDE for Arduino-compatible electronics prototyping platforms
+arduino - An IDE for Arduino-compatible electronics prototyping platforms
 
 <h2>SYNOPSIS</h2>
 

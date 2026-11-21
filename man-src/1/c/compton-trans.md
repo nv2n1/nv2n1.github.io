@@ -1,4 +1,5 @@
 ---
+
 title: "compton-trans(1)"
 name: "compton-trans"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-compton-trans/"
 description: "compton-trans – an opacity setter tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> compton-trans &#8211; an opacity setter tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>compton-trans</code> [-w <i>WINDOW_ID</i>] [-n <i>WINDOW_NAME</i>] [-c] [-s] <i>OPACITY</i></p>

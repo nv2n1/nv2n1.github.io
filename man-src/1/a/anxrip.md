@@ -1,4 +1,5 @@
 ---
+
 title: "anxrip(1)"
 name: "anxrip"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-anxrip/"
 description: "anxrip — Extract annotations and data tracks from annodexed media"
 ---
 
-<h2>NAME</h2>
 <p> anxrip &#8212; Extract annotations and data tracks from annodexed media<br />
 &nbsp;<wbr></p>
 <h2>SYNOPSIS</h2>

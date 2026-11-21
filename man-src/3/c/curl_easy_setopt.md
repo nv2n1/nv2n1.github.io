@@ -1,4 +1,5 @@
 ---
+
 title: "curl_easy_setopt(3)"
 name: "curl_easy_setopt"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-curl_easy_setopt/"
 description: "curl_easy_setopt – set options for a curl easy handle"
 ---
 
-<h2>NAME</h2>
 <p> curl_easy_setopt &#8211; set options for a curl easy handle</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;curl/curl.h&gt; </p>

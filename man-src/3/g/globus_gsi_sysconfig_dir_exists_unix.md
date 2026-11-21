@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gsi_sysconfig_dir_exists_unix(3)"
 name: "globus_gsi_sysconfig_dir_exists_unix"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gsi_sysconfig_dir_exists_unix/"
 description: "Functions for UNIX platforms –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Functions for UNIX platforms &#8211; </p>
 <h3>Functions</h3>
 <p> globus_result_t <code>globus_gsi_sysconfig_set_key_permissions_unix</code> (char *filename)<br />

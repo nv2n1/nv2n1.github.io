@@ -1,4 +1,5 @@
 ---
+
 title: "osinfo-install-script(1)"
 name: "osinfo-install-script"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-osinfo-install-script/"
 description: "osinfo-install-script – generate a script for automated installation"
 ---
 
-<h2 class="name">NAME</h2>
 <p> osinfo-install-script &#8211; generate a script for automated installation </p>
 <h2>SYNOPSIS</h2>
 <p> osinfo-install-script [<font SIZE="-1">OPTIONS&#8230;</font>] MEDIA-FILE|OS-ID</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_bool(3)"
 name: "bson_iter_bool"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_iter_bool/"
 description: "bson_iter_bool() – The bson_iter_bool()function shall return the boolean value of a BSON_TYPE_BOOL element. It is a programming error to call this function on an element other than BSON_TYPE_BOOL. ..."
 ---
 
-<h2>NAME</h2>
 <p> bson_iter_bool() &#8211; The bson_iter_bool()function shall return the boolean value of a BSON_TYPE_BOOL element. It is a programming error to call this function on an element other than BSON_TYPE_BOOL. You can check this with bson_iter_type() or BSON_ITER_HOLDS_BOOL().</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

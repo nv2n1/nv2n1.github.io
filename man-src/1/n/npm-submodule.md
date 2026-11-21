@@ -1,4 +1,5 @@
 ---
+
 title: "npm-submodule(1)"
 name: "npm-submodule"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-npm-submodule/"
 description: "npm-submodule — Add a package as a git submodule"
 ---
 
-<h2>NAME</h2>
 <p> <code>npm-submodule</code> &#8212; Add a package as a git submodule</p>
 <h2>SYNOPSIS</h2>
 <pre>

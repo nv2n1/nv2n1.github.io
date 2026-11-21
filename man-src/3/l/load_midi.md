@@ -1,4 +1,5 @@
 ---
+
 title: "load_midi(3)"
 name: "load_midi"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-load_midi/"
 description: "load_midi – Loads a MIDI file. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> load_midi &#8211; Loads a MIDI file. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

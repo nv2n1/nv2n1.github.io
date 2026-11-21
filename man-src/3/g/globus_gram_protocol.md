@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gram_protocol(3)"
 name: "globus_gram_protocol"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gram_protocol/"
 description: "GRAM Protocol –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> GRAM Protocol &#8211; </p>
 <p> GRAM Protocol.</p>
 <h3>Modules</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-harvest-pstoreoops(1)"
 name: "abrt-harvest-pstoreoops"
 section: "1"
@@ -6,10 +7,7 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-harvest-pstoreoops/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- abrt-harvest-pstoreoops - Reconstruct oops from /sys/fs/pstore/* files, create ABRT problems and remove the files 
+abrt-harvest-pstoreoops - Reconstruct oops from /sys/fs/pstore/* files, create ABRT problems and remove the files 
 
 <h2>SYNOPSIS</h2>
 

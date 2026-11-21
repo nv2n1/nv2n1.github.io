@@ -1,4 +1,5 @@
 ---
+
 title: "stg-clone(1)"
 name: "stg-clone"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-stg-clone/"
 description: "stg-clone – Make a local clone of a remote repository"
 ---
 
-<h2 class="name">NAME</h2>
 <p> stg-clone &#8211; Make a local clone of a remote repository </p>
 <h2>SYNOPSIS</h2>
 <pre>

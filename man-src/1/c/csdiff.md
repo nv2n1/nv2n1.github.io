@@ -1,4 +1,5 @@
 ---
+
 title: "csdiff(1)"
 name: "csdiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-csdiff/"
 description: "csdiff – manual page for csdiff 1.3.2"
 ---
 
-<h2>NAME</h2>
 <p> csdiff &#8211; manual page for csdiff 1.3.2</p>
 <h2>SYNOPSIS</h2>
 <p> <code>csdiff</code> [<i>options</i>] <i>old.err new.err, where options are:</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "thinkjettopbm(1)"
 name: "thinkjettopbm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-thinkjettopbm/"
 description: "thinkjettopbm – convert HP ThinkJet printer commands file to PBM"
 ---
 
-<h2 class="name">NAME</h2>
 <p> thinkjettopbm &#8211; convert HP ThinkJet printer commands file to PBM </p>
 <h2>SYNOPSIS</h2>
 <p> <code>thinkjettopbm</code> [<i>-d</i>] [<i>thinkjet_file</i>] </p>

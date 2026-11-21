@@ -1,4 +1,5 @@
 ---
+
 title: "elektra-keyvalue(3)"
 name: "elektra-keyvalue"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-elektra-keyvalue/"
 description: "Key :: Value Manipulation Methods –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Key :: Value Manipulation Methods &#8211; </p>
 <p> Methods to do various operations on Key values.</p>
 <h3>Functions</h3>

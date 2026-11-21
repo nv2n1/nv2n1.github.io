@@ -1,4 +1,5 @@
 ---
+
 title: "storescp(1)"
 name: "storescp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-storescp/"
 description: "storescp – DICOM storage (C-STORE) SCP"
 ---
 
-<h2 class="name">NAME</h2>
 <p> storescp &#8211; DICOM storage (C-STORE) SCP </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

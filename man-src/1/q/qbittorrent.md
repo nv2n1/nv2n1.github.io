@@ -1,4 +1,5 @@
 ---
+
 title: "qbittorrent(1)"
 name: "qbittorrent"
 section: "1"
@@ -6,12 +7,7 @@ letter: "q"
 url: "/docs/linux/man/1-qbittorrent/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- qBittorrent - a Bittorrent client written in C++ / Qt 
+qBittorrent - a Bittorrent client written in C++ / Qt 
 
 <h2>SYNOPSIS</h2>
 

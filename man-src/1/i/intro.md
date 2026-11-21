@@ -1,4 +1,5 @@
 ---
+
 title: "intro(1)"
 name: "intro"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-intro/"
 description: "intro – introduction to user commands"
 ---
 
-<h2 class="name">NAME</h2>
 <p> intro &#8211; introduction to user commands </p>
 <h2>DESCRIPTION</h2>
 <p> Section 1 of the manual describes user commands and tools, for example, file manipulation tools, shells, compilers, web browsers, file and image viewers and editors, and so on.</p>

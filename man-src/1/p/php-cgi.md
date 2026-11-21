@@ -1,4 +1,5 @@
 ---
+
 title: "php-cgi(1)"
 name: "php-cgi"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-php-cgi/"
 description: "php – PHP Command Line Interface ‘CLI’"
 ---
 
-<h2>NAME</h2>
 <p> php &#8211; PHP Command Line Interface &#8216;CLI&#8217; </p>
 <p> php-cgi &#8211; PHP Common Gateway Interface &#8216;CGI&#8217; command</p>
 <h2>SYNOPSIS</h2>

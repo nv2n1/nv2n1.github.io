@@ -1,4 +1,5 @@
 ---
+
 title: "pstoedit(1)"
 name: "pstoedit"
 section: "1"
@@ -6,7 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-pstoedit/"
 description: "pstoedit – a tool converting PostScript and PDF files into various vector graphic formats"
 ---
-<h2 class="name">NAME</h2>
+
 <p> pstoedit - a tool converting PostScript and PDF files into various vector graphic formats  </p>
 <h2>SYNOPSIS</h2>
 <h3>FROM THE COMMAND SHELL</h3>

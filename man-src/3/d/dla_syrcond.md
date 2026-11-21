@@ -1,4 +1,5 @@
 ---
+
 title: "dla_syrcond(3)"
 name: "dla_syrcond"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dla_syrcond/"
 description: "dla_syrcond.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dla_syrcond.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

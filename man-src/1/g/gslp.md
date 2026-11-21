@@ -1,4 +1,5 @@
 ---
+
 title: "gslp(1)"
 name: "gslp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gslp/"
 description: "gslp – Format and print text using ghostscript gsbj – Format and print text for BubbleJet printer using ghostscript gsdj – Format and print text for DeskJet printer using ghostscript gsdj500 – Form..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> gslp &#8211; Format and print text using ghostscript<br />
  gsbj &#8211; Format and print text for BubbleJet printer using ghostscript<br />
  gsdj &#8211; Format and print text for DeskJet printer using ghostscript<br />

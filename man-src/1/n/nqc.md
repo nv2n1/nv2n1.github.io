@@ -1,4 +1,5 @@
 ---
+
 title: "nqc(1)"
 name: "nqc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nqc/"
 description: "nqc – A simple C-like language for Lego’s RCX programmable brick"
 ---
 
-<h2>NAME</h2>
 <p> nqc &#8211; A simple C-like language for Lego&#8217;s RCX programmable brick</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nqc</code> [ <i>options</i> ] [ <i>actions</i> ] [ <code>&#8211;</code> | <i>filename</i> ] [ <i>actions</i> ]</p>

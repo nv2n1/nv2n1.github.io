@@ -1,4 +1,5 @@
 ---
+
 title: "git-add(1)"
 name: "git-add"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-add/"
 description: "git-add – Add file contents to the index"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-add &#8211; Add file contents to the index </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

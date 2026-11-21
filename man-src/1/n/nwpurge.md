@@ -1,4 +1,5 @@
 ---
+
 title: "nwpurge(1)"
 name: "nwpurge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nwpurge/"
 description: "nwpurge – Permanently delete previously erased files"
 ---
 
-<h2>NAME</h2>
 <p> nwpurge &#8211; Permanently delete previously erased files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nwpurge</code> [ <code>-h</code> ] [ <code>-a</code> ] [ <code>-l</code> ] [ <code>-s</code> ] [ <code>directory</code> ] </p>

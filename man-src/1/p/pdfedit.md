@@ -1,4 +1,5 @@
 ---
+
 title: "pdfedit(1)"
 name: "pdfedit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pdfedit/"
 description: "pdfedit – Editor for PDF files"
 ---
 
-<h2>NAME</h2>
 <p> pdfedit &#8211; Editor for PDF files</p>
 <h2>SYNOPSIS</h2>
 <p> pdfedit [file(s)] [&#8211;help] [&#8211;version] [-d (n)] [-console] [-script (filename)] [-run (filename)] [-eval (code)] [-s (filename)] [&#8211;]</p>

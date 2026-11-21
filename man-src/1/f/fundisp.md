@@ -1,4 +1,5 @@
 ---
+
 title: "fundisp(1)"
 name: "fundisp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fundisp/"
 description: "fundisp – display data in a Funtools data file"
 ---
 
-<h2>NAME</h2>
 <p> <code>fundisp &#8211; display data in a Funtools data file</code></p>
 <h2>SYNOPSIS</h2>
 <p> fundisp [-f format] [-l] [-n] [-T] &lt;iname&gt; [columns|bitpix=n]</p>

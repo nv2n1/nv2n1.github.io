@@ -1,4 +1,5 @@
 ---
+
 title: "bdftopcf(1)"
 name: "bdftopcf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bdftopcf/"
 description: "bdftopcf – convert X font from Bitmap Distribution Format to Portable Compiled Format"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bdftopcf &#8211; convert X font from Bitmap Distribution Format to Portable Compiled Format </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bdftopcf</code> [ <code>-p</code><i>n</i> ] [ <code>-u</code><i>n</i> ] [ <code>-m</code> ] [ <code>-l</code> ] [ <code>-M</code> ] [ <code>-L</code> ] [ <code>-t</code> ] [ <code>-i</code> ] [ <code>-o</code> <i>outputfile</i> ] fontfile.bdf</p>

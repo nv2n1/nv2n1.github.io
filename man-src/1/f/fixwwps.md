@@ -1,4 +1,5 @@
 ---
+
 title: "fixwwps(1)"
 name: "fixwwps"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fixwwps/"
 description: "fixwwps – filter to fix Windows Write documents so PSUtils work"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fixwwps &#8211; filter to fix Windows Write documents so PSUtils work </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fixwwps </code> &lt; <i>WinWrite.ps</i> &gt; <i>Fixed.ps</i></p>

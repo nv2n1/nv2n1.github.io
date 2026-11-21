@@ -1,4 +1,5 @@
 ---
+
 title: "sndfile-cmp(1)"
 name: "sndfile-cmp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sndfile-cmp/"
 description: "sndfile-cmp – compares two audio files"
 ---
 
-<h2>NAME</h2>
 <p> sndfile-cmp &#8211; compares two audio files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sndfile-cmp</code> file1 file2</p>

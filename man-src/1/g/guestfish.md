@@ -1,4 +1,5 @@
 ---
+
 title: "guestfish(1)"
 name: "guestfish"
 section: "1"
@@ -6,7 +7,7 @@ letter: "g"
 url: "/docs/linux/man/1-guestfish/"
 description: "guestfish – the guest filesystem shell"
 ---
-<h2 class="name">NAME</h2>
+
 <p> guestfish - the guest filesystem shell </p>
 <h2>SYNOPSIS</h2>
 <pre><code> guestfish [--options] [commands]

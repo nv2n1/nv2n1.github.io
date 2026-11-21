@@ -1,4 +1,5 @@
 ---
+
 title: "gozilla(1)"
 name: "gozilla"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gozilla/"
 description: "gozilla – force mozilla to display specified source file."
 ---
 
-<h2>NAME</h2>
 <p> gozilla &#8211; force mozilla to display specified source file.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gozilla</code> [-b browser][-p][+no] file<br />

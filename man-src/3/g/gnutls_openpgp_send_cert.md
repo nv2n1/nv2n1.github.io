@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_openpgp_send_cert(3)"
 name: "gnutls_openpgp_send_cert"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_openpgp_send_cert/"
 description: "gnutls_openpgp_send_cert – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_openpgp_send_cert &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "hx509_verify_ctx_f_allow_default_trustanchors(3)"
 name: "hx509_verify_ctx_f_allow_default_trustanchors"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hx509_verify_ctx_f_allow_default_trustanchors/"
 description: "hx509 certificate functions –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hx509 certificate functions &#8211; </p>
 <h3>Functions</h3>
 <p> hx509_cert <code>hx509_cert_init</code> (hx509_context context, const Certificate *c, heim_error_t *error) </p>

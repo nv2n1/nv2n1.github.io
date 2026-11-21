@@ -1,4 +1,5 @@
 ---
+
 title: "beagle-ping(1)"
 name: "beagle-ping"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-beagle-ping/"
 description: "beagle-ping"
 ---
 
-<h2>NAME</h2>
 <p> beagle-ping</p>
 <h2>SYNOPSIS</h2>
 <p> <code>beagle-ping</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "nbprgstr(1)"
 name: "nbprgstr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nbprgstr/"
 description: "nbp, nbplkup, nbprgstr, nbpunrgstr – access NBP database"
 ---
 
-<h2 class="name">NAME</h2>
 <p> nbp, nbplkup, nbprgstr, nbpunrgstr &#8211; access NBP database </p>
 <h2>SYNOPSIS</h2>
 <dl>

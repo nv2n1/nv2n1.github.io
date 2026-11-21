@@ -1,4 +1,5 @@
 ---
+
 title: "blackscholesprocess(3)"
 name: "blackscholesprocess"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-blackscholesprocess/"
 description: "ql/processes/blackscholesprocess.hpp – Black-Scholes processes."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/processes/blackscholesprocess.hpp &#8211; Black-Scholes processes. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/stochasticprocess.hpp&gt;<br />

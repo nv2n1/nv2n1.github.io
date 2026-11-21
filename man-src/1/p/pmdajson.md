@@ -1,4 +1,5 @@
 ---
+
 title: "pmdajson(1)"
 name: "pmdajson"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdajson/"
 description: "pmdajson – JSON PMDA"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdajson</code> &#8211; JSON PMDA</p>
 <h2>DESCRIPTION</h2>
 <p> <code>pmdajson</code> is a Performance Metrics Domain Agent (PMDA) which exports metrics from arbitrary sources generating Javascript Object Notation (JSON) syntax, describing metric metadata and values. </p>

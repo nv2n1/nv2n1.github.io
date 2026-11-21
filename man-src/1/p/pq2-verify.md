@@ -1,4 +1,5 @@
 ---
+
 title: "pq2-verify(1)"
 name: "pq2-verify"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pq2-verify/"
 description: "pq2-verify – Extract the content one or more datasets from a dataset meta-repository based on ROOT files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pq2-verify &#8211; Extract the content one or more datasets from a dataset meta-repository based on ROOT files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pq2-verify</code> [options] dataset</p>

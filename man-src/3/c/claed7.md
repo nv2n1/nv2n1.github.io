@@ -1,4 +1,5 @@
 ---
+
 title: "claed7(3)"
 name: "claed7"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-claed7/"
 description: "claed7.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> claed7.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

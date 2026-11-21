@@ -1,4 +1,5 @@
 ---
+
 title: "salt-minion(1)"
 name: "salt-minion"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-salt-minion/"
 description: "salt-minion – salt-minion Documentation"
 ---
 
-<h2>NAME</h2>
 <p> salt-minion &#8211; salt-minion Documentation </p>
 <p> The Salt minion daemon, receives commands from a remote Salt master.</p>
 <h2>SYNOPSIS</h2>

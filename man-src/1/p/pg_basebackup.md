@@ -1,4 +1,5 @@
 ---
+
 title: "pg_basebackup(1)"
 name: "pg_basebackup"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pg_basebackup/"
 description: "pg_basebackup – take a base backup of a PostgreSQL cluster"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pg_basebackup &#8211; take a base backup of a PostgreSQL cluster </p>
 <h2>SYNOPSIS</h2>
 <dl>

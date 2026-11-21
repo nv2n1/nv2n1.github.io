@@ -1,4 +1,5 @@
 ---
+
 title: "freehdl-v2cc(1)"
 name: "freehdl-v2cc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-freehdl-v2cc/"
 description: "FreeHDL-V2CC – A VHDL to C++ converter."
 ---
 
-<h2>NAME</h2>
 <p> FreeHDL-V2CC &#8211; A VHDL to C++ converter.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>freehdl-v2cc</code> [<i>OPTION</i>] &#8230; [<i>FILE</i>] &#8230;</p>

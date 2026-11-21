@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gram_job_manager_script_interface(3)"
 name: "globus_gram_job_manager_script_interface"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gram_job_manager_script_interface/"
 description: "globus_gram_job_manager_script_interface – Job Manager Scheduler Interface The GRAM Job Manager interfaces with the job filesystems and scheduler through scheduler-specific Perl modules."
 ---
 
-<h2 class="name">NAME</h2>
 <p> globus_gram_job_manager_script_interface &#8211; Job Manager Scheduler Interface The GRAM Job Manager interfaces with the job filesystems and scheduler through scheduler-specific Perl modules. </p>
 <p> GRAM provides several Perl modules which can be used to implement scheduler-specific interfaces to the GRAM Job Manager. These are:</p>
 <dl>

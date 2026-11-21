@@ -1,4 +1,5 @@
 ---
+
 title: "g_mdmat_d(1)"
 name: "g_mdmat_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_mdmat_d/"
 description: "g_mdmat – calculates residue contact maps"
 ---
 
-<h2>NAME</h2>
 <p> g_mdmat &#8211; calculates residue contact maps </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

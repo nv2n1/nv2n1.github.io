@@ -1,4 +1,5 @@
 ---
+
 title: "ioctl_userfaultfd(2)"
 name: "ioctl_userfaultfd"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-ioctl_userfaultfd/"
 description: "ioctl_userfaultfd – create a file descriptor for handling page faults in user space"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ioctl_userfaultfd &#8211; create a file descriptor for handling page faults in user space </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

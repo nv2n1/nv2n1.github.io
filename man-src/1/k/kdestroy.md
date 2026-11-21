@@ -1,4 +1,5 @@
 ---
+
 title: "kdestroy(1)"
 name: "kdestroy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kdestroy/"
 description: "kdestroy – destroy Kerberos tickets"
 ---
 
-<h2>NAME</h2>
 <p> kdestroy &#8211; destroy Kerberos tickets</p>
 <h2>SYNOPSIS</h2>
 <p> <code>kdestroy</code> [<code>-A</code>] [<code>-q</code>] [<code>-c</code> <i>cache_name</i>]</p>

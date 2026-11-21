@@ -1,4 +1,5 @@
 ---
+
 title: "metapixel(1)"
 name: "metapixel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-metapixel/"
 description: "metapixel – generator for photomosaics"
 ---
 
-<h2>NAME</h2>
 <p> metapixel &#8211; generator for photomosaics</p>
 <h2>SYNOPSIS</h2>
 <dl>

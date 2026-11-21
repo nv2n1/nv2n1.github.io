@@ -1,4 +1,5 @@
 ---
+
 title: "wimlib-imagex(1)"
 name: "wimlib-imagex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wimlib-imagex/"
 description: "wimlib-imagex – Extract, create, modify, or mount a WIM (Windows Imaging Format) archive"
 ---
 
-<h2>NAME</h2>
 <p> wimlib-imagex &#8211; Extract, create, modify, or mount a WIM (Windows Imaging Format) archive</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wimlib-imagex append</code> <i>arguments&#8230;</i><br />

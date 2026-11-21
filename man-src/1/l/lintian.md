@@ -1,4 +1,5 @@
 ---
+
 title: "lintian(1)"
 name: "lintian"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lintian/"
 description: "lintian – Static analysis tool for Debian packages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lintian &#8211; Static analysis tool for Debian packages </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lintian</code> [<i>action</i>] [<i>options</i>] [<i>packages</i>] &#8230;</p>

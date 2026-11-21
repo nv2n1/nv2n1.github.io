@@ -1,4 +1,5 @@
 ---
+
 title: "hqx2bin(1)"
 name: "hqx2bin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hqx2bin/"
 description: "megatron, unhex, unbin, unsingle, hqx2bin, single2bin, macbinary – Macintosh file format transformer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> megatron, unhex, unbin, unsingle, hqx2bin, single2bin, macbinary &#8211; Macintosh file format transformer </p>
 <h2>SYNOPSIS</h2>
 <dl>

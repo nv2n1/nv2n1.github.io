@@ -1,4 +1,5 @@
 ---
+
 title: "yum-builddep(1)"
 name: "yum-builddep"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-yum-builddep/"
 description: "yum-builddep – install missing dependencies for building an RPM package"
 ---
 
-<h2>NAME</h2>
 <p> yum-builddep &#8211; install missing dependencies for building an RPM package</p>
 <h2>SYNOPSIS</h2>
 <p> <code>yum-builddep</code> package </p>

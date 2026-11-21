@@ -1,4 +1,5 @@
 ---
+
 title: "geoiplookup(1)"
 name: "geoiplookup"
 section: "1"
@@ -6,10 +7,7 @@ letter: "g"
 url: "/docs/linux/man/1-geoiplookup/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- geoiplookup - look up country using IP Address or hostname 
+geoiplookup - look up country using IP Address or hostname 
 
 <h2>SYNOPSIS</h2>
 

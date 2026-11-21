@@ -1,4 +1,5 @@
 ---
+
 title: "byobu-layout(1)"
 name: "byobu-layout"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-byobu-layout/"
 description: "byobu-layout – Save and restore byobu-tmux laouts"
 ---
 
-<h2>NAME</h2>
 <p> byobu-layout &#8211; Save and restore byobu-tmux laouts </p>
 <h2>USAGE</h2>
 <p> byobu-layout [save|restore] [name] </p>

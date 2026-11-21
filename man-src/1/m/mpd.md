@@ -1,4 +1,5 @@
 ---
+
 title: "mpd(1)"
 name: "mpd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mpd/"
 description: "MPD – A daemon for playing music"
 ---
 
-<h2>NAME</h2>
 <p> MPD &#8211; A daemon for playing music</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mpd</code> [<i>options</i>] [<i>CONF_FILE</i>]</p>

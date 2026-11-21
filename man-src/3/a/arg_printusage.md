@@ -1,4 +1,5 @@
 ---
+
 title: "arg_printusage(3)"
 name: "arg_printusage"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-arg_printusage/"
 description: "getarg arg_printusage – collect command line options"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>getarg</code> <code>arg_printusage</code> &#8211; collect command line options </p>
 <h2>SYNOPSIS</h2>
 <p> In getarg.h Ft int Fn getarg struct getargs *args size_t num_args int argc char **argv int *optind Ft void Fn arg_printusage struct getargs *args size_t num_args const char *progname const char *extra_string</p>

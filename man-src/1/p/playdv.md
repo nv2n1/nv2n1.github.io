@@ -1,4 +1,5 @@
 ---
+
 title: "playdv(1)"
 name: "playdv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-playdv/"
 description: "playdv – display digital video streams on screen"
 ---
 
-<h2>NAME</h2>
 <p> playdv &#8211; display digital video streams on screen</p>
 <h2>SYNOPSIS</h2>
 <p> <code>playdv</code> [ <code>options</code> ] <i>file</i></p>

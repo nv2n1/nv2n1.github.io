@@ -1,4 +1,5 @@
 ---
+
 title: "nwvolinfo(1)"
 name: "nwvolinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nwvolinfo/"
 description: "nwvolinfo – Diplay info on NetWare Volumes"
 ---
 
-<h2>NAME</h2>
 <p> nwvolinfo &#8211; Diplay info on NetWare Volumes</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nwvolinfo</code> [ <code>-h</code> ] [ <code>-S</code> <i>server</i> ] [ <code>-U</code> <i>user name</i> ] [ <code>-P</code> <i>password</i> | <code>-n</code> ] [ <code>-C</code> ] [ <code>-v</code> <i>volume</i> ] [ <code>-N</code> ] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ode(1)"
 name: "ode"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ode/"
 description: "ode – numerical solution of ordinary differential equations"
 ---
 
-<h2>NAME</h2>
 <p> ode &#8211; numerical solution of ordinary differential equations</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ode</code> [ <i>options</i> ] [ <i>file</i> ]</p>

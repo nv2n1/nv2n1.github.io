@@ -1,4 +1,5 @@
 ---
+
 title: "bibmradd(1)"
 name: "bibmradd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bibmradd/"
 description: "bibmradd.pl – add MR numbers to papers in a given bib file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bibmradd.pl &#8211; add MR numbers to papers in a given bib file </p>
 <h2>SYNOPSIS</h2>
 <p> bibmradd [-d] [<code>-f</code>] [<code>-e</code> 1|0] [<code>-o</code> <i>output</i>] <i>bib_file</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "bson_strdup_printf(3)"
 name: "bson_strdup_printf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_strdup_printf/"
 description: "bson_strdup_printf() – This function performs a printf style format but into a newly allocated string."
 ---
 
-<h2>NAME</h2>
 <p> bson_strdup_printf() &#8211; This function performs a printf style format but into a newly allocated string.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

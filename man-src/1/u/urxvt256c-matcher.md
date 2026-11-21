@@ -1,4 +1,5 @@
 ---
+
 title: "urxvt256c-matcher(1)"
 name: "urxvt256c-matcher"
 section: "1"
@@ -6,10 +7,7 @@ letter: "u"
 url: "/docs/linux/man/1-urxvt256c-matcher/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- matcher - match strings in terminal output and change their rendition 
+matcher - match strings in terminal output and change their rendition 
 
 <h2>DESCRIPTION</h2>
 

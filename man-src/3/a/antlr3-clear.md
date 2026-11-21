@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-clear(3)"
 name: "antlr3-clear"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3-clear/"
 description: "ANTLR3_VECTOR_struct –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ANTLR3_VECTOR_struct &#8211; </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3collections.h">antlr3collections.h</a>&gt;</p>

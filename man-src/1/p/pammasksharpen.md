@@ -1,4 +1,5 @@
 ---
+
 title: "pammasksharpen(1)"
 name: "pammasksharpen"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pammasksharpen/"
 description: "pammasksharpen – Sharpen an image via an unsharp mask"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pammasksharpen &#8211; Sharpen an image via an unsharp mask</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pammasksharpen</code> [<code>-sharpness=</code><i>realnum</i>] [<code>-threshold=</code><i>realnum</i>] <i>maskfile</i> [<i>inputfile</i>] </p>

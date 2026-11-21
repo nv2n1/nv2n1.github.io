@@ -1,4 +1,5 @@
 ---
+
 title: "graph(3)"
 name: "graph"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-graph/"
 description: "libgraph – abstract graph library"
 ---
 
-<h2>NAME</h2>
 <p> <code>libgraph</code> &#8211; abstract graph library</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

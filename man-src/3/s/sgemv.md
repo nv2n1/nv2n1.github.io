@@ -1,4 +1,5 @@
 ---
+
 title: "sgemv(3)"
 name: "sgemv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sgemv/"
 description: "sgemv.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sgemv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

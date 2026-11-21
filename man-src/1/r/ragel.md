@@ -1,4 +1,5 @@
 ---
+
 title: "ragel(1)"
 name: "ragel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ragel/"
 description: "ragel – compile regular languages into executable state machines"
 ---
 
-<h2>NAME</h2>
 <p> ragel &#8211; compile regular languages into executable state machines</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ragel </code> [<i>options</i>] <i>file</i></p>

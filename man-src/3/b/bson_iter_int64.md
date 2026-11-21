@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_int64(3)"
 name: "bson_iter_int64"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_iter_int64/"
 description: "bson_iter_int64() – Fetches the value from a BSON_TYPE_INT64 field. You should verify that this is a BSON_TYPE_INT64 field before calling this function."
 ---
 
-<h2>NAME</h2>
 <p> bson_iter_int64() &#8211; Fetches the value from a BSON_TYPE_INT64 field. You should verify that this is a BSON_TYPE_INT64 field before calling this function.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

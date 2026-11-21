@@ -1,4 +1,5 @@
 ---
+
 title: "ck_ring_dequeue_spsc(3)"
 name: "ck_ring_dequeue_spsc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_ring_dequeue_spsc/"
 description: "ck_ring_dequeue_spsc – dequeue pointer from bounded FIFO"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_ring_dequeue_spsc</code> &#8211; dequeue pointer from bounded FIFO</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

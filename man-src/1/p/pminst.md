@@ -1,4 +1,5 @@
 ---
+
 title: "pminst(1)"
 name: "pminst"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pminst/"
 description: "pminst – find modules whose names match this pattern"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pminst &#8211; find modules whose names match this pattern </p>
 <h2>SYNOPSIS</h2>
 <p> pminst [<code>-s</code>] [<code>-l</code>] [<i>pattern</i>]</p>

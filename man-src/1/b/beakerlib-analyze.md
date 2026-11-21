@@ -1,4 +1,5 @@
 ---
+
 title: "beakerlib-analyze(1)"
 name: "beakerlib-analyze"
 section: "1"
@@ -6,10 +7,7 @@ letter: "b"
 url: "/docs/linux/man/1-beakerlib-analyze/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- BeakerLib - analyze - Analyzing test results 
+BeakerLib - analyze - Analyzing test results 
 
 <h2>DESCRIPTION</h2>
 

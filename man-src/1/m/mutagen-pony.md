@@ -1,4 +1,5 @@
 ---
+
 title: "mutagen-pony(1)"
 name: "mutagen-pony"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mutagen-pony/"
 description: "mutagen-pony – scan a collection of MP3 files"
 ---
 
-<h2>NAME</h2>
 <p> mutagen-pony &#8211; scan a collection of MP3 files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mutagen-pony</code> <i>directory</i> &#8230;</p>

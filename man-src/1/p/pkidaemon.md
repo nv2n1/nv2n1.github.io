@@ -1,4 +1,5 @@
 ---
+
 title: "pkidaemon(1)"
 name: "pkidaemon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pkidaemon/"
 description: "pkidaemon – provides status management of PKI instances"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>pkidaemon</code> &#8211; provides status management of PKI instances</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

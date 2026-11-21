@@ -1,4 +1,5 @@
 ---
+
 title: "mongoose(1)"
 name: "mongoose"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mongoose/"
 description: "mongoose – lightweight web server"
 ---
 
-<h2>NAME</h2>
 <p> <code>mongoose</code> &#8211; lightweight web server</p>
 <h2>SYNOPSIS</h2>
 <p> [<i>config_file</i> ]<br />

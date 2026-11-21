@@ -1,4 +1,5 @@
 ---
+
 title: "iv_event_raw_unregister(3)"
 name: "iv_event_raw_unregister"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-iv_event_raw_unregister/"
 description: "IV_EVENT_RAW_INIT, iv_event_raw_register, iv_event_raw_unregister, iv_event_raw_post – manage ivykis objects for event notification"
 ---
 
-<h2>NAME</h2>
 <p> IV_EVENT_RAW_INIT, iv_event_raw_register, iv_event_raw_unregister, iv_event_raw_post &#8211; manage ivykis objects for event notification</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;iv_event_raw.h&gt;</code> </p>

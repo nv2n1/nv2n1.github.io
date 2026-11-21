@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_sftp_readdir_ex(3)"
 name: "libssh2_sftp_readdir_ex"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_sftp_readdir_ex/"
 description: "libssh2_sftp_readdir_ex – read directory data from an SFTP handle"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_sftp_readdir_ex &#8211; read directory data from an SFTP handle</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

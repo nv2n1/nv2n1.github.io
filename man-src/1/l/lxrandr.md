@@ -1,4 +1,5 @@
 ---
+
 title: "lxrandr(1)"
 name: "lxrandr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lxrandr/"
 description: "lxrandr – a GTK+2 interface to XRandR for LXDE desktop."
 ---
 
-<h2 class="name">NAME</h2>
 <p> lxrandr &#8211; a GTK+2 interface to XRandR for LXDE desktop. </p>
 <h2>SYNOPSIS</h2>
 <dl>

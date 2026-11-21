@@ -1,4 +1,5 @@
 ---
+
 title: "ck_brlock(3)"
 name: "ck_brlock"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_brlock/"
 description: "ck_brlock_init ck_brlock_write_lock ck_brlock_write_unlock ck_brlock_write_trylock ck_brlock_read_register ck_brlock_read_unregister ck_brlock_read_lock ck_brlock_read_trylock ck_brlock_read_unlock..."
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_brlock_init</code> <code>ck_brlock_write_lock</code> <code>ck_brlock_write_unlock</code> <code>ck_brlock_write_trylock</code> <code>ck_brlock_read_register</code> <code>ck_brlock_read_unregister</code> <code>ck_brlock_read_lock</code> <code>ck_brlock_read_trylock</code> <code>ck_brlock_read_unlock</code> &#8211; big-reader locks</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

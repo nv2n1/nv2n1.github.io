@@ -1,4 +1,5 @@
 ---
+
 title: "mysqlreplicate(1)"
 name: "mysqlreplicate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysqlreplicate/"
 description: "mysqlreplicate – Set Up and Start Replication Between Two Servers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysqlreplicate &#8211; Set Up and Start Replication Between Two Servers </p>
 <h2>SYNOPSIS</h2>
 <dl>

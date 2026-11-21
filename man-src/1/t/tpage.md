@@ -1,4 +1,5 @@
 ---
+
 title: "tpage(1)"
 name: "tpage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tpage/"
 description: "Template::Tools::tpage – Process templates from command line"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Template::Tools::tpage &#8211; Process templates from command line </p>
 <h2>USAGE</h2>
 <pre><code>

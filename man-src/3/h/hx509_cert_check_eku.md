@@ -1,4 +1,5 @@
 ---
+
 title: "hx509_cert_check_eku(3)"
 name: "hx509_cert_check_eku"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hx509_cert_check_eku/"
 description: "hx509 certificate functions –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hx509 certificate functions &#8211; </p>
 <h3>Functions</h3>
 <p> hx509_cert <code>hx509_cert_init</code> (hx509_context context, const Certificate *c, heim_error_t *error) </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "kaya(1)"
 name: "kaya"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kaya/"
 description: "Kaya – Top-level interpreter for the kaya language"
 ---
 
-<h2>NAME</h2>
 <p> Kaya &#8211; Top-level interpreter for the kaya language</p>
 <h2>SYNOPSIS</h2>
 <p> <code>kaya</code> <i>FILE [-L DIRECTORY [-L &#8230;]] [-libdir DIRECTORY [-libdir &#8230;]] [-force] [-nochase] [-noprelude] [-nortchecks] [-noopts] [-htmldocs] [-xmldocs] [-static] [-profile] [-seedkey STRING] [-dumptac] [-dumpraw] [-dumptree] [-dumpsimpl] [-dumpeqns] [-dumpcg] [-dumpdeps] [-keepc] [-showgcc]</i></p>

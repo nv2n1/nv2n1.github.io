@@ -1,4 +1,5 @@
 ---
+
 title: "nxtrc(1)"
 name: "nxtrc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nxtrc/"
 description: "nxtrc – a program to interact with LEGO NXT via BlueTooth"
 ---
 
-<h2>NAME</h2>
 <p> nxtrc &#8211; a program to interact with LEGO NXT via BlueTooth</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nxtrc</code> [-s] </p>

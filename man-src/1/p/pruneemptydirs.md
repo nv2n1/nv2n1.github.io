@@ -1,4 +1,5 @@
 ---
+
 title: "pruneemptydirs(1)"
 name: "pruneemptydirs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pruneemptydirs/"
 description: "pruneemptydirs – Detects stale source directories in a CVS tree"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pruneemptydirs &#8211; Detects stale source directories in a CVS tree </p>
 <h2>SYNOPSIS</h2>
 <dl>

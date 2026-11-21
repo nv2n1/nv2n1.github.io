@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_rd_req_in_set_pac_check(3)"
 name: "krb5_rd_req_in_set_pac_check"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_rd_req_in_set_pac_check/"
 description: "Heimdal Kerberos 5 authentication functions –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Heimdal Kerberos 5 authentication functions &#8211; </p>
 <h3>Functions</h3>
 <p> KRB5_LIB_FUNCTION<br />

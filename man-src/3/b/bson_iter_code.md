@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_code(3)"
 name: "bson_iter_code"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_iter_code/"
 description: "bson_iter_code() – This function returns the contents of a BSON_TYPE_CODE field. The length of the string is stored in length if non-NULL."
 ---
 
-<h2>NAME</h2>
 <p> bson_iter_code() &#8211; This function returns the contents of a BSON_TYPE_CODE field. The length of the string is stored in length if non-NULL.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "wcsnrtombs(3)"
 name: "wcsnrtombs"
 section: "3"
@@ -6,8 +7,9 @@ letter: "w"
 url: "/docs/linux/man/3-wcsnrtombs/"
 description: "wcsnrtombs – convert a wide-character string to a multibyte string"
 ---
+
 <p>wcsnrtombs &#8211; convert a wide-character string to a multibyte string </p>
-<h2>SYNOPSIS</h2>
+
 <pre><code>
  #include &lt;wchar.h&gt; 
  size_t wcsnrtombs(char *  dest  , const wchar_t **  src  , size_t  nwc  , 

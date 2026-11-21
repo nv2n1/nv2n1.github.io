@@ -1,4 +1,5 @@
 ---
+
 title: "python-networkmanager(1)"
 name: "python-networkmanager"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-python-networkmanager/"
 description: "python-networkmanager – python-networkmanager Documentation"
 ---
 
-<h2>NAME</h2>
 <p> python-networkmanager &#8211; python-networkmanager Documentation </p>
 <p> NetworkManager provides a detailed and capable D-Bus interface on the system bus. You can use this interface to query NetworkManager about the overall state of the network and details of network devices like current IP addresses or DHCP options, and to activate and deactivate network connections. </p>
 <p> python-networkmanager takes this D-Bus interface and wraps D-Bus interfaces in classes and D-Bus properties in python properties. It also provides a command-line utility to inspect the configuration and (de-)activate connections.</p>

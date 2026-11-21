@@ -1,4 +1,5 @@
 ---
+
 title: "getaliasent(3)"
 name: "getaliasent"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getaliasent/"
 description: "setaliasent, endaliasent, getaliasent, getaliasent_r, getaliasbyname, getaliasbyname_r – read an alias entry"
 ---
 
-<h2 class="name">NAME</h2>
 <p> setaliasent, endaliasent, getaliasent, getaliasent_r, getaliasbyname, getaliasbyname_r &#8211; read an alias entry </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;aliases.h&gt;</code> </p>

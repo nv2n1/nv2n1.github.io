@@ -1,4 +1,5 @@
 ---
+
 title: "hivexsh(1)"
 name: "hivexsh"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hivexsh/"
 description: "hivexsh – Windows Registry hive shell"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hivexsh &#8211; Windows Registry hive shell </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

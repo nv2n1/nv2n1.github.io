@@ -1,4 +1,5 @@
 ---
+
 title: "flistxattr(2)"
 name: "flistxattr"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-flistxattr/"
 description: "listxattr, llistxattr, flistxattr – list extended attribute names"
 ---
 
-<h2 class="name">NAME</h2>
 <p> listxattr, llistxattr, flistxattr &#8211; list extended attribute names </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "perlnetware(1)"
 name: "perlnetware"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlnetware/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlnetware - Perl for NetWare 
+perlnetware - Perl for NetWare 
 
 <h2>DESCRIPTION</h2>
 

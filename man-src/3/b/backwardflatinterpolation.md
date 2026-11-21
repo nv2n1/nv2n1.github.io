@@ -1,4 +1,5 @@
 ---
+
 title: "backwardflatinterpolation(3)"
 name: "backwardflatinterpolation"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-backwardflatinterpolation/"
 description: "ql/math/interpolations/backwardflatinterpolation.hpp – backward-flat interpolation between discrete points"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/math/interpolations/backwardflatinterpolation.hpp &#8211; backward-flat interpolation between discrete points </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/interpolation.hpp&gt;<br />

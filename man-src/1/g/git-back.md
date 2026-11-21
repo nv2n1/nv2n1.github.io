@@ -1,4 +1,5 @@
 ---
+
 title: "git-back(1)"
 name: "git-back"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-back/"
 description: "git-back – Undo and Stage latest commits"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-back</code> &#8211; Undo and Stage latest commits</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-back</code> [&lt;commitcount&gt;]</p>

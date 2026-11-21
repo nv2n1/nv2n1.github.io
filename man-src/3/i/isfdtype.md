@@ -1,4 +1,5 @@
 ---
+
 title: "isfdtype(3)"
 name: "isfdtype"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-isfdtype/"
 description: "isfdtype – test file type of a file descriptor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> isfdtype &#8211; test file type of a file descriptor </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

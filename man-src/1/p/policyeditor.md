@@ -1,4 +1,5 @@
 ---
+
 title: "policyeditor(1)"
 name: "policyeditor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-policyeditor/"
 description: "policyeditor – view and modify security policy settings for javaws and the browser plugin"
 ---
 
-<h2 class="name">NAME</h2>
 <p> policyeditor &#8211; view and modify security policy settings for <code>javaws </code> and the <code>browser plugin</code></p>
 <h2>SYNOPSIS</h2>
 <p> <code>policyeditor </code><br />

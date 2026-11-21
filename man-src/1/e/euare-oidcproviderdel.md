@@ -1,4 +1,5 @@
 ---
+
 title: "euare-oidcproviderdel(1)"
 name: "euare-oidcproviderdel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-oidcproviderdel/"
 description: "euare-oidcproviderdel – Delete an OpenID Connect provider"
 ---
 
-<h2>NAME</h2>
 <p> euare-oidcproviderdel &#8211; Delete an OpenID Connect provider</p>
 <h2>SYNOPSIS</h2>
 <p> euare-oidcproviderdel [&#8211;as-account ACCOUNT] [-U URL]</p>

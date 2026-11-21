@@ -1,4 +1,5 @@
 ---
+
 title: "cal(1)"
 name: "cal"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cal/"
 description: "cal ncal – displays a calendar and the date of Easter"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>cal</code> <code>ncal</code> &#8211; displays a calendar and the date of Easter </p>
 <h2>SYNOPSIS</h2>
 <p> [-<code>31jy</code> ] [-<code>A </code><i>number</i> ] [-<code>B </code><i>number</i> ] [-<code>d </code><i>yyyy-mm</i> ] [[<i>month</i> ] <i>year</i> ]<br />

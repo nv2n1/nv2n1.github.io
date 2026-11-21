@@ -1,4 +1,5 @@
 ---
+
 title: "git-write-tree(1)"
 name: "git-write-tree"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-write-tree/"
 description: "git-write-tree – Create a tree object from the current index"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-write-tree &#8211; Create a tree object from the current index </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

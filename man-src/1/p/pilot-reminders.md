@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-reminders(1)"
 name: "pilot-reminders"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot-reminders/"
 description: "pilot-reminders – Exports your Palm Datebook database into a remind(1) data file format."
 ---
 
-<h2>NAME</h2>
 <p> pilot-reminders &#8211; Exports your Palm Datebook database into a remind(1) data file format.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>

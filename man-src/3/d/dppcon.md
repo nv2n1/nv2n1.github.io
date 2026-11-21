@@ -1,4 +1,5 @@
 ---
+
 title: "dppcon(3)"
 name: "dppcon"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dppcon/"
 description: "dppcon.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dppcon.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

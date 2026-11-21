@@ -1,4 +1,5 @@
 ---
+
 title: "log4cpp(3)"
 name: "log4cpp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-log4cpp/"
 description: "log4cpp –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> log4cpp &#8211; </p>
 <p> The top level namespace for all &#8216;Log for C++&#8217; types and classes.</p>
 <h2>SYNOPSIS</h2>

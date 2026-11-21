@@ -1,4 +1,5 @@
 ---
+
 title: "gmetric(1)"
 name: "gmetric"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gmetric/"
 description: "gmetric – manual page for Ganglia Custom Metric Utility"
 ---
 
-<h2>NAME</h2>
 <p> gmetric &#8211; manual page for Ganglia Custom Metric Utility</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gmetric</code> [<i>OPTIONS</i>]&#8230;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "euare-accountaliasdelete(1)"
 name: "euare-accountaliasdelete"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-accountaliasdelete/"
 description: "euare-accountaliasdelete – Delete an account’s alias, a.k.a. its account name"
 ---
 
-<h2>NAME</h2>
 <p> euare-accountaliasdelete &#8211; Delete an account&#8217;s alias, a.k.a. its account name</p>
 <h2>SYNOPSIS</h2>
 <p> euare-accountaliasdelete [&#8211;as-account ACCOUNT] [-U URL]</p>

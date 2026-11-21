@@ -1,4 +1,5 @@
 ---
+
 title: "rc(1)"
 name: "rc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rc/"
 description: "rc – shell"
 ---
 
-<h2>NAME</h2>
 <p> rc &#8211; shell</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rc</code> [<code>-deiIlnopsvx</code>] [<code>-c</code> <i>command</i>] [<i>arguments</i>]</p>

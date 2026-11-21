@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_hash(3)"
 name: "gnutls_hash"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_hash/"
 description: "gnutls_hash – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_hash &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/crypto.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "nightfall(1)"
 name: "nightfall"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nightfall/"
 description: "nightfall – binary star astronomy"
 ---
 
-<h2>NAME</h2>
 <p> nightfall &#8211; binary star astronomy</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nightfall </code> -h<br />

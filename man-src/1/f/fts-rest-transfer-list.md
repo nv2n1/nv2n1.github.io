@@ -1,4 +1,5 @@
 ---
+
 title: "fts-rest-transfer-list(1)"
 name: "fts-rest-transfer-list"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fts-rest-transfer-list/"
 description: "fts-rest-transfer-list"
 ---
 
-<h2>NAME</h2>
 <p> fts-rest-transfer-list</p>
 <h2>SYNOPIS</h2>
 <p> Usage: fts-rest-transfer-list [options]</p>

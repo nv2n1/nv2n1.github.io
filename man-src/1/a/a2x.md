@@ -1,4 +1,5 @@
 ---
+
 title: "a2x(1)"
 name: "a2x"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-a2x/"
 description: "a2x – A toolchain manager for AsciiDoc (converts Asciidoc text files to other file formats)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> a2x &#8211; A toolchain manager for AsciiDoc (converts Asciidoc text files to other file formats) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>a2x</code> [<i>OPTIONS</i>] <i>SOURCE_FILE</i></p>

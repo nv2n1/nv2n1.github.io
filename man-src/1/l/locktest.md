@@ -1,4 +1,5 @@
 ---
+
 title: "locktest(1)"
 name: "locktest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-locktest/"
 description: "locktest – Find differences in locking between two SMB servers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> locktest &#8211; Find differences in locking between two SMB servers </p>
 <h2>SYNOPSIS</h2>
 <dl>

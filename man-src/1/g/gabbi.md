@@ -1,4 +1,5 @@
 ---
+
 title: "gabbi(1)"
 name: "gabbi"
 section: "1"
@@ -6,9 +7,7 @@ letter: "g"
 url: "/docs/linux/man/1-gabbi/"
 ---
 
-<h2>NAME</h2>
-
- gabbi - Gabbi Documentation 
+gabbi - Gabbi Documentation 
 
  Gabbi tests are expressed in YAML as a series of HTTP requests with their expected response: 
 

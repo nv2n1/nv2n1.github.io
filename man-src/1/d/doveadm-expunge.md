@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-expunge(1)"
 name: "doveadm-expunge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-doveadm-expunge/"
 description: "doveadm-expunge – Expunge messages matching given search query"
 ---
 
-<h2>NAME</h2>
 <p> doveadm-expunge &#8211; Expunge messages matching given search query</p>
 <h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>expunge</code> [<code>-S</code> <i>socket_path</i>] [<code>-d</code>] <i>search_query</i><br />

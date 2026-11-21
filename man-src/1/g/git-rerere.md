@@ -1,4 +1,5 @@
 ---
+
 title: "git-rerere(1)"
 name: "git-rerere"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-rerere/"
 description: "git-rerere – Reuse recorded resolution of conflicted merges"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-rerere &#8211; Reuse recorded resolution of conflicted merges </p>
 <h2>SYNOPSIS</h2>
 <pre>

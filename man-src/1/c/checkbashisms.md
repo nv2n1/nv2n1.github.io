@@ -1,4 +1,5 @@
 ---
+
 title: "checkbashisms(1)"
 name: "checkbashisms"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-checkbashisms/"
 description: "checkbashisms – check for bashisms in /bin/sh scripts"
 ---
 
-<h2>NAME</h2>
 <p> checkbashisms &#8211; check for bashisms in /bin/sh scripts</p>
 <h2>SYNOPSIS</h2>
 <p> <code>checkbashisms</code> <i>script</i> &#8230;<br />

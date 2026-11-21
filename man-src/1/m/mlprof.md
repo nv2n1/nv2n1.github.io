@@ -1,4 +1,5 @@
 ---
+
 title: "mlprof(1)"
 name: "mlprof"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mlprof/"
 description: "mlprof – display profiling information for a MLton-compiled executable"
 ---
 
-<h2>NAME</h2>
 <p> <code>mlprof</code> &#8211; display profiling information for a MLton-compiled executable</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mlprof </code><i>[option &#8230;] a.out [mlmon.out &#8230;]</i></p>

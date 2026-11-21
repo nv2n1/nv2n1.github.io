@@ -1,4 +1,5 @@
 ---
+
 title: "gnotime(1)"
 name: "gnotime"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnotime/"
 description: "gnotime – GnoTime – a time tracker"
 ---
 
-<h2>NAME</h2>
 <p> gnotime &#8211; GnoTime &#8211; a time tracker</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnotime</code> [<code>&#8211;display</code> <i>displayname</i>] [<code>&#8211;geometry</code> <i>geometry</i>]</p>

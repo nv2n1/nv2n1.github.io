@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3input(3)"
 name: "antlr3input"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3input/"
 description: "include/antlr3input.h –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> include/antlr3input.h &#8211; </p>
 <p> Defines the basic structures used to manipulate character streams from any input source.</p>
 <h2>SYNOPSIS</h2>

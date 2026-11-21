@@ -1,4 +1,5 @@
 ---
+
 title: "attr_multi(3)"
 name: "attr_multi"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-attr_multi/"
 description: "attr_multi, attr_multif – manipulate multiple user attributes on a filesystem object at once"
 ---
 
-<h2>NAME</h2>
 <p> attr_multi, attr_multif &#8211; manipulate multiple user attributes on a filesystem object at once</p>
 <h2>C SYNOPSIS</h2>
 <pre><code>

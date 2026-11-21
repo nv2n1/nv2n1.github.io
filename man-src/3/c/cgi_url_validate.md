@@ -1,4 +1,5 @@
 ---
+
 title: "cgi_url_validate(3)"
 name: "cgi_url_validate"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgi_url_validate/"
 description: "cgi_url_validate – validate that url is of an allowed format"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cgi_url_validate &#8211; validate that url is of an allowed format </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

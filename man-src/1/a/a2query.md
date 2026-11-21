@@ -1,4 +1,5 @@
 ---
+
 title: "a2query(1)"
 name: "a2query"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-a2query/"
 description: "a2query – retrieve runtime configuration from a local Apache 2 HTTP server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> a2query &#8211; retrieve runtime configuration from a local Apache 2 HTTP server </p>
 <h2>SYNOPSIS</h2>
 <p> <code>a2query</code> [-m [<i></i><font SIZE="-1"><i>MODULE</i></font><i></i>]] [-s [<i></i><font SIZE="-1"><i>SITE</i></font><i></i>]] [-c [<i></i><font SIZE="-1"><i>CONF</i></font><i></i>]] [-a] [-v] [-M] [-d] [-h]</p>

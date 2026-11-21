@@ -1,4 +1,5 @@
 ---
+
 title: "fchownat(2)"
 name: "fchownat"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-fchownat/"
 description: "chown, fchown, lchown, fchownat – change ownership of a file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> chown, fchown, lchown, fchownat &#8211; change ownership of a file </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

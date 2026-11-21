@@ -1,4 +1,5 @@
 ---
+
 title: "calendar_(3)"
 name: "calendar_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-calendar_/"
 description: "QuantLib::CommodityIndex – base class for commodity indexes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::CommodityIndex &#8211; base class for commodity indexes </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/experimental/commodities/commodityindex.hpp&gt; </p>

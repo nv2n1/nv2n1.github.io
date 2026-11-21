@@ -1,4 +1,5 @@
 ---
+
 title: "dropbox(1)"
 name: "dropbox"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dropbox/"
 description: "dropbox – A command line interface to the Dropbox service"
 ---
 
-<h2>NAME</h2>
 <p> dropbox &#8211; A command line interface to the Dropbox service</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

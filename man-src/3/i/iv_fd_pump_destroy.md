@@ -1,4 +1,5 @@
 ---
+
 title: "iv_fd_pump_destroy(3)"
 name: "iv_fd_pump_destroy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-iv_fd_pump_destroy/"
 description: "IV_FD_PUMP_INIT, iv_fd_pump_init, iv_fd_pump_destroy, iv_fd_pump_pump, iv_fd_pump_is_done – pump data between file descriptors"
 ---
 
-<h2>NAME</h2>
 <p> IV_FD_PUMP_INIT, iv_fd_pump_init, iv_fd_pump_destroy, iv_fd_pump_pump, iv_fd_pump_is_done &#8211; pump data between file descriptors</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;iv_fd_pump.h&gt;</code> </p>

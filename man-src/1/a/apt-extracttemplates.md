@@ -1,4 +1,5 @@
 ---
+
 title: "apt-extracttemplates(1)"
 name: "apt-extracttemplates"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-apt-extracttemplates/"
 description: "apt-extracttemplates – Utility to extract debconf config and templates from Debian packages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> apt-extracttemplates &#8211; Utility to extract <code>debconf</code> config and templates from Debian packages </p>
 <h2>SYNOPSIS</h2>
 <dl>

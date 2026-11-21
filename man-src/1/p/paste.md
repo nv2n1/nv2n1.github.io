@@ -1,4 +1,5 @@
 ---
+
 title: "paste(1)"
 name: "paste"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-paste/"
 description: "paste – merge lines of files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> paste &#8211; merge lines of files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>paste</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>

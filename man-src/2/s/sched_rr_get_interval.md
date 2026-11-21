@@ -1,4 +1,5 @@
 ---
+
 title: "sched_rr_get_interval(2)"
 name: "sched_rr_get_interval"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-sched_rr_get_interval/"
 description: "sched_rr_get_interval – get the SCHED_RR interval for the named process"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sched_rr_get_interval &#8211; get the SCHED_RR interval for the named process </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sched.h&gt;</code> </p>

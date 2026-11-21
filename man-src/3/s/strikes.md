@@ -1,4 +1,5 @@
 ---
+
 title: "strikes(3)"
 name: "strikes"
 section: "3"
@@ -6,8 +7,9 @@ letter: "s"
 url: "/docs/linux/man/3-strikes/"
 description: "QuantLib::CapFloorTermVolSurface – Cap/floor smile volatility surface."
 ---
+
 <p>QuantLib::CapFloorTermVolSurface &#8211; Cap/floor smile volatility surface. </p>
-<h2>SYNOPSIS</h2>
+
 <p> <br />
  </p>
 <p>#include &lt;ql/termstructures/volatility/capfloor/capfloortermvolsurface.hpp&gt; </p>

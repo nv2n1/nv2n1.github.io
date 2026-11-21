@@ -1,4 +1,5 @@
 ---
+
 title: "sslsplit(1)"
 name: "sslsplit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sslsplit/"
 description: "sslsplit — transparent SSL/TLS interception"
 ---
 
-<h2>NAME</h2>
 <p> sslsplit &#8212; transparent SSL/TLS interception</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sslsplit</code> [<code>-kCKwWOPZdDgGsrReumjplLSFi</code>] <code>-c</code> <i>pem</i> <i>proxyspecs</i> [&#8230;]<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "jpegtopnm(1)"
 name: "jpegtopnm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jpegtopnm/"
 description: "jpegtopnm – convert JPEG/JFIF file to portable pixmap or graymap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> jpegtopnm &#8211; convert JPEG/JFIF file to portable pixmap or graymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>jpegtopnm</code> [<code>-dct</code> {<code>int</code>|<code>fast</code>|<code>float</code>}] [<code>-nosmooth</code>] [<code>-maxmemory</code> <i>N</i>] [{<code>-adobe</code>|<code>-notadobe</code>}] [<code>-comments</code>] [<code>-dumpexif</code>] [<code>-exif=</code><i>filespec</i>] [<code>-verbose</code>] [<code>-tracelevel</code> <i>N</i>] [ <i>filename</i> ] </p>

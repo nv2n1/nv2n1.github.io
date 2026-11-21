@@ -1,4 +1,5 @@
 ---
+
 title: "rafilteraddr(1)"
 name: "rafilteraddr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rafilteraddr/"
 description: "rafilteraddr – select argus(8) data based on an IANA IP address file."
 ---
 
-<h2>NAME</h2>
 <p> <code>rafilteraddr</code> &#8211; select <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data based on an IANA IP address file.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rafilteraddr</code> <code>[-f</code> <i>address.file</i> [<code> [-v] [raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>]</p>

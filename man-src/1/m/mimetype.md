@@ -1,4 +1,5 @@
 ---
+
 title: "mimetype(1)"
 name: "mimetype"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mimetype/"
 description: "mimetype – Determine file type"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mimetype &#8211; Determine file type </p>
 <h2>SYNOPSIS</h2>
 <p> mimetype [options] [-] files</p>

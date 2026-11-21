@@ -1,4 +1,5 @@
 ---
+
 title: "grub-customizer(1)"
 name: "grub-customizer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grub-customizer/"
 description: "grub-customizer – a graphical grub2/burg editor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> grub-customizer &#8211; a graphical grub2/burg editor</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grub-customizer</code> </p>

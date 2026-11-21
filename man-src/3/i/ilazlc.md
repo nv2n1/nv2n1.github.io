@@ -1,4 +1,5 @@
 ---
+
 title: "ilazlc(3)"
 name: "ilazlc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ilazlc/"
 description: "ilazlc.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ilazlc.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_init_find(3)"
 name: "bson_iter_init_find"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_iter_init_find/"
 description: "bson_iter_init_find() – This function is identical to (bson_iter_init() && bson_iter_find())."
 ---
 
-<h2>NAME</h2>
 <p> bson_iter_init_find() &#8211; This function is identical to (bson_iter_init() &amp;&amp; bson_iter_find()).</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

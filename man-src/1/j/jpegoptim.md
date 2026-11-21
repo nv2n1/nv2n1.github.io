@@ -1,4 +1,5 @@
 ---
+
 title: "jpegoptim(1)"
 name: "jpegoptim"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jpegoptim/"
 description: "jpegoptim – utility to optimize/compress JPEG/JFIF files."
 ---
 
-<h2>NAME</h2>
 <p> jpegoptim &#8211; utility to optimize/compress JPEG/JFIF files. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>jpegoptim</code> [ <code>options </code> ] [ <code>filenames </code> ] </p>

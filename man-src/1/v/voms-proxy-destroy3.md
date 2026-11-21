@@ -1,4 +1,5 @@
 ---
+
 title: "voms-proxy-destroy3(1)"
 name: "voms-proxy-destroy3"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-voms-proxy-destroy3/"
 description: "voms-proxy-destroy – destroys a VOMS proxy"
 ---
 
-<h2 class="name">NAME</h2>
 <p> voms-proxy-destroy &#8211; destroys a VOMS proxy </p>
 <h2>SYNOPSIS</h2>
 <p> voms-proxy-destroy</p>

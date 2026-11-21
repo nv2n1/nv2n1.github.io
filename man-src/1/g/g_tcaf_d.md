@@ -1,4 +1,5 @@
 ---
+
 title: "g_tcaf_d(1)"
 name: "g_tcaf_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_tcaf_d/"
 description: "g_tcaf – calculates viscosities of liquids"
 ---
 
-<h2>NAME</h2>
 <p> g_tcaf &#8211; calculates viscosities of liquids </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

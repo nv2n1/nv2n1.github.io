@@ -1,4 +1,5 @@
 ---
+
 title: "mknodat(2)"
 name: "mknodat"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-mknodat/"
 description: "mknod, mknodat – create a special or ordinary file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mknod, mknodat &#8211; create a special or ordinary file </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

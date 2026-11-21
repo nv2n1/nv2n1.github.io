@@ -1,4 +1,5 @@
 ---
+
 title: "oggz-info(1)"
 name: "oggz-info"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-oggz-info/"
 description: "oggz-info — Display information about one or more Ogg files and their bitstreams."
 ---
 
-<h2>NAME</h2>
 <p> oggz-info &#8212; Display information about one or more Ogg files and their bitstreams.<br />
 &nbsp;<wbr></p>
 <h2>SYNOPSIS</h2>

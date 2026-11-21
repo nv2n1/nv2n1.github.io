@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-create-tags(1)"
 name: "eulb-create-tags"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eulb-create-tags/"
 description: "eulb-create-tags – Add one or more tags to a load balancer"
 ---
 
-<h2>NAME</h2>
 <p> eulb-create-tags &#8211; Add one or more tags to a load balancer</p>
 <h2>SYNOPSIS</h2>
 <p> eulb-create-tags <code>-t</code> KEY=VALUE [-U URL] [&#8211;region USER [at] REGION]</p>

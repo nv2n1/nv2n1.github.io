@@ -1,4 +1,5 @@
 ---
+
 title: "bson_error_t(3)"
 name: "bson_error_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_error_t/"
 description: "bson_error_t – BSON Error Encapsulation"
 ---
 
-<h2>NAME</h2>
 <p> bson_error_t &#8211; BSON Error Encapsulation</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

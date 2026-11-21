@@ -1,4 +1,5 @@
 ---
+
 title: "bsdcpio(1)"
 name: "bsdcpio"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bsdcpio/"
 description: "cpio – copy files to and from archives"
 ---
 
-<h2>NAME</h2>
 <p> <code>cpio</code> &#8211; copy files to and from archives</p>
 <h2>SYNOPSIS</h2>
 <p> Br q Fl i [<i>options</i> ] [<i>pattern &#8230;</i> ] [<i>&lt; archive</i> ]<br />

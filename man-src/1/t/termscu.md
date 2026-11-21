@@ -1,4 +1,5 @@
 ---
+
 title: "termscu(1)"
 name: "termscu"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-termscu/"
 description: "termscu – DICOM termination SCU"
 ---
 
-<h2 class="name">NAME</h2>
 <p> termscu &#8211; DICOM termination SCU </p>
 <h2>SYNOPSIS</h2>
 <pre>

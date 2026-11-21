@@ -1,4 +1,5 @@
 ---
+
 title: "wineconsole(1)"
 name: "wineconsole"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wineconsole/"
 description: "wineconsole – The Wine console"
 ---
 
-<h2 class="name">NAME</h2>
 <p> wineconsole &#8211; The Wine console </p>
 <h2>SYNOPSIS</h2>
 <p> <code>wineconsole</code> [<i>option</i>] <i>command</i></p>

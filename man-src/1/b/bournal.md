@@ -1,4 +1,5 @@
 ---
+
 title: "bournal(1)"
 name: "bournal"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bournal/"
 description: "bournal – When nobody else cares what you have to say!"
 ---
 
-<h2>NAME</h2>
 <p> bournal &#8211; When nobody else cares what you have to say!</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bournal</code> [<i>options</i>]</p>

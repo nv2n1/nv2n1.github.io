@@ -1,4 +1,5 @@
 ---
+
 title: "mockchain(1)"
 name: "mockchain"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mockchain/"
 description: "mockchain – chain package builder."
 ---
 
-<h2>NAME</h2>
 <p> mockchain &#8211; chain package builder.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mockchain</code> -r chroot_config [options] [package&#8230;]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gpgsm(1)"
 name: "gpgsm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpgsm/"
 description: "gpgsm – CMS encryption and signing tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>gpgsm</code> &#8211; CMS encryption and signing tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gpgsm</code> [<code>&#8211;homedir</code> <i>dir</i>] [<code>&#8211;options</code> <i>file</i>] [<i>options</i>] <i>command</i> [<i>args</i>] </p>

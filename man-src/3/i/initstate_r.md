@@ -1,4 +1,5 @@
 ---
+
 title: "initstate_r(3)"
 name: "initstate_r"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-initstate_r/"
 description: "random_r, srandom_r, initstate_r, setstate_r – reentrant random number generator"
 ---
 
-<h2 class="name">NAME</h2>
 <p> random_r, srandom_r, initstate_r, setstate_r &#8211; reentrant random number generator </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

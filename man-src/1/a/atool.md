@@ -1,4 +1,5 @@
 ---
+
 title: "atool(1)"
 name: "atool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-atool/"
 description: "atool – A script for managing file archives of various types"
 ---
 
-<h2 class="name">NAME</h2>
 <p> atool &#8211; A script for managing file archives of various types </p>
 <h2>SYNOPSIS</h2>
 <p> <code>atool</code> [<i>OPTION</i>]&#8230;<i> ARCHIVE </i>[<i>FILE</i>]&#8230;<br />

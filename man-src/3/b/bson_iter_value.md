@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_value(3)"
 name: "bson_iter_value"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_iter_value/"
 description: "bson_iter_value() – Fetches the value for the currently observed type as a boxed type. This allows passing around the value without knowing the type at runtime."
 ---
 
-<h2>NAME</h2>
 <p> bson_iter_value() &#8211; Fetches the value for the currently observed type as a boxed type. This allows passing around the value without knowing the type at runtime.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

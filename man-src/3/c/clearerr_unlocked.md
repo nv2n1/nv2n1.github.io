@@ -1,4 +1,5 @@
 ---
+
 title: "clearerr_unlocked(3)"
 name: "clearerr_unlocked"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clearerr_unlocked/"
 description: "getc_unlocked, getchar_unlocked, putc_unlocked, putchar_unlocked – nonlocking stdio functions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getc_unlocked, getchar_unlocked, putc_unlocked, putchar_unlocked &#8211; nonlocking stdio functions </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

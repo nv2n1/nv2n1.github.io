@@ -1,4 +1,5 @@
 ---
+
 title: "dmlite_xstat(3)"
 name: "dmlite_xstat"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dmlite_xstat/"
 description: "dmlite_xstat –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dmlite_xstat &#8211; </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;inode.h&gt;</p>

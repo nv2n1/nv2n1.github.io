@@ -1,4 +1,5 @@
 ---
+
 title: "vboxmode(1)"
 name: "vboxmode"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vboxmode/"
 description: "vboxmode – detect format of isdn voice file"
 ---
 
-<h2>NAME</h2>
 <p> vboxmode &#8211; detect format of isdn voice file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>vboxmode</code> <i>[OPTION] [OPTION] [&#8230;] FILENAME</i></p>

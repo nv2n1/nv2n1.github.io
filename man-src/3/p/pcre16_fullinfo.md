@@ -1,4 +1,5 @@
 ---
+
 title: "pcre16_fullinfo(3)"
 name: "pcre16_fullinfo"
 section: "3"
@@ -6,8 +7,9 @@ letter: "p"
 url: "/docs/linux/man/3-pcre16_fullinfo/"
 description: "PCRE – Perl-compatible regular expressions"
 ---
+
 <p>PCRE &#8211; Perl-compatible regular expressions </p>
-<h2>SYNOPSIS</h2>
+
 <p> <code>#include &lt;pcre.h&gt;</code> </p>
 <pre><code>
  int pcre_fullinfo(const pcre *  code , const pcre_extra * extra ,

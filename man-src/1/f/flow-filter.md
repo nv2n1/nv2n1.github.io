@@ -1,4 +1,5 @@
 ---
+
 title: "flow-filter(1)"
 name: "flow-filter"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flow-filter/"
 description: "flow-filter – Filter flows."
 ---
 
-<h2>NAME</h2>
 <p> flow-filter &#8211; Filter flows.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>flow-filter</code> [ <code>-hko</code> ] [ <code>-a</code><i> src_as_filter</i> ] [ <code>-A</code><i> dst_as_filter</i> ] [ <code>-b</code><i> big</i><code>|</code><i>little</i> ] [ <code>-C</code><i> comment</i> ] [ <code>-D</code><i> dstaddr_filter_name</i> ] [ <code>-d</code><i> debug_level</i> ] [ <code>-e</code><i> exaddr_filter</i> ] [ <code>-f</code><i> acl_fname</i> ] [ <code>-i</code><i> input_filter</i> ] [ <code>-I</code><i> output_filter</i> ] [ <code>-p</code><i> srcport_filter</i> ] [ <code>-P</code><i> dstport_filter</i> ] [ <code>-r</code><i> ipprot_filter</i> ] [ <code>-S</code><i> srcaddr_filter_name</i> ] [ <code>-t</code><i> tos_filter</i> ] [ <code>-T</code><i> tcp_flags_filter</i> ] [ <code>-x</code><i> nexthop_filter_name</i> ] [ <code>-z</code><i> z_level</i> ]</p>

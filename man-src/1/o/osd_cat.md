@@ -1,4 +1,5 @@
 ---
+
 title: "osd_cat(1)"
 name: "osd_cat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-osd_cat/"
 description: "osd_cat – X on-screen file displayer"
 ---
 
-<h2>NAME</h2>
 <p> osd_cat &#8211; X on-screen file displayer</p>
 <h2>SYNOPSIS</h2>
 <p> <code>osd_cat</code> [<i>OPTION</i>] [<i>FILE</i>]&#8230;<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-vpc-attribute(1)"
 name: "euca-describe-vpc-attribute"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-describe-vpc-attribute/"
 description: "euca-describe-vpc-attribute – Show an attribute of a VPC"
 ---
 
-<h2>NAME</h2>
 <p> euca-describe-vpc-attribute &#8211; Show an attribute of a VPC</p>
 <h2>SYNOPSIS</h2>
 <p> euca-describe-vpc-attribute (<code>-d</code> | <code>-s</code>) [&#8211;show-empty-fields] [-U URL]</p>

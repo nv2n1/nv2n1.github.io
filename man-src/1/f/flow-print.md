@@ -1,4 +1,5 @@
 ---
+
 title: "flow-print(1)"
 name: "flow-print"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flow-print/"
 description: "flow-print – Display flows in formatted ASCII."
 ---
 
-<h2>NAME</h2>
 <p> flow-print &#8211; Display flows in formatted ASCII.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>flow-print</code> [ <code>-hlnpw</code> ] [ <code>-d</code><i> debug_level</i> ] [ <code>-f</code><i> format</i> ]</p>

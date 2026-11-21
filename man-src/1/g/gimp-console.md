@@ -1,4 +1,5 @@
 ---
+
 title: "gimp-console(1)"
 name: "gimp-console"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gimp-console/"
 description: "gimp – an image manipulation and paint program."
 ---
 
-<h2 class="name">NAME</h2>
 <p> gimp &#8211; an image manipulation and paint program. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gimp</code> [-h] [&#8211;help] [&#8211;help-all] [&#8211;help-gtk] [-v] [&#8211;version] [&#8211;license] [&#8211;verbose] [-n] [&#8211;new-instance] [-a] [&#8211;as-new] [-i] [&#8211;no-interface] [-d] [&#8211;no-data] [-f] [&#8211;no-fonts] [-s] [&#8211;no-splash] [&#8211;no-shm] [&#8211;no-cpu-accel] [&#8211;display <i>display</i>] [&#8211;session <i>&lt;name&gt;</i>] [-g] [&#8211;gimprc <i>&lt;gimprc&gt;</i>] [&#8211;system-gimprc <i>&lt;gimprc&gt;</i>] [&#8211;dump-gimprc] [&#8211;console-messages] [&#8211;debug-handlers] [&#8211;stack-trace-mode <i>&lt;mode&gt;</i>] [&#8211;pdb-compat-mode <i>&lt;mode&gt;</i>] [&#8211;batch-interpreter <i>&lt;procedure&gt;</i>] [-b] [&#8211;batch <i>&lt;command&gt;</i>] [<i>filename</i>] &#8230; </p>

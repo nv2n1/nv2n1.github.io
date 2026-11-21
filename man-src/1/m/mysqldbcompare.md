@@ -1,4 +1,5 @@
 ---
+
 title: "mysqldbcompare(1)"
 name: "mysqldbcompare"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysqldbcompare/"
 description: "mysqldbcompare – Compare Two Databases and Identify Differences"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysqldbcompare &#8211; Compare Two Databases and Identify Differences </p>
 <h2>SYNOPSIS</h2>
 <dl>

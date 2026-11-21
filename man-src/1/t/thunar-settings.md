@@ -1,4 +1,5 @@
 ---
+
 title: "thunar-settings(1)"
 name: "thunar-settings"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-thunar-settings/"
 description: "thunar-settings – display thunar(1) preferences dialog"
 ---
 
-<h2>NAME</h2>
 <p> thunar-settings &#8211; display <a href="/docs/linux/man/1-thunar/">thunar</a>(1) preferences dialog</p>
 <h2>SYNOPSIS</h2>
 <p> <code>thunar-settings </code></p>

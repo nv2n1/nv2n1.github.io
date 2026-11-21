@@ -1,4 +1,5 @@
 ---
+
 title: "albatross(1)"
 name: "albatross"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-albatross/"
 description: "albatross – a tool for finding fonts that contain a given (Unicode) glyph."
 ---
 
-<h2 class="name">NAME</h2>
 <p> albatross &#8211; a tool for finding fonts that contain a given (Unicode) glyph. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>albatross</code> [<i>options</i>] <i>glyphs</i>&#8230;</p>

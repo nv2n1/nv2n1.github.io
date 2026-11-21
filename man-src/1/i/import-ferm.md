@@ -1,4 +1,5 @@
 ---
+
 title: "import-ferm(1)"
 name: "import-ferm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-import-ferm/"
 description: "import-ferm – import existing firewall rules into ferm"
 ---
 
-<h2 class="name">NAME</h2>
 <p> import-ferm &#8211; import existing firewall rules into ferm </p>
 <h2>SYNOPSIS</h2>
 <p> <code>import-ferm</code> &gt; ferm.conf </p>

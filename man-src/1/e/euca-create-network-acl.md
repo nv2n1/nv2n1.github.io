@@ -1,4 +1,5 @@
 ---
+
 title: "euca-create-network-acl(1)"
 name: "euca-create-network-acl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-create-network-acl/"
 description: "euca-create-network-acl – Create a new VPC network ACL"
 ---
 
-<h2>NAME</h2>
 <p> euca-create-network-acl &#8211; Create a new VPC network ACL</p>
 <h2>SYNOPSIS</h2>
 <p> euca-create-network-acl [&#8211;show-empty-fields] [-U URL]</p>

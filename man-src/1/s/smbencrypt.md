@@ -1,4 +1,5 @@
 ---
+
 title: "smbencrypt(1)"
 name: "smbencrypt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-smbencrypt/"
 description: "smbencrypt – produce LM & NT password hashes from cleartext passwords"
 ---
 
-<h2>NAME</h2>
 <p> smbencrypt &#8211; produce LM &amp; NT password hashes from cleartext passwords</p>
 <h2>SYNOPSIS</h2>
 <p> <code>smbencrypt </code><i>password</i> [<i>password &#8230;</i>] </p>

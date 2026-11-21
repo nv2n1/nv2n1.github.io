@@ -1,4 +1,5 @@
 ---
+
 title: "t1testpage(1)"
 name: "t1testpage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-t1testpage/"
 description: "t1testpage – create a PostScript proof for a Type 1 font"
 ---
 
-<h2 class="name">NAME</h2>
 <p> t1testpage &#8211; create a PostScript proof for a Type 1 font </p>
 <h2>SYNOPSIS</h2>
 <p> <code>t1testpage</code> [<i>font&#8230;</i>]</p>

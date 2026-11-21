@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-terminal(1)"
 name: "gnome-terminal"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnome-terminal/"
 description: "gnome-terminal – A terminal emulator for GNOME"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gnome-terminal &#8211; A terminal emulator for GNOME </p>
 <h2>SYNOPSIS</h2>
 <dl>

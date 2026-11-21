@@ -1,4 +1,5 @@
 ---
+
 title: "git-tag(1)"
 name: "git-tag"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-tag/"
 description: "git-tag – Create, list, delete or verify a tag object signed with GPG"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-tag &#8211; Create, list, delete or verify a tag object signed with GPG </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

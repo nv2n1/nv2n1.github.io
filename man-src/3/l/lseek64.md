@@ -1,4 +1,5 @@
 ---
+
 title: "lseek64(3)"
 name: "lseek64"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-lseek64/"
 description: "lseek64 – reposition 64-bit read/write file offset"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lseek64 &#8211; reposition 64-bit read/write file offset </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#define _LARGEFILE64_SOURCE</code> /* See <a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a>(7) */<br />

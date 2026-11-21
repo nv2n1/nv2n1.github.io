@@ -1,4 +1,5 @@
 ---
+
 title: "gspectrum(1)"
 name: "gspectrum"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gspectrum/"
 description: "gspectrum – a small spectrum viewer application"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gspectrum &#8211; a small spectrum viewer application </p>
 <h2>SYNOPSIS</h2>
 <dl>

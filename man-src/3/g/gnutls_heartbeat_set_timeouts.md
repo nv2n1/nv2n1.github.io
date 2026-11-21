@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_heartbeat_set_timeouts(3)"
 name: "gnutls_heartbeat_set_timeouts"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_heartbeat_set_timeouts/"
 description: "gnutls_heartbeat_set_timeouts – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_heartbeat_set_timeouts &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

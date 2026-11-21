@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_alert_send_appropriate(3)"
 name: "gnutls_alert_send_appropriate"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_alert_send_appropriate/"
 description: "gnutls_alert_send_appropriate – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_alert_send_appropriate &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "h2paspp(1)"
 name: "h2paspp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-h2paspp/"
 description: "h2paspp – Free Pascal h2pas preprocessor program."
 ---
 
-<h2>NAME</h2>
 <p> h2paspp &#8211; Free Pascal h2pas preprocessor program. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>h2paspp [-doih] file1 &#8230; filen</code> </p>

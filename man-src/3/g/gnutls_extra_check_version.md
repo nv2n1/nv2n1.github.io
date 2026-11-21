@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_extra_check_version(3)"
 name: "gnutls_extra_check_version"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_extra_check_version/"
 description: "gnutls_extra_check_version – checks the libgnutls-extra version"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_extra_check_version &#8211; checks the libgnutls-extra version</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/extra.h">gnutls/extra.h</a>&gt;</code> </p>

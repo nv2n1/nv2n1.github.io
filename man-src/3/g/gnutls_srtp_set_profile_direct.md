@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_srtp_set_profile_direct(3)"
 name: "gnutls_srtp_set_profile_direct"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_srtp_set_profile_direct/"
 description: "gnutls_srtp_set_profile_direct – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_srtp_set_profile_direct &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

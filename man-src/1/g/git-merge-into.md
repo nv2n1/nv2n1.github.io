@@ -1,4 +1,5 @@
 ---
+
 title: "git-merge-into(1)"
 name: "git-merge-into"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-merge-into/"
 description: "git-merge-into – Merge one branch into another"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-merge-into</code> &#8211; Merge one branch into another</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git merge-into</code> [src] &lt;dest&gt; [&#8211;ff-only]</p>

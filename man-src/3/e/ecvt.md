@@ -1,4 +1,5 @@
 ---
+
 title: "ecvt(3)"
 name: "ecvt"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ecvt/"
 description: "ecvt, fcvt – convert a floating-point number to a string"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ecvt, fcvt &#8211; convert a floating-point number to a string </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;stdlib.h&gt;</code> </p>

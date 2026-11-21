@@ -1,4 +1,5 @@
 ---
+
 title: "stg-patches(1)"
 name: "stg-patches"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-stg-patches/"
 description: "stg-patches – Show the applied patches modifying a file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> stg-patches &#8211; Show the applied patches modifying a file </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

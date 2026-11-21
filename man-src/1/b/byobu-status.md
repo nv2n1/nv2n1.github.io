@@ -1,4 +1,5 @@
 ---
+
 title: "byobu-status(1)"
 name: "byobu-status"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-byobu-status/"
 description: "byobu-status – displays status suitable for printing by the BYOBU_BACKEND"
 ---
 
-<h2>NAME</h2>
 <p> byobu-status &#8211; displays status suitable for printing by the BYOBU_BACKEND </p>
 <h2>DESCRIPTION</h2>
 <p> <code>byobu-status</code> is a program periodically called by the BYOBU_BACKEND to gather the formatted status strings displayed in to lower status bar(s). </p>

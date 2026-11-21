@@ -1,4 +1,5 @@
 ---
+
 title: "tccat(1)"
 name: "tccat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tccat/"
 description: "tccat – concatenate multimedia streams from medium and print on the standard output"
 ---
 
-<h2>NAME</h2>
 <p> tccat &#8211; concatenate multimedia streams from medium and print on the standard output</p>
 <h2>SYNOPSIS</h2>
 <dl>

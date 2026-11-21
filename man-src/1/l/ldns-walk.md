@@ -1,4 +1,5 @@
 ---
+
 title: "ldns-walk(1)"
 name: "ldns-walk"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ldns-walk/"
 description: "ldns-walk – Retrieve the contents of a DNSSEC signed zone"
 ---
 
-<h2>NAME</h2>
 <p> ldns-walk &#8211; Retrieve the contents of a DNSSEC signed zone</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ldns-walk</code> [ <i>OPTION</i> ] <i>ZONE</i> </p>

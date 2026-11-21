@@ -1,4 +1,5 @@
 ---
+
 title: "desktop-file-edit(1)"
 name: "desktop-file-edit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-desktop-file-edit/"
 description: "desktop-file-install, desktop-file-edit – Installation and edition of desktop files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> desktop-file-install, desktop-file-edit &#8211; Installation and edition of desktop files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>desktop-file-install [&#8211;dir=DIR] [-m MODE|&#8211;mode=MODE]</code> <code>[&#8211;vendor=VENDOR] [&#8211;delete-original]</code> <code>[&#8211;rebuild-mime-info-cache]</code> <code>[EDITOPTION]&#8230; FILE&#8230;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ppcppc(1)"
 name: "ppcppc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppcppc/"
 description: "ppcppc – Free Pascal Compiler (FPC) binary, name derived from Portable Pascal Compiler"
 ---
 
-<h2>NAME</h2>
 <p> ppcppc &#8211; Free Pascal Compiler (FPC) binary, name derived from Portable Pascal Compiler </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppcppc [options] [sourcefile]</code></p>

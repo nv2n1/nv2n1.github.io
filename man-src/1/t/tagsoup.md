@@ -1,4 +1,5 @@
 ---
+
 title: "tagsoup(1)"
 name: "tagsoup"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tagsoup/"
 description: "tagsoup – convert nasty, ugly HTML to clean XHTML"
 ---
 
-<h2>NAME</h2>
 <p> tagsoup &#8211; convert nasty, ugly HTML to clean XHTML</p>
 <h2>SYNOPSIS</h2>
 <p> <code>java -jar tagsoup</code> [ <i>options</i> ] [ <i>files</i> ]</p>

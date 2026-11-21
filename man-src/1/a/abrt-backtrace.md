@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-backtrace(1)"
 name: "abrt-backtrace"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-abrt-backtrace/"
 description: "abrt-backtrace – a backtrace analyzer for abrt"
 ---
 
-<h2>NAME</h2>
 <p> abrt-backtrace &#8211; a backtrace analyzer for abrt</p>
 <h2>SYNOPSIS</h2>
 <p> <code>abrt-backtrace</code> [option]&#8230; [FILE]</p>

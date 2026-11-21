@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-account-attributes(1)"
 name: "euca-describe-account-attributes"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-describe-account-attributes/"
 description: "euca-describe-account-attributes – Show information about your account"
 ---
 
-<h2>NAME</h2>
 <p> euca-describe-account-attributes &#8211; Show information about your account</p>
 <h2>SYNOPSIS</h2>
 <p> euca-describe-account-attributes [&#8211;show-empty-fields] [-U URL]</p>

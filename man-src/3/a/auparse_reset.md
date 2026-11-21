@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_reset(3)"
 name: "auparse_reset"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_reset/"
 description: "auparse_reset – reset audit parser instance"
 ---
 
-<h2>NAME</h2>
 <p> auparse_reset &#8211; reset audit parser instance</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

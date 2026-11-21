@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_pkt_set_rd(3)"
 name: "ldns_pkt_set_rd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_pkt_set_rd/"
 description: "ldns_pkt_set_flags, ldns_pkt_set_id, ldns_pkt_set_qr, ldns_pkt_set_aa, ldns_pkt_set_tc, ldns_pkt_set_rd, ldns_pkt_set_cd, ldns_pkt_set_ra, ldns_pkt_set_ad, ldns_pkt_set_opcode, ldns_pkt_set_rcode, ..."
 ---
 
-<h2>NAME</h2>
 <p> ldns_pkt_set_flags, ldns_pkt_set_id, ldns_pkt_set_qr, ldns_pkt_set_aa, ldns_pkt_set_tc, ldns_pkt_set_rd, ldns_pkt_set_cd, ldns_pkt_set_ra, ldns_pkt_set_ad, ldns_pkt_set_opcode, ldns_pkt_set_rcode, ldns_pkt_set_qdcount, ldns_pkt_set_ancount, ldns_pkt_set_nscount, ldns_pkt_set_arcount, ldns_pkt_set_answerfrom, ldns_pkt_set_querytime, ldns_pkt_set_size, ldns_pkt_set_section_count, ldns_pkt_set_tsig </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

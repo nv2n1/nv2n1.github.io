@@ -1,4 +1,5 @@
 ---
+
 title: "geod(1)"
 name: "geod"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-geod/"
 description: "geod – direct geodesic computations invgeod – inverse geodesic computations"
 ---
 
-<h2>NAME</h2>
 <p> geod &#8211; direct geodesic computations<br />
  invgeod &#8211; inverse geodesic computations</p>
 <h2>SYNOPSIS</h2>

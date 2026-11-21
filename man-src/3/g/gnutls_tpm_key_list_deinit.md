@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_tpm_key_list_deinit(3)"
 name: "gnutls_tpm_key_list_deinit"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_tpm_key_list_deinit/"
 description: "gnutls_tpm_key_list_deinit – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_tpm_key_list_deinit &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/tpm.h&gt;</code> </p>

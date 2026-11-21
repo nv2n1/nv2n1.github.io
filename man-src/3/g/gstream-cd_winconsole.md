@@ -1,4 +1,5 @@
 ---
+
 title: "gstream-cd_winconsole(3)"
 name: "gstream-cd_winconsole"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gstream-cd_winconsole/"
 description: "cd_winconsole"
 ---
 
-<h2>NAME</h2>
 <p> cd_winconsole</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gstream.h">gstream.h</a>&gt;</code> </p>

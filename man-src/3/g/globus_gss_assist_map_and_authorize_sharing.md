@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gss_assist_map_and_authorize_sharing(3)"
 name: "globus_gss_assist_map_and_authorize_sharing"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gss_assist_map_and_authorize_sharing/"
 description: "Gridmap Authorization –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Gridmap Authorization &#8211; </p>
 <p> Gridmap Authorization and Local User Mapping.</p>
 <h3>Macros</h3>

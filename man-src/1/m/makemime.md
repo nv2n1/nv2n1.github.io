@@ -1,4 +1,5 @@
 ---
+
 title: "makemime(1)"
 name: "makemime"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-makemime/"
 description: "makemime – Create MIME-formatted messages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> makemime &#8211; Create MIME-formatted messages </p>
 <h2>SYNOPSIS</h2>
 <dl>

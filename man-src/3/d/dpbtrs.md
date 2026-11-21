@@ -1,4 +1,5 @@
 ---
+
 title: "dpbtrs(3)"
 name: "dpbtrs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dpbtrs/"
 description: "dpbtrs.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dpbtrs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

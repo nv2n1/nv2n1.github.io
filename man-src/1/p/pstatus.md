@@ -1,4 +1,5 @@
 ---
+
 title: "pstatus(1)"
 name: "pstatus"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pstatus/"
 description: "pstatus – show device status"
 ---
 
-<h2>NAME</h2>
 <p> pstatus &#8211; show device status </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pstatus</code> [-d <i>LEVEL</i>] [-p <i>DEVNAME</i>] [-h] </p>

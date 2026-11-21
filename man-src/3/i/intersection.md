@@ -1,4 +1,5 @@
 ---
+
 title: "intersection(3)"
 name: "intersection"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-intersection/"
 description: "QuantLib::DateInterval – Date interval described by a number of a given time unit."
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::DateInterval &#8211; <code>Date</code> interval described by a number of a given time unit. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/experimental/commodities/dateinterval.hpp&gt; </p>

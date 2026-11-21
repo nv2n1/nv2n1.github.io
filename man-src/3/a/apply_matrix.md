@@ -1,4 +1,5 @@
 ---
+
 title: "apply_matrix(3)"
 name: "apply_matrix"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-apply_matrix/"
 description: "apply_matrix, apply_matrix_f – Multiplies a point by a transformation matrix. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> apply_matrix, apply_matrix_f &#8211; Multiplies a point by a transformation matrix. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

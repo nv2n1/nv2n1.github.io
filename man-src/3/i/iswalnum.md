@@ -1,4 +1,5 @@
 ---
+
 title: "iswalnum(3)"
 name: "iswalnum"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-iswalnum/"
 description: "iswalnum – test for alphanumeric wide character"
 ---
 
-<h2 class="name">NAME</h2>
 <p> iswalnum &#8211; test for alphanumeric wide character </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

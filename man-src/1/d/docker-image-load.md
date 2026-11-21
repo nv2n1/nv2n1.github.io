@@ -1,4 +1,5 @@
 ---
+
 title: "docker-image-load(1)"
 name: "docker-image-load"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-image-load/"
 description: "docker-image-load – Load an image from a tar archive or STDIN"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-image-load &#8211; Load an image from a tar archive or STDIN </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker image load [OPTIONS]</code> </p>

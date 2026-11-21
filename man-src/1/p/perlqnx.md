@@ -1,4 +1,5 @@
 ---
+
 title: "perlqnx(1)"
 name: "perlqnx"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlqnx/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlqnx - Perl version 5 on QNX 
+perlqnx - Perl version 5 on QNX 
 
 <h2>DESCRIPTION</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "file_driver_cntls(3)"
 name: "file_driver_cntls"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-file_driver_cntls/"
 description: "Attributes and Cntls –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Attributes and Cntls &#8211; </p>
 <p> File driver specific attrs and cntls.</p>
 <h3>Enumerations</h3>

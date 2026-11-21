@@ -1,4 +1,5 @@
 ---
+
 title: "pidfd_send_signal(2)"
 name: "pidfd_send_signal"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-pidfd_send_signal/"
 description: "pidfd_send_signal – send a signal to a process specified by a file descriptor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pidfd_send_signal &#8211; send a signal to a process specified by a file descriptor </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

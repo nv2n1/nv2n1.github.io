@@ -1,4 +1,5 @@
 ---
+
 title: "scidavis(1)"
 name: "scidavis"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-scidavis/"
 description: "scidavis – Scientific Data Analysis and Visualization"
 ---
 
-<h2>NAME</h2>
 <p> scidavis &#8211; Scientific Data Analysis and Visualization</p>
 <h2>SYNOPSIS</h2>
 <p> <code>scidavis</code> [ <i> OPTIONS </i> ] [ <i> file_name </i> ]</p>

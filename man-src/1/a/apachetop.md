@@ -1,4 +1,5 @@
 ---
+
 title: "apachetop(1)"
 name: "apachetop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-apachetop/"
 description: "apachetop – display real-time web server statistics"
 ---
 
-<h2>NAME</h2>
 <p> apachetop &#8211; display real-time web server statistics</p>
 <h2>SYNOPSIS</h2>
 <p> <code>apachetop [-f filename] [-H hits | -T time] [-q] [-l] [-s segments] [-p] [-r secs]</code></p>

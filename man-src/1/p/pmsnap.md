@@ -1,4 +1,5 @@
 ---
+
 title: "pmsnap(1)"
 name: "pmsnap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmsnap/"
 description: "pmsnap – generate performance summary snapshot images"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmsnap</code> &#8211; generate performance summary snapshot images</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/pmsnap</code> [<code>-NV</code>] [<code>-C</code> <i>dir</i>] [<code>-c</code> <i>configs</i>] [<code>-n</code> <i>names</i>] [<code>-o</code> <i>dir</i>] [<code>-t</code> <i>type</i>] </p>

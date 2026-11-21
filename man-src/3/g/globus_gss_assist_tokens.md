@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gss_assist_tokens(3)"
 name: "globus_gss_assist_tokens"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gss_assist_tokens/"
 description: "Token Transport –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Token Transport &#8211; </p>
 <p> Send and Receive Security Tokens.</p>
 <h3>Functions</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "hashkit_create(3)"
 name: "hashkit_create"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hashkit_create/"
 description: "hashkit_create – libhashkit Documentation"
 ---
 
-<h2>NAME</h2>
 <p> hashkit_create &#8211; libhashkit Documentation</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libhashkit/hashkit.h&gt;</p>

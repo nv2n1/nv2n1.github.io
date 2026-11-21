@@ -1,4 +1,5 @@
 ---
+
 title: "swift(1)"
 name: "swift"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-swift/"
 description: "swift – OpenStack Swift client tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>swift</code> &#8211; OpenStack Swift client tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>swift</code> [options] &lt;command&gt; [args] </p>

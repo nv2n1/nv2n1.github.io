@@ -1,4 +1,5 @@
 ---
+
 title: "kexec_file_load(2)"
 name: "kexec_file_load"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-kexec_file_load/"
 description: "kexec_load, kexec_file_load – load a new kernel for later execution"
 ---
 
-<h2 class="name">NAME</h2>
 <p> kexec_load, kexec_file_load &#8211; load a new kernel for later execution </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

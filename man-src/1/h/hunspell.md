@@ -1,4 +1,5 @@
 ---
+
 title: "hunspell(1)"
 name: "hunspell"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hunspell/"
 description: "hunspell – spell checker, stemmer and morphological analyzer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hunspell &#8211; spell checker, stemmer and morphological analyzer </p>
 <h2>SYNOPSIS</h2>
 <p> hunspell [-1aDGHhLlmnrstvw] [&#8211;check-url] [-d dict[,dict2,&#8230;]] [&#8211;help] [-i enc] [-p dict] [-vv] [&#8211;version] [file(s)]</p>

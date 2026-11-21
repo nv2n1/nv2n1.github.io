@@ -1,4 +1,5 @@
 ---
+
 title: "rwho(1)"
 name: "rwho"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rwho/"
 description: "rwho – who is logged in on local machines"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>rwho</code> &#8211; who is logged in on local machines </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rwho</code> [-<code>a</code> ]</p>

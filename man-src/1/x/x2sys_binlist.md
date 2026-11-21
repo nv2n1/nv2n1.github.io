@@ -1,4 +1,5 @@
 ---
+
 title: "x2sys_binlist(1)"
 name: "x2sys_binlist"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-x2sys_binlist/"
 description: "x2sys_binlist – Create bin index listing from track data files"
 ---
 
-<h2>NAME</h2>
 <p> x2sys_binlist &#8211; Create bin index listing from track data files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>x2sys_binlist</code> <i>track(s)</i> <i>TAG</i> [ ] [ ] [ [<i>level</i>] ] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mylvmbackup(1)"
 name: "mylvmbackup"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mylvmbackup/"
 description: "mylvmbackup – a utility for creating MySQL backups using LVM snapshots"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mylvmbackup &#8211; a utility for creating MySQL backups using LVM snapshots </p>
 <h2>SYNOPSIS</h2>
 <p> mylvmbackup [<font SIZE="-1">OPTIONS</font>]</p>

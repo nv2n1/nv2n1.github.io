@@ -1,4 +1,5 @@
 ---
+
 title: "ldns-revoke(1)"
 name: "ldns-revoke"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ldns-revoke/"
 description: "ldns-revoke – sets the revoke bit of a DNSKEY"
 ---
 
-<h2>NAME</h2>
 <p> ldns-revoke &#8211; sets the revoke bit of a DNSKEY</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ldns-revoke</code> <i>file</i> </p>

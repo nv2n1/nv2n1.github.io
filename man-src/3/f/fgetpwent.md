@@ -1,4 +1,5 @@
 ---
+
 title: "fgetpwent(3)"
 name: "fgetpwent"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fgetpwent/"
 description: "fgetpwent – get password file entry"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fgetpwent &#8211; get password file entry </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

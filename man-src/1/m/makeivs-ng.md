@@ -1,4 +1,5 @@
 ---
+
 title: "makeivs-ng(1)"
 name: "makeivs-ng"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-makeivs-ng/"
 description: "makeivs – generate a dummy IVS dump file with a specific WEP key"
 ---
 
-<h2 class="name">NAME</h2>
 <p> makeivs &#8211; generate a dummy IVS dump file with a specific WEP key </p>
 <h2>SYNOPSIS</h2>
 <p> <code>makeivs</code> &lt;ivs file&gt; &lt;104-bit key&gt;</p>

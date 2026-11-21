@@ -1,4 +1,5 @@
 ---
+
 title: "xmlcatalog(1)"
 name: "xmlcatalog"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xmlcatalog/"
 description: "xmlcatalog – Command line tool to parse and manipulate XML or SGML catalog files."
 ---
 
-<h2 class="name">NAME</h2>
 <p> xmlcatalog &#8211; Command line tool to parse and manipulate XML or SGML catalog files. </p>
 <h2>SYNOPSIS</h2>
 <dl>

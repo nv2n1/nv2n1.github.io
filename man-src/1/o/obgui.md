@@ -1,4 +1,5 @@
 ---
+
 title: "obgui(1)"
 name: "obgui"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-obgui/"
 description: "obgui – Open Babel graphical user interface"
 ---
 
-<h2>NAME</h2>
 <p> <code>obgui</code> &#8211; Open Babel graphical user interface</p>
 <h2>SYNOPSIS</h2>
 <h2>OPTIONS</h2>

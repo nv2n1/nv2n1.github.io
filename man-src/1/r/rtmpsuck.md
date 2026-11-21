@@ -1,4 +1,5 @@
 ---
+
 title: "rtmpsuck(1)"
 name: "rtmpsuck"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rtmpsuck/"
 description: "rtmpsuck – a transparent RTMP proxy"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rtmpsuck &#8211; a transparent RTMP proxy </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rtmpsuck</code> [<code>-z</code>] </p>

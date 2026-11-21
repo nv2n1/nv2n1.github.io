@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc_get_next_obj_covering_cpuset_by_type(3)"
 name: "hwloc_get_next_obj_covering_cpuset_by_type"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hwloc_get_next_obj_covering_cpuset_by_type/"
 description: "hwlocality_helper_find_covering – Finding Objects covering at least CPU set"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hwlocality_helper_find_covering &#8211; Finding Objects covering at least CPU set </p>
 <h3>Functions</h3>
 <p> static <code>hwloc_obj_t</code> <code>hwloc_get_child_covering_cpuset</code> (<code>hwloc_topology_t</code> topology, <code>hwloc_const_cpuset_t</code> set, <code>hwloc_obj_t</code> parent) </p>

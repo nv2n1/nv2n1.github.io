@@ -1,4 +1,5 @@
 ---
+
 title: "gcov2perl(1)"
 name: "gcov2perl"
 section: "1"
@@ -6,10 +7,7 @@ letter: "g"
 url: "/docs/linux/man/1-gcov2perl/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- gcov2perl - convert gcov files to Devel::Cover databases 
+gcov2perl - convert gcov files to Devel::Cover databases 
 
 <h2>VERSION</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "ether_ntohost(3)"
 name: "ether_ntohost"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ether_ntohost/"
 description: "ether_aton, ether_ntoa, ether_ntohost, ether_hostton, ether_line, ether_ntoa_r, ether_aton_r – Ethernet address manipulation routines"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ether_aton, ether_ntoa, ether_ntohost, ether_hostton, ether_line, ether_ntoa_r, ether_aton_r &#8211; Ethernet address manipulation routines </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

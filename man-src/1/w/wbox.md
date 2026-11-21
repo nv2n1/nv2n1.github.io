@@ -1,4 +1,5 @@
 ---
+
 title: "wbox(1)"
 name: "wbox"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wbox/"
 description: "wbox – HTTP testing tool and configuration-less HTTP server"
 ---
 
-<h2>NAME</h2>
 <p> wbox &#8211; HTTP testing tool and configuration-less HTTP server</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wbox</code> &lt;url&gt; [ options ]<br />

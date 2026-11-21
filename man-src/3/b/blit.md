@@ -1,4 +1,5 @@
 ---
+
 title: "blit(3)"
 name: "blit"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-blit/"
 description: "blit – Copies a rectangular area from one bitmap to another. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> blit &#8211; Copies a rectangular area from one bitmap to another. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

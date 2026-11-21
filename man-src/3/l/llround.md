@@ -1,4 +1,5 @@
 ---
+
 title: "llround(3)"
 name: "llround"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-llround/"
 description: "lround, lroundf, lroundl, llround, llroundf, llroundl – round to nearest integer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lround, lroundf, lroundl, llround, llroundf, llroundl &#8211; round to nearest integer </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

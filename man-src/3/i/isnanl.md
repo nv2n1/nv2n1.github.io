@@ -1,4 +1,5 @@
 ---
+
 title: "isnanl(3)"
 name: "isnanl"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-isnanl/"
 description: "finite, finitef, finitel, isinf, isinff, isinfl, isnan, isnanf, isnanl – BSD floating-point classification functions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> finite, finitef, finitel, isinf, isinff, isinfl, isnan, isnanf, isnanl &#8211; BSD floating-point classification functions </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

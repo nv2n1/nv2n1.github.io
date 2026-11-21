@@ -1,4 +1,5 @@
 ---
+
 title: "podofoimpose(1)"
 name: "podofoimpose"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-podofoimpose/"
 description: "podofoimpose – A powerful PDF imposition tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> podofoimpose &#8211; A powerful PDF imposition tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>podofoimpose</code> Input Output Plan [Interpretor] </p>

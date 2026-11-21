@@ -1,4 +1,5 @@
 ---
+
 title: "ptiptop(1)"
 name: "ptiptop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ptiptop/"
 description: "tiptop – display hardware performance counters for Linux tasks"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tiptop &#8211; display hardware performance counters for Linux tasks</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tiptop</code> [OPTION] </p>

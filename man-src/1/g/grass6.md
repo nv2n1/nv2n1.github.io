@@ -1,4 +1,5 @@
 ---
+
 title: "grass6(1)"
 name: "grass6"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grass6/"
 description: "grass63 – The GRASS startup program"
 ---
 
-<h2>NAME</h2>
 <p> <i></i><code>grass63</code> &#8211; The GRASS startup program </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grass63</code> [<code>&#8211;</code>] [<code>-v</code>] [<code>-h | -help | &#8211;help</code>] [<code>-text | -gui | -oldgui]</code>] [[[<code>/</code>]<code>/</code>] ] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "xmlto(1)"
 name: "xmlto"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xmlto/"
 description: "xmlto – apply an XSL stylesheet to an XML document"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xmlto &#8211; apply an XSL stylesheet to an XML document </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "euca-create-customer-gateway(1)"
 name: "euca-create-customer-gateway"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-create-customer-gateway/"
 description: "euca-create-customer-gateway – Create a VPN customer gateway"
 ---
 
-<h2>NAME</h2>
 <p> euca-create-customer-gateway &#8211; Create a VPN customer gateway</p>
 <h2>SYNOPSIS</h2>
 <p> euca-create-customer-gateway <code>-t</code> ipsec.1 <code>-i</code> ADDRESS [-b ASN]</p>

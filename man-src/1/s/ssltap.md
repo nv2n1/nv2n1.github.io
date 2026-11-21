@@ -1,4 +1,5 @@
 ---
+
 title: "ssltap(1)"
 name: "ssltap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ssltap/"
 description: "ssltap – Tap into SSL connections and display the data going by"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ssltap &#8211; Tap into SSL connections and display the data going by </p>
 <h2>SYNOPSIS</h2>
 <dl>

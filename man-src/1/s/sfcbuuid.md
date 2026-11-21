@@ -1,4 +1,5 @@
 ---
+
 title: "sfcbuuid(1)"
 name: "sfcbuuid"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sfcbuuid/"
 description: "sfcbuuid – Script to create a universally unique identifier for the installed Small-Footprint CIM Broker (sfcb)"
 ---
 
-<h2>NAME</h2>
 <p> sfcbuuid &#8211; Script to create a universally unique identifier for the installed Small-Footprint CIM Broker (sfcb)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sfcbuuid</code> [<i>options</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "babeltrace-log(1)"
 name: "babeltrace-log"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-babeltrace-log/"
 description: "babeltrace-log — Babeltrace Log Converter"
 ---
 
-<h2 class="name">NAME</h2>
 <p> babeltrace-log &#8212; Babeltrace Log Converter</p>
 <h2>SYNOPSIS</h2>
 <pre>

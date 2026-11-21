@@ -1,4 +1,5 @@
 ---
+
 title: "dialog_message(3)"
 name: "dialog_message"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dialog_message/"
 description: "dialog_message – Sends a message to all the objects in an array. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> dialog_message &#8211; Sends a message to all the objects in an array. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

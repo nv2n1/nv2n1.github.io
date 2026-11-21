@@ -1,4 +1,5 @@
 ---
+
 title: "std-codecvt-6(3)"
 name: "std-codecvt-6"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-std-codecvt-6/"
 description: "std::wcsrtombs – std::wcsrtombs"
 ---
 
-<h2 id="name">NAME</h2>
 <p>std::wcsrtombs &#8211; std::wcsrtombs</p>
 <h2 id="synopsis">SYNOPSIS</h2>
 <p>Defined in header <code>&lt;cwchar&gt;</code></p>

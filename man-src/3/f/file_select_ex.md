@@ -1,4 +1,5 @@
 ---
+
 title: "file_select_ex(3)"
 name: "file_select_ex"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-file_select_ex/"
 description: "file_select_ex – Displays the Allegro file selector with a caption."
 ---
 
-<h2>NAME</h2>
 <p> file_select_ex &#8211; Displays the Allegro file selector with a caption.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

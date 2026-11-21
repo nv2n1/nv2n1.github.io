@@ -1,4 +1,5 @@
 ---
+
 title: "syslinux2ansi(1)"
 name: "syslinux2ansi"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-syslinux2ansi/"
 description: "syslinux2ansi – converts a syslinux-format screen to pc-ansi"
 ---
 
-<h2>NAME</h2>
 <p> syslinux2ansi &#8211; converts a syslinux-format screen to pc-ansi</p>
 <h2>SYNOPSIS</h2>
 <p> <code>syslinux2ansi</code> &lt; filename.input &gt; filename.output</p>

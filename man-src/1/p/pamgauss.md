@@ -1,4 +1,5 @@
 ---
+
 title: "pamgauss(1)"
 name: "pamgauss"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamgauss/"
 description: "pamgauss – create a two dimensional gaussian function as a PAM image"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamgauss &#8211; create a two dimensional gaussian function as a PAM image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamgauss</code> <i>width</i> <i>height</i> <code>-sigma=</code><i>number</i> [<code>-maxval=</code><i>number</i>] [<code>-tupletype=</code><i>string</i>] </p>

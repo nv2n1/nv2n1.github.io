@@ -1,4 +1,5 @@
 ---
+
 title: "curl_multi_add_handle(3)"
 name: "curl_multi_add_handle"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-curl_multi_add_handle/"
 description: "curl_multi_add_handle – add an easy handle to a multi session"
 ---
 
-<h2>NAME</h2>
 <p> curl_multi_add_handle &#8211; add an easy handle to a multi session</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;curl/curl.h&gt; </p>

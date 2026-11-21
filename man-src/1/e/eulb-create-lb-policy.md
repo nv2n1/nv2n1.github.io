@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-create-lb-policy(1)"
 name: "eulb-create-lb-policy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eulb-create-lb-policy/"
 description: "eulb-create-lb-policy – Add a new policy to a load balancer"
 ---
 
-<h2>NAME</h2>
 <p> eulb-create-lb-policy &#8211; Add a new policy to a load balancer</p>
 <h2>SYNOPSIS</h2>
 <p> eulb-create-lb-policy <code>-n</code> POLICY <code>-t</code> POLTYPE</p>

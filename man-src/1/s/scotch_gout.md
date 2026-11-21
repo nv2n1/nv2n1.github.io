@@ -1,4 +1,5 @@
 ---
+
 title: "scotch_gout(1)"
 name: "scotch_gout"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-scotch_gout/"
 description: "gout – output graphics from matrices and graphs"
 ---
 
-<h2>NAME</h2>
 <p> <code>gout </code>&#8211; output graphics from matrices and graphs</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

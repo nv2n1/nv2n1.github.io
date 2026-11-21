@@ -1,4 +1,5 @@
 ---
+
 title: "gpasswd(1)"
 name: "gpasswd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpasswd/"
 description: "gpasswd – administer /etc/group and /etc/gshadow"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gpasswd &#8211; administer /etc/group and /etc/gshadow </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "pmsocks(1)"
 name: "pmsocks"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmsocks/"
 description: "pmsocks – shell wrapper for performance monitoring across firewalls"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmsocks</code> &#8211; shell wrapper for performance monitoring across firewalls</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmsocks</code> <i>path</i> [<i>args</i> &#8230;]</p>

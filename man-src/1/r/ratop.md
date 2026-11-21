@@ -1,4 +1,5 @@
 ---
+
 title: "ratop(1)"
 name: "ratop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ratop/"
 description: "ratop – display and update sorted network flow data"
 ---
 
-<h2>NAME</h2>
 <p> <code>ratop</code> &#8211; display and update sorted network flow data</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ratop [raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "x_setup(1)"
 name: "x_setup"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-x_setup/"
 description: "x_setup – Determine Pairs of Legs that need Cross-Over Checking"
 ---
 
-<h2>NAME</h2>
 <p> <code>x_setup</code> &#8211; Determine Pairs of Legs that need Cross-Over Checking</p>
 <h2>SYNOPSIS</h2>
 <p> <code>x_setup</code> [ <code>-L</code><i>legfile</i> ] [ <code>-R</code><i>west/east/south/north</i> ]</p>

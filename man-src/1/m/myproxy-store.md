@@ -1,4 +1,5 @@
 ---
+
 title: "myproxy-store(1)"
 name: "myproxy-store"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-myproxy-store/"
 description: "myproxy-store – store end-entity credential for later retrieval"
 ---
 
-<h2>NAME</h2>
 <p> myproxy-store &#8211; store end-entity credential for later retrieval</p>
 <h2>SYNOPSIS</h2>
 <p> <code>myproxy-store </code> [ <i>options</i> ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_recurse(3)"
 name: "bson_iter_recurse"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_iter_recurse/"
 description: "bson_iter_recurse() – The bson_iter_recurse() function shall initialize child using the embedded document or array currently observed by iter."
 ---
 
-<h2>NAME</h2>
 <p> bson_iter_recurse() &#8211; The bson_iter_recurse() function shall initialize child using the embedded document or array currently observed by iter.</p>
 <h2>SYNOPSIS</h2>
 <pre>

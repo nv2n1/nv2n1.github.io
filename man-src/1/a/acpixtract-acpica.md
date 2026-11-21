@@ -1,4 +1,5 @@
 ---
+
 title: "acpixtract-acpica(1)"
 name: "acpixtract-acpica"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-acpixtract-acpica/"
 description: "acpixtract – ACPICA source code conversion utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> acpixtract &#8211; ACPICA source code conversion utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>acpixtract</code> [<i>&lt;option&gt;</i>&#8230;<i>]</i> &lt;acpidump-file&gt; </p>

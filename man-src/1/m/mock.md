@@ -1,4 +1,5 @@
 ---
+
 title: "mock(1)"
 name: "mock"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mock/"
 description: "mock – build SRPMs in a chroot"
 ---
 
-<h2>NAME</h2>
 <p> mock &#8211; build SRPMs in a chroot</p>
 <h2>SYNTAX</h2>
 <p> mock [options] <code>&#8211;rebuild</code> <i>SRPM [SRPM&#8230;</i>] </p>

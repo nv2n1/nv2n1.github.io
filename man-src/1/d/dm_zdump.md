@@ -1,4 +1,5 @@
 ---
+
 title: "dm_zdump(1)"
 name: "dm_zdump"
 section: "1"
@@ -6,10 +7,7 @@ letter: "d"
 url: "/docs/linux/man/1-dm_zdump/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- dm_zdump - timezone dumper 
+dm_zdump - timezone dumper 
 
 <h2>SYNOPSIS</h2>
 

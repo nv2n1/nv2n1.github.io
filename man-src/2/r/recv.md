@@ -1,4 +1,5 @@
 ---
+
 title: "recv(2)"
 name: "recv"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-recv/"
 description: "recv, recvfrom, recvmsg – receive a message from a socket"
 ---
 
-<h2 class="name">NAME</h2>
 <p> recv, recvfrom, recvmsg &#8211; receive a message from a socket </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

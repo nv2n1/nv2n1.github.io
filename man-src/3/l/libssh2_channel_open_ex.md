@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_channel_open_ex(3)"
 name: "libssh2_channel_open_ex"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_channel_open_ex/"
 description: "libssh2_channel_open_ex – establish a generic session channel"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_channel_open_ex &#8211; establish a generic session channel</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

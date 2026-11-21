@@ -1,4 +1,5 @@
 ---
+
 title: "talwani2d(1)"
 name: "talwani2d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-talwani2d/"
 description: "talwani2d – Compute free-air, geoid or vertical gravity gradients anomalies over 2-D bodies"
 ---
 
-<h2>NAME</h2>
 <p> talwani2d &#8211; Compute free-air, geoid or vertical gravity gradients anomalies over 2-D bodies</p>
 <h2>SYNOPSIS</h2>
 <p> <code>talwani2d</code> [ <i>modeltable</i> ] [ ] [ <i>rho</i> ] ] [ <code>f</code>|<code>n</code>|<code>v</code> ] [ [<code>h</code>][<code>v</code>] ] [ <i>trackfile</i> ] [ <i>min</i><i>max</i>/<i>inc</i> ] [ <i>level</i>[<i>ymin</i>/<i>ymax</i>] ] [ [<i>level</i>] ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-x</code>[[-]<i>n</i>] ] </p>

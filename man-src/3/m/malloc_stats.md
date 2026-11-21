@@ -1,4 +1,5 @@
 ---
+
 title: "malloc_stats(3)"
 name: "malloc_stats"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-malloc_stats/"
 description: "malloc_stats – print memory allocation statistics"
 ---
 
-<h2 class="name">NAME</h2>
 <p> malloc_stats &#8211; print memory allocation statistics </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;malloc.h&gt;</code> </p>

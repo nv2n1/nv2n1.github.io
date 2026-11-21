@@ -1,4 +1,5 @@
 ---
+
 title: "g_traj_d(1)"
 name: "g_traj_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_traj_d/"
 description: "g_traj – plots x, v and f of selected atoms/groups (and more) from a trajectory"
 ---
 
-<h2>NAME</h2>
 <p> g_traj &#8211; plots x, v and f of selected atoms/groups (and more) from a trajectory </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

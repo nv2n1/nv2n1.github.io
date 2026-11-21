@@ -1,4 +1,5 @@
 ---
+
 title: "exrgbhsv(3)"
 name: "exrgbhsv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-exrgbhsv/"
 description: "exrgbhsv – RGB <-> HSV color space conversions. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> exrgbhsv &#8211; RGB &lt;-&gt; HSV color space conversions. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

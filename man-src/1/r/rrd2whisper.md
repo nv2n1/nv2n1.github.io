@@ -1,4 +1,5 @@
 ---
+
 title: "rrd2whisper(1)"
 name: "rrd2whisper"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rrd2whisper/"
 description: "rrd2whisper – convert an RRD database to a whisper database"
 ---
 
-<h2>NAME</h2>
 <p> rrd2whisper &#8211; convert an RRD database to a whisper database</p>
 <h2>SYNOPSYS</h2>
 <pre>

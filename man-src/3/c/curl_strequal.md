@@ -1,4 +1,5 @@
 ---
+
 title: "curl_strequal(3)"
 name: "curl_strequal"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-curl_strequal/"
 description: "curl_strequal, curl_strnequal – case insensitive string comparisons"
 ---
 
-<h2>NAME</h2>
 <p> curl_strequal, curl_strnequal &#8211; case insensitive string comparisons</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;curl/curl.h&gt;</code> </p>

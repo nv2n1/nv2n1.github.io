@@ -1,4 +1,5 @@
 ---
+
 title: "hid2hci(1)"
 name: "hid2hci"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hid2hci/"
 description: "hid2hci – Bluetooth HID to HCI mode switching utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hid2hci &#8211; Bluetooth HID to HCI mode switching utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>hid2hci</code> [<i>OPTIONS</i>]</p>

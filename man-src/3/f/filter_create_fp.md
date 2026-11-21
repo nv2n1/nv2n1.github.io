@@ -1,4 +1,5 @@
 ---
+
 title: "filter_create_fp(3)"
 name: "filter_create_fp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-filter_create_fp/"
 description: "filter_create_fp – similar to filter_create_fd except with buffered FILE*"
 ---
 
-<h2 class="name">NAME</h2>
 <p> filter_create_fp &#8211; similar to filter_create_fd except with buffered FILE* </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

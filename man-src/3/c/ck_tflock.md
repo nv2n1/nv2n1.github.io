@@ -1,4 +1,5 @@
 ---
+
 title: "ck_tflock(3)"
 name: "ck_tflock"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_tflock/"
 description: "ck_tflock_ticket_init ck_tflock_ticket_write_lock ck_tflock_ticket_write_unlock ck_tflock_ticket_read_lock ck_tflock_ticket_read_unlock – centralized task-fair reader-writer locks"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_tflock_ticket_init</code> <code>ck_tflock_ticket_write_lock</code> <code>ck_tflock_ticket_write_unlock</code> <code>ck_tflock_ticket_read_lock</code> <code>ck_tflock_ticket_read_unlock</code> &#8211; centralized task-fair reader-writer locks</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

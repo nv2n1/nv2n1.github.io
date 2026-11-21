@@ -1,4 +1,5 @@
 ---
+
 title: "perlbook(1)"
 name: "perlbook"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlbook/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlbook - Books about and related to Perl 
+perlbook - Books about and related to Perl 
 
 <h2>DESCRIPTION</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "opahfirev(1)"
 name: "opahfirev"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-opahfirev/"
 description: "opahfirev"
 ---
 
-<h2>NAME</h2>
 <p> opahfirev </p>
 <p> <code>(Linux)</code> Scans the system and reports hardware and firmware information about all the HFIs in the system.</p>
 <h2>Syntax</h2>

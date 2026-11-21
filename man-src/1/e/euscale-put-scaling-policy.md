@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-put-scaling-policy(1)"
 name: "euscale-put-scaling-policy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euscale-put-scaling-policy/"
 description: "euscale-put-scaling-policy – Create or update an auto-scaling group’s scaling policy"
 ---
 
-<h2>NAME</h2>
 <p> euscale-put-scaling-policy &#8211; Create or update an auto-scaling group&#8217;s scaling policy</p>
 <h2>SYNOPSIS</h2>
 <p> euscale-put-scaling-policy <code>-g</code> ASGROUP <code>-a</code> SCALE <code>-t</code></p>

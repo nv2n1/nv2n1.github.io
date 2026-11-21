@@ -1,4 +1,5 @@
 ---
+
 title: "mbchk(1)"
 name: "mbchk"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mbchk/"
 description: "mbchk – check the format of a Multiboot kernel"
 ---
 
-<h2>NAME</h2>
 <p> mbchk &#8211; check the format of a Multiboot kernel</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mbchk</code> [<i>OPTION</i>]&#8230; [<i>FILE</i>]&#8230;</p>

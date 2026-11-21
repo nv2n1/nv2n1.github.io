@@ -1,4 +1,5 @@
 ---
+
 title: "ksu(1)"
 name: "ksu"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ksu/"
 description: "ksu – Kerberized super-user"
 ---
 
-<h2>NAME</h2>
 <p> ksu &#8211; Kerberized super-user</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ksu</code> [ <i>target_user</i> ] [ <code>-n</code> <i>target_principal_name</i> ] [ <code>-c</code> <i>source_cache_name</i> ] [ <code>-k</code> ] [ <code>-r</code> time ] [ <code>-pf</code> ] [ <code>-l</code> <i>lifetime</i> ] [ <code>-z | Z</code> ] [ <code>-q</code> ] [ <code>-e</code> <i>command</i> [ args &#8230; ] ] [ <code>-a</code> [ args &#8230; ] ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gvfsd(1)"
 name: "gvfsd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gvfsd/"
 description: "gvfsd – Main daemon for gvfs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gvfsd &#8211; Main daemon for gvfs </p>
 <h2>SYNOPSIS</h2>
 <dl>

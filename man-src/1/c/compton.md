@@ -1,4 +1,5 @@
 ---
+
 title: "compton(1)"
 name: "compton"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-compton/"
 description: "compton – a compositor for X11"
 ---
 
-<h2 class="name">NAME</h2>
 <p> compton &#8211; a compositor for X11 </p>
 <h2>SYNOPSIS</h2>
 <p> <code>compton</code> [<i>OPTIONS</i>]</p>

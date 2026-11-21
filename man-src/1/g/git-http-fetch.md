@@ -1,4 +1,5 @@
 ---
+
 title: "git-http-fetch(1)"
 name: "git-http-fetch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-http-fetch/"
 description: "git-http-fetch – Download from a remote Git repository via HTTP"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-http-fetch &#8211; Download from a remote Git repository via HTTP </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "sbverify(1)"
 name: "sbverify"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sbverify/"
 description: "sbverify – UEFI secure boot verification tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sbverify &#8211; UEFI secure boot verification tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sbverify</code> [<i>,options/</i>] <i>,&#8211;cert &lt;certfile&gt; &lt;efi-boot-image&gt;/</i></p>

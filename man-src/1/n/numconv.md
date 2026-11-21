@@ -1,4 +1,5 @@
 ---
+
 title: "numconv(1)"
 name: "numconv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-numconv/"
 description: "numconv – convert numbers from one number system to another"
 ---
 
-<h2>NAME</h2>
 <p> numconv &#8211; convert numbers from one number system to another</p>
 <h2>SYNOPSIS</h2>
 <p> <code>Numconv</code> &lt;options&gt;</p>

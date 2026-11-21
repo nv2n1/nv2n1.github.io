@@ -1,4 +1,5 @@
 ---
+
 title: "porestructure(1)"
 name: "porestructure"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-porestructure/"
 description: "porestructure – Restructure Gettxt PO files produced by :doc:`poconflicts </commands/poconflicts>` into the original directory tree for merging using :doc:`pomerge </commands/pomerge>`."
 ---
 
-<h2>NAME</h2>
 <p> porestructure &#8211; Restructure Gettxt PO files produced by :doc:`poconflicts &lt;/commands/poconflicts&gt;` into the original directory tree for merging using :doc:`pomerge &lt;/commands/pomerge&gt;`.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>porestructure </code>[&#8211;version] [-h|&#8211;help] [&#8211;manpage] [&#8211;progress <i>PROGRESS</i>] [&#8211;errorlevel <i>ERRORLEVEL</i>] [-i|&#8211;input] <i>INPUT</i> [-x|&#8211;exclude <i>EXCLUDE</i>] [-o|&#8211;output] <i>OUTPUT</i></p>

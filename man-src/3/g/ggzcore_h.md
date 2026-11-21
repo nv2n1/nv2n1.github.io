@@ -1,4 +1,5 @@
 ---
+
 title: "ggzcore_h(3)"
 name: "ggzcore_h"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ggzcore_h/"
 description: "ggzcore.h – The interface for the ggzcore library used by GGZ clients."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ggzcore.h &#8211; The interface for the ggzcore library used by GGZ clients. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdarg.h&gt;<br />

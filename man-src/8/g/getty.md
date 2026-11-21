@@ -1,4 +1,5 @@
 ---
+
 title: "getty(8)"
 name: "getty"
 section: "8"
@@ -6,8 +7,9 @@ letter: "g"
 url: "/docs/linux/man/8-getty/"
 description: "agetty – alternative Linux getty"
 ---
+
 <p>agetty &#8211; alternative Linux getty </p>
-<h2>SYNOPSIS</h2>
+
 <p> <code>agetty</code> [options] <i>port</i> [<i>baud_rate</i>...] [<i>term</i>]  </p>
 <h2>DESCRIPTION</h2>
 <p> <code>agetty</code> opens a tty port, prompts for a login name and invokes the /bin/login command. It is normally invoked by <code><a href="/docs/linux/man/8-init/">init</a></code>(8). </p>

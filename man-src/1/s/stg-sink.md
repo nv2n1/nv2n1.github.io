@@ -1,4 +1,5 @@
 ---
+
 title: "stg-sink(1)"
 name: "stg-sink"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-stg-sink/"
 description: "stg-sink – Send patches deeper down the stack"
 ---
 
-<h2 class="name">NAME</h2>
 <p> stg-sink &#8211; Send patches deeper down the stack </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

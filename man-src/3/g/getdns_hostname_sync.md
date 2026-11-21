@@ -1,4 +1,5 @@
 ---
+
 title: "getdns_hostname_sync(3)"
 name: "getdns_hostname_sync"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getdns_hostname_sync/"
 description: "getdns_hostname, getdns_hostname_sync — get hostname by address"
 ---
 
-<h2>NAME</h2>
 <p> <code>getdns_hostname, </code> <code>getdns_hostname_sync</code> &#8212; get hostname by address </p>
 <h2>LIBRARY</h2>
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>

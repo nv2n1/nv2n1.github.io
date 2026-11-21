@@ -1,4 +1,5 @@
 ---
+
 title: "frequency_(3)"
 name: "frequency_"
 section: "3"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-frequency_/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- QuantLib::AmortizingFixedRateBond - amortizing fixed-rate bond 
+QuantLib::AmortizingFixedRateBond - amortizing fixed-rate bond 
 
 <h2>SYNOPSIS</h2>
 

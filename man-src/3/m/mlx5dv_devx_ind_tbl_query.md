@@ -1,4 +1,5 @@
 ---
+
 title: "mlx5dv_devx_ind_tbl_query(3)"
 name: "mlx5dv_devx_ind_tbl_query"
 section: "3"
@@ -6,12 +7,7 @@ letter: "m"
 url: "/docs/linux/man/3-mlx5dv_devx_ind_tbl_query/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- mlx5dv_devx_qp_modify - Modifies a verbs QP via DEVX 
+mlx5dv_devx_qp_modify - Modifies a verbs QP via DEVX 
 
  mlx5dv_devx_qp_query - Queries a verbs QP via DEVX 
 

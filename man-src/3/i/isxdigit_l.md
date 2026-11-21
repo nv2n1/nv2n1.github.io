@@ -1,4 +1,5 @@
 ---
+
 title: "isxdigit_l(3)"
 name: "isxdigit_l"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-isxdigit_l/"
 description: "isalnum, isalpha, isascii, isblank, iscntrl, isdigit, isgraph, islower, isprint, ispunct, isspace, isupper, isxdigit, isalnum_l, isalpha_l, isascii_l, isblank_l, iscntrl_l, isdigit_l, isgraph_l, is..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> isalnum, isalpha, isascii, isblank, iscntrl, isdigit, isgraph, islower, isprint, ispunct, isspace, isupper, isxdigit, isalnum_l, isalpha_l, isascii_l, isblank_l, iscntrl_l, isdigit_l, isgraph_l, islower_l, isprint_l, ispunct_l, isspace_l, isupper_l, isxdigit_l &#8211; character classification functions </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

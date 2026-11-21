@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_userauth_authenticated(3)"
 name: "libssh2_userauth_authenticated"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_userauth_authenticated/"
 description: "libssh2_userauth_authenticated – return authentication status"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_userauth_authenticated &#8211; return authentication status</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

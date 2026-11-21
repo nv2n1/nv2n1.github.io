@@ -1,4 +1,5 @@
 ---
+
 title: "libtool(1)"
 name: "libtool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-libtool/"
 description: "libtool – manual page for libtool 2.4.2"
 ---
 
-<h2>NAME</h2>
 <p> libtool &#8211; manual page for libtool 2.4.2</p>
 <h2>SYNOPSIS</h2>
 <p> <code>libtool</code> [<i>OPTION</i>]&#8230; [<i>MODE-ARG</i>]&#8230;<br />

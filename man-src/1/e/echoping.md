@@ -1,4 +1,5 @@
 ---
+
 title: "echoping(1)"
 name: "echoping"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-echoping/"
 description: "echoping – tests a remote host with TCP or UDP"
 ---
 
-<h2>NAME</h2>
 <p> echoping &#8211; tests a remote host with TCP or UDP </p>
 <h2>SYNOPSIS</h2>
 <p> <code>echoping</code> [-4] [-6] [-v] [-V] [-f<i>fill]</i> [-t<i>timeout]</i> [-c] [-d] [-u] [-s<i>size]</i> [-n<i>number]</i> [-w<i>delay]</i> [-h<i>url-or-path]</i> [-R] [-i<i>url]</i> [-p<i>priority]</i> [-P<i>tos]</i> [-C] [-S] [-A] [-a] [-m<i>plugin]</i> <code>hostname</code> [:port] [plugin options&#8230;] </p>

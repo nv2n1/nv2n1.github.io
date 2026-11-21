@@ -1,4 +1,5 @@
 ---
+
 title: "getdns_validate_dnssec(3)"
 name: "getdns_validate_dnssec"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getdns_validate_dnssec/"
 description: "getdns_validate_dnssec — DNSSEC validate a given getdns record"
 ---
 
-<h2>NAME</h2>
 <p> <code>getdns_validate_dnssec</code> &#8212; DNSSEC validate a given getdns record </p>
 <h2>LIBRARY</h2>
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>

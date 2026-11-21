@@ -1,4 +1,5 @@
 ---
+
 title: "bcopy(3)"
 name: "bcopy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bcopy/"
 description: "bcopy – copy byte sequence"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bcopy &#8211; copy byte sequence </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

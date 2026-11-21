@@ -1,4 +1,5 @@
 ---
+
 title: "dstat(1)"
 name: "dstat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dstat/"
 description: "dstat – versatile tool for generating system resource statistics"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dstat &#8211; versatile tool for generating system resource statistics </p>
 <h2>SYNOPSIS</h2>
 <p> dstat [-afv] [options..] [delay [count]] </p>

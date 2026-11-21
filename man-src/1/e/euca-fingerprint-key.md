@@ -1,4 +1,5 @@
 ---
+
 title: "euca-fingerprint-key(1)"
 name: "euca-fingerprint-key"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-fingerprint-key/"
 description: "euca-fingerprint-key – Show the fingerprint of a private key as it would appear in the output of euca-describe-keypairs."
 ---
 
-<h2>NAME</h2>
 <p> euca-fingerprint-key &#8211; Show the fingerprint of a private key as it would appear in the output of euca-describe-keypairs.</p>
 <h2>SYNOPSIS</h2>
 <p> euca-fingerprint-key [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] FILE</p>

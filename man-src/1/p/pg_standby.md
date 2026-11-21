@@ -1,4 +1,5 @@
 ---
+
 title: "pg_standby(1)"
 name: "pg_standby"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pg_standby/"
 description: "pg_standby – supports the creation of a PostgreSQL warm standby server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pg_standby &#8211; supports the creation of a PostgreSQL warm standby server </p>
 <h2>SYNOPSIS</h2>
 <dl>

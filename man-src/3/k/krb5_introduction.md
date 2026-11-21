@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_introduction(3)"
 name: "krb5_introduction"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_introduction/"
 description: "krb5_introduction – Introduction to the Kerberos 5 API"
 ---
 
-<h2 class="name">NAME</h2>
 <p> krb5_introduction &#8211; Introduction to the Kerberos 5 API</p>
 <h2>Kerberos 5 API Overview</h2>
 <p> All functions are documented in manual pages. This section tries to give an overview of the major components used in Kerberos library, and point to where to look for a specific function.</p>

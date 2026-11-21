@@ -1,4 +1,5 @@
 ---
+
 title: "mate-volume-control-applet(1)"
 name: "mate-volume-control-applet"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-volume-control-applet/"
 description: "mate-volume-control-applet – The MATE Volume Control Applet"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>mate-volume-control-applet</code> &#8211; The MATE Volume Control Applet </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-volume-control [OPTIONS]</code></p>

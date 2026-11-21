@@ -1,4 +1,5 @@
 ---
+
 title: "htdig-pdfparser(1)"
 name: "htdig-pdfparser"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-htdig-pdfparser/"
 description: "htdig-pdfparser – parse a PDF document (wrapper script for htdig)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> htdig-pdfparser &#8211; parse a PDF document (wrapper script for htdig) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>htdig-pdfparser</code></p>

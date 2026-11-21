@@ -1,4 +1,5 @@
 ---
+
 title: "pnmhistmap(1)"
 name: "pnmhistmap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnmhistmap/"
 description: "pnmhistmap – draw a histogram for a PGM or PPM file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pnmhistmap &#8211; draw a histogram for a PGM or PPM file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmhistmap</code> [<code>-black</code>] [<code>-white</code>] [<code>-max</code> <i>N</i>] [<code>-verbose</code>] [<i>pnmfile</i>]</p>

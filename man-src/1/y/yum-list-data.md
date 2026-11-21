@@ -1,4 +1,5 @@
 ---
+
 title: "yum-list-data(1)"
 name: "yum-list-data"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-yum-list-data/"
 description: "yum list data plugin"
 ---
 
-<h2>NAME</h2>
 <p> yum list data plugin</p>
 <h2>SYNOPSIS</h2>
 <p> <code>yum</code> [options] [command] [package &#8230;]</p>

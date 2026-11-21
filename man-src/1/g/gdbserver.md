@@ -1,4 +1,5 @@
 ---
+
 title: "gdbserver(1)"
 name: "gdbserver"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gdbserver/"
 description: "gdbserver – Remote Server for the GNU Debugger"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gdbserver &#8211; Remote Server for the GNU Debugger </p>
 <h2>SYNOPSIS</h2>
 <p> gdbserver <i>comm</i> <i>prog</i> [<i>args</i>&#8230;] </p>

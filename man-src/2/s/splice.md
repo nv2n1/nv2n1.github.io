@@ -1,4 +1,5 @@
 ---
+
 title: "splice(2)"
 name: "splice"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-splice/"
 description: "splice – splice data to/from a pipe"
 ---
 
-<h2 class="name">NAME</h2>
 <p> splice &#8211; splice data to/from a pipe </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

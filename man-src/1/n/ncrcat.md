@@ -1,4 +1,5 @@
 ---
+
 title: "ncrcat(1)"
 name: "ncrcat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ncrcat/"
 description: "ncrcat – netCDF Record Concatenator"
 ---
 
-<h2>NAME</h2>
 <p> ncrcat &#8211; netCDF Record Concatenator</p>
 <h2>SYNTAX</h2>
 <p> ncrcat [-3] [-4] [-6] [-7] [-A] [&#8211;bfr <i>sz</i>]<i>[-C]</i>[-c]<i>[&#8211;cnk_byt</i> <i>sz</i>]<i>[&#8211;cnk_dmn</i> <i>nm,sz</i>] [&#8211;cnk_map <i>map</i>] [&#8211;cnk_plc <i>plc</i>] [&#8211;cnk_scl <i>sz</i>]<i>[-D</i> <i>dbg_lvl</i>] [-d <i>dim</i>,[ <i>min</i>][,[ <i>max</i>]][,[ <i>stride</i>[[,[ <i>subcycle</i>]]]]] [-F] [-G <i>gpe_dsc</i>] [-g <i>grp</i>[,&#8230;]] [-h] [&#8211;hdr_pad <i>sz</i>] [-L <i>dfl_lvl</i>] [-l <i>path</i>] [&#8211;mro] [&#8211;msa] [-n <i>loop]</i> [&#8211;no_tmp_fl] [-O] [-p <i>path</i>] [-R] [-r] [&#8211;ram_all] [&#8211;rec_apn] [-t <i>thr_nbr</i>] [&#8211;unn] [-v <i>var</i>[,&#8230;]] [-X <i>box</i>] [-x] <i>input-files</i> <i>output-file</i></p>

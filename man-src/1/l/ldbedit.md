@@ -1,4 +1,5 @@
 ---
+
 title: "ldbedit(1)"
 name: "ldbedit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ldbedit/"
 description: "ldbedit – Edit LDB databases using your preferred editor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ldbedit &#8211; Edit LDB databases using your preferred editor </p>
 <h2>SYNOPSIS</h2>
 <dl>

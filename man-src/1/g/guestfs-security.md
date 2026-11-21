@@ -1,4 +1,5 @@
 ---
+
 title: "guestfs-security(1)"
 name: "guestfs-security"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-guestfs-security/"
 description: "guestfs-security – security of libguestfs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> guestfs-security &#8211; security of libguestfs </p>
 <h2>DESCRIPTION</h2>
 <p> This manual page discusses security implications of using libguestfs, particularly with untrusted or malicious guests or disk images.</p>

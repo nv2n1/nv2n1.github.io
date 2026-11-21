@@ -1,4 +1,5 @@
 ---
+
 title: "modemtest(1)"
 name: "modemtest"
 section: "1"
@@ -6,10 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-modemtest/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- modemtest - Tool to examining your modem through Perl's Device::SerialPort 
+modemtest - Tool to examining your modem through Perl's Device::SerialPort 
 
 <h2>SYNOPSIS</h2>
 

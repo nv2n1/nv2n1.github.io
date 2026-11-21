@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_random_art(3)"
 name: "gnutls_random_art"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_random_art/"
 description: "gnutls_random_art – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_random_art &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

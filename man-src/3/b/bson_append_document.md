@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_document(3)"
 name: "bson_append_document"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_append_document/"
 description: "bson_append_document() – The bson_append_document() function shall append child to bson using the specified key. The type of the field will be a document."
 ---
 
-<h2>NAME</h2>
 <p> bson_append_document() &#8211; The bson_append_document() function shall append child to bson using the specified key. The type of the field will be a document.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

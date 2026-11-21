@@ -1,4 +1,5 @@
 ---
+
 title: "basepods(1)"
 name: "basepods"
 section: "1"
@@ -6,10 +7,7 @@ letter: "b"
 url: "/docs/linux/man/1-basepods/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- basepods - print out pod paths for the standard perl manpages 
+basepods - print out pod paths for the standard perl manpages 
 
 <h2>DESCRIPTION</h2>
 

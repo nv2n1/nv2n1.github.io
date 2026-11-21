@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_global_set_mem_functions(3)"
 name: "gnutls_global_set_mem_functions"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_global_set_mem_functions/"
 description: "gnutls_global_set_mem_functions – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_global_set_mem_functions &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/compat.h&gt;</code> </p>

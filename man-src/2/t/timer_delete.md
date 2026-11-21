@@ -1,4 +1,5 @@
 ---
+
 title: "timer_delete(2)"
 name: "timer_delete"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-timer_delete/"
 description: "timer_delete – delete a POSIX per-process timer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> timer_delete &#8211; delete a POSIX per-process timer </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

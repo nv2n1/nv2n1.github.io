@@ -1,4 +1,5 @@
 ---
+
 title: "glade-previewer(1)"
 name: "glade-previewer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-glade-previewer/"
 description: "glade-previewer – Preview glade user interface definitions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> glade-previewer &#8211; Preview glade user interface definitions </p>
 <h2>SYNOPSIS</h2>
 <dl>

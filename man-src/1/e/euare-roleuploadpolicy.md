@@ -1,4 +1,5 @@
 ---
+
 title: "euare-roleuploadpolicy(1)"
 name: "euare-roleuploadpolicy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-roleuploadpolicy/"
 description: "euare-roleuploadpolicy – Attach a policy to a role"
 ---
 
-<h2>NAME</h2>
 <p> euare-roleuploadpolicy &#8211; Attach a policy to a role</p>
 <h2>SYNOPSIS</h2>
 <p> euare-roleuploadpolicy <code>-p</code> POLICY (<code>-o</code> POLICY_CONTENT | <code>-f</code> FILE)</p>

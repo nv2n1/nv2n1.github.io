@@ -1,4 +1,5 @@
 ---
+
 title: "ecl-config(1)"
 name: "ecl-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ecl-config/"
 description: "ecl-config – Embeddable Common LISP configuration query"
 ---
 
-<h2>NAME</h2>
 <p> ecl-config &#8211; Embeddable Common LISP configuration query</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ecl-config</code> [<code>-cflags] [-libs] [-ldflags] [ LIBS] </code></p>

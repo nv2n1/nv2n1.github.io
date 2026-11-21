@@ -1,4 +1,5 @@
 ---
+
 title: "rdf2srec(1)"
 name: "rdf2srec"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rdf2srec/"
 description: "rdf2bin, rdf2com – convert an RDOFF object file to flat binary"
 ---
 
-<h2>NAME</h2>
 <p> rdf2bin, rdf2com &#8211; convert an RDOFF object file to flat binary</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rdf2bin</code> [-o <i>relocation-origin</i>] [-p <i>segment-alignment</i>] [-f <i>format</i>] <i>input-file</i> <i>output-file</i><br />

@@ -1,4 +1,5 @@
 ---
+
 title: "git-check-mailmap(1)"
 name: "git-check-mailmap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-check-mailmap/"
 description: "git-check-mailmap – Show canonical names and email addresses of contacts"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-check-mailmap &#8211; Show canonical names and email addresses of contacts </p>
 <h2>SYNOPSIS</h2>
 <pre>

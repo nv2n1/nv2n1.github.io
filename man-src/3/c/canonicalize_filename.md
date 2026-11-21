@@ -1,4 +1,5 @@
 ---
+
 title: "canonicalize_filename(3)"
 name: "canonicalize_filename"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-canonicalize_filename/"
 description: "canonicalize_filename – Converts any filename into its canonical form. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> canonicalize_filename &#8211; Converts any filename into its canonical form. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

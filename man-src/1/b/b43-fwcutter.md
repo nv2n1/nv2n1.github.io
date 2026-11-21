@@ -1,4 +1,5 @@
 ---
+
 title: "b43-fwcutter(1)"
 name: "b43-fwcutter"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-b43-fwcutter/"
 description: "b43-fwcutter – Utility for extracting Broadcom 43xx firmware"
 ---
 
-<h2>NAME</h2>
 <p> b43-fwcutter &#8211; Utility for extracting Broadcom 43xx firmware</p>
 <h2>SYNOPSIS</h2>
 <p> <code>b43-fwcutter</code> [<i>OPTION</i>] [<i>DRIVER</i>]</p>

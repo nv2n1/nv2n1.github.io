@@ -1,4 +1,5 @@
 ---
+
 title: "ksshell(1)"
 name: "ksshell"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ksshell/"
 description: "ksshell — an interactive kickstart shell"
 ---
 
-<h2>NAME</h2>
 <p> ksshell &#8212; an interactive kickstart shell</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ksflatten</code> [<code>-i</code> | <code>&#8211;input INFILE</code>] [<code>-o</code> | <code>&#8211;output OUTFILE</code>] [<code>-v</code> | <code>&#8211;version VERSION</code>]</p>

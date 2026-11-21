@@ -1,4 +1,5 @@
 ---
+
 title: "aa_render(3)"
 name: "aa_render"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_render/"
 description: "aa_render – convert image buffer to ASCII-art."
 ---
 
-<h2>NAME</h2>
 <p> aa_render &#8211; convert image buffer to ASCII-art.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

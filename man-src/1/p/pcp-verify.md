@@ -1,4 +1,5 @@
 ---
+
 title: "pcp-verify(1)"
 name: "pcp-verify"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pcp-verify/"
 description: "pcp-verify – verify aspects of a PCP installation"
 ---
 
-<h2>NAME</h2>
 <p> <code>pcp-verify</code> &#8211; verify aspects of a PCP installation</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pcp</code> [<i>pcp options</i>] <code>verify</code> [<code>-c</code>/<code>&#8211;containers</code>] [<code>-s</code>/<code>&#8211;secure</code>] [<code>-v</code>/<code>&#8211;verbose</code>]</p>

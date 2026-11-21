@@ -1,4 +1,5 @@
 ---
+
 title: "cgclear(1)"
 name: "cgclear"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cgclear/"
 description: "cgclear – unload the cgroup filesystem"
 ---
 
-<h2>NAME</h2>
 <p> cgclear &#8211; unload the cgroup filesystem </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cgclear</code> [<code>-e</code>] [<code>-l</code> &lt;<i>filename</i>&gt;] [<code>-L</code> &lt;<i>directory</i>&gt;] [&#8230;] </p>

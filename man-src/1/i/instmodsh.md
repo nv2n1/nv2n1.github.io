@@ -1,4 +1,5 @@
 ---
+
 title: "instmodsh(1)"
 name: "instmodsh"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-instmodsh/"
 description: "instmodsh – A shell to examine installed modules"
 ---
 
-<h2 class="name">NAME</h2>
 <p> instmodsh &#8211; A shell to examine installed modules </p>
 <h2>SYNOPSIS</h2>
 <pre>

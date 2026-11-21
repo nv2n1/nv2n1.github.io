@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-id-ctrl(1)"
 name: "nvme-id-ctrl"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-id-ctrl/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nvme-id-ctrl - Send NVMe Identify Controller, return result and structure 
+nvme-id-ctrl - Send NVMe Identify Controller, return result and structure 
 
 <h2>SYNOPSIS</h2>
 

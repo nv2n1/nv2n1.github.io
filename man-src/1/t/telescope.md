@@ -1,4 +1,5 @@
 ---
+
 title: "telescope(1)"
 name: "telescope"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-telescope/"
 description: "Telescope mount position control"
 ---
 
-<h2>NAME</h2>
 <p> Telescope mount position control</p>
 <h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr>telescope&nbsp;<wbr>[options]&nbsp;<wbr>[set | get]&nbsp;<wbr>[commands]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "readpst(1)"
 name: "readpst"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-readpst/"
 description: "readpst – convert PST (MS Outlook Personal Folders) files to mbox and other formats"
 ---
 
-<h2 class="name">NAME</h2>
 <p> readpst &#8211; convert PST (MS Outlook Personal Folders) files to mbox and other formats </p>
 <h2>SYNOPSIS</h2>
 <dl>

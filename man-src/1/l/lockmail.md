@@ -1,4 +1,5 @@
 ---
+
 title: "lockmail(1)"
 name: "lockmail"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lockmail/"
 description: "lockmail – create mail lock files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lockmail &#8211; create mail lock files </p>
 <h2>SYNOPSIS</h2>
 <dl>

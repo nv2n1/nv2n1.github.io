@@ -1,4 +1,5 @@
 ---
+
 title: "iv_fd_set_handler_in(3)"
 name: "iv_fd_set_handler_in"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-iv_fd_set_handler_in/"
 description: "iv_fd_register, iv_fd_register_try, iv_fd_unregister, iv_fd_registered, iv_fd_set_handler_in, iv_fd_set_handler_err, iv_fd_set_handler_out – deal with ivykis file descriptors"
 ---
 
-<h2>NAME</h2>
 <p> iv_fd_register, iv_fd_register_try, iv_fd_unregister, iv_fd_registered, iv_fd_set_handler_in, iv_fd_set_handler_err, iv_fd_set_handler_out &#8211; deal with ivykis file descriptors</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;iv.h&gt;</code> </p>

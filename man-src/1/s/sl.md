@@ -1,4 +1,5 @@
 ---
+
 title: "sl(1)"
 name: "sl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sl/"
 description: "sl – cure your bad habit of mistyping"
 ---
 
-<h2>NAME</h2>
 <p> sl &#8211; cure your bad habit of mistyping</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sl</code> [ <code>-alFc</code> ]</p>

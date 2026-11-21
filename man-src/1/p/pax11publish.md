@@ -1,4 +1,5 @@
 ---
+
 title: "pax11publish(1)"
 name: "pax11publish"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pax11publish/"
 description: "pax11publish – PulseAudio X11 Credential Utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pax11publish &#8211; PulseAudio X11 Credential Utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pax11publish -h </p>

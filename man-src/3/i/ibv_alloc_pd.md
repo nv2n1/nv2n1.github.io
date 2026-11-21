@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_alloc_pd(3)"
 name: "ibv_alloc_pd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ibv_alloc_pd/"
 description: "ibv_alloc_pd, ibv_dealloc_pd – allocate or deallocate a protection domain (PDs)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ibv_alloc_pd, ibv_dealloc_pd &#8211; allocate or deallocate a protection domain (PDs) </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

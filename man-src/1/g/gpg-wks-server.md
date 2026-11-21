@@ -1,4 +1,5 @@
 ---
+
 title: "gpg-wks-server(1)"
 name: "gpg-wks-server"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpg-wks-server/"
 description: "gpg-wks-server – Server providing the Web Key Service"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>gpg-wks-server</code> &#8211; Server providing the Web Key Service </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gpg-wks-server</code> [<i>options</i>] <code>&#8211;receive</code><br />

@@ -1,4 +1,5 @@
 ---
+
 title: "extlinux(1)"
 name: "extlinux"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-extlinux/"
 description: "extlinux – install the SYSLINUX bootloader on an ext2/ext3/ext4/btrfs/xfs filesystem"
 ---
 
-<h2 class="name">NAME</h2>
 <p> extlinux &#8211; install the <font SIZE="-1">SYSLINUX</font> bootloader on an ext2/ext3/ext4/btrfs/xfs filesystem </p>
 <h2>SYNOPSIS</h2>
 <p> <code>extlinux</code> [<i>options</i>] <i>directory</i></p>

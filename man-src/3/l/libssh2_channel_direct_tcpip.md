@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_channel_direct_tcpip(3)"
 name: "libssh2_channel_direct_tcpip"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_channel_direct_tcpip/"
 description: "libssh2_channel_direct_tcpip – convenience macro for libssh2_channel_direct_tcpip_ex(3) calls"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_channel_direct_tcpip &#8211; convenience macro for <i><a href="/docs/linux/man/3-libssh2_channel_direct_tcpip_ex/">libssh2_channel_direct_tcpip_ex</a>(3)</i> calls</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

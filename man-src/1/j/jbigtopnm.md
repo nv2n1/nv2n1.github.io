@@ -1,4 +1,5 @@
 ---
+
 title: "jbigtopnm(1)"
 name: "jbigtopnm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jbigtopnm/"
 description: "jbigtopnm – JBIG to PNM image file converter"
 ---
 
-<h2 class="name">NAME</h2>
 <p> jbigtopnm &#8211; JBIG to PNM image file converter</p>
 <h2>SYNOPSIS</h2>
 <p> <code>jbigtopnm</code> [<i>options</i>] [<i>input-file</i> [<i>output-file</i>]] </p>

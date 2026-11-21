@@ -1,4 +1,5 @@
 ---
+
 title: "msgcmp(1)"
 name: "msgcmp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-msgcmp/"
 description: "msgcmp – compare message catalog and template"
 ---
 
-<h2 class="name">NAME</h2>
 <p> msgcmp &#8211; compare message catalog and template </p>
 <h2>SYNOPSIS</h2>
 <p> <code>msgcmp</code> [<i>OPTION</i>] <i>def.po ref.pot</i></p>

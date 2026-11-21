@@ -1,4 +1,5 @@
 ---
+
 title: "rgb2ycbcr(1)"
 name: "rgb2ycbcr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rgb2ycbcr/"
 description: "rgb2ycbcr – convert non-YCbCr TIFF images to a YCbCr TIFF image"
 ---
 
-<h2>NAME</h2>
 <p> rgb2ycbcr &#8211; convert non-YCbCr <font SIZE="-1">TIFF</font> images to a YCbCr <font SIZE="-1">TIFF</font> image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rgb2ycbcr</code> [ <i>options</i> ] <i>src1.tif src2.tif &#8230; dst.tif</i></p>

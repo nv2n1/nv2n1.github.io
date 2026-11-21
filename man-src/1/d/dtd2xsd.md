@@ -1,4 +1,5 @@
 ---
+
 title: "dtd2xsd(1)"
 name: "dtd2xsd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dtd2xsd/"
 description: "dtd2xsd – XML Schema generator from XML document that contains DTD."
 ---
 
-<h2>NAME</h2>
 <p> dtd2xsd &#8211; XML Schema generator from XML document that contains DTD.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dtd2xsd</code> [options] <i>instance-xmlfile</i> <i>optional-xsdfile</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "texconfig(1)"
 name: "texconfig"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-texconfig/"
 description: "texconfig – configures teTeX or TeX Live"
 ---
 
-<h2>NAME</h2>
 <p> texconfig &#8211; configures teTeX or TeX Live </p>
 <p> texconfig-sys &#8211; configures teTeX or TeX Live system-wide</p>
 <h2>SYNOPSIS</h2>

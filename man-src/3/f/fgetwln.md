@@ -1,4 +1,5 @@
 ---
+
 title: "fgetwln(3)"
 name: "fgetwln"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fgetwln/"
 description: "fgetwln – get a line of wide characters from a stream"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>fgetwln</code> &#8211; get a line of wide characters from a stream </p>
 <h2>LIBRARY</h2>
 <p> Lb libbsd</p>

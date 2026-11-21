@@ -1,4 +1,5 @@
 ---
+
 title: "show-installed(1)"
 name: "show-installed"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-show-installed/"
 description: "show-installed – show installed RPM packages and descriptions"
 ---
 
-<h2>NAME</h2>
 <p> show-installed &#8211; show installed RPM packages and descriptions</p>
 <h2>SYNOPSIS</h2>
 <p> <code>show-installed</code> [options]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dlantr(3)"
 name: "dlantr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlantr/"
 description: "dlantr.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dlantr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

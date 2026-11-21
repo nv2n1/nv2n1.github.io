@@ -1,4 +1,5 @@
 ---
+
 title: "reseq(1)"
 name: "reseq"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-reseq/"
 description: "reseq – manual page for reseq 1.0.0"
 ---
 
-<h2>NAME</h2>
 <p> reseq &#8211; manual page for reseq 1.0.0</p>
 <h2>SYNOPSIS</h2>
 <p> <code>reseq</code> [<i>-t FILE</i>] <i>INPUT OUTPUT</i><br />

@@ -1,4 +1,5 @@
 ---
+
 title: "htsfile(1)"
 name: "htsfile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-htsfile/"
 description: "htsfile – identify high-throughput sequencing data files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> htsfile &#8211; identify high-throughput sequencing data files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>htsfile</code> [<code>-chHv</code>] <i>FILE</i>&#8230;<br />

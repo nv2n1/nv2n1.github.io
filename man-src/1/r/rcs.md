@@ -1,4 +1,5 @@
 ---
+
 title: "rcs(1)"
 name: "rcs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rcs/"
 description: "rcs – change RCS file attributes"
 ---
 
-<h2>NAME</h2>
 <p> rcs &#8211; change <font SIZE="-1">RCS</font> file attributes</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rcs</code> <i>options file </i>&#8230;</p>

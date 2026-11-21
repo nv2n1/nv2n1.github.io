@@ -1,4 +1,5 @@
 ---
+
 title: "keyctl_set_timeout(3)"
 name: "keyctl_set_timeout"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-keyctl_set_timeout/"
 description: "keyctl_set_timeout – Set the expiration timer on a key"
 ---
 
-<h2 class="name">NAME</h2>
 <p> keyctl_set_timeout &#8211; Set the expiration timer on a key </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "trace-cmd(1)"
 name: "trace-cmd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-trace-cmd/"
 description: "trace-cmd – interacts with Ftrace Linux kernel internal tracer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> trace-cmd &#8211; interacts with Ftrace Linux kernel internal tracer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>trace-cmd</code> <i>COMMAND</i> [<i>OPTIONS</i>]</p>

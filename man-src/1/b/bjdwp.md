@@ -1,4 +1,5 @@
 ---
+
 title: "bjdwp(1)"
 name: "bjdwp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bjdwp/"
 description: "bjdwp – Command line USB Blackberry Java Debug Wire Protocol"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>bjdwp</code> &#8211; Command line USB Blackberry Java Debug Wire Protocol </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bjdwp</code> [-h][-p pin][-P password][-v] address port </p>

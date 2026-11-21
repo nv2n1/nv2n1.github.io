@@ -1,4 +1,5 @@
 ---
+
 title: "sgeqrt(3)"
 name: "sgeqrt"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sgeqrt/"
 description: "sgeqrt.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sgeqrt.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

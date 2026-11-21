@@ -1,4 +1,5 @@
 ---
+
 title: "j1f(3)"
 name: "j1f"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-j1f/"
 description: "j0, j0f, j0l, j1, j1f, j1l, jn, jnf, jnl – Bessel functions of the first kind"
 ---
 
-<h2 class="name">NAME</h2>
 <p> j0, j0f, j0l, j1, j1f, j1l, jn, jnf, jnl &#8211; Bessel functions of the first kind </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

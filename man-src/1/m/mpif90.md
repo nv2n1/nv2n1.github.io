@@ -1,4 +1,5 @@
 ---
+
 title: "mpif90(1)"
 name: "mpif90"
 section: "1"
@@ -6,10 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-mpif90/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- mpif77, mpif90 -- Deprecated Open MPI Fortran wrapper compilers 
+mpif77, mpif90 -- Deprecated Open MPI Fortran wrapper compilers 
 
 <h2>SYNTAX</h2>
 

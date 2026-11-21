@@ -1,4 +1,5 @@
 ---
+
 title: "sessreg(1)"
 name: "sessreg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sessreg/"
 description: "sessreg – manage utmpx/wtmpx entries for non-init clients"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sessreg &#8211; manage utmpx/wtmpx entries for non-init clients </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sessreg</code> [-w <i>wtmpx-file</i>] [-u <i>utmpx-file</i>] [-L <i>lastlog-file</i>] [-l <i>line-name</i>] [-h <i>host-name</i>] [-s <i>slot-number</i>] [-x <i>Xservers-file</i>] [-t <i>ttys-file</i>] [-V] [-a] [-d] <i>user-name</i></p>

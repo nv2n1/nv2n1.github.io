@@ -1,4 +1,5 @@
 ---
+
 title: "pnmsplit(1)"
 name: "pnmsplit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnmsplit/"
 description: "pnmsplit – split a multi-image portable anymap into multiple single-image files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pnmsplit &#8211; split a multi-image portable anymap into multiple single-image files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmsplit</code> [<i>pnmfile</i>[<i> output_file_pattern</i>]] </p>

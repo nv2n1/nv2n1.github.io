@@ -1,4 +1,5 @@
 ---
+
 title: "pmdacifs(1)"
 name: "pmdacifs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdacifs/"
 description: "pmdacifs – Common Internet Filesystem (CIFS) PMDA"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdacifs</code> &#8211; Common Internet Filesystem (CIFS) PMDA</p>
 <h2>DESCRIPTION</h2>
 <p> <code>pmdacifs</code> is a Performance Metrics Domain Agent (PMDA) which exports metric values about mounted CIFS shares from the /proc/fs/cifs directory. This PMDA requires at least the CIFS kernel module to be loaded to return some metric values and at least one mounted CIFS share in order to provide data for all metrics. </p>

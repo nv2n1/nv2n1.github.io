@@ -1,4 +1,5 @@
 ---
+
 title: "arcperftest(1)"
 name: "arcperftest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-arcperftest/"
 description: "arcperftest – ARC service performance tester"
 ---
 
-<h2 class="name">NAME</h2>
 <p> arcperftest &#8211; ARC service performance tester</p>
 <h2>SYNOPSIS</h2>
 <p> <code>arcperftest</code> [ <code>-c</code> <i>config</i> ] [ <code>-d</code> <i>debug</i> ] [ <code>-r</code> ] <i>url threads duration</i> </p>

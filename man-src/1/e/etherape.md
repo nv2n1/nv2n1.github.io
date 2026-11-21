@@ -1,4 +1,5 @@
 ---
+
 title: "etherape(1)"
 name: "etherape"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-etherape/"
 description: "etherape – graphical network traffic browser"
 ---
 
-<h2>NAME</h2>
 <p> etherape &#8211; graphical network traffic browser</p>
 <h2>SYNOPSIS</h2>
 <p> <code>etherape</code> [ <code>-m</code> operating mode ] [ <code>-i</code> interface ] [ <code>-f</code> filter ] [ <code>-r</code> inputfile ] [ <code>-n</code> ] [ <code>-d</code> ] [ <code>-F</code> ] [ <code>-N</code> color ] [ <code>-L</code> color ] [ <code>-T</code> color ] <code>-z ]</code> </p>

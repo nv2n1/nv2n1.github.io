@@ -1,4 +1,5 @@
 ---
+
 title: "glunarclock(1)"
 name: "glunarclock"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-glunarclock/"
 description: "glunarclock – A lunar clock applet for the gnome panel"
 ---
 
-<h2 class="name">NAME</h2>
 <p> glunarclock &#8211; A lunar clock applet for the gnome panel </p>
 <h2>SYNOPSIS</h2>
 <p> <code>glunarclock-applet-2</code> [<i>no</i>options<i>]</i></p>

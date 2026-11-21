@@ -1,4 +1,5 @@
 ---
+
 title: "addr2name(1)"
 name: "addr2name"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-addr2name/"
 description: "addr2name, name2addr – perform DNS lookups from scripts"
 ---
 
-<h2>NAME</h2>
 <p> addr2name, name2addr &#8211; perform DNS lookups from scripts</p>
 <h2>SYNOPSIS</h2>
 <p> <code>addr2name</code> [<code>-46cmnr</code>] [<code>HOSTNAMES</code>] </p>

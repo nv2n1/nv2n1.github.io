@@ -1,4 +1,5 @@
 ---
+
 title: "gammu-smsd-inject(1)"
 name: "gammu-smsd-inject"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gammu-smsd-inject/"
 description: "gammu-smsd-inject – Inject messages into queue of SMS daemon for Gammu"
 ---
 
-<h2>NAME</h2>
 <p> gammu-smsd-inject &#8211; Inject messages into queue of SMS daemon for Gammu</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gammu-smsd-inject</code> [<i>OPTION</i>]&#8230; MESSAGETYPE RECIPIENT [<i>MESSAGE_PARAMETER</i>]&#8230;</p>

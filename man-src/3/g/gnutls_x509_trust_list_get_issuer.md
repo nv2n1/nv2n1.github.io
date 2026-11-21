@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_trust_list_get_issuer(3)"
 name: "gnutls_x509_trust_list_get_issuer"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_x509_trust_list_get_issuer/"
 description: "gnutls_x509_trust_list_get_issuer – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_x509_trust_list_get_issuer &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "bsdiff(1)"
 name: "bsdiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bsdiff/"
 description: "bsdiff – generate a patch between two binary files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>bsdiff</code> &#8211; generate a patch between two binary files </p>
 <h2>SYNOPSIS</h2>
 <p> Ao Ar oldfile Ac Ao Ar newfile Ac Ao Ar patchfile Ac</p>

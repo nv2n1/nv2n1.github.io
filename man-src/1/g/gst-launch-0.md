@@ -1,4 +1,5 @@
 ---
+
 title: "gst-launch-0(1)"
 name: "gst-launch-0"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gst-launch-0/"
 description: "gst-launch – build and run a GStreamer pipeline"
 ---
 
-<h2>NAME</h2>
 <p> gst-launch &#8211; build and run a GStreamer pipeline</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gst-launch</code> <i>[OPTION&#8230;]</i> PIPELINE-DESCRIPTION</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "labs(3)"
 name: "labs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-labs/"
 description: "abs, labs, llabs, imaxabs – compute the absolute value of an integer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> abs, labs, llabs, imaxabs &#8211; compute the absolute value of an integer </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

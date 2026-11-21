@@ -1,4 +1,5 @@
 ---
+
 title: "psed(1)"
 name: "psed"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-psed/"
 description: "psed – a stream editor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> psed &#8211; a stream editor </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

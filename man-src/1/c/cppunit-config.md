@@ -1,4 +1,5 @@
 ---
+
 title: "cppunit-config(1)"
 name: "cppunit-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cppunit-config/"
 description: "cppunit-config – script to get information about the installed version of cppunit"
 ---
 
-<h2>NAME</h2>
 <p> cppunit-config &#8211; script to get information about the installed version of cppunit</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cppunit-config</code> [&#8211;prefix<i>[=DIR]</i>] [&#8211;exec-prefix<i>[=DIR]</i>] [&#8211;version] [&#8211;libs] [&#8211;cflags]</p>

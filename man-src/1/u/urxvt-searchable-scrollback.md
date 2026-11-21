@@ -1,4 +1,5 @@
 ---
+
 title: "urxvt-searchable-scrollback(1)"
 name: "urxvt-searchable-scrollback"
 section: "1"
@@ -6,10 +7,7 @@ letter: "u"
 url: "/docs/linux/man/1-urxvt-searchable-scrollback/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- searchable-scrollback - incremental scrollback search (enabled by default) 
+searchable-scrollback - incremental scrollback search (enabled by default) 
 
 <h2>DESCRIPTION</h2>
 

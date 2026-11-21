@@ -1,4 +1,5 @@
 ---
+
 title: "wxmacmolplt(1)"
 name: "wxmacmolplt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wxmacmolplt/"
 description: "wxMacMolPlt – molecular visualization program"
 ---
 
-<h2>NAME</h2>
 <p> wxMacMolPlt &#8211; molecular visualization program</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wxmacmolplt [options] [input file]</code></p>

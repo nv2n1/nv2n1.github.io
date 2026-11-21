@@ -1,4 +1,5 @@
 ---
+
 title: "tilestache-clean(1)"
 name: "tilestache-clean"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tilestache-clean/"
 description: "tilestache-clean – clean tiles from a TileStache cache"
 ---
 
-<h2>NAME</h2>
 <p> tilestache-clean &#8211; clean tiles from a TileStache cache</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tilestache-clean</code> [<i>options</i>]<i> zoom</i>&#8230;</p>

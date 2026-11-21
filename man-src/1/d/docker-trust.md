@@ -1,4 +1,5 @@
 ---
+
 title: "docker-trust(1)"
 name: "docker-trust"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-trust/"
 description: "docker-trust – Manage trust on Docker images"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-trust &#8211; Manage trust on Docker images </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker trust</code> </p>

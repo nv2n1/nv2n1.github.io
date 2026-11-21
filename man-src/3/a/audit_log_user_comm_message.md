@@ -1,4 +1,5 @@
 ---
+
 title: "audit_log_user_comm_message(3)"
 name: "audit_log_user_comm_message"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-audit_log_user_comm_message/"
 description: "audit_log_user_comm_message – log a user message from a console app"
 ---
 
-<h2>NAME</h2>
 <p> audit_log_user_comm_message &#8211; log a user message from a console app</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libaudit.h&gt;</code> </p>

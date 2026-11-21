@@ -1,4 +1,5 @@
 ---
+
 title: "msynctool(1)"
 name: "msynctool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-msynctool/"
 description: "msynctool – Command line interface for OpenSync"
 ---
 
-<h2>NAME</h2>
 <p> msynctool &#8211; Command line interface for OpenSync</p>
 <h2>SYNTAX</h2>
 <p> msynctool <i>option</i> [<i>arguments</i>] [<i>option</i>]<br />

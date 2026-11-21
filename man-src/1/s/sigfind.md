@@ -1,4 +1,5 @@
 ---
+
 title: "sigfind(1)"
 name: "sigfind"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sigfind/"
 description: "sigfind – Find a binary signature in a file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sigfind &#8211; Find a binary signature in a file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sigfind [-b</code> <i>bsize</i> <code>] [-o</code> <i>offset</i> <code>] [-t</code> <i>template</i> <code>] [-lV] [</code> <i>hex_signature</i> <code>]</code> <i>file</i> </p>

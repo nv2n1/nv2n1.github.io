@@ -1,4 +1,5 @@
 ---
+
 title: "zipnote(1)"
 name: "zipnote"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zipnote/"
 description: "zipnote – write the comments in zipfile to stdout, edit comments and rename files in zipfile"
 ---
 
-<h2 class="name">NAME</h2>
 <p> zipnote &#8211; write the comments in zipfile to stdout, edit comments and rename files in zipfile</p>
 <h2>SYNOPSIS</h2>
 <p> <i>zipnote</i> [<code>-w</code>] [<code>-b path</code>] [<code>-h</code>] [<code>-v</code>] [<code>-L</code>] zipfile </p>

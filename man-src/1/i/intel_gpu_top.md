@@ -1,4 +1,5 @@
 ---
+
 title: "intel_gpu_top(1)"
 name: "intel_gpu_top"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-intel_gpu_top/"
 description: "intel_gpu_top – Display a top-like summary of Intel GPU usage"
 ---
 
-<h2>NAME</h2>
 <p> intel_gpu_top &#8211; Display a top-like summary of Intel GPU usage</p>
 <h2>SYNOPSIS</h2>
 <pre>

@@ -1,4 +1,5 @@
 ---
+
 title: "pdbtool(1)"
 name: "pdbtool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pdbtool/"
 description: "pdbtool – An application to test and convert syslog-ng pattern database rules"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pdbtool &#8211; An application to test and convert syslog-ng pattern database rules </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "eqn(1)"
 name: "eqn"
 section: "1"
@@ -6,7 +7,7 @@ letter: "e"
 url: "/docs/linux/man/1-eqn/"
 description: "eqn – format equations for troff or MathML"
 ---
-<h2 class="name">NAME</h2>
+
 <p> eqn - format equations for troff or MathML </p>
 <h2>SYNOPSIS</h2>
 <p> [ <code>-rvCNR</code> ] [ <code>-d </code><i>xy</i> ] [ <code>-T </code><i>name</i> ] [ <code>-M </code><i>dir</i> ] [ <code>-f </code><i>F</i> ] [ <code>-s </code><i>n</i> ] [ <code>-p </code><i>n</i> ] [ <code>-m </code><i>n</i> ] [<i>file</i> ...]  </p>

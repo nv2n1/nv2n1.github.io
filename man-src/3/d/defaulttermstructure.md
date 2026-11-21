@@ -1,4 +1,5 @@
 ---
+
 title: "defaulttermstructure(3)"
 name: "defaulttermstructure"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-defaulttermstructure/"
 description: "ql/termstructures/defaulttermstructure.hpp – default-probability term structure"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/termstructures/defaulttermstructure.hpp &#8211; default-probability term structure </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructure.hpp&gt; </p>

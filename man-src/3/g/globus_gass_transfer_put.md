@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gass_transfer_put(3)"
 name: "globus_gass_transfer_put"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gass_transfer_put/"
 description: "Client-Initiated Operations –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Client-Initiated Operations &#8211; </p>
 <p> GASS Transfer Client Operations.</p>
 <h3>Functions</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "growpart(1)"
 name: "growpart"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-growpart/"
 description: "growpart – extend a partition in a partition table to fill available space"
 ---
 
-<h2>NAME</h2>
 <p> growpart &#8211; extend a partition in a partition table to fill available space </p>
 <h2>SYNOPSIS</h2>
 <p> <code>growpart [OPTIONS] DISK PARTITION-NUMBER</code> </p>

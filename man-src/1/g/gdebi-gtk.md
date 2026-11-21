@@ -1,4 +1,5 @@
 ---
+
 title: "gdebi-gtk(1)"
 name: "gdebi-gtk"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gdebi-gtk/"
 description: "gdebi-gtk – Simple tool to install deb files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gdebi-gtk &#8211; Simple tool to install deb files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gdebi-gtk</code> [<i>package.deb</i>]&#8230;</p>

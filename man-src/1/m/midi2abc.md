@@ -1,4 +1,5 @@
 ---
+
 title: "midi2abc(1)"
 name: "midi2abc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-midi2abc/"
 description: "midi2abc – program to convert MIDI format files to abc notation"
 ---
 
-<h2>NAME</h2>
 <p> <code>midi2abc</code> &#8211; program to convert MIDI format files to abc notation</p>
 <h2>SYNOPSIS</h2>
 <p> midi2abc -f <i>infile</i> [-xa] [-ga] [-a <i>acbeats</i>] [-m <i>time signature</i>] [-ppu parts per unit] [-aul denominator of unit length] [-gu] [-b <i>bars</i>] [-Q <i>tempo</i>] [-u pulses] [-k <i>key</i>] [-c <i>channel</i>] [-obpl] [-bpl bars] [-bps bars] [-o <i>filename</i>] [-s] [-sr units] [-sum] [-nt] [-splitbars] [-splitvoices] [-midigram] [-mftext] [-nogr] [-title string] [-origin string]</p>

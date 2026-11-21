@@ -1,4 +1,5 @@
 ---
+
 title: "pamcut(1)"
 name: "pamcut"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamcut/"
 description: "pamcut – cut a rectangle out of a PAM, PBM, PGM, or PPM image"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamcut &#8211; cut a rectangle out of a PAM, PBM, PGM, or PPM image </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamcut</code> [<code>-left </code><i>leftcol</i>] [<code>-right </code><i>rightcol</i>] [<code>-top </code><i>toprow</i>] [<code>-bottom </code><i>bottomrow</i>] [<code>-width </code><i>width</i>] [<code>-height </code><i>height</i>] [<code>-pad</code>] [<code>-verbose</code>] [ <i>left right width height</i> ] [<i>pnmfile</i>] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "git-sed(1)"
 name: "git-sed"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-sed/"
 description: "git-sed – replace patterns in git-controlled files"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-sed</code> &#8211; replace patterns in git-controlled files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-sed</code> [ -c ] [ -f <i>flags</i> ] <i>search</i> <i>replacement</i></p>

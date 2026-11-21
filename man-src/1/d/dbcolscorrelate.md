@@ -1,4 +1,5 @@
 ---
+
 title: "dbcolscorrelate(1)"
 name: "dbcolscorrelate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dbcolscorrelate/"
 description: "dbcolscorrelate – find the coefficient of correlation over columns"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dbcolscorrelate &#8211; find the coefficient of correlation over columns </p>
 <h2>SYNOPSIS</h2>
 <pre>

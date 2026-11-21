@@ -1,4 +1,5 @@
 ---
+
 title: "dh_installgsettings(1)"
 name: "dh_installgsettings"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_installgsettings/"
 description: "dh_installgsettings – install GSettings overrides and set dependencies"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_installgsettings &#8211; install GSettings overrides and set dependencies </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_installgsettings</code> [<i>debhelper options</i>] [<code>&#8211;priority=&lt;number</code>&gt;]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cckddiag(1)"
 name: "cckddiag"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cckddiag/"
 description: "cckddiag – Hercules CCKD DASD diagnostic tool"
 ---
 
-<h2>NAME</h2>
 <p> <code>cckddiag</code> &#8211; Hercules CCKD DASD diagnostic tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cckddiag</code> [options&#8230;] <code>filename</code> </p>

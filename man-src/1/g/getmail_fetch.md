@@ -1,4 +1,5 @@
 ---
+
 title: "getmail_fetch(1)"
 name: "getmail_fetch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-getmail_fetch/"
 description: "getmail_fetch – retrieve messages from one or more POP3 or POP3-over-SSL mailboxes and deliver to a maildir, mboxrd-format mbox file, or external MDA"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getmail_fetch &#8211; retrieve messages from one or more POP3 or POP3-over-SSL mailboxes and deliver to a maildir, mboxrd-format mbox file, or external MDA </p>
 <h2>SYNOPSIS</h2>
 <p> <code>getmail_fetch</code> [<i>OPTIONS</i>] <i>SERVER</i> <i>USERNAME</i> <i>PASSWORD</i> <i>DESTINATION</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ecryptfs-recover-private(1)"
 name: "ecryptfs-recover-private"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ecryptfs-recover-private/"
 description: "ecryptfs-recover-private – find and mount any encrypted private directories"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>ecryptfs-recover-private</code> &#8211; find and mount any encrypted private directories</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ecryptfs-recover-private</code> [&#8211;rw] [encrypted private dir] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "default_store(3)"
 name: "default_store"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-default_store/"
 description: "default_store – generic storage of global data."
 ---
 
-<h2>NAME</h2>
 <p> default_store &#8211; generic storage of global data.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;net-snmp/net-snmp-config.h&gt;</code><br />

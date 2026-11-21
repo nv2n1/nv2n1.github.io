@@ -1,4 +1,5 @@
 ---
+
 title: "gpsprof(1)"
 name: "gpsprof"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpsprof/"
 description: "gpsprof – profile a GPS and gpsd, plotting latency information"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gpsprof &#8211; profile a GPS and gpsd, plotting latency information </p>
 <h2>SYNOPSIS</h2>
 <dl>

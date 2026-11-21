@@ -1,4 +1,5 @@
 ---
+
 title: "xzcmp(1)"
 name: "xzcmp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xzcmp/"
 description: "xzcmp, xzdiff, lzcmp, lzdiff – compare compressed files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xzcmp, xzdiff, lzcmp, lzdiff &#8211; compare compressed files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xzcmp</code> [<i>cmp_options</i>] <i>file1</i> [<i>file2</i>]<br />

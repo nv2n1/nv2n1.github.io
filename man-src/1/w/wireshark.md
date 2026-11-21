@@ -1,4 +1,5 @@
 ---
+
 title: "wireshark(1)"
 name: "wireshark"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wireshark/"
 description: "wireshark – Interactively dump and analyze network traffic"
 ---
 
-<h2 class="name">NAME</h2>
 <p> wireshark &#8211; Interactively dump and analyze network traffic </p>
 <h2>SYNOPSIS</h2>
 <p> <code>wireshark</code> [&nbsp;<wbr><code>-a</code>&nbsp;<wbr>&lt;capture autostop condition&gt;&nbsp;<wbr>]&nbsp;<wbr>&#8230; [&nbsp;<wbr><code>-b</code>&nbsp;<wbr>&lt;capture ring buffer option&gt;&nbsp;<wbr>]&nbsp;<wbr>&#8230; [&nbsp;<wbr><code>-B</code>&nbsp;<wbr>&lt;capture buffer size&gt;&nbsp;<wbr>]&nbsp;<wbr> [&nbsp;<wbr><code>-c</code>&nbsp;<wbr>&lt;capture packet count&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-C</code>&nbsp;<wbr>&lt;configuration profile&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-D</code>&nbsp;<wbr>] [&nbsp;<wbr><code>&#8211;display=</code>&lt;X display to use&gt;&nbsp;<wbr>]&nbsp;<wbr> [&nbsp;<wbr><code>-f</code>&nbsp;<wbr>&lt;capture filter&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-g</code>&nbsp;<wbr>&lt;packet number&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-h</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-H</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-i</code>&nbsp;<wbr>&lt;capture interface&gt;|-&nbsp;<wbr>] [&nbsp;<wbr><code>-I</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-j</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-J</code>&nbsp;<wbr>&lt;jump filter&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-k</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-K</code>&nbsp;<wbr>&lt;keytab&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-l</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-L</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-m</code>&nbsp;<wbr>&lt;font&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-n</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-N</code>&nbsp;<wbr>&lt;name resolving flags&gt;&nbsp;<wbr>]&nbsp;<wbr> [&nbsp;<wbr><code>-o</code>&nbsp;<wbr>&lt;preference/recent setting&gt;&nbsp;<wbr>]&nbsp;<wbr>&#8230; [&nbsp;<wbr><code>-p</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-P</code>&nbsp;<wbr>&lt;path setting&gt;] [&nbsp;<wbr><code>-r</code>&nbsp;<wbr>&lt;infile&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-R</code>&nbsp;<wbr>&lt;read&nbsp;<wbr>(display)&nbsp;<wbr>filter&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-s</code>&nbsp;<wbr>&lt;capture snaplen&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-S</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-t</code>&nbsp;<wbr>a|ad|d|dd|e|r|u|ud&nbsp;<wbr>] [&nbsp;<wbr><code>-v</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-w</code>&nbsp;<wbr>&lt;outfile&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-X</code>&nbsp;<wbr>&lt;eXtension option&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-y</code>&nbsp;<wbr>&lt;capture link type&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-Y</code>&nbsp;<wbr>&lt;displaY filter&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-z</code>&nbsp;<wbr>&lt;statistics&gt;&nbsp;<wbr>] [&nbsp;<wbr>&lt;infile&gt;&nbsp;<wbr>]</p>

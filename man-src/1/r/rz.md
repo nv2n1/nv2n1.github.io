@@ -1,4 +1,5 @@
 ---
+
 title: "rz(1)"
 name: "rz"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rz/"
 description: "rx, rb, rz – XMODEM, YMODEM, ZMODEM (Batch) file receive"
 ---
 
-<h2>NAME</h2>
 <p> rx, rb, rz &#8211; XMODEM, YMODEM, ZMODEM (Batch) file receive</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rz</code> [-<code>&nbsp;<wbr>+8abeOpqRtTuUvy</code>]<br />

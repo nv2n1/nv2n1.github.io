@@ -1,4 +1,5 @@
 ---
+
 title: "clnt_call(3)"
 name: "clnt_call"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clnt_call/"
 description: "rpc – library routines for remote procedure calls"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rpc &#8211; library routines for remote procedure calls </p>
 <h2>SYNOPSIS AND DESCRIPTION</h2>
 <p> These routines allow C programs to make procedure calls on other machines across the network. First, the client calls a procedure to send a data packet to the server. Upon receipt of the packet, the server calls a dispatch routine to perform the requested service, and then sends back a reply. Finally, the procedure call returns to the client. </p>

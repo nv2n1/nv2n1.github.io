@@ -1,4 +1,5 @@
 ---
+
 title: "fc-match(1)"
 name: "fc-match"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fc-match/"
 description: "fc-match – match available fonts"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fc-match &#8211; match available fonts </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fc-match</code> [ <code>-asvVh</code> ] [ <code>&#8211;all</code> ] [ <code>&#8211;sort</code> ] [ <code>&#8211;verbose</code> ] [ <code> [ -f </code><i>format</i><code> ] [ &#8211;format </code><i>format</i><code> ] </code> ] [ <code>&#8211;version</code> ] [ <code>&#8211;help</code> ] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "lower_bound(3)"
 name: "lower_bound"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-lower_bound/"
 description: "QuantLib::Schedule – Payment schedule."
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::Schedule &#8211; Payment schedule. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/time/schedule.hpp&gt; </p>

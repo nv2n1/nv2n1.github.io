@@ -1,4 +1,5 @@
 ---
+
 title: "mid3iconv(1)"
 name: "mid3iconv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mid3iconv/"
 description: "mid3iconv – convert ID3 tag encodings"
 ---
 
-<h2>NAME</h2>
 <p> mid3iconv &#8211; convert ID3 tag encodings</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mid3iconv</code> [<i>options</i>] <i>filename</i> &#8230;</p>

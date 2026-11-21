@@ -1,4 +1,5 @@
 ---
+
 title: "ragator(1)"
 name: "ragator"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ragator/"
 description: "ragator – aggregate argus(8) data file entries."
 ---
 
-<h2>NAME</h2>
 <p> <code>ragator</code> &#8211; aggregate <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data file entries.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2000-2003 QoSient. All rights reserved.</p>

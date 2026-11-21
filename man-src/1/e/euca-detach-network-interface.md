@@ -1,4 +1,5 @@
 ---
+
 title: "euca-detach-network-interface(1)"
 name: "euca-detach-network-interface"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-detach-network-interface/"
 description: "euca-detach-network-interface – Detach a VPC network interface from an instance"
 ---
 
-<h2>NAME</h2>
 <p> euca-detach-network-interface &#8211; Detach a VPC network interface from an instance</p>
 <h2>SYNOPSIS</h2>
 <p> euca-detach-network-interface [-f] [&#8211;show-empty-fields] [-U URL]</p>

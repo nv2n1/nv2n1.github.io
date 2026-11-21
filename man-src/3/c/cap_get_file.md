@@ -1,4 +1,5 @@
 ---
+
 title: "cap_get_file(3)"
 name: "cap_get_file"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cap_get_file/"
 description: "cap_get_file, cap_set_file, cap_get_fd, cap_set_fd – capability manipulation on files"
 ---
 
-<h2>NAME</h2>
 <p> cap_get_file, cap_set_file, cap_get_fd, cap_set_fd &#8211; capability manipulation on files</p>
 <h2>SYNOPSIS</h2>
 <p> <code></p>

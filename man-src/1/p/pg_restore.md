@@ -1,4 +1,5 @@
 ---
+
 title: "pg_restore(1)"
 name: "pg_restore"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pg_restore/"
 description: "pg_restore – restore a PostgreSQL database from an archive file created by pg_dump"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pg_restore &#8211; restore a PostgreSQL database from an archive file created by pg_dump </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "flickrdf(1)"
 name: "flickrdf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flickrdf/"
 description: "flickrdf – call Flickr API"
 ---
 
-<h2>NAME</h2>
 <p> flickrdf &#8211; call Flickr API</p>
 <h2>SYNOPSIS</h2>
 <p> <code>flickrdf</code> [<code>-d </code><i>DELAY</i>] [<code>-a </code><i>FROB</i>] [<code>-h</code>] [<code>-v</code>] </p>

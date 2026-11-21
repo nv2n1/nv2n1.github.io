@@ -1,4 +1,5 @@
 ---
+
 title: "perldeprecation(1)"
 name: "perldeprecation"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perldeprecation/"
 description: "perldeprecation – list Perl deprecations"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perldeprecation &#8211; list Perl deprecations </p>
 <h2>DESCRIPTION</h2>
 <p> The purpose of this document is to document what has been deprecated in Perl, and by which version the deprecated feature will disappear, or, for already removed features, when it was removed. </p>

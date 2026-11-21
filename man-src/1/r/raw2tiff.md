@@ -1,4 +1,5 @@
 ---
+
 title: "raw2tiff(1)"
 name: "raw2tiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-raw2tiff/"
 description: "raw2tiff – create a TIFF file from a raw data"
 ---
 
-<h2>NAME</h2>
 <p> raw2tiff &#8211; create a <font SIZE="-1">TIFF</font> file from a raw data</p>
 <h2>SYNOPSIS</h2>
 <p> <code>raw2tiff</code> [ <i>options</i> ] <i>input.raw</i> <i>output.tif</i></p>

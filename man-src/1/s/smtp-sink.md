@@ -1,4 +1,5 @@
 ---
+
 title: "smtp-sink(1)"
 name: "smtp-sink"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-smtp-sink/"
 description: "smtp-sink – parallelized SMTP/LMTP test server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> smtp-sink &#8211; parallelized SMTP/LMTP test server </p>
 <h2>SYNOPSIS</h2>
 <p> <code>smtp-sink</code> [<i>options</i>] [<code>inet:</code>][<i>host</i>]:<i>port</i> <i>backlog</i> </p>

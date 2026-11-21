@@ -1,4 +1,5 @@
 ---
+
 title: "euca-attach-volume(1)"
 name: "euca-attach-volume"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-attach-volume/"
 description: "euca-attach-volume – Attach an EBS volume to an instance"
 ---
 
-<h2>NAME</h2>
 <p> euca-attach-volume &#8211; Attach an EBS volume to an instance</p>
 <h2>SYNOPSIS</h2>
 <p> euca-attach-volume <code>-i</code> INSTANCE <code>-d</code> DEVICE [&#8211;show-empty-fields] [-U URL]</p>

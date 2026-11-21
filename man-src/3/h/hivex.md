@@ -1,4 +1,5 @@
 ---
+
 title: "hivex(3)"
 name: "hivex"
 section: "3"
@@ -6,10 +7,7 @@ letter: "h"
 url: "/docs/linux/man/3-hivex/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- hivex - Windows Registry &quot;hive&quot; extraction library 
+hivex - Windows Registry &quot;hive&quot; extraction library 
 
 <h2>SYNOPSIS</h2>
 

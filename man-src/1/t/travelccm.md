@@ -1,4 +1,5 @@
 ---
+
 title: "travelccm(1)"
 name: "travelccm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-travelccm/"
 description: "travelccm –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> travelccm &#8211; </p>
 <pre>
   Binary executable for the C++ Travel Customer Choice Model Library

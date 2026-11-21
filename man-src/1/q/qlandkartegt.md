@@ -1,4 +1,5 @@
 ---
+
 title: "qlandkartegt(1)"
 name: "qlandkartegt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qlandkartegt/"
 description: "QLandkarteGT – GPS mapping (GeoTiff and vector) and GPSr management"
 ---
 
-<h2>NAME</h2>
 <p> QLandkarteGT &#8211; GPS mapping (GeoTiff and vector) and GPSr management</p>
 <h2>SYNOPSIS</h2>
 <p> <code>qlandkartegt</code> [ <code>-d</code> | <code>&#8211;debug</code> ] [ <code>-h</code> | <code>&#8211;help</code> ] <code>-m</code><i>&nbsp;<wbr>FD</i> | <code>&#8211;monitor=</code><i>FD</i> ] [ <code>-n</code> | <code>&#8211;no-splash</code> ] [ <i>files</i>&#8230; ]</p>

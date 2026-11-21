@@ -1,4 +1,5 @@
 ---
+
 title: "cargo-doc(1)"
 name: "cargo-doc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cargo-doc/"
 description: "cargo-doc – Build a package’s documentation"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cargo-doc &#8211; Build a package&#8217;s documentation </p>
 <h2>SYNOPSIS</h2>
 <p> cargo doc [OPTIONS]</p>

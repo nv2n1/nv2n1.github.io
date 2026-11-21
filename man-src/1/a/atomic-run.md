@@ -1,4 +1,5 @@
 ---
+
 title: "atomic-run(1)"
 name: "atomic-run"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-atomic-run/"
 description: "atomic-run – Execute container image run method"
 ---
 
-<h2 class="name">NAME</h2>
 <p> atomic-run &#8211; Execute container image run method </p>
 <h2>SYNOPSIS</h2>
 <p> <code>atomic run</code> [<code>-h</code>|<code>&#8211;help</code>] [<code>&#8211;display</code>] [<code>-n</code>][<code>&#8211;name</code>[=<i>NAME</i>]] [<code>&#8211;spc</code>] [<code>&#8211;storage</code>] [<code>&#8211;quiet</code>] IMAGE [COMMAND] [ARG&#8230;] </p>

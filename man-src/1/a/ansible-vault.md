@@ -1,4 +1,5 @@
 ---
+
 title: "ansible-vault(1)"
 name: "ansible-vault"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ansible-vault/"
 description: "ansible-vault – manage encrypted ansible vars files (YAML)."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ansible-vault &#8211; manage encrypted ansible vars files (YAML). </p>
 <h2>SYNOPSIS</h2>
 <p> ansible-vault [create|decrypt|edit|encrypt|rekey] [&#8211;help] [options] file_name</p>

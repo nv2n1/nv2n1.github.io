@@ -1,4 +1,5 @@
 ---
+
 title: "fail2ban-client(1)"
 name: "fail2ban-client"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fail2ban-client/"
 description: "fail2ban-client – configure and control the server"
 ---
 
-<h2>NAME</h2>
 <p> fail2ban-client &#8211; configure and control the server</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fail2ban-client</code> [<i>,OPTIONS/</i>] <i>,&lt;COMMAND&gt;/</i></p>

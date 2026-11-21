@@ -1,4 +1,5 @@
 ---
+
 title: "systemd-analyze(1)"
 name: "systemd-analyze"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-systemd-analyze/"
 description: "systemd-analyze – Analyze and debug system manager"
 ---
 
-<h2 class="name">NAME</h2>
 <p> systemd-analyze &#8211; Analyze and debug system manager </p>
 <h2>SYNOPSIS</h2>
 <dl>

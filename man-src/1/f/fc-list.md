@@ -1,4 +1,5 @@
 ---
+
 title: "fc-list(1)"
 name: "fc-list"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fc-list/"
 description: "fc-list – list available fonts"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fc-list &#8211; list available fonts </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fc-list</code> [ <code>-vVh</code> ] [ <code>&#8211;verbose</code> ] [ <code> [ -f </code><i>format</i><code> ] [ &#8211;format </code><i>format</i><code> ] </code> ] [ <code> [ -q ] [ &#8211;quiet ] </code> ] [ <code>&#8211;version</code> ] [ <code>&#8211;help</code> ] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_dname_label_count(3)"
 name: "ldns_dname_label_count"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_dname_label_count/"
 description: "ldns_dname_left_chop, ldns_dname_label_count"
 ---
 
-<h2>NAME</h2>
 <p> ldns_dname_left_chop, ldns_dname_label_count </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

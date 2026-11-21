@@ -1,4 +1,5 @@
 ---
+
 title: "flipdiff(1)"
 name: "flipdiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flipdiff/"
 description: "flipdiff – exchange the order of two incremental patches"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flipdiff &#8211; exchange the order of two incremental patches </p>
 <h2>SYNOPSIS</h2>
 <dl>

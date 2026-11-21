@@ -1,4 +1,5 @@
 ---
+
 title: "netpbm(1)"
 name: "netpbm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-netpbm/"
 description: "netpbm – package of graphics manipulation programs and libraries"
 ---
 
-<h2 class="name">NAME</h2>
 <p> netpbm &#8211; package of graphics manipulation programs and libraries</p>
 <h2>DESCRIPTION</h2>
 <p> <code>Netpbm</code> is a package of graphics programs and programming libraries. </p>

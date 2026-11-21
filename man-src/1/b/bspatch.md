@@ -1,4 +1,5 @@
 ---
+
 title: "bspatch(1)"
 name: "bspatch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bspatch/"
 description: "bspatch – apply a patch built with"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>bspatch</code> &#8211; apply a patch built with </p>
 <p><a href="/docs/linux/man/1-bsdiff/">bsdiff</a>(1)</p>
 <h2>SYNOPSIS</h2>

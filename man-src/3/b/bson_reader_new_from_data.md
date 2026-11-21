@@ -1,4 +1,5 @@
 ---
+
 title: "bson_reader_new_from_data(3)"
 name: "bson_reader_new_from_data"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_reader_new_from_data/"
 description: "bson_reader_new_from_data() – The bson_reader_new_from_data() function shall create a new bson_reader_t using the buffer supplied. data is not copied and MUST be valid for the lifetime of the resul..."
 ---
 
-<h2>NAME</h2>
 <p> bson_reader_new_from_data() &#8211; The bson_reader_new_from_data() function shall create a new bson_reader_t using the buffer supplied. data is not copied and MUST be valid for the lifetime of the resulting bson_reader_t.</p>
 <h2>SYNOPSIS</h2>
 <pre>

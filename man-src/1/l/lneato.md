@@ -1,4 +1,5 @@
 ---
+
 title: "lneato(1)"
 name: "lneato"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lneato/"
 description: "lneato – A Customizable Graph Editor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lneato &#8211; A Customizable Graph Editor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lneato</code> [ <code>-V</code> ] [ <code>-lm</code><i>mode</i> ] [ <code>-el</code><i>lev</i> ] [ <i>file</i> ]</p>

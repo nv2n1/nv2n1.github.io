@@ -1,4 +1,5 @@
 ---
+
 title: "pcp-python(1)"
 name: "pcp-python"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pcp-python/"
 description: "pcp-python – run a python script using a preferred python variant"
 ---
 
-<h2>NAME</h2>
 <p> <code>pcp-python</code> &#8211; run a python script using a preferred python variant</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pcp python</code> [<i>SCRIPT</i> [<i>ARG</i>]&#8230;]</p>

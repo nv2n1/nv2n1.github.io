@@ -1,4 +1,5 @@
 ---
+
 title: "perlipc(1)"
 name: "perlipc"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlipc/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlipc - Perl interprocess communication (signals, fifos, pipes, safe subprocesses, sockets, and semaphores) 
+perlipc - Perl interprocess communication (signals, fifos, pipes, safe subprocesses, sockets, and semaphores) 
 
 <h2>DESCRIPTION</h2>
 

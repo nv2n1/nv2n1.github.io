@@ -1,4 +1,5 @@
 ---
+
 title: "voikkogc(1)"
 name: "voikkogc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-voikkogc/"
 description: "voikkogc – test program for Voikko grammar checker"
 ---
 
-<h2>NAME</h2>
 <p> voikkogc &#8211; test program for Voikko grammar checker</p>
 <h2>SYNOPSIS</h2>
 <p> <code>voikkogc</code> [<i>options</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dlals0(3)"
 name: "dlals0"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlals0/"
 description: "dlals0.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dlals0.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

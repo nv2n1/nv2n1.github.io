@@ -1,4 +1,5 @@
 ---
+
 title: "dorm2l(3)"
 name: "dorm2l"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dorm2l/"
 description: "dorm2l.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dorm2l.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

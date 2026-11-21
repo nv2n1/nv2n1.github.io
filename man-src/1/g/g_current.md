@@ -1,4 +1,5 @@
 ---
+
 title: "g_current(1)"
 name: "g_current"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_current/"
 description: "g_current – calculates dielectric constants for charged systems"
 ---
 
-<h2>NAME</h2>
 <p> g_current &#8211; calculates dielectric constants for charged systems </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

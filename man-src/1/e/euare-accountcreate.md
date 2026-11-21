@@ -1,4 +1,5 @@
 ---
+
 title: "euare-accountcreate(1)"
 name: "euare-accountcreate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-accountcreate/"
 description: "euare-accountcreate – [Eucalyptus cloud admin only] Create a new account"
 ---
 
-<h2>NAME</h2>
 <p> euare-accountcreate &#8211; [Eucalyptus cloud admin only] Create a new account</p>
 <h2>SYNOPSIS</h2>
 <p> euare-accountcreate [-k] [-w] [-d DOMAIN] [-l] [&#8211;show-empty-fields]</p>

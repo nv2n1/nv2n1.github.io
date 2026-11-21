@@ -1,4 +1,5 @@
 ---
+
 title: "imginfo(1)"
 name: "imginfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-imginfo/"
 description: "imginfo – Image information utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> imginfo &#8211; Image information utility</p>
 <h2>SYNOPSIS</h2>
 <p> <code>imginfo</code> [<i>options</i>] </p>

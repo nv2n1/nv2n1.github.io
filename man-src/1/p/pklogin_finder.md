@@ -1,4 +1,5 @@
 ---
+
 title: "pklogin_finder(1)"
 name: "pklogin_finder"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pklogin_finder/"
 description: "pklogin_finder – maps certificates into a user"
 ---
 
-<h2>NAME</h2>
 <p> pklogin_finder &#8211; maps certificates into a user</p>
 <h2>SYNTAX</h2>
 <p> <code>pklogin_finder</code> [<code>debug</code>] [<code>config_file=</code><i>&lt;filename&gt;</i>]</p>

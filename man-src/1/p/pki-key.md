@@ -1,4 +1,5 @@
 ---
+
 title: "pki-key(1)"
 name: "pki-key"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pki-key/"
 description: "pki-key – Command-Line Interface for managing Certificate System keys."
 ---
 
-<h2 class="name">NAME</h2>
 <p> pki-key &#8211; Command-Line Interface for managing Certificate System keys.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

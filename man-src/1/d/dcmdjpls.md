@@ -1,4 +1,5 @@
 ---
+
 title: "dcmdjpls(1)"
 name: "dcmdjpls"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dcmdjpls/"
 description: "dcmdjpls – Decode JPEG-LS compressed DICOM file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dcmdjpls &#8211; Decode JPEG-LS compressed DICOM file </p>
 <h2>SYNOPSIS</h2>
 <pre>

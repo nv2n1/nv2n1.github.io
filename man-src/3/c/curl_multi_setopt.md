@@ -1,4 +1,5 @@
 ---
+
 title: "curl_multi_setopt(3)"
 name: "curl_multi_setopt"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-curl_multi_setopt/"
 description: "curl_multi_setopt – set options for a curl multi handle"
 ---
 
-<h2>NAME</h2>
 <p> curl_multi_setopt &#8211; set options for a curl multi handle</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;curl/curl.h&gt; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pon(1)"
 name: "pon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pon/"
 description: "pon, poff, plog – starts up, shuts down or lists the log of PPP connections"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pon, poff, plog &#8211; starts up, shuts down or lists the log of PPP connections </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pon</code> [ isp-name [ options ] ]<br />

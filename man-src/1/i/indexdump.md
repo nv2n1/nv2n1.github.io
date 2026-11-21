@@ -1,4 +1,5 @@
 ---
+
 title: "indexdump(1)"
 name: "indexdump"
 section: "1"
@@ -6,10 +7,7 @@ letter: "i"
 url: "/docs/linux/man/1-indexdump/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- indexdump - Show the content of the index file 
+indexdump - Show the content of the index file 
 
 <h2>FORMAT</h2>
 

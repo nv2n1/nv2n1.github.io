@@ -1,4 +1,5 @@
 ---
+
 title: "gpg-connect-agent(1)"
 name: "gpg-connect-agent"
 section: "1"
@@ -6,7 +7,7 @@ letter: "g"
 url: "/docs/linux/man/1-gpg-connect-agent/"
 description: "gpg-connect-agent – Communicate with a running agent"
 ---
-<h2 class="name">NAME</h2>
+
 <p> <code>gpg-connect-agent</code> - Communicate with a running agent </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gpg-connect-agent</code> [<i>options</i>]<i>[commands]</i> </p>

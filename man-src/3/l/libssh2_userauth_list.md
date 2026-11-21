@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_userauth_list(3)"
 name: "libssh2_userauth_list"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_userauth_list/"
 description: "libssh2_userauth_list – list supported authentication methods"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_userauth_list &#8211; list supported authentication methods</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "expectk(1)"
 name: "expectk"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-expectk/"
 description: "expectk – Expect with Tk support"
 ---
 
-<h2>NAME</h2>
 <p> expectk &#8211; Expect with Tk support</p>
 <h2>SYNOPSIS</h2>
 <p> <code>expectk</code> [ <i>args</i> ]</p>

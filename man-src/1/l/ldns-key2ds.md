@@ -1,4 +1,5 @@
 ---
+
 title: "ldns-key2ds(1)"
 name: "ldns-key2ds"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ldns-key2ds/"
 description: "ldns-key2ds – transform a DNSKEY RR to a DS RR"
 ---
 
-<h2>NAME</h2>
 <p> ldns-key2ds &#8211; transform a DNSKEY RR to a DS RR</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ldns-key2ds </code> <i>file</i> </p>

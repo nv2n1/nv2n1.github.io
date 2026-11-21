@@ -1,4 +1,5 @@
 ---
+
 title: "lrztar(1)"
 name: "lrztar"
 section: "1"
@@ -6,10 +7,7 @@ letter: "l"
 url: "/docs/linux/man/1-lrztar/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- lrztar - Directory wrapper for lrzip 
+lrztar - Directory wrapper for lrzip 
 
 <h2>SYNOPSIS</h2>
 

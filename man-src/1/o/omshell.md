@@ -1,4 +1,5 @@
 ---
+
 title: "omshell(1)"
 name: "omshell"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-omshell/"
 description: "omshell – OMAPI Command Shell"
 ---
 
-<h2>NAME</h2>
 <p> omshell &#8211; OMAPI Command Shell</p>
 <h2>SYNOPSIS</h2>
 <p> <code>omshell</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ctrans(1)"
 name: "ctrans"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ctrans/"
 description: "ctrans – a Computer Graphics Metafile ( CGM ) translator"
 ---
 
-<h2>NAME</h2>
 <p> ctrans &#8211; a Computer Graphics Metafile ( <i>CGM</i> ) translator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ctrans</code> [ <code>-bell</code> ] [ <code>-d</code><i> device</i> ] [ <code>-f</code><i> font</i> ] [ <code>-lmin</code><i> min</i> ] [ <code>-lmax</code><i> max</i> ] [ <code>-lscale</code><i> scale</i> ] [ <code>-movie</code><i> time</i> ] [ <code>-outfile</code><i> file</i> ] [ <code>-pal</code><i> pal_fname</i> ] [ <code>-pause</code> ] [ <code>-quiet</code> ] [ <code>-record</code><i> record_num &#8230;</i> ] [ <code>-soft</code> ] [ <code>-verbose</code> ] [ <code>-Version</code> ] [ <code>-viewport</code><i> llx:lly:urx:ury</i> ] [ <code>-wid</code><i> window_id</i> ] [ <code>-window</code><i> llx:lly:urx:ury</i> ] [ <i>device-specific options</i> ] [ <code>&#8211; </code> | <i>metafile &#8230;</i> ]</p>

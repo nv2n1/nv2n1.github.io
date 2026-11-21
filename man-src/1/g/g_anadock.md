@@ -1,4 +1,5 @@
 ---
+
 title: "g_anadock(1)"
 name: "g_anadock"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_anadock/"
 description: "anadock – cluster structures from Autodock runs"
 ---
 
-<h2>NAME</h2>
 <p> anadock &#8211; cluster structures from Autodock runs </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

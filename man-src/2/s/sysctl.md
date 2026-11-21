@@ -1,4 +1,5 @@
 ---
+
 title: "sysctl(2)"
 name: "sysctl"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-sysctl/"
 description: "sysctl – read/write system parameters"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sysctl &#8211; read/write system parameters </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

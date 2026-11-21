@@ -1,4 +1,5 @@
 ---
+
 title: "gearadmin(1)"
 name: "gearadmin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gearadmin/"
 description: "gearadmin – Gearmand Documentation, http://gearman.info/"
 ---
 
-<h2>NAME</h2>
 <p> gearadmin &#8211; Gearmand Documentation, <a rel="nofollow" href="http://gearman.info/">http://gearman.info/</a> </p>
 <p> Run Administrative commands against a server.</p>
 <h2>SYNOPSIS</h2>

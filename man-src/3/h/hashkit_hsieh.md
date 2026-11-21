@@ -1,4 +1,5 @@
 ---
+
 title: "hashkit_hsieh(3)"
 name: "hashkit_hsieh"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hashkit_hsieh/"
 description: "hashkit_hsieh – libhashkit Documentation"
 ---
 
-<h2>NAME</h2>
 <p> hashkit_hsieh &#8211; libhashkit Documentation </p>
 <p> Various hash functions to use for calculating values for keys</p>
 <h2>SYNOPSIS</h2>

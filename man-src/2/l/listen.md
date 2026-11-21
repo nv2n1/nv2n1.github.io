@@ -1,4 +1,5 @@
 ---
+
 title: "listen(2)"
 name: "listen"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-listen/"
 description: "listen – listen for connections on a socket"
 ---
 
-<h2 class="name">NAME</h2>
 <p> listen &#8211; listen for connections on a socket </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

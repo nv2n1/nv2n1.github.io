@@ -1,4 +1,5 @@
 ---
+
 title: "rhythmbox(1)"
 name: "rhythmbox"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rhythmbox/"
 description: "rhythmbox – music player and library for tagged files using GStreamer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rhythmbox &#8211; music player and library for tagged files using GStreamer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rhythmbox</code> [<i>option&#8230;</i>]</p>

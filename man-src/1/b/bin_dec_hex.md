@@ -1,4 +1,5 @@
 ---
+
 title: "bin_dec_hex(1)"
 name: "bin_dec_hex"
 section: "1"
@@ -6,10 +7,7 @@ letter: "b"
 url: "/docs/linux/man/1-bin_dec_hex/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- bin_dec_hex - How to use binary, decimal, and hexadecimal notation. 
+bin_dec_hex - How to use binary, decimal, and hexadecimal notation. 
 
 <h2>DESCRIPTION</h2>
 

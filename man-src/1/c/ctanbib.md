@@ -1,4 +1,5 @@
 ---
+
 title: "ctanbib(1)"
 name: "ctanbib"
 section: "1"
@@ -6,10 +7,7 @@ letter: "c"
 url: "/docs/linux/man/1-ctanbib/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- ctanbib - retrieve bibliographic information for packages hosted on CTAN. 
+ctanbib - retrieve bibliographic information for packages hosted on CTAN. 
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "glide(1)"
 name: "glide"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-glide/"
 description: "glide – Vendor package management for Go"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>glide</code> &#8211; Vendor package management for Go </p>
 <h2>SYNOPSIS</h2>
 <p> [<i>global options</i> ] <i>command</i> [<i>command options</i> ] [<i>arguments&#8230;</i> ]</p>

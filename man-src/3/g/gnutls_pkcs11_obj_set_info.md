@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pkcs11_obj_set_info(3)"
 name: "gnutls_pkcs11_obj_set_info"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_pkcs11_obj_set_info/"
 description: "gnutls_pkcs11_obj_set_info – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_pkcs11_obj_set_info &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs11.h&gt;</code> </p>

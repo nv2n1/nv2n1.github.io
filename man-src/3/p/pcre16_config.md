@@ -1,4 +1,5 @@
 ---
+
 title: "pcre16_config(3)"
 name: "pcre16_config"
 section: "3"
@@ -6,8 +7,9 @@ letter: "p"
 url: "/docs/linux/man/3-pcre16_config/"
 description: "PCRE – Perl-compatible regular expressions"
 ---
+
 <p>PCRE &#8211; Perl-compatible regular expressions </p>
-<h2>SYNOPSIS</h2>
+
 <p> <code>#include &lt;pcre.h&gt;</code> </p>
 <p> <font SIZE="-1"><code>int pcre_config(int </code><i>what</i>, void *<i>where</i>); </font> </p>
 <p> <code>int pcre16_config(int </code><i>what</i>, void *<i>where</i>); </p>

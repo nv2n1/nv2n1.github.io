@@ -1,4 +1,5 @@
 ---
+
 title: "tv_grab_na_dd(1)"
 name: "tv_grab_na_dd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tv_grab_na_dd/"
 description: "tv_grab_na_dd – Grab TV listings for North America using Schedules Direct"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tv_grab_na_dd &#8211; Grab TV listings for North America using Schedules Direct </p>
 <p><a rel="nofollow" href="http://www.schedulesdirect.org">http://www.schedulesdirect.org</a></p>
 <h2>SYNOPSIS</h2>

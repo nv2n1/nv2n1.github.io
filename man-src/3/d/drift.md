@@ -1,4 +1,5 @@
 ---
+
 title: "drift(3)"
 name: "drift"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-drift/"
 description: "QuantLib::ExtendedBlackScholesMertonProcess – experimental Black-Scholes-Merton stochastic process"
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::ExtendedBlackScholesMertonProcess &#8211; experimental Black-Scholes-Merton stochastic process </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/experimental/processes/extendedblackscholesprocess.hpp&gt; </p>

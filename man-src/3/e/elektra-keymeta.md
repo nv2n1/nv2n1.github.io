@@ -1,4 +1,5 @@
 ---
+
 title: "elektra-keymeta(3)"
 name: "elektra-keymeta"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-elektra-keymeta/"
 description: "Key :: Meta Info Manipulation Methods –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Key :: Meta Info Manipulation Methods &#8211; </p>
 <p> Methods to do various operations on Key metainfo.</p>
 <h3>Functions</h3>

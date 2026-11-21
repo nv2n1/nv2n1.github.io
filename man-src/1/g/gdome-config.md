@@ -1,4 +1,5 @@
 ---
+
 title: "gdome-config(1)"
 name: "gdome-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gdome-config/"
 description: "gdome-config – script to get information about the installed version of gdome2"
 ---
 
-<h2>NAME</h2>
 <p> gdome-config &#8211; script to get information about the installed version of gdome2</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gdome-config</code> [&#8211;prefix<i>[=DIR]</i>] [&#8211;exec-prefix<i>[=DIR]</i>] [&#8211;libs] [&#8211;cflags] [&#8211;version] [&#8211;help]</p>

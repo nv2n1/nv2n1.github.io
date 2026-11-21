@@ -1,4 +1,5 @@
 ---
+
 title: "bson_strdupv_printf(3)"
 name: "bson_strdupv_printf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_strdupv_printf/"
 description: "bson_strdupv_printf() – This function is like bson_strdup_printf() except takes a va_list of parameters."
 ---
 
-<h2>NAME</h2>
 <p> bson_strdupv_printf() &#8211; This function is like bson_strdup_printf() except takes a va_list of parameters.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-keyring(1)"
 name: "gnome-keyring"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnome-keyring/"
 description: "gnome-keyring – The gnome-keyring commandline tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gnome-keyring &#8211; The gnome-keyring commandline tool </p>
 <h2>SYNOPSIS</h2>
 <dl>

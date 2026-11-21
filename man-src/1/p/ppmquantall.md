@@ -1,4 +1,5 @@
 ---
+
 title: "ppmquantall(1)"
 name: "ppmquantall"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppmquantall/"
 description: "ppmquantall – run ppmquant on a bunch of files all at once, so they share a common colormap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ppmquantall &#8211; run ppmquant on a bunch of files all at once, so they share a common colormap</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmquantall</code> [<code>-ext</code> <i>extension</i>] <i>ncolors ppmfile</i> &#8230; </p>

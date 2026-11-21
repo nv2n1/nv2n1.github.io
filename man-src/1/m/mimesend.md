@@ -1,4 +1,5 @@
 ---
+
 title: "mimesend(1)"
 name: "mimesend"
 section: "1"
@@ -6,10 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-mimesend/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- mimesend - send files via MIME mail, from the command line 
+mimesend - send files via MIME mail, from the command line 
 
 <h2>USAGE</h2>
 

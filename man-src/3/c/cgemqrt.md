@@ -1,4 +1,5 @@
 ---
+
 title: "cgemqrt(3)"
 name: "cgemqrt"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgemqrt/"
 description: "cgemqrt.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cgemqrt.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

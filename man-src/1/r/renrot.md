@@ -1,4 +1,5 @@
 ---
+
 title: "renrot(1)"
 name: "renrot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-renrot/"
 description: "renrot – rename and rotate images according EXIF data"
 ---
 
-<h2 class="name">NAME</h2>
 <p> renrot &#8211; rename and rotate images according EXIF data </p>
 <h2>SYNOPSIS</h2>
 <p> renrot [<font SIZE="-1">OPTIONS</font>] [[<code>&#8212;</code>] <font SIZE="-1">FILE1 FILE2 &#8230;</font>]</p>

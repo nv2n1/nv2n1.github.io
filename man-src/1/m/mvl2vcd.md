@@ -1,4 +1,5 @@
 ---
+
 title: "mvl2vcd(1)"
 name: "mvl2vcd"
 section: "1"
@@ -6,11 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-mvl2vcd/"
 ---
 
-<h2>NAME</h2>
-
- 
-
- mvl2vcd - Coverts MVLSIM AET files to VCD
+mvl2vcd - Coverts MVLSIM AET files to VCD
 
 <h2>SYNTAX</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "night_temperature(1)"
 name: "night_temperature"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-night_temperature/"
 description: "night_temperature – a camera temperature"
 ---
 
-<h2>NAME</h2>
 <p> night_temperature &#8211; a camera temperature</p>
 <h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr>night_temperature&nbsp;<wbr>[get|set]&nbsp;<wbr>[-t temperature]&nbsp;<wbr>[-off]&nbsp;<wbr>[-host address]</p>

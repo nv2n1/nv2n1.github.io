@@ -1,4 +1,5 @@
 ---
+
 title: "cggev(3)"
 name: "cggev"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cggev/"
 description: "cggev.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cggev.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

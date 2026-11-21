@@ -1,4 +1,5 @@
 ---
+
 title: "pgmmedian(1)"
 name: "pgmmedian"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pgmmedian/"
 description: "pgmmedian – apply a median filter to a PGM file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pgmmedian &#8211; apply a median filter to a PGM file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pgmmedian</code> </p>

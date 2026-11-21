@@ -1,4 +1,5 @@
 ---
+
 title: "scantv(1)"
 name: "scantv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-scantv/"
 description: "scantv – scan a v4l device for TV stations."
 ---
 
-<h2>NAME</h2>
 <p> scantv &#8211; scan a v4l device for TV stations.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>scantv [ options ]</code></p>

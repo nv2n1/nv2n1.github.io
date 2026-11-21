@@ -1,4 +1,5 @@
 ---
+
 title: "grdfilter(1)"
 name: "grdfilter"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grdfilter/"
 description: "grdfilter – Filter a grid in the space (or time) domain"
 ---
 
-<h2>NAME</h2>
 <p> grdfilter &#8211; Filter a grid in the space (or time) domain</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grdfilter</code> <i>ingrid</i> <i>distance_flag</i> <code>x</code><i>width</i>[/<i>width2</i>][<i>modifiers</i>] <i>outgrid</i> [ <i>increment</i> ] [ <code>i</code>|<code>p</code>|<code>r</code> ] [ <i>region</i> ] [ ] [ [<i>level</i>] ] [ <code>-f</code><i>&lt;flags&gt;</i> ] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gdbm_dump(1)"
 name: "gdbm_dump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gdbm_dump/"
 description: "gdbm_dump – dump a GDBM database to a file"
 ---
 
-<h2>NAME</h2>
 <p> gdbm_dump &#8211; dump a GDBM database to a file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gdbm_dump</code> [<code>-H </code><i>FMT</i>] [<code>&#8211;format</code>=<i>FMT</i>] <i>DB_FILE</i> [<i>FILE</i>] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mongoimport(1)"
 name: "mongoimport"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mongoimport/"
 description: "mongoimport – MongoDB Import Utility"
 ---
 
-<h2>NAME</h2>
 <p> mongoimport &#8211; MongoDB Import Utility</p>
 <h2>SYNOPSIS</h2>
 <p> The <code>mongoimport</code> tool provides a route to import content from a JSON, CSV, or TSV export created by <code>mongoexport</code>, or potentially, another third-party export tool. See the <a rel="nofollow" href="http://docs.mongodb.org/manual/core/import-export">http://docs.mongodb.org/manual/core/import-export</a> document for a more in depth usage overview, and the <code>mongoexport</code> document for more information regarding <code>mongoexport</code>, which provides the inverse &quot;exporting&quot; capability.</p>

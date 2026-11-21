@@ -1,4 +1,5 @@
 ---
+
 title: "arm_get_error_message(3)"
 name: "arm_get_error_message"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-arm_get_error_message/"
 description: "arm_get_error_message – get error message"
 ---
 
-<h2>NAME</h2>
 <p> arm_get_error_message &#8211; get error message</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/arm4.h">arm4.h</a>&gt;</code> </p>

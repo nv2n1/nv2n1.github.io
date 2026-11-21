@@ -1,4 +1,5 @@
 ---
+
 title: "cprojf(3)"
 name: "cprojf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cprojf/"
 description: "cproj, cprojf, cprojl – project into Riemann Sphere"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cproj, cprojf, cprojl &#8211; project into Riemann Sphere </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>

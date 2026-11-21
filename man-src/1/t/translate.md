@@ -1,4 +1,5 @@
 ---
+
 title: "translate(1)"
 name: "translate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-translate/"
 description: "translate – translate a text or web page"
 ---
 
-<h2>NAME</h2>
 <p> translate &#8211; translate a text or web page</p>
 <h2>SYNOPSIS</h2>
 <dl>

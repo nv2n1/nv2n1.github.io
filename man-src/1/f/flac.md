@@ -1,4 +1,5 @@
 ---
+
 title: "flac(1)"
 name: "flac"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flac/"
 description: "flac – Free Lossless Audio Codec"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flac &#8211; Free Lossless Audio Codec </p>
 <h2>SYNOPSIS</h2>
 <p> <code>flac</code> [ <i>OPTIONS</i> ] [ <i>infile.wav</i> | <i>infile.rf64</i> | <i>infile.aiff</i> | <i>infile.raw</i> | <i>infile.flac</i> | <i>infile.oga</i> | <i>infile.ogg</i> | <code>&#8211;</code><i> &#8230;</i> ] </p>

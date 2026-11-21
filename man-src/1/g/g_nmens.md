@@ -1,4 +1,5 @@
 ---
+
 title: "g_nmens(1)"
 name: "g_nmens"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_nmens/"
 description: "g_nmens – generates an ensemble of structures from the normal modes"
 ---
 
-<h2>NAME</h2>
 <p> g_nmens &#8211; generates an ensemble of structures from the normal modes </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

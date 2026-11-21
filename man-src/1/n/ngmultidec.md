@@ -1,4 +1,5 @@
 ---
+
 title: "ngmultidec(1)"
 name: "ngmultidec"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ngmultidec/"
 description: "ngmultidec – make ngpice sub-circuit for coupled transmission lines"
 ---
 
-<h2>NAME</h2>
 <p> ngmultidec &#8211; make ngpice sub-circuit for coupled transmission lines</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ngmultidec</code> [ <i>options</i>&#8230; ]</p>

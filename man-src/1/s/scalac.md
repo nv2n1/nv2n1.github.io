@@ -1,4 +1,5 @@
 ---
+
 title: "scalac(1)"
 name: "scalac"
 section: "1"
@@ -6,7 +7,7 @@ letter: "s"
 url: "/docs/linux/man/1-scalac/"
 description: "scalac – Compiler for the Scala 2 language"
 ---
-<h2 class="name">NAME</h2>
+
 <p> <code>scalac</code> - Compiler for the Scala 2 language </p>
 <h2>SYNOPSIS</h2>
 <p> <code>scalac</code> [ &lt;<i>options</i>&gt; ] &lt;<i>source files</i>&gt;  </p>

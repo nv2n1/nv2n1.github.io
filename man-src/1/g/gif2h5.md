@@ -1,4 +1,5 @@
 ---
+
 title: "gif2h5(1)"
 name: "gif2h5"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gif2h5/"
 description: "gif2h5 – Converts a GIF file to an HDF5 file."
 ---
 
-<h2>NAME</h2>
 <p> gif2h5 &#8211; Converts a GIF file to an HDF5 file.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gif2h5</code> gif_file h5_file</p>

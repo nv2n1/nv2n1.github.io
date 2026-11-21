@@ -1,4 +1,5 @@
 ---
+
 title: "pnmtorle(1)"
 name: "pnmtorle"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnmtorle/"
 description: "pnmtorle – convert a Netpbm image file into an RLE image file."
 ---
 
-<h2 class="name">NAME</h2>
 <p> pnmtorle &#8211; convert a Netpbm image file into an RLE image file. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmtorle</code> [ <code>-h</code> ] [ <code>-v</code> ] [ <code>-a</code> ] [ <code>-o</code><i> outfile</i> ] [ <i>pnmfile</i> ]</p>

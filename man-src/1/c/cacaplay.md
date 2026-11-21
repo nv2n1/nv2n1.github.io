@@ -1,4 +1,5 @@
 ---
+
 title: "cacaplay(1)"
 name: "cacaplay"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cacaplay/"
 description: "cacaplay – play libcaca files"
 ---
 
-<h2>NAME</h2>
 <p> cacaplay &#8211; play libcaca files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cacaplay [FILE]</code></p>

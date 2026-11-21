@@ -1,4 +1,5 @@
 ---
+
 title: "simul-landmarks(1)"
 name: "simul-landmarks"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-simul-landmarks/"
 description: "simul-landmarks – Robot dataset simulator"
 ---
 
-<h2 class="name">NAME</h2>
 <p> simul-landmarks &#8211; Robot dataset simulator </p>
 <h2>SYNOPSIS</h2>
 <p> simul-landmarks <i>config_file.ini</i></p>

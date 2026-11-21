@@ -1,4 +1,5 @@
 ---
+
 title: "gfcat(1)"
 name: "gfcat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gfcat/"
 description: "gfcat – manual page for gfcat (glusterfs-coreutils) 0.2.0"
 ---
 
-<h2>NAME</h2>
 <p> gfcat &#8211; manual page for gfcat (glusterfs-coreutils) 0.2.0</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gfcat</code> [<i>OPTION</i>]&#8230; <i>URL</i></p>

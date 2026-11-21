@@ -1,4 +1,5 @@
 ---
+
 title: "memcat(1)"
 name: "memcat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-memcat/"
 description: "memcat – libmemcached Documentation"
 ---
 
-<h2>NAME</h2>
 <p> memcat &#8211; libmemcached Documentation</p>
 <h2>SYNOPSIS</h2>
 <p> memcat [options] key </p>

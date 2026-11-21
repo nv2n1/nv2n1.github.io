@@ -1,4 +1,5 @@
 ---
+
 title: "urxvt256c-option-popup(1)"
 name: "urxvt256c-option-popup"
 section: "1"
@@ -6,10 +7,7 @@ letter: "u"
 url: "/docs/linux/man/1-urxvt256c-option-popup/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- option-popup - option menu (enabled by default) 
+option-popup - option menu (enabled by default) 
 
 <h2>DESCRIPTION</h2>
 

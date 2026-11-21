@@ -1,4 +1,5 @@
 ---
+
 title: "globus_hashtable_insert(3)"
 name: "globus_hashtable_insert"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_hashtable_insert/"
 description: "Hash Table –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Hash Table &#8211; </p>
 <h3>Modules</h3>
 <p> <code>Iterators</code> </p>

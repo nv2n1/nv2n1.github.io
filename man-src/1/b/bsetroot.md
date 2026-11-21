@@ -1,4 +1,5 @@
 ---
+
 title: "bsetroot(1)"
 name: "bsetroot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bsetroot/"
 description: "bsetroot – blackbox utility to change root window appearance"
 ---
 
-<h2>NAME</h2>
 <p> bsetroot &#8211; blackbox utility to change root window appearance</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bsetroot</code> -help<br />

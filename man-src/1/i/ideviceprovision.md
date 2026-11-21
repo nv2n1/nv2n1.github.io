@@ -1,4 +1,5 @@
 ---
+
 title: "ideviceprovision(1)"
 name: "ideviceprovision"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ideviceprovision/"
 description: "ideviceprovision – Manage provisioning profiles on a device."
 ---
 
-<h2>NAME</h2>
 <p> ideviceprovision &#8211; Manage provisioning profiles on a device.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ideviceprovision</code> [OPTIONS] COMMAND </p>

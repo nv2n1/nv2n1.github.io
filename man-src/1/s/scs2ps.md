@@ -1,4 +1,5 @@
 ---
+
 title: "scs2ps(1)"
 name: "scs2ps"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-scs2ps/"
 description: "scs2ps – convert IBM SCS printer data into PostScript"
 ---
 
-<h2>NAME</h2>
 <p> scs2ps &#8211; convert IBM SCS printer data into PostScript</p>
 <h2>SYNOPSIS</h2>
 <p> <code>scs2ps</code></p>

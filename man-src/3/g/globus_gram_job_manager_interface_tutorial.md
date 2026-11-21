@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gram_job_manager_interface_tutorial(3)"
 name: "globus_gram_job_manager_interface_tutorial"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gram_job_manager_interface_tutorial/"
 description: "globus_gram_job_manager_interface_tutorial – GRAM Job Manager Scheduler Tutorial This tutorial describes the steps needed to build a GRAM Job Manager Scheduler interface package."
 ---
 
-<h2 class="name">NAME</h2>
 <p> globus_gram_job_manager_interface_tutorial &#8211; GRAM Job Manager Scheduler Tutorial This tutorial describes the steps needed to build a GRAM Job Manager Scheduler interface package. </p>
 <p> The audience for this tutorial is a person interested in adding support for a new scheduler interface to GRAM. This tutorial will assume some familiarty with GTP, autoconf, automake, and Perl. As a reference point, this tutorial will refer to the code in the LSF Job Manager package. </p>
 <h2>Writing a Scheduler Interface</h2>

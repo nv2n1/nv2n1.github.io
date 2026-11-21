@@ -1,4 +1,5 @@
 ---
+
 title: "git-difftool(1)"
 name: "git-difftool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-difftool/"
 description: "git-difftool – Show changes using common diff tools"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-difftool &#8211; Show changes using common diff tools </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

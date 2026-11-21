@@ -1,4 +1,5 @@
 ---
+
 title: "roff2html(1)"
 name: "roff2html"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-roff2html/"
 description: "roff2html – transform roff code into html mode"
 ---
 
-<h2 class="name">NAME</h2>
 <p> roff2html &#8211; transform roff code into html mode </p>
 <h2>SYNOPSIS</h2>
 <p> [<i>groffer-option</i> &#8230; ] [ <code>&#8212;</code> ] [<i>filespec</i> &#8230; ] <code>-h</code> <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code> </p>

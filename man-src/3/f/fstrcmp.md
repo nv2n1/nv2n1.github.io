@@ -1,4 +1,5 @@
 ---
+
 title: "fstrcmp(3)"
 name: "fstrcmp"
 section: "3"
@@ -6,9 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-fstrcmp/"
 ---
 
-<h2>NAME</h2>
-
- fstrcmp - fuzzy comparison of two strings
+fstrcmp - fuzzy comparison of two strings
 
 <h2>SYNOPSIS</h2>
 

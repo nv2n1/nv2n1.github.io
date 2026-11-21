@@ -1,4 +1,5 @@
 ---
+
 title: "qrstat(1)"
 name: "qrstat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qrstat/"
 description: "qrstat – show the status of xxQS_NAMExx Advance Reservations (AR)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> qrstat &#8211; show the status of xxQS_NAMExx Advance Reservations (AR) </p>
 <h2>SYNTAX</h2>
 <p> <code>qrstat</code> [<code>-ar</code> <i>ar_id</i>,&#8230;] [<code>-help</code>] [<code>-u</code> <i>user</i>,&#8230;] [<code>-explain</code>]</p>

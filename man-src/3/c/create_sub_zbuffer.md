@@ -1,4 +1,5 @@
 ---
+
 title: "create_sub_zbuffer(3)"
 name: "create_sub_zbuffer"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-create_sub_zbuffer/"
 description: "create_sub_zbuffer – Creates a sub-z-buffer. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> create_sub_zbuffer &#8211; Creates a sub-z-buffer. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

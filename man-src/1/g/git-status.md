@@ -1,4 +1,5 @@
 ---
+
 title: "git-status(1)"
 name: "git-status"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-status/"
 description: "git-status – Show the working tree status"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-status &#8211; Show the working tree status </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

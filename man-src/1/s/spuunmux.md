@@ -1,4 +1,5 @@
 ---
+
 title: "spuunmux(1)"
 name: "spuunmux"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-spuunmux/"
 description: "spuunmux – demultiplexes subtitles from an existing mpeg2 program stream"
 ---
 
-<h2 class="name">NAME</h2>
 <p> spuunmux &#8211; demultiplexes subtitles from an existing mpeg2 program stream </p>
 <h2>SYNOPSIS</h2>
 <p> <code>spuunmux</code> [ <i>input file</i> ] [ <i>input file</i><i> &#8230;</i> ] </p>

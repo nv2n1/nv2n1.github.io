@@ -1,4 +1,5 @@
 ---
+
 title: "urxvt256c-ml-tabbed(1)"
 name: "urxvt256c-ml-tabbed"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-urxvt256c-ml-tabbed/"
 description: "tabbed – tabbed interface to urxvt"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tabbed &#8211; tabbed interface to urxvt </p>
 <h2>DESCRIPTION</h2>
 <p> This transforms the terminal into a tabbar with additional terminals, that is, it implements what is commonly referred to as &#8220;tabbed terminal&#8221;. The topmost line displays a &#8220;[<font SIZE="-1">NEW</font>]&#8221; button, which, when clicked, will add a new tab, followed by one button per tab. </p>

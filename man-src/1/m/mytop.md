@@ -1,4 +1,5 @@
 ---
+
 title: "mytop(1)"
 name: "mytop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mytop/"
 description: "mytop – display MySQL server performance info like `top’"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mytop &#8211; display MySQL server performance info like `top&#8217; </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mytop</code> [options]</p>

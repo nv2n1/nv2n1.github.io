@@ -1,4 +1,5 @@
 ---
+
 title: "matho-primes(1)"
 name: "matho-primes"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-matho-primes/"
 description: "matho-primes – generate consecutive prime numbers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> matho-primes &#8211; generate consecutive prime numbers</p>
 <h2>SYNOPSIS</h2>
 <p> <code>matho-primes</code> [start [stop]] [&quot;twin&quot;] [&quot;pal&quot; [base]]<br />

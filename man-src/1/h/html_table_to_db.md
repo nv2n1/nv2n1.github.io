@@ -1,4 +1,5 @@
 ---
+
 title: "html_table_to_db(1)"
 name: "html_table_to_db"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-html_table_to_db/"
 description: "html_table_to_db – convert HTML tables into fsdb"
 ---
 
-<h2 class="name">NAME</h2>
 <p> html_table_to_db &#8211; convert HTML tables into fsdb </p>
 <h2>SYNOPSIS</h2>
 <pre>

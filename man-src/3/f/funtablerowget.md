@@ -1,4 +1,5 @@
 ---
+
 title: "funtablerowget(3)"
 name: "funtablerowget"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-funtablerowget/"
 description: "FunTableRowGet – get Funtools rows"
 ---
 
-<h2>NAME</h2>
 <p> <code>FunTableRowGet &#8211; get Funtools rows</code></p>
 <h2>SYNOPSIS</h2>
 <pre><code>

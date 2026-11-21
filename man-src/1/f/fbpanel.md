@@ -1,4 +1,5 @@
 ---
+
 title: "fbpanel(1)"
 name: "fbpanel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fbpanel/"
 description: "fbpanel – a NETWM compliant lightweight GTK2-based panel for UNIX desktop."
 ---
 
-<h2>NAME</h2>
 <p> fbpanel &#8211; a NETWM compliant lightweight GTK2-based panel for UNIX desktop.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fbpanel</code> [<i>OPTION</i>] </p>

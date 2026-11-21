@@ -1,4 +1,5 @@
 ---
+
 title: "pdb3(1)"
 name: "pdb3"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pdb3/"
 description: "pdb3.10 – the Python debugger"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pdb3.10 &#8211; the Python debugger </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdb3.10</code> <i>script [&#8230;]</i></p>

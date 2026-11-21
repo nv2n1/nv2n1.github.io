@@ -1,4 +1,5 @@
 ---
+
 title: "dcmprscu(1)"
 name: "dcmprscu"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dcmprscu/"
 description: "dcmprscu – Print spooler for presentation state viewer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dcmprscu &#8211; Print spooler for presentation state viewer </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

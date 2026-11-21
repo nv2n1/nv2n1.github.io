@@ -1,4 +1,5 @@
 ---
+
 title: "checkisomd5(1)"
 name: "checkisomd5"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-checkisomd5/"
 description: "checkisomd5 — check an MD5 checksum implanted by implantisomd5"
 ---
 
-<h2>NAME</h2>
 <p> checkisomd5 &#8212; check an MD5 checksum implanted by <code>implantisomd5</code></p>
 <h2>SYNOPSIS</h2>
 <p> <code>checkisomd5</code> [<code>&#8211;md5sumonly</code>] [<code>&#8211;verbose</code>] [<code>&#8211;gauge</code>] [isofilename | blockdevice ]</p>

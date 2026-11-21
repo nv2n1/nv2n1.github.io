@@ -1,4 +1,5 @@
 ---
+
 title: "tla2vcd(1)"
 name: "tla2vcd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tla2vcd/"
 description: "tla2vcd – Converts TLA to VCD or LST files"
 ---
 
-<h2>NAME</h2>
 <p> tla2vcd &#8211; Converts TLA to VCD or LST files</p>
 <h2>SYNTAX</h2>
 <p> tla2vcd [<i>option</i>]&#8230; <i>TLAFILE</i> [[<i>TLAFILE</i>]&#8230;] </p>

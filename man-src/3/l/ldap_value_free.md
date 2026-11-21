@@ -1,4 +1,5 @@
 ---
+
 title: "ldap_value_free(3)"
 name: "ldap_value_free"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldap_value_free/"
 description: "ldap_get_values, ldap_get_values_len, ldap_count_values – LDAP attribute value handling routines"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ldap_get_values, ldap_get_values_len, ldap_count_values &#8211; LDAP attribute value handling routines </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>

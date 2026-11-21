@@ -1,4 +1,5 @@
 ---
+
 title: "extendedcoxingersollross(3)"
 name: "extendedcoxingersollross"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-extendedcoxingersollross/"
 description: "ql/models/shortrate/onefactormodels/extendedcoxingersollross.hpp – Extended Cox-Ingersoll-Ross model."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/models/shortrate/onefactormodels/extendedcoxingersollross.hpp &#8211; Extended Cox-Ingersoll-Ross model. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/models/shortrate/onefactormodels/coxingersollross.hpp&gt; </p>

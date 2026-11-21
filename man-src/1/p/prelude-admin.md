@@ -1,4 +1,5 @@
 ---
+
 title: "prelude-admin(1)"
 name: "prelude-admin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-prelude-admin/"
 description: "prelude-admin – Manage agents accounts"
 ---
 
-<h2>NAME</h2>
 <p> prelude-admin &#8211; Manage agents accounts </p>
 <h2>SYNOPSIS</h2>
 <p> <code>prelude-admin </code> &lt;subcommand&gt; [options] [args] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cmsg(3)"
 name: "cmsg"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cmsg/"
 description: "CMSG_ALIGN, CMSG_SPACE, CMSG_NXTHDR, CMSG_FIRSTHDR – access ancillary data"
 ---
 
-<h2 class="name">NAME</h2>
 <p> CMSG_ALIGN, CMSG_SPACE, CMSG_NXTHDR, CMSG_FIRSTHDR &#8211; access ancillary data </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

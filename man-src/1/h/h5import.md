@@ -1,4 +1,5 @@
 ---
+
 title: "h5import(1)"
 name: "h5import"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-h5import/"
 description: "h5import – Imports data into an existing or new HDF5 file."
 ---
 
-<h2>NAME</h2>
 <p> h5import &#8211; Imports data into an existing or new HDF5 file.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>h5import </code> infile <code>-d </code> dim_list [ <code>-p </code> pathname ] [ <code>-t </code> input_class ] [ <code>-s </code> input_size ] [infile &#8230;] <code>-o </code> outfile </p>

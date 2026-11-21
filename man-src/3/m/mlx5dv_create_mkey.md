@@ -1,4 +1,5 @@
 ---
+
 title: "mlx5dv_create_mkey(3)"
 name: "mlx5dv_create_mkey"
 section: "3"
@@ -6,12 +7,7 @@ letter: "m"
 url: "/docs/linux/man/3-mlx5dv_create_mkey/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- mlx5dv_create_mkey - Creates an indirect mkey 
+mlx5dv_create_mkey - Creates an indirect mkey 
 
  mlx5dv_create_mkey - Destroys an indirect mkey 
 

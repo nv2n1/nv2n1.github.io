@@ -1,4 +1,5 @@
 ---
+
 title: "gmusicbrowser(1)"
 name: "gmusicbrowser"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gmusicbrowser/"
 description: "gmusicbrowser – Jukebox for large collections of audio files"
 ---
 
-<h2>NAME</h2>
 <p> gmusicbrowser &#8211; Jukebox for large collections of audio files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gmusicbrowser</code> [-c] [-s] [-demo] [-ro] [-rotags] [-play] [-nodbus] [-gst|-nogst] [-server] [-port N] [-C FILE] [-F FIFO|-nofifo] [-debug] [-layout NAME] [-load FILE] [-use-gnome-session] [-cmd|-launch_or_cmd CMD&#8230;] </p>

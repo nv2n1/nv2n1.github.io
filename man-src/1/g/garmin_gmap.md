@@ -1,4 +1,5 @@
 ---
+
 title: "garmin_gmap(1)"
 name: "garmin_gmap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-garmin_gmap/"
 description: "garmin_gmap – convert .gmn files into xml data for use with goole maps"
 ---
 
-<h2>NAME</h2>
 <p> garmin_gmap &#8211; convert .gmn files into xml data for use with goole maps</p>
 <h2>SYNOPSIS</h2>
 <p> <code>garmin_gmap</code> <i>file</i> </p>

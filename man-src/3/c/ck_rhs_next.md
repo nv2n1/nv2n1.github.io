@@ -1,4 +1,5 @@
 ---
+
 title: "ck_rhs_next(3)"
 name: "ck_rhs_next"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_rhs_next/"
 description: "ck_rhs_next – iterate to next entry in hash set"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_rhs_next</code> &#8211; iterate to next entry in hash set</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "rpmorphan(1)"
 name: "rpmorphan"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rpmorphan/"
 description: "rpmorphan – find orphaned packages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rpmorphan &#8211; find orphaned packages </p>
 <h2>DESCRIPTION</h2>
 <p> rpmorphan finds &#8220;orphaned&#8221; packages on your system. It determines which packages have no other packages depending on their installation, and shows you a list of these packages. It is clone of deborphan debian software for rpm packages. </p>

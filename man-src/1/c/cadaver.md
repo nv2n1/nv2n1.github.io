@@ -1,4 +1,5 @@
 ---
+
 title: "cadaver(1)"
 name: "cadaver"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cadaver/"
 description: "cadaver – A command-line WebDAV client for Unix."
 ---
 
-<h2>NAME</h2>
 <p> cadaver &#8211; A command-line WebDAV client for Unix.</p>
 <h2>SYNOPSIS</h2>
 <p> cadaver [-trp[-r file][-p host[:port]]][-V][-h] <a rel="nofollow" href="http://hostname[:port]/path">http://hostname[:port]/path</a></p>

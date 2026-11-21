@@ -1,4 +1,5 @@
 ---
+
 title: "perf-archive(1)"
 name: "perf-archive"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perf-archive/"
 description: "perf-archive – Create archive with object files with build-ids found in perf.data file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perf-archive &#8211; Create archive with object files with build-ids found in perf.data file </p>
 <h2>SYNOPSIS</h2>
 <pre>

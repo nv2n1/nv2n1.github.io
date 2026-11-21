@@ -1,4 +1,5 @@
 ---
+
 title: "ocamldsort(1)"
 name: "ocamldsort"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ocamldsort/"
 description: "ocamldsort – Dependency sorter for OCaml source files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ocamldsort &#8211; Dependency sorter for OCaml source files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ocamldsort</code> [ <code>-pp</code> <i> pre-command</i> ] [ <code>-d</code> <i>dep-command</i> ]<br />

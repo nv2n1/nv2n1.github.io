@@ -1,4 +1,5 @@
 ---
+
 title: "show(1)"
 name: "show"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-show/"
 description: "show – show (display) messages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> show &#8211; show (display) messages </p>
 <h2>SYNOPSIS</h2>
 <dl>

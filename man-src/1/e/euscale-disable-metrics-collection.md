@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-disable-metrics-collection(1)"
 name: "euscale-disable-metrics-collection"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euscale-disable-metrics-collection/"
 description: "euscale-disable-metrics-collection – Disable monitoring of an auto-scaling group’s group metrics"
 ---
 
-<h2>NAME</h2>
 <p> euscale-disable-metrics-collection &#8211; Disable monitoring of an auto-scaling group&#8217;s group metrics</p>
 <h2>SYNOPSIS</h2>
 <p> euscale-disable-metrics-collection [-m METRIC1,METRIC2,&#8230;] [-U URL]</p>

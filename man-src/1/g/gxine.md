@@ -1,4 +1,5 @@
 ---
+
 title: "gxine(1)"
 name: "gxine"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gxine/"
 description: "gxine – a GTK/GNOME frontend to the xine video player"
 ---
 
-<h2>NAME</h2>
 <p> gxine &#8211; a GTK/GNOME frontend to the xine video player </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gxine</code> [<i>options</i>] [<i>files or MRLs</i>] </p>

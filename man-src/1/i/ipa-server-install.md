@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-server-install(1)"
 name: "ipa-server-install"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-server-install/"
 description: "ipa-server-install – Configure an IPA server"
 ---
 
-<h2>NAME</h2>
 <p> ipa-server-install &#8211; Configure an IPA server</p>
 <h2>SYNOPSIS</h2>
 <p> ipa-server-install [<i>OPTION</i>]&#8230;</p>

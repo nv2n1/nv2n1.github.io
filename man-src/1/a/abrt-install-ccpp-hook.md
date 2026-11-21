@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-install-ccpp-hook(1)"
 name: "abrt-install-ccpp-hook"
 section: "1"
@@ -6,10 +7,7 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-install-ccpp-hook/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- abrt-install-ccpp-hook - Install coredump handler. 
+abrt-install-ccpp-hook - Install coredump handler. 
 
 <h2>SYNOPSIS</h2>
 

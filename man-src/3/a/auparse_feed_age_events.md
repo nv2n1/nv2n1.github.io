@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_feed_age_events(3)"
 name: "auparse_feed_age_events"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_feed_age_events/"
 description: "auparse_feed_age_events – check events for complete based on time."
 ---
 
-<h2>NAME</h2>
 <p> auparse_feed_age_events &#8211; check events for complete based on time.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

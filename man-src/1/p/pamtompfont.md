@@ -1,4 +1,5 @@
 ---
+
 title: "pamtompfont(1)"
 name: "pamtompfont"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamtompfont/"
 description: "pamtompfont – Convert Netpbm image to Mplayer bitmap font file"
 ---
 
-<h2>NAME</h2>
 <p> pamtompfont &#8211; Convert Netpbm image to Mplayer bitmap font file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamtompfont</code> [<i>imagefile</i>] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ares_send(3)"
 name: "ares_send"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ares_send/"
 description: "ares_send – Initiate a DNS query"
 ---
 
-<h2>NAME</h2>
 <p> ares_send &#8211; Initiate a DNS query</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "google(1)"
 name: "google"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-google/"
 description: "google – command-line access to (some) Google services"
 ---
 
-<h2>NAME</h2>
 <p> google &#8211; command-line access to (some) Google services</p>
 <h2>SYNOPSIS</h2>
 <p> <code>google</code> [<i>picasa|blogger|youtube|docs|contacts|calendar</i>] <i>TASK </i>[<i>options</i>]</p>

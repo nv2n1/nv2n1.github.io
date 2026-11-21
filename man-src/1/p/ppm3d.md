@@ -1,4 +1,5 @@
 ---
+
 title: "ppm3d(1)"
 name: "ppm3d"
 section: "1"
@@ -6,9 +7,6 @@ letter: "p"
 url: "/docs/linux/man/1-ppm3d/"
 ---
 
-
-  </p>
-<h2 class="name">NAME</h2>
 <p> ppm3d &#8211; convert two portable pixmap into a red/blue 3d glasses pixmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppm3d</code> <i>leftppmfile</i> <i>rightppmfile</i> [<i>horizontal_offset</i>]  </p>

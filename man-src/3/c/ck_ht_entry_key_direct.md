@@ -1,4 +1,5 @@
 ---
+
 title: "ck_ht_entry_key_direct(3)"
 name: "ck_ht_entry_key_direct"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_ht_entry_key_direct/"
 description: "ck_ht_entry_key_direct – return key value as specified in hash table entry"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_ht_entry_key_direct</code> &#8211; return key value as specified in hash table entry</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

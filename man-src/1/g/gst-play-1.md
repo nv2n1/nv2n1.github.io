@@ -1,4 +1,5 @@
 ---
+
 title: "gst-play-1(1)"
 name: "gst-play-1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gst-play-1/"
 description: "gst-play-1.0 – Simple command line playback testing tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gst-play-1.0 &#8211; Simple command line playback testing tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gst-play-1.0</code> <i>FILE|DIRECTORY|URI [FILE2|DIRECTORY2|URI2]</i></p>

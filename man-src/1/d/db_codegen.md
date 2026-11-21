@@ -1,4 +1,5 @@
 ---
+
 title: "db_codegen(1)"
 name: "db_codegen"
 section: "1"
@@ -8,7 +9,7 @@ description: "db5.3_codegen – generate application code for Berkeley DB"
 ---
 
 <p>Berkeley DB</p>
-<h2 class="name">NAME</h2>
+
 <p> <code>db5.3_codegen</code> &#8211; generate application code for Berkeley DB </p>
 <h2>SYNOPSIS</h2>
 <p> [-<code>Vv </code>[-<code>a </code><i>api</i> ] ] [-<code>i </code><i>file</i> ] [-<code>o </code><i>prefix</i> ]</p>

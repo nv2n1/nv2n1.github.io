@@ -1,4 +1,5 @@
 ---
+
 title: "lgetxattr(2)"
 name: "lgetxattr"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-lgetxattr/"
 description: "getxattr, lgetxattr, fgetxattr – retrieve an extended attribute value"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getxattr, lgetxattr, fgetxattr &#8211; retrieve an extended attribute value </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

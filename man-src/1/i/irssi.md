@@ -1,4 +1,5 @@
 ---
+
 title: "irssi(1)"
 name: "irssi"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-irssi/"
 description: "Irssi – a modular IRC client for UNIX"
 ---
 
-<h2>NAME</h2>
 <p> Irssi &#8211; a modular IRC client for UNIX</p>
 <h2>SYNOPSIS</h2>
 <p> <code>irssi</code> [-dv!?] [-c server] [-p port] [-n nickname] [-w password] [-h hostname]</p>

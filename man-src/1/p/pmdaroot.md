@@ -1,4 +1,5 @@
 ---
+
 title: "pmdaroot(1)"
 name: "pmdaroot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdaroot/"
 description: "pmdaroot – a privileged PMCD helper performance metrics domain agent"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdaroot</code> &#8211; a privileged PMCD helper performance metrics domain agent</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/root/pmdaroot</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-s</code> <i>sockname</i>]</p>

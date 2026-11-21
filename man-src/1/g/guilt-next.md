@@ -1,4 +1,5 @@
 ---
+
 title: "guilt-next(1)"
 name: "guilt-next"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-guilt-next/"
 description: "guilt-next – Output the name of next patch to be pushed"
 ---
 
-<h2 class="name">NAME</h2>
 <p> guilt-next &#8211; Output the name of next patch to be pushed </p>
 <h2>SYNOPSIS</h2>
 <p> <i>guilt-next</i> [-p|&#8211;path]</p>

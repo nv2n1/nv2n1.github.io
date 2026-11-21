@@ -1,4 +1,5 @@
 ---
+
 title: "bsearch(1)"
 name: "bsearch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bsearch/"
 description: "bsearch – manages one-time passwords"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>bsearch</code> &#8211; manages one-time passwords </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bsearch</code> [-<code>KVvh</code> ] [-<code>b </code><i>block-size</i> ] [-<code>m </code><i>max-cache-size</i> ] <i>file</i> <i>[key &#8230;]</i></p>

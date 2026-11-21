@@ -1,4 +1,5 @@
 ---
+
 title: "canonicalize_file_name(3)"
 name: "canonicalize_file_name"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-canonicalize_file_name/"
 description: "canonicalize_file_name – return the canonicalized absolute pathname"
 ---
 
-<h2 class="name">NAME</h2>
 <p> canonicalize_file_name &#8211; return the canonicalized absolute pathname </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#define _GNU_SOURCE</code> /* See <a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a>(7) */<br />

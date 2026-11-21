@@ -1,4 +1,5 @@
 ---
+
 title: "poclean(1)"
 name: "poclean"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-poclean/"
 description: "poclean – Produces a clean file from an unclean file (Trados/Wordfast) by stripping out the tw4win indicators."
 ---
 
-<h2>NAME</h2>
 <p> poclean &#8211; Produces a clean file from an unclean file (Trados/Wordfast) by stripping out the tw4win indicators.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>poclean </code>[&#8211;version] [-h|&#8211;help] [&#8211;manpage] [&#8211;progress <i>PROGRESS</i>] [&#8211;errorlevel <i>ERRORLEVEL</i>] [-i|&#8211;input] <i>INPUT</i> [-x|&#8211;exclude <i>EXCLUDE</i>] [-o|&#8211;output] <i>OUTPUT</i> [-S|&#8211;timestamp]</p>

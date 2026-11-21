@@ -1,4 +1,5 @@
 ---
+
 title: "spottopgm(1)"
 name: "spottopgm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-spottopgm/"
 description: "spottopgm – convert SPOT satellite images to a PGM image"
 ---
 
-<h2 class="name">NAME</h2>
 <p> spottopgm &#8211; convert SPOT satellite images to a PGM image</p>
 <h2>SYNTAX</h2>
 <p> <code>spottopgm</code> [<code>-1</code>|<code>-2</code>|<code>-3</code>] [<i>Firstcol</i> <i>Firstline</i> <i>Lastcol</i> <i>Lastline</i>] <i>inputfile</i> </p>

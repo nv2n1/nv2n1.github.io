@@ -1,4 +1,5 @@
 ---
+
 title: "zshmisc(1)"
 name: "zshmisc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zshmisc/"
 description: "zshmisc – everything and then some"
 ---
 
-<h2 class="name">NAME</h2>
 <p> zshmisc &#8211; everything and then some </p>
 <h2>SIMPLE COMMANDS &amp; PIPELINES</h2>
 <p> A <i>simple command</i> is a sequence of optional parameter assignments followed by blank-separated words, with optional redirections interspersed. For a description of assignment, see the beginning of <i><a href="/docs/linux/man/1-zshparam/">zshparam</a></i>(1). </p>

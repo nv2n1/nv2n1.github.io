@@ -1,4 +1,5 @@
 ---
+
 title: "gpre(1)"
 name: "gpre"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpre/"
 description: "gpre – Firebird source pre-processor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gpre &#8211; Firebird source pre-processor </p>
 <h2>SYNOPSIS</h2>
 <dl>

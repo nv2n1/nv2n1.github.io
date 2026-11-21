@@ -1,4 +1,5 @@
 ---
+
 title: "fcntl64(2)"
 name: "fcntl64"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-fcntl64/"
 description: "fcntl – manipulate file descriptor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fcntl &#8211; manipulate file descriptor </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

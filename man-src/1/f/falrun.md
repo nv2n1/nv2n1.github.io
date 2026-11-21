@@ -1,4 +1,5 @@
 ---
+
 title: "falrun(1)"
 name: "falrun"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-falrun/"
 description: "flcrun – The Falcon command line execution tool"
 ---
 
-<h2>NAME</h2>
 <p> flcrun &#8211; The Falcon command line execution tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>falrun [options] [main_script] [script_options]</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "rgb2pct(1)"
 name: "rgb2pct"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rgb2pct/"
 description: "rgb2pct – rgb2pct.py Convert a 24bit RGB image to 8bit paletted"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rgb2pct &#8211; rgb2pct.py Convert a 24bit RGB image to 8bit paletted </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

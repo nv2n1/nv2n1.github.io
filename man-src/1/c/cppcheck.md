@@ -1,4 +1,5 @@
 ---
+
 title: "cppcheck(1)"
 name: "cppcheck"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cppcheck/"
 description: "cppcheck – Tool for static C/C++ code analysis"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cppcheck &#8211; Tool for static C/C++ code analysis </p>
 <h2>SYNOPSIS</h2>
 <dl>

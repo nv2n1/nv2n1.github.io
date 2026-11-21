@@ -1,4 +1,5 @@
 ---
+
 title: "g_sigeps_d(1)"
 name: "g_sigeps_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_sigeps_d/"
 description: "sigeps – convert c6/12 or c6/cn combinations to and from sigma/epsilon"
 ---
 
-<h2>NAME</h2>
 <p> sigeps &#8211; convert c6/12 or c6/cn combinations to and from sigma/epsilon </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

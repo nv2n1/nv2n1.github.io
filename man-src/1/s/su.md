@@ -1,4 +1,5 @@
 ---
+
 title: "su(1)"
 name: "su"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-su/"
 description: "su – run a command with substitute user and group ID"
 ---
 
-<h2 class="name">NAME</h2>
 <p> su &#8211; run a command with substitute user and group ID </p>
 <h2>SYNOPSIS</h2>
 <p> <code>su</code> [options] [<code>&#8211;</code>] [<i>user</i> [<i>argument</i>&#8230;]]</p>

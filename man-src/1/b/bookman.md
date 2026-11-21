@@ -1,4 +1,5 @@
 ---
+
 title: "bookman(1)"
 name: "bookman"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bookman/"
 description: "bookman – Generate a book from man pages"
 ---
 
-<h2>NAME</h2>
 <p> <code>bookman </code>&#8211; Generate a book from man pages</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

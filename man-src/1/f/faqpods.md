@@ -1,4 +1,5 @@
 ---
+
 title: "faqpods(1)"
 name: "faqpods"
 section: "1"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-faqpods/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- faqpods - print out pod paths for the standard perl faqs 
+faqpods - print out pod paths for the standard perl faqs 
 
 <h2>DESCRIPTION</h2>
 

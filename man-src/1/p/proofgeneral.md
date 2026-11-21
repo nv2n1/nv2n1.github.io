@@ -1,4 +1,5 @@
 ---
+
 title: "proofgeneral(1)"
 name: "proofgeneral"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-proofgeneral/"
 description: "proofgeneral – manual page for proofgeneral ()"
 ---
 
-<h2>NAME</h2>
 <p> proofgeneral &#8211; manual page for proofgeneral ()</p>
 <h2>SYNOPSIS</h2>
 <p> <code>proofgeneral</code> [<i>OPTION</i>] [<i>FILE</i>]&#8230;</p>

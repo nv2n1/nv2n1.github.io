@@ -1,4 +1,5 @@
 ---
+
 title: "pamx(1)"
 name: "pamx"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamx/"
 description: "pamx – display Netpbm image in X Window System window"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamx &#8211; display Netpbm image in X Window System window</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamx</code> </p>

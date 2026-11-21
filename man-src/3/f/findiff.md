@@ -1,4 +1,5 @@
 ---
+
 title: "findiff(3)"
 name: "findiff"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-findiff/"
 description: "Finite-differences framework –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Finite-differences framework &#8211; </p>
 <h3>Classes</h3>
 <p> class <code>BoundaryCondition&lt; Operator &gt;</code><br />

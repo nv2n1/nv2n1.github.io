@@ -1,4 +1,5 @@
 ---
+
 title: "bson_md5_append(3)"
 name: "bson_md5_append"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_md5_append/"
 description: "bson_md5_append() – Feeds more data into the MD5 algorithm."
 ---
 
-<h2>NAME</h2>
 <p> bson_md5_append() &#8211; Feeds more data into the MD5 algorithm.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

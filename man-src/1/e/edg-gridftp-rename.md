@@ -1,4 +1,5 @@
 ---
+
 title: "edg-gridftp-rename(1)"
 name: "edg-gridftp-rename"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-edg-gridftp-rename/"
 description: "edg-gridftp-rename – Rename a file or directory on a GridFTP server."
 ---
 
-<h2 class="name">NAME</h2>
 <p> edg-gridftp-rename &#8211; Rename a file or directory on a GridFTP server. </p>
 <h2>SYNOPSIS</h2>
 <p> edg-gridftp-rename [<code>&#8211;proxy</code>=<i>proxy</i>] [<code>&#8211;timeout</code>=<i>timeout</i>] <i>SourceURL</i> <i>DestinationURL</i> </p>

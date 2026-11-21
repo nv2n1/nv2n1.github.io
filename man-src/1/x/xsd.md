@@ -1,4 +1,5 @@
 ---
+
 title: "xsd(1)"
 name: "xsd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xsd/"
 description: "xsd – Mono’s utility for generating schema or class files"
 ---
 
-<h2>NAME</h2>
 <p> xsd &#8211; Mono&#8217;s utility for generating schema or class files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xsd</code> &lt;schema.xsd&gt; /classes [options] </p>

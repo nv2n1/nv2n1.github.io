@@ -1,4 +1,5 @@
 ---
+
 title: "flpsed(1)"
 name: "flpsed"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flpsed/"
 description: "flpsed – annotate PostScript and PDF files"
 ---
 
-<h2>NAME</h2>
 <p> <code>flpsed</code> &#8211; annotate PostScript and PDF files</p>
 <h2>SYNOPSIS</h2>
 <p> [-<code>bdh</code> ] [-<code>t </code><i>tag=value</i> ] [-<code>z </code><i>zoom</i> ] [<i>infile</i> ] [<i>outfile</i> ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "euform-validate-template(1)"
 name: "euform-validate-template"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euform-validate-template/"
 description: "euform-validate-template – Validate a template"
 ---
 
-<h2>NAME</h2>
 <p> euform-validate-template &#8211; Validate a template</p>
 <h2>SYNOPSIS</h2>
 <p> euform-validate-template (<code>&#8211;template-file</code> FILE | <code>&#8211;template-url</code> URL)</p>

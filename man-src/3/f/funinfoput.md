@@ -1,4 +1,5 @@
 ---
+
 title: "funinfoput(3)"
 name: "funinfoput"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-funinfoput/"
 description: "FunInfoPut – put information into a Funtools struct"
 ---
 
-<h2>NAME</h2>
 <p> <code>FunInfoPut &#8211; put information into a Funtools struct</code></p>
 <h2>SYNOPSIS</h2>
 <pre><code>

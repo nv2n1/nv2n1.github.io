@@ -1,4 +1,5 @@
 ---
+
 title: "htop(1)"
 name: "htop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-htop/"
 description: "htop – interactive process viewer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> htop &#8211; interactive process viewer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>htop</code> [<code>-dCFhpustvH</code>]</p>

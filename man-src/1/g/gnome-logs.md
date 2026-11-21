@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-logs(1)"
 name: "gnome-logs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnome-logs/"
 description: "gnome-logs – log viewer for the systemd journal"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gnome-logs &#8211; log viewer for the systemd journal </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "funimageput(3)"
 name: "funimageput"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-funimageput/"
 description: "FunImagePut – put an image to a Funtools file"
 ---
 
-<h2>NAME</h2>
 <p> <code>FunImagePut &#8211; put an image to a Funtools file</code></p>
 <h2>SYNOPSIS</h2>
 <pre><code>

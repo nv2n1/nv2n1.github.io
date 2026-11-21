@@ -1,4 +1,5 @@
 ---
+
 title: "nvimgdiff(1)"
 name: "nvimgdiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nvimgdiff/"
 description: "NVIDIA – manual page for NVIDIA Texture Tools – Copyright NVIDIA Corporation 2007"
 ---
 
-<h2>NAME</h2>
 <p> NVIDIA &#8211; manual page for NVIDIA Texture Tools &#8211; Copyright NVIDIA Corporation 2007</p>
 <h2>DESCRIPTION</h2>
 <p> NVIDIA Texture Tools &#8211; Copyright NVIDIA Corporation 2007 </p>

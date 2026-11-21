@@ -1,4 +1,5 @@
 ---
+
 title: "euca-reset-instance-attribute(1)"
 name: "euca-reset-instance-attribute"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-reset-instance-attribute/"
 description: "euca-reset-instance-attribute – Reset an attribute of an instance to its default value"
 ---
 
-<h2>NAME</h2>
 <p> euca-reset-instance-attribute &#8211; Reset an attribute of an instance to its default value</p>
 <h2>SYNOPSIS</h2>
 <p> euca-reset-instance-attribute</p>

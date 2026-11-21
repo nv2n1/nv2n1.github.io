@@ -1,4 +1,5 @@
 ---
+
 title: "baobab(1)"
 name: "baobab"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-baobab/"
 description: "baobab – A graphical disk usage analyzer for the GNOME desktop"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>baobab</code> &#8211; A graphical disk usage analyzer for the GNOME desktop</p>
 <h2>SYNOPSIS</h2>
 <p> <code>baobab</code> [OPTIONS…] [DIRECTORY] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pmdanvidia(1)"
 name: "pmdanvidia"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdanvidia/"
 description: "pmdanvidia – nvidia gpu metrics domain agent (PMDA)"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdanvidia</code> &#8211; nvidia gpu metrics domain agent (PMDA)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/nvidia/pmdanvidia</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>]</p>

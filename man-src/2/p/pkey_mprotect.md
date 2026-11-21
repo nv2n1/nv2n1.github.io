@@ -1,4 +1,5 @@
 ---
+
 title: "pkey_mprotect(2)"
 name: "pkey_mprotect"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-pkey_mprotect/"
 description: "mprotect, pkey_mprotect – set protection on a region of memory"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mprotect, pkey_mprotect &#8211; set protection on a region of memory </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

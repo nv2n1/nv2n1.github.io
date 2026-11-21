@@ -1,4 +1,5 @@
 ---
+
 title: "ssh-import-id-lp(1)"
 name: "ssh-import-id-lp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ssh-import-id-lp/"
 description: "ssh-import-id – retrieve one or more public keys from a public keyserver and append them to the current user’s authorized_keys file (or some other specified file)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>ssh-import-id</code> &#8211; retrieve one or more public keys from a public keyserver and append them to the current user&#8217;s authorized_keys file (or some other specified file)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ssh-import-id [options] USER_ID_1 [gh:USER_ID_2] &#8230; [lp:USER_ID_n]</code> </p>

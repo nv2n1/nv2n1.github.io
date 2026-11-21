@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-action-notify(1)"
 name: "abrt-action-notify"
 section: "1"
@@ -6,10 +7,7 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-action-notify/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- abrt-action-notify - Announces a new occurrence of problem via all accessible channels 
+abrt-action-notify - Announces a new occurrence of problem via all accessible channels 
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "qconf(1)"
 name: "qconf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qconf/"
 description: "qconf – xxQS_NAMExx Queue Configuration"
 ---
 
-<h2 class="name">NAME</h2>
 <p> qconf &#8211; xxQS_NAMExx Queue Configuration </p>
 <h2>SYNTAX</h2>
 <p> <code>qconf options</code></p>

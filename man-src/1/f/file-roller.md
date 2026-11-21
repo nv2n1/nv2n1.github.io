@@ -1,4 +1,5 @@
 ---
+
 title: "file-roller(1)"
 name: "file-roller"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-file-roller/"
 description: "file-roller – archive manager for GNOME"
 ---
 
-<h2 class="name">NAME</h2>
 <p> file-roller &#8211; archive manager for GNOME </p>
 <h2>SYNOPSIS</h2>
 <p> <code>file-roller</code> [<i>OPTIONS&#8230;</i>] [<i>FILE&#8230;</i>]</p>

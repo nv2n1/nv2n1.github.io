@@ -1,4 +1,5 @@
 ---
+
 title: "euare-grouplistbypath(1)"
 name: "euare-grouplistbypath"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-grouplistbypath/"
 description: "euare-grouplistbypath – List your account’s groups"
 ---
 
-<h2>NAME</h2>
 <p> euare-grouplistbypath &#8211; List your account&#8217;s groups</p>
 <h2>SYNOPSIS</h2>
 <p> euare-grouplistbypath [-p PATH] [&#8211;as-account ACCOUNT] [-U URL]</p>

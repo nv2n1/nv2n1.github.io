@@ -1,4 +1,5 @@
 ---
+
 title: "inotail(1)"
 name: "inotail"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-inotail/"
 description: "inotail – A fast and lightweight version of tail using inotify"
 ---
 
-<h2>NAME</h2>
 <p> inotail &#8211; A fast and lightweight version of tail using inotify</p>
 <h2>SYNOPSIS</h2>
 <p> <code>inotail</code> [OPTION]&#8230; [FILE]&#8230;</p>

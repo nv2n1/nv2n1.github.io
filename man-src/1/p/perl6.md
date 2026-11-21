@@ -1,4 +1,5 @@
 ---
+
 title: "perl6(1)"
 name: "perl6"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perl6/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perl6 - Rakudo Perl 6 Compiler 
+perl6 - Rakudo Perl 6 Compiler 
 
 <h2>SYNOPSIS</h2>
 

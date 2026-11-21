@@ -1,4 +1,5 @@
 ---
+
 title: "pkexec(1)"
 name: "pkexec"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pkexec/"
 description: "pkexec – Execute a command as another user"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pkexec &#8211; Execute a command as another user </p>
 <h2>SYNOPSIS</h2>
 <dl>

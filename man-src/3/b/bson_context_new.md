@@ -1,4 +1,5 @@
 ---
+
 title: "bson_context_new(3)"
 name: "bson_context_new"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_context_new/"
 description: "bson_context_new() – Creates a new bson_context_t. This is rarely needed as bson_context_get_default() serves most use-cases."
 ---
 
-<h2>NAME</h2>
 <p> bson_context_new() &#8211; Creates a new bson_context_t. This is rarely needed as bson_context_get_default() serves most use-cases.</p>
 <h2>SYNOPSIS</h2>
 <pre>

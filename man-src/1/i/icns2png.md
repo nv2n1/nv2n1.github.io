@@ -1,4 +1,5 @@
 ---
+
 title: "icns2png(1)"
 name: "icns2png"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-icns2png/"
 description: "icns2png – convert Mac OS icns files to png images"
 ---
 
-<h2>NAME</h2>
 <p> icns2png &#8211; convert Mac OS icns files to png images</p>
 <h2>SYNOPSIS</h2>
 <p> <code>icns2png</code> [<i>-x|-l</i>] [<i>options</i>] [<i>file </i>&#8230; ]</p>

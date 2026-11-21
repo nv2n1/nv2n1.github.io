@@ -1,4 +1,5 @@
 ---
+
 title: "pminclude(1)"
 name: "pminclude"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-pminclude/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- pminclude - show the include path for modules (@INC) 
+pminclude - show the include path for modules (@INC) 
 
 <h2>DESCRIPTION</h2>
 

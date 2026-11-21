@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-set-desired-capacity(1)"
 name: "euscale-set-desired-capacity"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euscale-set-desired-capacity/"
 description: "euscale-set-desired-capacity – Set an auto-scaling group’s desired capacity"
 ---
 
-<h2>NAME</h2>
 <p> euscale-set-desired-capacity &#8211; Set an auto-scaling group&#8217;s desired capacity</p>
 <h2>SYNOPSIS</h2>
 <p> euscale-set-desired-capacity <code>-c</code> DESIREDCAPACITY [-h] [-H] [-U URL]</p>

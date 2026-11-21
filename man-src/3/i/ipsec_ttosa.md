@@ -1,4 +1,5 @@
 ---
+
 title: "ipsec_ttosa(3)"
 name: "ipsec_ttosa"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ipsec_ttosa/"
 description: "ipsec_ttosa, ipsec_satot, ipsec_initsaid – convert IPsec Security Association IDs to and from text, initialize an SA ID"
 ---
 
-<h2>NAME</h2>
 <p> ipsec_ttosa, ipsec_satot, ipsec_initsaid &#8211; convert IPsec Security Association IDs to and from text, initialize an SA ID</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libreswan.h&gt;</code> </p>

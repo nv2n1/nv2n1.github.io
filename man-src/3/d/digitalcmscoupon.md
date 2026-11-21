@@ -1,4 +1,5 @@
 ---
+
 title: "digitalcmscoupon(3)"
 name: "digitalcmscoupon"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-digitalcmscoupon/"
 description: "ql/cashflows/digitalcmscoupon.hpp – Cms-rate coupon with digital call/put option."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/cashflows/digitalcmscoupon.hpp &#8211; Cms-rate coupon with digital call/put option. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/cashflows/digitalcoupon.hpp&gt;<br />

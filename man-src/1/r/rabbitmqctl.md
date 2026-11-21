@@ -1,4 +1,5 @@
 ---
+
 title: "rabbitmqctl(1)"
 name: "rabbitmqctl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rabbitmqctl/"
 description: "rabbitmqctl – command line tool for managing a RabbitMQ broker"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rabbitmqctl &#8211; command line tool for managing a RabbitMQ broker </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "sispmctl(1)"
 name: "sispmctl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sispmctl/"
 description: "sispmctl – Gembird Silver Shield PM ConTroL program"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sispmctl &#8211; Gembird Silver Shield PM ConTroL program</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sispmctl</code> <i>-s</i> </p>

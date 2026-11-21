@@ -1,4 +1,5 @@
 ---
+
 title: "ioctl_getfsmap(2)"
 name: "ioctl_getfsmap"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-ioctl_getfsmap/"
 description: "ioctl_getfsmap – retrieve the physical layout of the filesystem"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ioctl_getfsmap &#8211; retrieve the physical layout of the filesystem </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/ioctl.h&gt;</code><br />

@@ -1,4 +1,5 @@
 ---
+
 title: "pki-ca-profile(1)"
 name: "pki-ca-profile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pki-ca-profile/"
 description: "pki-profile – Command-Line Interface for managing Certificate System CA profiles."
 ---
 
-<h2 class="name">NAME</h2>
 <p> pki-profile &#8211; Command-Line Interface for managing Certificate System CA profiles.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

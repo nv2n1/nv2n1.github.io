@@ -1,4 +1,5 @@
 ---
+
 title: "iv_signal(3)"
 name: "iv_signal"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-iv_signal/"
 description: "IV_SIGNAL_INIT, iv_signal_register, iv_signal_unregister – ivykis signal handling"
 ---
 
-<h2>NAME</h2>
 <p> IV_SIGNAL_INIT, iv_signal_register, iv_signal_unregister &#8211; ivykis signal handling</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;iv_signal.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "bson_check_version(3)"
 name: "bson_check_version"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_check_version/"
 description: "bson_check_version() – Check at runtime if this release of libbson meets a required version."
 ---
 
-<h2>NAME</h2>
 <p> bson_check_version() &#8211; Check at runtime if this release of libbson meets a required version.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

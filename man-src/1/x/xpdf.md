@@ -1,4 +1,5 @@
 ---
+
 title: "xpdf(1)"
 name: "xpdf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xpdf/"
 description: "xpdf – Portable Document Format (PDF) file viewer for X (version 3.04)"
 ---
 
-<h2>NAME</h2>
 <p> xpdf &#8211; Portable Document Format (PDF) file viewer for X (version 3.04)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xpdf</code> [options] [<i>PDF-file</i> [<i>page</i> | +<i>dest</i>]]</p>

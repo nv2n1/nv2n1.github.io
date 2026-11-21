@@ -1,4 +1,5 @@
 ---
+
 title: "newsx-newsq(1)"
 name: "newsx-newsq"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-newsx-newsq/"
 description: "newsq – list news server outgoing queue"
 ---
 
-<h2>NAME</h2>
 <p> newsq &#8211; list news server outgoing queue </p>
 <h2>SYNOPSIS</h2>
 <p> <code>newsq</code> [ <i>options</i> ] [ <i>hostname&#8230;</i> ] </p>

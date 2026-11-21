@@ -1,4 +1,5 @@
 ---
+
 title: "ecryptfs-find(1)"
 name: "ecryptfs-find"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ecryptfs-find/"
 description: "ecryptfs-find – use inode numbers to match encrypted/decrypted filenames"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ecryptfs-find &#8211; use inode numbers to match encrypted/decrypted filenames</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ecryptfs-find</code> cleartext-filename <code>ecryptfs-find</code> ECRYPTFS_FNEK_ENCRYPTED.fwBGx18a.UcYl18CF7VKLMSDuEadV </p>

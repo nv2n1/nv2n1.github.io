@@ -1,4 +1,5 @@
 ---
+
 title: "qhold-ge(1)"
 name: "qhold-ge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qhold-ge/"
 description: "qhold – hold back Grid Engine jobs from execution"
 ---
 
-<h2>NAME</h2>
 <p> qhold &#8211; hold back Grid Engine jobs from execution</p>
 <h2>SYNTAX</h2>
 <p> <code>qhold</code> [ <code>-h</code> {<code>u</code>|<code>o</code>|<code>s</code>},&#8230; ] [ <code>-help</code> ] [ <code>job/task_id_list</code> ] </p>

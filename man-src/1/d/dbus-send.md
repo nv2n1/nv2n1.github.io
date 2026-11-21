@@ -1,4 +1,5 @@
 ---
+
 title: "dbus-send(1)"
 name: "dbus-send"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dbus-send/"
 description: "dbus-send – Send a message to a message bus"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dbus-send &#8211; Send a message to a message bus </p>
 <h2>SYNOPSIS</h2>
 <dl>

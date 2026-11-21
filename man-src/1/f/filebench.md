@@ -1,4 +1,5 @@
 ---
+
 title: "filebench(1)"
 name: "filebench"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-filebench/"
 description: "filebench – interprets WML script and generates appropriate filesystem workload"
 ---
 
-<h2>NAME</h2>
 <p> filebench &#8211; interprets WML script and generates appropriate filesystem workload</p>
 <h2>SYNOPSIS</h2>
 <p> <code>filebench [-f &lt;filename&gt;] [-h]</code></p>

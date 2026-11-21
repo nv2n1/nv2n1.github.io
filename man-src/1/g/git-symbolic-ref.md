@@ -1,4 +1,5 @@
 ---
+
 title: "git-symbolic-ref(1)"
 name: "git-symbolic-ref"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-symbolic-ref/"
 description: "git-symbolic-ref – Read, modify and delete symbolic refs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-symbolic-ref &#8211; Read, modify and delete symbolic refs </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

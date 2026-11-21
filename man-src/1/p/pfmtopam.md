@@ -1,4 +1,5 @@
 ---
+
 title: "pfmtopam(1)"
 name: "pfmtopam"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pfmtopam/"
 description: "pamtopfm – Convert PFM (Portable Float Map) image to Netpbm format"
 ---
 
-<h2>NAME</h2>
 <p> pamtopfm &#8211; Convert PFM (Portable Float Map) image to Netpbm format </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pfmtopam</code> [<code>-maxval=</code><i>n</i>] [<code>-verbose</code>] [<i>imagefile</i>] </p>

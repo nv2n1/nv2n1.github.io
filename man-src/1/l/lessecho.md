@@ -1,4 +1,5 @@
 ---
+
 title: "lessecho(1)"
 name: "lessecho"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lessecho/"
 description: "lessecho – expand metacharacters"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lessecho &#8211; expand metacharacters </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lessecho</code> <i>[-ox] [-cx] [-pn] [-dn] [-mx] [-nn] [-ex] [-a] file &#8230;</i></p>

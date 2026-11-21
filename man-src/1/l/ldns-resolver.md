@@ -1,4 +1,5 @@
 ---
+
 title: "ldns-resolver(1)"
 name: "ldns-resolver"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ldns-resolver/"
 description: "ldns-resolver – tries to create a resolver from a resolv.conf file."
 ---
 
-<h2>NAME</h2>
 <p> ldns-resolver &#8211; tries to create a resolver from a resolv.conf file.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ldns-resolver</code> <i>file</i> </p>

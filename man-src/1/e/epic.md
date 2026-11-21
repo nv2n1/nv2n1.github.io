@@ -1,4 +1,5 @@
 ---
+
 title: "epic(1)"
 name: "epic"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-epic/"
 description: "epic – Internet Relay Chat client for UNIX like systems"
 ---
 
-<h2>NAME</h2>
 <p> <code>epic</code> &#8211; Internet Relay Chat client for UNIX like systems</p>
 <h2>SYNOPSIS</h2>
 <p> <code>epic</code> [<i>-a</i> ] [<i>-b</i> ] [<i>-B</i> ] [<i>-c chan</i> ] [<i>-d </i> ] [<i>-f </i> ] [<i>-F </i> ] [<i>-h </i> ] [<i>-H hostname</i> ] [<i>-l filename</i> ] [<i>-L filename </i> ] [<i>-n nickname</i> ] [<i>-o</i> ] [<i>-O</i> ] [<i>-p port</i> ] [<i>-q </i> ] [<i>-v</i> ] [<i>-x</i> ] [<i>-z username</i> ] [<i>nickname</i> ] [<i>server description list</i> ]</p>

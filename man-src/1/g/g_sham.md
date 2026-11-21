@@ -1,4 +1,5 @@
 ---
+
 title: "g_sham(1)"
 name: "g_sham"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_sham/"
 description: "g_sham – read/write xmgr and xvgr data sets"
 ---
 
-<h2>NAME</h2>
 <p> g_sham &#8211; read/write xmgr and xvgr data sets </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "local-getcert(1)"
 name: "local-getcert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-local-getcert/"
 description: "local-getcert"
 ---
 
-<h2 class="name">NAME</h2>
 <p> local-getcert</p>
 <h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr>local-getcert request&nbsp;<wbr>[options]<br />

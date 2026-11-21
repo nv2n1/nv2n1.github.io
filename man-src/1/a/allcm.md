@@ -1,4 +1,5 @@
 ---
+
 title: "allcm(1)"
 name: "allcm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-allcm/"
 description: "allcm – force the most important Computer-Modern-fonts to be calculated"
 ---
 
-<h2 class="name">NAME</h2>
 <p> allcm &#8211; force the most important Computer-Modern-fonts to be calculated </p>
 <h2>SYNOPSIS</h2>
 <p> <code>allcm [-r]</code></p>

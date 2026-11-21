@@ -1,4 +1,5 @@
 ---
+
 title: "euimage-install-pack(1)"
 name: "euimage-install-pack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euimage-install-pack/"
 description: "euimage-install-pack – ***TECH PREVIEW***"
 ---
 
-<h2>NAME</h2>
 <p> euimage-install-pack &#8211; ***TECH PREVIEW***</p>
 <h2>SYNOPSIS</h2>
 <p> euimage-install-pack [&#8211;profile PROFILE] [-b BUCKET[/PREFIX]]</p>

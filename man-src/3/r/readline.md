@@ -1,4 +1,5 @@
 ---
+
 title: "readline(3)"
 name: "readline"
 section: "3"
@@ -6,8 +7,9 @@ letter: "r"
 url: "/docs/linux/man/3-readline/"
 description: "readline – get a line from a user with editing"
 ---
+
 <p>readline &#8211; get a line from a user with editing </p>
-<h2>SYNOPSIS</h2>
+
 <pre><code>
  #include &lt;stdio.h&gt;
 #include &lt;readline/readline.h&gt;

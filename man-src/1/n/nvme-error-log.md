@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-error-log(1)"
 name: "nvme-error-log"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-error-log/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nvme-error-log - Send NVME Error log page request, return result and log 
+nvme-error-log - Send NVME Error log page request, return result and log 
 
 <h2>SYNOPSIS</h2>
 

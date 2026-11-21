@@ -1,4 +1,5 @@
 ---
+
 title: "foomatic-printermap-to-gutenprint-xml(1)"
 name: "foomatic-printermap-to-gutenprint-xml"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-foomatic-printermap-to-gutenprint-xml/"
 description: "foomatic-printermap-to-gutenprint-xml – Updates Gutenprint driver XML file"
 ---
 
-<h2>NAME</h2>
 <p> foomatic-printermap-to-gutenprint-xml &#8211; Updates Gutenprint driver XML file</p>
 <h2>SYNOPSIS</h2>
 <dl>

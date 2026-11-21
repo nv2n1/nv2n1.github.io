@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-server(1)"
 name: "abrt-server"
 section: "1"
@@ -6,10 +7,7 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-server/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- abrt-server - Unix socket for ABRT. 
+abrt-server - Unix socket for ABRT. 
 
 <h2>SYNOPSIS</h2>
 

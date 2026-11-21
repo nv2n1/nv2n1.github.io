@@ -1,4 +1,5 @@
 ---
+
 title: "cgi_vredirect(3)"
 name: "cgi_vredirect"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgi_vredirect/"
 description: "cgi_vredirect – send an HTTP 302 redirect response"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cgi_vredirect &#8211; send an HTTP 302 redirect response </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

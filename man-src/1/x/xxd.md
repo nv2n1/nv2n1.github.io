@@ -1,4 +1,5 @@
 ---
+
 title: "xxd(1)"
 name: "xxd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xxd/"
 description: "xxd – make a hexdump or do the reverse."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <i>xxd</i> &#8211; make a hexdump or do the reverse. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xxd</code> -h[elp]<br />

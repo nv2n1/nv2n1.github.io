@@ -1,4 +1,5 @@
 ---
+
 title: "guestfs-testing(1)"
 name: "guestfs-testing"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-guestfs-testing/"
 description: "guestfs-testing – manual testing of libguestfs, you can help!"
 ---
 
-<h2 class="name">NAME</h2>
 <p> guestfs-testing &#8211; manual testing of libguestfs, you can help! </p>
 <h2>DESCRIPTION</h2>
 <p> This page has manual tests you can try on libguestfs. Everyone has a slightly different combination of platform, hardware and guests, so this testing is very valuable. Thanks for helping out! </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "scandeps(1)"
 name: "scandeps"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-scandeps/"
 description: "scandeps.pl – Scan file prerequisites"
 ---
 
-<h2 class="name">NAME</h2>
 <p> scandeps.pl &#8211; Scan file prerequisites </p>
 <h2>SYNOPSIS</h2>
 <pre>

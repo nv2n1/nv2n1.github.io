@@ -1,4 +1,5 @@
 ---
+
 title: "euare-rolegetattributes(1)"
 name: "euare-rolegetattributes"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-rolegetattributes/"
 description: "euare-rolegetattributes – Display a role’s ARN, GUID, and trust policy"
 ---
 
-<h2>NAME</h2>
 <p> euare-rolegetattributes &#8211; Display a role&#8217;s ARN, GUID, and trust policy</p>
 <h2>SYNOPSIS</h2>
 <p> euare-rolegetattributes [&#8211;as-account ACCOUNT] [-U URL]</p>

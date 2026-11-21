@@ -1,4 +1,5 @@
 ---
+
 title: "cpg_finalize(3)"
 name: "cpg_finalize"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cpg_finalize/"
 description: "cpg_finalize – Terminate a connection to the CPG service"
 ---
 
-<h2>NAME</h2>
 <p> cpg_finalize &#8211; Terminate a connection to the CPG service</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cpg.h&gt;</code> </p>

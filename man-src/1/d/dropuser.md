@@ -1,4 +1,5 @@
 ---
+
 title: "dropuser(1)"
 name: "dropuser"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dropuser/"
 description: "dropuser – remove a PostgreSQL user account"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dropuser &#8211; remove a PostgreSQL user account </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "src2man(1)"
 name: "src2man"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-src2man/"
 description: "src2man – extract man pages from source files."
 ---
 
-<h2>NAME</h2>
 <p> <code>src2man </code>&#8211; extract man pages from source files.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

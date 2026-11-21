@@ -1,4 +1,5 @@
 ---
+
 title: "euare-accountgetpolicy(1)"
 name: "euare-accountgetpolicy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-accountgetpolicy/"
 description: "euare-accountgetpolicy – [Eucalyptus cloud admin only] Display an account’s policy"
 ---
 
-<h2>NAME</h2>
 <p> euare-accountgetpolicy &#8211; [Eucalyptus cloud admin only] Display an account&#8217;s policy</p>
 <h2>SYNOPSIS</h2>
 <p> euare-accountgetpolicy <code>-p</code> POLICY [&#8211;pretty-print] [-U URL]</p>

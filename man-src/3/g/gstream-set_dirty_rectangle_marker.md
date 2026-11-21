@@ -1,4 +1,5 @@
 ---
+
 title: "gstream-set_dirty_rectangle_marker(3)"
 name: "gstream-set_dirty_rectangle_marker"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gstream-set_dirty_rectangle_marker/"
 description: "set_dirty_rectangle_marker"
 ---
 
-<h2>NAME</h2>
 <p> set_dirty_rectangle_marker</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gstream.h">gstream.h</a>&gt;</code> </p>

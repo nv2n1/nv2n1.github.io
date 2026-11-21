@@ -1,4 +1,5 @@
 ---
+
 title: "valgrind(1)"
 name: "valgrind"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-valgrind/"
 description: "valgrind – a suite of tools for debugging and profiling programs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> valgrind &#8211; a suite of tools for debugging and profiling programs </p>
 <h2>SYNOPSIS</h2>
 <dl>

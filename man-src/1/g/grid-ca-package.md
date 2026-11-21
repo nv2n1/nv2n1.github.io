@@ -1,4 +1,5 @@
 ---
+
 title: "grid-ca-package(1)"
 name: "grid-ca-package"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grid-ca-package/"
 description: "grid-ca-package – Prepare a CA certificate, configuration, and policy for distribution"
 ---
 
-<h2 class="name">NAME</h2>
 <p> grid-ca-package &#8211; Prepare a CA certificate, configuration, and policy for distribution </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grid-ca-sign</code> [-ca <i>HASH</i>] [-g] [-b] [-r] [-d] </p>

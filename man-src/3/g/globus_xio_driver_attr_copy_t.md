@@ -1,4 +1,5 @@
 ---
+
 title: "globus_xio_driver_attr_copy_t(3)"
 name: "globus_xio_driver_attr_copy_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_xio_driver_attr_copy_t/"
 description: "Globus XIO Driver –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Globus XIO Driver &#8211; </p>
 <h3>Modules</h3>
 <p> <code>Driver Programming: String options</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "robohdrs(1)"
 name: "robohdrs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-robohdrs/"
 description: "robohdrs – insert ROBODoc headers to source code."
 ---
 
-<h2>NAME</h2>
 <p> robohdrs &#8211; insert ROBODoc headers to source code.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>robohdrs</code> <code>[options]</code> &lt;source file&gt; </p>

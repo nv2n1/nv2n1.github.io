@@ -1,4 +1,5 @@
 ---
+
 title: "tex2aspc(1)"
 name: "tex2aspc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tex2aspc/"
 description: "tex2aspc – converts conventional MusiXTeX scores to .aspc format for processing by"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tex2aspc &#8211; converts conventional MusiXTeX scores to .aspc format for processing by <code></p>
 <p> <a href="/docs/linux/man/1-autosp/">autosp</a></code>(1). </p>
 <h2>SYNOPSIS</h2>

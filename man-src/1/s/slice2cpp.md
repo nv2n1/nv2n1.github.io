@@ -1,4 +1,5 @@
 ---
+
 title: "slice2cpp(1)"
 name: "slice2cpp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-slice2cpp/"
 description: "slice2cpp – The Slice to C++ compiler."
 ---
 
-<h2 class="name">NAME</h2>
 <p> slice2cpp &#8211; The Slice to C++ compiler.</p>
 <h2>SYNOPSIS</h2>
 <p> slice2cpp [options] [files] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc_topology_diff_apply(3)"
 name: "hwloc_topology_diff_apply"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hwloc_topology_diff_apply/"
 description: "hwlocality_diff – Topology differences"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hwlocality_diff &#8211; Topology differences </p>
 <h3>Data Structures</h3>
 <p> union <code>hwloc_topology_diff_obj_attr_u</code> </p>

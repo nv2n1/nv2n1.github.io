@@ -1,4 +1,5 @@
 ---
+
 title: "pmdaweblog(1)"
 name: "pmdaweblog"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdaweblog/"
 description: "pmdaweblog – performance metrics domain agent (PMDA) for Web server logs"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdaweblog</code> &#8211; performance metrics domain agent (PMDA) for Web server logs</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/weblog/pmdaweblog</code> [<code>-Cp</code>] [<code>-d</code> <i>domain</i>] [<code>-h</code> <i>helpfile</i>] [<code>-i</code> <i>port</i>] [<code>-l</code> <i>logfile</i>] [<code>-n</code> <i>idlesec</i>] [<code>-S</code> <i>num</i>] [<code>-t</code> <i>delay</i>] [<code>-u</code> <i>socket</i>] [<code>-U</code> <i>username</i>] <i>configfile</i></p>

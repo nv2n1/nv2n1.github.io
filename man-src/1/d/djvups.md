@@ -1,4 +1,5 @@
 ---
+
 title: "djvups(1)"
 name: "djvups"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-djvups/"
 description: "djvups – Convert DjVu documents to PostScript."
 ---
 
-<h2>NAME</h2>
 <p> djvups &#8211; Convert DjVu documents to PostScript. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>djvups [</code><i>options</i><code>] [</code><i>djvufile</i><code>] [</code><i>outputfile</i><code>]</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "attr_remove(3)"
 name: "attr_remove"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-attr_remove/"
 description: "attr_remove, attr_removef – remove a user attribute of a filesystem object"
 ---
 
-<h2>NAME</h2>
 <p> attr_remove, attr_removef &#8211; remove a user attribute of a filesystem object</p>
 <h2>C SYNOPSIS</h2>
 <pre><code>

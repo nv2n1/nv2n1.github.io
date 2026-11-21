@@ -1,4 +1,5 @@
 ---
+
 title: "systemd-ask-password(1)"
 name: "systemd-ask-password"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-systemd-ask-password/"
 description: "systemd-ask-password – Query the user for a system password"
 ---
 
-<h2 class="name">NAME</h2>
 <p> systemd-ask-password &#8211; Query the user for a system password </p>
 <h2>SYNOPSIS</h2>
 <dl>

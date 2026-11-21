@@ -1,4 +1,5 @@
 ---
+
 title: "pshortcut(1)"
 name: "pshortcut"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pshortcut/"
 description: "pshortcut – create a shortcut"
 ---
 
-<h2>NAME</h2>
 <p> pshortcut &#8211; create a shortcut </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pshortcut</code> [-d <i>LEVEL</i>] [-p <i>DEVNAME</i>] [-h] <i>SHORTCUT</i> <i>TARGET</i> </p>

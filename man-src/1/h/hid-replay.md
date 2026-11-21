@@ -1,4 +1,5 @@
 ---
+
 title: "hid-replay(1)"
 name: "hid-replay"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hid-replay/"
 description: "hid-replay – HID Input device replay through uhid."
 ---
 
-<h2 class="name">NAME</h2>
 <p> hid-replay &#8211; HID Input device replay through uhid. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>hid-replay</code> [OPTIONS] [FILENAME]</p>

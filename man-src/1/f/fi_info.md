@@ -1,4 +1,5 @@
 ---
+
 title: "fi_info(1)"
 name: "fi_info"
 section: "1"
@@ -6,12 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-fi_info/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- fi_info - Simple utility to query for fabric interfaces 
+fi_info - Simple utility to query for fabric interfaces 
 
 <h2>SYNOPSIS</h2>
 

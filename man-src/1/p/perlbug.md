@@ -1,4 +1,5 @@
 ---
+
 title: "perlbug(1)"
 name: "perlbug"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlbug/"
 description: "perlbug – how to submit bug reports on Perl"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perlbug &#8211; how to submit bug reports on Perl </p>
 <h2>SYNOPSIS</h2>
 <p> <code>perlbug</code> </p>

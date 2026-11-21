@@ -1,4 +1,5 @@
 ---
+
 title: "dla_gerfsx_extended(3)"
 name: "dla_gerfsx_extended"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dla_gerfsx_extended/"
 description: "dla_gerfsx_extended.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dla_gerfsx_extended.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

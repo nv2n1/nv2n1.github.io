@@ -1,4 +1,5 @@
 ---
+
 title: "lmtptest(1)"
 name: "lmtptest"
 section: "1"
@@ -8,7 +9,7 @@ description: "lmtptest – interactive LMTP test program"
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2 class="name">NAME</h2>
+
 <p> lmtptest &#8211; interactive LMTP test program </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lmtptest</code> [ <code>-t</code> <i>keyfile</i> ] [ <code>-p</code> <i>port</i> ] [ <code>-m</code> <i>mechanism</i> ] </p>

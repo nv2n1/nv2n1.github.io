@@ -1,4 +1,5 @@
 ---
+
 title: "postqueue(1)"
 name: "postqueue"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-postqueue/"
 description: "postqueue – Postfix queue control"
 ---
 
-<h2 class="name">NAME</h2>
 <p> postqueue &#8211; Postfix queue control </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

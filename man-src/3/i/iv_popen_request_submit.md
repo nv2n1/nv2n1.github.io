@@ -1,4 +1,5 @@
 ---
+
 title: "iv_popen_request_submit(3)"
 name: "iv_popen_request_submit"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-iv_popen_request_submit/"
 description: "IV_POPEN_REQUEST_INIT, iv_popen_request_submit, iv_popen_request_close – popen(3) for ivykis applications"
 ---
 
-<h2>NAME</h2>
 <p> IV_POPEN_REQUEST_INIT, iv_popen_request_submit, iv_popen_request_close &#8211; <code><a href="/docs/linux/man/3-popen/">popen</a></code>(3) for ivykis applications</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;iv_popen.h&gt;</code> </p>

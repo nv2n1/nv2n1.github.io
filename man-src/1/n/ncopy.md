@@ -1,4 +1,5 @@
 ---
+
 title: "ncopy(1)"
 name: "ncopy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ncopy/"
 description: "ncopy – NetWare file copy"
 ---
 
-<h2>NAME</h2>
 <p> ncopy &#8211; NetWare file copy </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ncopy -V</code> </p>

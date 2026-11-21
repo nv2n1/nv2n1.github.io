@@ -1,4 +1,5 @@
 ---
+
 title: "mtpaint(1)"
 name: "mtpaint"
 section: "1"
@@ -6,9 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-mtpaint/"
 ---
 
-<h2>NAME</h2>
-
- mtpaint - A pixel based painting program
+mtpaint - A pixel based painting program
 
 <h2>SYNOPSIS</h2>
 

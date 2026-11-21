@@ -1,4 +1,5 @@
 ---
+
 title: "netatalk-config(1)"
 name: "netatalk-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-netatalk-config/"
 description: "netatalk-config – script to get information about the installed version of netatalk"
 ---
 
-<h2 class="name">NAME</h2>
 <p> netatalk-config &#8211; script to get information about the installed version of netatalk </p>
 <h2>SYNOPSIS</h2>
 <dl>

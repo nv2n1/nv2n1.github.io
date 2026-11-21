@@ -1,4 +1,5 @@
 ---
+
 title: "pmlogconf(1)"
 name: "pmlogconf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmlogconf/"
 description: "pmlogconf – create/edit a pmlogger configuration file"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmlogconf</code> &#8211; create/edit a pmlogger configuration file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmlogconf</code> [<code>-cqrv</code>] [<code>-d</code><i> groupsdir</i>] [<code>-h</code><i> hostname</i>] <i>configfile</i></p>

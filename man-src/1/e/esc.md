@@ -1,4 +1,5 @@
 ---
+
 title: "esc(1)"
 name: "esc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-esc/"
 description: "esc – Minimal Command-Line Interface for Smart Card Manager."
 ---
 
-<h2 class="name">NAME</h2>
 <p> esc &#8211; Minimal Command-Line Interface for Smart Card Manager.</p>
 <h2>SYNOPSIS</h2>
 <p> esc [options] </p>

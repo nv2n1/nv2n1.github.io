@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_pkt_tsig_sign(3)"
 name: "ldns_pkt_tsig_sign"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_pkt_tsig_sign/"
 description: "ldns_pkt_tsig_verify, ldns_pkt_tsig_sign"
 ---
 
-<h2>NAME</h2>
 <p> ldns_pkt_tsig_verify, ldns_pkt_tsig_sign </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

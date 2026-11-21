@@ -1,4 +1,5 @@
 ---
+
 title: "g_dih(1)"
 name: "g_dih"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_dih/"
 description: "g_dih – analyzes dihedral transitions"
 ---
 
-<h2>NAME</h2>
 <p> g_dih &#8211; analyzes dihedral transitions </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "tv_merge(1)"
 name: "tv_merge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tv_merge/"
 description: "tv_merge – Merge (combine) two XMLTV files."
 ---
 
-<h2 class="name">NAME</h2>
 <p> tv_merge &#8211; Merge (combine) two XMLTV files. </p>
 <h2>SYNOPSIS</h2>
 <p> tv_merge -i <font SIZE="-1">FILE</font> -m <font SIZE="-1">FILE</font> -o <font SIZE="-1">FILE</font></p>

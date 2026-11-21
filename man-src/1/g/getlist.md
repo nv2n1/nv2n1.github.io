@@ -1,4 +1,5 @@
 ---
+
 title: "getlist(1)"
 name: "getlist"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-getlist/"
 description: "getlist – Get a list from an NNTP server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getlist &#8211; Get a list from an NNTP server </p>
 <h2>SYNOPSIS</h2>
 <p> <code>getlist</code> [<code>-AR</code>] [<code>-h</code> <i>host</i>] [<code>-p</code> <i>port</i>] [<i>list</i> [<i>pattern</i> [<i>types</i>]]]</p>

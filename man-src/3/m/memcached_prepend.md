@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_prepend(3)"
 name: "memcached_prepend"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memcached_prepend/"
 description: "memcached_prepend – Appending to or Prepending to data on the server"
 ---
 
-<h2>NAME</h2>
 <p> memcached_prepend &#8211; Appending to or Prepending to data on the server </p>
 <p> Appending or Prepending to data on the server</p>
 <h2>SYNOPSIS</h2>

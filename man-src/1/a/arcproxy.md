@@ -1,4 +1,5 @@
 ---
+
 title: "arcproxy(1)"
 name: "arcproxy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-arcproxy/"
 description: "arcproxy – ARC Credentials Proxy generation utility"
 ---
 
-<h2>NAME</h2>
 <p> arcproxy &#8211; ARC Credentials Proxy generation utility</p>
 <h2>SYNOPSIS</h2>
 <p> <code>arcproxy</code> [<i>OPTION</i>]</p>

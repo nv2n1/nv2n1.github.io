@@ -1,4 +1,5 @@
 ---
+
 title: "gtk3-demo(1)"
 name: "gtk3-demo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gtk3-demo/"
 description: "gtk3-demo – Demonstrate GTK+ widgets"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gtk3-demo &#8211; Demonstrate GTK+ widgets </p>
 <h2>SYNOPSIS</h2>
 <dl>

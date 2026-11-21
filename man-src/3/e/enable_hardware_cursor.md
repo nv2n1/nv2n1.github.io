@@ -1,4 +1,5 @@
 ---
+
 title: "enable_hardware_cursor(3)"
 name: "enable_hardware_cursor"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-enable_hardware_cursor/"
 description: "enable_hardware_cursor – Enables the OS hardware cursor. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> enable_hardware_cursor &#8211; Enables the OS hardware cursor. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

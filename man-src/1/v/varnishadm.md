@@ -1,4 +1,5 @@
 ---
+
 title: "varnishadm(1)"
 name: "varnishadm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-varnishadm/"
 description: "varnishadm – Control a running Varnish instance"
 ---
 
-<h2>NAME</h2>
 <p> varnishadm &#8211; Control a running Varnish instance</p>
 <h2>SYNOPSIS</h2>
 <p> varnishadm [-t timeout] [-S secret_file] [-T address:port] [-n name] [command [&#8230;]]</p>

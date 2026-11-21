@@ -1,4 +1,5 @@
 ---
+
 title: "clahqr(3)"
 name: "clahqr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clahqr/"
 description: "clahqr.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> clahqr.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

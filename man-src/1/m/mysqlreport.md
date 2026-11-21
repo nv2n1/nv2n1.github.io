@@ -1,4 +1,5 @@
 ---
+
 title: "mysqlreport(1)"
 name: "mysqlreport"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysqlreport/"
 description: "mysqlreport – Makes a friendly report of important MySQL status values"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysqlreport &#8211; Makes a friendly report of important MySQL status values </p>
 <h2>SYNTAX</h2>
 <p> mysqlreport [<i>options</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "getdirentries(3)"
 name: "getdirentries"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getdirentries/"
 description: "getdirentries – get directory entries in a filesystem-independent format"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getdirentries &#8211; get directory entries in a filesystem-independent format </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;dirent.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "euca-disassociate-address(1)"
 name: "euca-disassociate-address"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-disassociate-address/"
 description: "euca-disassociate-address – Disassociate an elastic IP address from an instance"
 ---
 
-<h2>NAME</h2>
 <p> euca-disassociate-address &#8211; Disassociate an elastic IP address from an instance</p>
 <h2>SYNOPSIS</h2>
 <p> euca-disassociate-address [-a ASSOC] [&#8211;show-empty-fields] [-U URL]</p>

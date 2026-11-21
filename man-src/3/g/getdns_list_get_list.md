@@ -1,4 +1,5 @@
 ---
+
 title: "getdns_list_get_list(3)"
 name: "getdns_list_get_list"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getdns_list_get_list/"
 description: "getdns_list_get, getdns_list_get_bindata, getdns_list_get_data_type, getdns_list_get_dict, getdns_list_get_length, getdns_list_get_list, getdns_list_get_int — get a value by index from a getdns list"
 ---
 
-<h2>NAME</h2>
 <p> <code>getdns_list_get, </code> <code>getdns_list_get_bindata, </code> <code>getdns_list_get_data_type, </code> <code>getdns_list_get_dict, </code> <code>getdns_list_get_length,</code> <code>getdns_list_get_list, </code> <code>getdns_list_get_int</code> &#8212; get a value by index from a getdns list </p>
 <h2>LIBRARY</h2>
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>

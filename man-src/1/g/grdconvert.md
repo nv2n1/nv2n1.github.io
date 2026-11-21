@@ -1,4 +1,5 @@
 ---
+
 title: "grdconvert(1)"
 name: "grdconvert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grdconvert/"
 description: "grdconvert – Convert between different grid formats"
 ---
 
-<h2>NAME</h2>
 <p> grdconvert &#8211; Convert between different grid formats</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grdconvert</code> <i>ingrdfile</i>[<i>=id</i>[<i>/scale/offset</i>[<i>/NaNvalue</i>]]] <i>outgrdfile</i>[<i>=id</i>[<i>/scale/offset</i>[<i>/NaNvalue</i>]][<i>:driver</i>[<i>/datatype</i>]]] [ ] [ <i>region</i> ] [ [<i>level</i>] ] [ <code>-f</code><i>&lt;flags&gt;</i> ] </p>

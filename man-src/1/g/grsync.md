@@ -1,4 +1,5 @@
 ---
+
 title: "grsync(1)"
 name: "grsync"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grsync/"
 description: "GRSYNC – GTK+ frontend for rsync"
 ---
 
-<h2 class="name">NAME</h2>
 <p> GRSYNC &#8211; GTK+ frontend for rsync</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grsync [-e] [-s] [session_name]</code> </p>

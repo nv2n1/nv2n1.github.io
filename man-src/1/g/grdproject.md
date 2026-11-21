@@ -1,4 +1,5 @@
 ---
+
 title: "grdproject(1)"
 name: "grdproject"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grdproject/"
 description: "grdproject – Forward and inverse map transformation of grids"
 ---
 
-<h2>NAME</h2>
 <p> grdproject &#8211; Forward and inverse map transformation of grids</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grdproject</code> <i>in_grdfile</i> <i>out_grdfile</i> <i>parameters</i> [ [<i>dx/dy</i>] ] [ <i>xinc</i>[<i>unit</i>][<code>=</code>|<code>+</code>][/<i>yinc</i>[<i>unit</i>][<code>=</code>|<code>+</code>]] ] [ <i>dpi</i> ] [ [<code>c|i|p|e|f|k|M|n|u</code>] ] [ ] [ <code>c</code>|<code>i</code>|<code>p</code> ] [ <i>region</i> ] [ [<i>level</i>] ] [ <code>-n</code><i>&lt;flags&gt;</i> ] [ <code>-r</code> ] </p>

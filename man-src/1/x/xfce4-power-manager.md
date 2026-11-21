@@ -1,4 +1,5 @@
 ---
+
 title: "xfce4-power-manager(1)"
 name: "xfce4-power-manager"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xfce4-power-manager/"
 description: "xfce4-power-manager – The Xfce 4 Power manager"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xfce4-power-manager &#8211; The Xfce 4 Power manager</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xfce4-power-manager</code> <i>[options]</i> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "install-tl(1)"
 name: "install-tl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-install-tl/"
 description: "install-tl – TeX Live cross-platform installer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> install-tl &#8211; TeX Live cross-platform installer </p>
 <h2>SYNOPSIS</h2>
 <p> install-tl [<i>option</i>]&#8230; </p>

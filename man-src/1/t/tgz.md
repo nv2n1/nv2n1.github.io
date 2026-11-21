@@ -1,4 +1,5 @@
 ---
+
 title: "tgz(1)"
 name: "tgz"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tgz/"
 description: "tgz – makes a gzip’d tar archive"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tgz &#8211; makes a gzip&#8217;d tar archive </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tgz</code> [ <i>destination</i> [ <i>source &#8230;</i> ] ]</p>

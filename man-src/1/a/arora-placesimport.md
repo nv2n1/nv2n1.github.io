@@ -1,4 +1,5 @@
 ---
+
 title: "arora-placesimport(1)"
 name: "arora-placesimport"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-arora-placesimport/"
 description: "arora-placesimport – a tool for importing browser history from Firefox 3 and up"
 ---
 
-<h2 class="name">NAME</h2>
 <p> arora-placesimport &#8211; a tool for importing browser history from Firefox 3 and up</p>
 <h2>SYNOPSIS</h2>
 <p> <code>arora-placesinfo ~/.mozilla/firefox/[profile-dir]/places.sqlite</code> </p>

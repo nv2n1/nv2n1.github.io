@@ -1,4 +1,5 @@
 ---
+
 title: "obchiral(1)"
 name: "obchiral"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-obchiral/"
 description: "obchiral – print molecular chirality information"
 ---
 
-<h2>NAME</h2>
 <p> <code>obchiral</code> &#8211; print molecular chirality information</p>
 <h2>SYNOPSIS</h2>
 <p> <i>filename</i></p>

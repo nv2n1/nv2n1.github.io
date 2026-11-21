@@ -1,4 +1,5 @@
 ---
+
 title: "klist(1)"
 name: "klist"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-klist/"
 description: "klist – list cached Kerberos tickets"
 ---
 
-<h2>NAME</h2>
 <p> klist &#8211; list cached Kerberos tickets</p>
 <h2>SYNOPSIS</h2>
 <p> <code>klist</code> [<code>-e</code>] [[<code>-c</code>] [<code>-l</code>] [<code>-A</code>] [<code>-f</code>] [<code>-s</code>] [<code>-a</code> [<code>-n</code>]]] [<code>-C</code>] [<code>-k</code> [<code>-t</code>] [<code>-K</code>]] [<code>-V</code>] [<i>cache_name</i>|<i>keytab_name</i>]</p>

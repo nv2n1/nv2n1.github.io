@@ -1,4 +1,5 @@
 ---
+
 title: "aa_autoinit(3)"
 name: "aa_autoinit"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_autoinit/"
 description: "aa_autoinit – easy to use AA-lib initialization function."
 ---
 
-<h2>NAME</h2>
 <p> aa_autoinit &#8211; easy to use AA-lib initialization function.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

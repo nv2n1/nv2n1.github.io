@@ -1,4 +1,5 @@
 ---
+
 title: "globus_ftp_client_exists(3)"
 name: "globus_ftp_client_exists"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_ftp_client_exists/"
 description: "FTP Operations –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> FTP Operations &#8211; </p>
 <h3>Typedefs</h3>
 <p> typedef void(* <code>globus_ftp_client_complete_callback_t</code> )(void *user_arg, <code>globus_ftp_client_handle_t</code> *handle, globus_object_t *error) </p>

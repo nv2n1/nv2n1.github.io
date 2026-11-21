@@ -1,4 +1,5 @@
 ---
+
 title: "msp430-gprof(1)"
 name: "msp430-gprof"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-msp430-gprof/"
 description: "gprof – display call graph profile data"
 ---
 
-<h2>NAME</h2>
 <p> gprof &#8211; display call graph profile data</p>
 <h2>SYNOPSIS</h2>
 <p> gprof [ -[abcDhilLrsTvwxyz] ] [ -[ACeEfFJnNOpPqQZ][<i>name</i>] ]<br />

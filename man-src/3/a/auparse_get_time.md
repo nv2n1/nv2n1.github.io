@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_get_time(3)"
 name: "auparse_get_time"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_get_time/"
 description: "auparse_get_time – get event’s time"
 ---
 
-<h2>NAME</h2>
 <p> auparse_get_time &#8211; get event&#8217;s time</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

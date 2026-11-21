@@ -1,4 +1,5 @@
 ---
+
 title: "euca-replace-route-table-association(1)"
 name: "euca-replace-route-table-association"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-replace-route-table-association/"
 description: "euca-replace-route-table-association – Change the route table associated with a VPC subnet"
 ---
 
-<h2>NAME</h2>
 <p> euca-replace-route-table-association &#8211; Change the route table associated with a VPC subnet</p>
 <h2>SYNOPSIS</h2>
 <p> euca-replace-route-table-association <code>-r</code> RTABLE [&#8211;show-empty-fields]</p>

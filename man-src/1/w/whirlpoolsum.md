@@ -1,4 +1,5 @@
 ---
+
 title: "whirlpoolsum(1)"
 name: "whirlpoolsum"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-whirlpoolsum/"
 description: "whirlpoolsum – compute and check WHIRLPOOL message digest"
 ---
 
-<h2>NAME</h2>
 <p> whirlpoolsum &#8211; compute and check WHIRLPOOL message digest</p>
 <h2>SYNOPSIS</h2>
 <p> <code>whirlpoolsum</code> [<i>OPTION</i>]&#8230; [<i>FILE</i>]&#8230;</p>

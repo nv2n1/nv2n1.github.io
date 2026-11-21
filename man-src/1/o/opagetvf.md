@@ -1,4 +1,5 @@
 ---
+
 title: "opagetvf(1)"
 name: "opagetvf"
 section: "1"
@@ -6,9 +7,7 @@ letter: "o"
 url: "/docs/linux/man/1-opagetvf/"
 ---
 
-<h2>NAME</h2>
-
- opagetvf 
+opagetvf 
 
  
 

@@ -1,4 +1,5 @@
 ---
+
 title: "euca-create-network-acl-entry(1)"
 name: "euca-create-network-acl-entry"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-create-network-acl-entry/"
 description: "euca-create-network-acl-entry – Create a new entry in a VPC network ACL"
 ---
 
-<h2>NAME</h2>
 <p> euca-create-network-acl-entry &#8211; Create a new entry in a VPC network ACL</p>
 <h2>SYNOPSIS</h2>
 <p> euca-create-network-acl-entry <code>-n</code> INT (<code>&#8211;allow</code> | <code>&#8211;deny</code>) <code>-r</code> CIDR</p>

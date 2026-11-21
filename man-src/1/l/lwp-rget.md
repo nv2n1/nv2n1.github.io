@@ -1,4 +1,5 @@
 ---
+
 title: "lwp-rget(1)"
 name: "lwp-rget"
 section: "1"
@@ -6,10 +7,7 @@ letter: "l"
 url: "/docs/linux/man/1-lwp-rget/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- lwp-rget - Retrieve web documents recursively 
+lwp-rget - Retrieve web documents recursively 
 
 <h2>SYNOPSIS</h2>
 

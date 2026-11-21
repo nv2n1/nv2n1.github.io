@@ -1,4 +1,5 @@
 ---
+
 title: "nsend(1)"
 name: "nsend"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nsend/"
 description: "nsend – Send messages to users or groups"
 ---
 
-<h2>NAME</h2>
 <p> nsend &#8211; Send messages to users or groups</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nsend</code> [ <code>-h</code> ] [ <code>-S</code> <i>server</i> ] [ <code>-U</code> <i>user name</i> ] [ <code>-P</code> <i>password</i> | <code>-n</code> ] [ <code>-C</code> ] [ <code>-a</code> ] <code>-i</code> <i>objectID</i> | <code>-c</code> <i>connNum</i>[,<i>&#8230;</i>] | { [ <code>-t</code> <i>recipient type</i> ] <code>-o</code> <i>recipient name</i> | <i>recipient name</i> } <i>message</i> </p>

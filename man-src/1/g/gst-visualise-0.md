@@ -1,4 +1,5 @@
 ---
+
 title: "gst-visualise-0(1)"
 name: "gst-visualise-0"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gst-visualise-0/"
 description: "gst-visualise – Run a GStreamer pipeline to display an audio visualisation"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gst-visualise &#8211; Run a GStreamer pipeline to display an audio visualisation </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gst-visualise</code> <i>[visualiser]</i></p>

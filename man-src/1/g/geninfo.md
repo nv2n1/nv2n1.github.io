@@ -1,4 +1,5 @@
 ---
+
 title: "geninfo(1)"
 name: "geninfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-geninfo/"
 description: "geninfo – Generate tracefiles from .da files"
 ---
 
-<h2>NAME</h2>
 <p> geninfo &#8211; Generate tracefiles from .da files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>geninfo</code> [<code>-h</code>|<code>&#8211;help</code>] [<code>-v</code>|<code>&#8211;version</code>] [<code>-q</code>|<code>&#8211;quiet</code>] </p>

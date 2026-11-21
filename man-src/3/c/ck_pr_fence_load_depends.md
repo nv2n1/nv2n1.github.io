@@ -1,4 +1,5 @@
 ---
+
 title: "ck_pr_fence_load_depends(3)"
 name: "ck_pr_fence_load_depends"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_pr_fence_load_depends/"
 description: "ck_pr_fence_load_depends – data dependency barrier"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_pr_fence_load_depends</code> &#8211; data dependency barrier</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

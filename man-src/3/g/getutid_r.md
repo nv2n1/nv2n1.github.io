@@ -1,4 +1,5 @@
 ---
+
 title: "getutid_r(3)"
 name: "getutid_r"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getutid_r/"
 description: "getutent, getutid, getutline, pututline, setutent, endutent, utmpname – access utmp file entries"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getutent, getutid, getutline, pututline, setutent, endutent, utmpname &#8211; access utmp file entries </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;utmp.h&gt;</code> </p>

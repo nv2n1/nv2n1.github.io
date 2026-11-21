@@ -1,4 +1,5 @@
 ---
+
 title: "find_allegro_resource(3)"
 name: "find_allegro_resource"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-find_allegro_resource/"
 description: "find_allegro_resource – Searches for a support file in many places. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> find_allegro_resource &#8211; Searches for a support file in many places. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

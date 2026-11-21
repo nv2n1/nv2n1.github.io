@@ -1,4 +1,5 @@
 ---
+
 title: "ck_hs_count(3)"
 name: "ck_hs_count"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_hs_count/"
 description: "ck_hs_count – returns number of entries in hash set"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_hs_count</code> &#8211; returns number of entries in hash set</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

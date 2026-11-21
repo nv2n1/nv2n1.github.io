@@ -1,4 +1,5 @@
 ---
+
 title: "hwlocality_linux_libnuma_ulongs(3)"
 name: "hwlocality_linux_libnuma_ulongs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hwlocality_linux_libnuma_ulongs/"
 description: "hwlocality_linux_libnuma_ulongs – Interoperability with Linux libnuma unsigned long masks"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hwlocality_linux_libnuma_ulongs &#8211; Interoperability with Linux libnuma unsigned long masks </p>
 <h3>Functions</h3>
 <p> static int <code>hwloc_cpuset_to_linux_libnuma_ulongs</code> (<code>hwloc_topology_t</code> topology, <code>hwloc_const_cpuset_t</code> cpuset, unsigned long *mask, unsigned long *maxnode) </p>

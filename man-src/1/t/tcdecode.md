@@ -1,4 +1,5 @@
 ---
+
 title: "tcdecode(1)"
 name: "tcdecode"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tcdecode/"
 description: "tcdecode – read multimedia streams from medium, decode to raw format and print to standard output"
 ---
 
-<h2>NAME</h2>
 <p> tcdecode &#8211; read multimedia streams from medium, decode to raw format and print to standard output</p>
 <h2>SYNOPSIS</h2>
 <dl>

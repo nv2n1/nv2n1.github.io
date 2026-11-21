@@ -1,4 +1,5 @@
 ---
+
 title: "libhavege(3)"
 name: "libhavege"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libhavege/"
 description: "libhavege, havege_create, havege_run, havege_rng, havege_destroy, havege_status, havege_status_dump, havege_version – haveged RNG"
 ---
 
-<h2>NAME</h2>
 <p> libhavege, havege_create, havege_run, havege_rng, havege_destroy, havege_status, havege_status_dump, havege_version &#8211; haveged RNG</p>
 <h2>SYNOPSIS</h2>
 <dl>

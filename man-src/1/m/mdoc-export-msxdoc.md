@@ -1,4 +1,5 @@
 ---
+
 title: "mdoc-export-msxdoc(1)"
 name: "mdoc-export-msxdoc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mdoc-export-msxdoc/"
 description: "mdoc export-msxdoc – Convert mdoc(5) XML to Microsoft XML Documentation"
 ---
 
-<h2>NAME</h2>
 <p> mdoc export-msxdoc &#8211; Convert <code><a href="/docs/linux/man/5-mdoc/">mdoc</a></code>(5) XML to Microsoft XML Documentation</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mdoc export-msxdoc</code> [OPTION]* DIRECTORIES</p>

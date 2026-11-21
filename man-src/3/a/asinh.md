@@ -1,4 +1,5 @@
 ---
+
 title: "asinh(3)"
 name: "asinh"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-asinh/"
 description: "asinh, asinhf, asinhl – inverse hyperbolic sine function"
 ---
 
-<h2 class="name">NAME</h2>
 <p> asinh, asinhf, asinhl &#8211; inverse hyperbolic sine function </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

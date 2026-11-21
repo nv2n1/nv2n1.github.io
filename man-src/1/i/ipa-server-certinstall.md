@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-server-certinstall(1)"
 name: "ipa-server-certinstall"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-server-certinstall/"
 description: "ipa-server-certinstall – Install new SSL server certificates"
 ---
 
-<h2>NAME</h2>
 <p> ipa-server-certinstall &#8211; Install new SSL server certificates</p>
 <h2>SYNOPSIS</h2>
 <p> ipa-server-certinstall [<i>OPTION</i>]&#8230; FILE&#8230;</p>

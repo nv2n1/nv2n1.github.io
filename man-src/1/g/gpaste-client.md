@@ -1,4 +1,5 @@
 ---
+
 title: "gpaste-client(1)"
 name: "gpaste-client"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpaste-client/"
 description: "GPaste – A lightweight clipboard manager for the Gnome desktop"
 ---
 
-<h2>NAME</h2>
 <p> GPaste &#8211; A lightweight clipboard manager for the Gnome desktop </p>
 <h2>SYNOPSIS</h2>
 <p> <code>[command |] gpaste-client [options&#8230;]</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "make_method(1)"
 name: "make_method"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-make_method/"
 description: "make_method – Turn Perl code into an XML description for RPC::XML::Server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> make_method &#8211; Turn Perl code into an XML description for RPC::XML::Server </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

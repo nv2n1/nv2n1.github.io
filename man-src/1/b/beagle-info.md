@@ -1,4 +1,5 @@
 ---
+
 title: "beagle-info(1)"
 name: "beagle-info"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-beagle-info/"
 description: "beagle-info"
 ---
 
-<h2>NAME</h2>
 <p> beagle-info</p>
 <h2>SYNOPSIS</h2>
 <p> <code>beagle-info</code> [<i>options</i>]</p>

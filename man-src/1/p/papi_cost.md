@@ -1,4 +1,5 @@
 ---
+
 title: "papi_cost(1)"
 name: "papi_cost"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-papi_cost/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- papi_cost - papi_cost utility. 
+papi_cost - papi_cost utility. 
 
  file cost.c 
 

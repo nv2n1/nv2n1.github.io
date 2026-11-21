@@ -1,4 +1,5 @@
 ---
+
 title: "euca-delete-route-table(1)"
 name: "euca-delete-route-table"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-delete-route-table/"
 description: "euca-delete-route-table – Delete a VPC route table"
 ---
 
-<h2>NAME</h2>
 <p> euca-delete-route-table &#8211; Delete a VPC route table</p>
 <h2>SYNOPSIS</h2>
 <p> euca-delete-route-table [&#8211;show-empty-fields] [-U URL]</p>

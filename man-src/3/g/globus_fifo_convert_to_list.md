@@ -1,4 +1,5 @@
 ---
+
 title: "globus_fifo_convert_to_list(3)"
 name: "globus_fifo_convert_to_list"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_fifo_convert_to_list/"
 description: "FIFO Queue –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> FIFO Queue &#8211; </p>
 <p> FIFO Queue Implementation.</p>
 <h3>Typedefs</h3>

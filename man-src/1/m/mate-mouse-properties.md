@@ -1,4 +1,5 @@
 ---
+
 title: "mate-mouse-properties(1)"
 name: "mate-mouse-properties"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-mouse-properties/"
 description: "mate-mouse-properties – configure MATE mouse preferences"
 ---
 
-<h2>NAME</h2>
 <p> <code>mate-mouse-properties </code>&#8211; configure MATE mouse preferences</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-mouse-properties</code> [&#8211;get-legacy]</p>

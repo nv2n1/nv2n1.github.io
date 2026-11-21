@@ -1,4 +1,5 @@
 ---
+
 title: "shtool-rotate(1)"
 name: "shtool-rotate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-shtool-rotate/"
 description: "shtool rotate – GNU shtool log file rotation"
 ---
 
-<h2 class="name">NAME</h2>
 <p> shtool rotate &#8211; GNU shtool log file rotation </p>
 <h2>SYNOPSIS</h2>
 <p> <code>shtool rotate</code> [<code>-v</code>|<code>&#8211;verbose</code>] [<code>-t</code>|<code>&#8211;trace</code>] [<code>-f</code>|<code>&#8211;force</code>] [<code>-n</code>|<code>&#8211;num-files</code> <i>count</i>] [<code>-s</code>|<code>&#8211;size</code> <i>size</i>] [<code>-c</code>|<code>&#8211;copy</code>] [<code>-r</code>|<code>&#8211;remove</code>] [<code>-a</code>|<code>&#8211;archive-dir</code> <i>dir</i>] [<code>-z</code>|<code>&#8211;compress</code> [<i>tool</i>:]<i>level</i>] [<code>-b</code>|<code>&#8211;background</code>] [<code>-d</code>|<code>&#8211;delay</code>] [<code>-p</code>|<code>&#8211;pad</code> <i>len</i>] [<code>-m</code>|<code>&#8211;mode</code> <i>mode</i>] [<code>-o</code>|<code>&#8211;owner</code> <i>owner</i>] [<code>-g</code>|<code>&#8211;group</code> <i>group</i>] [<code>-M</code>|<code>&#8211;migrate</code> <i>cmd</i>] [<code>-P</code>|<code>&#8211;prolog</code> <i>cmd</i>] [<code>-E</code>|<code>&#8211;epilog</code> <i>cmd</i>] <i>file</i> [<i>file</i> &#8230;]</p>

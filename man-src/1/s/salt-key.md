@@ -1,4 +1,5 @@
 ---
+
 title: "salt-key(1)"
 name: "salt-key"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-salt-key/"
 description: "salt-key – salt-key Documentation"
 ---
 
-<h2>NAME</h2>
 <p> salt-key &#8211; salt-key Documentation</p>
 <h2>SYNOPSIS</h2>
 <pre>

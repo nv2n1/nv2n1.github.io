@@ -1,4 +1,5 @@
 ---
+
 title: "findcon(1)"
 name: "findcon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-findcon/"
 description: "findcon – SELinux file context search tool"
 ---
 
-<h2>NAME</h2>
 <p> findcon &#8211; SELinux file context search tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>findcon</code> FCLIST [OPTIONS] [EXPRESSION]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cweb(1)"
 name: "cweb"
 section: "1"
@@ -6,12 +7,7 @@ letter: "c"
 url: "/docs/linux/man/1-cweb/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- ctangle, cweave - translate CWEB to C/C++ and/or TeX 
+ctangle, cweave - translate CWEB to C/C++ and/or TeX 
 
 <h2>SYNOPSIS</h2>
 

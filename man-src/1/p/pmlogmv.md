@@ -1,4 +1,5 @@
 ---
+
 title: "pmlogmv(1)"
 name: "pmlogmv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmlogmv/"
 description: "pmlogmv – move (rename) Performance Co-Pilot archive files"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmlogmv</code> &#8211; move (rename) Performance Co-Pilot archive files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmlogmv</code> [<i>-NV</i>] <i>oldname</i> <i>newname</i></p>

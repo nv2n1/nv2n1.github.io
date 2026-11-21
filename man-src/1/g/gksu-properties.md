@@ -1,4 +1,5 @@
 ---
+
 title: "gksu-properties(1)"
 name: "gksu-properties"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gksu-properties/"
 description: "gksu-properties – Configure the behaviour of gksu"
 ---
 
-<h2>NAME</h2>
 <p> gksu-properties &#8211; Configure the behaviour of gksu </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gksu-properties </code> </p>

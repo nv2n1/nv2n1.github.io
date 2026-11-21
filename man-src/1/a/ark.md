@@ -1,4 +1,5 @@
 ---
+
 title: "ark(1)"
 name: "ark"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ark/"
 description: "ark – KDE archiving tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ark &#8211; KDE archiving tool </p>
 <h2>SYNOPSIS</h2>
 <dl>

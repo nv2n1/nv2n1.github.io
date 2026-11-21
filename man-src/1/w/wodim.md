@@ -1,4 +1,5 @@
 ---
+
 title: "wodim(1)"
 name: "wodim"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wodim/"
 description: "wodim – write data to optical disk media"
 ---
 
-<h2>NAME</h2>
 <p> wodim &#8211; write data to optical disk media</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wodim</code> [<i>options</i>] <i>track1</i>&#8230;<i>trackn</i></p>

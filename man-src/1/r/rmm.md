@@ -1,4 +1,5 @@
 ---
+
 title: "rmm(1)"
 name: "rmm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rmm/"
 description: "rmm – remove messages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rmm &#8211; remove messages </p>
 <h2>SYNOPSIS</h2>
 <dl>

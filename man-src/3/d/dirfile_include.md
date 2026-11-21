@@ -1,4 +1,5 @@
 ---
+
 title: "dirfile_include(3)"
 name: "dirfile_include"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dirfile_include/"
 description: "dirfile_include — add a format file fragment to a dirfile"
 ---
 
-<h2>NAME</h2>
 <p> dirfile_include &#8212; add a format file fragment to a dirfile</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

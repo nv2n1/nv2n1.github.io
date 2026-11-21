@@ -1,4 +1,5 @@
 ---
+
 title: "baroneadesiwhaleyengine(3)"
 name: "baroneadesiwhaleyengine"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-baroneadesiwhaleyengine/"
 description: "ql/pricingengines/vanilla/baroneadesiwhaleyengine.hpp – Barone-Adesi and Whaley approximation engine."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/pricingengines/vanilla/baroneadesiwhaleyengine.hpp &#8211; Barone-Adesi and Whaley approximation engine. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/vanillaoption.hpp&gt;<br />

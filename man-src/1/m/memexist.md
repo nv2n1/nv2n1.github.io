@@ -1,4 +1,5 @@
 ---
+
 title: "memexist(1)"
 name: "memexist"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-memexist/"
 description: "memexist – libmemcached Documentation"
 ---
 
-<h2>NAME</h2>
 <p> memexist &#8211; libmemcached Documentation</p>
 <h2>SYNOPSIS</h2>
 <p> memexist [options] [key]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "get_entry_type(3)"
 name: "get_entry_type"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_entry_type/"
 description: "get_entry_type — retrieve the type of a dirfile field"
 ---
 
-<h2>NAME</h2>
 <p> get_entry_type &#8212; retrieve the type of a dirfile field</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pamsharpmap(1)"
 name: "pamsharpmap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamsharpmap/"
 description: "pamsharpmap – create map of sharpness in a PNM/PAM image"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamsharpmap &#8211; create map of sharpness in a PNM/PAM image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamsharpmap</code> [<i>imagefile</i>] </p>

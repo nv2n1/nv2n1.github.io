@@ -1,4 +1,5 @@
 ---
+
 title: "riemann-client(1)"
 name: "riemann-client"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-riemann-client/"
 description: "riemann-client – Riemann communication tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>riemann-client</code> &#8211; Riemann communication tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>riemann-client</code> <code>query</code> [<i>OPTIONS</i>&#8230;] <i>QUERY</i> [<i>HOST</i>] [<i>PORT</i>]<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "perldsc(1)"
 name: "perldsc"
 section: "1"
@@ -6,7 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perldsc/"
 description: "perldsc – Perl Data Structures Cookbook"
 ---
-<h2 class="name">NAME</h2>
+
 <p> perldsc - Perl Data Structures Cookbook </p>
 <h2>DESCRIPTION</h2>
 <p> Perl lets us have complex data structures. You can write something like this and all of a sudden, you&#8217;d have an array with three dimensions! </p>

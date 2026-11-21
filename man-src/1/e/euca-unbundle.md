@@ -1,4 +1,5 @@
 ---
+
 title: "euca-unbundle(1)"
 name: "euca-unbundle"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-unbundle/"
 description: "euca-unbundle – Recreate an image from its bundled parts"
 ---
 
-<h2>NAME</h2>
 <p> euca-unbundle &#8211; Recreate an image from its bundled parts</p>
 <h2>SYNOPSIS</h2>
 <p> euca-unbundle <code>-m</code> FILE [-s DIR] [-d DIR] [-k FILE]</p>

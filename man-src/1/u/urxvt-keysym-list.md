@@ -1,4 +1,5 @@
 ---
+
 title: "urxvt-keysym-list(1)"
 name: "urxvt-keysym-list"
 section: "1"
@@ -6,10 +7,7 @@ letter: "u"
 url: "/docs/linux/man/1-urxvt-keysym-list/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- keysym-list - implement the &quot;list&quot; keysym expansion. 
+keysym-list - implement the &quot;list&quot; keysym expansion. 
 
 <h2>SYNOPSIS</h2>
 

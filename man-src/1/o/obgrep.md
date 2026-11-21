@@ -1,4 +1,5 @@
 ---
+
 title: "obgrep(1)"
 name: "obgrep"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-obgrep/"
 description: "obgrep – an advanced molecular search program using SMARTS"
 ---
 
-<h2>NAME</h2>
 <p> <code>obgrep</code> &#8211; an advanced molecular search program using SMARTS</p>
 <h2>SYNOPSIS</h2>
 <p> [<i>OPTIONS</i> ] <i>&#8216;SMARTS-pattern&#8217; </i> <i>filename</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dasdseq(1)"
 name: "dasdseq"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dasdseq/"
 description: "dasdseq – Hercules DSORG=PS retrieval command"
 ---
 
-<h2>NAME</h2>
 <p> <code>dasdseq</code> &#8211; Hercules DSORG=PS retrieval command </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dasdseq</code> [options&#8230;] <code>image </code>[sf=shadow] <code>filespec</code><br />

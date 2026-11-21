@@ -1,4 +1,5 @@
 ---
+
 title: "ab(1)"
 name: "ab"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ab/"
 description: "ab – Apache HTTP server benchmarking tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ab &#8211; Apache HTTP server benchmarking tool</p>
 <h2>SYNOPSIS</h2>
 <p>&nbsp; </p>

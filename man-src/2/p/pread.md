@@ -1,4 +1,5 @@
 ---
+
 title: "pread(2)"
 name: "pread"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-pread/"
 description: "pread, pwrite – read from or write to a file descriptor at a given offset"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pread, pwrite &#8211; read from or write to a file descriptor at a given offset </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>

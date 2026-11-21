@@ -1,4 +1,5 @@
 ---
+
 title: "globus_callout_call_type(3)"
 name: "globus_callout_call_type"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_callout_call_type/"
 description: "Callout Invocation –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Callout Invocation &#8211; </p>
 <p> Invoke callouts.</p>
 <h3>Typedefs</h3>

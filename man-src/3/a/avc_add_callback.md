@@ -1,4 +1,5 @@
 ---
+
 title: "avc_add_callback(3)"
 name: "avc_add_callback"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-avc_add_callback/"
 description: "avc_add_callback – additional event notification for SELinux userspace object managers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> avc_add_callback &#8211; additional event notification for SELinux userspace object managers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/selinux.h&gt;</code><br />

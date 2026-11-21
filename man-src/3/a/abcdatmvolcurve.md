@@ -1,4 +1,5 @@
 ---
+
 title: "abcdatmvolcurve(3)"
 name: "abcdatmvolcurve"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-abcdatmvolcurve/"
 description: "ql/experimental/volatility/abcdatmvolcurve.hpp – Abcd-interpolated at-the-money (no-smile) interest rate vol curve."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/experimental/volatility/abcdatmvolcurve.hpp &#8211; Abcd-interpolated at-the-money (no-smile) interest rate vol curve. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/experimental/volatility/blackatmvolcurve.hpp&gt;<br />

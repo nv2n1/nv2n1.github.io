@@ -1,4 +1,5 @@
 ---
+
 title: "gpsd_nmea(1)"
 name: "gpsd_nmea"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpsd_nmea/"
 description: "gpsd_nmea.sh – switches your gpsd to NMEA mode"
 ---
 
-<h2>NAME</h2>
 <p> gpsd_nmea.sh &#8211; switches your gpsd to NMEA mode</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gpsdrive [options]</code> </p>

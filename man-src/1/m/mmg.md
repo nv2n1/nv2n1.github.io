@@ -1,4 +1,5 @@
 ---
+
 title: "mmg(1)"
 name: "mmg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mmg/"
 description: "mmg – a GUI for"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mmg &#8211; a GUI for <code></p>
 <p><a href="/docs/linux/man/1-mkvmerge/">mkvmerge</a></code>(1) including a chapter and a header editor</p>
 <h2>SYNOPSIS</h2>

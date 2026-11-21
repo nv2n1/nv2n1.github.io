@@ -1,4 +1,5 @@
 ---
+
 title: "perldelta(1)"
 name: "perldelta"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perldelta/"
 description: "perldelta – what is new for perl v5.30.0"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perldelta &#8211; what is new for perl v5.30.0 </p>
 <h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.28.0 release and the 5.30.0 release. </p>

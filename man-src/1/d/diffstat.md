@@ -1,4 +1,5 @@
 ---
+
 title: "diffstat(1)"
 name: "diffstat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-diffstat/"
 description: "diffstat – make histogram from diff-output"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>diffstat</code> &#8211; make histogram from diff-output </p>
 <h2>SYNOPSIS</h2>
 <p> <code>diffstat</code><i> [options] [file-specifications]</i></p>

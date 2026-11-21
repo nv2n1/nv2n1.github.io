@@ -1,4 +1,5 @@
 ---
+
 title: "pktopbm(1)"
 name: "pktopbm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pktopbm/"
 description: "pktopbm – convert packed (PK) format font into PBM"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pktopbm &#8211; convert packed (PK) format font into PBM</p>
 <h2>SYNOPSIS</h2>
 <p> pktopbm pkfile[.pk] [ -x width ] [ -y height ] [-c num] pbmfile &#8230; </p>

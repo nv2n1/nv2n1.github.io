@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_next_field(3)"
 name: "auparse_next_field"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_next_field/"
 description: "auparse_next_field – move field cursor"
 ---
 
-<h2>NAME</h2>
 <p> auparse_next_field &#8211; move field cursor</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

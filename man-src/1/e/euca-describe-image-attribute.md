@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-image-attribute(1)"
 name: "euca-describe-image-attribute"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-describe-image-attribute/"
 description: "euca-describe-image-attribute – Show information about an attribute of an image"
 ---
 
-<h2>NAME</h2>
 <p> euca-describe-image-attribute &#8211; Show information about an attribute of an image</p>
 <h2>SYNOPSIS</h2>
 <p> euca-describe-image-attribute</p>

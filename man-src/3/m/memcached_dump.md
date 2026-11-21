@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_dump(3)"
 name: "memcached_dump"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memcached_dump/"
 description: "memcached_dump – libmemcached Documentation"
 ---
 
-<h2>NAME</h2>
 <p> memcached_dump &#8211; libmemcached Documentation </p>
 <p> Get a list of keys found on memcached servers</p>
 <h2>SYNOPSIS</h2>

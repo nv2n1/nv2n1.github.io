@@ -1,4 +1,5 @@
 ---
+
 title: "snmpbulkwalk(1)"
 name: "snmpbulkwalk"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-snmpbulkwalk/"
 description: "snmpbulkwalk – retrieve a subtree of management values using SNMP GETBULK requests"
 ---
 
-<h2>NAME</h2>
 <p> snmpbulkwalk &#8211; retrieve a subtree of management values using SNMP GETBULK requests</p>
 <h2>SYNOPSIS</h2>
 <p> <code>snmpbulkwalk</code> [APPLICATION OPTIONS] [COMMON OPTIONS] AGENT [OID]</p>

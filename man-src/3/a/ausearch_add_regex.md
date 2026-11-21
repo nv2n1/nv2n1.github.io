@@ -1,4 +1,5 @@
 ---
+
 title: "ausearch_add_regex(3)"
 name: "ausearch_add_regex"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ausearch_add_regex/"
 description: "ausearch_add_regex – use regular expression search rule"
 ---
 
-<h2>NAME</h2>
 <p> ausearch_add_regex &#8211; use regular expression search rule</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

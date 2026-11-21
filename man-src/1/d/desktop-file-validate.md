@@ -1,4 +1,5 @@
 ---
+
 title: "desktop-file-validate(1)"
 name: "desktop-file-validate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-desktop-file-validate/"
 description: "desktop-file-validate – Validate desktop entry files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> desktop-file-validate &#8211; Validate desktop entry files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>desktop-file-validate [&#8211;no-hints] [&#8211;no-warn-deprecated] [&#8211;warn-kde] FILE&#8230;</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_certificate_set_x509_key_mem(3)"
 name: "gnutls_certificate_set_x509_key_mem"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_certificate_set_x509_key_mem/"
 description: "gnutls_certificate_set_x509_key_mem – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_certificate_set_x509_key_mem &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

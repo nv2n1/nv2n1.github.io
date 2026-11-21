@@ -1,4 +1,5 @@
 ---
+
 title: "grdinfo(1)"
 name: "grdinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grdinfo/"
 description: "grdinfo – Extract information from grids"
 ---
 
-<h2>NAME</h2>
 <p> grdinfo &#8211; Extract information from grids</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grdinfo</code> <i>grdfiles</i> [ ] [ ] [ [<i>dx</i>[/<i>dy</i>]|<code>r</code>|<code>b</code>] ] [ [<code>0</code>|<code>1</code>|<code>2</code>] ] [ ] [ <i>region</i> ] [ [<code>s</code>]<i>dz</i> ] [ [<i>level</i>] ] [ <code>-f</code><i>&lt;flags&gt;</i> ] </p>

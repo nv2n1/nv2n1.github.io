@@ -1,4 +1,5 @@
 ---
+
 title: "whisper-merge(1)"
 name: "whisper-merge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-whisper-merge/"
 description: "whisper-merge – merge two whisper database files"
 ---
 
-<h2>NAME</h2>
 <p> whisper-merge &#8211; merge two whisper database files</p>
 <h2>SYNOPSYS</h2>
 <pre>

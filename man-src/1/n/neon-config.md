@@ -1,4 +1,5 @@
 ---
+
 title: "neon-config(1)"
 name: "neon-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-neon-config/"
 description: "neon-config – script providing information about installed copy of neon library"
 ---
 
-<h2 class="name">NAME</h2>
 <p> neon-config &#8211; script providing information about installed copy of neon library </p>
 <h2>SYNOPSIS</h2>
 <dl>

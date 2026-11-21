@@ -1,4 +1,5 @@
 ---
+
 title: "clamscan(1)"
 name: "clamscan"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-clamscan/"
 description: "clamscan – scan files and directories for viruses"
 ---
 
-<h2>NAME</h2>
 <p> clamscan &#8211; scan files and directories for viruses</p>
 <h2>SYNOPSIS</h2>
 <p> clamscan [options] [file/directory/-]</p>

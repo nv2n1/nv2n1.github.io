@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_ia_allocate_server_credentials(3)"
 name: "gnutls_ia_allocate_server_credentials"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_ia_allocate_server_credentials/"
 description: "gnutls_ia_allocate_server_credentials – Used to allocate an gnutls_ia_server_credentials_t structure"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_ia_allocate_server_credentials &#8211; Used to allocate an gnutls_ia_server_credentials_t structure</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/extra.h">gnutls/extra.h</a>&gt;</code> </p>

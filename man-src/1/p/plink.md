@@ -1,4 +1,5 @@
 ---
+
 title: "plink(1)"
 name: "plink"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-plink/"
 description: "plink – PuTTY link, command line network connection tool"
 ---
 
-<h2>NAME</h2>
 <p> <code>plink</code> &#8211; PuTTY link, command line network connection tool</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

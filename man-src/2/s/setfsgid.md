@@ -1,4 +1,5 @@
 ---
+
 title: "setfsgid(2)"
 name: "setfsgid"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-setfsgid/"
 description: "setfsgid – set group identity used for filesystem checks"
 ---
 
-<h2 class="name">NAME</h2>
 <p> setfsgid &#8211; set group identity used for filesystem checks </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/fsuid.h&gt;</code> </p>

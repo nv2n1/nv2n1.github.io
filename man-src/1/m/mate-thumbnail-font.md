@@ -1,4 +1,5 @@
 ---
+
 title: "mate-thumbnail-font(1)"
 name: "mate-thumbnail-font"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-thumbnail-font/"
 description: "mate-thumbnail-font – configure MATE network proxy"
 ---
 
-<h2>NAME</h2>
 <p> mate-thumbnail-font &#8211; configure MATE network proxy</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-thumbnail-font</code> [<i>-h</i>|<i>-t &lt;TEXT&gt; -s &lt;SIZE&gt;</i>] <i>&lt;FONT_FILE&gt; &lt;OUTPUT_FILE&gt;</i></p>

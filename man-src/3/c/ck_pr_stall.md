@@ -1,4 +1,5 @@
 ---
+
 title: "ck_pr_stall(3)"
 name: "ck_pr_stall"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_pr_stall/"
 description: "ck_pr_stall – busy-wait primitive"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_pr_stall</code> &#8211; busy-wait primitive</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

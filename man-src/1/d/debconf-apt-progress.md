@@ -1,4 +1,5 @@
 ---
+
 title: "debconf-apt-progress(1)"
 name: "debconf-apt-progress"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-debconf-apt-progress/"
 description: "debconf-apt-progress – install packages using debconf to display a progress bar"
 ---
 
-<h2 class="name">NAME</h2>
 <p> debconf-apt-progress &#8211; install packages using debconf to display a progress bar </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

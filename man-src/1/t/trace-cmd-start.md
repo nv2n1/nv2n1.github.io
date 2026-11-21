@@ -1,4 +1,5 @@
 ---
+
 title: "trace-cmd-start(1)"
 name: "trace-cmd-start"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-trace-cmd-start/"
 description: "trace-cmd-start – start the Ftrace Linux kernel tracer without recording"
 ---
 
-<h2 class="name">NAME</h2>
 <p> trace-cmd-start &#8211; start the Ftrace Linux kernel tracer without recording </p>
 <h2>SYNOPSIS</h2>
 <p> <code>trace-cmd start</code> [<i>OPTIONS</i>]</p>

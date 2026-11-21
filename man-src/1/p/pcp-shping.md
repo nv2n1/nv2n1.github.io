@@ -1,4 +1,5 @@
 ---
+
 title: "pcp-shping(1)"
 name: "pcp-shping"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pcp-shping/"
 description: "pcp-shping – report on shell service availability and response"
 ---
 
-<h2>NAME</h2>
 <p> <code>pcp-shping</code> &#8211; report on shell service availability and response</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pcp shping</code> [<code>-cl</code>] <i>tag</i> &#8230;</p>

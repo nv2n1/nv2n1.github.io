@@ -1,4 +1,5 @@
 ---
+
 title: "ctan-o-mat(1)"
 name: "ctan-o-mat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ctan-o-mat/"
 description: "ctan-o-mat – Validate and upload a package for CTAN"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ctan-o-mat &#8211; Validate and upload a package for CTAN </p>
 <h2>SYNOPSIS</h2>
 <p> ctan-o-mat [options] [&lt;package configuration&gt;]</p>

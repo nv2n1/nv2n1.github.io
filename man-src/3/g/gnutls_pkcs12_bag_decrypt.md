@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pkcs12_bag_decrypt(3)"
 name: "gnutls_pkcs12_bag_decrypt"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_pkcs12_bag_decrypt/"
 description: "gnutls_pkcs12_bag_decrypt – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_pkcs12_bag_decrypt &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs12.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pkgdata(1)"
 name: "pkgdata"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pkgdata/"
 description: "pkgdata – package data for use by ICU"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>pkgdata</code> &#8211; package data for use by ICU </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pkgdata</code> [ <code>-h</code>, <code>-?</code>, <code>&#8211;help</code> ] [ <code>-v</code>, <code>&#8211;verbose</code> ] [ <code>-c</code>, <code>&#8211;copyright</code> | <code>-C</code>, <code>&#8211;comment</code><i> comment</i> ] [ <code>-m</code>, <code>&#8211;mode</code><i> mode</i> ] <code>-p</code>, <code>&#8211;name</code><i> name</i> <code>-O</code>, <code>&#8211;bldopt</code><i> options</i> [ <code>-e</code>, <code>&#8211;entrypoint</code><i> name</i> ] [ <code>-r</code>, <code>&#8211;revision</code><i> version</i> ] [ <code>-F</code>, <code>&#8211;rebuild</code> ] [ <code>-I</code>, <code>&#8211;install</code> ] [ <code>-s</code>, <code>&#8211;sourcedir</code><i> source</i> ] [ <code>-d</code>, <code>&#8211;destdir</code><i> destination</i> ] [ <code>-T</code>, <code>&#8211;tempdir</code><i> directory</i> ] [ <i>file</i> &#8230; ]</p>

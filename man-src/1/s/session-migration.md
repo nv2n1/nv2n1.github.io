@@ -1,4 +1,5 @@
 ---
+
 title: "session-migration(1)"
 name: "session-migration"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-session-migration/"
 description: "session-migration – Migrate in user session settings."
 ---
 
-<h2 class="name">NAME</h2>
 <p> session-migration &#8211; Migrate in user session settings.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>session-migration</code> [<i>options</i>] </p>

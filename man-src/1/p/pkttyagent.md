@@ -1,4 +1,5 @@
 ---
+
 title: "pkttyagent(1)"
 name: "pkttyagent"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pkttyagent/"
 description: "pkttyagent – Textual authentication helper"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pkttyagent &#8211; Textual authentication helper </p>
 <h2>SYNOPSIS</h2>
 <dl>

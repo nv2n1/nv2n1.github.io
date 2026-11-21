@@ -1,4 +1,5 @@
 ---
+
 title: "boinc(1)"
 name: "boinc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-boinc/"
 description: "boinc – The BOINC client program."
 ---
 
-<h2>NAME</h2>
 <p> boinc &#8211; The BOINC client program.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>boinc</code> [<i>options</i>]</p>

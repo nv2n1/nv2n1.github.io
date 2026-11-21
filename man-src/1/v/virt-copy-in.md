@@ -1,4 +1,5 @@
 ---
+
 title: "virt-copy-in(1)"
 name: "virt-copy-in"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-virt-copy-in/"
 description: "virt-copy-in – Copy files and directories into a virtual machine disk image."
 ---
 
-<h2 class="name">NAME</h2>
 <p> virt-copy-in &#8211; Copy files and directories into a virtual machine disk image. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

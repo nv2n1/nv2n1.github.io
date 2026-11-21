@@ -1,4 +1,5 @@
 ---
+
 title: "fixtorad_r(3)"
 name: "fixtorad_r"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fixtorad_r/"
 description: "fixtorad_r – Constant to convert angles in fixed point format to radians. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> fixtorad_r &#8211; Constant to convert angles in fixed point format to radians. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

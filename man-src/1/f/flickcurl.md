@@ -1,4 +1,5 @@
 ---
+
 title: "flickcurl(1)"
 name: "flickcurl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flickcurl/"
 description: "flickcurl – call Flickr API"
 ---
 
-<h2>NAME</h2>
 <p> flickcurl &#8211; call Flickr API</p>
 <h2>SYNOPSIS</h2>
 <p> <code>flickcurl</code> <code>-a </code><i>FROB</i><br />

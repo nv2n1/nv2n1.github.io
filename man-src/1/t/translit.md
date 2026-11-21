@@ -1,4 +1,5 @@
 ---
+
 title: "translit(1)"
 name: "translit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-translit/"
 description: "translit – transliterate text between various writing systems"
 ---
 
-<h2 class="name">NAME</h2>
 <p> translit &#8211; transliterate text between various writing systems </p>
 <h2>SYNOPSIS</h2>
 <p> translit <code>-t</code> <i>name</i> <code>-r</code> <code>-i</code> <i>file</i> <code>-o</code> <i>file</i> -l -v -h</p>

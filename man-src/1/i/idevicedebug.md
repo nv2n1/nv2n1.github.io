@@ -1,4 +1,5 @@
 ---
+
 title: "idevicedebug(1)"
 name: "idevicedebug"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-idevicedebug/"
 description: "idevicedebug – Interact with the debugserver service of a device."
 ---
 
-<h2>NAME</h2>
 <p> idevicedebug &#8211; Interact with the debugserver service of a device.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>idevicedebug</code> [OPTIONS] COMMAND </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mpaste(1)"
 name: "mpaste"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mpaste/"
 description: "mpaste – command-line client for https://paste.mate-desktop.org"
 ---
 
-<h2>NAME</h2>
 <p> mpaste &#8211; command-line client for <a rel="nofollow" href="https://paste.mate-desktop.org">https://paste.mate-desktop.org</a></p>
 <h2>SYNOPSIS</h2>
 <p> <code>mpaste [&lt;OPTIONS&gt;] [&lt;INFILE&gt;]</code></p>

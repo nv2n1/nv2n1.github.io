@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-describe-auto-scaling-notification-types(1)"
 name: "euscale-describe-auto-scaling-notification-types"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euscale-describe-auto-scaling-notification-types/"
 description: "euscale-describe-auto-scaling-notification-types – List all notification types supported by the service"
 ---
 
-<h2>NAME</h2>
 <p> euscale-describe-auto-scaling-notification-types &#8211; List all notification types supported by the service</p>
 <h2>SYNOPSIS</h2>
 <p> euscale-describe-auto-scaling-notification-types [&#8211;show-empty-fields]</p>

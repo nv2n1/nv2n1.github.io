@@ -1,4 +1,5 @@
 ---
+
 title: "sipdialer(1)"
 name: "sipdialer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sipdialer/"
 description: "sipdialer – initiate phone call (click-to-call)"
 ---
 
-<h2>NAME</h2>
 <p> sipdialer &#8211; initiate phone call (click-to-call)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sipdialer URI</code></p>

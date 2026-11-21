@@ -1,4 +1,5 @@
 ---
+
 title: "scotch_gmtst(1)"
 name: "scotch_gmtst"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-scotch_gmtst/"
 description: "gmtst – compute statistics on mappings"
 ---
 
-<h2>NAME</h2>
 <p> <code>gmtst </code>&#8211; compute statistics on mappings</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

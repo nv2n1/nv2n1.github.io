@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gsi_cred_set_cert(3)"
 name: "globus_gsi_cred_set_cert"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gsi_cred_set_cert/"
 description: "Credential Handle Management –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Credential Handle Management &#8211; </p>
 <h3>Typedefs</h3>
 <p> typedef struct<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "mdb_dump(1)"
 name: "mdb_dump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mdb_dump/"
 description: "mdb_dump – LMDB environment export tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mdb_dump &#8211; LMDB environment export tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mdb_dump</code> [<code>-V</code>] [<code>-f</code><i>&nbsp;<wbr>file</i>] [<code>-l</code>] [<code>-n</code>] [<code>-p</code>] [<code>-a</code>&nbsp;<wbr>| <code>-s</code><i>&nbsp;<wbr>subdb</i>] <code>&nbsp;<wbr>envpath</code></p>

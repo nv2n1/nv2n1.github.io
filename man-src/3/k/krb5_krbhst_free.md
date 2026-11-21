@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_krbhst_free(3)"
 name: "krb5_krbhst_free"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_krbhst_free/"
 description: "krb5_krbhst_init krb5_krbhst_init_flags krb5_krbhst_next krb5_krbhst_next_as_string krb5_krbhst_reset krb5_krbhst_free krb5_krbhst_format_string krb5_krbhst_get_addrinfo – lookup Kerberos KDC hosts"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_krbhst_init</code> <code>krb5_krbhst_init_flags</code> <code>krb5_krbhst_next</code> <code>krb5_krbhst_next_as_string</code> <code>krb5_krbhst_reset</code> <code>krb5_krbhst_free</code> <code>krb5_krbhst_format_string</code> <code>krb5_krbhst_get_addrinfo</code> &#8211; lookup Kerberos KDC hosts </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>

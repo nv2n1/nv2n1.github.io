@@ -1,4 +1,5 @@
 ---
+
 title: "cgetrs(3)"
 name: "cgetrs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgetrs/"
 description: "cgetrs.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cgetrs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

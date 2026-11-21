@@ -1,4 +1,5 @@
 ---
+
 title: "pnmtopalm(1)"
 name: "pnmtopalm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnmtopalm/"
 description: "pnmtopalm – convert a portable anymap into a Palm pixmap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pnmtopalm &#8211; convert a portable anymap into a Palm pixmap</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmtopalm</code> [<code>-verbose</code>] [<code>-depth</code> <i>N</i>] [<code>-maxdepth</code> <i>N</i>] [<code>-colormap</code>] [<code>-transparent</code> <i>color</i>] [<code>-offset</code>]<br />

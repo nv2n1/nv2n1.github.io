@@ -1,4 +1,5 @@
 ---
+
 title: "showriff(1)"
 name: "showriff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-showriff/"
 description: "showriff – show structure of RIFF files (wav, avi, …)"
 ---
 
-<h2>NAME</h2>
 <p> showriff &#8211; show structure of RIFF files (wav, avi, &#8230;)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>showriff [ options ] filename</code></p>

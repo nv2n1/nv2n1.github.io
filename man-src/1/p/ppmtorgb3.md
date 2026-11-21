@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtorgb3(1)"
 name: "ppmtorgb3"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppmtorgb3/"
 description: "ppmtorgb3 – separate a portable pixmap into three portable graymaps"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ppmtorgb3 &#8211; separate a portable pixmap into three portable graymaps </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmtorgb3</code> [<i>ppmfile</i>]</p>

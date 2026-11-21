@@ -1,4 +1,5 @@
 ---
+
 title: "tsa2d32(1)"
 name: "tsa2d32"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tsa2d32/"
 description: "tsa2d32, tsd2a32, tsd2a – gcin’s Tsin tools"
 ---
 
-<h2>NAME</h2>
 <p> tsa2d32, tsd2a32, tsd2a &#8211; gcin&#8217;s Tsin tools</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tsa2d32</code><br />

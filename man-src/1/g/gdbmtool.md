@@ -1,4 +1,5 @@
 ---
+
 title: "gdbmtool(1)"
 name: "gdbmtool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gdbmtool/"
 description: "gdbmtool – examine and modify a GDBM database"
 ---
 
-<h2>NAME</h2>
 <p> gdbmtool &#8211; examine and modify a GDBM database</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gdbmtool</code> [<code>-lmNnqrs</code>] [<code>-b</code> <i>SIZE</i>] [<code>-c</code> <i>SIZE</i>]<br />

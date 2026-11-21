@@ -1,4 +1,5 @@
 ---
+
 title: "ccguess(1)"
 name: "ccguess"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ccguess/"
 description: "ccguess – search for ccrypt encryption keys"
 ---
 
-<h2>NAME</h2>
 <p> ccguess &#8211; search for ccrypt encryption keys</p>
 <h2>SYNOPSIS</h2>
 <pre>

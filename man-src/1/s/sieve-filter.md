@@ -1,4 +1,5 @@
 ---
+
 title: "sieve-filter(1)"
 name: "sieve-filter"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sieve-filter/"
 description: "sieve-filter – Pigeonhole’s Sieve mailbox filter tool"
 ---
 
-<h2>NAME</h2>
 <p> sieve-filter &#8211; Pigeonhole&#8217;s Sieve mailbox filter tool </p>
 <p> <code>WARNING: </code>This tool is still experimental. Read this manual carefully, and backup any important mail before using this tool. Also note that some of the features documented here are not actually implemented yet; this is clearly indicated where applicable.</p>
 <h2>SYNOPSIS</h2>

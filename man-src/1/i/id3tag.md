@@ -1,4 +1,5 @@
 ---
+
 title: "id3tag(1)"
 name: "id3tag"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-id3tag/"
 description: "id3tag – Tags an mp3 file with id3v1 and/or id3v2 tags."
 ---
 
-<h2>NAME</h2>
 <p> id3tag &#8211; Tags an mp3 file with id3v1 and/or id3v2 tags.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>id3tag</code> [ <i>OPTION</i> ]<code>&#8230;</code> [ <i>FILE</i> ]<code>&#8230;</code> </p>

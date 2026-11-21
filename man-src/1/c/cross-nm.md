@@ -1,4 +1,5 @@
 ---
+
 title: "cross-nm(1)"
 name: "cross-nm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cross-nm/"
 description: "nm – list symbols from object files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> nm &#8211; list symbols from object files </p>
 <h2>SYNOPSIS</h2>
 <p> nm [<code>-A</code>|<code>-o</code>|<code>&#8211;print-file-name</code>] [<code>-a</code>|<code>&#8211;debug-syms</code>]<br />

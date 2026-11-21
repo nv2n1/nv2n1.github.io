@@ -1,4 +1,5 @@
 ---
+
 title: "ansible-doc(1)"
 name: "ansible-doc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ansible-doc/"
 description: "ansible-doc – show documentation on Ansible modules"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ansible-doc &#8211; show documentation on Ansible modules </p>
 <h2>SYNOPSIS</h2>
 <p> ansible-doc [-M module_path] [-l] [-s] [module&#8230;]</p>

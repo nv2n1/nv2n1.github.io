@@ -1,4 +1,5 @@
 ---
+
 title: "mm3d(1)"
 name: "mm3d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mm3d/"
 description: "mm3d – Misfit Model 3D"
 ---
 
-<h2>NAME</h2>
 <p> mm3d &#8211; Misfit Model 3D</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mm3d</code> [<i>options</i>]<i> files</i>&#8230; </p>

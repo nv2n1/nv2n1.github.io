@@ -1,4 +1,5 @@
 ---
+
 title: "globaltime(1)"
 name: "globaltime"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-globaltime/"
 description: "globaltime – International multiclock timeconverter for the Xfce Desktop Environment. It is part of Orage"
 ---
 
-<h2 class="name">NAME</h2>
 <p> globaltime &#8211; International multiclock timeconverter for the Xfce Desktop Environment. It is part of Orage </p>
 <h2>SYNOPSIS</h2>
 <dl>

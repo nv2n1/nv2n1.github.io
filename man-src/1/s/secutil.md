@@ -1,4 +1,5 @@
 ---
+
 title: "secutil(1)"
 name: "secutil"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-secutil/"
 description: "secutil – Extract X.509 certificates and strongnames from assemblies."
 ---
 
-<h2>NAME</h2>
 <p> secutil &#8211; Extract X.509 certificates and strongnames from assemblies.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>secutil [options] filename</code></p>

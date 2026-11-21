@@ -1,4 +1,5 @@
 ---
+
 title: "i686-pc-mingw32-windres(1)"
 name: "i686-pc-mingw32-windres"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-i686-pc-mingw32-windres/"
 description: "windres – manipulate Windows resources."
 ---
 
-<h2 class="name">NAME</h2>
 <p> windres &#8211; manipulate Windows resources. </p>
 <h2>SYNOPSIS</h2>
 <p> windmc [options] input-file windres [options] [input-file] [output-file]</p>

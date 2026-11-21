@@ -1,4 +1,5 @@
 ---
+
 title: "euca-modify-instance-type(1)"
 name: "euca-modify-instance-type"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-modify-instance-type/"
 description: "euca-modify-instance-type – [Eucalyptus cloud admin only] Modify an instance type"
 ---
 
-<h2>NAME</h2>
 <p> euca-modify-instance-type &#8211; [Eucalyptus cloud admin only] Modify an instance type</p>
 <h2>SYNOPSIS</h2>
 <p> euca-modify-instance-type [-c COUNT] [-d GiB] [-m MiB] [-i COUNT]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pidwait(1)"
 name: "pidwait"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pidwait/"
 description: "pgrep, pkill, pidwait – look up, signal, or wait for processes based on name and other attributes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pgrep, pkill, pidwait &#8211; look up, signal, or wait for processes based on name and other attributes </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pgrep</code> [options] pattern<br />

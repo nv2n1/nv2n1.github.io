@@ -1,4 +1,5 @@
 ---
+
 title: "statgrab-make-mrtg-index(1)"
 name: "statgrab-make-mrtg-index"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-statgrab-make-mrtg-index/"
 description: "statgrab-make-mrtg-index – generates MRTG configuration"
 ---
 
-<h2>NAME</h2>
 <p> statgrab-make-mrtg-index &#8211; generates MRTG configuration</p>
 <h2>SYNOPSIS</h2>
 <p> <code>statgrab-make-mrtg-index</code> [OPTION]&#8230; [CONFIGFILE]&#8230;</p>

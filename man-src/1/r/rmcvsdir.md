@@ -1,4 +1,5 @@
 ---
+
 title: "rmcvsdir(1)"
 name: "rmcvsdir"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rmcvsdir/"
 description: "rmcvsdir – The Free Pascal CVS tree cleaner program."
 ---
 
-<h2>NAME</h2>
 <p> rmcvsdir &#8211; The Free Pascal CVS tree cleaner program. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rmcvsdir [options]</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "euare-accountaliascreate(1)"
 name: "euare-accountaliascreate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-accountaliascreate/"
 description: "euare-accountaliascreate – Create an alias for an account, a.k.a. an account name"
 ---
 
-<h2>NAME</h2>
 <p> euare-accountaliascreate &#8211; Create an alias for an account, a.k.a. an account name</p>
 <h2>SYNOPSIS</h2>
 <p> euare-accountaliascreate [&#8211;as-account ACCOUNT] [-U URL]</p>

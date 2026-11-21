@@ -1,4 +1,5 @@
 ---
+
 title: "traptoemail(1)"
 name: "traptoemail"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-traptoemail/"
 description: "traptoemail – snmptrapd handler script to convert snmp traps into emails"
 ---
 
-<h2>NAME</h2>
 <p> traptoemail &#8211; snmptrapd handler script to convert snmp traps into emails</p>
 <h2>SYNOPSIS</h2>
 <p> <code>traptoemail</code> [<i>-f FROM</i>] [<i>-s SMTPSERVER</i>] ADDRESSES</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-client-install(1)"
 name: "ipa-client-install"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-client-install/"
 description: "ipa-client-install – Configure an IPA client"
 ---
 
-<h2>NAME</h2>
 <p> ipa-client-install &#8211; Configure an IPA client</p>
 <h2>SYNOPSIS</h2>
 <p> ipa-client-install [<i>OPTION</i>]&#8230;</p>

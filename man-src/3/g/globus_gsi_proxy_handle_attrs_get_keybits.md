@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gsi_proxy_handle_attrs_get_keybits(3)"
 name: "globus_gsi_proxy_handle_attrs_get_keybits"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gsi_proxy_handle_attrs_get_keybits/"
 description: "Handle Attributes –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Handle Attributes &#8211; </p>
 <h3>Typedefs</h3>
 <p> typedef struct<br />

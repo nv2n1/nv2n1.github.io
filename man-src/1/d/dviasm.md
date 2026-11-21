@@ -1,4 +1,5 @@
 ---
+
 title: "dviasm(1)"
 name: "dviasm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dviasm/"
 description: "DVIasm – a TeX utility program for editing DVI files directly"
 ---
 
-<h2 class="name">NAME</h2>
 <p> DVIasm &#8211; a TeX utility program for editing DVI files directly </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dviasm</code> [&lt;<i>options</i>&gt;] &lt;<i>dvi_file</i>&gt;|&lt;<i>dvi_dump_file</i>&gt;</p>

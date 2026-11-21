@@ -1,4 +1,5 @@
 ---
+
 title: "votl_maketags(1)"
 name: "votl_maketags"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-votl_maketags/"
 description: "vo_maketags – build TAGS for vim outliner"
 ---
 
-<h2 class="name">NAME</h2>
 <p> vo_maketags &#8211; build TAGS for vim outliner </p>
 <h2>SYNOPSIS</h2>
 <p> <code>vo_maketags</code> [<i>filename</i>]</p>

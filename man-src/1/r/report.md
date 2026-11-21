@@ -1,4 +1,5 @@
 ---
+
 title: "report(1)"
 name: "report"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-report/"
 description: "report – uploads FILEs to specified ticket on TARGET."
 ---
 
-<h2 class="name">NAME</h2>
 <p> report &#8211; uploads FILEs to specified ticket on TARGET. </p>
 <h2>SYNOPSIS</h2>
 <p> <i>report</i> [-v] -T TARGET -t ID FILE&#8230;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "arp-scan(1)"
 name: "arp-scan"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-arp-scan/"
 description: "arp-scan – The ARP scanner"
 ---
 
-<h2 class="name">NAME</h2>
 <p> arp-scan &#8211; The ARP scanner </p>
 <h2>SYNOPSIS</h2>
 <p> <code>arp-scan</code> [<i>options</i>]<i> </i>[<i>hosts</i>&#8230;] </p>

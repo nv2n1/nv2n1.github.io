@@ -1,4 +1,5 @@
 ---
+
 title: "libgphoto2(3)"
 name: "libgphoto2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libgphoto2/"
 description: "libgphoto2 – cross-platform digital camera library"
 ---
 
-<h2 class="name">NAME</h2>
 <p> libgphoto2 &#8211; cross-platform digital camera library </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-describe-instance-health(1)"
 name: "eulb-describe-instance-health"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eulb-describe-instance-health/"
 description: "eulb-describe-instance-health – Show the state of instances registered with a load balancer"
 ---
 
-<h2>NAME</h2>
 <p> eulb-describe-instance-health &#8211; Show the state of instances registered with a load balancer</p>
 <h2>SYNOPSIS</h2>
 <p> eulb-describe-instance-health [&#8211;instances INSTANCE1,INSTANCE2,&#8230;]</p>

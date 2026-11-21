@@ -1,4 +1,5 @@
 ---
+
 title: "fbgs(1)"
 name: "fbgs"
 section: "1"
@@ -8,7 +9,7 @@ description: "fbgs – Poor man’s PostScript/pdf viewer for the linux framebuf
 ---
 
 <p>#</p>
-<h2 class="name">NAME</h2>
+
 <p> fbgs &#8211; Poor man&#8217;s PostScript/pdf viewer for the linux framebuffer console. # # </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fbgs</code><br />

@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-schlep(1)"
 name: "pilot-schlep"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot-schlep/"
 description: "pilot-schlep – Pack an arbitrary file and install it on your Palm or unpack a file from your Palm."
 ---
 
-<h2>NAME</h2>
 <p> pilot-schlep &#8211; Pack an arbitrary file and install it on your Palm or unpack a file from your Palm.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>

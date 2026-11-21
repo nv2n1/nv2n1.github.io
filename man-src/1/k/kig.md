@@ -1,4 +1,5 @@
 ---
+
 title: "kig(1)"
 name: "kig"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kig/"
 description: "kig – an interactive geometry program for KDE"
 ---
 
-<h2>NAME</h2>
 <p> kig &#8211; an interactive geometry program for KDE</p>
 <h2>SYNOPSIS</h2>
 <dl>

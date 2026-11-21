@@ -1,4 +1,5 @@
 ---
+
 title: "cjdns-traceroute(1)"
 name: "cjdns-traceroute"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cjdns-traceroute/"
 description: "cjdns-traceroute — trace cjdns packet routing"
 ---
 
-<h2>NAME</h2>
 <p> <code>cjdns-traceroute</code> &#8212; trace cjdns packet routing</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cjdns-traceroute</code> &lt;host<i>or</i>ip&gt;</p>

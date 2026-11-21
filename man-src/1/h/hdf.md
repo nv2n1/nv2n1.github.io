@@ -1,4 +1,5 @@
 ---
+
 title: "hdf(1)"
 name: "hdf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hdf/"
 description: "hdf – Hierarchical Data Format library"
 ---
 
-<h2>NAME</h2>
 <p> hdf &#8211; Hierarchical Data Format library</p>
 <h2>SYNOPSIS</h2>
 <p> <code> -lmfhdf -ldf -ljpeg -lz [ -lsz ] </p>

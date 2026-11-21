@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-getram(1)"
 name: "pilot-getram"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot-getram/"
 description: "pilot-getram – Retrieves the RAM image from your Palm device for use in debugging."
 ---
 
-<h2>NAME</h2>
 <p> pilot-getram &#8211; Retrieves the RAM image from your Palm device for use in debugging.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Tools </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "saidar(1)"
 name: "saidar"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-saidar/"
 description: "saidar – a curses-based tool for viewing system statistics"
 ---
 
-<h2>NAME</h2>
 <p> saidar &#8211; a curses-based tool for viewing system statistics</p>
 <h2>SYNOPSIS</h2>
 <p> <code>saidar</code> [-d <i>delay</i>] [-c] [-v] [-h]</p>

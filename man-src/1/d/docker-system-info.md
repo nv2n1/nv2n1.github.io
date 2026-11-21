@@ -1,4 +1,5 @@
 ---
+
 title: "docker-system-info(1)"
 name: "docker-system-info"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-system-info/"
 description: "docker-system-info – Display system-wide information"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-system-info &#8211; Display system-wide information </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker system info [OPTIONS]</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "euare-servercertgetattributes(1)"
 name: "euare-servercertgetattributes"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-servercertgetattributes/"
 description: "euare-servercertgetattributes – Show the ARN and GUID of a server certificate"
 ---
 
-<h2>NAME</h2>
 <p> euare-servercertgetattributes &#8211; Show the ARN and GUID of a server certificate</p>
 <h2>SYNOPSIS</h2>
 <p> euare-servercertgetattributes [&#8211;as-account ACCOUNT] [-U URL]</p>

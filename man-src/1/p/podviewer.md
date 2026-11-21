@@ -1,4 +1,5 @@
 ---
+
 title: "podviewer(1)"
 name: "podviewer"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-podviewer/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- podviewer - a Gtk2-Perl POD Reading Program 
+podviewer - a Gtk2-Perl POD Reading Program 
 
 <h2>SYNOPSIS</h2>
 

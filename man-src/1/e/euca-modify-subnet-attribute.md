@@ -1,4 +1,5 @@
 ---
+
 title: "euca-modify-subnet-attribute(1)"
 name: "euca-modify-subnet-attribute"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-modify-subnet-attribute/"
 description: "euca-modify-subnet-attribute – Modify an attribute of a subnet"
 ---
 
-<h2>NAME</h2>
 <p> euca-modify-subnet-attribute &#8211; Modify an attribute of a subnet</p>
 <h2>SYNOPSIS</h2>
 <p> euca-modify-subnet-attribute <code>-m</code> (true|false) [&#8211;show-empty-fields]</p>

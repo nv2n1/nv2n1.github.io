@@ -1,4 +1,5 @@
 ---
+
 title: "elektra-key(3)"
 name: "elektra-key"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-elektra-key/"
 description: "Key :: Basic Methods –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Key :: Basic Methods &#8211; </p>
 <p> Key construction and initialization methods.</p>
 <h3>Functions</h3>

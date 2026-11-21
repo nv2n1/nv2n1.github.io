@@ -1,4 +1,5 @@
 ---
+
 title: "xdg-icon-resource(1)"
 name: "xdg-icon-resource"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xdg-icon-resource/"
 description: "xdg-icon-resource – command line tool for (un)installing icon resources"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xdg-icon-resource &#8211; command line tool for (un)installing icon resources </p>
 <h2>SYNOPSIS</h2>
 <dl>

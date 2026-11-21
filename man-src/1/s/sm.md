@@ -1,4 +1,5 @@
 ---
+
 title: "sm(1)"
 name: "sm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sm/"
 description: "sm – Command-line interface to the INN storage manager"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sm &#8211; Command-line interface to the INN storage manager </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sm</code> [<code>-cdHiqRrSs</code>] [<i>token</i> &#8230;]</p>

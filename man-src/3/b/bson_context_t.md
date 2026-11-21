@@ -1,4 +1,5 @@
 ---
+
 title: "bson_context_t(3)"
 name: "bson_context_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_context_t/"
 description: "bson_context_t – BSON OID Generation Context"
 ---
 
-<h2>NAME</h2>
 <p> bson_context_t &#8211; BSON OID Generation Context</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

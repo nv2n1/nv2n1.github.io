@@ -1,4 +1,5 @@
 ---
+
 title: "euare-userenablemfadevice(1)"
 name: "euare-userenablemfadevice"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-userenablemfadevice/"
 description: "euare-userenablemfadevice – Enable an MFA device"
 ---
 
-<h2>NAME</h2>
 <p> euare-userenablemfadevice &#8211; Enable an MFA device</p>
 <h2>SYNOPSIS</h2>
 <p> euare-userenablemfadevice <code>-s</code> SERIAL <code>-c1</code> CODE <code>-c2</code> CODE</p>

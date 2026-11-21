@@ -1,4 +1,5 @@
 ---
+
 title: "abicompat(1)"
 name: "abicompat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-abicompat/"
 description: "abicompat – check ABI compatibility"
 ---
 
-<h2>NAME</h2>
 <p> abicompat &#8211; check ABI compatibility </p>
 <p> abicompat checks that an application that links against a given shared library is still ABI compatible with a subsequent version of that library. If the new version of the library introduces an ABI incompatibility, then abicompat hints the user at what exactly that incompatibility is.</p>
 <h2>INVOCATION</h2>

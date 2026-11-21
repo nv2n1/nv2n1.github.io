@@ -1,4 +1,5 @@
 ---
+
 title: "wavpack(1)"
 name: "wavpack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wavpack/"
 description: "wavpack – encode wav files to wavpack"
 ---
 
-<h2 class="name">NAME</h2>
 <p> wavpack &#8211; encode wav files to wavpack </p>
 <h2>SYNOPSIS</h2>
 <dl>

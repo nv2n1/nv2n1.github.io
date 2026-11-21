@@ -1,4 +1,5 @@
 ---
+
 title: "stest(1)"
 name: "stest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-stest/"
 description: "stest – filter a list of files by properties"
 ---
 
-<h2>NAME</h2>
 <p> stest &#8211; filter a list of files by properties</p>
 <h2>SYNOPSIS</h2>
 <p> <code>stest</code> [<code>-abcdefghlpqrsuwx</code>] [<code>-n</code> <i>file</i>] [<code>-o</code> <i>file</i>] [<i>file</i>&#8230;]</p>

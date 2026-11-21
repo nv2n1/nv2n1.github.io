@@ -1,4 +1,5 @@
 ---
+
 title: "mosquitto_pub(1)"
 name: "mosquitto_pub"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mosquitto_pub/"
 description: "mosquitto_pub – an MQTT version 3.1/3.1.1 client for publishing simple messages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mosquitto_pub &#8211; an MQTT version 3.1/3.1.1 client for publishing simple messages </p>
 <h2>SYNOPSIS</h2>
 <dl>

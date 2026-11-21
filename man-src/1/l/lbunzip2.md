@@ -1,4 +1,5 @@
 ---
+
 title: "lbunzip2(1)"
 name: "lbunzip2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lbunzip2/"
 description: "lbzip2 – parallel bzip2 utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lbzip2 &#8211; parallel bzip2 utility</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lbzip2</code>|<code>bzip2</code> [<code>-n</code> <i>WTHRS</i>] [<code>-k</code>|<code>-c</code>|<code>-t</code>] [<code>-d</code>] [<code>-1</code> .. <code>-9</code>] [<code>-f</code>] [<code>-s</code>] [<code>-u</code>] [<code>-v</code>] [<code>-S</code>] [ <i>FILE &#8230; </i>] </p>

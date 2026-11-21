@@ -1,4 +1,5 @@
 ---
+
 title: "intro(3)"
 name: "intro"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-intro/"
 description: "intro – introduction to library functions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> intro &#8211; introduction to library functions </p>
 <h2>DESCRIPTION</h2>
 <p> Section 3 of the manual describes all library functions excluding the library functions (system call wrappers) described in Section 2, which implement system calls. </p>

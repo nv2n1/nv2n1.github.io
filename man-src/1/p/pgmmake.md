@@ -1,4 +1,5 @@
 ---
+
 title: "pgmmake(1)"
 name: "pgmmake"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pgmmake/"
 description: "pgmmake – create a PGM image of a specified gray level and dimensions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pgmmake &#8211; create a PGM image of a specified gray level and dimensions</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pgmmake</code> [<code>-maxval=</code><i>maxval</i>] <i>graylevel</i> <i>width</i> <i>height</i> </p>

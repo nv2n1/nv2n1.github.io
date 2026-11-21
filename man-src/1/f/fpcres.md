@@ -1,4 +1,5 @@
 ---
+
 title: "fpcres(1)"
 name: "fpcres"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fpcres/"
 description: "fpcres – The Free Pascal resource compiler program."
 ---
 
-<h2>NAME</h2>
 <p> fpcres &#8211; The Free Pascal resource compiler program. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fpcres [options]</code> </p>

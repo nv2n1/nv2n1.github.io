@@ -1,4 +1,5 @@
 ---
+
 title: "locale(7)"
 name: "locale"
 section: "7"
@@ -6,8 +7,9 @@ letter: "l"
 url: "/docs/linux/man/7-locale/"
 description: "locale – description of multilanguage support"
 ---
+
 <p>locale &#8211; description of multilanguage support </p>
-<h2>SYNOPSIS</h2>
+
 <pre><code>
  #include &lt;locale.h&gt; 
 </code></pre>

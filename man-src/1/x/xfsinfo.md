@@ -1,4 +1,5 @@
 ---
+
 title: "xfsinfo(1)"
 name: "xfsinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xfsinfo/"
 description: "xfsinfo – X font server information utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xfsinfo &#8211; X font server information utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xfsinfo</code> [-server <i>servername</i>]</p>

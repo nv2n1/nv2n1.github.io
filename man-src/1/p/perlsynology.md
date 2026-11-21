@@ -1,4 +1,5 @@
 ---
+
 title: "perlsynology(1)"
 name: "perlsynology"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlsynology/"
 description: "perlsynology – Perl 5 on Synology DSM systems"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perlsynology &#8211; Perl 5 on Synology DSM systems </p>
 <h2>DESCRIPTION</h2>
 <p> Synology manufactures a vast number of Network Attached Storage (<font SIZE="-1">NAS</font>) devices that are very popular in large organisations as well as small businesses and homes. </p>

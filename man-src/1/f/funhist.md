@@ -1,4 +1,5 @@
 ---
+
 title: "funhist(1)"
 name: "funhist"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-funhist/"
 description: "funhist – create a 1D histogram of a column (from a FITS binary table or raw event file) or an image"
 ---
 
-<h2>NAME</h2>
 <p> <code>funhist &#8211; create a 1D histogram of a column (from a FITS binary table or raw event file) or an image</code></p>
 <h2>SYNOPSIS</h2>
 <p> funhist [-n|-w|-T] &lt;iname&gt; [column] [[lo:hi:]bins]</p>

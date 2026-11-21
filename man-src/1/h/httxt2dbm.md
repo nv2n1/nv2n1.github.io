@@ -1,4 +1,5 @@
 ---
+
 title: "httxt2dbm(1)"
 name: "httxt2dbm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-httxt2dbm/"
 description: "httxt2dbm – Generate dbm files for use with RewriteMap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> httxt2dbm &#8211; Generate dbm files for use with RewriteMap</p>
 <h2>SYNOPSIS</h2>
 <p>&nbsp; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "tcsh(1)"
 name: "tcsh"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tcsh/"
 description: "tcsh – C shell with file name completion and command line editing"
 ---
 
-<h2>NAME</h2>
 <p> tcsh &#8211; C shell with file name completion and command line editing</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tcsh </code>[<code>-bcdefFimnqstvVxX</code>] [<code>-Dname</code>[<code>=value</code>]] [arg &#8230;]<br />

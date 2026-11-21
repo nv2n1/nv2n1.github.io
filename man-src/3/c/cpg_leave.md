@@ -1,4 +1,5 @@
 ---
+
 title: "cpg_leave(3)"
 name: "cpg_leave"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cpg_leave/"
 description: "cpg_leave – Leave a group in the CPG library"
 ---
 
-<h2>NAME</h2>
 <p> cpg_leave &#8211; Leave a group in the CPG library</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cpg.h&gt;</code> </p>

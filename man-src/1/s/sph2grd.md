@@ -1,4 +1,5 @@
 ---
+
 title: "sph2grd(1)"
 name: "sph2grd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sph2grd/"
 description: "sph2grd – Compute grid from spherical harmonic coefficients"
 ---
 
-<h2>NAME</h2>
 <p> sph2grd &#8211; Compute grid from spherical harmonic coefficients</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sph2grd</code> [ <i>table</i> ] <i>grdfile</i> <i>increment</i> <i>region</i> [ [<code>g</code>|<code>n</code>] ] [ ] [ [<code>k</code>]<i>filter</i> ] [ [<i>norm</i>] ] [ ] [ [<i>level</i>] ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-r</code> ] [ <code>-x</code>[[-]<i>n</i>] ] </p>

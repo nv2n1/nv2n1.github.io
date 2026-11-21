@@ -1,4 +1,5 @@
 ---
+
 title: "bson_destroy_with_steal(3)"
 name: "bson_destroy_with_steal"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_destroy_with_steal/"
 description: "bson_destroy_with_steal() – The bson_destroy_with_steal() function shall destroy a bson_t structure but return the underlying buffer instead of freeing it. If steal is false, this is equivalent to ..."
 ---
 
-<h2>NAME</h2>
 <p> bson_destroy_with_steal() &#8211; The bson_destroy_with_steal() function shall destroy a bson_t structure but return the underlying buffer instead of freeing it. If steal is false, this is equivalent to calling bson_destroy(). It is a programming error to call this function on a bson_t that is not a top-level bson_t, shuch as those initialized with bson_append_document_begin(), bson_append_array_begin(), and bson_writer_begin().</p>
 <h2>SYNOPSIS</h2>
 <pre>

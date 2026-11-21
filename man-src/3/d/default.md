@@ -1,4 +1,5 @@
 ---
+
 title: "default(3)"
 name: "default"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-default/"
 description: "ql/default.hpp – Classes for default-event handling."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/default.hpp &#8211; Classes for default-event handling. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/event.hpp&gt; </p>

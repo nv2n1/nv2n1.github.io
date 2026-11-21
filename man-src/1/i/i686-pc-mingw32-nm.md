@@ -1,4 +1,5 @@
 ---
+
 title: "i686-pc-mingw32-nm(1)"
 name: "i686-pc-mingw32-nm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-i686-pc-mingw32-nm/"
 description: "nm – list symbols from object files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> nm &#8211; list symbols from object files </p>
 <h2>SYNOPSIS</h2>
 <p> nm [<code>-a</code>|<code>&#8211;debug-syms</code>]<br />

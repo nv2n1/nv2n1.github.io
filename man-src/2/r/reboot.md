@@ -1,4 +1,5 @@
 ---
+
 title: "reboot(2)"
 name: "reboot"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-reboot/"
 description: "reboot – reboot or enable/disable Ctrl-Alt-Del"
 ---
 
-<h2 class="name">NAME</h2>
 <p> reboot &#8211; reboot or enable/disable Ctrl-Alt-Del </p>
 <h2>SYNOPSIS</h2>
 <p> /* Since kernel version 2.1.30 there are symbolic names LINUX_REBOOT_*<br />

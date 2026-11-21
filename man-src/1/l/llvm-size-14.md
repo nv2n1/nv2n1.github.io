@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-size-14(1)"
 name: "llvm-size-14"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-llvm-size-14/"
 description: "llvm-size – manual page for llvm-size 14"
 ---
 
-<h2 class="name">NAME</h2>
 <p> llvm-size &#8211; manual page for llvm-size 14 </p>
 <h2>DESCRIPTION</h2>
 <p> OVERVIEW: LLVM object size dumper </p>

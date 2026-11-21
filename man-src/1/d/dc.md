@@ -1,4 +1,5 @@
 ---
+
 title: "dc(1)"
 name: "dc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dc/"
 description: "dc – an arbitrary precision calculator"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dc &#8211; an arbitrary precision calculator </p>
 <h2>SYNOPSIS</h2>
 <p> dc [-V] [&#8211;version] [-h] [&#8211;help]<br />

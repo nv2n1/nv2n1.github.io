@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-applet(1)"
 name: "abrt-applet"
 section: "1"
@@ -6,10 +7,7 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-applet/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- abrt-applet - Applet which notifies user when new problems are detected by ABRT 
+abrt-applet - Applet which notifies user when new problems are detected by ABRT 
 
 <h2>SYNOPSIS</h2>
 

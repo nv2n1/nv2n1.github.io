@@ -1,4 +1,5 @@
 ---
+
 title: "git-stash(1)"
 name: "git-stash"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-stash/"
 description: "git-stash – Stash the changes in a dirty working directory away"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-stash &#8211; Stash the changes in a dirty working directory away </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

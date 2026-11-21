@@ -1,4 +1,5 @@
 ---
+
 title: "sdsdot(3)"
 name: "sdsdot"
 section: "3"
@@ -6,10 +7,7 @@ letter: "s"
 url: "/docs/linux/man/3-sdsdot/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- sdsdot.f - 
+sdsdot.f - 
 
 <h2>SYNOPSIS</h2>
 

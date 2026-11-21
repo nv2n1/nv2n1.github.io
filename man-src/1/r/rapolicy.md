@@ -1,4 +1,5 @@
 ---
+
 title: "rapolicy(1)"
 name: "rapolicy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rapolicy/"
 description: "rapolicy – compare a argus(8) data file/stream against a Cisco Access Control List."
 ---
 
-<h2>NAME</h2>
 <p> <code>rapolicy</code> &#8211; compare a <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data file/stream against a Cisco Access Control List.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rapolicy</code> <code>-r</code> <i>argus-file [</i><code>raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>]</p>

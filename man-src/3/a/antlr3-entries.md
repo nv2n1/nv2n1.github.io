@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-entries(3)"
 name: "antlr3-entries"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3-entries/"
 description: "ANTLR3_HASH_BUCKET_struct –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ANTLR3_HASH_BUCKET_struct &#8211; </p>
 <p> Internal structure of a hash table bucket, which tracks all keys that hash to the same bucket.</p>
 <h2>SYNOPSIS</h2>

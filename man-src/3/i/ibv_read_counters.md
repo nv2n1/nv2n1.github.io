@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_read_counters(3)"
 name: "ibv_read_counters"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ibv_read_counters/"
 description: "ibv_read_counters – Read counter values"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ibv_read_counters &#8211; Read counter values </p>
 <h2>SYNOPSIS</h2>
 <dl>

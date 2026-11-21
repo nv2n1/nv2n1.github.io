@@ -1,4 +1,5 @@
 ---
+
 title: "subpage_prot(2)"
 name: "subpage_prot"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-subpage_prot/"
 description: "subpage_prot – define a subpage protection for an address range"
 ---
 
-<h2 class="name">NAME</h2>
 <p> subpage_prot &#8211; define a subpage protection for an address range </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

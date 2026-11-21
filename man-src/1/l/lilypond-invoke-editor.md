@@ -1,4 +1,5 @@
 ---
+
 title: "lilypond-invoke-editor(1)"
 name: "lilypond-invoke-editor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lilypond-invoke-editor/"
 description: "lilypond-invoke-editor – manual page for lilypond-invoke-editor 2.12.2"
 ---
 
-<h2>NAME</h2>
 <p> lilypond-invoke-editor &#8211; manual page for lilypond-invoke-editor 2.12.2</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lilypond-invoke-editor</code> [<i>textedit://</i>]<i>FILE:LINE:CHAR:COLUMN</i></p>

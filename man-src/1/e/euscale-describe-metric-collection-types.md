@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-describe-metric-collection-types(1)"
 name: "euscale-describe-metric-collection-types"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euscale-describe-metric-collection-types/"
 description: "euscale-describe-metric-collection-types – Describe auto-scaling metrics and granularities"
 ---
 
-<h2>NAME</h2>
 <p> euscale-describe-metric-collection-types &#8211; Describe auto-scaling metrics and granularities</p>
 <h2>SYNOPSIS</h2>
 <p> euscale-describe-metric-collection-types [&#8211;show-empty-fields] [-U URL]</p>

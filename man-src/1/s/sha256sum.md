@@ -1,4 +1,5 @@
 ---
+
 title: "sha256sum(1)"
 name: "sha256sum"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sha256sum/"
 description: "sha256sum – compute and check SHA256 message digest"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sha256sum &#8211; compute and check SHA256 message digest </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sha256sum</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>

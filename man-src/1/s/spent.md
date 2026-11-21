@@ -1,4 +1,5 @@
 ---
+
 title: "spent(1)"
 name: "spent"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-spent/"
 description: "ospent – Concatenates entities in an SGML/XML document"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ospent &#8211; Concatenates entities in an SGML/XML document </p>
 <h2>SYNOPSIS</h2>
 <dl>

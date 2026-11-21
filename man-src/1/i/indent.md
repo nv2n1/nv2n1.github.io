@@ -1,4 +1,5 @@
 ---
+
 title: "indent(1)"
 name: "indent"
 section: "1"
@@ -6,7 +7,7 @@ letter: "i"
 url: "/docs/linux/man/1-indent/"
 description: "indent – changes the appearance of a C program by inserting or deleting whitespace."
 ---
-<h2>NAME</h2>
+
 <p> indent - changes the appearance of a C program by inserting or deleting whitespace.  </p>
 <h2>SYNOPSIS</h2>
 <p> <code>indent </code> [options] [input-files] </p>

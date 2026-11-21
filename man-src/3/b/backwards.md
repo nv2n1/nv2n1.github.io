@@ -1,4 +1,5 @@
 ---
+
 title: "backwards(3)"
 name: "backwards"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-backwards/"
 description: "QuantLib::MakeSchedule – helper class"
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::MakeSchedule &#8211; helper class </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/time/schedule.hpp&gt; </p>

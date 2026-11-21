@@ -1,4 +1,5 @@
 ---
+
 title: "mate-about(1)"
 name: "mate-about"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-about/"
 description: "mate-about – Learn more about MATE"
 ---
 
-<h2>NAME</h2>
 <p> mate-about &#8211; Learn more about MATE</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-about [&#8211;mate-version]</code></p>

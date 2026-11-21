@@ -1,4 +1,5 @@
 ---
+
 title: "webpmux(1)"
 name: "webpmux"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-webpmux/"
 description: "webpmux – command line tool to create WebP Mux/container file."
 ---
 
-<h2>NAME</h2>
 <p> webpmux &#8211; command line tool to create WebP Mux/container file.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>webpmux -get</code> <i>GET_OPTIONS</i> <i>INPUT</i> <code>-o</code> <i>OUTPUT</i><br />

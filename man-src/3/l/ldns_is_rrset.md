@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_is_rrset(3)"
 name: "ldns_is_rrset"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_is_rrset/"
 description: "ldns_is_rrset"
 ---
 
-<h2>NAME</h2>
 <p> ldns_is_rrset </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "monop(1)"
 name: "monop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-monop/"
 description: "monop, monop2 – Mono Class Outline Viewer"
 ---
 
-<h2>NAME</h2>
 <p> monop, monop2 &#8211; Mono Class Outline Viewer</p>
 <h2>SYNOPSIS</h2>
 <p> <code>monop</code> [-r:assembly] [&#8211;search] class</p>

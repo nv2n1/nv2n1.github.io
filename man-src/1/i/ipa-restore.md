@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-restore(1)"
 name: "ipa-restore"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-restore/"
 description: "ipa-restore – Restore an IPA master"
 ---
 
-<h2>NAME</h2>
 <p> ipa-restore &#8211; Restore an IPA master</p>
 <h2>SYNOPSIS</h2>
 <p> ipa-restore [<i>OPTION</i>]&#8230; BACKUP</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "bibdoiadd(1)"
 name: "bibdoiadd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bibdoiadd/"
 description: "bibdoiadd.pl – add DOI numbers to papers in a given bib file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bibdoiadd.pl &#8211; add DOI numbers to papers in a given bib file </p>
 <h2>SYNOPSIS</h2>
 <p> bibdoiadd [<code>-c</code> <i>config_file</i>] [<code>-C</code> 1|0] [<code>-e</code> 1|0] [<code>-f</code>] [<code>-o</code> <i>output</i>] <i>bib_file</i></p>

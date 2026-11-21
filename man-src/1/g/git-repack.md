@@ -1,4 +1,5 @@
 ---
+
 title: "git-repack(1)"
 name: "git-repack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-repack/"
 description: "git-repack – Pack unpacked objects in a repository"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-repack &#8211; Pack unpacked objects in a repository </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

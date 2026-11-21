@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_get_default_realms(3)"
 name: "krb5_get_default_realms"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_get_default_realms/"
 description: "krb5_copy_host_realm krb5_free_host_realm krb5_get_default_realm krb5_get_default_realms krb5_get_host_realm krb5_set_default_realm – default and host realm read and manipulation routines"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_copy_host_realm</code> <code>krb5_free_host_realm</code> <code>krb5_get_default_realm</code> <code>krb5_get_default_realms</code> <code>krb5_get_host_realm</code> <code>krb5_set_default_realm</code> &#8211; default and host realm read and manipulation routines </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>

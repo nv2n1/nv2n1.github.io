@@ -1,4 +1,5 @@
 ---
+
 title: "postfix(1)"
 name: "postfix"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-postfix/"
 description: "postfix – Postfix control program"
 ---
 
-<h2 class="name">NAME</h2>
 <p> postfix &#8211; Postfix control program </p>
 <h2>SYNOPSIS</h2>
 <p> <code>postfix</code> [<code>-Dv</code>] [<code>-c </code><i>config_dir</i>] <i>command</i></p>

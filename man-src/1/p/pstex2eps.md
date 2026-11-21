@@ -1,4 +1,5 @@
 ---
+
 title: "pstex2eps(1)"
 name: "pstex2eps"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pstex2eps/"
 description: "pstex2eps – Generate EPS file from PLplot pstex driver generated file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pstex2eps &#8211; Generate EPS file from PLplot pstex driver generated file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pstex2eps</code> &lt;filename&gt;</p>

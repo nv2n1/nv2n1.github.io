@@ -1,4 +1,5 @@
 ---
+
 title: "memkind(3)"
 name: "memkind"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memkind/"
 description: "memkind – Heap manager that enables allocations to memory with different properties. This header expose EXPERIMENTAL API in except of STANDARD API placed in section LIBRARY VERSION. API Standards a..."
 ---
 
-<h2>NAME</h2>
 <p> memkind &#8211; Heap manager that enables allocations to memory with different properties.<br />
  This header expose EXPERIMENTAL API in except of STANDARD API placed in section LIBRARY VERSION. API Standards are described below in this man page.</p>
 <h2>SYNOPSIS</h2>

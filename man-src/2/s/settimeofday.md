@@ -1,4 +1,5 @@
 ---
+
 title: "settimeofday(2)"
 name: "settimeofday"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-settimeofday/"
 description: "gettimeofday, settimeofday – get / set time"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gettimeofday, settimeofday &#8211; get / set time </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

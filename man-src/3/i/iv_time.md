@@ -1,4 +1,5 @@
 ---
+
 title: "iv_time(3)"
 name: "iv_time"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-iv_time/"
 description: "iv_now, iv_validate_now, iv_invalidate_now – ivykis time handling"
 ---
 
-<h2>NAME</h2>
 <p> iv_now, iv_validate_now, iv_invalidate_now &#8211; ivykis time handling</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;iv.h&gt;</code> </p>

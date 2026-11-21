@@ -1,4 +1,5 @@
 ---
+
 title: "libmagic(3)"
 name: "libmagic"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libmagic/"
 description: "magic_open magic_close magic_error magic_descriptor magic_buffer magic_setflags magic_check magic_compile magic_load – Magic number recognition library"
 ---
 
-<h2>NAME</h2>
 <p> <code>magic_open</code> <code>magic_close</code> <code>magic_error</code> <code>magic_descriptor</code> <code>magic_buffer</code> <code>magic_setflags</code> <code>magic_check</code> <code>magic_compile</code> <code>magic_load</code> &#8211; Magic number recognition library</p>
 <h2>LIBRARY</h2>
 <p> Lb libmagic</p>

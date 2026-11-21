@@ -1,4 +1,5 @@
 ---
+
 title: "vorbisgain(1)"
 name: "vorbisgain"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vorbisgain/"
 description: "vorbisgain – calculate the replay gain for Ogg Vorbis files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> vorbisgain &#8211; calculate the replay gain for Ogg Vorbis files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>vorbisgain</code> [ <code>-acCdfhqrsv</code> ] [ <code>-g</code> <i>album gain</i> ] <i>input_files </i>&#8230; </p>

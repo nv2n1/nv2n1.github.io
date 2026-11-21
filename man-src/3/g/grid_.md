@@ -1,4 +1,5 @@
 ---
+
 title: "grid_(3)"
 name: "grid_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-grid_/"
 description: "QuantLib::TransformedGrid – transformed grid"
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::TransformedGrid &#8211; transformed grid </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/transformedgrid.hpp&gt; </p>

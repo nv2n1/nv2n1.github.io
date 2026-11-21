@@ -1,4 +1,5 @@
 ---
+
 title: "is_relative_filename(3)"
 name: "is_relative_filename"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-is_relative_filename/"
 description: "is_relative_filename – Returns TRUE if the filename is relative. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> is_relative_filename &#8211; Returns TRUE if the filename is relative. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

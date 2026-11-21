@@ -1,4 +1,5 @@
 ---
+
 title: "tracker-reset(1)"
 name: "tracker-reset"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tracker-reset/"
 description: "tracker-reset – Reset the index and configuration"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tracker-reset &#8211; Reset the index and configuration</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tracker reset</code> [&#8211;hard | &#8211;soft] [&#8211;config] [&#8211;file <i>FILE</i>] </p>

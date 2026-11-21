@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtoascii(1)"
 name: "ppmtoascii"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppmtoascii/"
 description: "ppmtoascii – convert a PPM image to ASCII graphics with ANSI terminal color"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ppmtoascii &#8211; convert a PPM image to ASCII graphics with ANSI terminal color</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmtoascii</code> </p>

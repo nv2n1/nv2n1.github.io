@@ -1,4 +1,5 @@
 ---
+
 title: "nsdejavu(1)"
 name: "nsdejavu"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nsdejavu/"
 description: "nsdejavu – DjVu browser plugin"
 ---
 
-<h2 class="name">NAME</h2>
 <p> nsdejavu &#8211; DjVu browser plugin</p>
 <h2>SYNOPSIS</h2>
 <p> <code>/usr/lib/mozilla/plugins/nsdejavu.so</code> or<br />

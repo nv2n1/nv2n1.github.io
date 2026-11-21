@@ -1,4 +1,5 @@
 ---
+
 title: "ndctl-read-labels(1)"
 name: "ndctl-read-labels"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ndctl-read-labels/"
 description: "ndctl-read-labels – read out the label area on a dimm or set of dimms"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ndctl-read-labels &#8211; read out the label area on a dimm or set of dimms </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

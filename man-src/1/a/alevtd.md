@@ -1,4 +1,5 @@
 ---
+
 title: "alevtd(1)"
 name: "alevtd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-alevtd/"
 description: "alevtd – webserver for videotext pages"
 ---
 
-<h2>NAME</h2>
 <p> alevtd &#8211; webserver for videotext pages</p>
 <h2>SYNOPSIS</h2>
 <p> <code>alevtd [ options ]</code></p>

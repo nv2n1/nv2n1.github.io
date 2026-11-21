@@ -1,4 +1,5 @@
 ---
+
 title: "euca-create-group(1)"
 name: "euca-create-group"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-create-group/"
 description: "euca-create-group – Create a new security group"
 ---
 
-<h2>NAME</h2>
 <p> euca-create-group &#8211; Create a new security group</p>
 <h2>SYNOPSIS</h2>
 <p> euca-create-group <code>-d</code> DESC [-c VPC] [&#8211;show-empty-fields] [-U URL]</p>

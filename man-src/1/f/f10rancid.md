@@ -1,4 +1,5 @@
 ---
+
 title: "f10rancid(1)"
 name: "f10rancid"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-f10rancid/"
 description: "rancid – Cisco configuration filter"
 ---
 
-<h2>NAME</h2>
 <p> rancid &#8211; Cisco configuration filter</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rancid</code> [<code>-dlCV</code>] [<code>-t device_type</code>] (<code>-f</code> filename | hostname) </p>

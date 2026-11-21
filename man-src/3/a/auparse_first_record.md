@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_first_record(3)"
 name: "auparse_first_record"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_first_record/"
 description: "auparse_first_record – reposition record cursor"
 ---
 
-<h2>NAME</h2>
 <p> auparse_first_record &#8211; reposition record cursor</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

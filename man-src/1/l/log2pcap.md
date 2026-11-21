@@ -1,4 +1,5 @@
 ---
+
 title: "log2pcap(1)"
 name: "log2pcap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-log2pcap/"
 description: "log2pcap – Extract network traces from Samba log files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> log2pcap &#8211; Extract network traces from Samba log files </p>
 <h2>SYNOPSIS</h2>
 <dl>

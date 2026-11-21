@@ -1,4 +1,5 @@
 ---
+
 title: "devio(1)"
 name: "devio"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-devio/"
 description: "devio – program to read and write from block devices"
 ---
 
-<h2 class="name">NAME</h2>
 <p> devio &#8211; program to read and write from block devices </p>
 <h2>SYNOPSIS</h2>
 <p> <code>devio</code> [<i>options</i>]<i> files</i>&#8230;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "virt-customize(1)"
 name: "virt-customize"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-virt-customize/"
 description: "virt-customize – Customize a virtual machine"
 ---
 
-<h2 class="name">NAME</h2>
 <p> virt-customize &#8211; Customize a virtual machine </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

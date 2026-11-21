@@ -1,4 +1,5 @@
 ---
+
 title: "dirfilename(3)"
 name: "dirfilename"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dirfilename/"
 description: "dirfilename — retrieve the name of a dirfile"
 ---
 
-<h2>NAME</h2>
 <p> dirfilename &#8212; retrieve the name of a dirfile</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

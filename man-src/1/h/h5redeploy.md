@@ -1,4 +1,5 @@
 ---
+
 title: "h5redeploy(1)"
 name: "h5redeploy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-h5redeploy/"
 description: "h5redeploy – Updates HDF5 compiler tools after an HDF5 software installation in a new location."
 ---
 
-<h2>NAME</h2>
 <p> h5redeploy &#8211; Updates HDF5 compiler tools after an HDF5 software installation in a new location.</p>
 <h2>SYNOPSIS</h2>
 <p> h5redeploy [help | -help] </p>

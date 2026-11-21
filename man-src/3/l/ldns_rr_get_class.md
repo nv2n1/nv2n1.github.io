@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_rr_get_class(3)"
 name: "ldns_rr_get_class"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_rr_get_class/"
 description: "ldns_rr_rdf, ldns_rr_owner, ldns_rr_rd_count, ldns_rr_ttl, ldns_rr_get_class"
 ---
 
-<h2>NAME</h2>
 <p> ldns_rr_rdf, ldns_rr_owner, ldns_rr_rd_count, ldns_rr_ttl, ldns_rr_get_class </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

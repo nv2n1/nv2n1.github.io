@@ -1,4 +1,5 @@
 ---
+
 title: "ares_mkquery(3)"
 name: "ares_mkquery"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ares_mkquery/"
 description: "ares_mkquery – Compose a single-question DNS query buffer"
 ---
 
-<h2>NAME</h2>
 <p> ares_mkquery &#8211; Compose a single-question DNS query buffer</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "a5toa4(1)"
 name: "a5toa4"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-a5toa4/"
 description: "a5toa4 – arrange A5 pages in a PDF onto A4 landscape paper"
 ---
 
-<h2 class="name">NAME</h2>
 <p> a5toa4 &#8211; arrange A5 pages in a PDF onto A4 landscape paper</p>
 <h2>SYNOPSIS</h2>
 <p> <code>a5toa4</code> [<code>-b</code>|<code>-s</code>] [<code>-o</code>] <i>input.pdf</i>&#8230; </p>

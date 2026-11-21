@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-suspend-processes(1)"
 name: "euscale-suspend-processes"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euscale-suspend-processes/"
 description: "euscale-suspend-processes – Suspend an auto-scaling group’s auto-scaling processes"
 ---
 
-<h2>NAME</h2>
 <p> euscale-suspend-processes &#8211; Suspend an auto-scaling group&#8217;s auto-scaling processes</p>
 <h2>SYNOPSIS</h2>
 <p> euscale-suspend-processes [&#8211;processes PROCESS1,PROCESS2,&#8230;] [-U URL]</p>

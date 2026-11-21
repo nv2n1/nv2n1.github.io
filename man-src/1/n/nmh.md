@@ -1,4 +1,5 @@
 ---
+
 title: "nmh(1)"
 name: "nmh"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nmh/"
 description: "nmh – new MH message system"
 ---
 
-<h2>NAME</h2>
 <p> nmh &#8211; new MH message system</p>
 <h2>SYNOPSIS</h2>
 <p> any <code>nmh</code> command</p>

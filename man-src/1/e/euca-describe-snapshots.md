@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-snapshots(1)"
 name: "euca-describe-snapshots"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-describe-snapshots/"
 description: "euca-describe-snapshots – Show information about snapshots"
 ---
 
-<h2>NAME</h2>
 <p> euca-describe-snapshots &#8211; Show information about snapshots</p>
 <h2>SYNOPSIS</h2>
 <p> euca-describe-snapshots [-a] [-o ACCOUNT] [-r ACCOUNT]</p>

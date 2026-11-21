@@ -1,4 +1,5 @@
 ---
+
 title: "g_pdb2gmx_d(1)"
 name: "g_pdb2gmx_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_pdb2gmx_d/"
 description: "pdb2gmx – converts pdb files to topology and coordinate files"
 ---
 
-<h2>NAME</h2>
 <p> pdb2gmx &#8211; converts pdb files to topology and coordinate files </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

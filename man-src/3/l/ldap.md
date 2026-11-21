@@ -1,4 +1,5 @@
 ---
+
 title: "ldap(3)"
 name: "ldap"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldap/"
 description: "ldap – OpenLDAP Lightweight Directory Access Protocol API"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ldap &#8211; OpenLDAP Lightweight Directory Access Protocol API </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>

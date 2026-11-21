@@ -1,4 +1,5 @@
 ---
+
 title: "htdbm(1)"
 name: "htdbm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-htdbm/"
 description: "htdbm – Manipulate DBM password databases"
 ---
 
-<h2 class="name">NAME</h2>
 <p> htdbm &#8211; Manipulate DBM password databases</p>
 <h2>SYNOPSIS</h2>
 <p>&nbsp; </p>

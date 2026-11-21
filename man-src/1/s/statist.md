@@ -1,4 +1,5 @@
 ---
+
 title: "statist(1)"
 name: "statist"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-statist/"
 description: "statist – calculate Huffman distribution for freeze(1)"
 ---
 
-<h2>NAME</h2>
 <p> statist &#8211; calculate Huffman distribution for <i><a href="/docs/linux/man/1-freeze/">freeze</a></i>(1)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>statist</code> [ <code>-gx&#8230;</code> ] </p>

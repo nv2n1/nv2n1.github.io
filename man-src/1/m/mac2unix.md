@@ -1,4 +1,5 @@
 ---
+
 title: "mac2unix(1)"
 name: "mac2unix"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mac2unix/"
 description: "dos2unix – DOS/Mac to Unix and vice versa text file format converter"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dos2unix &#8211; DOS/Mac to Unix and vice versa text file format converter </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

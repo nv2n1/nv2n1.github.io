@@ -1,4 +1,5 @@
 ---
+
 title: "dh_listpackages(1)"
 name: "dh_listpackages"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_listpackages/"
 description: "dh_listpackages – list binary packages debhelper will act on"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_listpackages &#8211; list binary packages debhelper will act on </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_listpackages</code> [<i>debhelper options</i>]</p>

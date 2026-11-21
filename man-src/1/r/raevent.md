@@ -1,4 +1,5 @@
 ---
+
 title: "raevent(1)"
 name: "raevent"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-raevent/"
 description: "raevent – read argus(8) event data."
 ---
 
-<h2>NAME</h2>
 <p> <code>raevent</code> &#8211; read <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> event data.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>raevent [raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>]</p>

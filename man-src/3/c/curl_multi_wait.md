@@ -1,4 +1,5 @@
 ---
+
 title: "curl_multi_wait(3)"
 name: "curl_multi_wait"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-curl_multi_wait/"
 description: "curl_multi_wait – polls on all easy handles in a multi handle"
 ---
 
-<h2>NAME</h2>
 <p> curl_multi_wait &#8211; polls on all easy handles in a multi handle</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

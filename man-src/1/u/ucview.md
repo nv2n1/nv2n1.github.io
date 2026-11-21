@@ -1,4 +1,5 @@
 ---
+
 title: "ucview(1)"
 name: "ucview"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ucview/"
 description: "ucview – a video capture and display program"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>ucview</code> &#8211; a video capture and display program</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ucview</code> </p>

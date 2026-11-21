@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-session(1)"
 name: "gnome-session"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnome-session/"
 description: "gnome-session – Start the GNOME desktop environment"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gnome-session &#8211; Start the GNOME desktop environment </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnome-session [-a|&#8211;autostart=DIR] [&#8211;session=SESSION] [&#8211;failsafe|-f] [&#8211;debug] [&#8211;whale]</code></p>

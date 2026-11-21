@@ -1,4 +1,5 @@
 ---
+
 title: "gts-config(1)"
 name: "gts-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gts-config/"
 description: "gts-config – defines values for programs using gts."
 ---
 
-<h2 class="name">NAME</h2>
 <p> gts-config &#8211; defines values for programs using gts.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gts-config</code> [<i>OPTIONS</i>]&nbsp;[<i>LIBRARIES</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "lnewusers(1)"
 name: "lnewusers"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lnewusers/"
 description: "lnewusers – Create new user accounts"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lnewusers &#8211; Create new user accounts</p>
 <h2>SYNOPSIS</h2>
 <p> lnewusers [<i>OPTION</i>]&#8230; </p>

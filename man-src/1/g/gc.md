@@ -1,4 +1,5 @@
 ---
+
 title: "gc(1)"
 name: "gc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gc/"
 description: "gc – count graph components"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gc &#8211; count graph components </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gc</code> [ <code>-necCaDUrsv?</code> ] [ <i>files</i> ]</p>

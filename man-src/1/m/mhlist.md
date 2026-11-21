@@ -1,4 +1,5 @@
 ---
+
 title: "mhlist(1)"
 name: "mhlist"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mhlist/"
 description: "mhlist – list information about MIME messages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mhlist &#8211; list information about MIME messages </p>
 <h2>SYNOPSIS</h2>
 <dl>

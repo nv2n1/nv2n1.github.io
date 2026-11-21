@@ -1,4 +1,5 @@
 ---
+
 title: "ecryptfs-setup-private(1)"
 name: "ecryptfs-setup-private"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ecryptfs-setup-private/"
 description: "ecryptfs-setup-private – setup an eCryptfs private directory."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ecryptfs-setup-private &#8211; setup an eCryptfs private directory.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ecryptfs-setup-private [-f|&#8211;force] [-w|&#8211;wrapping] [-b|&#8211;bootstrap] [-n|&#8211;no-fnek] [&#8211;nopwcheck] [-u|&#8211;username USER] [-l|&#8211;loginpass LOGINPASS] [-m|&#8211;mountpass MOUNTPASS]</code> </p>

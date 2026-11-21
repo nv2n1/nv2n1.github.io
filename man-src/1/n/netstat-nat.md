@@ -1,4 +1,5 @@
 ---
+
 title: "netstat-nat(1)"
 name: "netstat-nat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-netstat-nat/"
 description: "netstat-nat – Show the natted connections on a linux iptable firewall"
 ---
 
-<h2>NAME</h2>
 <p> netstat-nat &#8211; Show the natted connections on a linux iptable firewall</p>
 <h2>SYNOPSIS</h2>
 <p> <code>netstat-nat [options]</code> </p>

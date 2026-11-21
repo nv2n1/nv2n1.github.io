@@ -1,4 +1,5 @@
 ---
+
 title: "compress(1)"
 name: "compress"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-compress/"
 description: "compress, uncompress, zcat – compress and expand data"
 ---
 
-<h2>NAME</h2>
 <p> compress, uncompress, zcat &#8211; compress and expand data</p>
 <h2>SYNOPSIS</h2>
 <p> <code>compress</code> [ <code>-f</code> ] [ <code>-v</code> ] [ <code>-c</code> ] [ <code>-V</code> ] [ <code>-r</code> ] [ <code>-b</code> <i>bits</i> ] [ <i>name &#8230;</i> ]<br />

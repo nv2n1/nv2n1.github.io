@@ -1,4 +1,5 @@
 ---
+
 title: "snapraid(1)"
 name: "snapraid"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-snapraid/"
 description: "snapraid – SnapRAID Backup For Disk Arrays"
 ---
 
-<h2>NAME</h2>
 <p> snapraid &#8211; SnapRAID Backup For Disk Arrays</p>
 <h2>SYNOPSIS</h2>
 <p> snapraid [-c, &#8211;conf CONFIG] </p>

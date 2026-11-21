@@ -1,4 +1,5 @@
 ---
+
 title: "pbmminkowski(1)"
 name: "pbmminkowski"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pbmminkowski/"
 description: "pbmminkowski – compute Minkowski integral"
 ---
 
-<h2>NAME</h2>
 <p> pbmminkowski &#8211; compute Minkowski integral </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmminkowski</code> <i>pbmfile</i> </p>

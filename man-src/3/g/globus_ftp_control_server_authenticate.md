@@ -1,4 +1,5 @@
 ---
+
 title: "globus_ftp_control_server_authenticate(3)"
 name: "globus_ftp_control_server_authenticate"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_ftp_control_server_authenticate/"
 description: "GridFTP Server Control –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> GridFTP Server Control &#8211; </p>
 <p> Manage GridFTP Server Control Connections.</p>
 <h3>Typedefs</h3>

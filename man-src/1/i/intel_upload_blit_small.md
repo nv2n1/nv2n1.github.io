@@ -1,4 +1,5 @@
 ---
+
 title: "intel_upload_blit_small(1)"
 name: "intel_upload_blit_small"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-intel_upload_blit_small/"
 description: "intel_upload_blit_small – microbenchmark of Intel GPU performance"
 ---
 
-<h2>NAME</h2>
 <p> intel_upload_blit_small &#8211; microbenchmark of Intel GPU performance</p>
 <h2>SYNOPSIS</h2>
 <pre>

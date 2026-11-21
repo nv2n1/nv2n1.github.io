@@ -1,4 +1,5 @@
 ---
+
 title: "git-notes(1)"
 name: "git-notes"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-notes/"
 description: "git-notes – Add or inspect object notes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-notes &#8211; Add or inspect object notes </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

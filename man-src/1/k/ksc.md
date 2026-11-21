@@ -1,4 +1,5 @@
 ---
+
 title: "ksc(1)"
 name: "ksc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ksc/"
 description: "ksc – Linux kernel module source checker"
 ---
 
-<h2>NAME</h2>
 <p> ksc &#8211; Linux kernel module source checker</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ksc</code> [<code> -d | &#8211;directory </code>] DIRECTORY</p>

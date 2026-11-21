@@ -1,4 +1,5 @@
 ---
+
 title: "fluid(1)"
 name: "fluid"
 section: "1"
@@ -6,9 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-fluid/"
 ---
 
-<h2>NAME</h2>
-
- fluid - the fast light user-interface designer 
+fluid - the fast light user-interface designer 
 
 <h2>SYNOPSIS</h2>
 

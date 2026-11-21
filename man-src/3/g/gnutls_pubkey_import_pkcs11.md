@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pubkey_import_pkcs11(3)"
 name: "gnutls_pubkey_import_pkcs11"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_pubkey_import_pkcs11/"
 description: "gnutls_pubkey_import_pkcs11 – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_pubkey_import_pkcs11 &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/abstract.h&gt;</code> </p>

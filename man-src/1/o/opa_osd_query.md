@@ -1,4 +1,5 @@
 ---
+
 title: "opa_osd_query(1)"
 name: "opa_osd_query"
 section: "1"
@@ -6,9 +7,7 @@ letter: "o"
 url: "/docs/linux/man/1-opa_osd_query/"
 ---
 
-<h2>NAME</h2>
-
- opa_osd_query 
+opa_osd_query 
 
  
 

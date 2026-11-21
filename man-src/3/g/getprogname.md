@@ -1,4 +1,5 @@
 ---
+
 title: "getprogname(3)"
 name: "getprogname"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getprogname/"
 description: "getprogname setprogname – get or set the program name"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>getprogname</code> <code>setprogname</code> &#8211; get or set the program name </p>
 <h2>LIBRARY</h2>
 <p> Lb libbsd</p>

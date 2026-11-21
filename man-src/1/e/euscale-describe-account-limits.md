@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-describe-account-limits(1)"
 name: "euscale-describe-account-limits"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euscale-describe-account-limits/"
 description: "euscale-describe-account-limits – Describe your account’s limits on auto-scaling resources"
 ---
 
-<h2>NAME</h2>
 <p> euscale-describe-account-limits &#8211; Describe your account&#8217;s limits on auto-scaling resources</p>
 <h2>SYNOPSIS</h2>
 <p> euscale-describe-account-limits [&#8211;show-empty-fields] [-U URL]</p>

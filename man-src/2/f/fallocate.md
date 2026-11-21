@@ -1,4 +1,5 @@
 ---
+
 title: "fallocate(2)"
 name: "fallocate"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-fallocate/"
 description: "fallocate – manipulate file space"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fallocate &#8211; manipulate file space </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

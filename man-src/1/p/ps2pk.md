@@ -1,4 +1,5 @@
 ---
+
 title: "ps2pk(1)"
 name: "ps2pk"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-ps2pk/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- ps2pk - creates a TeX pkfont from a type1 PostScript font 
+ps2pk - creates a TeX pkfont from a type1 PostScript font 
 
 <h2>SYNOPSIS</h2>
 

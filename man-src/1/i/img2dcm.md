@@ -1,4 +1,5 @@
 ---
+
 title: "img2dcm(1)"
 name: "img2dcm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-img2dcm/"
 description: "img2dcm – Convert standard image formats into DICOM format"
 ---
 
-<h2 class="name">NAME</h2>
 <p> img2dcm &#8211; Convert standard image formats into DICOM format </p>
 <h2>SYNOPSIS</h2>
 <pre>

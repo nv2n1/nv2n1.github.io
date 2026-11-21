@@ -1,4 +1,5 @@
 ---
+
 title: "globus_thread_yield(3)"
 name: "globus_thread_yield"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_thread_yield/"
 description: "Threading –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Threading &#8211; </p>
 <p> Portable Thread Abstraction.</p>
 <h3>Modules</h3>

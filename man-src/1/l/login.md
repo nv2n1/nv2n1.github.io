@@ -1,4 +1,5 @@
 ---
+
 title: "login(1)"
 name: "login"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-login/"
 description: "login – begin session on the system"
 ---
 
-<h2 class="name">NAME</h2>
 <p> login &#8211; begin session on the system </p>
 <h2>SYNOPSIS</h2>
 <dl>

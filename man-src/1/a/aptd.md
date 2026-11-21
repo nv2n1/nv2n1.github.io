@@ -1,4 +1,5 @@
 ---
+
 title: "aptd(1)"
 name: "aptd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-aptd/"
 description: "aptd – package managing daemon proving a D-Bus interface"
 ---
 
-<h2 class="name">NAME</h2>
 <p> aptd &#8211; package managing daemon proving a D-Bus interface </p>
 <h2>SYNOPSIS</h2>
 <p> <code>aptd</code> [<i>OPTIONS</i>]</p>

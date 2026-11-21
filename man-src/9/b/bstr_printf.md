@@ -1,4 +1,5 @@
 ---
+
 title: "bstr_printf(9)"
 name: "bstr_printf"
 section: "9"
@@ -6,8 +7,9 @@ letter: "b"
 url: "/docs/linux/man/9-bstr_printf/"
 description: "bstr_printf – Format a string from binary arguments and place it in a buffer"
 ---
+
 <p>bstr_printf &#8211; Format a string from binary arguments and place it in a buffer </p>
-<h2>SYNOPSIS</h2>
+
 <dl>
 <dt><code>int bstr_printf(char&nbsp;<wbr>*&nbsp;<wbr></code><i>buf</i><code>, size_t&nbsp;<wbr></code><i>size</i><code>, const char&nbsp;<wbr>*&nbsp;<wbr></code><i>fmt</i><code>, const u32&nbsp;<wbr>*&nbsp;<wbr></code><i>bin_buf</i><code>);</code></dt>
 </dl>

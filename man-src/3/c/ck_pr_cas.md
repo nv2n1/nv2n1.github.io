@@ -1,4 +1,5 @@
 ---
+
 title: "ck_pr_cas(3)"
 name: "ck_pr_cas"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_pr_cas/"
 description: "ck_pr_cas_ptr ck_pr_cas_ptr_value ck_pr_cas_ptr_2 ck_pr_cas_ptr_2_value ck_pr_cas_double ck_pr_cas_double_value ck_pr_cas_char ck_pr_cas_char_value ck_pr_cas_uint ck_pr_cas_uint_value ck_pr_cas_int..."
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_pr_cas_ptr</code> <code>ck_pr_cas_ptr_value</code> <code>ck_pr_cas_ptr_2</code> <code>ck_pr_cas_ptr_2_value</code> <code>ck_pr_cas_double</code> <code>ck_pr_cas_double_value</code> <code>ck_pr_cas_char</code> <code>ck_pr_cas_char_value</code> <code>ck_pr_cas_uint</code> <code>ck_pr_cas_uint_value</code> <code>ck_pr_cas_int</code> <code>ck_pr_cas_int_value</code> <code>ck_pr_cas_64_2</code> <code>ck_pr_cas_64_2_value</code> <code>ck_pr_cas_64</code> <code>ck_pr_cas_64_value</code> <code>ck_pr_cas_32</code> <code>ck_pr_cas_32_value</code> <code>ck_pr_cas_16</code> <code>ck_pr_cas_16_value</code> <code>ck_pr_cas_8</code> <code>ck_pr_cas_8_value</code> &#8211; atomic compare-and-swap operations</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

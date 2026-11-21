@@ -1,4 +1,5 @@
 ---
+
 title: "euca-create-vpc(1)"
 name: "euca-create-vpc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-create-vpc/"
 description: "euca-create-vpc – Create a new VPC"
 ---
 
-<h2>NAME</h2>
 <p> euca-create-vpc &#8211; Create a new VPC</p>
 <h2>SYNOPSIS</h2>
 <p> euca-create-vpc [&#8211;tenancy {default,dedicated}] [&#8211;show-empty-fields]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "is_windowed_mode(3)"
 name: "is_windowed_mode"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-is_windowed_mode/"
 description: "is_windowed_mode – Tells if you are running in windowed mode. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> is_windowed_mode &#8211; Tells if you are running in windowed mode. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

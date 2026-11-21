@@ -1,4 +1,5 @@
 ---
+
 title: "cpu_capabilities(3)"
 name: "cpu_capabilities"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cpu_capabilities/"
 description: "cpu_capabilities – Contains the capability flags of the CPU. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> cpu_capabilities &#8211; Contains the capability flags of the CPU. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

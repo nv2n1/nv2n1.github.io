@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gss_assist_display_status(3)"
 name: "globus_gss_assist_display_status"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gss_assist_display_status/"
 description: "GSSAPI Result Status Strings –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> GSSAPI Result Status Strings &#8211; </p>
 <p> Display Error Status from a GSSAPI Result.</p>
 <h3>Functions</h3>

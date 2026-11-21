@@ -1,4 +1,5 @@
 ---
+
 title: "ltdbtool(1)"
 name: "ltdbtool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ltdbtool/"
 description: "ltdbtool – manipulate CTDB’s local TDB files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ltdbtool &#8211; manipulate CTDB&#8217;s local TDB files </p>
 <h2>SYNOPSIS</h2>
 <dl>

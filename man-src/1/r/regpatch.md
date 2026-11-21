@@ -1,4 +1,5 @@
 ---
+
 title: "regpatch(1)"
 name: "regpatch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-regpatch/"
 description: "regpatch – Applies registry patches to registry files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> regpatch &#8211; Applies registry patches to registry files </p>
 <h2>SYNOPSIS</h2>
 <dl>

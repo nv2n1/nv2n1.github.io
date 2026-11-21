@@ -1,4 +1,5 @@
 ---
+
 title: "globus_rls_client_status(3)"
 name: "globus_rls_client_status"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_rls_client_status/"
 description: "Status Codes –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Status Codes &#8211; </p>
 <p> All of the functions in the API that return status return it in a globus_result_t structure.</p>
 <h3>Defines</h3>

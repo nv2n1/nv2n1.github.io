@@ -1,4 +1,5 @@
 ---
+
 title: "epydoc(1)"
 name: "epydoc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-epydoc/"
 description: "epydoc – generate API documentation from Python docstrings"
 ---
 
-<h2>NAME</h2>
 <p> epydoc &#8211; generate API documentation from Python docstrings</p>
 <h2>SYNOPSIS</h2>
 <dl>

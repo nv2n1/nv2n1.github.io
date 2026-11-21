@@ -1,4 +1,5 @@
 ---
+
 title: "bson_get_minor_version(3)"
 name: "bson_get_minor_version"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_get_minor_version/"
 description: "bson_get_minor_version() – Get the middle number in libbson’s MAJOR.MINOR.MICRO release version."
 ---
 
-<h2>NAME</h2>
 <p> bson_get_minor_version() &#8211; Get the middle number in libbson&#8217;s MAJOR.MINOR.MICRO release version.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

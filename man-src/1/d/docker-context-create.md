@@ -1,4 +1,5 @@
 ---
+
 title: "docker-context-create(1)"
 name: "docker-context-create"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-context-create/"
 description: "docker-context-create – Create a context"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-context-create &#8211; Create a context </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker context create [OPTIONS] CONTEXT</code> </p>

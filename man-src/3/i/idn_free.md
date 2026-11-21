@@ -1,4 +1,5 @@
 ---
+
 title: "idn_free(3)"
 name: "idn_free"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-idn_free/"
 description: "idn_free – API function"
 ---
 
-<h2>NAME</h2>
 <p> idn_free &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;idn.h&gt;</code> </p>

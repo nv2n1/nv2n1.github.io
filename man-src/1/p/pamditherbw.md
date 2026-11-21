@@ -1,4 +1,5 @@
 ---
+
 title: "pamditherbw(1)"
 name: "pamditherbw"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamditherbw/"
 description: "pamditherbw – dither grayscale image to black and white"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamditherbw &#8211; dither grayscale image to black and white</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamditherbw</code> </p>

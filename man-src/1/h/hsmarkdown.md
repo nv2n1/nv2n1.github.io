@@ -1,4 +1,5 @@
 ---
+
 title: "hsmarkdown(1)"
 name: "hsmarkdown"
 section: "1"
@@ -6,12 +7,7 @@ letter: "h"
 url: "/docs/linux/man/1-hsmarkdown/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- hsmarkdown - convert markdown-formatted text to HTML 
+hsmarkdown - convert markdown-formatted text to HTML 
 
 <h2>SYNOPSIS</h2>
 

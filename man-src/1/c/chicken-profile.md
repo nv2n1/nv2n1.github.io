@@ -1,4 +1,5 @@
 ---
+
 title: "chicken-profile(1)"
 name: "chicken-profile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-chicken-profile/"
 description: "chicken-profile – generate a report from profile-information"
 ---
 
-<h2 class="name">NAME</h2>
 <p> chicken-profile &#8211; generate a report from profile-information</p>
 <h2>SYNOPSIS</h2>
 <p> <code>chicken-profile</code> [ <i>filename</i> | <i>option &#8230;</i> ] </p>

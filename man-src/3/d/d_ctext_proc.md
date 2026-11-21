@@ -1,4 +1,5 @@
 ---
+
 title: "d_ctext_proc(3)"
 name: "d_ctext_proc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-d_ctext_proc/"
 description: "d_text_proc, d_ctext_proc, d_rtext_proc – Dialogs procedure drawing text onto the screen. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> d_text_proc, d_ctext_proc, d_rtext_proc &#8211; Dialogs procedure drawing text onto the screen. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

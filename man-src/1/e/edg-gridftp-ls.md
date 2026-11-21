@@ -1,4 +1,5 @@
 ---
+
 title: "edg-gridftp-ls(1)"
 name: "edg-gridftp-ls"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-edg-gridftp-ls/"
 description: "edg-gridftp-ls – List a file or contents of directory."
 ---
 
-<h2 class="name">NAME</h2>
 <p> edg-gridftp-ls &#8211; List a file or contents of directory. </p>
 <h2>SYNOPSIS</h2>
 <p> edg-gridftp-ls [<code>&#8211;proxy</code>=<i>proxy</i>] [<code>&#8211;timeout</code>=<i>timeout</i>] [<code>&#8211;verbose</code>] [<code>&#8211;noauth</code>] <i></i><font SIZE="-1"><i>URL</i></font><i></i> </p>

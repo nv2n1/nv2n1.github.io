@@ -1,4 +1,5 @@
 ---
+
 title: "infocmp(1)"
 name: "infocmp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-infocmp/"
 description: "infocmp – compare or print out terminfo descriptions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>infocmp</code> &#8211; compare or print out <i>terminfo</i> descriptions </p>
 <h2>SYNOPSIS</h2>
 <p> <code>infocmp</code> [<code>-1CDEFGIKLTUVWcdegilnpqrtux</code>] </p>

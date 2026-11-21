@@ -1,4 +1,5 @@
 ---
+
 title: "getmode(3)"
 name: "getmode"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getmode/"
 description: "getmode setmode – modify mode bits"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>getmode</code> <code>setmode</code> &#8211; modify mode bits </p>
 <h2>LIBRARY</h2>
 <p> Lb libbsd</p>

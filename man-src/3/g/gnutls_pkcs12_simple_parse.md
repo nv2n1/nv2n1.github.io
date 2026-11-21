@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pkcs12_simple_parse(3)"
 name: "gnutls_pkcs12_simple_parse"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_pkcs12_simple_parse/"
 description: "gnutls_pkcs12_simple_parse – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_pkcs12_simple_parse &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs12.h&gt;</code> </p>

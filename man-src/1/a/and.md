@@ -1,4 +1,5 @@
 ---
+
 title: "and(1)"
 name: "and"
 section: "1"
@@ -6,10 +7,7 @@ letter: "a"
 url: "/docs/linux/man/1-and/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- and - conditionally execute a command
+and - conditionally execute a command
 
 <h3>Synopsis</h3>
 

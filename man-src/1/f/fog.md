@@ -1,4 +1,5 @@
 ---
+
 title: "fog(1)"
 name: "fog"
 section: "1"
@@ -6,9 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-fog/"
 ---
 
-<h2>NAME</h2>
-
- Fog - The console Form Designer for GNU/Linux Version 1.4
+Fog - The console Form Designer for GNU/Linux Version 1.4
 
 <h2>DESCRIPTION</h2>
 

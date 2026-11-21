@@ -1,4 +1,5 @@
 ---
+
 title: "pkcheck(1)"
 name: "pkcheck"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pkcheck/"
 description: "pkcheck – Check whether a process is authorized"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pkcheck &#8211; Check whether a process is authorized </p>
 <h2>SYNOPSIS</h2>
 <dl>

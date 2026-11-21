@@ -1,4 +1,5 @@
 ---
+
 title: "jstack(1)"
 name: "jstack"
 section: "1"
@@ -6,7 +7,7 @@ letter: "j"
 url: "/docs/linux/man/1-jstack/"
 description: "jstack – Prints Java thread stack traces for a Java process, core file, or remote debug server. This command is experimental and unsupported."
 ---
-<h2>NAME</h2>
+
 <p> jstack - Prints Java thread stack traces for a Java process, core file, or remote debug server. This command is experimental and unsupported.  </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

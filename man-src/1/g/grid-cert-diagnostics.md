@@ -1,4 +1,5 @@
 ---
+
 title: "grid-cert-diagnostics(1)"
 name: "grid-cert-diagnostics"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grid-cert-diagnostics/"
 description: "grid-cert-diagnostics – Print diagnostic information about certificates and keys"
 ---
 
-<h2 class="name">NAME</h2>
 <p> grid-cert-diagnostics &#8211; Print diagnostic information about certificates and keys </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grid-cert-diagnostics</code> [ -h | -help ] </p>

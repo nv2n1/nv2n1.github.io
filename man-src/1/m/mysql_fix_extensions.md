@@ -1,4 +1,5 @@
 ---
+
 title: "mysql_fix_extensions(1)"
 name: "mysql_fix_extensions"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysql_fix_extensions/"
 description: "mysql_fix_extensions – normalize table file name extensions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysql_fix_extensions &#8211; normalize table file name extensions </p>
 <h2>SYNOPSIS</h2>
 <dl>

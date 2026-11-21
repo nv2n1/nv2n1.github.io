@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_hash_get_len(3)"
 name: "gnutls_hash_get_len"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_hash_get_len/"
 description: "gnutls_hash_get_len – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_hash_get_len &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/crypto.h&gt;</code> </p>

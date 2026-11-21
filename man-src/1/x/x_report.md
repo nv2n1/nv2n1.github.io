@@ -1,4 +1,5 @@
 ---
+
 title: "x_report(1)"
 name: "x_report"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-x_report/"
 description: "x_report – Report Cross-Over Error Statistics for Cruises"
 ---
 
-<h2>NAME</h2>
 <p> <code>x_report</code> &#8211; Report Cross-Over Error Statistics for Cruises</p>
 <h2>SYNOPSIS</h2>
 <p> <code>x_report</code> [ <i>leg</i> ] [ <code>-X</code><i>legbase</i> ] [ <code>-G</code> ] [ <code>-M</code> ] [ <code>-T</code> ]</p>

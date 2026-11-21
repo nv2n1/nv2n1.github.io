@@ -1,4 +1,5 @@
 ---
+
 title: "grdedit(1)"
 name: "grdedit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grdedit/"
 description: "grdedit – Modify header or content of a grid"
 ---
 
-<h2>NAME</h2>
 <p> grdedit &#8211; Modify header or content of a grid</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grdedit</code> <i>grid</i> [ ] [ <i>xname</i>/<i>yname</i>/<i>zname</i>/<i>scale</i>/<i>offset</i>/<i>invalid</i>/<i>title</i>/<i>remark</i> ] [ [<code>a</code>|<code>h</code>|<code>l</code>|<code>r</code>|<code>t</code>|<code>v</code>] ] [ <i>outgrid</i> ] [ <i>parameters</i> ] [ <i>table</i> ] [ <i>region</i> ] [ ] [ ] [ [<i>level</i>] ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

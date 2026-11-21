@@ -1,4 +1,5 @@
 ---
+
 title: "gvpr(1)"
 name: "gvpr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gvpr/"
 description: "gvpr – graph pattern scanning and processing language"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gvpr &#8211; graph pattern scanning and processing language </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gvpr</code> [<code>-icnqV?</code>] [ <code>-o</code> <i>outfile</i> ] [ <code>-a</code> <i>args</i> ] [ <i>&#8216;prog&#8217;</i> | <code>-f</code> <i>progfile</i> ] [ <i>files </i> ]</p>

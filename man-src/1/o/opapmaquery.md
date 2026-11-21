@@ -1,4 +1,5 @@
 ---
+
 title: "opapmaquery(1)"
 name: "opapmaquery"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-opapmaquery/"
 description: "opapmaquery"
 ---
 
-<h2>NAME</h2>
 <p> opapmaquery </p>
 <p> <code>(All)</code> Performs individual PMA queries against a specific LID. It is very useful in displaying port runtime information.</p>
 <h2>Syntax</h2>

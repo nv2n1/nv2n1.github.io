@@ -1,4 +1,5 @@
 ---
+
 title: "mate-search-tool(1)"
 name: "mate-search-tool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-search-tool/"
 description: "mate-search-tool – the MATE Search Tool"
 ---
 
-<h2>NAME</h2>
 <p> mate-search-tool &#8211; the MATE Search Tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-search-tool</code> [<i>options</i>] </p>

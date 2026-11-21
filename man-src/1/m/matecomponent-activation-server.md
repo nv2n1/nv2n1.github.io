@@ -1,4 +1,5 @@
 ---
+
 title: "matecomponent-activation-server(1)"
 name: "matecomponent-activation-server"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-matecomponent-activation-server/"
 description: "matecomponent-activation-server – MATE component tracker"
 ---
 
-<h2>NAME</h2>
 <p> matecomponent-activation-server &#8211; MATE component tracker</p>
 <h2>DESCRIPTION</h2>
 <p> This application tracks information about installed components and brokers components, in conjunction with its client library; libmatecomponent-activation. </p>

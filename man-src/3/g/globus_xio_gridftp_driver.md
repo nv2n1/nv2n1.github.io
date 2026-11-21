@@ -1,4 +1,5 @@
 ---
+
 title: "globus_xio_gridftp_driver(3)"
 name: "globus_xio_gridftp_driver"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_xio_gridftp_driver/"
 description: "Globus XIO GRIDFTP Client Driver –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Globus XIO GRIDFTP Client Driver &#8211; </p>
 <h3>Typedefs</h3>
 <p> typedef enum<br />

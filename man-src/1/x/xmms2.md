@@ -1,4 +1,5 @@
 ---
+
 title: "xmms2(1)"
 name: "xmms2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xmms2/"
 description: "xmms2 – offers a simple command-line interface to the XMMS2 daemon"
 ---
 
-<h2>NAME</h2>
 <p> xmms2 &#8211; offers a simple command-line interface to the XMMS2 daemon</p>
 <h2>SYNOPSIS</h2>
 <p> <i>xmms2</i> <code>command</code> <i>xmms2</i> <code>mlib</code> <code>command</code> <i>xmms2</i> <code>playlist</code> <code>command</code> <i>xmms2</i> <code>coll</code> <code>command </code></p>

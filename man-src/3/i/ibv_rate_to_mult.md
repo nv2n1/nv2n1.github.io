@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_rate_to_mult(3)"
 name: "ibv_rate_to_mult"
 section: "3"
@@ -6,12 +7,7 @@ letter: "i"
 url: "/docs/linux/man/3-ibv_rate_to_mult/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- ibv_rate_to_mult - convert IB rate enumeration to multiplier of 2.5 Gbit/sec 
+ibv_rate_to_mult - convert IB rate enumeration to multiplier of 2.5 Gbit/sec 
 
  mult_to_ibv_rate - convert multiplier of 2.5 Gbit/sec to an IB rate enumeration 
 

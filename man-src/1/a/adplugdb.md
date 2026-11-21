@@ -1,4 +1,5 @@
 ---
+
 title: "adplugdb(1)"
 name: "adplugdb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-adplugdb/"
 description: "adplugdb – AdPlug database maintenance utility"
 ---
 
-<h2>NAME</h2>
 <p> adplugdb &#8211; AdPlug database maintenance utility</p>
 <h2>SYNOPSIS</h2>
 <p> <code>adplugdb</code> [OPTION]&#8230; COMMAND [ARGUMENT]&#8230;</p>

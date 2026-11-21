@@ -1,4 +1,5 @@
 ---
+
 title: "cdk_entry(3)"
 name: "cdk_entry"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cdk_entry/"
 description: "cdk_entry – curses text-entry widget."
 ---
 
-<h2>NAME</h2>
 <p> cdk_entry &#8211; curses text-entry widget.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>

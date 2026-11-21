@@ -1,4 +1,5 @@
 ---
+
 title: "xscreensaver(1)"
 name: "xscreensaver"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xscreensaver/"
 description: "xscreensaver – extensible screen saver and screen locking framework"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xscreensaver &#8211; extensible screen saver and screen locking framework </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xscreensaver</code> [-display <i>host:display.screen</i>] [-verbose] [-no-splash] [-no-capture-stderr] [-log <i>filename</i>]</p>

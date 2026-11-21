@@ -1,4 +1,5 @@
 ---
+
 title: "nxtvepg(1)"
 name: "nxtvepg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nxtvepg/"
 description: "nxtvepg – Receiving, Browsing and Analyzing Nextview EPG data"
 ---
 
-<h2>NAME</h2>
 <p> nxtvepg &#8211; Receiving, Browsing and Analyzing Nextview EPG data</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nxtvepg</code> [&nbsp;<wbr>options&nbsp;<wbr>] [&nbsp;<wbr>database&nbsp;<wbr>] </p>

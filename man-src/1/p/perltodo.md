@@ -1,4 +1,5 @@
 ---
+
 title: "perltodo(1)"
 name: "perltodo"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perltodo/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perltodo - Link to the Perl to-do list 
+perltodo - Link to the Perl to-do list 
 
 <h2>DESCRIPTION</h2>
 

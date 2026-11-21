@@ -1,4 +1,5 @@
 ---
+
 title: "gmttrack(1)"
 name: "gmttrack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gmttrack/"
 description: "gmttrack – A shiptrack plotting program"
 ---
 
-<h2>NAME</h2>
 <p> gmttrack &#8211; A shiptrack plotting program</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gmttrack</code> <i>leg-ids</i> <code>-R</code><i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[<code>r</code>] <code>-J</code><i>parameters</i> [ <code>-B</code>[<code>p</code>|<code>s</code>]<i>parameters</i> ] [ <code>-M</code><i>trackticks</i> ] [ <code>-W</code><i>pen</i>[<i>red/green/blue</i>][<code>OA</code>] ] [ <code>-A</code>[<i>size</i>] ] [ <code>-K</code> ] [ <code>-O</code> ] [ <code>-P</code> ] [ <code>-U</code>[<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ <code>-V</code> ] [ <code>-X</code>[<code>a</code>|<code>c</code>|<code>r</code>][<i>x-shift</i>[<code>u</code>]] ] [ <code>-Y</code>[<code>a</code>|<code>c</code>|<code>r</code>][<i>y-shift</i>[<code>u</code>]] ] [ <code>-c</code><i>copies</i> ]</p>

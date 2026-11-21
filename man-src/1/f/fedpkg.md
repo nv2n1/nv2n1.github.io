@@ -1,4 +1,5 @@
 ---
+
 title: "fedpkg(1)"
 name: "fedpkg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fedpkg/"
 description: "fedpkg – RPM Packaging utility"
 ---
 
-<h2>NAME</h2>
 <p> fedpkg &#8211; RPM Packaging utility</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fedpkg</code> [ <i>global_options</i> ] <i>command</i> [ <i>command_options</i> ] [ <i>command_arguments</i> ]<br />

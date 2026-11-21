@@ -1,4 +1,5 @@
 ---
+
 title: "obspectrophore(1)"
 name: "obspectrophore"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-obspectrophore/"
 description: "obspectrophore – SPECTROPHORE calculator"
 ---
 
-<h2>NAME</h2>
 <p> <code>obspectrophore</code> &#8211; SPECTROPHORE calculator</p>
 <h2>SYNOPSIS</h2>
 <p> [<i>options</i> ] &#8211;<code>i </code><i>input_file</i> </p>

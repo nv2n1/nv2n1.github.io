@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_get_memory_allocators(3)"
 name: "memcached_get_memory_allocators"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memcached_get_memory_allocators/"
 description: "memcached_get_memory_allocators – libmemcached Documentation"
 ---
 
-<h2>NAME</h2>
 <p> memcached_get_memory_allocators &#8211; libmemcached Documentation </p>
 <p> Manage memory allocator functions</p>
 <h2>SYNOPSIS</h2>

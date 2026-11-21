@@ -1,4 +1,5 @@
 ---
+
 title: "knsupdate(1)"
 name: "knsupdate"
 section: "1"
@@ -6,7 +7,6 @@ letter: "k"
 url: "/docs/linux/man/1-knsupdate/"
 ---
 
-<h2>NAME</h2>
 <dl>
 <dt><code>knsupdate</code></dt>
 <dd> &#8211; Dynamic DNS update utility (libknot equivalent of ISC nsupdate)</dd></dl>

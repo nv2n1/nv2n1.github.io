@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-resv-report(1)"
 name: "nvme-resv-report"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-resv-report/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nvme-resv-report - Send NVMe Reservation Report, parse the result 
+nvme-resv-report - Send NVMe Reservation Report, parse the result 
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "fts-rest-ban(1)"
 name: "fts-rest-ban"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fts-rest-ban/"
 description: "fts-rest-ban"
 ---
 
-<h2>NAME</h2>
 <p> fts-rest-ban</p>
 <h2>SYNOPIS</h2>
 <p> Usage: fts-rest-ban [options]</p>

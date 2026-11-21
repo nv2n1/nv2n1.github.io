@@ -1,4 +1,5 @@
 ---
+
 title: "usbguard(1)"
 name: "usbguard"
 section: "1"
@@ -6,11 +7,7 @@ letter: "u"
 url: "/docs/linux/man/1-usbguard/"
 ---
 
-<h2>NAME</h2>
-
- 
-
- usbguard -- USBGuard command-line interface
+usbguard -- USBGuard command-line interface
 
 <h2>SYNOPSIS</h2>
 

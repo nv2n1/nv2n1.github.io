@@ -1,4 +1,5 @@
 ---
+
 title: "create_cvsignore(1)"
 name: "create_cvsignore"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-create_cvsignore/"
 description: "create_cvsignore – Create preliminary .cvsignore in the current directory"
 ---
 
-<h2>NAME</h2>
 <p> create_cvsignore &#8211; Create preliminary .cvsignore in the current directory</p>
 <h2>SYNOPSIS</h2>
 <dl>

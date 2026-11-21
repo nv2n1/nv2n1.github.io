@@ -1,4 +1,5 @@
 ---
+
 title: "pg_ctl(1)"
 name: "pg_ctl"
 section: "1"
@@ -6,7 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-pg_ctl/"
 description: "pg_ctl – initialize, start, stop, or control a PostgreSQL server"
 ---
-<h2 class="name">NAME</h2>
+
 <p> pg_ctl - initialize, start, stop, or control a PostgreSQL server </p>
 <h2>SYNOPSIS</h2>
 <dl>

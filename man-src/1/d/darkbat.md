@@ -1,4 +1,5 @@
 ---
+
 title: "darkbat(1)"
 name: "darkbat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-darkbat/"
 description: "darkbat – CCD dark-frame correction"
 ---
 
-<h2 class="name">NAME</h2>
 <p> darkbat &#8211; CCD dark-frame correction</p>
 <h2>SYNOPSIS</h2>
 <p> <code>darkbat </code><i>[options] </i><code>dark=</code><i>file source_file &#8230;</i> </p>

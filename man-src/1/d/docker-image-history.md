@@ -1,4 +1,5 @@
 ---
+
 title: "docker-image-history(1)"
 name: "docker-image-history"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-image-history/"
 description: "docker-image-history – Show the history of an image"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-image-history &#8211; Show the history of an image </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker image history [OPTIONS] IMAGE</code> </p>

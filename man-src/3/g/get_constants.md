@@ -1,4 +1,5 @@
 ---
+
 title: "get_constants(3)"
 name: "get_constants"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_constants/"
 description: "get_constants — retrieve a list of constant values from a dirfile"
 ---
 
-<h2>NAME</h2>
 <p> get_constants &#8212; retrieve a list of constant values from a dirfile</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

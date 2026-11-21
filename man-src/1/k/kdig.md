@@ -1,4 +1,5 @@
 ---
+
 title: "kdig(1)"
 name: "kdig"
 section: "1"
@@ -6,7 +7,6 @@ letter: "k"
 url: "/docs/linux/man/1-kdig/"
 ---
 
-<h2>NAME</h2>
 <dl>
 <dt><code>kdig</code></dt>
 <dd> &#8211; Advanced DNS lookup utility (libknot equivalent of ISC dig)</dd></dl>

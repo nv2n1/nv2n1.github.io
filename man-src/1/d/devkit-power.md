@@ -1,4 +1,5 @@
 ---
+
 title: "devkit-power(1)"
 name: "devkit-power"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-devkit-power/"
 description: "devkit-power – DeviceKit-power command line tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> devkit-power &#8211; DeviceKit-power command line tool </p>
 <h2>SYNOPSIS</h2>
 <dl>

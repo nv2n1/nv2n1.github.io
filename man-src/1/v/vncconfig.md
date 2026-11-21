@@ -1,4 +1,5 @@
 ---
+
 title: "vncconfig(1)"
 name: "vncconfig"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vncconfig/"
 description: "vncconfig – configure and control a VNC server"
 ---
 
-<h2>NAME</h2>
 <p> vncconfig &#8211; configure and control a VNC server</p>
 <h2>SYNOPSIS</h2>
 <p> <code>vncconfig</code> [<i>parameters</i>]<br />

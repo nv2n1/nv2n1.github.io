@@ -1,4 +1,5 @@
 ---
+
 title: "cvt(1)"
 name: "cvt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cvt/"
 description: "cvt – calculate VESA CVT mode lines"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cvt &#8211; calculate VESA CVT mode lines </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cvt</code> [<code>-v</code>|<code>&#8211;verbose</code>] [<code>-r</code>|<code>&#8211;reduced</code>] <i>h-resolution</i> <i>v-resolution</i> [<code>refresh</code>]</p>

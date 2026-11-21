@@ -1,4 +1,5 @@
 ---
+
 title: "cgbsvx(3)"
 name: "cgbsvx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgbsvx/"
 description: "cgbsvx.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cgbsvx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

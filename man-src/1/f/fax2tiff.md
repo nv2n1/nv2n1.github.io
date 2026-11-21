@@ -1,4 +1,5 @@
 ---
+
 title: "fax2tiff(1)"
 name: "fax2tiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fax2tiff/"
 description: "fax2tiff – create a TIFF Class F fax file from raw fax data"
 ---
 
-<h2>NAME</h2>
 <p> fax2tiff &#8211; create a <font SIZE="-1">TIFF</font> Class F fax file from raw fax data</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fax2tiff</code> [ <i>options</i> ] [ <code>-o</code> <i>output.tif</i> ] <i>input.raw</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_knownhost_add(3)"
 name: "libssh2_knownhost_add"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_knownhost_add/"
 description: "libssh2_knownhost_add – add a known host"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_knownhost_add &#8211; add a known host</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

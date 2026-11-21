@@ -1,4 +1,5 @@
 ---
+
 title: "webalizer(1)"
 name: "webalizer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-webalizer/"
 description: "webalizer – A web server log file analysis tool."
 ---
 
-<h2>NAME</h2>
 <p> webalizer &#8211; A web server log file analysis tool.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>webalizer</code> [<i> option &#8230; </i>] [<i> log-file </i>] </p>

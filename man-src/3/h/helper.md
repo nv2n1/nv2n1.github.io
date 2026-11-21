@@ -1,4 +1,5 @@
 ---
+
 title: "helper(3)"
 name: "helper"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-helper/"
 description: "QuantLib::HazardRate – Hazard-rate-curve traits."
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::HazardRate &#8211; Hazard-rate-curve traits. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/credit/probabilitytraits.hpp&gt; </p>

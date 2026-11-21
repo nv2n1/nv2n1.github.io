@@ -1,4 +1,5 @@
 ---
+
 title: "amtterm(1)"
 name: "amtterm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-amtterm/"
 description: "amtterm – Intel AMT serial-over-lan (sol) client."
 ---
 
-<h2>NAME</h2>
 <p> amtterm &#8211; Intel AMT serial-over-lan (sol) client.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>amtterm [ options ] host [ port ]</code></p>

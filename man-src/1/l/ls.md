@@ -1,4 +1,5 @@
 ---
+
 title: "ls(1)"
 name: "ls"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ls/"
 description: "ls – list directory contents"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ls &#8211; list directory contents </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ls</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "octave(1)"
 name: "octave"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-octave/"
 description: "octave – A high-level interactive language for numerical computations."
 ---
 
-<h2>NAME</h2>
 <p> octave &#8211; A high-level interactive language for numerical computations.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>octave</code> [<i>options</i>]&#8230; [<i>file</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ccrewrite(1)"
 name: "ccrewrite"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ccrewrite/"
 description: "ccrewrite – Rewrite CLR assemblies for runtime code contract verification."
 ---
 
-<h2>NAME</h2>
 <p> ccrewrite &#8211; Rewrite CLR assemblies for runtime code contract verification.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ccrewrite &#8211;assembly=&lt;assembly&gt; [options]</code></p>

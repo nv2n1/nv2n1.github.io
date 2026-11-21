@@ -1,4 +1,5 @@
 ---
+
 title: "com_err(3)"
 name: "com_err"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-com_err/"
 description: "com_err – common error display routine"
 ---
 
-<h2>NAME</h2>
 <p> com_err &#8211; common error display routine</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

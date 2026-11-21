@@ -1,4 +1,5 @@
 ---
+
 title: "git-rm(1)"
 name: "git-rm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-rm/"
 description: "git-rm – Remove files from the working tree and from the index"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-rm &#8211; Remove files from the working tree and from the index </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

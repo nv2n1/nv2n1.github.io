@@ -1,4 +1,5 @@
 ---
+
 title: "ldap_dcedn2dn(3)"
 name: "ldap_dcedn2dn"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldap_dcedn2dn/"
 description: "ldap_get_dn, ldap_explode_dn, ldap_explode_rdn, ldap_dn2ufn – LDAP DN handling routines"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ldap_get_dn, ldap_explode_dn, ldap_explode_rdn, ldap_dn2ufn &#8211; LDAP DN handling routines </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>

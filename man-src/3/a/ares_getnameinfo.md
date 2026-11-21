@@ -1,4 +1,5 @@
 ---
+
 title: "ares_getnameinfo(3)"
 name: "ares_getnameinfo"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ares_getnameinfo/"
 description: "ares_getnameinfo – Address-to-nodename translation in protocol-independent manner"
 ---
 
-<h2>NAME</h2>
 <p> ares_getnameinfo &#8211; Address-to-nodename translation in protocol-independent manner</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

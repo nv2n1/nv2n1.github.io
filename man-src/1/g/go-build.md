@@ -1,4 +1,5 @@
 ---
+
 title: "go-build(1)"
 name: "go-build"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-go-build/"
 description: "go-build – compile the packages named by the import paths"
 ---
 
-<h2 class="name">NAME</h2>
 <p> go-build &#8211; compile the packages named by the import paths </p>
 <h2>SYNOPSIS</h2>
 <p> <code>go build</code> [<code>-o</code> <i>output</i>] [<i>build flags</i>] [<i>packages</i>]</p>

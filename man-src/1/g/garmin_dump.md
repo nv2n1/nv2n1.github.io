@@ -1,4 +1,5 @@
 ---
+
 title: "garmin_dump(1)"
 name: "garmin_dump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-garmin_dump/"
 description: "garmin_dump – convert .gmn files into xml data"
 ---
 
-<h2>NAME</h2>
 <p> garmin_dump &#8211; convert .gmn files into xml data</p>
 <h2>SYNOPSIS</h2>
 <p> <code>garmin_dump</code> <i>file</i> </p>

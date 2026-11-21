@@ -1,4 +1,5 @@
 ---
+
 title: "ledger(1)"
 name: "ledger"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ledger/"
 description: "ledger – Command-line, double-entry account reporting tool"
 ---
 
-<h2>NAME</h2>
 <p> <code>ledger</code> &#8211; Command-line, double-entry account reporting tool</p>
 <h2>SYNOPSIS</h2>
 <p> [<i>command</i> ] [<i>options</i> ] [<i>arguments</i> ]</p>

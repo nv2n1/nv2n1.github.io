@@ -1,4 +1,5 @@
 ---
+
 title: "gfrm(1)"
 name: "gfrm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gfrm/"
 description: "gfrm – manual page for gfrm (glusterfs-coreutils) 0.2.0"
 ---
 
-<h2>NAME</h2>
 <p> gfrm &#8211; manual page for gfrm (glusterfs-coreutils) 0.2.0</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gfrm</code> [<i>OPTION</i>]&#8230; <i>URL</i></p>

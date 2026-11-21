@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-subsystem-reset(1)"
 name: "nvme-subsystem-reset"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-subsystem-reset/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nvme-subsystem-reset - Reset the nvme subsystem. 
+nvme-subsystem-reset - Reset the nvme subsystem. 
 
 <h2>SYNOPSIS</h2>
 

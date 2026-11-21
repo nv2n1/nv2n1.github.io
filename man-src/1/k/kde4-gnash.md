@@ -1,4 +1,5 @@
 ---
+
 title: "kde4-gnash(1)"
 name: "kde4-gnash"
 section: "1"
@@ -6,9 +7,7 @@ letter: "k"
 url: "/docs/linux/man/1-kde4-gnash/"
 ---
 
-<h2>NAME</h2>
-
- gnash, gtk-gnash, kde4-gnash - GNU Flash (SWF) Player
+gnash, gtk-gnash, kde4-gnash - GNU Flash (SWF) Player
 
 <h2>Synopsis</h2>
 

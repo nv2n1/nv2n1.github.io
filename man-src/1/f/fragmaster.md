@@ -1,4 +1,5 @@
 ---
+
 title: "fragmaster(1)"
 name: "fragmaster"
 section: "1"
@@ -6,7 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-fragmaster/"
 description: "fragmaster – Using psfrag constructs with pdflatex"
 ---
-<h2 class="name">NAME</h2>
+
 <p> fragmaster - Using psfrag constructs with pdflatex </p>
 <h2>SYNOPSIS</h2>
 <pre><code> fragmaster [options]

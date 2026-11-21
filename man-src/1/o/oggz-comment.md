@@ -1,4 +1,5 @@
 ---
+
 title: "oggz-comment(1)"
 name: "oggz-comment"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-oggz-comment/"
 description: "oggz-comment — List or edit comments in an Ogg file."
 ---
 
-<h2>NAME</h2>
 <p> oggz-comment &#8212; List or edit comments in an Ogg file.<br />
 &nbsp;<wbr></p>
 <h2>SYNOPSIS</h2>

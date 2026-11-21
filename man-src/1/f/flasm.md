@@ -1,4 +1,5 @@
 ---
+
 title: "flasm(1)"
 name: "flasm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flasm/"
 description: "flasm – A swf bytecode assembler/disassembler"
 ---
 
-<h2>NAME</h2>
 <p> flasm &#8211; A swf bytecode assembler/disassembler</p>
 <h2>SYNOPSIS</h2>
 <p> <code>flasm</code> [<code>-daubzx</code>] <i>filename</i></p>

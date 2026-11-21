@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_cc_switch(3)"
 name: "krb5_cc_switch"
 section: "3"
@@ -6,10 +7,7 @@ letter: "k"
 url: "/docs/linux/man/3-krb5_cc_switch/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- Heimdal Kerberos 5 credential cache functions - 
+Heimdal Kerberos 5 credential cache functions - 
 
 <h3>Functions</h3>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "scene_polygon3d_f(3)"
 name: "scene_polygon3d_f"
 section: "3"
@@ -6,9 +7,6 @@ letter: "s"
 url: "/docs/linux/man/3-scene_polygon3d_f/"
 ---
 
-
- </p>
-<h2>NAME</h2>
 <p> scene_polygon3d, scene_polygon3d_f &#8211; Puts a polygon in the scene rendering list. Allegro game programming library.  </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

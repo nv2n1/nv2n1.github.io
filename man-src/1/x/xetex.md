@@ -1,4 +1,5 @@
 ---
+
 title: "xetex(1)"
 name: "xetex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xetex/"
 description: "xetex – extended TeX with native support for Unicode, OpenType, system fonts"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xetex &#8211; extended TeX with native support for Unicode, OpenType, system fonts </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xetex</code> [<i>options</i>] [<i></i><code>&amp;</code>format] [<i>file</i>|<i></i><code>\</code>commands]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "mh-chart(1)"
 name: "mh-chart"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mh-chart/"
 description: "mh-chart – Chart of nmh Commands"
 ---
 
-<h2>NAME</h2>
 <p> mh-chart &#8211; Chart of nmh Commands</p>
 <h2>SYNOPSIS</h2>
 <dl>

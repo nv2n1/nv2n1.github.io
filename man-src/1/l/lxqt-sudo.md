@@ -1,4 +1,5 @@
 ---
+
 title: "lxqt-sudo(1)"
 name: "lxqt-sudo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lxqt-sudo/"
 description: "lxqt-sudo, lxsu – execute a command as privileged user"
 ---
 
-<h2>NAME</h2>
 <p> <code>lxqt-sudo</code>, <code>lxsu</code> &#8211; execute a command as privileged user</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lxqt-sudo</code> <i>option</i> [<i>command</i> [<i>arguments</i>]]<br />

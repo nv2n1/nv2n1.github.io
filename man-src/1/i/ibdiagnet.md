@@ -1,4 +1,5 @@
 ---
+
 title: "ibdiagnet(1)"
 name: "ibdiagnet"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ibdiagnet/"
 description: "ibdiagnet – IB diagnostic net"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ibdiagnet &#8211; IB diagnostic net </p>
 <h2>SYNOPSYS</h2>
 <p> ibdiagnet [-c &lt;count&gt;] [-v] [-r] [-vlr] [-u] [-o &lt;out-dir&gt;]<br />

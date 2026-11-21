@@ -1,4 +1,5 @@
 ---
+
 title: "jackrec(1)"
 name: "jackrec"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jackrec/"
 description: "jackrec – JACK toolkit client for recording audio"
 ---
 
-<h2>NAME</h2>
 <p> jackrec &#8211; JACK toolkit client for recording audio</p>
 <h2>SYNOPSIS</h2>
 <p> <code>jackrec</code> -f filename -d seconds [ -b bitdepth ] port1 [ port2 &#8230; ]</p>

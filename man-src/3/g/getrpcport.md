@@ -1,4 +1,5 @@
 ---
+
 title: "getrpcport(3)"
 name: "getrpcport"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getrpcport/"
 description: "getrpcport – get RPC port number"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getrpcport &#8211; get RPC port number </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

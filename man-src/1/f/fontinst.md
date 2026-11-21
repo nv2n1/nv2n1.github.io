@@ -1,4 +1,5 @@
 ---
+
 title: "fontinst(1)"
 name: "fontinst"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fontinst/"
 description: "fontinst – utility to run TeX as fontinst"
 ---
 
-<h2>NAME</h2>
 <p> fontinst &#8211; utility to run TeX as fontinst </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fontinst</code> <i>package</i> </p>

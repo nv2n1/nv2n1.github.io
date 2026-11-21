@@ -1,4 +1,5 @@
 ---
+
 title: "pdns_server(1)"
 name: "pdns_server"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pdns_server/"
 description: "pdns_server – The PowerDNS nameserver"
 ---
 
-<h2>NAME</h2>
 <p> pdns_server &#8211; The PowerDNS nameserver</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdns_server [options]</code></p>

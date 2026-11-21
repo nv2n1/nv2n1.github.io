@@ -1,4 +1,5 @@
 ---
+
 title: "ares_destroy_options(3)"
 name: "ares_destroy_options"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ares_destroy_options/"
 description: "ares_destroy_options – Destroy options initialized with ares_save_options"
 ---
 
-<h2>NAME</h2>
 <p> ares_destroy_options &#8211; Destroy options initialized with ares_save_options</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

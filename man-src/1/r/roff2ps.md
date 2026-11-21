@@ -1,4 +1,5 @@
 ---
+
 title: "roff2ps(1)"
 name: "roff2ps"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-roff2ps/"
 description: "roff2ps – transform roff code into ps mode"
 ---
 
-<h2 class="name">NAME</h2>
 <p> roff2ps &#8211; transform roff code into ps mode </p>
 <h2>SYNOPSIS</h2>
 <p> [<i>groffer-option</i> &#8230; ] [ <code>&#8212;</code> ] [<i>filespec</i> &#8230; ] <code>-h</code> <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code> </p>

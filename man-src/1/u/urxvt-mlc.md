@@ -1,4 +1,5 @@
 ---
+
 title: "urxvt-mlc(1)"
 name: "urxvt-mlc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-urxvt-mlc/"
 description: "urxvt-mlc – control the urxvt-mld daemon"
 ---
 
-<h2 class="name">NAME</h2>
 <p> urxvt-mlc &#8211; control the urxvt-mld daemon </p>
 <h2>SYNOPSIS</h2>
 <p> <code>urxvt-mlc</code> [same options as for urxvt-ml]</p>

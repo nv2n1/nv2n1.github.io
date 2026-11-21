@@ -1,4 +1,5 @@
 ---
+
 title: "virt-edit(1)"
 name: "virt-edit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-virt-edit/"
 description: "virt-edit – Edit a file in a virtual machine"
 ---
 
-<h2 class="name">NAME</h2>
 <p> virt-edit &#8211; Edit a file in a virtual machine </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

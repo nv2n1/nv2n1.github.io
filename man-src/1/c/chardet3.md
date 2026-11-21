@@ -1,4 +1,5 @@
 ---
+
 title: "chardet3(1)"
 name: "chardet3"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-chardet3/"
 description: "chardet3 – universal character encoding detector"
 ---
 
-<h2 class="name">NAME</h2>
 <p> chardet3 &#8211; universal character encoding detector </p>
 <h2>SYNOPSIS</h2>
 <p> <code>chardet3</code> [<i>file </i>&#8230;]</p>

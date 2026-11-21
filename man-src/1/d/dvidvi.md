@@ -1,4 +1,5 @@
 ---
+
 title: "dvidvi(1)"
 name: "dvidvi"
 section: "1"
@@ -6,12 +7,7 @@ letter: "d"
 url: "/docs/linux/man/1-dvidvi/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- dvidvi - selects and/or re-arranges pages in a TeX dvi file 
+dvidvi - selects and/or re-arranges pages in a TeX dvi file 
 
 <h2>SYNOPSIS</h2>
 

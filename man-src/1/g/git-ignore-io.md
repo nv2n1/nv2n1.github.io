@@ -1,4 +1,5 @@
 ---
+
 title: "git-ignore-io(1)"
 name: "git-ignore-io"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-ignore-io/"
 description: "git-ignore-io – Get sample gitignore file"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-ignore-io</code> &#8211; Get sample gitignore file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git ignore-io</code> [&lt;OPTIONS&gt;]</p>

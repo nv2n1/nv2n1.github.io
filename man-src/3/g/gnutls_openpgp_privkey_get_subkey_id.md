@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_openpgp_privkey_get_subkey_id(3)"
 name: "gnutls_openpgp_privkey_get_subkey_id"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_openpgp_privkey_get_subkey_id/"
 description: "gnutls_openpgp_privkey_get_subkey_id – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_openpgp_privkey_get_subkey_id &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>

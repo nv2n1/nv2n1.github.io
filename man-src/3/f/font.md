@@ -1,4 +1,5 @@
 ---
+
 title: "font(3)"
 name: "font"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-font/"
 description: "font – A simple 8×8 fixed size font. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> font &#8211; A simple 8&#215;8 fixed size font. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

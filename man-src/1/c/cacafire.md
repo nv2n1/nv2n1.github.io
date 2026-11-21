@@ -1,4 +1,5 @@
 ---
+
 title: "cacafire(1)"
 name: "cacafire"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cacafire/"
 description: "cacademo, cacafire – libcaca’s demonstration applications"
 ---
 
-<h2>NAME</h2>
 <p> cacademo, cacafire &#8211; libcaca&#8217;s demonstration applications</p>
 <h2>SYNOPSIS</h2>
 <p> cacademo </p>

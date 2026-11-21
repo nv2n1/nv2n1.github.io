@@ -1,4 +1,5 @@
 ---
+
 title: "vimdiff(1)"
 name: "vimdiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vimdiff/"
 description: "vimdiff – edit between two and eight versions of a file with Vim and show differences"
 ---
 
-<h2 class="name">NAME</h2>
 <p> vimdiff &#8211; edit between two and eight versions of a file with Vim and show differences </p>
 <h2>SYNOPSIS</h2>
 <p> <code>vimdiff</code> [options] file1 file2 [file3 [file4 [file5 [file6 [file7 [file8]]]]]] </p>

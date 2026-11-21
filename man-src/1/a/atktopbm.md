@@ -1,4 +1,5 @@
 ---
+
 title: "atktopbm(1)"
 name: "atktopbm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-atktopbm/"
 description: "atktopbm – convert Andrew Toolkit raster object to portable bitmap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> atktopbm &#8211; convert Andrew Toolkit raster object to portable bitmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>atktopbm</code> [<i>atkfile</i>]</p>

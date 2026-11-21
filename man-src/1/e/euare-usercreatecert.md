@@ -1,4 +1,5 @@
 ---
+
 title: "euare-usercreatecert(1)"
 name: "euare-usercreatecert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-usercreatecert/"
 description: "euare-usercreatecert – [Eucalyptus only] Create a new signing certificate"
 ---
 
-<h2>NAME</h2>
 <p> euare-usercreatecert &#8211; [Eucalyptus only] Create a new signing certificate</p>
 <h2>SYNOPSIS</h2>
 <p> euare-usercreatecert [&#8211;out FILE] [&#8211;keyout FILE]</p>

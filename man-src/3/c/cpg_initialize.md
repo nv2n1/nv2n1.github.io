@@ -1,4 +1,5 @@
 ---
+
 title: "cpg_initialize(3)"
 name: "cpg_initialize"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cpg_initialize/"
 description: "cpg_initialize – Create a new connection to the CPG service"
 ---
 
-<h2>NAME</h2>
 <p> cpg_initialize &#8211; Create a new connection to the CPG service</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cpg.h&gt;</code> </p>

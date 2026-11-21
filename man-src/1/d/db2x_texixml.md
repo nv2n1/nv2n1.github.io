@@ -1,4 +1,5 @@
 ---
+
 title: "db2x_texixml(1)"
 name: "db2x_texixml"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-db2x_texixml/"
 description: "db2x_texixml – Make Texinfo files from Texi-XML"
 ---
 
-<h2>NAME</h2>
 <p> db2x_texixml &#8211; Make Texinfo files from Texi-XML</p>
 <h2>SYNOPSIS</h2>
 <p> <code>db2x_texixml</code> [options]&#8230; [<i>xml-document</i>]</p>

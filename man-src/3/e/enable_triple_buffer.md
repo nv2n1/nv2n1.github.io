@@ -1,4 +1,5 @@
 ---
+
 title: "enable_triple_buffer(3)"
 name: "enable_triple_buffer"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-enable_triple_buffer/"
 description: "enable_triple_buffer – Enables triple buffering. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> enable_triple_buffer &#8211; Enables triple buffering. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

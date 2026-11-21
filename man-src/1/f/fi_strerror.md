@@ -1,4 +1,5 @@
 ---
+
 title: "fi_strerror(1)"
 name: "fi_strerror"
 section: "1"
@@ -6,12 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-fi_strerror/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- fi_strerror - display libfabric error strings 
+fi_strerror - display libfabric error strings 
 
 <h2>SYNOPSIS</h2>
 

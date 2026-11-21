@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_dnssec_name_new_frm_rr(3)"
 name: "ldns_dnssec_name_new_frm_rr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_dnssec_name_new_frm_rr/"
 description: "ldns_dnssec_name_new, ldns_dnssec_name_new_frm_rr, ldns_dnssec_name_free, ldns_dnssec_name_name, ldns_dnssec_name_set_name, ldns_dnssec_name_set_nsec, ldns_dnssec_name_cmp, ldns_dnssec_name_add_rr,..."
 ---
 
-<h2>NAME</h2>
 <p> ldns_dnssec_name_new, ldns_dnssec_name_new_frm_rr, ldns_dnssec_name_free, ldns_dnssec_name_name, ldns_dnssec_name_set_name, ldns_dnssec_name_set_nsec, ldns_dnssec_name_cmp, ldns_dnssec_name_add_rr, ldns_dnssec_name_find_rrset, ldns_dnssec_name_print </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

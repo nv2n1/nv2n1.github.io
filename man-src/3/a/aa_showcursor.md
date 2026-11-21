@@ -1,4 +1,5 @@
 ---
+
 title: "aa_showcursor(3)"
 name: "aa_showcursor"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_showcursor/"
 description: "aa_showcursor – show the hardware cursor."
 ---
 
-<h2>NAME</h2>
 <p> aa_showcursor &#8211; show the hardware cursor.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

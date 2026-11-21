@@ -1,4 +1,5 @@
 ---
+
 title: "musetup-gtk(1)"
 name: "musetup-gtk"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-musetup-gtk/"
 description: "Musetup-GTK – PyGTK2 Configuration app for Museekd"
 ---
 
-<h2>NAME</h2>
 <p> <code>Musetup-GTK</code> &#8211; PyGTK2 Configuration app for Museekd</p>
 <h2>SYNOPSIS</h2>
 <p> <code>musetup-gtk </code> [-c | &#8211;config &lt;<i>config-filename</i>&gt;] [-h | &#8211;help]</p>

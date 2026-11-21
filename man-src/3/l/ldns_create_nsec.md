@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_create_nsec(3)"
 name: "ldns_create_nsec"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_create_nsec/"
 description: "ldns_create_nsec"
 ---
 
-<h2>NAME</h2>
 <p> ldns_create_nsec </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

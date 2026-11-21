@@ -1,4 +1,5 @@
 ---
+
 title: "scotch_amk_ccc(1)"
 name: "scotch_amk_ccc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-scotch_amk_ccc/"
 description: "amk_ccc, amk_fft2, amk_hy, amk_m2, amk_p2 – create target architectures"
 ---
 
-<h2>NAME</h2>
 <p> <code>amk_ccc, amk_fft2, amk_hy, amk_m2, amk_p2 </code>&#8211; create target architectures</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

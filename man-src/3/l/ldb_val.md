@@ -1,4 +1,5 @@
 ---
+
 title: "ldb_val(3)"
 name: "ldb_val"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldb_val/"
 description: "ldb_val –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ldb_val &#8211; </p>
 <p> Result value.</p>
 <h2>SYNOPSIS</h2>

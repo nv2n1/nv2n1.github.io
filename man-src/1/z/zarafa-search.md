@@ -1,4 +1,5 @@
 ---
+
 title: "zarafa-search(1)"
 name: "zarafa-search"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zarafa-search/"
 description: "zarafa-search – Zarafa Indexed Search Service."
 ---
 
-<h2 class="name">NAME</h2>
 <p> zarafa-search &#8211; Zarafa Indexed Search Service. </p>
 <h2>SYNOPSIS</h2>
 <dl>

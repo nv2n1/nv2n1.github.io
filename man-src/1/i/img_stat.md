@@ -1,4 +1,5 @@
 ---
+
 title: "img_stat(1)"
 name: "img_stat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-img_stat/"
 description: "img_stat – Display details of an image file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> img_stat &#8211; Display details of an image file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>img_stat [-i imgtype] [-b dev_sector_size] [-tvV] </code> <i>image [images] </i></p>

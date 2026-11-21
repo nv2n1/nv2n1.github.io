@@ -1,4 +1,5 @@
 ---
+
 title: "xproofd(1)"
 name: "xproofd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xproofd/"
 description: "xproofd – PROOF (The Parallel ROOT Facility) xrootd version"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xproofd &#8211; PROOF (The Parallel ROOT Facility) xrootd version </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xproofd</code> [<code> -c </code><i>cfn</i> ] [<code> -d </code>] [<code> -l </code><i>fnc</i> ] [<code> -n </code><i>name</i> ] [<code> -p </code><i>port</i> ] [<code> -P </code><i>prot</i> ] [<i> prot_options </i>]</p>

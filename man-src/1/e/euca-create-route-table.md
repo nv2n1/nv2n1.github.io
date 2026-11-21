@@ -1,4 +1,5 @@
 ---
+
 title: "euca-create-route-table(1)"
 name: "euca-create-route-table"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-create-route-table/"
 description: "euca-create-route-table – Create a new VPC route table"
 ---
 
-<h2>NAME</h2>
 <p> euca-create-route-table &#8211; Create a new VPC route table</p>
 <h2>SYNOPSIS</h2>
 <p> euca-create-route-table [&#8211;show-empty-fields] [-U URL]</p>

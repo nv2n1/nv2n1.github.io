@@ -1,4 +1,5 @@
 ---
+
 title: "ppudump(1)"
 name: "ppudump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppudump/"
 description: "ppudump – The FPC Pascal unit dump program."
 ---
 
-<h2>NAME</h2>
 <p> ppudump &#8211; The FPC Pascal unit dump program. </p>
 <h2>SYNOPSIS</h2>
 <p> <i>ppudump</i> [-h] [-v[h|i|m|d|s|b|a]] ppu-file1 ppufile2 &#8230; </p>

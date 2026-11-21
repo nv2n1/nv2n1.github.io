@@ -1,4 +1,5 @@
 ---
+
 title: "dh_movefiles(1)"
 name: "dh_movefiles"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_movefiles/"
 description: "dh_movefiles – move files out of debian/tmp into subpackages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_movefiles &#8211; move files out of debian/tmp into subpackages </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_movefiles</code> [<i>debhelper options</i>] [<code>&#8211;sourcedir=</code><i>dir</i>] [<code>-X</code><i>item</i>] [<i>file</i> &#8230;]</p>

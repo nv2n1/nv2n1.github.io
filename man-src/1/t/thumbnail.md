@@ -1,4 +1,5 @@
 ---
+
 title: "thumbnail(1)"
 name: "thumbnail"
 section: "1"
@@ -6,9 +7,6 @@ letter: "t"
 url: "/docs/linux/man/1-thumbnail/"
 ---
 
-
- </p>
-<h2>NAME</h2>
 <p> thumbnail &#8211; create a <font SIZE="-1">TIFF</font> file with thumbnail images  </p>
 <h2>SYNOPSIS</h2>
 <p> <code>thumbnail</code> [ <i>options</i> ] <i>input.tif</i> <i>output.tif</i>  </p>

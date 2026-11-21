@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_session_init_ex(3)"
 name: "libssh2_session_init_ex"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_session_init_ex/"
 description: "libssh2_session_init_ex – initializes an SSH session object"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_session_init_ex &#8211; initializes an SSH session object</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

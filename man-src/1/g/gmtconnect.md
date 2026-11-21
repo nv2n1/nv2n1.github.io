@@ -1,4 +1,5 @@
 ---
+
 title: "gmtconnect(1)"
 name: "gmtconnect"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gmtconnect/"
 description: "gmtconnect – Connect individual lines whose end points match within tolerance"
 ---
 
-<h2>NAME</h2>
 <p> gmtconnect &#8211; Connect individual lines whose end points match within tolerance</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gmtconnect</code> [ <i>table</i> ] [ [<i>closed</i>] ] [ [<i>template</i>] ] [ [<i>linkfile</i>] ] [ [<i>template</i>] ] [ [<i>cutoff</i>[<i>unit</i>][/<i>nn_dist</i>]] ] [ [<i>level</i>] ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

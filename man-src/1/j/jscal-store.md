@@ -1,4 +1,5 @@
 ---
+
 title: "jscal-store(1)"
 name: "jscal-store"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jscal-store/"
 description: "jscal-store – stores joystick calibration"
 ---
 
-<h2>NAME</h2>
 <p> jscal-store &#8211; stores joystick calibration</p>
 <h2>SYNOPSIS</h2>
 <p> <code>jscal-store</code> &lt;<i>device-name</i>&gt;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "rzxdump(1)"
 name: "rzxdump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rzxdump/"
 description: "rzxdump – List contents of Sinclair ZX Spectrum input recording files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rzxdump &#8211; List contents of Sinclair ZX Spectrum input recording files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rzxdump</code> <i>rzxfile</i>&#8230;</p>

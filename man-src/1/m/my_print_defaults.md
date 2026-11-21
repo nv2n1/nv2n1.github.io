@@ -1,4 +1,5 @@
 ---
+
 title: "my_print_defaults(1)"
 name: "my_print_defaults"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-my_print_defaults/"
 description: "my_print_defaults – display options from option files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> my_print_defaults &#8211; display options from option files </p>
 <h2>SYNOPSIS</h2>
 <dl>

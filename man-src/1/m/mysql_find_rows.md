@@ -1,4 +1,5 @@
 ---
+
 title: "mysql_find_rows(1)"
 name: "mysql_find_rows"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysql_find_rows/"
 description: "mysql_find_rows – extract SQL statements from files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysql_find_rows &#8211; extract SQL statements from files </p>
 <h2>SYNOPSIS</h2>
 <dl>

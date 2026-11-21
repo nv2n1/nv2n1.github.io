@@ -1,4 +1,5 @@
 ---
+
 title: "g_mdrun_d(1)"
 name: "g_mdrun_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_mdrun_d/"
 description: "mdrun – performs a simulation, do a normal mode analysis or an energy minimization"
 ---
 
-<h2>NAME</h2>
 <p> mdrun &#8211; performs a simulation, do a normal mode analysis or an energy minimization </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

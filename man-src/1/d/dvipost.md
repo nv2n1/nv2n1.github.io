@@ -1,4 +1,5 @@
 ---
+
 title: "dvipost(1)"
 name: "dvipost"
 section: "1"
@@ -6,7 +7,7 @@ letter: "d"
 url: "/docs/linux/man/1-dvipost/"
 description: "dvipost, pptex, pplatex – post processing of dvi files"
 ---
-<h2>NAME</h2>
+
 <p> dvipost, pptex, pplatex - post processing of dvi files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dvipost</code> [<code>-debug</code>] [<code>-version</code>] [<code>-help</code>] <i>in</i> <i>out</i> </p>

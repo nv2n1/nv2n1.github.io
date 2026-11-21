@@ -1,4 +1,5 @@
 ---
+
 title: "byobu-select-backend(1)"
 name: "byobu-select-backend"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-byobu-select-backend/"
 description: "byobu-select-backend – select your default Byobu backend window manager"
 ---
 
-<h2>NAME</h2>
 <p> byobu-select-backend &#8211; select your default Byobu backend window manager </p>
 <h2>SYNOPSIS</h2>
 <p> <code>byobu-select-backend</code> [screen|tmux] </p>

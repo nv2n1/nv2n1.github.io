@@ -1,4 +1,5 @@
 ---
+
 title: "preconv(1)"
 name: "preconv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-preconv/"
 description: "preconv – convert encoding of input files to something GNU troff understands"
 ---
 
-<h2 class="name">NAME</h2>
 <p> preconv &#8211; convert encoding of input files to something GNU troff understands </p>
 <h2>SYNOPSIS</h2>
 <p> [ <code>-dr</code> ] [ <code>-D </code><i>default_encoding</i> ] [ <code>-e </code><i>encoding</i> ] [<i>file</i> &#8230;] <code>-h</code> <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>

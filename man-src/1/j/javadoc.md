@@ -1,4 +1,5 @@
 ---
+
 title: "javadoc(1)"
 name: "javadoc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-javadoc/"
 description: "javadoc – Generates HTML pages of API documentation from Java source files."
 ---
 
-<h2>NAME</h2>
 <p> javadoc &#8211; Generates HTML pages of API documentation from Java source files.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

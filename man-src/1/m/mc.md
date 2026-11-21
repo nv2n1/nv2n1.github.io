@@ -1,4 +1,5 @@
 ---
+
 title: "mc(1)"
 name: "mc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mc/"
 description: "mc – Visual shell for Unix-like systems."
 ---
 
-<h2 class="name">NAME</h2>
 <p> mc &#8211; Visual shell for Unix-like systems. </p>
 <h2>USAGE</h2>
 <p> <code>mc</code> [-abcCdfhPstuUVx] [-l log] [dir1 [dir2]] [-e [file] &#8230;] [-v file]</p>

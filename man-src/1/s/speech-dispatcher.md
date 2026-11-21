@@ -1,4 +1,5 @@
 ---
+
 title: "speech-dispatcher(1)"
 name: "speech-dispatcher"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-speech-dispatcher/"
 description: "speech-dispatcher – speech synthesis daemon"
 ---
 
-<h2 class="name">NAME</h2>
 <p> speech-dispatcher &#8211; speech synthesis daemon </p>
 <h2>SYNOPSIS</h2>
 <p> <code>speech-dispatcher</code> [<i>,-{d|s}/</i>] [<i>,-l {1|2|3|4|5}/</i>] [<i>,-c com_method/</i>] [<i>,-S socket_path/</i>] [<i>,-p port/</i>] [<i>,-t timeout/</i>] <i>,| /</i>[<i>,-v/</i>] <i>,| /</i>[<i>,-h/</i>]</p>

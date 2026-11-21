@@ -1,4 +1,5 @@
 ---
+
 title: "mtx-metapost(1)"
 name: "mtx-metapost"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mtx-metapost/"
 description: "mtx-metapost – MetaPost to PDF processor"
 ---
 
-<h2 class="name">NAME</h2>
 <p>&nbsp;mtx-metapost &#8211; MetaPost to PDF processor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mtxrun &#8211;script metapost [</code> <i>OPTIONS &#8230;</i> <code>] [</code> <i>FILENAMES</i> <code>]</code></p>

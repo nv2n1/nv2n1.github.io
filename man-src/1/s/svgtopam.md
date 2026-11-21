@@ -1,4 +1,5 @@
 ---
+
 title: "svgtopam(1)"
 name: "svgtopam"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-svgtopam/"
 description: "svgtopam – convert an SVG (Scalable Vector Graphics) image to Netpbm format"
 ---
 
-<h2 class="name">NAME</h2>
 <p> svgtopam &#8211; convert an SVG (Scalable Vector Graphics) image to Netpbm format</p>
 <h2>SYNOPSIS</h2>
 <p> <code>svgtopam</code> [<code>-trace</code>] [<i>pnmfile</i>] </p>

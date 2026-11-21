@@ -1,4 +1,5 @@
 ---
+
 title: "wicd-client(1)"
 name: "wicd-client"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wicd-client/"
 description: "wicd-client – frontend to the WICD daemon"
 ---
 
-<h2 class="name">NAME</h2>
 <p> wicd-client &#8211; frontend to the WICD daemon </p>
 <h2>DESCRIPTION</h2>
 <p> wireless (and wired) connection daemon front-end. </p>

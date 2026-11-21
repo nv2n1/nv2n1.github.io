@@ -1,4 +1,5 @@
 ---
+
 title: "pdftopng(1)"
 name: "pdftopng"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pdftopng/"
 description: "pdftopng – Portable Document Format (PDF) to Portable Network Graphics (PNG) converter (version 3.04)"
 ---
 
-<h2>NAME</h2>
 <p> pdftopng &#8211; Portable Document Format (PDF) to Portable Network Graphics (PNG) converter (version 3.04)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdftopng</code> [options] <i>PDF-file PNG-root</i></p>

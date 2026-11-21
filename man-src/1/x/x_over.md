@@ -1,4 +1,5 @@
 ---
+
 title: "x_over(1)"
 name: "x_over"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-x_over/"
 description: "x_over – Find and compute Cross-Over Errors"
 ---
 
-<h2>NAME</h2>
 <p> <code>x_over</code> &#8211; Find and compute Cross-Over Errors</p>
 <h2>SYNOPSIS</h2>
 <p> <code>x_over</code> <i>leg_1</i> [ <i>leg_2</i> ] [ <code>-A</code> ] [ <code>-C</code> ] [ <code>-L</code> ] [ <code>-V</code> ] [ <code>-W</code><i>timegap</i> ] [ <code>-G</code><i>fact</i> ] [ <code>-M</code><i>fact</i> ] [ <code>-T</code><i>fact</i> ] [ <code>-N</code><i>np_int</i> ]</p>

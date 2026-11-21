@@ -1,4 +1,5 @@
 ---
+
 title: "fixfloor(3)"
 name: "fixfloor"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fixfloor/"
 description: "fixfloor – Returns the greatest integer not greater than x. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> fixfloor &#8211; Returns the greatest integer not greater than x. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

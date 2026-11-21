@@ -1,4 +1,5 @@
 ---
+
 title: "nautilus-file-management-properties(1)"
 name: "nautilus-file-management-properties"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nautilus-file-management-properties/"
 description: "nautilus-file-management-properties – File Management Preferences"
 ---
 
-<h2 class="name">NAME</h2>
 <p> nautilus-file-management-properties &#8211; File Management Preferences </p>
 <h2>SYNOPSIS</h2>
 <p> <code>nautilus-file-management-properties</code> [<i>options</i>]</p>

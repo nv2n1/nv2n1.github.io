@@ -1,4 +1,5 @@
 ---
+
 title: "git-sync(1)"
 name: "git-sync"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-sync/"
 description: "git-sync – Sync local branch with remote branch"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-sync</code> &#8211; Sync local branch with remote branch</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git sync</code> [ &lt;remote&gt; &lt;branch&gt; ]</p>

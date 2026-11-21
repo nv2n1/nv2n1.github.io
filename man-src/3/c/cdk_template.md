@@ -1,4 +1,5 @@
 ---
+
 title: "cdk_template(3)"
 name: "cdk_template"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cdk_template/"
 description: "cdk_template – a curses template widget."
 ---
 
-<h2>NAME</h2>
 <p> cdk_template &#8211; a curses template widget.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "htfind(1)"
 name: "htfind"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-htfind/"
 description: "htcp, htmv, htrm, htls, htll, htmkdir, htfind, htping – file transfers and queries via HTTP/HTTPS/SiteCast"
 ---
 
-<h2>NAME</h2>
 <p> <code>htcp, htmv, htrm, htls, htll, htmkdir, htfind, htping</code> &#8211; file transfers and queries via HTTP/HTTPS/SiteCast</p>
 <h2>SYNOPSIS</h2>
 <p> <code>htcp, htmv</code> [options] Source-URL[s] Destination-URL </p>

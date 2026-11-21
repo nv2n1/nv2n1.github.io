@@ -1,4 +1,5 @@
 ---
+
 title: "ezstream(1)"
 name: "ezstream"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ezstream/"
 description: "ezstream – source client for Icecast with external de-/encoder support"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>ezstream</code> &#8211; source client for Icecast with external de-/encoder support </p>
 <h2>SYNOPSIS</h2>
 <p> -words [-<code>hmnqVv </code>&#8211;<code>c </code><i>configfile</i> ]<br />

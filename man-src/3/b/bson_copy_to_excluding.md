@@ -1,4 +1,5 @@
 ---
+
 title: "bson_copy_to_excluding(3)"
 name: "bson_copy_to_excluding"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_copy_to_excluding/"
 description: "bson_copy_to_excluding() – The bson_copy_to_excluding() function shall copy all fields from src to dst except those speified by the variadic, NULL terminated list of keys starting from first_exclude."
 ---
 
-<h2>NAME</h2>
 <p> bson_copy_to_excluding() &#8211; The bson_copy_to_excluding() function shall copy all fields from src to dst except those speified by the variadic, NULL terminated list of keys starting from first_exclude.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

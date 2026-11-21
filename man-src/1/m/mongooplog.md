@@ -1,4 +1,5 @@
 ---
+
 title: "mongooplog(1)"
 name: "mongooplog"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mongooplog/"
 description: "mongooplog – MongoDB Oplog Utility"
 ---
 
-<h2>NAME</h2>
 <p> mongooplog &#8211; MongoDB Oplog Utility </p>
 <p> New in version 2.2. </p>
 <h2>SYNOPSIS</h2>

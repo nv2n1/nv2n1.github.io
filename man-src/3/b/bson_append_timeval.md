@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_timeval(3)"
 name: "bson_append_timeval"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_append_timeval/"
 description: "bson_append_timeval() – The bson_append_timeval() function is a helper that takes a _struct timeval_ instead of milliseconds since the UNIX epoch."
 ---
 
-<h2>NAME</h2>
 <p> bson_append_timeval() &#8211; The bson_append_timeval() function is a helper that takes a _struct timeval_ instead of milliseconds since the UNIX epoch.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "beep(1)"
 name: "beep"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-beep/"
 description: "beep – beep the pc speaker any number of ways"
 ---
 
-<h2>NAME</h2>
 <p> beep &#8211; beep the pc speaker any number of ways</p>
 <h2>SYNOPSIS</h2>
 <p> <code>beep</code> [-f N] [-l N] [-r N] [-d N] [-D N] [-s] [-c]</p>

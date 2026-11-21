@@ -1,4 +1,5 @@
 ---
+
 title: "chicken-install(1)"
 name: "chicken-install"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-chicken-install/"
 description: "chicken-install – download and install extension libraries for CHICKEN Scheme"
 ---
 
-<h2 class="name">NAME</h2>
 <p> chicken-install &#8211; download and install extension libraries for CHICKEN Scheme</p>
 <h2>SYNOPSIS</h2>
 <p> chicken-install [OPTION | EXTENSION[:VERSION]] &#8230; </p>

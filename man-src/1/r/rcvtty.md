@@ -1,4 +1,5 @@
 ---
+
 title: "rcvtty(1)"
 name: "rcvtty"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rcvtty/"
 description: "rcvtty – report new mail"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rcvtty &#8211; report new mail </p>
 <h2>SYNOPSIS</h2>
 <dl>

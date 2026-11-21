@@ -1,4 +1,5 @@
 ---
+
 title: "mwm(1)"
 name: "mwm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mwm/"
 description: "mwm — The Motif Window Manager"
 ---
 
-<h2>NAME</h2>
 <p> <code>mwm</code> &#8212; The Motif Window Manager</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mwm</code> [<i>options</i>]</p>

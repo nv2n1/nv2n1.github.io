@@ -1,4 +1,5 @@
 ---
+
 title: "anjuta(1)"
 name: "anjuta"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-anjuta/"
 description: "anjuta – GNOME Integrated Development Environment"
 ---
 
-<h2>NAME</h2>
 <p> anjuta &#8211; GNOME Integrated Development Environment</p>
 <h2>SYNTAX</h2>
 <p> anjuta [<i>option</i>] [<i>files &#8230; </i>]</p>

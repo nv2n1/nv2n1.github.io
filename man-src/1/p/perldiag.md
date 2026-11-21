@@ -1,4 +1,5 @@
 ---
+
 title: "perldiag(1)"
 name: "perldiag"
 section: "1"
@@ -6,7 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perldiag/"
 description: "perldiag – various Perl diagnostics"
 ---
-<h2 class="name">NAME</h2>
+
 <p> perldiag - various Perl diagnostics </p>
 <h2>DESCRIPTION</h2>
 <p> These messages are classified as follows (listed in increasing order of desperation): </p>

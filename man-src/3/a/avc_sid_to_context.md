@@ -1,4 +1,5 @@
 ---
+
 title: "avc_sid_to_context(3)"
 name: "avc_sid_to_context"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-avc_sid_to_context/"
 description: "avc_context_to_sid, avc_sid_to_context, avc_get_initial_sid – obtain and manipulate SELinux security ID’s"
 ---
 
-<h2 class="name">NAME</h2>
 <p> avc_context_to_sid, avc_sid_to_context, avc_get_initial_sid &#8211; obtain and manipulate SELinux security ID&#8217;s </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/selinux.h&gt;</code><br />

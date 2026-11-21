@@ -1,4 +1,5 @@
 ---
+
 title: "notify-send(1)"
 name: "notify-send"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-notify-send/"
 description: "notify-send – a program to send desktop notifications"
 ---
 
-<h2 class="name">NAME</h2>
 <p> notify-send &#8211; a program to send desktop notifications </p>
 <h2>SYNOPSIS</h2>
 <dl>

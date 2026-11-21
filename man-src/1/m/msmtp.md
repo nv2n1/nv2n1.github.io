@@ -1,4 +1,5 @@
 ---
+
 title: "msmtp(1)"
 name: "msmtp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-msmtp/"
 description: "msmtp – An SMTP client"
 ---
 
-<h2>NAME</h2>
 <p> msmtp &#8211; An SMTP client</p>
 <h2>SYNOPSIS</h2>
 <dl>

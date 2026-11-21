@@ -1,4 +1,5 @@
 ---
+
 title: "hpisettime(1)"
 name: "hpisettime"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hpisettime/"
 description: "hpisettime – This sample openhpi application excercises Event Log clock APIs."
 ---
 
-<h2 class="name">NAME</h2>
 <p> hpisettime &#8211; This sample openhpi application excercises Event Log clock APIs. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

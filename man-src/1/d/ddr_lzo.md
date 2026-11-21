@@ -1,4 +1,5 @@
 ---
+
 title: "ddr_lzo(1)"
 name: "ddr_lzo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ddr_lzo/"
 description: "ddr_lzo – Data de/compression plugin for dd_rescue"
 ---
 
-<h2>NAME</h2>
 <p> ddr_lzo &#8211; Data de/compression plugin for dd_rescue</p>
 <h2>SYNOPSIS</h2>
 <p> <code>-L lzo[=option[:option[:&#8230;]]]</code><br />

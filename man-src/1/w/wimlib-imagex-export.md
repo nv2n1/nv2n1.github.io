@@ -1,4 +1,5 @@
 ---
+
 title: "wimlib-imagex-export(1)"
 name: "wimlib-imagex-export"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wimlib-imagex-export/"
 description: "wimlib-imagex-export – Exports an image from a WIM archive to an existing or new WIM archive"
 ---
 
-<h2>NAME</h2>
 <p> wimlib-imagex-export &#8211; Exports an image from a WIM archive to an existing or new WIM archive</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wimlib-imagex export</code> <i>SRC_WIMFILE</i> <i>SRC_IMAGE</i> <i>DEST_WIMFILE</i> [<i>DEST_IMAGE_NAME</i> [<i>DEST_IMAGE_DESCRIPTION</i>]] [<i>OPTION</i>&#8230;]</p>

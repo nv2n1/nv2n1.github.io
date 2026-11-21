@@ -1,4 +1,5 @@
 ---
+
 title: "bson_oid_get_time_t(3)"
 name: "bson_oid_get_time_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_oid_get_time_t/"
 description: "bson_oid_get_time_t() – Fetches the generation time in seconds since the UNIX Epoch of oid."
 ---
 
-<h2>NAME</h2>
 <p> bson_oid_get_time_t() &#8211; Fetches the generation time in seconds since the UNIX Epoch of oid.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

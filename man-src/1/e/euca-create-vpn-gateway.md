@@ -1,4 +1,5 @@
 ---
+
 title: "euca-create-vpn-gateway(1)"
 name: "euca-create-vpn-gateway"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-create-vpn-gateway/"
 description: "euca-create-vpn-gateway – Create a virtual private gateway"
 ---
 
-<h2>NAME</h2>
 <p> euca-create-vpn-gateway &#8211; Create a virtual private gateway</p>
 <h2>SYNOPSIS</h2>
 <p> euca-create-vpn-gateway <code>-t</code> ipsec.1 [&#8211;show-empty-fields] [-U URL]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "opainfo(1)"
 name: "opainfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-opainfo/"
 description: "opainfo"
 ---
 
-<h2>NAME</h2>
 <p> opainfo </p>
 <p> Provides summary information for local HFI port(s).</p>
 <h2>Syntax</h2>

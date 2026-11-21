@@ -1,4 +1,5 @@
 ---
+
 title: "kdesvn(1)"
 name: "kdesvn"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kdesvn/"
 description: "kdesvn – A Subversion client for KDE (standalone application)"
 ---
 
-<h2>NAME</h2>
 <p> kdesvn &#8211; A Subversion client for KDE (standalone application)</p>
 <h2>SYNOPSIS</h2>
 <p> kdesvn [Qt-options] [KDE-options] [options] exec &lt;command&gt; [URL]</p>

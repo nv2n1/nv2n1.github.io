@@ -1,4 +1,5 @@
 ---
+
 title: "ipq_get_msgerr(3)"
 name: "ipq_get_msgerr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ipq_get_msgerr/"
 description: "ipq_message_type, ipq_get_packet, ipq_getmsgerr — query queue messages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ipq_message_type, ipq_get_packet, ipq_getmsgerr &#8212; query queue messages </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/linux/netfilter.h">linux/netfilter.h</a>&gt;</code><br />

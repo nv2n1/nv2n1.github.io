@@ -1,4 +1,5 @@
 ---
+
 title: "globus_net_manager_logging_module(3)"
 name: "globus_net_manager_logging_module"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_net_manager_logging_module/"
 description: "logging/globus_net_manager_logging.c –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> logging/globus_net_manager_logging.c &#8211; </p>
 <p> Logging Network Manager Implementation.</p>
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "dsbgvx(3)"
 name: "dsbgvx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dsbgvx/"
 description: "dsbgvx.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dsbgvx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

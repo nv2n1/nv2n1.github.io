@@ -1,4 +1,5 @@
 ---
+
 title: "simplevisor-loop(1)"
 name: "simplevisor-loop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-simplevisor-loop/"
 description: "simplevisor-loop – execute the given command in a loop"
 ---
 
-<h2 class="name">NAME</h2>
 <p> simplevisor-loop &#8211; execute the given command in a loop </p>
 <h2>SYNOPSIS</h2>
 <p> <code>simplevisor-loop</code> [<i></i><font SIZE="-1"><i>OPTIONS</i></font><i></i>] <font SIZE="-1">COMMAND&#8230;</font></p>

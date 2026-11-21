@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_channel_direct_tcpip_ex(3)"
 name: "libssh2_channel_direct_tcpip_ex"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_channel_direct_tcpip_ex/"
 description: "libssh2_channel_direct_tcpip_ex – Tunnel a TCP connection through an SSH session"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_channel_direct_tcpip_ex &#8211; Tunnel a TCP connection through an SSH session</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

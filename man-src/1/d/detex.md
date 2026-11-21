@@ -1,4 +1,5 @@
 ---
+
 title: "detex(1)"
 name: "detex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-detex/"
 description: "detex – a filter to strip TeX commands from a .tex file."
 ---
 
-<h2 class="name">NAME</h2>
 <p> detex &#8211; a filter to strip <i>TeX</i> commands from a .tex file. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>detex</code> [ <code>-clnstw</code> ] [ <code>-e</code><i> environment-list</i> ] [ <i>filename</i>[.tex] &#8230; ]</p>

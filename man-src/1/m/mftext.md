@@ -1,4 +1,5 @@
 ---
+
 title: "mftext(1)"
 name: "mftext"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mftext/"
 description: "mftext – Dump a MIDI file as text"
 ---
 
-<h2>NAME</h2>
 <p> mftext &#8211; Dump a MIDI file as text</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mftext</code><i> file</i></p>

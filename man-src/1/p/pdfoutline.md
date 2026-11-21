@@ -1,4 +1,5 @@
 ---
+
 title: "pdfoutline(1)"
 name: "pdfoutline"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pdfoutline/"
 description: "pdfoutline – add outlines (aka bookmarks) to PDF files"
 ---
 
-<h2>NAME</h2>
 <p> pdfoutline &#8211; add outlines (aka bookmarks) to PDF files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdfoutline</code> <i>input.pdf outlines.txt output.pdf</i></p>

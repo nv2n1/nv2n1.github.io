@@ -1,4 +1,5 @@
 ---
+
 title: "pwgen(1)"
 name: "pwgen"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pwgen/"
 description: "pwgen – generate pronounceable passwords"
 ---
 
-<h2>NAME</h2>
 <p> pwgen &#8211; generate pronounceable passwords</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pwgen</code> [ <i>OPTION</i> ] [ <i>pw_length</i> ] [ <i>num_pw</i> ]</p>

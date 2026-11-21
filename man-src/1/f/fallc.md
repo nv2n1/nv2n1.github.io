@@ -1,4 +1,5 @@
 ---
+
 title: "fallc(1)"
 name: "fallc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fallc/"
 description: "falconeer.fal – Falcon Language table compiler"
 ---
 
-<h2>NAME</h2>
 <p> falconeer.fal &#8211; Falcon Language table compiler </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fallc.fal [-m merge_file] [&#8230;options&#8230;] ftt_list&#8230;</code> </p>

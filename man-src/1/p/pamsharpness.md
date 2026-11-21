@@ -1,4 +1,5 @@
 ---
+
 title: "pamsharpness(1)"
 name: "pamsharpness"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamsharpness/"
 description: "pamsharpness – measure the sharpness of a PNM/PAM image"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamsharpness &#8211; measure the sharpness of a PNM/PAM image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamsharpness</code> [<i>imagefile</i>] </p>

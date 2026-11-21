@@ -1,4 +1,5 @@
 ---
+
 title: "rmic(1)"
 name: "rmic"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rmic/"
 description: "rmic – Generates stub, skeleton, and tie classes for remote objects that use the Java Remote Method Protocol (JRMP) or Internet Inter-Orb protocol (IIOP). Also generates Object Management Group (OM..."
 ---
 
-<h2>NAME</h2>
 <p> rmic &#8211; Generates stub, skeleton, and tie classes for remote objects that use the Java Remote Method Protocol (JRMP) or Internet Inter-Orb protocol (IIOP). Also generates Object Management Group (OMG) Interface Definition Language (IDL)</p>
 <h2>SYNOPSIS</h2>
 <pre>

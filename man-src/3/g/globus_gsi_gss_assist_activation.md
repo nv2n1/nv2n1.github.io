@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gsi_gss_assist_activation(3)"
 name: "globus_gsi_gss_assist_activation"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gsi_gss_assist_activation/"
 description: "Activation –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Activation &#8211; </p>
 <p> Globus GSI GSS Assist uses standard Globus module activation and deactivation.</p>
 <h3>Defines</h3>

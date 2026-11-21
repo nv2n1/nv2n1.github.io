@@ -1,4 +1,5 @@
 ---
+
 title: "pq2-redistribute(1)"
 name: "pq2-redistribute"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pq2-redistribute/"
 description: "pq2-redistribute – Execute the file movements as determined by pq2-ana-dist"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pq2-redistribute &#8211; Execute the file movements as determined by pq2-ana-dist </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pq2-redistribute</code> [-b backend] -f filemv</p>

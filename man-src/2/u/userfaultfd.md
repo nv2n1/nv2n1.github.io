@@ -1,4 +1,5 @@
 ---
+
 title: "userfaultfd(2)"
 name: "userfaultfd"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-userfaultfd/"
 description: "userfaultfd – create a file descriptor for handling page faults in user space"
 ---
 
-<h2 class="name">NAME</h2>
 <p> userfaultfd &#8211; create a file descriptor for handling page faults in user space </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

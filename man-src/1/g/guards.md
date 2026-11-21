@@ -1,4 +1,5 @@
 ---
+
 title: "guards(1)"
 name: "guards"
 section: "1"
@@ -6,10 +7,7 @@ letter: "g"
 url: "/docs/linux/man/1-guards/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- guards - select from a list of files guarded by conditions 
+guards - select from a list of files guarded by conditions 
 
 <h2>SYNOPSIS</h2>
 

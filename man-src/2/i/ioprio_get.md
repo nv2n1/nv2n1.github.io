@@ -1,4 +1,5 @@
 ---
+
 title: "ioprio_get(2)"
 name: "ioprio_get"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-ioprio_get/"
 description: "ioprio_get, ioprio_set – get/set I/O scheduling class and priority"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ioprio_get, ioprio_set &#8211; get/set I/O scheduling class and priority </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "irsimreceive(1)"
 name: "irsimreceive"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-irsimreceive/"
 description: "irsimreceive- decode IR durations data."
 ---
 
-<h2>NAME</h2>
 <p> irsimreceive- decode IR durations data.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>irsimreceive [options] &lt;configfile&gt; &lt;datafile&gt;</code> </p>

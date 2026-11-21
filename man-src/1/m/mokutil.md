@@ -1,4 +1,5 @@
 ---
+
 title: "mokutil(1)"
 name: "mokutil"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mokutil/"
 description: "mokutil – utility to manipulate machine owner keys"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mokutil &#8211; utility to manipulate machine owner keys</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mokutil</code> [&#8211;list-enrolled | -l]<br />

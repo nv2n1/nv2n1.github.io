@@ -1,4 +1,5 @@
 ---
+
 title: "makeg(1)"
 name: "makeg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-makeg/"
 description: "makeg – make a debuggable executable"
 ---
 
-<h2>NAME</h2>
 <p> makeg &#8211; make a debuggable executable</p>
 <h2>SYNOPSIS</h2>
 <p> <code>makeg</code> [ <i>make-options &#8230;</i> ] [ <i>targets &#8230;</i> ]</p>

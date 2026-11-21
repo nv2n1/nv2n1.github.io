@@ -1,4 +1,5 @@
 ---
+
 title: "euca-add-group(1)"
 name: "euca-add-group"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-add-group/"
 description: "euca-add-group – Eucalyptus tool: Creates a new security group."
 ---
 
-<h2>NAME</h2>
 <p> euca-add-group &#8211; Eucalyptus tool: Creates a new security group.</p>
 <h2>DESCRIPTION</h2>
 <p> Creates a new security group. </p>

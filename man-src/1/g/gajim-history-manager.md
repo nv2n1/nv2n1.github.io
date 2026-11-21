@@ -1,4 +1,5 @@
 ---
+
 title: "gajim-history-manager(1)"
 name: "gajim-history-manager"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gajim-history-manager/"
 description: "gajim-history-manager – a tool to manage"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>gajim-history-manager</code> &#8211; a tool to manage </p>
 <p><a href="/docs/linux/man/1-gajim/">gajim</a>(1) logs</p>
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "exstream(3)"
 name: "exstream"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-exstream/"
 description: "exstream – Playing audio streams. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> exstream &#8211; Playing audio streams. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

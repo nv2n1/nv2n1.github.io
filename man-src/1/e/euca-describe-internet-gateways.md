@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-internet-gateways(1)"
 name: "euca-describe-internet-gateways"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-describe-internet-gateways/"
 description: "euca-describe-internet-gateways – Describe one or more VPC Internet gateways"
 ---
 
-<h2>NAME</h2>
 <p> euca-describe-internet-gateways &#8211; Describe one or more VPC Internet gateways</p>
 <h2>SYNOPSIS</h2>
 <p> euca-describe-internet-gateways [&#8211;show-empty-fields] [-U URL]</p>

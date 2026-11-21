@@ -1,4 +1,5 @@
 ---
+
 title: "shtool(1)"
 name: "shtool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-shtool/"
 description: "GNU shtool – The GNU Portable Shell Tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> GNU shtool &#8211; The GNU Portable Shell Tool </p>
 <h2>VERSION</h2>
 <p> <font SIZE="-1">GNU</font> shtool <font SIZE="-1">2.0.8 (18-Jul-2008)</font></p>

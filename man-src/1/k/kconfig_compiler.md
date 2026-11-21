@@ -1,4 +1,5 @@
 ---
+
 title: "kconfig_compiler(1)"
 name: "kconfig_compiler"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kconfig_compiler/"
 description: "kconfig_compiler – KDE configuration compiler"
 ---
 
-<h2 class="name">NAME</h2>
 <p> kconfig_compiler &#8211; KDE configuration compiler </p>
 <h2>SYNOPSIS</h2>
 <dl>

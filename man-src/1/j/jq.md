@@ -1,4 +1,5 @@
 ---
+
 title: "jq(1)"
 name: "jq"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jq/"
 description: "jq – Command-line JSON processor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>jq</code> &#8211; Command-line JSON processor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>jq</code> [<i>options</i>&#8230;] <i>filter</i> [<i>files</i>&#8230;] </p>

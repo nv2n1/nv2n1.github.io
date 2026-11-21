@@ -1,4 +1,5 @@
 ---
+
 title: "pmdakvm(1)"
 name: "pmdakvm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdakvm/"
 description: "pmdakvm – Linux virtualization performance metrics domain agent (PMDA)"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdakvm</code> &#8211; Linux virtualization performance metrics domain agent (PMDA)</p>
 <h2>DESCRIPTION</h2>
 <p> <code>pmdakvm</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which exports metric values from the Linux KVM virtualisation subsystem. </p>

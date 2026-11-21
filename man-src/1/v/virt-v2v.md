@@ -1,4 +1,5 @@
 ---
+
 title: "virt-v2v(1)"
 name: "virt-v2v"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-virt-v2v/"
 description: "virt-v2v – Convert a guest to use KVM"
 ---
 
-<h2 class="name">NAME</h2>
 <p> virt-v2v &#8211; Convert a guest to use KVM </p>
 <h2>SYNOPSIS</h2>
 <pre>

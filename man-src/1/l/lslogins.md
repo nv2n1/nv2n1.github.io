@@ -1,4 +1,5 @@
 ---
+
 title: "lslogins(1)"
 name: "lslogins"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lslogins/"
 description: "lslogins – display information about known users in the system"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lslogins &#8211; display information about known users in the system </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lslogins</code> [options] [<code>-s</code>|<code>-u</code>[=<i>UID</i>]] [<code>-g</code> <i>groups</i>] [<code>-l</code> <i>logins</i>] [<i>username</i>]</p>

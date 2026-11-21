@@ -1,4 +1,5 @@
 ---
+
 title: "pamfix(1)"
 name: "pamfix"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamfix/"
 description: "pamfix – repair a Netpbm image with various corruptions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamfix &#8211; repair a Netpbm image with various corruptions</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamfix</code> </p>

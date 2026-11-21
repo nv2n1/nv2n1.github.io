@@ -1,4 +1,5 @@
 ---
+
 title: "dblink_get_connections(3)"
 name: "dblink_get_connections"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dblink_get_connections/"
 description: "dblink_get_connections – returns the names of all open named dblink connections"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dblink_get_connections &#8211; returns the names of all open named dblink connections </p>
 <h2>SYNOPSIS</h2>
 <pre>

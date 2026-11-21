@@ -1,4 +1,5 @@
 ---
+
 title: "shutdown(2)"
 name: "shutdown"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-shutdown/"
 description: "shutdown – shut down part of a full-duplex connection"
 ---
 
-<h2 class="name">NAME</h2>
 <p> shutdown &#8211; shut down part of a full-duplex connection </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/socket.h&gt;</code> </p>

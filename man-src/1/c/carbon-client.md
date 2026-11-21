@@ -1,4 +1,5 @@
 ---
+
 title: "carbon-client(1)"
 name: "carbon-client"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-carbon-client/"
 description: "carbon-client – Graphite client to reroute carbon data"
 ---
 
-<h2>NAME</h2>
 <p> carbon-client &#8211; Graphite client to reroute carbon data</p>
 <h2>SYNOPSYS</h2>
 <pre>

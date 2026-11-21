@@ -1,4 +1,5 @@
 ---
+
 title: "dh_installifupdown(1)"
 name: "dh_installifupdown"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_installifupdown/"
 description: "dh_installifupdown – install if-up and if-down hooks"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_installifupdown &#8211; install if-up and if-down hooks </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_installifupdown</code> [<i>debhelper options</i>] [<code>&#8211;name=</code><i>name</i>]</p>

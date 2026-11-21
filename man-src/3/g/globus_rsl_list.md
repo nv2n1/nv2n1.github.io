@@ -1,4 +1,5 @@
 ---
+
 title: "globus_rsl_list(3)"
 name: "globus_rsl_list"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_rsl_list/"
 description: "List Functions –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> List Functions &#8211; </p>
 <h3>Functions</h3>
 <p> globus_list_t * <code>globus_list_copy_reverse</code> (globus_list_t *orig)<br />

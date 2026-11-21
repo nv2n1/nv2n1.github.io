@@ -1,4 +1,5 @@
 ---
+
 title: "mate-color-select(1)"
 name: "mate-color-select"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-color-select/"
 description: "mate-color-select – Select a color from a palette or from screen"
 ---
 
-<h2>NAME</h2>
 <p> mate-color-select &#8211; Select a color from a palette or from screen</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-color-select [&lt;gtk-options&gt;]</code></p>

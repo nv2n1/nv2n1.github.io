@@ -1,4 +1,5 @@
 ---
+
 title: "slalsd(3)"
 name: "slalsd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slalsd/"
 description: "slalsd.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> slalsd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "pamthreshold(1)"
 name: "pamthreshold"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamthreshold/"
 description: "pamthreshold – threshold grayscale image to black and white"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamthreshold &#8211; threshold grayscale image to black and white</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamthreshold</code> [<code>-simple</code>] [<code>-local=</code><i>width</i><code>x</code><i>height</i>] [<code>-dual=</code><i>width</i><code>x</code><i>height</i>] [<code>-threshold=</code><i>threshold</i>] [<code>-contrast=</code><i>threshold</i>] [<i>inputpamfile</i>] </p>

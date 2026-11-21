@@ -1,4 +1,5 @@
 ---
+
 title: "bssh(1)"
 name: "bssh"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bssh/"
 description: "bssh/bvnc/bshell – Browse for SSH/VNC servers on the local network"
 ---
 
-<h2>NAME</h2>
 <p> bssh/bvnc/bshell &#8211; Browse for SSH/VNC servers on the local network</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bssh </p>

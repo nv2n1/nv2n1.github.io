@@ -1,4 +1,5 @@
 ---
+
 title: "hal-set-property(1)"
 name: "hal-set-property"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hal-set-property/"
 description: "hal-set-property – set a property on a device object"
 ---
 
-<h2>NAME</h2>
 <p> hal-set-property &#8211; set a property on a device object</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hal-set-property</code> [options] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "xine-remote(1)"
 name: "xine-remote"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xine-remote/"
 description: "xine-remote – a small tool to connect xine remote control server."
 ---
 
-<h2>NAME</h2>
 <p> xine-remote &#8211; a small tool to connect xine remote control server.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xine-remote</code> <i>[options]</i></p>

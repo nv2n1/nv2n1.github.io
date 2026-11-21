@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtoy4m(1)"
 name: "ppmtoy4m"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppmtoy4m/"
 description: "ppmtoy4m – Convert PPM images to YUV4MPEG2 stream"
 ---
 
-<h2>NAME</h2>
 <p> ppmtoy4m &#8211; Convert PPM images to YUV4MPEG2 stream </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmtoy4m</code> [<i>options</i>] <i>[ filename ]</i> </p>

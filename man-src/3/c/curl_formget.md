@@ -1,4 +1,5 @@
 ---
+
 title: "curl_formget(3)"
 name: "curl_formget"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-curl_formget/"
 description: "curl_formget – serialize a previously built multipart/formdata HTTP POST chain"
 ---
 
-<h2>NAME</h2>
 <p> curl_formget &#8211; serialize a previously built multipart/formdata HTTP POST chain</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "pyreverse(1)"
 name: "pyreverse"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pyreverse/"
 description: "pyreverse – parse python sources files and extract diagrams from them."
 ---
 
-<h2>NAME</h2>
 <p> pyreverse &#8211; parse python sources files and extract diagrams from them. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pyreverse </code> <i>[options]</i> &lt;modules&gt; </p>

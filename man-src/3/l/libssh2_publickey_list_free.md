@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_publickey_list_free(3)"
 name: "libssh2_publickey_list_free"
 section: "3"
@@ -6,9 +7,7 @@ letter: "l"
 url: "/docs/linux/man/3-libssh2_publickey_list_free/"
 ---
 
-<h2>NAME</h2>
-
- libssh2_publickey_list_free - TODO
+libssh2_publickey_list_free - TODO
 
 <h2>SYNOPSIS</h2>
 

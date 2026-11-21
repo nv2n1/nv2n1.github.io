@@ -1,4 +1,5 @@
 ---
+
 title: "euca-modify-vpc-attribute(1)"
 name: "euca-modify-vpc-attribute"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-modify-vpc-attribute/"
 description: "euca-modify-vpc-attribute – Modify an attribute of a VPC"
 ---
 
-<h2>NAME</h2>
 <p> euca-modify-vpc-attribute &#8211; Modify an attribute of a VPC</p>
 <h2>SYNOPSIS</h2>
 <p> euca-modify-vpc-attribute [-c VPC] (<code>-d</code> (true|false) | <code>-s</code> (true|false))</p>

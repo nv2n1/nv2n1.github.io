@@ -1,4 +1,5 @@
 ---
+
 title: "hpls(1)"
 name: "hpls"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hpls/"
 description: "hpls — list the contents of a directory on an HFS+ volume"
 ---
 
-<h2>NAME</h2>
 <p> hpls &#8212; list the contents of a directory on an HFS+ volume</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hpls</code> [<code>options</code>] [<i>hfs-path &#8230;</i>]</p>

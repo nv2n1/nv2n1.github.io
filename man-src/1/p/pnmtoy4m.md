@@ -1,4 +1,5 @@
 ---
+
 title: "pnmtoy4m(1)"
 name: "pnmtoy4m"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnmtoy4m/"
 description: "pnmtoy4m – Convert PNM/PAM images to YUV4MPEG2 stream"
 ---
 
-<h2>NAME</h2>
 <p> pnmtoy4m &#8211; Convert PNM/PAM images to YUV4MPEG2 stream </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmtoy4m</code> [<i>options</i>] <i>[ filename ]</i> </p>

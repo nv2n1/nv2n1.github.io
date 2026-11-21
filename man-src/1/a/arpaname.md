@@ -1,4 +1,5 @@
 ---
+
 title: "arpaname(1)"
 name: "arpaname"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-arpaname/"
 description: "arpaname – translate IP addresses to the corresponding ARPA names"
 ---
 
-<h2 class="name">NAME</h2>
 <p> arpaname &#8211; translate IP addresses to the corresponding ARPA names </p>
 <h2>SYNOPSIS</h2>
 <dl>

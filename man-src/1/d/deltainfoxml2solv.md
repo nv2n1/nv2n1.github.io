@@ -1,4 +1,5 @@
 ---
+
 title: "deltainfoxml2solv(1)"
 name: "deltainfoxml2solv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-deltainfoxml2solv/"
 description: "deltainfoxml2solv – convert rpm-md’s deltainfo format into a solv file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> deltainfoxml2solv &#8211; convert rpm-md&#8217;s deltainfo format into a solv file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>deltainfoxml2solv</code> [<i>OPTIONS</i>]</p>

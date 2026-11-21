@@ -1,4 +1,5 @@
 ---
+
 title: "flow-tools-examples(1)"
 name: "flow-tools-examples"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flow-tools-examples/"
 description: "flow-tools-examples – Example usage of flow-tools."
 ---
 
-<h2>NAME</h2>
 <p> flow-tools-examples &#8211; Example usage of flow-tools.</p>
 <h2>EXAMPLE &#8211; CONFIGURING CISCO IOS ROUTER</h2>
 <p> NetFlow is configured on each input interface, then global commands are used to specify the export destination. To ensure a consistant source address address Loopback0 is configured as the export source. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "git(1)"
 name: "git"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git/"
 description: "git – the stupid content tracker"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git &#8211; the stupid content tracker </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

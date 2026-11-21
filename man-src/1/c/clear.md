@@ -1,4 +1,5 @@
 ---
+
 title: "clear(1)"
 name: "clear"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-clear/"
 description: "clear – clear the terminal screen"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>clear</code> &#8211; clear the terminal screen </p>
 <h2>SYNOPSIS</h2>
 <p> <code>clear</code> [<code>-T</code><i>type</i>] [<code>-V</code>] [<code>-x</code>] </p>

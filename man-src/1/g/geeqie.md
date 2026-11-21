@@ -1,4 +1,5 @@
 ---
+
 title: "geeqie(1)"
 name: "geeqie"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-geeqie/"
 description: "Geeqie – GTK based multiformat image viewer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Geeqie &#8211; GTK based multiformat image viewer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>geeqie</code> [<i>options</i>] [<i>path</i>] </p>

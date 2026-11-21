@@ -1,4 +1,5 @@
 ---
+
 title: "cs2cs(1)"
 name: "cs2cs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cs2cs/"
 description: "cs2cs – cartographic coordinate system filter"
 ---
 
-<h2>NAME</h2>
 <p> cs2cs &#8211; cartographic coordinate system filter</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cs2cs</code> [ <code>-eEfIlrstvwW</code> [ <i>args</i> ] ] [ <code>+opts[=arg]</code> ] </p>

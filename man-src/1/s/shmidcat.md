@@ -1,4 +1,5 @@
 ---
+
 title: "shmidcat(1)"
 name: "shmidcat"
 section: "1"
@@ -6,11 +7,7 @@ letter: "s"
 url: "/docs/linux/man/1-shmidcat/"
 ---
 
-<h2>NAME</h2>
-
- 
-
- shmidcat - Copies stdin/file to a shared memory block for <i><a HREF="/docs/linux/man/1-gtkwave/">gtkwave</a></i>(1)
+shmidcat - Copies stdin/file to a shared memory block for <i><a HREF="/docs/linux/man/1-gtkwave/">gtkwave</a></i>(1)
 
 <h2>SYNTAX</h2>
 

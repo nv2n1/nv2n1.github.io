@@ -1,4 +1,5 @@
 ---
+
 title: "kabcclient(1)"
 name: "kabcclient"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kabcclient/"
 description: "kabcclient – commandline client for the KDE addressbook"
 ---
 
-<h2 class="name">NAME</h2>
 <p> kabcclient &#8211; commandline client for the KDE addressbook </p>
 <h2>SYNOPSIS</h2>
 <dl>

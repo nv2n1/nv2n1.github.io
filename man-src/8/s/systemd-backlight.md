@@ -1,4 +1,5 @@
 ---
+
 title: "systemd-backlight(8)"
 name: "systemd-backlight"
 section: "8"
@@ -6,8 +7,9 @@ letter: "s"
 url: "/docs/linux/man/8-systemd-backlight/"
 description: "systemd-backlight [at] .service, systemd-backlight – Load and save the display backlight brightness at boot and shutdown"
 ---
+
 <p>systemd-backlight [at] .service, systemd-backlight &#8211; Load and save the display backlight brightness at boot and shutdown </p>
-<h2>SYNOPSIS</h2>
+
 <p>systemd-backlight [at] .service </p>
 <p>/lib/systemd/systemd-backlight save [backlight|leds]:DEVICE </p>
 <p>/lib/systemd/systemd-backlight load [backlight|leds]:DEVICE  </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pidl(1)"
 name: "pidl"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-pidl/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- pidl - An IDL compiler written in Perl 
+pidl - An IDL compiler written in Perl 
 
 <h2>SYNOPSIS</h2>
 

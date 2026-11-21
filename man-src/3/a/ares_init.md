@@ -1,4 +1,5 @@
 ---
+
 title: "ares_init(3)"
 name: "ares_init"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ares_init/"
 description: "ares_init, ares_init_options – Initialize a resolver channel"
 ---
 
-<h2>NAME</h2>
 <p> ares_init, ares_init_options &#8211; Initialize a resolver channel</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

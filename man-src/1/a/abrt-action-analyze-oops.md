@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-action-analyze-oops(1)"
 name: "abrt-action-analyze-oops"
 section: "1"
@@ -6,10 +7,7 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-action-analyze-oops/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- abrt-action-analyze-oops - Calculate and save UUID and duplicate hash for a problem data directory DIR with kernel oops. 
+abrt-action-analyze-oops - Calculate and save UUID and duplicate hash for a problem data directory DIR with kernel oops. 
 
 <h2>SYNOPSIS</h2>
 

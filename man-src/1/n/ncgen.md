@@ -1,4 +1,5 @@
 ---
+
 title: "ncgen(1)"
 name: "ncgen"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ncgen/"
 description: "ncgen – From a CDL file generate a netCDF-3 file, a netCDF-4 file or a C program"
 ---
 
-<h2>NAME</h2>
 <p> ncgen &#8211; From a CDL file generate a netCDF-3 file, a netCDF-4 file or a C program</p>
 <h2>SYNOPSIS</h2>
 <dl>

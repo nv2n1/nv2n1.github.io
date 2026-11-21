@@ -1,4 +1,5 @@
 ---
+
 title: "wcsware(1)"
 name: "wcsware"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wcsware/"
 description: "wcsware – Extract WCS keywords for an image"
 ---
 
-<h2>NAME</h2>
 <p> wcsware &#8211; Extract WCS keywords for an image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wcsware</code> [<i>-a&lt;alt&gt;</i>] [<i>-f</i>] [<i>-h&lt;hdu&gt;</i>] [<i>-p</i>] [<i>-x</i>] [<i>&lt;fitsfile&gt;</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dbwrap_tool(1)"
 name: "dbwrap_tool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dbwrap_tool/"
 description: "dbwrap_tool – low level TDB/CTDB manipulation tool using the dbwrap interface"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dbwrap_tool &#8211; low level TDB/CTDB manipulation tool using the dbwrap interface </p>
 <h2>SYNOPSIS</h2>
 <dl>

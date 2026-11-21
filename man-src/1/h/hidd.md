@@ -1,4 +1,5 @@
 ---
+
 title: "hidd(1)"
 name: "hidd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hidd/"
 description: "hidd – Bluetooth HID daemon"
 ---
 
-<h2>NAME</h2>
 <p> hidd &#8211; Bluetooth HID daemon</p>
 <h2>DESCRIPTION</h2>
 <p> hidd &#8211; Bluetooth HID daemon</p>

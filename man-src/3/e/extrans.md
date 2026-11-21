@@ -1,4 +1,5 @@
 ---
+
 title: "extrans(3)"
 name: "extrans"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-extrans/"
 description: "extrans – Lighting and translucency effects. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> extrans &#8211; Lighting and translucency effects. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

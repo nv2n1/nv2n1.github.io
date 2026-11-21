@@ -1,4 +1,5 @@
 ---
+
 title: "icegridadmin(1)"
 name: "icegridadmin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-icegridadmin/"
 description: "icegridadmin – The IceGrid command-line administrative utility."
 ---
 
-<h2 class="name">NAME</h2>
 <p> icegridadmin &#8211; The IceGrid command-line administrative utility.</p>
 <h2>SYNOPSIS</h2>
 <p> icegridadmin [options] </p>

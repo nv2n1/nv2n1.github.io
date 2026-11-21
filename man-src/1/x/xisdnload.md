@@ -1,4 +1,5 @@
 ---
+
 title: "xisdnload(1)"
 name: "xisdnload"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xisdnload/"
 description: "xisdnload – ISDN load average display for X"
 ---
 
-<h2>NAME</h2>
 <p> xisdnload &#8211; ISDN load average display for X</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xisdnload</code>[-<i>toolkitoption</i> &#8230;] [-scale <i>integer</i>] [-update <i>seconds</i>] [-hl <i>color</i>] [-highlight <i>color</i>] [-online <i>color</i>] [-active <i>color</i>] [-trying <i>color</i>] [-activate <i>command</i>] [-deactivate <i>command</i>] [-jumpscroll <i>pixels</i>] [-number <i>regexp</i>] [-label <i>string</i>] [-nolabel]</p>

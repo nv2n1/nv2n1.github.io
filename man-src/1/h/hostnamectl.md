@@ -1,4 +1,5 @@
 ---
+
 title: "hostnamectl(1)"
 name: "hostnamectl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hostnamectl/"
 description: "hostnamectl – Control the system hostname"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hostnamectl &#8211; Control the system hostname </p>
 <h2>SYNOPSIS</h2>
 <dl>

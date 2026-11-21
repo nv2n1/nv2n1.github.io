@@ -1,4 +1,5 @@
 ---
+
 title: "audit_request_status(3)"
 name: "audit_request_status"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-audit_request_status/"
 description: "audit_request_status – Request status of the audit system"
 ---
 
-<h2>NAME</h2>
 <p> audit_request_status &#8211; Request status of the audit system</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libaudit.h&gt;</code> </p>

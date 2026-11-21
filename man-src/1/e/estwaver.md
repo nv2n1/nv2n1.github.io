@@ -1,4 +1,5 @@
 ---
+
 title: "estwaver(1)"
 name: "estwaver"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-estwaver/"
 description: "estwaver – command line interface of web crawler"
 ---
 
-<h2 class="name">NAME</h2>
 <p> estwaver &#8211; command line interface of web crawler</p>
 <h2>SYNOPSIS</h2>
 <p> <code>estwaver init [-apn|-acc] [-xs|-xl|-xh] [-sv|-si|-sa] rootdir</code> </p>

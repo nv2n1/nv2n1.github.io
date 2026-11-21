@@ -1,4 +1,5 @@
 ---
+
 title: "csqrt(3)"
 name: "csqrt"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-csqrt/"
 description: "csqrt, csqrtf, csqrtl – complex square root"
 ---
 
-<h2 class="name">NAME</h2>
 <p> csqrt, csqrtf, csqrtl &#8211; complex square root </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>

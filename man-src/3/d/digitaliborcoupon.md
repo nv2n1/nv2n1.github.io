@@ -1,4 +1,5 @@
 ---
+
 title: "digitaliborcoupon(3)"
 name: "digitaliborcoupon"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-digitaliborcoupon/"
 description: "ql/cashflows/digitaliborcoupon.hpp – Ibor-rate coupon with digital call/put option."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/cashflows/digitaliborcoupon.hpp &#8211; Ibor-rate coupon with digital call/put option. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/cashflows/digitalcoupon.hpp&gt;<br />

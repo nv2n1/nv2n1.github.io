@@ -1,4 +1,5 @@
 ---
+
 title: "xine(1)"
 name: "xine"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xine/"
 description: "xine – a free video player"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xine &#8211; a free video player </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xine</code> <i>[options] [MRL] &#8230;</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "keyctl_search(3)"
 name: "keyctl_search"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-keyctl_search/"
 description: "keyctl_search – Search a keyring for a key"
 ---
 
-<h2 class="name">NAME</h2>
 <p> keyctl_search &#8211; Search a keyring for a key </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

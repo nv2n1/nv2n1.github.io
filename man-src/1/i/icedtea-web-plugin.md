@@ -1,4 +1,5 @@
 ---
+
 title: "icedtea-web-plugin(1)"
 name: "icedtea-web-plugin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-icedtea-web-plugin/"
 description: "icedtea-web-plugin – allow to run java applets in your favorite browser"
 ---
 
-<h2 class="name">NAME</h2>
 <p> icedtea-web-plugin &#8211; allow to run <code>java applets </code> in your favorite <code>browser</code></p>
 <h2>SYNOPSIS</h2>
 <p> <code>icedtea-web-plugin </code> is working in your browser, once your browser knows about this files. </p>

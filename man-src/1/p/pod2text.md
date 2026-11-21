@@ -1,4 +1,5 @@
 ---
+
 title: "pod2text(1)"
 name: "pod2text"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pod2text/"
 description: "pod2text – Convert POD data to formatted ASCII text"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pod2text &#8211; Convert POD data to formatted ASCII text </p>
 <h2>SYNOPSIS</h2>
 <p> pod2text [<code>-aclostu</code>] [<code>&#8211;code</code>] [<code>&#8211;errors</code>=<i>style</i>] [<code>-i</code> <i>indent</i>]<br />

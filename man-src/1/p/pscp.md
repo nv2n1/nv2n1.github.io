@@ -1,4 +1,5 @@
 ---
+
 title: "pscp(1)"
 name: "pscp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pscp/"
 description: "pscp – command-line SCP (secure copy) / SFTP client"
 ---
 
-<h2>NAME</h2>
 <p> <code>pscp</code> &#8211; command-line SCP (secure copy) / SFTP client</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

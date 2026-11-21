@@ -1,4 +1,5 @@
 ---
+
 title: "wimlib-imagex-update(1)"
 name: "wimlib-imagex-update"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wimlib-imagex-update/"
 description: "wimlib-imagex-update – Update a WIM image"
 ---
 
-<h2>NAME</h2>
 <p> wimlib-imagex-update &#8211; Update a WIM image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wimlib-imagex update</code> <i>WIMFILE</i> [<i>IMAGE</i>] [<i>OPTION</i>&#8230;] [&lt; <i>CMDFILE</i>]</p>

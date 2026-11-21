@@ -1,4 +1,5 @@
 ---
+
 title: "socketpair(2)"
 name: "socketpair"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-socketpair/"
 description: "socketpair – create a pair of connected sockets"
 ---
 
-<h2 class="name">NAME</h2>
 <p> socketpair &#8211; create a pair of connected sockets </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code> /* See NOTES */<br />

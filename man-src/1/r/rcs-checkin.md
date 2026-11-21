@@ -1,4 +1,5 @@
 ---
+
 title: "rcs-checkin(1)"
 name: "rcs-checkin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rcs-checkin/"
 description: "rcs-checkin – check files into RCS"
 ---
 
-<h2>NAME</h2>
 <p> rcs-checkin &#8211; check files into RCS</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rcs-checkin</code> [<i>FILE</i>&#8230;]</p>

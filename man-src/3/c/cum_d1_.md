@@ -1,4 +1,5 @@
 ---
+
 title: "cum_d1_(3)"
 name: "cum_d1_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cum_d1_/"
 description: "QuantLib::BlackCalculator – Black 1976 calculator class."
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::BlackCalculator &#8211; Black 1976 calculator class. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/pricingengines/blackcalculator.hpp&gt; </p>

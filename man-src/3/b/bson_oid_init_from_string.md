@@ -1,4 +1,5 @@
 ---
+
 title: "bson_oid_init_from_string(3)"
 name: "bson_oid_init_from_string"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_oid_init_from_string/"
 description: "bson_oid_init_from_string() – Parses the string containing hex encoded oid and initialize the bytes in oid."
 ---
 
-<h2>NAME</h2>
 <p> bson_oid_init_from_string() &#8211; Parses the string containing hex encoded oid and initialize the bytes in oid.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

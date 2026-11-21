@@ -1,4 +1,5 @@
 ---
+
 title: "lightdm(1)"
 name: "lightdm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lightdm/"
 description: "lightdm – a display manager"
 ---
 
-<h2>NAME</h2>
 <p> lightdm &#8211; a display manager</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lightdm</code> [ <i>OPTION</i> ]</p>

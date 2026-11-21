@@ -1,4 +1,5 @@
 ---
+
 title: "xmlpretty(1)"
 name: "xmlpretty"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xmlpretty/"
 description: "xmlpretty – XML pretty printer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xmlpretty &#8211; XML pretty printer </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

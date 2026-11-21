@@ -1,4 +1,5 @@
 ---
+
 title: "dirfile_protect(3)"
 name: "dirfile_protect"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dirfile_protect/"
 description: "dirfile_protect — modify the protection level of a dirfile fragment"
 ---
 
-<h2>NAME</h2>
 <p> dirfile_protect &#8212; modify the protection level of a dirfile fragment</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

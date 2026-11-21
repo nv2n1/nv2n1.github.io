@@ -1,4 +1,5 @@
 ---
+
 title: "euca-stop-instances(1)"
 name: "euca-stop-instances"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-stop-instances/"
 description: "euca-stop-instances – Stop one or more running instances"
 ---
 
-<h2>NAME</h2>
 <p> euca-stop-instances &#8211; Stop one or more running instances</p>
 <h2>SYNOPSIS</h2>
 <p> euca-stop-instances [-f] [&#8211;show-empty-fields] [-U URL]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "memping(1)"
 name: "memping"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-memping/"
 description: "memping – libmemcached Documentation"
 ---
 
-<h2>NAME</h2>
 <p> memping &#8211; libmemcached Documentation</p>
 <h2>SYNOPSIS</h2>
 <p> memping [options] [server]</p>

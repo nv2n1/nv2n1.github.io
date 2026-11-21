@@ -1,4 +1,5 @@
 ---
+
 title: "mate-panel-test-applets(1)"
 name: "mate-panel-test-applets"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-panel-test-applets/"
 description: "mate-panel-test-applets – display and test installed applets"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mate-panel-test-applets &#8211; display and test installed applets </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-panel-test-applets [OPTIONS] </code></p>

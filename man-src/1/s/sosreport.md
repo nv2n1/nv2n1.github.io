@@ -1,4 +1,5 @@
 ---
+
 title: "sosreport(1)"
 name: "sosreport"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sosreport/"
 description: "sosreport – Collect and package diagnostic and support data"
 ---
 
-<h2>NAME</h2>
 <p> sosreport &#8211; Collect and package diagnostic and support data</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sosreport</code><br />

@@ -1,4 +1,5 @@
 ---
+
 title: "cpupower-idle-set(1)"
 name: "cpupower-idle-set"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cpupower-idle-set/"
 description: "cpupower idle-set – Utility to set cpu idle state specific kernel options"
 ---
 
-<h2>NAME</h2>
 <p> cpupower idle-set &#8211; Utility to set cpu idle state specific kernel options</p>
 <h2>SYNTAX</h2>
 <p> cpupower [ -c cpulist ] idle-info [<i>options</i>]</p>

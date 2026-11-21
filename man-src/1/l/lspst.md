@@ -1,4 +1,5 @@
 ---
+
 title: "lspst(1)"
 name: "lspst"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lspst/"
 description: "lspst – list PST (MS Outlook Personal Folders) file data"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lspst &#8211; list PST (MS Outlook Personal Folders) file data </p>
 <h2>SYNOPSIS</h2>
 <dl>

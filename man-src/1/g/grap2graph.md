@@ -1,4 +1,5 @@
 ---
+
 title: "grap2graph(1)"
 name: "grap2graph"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grap2graph/"
 description: "grap2graph – convert a GRAP diagram into a cropped image"
 ---
 
-<h2 class="name">NAME</h2>
 <p> grap2graph &#8211; convert a GRAP diagram into a cropped image </p>
 <h2>SYNOPSIS</h2>
 <p> [ <code>-unsafe</code> ] [ <code>-format </code><i>output-format</i> ] [<i>convert-arguments</i>] <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>

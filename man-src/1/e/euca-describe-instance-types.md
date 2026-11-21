@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-instance-types(1)"
 name: "euca-describe-instance-types"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-describe-instance-types/"
 description: "euca-describe-instance-types – [Eucalyptus only] Show information about instance types"
 ---
 
-<h2>NAME</h2>
 <p> euca-describe-instance-types &#8211; [Eucalyptus only] Show information about instance types</p>
 <h2>SYNOPSIS</h2>
 <p> euca-describe-instance-types [&#8211;by-zone] [&#8211;show-capacity]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "lwres_getipnodebyaddr(3)"
 name: "lwres_getipnodebyaddr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-lwres_getipnodebyaddr/"
 description: "lwres_getipnodebyname, lwres_getipnodebyaddr, lwres_freehostent – lightweight resolver nodename / address translation API"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lwres_getipnodebyname, lwres_getipnodebyaddr, lwres_freehostent &#8211; lightweight resolver nodename / address translation API </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

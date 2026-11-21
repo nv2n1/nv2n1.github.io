@@ -1,4 +1,5 @@
 ---
+
 title: "console(1)"
 name: "console"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-console/"
 description: "console – console server client program"
 ---
 
-<h2>NAME</h2>
 <p> console &#8211; console server client program</p>
 <h2>SYNOPSIS</h2>
 <p> <code>console</code> [<i>generic-args</i>] [<code>-aAfFsS</code>] <code>[</code>-e <i>esc</i>] <i>console</i><br />

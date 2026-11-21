@@ -1,4 +1,5 @@
 ---
+
 title: "readlink(2)"
 name: "readlink"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-readlink/"
 description: "readlink, readlinkat – read value of a symbolic link"
 ---
 
-<h2 class="name">NAME</h2>
 <p> readlink, readlinkat &#8211; read value of a symbolic link </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

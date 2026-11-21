@@ -1,4 +1,5 @@
 ---
+
 title: "xfig(1)"
 name: "xfig"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xfig/"
 description: "xfig – Facility for Interactive Generation of figures under X11 Version 3.2.7b"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xfig &#8211; Facility for Interactive Generation of figures under X11<br />
  Version 3.2.7b </p>
 <h2>SYNOPSIS</h2>

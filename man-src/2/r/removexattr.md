@@ -1,4 +1,5 @@
 ---
+
 title: "removexattr(2)"
 name: "removexattr"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-removexattr/"
 description: "removexattr, lremovexattr, fremovexattr – remove an extended attribute"
 ---
 
-<h2 class="name">NAME</h2>
 <p> removexattr, lremovexattr, fremovexattr &#8211; remove an extended attribute </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "halberd(1)"
 name: "halberd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-halberd/"
 description: "halberd – manual page for halberd 0.2.4 (14-Aug-2010)"
 ---
 
-<h2>NAME</h2>
 <p> halberd &#8211; manual page for halberd 0.2.4 (14-Aug-2010)</p>
 <h2>DESCRIPTION</h2>
 <p> Usage: halberd [OPTION]&#8230; URL </p>

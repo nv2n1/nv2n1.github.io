@@ -1,4 +1,5 @@
 ---
+
 title: "g_velacc_d(1)"
 name: "g_velacc_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_velacc_d/"
 description: "g_velacc – calculates velocity autocorrelation functions"
 ---
 
-<h2>NAME</h2>
 <p> g_velacc &#8211; calculates velocity autocorrelation functions </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

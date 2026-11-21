@@ -1,4 +1,5 @@
 ---
+
 title: "ipmi_ui(1)"
 name: "ipmi_ui"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipmi_ui/"
 description: "ipmi_ui – Crude interface to an IPMI system"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ipmi_ui &#8211; Crude interface to an IPMI system</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ipmi_ui</code> [<code>-dmsg</code>] [<code>-dmem</code>] [<code>-c</code>] <i>connection-1</i>[<i>connection-2</i>] </p>

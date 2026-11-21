@@ -1,4 +1,5 @@
 ---
+
 title: "curvecpprintkey(1)"
 name: "curvecpprintkey"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-curvecpprintkey/"
 description: "CurveCP — Message-handling programs"
 ---
 
-<h2>NAME</h2>
 <p> CurveCP &#8212; Message-handling programs</p>
 <h2>SYNOPSIS</h2>
 <p> <code>curvecpmakekey</code> [<code>keydir</code>]</p>

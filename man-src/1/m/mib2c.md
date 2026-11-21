@@ -1,4 +1,5 @@
 ---
+
 title: "mib2c(1)"
 name: "mib2c"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mib2c/"
 description: "mib2c — generate template code for extending the agent"
 ---
 
-<h2>NAME</h2>
 <p> mib2c &#8212; generate template code for extending the agent</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mib2c</code> [-h] -c CONFIGFILE [-I PATH] [-f OUTNAME] [-i][-s][-q][-S VAR=VAL] MIBNODE</p>

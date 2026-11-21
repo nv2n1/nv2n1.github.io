@@ -1,4 +1,5 @@
 ---
+
 title: "vhangup(2)"
 name: "vhangup"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-vhangup/"
 description: "vhangup – virtually hangup the current terminal"
 ---
 
-<h2 class="name">NAME</h2>
 <p> vhangup &#8211; virtually hangup the current terminal </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>

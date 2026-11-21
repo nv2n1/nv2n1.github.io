@@ -1,4 +1,5 @@
 ---
+
 title: "collectl(1)"
 name: "collectl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-collectl/"
 description: "collectl – Collects data that describes the current system status."
 ---
 
-<h2>NAME</h2>
 <p> collectl &#8211; Collects data that describes the current system status. </p>
 <h2>SYNOPSIS</h2>
 <p> Record Mode &#8211; read data from live system and write to file or display on terminal </p>

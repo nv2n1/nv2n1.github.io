@@ -1,4 +1,5 @@
 ---
+
 title: "wishwn(1)"
 name: "wishwn"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wishwn/"
 description: "wishwn – default version of the Tcl_AppInit procedure for wnb(1)"
 ---
 
-<h2>NAME</h2>
 <p> wishwn &#8211; default version of the Tcl_AppInit procedure for <a href="/docs/linux/man/1-wnb/">wnb</a>(1) </p>
 <h2>SYNOPSIS</h2>
 <p> it is intended to be run from wnb (see wnb.1) </p>

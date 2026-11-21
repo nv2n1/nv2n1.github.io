@@ -1,4 +1,5 @@
 ---
+
 title: "blaze-remove(1)"
 name: "blaze-remove"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-blaze-remove/"
 description: "blaze-remove – remove a post/page from the BlazeBlogger repository"
 ---
 
-<h2 class="name">NAME</h2>
 <p> blaze-remove &#8211; remove a post/page from the BlazeBlogger repository </p>
 <h2>SYNOPSIS</h2>
 <p> <code>blaze-remove</code> [<code>-fipqPV</code>] [<code>-b</code> <i>directory</i>] <i>id</i>&#8230; </p>

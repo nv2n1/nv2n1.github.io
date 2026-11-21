@@ -1,4 +1,5 @@
 ---
+
 title: "mmldif(1)"
 name: "mmldif"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mmldif/"
 description: "mmldif – mmldif util"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mmldif &#8211; mmldif util </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mmldif</code> [-c] [-D] [-o out.ldif] in1.ldif in2.ldif &#8230; </p>

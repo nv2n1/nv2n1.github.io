@@ -1,4 +1,5 @@
 ---
+
 title: "tpmtoken_import(1)"
 name: "tpmtoken_import"
 section: "1"
@@ -9,7 +10,7 @@ description: "tpmtoken_import – import an X.509 certficate and/or an RSA key p
 
 <p>TPM Management &#8211; tpmtoken_import<br />
  </center></p>
-<h2 class="name">NAME</h2>
+
 <p> tpmtoken_import &#8211; import an X.509 certficate and/or an RSA key pair into the user&#8217;s TPM PKCS#11 data store </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tpmtoken_import</code> [ OPTION ] FILE </p>

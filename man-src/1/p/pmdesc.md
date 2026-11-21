@@ -1,4 +1,5 @@
 ---
+
 title: "pmdesc(1)"
 name: "pmdesc"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-pmdesc/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- pmdesc - print out version and whatis description of perl modules 
+pmdesc - print out version and whatis description of perl modules 
 
 <h2>DESCRIPTION</h2>
 

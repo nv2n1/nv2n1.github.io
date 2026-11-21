@@ -1,4 +1,5 @@
 ---
+
 title: "get_raw_filename(3)"
 name: "get_raw_filename"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_raw_filename/"
 description: "get_raw_filename — retrieve the pathname of a binary file in a dirfile"
 ---
 
-<h2>NAME</h2>
 <p> get_raw_filename &#8212; retrieve the pathname of a binary file in a dirfile</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

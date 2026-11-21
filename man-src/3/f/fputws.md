@@ -1,4 +1,5 @@
 ---
+
 title: "fputws(3)"
 name: "fputws"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fputws/"
 description: "fputws – write a wide-character string to a FILE stream"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fputws &#8211; write a wide-character string to a FILE stream </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

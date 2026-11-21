@@ -1,4 +1,5 @@
 ---
+
 title: "euare-accountuploadpolicy(1)"
 name: "euare-accountuploadpolicy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-accountuploadpolicy/"
 description: "euare-accountuploadpolicy – [Eucalyptus cloud admin only] Attach a policy to an account"
 ---
 
-<h2>NAME</h2>
 <p> euare-accountuploadpolicy &#8211; [Eucalyptus cloud admin only] Attach a policy to an account</p>
 <h2>SYNOPSIS</h2>
 <p> euare-accountuploadpolicy <code>-p</code> POLICY (<code>-o</code> POLICY_CONTENT | <code>-f</code> FILE)</p>

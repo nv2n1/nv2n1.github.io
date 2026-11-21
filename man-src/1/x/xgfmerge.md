@@ -1,4 +1,5 @@
 ---
+
 title: "xgfmerge(1)"
 name: "xgfmerge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xgfmerge/"
 description: "xgfmerge – merges two Xgridfit program files"
 ---
 
-<h2>NAME</h2>
 <p> <code>xgfmerge</code> &#8211; merges two Xgridfit program files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xgfmerge</code> [options] <i>file-a</i> <i>file-b</i> <i>[&#8230;]</i></p>

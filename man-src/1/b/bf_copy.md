@@ -1,4 +1,5 @@
 ---
+
 title: "bf_copy(1)"
 name: "bf_copy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bf_copy/"
 description: "bf_copy – shell script to copy a bogofilter working directory"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bf_copy &#8211; shell script to copy a bogofilter working directory </p>
 <h2>SYNOPSIS</h2>
 <dl>

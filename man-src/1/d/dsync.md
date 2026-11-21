@@ -1,4 +1,5 @@
 ---
+
 title: "dsync(1)"
 name: "dsync"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dsync/"
 description: "dsync – Dovecot’s mailbox synchronization utility"
 ---
 
-<h2>NAME</h2>
 <p> dsync &#8211; Dovecot&#8217;s mailbox synchronization utility</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dsync</code> [<i>options</i>] <code>mirror&nbsp;<wbr></code><i>location2</i><br />

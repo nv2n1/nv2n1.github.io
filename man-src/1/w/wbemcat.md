@@ -1,4 +1,5 @@
 ---
+
 title: "wbemcat(1)"
 name: "wbemcat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wbemcat/"
 description: "wbemcat – a multi-protocol CIM-XML client"
 ---
 
-<h2>NAME</h2>
 <p> wbemcat &#8211; a multi-protocol CIM-XML client </p>
 <h2>SYNOPSIS</h2>
 <p> <code>wbemcatX</code> [<i>options</i>] [<i>FILE</i>]</p>

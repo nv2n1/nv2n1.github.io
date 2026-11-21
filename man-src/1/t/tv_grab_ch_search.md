@@ -1,4 +1,5 @@
 ---
+
 title: "tv_grab_ch_search(1)"
 name: "tv_grab_ch_search"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tv_grab_ch_search/"
 description: "tv_grab_ch_search – Grab TV listings for Switzerland (from tv.search.ch webpage)."
 ---
 
-<h2 class="name">NAME</h2>
 <p> tv_grab_ch_search &#8211; Grab TV listings for Switzerland (from tv.search.ch webpage). </p>
 <h2>SYNOPSIS</h2>
 <p> tv_grab_ch_search &#8211;help </p>

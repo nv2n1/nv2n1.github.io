@@ -1,4 +1,5 @@
 ---
+
 title: "snmpnetstat(1)"
 name: "snmpnetstat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-snmpnetstat/"
 description: "snmpnetstat – display networking status and configuration information from a network entity via SNMP"
 ---
 
-<h2>NAME</h2>
 <p> snmpnetstat &#8211; display networking status and configuration information from a network entity via SNMP</p>
 <h2>SYNOPSIS</h2>
 <p> <code>snmpnetstat</code> [COMMON OPTIONS] [-Ca] [-Cn] AGENT<br />

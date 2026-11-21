@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-update-auto-scaling-group(1)"
 name: "euscale-update-auto-scaling-group"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euscale-update-auto-scaling-group/"
 description: "euscale-update-auto-scaling-group – Update an auto-scaling group’s parameters"
 ---
 
-<h2>NAME</h2>
 <p> euscale-update-auto-scaling-group &#8211; Update an auto-scaling group&#8217;s parameters</p>
 <h2>SYNOPSIS</h2>
 <p> euscale-update-auto-scaling-group [&#8211;default-cooldown SECONDS]</p>

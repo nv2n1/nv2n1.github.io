@@ -1,4 +1,5 @@
 ---
+
 title: "keyctl_revoke(3)"
 name: "keyctl_revoke"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-keyctl_revoke/"
 description: "keyctl_revoke – Revoke a key"
 ---
 
-<h2 class="name">NAME</h2>
 <p> keyctl_revoke &#8211; Revoke a key </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

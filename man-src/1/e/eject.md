@@ -1,4 +1,5 @@
 ---
+
 title: "eject(1)"
 name: "eject"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eject/"
 description: "eject – eject removable media"
 ---
 
-<h2 class="name">NAME</h2>
 <p> eject &#8211; eject removable media </p>
 <p> <code>eject</code> [options] <i>device</i>|<i>mountpoint</i> </p>
 <h2>DESCRIPTION</h2>

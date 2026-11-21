@@ -1,4 +1,5 @@
 ---
+
 title: "kst(1)"
 name: "kst"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kst/"
 description: "kst – A plotting and data viewing program"
 ---
 
-<h2>NAME</h2>
 <p> kst &#8211; A plotting and data viewing program</p>
 <h2>SYNOPSIS</h2>
 <p> The options are:</p>

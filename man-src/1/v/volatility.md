@@ -1,4 +1,5 @@
 ---
+
 title: "volatility(1)"
 name: "volatility"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-volatility/"
 description: "volatility – advanced memory forensics framework"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>volatility </code>&#8211; advanced memory forensics framework </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

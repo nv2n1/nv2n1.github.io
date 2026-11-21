@@ -1,4 +1,5 @@
 ---
+
 title: "dh_autotools-dev_restoreconfig(1)"
 name: "dh_autotools-dev_restoreconfig"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_autotools-dev_restoreconfig/"
 description: "dh_autotools-dev_restoreconfig – restore config.sub and config.guess"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_autotools-dev_restoreconfig &#8211; restore config.sub and config.guess </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_autotools-dev_restoreconfig</code> [<i>debhelper options</i>]</p>

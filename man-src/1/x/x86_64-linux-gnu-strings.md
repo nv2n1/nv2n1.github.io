@@ -1,4 +1,5 @@
 ---
+
 title: "x86_64-linux-gnu-strings(1)"
 name: "x86_64-linux-gnu-strings"
 section: "1"
@@ -6,7 +7,7 @@ letter: "x"
 url: "/docs/linux/man/1-x86_64-linux-gnu-strings/"
 description: "strings – print the sequences of printable characters in files"
 ---
-<h2 class="name">NAME</h2>
+
 <p> strings - print the sequences of printable characters in files </p>
 <h2>SYNOPSIS</h2>
 <p> strings [<code>-afovV</code>] [<code>-</code><i>min-len</i>] <br />

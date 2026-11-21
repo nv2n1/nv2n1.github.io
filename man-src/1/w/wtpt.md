@@ -1,4 +1,5 @@
 ---
+
 title: "wtpt(1)"
 name: "wtpt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wtpt/"
 description: "wtpt – Show media white of profiles, identifying black body locus."
 ---
 
-<h2>NAME</h2>
 <p> wtpt &#8211; Show media white of profiles, identifying black body locus.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wtpt</code> [<i>profile</i>]</p>

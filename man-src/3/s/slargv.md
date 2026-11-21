@@ -1,4 +1,5 @@
 ---
+
 title: "slargv(3)"
 name: "slargv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slargv/"
 description: "slargv.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> slargv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

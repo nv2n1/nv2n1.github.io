@@ -1,4 +1,5 @@
 ---
+
 title: "fvwm-menu-desktop(1)"
 name: "fvwm-menu-desktop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fvwm-menu-desktop/"
 description: "fvwm-menu-desktop – Reads XDG menu files and creates Fvwm menus"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fvwm-menu-desktop &#8211; Reads XDG menu files and creates Fvwm menus</p>
 <h2>SYNOPSIS</h2>
 <p> fvwm-menu-desktop [ <code>&#8211;help</code>|<code>-h</code> ] [ <code>&#8211;version</code>|<code>-v</code> ] [ <code>&#8211;install-prefix</code> <i>DIR</i> ] [ <code>&#8211;desktop</code> <i>NAME</i> ] [ <code>&#8211;menu-type</code> <i>NAME</i> ] [ <code>&#8211;theme</code> <i>NAME</i> ] [ <code>&#8211;with-titles</code>|<code>-w</code> ] [ <code>&#8211;enable-mini-icons</code> ] [ <code>&#8211;size</code>|<code>-s</code> <i>NUM</i> ] [ <code>&#8211;mini-icon-dir</code>|<code>-t</code> <i>DIR</i> ] [ <code>&#8211;title</code>|<code>-t</code> <i>NAME</i> ] [ <code>&#8211;insert-in-menu</code> <i>NAME</i> ] [ <code>&#8211;get-menus</code> <i>all</i>|<i>desktop</i> ] [ <code>&#8211;set-menus</code> <i>menu_paths</i> ] [ <code>&#8211;verbose</code> ] </p>

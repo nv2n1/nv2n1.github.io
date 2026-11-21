@@ -1,4 +1,5 @@
 ---
+
 title: "cht(1)"
 name: "cht"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cht/"
 description: "cht – chemtool drawings analyzer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cht &#8211; chemtool drawings analyzer</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cht</code> [<code>options</code>] <i>filename.cht</i> </p>

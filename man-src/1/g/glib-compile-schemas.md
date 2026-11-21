@@ -1,4 +1,5 @@
 ---
+
 title: "glib-compile-schemas(1)"
 name: "glib-compile-schemas"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-glib-compile-schemas/"
 description: "glib-compile-schemas – GSettings schema compiler"
 ---
 
-<h2 class="name">NAME</h2>
 <p> glib-compile-schemas &#8211; GSettings schema compiler </p>
 <h2>SYNOPSIS</h2>
 <dl>

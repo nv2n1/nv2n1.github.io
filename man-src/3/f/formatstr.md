@@ -1,4 +1,5 @@
 ---
+
 title: "formatstr(3)"
 name: "formatstr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-formatstr/"
 description: "formatstr – String Formatter object"
 ---
 
-<h2>NAME</h2>
 <p> formatstr &#8211; String Formatter object</p>
 <h2>DESCRIPTION</h2>
 <p> Object used to format base objects into strings. It extends the functionality of the string Formatter object to include new modifiers for different objects. Some of these new modifiers include conversion of strings into a sequence of hex characters, conversion of strings to their corresponding CRC32 or CRC16 representation.</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "rhythmbox-client(1)"
 name: "rhythmbox-client"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rhythmbox-client/"
 description: "rhythmbox-client – controls a running instance of rhythmbox"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rhythmbox-client &#8211; controls a running instance of rhythmbox </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rhythmbox-client</code> [<i>option&#8230;</i>]<i>[</i>file&#8230;<i>]</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "xca(1)"
 name: "xca"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xca/"
 description: "xca – X Certificate and key management A GUI for handling X509 certificates, RSA/DSA/EC keys, PKCS#10 Requests and CRLs in Software and on Smartcards."
 ---
 
-<h2>NAME</h2>
 <p> xca &#8211; X Certificate and key management<br />
  A GUI for handling X509 certificates, RSA/DSA/EC keys, PKCS#10 Requests and CRLs in Software and on Smartcards.</p>
 <h2>SYNOPSIS</h2>

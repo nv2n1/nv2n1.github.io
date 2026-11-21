@@ -1,4 +1,5 @@
 ---
+
 title: "globus_ftp_client_handle_init(3)"
 name: "globus_ftp_client_handle_init"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_ftp_client_handle_init/"
 description: "Handle Management –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Handle Management &#8211; </p>
 <h3>Data Structures</h3>
 <p> struct <code>globus_i_ftp_client_data_target_t</code><br />

@@ -1,4 +1,5 @@
 ---
+
 title: "dlansy(3)"
 name: "dlansy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlansy/"
 description: "dlansy.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dlansy.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

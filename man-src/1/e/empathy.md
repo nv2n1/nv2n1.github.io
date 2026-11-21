@@ -1,4 +1,5 @@
 ---
+
 title: "empathy(1)"
 name: "empathy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-empathy/"
 description: "empathy – GNOME multi-protocol chat and call client"
 ---
 
-<h2>NAME</h2>
 <p> empathy &#8211; GNOME multi-protocol chat and call client</p>
 <h2>SYNOPSIS</h2>
 <p> empathy</p>

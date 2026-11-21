@@ -1,4 +1,5 @@
 ---
+
 title: "install_timer(3)"
 name: "install_timer"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-install_timer/"
 description: "install_timer – Installs the Allegro timer interrupt handler."
 ---
 
-<h2>NAME</h2>
 <p> install_timer &#8211; Installs the Allegro timer interrupt handler.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

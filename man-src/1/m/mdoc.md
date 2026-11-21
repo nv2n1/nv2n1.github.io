@@ -1,4 +1,5 @@
 ---
+
 title: "mdoc(1)"
 name: "mdoc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mdoc/"
 description: "mdoc – Mono documentation management tool"
 ---
 
-<h2>NAME</h2>
 <p> mdoc &#8211; Mono documentation management tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mdoc</code> <i>command</i> [<i>options</i>] [<i>args</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "engine(3)"
 name: "engine"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-engine/"
 description: "QuantLib::QuantoVanillaOption – quanto version of a vanilla option"
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::QuantoVanillaOption &#8211; quanto version of a vanilla option </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/quantovanillaoption.hpp&gt; </p>

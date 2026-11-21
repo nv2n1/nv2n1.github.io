@@ -1,4 +1,5 @@
 ---
+
 title: "llmk(1)"
 name: "llmk"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-llmk/"
 description: "llmk – Light LaTeX Make"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>llmk</code> &#8211; Light LaTeX Make </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llmk</code> [OPTION]&#8230; [FILE]&#8230;</p>

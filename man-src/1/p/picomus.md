@@ -1,4 +1,5 @@
 ---
+
 title: "picomus(1)"
 name: "picomus"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-picomus/"
 description: "picomus – Minimal Unsatisfiable Core (MUS) generator"
 ---
 
-<h2>NAME</h2>
 <p> picomus &#8211; Minimal Unsatisfiable Core (MUS) generator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>picomus</code> [<i>OPTION</i>]&#8230; [<i>INPUT</i> [<i>OUTPUT</i>]]</p>

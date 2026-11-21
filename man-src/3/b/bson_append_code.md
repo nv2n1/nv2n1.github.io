@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_code(3)"
 name: "bson_append_code"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_append_code/"
 description: "bson_append_code() – The bson_append_code() function shall append a new element to bson using the UTF-8 encoded javascript provided. javascript must be a NULL terminated C string."
 ---
 
-<h2>NAME</h2>
 <p> bson_append_code() &#8211; The bson_append_code() function shall append a new element to bson using the UTF-8 encoded javascript provided. javascript must be a NULL terminated C string.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

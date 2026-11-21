@@ -1,4 +1,5 @@
 ---
+
 title: "gpsman(1)"
 name: "gpsman"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpsman/"
 description: "gpsman – a (graphical) manager of GPS data"
 ---
 
-<h2>NAME</h2>
 <p> gpsman &#8211; a (graphical) manager of GPS data</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gpsman</code> [<code>-dev</code> <i>[usb=]DEVICE</i>]<br />

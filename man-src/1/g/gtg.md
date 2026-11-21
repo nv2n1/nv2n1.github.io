@@ -1,4 +1,5 @@
 ---
+
 title: "gtg(1)"
 name: "gtg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gtg/"
 description: "gtg – Getting Things Gnome!, an organizer for the GNOME desktop"
 ---
 
-<h2>NAME</h2>
 <p> gtg &#8211; Getting Things Gnome!, an organizer for the GNOME desktop</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gtg</code></p>

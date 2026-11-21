@@ -1,4 +1,5 @@
 ---
+
 title: "svndumpfilter(1)"
 name: "svndumpfilter"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-svndumpfilter/"
 description: "svndumpfilter – Filter a subversion repository ‘dumpfile’."
 ---
 
-<h2>NAME</h2>
 <p> svndumpfilter &#8211; Filter a subversion repository &#8216;dumpfile&#8217;.</p>
 <h2>SYNOPSIS</h2>
 <dl>

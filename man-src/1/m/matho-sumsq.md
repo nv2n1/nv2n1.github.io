@@ -1,4 +1,5 @@
 ---
+
 title: "matho-sumsq(1)"
 name: "matho-sumsq"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-matho-sumsq/"
 description: "matho-sumsq – Find the minimum sum of the squares for integers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> matho-sumsq &#8211; Find the minimum sum of the squares for integers</p>
 <h2>SYNOPSIS</h2>
 <p> <code>matho-sumsq</code> [<i>numbers</i>] </p>

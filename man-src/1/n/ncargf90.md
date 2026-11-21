@@ -1,4 +1,5 @@
 ---
+
 title: "ncargf90(1)"
 name: "ncargf90"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ncargf90/"
 description: "ncargf90 – Command for compiling Fortran code that uses the NCAR Graphics low-level utilities"
 ---
 
-<h2>NAME</h2>
 <p> ncargf90 &#8211; Command for compiling Fortran code that uses the NCAR Graphics low-level utilities</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ncargf90</code> [<code>-ngmath</code>] [<code>-smooth</code>] [<code>-quick</code>] [<code>-super</code>] [<code>-agupwrtx</code>] [<code>-ictrans</code>] [<code>-noX11</code>] &#8230;</p>

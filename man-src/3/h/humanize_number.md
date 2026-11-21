@@ -1,4 +1,5 @@
 ---
+
 title: "humanize_number(3)"
 name: "humanize_number"
 section: "3"
@@ -6,10 +7,7 @@ letter: "h"
 url: "/docs/linux/man/3-humanize_number/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- <b>dehumanize_number</b> <b>humanize_number</b> - format a number into a human readable form and viceversa 
+<b>dehumanize_number</b> <b>humanize_number</b> - format a number into a human readable form and viceversa 
 
 <h2>LIBRARY</h2>
 

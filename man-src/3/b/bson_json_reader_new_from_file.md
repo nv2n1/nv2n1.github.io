@@ -1,4 +1,5 @@
 ---
+
 title: "bson_json_reader_new_from_file(3)"
 name: "bson_json_reader_new_from_file"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_json_reader_new_from_file/"
 description: "bson_json_reader_new_from_file() – Creates a new bson_json_reader_t using the underlying file found at filename."
 ---
 
-<h2>NAME</h2>
 <p> bson_json_reader_new_from_file() &#8211; Creates a new bson_json_reader_t using the underlying file found at filename.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "wtoc(1)"
 name: "wtoc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wtoc/"
 description: "wtoc – Convert a Wnn text-form dictionary (or dictionaries) into Canna text-form dictionaries"
 ---
 
-<h2>NAME</h2>
 <p> wtoc &#8211; Convert a Wnn text-form dictionary (or dictionaries) into Canna text-form dictionaries</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wtoc [-f </code><i>hinshidata</i>] [<i>wnnjisho</i>] [<i>cannajisho</i>]</p>

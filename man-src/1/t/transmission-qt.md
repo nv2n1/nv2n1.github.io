@@ -1,4 +1,5 @@
 ---
+
 title: "transmission-qt(1)"
 name: "transmission-qt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-transmission-qt/"
 description: "transmission-qt – a bittorrent client"
 ---
 
-<h2>NAME</h2>
 <p> <code>transmission-qt</code> &#8211; a bittorrent client</p>
 <h2>SYNOPSIS</h2>
 <p> <code>transmission-qt</code> &#8211;<code>h</code><br />

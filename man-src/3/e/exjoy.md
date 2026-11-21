@@ -1,4 +1,5 @@
 ---
+
 title: "exjoy(3)"
 name: "exjoy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-exjoy/"
 description: "exjoy – Detecting, calibrating and using joystick input. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> exjoy &#8211; Detecting, calibrating and using joystick input. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

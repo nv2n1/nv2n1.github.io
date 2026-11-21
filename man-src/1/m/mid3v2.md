@@ -1,4 +1,5 @@
 ---
+
 title: "mid3v2(1)"
 name: "mid3v2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mid3v2/"
 description: "mid3v2 – audio tag editor similar to ‘id3v2’"
 ---
 
-<h2>NAME</h2>
 <p> mid3v2 &#8211; audio tag editor similar to &#8216;id3v2&#8217;</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mid3v2</code> [<i>options</i>] <i>filename</i> &#8230;</p>

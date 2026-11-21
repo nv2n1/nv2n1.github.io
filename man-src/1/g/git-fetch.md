@@ -1,4 +1,5 @@
 ---
+
 title: "git-fetch(1)"
 name: "git-fetch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-fetch/"
 description: "git-fetch – Download objects and refs from another repository"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-fetch &#8211; Download objects and refs from another repository </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

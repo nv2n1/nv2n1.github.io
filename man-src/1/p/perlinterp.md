@@ -1,4 +1,5 @@
 ---
+
 title: "perlinterp(1)"
 name: "perlinterp"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlinterp/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlinterp - An overview of the Perl interpreter 
+perlinterp - An overview of the Perl interpreter 
 
 <h2>DESCRIPTION</h2>
 

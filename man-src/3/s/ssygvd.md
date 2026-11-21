@@ -1,4 +1,5 @@
 ---
+
 title: "ssygvd(3)"
 name: "ssygvd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ssygvd/"
 description: "ssygvd.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ssygvd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

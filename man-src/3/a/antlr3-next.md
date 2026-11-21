@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-next(3)"
 name: "antlr3-next"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3-next/"
 description: "src/antlr3rewritestreams.c –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> src/antlr3rewritestreams.c &#8211; </p>
 <p> Implementation of token/tree streams that are used by the tree re-write rules to manipulate the tokens and trees produced by rules that are subject to rewrite directives.</p>
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "digi_recorder(3)"
 name: "digi_recorder"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-digi_recorder/"
 description: "digi_recorder – Hook notifying you when a new sample buffer becomes available. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> digi_recorder &#8211; Hook notifying you when a new sample buffer becomes available. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

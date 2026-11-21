@@ -1,4 +1,5 @@
 ---
+
 title: "log4c-config(1)"
 name: "log4c-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-log4c-config/"
 description: "log4c-config – script to get information about the installed version of log4c"
 ---
 
-<h2>NAME</h2>
 <p> log4c-config &#8211; script to get information about the installed version of log4c</p>
 <h2>SYNOPSIS</h2>
 <p> <code>log4c-config</code> [&#8211;prefix] [&#8211;libs] [&#8211;cflags] [&#8211;version] [&#8211;help]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "rcvdist(1)"
 name: "rcvdist"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rcvdist/"
 description: "rcvdist – asynchronously redistribute new mail"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rcvdist &#8211; asynchronously redistribute new mail </p>
 <h2>SYNOPSIS</h2>
 <dl>

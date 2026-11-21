@@ -1,4 +1,5 @@
 ---
+
 title: "grub2-mknetdir(1)"
 name: "grub2-mknetdir"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grub2-mknetdir/"
 description: "grub-mknetdir — Prepare a GRUB netboot directory."
 ---
 
-<h2>NAME</h2>
 <p> <code>grub-mknetdir</code> &#8212; Prepare a GRUB netboot directory. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grub-mknetdir</code> </p>

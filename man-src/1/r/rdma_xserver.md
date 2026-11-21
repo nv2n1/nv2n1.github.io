@@ -1,4 +1,5 @@
 ---
+
 title: "rdma_xserver(1)"
 name: "rdma_xserver"
 section: "1"
@@ -6,9 +7,7 @@ letter: "r"
 url: "/docs/linux/man/1-rdma_xserver/"
 ---
 
-<h2>NAME</h2>
-
- rdma_xserver - RDMA CM communication server test program
+rdma_xserver - RDMA CM communication server test program
 
 <h2>SYNOPSIS</h2>
 

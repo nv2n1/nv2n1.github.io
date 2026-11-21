@@ -1,4 +1,5 @@
 ---
+
 title: "latrace(1)"
 name: "latrace"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-latrace/"
 description: "latrace – LD_AUDIT 2.4+ libc frontend"
 ---
 
-<h2 class="name">NAME</h2>
 <p> latrace &#8211; LD_AUDIT 2.4+ libc frontend </p>
 <h2>SYNOPSIS</h2>
 <p> latrace [-snltfvhiBdISbcCyYLpoaNADVTFERq] command [arg &#8230; ]</p>

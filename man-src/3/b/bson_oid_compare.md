@@ -1,4 +1,5 @@
 ---
+
 title: "bson_oid_compare(3)"
 name: "bson_oid_compare"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_oid_compare/"
 description: "bson_oid_compare() – The bson_oid_compare() function shall return a qsort() style value of a lexicographical sort of _oid1_ and _oid2_."
 ---
 
-<h2>NAME</h2>
 <p> bson_oid_compare() &#8211; The bson_oid_compare() function shall return a qsort() style value of a lexicographical sort of _oid1_ and _oid2_.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "smidump(1)"
 name: "smidump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-smidump/"
 description: "smidump – dump SMI or SPPI modules in various formats"
 ---
 
-<h2>NAME</h2>
 <p> smidump &#8211; dump SMI or SPPI modules in various formats</p>
 <h2>SYNOPSIS</h2>
 <p> <code>smidump</code> [ <code>-Vhqusmk</code> ] [ <code>-c </code><i>file</i> ] [ <code>-o </code><i>name</i> ] [ <code>-p </code><i>module</i> ] [ <code>-l </code><i>level</i> ] [ <code>-f </code><i>format</i> ] <i>module(s)</i></p>

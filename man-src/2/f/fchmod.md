@@ -1,4 +1,5 @@
 ---
+
 title: "fchmod(2)"
 name: "fchmod"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-fchmod/"
 description: "chmod, fchmod, fchmodat – change permissions of a file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> chmod, fchmod, fchmodat &#8211; change permissions of a file </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

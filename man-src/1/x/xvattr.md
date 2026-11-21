@@ -1,4 +1,5 @@
 ---
+
 title: "xvattr(1)"
 name: "xvattr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xvattr/"
 description: "xvattr – Query/Set X11 XVideo Setting(s)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xvattr &#8211; Query/Set X11 XVideo Setting(s) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xvattr</code> [<i>options</i>&#8230;] </p>

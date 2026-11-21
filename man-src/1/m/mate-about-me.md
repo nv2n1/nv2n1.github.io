@@ -1,4 +1,5 @@
 ---
+
 title: "mate-about-me(1)"
 name: "mate-about-me"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-about-me/"
 description: "mate-about-me — is a control center applet."
 ---
 
-<h2>NAME</h2>
 <p> mate-about-me &#8212; is a control center applet. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-about-me</code> </p>

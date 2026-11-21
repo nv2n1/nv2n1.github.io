@@ -1,4 +1,5 @@
 ---
+
 title: "arm_destroy_application(3)"
 name: "arm_destroy_application"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-arm_destroy_application/"
 description: "arm_destroy_application – destroy application data"
 ---
 
-<h2>NAME</h2>
 <p> arm_destroy_application &#8211; destroy application data</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/arm4.h">arm4.h</a>&gt;</code> </p>

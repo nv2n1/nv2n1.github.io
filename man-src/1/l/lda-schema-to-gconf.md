@@ -1,4 +1,5 @@
 ---
+
 title: "lda-schema-to-gconf(1)"
 name: "lda-schema-to-gconf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lda-schema-to-gconf/"
 description: "lda-schema-to-gconf – A script which converts keyfile-based schemas into GConf schemas for libdesktop-agnostic."
 ---
 
-<h2>NAME</h2>
 <p> lda-schema-to-gconf &#8211; A script which converts keyfile-based schemas into GConf schemas for libdesktop-agnostic. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lda-schema-to-gconf</code> </p>

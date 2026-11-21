@@ -1,4 +1,5 @@
 ---
+
 title: "opax(1)"
 name: "opax"
 section: "1"
@@ -6,7 +7,7 @@ letter: "o"
 url: "/docs/linux/man/1-opax/"
 description: "opax – read and write file archives and copy directory hierarchies (OpenBSD pax implementation)"
 ---
-<h2>NAME</h2>
+
 <p> <code>opax</code> - read and write file archives and copy directory hierarchies (OpenBSD <i>pax</i> implementation)  </p>
 <h2>SYNOPSIS</h2>
 <p> [-<code>0cdOnvz</code> ] -words [-<code>f </code><i>archive</i> ] -words [-<code>s </code><i>replstr</i> ] <i>...</i> -words [-<code>U </code><i>user</i> ] <i>...</i> -words [-<code>G </code><i>group</i> ] <i>...</i> -words [-<code>T</code> [<i>from_date</i> ] [<i>,to_date</i> ] ] <i>...</i> [<i>pattern ...</i> ] <br />

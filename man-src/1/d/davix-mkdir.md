@@ -1,4 +1,5 @@
 ---
+
 title: "davix-mkdir(1)"
 name: "davix-mkdir"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-davix-mkdir/"
 description: "davix-mkdir – Directory creation tool based on libdavix."
 ---
 
-<h2>NAME</h2>
 <p> davix-mkdir &#8211; Directory creation tool based on libdavix.</p>
 <h2>SYNOPSIS</h2>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> davix-mkdir [options]&#8230; url</p>

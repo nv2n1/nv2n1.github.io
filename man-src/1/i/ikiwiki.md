@@ -1,4 +1,5 @@
 ---
+
 title: "ikiwiki(1)"
 name: "ikiwiki"
 section: "1"
@@ -6,9 +7,7 @@ letter: "i"
 url: "/docs/linux/man/1-ikiwiki/"
 ---
 
-<h2>NAME</h2>
-
- ikiwiki - a wiki compiler 
+ikiwiki - a wiki compiler 
 
 <h2>SYNOPSIS</h2>
 

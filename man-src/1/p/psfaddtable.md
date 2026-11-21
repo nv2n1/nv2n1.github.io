@@ -1,4 +1,5 @@
 ---
+
 title: "psfaddtable(1)"
 name: "psfaddtable"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-psfaddtable/"
 description: "psfaddtable – add a Unicode character table to a console font"
 ---
 
-<h2 class="name">NAME</h2>
 <p> psfaddtable &#8211; add a Unicode character table to a console font </p>
 <h2>SYNOPSIS</h2>
 <p> <code>psfaddtable</code> <i>fontfile tablefile outfile</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "zdiff(1)"
 name: "zdiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zdiff/"
 description: "zcmp, zdiff – compare compressed files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> zcmp, zdiff &#8211; compare compressed files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>zcmp</code> [ cmp_options ] file1 [ file2 ]<br />

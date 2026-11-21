@@ -1,4 +1,5 @@
 ---
+
 title: "cpanm(1)"
 name: "cpanm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cpanm/"
 description: "cpanm – get, unpack build and install modules from CPAN"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cpanm &#8211; get, unpack build and install modules from CPAN </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

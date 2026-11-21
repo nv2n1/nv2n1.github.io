@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-to8_8(3)"
 name: "antlr3-to8_8"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3-to8_8/"
 description: "src/antlr3string.c –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> src/antlr3string.c &#8211; </p>
 <p> Implementation of the ANTLR3 string and string factory classes.</p>
 <h2>SYNOPSIS</h2>

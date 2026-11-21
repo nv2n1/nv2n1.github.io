@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_get_all_client_addrs(3)"
 name: "krb5_get_all_client_addrs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_get_all_client_addrs/"
 description: "krb5_get_all_client_addrs krb5_get_all_server_addrs – return local addresses"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_get_all_client_addrs</code> <code>krb5_get_all_server_addrs</code> &#8211; return local addresses </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>

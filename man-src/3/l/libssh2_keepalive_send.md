@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_keepalive_send(3)"
 name: "libssh2_keepalive_send"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_keepalive_send/"
 description: "libssh2_keepalive_send – short function description"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_keepalive_send &#8211; short function description</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

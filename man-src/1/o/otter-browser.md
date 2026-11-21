@@ -1,4 +1,5 @@
 ---
+
 title: "otter-browser(1)"
 name: "otter-browser"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-otter-browser/"
 description: "otter-browser – the web browser controlled by the user, not vice-versa"
 ---
 
-<h2>NAME</h2>
 <p> otter-browser &#8211; the web browser controlled by the user, not vice-versa</p>
 <h2>SYNOPSIS</h2>
 <p> <code>otter-browser</code> [<i>OPTIONS</i>] [<i>PATH</i>|<i>URL</i>|<i>TERM</i>&#8230;]</p>

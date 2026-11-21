@@ -1,4 +1,5 @@
 ---
+
 title: "cobbler(1)"
 name: "cobbler"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cobbler/"
 description: "cobbler – a provisioning and update server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cobbler &#8211; a provisioning and update server </p>
 <p> cobbler is a provisioning (installation) and update server. It supports deployments via PXE (network booting), virtualization (Xen, QEMU/KVM, or VMware), and re-installs of existing Linux systems. The latter two features are enabled by usage of &#8216;koan&#8217; on the remote system. Update server features include yum mirroring and integration of those mirrors with kickstart. Cobbler has a command line interface, Web UI, and extensive Python and XMLRPC APIs for integration with external scripts and applications. </p>
 <h2>SYNOPSIS</h2>

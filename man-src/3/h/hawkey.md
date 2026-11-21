@@ -1,4 +1,5 @@
 ---
+
 title: "hawkey(3)"
 name: "hawkey"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hawkey/"
 description: "hawkey – Hawkey Documentation"
 ---
 
-<h2>NAME</h2>
 <p> hawkey &#8211; Hawkey Documentation </p>
 <p> Contents:</p>
 <h2>API CHANGES</h2>

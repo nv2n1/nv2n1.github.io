@@ -1,4 +1,5 @@
 ---
+
 title: "fpcmake(1)"
 name: "fpcmake"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fpcmake/"
 description: "fpcmake – The Free Pascal makefile constructor program."
 ---
 
-<h2>NAME</h2>
 <p> fpcmake &#8211; The Free Pascal makefile constructor program. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fpcmake [-Ttarget] [-pwhrqvV] [filename [filename [filename]]]</code> </p>

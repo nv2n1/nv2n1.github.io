@@ -1,4 +1,5 @@
 ---
+
 title: "sgepasswd(1)"
 name: "sgepasswd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sgepasswd/"
 description: "sgepasswd – Modify the xxQS_NAMExx password file of xxQS_NAMExx"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sgepasswd &#8211; Modify the xxQS_NAMExx password file of xxQS_NAMExx </p>
 <h2>SYNTAX</h2>
 <p> <code>sgepasswd</code> [[ <code>-D domain</code> ] <code>-d user</code> ] </p>

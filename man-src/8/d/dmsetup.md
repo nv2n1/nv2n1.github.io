@@ -1,4 +1,5 @@
 ---
+
 title: "dmsetup(8)"
 name: "dmsetup"
 section: "8"
@@ -6,8 +7,9 @@ letter: "d"
 url: "/docs/linux/man/8-dmsetup/"
 description: "dmsetup — low level logical volume management"
 ---
+
 <p>dmsetup --- low level logical volume management </p>
-<h2>SYNOPSIS</h2>
+
 <dl>
 <dt><code>dmsetup</code><code>clear</code><i>device_name</i></dt>
 <dt><code>dmsetup</code><code>create</code><i>device_name</i> [<code>-u</code>|<code>--uuid</code><i>uuid</i>] [<code>--addnodeoncreate</code>|<code>--addnodeonresume</code>] [<code>-n</code>|<code>--notable</code>|<code>--table</code><i>table</i>|<i>table_file</i>] [<code>--readahead</code> [<code>+</code>]<i>sectors</i>|<code>auto</code>|<code>none</code>] </dt>

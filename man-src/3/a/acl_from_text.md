@@ -1,4 +1,5 @@
 ---
+
 title: "acl_from_text(3)"
 name: "acl_from_text"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-acl_from_text/"
 description: "acl_from_text – create an ACL from text"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_from_text</code> &#8211; create an ACL from text </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>

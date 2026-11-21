@@ -1,4 +1,5 @@
 ---
+
 title: "passmass(1)"
 name: "passmass"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-passmass/"
 description: "passmass – change password on multiple machines"
 ---
 
-<h2 class="name">NAME</h2>
 <p> passmass &#8211; change password on multiple machines </p>
 <h2>SYNOPSIS</h2>
 <p> <code>passmass</code> [ <i>host1 host2 host3 &#8230;</i> ]</p>

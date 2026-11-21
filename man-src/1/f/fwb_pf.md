@@ -1,4 +1,5 @@
 ---
+
 title: "fwb_pf(1)"
 name: "fwb_pf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fwb_pf/"
 description: "fwb_pf – Policy compiler for OpenBSD packet filter \"pf\""
 ---
 
-<h2>NAME</h2>
 <p> fwb_pf &#8211; Policy compiler for OpenBSD packet filter &quot;pf&quot;</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fwb_pf</code> <code>[-vVx]</code> <code>[-d wdir]</code> <code>[-o output.fw]</code> <code>[-i]</code> <code>-f data_file.xml</code> object_name </p>

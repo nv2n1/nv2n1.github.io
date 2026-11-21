@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_session_hostkey(3)"
 name: "libssh2_session_hostkey"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_session_hostkey/"
 description: "libssh2_session_hostkey – get the remote key"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_session_hostkey &#8211; get the remote key</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

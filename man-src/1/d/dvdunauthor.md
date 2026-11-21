@@ -1,4 +1,5 @@
 ---
+
 title: "dvdunauthor(1)"
 name: "dvdunauthor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dvdunauthor/"
 description: "dvdunauthor – Decodes DVD-Video file structure"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dvdunauthor &#8211; Decodes DVD-Video file structure </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dvdunauthor</code> [ <code>path</code> ] </p>

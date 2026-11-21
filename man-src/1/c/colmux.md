@@ -1,4 +1,5 @@
 ---
+
 title: "colmux(1)"
 name: "colmux"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-colmux/"
 description: "colmux – multiplex communications to multiple systems running collectl from a single system"
 ---
 
-<h2>NAME</h2>
 <p> <code>colmux</code> &#8211; multiplex communications to multiple systems running collectl from a single system </p>
 <h2>SYNOPSIS</h2>
 <p> colmux [-command &quot;collectl-switches&#8230; [-p filespec]]&quot; [-address addr1[,addr2,&#8230;]|-addr filename] [-cols col1[,col2&#8230;]] | [-column num] </p>

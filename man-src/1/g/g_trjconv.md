@@ -1,4 +1,5 @@
 ---
+
 title: "g_trjconv(1)"
 name: "g_trjconv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_trjconv/"
 description: "trjconv – converts and manipulates trajectory files"
 ---
 
-<h2>NAME</h2>
 <p> trjconv &#8211; converts and manipulates trajectory files </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

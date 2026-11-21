@@ -1,4 +1,5 @@
 ---
+
 title: "ck_ht_next(3)"
 name: "ck_ht_next"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_ht_next/"
 description: "ck_ht_next – iterate to next entry in hash table"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_ht_next</code> &#8211; iterate to next entry in hash table</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

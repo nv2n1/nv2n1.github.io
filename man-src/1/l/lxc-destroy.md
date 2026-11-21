@@ -1,4 +1,5 @@
 ---
+
 title: "lxc-destroy(1)"
 name: "lxc-destroy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lxc-destroy/"
 description: "lxc-destroy – destroy a container."
 ---
 
-<h2>NAME</h2>
 <p> lxc-destroy &#8211; destroy a container.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lxc-destroy</code> {-n <i>name</i>} [-f]</p>

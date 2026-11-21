@@ -1,4 +1,5 @@
 ---
+
 title: "rgrep(1)"
 name: "rgrep"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rgrep/"
 description: "grep, egrep, fgrep, rgrep – print lines that match patterns"
 ---
 
-<h2 class="name">NAME</h2>
 <p> grep, egrep, fgrep, rgrep &#8211; print lines that match patterns </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grep</code> [<i>OPTION</i>&#8230;] <i>PATTERNS</i> [<i>FILE</i>&#8230;]<br />

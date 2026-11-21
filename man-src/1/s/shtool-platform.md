@@ -1,4 +1,5 @@
 ---
+
 title: "shtool-platform(1)"
 name: "shtool-platform"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-shtool-platform/"
 description: "shtool platform – GNU shtool Unix platform identification"
 ---
 
-<h2 class="name">NAME</h2>
 <p> shtool platform &#8211; GNU shtool Unix platform identification </p>
 <h2>SYNOPSIS</h2>
 <p> <code>shtool platform</code> [<code>-F</code>|<code>&#8211;format</code> <i>format</i>] [<code>-S</code>|<code>&#8211;sep</code> <i>string</i>] [<code>-C</code>|<code>&#8211;conc</code> <i>string</i>] [<code>-L</code>|<code>&#8211;lower</code>] [<code>-U</code>|<code>&#8211;upper</code>] [<code>-v</code>|<code>&#8211;verbose</code>] [<code>-c</code>|<code>&#8211;concise</code>] [<code>-n</code>|<code>&#8211;newline</code>] [<code>-d</code>|<code>&#8211;debug</code>] [<code>-t</code>|<code>&#8211;type</code> <i>type</i>] [<code>-n</code>|<code>&#8211;newline</code>] [<code>-d</code>|<code>&#8211;debug</code>]</p>

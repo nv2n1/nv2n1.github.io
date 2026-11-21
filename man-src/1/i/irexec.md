@@ -1,4 +1,5 @@
 ---
+
 title: "irexec(1)"
 name: "irexec"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-irexec/"
 description: "irexec – run programs with one button press"
 ---
 
-<h2>NAME</h2>
 <p> irexec &#8211; run programs with one button press</p>
 <h2>SYNOPSIS</h2>
 <p> <code>irexec</code> [<i>options</i>] [<i>config_file</i>]</p>

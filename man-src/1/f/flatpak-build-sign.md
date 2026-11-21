@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-build-sign(1)"
 name: "flatpak-build-sign"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flatpak-build-sign/"
 description: "flatpak-build-sign – Sign an application or runtime"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flatpak-build-sign &#8211; Sign an application or runtime </p>
 <h2>SYNOPSIS</h2>
 <dl>

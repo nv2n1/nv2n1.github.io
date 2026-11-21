@@ -1,4 +1,5 @@
 ---
+
 title: "munmap(2)"
 name: "munmap"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-munmap/"
 description: "mmap, munmap – map or unmap files or devices into memory"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mmap, munmap &#8211; map or unmap files or devices into memory </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

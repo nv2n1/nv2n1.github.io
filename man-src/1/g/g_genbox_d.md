@@ -1,4 +1,5 @@
 ---
+
 title: "g_genbox_d(1)"
 name: "g_genbox_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_genbox_d/"
 description: "genbox – solvates a system"
 ---
 
-<h2>NAME</h2>
 <p> genbox &#8211; solvates a system </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

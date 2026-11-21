@@ -1,4 +1,5 @@
 ---
+
 title: "mckey(1)"
 name: "mckey"
 section: "1"
@@ -6,9 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-mckey/"
 ---
 
-<h2>NAME</h2>
-
- mckey - RDMA CM multicast setup and simple data transfer test.
+mckey - RDMA CM multicast setup and simple data transfer test.
 
 <h2>SYNOPSIS</h2>
 

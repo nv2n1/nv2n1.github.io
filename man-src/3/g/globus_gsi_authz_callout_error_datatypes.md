@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gsi_authz_callout_error_datatypes(3)"
 name: "globus_gsi_authz_callout_error_datatypes"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gsi_authz_callout_error_datatypes/"
 description: "Datatypes –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Datatypes &#8211; </p>
 <h3>Enumerations</h3>
 <p> enum <code>globus_gsi_authz_callout_error_t</code> { <code>GLOBUS_GSI_AUTHZ_CALLOUT_AUTHZ_CALLOUT_ERROR</code> = 0, <code>GLOBUS_GSI_AUTHZ_CALLOUT_AUTHZ_DENIED_BY_CALLOUT</code> = 1, <code>GLOBUS_GSI_AUTHZ_CALLOUT_CONFIGURATION_ERROR</code> = 2, <code>GLOBUS_GSI_AUTHZ_CALLOUT_SYSTEM_ERROR</code> = 3, <code>GLOBUS_GSI_AUTHZ_CALLOUT_CREDENTIAL_ERROR</code> = 4, <code>GLOBUS_GSI_AUTHZ_CALLOUT_BAD_ARGUMENT_ERROR</code> = 5 } </p>

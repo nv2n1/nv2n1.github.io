@@ -1,4 +1,5 @@
 ---
+
 title: "dwell-click-applet(1)"
 name: "dwell-click-applet"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dwell-click-applet/"
 description: "dwell-click-applet – Useful to select click type when using dwell click"
 ---
 
-<h2>NAME</h2>
 <p> dwell-click-applet &#8211; Useful to select click type when using dwell click</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dwell-click-applet</code></p>

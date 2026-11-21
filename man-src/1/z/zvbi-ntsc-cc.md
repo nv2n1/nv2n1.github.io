@@ -1,4 +1,5 @@
 ---
+
 title: "zvbi-ntsc-cc(1)"
 name: "zvbi-ntsc-cc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zvbi-ntsc-cc/"
 description: "zvbi-ntsc-cc – closed caption decoder"
 ---
 
-<h2>NAME</h2>
 <p> zvbi-ntsc-cc &#8211; closed caption decoder</p>
 <h2>SYNOPSIS</h2>
 <p> <code>zvbi-ntsc-cc [ options ]</code></p>

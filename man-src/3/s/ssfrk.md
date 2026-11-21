@@ -1,4 +1,5 @@
 ---
+
 title: "ssfrk(3)"
 name: "ssfrk"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ssfrk/"
 description: "ssfrk.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ssfrk.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

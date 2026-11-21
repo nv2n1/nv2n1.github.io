@@ -1,4 +1,5 @@
 ---
+
 title: "tipc-pipe(1)"
 name: "tipc-pipe"
 section: "1"
@@ -6,9 +7,7 @@ letter: "t"
 url: "/docs/linux/man/1-tipc-pipe/"
 ---
 
-<h2>NAME</h2>
-
- tipc-PIPE - simple client/server
+tipc-PIPE - simple client/server
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "ck_bitmap_bts(3)"
 name: "ck_bitmap_bts"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_bitmap_bts/"
 description: "ck_bitmap_bts – set the bit at the specified index and fetch its original value"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_bitmap_bts</code> &#8211; set the bit at the specified index and fetch its original value</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

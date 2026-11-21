@@ -1,4 +1,5 @@
 ---
+
 title: "srm(1)"
 name: "srm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-srm/"
 description: "srm – securely remove files or directories"
 ---
 
-<h2>NAME</h2>
 <p> srm &#8211; securely remove files or directories</p>
 <h2>SYNOPSIS</h2>
 <p> <code>srm</code> [<i>OPTION</i>]&#8230; <i>FILE</i>&#8230;</p>

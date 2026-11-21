@@ -1,4 +1,5 @@
 ---
+
 title: "pnmcolormap(1)"
 name: "pnmcolormap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnmcolormap/"
 description: "pnmcolormap – create quantization color map for a portable anymap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pnmcolormap &#8211; create quantization color map for a portable anymap</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmcolormap</code> [<code>-center</code>|<code>-meancolor</code>|<code>-meanpixel</code>] [<code>-spreadbrightness</code>|<code>-spreadluminosity</code>] [<code>-sort</code>] [<code>-square</code>] <i>ncolors</i>|<i></i><code>all</code> [<i>pnmfile</i>] </p>

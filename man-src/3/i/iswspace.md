@@ -1,4 +1,5 @@
 ---
+
 title: "iswspace(3)"
 name: "iswspace"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-iswspace/"
 description: "iswspace – test for whitespace wide character"
 ---
 
-<h2 class="name">NAME</h2>
 <p> iswspace &#8211; test for whitespace wide character </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

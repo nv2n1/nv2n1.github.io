@@ -1,4 +1,5 @@
 ---
+
 title: "ldap_parse_vlv_control(3)"
 name: "ldap_parse_vlv_control"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldap_parse_vlv_control/"
 description: "ldap_parse_vlv_control – Decode the information returned from a search operation that used a VLV (virtual list view) control"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ldap_parse_vlv_control &#8211; Decode the information returned from a search operation that used a VLV (virtual list view) control </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>

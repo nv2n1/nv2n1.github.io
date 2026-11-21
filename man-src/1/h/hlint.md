@@ -1,4 +1,5 @@
 ---
+
 title: "hlint(1)"
 name: "hlint"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hlint/"
 description: "HLint – haskell source code suggestions"
 ---
 
-<h2>NAME</h2>
 <p> HLint &#8211; haskell source code suggestions</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hlint</code> [<i>files/directories</i>] [<i>options</i>] </p>

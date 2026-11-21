@@ -1,4 +1,5 @@
 ---
+
 title: "pamscale(1)"
 name: "pamscale"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamscale/"
 description: "pamscale – scale a Netpbm image"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamscale &#8211; scale a Netpbm image</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

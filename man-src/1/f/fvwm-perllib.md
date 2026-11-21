@@ -1,4 +1,5 @@
 ---
+
 title: "fvwm-perllib(1)"
 name: "fvwm-perllib"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fvwm-perllib/"
 description: "fvwm-perllib – shows the documentation of the Fvwm Perl library"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fvwm-perllib &#8211; shows the documentation of the Fvwm Perl library </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fvwm-perllib</code> [ <code>&#8211;help</code>|<code>-h</code>|<code>-?</code> ] [ <code>&#8211;version</code>|<code>-v</code>|<code>-V</code> ] [ <code>man</code> [ <i>Perl::Class</i> ] ] [ <code>cat</code> [ <i>Perl::Class</i> ] ] [ <code>raw</code> [ <i>Perl::Class</i> ] ] [ <code>dir</code> ]</p>

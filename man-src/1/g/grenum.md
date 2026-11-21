@@ -1,4 +1,5 @@
 ---
+
 title: "grenum(1)"
 name: "grenum"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grenum/"
 description: "grenum – An advanced refdes renumber utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>grenum</code> &#8211; An advanced refdes renumber utility</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grenum</code> [-v|&#8211;version -h|&#8211;help -p|&#8211;pagejump] <i>infile1.sch infile2.sch</i> &#8230; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "git-filter-branch(1)"
 name: "git-filter-branch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-filter-branch/"
 description: "git-filter-branch – Rewrite branches"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-filter-branch &#8211; Rewrite branches </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

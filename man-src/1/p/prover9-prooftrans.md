@@ -1,4 +1,5 @@
 ---
+
 title: "prover9-prooftrans(1)"
 name: "prover9-prooftrans"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-prover9-prooftrans/"
 description: "prooftrans – tool for transforming Prover9 proofs"
 ---
 
-<h2>NAME</h2>
 <p> prooftrans &#8211; tool for transforming Prover9 proofs</p>
 <h2>SYNOPSIS</h2>
 <p> <code>prooftrans</code> [<i>parents_only</i>] [<i>expand</i>] [<i>renumber</i>] [<i>striplabels</i>] [<i>-f file</i>]<br />

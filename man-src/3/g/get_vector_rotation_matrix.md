@@ -1,4 +1,5 @@
 ---
+
 title: "get_vector_rotation_matrix(3)"
 name: "get_vector_rotation_matrix"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_vector_rotation_matrix/"
 description: "get_vector_rotation_matrix, get_vector_rotation_matrix_f – Constructs X, Y, Z rotation matrices with an angle. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> get_vector_rotation_matrix, get_vector_rotation_matrix_f &#8211; Constructs X, Y, Z rotation matrices with an angle. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

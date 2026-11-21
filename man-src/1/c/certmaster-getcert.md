@@ -1,4 +1,5 @@
 ---
+
 title: "certmaster-getcert(1)"
 name: "certmaster-getcert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-certmaster-getcert/"
 description: "certmaster-getcert"
 ---
 
-<h2 class="name">NAME</h2>
 <p> certmaster-getcert</p>
 <h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr>certmaster-getcert request&nbsp;<wbr>[options]<br />

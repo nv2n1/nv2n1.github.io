@@ -1,4 +1,5 @@
 ---
+
 title: "aa_recommendlowmouse(3)"
 name: "aa_recommendlowmouse"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_recommendlowmouse/"
 description: "aa_recommendlowmouse – Add the given driver to the end of list of mouse recommended drivers."
 ---
 
-<h2>NAME</h2>
 <p> aa_recommendlowmouse &#8211; Add the given driver to the end of list of mouse recommended drivers.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

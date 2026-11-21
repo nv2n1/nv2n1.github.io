@@ -1,4 +1,5 @@
 ---
+
 title: "dgghrd(3)"
 name: "dgghrd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgghrd/"
 description: "dgghrd.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dgghrd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

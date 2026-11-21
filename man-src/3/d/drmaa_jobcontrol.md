@@ -1,4 +1,5 @@
 ---
+
 title: "drmaa_jobcontrol(3)"
 name: "drmaa_jobcontrol"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-drmaa_jobcontrol/"
 description: "drmaa_job_ps, drmaa_control, – Monitor and control jobs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> drmaa_job_ps, drmaa_control, &#8211; Monitor and control jobs</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include drmaa.h</code> </p>

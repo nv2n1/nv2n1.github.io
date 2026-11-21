@@ -1,4 +1,5 @@
 ---
+
 title: "qmsg(1)"
 name: "qmsg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qmsg/"
 description: "qmsg – send message to pbs batch jobs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> qmsg &#8211; send message to pbs batch jobs </p>
 <h2>SYNOPSIS</h2>
 <p> qmsg [-E] [-O] message_string job_identifier &#8230;</p>

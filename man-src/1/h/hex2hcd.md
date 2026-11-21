@@ -1,4 +1,5 @@
 ---
+
 title: "hex2hcd(1)"
 name: "hex2hcd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hex2hcd/"
 description: "hex2hcd – Broadcom Bluetooth firmware converter"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hex2hcd &#8211; Broadcom Bluetooth firmware converter </p>
 <h2>DESCRIPTION</h2>
 <p> Broadcom Bluetooth firmware converter Usage:</p>

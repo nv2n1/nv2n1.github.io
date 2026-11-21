@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_record_recv_packet(3)"
 name: "gnutls_record_recv_packet"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_record_recv_packet/"
 description: "gnutls_record_recv_packet – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_record_recv_packet &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

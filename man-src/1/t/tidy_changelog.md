@@ -1,4 +1,5 @@
 ---
+
 title: "tidy_changelog(1)"
 name: "tidy_changelog"
 section: "1"
@@ -6,10 +7,7 @@ letter: "t"
 url: "/docs/linux/man/1-tidy_changelog/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- tidy_changelog - command-line tool for CPAN::Changes 
+tidy_changelog - command-line tool for CPAN::Changes 
 
 <h2>SYNOPSIS</h2>
 

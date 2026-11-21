@@ -1,4 +1,5 @@
 ---
+
 title: "winicontopam(1)"
 name: "winicontopam"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-winicontopam/"
 description: "winicontopam – convert a Microsoft Windows icon file into a Netpbm PAM file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> winicontopam &#8211; convert a Microsoft Windows icon file into a Netpbm PAM file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>winicontopam</code> [<code>-image=</code><i>index</i> | <code>-allimages</code>] [<code>-andmasks</code>] [<code>-verbose</code>] [<i>icon_file</i>] </p>

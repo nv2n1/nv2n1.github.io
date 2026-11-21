@@ -1,4 +1,5 @@
 ---
+
 title: "intel_bios_dumper(1)"
 name: "intel_bios_dumper"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-intel_bios_dumper/"
 description: "intel_bios_dumper – Saves the Intel video BIOS contents to a file."
 ---
 
-<h2>NAME</h2>
 <p> intel_bios_dumper &#8211; Saves the Intel video BIOS contents to a file.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>intel_bios_dumper </code><i>filename</i></p>

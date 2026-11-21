@@ -1,4 +1,5 @@
 ---
+
 title: "ares_dup(3)"
 name: "ares_dup"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ares_dup/"
 description: "ares_dup – Duplicate a resolver channel"
 ---
 
-<h2>NAME</h2>
 <p> ares_dup &#8211; Duplicate a resolver channel</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

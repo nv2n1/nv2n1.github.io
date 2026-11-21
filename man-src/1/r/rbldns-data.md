@@ -1,4 +1,5 @@
 ---
+
 title: "rbldns-data(1)"
 name: "rbldns-data"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rbldns-data/"
 description: "rbldns-data"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>rbldns-data</code></p>
 <h2>SYNOPSIS</h2>
 <p> <code>rbldns-data</code> [<code>OPTIONS</code>] </p>

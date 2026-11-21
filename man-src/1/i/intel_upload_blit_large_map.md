@@ -1,4 +1,5 @@
 ---
+
 title: "intel_upload_blit_large_map(1)"
 name: "intel_upload_blit_large_map"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-intel_upload_blit_large_map/"
 description: "intel_upload_blit_large_map – microbenchmark of Intel GPU performance"
 ---
 
-<h2>NAME</h2>
 <p> intel_upload_blit_large_map &#8211; microbenchmark of Intel GPU performance</p>
 <h2>SYNOPSIS</h2>
 <pre>

@@ -1,4 +1,5 @@
 ---
+
 title: "usleep(1)"
 name: "usleep"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-usleep/"
 description: "usleep – sleep some number of microseconds"
 ---
 
-<h2>NAME</h2>
 <p> usleep &#8211; sleep some number of microseconds</p>
 <h2>SYNOPSIS</h2>
 <p> <code>usleep</code> [<i>number</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cptcss(1)"
 name: "cptcss"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cptcss/"
 description: "cptcss – create CSS fragment for colouring HTML tables."
 ---
 
-<h2 class="name">NAME</h2>
 <p> cptcss &#8211; create CSS fragment for colouring HTML tables. </p>
 <h2>SYNOPSIS</h2>
 <dl>

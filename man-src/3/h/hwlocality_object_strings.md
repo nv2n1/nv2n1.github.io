@@ -1,4 +1,5 @@
 ---
+
 title: "hwlocality_object_strings(3)"
 name: "hwlocality_object_strings"
 section: "3"
@@ -6,7 +7,7 @@ letter: "h"
 url: "/docs/linux/man/3-hwlocality_object_strings/"
 description: "hwlocality_object_strings – Manipulating Object Type, Sets and Attributes as Strings"
 ---
-<h2 class="name">NAME</h2>
+
 <p> hwlocality_object_strings - Manipulating Object Type, Sets and Attributes as Strings </p>
 <h3>Functions</h3>
 <p> <br />

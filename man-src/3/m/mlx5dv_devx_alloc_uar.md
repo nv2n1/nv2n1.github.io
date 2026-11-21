@@ -1,4 +1,5 @@
 ---
+
 title: "mlx5dv_devx_alloc_uar(3)"
 name: "mlx5dv_devx_alloc_uar"
 section: "3"
@@ -6,12 +7,7 @@ letter: "m"
 url: "/docs/linux/man/3-mlx5dv_devx_alloc_uar/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- mlx5dv_devx_alloc_uar - Allocates a DEVX UAR 
+mlx5dv_devx_alloc_uar - Allocates a DEVX UAR 
 
  mlx5dv_devx_free_uar - Frees a DEVX UAR 
 

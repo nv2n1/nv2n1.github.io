@@ -1,4 +1,5 @@
 ---
+
 title: "iotop(1)"
 name: "iotop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-iotop/"
 description: "iotop – simple top-like I/O monitor"
 ---
 
-<h2>NAME</h2>
 <p> iotop &#8211; simple top-like I/O monitor</p>
 <h2>SYNOPSIS</h2>
 <p> <code>iotop</code> [<i>OPTIONS</i>]</p>

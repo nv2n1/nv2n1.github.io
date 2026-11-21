@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-delete-lb-listeners(1)"
 name: "eulb-delete-lb-listeners"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eulb-delete-lb-listeners/"
 description: "eulb-delete-lb-listeners – Delete one or more listeners from a load balancer"
 ---
 
-<h2>NAME</h2>
 <p> eulb-delete-lb-listeners &#8211; Delete one or more listeners from a load balancer</p>
 <h2>SYNOPSIS</h2>
 <p> eulb-delete-lb-listeners <code>-l</code> PORT1,PORT2,&#8230; [-U URL]</p>

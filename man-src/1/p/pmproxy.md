@@ -1,4 +1,5 @@
 ---
+
 title: "pmproxy(1)"
 name: "pmproxy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmproxy/"
 description: "pmproxy – proxy for performance metrics collector daemon"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmproxy</code> &#8211; proxy for performance metrics collector daemon</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmproxy</code> [<code>-Af</code>] [<code>-C</code> <i>dirname</i>] [<code>-i</code> <i>ipaddress</i>] [<code>-l</code> <i>logfile</i>] [<code>-L</code> <i>bytes</i>] [<code>-M</code> <i>certname</i>] [<code>-p</code> <i>port</i>[,<i>port</i> &#8230;] [<code>-P</code> <i>passfile</i>] [<code>-U</code> <i>username</i>] [<code>-x</code> <i>file</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "xml_split(1)"
 name: "xml_split"
 section: "1"
@@ -6,10 +7,7 @@ letter: "x"
 url: "/docs/linux/man/1-xml_split/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- <pre>
+<pre>
   xml_split - cut a big XML file into smaller chunks
 </pre> 
 

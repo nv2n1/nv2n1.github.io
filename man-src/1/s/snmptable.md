@@ -1,4 +1,5 @@
 ---
+
 title: "snmptable(1)"
 name: "snmptable"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-snmptable/"
 description: "snmptable – retrieve an SNMP table and display it in tabular form"
 ---
 
-<h2>NAME</h2>
 <p> snmptable &#8211; retrieve an SNMP table and display it in tabular form</p>
 <h2>SYNOPSIS</h2>
 <p> <code>snmptable</code> [COMMON OPTIONS] [-Cb] [-CB] [-Ch] [-CH] [-Ci] [-Cf STRING] [-Cw WIDTH] AGENT TABLE-OID</p>

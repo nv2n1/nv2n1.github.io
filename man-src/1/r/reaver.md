@@ -1,4 +1,5 @@
 ---
+
 title: "reaver(1)"
 name: "reaver"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-reaver/"
 description: "Reaver – WPS Cracker"
 ---
 
-<h2>NAME</h2>
 <p> <code>Reaver</code> &#8211; WPS Cracker</p>
 <h2>SYNOPSIS</h2>
 <p> <code>reaver -i &lt;interface&gt; -b &lt;target bssid&gt; -vv</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "lamed(1)"
 name: "lamed"
 section: "1"
@@ -6,7 +7,7 @@ letter: "l"
 url: "/docs/linux/man/1-lamed/"
 description: "aleph – extended Unicode TeX"
 ---
-<h2 class="name">NAME</h2>
+
 <p> aleph - extended Unicode TeX </p>
 <h2>SYNOPSIS</h2>
 <p> <code>aleph</code> [<i>options</i>] [<i></i><code>&amp;</code>format] [<i>file</i>|<i></i><code>\</code>commands]  </p>

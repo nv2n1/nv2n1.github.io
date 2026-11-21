@@ -1,4 +1,5 @@
 ---
+
 title: "tuxpaint(1)"
 name: "tuxpaint"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tuxpaint/"
 description: "tuxpaint — \"Tux Paint\", a drawing program for young children."
 ---
 
-<h2>NAME</h2>
 <p> tuxpaint &#8212; &quot;Tux Paint&quot;, a drawing program for young children. </p>
 <h2>SYNOPSYS</h2>
 <p> <code>tuxpaint</code> [&#8211;help &#8211;version &#8211;verbose-version &#8211;usage &#8211;copying] </p>

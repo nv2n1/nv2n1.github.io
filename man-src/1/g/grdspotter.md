@@ -1,4 +1,5 @@
 ---
+
 title: "grdspotter(1)"
 name: "grdspotter"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grdspotter/"
 description: "grdspotter – Create CVA image from a gravity or topography grid"
 ---
 
-<h2>NAME</h2>
 <p> grdspotter &#8211; Create CVA image from a gravity or topography grid</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grdspotter</code> [<i>grdfile</i>] <i>rotfile</i> <i>CVAgrid</i> <i>increment</i> <i>region</i> [ <i>agegrid</i> ] [ <i>DIgrid</i> ] [ <i>IDgrid</i> ] [ ] [ <i>upper_age</i> ] [ <i>PAgrid</i> ] [ <i>IDinfo</i> ] [ ] [ <code>t</code>|<code>u</code><i>fixed_val</i> ] [ [ [<i>level</i>] ] [ <i>n_try</i> ]] [ <code>-Z</code><i>z_min</i>[/<i>z_max</i>[/<i>z_inc</i>]] ] [ <code>-r</code> ] </p>

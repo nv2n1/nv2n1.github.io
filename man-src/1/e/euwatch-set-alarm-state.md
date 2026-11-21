@@ -1,4 +1,5 @@
 ---
+
 title: "euwatch-set-alarm-state(1)"
 name: "euwatch-set-alarm-state"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euwatch-set-alarm-state/"
 description: "euwatch-set-alarm-state – Temporarily set the state of an alarm"
 ---
 
-<h2>NAME</h2>
 <p> euwatch-set-alarm-state &#8211; Temporarily set the state of an alarm</p>
 <h2>SYNOPSIS</h2>
 <p> euwatch-set-alarm-state <code>&#8211;state-value</code> {ALARM,INSUFFICIENT_DATA,OK}</p>

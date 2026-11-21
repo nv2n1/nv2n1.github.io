@@ -1,4 +1,5 @@
 ---
+
 title: "freecad(1)"
 name: "freecad"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-freecad/"
 description: "freecad – An extensible Open Source CAx program for Unix/X11"
 ---
 
-<h2 class="name">NAME</h2>
 <p> freecad &#8211; An extensible Open Source CAx program for Unix/X11 </p>
 <h2>SYNOPSIS</h2>
 <p> <code>freecad</code> [<i>options</i>]<i> files</i><br />

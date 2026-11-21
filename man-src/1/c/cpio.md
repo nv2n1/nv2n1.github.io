@@ -1,4 +1,5 @@
 ---
+
 title: "cpio(1)"
 name: "cpio"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cpio/"
 description: "cpio – copy files to and from archives"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cpio &#8211; copy files to and from archives </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cpio</code> {<code>-o</code>|<code>&#8211;create</code>} [<code>-0acvABLV</code>] [<code>-C</code> <i>BYTES</i>] [<code>-H</code> <i>FORMAT</i>] [<code>-M</code> <i>MESSAGE</i>] [<code>-O</code> [[<i>USER</i><code>@</code>]<i>HOST</i><code>:</code>]<i>ARCHIVE</i>] [<code>-F</code> [[<i>USER</i><code>@</code>]<i>HOST</i><code>:</code>]<i>ARCHIVE</i>] [<code>&#8211;file=</code>[[<i>USER</i><code>@</code>]<i>HOST</i><code>:</code>]<i>ARCHIVE</i>] [<code>&#8211;format=</code><i>FORMAT</i>] [<code>&#8211;message=</code><i>MESSAGE</i>] [<code>&#8211;null</code>] [<code>&#8211;reset-access-time</code>] [<code>&#8211;verbose</code>] [<code>&#8211;dot</code>] [<code>&#8211;append</code>] [<code>&#8211;block-size=</code><i>blocks</i>] [<code>&#8211;dereference</code>] [<code>&#8211;io-size=</code><i>BYTES</i>] [<code>&#8211;quiet</code>] [<code>&#8211;force-local</code>] [<code>&#8211;rsh-command=</code><i>COMMAND</i>] <code>&lt;</code> <i>name-list</i> [<code>&gt;</code> <i>archive</i>] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dump(8)"
 name: "dump"
 section: "8"
@@ -6,8 +7,9 @@ letter: "d"
 url: "/docs/linux/man/8-dump/"
 description: "dump – ext2/3/4 filesystem backup"
 ---
+
 <p> dump - ext2/3/4 filesystem backup  </p>
-<h2>SYNOPSIS</h2>
+
 <p> <code>dump </code> [<code>-</code><i>level#</i>] [<code>-ackMnqSuv] [-A </code><i>file</i>] [<code>-B </code><i>records</i>] [<code>-b </code><i>blocksize</i>] [<code>-d </code><i>density</i>] [<code>-D </code><i>file</i>] [<code>-e </code><i>inode numbers</i>] [<code>-E </code><i>file</i>] [<code>-f </code><i>file</i>] [<code>-F </code><i>script</i>] [<code>-h </code><i>level</i>] [<code>-I </code><i>nr errors</i>] [<code>-j</code><i>compression level</i>] [<code>-L </code><i>label</i>] [<code>-Q </code><i>file</i>] [<code>-s </code><i>feet</i>] [<code>-T </code><i>date</i>] [<code>-y</code>] [<code>-z</code><i>compression level</i>] <i>files-to-dump</i> </p>
 <p> <code>dump </code> [<code>-W </code>| <code>-w</code>]  </p>
 <h2>DESCRIPTION</h2>

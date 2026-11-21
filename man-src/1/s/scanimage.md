@@ -1,4 +1,5 @@
 ---
+
 title: "scanimage(1)"
 name: "scanimage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-scanimage/"
 description: "scanimage – scan an image"
 ---
 
-<h2 class="name">NAME</h2>
 <p> scanimage &#8211; scan an image </p>
 <h2>SYNOPSIS</h2>
 <p> <code>scanimage</code> [<code>-d</code>|<code>&#8211;device-name</code> <i>dev</i>] [<code>&#8211;format</code> <i>format</i>] [<code>-i</code>|<code>&#8211;icc-profile</code> <i>profile</i>] [<code>-L</code>|<code>&#8211;list-devices</code>] [<code>-f</code>|<code>&#8211;formatted-device-list</code> <i>format</i>] [<code>-b</code>|<code>&#8211;batch</code> [<i>format</i>]] [<code>&#8211;batch-start</code> <i>start</i>] [<code>&#8211;batch-count</code> <i>count</i>] [<code>&#8211;batch-increment</code> <i>increment</i>] [<code>&#8211;batch-double</code>] [<code>&#8211;accept-md5-only</code>] [<code>-p</code>|<code>&#8211;progress</code>] [<code>-o</code>|<code>&#8211;output-file</code> <i>path</i>] [<code>-n</code>|<code>&#8211;dont-scan</code>] [<code>-T</code>|<code>&#8211;test</code>] [<code>-A</code>|<code>&#8211;all-options</code>] [<code>-h</code>|<code>&#8211;help</code>] [<code>-v</code>|<code>&#8211;verbose</code>] [<code>-B</code>|<code>&#8211;buffer-size</code> [=<i>size</i>]] [<code>-V</code>|<code>&#8211;version</code>] [<i>device-specific-options</i>]</p>

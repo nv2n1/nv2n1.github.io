@@ -1,4 +1,5 @@
 ---
+
 title: "ldapdiff(1)"
 name: "ldapdiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ldapdiff/"
 description: "ldapdiff – Tool to synchronize ldap servers using ldif formatted input files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ldapdiff &#8211; Tool to synchronize ldap servers using ldif formatted input files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ldapdiff</code> [options] </p>

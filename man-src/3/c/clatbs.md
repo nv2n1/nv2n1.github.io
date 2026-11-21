@@ -1,4 +1,5 @@
 ---
+
 title: "clatbs(3)"
 name: "clatbs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clatbs/"
 description: "clatbs.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> clatbs.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

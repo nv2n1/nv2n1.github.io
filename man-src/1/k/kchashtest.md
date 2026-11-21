@@ -1,4 +1,5 @@
 ---
+
 title: "kchashtest(1)"
 name: "kchashtest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kchashtest/"
 description: "kchashtest – command line interface to test the file hash database"
 ---
 
-<h2 class="name">NAME</h2>
 <p> kchashtest &#8211; command line interface to test the file hash database</p>
 <h2>DESCRIPTION</h2>
 <p> The command `<code>kchashtest</code>&#8216; is a utility for facility test and performance test of the file hash database. This command is used in the following format. `<i>path</i>&#8216; specifies the path of a database file. `<i>rnum</i>&#8216; specifies the number of iterations. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "racluster(1)"
 name: "racluster"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-racluster/"
 description: "racluster – aggregate argus(8) data files."
 ---
 
-<h2>NAME</h2>
 <p> <code>racluster</code> &#8211; aggregate <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data files.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>racluster</code> [<code>-f</code> <i>conf</i>] [<code>-m</code> <i>agr(s)</i>] [<code>-M</code> <i>mode(s)</i>] [<code>raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>]</p>

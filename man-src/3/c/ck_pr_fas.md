@@ -1,4 +1,5 @@
 ---
+
 title: "ck_pr_fas(3)"
 name: "ck_pr_fas"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_pr_fas/"
 description: "ck_pr_fas_ptr ck_pr_fas_double ck_pr_fas_char ck_pr_fas_uint ck_pr_fas_int ck_pr_fas_64 ck_pr_fas_32 ck_pr_fas_16 ck_pr_fas_8 – atomic swap operations"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_pr_fas_ptr</code> <code>ck_pr_fas_double</code> <code>ck_pr_fas_char</code> <code>ck_pr_fas_uint</code> <code>ck_pr_fas_int</code> <code>ck_pr_fas_64</code> <code>ck_pr_fas_32</code> <code>ck_pr_fas_16</code> <code>ck_pr_fas_8</code> &#8211; atomic swap operations</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

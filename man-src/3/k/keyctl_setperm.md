@@ -1,4 +1,5 @@
 ---
+
 title: "keyctl_setperm(3)"
 name: "keyctl_setperm"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-keyctl_setperm/"
 description: "keyctl_setperm – Change the permissions mask on a key"
 ---
 
-<h2 class="name">NAME</h2>
 <p> keyctl_setperm &#8211; Change the permissions mask on a key </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

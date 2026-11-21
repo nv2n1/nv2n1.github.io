@@ -1,4 +1,5 @@
 ---
+
 title: "bluetooth-wizard(1)"
 name: "bluetooth-wizard"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bluetooth-wizard/"
 description: "bluetooth-wizard – GTK wizard for setting up devices with the Linux Bluetooth stack"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bluetooth-wizard &#8211; GTK wizard for setting up devices with the Linux Bluetooth stack </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bluetooth-wizard</code></p>

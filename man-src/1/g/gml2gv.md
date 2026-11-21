@@ -1,4 +1,5 @@
 ---
+
 title: "gml2gv(1)"
 name: "gml2gv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gml2gv/"
 description: "gml2gv,gv2gml – GML-DOT converters"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gml2gv,gv2gml &#8211; GML-DOT converters </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gml2gv</code> [ <code>-?v</code> ] [ <code>-g</code><i>gname</i> ] [ <code>-o</code><i>outfile</i> ] [ <i>files</i> ]<br />

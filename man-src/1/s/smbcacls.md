@@ -1,4 +1,5 @@
 ---
+
 title: "smbcacls(1)"
 name: "smbcacls"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-smbcacls/"
 description: "smbcacls – Set or get ACLs on an NT file or directory names"
 ---
 
-<h2 class="name">NAME</h2>
 <p> smbcacls &#8211; Set or get ACLs on an NT file or directory names </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "ps2raster(1)"
 name: "ps2raster"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ps2raster/"
 description: "ps2raster – Converts one or several PostScript file(s) to other formats using GhostScript"
 ---
 
-<h2>NAME</h2>
 <p> ps2raster &#8211; Converts one or several <i>PostScript</i> file(s) to other formats using GhostScript</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ps2raster</code> <i>psfile(s)</i> [ <code>-A</code>[<code>u</code>|-] ] [ <code>-C</code><i>gs_option</i>] [ <code>-D</code><i>outdir</i> ] [ <code>-E</code><i>resolution</i> ] [ <code>-G</code><i>ghost_path</i> ] [ <code>-L</code><i>listfile</i>] [ <code>-P</code> ] [ <code>-Q</code>[<code>g</code>|<code>t</code>][1|2|4] ] [ <code>-S</code> ] [ <code>-Tb</code>|<code>e</code>|<code>f</code>|<code>j</code>|<code>g</code>|<code>G</code>|<code>m</code>|<code>t</code> ] [ <code>-V</code> ] [ <code>-W</code>[<code>+g</code>][<code>+t</code><i>docname</i>][<code>+n</code><i>layername</i>][<code>+a</code><i>altmode</i>[<i>alt</i>]][<code>+l</code><i>minLOD/maxLOD</i>][<code>+f</code><i>minfade/maxfade</i>][<code>+u</code><i>URL</i>] ]</p>

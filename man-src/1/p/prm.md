@@ -1,4 +1,5 @@
 ---
+
 title: "prm(1)"
 name: "prm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-prm/"
 description: "prm – remove file"
 ---
 
-<h2>NAME</h2>
 <p> prm &#8211; remove file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>prm</code> [-d <i>LEVEL</i>] [-p <i>DEVNAME</i>] [-h] <i>FILE</i> </p>

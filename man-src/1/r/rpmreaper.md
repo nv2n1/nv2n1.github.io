@@ -1,4 +1,5 @@
 ---
+
 title: "rpmreaper(1)"
 name: "rpmreaper"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rpmreaper/"
 description: "rpmreaper – A tool for removing unnecessary packages from system"
 ---
 
-<h2>NAME</h2>
 <p> rpmreaper &#8211; A tool for removing unnecessary packages from system </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rpmreaper</code> [<code>-lvh</code>] [<code>-r</code> <i>root</i>] [<i>limit</i>] </p>

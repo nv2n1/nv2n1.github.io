@@ -1,4 +1,5 @@
 ---
+
 title: "dvipdft(1)"
 name: "dvipdft"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dvipdft/"
 description: "dvipdft – create thumbnail images for use with dvipdfm"
 ---
 
-<h2>NAME</h2>
 <p> dvipdft &#8211; create thumbnail images for use with dvipdfm </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dvipdft</code> [<i>DVIPDFM-OPTIONS</i>&#8230;] <i>filename</i>[<code>.dvi</code>] </p>

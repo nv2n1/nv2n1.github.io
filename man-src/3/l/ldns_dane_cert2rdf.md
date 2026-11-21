@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_dane_cert2rdf(3)"
 name: "ldns_dane_cert2rdf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_dane_cert2rdf/"
 description: "ldns_dane_create_tlsa_owner, ldns_dane_cert2rdf, ldns_dane_select_certificate, ldns_dane_create_tlsa_rr"
 ---
 
-<h2>NAME</h2>
 <p> ldns_dane_create_tlsa_owner, ldns_dane_cert2rdf, ldns_dane_select_certificate, ldns_dane_create_tlsa_rr </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

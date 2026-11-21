@@ -1,4 +1,5 @@
 ---
+
 title: "pamslice(1)"
 name: "pamslice"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamslice/"
 description: "pamslice – extract one line of values out of a Netpbm image"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamslice &#8211; extract one line of values out of a Netpbm image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamslice</code> {<code>-row=</code><i>rownumber</i> | <code>-column=</code><i>columnnumber</i>} [<code>-plane=</code><i>planenumber</i>] [<i>imagefile</i>] </p>

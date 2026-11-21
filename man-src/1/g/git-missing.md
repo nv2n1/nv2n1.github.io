@@ -1,4 +1,5 @@
 ---
+
 title: "git-missing(1)"
 name: "git-missing"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-missing/"
 description: "git-missing – Show commits missing from another branch"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-missing</code> &#8211; Show commits missing from another branch</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-missing</code> [&lt;first branch&gt;] &lt;second branch&gt; [&lt;git log options&gt;]</p>

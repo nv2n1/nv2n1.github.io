@@ -1,4 +1,5 @@
 ---
+
 title: "beakerlib-performance(1)"
 name: "beakerlib-performance"
 section: "1"
@@ -6,10 +7,7 @@ letter: "b"
 url: "/docs/linux/man/1-beakerlib-performance/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- BeakerLib - performance - Performance measuring routines 
+BeakerLib - performance - Performance measuring routines 
 
 <h2>DESCRIPTION</h2>
 

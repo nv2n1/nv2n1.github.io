@@ -1,4 +1,5 @@
 ---
+
 title: "ck_epoch_register(3)"
 name: "ck_epoch_register"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_epoch_register/"
 description: "ck_epoch_register – register a thread for epoch reclamation"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_epoch_register</code> &#8211; register a thread for epoch reclamation</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

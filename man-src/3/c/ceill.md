@@ -1,4 +1,5 @@
 ---
+
 title: "ceill(3)"
 name: "ceill"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ceill/"
 description: "ceil, ceilf, ceill – ceiling function: smallest integral value not less than argument"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ceil, ceilf, ceill &#8211; ceiling function: smallest integral value not less than argument </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "whisper-set-aggregation-method(1)"
 name: "whisper-set-aggregation-method"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-whisper-set-aggregation-method/"
 description: "whisper-set-aggregation-method – set aggregationType field"
 ---
 
-<h2>NAME</h2>
 <p> whisper-set-aggregation-method &#8211; set aggregationType field</p>
 <h2>SYNOPSYS</h2>
 <pre>

@@ -1,4 +1,5 @@
 ---
+
 title: "funcd(1)"
 name: "funcd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-funcd/"
 description: "funcd – deaemon for the Fedora Universal Network Controller"
 ---
 
-<h2>NAME</h2>
 <p> <code>funcd</code> &#8211; deaemon for the Fedora Universal Network Controller</p>
 <h2>SYNOPSIS</h2>
 <dl>

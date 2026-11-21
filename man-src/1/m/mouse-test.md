@@ -1,4 +1,5 @@
 ---
+
 title: "mouse-test(1)"
 name: "mouse-test"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mouse-test/"
 description: "mouse-test – a tool for determining mouse type and device it’s attached to."
 ---
 
-<h2>NAME</h2>
 <p> mouse-test &#8211; a tool for determining mouse type and device it&#8217;s attached to.</p>
 <h2>SYNTAX</h2>
 <p> <code>mouse-test</code> [ <i>device</i> &#8230; ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "rdma_xclient(1)"
 name: "rdma_xclient"
 section: "1"
@@ -6,9 +7,7 @@ letter: "r"
 url: "/docs/linux/man/1-rdma_xclient/"
 ---
 
-<h2>NAME</h2>
-
- rdma_xclient - RDMA CM communication client test program
+rdma_xclient - RDMA CM communication client test program
 
 <h2>SYNOPSIS</h2>
 

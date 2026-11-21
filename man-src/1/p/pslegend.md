@@ -1,4 +1,5 @@
 ---
+
 title: "pslegend(1)"
 name: "pslegend"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pslegend/"
 description: "pslegend – Plot legends on maps"
 ---
 
-<h2>NAME</h2>
 <p> pslegend &#8211; Plot legends on maps</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pslegend</code> [ <i>specfile</i> ] <i>refpoint</i> ] [ <i>dx</i>/<i>dy</i> ] [ <i>box</i> ] [ <i>parameters</i> ] [ ] [ ] [ ] [ <i>region</i> ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ [<i>level</i>] ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ <code>-c</code><i>copies</i> ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-t</code><i>&lt;transp&gt;</i> ] </p>

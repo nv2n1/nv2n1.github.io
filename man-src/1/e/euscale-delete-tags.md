@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-delete-tags(1)"
 name: "euscale-delete-tags"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euscale-delete-tags/"
 description: "euscale-delete-tags – Delete one or more resource tags"
 ---
 
-<h2>NAME</h2>
 <p> euscale-delete-tags &#8211; Delete one or more resource tags</p>
 <h2>SYNOPSIS</h2>
 <p> euscale-delete-tags <code>&#8211;tag</code> &quot;k=VALUE, id=VALUE, t=VALUE, v=VALUE,</p>

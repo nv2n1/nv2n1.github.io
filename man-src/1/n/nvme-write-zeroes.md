@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-write-zeroes(1)"
 name: "nvme-write-zeroes"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-write-zeroes/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nvme-write-zeroes - Send an NVMe write zeroes command, return results 
+nvme-write-zeroes - Send an NVMe write zeroes command, return results 
 
 <h2>SYNOPSIS</h2>
 

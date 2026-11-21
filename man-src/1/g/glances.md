@@ -1,4 +1,5 @@
 ---
+
 title: "glances(1)"
 name: "glances"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-glances/"
 description: "glances – A cross-platform curses-based monitoring tool"
 ---
 
-<h2>NAME</h2>
 <p> glances &#8211; A cross-platform curses-based monitoring tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>glances</code> [-bdehmnrsvyz1] [-B bind] [-c server] [-C conffile] [-p port] [-P password] [&#8211;password] [-t refresh] [-f file] [-o output]</p>

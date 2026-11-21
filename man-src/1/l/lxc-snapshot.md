@@ -1,4 +1,5 @@
 ---
+
 title: "lxc-snapshot(1)"
 name: "lxc-snapshot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lxc-snapshot/"
 description: "lxc-snapshot – Snapshot an existing container."
 ---
 
-<h2>NAME</h2>
 <p> lxc-snapshot &#8211; Snapshot an existing container.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lxc-snapshot</code> {-n, &#8211;name <i>name</i>} [-c, &#8211;comment <i>file</i>] <code>lxc-snapshot</code> {-n, &#8211;name <i>name</i>} {-d, -destroy <i>snapshot-name</i>} <code>lxc-snapshot</code> {-n, &#8211;name <i>name</i>} {-L, &#8211;list } [-C, &#8211;showcomments ] <code>lxc-snapshot</code> {-n, &#8211;name <i>name</i>} {-r, -restore <i>snapshot-name</i>} [ <i>newname</i>]</p>

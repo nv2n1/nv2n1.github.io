@@ -1,4 +1,5 @@
 ---
+
 title: "tiff2rgba(1)"
 name: "tiff2rgba"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tiff2rgba/"
 description: "tiff2rgba – convert a TIFF image to RGBA color space"
 ---
 
-<h2>NAME</h2>
 <p> tiff2rgba &#8211; convert a <font SIZE="-1">TIFF</font> image to RGBA color space</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tiff2rgba</code> [ <i>options</i> ] <i>input.tif</i> <i>output.tif</i></p>

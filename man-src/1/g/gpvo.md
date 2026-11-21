@@ -1,4 +1,5 @@
 ---
+
 title: "gpvo(1)"
 name: "gpvo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpvo/"
 description: "gpvo – GNU PIC object file viewer"
 ---
 
-<h2>NAME</h2>
 <p> gpvo &#8211; GNU PIC object file viewer</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gpvo [options] file</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ck_epoch_begin(3)"
 name: "ck_epoch_begin"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_epoch_begin/"
 description: "ck_epoch_begin – begin epoch-protected segment of execution"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_epoch_begin</code> &#8211; begin epoch-protected segment of execution</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

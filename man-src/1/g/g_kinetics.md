@@ -1,4 +1,5 @@
 ---
+
 title: "g_kinetics(1)"
 name: "g_kinetics"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_kinetics/"
 description: "g_kinetics – derives information about kinetic processes from you trajectories"
 ---
 
-<h2>NAME</h2>
 <p> g_kinetics &#8211; derives information about kinetic processes from you trajectories </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "xml_grep(1)"
 name: "xml_grep"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xml_grep/"
 description: "xml_grep – grep XML files looking for specific elements"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xml_grep &#8211; grep XML files looking for specific elements </p>
 <h2>SYNOPSYS</h2>
 <pre>

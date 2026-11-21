@@ -1,4 +1,5 @@
 ---
+
 title: "dirfile_add_raw(3)"
 name: "dirfile_add_raw"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dirfile_add_raw/"
 description: "dirfile_add_bit, dirfile_add_clincom, dirfile_add_const, dirfile_add_cpolynom, dirfile_add_lincom, dirfile_add_linterp, dirfile_add_multiply, dirfile_add_phase, dirfile_add_polynom, dirfile_add_raw..."
 ---
 
-<h2>NAME</h2>
 <p> dirfile_add_bit, dirfile_add_clincom, dirfile_add_const, dirfile_add_cpolynom, dirfile_add_lincom, dirfile_add_linterp, dirfile_add_multiply, dirfile_add_phase, dirfile_add_polynom, dirfile_add_raw, dirfile_add_sbit, dirfile_add_string &#8212; add a field to a dirfile</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

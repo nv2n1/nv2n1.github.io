@@ -1,4 +1,5 @@
 ---
+
 title: "xdotool(1)"
 name: "xdotool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xdotool/"
 description: "xdotool – command-line X11 automation tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xdotool &#8211; command-line X11 automation tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xdotool</code> <i>cmd</i> <i>args&#8230;</i> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "sbbcsd(3)"
 name: "sbbcsd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sbbcsd/"
 description: "sbbcsd.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sbbcsd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

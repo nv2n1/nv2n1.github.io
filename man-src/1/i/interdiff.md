@@ -1,4 +1,5 @@
 ---
+
 title: "interdiff(1)"
 name: "interdiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-interdiff/"
 description: "interdiff – show differences between two diff files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> interdiff &#8211; show differences between two diff files </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "cleanup_digikamdb(1)"
 name: "cleanup_digikamdb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cleanup_digikamdb/"
 description: "cleanup_digikamdb – Cleanup the digiKam databases to reduce their sizes and increase access speed"
 ---
 
-<h2>NAME</h2>
 <p> cleanup_digikamdb &#8211; Cleanup the digiKam databases to reduce their sizes and increase access speed</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cleanup_digikamdb</code> [-t] [-T] [-p] [-h]</p>

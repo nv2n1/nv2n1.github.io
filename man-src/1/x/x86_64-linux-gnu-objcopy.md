@@ -1,4 +1,5 @@
 ---
+
 title: "x86_64-linux-gnu-objcopy(1)"
 name: "x86_64-linux-gnu-objcopy"
 section: "1"
@@ -6,10 +7,7 @@ letter: "x"
 url: "/docs/linux/man/1-x86_64-linux-gnu-objcopy/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- objcopy - copy and translate object files 
+objcopy - copy and translate object files 
 
 <h2>SYNOPSIS</h2>
 

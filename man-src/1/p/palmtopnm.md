@@ -1,4 +1,5 @@
 ---
+
 title: "palmtopnm(1)"
 name: "palmtopnm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-palmtopnm/"
 description: "palmtopnm – convert a Palm pixmap into a portable anymap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> palmtopnm &#8211; convert a Palm pixmap into a portable anymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>palmtopnm</code> [<code>-verbose</code>] [<code>-rendition</code> <i>N</i>] [<code>-showhist</code>]<br />

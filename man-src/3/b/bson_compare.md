@@ -1,4 +1,5 @@
 ---
+
 title: "bson_compare(3)"
 name: "bson_compare"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_compare/"
 description: "bson_compare() – The bson_compare() function shall compare two bson documents for equality."
 ---
 
-<h2>NAME</h2>
 <p> bson_compare() &#8211; The bson_compare() function shall compare two bson documents for equality.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

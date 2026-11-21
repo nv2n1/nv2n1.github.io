@@ -1,4 +1,5 @@
 ---
+
 title: "perlre(1)"
 name: "perlre"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlre/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlre - Perl regular expressions 
+perlre - Perl regular expressions 
 
 <h2>DESCRIPTION</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "audit_set_backlog_limit(3)"
 name: "audit_set_backlog_limit"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-audit_set_backlog_limit/"
 description: "audit_set_backlog_limit – Set the audit backlog limit"
 ---
 
-<h2>NAME</h2>
 <p> audit_set_backlog_limit &#8211; Set the audit backlog limit</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libaudit.h&gt;</code> </p>

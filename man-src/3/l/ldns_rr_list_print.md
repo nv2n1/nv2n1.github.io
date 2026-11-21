@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_rr_list_print(3)"
 name: "ldns_rr_list_print"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_rr_list_print/"
 description: "ldns_rr_print, ldns_rdf_print, ldns_pkt_print, ldns_rr_list_print, ldns_resolver_print, ldns_zone_print"
 ---
 
-<h2>NAME</h2>
 <p> ldns_rr_print, ldns_rdf_print, ldns_pkt_print, ldns_rr_list_print, ldns_resolver_print, ldns_zone_print </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "ppcarm(1)"
 name: "ppcarm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppcarm/"
 description: "ppcarm – Free Pascal Compiler (FPC) binary, name derived from Portable Pascal Compiler"
 ---
 
-<h2>NAME</h2>
 <p> ppcarm &#8211; Free Pascal Compiler (FPC) binary, name derived from Portable Pascal Compiler </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppcarm [options] [sourcefile]</code></p>

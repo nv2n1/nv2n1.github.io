@@ -1,4 +1,5 @@
 ---
+
 title: "iceboxadmin(1)"
 name: "iceboxadmin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-iceboxadmin/"
 description: "iceboxadmin – The IceBox administrative utility."
 ---
 
-<h2 class="name">NAME</h2>
 <p> iceboxadmin &#8211; The IceBox administrative utility.</p>
 <h2>SYNOPSIS</h2>
 <p> iceboxadmin [options] [command&#8230;] </p>

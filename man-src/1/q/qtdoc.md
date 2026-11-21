@@ -1,4 +1,5 @@
 ---
+
 title: "qtdoc(1)"
 name: "qtdoc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qtdoc/"
 description: "qtdoc – Open a Qt(TM) help page in Konqueror"
 ---
 
-<h2 class="name">NAME</h2>
 <p> qtdoc &#8211; Open a Qt(TM) help page in Konqueror </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "byobu-enable-prompt(1)"
 name: "byobu-enable-prompt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-byobu-enable-prompt/"
 description: "byobu-prompt, byobu-enable-prompt, byobu-disable-prompt – add and remove a nice color prompt to your shell configuration"
 ---
 
-<h2>NAME</h2>
 <p> byobu-prompt, byobu-enable-prompt, byobu-disable-prompt &#8211; add and remove a nice color prompt to your shell configuration </p>
 <h2>SYNOPSIS</h2>
 <p> <code>byobu-prompt</code></p>

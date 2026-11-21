@@ -1,4 +1,5 @@
 ---
+
 title: "lber-sockbuf(3)"
 name: "lber-sockbuf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-lber-sockbuf/"
 description: "ber_sockbuf_alloc, ber_sockbuf_free, ber_sockbuf_ctrl, ber_sockbuf_add_io, ber_sockbuf_remove_io, Sockbuf_IO – OpenLDAP LBER I/O infrastructure"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ber_sockbuf_alloc, ber_sockbuf_free, ber_sockbuf_ctrl, ber_sockbuf_add_io, ber_sockbuf_remove_io, Sockbuf_IO &#8211; OpenLDAP LBER I/O infrastructure </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LBER (liblber, -llber)</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "guestfs-performance(1)"
 name: "guestfs-performance"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-guestfs-performance/"
 description: "guestfs-performance – engineering libguestfs for greatest performance"
 ---
 
-<h2 class="name">NAME</h2>
 <p> guestfs-performance &#8211; engineering libguestfs for greatest performance </p>
 <h2>DESCRIPTION</h2>
 <p> This page documents how to get the greatest performance out of libguestfs, especially when you expect to use libguestfs to manipulate thousands of virtual machines or disk images. </p>

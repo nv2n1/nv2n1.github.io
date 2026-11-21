@@ -1,4 +1,5 @@
 ---
+
 title: "qmicli(1)"
 name: "qmicli"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qmicli/"
 description: "qmicli – Control QMI devices"
 ---
 
-<h2>NAME</h2>
 <p> qmicli &#8211; Control QMI devices</p>
 <h2>DESCRIPTION</h2>
 <h3>Usage:</h3>

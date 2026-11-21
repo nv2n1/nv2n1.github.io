@@ -1,4 +1,5 @@
 ---
+
 title: "cpowf(3)"
 name: "cpowf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cpowf/"
 description: "cpow, cpowf, cpowl – complex power function"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cpow, cpowf, cpowl &#8211; complex power function </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

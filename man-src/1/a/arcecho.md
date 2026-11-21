@@ -1,4 +1,5 @@
 ---
+
 title: "arcecho(1)"
 name: "arcecho"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-arcecho/"
 description: "arcecho – ARC echo client"
 ---
 
-<h2 class="name">NAME</h2>
 <p> arcecho &#8211; ARC echo client</p>
 <h2>DESCRIPTION</h2>
 <p> The <code>arcecho</code> command is a client for the ARC echo service. </p>

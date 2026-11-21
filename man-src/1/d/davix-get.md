@@ -1,4 +1,5 @@
 ---
+
 title: "davix-get(1)"
 name: "davix-get"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-davix-get/"
 description: "davix-get – Download tool based on libdavix"
 ---
 
-<h2>NAME</h2>
 <p> davix-get &#8211; Download tool based on libdavix</p>
 <h2>SYNOPSIS</h2>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> davix-get [options]&#8230; url<br />

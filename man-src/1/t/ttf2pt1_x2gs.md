@@ -1,4 +1,5 @@
 ---
+
 title: "ttf2pt1_x2gs(1)"
 name: "ttf2pt1_x2gs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ttf2pt1_x2gs/"
 description: "ttf2pt1_x2gs – font installer for Ghostscript"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ttf2pt1_x2gs &#8211; font installer for Ghostscript </p>
 <h2>SYNOPSIS</h2>
 <p> ttf2pt1_x2gs <code>[config-file]</code></p>

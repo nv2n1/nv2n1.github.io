@@ -1,4 +1,5 @@
 ---
+
 title: "ompi-ps(1)"
 name: "ompi-ps"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ompi-ps/"
 description: "ompi-ps, orte-ps – Displays information about the active jobs and processes in Open MPI."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ompi-ps, orte-ps &#8211; Displays information about the active jobs and processes in Open MPI. </p>
 <p> <code>NOTE:</code> <i>ompi-ps</i>, and <i>orte-ps</i> are exact synonyms for each other. Using any of the names will result in exactly identical behavior. </p>
 <h2>SYNOPSIS</h2>

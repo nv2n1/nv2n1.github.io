@@ -1,4 +1,5 @@
 ---
+
 title: "psplit(1)"
 name: "psplit"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-psplit/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- psplit - a tool for splitting PostScript files with multiple frames into individual PostScript files, or simply determining the number of pages in a file. 
+psplit - a tool for splitting PostScript files with multiple frames into individual PostScript files, or simply determining the number of pages in a file. 
 
 <h2>SYNOPSIS</h2>
 

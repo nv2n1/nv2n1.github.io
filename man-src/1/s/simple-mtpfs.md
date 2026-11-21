@@ -1,4 +1,5 @@
 ---
+
 title: "simple-mtpfs(1)"
 name: "simple-mtpfs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-simple-mtpfs/"
 description: "SIMPLE-MTPFS – filesystem driver for MTP based devices"
 ---
 
-<h2>NAME</h2>
 <p> SIMPLE-MTPFS &#8211; filesystem driver for MTP based devices</p>
 <h2>SYNOPSIS</h2>
 <h3>mounting</h3>

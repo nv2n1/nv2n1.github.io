@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-rmkeytab(1)"
 name: "ipa-rmkeytab"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-rmkeytab/"
 description: "ipa-rmkeytab – Remove a kerberos principal from a keytab"
 ---
 
-<h2>NAME</h2>
 <p> ipa-rmkeytab &#8211; Remove a kerberos principal from a keytab</p>
 <h2>SYNOPSIS</h2>
 <p> ipa-rmkeytab [ <code>-p</code> principal-name ] [ <code>-k</code> keytab-file ] [ <code>-r</code> realm ] [ <code>-d</code> ] </p>

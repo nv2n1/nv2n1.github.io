@@ -1,4 +1,5 @@
 ---
+
 title: "x0vncserver(1)"
 name: "x0vncserver"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-x0vncserver/"
 description: "x0vncserver – TigerVNC Server for X displays"
 ---
 
-<h2>NAME</h2>
 <p> x0vncserver &#8211; TigerVNC Server for X displays</p>
 <h2>SYNOPSIS</h2>
 <p> <code>x0vncserver</code> [<i>options</i>]<br />

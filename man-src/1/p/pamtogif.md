@@ -1,4 +1,5 @@
 ---
+
 title: "pamtogif(1)"
 name: "pamtogif"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamtogif/"
 description: "pamtogif – convert a Netpbm image to a GIF image"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamtogif &#8211; convert a Netpbm image to a GIF image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamtogif</code> </p>

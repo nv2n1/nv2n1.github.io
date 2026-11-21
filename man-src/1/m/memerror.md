@@ -1,4 +1,5 @@
 ---
+
 title: "memerror(1)"
 name: "memerror"
 section: "1"
@@ -6,9 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-memerror/"
 ---
 
-<h2>NAME</h2>
-
- memerror - libmemcached Documentation 
+memerror - libmemcached Documentation 
 
  Translates a memcached error code into a string
 

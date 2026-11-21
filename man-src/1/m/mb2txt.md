@@ -1,4 +1,5 @@
 ---
+
 title: "mb2txt(1)"
 name: "mb2txt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mb2txt/"
 description: "mb2txt, txt2mb – fcitx table related tools"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mb2txt, txt2mb &#8211; fcitx table related tools </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mb2txt </code><i>&lt;mbfile&gt;</i> </p>

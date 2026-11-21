@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-enter(1)"
 name: "flatpak-enter"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flatpak-enter/"
 description: "flatpak-enter – Enter an application or runtime’s sandbox"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flatpak-enter &#8211; Enter an application or runtime&#8217;s sandbox </p>
 <h2>SYNOPSIS</h2>
 <dl>

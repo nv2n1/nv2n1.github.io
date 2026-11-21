@@ -1,4 +1,5 @@
 ---
+
 title: "ikiwiki-makerepo(1)"
 name: "ikiwiki-makerepo"
 section: "1"
@@ -6,9 +7,7 @@ letter: "i"
 url: "/docs/linux/man/1-ikiwiki-makerepo/"
 ---
 
-<h2>NAME</h2>
-
- ikiwiki-makerepo - check an ikiwiki srcdir into revision control 
+ikiwiki-makerepo - check an ikiwiki srcdir into revision control 
 
 <h2>SYNOPSIS</h2>
 

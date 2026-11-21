@@ -1,4 +1,5 @@
 ---
+
 title: "ex3d(3)"
 name: "ex3d"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ex3d/"
 description: "ex3d – 3d ‘bouncy cubes’ demo. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> ex3d &#8211; 3d &#8216;bouncy cubes&#8217; demo. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

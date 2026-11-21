@@ -1,4 +1,5 @@
 ---
+
 title: "semctl(2)"
 name: "semctl"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-semctl/"
 description: "semctl – System V semaphore control operations"
 ---
 
-<h2 class="name">NAME</h2>
 <p> semctl &#8211; System V semaphore control operations </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

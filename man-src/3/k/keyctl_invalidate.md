@@ -1,4 +1,5 @@
 ---
+
 title: "keyctl_invalidate(3)"
 name: "keyctl_invalidate"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-keyctl_invalidate/"
 description: "keyctl_invalidate – Invalidate a key"
 ---
 
-<h2 class="name">NAME</h2>
 <p> keyctl_invalidate &#8211; Invalidate a key </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

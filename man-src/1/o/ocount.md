@@ -1,4 +1,5 @@
 ---
+
 title: "ocount(1)"
 name: "ocount"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ocount/"
 description: "ocount – Event counting tool for Linux"
 ---
 
-<h2>NAME</h2>
 <p> ocount &#8211; Event counting tool for Linux </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ocount</code> [ <i>options</i> ] [ &#8211;system-wide | &#8211;process-list &lt;pids&gt; | &#8211;thread-list &lt;tids&gt; | &#8211;cpu-list &lt;cpus&gt; [ command [ args ] ] ] </p>

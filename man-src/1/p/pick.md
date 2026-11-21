@@ -1,4 +1,5 @@
 ---
+
 title: "pick(1)"
 name: "pick"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pick/"
 description: "pick – search for messages by content"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pick &#8211; search for messages by content </p>
 <h2>SYNOPSIS</h2>
 <dl>

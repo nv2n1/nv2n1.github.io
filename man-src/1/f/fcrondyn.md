@@ -1,4 +1,5 @@
 ---
+
 title: "fcrondyn(1)"
 name: "fcrondyn"
 section: "1"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-fcrondyn/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- fcrondyn - dialog dyn-amically with a running fcron daemon 
+fcrondyn - dialog dyn-amically with a running fcron daemon 
 
 <h2>SYNOPSIS</h2>
 

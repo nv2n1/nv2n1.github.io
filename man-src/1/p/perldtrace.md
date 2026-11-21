@@ -1,4 +1,5 @@
 ---
+
 title: "perldtrace(1)"
 name: "perldtrace"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perldtrace/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perldtrace - Perl's support for DTrace 
+perldtrace - Perl's support for DTrace 
 
 <h2>SYNOPSIS</h2>
 

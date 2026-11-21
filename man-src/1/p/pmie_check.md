@@ -1,4 +1,5 @@
 ---
+
 title: "pmie_check(1)"
 name: "pmie_check"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmie_check/"
 description: "pmie_check, pmie_daily – administration of the Performance Co-Pilot inference engine"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmie_check</code>, <code>pmie_daily</code> &#8211; administration of the Performance Co-Pilot inference engine</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/pmie_check</code> [<code>-CNsV</code>] [<code>-c</code> <i>control</i>] [<code>-l</code> <i>logfile</i>]<br />

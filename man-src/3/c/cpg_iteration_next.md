@@ -1,4 +1,5 @@
 ---
+
 title: "cpg_iteration_next(3)"
 name: "cpg_iteration_next"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cpg_iteration_next/"
 description: "cpg_iteration_next – Return next item in iteration of CPG"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cpg_iteration_next &#8211; Return next item in iteration of CPG</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cpg.h&gt;</code> </p>

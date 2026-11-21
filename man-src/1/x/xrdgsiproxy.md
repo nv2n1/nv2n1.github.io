@@ -1,4 +1,5 @@
 ---
+
 title: "xrdgsiproxy(1)"
 name: "xrdgsiproxy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xrdgsiproxy/"
 description: "xrdgsiproxy – generate a proxy X.509 certificate"
 ---
 
-<h2>NAME</h2>
 <p> xrdgsiproxy &#8211; generate a proxy X.509 certificate</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

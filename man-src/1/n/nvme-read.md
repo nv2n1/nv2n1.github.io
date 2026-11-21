@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-read(1)"
 name: "nvme-read"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-read/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nvme-read - Send an NVMe Read command, provide results 
+nvme-read - Send an NVMe Read command, provide results 
 
 <h2>SYNOPSIS</h2>
 

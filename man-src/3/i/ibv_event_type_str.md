@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_event_type_str(3)"
 name: "ibv_event_type_str"
 section: "3"
@@ -6,12 +7,7 @@ letter: "i"
 url: "/docs/linux/man/3-ibv_event_type_str/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- ibv_event_type_str - Return string describing event_type enum value 
+ibv_event_type_str - Return string describing event_type enum value 
 
  ibv_node_type_str - Return string describing node_type enum value 
 

@@ -1,4 +1,5 @@
 ---
+
 title: "fio2gnuplot(1)"
 name: "fio2gnuplot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fio2gnuplot/"
 description: "fio2gnuplot – Render fio’s output files with gnuplot"
 ---
 
-<h2>NAME</h2>
 <p> <code>fio2gnuplot </code>&#8211; Render fio&#8217;s output files with gnuplot</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

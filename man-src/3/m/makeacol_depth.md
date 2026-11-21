@@ -1,4 +1,5 @@
 ---
+
 title: "makeacol_depth(3)"
 name: "makeacol_depth"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-makeacol_depth/"
 description: "makeacol, makeacol_depth – Converts RGBA colors into display dependent pixel formats. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> makeacol, makeacol_depth &#8211; Converts RGBA colors into display dependent pixel formats. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

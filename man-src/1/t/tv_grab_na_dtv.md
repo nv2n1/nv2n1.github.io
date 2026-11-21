@@ -1,4 +1,5 @@
 ---
+
 title: "tv_grab_na_dtv(1)"
 name: "tv_grab_na_dtv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tv_grab_na_dtv/"
 description: "tv_grab_na_dtv – Grab TV listings from DirecTV."
 ---
 
-<h2 class="name">NAME</h2>
 <p> tv_grab_na_dtv &#8211; Grab TV listings from DirecTV. </p>
 <h2>SYNOPSIS</h2>
 <p> tv_grab_na_dtv &#8211;help </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "scsitape(1)"
 name: "scsitape"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-scsitape/"
 description: "scsitape – control SCSI tape devices"
 ---
 
-<h2>NAME</h2>
 <p> scsitape &#8211; control SCSI tape devices</p>
 <h2>SYNOPSIS</h2>
 <p> scsitape [-f &lt;scsi-generic-device&gt;] commands</p>

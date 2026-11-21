@@ -1,4 +1,5 @@
 ---
+
 title: "bximage(1)"
 name: "bximage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bximage/"
 description: "bximage – Interactive Disk Image Creator for Bochs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bximage &#8211; Interactive Disk Image Creator for Bochs </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bximage</code> [<i>options</i>] [<i>filename</i>]</p>

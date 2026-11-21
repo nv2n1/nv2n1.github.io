@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_next(3)"
 name: "bson_iter_next"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_iter_next/"
 description: "bson_iter_next() – Advances iter to the next element in the document if one exists."
 ---
 
-<h2>NAME</h2>
 <p> bson_iter_next() &#8211; Advances iter to the next element in the document if one exists.</p>
 <h2>SYNOPSIS</h2>
 <pre>

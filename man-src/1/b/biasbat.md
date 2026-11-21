@@ -1,4 +1,5 @@
 ---
+
 title: "biasbat(1)"
 name: "biasbat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-biasbat/"
 description: "biasbat – CCD bias-frame correction"
 ---
 
-<h2 class="name">NAME</h2>
 <p> biasbat &#8211; CCD bias-frame correction</p>
 <h2>SYNOPSIS</h2>
 <p> <code>biasbat </code><i>[options] </i><code>bias=</code><i>file source_file &#8230;</i> </p>

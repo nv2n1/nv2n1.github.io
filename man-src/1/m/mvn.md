@@ -1,4 +1,5 @@
 ---
+
 title: "mvn(1)"
 name: "mvn"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mvn/"
 description: "mvn – software project management and comprehension tool"
 ---
 
-<h2>NAME</h2>
 <p> mvn &#8211; software project management and comprehension tool</p>
 <h2>DESCRIPTION</h2>
 <p> usage: mvn [options] [&lt;goal(s)&gt;] [&lt;phase(s)&gt;]</p>

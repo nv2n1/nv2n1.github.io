@@ -1,4 +1,5 @@
 ---
+
 title: "busctl(1)"
 name: "busctl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-busctl/"
 description: "busctl – Introspect the bus"
 ---
 
-<h2 class="name">NAME</h2>
 <p> busctl &#8211; Introspect the bus </p>
 <h2>SYNOPSIS</h2>
 <dl>

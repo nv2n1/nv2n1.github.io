@@ -1,4 +1,5 @@
 ---
+
 title: "darcs(1)"
 name: "darcs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-darcs/"
 description: "darcs – an advanced revision control system"
 ---
 
-<h2>NAME</h2>
 <p> darcs &#8211; an advanced revision control system</p>
 <h2>SYNOPSIS</h2>
 <p> <code>darcs</code> <i>command</i> &lt;<i>arguments</i>|[<i>options</i>]&gt;&#8230; </p>

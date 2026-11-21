@@ -1,4 +1,5 @@
 ---
+
 title: "git-show-ref(1)"
 name: "git-show-ref"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-show-ref/"
 description: "git-show-ref – List references in a local repository"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-show-ref &#8211; List references in a local repository </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

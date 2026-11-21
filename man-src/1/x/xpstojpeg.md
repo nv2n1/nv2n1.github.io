@@ -1,4 +1,5 @@
 ---
+
 title: "xpstojpeg(1)"
 name: "xpstojpeg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xpstojpeg/"
 description: "xpstojpeg – XPS to JPEG converter"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xpstojpeg &#8211; XPS to JPEG converter </p>
 <h2>SYNOPSIS</h2>
 <dl>

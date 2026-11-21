@@ -1,4 +1,5 @@
 ---
+
 title: "alevt-cap(1)"
 name: "alevt-cap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-alevt-cap/"
 description: "alevt-cap – simple capture of teletext pages"
 ---
 
-<h2>NAME</h2>
 <p> alevt-cap &#8211; simple capture of teletext pages </p>
 <h2>SYNOPSIS</h2>
 <p> <code>alevt-cap</code> [<i>options</i>] <i>ppp</i>[<i>.ss</i>] <i>&#8230;</i> </p>

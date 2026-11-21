@@ -1,4 +1,5 @@
 ---
+
 title: "euare-instanceprofiledel(1)"
 name: "euare-instanceprofiledel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-instanceprofiledel/"
 description: "euare-instanceprofiledel – Delete an instance profile"
 ---
 
-<h2>NAME</h2>
 <p> euare-instanceprofiledel &#8211; Delete an instance profile</p>
 <h2>SYNOPSIS</h2>
 <p> euare-instanceprofiledel [-r] [-p] [&#8211;as-account ACCOUNT] [-U URL]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "xournal(1)"
 name: "xournal"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xournal/"
 description: "xournal – GTK+ Application for note taking"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xournal &#8211; GTK+ Application for note taking </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xournal</code> [<i>file</i>] </p>

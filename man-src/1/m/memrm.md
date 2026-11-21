@@ -1,4 +1,5 @@
 ---
+
 title: "memrm(1)"
 name: "memrm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-memrm/"
 description: "memrm – libmemcached Documentation"
 ---
 
-<h2>NAME</h2>
 <p> memrm &#8211; libmemcached Documentation </p>
 <p> memrm &#8211; Remove a key(s) from a collection of memcached servers</p>
 <h2>SYNOPSIS</h2>

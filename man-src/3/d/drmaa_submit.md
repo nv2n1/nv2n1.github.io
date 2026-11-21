@@ -1,4 +1,5 @@
 ---
+
 title: "drmaa_submit(3)"
 name: "drmaa_submit"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-drmaa_submit/"
 description: "drmaa_run_job, drmaa_run_bulk_jobs, drmaa_get_next_job_id, drmaa_get_num_job_ids, drmaa_release_job_ids – Job submission"
 ---
 
-<h2 class="name">NAME</h2>
 <p> drmaa_run_job, drmaa_run_bulk_jobs, drmaa_get_next_job_id, drmaa_get_num_job_ids, drmaa_release_job_ids &#8211; Job submission</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include drmaa.h</code> </p>

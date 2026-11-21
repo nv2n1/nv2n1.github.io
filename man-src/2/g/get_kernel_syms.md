@@ -1,4 +1,5 @@
 ---
+
 title: "get_kernel_syms(2)"
 name: "get_kernel_syms"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-get_kernel_syms/"
 description: "get_kernel_syms – retrieve exported kernel and module symbols"
 ---
 
-<h2 class="name">NAME</h2>
 <p> get_kernel_syms &#8211; retrieve exported kernel and module symbols </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

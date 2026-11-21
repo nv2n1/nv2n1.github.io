@@ -1,4 +1,5 @@
 ---
+
 title: "holland_cvmysqlsv(1)"
 name: "holland_cvmysqlsv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-holland_cvmysqlsv/"
 description: "holland_cvmysqlsv – Holland Addon for CommVault Support"
 ---
 
-<h2>NAME</h2>
 <p> holland_cvmysqlsv &#8211; Holland Addon for CommVault Support</p>
 <h2>SYNOPSIS</h2>
 <p> holland_cvmysqlsv [&#8211;config-file|-c &lt;config-file&gt;]</p>

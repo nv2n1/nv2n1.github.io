@@ -1,4 +1,5 @@
 ---
+
 title: "lxc-freeze(1)"
 name: "lxc-freeze"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lxc-freeze/"
 description: "lxc-freeze – freeze all the container’s processes"
 ---
 
-<h2>NAME</h2>
 <p> lxc-freeze &#8211; freeze all the container&#8217;s processes</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lxc-freeze</code> {-n <i>name</i>}</p>

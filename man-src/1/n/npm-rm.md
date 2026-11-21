@@ -1,4 +1,5 @@
 ---
+
 title: "npm-rm(1)"
 name: "npm-rm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-npm-rm/"
 description: "npm-rm — Remove a package"
 ---
 
-<h2>NAME</h2>
 <p> <code>npm-rm</code> &#8212; Remove a package</p>
 <h2>SYNOPSIS</h2>
 <pre>

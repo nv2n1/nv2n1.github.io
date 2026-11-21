@@ -1,4 +1,5 @@
 ---
+
 title: "cgiwrap_putenv(3)"
 name: "cgiwrap_putenv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgiwrap_putenv/"
 description: "cgiwrap_putenv – wrap the putenv call"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cgiwrap_putenv &#8211; wrap the putenv call </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

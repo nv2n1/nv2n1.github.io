@@ -1,4 +1,5 @@
 ---
+
 title: "sortm(1)"
 name: "sortm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sortm/"
 description: "sortm – sort messages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sortm &#8211; sort messages </p>
 <h2>SYNOPSIS</h2>
 <dl>

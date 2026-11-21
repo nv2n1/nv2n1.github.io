@@ -1,4 +1,5 @@
 ---
+
 title: "texmacs(1)"
 name: "texmacs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-texmacs/"
 description: "GNU TeXmacs – a WYSIWYG mathematical text editor"
 ---
 
-<h2>NAME</h2>
 <p> GNU TeXmacs &#8211; a WYSIWYG mathematical text editor </p>
 <h2>SYNOPSIS</h2>
 <p> texmacs [<i>OPTION</i>]&#8230; [<i>SOURCE</i>]&#8230; </p>

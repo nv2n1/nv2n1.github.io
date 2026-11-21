@@ -1,4 +1,5 @@
 ---
+
 title: "whisper-resize(1)"
 name: "whisper-resize"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-whisper-resize/"
 description: "whisper-resize – resize a whisper database"
 ---
 
-<h2>NAME</h2>
 <p> whisper-resize &#8211; resize a whisper database</p>
 <h2>SYNOPSYS</h2>
 <pre>

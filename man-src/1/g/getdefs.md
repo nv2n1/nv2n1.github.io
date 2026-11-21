@@ -1,4 +1,5 @@
 ---
+
 title: "getdefs(1)"
 name: "getdefs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-getdefs/"
 description: "getdefs – AutoGen Definition Extraction Tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getdefs &#8211; AutoGen Definition Extraction Tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>getdefs</code> [<i>opt-name</i>[<code>=</code><i>value</i>]]&#8230; </p>

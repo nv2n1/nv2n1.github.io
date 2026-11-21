@@ -1,4 +1,5 @@
 ---
+
 title: "git-annotate(1)"
 name: "git-annotate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-annotate/"
 description: "git-annotate – Annotate file lines with commit information"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-annotate &#8211; Annotate file lines with commit information </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

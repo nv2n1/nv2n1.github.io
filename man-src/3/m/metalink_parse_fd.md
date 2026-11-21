@@ -1,4 +1,5 @@
 ---
+
 title: "metalink_parse_fd(3)"
 name: "metalink_parse_fd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-metalink_parse_fd/"
 description: "metalink_parse_file, metalink_parse_fp, metalink_parse_fd, metalink_parse_memory – Parse Metalink file and create metalink_t object."
 ---
 
-<h2>NAME</h2>
 <p> metalink_parse_file, metalink_parse_fp, metalink_parse_fd, metalink_parse_memory &#8211; Parse Metalink file and create metalink_t object.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/metalink/metalink_parser.h">metalink/metalink_parser.h</a>&gt;</code> </p>

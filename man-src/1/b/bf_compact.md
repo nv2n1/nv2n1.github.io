@@ -1,4 +1,5 @@
 ---
+
 title: "bf_compact(1)"
 name: "bf_compact"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bf_compact/"
 description: "bf_compact – shell script to compact a bogofilter directory"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bf_compact &#8211; shell script to compact a bogofilter directory </p>
 <h2>SYNOPSIS</h2>
 <dl>

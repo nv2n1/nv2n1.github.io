@@ -1,4 +1,5 @@
 ---
+
 title: "chgrp(1)"
 name: "chgrp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-chgrp/"
 description: "chgrp – change group ownership"
 ---
 
-<h2 class="name">NAME</h2>
 <p> chgrp &#8211; change group ownership </p>
 <h2>SYNOPSIS</h2>
 <p> <code>chgrp</code> [<i>,OPTION/</i>]&#8230; <i>,GROUP FILE/</i>&#8230;<br />

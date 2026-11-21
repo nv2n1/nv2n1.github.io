@@ -1,4 +1,5 @@
 ---
+
 title: "clearerr(3)"
 name: "clearerr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-clearerr/"
 description: "clearerr, feof, ferror, fileno – check and reset stream status"
 ---
 
-<h2 class="name">NAME</h2>
 <p> clearerr, feof, ferror, fileno &#8211; check and reset stream status </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;stdio.h&gt;</code> </p>

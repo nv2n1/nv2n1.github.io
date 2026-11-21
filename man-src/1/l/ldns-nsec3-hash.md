@@ -1,4 +1,5 @@
 ---
+
 title: "ldns-nsec3-hash(1)"
 name: "ldns-nsec3-hash"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ldns-nsec3-hash/"
 description: "ldns-nsec3-hash – print out the NSEC3 hash for a domain name"
 ---
 
-<h2>NAME</h2>
 <p> ldns-nsec3-hash &#8211; print out the NSEC3 hash for a domain name</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ldns-nsec3-hash</code> <i>&lt;domain_name&gt;</i> </p>

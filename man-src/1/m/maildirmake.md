@@ -1,4 +1,5 @@
 ---
+
 title: "maildirmake(1)"
 name: "maildirmake"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-maildirmake/"
 description: "maildirmake – create maildirs and maildir folders"
 ---
 
-<h2 class="name">NAME</h2>
 <p> maildirmake &#8211; create maildirs and maildir folders </p>
 <h2>SYNOPSIS</h2>
 <dl>

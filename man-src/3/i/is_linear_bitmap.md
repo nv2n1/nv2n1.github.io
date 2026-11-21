@@ -1,4 +1,5 @@
 ---
+
 title: "is_linear_bitmap(3)"
 name: "is_linear_bitmap"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-is_linear_bitmap/"
 description: "is_linear_bitmap – Tells if a bitmap is linear. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> is_linear_bitmap &#8211; Tells if a bitmap is linear. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

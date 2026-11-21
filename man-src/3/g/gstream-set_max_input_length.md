@@ -1,4 +1,5 @@
 ---
+
 title: "gstream-set_max_input_length(3)"
 name: "gstream-set_max_input_length"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gstream-set_max_input_length/"
 description: "set_max_input_length"
 ---
 
-<h2>NAME</h2>
 <p> set_max_input_length</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gstream.h">gstream.h</a>&gt;</code> </p>

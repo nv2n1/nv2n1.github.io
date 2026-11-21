@@ -1,4 +1,5 @@
 ---
+
 title: "nfstest_pnfs(1)"
 name: "nfstest_pnfs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nfstest_pnfs/"
 description: "nfstest_pnfs – Basic pNFS functional tests"
 ---
 
-<h2>NAME</h2>
 <p> nfstest_pnfs &#8211; Basic pNFS functional tests</p>
 <h2>SYNOPSIS</h2>
 <p> nfstest_pnfs &#8211;server &lt;server&gt; [options]</p>

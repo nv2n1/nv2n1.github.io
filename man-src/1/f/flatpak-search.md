@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-search(1)"
 name: "flatpak-search"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flatpak-search/"
 description: "flatpak-search – Search for applications and runtimes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flatpak-search &#8211; Search for applications and runtimes </p>
 <h2>SYNOPSIS</h2>
 <dl>

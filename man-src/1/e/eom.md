@@ -1,4 +1,5 @@
 ---
+
 title: "eom(1)"
 name: "eom"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eom/"
 description: "eom – The Eye of MATE Image Viewer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> eom &#8211; The Eye of MATE Image Viewer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>eom [&#8211;fullscreen] [&#8211;disable-image-collection] [&#8211;slide-show] [&#8211;new instance] [FILES&#8230;]</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ypmatch(1)"
 name: "ypmatch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ypmatch/"
 description: "ypmatch – print the values of one or more keys from a NIS map"
 ---
 
-<h2>NAME</h2>
 <p> ypmatch &#8211; print the values of one or more keys from a NIS map</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ypmatch</code> [ <code>-kt</code> ] [ <code>-d</code><i> domain</i> ] <i>key &#8230; mapname</i><br />

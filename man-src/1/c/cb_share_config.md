@@ -1,4 +1,5 @@
 ---
+
 title: "cb_share_config(1)"
 name: "cb_share_config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cb_share_config/"
 description: "cb_share_config – Import/export parts of Code::Blocks configuration"
 ---
 
-<h2>NAME</h2>
 <p> cb_share_config &#8211; Import/export parts of Code::Blocks configuration</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cb_share_config</code></p>

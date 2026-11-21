@@ -1,4 +1,5 @@
 ---
+
 title: "cpdic(1)"
 name: "cpdic"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cpdic/"
 description: "cpdic – User Dictionary Copy Tool"
 ---
 
-<h2>NAME</h2>
 <p> cpdic &#8211; User Dictionary Copy Tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cpdic [{-cs|-cannaserver} </code><i>canna-server</i>] [-i|-u <i>user-name</i>] <i>from-dic</i> <i>to-dic</i></p>

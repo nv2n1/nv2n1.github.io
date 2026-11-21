@@ -1,4 +1,5 @@
 ---
+
 title: "crlutil(1)"
 name: "crlutil"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-crlutil/"
 description: "crlutil – List, generate, modify, or delete CRLs within the NSS security database file(s) and list, create, modify or delete certificates entries in a particular CRL."
 ---
 
-<h2 class="name">NAME</h2>
 <p> crlutil &#8211; List, generate, modify, or delete CRLs within the NSS security database file(s) and list, create, modify or delete certificates entries in a particular CRL. </p>
 <h2>SYNOPSIS</h2>
 <dl>

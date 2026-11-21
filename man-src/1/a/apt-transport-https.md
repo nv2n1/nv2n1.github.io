@@ -1,4 +1,5 @@
 ---
+
 title: "apt-transport-https(1)"
 name: "apt-transport-https"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-apt-transport-https/"
 description: "apt-transport-https – APT transport for downloading via the HTTP Secure protocol (HTTPS)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> apt-transport-https &#8211; APT transport for downloading via the HTTP Secure protocol (HTTPS) </p>
 <h2>DESCRIPTION</h2>
 <p> This APT transport allows the use of repositories accessed via the HTTP Secure protocol (HTTPS), also referred to as HTTP over TLS. It is available by default since apt 1.5 and was available before that in the package apt-transport-https. Note that a transport is never called directly by a user but used by APT tools based on user configuration. </p>

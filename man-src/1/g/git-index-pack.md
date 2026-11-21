@@ -1,4 +1,5 @@
 ---
+
 title: "git-index-pack(1)"
 name: "git-index-pack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-index-pack/"
 description: "git-index-pack – Build pack index file for an existing packed archive"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-index-pack &#8211; Build pack index file for an existing packed archive </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

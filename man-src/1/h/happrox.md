@@ -1,4 +1,5 @@
 ---
+
 title: "happrox(1)"
 name: "happrox"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-happrox/"
 description: "happrox – returns a simplified triangulation of a set of points using algorithm III of Garland and Heckbert (1995)."
 ---
 
-<h2 class="name">NAME</h2>
 <p> happrox &#8211; returns a simplified triangulation of a set of points using algorithm III of Garland and Heckbert (1995).</p>
 <h2>SYNOPSIS</h2>
 <p> <code>happrox</code> [<i>OPTIONS</i>]&nbsp;&lt;&nbsp;[<i>input.pgm</i>|<i>input</i>]&nbsp;&gt;&nbsp;<i>output.gts</i> </p>

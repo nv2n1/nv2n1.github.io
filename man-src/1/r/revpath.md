@@ -1,4 +1,5 @@
 ---
+
 title: "revpath(1)"
 name: "revpath"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-revpath/"
 description: "revpath – generate a relative path that can be used to undo a change-directory"
 ---
 
-<h2>NAME</h2>
 <p> revpath &#8211; generate a relative path that can be used to undo a change-directory</p>
 <h2>SYNOPSIS</h2>
 <p> <code>revpath</code> <i>path</i></p>

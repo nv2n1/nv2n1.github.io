@@ -1,4 +1,5 @@
 ---
+
 title: "sgen(1)"
 name: "sgen"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sgen/"
 description: "sgen – Mono XML Serializer GENerator"
 ---
 
-<h2>NAME</h2>
 <p> sgen &#8211; Mono XML Serializer GENerator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sgen [options]</code></p>

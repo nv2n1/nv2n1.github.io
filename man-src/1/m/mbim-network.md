@@ -1,4 +1,5 @@
 ---
+
 title: "mbim-network(1)"
 name: "mbim-network"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mbim-network/"
 description: "mbim-network – Simple network management of MBIM devices"
 ---
 
-<h2>NAME</h2>
 <p> mbim-network &#8211; Simple network management of MBIM devices</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mbim-network</code> [<i>,OPTIONS/</i>] [<i>,DEVICE/</i>] [<i>,COMMAND/</i>]</p>

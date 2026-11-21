@@ -1,4 +1,5 @@
 ---
+
 title: "makebootfat(1)"
 name: "makebootfat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-makebootfat/"
 description: "makebootfat – Makebootfat Bootable FAT Disk Creation"
 ---
 
-<h2>NAME</h2>
 <p> makebootfat &#8211; Makebootfat Bootable FAT Disk Creation</p>
 <h2>SYNOPSIS</h2>
 <p> makebootfat [options] IMAGE </p>

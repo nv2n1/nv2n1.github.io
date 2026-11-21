@@ -1,4 +1,5 @@
 ---
+
 title: "grive(1)"
 name: "grive"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grive/"
 description: "grive – Google Drive client for GNU/Linux"
 ---
 
-<h2>NAME</h2>
 <p> grive &#8211; Google Drive client for GNU/Linux </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grive [OPTIONS]</code></p>

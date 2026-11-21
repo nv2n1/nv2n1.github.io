@@ -1,4 +1,5 @@
 ---
+
 title: "audit_encode_nv_string(3)"
 name: "audit_encode_nv_string"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-audit_encode_nv_string/"
 description: "audit_encode_nv_string – encode a name/value pair in a string"
 ---
 
-<h2>NAME</h2>
 <p> audit_encode_nv_string &#8211; encode a name/value pair in a string</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libaudit.h&gt;</code> </p>

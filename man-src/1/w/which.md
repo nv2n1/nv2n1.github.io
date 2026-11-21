@@ -1,4 +1,5 @@
 ---
+
 title: "which(1)"
 name: "which"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-which/"
 description: "which – locate a command"
 ---
 
-<h2 class="name">NAME</h2>
 <p> which &#8211; locate a command </p>
 <h2>SYNOPSIS</h2>
 <p> which [-a] filename &#8230;</p>

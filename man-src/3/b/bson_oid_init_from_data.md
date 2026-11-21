@@ -1,4 +1,5 @@
 ---
+
 title: "bson_oid_init_from_data(3)"
 name: "bson_oid_init_from_data"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_oid_init_from_data/"
 description: "bson_oid_init_from_data() – Initializes a bson_oid_t using the raw buffer provided."
 ---
 
-<h2>NAME</h2>
 <p> bson_oid_init_from_data() &#8211; Initializes a bson_oid_t using the raw buffer provided.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

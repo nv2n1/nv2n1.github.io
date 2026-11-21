@@ -1,4 +1,5 @@
 ---
+
 title: "lirc-lsplugins(1)"
 name: "lirc-lsplugins"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lirc-lsplugins/"
 description: "lirc-lsplugins – print dynamic modules info"
 ---
 
-<h2>NAME</h2>
 <p> lirc-lsplugins &#8211; print dynamic modules info</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lirc-lsplugins</code> <i>[-l] [-q] [-U plugindir]</i> <i>[drivers]</i><br />

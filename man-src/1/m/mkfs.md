@@ -1,4 +1,5 @@
 ---
+
 title: "mkfs(1)"
 name: "mkfs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mkfs/"
 description: "mkfs.jffs2 – Create a JFFS2 file system image from directory"
 ---
 
-<h2>NAME</h2>
 <p> mkfs.jffs2 &#8211; Create a JFFS2 file system image from directory</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mkfs.jffs2</code> [ <code>-p,&#8211;pad[=SIZE]</code> ] [ <code>-r,-d,&#8211;root</code> <i>directory</i> ] [ <code>-s,&#8211;pagesize=SIZE</code> ] [ <code>-e,&#8211;eraseblock=SIZE</code> ] [ <code>-c,&#8211;cleanmarker=SIZE</code> ] [ <code>-n,&#8211;no-cleanmarkers</code> ] [ <code>-o,&#8211;output</code> <i>image.jffs2</i> ] [ <code>-l,&#8211;little-endian</code> ] [ <code>-b,&#8211;big-endian</code> ] [ <code>-D,&#8211;devtable=FILE</code> ] [ <code>-f,&#8211;faketime</code> ] [ <code>-q,&#8211;squash</code> ] [ <code>-U,&#8211;squash-uids</code> ] [ <code>-P,&#8211;squash-perms</code> ] [ <code>&#8211;with-xattr</code> ] [ <code>&#8211;with-selinux</code> ] [ <code>&#8211;with-posix-acl</code> ] [ <code>-m,&#8211;compression-mode=MODE</code> ] [ <code>-x,&#8211;disable-compressor=NAME</code> ] [ <code>-X,&#8211;enable-compressor=NAME</code> ] [ <code>-y,&#8211;compressor-priority=PRIORITY:NAME</code> ] [ <code>-L,&#8211;list-compressors</code> ] [ <code>-t,&#8211;test-compression</code> ] [ <code>-h,&#8211;help</code> ] [ <code>-v,&#8211;verbose</code> ] [ <code>-V,&#8211;version</code> ] [ <code>-i,&#8211;incremental</code> <i>image.jffs2</i> ] </p>

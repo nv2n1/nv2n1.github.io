@@ -1,4 +1,5 @@
 ---
+
 title: "kpseaccess(1)"
 name: "kpseaccess"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kpseaccess/"
 description: "kpseaccess – determine whether a file can be accessed"
 ---
 
-<h2 class="name">NAME</h2>
 <p> kpseaccess &#8211; determine whether a file can be accessed </p>
 <h2>SYNOPSIS</h2>
 <p> <code>kpseaccess</code> <i>mode</i> <i>file</i></p>

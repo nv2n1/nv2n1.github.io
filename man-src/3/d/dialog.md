@@ -1,4 +1,5 @@
 ---
+
 title: "dialog(3)"
 name: "dialog"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dialog/"
 description: "dialog – widgets and utilities for the dialog program"
 ---
 
-<h2>NAME</h2>
 <p> dialog &#8211; widgets and utilities for the dialog program</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cc [ flag &#8230; ] file &#8230; -ldialog [ library &#8230; ]</code><br />

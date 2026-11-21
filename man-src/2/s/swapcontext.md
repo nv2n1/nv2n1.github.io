@@ -1,4 +1,5 @@
 ---
+
 title: "swapcontext(2)"
 name: "swapcontext"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-swapcontext/"
 description: "swapcontext – Swap out old context with new context"
 ---
 
-<h2>NAME</h2>
 <p> swapcontext &#8211; Swap out old context with new context</p>
 <h2>SYNOPSIS</h2>
 <dl>

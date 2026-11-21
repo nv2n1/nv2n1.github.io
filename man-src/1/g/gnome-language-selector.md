@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-language-selector(1)"
 name: "gnome-language-selector"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnome-language-selector/"
 description: "gnome-language-selector – graphical language selection utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>gnome-language-selector</code> &#8211; graphical language selection utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnome-language-selector</code> [<i>OPTIONS</i>]</p>

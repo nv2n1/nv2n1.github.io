@@ -1,4 +1,5 @@
 ---
+
 title: "front(3)"
 name: "front"
 section: "3"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-front/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- QuantLib::Array - 1-D array used in linear algebra. 
+QuantLib::Array - 1-D array used in linear algebra. 
 
 <h2>SYNOPSIS</h2>
 

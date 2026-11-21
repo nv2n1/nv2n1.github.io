@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_channel_write_ex(3)"
 name: "libssh2_channel_write_ex"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_channel_write_ex/"
 description: "libssh2_channel_write_ex – write data to a channel stream blocking"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_channel_write_ex &#8211; write data to a channel stream blocking</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

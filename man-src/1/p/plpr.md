@@ -1,4 +1,5 @@
 ---
+
 title: "plpr(1)"
 name: "plpr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-plpr/"
 description: "plpr – converts PLplot metafile to something the printer will understand"
 ---
 
-<h2>NAME</h2>
 <p> plpr &#8211; converts PLplot metafile to something the printer will understand</p>
 <h2>SYNOPSIS</h2>
 <p> <code>plpr</code> <i>file</i></p>

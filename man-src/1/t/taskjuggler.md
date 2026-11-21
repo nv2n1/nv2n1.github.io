@@ -1,4 +1,5 @@
 ---
+
 title: "taskjuggler(1)"
 name: "taskjuggler"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-taskjuggler/"
 description: "_______taskjuggler ____ – translates project descriptions into HTML or XML reports"
 ---
 
-<h2 class="name">NAME</h2>
 <p> _______taskjuggler ____ &#8211; translates project descriptions into HTML or XML reports </p>
 <h2>SYNOPSIS</h2>
 <dl>

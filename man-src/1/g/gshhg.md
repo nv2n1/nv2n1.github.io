@@ -1,4 +1,5 @@
 ---
+
 title: "gshhg(1)"
 name: "gshhg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gshhg/"
 description: "gshhg – Extract data tables from binary GSHHG or WDBII data files"
 ---
 
-<h2>NAME</h2>
 <p> gshhg &#8211; Extract data tables from binary GSHHG or WDBII data files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gshhg</code> <i>binaryfile.b</i> [ <i>min</i> ] [ ] [ <i>id</i> ] [ ] [ <i>level</i> ] [ <code>e</code>|<code>i</code> ] [ <code>-bo</code><i>&lt;binary&gt;</i> ] [ <code>-do</code><i>&lt;nodata&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] &gt; <i>asciifile.txt</i> </p>

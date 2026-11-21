@@ -1,4 +1,5 @@
 ---
+
 title: "opasaquery(1)"
 name: "opasaquery"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-opasaquery/"
 description: "opasaquery"
 ---
 
-<h2>NAME</h2>
 <p> opasaquery </p>
 <p> <code>(All)</code> Performs various queries of the subnet manager/subnet agent and provides detailed fabric information. </p>
 <p> opareport and opareports can provide a more powerful tool, however, in some cases opasaquery is preferred, especially when dealing with virtual fabrics, service records, and multicast. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "seccomp(2)"
 name: "seccomp"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-seccomp/"
 description: "seccomp – operate on Secure Computing state of the process"
 ---
 
-<h2 class="name">NAME</h2>
 <p> seccomp &#8211; operate on Secure Computing state of the process </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

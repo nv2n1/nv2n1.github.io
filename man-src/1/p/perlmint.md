@@ -1,4 +1,5 @@
 ---
+
 title: "perlmint(1)"
 name: "perlmint"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlmint/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- README.mint - Perl version 5 on Atari MiNT 
+README.mint - Perl version 5 on Atari MiNT 
 
 <h2>DESCRIPTION</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "nbackup(1)"
 name: "nbackup"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nbackup/"
 description: "nbackup – Physical backup manager for Firebird"
 ---
 
-<h2 class="name">NAME</h2>
 <p> nbackup &#8211; Physical backup manager for Firebird </p>
 <h2>SYNOPSIS</h2>
 <dl>

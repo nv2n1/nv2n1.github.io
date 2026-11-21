@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3basetreeadaptor(3)"
 name: "antlr3basetreeadaptor"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3basetreeadaptor/"
 description: "include/antlr3basetreeadaptor.h –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> include/antlr3basetreeadaptor.h &#8211; </p>
 <p> Definition of the ANTLR3 base tree adaptor.</p>
 <h2>SYNOPSIS</h2>

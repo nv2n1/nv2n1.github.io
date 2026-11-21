@@ -1,4 +1,5 @@
 ---
+
 title: "npm-test(1)"
 name: "npm-test"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-npm-test/"
 description: "npm-test – Test a package"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>npm-test</code> &#8211; Test a package </p>
 <h3>Synopsis</h3>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "texdiff(1)"
 name: "texdiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-texdiff/"
 description: "texdiff – Compares two (La)TeX documents to create a merged version showing changes, similar to that of ‘Change Tracking’ in some word processors."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>texdiff</code> &#8211; Compares two (La)TeX documents to create a merged version showing changes, similar to that of &#8216;Change Tracking&#8217; in some word processors. </p>
 <h2>SYNOPSIS</h2>
 <p> texdiff [&#8211;nofloats|-n] old.tex new.tex [diff.tex]</p>

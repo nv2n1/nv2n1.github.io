@@ -1,4 +1,5 @@
 ---
+
 title: "slice2php(1)"
 name: "slice2php"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-slice2php/"
 description: "slice2php – The Slice to PHP compiler."
 ---
 
-<h2 class="name">NAME</h2>
 <p> slice2php &#8211; The Slice to PHP compiler.</p>
 <h2>SYNOPSIS</h2>
 <p> slice2php [options] [files] </p>

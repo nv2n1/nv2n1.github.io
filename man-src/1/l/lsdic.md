@@ -1,4 +1,5 @@
 ---
+
 title: "lsdic(1)"
 name: "lsdic"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lsdic/"
 description: "lsdic – Display the user dictionary list"
 ---
 
-<h2>NAME</h2>
 <p> lsdic &#8211; Display the user dictionary list</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lsdic [{-cs|-cannaserver} </code><i>canna-server</i>] [-i|-u <i>user-name</i>]</p>

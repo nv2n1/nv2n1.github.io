@@ -1,4 +1,5 @@
 ---
+
 title: "protoc(1)"
 name: "protoc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-protoc/"
 description: "protoc – compile protocol buffer description files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> protoc &#8211; compile protocol buffer description files </p>
 <h2>SYNOPSIS</h2>
 <dl>

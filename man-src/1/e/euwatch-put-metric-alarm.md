@@ -1,4 +1,5 @@
 ---
+
 title: "euwatch-put-metric-alarm(1)"
 name: "euwatch-put-metric-alarm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euwatch-put-metric-alarm/"
 description: "euwatch-put-metric-alarm – Create or update an alarm"
 ---
 
-<h2>NAME</h2>
 <p> euwatch-put-metric-alarm &#8211; Create or update an alarm</p>
 <h2>SYNOPSIS</h2>
 <p> euwatch-put-metric-alarm <code>&#8211;comparison-operator</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "netmask(1)"
 name: "netmask"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-netmask/"
 description: "netmask – a netmask generation and conversion program"
 ---
 
-<h2 class="name">NAME</h2>
 <p> netmask &#8211; a netmask generation and conversion program </p>
 <h2>SYNOPSIS</h2>
 <p> <code>netmask</code> [ <i>options</i> ] <i>spec</i> [ <i>spec</i> &#8230; ]</p>

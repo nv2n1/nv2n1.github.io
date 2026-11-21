@@ -1,4 +1,5 @@
 ---
+
 title: "git-replace(1)"
 name: "git-replace"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-replace/"
 description: "git-replace – Create, list, delete refs to replace objects"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-replace &#8211; Create, list, delete refs to replace objects </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

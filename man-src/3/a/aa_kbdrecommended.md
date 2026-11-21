@@ -1,4 +1,5 @@
 ---
+
 title: "aa_kbdrecommended(3)"
 name: "aa_kbdrecommended"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_kbdrecommended/"
 description: "aa_kbdrecommended – List of recommended drivers."
 ---
 
-<h2>NAME</h2>
 <p> aa_kbdrecommended &#8211; List of recommended drivers.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

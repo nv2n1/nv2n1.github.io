@@ -1,4 +1,5 @@
 ---
+
 title: "clipfilter(1)"
 name: "clipfilter"
 section: "1"
@@ -6,10 +7,7 @@ letter: "c"
 url: "/docs/linux/man/1-clipfilter/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- clipfilter - Run various conversions for your clipboard data. 
+clipfilter - Run various conversions for your clipboard data. 
 
 <h2>USAGE</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "time(1)"
 name: "time"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-time/"
 description: "time – run programs and summarize system resource usage"
 ---
 
-<h2 class="name">NAME</h2>
 <p> time &#8211; run programs and summarize system resource usage </p>
 <h2>SYNOPSIS</h2>
 <dl>

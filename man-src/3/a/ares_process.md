@@ -1,4 +1,5 @@
 ---
+
 title: "ares_process(3)"
 name: "ares_process"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ares_process/"
 description: "ares_process – Process events for name resolution"
 ---
 
-<h2>NAME</h2>
 <p> ares_process &#8211; Process events for name resolution</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

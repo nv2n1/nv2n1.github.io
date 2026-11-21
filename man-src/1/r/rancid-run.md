@@ -1,4 +1,5 @@
 ---
+
 title: "rancid-run(1)"
 name: "rancid-run"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rancid-run/"
 description: "rancid-run – run rancid for each of the groups"
 ---
 
-<h2>NAME</h2>
 <p> rancid-run &#8211; run rancid for each of the groups</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rancid-run</code> [<code>-V</code>] [<code>-f&nbsp;<wbr></code>rancid.conf]&nbsp;<wbr>[<code>-f&nbsp;<wbr></code>rancid.conf]&nbsp;<wbr>[<code>-m&nbsp;<wbr></code>mail_rcpt]&nbsp;<wbr>[<code>-r&nbsp;<wbr></code>device_name]&nbsp;<wbr>[group [group &#8230;]]</p>

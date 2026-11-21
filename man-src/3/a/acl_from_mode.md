@@ -1,4 +1,5 @@
 ---
+
 title: "acl_from_mode(3)"
 name: "acl_from_mode"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-acl_from_mode/"
 description: "acl_from_mode – create an ACL from file permission bits"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_from_mode</code> &#8211; create an ACL from file permission bits </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>

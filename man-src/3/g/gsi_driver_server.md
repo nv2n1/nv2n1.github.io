@@ -1,4 +1,5 @@
 ---
+
 title: "gsi_driver_server(3)"
 name: "gsi_driver_server"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gsi_driver_server/"
 description: "Server –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Server &#8211; </p>
 <p> <code>globus_xio_server_create()</code> causes a new transport-specific listener socket to be created to handle new GSI connections. <code>globus_xio_server_create()</code> causes a new transport-specific listener socket to be created to handle new GSI connections. </p>
 <p> <code>globus_xio_server_register_accept()</code> will accept a new connection for processing. <code>globus_xio_server_register_close()</code> cleans up the internal resources associated with the http server and calls close on the listener. </p>

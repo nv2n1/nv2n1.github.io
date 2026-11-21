@@ -1,4 +1,5 @@
 ---
+
 title: "nfsiostat(1)"
 name: "nfsiostat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nfsiostat/"
 description: "nfsiostat – Report input/output statistics for network filesystems (NFS)."
 ---
 
-<h2>NAME</h2>
 <p> nfsiostat &#8211; Report input/output statistics for network filesystems (NFS).</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nfsiostat [ -h ] [ -k | -m ] [ -t ] [ -V ] [</code> <i>interval</i> <code>[</code> <i>count</i> <code>] ]</code></p>

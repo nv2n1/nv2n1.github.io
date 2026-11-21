@@ -1,4 +1,5 @@
 ---
+
 title: "changestool(1)"
 name: "changestool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-changestool/"
 description: "changestool – verify, dump, modify, create or fix Debian .changes files"
 ---
 
-<h2>NAME</h2>
 <p> changestool &#8211; verify, dump, modify, create or fix Debian .changes files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>changestool &#8211;help</code> </p>

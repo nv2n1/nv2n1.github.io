@@ -1,4 +1,5 @@
 ---
+
 title: "mdb-array(1)"
 name: "mdb-array"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mdb-array/"
 description: "mdb-array – Export data in an MDB database table to a C array."
 ---
 
-<h2>NAME</h2>
 <p> <code>mdb-array </code>&#8211; Export data in an MDB database table to a C array.</p>
 <h2>SYNOPSIS</h2>
 <pre>

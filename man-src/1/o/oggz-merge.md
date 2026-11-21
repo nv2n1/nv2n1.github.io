@@ -1,4 +1,5 @@
 ---
+
 title: "oggz-merge(1)"
 name: "oggz-merge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-oggz-merge/"
 description: "oggz-merge — Merge Ogg files together, interleaving pages in order of presentation time."
 ---
 
-<h2>NAME</h2>
 <p> oggz-merge &#8212; Merge Ogg files together, interleaving pages in order of presentation time.<br />
 &nbsp;<wbr></p>
 <h2>SYNOPSIS</h2>

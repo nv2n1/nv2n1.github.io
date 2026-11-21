@@ -1,4 +1,5 @@
 ---
+
 title: "bgljfile(1)"
 name: "bgljfile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bgljfile/"
 description: "Bgljfile – a Jvm Access File Generator"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Bgljfile &#8211; a Jvm Access File Generator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bgljfile</code> [ options ] <i>file &#8230;</i> </p>

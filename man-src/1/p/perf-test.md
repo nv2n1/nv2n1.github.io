@@ -1,4 +1,5 @@
 ---
+
 title: "perf-test(1)"
 name: "perf-test"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perf-test/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perf-test - Runs sanity tests. 
+perf-test - Runs sanity tests. 
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_hostkey_hash(3)"
 name: "libssh2_hostkey_hash"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_hostkey_hash/"
 description: "libssh2_hostkey_hash – return a hash of the remote host’s key"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_hostkey_hash &#8211; return a hash of the remote host&#8217;s key</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

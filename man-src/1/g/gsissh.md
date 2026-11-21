@@ -1,4 +1,5 @@
 ---
+
 title: "gsissh(1)"
 name: "gsissh"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gsissh/"
 description: "ssh – OpenSSH SSH client (remote login program)"
 ---
 
-<h2>NAME</h2>
 <p> <code>ssh</code> &#8211; OpenSSH SSH client (remote login program)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ssh</code> -words [-<code>1246AaCfgKkMNnqsTtVvXxYy </code>[-<code>b </code><i>bind_address</i> ] ] [-<code>c </code><i>cipher_spec</i> ] [-<code>D </code>[<i>bind_address : </i><i>port</i> ] ] [-<code>E </code><i>log_file</i> ] [-<code>e </code><i>escape_char</i> ] [-<code>F </code><i>configfile</i> ] [-<code>I </code><i>pkcs11</i> ] [-<code>i </code><i>identity_file</i> ] [-<code>L </code>[<i>bind_address : </i><i>port : </i><i>host : </i><i>hostport</i> ] ] [-<code>l </code><i>login_name</i> ] [-<code>m </code><i>mac_spec</i> ] [-<code>O </code><i>ctl_cmd</i> ] [-<code>o </code><i>option</i> ] [-<code>p </code><i>port</i> ] [-<code>Q cipher | cipher-auth | mac | kex | key</code> ] [-<code>R </code>[<i>bind_address : </i><i>port : </i><i>host : </i><i>hostport</i> ] ] [-<code>S </code><i>ctl_path</i> ] [-<code>W </code><i>host : </i><i>port</i> ] [-<code>w </code><i>local_tun </i>[: <i>remote_tun</i> ] ] [<i>user </i><code>@ </code><i>hostname</i> ] [<i>command</i> ]</p>

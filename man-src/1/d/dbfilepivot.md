@@ -1,4 +1,5 @@
 ---
+
 title: "dbfilepivot(1)"
 name: "dbfilepivot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dbfilepivot/"
 description: "dbfilepivot – pivot a table, converting multiple rows into single wide row"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dbfilepivot &#8211; pivot a table, converting multiple rows into single wide row </p>
 <h2>SYNOPSIS</h2>
 <p> dbfilepivot [-e empty] -k KeyField -p PivotField [-v ValueField]</p>

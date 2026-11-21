@@ -1,4 +1,5 @@
 ---
+
 title: "tcmodchain(1)"
 name: "tcmodchain"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tcmodchain/"
 description: "tcmodchain – Query compatibily of transcode modules chains."
 ---
 
-<h2>NAME</h2>
 <p> tcmodchain &#8211; Query compatibily of transcode modules chains.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tcmodchain</code> [ <code>-m</code> <i>path</i> ] [ <code>-C</code> ] [ <code>-L</code> ] [ <code>-d</code> <i>verbosity</i> ] [ <code>-v</code> ] module1 module2</p>

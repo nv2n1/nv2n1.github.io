@@ -1,4 +1,5 @@
 ---
+
 title: "aa_printf(3)"
 name: "aa_printf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_printf/"
 description: "aa_printf – print text to AA-lib output buffers."
 ---
 
-<h2>NAME</h2>
 <p> aa_printf &#8211; print text to AA-lib output buffers.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

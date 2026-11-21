@@ -1,4 +1,5 @@
 ---
+
 title: "cinnamon-extension-tool(1)"
 name: "cinnamon-extension-tool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cinnamon-extension-tool/"
 description: "cinnamon-extension-tool – extension management program"
 ---
 
-<h2>NAME</h2>
 <p> cinnamon-extension-tool &#8211; extension management program</p>
 <h2>SYNOPSIS</h2>
 <p> [ <code>&#8211;create-extension</code> ] </p>

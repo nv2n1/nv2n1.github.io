@@ -1,4 +1,5 @@
 ---
+
 title: "euare-useraddkey(1)"
 name: "euare-useraddkey"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-useraddkey/"
 description: "euare-useraddkey – Create a new access key for a user"
 ---
 
-<h2>NAME</h2>
 <p> euare-useraddkey &#8211; Create a new access key for a user</p>
 <h2>SYNOPSIS</h2>
 <p> euare-useraddkey [-w] [-d DOMAIN] [-l] [&#8211;as-account ACCOUNT] [-U URL]</p>

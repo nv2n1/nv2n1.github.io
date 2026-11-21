@@ -1,4 +1,5 @@
 ---
+
 title: "mtrace(1)"
 name: "mtrace"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mtrace/"
 description: "mtrace – interpret the malloc trace log"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mtrace &#8211; interpret the malloc trace log </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mtrace</code> [<i>option</i>]&#8230; [<i>binary</i>] <i>mtracedata</i></p>

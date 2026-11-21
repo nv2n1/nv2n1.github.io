@@ -1,4 +1,5 @@
 ---
+
 title: "fts-set-debug(1)"
 name: "fts-set-debug"
 section: "1"
@@ -6,9 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-fts-set-debug/"
 ---
 
-<h2>NAME</h2>
-
- fts-set-debug
+fts-set-debug
 
 <h2>SYNOPSIS</h2>
 

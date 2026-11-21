@@ -1,4 +1,5 @@
 ---
+
 title: "ybmtopbm(1)"
 name: "ybmtopbm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ybmtopbm/"
 description: "ybmtopbm – convert a Bennet Yee \"face\" file into a portable bitmap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ybmtopbm &#8211; convert a Bennet Yee &quot;face&quot; file into a portable bitmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ybmtopbm</code> [<i>facefile</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "grantpt(3)"
 name: "grantpt"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-grantpt/"
 description: "grantpt – grant access to the slave pseudoterminal"
 ---
 
-<h2 class="name">NAME</h2>
 <p> grantpt &#8211; grant access to the slave pseudoterminal </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;stdlib.h&gt;</code> </p>

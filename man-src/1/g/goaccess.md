@@ -1,4 +1,5 @@
 ---
+
 title: "goaccess(1)"
 name: "goaccess"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-goaccess/"
 description: "goaccess – fast web log analyzer and interactive viewer."
 ---
 
-<h2>NAME</h2>
 <p> goaccess &#8211; fast web log analyzer and interactive viewer.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>goaccess [-f input-file][-c][-r][-d][-m][-q][-o][-h][&#8230;]</code></p>

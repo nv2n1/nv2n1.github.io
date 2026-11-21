@@ -1,4 +1,5 @@
 ---
+
 title: "curl_slist_free_all(3)"
 name: "curl_slist_free_all"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-curl_slist_free_all/"
 description: "curl_slist_free_all – free an entire curl_slist list"
 ---
 
-<h2>NAME</h2>
 <p> curl_slist_free_all &#8211; free an entire curl_slist list</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;curl/curl.h&gt;</code> </p>

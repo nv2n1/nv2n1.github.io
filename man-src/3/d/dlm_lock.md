@@ -1,4 +1,5 @@
 ---
+
 title: "dlm_lock(3)"
 name: "dlm_lock"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlm_lock/"
 description: "dlm_lock – acquire or convert a DLM lock"
 ---
 
-<h2>NAME</h2>
 <p> dlm_lock &#8211; acquire or convert a DLM lock</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

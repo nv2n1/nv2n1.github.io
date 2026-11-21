@@ -1,4 +1,5 @@
 ---
+
 title: "coeff_(3)"
 name: "coeff_"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-coeff_/"
 description: "QuantLib::LongstaffSchwartzPathPricer – Longstaff-Schwarz path pricer for early exercise options."
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::LongstaffSchwartzPathPricer &#8211; Longstaff-Schwarz path pricer for early exercise options. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/methods/montecarlo/longstaffschwartzpathpricer.hpp&gt; </p>

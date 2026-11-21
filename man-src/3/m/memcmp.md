@@ -1,4 +1,5 @@
 ---
+
 title: "memcmp(3)"
 name: "memcmp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memcmp/"
 description: "memcmp – compare memory areas"
 ---
 
-<h2 class="name">NAME</h2>
 <p> memcmp &#8211; compare memory areas </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

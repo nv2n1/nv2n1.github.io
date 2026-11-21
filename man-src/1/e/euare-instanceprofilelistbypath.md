@@ -1,4 +1,5 @@
 ---
+
 title: "euare-instanceprofilelistbypath(1)"
 name: "euare-instanceprofilelistbypath"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-instanceprofilelistbypath/"
 description: "euare-instanceprofilelistbypath – List your account’s instance profiles"
 ---
 
-<h2>NAME</h2>
 <p> euare-instanceprofilelistbypath &#8211; List your account&#8217;s instance profiles</p>
 <h2>SYNOPSIS</h2>
 <p> euare-instanceprofilelistbypath [-p PREFIX] [&#8211;as-account ACCOUNT]</p>

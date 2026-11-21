@@ -1,4 +1,5 @@
 ---
+
 title: "nfstest_sparse(1)"
 name: "nfstest_sparse"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nfstest_sparse/"
 description: "nfstest_sparse – Sparse file tests"
 ---
 
-<h2>NAME</h2>
 <p> nfstest_sparse &#8211; Sparse file tests</p>
 <h2>SYNOPSIS</h2>
 <p> nfstest_sparse &#8211;server &lt;server&gt; [options]</p>

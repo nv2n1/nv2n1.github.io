@@ -1,4 +1,5 @@
 ---
+
 title: "fwup_resource_free(3)"
 name: "fwup_resource_free"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fwup_resource_free/"
 description: "libfwup – library to support management of system firmware updates"
 ---
 
-<h2>NAME</h2>
 <p> libfwup &#8211; library to support management of system firmware updates</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "restoretextmode(1)"
 name: "restoretextmode"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-restoretextmode/"
 description: "restoretextmode – save or restore the SVGA registers for textmode."
 ---
 
-<h2>NAME</h2>
 <p> restoretextmode &#8211; save or restore the SVGA registers for textmode.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>restoretextmode {-r|-w} </code><i>filename</i> </p>

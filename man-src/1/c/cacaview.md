@@ -1,4 +1,5 @@
 ---
+
 title: "cacaview(1)"
 name: "cacaview"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cacaview/"
 description: "cacaview – ASCII image browser"
 ---
 
-<h2>NAME</h2>
 <p> cacaview &#8211; ASCII image browser</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cacaview [FILE&#8230;]</code></p>

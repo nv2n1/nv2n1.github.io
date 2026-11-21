@@ -1,4 +1,5 @@
 ---
+
 title: "mino(1)"
 name: "mino"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mino/"
 description: "Mino – a user friendly text editor for GNU/Linux console/xterm"
 ---
 
-<h2>NAME</h2>
 <p> Mino &#8211; a user friendly text editor for GNU/Linux console/xterm</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mino [file-name] [&#8211;help, -h] [&#8211;reset-config]</code></p>

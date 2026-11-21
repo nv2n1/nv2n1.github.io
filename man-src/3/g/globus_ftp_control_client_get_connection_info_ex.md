@@ -1,4 +1,5 @@
 ---
+
 title: "globus_ftp_control_client_get_connection_info_ex(3)"
 name: "globus_ftp_control_client_get_connection_info_ex"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_ftp_control_client_get_connection_info_ex/"
 description: "globus_ftp_control.h – GridFTP Control Connection API."
 ---
 
-<h2 class="name">NAME</h2>
 <p> globus_ftp_control.h &#8211; GridFTP Control Connection API.</p>
 <h2>SYNOPSIS</h2>
 <p> #include &#8216;globus_common.h&#8217;<br />

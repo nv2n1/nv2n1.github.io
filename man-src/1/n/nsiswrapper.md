@@ -1,4 +1,5 @@
 ---
+
 title: "nsiswrapper(1)"
 name: "nsiswrapper"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nsiswrapper/"
 description: "nsiswrapper – Helper program for making NSIS Windows installers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> nsiswrapper &#8211; Helper program for making NSIS Windows installers </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

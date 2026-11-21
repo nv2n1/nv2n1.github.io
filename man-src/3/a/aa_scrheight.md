@@ -1,4 +1,5 @@
 ---
+
 title: "aa_scrheight(3)"
 name: "aa_scrheight"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_scrheight/"
 description: "aa_scrheight – returns height of the output screen in characters."
 ---
 
-<h2>NAME</h2>
 <p> aa_scrheight &#8211; returns height of the output screen in characters.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

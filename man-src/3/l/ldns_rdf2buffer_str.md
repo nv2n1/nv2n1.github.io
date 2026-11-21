@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_rdf2buffer_str(3)"
 name: "ldns_rdf2buffer_str"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_rdf2buffer_str/"
 description: "ldns_pkt2buffer_str, ldns_pktheader2buffer_str, ldns_rr2buffer_str, ldns_rr_list2buffer_str, ldns_rdf2buffer_str, ldns_key2buffer_str, ldns_pkt2buffer_wire, ldns_rr2buffer_wire, ldns_rdf2buffer_wir..."
 ---
 
-<h2>NAME</h2>
 <p> ldns_pkt2buffer_str, ldns_pktheader2buffer_str, ldns_rr2buffer_str, ldns_rr_list2buffer_str, ldns_rdf2buffer_str, ldns_key2buffer_str, ldns_pkt2buffer_wire, ldns_rr2buffer_wire, ldns_rdf2buffer_wire, ldns_rrsig2buffer_wire, ldns_rr_rdata2buffer_wire </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

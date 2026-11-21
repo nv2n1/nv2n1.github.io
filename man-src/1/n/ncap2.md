@@ -1,4 +1,5 @@
 ---
+
 title: "ncap2(1)"
 name: "ncap2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ncap2/"
 description: "ncap2 – netCDF Arithmetic Processor, Next Generation"
 ---
 
-<h2>NAME</h2>
 <p> ncap2 &#8211; netCDF Arithmetic Processor, Next Generation</p>
 <h2>SYNTAX</h2>
 <p> ncap2 [-3] [-4] [-6] [-7] [-A] [&#8211;bfr <i>sz</i>]<i>[-C]</i>[-c]<i>[-D</i> <i>dbg_lvl</i>] [-d <i>dim</i>,[ <i>min</i>][,[ <i>max</i>]]] [-F] [-f] [-h] [&#8211;hdf] [&#8211;hdr_pad <i>sz</i>] [-l <i>path</i>] [&#8211;no_tmp_fl] [-O] [-o <i>output-file</i>] [-p <i>path</i>] [-R] [-r] [&#8211;ram_all] [-S <i>script-file</i>]<i>[-s</i> <i>script</i>]<i>[-t</i> <i>thr_nbr</i>]<i>[-v</i> <i>var</i>[,&#8230;]] <i>input-file [</i> <i>output-file ]</i></p>

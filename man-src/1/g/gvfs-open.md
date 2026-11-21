@@ -1,4 +1,5 @@
 ---
+
 title: "gvfs-open(1)"
 name: "gvfs-open"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gvfs-open/"
 description: "gvfs-open"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gvfs-open </p>
 <h2>DESCRIPTION</h2>
 <p> <code>gvfs-open</code> has been deprecated and it is redirected to <code>gio open</code>.</p>

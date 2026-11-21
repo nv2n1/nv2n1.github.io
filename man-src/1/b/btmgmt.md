@@ -1,4 +1,5 @@
 ---
+
 title: "btmgmt(1)"
 name: "btmgmt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-btmgmt/"
 description: "btmgmt: – A command-line interface of BlueZ for management Usage:"
 ---
 
-<h2 class="name">NAME</h2>
 <p> btmgmt: &#8211; A command-line interface of BlueZ for management Usage:</p>
 <dl>
 <dt>

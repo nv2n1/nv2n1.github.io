@@ -1,4 +1,5 @@
 ---
+
 title: "clock_adjtime(2)"
 name: "clock_adjtime"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-clock_adjtime/"
 description: "adjtimex, clock_adjtime, ntp_adjtime – tune kernel clock"
 ---
 
-<h2 class="name">NAME</h2>
 <p> adjtimex, clock_adjtime, ntp_adjtime &#8211; tune kernel clock </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

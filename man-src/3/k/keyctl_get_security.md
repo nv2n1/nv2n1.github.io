@@ -1,4 +1,5 @@
 ---
+
 title: "keyctl_get_security(3)"
 name: "keyctl_get_security"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-keyctl_get_security/"
 description: "keyctl_get_security – Retrieve a key’s security context"
 ---
 
-<h2 class="name">NAME</h2>
 <p> keyctl_get_security &#8211; Retrieve a key&#8217;s security context </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

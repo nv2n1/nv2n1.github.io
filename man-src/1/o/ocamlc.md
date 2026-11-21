@@ -1,4 +1,5 @@
 ---
+
 title: "ocamlc(1)"
 name: "ocamlc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ocamlc/"
 description: "ocamlc – The OCaml bytecode compiler"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ocamlc &#8211; The OCaml bytecode compiler</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ocamlc</code> [ <i>options</i> ] <i>filename &#8230;</i> </p>

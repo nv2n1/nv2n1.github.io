@@ -1,4 +1,5 @@
 ---
+
 title: "fontimage(1)"
 name: "fontimage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fontimage/"
 description: "fontimage – produce a font thumbnail image"
 ---
 
-<h2>NAME</h2>
 <p> <code>fontimage &#8211; produce a font thumbnail image</code></p>
 <h2>SYNOPSIS</h2>
 <p> <code>fontimage</code> [<code>&#8211;help</code>] [<code>&#8211;width</code> <i>num</i>] [<code>&#8211;height</code> <i>num</i>] [<code>&#8211;pixelsize</code> <i>num</i>] [<code>&#8211;text</code> <i>string</i>] [<code>&#8211;o</code> <i>outputfile</i>] [<code>&#8211;usage</code>] [<code>&#8211;version</code>] <i>fontfile</i></p>

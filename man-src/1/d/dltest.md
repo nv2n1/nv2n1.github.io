@@ -1,4 +1,5 @@
 ---
+
 title: "dltest(1)"
 name: "dltest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dltest/"
 description: "dltest – A simple library symbol test"
 ---
 
-<h2>NAME</h2>
 <p> dltest &#8211; A simple library symbol test </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dltest</code> <i>library symbol</i> </p>

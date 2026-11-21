@@ -1,4 +1,5 @@
 ---
+
 title: "avc_av_stats(3)"
 name: "avc_av_stats"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-avc_av_stats/"
 description: "avc_cache_stats, avc_av_stats, avc_sid_stats – obtain userspace SELinux AVC statistics"
 ---
 
-<h2 class="name">NAME</h2>
 <p> avc_cache_stats, avc_av_stats, avc_sid_stats &#8211; obtain userspace SELinux AVC statistics </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/selinux.h&gt;</code><br />

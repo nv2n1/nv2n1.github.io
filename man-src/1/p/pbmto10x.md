@@ -1,4 +1,5 @@
 ---
+
 title: "pbmto10x(1)"
 name: "pbmto10x"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pbmto10x/"
 description: "pbmto10x – convert a portable bitmap into Gemini 10X printer graphics"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pbmto10x &#8211; convert a portable bitmap into Gemini 10X printer graphics </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmto10x</code> [<code>-h</code>] [<i>pbmfile</i>]</p>

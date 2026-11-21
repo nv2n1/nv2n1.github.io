@@ -1,4 +1,5 @@
 ---
+
 title: "ip6sic(1)"
 name: "ip6sic"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ip6sic/"
 description: "ip6sic – flood a node with IPv6 frames in an attempt to cause great havoc"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>ip6sic</code> &#8211; flood a node with IPv6 frames in an attempt to cause great havoc </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ip6sic</code> [<code>-bDhHtv</code>] [<code>-i</code> intf] [<code>-d</code> dst addr] [<code>-s</code> src addr] [<code>-e</code> num hdrs] [<code>-p</code> num pkts] [<code>-r</code> seed] [<code>-w</code> pcap file] [<code>-y</code> max payload] [<code>-f</code> fragment pct] [<code>-T</code> TCP pct] [<code>-U</code> UDP pct] [<code>-I</code> ICMP pct] [<code>-c</code> checksum pct] [<code>-4</code> IPv4 tunnel pct] [<code>-6</code> IPv6 tunnel pct] </p>

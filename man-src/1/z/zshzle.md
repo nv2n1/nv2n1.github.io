@@ -1,4 +1,5 @@
 ---
+
 title: "zshzle(1)"
 name: "zshzle"
 section: "1"
@@ -6,7 +7,7 @@ letter: "z"
 url: "/docs/linux/man/1-zshzle/"
 description: "zshzle – zsh command line editor"
 ---
-<h2 class="name">NAME</h2>
+
 <p> zshzle - zsh command line editor </p>
 <h2>DESCRIPTION</h2>
 <p> If the <code>ZLE</code> option is set (which it is by default in interactive shells) and the shell input is attached to the terminal, the user is able to edit command lines. </p>

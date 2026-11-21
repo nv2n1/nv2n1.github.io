@@ -1,4 +1,5 @@
 ---
+
 title: "gdcmimg(1)"
 name: "gdcmimg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gdcmimg/"
 description: "gdcmimg – .TH \"gdcmimg\" 1 \"Fri Oct 29 2010\" \"Version 2.0.16\" \"GDCM\""
 ---
 
-<h2 class="name">NAME</h2>
 <p> gdcmimg &#8211; .TH &quot;gdcmimg&quot; 1 &quot;Fri Oct 29 2010&quot; &quot;Version 2.0.16&quot; &quot;GDCM&quot; </p>
 <h2 class="name">NAME</h2>
 <p> gdcmimg &#8211; .SH &quot;SYNOPSIS&quot; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "containerd-config(1)"
 name: "containerd-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-containerd-config/"
 description: "containerd-config – information on the containerd config"
 ---
 
-<h2 class="name">NAME</h2>
 <p> containerd-config &#8211; information on the containerd config</p>
 <h2>SYNOPSIS</h2>
 <p> containerd config [command] </p>

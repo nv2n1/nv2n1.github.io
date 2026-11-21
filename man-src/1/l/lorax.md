@@ -1,4 +1,5 @@
 ---
+
 title: "lorax(1)"
 name: "lorax"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lorax/"
 description: "lorax – Create installer boot iso"
 ---
 
-<h2>NAME</h2>
 <p> lorax &#8211; Create installer boot iso </p>
 <h2>SYNOPSIS</h2>
 <p> lorax -p PRODUCT -v VERSION -r RELEASE -s REPOSITORY OUTPUTDIR </p>

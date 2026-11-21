@@ -1,4 +1,5 @@
 ---
+
 title: "cmis-client(1)"
 name: "cmis-client"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cmis-client/"
 description: "______cmis-client ____ – command line CMIS client tool."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ______cmis-client ____ &#8211; command line CMIS client tool. </p>
 <h2>SYNOPSIS</h2>
 <dl>

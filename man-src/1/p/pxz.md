@@ -1,4 +1,5 @@
 ---
+
 title: "pxz(1)"
 name: "pxz"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pxz/"
 description: "pxz – Parallel LZMA compressor compatible with XZ."
 ---
 
-<h2>NAME</h2>
 <p> pxz &#8211; Parallel LZMA compressor compatible with XZ.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pxz</code> [<code>options</code>]&#8230; [<i>file</i>]&#8230; </p>

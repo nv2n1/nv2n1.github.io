@@ -1,4 +1,5 @@
 ---
+
 title: "salt-cp(1)"
 name: "salt-cp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-salt-cp/"
 description: "salt-cp – salt-cp Documentation"
 ---
 
-<h2>NAME</h2>
 <p> salt-cp &#8211; salt-cp Documentation </p>
 <p> Copy a file to a set of systems</p>
 <h2>SYNOPSIS</h2>

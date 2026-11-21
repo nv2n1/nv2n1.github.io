@@ -1,4 +1,5 @@
 ---
+
 title: "unflatten(1)"
 name: "unflatten"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-unflatten/"
 description: "unflatten – adjust directed graphs to improve layout aspect ratio"
 ---
 
-<h2 class="name">NAME</h2>
 <p> unflatten &#8211; adjust directed graphs to improve layout aspect ratio </p>
 <h2>SYNOPSIS</h2>
 <p> <code>unflatten</code> [<code>-f</code>] [<code>-l</code><i>len</i>] [<code>-c</code><i>len</i> ] [ <code>-o</code> <i>outfile</i> ] [ files ]</p>

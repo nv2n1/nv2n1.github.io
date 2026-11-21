@@ -1,4 +1,5 @@
 ---
+
 title: "get-iab(1)"
 name: "get-iab"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-get-iab/"
 description: "get-iab – Fetch the arp-scan IAB file from the IEEE website"
 ---
 
-<h2 class="name">NAME</h2>
 <p> get-iab &#8211; Fetch the arp-scan IAB file from the IEEE website </p>
 <h2>SYNOPSIS</h2>
 <p> <code>get-iab</code> [<i>options</i>]</p>

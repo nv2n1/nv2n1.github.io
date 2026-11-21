@@ -1,4 +1,5 @@
 ---
+
 title: "calamaris(1)"
 name: "calamaris"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-calamaris/"
 description: "calamaris – generate statistic out of log files from Proxy-Cache-Servers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> calamaris &#8211; generate statistic out of log files from Proxy-Cache-Servers</p>
 <h2>SYNOPSIS</h2>
 <p> cat log | <code>calamaris</code> [ calamaris_options ] </p>

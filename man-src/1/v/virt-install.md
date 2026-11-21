@@ -1,4 +1,5 @@
 ---
+
 title: "virt-install(1)"
 name: "virt-install"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-virt-install/"
 description: "virt-install – provision new virtual machines"
 ---
 
-<h2 class="name">NAME</h2>
 <p> virt-install &#8211; provision new virtual machines </p>
 <h2>SYNOPSIS</h2>
 <p> <code>virt-install</code> [<font SIZE="-1">OPTION</font>]&#8230;</p>

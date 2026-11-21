@@ -1,4 +1,5 @@
 ---
+
 title: "streamzip(1)"
 name: "streamzip"
 section: "1"
@@ -6,10 +7,7 @@ letter: "s"
 url: "/docs/linux/man/1-streamzip/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- streamzip - create a zip file from stdin 
+streamzip - create a zip file from stdin 
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "mp3-decoder(1)"
 name: "mp3-decoder"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mp3-decoder/"
 description: "mpg123 – play audio MPEG 1.0/2.0/2.5 stream (layers 1, 2 and 3)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mpg123 &#8211; play audio MPEG 1.0/2.0/2.5 stream (layers 1, 2 and 3) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mpg123</code> [ <code>options</code> ] <i>file-or-URL</i>&#8230;</p>

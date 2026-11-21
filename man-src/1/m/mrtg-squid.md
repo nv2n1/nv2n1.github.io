@@ -1,4 +1,5 @@
 ---
+
 title: "mrtg-squid(1)"
 name: "mrtg-squid"
 section: "1"
@@ -6,10 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-mrtg-squid/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- mrtg-squid - using mrtg to monitor Squid 
+mrtg-squid - using mrtg to monitor Squid 
 
 <h2>DESCRIPTION</h2>
 

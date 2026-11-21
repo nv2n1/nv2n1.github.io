@@ -1,4 +1,5 @@
 ---
+
 title: "idevicediagnostics(1)"
 name: "idevicediagnostics"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-idevicediagnostics/"
 description: "idevicediagnostics – Interact with the diagnostics interface of a device."
 ---
 
-<h2>NAME</h2>
 <p> idevicediagnostics &#8211; Interact with the diagnostics interface of a device.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>idevicediagnostics</code> [OPTIONS] COMMAND </p>

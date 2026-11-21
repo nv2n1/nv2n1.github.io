@@ -1,4 +1,5 @@
 ---
+
 title: "gmediaserver(1)"
 name: "gmediaserver"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gmediaserver/"
 description: "GMediaServer – A UPnP compatible media server"
 ---
 
-<h2>NAME</h2>
 <p> GMediaServer &#8211; A UPnP compatible media server</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gmediaserver</code> [<i>OPTIONS</i>]&#8230; <i>DIRECTORIES</i>&#8230;</p>

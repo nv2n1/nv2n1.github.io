@@ -1,4 +1,5 @@
 ---
+
 title: "dh_md5sums(1)"
 name: "dh_md5sums"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_md5sums/"
 description: "dh_md5sums – generate DEBIAN/md5sums file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_md5sums &#8211; generate DEBIAN/md5sums file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_md5sums</code> [<i>debhelper options</i>] [<code>-x</code>] [<code>-X</code><i>item</i>] [<code>&#8211;include-conffiles</code>]</p>

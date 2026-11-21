@@ -1,4 +1,5 @@
 ---
+
 title: "fbterm(1)"
 name: "fbterm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fbterm/"
 description: "FbTerm – a fast Frame Buffer based TERMinal emulator for linux"
 ---
 
-<h2>NAME</h2>
 <p> FbTerm &#8211; a fast Frame Buffer based TERMinal emulator for linux</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fbterm</code> [<i>options</i>] [&#8211;] [<i>command</i> [<i>arguments</i>]]</p>

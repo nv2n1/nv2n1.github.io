@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_dnssec_data_chain_print(3)"
 name: "ldns_dnssec_data_chain_print"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_dnssec_data_chain_print/"
 description: "ldns_dnssec_data_chain_new, ldns_dnssec_data_chain_free, ldns_dnssec_data_chain_deep_free, ldns_dnssec_build_data_chain, ldns_dnssec_data_chain_print"
 ---
 
-<h2>NAME</h2>
 <p> ldns_dnssec_data_chain_new, ldns_dnssec_data_chain_free, ldns_dnssec_data_chain_deep_free, ldns_dnssec_build_data_chain, ldns_dnssec_data_chain_print </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

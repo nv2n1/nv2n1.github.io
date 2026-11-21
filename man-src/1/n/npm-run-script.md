@@ -1,4 +1,5 @@
 ---
+
 title: "npm-run-script(1)"
 name: "npm-run-script"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-npm-run-script/"
 description: "npm-run-script – Run arbitrary package scripts"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>npm-run-script</code> &#8211; Run arbitrary package scripts </p>
 <h3>Synopsis</h3>
 <dl>

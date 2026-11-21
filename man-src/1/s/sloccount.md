@@ -1,4 +1,5 @@
 ---
+
 title: "sloccount(1)"
 name: "sloccount"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sloccount/"
 description: "sloccount – count source lines of code (SLOC)"
 ---
 
-<h2>NAME</h2>
 <p> sloccount &#8211; count source lines of code (SLOC)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sloccount</code> [<code>&#8211;version</code>] [<code>&#8211;cached</code>] [<code>&#8211;append</code>] [ <code>&#8211;datadir</code> <i>directory</i> ] [<code>&#8211;follow</code>] [<code>&#8211;duplicates</code>] [<code>&#8211;crossdups</code>] [<code>&#8211;autogen</code>] [<code>&#8211;multiproject</code>] [<code>&#8211;filecount</code>] [<code>&#8211;wide</code>] [<code>&#8211;details</code>] [ <code>&#8211;effort</code> <i>F</i> <i>E</i> ] [ <code>&#8211;schedule</code> <i>F</i> <i>E</i> ] [ <code>&#8211;personcost</code> <i>cost</i> ] [ <code>&#8211;overhead</code> <i>overhead</i> ] [ <code>&#8211;addlang</code> <i>language</i> ] [ <code>&#8211;addlangall</code> ] [<code>&#8212;</code>] <i>directories</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cptcat(1)"
 name: "cptcat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cptcat/"
 description: "cptcat – concatenate GMT colour palette tables."
 ---
 
-<h2 class="name">NAME</h2>
 <p> cptcat &#8211; concatenate GMT colour palette tables. </p>
 <h2>SYNOPSIS</h2>
 <dl>

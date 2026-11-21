@@ -1,4 +1,5 @@
 ---
+
 title: "dmtxread(1)"
 name: "dmtxread"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dmtxread/"
 description: "dmtxread – scan Data Matrix barcodes"
 ---
 
-<h2>NAME</h2>
 <p> dmtxread &#8211; scan Data Matrix barcodes</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dmtxread</code> [<i>options</i>] [<i>FILE</i>]&#8230;</p>

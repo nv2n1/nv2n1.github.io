@@ -1,4 +1,5 @@
 ---
+
 title: "irsim-analyzer(3)"
 name: "irsim-analyzer"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-irsim-analyzer/"
 description: "irsim-analyzer"
 ---
 
-<h2>NAME</h2>
 <p> irsim-analyzer</p>
 <h2>SYNOPSIS</h2>
 <p> <code>analyzer </code><i>node&#8230;</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "virsh(1)"
 name: "virsh"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-virsh/"
 description: "virsh – management user interface"
 ---
 
-<h2 class="name">NAME</h2>
 <p> virsh &#8211; management user interface </p>
 <h2>SYNOPSIS</h2>
 <p> <code>virsh</code> [<i></i><font SIZE="-1"><i>OPTION</i></font><i></i>]&#8230; [<i></i><font SIZE="-1"><i>COMMAND_STRING</i></font><i></i>] </p>

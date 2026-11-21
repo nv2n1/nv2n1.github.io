@@ -1,4 +1,5 @@
 ---
+
 title: "gsql(1)"
 name: "gsql"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gsql/"
 description: "GSQL – an integrated database development environment for GNOME"
 ---
 
-<h2>NAME</h2>
 <p> GSQL &#8211; an integrated database development environment for <code>GNOME</code></p>
 <h2>VERSION</h2>
 <p> Current version is 0.2.1</p>

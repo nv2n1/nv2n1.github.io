@@ -1,4 +1,5 @@
 ---
+
 title: "mdb_copy(1)"
 name: "mdb_copy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mdb_copy/"
 description: "mdb_copy – LMDB environment copy tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mdb_copy &#8211; LMDB environment copy tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mdb_copy</code> [<code>-V</code>] [<code>-c</code>] [<code>-n</code>] <code>srcpath</code> [<code>dstpath</code>]</p>

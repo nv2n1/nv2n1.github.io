@@ -1,4 +1,5 @@
 ---
+
 title: "php-config(1)"
 name: "php-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-php-config/"
 description: "php-config – get information about PHP configuration and compile options"
 ---
 
-<h2>NAME</h2>
 <p> php-config &#8211; get information about PHP configuration and compile options</p>
 <h2>SYNOPSIS</h2>
 <p> <code>php-config</code> [options] </p>

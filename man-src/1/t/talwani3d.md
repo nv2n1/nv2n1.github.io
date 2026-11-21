@@ -1,4 +1,5 @@
 ---
+
 title: "talwani3d(1)"
 name: "talwani3d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-talwani3d/"
 description: "talwani3d – Compute free-air, geoid or vertical gravity gradients anomalies over 3-D bodies"
 ---
 
-<h2>NAME</h2>
 <p> talwani3d &#8211; Compute free-air, geoid or vertical gravity gradients anomalies over 3-D bodies</p>
 <h2>SYNOPSIS</h2>
 <p> <code>talwani3d</code> [ <i>modeltable</i> ] [ ] [ <i>rho</i> ] ] [ <code>f</code>|<code>n</code>|<code>v</code> ] [ <i>grdfile</i> ] [ <i>increment</i> ] [ [<code>h</code>][<code>v</code>] ] [ <i>trackfile</i> ] [ <i>region</i> ] [ <i>level</i>|<i>obsgrid</i> ] [ [<i>level</i>] ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-fg</code> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-r</code> ] [ <code>-x</code>[[-]<i>n</i>] ] </p>

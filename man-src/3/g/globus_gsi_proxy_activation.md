@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gsi_proxy_activation(3)"
 name: "globus_gsi_proxy_activation"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gsi_proxy_activation/"
 description: "Activation –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Activation &#8211; </p>
 <h3>Macros</h3>
 <p> #define <code>GLOBUS_GSI_PROXY_MODULE</code><br />

@@ -1,4 +1,5 @@
 ---
+
 title: "fsstat(1)"
 name: "fsstat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fsstat/"
 description: "fsstat – Display general details of a file system"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fsstat &#8211; Display general details of a file system </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fsstat [-f </code> <i>fstype </i> <code>] [-i imgtype] [-o imgoffset] [-b dev_sector_size] [-tvV] </code> <i>image [images] </i></p>

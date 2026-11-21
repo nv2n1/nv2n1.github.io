@@ -1,4 +1,5 @@
 ---
+
 title: "wbinfo(1)"
 name: "wbinfo"
 section: "1"
@@ -6,7 +7,7 @@ letter: "w"
 url: "/docs/linux/man/1-wbinfo/"
 description: "wbinfo – Query information from winbind daemon"
 ---
-<h2 class="name">NAME</h2>
+
 <p> wbinfo - Query information from winbind daemon </p>
 <h2>SYNOPSIS</h2>
 <dl>

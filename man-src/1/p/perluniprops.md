@@ -1,4 +1,5 @@
 ---
+
 title: "perluniprops(1)"
 name: "perluniprops"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perluniprops/"
 description: "perluniprops – Index of Unicode Version 12.1.0 character properties in Perl"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perluniprops &#8211; Index of Unicode Version 12.1.0 character properties in Perl </p>
 <h2>DESCRIPTION</h2>
 <p> This document provides information about the portion of the Unicode database that deals with character properties, that is the portion that is defined on single code points. (&#8220;Other information in the Unicode data base&#8221; below briefly mentions other data that Unicode provides.) </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pass(1)"
 name: "pass"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pass/"
 description: "pass – stores, retrieves, generates, and synchronizes passwords securely"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pass &#8211; stores, retrieves, generates, and synchronizes passwords securely</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pass</code> [ <i>COMMAND</i> ] [ <i>OPTIONS</i> ]&#8230; [ <i>ARGS</i> ]&#8230; </p>

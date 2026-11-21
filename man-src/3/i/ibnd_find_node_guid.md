@@ -1,4 +1,5 @@
 ---
+
 title: "ibnd_find_node_guid(3)"
 name: "ibnd_find_node_guid"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ibnd_find_node_guid/"
 description: "ibnd_find_node_guid, ibnd_find_node_dr – given a fabric object find the node object within it which matches the guid or directed route specified."
 ---
 
-<h2>NAME</h2>
 <p> ibnd_find_node_guid, ibnd_find_node_dr &#8211; given a fabric object find the node object within it which matches the guid or directed route specified.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

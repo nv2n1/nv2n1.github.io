@@ -1,4 +1,5 @@
 ---
+
 title: "exonerate-server(1)"
 name: "exonerate-server"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-exonerate-server/"
 description: "exonerate-server – a sequence comparison server for exonerate"
 ---
 
-<h2>NAME</h2>
 <p> exonerate-server &#8211; a sequence comparison server for exonerate </p>
 <h2>SYNOPSIS</h2>
 <p> <code>exonerate-server [ options ] &lt;index path&gt;</code> </p>

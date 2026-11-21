@@ -1,4 +1,5 @@
 ---
+
 title: "g3topbm(1)"
 name: "g3topbm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g3topbm/"
 description: "g3topbm – convert a Group 3 fax file into a portable bitmap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> g3topbm &#8211; convert a Group 3 fax file into a portable bitmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>g3topbm</code> [<code>-kludge</code>] [<code>-reversebits</code>] [<code>-stretch</code>] [<i>g3file</i>]</p>

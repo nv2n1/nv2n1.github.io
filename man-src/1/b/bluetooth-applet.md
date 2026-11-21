@@ -1,4 +1,5 @@
 ---
+
 title: "bluetooth-applet(1)"
 name: "bluetooth-applet"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bluetooth-applet/"
 description: "bluetooth-applet – GNOME applet for prompting the user for a Bluetooth passkey (PIN)"
 ---
 
-<h2>NAME</h2>
 <p> bluetooth-applet &#8211; GNOME applet for prompting the user for a Bluetooth passkey (PIN)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bluetooth-applet</code></p>

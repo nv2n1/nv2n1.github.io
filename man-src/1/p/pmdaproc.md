@@ -1,4 +1,5 @@
 ---
+
 title: "pmdaproc(1)"
 name: "pmdaproc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdaproc/"
 description: "pmdaproc – process performance metrics domain agent (PMDA)"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdaproc</code> &#8211; process performance metrics domain agent (PMDA)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/proc/pmdaproc</code> [<code>-AL</code>] [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-r</code> <i>cgroup</i>] [<code>-U</code> <i>username</i>]</p>

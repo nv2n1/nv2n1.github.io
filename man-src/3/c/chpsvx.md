@@ -1,4 +1,5 @@
 ---
+
 title: "chpsvx(3)"
 name: "chpsvx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-chpsvx/"
 description: "chpsvx.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> chpsvx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

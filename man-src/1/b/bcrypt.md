@@ -1,4 +1,5 @@
 ---
+
 title: "bcrypt(1)"
 name: "bcrypt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bcrypt/"
 description: "bcrypt – blowfish file encryption"
 ---
 
-<h2>NAME</h2>
 <p> bcrypt &#8211; blowfish file encryption</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bcrypt</code> [-orc]<code>[-s</code>N] <i>file &#8230;</i></p>

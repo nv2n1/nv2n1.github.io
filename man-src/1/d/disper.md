@@ -1,4 +1,5 @@
 ---
+
 title: "disper(1)"
 name: "disper"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-disper/"
 description: "disper – on-the-fly display switcher"
 ---
 
-<h2>NAME</h2>
 <p> disper &#8211; on-the-fly display switcher</p>
 <h2>SYNOPSIS</h2>
 <p> <code>disper</code> [<i>options</i>] <i>(-l|-s|-c|-e|-p|-i)</i></p>

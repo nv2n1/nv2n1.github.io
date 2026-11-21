@@ -1,4 +1,5 @@
 ---
+
 title: "dovecot(1)"
 name: "dovecot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dovecot/"
 description: "dovecot – a secure and highly configurable IMAP and POP3 server"
 ---
 
-<h2>NAME</h2>
 <p> dovecot &#8211; a secure and highly configurable IMAP and POP3 server</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dovecot</code> [<code>-Fp</code>] [<code>-c</code> <i>config-file</i>]<br />

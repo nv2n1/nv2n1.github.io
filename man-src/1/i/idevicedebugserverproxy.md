@@ -1,4 +1,5 @@
 ---
+
 title: "idevicedebugserverproxy(1)"
 name: "idevicedebugserverproxy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-idevicedebugserverproxy/"
 description: "idevicedebugserverproxy – Remote debugging proxy."
 ---
 
-<h2>NAME</h2>
 <p> idevicedebugserverproxy &#8211; Remote debugging proxy.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>idevicedebugserverproxy</code> [OPTIONS] PORT </p>

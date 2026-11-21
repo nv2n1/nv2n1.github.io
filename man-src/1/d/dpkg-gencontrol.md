@@ -1,4 +1,5 @@
 ---
+
 title: "dpkg-gencontrol(1)"
 name: "dpkg-gencontrol"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dpkg-gencontrol/"
 description: "dpkg-gencontrol – generate Debian control files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dpkg-gencontrol &#8211; generate Debian control files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dpkg-gencontrol</code> [<i>option</i>&#8230;]</p>

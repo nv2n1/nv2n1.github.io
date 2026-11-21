@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_session_last_errno(3)"
 name: "libssh2_session_last_errno"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_session_last_errno/"
 description: "libssh2_session_last_errno – get the most recent error number"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_session_last_errno &#8211; get the most recent error number</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "sendiso(1)"
 name: "sendiso"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sendiso/"
 description: "sendiso – send IEEE 1394 isochronous packets from dump file"
 ---
 
-<h2>NAME</h2>
 <p> sendiso &#8211; send IEEE 1394 isochronous packets from dump file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sendiso</code> [ <i>options</i> ] <i>FILE</i></p>

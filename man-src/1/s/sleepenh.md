@@ -1,4 +1,5 @@
 ---
+
 title: "sleepenh(1)"
 name: "sleepenh"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sleepenh/"
 description: "sleepenh – an enhanced sleep program."
 ---
 
-<h2 class="name">NAME</h2>
 <p> sleepenh &#8211; an enhanced sleep program. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sleepenh</code> [<i>initial-time</i>] sleep-time</p>

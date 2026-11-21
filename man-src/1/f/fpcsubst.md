@@ -1,4 +1,5 @@
 ---
+
 title: "fpcsubst(1)"
 name: "fpcsubst"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fpcsubst/"
 description: "fpcsubst – The Free Pascal macro processing program."
 ---
 
-<h2>NAME</h2>
 <p> fpcsubst &#8211; The Free Pascal macro processing program. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fpcsubst [options]</code> </p>

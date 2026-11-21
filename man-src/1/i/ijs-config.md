@@ -1,4 +1,5 @@
 ---
+
 title: "ijs-config(1)"
 name: "ijs-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ijs-config/"
 description: "ijs-config – script to get information about the installed version of ijs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ijs-config &#8211; script to get information about the installed version of ijs </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ijs-config</code> [&#8211;prefix<i>[=DIR]</i>] [&#8211;exec-prefix<i>[=DIR]</i>] [&#8211;version] [&#8211;libs] [&#8211;cflags]</p>

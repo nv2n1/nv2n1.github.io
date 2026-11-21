@@ -1,4 +1,5 @@
 ---
+
 title: "newuidmap(1)"
 name: "newuidmap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-newuidmap/"
 description: "newuidmap – set the uid mapping of a user namespace"
 ---
 
-<h2 class="name">NAME</h2>
 <p> newuidmap &#8211; set the uid mapping of a user namespace </p>
 <h2>SYNOPSIS</h2>
 <dl>

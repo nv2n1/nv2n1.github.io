@@ -1,4 +1,5 @@
 ---
+
 title: "getgroups(2)"
 name: "getgroups"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-getgroups/"
 description: "getgroups, setgroups – get/set list of supplementary group IDs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getgroups, setgroups &#8211; get/set list of supplementary group IDs </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code><br />

@@ -1,4 +1,5 @@
 ---
+
 title: "is_trans_font(3)"
 name: "is_trans_font"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-is_trans_font/"
 description: "is_trans_font – Returns TRUE if a font uses transparency. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> is_trans_font &#8211; Returns TRUE if a font uses transparency. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

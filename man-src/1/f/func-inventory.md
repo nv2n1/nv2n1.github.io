@@ -1,4 +1,5 @@
 ---
+
 title: "func-inventory(1)"
 name: "func-inventory"
 section: "1"
@@ -6,9 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-func-inventory/"
 ---
 
-<h2>NAME</h2>
-
- func-inventory -- Takes inventory of data from func minions, and stores them in git.
+func-inventory -- Takes inventory of data from func minions, and stores them in git.
 
 <h2>SYNOPSIS</h2>
 

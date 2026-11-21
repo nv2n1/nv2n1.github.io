@@ -1,4 +1,5 @@
 ---
+
 title: "fvwm-convert-2(1)"
 name: "fvwm-convert-2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fvwm-convert-2/"
 description: "fvwm-convert-2.6 – convert fvwm 2.4.x configuration file to fvwm 2.6 style"
 ---
 
-<h2>NAME</h2>
 <p> fvwm-convert-2.6 &#8211; convert fvwm 2.4.x configuration file to fvwm 2.6 style</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fvwm-convert-2.6</code> [<i>&#8211;follow-read</i>|<i>-f</i>] [<i>&#8211;help</i>|<i>-h</i>] source [<i>dest</i>]</p>

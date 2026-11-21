@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_subject_alt_names_get(3)"
 name: "gnutls_subject_alt_names_get"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_subject_alt_names_get/"
 description: "gnutls_subject_alt_names_get – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_subject_alt_names_get &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509-ext.h&gt;</code> </p>

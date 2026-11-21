@@ -1,4 +1,5 @@
 ---
+
 title: "ibdm-topo-file(1)"
 name: "ibdm-topo-file"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ibdm-topo-file/"
 description: "IBDM Topology File"
 ---
 
-<h2>NAME</h2>
 <p> <code>IBDM Topology File</code> </p>
 <p> The topology file describes the IB connectivity and systems included in the network. It serves two purposes:</p>
 <dl>

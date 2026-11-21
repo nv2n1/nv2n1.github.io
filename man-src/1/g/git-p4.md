@@ -1,4 +1,5 @@
 ---
+
 title: "git-p4(1)"
 name: "git-p4"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-p4/"
 description: "git-p4 – Import from and submit to Perforce repositories"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-p4 &#8211; Import from and submit to Perforce repositories </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

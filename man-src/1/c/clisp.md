@@ -1,4 +1,5 @@
 ---
+
 title: "clisp(1)"
 name: "clisp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-clisp/"
 description: "clisp – ANSI Common Lisp compiler, interpreter and debugger."
 ---
 
-<h2 class="name">NAME</h2>
 <p> clisp &#8211; ANSI Common Lisp compiler, interpreter and debugger. </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "recordmydesktop(1)"
 name: "recordmydesktop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-recordmydesktop/"
 description: "recordMyDesktop – record desktop sessions to an Ogg-Theora-Vorbis file."
 ---
 
-<h2 class="name">NAME</h2>
 <p> recordMyDesktop &#8211; record desktop sessions to an Ogg-Theora-Vorbis file. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>recordmydesktop</code> [ <code>Options</code> ]^ <code>filename</code> </p>

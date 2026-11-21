@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_x509_crq_sign(3)"
 name: "gnutls_x509_crq_sign"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_x509_crq_sign/"
 description: "gnutls_x509_crq_sign – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_x509_crq_sign &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/compat.h&gt;</code> </p>

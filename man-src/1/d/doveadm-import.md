@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-import(1)"
 name: "doveadm-import"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-doveadm-import/"
 description: "doveadm-import – Import messages matching given search query"
 ---
 
-<h2>NAME</h2>
 <p> doveadm-import &#8211; Import messages matching given search query</p>
 <h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>import</code> [<code>-S</code> <i>socket_path</i>] [<code>-s</code>] <i>source_location dest_parent search_query</i><br />

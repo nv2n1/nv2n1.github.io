@@ -1,4 +1,5 @@
 ---
+
 title: "globus_callback_error_type_t(3)"
 name: "globus_callback_error_type_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_callback_error_type_t/"
 description: "Globus Callback –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Globus Callback &#8211; </p>
 <p> Globus Callback Function Interface.</p>
 <h3>Modules</h3>

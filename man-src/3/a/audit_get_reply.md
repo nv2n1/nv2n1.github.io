@@ -1,4 +1,5 @@
 ---
+
 title: "audit_get_reply(3)"
 name: "audit_get_reply"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-audit_get_reply/"
 description: "audit_get_reply – Get the audit system’s reply"
 ---
 
-<h2>NAME</h2>
 <p> audit_get_reply &#8211; Get the audit system&#8217;s reply</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libaudit.h&gt;</code> </p>

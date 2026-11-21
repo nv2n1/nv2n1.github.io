@@ -1,4 +1,5 @@
 ---
+
 title: "qpdf(1)"
 name: "qpdf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qpdf/"
 description: "qpdf – PDF transformation software"
 ---
 
-<h2 class="name">NAME</h2>
 <p> qpdf &#8211; PDF transformation software </p>
 <h2>SYNOPSIS</h2>
 <p> <code>qpdf</code> [ <i>options</i> ] <i>infilename</i> [ <i>outfilename</i> ]</p>

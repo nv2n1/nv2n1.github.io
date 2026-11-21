@@ -1,4 +1,5 @@
 ---
+
 title: "gxditview(1)"
 name: "gxditview"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gxditview/"
 description: "gxditview – display groff intermediate output files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gxditview &#8211; display groff intermediate output files </p>
 <h2>SYNOPSIS</h2>
 <p> [<i>X-toolkit-option</i>&#8230;] [ <code>-backingStore </code><i>backing-store-type</i> ] [ <code>-filename </code><i>string</i> ] [ <code>-page </code><i>n</i> ] [ <code>-printCommand </code><i>string</i> ] [ <code>-resolution </code><i>res</i> ] [<i>file</i>] <code>-help</code> <code>&#8211;help</code></p>

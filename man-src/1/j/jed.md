@@ -1,4 +1,5 @@
 ---
+
 title: "jed(1)"
 name: "jed"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jed/"
 description: "Jed – programmers editor"
 ---
 
-<h2>NAME</h2>
 <p> Jed &#8211; programmers editor</p>
 <h2>SYNOPSIS</h2>
 <p> <code>jed [options] </code> <i>file</i> <code>&#8230;</code></p>

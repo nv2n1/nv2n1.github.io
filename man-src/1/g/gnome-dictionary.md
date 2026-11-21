@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-dictionary(1)"
 name: "gnome-dictionary"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnome-dictionary/"
 description: "gnome-dictionary – Look up words on dictionaries"
 ---
 
-<h2>NAME</h2>
 <p> gnome-dictionary &#8211; Look up words on dictionaries</p>
 <h2>SYNOPSIS</h2>
 <pre>

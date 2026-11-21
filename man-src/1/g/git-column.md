@@ -1,4 +1,5 @@
 ---
+
 title: "git-column(1)"
 name: "git-column"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-column/"
 description: "git-column – Display data in columns"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-column &#8211; Display data in columns </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

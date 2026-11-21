@@ -1,4 +1,5 @@
 ---
+
 title: "help2man(1)"
 name: "help2man"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-help2man/"
 description: "help2man – generate a simple manual page"
 ---
 
-<h2>NAME</h2>
 <p> help2man &#8211; generate a simple manual page</p>
 <h2>SYNOPSIS</h2>
 <p> <code>help2man</code> [<i>OPTION</i>]&#8230; <i>EXECUTABLE</i></p>

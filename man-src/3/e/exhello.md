@@ -1,4 +1,5 @@
 ---
+
 title: "exhello(3)"
 name: "exhello"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-exhello/"
 description: "exhello – Simple graphical \"hello world\" program. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> exhello &#8211; Simple graphical &quot;hello world&quot; program. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

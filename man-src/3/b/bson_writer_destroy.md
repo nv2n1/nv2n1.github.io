@@ -1,4 +1,5 @@
 ---
+
 title: "bson_writer_destroy(3)"
 name: "bson_writer_destroy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_writer_destroy/"
 description: "bson_writer_destroy() – Cleanup after writer and release any allocated memory. Note that the buffer supplied to bson_writer_new() is NOT freed from this method. The caller is responsible for that."
 ---
 
-<h2>NAME</h2>
 <p> bson_writer_destroy() &#8211; Cleanup after writer and release any allocated memory. Note that the buffer supplied to bson_writer_new() is NOT freed from this method. The caller is responsible for that.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

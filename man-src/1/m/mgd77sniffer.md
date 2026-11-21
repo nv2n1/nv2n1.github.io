@@ -1,4 +1,5 @@
 ---
+
 title: "mgd77sniffer(1)"
 name: "mgd77sniffer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mgd77sniffer/"
 description: "mgd77sniffer – Along-track quality control of MGD77 cruises"
 ---
 
-<h2>NAME</h2>
 <p> mgd77sniffer &#8211; Along-track quality control of MGD77 cruises</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mgd77sniffer</code> <i>NGDC-ids</i> [ <i>fieldabbrev</i>,<i>scale</i>,<i>offset</i> ] [ <i>maxspd</i> ] [ <code>d</code>|<code>e</code>|<code>E</code>|<code>f</code>|<code>l</code>|<code>m</code>|<code>s</code>|<code>v</code>[<i>r</i>] ] [ <i>fieldabbrev</i>,<i>imggrid</i>,<i>scale</i>,<i>mode</i> or <i>fieldabbrev</i>,<i>grid</i> ] [ ] [ <i>fieldabbrev</i>,<i>rec1</i>,<i>recN</i> ] [ ] [ <i>custom-limits-file</i> ] [ ] [ <i>region</i> ] [ <code>d</code>|<code>s</code>|<code>t</code> ] [ <i>gap</i> ] [ [<i>level</i>] ] [ <code>c</code>|<code>g</code>|<code>o</code>|<code>s</code>|<code>t</code>|<code>v</code>|<code>x</code> ] [ <code>-bo</code><i>&lt;binary&gt;</i> ] [ <code>-do</code><i>&lt;nodata&gt;</i> ] [ <code>-n</code><i>&lt;flags&gt;</i> ] </p>

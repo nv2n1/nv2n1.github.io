@@ -1,4 +1,5 @@
 ---
+
 title: "globus_cond_wait(3)"
 name: "globus_cond_wait"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_cond_wait/"
 description: "Condition Variables –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Condition Variables &#8211; </p>
 <h3>Data Structures</h3>
 <p> union <code>globus_cond_t</code><br />

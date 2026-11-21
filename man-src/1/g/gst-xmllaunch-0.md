@@ -1,4 +1,5 @@
 ---
+
 title: "gst-xmllaunch-0(1)"
 name: "gst-xmllaunch-0"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gst-xmllaunch-0/"
 description: "gst-xmllaunch – build and run a GStreamer pipeline from an XML serialization"
 ---
 
-<h2>NAME</h2>
 <p> gst-xmllaunch &#8211; build and run a GStreamer pipeline from an XML serialization</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gst-xmllaunch</code> <i>[OPTION&#8230;]</i> XML-FILE [ ELEMENT.PROPERTY=VALUE &#8230; ]</p>

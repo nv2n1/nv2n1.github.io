@@ -1,4 +1,5 @@
 ---
+
 title: "readmult(1)"
 name: "readmult"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-readmult/"
 description: "readmult – a multitrack wrapper for cdda2wav"
 ---
 
-<h2 class="name">NAME</h2>
 <p> readmult &#8211; a multitrack wrapper for cdda2wav</p>
 <h2>SYNOPSIS</h2>
 <p> <code>readmult</code> &lt;track a&gt; &lt;title a&gt; &lt;track b&gt; &lt;title b&gt; &#8230; </p>

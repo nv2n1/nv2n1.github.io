@@ -1,4 +1,5 @@
 ---
+
 title: "aa_attrs(3)"
 name: "aa_attrs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_attrs/"
 description: "aa_attrs – returns pointer to the text output buffer used by AA-lib."
 ---
 
-<h2>NAME</h2>
 <p> aa_attrs &#8211; returns pointer to the text output buffer used by AA-lib.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

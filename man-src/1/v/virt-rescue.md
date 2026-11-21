@@ -1,4 +1,5 @@
 ---
+
 title: "virt-rescue(1)"
 name: "virt-rescue"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-virt-rescue/"
 description: "virt-rescue – Run a rescue shell on a virtual machine"
 ---
 
-<h2 class="name">NAME</h2>
 <p> virt-rescue &#8211; Run a rescue shell on a virtual machine </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

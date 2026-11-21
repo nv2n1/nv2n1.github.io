@@ -1,4 +1,5 @@
 ---
+
 title: "barrybackup(1)"
 name: "barrybackup"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-barrybackup/"
 description: "barrybackup – Barry Project’s backup program for the BlackBerry handheld"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>barrybackup</code> &#8211; Barry Project&#8217;s backup program for the BlackBerry handheld </p>
 <h2>SYNOPSIS</h2>
 <p> <code>barrybackup</code> [-?][-d]</p>

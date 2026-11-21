@@ -1,4 +1,5 @@
 ---
+
 title: "gstat(1)"
 name: "gstat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gstat/"
 description: "gstat – manual page for Ganglia Status Tool"
 ---
 
-<h2>NAME</h2>
 <p> gstat &#8211; manual page for Ganglia Status Tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gstat</code> [<i>OPTIONS</i>]&#8230;</p>

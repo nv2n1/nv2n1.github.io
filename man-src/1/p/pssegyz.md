@@ -1,4 +1,5 @@
 ---
+
 title: "pssegyz(1)"
 name: "pssegyz"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pssegyz/"
 description: "pssegyz – Create imagemasked postscript from SEGY file"
 ---
 
-<h2>NAME</h2>
 <p> pssegyz &#8211; Create imagemasked postscript from SEGY file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pssegyz</code> <i>SEGYfile</i> <i>parameters</i> <code>z</code>|<code>Z</code><i>parameters</i> <i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[/<i>zmin</i>/<i>zmax</i>][<code>r</code>] <i>deviation</i> [<i>color</i>] <code>-W</code> [ <i>clip</i> ] [ ] [ ] [ <i>nsamp</i> ] [ <i>ntrace</i> ] [ ] [ ] [ ] [ <i>&lt;mode&gt;&lt;value&gt;</i> ] [ <i>header_x</i>/<i>header_y</i> ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ [<i>level</i>] ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-t</code><i>&lt;transp&gt;</i> ] </p>

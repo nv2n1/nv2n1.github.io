@@ -1,4 +1,5 @@
 ---
+
 title: "irunner(1)"
 name: "irunner"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-irunner/"
 description: "irunner – interactive runner interface"
 ---
 
-<h2>NAME</h2>
 <p> <code>irunner &#8211; interactive runner interface </code></p>
 <h2>SYNOPSIS</h2>
 <pre>

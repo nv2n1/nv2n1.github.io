@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_crypto_digest_register2(3)"
 name: "gnutls_crypto_digest_register2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_crypto_digest_register2/"
 description: "gnutls_crypto_digest_register2 – register a digest interface"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_crypto_digest_register2 &#8211; register a digest interface</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/gnutls.h">gnutls/gnutls.h</a>&gt;</code> </p>

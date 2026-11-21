@@ -1,4 +1,5 @@
 ---
+
 title: "chpgvd(3)"
 name: "chpgvd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-chpgvd/"
 description: "chpgvd.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> chpgvd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "tla(1)"
 name: "tla"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tla/"
 description: "tla – arch command line client tool"
 ---
 
-<h2>NAME</h2>
 <p> tla &#8211; arch command line client tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tla</code> <i>command</i> [ <i>command_options</i> ]<br />

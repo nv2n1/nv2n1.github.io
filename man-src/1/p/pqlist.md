@@ -1,4 +1,5 @@
 ---
+
 title: "pqlist(1)"
 name: "pqlist"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pqlist/"
 description: "pqlist – List available NetWare print queues"
 ---
 
-<h2>NAME</h2>
 <p> pqlist &#8211; List available NetWare print queues</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pqlist</code> [ <code>-h</code> ] [ <code>-S</code> <i>server</i> ] [ <code>-U</code> <i>user name</i> ] [ <code>-P</code> <i>password</i><br />

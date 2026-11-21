@@ -1,4 +1,5 @@
 ---
+
 title: "cgsnapshot(1)"
 name: "cgsnapshot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cgsnapshot/"
 description: "cgsnapshot – generate the configuration file for given controllers"
 ---
 
-<h2>NAME</h2>
 <p> cgsnapshot &#8211; generate the configuration file for given controllers </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cgsnapshot</code> [<code>-h</code>] [<code>-s</code>] [<code>-t</code>] [<code>-b</code> <i>file</i>] [<code>-w</code> <i>file</i>] [<code>-f</code> <i>output_file</i>] [<code>controller</code>] [&#8230;] </p>

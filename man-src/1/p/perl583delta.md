@@ -1,4 +1,5 @@
 ---
+
 title: "perl583delta(1)"
 name: "perl583delta"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perl583delta/"
 description: "perl583delta – what is new for perl v5.8.3"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perl583delta &#8211; what is new for perl v5.8.3 </p>
 <h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.8.2 release and the 5.8.3 release. </p>

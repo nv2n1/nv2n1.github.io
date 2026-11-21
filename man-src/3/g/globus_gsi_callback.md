@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gsi_callback(3)"
 name: "globus_gsi_callback"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gsi_callback/"
 description: "Globus GSI Callback –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Globus GSI Callback &#8211; </p>
 <h3>Modules</h3>
 <p> <code>Activation</code> </p>

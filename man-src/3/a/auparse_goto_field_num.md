@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_goto_field_num(3)"
 name: "auparse_goto_field_num"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_goto_field_num/"
 description: "auparse_goto_field_num – move field cursor to specific field"
 ---
 
-<h2>NAME</h2>
 <p> auparse_goto_field_num &#8211; move field cursor to specific field</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

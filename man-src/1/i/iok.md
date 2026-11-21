@@ -1,4 +1,5 @@
 ---
+
 title: "iok(1)"
 name: "iok"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-iok/"
 description: "iok– Indic Onscreen Keyboard"
 ---
 
-<h2>NAME</h2>
 <p> <code>iok</code>&#8211; Indic Onscreen Keyboard</p>
 <h2>SYNOPSIS</h2>
 <p> <code>iok</code> [<code>-a</code>] [<code>-h</code>] [<code>-d</code> <i>1</i>] [<code>-n</code> <i>LANGCODE</i>]</p>

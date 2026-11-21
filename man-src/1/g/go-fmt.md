@@ -1,4 +1,5 @@
 ---
+
 title: "go-fmt(1)"
 name: "go-fmt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-go-fmt/"
 description: "go-fmt – gofmt (reformat) package sources"
 ---
 
-<h2 class="name">NAME</h2>
 <p> go-fmt &#8211; gofmt (reformat) package sources </p>
 <h2>SYNOPSIS</h2>
 <p> <code>go fmt</code> [<code>-n</code>] [<code>-x</code>] [<i>packages</i>]</p>

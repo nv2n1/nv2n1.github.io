@@ -1,4 +1,5 @@
 ---
+
 title: "globus_module_activate_array(3)"
 name: "globus_module_activate_array"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_module_activate_array/"
 description: "Module Activation Management –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Module Activation Management &#8211; </p>
 <h3>Data Structures</h3>
 <p> struct <code>globus_module_descriptor_s</code><br />

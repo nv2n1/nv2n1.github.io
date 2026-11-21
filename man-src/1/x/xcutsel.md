@@ -1,4 +1,5 @@
 ---
+
 title: "xcutsel(1)"
 name: "xcutsel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xcutsel/"
 description: "xcutsel – interchange between cut buffer and selection"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xcutsel &#8211; interchange between cut buffer and selection </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xcutsel</code> [ <i>-toolkitoption</i> &#8230;] [-selection <i>selection</i>] [-cutbuffer <i>number</i>]</p>

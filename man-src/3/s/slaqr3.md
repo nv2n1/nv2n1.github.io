@@ -1,4 +1,5 @@
 ---
+
 title: "slaqr3(3)"
 name: "slaqr3"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slaqr3/"
 description: "slaqr3.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> slaqr3.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

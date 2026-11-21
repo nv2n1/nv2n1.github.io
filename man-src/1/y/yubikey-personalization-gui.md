@@ -1,4 +1,5 @@
 ---
+
 title: "yubikey-personalization-gui(1)"
 name: "yubikey-personalization-gui"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-yubikey-personalization-gui/"
 description: "yubikey-personalization-gui – personalize YubiKey OTP tokens"
 ---
 
-<h2>NAME</h2>
 <p> yubikey-personalization-gui &#8211; personalize YubiKey OTP tokens</p>
 <h2>SYNOPSIS</h2>
 <p> <code>yubikey-personalization-gui</code></p>

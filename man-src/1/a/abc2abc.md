@@ -1,4 +1,5 @@
 ---
+
 title: "abc2abc(1)"
 name: "abc2abc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-abc2abc/"
 description: "abc2abc – a simple abc checker/re-formatter/transposer"
 ---
 
-<h2>NAME</h2>
 <p> abc2abc &#8211; a simple abc checker/re-formatter/transposer</p>
 <h2>SYNOPSIS</h2>
 <p> <code>abc2abc</code> <i>file</i> [ <code>-s</code> ] [ <code>-n</code> ] [ <code>-b</code> ] [ <code>-r</code> ] [ <code>-e</code> ] [ <code>-t </code><i>semitones</i> ] [ <code>-nda</code> ] [ <code>-u</code> ] [ <code>-d</code> ] [ <code>-v</code> ] [ <code>-v</code>] [<code>-nokeys</code>] [ <code>-nokeyf</code>] [ <code>-usekey</code><i>(sharps/flats)</i>] [ <code>-OCC</code> ]</p>

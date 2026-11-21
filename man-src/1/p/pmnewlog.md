@@ -1,4 +1,5 @@
 ---
+
 title: "pmnewlog(1)"
 name: "pmnewlog"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmnewlog/"
 description: "pmnewlog – stop and restart archive logging for PCP performance metrics"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmnewlog</code> &#8211; stop and restart archive logging for PCP performance metrics</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/pmnewlog</code> [<code>-a</code> <i>accessfile</i>] [<code>-C</code> <i>saveconfig</i>] [<code>-c</code> <i>configfile</i>] [<code>-N</code>] [<code>-n</code> <i>pmnsfile</i>] [<code>-P</code>] [<code>-p</code> <i>pid</i>] [<code>-s</code>] [<code>-V</code>] [<i>other pmlogger options</i>] <i>archive</i></p>

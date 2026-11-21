@@ -1,4 +1,5 @@
 ---
+
 title: "puudecode(1)"
 name: "puudecode"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-puudecode/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- <pre>
+<pre>
  puudecode - perl replacement for uudecode
 </pre> 
 

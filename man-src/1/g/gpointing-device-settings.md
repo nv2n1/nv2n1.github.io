@@ -1,4 +1,5 @@
 ---
+
 title: "gpointing-device-settings(1)"
 name: "gpointing-device-settings"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpointing-device-settings/"
 description: "gpointing-device-settings – program to configure pointing devices"
 ---
 
-<h2>NAME</h2>
 <p> gpointing-device-settings &#8211; program to configure pointing devices</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gpointing-device-settings</code> [<i>options</i>]</p>

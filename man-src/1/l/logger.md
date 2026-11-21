@@ -1,4 +1,5 @@
 ---
+
 title: "logger(1)"
 name: "logger"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-logger/"
 description: "logger – enter messages into the system log"
 ---
 
-<h2 class="name">NAME</h2>
 <p> logger &#8211; enter messages into the system log </p>
 <h2>SYNOPSIS</h2>
 <p> <code>logger</code> [options] <i>message</i></p>

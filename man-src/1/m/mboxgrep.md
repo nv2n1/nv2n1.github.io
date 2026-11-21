@@ -1,4 +1,5 @@
 ---
+
 title: "mboxgrep(1)"
 name: "mboxgrep"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mboxgrep/"
 description: "mboxgrep – displays email messages matching a pattern"
 ---
 
-<h2>NAME</h2>
 <p> mboxgrep &#8211; displays email messages matching a pattern</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mboxgrep</code> [<i>OPTIONS</i>] PATTERN [<i>MAILBOX</i>]</p>

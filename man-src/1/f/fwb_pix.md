@@ -1,4 +1,5 @@
 ---
+
 title: "fwb_pix(1)"
 name: "fwb_pix"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fwb_pix/"
 description: "fwb_ipt – Policy compiler for Cisco PIX"
 ---
 
-<h2>NAME</h2>
 <p> fwb_ipt &#8211; Policy compiler for Cisco PIX</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fwb_pix</code> <code>[-vVi]</code> <code>[-d wdir]</code> <code>-f data_file.xml</code> object_name </p>

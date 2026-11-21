@@ -1,4 +1,5 @@
 ---
+
 title: "bison(1)"
 name: "bison"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bison/"
 description: "bison – GNU Project parser generator (yacc replacement)"
 ---
 
-<h2>NAME</h2>
 <p> bison &#8211; GNU Project parser generator (yacc replacement)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bison</code> [<i>,OPTION/</i>]&#8230; <i>,FILE/</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "file_driver_types(3)"
 name: "file_driver_types"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-file_driver_types/"
 description: "Types –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Types &#8211; </p>
 <h3>Defines</h3>
 <p> #define <code>GLOBUS_XIO_FILE_INVALID_HANDLE</code> </p>

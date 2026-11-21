@@ -1,4 +1,5 @@
 ---
+
 title: "txt2man(1)"
 name: "txt2man"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-txt2man/"
 description: "txt2man – convert flat ASCII text to man page format"
 ---
 
-<h2>NAME</h2>
 <p> <code>txt2man </code>&#8211; convert flat ASCII text to man page format</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

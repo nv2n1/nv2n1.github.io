@@ -1,4 +1,5 @@
 ---
+
 title: "curl_easy_recv(3)"
 name: "curl_easy_recv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-curl_easy_recv/"
 description: "curl_easy_recv – receives raw data on an \"easy\" connection"
 ---
 
-<h2>NAME</h2>
 <p> curl_easy_recv &#8211; receives raw data on an &quot;easy&quot; connection</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;curl/easy.h&gt;</code> </p>

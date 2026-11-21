@@ -1,4 +1,5 @@
 ---
+
 title: "rotctl(1)"
 name: "rotctl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rotctl/"
 description: "rotctl – control antenna rotators"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rotctl &#8211; control antenna rotators </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rotctl</code> [<i>OPTION</i>]&#8230; [<i>COMMAND</i>]&#8230;</p>

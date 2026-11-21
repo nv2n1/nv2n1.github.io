@@ -1,4 +1,5 @@
 ---
+
 title: "secon(1)"
 name: "secon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-secon/"
 description: "secon – See an SELinux context, from a file, program or user input."
 ---
 
-<h2>NAME</h2>
 <p> secon &#8211; See an SELinux context, from a file, program or user input.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>secon</code> [<code>-hVurtscmPRfLp</code>] [<i>CONTEXT</i>]<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "ipythonx(1)"
 name: "ipythonx"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipythonx/"
 description: "ipythonx – Simple graphical frontend to IPython, using WxWidgets."
 ---
 
-<h2>NAME</h2>
 <p> <code>ipythonx &#8211; Simple graphical frontend to IPython, using WxWidgets. </code></p>
 <h2>SYNOPSIS</h2>
 <pre>

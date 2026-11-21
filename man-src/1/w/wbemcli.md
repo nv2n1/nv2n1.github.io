@@ -1,4 +1,5 @@
 ---
+
 title: "wbemcli(1)"
 name: "wbemcli"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wbemcli/"
 description: "wbemcli – independent command line CIM Client"
 ---
 
-<h2 class="name">NAME</h2>
 <p> wbemcli &#8211; independent command line CIM Client </p>
 <h2>SYNOPSIS</h2>
 <p> <code>wbemcli</code> <code>gc|gcd|dc|ec|ecn|gi|ci|mi|di|ei|ein|ai|ain|ri|rin|gp|sp|cm|cmx</code> [<code>-nl</code>] [<code>-h</code>] [<code>-t</code>] [<code>-cte]</code> [<code>-dx</code>] [<code>-dr</code>] [<code>-noverify</code>] [<code>-cacert</code>&nbsp;<wbr>file] [<code>-clientcert</code>&nbsp;<wbr>file] [<code>-clientkey</code>&nbsp;<wbr>file] [<code>-ac</code><i>&nbsp;<wbr>assocClass</i>] [<code>-arc</code><i>&nbsp;<wbr>resultClass</i>] [<code>-ar</code><i>&nbsp;<wbr>role</i>] [<code>-arr</code><i>&nbsp;<wbr>resultRole</i>] <i>objectPath</i> [<i>prop=value[,&#8230;]]</i> [<i>prop[,&#8230;]]</i></p>

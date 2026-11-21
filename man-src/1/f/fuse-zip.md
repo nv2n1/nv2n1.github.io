@@ -1,4 +1,5 @@
 ---
+
 title: "fuse-zip(1)"
 name: "fuse-zip"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fuse-zip/"
 description: "fuse-zip – a FUSE filesystem for zip archives with write support"
 ---
 
-<h2>NAME</h2>
 <p> fuse-zip &#8211; a FUSE filesystem for zip archives with write support</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fuse-zip</code> zip-file [<i>fusermount</i> <i>options</i>] mount-point</p>

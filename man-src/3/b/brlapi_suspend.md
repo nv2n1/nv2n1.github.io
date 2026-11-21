@@ -1,4 +1,5 @@
 ---
+
 title: "brlapi_suspend(3)"
 name: "brlapi_suspend"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-brlapi_suspend/"
 description: "Deprecated names –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Deprecated names &#8211; </p>
 <h3>Data Structures</h3>
 <p> struct <code>brlapi_writeStruct</code> </p>

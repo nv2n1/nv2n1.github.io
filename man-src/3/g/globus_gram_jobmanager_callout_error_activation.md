@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gram_jobmanager_callout_error_activation(3)"
 name: "globus_gram_jobmanager_callout_error_activation"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gram_jobmanager_callout_error_activation/"
 description: "Activation –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Activation &#8211; </p>
 <h3>Macros</h3>
 <p> #define <code>GLOBUS_GRAM_JOBMANAGER_CALLOUT_ERROR_MODULE</code> </p>

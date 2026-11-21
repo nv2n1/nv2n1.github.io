@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_normalize_functions(3)"
 name: "auparse_normalize_functions"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_normalize_functions/"
 description: "auparse_normalize_get_event_kind, auparse_normalize_get_action, auparse_normalize_object_kind, auparse_normalize_how, auparse_normalize_session, auparse_normalize_subject_primary, auparse_normalize..."
 ---
 
-<h2>NAME</h2>
 <pre>
 auparse_normalize_get_event_kind, auparse_normalize_get_action, auparse_normalize_object_kind, auparse_normalize_how, auparse_normalize_session, auparse_normalize_subject_primary, auparse_normalize_subject_secondary, auparse_normalize_subject_first_attribute, auparse_normalize_subject_next_attribute, auparse_normalize_object_primary, auparse_normalize_object_secondary, auparse_normalize_object_first_attribute, auparse_normalize_object_next_attribute, auparse_normalize_get_results, auparse_normalize_key - Access normalized fields
 </pre>

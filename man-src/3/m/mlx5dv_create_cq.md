@@ -1,4 +1,5 @@
 ---
+
 title: "mlx5dv_create_cq(3)"
 name: "mlx5dv_create_cq"
 section: "3"
@@ -6,12 +7,7 @@ letter: "m"
 url: "/docs/linux/man/3-mlx5dv_create_cq/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- mlx5dv_create_cq - creates a completion queue (CQ) 
+mlx5dv_create_cq - creates a completion queue (CQ) 
 
 <h2>SYNOPSIS</h2>
 

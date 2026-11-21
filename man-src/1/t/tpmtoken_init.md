@@ -1,4 +1,5 @@
 ---
+
 title: "tpmtoken_init(1)"
 name: "tpmtoken_init"
 section: "1"
@@ -9,7 +10,7 @@ description: "tpmtoken_init – initialize the user’s TPM PKCS#11 data store"
 
 <p>TPM Management &#8211; tpmtoken_init<br />
  </center></p>
-<h2 class="name">NAME</h2>
+
 <p> tpmtoken_init &#8211; initialize the user&#8217;s TPM PKCS#11 data store </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tpmtoken_init</code> [<code>OPTION</code>] </p>

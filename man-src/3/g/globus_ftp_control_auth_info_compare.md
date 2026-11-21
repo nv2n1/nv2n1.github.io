@@ -1,4 +1,5 @@
 ---
+
 title: "globus_ftp_control_auth_info_compare(3)"
 name: "globus_ftp_control_auth_info_compare"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_ftp_control_auth_info_compare/"
 description: "GridFTP Control Client –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> GridFTP Control Client &#8211; </p>
 <p> Control Client.</p>
 <h3>Functions</h3>

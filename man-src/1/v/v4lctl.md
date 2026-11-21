@@ -1,4 +1,5 @@
 ---
+
 title: "v4lctl(1)"
 name: "v4lctl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-v4lctl/"
 description: "xawtv-remote, v4lctl — control video4linux devices"
 ---
 
-<h2>NAME</h2>
 <p> xawtv-remote, v4lctl &#8212; control video4linux devices</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xawtv-remote [ options ] command</code><br />

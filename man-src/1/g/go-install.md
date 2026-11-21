@@ -1,4 +1,5 @@
 ---
+
 title: "go-install(1)"
 name: "go-install"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-go-install/"
 description: "go – tool for managing Go source code"
 ---
 
-<h2 class="name">NAME</h2>
 <p> go &#8211; tool for managing Go source code </p>
 <h2>SYNOPSIS</h2>
 <p> <code>go install</code> [<i>build flags</i>] [<i>packages</i>]</p>

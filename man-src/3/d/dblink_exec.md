@@ -1,4 +1,5 @@
 ---
+
 title: "dblink_exec(3)"
 name: "dblink_exec"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dblink_exec/"
 description: "dblink_exec – executes a command in a remote database"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dblink_exec &#8211; executes a command in a remote database </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

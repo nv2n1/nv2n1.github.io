@@ -1,4 +1,5 @@
 ---
+
 title: "strfile(1)"
 name: "strfile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-strfile/"
 description: "strfile – create a random access file for storing strings unstr – dump strings in pointer order"
 ---
 
-<h2>NAME</h2>
 <p> strfile &#8211; create a random access file for storing strings<br />
  unstr &#8211; dump strings in pointer order</p>
 <h2>SYNOPSIS</h2>

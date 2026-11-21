@@ -1,4 +1,5 @@
 ---
+
 title: "id3convert(1)"
 name: "id3convert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-id3convert/"
 description: "id3convert – Converts between id3v1 and id3v2 tags of an mp3 file."
 ---
 
-<h2>NAME</h2>
 <p> id3convert &#8211; Converts between id3v1 and id3v2 tags of an mp3 file.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>id3convert</code> [ <i>OPTION</i> ] [ <i>FILE</i> ] </p>

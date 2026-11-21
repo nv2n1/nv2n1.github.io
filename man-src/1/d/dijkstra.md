@@ -1,4 +1,5 @@
 ---
+
 title: "dijkstra(1)"
 name: "dijkstra"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dijkstra/"
 description: "dijkstra – single-source distance filter for Graphviz"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dijkstra &#8211; single-source distance filter for Graphviz </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dijkstra</code> [ <code>-adp?</code> ] [ <i>sourcenode file</i> ]</p>

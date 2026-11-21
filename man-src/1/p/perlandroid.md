@@ -1,4 +1,5 @@
 ---
+
 title: "perlandroid(1)"
 name: "perlandroid"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlandroid/"
 description: "perlandroid – Perl under Android"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perlandroid &#8211; Perl under Android </p>
 <h2>SYNOPSIS</h2>
 <p> The first portions of this documents contains instructions to cross-compile Perl for Android 2.0 and later, using the binaries provided by Google. The latter portion describes how to build perl native using one of the toolchains available on the Play Store.</p>

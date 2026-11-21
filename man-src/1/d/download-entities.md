@@ -1,4 +1,5 @@
 ---
+
 title: "download-entities(1)"
 name: "download-entities"
 section: "1"
@@ -6,10 +7,7 @@ letter: "d"
 url: "/docs/linux/man/1-download-entities/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- download-entities - download and parse XML Entity definitions 
+download-entities - download and parse XML Entity definitions 
 
 <h2>SYNOPSIS</h2>
 

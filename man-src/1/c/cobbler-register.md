@@ -1,4 +1,5 @@
 ---
+
 title: "cobbler-register(1)"
 name: "cobbler-register"
 section: "1"
@@ -6,10 +7,7 @@ letter: "c"
 url: "/docs/linux/man/1-cobbler-register/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- cobbler-register - create a cobbler system record 
+cobbler-register - create a cobbler system record 
 
 <h2>SYNOPSIS</h2>
 

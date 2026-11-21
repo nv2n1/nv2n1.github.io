@@ -1,4 +1,5 @@
 ---
+
 title: "fd2ps(1)"
 name: "fd2ps"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fd2ps/"
 description: "fd2ps – Translates fdesign output to PostScript"
 ---
 
-<h2>NAME</h2>
 <p> fd2ps &#8211; Translates fdesign output to PostScript</p>
 <h2>SYNOPSIS</h2>
 <p> fd2ps [-options] input.[fd] [output]</p>

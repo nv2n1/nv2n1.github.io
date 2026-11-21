@@ -1,4 +1,5 @@
 ---
+
 title: "dprintf(3)"
 name: "dprintf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dprintf/"
 description: "printf, fprintf, dprintf, sprintf, snprintf, vprintf, vfprintf, vdprintf, vsprintf, vsnprintf – formatted output conversion"
 ---
 
-<h2 class="name">NAME</h2>
 <p> printf, fprintf, dprintf, sprintf, snprintf, vprintf, vfprintf, vdprintf, vsprintf, vsnprintf &#8211; formatted output conversion </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

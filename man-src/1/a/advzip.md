@@ -1,4 +1,5 @@
 ---
+
 title: "advzip(1)"
 name: "advzip"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-advzip/"
 description: "advzip – AdvanceCOMP ZIP Compression Utility"
 ---
 
-<h2>NAME</h2>
 <p> advzip &#8211; AdvanceCOMP ZIP Compression Utility</p>
 <h2>SYNOPSIS</h2>
 <p> advzip [-a, &#8211;add] [-x, &#8211;extract] [-l, &#8211;list] </p>

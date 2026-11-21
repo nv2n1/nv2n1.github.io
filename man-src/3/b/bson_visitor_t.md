@@ -1,4 +1,5 @@
 ---
+
 title: "bson_visitor_t(3)"
 name: "bson_visitor_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_visitor_t/"
 description: "bson_visitor_t – The bson_visitor_t structure provides a series of callbacks that can be called while iterating a BSON document. This may simplify the conversion of a bson_t to a higher level langu..."
 ---
 
-<h2>NAME</h2>
 <p> bson_visitor_t &#8211; The bson_visitor_t structure provides a series of callbacks that can be called while iterating a BSON document. This may simplify the conversion of a bson_t to a higher level language structure.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

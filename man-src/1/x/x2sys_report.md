@@ -1,4 +1,5 @@
 ---
+
 title: "x2sys_report(1)"
 name: "x2sys_report"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-x2sys_report/"
 description: "x2sys_report – Report statistics from crossover data base"
 ---
 
-<h2>NAME</h2>
 <p> x2sys_report &#8211; Report statistics from crossover data base</p>
 <h2>SYNOPSIS</h2>
 <p> <code>x2sys_report</code> <i>column</i> <i>TAG</i> [ <i>coedbase.txt</i> ] [ ] [ [<i>list</i>] ] [ [<i>corrtable</i>] ] [ <i>nx_min</i> ] [ <code>e</code>|<code>i</code> ] [ [ <i>region</i> ] [ <i>track</i> ] [ [<i>level</i>] ] </p>

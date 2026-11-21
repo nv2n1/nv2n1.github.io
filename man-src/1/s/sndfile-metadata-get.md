@@ -1,4 +1,5 @@
 ---
+
 title: "sndfile-metadata-get(1)"
 name: "sndfile-metadata-get"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sndfile-metadata-get/"
 description: "sndfile-metadata-get – retrieve metadata from a sound file sndfile-metadata-set – set metadata in a sound file"
 ---
 
-<h2>NAME</h2>
 <p> sndfile-metadata-get &#8211; retrieve metadata from a sound file<br />
  sndfile-metadata-set &#8211; set metadata in a sound file</p>
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "euare-groupremoveuser(1)"
 name: "euare-groupremoveuser"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-groupremoveuser/"
 description: "euare-groupremoveuser – Remove a user from a group"
 ---
 
-<h2>NAME</h2>
 <p> euare-groupremoveuser &#8211; Remove a user from a group</p>
 <h2>SYNOPSIS</h2>
 <p> euare-groupremoveuser <code>-u</code> USER [&#8211;as-account ACCOUNT] [-U URL]</p>

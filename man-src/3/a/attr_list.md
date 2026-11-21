@@ -1,4 +1,5 @@
 ---
+
 title: "attr_list(3)"
 name: "attr_list"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-attr_list/"
 description: "attr_list, attr_listf – list the names of the user attributes of a filesystem object"
 ---
 
-<h2>NAME</h2>
 <p> attr_list, attr_listf &#8211; list the names of the user attributes of a filesystem object</p>
 <h2>C SYNOPSIS</h2>
 <pre><code>

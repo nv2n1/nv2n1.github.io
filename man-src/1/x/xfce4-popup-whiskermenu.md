@@ -1,4 +1,5 @@
 ---
+
 title: "xfce4-popup-whiskermenu(1)"
 name: "xfce4-popup-whiskermenu"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xfce4-popup-whiskermenu/"
 description: "xfce4-popup-whiskermenu – shows Whisker Menu"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xfce4-popup-whiskermenu &#8211; shows Whisker Menu</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xfce4-popup-whiskermenu -h</code><br />

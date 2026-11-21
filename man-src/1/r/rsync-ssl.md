@@ -1,4 +1,5 @@
 ---
+
 title: "rsync-ssl(1)"
 name: "rsync-ssl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rsync-ssl/"
 description: "rsync-ssl – a helper script for connecting to an ssl rsync daemon"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rsync-ssl &#8211; a helper script for connecting to an ssl rsync daemon</p>
 <h2>SYNOPSIS</h2>
 <pre>

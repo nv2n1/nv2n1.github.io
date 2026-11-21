@@ -1,4 +1,5 @@
 ---
+
 title: "cfftot1(1)"
 name: "cfftot1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cfftot1/"
 description: "cfftot1 – convert PostScript font from CFF to Type 1"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cfftot1 &#8211; convert PostScript font from CFF to Type 1 </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cfftot1</code> [<code>-a</code>] [<i>input</i> [<i>output</i>]]</p>

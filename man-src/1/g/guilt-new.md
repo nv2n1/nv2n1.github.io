@@ -1,4 +1,5 @@
 ---
+
 title: "guilt-new(1)"
 name: "guilt-new"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-guilt-new/"
 description: "guilt-new – Create a new patch"
 ---
 
-<h2 class="name">NAME</h2>
 <p> guilt-new &#8211; Create a new patch </p>
 <h2>SYNOPSIS</h2>
 <p> <i>guilt-new</i> [-f] [-s] [-e|-m message] &lt;patchname&gt;</p>

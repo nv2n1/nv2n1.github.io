@@ -1,4 +1,5 @@
 ---
+
 title: "gif2tiff(1)"
 name: "gif2tiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gif2tiff/"
 description: "gif2tiff – create a TIFF file from a GIF87 format image file"
 ---
 
-<h2>NAME</h2>
 <p> gif2tiff &#8211; create a <font SIZE="-1">TIFF</font> file from a GIF87 format image file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gif2tiff</code> [ <i>options</i> ] <i>input.gif</i> <i>output.tif</i></p>

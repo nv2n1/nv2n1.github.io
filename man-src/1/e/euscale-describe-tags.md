@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-describe-tags(1)"
 name: "euscale-describe-tags"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euscale-describe-tags/"
 description: "euscale-describe-tags – Describe auto-scaling tags"
 ---
 
-<h2>NAME</h2>
 <p> euscale-describe-tags &#8211; Describe auto-scaling tags</p>
 <h2>SYNOPSIS</h2>
 <p> euscale-describe-tags [&#8211;filter NAME=VALUE,&#8230;] [&#8211;show-empty-fields]</p>

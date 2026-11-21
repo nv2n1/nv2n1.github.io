@@ -1,4 +1,5 @@
 ---
+
 title: "combinediff(1)"
 name: "combinediff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-combinediff/"
 description: "combinediff – create a cumulative unified patch from two incremental patches"
 ---
 
-<h2 class="name">NAME</h2>
 <p> combinediff &#8211; create a cumulative unified patch from two incremental patches </p>
 <h2>SYNOPSIS</h2>
 <dl>

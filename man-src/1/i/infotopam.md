@@ -1,4 +1,5 @@
 ---
+
 title: "infotopam(1)"
 name: "infotopam"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-infotopam/"
 description: "infotopam – convert Amiga .info icons to PAM"
 ---
 
-<h2 class="name">NAME</h2>
 <p> infotopam &#8211; convert Amiga .info icons to PAM</p>
 <h2>SYNOPSIS</h2>
 <p> <code>infotopam</code> [<code>-forcecolor</code>] [<code>-numcolors</code> <i>numcolors</i>] [<code>-selected</code>] [<i>index color</i> &#8230;] [<i>filename</i>] </p>

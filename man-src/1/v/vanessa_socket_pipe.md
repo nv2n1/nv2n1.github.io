@@ -1,4 +1,5 @@
 ---
+
 title: "vanessa_socket_pipe(1)"
 name: "vanessa_socket_pipe"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vanessa_socket_pipe/"
 description: "vanessa_socket_pipe – Trivial TCP/IP pipe based on libvanessa_socket"
 ---
 
-<h2>NAME</h2>
 <p> vanessa_socket_pipe &#8211; Trivial TCP/IP pipe based on libvanessa_socket</p>
 <h2>SYNOPSIS</h2>
 <p> <code>vanessa_socket_pipe</code> [options]</p>

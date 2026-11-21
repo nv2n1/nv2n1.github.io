@@ -1,4 +1,5 @@
 ---
+
 title: "gst-install(1)"
 name: "gst-install"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gst-install/"
 description: "gst-install – installs missing GStreamer plugins"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gst-install &#8211; installs missing GStreamer plugins </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gst-install</code> [<i>OPTIONS</i>] plugin <code>&#8230;</code></p>

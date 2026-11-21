@@ -1,4 +1,5 @@
 ---
+
 title: "mrtglib(1)"
 name: "mrtglib"
 section: "1"
@@ -6,10 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-mrtglib/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- MRTG_lib.pm - Library for MRTG and support scripts 
+MRTG_lib.pm - Library for MRTG and support scripts 
 
 <h2>SYNOPSIS</h2>
 

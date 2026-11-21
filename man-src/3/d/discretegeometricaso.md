@@ -1,4 +1,5 @@
 ---
+
 title: "discretegeometricaso(3)"
 name: "discretegeometricaso"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-discretegeometricaso/"
 description: "ql/legacy/pricers/discretegeometricaso.hpp – Discrete geometric average-strike Asian option."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/legacy/pricers/discretegeometricaso.hpp &#8211; Discrete geometric average-strike Asian option. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/legacy/pricers/singleassetoption.hpp&gt;<br />

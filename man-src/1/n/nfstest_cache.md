@@ -1,4 +1,5 @@
 ---
+
 title: "nfstest_cache(1)"
 name: "nfstest_cache"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nfstest_cache/"
 description: "nfstest_cache – NFS client side caching tests"
 ---
 
-<h2>NAME</h2>
 <p> nfstest_cache &#8211; NFS client side caching tests</p>
 <h2>SYNOPSIS</h2>
 <p> nfstest_cache &#8211;server &lt;server&gt; &#8211;client &lt;client&gt; [options]</p>

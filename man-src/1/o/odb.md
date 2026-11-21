@@ -1,4 +1,5 @@
 ---
+
 title: "odb(1)"
 name: "odb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-odb/"
 description: "odb – object-relational mapping (ORM) compiler for C++"
 ---
 
-<h2>NAME</h2>
 <p> odb &#8211; object-relational mapping (ORM) compiler for C++</p>
 <h2>SYNOPSIS</h2>
 <p> <code>odb</code> <code>[</code> <i>options</i> <code>]</code> <i>file</i> <code>[</code> <i>file&#8230;</i> <code>]</code></p>

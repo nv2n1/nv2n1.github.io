@@ -1,4 +1,5 @@
 ---
+
 title: "dlamchf77(3)"
 name: "dlamchf77"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlamchf77/"
 description: "dlamchf77.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dlamchf77.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

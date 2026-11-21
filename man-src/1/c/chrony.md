@@ -1,4 +1,5 @@
 ---
+
 title: "chrony(1)"
 name: "chrony"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-chrony/"
 description: "chrony – programs for keeping computer clocks accurate"
 ---
 
-<h2>NAME</h2>
 <p> chrony &#8211; programs for keeping computer clocks accurate </p>
 <h2>SYNOPSIS</h2>
 <p> <code>chronyc</code> [<i>OPTIONS</i>] </p>

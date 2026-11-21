@@ -1,4 +1,5 @@
 ---
+
 title: "ustat(2)"
 name: "ustat"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-ustat/"
 description: "ustat – get filesystem statistics"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ustat &#8211; get filesystem statistics </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

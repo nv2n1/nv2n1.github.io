@@ -1,4 +1,5 @@
 ---
+
 title: "patcat(1)"
 name: "patcat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-patcat/"
 description: "patcat – combine two GUS patches into one stereo extended GUS patch"
 ---
 
-<h2>NAME</h2>
 <p> patcat &#8211; combine two GUS patches into one stereo extended GUS patch </p>
 <h2>SYNOPSIS</h2>
 <p> <code>patcat left.pat right.pat</code> </p>

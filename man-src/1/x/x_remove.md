@@ -1,4 +1,5 @@
 ---
+
 title: "x_remove(1)"
 name: "x_remove"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-x_remove/"
 description: "x_remove – Remove COEs for Selected Cruises from the Data Base"
 ---
 
-<h2>NAME</h2>
 <p> <code>x_remove</code> &#8211; Remove COEs for Selected Cruises from the Data Base</p>
 <h2>SYNOPSIS</h2>
 <p> <code>x_remove</code> <i>removefile</i> [ <code>-X</code><i>xbase</i> ] [ <code>-L</code><i>legbase</i> ] [ <code>-V</code> ]</p>

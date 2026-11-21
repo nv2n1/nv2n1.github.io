@@ -1,4 +1,5 @@
 ---
+
 title: "tificc2(1)"
 name: "tificc2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tificc2/"
 description: "tifficc – little cms ICC profile applier for TIFF."
 ---
 
-<h2>NAME</h2>
 <p> tifficc &#8211; little cms ICC profile applier for TIFF.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tifficc</code> [<i>options</i>]<i> input.tif output.tif</i></p>

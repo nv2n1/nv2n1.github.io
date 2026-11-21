@@ -1,4 +1,5 @@
 ---
+
 title: "pnmquant(1)"
 name: "pnmquant"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnmquant/"
 description: "pnmquant – quantize the colors in a Netpbm image to a smaller set"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pnmquant &#8211; quantize the colors in a Netpbm image to a smaller set</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmquant</code> [<code>-center</code>|<code>-meancolor</code>|<code>-meanpixel</code>] [<code>-floyd</code>|<code>-fs</code>] [<code>-nofloyd</code>|<code>-nofs</code>] [<code>-spreadbrightness</code>|<code>-spreadluminosity</code>] <i>ncolors</i> [<i>pnmfile</i>] </p>

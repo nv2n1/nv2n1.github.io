@@ -1,4 +1,5 @@
 ---
+
 title: "gspiceui(1)"
 name: "gspiceui"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gspiceui/"
 description: "gspiceui – GUI frontend for various electronic circuit simulation engines"
 ---
 
-<h2>NAME</h2>
 <p> gspiceui &#8211; GUI frontend for various electronic circuit simulation engines </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gspiceui</code> [-v] [-h] [-r RCFILE] [-s SIMENG] [-a ANA] [-g [PROC]] [-w VIEWER] [FILE/S] </p>

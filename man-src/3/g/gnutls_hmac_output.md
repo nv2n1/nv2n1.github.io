@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_hmac_output(3)"
 name: "gnutls_hmac_output"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_hmac_output/"
 description: "gnutls_hmac_output – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_hmac_output &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/crypto.h&gt;</code> </p>

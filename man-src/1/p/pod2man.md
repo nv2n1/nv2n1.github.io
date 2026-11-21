@@ -1,4 +1,5 @@
 ---
+
 title: "pod2man(1)"
 name: "pod2man"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pod2man/"
 description: "pod2man – Convert POD data to formatted *roff input"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pod2man &#8211; Convert POD data to formatted *roff input </p>
 <h2>SYNOPSIS</h2>
 <p> pod2man [<code>&#8211;center</code>=<i>string</i>] [<code>&#8211;date</code>=<i>string</i>] [<code>&#8211;errors</code>=<i>style</i>]<br />

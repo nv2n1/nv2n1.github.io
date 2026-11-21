@@ -1,4 +1,5 @@
 ---
+
 title: "g_bundle_d(1)"
 name: "g_bundle_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_bundle_d/"
 description: "g_bundle – analyzes bundles of axes, e.g. helices"
 ---
 
-<h2>NAME</h2>
 <p> g_bundle &#8211; analyzes bundles of axes, e.g. helices </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

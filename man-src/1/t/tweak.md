@@ -1,4 +1,5 @@
 ---
+
 title: "tweak(1)"
 name: "tweak"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tweak/"
 description: "tweak – efficient hex editor"
 ---
 
-<h2>NAME</h2>
 <p> <code>tweak</code> &#8211; efficient hex editor</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

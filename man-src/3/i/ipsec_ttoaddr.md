@@ -1,4 +1,5 @@
 ---
+
 title: "ipsec_ttoaddr(3)"
 name: "ipsec_ttoaddr"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ipsec_ttoaddr/"
 description: "ipsec_ttoaddr, ipsec_tnatoaddr, ipsec_addrtot, ipsec_ttosubnet, ipsec_subnettot – convert Internet addresses and Subnet masks to and from text"
 ---
 
-<h2>NAME</h2>
 <p> ipsec_ttoaddr, ipsec_tnatoaddr, ipsec_addrtot, ipsec_ttosubnet, ipsec_subnettot &#8211; convert Internet addresses and Subnet masks to and from text</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libreswan.h&gt;</code> </p>

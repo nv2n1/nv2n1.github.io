@@ -1,4 +1,5 @@
 ---
+
 title: "gzexe(1)"
 name: "gzexe"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gzexe/"
 description: "gzexe – compress executable files in place"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gzexe &#8211; compress executable files in place </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gzexe</code> <i>name &#8230;</i></p>

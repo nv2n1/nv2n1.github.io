@@ -1,4 +1,5 @@
 ---
+
 title: "t1dotlessj(1)"
 name: "t1dotlessj"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-t1dotlessj/"
 description: "t1dotlessj – create a dotless-j PostScript Type 1 font"
 ---
 
-<h2 class="name">NAME</h2>
 <p> t1dotlessj &#8211; create a dotless-j PostScript Type 1 font </p>
 <h2>SYNOPSIS</h2>
 <p> <code>t1dotlessj</code> [OPTIONS&#8230;] <i>font</i> [<i>outputfile</i>]</p>

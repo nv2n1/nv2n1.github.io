@@ -1,4 +1,5 @@
 ---
+
 title: "audit_log_user_message(3)"
 name: "audit_log_user_message"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-audit_log_user_message/"
 description: "audit_log_user_message – log a general user message"
 ---
 
-<h2>NAME</h2>
 <p> audit_log_user_message &#8211; log a general user message</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libaudit.h&gt;</code> </p>

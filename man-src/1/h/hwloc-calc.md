@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc-calc(1)"
 name: "hwloc-calc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hwloc-calc/"
 description: "hwloc-calc – Operate on cpu mask strings and objects"
 ---
 
-<h2>NAME</h2>
 <p> hwloc-calc &#8211; Operate on cpu mask strings and objects</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hwloc-calc</code> [<i>options</i>] <i>&lt;location1&gt; [&lt;location2&gt; [&#8230;] ] </p>

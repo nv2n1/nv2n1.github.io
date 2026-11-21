@@ -1,4 +1,5 @@
 ---
+
 title: "roff2pdf(1)"
 name: "roff2pdf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-roff2pdf/"
 description: "roff2pdf – transform roff code into pdf mode"
 ---
 
-<h2 class="name">NAME</h2>
 <p> roff2pdf &#8211; transform roff code into pdf mode </p>
 <h2>SYNOPSIS</h2>
 <p> [<i>groffer-option</i> &#8230; ] [ <code>&#8212;</code> ] [<i>filespec</i> &#8230; ] <code>-h</code> <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code> </p>

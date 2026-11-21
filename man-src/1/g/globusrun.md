@@ -1,4 +1,5 @@
 ---
+
 title: "globusrun(1)"
 name: "globusrun"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-globusrun/"
 description: "globusrun – Execute and manage jobs via GRAM"
 ---
 
-<h2 class="name">NAME</h2>
 <p> globusrun &#8211; Execute and manage jobs via GRAM </p>
 <h2>SYNOPSIS</h2>
 <p> <code>globusrun</code> [-help | -usage | -version -versions ] </p>

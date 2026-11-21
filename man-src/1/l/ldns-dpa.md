@@ -1,4 +1,5 @@
 ---
+
 title: "ldns-dpa(1)"
 name: "ldns-dpa"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ldns-dpa/"
 description: "dpa – DNS Packet Analyzer. Analyze DNS packets in ip trace files"
 ---
 
-<h2>NAME</h2>
 <p> dpa &#8211; DNS Packet Analyzer. Analyze DNS packets in ip trace files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dpa</code> [ <i>OPTION</i> ] <i>TRACEFILE</i> </p>

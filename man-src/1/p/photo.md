@@ -1,4 +1,5 @@
 ---
+
 title: "photo(1)"
 name: "photo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-photo/"
 description: "photo.rectify"
 ---
 
-<h2>NAME</h2>
 <p> <i></i><code>photo.rectify</code></p>
 <h2>DESCRIPTION</h2>
 <p> <i>photo.rectify</i> rectifies an image by using the image to photo coordinate transformation matrix created by photo.2image and the rectification parameters created by photo.2target. Rectification is the process by which the geometry of an image is made planimetric. This is accomplished by mapping an image from one coordinate system to another. In photo.rectify the parameters computed by photo.2image and photo.2target are used in equations to convert x,y image coordinates to standard map coordinates for each pixel in the image. The result is an image with a standard map coordinate system, compensated for relief distortions and photographic tilt. Upon completion of the program the rectified image is deposited in a previously targeted GRASS LOCATION. </p>

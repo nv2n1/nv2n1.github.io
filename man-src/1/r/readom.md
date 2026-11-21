@@ -1,4 +1,5 @@
 ---
+
 title: "readom(1)"
 name: "readom"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-readom/"
 description: "readom – read or write data Compact Discs"
 ---
 
-<h2>NAME</h2>
 <p> readom &#8211; read or write data Compact Discs</p>
 <h2>SYNOPSIS</h2>
 <p> <code>readom</code> <code>dev=</code><i>device</i> [ <i>options</i> ] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "nytprofcg(1)"
 name: "nytprofcg"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nytprofcg/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nytprofcg - Convert an NYTProf profile into Callgrind format 
+nytprofcg - Convert an NYTProf profile into Callgrind format 
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "zbarcam(1)"
 name: "zbarcam"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zbarcam/"
 description: "zbarcam – scan and decode bar codes from a video device"
 ---
 
-<h2 class="name">NAME</h2>
 <p> zbarcam &#8211; scan and decode bar codes from a video device </p>
 <h2>SYNOPSIS</h2>
 <dl>

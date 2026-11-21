@@ -1,4 +1,5 @@
 ---
+
 title: "grfid(1)"
 name: "grfid"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grfid/"
 description: "GRFID – A tool to extract the (New)GRF ID from a (New)GRF"
 ---
 
-<h2>NAME</h2>
 <p> <code>GRFID</code> &#8211; A tool to extract the (New)GRF ID from a (New)GRF</p>
 <h2>SYNOPSIS</h2>
 <p> [-<code>hv</code> ] <code>grfid </code><i>file</i></p>

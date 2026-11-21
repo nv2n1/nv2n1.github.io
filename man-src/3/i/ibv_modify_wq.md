@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_modify_wq(3)"
 name: "ibv_modify_wq"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ibv_modify_wq/"
 description: "ibv_modify_wq – Modify a Work Queue (WQ)."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ibv_modify_wq &#8211; Modify a Work Queue (WQ). </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

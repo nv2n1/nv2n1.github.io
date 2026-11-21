@@ -1,4 +1,5 @@
 ---
+
 title: "acosf(3)"
 name: "acosf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-acosf/"
 description: "acos, acosf, acosl – arc cosine function"
 ---
 
-<h2 class="name">NAME</h2>
 <p> acos, acosf, acosl &#8211; arc cosine function </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

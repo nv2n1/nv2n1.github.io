@@ -1,4 +1,5 @@
 ---
+
 title: "psscale(1)"
 name: "psscale"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-psscale/"
 description: "psscale – Plot a gray or color scale-bar on maps"
 ---
 
-<h2>NAME</h2>
 <p> psscale &#8211; Plot a gray or color scale-bar on maps</p>
 <h2>SYNOPSIS</h2>
 <p> <code>psscale</code> <i>refpoint</i> [ [<code>p</code>|<code>s</code>]<i>parameters</i> ] [ <i>cpt</i> ] [ <i>box</i> ] [ <i>zlo</i>/<i>zhi</i> ] [ [<i>max_intens</i>|<i>low_i</i>/<i>high_i</i>] ] [ <i>parameters</i> ] [ <code>z</code>|<code>Z</code><i>parameters</i> ] [ ] [ [<code>i</code>][<i>gap</i>] ] [ ] [ [<code>p</code>|<i>dpi</i> ]] [ ] [ ] [ ] [ <i>region</i> ] [ ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ [<i>level</i>] ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ <i>zfile</i> ] [ <code>-c</code><i>copies</i> ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-t</code><i>&lt;transp&gt;</i> ] </p>

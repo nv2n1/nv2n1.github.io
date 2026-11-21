@@ -1,4 +1,5 @@
 ---
+
 title: "urxvt256cc(1)"
 name: "urxvt256cc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-urxvt256cc/"
 description: "urxvt256cc – control the urxvt256cd daemon"
 ---
 
-<h2 class="name">NAME</h2>
 <p> urxvt256cc &#8211; control the urxvt256cd daemon </p>
 <h2>SYNOPSIS</h2>
 <p> <code>urxvt256cc</code> [same options as for urxvt256c]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "bashdb(1)"
 name: "bashdb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bashdb/"
 description: "bashdb – bash debugger script"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bashdb &#8211; bash debugger script </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bashdb</code> [<i>options</i>] [&#8211;] <i>script-name</i> [<i>script options</i>] </p>

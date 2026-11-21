@@ -1,4 +1,5 @@
 ---
+
 title: "vbox(1)"
 name: "vbox"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vbox/"
 description: "vbox – interact with recorded messages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> vbox &#8211; interact with recorded messages</p>
 <h2>SYNOPSIS</h2>
 <p> <code>vbox</code> <i>[-f|&#8211;force] [-o|&#8211;mono] [-s|&#8211;noledstatus] [-c|&#8211;playcmd player] [-m|&#8211;hostname server] [-p|&#8211;port port] [-r |&#8211;reload SECS]</i> <i>[-v|&#8211;version]</i> <i>[-h|&#8211;help]</i> </p>

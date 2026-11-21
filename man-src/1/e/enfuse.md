@@ -1,4 +1,5 @@
 ---
+
 title: "enfuse(1)"
 name: "enfuse"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-enfuse/"
 description: "enfuse – manual page for enfuse 4.1.1"
 ---
 
-<h2>NAME</h2>
 <p> enfuse &#8211; manual page for enfuse 4.1.1</p>
 <h2>SYNOPSIS</h2>
 <p> <code>enfuse</code> [<i>options</i>] [<i>&#8211;output=IMAGE</i>] <i>INPUT</i>&#8230;</p>

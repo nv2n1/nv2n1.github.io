@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_rdf_type(3)"
 name: "ldns_rdf_type"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_rdf_type/"
 description: "ldns_rdf, ldns_rdf_type"
 ---
 
-<h2>NAME</h2>
 <p> ldns_rdf, ldns_rdf_type </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "zipmerge(1)"
 name: "zipmerge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zipmerge/"
 description: "zipmerge – merge zip archives"
 ---
 
-<h2>NAME</h2>
 <p> zipmerge &#8211; merge zip archives</p>
 <h2>SYNOPSIS</h2>
 <p> <code>zipmerge</code> [<code>-DhIiSsV</code>] <code>target-zip</code> <code>source-zip Op source-zip &#8230;</code></p>

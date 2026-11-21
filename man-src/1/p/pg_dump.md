@@ -1,4 +1,5 @@
 ---
+
 title: "pg_dump(1)"
 name: "pg_dump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pg_dump/"
 description: "pg_dump – extract a PostgreSQL database into a script file or other archive file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pg_dump &#8211; extract a PostgreSQL database into a script file or other archive file </p>
 <h2>SYNOPSIS</h2>
 <dl>

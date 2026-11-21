@@ -1,4 +1,5 @@
 ---
+
 title: "cdk_util(3)"
 name: "cdk_util"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cdk_util/"
 description: "cdk_util – Cdk utility functions"
 ---
 
-<h2>NAME</h2>
 <p> cdk_util &#8211; Cdk utility functions</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>

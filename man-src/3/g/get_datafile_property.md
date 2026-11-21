@@ -1,4 +1,5 @@
 ---
+
 title: "get_datafile_property(3)"
 name: "get_datafile_property"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_datafile_property/"
 description: "get_datafile_property – Returns the property string for the object. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> get_datafile_property &#8211; Returns the property string for the object. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

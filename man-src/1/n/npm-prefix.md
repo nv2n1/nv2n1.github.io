@@ -1,4 +1,5 @@
 ---
+
 title: "npm-prefix(1)"
 name: "npm-prefix"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-npm-prefix/"
 description: "npm-prefix – Display prefix"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>npm-prefix</code> &#8211; Display prefix </p>
 <h3>Synopsis</h3>
 <dl>

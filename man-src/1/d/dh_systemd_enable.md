@@ -1,4 +1,5 @@
 ---
+
 title: "dh_systemd_enable(1)"
 name: "dh_systemd_enable"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_systemd_enable/"
 description: "dh_systemd_enable – enable/disable systemd unit files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_systemd_enable &#8211; enable/disable systemd unit files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_systemd_enable</code> [<i>debhelper options</i>] [<code>&#8211;no-enable</code>] [<code>&#8211;name=</code><i>name</i>] [<i>unit file</i> &#8230;]</p>

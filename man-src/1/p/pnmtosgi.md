@@ -1,4 +1,5 @@
 ---
+
 title: "pnmtosgi(1)"
 name: "pnmtosgi"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnmtosgi/"
 description: "pnmtosgi – convert a portable anymap to a SGI image file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pnmtosgi &#8211; convert a portable anymap to a SGI image file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmtosgi</code> [<code>-verbatim</code>|<code>-rle</code>] [<code>-imagename</code> <i>Name</i>] [<code>pnmfile</code>]</p>

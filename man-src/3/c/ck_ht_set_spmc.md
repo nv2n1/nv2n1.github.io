@@ -1,4 +1,5 @@
 ---
+
 title: "ck_ht_set_spmc(3)"
 name: "ck_ht_set_spmc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_ht_set_spmc/"
 description: "ck_ht_set_spmc – store key-value pair into hash table"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_ht_set_spmc</code> &#8211; store key-value pair into hash table</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

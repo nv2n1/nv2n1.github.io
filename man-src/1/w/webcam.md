@@ -1,4 +1,5 @@
 ---
+
 title: "webcam(1)"
 name: "webcam"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-webcam/"
 description: "webcam – capture images and upload them to a webserver using ftp"
 ---
 
-<h2>NAME</h2>
 <p> webcam &#8211; capture images and upload them to a webserver using ftp</p>
 <h2>SYNOPSIS</h2>
 <p> <code>webcam [ config file ]</code></p>

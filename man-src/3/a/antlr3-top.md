@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-top(3)"
 name: "antlr3-top"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3-top/"
 description: "ANTLR3_STACK_struct –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ANTLR3_STACK_struct &#8211; </p>
 <p> Structure that represents a Stack collection.</p>
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "curl_multi_info_read(3)"
 name: "curl_multi_info_read"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-curl_multi_info_read/"
 description: "curl_multi_info_read – read multi stack informationals"
 ---
 
-<h2>NAME</h2>
 <p> curl_multi_info_read &#8211; read multi stack informationals</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;curl/curl.h&gt; </p>

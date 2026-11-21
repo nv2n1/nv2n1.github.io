@@ -1,4 +1,5 @@
 ---
+
 title: "gresource(1)"
 name: "gresource"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gresource/"
 description: "gresource – GResource tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gresource &#8211; GResource tool </p>
 <h2>SYNOPSIS</h2>
 <dl>

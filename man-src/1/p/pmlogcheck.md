@@ -1,4 +1,5 @@
 ---
+
 title: "pmlogcheck(1)"
 name: "pmlogcheck"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmlogcheck/"
 description: "pmlogcheck – checks for invalid data in a PCP archive"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmlogcheck</code> &#8211; checks for invalid data in a PCP archive</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmlogcheck</code> [<code>-lz</code>] [<code>-n</code> <i>pmnsfile</i>] [<code>-S</code> <i>start</i>] [<code>-T</code> <i>finish</i>] [<code>-Z</code> <i>timezone</i>] <i>archive</i></p>

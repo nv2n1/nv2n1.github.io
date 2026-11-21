@@ -1,4 +1,5 @@
 ---
+
 title: "certmaster(1)"
 name: "certmaster"
 section: "1"
@@ -6,10 +7,7 @@ letter: "c"
 url: "/docs/linux/man/1-certmaster/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- certmaster -- hands out certificates to programs that want them, like certmaster-request or users of the certmaster API 
+certmaster -- hands out certificates to programs that want them, like certmaster-request or users of the certmaster API 
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "dillo(1)"
 name: "dillo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dillo/"
 description: "dillo – web browser"
 ---
 
-<h2>NAME</h2>
 <p> dillo &#8211; web browser</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dillo</code> [<i>OPTION</i>]&#8230; [<code>&#8212;</code>] [<i>URL</i>|<i>FILE</i>]&#8230;</p>

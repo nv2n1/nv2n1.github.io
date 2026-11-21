@@ -1,4 +1,5 @@
 ---
+
 title: "xmlsec1(1)"
 name: "xmlsec1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xmlsec1/"
 description: "xmlsec1 – sign, verify, encrypt and decrypt XML documents"
 ---
 
-<h2>NAME</h2>
 <p> xmlsec1 &#8211; sign, verify, encrypt and decrypt XML documents</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xmlsec</code> <i>&lt;command&gt; </i>[<i>&lt;options&gt;</i>] [<i>&lt;files&gt;</i>]</p>

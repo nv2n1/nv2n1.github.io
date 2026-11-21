@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_agent_free(3)"
 name: "libssh2_agent_free"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_agent_free/"
 description: "libssh2_agent_free – free an ssh-agent handle"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_agent_free &#8211; free an ssh-agent handle</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

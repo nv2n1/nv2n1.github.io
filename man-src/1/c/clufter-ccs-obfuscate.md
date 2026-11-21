@@ -1,4 +1,5 @@
 ---
+
 title: "clufter-ccs-obfuscate(1)"
 name: "clufter-ccs-obfuscate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-clufter-ccs-obfuscate/"
 description: "clufter – ccs-obfuscate"
 ---
 
-<h2>NAME</h2>
 <p> clufter &#8211; ccs-obfuscate</p>
 <h2>SYNOPSIS</h2>
 <p> <code>clufter</code> [<i>&lt;global option&gt; </i>&#8230;] <i>ccs-obfuscate </i>[<i>&lt;cmd option </i>&#8230;<i>&gt;</i>]</p>

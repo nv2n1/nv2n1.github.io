@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_verify_init_creds(3)"
 name: "krb5_verify_init_creds"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_verify_init_creds/"
 description: "krb5_verify_init_creds_opt_init krb5_verify_init_creds_opt_set_ap_req_nofail krb5_verify_init_creds – verifies a credential cache is correct by using a local keytab"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_verify_init_creds_opt_init</code> <code>krb5_verify_init_creds_opt_set_ap_req_nofail</code> <code>krb5_verify_init_creds</code> &#8211; verifies a credential cache is correct by using a local keytab </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>

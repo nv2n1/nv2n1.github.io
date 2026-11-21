@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_init_find_case(3)"
 name: "bson_iter_init_find_case"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_iter_init_find_case/"
 description: "bson_iter_init_find_case() – This function is identical to bson_iter_init() && bson_iter_find_case()."
 ---
 
-<h2>NAME</h2>
 <p> bson_iter_init_find_case() &#8211; This function is identical to bson_iter_init() &amp;&amp; bson_iter_find_case().</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

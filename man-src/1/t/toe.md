@@ -1,4 +1,5 @@
 ---
+
 title: "toe(1)"
 name: "toe"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-toe/"
 description: "toe – table of (terminfo) entries"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>toe</code> &#8211; table of (terminfo) entries </p>
 <h2>SYNOPSIS</h2>
 <p> <code>toe</code> [<code>-v</code>[<i>n</i>]] [<code>-ahsuUV</code>] <i>file&#8230;</i> </p>

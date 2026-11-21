@@ -1,4 +1,5 @@
 ---
+
 title: "anyremote(1)"
 name: "anyremote"
 section: "1"
@@ -6,12 +7,7 @@ letter: "a"
 url: "/docs/linux/man/1-anyremote/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- anyremote - control PC with Bluetooth cell phone 
+anyremote - control PC with Bluetooth cell phone 
  
 
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_interpret_field(3)"
 name: "auparse_interpret_field"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_interpret_field/"
 description: "auparse_interpret_field – get current field’s value interpreted"
 ---
 
-<h2>NAME</h2>
 <p> auparse_interpret_field &#8211; get current field&#8217;s value interpreted</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

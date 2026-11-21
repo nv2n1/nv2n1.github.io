@@ -1,4 +1,5 @@
 ---
+
 title: "eurliborswap(3)"
 name: "eurliborswap"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-eurliborswap/"
 description: "ql/indexes/swap/eurliborswap.hpp – EUR Libor Swap indexes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/indexes/swap/eurliborswap.hpp &#8211; EUR Libor Swap indexes </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/indexes/swapindex.hpp&gt;<br />

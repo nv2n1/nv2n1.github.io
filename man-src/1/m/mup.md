@@ -1,4 +1,5 @@
 ---
+
 title: "mup(1)"
 name: "mup"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mup/"
 description: "mup – music publisher"
 ---
 
-<h2>NAME</h2>
 <p> mup &#8211; music publisher</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mup</code> [<code>-c</code><i>N</i>] [-C] [<code>-d</code><i>N</i>] [<code>-D</code> <i>MACRO[=macro_def</i>]] [<code>-e</code> <i>errfile</i>] [-E] [<code>-f</code> <i>outfile</i>] [<code>-F</code>] [<code>-l</code>] [<code>-m</code> <i>midifile</i>] [<code>-M</code>] [<code>-o</code> <i>pagelist</i>] [<code>-p</code><i>N</i>] [<code>-v</code>] [<code>-x</code> <i>N</i>[,<i>M</i>] [<i>file&#8230;</i>]</p>

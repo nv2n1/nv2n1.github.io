@@ -1,4 +1,5 @@
 ---
+
 title: "xmms2-et(1)"
 name: "xmms2-et"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xmms2-et/"
 description: "xmms2-et – transmits an anonymous informative packet to the XMMS2 team on each song change"
 ---
 
-<h2>NAME</h2>
 <p> xmms2-et &#8211; transmits an anonymous informative packet to the XMMS2 team on each song change</p>
 <h2>SYNOPSIS</h2>
 <p> <i>xmms2-et</i></p>

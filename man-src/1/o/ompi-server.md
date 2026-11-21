@@ -1,4 +1,5 @@
 ---
+
 title: "ompi-server(1)"
 name: "ompi-server"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ompi-server/"
 description: "ompi-server – Server for supporting name publish/lookup operations."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ompi-server &#8211; Server for supporting name publish/lookup operations.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ompi-server</code> [ options ]</p>

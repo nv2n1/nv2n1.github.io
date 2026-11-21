@@ -1,4 +1,5 @@
 ---
+
 title: "alltray(1)"
 name: "alltray"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-alltray/"
 description: "AllTray – Dock any program into the system tray."
 ---
 
-<h2>NAME</h2>
 <p> AllTray &#8211; Dock any program into the system tray.</p>
 <h2>SYNOPSIS</h2>
 <dl>

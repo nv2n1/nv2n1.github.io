@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_add_extra_addresses(3)"
 name: "krb5_add_extra_addresses"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_add_extra_addresses/"
 description: "Heimdal Kerberos 5 library –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Heimdal Kerberos 5 library &#8211; </p>
 <h3>Functions</h3>
 <p> KRB5_LIB_FUNCTION<br />

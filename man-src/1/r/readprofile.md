@@ -1,4 +1,5 @@
 ---
+
 title: "readprofile(1)"
 name: "readprofile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-readprofile/"
 description: "readprofile – read kernel profiling information"
 ---
 
-<h2 class="name">NAME</h2>
 <p> readprofile &#8211; read kernel profiling information </p>
 <h2>SYNOPSIS</h2>
 <p> <code>readprofile</code> [<i>options</i>] </p>

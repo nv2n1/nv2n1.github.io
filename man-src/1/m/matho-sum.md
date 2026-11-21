@@ -1,4 +1,5 @@
 ---
+
 title: "matho-sum(1)"
 name: "matho-sum"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-matho-sum/"
 description: "matho-sum – sum integers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> matho-sum &#8211; sum integers</p>
 <h2>SYNOPSIS</h2>
 <p> <code>matho-sum</code> [integers] </p>

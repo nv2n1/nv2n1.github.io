@@ -1,4 +1,5 @@
 ---
+
 title: "scotch_gord(1)"
 name: "scotch_gord"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-scotch_gord/"
 description: "gord – compute sparse matrix orderings of graphs"
 ---
 
-<h2>NAME</h2>
 <p> <code>gord </code>&#8211; compute sparse matrix orderings of graphs</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

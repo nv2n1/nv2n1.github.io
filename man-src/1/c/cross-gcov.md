@@ -1,4 +1,5 @@
 ---
+
 title: "cross-gcov(1)"
 name: "cross-gcov"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cross-gcov/"
 description: "gcov – coverage testing tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gcov &#8211; coverage testing tool </p>
 <h2>SYNOPSIS</h2>
 <p> gcov [<code>-v</code>|<code>&#8211;version</code>] [<code>-h</code>|<code>&#8211;help</code>]<br />

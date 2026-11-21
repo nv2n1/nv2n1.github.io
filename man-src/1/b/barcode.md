@@ -1,4 +1,5 @@
 ---
+
 title: "barcode(1)"
 name: "barcode"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-barcode/"
 description: "barcode – a stand alone program to run the barcode library"
 ---
 
-<h2 class="name">NAME</h2>
 <p> barcode &#8211; a stand alone program to run the barcode library </p>
 <h2>SYNOPSIS</h2>
 <p> <code>barcode</code> [-b &#8211; | string] [-e encoding] [-o &#8211; | outfile] [ <i>other-flags</i> ]</p>

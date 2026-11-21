@@ -1,4 +1,5 @@
 ---
+
 title: "ustr-import(1)"
 name: "ustr-import"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ustr-import/"
 description: "ustr-import – ustr string library import tool"
 ---
 
-<h2>NAME</h2>
 <p> ustr-import &#8211; ustr string library import tool</p>
 <h2>SYNOPSIS</h2>
 <dl>

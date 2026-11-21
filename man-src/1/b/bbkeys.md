@@ -1,4 +1,5 @@
 ---
+
 title: "bbkeys(1)"
 name: "bbkeys"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bbkeys/"
 description: "bbkeys – a general XWindow keygrabber"
 ---
 
-<h2>NAME</h2>
 <p> bbkeys &#8211; a general XWindow keygrabber </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bbkeys</code> [<i>OPTION</i>] </p>

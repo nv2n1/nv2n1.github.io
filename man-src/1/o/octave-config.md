@@ -1,4 +1,5 @@
 ---
+
 title: "octave-config(1)"
 name: "octave-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-octave-config/"
 description: "octave-config – GNU Octave component and library information retrieval"
 ---
 
-<h2>NAME</h2>
 <p> octave-config &#8211; GNU Octave component and library information retrieval</p>
 <h2>SYNOPSIS</h2>
 <p> <code>octave-config</code> [<i>OPTION</i>]&#8230;</p>

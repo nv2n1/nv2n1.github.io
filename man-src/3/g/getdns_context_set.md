@@ -1,4 +1,5 @@
 ---
+
 title: "getdns_context_set(3)"
 name: "getdns_context_set"
 section: "3"
@@ -6,10 +7,7 @@ letter: "g"
 url: "/docs/linux/man/3-getdns_context_set/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- <b>getdns_context_set_append_name, </b> <b>getdns_context_set_context_update_callback, </b> <b>getdns_context_set_dns_root_servers, </b> <b>getdns_context_set_dns_transport, </b> <b>getdns_context_set_dnssec_trust_anchors, </b> <b>getdns_context_set_dnssec_allowed_skew,</b> <b>getdns_context_set_follow_redirects, </b> <b>getdns_context_set_limit_outstanding_queries, </b> <b>getdns_context_set_namespaces, </b> <b>getdns_context_set_resolution_type, </b> <b>getdns_context_set_suffix, </b> <b>getdns_context_set_timeout, </b> -- getdns context manipulation routines
+<b>getdns_context_set_append_name, </b> <b>getdns_context_set_context_update_callback, </b> <b>getdns_context_set_dns_root_servers, </b> <b>getdns_context_set_dns_transport, </b> <b>getdns_context_set_dnssec_trust_anchors, </b> <b>getdns_context_set_dnssec_allowed_skew,</b> <b>getdns_context_set_follow_redirects, </b> <b>getdns_context_set_limit_outstanding_queries, </b> <b>getdns_context_set_namespaces, </b> <b>getdns_context_set_resolution_type, </b> <b>getdns_context_set_suffix, </b> <b>getdns_context_set_timeout, </b> -- getdns context manipulation routines
 
 <h2>LIBRARY</h2>
 

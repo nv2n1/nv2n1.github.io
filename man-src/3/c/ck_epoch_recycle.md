@@ -1,4 +1,5 @@
 ---
+
 title: "ck_epoch_recycle(3)"
 name: "ck_epoch_recycle"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_epoch_recycle/"
 description: "ck_epoch_recycle – return an epoch record that may be used by caller"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_epoch_recycle</code> &#8211; return an epoch record that may be used by caller</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

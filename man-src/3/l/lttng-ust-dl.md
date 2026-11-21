@@ -1,4 +1,5 @@
 ---
+
 title: "lttng-ust-dl(3)"
 name: "lttng-ust-dl"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-lttng-ust-dl/"
 description: "lttng-ust-dl — LTTng UST 2.x Dynamic Linker Tracing"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lttng-ust-dl &#8212; LTTng UST 2.x Dynamic Linker Tracing</p>
 <h2>SYNOPSIS</h2>
 <p> Launch your application with:</p>

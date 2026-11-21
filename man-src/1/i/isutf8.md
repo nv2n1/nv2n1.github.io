@@ -1,4 +1,5 @@
 ---
+
 title: "isutf8(1)"
 name: "isutf8"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-isutf8/"
 description: "isutf8 – check whether files are valid UTF-8"
 ---
 
-<h2 class="name">NAME</h2>
 <p> isutf8 &#8211; check whether files are valid UTF-8 </p>
 <h2>SYNOPSIS</h2>
 <dl>

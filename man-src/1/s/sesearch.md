@@ -1,4 +1,5 @@
 ---
+
 title: "sesearch(1)"
 name: "sesearch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sesearch/"
 description: "sesearch – SELinux policy query tool"
 ---
 
-<h2>NAME</h2>
 <p> sesearch &#8211; SELinux policy query tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sesearch</code> [OPTIONS] RULE_TYPE [RULE_TYPE &#8230;] [EXPRESSION] [POLICY &#8230;]</p>

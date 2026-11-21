@@ -1,4 +1,5 @@
 ---
+
 title: "lame(1)"
 name: "lame"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lame/"
 description: "lame – create mp3 audio files"
 ---
 
-<h2>NAME</h2>
 <p> lame &#8211; create mp3 audio files</p>
 <h2>SYNOPSIS</h2>
 <p> lame [options] &lt;infile&gt; &lt;outfile&gt;</p>

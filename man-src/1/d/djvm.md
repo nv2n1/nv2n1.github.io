@@ -1,4 +1,5 @@
 ---
+
 title: "djvm(1)"
 name: "djvm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-djvm/"
 description: "djvm – Manipulate bundled multi-page DjVu documents."
 ---
 
-<h2 class="name">NAME</h2>
 <p> djvm &#8211; Manipulate bundled multi-page DjVu documents.</p>
 <h2>SYNOPSIS</h2>
 <h2>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Creating a bundled document:</h2>

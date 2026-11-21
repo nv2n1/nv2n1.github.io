@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_buffer(3)"
 name: "ldns_buffer"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_buffer/"
 description: "ldns_buffer"
 ---
 
-<h2>NAME</h2>
 <p> ldns_buffer </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

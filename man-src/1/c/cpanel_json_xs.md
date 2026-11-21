@@ -1,4 +1,5 @@
 ---
+
 title: "cpanel_json_xs(1)"
 name: "cpanel_json_xs"
 section: "1"
@@ -6,10 +7,7 @@ letter: "c"
 url: "/docs/linux/man/1-cpanel_json_xs/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- cpanel_json_xs - Cpanel::JSON::XS commandline utility 
+cpanel_json_xs - Cpanel::JSON::XS commandline utility 
 
 <h2>SYNOPSIS</h2>
 

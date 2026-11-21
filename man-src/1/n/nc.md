@@ -1,4 +1,5 @@
 ---
+
 title: "nc(1)"
 name: "nc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nc/"
 description: "nc – arbitrary TCP and UDP connections and listens"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>nc</code> &#8211; arbitrary TCP and UDP connections and listens </p>
 <h2>SYNOPSIS</h2>
 <p> <code>nc</code> [-<code>46bCDdFhklNnrStUuvZz </code>[-<code>I </code><i>length</i> ] ] [-<code>i </code><i>interval</i> ] [-<code>M </code><i>ttl</i> ] [-<code>m </code><i>minttl</i> ] [-<code>O </code><i>length</i> ] [-<code>P </code><i>proxy_username</i> ] [-<code>p </code><i>source_port</i> ] [-<code>q </code><i>seconds</i> ] [-<code>s </code><i>sourceaddr</i> ] [-<code>T </code><i>keyword</i> ] [-<code>V </code><i>rtable</i> ] [-<code>W </code><i>recvlimit</i> ] [-<code>w </code><i>timeout</i> ] [-<code>X </code><i>proxy_protocol</i> ] [-<code>x </code><i>proxy_address </i>[: <i>port</i> ] ] [<i>destination</i> ] [<i>port</i> ]</p>

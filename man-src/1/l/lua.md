@@ -1,4 +1,5 @@
 ---
+
 title: "lua(1)"
 name: "lua"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lua/"
 description: "lua – Lua interpreter"
 ---
 
-<h2>NAME</h2>
 <p> lua &#8211; Lua interpreter</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lua</code> [ <i>options</i> ] [ <i>script</i> [ <i>args</i> ] ]</p>

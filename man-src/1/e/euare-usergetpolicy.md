@@ -1,4 +1,5 @@
 ---
+
 title: "euare-usergetpolicy(1)"
 name: "euare-usergetpolicy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-usergetpolicy/"
 description: "euare-usergetpolicy – Display a user’s policy"
 ---
 
-<h2>NAME</h2>
 <p> euare-usergetpolicy &#8211; Display a user&#8217;s policy</p>
 <h2>SYNOPSIS</h2>
 <p> euare-usergetpolicy <code>-p</code> POLICY [&#8211;pretty-print] [&#8211;as-account ACCOUNT]</p>

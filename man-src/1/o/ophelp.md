@@ -1,4 +1,5 @@
 ---
+
 title: "ophelp(1)"
 name: "ophelp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ophelp/"
 description: "ophelp – list OProfile events"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ophelp &#8211; list OProfile events </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ophelp</code> [ <i>options</i> ] [event name]</p>

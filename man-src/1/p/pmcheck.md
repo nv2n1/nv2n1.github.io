@@ -1,4 +1,5 @@
 ---
+
 title: "pmcheck(1)"
 name: "pmcheck"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-pmcheck/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- pmcheck - check that Perl is set up correctly for Perl modules 
+pmcheck - check that Perl is set up correctly for Perl modules 
 
 <h2>DESCRIPTION</h2>
 

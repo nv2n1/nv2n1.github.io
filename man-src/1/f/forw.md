@@ -1,4 +1,5 @@
 ---
+
 title: "forw(1)"
 name: "forw"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-forw/"
 description: "forw – forward messages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> forw &#8211; forward messages </p>
 <h2>SYNOPSIS</h2>
 <dl>

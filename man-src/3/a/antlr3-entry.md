@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-entry(3)"
 name: "antlr3-entry"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3-entry/"
 description: "ANTLR3_HASH_ENUM_struct –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ANTLR3_HASH_ENUM_struct &#8211; </p>
 <p> Internal structure representing an enumeration of a table.</p>
 <h2>SYNOPSIS</h2>

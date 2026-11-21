@@ -1,4 +1,5 @@
 ---
+
 title: "minmax(3)"
 name: "minmax"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-minmax/"
 description: "QuantLib::ContinuousFloatingLookbackOption::arguments – Arguments for continuous floating lookback option calculation"
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::ContinuousFloatingLookbackOption::arguments &#8211; Arguments for continuous floating lookback option calculation </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/lookbackoption.hpp&gt; </p>

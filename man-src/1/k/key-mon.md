@@ -1,4 +1,5 @@
 ---
+
 title: "key-mon(1)"
 name: "key-mon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-key-mon/"
 description: "Keymon – Keyboard and mouse monitor window for GTK."
 ---
 
-<h2>NAME</h2>
 <p> Keymon &#8211; Keyboard and mouse monitor window for GTK.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>key-mon [options]</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-moduser(1)"
 name: "ipa-moduser"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-moduser/"
 description: "ipa-moduser – Modify a user"
 ---
 
-<h2>NAME</h2>
 <p> ipa-moduser &#8211; Modify a user</p>
 <h2>SYNOPSIS</h2>
 <p> ipa-moduser [<i>OPTION</i>]&#8230; <i>name</i> </p>

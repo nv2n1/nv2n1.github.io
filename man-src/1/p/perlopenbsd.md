@@ -1,4 +1,5 @@
 ---
+
 title: "perlopenbsd(1)"
 name: "perlopenbsd"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlopenbsd/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlopenbsd - Perl version 5 on OpenBSD systems 
+perlopenbsd - Perl version 5 on OpenBSD systems 
 
 <h2>DESCRIPTION</h2>
 

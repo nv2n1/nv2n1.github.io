@@ -1,4 +1,5 @@
 ---
+
 title: "globus-hostname(1)"
 name: "globus-hostname"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-globus-hostname/"
 description: "globus-hostname – Print the system host name"
 ---
 
-<h2 class="name">NAME</h2>
 <p> globus-hostname &#8211; Print the system host name </p>
 <h2>SYNOPSIS</h2>
 <p> <code>globus-hostname</code> [ -help | -h ] [ -version|-versions ]</p>

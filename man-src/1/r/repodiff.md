@@ -1,4 +1,5 @@
 ---
+
 title: "repodiff(1)"
 name: "repodiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-repodiff/"
 description: "repodiff – list differences between two or more Yum repositories"
 ---
 
-<h2>NAME</h2>
 <p> repodiff &#8211; list differences between two or more Yum repositories</p>
 <h2>SYNOPSIS</h2>
 <p> <code>repodiff</code> &#8211;old=old_repo_baseurl &#8211;new=new_repo_baseurl</p>

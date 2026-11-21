@@ -1,4 +1,5 @@
 ---
+
 title: "mate-system-log(1)"
 name: "mate-system-log"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-system-log/"
 description: "mate-system-log – the MATE System Log Viewer"
 ---
 
-<h2>NAME</h2>
 <p> mate-system-log &#8211; the MATE System Log Viewer</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-system-log</code> </p>

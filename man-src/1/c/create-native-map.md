@@ -1,4 +1,5 @@
 ---
+
 title: "create-native-map(1)"
 name: "create-native-map"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-create-native-map/"
 description: "create-native-map – C/C# Mapping Creator"
 ---
 
-<h2>NAME</h2>
 <p> create-native-map &#8211; C/C# Mapping Creator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>create-native-map</code> [OPTIONS]* ASSEMBLY-FILE-NAME OUPUT-PREFIX</p>

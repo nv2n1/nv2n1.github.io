@@ -1,4 +1,5 @@
 ---
+
 title: "urxvt256c-background(1)"
 name: "urxvt256c-background"
 section: "1"
@@ -6,10 +7,7 @@ letter: "u"
 url: "/docs/linux/man/1-urxvt256c-background/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- background - manage terminal background 
+background - manage terminal background 
 
 <h2>SYNOPSIS</h2>
 

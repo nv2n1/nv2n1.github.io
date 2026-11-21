@@ -1,4 +1,5 @@
 ---
+
 title: "isdnconf(1)"
 name: "isdnconf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-isdnconf/"
 description: "isdnconf – manipulate or read ISDN phone number config files."
 ---
 
-<h2>NAME</h2>
 <p> isdnconf &#8211; manipulate or read ISDN phone number config files. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>isdnconf</code> </p>

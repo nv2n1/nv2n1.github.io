@@ -1,4 +1,5 @@
 ---
+
 title: "winff(1)"
 name: "winff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-winff/"
 description: "winff – video and audio batch converter using ffmpeg or avconv"
 ---
 
-<h2 class="name">NAME</h2>
 <p> winff &#8211; video and audio batch converter using ffmpeg or avconv </p>
 <h2>SYNOPSIS</h2>
 <dl>

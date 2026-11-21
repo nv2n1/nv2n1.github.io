@@ -1,4 +1,5 @@
 ---
+
 title: "uberftp(1)"
 name: "uberftp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-uberftp/"
 description: "uberftp – GridFTP-enabled client"
 ---
 
-<h2>NAME</h2>
 <p> uberftp &#8211; GridFTP-enabled client</p>
 <h2>SYNOPSIS</h2>
 <p> <code>uberftp</code> [options] [host options] [<i>host</i>] </p>

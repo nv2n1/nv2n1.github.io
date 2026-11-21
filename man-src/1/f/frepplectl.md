@@ -1,4 +1,5 @@
 ---
+
 title: "frepplectl(1)"
 name: "frepplectl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-frepplectl/"
 description: "frepplectl – open source production planning and scheduling"
 ---
 
-<h2>NAME</h2>
 <p> frepplectl &#8211; open source production planning and scheduling </p>
 <h2>SYNOPSIS</h2>
 <p> <code>frepplectl subcommand [options] [arguments]</code> </p>

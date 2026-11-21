@@ -1,4 +1,5 @@
 ---
+
 title: "pnmcrop(1)"
 name: "pnmcrop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnmcrop/"
 description: "pnmcrop – crop a portable anymap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pnmcrop &#8211; crop a portable anymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmcrop</code> [<code>-white</code>|<code>-black</code>|<code>-sides</code>] [<code>-left</code>] [<code>-right</code>] [<code>-top</code>] [<code>-bottom</code>] [<i>pnmfile</i>] </p>

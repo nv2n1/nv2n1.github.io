@@ -1,4 +1,5 @@
 ---
+
 title: "yum-debug-restore(1)"
 name: "yum-debug-restore"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-yum-debug-restore/"
 description: "yum-debug-restore – replay Yum transactions captured in a debug-dump file"
 ---
 
-<h2>NAME</h2>
 <p> yum-debug-restore &#8211; replay Yum transactions captured in a debug-dump file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>yum-debug-restore</code></p>

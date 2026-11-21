@@ -1,4 +1,5 @@
 ---
+
 title: "pkaction(1)"
 name: "pkaction"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pkaction/"
 description: "pkaction – Get details about a registered action"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pkaction &#8211; Get details about a registered action </p>
 <h2>SYNOPSIS</h2>
 <dl>

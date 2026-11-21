@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_alert_send(3)"
 name: "gnutls_alert_send"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_alert_send/"
 description: "gnutls_alert_send – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_alert_send &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pdb2mdb(1)"
 name: "pdb2mdb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pdb2mdb/"
 description: "pdb2mdb – Program Database to Mono Debugging Symbol converter."
 ---
 
-<h2>NAME</h2>
 <p> pdb2mdb &#8211; Program Database to Mono Debugging Symbol converter.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdb2mdb</code> pdb_file</p>

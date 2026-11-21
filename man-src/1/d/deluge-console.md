@@ -1,4 +1,5 @@
 ---
+
 title: "deluge-console(1)"
 name: "deluge-console"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-deluge-console/"
 description: "deluge-console – a bittorrent client curses interface"
 ---
 
-<h2 class="name">NAME</h2>
 <p> deluge-console &#8211; a bittorrent client curses interface</p>
 <h2>SYNOPSIS</h2>
 <p> <code>deluge-console [options]</code> </p>

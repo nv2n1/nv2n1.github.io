@@ -1,4 +1,5 @@
 ---
+
 title: "genkey(1)"
 name: "genkey"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-genkey/"
 description: "genkey – generate SSL certificates and certificate requests"
 ---
 
-<h2 class="name">NAME</h2>
 <p> genkey &#8211; generate SSL certificates and certificate requests </p>
 <h2>SYNOPSIS</h2>
 <dl>

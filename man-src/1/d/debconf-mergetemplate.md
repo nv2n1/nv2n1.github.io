@@ -1,4 +1,5 @@
 ---
+
 title: "debconf-mergetemplate(1)"
 name: "debconf-mergetemplate"
 section: "1"
@@ -6,10 +7,7 @@ letter: "d"
 url: "/docs/linux/man/1-debconf-mergetemplate/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- debconf-mergetemplate - merge together multiple debconf template files 
+debconf-mergetemplate - merge together multiple debconf template files 
 
 <h2>SYNOPSIS</h2>
 

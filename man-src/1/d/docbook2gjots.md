@@ -1,4 +1,5 @@
 ---
+
 title: "docbook2gjots(1)"
 name: "docbook2gjots"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docbook2gjots/"
 description: "docbook2gjots – Convert a DOCBOOK file to gjots format (on stdout)"
 ---
 
-<h2>NAME</h2>
 <p> docbook2gjots &#8211; Convert a DOCBOOK file to gjots format (on <code>stdout</code>)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>docbook2gjots</code> [ <i>DOCBOOK-file</i> ]</p>

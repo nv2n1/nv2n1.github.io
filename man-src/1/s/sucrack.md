@@ -1,4 +1,5 @@
 ---
+
 title: "sucrack(1)"
 name: "sucrack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sucrack/"
 description: "sucrack is a multithreaded Linux/UNIX tool for brute-force cracking of local user accounts via su."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>sucrack</code> is a multithreaded Linux/UNIX tool for brute-force cracking of local user accounts via su.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sucrack </code> [options] wordlist </p>

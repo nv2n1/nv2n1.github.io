@@ -1,4 +1,5 @@
 ---
+
 title: "csclng(1)"
 name: "csclng"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-csclng/"
 description: "csclng – a compiler wrapper that runs the Clang analyzer in background"
 ---
 
-<h2 class="name">NAME</h2>
 <p> csclng &#8211; a compiler wrapper that runs the Clang analyzer in background </p>
 <h2>SYNOPSIS</h2>
 <p> <code>csclng</code> [<i>&#8211;help</i> | <i>&#8211;print-path-to-wrap</i>]</p>

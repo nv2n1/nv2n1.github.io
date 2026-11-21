@@ -1,4 +1,5 @@
 ---
+
 title: "gdalmanage(1)"
 name: "gdalmanage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gdalmanage/"
 description: "gdalmanage – gdalmanage Identify, delete, rename and copy raster data files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gdalmanage &#8211; gdalmanage Identify, delete, rename and copy raster data files </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

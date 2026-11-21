@@ -1,4 +1,5 @@
 ---
+
 title: "seahorse(1)"
 name: "seahorse"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-seahorse/"
 description: "seahorse – Passwords and Keys"
 ---
 
-<h2 class="name">NAME</h2>
 <p> seahorse &#8211; Passwords and Keys </p>
 <h2>SYNOPSIS</h2>
 <dl>

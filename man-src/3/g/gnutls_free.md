@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_free(3)"
 name: "gnutls_free"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_free/"
 description: "gnutls_free – Returns a free() like function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_free &#8211; Returns a free() like function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/gnutls.h">gnutls/gnutls.h</a>&gt;</code> </p>

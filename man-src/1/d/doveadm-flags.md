@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-flags(1)"
 name: "doveadm-flags"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-doveadm-flags/"
 description: "doveadm-flags – add, remove or replace messages’ flags"
 ---
 
-<h2>NAME</h2>
 <p> doveadm-flags &#8211; add, remove or replace messages&#8217; flags</p>
 <h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>flags</code> [<code>-S</code> <i>socket_path</i>] <i>command flags search_query</i><br />

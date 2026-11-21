@@ -1,4 +1,5 @@
 ---
+
 title: "unshare(1)"
 name: "unshare"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-unshare/"
 description: "unshare – run program in new namespaces"
 ---
 
-<h2 class="name">NAME</h2>
 <p> unshare &#8211; run program in new namespaces </p>
 <h2>SYNOPSIS</h2>
 <p> <code>unshare</code> [options] [<i>program</i> [<i>arguments</i>]]</p>

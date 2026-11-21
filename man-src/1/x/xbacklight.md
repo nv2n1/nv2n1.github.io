@@ -1,4 +1,5 @@
 ---
+
 title: "xbacklight(1)"
 name: "xbacklight"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xbacklight/"
 description: "xbacklight – adjust backlight brightness using RandR extension"
 ---
 
-<h2>NAME</h2>
 <p> xbacklight &#8211; adjust backlight brightness using RandR extension</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xbacklight</code> [-help] [-display <i>display</i>] [-get] [-set percent] [-inc percent] [-dec percent]</p>

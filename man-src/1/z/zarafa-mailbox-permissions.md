@@ -1,4 +1,5 @@
 ---
+
 title: "zarafa-mailbox-permissions(1)"
 name: "zarafa-mailbox-permissions"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zarafa-mailbox-permissions/"
 description: "zarafa-mailbox-permissions – Manage mailbox delegate permissions."
 ---
 
-<h2 class="name">NAME</h2>
 <p> zarafa-mailbox-permissions &#8211; Manage mailbox delegate permissions. </p>
 <h2>SYNOPSIS</h2>
 <dl>

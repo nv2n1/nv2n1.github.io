@@ -1,4 +1,5 @@
 ---
+
 title: "nfanon(1)"
 name: "nfanon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nfanon/"
 description: "nfanon – netflow anonymisation"
 ---
 
-<h2>NAME</h2>
 <p> nfanon &#8211; netflow anonymisation</p>
 <h2>SYNOPSIS</h2>
 <dl>

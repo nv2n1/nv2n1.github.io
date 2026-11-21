@@ -1,4 +1,5 @@
 ---
+
 title: "hpialarms(1)"
 name: "hpialarms"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hpialarms/"
 description: "hpialarms – A openhpi sample application that shows \"Alarm Control\" management instruments"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hpialarms &#8211; A openhpi sample application that shows &quot;Alarm Control&quot; management instruments </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

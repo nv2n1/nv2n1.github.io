@@ -1,4 +1,5 @@
 ---
+
 title: "do_uconvert(3)"
 name: "do_uconvert"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-do_uconvert/"
 description: "do_uconvert – Converts a string to another encoding format. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> do_uconvert &#8211; Converts a string to another encoding format. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

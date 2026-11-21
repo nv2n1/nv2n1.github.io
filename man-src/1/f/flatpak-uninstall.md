@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-uninstall(1)"
 name: "flatpak-uninstall"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flatpak-uninstall/"
 description: "flatpak-uninstall – Uninstall an application or runtime"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flatpak-uninstall &#8211; Uninstall an application or runtime </p>
 <h2>SYNOPSIS</h2>
 <dl>

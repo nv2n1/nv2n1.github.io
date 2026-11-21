@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-getkeytab(1)"
 name: "ipa-getkeytab"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-getkeytab/"
 description: "ipa-getkeytab – Get a keytab for a Kerberos principal"
 ---
 
-<h2>NAME</h2>
 <p> ipa-getkeytab &#8211; Get a keytab for a Kerberos principal</p>
 <h2>SYNOPSIS</h2>
 <p> ipa-getkeytab <code>-p</code> <i>principal-name</i> <code>-k</code> <i>keytab-file</i> [ <code>-e</code> <i>encryption-types</i> ] [ <code>-s</code> <i>ipaserver</i> ] [ <code>-q</code> ] [ <code>-D</code>|<code>&#8211;binddn</code> <i>BINDDN</i> ] [ <code>-w|&#8211;bindpw</code> ] [ <code>-P</code>|<code>&#8211;password</code> <i>PASSWORD</i> ] [ <code>&#8211;cacert </code><i>CACERT</i> ] [ <code>-H|&#8211;ldapuri </code><i>URI</i> ] [ <code>-Y|&#8211;mech </code><i>GSSAPI|EXTERNAL</i> ] [ <code>-r</code> ] </p>

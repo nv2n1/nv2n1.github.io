@@ -1,4 +1,5 @@
 ---
+
 title: "make_services(1)"
 name: "make_services"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-make_services/"
 description: "make_services – generate GNUstep services info"
 ---
 
-<h2>NAME</h2>
 <p> make_services &#8211; generate GNUstep services info </p>
 <h2>SYNOPSIS</h2>
 <p> <code>make_services</code> [<code>&#8211;test</code> <i>filename</i> ] [<code>&#8211;verbose</code>|<code>&#8211;quiet</code>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "get_endianness(3)"
 name: "get_endianness"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_endianness/"
 description: "get_endianness — report the byte sex of fields in a dirfile"
 ---
 
-<h2>NAME</h2>
 <p> get_endianness &#8212; report the byte sex of fields in a dirfile</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

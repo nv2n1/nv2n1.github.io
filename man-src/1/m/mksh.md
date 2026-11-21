@@ -1,4 +1,5 @@
 ---
+
 title: "mksh(1)"
 name: "mksh"
 section: "1"
@@ -6,7 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-mksh/"
 description: "mksh sh – MirBSD Korn shell"
 ---
-<h2 class="name">NAME</h2>
+
 <p> <code>mksh</code> <code>sh</code> - MirBSD Korn shell </p>
 <h2>SYNOPSIS</h2>
 <p> -words [-<code>+abCefhiklmnprUuvXx </code>[-<code>T </code><i>/dev/ttyCn </i>| - ] ] [-<code>+o </code><i>option</i> ] [-<code>c </code><i>string |</i> -<code>s |</code> <i>file</i> [<i>argument ...</i> ] ] <br />

@@ -1,4 +1,5 @@
 ---
+
 title: "bson_copy(3)"
 name: "bson_copy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_copy/"
 description: "bson_copy() – The bson_copy() function shall copy the contents of a bson document into a new bson_t."
 ---
 
-<h2>NAME</h2>
 <p> bson_copy() &#8211; The bson_copy() function shall copy the contents of a bson document into a new bson_t.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

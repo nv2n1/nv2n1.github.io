@@ -1,4 +1,5 @@
 ---
+
 title: "bson_oid_copy(3)"
 name: "bson_oid_copy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_oid_copy/"
 description: "bson_oid_copy() – Copies the contents of src into dst."
 ---
 
-<h2>NAME</h2>
 <p> bson_oid_copy() &#8211; Copies the contents of src into dst.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

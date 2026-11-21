@@ -1,4 +1,5 @@
 ---
+
 title: "stap(1)"
 name: "stap"
 section: "1"
@@ -6,7 +7,7 @@ letter: "s"
 url: "/docs/linux/man/1-stap/"
 description: "stap – systemtap script translator/driver"
 ---
-<h2>NAME</h2>
+
 <p> stap - systemtap script translator/driver </p>
 <h2>SYNOPSIS</h2>
 <p> <br />

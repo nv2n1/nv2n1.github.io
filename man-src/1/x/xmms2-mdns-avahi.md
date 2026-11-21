@@ -1,4 +1,5 @@
 ---
+
 title: "xmms2-mdns-avahi(1)"
 name: "xmms2-mdns-avahi"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xmms2-mdns-avahi/"
 description: "xmms2-mdns-avahi – announces XMMS2 via mDNS"
 ---
 
-<h2>NAME</h2>
 <p> xmms2-mdns-avahi &#8211; announces XMMS2 via mDNS</p>
 <h2>SYNOPSIS</h2>
 <p> <i>xmms2-mdns-avahi</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "bson_utf8_escape_for_json(3)"
 name: "bson_utf8_escape_for_json"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_utf8_escape_for_json/"
 description: "bson_utf8_escape_for_json() – Escapes the string utf8 to be placed inside of a JSON string."
 ---
 
-<h2>NAME</h2>
 <p> bson_utf8_escape_for_json() &#8211; Escapes the string utf8 to be placed inside of a JSON string.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

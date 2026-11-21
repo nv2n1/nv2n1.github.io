@@ -1,4 +1,5 @@
 ---
+
 title: "repomanage(1)"
 name: "repomanage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-repomanage/"
 description: "repomanage – list the newest or oldest RPM packages in a directory"
 ---
 
-<h2>NAME</h2>
 <p> repomanage &#8211; list the newest or oldest RPM packages in a directory</p>
 <h2>SYNOPSIS</h2>
 <p> <code>repomanage</code> [options] directory</p>

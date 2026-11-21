@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc_bitmap_isequal(3)"
 name: "hwloc_bitmap_isequal"
 section: "3"
@@ -6,7 +7,7 @@ letter: "h"
 url: "/docs/linux/man/3-hwloc_bitmap_isequal/"
 description: "hwlocality_bitmap – The bitmap API"
 ---
-<h2 class="name">NAME</h2>
+
 <p> hwlocality_bitmap - The bitmap API </p>
 <h3>Macros</h3>
 <p> <br />

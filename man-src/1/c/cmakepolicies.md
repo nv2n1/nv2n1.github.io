@@ -1,4 +1,5 @@
 ---
+
 title: "cmakepolicies(1)"
 name: "cmakepolicies"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cmakepolicies/"
 description: "cmakepolicies – Reference of CMake policies."
 ---
 
-<h2>NAME</h2>
 <p> cmakepolicies &#8211; Reference of CMake policies. </p>
 <h2>DESCRIPTION</h2>
 <p> The &quot;cmake&quot; executable is the CMake command-line interface. It may be used to configure projects in scripts. Project configuration settings may be specified on the command line with the -D option. The -i option will cause cmake to interactively prompt for such settings. </p>

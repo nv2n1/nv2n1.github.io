@@ -1,4 +1,5 @@
 ---
+
 title: "aafire(1)"
 name: "aafire"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-aafire/"
 description: "aafire, aainfo, aasavefont, aatest – aalib example programs"
 ---
 
-<h2>NAME</h2>
 <p> aafire, aainfo, aasavefont, aatest &#8211; aalib example programs</p>
 <h2>SYNOPSIS</h2>
 <p> <code>aafire</code> <i>[options]</i> </p>

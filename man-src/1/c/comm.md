@@ -1,4 +1,5 @@
 ---
+
 title: "comm(1)"
 name: "comm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-comm/"
 description: "comm – compare two sorted files line by line"
 ---
 
-<h2 class="name">NAME</h2>
 <p> comm &#8211; compare two sorted files line by line </p>
 <h2>SYNOPSIS</h2>
 <p> <code>comm</code> [<i>,OPTION/</i>]&#8230; <i>,FILE1 FILE2/</i></p>

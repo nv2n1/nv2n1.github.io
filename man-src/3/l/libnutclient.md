@@ -1,4 +1,5 @@
 ---
+
 title: "libnutclient(3)"
 name: "libnutclient"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libnutclient/"
 description: "libnutclient – Network UPS Tools high-level client access library"
 ---
 
-<h2 class="name">NAME</h2>
 <p> libnutclient &#8211; Network UPS Tools high-level client access library </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

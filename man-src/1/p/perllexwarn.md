@@ -1,4 +1,5 @@
 ---
+
 title: "perllexwarn(1)"
 name: "perllexwarn"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perllexwarn/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perllexwarn - Perl Lexical Warnings 
+perllexwarn - Perl Lexical Warnings 
 
 <h2>DESCRIPTION</h2>
 

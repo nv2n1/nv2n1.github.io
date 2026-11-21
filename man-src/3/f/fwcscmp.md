@@ -1,4 +1,5 @@
 ---
+
 title: "fwcscmp(3)"
 name: "fwcscmp"
 section: "3"
@@ -6,9 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-fwcscmp/"
 ---
 
-<h2>NAME</h2>
-
- fwcscmp - fuzzy comparison of two wide-character strings
+fwcscmp - fuzzy comparison of two wide-character strings
 
 <h2>SYNOPSIS</h2>
 

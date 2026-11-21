@@ -1,4 +1,5 @@
 ---
+
 title: "nc6(1)"
 name: "nc6"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nc6/"
 description: "nc6 – network swiss army knife"
 ---
 
-<h2>NAME</h2>
 <p> nc6 &#8211; network swiss army knife</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nc6</code> <i>[options&#8230;] hostname port</i><br />

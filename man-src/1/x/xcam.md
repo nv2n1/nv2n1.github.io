@@ -1,4 +1,5 @@
 ---
+
 title: "xcam(1)"
 name: "xcam"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xcam/"
 description: "xcam – a graphical camera frontend for SANE"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xcam &#8211; a graphical camera frontend for SANE </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xcam</code> [<code>&#8211;buffersize</code>|<code>-B</code>] [<code>&#8211;version</code>|<code>-V</code>] [<code>&#8211;help</code>|<code>-h</code>] </p>

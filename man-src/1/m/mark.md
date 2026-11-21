@@ -1,4 +1,5 @@
 ---
+
 title: "mark(1)"
 name: "mark"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mark/"
 description: "mark – manipulate message sequences"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mark &#8211; manipulate message sequences </p>
 <h2>SYNOPSIS</h2>
 <dl>

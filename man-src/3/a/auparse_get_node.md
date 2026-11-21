@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_get_node(3)"
 name: "auparse_get_node"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_get_node/"
 description: "auparse_get_node – get the event’s machine node name"
 ---
 
-<h2>NAME</h2>
 <p> auparse_get_node &#8211; get the event&#8217;s machine node name</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

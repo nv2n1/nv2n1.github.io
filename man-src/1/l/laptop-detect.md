@@ -1,4 +1,5 @@
 ---
+
 title: "laptop-detect(1)"
 name: "laptop-detect"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-laptop-detect/"
 description: "laptop-detect – attempt to detect a laptop"
 ---
 
-<h2 class="name">NAME</h2>
 <p> laptop-detect &#8211; attempt to detect a laptop </p>
 <h2>SYNOPSIS</h2>
 <p> laptop-detect [<i>-h</i>|<i>&#8211;help</i>|<i>-v</i>|<i>&#8211;verbose</i>|<i>-V</i>|<i>&#8211;version</i>|<i>-D</i>|<i>&#8211;debug</i>]</p>

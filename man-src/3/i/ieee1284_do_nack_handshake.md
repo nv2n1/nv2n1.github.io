@@ -1,4 +1,5 @@
 ---
+
 title: "ieee1284_do_nack_handshake(3)"
 name: "ieee1284_do_nack_handshake"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ieee1284_do_nack_handshake/"
 description: "ieee1284_read_control, ieee1284_write_control, ieee1284_frob_control, ieee1284_do_nack_handshake – manipulate control lines"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ieee1284_read_control, ieee1284_write_control, ieee1284_frob_control, ieee1284_do_nack_handshake &#8211; manipulate control lines </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

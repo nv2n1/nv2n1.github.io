@@ -1,4 +1,5 @@
 ---
+
 title: "r2e(1)"
 name: "r2e"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-r2e/"
 description: "r2e – receive RSS feeds by email"
 ---
 
-<h2>NAME</h2>
 <p> r2e &#8211; receive RSS feeds by email</p>
 <h2>SYNOPSIS</h2>
 <p> <code>r2e action [options]</code></p>

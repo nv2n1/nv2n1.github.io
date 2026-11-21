@@ -1,4 +1,5 @@
 ---
+
 title: "pdftocairo(1)"
 name: "pdftocairo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pdftocairo/"
 description: "pdftocairo – Portable Document Format (PDF) to PNG/JPEG/TIFF/PDF/PS/EPS/SVG using cairo"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pdftocairo &#8211; Portable Document Format (PDF) to PNG/JPEG/TIFF/PDF/PS/EPS/SVG using cairo </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdftocairo</code> [options] <i>PDF-file</i> [<i>output-file</i>]</p>

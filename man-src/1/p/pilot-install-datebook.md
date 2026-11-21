@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-install-datebook(1)"
 name: "pilot-install-datebook"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot-install-datebook/"
 description: "pilot-install-datebook – Installs one or more new datebook entries onto your Palm handheld."
 ---
 
-<h2>NAME</h2>
 <p> pilot-install-datebook &#8211; Installs one or more new datebook entries onto your Palm handheld.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>

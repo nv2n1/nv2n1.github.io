@@ -1,4 +1,5 @@
 ---
+
 title: "snmpstatus(1)"
 name: "snmpstatus"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-snmpstatus/"
 description: "snmpstatus – retrieves a fixed set of management information from a network entity"
 ---
 
-<h2>NAME</h2>
 <p> snmpstatus &#8211; retrieves a fixed set of management information from a network entity</p>
 <h2>SYNOPSIS</h2>
 <p> <code>snmpstatus</code> [COMMON OPTIONS] [-Cf] AGENT</p>

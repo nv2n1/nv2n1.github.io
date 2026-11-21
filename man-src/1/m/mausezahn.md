@@ -1,4 +1,5 @@
 ---
+
 title: "mausezahn(1)"
 name: "mausezahn"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mausezahn/"
 description: "mausezahn – a fast versatile packet generator"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mausezahn &#8211; a fast versatile packet generator </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mausezahn</code> [<i>options</i>]<i>&lt;arg_string&gt; | &lt;hex_string&gt;</i> </p>

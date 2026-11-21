@@ -1,4 +1,5 @@
 ---
+
 title: "elektra-keytest(3)"
 name: "elektra-keytest"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-elektra-keytest/"
 description: "Key :: Methods for Making Tests –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Key :: Methods for Making Tests &#8211; </p>
 <p> Methods to do various tests on Keys.</p>
 <h3>Functions</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "xapian-replicate-server(1)"
 name: "xapian-replicate-server"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xapian-replicate-server/"
 description: "xapian-replicate-server – Service database replication requests from clients"
 ---
 
-<h2>NAME</h2>
 <p> xapian-replicate-server &#8211; Service database replication requests from clients</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xapian-replicate-server</code> [<i>OPTIONS</i>] <i>DATABASE_PARENT_DIRECTORY</i></p>

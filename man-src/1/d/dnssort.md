@@ -1,4 +1,5 @@
 ---
+
 title: "dnssort(1)"
 name: "dnssort"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dnssort/"
 description: "dnssort – sort DNS hostnames"
 ---
 
-<h2>NAME</h2>
 <p> dnssort &#8211; sort DNS hostnames</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dnssort</code> [<code>-r</code>] [<code>FILES</code>] </p>

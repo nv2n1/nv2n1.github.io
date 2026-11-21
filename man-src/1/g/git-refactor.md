@@ -1,4 +1,5 @@
 ---
+
 title: "git-refactor(1)"
 name: "git-refactor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-refactor/"
 description: "git-refactor – Create refactor branch"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-refactor</code> &#8211; Create refactor branch</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-refactor</code> [finish] &lt;name&gt;</p>

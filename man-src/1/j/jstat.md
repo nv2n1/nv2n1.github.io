@@ -1,4 +1,5 @@
 ---
+
 title: "jstat(1)"
 name: "jstat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jstat/"
 description: "jstat – Monitors Java Virtual Machine (JVM) statistics. This command is experimental and unsupported."
 ---
 
-<h2 class="name">NAME</h2>
 <p> jstat &#8211; Monitors Java Virtual Machine (JVM) statistics. This command is experimental and unsupported. </p>
 <h2>SYNOPSIS</h2>
 <dl>

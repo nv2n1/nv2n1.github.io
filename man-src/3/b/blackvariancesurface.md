@@ -1,4 +1,5 @@
 ---
+
 title: "blackvariancesurface(3)"
 name: "blackvariancesurface"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-blackvariancesurface/"
 description: "ql/termstructures/volatility/equityfx/blackvariancesurface.hpp – Black volatility surface modelled as variance surface."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/termstructures/volatility/equityfx/blackvariancesurface.hpp &#8211; Black volatility surface modelled as variance surface. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/volatility/equityfx/blackvoltermstructure.hpp&gt;<br />

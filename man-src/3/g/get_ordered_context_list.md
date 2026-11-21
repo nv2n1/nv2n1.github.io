@@ -1,4 +1,5 @@
 ---
+
 title: "get_ordered_context_list(3)"
 name: "get_ordered_context_list"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_ordered_context_list/"
 description: "get_ordered_context_list, get_ordered_context_list_with_level, get_default_context, get_default_context_with_level, get_default_context_with_role, get_default_context_with_rolelevel, query_user_con..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> get_ordered_context_list, get_ordered_context_list_with_level, get_default_context, get_default_context_with_level, get_default_context_with_role, get_default_context_with_rolelevel, query_user_context, manual_user_enter_context, get_default_role &#8211; determine SELinux context(s) for user sessions </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/selinux.h&gt;</code><br />

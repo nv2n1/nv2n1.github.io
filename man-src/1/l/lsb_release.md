@@ -1,4 +1,5 @@
 ---
+
 title: "lsb_release(1)"
 name: "lsb_release"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lsb_release/"
 description: "lsb_release – print distribution-specific information"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lsb_release &#8211; print distribution-specific information </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lsb_release</code> <i>[options]</i></p>

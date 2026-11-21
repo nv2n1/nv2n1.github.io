@@ -1,4 +1,5 @@
 ---
+
 title: "dptsv(1)"
 name: "dptsv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dptsv/"
 description: "dptsv – mutual converter between TSV and QDBM Depot database"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dptsv &#8211; mutual converter between TSV and QDBM Depot database </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dptsv import</code> [-bnum <i>num</i>] [-bin] <i>name</i><br />

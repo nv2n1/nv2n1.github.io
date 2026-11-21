@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_modify_qp(3)"
 name: "ibv_modify_qp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ibv_modify_qp/"
 description: "ibv_modify_qp – modify the attributes of a queue pair (QP)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ibv_modify_qp &#8211; modify the attributes of a queue pair (QP) </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

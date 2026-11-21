@@ -1,4 +1,5 @@
 ---
+
 title: "exswitch(3)"
 name: "exswitch"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-exswitch/"
 description: "exswitch – Controlling the console switch mode for background running. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> exswitch &#8211; Controlling the console switch mode for background running. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

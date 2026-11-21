@@ -1,4 +1,5 @@
 ---
+
 title: "getentropy(3)"
 name: "getentropy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getentropy/"
 description: "getentropy – fill a buffer with random bytes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getentropy &#8211; fill a buffer with random bytes </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>

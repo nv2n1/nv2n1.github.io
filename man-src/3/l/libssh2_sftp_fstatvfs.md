@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_sftp_fstatvfs(3)"
 name: "libssh2_sftp_fstatvfs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_sftp_fstatvfs/"
 description: "libssh2_sftp_statvfs, libssh2_sftp_fstatvfs – get file system statistics"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_sftp_statvfs, libssh2_sftp_fstatvfs &#8211; get file system statistics</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

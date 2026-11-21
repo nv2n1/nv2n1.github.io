@@ -1,4 +1,5 @@
 ---
+
 title: "dieharder(1)"
 name: "dieharder"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dieharder/"
 description: "dieharder – A testing and benchmarking tool for random number generators."
 ---
 
-<h2>NAME</h2>
 <p> <code>dieharder &#8211; A testing and benchmarking tool for random number</code> <code>generators.</code> </p>
 <h2>SYNOPSIS</h2>
 <p> dieharder [-a] [-d dieharder test number] [-f filename] [-B]<br />

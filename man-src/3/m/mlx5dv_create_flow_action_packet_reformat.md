@@ -1,4 +1,5 @@
 ---
+
 title: "mlx5dv_create_flow_action_packet_reformat(3)"
 name: "mlx5dv_create_flow_action_packet_reformat"
 section: "3"
@@ -6,12 +7,7 @@ letter: "m"
 url: "/docs/linux/man/3-mlx5dv_create_flow_action_packet_reformat/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- mlx5dv_create_flow_action_packet_reformat - Flow action reformat packet for mlx5 provider 
+mlx5dv_create_flow_action_packet_reformat - Flow action reformat packet for mlx5 provider 
 
 <h2>SYNOPSIS</h2>
 

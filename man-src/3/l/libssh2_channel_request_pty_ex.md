@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_channel_request_pty_ex(3)"
 name: "libssh2_channel_request_pty_ex"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_channel_request_pty_ex/"
 description: "libssh2_channel_request_pty_ex – short function description"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_channel_request_pty_ex &#8211; short function description</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

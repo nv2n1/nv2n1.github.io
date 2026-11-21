@@ -1,4 +1,5 @@
 ---
+
 title: "aa_getevent(3)"
 name: "aa_getevent"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_getevent/"
 description: "aa_getevent – keyboard functions"
 ---
 
-<h2>NAME</h2>
 <p> aa_getevent &#8211; keyboard functions</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

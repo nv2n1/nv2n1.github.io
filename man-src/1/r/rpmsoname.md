@@ -1,4 +1,5 @@
 ---
+
 title: "rpmsoname(1)"
 name: "rpmsoname"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rpmsoname/"
 description: "rpmsoname – list files that provide sonames in RPM package(s)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rpmsoname &#8211; list files that provide sonames in RPM package(s) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rpmsoname</code> [<code>-h</code>] [<i>options</i>] [<i></i><font SIZE="-1"><i>FILE</i></font><i></i>&#8230;] [<i></i><font SIZE="-1"><i>DIR</i></font><i></i>&#8230;]</p>

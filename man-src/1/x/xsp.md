@@ -1,4 +1,5 @@
 ---
+
 title: "xsp(1)"
 name: "xsp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xsp/"
 description: "XSP – Mono ASP.NET Web Server (xsp and xsp2)"
 ---
 
-<h2>NAME</h2>
 <p> XSP &#8211; Mono ASP.NET Web Server (xsp and xsp2)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xsp</code> [options] </p>

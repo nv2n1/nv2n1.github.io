@@ -1,4 +1,5 @@
 ---
+
 title: "getloadavg(3)"
 name: "getloadavg"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getloadavg/"
 description: "getloadavg – get system load averages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getloadavg &#8211; get system load averages </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

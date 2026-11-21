@@ -1,4 +1,5 @@
 ---
+
 title: "fwb_iosacl(1)"
 name: "fwb_iosacl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fwb_iosacl/"
 description: "fwb_ipt – Policy compiler for Cisco IOS ACL"
 ---
 
-<h2>NAME</h2>
 <p> fwb_ipt &#8211; Policy compiler for Cisco IOS ACL</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fwb_iosacl</code> <code>[-vV]</code> <code>[-d wdir]</code> <code>[-4]</code> <code>[-6]</code> <code>[-i]</code> <code>-f data_file.xml</code> object_name </p>

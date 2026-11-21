@@ -1,4 +1,5 @@
 ---
+
 title: "dlaqr0(3)"
 name: "dlaqr0"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlaqr0/"
 description: "dlaqr0.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dlaqr0.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

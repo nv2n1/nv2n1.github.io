@@ -1,4 +1,5 @@
 ---
+
 title: "dcmsign(1)"
 name: "dcmsign"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dcmsign/"
 description: "dcmsign – Sign and Verify DICOM Files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dcmsign &#8211; Sign and Verify DICOM Files </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

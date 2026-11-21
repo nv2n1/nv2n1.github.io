@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_global_init_extra(3)"
 name: "gnutls_global_init_extra"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_global_init_extra/"
 description: "gnutls_global_init_extra – initializes the global state of gnutls-extra"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_global_init_extra &#8211; initializes the global state of gnutls-extra</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/extra.h">gnutls/extra.h</a>&gt;</code> </p>

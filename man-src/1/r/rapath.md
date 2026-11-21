@@ -1,4 +1,5 @@
 ---
+
 title: "rapath(1)"
 name: "rapath"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rapath/"
 description: "rapath – print traceroute path information from argus(8) data."
 ---
 
-<h2>NAME</h2>
 <p> <code>rapath</code> &#8211; print traceroute path information from <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rapath</code> [<code>-A</code>] [<code>-M [ aspath [dist] | asnode ] </code>] [<code>-m fields </code>] [<code>raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>]</p>

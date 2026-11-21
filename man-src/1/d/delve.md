@@ -1,4 +1,5 @@
 ---
+
 title: "delve(1)"
 name: "delve"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-delve/"
 description: "delve – Inspect the contents of a Xapian database"
 ---
 
-<h2>NAME</h2>
 <p> delve &#8211; Inspect the contents of a Xapian database</p>
 <h2>SYNOPSIS</h2>
 <p> <code>delve</code> [<i>OPTIONS</i>] <i>DATABASE</i>&#8230;</p>

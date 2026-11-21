@@ -1,4 +1,5 @@
 ---
+
 title: "dvitodvi(1)"
 name: "dvitodvi"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dvitodvi/"
 description: "dvitodvi – rearrange pages in a DVI file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dvitodvi &#8211; rearrange pages in a DVI file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dvitodvi</code> [ <code>-q</code> ] [ <code>-i</code> <i>infile</i> ] [ <code>-o</code> <i>outfile</i> ] [ <code>-w</code><i>width</i> ] [ <code>-h</code><i>height</i> ] <i>pagespecs</i> [ <i>infile</i> [ <i>outfile</i> ] ]</p>

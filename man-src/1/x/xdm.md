@@ -1,4 +1,5 @@
 ---
+
 title: "xdm(1)"
 name: "xdm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xdm/"
 description: "xdm – X Display Manager with support for XDMCP, host chooser"
 ---
 
-<h2>NAME</h2>
 <p> xdm &#8211; X Display Manager with support for XDMCP, host chooser</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xdm</code> [ <code>-config</code> <i>configuration_file</i> ] [ <code>-nodaemon</code> ] [ <code>-debug</code> <i>debug_level</i> ] [ <code>-error</code> <i>error_log_file</i> ] [ <code>-resources</code> <i>resource_file</i> ] [ <code>-server</code> <i>server_entry</i> ] [ <code>-session</code> <i>session_program</i> ]</p>

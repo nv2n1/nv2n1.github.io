@@ -1,4 +1,5 @@
 ---
+
 title: "sgerfsx(3)"
 name: "sgerfsx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sgerfsx/"
 description: "sgerfsx.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sgerfsx.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

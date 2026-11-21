@@ -1,4 +1,5 @@
 ---
+
 title: "midicopy(1)"
 name: "midicopy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-midicopy/"
 description: "midicopy – Copy selected track, channel, time interval of a MIDI file to another MIDI file"
 ---
 
-<h2>NAME</h2>
 <p> midicopy &#8211; Copy selected track, channel, time interval of a MIDI file to another MIDI file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>midicopy</code> [<code>-ver</code>] [<code>-trks</code> <i>n1,n2,..</i>] [<code>-chans</code> <i>n1,n2,&#8230;</i>]<br />

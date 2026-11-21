@@ -1,4 +1,5 @@
 ---
+
 title: "banshee(1)"
 name: "banshee"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-banshee/"
 description: "Banshee – Media Management and Playback application Muinshee – Media Management and Playback application"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Banshee &#8211; Media Management and Playback application<br />
  Muinshee &#8211; Media Management and Playback application </p>
 <h2>SYNOPSIS</h2>

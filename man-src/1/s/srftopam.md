@@ -1,4 +1,5 @@
 ---
+
 title: "srftopam(1)"
 name: "srftopam"
 section: "1"
@@ -8,7 +9,7 @@ description: "srftopam – convert a SRF image file to Netpbm images"
 ---
 
 <p>&lt;html xmlns=&quot;<a rel="nofollow" href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>&quot; xml:lang=&quot;en&quot;&gt; </p>
-<h2 class="name">NAME</h2>
+
 <p> srftopam &#8211; convert a SRF image file to Netpbm images </p>
 <h2>SYNOPSIS</h2>
 <p> <code>srftopam</code> [<code>-verbose</code>] [<i>netpbmfile</i>] </p>

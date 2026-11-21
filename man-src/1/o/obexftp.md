@@ -1,4 +1,5 @@
 ---
+
 title: "obexftp(1)"
 name: "obexftp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-obexftp/"
 description: "obexftp – Mobile Equipment file transfer tool"
 ---
 
-<h2>NAME</h2>
 <p> obexftp &#8211; Mobile Equipment file transfer tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>obexftp</code> [<i>OPTION</i>] [<i>COMMANDS</i>]</p>

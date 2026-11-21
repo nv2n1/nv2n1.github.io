@@ -1,4 +1,5 @@
 ---
+
 title: "salt-master(1)"
 name: "salt-master"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-salt-master/"
 description: "salt-master – salt-master Documentation"
 ---
 
-<h2>NAME</h2>
 <p> salt-master &#8211; salt-master Documentation </p>
 <p> The Salt master daemon, used to control the Salt minions</p>
 <h2>SYNOPSIS</h2>

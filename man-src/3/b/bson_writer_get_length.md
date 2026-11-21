@@ -1,4 +1,5 @@
 ---
+
 title: "bson_writer_get_length(3)"
 name: "bson_writer_get_length"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_writer_get_length/"
 description: "bson_writer_get_length() – Fetches the current length of the content written by the buffer (including the initial offset). This includes a partly written document currently being written."
 ---
 
-<h2>NAME</h2>
 <p> bson_writer_get_length() &#8211; Fetches the current length of the content written by the buffer (including the initial offset). This includes a partly written document currently being written.</p>
 <h2>SYNOPSIS</h2>
 <pre>

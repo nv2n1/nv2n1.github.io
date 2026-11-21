@@ -1,4 +1,5 @@
 ---
+
 title: "gearman(1)"
 name: "gearman"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gearman/"
 description: "gearman – Gearmand Documentation, http://gearman.info/"
 ---
 
-<h2>NAME</h2>
 <p> gearman &#8211; Gearmand Documentation, <a rel="nofollow" href="http://gearman.info/">http://gearman.info/</a> </p>
 <p> Command line client for Gearmand</p>
 <h2>SYNOPSIS</h2>

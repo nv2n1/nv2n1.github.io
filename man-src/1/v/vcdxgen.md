@@ -1,4 +1,5 @@
 ---
+
 title: "vcdxgen(1)"
 name: "vcdxgen"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vcdxgen/"
 description: "vcdxgen – manual page for vcdxgen 0.7.24"
 ---
 
-<h2>NAME</h2>
 <p> vcdxgen &#8211; manual page for vcdxgen 0.7.24</p>
 <h2>SYNOPSIS</h2>
 <p> <code>vcdxgen</code> <i>mpeg-track1 </i>[<i>mpeg-track2</i>&#8230;]</p>

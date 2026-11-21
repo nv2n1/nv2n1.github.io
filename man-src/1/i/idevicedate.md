@@ -1,4 +1,5 @@
 ---
+
 title: "idevicedate(1)"
 name: "idevicedate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-idevicedate/"
 description: "idevicedate – Display the current date or set it on a device."
 ---
 
-<h2>NAME</h2>
 <p> idevicedate &#8211; Display the current date or set it on a device.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>idevicedate</code> [OPTIONS] </p>

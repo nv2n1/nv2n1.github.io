@@ -1,4 +1,5 @@
 ---
+
 title: "euare-instanceprofilecreate(1)"
 name: "euare-instanceprofilecreate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-instanceprofilecreate/"
 description: "euare-instanceprofilecreate – Create a new instance profile"
 ---
 
-<h2>NAME</h2>
 <p> euare-instanceprofilecreate &#8211; Create a new instance profile</p>
 <h2>SYNOPSIS</h2>
 <p> euare-instanceprofilecreate [-p PATH] [-r ROLE | <code>&#8211;create-role]</code> [-v]</p>

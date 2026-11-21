@@ -1,4 +1,5 @@
 ---
+
 title: "rredtool(1)"
 name: "rredtool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rredtool/"
 description: "rredtool – merge or apply a very restricted subset of ed patches"
 ---
 
-<h2>NAME</h2>
 <p> rredtool &#8211; merge or apply a very restricted subset of ed patches</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rredtool &#8211;help</code> </p>

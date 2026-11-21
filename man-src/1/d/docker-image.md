@@ -1,4 +1,5 @@
 ---
+
 title: "docker-image(1)"
 name: "docker-image"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-image/"
 description: "docker-image – Manage images"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-image &#8211; Manage images </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker image</code> </p>

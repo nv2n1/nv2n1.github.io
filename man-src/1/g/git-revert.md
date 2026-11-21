@@ -1,4 +1,5 @@
 ---
+
 title: "git-revert(1)"
 name: "git-revert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-revert/"
 description: "git-revert – Revert some existing commits"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-revert &#8211; Revert some existing commits </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

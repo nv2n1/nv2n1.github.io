@@ -1,4 +1,5 @@
 ---
+
 title: "djvudump(1)"
 name: "djvudump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-djvudump/"
 description: "djvudump – Display internal structure of DjVu files."
 ---
 
-<h2 class="name">NAME</h2>
 <p> djvudump &#8211; Display internal structure of DjVu files.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>djvudump [-o </code><i>outputfile</i><code>] </code><i>djvufiles</i><code>&#8230;</code> </p>

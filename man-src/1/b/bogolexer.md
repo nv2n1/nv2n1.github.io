@@ -1,4 +1,5 @@
 ---
+
 title: "bogolexer(1)"
 name: "bogolexer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bogolexer/"
 description: "bogolexer – Utility program for separating email messages into tokens"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bogolexer &#8211; Utility program for separating email messages into tokens </p>
 <h2>SYNOPSIS</h2>
 <dl>

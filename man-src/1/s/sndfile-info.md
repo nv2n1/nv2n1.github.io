@@ -1,4 +1,5 @@
 ---
+
 title: "sndfile-info(1)"
 name: "sndfile-info"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sndfile-info/"
 description: "sndfile-info – display information about a sound file"
 ---
 
-<h2>NAME</h2>
 <p> sndfile-info &#8211; display information about a sound file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sndfile-info</code> file</p>

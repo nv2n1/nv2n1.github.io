@@ -1,4 +1,5 @@
 ---
+
 title: "rlwrap(1)"
 name: "rlwrap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rlwrap/"
 description: "rlwrap – readline wrapper"
 ---
 
-<h2>NAME</h2>
 <p> rlwrap &#8211; readline wrapper</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rlwrap</code> <i>[rlwrap-options]</i> <i>command &#8230;</i></p>

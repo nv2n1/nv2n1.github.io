@@ -1,4 +1,5 @@
 ---
+
 title: "div(3)"
 name: "div"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-div/"
 description: "div, ldiv, lldiv, imaxdiv – compute quotient and remainder of an integer division"
 ---
 
-<h2 class="name">NAME</h2>
 <p> div, ldiv, lldiv, imaxdiv &#8211; compute quotient and remainder of an integer division </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "euare-accountgetsummary(1)"
 name: "euare-accountgetsummary"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-accountgetsummary/"
 description: "euare-accountgetsummary – Display account-level information about account entity usage and IAM quotas"
 ---
 
-<h2>NAME</h2>
 <p> euare-accountgetsummary &#8211; Display account-level information about account entity usage and IAM quotas</p>
 <h2>SYNOPSIS</h2>
 <p> euare-accountgetsummary [&#8211;as-account ACCOUNT] [-U URL]</p>

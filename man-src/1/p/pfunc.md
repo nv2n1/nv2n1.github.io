@@ -1,4 +1,5 @@
 ---
+
 title: "pfunc(1)"
 name: "pfunc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pfunc/"
 description: "pfunc – grep for perl functions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pfunc &#8211; grep for perl functions </p>
 <h2>SYNOPSIS</h2>
 <pre>

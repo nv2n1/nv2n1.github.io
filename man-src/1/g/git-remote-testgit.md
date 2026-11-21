@@ -1,4 +1,5 @@
 ---
+
 title: "git-remote-testgit(1)"
 name: "git-remote-testgit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-remote-testgit/"
 description: "git-remote-testgit – Example remote-helper"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-remote-testgit &#8211; Example remote-helper </p>
 <h2>SYNOPSIS</h2>
 <pre>

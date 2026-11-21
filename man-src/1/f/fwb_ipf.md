@@ -1,4 +1,5 @@
 ---
+
 title: "fwb_ipf(1)"
 name: "fwb_ipf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fwb_ipf/"
 description: "fwb_ipf – Policy compiler for ipfilter"
 ---
 
-<h2>NAME</h2>
 <p> fwb_ipf &#8211; Policy compiler for ipfilter</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fwb_ipf</code> <code>[-vVx]</code> <code>[-d wdir]</code> <code>[-o output.fw]</code> <code>[-i]</code> <code>-f data_file.xml</code> object_name </p>

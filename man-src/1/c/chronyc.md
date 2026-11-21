@@ -1,4 +1,5 @@
 ---
+
 title: "chronyc(1)"
 name: "chronyc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-chronyc/"
 description: "chronyc – command-line interface for chrony daemon"
 ---
 
-<h2 class="name">NAME</h2>
 <p> chronyc &#8211; command-line interface for chrony daemon </p>
 <h2>SYNOPSIS</h2>
 <p> <code>chronyc</code> [<i>OPTION</i>]&#8230; [<i>COMMAND</i>]&#8230;</p>

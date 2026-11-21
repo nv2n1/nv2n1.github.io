@@ -1,4 +1,5 @@
 ---
+
 title: "pee(1)"
 name: "pee"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pee/"
 description: "pee – tee standard input to pipes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pee &#8211; tee standard input to pipes </p>
 <h2>SYNOPSIS</h2>
 <dl>

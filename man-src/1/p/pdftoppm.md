@@ -1,4 +1,5 @@
 ---
+
 title: "pdftoppm(1)"
 name: "pdftoppm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pdftoppm/"
 description: "pdftoppm – Portable Document Format (PDF) to Portable Pixmap (PPM) converter (version 3.03)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pdftoppm &#8211; Portable Document Format (PDF) to Portable Pixmap (PPM) converter (version 3.03) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdftoppm</code> [options] <i>PDF-file PPM-root</i></p>

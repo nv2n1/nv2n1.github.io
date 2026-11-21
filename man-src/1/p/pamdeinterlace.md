@@ -1,4 +1,5 @@
 ---
+
 title: "pamdeinterlace(1)"
 name: "pamdeinterlace"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamdeinterlace/"
 description: "pamdeinterlace – remove ever other row from a PAM/PNM image"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamdeinterlace &#8211; remove ever other row from a PAM/PNM image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamdeinterlace</code> [<code>-takeodd</code>] [<code>-takeeven</code>] <i>N</i> [<i>infile</i>] </p>

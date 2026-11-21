@@ -1,4 +1,5 @@
 ---
+
 title: "gui_menu_draw_menu_item(3)"
 name: "gui_menu_draw_menu_item"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gui_menu_draw_menu_item/"
 description: "gui_menu_draw_menu, gui_menu_draw_menu_item – Hooks to modify the appearance of menus. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> gui_menu_draw_menu, gui_menu_draw_menu_item &#8211; Hooks to modify the appearance of menus. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

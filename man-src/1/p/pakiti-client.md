@@ -1,4 +1,5 @@
 ---
+
 title: "pakiti-client(1)"
 name: "pakiti-client"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pakiti-client/"
 description: "pakiti-client – report the list of installed packages to a collecting server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pakiti-client &#8211; report the list of installed packages to a collecting server </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pakiti-client</code> [<i></i><font SIZE="-1"><i>OPTIONS</i></font><i></i>]</p>

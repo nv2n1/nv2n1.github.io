@@ -1,4 +1,5 @@
 ---
+
 title: "newhelp(1)"
 name: "newhelp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-newhelp/"
 description: "newhelp – generate a performance metrics help database"
 ---
 
-<h2>NAME</h2>
 <p> <code>newhelp</code> &#8211; generate a performance metrics help database</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/newhelp</code> [<code>-V</code>] [<code>-n</code> <i>pmnsfile</i>] [<code>-o</code> <i>outputfile</i>] [<code>-v</code> <i>version</i>] [<i>file</i> &#8230;]</p>

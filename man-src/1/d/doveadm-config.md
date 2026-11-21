@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-config(1)"
 name: "doveadm-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-doveadm-config/"
 description: "doveconf – Dovecot’s configuration dumping utility"
 ---
 
-<h2>NAME</h2>
 <p> doveconf &#8211; Dovecot&#8217;s configuration dumping utility</p>
 <h2>SYNOPSIS</h2>
 <p> <code>doveconf</code> [<code>-adnNSx</code>] [<code>-c</code> <i>config-file</i>] [<code>-f</code> <i>filter</i>] [<code>-m</code> <i>module</i>]<br />

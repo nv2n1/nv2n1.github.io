@@ -1,4 +1,5 @@
 ---
+
 title: "mate-power-manager-bugreport(1)"
 name: "mate-power-manager-bugreport"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-power-manager-bugreport/"
 description: "mate-power-manager-bugreport – collect system information for mate power manager bugreports"
 ---
 
-<h2>NAME</h2>
 <p> mate-power-manager-bugreport &#8211; collect system information for mate power manager bugreports</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-power-manager-bugreport</code></p>

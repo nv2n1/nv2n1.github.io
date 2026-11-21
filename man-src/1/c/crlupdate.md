@@ -1,4 +1,5 @@
 ---
+
 title: "crlupdate(1)"
 name: "crlupdate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-crlupdate/"
 description: "crlupdate – Mono Certficate Revocation List Downloader and Updater"
 ---
 
-<h2>NAME</h2>
 <p> crlupdate &#8211; Mono Certficate Revocation List Downloader and Updater</p>
 <h2>SYNOPSIS</h2>
 <p> <code>crlupdate [-m] [-v] [-f]</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "perlos2(1)"
 name: "perlos2"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlos2/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlos2 - Perl under OS/2, DOS, Win0.3*, Win0.95 and WinNT. 
+perlos2 - Perl under OS/2, DOS, Win0.3*, Win0.95 and WinNT. 
 
 <h2>SYNOPSIS</h2>
 

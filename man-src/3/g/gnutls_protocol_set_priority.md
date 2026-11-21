@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_protocol_set_priority(3)"
 name: "gnutls_protocol_set_priority"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_protocol_set_priority/"
 description: "gnutls_protocol_set_priority – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_protocol_set_priority &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/compat.h&gt;</code> </p>

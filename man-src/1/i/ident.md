@@ -1,4 +1,5 @@
 ---
+
 title: "ident(1)"
 name: "ident"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ident/"
 description: "ident – identify RCS keyword strings in files"
 ---
 
-<h2>NAME</h2>
 <p> ident &#8211; identify RCS keyword strings in files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ident</code> [ <code>-q</code> ] [ <code>-V</code> ] [ <i>file</i> &#8230; ]</p>

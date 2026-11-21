@@ -1,4 +1,5 @@
 ---
+
 title: "aa_recommendlowdisplay(3)"
 name: "aa_recommendlowdisplay"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_recommendlowdisplay/"
 description: "aa_recommendlowdisplay – Add the given driver to the end of list of display recommended drivers."
 ---
 
-<h2>NAME</h2>
 <p> aa_recommendlowdisplay &#8211; Add the given driver to the end of list of display recommended drivers.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

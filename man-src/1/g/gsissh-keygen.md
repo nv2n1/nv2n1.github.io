@@ -1,4 +1,5 @@
 ---
+
 title: "gsissh-keygen(1)"
 name: "gsissh-keygen"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gsissh-keygen/"
 description: "ssh-keygen – authentication key generation, management and conversion"
 ---
 
-<h2>NAME</h2>
 <p> <code>ssh-keygen</code> &#8211; authentication key generation, management and conversion</p>
 <h2>SYNOPSIS</h2>
 <p> -words <code>ssh-keygen</code> [-<code>q</code> ] [-<code>b </code><i>bits</i> ] [-<code>t </code><i>type</i> ] [-<code>N </code><i>new_passphrase</i> ] [-<code>C </code><i>comment</i> ] [-<code>f </code><i>output_keyfile</i> ]<br />

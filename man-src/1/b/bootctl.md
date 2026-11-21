@@ -1,4 +1,5 @@
 ---
+
 title: "bootctl(1)"
 name: "bootctl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bootctl/"
 description: "bootctl – Control EFI firmware boot settings and manage boot loader"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bootctl &#8211; Control EFI firmware boot settings and manage boot loader </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "ppdmerge(1)"
 name: "ppdmerge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppdmerge/"
 description: "ppdmerge – merge ppd files (deprecated)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ppdmerge &#8211; merge ppd files (deprecated) </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppdmerge</code> [ <code>-o</code> <i>output-ppd-file</i> ] <i>ppd-file</i> <i>ppd-file</i> [ &#8230; <i>ppd-file</i> ]</p>

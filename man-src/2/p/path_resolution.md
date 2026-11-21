@@ -1,4 +1,5 @@
 ---
+
 title: "path_resolution(2)"
 name: "path_resolution"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-path_resolution/"
 description: "path_resolution – how a pathname is resolved to a file"
 ---
 
-<h2>NAME</h2>
 <p> path_resolution &#8211; how a pathname is resolved to a file</p>
 <h2>DESCRIPTION</h2>
 <p> Some UNIX/Linux system calls have as parameter one or more filenames. A filename (or pathname) is resolved as follows.</p>

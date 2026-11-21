@@ -1,4 +1,5 @@
 ---
+
 title: "cap_copy_ext(3)"
 name: "cap_copy_ext"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cap_copy_ext/"
 description: "cap_copy_ext, cap_size, cap_copy_int – capability state external representation translation"
 ---
 
-<h2>NAME</h2>
 <p> cap_copy_ext, cap_size, cap_copy_int &#8211; capability state external representation translation</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/capability.h&gt;</code> </p>

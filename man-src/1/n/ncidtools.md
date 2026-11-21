@@ -1,4 +1,5 @@
 ---
+
 title: "ncidtools(1)"
 name: "ncidtools"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ncidtools/"
 description: "cidlog – view Caller ID log file"
 ---
 
-<h2>NAME</h2>
 <p> <code>cidlog</code> &#8211; view Caller ID log file </p>
 <p> <code>cidalias</code> &#8211; view Caller ID alias definitions </p>
 <p> <code>cidupdate</code> &#8211; update Caller ID aliases in log file</p>

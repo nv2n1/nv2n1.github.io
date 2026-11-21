@@ -1,4 +1,5 @@
 ---
+
 title: "zshbuiltins(1)"
 name: "zshbuiltins"
 section: "1"
@@ -6,7 +7,7 @@ letter: "z"
 url: "/docs/linux/man/1-zshbuiltins/"
 description: "zshbuiltins – zsh built-in commands"
 ---
-<h2 class="name">NAME</h2>
+
 <p> zshbuiltins - zsh built-in commands </p>
 <h2>SHELL BUILTIN COMMANDS</h2>
 <p> Some shell builtin commands take options as described in individual entries; these are often referred to in the list below as `<code>flags</code>&#8216; to avoid confusion with shell options, which may also have an effect on the behaviour of builtin commands. In this introductory section, `<code>option</code>&#8216; always has the meaning of an option to a command that should be familiar to most command line users. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "docker-context-update(1)"
 name: "docker-context-update"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-context-update/"
 description: "docker-context-update – Update a context"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-context-update &#8211; Update a context </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker context update [OPTIONS] CONTEXT</code> </p>

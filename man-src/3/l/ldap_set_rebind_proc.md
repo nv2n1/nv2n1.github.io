@@ -1,4 +1,5 @@
 ---
+
 title: "ldap_set_rebind_proc(3)"
 name: "ldap_set_rebind_proc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldap_set_rebind_proc/"
 description: "ldap_bind, ldap_bind_s, ldap_simple_bind, ldap_simple_bind_s, ldap_sasl_bind, ldap_sasl_bind_s, ldap_sasl_interactive_bind_s, ldap_parse_sasl_bind_result, ldap_unbind, ldap_unbind_s, ldap_unbind_ex..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ldap_bind, ldap_bind_s, ldap_simple_bind, ldap_simple_bind_s, ldap_sasl_bind, ldap_sasl_bind_s, ldap_sasl_interactive_bind_s, ldap_parse_sasl_bind_result, ldap_unbind, ldap_unbind_s, ldap_unbind_ext, ldap_unbind_ext_s, ldap_set_rebind_proc &#8211; LDAP bind routines </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>

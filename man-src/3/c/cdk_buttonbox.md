@@ -1,4 +1,5 @@
 ---
+
 title: "cdk_buttonbox(3)"
 name: "cdk_buttonbox"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cdk_buttonbox/"
 description: "cdk_buttonbox – Creates a managed curses buttonbox widget."
 ---
 
-<h2>NAME</h2>
 <p> cdk_buttonbox &#8211; Creates a managed curses buttonbox widget.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>

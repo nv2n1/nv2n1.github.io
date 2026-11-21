@@ -1,4 +1,5 @@
 ---
+
 title: "murmur(1)"
 name: "murmur"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-murmur/"
 description: "Murmur – PyGTK2 client for museek"
 ---
 
-<h2>NAME</h2>
 <p> <code>Murmur</code> &#8211; PyGTK2 client for museek</p>
 <h2>SYNOPSIS</h2>
 <p> <code>murmur</code> [-c &#8211;config &lt;<i>filename</i>&gt;] [-l &#8211;log &lt;<i>directory</i>&gt;] [-v] [&#8211;version] [-d] [-h] [&#8211;help]</p>

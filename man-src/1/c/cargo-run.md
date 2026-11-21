@@ -1,4 +1,5 @@
 ---
+
 title: "cargo-run(1)"
 name: "cargo-run"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cargo-run/"
 description: "cargo-run – Run the current project"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cargo-run &#8211; Run the current project </p>
 <h2>SYNOPSIS</h2>
 <p> cargo run [OPTIONS] [&#8211;] [&lt;ARGS&gt;&#8230;]</p>

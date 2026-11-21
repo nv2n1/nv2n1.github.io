@@ -1,4 +1,5 @@
 ---
+
 title: "dlanv2(3)"
 name: "dlanv2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlanv2/"
 description: "dlanv2.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dlanv2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

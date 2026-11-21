@@ -1,4 +1,5 @@
 ---
+
 title: "lxqt-config-session(1)"
 name: "lxqt-config-session"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lxqt-config-session/"
 description: "lxqt-config-session – Application settings of LXQt: The Lightweight Qt Desktop Environment"
 ---
 
-<h2>NAME</h2>
 <p> <code>lxqt-config-session</code> &#8211; Application settings of <code>LXQt</code>: The Lightweight Qt Desktop Environment</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lxqt-config-session</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "afppasswd(1)"
 name: "afppasswd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-afppasswd/"
 description: "afppasswd – netatalk password maintenance utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> afppasswd &#8211; netatalk password maintenance utility </p>
 <h2>SYNOPSIS</h2>
 <dl>

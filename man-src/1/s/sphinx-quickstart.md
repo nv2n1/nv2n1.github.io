@@ -1,4 +1,5 @@
 ---
+
 title: "sphinx-quickstart(1)"
 name: "sphinx-quickstart"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sphinx-quickstart/"
 description: "sphinx-quickstart – Sphinx documentation template generator"
 ---
 
-<h2>NAME</h2>
 <p> sphinx-quickstart &#8211; Sphinx documentation template generator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sphinx-quickstart</code></p>

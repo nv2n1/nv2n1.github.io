@@ -1,4 +1,5 @@
 ---
+
 title: "ausearch_add_item(3)"
 name: "ausearch_add_item"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ausearch_add_item/"
 description: "ausearch_add_item – build up search rule"
 ---
 
-<h2>NAME</h2>
 <p> ausearch_add_item &#8211; build up search rule</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

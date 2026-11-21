@@ -1,4 +1,5 @@
 ---
+
 title: "gtk-builder-convert(1)"
 name: "gtk-builder-convert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gtk-builder-convert/"
 description: "gtk-builder-convert – Glade file conversion utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gtk-builder-convert &#8211; Glade file conversion utility </p>
 <h2>SYNOPSIS</h2>
 <dl>

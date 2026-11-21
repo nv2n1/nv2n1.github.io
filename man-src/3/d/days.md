@@ -1,4 +1,5 @@
 ---
+
 title: "days(3)"
 name: "days"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-days/"
 description: "QuantLib::Period –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::Period &#8211; </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/time/period.hpp&gt; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "svnversion(1)"
 name: "svnversion"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-svnversion/"
 description: "svnversion – Produce a compact version number for a working copy."
 ---
 
-<h2>NAME</h2>
 <p> svnversion &#8211; Produce a compact version number for a working copy.</p>
 <h2>SYNOPSIS</h2>
 <dl>

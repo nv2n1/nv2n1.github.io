@@ -1,4 +1,5 @@
 ---
+
 title: "globus_rls_client_connection(3)"
 name: "globus_rls_client_connection"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_rls_client_connection/"
 description: "Connection Management –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Connection Management &#8211; </p>
 <p> Functions to open and close connections to an RLS server.</p>
 <h3>Defines</h3>

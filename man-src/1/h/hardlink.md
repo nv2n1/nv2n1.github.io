@@ -1,4 +1,5 @@
 ---
+
 title: "hardlink(1)"
 name: "hardlink"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hardlink/"
 description: "hardlink – link multiple copies of a file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hardlink &#8211; link multiple copies of a file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>hardlink</code> [options] [<i>directory</i>|<i>file</i>]&#8230;</p>

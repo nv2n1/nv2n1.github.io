@@ -1,4 +1,5 @@
 ---
+
 title: "dbcoldefine(1)"
 name: "dbcoldefine"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dbcoldefine/"
 description: "dbcoldefine – define the columns of a plain text file to make it an Fsdb file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dbcoldefine &#8211; define the columns of a plain text file to make it an Fsdb file </p>
 <h2>SYNOPSIS</h2>
 <p> dbcoldefine [-F x] [column&#8230;]</p>

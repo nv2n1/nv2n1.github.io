@@ -1,4 +1,5 @@
 ---
+
 title: "cheatmake(1)"
 name: "cheatmake"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cheatmake/"
 description: "cheatmake – fool make into not rebuilding certain files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cheatmake &#8211; fool <code>make</code> into not rebuilding certain files </p>
 <h2>SYNOPSIS</h2>
 <dl>

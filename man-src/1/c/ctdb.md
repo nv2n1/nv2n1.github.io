@@ -1,4 +1,5 @@
 ---
+
 title: "ctdb(1)"
 name: "ctdb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ctdb/"
 description: "ctdb – CTDB management utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ctdb &#8211; CTDB management utility </p>
 <h2>SYNOPSIS</h2>
 <dl>

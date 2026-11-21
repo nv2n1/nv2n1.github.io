@@ -1,4 +1,5 @@
 ---
+
 title: "pythonjenkins(1)"
 name: "pythonjenkins"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pythonjenkins/"
 description: "pythonjenkins – Python Jenkins Documentation"
 ---
 
-<h2>NAME</h2>
 <p> pythonjenkins &#8211; Python Jenkins Documentation </p>
 <p> Python Jenkins is a python wrapper for the <i>Jenkins</i> REST API which aims to provide a more conventionally pythonic way of controlling a Jenkins server. It provides a higher-level API containing a number of convenience functions. </p>
 <p> We like to use python-jenkins to automate our Jenkins servers. Here are some of the things you can use it for:</p>

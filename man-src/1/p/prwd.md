@@ -1,4 +1,5 @@
 ---
+
 title: "prwd(1)"
 name: "prwd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-prwd/"
 description: "prwd – universal shell prompt"
 ---
 
-<h2>NAME</h2>
 <p> <code>prwd</code> &#8211; universal shell prompt</p>
 <h2>SYNOPSIS</h2>
 <p> <code>prwd</code> [-<code>aVh </code></p>

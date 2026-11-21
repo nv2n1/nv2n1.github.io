@@ -1,4 +1,5 @@
 ---
+
 title: "gpsdrive(1)"
 name: "gpsdrive"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpsdrive/"
 description: "gpsdrive – displays GPS position on a map"
 ---
 
-<h2>NAME</h2>
 <p> gpsdrive &#8211; displays GPS position on a map</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gpsdrive [options]</code> </p>

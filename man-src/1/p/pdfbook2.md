@@ -1,4 +1,5 @@
 ---
+
 title: "pdfbook2(1)"
 name: "pdfbook2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pdfbook2/"
 description: "pdfbook2 – transform pdf files into booklets for double-sided printing"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pdfbook2 &#8211; transform pdf files into booklets for double-sided printing</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdfbook2</code> [ <i>options</i> ] <i>INPUT</i> [ <i>INPUT</i>, &#8230;] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "metacity-theme-viewer(1)"
 name: "metacity-theme-viewer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-metacity-theme-viewer/"
 description: "metacity-theme-viewer – view metacity themes"
 ---
 
-<h2>NAME</h2>
 <p> metacity-theme-viewer &#8211; view metacity themes</p>
 <h2>SYNOPSIS</h2>
 <p> <code>metacity-theme-viewer</code> [ <i>THEMENAME</i> ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gmtget(1)"
 name: "gmtget"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gmtget/"
 description: "gmtget – Get individual GMT default parameters"
 ---
 
-<h2>NAME</h2>
 <p> gmtget &#8211; Get individual GMT default parameters</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gmtget</code> [ <i>defaultsfile</i> ] [ ] <i>PARAMETER1</i> [ <i>PARAMETER2</i> <i>PARAMETER3</i> &#8230; ] </p>

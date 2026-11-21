@@ -1,4 +1,5 @@
 ---
+
 title: "perl5130delta(1)"
 name: "perl5130delta"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perl5130delta/"
 description: "perl5130delta – what is new for perl v5.13.0"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perl5130delta &#8211; what is new for perl v5.13.0 </p>
 <h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.12.0 release and the 5.13.0 release. </p>

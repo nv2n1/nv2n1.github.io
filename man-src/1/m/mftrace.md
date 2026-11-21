@@ -1,4 +1,5 @@
 ---
+
 title: "mftrace(1)"
 name: "mftrace"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mftrace/"
 description: "mftrace – convert METAFONT format fonts into Type1 outline fonts"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mftrace &#8211; convert METAFONT format fonts into Type1 outline fonts </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mftrace</code> [<i>options</i>]<i> fontname</i></p>

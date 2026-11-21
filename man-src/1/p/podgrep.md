@@ -1,4 +1,5 @@
 ---
+
 title: "podgrep(1)"
 name: "podgrep"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-podgrep/"
 description: "podgrep – grep in pod sections only"
 ---
 
-<h2 class="name">NAME</h2>
 <p> podgrep &#8211; grep in pod sections only </p>
 <h2>SYNOPSIS</h2>
 <p> podgrep [<code>-i</code>] [<code>-p</code>] [<code>-f</code>] [<code>-h</code>] <i>pattern</i> [ <i>files</i> &#8230; ]</p>

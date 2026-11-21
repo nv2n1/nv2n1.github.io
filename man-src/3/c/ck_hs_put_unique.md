@@ -1,4 +1,5 @@
 ---
+
 title: "ck_hs_put_unique(3)"
 name: "ck_hs_put_unique"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_hs_put_unique/"
 description: "ck_hs_put_unique – unconditionally store unique key into a hash set"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_hs_put_unique</code> &#8211; unconditionally store unique key into a hash set</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

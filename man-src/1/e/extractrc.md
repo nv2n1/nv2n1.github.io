@@ -1,4 +1,5 @@
 ---
+
 title: "extractrc(1)"
 name: "extractrc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-extractrc/"
 description: "extractrc – Extract message strings from UI and GUI-RC files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> extractrc &#8211; Extract message strings from UI and GUI-RC files </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "mdb-tables(1)"
 name: "mdb-tables"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mdb-tables/"
 description: "mdb-tables – Get listing of tables in an MDB database"
 ---
 
-<h2>NAME</h2>
 <p> <code>mdb-tables </code>&#8211; Get listing of tables in an MDB database</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

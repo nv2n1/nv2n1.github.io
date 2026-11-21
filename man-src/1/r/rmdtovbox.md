@@ -1,4 +1,5 @@
 ---
+
 title: "rmdtovbox(1)"
 name: "rmdtovbox"
 section: "1"
@@ -6,9 +7,7 @@ letter: "r"
 url: "/docs/linux/man/1-rmdtovbox/"
 ---
 
-<h2>NAME</h2>
-
- rmdtovbox - isdn voice box (converter backend)
+rmdtovbox - isdn voice box (converter backend)
 
 <h2>DESCRIPTION</h2>
 

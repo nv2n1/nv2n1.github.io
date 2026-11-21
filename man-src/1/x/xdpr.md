@@ -1,4 +1,5 @@
 ---
+
 title: "xdpr(1)"
 name: "xdpr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xdpr/"
 description: "xdpr – dump an X window directly to a printer"
 ---
 
-<h2>NAME</h2>
 <p> xdpr &#8211; dump an X window directly to a printer</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xdpr</code> [ <i>filename</i> ] [ <code>-display</code> <i>host:display</i> ] [ <code>-P</code><i>printer</i> ] [ <code>-device</code> <i>devtype</i> ] [ <i>option</i> &#8230; ] </p>

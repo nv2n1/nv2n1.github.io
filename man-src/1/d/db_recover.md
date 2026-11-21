@@ -1,4 +1,5 @@
 ---
+
 title: "db_recover(1)"
 name: "db_recover"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-db_recover/"
 description: "db5.3_recover – Restore the database to a consistent state"
 ---
 
-<h2 class="name">NAME</h2>
 <p> db5.3_recover &#8211; Restore the database to a consistent state </p>
 <h2>SYNOPSIS</h2>
 <p> <code>db5.3_recover</code> [-ceVv] [-h home] [-P password] [-t [[CC]YY]MMDDhhmm[.SS]]]</p>

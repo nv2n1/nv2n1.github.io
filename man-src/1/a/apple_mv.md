@@ -1,4 +1,5 @@
 ---
+
 title: "apple_mv(1)"
 name: "apple_mv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-apple_mv/"
 description: "apple_mv – Do an apple move, moving metadata and the resource fork as well"
 ---
 
-<h2 class="name">NAME</h2>
 <p> apple_mv &#8211; Do an apple move, moving metadata and the resource fork as well </p>
 <h2>SYNOPSIS</h2>
 <p> <code>/usr/bin/apple_mv</code> <i>SOURCE DEST</i> <code>/usr/bin/apple_mv</code> <i>SOURCE</i>&#8230; <i>DIRECTORY</i></p>

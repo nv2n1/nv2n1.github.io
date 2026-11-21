@@ -1,4 +1,5 @@
 ---
+
 title: "ipmitool(1)"
 name: "ipmitool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipmitool/"
 description: "ipmitool – utility for controlling IPMI-enabled devices"
 ---
 
-<h2>NAME</h2>
 <p> ipmitool &#8211; utility for controlling IPMI-enabled devices</p>
 <h2>SYNOPSIS</h2>
 <p> ipmitool [ &lt;options&gt; ] &lt;command&gt; [ &lt;sub-commands and sub-options&gt; ] </p>

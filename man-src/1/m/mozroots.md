@@ -1,4 +1,5 @@
 ---
+
 title: "mozroots(1)"
 name: "mozroots"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mozroots/"
 description: "mozroots – Download and import trusted root certificates from Mozilla’s LXR into Mono’s certificate store"
 ---
 
-<h2>NAME</h2>
 <p> mozroots &#8211; Download and import trusted root certificates from Mozilla&#8217;s LXR into Mono&#8217;s certificate store</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mozroots [&#8211;import [&#8211;machine] [&#8211;sync | &#8211;ask | &#8211;ask-add | &#8211;ask-remove]]</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "spice-vdagent(1)"
 name: "spice-vdagent"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-spice-vdagent/"
 description: "spice-vdagent – Spice guest agent X11 session agent"
 ---
 
-<h2 class="name">NAME</h2>
 <p> spice-vdagent &#8211; Spice guest agent X11 session agent </p>
 <h2>SYNOPSIS</h2>
 <p> <code>spice-vdagent</code> [<i>OPTIONS</i>]</p>

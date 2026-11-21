@@ -1,4 +1,5 @@
 ---
+
 title: "ganglia2pcp(1)"
 name: "ganglia2pcp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ganglia2pcp/"
 description: "ganglia2pcp – import ganglia data and create a PCP archive"
 ---
 
-<h2>NAME</h2>
 <p> <code>ganglia2pcp</code> &#8211; import ganglia data and create a PCP archive</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ganglia2pcp</code> [<code>-s</code> <i>start</i>] [<code>-e</code> <i>end</i>] [<code>-f</code> <i>outfile</i>] [<code>-d</code> <i>outdir</i>] [<code>-Z</code> <i>timezone</i>] [<code>-h</code> <i>hostname</i>] <i>input_dir</i></p>

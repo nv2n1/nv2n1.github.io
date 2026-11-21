@@ -1,4 +1,5 @@
 ---
+
 title: "exalpha(3)"
 name: "exalpha"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-exalpha/"
 description: "exalpha – Creating and using 32 bit RGBA sprites. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> exalpha &#8211; Creating and using 32 bit RGBA sprites. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

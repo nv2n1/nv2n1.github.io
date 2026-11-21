@@ -1,4 +1,5 @@
 ---
+
 title: "mountpoint(1)"
 name: "mountpoint"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mountpoint/"
 description: "mountpoint – see if a directory or file is a mountpoint"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mountpoint &#8211; see if a directory or file is a mountpoint </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mountpoint</code> [<code>-d</code>|<code>-q</code>] <i>directory</i>|<i>file</i> </p>

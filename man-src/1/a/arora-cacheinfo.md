@@ -1,4 +1,5 @@
 ---
+
 title: "arora-cacheinfo(1)"
 name: "arora-cacheinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-arora-cacheinfo/"
 description: "arora-cacheinfo – a tool for extracting files and metadata out of Arora cache files."
 ---
 
-<h2 class="name">NAME</h2>
 <p> arora-cacheinfo &#8211; a tool for extracting files and metadata out of Arora cache files.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>arora-cacheinfo [-o cachefile] [file | url]</code> </p>

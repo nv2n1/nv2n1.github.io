@@ -1,4 +1,5 @@
 ---
+
 title: "libmaxminddb(3)"
 name: "libmaxminddb"
 section: "3"
@@ -6,12 +7,7 @@ letter: "l"
 url: "/docs/linux/man/3-libmaxminddb/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- libmaxminddb - a library for working with MaxMind DB files 
+libmaxminddb - a library for working with MaxMind DB files 
 
 <h2>SYNOPSIS</h2>
 

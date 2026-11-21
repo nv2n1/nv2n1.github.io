@@ -1,4 +1,5 @@
 ---
+
 title: "alexandria(1)"
 name: "alexandria"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-alexandria/"
 description: "alexandria – a book collection manager"
 ---
 
-<h2>NAME</h2>
 <p> alexandria &#8211; a book collection manager </p>
 <h2>SYNOPSIS</h2>
 <p> <code>alexandria</code> <i>[OPTIONS]</i> </p>

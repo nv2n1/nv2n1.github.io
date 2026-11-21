@@ -1,4 +1,5 @@
 ---
+
 title: "wimlib-imagex-dir(1)"
 name: "wimlib-imagex-dir"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wimlib-imagex-dir/"
 description: "wimlib-imagex-dir – Show the files contained in a WIM archive"
 ---
 
-<h2>NAME</h2>
 <p> wimlib-imagex-dir &#8211; Show the files contained in a WIM archive</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wimlib-imagex dir</code> <i>WIMFILE</i> <i>IMAGE</i> [<i>OPTIONS</i>]</p>

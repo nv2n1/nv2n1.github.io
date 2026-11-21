@@ -1,4 +1,5 @@
 ---
+
 title: "ecryptfs-unwrap-passphrase(1)"
 name: "ecryptfs-unwrap-passphrase"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ecryptfs-unwrap-passphrase/"
 description: "ecryptfs-unwrap-passphrase – unwrap an eCryptfs mount passphrase from file."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ecryptfs-unwrap-passphrase &#8211; unwrap an eCryptfs mount passphrase from file.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ecryptfs-unwrap-passphrase [file]</code> </p>

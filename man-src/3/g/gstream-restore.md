@@ -1,4 +1,5 @@
 ---
+
 title: "gstream-restore(3)"
 name: "gstream-restore"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gstream-restore/"
 description: "restore"
 ---
 
-<h2>NAME</h2>
 <p> restore</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gstream.h">gstream.h</a>&gt;</code> </p>

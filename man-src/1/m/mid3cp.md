@@ -1,4 +1,5 @@
 ---
+
 title: "mid3cp(1)"
 name: "mid3cp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mid3cp/"
 description: "mid3cp – copy ID3 tags"
 ---
 
-<h2>NAME</h2>
 <p> mid3cp &#8211; copy ID3 tags</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mid3cp</code> [<i>options</i>] <i>source</i> <i>dest</i></p>

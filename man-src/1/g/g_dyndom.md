@@ -1,4 +1,5 @@
 ---
+
 title: "g_dyndom(1)"
 name: "g_dyndom"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_dyndom/"
 description: "g_dyndom – interpolate and extrapolate structure rotations"
 ---
 
-<h2>NAME</h2>
 <p> g_dyndom &#8211; interpolate and extrapolate structure rotations </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

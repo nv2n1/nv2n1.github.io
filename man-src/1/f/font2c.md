@@ -1,4 +1,5 @@
 ---
+
 title: "font2c(1)"
 name: "font2c"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-font2c/"
 description: "font2c – Write PostScript Type 0 or Type 1 font as C code"
 ---
 
-<h2>NAME</h2>
 <p> font2c &#8211; Write PostScript Type 0 or Type 1 font as C code</p>
 <h2>SYNOPSIS</h2>
 <p> <code>font2c</code> <i>fontnames</i></p>

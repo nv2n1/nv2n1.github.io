@@ -1,4 +1,5 @@
 ---
+
 title: "bson_new_from_json(3)"
 name: "bson_new_from_json"
 section: "3"
@@ -6,7 +7,7 @@ letter: "b"
 url: "/docs/linux/man/3-bson_new_from_json/"
 description: "bson_new_from_json() – The bson_new_from_json() function allocates and initialize a new bson_t by parsing the JSON found in data. Only a single JSON object may exist in data or an error will be set..."
 ---
-<h2>NAME</h2>
+
 <p> bson_new_from_json() - The bson_new_from_json() function allocates and initialize a new bson_t by parsing the JSON found in data. Only a single JSON object may exist in data or an error will be set and NULL returned.  </p>
 <h2>SYNOPSIS</h2>
 <pre><code>bson_t *

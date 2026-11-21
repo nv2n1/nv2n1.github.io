@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_cipher_set_iv(3)"
 name: "gnutls_cipher_set_iv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_cipher_set_iv/"
 description: "gnutls_cipher_set_iv – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_cipher_set_iv &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/crypto.h&gt;</code> </p>

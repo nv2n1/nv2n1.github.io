@@ -1,4 +1,5 @@
 ---
+
 title: "perlfilter(1)"
 name: "perlfilter"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlfilter/"
 description: "perlfilter – Source Filters"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perlfilter &#8211; Source Filters </p>
 <h2>DESCRIPTION</h2>
 <p> This article is about a little-known feature of Perl called <i>source filters</i>. Source filters alter the program text of a module before Perl sees it, much as a C preprocessor alters the source text of a C program before the compiler sees it. This article tells you more about what source filters are, how they work, and how to write your own. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "editor(1)"
 name: "editor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-editor/"
 description: "nano – Nano’s ANOther editor, inspired by Pico"
 ---
 
-<h2 class="name">NAME</h2>
 <p> nano &#8211; Nano&#8217;s ANOther editor, inspired by Pico</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nano</code> [<i>options</i>] [[<code>+</code><i>line</i>[<code>,</code><i>column</i>]] <i>file</i>]&#8230; </p>

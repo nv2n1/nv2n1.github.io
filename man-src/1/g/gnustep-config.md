@@ -1,4 +1,5 @@
 ---
+
 title: "gnustep-config(1)"
 name: "gnustep-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnustep-config/"
 description: "gnustep-config – prints information about the current gnustep installation."
 ---
 
-<h2>NAME</h2>
 <p> gnustep-config &#8211; prints information about the current gnustep installation.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnustep-config</code> [ <code>&#8211;variable=</code><i>variable</i> |<code>&#8211;objc-flags</code>|<code>&#8211;objc-libs</code>|<code>&#8211;base-libs</code>|<code>&#8211;gui-libs</code> ]</p>

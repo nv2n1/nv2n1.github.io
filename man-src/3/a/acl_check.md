@@ -1,4 +1,5 @@
 ---
+
 title: "acl_check(3)"
 name: "acl_check"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-acl_check/"
 description: "acl_check – check an ACL for validity"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_check</code> &#8211; check an ACL for validity </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>

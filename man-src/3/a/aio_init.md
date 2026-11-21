@@ -1,4 +1,5 @@
 ---
+
 title: "aio_init(3)"
 name: "aio_init"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aio_init/"
 description: "aio_init – asynchronous I/O initialization"
 ---
 
-<h2 class="name">NAME</h2>
 <p> aio_init &#8211; asynchronous I/O initialization </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

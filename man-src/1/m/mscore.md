@@ -1,4 +1,5 @@
 ---
+
 title: "mscore(1)"
 name: "mscore"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mscore/"
 description: "mscore – Full featured WYSIWYG score editor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mscore &#8211; Full featured WYSIWYG score editor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mscore</code> [<i>options</i>]<i>scorefile</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "lkbib(1)"
 name: "lkbib"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lkbib/"
 description: "lkbib – search bibliographic databases"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lkbib &#8211; search bibliographic databases </p>
 <h2>SYNOPSIS</h2>
 <p> [ <code>-n</code> ] [ <code>-i </code><i>fields</i> ] [ <code>-p </code><i>filename</i> ] [ <code>-t </code><i>n</i> ] <i>key</i> &#8230; <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>

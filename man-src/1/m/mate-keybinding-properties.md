@@ -1,4 +1,5 @@
 ---
+
 title: "mate-keybinding-properties(1)"
 name: "mate-keybinding-properties"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-keybinding-properties/"
 description: "mate-keybinding-properties – configure MATE keybindings"
 ---
 
-<h2>NAME</h2>
 <p> <code>mate-keybinding-properties </code>&#8211; configure MATE keybindings</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-keybinding-properties</code> [<i>OPTIONS&#8230;]</i></p>

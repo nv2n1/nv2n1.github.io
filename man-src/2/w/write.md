@@ -1,4 +1,5 @@
 ---
+
 title: "write(2)"
 name: "write"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-write/"
 description: "write – write to a file descriptor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> write &#8211; write to a file descriptor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>

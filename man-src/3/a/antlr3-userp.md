@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-userp(3)"
 name: "antlr3-userp"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3-userp/"
 description: "ANTLR3_RECOGNIZER_SHARED_STATE_struct –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ANTLR3_RECOGNIZER_SHARED_STATE_struct &#8211; </p>
 <p> All the data elements required to track the current state of any recognizer (lexer, parser, tree parser).</p>
 <h2>SYNOPSIS</h2>

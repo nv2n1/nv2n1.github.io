@@ -1,4 +1,5 @@
 ---
+
 title: "apport-cli(1)"
 name: "apport-cli"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-apport-cli/"
 description: "apport-cli, apport-gtk, apport-kde – Apport user interfaces for reporting problems"
 ---
 
-<h2 class="name">NAME</h2>
 <p> apport-cli, apport-gtk, apport-kde &#8211; Apport user interfaces for reporting problems</p>
 <h2>SYNOPSIS</h2>
 <p> <code>apport-cli</code> </p>

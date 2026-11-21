@@ -1,4 +1,5 @@
 ---
+
 title: "virt-p2v-make-kickstart(1)"
 name: "virt-p2v-make-kickstart"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-virt-p2v-make-kickstart/"
 description: "virt-p2v-make-kickstart – Build the virt-p2v kickstart"
 ---
 
-<h2 class="name">NAME</h2>
 <p> virt-p2v-make-kickstart &#8211; Build the virt-p2v kickstart </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

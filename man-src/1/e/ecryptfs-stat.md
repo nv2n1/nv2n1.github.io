@@ -1,4 +1,5 @@
 ---
+
 title: "ecryptfs-stat(1)"
 name: "ecryptfs-stat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ecryptfs-stat/"
 description: "ecryptfs-stat – Present statistics on encrypted eCryptfs file attributes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ecryptfs-stat &#8211; Present statistics on encrypted eCryptfs file attributes</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ecryptfs-stat</code> filename </p>

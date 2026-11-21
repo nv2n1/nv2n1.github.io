@@ -1,4 +1,5 @@
 ---
+
 title: "dpkg-name(1)"
 name: "dpkg-name"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dpkg-name/"
 description: "dpkg-name – rename Debian packages to full package names"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dpkg-name &#8211; rename Debian packages to full package names </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dpkg-name</code> [<i>option</i>&#8230;] [<code>&#8212;</code>] <i>file</i>&#8230;</p>

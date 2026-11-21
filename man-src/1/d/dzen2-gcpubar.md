@@ -1,4 +1,5 @@
 ---
+
 title: "dzen2-gcpubar(1)"
 name: "dzen2-gcpubar"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dzen2-gcpubar/"
 description: "dzen2-gcpubar – graphical CPU usage meter"
 ---
 
-<h2>NAME</h2>
 <p> dzen2-gcpubar &#8211; graphical CPU usage meter</p>
 <h2>SYNOPSIS</h2>
 <dl>

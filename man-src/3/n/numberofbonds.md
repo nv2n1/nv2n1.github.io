@@ -1,4 +1,5 @@
 ---
+
 title: "numberofbonds(3)"
 name: "numberofbonds"
 section: "3"
@@ -6,8 +7,9 @@ letter: "n"
 url: "/docs/linux/man/3-numberofbonds/"
 description: "QuantLib::FittedBondDiscountCurve – Discount curve fitted to a set of fixed-coupon bonds."
 ---
+
 <p>QuantLib::FittedBondDiscountCurve &#8211; <code>Discount</code> curve fitted to a set of fixed-coupon bonds. </p>
-<h2>SYNOPSIS</h2>
+
 <p> <br />
  </p>
 <p>#include &lt;ql/termstructures/yield/fittedbonddiscountcurve.hpp&gt; </p>

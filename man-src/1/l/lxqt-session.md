@@ -1,4 +1,5 @@
 ---
+
 title: "lxqt-session(1)"
 name: "lxqt-session"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lxqt-session/"
 description: "lxqt-session – Session manager of LXQt: The Lightweight Qt Desktop Environment"
 ---
 
-<h2>NAME</h2>
 <p> <code>lxqt-session</code> &#8211; Session manager of <code>LXQt</code>: The Lightweight Qt Desktop Environment</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lxqt-session</code> </p>

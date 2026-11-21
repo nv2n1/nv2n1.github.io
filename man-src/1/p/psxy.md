@@ -1,4 +1,5 @@
 ---
+
 title: "psxy(1)"
 name: "psxy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-psxy/"
 description: "psxy – Plot lines, polygons, and symbols on maps"
 ---
 
-<h2>NAME</h2>
 <p> psxy &#8211; Plot lines, polygons, and symbols on maps</p>
 <h2>SYNOPSIS</h2>
 <p> <code>psxy</code> [ <i>table</i> ] <i>parameters</i> <i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[/<i>zmin</i>/<i>zmax</i>][<code>r</code>] [ [<code>m</code>|<code>p</code>|<code>x</code>|<code>y</code>] ] [ [<code>p</code>|<code>s</code>]<i>parameters</i> ] [ <i>cpt</i> ] [ <i>dx</i>/<i>dy</i> ] [ [<code>x</code>[<code>+</code>]|<code>y</code>[<code>+</code>]|<code>X</code>|<code>Y</code>][<code>n</code>][<i>cap</i>][/[<code>&#8211;</code>|<code>+</code>]<i>pen</i>] ] [ [<code>c</code>|<code>n</code>|<code>r</code>][<i>refpoint</i>] ] [ <i>fill</i> ] [ <i>intens</i> ] [ <code>z</code>|<code>Z</code><i>parameters</i> ] [ ] [ [<code>+b</code>|<code>d</code>|<code>D</code>][<code>+xl</code>|<code>r</code>|<i>x0</i>][<code>+yl</code>|<code>r</code>|<i>y0</i>][<code>+p</code><i>pen</i>] ] [ [<code>c</code>|<code>r</code>] ] [ ] [ ] [ [<i>symbol</i>][<i>size</i>[<code>u</code>] ] [ ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ [<i>level</i>] ] [ [<code>&#8211;</code>|<code>+</code>][<i>pen</i>][<i>attr</i>] ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ <code>-a</code><i>&lt;flags&gt;</i> ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-c</code><i>copies</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-t</code><i>&lt;transp&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

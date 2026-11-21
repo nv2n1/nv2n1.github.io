@@ -1,4 +1,5 @@
 ---
+
 title: "uux(1)"
 name: "uux"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-uux/"
 description: "uux – Remote command execution over UUCP"
 ---
 
-<h2>NAME</h2>
 <p> uux &#8211; Remote command execution over UUCP</p>
 <h2>SYNOPSIS</h2>
 <p> <code>uux</code> [ options ] command</p>

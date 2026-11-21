@@ -1,4 +1,5 @@
 ---
+
 title: "activate-devpay(1)"
 name: "activate-devpay"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-activate-devpay/"
 description: "activate-devpay – create the token and certificate files for Amazon S3"
 ---
 
-<h2>NAME</h2>
 <p> activate-devpay &#8211; create the token and certificate files for Amazon S3</p>
 <h2>SYNOPSIS</h2>
 <p> <code>activate-devpay</code></p>

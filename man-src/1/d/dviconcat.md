@@ -1,4 +1,5 @@
 ---
+
 title: "dviconcat(1)"
 name: "dviconcat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dviconcat/"
 description: "dviconcat – concatenate DVI files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dviconcat &#8211; concatenate DVI files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dviconcat</code> [ <code>-m</code> <i>magnification</i> ] [ <code>-o</code> <i>outfile</i> ] <i>list of files</i></p>

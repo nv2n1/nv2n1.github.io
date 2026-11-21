@@ -1,4 +1,5 @@
 ---
+
 title: "kill(1)"
 name: "kill"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kill/"
 description: "kill – send a signal to a process"
 ---
 
-<h2 class="name">NAME</h2>
 <p> kill &#8211; send a signal to a process </p>
 <h2>SYNOPSIS</h2>
 <p> <code>kill</code> [options] &lt;pid&gt; [&#8230;]</p>

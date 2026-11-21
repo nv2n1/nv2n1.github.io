@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gsi_credential(3)"
 name: "globus_gsi_credential"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gsi_credential/"
 description: "Globus GSI Credential –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Globus GSI Credential &#8211; </p>
 <h3>Modules</h3>
 <p> <code>Activation</code> </p>

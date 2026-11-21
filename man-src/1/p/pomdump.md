@@ -1,4 +1,5 @@
 ---
+
 title: "pomdump(1)"
 name: "pomdump"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-pomdump/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- pomdump - dump the POM parse tree for a POD document 
+pomdump - dump the POM parse tree for a POD document 
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "error_message_count(3)"
 name: "error_message_count"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-error_message_count/"
 description: "error, error_at_line, error_message_count, error_one_per_line, error_print_progname – glibc error reporting functions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> error, error_at_line, error_message_count, error_one_per_line, error_print_progname &#8211; glibc error reporting functions </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

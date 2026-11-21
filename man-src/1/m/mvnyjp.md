@@ -1,4 +1,5 @@
 ---
+
 title: "mvnyjp(1)"
 name: "mvnyjp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mvnyjp/"
 description: "mvn – software project management and comprehension tool"
 ---
 
-<h2>NAME</h2>
 <p> mvn &#8211; software project management and comprehension tool</p>
 <h2>DESCRIPTION</h2>
 <p> usage: mvn [options] [&lt;goal(s)&gt;] [&lt;phase(s)&gt;] usage: mvnDebug [options] [&lt;goal(s)&gt;] [&lt;phase(s)&gt;] usage: mvnyjp [options] [&lt;goal(s)&gt;] [&lt;phase(s)&gt;]</p>

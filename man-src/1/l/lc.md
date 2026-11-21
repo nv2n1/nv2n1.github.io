@@ -1,4 +1,5 @@
 ---
+
 title: "lc(1)"
 name: "lc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lc/"
 description: "lc – Mono License Compiler"
 ---
 
-<h2>NAME</h2>
 <p> lc &#8211; Mono License Compiler</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lc -c filename -t targetassembly [-i reference&#8230;] [-v] [-o outputpath] [-nologo]</code></p>

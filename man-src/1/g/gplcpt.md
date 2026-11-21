@@ -1,4 +1,5 @@
 ---
+
 title: "gplcpt(1)"
 name: "gplcpt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gplcpt/"
 description: "gplcpt – convert GIMP colour palette (gpl) to GMT colour palette table (cpt)."
 ---
 
-<h2 class="name">NAME</h2>
 <p> gplcpt &#8211; convert GIMP colour palette (gpl) to GMT colour palette table (cpt). </p>
 <h2>SYNOPSIS</h2>
 <dl>

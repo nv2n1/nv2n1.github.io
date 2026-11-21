@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-action-analyze-c(1)"
 name: "abrt-action-analyze-c"
 section: "1"
@@ -6,10 +7,7 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-action-analyze-c/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- abrt-action-analyze-c - Calculate and save UUID for a problem data directory DIR with coredump. 
+abrt-action-analyze-c - Calculate and save UUID for a problem data directory DIR with coredump. 
 
 <h2>SYNOPSIS</h2>
 

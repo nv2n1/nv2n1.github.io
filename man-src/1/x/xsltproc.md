@@ -1,4 +1,5 @@
 ---
+
 title: "xsltproc(1)"
 name: "xsltproc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xsltproc/"
 description: "xsltproc – command line XSLT processor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xsltproc &#8211; command line XSLT processor </p>
 <h2>SYNOPSIS</h2>
 <dl>

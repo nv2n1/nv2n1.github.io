@@ -1,4 +1,5 @@
 ---
+
 title: "manhole(1)"
 name: "manhole"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-manhole/"
 description: "manhole – Connect to a Twisted Manhole service"
 ---
 
-<h2>NAME</h2>
 <p> manhole &#8211; Connect to a Twisted Manhole service</p>
 <h2>SYNOPSIS</h2>
 <p> <code>manhole</code></p>

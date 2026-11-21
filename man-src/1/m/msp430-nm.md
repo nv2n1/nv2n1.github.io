@@ -1,4 +1,5 @@
 ---
+
 title: "msp430-nm(1)"
 name: "msp430-nm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-msp430-nm/"
 description: "nm – list symbols from object files"
 ---
 
-<h2>NAME</h2>
 <p> nm &#8211; list symbols from object files</p>
 <h2>SYNOPSIS</h2>
 <p> nm [<code>-a</code>|<code>&#8211;debug-syms</code>] [<code>-g</code>|<code>&#8211;extern-only</code>]<br />

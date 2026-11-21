@@ -1,4 +1,5 @@
 ---
+
 title: "bcomps(1)"
 name: "bcomps"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bcomps/"
 description: "bcomps – biconnected components filter for graphs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bcomps &#8211; biconnected components filter for graphs </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bcomps</code> [ <code>-stvx?</code> ] [ <code>-o</code><i>outfile</i> ] [ <i>files</i> ]</p>

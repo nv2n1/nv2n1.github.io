@@ -1,4 +1,5 @@
 ---
+
 title: "natspec(1)"
 name: "natspec"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-natspec/"
 description: "natspec – command line utility to access libnatspec functions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> natspec &#8211; command line utility to access libnatspec functions </p>
 <h2>SYNOPSIS</h2>
 <dl>

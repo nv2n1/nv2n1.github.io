@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_tdb_deinit(3)"
 name: "gnutls_tdb_deinit"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_tdb_deinit/"
 description: "gnutls_tdb_deinit – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_tdb_deinit &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

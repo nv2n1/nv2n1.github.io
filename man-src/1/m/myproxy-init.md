@@ -1,4 +1,5 @@
 ---
+
 title: "myproxy-init(1)"
 name: "myproxy-init"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-myproxy-init/"
 description: "myproxy-init – store a credential for later retrieval"
 ---
 
-<h2>NAME</h2>
 <p> myproxy-init &#8211; store a credential for later retrieval</p>
 <h2>SYNOPSIS</h2>
 <p> <code>myproxy-init </code> [ <i>options</i> ]</p>

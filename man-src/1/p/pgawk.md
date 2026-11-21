@@ -1,4 +1,5 @@
 ---
+
 title: "pgawk(1)"
 name: "pgawk"
 section: "1"
@@ -6,7 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-pgawk/"
 description: "gawk – pattern scanning and processing language"
 ---
-<h2>NAME</h2>
+
 <p> gawk - pattern scanning and processing language  </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gawk</code> [ <font SIZE="-1">POSIX</font> or <font SIZE="-1">GNU</font> style options ] <code>-f</code> <i>program-file</i> [ <code>--</code> ] file ... <br />

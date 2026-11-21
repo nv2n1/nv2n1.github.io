@@ -1,4 +1,5 @@
 ---
+
 title: "perlunicook(1)"
 name: "perlunicook"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlunicook/"
 description: "perlunicook – cookbookish examples of handling Unicode in Perl"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perlunicook &#8211; cookbookish examples of handling Unicode in Perl </p>
 <h2>DESCRIPTION</h2>
 <p> This manpage contains short recipes demonstrating how to handle common Unicode operations in Perl, plus one complete program at the end. Any undeclared variables in individual recipes are assumed to have a previous appropriate value in them.</p>

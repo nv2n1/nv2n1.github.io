@@ -1,4 +1,5 @@
 ---
+
 title: "libguestfs-test-tool(1)"
 name: "libguestfs-test-tool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-libguestfs-test-tool/"
 description: "libguestfs-test-tool – Diagnostics for libguestfs"
 ---
 
-<h2 class="name">NAME</h2>
 <p> libguestfs-test-tool &#8211; Diagnostics for libguestfs </p>
 <h2>SYNOPSIS</h2>
 <pre>

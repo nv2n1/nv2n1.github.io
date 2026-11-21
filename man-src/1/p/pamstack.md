@@ -1,4 +1,5 @@
 ---
+
 title: "pamstack(1)"
 name: "pamstack"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamstack/"
 description: "pamstack – stack planes of multiple PAM images into one PAM image"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamstack &#8211; stack planes of multiple PAM images into one PAM image </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamstack</code> [<code>-tupletype </code><i>tupletype</i>] [<i>inputfilespec</i>] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dcmmkdir(1)"
 name: "dcmmkdir"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dcmmkdir/"
 description: "dcmmkdir – Create a DICOMDIR file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dcmmkdir &#8211; Create a DICOMDIR file </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

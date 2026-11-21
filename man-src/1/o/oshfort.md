@@ -1,4 +1,5 @@
 ---
+
 title: "oshfort(1)"
 name: "oshfort"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-oshfort/"
 description: "oshfort — Open SHMEM Fortran wrapper compiler"
 ---
 
-<h2 class="name">NAME</h2>
 <p> oshfort &#8212; Open SHMEM Fortran wrapper compiler </p>
 <h2>SYNTAX</h2>
 <p> oshfort [-showme|-showme:compile|-showme:link] &#8230;</p>

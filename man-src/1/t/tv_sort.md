@@ -1,4 +1,5 @@
 ---
+
 title: "tv_sort(1)"
 name: "tv_sort"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tv_sort/"
 description: "tv_sort – Sort XMLTV listings files by date, and add stop times."
 ---
 
-<h2 class="name">NAME</h2>
 <p> tv_sort &#8211; Sort XMLTV listings files by date, and add stop times. </p>
 <h2>SYNOPSIS</h2>
 <p> tv_sort [&#8211;help] [&#8211;by-channel] [&#8211;output <font SIZE="-1">FILE</font>] [<font SIZE="-1">FILE&#8230;</font>]</p>

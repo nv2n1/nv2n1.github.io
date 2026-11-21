@@ -1,4 +1,5 @@
 ---
+
 title: "mewl(1)"
 name: "mewl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mewl/"
 description: "mewl – Message scanner for Mew 4 or later"
 ---
 
-<h2>NAME</h2>
 <p> mewl &#8211; Message scanner for Mew 4 or later</p>
 <h2>SYNOPSIS</h2>
 <p> mewl [<i>options</i>] [<i>folder</i> [<i>range</i>]]</p>

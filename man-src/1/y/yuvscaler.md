@@ -1,4 +1,5 @@
 ---
+
 title: "yuvscaler(1)"
 name: "yuvscaler"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-yuvscaler/"
 description: "yuvscaler – UPscales or DOWNscales a YUV4MPEG2 stream to a specified format"
 ---
 
-<h2 class="name">NAME</h2>
 <p> yuvscaler &#8211; UPscales or DOWNscales a YUV4MPEG2 stream to a specified format</p>
 <h2>SYNOPSIS</h2>
 <p> <code>yuvscaler </code> [<code>-I</code> <i>input_keyword</i>] [<code>-M</code> <i>mode_keyword</i>] [<code>-O</code> <i>output_keyword</i>] [<code>-n p</code>|<code>s</code>|<code>n</code>] [<code>-v 0</code>&#8211;<code>2</code>] [<code>-h</code>] </p>

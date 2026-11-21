@@ -1,4 +1,5 @@
 ---
+
 title: "rcsclean(1)"
 name: "rcsclean"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rcsclean/"
 description: "rcsclean – clean up working files"
 ---
 
-<h2>NAME</h2>
 <p> rcsclean &#8211; clean up working files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rcsclean</code> [<i>options</i>] [ <i>file</i> &#8230; ]</p>

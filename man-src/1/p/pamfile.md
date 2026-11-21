@@ -1,4 +1,5 @@
 ---
+
 title: "pamfile(1)"
 name: "pamfile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamfile/"
 description: "pamfile – describe a Netpbm (PAM or PNM) file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamfile &#8211; describe a Netpbm (PAM or PNM) file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamfile</code> [<code>-allimages</code>] [<i>file &#8230;</i>] </p>

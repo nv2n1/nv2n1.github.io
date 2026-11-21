@@ -1,4 +1,5 @@
 ---
+
 title: "fapg(1)"
 name: "fapg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fapg/"
 description: "fapg – Fast Audio Playlist Generator"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fapg &#8211; Fast Audio Playlist Generator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fapg [</code> <i>options</i> <code>]</code> <i>/path/to/mp3/dir1 </i> <code>[</code> <i>/path/to/mp3/dir2 </i> <code>&#8230; ]</code> </p>

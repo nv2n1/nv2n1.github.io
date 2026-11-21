@@ -1,4 +1,5 @@
 ---
+
 title: "euca-modify-snapshot-attribute(1)"
 name: "euca-modify-snapshot-attribute"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-modify-snapshot-attribute/"
 description: "euca-modify-snapshot-attribute – Modify an attribute of a snapshot"
 ---
 
-<h2>NAME</h2>
 <p> euca-modify-snapshot-attribute &#8211; Modify an attribute of a snapshot</p>
 <h2>SYNOPSIS</h2>
 <p> euca-modify-snapshot-attribute <code>-c</code> [-a ENTITY] [-r ENTITY]</p>

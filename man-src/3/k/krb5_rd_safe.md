@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_rd_safe(3)"
 name: "krb5_rd_safe"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_rd_safe/"
 description: "krb5_rd_safe krb5_rd_priv – verifies authenticity of messages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_rd_safe</code> <code>krb5_rd_priv</code> &#8211; verifies authenticity of messages </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>

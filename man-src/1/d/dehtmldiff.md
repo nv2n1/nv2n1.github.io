@@ -1,4 +1,5 @@
 ---
+
 title: "dehtmldiff(1)"
 name: "dehtmldiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dehtmldiff/"
 description: "dehtmldiff – get usable diff from an HTML page"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dehtmldiff &#8211; get usable diff from an HTML page </p>
 <h2>SYNOPSIS</h2>
 <dl>

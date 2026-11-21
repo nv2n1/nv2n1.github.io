@@ -1,4 +1,5 @@
 ---
+
 title: "tv_grab_fi(1)"
 name: "tv_grab_fi"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tv_grab_fi/"
 description: "tv_grab_fi – Grab TV listings for Finland"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tv_grab_fi &#8211; Grab TV listings for Finland </p>
 <h2>SYNOPSIS</h2>
 <p> tv_grab_fi [&#8211;cache &lt;<font SIZE="-1">FILE</font>&gt;]<br />

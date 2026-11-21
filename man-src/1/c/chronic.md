@@ -1,4 +1,5 @@
 ---
+
 title: "chronic(1)"
 name: "chronic"
 section: "1"
@@ -6,10 +7,7 @@ letter: "c"
 url: "/docs/linux/man/1-chronic/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- chronic - runs a command quietly unless it fails 
+chronic - runs a command quietly unless it fails 
 
 <h2>SYNOPSIS</h2>
 

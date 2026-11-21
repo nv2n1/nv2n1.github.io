@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_knownhost_del(3)"
 name: "libssh2_knownhost_del"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_knownhost_del/"
 description: "libssh2_knownhost_del – delete a known host entry"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_knownhost_del &#8211; delete a known host entry</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

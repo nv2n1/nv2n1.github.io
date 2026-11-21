@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_update_pkt_new(3)"
 name: "ldns_update_pkt_new"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_update_pkt_new/"
 description: "ldns_update_pkt_new"
 ---
 
-<h2>NAME</h2>
 <p> ldns_update_pkt_new </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

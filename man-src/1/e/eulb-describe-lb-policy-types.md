@@ -1,4 +1,5 @@
 ---
+
 title: "eulb-describe-lb-policy-types(1)"
 name: "eulb-describe-lb-policy-types"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eulb-describe-lb-policy-types/"
 description: "eulb-describe-lb-policy-types – Show information about load balancer policy types"
 ---
 
-<h2>NAME</h2>
 <p> eulb-describe-lb-policy-types &#8211; Show information about load balancer policy types</p>
 <h2>SYNOPSIS</h2>
 <p> eulb-describe-lb-policy-types [&#8211;show-long] [&#8211;show-empty-fields]</p>

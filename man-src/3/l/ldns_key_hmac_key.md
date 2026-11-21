@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_key_hmac_key(3)"
 name: "ldns_key_hmac_key"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_key_hmac_key/"
 description: "ldns_key_rsa_key, ldns_key_dsa_key, ldns_key_algorithm, ldns_key_hmac_key"
 ---
 
-<h2>NAME</h2>
 <p> ldns_key_rsa_key, ldns_key_dsa_key, ldns_key_algorithm, ldns_key_hmac_key </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

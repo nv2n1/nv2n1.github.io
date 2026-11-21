@@ -1,4 +1,5 @@
 ---
+
 title: "ruptime(1)"
 name: "ruptime"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ruptime/"
 description: "ruptime – show host status of local machines"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>ruptime</code> &#8211; show host status of local machines </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ruptime</code> [-<code>alrtu</code> ] [-<code>n=length</code> ]</p>

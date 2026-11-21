@@ -1,4 +1,5 @@
 ---
+
 title: "arm4_dump(1)"
 name: "arm4_dump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-arm4_dump/"
 description: "arm4_dump – dump the ARM 4 database"
 ---
 
-<h2>NAME</h2>
 <p> arm4_dump &#8211; dump the ARM 4 database</p>
 <h2>SYNOPSIS</h2>
 <p> <code>arm4_dump</code> <i>&#8211;help|-h</i><br />

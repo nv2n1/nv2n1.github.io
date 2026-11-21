@@ -1,4 +1,5 @@
 ---
+
 title: "pmdanamed(1)"
 name: "pmdanamed"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdanamed/"
 description: "pmdanamed – BIND (named) PMDA"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pmdanamed &#8211; BIND (named) PMDA </p>
 <h2>DESCRIPTION</h2>
 <p> <code>pmdanamed</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which exports metric values from the <font SIZE="-1">BIND DNS</font> server. Further details on <font SIZE="-1">BIND</font> can be found at <a rel="nofollow" href="http://isc.org/.">http://isc.org/.</a></p>

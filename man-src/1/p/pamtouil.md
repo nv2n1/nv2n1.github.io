@@ -1,4 +1,5 @@
 ---
+
 title: "pamtouil(1)"
 name: "pamtouil"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamtouil/"
 description: "pamtouil – convert a PNM or PNM/alpha image into a Motif UIL icon file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamtouil &#8211; convert a PNM or PNM/alpha image into a Motif UIL icon file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamtouil</code> [<code>-name=</code><i>uilname</i>] [<i>pamfile</i>] </p>

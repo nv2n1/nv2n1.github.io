@@ -1,4 +1,5 @@
 ---
+
 title: "cpansign(1)"
 name: "cpansign"
 section: "1"
@@ -6,10 +7,7 @@ letter: "c"
 url: "/docs/linux/man/1-cpansign/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- cpansign - CPAN signature management utility 
+cpansign - CPAN signature management utility 
 
 <h2>SYNOPSIS</h2>
 

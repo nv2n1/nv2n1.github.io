@@ -1,4 +1,5 @@
 ---
+
 title: "libmapiadmin(3)"
 name: "libmapiadmin"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libmapiadmin/"
 description: "libmapiadmin/libmapiadmin.h –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> libmapiadmin/libmapiadmin.h &#8211; </p>
 <p> Structures for MAPI admin functions.</p>
 <h2>SYNOPSIS</h2>

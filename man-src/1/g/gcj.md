@@ -1,4 +1,5 @@
 ---
+
 title: "gcj(1)"
 name: "gcj"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gcj/"
 description: "gcj – Ahead-of-time compiler for the Java language"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gcj &#8211; Ahead-of-time compiler for the Java language </p>
 <h2>SYNOPSIS</h2>
 <p> gcj [<code>-I</code><i>dir</i>&#8230;] [<code>-d</code> <i>dir</i>&#8230;]<br />

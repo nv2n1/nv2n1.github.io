@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_session_get_master_secret(3)"
 name: "gnutls_session_get_master_secret"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_session_get_master_secret/"
 description: "gnutls_session_get_master_secret – get the session’s master secret value"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_session_get_master_secret &#8211; get the session&#8217;s master secret value</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/gnutls.h">gnutls/gnutls.h</a>&gt;</code> </p>

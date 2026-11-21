@@ -1,4 +1,5 @@
 ---
+
 title: "bson_realloc_ctx(3)"
 name: "bson_realloc_ctx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_realloc_ctx/"
 description: "bson_realloc_ctx() – This function is identical to bson_realloc() except it takes a context parameter. This is useful when working with pooled or specific memory allocators."
 ---
 
-<h2>NAME</h2>
 <p> bson_realloc_ctx() &#8211; This function is identical to bson_realloc() except it takes a context parameter. This is useful when working with pooled or specific memory allocators.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

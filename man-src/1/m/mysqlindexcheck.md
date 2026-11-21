@@ -1,4 +1,5 @@
 ---
+
 title: "mysqlindexcheck(1)"
 name: "mysqlindexcheck"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysqlindexcheck/"
 description: "mysqlindexcheck – Identify Potentially Redundant Table Indexes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysqlindexcheck &#8211; Identify Potentially Redundant Table Indexes </p>
 <h2>SYNOPSIS</h2>
 <dl>

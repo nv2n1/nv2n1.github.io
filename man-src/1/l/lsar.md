@@ -1,4 +1,5 @@
 ---
+
 title: "lsar(1)"
 name: "lsar"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lsar/"
 description: "lsar – list archive file contents"
 ---
 
-<h2>NAME</h2>
 <p> lsar &#8211; list archive file contents</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lsar</code> [<i>OPTION</i>]&#8230; <i>ARCHIVE</i>&#8230;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "monolinker(1)"
 name: "monolinker"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-monolinker/"
 description: "Mono CIL Linker"
 ---
 
-<h2>NAME</h2>
 <p> Mono CIL Linker</p>
 <h2>SYNOPSIS</h2>
 <p> <code>monolinker [-o output_directory][-l i18n_assemblies][-c skip | copy | link] -x descriptor | -a assembly | -i info_file &#8230;</code></p>

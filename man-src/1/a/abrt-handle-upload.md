@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-handle-upload(1)"
 name: "abrt-handle-upload"
 section: "1"
@@ -6,10 +7,7 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-handle-upload/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- abrt-handle-upload - Unpacks and moves problem data. 
+abrt-handle-upload - Unpacks and moves problem data. 
 
 <h2>SYNOPSIS</h2>
 

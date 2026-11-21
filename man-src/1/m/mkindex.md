@@ -1,4 +1,5 @@
 ---
+
 title: "mkindex(1)"
 name: "mkindex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mkindex/"
 description: "mkindex – script to process LaTeX index and glossary files"
 ---
 
-<h2>NAME</h2>
 <p> mkindex &#8211; script to process LaTeX index and glossary files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mkindex</code> <i>BASENAME</i>[.idx] &#8230; </p>

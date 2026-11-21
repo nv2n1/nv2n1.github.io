@@ -1,4 +1,5 @@
 ---
+
 title: "gdal_fillnodata(1)"
 name: "gdal_fillnodata"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gdal_fillnodata/"
 description: "gdal_fillnodata – gdal_fillnodata.py fill raster regions by interpolation from edges"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gdal_fillnodata &#8211; gdal_fillnodata.py fill raster regions by interpolation from edges </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

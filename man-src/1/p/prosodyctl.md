@@ -1,4 +1,5 @@
 ---
+
 title: "prosodyctl(1)"
 name: "prosodyctl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-prosodyctl/"
 description: "prosodyctl – Manage a Prosody XMPP server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> prosodyctl &#8211; Manage a Prosody XMPP server</p>
 <h2>SYNOPSIS</h2>
 <p> <code>prosodyctl</code> <i>command</i> [<i>&#8211;help</i>] </p>

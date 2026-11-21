@@ -1,4 +1,5 @@
 ---
+
 title: "gschem(1)"
 name: "gschem"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gschem/"
 description: "gschem – gEDA/gaf Schematic Capture"
 ---
 
-<h2>NAME</h2>
 <p> gschem &#8211; gEDA/gaf Schematic Capture</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gschem</code> [-q] [-v] [-t] [-r rcfilename] [-s scriptfilename] [-o outputfilename] [-p] [-h] [schematic1 &#8230; schematicN]</p>

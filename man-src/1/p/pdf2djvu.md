@@ -1,4 +1,5 @@
 ---
+
 title: "pdf2djvu(1)"
 name: "pdf2djvu"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pdf2djvu/"
 description: "pdf2djvu – creates DjVu files from PDF files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pdf2djvu &#8211; creates DjVu files from PDF files </p>
 <h2>SYNOPSIS</h2>
 <dl>

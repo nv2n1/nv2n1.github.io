@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc_topology_export_xml(3)"
 name: "hwloc_topology_export_xml"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hwloc_topology_export_xml/"
 description: "hwlocality_xmlexport – Exporting Topologies to XML"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hwlocality_xmlexport &#8211; Exporting Topologies to XML </p>
 <h3>Functions</h3>
 <p> int <code>hwloc_topology_export_xml</code> (<code>hwloc_topology_t</code> topology, const char *xmlpath) </p>

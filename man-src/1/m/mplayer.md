@@ -1,4 +1,5 @@
 ---
+
 title: "mplayer(1)"
 name: "mplayer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mplayer/"
 description: "mplayer – movie player mencoder – movie encoder"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mplayer &#8211; movie player<br />
  mencoder &#8211; movie encoder </p>
 <h2>SYNOPSIS</h2>

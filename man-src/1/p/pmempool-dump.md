@@ -1,4 +1,5 @@
 ---
+
 title: "pmempool-dump(1)"
 name: "pmempool-dump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmempool-dump/"
 description: "pmempool-dump – Dump user data from specified pool"
 ---
 
-<h2>NAME</h2>
 <p> pmempool-dump &#8211; Dump user data from specified pool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmempool dump</code> [&lt;options&gt;] &lt;file&gt;</p>

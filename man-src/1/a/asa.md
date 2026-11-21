@@ -1,4 +1,5 @@
 ---
+
 title: "asa(1)"
 name: "asa"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-asa/"
 description: "asa – convert ASA (Fortran) carriage control charachters"
 ---
 
-<h2>NAME</h2>
 <p> asa &#8211; convert ASA (Fortran) carriage control charachters</p>
 <h2>SYNOPSIS</h2>
 <p> <code>asa</code> [<i>file</i>&#8230;]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "msginit(1)"
 name: "msginit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-msginit/"
 description: "msginit – initialize a message catalog"
 ---
 
-<h2 class="name">NAME</h2>
 <p> msginit &#8211; initialize a message catalog </p>
 <h2>SYNOPSIS</h2>
 <p> <code>msginit</code> [<i>OPTION</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "opensc-tool(1)"
 name: "opensc-tool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-opensc-tool/"
 description: "opensc-tool – generic smart card utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> opensc-tool &#8211; generic smart card utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>opensc-tool</code> [OPTIONS]</p>

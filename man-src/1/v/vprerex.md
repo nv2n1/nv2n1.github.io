@@ -1,4 +1,5 @@
 ---
+
 title: "vprerex(1)"
 name: "vprerex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vprerex/"
 description: "vprerex – graphical front-end and viewer for the"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>vprerex</code> &#8211; graphical front-end and viewer for the <code></p>
 <p> <a href="/docs/linux/man/1-prerex/">prerex</a></code>(1) prerequisite-chart editor</p>
 <h2>SYNOPSIS</h2>

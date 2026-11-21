@@ -1,4 +1,5 @@
 ---
+
 title: "pmempool-info(1)"
 name: "pmempool-info"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmempool-info/"
 description: "pmempool-info – Print basic information about Persistent Memory Pool file"
 ---
 
-<h2>NAME</h2>
 <p> pmempool-info &#8211; Print basic information about Persistent Memory Pool file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmempool info</code> [&lt;options&gt;] &lt;file&gt;</p>

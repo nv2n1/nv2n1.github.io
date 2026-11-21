@@ -1,4 +1,5 @@
 ---
+
 title: "hivexml(1)"
 name: "hivexml"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hivexml/"
 description: "hivexml – Convert Windows Registry binary \"hive\" into XML"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hivexml &#8211; Convert Windows Registry binary &quot;hive&quot; into XML </p>
 <h2>SYNOPSIS</h2>
 <pre>

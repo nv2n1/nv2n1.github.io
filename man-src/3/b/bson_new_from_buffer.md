@@ -1,4 +1,5 @@
 ---
+
 title: "bson_new_from_buffer(3)"
 name: "bson_new_from_buffer"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_new_from_buffer/"
 description: "bson_new_from_buffer() – TODO:"
 ---
 
-<h2>NAME</h2>
 <p> bson_new_from_buffer() &#8211; TODO:</p>
 <h2>SYNOPSIS</h2>
 <pre>

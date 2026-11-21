@@ -1,4 +1,5 @@
 ---
+
 title: "vows(1)"
 name: "vows"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vows/"
 description: "vows – Asynchronous behavior-driven development (BDD) framework"
 ---
 
-<h2>NAME</h2>
 <p> vows &#8211; Asynchronous behavior-driven development (BDD) framework</p>
 <h2>SYNOPSIS</h2>
 <p> Usage: vows [FILE, &#8230;] [options]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "eta(3)"
 name: "eta"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-eta/"
 description: "QuantLib::G2Process – G2 stochastic process"
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::G2Process &#8211; G2 stochastic process </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/processes/g2process.hpp&gt; </p>

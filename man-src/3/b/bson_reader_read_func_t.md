@@ -1,4 +1,5 @@
 ---
+
 title: "bson_reader_read_func_t(3)"
 name: "bson_reader_read_func_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_reader_read_func_t/"
 description: "bson_reader_read_func_t – A callback function that will be called by bson_reader_t to read the next chunk of data from the underlying opaque file descriptor."
 ---
 
-<h2>NAME</h2>
 <p> bson_reader_read_func_t &#8211; A callback function that will be called by bson_reader_t to read the next chunk of data from the underlying opaque file descriptor.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

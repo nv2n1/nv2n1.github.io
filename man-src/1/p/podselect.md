@@ -1,4 +1,5 @@
 ---
+
 title: "podselect(1)"
 name: "podselect"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-podselect/"
 description: "podselect – print selected sections of pod documentation on standard output"
 ---
 
-<h2 class="name">NAME</h2>
 <p> podselect &#8211; print selected sections of pod documentation on standard output </p>
 <h2>SYNOPSIS</h2>
 <p> <code>podselect</code> [<code>-help</code>] [<code>-man</code>] [<code>-section</code> <i>section-spec</i>] [<i>file</i> &#8230;]</p>

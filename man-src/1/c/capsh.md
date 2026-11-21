@@ -1,4 +1,5 @@
 ---
+
 title: "capsh(1)"
 name: "capsh"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-capsh/"
 description: "capsh – capability shell wrapper"
 ---
 
-<h2 class="name">NAME</h2>
 <p> capsh &#8211; capability shell wrapper </p>
 <h2>SYNOPSIS</h2>
 <p> <code>capsh</code> [<i>OPTION</i>]&#8230;</p>

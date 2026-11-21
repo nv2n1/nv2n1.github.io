@@ -1,4 +1,5 @@
 ---
+
 title: "pqstat(1)"
 name: "pqstat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pqstat/"
 description: "pqstat – List jobs in NetWare print queue"
 ---
 
-<h2>NAME</h2>
 <p> pqstat &#8211; List jobs in NetWare print queue</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pqstat</code> [ <code>-h</code> ] [ <code>-S</code> <i>server</i> ] [ <code>-U</code> <i>user name</i> ] [ <code>-P</code> <i>password</i><br />

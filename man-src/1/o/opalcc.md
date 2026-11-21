@@ -1,4 +1,5 @@
 ---
+
 title: "opalcc(1)"
 name: "opalcc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-opalcc/"
 description: "opalcc — Open PAL C wrapper compiler"
 ---
 
-<h2 class="name">NAME</h2>
 <p> opalcc &#8212; Open PAL C wrapper compiler </p>
 <h2>SYNTAX</h2>
 <p> opalcc [-showme|-showme:compile|-showme:link] &#8230;</p>

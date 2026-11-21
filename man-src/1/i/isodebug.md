@@ -1,4 +1,5 @@
 ---
+
 title: "isodebug(1)"
 name: "isodebug"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-isodebug/"
 description: "isodebug – print genisoimage debug info from ISO-9660 image"
 ---
 
-<h2>NAME</h2>
 <p> isodebug &#8211; print genisoimage debug info from ISO-9660 image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>isodebug</code> [ <i>options</i> ] [ <i>file</i> ]</p>

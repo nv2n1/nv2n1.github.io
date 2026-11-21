@@ -1,4 +1,5 @@
 ---
+
 title: "xqilla(1)"
 name: "xqilla"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xqilla/"
 description: "xqilla – run XQuery and XPath 2 expressions"
 ---
 
-<h2>NAME</h2>
 <p> xqilla &#8211; run XQuery and XPath 2 expressions</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xqilla</code> [<i>OPTION</i>]&#8230; QUERY-FILE&#8230;</p>

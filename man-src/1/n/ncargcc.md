@@ -1,4 +1,5 @@
 ---
+
 title: "ncargcc(1)"
 name: "ncargcc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ncargcc/"
 description: "ncargcc – Command for compiling C code that uses the NCAR Graphics low-level utilities"
 ---
 
-<h2>NAME</h2>
 <p> ncargcc &#8211; Command for compiling C code that uses the NCAR Graphics low-level utilities</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ncargcc</code> [<code>-ngmath</code>] [<code>-smooth</code>] [<code>-quick</code>] [<code>-super</code>] [<code>-agupwrtx</code>] [<code>-ncarbd</code>] &#8230; [<code>-ngmathbd</code>] &#8230; [<code>-noX11</code>] &#8230;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "perlver(1)"
 name: "perlver"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlver/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlver - The Perl Minimum Version Analyzer 
+perlver - The Perl Minimum Version Analyzer 
 
 <h2>SYNOPSIS</h2>
 

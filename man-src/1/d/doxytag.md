@@ -1,4 +1,5 @@
 ---
+
 title: "doxytag(1)"
 name: "doxytag"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-doxytag/"
 description: "doxytag – generates a tag file and/or a search index for a set of HTML files"
 ---
 
-<h2>NAME</h2>
 <p> doxytag &#8211; generates a tag file and/or a search index for a set of HTML files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>doxytag</code> [<i>-t tag_file</i>] [<i>-s index_file</i>] [ <i>html_file </i>[<i>html_file</i>&#8230;] ]</p>

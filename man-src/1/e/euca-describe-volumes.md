@@ -1,4 +1,5 @@
 ---
+
 title: "euca-describe-volumes(1)"
 name: "euca-describe-volumes"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-describe-volumes/"
 description: "euca-describe-volumes – Display information about volumes"
 ---
 
-<h2>NAME</h2>
 <p> euca-describe-volumes &#8211; Display information about volumes</p>
 <h2>SYNOPSIS</h2>
 <p> euca-describe-volumes [&#8211;show-empty-fields] [-U URL]</p>

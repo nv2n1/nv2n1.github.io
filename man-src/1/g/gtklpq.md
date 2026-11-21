@@ -1,4 +1,5 @@
 ---
+
 title: "gtklpq(1)"
 name: "gtklpq"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gtklpq/"
 description: "gtklpq – manage print queues via CUPS"
 ---
 
-<h2>NAME</h2>
 <p> gtklpq &#8211; manage print queues via CUPS</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gtklpq</code> [-P|-d <i>printer</i>] [-S <i>server</i>] [-p <i>port</i>] [-D] [-V] [-U <i>user</i>] [-t <i>timeout</i>] [-g <i>X</i>x<i>Y</i>] [-C] [-h] [-E] </p>

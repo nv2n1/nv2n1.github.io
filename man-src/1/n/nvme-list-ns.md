@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-list-ns(1)"
 name: "nvme-list-ns"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-list-ns/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nvme-list-ns - Send NVMe Identify List Namespaces, return result and structure 
+nvme-list-ns - Send NVMe Identify List Namespaces, return result and structure 
 
 <h2>SYNOPSIS</h2>
 

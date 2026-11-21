@@ -1,4 +1,5 @@
 ---
+
 title: "whatsup(1)"
 name: "whatsup"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-whatsup/"
 description: "whatsup – list up and/or down nodes in a cluster"
 ---
 
-<h2>NAME</h2>
 <p> whatsup &#8211; list up and/or down nodes in a cluster</p>
 <h2>SYNOPSIS</h2>
 <p> <code>whatsup</code> [<i>OPTION</i>]&#8230; [<i>NODES</i>]&#8230; </p>

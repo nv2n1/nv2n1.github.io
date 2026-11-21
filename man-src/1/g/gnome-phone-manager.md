@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-phone-manager(1)"
 name: "gnome-phone-manager"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnome-phone-manager/"
 description: "gnome-phone-manager – Manage your mobile phone"
 ---
 
-<h2>NAME</h2>
 <p> gnome-phone-manager &#8211; Manage your mobile phone</p>
 <h2>USAGE</h2>
 <p> <code>gnome-phone-manager</code> [&#8211;identify&nbsp;<wbr>&lt;baddr&gt;] [&#8211;config] [-d|&#8211;debug]] [&#8211;display=DISPLAY]</p>

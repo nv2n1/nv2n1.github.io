@@ -1,4 +1,5 @@
 ---
+
 title: "rootv(1)"
 name: "rootv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rootv/"
 description: "rootv – display TV using the Xvideo extension"
 ---
 
-<h2>NAME</h2>
 <p> rootv &#8211; display TV using the Xvideo extension</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rootv [ options ]</code></p>

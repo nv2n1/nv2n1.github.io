@@ -1,4 +1,5 @@
 ---
+
 title: "euare-instanceprofilegetattributes(1)"
 name: "euare-instanceprofilegetattributes"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-instanceprofilegetattributes/"
 description: "euare-instanceprofilegetattributes – Display an instance profile’s ARN and GUID"
 ---
 
-<h2>NAME</h2>
 <p> euare-instanceprofilegetattributes &#8211; Display an instance profile&#8217;s ARN and GUID</p>
 <h2>SYNOPSIS</h2>
 <p> euare-instanceprofilegetattributes [-r] [&#8211;as-account ACCOUNT] [-U URL]</p>

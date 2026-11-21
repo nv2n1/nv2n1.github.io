@@ -1,4 +1,5 @@
 ---
+
 title: "fastd(1)"
 name: "fastd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fastd/"
 description: "fastd – Fast and Secure Tunnelling Daemon"
 ---
 
-<h2>NAME</h2>
 <p> fastd &#8211; Fast and Secure Tunnelling Daemon</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fastd</code> <i>OPTION</i>&#8230;</p>

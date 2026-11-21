@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_record_get_discarded(3)"
 name: "gnutls_record_get_discarded"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_record_get_discarded/"
 description: "gnutls_record_get_discarded – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_record_get_discarded &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/dtls.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "agedu(1)"
 name: "agedu"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-agedu/"
 description: "agedu – correlate disk usage with last-access times to identify large and disused data"
 ---
 
-<h2>NAME</h2>
 <p> <code>agedu</code> &#8211; correlate disk usage with last-access times to identify large and disused data</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

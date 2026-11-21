@@ -1,4 +1,5 @@
 ---
+
 title: "gsl-histogram(1)"
 name: "gsl-histogram"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gsl-histogram/"
 description: "gsl-histogram – compute histogram of data on stdin"
 ---
 
-<h2>NAME</h2>
 <p> gsl-histogram &#8211; compute histogram of data on stdin</p>
 <h2>SYNOPSYS</h2>
 <p> <code>gsl-histogram xmin xmax [n]</code></p>

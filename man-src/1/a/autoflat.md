@@ -1,4 +1,5 @@
 ---
+
 title: "autoflat(1)"
 name: "autoflat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-autoflat/"
 description: "autoflat – CCD flat-frame composition"
 ---
 
-<h2 class="name">NAME</h2>
 <p> autoflat &#8211; CCD flat-frame composition</p>
 <h2>SYNOPSIS</h2>
 <p> <code>autoflat </code><i>[options] source_file &#8230;</i> </p>

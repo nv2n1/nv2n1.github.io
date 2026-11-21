@@ -1,4 +1,5 @@
 ---
+
 title: "docker-stack-deploy(1)"
 name: "docker-stack-deploy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-stack-deploy/"
 description: "docker-stack-deploy – Deploy a new stack or update an existing stack"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-stack-deploy &#8211; Deploy a new stack or update an existing stack </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker stack deploy [OPTIONS] STACK</code> </p>

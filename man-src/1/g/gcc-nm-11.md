@@ -1,4 +1,5 @@
 ---
+
 title: "gcc-nm-11(1)"
 name: "gcc-nm-11"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gcc-nm-11/"
 description: "gcc-nm – a wrapper around nm adding the –plugin option"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gcc-nm &#8211; a wrapper around nm adding the &#8211;plugin option</p>
 <h2>SYNOPSIS</h2>
 <p> gcc-nm [<font SIZE="-1"><code>OPTION</code></font>] &#8230; [<i></i><font SIZE="-1"><i>ARGS</i></font><i></i>&#8230;] </p>

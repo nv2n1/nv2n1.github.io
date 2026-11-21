@@ -1,4 +1,5 @@
 ---
+
 title: "radecode(1)"
 name: "radecode"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-radecode/"
 description: "radecode – tshark-like decode of argus(1) user data"
 ---
 
-<h2>NAME</h2>
 <p> radecode &#8211; tshark-like decode of argus(1) user data</p>
 <h2>SYNOPSIS</h2>
 <p> <code>radecode </code> <code>-r</code> <i>argusFlowFile</i></p>

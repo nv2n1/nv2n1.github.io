@@ -1,4 +1,5 @@
 ---
+
 title: "lber-memory(3)"
 name: "lber-memory"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-lber-memory/"
 description: "ber_memalloc, ber_memcalloc, ber_memrealloc, ber_memfree, ber_memvfree – OpenLDAP LBER memory allocators"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ber_memalloc, ber_memcalloc, ber_memrealloc, ber_memfree, ber_memvfree &#8211; OpenLDAP LBER memory allocators </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LBER (liblber, -llber)</p>

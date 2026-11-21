@@ -1,4 +1,5 @@
 ---
+
 title: "hx509_certs_end_seq(3)"
 name: "hx509_certs_end_seq"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hx509_certs_end_seq/"
 description: "hx509 certificate store functions –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hx509 certificate store functions &#8211; </p>
 <h3>Functions</h3>
 <p> int <code>hx509_certs_add</code> (hx509_context, hx509_certs, hx509_cert) </p>

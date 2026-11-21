@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_channel_request_pty_size_ex(3)"
 name: "libssh2_channel_request_pty_size_ex"
 section: "3"
@@ -6,9 +7,7 @@ letter: "l"
 url: "/docs/linux/man/3-libssh2_channel_request_pty_size_ex/"
 ---
 
-<h2>NAME</h2>
-
- libssh2_channel_request_pty_size_ex - TODO
+libssh2_channel_request_pty_size_ex - TODO
 
 <h2>SYNOPSIS</h2>
 

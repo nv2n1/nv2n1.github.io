@@ -1,4 +1,5 @@
 ---
+
 title: "intel_panel_fitter(1)"
 name: "intel_panel_fitter"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-intel_panel_fitter/"
 description: "intel_panel_fitter – Change the panel fitter settings"
 ---
 
-<h2>NAME</h2>
 <p> intel_panel_fitter &#8211; Change the panel fitter settings</p>
 <h2>SYNOPSIS</h2>
 <p> <code>intel_panel_fitter [options]</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "t1unmac(1)"
 name: "t1unmac"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-t1unmac/"
 description: "t1unmac – translate a Mac PostScript Type 1 font into PFA or PFB format"
 ---
 
-<h2 class="name">NAME</h2>
 <p> t1unmac &#8211; translate a Mac PostScript Type 1 font into PFA or PFB format </p>
 <h2>SYNOPSIS</h2>
 <p> <code>t1unmac</code> [<code>-a</code>|<code>-b</code>] [<code>-r</code>] [<i>input</i> [<i>output</i>]]</p>

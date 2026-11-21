@@ -1,4 +1,5 @@
 ---
+
 title: "qdel-torque(1)"
 name: "qdel-torque"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qdel-torque/"
 description: "qdel – delete pbs batch job"
 ---
 
-<h2 class="name">NAME</h2>
 <p> qdel &#8211; delete pbs batch job </p>
 <h2>SYNOPSIS</h2>
 <p> qdel [-a] [-c] [-m message] [-p] [-t array_range] [-W delay] job_identifier&#8230;</p>

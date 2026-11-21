@@ -1,4 +1,5 @@
 ---
+
 title: "bcm43xx-fwcutter(1)"
 name: "bcm43xx-fwcutter"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bcm43xx-fwcutter/"
 description: "bcm43xx-fwcutter – manual page for bcm43xx-fwcutter"
 ---
 
-<h2>NAME</h2>
 <p> bcm43xx-fwcutter &#8211; manual page for bcm43xx-fwcutter</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bcm43xx-fwcutter</code> [<i>OPTION</i>] [<i>DRIVER</i>]</p>

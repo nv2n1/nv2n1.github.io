@@ -1,4 +1,5 @@
 ---
+
 title: "garmin_get_info(1)"
 name: "garmin_get_info"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-garmin_get_info/"
 description: "garmin_get_info – retrieve basic information from a Forerunner device."
 ---
 
-<h2>NAME</h2>
 <p> garmin_get_info &#8211; retrieve basic information from a Forerunner device.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>garmin_get_info</code> </p>

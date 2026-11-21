@@ -1,4 +1,5 @@
 ---
+
 title: "ck_pr_add(3)"
 name: "ck_pr_add"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_pr_add/"
 description: "ck_pr_add_ptr ck_pr_add_double ck_pr_add_char ck_pr_add_uint ck_pr_add_int ck_pr_add_64 ck_pr_add_32 ck_pr_add_16 ck_pr_add_8 – atomic addition operations"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_pr_add_ptr</code> <code>ck_pr_add_double</code> <code>ck_pr_add_char</code> <code>ck_pr_add_uint</code> <code>ck_pr_add_int</code> <code>ck_pr_add_64</code> <code>ck_pr_add_32</code> <code>ck_pr_add_16</code> <code>ck_pr_add_8</code> &#8211; atomic addition operations</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

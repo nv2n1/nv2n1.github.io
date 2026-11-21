@@ -1,4 +1,5 @@
 ---
+
 title: "esdsample(1)"
 name: "esdsample"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-esdsample/"
 description: "esdsample – play a sample"
 ---
 
-<h2>NAME</h2>
 <p> esdsample &#8211; play a sample</p>
 <h2>SYNOPSIS</h2>
 <p> <code>esdsample</code> [-<code>s </code><i>hostname</i>:<i>port</i>] [-<code>b</code>] [-<code>d</code>] [-<code>e</code>] [-<code>h</code>] [-<code>m</code>] [-<code>r </code><i>freq</i>] <i>samplename</i></p>

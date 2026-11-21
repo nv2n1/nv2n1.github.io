@@ -1,4 +1,5 @@
 ---
+
 title: "vmmouse_detect(1)"
 name: "vmmouse_detect"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vmmouse_detect/"
 description: "vmmouse_detect – VMware mouse device autodetection tool"
 ---
 
-<h2>NAME</h2>
 <p> vmmouse_detect &#8211; VMware mouse device autodetection tool</p>
 <h2>SYNOPSIS</h2>
 <p> vmmouse_detect</p>

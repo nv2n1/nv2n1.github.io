@@ -1,4 +1,5 @@
 ---
+
 title: "whatis(1)"
 name: "whatis"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-whatis/"
 description: "whatis – display one-line manual page descriptions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> whatis &#8211; display one-line manual page descriptions </p>
 <h2>SYNOPSIS</h2>
 <p> <code>whatis</code> [<code>-dlv?V</code>] [<code>-r</code>|<code>-w</code>] [<code>-s</code> <i>list</i>] [<code>-m</code> <i>system</i>[,&#8230;]] [<code>-M</code> <i>path</i>] [<code>-L</code> <i>locale</i>] [<code>-C</code> <i>file</i>] <i>name</i> &#8230;</p>

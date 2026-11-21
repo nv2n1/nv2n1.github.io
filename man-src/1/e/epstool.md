@@ -1,4 +1,5 @@
 ---
+
 title: "epstool(1)"
 name: "epstool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-epstool/"
 description: "epstool – Edit preview images and fix bounding boxes in EPS files."
 ---
 
-<h2>NAME</h2>
 <p> epstool &#8211; Edit preview images and fix bounding boxes in EPS files. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>epstool</code> <i>command</i> [ <i>options</i> ] <i>inputfile outputfile</i> </p>

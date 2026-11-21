@@ -1,4 +1,5 @@
 ---
+
 title: "mysql_ssl_rsa_setup(1)"
 name: "mysql_ssl_rsa_setup"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mysql_ssl_rsa_setup/"
 description: "mysql_ssl_rsa_setup – create SSL/RSA files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mysql_ssl_rsa_setup &#8211; create SSL/RSA files </p>
 <h2>SYNOPSIS</h2>
 <dl>

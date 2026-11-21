@@ -1,12 +1,14 @@
 ---
+
 title: "aa_putpixel(3)"
 name: "aa_putpixel"
 section: "3"
 letter: "a"
 url: "/docs/linux/man/3-aa_putpixel/"
 ---
+
 <p> aa_putpixel - put pixel to emulated framebuffer  </p>
-<h2>SYNOPSIS</h2>
+
 <p> <code> #include &lt;aalib.h&gt; </p>
 <p>void aa_putpixel <br />
  ( <br />

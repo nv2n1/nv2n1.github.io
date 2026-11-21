@@ -1,4 +1,5 @@
 ---
+
 title: "lockdev(3)"
 name: "lockdev"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-lockdev/"
 description: "lockdev, liblockdev, dev_testlock, dev_lock, dev_relock, dev_unlock – manage device lockfiles"
 ---
 
-<h2>NAME</h2>
 <p> lockdev, liblockdev, dev_testlock, dev_lock, dev_relock, dev_unlock &#8211; manage device lockfiles</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;lockdev.h&gt;</code> </p>

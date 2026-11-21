@@ -1,4 +1,5 @@
 ---
+
 title: "chmoddic(1)"
 name: "chmoddic"
 section: "1"
@@ -6,9 +7,7 @@ letter: "c"
 url: "/docs/linux/man/1-chmoddic/"
 ---
 
-<h2>NAME</h2>
-
- <tt>chmoddic</tt> - change access rights for a directory
+<tt>chmoddic</tt> - change access rights for a directory
 
 <h2>SYNOPSIS</h2>
 

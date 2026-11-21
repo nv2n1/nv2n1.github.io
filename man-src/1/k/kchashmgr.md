@@ -1,4 +1,5 @@
 ---
+
 title: "kchashmgr(1)"
 name: "kchashmgr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kchashmgr/"
 description: "kchashmgr – command line interface to manage the file hash database"
 ---
 
-<h2 class="name">NAME</h2>
 <p> kchashmgr &#8211; command line interface to manage the file hash database</p>
 <h2>DESCRIPTION</h2>
 <p> The command `<code>kchashmgr</code>&#8216; is a utility for test and debugging of the file hash database and its applications. `<i>path</i>&#8216; specifies the path of a database file. `<i>key</i>&#8216; specifies the key of a record. `<i>value</i>&#8216; specifies the value of a record. `<i>file</i>&#8216; specifies the input/output file. </p>

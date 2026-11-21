@@ -1,4 +1,5 @@
 ---
+
 title: "copr-cli(1)"
 name: "copr-cli"
 section: "1"
@@ -6,10 +7,7 @@ letter: "c"
 url: "/docs/linux/man/1-copr-cli/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- copr-cli - command line interface for the Copr service 
+copr-cli - command line interface for the Copr service 
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "unxrandr(1)"
 name: "unxrandr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-unxrandr/"
 description: "unxrandr – inverse tool of xrandr"
 ---
 
-<h2>NAME</h2>
 <p> unxrandr &#8211; inverse tool of xrandr</p>
 <h2>SYNOPSIS</h2>
 <p> <code>unxrandr</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "funhead(1)"
 name: "funhead"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-funhead/"
 description: "funhead – display a header in a Funtools file"
 ---
 
-<h2>NAME</h2>
 <p> <code>funhead &#8211; display a header in a Funtools file</code></p>
 <h2>SYNOPSIS</h2>
 <p> funhead [-a] [-s] [-t] [-L] &lt;iname&gt; [oname ename]</p>

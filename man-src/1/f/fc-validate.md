@@ -1,4 +1,5 @@
 ---
+
 title: "fc-validate(1)"
 name: "fc-validate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fc-validate/"
 description: "fc-validate – validate font files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fc-validate &#8211; validate font files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fc-validate</code> [ <code>-Vhv</code> ] </p>

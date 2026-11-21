@@ -1,4 +1,5 @@
 ---
+
 title: "lav2mpeg(1)"
 name: "lav2mpeg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lav2mpeg/"
 description: "lav2mpeg – easy conversion of lav files to mpeg"
 ---
 
-<h2>NAME</h2>
 <p> lav2mpeg &#8211; easy conversion of lav files to mpeg</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lav2mpeg [ options ]</code> <i>lavfile1 [lavfile2 &#8230; lavfileN]</i></p>

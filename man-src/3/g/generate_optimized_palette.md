@@ -1,4 +1,5 @@
 ---
+
 title: "generate_optimized_palette(3)"
 name: "generate_optimized_palette"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-generate_optimized_palette/"
 description: "generate_optimized_palette – Generates an optimized palette for a bitmap. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> generate_optimized_palette &#8211; Generates an optimized palette for a bitmap. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

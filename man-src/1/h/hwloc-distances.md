@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc-distances(1)"
 name: "hwloc-distances"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hwloc-distances/"
 description: "hwloc-distances – Displays distance matrices"
 ---
 
-<h2>NAME</h2>
 <p> hwloc-distances &#8211; Displays distance matrices</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hwloc-distances</code> [<i>options</i>]</p>

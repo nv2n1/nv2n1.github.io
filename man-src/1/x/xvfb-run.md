@@ -1,4 +1,5 @@
 ---
+
 title: "xvfb-run(1)"
 name: "xvfb-run"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xvfb-run/"
 description: "xvfb-run – run specified X client or command in a virtual X server environment"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xvfb-run &#8211; run specified X client or command in a virtual X server environment </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xvfb-run</code> [ <i>options</i> ] <i>command</i></p>

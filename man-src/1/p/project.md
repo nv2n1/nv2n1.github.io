@@ -1,4 +1,5 @@
 ---
+
 title: "project(1)"
 name: "project"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-project/"
 description: "project – Project table data onto lines or great circles, generate tracks, or translate coordinates"
 ---
 
-<h2>NAME</h2>
 <p> project &#8211; Project table data onto lines or great circles, generate tracks, or translate coordinates</p>
 <h2>SYNOPSIS</h2>
 <p> <code>project</code> [ <i>table</i> ] <i>cx</i>/<i>cy</i> [ <i>azimuth</i> ] [ <i>bx</i>/<i>by</i> ] [ <i>flags</i> ] [ <i>dist</i>[/<i>colat</i>][<code>+</code>] ] [ [<code>w</code>][<i>l_min</i>/<i>l_max</i>] ] [ ] [ ] [ ] [ <i>px</i>/<i>py</i> ] [ [<i>level</i>] ] [ <i>w_min</i>/<i>w_max</i> ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-s</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

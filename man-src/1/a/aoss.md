@@ -1,4 +1,5 @@
 ---
+
 title: "aoss(1)"
 name: "aoss"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-aoss/"
 description: "aoss – Wrapper script to facilitate use of the ALSA OSS compatibility library."
 ---
 
-<h2>NAME</h2>
 <p> aoss &#8211; Wrapper script to facilitate use of the ALSA OSS compatibility library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>aoss</code> [-32] <i>osscommand</i> [arguments] </p>

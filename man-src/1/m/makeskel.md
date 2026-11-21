@@ -1,4 +1,5 @@
 ---
+
 title: "makeskel(1)"
 name: "makeskel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-makeskel/"
 description: "makeskel – generate description file for fpdoc."
 ---
 
-<h2>NAME</h2>
 <p> makeskel &#8211; generate description file for <code>fpdoc.</code> </p>
 <h2>SYNOPSIS</h2>
 <p> <code>makeskel</code> [&#8211;descr=filename] [&#8211;disable-arguments] [&#8211;disable-errors] [&#8211;disable-function-results] [&#8211;disable-private] [&#8211;disable-protected] [&#8211;disable-seealso] [&#8211;emit-class-separator] [&#8211;help] [&#8211;lang=language] [&#8211;output=filename] [&#8211;update] &#8211;package=name &#8211;input=cmdline </p>

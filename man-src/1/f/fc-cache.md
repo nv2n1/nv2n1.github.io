@@ -1,4 +1,5 @@
 ---
+
 title: "fc-cache(1)"
 name: "fc-cache"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fc-cache/"
 description: "fc-cache – build font information cache files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fc-cache &#8211; build font information cache files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fc-cache</code> [ <code>-EfrsvVh</code> ] [ <code>&#8211;error-on-no-fonts</code> ] [ <code>&#8211;force</code> ] [ <code>&#8211;really-force</code> ] [ <code> [ -y </code><i>dir</i><code> ] [ &#8211;sysroot </code><i>dir</i><code> ] </code> ] [ <code>&#8211;system-only</code> ] [ <code>&#8211;verbose</code> ] [ <code>&#8211;version</code> ] [ <code>&#8211;help</code> ] [ <i>dir</i><i>&#8230;</i> ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "iswpunct(3)"
 name: "iswpunct"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-iswpunct/"
 description: "iswpunct – test for punctuation or symbolic wide character"
 ---
 
-<h2 class="name">NAME</h2>
 <p> iswpunct &#8211; test for punctuation or symbolic wide character </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

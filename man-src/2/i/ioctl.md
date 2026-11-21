@@ -1,4 +1,5 @@
 ---
+
 title: "ioctl(2)"
 name: "ioctl"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-ioctl/"
 description: "ioctl – control device"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ioctl &#8211; control device </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/ioctl.h&gt;</code> </p>

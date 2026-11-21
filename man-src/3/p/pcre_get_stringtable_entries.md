@@ -1,4 +1,5 @@
 ---
+
 title: "pcre_get_stringtable_entries(3)"
 name: "pcre_get_stringtable_entries"
 section: "3"
@@ -6,8 +7,9 @@ letter: "p"
 url: "/docs/linux/man/3-pcre_get_stringtable_entries/"
 description: "PCRE – Perl-compatible regular expressions"
 ---
+
 <p>PCRE &#8211; Perl-compatible regular expressions </p>
-<h2>SYNOPSIS</h2>
+
 <p> <code>#include &lt;pcre.h&gt;</code> </p>
 <pre><code>
  int pcre_get_stringtable_entries(const pcre *  code ,

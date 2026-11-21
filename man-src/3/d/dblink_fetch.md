@@ -1,4 +1,5 @@
 ---
+
 title: "dblink_fetch(3)"
 name: "dblink_fetch"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dblink_fetch/"
 description: "dblink_fetch – returns rows from an open cursor in a remote database"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dblink_fetch &#8211; returns rows from an open cursor in a remote database </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

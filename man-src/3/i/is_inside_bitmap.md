@@ -1,4 +1,5 @@
 ---
+
 title: "is_inside_bitmap(3)"
 name: "is_inside_bitmap"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-is_inside_bitmap/"
 description: "is_inside_bitmap – Tells if a point is inside a bitmap. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> is_inside_bitmap &#8211; Tells if a point is inside a bitmap. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

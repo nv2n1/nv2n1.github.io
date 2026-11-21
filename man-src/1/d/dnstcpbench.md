@@ -1,4 +1,5 @@
 ---
+
 title: "dnstcpbench(1)"
 name: "dnstcpbench"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dnstcpbench/"
 description: "dnstcpbench – tool to perform TCP benchmarking of nameservers"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dnstcpbench &#8211; tool to perform TCP benchmarking of nameservers </p>
 <h2>SYNOPSIS</h2>
 <p> <i>dnstcpbench</i> [&#8211;help] [&#8211;file=filename] [&#8211;verbose] [&#8211;udp-first, -u] [&#8211;workers] [&#8211;timeout-msec] remote-ip-address [remote-port]</p>

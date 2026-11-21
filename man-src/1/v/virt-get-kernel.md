@@ -1,4 +1,5 @@
 ---
+
 title: "virt-get-kernel(1)"
 name: "virt-get-kernel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-virt-get-kernel/"
 description: "virt-get-kernel – Extract kernel and ramdisk from guests"
 ---
 
-<h2 class="name">NAME</h2>
 <p> virt-get-kernel &#8211; Extract kernel and ramdisk from guests </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

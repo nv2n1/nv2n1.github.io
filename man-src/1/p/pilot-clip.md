@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-clip(1)"
 name: "pilot-clip"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot-clip/"
 description: "pilot-clip – Get or Set the Palm Clipboard contents from STDOUT/STDIN."
 ---
 
-<h2>NAME</h2>
 <p> pilot-clip &#8211; Get or Set the Palm Clipboard contents from STDOUT/STDIN.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>

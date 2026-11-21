@@ -1,4 +1,5 @@
 ---
+
 title: "endpwent(3)"
 name: "endpwent"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-endpwent/"
 description: "getpwent, setpwent, endpwent – get password file entry"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getpwent, setpwent, endpwent &#8211; get password file entry </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

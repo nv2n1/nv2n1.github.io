@@ -1,4 +1,5 @@
 ---
+
 title: "gjots2html(1)"
 name: "gjots2html"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gjots2html/"
 description: "gjots2html – Convert a gjotsfile to HTML (on stdout)"
 ---
 
-<h2>NAME</h2>
 <p> gjots2html &#8211; Convert a gjotsfile to HTML (on <code>stdout</code>)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gjots2html</code> { <code>-lc</code> ] [ <code>-t</code><i> title</i> ] [ <code>-i</code><i> level</i> } [ <i>gjotsfile</i> ]</p>

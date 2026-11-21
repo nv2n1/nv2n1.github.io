@@ -1,4 +1,5 @@
 ---
+
 title: "arm4_export(1)"
 name: "arm4_export"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-arm4_export/"
 description: "arm4_export – export the ARM 4 database in XML format"
 ---
 
-<h2>NAME</h2>
 <p> arm4_export &#8211; export the ARM 4 database in XML format</p>
 <h2>SYNOPSIS</h2>
 <p> <code>arm4_export</code> <i>&#8211;help|-h</i><br />

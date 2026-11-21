@@ -1,4 +1,5 @@
 ---
+
 title: "manpage-alert(1)"
 name: "manpage-alert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-manpage-alert/"
 description: "manpage-alert – check for binaries without corresponding manpages"
 ---
 
-<h2>NAME</h2>
 <p> manpage-alert &#8211; check for binaries without corresponding manpages</p>
 <h2>SYNOPSIS</h2>
 <p> <code>manpage-alert</code> [<i>path list</i>]<br />

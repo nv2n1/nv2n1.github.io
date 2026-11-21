@@ -1,4 +1,5 @@
 ---
+
 title: "fastautils(1)"
 name: "fastautils"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fastautils/"
 description: "fastautils – FASTA format file manipulation utilities"
 ---
 
-<h2>NAME</h2>
 <p> fastautils &#8211; FASTA format file manipulation utilities </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fastachecksum [ options ] &lt;input file&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "tv_grab_se_swedb(1)"
 name: "tv_grab_se_swedb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tv_grab_se_swedb/"
 description: "tv_grab_se_swedb – Grab TV listings for Sweden."
 ---
 
-<h2 class="name">NAME</h2>
 <p> tv_grab_se_swedb &#8211; Grab TV listings for Sweden. </p>
 <h2>SYNOPSIS</h2>
 <p> tv_grab_se_swedb &#8211;help </p>

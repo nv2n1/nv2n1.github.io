@@ -1,4 +1,5 @@
 ---
+
 title: "bti-shrink-urls(1)"
 name: "bti-shrink-urls"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bti-shrink-urls/"
 description: "bti-shrink-urls – convert URLs to a shorter form using a web service"
 ---
 
-<h2 class="name">NAME</h2>
 <p> bti-shrink-urls &#8211; convert URLs to a shorter form using a web service </p>
 <h2>SYNOPSIS</h2>
 <dl>

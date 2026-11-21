@@ -1,4 +1,5 @@
 ---
+
 title: "ares_get_servers(3)"
 name: "ares_get_servers"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ares_get_servers/"
 description: "ares_get_servers – Retrieve name servers from an initialized ares_channel"
 ---
 
-<h2>NAME</h2>
 <p> ares_get_servers &#8211; Retrieve name servers from an initialized ares_channel</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "cannacheck(1)"
 name: "cannacheck"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cannacheck/"
 description: "cannacheck – Display information about Japanese input system Canna"
 ---
 
-<h2>NAME</h2>
 <p> cannacheck &#8211; Display information about Japanese input system Canna</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cannacheck [-v]</code></p>

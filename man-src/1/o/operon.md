@@ -1,4 +1,5 @@
 ---
+
 title: "operon(1)"
 name: "operon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-operon/"
 description: "operon – command line music tagger"
 ---
 
-<h2>NAME</h2>
 <p> operon &#8211; command line music tagger</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

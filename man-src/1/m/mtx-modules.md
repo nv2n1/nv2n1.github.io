@@ -1,4 +1,5 @@
 ---
+
 title: "mtx-modules(1)"
 name: "mtx-modules"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mtx-modules/"
 description: "mtx-modules – ConTeXt Module Documentation Generators"
 ---
 
-<h2 class="name">NAME</h2>
 <p>&nbsp;mtx-modules &#8211; ConTeXt Module Documentation Generators </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mtxrun &#8211;script modules [</code> <i>OPTIONS &#8230;</i> <code>] [</code> <i>FILENAMES</i> <code>]</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pivot_root(2)"
 name: "pivot_root"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-pivot_root/"
 description: "pivot_root – change the root mount"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pivot_root &#8211; change the root mount </p>
 <h2>SYNOPSIS</h2>
 <p> <code>int pivot_root(const char *</code><i>new_root</i><code>, const char *</code><i>put_old</i><code>);</code> </p>

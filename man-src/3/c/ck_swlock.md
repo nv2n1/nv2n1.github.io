@@ -1,4 +1,5 @@
 ---
+
 title: "ck_swlock(3)"
 name: "ck_swlock"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_swlock/"
 description: "ck_swlock_init ck_swlock_write_latch ck_swlock_write_unlatch ck_swlock_write_lock ck_swlock_write_unlock ck_swlock_write_trylock ck_swlock_write_downgrade ck_swlock_locked_writer ck_swlock_read_loc..."
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_swlock_init</code> <code>ck_swlock_write_latch</code> <code>ck_swlock_write_unlatch</code> <code>ck_swlock_write_lock</code> <code>ck_swlock_write_unlock</code> <code>ck_swlock_write_trylock</code> <code>ck_swlock_write_downgrade</code> <code>ck_swlock_locked_writer</code> <code>ck_swlock_read_lock</code> <code>ck_swlock_read_trylock</code> <code>ck_swlock_read_unlock</code> <code>ck_swlock_locked_reader</code> &#8211; centralized copy-safe write-biased single-writer read-write locks</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

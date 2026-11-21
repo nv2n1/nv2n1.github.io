@@ -1,4 +1,5 @@
 ---
+
 title: "bson_strerror_r(3)"
 name: "bson_strerror_r"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_strerror_r/"
 description: "bson_strerror_r() – This is a portability wrapper around strerror()."
 ---
 
-<h2>NAME</h2>
 <p> bson_strerror_r() &#8211; This is a portability wrapper around strerror().</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

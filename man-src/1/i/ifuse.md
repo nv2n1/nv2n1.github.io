@@ -1,4 +1,5 @@
 ---
+
 title: "ifuse(1)"
 name: "ifuse"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ifuse/"
 description: "ifuse – Mount directories of an iOS device locally using fuse."
 ---
 
-<h2>NAME</h2>
 <p> ifuse &#8211; Mount directories of an iOS device locally using fuse.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ifuse MOUNTPOINT [OPTIONS]</code> </p>

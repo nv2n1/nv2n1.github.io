@@ -1,4 +1,5 @@
 ---
+
 title: "kpsewhere(1)"
 name: "kpsewhere"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kpsewhere/"
 description: "kpsewhere – Expanding kpsewhich to separately iterate over each texmf tree listed in $TEXMF."
 ---
 
-<h2>NAME</h2>
 <p> kpsewhere &#8211; Expanding <code>kpsewhich</code> to separately iterate over each texmf tree listed in $TEXMF. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>kpsewhere </code> [ <i>kpsewhich-OPTIONS</i>&#8230; ] <i>COMMAND</i> </p>

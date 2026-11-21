@@ -1,4 +1,5 @@
 ---
+
 title: "spumux(1)"
 name: "spumux"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-spumux/"
 description: "spumux – generates and multiplexes subtitles into an existing mpeg2 program stream"
 ---
 
-<h2 class="name">NAME</h2>
 <p> spumux &#8211; generates and multiplexes subtitles into an existing mpeg2 program stream </p>
 <h2>SYNOPSIS</h2>
 <p> <code>spumux</code> [ <code>-m dvd</code> | <code>-m cvd</code> | <code>-m svcd</code> ] [ <code>-s </code><i>stream</i> ] [ <code>-v </code><i>level</i> ] [ <code>-P</code> ] [ <code>&#8211;nomux</code> ] [ <code>&#8211;nodvdauthor-data</code> ] <i>file</i> <code>&lt; </code><i>mpeg</i> <code>&gt; </code><i>mpeg-with-subtitles</i> </p>

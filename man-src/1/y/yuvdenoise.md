@@ -1,4 +1,5 @@
 ---
+
 title: "yuvdenoise(1)"
 name: "yuvdenoise"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-yuvdenoise/"
 description: "yuvdenoise – Motion-Compensating-YUV4MPEG2-frame-denoiser"
 ---
 
-<h2 class="name">NAME</h2>
 <p> yuvdenoise &#8211; Motion-Compensating-YUV4MPEG2-frame-denoiser</p>
 <h2>SYNOPSIS</h2>
 <p> <code>yuvdenoise</code> [<i>options</i>] &lt;/dev/stdin &gt;/dev/stdout </p>

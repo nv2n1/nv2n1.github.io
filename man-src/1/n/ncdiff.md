@@ -1,4 +1,5 @@
 ---
+
 title: "ncdiff(1)"
 name: "ncdiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ncdiff/"
 description: "ncdiff – netCDF Differencer"
 ---
 
-<h2>NAME</h2>
 <p> ncdiff &#8211; netCDF Differencer</p>
 <h2>SYNTAX</h2>
 <p> ncdiff [-3] [-4] [-6] [-A] [-C] [-c] [-D dbg_lvl ] [-d <i>dim</i>,[ <i>min</i>][,[ <i>max</i>]]] [-F] [-h] [&#8211;hdr_pad <i>sz</i>] [-L <i>dfl_lvl</i>] [-l <i>path</i>] [-O] [-p <i>path</i>] [-R] [-r] [-v <i>var</i>[,&#8230;]] [-x] <i>file_1</i> <i>file_2</i> <i>file_3</i></p>

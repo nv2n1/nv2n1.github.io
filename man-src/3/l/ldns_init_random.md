@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_init_random(3)"
 name: "ldns_init_random"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_init_random/"
 description: "ldns_init_random"
 ---
 
-<h2>NAME</h2>
 <p> ldns_init_random </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "quotasync(1)"
 name: "quotasync"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-quotasync/"
 description: "quotasync – synchronize in-kernel file system usage and limits to disk format"
 ---
 
-<h2>NAME</h2>
 <p> quotasync &#8211; synchronize in-kernel file system usage and limits to disk format</p>
 <h2>SYNOPSIS</h2>
 <p> <code>quotasync</code> [ <code>-ug</code> ] <i>mount-point</i>&#8230;<br />

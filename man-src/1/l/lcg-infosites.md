@@ -1,4 +1,5 @@
 ---
+
 title: "lcg-infosites(1)"
 name: "lcg-infosites"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lcg-infosites/"
 description: "lcg-infosites – list grid service information matching given criteria"
 ---
 
-<h2>NAME</h2>
 <p> lcg-infosites &#8211; list grid service information matching given criteria</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lcg-infosites</code> [<i>options</i>] <i>selection(s)</i> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "extractbb(1)"
 name: "extractbb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-extractbb/"
 description: "extractbb, ebb – extract bounding box information from graphics files"
 ---
 
-<h2>NAME</h2>
 <p> extractbb, ebb &#8211; extract bounding box information from graphics files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>extractbb</code> [<code>-v</code>|<code>-q</code>] [<code>-O</code>] [<code>-m</code>|<code>-x</code>] <i>file</i>&#8230; </p>

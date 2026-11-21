@@ -1,4 +1,5 @@
 ---
+
 title: "nfdump(1)"
 name: "nfdump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nfdump/"
 description: "nfdump – netflow display and analyze program"
 ---
 
-<h2>NAME</h2>
 <p> nfdump &#8211; netflow display and analyze program</p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "config_data(1)"
 name: "config_data"
 section: "1"
@@ -6,10 +7,7 @@ letter: "c"
 url: "/docs/linux/man/1-config_data/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- config_data - Query or change configuration of Perl modules 
+config_data - Query or change configuration of Perl modules 
 
 <h2>SYNOPSIS</h2>
 

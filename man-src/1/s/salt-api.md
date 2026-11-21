@@ -1,4 +1,5 @@
 ---
+
 title: "salt-api(1)"
 name: "salt-api"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-salt-api/"
 description: "salt-api – salt-api Command"
 ---
 
-<h2>NAME</h2>
 <p> salt-api &#8211; salt-api Command </p>
 <p> Start interfaces used to remotely connect to the salt master</p>
 <h2>SYNOPSIS</h2>

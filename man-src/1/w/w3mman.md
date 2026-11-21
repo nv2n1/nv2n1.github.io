@@ -1,4 +1,5 @@
 ---
+
 title: "w3mman(1)"
 name: "w3mman"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-w3mman/"
 description: "w3mman – an interface to the on-line reference manuals via"
 ---
 
-<h2 class="name">NAME</h2>
 <p> w3mman &#8211; an interface to the on-line reference manuals via </p>
 <p> <a href="/docs/linux/man/1-w3m/">w3m</a>(1)</p>
 <h2>SYNOPSIS</h2>

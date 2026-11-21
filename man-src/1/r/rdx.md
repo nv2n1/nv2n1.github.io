@@ -1,4 +1,5 @@
 ---
+
 title: "rdx(1)"
 name: "rdx"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rdx/"
 description: "rdx – load and execute an RDOFF object"
 ---
 
-<h2>NAME</h2>
 <p> rdx &#8211; load and execute an RDOFF object</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rdx</code> <i>object</i></p>

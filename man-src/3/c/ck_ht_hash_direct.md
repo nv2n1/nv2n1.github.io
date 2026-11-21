@@ -1,4 +1,5 @@
 ---
+
 title: "ck_ht_hash_direct(3)"
 name: "ck_ht_hash_direct"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_ht_hash_direct/"
 description: "ck_ht_hash_direct – generate a hash value for a hash table"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_ht_hash_direct</code> &#8211; generate a hash value for a hash table</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

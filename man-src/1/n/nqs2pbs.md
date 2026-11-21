@@ -1,4 +1,5 @@
 ---
+
 title: "nqs2pbs(1)"
 name: "nqs2pbs"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nqs2pbs/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nqs2pbs - convert NQS job scripts to PBS 
+nqs2pbs - convert NQS job scripts to PBS 
 
 <h2>SYNOPSIS</h2>
 

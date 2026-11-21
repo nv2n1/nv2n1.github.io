@@ -1,4 +1,5 @@
 ---
+
 title: "pmiestatus(1)"
 name: "pmiestatus"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmiestatus/"
 description: "pmiestatus – display information from pmie stats file"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmiestatus</code> &#8211; display information from pmie stats file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmiestatus</code> <i>statsfile</i> [<i>&#8230;</i>]</p>

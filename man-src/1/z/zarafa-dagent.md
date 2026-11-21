@@ -1,4 +1,5 @@
 ---
+
 title: "zarafa-dagent(1)"
 name: "zarafa-dagent"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zarafa-dagent/"
 description: "zarafa-dagent – Deliver mails to Zarafa."
 ---
 
-<h2 class="name">NAME</h2>
 <p> zarafa-dagent &#8211; Deliver mails to Zarafa. </p>
 <h2>SYNOPSIS</h2>
 <dl>

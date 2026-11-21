@@ -1,4 +1,5 @@
 ---
+
 title: "eruby(1)"
 name: "eruby"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-eruby/"
 description: "eruby – Embedded Ruby Language"
 ---
 
-<h2>NAME</h2>
 <p> eruby &#8211; Embedded Ruby Language</p>
 <h2>SYNOPSIS</h2>
 <p> eruby [options] [inputfile]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "xyz2grd(1)"
 name: "xyz2grd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xyz2grd/"
 description: "xyz2grd – Convert data table to a grid file"
 ---
 
-<h2>NAME</h2>
 <p> xyz2grd &#8211; Convert data table to a grid file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xyz2grd</code> [ <i>table</i> ] <i>grdfile</i> <i>increment</i> <i>region</i> [ [<code>f</code>|<code>l</code>|<code>m</code>|<code>n</code>|<code>r</code>|<code>s</code>|<code>u</code>|<code>z</code>] ] [ <i>xname</i>/<i>yname</i>/<i>zname</i>/<i>scale</i>/<i>offset</i>/<i>invalid</i>/<i>title</i>/<i>remark</i> ] [ [<i>zfile</i>] ] [ [<i>level</i>] ] [ [<i>flags</i>] ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-r</code> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

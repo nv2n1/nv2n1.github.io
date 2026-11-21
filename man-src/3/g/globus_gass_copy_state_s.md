@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gass_copy_state_s(3)"
 name: "globus_gass_copy_state_s"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gass_copy_state_s/"
 description: "globus_gass_copy_state_s –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> globus_gass_copy_state_s &#8211; </p>
 <p> The state structure contains all that is required to perform a file transfer from a source to a destination.</p>
 <h2>SYNOPSIS</h2>

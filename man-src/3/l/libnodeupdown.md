@@ -1,4 +1,5 @@
 ---
+
 title: "libnodeupdown(3)"
 name: "libnodeupdown"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libnodeupdown/"
 description: "libnodeupdown – a library of functions to determine if a node is up or down"
 ---
 
-<h2>NAME</h2>
 <p> libnodeupdown &#8211; a library of functions to determine if a node is up or down</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;nodeupdown.h&gt;</code> </p>

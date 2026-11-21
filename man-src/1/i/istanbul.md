@@ -1,4 +1,5 @@
 ---
+
 title: "istanbul(1)"
 name: "istanbul"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-istanbul/"
 description: "istanbul – a desktop session recorder"
 ---
 
-<h2>NAME</h2>
 <p> istanbul &#8211; a desktop session recorder</p>
 <h2>SYNOPSIS</h2>
 <p> <code>istanbul</code> [options]</p>

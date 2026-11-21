@@ -1,4 +1,5 @@
 ---
+
 title: "nvme-io-passthru(1)"
 name: "nvme-io-passthru"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-io-passthru/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nvme-io-passthru - Submit an arbitrary io command, return results 
+nvme-io-passthru - Submit an arbitrary io command, return results 
 
 <h2>SYNOPSIS</h2>
 

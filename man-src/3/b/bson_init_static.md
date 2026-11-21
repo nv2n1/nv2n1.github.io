@@ -1,4 +1,5 @@
 ---
+
 title: "bson_init_static(3)"
 name: "bson_init_static"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_init_static/"
 description: "bson_init_static() – The bson_init_static() function shall shall initialize a read-only bson_t on the stack using the data provided. No copies of the data will be made and therefore must remain val..."
 ---
 
-<h2>NAME</h2>
 <p> bson_init_static() &#8211; The bson_init_static() function shall shall initialize a read-only bson_t on the stack using the data provided. No copies of the data will be made and therefore must remain valid for the lifetime of the bson_t.</p>
 <h2>SYNOPSIS</h2>
 <pre>

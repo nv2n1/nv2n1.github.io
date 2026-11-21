@@ -1,4 +1,5 @@
 ---
+
 title: "euca-cancel-conversion-task(1)"
 name: "euca-cancel-conversion-task"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-cancel-conversion-task/"
 description: "euca-cancel-conversion-task – Cancel an import task"
 ---
 
-<h2>NAME</h2>
 <p> euca-cancel-conversion-task &#8211; Cancel an import task</p>
 <h2>SYNOPSIS</h2>
 <p> euca-cancel-conversion-task [&#8211;show-empty-fields] [-U URL]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dh_desktop(1)"
 name: "dh_desktop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_desktop/"
 description: "dh_desktop – deprecated no-op"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_desktop &#8211; deprecated no-op </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_desktop</code> [<i>debhelper options</i>]</p>

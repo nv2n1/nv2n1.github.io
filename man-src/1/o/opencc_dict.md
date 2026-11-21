@@ -1,4 +1,5 @@
 ---
+
 title: "opencc_dict(1)"
 name: "opencc_dict"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-opencc_dict/"
 description: "opencc_dict – open chinese convert dictionary tool"
 ---
 
-<h2>NAME</h2>
 <p> opencc_dict &#8211; open chinese convert dictionary tool</p>
 <h2>DESCRIPTION</h2>
 <p> Open Chinese Convert (OpenCC) Dictionary Tool</p>

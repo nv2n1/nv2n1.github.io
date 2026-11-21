@@ -1,4 +1,5 @@
 ---
+
 title: "lssubsys(1)"
 name: "lssubsys"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lssubsys/"
 description: "lssubsys – list hierarchies containing given subsystem"
 ---
 
-<h2>NAME</h2>
 <p> lssubsys &#8211; list hierarchies containing given subsystem </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lssubsys</code> [<code>-m|&#8211;mount-points</code>] [<code>-M|&#8211;all-mount-points</code>] [<i>controller</i>] [&#8230;]<br />

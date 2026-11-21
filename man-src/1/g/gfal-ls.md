@@ -1,4 +1,5 @@
 ---
+
 title: "gfal-ls(1)"
 name: "gfal-ls"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gfal-ls/"
 description: "gfal-ls – list directory contents or file information"
 ---
 
-<h2>NAME</h2>
 <p> gfal-ls &#8211; list directory contents or file information</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gfal-ls [-h] [-V] [-v] [-D DEFINITION] [-C CLIENT-INFO] [-t TIMEOUT] [-a] [-l] [-d] [-H] file</code> </p>

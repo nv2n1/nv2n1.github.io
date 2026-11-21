@@ -1,4 +1,5 @@
 ---
+
 title: "avc_entry_ref_init(3)"
 name: "avc_entry_ref_init"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-avc_entry_ref_init/"
 description: "avc_has_perm, avc_has_perm_noaudit, avc_audit, avc_entry_ref_init – obtain and audit SELinux access decisions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> avc_has_perm, avc_has_perm_noaudit, avc_audit, avc_entry_ref_init &#8211; obtain and audit SELinux access decisions </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/selinux.h&gt;</code><br />

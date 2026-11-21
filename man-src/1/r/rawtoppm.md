@@ -1,4 +1,5 @@
 ---
+
 title: "rawtoppm(1)"
 name: "rawtoppm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rawtoppm/"
 description: "rawtoppm – convert raw RGB bytes into a portable pixmap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rawtoppm &#8211; convert raw RGB bytes into a portable pixmap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>rawtoppm</code> [<code>-headerskip</code> <i>N</i>] [<code>-rowskip</code> <i>N</i>] [<code>-rgb</code>|<code>-rbg</code>|<code>-grb</code> |<code>-gbr</code>|<code>-brg</code>|<code>-bgr</code> ] [<code>-interpixel</code>|<code>-interrow</code>] <i>width height</i> [<i>imagedata</i>]</p>

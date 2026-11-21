@@ -1,4 +1,5 @@
 ---
+
 title: "msktutil(1)"
 name: "msktutil"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-msktutil/"
 description: "msktutil – fetches and manages kerberos keytabs in an Active Directory environment"
 ---
 
-<h2>NAME</h2>
 <p> msktutil &#8211; fetches and manages kerberos keytabs in an Active Directory environment</p>
 <h2>SYNOPSIS</h2>
 <p> <code>msktutil</code> [command 1] [command 2] [command 3] &#8230;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "hciattach(1)"
 name: "hciattach"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hciattach/"
 description: "hciattach – attach serial devices via UART HCI to BlueZ stack"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hciattach &#8211; attach serial devices via UART HCI to BlueZ stack </p>
 <h2>SYNOPSIS</h2>
 <p> <code>hciattach</code> [<i>OPTIONS</i>] &lt;<i>tty</i>&gt; &lt;<i>type|id</i>&gt; [<i>speed</i>] [<i>flow</i>] [<i>sleep</i>] [<i>bdaddr</i>] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pgcenter(1)"
 name: "pgcenter"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pgcenter/"
 description: "pgcenter – is the PostgreSQL administration console with top-like monitoring."
 ---
 
-<h2>NAME</h2>
 <p> pgcenter &#8211; is the PostgreSQL administration console with top-like monitoring.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pgcenter</code> [OPTION]&#8230; [DBNAME [USERNAME]] </p>

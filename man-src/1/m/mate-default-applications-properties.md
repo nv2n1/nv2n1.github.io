@@ -1,4 +1,5 @@
 ---
+
 title: "mate-default-applications-properties(1)"
 name: "mate-default-applications-properties"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-default-applications-properties/"
 description: "mate-default-applications-properties — is a control center applet."
 ---
 
-<h2>NAME</h2>
 <p> mate-default-applications-properties &#8212; is a control center applet. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-default-applications-properties</code> [<i>OPTIONS</i>]&#8230; </p>

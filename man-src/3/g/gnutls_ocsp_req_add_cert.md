@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_ocsp_req_add_cert(3)"
 name: "gnutls_ocsp_req_add_cert"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_ocsp_req_add_cert/"
 description: "gnutls_ocsp_req_add_cert – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_ocsp_req_add_cert &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/ocsp.h&gt;</code> </p>

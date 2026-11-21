@@ -1,4 +1,5 @@
 ---
+
 title: "nwsfind(1)"
 name: "nwsfind"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nwsfind/"
 description: "nwsfind – Find a NetWare Server"
 ---
 
-<h2>NAME</h2>
 <p> nwsfind &#8211; Find a NetWare Server</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nwsfind</code> [ <code>-t</code> <i>type</i> ] [ <i>name</i> ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "iso-read(1)"
 name: "iso-read"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-iso-read/"
 description: "iso-read – reads portions of an ISO 9660 image"
 ---
 
-<h2>NAME</h2>
 <p> iso-read &#8211; reads portions of an ISO 9660 image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>iso-read</code> [<i>OPTION</i>&#8230;]</p>

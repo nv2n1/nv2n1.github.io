@@ -1,4 +1,5 @@
 ---
+
 title: "nm(1)"
 name: "nm"
 section: "1"
@@ -6,7 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nm/"
 description: "nm – list symbols from object files"
 ---
-<h2 class="name">NAME</h2>
+
 <p> nm - list symbols from object files </p>
 <h2>SYNOPSIS</h2>
 <p> nm [<code>-A</code>|<code>-o</code>|<code>--print-file-name</code>] <br />

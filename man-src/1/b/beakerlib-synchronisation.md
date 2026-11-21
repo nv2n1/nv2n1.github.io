@@ -1,4 +1,5 @@
 ---
+
 title: "beakerlib-synchronisation(1)"
 name: "beakerlib-synchronisation"
 section: "1"
@@ -6,10 +7,7 @@ letter: "b"
 url: "/docs/linux/man/1-beakerlib-synchronisation/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- BeakerLib - synchronisation - Process synchronisation routines 
+BeakerLib - synchronisation - Process synchronisation routines 
 
 <h2>DESCRIPTION</h2>
 

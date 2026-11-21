@@ -1,4 +1,5 @@
 ---
+
 title: "cl-dump(1)"
 name: "cl-dump"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cl-dump/"
 description: "cl-dump – Dump and decode Directory Server replication change log"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cl-dump &#8211; Dump and decode Directory Server replication change log </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cl-dump</code> [<i>-h host</i>] [<i>-p port</i>] [<i>-D bind-dn</i>] -w bind-password | -P bind-cert<br />

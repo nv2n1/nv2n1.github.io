@@ -1,4 +1,5 @@
 ---
+
 title: "grdreformat(1)"
 name: "grdreformat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grdreformat/"
 description: "grdreformat – Converting between different grid file formats."
 ---
 
-<h2>NAME</h2>
 <p> grdreformat &#8211; Converting between different grid file formats.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grdreformat</code> <i>ingrdfile</i>[<i>=id</i>[<i>/scale/offset</i>[<i>/NaNvalue</i>]]] <i>outgrdfile</i>[<i>=id</i>[<i>/scale/offset</i>[<i>/NaNvalue</i>]]] [ <code>-N</code> ] [ <code>-R</code><i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[<code>r</code>] ] [ <code>-f</code>[<code>i</code>|<code>o</code>]<i>colinfo</i> ] [ <code>-V</code> ]</p>

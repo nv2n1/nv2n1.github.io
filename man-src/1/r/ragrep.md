@@ -1,4 +1,5 @@
 ---
+
 title: "ragrep(1)"
 name: "ragrep"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ragrep/"
 description: "ragrep – grep argus(8) user captured data."
 ---
 
-<h2>NAME</h2>
 <p> <code>ragrep</code> &#8211; grep <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> user captured data.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ragrep</code> [<code>options</code>] <code>-e</code> <i>pattern</i> [<code>raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>]<br />

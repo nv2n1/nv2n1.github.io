@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-cacert-manage(1)"
 name: "ipa-cacert-manage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-cacert-manage/"
 description: "ipa-cacert-manage – Manage CA certificates in IPA"
 ---
 
-<h2>NAME</h2>
 <p> ipa-cacert-manage &#8211; Manage CA certificates in IPA</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ipa-cacert-manage</code> [<i>OPTIONS</i>&#8230;] renew <code>ipa-cacert-manage</code> [<i>OPTIONS</i>&#8230;] install <i>CERTFILE</i></p>

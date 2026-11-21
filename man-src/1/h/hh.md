@@ -1,4 +1,5 @@
 ---
+
 title: "hh(1)"
 name: "hh"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hh/"
 description: "hh – easily view, navigate, sort and use your command history with shell history suggest box."
 ---
 
-<h2>NAME</h2>
 <p> <code>hh</code> &#8211; easily view, navigate, sort and use your command history with shell history suggest box.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hh [option] [arg1] [arg2]&#8230; </code></p>

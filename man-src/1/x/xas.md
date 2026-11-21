@@ -1,4 +1,5 @@
 ---
+
 title: "xas(1)"
 name: "xas"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xas/"
 description: "xas – X-Chat aMule Statistics"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xas &#8211; X-Chat aMule Statistics </p>
 <h2>SYNOPSIS</h2>
 <p> <code>none</code></p>

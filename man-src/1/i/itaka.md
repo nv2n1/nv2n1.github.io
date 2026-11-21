@@ -1,4 +1,5 @@
 ---
+
 title: "itaka(1)"
 name: "itaka"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-itaka/"
 description: "itaka — On-demand screenshooting server"
 ---
 
-<h2>NAME</h2>
 <p> itaka &#8212; On-demand screenshooting server</p>
 <h2>SYNOPSIS</h2>
 <p> <code>itaka</code></p>

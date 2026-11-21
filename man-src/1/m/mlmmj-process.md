@@ -1,4 +1,5 @@
 ---
+
 title: "mlmmj-process(1)"
 name: "mlmmj-process"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mlmmj-process/"
 description: "mlmmj-process – process mail for an mlmmj managed mailinglist"
 ---
 
-<h2>NAME</h2>
 <p> mlmmj-process &#8211; process mail for an mlmmj managed mailinglist</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mlmmj-process</code> <i>-L /path/to/list -m /path/to/mail </i>[<i>-h</i>] [<i>-P</i>] [<i>-V</i>]</p>

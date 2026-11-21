@@ -1,4 +1,5 @@
 ---
+
 title: "fstrcolli(3)"
 name: "fstrcolli"
 section: "3"
@@ -6,9 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-fstrcolli/"
 ---
 
-<h2>NAME</h2>
-
- fstrcolli - fuzzy comparison of two strings using the current locale
+fstrcolli - fuzzy comparison of two strings using the current locale
 
 <h2>SYNOPSIS</h2>
 

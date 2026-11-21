@@ -1,4 +1,5 @@
 ---
+
 title: "dmlite_pool(3)"
 name: "dmlite_pool"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dmlite_pool/"
 description: "dmlite_pool –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dmlite_pool &#8211; </p>
 <p> Pool data.</p>
 <h2>SYNOPSIS</h2>

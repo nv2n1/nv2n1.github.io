@@ -1,4 +1,5 @@
 ---
+
 title: "fntsample(1)"
 name: "fntsample"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fntsample/"
 description: "fntsample – PDF and PostScript font samples generator"
 ---
 
-<h2>NAME</h2>
 <p> fntsample &#8211; PDF and PostScript font samples generator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fntsample</code> <code>[ </code><i>OPTIONS</i><code> ]</code> <code>-f </code><i>FONT-FILE</i><code> -o </code><i>OUTPUT-FILE</i><br />

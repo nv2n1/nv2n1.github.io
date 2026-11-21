@@ -1,4 +1,5 @@
 ---
+
 title: "git-remote-ext(1)"
 name: "git-remote-ext"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-remote-ext/"
 description: "git-remote-ext – Bridge smart transport to external command."
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-remote-ext &#8211; Bridge smart transport to external command. </p>
 <h2>SYNOPSIS</h2>
 <pre>

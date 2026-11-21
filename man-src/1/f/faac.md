@@ -1,4 +1,5 @@
 ---
+
 title: "faac(1)"
 name: "faac"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-faac/"
 description: "faac – open source MPEG-4 and MPEG-2 AAC encoder"
 ---
 
-<h2 class="name">NAME</h2>
 <p> faac &#8211; open source MPEG-4 and MPEG-2 AAC encoder</p>
 <h2>SYNOPSIS</h2>
 <p> <code>faac</code> [<i>options</i>] [-o&nbsp;<wbr><i>outfile</i>] <i>infiles</i> &#8230; </p>

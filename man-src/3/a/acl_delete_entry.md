@@ -1,4 +1,5 @@
 ---
+
 title: "acl_delete_entry(3)"
 name: "acl_delete_entry"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-acl_delete_entry/"
 description: "acl_delete_entry – delete an ACL entry"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_delete_entry</code> &#8211; delete an ACL entry </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>

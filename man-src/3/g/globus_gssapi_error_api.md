@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gssapi_error_api(3)"
 name: "globus_gssapi_error_api"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gssapi_error_api/"
 description: "Globus GSSAPI Error API –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Globus GSSAPI Error API &#8211; </p>
 <h3>Modules</h3>
 <p> <code>Error Construction</code> </p>

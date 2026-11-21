@@ -1,4 +1,5 @@
 ---
+
 title: "gda-config-tool-3(1)"
 name: "gda-config-tool-3"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gda-config-tool-3/"
 description: "gda-config-tool-3.0 – Tool for managing libgda configuration file."
 ---
 
-<h2>NAME</h2>
 <p> gda-config-tool-3.0 &#8211; Tool for managing libgda configuration file.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gda-config-tool-3.0 [OPTIONS]</code></p>

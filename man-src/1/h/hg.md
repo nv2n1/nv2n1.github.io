@@ -1,4 +1,5 @@
 ---
+
 title: "hg(1)"
 name: "hg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hg/"
 description: "hg – Mercurial source code management system"
 ---
 
-<h2>NAME</h2>
 <p> hg &#8211; Mercurial source code management system</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hg</code> <i>command</i> [<i>option</i>]&#8230; [<i>argument</i>]&#8230;</p>

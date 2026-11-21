@@ -1,4 +1,5 @@
 ---
+
 title: "fail2ban-regex(1)"
 name: "fail2ban-regex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fail2ban-regex/"
 description: "fail2ban-regex – test Fail2ban \"failregex\" option"
 ---
 
-<h2>NAME</h2>
 <p> fail2ban-regex &#8211; test Fail2ban &quot;failregex&quot; option</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fail2ban-regex</code> [<i>,OPTIONS/</i>] <i>,&lt;LOG&gt; &lt;REGEX&gt; /</i>[<i>,IGNOREREGEX/</i>]</p>

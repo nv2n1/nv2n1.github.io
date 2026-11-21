@@ -1,4 +1,5 @@
 ---
+
 title: "ppmforge(1)"
 name: "ppmforge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppmforge/"
 description: "ppmforge – fractal forgeries of clouds, planets, and starry skies"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ppmforge &#8211; fractal forgeries of clouds, planets, and starry skies </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmforge</code> [<code>-clouds</code>] [<code>-night</code>] [<code>-dimension</code> <i>dimen</i>] [<code>-hour</code> <i>hour</i>] [<code>-inclination|-tilt</code> <i>angle</i>] [<code>-mesh</code> <i>size</i>] [<code>-power</code> <i>factor</i>] [<code>-glaciers</code> <i>level</i>] [<code>-ice</code> <i>level</i>] [<code>-saturation</code> <i>sat</i>] [<code>-seed</code> <i>seed</i>] [<code>-stars</code> <i>fraction</i>] [<code>-xsize|-width</code> <i>width</i>] [<code>-ysize|-height</code> <i>height</i>]</p>

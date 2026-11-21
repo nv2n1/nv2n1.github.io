@@ -1,4 +1,5 @@
 ---
+
 title: "mgd77togmt(1)"
 name: "mgd77togmt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mgd77togmt/"
 description: "mgd77togmt – Convert an MGD-77 ASCII file to a binary gmt file"
 ---
 
-<h2>NAME</h2>
 <p> mgd77togmt &#8211; Convert an MGD-77 ASCII file to a binary gmt file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mgd77togmt</code> [ <code>-L</code><i>list</i> ] [ <i>mgd77file</i> ] <code>-F</code><i>legid</i> <code>-Y</code><i>start_year</i> [ <code>-A</code><i>information</i> ] [ <code>-I</code><i>time_increment</i> ] [<code>-T</code>[<i>&lt;offset&gt;</i>]] [<code>-W</code>[<i>&lt;cable_length&gt;</i>]] [ <code>-V</code> ]</p>

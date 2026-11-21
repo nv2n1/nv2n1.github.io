@@ -1,4 +1,5 @@
 ---
+
 title: "perlreapi(1)"
 name: "perlreapi"
 section: "1"
@@ -6,7 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlreapi/"
 description: "perlreapi – Perl regular expression plugin interface"
 ---
-<h2 class="name">NAME</h2>
+
 <p> perlreapi - Perl regular expression plugin interface </p>
 <h2>DESCRIPTION</h2>
 <p> As of Perl 5.9.5 there is a new interface for plugging and using regular expression engines other than the default one. </p>

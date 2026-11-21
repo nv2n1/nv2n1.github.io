@@ -1,4 +1,5 @@
 ---
+
 title: "sudo(1)"
 name: "sudo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sudo/"
 description: "sudo, sudoedit – execute a command as another user"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sudo, sudoedit &#8211; execute a command as another user </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sudo</code> <code>-h</code> | <code>-K</code> | <code>-k</code> | <code>-L</code> | <code>-V</code> </p>

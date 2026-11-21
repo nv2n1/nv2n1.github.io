@@ -1,4 +1,5 @@
 ---
+
 title: "nullmodem(1)"
 name: "nullmodem"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nullmodem/"
 description: "nullmodem – a Utility to loopback Pseudo-Terminals"
 ---
 
-<h2>NAME</h2>
 <p> nullmodem &#8211; a Utility to loopback Pseudo-Terminals</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nullmodem [-F] [-V] [-q] [-r] [-m] tty&#8230;</code> </p>

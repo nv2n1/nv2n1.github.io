@@ -1,4 +1,5 @@
 ---
+
 title: "ideviceimagemounter(1)"
 name: "ideviceimagemounter"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ideviceimagemounter/"
 description: "ideviceimagemounter – Mount disk images on the device."
 ---
 
-<h2>NAME</h2>
 <p> ideviceimagemounter &#8211; Mount disk images on the device.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ideviceimagemounter</code> [OPTIONS] IMAGE_FILE IMAGE_SIGNATURE_FILE </p>

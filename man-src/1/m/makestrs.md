@@ -1,4 +1,5 @@
 ---
+
 title: "makestrs(1)"
 name: "makestrs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-makestrs/"
 description: "makestrs – makes string table C source and header(s)"
 ---
 
-<h2>NAME</h2>
 <p> makestrs &#8211; makes string table C source and header(s)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>makestrs [-f source] [-i includedir] [-abioptions &#8230;]</code></p>

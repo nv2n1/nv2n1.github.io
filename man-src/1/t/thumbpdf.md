@@ -1,4 +1,5 @@
 ---
+
 title: "thumbpdf(1)"
 name: "thumbpdf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-thumbpdf/"
 description: "thumbpdf – generate thumbnail images for a PDF file created with pdftex"
 ---
 
-<h2>NAME</h2>
 <p> thumbpdf &#8211; generate thumbnail images for a PDF file created with <code>pdftex</code> </p>
 <h2>SYNOPSIS</h2>
 <p> <code>thumbpdf</code> [ <i>OPTION</i>&#8230; ] <i>PDF_FILE</i> </p>

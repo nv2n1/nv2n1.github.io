@@ -1,4 +1,5 @@
 ---
+
 title: "numfmt(1)"
 name: "numfmt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-numfmt/"
 description: "numfmt – Convert numbers from/to human-readable strings"
 ---
 
-<h2 class="name">NAME</h2>
 <p> numfmt &#8211; Convert numbers from/to human-readable strings </p>
 <h2>SYNOPSIS</h2>
 <p> <code>numfmt</code> [<i>,OPTION/</i>]&#8230; [<i>,NUMBER/</i>]&#8230;</p>

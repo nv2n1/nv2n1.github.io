@@ -1,4 +1,5 @@
 ---
+
 title: "shtool-subst(1)"
 name: "shtool-subst"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-shtool-subst/"
 description: "shtool subst – GNU shtool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> shtool subst &#8211; GNU shtool </p>
 <p><a href="/docs/linux/man/1-sed/">sed</a>(1) substitution operations</p>
 <h2>SYNOPSIS</h2>

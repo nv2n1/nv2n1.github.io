@@ -1,4 +1,5 @@
 ---
+
 title: "xrd(1)"
 name: "xrd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xrd/"
 description: "xrd – xrootd file and directory meta-data utility"
 ---
 
-<h2>NAME</h2>
 <p> xrd &#8211; xrootd file and directory meta-data utility</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

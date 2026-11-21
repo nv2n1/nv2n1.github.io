@@ -1,4 +1,5 @@
 ---
+
 title: "ffado-fireworks-downloader(1)"
 name: "ffado-fireworks-downloader"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ffado-fireworks-downloader/"
 description: "ffado-fireworks-downloader – firmware download application for Echo Fireworks devices"
 ---
 
-<h2>NAME</h2>
 <p> ffado-fireworks-downloader &#8211; firmware download application for Echo Fireworks devices</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ffado-fireworks-downloader [OPTION&#8230;] OPERATION</code> </p>

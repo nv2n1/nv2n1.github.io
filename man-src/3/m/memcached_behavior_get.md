@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_behavior_get(3)"
 name: "memcached_behavior_get"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memcached_behavior_get/"
 description: "memcached_behavior_get – libmemcached Documentation"
 ---
 
-<h2>NAME</h2>
 <p> memcached_behavior_get &#8211; libmemcached Documentation </p>
 <p> Manipulate the behavior of a memcached_st structure.</p>
 <h2>SYNOPSIS</h2>

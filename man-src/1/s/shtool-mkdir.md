@@ -1,4 +1,5 @@
 ---
+
 title: "shtool-mkdir(1)"
 name: "shtool-mkdir"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-shtool-mkdir/"
 description: "shtool mkdir – GNU shtool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> shtool mkdir &#8211; GNU shtool </p>
 <p><a href="/docs/linux/man/1-mkdir/">mkdir</a>(1) style command</p>
 <h2>SYNOPSIS</h2>

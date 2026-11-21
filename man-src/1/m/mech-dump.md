@@ -1,4 +1,5 @@
 ---
+
 title: "mech-dump(1)"
 name: "mech-dump"
 section: "1"
@@ -6,10 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-mech-dump/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- mech-dump - Dumps information about a web page 
+mech-dump - Dumps information about a web page 
 
 <h2>SYNOPSIS</h2>
 

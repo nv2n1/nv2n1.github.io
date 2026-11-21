@@ -1,4 +1,5 @@
 ---
+
 title: "kismet(1)"
 name: "kismet"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kismet/"
 description: "kismet – Wireless sniffing and monitoring"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>kismet</code> &#8211; Wireless sniffing and monitoring </p>
 <h2>SYNOPSIS</h2>
 <p> <i>kismet</i> [server-options] [- ] [client-options] </p>

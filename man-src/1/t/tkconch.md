@@ -1,4 +1,5 @@
 ---
+
 title: "tkconch(1)"
 name: "tkconch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tkconch/"
 description: "tkconch – connect to SSH servers graphically"
 ---
 
-<h2>NAME</h2>
 <p> tkconch &#8211; connect to SSH servers graphically</p>
 <h2>SYNOPSIS</h2>
 <p> <code>conch [-l </code><i>user</i>] [-i <i>identity</i> [ -i <i>identity</i> &#8230; ]] [-c <i>cipher</i>] [-m <i>MAC</i>] [-p <i>port</i>] [-n] [-t] [-T] [-V] [-C] [-N] [-s] [arg [&#8230;]] </p>

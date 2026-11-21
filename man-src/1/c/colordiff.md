@@ -1,4 +1,5 @@
 ---
+
 title: "colordiff(1)"
 name: "colordiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-colordiff/"
 description: "colordiff – a tool to colorize diff output"
 ---
 
-<h2 class="name">NAME</h2>
 <p> colordiff &#8211; a tool to colorize <code>diff</code> output </p>
 <h2>SYNOPSIS</h2>
 <dl>

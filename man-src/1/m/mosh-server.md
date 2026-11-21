@@ -1,4 +1,5 @@
 ---
+
 title: "mosh-server(1)"
 name: "mosh-server"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mosh-server/"
 description: "mosh-server – server-side helper for mosh"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mosh-server &#8211; server-side helper for mosh </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mosh-server</code> new [-s] [-v] [-i <i>IP</i>] [-p <i>PORT</i>[:<i>PORT2</i>]] [-c <i>COLORS</i>] [&#8211; command&#8230;] </p>

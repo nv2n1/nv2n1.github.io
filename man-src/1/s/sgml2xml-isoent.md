@@ -1,4 +1,5 @@
 ---
+
 title: "sgml2xml-isoent(1)"
 name: "sgml2xml-isoent"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sgml2xml-isoent/"
 description: "sgml2xml-isoent – Convert SGML to XML with support for ISO entities"
 ---
 
-<h2>NAME</h2>
 <p> sgml2xml-isoent &#8211; Convert SGML to XML with support for ISO entities</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sgml2xml-isoent</code> [<i>sgml-document</i>]</p>

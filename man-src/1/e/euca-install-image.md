@@ -1,4 +1,5 @@
 ---
+
 title: "euca-install-image(1)"
 name: "euca-install-image"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-install-image/"
 description: "euca-install-image – Bundle, upload and register an image into the cloud"
 ---
 
-<h2>NAME</h2>
 <p> euca-install-image &#8211; Bundle, upload and register an image into the cloud</p>
 <h2>SYNOPSIS</h2>
 <p> euca-install-image <code>-n</code> NAME [&#8211;description DESCRIPTION]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "docker-plugin-ls(1)"
 name: "docker-plugin-ls"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-plugin-ls/"
 description: "docker-plugin-ls – List plugins"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-plugin-ls &#8211; List plugins </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker plugin ls [OPTIONS]</code> </p>

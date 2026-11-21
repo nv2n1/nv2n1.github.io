@@ -1,4 +1,5 @@
 ---
+
 title: "mglview(1)"
 name: "mglview"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mglview/"
 description: "mglview – Execute MathGL scripts and show in an window"
 ---
 
-<h2>NAME</h2>
 <p> mglview &#8211; Execute MathGL scripts and show in an window</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mglview</code> [parameters] scriptfile</p>

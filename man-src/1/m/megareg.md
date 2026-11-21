@@ -1,4 +1,5 @@
 ---
+
 title: "megareg(1)"
 name: "megareg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-megareg/"
 description: "megareg – Register new Mega.co.nz account"
 ---
 
-<h2 class="name">NAME</h2>
 <p> megareg &#8211; Register new Mega.co.nz account </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

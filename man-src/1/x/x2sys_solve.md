@@ -1,4 +1,5 @@
 ---
+
 title: "x2sys_solve(1)"
 name: "x2sys_solve"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-x2sys_solve/"
 description: "x2sys_solve – Determine least-squares systematic correction from crossovers"
 ---
 
-<h2>NAME</h2>
 <p> x2sys_solve &#8211; Determine least-squares systematic correction from crossovers</p>
 <h2>SYNOPSIS</h2>
 <p> <code>x2sys_solve</code> <i>column</i> <i>TAG</i> <i>mode</i> [ <i>COE_list.d</i> ] [ [<i>level</i>] ] [ <code>[u]</code> ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-x</code>[[-]<i>n</i>] ] </p>

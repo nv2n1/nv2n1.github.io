@@ -1,4 +1,5 @@
 ---
+
 title: "pm-is-supported(1)"
 name: "pm-is-supported"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pm-is-supported/"
 description: "pm-is-supported – Test whether suspend or hibernate is supported."
 ---
 
-<h2 class="name">NAME</h2>
 <p> pm-is-supported &#8211; Test whether suspend or hibernate is supported. </p>
 <h2>SYNOPSIS</h2>
 <dl>

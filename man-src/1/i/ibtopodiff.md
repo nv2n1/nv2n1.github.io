@@ -1,4 +1,5 @@
 ---
+
 title: "ibtopodiff(1)"
 name: "ibtopodiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ibtopodiff/"
 description: "ibtoopdiff – Fabric Topology Matcher"
 ---
 
-<h2>NAME</h2>
 <p> <code>ibtoopdiff &#8211; Fabric Topology Matcher</code></p>
 <h2>SYNOPSYS</h2>
 <p> ibtopodiff [-v][-h] -t &lt;topo file&gt; -d &lt;subnet file&gt; -s &lt;start node name&gt;<br />

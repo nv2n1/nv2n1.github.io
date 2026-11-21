@@ -1,4 +1,5 @@
 ---
+
 title: "aa_kbddrivers(3)"
 name: "aa_kbddrivers"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_kbddrivers/"
 description: "aa_kbddrivers – NULL-terminated array of keyboard drivers available in AA_lib."
 ---
 
-<h2>NAME</h2>
 <p> aa_kbddrivers &#8211; NULL-terminated array of keyboard drivers available in AA_lib.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

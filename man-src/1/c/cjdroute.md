@@ -1,4 +1,5 @@
 ---
+
 title: "cjdroute(1)"
 name: "cjdroute"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cjdroute/"
 description: "cjdroute — Cjdns packet switch"
 ---
 
-<h2>NAME</h2>
 <p> <code>cjdroute</code> &#8212; Cjdns packet switch</p>
 <h2>SYNOPSIS</h2>
 <p> <code>/usr/sbin/cjdroute</code> [&lt;options&gt;&#8230;]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dump-mixers(1)"
 name: "dump-mixers"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dump-mixers/"
 description: "dump-mixers – dump OSS mixer settings to standard output"
 ---
 
-<h2>NAME</h2>
 <p> dump-mixers &#8211; dump OSS mixer settings to standard output</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dump-mixers</code></p>

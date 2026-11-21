@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_calc_keytag(3)"
 name: "ldns_calc_keytag"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_calc_keytag/"
 description: "ldns_verify_rrsig_dsa, ldns_verify_rrsig_rsasha1, ldns_verify_rrsig_rsamd5"
 ---
 
-<h2>NAME</h2>
 <p> ldns_verify_rrsig_dsa, ldns_verify_rrsig_rsasha1, ldns_verify_rrsig_rsamd5 </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

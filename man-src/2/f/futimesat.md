@@ -1,4 +1,5 @@
 ---
+
 title: "futimesat(2)"
 name: "futimesat"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-futimesat/"
 description: "futimesat – change timestamps of a file relative to a directory file descriptor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> futimesat &#8211; change timestamps of a file relative to a directory file descriptor </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

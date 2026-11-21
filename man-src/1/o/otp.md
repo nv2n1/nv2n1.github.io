@@ -1,4 +1,5 @@
 ---
+
 title: "otp(1)"
 name: "otp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-otp/"
 description: "otp – manages one-time passwords"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>otp</code> &#8211; manages one-time passwords </p>
 <h2>SYNOPSIS</h2>
 <p> <code>otp</code> [-<code>dhlor</code> ] [-<code>f </code><i>algorithm</i> ] [-<code>u </code><i>user</i> ] <i>sequence-number</i> <i>seed</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dblink_build_sql_insert(3)"
 name: "dblink_build_sql_insert"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dblink_build_sql_insert/"
 description: "dblink_build_sql_insert – builds an INSERT statement using a local tuple, replacing the primary key field values with alternative supplied values"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dblink_build_sql_insert &#8211; builds an INSERT statement using a local tuple, replacing the primary key field values with alternative supplied values </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

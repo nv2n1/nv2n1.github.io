@@ -1,4 +1,5 @@
 ---
+
 title: "tlock(1)"
 name: "tlock"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tlock/"
 description: "tlock – terminal lock"
 ---
 
-<h2>NAME</h2>
 <p> tlock &#8211; terminal lock</p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "dgesc2(3)"
 name: "dgesc2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgesc2/"
 description: "dgesc2.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dgesc2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

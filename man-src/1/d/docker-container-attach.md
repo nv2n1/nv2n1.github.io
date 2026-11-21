@@ -1,4 +1,5 @@
 ---
+
 title: "docker-container-attach(1)"
 name: "docker-container-attach"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-container-attach/"
 description: "docker-container-attach – Attach local standard input, output, and error streams to a running container"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-container-attach &#8211; Attach local standard input, output, and error streams to a running container </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker container attach [OPTIONS] CONTAINER</code> </p>

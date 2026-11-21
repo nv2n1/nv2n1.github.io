@@ -1,4 +1,5 @@
 ---
+
 title: "html2markdown(1)"
 name: "html2markdown"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-html2markdown/"
 description: "html2markdown – converts a page of HTML into markdown."
 ---
 
-<h2 class="name">NAME</h2>
 <p> html2markdown &#8211; converts a page of HTML into markdown. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>html2markdown</code> [options&#8230;] [(<i>filename</i>|<i>url</i>) [<i>encoding</i>]]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fts-config-del(1)"
 name: "fts-config-del"
 section: "1"
@@ -6,9 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-fts-config-del/"
 ---
 
-<h2>NAME</h2>
-
- fts-config-del
+fts-config-del
 
 <h2>SYNOPSIS</h2>
 

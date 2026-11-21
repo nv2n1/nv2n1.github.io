@@ -1,4 +1,5 @@
 ---
+
 title: "ldmtool(1)"
 name: "ldmtool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ldmtool/"
 description: "ldmtool – A tool to manage Microsoft Windows dynamic disks"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ldmtool &#8211; A tool to manage Microsoft Windows dynamic disks </p>
 <h2>SYNOPSIS</h2>
 <dl>

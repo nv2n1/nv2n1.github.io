@@ -1,4 +1,5 @@
 ---
+
 title: "certwatch(1)"
 name: "certwatch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-certwatch/"
 description: "certwatch – generate SSL certificate expiry warnings"
 ---
 
-<h2 class="name">NAME</h2>
 <p> certwatch &#8211; generate SSL certificate expiry warnings </p>
 <h2>SYNOPSIS</h2>
 <dl>

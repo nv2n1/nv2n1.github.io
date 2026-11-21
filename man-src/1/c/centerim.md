@@ -1,4 +1,5 @@
 ---
+
 title: "centerim(1)"
 name: "centerim"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-centerim/"
 description: "centerim – a text mode based IM client for Linux, *BSD, Sun Solaris, MacOS X and possibly, other Unices. ICQ2000, Yahoo!, AIM TOC, IRC, MSN, Gadu-Gadu and Jabber protocols are now supported. Intern..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>centerim</code> &#8211; a text mode based IM client for Linux, *BSD, Sun Solaris, MacOS X and possibly, other Unices. ICQ2000, Yahoo!, AIM TOC, IRC, MSN, Gadu-Gadu and Jabber protocols are now supported. Internal LiveJournal client and RSS reader are also provided.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>centerim </code> [ <code>option</code> ] &#8230; </p>

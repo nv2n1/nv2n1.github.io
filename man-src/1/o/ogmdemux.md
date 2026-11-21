@@ -1,4 +1,5 @@
 ---
+
 title: "ogmdemux(1)"
 name: "ogmdemux"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ogmdemux/"
 description: "ogmdemux – Extract streams from OGG/OGM files into separate files"
 ---
 
-<h2>NAME</h2>
 <p> ogmdemux &#8211; Extract streams from OGG/OGM files into separate files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ogmdemux</code> [<i>options</i>] <i>inname</i></p>

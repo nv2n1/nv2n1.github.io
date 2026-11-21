@@ -1,4 +1,5 @@
 ---
+
 title: "global(1)"
 name: "global"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-global/"
 description: "global – print the locations of specified object."
 ---
 
-<h2>NAME</h2>
 <p> global &#8211; print the locations of specified object.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>global</code> [-aGilnqrstTvx][-e] <i>pattern</i><br />

@@ -1,4 +1,5 @@
 ---
+
 title: "dlaqps(3)"
 name: "dlaqps"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlaqps/"
 description: "dlaqps.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dlaqps.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

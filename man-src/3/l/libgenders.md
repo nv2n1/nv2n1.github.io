@@ -1,4 +1,5 @@
 ---
+
 title: "libgenders(3)"
 name: "libgenders"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libgenders/"
 description: "libgenders – a library of functions to parse and retrieve genders data"
 ---
 
-<h2>NAME</h2>
 <p> libgenders &#8211; a library of functions to parse and retrieve genders data</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;genders.h&gt;</code> </p>

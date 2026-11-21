@@ -1,4 +1,5 @@
 ---
+
 title: "ibacm(1)"
 name: "ibacm"
 section: "1"
@@ -6,9 +7,7 @@ letter: "i"
 url: "/docs/linux/man/1-ibacm/"
 ---
 
-<h2>NAME</h2>
-
- ibacm - address and route resolution services for InfiniBand.
+ibacm - address and route resolution services for InfiniBand.
 
 <h2>SYNOPSIS</h2>
 

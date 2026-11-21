@@ -1,4 +1,5 @@
 ---
+
 title: "reformime(1)"
 name: "reformime"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-reformime/"
 description: "reformime – MIME E-mail reformatting tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> reformime &#8211; MIME E-mail reformatting tool </p>
 <h2>SYNOPSIS</h2>
 <dl>

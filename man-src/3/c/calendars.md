@@ -1,4 +1,5 @@
 ---
+
 title: "calendars(3)"
 name: "calendars"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-calendars/"
 description: "Calendars –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Calendars &#8211; </p>
 <h3>Classes</h3>
 <p> class <code>Argentina</code><br />

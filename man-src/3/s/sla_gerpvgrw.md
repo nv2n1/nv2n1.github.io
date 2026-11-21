@@ -1,4 +1,5 @@
 ---
+
 title: "sla_gerpvgrw(3)"
 name: "sla_gerpvgrw"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sla_gerpvgrw/"
 description: "sla_gerpvgrw.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sla_gerpvgrw.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

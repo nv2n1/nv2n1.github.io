@@ -1,4 +1,5 @@
 ---
+
 title: "bson_utf8_from_unichar(3)"
 name: "bson_utf8_from_unichar"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_utf8_from_unichar/"
 description: "bson_utf8_from_unichar() – Converts a single unicode character to a multi-byte UTF-8 sequence. The result is stored in utf8 and the number of bytes used in len."
 ---
 
-<h2>NAME</h2>
 <p> bson_utf8_from_unichar() &#8211; Converts a single unicode character to a multi-byte UTF-8 sequence. The result is stored in utf8 and the number of bytes used in len.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

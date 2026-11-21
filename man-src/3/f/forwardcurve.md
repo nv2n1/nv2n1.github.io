@@ -1,4 +1,5 @@
 ---
+
 title: "forwardcurve(3)"
 name: "forwardcurve"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-forwardcurve/"
 description: "ql/termstructures/yield/forwardcurve.hpp – interpolated forward-rate structure"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/termstructures/yield/forwardcurve.hpp &#8211; interpolated forward-rate structure </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/yield/forwardstructure.hpp&gt;<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-install-expenses(1)"
 name: "pilot-install-expenses"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot-install-expenses/"
 description: "pilot-install-expenses – Install an expense record entries onto your Palm handheld device."
 ---
 
-<h2>NAME</h2>
 <p> pilot-install-expenses &#8211; Install an expense record entries onto your Palm handheld device.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>

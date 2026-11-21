@@ -1,4 +1,5 @@
 ---
+
 title: "pcp-atopsar(1)"
 name: "pcp-atopsar"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pcp-atopsar/"
 description: "pcp-atopsar – Advanced System Activity Report (pcp-atop related)"
 ---
 
-<h2>NAME</h2>
 <p> <code>pcp-atopsar</code> &#8211; Advanced System Activity Report (pcp-atop related)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pcp</code> [<i>pcp options</i>] <code>atopsar</code> [<i>atop options</i>] [-r <i>file|date</i>] [-h <i>host</i>] [-R <i>cnt</i>] [-b <i>hh:mm</i>] [-e <i>hh:mm</i>]<br />

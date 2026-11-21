@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-harvest-vmcore(1)"
 name: "abrt-harvest-vmcore"
 section: "1"
@@ -6,10 +7,7 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-harvest-vmcore/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- abrt-harvest-vmcore - Converts VMCores to ABRT problems 
+abrt-harvest-vmcore - Converts VMCores to ABRT problems 
 
 <h2>SYNOPSIS</h2>
 

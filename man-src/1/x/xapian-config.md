@@ -1,4 +1,5 @@
 ---
+
 title: "xapian-config(1)"
 name: "xapian-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xapian-config/"
 description: "xapian-config – report information about the installed version of xapian"
 ---
 
-<h2>NAME</h2>
 <p> xapian-config &#8211; report information about the installed version of xapian</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xapian-config</code> <i>OPTION</i>&#8230;</p>

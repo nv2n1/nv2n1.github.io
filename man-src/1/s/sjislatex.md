@@ -1,4 +1,5 @@
 ---
+
 title: "sjislatex(1)"
 name: "sjislatex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sjislatex/"
 description: "bg5latex – Use LaTeX directly on a Big5 encoded .tex file bg5pdflatex – Use pdfLaTeX directly on a Big5 encoded .tex file bg5+latex – Use LaTeX directly on a Big5+ encoded .tex file bg5+pdflatex – ..."
 ---
 
-<h2 class="name">NAME</h2>
 <p> bg5latex &#8211; Use LaTeX directly on a Big5 encoded .tex file<br />
  bg5pdflatex &#8211; Use pdfLaTeX directly on a Big5 encoded .tex file<br />
  bg5+latex &#8211; Use LaTeX directly on a Big5+ encoded .tex file<br />

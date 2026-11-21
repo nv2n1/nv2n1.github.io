@@ -1,4 +1,5 @@
 ---
+
 title: "package-cleanup(1)"
 name: "package-cleanup"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-package-cleanup/"
 description: "package-cleanup – clean up locally installed, duplicate, or orphaned packages"
 ---
 
-<h2>NAME</h2>
 <p> package-cleanup &#8211; clean up locally installed, duplicate, or orphaned packages</p>
 <h2>SYNOPSIS</h2>
 <p> <code>package-cleanup</code> [options] &lt;item &#8230;&gt;</p>

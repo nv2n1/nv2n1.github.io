@@ -1,4 +1,5 @@
 ---
+
 title: "dssi_analyse_plugin(1)"
 name: "dssi_analyse_plugin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dssi_analyse_plugin/"
 description: "dssi_analyse_plugin – describe a DSSI plugin"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dssi_analyse_plugin &#8211; describe a DSSI plugin </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dssi_analyse_plugin</code> [-v|&#8211;verbose] [<i>path</i>]&lt;<i>libname</i>&gt;[:&lt;<i>label</i>&gt;]</p>

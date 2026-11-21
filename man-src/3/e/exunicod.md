@@ -1,4 +1,5 @@
 ---
+
 title: "exunicod(3)"
 name: "exunicod"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-exunicod/"
 description: "exunicod – Using Unicode string functions. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> exunicod &#8211; Using Unicode string functions. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

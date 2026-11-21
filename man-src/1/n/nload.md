@@ -1,4 +1,5 @@
 ---
+
 title: "nload(1)"
 name: "nload"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nload/"
 description: "nload – displays the current network usage"
 ---
 
-<h2>NAME</h2>
 <p> nload &#8211; displays the current network usage </p>
 <h2>SYNOPSIS</h2>
 <p> <code>nload</code> [<code>-a</code> <i>period</i>] [<code>-i</code> <i>max_scaling</i>] [<code>-m</code>] [<code>-o</code> <i>max_scaling</i>] [<code>-t</code> <i>interval</i>] [<code>-u</code> <i>h|H|b|B|k|K|m|M|g|G</i>] [<code>-U</code> <i>h|H|b|B|k|K|m|M|g|G</i>] [<i>devices</i>] </p>

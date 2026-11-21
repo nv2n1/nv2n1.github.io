@@ -1,4 +1,5 @@
 ---
+
 title: "jpeg2yuv(1)"
 name: "jpeg2yuv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jpeg2yuv/"
 description: "jpeg2yuv – Convert jpeg images to the yuv format."
 ---
 
-<h2 class="name">NAME</h2>
 <p> jpeg2yuv &#8211; Convert jpeg images to the yuv format.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>jpeg2yuv</code> [<code>-b</code> <i>num</i>] [<code>-f</code> <i>num</i>] [<code>-I</code> <i>num</i>] [<code>-A</code> <i>ratio</i>] [<code>-L</code> <i>num</i>] [<code>-n</code> num<code>]</code> [<code>-l</code> <i>num</i>] [<code>-j</code> <i>filename</i>] </p>

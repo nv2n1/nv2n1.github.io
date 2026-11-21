@@ -1,4 +1,5 @@
 ---
+
 title: "glib-compile-resources(1)"
 name: "glib-compile-resources"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-glib-compile-resources/"
 description: "glib-compile-resources – GLib resource compiler"
 ---
 
-<h2 class="name">NAME</h2>
 <p> glib-compile-resources &#8211; GLib resource compiler </p>
 <h2>SYNOPSIS</h2>
 <dl>

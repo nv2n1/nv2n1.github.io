@@ -1,4 +1,5 @@
 ---
+
 title: "faxrm(1)"
 name: "faxrm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-faxrm/"
 description: "faxrm – remove fax jobs queued by"
 ---
 
-<h2 class="name">NAME</h2>
 <p> faxrm &#8211; remove fax jobs queued by </p>
 <p><a href="/docs/linux/man/1-faxspool/">faxspool</a>(1)</p>
 <h2>SYNOPSIS</h2>

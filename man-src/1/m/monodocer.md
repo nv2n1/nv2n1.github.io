@@ -1,4 +1,5 @@
 ---
+
 title: "monodocer(1)"
 name: "monodocer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-monodocer/"
 description: "monodocer – ECMA Documentation Format Support"
 ---
 
-<h2>NAME</h2>
 <p> monodocer &#8211; ECMA Documentation Format Support</p>
 <h2>SYNOPSIS</h2>
 <p> <code>monodocer</code> [OPTIONS]*</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "bson_equal(3)"
 name: "bson_equal"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_equal/"
 description: "bson_equal() – The bson_equal() function shall return true if both documents are equal."
 ---
 
-<h2>NAME</h2>
 <p> bson_equal() &#8211; The bson_equal() function shall return true if both documents are equal.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

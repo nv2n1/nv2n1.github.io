@@ -1,4 +1,5 @@
 ---
+
 title: "git-standup(1)"
 name: "git-standup"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-standup/"
 description: "git-standup – Recall the commit history"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-standup</code> &#8211; Recall the commit history</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-standup</code> [&lt;full name&gt;] [&lt;since&gt;] [&lt;until&gt;]</p>

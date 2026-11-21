@@ -1,4 +1,5 @@
 ---
+
 title: "scsieject(1)"
 name: "scsieject"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-scsieject/"
 description: "scsieject – control SCSI tape devices"
 ---
 
-<h2>NAME</h2>
 <p> scsieject &#8211; control SCSI tape devices</p>
 <h2>SYNOPSIS</h2>
 <p> scsieject [-f &lt;scsi-generic-device&gt;] commands</p>

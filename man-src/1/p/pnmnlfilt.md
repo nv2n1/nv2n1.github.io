@@ -1,4 +1,5 @@
 ---
+
 title: "pnmnlfilt(1)"
 name: "pnmnlfilt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnmnlfilt/"
 description: "pnmnlfilt – non-linear filters: smooth, alpha trim mean, optimal estimation smoothing, edge enhancement."
 ---
 
-<h2 class="name">NAME</h2>
 <p> pnmnlfilt &#8211; non-linear filters: smooth, alpha trim mean, optimal estimation smoothing, edge enhancement. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmnlfilt</code> <i>alpha</i> <i>radius</i> [<i>pnmfile</i>] </p>

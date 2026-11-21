@@ -1,4 +1,5 @@
 ---
+
 title: "cscope(1)"
 name: "cscope"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cscope/"
 description: "cscope – interactively examine a C program"
 ---
 
-<h2>NAME</h2>
 <p> cscope &#8211; interactively examine a C program</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cscope</code> <code>[-bCcdehkLlqRTUuVv]</code> <code>[-F</code><i>symfile</i><code>]</code> <code>[-f</code><i>reffile</i><code>]</code> <code>[-I</code><i>incdir</i><code>]</code> <code>[-i</code><i>namefile</i><code>]</code> <code>[-0123456789</code><i>pattern</i><code>]</code> <code>[-p</code><i>n</i><code>]</code> <code>[-s</code><i>dir</i><code>]</code> <code>[</code><i>files</i><code>]</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "darktable-generate-cache(1)"
 name: "darktable-generate-cache"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-darktable-generate-cache/"
 description: "darktable-generate-cache – update darktable’s thumbnail cache"
 ---
 
-<h2 class="name">NAME</h2>
 <p> darktable-generate-cache &#8211; update darktable&#8217;s thumbnail cache </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

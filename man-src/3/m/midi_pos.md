@@ -1,4 +1,5 @@
 ---
+
 title: "midi_pos(3)"
 name: "midi_pos"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-midi_pos/"
 description: "midi_pos – Stores the current position in the MIDI file. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> midi_pos &#8211; Stores the current position in the MIDI file. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

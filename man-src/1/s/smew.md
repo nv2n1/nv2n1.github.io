@@ -1,4 +1,5 @@
 ---
+
 title: "smew(1)"
 name: "smew"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-smew/"
 description: "smew – search related messages from Mew’s database file"
 ---
 
-<h2>NAME</h2>
 <p> smew &#8211; search related messages from Mew&#8217;s database file</p>
 <h2>SYNOPSIS</h2>
 <p> smew myid [<i>mydb</i> [<i>mydir</i>]]</p>

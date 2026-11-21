@@ -1,4 +1,5 @@
 ---
+
 title: "puttytel(1)"
 name: "puttytel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-puttytel/"
 description: "puttytel – GUI Telnet and Rlogin client for X"
 ---
 
-<h2>NAME</h2>
 <p> <code>puttytel</code> &#8211; GUI Telnet and Rlogin client for X</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

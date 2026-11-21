@@ -1,4 +1,5 @@
 ---
+
 title: "mcbasketengine(3)"
 name: "mcbasketengine"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-mcbasketengine/"
 description: "ql/pricingengines/basket/mcbasketengine.hpp – European basket MC Engine."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/pricingengines/basket/mcbasketengine.hpp &#8211; European basket MC Engine. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/basketoption.hpp&gt;<br />

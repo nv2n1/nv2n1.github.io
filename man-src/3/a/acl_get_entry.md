@@ -1,4 +1,5 @@
 ---
+
 title: "acl_get_entry(3)"
 name: "acl_get_entry"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-acl_get_entry/"
 description: "acl_get_entry – get an ACL entry"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_get_entry</code> &#8211; get an ACL entry </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>

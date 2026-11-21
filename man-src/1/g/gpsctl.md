@@ -1,4 +1,5 @@
 ---
+
 title: "gpsctl(1)"
 name: "gpsctl"
 section: "1"
@@ -6,7 +7,7 @@ letter: "g"
 url: "/docs/linux/man/1-gpsctl/"
 description: "gpsctl – control the modes of a GPS"
 ---
-<h2 class="name">NAME</h2>
+
 <p> gpsctl - control the modes of a GPS </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "start-pulseaudio-kde(1)"
 name: "start-pulseaudio-kde"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-start-pulseaudio-kde/"
 description: "start-pulseaudio-kde – PulseAudio Sound Server KDE Startup Script"
 ---
 
-<h2>NAME</h2>
 <p> start-pulseaudio-kde &#8211; PulseAudio Sound Server KDE Startup Script</p>
 <h2>SYNOPSIS</h2>
 <p> <code>start-pulseaudio-kde [</code><i>pulseaudio options</i><code>] </code></p>

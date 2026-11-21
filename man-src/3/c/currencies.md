@@ -1,4 +1,5 @@
 ---
+
 title: "currencies(3)"
 name: "currencies"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-currencies/"
 description: "Currencies and FX rates –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Currencies and FX rates &#8211; </p>
 <h3>Classes</h3>
 <p> class <code>ZARCurrency</code><br />

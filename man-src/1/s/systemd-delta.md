@@ -1,4 +1,5 @@
 ---
+
 title: "systemd-delta(1)"
 name: "systemd-delta"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-systemd-delta/"
 description: "systemd-delta – Find overridden configuration files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> systemd-delta &#8211; Find overridden configuration files </p>
 <h2>SYNOPSIS</h2>
 <dl>

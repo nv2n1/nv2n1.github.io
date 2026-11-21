@@ -1,4 +1,5 @@
 ---
+
 title: "rpntutorial(1)"
 name: "rpntutorial"
 section: "1"
@@ -6,10 +7,7 @@ letter: "r"
 url: "/docs/linux/man/1-rpntutorial/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- rpntutorial - Reading RRDtool RPN Expressions by Steve Rader 
+rpntutorial - Reading RRDtool RPN Expressions by Steve Rader 
 
 <h2>DESCRIPTION</h2>
 

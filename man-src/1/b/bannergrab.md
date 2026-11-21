@@ -1,4 +1,5 @@
 ---
+
 title: "bannergrab(1)"
 name: "bannergrab"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bannergrab/"
 description: "bannergrab – a network service banner grabbing tool"
 ---
 
-<h2>NAME</h2>
 <p> bannergrab &#8211; a network service banner grabbing tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bannergrab</code> [<i>options</i>]<i> host port</i></p>

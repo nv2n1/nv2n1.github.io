@@ -1,4 +1,5 @@
 ---
+
 title: "aa_mmwidth(3)"
 name: "aa_mmwidth"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_mmwidth/"
 description: "aa_mmwidth – returns width of the output screen in millimeters."
 ---
 
-<h2>NAME</h2>
 <p> aa_mmwidth &#8211; returns width of the output screen in millimeters.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

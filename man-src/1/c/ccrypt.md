@@ -1,4 +1,5 @@
 ---
+
 title: "ccrypt(1)"
 name: "ccrypt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ccrypt/"
 description: "ccrypt – encrypt and decrypt files and streams"
 ---
 
-<h2>NAME</h2>
 <p> ccrypt &#8211; encrypt and decrypt files and streams</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

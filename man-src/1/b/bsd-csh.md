@@ -1,4 +1,5 @@
 ---
+
 title: "bsd-csh(1)"
 name: "bsd-csh"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bsd-csh/"
 description: "csh – a shell (command interpreter) with C-like syntax"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>csh</code> &#8211; a shell (command interpreter) with C-like syntax </p>
 <h2>SYNOPSIS</h2>
 <p> <code>csh</code> [-<code>bcefimnstVvXx </code>[<i>argument &#8230;</i> ] ]<br />

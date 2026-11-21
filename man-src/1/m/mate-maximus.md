@@ -1,4 +1,5 @@
 ---
+
 title: "mate-maximus(1)"
 name: "mate-maximus"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-maximus/"
 description: "mate-maximus – force all windows to be full-screen"
 ---
 
-<h2>NAME</h2>
 <p> mate-maximus &#8211; force all windows to be full-screen</p>
 <h2>SYNOPSIS</h2>
 <p> mate-maximus</p>

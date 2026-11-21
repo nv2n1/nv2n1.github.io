@@ -1,4 +1,5 @@
 ---
+
 title: "cockpit-bridge(1)"
 name: "cockpit-bridge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cockpit-bridge/"
 description: "cockpit-bridge – Cockpit Host Bridge"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cockpit-bridge &#8211; Cockpit Host Bridge </p>
 <h2>SYNOPSIS</h2>
 <dl>

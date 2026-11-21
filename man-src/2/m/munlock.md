@@ -1,4 +1,5 @@
 ---
+
 title: "munlock(2)"
 name: "munlock"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-munlock/"
 description: "mlock, mlock2, munlock, mlockall, munlockall – lock and unlock memory"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mlock, mlock2, munlock, mlockall, munlockall &#8211; lock and unlock memory </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

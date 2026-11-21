@@ -1,4 +1,5 @@
 ---
+
 title: "encfuncs(3)"
 name: "encfuncs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-encfuncs/"
 description: "Functions for Encoding –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Functions for Encoding &#8211; </p>
 <h3>Modules</h3>
 <p> <code>Configuration keys for the encoder ctl interface.</code><br />

@@ -1,4 +1,5 @@
 ---
+
 title: "avologin(1)"
 name: "avologin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-avologin/"
 description: "clogin – Cisco login script"
 ---
 
-<h2>NAME</h2>
 <p> clogin &#8211; Cisco login script</p>
 <h2>SYNOPSIS</h2>
 <p> <code>clogin</code> [<code>-autoenable</code>] [<code>-noenable</code>] [<code>-dSV</code>] [<code>-c&nbsp;<wbr></code> command] [<code>-E&nbsp;<wbr></code> var=x] [<code>-e&nbsp;<wbr></code> enable-password] [<code>-f&nbsp;<wbr></code> cloginrc-file] [<code>-p&nbsp;<wbr></code> user-password] [<code>-s&nbsp;<wbr></code> script-file] [<code>-t&nbsp;<wbr></code> timeout] [<code>-u&nbsp;<wbr></code> username] [<code>-v&nbsp;<wbr></code> vty-password] [<code>-w&nbsp;<wbr></code> enable-username] [<code>-x&nbsp;<wbr></code> command-file] [<code>-y&nbsp;<wbr></code> ssh_cypher_type] router [router&#8230;]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "euare-userdelcert(1)"
 name: "euare-userdelcert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-userdelcert/"
 description: "euare-userdelcert – Delete a signing certificate"
 ---
 
-<h2>NAME</h2>
 <p> euare-userdelcert &#8211; Delete a signing certificate</p>
 <h2>SYNOPSIS</h2>
 <p> euare-userdelcert [-u USER] [&#8211;as-account ACCOUNT] [-U URL]</p>

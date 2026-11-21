@@ -1,4 +1,5 @@
 ---
+
 title: "gentest(1)"
 name: "gentest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gentest/"
 description: "gentest – Run random generic SMB operations against two SMB servers and show the differences in behavior"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gentest &#8211; Run random generic SMB operations against two SMB servers and show the differences in behavior </p>
 <h2>SYNOPSIS</h2>
 <dl>

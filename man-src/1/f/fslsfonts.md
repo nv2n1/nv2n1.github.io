@@ -1,4 +1,5 @@
 ---
+
 title: "fslsfonts(1)"
 name: "fslsfonts"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fslsfonts/"
 description: "fslsfonts – list fonts served by X font server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fslsfonts &#8211; list fonts served by X font server </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fslsfonts</code> [-options &#8230;] [-fn pattern]</p>

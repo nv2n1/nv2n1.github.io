@@ -1,4 +1,5 @@
 ---
+
 title: "yuvycsnoise(1)"
 name: "yuvycsnoise"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-yuvycsnoise/"
 description: "yuvycsnoise – Noise filter specialized for NTSC Y/C separation noise"
 ---
 
-<h2 class="name">NAME</h2>
 <p> yuvycsnoise &#8211; Noise filter specialized for NTSC Y/C separation noise</p>
 <h2>SYNOPSIS</h2>
 <p> <code>yuvycsnoise</code> [<code>-t</code>] [<code>-m t</code>|<code>b</code>|<code>i</code>|<code>c</code>] [<code>-S</code> <i>MIN</i>] [<code>-T</code> <i>ERRT</i>[<code>,</code><i>MAXT</i>]] [<code>-B</code> <i>ERRB</i>[<code>,</code><i>MAXB</i>]] [<code>-I</code> <i>ERRI</i>[<code>,</code><i>MAXI</i>]] [<code>-C</code> <i>ERRC</i>[<code>,</code><i>MAXC</i>]] </p>

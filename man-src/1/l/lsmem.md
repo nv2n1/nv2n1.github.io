@@ -1,4 +1,5 @@
 ---
+
 title: "lsmem(1)"
 name: "lsmem"
 section: "1"
@@ -6,7 +7,7 @@ letter: "l"
 url: "/docs/linux/man/1-lsmem/"
 description: "lsmem – list the ranges of available memory with their online status"
 ---
-<h2 class="name">NAME</h2>
+
 <p> lsmem - list the ranges of available memory with their online status </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lsmem</code> [options]  </p>

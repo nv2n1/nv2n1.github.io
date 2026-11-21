@@ -1,4 +1,5 @@
 ---
+
 title: "perlriscos(1)"
 name: "perlriscos"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlriscos/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlriscos - Perl version 5 for RISC OS 
+perlriscos - Perl version 5 for RISC OS 
 
 <h2>DESCRIPTION</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "gnc-prices(1)"
 name: "gnc-prices"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnc-prices/"
 description: "gnc-prices – update stock prices from online sources for gnucash"
 ---
 
-<h2>NAME</h2>
 <p> gnc-prices &#8211; update stock prices from online sources for gnucash</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnc-prices</code> <i>xacc-data.xac</i></p>

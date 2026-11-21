@@ -1,4 +1,5 @@
 ---
+
 title: "pmtime(1)"
 name: "pmtime"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmtime/"
 description: "pmtime – time control server for Performance Co-Pilot"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmtime</code> &#8211; time control server for Performance Co-Pilot</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmtime</code> [<code>-p</code> <i>port</i>]</p>

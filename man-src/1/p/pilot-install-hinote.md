@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-install-hinote(1)"
 name: "pilot-install-hinote"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot-install-hinote/"
 description: "pilot-install-hinote – Install local files into your Hi-Note database on your Palm handheld."
 ---
 
-<h2>NAME</h2>
 <p> pilot-install-hinote &#8211; Install local files into your Hi-Note database on your Palm handheld.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "opa_osd_dump(1)"
 name: "opa_osd_dump"
 section: "1"
@@ -6,9 +7,7 @@ letter: "o"
 url: "/docs/linux/man/1-opa_osd_dump/"
 ---
 
-<h2>NAME</h2>
-
- opa_osd_dump 
+opa_osd_dump 
 
  
 

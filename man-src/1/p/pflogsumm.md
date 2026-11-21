@@ -1,4 +1,5 @@
 ---
+
 title: "pflogsumm(1)"
 name: "pflogsumm"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-pflogsumm/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- pflogsumm.pl - Produce Postfix MTA logfile summary 
+pflogsumm.pl - Produce Postfix MTA logfile summary 
 
  Copyright (C) 1998-2010 by James S. Seymour, Release 1.1.3. 
 

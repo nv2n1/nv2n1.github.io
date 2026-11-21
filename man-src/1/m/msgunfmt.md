@@ -1,4 +1,5 @@
 ---
+
 title: "msgunfmt(1)"
 name: "msgunfmt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-msgunfmt/"
 description: "msgunfmt – uncompile message catalog from binary format"
 ---
 
-<h2 class="name">NAME</h2>
 <p> msgunfmt &#8211; uncompile message catalog from binary format </p>
 <h2>SYNOPSIS</h2>
 <p> <code>msgunfmt</code> [<i>OPTION</i>] [<i>FILE</i>]&#8230;</p>

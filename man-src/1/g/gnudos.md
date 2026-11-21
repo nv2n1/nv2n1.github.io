@@ -1,4 +1,5 @@
 ---
+
 title: "gnudos(1)"
 name: "gnudos"
 section: "1"
@@ -6,9 +7,7 @@ letter: "g"
 url: "/docs/linux/man/1-gnudos/"
 ---
 
-<h2>NAME</h2>
-
- GnuDOS - The GnuDOS library for GNU/Linux Version 1.9
+GnuDOS - The GnuDOS library for GNU/Linux Version 1.9
 
 <h2>DESCRIPTION</h2>
 

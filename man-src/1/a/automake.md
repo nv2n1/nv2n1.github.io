@@ -1,4 +1,5 @@
 ---
+
 title: "automake(1)"
 name: "automake"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-automake/"
 description: "automake – manual page for automake 1.16.5"
 ---
 
-<h2 class="name">NAME</h2>
 <p> automake &#8211; manual page for automake 1.16.5 </p>
 <h2>SYNOPSIS</h2>
 <p> <code>automake-1.16</code> [<i>,OPTION/</i>]&#8230; [<i>,Makefile/</i>]&#8230;</p>

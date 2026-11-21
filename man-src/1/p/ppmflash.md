@@ -1,4 +1,5 @@
 ---
+
 title: "ppmflash(1)"
 name: "ppmflash"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-ppmflash/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- ppmflash - brighten a picture up to complete white-out 
+ppmflash - brighten a picture up to complete white-out 
 
 <h2>SYNOPSIS</h2>
 

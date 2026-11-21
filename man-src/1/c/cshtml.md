@@ -1,4 +1,5 @@
 ---
+
 title: "cshtml(1)"
 name: "cshtml"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cshtml/"
 description: "cshtml – manual page for cshtml 1.3.2"
 ---
 
-<h2>NAME</h2>
 <p> cshtml &#8211; manual page for cshtml 1.3.2</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cshtml</code> [<i>options</i>] <i>proj.js, where options are:</i></p>

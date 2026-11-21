@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_rr_compare(3)"
 name: "ldns_rr_compare"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_rr_compare/"
 description: "ldns_rr_compare, ldns_rr_compare_ds"
 ---
 
-<h2>NAME</h2>
 <p> ldns_rr_compare, ldns_rr_compare_ds </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

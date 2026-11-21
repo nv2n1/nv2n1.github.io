@@ -1,4 +1,5 @@
 ---
+
 title: "ffmvforce(1)"
 name: "ffmvforce"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ffmvforce/"
 description: "ffmvforce – force orientation test for force-feedback devices"
 ---
 
-<h2>NAME</h2>
 <p> ffmvforce &#8211; force orientation test for force-feedback devices</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ffmvforce</code> &lt;<i>device</i>&gt; [<code>-u</code> &lt;<i>update rate</i>&gt;]</p>

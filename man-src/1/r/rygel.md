@@ -1,4 +1,5 @@
 ---
+
 title: "rygel(1)"
 name: "rygel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rygel/"
 description: "rygel – a collection of DLNA/UPnP AV services"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rygel &#8211; a collection of DLNA/UPnP AV services </p>
 <h2>SYNOPSIS</h2>
 <dl>

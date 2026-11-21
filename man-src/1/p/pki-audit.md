@@ -1,4 +1,5 @@
 ---
+
 title: "pki-audit(1)"
 name: "pki-audit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pki-audit/"
 description: "pki-audit – Command-Line Interface for managing Certificate System audit configuration."
 ---
 
-<h2 class="name">NAME</h2>
 <p> pki-audit &#8211; Command-Line Interface for managing Certificate System audit configuration.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

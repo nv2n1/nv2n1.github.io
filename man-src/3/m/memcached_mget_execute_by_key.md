@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_mget_execute_by_key(3)"
 name: "memcached_mget_execute_by_key"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memcached_mget_execute_by_key/"
 description: "memcached_mget_execute_by_key – Retrieving data from the server"
 ---
 
-<h2>NAME</h2>
 <p> memcached_mget_execute_by_key &#8211; Retrieving data from the server</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>

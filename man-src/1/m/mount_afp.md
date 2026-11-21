@@ -1,4 +1,5 @@
 ---
+
 title: "mount_afp(1)"
 name: "mount_afp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mount_afp/"
 description: "mount_afp – mount an afp (AppleShare) filesystem using FUSE"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>mount_afp</code> &#8211; mount an afp (AppleShare) filesystem using FUSE </p>
 <h2>SYNOPSIS</h2>
 <p> [-<code>o </code><i>options</i> ] <i>afp_url</i> <i>node</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "bltk(1)"
 name: "bltk"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bltk/"
 description: "bltk – tool kit is used to measure battery life and performance under different workloads on Linux."
 ---
 
-<h2>NAME</h2>
 <p> bltk &#8211; tool kit is used to measure battery life and performance under different workloads on Linux.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bltk</code> [-hVvaNAcCBXswiIRDPGOYZyQzxul] [-t sec] [-r results_dir] [-m {0,1}] [-U path] [-g setup] [-J pid] [-T time] [-F file] [-W app] [-L title] [-K comment] [-e app] [-E app] [-p percent] [-d percent] [-o {0,1,2}] [-q file] [-b percent] [-f command] [-k num]</p>

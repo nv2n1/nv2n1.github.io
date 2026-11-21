@@ -1,4 +1,5 @@
 ---
+
 title: "audio2tape(1)"
 name: "audio2tape"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-audio2tape/"
 description: "audio2tape – Sinclair ZX Spectrum audio to tape file converter"
 ---
 
-<h2 class="name">NAME</h2>
 <p> audio2tape &#8211; Sinclair ZX Spectrum audio to tape file converter </p>
 <h2>SYNOPSIS</h2>
 <p> <code>audio2tape</code> [-t <i>type</i>] [-s] [-r] [-k] [-z <i>level</i>] [-c <i>level</i>] <i>infile outfile</i></p>

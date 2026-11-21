@@ -1,4 +1,5 @@
 ---
+
 title: "copydatabase(1)"
 name: "copydatabase"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-copydatabase/"
 description: "copydatabase – Perform a document-by-document copy of one or more Xapian databases"
 ---
 
-<h2>NAME</h2>
 <p> copydatabase &#8211; Perform a document-by-document copy of one or more Xapian databases</p>
 <h2>SYNOPSIS</h2>
 <p> <code>copydatabase</code> <i>SOURCE_DATABASE</i>&#8230; <i>DESTINATION_DATABASE</i></p>

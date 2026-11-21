@@ -1,4 +1,5 @@
 ---
+
 title: "module-starter(1)"
 name: "module-starter"
 section: "1"
@@ -6,10 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-module-starter/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- module-starter - creates a skeleton module distribution 
+module-starter - creates a skeleton module distribution 
 
 <h2>SYNOPSIS</h2>
 

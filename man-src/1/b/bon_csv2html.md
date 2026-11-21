@@ -1,4 +1,5 @@
 ---
+
 title: "bon_csv2html(1)"
 name: "bon_csv2html"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bon_csv2html/"
 description: "bon_csv2html program to convert CSV format Bonnie++ data to a HTML form using tables suitable for display on a web page. NB Lynx can’t display this properly, and due to the size it probably require..."
 ---
 
-<h2>NAME</h2>
 <p> <code>bon_csv2html</code> program to convert CSV format Bonnie++ data to a HTML form using tables suitable for display on a web page. NB Lynx can&#8217;t display this properly, and due to the size it probably requires 1024&#215;768 monitor to display properly. </p>
 <p> <code>bon_csv2txt</code> program to convert CSV format Bonnie++ data to plain-text format suitable for pasting into an email or reading on a Braille display. </p>
 <h2>DESCRIPTION</h2>

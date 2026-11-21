@@ -1,4 +1,5 @@
 ---
+
 title: "musixflx(1)"
 name: "musixflx"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-musixflx/"
 description: "musixflx – process mx1 files (the second pass of 3-pass MusiXTeX typesetting)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> musixflx &#8211; process mx1 files (the second pass of 3-pass MusiXTeX typesetting)</p>
 <h2>SYNOPSIS</h2>
 <p> [ texlua ] <code>musixflx[.lua]</code> <i>jobname </i> [ .mx1 | .tex ] [ <i>debugmode </i> ] </p>

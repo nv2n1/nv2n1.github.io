@@ -1,4 +1,5 @@
 ---
+
 title: "globus_callout_register(3)"
 name: "globus_callout_register"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_callout_register/"
 description: "Callout Configuration –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Callout Configuration &#8211; </p>
 <p> Register callouts.</p>
 <h3>Functions</h3>

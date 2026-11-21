@@ -1,4 +1,5 @@
 ---
+
 title: "cheese(1)"
 name: "cheese"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cheese/"
 description: "cheese – tool to take pictures and videos from your webcam"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cheese &#8211; tool to take pictures and videos from your webcam </p>
 <h2>SYNOPSIS</h2>
 <dl>

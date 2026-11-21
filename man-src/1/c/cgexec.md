@@ -1,4 +1,5 @@
 ---
+
 title: "cgexec(1)"
 name: "cgexec"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cgexec/"
 description: "cgexec – run the task in given control groups"
 ---
 
-<h2>NAME</h2>
 <p> cgexec &#8211; run the task in given control groups </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cgexec</code> [<code>-h</code>] [<code>-g</code> &lt;<i>controllers&gt;:&lt;path</i>&gt;] [&#8211;sticky] <code>command</code> [<i>arguments</i>] </p>

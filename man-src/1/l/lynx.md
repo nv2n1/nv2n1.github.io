@@ -1,4 +1,5 @@
 ---
+
 title: "lynx(1)"
 name: "lynx"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lynx/"
 description: "lynx – a general purpose distributed information browser for the World Wide Web"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lynx &#8211; a general purpose distributed information browser for the World Wide Web </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lynx </code><i>[options] [optional paths or URLs]</i> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "globus_size_t(3)"
 name: "globus_size_t"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_size_t/"
 description: "globus_types.h –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> globus_types.h &#8211; </p>
 <p> Common Primitive Types.</p>
 <h2>SYNOPSIS</h2>

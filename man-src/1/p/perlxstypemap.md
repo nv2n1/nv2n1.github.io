@@ -1,4 +1,5 @@
 ---
+
 title: "perlxstypemap(1)"
 name: "perlxstypemap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlxstypemap/"
 description: "perlxstypemap – Perl XS C/Perl type mapping"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perlxstypemap &#8211; Perl XS C/Perl type mapping </p>
 <h2>DESCRIPTION</h2>
 <p> The more you think about interfacing between two languages, the more you&#8217;ll realize that the majority of programmer effort has to go into converting between the data structures that are native to either of the languages involved. This trumps other matter such as differing calling conventions because the problem space is so much greater. There are simply more ways to shove data into memory than there are ways to implement a function call. </p>

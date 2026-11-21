@@ -1,4 +1,5 @@
 ---
+
 title: "pinentry(1)"
 name: "pinentry"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pinentry/"
 description: "pinentry-gnome3 – PIN or pass-phrase entry dialog for GnuPG"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pinentry-gnome3 &#8211; PIN or pass-phrase entry dialog for GnuPG</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pinentry-gnome3 [</code><i>OPTION</i>&#8230;]</p>

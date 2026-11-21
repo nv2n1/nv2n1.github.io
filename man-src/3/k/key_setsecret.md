@@ -1,4 +1,5 @@
 ---
+
 title: "key_setsecret(3)"
 name: "key_setsecret"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-key_setsecret/"
 description: "key_decryptsession, key_encryptsession, key_setsecret, key_gendes, key_secretkey_is_set – interfaces to rpc keyserver daemon"
 ---
 
-<h2 class="name">NAME</h2>
 <p> key_decryptsession, key_encryptsession, key_setsecret, key_gendes, key_secretkey_is_set &#8211; interfaces to rpc keyserver daemon </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;rpc/rpc.h&gt;</code> </p>

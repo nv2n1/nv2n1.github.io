@@ -1,4 +1,5 @@
 ---
+
 title: "ovsdb-client(1)"
 name: "ovsdb-client"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ovsdb-client/"
 description: "ovsdb-client – command-line interface to"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ovsdb-client &#8211; command-line interface to <code></p>
 <p><a href="/docs/linux/man/1-ovsdb-server/">ovsdb-server</a></code>(1)</p>
 <h2>SYNOPSIS</h2>

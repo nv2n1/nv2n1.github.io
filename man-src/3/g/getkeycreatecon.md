@@ -1,4 +1,5 @@
 ---
+
 title: "getkeycreatecon(3)"
 name: "getkeycreatecon"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getkeycreatecon/"
 description: "getkeycreatecon, setkeycreatecon – get or set the SELinux security context used for creating a new kernel keyrings"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getkeycreatecon, setkeycreatecon &#8211; get or set the SELinux security context used for creating a new kernel keyrings </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/selinux.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-contacts(1)"
 name: "gnome-contacts"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnome-contacts/"
 description: "gnome-contacts – Access and store information about contacts"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gnome-contacts &#8211; Access and store information about contacts </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_channel_receive_window_adjust(3)"
 name: "libssh2_channel_receive_window_adjust"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_channel_receive_window_adjust/"
 description: "libssh2_channel_receive_window_adjust – adjust the channel window"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_channel_receive_window_adjust &#8211; adjust the channel window</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

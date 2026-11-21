@@ -1,4 +1,5 @@
 ---
+
 title: "aa_imgwidth(3)"
 name: "aa_imgwidth"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_imgwidth/"
 description: "aa_imgwidth – returns width of the emulated image in pixels."
 ---
 
-<h2>NAME</h2>
 <p> aa_imgwidth &#8211; returns width of the emulated image in pixels.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

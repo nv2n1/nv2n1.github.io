@@ -1,4 +1,5 @@
 ---
+
 title: "ffcall-avcall(3)"
 name: "ffcall-avcall"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ffcall-avcall/"
 description: "avcall – build a C argument list incrementally and call a C function on it."
 ---
 
-<h2>NAME</h2>
 <p> avcall &#8211; build a C argument list incrementally and call a C function on it.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;avcall.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cmap_context_get(3)"
 name: "cmap_context_get"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cmap_context_get/"
 description: "cmap_context_get – Gets the context variable for a CMAP instance"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cmap_context_get &#8211; Gets the context variable for a CMAP instance</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cmap.h&gt;</code> </p>

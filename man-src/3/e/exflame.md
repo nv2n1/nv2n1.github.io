@@ -1,4 +1,5 @@
 ---
+
 title: "exflame(3)"
 name: "exflame"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-exflame/"
 description: "exflame – How to write directly to video memory improving performance. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> exflame &#8211; How to write directly to video memory improving performance. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

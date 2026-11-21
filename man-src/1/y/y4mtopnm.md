@@ -1,4 +1,5 @@
 ---
+
 title: "y4mtopnm(1)"
 name: "y4mtopnm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-y4mtopnm/"
 description: "y4mtopnm – Convert a YUV4MPEG2 stream to PNM images"
 ---
 
-<h2>NAME</h2>
 <p> y4mtopnm &#8211; Convert a YUV4MPEG2 stream to PNM images </p>
 <h2>SYNOPSIS</h2>
 <p> <code>y4mtopnm</code> [<i>options</i>] </p>

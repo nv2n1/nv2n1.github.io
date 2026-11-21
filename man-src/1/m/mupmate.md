@@ -1,4 +1,5 @@
 ---
+
 title: "mupmate(1)"
 name: "mupmate"
 section: "1"
@@ -6,11 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-mupmate/"
 ---
 
-<h2>NAME</h2>
-
- 
-
- mupmate - user interface for Mup music publisher
+mupmate - user interface for Mup music publisher
 
 <h2>SYNOPSIS</h2>
 

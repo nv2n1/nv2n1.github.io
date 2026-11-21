@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_pkt_edns_version(3)"
 name: "ldns_pkt_edns_version"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_pkt_edns_version/"
 description: "ldns_pkt_edns, ldns_pkt_edns_udp_size, ldns_pkt_edns_extended_rcode, ldns_pkt_edns_version, ldns_pkt_edns_z, ldns_pkt_edns_data, ldns_pkt_set_edns_udp_size, ldns_pkt_set_edns_extended_rcode, ldns_p..."
 ---
 
-<h2>NAME</h2>
 <p> ldns_pkt_edns, ldns_pkt_edns_udp_size, ldns_pkt_edns_extended_rcode, ldns_pkt_edns_version, ldns_pkt_edns_z, ldns_pkt_edns_data, ldns_pkt_set_edns_udp_size, ldns_pkt_set_edns_extended_rcode, ldns_pkt_set_edns_version, ldns_pkt_set_edns_z, ldns_pkt_set_edns_data </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

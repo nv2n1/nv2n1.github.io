@@ -1,4 +1,5 @@
 ---
+
 title: "ldns-testns(1)"
 name: "ldns-testns"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ldns-testns/"
 description: "ldns-testns – simple fake nameserver tool"
 ---
 
-<h2>NAME</h2>
 <p> ldns-testns &#8211; simple fake nameserver tool</p>
 <h2>SYNOPSYS</h2>
 <p> <code>ldns-testns</code> [ <i>OPTION</i> ] <i>datafile</i> </p>

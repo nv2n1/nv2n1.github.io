@@ -1,4 +1,5 @@
 ---
+
 title: "ikiwiki-update-wikilist(1)"
 name: "ikiwiki-update-wikilist"
 section: "1"
@@ -6,9 +7,7 @@ letter: "i"
 url: "/docs/linux/man/1-ikiwiki-update-wikilist/"
 ---
 
-<h2>NAME</h2>
-
- ikiwiki-update-wikilist - add or remove user from /etc/ikiwiki/wikilist 
+ikiwiki-update-wikilist - add or remove user from /etc/ikiwiki/wikilist 
 
 <h2>SYNOPSIS</h2>
 

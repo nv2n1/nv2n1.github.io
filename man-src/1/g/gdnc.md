@@ -1,4 +1,5 @@
 ---
+
 title: "gdnc(1)"
 name: "gdnc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gdnc/"
 description: "gdnc – GNUstep Distributed Notification Center"
 ---
 
-<h2>NAME</h2>
 <p> gdnc &#8211; GNUstep Distributed Notification Center</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gdnc</code> </p>

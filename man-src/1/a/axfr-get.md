@@ -1,4 +1,5 @@
 ---
+
 title: "axfr-get(1)"
 name: "axfr-get"
 section: "1"
@@ -6,7 +7,6 @@ letter: "a"
 url: "/docs/linux/man/1-axfr-get/"
 ---
 
-<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>axfr-get</code> [OPTIONS] &lt;DOMAIN-NAME&gt; &lt;OUTFILE&gt; &lt;OUTFILE.TMP&gt;</dt>
 <dd>

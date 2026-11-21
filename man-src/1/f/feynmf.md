@@ -1,4 +1,5 @@
 ---
+
 title: "feynmf(1)"
 name: "feynmf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-feynmf/"
 description: "feynmf – Process LaTeX files using FeynMF"
 ---
 
-<h2 class="name">NAME</h2>
 <p> feynmf &#8211; Process LaTeX files using FeynMF </p>
 <h2>SYNOPSIS</h2>
 <p> <code>feynmf</code> [<code>-hvqncfT</code>] [<code>-t</code> <i>tfm</i> [<code>-t</code> <i>tfm</i> &#8230;]] [<code>-m</code> <i>mode</i>]<br />

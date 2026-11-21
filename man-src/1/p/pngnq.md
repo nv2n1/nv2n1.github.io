@@ -1,4 +1,5 @@
 ---
+
 title: "pngnq(1)"
 name: "pngnq"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pngnq/"
 description: "pngnq – quantize png images"
 ---
 
-<h2>NAME</h2>
 <p> pngnq &#8211; quantize png images</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pngnq [-vfhV][-s </code> <i>sample_factor</i> <code>][-Q </code> <i>dither</i> <code>][-g</code> <i>gamma</i> <code>][-e </code> <i>extension </i> <code>][-d </code> <i>dir</i> <code>][-n </code> <i>colors</i> <code>][</code> <i>inputfiles</i> <code>]</code></p>

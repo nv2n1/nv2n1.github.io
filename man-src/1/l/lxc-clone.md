@@ -1,4 +1,5 @@
 ---
+
 title: "lxc-clone(1)"
 name: "lxc-clone"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lxc-clone/"
 description: "lxc-clone – clone a new container from an existing one."
 ---
 
-<h2>NAME</h2>
 <p> lxc-clone &#8211; clone a new container from an existing one.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lxc-clone</code> [-s ] [-K ] [-M ] [-H ] [-B <i>backingstore</i>] [-L <i>fssize</i>] [-p <i>lxcpath</i>] [-P <i>newlxcpath</i>] {-o <i>orig</i>} {-n <i>new</i>} [&#8211; hook arguments] <code>lxc-clone</code> [-s ] [-K ] [-M ] [-H ] [-B <i>backingstore</i>] [-L <i>fssize</i>] [-p <i>lxcpath</i>] [-P <i>newlxcpath</i>] {orig} {new} [&#8211; hook arguments]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "xvkbd(1)"
 name: "xvkbd"
 section: "1"
@@ -6,7 +7,7 @@ letter: "x"
 url: "/docs/linux/man/1-xvkbd/"
 description: "xvkbd – virtual keyboard for X window system"
 ---
-<h2 class="name">NAME</h2>
+
 <p> xvkbd - virtual keyboard for X window system  </p>
 <h2>DESCRIPTION</h2>
 <p> <i>xvkbd</i> is a virtual (graphical) keyboard program for X Window System which provides a facility to enter characters onto other clients (software) by clicking on a keyboard displayed on the screen. This may be used for systems without a hardware keyboard such as kiosk terminals or handheld devices. This program also has a facility to send characters specified as the command line option to another client. </p>

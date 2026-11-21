@@ -1,4 +1,5 @@
 ---
+
 title: "gdaltindex(1)"
 name: "gdaltindex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gdaltindex/"
 description: "gdaltindex – gdaltindex Builds a shapefile as a raster tileindex"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gdaltindex &#8211; gdaltindex Builds a shapefile as a raster tileindex </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

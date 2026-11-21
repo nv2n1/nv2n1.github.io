@@ -1,4 +1,5 @@
 ---
+
 title: "asn1_perror(3)"
 name: "asn1_perror"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-asn1_perror/"
 description: "asn1_perror – API function"
 ---
 
-<h2>NAME</h2>
 <p> asn1_perror &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>

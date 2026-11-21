@@ -1,4 +1,5 @@
 ---
+
 title: "uchardet(1)"
 name: "uchardet"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-uchardet/"
 description: "uchardet – universalchardet (Universal Charset Detector)"
 ---
 
-<h2>NAME</h2>
 <p> uchardet &#8211; universalchardet (Universal Charset Detector)</p>
 <h2>DESCRIPTION</h2>
 <p> uchardet Command Line Tool</p>

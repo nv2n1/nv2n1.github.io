@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc_topology_set_synthetic(3)"
 name: "hwloc_topology_set_synthetic"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hwloc_topology_set_synthetic/"
 description: "hwlocality_configuration – Topology Detection Configuration and Query"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hwlocality_configuration &#8211; Topology Detection Configuration and Query </p>
 <h3>Data Structures</h3>
 <p> struct <code>hwloc_topology_discovery_support</code> </p>

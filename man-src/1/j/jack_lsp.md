@@ -1,4 +1,5 @@
 ---
+
 title: "jack_lsp(1)"
 name: "jack_lsp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jack_lsp/"
 description: "jack_lsp – JACK toolkit client to list informtion on ports"
 ---
 
-<h2>NAME</h2>
 <p> jack_lsp &#8211; JACK toolkit client to list informtion on ports</p>
 <h2>SYNOPSIS</h2>
 <p> <code>jack_lsp</code> [ <i>-s</i> | <i>&#8211;server</i> servername ] [ <i>-AclLptvh</i> ]</p>

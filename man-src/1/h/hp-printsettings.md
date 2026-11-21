@@ -1,4 +1,5 @@
 ---
+
 title: "hp-printsettings(1)"
 name: "hp-printsettings"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hp-printsettings/"
 description: "hp-printsettings – Printer Settings Utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hp-printsettings &#8211; Printer Settings Utility </p>
 <h2>DESCRIPTION</h2>
 <p> Printer settings (options) utility for HPLIP supported printers.</p>

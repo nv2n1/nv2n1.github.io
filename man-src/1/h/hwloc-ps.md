@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc-ps(1)"
 name: "hwloc-ps"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hwloc-ps/"
 description: "hwloc-ps – List currently-running processes or threads that are bound"
 ---
 
-<h2>NAME</h2>
 <p> hwloc-ps &#8211; List currently-running processes or threads that are bound</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hwloc-ps</code> [<i>options</i>]</p>

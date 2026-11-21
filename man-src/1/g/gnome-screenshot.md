@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-screenshot(1)"
 name: "gnome-screenshot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnome-screenshot/"
 description: "gnome-screenshot – capture the screen, a window, or an user-defined area and save the snapshot image to a file."
 ---
 
-<h2 class="name">NAME</h2>
 <p> gnome-screenshot &#8211; capture the screen, a window, or an user-defined area and save the snapshot image to a file. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnome-screenshot</code> [ <code>-c</code> ] [ <code>-w</code> ] [ <code>-a</code> ] [ <code>-b</code> ] [ <code>-B</code> ] [ <code>-p</code> ] [ <code>-d </code><i>SECONDS</i> ] [ <code>-e </code><i>EFFECT</i> ] [ <code>-i</code> ] [ <code>-f </code><i>FILENAME</i> ] [ <code>&#8211;display </code><i>DISPLAY</i> ]</p>

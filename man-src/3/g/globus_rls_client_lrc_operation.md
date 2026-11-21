@@ -1,4 +1,5 @@
 ---
+
 title: "globus_rls_client_lrc_operation(3)"
 name: "globus_rls_client_lrc_operation"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_rls_client_lrc_operation/"
 description: "LRC Operations –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> LRC Operations &#8211; </p>
 <p> Functions to view and update data managed by a LRC server.</p>
 <h3>Data Structures</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "euca-replace-network-acl-entry(1)"
 name: "euca-replace-network-acl-entry"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-replace-network-acl-entry/"
 description: "euca-replace-network-acl-entry – Replace an entry in a VPC network ACL"
 ---
 
-<h2>NAME</h2>
 <p> euca-replace-network-acl-entry &#8211; Replace an entry in a VPC network ACL</p>
 <h2>SYNOPSIS</h2>
 <p> euca-replace-network-acl-entry <code>-n</code> INT (<code>&#8211;allow</code> | <code>&#8211;deny</code>) <code>-r</code> CIDR</p>

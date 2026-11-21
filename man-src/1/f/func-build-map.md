@@ -1,4 +1,5 @@
 ---
+
 title: "func-build-map(1)"
 name: "func-build-map"
 section: "1"
@@ -6,9 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-func-build-map/"
 ---
 
-<h2>NAME</h2>
-
- func-build-map -- Builds/augments delegation map of all available func minions
+func-build-map -- Builds/augments delegation map of all available func minions
 
 <h2>SYNOPSIS</h2>
 

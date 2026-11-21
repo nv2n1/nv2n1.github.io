@@ -1,4 +1,5 @@
 ---
+
 title: "smbtorture(1)"
 name: "smbtorture"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-smbtorture/"
 description: "smbtorture – Run a series of tests against a SMB server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> smbtorture &#8211; Run a series of tests against a SMB server </p>
 <h2>SYNOPSIS</h2>
 <dl>

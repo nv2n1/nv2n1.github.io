@@ -1,4 +1,5 @@
 ---
+
 title: "ibmsquit(1)"
 name: "ibmsquit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ibmsquit/"
 description: "ibmsquit – Quit the management simulator"
 ---
 
-<h2>NAME</h2>
 <p> <code>ibmsquit</code> &#8211; Quit the management simulator</p>
 <h2>SYNOPSYS</h2>
 <p> ibmsquit &lt;simulator host&gt; &lt;simulator port&gt;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ircat(1)"
 name: "ircat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ircat/"
 description: "ircat – print strings when pressing buttons"
 ---
 
-<h2>NAME</h2>
 <p> ircat &#8211; print strings when pressing buttons</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ircat</code> [<i>options</i>] <i>&lt;prog&gt;</i></p>

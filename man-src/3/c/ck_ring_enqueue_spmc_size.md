@@ -1,4 +1,5 @@
 ---
+
 title: "ck_ring_enqueue_spmc_size(3)"
 name: "ck_ring_enqueue_spmc_size"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_ring_enqueue_spmc_size/"
 description: "ck_ring_enqueue_spmc_size – enqueue pointer into bounded FIFO and return size of buffer"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_ring_enqueue_spmc_size</code> &#8211; enqueue pointer into bounded FIFO and return size of buffer</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

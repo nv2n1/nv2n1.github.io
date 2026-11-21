@@ -1,4 +1,5 @@
 ---
+
 title: "ares_expand_string(3)"
 name: "ares_expand_string"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ares_expand_string/"
 description: "ares_expand_string – Expand a length encoded string"
 ---
 
-<h2>NAME</h2>
 <p> ares_expand_string &#8211; Expand a length encoded string</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

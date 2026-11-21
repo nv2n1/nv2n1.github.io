@@ -1,4 +1,5 @@
 ---
+
 title: "zgrep(1)"
 name: "zgrep"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zgrep/"
 description: "zgrep – search possibly compressed files for a regular expression"
 ---
 
-<h2 class="name">NAME</h2>
 <p> zgrep &#8211; search possibly compressed files for a regular expression </p>
 <h2>SYNOPSIS</h2>
 <p> <code>zgrep</code> [ grep_options ] <code>[&nbsp;-e&nbsp;]</code><i> pattern</i> <i>filename</i>&#8230;</p>

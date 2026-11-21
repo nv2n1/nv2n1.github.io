@@ -1,4 +1,5 @@
 ---
+
 title: "libinput-measure-touchpad-pressure(1)"
 name: "libinput-measure-touchpad-pressure"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-libinput-measure-touchpad-pressure/"
 description: "libinput-measure-touchpad-pressure – measure pressure properties of devices"
 ---
 
-<h2 class="name">NAME</h2>
 <p> libinput-measure-touchpad-pressure &#8211; measure pressure properties of devices </p>
 <h2>SYNOPSIS</h2>
 <p> <code>libinput measure touchpad-pressure [&#8211;help] [options]</code> [<i>/dev/input/event0] </i></p>

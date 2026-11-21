@@ -1,4 +1,5 @@
 ---
+
 title: "clush(1)"
 name: "clush"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-clush/"
 description: "clush – execute shell commands on a cluster"
 ---
 
-<h2>NAME</h2>
 <p> clush &#8211; execute shell commands on a cluster</p>
 <h2>SYNOPSIS</h2>
 <p> <code>clush</code> <code>-a</code> | <code>-g</code> <i>group</i> | <code>-w</code> <i>nodes</i> [OPTIONS] </p>

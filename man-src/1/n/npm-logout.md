@@ -1,4 +1,5 @@
 ---
+
 title: "npm-logout(1)"
 name: "npm-logout"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-npm-logout/"
 description: "npm-logout – Log out of the registry"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>npm-logout</code> &#8211; Log out of the registry </p>
 <h3>Synopsis</h3>
 <dl>

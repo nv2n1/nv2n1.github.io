@@ -1,4 +1,5 @@
 ---
+
 title: "sensors(1)"
 name: "sensors"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sensors/"
 description: "sensors – print sensors information"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sensors &#8211; print sensors information </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sensors [</code> <i>options</i> <code>] [</code> <i>chips</i> <code>]</code><br />

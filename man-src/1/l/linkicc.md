@@ -1,4 +1,5 @@
 ---
+
 title: "linkicc(1)"
 name: "linkicc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-linkicc/"
 description: "linkicc – little cms device link generator."
 ---
 
-<h2 class="name">NAME</h2>
 <p> linkicc &#8211; little cms device link generator. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>linkicc</code> [<i>options</i>]<i> &lt;profiles&gt;</i></p>

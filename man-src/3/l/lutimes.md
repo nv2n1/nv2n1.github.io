@@ -1,4 +1,5 @@
 ---
+
 title: "lutimes(3)"
 name: "lutimes"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-lutimes/"
 description: "futimes, lutimes – change file timestamps"
 ---
 
-<h2 class="name">NAME</h2>
 <p> futimes, lutimes &#8211; change file timestamps </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

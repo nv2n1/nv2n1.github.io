@@ -1,4 +1,5 @@
 ---
+
 title: "fts-set-priority(1)"
 name: "fts-set-priority"
 section: "1"
@@ -6,9 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-fts-set-priority/"
 ---
 
-<h2>NAME</h2>
-
- fts-set-priority
+fts-set-priority
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "mtn(1)"
 name: "mtn"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mtn/"
 description: "monotone – a distributed version control system"
 ---
 
-<h2>NAME</h2>
 <p> monotone &#8211; a distributed version control system</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mtn</code> <i>[options&#8230;] command [arguments&#8230;]</i></p>

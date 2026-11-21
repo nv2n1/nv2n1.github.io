@@ -1,4 +1,5 @@
 ---
+
 title: "ffado-diag(1)"
 name: "ffado-diag"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ffado-diag/"
 description: "ffado-diag – print system diagnostic information related to FFADO."
 ---
 
-<h2>NAME</h2>
 <p> ffado-diag &#8211; print system diagnostic information related to FFADO.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ffado-diag</code> </p>

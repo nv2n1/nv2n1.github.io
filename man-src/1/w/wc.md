@@ -1,4 +1,5 @@
 ---
+
 title: "wc(1)"
 name: "wc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wc/"
 description: "wc – print newline, word, and byte counts for each file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> wc &#8211; print newline, word, and byte counts for each file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>wc</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;<br />

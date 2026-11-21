@@ -1,4 +1,5 @@
 ---
+
 title: "vcd-info(1)"
 name: "vcd-info"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vcd-info/"
 description: "vcd-info – manual page for vcd-info 0.7.24"
 ---
 
-<h2>NAME</h2>
 <p> vcd-info &#8211; manual page for vcd-info 0.7.24</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lt-vcd-info</code> [<i>OPTION</i>&#8230;]</p>

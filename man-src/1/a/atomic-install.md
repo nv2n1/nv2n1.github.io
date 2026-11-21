@@ -1,4 +1,5 @@
 ---
+
 title: "atomic-install(1)"
 name: "atomic-install"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-atomic-install/"
 description: "atomic-install – Execute Image Install Method"
 ---
 
-<h2 class="name">NAME</h2>
 <p> atomic-install &#8211; Execute Image Install Method </p>
 <h2>SYNOPSIS</h2>
 <p> <code>atomic install</code> [<code>-h</code>|<code>&#8211;help</code>] [<code>&#8211;display</code>] [<code>-n</code>][<code>&#8211;name</code>[=<i>NAME</i>]] [<code>&#8211;rootfs</code>=<i>ROOTFS</i>] [<code>&#8211;set</code>=<i>NAME</i>=<i>VALUE</i>] [<code>&#8211;storage</code>] [<code>&#8211;system</code>] IMAGE [ARG&#8230;] </p>

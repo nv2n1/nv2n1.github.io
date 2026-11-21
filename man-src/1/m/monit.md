@@ -1,4 +1,5 @@
 ---
+
 title: "monit(1)"
 name: "monit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-monit/"
 description: "Monit – utility for monitoring services on a Unix system"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Monit &#8211; utility for monitoring services on a Unix system </p>
 <h2>SYNOPSIS</h2>
 <p> <code>monit</code> [options] {arguments}</p>

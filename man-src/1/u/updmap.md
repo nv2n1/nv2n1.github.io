@@ -1,4 +1,5 @@
 ---
+
 title: "updmap(1)"
 name: "updmap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-updmap/"
 description: "updmap – manage TeX font maps updmap-sys – manage TeX font maps, system-wide updmap-user – manage TeX font maps, per-user"
 ---
 
-<h2 class="name">NAME</h2>
 <p> updmap &#8211; manage TeX font maps<br />
  updmap-sys &#8211; manage TeX font maps, system-wide<br />
  updmap-user &#8211; manage TeX font maps, per-user </p>

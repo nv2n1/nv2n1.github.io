@@ -1,4 +1,5 @@
 ---
+
 title: "getpeername(2)"
 name: "getpeername"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-getpeername/"
 description: "getpeername – get name of connected peer socket"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getpeername &#8211; get name of connected peer socket </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/socket.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "i686-pc-mingw32-strip(1)"
 name: "i686-pc-mingw32-strip"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-i686-pc-mingw32-strip/"
 description: "strip – Discard symbols from object files."
 ---
 
-<h2 class="name">NAME</h2>
 <p> strip &#8211; Discard symbols from object files. </p>
 <h2>SYNOPSIS</h2>
 <p> strip [<code>-F</code> <i>bfdname</i> |<code>&#8211;target=</code><i>bfdname</i>]<br />

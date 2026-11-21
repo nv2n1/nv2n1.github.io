@@ -1,4 +1,5 @@
 ---
+
 title: "euare-servercertupload(1)"
 name: "euare-servercertupload"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-servercertupload/"
 description: "euare-servercertupload – Upload a server certificate"
 ---
 
-<h2>NAME</h2>
 <p> euare-servercertupload &#8211; Upload a server certificate</p>
 <h2>SYNOPSIS</h2>
 <p> euare-servercertupload (<code>-c</code> CERT_CONTENT | <code>&#8211;certificate-file</code> FILE)</p>

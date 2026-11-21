@@ -1,4 +1,5 @@
 ---
+
 title: "gappletviewer(1)"
 name: "gappletviewer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gappletviewer/"
 description: "gappletviewer – Load and runs an applet"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gappletviewer &#8211; Load and runs an applet </p>
 <h2>SYNOPSIS</h2>
 <p> appletviewer [<i></i><font SIZE="-1"><i>OPTION</i></font><i></i>]&#8230; <i></i><font SIZE="-1"><i>URL</i></font><i></i>&#8230; </p>

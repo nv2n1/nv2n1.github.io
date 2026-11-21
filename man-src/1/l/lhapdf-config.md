@@ -1,4 +1,5 @@
 ---
+
 title: "lhapdf-config(1)"
 name: "lhapdf-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lhapdf-config/"
 description: "lhapdf-config – script to get version number and compiler flags of the installed LHAPDF library"
 ---
 
-<h2>NAME</h2>
 <p> lhapdf-config &#8211; script to get version number and compiler flags of the installed LHAPDF library</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lhapdf-config</code> [[<i>&#8211;help|-h</i>] <i>| </i>[<i>&#8211;prefix</i>] <i>| </i>[<i>&#8211;pdfsets-path</i>]]</p>

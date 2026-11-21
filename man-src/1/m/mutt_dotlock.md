@@ -1,4 +1,5 @@
 ---
+
 title: "mutt_dotlock(1)"
 name: "mutt_dotlock"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mutt_dotlock/"
 description: "mutt_dotlock – Lock mail spool files."
 ---
 
-<h2 class="name">NAME</h2>
 <p> mutt_dotlock &#8211; Lock mail spool files. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mutt_dotlock </code> [-t|-f|-u|-d] [-p] [-r <i>retries</i>] <i>file</i></p>

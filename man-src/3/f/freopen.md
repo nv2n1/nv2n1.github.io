@@ -1,4 +1,5 @@
 ---
+
 title: "freopen(3)"
 name: "freopen"
 section: "3"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-freopen/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- fopen, fdopen, freopen - stream open functions 
+fopen, fdopen, freopen - stream open functions 
 
 <h2>SYNOPSIS</h2>
 

@@ -1,4 +1,5 @@
 ---
+
 title: "apg(1)"
 name: "apg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-apg/"
 description: "apg – generates several random passwords"
 ---
 
-<h2 class="name">NAME</h2>
 <p> apg &#8211; generates several random passwords</p>
 <h2>SYNOPSIS</h2>
 <p> <code>apg</code> [<code>-a algorithm</code>] [<code>-M mode</code>] [<code>-E char_string</code>] [<code>-n num_of_pass</code>] [<code>-m min_pass_len</code>] [<code>-x max_pass_len</code>] [<code>-r</code> <i>dictfile</i>] [<code>-b</code> <i>filter_file</i>] [<code>-p min_substr_len</code>] [<code>-s</code>] [<code>-c cl_seed</code>] [<code>-d</code>] [<code>-y</code>] [<code>-l</code>] [<code>-t</code>] [<code>-q</code>] [<code>-h</code>] [<code>-v</code>] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "isfinite(3)"
 name: "isfinite"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-isfinite/"
 description: "fpclassify, isfinite, isnormal, isnan, isinf – floating-point classification macros"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fpclassify, isfinite, isnormal, isnan, isinf &#8211; floating-point classification macros </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

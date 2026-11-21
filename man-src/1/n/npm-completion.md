@@ -1,4 +1,5 @@
 ---
+
 title: "npm-completion(1)"
 name: "npm-completion"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-npm-completion/"
 description: "npm-completion – Tab Completion for npm"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>npm-completion</code> &#8211; Tab Completion for npm </p>
 <h3>Synopsis</h3>
 <dl>

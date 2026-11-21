@@ -1,4 +1,5 @@
 ---
+
 title: "xentrace_format(1)"
 name: "xentrace_format"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xentrace_format/"
 description: "xentrace_format – pretty-print Xen trace data"
 ---
 
-<h2>NAME</h2>
 <p> xentrace_format &#8211; pretty-print Xen trace data</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xentrace_format</code> [ <i>DEFS-FILE</i> ]</p>

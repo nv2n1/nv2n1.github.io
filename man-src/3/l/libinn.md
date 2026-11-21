@@ -1,4 +1,5 @@
 ---
+
 title: "libinn(3)"
 name: "libinn"
 section: "3"
@@ -6,9 +7,7 @@ letter: "l"
 url: "/docs/linux/man/3-libinn/"
 ---
 
-<h2>NAME</h2>
-
- libinn - InterNetNews library routines
+libinn - InterNetNews library routines
 
 <h2>SYNOPSIS</h2>
 

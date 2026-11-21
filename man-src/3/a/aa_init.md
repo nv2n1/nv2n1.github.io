@@ -1,4 +1,5 @@
 ---
+
 title: "aa_init(3)"
 name: "aa_init"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_init/"
 description: "aa_init – open the output display for AA-lib."
 ---
 
-<h2>NAME</h2>
 <p> aa_init &#8211; open the output display for AA-lib.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

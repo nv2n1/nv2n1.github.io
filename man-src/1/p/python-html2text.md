@@ -1,4 +1,5 @@
 ---
+
 title: "python-html2text(1)"
 name: "python-html2text"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-python-html2text/"
 description: "python-html2text – manual page for python-html2text 2016.9.19"
 ---
 
-<h2>NAME</h2>
 <p> python-html2text &#8211; manual page for python-html2text 2016.9.19</p>
 <h2>SYNOPSIS</h2>
 <p> <code>python-html2text</code> [<i>(filename|url) </i>[<i>encoding</i>]]</p>

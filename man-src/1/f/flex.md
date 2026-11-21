@@ -1,4 +1,5 @@
 ---
+
 title: "flex(1)"
 name: "flex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flex/"
 description: "flex – the fast lexical analyser generator"
 ---
 
-<h2>NAME</h2>
 <p> flex &#8211; the fast lexical analyser generator</p>
 <h2>SYNOPSIS</h2>
 <p> <code>flex</code> [<i>OPTIONS</i>] [<i>FILE</i>]&#8230;</p>

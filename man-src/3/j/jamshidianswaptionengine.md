@@ -1,4 +1,5 @@
 ---
+
 title: "jamshidianswaptionengine(3)"
 name: "jamshidianswaptionengine"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-jamshidianswaptionengine/"
 description: "ql/pricingengines/swaption/jamshidianswaptionengine.hpp – Swaption engine using Jamshidian’s decomposition."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/pricingengines/swaption/jamshidianswaptionengine.hpp &#8211; Swaption engine using Jamshidian&#8217;s decomposition. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/swaption.hpp&gt;<br />

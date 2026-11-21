@@ -1,4 +1,5 @@
 ---
+
 title: "getpwnam_r(3)"
 name: "getpwnam_r"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getpwnam_r/"
 description: "getpwnam, getpwnam_r, getpwuid, getpwuid_r – get password file entry"
 ---
 
-<h2 class="name">NAME</h2>
 <p> getpwnam, getpwnam_r, getpwuid, getpwuid_r &#8211; get password file entry </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

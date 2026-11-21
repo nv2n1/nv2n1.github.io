@@ -1,4 +1,5 @@
 ---
+
 title: "xdg-settings(1)"
 name: "xdg-settings"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xdg-settings/"
 description: "xdg-settings – get various settings from the desktop environment"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xdg-settings &#8211; get various settings from the desktop environment </p>
 <h2>SYNOPSIS</h2>
 <dl>

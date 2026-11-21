@@ -1,4 +1,5 @@
 ---
+
 title: "extractres(1)"
 name: "extractres"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-extractres/"
 description: "extractres – filter to extract resources from a PostScript document"
 ---
 
-<h2 class="name">NAME</h2>
 <p> extractres &#8211; filter to extract resources from a PostScript document </p>
 <h2>SYNOPSIS</h2>
 <p> <code>extractres </code> [ <code>-m</code> ] &lt; <i>document.ps</i> &gt; <i>output.ps</i></p>

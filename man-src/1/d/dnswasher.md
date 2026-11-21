@@ -1,4 +1,5 @@
 ---
+
 title: "dnswasher(1)"
 name: "dnswasher"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dnswasher/"
 description: "dnswasher – A PowerDNS nameserver debugging tool"
 ---
 
-<h2>NAME</h2>
 <p> dnswasher &#8211; A PowerDNS nameserver debugging tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dnswasher </code><i>[infile]</i> <i>[outfile]</i></p>

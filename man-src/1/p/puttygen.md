@@ -1,4 +1,5 @@
 ---
+
 title: "puttygen(1)"
 name: "puttygen"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-puttygen/"
 description: "puttygen – public-key generator for the PuTTY tools"
 ---
 
-<h2>NAME</h2>
 <p> <code>puttygen</code> &#8211; public-key generator for the PuTTY tools</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

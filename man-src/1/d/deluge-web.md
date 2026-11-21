@@ -1,4 +1,5 @@
 ---
+
 title: "deluge-web(1)"
 name: "deluge-web"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-deluge-web/"
 description: "deluge-web – a bittorrent client ajax web interface"
 ---
 
-<h2 class="name">NAME</h2>
 <p> deluge-web &#8211; a bittorrent client ajax web interface</p>
 <h2>SYNOPSIS</h2>
 <p> <code>deluge-web [options]</code> </p>

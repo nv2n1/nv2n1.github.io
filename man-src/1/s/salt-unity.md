@@ -1,4 +1,5 @@
 ---
+
 title: "salt-unity(1)"
 name: "salt-unity"
 section: "1"
@@ -6,9 +7,7 @@ letter: "s"
 url: "/docs/linux/man/1-salt-unity/"
 ---
 
-<h2>NAME</h2>
-
- salt-unity - salt-unity Command 
+salt-unity - salt-unity Command 
 
  A unified invocation wrapper around other Salt CLI scripts.
 

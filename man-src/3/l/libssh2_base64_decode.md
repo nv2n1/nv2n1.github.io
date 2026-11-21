@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_base64_decode(3)"
 name: "libssh2_base64_decode"
 section: "3"
@@ -6,9 +7,7 @@ letter: "l"
 url: "/docs/linux/man/3-libssh2_base64_decode/"
 ---
 
-<h2>NAME</h2>
-
- libssh2_base64_decode - decode a base64 encoded string
+libssh2_base64_decode - decode a base64 encoded string
 
 <h2>SYNOPSIS</h2>
 

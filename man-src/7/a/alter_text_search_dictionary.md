@@ -1,4 +1,5 @@
 ---
+
 title: "alter_text_search_dictionary(7)"
 name: "alter_text_search_dictionary"
 section: "7"
@@ -6,9 +7,6 @@ letter: "a"
 url: "/docs/linux/man/7-alter_text_search_dictionary/"
 ---
 
-
- </p>
-<h2>NAME</h2>
 <p> ALTER TEXT SEARCH DICTIONARY &#8211; change the definition of a text search dictionary </p>
 <h2>SYNOPSIS</h2>
 <pre><code>ALTER TEXT SEARCH DICTIONARY name  ( option  [ = value  ] [, ... ]

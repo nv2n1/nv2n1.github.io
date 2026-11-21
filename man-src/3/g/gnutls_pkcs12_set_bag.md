@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pkcs12_set_bag(3)"
 name: "gnutls_pkcs12_set_bag"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_pkcs12_set_bag/"
 description: "gnutls_pkcs12_set_bag – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_pkcs12_set_bag &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs12.h&gt;</code> </p>

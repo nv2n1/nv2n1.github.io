@@ -1,4 +1,5 @@
 ---
+
 title: "msql2mysql(1)"
 name: "msql2mysql"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-msql2mysql/"
 description: "msql2mysql – convert mSQL programs for use with MySQL"
 ---
 
-<h2 class="name">NAME</h2>
 <p> msql2mysql &#8211; convert mSQL programs for use with MySQL </p>
 <h2>SYNOPSIS</h2>
 <dl>

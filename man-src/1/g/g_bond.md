@@ -1,4 +1,5 @@
 ---
+
 title: "g_bond(1)"
 name: "g_bond"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_bond/"
 description: "g_bond – calculates distances between atoms"
 ---
 
-<h2>NAME</h2>
 <p> g_bond &#8211; calculates distances between atoms </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "rdiff-backup-statistics(1)"
 name: "rdiff-backup-statistics"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rdiff-backup-statistics/"
 description: "rdiff-backup-statistics – summarize rdiff-backup statistics files"
 ---
 
-<h2>NAME</h2>
 <p> rdiff-backup-statistics &#8211; summarize rdiff-backup statistics files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rdiff-backup-statistics</code> <code>[&#8211;begin-time</code><i> time</i><code>]</code> <code>[&#8211;end-time</code><i> time</i><code>]</code> <code>[&#8211;minimum-ratio</code><i> ratio</i><code>]</code> <code>[&#8211;null-separator]</code> <code>[&#8211;quiet]</code> <i>repository</i> </p>

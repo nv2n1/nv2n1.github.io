@@ -1,4 +1,5 @@
 ---
+
 title: "libhashkit(3)"
 name: "libhashkit"
 section: "3"
@@ -6,9 +7,7 @@ letter: "l"
 url: "/docs/linux/man/3-libhashkit/"
 ---
 
-<h2>NAME</h2>
-
- libhashkit - libhashkit Documentation 
+libhashkit - libhashkit Documentation 
 
  <pre><code>
 cc[flag...] file... - lhashkit

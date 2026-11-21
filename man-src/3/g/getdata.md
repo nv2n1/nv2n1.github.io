@@ -1,4 +1,5 @@
 ---
+
 title: "getdata(3)"
 name: "getdata"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getdata/"
 description: "getdata — retrieve data from a dirfile database"
 ---
 
-<h2>NAME</h2>
 <p> getdata &#8212; retrieve data from a dirfile database</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "alsa-delay(1)"
 name: "alsa-delay"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-alsa-delay/"
 description: "alsadelay – a command to (re)initialize sound hardware"
 ---
 
-<h2>NAME</h2>
 <p> alsadelay &#8211; a command to (re)initialize sound hardware </p>
 <h2>SYNOPSIS</h2>
 <p> <code>alsa-delay</code> <i>[options]</i> <i>requested_delay_in_ms</i> [<i>output_card</i>[,<i>device</i>]] </p>

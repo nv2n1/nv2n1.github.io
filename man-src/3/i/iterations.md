@@ -1,4 +1,5 @@
 ---
+
 title: "iterations(3)"
 name: "iterations"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-iterations/"
 description: "QuantLib::TqrEigenDecomposition – tridiag. QR eigen decomposition with explicite shift aka Wilkinson"
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::TqrEigenDecomposition &#8211; tridiag. QR eigen decomposition with explicite shift aka Wilkinson </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/matrixutilities/tqreigendecomposition.hpp&gt; </p>

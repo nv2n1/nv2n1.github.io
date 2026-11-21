@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_bye(3)"
 name: "gnutls_bye"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_bye/"
 description: "gnutls_bye – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_bye &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_creds(3)"
 name: "krb5_creds"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_creds/"
 description: "krb5_creds krb5_copy_creds krb5_copy_creds_contents krb5_free_creds krb5_free_cred_contents – Kerberos 5 credential handling functions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_creds</code> <code>krb5_copy_creds</code> <code>krb5_copy_creds_contents</code> <code>krb5_free_creds</code> <code>krb5_free_cred_contents</code> &#8211; Kerberos 5 credential handling functions </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>

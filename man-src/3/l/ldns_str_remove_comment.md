@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_str_remove_comment(3)"
 name: "ldns_str_remove_comment"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_str_remove_comment/"
 description: "ldns_str_remove_comment"
 ---
 
-<h2>NAME</h2>
 <p> ldns_str_remove_comment </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

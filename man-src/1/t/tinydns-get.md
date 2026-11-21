@@ -1,4 +1,5 @@
 ---
+
 title: "tinydns-get(1)"
 name: "tinydns-get"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tinydns-get/"
 description: "tinydns-get – get the tinydns server records"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>tinydns-get</code> &#8211; get the tinydns server records</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tinydns-get</code> [<code>OPTIONS</code>] TYPE NAME [IP] </p>

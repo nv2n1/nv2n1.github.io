@@ -1,4 +1,5 @@
 ---
+
 title: "funcone(1)"
 name: "funcone"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-funcone/"
 description: "funcone – cone search of a binary table containing RA, Dec columns"
 ---
 
-<h2>NAME</h2>
 <p> <code>funcone &#8211; cone search of a binary table containing RA, Dec columns</code></p>
 <h2>SYNOPSIS</h2>
 <p> funcone &lt;switches&gt; &lt;iname&gt; &lt;oname&gt; &lt;ra[hdr]&gt; &lt;dec[hdr]&gt; &lt;radius[dr&#8217;&quot;]&gt; [columns]</p>

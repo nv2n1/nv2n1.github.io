@@ -1,4 +1,5 @@
 ---
+
 title: "whisper-fill(1)"
 name: "whisper-fill"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-whisper-fill/"
 description: "whisper-fill – copy missing metrics from src into dst"
 ---
 
-<h2>NAME</h2>
 <p> whisper-fill &#8211; copy missing metrics from src into dst</p>
 <h2>SYNOPSYS</h2>
 <pre>

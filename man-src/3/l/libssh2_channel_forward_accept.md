@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_channel_forward_accept(3)"
 name: "libssh2_channel_forward_accept"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_channel_forward_accept/"
 description: "libssh2_channel_forward_accept – accept a queued connection"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_channel_forward_accept &#8211; accept a queued connection</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>

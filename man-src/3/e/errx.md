@@ -1,4 +1,5 @@
 ---
+
 title: "errx(3)"
 name: "errx"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-errx/"
 description: "err, verr, errx, verrx, warn, vwarn, warnx, vwarnx – formatted error messages"
 ---
 
-<h2 class="name">NAME</h2>
 <p> err, verr, errx, verrx, warn, vwarn, warnx, vwarnx &#8211; formatted error messages </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

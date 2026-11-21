@@ -1,4 +1,5 @@
 ---
+
 title: "wnintro(1)"
 name: "wnintro"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wnintro/"
 description: "wnintro – WordNet user commands"
 ---
 
-<h2>NAME</h2>
 <p> wnintro &#8211; WordNet user commands</p>
 <h2>SYNOPSIS</h2>
 <p> <code>wn</code> &#8211; command line interface to WordNet database </p>

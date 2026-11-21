@@ -1,4 +1,5 @@
 ---
+
 title: "movescu(1)"
 name: "movescu"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-movescu/"
 description: "movescu – DICOM retrieve (C-MOVE) SCU"
 ---
 
-<h2 class="name">NAME</h2>
 <p> movescu &#8211; DICOM retrieve (C-MOVE) SCU </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

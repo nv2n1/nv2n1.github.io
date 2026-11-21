@@ -1,4 +1,5 @@
 ---
+
 title: "get_clip_rect(3)"
 name: "get_clip_rect"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_clip_rect/"
 description: "get_clip_rect – Returns the clipping rectangle of a bitmap. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> get_clip_rect &#8211; Returns the clipping rectangle of a bitmap. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

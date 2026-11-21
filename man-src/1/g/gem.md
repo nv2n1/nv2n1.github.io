@@ -1,4 +1,5 @@
 ---
+
 title: "gem(1)"
 name: "gem"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gem/"
 description: "gem2.7 – frontend to RubyGems, the Ruby package manager"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gem2.7 &#8211; frontend to RubyGems, the Ruby package manager </p>
 <h2>SYNOPSIS</h2>
 <p> gem2.7 command [arguments&#8230;] [options&#8230;]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pbmfilters(1)"
 name: "pbmfilters"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pbmfilters/"
 description: "pbmfilters – list of all programs in the netpbm package"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pbmfilters &#8211; list of all programs in the netpbm package </p>
 <h2>DESCRIPTION</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "abook(1)"
 name: "abook"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-abook/"
 description: "abook – text-based address book program"
 ---
 
-<h2 class="name">NAME</h2>
 <p> abook &#8211; text-based address book program </p>
 <h2>SYNOPSIS</h2>
 <p> <code>abook</code> [ <i>OPTION</i> ]</p>

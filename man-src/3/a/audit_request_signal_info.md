@@ -1,4 +1,5 @@
 ---
+
 title: "audit_request_signal_info(3)"
 name: "audit_request_signal_info"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-audit_request_signal_info/"
 description: "audit_request_signal_info – Request signal info for the audit system"
 ---
 
-<h2>NAME</h2>
 <p> audit_request_signal_info &#8211; Request signal info for the audit system</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libaudit.h&gt;</code> </p>

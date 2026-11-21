@@ -1,4 +1,5 @@
 ---
+
 title: "euare-roleupdateassumepolicy(1)"
 name: "euare-roleupdateassumepolicy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-roleupdateassumepolicy/"
 description: "euare-roleupdateassumepolicy – Update a role’s trust policy, the policy that allows entities to assume a role"
 ---
 
-<h2>NAME</h2>
 <p> euare-roleupdateassumepolicy &#8211; Update a role&#8217;s trust policy, the policy that allows entities to assume a role</p>
 <h2>SYNOPSIS</h2>
 <p> euare-roleupdateassumepolicy (<code>-f</code> FILE | <code>-s</code> SERVICE) [-o]</p>

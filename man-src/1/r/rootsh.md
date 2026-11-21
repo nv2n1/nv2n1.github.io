@@ -1,4 +1,5 @@
 ---
+
 title: "rootsh(1)"
 name: "rootsh"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rootsh/"
 description: "rootsh – a logging wrapper for shells"
 ---
 
-<h2>NAME</h2>
 <p> rootsh &#8211; a logging wrapper for shells</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rootsh</code> [<i>OPTION</i>]&#8230; [<i>&#8212;</i>] [<i>COMMANDS</i>]</p>

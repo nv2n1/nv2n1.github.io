@@ -1,4 +1,5 @@
 ---
+
 title: "pdc_client(1)"
 name: "pdc_client"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pdc_client/"
 description: "pdc_client – work with a PDC instance"
 ---
 
-<h2>NAME</h2>
 <p> pdc_client &#8211; work with a PDC instance</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdc_client</code> <code>-s</code> <i>SERVER</i> [<i>OPTIONS</i>&#8230;]</p>

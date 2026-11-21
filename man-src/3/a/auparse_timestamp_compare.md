@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_timestamp_compare(3)"
 name: "auparse_timestamp_compare"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_timestamp_compare/"
 description: "auparse_timestamp_compare – compares timestamp values"
 ---
 
-<h2>NAME</h2>
 <p> auparse_timestamp_compare &#8211; compares timestamp values</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

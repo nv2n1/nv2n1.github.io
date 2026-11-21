@@ -1,4 +1,5 @@
 ---
+
 title: "rastrip(1)"
 name: "rastrip"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rastrip/"
 description: "rastrip – strip argus(8) data file."
 ---
 
-<h2>NAME</h2>
 <p> <code>rastrip</code> &#8211; strip <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data file.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rastrip</code> [<code>-M</code> [replace] [+|-]<i>dsr</i> [-M &#8230;]] [<code>raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>]</p>

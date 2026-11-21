@@ -1,4 +1,5 @@
 ---
+
 title: "distccmon-text(1)"
 name: "distccmon-text"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-distccmon-text/"
 description: "distccmon-text – Displays current compilation jobs in text form."
 ---
 
-<h2>NAME</h2>
 <p> distccmon-text &#8211; Displays current compilation jobs in text form.</p>
 <h2>SYNTAX</h2>
 <p> distccmon-text [DELAY]</p>

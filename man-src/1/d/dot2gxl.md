@@ -1,4 +1,5 @@
 ---
+
 title: "dot2gxl(1)"
 name: "dot2gxl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dot2gxl/"
 description: "gxl2gv,gv2gxl – GXL-GV converters"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gxl2gv,gv2gxl &#8211; GXL-GV converters </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gxl2gv</code> [ <code>-gd?</code> ] [ <code>-o</code><i>outfile</i> ] [ <i>files</i> ]<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "cinnamon(1)"
 name: "cinnamon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cinnamon/"
 description: "cinnamon – desktop"
 ---
 
-<h2>NAME</h2>
 <p> cinnamon &#8211; desktop </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cinnamon [options]</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gchem3d(1)"
 name: "gchem3d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gchem3d/"
 description: "gchem3d – a small chemical viewer application"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gchem3d &#8211; a small chemical viewer application </p>
 <h2>SYNOPSIS</h2>
 <dl>

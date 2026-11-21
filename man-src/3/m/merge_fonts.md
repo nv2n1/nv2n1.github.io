@@ -1,4 +1,5 @@
 ---
+
 title: "merge_fonts(3)"
 name: "merge_fonts"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-merge_fonts/"
 description: "merge_fonts – Merges two fonts into one font. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> merge_fonts &#8211; Merges two fonts into one font. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

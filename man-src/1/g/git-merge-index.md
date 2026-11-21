@@ -1,4 +1,5 @@
 ---
+
 title: "git-merge-index(1)"
 name: "git-merge-index"
 section: "1"
@@ -6,10 +7,7 @@ letter: "g"
 url: "/docs/linux/man/1-git-merge-index/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- git-merge-index - Run a merge for files needing merging 
+git-merge-index - Run a merge for files needing merging 
 
 <h2>SYNOPSIS</h2>
 

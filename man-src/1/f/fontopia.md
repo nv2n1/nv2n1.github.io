@@ -1,4 +1,5 @@
 ---
+
 title: "fontopia(1)"
 name: "fontopia"
 section: "1"
@@ -6,9 +7,6 @@ letter: "f"
 url: "/docs/linux/man/1-fontopia/"
 ---
 
-
- </p>
-<h2>NAME</h2>
 <p> fontopia &#8211; the console bitmap font editor  </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fontopia [OPTIONS] [file-name]</code>  </p>

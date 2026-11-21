@@ -1,4 +1,5 @@
 ---
+
 title: "euca-get-console-output(1)"
 name: "euca-get-console-output"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-get-console-output/"
 description: "euca-get-console-output – Retrieve console output for the specified instance"
 ---
 
-<h2>NAME</h2>
 <p> euca-get-console-output &#8211; Retrieve console output for the specified instance</p>
 <h2>SYNOPSIS</h2>
 <p> euca-get-console-output [-r] [&#8211;show-empty-fields] [-U URL]</p>

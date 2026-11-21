@@ -1,4 +1,5 @@
 ---
+
 title: "euwatch-describe-alarms-for-metric(1)"
 name: "euwatch-describe-alarms-for-metric"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euwatch-describe-alarms-for-metric/"
 description: "euwatch-describe-alarms-for-metric – Describe alarms for a single metric."
 ---
 
-<h2>NAME</h2>
 <p> euwatch-describe-alarms-for-metric &#8211; Describe alarms for a single metric.</p>
 <h2>SYNOPSIS</h2>
 <p> euwatch-describe-alarms-for-metric <code>&#8211;metric-name</code> METRIC <code>&#8211;namespace</code></p>

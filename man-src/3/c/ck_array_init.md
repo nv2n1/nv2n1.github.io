@@ -1,4 +1,5 @@
 ---
+
 title: "ck_array_init(3)"
 name: "ck_array_init"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_array_init/"
 description: "ck_array_init – initialize a pointer array"
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_array_init</code> &#8211; initialize a pointer array</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

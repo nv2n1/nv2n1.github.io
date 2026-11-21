@@ -1,4 +1,5 @@
 ---
+
 title: "g_dielectric(1)"
 name: "g_dielectric"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_dielectric/"
 description: "g_dielectric – calculates frequency dependent dielectric constants"
 ---
 
-<h2>NAME</h2>
 <p> g_dielectric &#8211; calculates frequency dependent dielectric constants </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

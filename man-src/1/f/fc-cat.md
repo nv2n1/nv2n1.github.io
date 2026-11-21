@@ -1,4 +1,5 @@
 ---
+
 title: "fc-cat(1)"
 name: "fc-cat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fc-cat/"
 description: "fc-cat – read font information cache files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fc-cat &#8211; read font information cache files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fc-cat</code> [ <code>-rvVh</code> ] [ <code>&#8211;recurse</code> ] [ <code>&#8211;verbose</code> ] [ <code>&#8211;version</code> ] [ <code>&#8211;help</code> ] </p>

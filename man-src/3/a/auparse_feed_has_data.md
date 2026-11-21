@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_feed_has_data(3)"
 name: "auparse_feed_has_data"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_feed_has_data/"
 description: "auparse_feed_has_data – check if there is any data accumulating that might need flushing."
 ---
 
-<h2>NAME</h2>
 <p> auparse_feed_has_data &#8211; check if there is any data accumulating that might need flushing.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

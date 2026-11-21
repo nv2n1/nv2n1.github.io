@@ -1,4 +1,5 @@
 ---
+
 title: "knockd(1)"
 name: "knockd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-knockd/"
 description: "knockd – port-knock server"
 ---
 
-<h2>NAME</h2>
 <p> knockd &#8211; port-knock server</p>
 <h2>SYNOPSIS</h2>
 <p> <code>knockd [options]</code></p>

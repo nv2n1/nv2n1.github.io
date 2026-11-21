@@ -1,4 +1,5 @@
 ---
+
 title: "idevicename(1)"
 name: "idevicename"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-idevicename/"
 description: "idevicename – Display the device name or set it to NAME if specified."
 ---
 
-<h2>NAME</h2>
 <p> idevicename &#8211; Display the device name or set it to NAME if specified.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>idevicename</code> [OPTIONS] [NAME] </p>

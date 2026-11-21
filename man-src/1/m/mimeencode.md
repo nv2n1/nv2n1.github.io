@@ -1,4 +1,5 @@
 ---
+
 title: "mimeencode(1)"
 name: "mimeencode"
 section: "1"
@@ -6,10 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-mimeencode/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- mimeencode - encode a file 
+mimeencode - encode a file 
 
 <h2>SYNOPSIS</h2>
 

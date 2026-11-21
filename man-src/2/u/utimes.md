@@ -1,4 +1,5 @@
 ---
+
 title: "utimes(2)"
 name: "utimes"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-utimes/"
 description: "utime, utimes – change file last access and modification times"
 ---
 
-<h2 class="name">NAME</h2>
 <p> utime, utimes &#8211; change file last access and modification times </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

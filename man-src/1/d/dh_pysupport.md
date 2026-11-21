@@ -1,4 +1,5 @@
 ---
+
 title: "dh_pysupport(1)"
 name: "dh_pysupport"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_pysupport/"
 description: "dh_pysupport – use the python-support framework to handle Python modules"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_pysupport &#8211; use the python-support framework to handle Python modules </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_pysupport</code> [<i>debhelper options</i>] [-V <i>X.Y</i>] [-X <i>item</i> [&#8230;]] [-n] [<i>module dirs &#8230;</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "sshuttle(1)"
 name: "sshuttle"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sshuttle/"
 description: "sshuttle – sshuttle documentation"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sshuttle &#8211; sshuttle documentation </p>
 <h2>SYNOPSIS</h2>
 <p> <code>sshuttle</code> [<i>options</i>] [<code>-r</code> <i>[username@]sshserver[:port]</i>] &lt;<i>subnets</i> …&gt;</p>

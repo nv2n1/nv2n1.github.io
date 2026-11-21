@@ -1,4 +1,5 @@
 ---
+
 title: "syndaemon(1)"
 name: "syndaemon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-syndaemon/"
 description: "syndaemon – a program that monitors keyboard activity and disables the touchpad when the keyboard is being used."
 ---
 
-<h2 class="name">NAME</h2>
 <p> syndaemon &#8211; a program that monitors keyboard activity and disables the touchpad when the keyboard is being used. </p>
 <h2>SYNOPSIS</h2>
 <p> syndaemon [<i>-i idle-time</i>] [<i>-m poll-inverval</i>] [<i>-d</i>] [<i>-p pid-file</i>] [<i>-t</i>] [<i>-k</i>] [<i>-K</i>] [<i>-R</i>]</p>

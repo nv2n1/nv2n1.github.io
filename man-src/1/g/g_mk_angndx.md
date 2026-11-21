@@ -1,4 +1,5 @@
 ---
+
 title: "g_mk_angndx(1)"
 name: "g_mk_angndx"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_mk_angndx/"
 description: "mk_angndx – generates index files for g_angle"
 ---
 
-<h2>NAME</h2>
 <p> mk_angndx &#8211; generates index files for g_angle </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

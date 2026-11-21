@@ -1,4 +1,5 @@
 ---
+
 title: "perlrepository(1)"
 name: "perlrepository"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlrepository/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlrepository - Links to current information on the Perl source repository 
+perlrepository - Links to current information on the Perl source repository 
 
 <h2>DESCRIPTION</h2>
 

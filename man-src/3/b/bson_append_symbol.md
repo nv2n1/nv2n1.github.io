@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_symbol(3)"
 name: "bson_append_symbol"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_append_symbol/"
 description: "bson_append_symbol() – Appends a new field to bson of type BSON_TYPE_SYMBOL. This BSON type is deprecated and should not be used in new code."
 ---
 
-<h2>NAME</h2>
 <p> bson_append_symbol() &#8211; Appends a new field to bson of type BSON_TYPE_SYMBOL. This BSON type is deprecated and should not be used in new code.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

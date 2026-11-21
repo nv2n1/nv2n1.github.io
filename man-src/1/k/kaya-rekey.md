@@ -1,4 +1,5 @@
 ---
+
 title: "kaya-rekey(1)"
 name: "kaya-rekey"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kaya-rekey/"
 description: "kaya-rekey – Binary key regeneration for kaya web applications"
 ---
 
-<h2>NAME</h2>
 <p> kaya-rekey &#8211; Binary key regeneration for kaya web applications</p>
 <h2>SYNOPSIS</h2>
 <p> <code>kaya-rekey</code> <i>FILE1 [FILE2 [&#8230;]]</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ncftpget(1)"
 name: "ncftpget"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ncftpget/"
 description: "ncftpget – Internet file transfer program for scripts"
 ---
 
-<h2>NAME</h2>
 <p> ncftpget &#8211; Internet file transfer program for scripts</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ncftpget</code> [<i>options</i>] <i>remote-host local-directory remote-files&#8230;</i> </p>

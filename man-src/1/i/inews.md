@@ -1,4 +1,5 @@
 ---
+
 title: "inews(1)"
 name: "inews"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-inews/"
 description: "inews – Post a Usenet article to the local news server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> inews &#8211; Post a Usenet article to the local news server </p>
 <h2>SYNOPSIS</h2>
 <p> <code>inews</code> [<code>-ADhNORSVW</code>] [<code>-acdeFfnortwx</code> <i>value</i>] [<code>-p</code> <i>port</i>] [<i>file</i>]</p>

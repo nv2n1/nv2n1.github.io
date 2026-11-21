@@ -1,4 +1,5 @@
 ---
+
 title: "dhcpctl(3)"
 name: "dhcpctl"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dhcpctl/"
 description: "dhcpctl_initialize – dhcpctl library initialization."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>dhcpctl_initialize</code> &#8211; dhcpctl library initialization. </p>
 <h2>SYNOPSIS</h2>
 <p> Fd #include &lt;dhcpctl/dhcpctl.h&gt; Ft dhcpctl_status Fo dhcpctl_initialize Fa void Fc Ft dhcpctl_status Fo dhcpctl_connect Fa dhcpctl_handle *cxn Fa const char *host Fa int port Fa dhcpctl_handle auth Fc Ft dhcpctl_status Fo dhcpctl_wait_for_completion Fa dhcpctl_handle object Fa dhcpctl_status *status Fc Ft dhcpctl_status Fo dhcpctl_get_value Fa dhcpctl_data_string *value Fa dhcpctl_handle object Fa const char *name Fc Ft dhcpctl_status Fo dhcpctl_get_boolean Fa int *value Fa dhcpctl_handle object Fa const char *name Fc Ft dhcpctl_status Fo dhcpctl_set_value Fa dhcpctl_handle object Fa dhcpctl_data_string value Fa const char *name Fc Ft dhcpctl_status Fo dhcpctl_set_string_value Fa dhcpctl_handle object Fa const char *value Fa const char *name Fc Ft dhcpctl_status Fo dhcpctl_set_boolean_value Fa dhcpctl_handle object Fa int value Fa const char *name Fc Ft dhcpctl_status Fo dhcpctl_set_int_value Fa dhcpctl_handle object Fa int value Fa const char *name Fc Ft dhcpctl_status Fo dhcpctl_object_update Fa dhcpctl_handle connection Fa dhcpctl_handle object Fc Ft dhcpctl_status Fo dhcpctl_object_refresh Fa dhcpctl_handle connection Fa dhcpctl_handle object Fc Ft dhcpctl_status Fo dhcpctl_object_remove Fa dhcpctl_handle connection Fa dhcpctl_handle object Fc Ft dhcpctl_status Fo dhcpctl_set_callback Fa dhcpctl_handle object Fa void *data Fa void (*function) (dhcpctl_handle, dhcpctl_status, void *) Fc Ft dhcpctl_status Fo dhcpctl_new_authenticator Fa dhcpctl_handle *object Fa const char *name Fa const char *algorithm Fa const char *secret Fa unsigned secret_len Fc Ft dhcpctl_status Fo dhcpctl_new_object Fa dhcpctl_handle *object Fa dhcpctl_handle connection Fa const char *object_type Fc Ft dhcpctl_status Fo dhcpctl_open_object Fa dhcpctl_handle object Fa dhcpctl_handle connection Fa int flags Fc Ft isc_result_t Fo omapi_data_string_new Fa dhcpctl_data_string *data Fa unsigned int length Fa const char *filename, Fa int lineno Fc Ft isc_result_t Fo dhcpctl_data_string_dereference Fa dhcpctl_data_string * Fa const char * Fa int Fc</p>

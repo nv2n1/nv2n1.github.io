@@ -1,4 +1,5 @@
 ---
+
 title: "munindoc(1)"
 name: "munindoc"
 section: "1"
@@ -6,10 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-munindoc/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- munindoc - Munin documentation 
+munindoc - Munin documentation 
 
 <h2>DESCRIPTION</h2>
 

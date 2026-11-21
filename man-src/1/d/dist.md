@@ -1,4 +1,5 @@
 ---
+
 title: "dist(1)"
 name: "dist"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dist/"
 description: "dist – redistribute a message to additional addresses"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dist &#8211; redistribute a message to additional addresses </p>
 <h2>SYNOPSIS</h2>
 <dl>

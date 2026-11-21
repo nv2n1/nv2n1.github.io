@@ -1,4 +1,5 @@
 ---
+
 title: "mheard(1)"
 name: "mheard"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mheard/"
 description: "mheard – display AX.25 calls recently heard."
 ---
 
-<h2>NAME</h2>
 <p> mheard &#8211; display AX.25 calls recently heard.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mheard [-d cmns] [-n] [-o cfpt] [-v] [port&#8230;]</code></p>

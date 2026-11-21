@@ -1,4 +1,5 @@
 ---
+
 title: "funcolumnactivate(3)"
 name: "funcolumnactivate"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-funcolumnactivate/"
 description: "FunColumnActivate – activate Funtools columns"
 ---
 
-<h2>NAME</h2>
 <p> <code>FunColumnActivate &#8211; activate Funtools columns</code></p>
 <h2>SYNOPSIS</h2>
 <pre><code>

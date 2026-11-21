@@ -1,4 +1,5 @@
 ---
+
 title: "lli(1)"
 name: "lli"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lli/"
 description: "lli – directly execute programs from LLVM bitcode"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lli &#8211; directly execute programs from LLVM bitcode </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lli</code> [<i>options</i>] [<i>filename</i>] [<i>program args</i>]</p>

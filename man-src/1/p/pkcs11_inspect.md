@@ -1,4 +1,5 @@
 ---
+
 title: "pkcs11_inspect(1)"
 name: "pkcs11_inspect"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pkcs11_inspect/"
 description: "pkcs11_inspect – print certificate contents"
 ---
 
-<h2>NAME</h2>
 <p> pkcs11_inspect &#8211; print certificate contents</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pkcs11_inspect</code> [<code>debug</code>] [<code>config_file=</code><i>&lt;filename&gt;</i>]</p>

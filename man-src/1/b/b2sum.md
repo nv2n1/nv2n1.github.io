@@ -1,4 +1,5 @@
 ---
+
 title: "b2sum(1)"
 name: "b2sum"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-b2sum/"
 description: "b2sum – compute and check BLAKE2 message digest"
 ---
 
-<h2 class="name">NAME</h2>
 <p> b2sum &#8211; compute and check BLAKE2 message digest </p>
 <h2>SYNOPSIS</h2>
 <p> <code>b2sum</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>

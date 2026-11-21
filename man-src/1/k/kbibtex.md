@@ -1,4 +1,5 @@
 ---
+
 title: "kbibtex(1)"
 name: "kbibtex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kbibtex/"
 description: "KBibTeX – a BibTeX editor for KDE"
 ---
 
-<h2>NAME</h2>
 <p> KBibTeX &#8211; a BibTeX editor for KDE </p>
 <h2>SYNOPSIS</h2>
 <p> <code>kbibtex</code> [<i>Qt-options</i>] [<i>KDE-options</i>] [<i>file</i>]</p>

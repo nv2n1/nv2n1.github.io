@@ -1,4 +1,5 @@
 ---
+
 title: "avisync(1)"
 name: "avisync"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-avisync/"
 description: "avisync – adjust audio synchronisation"
 ---
 
-<h2>NAME</h2>
 <p> avisync &#8211; adjust audio synchronisation</p>
 <h2>SYNOPSIS</h2>
 <p> <code>avisync</code> [ <code>-o</code> <i>file</i> <code>-i</code> <i>file</i> <code>-q</code> <code>-n</code> <i>num</i> <code>-b</code> <i>num</i> <code>-a</code> <i>track</i> <code>-f</code> <i>commentfile</i> ]</p>

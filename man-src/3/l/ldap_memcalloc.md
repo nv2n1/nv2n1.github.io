@@ -1,4 +1,5 @@
 ---
+
 title: "ldap_memcalloc(3)"
 name: "ldap_memcalloc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldap_memcalloc/"
 description: "ldap_memfree, ldap_memvfree, ldap_memalloc, ldap_memcalloc, ldap_memrealloc, ldap_strdup – LDAP memory allocation routines"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ldap_memfree, ldap_memvfree, ldap_memalloc, ldap_memcalloc, ldap_memrealloc, ldap_strdup &#8211; LDAP memory allocation routines </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>

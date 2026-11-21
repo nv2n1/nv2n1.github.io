@@ -1,4 +1,5 @@
 ---
+
 title: "db2x_manxml(1)"
 name: "db2x_manxml"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-db2x_manxml/"
 description: "db2x_manxml – Make man pages from Man-XML"
 ---
 
-<h2>NAME</h2>
 <p> db2x_manxml &#8211; Make man pages from Man-XML</p>
 <h2>SYNOPSIS</h2>
 <p> <code>db2x_manxml</code> [<i>options</i>] [<i>xml-document</i>]</p>

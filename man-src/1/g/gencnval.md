@@ -1,4 +1,5 @@
 ---
+
 title: "gencnval(1)"
 name: "gencnval"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gencnval/"
 description: "gencnval – compile the converters aliases file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>gencnval</code> &#8211; compile the converters aliases file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gencnval</code> [ <code>-h</code>, <code>-?</code>, <code>&#8211;help</code> ] [ <code>-v</code>, <code>&#8211;verbose</code> ] [ <code>-c</code>, <code>&#8211;copyright</code> ] [ <code>-s</code>, <code>&#8211;sourcedir</code><i> source</i> ] [ <code>-d</code>, <code>&#8211;destdir</code><i> destination</i> ] [ <i>converterfile</i> ]</p>

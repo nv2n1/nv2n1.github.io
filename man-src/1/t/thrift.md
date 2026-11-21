@@ -1,4 +1,5 @@
 ---
+
 title: "thrift(1)"
 name: "thrift"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-thrift/"
 description: "thrift – program to do something"
 ---
 
-<h2 class="name">NAME</h2>
 <p> thrift &#8211; program to do something </p>
 <h2>SYNOPSIS</h2>
 <p> <code>thrift</code> [<i>options</i>]<i> files</i>&#8230;<br />

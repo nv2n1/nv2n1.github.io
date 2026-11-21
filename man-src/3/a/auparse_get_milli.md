@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_get_milli(3)"
 name: "auparse_get_milli"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_get_milli/"
 description: "auparse_get_milli – get the millisecond value of the event"
 ---
 
-<h2>NAME</h2>
 <p> auparse_get_milli &#8211; get the millisecond value of the event</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

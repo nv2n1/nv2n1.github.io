@@ -1,4 +1,5 @@
 ---
+
 title: "euare-userupdateinfo(1)"
 name: "euare-userupdateinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-userupdateinfo/"
 description: "euare-userupdateinfo – [Eucalyptus only] Update a user’s information"
 ---
 
-<h2>NAME</h2>
 <p> euare-userupdateinfo &#8211; [Eucalyptus only] Update a user&#8217;s information</p>
 <h2>SYNOPSIS</h2>
 <p> euare-userupdateinfo <code>-k</code> KEY [-i VALUE] [&#8211;as-account ACCOUNT] [-U URL]</p>

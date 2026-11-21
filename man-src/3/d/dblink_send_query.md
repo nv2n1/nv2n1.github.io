@@ -1,4 +1,5 @@
 ---
+
 title: "dblink_send_query(3)"
 name: "dblink_send_query"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dblink_send_query/"
 description: "dblink_send_query – sends an async query to a remote database"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dblink_send_query &#8211; sends an async query to a remote database </p>
 <h2>SYNOPSIS</h2>
 <pre>

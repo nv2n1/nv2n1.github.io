@@ -1,4 +1,5 @@
 ---
+
 title: "opafabricinfo(1)"
 name: "opafabricinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-opafabricinfo/"
 description: "opafabricinfo"
 ---
 
-<h2>NAME</h2>
 <p> opafabricinfo </p>
 <p> Provides a brief summary of the components in the fabric, using the first active port on the given local host to perform its analysis. opafabricinfo is supplied in both:</p>
 <dl>

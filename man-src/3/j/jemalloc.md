@@ -1,4 +1,5 @@
 ---
+
 title: "jemalloc(3)"
 name: "jemalloc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-jemalloc/"
 description: "jemalloc – general purpose memory allocation functions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> jemalloc &#8211; general purpose memory allocation functions </p>
 <h2>LIBRARY</h2>
 <p> This manual describes jemalloc 3.6.0-0-g46c0af68bd248b04df75e4f92d5fb804c3d75340. More information can be found at the m[blue]<code>jemalloc website</code>m[]<font SIZE="-2">[1]</font>.</p>

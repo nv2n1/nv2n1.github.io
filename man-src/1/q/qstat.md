@@ -1,4 +1,5 @@
 ---
+
 title: "qstat(1)"
 name: "qstat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qstat/"
 description: "qstat – show the status of xxQS_NAMExx jobs and queues"
 ---
 
-<h2 class="name">NAME</h2>
 <p> qstat &#8211; show the status of xxQS_NAMExx jobs and queues </p>
 <h2>SYNTAX</h2>
 <p> <code>qstat</code> [<code>-ext</code>] [<code>-f</code>] [<code>-F</code> [<i>resource_name</i>,&#8230;]] [<code>-g</code> <code>c</code>|<code>d</code>|<code>t</code>[<code>+</code>]] [<code>-help</code>] [<code>-j</code> [<i>job_list</i>]] [<code>-l</code> <i>resource</i>=<i>val</i>,&#8230;<i>]</i> [<code>-ne</code>] [<code>-pe</code> <i>pe_name</i>,&#8230;] [<code>-ncb</code>] [<code>-pri</code>] [<code>-q</code> <i>wc_queue_list</i>] [<code>-qs</code> <code>a</code>|<code>c</code>|<code>d</code>|<code>o</code>|<code>s</code>|<code>u</code>|<code>A</code>|<code>C</code>|<code>D</code>|<code>E</code>|<code>S</code>] [<code>-r</code>] [<code>-s</code> {<code>r</code>|<code>p</code>|<code>s</code>|<code>z</code>|<code>hu</code>|<code>ho</code>|<code>hs</code>|<code>hd</code>|<code>hj</code>|<code>ha</code>|<code>h</code>|<code>a</code>}[+]] [<code>-t</code>] [<code>-U</code> <i>user</i>,&#8230;] [<code>-u</code> <i>user</i>,&#8230;] [<code>-urg</code>] [<code>-xml</code>]</p>

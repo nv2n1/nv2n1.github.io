@@ -1,4 +1,5 @@
 ---
+
 title: "heimdal-login(1)"
 name: "heimdal-login"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-heimdal-login/"
 description: "login – authenticate a user and start new session"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>login</code> &#8211; authenticate a user and start new session </p>
 <h2>SYNOPSIS</h2>
 <p> [-<code>fp</code> ] [-<code>a </code><i>level</i> ] [-<code>h </code><i>hostname</i> ] <i>[username]</i></p>

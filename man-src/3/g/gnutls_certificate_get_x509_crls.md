@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_certificate_get_x509_crls(3)"
 name: "gnutls_certificate_get_x509_crls"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_certificate_get_x509_crls/"
 description: "gnutls_certificate_get_x509_crls – Used to export all the CRLs from a gnutls_certificate_credentials_t structure"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_certificate_get_x509_crls &#8211; Used to export all the CRLs from a gnutls_certificate_credentials_t structure</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/gnutls.h">gnutls/gnutls.h</a>&gt;</code> </p>

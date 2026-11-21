@@ -1,4 +1,5 @@
 ---
+
 title: "dgesvd(3)"
 name: "dgesvd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dgesvd/"
 description: "dgesvd.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dgesvd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

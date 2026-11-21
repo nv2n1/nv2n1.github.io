@@ -1,4 +1,5 @@
 ---
+
 title: "cgetri(3)"
 name: "cgetri"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgetri/"
 description: "cgetri.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cgetri.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

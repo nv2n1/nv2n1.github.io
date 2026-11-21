@@ -1,4 +1,5 @@
 ---
+
 title: "multiplexer(2)"
 name: "multiplexer"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-multiplexer/"
 description: "afs_syscall, break, fattach, fdetach, ftime, getmsg, getpmsg, gtty, isastream, lock, madvise1, mpx, multiplexer, prof, profil, putmsg, putpmsg, security, stty, tuxcall, ulimit, vserver – unimplemen..."
 ---
 
-<h2>NAME</h2>
 <p> afs_syscall, break, fattach, fdetach, ftime, getmsg, getpmsg, gtty, isastream, lock, madvise1, mpx, multiplexer, prof, profil, putmsg, putpmsg, security, stty, tuxcall, ulimit, vserver &#8211; unimplemented system calls</p>
 <h2>SYNOPSIS</h2>
 <p> Unimplemented system calls.</p>

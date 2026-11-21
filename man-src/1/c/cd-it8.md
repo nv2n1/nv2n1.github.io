@@ -1,4 +1,5 @@
 ---
+
 title: "cd-it8(1)"
 name: "cd-it8"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cd-it8/"
 description: "cd-it8 – Color Manager Testing Tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cd-it8 &#8211; Color Manager Testing Tool </p>
 <h2>SYNOPSIS</h2>
 <dl>

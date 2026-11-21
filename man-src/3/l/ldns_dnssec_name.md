@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_dnssec_name(3)"
 name: "ldns_dnssec_name"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_dnssec_name/"
 description: "ldns_dnssec_zone, ldns_dnssec_name, ldns_dnssec_rrs, ldns_dnssec_rrsets"
 ---
 
-<h2>NAME</h2>
 <p> ldns_dnssec_zone, ldns_dnssec_name, ldns_dnssec_rrs, ldns_dnssec_rrsets </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

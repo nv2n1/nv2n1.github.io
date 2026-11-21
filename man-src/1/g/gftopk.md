@@ -1,4 +1,5 @@
 ---
+
 title: "gftopk(1)"
 name: "gftopk"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gftopk/"
 description: "gftopk – convert generic font files to packed font files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gftopk &#8211; convert generic font files to packed font files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gftopk</code> [<code>-v</code>] <i>gf_file_name</i> [<i>pk_file_name</i>]</p>

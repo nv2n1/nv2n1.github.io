@@ -1,4 +1,5 @@
 ---
+
 title: "override_config_file(3)"
 name: "override_config_file"
 section: "3"
@@ -6,8 +7,9 @@ letter: "o"
 url: "/docs/linux/man/3-override_config_file/"
 description: "override_config_file – Specifies a file containing config overrides. Allegro game programming library."
 ---
+
 <p> override_config_file - Specifies a file containing config overrides. Allegro game programming library.  </p>
-<h2>SYNOPSIS</h2>
+
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>void override_config_file(const char *filename);</code>  </p>
 <h2>DESCRIPTION</h2>

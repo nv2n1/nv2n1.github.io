@@ -1,4 +1,5 @@
 ---
+
 title: "fixasin(3)"
 name: "fixasin"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fixasin/"
 description: "fixasin – Fixed point inverse sine lookup table. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> fixasin &#8211; Fixed point inverse sine lookup table. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

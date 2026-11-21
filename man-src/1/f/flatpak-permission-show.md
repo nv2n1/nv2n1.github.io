@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-permission-show(1)"
 name: "flatpak-permission-show"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flatpak-permission-show/"
 description: "flatpak-permission-show – Show permissions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flatpak-permission-show &#8211; Show permissions </p>
 <h2>SYNOPSIS</h2>
 <dl>

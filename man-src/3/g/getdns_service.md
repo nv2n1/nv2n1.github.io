@@ -1,4 +1,5 @@
 ---
+
 title: "getdns_service(3)"
 name: "getdns_service"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-getdns_service/"
 description: "getdns_service, getdns_service_sync — getdns lookup of a service"
 ---
 
-<h2>NAME</h2>
 <p> <code>getdns_service, </code> <code>getdns_service_sync</code> &#8212; getdns lookup of a service </p>
 <h2>LIBRARY</h2>
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>

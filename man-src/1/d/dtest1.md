@@ -1,4 +1,5 @@
 ---
+
 title: "dtest1(1)"
 name: "dtest1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dtest1/"
 description: "dtest – simple uDAPL send/receive and RDMA test"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dtest &#8211; simple uDAPL send/receive and RDMA test</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dtest</code> [-P provider] [-b buf size] [-B burst count][-v] [-c] [-p] [-d]<code> [-s]</code> </p>

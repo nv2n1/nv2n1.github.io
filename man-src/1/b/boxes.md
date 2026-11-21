@@ -1,4 +1,5 @@
 ---
+
 title: "boxes(1)"
 name: "boxes"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-boxes/"
 description: "boxes – text mode box and comment drawing filter"
 ---
 
-<h2 class="name">NAME</h2>
 <p> boxes &#8211; text mode box and comment drawing filter </p>
 <h2>SYNOPSIS</h2>
 <p> <code>boxes</code> [-hlmrv] [-a format] [-d design] [-f file] [-i indent] [-k bool] [-p pad] [-s size] [-t tabopts] [infile [outfile]]</p>

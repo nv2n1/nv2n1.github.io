@@ -1,4 +1,5 @@
 ---
+
 title: "telnet(1)"
 name: "telnet"
 section: "1"
@@ -8,7 +9,7 @@ description: "telnet – user interface to the TELNET protocol"
 ---
 
 <p>Linux NetKit (0.17)</p>
-<h2 class="name">NAME</h2>
+
 <p> <code>telnet</code> &#8211; user interface to the <code>TELNET</code> protocol </p>
 <h2>SYNOPSIS</h2>
 <p> <code>telnet</code> [-<code>468ELadr</code> ] [-<code>S </code><i>tos</i> ] [-<code>b </code><i>address</i> ] [-<code>e </code><i>escapechar</i> ] [-<code>l </code><i>user</i> ] [-<code>n </code><i>tracefile</i> ] [<i>host</i> [<i>port</i> ] ]</p>

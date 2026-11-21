@@ -1,4 +1,5 @@
 ---
+
 title: "findscu(1)"
 name: "findscu"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-findscu/"
 description: "findscu – DICOM query (C-FIND) SCU"
 ---
 
-<h2 class="name">NAME</h2>
 <p> findscu &#8211; DICOM query (C-FIND) SCU </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

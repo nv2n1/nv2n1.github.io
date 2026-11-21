@@ -1,4 +1,5 @@
 ---
+
 title: "insque(3)"
 name: "insque"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-insque/"
 description: "insque, remque – insert/remove an item from a queue"
 ---
 
-<h2 class="name">NAME</h2>
 <p> insque, remque &#8211; insert/remove an item from a queue </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

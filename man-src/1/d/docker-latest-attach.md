@@ -1,4 +1,5 @@
 ---
+
 title: "docker-latest-attach(1)"
 name: "docker-latest-attach"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-latest-attach/"
 description: "docker-attach – Attach to a running container"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-attach &#8211; Attach to a running container </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker attach</code> [<code>&#8211;detach-keys</code>[=<i>[]</i>]] [<code>&#8211;help</code>] [<code>&#8211;no-stdin</code>] [<code>&#8211;sig-proxy</code>[=<i>true</i>]] CONTAINER </p>

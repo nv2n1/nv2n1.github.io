@@ -1,4 +1,5 @@
 ---
+
 title: "git-changelog(1)"
 name: "git-changelog"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-changelog/"
 description: "git-changelog – Generate a changelog report"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-changelog</code> &#8211; Generate a changelog report</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-changelog</code> [options] [&lt;file&gt;]<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "foomatic-ppd-to-xml(1)"
 name: "foomatic-ppd-to-xml"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-foomatic-ppd-to-xml/"
 description: "foomatic-ppd-to-xml – Generate Foomatic printer XML from a PPD"
 ---
 
-<h2>NAME</h2>
 <p> foomatic-ppd-to-xml &#8211; Generate Foomatic printer XML from a PPD</p>
 <h2>SYNOPSIS</h2>
 <dl>

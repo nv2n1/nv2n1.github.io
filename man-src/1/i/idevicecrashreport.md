@@ -1,4 +1,5 @@
 ---
+
 title: "idevicecrashreport(1)"
 name: "idevicecrashreport"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-idevicecrashreport/"
 description: "idevicecrashreport – Retrieve crash reports from a device."
 ---
 
-<h2>NAME</h2>
 <p> idevicecrashreport &#8211; Retrieve crash reports from a device.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>idevicecrashreport</code> [OPTIONS] DIRECTORY </p>

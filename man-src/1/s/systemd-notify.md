@@ -1,4 +1,5 @@
 ---
+
 title: "systemd-notify(1)"
 name: "systemd-notify"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-systemd-notify/"
 description: "systemd-notify – Notify service manager about start-up completion and other daemon status changes"
 ---
 
-<h2 class="name">NAME</h2>
 <p> systemd-notify &#8211; Notify service manager about start-up completion and other daemon status changes </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "bson_string_append_printf(3)"
 name: "bson_string_append_printf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_string_append_printf/"
 description: "bson_string_append_printf() – Like bson_string_append() but formats a printf style string and then appends that to string."
 ---
 
-<h2>NAME</h2>
 <p> bson_string_append_printf() &#8211; Like bson_string_append() but formats a printf style string and then appends that to string.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

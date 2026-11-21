@@ -1,4 +1,5 @@
 ---
+
 title: "ucf(1)"
 name: "ucf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ucf/"
 description: "ucf – Update Configuration File: preserve user changes in configuration files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ucf &#8211; Update Configuration File: preserve user changes in configuration files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ucf</code> [<i>options</i>] <i>&lt;New File&gt;</i> <i>&lt;Destination&gt;</i> </p>

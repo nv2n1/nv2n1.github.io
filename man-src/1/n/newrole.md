@@ -1,4 +1,5 @@
 ---
+
 title: "newrole(1)"
 name: "newrole"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-newrole/"
 description: "newrole – run a shell with a new SELinux role"
 ---
 
-<h2>NAME</h2>
 <p> newrole &#8211; run a shell with a new SELinux role</p>
 <h2>SYNOPSIS</h2>
 <p> <code>newrole</code> [<code>-r</code>|<code>&#8211;role</code>] <i>ROLE</i> [<code>-t</code>|<code>&#8211;type</code>] <i>TYPE</i> [<code>-l</code>|<code>&#8211;level</code>] [<code>-p</code>|<code>&#8211;preserve-environment</code>] <i>LEVEL</i> [&#8211; [<i>ARGS</i>]&#8230;]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "xgridfit(1)"
 name: "xgridfit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xgridfit/"
 description: "xgridfit – a program for gridfitting, or \"hinting,\" TrueType fonts"
 ---
 
-<h2>NAME</h2>
 <p> <code>xgridfit </code> &#8211; a program for gridfitting, or &quot;hinting,&quot; TrueType fonts</p>
 <h2>SYNOPSIS</h2>
 <p> <code>xgridfit [options]</code> <i>file.</i>{<i>xgf</i> or <i>xml</i>}&#8230;</p>

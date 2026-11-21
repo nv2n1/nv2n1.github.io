@@ -1,4 +1,5 @@
 ---
+
 title: "mdb-schema(1)"
 name: "mdb-schema"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mdb-schema/"
 description: "mdb-schema – Generate schema creation DDL"
 ---
 
-<h2>NAME</h2>
 <p> <code>mdb-schema </code>&#8211; Generate schema creation DDL</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

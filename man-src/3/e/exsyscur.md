@@ -1,4 +1,5 @@
 ---
+
 title: "exsyscur(3)"
 name: "exsyscur"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-exsyscur/"
 description: "exsyscur – Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> exsyscur &#8211; Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-exec(1)"
 name: "doveadm-exec"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-doveadm-exec/"
 description: "doveadm-exec – easily execute commands from Dovecot’s libexec_dir"
 ---
 
-<h2>NAME</h2>
 <p> doveadm-exec &#8211; easily execute commands from Dovecot&#8217;s libexec_dir</p>
 <h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>exec</code> <i>binary</i> [<i>binary arguments</i>]</p>

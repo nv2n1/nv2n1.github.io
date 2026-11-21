@@ -1,4 +1,5 @@
 ---
+
 title: "x2sys_init(1)"
 name: "x2sys_init"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-x2sys_init/"
 description: "x2sys_init – Initialize a new x2sys track database"
 ---
 
-<h2>NAME</h2>
 <p> x2sys_init &#8211; Initialize a new x2sys track database</p>
 <h2>SYNOPSIS</h2>
 <p> <code>x2sys_init</code> <i>TAG</i> <i>deffile</i> [ <code>c</code>|<code>f</code>|<code>g</code>|<code>e</code> ] [ <i>suffix</i> ] [ ] [ <code>d</code>|<code>g</code> ] [ <i>dx</i>[/<i>dy</i>] ] [ <code>d</code>|<code>s</code><i>unit</i> ] [ <i>region</i> ] [ [<i>level</i>] ] [ <code>t</code>|<code>d</code><i>gap</i> ] </p>

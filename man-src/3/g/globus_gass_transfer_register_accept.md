@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gass_transfer_register_accept(3)"
 name: "globus_gass_transfer_register_accept"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gass_transfer_register_accept/"
 description: "Implementing Servers –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Implementing Servers &#8211; </p>
 <p> GASS Server Implementation.</p>
 <h3>Typedefs</h3>

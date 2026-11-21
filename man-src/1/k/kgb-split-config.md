@@ -1,4 +1,5 @@
 ---
+
 title: "kgb-split-config(1)"
 name: "kgb-split-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kgb-split-config/"
 description: "kgb-split-config – helper script for splitting out project configurations"
 ---
 
-<h2 class="name">NAME</h2>
 <p> kgb-split-config &#8211; helper script for splitting out project configurations </p>
 <h2>SYNOPSIS</h2>
 <p> <code>kgb-split-config</code></p>

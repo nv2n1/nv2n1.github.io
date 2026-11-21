@@ -1,4 +1,5 @@
 ---
+
 title: "wimlib-imagex-apply(1)"
 name: "wimlib-imagex-apply"
 section: "1"
@@ -6,7 +7,7 @@ letter: "w"
 url: "/docs/linux/man/1-wimlib-imagex-apply/"
 description: "wimlib-imagex-apply – Extract one image, or all images, from a WIM archive"
 ---
-<h2>NAME</h2>
+
 <p> wimlib-imagex-apply - Extract one image, or all images, from a WIM archive  </p>
 <h2>SYNOPSIS</h2>
 <p> <code>wimlib-imagex apply</code> <i>WIMFILE</i> [<i>IMAGE</i>] <i>TARGET</i> [<i>OPTION</i>...]  </p>

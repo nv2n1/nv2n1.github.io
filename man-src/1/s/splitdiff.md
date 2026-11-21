@@ -1,4 +1,5 @@
 ---
+
 title: "splitdiff(1)"
 name: "splitdiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-splitdiff/"
 description: "splitdiff – separate out incremental patches"
 ---
 
-<h2 class="name">NAME</h2>
 <p> splitdiff &#8211; separate out incremental patches </p>
 <h2>SYNOPSIS</h2>
 <dl>

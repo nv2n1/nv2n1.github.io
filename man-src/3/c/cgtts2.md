@@ -1,4 +1,5 @@
 ---
+
 title: "cgtts2(3)"
 name: "cgtts2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgtts2/"
 description: "cgtts2.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cgtts2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

@@ -1,4 +1,5 @@
 ---
+
 title: "lrunzip(1)"
 name: "lrunzip"
 section: "1"
@@ -6,10 +7,7 @@ letter: "l"
 url: "/docs/linux/man/1-lrunzip/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- lrunzip - Uncompress LRZ files 
+lrunzip - Uncompress LRZ files 
 
 <h2>SYNOPSIS</h2>
 

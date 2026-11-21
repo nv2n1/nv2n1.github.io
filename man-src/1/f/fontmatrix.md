@@ -1,4 +1,5 @@
 ---
+
 title: "fontmatrix(1)"
 name: "fontmatrix"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fontmatrix/"
 description: "fontmatrix – a powerful open source font manager"
 ---
 
-<h2>NAME</h2>
 <p> fontmatrix &#8211; a powerful open source font manager </p>
 <h2>SYNOPSIS</h2>
 <p> fontmatrix [-h|&#8211;help]</p>

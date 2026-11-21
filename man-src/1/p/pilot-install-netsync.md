@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-install-netsync(1)"
 name: "pilot-install-netsync"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot-install-netsync/"
 description: "pilot-install-netsync – reads or sets the Network Preferences information on a Palm Device."
 ---
 
-<h2>NAME</h2>
 <p> pilot-install-netsync &#8211; reads or sets the Network Preferences information on a Palm Device.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>

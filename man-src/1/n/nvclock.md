@@ -1,4 +1,5 @@
 ---
+
 title: "nvclock(1)"
 name: "nvclock"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nvclock/"
 description: "nvclock – Overclock your nVidia graphics adapter."
 ---
 
-<h2>NAME</h2>
 <p> nvclock &#8211; Overclock your nVidia graphics adapter.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nvclock</code> <i>[options]</i></p>

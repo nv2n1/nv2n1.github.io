@@ -1,4 +1,5 @@
 ---
+
 title: "y4mscaler(1)"
 name: "y4mscaler"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-y4mscaler/"
 description: "y4mscaler – Scale/crop/translate a YUV4MPEG2 stream"
 ---
 
-<h2 class="name">NAME</h2>
 <p> y4mscaler &#8211; Scale/crop/translate a YUV4MPEG2 stream</p>
 <h2>SYNOPSIS</h2>
 <p> <code>y4mscaler</code> [<i>options</i>] <i>&lt; Y4Mstream &gt; Y4Mstream</i> </p>

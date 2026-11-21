@@ -1,4 +1,5 @@
 ---
+
 title: "perlintro(1)"
 name: "perlintro"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlintro/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlintro -- a brief introduction and overview of Perl 
+perlintro -- a brief introduction and overview of Perl 
 
 <h2>DESCRIPTION</h2>
 

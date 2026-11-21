@@ -1,4 +1,5 @@
 ---
+
 title: "spbequ(3)"
 name: "spbequ"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-spbequ/"
 description: "spbequ.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> spbequ.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

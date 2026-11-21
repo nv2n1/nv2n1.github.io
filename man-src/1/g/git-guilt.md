@@ -1,4 +1,5 @@
 ---
+
 title: "git-guilt(1)"
 name: "git-guilt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-guilt/"
 description: "git-guilt – calculate change between two revisions"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-guilt</code> &#8211; calculate change between two revisions</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git guilt</code> [&lt;option&gt;]<br />

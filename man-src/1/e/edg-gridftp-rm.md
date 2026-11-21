@@ -1,4 +1,5 @@
 ---
+
 title: "edg-gridftp-rm(1)"
 name: "edg-gridftp-rm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-edg-gridftp-rm/"
 description: "edg-gridftp-rm – Remove a file on a GridFTP server."
 ---
 
-<h2 class="name">NAME</h2>
 <p> edg-gridftp-rm &#8211; Remove a file on a GridFTP server. </p>
 <h2>SYNOPSIS</h2>
 <p> edg-gridftp-rm [<code>&#8211;proxy</code>=<i>proxy</i>] [<code>&#8211;timeout</code>=<i>timeout</i>] <i></i><font SIZE="-1"><i>URL</i></font><i></i> [<i></i><font SIZE="-1"><i>URL</i></font><i></i> &#8230;] </p>

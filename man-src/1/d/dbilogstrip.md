@@ -1,4 +1,5 @@
 ---
+
 title: "dbilogstrip(1)"
 name: "dbilogstrip"
 section: "1"
@@ -6,10 +7,7 @@ letter: "d"
 url: "/docs/linux/man/1-dbilogstrip/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- dbilogstrip - filter to normalize DBI trace logs for diff'ing 
+dbilogstrip - filter to normalize DBI trace logs for diff'ing 
 
 <h2>SYNOPSIS</h2>
 

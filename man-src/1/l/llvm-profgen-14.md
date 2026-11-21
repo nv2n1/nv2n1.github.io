@@ -1,4 +1,5 @@
 ---
+
 title: "llvm-profgen-14(1)"
 name: "llvm-profgen-14"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-llvm-profgen-14/"
 description: "llvm-profgen – LLVM SPGO profile generation tool"
 ---
 
-<h2 class="name">NAME</h2>
 <p> llvm-profgen &#8211; LLVM SPGO profile generation tool </p>
 <h2>SYNOPSIS</h2>
 <p> <code>llvm-profgen</code> [<i>commands</i>] [<i>options</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "func-transmit(1)"
 name: "func-transmit"
 section: "1"
@@ -6,9 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-func-transmit/"
 ---
 
-<h2>NAME</h2>
-
- Func-transmit -- cross-language func adapter
+Func-transmit -- cross-language func adapter
 
 <h2>SYNOPSIS</h2>
 

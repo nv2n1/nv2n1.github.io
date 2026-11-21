@@ -1,4 +1,5 @@
 ---
+
 title: "eventfd_read(3)"
 name: "eventfd_read"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-eventfd_read/"
 description: "eventfd – create a file descriptor for event notification"
 ---
 
-<h2 class="name">NAME</h2>
 <p> eventfd &#8211; create a file descriptor for event notification </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/eventfd.h&gt;</code> </p>

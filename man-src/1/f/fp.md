@@ -1,4 +1,5 @@
 ---
+
 title: "fp(1)"
 name: "fp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fp/"
 description: "fp – Free Pascal Compiler (FPC) integrated development enviroment"
 ---
 
-<h2>NAME</h2>
 <p> fp &#8211; Free Pascal Compiler (FPC) integrated development enviroment </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fp [options] [sourcefile]</code></p>

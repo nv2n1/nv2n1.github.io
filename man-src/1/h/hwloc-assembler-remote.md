@@ -1,4 +1,5 @@
 ---
+
 title: "hwloc-assembler-remote(1)"
 name: "hwloc-assembler-remote"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hwloc-assembler-remote/"
 description: "hwloc-assembler-remote – Assemble multiple remote host topologies"
 ---
 
-<h2>NAME</h2>
 <p> hwloc-assembler-remote &#8211; Assemble multiple remote host topologies</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hwloc-assembler-remote</code> [<i>options</i>] output.xml host1 host2 &#8230;</p>

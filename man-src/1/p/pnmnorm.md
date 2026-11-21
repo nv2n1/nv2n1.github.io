@@ -1,4 +1,5 @@
 ---
+
 title: "pnmnorm(1)"
 name: "pnmnorm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnmnorm/"
 description: "pnmnorm – normalize the contrast in a Netbpm image"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pnmnorm &#8211; normalize the contrast in a Netbpm image </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmnorm</code> [<code>-bpercent</code> <i>N</i> | <code>-bvalue</code> <i>N</i>] [<code>-wpercent</code> <i>N</i> | <code>-wvalue</code> <i>N</i>] [<code>-keephues</code>] [<code>-brightmax</code>] </p>

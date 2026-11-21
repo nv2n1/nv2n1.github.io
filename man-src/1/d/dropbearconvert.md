@@ -1,4 +1,5 @@
 ---
+
 title: "dropbearconvert(1)"
 name: "dropbearconvert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dropbearconvert/"
 description: "dropbearconvert – convert between Dropbear and OpenSSH private key formats"
 ---
 
-<h2>NAME</h2>
 <p> dropbearconvert &#8211; convert between Dropbear and OpenSSH private key formats</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dropbearconvert</code> <i>input_type</i> <i>output_type</i> <i>input_file</i> <i>output_file</i></p>

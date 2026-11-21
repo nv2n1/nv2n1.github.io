@@ -1,4 +1,5 @@
 ---
+
 title: "git-clean(1)"
 name: "git-clean"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-clean/"
 description: "git-clean – Remove untracked files from the working tree"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-clean &#8211; Remove untracked files from the working tree </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

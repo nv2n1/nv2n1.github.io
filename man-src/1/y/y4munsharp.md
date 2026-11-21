@@ -1,4 +1,5 @@
 ---
+
 title: "y4munsharp(1)"
 name: "y4munsharp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-y4munsharp/"
 description: "y4munsharp – Unsharp filter for YUV4MPEG2 streams"
 ---
 
-<h2>NAME</h2>
 <p> y4munsharp &#8211; Unsharp filter for YUV4MPEG2 streams</p>
 <h2>SYNOPSIS</h2>
 <p> <code>y4munsharp</code> [<i>options</i>]</p>

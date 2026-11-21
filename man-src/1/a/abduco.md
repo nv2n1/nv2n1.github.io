@@ -1,4 +1,5 @@
 ---
+
 title: "abduco(1)"
 name: "abduco"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-abduco/"
 description: "abduco – terminal session manager"
 ---
 
-<h2 class="name">NAME</h2>
 <p> abduco &#8211; terminal session manager </p>
 <h2>SYNOPSIS</h2>
 <p> <code>abduco</code> [<code>-e</code> <i>detachkey</i>] [<code>-r</code>] [<code>-f</code>] -c name command [<i>args</i>&nbsp;<wbr>&#8230;<i></i>]<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "libcap(3)"
 name: "libcap"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libcap/"
 description: "cap_clear, cap_clear_flag, cap_compare, cap_copy_ext, cap_copy_int, cap_free, cap_from_name, cap_from_text, cap_get_fd, cap_get_file, cap_get_flag, cap_get_pid, cap_get_proc, cap_set_fd, cap_set_fi..."
 ---
 
-<h2>NAME</h2>
 <p> cap_clear, cap_clear_flag, cap_compare, cap_copy_ext, cap_copy_int, cap_free, cap_from_name, cap_from_text, cap_get_fd, cap_get_file, cap_get_flag, cap_get_pid, cap_get_proc, cap_set_fd, cap_set_file, cap_set_flag, cap_set_proc, cap_size, cap_to_name, cap_to_text, cap_get_pid, cap_dup &#8211; capability data object manipulation</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

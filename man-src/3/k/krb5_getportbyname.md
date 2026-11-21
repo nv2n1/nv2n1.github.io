@@ -1,4 +1,5 @@
 ---
+
 title: "krb5_getportbyname(3)"
 name: "krb5_getportbyname"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-krb5_getportbyname/"
 description: "krb5_getportbyname – get port number by name"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>krb5_getportbyname</code> &#8211; get port number by name </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>

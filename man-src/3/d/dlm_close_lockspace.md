@@ -1,4 +1,5 @@
 ---
+
 title: "dlm_close_lockspace(3)"
 name: "dlm_close_lockspace"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dlm_close_lockspace/"
 description: "dlm_create_lockspace, dlm_open_lockspace, dlm_close_lockspace, dlm_release_lockspace – manipulate DLM lockspaces"
 ---
 
-<h2>NAME</h2>
 <p> dlm_create_lockspace, dlm_open_lockspace, dlm_close_lockspace, dlm_release_lockspace &#8211; manipulate DLM lockspaces</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "globus_ftp_client_handleattr_set_netlogger(3)"
 name: "globus_ftp_client_handleattr_set_netlogger"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_ftp_client_handleattr_set_netlogger/"
 description: "Handle Attributes –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Handle Attributes &#8211; </p>
 <h3>Data Structures</h3>
 <p> struct <code>globus_i_ftp_client_handleattr_t</code><br />

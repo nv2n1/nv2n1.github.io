@@ -1,4 +1,5 @@
 ---
+
 title: "rlog(1)"
 name: "rlog"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rlog/"
 description: "rlog – print log messages and other information about RCS files"
 ---
 
-<h2>NAME</h2>
 <p> rlog &#8211; print log messages and other information about <font SIZE="-1">RCS</font> files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>rlog</code> [<i> options </i>]<i> file </i>&#8230;</p>

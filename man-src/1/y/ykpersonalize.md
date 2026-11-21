@@ -1,4 +1,5 @@
 ---
+
 title: "ykpersonalize(1)"
 name: "ykpersonalize"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ykpersonalize/"
 description: "ykpersonalize – personalize YubiKey OTP tokens"
 ---
 
-<h2>NAME</h2>
 <p> ykpersonalize &#8211; personalize YubiKey OTP tokens</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ykpersonalize</code> [<i>-1</i> | <i>-2</i>] [<i>-sfile</i>] [<i>-ifile</i>] [<i>-fformat</i>] [<i>-axxx</i>] [<i>-cxxx</i>] [<i>-ooption</i>] [<i>-y</i>] [<i>-v</i>] [<i>-d</i>] [<i>-h</i>] [<i>-n</i>] [<i>-t</i>] [<i>-u</i>] [<i>-x</i>] [<i>-z</i>] [<i>-m</i>] [<i>-S</i>] [<i>-V</i>]</p>

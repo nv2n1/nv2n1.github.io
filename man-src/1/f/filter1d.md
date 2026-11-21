@@ -1,4 +1,5 @@
 ---
+
 title: "filter1d(1)"
 name: "filter1d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-filter1d/"
 description: "filter1d – Do time domain filtering of 1-D data tables"
 ---
 
-<h2>NAME</h2>
 <p> filter1d &#8211; Do time domain filtering of 1-D data tables</p>
 <h2>SYNOPSIS</h2>
 <p> <code>filter1d</code> [ <i>table</i> ] <i>type&lt;width&gt;</i>[<i>mode</i>] [ <i>increment</i> ] [ ] [ <i>ignore_val</i> ] [ <i>lack_width</i> ] [ <i>t_col</i> ] [ <i>q_factor</i> ] [ <i>symmetry_factor</i> ] [ <i>t_min/t_max/t_inc</i>[<code>+</code>] ] [ [<i>level</i>] ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

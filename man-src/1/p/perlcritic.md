@@ -1,4 +1,5 @@
 ---
+
 title: "perlcritic(1)"
 name: "perlcritic"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlcritic/"
 description: "\"perlcritic\" – Command-line interface to critique Perl source."
 ---
 
-<h2 class="name">NAME</h2>
 <p> &quot;perlcritic&quot; &#8211; Command-line interface to critique Perl source. </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

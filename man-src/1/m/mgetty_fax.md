@@ -1,4 +1,5 @@
 ---
+
 title: "mgetty_fax(1)"
 name: "mgetty_fax"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mgetty_fax/"
 description: "fax – fax sending and receiving with mgetty+sendfax"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fax &#8211; fax sending and receiving with mgetty+sendfax </p>
 <h2>SYNOPSIS</h2>
 <p> <code>faxspool</code> [options] phone-number file </p>

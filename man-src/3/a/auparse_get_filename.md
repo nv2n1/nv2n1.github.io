@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_get_filename(3)"
 name: "auparse_get_filename"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_get_filename/"
 description: "auparse_get_filename – get the filename where record was found"
 ---
 
-<h2>NAME</h2>
 <p> auparse_get_filename &#8211; get the filename where record was found</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

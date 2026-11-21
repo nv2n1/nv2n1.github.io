@@ -1,4 +1,5 @@
 ---
+
 title: "g-ir-compiler(1)"
 name: "g-ir-compiler"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g-ir-compiler/"
 description: "g-ir-compiler – typelib compiler."
 ---
 
-<h2>NAME</h2>
 <p> g-ir-compiler &#8211; typelib compiler.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>g-ir-compiler</code> [OPTION&#8230;] GIRFILE</p>

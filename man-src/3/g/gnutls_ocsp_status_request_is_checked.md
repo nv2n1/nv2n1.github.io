@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_ocsp_status_request_is_checked(3)"
 name: "gnutls_ocsp_status_request_is_checked"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_ocsp_status_request_is_checked/"
 description: "gnutls_ocsp_status_request_is_checked – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_ocsp_status_request_is_checked &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

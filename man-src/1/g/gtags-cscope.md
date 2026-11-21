@@ -1,4 +1,5 @@
 ---
+
 title: "gtags-cscope(1)"
 name: "gtags-cscope"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gtags-cscope/"
 description: "gtags-cscope – pseudo cscope which implements the line-oriented interface"
 ---
 
-<h2>NAME</h2>
 <p> gtags-cscope &#8211; pseudo cscope which implements the line-oriented interface</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gtags-cscope</code> [-Cqv] </p>

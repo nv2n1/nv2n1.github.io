@@ -1,4 +1,5 @@
 ---
+
 title: "gplink(1)"
 name: "gplink"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gplink/"
 description: "gplink – GNU PIC linker"
 ---
 
-<h2>NAME</h2>
 <p> gplink &#8211; GNU PIC linker</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gplink [options] [objects] [libraries]</code></p>

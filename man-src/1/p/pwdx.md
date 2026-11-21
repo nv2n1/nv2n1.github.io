@@ -1,4 +1,5 @@
 ---
+
 title: "pwdx(1)"
 name: "pwdx"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pwdx/"
 description: "pwdx – report current working directory of a process"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pwdx &#8211; report current working directory of a process </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pwdx</code> [<i>options</i>] <i>pid</i> [&#8230;]</p>

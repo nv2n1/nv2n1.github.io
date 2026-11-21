@@ -1,4 +1,5 @@
 ---
+
 title: "empathy-accounts(1)"
 name: "empathy-accounts"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-empathy-accounts/"
 description: "empathy-accounts – Accounts configuration dialog for Empathy instant messaging client"
 ---
 
-<h2>NAME</h2>
 <p> empathy-accounts &#8211; Accounts configuration dialog for Empathy instant messaging client</p>
 <h2>SYNOPSIS</h2>
 <p> empathy-accounts [<i>options</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cabsf(3)"
 name: "cabsf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cabsf/"
 description: "cabs, cabsf, cabsl – absolute value of a complex number"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cabs, cabsf, cabsl &#8211; absolute value of a complex number </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "acl_set_file(3)"
 name: "acl_set_file"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-acl_set_file/"
 description: "acl_set_file – set an ACL by filename"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>acl_set_file</code> &#8211; set an ACL by filename </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>

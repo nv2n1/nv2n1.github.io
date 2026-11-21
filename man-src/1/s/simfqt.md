@@ -1,4 +1,5 @@
 ---
+
 title: "simfqt(1)"
 name: "simfqt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-simfqt/"
 description: "simfqt –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> simfqt &#8211; </p>
 <pre>
   Command-line interpreter for the C++ Simulated Fare Quote System Library

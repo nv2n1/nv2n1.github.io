@@ -1,4 +1,5 @@
 ---
+
 title: "unsf(1)"
 name: "unsf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-unsf/"
 description: "unsf – break up SoundFont .sf2 files into GUS-type instrument patches."
 ---
 
-<h2>NAME</h2>
 <p> unsf &#8211; break up SoundFont .sf2 files into GUS-type instrument patches. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>unsf</code> [<i>-v|-s|-m|-d|-n|-V</i>] [<i>-M &lt;bank&gt;:&lt;instrument&gt;=&lt;layer&gt;</i>] [<i>-D &lt;bank&gt;:&lt;instrument&gt;=&lt;layer&gt;</i>] <code>soundfont-file</code> </p>

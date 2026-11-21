@@ -1,4 +1,5 @@
 ---
+
 title: "rootn(1)"
 name: "rootn"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rootn/"
 description: "rootn.exe – ROOT interpretor memory managed backend"
 ---
 
-<h2 class="name">NAME</h2>
 <p> rootn.exe &#8211; ROOT interpretor memory managed backend </p>
 <h2>DESCRIPTION</h2>
 <p> This executable is linked with <code>libNew</code>, unlike <i>root.exe</i>, which makes it appropiate for if one wants to use memory mapped file, <code>TMapFile</code>, and so on. In all other aspects, it&#8217;s the same as the <i><a href="/docs/linux/man/1-root/">root</a></i>(1) executable.</p>

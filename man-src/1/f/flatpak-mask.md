@@ -1,4 +1,5 @@
 ---
+
 title: "flatpak-mask(1)"
 name: "flatpak-mask"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flatpak-mask/"
 description: "flatpak-mask – Mask out updates and automatic installation"
 ---
 
-<h2 class="name">NAME</h2>
 <p> flatpak-mask &#8211; Mask out updates and automatic installation </p>
 <h2>SYNOPSIS</h2>
 <dl>

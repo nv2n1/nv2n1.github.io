@@ -1,4 +1,5 @@
 ---
+
 title: "hugs(1)"
 name: "hugs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hugs/"
 description: "hugs, runhugs, ffihugs – Hugs 98, functional programming system"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hugs, runhugs, ffihugs &#8211; Hugs 98, functional programming system </p>
 <h2>SYNOPSIS</h2>
 <p> <code>hugs</code> [ <i>options</i> ] [ <i>modules</i> ]<br />

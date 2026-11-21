@@ -1,4 +1,5 @@
 ---
+
 title: "fstrcmp(1)"
 name: "fstrcmp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fstrcmp/"
 description: "fstrcmp – fuzzy comparison of strings"
 ---
 
-<h2>NAME</h2>
 <p> fstrcmp &#8211; fuzzy comparison of strings</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fstrcmp</code> [ <code>-p</code> ] <i>first-string</i> <i>second-string</i> </p>

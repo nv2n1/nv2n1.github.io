@@ -1,4 +1,5 @@
 ---
+
 title: "msp430-gcc(1)"
 name: "msp430-gcc"
 section: "1"
@@ -6,7 +7,7 @@ letter: "m"
 url: "/docs/linux/man/1-msp430-gcc/"
 description: "gcc – GNU project C and C++ compiler"
 ---
-<h2 class="name">NAME</h2>
+
 <p> gcc - <font SIZE="-1">GNU</font> project C and C<font SIZE="-2">++</font> compiler </p>
 <h2>SYNOPSIS</h2>
 <p> gcc [<code>-c</code>|<code>-S</code>|<code>-E</code>] [<code>-std=</code><i>standard</i>] <br />

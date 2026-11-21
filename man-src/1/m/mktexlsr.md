@@ -1,4 +1,5 @@
 ---
+
 title: "mktexlsr(1)"
 name: "mktexlsr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mktexlsr/"
 description: "mktexlsr – create ls-R databases"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mktexlsr &#8211; create ls-R databases </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mktexlsr</code> [<i>directories</i>]</p>

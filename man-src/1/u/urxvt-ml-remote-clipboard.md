@@ -1,4 +1,5 @@
 ---
+
 title: "urxvt-ml-remote-clipboard(1)"
 name: "urxvt-ml-remote-clipboard"
 section: "1"
@@ -6,10 +7,7 @@ letter: "u"
 url: "/docs/linux/man/1-urxvt-ml-remote-clipboard/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- remote-clipboard - manage a shared and possibly remote clipboard 
+remote-clipboard - manage a shared and possibly remote clipboard 
 
 <h2>DESCRIPTION</h2>
 

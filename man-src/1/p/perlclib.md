@@ -1,4 +1,5 @@
 ---
+
 title: "perlclib(1)"
 name: "perlclib"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-perlclib/"
 description: "perlclib – Internal replacements for standard C library functions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> perlclib &#8211; Internal replacements for standard C library functions </p>
 <h2>DESCRIPTION</h2>
 <p> One thing Perl porters should note is that <i>perl</i> doesn&#8217;t tend to use that much of the C standard library internally; you&#8217;ll see very little use of, for example, the <i>ctype.h</i> functions in there. This is because Perl tends to reimplement or abstract standard library functions, so that we know exactly how they&#8217;re going to operate. </p>

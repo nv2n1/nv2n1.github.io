@@ -1,4 +1,5 @@
 ---
+
 title: "aa_drivers(3)"
 name: "aa_drivers"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_drivers/"
 description: "aa_drivers – NULL-terminated array of output drivers available in AA-lib."
 ---
 
-<h2>NAME</h2>
 <p> aa_drivers &#8211; NULL-terminated array of output drivers available in AA-lib.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

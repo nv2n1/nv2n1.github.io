@@ -1,4 +1,5 @@
 ---
+
 title: "dcmdjpeg(1)"
 name: "dcmdjpeg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dcmdjpeg/"
 description: "dcmdjpeg – Decode JPEG-compressed DICOM file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dcmdjpeg &#8211; Decode JPEG-compressed DICOM file </p>
 <h2>SYNOPSIS</h2>
 <pre>

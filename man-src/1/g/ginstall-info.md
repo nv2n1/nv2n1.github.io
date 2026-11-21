@@ -1,4 +1,5 @@
 ---
+
 title: "ginstall-info(1)"
 name: "ginstall-info"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ginstall-info/"
 description: "install-info – update info/dir entries"
 ---
 
-<h2 class="name">NAME</h2>
 <p> install-info &#8211; update info/dir entries </p>
 <h2>SYNOPSIS</h2>
 <p> <code>install-info</code> [<i>,OPTION/</i>]&#8230; [<i>,INFO-FILE /</i>[<i>,DIR-FILE/</i>]]</p>

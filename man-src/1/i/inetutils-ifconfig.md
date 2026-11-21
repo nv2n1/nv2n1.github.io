@@ -1,4 +1,5 @@
 ---
+
 title: "inetutils-ifconfig(1)"
 name: "inetutils-ifconfig"
 section: "1"
@@ -8,7 +9,7 @@ description: "ifconfig – configure network interfaces"
 ---
 
 <p>GNU Network Utilities</p>
-<h2 class="name">NAME</h2>
+
 <p> <code>ifconfig</code> &#8211; configure network interfaces </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ifconfig</code> [<i>option &#8230;</i> ] <i>name</i> [<i>addr</i> ] [<code>broadcast </code><i>brdaddr</i> ] [<code>{ pointopoint | dstaddr } </code><i>dstaddr</i> ] [<code>netmask </code><i>mask</i> ] [<code>{ ether | hwaddr | lladdr } </code><i>macaddr</i> ] [<code>metric </code><i>n</i> ] [<code>mtu </code><i>n</i> ] [<code>txqueuelen </code><i>n</i> ] [<code>up | down</code> ] [<i>flags</i> ]</p>

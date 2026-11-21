@@ -1,4 +1,5 @@
 ---
+
 title: "ccache-swig(1)"
 name: "ccache-swig"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ccache-swig/"
 description: "ccache-swig – a fast compiler cache"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ccache-swig &#8211; a fast compiler cache</p>
 <h2>SYNOPSIS</h2>
 <p> ccache-swig [OPTION] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "notepad(1)"
 name: "notepad"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-notepad/"
 description: "notepad – Wine text editor"
 ---
 
-<h2>NAME</h2>
 <p> notepad &#8211; Wine text editor</p>
 <h2>SYNOPSIS</h2>
 <p> <code>notepad</code> [<i>text file</i>]</p>

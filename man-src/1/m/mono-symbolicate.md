@@ -1,4 +1,5 @@
 ---
+
 title: "mono-symbolicate(1)"
 name: "mono-symbolicate"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mono-symbolicate/"
 description: "mono-symbolicate – Mono Symbolicate Tool"
 ---
 
-<h2>NAME</h2>
 <p> mono-symbolicate &#8211; Mono Symbolicate Tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mono-symbolicate exefile stacktracesfile [directories&#8230;]</code></p>

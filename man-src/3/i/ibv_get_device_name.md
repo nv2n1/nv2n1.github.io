@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_get_device_name(3)"
 name: "ibv_get_device_name"
 section: "3"
@@ -6,12 +7,7 @@ letter: "i"
 url: "/docs/linux/man/3-ibv_get_device_name/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- ibv_get_device_name - get an RDMA device's name 
+ibv_get_device_name - get an RDMA device's name 
 
 <h2>SYNOPSIS</h2>
 

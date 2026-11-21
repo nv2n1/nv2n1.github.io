@@ -1,4 +1,5 @@
 ---
+
 title: "urxvt-ml-selection(1)"
 name: "urxvt-ml-selection"
 section: "1"
@@ -6,10 +7,7 @@ letter: "u"
 url: "/docs/linux/man/1-urxvt-ml-selection/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- selection - more intelligent selection (enabled by default) 
+selection - more intelligent selection (enabled by default) 
 
 <h2>DESCRIPTION</h2>
 

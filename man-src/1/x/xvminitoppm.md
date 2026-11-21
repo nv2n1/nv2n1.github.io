@@ -1,4 +1,5 @@
 ---
+
 title: "xvminitoppm(1)"
 name: "xvminitoppm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xvminitoppm/"
 description: "xvminitoppm – convert a XV \"thumbnail\" picture to PPM"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xvminitoppm &#8211; convert a XV &quot;thumbnail&quot; picture to PPM </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xvminitoppm</code> [<i>xvminipic</i>]</p>

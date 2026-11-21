@@ -1,4 +1,5 @@
 ---
+
 title: "bacula-bgnome-console(1)"
 name: "bacula-bgnome-console"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bacula-bgnome-console/"
 description: "bgnome-console – Bacula’s management Console, GUI version."
 ---
 
-<h2 class="name">NAME</h2>
 <p>&nbsp;<wbr>bgnome-console &#8211; Bacula&#8217;s management Console, GUI version. </p>
 <h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>bgnome-console</code> command, the Gnome GUI version of the Bacula administration console. </p>

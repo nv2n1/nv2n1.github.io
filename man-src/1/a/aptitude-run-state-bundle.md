@@ -1,4 +1,5 @@
 ---
+
 title: "aptitude-run-state-bundle(1)"
 name: "aptitude-run-state-bundle"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-aptitude-run-state-bundle/"
 description: "aptitude-run-state-bundle – unpack an aptitude state bundle and invoke aptitude on it"
 ---
 
-<h2 class="name">NAME</h2>
 <p> aptitude-run-state-bundle &#8211; unpack an aptitude state bundle and invoke aptitude on it </p>
 <h2>SYNOPSIS</h2>
 <dl>

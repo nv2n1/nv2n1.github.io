@@ -1,4 +1,5 @@
 ---
+
 title: "salt-cloud(1)"
 name: "salt-cloud"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-salt-cloud/"
 description: "salt-cloud – Salt Cloud Command"
 ---
 
-<h2>NAME</h2>
 <p> salt-cloud &#8211; Salt Cloud Command </p>
 <p> Provision virtual machines in the cloud with Salt</p>
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "arm_sync_file_range(2)"
 name: "arm_sync_file_range"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-arm_sync_file_range/"
 description: "sync_file_range – sync a file segment with disk"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sync_file_range &#8211; sync a file segment with disk </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

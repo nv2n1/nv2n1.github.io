@@ -1,4 +1,5 @@
 ---
+
 title: "grok-manifest(1)"
 name: "grok-manifest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grok-manifest/"
 description: "GROK-MANIFEST – Create manifest for use with grokmirror"
 ---
 
-<h2>NAME</h2>
 <p> GROK-MANIFEST &#8211; Create manifest for use with grokmirror</p>
 <h2>SYNOPSIS</h2>
 <p> grok-manifest [opts] -m manifest.js[.gz] -t /path [/path/to/bare.git]</p>

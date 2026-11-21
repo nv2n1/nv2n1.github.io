@@ -1,4 +1,5 @@
 ---
+
 title: "euca-create-nat-gateway(1)"
 name: "euca-create-nat-gateway"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-create-nat-gateway/"
 description: "euca-create-nat-gateway – Create a new VPC NAT gateway"
 ---
 
-<h2>NAME</h2>
 <p> euca-create-nat-gateway &#8211; Create a new VPC NAT gateway</p>
 <h2>SYNOPSIS</h2>
 <p> euca-create-nat-gateway <code>-s</code> SUBNET <code>-a</code> ALLOC [&#8211;client-token TOKEN]</p>

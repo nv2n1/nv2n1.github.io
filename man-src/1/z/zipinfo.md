@@ -1,4 +1,5 @@
 ---
+
 title: "zipinfo(1)"
 name: "zipinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-zipinfo/"
 description: "zipinfo – list detailed information about a ZIP archive"
 ---
 
-<h2 class="name">NAME</h2>
 <p> zipinfo &#8211; list detailed information about a ZIP archive </p>
 <h2>SYNOPSIS</h2>
 <p> <code>zipinfo</code> [<code>-12smlvhMtTz</code>] <i>file</i>[<i>.zip</i>] [<i>file(s)</i>&nbsp;&#8230;] [<code>-x</code>&nbsp;<i>xfile(s)</i>&nbsp;&#8230;] </p>

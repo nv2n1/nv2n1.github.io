@@ -1,4 +1,5 @@
 ---
+
 title: "glitz(3)"
 name: "glitz"
 section: "3"
@@ -6,10 +7,7 @@ letter: "g"
 url: "/docs/linux/man/3-glitz/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- GLITZ - OpenGL image compositing library
+GLITZ - OpenGL image compositing library
 
 <h2>SYNOPSIS</h2>
 

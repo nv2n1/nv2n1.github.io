@@ -1,4 +1,5 @@
 ---
+
 title: "grdredpol(1)"
 name: "grdredpol"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grdredpol/"
 description: "grdredpol – Compute the Continuous Reduction To the Pole, AKA differential RTP."
 ---
 
-<h2>NAME</h2>
 <p> grdredpol &#8211; Compute the Continuous Reduction To the Pole, AKA differential RTP.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grdredpol</code> <i>anom_grd</i> <i>rtp_grd</i> [<i>dec/dip</i>] [ <i>dec_grd/dipgrd</i>] [ <i>&lt;m/n&gt;</i>] [ <i>m|r</i>] [ ] [ <i>win_width</i>] [ [<i>level</i>] ] [ <i>year</i> ] [ <i>filtergrd</i> ] [ [<i>level</i>] ] [ <code>-n</code><i>&lt;flags&gt;</i> ] </p>

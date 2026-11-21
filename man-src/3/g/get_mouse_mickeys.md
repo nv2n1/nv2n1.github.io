@@ -1,4 +1,5 @@
 ---
+
 title: "get_mouse_mickeys(3)"
 name: "get_mouse_mickeys"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_mouse_mickeys/"
 description: "get_mouse_mickeys – How far the mouse has moved since the last call to this function. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> get_mouse_mickeys &#8211; How far the mouse has moved since the last call to this function. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

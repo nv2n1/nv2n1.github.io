@@ -1,4 +1,5 @@
 ---
+
 title: "clufter-ccs2pcscmd-needle(1)"
 name: "clufter-ccs2pcscmd-needle"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-clufter-ccs2pcscmd-needle/"
 description: "clufter – ccs2pcscmd-needle"
 ---
 
-<h2>NAME</h2>
 <p> clufter &#8211; ccs2pcscmd-needle</p>
 <h2>SYNOPSIS</h2>
 <p> <code>clufter</code> [<i>&lt;global option&gt; </i>&#8230;] <i>ccs2pcscmd-needle </i>[<i>&lt;cmd option </i>&#8230;<i>&gt;</i>]</p>

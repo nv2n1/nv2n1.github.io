@@ -1,4 +1,5 @@
 ---
+
 title: "evince(1)"
 name: "evince"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-evince/"
 description: "evince – GNOME document viewer"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>evince</code> &#8211; GNOME document viewer </p>
 <p> The Evince Document Viewer application for the GNOME desktop environment</p>
 <h2>SYNTAX</h2>

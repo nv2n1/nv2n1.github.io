@@ -1,4 +1,5 @@
 ---
+
 title: "g_highway_d(1)"
 name: "g_highway_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_highway_d/"
 description: "highway – X-windows gadget for highway simulations"
 ---
 
-<h2>NAME</h2>
 <p> highway &#8211; X-windows gadget for highway simulations </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

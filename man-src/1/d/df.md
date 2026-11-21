@@ -1,4 +1,5 @@
 ---
+
 title: "df(1)"
 name: "df"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-df/"
 description: "df – report file system disk space usage"
 ---
 
-<h2 class="name">NAME</h2>
 <p> df &#8211; report file system disk space usage </p>
 <h2>SYNOPSIS</h2>
 <p> <code>df</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>

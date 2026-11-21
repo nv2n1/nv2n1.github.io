@@ -1,4 +1,5 @@
 ---
+
 title: "gdaladdo(1)"
 name: "gdaladdo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gdaladdo/"
 description: "gdaladdo – gdaladdo builds or rebuilds overview images"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gdaladdo &#8211; gdaladdo builds or rebuilds overview images </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

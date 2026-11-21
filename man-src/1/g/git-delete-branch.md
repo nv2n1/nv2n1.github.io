@@ -1,4 +1,5 @@
 ---
+
 title: "git-delete-branch(1)"
 name: "git-delete-branch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-delete-branch/"
 description: "git-delete-branch – Delete branches"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-delete-branch</code> &#8211; Delete branches</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-delete-branch</code> &lt;branchname&gt;</p>

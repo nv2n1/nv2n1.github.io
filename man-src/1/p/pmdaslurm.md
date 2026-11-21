@@ -1,4 +1,5 @@
 ---
+
 title: "pmdaslurm(1)"
 name: "pmdaslurm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdaslurm/"
 description: "pmdaslurm – SLURM statistics performance metrics domain agent (PMDA)"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdaslurm</code> &#8211; SLURM statistics performance metrics domain agent (PMDA)</p>
 <h2>DESCRIPTION</h2>
 <p> <code>pmdaslurm</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which exports metric values from the slurm perlapi interface to provide information on slurm jobs, nodes and users.</p>

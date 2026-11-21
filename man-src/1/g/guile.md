@@ -1,4 +1,5 @@
 ---
+
 title: "guile(1)"
 name: "guile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-guile/"
 description: "guile – The GNU Project Extension Language"
 ---
 
-<h2>NAME</h2>
 <p> guile &#8211; The GNU Project Extension Language</p>
 <h2>SYNOPSIS</h2>
 <p> <code>guile</code> [<code>-L</code> <i>DIRECTORY</i>] [<code>-l</code> <i>FILE</i>] [<code>-e</code> <i>FUNCTION</i>] [<code>\</code>] [<code>-c</code> <i>EXPR</i>] [<code>-s</code> <i>SCRIPT</i>] [<code>&#8212;</code>] [<i>SCRIPT</i> [<i>ARGs for SCRIPT</i>]] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "codepage(1)"
 name: "codepage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-codepage/"
 description: "codepage – extract a codepage from an MSDOS codepage file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> codepage &#8211; extract a codepage from an MSDOS codepage file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>codepage </code> [ <i>-c </i> | <i>-l</i> | <i>-L </i> | <i>-a </i> | <i>nnn</i> ] <i>file.cpi</i> </p>

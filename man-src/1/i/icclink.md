@@ -1,4 +1,5 @@
 ---
+
 title: "icclink(1)"
 name: "icclink"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-icclink/"
 description: "icclink – little cms device link generator."
 ---
 
-<h2>NAME</h2>
 <p> icclink &#8211; little cms device link generator.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>icclink</code> [<i>options</i>]<i> &lt;profiles&gt;</i></p>

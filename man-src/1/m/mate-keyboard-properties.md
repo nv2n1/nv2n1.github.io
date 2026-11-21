@@ -1,4 +1,5 @@
 ---
+
 title: "mate-keyboard-properties(1)"
 name: "mate-keyboard-properties"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mate-keyboard-properties/"
 description: "mate-keyboard-properties – manage keyboard behaviour in MATE"
 ---
 
-<h2>NAME</h2>
 <p> mate-keyboard-properties &#8211; manage keyboard behaviour in MATE</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mate-keyboard-properties</code> [<i>OPTIONS&#8230;</i>]</p>

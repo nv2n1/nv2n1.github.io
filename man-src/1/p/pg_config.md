@@ -1,4 +1,5 @@
 ---
+
 title: "pg_config(1)"
 name: "pg_config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pg_config/"
 description: "pg_config – retrieve information about the installed version of PostgreSQL"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pg_config &#8211; retrieve information about the installed version of PostgreSQL </p>
 <h2>SYNOPSIS</h2>
 <dl>

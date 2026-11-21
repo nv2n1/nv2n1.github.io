@@ -1,4 +1,5 @@
 ---
+
 title: "xmgrace(1)"
 name: "xmgrace"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xmgrace/"
 description: "grace – command line interface xmgrace – full-featured GUI mode gracebat – batch mode – print and exit"
 ---
 
-<h2 class="name">NAME</h2>
 <p> grace &#8211; command line interface<br />
  xmgrace &#8211; full-featured GUI mode<br />
  gracebat &#8211; batch mode &#8211; print and exit</p>

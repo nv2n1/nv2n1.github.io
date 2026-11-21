@@ -1,4 +1,5 @@
 ---
+
 title: "h5diff(1)"
 name: "h5diff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-h5diff/"
 description: "h5diff – Compares two HDF5 files and reports the differences."
 ---
 
-<h2>NAME</h2>
 <p> h5diff &#8211; Compares two HDF5 files and reports the differences.</p>
 <h2>SYNOPSIS</h2>
 <p> h5diff file1 file2 [OPTIONS] [object1 [object2 ] ]</p>

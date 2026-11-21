@@ -1,4 +1,5 @@
 ---
+
 title: "grdmask(1)"
 name: "grdmask"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grdmask/"
 description: "grdmask – Create mask grid from polygons or point coverage"
 ---
 
-<h2>NAME</h2>
 <p> grdmask &#8211; Create mask grid from polygons or point coverage</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grdmask</code> <i>pathfiles</i> <i>mask_grd_file</i>] <i>increment</i> <i>region</i> [ [<code>m</code>|<code>p</code>|<code>x</code>|<code>y</code>] ] [ [<code>z</code>|<code>Z</code>|<code>p</code>|<code>P</code>]<i>values</i> ] [ <i>search_radius</i>[<i>unit</i>] ] [ [<i>level</i>] ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-r</code> ] [ <code>-x</code>[[-]<i>n</i>] ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>

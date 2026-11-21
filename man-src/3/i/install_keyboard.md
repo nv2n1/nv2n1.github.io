@@ -1,4 +1,5 @@
 ---
+
 title: "install_keyboard(3)"
 name: "install_keyboard"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-install_keyboard/"
 description: "install_keyboard – Installs the Allegro keyboard interrupt handler."
 ---
 
-<h2>NAME</h2>
 <p> install_keyboard &#8211; Installs the Allegro keyboard interrupt handler.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

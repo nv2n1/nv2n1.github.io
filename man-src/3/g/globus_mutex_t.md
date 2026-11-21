@@ -1,4 +1,5 @@
 ---
+
 title: "globus_mutex_t(3)"
 name: "globus_mutex_t"
 section: "3"
@@ -6,10 +7,7 @@ letter: "g"
 url: "/docs/linux/man/3-globus_mutex_t/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- globus_mutex_t - 
+globus_mutex_t - 
 
  Mutex.
 

@@ -1,4 +1,5 @@
 ---
+
 title: "aspell(1)"
 name: "aspell"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-aspell/"
 description: "aspell – interactive spell checker"
 ---
 
-<h2 class="name">NAME</h2>
 <p> aspell &#8211; interactive spell checker </p>
 <h2>SYNOPSIS</h2>
 <p> <code>aspell</code> <i>[options] &lt;command&gt;</i> </p>

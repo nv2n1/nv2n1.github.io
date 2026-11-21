@@ -1,4 +1,5 @@
 ---
+
 title: "git-repo-config(1)"
 name: "git-repo-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-repo-config/"
 description: "git-repo-config – Get and set repository or global options"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-repo-config &#8211; Get and set repository or global options </p>
 <h2>SYNOPSIS</h2>
 <pre>

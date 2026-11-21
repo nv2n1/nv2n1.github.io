@@ -1,4 +1,5 @@
 ---
+
 title: "xgamma(1)"
 name: "xgamma"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xgamma/"
 description: "xgamma – Alter a monitor’s gamma correction through the X server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xgamma &#8211; Alter a monitor&#8217;s gamma correction through the X server </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xgamma</code> [-display <i>display</i>] [-screen <i>screen</i>] [-quiet] [-version] [-gamma f.f | [[-rgamma f.f] [-ggamma f.f] [-bgamma f.f]]]</p>

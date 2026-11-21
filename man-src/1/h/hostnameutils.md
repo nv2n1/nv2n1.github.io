@@ -1,4 +1,5 @@
 ---
+
 title: "hostnameutils(1)"
 name: "hostnameutils"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hostnameutils/"
 description: "gethostname, gethostbyname, gethostbyaddr, getservbyname – get local host information"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gethostname, gethostbyname, gethostbyaddr, getservbyname &#8211; get local host information</p>
 <h2>SYNTAX</h2>
 <p> <code>$SGE_ROOT/utilbin/$ARCH/gethostname&nbsp;</code>[<code>-help</code>|<code>-name</code>|<code>-aname</code>|<code>-all</code>] </p>

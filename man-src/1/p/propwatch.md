@@ -1,4 +1,5 @@
 ---
+
 title: "propwatch(1)"
 name: "propwatch"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-propwatch/"
 description: "propwatch – a tool to monitor X11 properties"
 ---
 
-<h2>NAME</h2>
 <p> propwatch &#8211; a tool to monitor X11 properties</p>
 <h2>SYNOPSIS</h2>
 <p> <code>propwatch [ options ] property-name &#8230;</code></p>

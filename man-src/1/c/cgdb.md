@@ -1,4 +1,5 @@
 ---
+
 title: "cgdb(1)"
 name: "cgdb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cgdb/"
 description: "CGDB – manual page for CGDB 0.6.8"
 ---
 
-<h2>NAME</h2>
 <p> CGDB &#8211; manual page for CGDB 0.6.8</p>
 <h2>DESCRIPTION</h2>
 <h3>CGDB Usage:</h3>

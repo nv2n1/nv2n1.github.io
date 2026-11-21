@@ -1,4 +1,5 @@
 ---
+
 title: "asn1_copy_node(3)"
 name: "asn1_copy_node"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-asn1_copy_node/"
 description: "asn1_copy_node – API function"
 ---
 
-<h2>NAME</h2>
 <p> asn1_copy_node &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>

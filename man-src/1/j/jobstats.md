@@ -1,4 +1,5 @@
 ---
+
 title: "jobstats(1)"
 name: "jobstats"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jobstats/"
 description: "jobstats – print historic job information or timeline view"
 ---
 
-<h2 class="name">NAME</h2>
 <p> jobstats &#8211; print historic job information or timeline view </p>
 <h2>SYNOPSIS</h2>
 <p> <code>jobstats</code> [<code>-html</code>]<code>&nbsp;</code>[<code>-timeline</code>]<code>&nbsp;</code>[<code>-ntw</code>]<code>&nbsp;</code>[<code>-usage</code>] [<code>-available_slots</code> <i>s</i>] [<code>-start_jid</code> <i>jid</i>] [<code>-end_jid</code> <i>jid</i>] [<code>-owner</code> <i>opattern</i>] [<code>-name</code> <i>npatterm</i>] [<code>table_width</code> <i>w</i>] [<code>-nw</code> <i>w</i>] [<code>-nojoblist</code>]<code>&nbsp;</code>[<code>-tsort</code> <i>method</i>] [<i>file</i>&#8230;]</p>

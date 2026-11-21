@@ -1,4 +1,5 @@
 ---
+
 title: "docker-service-rollback(1)"
 name: "docker-service-rollback"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-docker-service-rollback/"
 description: "docker-service-rollback – Revert changes to a service’s configuration"
 ---
 
-<h2 class="name">NAME</h2>
 <p> docker-service-rollback &#8211; Revert changes to a service&#8217;s configuration </p>
 <h2>SYNOPSIS</h2>
 <p> <code>docker service rollback [OPTIONS] SERVICE</code> </p>

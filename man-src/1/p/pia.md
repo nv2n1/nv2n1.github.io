@@ -1,4 +1,5 @@
 ---
+
 title: "pia(1)"
 name: "pia"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pia/"
 description: "pia – play media files"
 ---
 
-<h2>NAME</h2>
 <p> pia &#8211; play media files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pia [ options ] movie</code></p>

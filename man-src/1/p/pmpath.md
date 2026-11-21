@@ -1,4 +1,5 @@
 ---
+
 title: "pmpath(1)"
 name: "pmpath"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-pmpath/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- pmpath - show full path to a perl module 
+pmpath - show full path to a perl module 
 
 <h2>SYNOPSIS</h2>
 

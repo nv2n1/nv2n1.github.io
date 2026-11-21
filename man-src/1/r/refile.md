@@ -1,4 +1,5 @@
 ---
+
 title: "refile(1)"
 name: "refile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-refile/"
 description: "refile – file message in other folders"
 ---
 
-<h2 class="name">NAME</h2>
 <p> refile &#8211; file message in other folders </p>
 <h2>SYNOPSIS</h2>
 <dl>

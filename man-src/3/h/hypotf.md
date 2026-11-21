@@ -1,4 +1,5 @@
 ---
+
 title: "hypotf(3)"
 name: "hypotf"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-hypotf/"
 description: "hypot, hypotf, hypotl – Euclidean distance function"
 ---
 
-<h2 class="name">NAME</h2>
 <p> hypot, hypotf, hypotl &#8211; Euclidean distance function </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

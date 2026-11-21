@@ -1,4 +1,5 @@
 ---
+
 title: "gamt(1)"
 name: "gamt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gamt/"
 description: "gamt – Intel AMT serial-over-lan (sol) client."
 ---
 
-<h2>NAME</h2>
 <p> gamt &#8211; Intel AMT serial-over-lan (sol) client.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gamt [ options ] [ host ]</code></p>

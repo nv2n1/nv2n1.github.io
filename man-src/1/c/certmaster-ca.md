@@ -1,4 +1,5 @@
 ---
+
 title: "certmaster-ca(1)"
 name: "certmaster-ca"
 section: "1"
@@ -6,10 +7,7 @@ letter: "c"
 url: "/docs/linux/man/1-certmaster-ca/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- certmaster-ca -- signs certificate requests gathered by certmaster. 
+certmaster-ca -- signs certificate requests gathered by certmaster. 
 
 <h2>SYNOPSIS</h2>
 

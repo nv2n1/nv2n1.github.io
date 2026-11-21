@@ -1,4 +1,5 @@
 ---
+
 title: "git-cpan-import(1)"
 name: "git-cpan-import"
 section: "1"
@@ -6,10 +7,7 @@ letter: "g"
 url: "/docs/linux/man/1-git-cpan-import/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- git-cpan-import - Import a module into a git repository 
+git-cpan-import - Import a module into a git repository 
 
 <h2>SYNOPSIS</h2>
 

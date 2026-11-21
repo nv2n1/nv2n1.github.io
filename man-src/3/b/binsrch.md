@@ -1,4 +1,5 @@
 ---
+
 title: "binsrch(3)"
 name: "binsrch"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-binsrch/"
 description: "bin_search, copyfile, replace_line, insert_line – general purpose functions for performing a binary search"
 ---
 
-<h2>NAME</h2>
 <p> bin_search, copyfile, replace_line, insert_line &#8211; general purpose functions for performing a binary search</p>
 <h2>SYNOPSIS</h2>
 <p> <code>char *bin_search(char *key, FILE *fp);</code> </p>

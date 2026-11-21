@@ -1,4 +1,5 @@
 ---
+
 title: "dbmerge(1)"
 name: "dbmerge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dbmerge/"
 description: "dbmerge – merge all inputs in sorted order based on the the specified columns"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dbmerge &#8211; merge all inputs in sorted order based on the the specified columns </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

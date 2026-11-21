@@ -1,4 +1,5 @@
 ---
+
 title: "pmvers(1)"
 name: "pmvers"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-pmvers/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- pmvers - print out a module's version 
+pmvers - print out a module's version 
 
 <h2>DESCRIPTION</h2>
 

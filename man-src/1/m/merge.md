@@ -1,4 +1,5 @@
 ---
+
 title: "merge(1)"
 name: "merge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-merge/"
 description: "merge – three-way file merge"
 ---
 
-<h2>NAME</h2>
 <p> merge &#8211; three-way file merge</p>
 <h2>SYNOPSIS</h2>
 <p> <code>merge</code> [ <i>options</i> ] <i>file1 file2 file3</i></p>

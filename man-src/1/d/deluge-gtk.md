@@ -1,4 +1,5 @@
 ---
+
 title: "deluge-gtk(1)"
 name: "deluge-gtk"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-deluge-gtk/"
 description: "deluge-gtk – a bittorrent client gtk interface"
 ---
 
-<h2 class="name">NAME</h2>
 <p> deluge-gtk &#8211; a bittorrent client gtk interface</p>
 <h2>SYNOPSIS</h2>
 <p> <code>deluge-gtk [options]</code> [<i>torrent-file</i>] </p>

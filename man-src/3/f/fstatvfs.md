@@ -1,4 +1,5 @@
 ---
+
 title: "fstatvfs(3)"
 name: "fstatvfs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fstatvfs/"
 description: "statvfs, fstatvfs – get filesystem statistics"
 ---
 
-<h2 class="name">NAME</h2>
 <p> statvfs, fstatvfs &#8211; get filesystem statistics </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/statvfs.h&gt;</code> </p>

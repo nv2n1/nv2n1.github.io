@@ -1,4 +1,5 @@
 ---
+
 title: "mendex(1)"
 name: "mendex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mendex/"
 description: "mendex – Japanese index processor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mendex &#8211; Japanese index processor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mendex</code> [-ilqrcgfEJSU] [<code>-s</code><i> sty</i>] [<code>-d</code><i> dic</i>] [<code>-o</code><i> ind</i>] [<code>-t</code><i> log</i>] [<code>-p</code><i> no</i>] [<code>-I</code><i> enc</i>] [<code>&#8211;help</code>] [<code>&#8212;</code>] [<i> idx0 idx1 idx2 &#8230;</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "wine-stable(1)"
 name: "wine-stable"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wine-stable/"
 description: "wine – run Windows programs on Unix"
 ---
 
-<h2 class="name">NAME</h2>
 <p> wine &#8211; run Windows programs on Unix </p>
 <h2>SYNOPSIS</h2>
 <p> <code>wine</code> <i>program </i>[<i>arguments</i>]<br />

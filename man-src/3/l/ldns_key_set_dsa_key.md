@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_key_set_dsa_key(3)"
 name: "ldns_key_set_dsa_key"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_key_set_dsa_key/"
 description: "ldns_key_set_algorithm, ldns_key_set_rsa_key, ldns_key_set_dsa_key, ldns_key_set_hmac_key, ldns_key_set_origttl, ldns_key_set_inception, ldns_key_set_expiration, ldns_key_set_pubkey_owner, ldns_key..."
 ---
 
-<h2>NAME</h2>
 <p> ldns_key_set_algorithm, ldns_key_set_rsa_key, ldns_key_set_dsa_key, ldns_key_set_hmac_key, ldns_key_set_origttl, ldns_key_set_inception, ldns_key_set_expiration, ldns_key_set_pubkey_owner, ldns_key_set_keytag, ldns_key_set_flags, ldns_key_list_set_key_count </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

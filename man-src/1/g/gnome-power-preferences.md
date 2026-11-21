@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-power-preferences(1)"
 name: "gnome-power-preferences"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnome-power-preferences/"
 description: "gnome-power-preferences – gnome power preferences gui"
 ---
 
-<h2>NAME</h2>
 <p> gnome-power-preferences &#8211; gnome power preferences gui</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnome-power-preferences</code> [ <code>&#8211;verbose</code> ] [ <code>&#8211;help</code> ]</p>

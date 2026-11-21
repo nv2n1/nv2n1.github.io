@@ -1,4 +1,5 @@
 ---
+
 title: "bson_append_oid(3)"
 name: "bson_append_oid"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_append_oid/"
 description: "bson_append_oid() – The bson_append_oid() function shall append a new element to bson of type BSON_TYPE_OID. oid MUST be a pointer to a bson_oid_t."
 ---
 
-<h2>NAME</h2>
 <p> bson_append_oid() &#8211; The bson_append_oid() function shall append a new element to bson of type BSON_TYPE_OID. oid MUST be a pointer to a bson_oid_t.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

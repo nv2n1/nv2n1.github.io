@@ -1,4 +1,5 @@
 ---
+
 title: "ttf2tfm(1)"
 name: "ttf2tfm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ttf2tfm/"
 description: "ttf2tfm – build TeX metric files from a TrueType font"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ttf2tfm &#8211; build TeX metric files from a TrueType font </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ttf2tfm</code> <i>ttffile</i>[<code>.ttf</code>|<code>.ttc</code>] [<code>-c</code><i>&nbsp;caps-height-factor</i>] [<code>-e</code><i>&nbsp;extension-factor</i>] [<code>-E</code><i>&nbsp;encoding-id</i>] [<code>-f</code><i>&nbsp;font-index</i>] [<code>-l</code>] [<code>-L&nbsp;</code><i>ligature-file</i>[<i>.sfd</i>]] [<code>-n</code>] [<code>-N</code>] [<code>-O</code>] [<code>-p&nbsp;</code><i>inencfile</i>[<i>.enc</i>]] [<code>-P</code><i>&nbsp;platform-id</i>] [<code>-q</code>] [<code>-r</code><i>&nbsp;old-glyphname new-glyphname</i>] [<code>-R&nbsp;</code><i>replacement-file</i>[<i>.rpl</i>]] [<code>-s</code><i>&nbsp;slant-factor</i>] [<code>-t&nbsp;</code><i>outencfile</i>[<i>.enc</i>]] [<code>-T&nbsp;</code><i>inoutencfile</i>[<i>.enc</i>]] [<code>-u</code>] [<code>-v&nbsp;</code><i>vplfile</i>[<i>.vpl</i>]] [<code>-V&nbsp;</code><i>scvplfile</i>[<i>.vpl</i>]] [<code>-w</code>] [<code>-x</code>] [<code>-y</code><i>&nbsp;vertical-shift-factor</i>] [<i>tfmfile</i>[<i>.tfm</i>]]<br />

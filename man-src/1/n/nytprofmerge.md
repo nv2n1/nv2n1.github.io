@@ -1,4 +1,5 @@
 ---
+
 title: "nytprofmerge(1)"
 name: "nytprofmerge"
 section: "1"
@@ -6,10 +7,7 @@ letter: "n"
 url: "/docs/linux/man/1-nytprofmerge/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- nytprofmerge - Reads multiple NYTProf profiles and outputs a merged one 
+nytprofmerge - Reads multiple NYTProf profiles and outputs a merged one 
 
 <h2>SYNOPSIS</h2>
 

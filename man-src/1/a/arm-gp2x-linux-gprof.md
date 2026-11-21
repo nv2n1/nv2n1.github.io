@@ -1,4 +1,5 @@
 ---
+
 title: "arm-gp2x-linux-gprof(1)"
 name: "arm-gp2x-linux-gprof"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-arm-gp2x-linux-gprof/"
 description: "gprof – display call graph profile data"
 ---
 
-<h2>NAME</h2>
 <p> gprof &#8211; display call graph profile data</p>
 <h2>SYNOPSIS</h2>
 <p> gprof [ -[abcDhilLrsTvwxyz] ] [ -[ACeEfFJnNOpPqQZ][<i>name</i>] ]<br />

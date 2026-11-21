@@ -1,4 +1,5 @@
 ---
+
 title: "x86_64-linux-gnu-ranlib(1)"
 name: "x86_64-linux-gnu-ranlib"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-x86_64-linux-gnu-ranlib/"
 description: "ranlib – generate an index to an archive"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ranlib &#8211; generate an index to an archive </p>
 <h2>SYNOPSIS</h2>
 <p> ranlib [<code>&#8211;plugin</code> <i>name</i>] [<code>-DhHvVt</code>] <i>archive</i></p>

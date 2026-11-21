@@ -1,4 +1,5 @@
 ---
+
 title: "show-changed-rco(1)"
 name: "show-changed-rco"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-show-changed-rco/"
 description: "show-changed-rco – show changes in an RPM package"
 ---
 
-<h2>NAME</h2>
 <p> show-changed-rco &#8211; show changes in an RPM package</p>
 <h2>SYNOPSIS</h2>
 <p> <code>show-changed-rco</code> [options]</p>

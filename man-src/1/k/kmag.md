@@ -1,4 +1,5 @@
 ---
+
 title: "kmag(1)"
 name: "kmag"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kmag/"
 description: "kmag – Screen magnifier"
 ---
 
-<h2 class="name">NAME</h2>
 <p> kmag &#8211; Screen magnifier </p>
 <h2>SYNOPSIS</h2>
 <dl>

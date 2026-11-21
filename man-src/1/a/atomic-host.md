@@ -1,4 +1,5 @@
 ---
+
 title: "atomic-host(1)"
 name: "atomic-host"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-atomic-host/"
 description: "atomic-host – Manage Atomic Host Commands"
 ---
 
-<h2 class="name">NAME</h2>
 <p> atomic-host &#8211; Manage Atomic Host Commands </p>
 <h2>SYNOPSIS</h2>
 <p> <code>atomic host [OPTIONS] COMMAND</code> </p>

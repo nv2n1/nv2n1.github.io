@@ -1,4 +1,5 @@
 ---
+
 title: "grub2-fstest(1)"
 name: "grub2-fstest"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grub2-fstest/"
 description: "grub-fstest — Debug tool for GRUB’s filesystem driver."
 ---
 
-<h2>NAME</h2>
 <p> <code>grub-fstest</code> — Debug tool for GRUB&#8217;s filesystem driver. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grub-fstest</code> [-c | &#8211;diskcount=<i>NUM</i>] [-C | &#8211;crypto]</p>

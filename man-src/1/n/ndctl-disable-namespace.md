@@ -1,4 +1,5 @@
 ---
+
 title: "ndctl-disable-namespace(1)"
 name: "ndctl-disable-namespace"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ndctl-disable-namespace/"
 description: "ndctl-disable-namespace – disable the given namespace(s)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ndctl-disable-namespace &#8211; disable the given namespace(s) </p>
 <h2>SYNOPSIS</h2>
 <pre>

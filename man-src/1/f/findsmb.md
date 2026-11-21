@@ -1,4 +1,5 @@
 ---
+
 title: "findsmb(1)"
 name: "findsmb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-findsmb/"
 description: "findsmb – list info about machines that respond to SMB name queries on a subnet"
 ---
 
-<h2 class="name">NAME</h2>
 <p> findsmb &#8211; list info about machines that respond to SMB name queries on a subnet </p>
 <h2>SYNOPSIS</h2>
 <dl>

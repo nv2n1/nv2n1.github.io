@@ -1,4 +1,5 @@
 ---
+
 title: "nxproxy(1)"
 name: "nxproxy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nxproxy/"
 description: "nxproxy – NX Proxy Tool"
 ---
 
-<h2>NAME</h2>
 <p> nxproxy &#8211; NX Proxy Tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nxproxy</code> &lt;options&gt; </p>

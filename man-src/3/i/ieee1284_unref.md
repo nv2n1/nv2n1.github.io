@@ -1,4 +1,5 @@
 ---
+
 title: "ieee1284_unref(3)"
 name: "ieee1284_unref"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ieee1284_unref/"
 description: "ieee1284_ref, ieee1284_unref – modify a port’s reference count"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ieee1284_ref, ieee1284_unref &#8211; modify a port&#8217;s reference count </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

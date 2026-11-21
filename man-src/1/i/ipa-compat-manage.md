@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-compat-manage(1)"
 name: "ipa-compat-manage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-compat-manage/"
 description: "ipa-compat-manage – Enables or disables the schema compatibility plugin"
 ---
 
-<h2>NAME</h2>
 <p> ipa-compat-manage &#8211; Enables or disables the schema compatibility plugin</p>
 <h2>SYNOPSIS</h2>
 <p> ipa-compat-manage [options] &lt;enable|disable|status&gt;</p>

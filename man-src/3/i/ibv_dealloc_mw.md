@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_dealloc_mw(3)"
 name: "ibv_dealloc_mw"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ibv_dealloc_mw/"
 description: "ibv_alloc_mw, ibv_dealloc_mw – allocate or deallocate a memory window (MW)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ibv_alloc_mw, ibv_dealloc_mw &#8211; allocate or deallocate a memory window (MW) </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

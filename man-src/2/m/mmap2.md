@@ -1,4 +1,5 @@
 ---
+
 title: "mmap2(2)"
 name: "mmap2"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-mmap2/"
 description: "mmap2 – map files or devices into memory"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mmap2 &#8211; map files or devices into memory </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

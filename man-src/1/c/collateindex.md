@@ -1,4 +1,5 @@
 ---
+
 title: "collateindex(1)"
 name: "collateindex"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-collateindex/"
 description: "collateindex.pl – generate DocBook index files"
 ---
 
-<h2>NAME</h2>
 <p> collateindex.pl &#8211; generate DocBook index files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>collateindex.pl</code> [<code>-f</code>] [<code>-g</code>] [<code>-i</code> <i>id</i>] [<code>-I</code> <i>scope</i>] [<code>-N</code>]<br />

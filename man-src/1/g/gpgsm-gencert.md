@@ -1,4 +1,5 @@
 ---
+
 title: "gpgsm-gencert(1)"
 name: "gpgsm-gencert"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpgsm-gencert/"
 description: "gpgsm-gencert.sh – Generate an X.509 certificate request"
 ---
 
-<h2>NAME</h2>
 <p> <code>gpgsm-gencert.sh</code> &#8211; Generate an X.509 certificate request</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gpgsm-gencert.sh</code> </p>

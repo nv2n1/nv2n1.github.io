@@ -1,4 +1,5 @@
 ---
+
 title: "memcached_strerror(3)"
 name: "memcached_strerror"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-memcached_strerror/"
 description: "memcached_strerror – libmemcached Documentation"
 ---
 
-<h2>NAME</h2>
 <p> memcached_strerror &#8211; libmemcached Documentation</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>

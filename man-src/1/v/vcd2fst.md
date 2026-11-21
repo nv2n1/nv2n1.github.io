@@ -1,4 +1,5 @@
 ---
+
 title: "vcd2fst(1)"
 name: "vcd2fst"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-vcd2fst/"
 description: "vcd2fst – Converts VCD files to FST files"
 ---
 
-<h2>NAME</h2>
 <p> vcd2fst &#8211; Converts VCD files to FST files</p>
 <h2>SYNTAX</h2>
 <p> vcd2fst [<i>option</i>]&#8230; [<i>VCDFILE</i>] [<i>FSTFILE</i>]</p>

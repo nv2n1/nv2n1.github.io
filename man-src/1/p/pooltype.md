@@ -1,4 +1,5 @@
 ---
+
 title: "pooltype(1)"
 name: "pooltype"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pooltype/"
 description: "pooltype – display a WEB pool file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pooltype &#8211; display a WEB pool file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pooltype</code> <i>pool_file_name</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "otangle(1)"
 name: "otangle"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-otangle/"
 description: "tangle – translate WEB to Pascal"
 ---
 
-<h2 class="name">NAME</h2>
 <p> tangle &#8211; translate WEB to Pascal </p>
 <h2>SYNOPSIS</h2>
 <p> <code>tangle</code> [<i>options</i>] <i>webfile</i>[<i></i><code>.web</code>] [<i>changefile</i>[<i></i><code>.ch</code>]]</p>

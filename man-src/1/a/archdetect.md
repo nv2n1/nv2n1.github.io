@@ -1,4 +1,5 @@
 ---
+
 title: "archdetect(1)"
 name: "archdetect"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-archdetect/"
 description: "archdetect – detect hardware architecture"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>archdetect</code> &#8211; detect hardware architecture </p>
 <h2>SYNOPSIS</h2>
 <p> [-<code>g</code> ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "git-line-summary(1)"
 name: "git-line-summary"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-line-summary/"
 description: "git-line-summary – Show repository summary by line"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-line-summary</code> &#8211; Show repository summary by line</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-line-summary</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "x2sys_datalist(1)"
 name: "x2sys_datalist"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-x2sys_datalist/"
 description: "x2sys_datalist – Extract content of track data files"
 ---
 
-<h2>NAME</h2>
 <p> x2sys_datalist &#8211; Extract content of track data files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>x2sys_datalist</code> <i>track(s)</i> <code>-T</code><i>TAG</i> [ ] [ ] [ <i>name1</i>,<i>name2</i>,&#8230;) ] [ [<i>list</i>] ] [ [<i>corrtable</i>] ] [ <i>region</i> ] [ ] [ [ [<i>level</i>] ] [ <code>-bo</code><i>&lt;binary&gt;</i> ] [ <code>-do</code><i>&lt;nodata&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] </p>

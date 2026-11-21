@@ -1,4 +1,5 @@
 ---
+
 title: "codesnippets(1)"
 name: "codesnippets"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-codesnippets/"
 description: "codesnippets – Stand-alone app for the codesnippets Code::Blocks plugin."
 ---
 
-<h2>NAME</h2>
 <p> codesnippets &#8211; Stand-alone app for the codesnippets Code::Blocks plugin.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>codesnippets</code></p>

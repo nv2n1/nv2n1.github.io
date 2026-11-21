@@ -1,4 +1,5 @@
 ---
+
 title: "mgd77manage(1)"
 name: "mgd77manage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mgd77manage/"
 description: "mgd77manage – Manage the content of MGD77+ files"
 ---
 
-<h2>NAME</h2>
 <p> mgd77manage &#8211; Manage the content of MGD77+ files</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mgd77manage</code> <i>NGDC-ids</i> [ [<code>+</code>]<code>a</code>|<code>c</code>|<code>d</code>|<code>D</code>|<code>e</code>|<code>E</code>|<code>g</code>|<code>i</code>|<code>n</code>|<code>t</code>|<code>T</code><i>fileinfo</i> ] [ <code>f</code>|<code>g</code>|<code>e</code> ] [ <i>abbrev1</i>,<i>abbrev2</i>,&#8230;) ] [ <i>empty</i> ] [ ] [ <i>abbrev</i>/<i>name</i>/<i>unit</i>/<code>t</code>/<i>scale</i>/<i>offset</i>/<i>comment</i> ] [ <i>unit</i> ] [ <i>region</i> ] [ [<i>level</i>] ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-n</code><i>&lt;flags&gt;</i> ] </p>

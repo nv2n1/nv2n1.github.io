@@ -1,4 +1,5 @@
 ---
+
 title: "g_lie_d(1)"
 name: "g_lie_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_lie_d/"
 description: "g_lie – free energy estimate from linear combinations"
 ---
 
-<h2>NAME</h2>
 <p> g_lie &#8211; free energy estimate from linear combinations </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

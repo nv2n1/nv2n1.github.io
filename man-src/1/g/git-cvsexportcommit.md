@@ -1,4 +1,5 @@
 ---
+
 title: "git-cvsexportcommit(1)"
 name: "git-cvsexportcommit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-cvsexportcommit/"
 description: "git-cvsexportcommit – Export a single commit to a CVS checkout"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-cvsexportcommit &#8211; Export a single commit to a CVS checkout </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

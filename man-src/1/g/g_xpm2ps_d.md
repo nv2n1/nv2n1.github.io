@@ -1,4 +1,5 @@
 ---
+
 title: "g_xpm2ps_d(1)"
 name: "g_xpm2ps_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_xpm2ps_d/"
 description: "xpm2ps – convert XPM (XPixelMap) file to postscript"
 ---
 
-<h2>NAME</h2>
 <p> xpm2ps &#8211; convert XPM (XPixelMap) file to postscript </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "sg(1)"
 name: "sg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sg/"
 description: "sg – execute command as different group ID"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sg &#8211; execute command as different group ID </p>
 <h2>SYNOPSIS</h2>
 <dl>

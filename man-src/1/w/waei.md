@@ -1,4 +1,5 @@
 ---
+
 title: "waei(1)"
 name: "waei"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-waei/"
 description: "waei – Japanese-English dictionary"
 ---
 
-<h2 class="name">NAME</h2>
 <p> waei &#8211; Japanese-English dictionary </p>
 <h2>SYNOPSIS</h2>
 <p> <code>waei</code> [<i>options</i>]<i> pattern</i>&#8230;</p>

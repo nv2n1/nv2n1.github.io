@@ -1,4 +1,5 @@
 ---
+
 title: "aa_recommendhidisplay(3)"
 name: "aa_recommendhidisplay"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_recommendhidisplay/"
 description: "aa_recommendhidisplay – insert the given driver on beggining of the list of recommended display drivers."
 ---
 
-<h2>NAME</h2>
 <p> aa_recommendhidisplay &#8211; insert the given driver on beggining of the list of recommended display drivers.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

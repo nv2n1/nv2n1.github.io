@@ -1,4 +1,5 @@
 ---
+
 title: "iv_work(3)"
 name: "iv_work"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-iv_work/"
 description: "IV_WORK_POOL_INIT, iv_work_pool_create, iv_work_pool_put, IV_WORK_ITEM_INIT, iv_work_pool_submit_work – ivykis worker thread management"
 ---
 
-<h2>NAME</h2>
 <p> IV_WORK_POOL_INIT, iv_work_pool_create, iv_work_pool_put, IV_WORK_ITEM_INIT, iv_work_pool_submit_work &#8211; ivykis worker thread management</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;iv_work.h&gt;</code> </p>

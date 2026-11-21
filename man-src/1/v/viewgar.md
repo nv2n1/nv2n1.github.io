@@ -1,4 +1,5 @@
 ---
+
 title: "viewgar(1)"
 name: "viewgar"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-viewgar/"
 description: "viewgar – GiNaC archive file viewer"
 ---
 
-<h2>NAME</h2>
 <p> viewgar &#8211; GiNaC archive file viewer</p>
 <h2>SYNPOSIS</h2>
 <p> <code>viewgar</code> [-d] [<i>file&#8230;</i>]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ffmpegthumbnailer(1)"
 name: "ffmpegthumbnailer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ffmpegthumbnailer/"
 description: "ffmpegthumbnailer – fast and lightweight video thumbnailer"
 ---
 
-<h2>NAME</h2>
 <p> ffmpegthumbnailer &#8211; fast and lightweight video thumbnailer</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ffmpegthumbnailer</code> [<i>options</i>]</p>

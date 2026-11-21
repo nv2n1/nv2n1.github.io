@@ -1,4 +1,5 @@
 ---
+
 title: "gdalcompare(1)"
 name: "gdalcompare"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gdalcompare/"
 description: "gdalcompare – gdalcompare.py compare two images"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gdalcompare &#8211; gdalcompare.py compare two images </p>
 <h2>SYNOPSIS</h2>
 <pre>

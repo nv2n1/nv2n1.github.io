@@ -1,4 +1,5 @@
 ---
+
 title: "lg_intro(1)"
 name: "lg_intro"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lg_intro/"
 description: "lg_intro – introduction to the looking glass"
 ---
 
-<h2>NAME</h2>
 <p> lg_intro &#8211; introduction to the looking glass</p>
 <h2>INTRODUCTION</h2>
 <p> The <code>looking glass</code> offers a web based interface to routers to users without their needing permission to login to the router. This may be a perfect interface for customer support or less savvy folks, and many ISPs have given public access to such an interface as a &quot;route server.&quot;</p>

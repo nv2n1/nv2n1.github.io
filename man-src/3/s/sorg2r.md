@@ -1,4 +1,5 @@
 ---
+
 title: "sorg2r(3)"
 name: "sorg2r"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-sorg2r/"
 description: "sorg2r.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sorg2r.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

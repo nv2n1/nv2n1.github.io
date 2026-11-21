@@ -1,4 +1,5 @@
 ---
+
 title: "dh_bash-completion(1)"
 name: "dh_bash-completion"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_bash-completion/"
 description: "dh_bash-completion – install bash completions for package"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_bash-completion &#8211; install bash completions for package </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_bash-completion</code> [<i>debhelper options</i>]</p>

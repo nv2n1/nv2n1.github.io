@@ -1,4 +1,5 @@
 ---
+
 title: "gnutls_pk_get_name(3)"
 name: "gnutls_pk_get_name"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gnutls_pk_get_name/"
 description: "gnutls_pk_get_name – API function"
 ---
 
-<h2>NAME</h2>
 <p> gnutls_pk_get_name &#8211; API function</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>

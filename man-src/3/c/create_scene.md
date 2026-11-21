@@ -1,4 +1,5 @@
 ---
+
 title: "create_scene(3)"
 name: "create_scene"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-create_scene/"
 description: "create_scene – Allocates memory for a 3d scene. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> create_scene &#8211; Allocates memory for a 3d scene. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

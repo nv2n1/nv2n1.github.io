@@ -1,4 +1,5 @@
 ---
+
 title: "cdk_binding(3)"
 name: "cdk_binding"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cdk_binding/"
 description: "cdk_binding – Curses Development Kit Character Binding Capabilities."
 ---
 
-<h2>NAME</h2>
 <p> cdk_binding &#8211; <code>Curses Development Kit</code> Character Binding Capabilities. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>

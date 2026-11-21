@@ -1,4 +1,5 @@
 ---
+
 title: "ipq_set_verdict(3)"
 name: "ipq_set_verdict"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ipq_set_verdict/"
 description: "ipq_set_verdict — issue verdict and optionally modified packet to kernel"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ipq_set_verdict &#8212; issue verdict and optionally modified packet to kernel </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/linux/netfilter.h">linux/netfilter.h</a>&gt;</code><br />

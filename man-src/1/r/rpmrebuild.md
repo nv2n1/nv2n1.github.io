@@ -1,4 +1,5 @@
 ---
+
 title: "rpmrebuild(1)"
 name: "rpmrebuild"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rpmrebuild/"
 description: "rpmrebuild – a tool to build an rpm package from an installed package"
 ---
 
-<h2>NAME</h2>
 <p> rpmrebuild &#8211; a tool to build an rpm package from an installed package </p>
 <h2>SYNOPSIS</h2>
 <p> rpmrebuild [<i>option</i>] &lt;<i>packagename</i>&gt; </p>

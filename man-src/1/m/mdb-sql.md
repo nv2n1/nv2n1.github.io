@@ -1,4 +1,5 @@
 ---
+
 title: "mdb-sql(1)"
 name: "mdb-sql"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mdb-sql/"
 description: "mdb-sql – SQL interface to MDB Tools"
 ---
 
-<h2>NAME</h2>
 <p> <code>mdb-sql </code>&#8211; SQL interface to MDB Tools</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

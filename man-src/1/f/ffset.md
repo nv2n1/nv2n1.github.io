@@ -1,4 +1,5 @@
 ---
+
 title: "ffset(1)"
 name: "ffset"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ffset/"
 description: "ffset – set force-feedback device parameters"
 ---
 
-<h2>NAME</h2>
 <p> ffset &#8211; set force-feedback device parameters</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ffset</code> &lt;<i>device</i>&gt; [<code>-g</code> &lt;<i>gain</i>&gt;] [<code>-a</code> &lt;<i>autocenter strength</i>&gt;]</p>

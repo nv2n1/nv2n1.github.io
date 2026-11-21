@@ -1,4 +1,5 @@
 ---
+
 title: "cgerc(3)"
 name: "cgerc"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgerc/"
 description: "cgerc.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cgerc.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

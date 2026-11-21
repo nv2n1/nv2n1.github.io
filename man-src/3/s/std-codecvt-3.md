@@ -1,4 +1,5 @@
 ---
+
 title: "std-codecvt-3(3)"
 name: "std-codecvt-3"
 section: "3"
@@ -6,10 +7,7 @@ letter: "s"
 url: "/docs/linux/man/3-std-codecvt-3/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- std::mbrtowc - std::mbrtowc
+std::mbrtowc - std::mbrtowc
 
 <h2>Synopsis</h2>
 

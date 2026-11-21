@@ -1,4 +1,5 @@
 ---
+
 title: "nvlc(1)"
 name: "nvlc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nvlc/"
 description: "vlc, qvlc, svlc, nvlc, rvlc, cvlc – the VLC media player"
 ---
 
-<h2 class="name">NAME</h2>
 <p> vlc, qvlc, svlc, nvlc, rvlc, cvlc &#8211; the VLC media player </p>
 <h2>SYNOPSIS</h2>
 <p> <code>vlc</code> [<i>OPTIONS</i>] [<i>ITEMS</i>]&#8230;</p>

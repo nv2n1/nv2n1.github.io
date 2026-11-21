@@ -1,4 +1,5 @@
 ---
+
 title: "sfconv(1)"
 name: "sfconv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sfconv/"
 description: "sfconv – A tool for converting the encoding of Standard Format (SF) files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> sfconv &#8211; A tool for converting the encoding of Standard Format (SF) files </p>
 <h2>SYNOPSIS</h2>
 <h3>8-bit to Unicode:</h3>

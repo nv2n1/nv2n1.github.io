@@ -1,4 +1,5 @@
 ---
+
 title: "fpurge(3)"
 name: "fpurge"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fpurge/"
 description: "fpurge, __fpurge – purge a stream"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fpurge, __fpurge &#8211; purge a stream </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

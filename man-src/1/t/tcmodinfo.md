@@ -1,4 +1,5 @@
 ---
+
 title: "tcmodinfo(1)"
 name: "tcmodinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tcmodinfo/"
 description: "tcmodinfo – Get and Set information in transcode modules"
 ---
 
-<h2>NAME</h2>
 <p> tcmodinfo &#8211; Get and Set information in transcode modules</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tcmodinfo</code> [ <code>-i</code> <i>name</i> ] [ <code>-m</code> <i>path</i> ] [ <code>-t</code> <i>type</i> ] [ <code>-M</code> <i>param</i> ] [ <code>-C</code> <i>param</i> ] [ <code>-s</code> <i>socket</i> ] [ <code>-p</code> ] [ <code>-d</code> <i>verbosity</i> ] [ <code>-v</code> ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "cannakill(1)"
 name: "cannakill"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cannakill/"
 description: "cannakill – Terminate operation of the Kana-Kanji conversion server cannaserver"
 ---
 
-<h2>NAME</h2>
 <p> cannakill &#8211; Terminate operation of the Kana-Kanji conversion server cannaserver</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cannakill</code></p>

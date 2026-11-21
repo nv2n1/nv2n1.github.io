@@ -1,4 +1,5 @@
 ---
+
 title: "imsettings-list(1)"
 name: "imsettings-list"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-imsettings-list/"
 description: "imsettings-list – Display Input Methods list"
 ---
 
-<h2>NAME</h2>
 <p> imsettings-list &#8211; Display Input Methods list</p>
 <h2>SYNOPSIS</h2>
 <p> <code>imsettings-list</code></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "memusage(1)"
 name: "memusage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-memusage/"
 description: "memusage – profile memory usage of a program"
 ---
 
-<h2 class="name">NAME</h2>
 <p> memusage &#8211; profile memory usage of a program </p>
 <h2>SYNOPSIS</h2>
 <p> <code>memusage</code> [<i>option</i>]&#8230; <i>program</i> [<i>programoption</i>]&#8230;</p>

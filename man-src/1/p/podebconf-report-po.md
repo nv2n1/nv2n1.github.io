@@ -1,4 +1,5 @@
 ---
+
 title: "podebconf-report-po(1)"
 name: "podebconf-report-po"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-podebconf-report-po/"
 description: "podebconf-report-po – send outdated debconf PO files to the last translators"
 ---
 
-<h2 class="name">NAME</h2>
 <p> podebconf-report-po &#8211; send outdated debconf PO files to the last translators </p>
 <h2>SYNOPSIS</h2>
 <p> <code>podebconf-report-po</code> [options]</p>

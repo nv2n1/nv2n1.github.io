@@ -1,4 +1,5 @@
 ---
+
 title: "slalsa(3)"
 name: "slalsa"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-slalsa/"
 description: "slalsa.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> slalsa.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

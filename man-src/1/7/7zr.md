@@ -1,4 +1,5 @@
 ---
+
 title: "7zr(1)"
 name: "7zr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-7zr/"
 description: "7zr – A file archiver with high compression ratio format"
 ---
 
-<h2 class="name">NAME</h2>
 <p> 7zr &#8211; A file archiver with high compression ratio format </p>
 <h2>SYNOPSIS</h2>
 <p> <code>7zr</code> <code>&lt;command&gt;</code> [<code>&lt;switches&gt;</code>&#8230; ] <code>&lt;archive_name&gt;</code> [<code>&lt;file_names&gt;</code>&#8230; ] [<code>&lt;@listfiles&gt;</code>&#8230; ] </p>

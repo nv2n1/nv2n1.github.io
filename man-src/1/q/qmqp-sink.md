@@ -1,4 +1,5 @@
 ---
+
 title: "qmqp-sink(1)"
 name: "qmqp-sink"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-qmqp-sink/"
 description: "qmqp-sink – parallelized QMQP test server"
 ---
 
-<h2 class="name">NAME</h2>
 <p> qmqp-sink &#8211; parallelized QMQP test server </p>
 <h2>SYNOPSIS</h2>
 <p> <code>qmqp-sink</code> [<code>-46cv</code>] [<code>-x </code><i>time</i>] [<code>inet:</code>][<i>host</i>]:<i>port</i> <i>backlog</i> </p>

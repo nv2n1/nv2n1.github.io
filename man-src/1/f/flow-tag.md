@@ -1,4 +1,5 @@
 ---
+
 title: "flow-tag(1)"
 name: "flow-tag"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-flow-tag/"
 description: "flow-tag – Apply tags to flow files."
 ---
 
-<h2>NAME</h2>
 <p> flow-tag &#8211; Apply tags to flow files.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>flow-tag</code> [ <code>-hk</code> ] [ <code>-b</code><i> big</i><code>|</code><i>little</i> ] [ <code>-C</code><i> comment</i> ] [ <code>-d</code><i> debug_level</i> ] [ <code>-t</code><i> tag_fname</i> ] [ <code>-T</code><i> tag_definition</i> ] [ <code>-v</code><i> variable binding</i> ]</p>

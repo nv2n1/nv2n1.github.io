@@ -1,4 +1,5 @@
 ---
+
 title: "pmdaperfevent(1)"
 name: "pmdaperfevent"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdaperfevent/"
 description: "pmdaperfevent – hardware performance counter performance metrics domain agent (PMDA)"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdaperfevent</code> &#8211; hardware performance counter performance metrics domain agent (PMDA)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/perfevent/pmdaperfevent</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>] [<code>-i</code> <i>port</i>] [<code>-p</code>] [<code>-u</code> <i>socket</i>] [<code>-6</code>]</p>

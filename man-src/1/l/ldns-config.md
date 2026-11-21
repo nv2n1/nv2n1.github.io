@@ -1,4 +1,5 @@
 ---
+
 title: "ldns-config(1)"
 name: "ldns-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ldns-config/"
 description: "ldns-config – show compiler and linker flags for ldns usage."
 ---
 
-<h2>NAME</h2>
 <p> ldns-config &#8211; show compiler and linker flags for ldns usage.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ldns-config</code> [ <i>OPTIONS</i> ] </p>

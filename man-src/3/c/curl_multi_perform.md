@@ -1,4 +1,5 @@
 ---
+
 title: "curl_multi_perform(3)"
 name: "curl_multi_perform"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-curl_multi_perform/"
 description: "curl_multi_perform – reads/writes available data from each easy handle"
 ---
 
-<h2>NAME</h2>
 <p> curl_multi_perform &#8211; reads/writes available data from each easy handle</p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;curl/curl.h&gt; </p>

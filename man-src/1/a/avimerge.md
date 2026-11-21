@@ -1,4 +1,5 @@
 ---
+
 title: "avimerge(1)"
 name: "avimerge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-avimerge/"
 description: "avimerge – merge several AVI-files into one"
 ---
 
-<h2>NAME</h2>
 <p> avimerge &#8211; merge several AVI-files into one</p>
 <h2>SYNOPSIS</h2>
 <p> <code>avimerge</code> <code>-o</code> <i>name</i> <code>-i</code> <i>file1</i><code> [ </code><i>file2</i><code> [ </code><i>&#8230;</i><code> ] ] </code> [ <code>-p</code> <i>file</i> ] [ <code>-a</code> <i>num</i> ] [ <code>-A</code> <i>num</i> ] [ <code>-b</code> <i>num</i> ] [ <code>-c</code> ] [ <code>-f</code> <i>commentfile</i> ] [ <code>-x</code> <i>indexfile</i> ]</p>

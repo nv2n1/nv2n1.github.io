@@ -1,4 +1,5 @@
 ---
+
 title: "mm2gv(1)"
 name: "mm2gv"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mm2gv/"
 description: "mm2gv – Matrix Market-DOT converters"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mm2gv &#8211; Matrix Market-DOT converters </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mm2gv</code> [ <code>-cluv?</code> ] [ <code>-U</code><i>i</i> ] [ <code>-o</code><i>outfile</i> ] [ <i>file</i> ] </p>

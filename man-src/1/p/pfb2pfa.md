@@ -1,4 +1,5 @@
 ---
+
 title: "pfb2pfa(1)"
 name: "pfb2pfa"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-pfb2pfa/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- pfb2pfa - convert a type1 pfb file (binary MSDOS) into a pfa (ASCII) 
+pfb2pfa - convert a type1 pfb file (binary MSDOS) into a pfa (ASCII) 
 
 <h2>SYNOPSIS</h2>
 

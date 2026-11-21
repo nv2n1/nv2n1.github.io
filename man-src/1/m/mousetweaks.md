@@ -1,4 +1,5 @@
 ---
+
 title: "mousetweaks(1)"
 name: "mousetweaks"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mousetweaks/"
 description: "mousetweaks – Accessibility enhancements for pointing devices"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mousetweaks &#8211; Accessibility enhancements for pointing devices </p>
 <h2>SYNOPSIS</h2>
 <p> <code>mousetweaks</code> [&#8211;dwell] [&#8211;ssc] [&#8211;dwell-time=FLOAT] [&#8211;ssc-time=FLOAT] [-m|&#8211;dwell-mode=STRING] [-c|&#8211;show-ctw] [-t|&#8211;threshold=INT] [-g|&#8211;geometry] [-s|&#8211;shutdown] [&#8211;daemonize] [-?|&#8211;help]</p>

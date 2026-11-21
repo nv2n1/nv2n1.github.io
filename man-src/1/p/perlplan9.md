@@ -1,4 +1,5 @@
 ---
+
 title: "perlplan9(1)"
 name: "perlplan9"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlplan9/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlplan9 - Plan 9-specific documentation for Perl 
+perlplan9 - Plan 9-specific documentation for Perl 
 
 <h2>DESCRIPTION</h2>
 

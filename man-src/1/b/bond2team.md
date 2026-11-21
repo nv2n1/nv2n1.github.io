@@ -1,4 +1,5 @@
 ---
+
 title: "bond2team(1)"
 name: "bond2team"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bond2team/"
 description: "bond2team — Converts bonding configuration to team"
 ---
 
-<h2>NAME</h2>
 <p> bond2team &#8212; Converts bonding configuration to team</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bond2team</code> [options]</p>

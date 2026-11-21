@@ -1,4 +1,5 @@
 ---
+
 title: "mdtool(1)"
 name: "mdtool"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mdtool/"
 description: "mdtool – MonoDevelop Application Runner"
 ---
 
-<h2>NAME</h2>
 <p> mdtool &#8211; MonoDevelop Application Runner</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mdtool</code> &lt;applicationId&gt; &#8230; </p>

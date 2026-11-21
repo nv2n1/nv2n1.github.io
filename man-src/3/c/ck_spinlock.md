@@ -1,4 +1,5 @@
 ---
+
 title: "ck_spinlock(3)"
 name: "ck_spinlock"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ck_spinlock/"
 description: "ck_spinlock_init ck_spinlock_lock ck_spinlock_unlock ck_spinlock_locked ck_spinlock_trylock ck_spinlock_anderson_init ck_spinlock_anderson_locked ck_spinlock_anderson_lock ck_spinlock_anderson_unlo..."
 ---
 
-<h2>NAME</h2>
 <p> <code>ck_spinlock_init</code> <code>ck_spinlock_lock</code> <code>ck_spinlock_unlock</code> <code>ck_spinlock_locked</code> <code>ck_spinlock_trylock</code> <code>ck_spinlock_anderson_init</code> <code>ck_spinlock_anderson_locked</code> <code>ck_spinlock_anderson_lock</code> <code>ck_spinlock_anderson_unlock</code> <code>ck_spinlock_cas_init</code> <code>ck_spinlock_cas_locked</code> <code>ck_spinlock_cas_lock</code> <code>ck_spinlock_cas_lock_eb</code> <code>ck_spinlock_cas_trylock</code> <code>ck_spinlock_cas_unlock</code> <code>ck_spinlock_clh_init</code> <code>ck_spinlock_clh_locked</code> <code>ck_spinlock_clh_lock</code> <code>ck_spinlock_clh_unlock</code> <code>ck_spinlock_dec_init</code> <code>ck_spinlock_dec_locked</code> <code>ck_spinlock_dec_lock</code> <code>ck_spinlock_dec_lock_eb</code> <code>ck_spinlock_dec_trylock</code> <code>ck_spinlock_dec_unlock</code> <code>ck_spinlock_fas_init</code> <code>ck_spinlock_fas_lock</code> <code>ck_spinlock_fas_lock_eb</code> <code>ck_spinlock_fas_locked</code> <code>ck_spinlock_fas_trylock</code> <code>ck_spinlock_fas_unlock</code> <code>ck_spinlock_hclh_init</code> <code>ck_spinlock_hclh_locked</code> <code>ck_spinlock_hclh_lock</code> <code>ck_spinlock_hclh_unlock</code> <code>ck_spinlock_mcs_init</code> <code>ck_spinlock_mcs_locked</code> <code>ck_spinlock_mcs_lock</code> <code>ck_spinlock_mcs_trylock</code> <code>ck_spinlock_mcs_unlock</code> <code>ck_spinlock_ticket_init</code> <code>ck_spinlock_ticket_locked</code> <code>ck_spinlock_ticket_lock</code> <code>ck_spinlock_ticket_lock_pb</code> <code>ck_spinlock_ticket_trylock</code> <code>ck_spinlock_ticket_unlock</code> &#8211; spinlock implementations</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>

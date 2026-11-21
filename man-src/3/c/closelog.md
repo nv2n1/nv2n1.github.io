@@ -1,4 +1,5 @@
 ---
+
 title: "closelog(3)"
 name: "closelog"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-closelog/"
 description: "closelog, openlog, syslog, vsyslog – send messages to the system logger"
 ---
 
-<h2 class="name">NAME</h2>
 <p> closelog, openlog, syslog, vsyslog &#8211; send messages to the system logger </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;syslog.h&gt;</code> </p>

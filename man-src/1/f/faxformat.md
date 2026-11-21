@@ -1,4 +1,5 @@
 ---
+
 title: "faxformat(1)"
 name: "faxformat"
 section: "1"
@@ -6,7 +7,6 @@ letter: "f"
 url: "/docs/linux/man/1-faxformat/"
 ---
 
-<h2>SYNOPSIS</h2>
 <p> This page, part of the <code>Netpbm</code>user&#8217;s<code>guide</code>(1) , describes FAX formats in relation to Netpbm facilities. </p>
 <h2>DESCRIPTION</h2>
 <p> The ITU (formerly CCITT) publishes standards for operation of fax machines (the idea is to provide a way to be sure that a fax machine is able to receive a fax sent by another). These standards incidentally specify graphics file formats &#8212; a protocol for representing a visual image in sequences of bits. </p>

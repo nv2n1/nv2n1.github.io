@@ -1,4 +1,5 @@
 ---
+
 title: "pamflip(1)"
 name: "pamflip"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamflip/"
 description: "pamflip – flip or rotate a PAM or PNM image"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamflip &#8211; flip or rotate a PAM or PNM image</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamflip</code> { <code>-leftright</code> | <code>-lr</code> | <code>-topbottom</code> | <code>-tb</code> | <code>-transpose</code> | <code>-xy</code> | <code>-rotate90</code> | <code>-r90</code> | <code>-cw</code> | <code>-rotate270</code> | <code>-r270</code> | <code>-ccw</code> | <code>-rotate180</code> | <code>-r180</code> <code>-null</code> | <code>-xform=</code><i>xform1</i><code>,</code><i>xform2</i>&#8230; } [<code>-memsize=</code><i>mebibytes</i>] [<code>-pagesize=</code><i>bytes</i>] [<i>pamfile</i>] </p>

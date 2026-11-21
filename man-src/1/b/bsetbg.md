@@ -1,4 +1,5 @@
 ---
+
 title: "bsetbg(1)"
 name: "bsetbg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bsetbg/"
 description: "bsetbg – utility to manipulate the appearance of the X11 desktop’s root window."
 ---
 
-<h2>NAME</h2>
 <p> bsetbg &#8211; utility to manipulate the appearance of the X11 desktop&#8217;s root window.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>bsetbg</code> [options] <i>image</i></p>

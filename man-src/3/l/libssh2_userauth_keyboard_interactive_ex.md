@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_userauth_keyboard_interactive_ex(3)"
 name: "libssh2_userauth_keyboard_interactive_ex"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_userauth_keyboard_interactive_ex/"
 description: "libssh2_userauth_keyboard_interactive_ex – authenticate a session using keyboard-interactive authentication"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_userauth_keyboard_interactive_ex &#8211; authenticate a session using keyboard-interactive authentication</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

@@ -1,4 +1,5 @@
 ---
+
 title: "g_nmeig_d(1)"
 name: "g_nmeig_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_nmeig_d/"
 description: "g_nmeig – diagonalizes the Hessian"
 ---
 
-<h2>NAME</h2>
 <p> g_nmeig &#8211; diagonalizes the Hessian </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

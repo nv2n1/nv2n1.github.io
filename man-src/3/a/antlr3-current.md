@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-current(3)"
 name: "antlr3-current"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3-current/"
 description: "ANTLR3_INT_TRIE_struct –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ANTLR3_INT_TRIE_struct &#8211; </p>
 <p> Structure that defines an ANTLR3_INT_TRIE.</p>
 <h2>SYNOPSIS</h2>

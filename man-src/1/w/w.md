@@ -1,4 +1,5 @@
 ---
+
 title: "w(1)"
 name: "w"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-w/"
 description: "w – Show who is logged on and what they are doing."
 ---
 
-<h2 class="name">NAME</h2>
 <p> w &#8211; Show who is logged on and what they are doing. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>w</code> [<i>options</i>] <i>user</i> [&#8230;]</p>

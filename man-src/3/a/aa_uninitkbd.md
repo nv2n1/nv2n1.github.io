@@ -1,4 +1,5 @@
 ---
+
 title: "aa_uninitkbd(3)"
 name: "aa_uninitkbd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_uninitkbd/"
 description: "aa_uninitkbd – uninitialize the keyboard driver."
 ---
 
-<h2>NAME</h2>
 <p> aa_uninitkbd &#8211; uninitialize the keyboard driver.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

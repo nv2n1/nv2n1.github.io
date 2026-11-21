@@ -1,4 +1,5 @@
 ---
+
 title: "pamtofits(1)"
 name: "pamtofits"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamtofits/"
 description: "pamtofits – convert a Netpbm image into FITS format"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pamtofits &#8211; convert a Netpbm image into FITS format</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamtofits</code> [<code>-max</code> <i>f</i>] [<code>-min</code> <i>f</i>] [<i>pamfile</i>] </p>

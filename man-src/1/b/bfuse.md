@@ -1,4 +1,5 @@
 ---
+
 title: "bfuse(1)"
 name: "bfuse"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bfuse/"
 description: "bfuse – Create a FUSE filesystem out of BlackBerry databases."
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>bfuse</code> &#8211; Create a FUSE filesystem out of BlackBerry databases. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>bfuse</code> mountpoint [options]</p>

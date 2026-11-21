@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3defs(3)"
 name: "antlr3defs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3defs/"
 description: "include/antlr3defs.h –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> include/antlr3defs.h &#8211; </p>
 <p> Basic type and constant definitions for ANTLR3 Runtime.</p>
 <h2>SYNOPSIS</h2>

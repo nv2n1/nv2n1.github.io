@@ -1,4 +1,5 @@
 ---
+
 title: "desktop_palette(3)"
 name: "desktop_palette"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-desktop_palette/"
 description: "desktop_palette – The palette used by the Atari ST low resolution desktop. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> desktop_palette &#8211; The palette used by the Atari ST low resolution desktop. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

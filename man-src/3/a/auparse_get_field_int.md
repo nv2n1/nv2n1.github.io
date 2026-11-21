@@ -1,4 +1,5 @@
 ---
+
 title: "auparse_get_field_int(3)"
 name: "auparse_get_field_int"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-auparse_get_field_int/"
 description: "auparse_get_field_int – get current field’s value as an int"
 ---
 
-<h2>NAME</h2>
 <p> auparse_get_field_int &#8211; get current field&#8217;s value as an int</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "dislocker-find(1)"
 name: "dislocker-find"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dislocker-find/"
 description: "Dislocker find – Find BitLocker-encrypted volumes."
 ---
 
-<h2>NAME</h2>
 <p> Dislocker find &#8211; Find BitLocker-encrypted volumes.</p>
 <h2>SYNOPSIS</h2>
 <p> dislocker-find [-h] [files&#8230;]</p>

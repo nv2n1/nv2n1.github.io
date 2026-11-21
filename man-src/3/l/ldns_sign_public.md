@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_sign_public(3)"
 name: "ldns_sign_public"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_sign_public/"
 description: "ldns_sign_public"
 ---
 
-<h2>NAME</h2>
 <p> ldns_sign_public </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

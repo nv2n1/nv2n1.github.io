@@ -1,4 +1,5 @@
 ---
+
 title: "pmdazswap(1)"
 name: "pmdazswap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdazswap/"
 description: "pmdazswap – zswap (compressed swap) PMDA"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdazswap</code> &#8211; zswap (compressed swap) PMDA</p>
 <h2>DESCRIPTION</h2>
 <p> <code>pmdazswap</code> is a Performance Metrics Domain Agent (PMDA) which exports metric values about compressed swap operation, as tracked by the <code>zswap</code> Linux kernel module. </p>

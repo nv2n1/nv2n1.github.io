@@ -1,4 +1,5 @@
 ---
+
 title: "globus_xio(3)"
 name: "globus_xio"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_xio/"
 description: "Globus XIO –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Globus XIO &#8211; </p>
 <p> eXtensible Input Output library</p>
 <h3>Modules</h3>

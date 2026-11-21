@@ -1,4 +1,5 @@
 ---
+
 title: "ddrescue(1)"
 name: "ddrescue"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ddrescue/"
 description: "ddrescue – data recovery tool"
 ---
 
-<h2>NAME</h2>
 <p> ddrescue &#8211; data recovery tool</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ddrescue</code> [<i>,options/</i>] <i>,infile outfile /</i>[<i>,mapfile/</i>]</p>

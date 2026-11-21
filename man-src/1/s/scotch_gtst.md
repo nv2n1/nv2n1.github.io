@@ -1,4 +1,5 @@
 ---
+
 title: "scotch_gtst(1)"
 name: "scotch_gtst"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-scotch_gtst/"
 description: "gtst – test the consistency of source graphs"
 ---
 
-<h2>NAME</h2>
 <p> <code>gtst </code>&#8211; test the consistency of source graphs</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

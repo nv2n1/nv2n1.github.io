@@ -1,4 +1,5 @@
 ---
+
 title: "sfcbunstage(1)"
 name: "sfcbunstage"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sfcbunstage/"
 description: "sfcbstage – Script to remove provider MOF and registration files from the Small-Footprint CIM Broker (sfcb) staging area"
 ---
 
-<h2>NAME</h2>
 <p> sfcbstage &#8211; Script to remove provider MOF and registration files from the Small-Footprint CIM Broker (sfcb) staging area</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sfcbstage</code> [<i>options</i>] [<i>mof&#8230;</i>]</p>

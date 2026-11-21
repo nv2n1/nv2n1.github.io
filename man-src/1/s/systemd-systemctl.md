@@ -1,4 +1,5 @@
 ---
+
 title: "systemd-systemctl(1)"
 name: "systemd-systemctl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-systemd-systemctl/"
 description: "systemctl, systemd-systemctl – Control the systemd system and service manager"
 ---
 
-<h2 class="name">NAME</h2>
 <p> systemctl, systemd-systemctl &#8211; Control the systemd system and service manager </p>
 <h2>SYNOPSIS</h2>
 <dl>

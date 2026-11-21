@@ -1,4 +1,5 @@
 ---
+
 title: "euca-terminate-instances(1)"
 name: "euca-terminate-instances"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-terminate-instances/"
 description: "euca-terminate-instances – Terminate one or more instances"
 ---
 
-<h2>NAME</h2>
 <p> euca-terminate-instances &#8211; Terminate one or more instances</p>
 <h2>SYNOPSIS</h2>
 <p> euca-terminate-instances [&#8211;show-empty-fields] [-U URL]</p>

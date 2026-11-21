@@ -1,4 +1,5 @@
 ---
+
 title: "dtrmv(3)"
 name: "dtrmv"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dtrmv/"
 description: "dtrmv.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dtrmv.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

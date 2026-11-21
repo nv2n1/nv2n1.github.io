@@ -1,4 +1,5 @@
 ---
+
 title: "primorial(1)"
 name: "primorial"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-primorial/"
 description: "primorial – calculate large primorials"
 ---
 
-<h2 class="name">NAME</h2>
 <p> primorial &#8211; calculate large primorials</p>
 <h2>SYNOPSIS</h2>
 <p> <code>primorial</code> integers </p>

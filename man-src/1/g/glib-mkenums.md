@@ -1,4 +1,5 @@
 ---
+
 title: "glib-mkenums(1)"
 name: "glib-mkenums"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-glib-mkenums/"
 description: "glib-mkenums – C language enum description generation utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> glib-mkenums &#8211; C language enum description generation utility </p>
 <h2>SYNOPSIS</h2>
 <dl>

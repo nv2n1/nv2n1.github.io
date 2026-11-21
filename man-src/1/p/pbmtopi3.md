@@ -1,4 +1,5 @@
 ---
+
 title: "pbmtopi3(1)"
 name: "pbmtopi3"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pbmtopi3/"
 description: "pbmtopi3 – convert a portable bitmap into an Atari Degas .pi3 file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pbmtopi3 &#8211; convert a portable bitmap into an Atari Degas .pi3 file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmtopi3</code> [<i>pbmfile</i>]</p>

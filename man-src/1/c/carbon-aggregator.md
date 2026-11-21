@@ -1,4 +1,5 @@
 ---
+
 title: "carbon-aggregator(1)"
 name: "carbon-aggregator"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-carbon-aggregator/"
 description: "carbon-aggregator – buffer metrics over time before reporting to carbon-cache"
 ---
 
-<h2>NAME</h2>
 <p> carbon-aggregator &#8211; buffer metrics over time before reporting to carbon-cache</p>
 <h2>SYNOPSYS</h2>
 <pre>

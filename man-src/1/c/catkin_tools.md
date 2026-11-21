@@ -1,4 +1,5 @@
 ---
+
 title: "catkin_tools(1)"
 name: "catkin_tools"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-catkin_tools/"
 description: "catkin_tools – catkin_tools Documentation"
 ---
 
-<h2>NAME</h2>
 <p> catkin_tools &#8211; catkin_tools Documentation</p>
 <h2>INSTALLING CATKIN_TOOLS</h2>
 <p> You can install the <code>catkin_tools</code> package as a binary through a package manager like <code>pip</code> or <code>apt-get</code>, or from source. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ilasm(1)"
 name: "ilasm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ilasm/"
 description: "ilasm, ilasm2 – Mono IL assembler"
 ---
 
-<h2>NAME</h2>
 <p> ilasm, ilasm2 &#8211; Mono IL assembler</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ilasm</code> [option] [source-files] </p>

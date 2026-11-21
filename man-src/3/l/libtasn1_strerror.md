@@ -1,4 +1,5 @@
 ---
+
 title: "libtasn1_strerror(3)"
 name: "libtasn1_strerror"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libtasn1_strerror/"
 description: "libtasn1_strerror – Returns a string with a description of an error"
 ---
 
-<h2>NAME</h2>
 <p> libtasn1_strerror &#8211; Returns a string with a description of an error</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/libtasn1.h">libtasn1.h</a>&gt;</code> </p>

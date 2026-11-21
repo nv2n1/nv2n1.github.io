@@ -1,4 +1,5 @@
 ---
+
 title: "g_order_d(1)"
 name: "g_order_d"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-g_order_d/"
 description: "g_order – computes the order parameter per atom for carbon tails"
 ---
 
-<h2>NAME</h2>
 <p> g_order &#8211; computes the order parameter per atom for carbon tails </p>
 <p> <code>VERSION 4.0.1</code></p>
 <h2>SYNOPSIS</h2>

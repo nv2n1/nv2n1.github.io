@@ -1,4 +1,5 @@
 ---
+
 title: "pk12util(1)"
 name: "pk12util"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pk12util/"
 description: "pk12util – Export and import keys and certificate to or from a PKCS #12 file and the NSS database"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pk12util &#8211; Export and import keys and certificate to or from a PKCS #12 file and the NSS database </p>
 <h2>SYNOPSIS</h2>
 <dl>

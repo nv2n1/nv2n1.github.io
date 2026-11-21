@@ -1,4 +1,5 @@
 ---
+
 title: "gitg(1)"
 name: "gitg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gitg/"
 description: "gitg – Git repository viewer"
 ---
 
-<h2>NAME</h2>
 <p> gitg &#8211; Git repository viewer </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gitg</code> [options]&nbsp;<wbr>[repository]&nbsp;<wbr>[&lt;refspec&gt;]</p>

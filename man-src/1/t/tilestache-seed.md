@@ -1,4 +1,5 @@
 ---
+
 title: "tilestache-seed(1)"
 name: "tilestache-seed"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tilestache-seed/"
 description: "tilestache-seed – seed a single layer in your TileStache configuration"
 ---
 
-<h2>NAME</h2>
 <p> tilestache-seed &#8211; seed a single layer in your TileStache configuration</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tilestache-seed</code> [<i>options</i>]<i> zoom</i>&#8230;</p>

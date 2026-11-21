@@ -1,4 +1,5 @@
 ---
+
 title: "pbmtosunicon(1)"
 name: "pbmtosunicon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pbmtosunicon/"
 description: "pbmtosunicon – convert a PBM image into a Sun icon"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pbmtosunicon &#8211; convert a PBM image into a Sun icon</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pbmtosunicon</code> [<i>pbmfile</i>] </p>

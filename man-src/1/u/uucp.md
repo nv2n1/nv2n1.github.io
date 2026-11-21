@@ -1,4 +1,5 @@
 ---
+
 title: "uucp(1)"
 name: "uucp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-uucp/"
 description: "uucp – Unix to Unix copy"
 ---
 
-<h2>NAME</h2>
 <p> uucp &#8211; Unix to Unix copy</p>
 <h2>SYNOPSIS</h2>
 <p> <code>uucp</code> [ options ] source-file destination-file </p>

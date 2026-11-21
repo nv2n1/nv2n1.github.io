@@ -1,4 +1,5 @@
 ---
+
 title: "guestunmount(1)"
 name: "guestunmount"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-guestunmount/"
 description: "guestunmount – Unmount a guestmounted filesystem"
 ---
 
-<h2 class="name">NAME</h2>
 <p> guestunmount &#8211; Unmount a guestmounted filesystem </p>
 <h2>SYNOPSIS</h2>
 <pre>

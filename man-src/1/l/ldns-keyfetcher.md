@@ -1,4 +1,5 @@
 ---
+
 title: "ldns-keyfetcher(1)"
 name: "ldns-keyfetcher"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ldns-keyfetcher/"
 description: "ldns-keyfetcher – retrieve the DNSSEC DNSKEYs for a zone"
 ---
 
-<h2>NAME</h2>
 <p> ldns-keyfetcher &#8211; retrieve the DNSSEC DNSKEYs for a zone</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ldns-keyfetcher</code> [ <i>OPTIONS</i> ] <i>DOMAIN</i> </p>

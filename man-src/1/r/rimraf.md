@@ -1,4 +1,5 @@
 ---
+
 title: "rimraf(1)"
 name: "rimraf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-rimraf/"
 description: "rimraf – Fast deep deletion (like rm -rf)"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>rimraf</code> &#8211; Fast deep deletion (like rm -rf) </p>
 <h2>SYNOPSIS</h2>
 <p> rimraf &lt;path&gt;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "kazehakase(1)"
 name: "kazehakase"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kazehakase/"
 description: "kazehakase – Gecko based web browser using GTK"
 ---
 
-<h2>NAME</h2>
 <p> kazehakase &#8211; Gecko based web browser using GTK</p>
 <h2>SYNOPSIS</h2>
 <dl>

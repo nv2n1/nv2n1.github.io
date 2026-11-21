@@ -1,4 +1,5 @@
 ---
+
 title: "ipa-managed-entries(1)"
 name: "ipa-managed-entries"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipa-managed-entries/"
 description: "ipa-managed-entries – Enables or disables the schema Managed Entry plugins"
 ---
 
-<h2>NAME</h2>
 <p> ipa-managed-entries &#8211; Enables or disables the schema Managed Entry plugins</p>
 <h2>SYNOPSIS</h2>
 <p> ipa-managed-entries [options] &lt;enable|disable|status&gt;</p>

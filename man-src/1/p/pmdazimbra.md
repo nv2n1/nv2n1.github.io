@@ -1,4 +1,5 @@
 ---
+
 title: "pmdazimbra(1)"
 name: "pmdazimbra"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdazimbra/"
 description: "pmdazimbra – Zimbra Collaboration Suite (ZCS) PMDA"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdazimbra</code> &#8211; Zimbra Collaboration Suite (ZCS) PMDA</p>
 <h2>DESCRIPTION</h2>
 <p> <code>pmdazimbra</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which exports metric values from several subsystems of the Zimbra Suite. Further details on Zimbra can be found at <a rel="nofollow" href="http://www.zimbra.com/.">http://www.zimbra.com/.</a></p>

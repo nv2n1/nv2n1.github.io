@@ -1,4 +1,5 @@
 ---
+
 title: "psidtopgm(1)"
 name: "psidtopgm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-psidtopgm/"
 description: "psidtopgm – convert PostScript \"image\" data into a portable graymap"
 ---
 
-<h2 class="name">NAME</h2>
 <p> psidtopgm &#8211; convert PostScript &quot;image&quot; data into a portable graymap </p>
 <h2>SYNOPSIS</h2>
 <p> <code>psidtopgm</code> <i>width height bits/sample</i> [<i>imagedata</i>]</p>

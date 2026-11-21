@@ -1,4 +1,5 @@
 ---
+
 title: "tv_grab_pt_meo(1)"
 name: "tv_grab_pt_meo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tv_grab_pt_meo/"
 description: "tv_grab_pt_meo – Grab TV listings for MEO from SAPO in Portugal."
 ---
 
-<h2 class="name">NAME</h2>
 <p> tv_grab_pt_meo &#8211; Grab TV listings for MEO from SAPO in Portugal. </p>
 <h2>SYNOPSIS</h2>
 <p> tv_grab_pt_meo &#8211;help </p>

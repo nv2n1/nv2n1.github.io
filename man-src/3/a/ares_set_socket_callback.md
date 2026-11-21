@@ -1,4 +1,5 @@
 ---
+
 title: "ares_set_socket_callback(3)"
 name: "ares_set_socket_callback"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ares_set_socket_callback/"
 description: "ares_set_socket_callback – Set a socket creation callback"
 ---
 
-<h2>NAME</h2>
 <p> ares_set_socket_callback &#8211; Set a socket creation callback</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

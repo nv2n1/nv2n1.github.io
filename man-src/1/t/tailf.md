@@ -1,4 +1,5 @@
 ---
+
 title: "tailf(1)"
 name: "tailf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tailf/"
 description: "tailf – follow the growth of a log file"
 ---
 
-<h2>NAME</h2>
 <p> tailf &#8211; follow the growth of a log file</p>
 <h2>SYNOPSIS</h2>
 <p> <code>tailf</code> [<i>OPTION</i>] <i>file</i></p>

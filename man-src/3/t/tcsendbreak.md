@@ -1,4 +1,5 @@
 ---
+
 title: "tcsendbreak(3)"
 name: "tcsendbreak"
 section: "3"
@@ -6,8 +7,9 @@ letter: "t"
 url: "/docs/linux/man/3-tcsendbreak/"
 description: "termios, tcgetattr, tcsetattr, tcsendbreak, tcdrain, tcflush, tcflow, cfmakeraw, cfgetospeed, cfgetispeed, cfsetispeed, cfsetospeed, cfsetspeed – get and set terminal attributes, line control, get ..."
 ---
+
 <p>termios, tcgetattr, tcsetattr, tcsendbreak, tcdrain, tcflush, tcflow, cfmakeraw, cfgetospeed, cfgetispeed, cfsetispeed, cfsetospeed, cfsetspeed &#8211; get and set terminal attributes, line control, get and set baud rate </p>
-<h2>SYNOPSIS</h2>
+
 <pre><code>
  #include &lt;termios.h&gt; 
  #include &lt;unistd.h&gt; 

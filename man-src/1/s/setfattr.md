@@ -1,4 +1,5 @@
 ---
+
 title: "setfattr(1)"
 name: "setfattr"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-setfattr/"
 description: "setfattr – set extended attributes of filesystem objects"
 ---
 
-<h2 class="name">NAME</h2>
 <p> setfattr &#8211; set extended attributes of filesystem objects </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

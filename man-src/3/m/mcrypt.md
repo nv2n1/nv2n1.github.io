@@ -1,4 +1,5 @@
 ---
+
 title: "mcrypt(3)"
 name: "mcrypt"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-mcrypt/"
 description: "libmcrypt – encryption/decryption library"
 ---
 
-<h2>NAME</h2>
 <p> libmcrypt &#8211; encryption/decryption library</p>
 <h2>SYNOPSIS</h2>
 <p> [see also <i>mcrypt.h</i> for more information]</p>

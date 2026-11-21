@@ -1,4 +1,5 @@
 ---
+
 title: "spu_run(2)"
 name: "spu_run"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-spu_run/"
 description: "spu_run – execute an SPU context"
 ---
 
-<h2 class="name">NAME</h2>
 <p> spu_run &#8211; execute an SPU context </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

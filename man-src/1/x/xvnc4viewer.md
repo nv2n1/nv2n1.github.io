@@ -1,4 +1,5 @@
 ---
+
 title: "xvnc4viewer(1)"
 name: "xvnc4viewer"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xvnc4viewer/"
 description: "vncviewer – VNC viewer for X"
 ---
 
-<h2 class="name">NAME</h2>
 <p> vncviewer &#8211; VNC viewer for X </p>
 <h2>SYNOPSIS</h2>
 <p> <code>vncviewer</code> [<i>options</i>] [<i>host</i>][:<i>display#</i>]<br />

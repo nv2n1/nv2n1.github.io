@@ -1,4 +1,5 @@
 ---
+
 title: "tv_grab_combiner(1)"
 name: "tv_grab_combiner"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tv_grab_combiner/"
 description: "tv_grab_combiner – Grab listings by combining data from several grabbers."
 ---
 
-<h2 class="name">NAME</h2>
 <p> tv_grab_combiner &#8211; Grab listings by combining data from several grabbers. </p>
 <h2>SYNOPSIS</h2>
 <p> tv_grab_combiner &#8211;help </p>

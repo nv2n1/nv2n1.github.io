@@ -1,4 +1,5 @@
 ---
+
 title: "fswebcam(1)"
 name: "fswebcam"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fswebcam/"
 description: "fswebcam – Small and simple webcam for *nix."
 ---
 
-<h2>NAME</h2>
 <p> fswebcam &#8211; Small and simple webcam for *nix.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fswebcam</code> [<i>&lt;options&gt;</i>] <i>&lt;filename&gt;</i> [[<i>&lt;options&gt;</i>] <i>&lt;filename&gt;</i> &#8230; ]</p>

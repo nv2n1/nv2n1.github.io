@@ -1,4 +1,5 @@
 ---
+
 title: "fribidi_get_par_direction(3)"
 name: "fribidi_get_par_direction"
 section: "3"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_get_par_direction/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- fribidi_get_par_direction - get base paragraph direction 
+fribidi_get_par_direction - get base paragraph direction 
 
 <h2>SYNOPSIS</h2>
 

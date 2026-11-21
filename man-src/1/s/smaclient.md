@@ -1,4 +1,5 @@
 ---
+
 title: "smaclient(1)"
 name: "smaclient"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-smaclient/"
 description: "smaclient – tool for accessing z/VM System Management functions"
 ---
 
-<h2>NAME</h2>
 <p> smaclient &#8211; tool for accessing z/VM System Management functions</p>
 <h2>SYNOPSIS</h2>
 <p> <code>smaclient</code> [FUNCTION] [OPTION] [PARAMETER]<br />

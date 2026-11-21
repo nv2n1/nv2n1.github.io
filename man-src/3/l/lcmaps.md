@@ -1,4 +1,5 @@
 ---
+
 title: "lcmaps(3)"
 name: "lcmaps"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-lcmaps/"
 description: "lcmaps – The Local Credential MAPping Service"
 ---
 
-<h2>NAME</h2>
 <p> lcmaps &#8211; The Local Credential MAPping Service</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lcmaps</code> </p>

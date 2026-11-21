@@ -1,4 +1,5 @@
 ---
+
 title: "sfcapd(1)"
 name: "sfcapd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sfcapd/"
 description: "sfcapd – sflow capture daemon"
 ---
 
-<h2>NAME</h2>
 <p> sfcapd &#8211; sflow capture daemon</p>
 <h2>SYNOPSIS</h2>
 <dl>

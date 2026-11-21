@@ -1,4 +1,5 @@
 ---
+
 title: "hub(1)"
 name: "hub"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hub/"
 description: "hub – git + hub = github"
 ---
 
-<h2>NAME</h2>
 <p> <code>hub</code> &#8211; git + hub = github</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hub</code> [<code>&#8211;noop</code>] <i>COMMAND</i> <i>OPTIONS</i><br />

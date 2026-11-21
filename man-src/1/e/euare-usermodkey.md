@@ -1,4 +1,5 @@
 ---
+
 title: "euare-usermodkey(1)"
 name: "euare-usermodkey"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-usermodkey/"
 description: "euare-usermodkey – Change the status of an access key from Active to Inactive, or vice versa"
 ---
 
-<h2>NAME</h2>
 <p> euare-usermodkey &#8211; Change the status of an access key from Active to Inactive, or vice versa</p>
 <h2>SYNOPSIS</h2>
 <p> euare-usermodkey <code>-s</code> {Active,Inactive} [-u USER] [&#8211;as-account ACCOUNT]</p>

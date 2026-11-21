@@ -1,4 +1,5 @@
 ---
+
 title: "gimplut(1)"
 name: "gimplut"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gimplut/"
 description: "gimplut – convert GIMP gradient (ggr) files to binary lookup tables (lut)."
 ---
 
-<h2 class="name">NAME</h2>
 <p> gimplut &#8211; convert GIMP gradient (ggr) files to binary lookup tables (lut). </p>
 <h2>SYNOPSIS</h2>
 <dl>

@@ -1,4 +1,5 @@
 ---
+
 title: "cfgmaint(1)"
 name: "cfgmaint"
 section: "1"
@@ -6,10 +7,7 @@ letter: "c"
 url: "/docs/linux/man/1-cfgmaint/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- cfgmaint - configuration tool for Visual Builder 
+cfgmaint - configuration tool for Visual Builder 
 
 <h2>SYNTAX</h2>
 

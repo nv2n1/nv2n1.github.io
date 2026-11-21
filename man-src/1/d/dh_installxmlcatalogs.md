@@ -1,4 +1,5 @@
 ---
+
 title: "dh_installxmlcatalogs(1)"
 name: "dh_installxmlcatalogs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dh_installxmlcatalogs/"
 description: "dh_installxmlcatalogs – install and register XML catalog files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dh_installxmlcatalogs &#8211; install and register XML catalog files </p>
 <h2>SYNOPSIS</h2>
 <p> <code>dh_installxmlcatalogs</code> [<i>debhelper options</i>] [<code>-n</code>]</p>

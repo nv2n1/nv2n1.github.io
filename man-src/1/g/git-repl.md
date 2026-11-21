@@ -1,4 +1,5 @@
 ---
+
 title: "git-repl(1)"
 name: "git-repl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-repl/"
 description: "git-repl – git read-eval-print-loop"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-repl</code> &#8211; git read-eval-print-loop</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-repl</code></p>

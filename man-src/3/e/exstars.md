@@ -1,4 +1,5 @@
 ---
+
 title: "exstars(3)"
 name: "exstars"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-exstars/"
 description: "exstars – 3d starfield and lightsourced spaceship. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> exstars &#8211; 3d starfield and lightsourced spaceship. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

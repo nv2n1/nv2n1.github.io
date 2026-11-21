@@ -1,4 +1,5 @@
 ---
+
 title: "bson_iter_document(3)"
 name: "bson_iter_document"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_iter_document/"
 description: "bson_iter_document() – The bson_iter_document() function shall retrieve the raw buffer of a sub-document from iter. iter MUST be on an element that is of type BSON_TYPE_DOCUMENT. This can be verifi..."
 ---
 
-<h2>NAME</h2>
 <p> bson_iter_document() &#8211; The bson_iter_document() function shall retrieve the raw buffer of a sub-document from iter. iter MUST be on an element that is of type BSON_TYPE_DOCUMENT. This can be verified with bson_iter_type() or the BSON_ITER_HOLDS_DOCUMENT() macro.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

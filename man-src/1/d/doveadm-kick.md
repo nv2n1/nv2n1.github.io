@@ -1,4 +1,5 @@
 ---
+
 title: "doveadm-kick(1)"
 name: "doveadm-kick"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-doveadm-kick/"
 description: "doveadm-kick – Disconnect users by user name and/or IP address"
 ---
 
-<h2>NAME</h2>
 <p> doveadm-kick &#8211; Disconnect users by user name and/or IP address</p>
 <h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>kick</code> [ -a <i>anvil_socket_path</i>] [<code>-f</code>] <i>user</i><br />

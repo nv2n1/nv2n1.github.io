@@ -1,4 +1,5 @@
 ---
+
 title: "euca-delete-disk-image(1)"
 name: "euca-delete-disk-image"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-delete-disk-image/"
 description: "euca-delete-disk-image – Delete a disk image used for an import task"
 ---
 
-<h2>NAME</h2>
 <p> euca-delete-disk-image &#8211; Delete a disk image used for an import task</p>
 <h2>SYNOPSIS</h2>
 <p> euca-delete-disk-image (<code>-t</code> TASK | <code>-u</code> MANIFEST_URL)</p>

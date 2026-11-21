@@ -1,4 +1,5 @@
 ---
+
 title: "abipkgdiff(1)"
 name: "abipkgdiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-abipkgdiff/"
 description: "abipkgdiff – compare ABIs of ELF files in software packages"
 ---
 
-<h2>NAME</h2>
 <p> abipkgdiff &#8211; compare ABIs of ELF files in software packages </p>
 <p> <code>abipkgdiff</code> compares the Application Binary Interfaces (ABI) of the <i>ELF</i> binaries contained in two software packages. The software package formats currently supported are <i>Deb</i>, <i>RPM</i>, <i>tar</i> archives (either compressed or not) and plain directories that contain binaries. </p>
 <p> For a comprehensive ABI change report that includes changes about function and variable sub-types, the two input packages must be accompanied with their debug information packages that contain debug information in <i>DWARF</i> format.</p>

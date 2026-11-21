@@ -1,4 +1,5 @@
 ---
+
 title: "ibdmchk(1)"
 name: "ibdmchk"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ibdmchk/"
 description: "IBDM – Network Checker and Attributes Analyzer"
 ---
 
-<h2>NAME</h2>
 <p> <code>IBDM &#8211; Network Checker and Attributes Analyzer</code></p>
 <h2>SYNOPSYS</h2>
 <p> ibdmchk has two operation modes: design and verification. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "h52gif(1)"
 name: "h52gif"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-h52gif/"
 description: "h52gif – Converts an HDF5 file to a GIF file."
 ---
 
-<h2>NAME</h2>
 <p> h52gif &#8211; Converts an HDF5 file to a GIF file.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>h52gif </code> h5_file gif_file <code>-i </code> h5_image [ <code>-p </code> h5_palette ]</p>

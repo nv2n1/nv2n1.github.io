@@ -1,4 +1,5 @@
 ---
+
 title: "jdb(1)"
 name: "jdb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jdb/"
 description: "jdb – Finds and fixes bugs in Java platform programs."
 ---
 
-<h2>NAME</h2>
 <p> jdb &#8211; Finds and fixes bugs in Java platform programs.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

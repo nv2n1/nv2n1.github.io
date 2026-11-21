@@ -1,4 +1,5 @@
 ---
+
 title: "bats(1)"
 name: "bats"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bats/"
 description: "bats – Bash Automated Testing System"
 ---
 
-<h2>NAME</h2>
 <p> <code>bats</code> &#8211; Bash Automated Testing System</p>
 <h2>SYNOPSIS</h2>
 <p> bats [-c] [-p | -t] <i>test</i> [<i>test</i> &#8230;] </p>

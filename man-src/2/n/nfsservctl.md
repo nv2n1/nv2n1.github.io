@@ -1,4 +1,5 @@
 ---
+
 title: "nfsservctl(2)"
 name: "nfsservctl"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-nfsservctl/"
 description: "nfsservctl – syscall interface to kernel nfs daemon"
 ---
 
-<h2 class="name">NAME</h2>
 <p> nfsservctl &#8211; syscall interface to kernel nfs daemon </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

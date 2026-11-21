@@ -1,4 +1,5 @@
 ---
+
 title: "keepass(1)"
 name: "keepass"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-keepass/"
 description: "keepass – password manager"
 ---
 
-<h2>NAME</h2>
 <p> keepass &#8211; password manager</p>
 <h2>SYNOPSIS</h2>
 <p> <code>keepass</code></p>

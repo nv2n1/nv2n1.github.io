@@ -1,4 +1,5 @@
 ---
+
 title: "ldns-test-edns(1)"
 name: "ldns-test-edns"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ldns-test-edns/"
 description: "ldns-test-edns – test if dns cache supports EDNS and DNSSEC."
 ---
 
-<h2>NAME</h2>
 <p> ldns-test-edns &#8211; test if dns cache supports EDNS and DNSSEC.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ldns-test-edns</code> [ <i>-i</i> ] { <i>ip</i> }</p>

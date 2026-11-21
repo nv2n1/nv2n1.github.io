@@ -1,4 +1,5 @@
 ---
+
 title: "sar(1)"
 name: "sar"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sar/"
 description: "sar – Collect, report, or save system activity information."
 ---
 
-<h2 class="name">NAME</h2>
 <p> sar &#8211; Collect, report, or save system activity information.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sar [ -A ] [ -B ] [ -b ] [ -C ] [ -D ] [ -d ] [ -F [ MOUNT ] ] [ -H ] [ -h ] [ -p ]</code> <code>[ -r [ ALL ] ] [ -S ] [ -t ] [ -u [ ALL ] ] [ -V ] [ -v ] [ -W ] [ -w ] [ -y ] [ -z ]</code> <code>[ &#8211;dec={ 0 | 1 | 2 } ]</code> <code>[ &#8211;dev=</code><i>dev_list </i><code>] [ &#8211;fs=</code><i>fs_list </i><code>] [ &#8211;help ] [ &#8211;human ] [ &#8211;iface=</code><i>iface_list</i> <code>] [ &#8211;pretty ] [ &#8211;sadc ] [ -I { </code><i>int_list </i><code>| SUM | ALL } ] [ -P { </code><i>cpu_list</i> <code>| ALL } ] [ -m {</code> <i>keyword</i><code>[,&#8230;] | ALL } ] [ -n { </code><i>keyword</i><code>[,&#8230;] | ALL } ] [ -q [ </code><i>keyword</i><code>[,&#8230;] | ALL ] ]</code> <code>[ -j { SID | ID | LABEL | PATH | UUID | &#8230; } ]</code> <code>[ -f [ </code><i>filename </i><code>] | -o [ </code><i>filename </i><code>] | -[0-9]+ ]</code> <code>[ -i </code><i>interval </i><code>] [ -s [ </code><i>hh</i><code>:</code><i>mm</i><code>[:</code><i>ss</i><code>]</code> <code>] ] [ -e [ </code><i>hh</i><code>:</code><i>mm</i><code>[:</code><i>ss</i><code>] ] ] [ </code><i>interval </i><code>[ </code><i>count </i><code>] ]</code> </p>

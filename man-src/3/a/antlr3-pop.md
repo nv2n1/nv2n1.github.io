@@ -1,4 +1,5 @@
 ---
+
 title: "antlr3-pop(3)"
 name: "antlr3-pop"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-antlr3-pop/"
 description: "src/antlr3commontreenodestream.c –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> src/antlr3commontreenodestream.c &#8211; </p>
 <p> Defines the implementation of the common node stream the default tree node stream used by ANTLR.</p>
 <h2>SYNOPSIS</h2>

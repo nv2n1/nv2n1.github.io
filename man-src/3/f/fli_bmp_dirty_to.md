@@ -1,4 +1,5 @@
 ---
+
 title: "fli_bmp_dirty_to(3)"
 name: "fli_bmp_dirty_to"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fli_bmp_dirty_to/"
 description: "fli_bmp_dirty_from, fli_bmp_dirty_to – Indicate which parts of the image have changed. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> fli_bmp_dirty_from, fli_bmp_dirty_to &#8211; Indicate which parts of the image have changed. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

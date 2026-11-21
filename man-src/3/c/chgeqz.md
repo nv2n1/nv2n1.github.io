@@ -1,4 +1,5 @@
 ---
+
 title: "chgeqz(3)"
 name: "chgeqz"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-chgeqz/"
 description: "chgeqz.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> chgeqz.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

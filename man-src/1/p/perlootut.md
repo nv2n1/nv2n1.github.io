@@ -1,4 +1,5 @@
 ---
+
 title: "perlootut(1)"
 name: "perlootut"
 section: "1"
@@ -6,10 +7,7 @@ letter: "p"
 url: "/docs/linux/man/1-perlootut/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- perlootut - Object-Oriented Programming in Perl Tutorial 
+perlootut - Object-Oriented Programming in Perl Tutorial 
 
 <h2>DATE</h2>
 

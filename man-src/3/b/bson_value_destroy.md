@@ -1,4 +1,5 @@
 ---
+
 title: "bson_value_destroy(3)"
 name: "bson_value_destroy"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_value_destroy/"
 description: "bson_value_destroy() – Releases any resources associated with value."
 ---
 
-<h2>NAME</h2>
 <p> bson_value_destroy() &#8211; Releases any resources associated with value.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

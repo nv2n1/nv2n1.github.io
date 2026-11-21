@@ -1,4 +1,5 @@
 ---
+
 title: "git-merge-repo(1)"
 name: "git-merge-repo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-merge-repo/"
 description: "git-merge-repo – Merge two repo histories"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-merge-repo</code> &#8211; Merge two repo histories</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-merge-repo</code> &lt;repo&gt; &lt;branch&gt; &lt;directory&gt; [&#8211;squash]</p>

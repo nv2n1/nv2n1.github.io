@@ -1,4 +1,5 @@
 ---
+
 title: "nbd-server(1)"
 name: "nbd-server"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nbd-server/"
 description: "nbd-server – serve a file as a block device to other computers running the GNU/Linux(tm) or GNU/Hurd Operating System"
 ---
 
-<h2 class="name">NAME</h2>
 <p> nbd-server &#8211; serve a file as a block device to other computers running the GNU/Linux(tm) or GNU/Hurd Operating System </p>
 <h2>SYNOPSIS</h2>
 <p> <code>nbd-server </code> <i>[ip@]port</i> <i>filename</i> [ <i>size</i> ] [ <code>-r</code> ] [ <code>-m</code> ] [ <code>-c</code> ] [ <code>-l </code><i>host list filename</i> ] [ <code>-o </code><i>section name</i> ] [ <code>-C </code><i>config file</i> ] [ <code>-M </code><i>max connections</i> ] [ <code>-V</code> ] [ <code>-d</code> ] </p>

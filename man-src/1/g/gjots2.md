@@ -1,4 +1,5 @@
 ---
+
 title: "gjots2(1)"
 name: "gjots2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gjots2/"
 description: "gjots2 – A gnome-2/X11 jotter"
 ---
 
-<h2>NAME</h2>
 <p> gjots2 &#8211; A gnome-2/X11 jotter</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gjots2</code> [<code>options</code>] <i>gjotsfile </i></p>

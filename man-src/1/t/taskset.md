@@ -1,4 +1,5 @@
 ---
+
 title: "taskset(1)"
 name: "taskset"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-taskset/"
 description: "taskset – set or retrieve a process’s CPU affinity"
 ---
 
-<h2 class="name">NAME</h2>
 <p> taskset &#8211; set or retrieve a process&#8217;s CPU affinity </p>
 <h2>SYNOPSIS</h2>
 <p> <code>taskset</code> [options] <i>mask command</i> [<i>argument</i>&#8230;] </p>

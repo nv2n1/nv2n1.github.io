@@ -1,4 +1,5 @@
 ---
+
 title: "cdk_screen(3)"
 name: "cdk_screen"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cdk_screen/"
 description: "cdk_screen – Cdk Screen and Widget Manipulation Functions"
 ---
 
-<h2>NAME</h2>
 <p> cdk_screen &#8211; Cdk Screen and Widget Manipulation Functions</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>

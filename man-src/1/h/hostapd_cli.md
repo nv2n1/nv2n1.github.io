@@ -1,4 +1,5 @@
 ---
+
 title: "hostapd_cli(1)"
 name: "hostapd_cli"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-hostapd_cli/"
 description: "hostapd_cli – hostapd command-line interface"
 ---
 
-<h2>NAME</h2>
 <p> hostapd_cli &#8211; hostapd command-line interface</p>
 <h2>SYNOPSIS</h2>
 <p> <code>hostapd_cli</code> [-p&lt;path&gt;] [-i&lt;ifname&gt;] [-a&lt;path&gt;] [-hvB] [command..]</p>

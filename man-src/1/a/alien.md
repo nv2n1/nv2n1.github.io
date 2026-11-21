@@ -1,4 +1,5 @@
 ---
+
 title: "alien(1)"
 name: "alien"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-alien/"
 description: "alien – Convert or install an alien binary package"
 ---
 
-<h2 class="name">NAME</h2>
 <p> alien &#8211; Convert or install an alien binary package </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

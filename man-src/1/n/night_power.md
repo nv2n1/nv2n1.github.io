@@ -1,4 +1,5 @@
 ---
+
 title: "night_power(1)"
 name: "night_power"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-night_power/"
 description: "night_power – control the power of camera"
 ---
 
-<h2>NAME</h2>
 <p> night_power &#8211; control the power of camera</p>
 <h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr>night_power&nbsp;<wbr>{on|off|info}&nbsp;<wbr>[-host address]</p>

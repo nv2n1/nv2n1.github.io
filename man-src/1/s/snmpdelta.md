@@ -1,4 +1,5 @@
 ---
+
 title: "snmpdelta(1)"
 name: "snmpdelta"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-snmpdelta/"
 description: "snmpdelta – Monitor delta differences in SNMP Counter values"
 ---
 
-<h2>NAME</h2>
 <p> snmpdelta &#8211; Monitor delta differences in SNMP Counter values</p>
 <h2>SYNOPSIS</h2>
 <p> <code>snmpdelta</code> [ COMMON OPTIONS ] [-Cf] [ -Ct ] [ -Cs ] [ -CS ] [ -Cm ] [ -CF configfile ] [ -Cl ] [ -Cp period ] [ -CP Peaks ] [ -Ck ] [ -CT ] AGENT OID [ OID &#8230; ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "t1rawafm(1)"
 name: "t1rawafm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-t1rawafm/"
 description: "t1rawafm – produce raw AFM metrics from a PostScript Type 1 font"
 ---
 
-<h2 class="name">NAME</h2>
 <p> t1rawafm &#8211; produce raw AFM metrics from a PostScript Type 1 font </p>
 <h2>SYNOPSIS</h2>
 <p> <code>t1rawafm</code> [OPTIONS&#8230;] [<i>font</i> [<i>outputfile</i>]]</p>

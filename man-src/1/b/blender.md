@@ -1,4 +1,5 @@
 ---
+
 title: "blender(1)"
 name: "blender"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-blender/"
 description: "blender – a 3D modelling and rendering package"
 ---
 
-<h2 class="name">NAME</h2>
 <p> blender &#8211; a 3D modelling and rendering package </p>
 <h2>SYNOPSIS</h2>
 <p> <code>blender [args &#8230;] [file] [args &#8230;]</code> </p>

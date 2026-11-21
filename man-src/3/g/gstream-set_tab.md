@@ -1,4 +1,5 @@
 ---
+
 title: "gstream-set_tab(3)"
 name: "gstream-set_tab"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gstream-set_tab/"
 description: "set_tab"
 ---
 
-<h2>NAME</h2>
 <p> set_tab</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gstream.h">gstream.h</a>&gt;</code> </p>

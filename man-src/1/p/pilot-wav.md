@@ -1,4 +1,5 @@
 ---
+
 title: "pilot-wav(1)"
 name: "pilot-wav"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pilot-wav/"
 description: "pilot-wav – Decodes Palm Voice Memo files to wav files you can read on your desktop"
 ---
 
-<h2>NAME</h2>
 <p> pilot-wav &#8211; Decodes Palm Voice Memo files to wav files you can read on your desktop</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>

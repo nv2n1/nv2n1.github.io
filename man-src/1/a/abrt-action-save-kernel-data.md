@@ -1,4 +1,5 @@
 ---
+
 title: "abrt-action-save-kernel-data(1)"
 name: "abrt-action-save-kernel-data"
 section: "1"
@@ -6,10 +7,7 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-action-save-kernel-data/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- abrt-action-save-kernel-data - Creates uReport mandatory files for kernel oopses. 
+abrt-action-save-kernel-data - Creates uReport mandatory files for kernel oopses. 
 
 <h2>SYNOPSIS</h2>
 

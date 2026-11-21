@@ -1,4 +1,5 @@
 ---
+
 title: "commoditycurve(3)"
 name: "commoditycurve"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-commoditycurve/"
 description: "ql/experimental/commodities/commoditycurve.hpp – Commodity curve."
 ---
 
-<h2 class="name">NAME</h2>
 <p> ql/experimental/commodities/commoditycurve.hpp &#8211; Commodity curve. </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructure.hpp&gt;<br />

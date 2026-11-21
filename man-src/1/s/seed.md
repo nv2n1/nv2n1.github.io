@@ -1,4 +1,5 @@
 ---
+
 title: "seed(1)"
 name: "seed"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-seed/"
 description: "seed – libseed JavaScript REPL/Interpreter."
 ---
 
-<h2>NAME</h2>
 <p> seed &#8211; libseed JavaScript REPL/Interpreter.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>seed</code> [OPTION&#8230;] [SCRIPT]</p>

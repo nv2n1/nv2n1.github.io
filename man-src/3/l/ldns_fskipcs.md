@@ -1,4 +1,5 @@
 ---
+
 title: "ldns_fskipcs(3)"
 name: "ldns_fskipcs"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-ldns_fskipcs/"
 description: "ldns_fget_token, ldns_fskipcs"
 ---
 
-<h2>NAME</h2>
 <p> ldns_fget_token, ldns_fskipcs </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />

@@ -1,4 +1,5 @@
 ---
+
 title: "ppmtobmp(1)"
 name: "ppmtobmp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ppmtobmp/"
 description: "ppmtobmp – convert a portable pixmap into a BMP file"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ppmtobmp &#8211; convert a portable pixmap into a BMP file </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ppmtobmp</code> [<code>-windows</code>] [<code>-os2</code>] [<code>-bpp=</code><i>bits_per_pixel</i>] [<i>ppmfile</i>]</p>

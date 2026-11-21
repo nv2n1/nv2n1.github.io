@@ -1,4 +1,5 @@
 ---
+
 title: "fts-rest-transfer-status(1)"
 name: "fts-rest-transfer-status"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fts-rest-transfer-status/"
 description: "fts-rest-transfer-status"
 ---
 
-<h2>NAME</h2>
 <p> fts-rest-transfer-status</p>
 <h2>SYNOPIS</h2>
 <p> Usage: fts-rest-transfer-status [options] JOB_ID</p>

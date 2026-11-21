@@ -1,4 +1,5 @@
 ---
+
 title: "m(1)"
 name: "m"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-m/"
 description: "m.proj – Convert coordinates from one projection to another (cs2cs frontend)."
 ---
 
-<h2>NAME</h2>
 <p> <i></i><code>m.proj</code> &#8211; Convert coordinates from one projection to another (cs2cs frontend).</p>
 <h2>KEYWORDS</h2>
 <p> miscellaneous, projection</p>

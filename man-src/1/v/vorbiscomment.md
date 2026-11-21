@@ -1,4 +1,5 @@
 ---
+
 title: "vorbiscomment(1)"
 name: "vorbiscomment"
 section: "1"
@@ -6,7 +7,7 @@ letter: "v"
 url: "/docs/linux/man/1-vorbiscomment/"
 description: "vorbiscomment – List or edit comments in Ogg Vorbis files"
 ---
-<h2 class="name">NAME</h2>
+
 <p> vorbiscomment - List or edit comments in Ogg Vorbis files  </p>
 <h2>SYNOPSIS</h2>
 <p> <code>vorbiscomment</code> <code>[-l]</code> [<code>-R</code>] [<code>-e</code>] <i>file.ogg</i> <br />

@@ -1,4 +1,5 @@
 ---
+
 title: "lessfile(1)"
 name: "lessfile"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lessfile/"
 description: "lessfile, lesspipe – \"input preprocessor\" for less."
 ---
 
-<h2 class="name">NAME</h2>
 <p> lessfile, lesspipe &#8211; &quot;input preprocessor&quot; for less. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>lessfile, lesspipe</code></p>

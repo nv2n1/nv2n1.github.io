@@ -1,4 +1,5 @@
 ---
+
 title: "dirfile_rename(3)"
 name: "dirfile_rename"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dirfile_rename/"
 description: "dirfile_rename — change the name of a dirfile field"
 ---
 
-<h2>NAME</h2>
 <p> dirfile_rename &#8212; change the name of a dirfile field</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

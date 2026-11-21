@@ -1,4 +1,5 @@
 ---
+
 title: "volname(1)"
 name: "volname"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-volname/"
 description: "volname – return volume name"
 ---
 
-<h2 class="name">NAME</h2>
 <p> volname &#8211; return volume name </p>
 <h2>SYNOPSIS</h2>
 <p> volname [&lt;device-file&gt;] </p>

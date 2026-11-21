@@ -1,4 +1,5 @@
 ---
+
 title: "guilt-help(1)"
 name: "guilt-help"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-guilt-help/"
 description: "guilt-help – open man page of a guilt command"
 ---
 
-<h2 class="name">NAME</h2>
 <p> guilt-help &#8211; open man page of a guilt command </p>
 <h2>SYNOPSIS</h2>
 <p> <i>guilt-help</i> [&lt;command&gt; | &lt;topic&gt;]</p>

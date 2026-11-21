@@ -1,4 +1,5 @@
 ---
+
 title: "mergerepo(1)"
 name: "mergerepo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mergerepo/"
 description: "mergerepo – Merge multiple repositories together"
 ---
 
-<h2 class="name">NAME</h2>
 <p> mergerepo &#8211; Merge multiple repositories together</p>
 <h2>SYNOPSIS</h2>
 <p> <code>mergerepo</code> &#8211;repo repo1 &#8211;repo repo2 </p>

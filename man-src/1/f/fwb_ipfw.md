@@ -1,4 +1,5 @@
 ---
+
 title: "fwb_ipfw(1)"
 name: "fwb_ipfw"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fwb_ipfw/"
 description: "fwb_ipfw – Policy compiler for ipfw"
 ---
 
-<h2>NAME</h2>
 <p> fwb_ipfw &#8211; Policy compiler for ipfw</p>
 <h2>SYNOPSIS</h2>
 <p> <code>fwb_ipfw</code> <code>[-vVx]</code> <code>[-d wdir]</code> <code>[-o output.fw]</code> <code>[-i]</code> <code>-f data_file.xml</code> object_name </p>

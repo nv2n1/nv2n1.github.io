@@ -1,4 +1,5 @@
 ---
+
 title: "cgi_display(3)"
 name: "cgi_display"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgi_display/"
 description: "cgi_display – render and display the CGI output to the user"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cgi_display &#8211; render and display the CGI output to the user </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

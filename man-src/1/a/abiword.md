@@ -1,4 +1,5 @@
 ---
+
 title: "abiword(1)"
 name: "abiword"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-abiword/"
 description: "abiword — flexible cross-platform word processor"
 ---
 
-<h2>NAME</h2>
 <p> abiword &#8212; flexible cross-platform word processor</p>
 <h2>SYNOPSIS</h2>
 <p> <code>abiword</code> [<i>OPTIONS</i>] [<i>FILENAME&#8230;</i>]</p>

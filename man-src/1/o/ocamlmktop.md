@@ -1,4 +1,5 @@
 ---
+
 title: "ocamlmktop(1)"
 name: "ocamlmktop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ocamlmktop/"
 description: "ocamlmktop – Building custom toplevel systems"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ocamlmktop &#8211; Building custom toplevel systems</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ocamlmktop</code> [ <code>-v</code>|<code>-version</code>|<code>-vnum</code> ] [ <code>-cclib</code><i>&nbsp;<wbr>libname</i> ] [ <code>-ccopt</code><i>&nbsp;<wbr>option</i> ] [ <code>-custom</code> [ <code>-o</code><i>&nbsp;<wbr>exec-file</i> ] [ <code>-I</code><i>&nbsp;<wbr>lib-dir</i> ] <i>filename &#8230;</i> </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "ecryptfs-rewrite-file(1)"
 name: "ecryptfs-rewrite-file"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ecryptfs-rewrite-file/"
 description: "ecryptfs-rewrite-file – force a file to be rewritten (reencrypted) in the lower filesystem"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ecryptfs-rewrite-file &#8211; force a file to be rewritten (reencrypted) in the lower filesystem</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ecryptfs-rewrite-file [file1] [file2] [file3] &#8230;</code> </p>

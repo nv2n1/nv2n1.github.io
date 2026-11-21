@@ -1,4 +1,5 @@
 ---
+
 title: "get_framenum_subset(3)"
 name: "get_framenum_subset"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-get_framenum_subset/"
 description: "get_framenum_subset, get_framenum — perform a reverse look-up on a monotonic dirfile field"
 ---
 
-<h2>NAME</h2>
 <p> get_framenum_subset, get_framenum &#8212; perform a reverse look-up on a monotonic dirfile field</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>

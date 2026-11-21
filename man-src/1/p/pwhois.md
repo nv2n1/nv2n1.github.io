@@ -1,4 +1,5 @@
 ---
+
 title: "pwhois(1)"
 name: "pwhois"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pwhois/"
 description: "pwhois – Perl written whois client"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pwhois &#8211; Perl written whois client </p>
 <h2>SYNOPSIS</h2>
 <pre>

@@ -1,4 +1,5 @@
 ---
+
 title: "apropos(1)"
 name: "apropos"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-apropos/"
 description: "apropos – search the manual page names and descriptions"
 ---
 
-<h2 class="name">NAME</h2>
 <p> apropos &#8211; search the manual page names and descriptions </p>
 <h2>SYNOPSIS</h2>
 <p> <code>apropos</code> [<code>-dalv?V</code>] [<code>-e</code>|<code>-w</code>|<code>-r</code>] [<code>-s</code> <i>list</i>] [<code>-m</code> <i>system</i>[,&#8230;]] [<code>-M</code> <i>path</i>] [<code>-L</code> <i>locale</i>] [<code>-C</code> <i>file</i>] <i>keyword</i> &#8230;</p>

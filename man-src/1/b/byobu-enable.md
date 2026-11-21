@@ -1,4 +1,5 @@
 ---
+
 title: "byobu-enable(1)"
 name: "byobu-enable"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-byobu-enable/"
 description: "byobu-enable, byobu-disable – wrapper script for enabling/disabling automatic startup of byobu after login into text console"
 ---
 
-<h2>NAME</h2>
 <p> byobu-enable, byobu-disable &#8211; wrapper script for enabling/disabling automatic startup of byobu after login into text console </p>
 <h2>SYNOPSIS</h2>
 <p> <code>byobu-enable</code></p>

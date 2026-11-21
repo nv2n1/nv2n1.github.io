@@ -1,4 +1,5 @@
 ---
+
 title: "euare-accountlistpolicies(1)"
 name: "euare-accountlistpolicies"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euare-accountlistpolicies/"
 description: "euare-accountlistpolicies – [Eucalyptus only] List one or all policies policies attached to an account"
 ---
 
-<h2>NAME</h2>
 <p> euare-accountlistpolicies &#8211; [Eucalyptus only] List one or all policies policies attached to an account</p>
 <h2>SYNOPSIS</h2>
 <p> euare-accountlistpolicies [-p POLICY] [-v] [&#8211;pretty-print] [-U URL]</p>

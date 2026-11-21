@@ -1,4 +1,5 @@
 ---
+
 title: "gpspipe(1)"
 name: "gpspipe"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gpspipe/"
 description: "gpspipe – tool to connect to gpsd and retrieve sentences"
 ---
 
-<h2 class="name">NAME</h2>
 <p> gpspipe &#8211; tool to connect to gpsd and retrieve sentences </p>
 <h2>SYNOPSIS</h2>
 <dl>

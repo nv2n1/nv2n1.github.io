@@ -1,4 +1,5 @@
 ---
+
 title: "dc1394_reset_bus(1)"
 name: "dc1394_reset_bus"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dc1394_reset_bus/"
 description: "dc1394_reset_bus – resets the IEEE1394 bus"
 ---
 
-<h2>NAME</h2>
 <p> dc1394_reset_bus &#8211; resets the IEEE1394 bus</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dc1394_reset_bus</code></p>

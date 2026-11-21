@@ -1,4 +1,5 @@
 ---
+
 title: "globus_priority_q_first_priority(3)"
 name: "globus_priority_q_first_priority"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_priority_q_first_priority/"
 description: "Priority Queue –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Priority Queue &#8211; </p>
 <h3>Data Structures</h3>
 <p> struct <code>globus_priority_q_s</code><br />

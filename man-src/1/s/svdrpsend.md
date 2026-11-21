@@ -1,4 +1,5 @@
 ---
+
 title: "svdrpsend(1)"
 name: "svdrpsend"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-svdrpsend/"
 description: "svdrpsend – sends commands to VDR"
 ---
 
-<h2>NAME</h2>
 <p> svdrpsend &#8211; sends commands to VDR</p>
 <h2>SYNOPSIS</h2>
 <p> svdrpsend [<i>options</i>] <i>command</i></p>

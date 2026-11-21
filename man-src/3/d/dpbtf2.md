@@ -1,4 +1,5 @@
 ---
+
 title: "dpbtf2(3)"
 name: "dpbtf2"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-dpbtf2/"
 description: "dpbtf2.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dpbtf2.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

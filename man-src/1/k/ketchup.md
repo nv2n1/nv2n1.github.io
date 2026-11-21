@@ -1,4 +1,5 @@
 ---
+
 title: "ketchup(1)"
 name: "ketchup"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ketchup/"
 description: "ketchup – Utility to update the kernel source"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ketchup &#8211; Utility to update the kernel source </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ketchup</code> [<i>options</i>] <i>&lt;ver&gt;</i></p>

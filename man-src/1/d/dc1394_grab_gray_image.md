@@ -1,4 +1,5 @@
 ---
+
 title: "dc1394_grab_gray_image(1)"
 name: "dc1394_grab_gray_image"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dc1394_grab_gray_image/"
 description: "grab_gray_image – grab an image using libdc1394"
 ---
 
-<h2>NAME</h2>
 <p> grab_gray_image &#8211; grab an image using libdc1394</p>
 <h2>SYNOPSIS</h2>
 <p> <code>grab_gray_image</code></p>

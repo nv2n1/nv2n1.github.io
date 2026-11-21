@@ -1,4 +1,5 @@
 ---
+
 title: "bson_string_free(3)"
 name: "bson_string_free"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_string_free/"
 description: "bson_string_free() – Frees the bson_string_t structure and optionally the string itself."
 ---
 
-<h2>NAME</h2>
 <p> bson_string_free() &#8211; Frees the bson_string_t structure and optionally the string itself.</p>
 <h2>SYNOPSIS</h2>
 <pre>

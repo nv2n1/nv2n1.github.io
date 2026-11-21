@@ -1,4 +1,5 @@
 ---
+
 title: "flawfinder(1)"
 name: "flawfinder"
 section: "1"
@@ -6,7 +7,7 @@ letter: "f"
 url: "/docs/linux/man/1-flawfinder/"
 description: "flawfinder – find potential security flaws (\"hits\") in source code"
 ---
-<h2>NAME</h2>
+
 <p> flawfinder - find potential security flaws (&quot;hits&quot;) in source code  </p>
 <h2>SYNOPSIS</h2>
 <p> <code>flawfinder</code> [<code>--help</code>] [<code>--version</code>] [<code>--allowlink</code>] [<code>--inputs</code>|<code>-I</code>] [ <code>--minlevel </code><i>X</i> | <code>-m</code>&nbsp;<wbr><i>X</i> ] [<code>--falsepositive</code>|<code>-F</code>] [<code>--neverignore</code>|<code>-n</code>] [<code>--patch&nbsp;<wbr></code><i>filename</i>|<code>-P&nbsp;<wbr></code><i>filename</i>] [<code>--followdotdir</code>] [<code>--context</code>|<code>-c</code>] [<code>--columns</code>|<code>-C</code>] [<code>--dataonly</code>|<code>-D</code>] [<code>--html</code>] [<code>--immediate</code>|<code>-i</code>] [<code>--singleline</code>|<code>-S</code>] [<code>--omittime</code>] [<code>--quiet</code>|<code>-Q</code>] [ <code>--loadhitlist&nbsp;<wbr></code><i>F</i> ] [ <code>--savehitlist&nbsp;<wbr></code><i>F</i> ] [ <code>--diffhitlist&nbsp;<wbr></code><i>F</i> ] [<code>--</code>] <i>[ source code file or source root directory ]+</i>  </p>

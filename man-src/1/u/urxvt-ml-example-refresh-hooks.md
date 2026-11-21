@@ -1,4 +1,5 @@
 ---
+
 title: "urxvt-ml-example-refresh-hooks(1)"
 name: "urxvt-ml-example-refresh-hooks"
 section: "1"
@@ -6,10 +7,7 @@ letter: "u"
 url: "/docs/linux/man/1-urxvt-ml-example-refresh-hooks/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- example-refresh-hooks - example of how to use refresh hooks 
+example-refresh-hooks - example of how to use refresh hooks 
 
 <h2>DESCRIPTION</h2>
 

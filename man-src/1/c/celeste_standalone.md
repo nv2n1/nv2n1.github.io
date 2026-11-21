@@ -1,4 +1,5 @@
 ---
+
 title: "celeste_standalone(1)"
 name: "celeste_standalone"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-celeste_standalone/"
 description: "celeste_standalone – Cloud identification"
 ---
 
-<h2 class="name">NAME</h2>
 <p> celeste_standalone &#8211; Cloud identification </p>
 <h2>SYNOPSIS</h2>
 <p> <code>celeste_standalone</code> [options] <i>image1</i> <i>image2</i> <i>[..]</i></p>

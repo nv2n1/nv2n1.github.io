@@ -1,4 +1,5 @@
 ---
+
 title: "cgglse(3)"
 name: "cgglse"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cgglse/"
 description: "cgglse.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cgglse.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

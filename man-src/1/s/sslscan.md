@@ -1,4 +1,5 @@
 ---
+
 title: "sslscan(1)"
 name: "sslscan"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sslscan/"
 description: "sslscan – Fast SSL/TLS scanner"
 ---
 
-<h2>NAME</h2>
 <p> sslscan &#8211; Fast SSL/TLS scanner</p>
 <h2>SYNOPSIS</h2>
 <p> <code>sslscan</code> [<i>options</i>]<i> [host:port | host]</i></p>

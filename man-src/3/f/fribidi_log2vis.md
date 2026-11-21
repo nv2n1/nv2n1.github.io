@@ -1,4 +1,5 @@
 ---
+
 title: "fribidi_log2vis(3)"
 name: "fribidi_log2vis"
 section: "3"
@@ -6,10 +7,7 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_log2vis/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- fribidi_log2vis - get visual string 
+fribidi_log2vis - get visual string 
 
 <h2>SYNOPSIS</h2>
 

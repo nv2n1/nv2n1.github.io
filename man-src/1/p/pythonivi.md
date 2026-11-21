@@ -1,4 +1,5 @@
 ---
+
 title: "pythonivi(1)"
 name: "pythonivi"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pythonivi/"
 description: "pythonivi – Python IVI Documentation"
 ---
 
-<h2>NAME</h2>
 <p> pythonivi &#8211; Python IVI Documentation </p>
 <p> Python IVI is a Python-based interpretation of the Interchangeable Virtual Instrument standard from the <i>IVI foundation</i>. </p>
 <p> See also:</p>

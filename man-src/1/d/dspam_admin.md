@@ -1,4 +1,5 @@
 ---
+
 title: "dspam_admin(1)"
 name: "dspam_admin"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dspam_admin/"
 description: "dspam_admin – Alter DSPAM users preferences"
 ---
 
-<h2 class="name">NAME</h2>
 <p> dspam_admin &#8211; Alter DSPAM users preferences</p>
 <h2>SYNOPSIS</h2>
 <p> <code>dspam_admin</code> [<code>&#8211;profile</code>=PROFILE] [<i>function</i>] [<i>argument</i>] </p>

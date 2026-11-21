@@ -1,4 +1,5 @@
 ---
+
 title: "expect_multixterm(1)"
 name: "expect_multixterm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-expect_multixterm/"
 description: "multixterm – drive multiple xterms separately or together"
 ---
 
-<h2 class="name">NAME</h2>
 <p> multixterm &#8211; drive multiple xterms separately or together </p>
 <h2>SYNOPSIS</h2>
 <p> <code>multixterm</code> [ <i>args</i> ]</p>

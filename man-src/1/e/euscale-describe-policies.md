@@ -1,4 +1,5 @@
 ---
+
 title: "euscale-describe-policies(1)"
 name: "euscale-describe-policies"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euscale-describe-policies/"
 description: "euscale-describe-policies – Describe auto-scaling policies"
 ---
 
-<h2>NAME</h2>
 <p> euscale-describe-policies &#8211; Describe auto-scaling policies</p>
 <h2>SYNOPSIS</h2>
 <p> euscale-describe-policies [-g ASGROUP] [&#8211;show-long]</p>

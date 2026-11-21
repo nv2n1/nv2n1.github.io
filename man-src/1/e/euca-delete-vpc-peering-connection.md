@@ -1,4 +1,5 @@
 ---
+
 title: "euca-delete-vpc-peering-connection(1)"
 name: "euca-delete-vpc-peering-connection"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-delete-vpc-peering-connection/"
 description: "euca-delete-vpc-peering-connection – Delete a VPC peering connection"
 ---
 
-<h2>NAME</h2>
 <p> euca-delete-vpc-peering-connection &#8211; Delete a VPC peering connection</p>
 <h2>SYNOPSIS</h2>
 <p> euca-delete-vpc-peering-connection [&#8211;show-empty-fields] [-U URL]</p>

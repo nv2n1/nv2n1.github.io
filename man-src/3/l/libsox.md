@@ -1,4 +1,5 @@
 ---
+
 title: "libsox(3)"
 name: "libsox"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libsox/"
 description: "libsox – SoX, an audio file-format and effect library"
 ---
 
-<h2>NAME</h2>
 <p> libsox &#8211; SoX, an audio file-format and effect library</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

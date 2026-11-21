@@ -1,4 +1,5 @@
 ---
+
 title: "tarsnap(1)"
 name: "tarsnap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tarsnap/"
 description: "tarsnap – manipulate remote encrypted backups"
 ---
 
-<h2>NAME</h2>
 <p> <code>tarsnap</code> &#8211; manipulate remote encrypted backups</p>
 <h2>SYNOPSIS</h2>
 <p> Br q Fl c &#8211;<code>-keyfile </code><i>key-file</i> &#8211;<code>-cachedir </code><i>cache-dir</i> &#8211;<code>f </code><i>archive-name</i> [<i>options</i> ] [<i>files | directories</i> ]<br />

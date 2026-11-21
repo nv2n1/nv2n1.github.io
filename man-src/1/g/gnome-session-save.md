@@ -1,4 +1,5 @@
 ---
+
 title: "gnome-session-save(1)"
 name: "gnome-session-save"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gnome-session-save/"
 description: "gnome-session-save – Saves or ends the current GNOME session"
 ---
 
-<h2>NAME</h2>
 <p> gnome-session-save &#8211; Saves or ends the current GNOME session</p>
 <h2>SYNOPSIS</h2>
 <p> <code>gnome-session-save [&#8211;logout] [&#8211;force-logout] [&#8211;logout-dialog] [&#8211;shutdown-dialog] [&#8211;gui] [&#8211;kill [&#8211;silent]]</code></p>

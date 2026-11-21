@@ -1,4 +1,5 @@
 ---
+
 title: "kover(1)"
 name: "kover"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kover/"
 description: "kover – CD Cover printer"
 ---
 
-<h2>NAME</h2>
 <p> kover &#8211; CD Cover printer</p>
 <h2>SYNOPSIS</h2>
 <p> <code>kover</code> [<i>Qt-options</i>] [<i>KDE-options</i>] [<i>options</i>] <i>file</i></p>

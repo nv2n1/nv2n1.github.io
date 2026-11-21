@@ -1,4 +1,5 @@
 ---
+
 title: "scriptreplay(1)"
 name: "scriptreplay"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-scriptreplay/"
 description: "scriptreplay – play back typescripts, using timing information"
 ---
 
-<h2 class="name">NAME</h2>
 <p> scriptreplay &#8211; play back typescripts, using timing information </p>
 <h2>SYNOPSIS</h2>
 <p> <code>scriptreplay</code> [options] [<code>-t</code>] <i>timingfile</i> [<i>typescript</i> [<i>divisor</i>]]</p>

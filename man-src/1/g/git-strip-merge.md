@@ -1,4 +1,5 @@
 ---
+
 title: "git-strip-merge(1)"
 name: "git-strip-merge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-strip-merge/"
 description: "git-strip-merge – A git-merge wrapper that deletes files on a \"foreign\" branch before merging"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-strip-merge &#8211; A git-merge wrapper that deletes files on a &quot;foreign&quot; branch before merging </p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-strip-merge</code> [<i>git-merge options</i>] [<code>-M</code> <i>&lt;commitmsg&gt;</i>] <i>&lt;branch&gt;</i> <i>FILE</i>&#8230;</p>

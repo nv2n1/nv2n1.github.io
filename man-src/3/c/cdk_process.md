@@ -1,4 +1,5 @@
 ---
+
 title: "cdk_process(3)"
 name: "cdk_process"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cdk_process/"
 description: "cdk_process – curses widget pre/post-processing"
 ---
 
-<h2>NAME</h2>
 <p> cdk_process &#8211; curses widget pre/post-processing</p>
 <h2>SYNOPSIS</h2>
 <p> Perform pre- and post-processing of data which is injected into a widget.</p>

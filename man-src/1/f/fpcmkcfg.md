@@ -1,4 +1,5 @@
 ---
+
 title: "fpcmkcfg(1)"
 name: "fpcmkcfg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fpcmkcfg/"
 description: "fpcmkcfg – The Free Pascal configuration program."
 ---
 
-<h2>NAME</h2>
 <p> fpcmkcfg &#8211; The Free Pascal configuration program. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fpcmkcfg [options]</code> </p>

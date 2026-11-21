@@ -1,4 +1,5 @@
 ---
+
 title: "xstdcmap(1)"
 name: "xstdcmap"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xstdcmap/"
 description: "xstdcmap – X standard colormap utility"
 ---
 
-<h2 class="name">NAME</h2>
 <p> xstdcmap &#8211; X standard colormap utility </p>
 <h2>SYNOPSIS</h2>
 <p> <code>xstdcmap</code> [-all] [-best] [-blue] [-default] [-delete <i>map</i>] [-display <i>dpy</i>] [-gray] [-green] [-help] [-red] [-verbose] [-version]</p>

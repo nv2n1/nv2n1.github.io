@@ -1,4 +1,5 @@
 ---
+
 title: "cargo-metadata(1)"
 name: "cargo-metadata"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cargo-metadata/"
 description: "cargo-metadata – Machine-readable metadata about the current project"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cargo-metadata &#8211; Machine-readable metadata about the current project </p>
 <h2>SYNOPSIS</h2>
 <p> cargo metadata [OPTIONS]</p>

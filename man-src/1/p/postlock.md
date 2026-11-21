@@ -1,4 +1,5 @@
 ---
+
 title: "postlock(1)"
 name: "postlock"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-postlock/"
 description: "postlock – lock mail folder and execute command"
 ---
 
-<h2 class="name">NAME</h2>
 <p> postlock &#8211; lock mail folder and execute command </p>
 <h2>SYNOPSIS</h2>
 <p> <code>postlock</code> [<code>-c </code><i>config_dir</i>] [<code>-l </code><i>lock_style</i>]<br />

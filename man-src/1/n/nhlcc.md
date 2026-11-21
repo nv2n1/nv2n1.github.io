@@ -1,4 +1,5 @@
 ---
+
 title: "nhlcc(1)"
 name: "nhlcc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nhlcc/"
 description: "nhlcc – Command for compiling C code that uses the NCAR Graphics high-level utilities."
 ---
 
-<h2>NAME</h2>
 <p> nhlcc &#8211; Command for compiling C code that uses the NCAR Graphics high-level utilities.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nhlcc</code> [<code>-ngmath</code>] [<code>-ncarbd</code>] [<code>-ngmathbd</code>] [<code>-netcdf</code>] [<code>-hdf</code>] &#8230;</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "lid(1)"
 name: "lid"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lid/"
 description: "lid – Display user’s groups or group’s users"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lid &#8211; Display user&#8217;s groups or group&#8217;s users</p>
 <h2>SYNOPSIS</h2>
 <p> lid [<i>OPTION</i>]&#8230; [<i>name</i>] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "aplay(1)"
 name: "aplay"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-aplay/"
 description: "arecord, aplay – command-line sound recorder and player for ALSA soundcard driver"
 ---
 
-<h2 class="name">NAME</h2>
 <p> arecord, aplay &#8211; command-line sound recorder and player for ALSA soundcard driver </p>
 <h2>SYNOPSIS</h2>
 <p> <code>arecord</code> [<i>flags</i>] [filename]<br />

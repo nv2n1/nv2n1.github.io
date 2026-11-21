@@ -1,4 +1,5 @@
 ---
+
 title: "cggsvd(3)"
 name: "cggsvd"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-cggsvd/"
 description: "cggsvd.f –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> cggsvd.f &#8211; </p>
 <h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>

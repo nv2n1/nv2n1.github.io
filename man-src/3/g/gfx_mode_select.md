@@ -1,4 +1,5 @@
 ---
+
 title: "gfx_mode_select(3)"
 name: "gfx_mode_select"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-gfx_mode_select/"
 description: "gfx_mode_select – Displays the Allegro graphics mode selection dialog."
 ---
 
-<h2>NAME</h2>
 <p> gfx_mode_select &#8211; Displays the Allegro graphics mode selection dialog.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

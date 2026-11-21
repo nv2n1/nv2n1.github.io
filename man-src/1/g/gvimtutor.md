@@ -1,4 +1,5 @@
 ---
+
 title: "gvimtutor(1)"
 name: "gvimtutor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gvimtutor/"
 description: "vimtutor – the Vim tutor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> vimtutor &#8211; the Vim tutor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>vimtutor [-g] [language]</code></p>

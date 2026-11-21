@@ -1,4 +1,5 @@
 ---
+
 title: "friendsd2(1)"
 name: "friendsd2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-friendsd2/"
 description: "friendsd2 – displays GPS position on a map"
 ---
 
-<h2>NAME</h2>
 <p> friendsd2 &#8211; displays GPS position on a map</p>
 <h2>SYNOPSIS</h2>
 <p> <code>friendsd2 [options]</code> </p>

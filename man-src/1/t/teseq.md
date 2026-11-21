@@ -1,4 +1,5 @@
 ---
+
 title: "teseq(1)"
 name: "teseq"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-teseq/"
 description: "teseq – manual page for teseq 1.0.0"
 ---
 
-<h2>NAME</h2>
 <p> teseq &#8211; manual page for teseq 1.0.0</p>
 <h2>SYNOPSIS</h2>
 <p> <code>teseq</code> [<i>-CLDEx</i>] [<i>in</i>] [<i>out</i>]<br />

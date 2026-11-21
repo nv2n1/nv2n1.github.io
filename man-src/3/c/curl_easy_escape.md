@@ -1,4 +1,5 @@
 ---
+
 title: "curl_easy_escape(3)"
 name: "curl_easy_escape"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-curl_easy_escape/"
 description: "curl_easy_escape – URL encodes the given string"
 ---
 
-<h2>NAME</h2>
 <p> curl_easy_escape &#8211; URL encodes the given string</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;curl/curl.h&gt;</code> </p>

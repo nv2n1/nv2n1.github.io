@@ -1,4 +1,5 @@
 ---
+
 title: "bson_strfreev(3)"
 name: "bson_strfreev"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-bson_strfreev/"
 description: "bson_strfreev() – This will free each string in a NULL-terminated array of strings and then the array itself."
 ---
 
-<h2>NAME</h2>
 <p> bson_strfreev() &#8211; This will free each string in a NULL-terminated array of strings and then the array itself.</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

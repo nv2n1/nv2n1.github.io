@@ -1,4 +1,5 @@
 ---
+
 title: "bson_md5_t(3)"
 name: "bson_md5_t"
 section: "3"
@@ -6,9 +7,7 @@ letter: "b"
 url: "/docs/linux/man/3-bson_md5_t/"
 ---
 
-<h2>NAME</h2>
-
- bson_md5_t - BSON MD5 Abstraction
+bson_md5_t - BSON MD5 Abstraction
 
 <h2>SYNOPSIS</h2>
 

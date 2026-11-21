@@ -1,4 +1,5 @@
 ---
+
 title: "arguments(3)"
 name: "arguments"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-arguments/"
 description: "QuantLib::ForwardVanillaOption – Forward version of a vanilla option"
 ---
 
-<h2 class="name">NAME</h2>
 <p> QuantLib::ForwardVanillaOption &#8211; Forward version of a vanilla option </p>
 <h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/forwardvanillaoption.hpp&gt; </p>

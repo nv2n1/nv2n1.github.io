@@ -1,4 +1,5 @@
 ---
+
 title: "ibv_get_device_guid(3)"
 name: "ibv_get_device_guid"
 section: "3"
@@ -6,12 +7,7 @@ letter: "i"
 url: "/docs/linux/man/3-ibv_get_device_guid/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- 
-
- ibv_get_device_guid - get an RDMA device's GUID 
+ibv_get_device_guid - get an RDMA device's GUID 
 
 <h2>SYNOPSIS</h2>
 

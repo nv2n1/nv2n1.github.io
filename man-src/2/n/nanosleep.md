@@ -1,4 +1,5 @@
 ---
+
 title: "nanosleep(2)"
 name: "nanosleep"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-nanosleep/"
 description: "nanosleep – high-resolution sleep"
 ---
 
-<h2 class="name">NAME</h2>
 <p> nanosleep &#8211; high-resolution sleep </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;time.h&gt;</code> </p>

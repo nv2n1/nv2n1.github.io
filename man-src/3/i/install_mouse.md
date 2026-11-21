@@ -1,4 +1,5 @@
 ---
+
 title: "install_mouse(3)"
 name: "install_mouse"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-install_mouse/"
 description: "install_mouse – Installs the Allegro mouse handler."
 ---
 
-<h2>NAME</h2>
 <p> install_mouse &#8211; Installs the Allegro mouse handler.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

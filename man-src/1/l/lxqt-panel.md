@@ -1,4 +1,5 @@
 ---
+
 title: "lxqt-panel(1)"
 name: "lxqt-panel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lxqt-panel/"
 description: "lxqt-panel – Desktop panel for LXQt: The Lightweight Qt Desktop Environment"
 ---
 
-<h2>NAME</h2>
 <p> lxqt-panel &#8211; Desktop panel for <code>LXQt</code>: The Lightweight Qt Desktop Environment</p>
 <h2>SYNOPSIS</h2>
 <p> <code>lxqt-panel</code> </p>

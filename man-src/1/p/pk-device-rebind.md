@@ -1,4 +1,5 @@
 ---
+
 title: "pk-device-rebind(1)"
 name: "pk-device-rebind"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pk-device-rebind/"
 description: "pk-device-rebind – Device software reloader"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pk-device-rebind &#8211; Device software reloader </p>
 <h2>SYNOPSIS</h2>
 <dl>

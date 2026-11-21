@@ -1,4 +1,5 @@
 ---
+
 title: "mdb-prop(1)"
 name: "mdb-prop"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mdb-prop/"
 description: "mdb-prop – Get properties list from MDB database"
 ---
 
-<h2>NAME</h2>
 <p> <code>mdb-prop </code>&#8211; Get properties list from MDB database</p>
 <h2>SYNOPSIS</h2>
 <pre>

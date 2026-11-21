@@ -1,4 +1,5 @@
 ---
+
 title: "pmview(1)"
 name: "pmview"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmview/"
 description: "pmview – performance metrics 3D visualization back-end"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmview</code> &#8211; performance metrics 3D visualization back-end</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmview</code> [<code>-Cz</code>] [<code>-A</code> <i>align</i>] [<code>-a</code> <i>archive</i>[<code>,</code><i>archive</i><code>,</code>&#8230;]] [<code>-c</code> <i>configfile</i>] [<code>-h</code> <i>host</i>] [<code>-n</code> <i>pmnsfile</i>] [<code>-O</code> <i>origin</i>] [<code>-p</code> <i>port</i>] [<code>-R</code> <i>logconfig</i>] [<code>-r</code> <i>addconfig</i>] [<code>-S</code> <i>starttime</i>] [<code>-t</code> <i>interval</i>] [<code>-T</code> <i>endtime</i>] [<code>-x</code> <i>version</i>] [<code>-Z</code> <i>timezone</i>] [<code>-geometry</code> <i>geometry</i>] [<code>-display</code> <i>display</i>] [<code>-name</code> <i>name</i>] [<code>-title</code> <i>title</i>] [<code>-xrm &quot;</code><i>resourceName</i><code>:</code><i> value</i><code>&quot;</code> &#8230;] [<i>other X11-args</i>]</p>

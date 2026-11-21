@@ -1,4 +1,5 @@
 ---
+
 title: "coredumpctl(1)"
 name: "coredumpctl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-coredumpctl/"
 description: "coredumpctl – Retrieve coredumps from the journal"
 ---
 
-<h2 class="name">NAME</h2>
 <p> coredumpctl &#8211; Retrieve coredumps from the journal </p>
 <h2>SYNOPSIS</h2>
 <dl>

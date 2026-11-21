@@ -1,4 +1,5 @@
 ---
+
 title: "pmdatrivial(1)"
 name: "pmdatrivial"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmdatrivial/"
 description: "pmdatrivial – trivial performance metrics domain agent (PMDA)"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmdatrivial</code> &#8211; trivial performance metrics domain agent (PMDA)</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/trivial/pmdatrivial</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>]</p>

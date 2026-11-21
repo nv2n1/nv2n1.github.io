@@ -1,4 +1,5 @@
 ---
+
 title: "kafs_set_verbose(3)"
 name: "kafs_set_verbose"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-kafs_set_verbose/"
 description: "k_hasafs k_hasafs_recheck k_pioctl k_unlog k_setpag k_afs_cell_of_file kafs_set_verbose kafs_settoken_rxkad kafs_settoken krb_afslog krb_afslog_uid kafs_settoken5 krb5_afslog krb5_afslog_uid – AFS ..."
 ---
 
-<h2>NAME</h2>
 <p> <code>k_hasafs</code> <code>k_hasafs_recheck</code> <code>k_pioctl</code> <code>k_unlog</code> <code>k_setpag</code> <code>k_afs_cell_of_file</code> <code>kafs_set_verbose</code> <code>kafs_settoken_rxkad</code> <code>kafs_settoken</code> <code>krb_afslog</code> <code>krb_afslog_uid</code> <code>kafs_settoken5</code> <code>krb5_afslog</code> <code>krb5_afslog_uid</code> &#8211; AFS library</p>
 <h2>LIBRARY</h2>
 <p> AFS cache manager access library (libkafs, -lkafs)</p>

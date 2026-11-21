@@ -1,4 +1,5 @@
 ---
+
 title: "cvsps(1)"
 name: "cvsps"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-cvsps/"
 description: "CVSps – create patchset information from CVS"
 ---
 
-<h2>NAME</h2>
 <p> CVSps &#8211; create patchset information from CVS</p>
 <h2>SYNOPSIS</h2>
 <p> <code>cvsps</code> [-h] [-x] [-u] [-z &lt;fuzz&gt;] [-g] [-s &lt;patchset&gt;] [-a &lt;author&gt;] [-f &lt;file&gt;] [-d &lt;date1&gt; [-d &lt;date2&gt;]] [-l &lt;text&gt;] [-b &lt;branch&gt;] [-r &lt;tag&gt; [-r &lt;tag&gt;]] [-p &lt;directory&gt;] [-v] [-t] [&#8211;norc] [&#8211;summary-first] [&#8211;test-log &lt;filename&gt;] [&#8211;bkcvs] [&#8211;no-rlog] [&#8211;diff-opts &lt;option string&gt;] [&#8211;cvs-direct] [&#8211;debuglvl &lt;bitmask&gt;] [-Z &lt;compression&gt;] [&#8211;root &lt;cvsroot&gt;] [-q] [-A] [&lt;repository&gt;]</p>

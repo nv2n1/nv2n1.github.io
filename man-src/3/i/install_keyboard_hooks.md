@@ -1,4 +1,5 @@
 ---
+
 title: "install_keyboard_hooks(3)"
 name: "install_keyboard_hooks"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-install_keyboard_hooks/"
 description: "install_keyboard_hooks – Installs custom keyboard hooks. Allegro game programming library."
 ---
 
-<h2>NAME</h2>
 <p> install_keyboard_hooks &#8211; Installs custom keyboard hooks. Allegro game programming library.</p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>

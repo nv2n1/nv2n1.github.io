@@ -1,4 +1,5 @@
 ---
+
 title: "udisks-tcp-bridge(1)"
 name: "udisks-tcp-bridge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-udisks-tcp-bridge/"
 description: "udisks-tcp-bridge – udisks TCP/IP bridge"
 ---
 
-<h2 class="name">NAME</h2>
 <p> udisks-tcp-bridge &#8211; udisks TCP/IP bridge </p>
 <h2>SYNOPSIS</h2>
 <dl>

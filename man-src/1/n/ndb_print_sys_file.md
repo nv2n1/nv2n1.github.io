@@ -1,4 +1,5 @@
 ---
+
 title: "ndb_print_sys_file(1)"
 name: "ndb_print_sys_file"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ndb_print_sys_file/"
 description: "ndb_print_sys_file – print NDB system file contents"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ndb_print_sys_file &#8211; print NDB system file contents </p>
 <h2>SYNOPSIS</h2>
 <dl>

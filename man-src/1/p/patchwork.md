@@ -1,4 +1,5 @@
 ---
+
 title: "patchwork(1)"
 name: "patchwork"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-patchwork/"
 description: "patchwork – filter for drawing clustered graphs as treemaps"
 ---
 
-<h2 class="name">NAME</h2>
 <p> patchwork &#8211; filter for drawing clustered graphs as treemaps </p>
 <h2>SYNOPSIS</h2>
 <p> <code>patchwork</code> [<code>&#8211;</code>(<code>G</code>|<code>N</code>|<code>E</code>)<i>name=value</i>] [<code>-T</code><i>lang</i>] [<code>-l</code><i>libfile</i>] [<code>-o</code><i>outfile</i>] [<code>-O</code>] [<code>-P</code>] [<code>-v</code>] [<code>-V</code>] [files]</p>

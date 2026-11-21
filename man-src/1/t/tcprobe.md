@@ -1,4 +1,5 @@
 ---
+
 title: "tcprobe(1)"
 name: "tcprobe"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tcprobe/"
 description: "tcprobe – probe multimedia streams from medium and print information on the standard output"
 ---
 
-<h2>NAME</h2>
 <p> tcprobe &#8211; probe multimedia streams from medium and print information on the standard output</p>
 <h2>SYNOPSIS</h2>
 <dl>

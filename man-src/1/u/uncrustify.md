@@ -1,4 +1,5 @@
 ---
+
 title: "uncrustify(1)"
 name: "uncrustify"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-uncrustify/"
 description: "uncrustify – C, C++, C#, D, Java and Pawn source code beautifier"
 ---
 
-<h2>NAME</h2>
 <p> uncrustify &#8211; C, C++, C#, D, Java and Pawn source code beautifier </p>
 <h2>SYNOPSIS</h2>
 <p> <code>uncrustify </code>[<i>OPTIONS</i>] [<i>FILES</i>] </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "fio_generate_plots(1)"
 name: "fio_generate_plots"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-fio_generate_plots/"
 description: "fio_generate_plots – Generate plots for Flexible I/O Tester"
 ---
 
-<h2 class="name">NAME</h2>
 <p> fio_generate_plots &#8211; Generate plots for Flexible I/O Tester </p>
 <h2>SYNOPSIS</h2>
 <p> <code>fio_generate_plots</code> title </p>

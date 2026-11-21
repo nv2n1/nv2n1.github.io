@@ -1,4 +1,5 @@
 ---
+
 title: "euca-associate-dhcp-options(1)"
 name: "euca-associate-dhcp-options"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-euca-associate-dhcp-options/"
 description: "euca-associate-dhcp-options – Associate a DHCP option set with a VPC"
 ---
 
-<h2>NAME</h2>
 <p> euca-associate-dhcp-options &#8211; Associate a DHCP option set with a VPC</p>
 <h2>SYNOPSIS</h2>
 <p> euca-associate-dhcp-options <code>-c</code> VPC [&#8211;show-empty-fields] [-U URL]</p>

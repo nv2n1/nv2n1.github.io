@@ -1,4 +1,5 @@
 ---
+
 title: "grub-syslinux2cfg(1)"
 name: "grub-syslinux2cfg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-grub-syslinux2cfg/"
 description: "grub-syslinux2cfg – transform syslinux config into grub.cfg"
 ---
 
-<h2 class="name">NAME</h2>
 <p> grub-syslinux2cfg &#8211; transform syslinux config into grub.cfg </p>
 <h2>SYNOPSIS</h2>
 <p> <code>grub-syslinux2cfg</code> [<i>,OPTION/</i>&#8230;] <i>,FILE/</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "pmsignal(1)"
 name: "pmsignal"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmsignal/"
 description: "pmsignal – send a signal to one or more processes"
 ---
 
-<h2>NAME</h2>
 <p> <code>pmsignal</code> &#8211; send a signal to one or more processes</p>
 <h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/pmsignal</code> [<code>-alnp</code>] [<code>-s</code> <i>signal</i>] [<i>PID</i> &#8230;|<i>name</i> &#8230;]</p>

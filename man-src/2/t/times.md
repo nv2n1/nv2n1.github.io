@@ -1,4 +1,5 @@
 ---
+
 title: "times(2)"
 name: "times"
 section: "2"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/2-times/"
 description: "times – get process times"
 ---
 
-<h2 class="name">NAME</h2>
 <p> times &#8211; get process times </p>
 <h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/times.h&gt;</code> </p>

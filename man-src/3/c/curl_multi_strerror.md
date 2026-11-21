@@ -1,4 +1,5 @@
 ---
+
 title: "curl_multi_strerror(3)"
 name: "curl_multi_strerror"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-curl_multi_strerror/"
 description: "curl_multi_strerror – return string describing error code"
 ---
 
-<h2>NAME</h2>
 <p> curl_multi_strerror &#8211; return string describing error code</p>
 <h2>SYNOPSIS</h2>
 <pre><code>

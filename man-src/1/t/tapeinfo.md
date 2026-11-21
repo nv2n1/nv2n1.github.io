@@ -1,4 +1,5 @@
 ---
+
 title: "tapeinfo(1)"
 name: "tapeinfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tapeinfo/"
 description: "tapeinfo – report SCSI tape device info"
 ---
 
-<h2>NAME</h2>
 <p> tapeinfo &#8211; report SCSI tape device info</p>
 <h2>SYNOPSIS</h2>
 <p> tapeinfo -f &lt;scsi-generic-device&gt;</p>

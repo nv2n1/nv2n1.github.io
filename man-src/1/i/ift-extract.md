@@ -1,4 +1,5 @@
 ---
+
 title: "ift-extract(1)"
 name: "ift-extract"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ift-extract/"
 description: "ift-extract.info – ift-extract.info"
 ---
 
-<h2>NAME</h2>
 <p> ift-extract.info &#8211; ift-extract.info</p>
 <h2>Built-in iSight firmware extractor and patcher</h2>
 <p> ift-extract extract the Built-in iSight firmware from Apple driver and patch it to avoid some bugs in it. The firmware is then ready to get loaded into the chip using ift-load. </p>

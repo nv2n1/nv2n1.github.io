@@ -1,4 +1,5 @@
 ---
+
 title: "pdfopt(1)"
 name: "pdfopt"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pdfopt/"
 description: "pdfopt – Ghostscript PDF Optimizer"
 ---
 
-<h2>NAME</h2>
 <p> pdfopt &#8211; Ghostscript PDF Optimizer</p>
 <h2>SYNOPSIS</h2>
 <p> <code>pdfopt</code> [ <i>options</i> ] <i>input.pdf output.pdf</i></p>

@@ -1,4 +1,5 @@
 ---
+
 title: "globus_gsi_gss_returned_context_flags(3)"
 name: "globus_gsi_gss_returned_context_flags"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-globus_gsi_gss_returned_context_flags/"
 description: "Return Flags –"
 ---
 
-<h2 class="name">NAME</h2>
 <p> Return Flags &#8211; </p>
 <p> Return Flags.</p>
 <h3>Macros</h3>

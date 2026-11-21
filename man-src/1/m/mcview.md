@@ -1,4 +1,5 @@
 ---
+
 title: "mcview(1)"
 name: "mcview"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mcview/"
 description: "mcview – Internal file viewer of GNU Midnight Commander."
 ---
 
-<h2>NAME</h2>
 <p> mcview &#8211; Internal file viewer of GNU Midnight Commander.</p>
 <h2>USAGE</h2>
 <p> <code>mcview</code> [-bcCdfhstVx?] file</p>

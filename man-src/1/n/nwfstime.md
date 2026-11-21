@@ -1,4 +1,5 @@
 ---
+
 title: "nwfstime(1)"
 name: "nwfstime"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-nwfstime/"
 description: "nwfstime – Display / Set a NetWare server’s date and time"
 ---
 
-<h2>NAME</h2>
 <p> nwfstime &#8211; Display / Set a NetWare server&#8217;s date and time</p>
 <h2>SYNOPSIS</h2>
 <p> <code>nwfstime</code> [ <code>-h</code> ] [ <code>-S</code> <i>server</i> ] [ <code>-U</code> <i>user name</i> ] [ <code>-P</code> <i>password</i> | <code>-n</code> ] [ <code>-C</code> ] [ <code>-s</code> ] </p>

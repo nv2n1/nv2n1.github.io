@@ -1,4 +1,5 @@
 ---
+
 title: "dm_date(1)"
 name: "dm_date"
 section: "1"
@@ -6,10 +7,7 @@ letter: "d"
 url: "/docs/linux/man/1-dm_date/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- dm_date - print out the system date and time 
+dm_date - print out the system date and time 
 
 <h2>SYNOPSIS</h2>
 

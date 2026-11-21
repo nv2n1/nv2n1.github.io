@@ -1,4 +1,5 @@
 ---
+
 title: "ddrescuelog(1)"
 name: "ddrescuelog"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ddrescuelog/"
 description: "ddrescuelog – tool for ddrescue mapfiles"
 ---
 
-<h2>NAME</h2>
 <p> ddrescuelog &#8211; tool for ddrescue mapfiles</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ddrescuelog</code> [<i>,options/</i>] <i>,mapfile/</i></p>

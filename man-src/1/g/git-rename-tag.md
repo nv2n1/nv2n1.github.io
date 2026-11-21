@@ -1,4 +1,5 @@
 ---
+
 title: "git-rename-tag(1)"
 name: "git-rename-tag"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-rename-tag/"
 description: "git-rename-tag – Rename a tag"
 ---
 
-<h2>NAME</h2>
 <p> <code>git-rename-tag</code> &#8211; Rename a tag</p>
 <h2>SYNOPSIS</h2>
 <p> <code>git-rename-tag</code> &lt;old-tag-name&gt; &lt;new-tag-name&gt;</p>

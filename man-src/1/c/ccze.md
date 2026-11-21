@@ -1,4 +1,5 @@
 ---
+
 title: "ccze(1)"
 name: "ccze"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ccze/"
 description: "ccze – A robust log colorizer"
 ---
 
-<h2>NAME</h2>
 <p> ccze &#8211; A robust log colorizer</p>
 <h2>SYNOPSIS</h2>
 <p> <code>ccze</code> [<i>options</i>] &lt;<i>logfile</i></p>

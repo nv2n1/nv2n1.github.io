@@ -1,4 +1,5 @@
 ---
+
 title: "lto-dump-11(1)"
 name: "lto-dump-11"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-lto-dump-11/"
 description: "lto-dump – Tool for dumping LTO object files"
 ---
 
-<h2 class="name">NAME</h2>
 <p> lto-dump &#8211; Tool for dumping LTO object files </p>
 <h2>SYNOPSIS</h2>
 <p> lto-dump [<code>-list</code>]<br />

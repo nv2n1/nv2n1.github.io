@@ -1,4 +1,5 @@
 ---
+
 title: "ipe(1)"
 name: "ipe"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ipe/"
 description: "ipe – drawing editor for creating figures in PDF or PS formats"
 ---
 
-<h2 class="name">NAME</h2>
 <p> ipe &#8211; drawing editor for creating figures in PDF or PS formats </p>
 <h2>SYNOPSIS</h2>
 <p> <code>ipe</code> [ <i>Qt options</i> ] [ -debug ] [ -sheet <i>stylesheet</i> ] [ -geom <i>WxH+X+Y</i> ] <i>filename</i> </p>

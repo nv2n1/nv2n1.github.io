@@ -1,4 +1,5 @@
 ---
+
 title: "tcdemux(1)"
 name: "tcdemux"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tcdemux/"
 description: "tcdemux – demultiplex a program stream"
 ---
 
-<h2>NAME</h2>
 <p> tcdemux &#8211; demultiplex a program stream</p>
 <h2>SYNOPSIS</h2>
 <dl>

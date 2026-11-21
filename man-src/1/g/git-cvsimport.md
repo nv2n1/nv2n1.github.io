@@ -1,4 +1,5 @@
 ---
+
 title: "git-cvsimport(1)"
 name: "git-cvsimport"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-git-cvsimport/"
 description: "git-cvsimport – Salvage your data out of another SCM people love to hate"
 ---
 
-<h2 class="name">NAME</h2>
 <p> git-cvsimport &#8211; Salvage your data out of another SCM people love to hate </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

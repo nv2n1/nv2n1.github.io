@@ -1,4 +1,5 @@
 ---
+
 title: "memcached(1)"
 name: "memcached"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-memcached/"
 description: "memcached – high-performance memory object caching system"
 ---
 
-<h2>NAME</h2>
 <p> memcached &#8211; high-performance memory object caching system</p>
 <h2>SYNOPSIS</h2>
 <p> <code>memcached</code> [<i>options</i>] </p>

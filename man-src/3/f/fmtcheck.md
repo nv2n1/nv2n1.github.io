@@ -1,4 +1,5 @@
 ---
+
 title: "fmtcheck(3)"
 name: "fmtcheck"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-fmtcheck/"
 description: "fmtcheck – sanitizes user-supplied"
 ---
 
-<h2 class="name">NAME</h2>
 <p> <code>fmtcheck</code> &#8211; sanitizes user-supplied </p>
 <p><a href="/docs/linux/man/3-printf/">printf</a>(3)Ns-style format string</p>
 <h2>LIBRARY</h2>

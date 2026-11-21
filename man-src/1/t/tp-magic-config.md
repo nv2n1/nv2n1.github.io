@@ -1,4 +1,5 @@
 ---
+
 title: "tp-magic-config(1)"
 name: "tp-magic-config"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tp-magic-config/"
 description: "tp-magic-config — Helps creating ‘Magic’ tool plugins for Tux Paint(1)"
 ---
 
-<h2>NAME</h2>
 <p> tp-magic-config &#8212; Helps creating &#8216;Magic&#8217; tool plugins for Tux Paint(1) </p>
 <h2>SYNOPSYS</h2>
 <dl>

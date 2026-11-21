@@ -1,4 +1,5 @@
 ---
+
 title: "uxterm(1)"
 name: "uxterm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-uxterm/"
 description: "uxterm – X terminal emulator for Unicode (UTF-8) environments"
 ---
 
-<h2 class="name">NAME</h2>
 <p> uxterm &#8211; X terminal emulator for Unicode (UTF-8) environments </p>
 <h2>SYNOPSIS</h2>
 <p> <code>uxterm</code> [ <i>xterm-options</i> ]</p>

@@ -1,4 +1,5 @@
 ---
+
 title: "netstiff(1)"
 name: "netstiff"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-netstiff/"
 description: "netstiff – powerful and easy tool to check for Web and FTP updates"
 ---
 
-<h2>NAME</h2>
 <p> netstiff &#8211; powerful and easy tool to check for Web and FTP updates </p>
 <h2>SYNOPSIS</h2>
 <p> <code>netstiff</code> [<i>options</i>] [<i>command</i>] </p>

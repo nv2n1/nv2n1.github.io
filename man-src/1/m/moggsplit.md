@@ -1,4 +1,5 @@
 ---
+
 title: "moggsplit(1)"
 name: "moggsplit"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-moggsplit/"
 description: "moggsplit – split Ogg logical streams"
 ---
 
-<h2>NAME</h2>
 <p> moggsplit &#8211; split Ogg logical streams</p>
 <h2>SYNOPSIS</h2>
 <p> <code>moggsplit</code> <i>filename</i> &#8230;</p>

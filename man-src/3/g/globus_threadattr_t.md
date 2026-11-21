@@ -1,4 +1,5 @@
 ---
+
 title: "globus_threadattr_t(3)"
 name: "globus_threadattr_t"
 section: "3"
@@ -6,10 +7,7 @@ letter: "g"
 url: "/docs/linux/man/3-globus_threadattr_t/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- globus_threadattr_t - 
+globus_threadattr_t - 
 
  Thread attributes.
 

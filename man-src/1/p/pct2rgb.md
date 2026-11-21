@@ -1,4 +1,5 @@
 ---
+
 title: "pct2rgb(1)"
 name: "pct2rgb"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pct2rgb/"
 description: "pct2rgb – pct2rgb.py Convert an 8bit paletted image to 24bit RGB"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pct2rgb &#8211; pct2rgb.py Convert an 8bit paletted image to 24bit RGB </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

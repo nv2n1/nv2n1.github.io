@@ -1,4 +1,5 @@
 ---
+
 title: "libssh2_session_get_blocking(3)"
 name: "libssh2_session_get_blocking"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libssh2_session_get_blocking/"
 description: "libssh2_session_get_blocking – TODO"
 ---
 
-<h2>NAME</h2>
 <p> libssh2_session_get_blocking &#8211; TODO</p>
 <h2>SYNOPSIS</h2>
 <p> int libssh2_session_get_blocking(LIBSSH2_SESSION *session);</p>

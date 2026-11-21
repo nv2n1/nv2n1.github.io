@@ -1,4 +1,5 @@
 ---
+
 title: "tnameserv-java-1(1)"
 name: "tnameserv-java-1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-tnameserv-java-1/"
 description: "tnameserv – Interface Definition Language (IDL)."
 ---
 
-<h2>NAME</h2>
 <p> tnameserv &#8211; Interface Definition Language (IDL).</p>
 <h2>SYNOPSIS</h2>
 <pre>

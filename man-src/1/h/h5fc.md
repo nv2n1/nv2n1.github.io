@@ -1,4 +1,5 @@
 ---
+
 title: "h5fc(1)"
 name: "h5fc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-h5fc/"
 description: "Fortran – Reports statistics regarding an HDF5 file and the objects in the file."
 ---
 
-<h2>NAME</h2>
 <p> Fortran &#8211; Reports statistics regarding an HDF5 file and the objects in the file.</p>
 <h2>DESCRIPTION</h2>
 <p> usage: h5fc [OPTIONS] &lt;compile line&gt;</p>

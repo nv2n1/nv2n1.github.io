@@ -1,4 +1,5 @@
 ---
+
 title: "pmxab(1)"
 name: "pmxab"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pmxab/"
 description: "pmxab – a MusiXTeX preprocessor"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pmxab &#8211; a MusiXTeX preprocessor </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pmxab</code> basename<i>[.pmx]</i> </p>

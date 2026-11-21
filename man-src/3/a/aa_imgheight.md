@@ -1,4 +1,5 @@
 ---
+
 title: "aa_imgheight(3)"
 name: "aa_imgheight"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-aa_imgheight/"
 description: "aa_imgheight – returns height of the emulated image in pixels."
 ---
 
-<h2>NAME</h2>
 <p> aa_imgheight &#8211; returns height of the emulated image in pixels.</p>
 <h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "luafindfont(1)"
 name: "luafindfont"
 section: "1"
@@ -6,10 +7,7 @@ letter: "l"
 url: "/docs/linux/man/1-luafindfont/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- luafindfont - retrieve font informations of all installed system and TeX fonts. 
+luafindfont - retrieve font informations of all installed system and TeX fonts. 
 
 <h2>SYNOPSIS</h2>
 

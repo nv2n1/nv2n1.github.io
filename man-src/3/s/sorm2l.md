@@ -1,4 +1,5 @@
 ---
+
 title: "sorm2l(3)"
 name: "sorm2l"
 section: "3"
@@ -6,10 +7,7 @@ letter: "s"
 url: "/docs/linux/man/3-sorm2l/"
 ---
 
-<h2 class="name">NAME</h2>
- 
-
- sorm2l.f - 
+sorm2l.f - 
 
 <h2>SYNOPSIS</h2>
 

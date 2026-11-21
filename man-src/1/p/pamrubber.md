@@ -1,4 +1,5 @@
 ---
+
 title: "pamrubber(1)"
 name: "pamrubber"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pamrubber/"
 description: "pamrubber – a rubber-sheeting utility that stretches an image based on control points"
 ---
 
-<h2>NAME</h2>
 <p> pamrubber &#8211; a rubber-sheeting utility that stretches an image based on control points </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pamrubber</code> {<code>-tri | -quad</code>} [<code>-linear</code>] [<code>-frame</code>] [<code>-randomseed=</code><i>N</i>] <i>cp1x cp1y</i> [<i>cp2x cp2y</i> [<i>cp3x cp3y</i> [<i>cp4x cp4y</i>]]] <i>cp1x cp1y</i> [<i>cp2x cp2y</i> [<i>cp3x cp3y</i> [<i>cp4x cp4y</i>]]] [<i>filename</i>] </p>

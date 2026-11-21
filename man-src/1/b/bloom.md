@@ -1,4 +1,5 @@
 ---
+
 title: "bloom(1)"
 name: "bloom"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-bloom/"
 description: "bloom – bloom Documentation"
 ---
 
-<h2>NAME</h2>
 <p> bloom &#8211; bloom Documentation</p>
 <h2>WHAT IS BLOOM?</h2>
 <p> Bloom is a release automation tool, designed to make generating platform specific release artifacts from source projects easier. Bloom is designed to work best with <i>catkin</i> projects, but can also accommodate other types of projects.</p>

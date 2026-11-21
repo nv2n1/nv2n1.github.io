@@ -1,4 +1,5 @@
 ---
+
 title: "stap-merge(1)"
 name: "stap-merge"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-stap-merge/"
 description: "stap-merge – systemtap per-cpu binary merger"
 ---
 
-<h2>NAME</h2>
 <p> stap-merge &#8211; systemtap per-cpu binary merger </p>
 <h2>SYNOPSIS</h2>
 <p> <code>stap-merge</code> [ <i>OPTIONS</i> ] [ <i>INPUT FILENAMES</i> ] </p>

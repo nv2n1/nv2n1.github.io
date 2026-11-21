@@ -1,4 +1,5 @@
 ---
+
 title: "pnmshear(1)"
 name: "pnmshear"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-pnmshear/"
 description: "pnmshear – shear a portable anymap by some angle"
 ---
 
-<h2 class="name">NAME</h2>
 <p> pnmshear &#8211; shear a portable anymap by some angle </p>
 <h2>SYNOPSIS</h2>
 <p> <code>pnmshear</code> [<code>-noantialias</code>] <i>angle</i> [<i>pnmfile</i>]</p>

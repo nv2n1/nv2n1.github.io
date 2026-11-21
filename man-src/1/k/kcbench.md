@@ -1,4 +1,5 @@
 ---
+
 title: "kcbench(1)"
 name: "kcbench"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-kcbench/"
 description: "kcbench – Kernel compile benchmark"
 ---
 
-<h2>NAME</h2>
 <p> <code>kcbench </code>&#8211; Kernel compile benchmark</p>
 <h2>SYNOPSIS</h2>
 <pre>

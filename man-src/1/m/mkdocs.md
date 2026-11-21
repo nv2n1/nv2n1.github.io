@@ -1,4 +1,5 @@
 ---
+
 title: "mkdocs(1)"
 name: "mkdocs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mkdocs/"
 description: "mkdocs – Create HTML documentation from markdown sources"
 ---
 
-<h2>NAME</h2>
 <p> mkdocs &#8211; Create HTML documentation from markdown sources</p>
 <h2>SYNOPSIS</h2>
 <p> mkdocs [build|gh-deploy|new|serve] {options}</p>
