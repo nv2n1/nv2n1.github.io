@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pkcs11_init(3)"
 name: "gnutls_pkcs11_init"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_pkcs11_init – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs11_init &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs11.h&gt;</code> </p>
 <p> <code>int gnutls_pkcs11_init(unsigned int </code><i>flags</i><code>, const char * </code><i>deprecated_config_file</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_pkcs11_init – API function"
 <dd> An ORed sequence of <code>GNUTLS_PKCS11_FLAG_</code>*</dd>
 <dt>const char * deprecated_config_file</dt>
 <dd> either NULL or the location of a deprecated configuration file</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will initialize the PKCS 11 subsystem in gnutls. It will read configuration files if <code>GNUTLS_PKCS11_FLAG_AUTO</code> is used or allow you to independently load PKCS 11 modules using <code>gnutls_pkcs11_add_provider()</code> if <code>GNUTLS_PKCS11_FLAG_MANUAL</code> is specified. </p>
 <p> Normally you don&#8217;t need to call this function since it is being called when the first PKCS 11 operation is requested using the <code>GNUTLS_PKCS11_FLAG_AUTO</code> flag. If another flags are required then it must be called independently prior to any PKCS 11 operation.</p>
 <h2>RETURNS</h2>

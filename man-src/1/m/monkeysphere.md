@@ -1,5 +1,4 @@
 ---
-
 title: "monkeysphere(1)"
 name: "monkeysphere"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-monkeysphere/"
 description: "monkeysphere – Monkeysphere client user interface"
 ---
 
+<h2 class="name">NAME</h2>
+<p> monkeysphere &#8211; Monkeysphere client user interface</p>
+<h2>SYNOPSIS</h2>
 <p> <code>monkeysphere </code><i>subcommand</i> [<i>args</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>Monkeysphere</code> is a framework to leverage the OpenPGP web of trust for OpenSSH and TLS key-based authentication. OpenPGP keys are tracked via GnuPG, and added to the authorized_keys and known_hosts files used by OpenSSH for connection authentication. Monkeysphere can also be used by a validation agent to validate TLS connections (e.g. https). </p>
 <p> <code>monkeysphere</code> is the Monkeysphere client utility. </p>
 <h2>SUBCOMMANDS</h2>

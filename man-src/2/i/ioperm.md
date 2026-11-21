@@ -1,5 +1,4 @@
 ---
-
 title: "ioperm(2)"
 name: "ioperm"
 section: "2"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/2-ioperm/"
 description: "ioperm – set port input/output permissions"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ioperm &#8211; set port input/output permissions </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/io.h&gt;</code> /* for glibc */ </p>
 <p> <code>int ioperm(unsigned long </code><i>from</i><code>, unsigned long </code><i>num</i><code>, int </code><i>turn_on</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>ioperm</code>() sets the port access permission bits for the calling thread for <i>num</i> bits starting from port address <i>from</i>. If <i>turn_on</i> is nonzero, then permission for the specified bits is enabled; otherwise it is disabled. If <i>turn_on</i> is nonzero, the calling thread must be privileged (<code>CAP_SYS_RAWIO</code>). </p>
 <p> Before Linux 2.6.8, only the first 0x3ff I/O ports could be specified in this manner. For more ports, the <code><a href="/docs/linux/man/2-iopl/">iopl</a></code>(2) system call had to be used (with a <i>level</i> argument of 3). Since Linux 2.6.8, 65,536 I/O ports can be specified. </p>
 <p> Permissions are inherited by the child created by <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) (but see NOTES). Permissions are preserved across <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2); this is useful for giving port access permissions to unprivileged programs. </p>

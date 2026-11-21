@@ -1,5 +1,4 @@
 ---
-
 title: "carbon-relay(1)"
 name: "carbon-relay"
 section: "1"
@@ -14,6 +13,7 @@ description: "carbon-relay – replication and sharding data"
 <pre>
 carbon-relay [options] start
 </pre>
+<h2>DESCRIPTION</h2>
 <p> carbon-relay serves two distinct purposes: replication and sharding. </p>
 <p> The options are described below.</p>
 <h2>OPTIONS</h2>

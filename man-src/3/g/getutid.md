@@ -1,5 +1,4 @@
 ---
-
 title: "getutid(3)"
 name: "getutid"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-getutid/"
 description: "getutent, getutid, getutline, pututline, setutent, endutent, utmpname – access utmp file entries"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getutent, getutid, getutline, pututline, setutent, endutent, utmpname &#8211; access utmp file entries </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;utmp.h&gt;</code> </p>
 <p> <code>struct utmp *getutent(void);</code><br />
  <code>struct utmp *getutid(const struct utmp *</code><i>ut</i><code>);</code><br />
@@ -16,6 +18,7 @@ description: "getutent, getutid, getutline, pututline, setutent, endutent, utmpn
 <p> <code>void setutent(void);</code><br />
  <code>void endutent(void);</code> </p>
 <p> <code>int utmpname(const char *</code><i>file</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> New applications should use the POSIX.1-specified &quot;utmpx&quot; versions of these functions; see CONFORMING TO. </p>
 <p> <code>utmpname</code>() sets the name of the utmp-format file for the other utmp functions to access. If <code>utmpname</code>() is not used to set the filename before the other functions are used, they assume <code>_PATH_UTMP</code>, as defined in <i>&lt;paths.h&gt;</i>. </p>
 <p> <code>setutent</code>() rewinds the file pointer to the beginning of the utmp file. It is generally a good idea to call it before any of the other functions. </p>

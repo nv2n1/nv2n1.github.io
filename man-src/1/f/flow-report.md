@@ -1,5 +1,4 @@
 ---
-
 title: "flow-report(1)"
 name: "flow-report"
 section: "1"
@@ -10,7 +9,9 @@ description: "flow-report – Generate reports from flow data."
 
 <h2>NAME</h2>
 <p> flow-report &#8211; Generate reports from flow data.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>flow-report</code> [ <code>-h</code> ] [ <code>-d</code><i> debug_level</i> ] [ <code>-s</code><i> stat_fname</i> ] [ <code>-S</code><i> stat_definition</i> ] [ <code>-v</code><i> variable binding</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>flow-report</code> utility will generate reports from flow data. The reports are easy to parse ASCII text that can be used by a front end to produce readable reports, graphs, and charts. </p>
 <p> Reports are definied in a configuration file by the &#8216;stat-report&#8217; keyword followed by a report name. Each report has a type defined below and other commands. Reports are grouped into a definition with the &#8216;stat-definition&#8217; keyword followed by a definition name. Each definition can invoke a filter and optionally apply tags. </p>
 <p> Words in the configuration file of the form @VAR or @{VAR:default} will be expanded at run-time by setting variable names with the -v option. </p>

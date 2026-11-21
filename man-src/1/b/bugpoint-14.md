@@ -1,5 +1,4 @@
 ---
-
 title: "bugpoint-14(1)"
 name: "bugpoint-14"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-bugpoint-14/"
 description: "bugpoint – automatic test case reduction tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bugpoint &#8211; automatic test case reduction tool </p>
+<h2>SYNOPSIS</h2>
 <p> <code>bugpoint</code> [<i>options</i>] [<i>input LLVM ll/bc files</i>] [<i>LLVM passes</i>] <code>–args</code> <i>program arguments</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>bugpoint</code> narrows down the source of problems in LLVM tools and passes. It can be used to debug three types of failures: optimizer crashes, miscompilations by optimizers, or bad native code generation (including problems in the static and JIT compilers). It aims to reduce large test cases to small, useful ones. For more information on the design and inner workings of <code>bugpoint</code>, as well as advice for using bugpoint, see /Bugpoint in the LLVM distribution.</p>
 <h2>OPTIONS</h2>
 <p> <code>–additional-so</code> <i>library</i> Load the dynamic shared object <i>library</i> into the test program whenever it is run. This is useful if you are debugging programs which depend on non-LLVM libraries (such as the X or curses libraries) to run. </p>

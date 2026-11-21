@@ -1,5 +1,4 @@
 ---
-
 title: "qrdel(1)"
 name: "qrdel"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-qrdel/"
 description: "qrdel – delete xxQS_NAMExx Advance Reservations (AR)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> qrdel &#8211; delete xxQS_NAMExx Advance Reservations (AR) </p>
 <h2>SYNTAX</h2>
 <p> <code>qrdel</code> [<code>-f</code>] [<code>-help</code>] [<code>-u</code> <i>wc_user_list</i>] <i>wc_ar_list</i></p>
+<h2>DESCRIPTION</h2>
 <p> <i>Qrdel</i> provides a means for a user/operator/manager to delete one or more Advance Reservations (AR) referenced by numeric id or name. A manager/operator can delete ARs belonging to any user, while regular users can only delete their own ARs. If a manager wants to delete another user&#8217;s AR, the manager can specify the AR id. By default, &quot;qrdel wc_ar_name&quot; will delete only the ARs belonging to that user. A manager is able to delete another user&#8217;s AR via &quot;-u wc_user_list&quot;. Jobs referring to an AR tagged for deletion will also be removed. Only if all jobs referring to an AR are removed from the xxQS_NAMExx database will the AR also be removed. <i>Qrdel</i> deletes ARs in the order in which the AR identifiers are presented. Find additional information concerning <i>wc_user_list</i> and <i>wc_ar_list</i> in</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "heapsort(3)"
 name: "heapsort"
 section: "3"
@@ -8,10 +7,13 @@ url: "/docs/linux/man/3-heapsort/"
 description: "heapsort , mergesort – sort functions"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>heapsort , mergesort</code> &#8211; sort functions </p>
 <h2>LIBRARY</h2>
 <p> Lb libbsd</p>
+<h2>SYNOPSIS</h2>
 <p> In bsd/stdlib.h Ft int Fo heapsort Fa void *base Fa size_t nmemb Fa size_t size Fa int *comparconst void *, const void * Fc Ft int Fo mergesort Fa void *base Fa size_t nmemb Fa size_t size Fa int *comparconst void *, const void * Fc</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn heapsort function is a modified selection sort. The Fn mergesort function is a modified merge sort with exponential search intended for sorting data with pre-existing order. </p>
 <p> The Fn heapsort function sorts an array of Fa nmemb objects, the initial member of which is pointed to by Fa base . The size of each object is specified by Fa size . The Fn mergesort function behaves similarly, but <i>requires</i> that Fa size be greater than &#8220;sizeof(void *) / 2&#8221; </p>
 <p> The contents of the array Fa base are sorted in ascending order according to a comparison function pointed to by Fa compar , which requires two arguments pointing to the objects being compared. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "cpufreq-aperf(1)"
 name: "cpufreq-aperf"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-cpufreq-aperf/"
 description: "cpufreq-aperf – Calculates the average frequency over a time period"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cpufreq-aperf &#8211; Calculates the average frequency over a time period </p>
 <h2>SYNTAX</h2>
 <p> cpufreq-aperf [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> On latest processors exist two MSR registers refered to as:<br />
 &nbsp;<wbr>&nbsp;<wbr>&#8211; MPERF increasing with maxium&nbsp;<wbr>(P0)&nbsp;<wbr>frequency in C0<br />
 &nbsp;<wbr>&nbsp;<wbr>&#8211; APERF increasing with current/actual frequency in C0 </p>

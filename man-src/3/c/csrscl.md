@@ -1,5 +1,4 @@
 ---
-
 title: "csrscl(3)"
 name: "csrscl"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-csrscl/"
 description: "csrscl.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> csrscl.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>csrscl</code> (N, SA, SX, INCX)<br />
  <i></i><code>CSRSCL</code> multiplies a vector by the reciprocal of a real scalar.</p>

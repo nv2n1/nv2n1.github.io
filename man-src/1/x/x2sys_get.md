@@ -1,5 +1,4 @@
 ---
-
 title: "x2sys_get(1)"
 name: "x2sys_get"
 section: "1"
@@ -10,8 +9,10 @@ description: "x2sys_get – Get track listing from the x2sys track index databas
 
 <h2>NAME</h2>
 <p> x2sys_get &#8211; Get track listing from the x2sys track index databases</p>
+<h2>SYNOPSIS</h2>
 <p> <code>x2sys_get</code> <i>TAG</i> [ ] [ <i>flags</i> ] [ ] [ [<code>+</code>][<i>list</i>] ] [ <i>flags</i> ] [ [ <i>region</i> ] [ [<i>level</i>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>x2sys_get</code> will return the names of the track data files in the x2sys data base for this TAG that match the given requirements. You may choose a specific region and optionally ask only for tracks that meet certain data criteria. Finally, you may select an option to list all possible pairs that might generate crossovers.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

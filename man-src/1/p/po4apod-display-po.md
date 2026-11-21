@@ -1,5 +1,4 @@
 ---
-
 title: "po4apod-display-po(1)"
 name: "po4apod-display-po"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-po4apod-display-po/"
 description: "po4apod-display-po – man display of a translated POD file according to a PO"
 ---
 
+<h2 class="name">NAME</h2>
+<p> po4apod-display-po &#8211; man display of a translated POD file according to a PO </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>po4apod-display-po</code> <code>-p&nbsp;<wbr></code> <i>PO_FILE</i> <code>-m&nbsp;<wbr></code> <i>POD_FILE</i> [<code>-o&nbsp;<wbr></code>&nbsp;<wbr><i>PO4A_OPT</i>]</dt>
 <dd>
 </dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>po4apod-display-po</code></p>
 <dd>can be used by a translator who wants to check how the man page, generated from a POD file, being translated in a PO will be displayed. Generally, POD file is only available in source package or embedded in Perl script.</dd>
 <h2>OPTIONS</h2>

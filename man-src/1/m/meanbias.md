@@ -1,5 +1,4 @@
 ---
-
 title: "meanbias(1)"
 name: "meanbias"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-meanbias/"
 description: "meanbias – CCD bias frame composition"
 ---
 
+<h2 class="name">NAME</h2>
+<p> meanbias &#8211; CCD bias frame composition</p>
+<h2>SYNOPSIS</h2>
 <p> <code>meanbias </code><i>[options] source_file &#8230;</i> </p>
+<h2>DESCRIPTION</h2>
 <p> The meanbias program compose a set of bias-fields and performs one bias field called master-bias. It applies the robust median algorithm to the corresponding pixels to get the resulting value. Applying this function, you can achieve high quality correction frame to reduce the noise. </p>
 <p> All source frames must be in FITS format and of same dimensions. Frames of the same exposition duration should be used. The output file is in FITS format too. </p>
 <h2>OPTIONS</h2>

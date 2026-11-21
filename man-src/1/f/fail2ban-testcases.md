@@ -1,5 +1,4 @@
 ---
-
 title: "fail2ban-testcases(1)"
 name: "fail2ban-testcases"
 section: "1"
@@ -10,7 +9,9 @@ description: "fail2ban-testcases – run Fail2Ban unit-tests"
 
 <h2>NAME</h2>
 <p> fail2ban-testcases &#8211; run Fail2Ban unit-tests</p>
+<h2>SYNOPSIS</h2>
 <p> <code>fail2ban-testcases</code> [<i>,OPTIONS/</i>] [<i>,regexps/</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Script to run Fail2Ban tests battery</p>
 <h2>OPTIONS</h2>
 <dl>

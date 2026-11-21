@@ -1,5 +1,4 @@
 ---
-
 title: "byobu-config(1)"
 name: "byobu-config"
 section: "1"
@@ -10,6 +9,7 @@ description: "byobu-config – Configuration utility for byobu"
 
 <h2>NAME</h2>
 <p> byobu-config &#8211; Configuration utility for byobu </p>
+<h2>DESCRIPTION</h2>
 <p> <code>byobu-config</code> is an application that can configure a number of options available in the byobu utility. </p>
 <p> The menu provided by the <code>byobu</code> should be self-explanatory. </p>
 <h2>SEE ALSO</h2>

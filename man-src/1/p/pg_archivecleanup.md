@@ -1,5 +1,4 @@
 ---
-
 title: "pg_archivecleanup(1)"
 name: "pg_archivecleanup"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pg_archivecleanup/"
 description: "pg_archivecleanup – clean up PostgreSQL WAL archive files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pg_archivecleanup &#8211; clean up PostgreSQL WAL archive files </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pg_archivecleanup</code> [<i>option</i>&#8230;] <i>archivelocation</i> <i>oldestkeptwalfile</i></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>pg_archivecleanup is designed to be used as an archive_cleanup_command to clean up WAL file archives when running as a standby server (see Section 25.2, &#8220;Log-Shipping Standby Servers&#8221;, in the documentation). pg_archivecleanup can also be used as a standalone program to clean WAL file archives. </dd>
 <p> To configure a standby server to use pg_archivecleanup, put this into its recovery.conf configuration file: </p>
 <dl>

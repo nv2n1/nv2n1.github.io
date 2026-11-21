@@ -1,5 +1,4 @@
 ---
-
 title: "mp4box(1)"
 name: "mp4box"
 section: "1"
@@ -10,7 +9,9 @@ description: "MP4Box – MPEG-4 Systems Toolbox"
 
 <h2>NAME</h2>
 <p> MP4Box &#8211; MPEG-4 Systems Toolbox</p>
+<h2>SYNOPSIS</h2>
 <p> <code>MP4Box</code> [options]<i>&nbsp;<wbr>file</i>&nbsp;<wbr>[options] </p>
+<h2>DESCRIPTION</h2>
 <p> MP4Box is a multi-purpose command line tool to create and edit MPEG-4 Systems presentations and manipulate ISO-media files (MP4, 3GP, MOV). </p>
 <p> MP4Box supports file conversion from various raw formats and IsoMedia/AVI/MPEG-PS/OGG containers, file hinting for RTP streaming for QuickTime compatible streaming servers, file interleaving, file fragmentation and track extraction. </p>
 <p> MP4Box also provides dump tools used to inspect file layout, RTP hint tracks, SDP information, scene composition. It may also be used to convert to and from BT/XMT-A/VRML/X3D. </p>

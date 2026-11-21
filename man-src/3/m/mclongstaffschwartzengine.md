@@ -1,5 +1,4 @@
 ---
-
 title: "mclongstaffschwartzengine(3)"
 name: "mclongstaffschwartzengine"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-mclongstaffschwartzengine/"
 description: "ql/pricingengines/mclongstaffschwartzengine.hpp – Longstaff Schwartz Monte Carlo engine for early exercise options."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/pricingengines/mclongstaffschwartzengine.hpp &#8211; Longstaff Schwartz Monte Carlo engine for early exercise options. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/pricingengines/mcsimulation.hpp&gt;<br />
  #include &lt;ql/methods/montecarlo/longstaffschwartzpathpricer.hpp&gt; </p>
 <h3>Classes</h3>

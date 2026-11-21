@@ -1,5 +1,4 @@
 ---
-
 title: "getcifsacl(1)"
 name: "getcifsacl"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-getcifsacl/"
 description: "getcifsacl – Userspace helper to display an ACL in a security descriptor for Common Internet File System (CIFS)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getcifsacl &#8211; Userspace helper to display an ACL in a security descriptor for Common Internet File System (CIFS) </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt>
 </dt><dd>getcifsacl [-v|-r] {file system object}</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This tool is part of the cifs-utils suite. </p>
 <p> getcifsacl is a userspace helper program for the Linux CIFS client file system. It is intended to display a security descriptor including ACL for a file system object. </p>
 <p> This program uses a plugin to handle the mapping of SIDs to user and group names. <code>/etc/cifs-utils/idmap-plugin</code> should be a symlink that points to the correct plugin to use. </p>

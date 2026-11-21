@@ -1,5 +1,4 @@
 ---
-
 title: "fpcsubst(1)"
 name: "fpcsubst"
 section: "1"
@@ -10,7 +9,9 @@ description: "fpcsubst – The Free Pascal macro processing program."
 
 <h2>NAME</h2>
 <p> fpcsubst &#8211; The Free Pascal macro processing program. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>fpcsubst [options]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Replaces some standard %XYZ% identifiers with a text, it&#8217;s a macro preprocessor. </p>
 <p> <code>fpcsubst</code> TO BE FILLED. </p>
 <h2>USAGE</h2>

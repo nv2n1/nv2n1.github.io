@@ -1,5 +1,4 @@
 ---
-
 title: "newuidmap(1)"
 name: "newuidmap"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-newuidmap/"
 description: "newuidmap – set the uid mapping of a user namespace"
 ---
 
+<h2 class="name">NAME</h2>
+<p> newuidmap &#8211; set the uid mapping of a user namespace </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>newuidmap</code> <i>pid</i> <i>uid</i> <i>loweruid</i> <i>count</i> [<i>uid</i>&nbsp;<wbr><i>loweruid</i>&nbsp;<wbr><i>count</i>&nbsp;<wbr>[&nbsp;<wbr><i>&#8230;</i>&nbsp;<wbr>]]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>newuidmap</code> sets /proc/[pid]/uid_map based on it&#8217;s command line arguments and the uids allowed in /etc/subuid. </dd>
 <p> After the pid argument, <code>newuidmap</code> expects sets of 3 integers: </p>
 <p> uid</p>

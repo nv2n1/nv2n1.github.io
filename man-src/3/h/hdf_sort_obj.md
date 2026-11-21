@@ -1,5 +1,4 @@
 ---
-
 title: "hdf_sort_obj(3)"
 name: "hdf_sort_obj"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-hdf_sort_obj/"
 description: "hdf_sort_obj – sort the children of an HDF node"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hdf_sort_obj &#8211; sort the children of an HDF node </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;util/neo_hdf.h&gt;
 </code></pre>
@@ -27,6 +29,7 @@ hdf_sort_obj()
  return strcasecmp(hdf_obj_name(*ha), hdf_obj_name(*hb));<br />
  }<br />
  * </p>
+<h2>DESCRIPTION</h2>
 <p> hdf_sort_obj will sort the children of an HDF node, based on the given comparison function. This function works by creating an array of the pointers for each child object of h, using qsort to sort that array, and then re-ordering the linked list of children to the new order. The qsort compare function uses a pointer to the value in the array, which in our case is a pointer to an HDF struct, so your comparison function should work on HDF ** pointers. </p>
 <h2>RETURN VALUE</h2>
 <p> None (h children will be sorted) </p>

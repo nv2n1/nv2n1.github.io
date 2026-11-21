@@ -1,5 +1,4 @@
 ---
-
 title: "drmaa_jobt(3)"
 name: "drmaa_jobt"
 section: "3"
@@ -7,7 +6,10 @@ letter: "d"
 url: "/docs/linux/man/3-drmaa_jobt/"
 ---
 
-Job template operations. - 
+<h2 class="name">NAME</h2>
+ 
+
+ Job template operations. - 
 
  The function drmaa_allocate_job_template() SHALL allocate a new job template, returned in <i>jt</i>. The function drmaa_allocate_job_template() SHALL allocate a new job template, returned in <i>jt</i>. 
 

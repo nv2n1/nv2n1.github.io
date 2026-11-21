@@ -1,5 +1,4 @@
 ---
-
 title: "gmtselect(1)"
 name: "gmtselect"
 section: "1"
@@ -10,8 +9,10 @@ description: "gmtselect – Select data table subsets based on multiple spatial 
 
 <h2>NAME</h2>
 <p> gmtselect &#8211; Select data table subsets based on multiple spatial criteria</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gmtselect</code> [ <i>table</i> ] [ <i>min_area</i>[/<i>min_level</i>/<i>max_level</i>][<code>+ag</code>|<code>i</code>|<code>s</code>|<code>S</code>][<code>+r</code>|<code>l</code>][<code>p</code><i>percent</i>] ] [ <i>dist</i>[<i>unit</i>]/<i>ptfile</i> ] [ <i>resolution</i>[<code>+</code>] ] [ [<code>fn</code>] ] [ <i>polygonfile</i> ] [ <code>-I</code>[<code>cflrsz</code>] ] [ <i>parameters</i> ] [ [<code>p</code>]<i>dist</i>[<i>unit</i>]/<i>linefile</i> ] [ <i>maskvalues</i> ] [ <i>region</i> ] [ <i>min</i>[/<i>max</i>][<code>+c</code><i>col</i>] ] [ [<i>level</i>] ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>gmtselect</code> is a filter that reads (longitude, latitude) positions from the first 2 columns of <i>infiles</i> [or standard input] and uses a combination of 1-6 criteria to pass or reject the records. Records can be selected based on whether or not they are 1) inside a rectangular region (<code>-R</code> [and <code>-J</code>]), 2) within <i>dist</i> km of any point in <i>ptfile</i>, 3) within <i>dist</i> km of any line in <i>linefile</i>, 4) inside one of the polygons in the <i>polygonfile</i>, 5) inside geographical features (based on coastlines), or 6) has z-values within a given range. The sense of the tests can be reversed for each of these 6 criteria by using the <code>-I</code> option. See option <code>-:</code> on how to read (latitude,longitude) files.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <p> None</p>

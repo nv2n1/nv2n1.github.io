@@ -1,5 +1,4 @@
 ---
-
 title: "pnmtosgi(1)"
 name: "pnmtosgi"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pnmtosgi/"
 description: "pnmtosgi – convert a portable anymap to a SGI image file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pnmtosgi &#8211; convert a portable anymap to a SGI image file </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pnmtosgi</code> [<code>-verbatim</code>|<code>-rle</code>] [<code>-imagename</code> <i>Name</i>] [<code>pnmfile</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> Reads a portable anymap as input. Produces an SGI image file as output. The SGI image will be 2-dimensional (1 channel) for PBM and PGM input, and 3-dimensional (3 channels) for PPM.</p>
 <h2>OPTIONS</h2>
 <dl>

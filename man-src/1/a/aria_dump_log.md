@@ -1,5 +1,4 @@
 ---
-
 title: "aria_dump_log(1)"
 name: "aria_dump_log"
 section: "1"
@@ -10,7 +9,9 @@ description: "aria_dump_log – Dump content of Aria log pages."
 
 <h2>NAME</h2>
 <p> aria_dump_log &#8211; Dump content of Aria log pages.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>aria_dump_log</code> <i>-f file OPTIONS</i></p>
+<h2>DESCRIPTION</h2>
 <p> Dump content of Aria log pages.</p>
 <dl>
 <dt><code>-#</code>, <code>&#8211;debug</code>[=<i>name</i>]</dt>

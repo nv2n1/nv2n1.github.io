@@ -1,5 +1,4 @@
 ---
-
 title: "mq_timedreceive(2)"
 name: "mq_timedreceive"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-mq_timedreceive/"
 description: "mq_receive, mq_timedreceive – receive a message from a message queue"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mq_receive, mq_timedreceive &#8211; receive a message from a message queue </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;mqueue.h&gt;
 ssize_t mq_receive(mqd_t mqdes, char *msg_ptr,
@@ -24,6 +26,7 @@ ssize_t mq_timedreceive(mqd_t mqdes, char *msg_ptr,
 <dl>
 <dt>
 </dt><dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>mq_receive</code>() removes the oldest message with the highest priority from the message queue referred to by the message queue descriptor <i>mqdes</i>, and places it in the buffer pointed to by <i>msg_ptr</i>. The <i>msg_len</i> argument specifies the size of the buffer pointed to by <i>msg_ptr</i>; this must be greater than or equal to the <i>mq_msgsize</i> attribute of the queue (see <code><a href="/docs/linux/man/3-mq_getattr/">mq_getattr</a></code>(3)). If <i>msg_prio</i> is not NULL, then the buffer to which it points is used to return the priority associated with the received message. </p>
 <p> If the queue is empty, then, by default, <code>mq_receive</code>() blocks until a message becomes available, or the call is interrupted by a signal handler. If the <code>O_NONBLOCK</code> flag is enabled for the message queue description, then the call instead fails immediately with the error <code>EAGAIN</code>. </p>
 <p> <code>mq_timedreceive</code>() behaves just like <code>mq_receive</code>(), except that if the queue is empty and the <code>O_NONBLOCK</code> flag is not enabled for the message queue description, then <i>abs_timeout</i> points to a structure which specifies how long the call will block. This value is an absolute timeout in seconds and nanoseconds since the Epoch, 1970-01-01 00:00:00 +0000 (UTC), specified in the following structure: </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_openpgp_crt_init(3)"
 name: "gnutls_openpgp_crt_init"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_openpgp_crt_init – API function"
 
 <h2>NAME</h2>
 <p> gnutls_openpgp_crt_init &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>
 <p> <code>int gnutls_openpgp_crt_init(gnutls_openpgp_crt_t * </code><i>key</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_openpgp_crt_t * key</dt>
 <dd> The structure to be initialized</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will initialize an OpenPGP key structure.</p>
 <h2>RETURNS</h2>
 <p> <code>GNUTLS_E_SUCCESS</code> on success, or an error code.</p>

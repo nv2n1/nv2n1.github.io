@@ -1,5 +1,4 @@
 ---
-
 title: "lroundl(3)"
 name: "lroundl"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-lroundl/"
 description: "lround, lroundf, lroundl, llround, llroundf, llroundl – round to nearest integer"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lround, lroundf, lroundl, llround, llroundf, llroundl &#8211; round to nearest integer </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;
 long lround(double x);
@@ -23,6 +25,7 @@ long long llroundl(long double x);
 <dl>
 <dt>
 </dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> These functions round their argument to the nearest integer value, rounding halfway cases away from zero, regardless of the current rounding direction (see <code><a href="/docs/linux/man/3-fenv/">fenv</a></code>(3)). </p>
 <p> Note that unlike the <code><a href="/docs/linux/man/3-round/">round</a></code>(3) and <code><a href="/docs/linux/man/3-ceil/">ceil</a></code>(3), functions, the return type of these functions differs from that of their arguments.</p>
 <h2>RETURN VALUE</h2>

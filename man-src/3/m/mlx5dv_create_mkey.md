@@ -1,5 +1,4 @@
 ---
-
 title: "mlx5dv_create_mkey(3)"
 name: "mlx5dv_create_mkey"
 section: "3"
@@ -7,9 +6,16 @@ letter: "m"
 url: "/docs/linux/man/3-mlx5dv_create_mkey/"
 ---
 
-mlx5dv_create_mkey - Creates an indirect mkey 
+<h2 class="name">NAME</h2>
+ 
+
+ 
+
+ mlx5dv_create_mkey - Creates an indirect mkey 
 
  mlx5dv_create_mkey - Destroys an indirect mkey 
+
+<h2>SYNOPSIS</h2>
 
 <dl>
 <dt>
@@ -29,7 +35,11 @@ mlx5dv_create_mkey(struct mlx5dv_mkey_init_attr *mkey_init_attr);
 int mlx5dv_destroy_mkey(struct mlx5dv_mkey *mkey);
 </code></pre></dd></dl>
 
-Create / destroy an indirect mkey. 
+<h2>DESCRIPTION</h2>
+
+ 
+
+ Create / destroy an indirect mkey. 
 
  Create an indirect mkey to enable application uses its specific device functionality.
 

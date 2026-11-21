@@ -1,5 +1,4 @@
 ---
-
 title: "mkmapfile(1)"
 name: "mkmapfile"
 section: "1"
@@ -7,18 +6,25 @@ letter: "m"
 url: "/docs/linux/man/1-mkmapfile/"
 ---
 
-mkmapfile - create Unicode mapfiles 
+<h2 class="name">NAME</h2>
+ 
+
+ mkmapfile - create Unicode mapfiles 
 
  Very Alpha. 
 
-Example: 
+<h2>SYNOPSIS</h2>
+
+ Example: 
 
  <pre>
  mkmapfile -M ./GB2312-80.map ~/Unicode/MAPPINGS/EASTASIA/GB/GB2312.TXT
  See &quot;mkmapfile -h&quot; for details.
 </pre>
 
-Creates the binary mapfiles that module Unicode::Map uses for converting from and to unicode character sets.
+<h2>DESCRIPTION</h2>
+
+ Creates the binary mapfiles that module Unicode::Map uses for converting from and to unicode character sets.
 
 <h2>SEE ALSO</h2>
 

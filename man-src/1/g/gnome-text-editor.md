@@ -1,5 +1,4 @@
 ---
-
 title: "gnome-text-editor(1)"
 name: "gnome-text-editor"
 section: "1"
@@ -8,9 +7,12 @@ url: "/docs/linux/man/1-gnome-text-editor/"
 description: "gedit – text editor for the GNOME Desktop"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>gedit</code> &#8211; text editor for the GNOME Desktop</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gedit</code> [<i>OPTION</i>&#8230;] [<i>FILE</i>&#8230;] [+<i>LINE</i>[:<i>COLUMN</i>]]<br />
  <code>gedit</code> [<i>OPTION</i>&#8230;] &#8211; </p>
+<h2>DESCRIPTION</h2>
 <p> <code>gedit</code> is the official text editor of the GNOME desktop environment. </p>
 <p> While aiming at simplicity and ease of use, <code>gedit</code> is a powerful general purpose text editor. It can be used to create and edit all kinds of text files. </p>
 <p> <code>gedit</code> features a flexible plugin system which can be used to dynamically add new advanced features to <code>gedit</code> itself. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "gdcmscanner(1)"
 name: "gdcmscanner"
 section: "1"
@@ -8,9 +7,14 @@ url: "/docs/linux/man/1-gdcmscanner/"
 description: "gdcmscanner – .TH \"gdcmscanner\" 1 \"Fri Oct 29 2010\" \"Version 2.0.16\" \"GDCM\""
 ---
 
+<h2 class="name">NAME</h2>
+<p> gdcmscanner &#8211; .TH &quot;gdcmscanner&quot; 1 &quot;Fri Oct 29 2010&quot; &quot;Version 2.0.16&quot; &quot;GDCM&quot; </p>
+<h2 class="name">NAME</h2>
+<p> gdcmscanner &#8211; .SH &quot;SYNOPSIS&quot; </p>
 <pre>
 gdcmscanner [options] directory
 </pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>gdcmscanner</code> is a command line tool to quickly extract value from a set of DICOM attribute in a DICOM File-Set.</p>
 <h3>PARAMETERS</h3>
 <pre>

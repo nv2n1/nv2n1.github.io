@@ -1,5 +1,4 @@
 ---
-
 title: "gifview(1)"
 name: "gifview"
 section: "1"
@@ -10,7 +9,9 @@ description: "gifview – displays GIF images and animations on the X window sys
 
 <h2>NAME</h2>
 <p> gifview &#8211; displays GIF images and animations on the X window system</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gifview</code> [<code>&#8211;display</code> <i>display</i>] [options] [filenames and frames]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>gifview</code> displays GIF image files on workstations and terminals running the X Window System. <code>gifview</code> understands multi-image GIFs, which can be displayed either as slideshows or as animations.</p>
 <h2>INTERACTION</h2>
 <p> <code>gifview</code> windows recognize several keystrokes and button commands. Many of them are only useful for multi-image GIFs.</p>

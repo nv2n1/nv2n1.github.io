@@ -1,5 +1,4 @@
 ---
-
 title: "icebox(1)"
 name: "icebox"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-icebox/"
 description: "icebox – The IceBox C++ service daemon."
 ---
 
+<h2 class="name">NAME</h2>
+<p> icebox &#8211; The IceBox C++ service daemon.</p>
+<h2>SYNOPSIS</h2>
 <p> icebox [options] </p>
+<h2>DESCRIPTION</h2>
 <p> IceBox is an easy-to-use framework for Ice application services. Full documentation for IceBox is available online at:<br />
  &quot;<a rel="nofollow" href="http://doc.zeroc.com/display/Ice/IceBox">http://doc.zeroc.com/display/Ice/IceBox</a>&quot;. </p>
 <h2>OPTIONS</h2>

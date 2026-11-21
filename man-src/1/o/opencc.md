@@ -1,5 +1,4 @@
 ---
-
 title: "opencc(1)"
 name: "opencc"
 section: "1"
@@ -10,6 +9,7 @@ description: "opencc – simplified-traditional chinese conversion tool"
 
 <h2>NAME</h2>
 <p> opencc &#8211; simplified-traditional chinese conversion tool</p>
+<h2>DESCRIPTION</h2>
 <p> Open Chinese Convert (OpenCC) Command Line Tool</p>
 <h3>Usage:</h3>
 <dl>

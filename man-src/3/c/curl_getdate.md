@@ -1,5 +1,4 @@
 ---
-
 title: "curl_getdate(3)"
 name: "curl_getdate"
 section: "3"
@@ -10,8 +9,10 @@ description: "curl_getdate – Convert a date string to number of seconds since 
 
 <h2>NAME</h2>
 <p> curl_getdate &#8211; Convert a date string to number of seconds since January 1, 1970</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;curl/curl.h&gt;</code> </p>
 <p> <code>time_t curl_getdate(char *</code><i>datestring</i><code>, time_t *now</code><i> );</i></p>
+<h2>DESCRIPTION</h2>
 <p> This function returns the number of seconds since January 1st 1970 in the UTC time zone, for the date and time that the <i>datestring</i> parameter specifies. The <i>now</i> parameter is not used, pass a NULL there. </p>
 <p> <code>NOTE:</code> This function was rewritten for the 7.12.2 release and this documentation covers the functionality of the new one. The new one is not feature-complete with the old one, but most of the formats supported by the new one was supported by the old too.</p>
 <h2>PARSING DATES AND TIMES</h2>

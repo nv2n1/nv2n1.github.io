@@ -1,5 +1,4 @@
 ---
-
 title: "gbak(1)"
 name: "gbak"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-gbak/"
 description: "gbak — backup /restore Firebird database"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gbak &#8212; backup /restore Firebird database </p>
+<h2>SYNOPSIS</h2>
 <p> <code>gbak</code> -b [<i>backup option</i>&#8230;] [<i>common option</i>&#8230;] <i>source</i> <i>target</i> </p>
 <p> <code>gbak</code> -c|-r [<i>restore option</i>&#8230;] [<i>common option</i>&#8230;] <i>source</i> <i>target</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>gbak</code> is the tool for managing Firebird database logical backup and restore. </p>
 <p> In backup mode <i>source</i> is the path to an existing database and <i>target</i> is the backup file name. If <i>target</i> is <tt>&quot;stdout&quot;</tt>, the backup is sent to the standard output. </p>
 <p> In restore mode <i>source</i> is an existing backup file and <i>target</i> is the path to a firebird database. If <i>source</i> is <tt>&quot;stdin&quot;</tt>, the backup data is expected on the standard input.</p>

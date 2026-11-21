@@ -1,5 +1,4 @@
 ---
-
 title: "g_mindist_d(1)"
 name: "g_mindist_d"
 section: "1"
@@ -11,7 +10,9 @@ description: "g_mindist – calculates the minimum distance between two groups"
 <h2>NAME</h2>
 <p> g_mindist &#8211; calculates the minimum distance between two groups </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>g_mindist</code> <code>-f</code><i> traj.xtc </i> <code>-s</code><i> topol.tpr </i> <code>-n</code><i> index.ndx </i> <code>-od</code><i> mindist.xvg </i> <code>-on</code><i> numcont.xvg </i> <code>-o</code><i> atm-pair.out </i> <code>-ox</code><i> mindist.xtc </i> <code>-or</code><i> mindistres.xvg </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-tu</code><i> enum </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-[no]matrix</code><i></i> <code>-[no]max</code><i></i> <code>-d</code><i> real </i> <code>-[no]pi</code><i></i> <code>-[no]split</code><i></i> <code>-ng</code><i> int </i> <code>-[no]pbc</code><i></i></p>
+<h2>DESCRIPTION</h2>
 <p> g_mindist computes the distance between one group and a number of other groups. Both the minimum distance (between any pair of atoms from the respective groups) and the number of contacts within a given distance are written to two separate output files. With <code> -or</code>, minimum distances to each residue in the first group are determined and plotted as a function of reisdue number. </p>
 <p> With option <code> -pi</code> the minimum distance of a group to its periodic image is plotted. This is useful for checking if a protein has seen its periodic image during a simulation. Only one shift in each direction is considered, giving a total of 26 shifts. It also plots the maximum distance within the group and the lengths of the three box vectors. </p>
 <p> Other programs that calculate distances are <code> g_dist</code> and <code> g_bond</code>.</p>

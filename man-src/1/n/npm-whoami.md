@@ -1,5 +1,4 @@
 ---
-
 title: "npm-whoami(1)"
 name: "npm-whoami"
 section: "1"
@@ -8,6 +7,7 @@ url: "/docs/linux/man/1-npm-whoami/"
 description: "npm-whoami – Display npm username"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>npm-whoami</code> &#8211; Display npm username </p>
 <h3>Synopsis</h3>
 <dl>

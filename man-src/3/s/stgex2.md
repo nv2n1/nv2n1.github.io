@@ -1,5 +1,4 @@
 ---
-
 title: "stgex2(3)"
 name: "stgex2"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-stgex2/"
 description: "stgex2.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> stgex2.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>stgex2</code> (WANTQ, WANTZ, N, A, LDA, B, LDB, Q, LDQ, Z, LDZ, J1, N1, N2, WORK, LWORK, INFO)<br />
  <i></i><code>STGEX2</code> swaps adjacent diagonal blocks in an upper (quasi) triangular matrix pair by an orthogonal equivalence transformation.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "dlaebz(3)"
 name: "dlaebz"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlaebz/"
 description: "dlaebz.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlaebz.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlaebz</code> (IJOB, NITMAX, N, MMAX, MINP, NBMIN, ABSTOL, RELTOL, PIVMIN, D, E, E2, NVAL, AB, C, MOUT, NAB, WORK, IWORK, INFO)<br />
  <i></i><code>DLAEBZ</code> computes the number of eigenvalues of a real symmetric tridiagonal matrix which are less than or equal to a given value, and performs other tasks required by the routine sstebz.</p>

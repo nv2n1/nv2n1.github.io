@@ -1,5 +1,4 @@
 ---
-
 title: "ctxtools(1)"
 name: "ctxtools"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ctxtools/"
 description: "ctxtools – clean up temporary ConTeXt files, install latest ConTeXt"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ctxtools &#8211; clean up temporary ConTeXt files, install latest ConTeXt</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ctxtools</code> [ <i>OPTION</i> &#8230; ] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>ctxtools</code> is useful for dealing with ConTeXt source and generated files and for installing new versions of ConTeXt. </p>
 <h2>OPTIONS</h2>
 <dl>

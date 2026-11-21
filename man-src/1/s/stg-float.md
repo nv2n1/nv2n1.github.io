@@ -1,5 +1,4 @@
 ---
-
 title: "stg-float(1)"
 name: "stg-float"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-stg-float/"
 description: "stg-float – Push patches to the top, even if applied"
 ---
 
+<h2 class="name">NAME</h2>
+<p> stg-float &#8211; Push patches to the top, even if applied </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 stg float[--]&lt;patches&gt;
         stg float - s&lt;series&gt;
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Push a patch or a range of patches to the top even if applied. The necessary pop and push operations will be performed to accomplish this. The <i>&#8211;series</i> option can be used to rearrange the (top) patches as specified by the given series file (or the standard input).</p>
 <h2>OPTIONS</h2>
 <p> -s FILE, &#8211;series FILE</p>

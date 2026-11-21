@@ -1,5 +1,4 @@
 ---
-
 title: "wmfmio(1)"
 name: "wmfmio"
 section: "1"
@@ -10,7 +9,9 @@ description: "wmfmio – WindowMaker dockable application to manipulate fm radio
 
 <h2>NAME</h2>
 <p> <code>wmfmio</code> &#8211; WindowMaker dockable application to manipulate fm radio card</p>
+<h2>SYNOPSIS</h2>
 <p> <code>wmfmio</code> [-<code>n</code> ] [-<code>t </code><i>&lt;##:##&gt;</i> ] [-<code>p </code><i>&lt;##&gt;</i> ] [-<code>h</code> ]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>wmfmio</code> is a wmtune based WindowMaker dockable application that controls radio tuner cards supported by fmio utility. </p>
 <p> The `+&#8217; and `-&#8216; buttons are for FINE tuning. </p>
 <p> The 2 buttons to the right of the FINE tuning buttons are the SCAN buttons. </p>

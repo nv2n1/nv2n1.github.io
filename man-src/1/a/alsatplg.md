@@ -1,5 +1,4 @@
 ---
-
 title: "alsatplg(1)"
 name: "alsatplg"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-alsatplg/"
 description: "alsatplg – ALSA Topology Compiler"
 ---
 
+<h2 class="name">NAME</h2>
+<p> alsatplg &#8211; ALSA Topology Compiler </p>
+<h2>SYNOPSIS</h2>
 <p> <i>alsatplg</i> &lt;options&gt; [command]</p>
+<h2>DESCRIPTION</h2>
 <p> alsatplg (ALSA Topology compiler) is a program to compile topology configuration file to the binary file for the kernel drivers. </p>
 <p> Current audio drivers typically hard code topology information in the driver sources: This tightly couples the audio driver to the development board making it time consuming to modify a driver to work on a different devices. The driver is also tightly coupled to the DSP firmware version meaning extra care is needed to keep the driver and firmware version in sync. New firmware features also mean driver updates. </p>
 <p> The ALSA topology project removes the need for re-writing or porting audio drivers to different devices or different firmwares: Drivers have no hard coded topology data meaning a single driver can be used on different devices by updating the topology data from the file system. Firmware updates can be pushed without having to update the drivers. The new firmware just needs to include an updated topology file describing the update.</p>

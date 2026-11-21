@@ -1,5 +1,4 @@
 ---
-
 title: "getrusage(2)"
 name: "getrusage"
 section: "2"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/2-getrusage/"
 description: "getrusage – get resource usage"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getrusage &#8211; get resource usage </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/time.h&gt;</code><br />
  <code>#include &lt;sys/resource.h&gt;</code> </p>
 <p> <code>int getrusage(int </code><i>who</i><code>, struct rusage *</code><i>usage</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>getrusage</code>() returns resource usage measures for <i>who</i>, which can be one of the following:</p>
 <dl>
 <dt><code>RUSAGE_SELF</code></dt>

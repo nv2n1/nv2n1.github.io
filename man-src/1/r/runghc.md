@@ -1,5 +1,4 @@
 ---
-
 title: "runghc(1)"
 name: "runghc"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-runghc/"
 description: "runghc – program to run Haskell programs without first having to compile them."
 ---
 
+<h2 class="name">NAME</h2>
+<p> runghc &#8211; program to run Haskell programs without first having to compile them. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>runghc</code> [runghc|flags] [GHC|flags] module [program|flags]&#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> <code>runghc </code> is considered a non-interactive interpreter and part of The Glasgow Haskell Compiler. <code>runghc</code> is a compiler that automatically runs its results at the end. </p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "antlr3-false(3)"
 name: "antlr3-false"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-antlr3-false/"
 description: "src/antlr3convertutf.c –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> src/antlr3convertutf.c &#8211; </p>
+<h2>SYNOPSIS</h2>
 <p> #include &#8216;antlr3convertutf.h&#8217; </p>
 <h3>Defines</h3>
 <p> #define <code>false</code> 0 </p>

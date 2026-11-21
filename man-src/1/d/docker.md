@@ -1,5 +1,4 @@
 ---
-
 title: "docker(1)"
 name: "docker"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-docker/"
 description: "docker – Docker image and container command line interface"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker &#8211; Docker image and container command line interface </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker</code> [OPTIONS] COMMAND [ARG&#8230;] </p>
 <p> <code>docker</code> [&#8211;help|-v|&#8211;version] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>docker</code> is a client for interacting with the daemon (see <code><a href="/docs/linux/man/8-dockerd/">dockerd</a>(8)</code>) through the CLI. </p>
 <p> The Docker CLI has over 30 commands. The commands are listed below and each has its own man page which explain usage and arguments. </p>
 <p> To see the man page for a command run <code>man docker </code>. </p>

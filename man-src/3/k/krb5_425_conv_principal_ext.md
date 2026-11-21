@@ -1,5 +1,4 @@
 ---
-
 title: "krb5_425_conv_principal_ext(3)"
 name: "krb5_425_conv_principal_ext"
 section: "3"
@@ -8,10 +7,13 @@ url: "/docs/linux/man/3-krb5_425_conv_principal_ext/"
 description: "krb5_425_conv_principal krb5_425_conv_principal_ext krb5_524_conv_principal – converts to and from version 4 principals"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>krb5_425_conv_principal</code> <code>krb5_425_conv_principal_ext</code> <code>krb5_524_conv_principal</code> &#8211; converts to and from version 4 principals </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>
+<h2>SYNOPSIS</h2>
 <p> In krb5.h Ft krb5_error_code Fn krb5_425_conv_principal krb5_context context const char *name const char *instance const char *realm krb5_principal *principal Ft krb5_error_code Fn krb5_425_conv_principal_ext krb5_context context const char *name const char *instance const char *realm krb5_boolean (*func)(krb5_context, krb5_principal) krb5_boolean resolve krb5_principal *principal Ft krb5_error_code Fn krb5_524_conv_principal krb5_context context const krb5_principal principal char *name char *instance char *realm</p>
+<h2>DESCRIPTION</h2>
 <p> Converting between version 4 and version 5 principals can at best be described as a mess. </p>
 <p> A version 4 principal consists of a name, an instance, and a realm. A version 5 principal consists of one or more components, and a realm. In some cases also the first component/name will differ between version 4 and version 5. Furthermore the second component of a host principal will be the fully qualified domain name of the host in question, while the instance of a version 4 principal will only contain the first part (short hostname). Because of these problems the conversion between principals will have to be site customized. </p>
 <p> Fn krb5_425_conv_principal_ext will try to convert a version 4 principal, given by Fa name , Fa instance , and Fa realm , to a version 5 principal. This can result in several possible principals, and if Fa func is non-NULL, it will be called for each candidate principal. Fa func should return true if the principal was &#8220;good&#8221; To accomplish this, Fn krb5_425_conv_principal_ext will look up the name in krb5.conf It first looks in the <code>v4_name_convert/host</code> subsection, which should contain a list of version 4 names whose instance should be treated as a hostname. This list can be specified for each realm (in the <code>realms</code> section), or in the <code>libdefaults</code> section. If the name is found the resulting name of the principal will be the value of this binding. The instance is then first looked up in <code>v4_instance_convert</code> for the specified realm. If found the resulting value will be used as instance (this can be used for special cases), no further attempts will be made to find a conversion if this fails (with Fa func ) . If the Fa resolve parameter is true, the instance will be looked up with Fn gethostbyname . This can be a time consuming, error prone, and unsafe operation. Next a list of hostnames will be created from the instance and the <code>v4_domains</code> variable, which should contain a list of possible domains for the specific realm. </p>

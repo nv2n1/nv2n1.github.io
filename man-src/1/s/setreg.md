@@ -1,5 +1,4 @@
 ---
-
 title: "setreg(1)"
 name: "setreg"
 section: "1"
@@ -10,7 +9,9 @@ description: "setreg – Change settings for public key cryptography"
 
 <h2>NAME</h2>
 <p> setreg &#8211; Change settings for public key cryptography</p>
+<h2>SYNOPSIS</h2>
 <p> <code>setreg [options] [feature] [true|false]</code></p>
+<h2>DESCRIPTION</h2>
 <p> Allow to configure some optional settings for public key cryptography parameters used in Mono.</p>
 <h2>OPTIONS</h2>
 <dl>

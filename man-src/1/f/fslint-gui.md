@@ -1,5 +1,4 @@
 ---
-
 title: "fslint-gui(1)"
 name: "fslint-gui"
 section: "1"
@@ -10,7 +9,9 @@ description: "fslint-gui – A GUI wrapper for the individual fslint command lin
 
 <h2>NAME</h2>
 <p> fslint-gui &#8211; A GUI wrapper for the individual fslint command line tools</p>
+<h2>SYNOPSIS</h2>
 <p> <code>fslint-gui</code> [<i>OPTIONS</i>] [<i>PATHS</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> fslint is a toolset to find various problems with filesystems, including duplicate files and problematic filenames etc. </p>
 <p> Individual command line tools are available in addition to the GUI and to access them, one can change to, or add to $PATH the /usr/share/fslint/fslint directory on a standard install. Each of these commands in that directory have a &#8211;help option which further details its parameters. </p>
 <p> <code>findup</code> &#8211; find DUPlicate files </p>

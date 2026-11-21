@@ -1,5 +1,4 @@
 ---
-
 title: "mysql_plugin(1)"
 name: "mysql_plugin"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mysql_plugin/"
 description: "mysql_plugin – configure MySQL server plugins"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mysql_plugin &#8211; configure MySQL server plugins </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysql_plugin [</code><i>options</i><code>] </code><i>plugin</i><code> {ENABLE|DISABLE}</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dl>
 <dd> <font SIZE="+1"> <code>Note</code> </font></dd>
 <dd>

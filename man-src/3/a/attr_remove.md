@@ -1,5 +1,4 @@
 ---
-
 title: "attr_remove(3)"
 name: "attr_remove"
 section: "3"
@@ -16,6 +15,7 @@ description: "attr_remove, attr_removef – remove a user attribute of a filesys
 int attr_remove(const char *path, const char *attrname, int flags);
 int attr_removef(int fd, const char *attrname, int flags);
 [</code></pre>
+<h2>DESCRIPTION</h2>
 <p> ] The <code>attr_remove</code> and <code>attr_removef</code> functions provide a way to remove previously created attributes from filesystem objects. </p>
 <p> <i>Path</i> points to a path name for a filesystem object, and <i>fd</i> refers to the file descriptor associated with a file. If the attribute <i>attrname</i> exists, the attribute name and value will be removed from the fileystem object. The <i>flags</i> argument can contain the following symbols bitwise OR&#8217;ed together:</p>
 <dl>

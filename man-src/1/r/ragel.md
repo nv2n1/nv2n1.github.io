@@ -1,5 +1,4 @@
 ---
-
 title: "ragel(1)"
 name: "ragel"
 section: "1"
@@ -10,7 +9,9 @@ description: "ragel – compile regular languages into executable state machines
 
 <h2>NAME</h2>
 <p> ragel &#8211; compile regular languages into executable state machines</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ragel </code> [<i>options</i>] <i>file</i></p>
+<h2>DESCRIPTION</h2>
 <p> Ragel compiles executable finite state machines from regular languages. Ragel can generate C, C++, Objective-C, D, Go, or Java code. Ragel state machines can not only recognize byte sequences as regular expression machines do, but can also execute code at arbitrary points in the recognition of a regular language. User code is embedded using inline operators that do not disrupt the regular language syntax. </p>
 <p> The core language consists of standard regular expression operators, such as union, concatenation and kleene star, accompanied by action embedding operators. Ragel also provides operators that let you control any non-determinism that you create, construct scanners using the longest match paradigm, and build state machines using the statechart model. It is also possible to influence the execution of a state machine from inside an embedded action by jumping or calling to other parts of the machine and reprocessing input. </p>
 <p> Ragel provides a very flexibile interface to the host language that attempts to place minimal restrictions on how the generated code is used and integrated into the application. The generated code has no dependencies. </p>

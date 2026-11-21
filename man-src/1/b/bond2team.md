@@ -1,5 +1,4 @@
 ---
-
 title: "bond2team(1)"
 name: "bond2team"
 section: "1"
@@ -10,7 +9,9 @@ description: "bond2team — Converts bonding configuration to team"
 
 <h2>NAME</h2>
 <p> bond2team &#8212; Converts bonding configuration to team</p>
+<h2>SYNOPSIS</h2>
 <p> <code>bond2team</code> [options]</p>
+<h2>DESCRIPTION</h2>
 <p> bond2team is a tool to convert bonding options to team trying as much as possible to keep the original functionality. </p>
 <p> The resulting files are saved in a temporary directory using ifcfg style by default. In the case of converting an ifcfg file, it translates the bonding options to team, preserving all other options. In that case, it converts the respective slave ifcfg files to team port, preserving all their other options too. In case of converting from given bonding options in the command line, the tool can use the specified ports as team ports.</p>
 <h2>OPTIONS</h2>

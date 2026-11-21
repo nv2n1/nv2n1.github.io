@@ -1,5 +1,4 @@
 ---
-
 title: "ck_epoch_call(3)"
 name: "ck_epoch_call"
 section: "3"
@@ -12,8 +11,10 @@ description: "ck_epoch_call – defer function execution until a grace period"
 <p> <code>ck_epoch_call</code> &#8211; defer function execution until a grace period</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_epoch.h typedef struct ck_epoch_entry ck_epoch_entry_t;<br />
  typedef void ck_epoch_cb_t(ck_epoch_entry_t *); Ft void Fn ck_epoch_call ck_epoch_record_t *record ck_epoch_entry_t *entry ck_epoch_cb_t *function</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_epoch_call 3 function will defer the execution of the function pointed to by Fa function until a grace-period has been detected in Fa epoch . The function will be provided the pointer specified by Fa entry . The function will execute at some time in the future via calls to Fn ck_epoch_reclaim 3 , Fn ck_epoch_barrier 3 or Fn ck_epoch_poll 3 .</p>
 <h2>EXAMPLE</h2>
 <blockquote>

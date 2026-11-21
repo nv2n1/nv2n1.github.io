@@ -1,5 +1,4 @@
 ---
-
 title: "git-rev-list(1)"
 name: "git-rev-list"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-rev-list/"
 description: "git-rev-list – Lists commit objects in reverse chronological order"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-rev-list &#8211; Lists commit objects in reverse chronological order </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git rev - list[&lt;options&gt;]&lt;commit&gt;...[[--]&lt;path&gt;...]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> List commits that are reachable by following the <code>parent</code> links from the given commit(s), but exclude commits that are reachable from the one(s) given with a <i>^</i> in front of them. The output is given in reverse chronological order by default. </p>
 <p> You can think of this as a set operation. Commits reachable from any of the commits given on the command line form a set, and then commits reachable from any of the ones given with <i>^</i> in front are subtracted from that set. The remaining commits are what comes out in the command&#8217;s output. Various other options and paths parameters can be used to further limit the result. </p>
 <p> Thus, the following command: </p>

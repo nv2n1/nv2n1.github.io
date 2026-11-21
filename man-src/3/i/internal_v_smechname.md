@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-internal_v_smechname/"
 description: "internal_v_smechname – Internal names and mechanism names"
 ---
 
+<h2 class="name">NAME</h2>
+<p> internal_v_smechname &#8211; Internal names and mechanism names</p>
 <h2>Name forms</h2>
 <p> There are two name representations in GSS-API: Internal form and Contiguous string (&#8216;flat&#8217;) form. Functions <code>gss_export_name()</code> and <code>gss_import_name()</code> can be used to convert between the two forms. </p>
 <dl>

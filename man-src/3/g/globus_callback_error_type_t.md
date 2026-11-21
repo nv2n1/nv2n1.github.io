@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_callback_error_type_t/"
 description: "Globus Callback –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Globus Callback &#8211; </p>
 <p> Globus Callback Function Interface.</p>
 <h3>Modules</h3>
 <p> <code>Globus Callback API</code> </p>

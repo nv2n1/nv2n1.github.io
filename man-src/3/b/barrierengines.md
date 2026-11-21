@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-barrierengines/"
 description: "Barrier option engines –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Barrier option engines &#8211; </p>
 <h3>Classes</h3>
 <p> class <code>PerturbativeBarrierOptionEngine</code><br />
  <i>perturbative barrier-option engine </i><br />

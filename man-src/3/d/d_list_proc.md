@@ -1,5 +1,4 @@
 ---
-
 title: "d_list_proc(3)"
 name: "d_list_proc"
 section: "3"
@@ -10,8 +9,10 @@ description: "d_list_proc – Dialog procedure implementing a list box object. A
 
 <h2>NAME</h2>
 <p> d_list_proc &#8211; Dialog procedure implementing a list box object. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>int d_list_proc(int msg, DIALOG *d, int c);</code></p>
+<h2>DESCRIPTION</h2>
 <p> A list box object. This will allow the user to scroll through a list of items and to select one by clicking or with the arrow keys. If the D_EXIT flag is set, double clicking on a list item will close the dialog. The index of the selected item is held in the d1 field, and d2 is used to store how far it has scrolled through the list. The dp field points to a function which will be called to obtain information about the contents of the list. This should follow the form: </p>
 <pre><code>
 char *foobar(int index, int *list_size);

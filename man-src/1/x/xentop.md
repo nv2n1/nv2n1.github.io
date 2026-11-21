@@ -1,5 +1,4 @@
 ---
-
 title: "xentop(1)"
 name: "xentop"
 section: "1"
@@ -10,7 +9,9 @@ description: "xentop – displays real-time information about a Xen system and d
 
 <h2>NAME</h2>
 <p> <code>xentop</code> &#8211; displays real-time information about a Xen system and domains </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xentop</code> [<code>-h</code>] [<code>-V</code>] [<code>-d</code>SECONDS] [<code>-n</code>] [<code>-r</code>] [<code>-v</code>] [<code>-b</code>] [<code>-i</code>ITERATIONS] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>xentop</code> displays information about the Xen system and domains, in a continually-updating manner. Command-line options and interactive commands can change the detail and format of the information displayed by <code>xentop</code>. </p>
 <h2>OPTIONS</h2>
 <dl>

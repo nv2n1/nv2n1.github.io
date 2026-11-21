@@ -1,5 +1,4 @@
 ---
-
 title: "euare-usercreate(1)"
 name: "euare-usercreate"
 section: "1"
@@ -10,10 +9,12 @@ description: "euare-usercreate – Create a new user"
 
 <h2>NAME</h2>
 <p> euare-usercreate &#8211; Create a new user</p>
+<h2>SYNOPSIS</h2>
 <p> euare-usercreate [-p PATH] [-g GROUP_NAME] [&#8211;verify] [-k] [-v | <code>-w]</code></p>
 <dl>
 <dt>[-d DOMAIN] [-l] [&#8211;as-account ACCOUNT] [-U URL]</dt>
 <dd> [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] USER</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Create a new user</p>
 <h3>positional arguments:</h3>
 <dl>

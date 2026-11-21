@@ -1,5 +1,4 @@
 ---
-
 title: "mongod(1)"
 name: "mongod"
 section: "1"
@@ -10,6 +9,7 @@ description: "mongod – MongoDB Server"
 
 <h2>NAME</h2>
 <p> mongod &#8211; MongoDB Server</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mongod</code> is the primary daemon process for the MongoDB system. It handles data requests, manages data format, and performs background management operations. </p>
 <p> This document provides a complete overview of all command line options for <code>mongod</code>. These options are primarily useful for testing purposes. In common operation, use the <code>configuration file options</code> to control the behavior of your database, which is fully capable of all operations described below.</p>
 <h2>OPTIONS</h2>

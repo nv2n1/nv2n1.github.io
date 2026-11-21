@@ -1,5 +1,4 @@
 ---
-
 title: "create_bitmap_ex(3)"
 name: "create_bitmap_ex"
 section: "3"
@@ -10,8 +9,10 @@ description: "create_bitmap_ex – Creates a memory bitmap specifying color dept
 
 <h2>NAME</h2>
 <p> create_bitmap_ex &#8211; Creates a memory bitmap specifying color depth. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>BITMAP *create_bitmap_ex(int color_depth, int width, int height);</code></p>
+<h2>DESCRIPTION</h2>
 <p> Creates a bitmap in a specific color depth (8, 15, 16, 24 or 32 bits per pixel). Example: </p>
 <pre><code>
 /* Create screen sized bitmap in 32 bits per pixel. */

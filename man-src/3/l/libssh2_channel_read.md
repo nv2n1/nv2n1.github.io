@@ -1,5 +1,4 @@
 ---
-
 title: "libssh2_channel_read(3)"
 name: "libssh2_channel_read"
 section: "3"
@@ -10,8 +9,10 @@ description: "libssh2_channel_read – convenience macro for libssh2_channel_rea
 
 <h2>NAME</h2>
 <p> libssh2_channel_read &#8211; convenience macro for <i><a href="/docs/linux/man/3-libssh2_channel_read_ex/">libssh2_channel_read_ex</a>(3)</i> calls</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
 <p> ssize_t libssh2_channel_read(LIBSSH2_CHANNEL *channel, char *buf, size_t buflen); </p>
+<h2>DESCRIPTION</h2>
 <p> This is a macro defined in a public libssh2 header file that is using the underlying function <i><a href="/docs/linux/man/3-libssh2_channel_read_ex/">libssh2_channel_read_ex</a>(3)</i>.</p>
 <h2>RETURN VALUE</h2>
 <p> See <i><a href="/docs/linux/man/3-libssh2_channel_read_ex/">libssh2_channel_read_ex</a>(3)</i></p>

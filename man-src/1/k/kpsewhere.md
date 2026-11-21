@@ -1,5 +1,4 @@
 ---
-
 title: "kpsewhere(1)"
 name: "kpsewhere"
 section: "1"
@@ -10,7 +9,9 @@ description: "kpsewhere – Expanding kpsewhich to separately iterate over each 
 
 <h2>NAME</h2>
 <p> kpsewhere &#8211; Expanding <code>kpsewhich</code> to separately iterate over each texmf tree listed in $TEXMF. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>kpsewhere </code> [ <i>kpsewhich-OPTIONS</i>&#8230; ] <i>COMMAND</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>kpsewhere</code> is an extension to <code>kpsewhich</code> (as <code>where</code> is for <code>which</code> in tcsh). The intention is to provide a way to check for conflicts/shadowed files. It will, however, only find <code>one</code> file per TEXMF tree. </p>
 <h2>OPTIONS</h2>
 <dl>

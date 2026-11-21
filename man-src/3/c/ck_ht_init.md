@@ -1,5 +1,4 @@
 ---
-
 title: "ck_ht_init(3)"
 name: "ck_ht_init"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_ht_init – initialize a hash table"
 <p> <code>ck_ht_init</code> &#8211; initialize a hash table</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_ht.h Ft typedef void Fn ck_ht_hash_cb_t ck_ht_hash_t *h const void *key size_t key_length uint64_t seed Ft bool Fn ck_ht_init ck_ht_t *ht enum ck_ht_mode mode ck_ht_hash_cb_t *hash_function struct ck_malloc *allocator uint64_t capacity uint64_t seed</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_ht_init function initializes the hash table pointed to by the Fa ht pointer. </p>
 <p> The argument Fa mode specifies the type of key-value pairs to be stored in the hash table. The value of Fa mode may be one of:</p>
 <dl>

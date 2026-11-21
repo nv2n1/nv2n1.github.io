@@ -1,5 +1,4 @@
 ---
-
 title: "inotify_rm_watch(2)"
 name: "inotify_rm_watch"
 section: "2"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/2-inotify_rm_watch/"
 description: "inotify_rm_watch – remove an existing watch from an inotify instance"
 ---
 
+<h2 class="name">NAME</h2>
+<p> inotify_rm_watch &#8211; remove an existing watch from an inotify instance </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/inotify.h&gt;</code> </p>
 <p> <code>int inotify_rm_watch(int </code><i>fd</i><code>, int </code><i>wd</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>inotify_rm_watch</code>() removes the watch associated with the watch descriptor <i>wd</i> from the inotify instance associated with the file descriptor <i>fd</i>. </p>
 <p> Removing a watch causes an <code>IN_IGNORED</code> event to be generated for this watch descriptor. (See <code><a href="/docs/linux/man/7-inotify/">inotify</a></code>(7).)</p>
 <h2>RETURN VALUE</h2>

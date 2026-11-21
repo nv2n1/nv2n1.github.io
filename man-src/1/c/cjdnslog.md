@@ -1,5 +1,4 @@
 ---
-
 title: "cjdnslog(1)"
 name: "cjdnslog"
 section: "1"
@@ -10,7 +9,9 @@ description: "cjdnslog — display cjdroute log messages"
 
 <h2>NAME</h2>
 <p> <code>cjdnslog</code> &#8212; display cjdroute log messages</p>
+<h2>SYNOPSIS</h2>
 <p> <code>/usr/bin/cjdnslog</code> [&lt;options&gt;&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> Cjdroute sends continuous log messages to the bit bucket. Cjdnslog captures that information in real time and sends it to stdout.</p>
 <h2>OPTIONS</h2>
 <p> With no options, cjdnslog logs everything.</p>

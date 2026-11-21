@@ -1,5 +1,4 @@
 ---
-
 title: "getunwind(2)"
 name: "getunwind"
 section: "2"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/2-getunwind/"
 description: "getunwind – copy the unwind data to caller’s buffer"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getunwind &#8211; copy the unwind data to caller&#8217;s buffer </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/unwind.h&gt;
 #include &lt;syscall.h&gt;
 long getunwind(void *buf, size_t buf_size);
 </code></pre>
 <p> <i>Note</i>: There is no glibc wrapper for this system call; see NOTES.</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Note: this function is obsolete.</i> </p>
 <p> The IA-64-specific <code>getunwind</code>() system call copies the kernel&#8217;s call frame unwind data into the buffer pointed to by <i>buf</i> and returns the size of the unwind data; this data describes the gate page (kernel code that is mapped into user space). </p>
 <p> The size of the buffer <i>buf</i> is specified in <i>buf_size</i>. The data is copied only if <i>buf_size</i> is greater than or equal to the size of the unwind data and <i>buf</i> is not NULL; otherwise, no data is copied, and the call succeeds, returning the size that would be needed to store the unwind data. </p>

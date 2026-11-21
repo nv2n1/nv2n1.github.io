@@ -1,5 +1,4 @@
 ---
-
 title: "dggqrf(3)"
 name: "dggqrf"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dggqrf/"
 description: "dggqrf.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dggqrf.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dggqrf</code> (N, M, P, A, LDA, TAUA, B, LDB, TAUB, WORK, LWORK, INFO)<br />
  <i></i><code>DGGQRF</code></p>

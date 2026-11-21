@@ -1,5 +1,4 @@
 ---
-
 title: "check_mk(1)"
 name: "check_mk"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-check_mk/"
 description: "check_mk – command line utility for managing Check_MK"
 ---
 
+<h2 class="name">NAME</h2>
+<p> check_mk &#8211; command line utility for managing Check_MK</p>
+<h2>SYNOPSIS</h2>
 <p> <code>check_mk</code> [<i>GLOBAL OPTIONS</i>] [<i>MODE</i>] [<i>MODE OPTIONS</i>] [<i>ARGUMENTS&#8230;</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>check_mk</code> (or its alias <code>cmk</code>) is a command line utility for managing some aspects of the Check_MK Monitoring System. It can be used for diagnosis, for automating things in scripts and for doing some tasks more efficiently than with the web based WATO. </p>
 <h2>GENERIC OPTIONS</h2>
 <p> The following options work in all modes and all situations. </p>

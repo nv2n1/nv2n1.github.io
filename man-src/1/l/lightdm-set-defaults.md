@@ -1,5 +1,4 @@
 ---
-
 title: "lightdm-set-defaults(1)"
 name: "lightdm-set-defaults"
 section: "1"
@@ -10,7 +9,9 @@ description: "lightdm-set-defaults – sets configuration options for lightdm"
 
 <h2>NAME</h2>
 <p> lightdm-set-defaults &#8211; sets configuration options for lightdm</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lightdm-set-defaults</code> [ <i>OPTION</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>lightdm-set-defaults</code> sets configuration options for lightdm. Requires root permissions to run.</p>
 <h2>OPTIONS</h2>
 <dl>

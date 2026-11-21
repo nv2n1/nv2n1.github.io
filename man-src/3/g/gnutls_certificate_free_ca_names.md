@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_certificate_free_ca_names(3)"
 name: "gnutls_certificate_free_ca_names"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_certificate_free_ca_names – API function"
 
 <h2>NAME</h2>
 <p> gnutls_certificate_free_ca_names &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_certificate_free_ca_names(gnutls_certificate_credentials_t </code><i>sc</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_certificate_credentials_t sc</dt>
 <dd> is a <code>gnutls_certificate_credentials_t</code> structure.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will delete all the CA name in the given credentials. Clients may call this to save some memory since in client side the CA names are not used. Servers might want to use this function if a large list of trusted CAs is present and sending the names of it would just consume bandwidth without providing information to client. </p>
 <p> CA names are used by servers to advertise the CAs they support to clients.</p>
 <h2>REPORTING BUGS</h2>

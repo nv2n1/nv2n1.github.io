@@ -1,5 +1,4 @@
 ---
-
 title: "drmaa_wait(3)"
 name: "drmaa_wait"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-drmaa_wait/"
 description: "drmaa_synchronize, drmaa_wait, drmaa_wifexited, drmaa_wexitstatus, drmaa_wifsignaled, drmaa_wtermsig, drmaa_wcoredump, drmaa_wifaborted – Waiting for jobs to finish"
 ---
 
+<h2 class="name">NAME</h2>
+<p> drmaa_synchronize, drmaa_wait, drmaa_wifexited, drmaa_wexitstatus, drmaa_wifsignaled, drmaa_wtermsig, drmaa_wcoredump, drmaa_wifaborted &#8211; Waiting for jobs to finish</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include drmaa.h</code> </p>
 <pre><code>
 int drmaa_synchronize(
@@ -67,6 +69,7 @@ char *error_diagnosis,
 size_t&amp;nbsp;error_diag_len
 </code></pre>
 <p> <code>);</code> </p>
+<h2>DESCRIPTION</h2>
 <p> The drmaa_synchronize() function blocks the calling thread until all jobs specified in <i>job_ids</i> have failed or finished execution. If <i>job_ids</i> contains &#8216;DRMAA_JOB_IDS_SESSION_ALL&#8217;, then this function waits for all jobs submitted during this DRMAA session. The <i>job_ids</i> pointer array must be NULL terminated. </p>
 <p> To prevent blocking indefinitely in this call, the caller may use the <i>timeout</i>, specifying how many seconds to wait for this call to complete before timing out. The special value DRMAA_TIMEOUT_WAIT_FOREVER can be used to wait indefinitely for a result. The special value DRMAA_TIMEOUT_NO_WAIT can be used to return immediately. If the call exits before <i>timeout</i> seconds, all the specified jobs have completed or the calling thread received an interrupt. In both cases, the return code is DRMAA_ERRNO_EXIT_TIMEOUT. </p>
 <p> The <i>dispose</i> parameter specifies how to treat reaping information. If &#8216;0&#8217; is passed to this parameter, job finish information will still be available when is used. If &#8216;1&#8217; is passed, will be unable to access this job&#8217;s finish information.</p>

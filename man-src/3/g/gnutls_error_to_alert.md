@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_error_to_alert(3)"
 name: "gnutls_error_to_alert"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_error_to_alert – API function"
 
 <h2>NAME</h2>
 <p> gnutls_error_to_alert &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_error_to_alert(int </code><i>err</i><code>, int * </code><i>level</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_error_to_alert – API function"
 <dd> is a negative integer</dd>
 <dt>int * level</dt>
 <dd> the alert level will be stored there</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Get an alert depending on the error code returned by a gnutls function. All alerts sent by this function should be considered fatal. The only exception is when <i>err</i> is <code>GNUTLS_E_REHANDSHAKE</code>, where a warning alert should be sent to the peer indicating that no renegotiation will be performed. </p>
 <p> If there is no mapping to a valid alert the alert to indicate internal error is returned.</p>
 <h2>RETURNS</h2>

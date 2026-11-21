@@ -1,5 +1,4 @@
 ---
-
 title: "tiff2ps(1)"
 name: "tiff2ps"
 section: "1"
@@ -10,7 +9,9 @@ description: "tiff2ps – convert a TIFF image to PostScript"
 
 <h2>NAME</h2>
 <p> tiff2ps &#8211; convert a <font SIZE="-1">TIFF</font> image to PostScript</p>
+<h2>SYNOPSIS</h2>
 <p> <code>tiff2ps</code> [ <i>options</i> ] <i>input.tif &#8230;</i></p>
+<h2>DESCRIPTION</h2>
 <p> <i>tiff2ps</i> reads <font SIZE="-1">TIFF</font> images and writes PostScript or Encapsulated PostScript (EPS) on the standard output. By default, <i>tiff2ps</i> writes Encapsulated PostScript for the first image in the specified <font SIZE="-1">TIFF</font> image file. </p>
 <p> By default, <i>tiff2ps</i> will generate PostScript that fills a printed area specified by the <font SIZE="-1">TIFF</font> tags in the input file. If the file does not contain <i>XResolution</i> or <i>YResolution</i> tags, then the printed area is set according to the image dimensions. The <code>-w</code> and <code>-h</code> options (see below) can be used to set the dimensions of the printed area in inches; overriding any relevant <font SIZE="-1">TIFF</font> tags. </p>
 <p> The PostScript generated for <font SIZE="-1">RGB,</font> palette, and <font SIZE="-1">CMYK</font> images uses the <i>colorimage</i> operator. The PostScript generated for greyscale and bilevel images uses the <i>image</i> operator. When the <i>colorimage</i> operator is used, PostScript code to emulate this operator on older PostScript printers is also generated. Note that this emulation code can be very slow. </p>

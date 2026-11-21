@@ -1,5 +1,4 @@
 ---
-
 title: "oggz-comment(1)"
 name: "oggz-comment"
 section: "1"
@@ -11,6 +10,7 @@ description: "oggz-comment — List or edit comments in an Ogg file."
 <h2>NAME</h2>
 <p> oggz-comment &#8212; List or edit comments in an Ogg file.<br />
 &nbsp;<wbr></p>
+<h2>SYNOPSIS</h2>
 <p> <code>oggz-comment</code> [-l | &#8211;list ] </p>
 <p> <code>oggz-comment</code> [-o <code>filename</code> | &#8211;output <code>filename</code> ] [-d | &#8211;delete ] [-a | &#8211;all ] [-s <code>serialno</code> | &#8211;serialno <code>serialno</code> ] [-c <code>content-type</code> | &#8211;content-type <code>content-type</code> ] filename </p>
 <p> <code>oggz-comment</code> [-h | &#8211;help ] [-v | &#8211;version ]</p>

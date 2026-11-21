@@ -1,5 +1,4 @@
 ---
-
 title: "guestfs-building(1)"
 name: "guestfs-building"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-guestfs-building/"
 description: "guestfs-building – How to build libguestfs from source"
 ---
 
+<h2 class="name">NAME</h2>
+<p> guestfs-building &#8211; How to build libguestfs from source </p>
+<h2>DESCRIPTION</h2>
 <p> This manual page describes how to build libguestfs from source. </p>
 <p> The main steps are:</p>
 <dl>

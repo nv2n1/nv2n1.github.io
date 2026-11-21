@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pubkey_import(3)"
 name: "gnutls_pubkey_import"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_pubkey_import – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pubkey_import &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/abstract.h&gt;</code> </p>
 <p> <code>int gnutls_pubkey_import(gnutls_pubkey_t </code><i>key</i><code>, const gnutls_datum_t * </code><i>data</i><code>, gnutls_x509_crt_fmt_t </code><i>format</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_pubkey_import – API function"
 <dd> The DER or PEM encoded certificate.</dd>
 <dt>gnutls_x509_crt_fmt_t format</dt>
 <dd> One of DER or PEM</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will import the provided public key in a SubjectPublicKeyInfo X.509 structure to a native <code>gnutls_pubkey_t</code> structure. The output will be stored in <i>key</i> . If the public key is PEM encoded it should have a header of &quot;PUBLIC KEY&quot;.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

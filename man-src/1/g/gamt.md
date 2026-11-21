@@ -1,5 +1,4 @@
 ---
-
 title: "gamt(1)"
 name: "gamt"
 section: "1"
@@ -10,7 +9,9 @@ description: "gamt – Intel AMT serial-over-lan (sol) client."
 
 <h2>NAME</h2>
 <p> gamt &#8211; Intel AMT serial-over-lan (sol) client.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gamt [ options ] [ host ]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>gamt</code> provides access to the serial-over-lan port of Intel AMT managed machines. <code>host</code> is the hostname or IP address of the machine gamt should connect to. </p>
 <p> For more inforamtions on Intel AMT check <a href="/docs/linux/man/7-amt-howto/">amt-howto</a>(7).</p>
 <h2>OPTIONS</h2>

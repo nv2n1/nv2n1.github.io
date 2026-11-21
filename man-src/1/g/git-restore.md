@@ -1,5 +1,4 @@
 ---
-
 title: "git-restore(1)"
 name: "git-restore"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-restore/"
 description: "git-restore – Restore working tree files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-restore &#8211; Restore working tree files </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git restore[&lt;options&gt;][--source = &lt;tree&gt;][--staged][--worktree][--]&lt;pathspec&gt;... git restore[&lt;options&gt;][--source = &lt;tree&gt;][--staged][--worktree]-- pathspec - from - file = &lt;file&gt;[--pathspec - file - nul] git restore(-p | --patch)[&lt;options&gt;][--source = &lt;tree&gt;][--staged][--worktree][--][&lt;pathspec&gt;...]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Restore specified paths in the working tree with some contents from a restore source. If a path is tracked but does not exist in the restore source, it will be removed to match the source. </p>
 <p> The command can also be used to restore the content in the index with <code>&#8211;staged</code>, or restore both the working tree and the index with <code>&#8211;staged &#8211;worktree</code>. </p>
 <p> By default, if <code>&#8211;staged</code> is given, the contents are restored from <code>HEAD</code>, otherwise from the index. Use <code>&#8211;source</code> to restore from a different commit. </p>

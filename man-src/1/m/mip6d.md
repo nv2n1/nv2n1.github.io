@@ -1,5 +1,4 @@
 ---
-
 title: "mip6d(1)"
 name: "mip6d"
 section: "1"
@@ -10,7 +9,9 @@ description: "mip6d – UMIP Mobile IPv6 and NEMO Basic Support protocol impleme
 
 <h2>NAME</h2>
 <p> mip6d &#8211; UMIP Mobile IPv6 and NEMO Basic Support protocol implementation</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mip6d [options]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Mobile IPv6 and NEMO Basic Support implementation </p>
 <h2>OPTIONS</h2>
 <dl>

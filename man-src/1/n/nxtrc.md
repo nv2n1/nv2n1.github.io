@@ -1,5 +1,4 @@
 ---
-
 title: "nxtrc(1)"
 name: "nxtrc"
 section: "1"
@@ -10,8 +9,10 @@ description: "nxtrc – a program to interact with LEGO NXT via BlueTooth"
 
 <h2>NAME</h2>
 <p> nxtrc &#8211; a program to interact with LEGO NXT via BlueTooth</p>
+<h2>SYNOPSIS</h2>
 <p> <code>nxtrc</code> [-s] </p>
 <p> <code>nxtrc</code> [-a ADDR] [-v] command</p>
+<h2>DESCRIPTION</h2>
 <p> NXTRC (NXT Remote Command) is a small program that allows to send various commands to a LEGO Mindstorm NXT Brick. It uses the Bluetooth protocol through the Bluez libraries. </p>
 <p> The option <code>-s</code> starts a scan to find BlueTooth devices. If a BT address is given in the command line or is in the Environment Variable BTADDR it connects to the NXT and performs the task specified in &lt;command&gt;. The first time you connect with a device you need to exchange a password, this task is usually done by the Operative System BlueTooth Management (as Kbluetooth under KDE). </p>
 <h2>COMMANDS and OPTIONS</h2>

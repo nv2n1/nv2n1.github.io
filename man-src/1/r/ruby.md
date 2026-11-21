@@ -1,5 +1,4 @@
 ---
-
 title: "ruby(1)"
 name: "ruby"
 section: "1"
@@ -9,8 +8,11 @@ description: "ruby – Interpreted object-oriented scripting language"
 ---
 
 <p>UNIX</p>
+<h2 class="name">NAME</h2>
 <p> <code>ruby</code> &#8211; Interpreted object-oriented scripting language </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ruby</code> [-<code>-copyright</code> ] [-<code>-version</code> ] [-<code>SUacdlnpswvy</code> ] [-<code>0 </code>[<i>octal</i> ] ] [-<code>C </code><i>directory</i> ] [-<code>E </code><i>external </i>[: <i>internal</i> ] ] [-<code>F </code>[<i>pattern</i> ] ] [-<code>I </code><i>directory</i> ] [-<code>K </code>[<i>c</i> ] ] [-<code>T </code>[<i>level</i> ] ] [-<code>W </code>[<i>level</i> ] ] [-<code>e </code><i>command</i> ] [-<code>i </code>[<i>extension</i> ] ] [-<code>r </code><i>library</i> ] [-<code>x </code>[<i>directory</i> ] ] [-<code>&#8211; Bro enable | disable Brc &#8211; </code><i>FEATURE</i> ] [-<code>-dump = </code><i>target</i> ] [-<code>-verbose</code> ] [- ] [<i>program_file</i> ] [<i>argument &#8230;</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> Ruby is an interpreted scripting language for quick and easy object-oriented programming. It has many features to process text files and to do system management tasks (like in Perl). It is simple, straight-forward, and extensible. </p>
 <p> If you want a language for easy object-oriented programming, or you don&#8217;t like the Perl ugliness, or you do like the concept of LISP, but don&#8217;t like too many parentheses, Ruby might be your language of choice.</p>
 <h2>FEATURES</h2>

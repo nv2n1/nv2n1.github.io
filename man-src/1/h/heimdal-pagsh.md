@@ -1,5 +1,4 @@
 ---
-
 title: "heimdal-pagsh(1)"
 name: "heimdal-pagsh"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-heimdal-pagsh/"
 description: "pagsh – creates a new credential cache sandbox"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>pagsh</code> &#8211; creates a new credential cache sandbox </p>
+<h2>SYNOPSIS</h2>
 <p> [-<code>c </code><i>command-string</i> ] [-<code>h | &#8211;help</code> ] [-<code>-version</code> ] [-<code>-cache-type= </code><i>string</i> ] <i>command [args&#8230;]</i></p>
+<h2>DESCRIPTION</h2>
 <p> Supported options:</p>
 <dl>
 <dt> &#8211;<code>c </code><i>command-string</i></dt>

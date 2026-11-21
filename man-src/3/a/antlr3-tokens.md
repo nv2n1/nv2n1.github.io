@@ -1,5 +1,4 @@
 ---
-
 title: "antlr3-tokens(3)"
 name: "antlr3-tokens"
 section: "3"
@@ -8,7 +7,10 @@ url: "/docs/linux/man/3-antlr3-tokens/"
 description: "ANTLR3_COMMON_TOKEN_STREAM_struct –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ANTLR3_COMMON_TOKEN_STREAM_struct &#8211; </p>
 <p> Common token stream is an implementation of ANTLR_TOKEN_STREAM for the default parsers and recognizers.</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3tokenstream.h">antlr3tokenstream.h</a>&gt;</p>
 <h3>Data Fields</h3>
 <p> <code>ANTLR3_UINT32</code> <code>channel</code> </p>

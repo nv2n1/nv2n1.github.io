@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_ia_get_client_avp_ptr(3)"
 name: "gnutls_ia_get_client_avp_ptr"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_ia_get_client_avp_ptr – Returns the pointer which is sent
 
 <h2>NAME</h2>
 <p> gnutls_ia_get_client_avp_ptr &#8211; Returns the pointer which is sent to TLS/IA callback</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/extra.h">gnutls/extra.h</a>&gt;</code> </p>
 <p> <code>void * gnutls_ia_get_client_avp_ptr(gnutls_ia_client_credentials_t </code><i>cred</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_ia_client_credentials_t cred</dt>
 <dd> is a <code>gnutls_ia_client_credentials_t</code> structure.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Returns the pointer that will be provided to the TLS/IA callback function as the first argument.</p>
 <h2>RETURNS</h2>
 <p> The client callback data pointer.</p>

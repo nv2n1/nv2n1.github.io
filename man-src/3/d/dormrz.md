@@ -1,5 +1,4 @@
 ---
-
 title: "dormrz(3)"
 name: "dormrz"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dormrz/"
 description: "dormrz.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dormrz.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dormrz</code> (SIDE, TRANS, M, N, K, L, A, LDA, TAU, C, LDC, WORK, LWORK, INFO)<br />
  <i></i><code>DORMRZ</code></p>

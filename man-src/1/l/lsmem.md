@@ -1,5 +1,4 @@
 ---
-
 title: "lsmem(1)"
 name: "lsmem"
 section: "1"
@@ -7,8 +6,11 @@ letter: "l"
 url: "/docs/linux/man/1-lsmem/"
 description: "lsmem – list the ranges of available memory with their online status"
 ---
-
+<h2 class="name">NAME</h2>
+<p> lsmem - list the ranges of available memory with their online status </p>
+<h2>SYNOPSIS</h2>
 <p> <code>lsmem</code> [options]  </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>lsmem</code> command lists the ranges of available memory with their online status. The listed memory blocks correspond to the memory block representation in sysfs. The command also shows the memory block size and the amount of memory in online and offline state. </p>
 <p> The default output compatible with original implementation from s390-tools, but it&#8217;s strongly recommended to avoid using default outputs in your scripts. Always explicitly define expected columns by using the <code>--output</code> option together with a columns list in environments where a stable output is required. </p>
 <p> The <code>lsmem</code> command lists a new memory range always when the current memory block distinguish from the previous block by some output column. This default behavior is possible to override by the <code>--split</code> option (e.g., <code>lsmem --split=ZONES</code>). The special word &quot;none&quot; may be used to ignore all differences between memory blocks and to create as large as possible continuous ranges. The opposite semantic is <code>--all</code> to list individual memory blocks. </p>

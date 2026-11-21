@@ -1,5 +1,4 @@
 ---
-
 title: "escp2topbm(1)"
 name: "escp2topbm"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-escp2topbm/"
 description: "escp2topbm – convert an ESC/P2 printer file to a PBM image"
 ---
 
+<h2 class="name">NAME</h2>
+<p> escp2topbm &#8211; convert an ESC/P2 printer file to a PBM image</p>
+<h2>SYNOPSIS</h2>
 <p> <code>escp2topbm</code> [<i>printfile</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>escp2topbm</code> reads an ESC/P2 printer control stream as input. It produces a PBM image as output. </p>
 <p> <code>escp2topbm</code> filters the raster graphic content from an Epson ESC/P2 printer control stream and writes the image it would print as a standard (raw) PBM image. </p>

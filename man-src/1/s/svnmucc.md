@@ -1,5 +1,4 @@
 ---
-
 title: "svnmucc(1)"
 name: "svnmucc"
 section: "1"
@@ -10,6 +9,7 @@ description: "svnmucc – Multiple URL Command Client for Subversion"
 
 <h2>NAME</h2>
 <p> svnmucc &#8211; Multiple URL Command Client for Subversion</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>svnmucc</code> [<i>options</i>]</dt>
 <dd></dd></dl>

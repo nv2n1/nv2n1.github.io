@@ -1,5 +1,4 @@
 ---
-
 title: "blkcat(1)"
 name: "blkcat"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-blkcat/"
 description: "blkcat – Display the contents of file system data unit in a disk image."
 ---
 
+<h2 class="name">NAME</h2>
+<p> blkcat &#8211; Display the contents of file system data unit in a disk image. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>blkcat [-ahswvV] [-f fstype] [-u unit_size] [-i imgtype] [-o imgoffset] [-b dev_sector_size] </code> <i>image [images] unit_addr [num]</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>blkcat</code> displays <code>num </code> data units (default is one) starting at the unit address <code>unit_addr</code> from <code>image</code> to stdout in different formats (default is raw). <code>blkcat</code> was called <code>dcat</code> in TSK versions prior to 3.0.0. </p>
 <h2>ARGUMENTS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "sphinterpolate(1)"
 name: "sphinterpolate"
 section: "1"
@@ -10,8 +9,10 @@ description: "sphinterpolate – Spherical gridding in tension of data on a sphe
 
 <h2>NAME</h2>
 <p> sphinterpolate &#8211; Spherical gridding in tension of data on a sphere</p>
+<h2>SYNOPSIS</h2>
 <p> <code>sphinterpolate</code> [ <i>table</i> ] <i>grdfile</i> [ <i>increment</i> ] [ <i>mode</i>[/<i>options</i>] ] [ <i>region</i> ] [ [<i>level</i>] ] [ ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-r</code> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>sphinterpolate</code> reads one or more ASCII [or binary] files (or standard input) containing lon, lat, f and performs a Delaunay triangulation to set up a spherical interpolation in tension. The final grid is saved to the specified file. Several options may be used to affect the outcome, such as choosing local versus global gradient estimation or optimize the tension selection to satisfy one of four criteria.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

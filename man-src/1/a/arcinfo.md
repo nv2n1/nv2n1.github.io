@@ -1,5 +1,4 @@
 ---
-
 title: "arcinfo(1)"
 name: "arcinfo"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-arcinfo/"
 description: "arcinfo – ARC Info"
 ---
 
+<h2 class="name">NAME</h2>
+<p> arcinfo &#8211; ARC Info</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>arcinfo</code> command is used for obtaining status and information of clusters on the grid. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>arcinfo [options] [cluster &#8230;]</code> </p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "blackbox(3)"
 name: "blackbox"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-blackbox/"
 description: "blackbox.h –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> blackbox.h &#8211; </p>
+<h2>SYNOPSIS</h2>
 <p> #include &#8216;alchemist.h&#8217; </p>
 <h3>Classes</h3>
 <p> struct <code>AdmBlackBoxMethods</code> </p>

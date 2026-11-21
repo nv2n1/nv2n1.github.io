@@ -1,5 +1,4 @@
 ---
-
 title: "gstream-set_input_approver(3)"
 name: "gstream-set_input_approver"
 section: "3"
@@ -10,8 +9,10 @@ description: "set_input_approver"
 
 <h2>NAME</h2>
 <p> set_input_approver</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gstream.h">gstream.h</a>&gt;</code> </p>
 <p> <code>void set_input_approver(bool (*input_approver)(int));</code></p>
+<h2>DESCRIPTION</h2>
 <p> The function handed over will be called with every new character inputted and determines whether the character will be accepted by the inputter. If it returns true, the character is accepted and inserted in the input string, if false, the character is thrown away. </p>
 <p> A short example: </p>
 <pre><code>

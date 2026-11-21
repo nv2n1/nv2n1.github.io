@@ -1,5 +1,4 @@
 ---
-
 title: "xbrlapi(1)"
 name: "xbrlapi"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-xbrlapi/"
 description: "xbrlapi – X11 BrlAPI helper for Linux/Unix"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xbrlapi &#8211; X11 BrlAPI helper for Linux/Unix </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xbrlapi</code> [<i>option</i> &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>xbrlapi</code> connects to a <code>BrlAPI</code> server in order to provide it with the ID of the <code>X11</code> window which currently has focus. It also simulates <code>X</code> keysyms from braille key presses (else brltty would simulate them using a qwerty keyboard). By default, it puts itself in the background, unless option <code>-n</code> is given.</p>
 <h2>OPTIONS</h2>
 <p> Options are processed sequentially from left to right. If an option is specified more than once, or in case of a conflict, the rightmost specification takes precedence. </p>

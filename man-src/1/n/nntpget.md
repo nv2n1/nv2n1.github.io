@@ -1,5 +1,4 @@
 ---
-
 title: "nntpget(1)"
 name: "nntpget"
 section: "1"
@@ -10,7 +9,9 @@ description: "nntpget – get Usenet articles from a remote NNTP server"
 
 <h2>NAME</h2>
 <p> nntpget &#8211; get Usenet articles from a remote NNTP server</p>
+<h2>SYNOPSIS</h2>
 <p> <i>nntpget</i> [ <code>-d</code><i> dist</i> ] [ <code>-f</code><i> file</i> ] [ <code>-n</code><i> newsgroups</i> ] [ <code>-t</code><i> timestring</i> ] [ <code>-o</code> ] [ <code>-u</code><i> file</i> ] [ <code>-v</code> ] <i>host</i></p>
+<h2>DESCRIPTION</h2>
 <p> <i>Nntpget</i> connects to the NNTP server at the specified <i>host</i> and retrieves articles from it. The Message-ID&#8217;s of the desired articles are read from standard input. The articles are sent to standard output.</p>
 <h2>OPTIONS</h2>
 <dl>

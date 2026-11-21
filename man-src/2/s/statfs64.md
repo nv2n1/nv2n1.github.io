@@ -1,5 +1,4 @@
 ---
-
 title: "statfs64(2)"
 name: "statfs64"
 section: "2"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/2-statfs64/"
 description: "statfs, fstatfs – get filesystem statistics"
 ---
 
+<h2 class="name">NAME</h2>
+<p> statfs, fstatfs &#8211; get filesystem statistics </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/vfs.h&gt; </code>/* or &lt;sys/statfs.h&gt; */ </p>
 <p> <code>int statfs(const char *</code><i>path</i><code>, struct statfs *</code><i>buf</i><code>);</code><br />
  <code>int fstatfs(int </code><i>fd</i><code>, struct statfs *</code><i>buf</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>statfs</code>() system call returns information about a mounted filesystem. <i>path</i> is the pathname of any file within the mounted filesystem. <i>buf</i> is a pointer to a <i>statfs</i> structure defined approximately as follows: </p>
 <p> struct statfs {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;__fsword_t f_type;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Type of filesystem&nbsp;(see below)&nbsp;*/<br />

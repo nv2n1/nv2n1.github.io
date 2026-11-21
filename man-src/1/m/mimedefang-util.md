@@ -1,5 +1,4 @@
 ---
-
 title: "mimedefang-util(1)"
 name: "mimedefang-util"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-mimedefang-util/"
 description: "mimedefang-util — Utility script for message structure debugging"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mimedefang-util &#8212; Utility script for message structure debugging </p>
+<h2>SYNOPSIS</h2>
 <pre>
     # Print a &quot;pretty&quot; version of an input message
     mimedefang-util --prettyprint &lt; input.msg
@@ -16,6 +18,7 @@ description: "mimedefang-util — Utility script for message structure debugging
     # Parse and re-MIME the message
     mimedefang-util --dump &lt; input.msg
 </pre>
+<h2>DESCRIPTION</h2>
 <p> This script provides some debug tools formerly provided as part of mimedefang.pl</p>
 <h2>OPTIONS</h2>
 <dl>

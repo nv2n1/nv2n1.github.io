@@ -1,5 +1,4 @@
 ---
-
 title: "dlar2v(3)"
 name: "dlar2v"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlar2v/"
 description: "dlar2v.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlar2v.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlar2v</code> (N, X, Y, Z, INCX, C, S, INCC)<br />
  <i></i><code>DLAR2V</code> applies a vector of plane rotations with real cosines and real sines from both sides to a sequence of 2-by-2 symmetric/Hermitian matrices.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "get_encoding(3)"
 name: "get_encoding"
 section: "3"
@@ -10,9 +9,11 @@ description: "get_encoding — report the binary encoding of data in a dirfile"
 
 <h2>NAME</h2>
 <p> get_encoding &#8212; report the binary encoding of data in a dirfile</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
 <dl>
 <dt> <code>unsigned long get_encoding(DIRFILE *</code><i>dirfile</i><code>, int </code><i>fragment_index</i><code>);</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>get_encoding</code>() function queries a <a href="/docs/linux/man/5-dirfile/">dirfile</a>(5) database specified by <i>dirfile</i> and returns the binary encoding for the fragment indexed by <i>fragment_index</i>. The binary encoding of a fragment indicate the encoding of data stored in binary files associated with <code>RAW</code> fields defined in the specified fragment. The encoding of a fragment containing no <code>RAW</code> fields is ignored. </dd>
 <h2>RETURN VALUE</h2>
 <p> Upon successful completion, <code>get_encoding</code>() returns the binary encoding of the specified fragment, which will one of the following symbols:</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "flow-tools(1)"
 name: "flow-tools"
 section: "1"
@@ -10,6 +9,7 @@ description: "flow-tools – Tool set for working with NetFlow data."
 
 <h2>NAME</h2>
 <p> flow-tools &#8211; Tool set for working with NetFlow data.</p>
+<h2>DESCRIPTION</h2>
 <p> Flow-tools is library and a collection of programs used to collect, send, process, and generate reports from NetFlow data. The tools can be used together on a single server or distributed to multiple servers for large deployments. The flow-toools library provides an API for development of custom applications for NetFlow export versions 1,5,6 and the 14 currently defined version 8 subversions. A Perl and Python interface have been contributed and are included in the distribution. </p>
 <p> Flow data is collected and stored by default in host byte order, yet the files are portable across big and little endian architectures. </p>
 <p> Commands that utilize the network use a localip/remoteip/port designation for communication. &quot;localip&quot; is the IP address the host will use as a source for sending or bind to when receiving NetFlow PDU&#8217;s (ie the destination address of the exporter. Configuring the &quot;localip&quot; to 0 will force the kernel to decide what IP address to use for sending and listen on all IP addresses for receiving. &quot;remoteip&quot; is the destination IP address used for sending or the expected address of the source when receiving. If the &quot;remoteip&quot; is 0 then the application will accept flows from any source address. The &quot;port&quot; is the UDP port number used for sending or receiving. When using multicast addresses the localip/remoteip/port is used to represent the source, group, and port respectively. </p>

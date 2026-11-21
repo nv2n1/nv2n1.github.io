@@ -1,5 +1,4 @@
 ---
-
 title: "torsocks(1)"
 name: "torsocks"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-torsocks/"
 description: "torsocks — Shell wrapper to simplify the use of the"
 ---
 
+<h2 class="name">NAME</h2>
+<p> torsocks &#8212; Shell wrapper to simplify the use of the </p>
 <p><a href="/docs/linux/man/8-torsocks/">torsocks</a>(8) library to transparently torify an application. </p>
+<h2>SYNOPSIS</h2>
 <p> torsocks [OPTIONS] [COMMAND [ARG &#8230;]] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>torsocks</code> is a wrapper between the torsocks library and the application in order to make every Internet communication go through the Tor network. </p>
 <p> By default, torsocks will assume that it should connect to the Tor SOCKS proxy running at 127.0.0.1 on port 9050 being the defaults of the Tor daemon. </p>
 <p> In order to use a configuration file, torsocks tries to read the <code>/etc/tor/torsocks.conf</code> file or look for the environment variable TORSOCKS_CONF_FILE with the location of the file. If that file cannot be read, torsocks will use sensible defaults for most Tor installations. </p>

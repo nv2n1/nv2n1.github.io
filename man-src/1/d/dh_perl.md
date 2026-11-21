@@ -1,5 +1,4 @@
 ---
-
 title: "dh_perl(1)"
 name: "dh_perl"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dh_perl/"
 description: "dh_perl – calculates Perl dependencies and cleans up after MakeMaker"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dh_perl &#8211; calculates Perl dependencies and cleans up after MakeMaker </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dh_perl</code> [<i>debhelper options</i>] [<code>-d</code>] [<i>library dirs</i> &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>dh_perl</code> is a debhelper program that is responsible for generating the <code>${perl:Depends}</code> substitutions and adding them to substvars files. </p>
 <p> The program will look at Perl scripts and modules in your package, and will use this information to generate a dependency on <code>perl</code> or <code>perlapi</code>. The dependency will be substituted into your package&#8217;s <i>control</i> file wherever you place the token <code>${perl:Depends}</code>. </p>
 <p> <code>dh_perl</code> also cleans up empty directories that MakeMaker can generate when installing Perl modules.</p>

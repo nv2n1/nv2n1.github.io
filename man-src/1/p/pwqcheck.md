@@ -1,5 +1,4 @@
 ---
-
 title: "pwqcheck(1)"
 name: "pwqcheck"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-pwqcheck/"
 description: "pwqcheck – Check passphrase quality"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>pwqcheck</code> &#8211; Check passphrase quality </p>
+<h2>SYNOPSIS</h2>
 <p> [<i>options</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>Op Ar options</code> program checks passphrase quality using the libpasswdqc library. By default, it expects to read 3 lines from standard input: </p>
 <dl>
 <dt><code>first line is a new password,</code></dt>

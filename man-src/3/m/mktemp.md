@@ -1,5 +1,4 @@
 ---
-
 title: "mktemp(3)"
 name: "mktemp"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-mktemp/"
 description: "mktemp – make a unique temporary filename"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mktemp &#8211; make a unique temporary filename </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;
 char *mktemp(char *template);
@@ -23,6 +25,7 @@ char *mktemp(char *template);
 <dt>Before glibc 2.12:</dt>
 <dd> _BSD_SOURCE || _SVID_SOURCE || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dd></dl>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> <i>Never use this function</i>; see BUGS. </p>
 <p> The <code>mktemp</code>() function generates a unique temporary filename from <i>template</i>. The last six characters of <i>template</i> must be XXXXXX and these are replaced with a string that makes the filename unique. Since it will be modified, <i>template</i> must not be a string constant, but should be declared as a character array.</p>
 <h2>RETURN VALUE</h2>

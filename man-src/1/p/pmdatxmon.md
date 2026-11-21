@@ -1,5 +1,4 @@
 ---
-
 title: "pmdatxmon(1)"
 name: "pmdatxmon"
 section: "1"
@@ -10,10 +9,12 @@ description: "pmdatxmon – txmon performance metrics domain agent (PMDA)"
 
 <h2>NAME</h2>
 <p> <code>pmdatxmon</code> &#8211; txmon performance metrics domain agent (PMDA)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/txmon/pmdatxmon</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>] <i>tx_type</i> &#8230;<br />
  <code>$PCP_PMDAS_DIR/txmon/txrecord</code> [<code>-l</code>]<br />
  <code>$PCP_PMDAS_DIR/txmon/txrecord</code> <i>tx_type servtime</i> [<i>tx_type servtime</i> &#8230; ]<br />
  <code>$PCP_PMDAS_DIR/txmon/genload</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdatxmon</code> is an example Performance Metrics Domain Agent (PMDA) which exports a small number of performance metrics from a simulated transaction monitor. </p>
 <p> The txmon PMDA is shipped as both binary and source code and is designed to be an aid for PMDA developers; the txmon PMDA demonstrates how performance data can be exported from an application (in this case <code>txrecord</code>) to the PCP infrastructure via a shared memory segment. As a matter of convenience, <code>pmdatxmon</code> creates (and destroys on exit) the shared memory segment. </p>
 <p> The <i>tx_type</i> arguments are arbitrary unique tags used to identify different transaction types. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "sphinx-apidoc(1)"
 name: "sphinx-apidoc"
 section: "1"
@@ -10,7 +9,9 @@ description: "sphinx-apidoc – Sphinx API doc generator tool"
 
 <h2>NAME</h2>
 <p> sphinx-apidoc &#8211; Sphinx API doc generator tool</p>
+<h2>SYNOPSIS</h2>
 <p> <code>sphinx-apidoc</code> [<i>options</i>] -o &lt;<i>outputdir</i>&gt; &lt;<i>sourcedir</i>&gt; [<i>pathnames</i> &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>sphinx-apidoc</code> is a tool for automatic generation of Sphinx sources that, using the autodoc extension, document a whole package in the style of other automatic API documentation tools. </p>
 <p> <i>sourcedir</i> must point to a Python package. Any <i>pathnames</i> given are paths to be excluded from the generation. </p>
 <p> <code>WARNING:</code> <code>sphinx-apidoc</code> generates source files that use <code>sphinx.ext.autodoc</code> to document all found modules. If any modules have side effects on import, these will be executed by <code>autodoc</code> when <code>sphinx-build</code> is run. </p>

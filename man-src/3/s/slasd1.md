@@ -1,5 +1,4 @@
 ---
-
 title: "slasd1(3)"
 name: "slasd1"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-slasd1/"
 description: "slasd1.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> slasd1.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slasd1</code> (NL, NR, SQRE, D, ALPHA, BETA, U, LDU, VT, LDVT, IDXQ, IWORK, WORK, INFO)<br />
  <i></i><code>SLASD1</code> computes the SVD of an upper bidiagonal matrix B of the specified size. Used by sbdsdc.</p>

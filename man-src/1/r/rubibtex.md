@@ -1,5 +1,4 @@
 ---
-
 title: "rubibtex(1)"
 name: "rubibtex"
 section: "1"
@@ -10,7 +9,9 @@ description: "rubibtex – make a bibliography for (La)TeX using Russian letters
 
 <h2>NAME</h2>
 <p> rubibtex &#8211; make a bibliography for (La)TeX using Russian letters as item names </p>
+<h2>SYNOPSIS</h2>
 <p> <code>rubibtex</code> <i>BASENAME</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>rubibtex</code> is used to run <code><a href="/docs/linux/man/1-bibtex/">bibtex</a></code>(1) on auxiliary files with Russian characters in item names (citation keys). It is part of the T2 package. </p>
 <p> <code>rubibtex</code> copies the auxiliary file to <i>/tmp</i>, uses <code><a href="/docs/linux/man/1-sed/">sed</a></code>(1) to convert Cyrillic character commands to their 8-bit ASCII equivalents; runs <code><a href="/docs/linux/man/1-bibtex/">bibtex</a></code>(1) on the modified file; and finally moves the original auxiliary file back (overwriting the modified file). </p>
 <p> <code>rubibtex</code> assumes that the <code><a href="/docs/linux/man/1-bibtex/">bibtex</a></code>(1) database (<tt>bib</tt>) files are encoded with the KOI8-R encoding. </p>

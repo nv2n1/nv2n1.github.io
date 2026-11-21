@@ -1,5 +1,4 @@
 ---
-
 title: "gftopk(1)"
 name: "gftopk"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-gftopk/"
 description: "gftopk – convert generic font files to packed font files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gftopk &#8211; convert generic font files to packed font files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>gftopk</code> [<code>-v</code>] <i>gf_file_name</i> [<i>pk_file_name</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page is not meant to be exhaustive. The complete documentation for this version of TeX can be found in the info file or manual <i>Web2C: A TeX implementation</i>. </p>
 <p> The <code>gftopk</code> program converts a generic font file output by, for example, <code><a href="/docs/linux/man/1-mf/">mf</a></code>(1), to a packed font file for use by DVI-reading programs. Packed font files (<i>pk</i> files) are much smaller than the corresponding <i>gf</i> files, so they are generally the font format of choice. </p>
 <p> The <i>gf_file_name</i> on the command line must be complete. Because the resolution is part of the extension, it would not make sense to append a default extension as is done with TeX or DVI-reading software. The <i>pk_file_name</i> defaults to the same (stripped) name as <i>gf_file_name</i>, and it is placed in the current working directory with the <code>pk</code> suffix replacing <code>gf</code>. For example, the input file <i>cmr10.300gf</i> would become <i>cmr10.300pk</i>.</p>

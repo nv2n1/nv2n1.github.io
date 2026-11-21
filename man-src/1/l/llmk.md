@@ -1,5 +1,4 @@
 ---
-
 title: "llmk(1)"
 name: "llmk"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-llmk/"
 description: "llmk – Light LaTeX Make"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>llmk</code> &#8211; Light LaTeX Make </p>
+<h2>SYNOPSIS</h2>
 <p> <code>llmk</code> [OPTION]&#8230; [FILE]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>llmk</code> is yet another LaTeX-specific build tool. Its aim is to provide a simple way to write down workflows for processing LaTeX documents. The only requirement is the <code><a href="/docs/linux/man/1-texlua/">texlua</a></code>(1) program. </p>
 <p> If one or more FILE(s) are specified, <code>llmk</code> reads the TOML fields or other supported magic comments in the files. Otherwise, it will read the special configuration file <i>llmk.toml</i> in the working directory. Then, <code>llmk</code> will execute the specified workflow to typeset the LaTeX documents.</p>
 <h2>OPTIONS</h2>

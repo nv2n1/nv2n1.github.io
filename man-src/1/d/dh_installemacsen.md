@@ -1,5 +1,4 @@
 ---
-
 title: "dh_installemacsen(1)"
 name: "dh_installemacsen"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dh_installemacsen/"
 description: "dh_installemacsen – register an Emacs add on package"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dh_installemacsen &#8211; register an Emacs add on package </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dh_installemacsen</code> [<i>debhelper options</i>] [<code>-n</code>] [<code>&#8211;priority=</code><i>n</i>] [<code>&#8211;flavor=</code><i>foo</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>dh_installemacsen</code> is a debhelper program that is responsible for installing files used by the Debian <code>emacsen-common</code> package into package build directories. </p>
 <p> It also automatically generates the <i>preinst</i> <i>postinst</i> and <i>prerm</i> commands needed to register a package as an Emacs add on package. The commands are added to the maintainer scripts by <code>dh_installdeb</code>. See <i><a href="/docs/linux/man/1-dh_installdeb/">dh_installdeb</a></i>(1) for an explanation of how this works.</p>
 <h2>FILES</h2>

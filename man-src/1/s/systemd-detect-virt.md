@@ -1,5 +1,4 @@
 ---
-
 title: "systemd-detect-virt(1)"
 name: "systemd-detect-virt"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-systemd-detect-virt/"
 description: "systemd-detect-virt – Detect execution in a virtualized environment"
 ---
 
+<h2 class="name">NAME</h2>
+<p> systemd-detect-virt &#8211; Detect execution in a virtualized environment </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>systemd-detect-virt</code> [OPTIONS&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>systemd-detect-virt</code></p>
 <dd>detects execution in a virtualized environment. It identifies the virtualization technology and can distinguish full machine virtualization from container virtualization. systemd-detect-virt exits with a return value of 0 (success) if a virtualization technology is detected, and non-zero (error) otherwise. By default, any type of virtualization is detected, and the options <code>&#8211;container</code> and <code>&#8211;vm</code> can be used to limit what types of virtualization are detected. </dd>
 <p> When executed without <code>&#8211;quiet</code> will print a short identifier for the detected virtualization technology. The following technologies are currently identified: </p>

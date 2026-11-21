@@ -1,5 +1,4 @@
 ---
-
 title: "cpupower-monitor(1)"
 name: "cpupower-monitor"
 section: "1"
@@ -10,9 +9,11 @@ description: "cpupower-monitor – Report processor frequency and idle statistic
 
 <h2>NAME</h2>
 <p> cpupower-monitor &#8211; Report processor frequency and idle statistics</p>
+<h2>SYNOPSIS</h2>
 <p> <code> cpupower monitor</code> -l </p>
 <p> <code>cpupower monitor</code> [<code>-c</code>]<code>[</code>-m &lt;mon1&gt;,<code>[</code>&lt;mon2&gt;,&#8230;<code>]</code>] [<code>-i seconds</code>]<br />
  <code>cpupower monitor</code> [<code>-c</code>][<code>-m &lt;mon1&gt;,</code>[<code>&lt;mon2&gt;,&#8230;</code>]<code>]</code> command </p>
+<h2>DESCRIPTION</h2>
 <p> <code>cpupower-monitor </code> reports processor topology, frequency and idle power state statistics. Either <code>command</code> is forked and statistics are printed upon its completion, or statistics are printed periodically. </p>
 <p> <code>cpupower-monitor </code> implements independent processor sleep state and frequency counters. Some are retrieved from kernel statistics, some are directly reading out hardware registers. Use -l to get an overview which are supported on your system. </p>
 <h2>Options</h2>

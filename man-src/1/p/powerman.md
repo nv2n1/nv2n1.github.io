@@ -1,5 +1,4 @@
 ---
-
 title: "powerman(1)"
 name: "powerman"
 section: "1"
@@ -10,7 +9,9 @@ description: "powerman – power on/off nodes"
 
 <h2>NAME</h2>
 <p> powerman &#8211; power on/off nodes</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pm</code> <i>[-options] -action [targets] [-action [targets] &#8230;]</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>powerman</code> provides power management in a data center or compute cluster environment. It performs operations such as power on, power off, and power cycle via remote power controller (RPC) devices. Target hostnames are mapped to plugs on RPC devices in <i><a href="/docs/linux/man/5-powerman-conf/">powerman.conf</a>(5).</i></p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "whisper-fetch(1)"
 name: "whisper-fetch"
 section: "1"
@@ -14,6 +13,7 @@ description: "whisper-fetch – extract records from a whisper database"
 <pre>
 whisper-fetch [options] path
 </pre>
+<h2>DESCRIPTION</h2>
 <p> This command retrieves records from a whisper fixed-size database. </p>
 <p> The options are described below.</p>
 <h2>OPTIONS</h2>

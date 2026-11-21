@@ -1,5 +1,4 @@
 ---
-
 title: "zarafa-server(1)"
 name: "zarafa-server"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-zarafa-server/"
 description: "zarafa-server – Start the Zarafa storage server."
 ---
 
+<h2 class="name">NAME</h2>
+<p> zarafa-server &#8211; Start the Zarafa storage server. </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>zarafa-server</code> [<i>OPTION</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The zarafa-server is the Zafara storage server. It contacts a database server and provides services to Zarafa clients. The user base can be retreived from an external source, like LDAP, or can be setup with a separate list of users. </dd>
 <p> After starting, the server keeps listening for connections on the configured TCP port and/or Unix socket.</p>
 <h2>OPTIONS</h2>

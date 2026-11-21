@@ -1,5 +1,4 @@
 ---
-
 title: "gvfsd-metadata(1)"
 name: "gvfsd-metadata"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-gvfsd-metadata/"
 description: "gvfsd-metadata – Metadata daemon for gvfs"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gvfsd-metadata &#8211; Metadata daemon for gvfs </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gvfs-metadata</code> [OPTION&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>gvfsd-metadata</code></p>
 <dd>is a daemon acting as a write serialiser to the internal gvfs metadata storage. It is autostarted by GIO clients when they make metadata changes. Read operations are done by client-side GIO code directly, and don&#8217;t require the daemon to be running. </dd>
 <p> The gvfs metadata capabilities are used by the nautilus file manager, for example.</p>

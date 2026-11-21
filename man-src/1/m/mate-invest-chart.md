@@ -1,5 +1,4 @@
 ---
-
 title: "mate-invest-chart(1)"
 name: "mate-invest-chart"
 section: "1"
@@ -10,7 +9,9 @@ description: "mate-invest-chart — tool to set CPU frequency"
 
 <h2>NAME</h2>
 <p> mate-invest-chart &#8212; tool to set CPU frequency</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mate-invest-chart</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>mate-invest-chart</code> is a MATE panel applet that downloads current quotes for stocks, stock indices, currencies and precious metals. Quotes are downloaded from Yahoo! Finance and are displayed in a drop-down list.</p>
 <h2>OPTIONS</h2>
 <p> Invest provides the following features:</p>

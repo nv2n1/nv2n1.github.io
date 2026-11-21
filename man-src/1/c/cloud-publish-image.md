@@ -1,5 +1,4 @@
 ---
-
 title: "cloud-publish-image(1)"
 name: "cloud-publish-image"
 section: "1"
@@ -10,6 +9,7 @@ description: "cloud-publish-image – publish a cloud image"
 
 <h2>NAME</h2>
 <p> cloud-publish-image &#8211; publish a cloud image </p>
+<h2>SYNOPSIS</h2>
 <p> <code>cloud-publish-image [OPTIONS] ARCH IMAGE BUCKET</code> </p>
 <h2>OPTIONS</h2>
 <dl>
@@ -54,6 +54,7 @@ description: "cloud-publish-image – publish a cloud image"
 <dt><code>EC2PRE</code></dt>
 <dd> Underlying tools will be invoked using this prefix. The default is &#8216;euca-&#8216;, which results in using tools like &#8216;euca-register&#8217; and &#8216;euca-bundle-image&#8217;. To use the ec2-api-tools or ec2-ami-tools, set EC2PRE=&#8217;ec2-&#8216; </dd>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> Publish an image to a cloud </p>
 <h2>AUTHOR</h2>
 <p> This manpage was written by Dustin Kirkland &lt;kirkland [at] canonical.com&gt; for Ubuntu systems (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 3 published by the Free Software Foundation. </p>

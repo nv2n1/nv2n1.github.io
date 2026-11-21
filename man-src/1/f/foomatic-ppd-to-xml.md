@@ -1,5 +1,4 @@
 ---
-
 title: "foomatic-ppd-to-xml(1)"
 name: "foomatic-ppd-to-xml"
 section: "1"
@@ -10,10 +9,12 @@ description: "foomatic-ppd-to-xml – Generate Foomatic printer XML from a PPD"
 
 <h2>NAME</h2>
 <p> foomatic-ppd-to-xml &#8211; Generate Foomatic printer XML from a PPD</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>foomatic-ppd-to-xml</code> <i>OPTIONSFR [DRIVER</i>:]<i>PPD</i> [[<i>DRIVER</i>:]<i>PPD</i> &#8230;]</dt>
 <dt> <code>foomatic-ppd-to-xml</code> -h </dt>
 </dl>
+<h2>DESCRIPTION</h2>
 <dd>The first form of the <code>foomatic-ppd-to-xml</code> command creates Foomatic printer XML corresponding to a given PPD file. </dd>
 <p> If <i>DRIVER</i> is specified, it is the driver to which the PPD file should get assigned. If not supplied, the first driver in the driver list supplied via the <code>-d</code> option is used. Note that the PPD files have to be supplied to different drivers, so drivers need to be specified if using more than one PPD. </p>
 <p> The second form prints a help message and exits. </p>

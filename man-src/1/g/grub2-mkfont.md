@@ -1,5 +1,4 @@
 ---
-
 title: "grub2-mkfont(1)"
 name: "grub2-mkfont"
 section: "1"
@@ -10,6 +9,7 @@ description: "grub-mkfont — Convert common font file formats into the PF2 form
 
 <h2>NAME</h2>
 <p> <code>grub-mkfont</code> &#8212; Convert common font file formats into the PF2 format. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>grub-mkfont</code> [&#8211;ascii-bitmaps] [-a | &#8211;force-autohint]</p>
 <dl>
 <dt>
@@ -27,6 +27,7 @@ description: "grub-mkfont — Convert common font file formats into the PF2 form
 <dt>
 </dt><dd> [-v | &#8211;verbose] [&#8211;width-spec] <i>FONT_FILES</i> </dd>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> <code>grub-mkfont</code> converts font files from common formats into the PF2 format used by GRUB. </p>
 <h2>OPTIONS</h2>
 <dl>

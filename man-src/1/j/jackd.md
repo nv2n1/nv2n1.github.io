@@ -1,5 +1,4 @@
 ---
-
 title: "jackd(1)"
 name: "jackd"
 section: "1"
@@ -10,8 +9,10 @@ description: "jackd – JACK Audio Connection Kit sound server"
 
 <h2>NAME</h2>
 <p> jackd &#8211; JACK Audio Connection Kit sound server</p>
+<h2>SYNOPSIS</h2>
 <p> <code>jackd</code> [<i>options</i>] <code>-d</code><i> backend </i> [<i>backend-parameters</i>]<br />
  <code>jackd &#8211;help</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>jackd</code> is the JACK audio server daemon, a low-latency audio server. Originally written for the GNU/Linux operating system, it also supports Mac OS X and various Unix platforms. JACK can connect a number of different client applications to an audio device and also to each other. Most clients are external, running in their own processes as normal applications. JACK also supports internal clients, which run within the <code>jackd</code> process using a loadable &quot;plugin&quot; interface. </p>
 <p> JACK differs from other audio servers in being designed from the ground up for professional audio work. It focuses on two key areas: synchronous execution of all clients, and low latency operation. </p>
 <p> For the latest JACK information, please consult the web site, &lt;<code><a rel="nofollow" href="http://www.jackaudio.org">http://www.jackaudio.org</a></code>&gt;.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "mkfifo(3)"
 name: "mkfifo"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-mkfifo/"
 description: "mkfifo, mkfifoat – make a FIFO special file (a named pipe)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mkfifo, mkfifoat &#8211; make a FIFO special file (a named pipe) </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/stat.h&gt;
 #include &lt;sys/types.h&gt;
@@ -25,6 +27,7 @@ int mkfifoat(int dirfd, const char *pathname, mode_t mode);
 <dt>Before glibc 2.10:</dt>
 <dd> _ATFILE_SOURCE</dd></dl>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> <code>mkfifo</code>() makes a FIFO special file with name <i>pathname</i>. <i>mode</i> specifies the FIFO&#8217;s permissions. It is modified by the process&#8217;s <code>umask</code> in the usual way: the permissions of the created file are <code>(</code><i>mode</i><code> &amp; ~umask)</code>. </p>
 <p> A FIFO special file is similar to a pipe, except that it is created in a different way. Instead of being an anonymous communications channel, a FIFO special file is entered into the filesystem by calling <code>mkfifo</code>(). </p>
 <p> Once you have created a FIFO special file in this way, any process can open it for reading or writing, in the same way as an ordinary file. However, it has to be open at both ends simultaneously before you can proceed to do any input or output operations on it. Opening a FIFO for reading normally blocks until some other process opens the same FIFO for writing, and vice versa. See <code><a href="/docs/linux/man/7-fifo/">fifo</a></code>(7) for nonblocking handling of FIFO special files.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "pilot-install-todos(1)"
 name: "pilot-install-todos"
 section: "1"
@@ -12,7 +11,9 @@ description: "pilot-install-todos – Updates the Palm ToDo list with entries fr
 <p> pilot-install-todos &#8211; Updates the Palm ToDo list with entries from a local file.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>
+<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr><i>pilot-install-todos</i>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;port</code>&nbsp;<wbr>&lt;<code>port</code>&gt;]&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr>[<code>-?</code>|<code>&#8211;help</code>]&nbsp;<wbr>[<code>&#8211;usage</code>]&nbsp;<wbr>[<code>-q</code>|<code>&#8211;quiet</code>]&nbsp;<wbr>[<code>-f</code>|<code>&#8211;filename</code>&nbsp;<wbr>&nbsp;<wbr><code>STRING</code>] </p>
+<h2>DESCRIPTION</h2>
 <p>&nbsp;<wbr><i>pilot-install-todos</i>&nbsp;<wbr>allows the user to update the Palm ToDo list with entries from a local file. </p>
 <p> The format of this file is a simple line-by-line ToDo task entry. For each new line in the local file, a new task is created in the ToDo database on the Palm. </p>
 <h2>OPTIONS</h2>

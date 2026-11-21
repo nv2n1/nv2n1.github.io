@@ -1,5 +1,4 @@
 ---
-
 title: "flatpak(1)"
 name: "flatpak"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-flatpak/"
 description: "flatpak – Build, install and run applications and runtimes"
 ---
 
+<h2 class="name">NAME</h2>
+<p> flatpak &#8211; Build, install and run applications and runtimes </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak</code> [OPTION&#8230;] {COMMAND}</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>Flatpak is a tool for managing applications and the runtimes they use. In the Flatpak model, applications can be built and distributed independently from the host system they are used on, and they are isolated from the host system (&#8216;sandboxed&#8217;) to some degree, at runtime. </dd>
 <p> Flatpak can operate in system-wide or per-user mode. The system-wide data (runtimes, applications and configuration) is located in $prefix/var/lib/flatpak/, and the per-user data is in $HOME/.local/share/flatpak/. Below these locations, there is a local repository in the repo/ subdirectory and installed runtimes and applications are in the corresponding runtime/ and app/ subdirectories. </p>
 <p> System-wide remotes can be statically preconfigured by dropping flatpakrepo files into /etc/flatpak/remotes.d/. </p>

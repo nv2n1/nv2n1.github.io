@@ -1,5 +1,4 @@
 ---
-
 title: "dpbcon(3)"
 name: "dpbcon"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dpbcon/"
 description: "dpbcon.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dpbcon.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dpbcon</code> (UPLO, N, KD, AB, LDAB, ANORM, RCOND, WORK, IWORK, INFO)<br />
  <i></i><code>DPBCON</code></p>

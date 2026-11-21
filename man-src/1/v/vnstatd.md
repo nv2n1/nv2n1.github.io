@@ -1,5 +1,4 @@
 ---
-
 title: "vnstatd(1)"
 name: "vnstatd"
 section: "1"
@@ -10,7 +9,9 @@ description: "vnstatd – daemon based database updating for vnStat"
 
 <h2>NAME</h2>
 <p> vnstatd &#8211; daemon based database updating for vnStat </p>
+<h2>SYNOPSIS</h2>
 <p> <code>vnstatd</code> [ <code>-Ddnpsv?</code> ] [ <code>&#8211;alwaysadd</code> ] [ <code>&#8211;config</code> <i>file</i> ] [ <code>&#8211;daemon</code> ] [ <code>&#8211;debug</code> ] [ <code>-g</code> <i>group</i> ] [ <code>&#8211;group</code> <i>group</i> ] [ <code>&#8211;help</code> ] [ <code>&#8211;noadd</code> ] [ <code>&#8211;nodaemon</code> ] [ <code>&#8211;pidfile</code> <i>file</i> ] [ <code>&#8211;sync</code> ] [ <code>&#8211;u</code> <i>user</i> ] [ <code>&#8211;user</code> <i>user</i> ] [ <code>&#8211;version</code> ] </p>
+<h2>DESCRIPTION</h2>
 <p> The purpose of <code>vnstatd</code> is to provide a more flexible and robust way for updating <code><a href="/docs/linux/man/1-vnstat/">vnstat</a></code>(1) databases than what using cron for updating can provide. The daemon makes possible updating databases more often but at the same time causes less disk access since data can be cached and written only later to disk at a user configurable interval. The availability of each interface is automatically tracked which removes the need for additional scripts to be implemented and called when an interface comes online or goes offline. </p>
 <p> <code>vnstatd</code> is the command for starting the daemon. The daemon can either fork itself to run as a background process or stay attached to the terminal. It supports logging to a user selectable file or using syslog. </p>
 <p> Once started, the daemon will read <code><a href="/docs/linux/man/5-vnstat-conf/">vnstat.conf</a></code>(5) if available and then check if there are any databases present in the database directory that has been specified in the configuration file. By default, if no databases are found, new databases will be created during startup for all available interfaces excluding pseudo interfaces lo, lo0 and sit0. This automatic database addition behaviour can be disabled using the <code>&#8211;noadd</code> option. Alternatively, it is possible to allow the daemon to create new databases whenever previously unseen interfaces become visible using the <code>&#8211;alwaysadd</code> option. </p>

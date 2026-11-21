@@ -1,5 +1,4 @@
 ---
-
 title: "xganim(1)"
 name: "xganim"
 section: "1"
@@ -10,6 +9,7 @@ description: "xganim"
 
 <h2>NAME</h2>
 <p> <i></i><code>xganim</code></p>
+<h2>DESCRIPTION</h2>
 <p> <i>xganim</i> is a tool for animating a series of GRASS raster files. At startup, a graphics window is opened containing VCR-like button controls for: rewind, reverse play, step back, stop, step forward, forward play, loop, swing, slower, faster, show filenames, current frame number, and Exit. The image is displayed above or to the left of the controls. Each raster map is read into memory, then the animation is played once beginning to end. The user may then replay the series or play continuous animation by using the buttons. </p>
 <p> The user may define up to four &quot;views&quot;, or sub-windows, to animate simultaneously. e.g., View 1 could be rainfall, View 2 flooded areas, View 3 damage to bridges or levees, View 4 other economic damage, all animated as a time series. There is an arbitrary limit of 400 files per view (400 animation frames), but the practical limit may be less depending on the window size and amount of available RAM. </p>
 <p> The environment variable XGANIM_SIZE is checked for a value to use as the dimension, in pixels, of the longest dimension of the animation window. If XGANIM_SIZE is not set, the animation size defaults to the rows &amp; columns in the current GRASS region, scaling if necessary to a default minimum size of 600 and maximum of 900. The resolution of the current GRASS region is maintained, independent of window size. Resizing the window after the program is running will have no effect on the animation size. </p>

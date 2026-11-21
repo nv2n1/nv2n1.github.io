@@ -1,5 +1,4 @@
 ---
-
 title: "lseek64(3)"
 name: "lseek64"
 section: "3"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/3-lseek64/"
 description: "lseek64 – reposition 64-bit read/write file offset"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lseek64 &#8211; reposition 64-bit read/write file offset </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#define _LARGEFILE64_SOURCE</code> /* See <a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a>(7) */<br />
  <code>#include &lt;sys/types.h&gt;</code><br />
  <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>off64_t lseek64(int </code><i>fd</i><code>, off64_t </code><i>offset</i><code>, int </code><i>whence</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>lseek</code>() family of functions reposition the offset of the open file associated with the file descriptor <i>fd</i> to <i>offset</i> bytes relative to the start, current position, or end of the file, when <i>whence</i> has the value <code>SEEK_SET</code>, <code>SEEK_CUR</code>, or <code>SEEK_END</code>, respectively. </p>
 <p> For more details, return value, and errors, see <code><a href="/docs/linux/man/2-lseek/">lseek</a></code>(2). </p>
 <p> Four interfaces are available: <code>lseek</code>(), <code>lseek64</code>(), <code>llseek</code>(), and <code>_llseek</code>().</p>

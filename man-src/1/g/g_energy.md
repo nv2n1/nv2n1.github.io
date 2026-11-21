@@ -1,5 +1,4 @@
 ---
-
 title: "g_energy(1)"
 name: "g_energy"
 section: "1"
@@ -11,7 +10,9 @@ description: "g_energy – writes energies to xvg files and displays averages"
 <h2>NAME</h2>
 <p> g_energy &#8211; writes energies to xvg files and displays averages </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>g_energy</code> <code>-f</code><i> ener.edr </i> <code>-f2</code><i> ener.edr </i> <code>-s</code><i> topol.tpr </i> <code>-o</code><i> energy.xvg </i> <code>-viol</code><i> violaver.xvg </i> <code>-pairs</code><i> pairs.xvg </i> <code>-ora</code><i> orienta.xvg </i> <code>-ort</code><i> orientt.xvg </i> <code>-oda</code><i> orideva.xvg </i> <code>-odr</code><i> oridevr.xvg </i> <code>-odt</code><i> oridevt.xvg </i> <code>-oten</code><i> oriten.xvg </i> <code>-corr</code><i> enecorr.xvg </i> <code>-vis</code><i> visco.xvg </i> <code>-ravg</code><i> runavgdf.xvg </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-[no]fee</code><i></i> <code>-fetemp</code><i> real </i> <code>-zero</code><i> real </i> <code>-[no]sum</code><i></i> <code>-[no]dp</code><i></i> <code>-[no]mutot</code><i></i> <code>-[no]uni</code><i></i> <code>-skip</code><i> int </i> <code>-[no]aver</code><i></i> <code>-nmol</code><i> int </i> <code>-ndf</code><i> int </i> <code>-[no]fluc</code><i></i> <code>-[no]orinst</code><i></i> <code>-[no]ovec</code><i></i> <code>-acflen</code><i> int </i> <code>-[no]normalize</code><i></i> <code>-P</code><i> enum </i> <code>-fitfn</code><i> enum </i> <code>-ncskip</code><i> int </i> <code>-beginfit</code><i> real </i> <code>-endfit</code><i> real </i></p>
+<h2>DESCRIPTION</h2>
 <p> g_energy extracts energy components or distance restraint data from an energy file. The user is prompted to interactively select the energy terms she wants. </p>
 <p> Average and RMSD are calculated with full precision from the simulation (see printed manual). Drift is calculated by performing a LSQ fit of the data to a straight line. Total drift is drift multiplied by total time. The term fluctuation gives the RMSD around the LSQ fit. </p>
 <p> When the <code> -viol</code> option is set, the time averaged violations are plotted and the running time-averaged and instantaneous sum of violations are recalculated. Additionally running time-averaged and instantaneous distances between selected pairs can be plotted with the <code> -pairs</code> option. </p>

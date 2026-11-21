@@ -1,5 +1,4 @@
 ---
-
 title: "ipa-getkeytab(1)"
 name: "ipa-getkeytab"
 section: "1"
@@ -10,7 +9,9 @@ description: "ipa-getkeytab – Get a keytab for a Kerberos principal"
 
 <h2>NAME</h2>
 <p> ipa-getkeytab &#8211; Get a keytab for a Kerberos principal</p>
+<h2>SYNOPSIS</h2>
 <p> ipa-getkeytab <code>-p</code> <i>principal-name</i> <code>-k</code> <i>keytab-file</i> [ <code>-e</code> <i>encryption-types</i> ] [ <code>-s</code> <i>ipaserver</i> ] [ <code>-q</code> ] [ <code>-D</code>|<code>&#8211;binddn</code> <i>BINDDN</i> ] [ <code>-w|&#8211;bindpw</code> ] [ <code>-P</code>|<code>&#8211;password</code> <i>PASSWORD</i> ] [ <code>&#8211;cacert </code><i>CACERT</i> ] [ <code>-H|&#8211;ldapuri </code><i>URI</i> ] [ <code>-Y|&#8211;mech </code><i>GSSAPI|EXTERNAL</i> ] [ <code>-r</code> ] </p>
+<h2>DESCRIPTION</h2>
 <p> Retrieves a Kerberos <i>keytab</i>. </p>
 <p> Kerberos keytabs are used for services (like sshd) to perform Kerberos authentication. A keytab is a file with one or more secrets (or keys) for a Kerberos principal. </p>
 <p> A Kerberos service principal is a Kerberos identity that can be used for authentication. Service principals contain the name of the service, the hostname of the server, and the realm name. For example, the following is an example principal for an ldap server: </p>

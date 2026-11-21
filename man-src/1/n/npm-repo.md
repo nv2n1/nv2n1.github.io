@@ -1,5 +1,4 @@
 ---
-
 title: "npm-repo(1)"
 name: "npm-repo"
 section: "1"
@@ -8,6 +7,7 @@ url: "/docs/linux/man/1-npm-repo/"
 description: "npm-repo – Open package repository page in the browser"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>npm-repo</code> &#8211; Open package repository page in the browser </p>
 <h3>Synopsis</h3>
 <dl>

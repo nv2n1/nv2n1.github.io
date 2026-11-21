@@ -1,5 +1,4 @@
 ---
-
 title: "grisbi(1)"
 name: "grisbi"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-grisbi/"
 description: "grisbi – Personal finance tracking program based on GTK"
 ---
 
+<h2 class="name">NAME</h2>
+<p> grisbi &#8211; Personal finance tracking program based on GTK </p>
+<h2>SYNOPSIS</h2>
 <p> <code>grisbi</code> [<i>options</i>]<i> file</i>&#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>grisbi</code> command. This manual page was written for the Debian GNU/Linux distribution because the original program does not have a manual page. </p>
 <p> <code>grisbi</code> is a personal finance tracking program with a lot of features: </p>
 <p>&nbsp;<wbr>*&nbsp;<wbr>bank, cash and passive accounts </p>

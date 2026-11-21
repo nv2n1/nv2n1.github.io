@@ -1,5 +1,4 @@
 ---
-
 title: "fts-transfer-delete(1)"
 name: "fts-transfer-delete"
 section: "1"
@@ -11,9 +10,13 @@ url: "/docs/linux/man/1-fts-transfer-delete/"
 
  fts-transfer-delete
 
-fts-transfer-delete [options]
+<h2>SYNOPSIS</h2>
 
-fts-transfer-delete is a tool for deleting files using the GRID File Transfer Service 3.
+ fts-transfer-delete [options]
+
+<h2>DESCRIPTION</h2>
+
+ fts-transfer-delete is a tool for deleting files using the GRID File Transfer Service 3.
 
 <h2>OPTIONS</h2>
 

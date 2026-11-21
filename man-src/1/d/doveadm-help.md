@@ -1,5 +1,4 @@
 ---
-
 title: "doveadm-help(1)"
 name: "doveadm-help"
 section: "1"
@@ -10,7 +9,9 @@ description: "doveadm-help – Show information about doveadm commands"
 
 <h2>NAME</h2>
 <p> doveadm-help &#8211; Show information about doveadm commands</p>
+<h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>help</code> [<i>command</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> With no <i>command</i> argument given, <code>doveadm help</code> will print:</p>
 <dl>
 <dt>*</dt>

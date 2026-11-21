@@ -1,5 +1,4 @@
 ---
-
 title: "gstream-save_input_approver(3)"
 name: "gstream-save_input_approver"
 section: "3"
@@ -10,8 +9,10 @@ description: "save_input_approver"
 
 <h2>NAME</h2>
 <p> save_input_approver</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gstream.h">gstream.h</a>&gt;</code> </p>
 <p> <code>void save_input_approver();</code></p>
+<h2>DESCRIPTION</h2>
 <p> A typical use of the input approver system is to temporarily set a home-made approver, launch an input and then get the original settings back. Consequently there is a pair of functions to help you with that, save_input_approver and restore_input_approver. </p>
 <p> Saving will backup the currently used approver, so you can continue using it. </p>
 <pre><code>

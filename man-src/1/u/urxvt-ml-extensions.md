@@ -1,5 +1,4 @@
 ---
-
 title: "urxvt-ml-extensions(1)"
 name: "urxvt-ml-extensions"
 section: "1"
@@ -7,13 +6,20 @@ letter: "u"
 url: "/docs/linux/man/1-urxvt-ml-extensions/"
 ---
 
-urxvt-extensions - briefly list urxvt perl extensions 
+<h2 class="name">NAME</h2>
+ 
 
-<pre>
+ urxvt-extensions - briefly list urxvt perl extensions 
+
+<h2>SYNOPSIS</h2>
+
+ <pre>
    urxvt -pe extension-name
 </pre>
 
-This manpage briefly lists the rxvt-unicode extensions available in this version of rxvt-unicode. For information on how to write urxvt extensions, see the urxvt-extensions manpage. 
+<h2>DESCRIPTION</h2>
+
+ This manpage briefly lists the rxvt-unicode extensions available in this version of rxvt-unicode. For information on how to write urxvt extensions, see the urxvt-extensions manpage. 
 
  Extensions that use resources for configuration are loaded automatically when their resources are specified as command-line switches. Any extension can be loaded explicitly with the <tt>&quot;-pe&quot;</tt> switch.
 

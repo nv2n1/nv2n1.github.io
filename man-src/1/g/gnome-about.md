@@ -1,5 +1,4 @@
 ---
-
 title: "gnome-about(1)"
 name: "gnome-about"
 section: "1"
@@ -10,7 +9,9 @@ description: "gnome-about – Learn more about GNOME"
 
 <h2>NAME</h2>
 <p> gnome-about &#8211; Learn more about GNOME</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gnome-about [&#8211;gnome-version]</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <i>gnome-about</i> program is a tool to learn more about GNOME and who creates GNOME. It contains an introduction about the project, and lists all contributors. </p>
 <p> The list of contributors used by <i>gnome-about</i> is the list of GNOME Foundation members.</p>
 <h2>OPTIONS</h2>

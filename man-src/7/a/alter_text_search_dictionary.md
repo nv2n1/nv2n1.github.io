@@ -1,5 +1,4 @@
 ---
-
 title: "alter_text_search_dictionary(7)"
 name: "alter_text_search_dictionary"
 section: "7"
@@ -7,13 +6,16 @@ letter: "a"
 url: "/docs/linux/man/7-alter_text_search_dictionary/"
 ---
 
+
  </p>
 <h2>NAME</h2>
 <p> ALTER TEXT SEARCH DICTIONARY &#8211; change the definition of a text search dictionary </p>
+<h2>SYNOPSIS</h2>
 <pre><code>ALTER TEXT SEARCH DICTIONARY name  ( option  [ = value  ] [, ... ]
 )
 ALTER TEXT SEARCH DICTIONARY name  RENAME TO newname ALTER TEXT SEARCH DICTIONARY name  OWNER TO newowner 
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>ALTER TEXT SEARCH DICTIONARY</code> changes the definition of a text search dictionary. You can change the dictionary&#8217;s template-specific options, or change the dictionary&#8217;s name or owner. </p>
 <p> You must be the owner of the dictionary to use <code>ALTER TEXT SEARCH DICTIONARY</code>.  </p>
 <h2>PARAMETERS</h2>

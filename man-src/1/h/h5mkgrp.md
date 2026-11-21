@@ -1,5 +1,4 @@
 ---
-
 title: "h5mkgrp(1)"
 name: "h5mkgrp"
 section: "1"
@@ -10,6 +9,7 @@ description: "h5mkgrp: – Creates a new HDF5 group in a file"
 
 <h2>NAME</h2>
 <p> h5mkgrp: &#8211; Creates a new HDF5 group in a file</p>
+<h2>DESCRIPTION</h2>
 <p> usage: h5mkgrp [OPTIONS] FILE GROUP&#8230;</p>
 <dl>
 <dt>

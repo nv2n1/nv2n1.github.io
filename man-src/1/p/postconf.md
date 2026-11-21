@@ -1,5 +1,4 @@
 ---
-
 title: "postconf(1)"
 name: "postconf"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-postconf/"
 description: "postconf – Postfix configuration utility"
 ---
 
+<h2 class="name">NAME</h2>
+<p> postconf &#8211; Postfix configuration utility </p>
+<h2>SYNOPSIS</h2>
 <p> <code>Managing main.cf:</code> </p>
 <p> <code>postconf</code> [<code>-dfhHnopvx</code>] [<code>-c </code><i>config_dir</i>] [<code>-C </code><i>class,&#8230;</i>] [<i>parameter &#8230;</i>] </p>
 <p> <code>postconf</code> [<code>-epv</code>] [<code>-c </code><i>config_dir</i>] <i>parameter</i><code>=</code><i>value &#8230;</i> </p>
@@ -32,6 +34,7 @@ description: "postconf – Postfix configuration utility"
 <p> <code>postconf</code> <code>-T </code><i>mode</i> [<code>-v</code>] [<code>-c </code><i>config_dir</i>] </p>
 <p> <code>Managing other configuration:</code> </p>
 <p> <code>postconf</code> <code>-a</code>|<code>-A</code>|<code>-l</code>|<code>-m</code> [<code>-v</code>] [<code>-c </code><i>config_dir</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> By default, the <code><a href="/docs/linux/man/1-postconf/">postconf</a></code>(1) command displays the values of <code>main.cf</code> configuration parameters, and warns about possible mis-typed parameter names (Postfix 2.9 and later). The command can also change <code>main.cf</code> configuration parameter values, or display other configuration information about the Postfix mail system. </p>
 <p> Options:</p>
 <dl>

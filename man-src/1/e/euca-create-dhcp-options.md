@@ -1,5 +1,4 @@
 ---
-
 title: "euca-create-dhcp-options(1)"
 name: "euca-create-dhcp-options"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-create-dhcp-options – Create a VPC DHCP option set"
 
 <h2>NAME</h2>
 <p> euca-create-dhcp-options &#8211; Create a VPC DHCP option set</p>
+<h2>SYNOPSIS</h2>
 <p> euca-create-dhcp-options [&#8211;show-empty-fields] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] KEY=VALUE,[VALUE,&#8230;] [KEY=VALUE,[VALUE,&#8230;] &#8230;]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Create a VPC DHCP option set</p>
 <h3>positional arguments:</h3>
 <dl>

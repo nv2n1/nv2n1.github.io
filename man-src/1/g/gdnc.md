@@ -1,5 +1,4 @@
 ---
-
 title: "gdnc(1)"
 name: "gdnc"
 section: "1"
@@ -10,7 +9,9 @@ description: "gdnc – GNUstep Distributed Notification Center"
 
 <h2>NAME</h2>
 <p> gdnc &#8211; GNUstep Distributed Notification Center</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gdnc</code> </p>
+<h2>DESCRIPTION</h2>
 <p> The gdnc daemon is used by GNUstep programs to send notifications and messages to one another. By default it uses private inter-process communications accessible only to the curtrent user on the machine on which it is running (where the operating system supports them). </p>
 <p> Every user needs to have his own instance of <code>gdnc</code> running. While <code>gdnc</code> will be started automatically as soon as it is needed, it is recommended to start <code>gdnc</code> in a personal login script like ~/.bashrc or ~/.cshrc. Alternatively (if you have no command-line tools which use distributed notifications) you can launch gdnc when your windowing system or the window manager is started. For example, on systems with X11 you can launch <code>gdnc</code> from your .xinitrc script or alternatively &#8211; if you are running Window Maker &#8211; put it in Window Maker&#8217;s autostart script. See the <i>GNUstep Build Guide</i> for a sample startup script. </p>
 <h2>OPTIONS</h2>

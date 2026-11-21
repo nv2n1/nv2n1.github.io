@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_global_deinit(3)"
 name: "gnutls_global_deinit"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_global_deinit – API function"
 
 <h2>NAME</h2>
 <p> gnutls_global_deinit &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_global_deinit( </code><i>void</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt> void</dt>
 <dd></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function deinitializes the global data, that were initialized using <code>gnutls_global_init()</code>.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />

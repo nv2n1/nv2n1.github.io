@@ -1,5 +1,4 @@
 ---
-
 title: "po2xml(1)"
 name: "po2xml"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-po2xml/"
 description: "po2xml – Translates an DocBook XML file using a PO file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> po2xml &#8211; Translates an DocBook XML file using a PO file </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>po2xml</code> [<i>original-XML</i><i>translated-PO</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>po2xml</code></p>
 <dd>is a command-line tool that translates the DocBook XML file <i>original-XML</i> using the gettext message file <i>translated-PO</i>. The resulting translated XML file is sent to standard output. </dd>
 <p> This utility is part of the KDE Software Development Kit.</p>

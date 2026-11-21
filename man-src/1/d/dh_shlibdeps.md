@@ -1,5 +1,4 @@
 ---
-
 title: "dh_shlibdeps(1)"
 name: "dh_shlibdeps"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dh_shlibdeps/"
 description: "dh_shlibdeps – calculate shared library dependencies"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dh_shlibdeps &#8211; calculate shared library dependencies </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dh_shlibdeps</code> [<i>debhelper options</i>] [<code>-L</code><i>package</i>] [<code>-l</code><i>directory</i>] [<code>-X</code><i>item</i>] [<code>&#8212;</code> <i>params</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>dh_shlibdeps</code> is a debhelper program that is responsible for calculating shared library dependencies for packages. </p>
 <p> This program is merely a wrapper around <i><a href="/docs/linux/man/1-dpkg-shlibdeps/">dpkg-shlibdeps</a></i>(1) that calls it once for each package listed in the <i>control</i> file, passing it a list of <font SIZE="-1">ELF</font> executables and shared libraries it has found.</p>
 <h2>OPTIONS</h2>

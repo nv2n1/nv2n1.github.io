@@ -1,5 +1,4 @@
 ---
-
 title: "bicubicsplineinterpolation(3)"
 name: "bicubicsplineinterpolation"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-bicubicsplineinterpolation/"
 description: "ql/math/interpolations/bicubicsplineinterpolation.hpp – bicubic spline interpolation between discrete points"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/math/interpolations/bicubicsplineinterpolation.hpp &#8211; bicubic spline interpolation between discrete points </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/interpolations/interpolation2d.hpp&gt;<br />
  #include &lt;ql/math/interpolations/cubicinterpolation.hpp&gt; </p>
 <h3>Classes</h3>

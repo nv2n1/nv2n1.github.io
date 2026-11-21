@@ -1,5 +1,4 @@
 ---
-
 title: "lbzexe(1)"
 name: "lbzexe"
 section: "1"
@@ -10,7 +9,9 @@ description: "lbzexe – compress executable files in place"
 
 <h2>NAME</h2>
 <p> lbzexe &#8211; compress executable files in place</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lbzexe</code> <i>name &#8230;</i></p>
+<h2>DESCRIPTION</h2>
 <p> The <i>lbzexe</i> utility allows you to compress executables in place and have them automatically uncompress and execute when you run them (at a penalty in performance). For example if you execute &#8220;lbzexe /usr/bin/gdb&#8221; it will create the following two files: </p>
 <pre>
 <br>

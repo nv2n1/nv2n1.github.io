@@ -1,5 +1,4 @@
 ---
-
 title: "megafs(1)"
 name: "megafs"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-megafs/"
 description: "megafs – Mount remote filesystem locally via FUSE"
 ---
 
+<h2 class="name">NAME</h2>
+<p> megafs &#8211; Mount remote filesystem locally via FUSE </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 megafs[-o&lt;options&gt;...][-d][-f]&lt;mountpoint&gt;
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Mounts remote filesystem locally via FUSE. </p>
 <p> <code>NOTE</code>: Be aware that reading and writing files is not implemented yet. You can only manage directories and remove files.</p>
 <h2>OPTIONS</h2>

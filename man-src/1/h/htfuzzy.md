@@ -1,5 +1,4 @@
 ---
-
 title: "htfuzzy(1)"
 name: "htfuzzy"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-htfuzzy/"
 description: "htfuzzy – fuzzy command-line search utility for the ht://Dig search engine"
 ---
 
+<h2 class="name">NAME</h2>
+<p> htfuzzy &#8211; fuzzy command-line search utility for the ht://Dig search engine </p>
+<h2>SYNOPSIS</h2>
 <p> <code>htfuzzy [-c configfile] [-v] algorithm</code> <i>[options]</i></p>
+<h2>DESCRIPTION</h2>
 <p> Description to follow here</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "dla_syrpvgrw(3)"
 name: "dla_syrpvgrw"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dla_syrpvgrw/"
 description: "dla_syrpvgrw.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dla_syrpvgrw.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> DOUBLE PRECISION function <code>dla_syrpvgrw</code> (UPLO, N, INFO, A, LDA, AF, LDAF, IPIV, WORK)<br />
  <i></i><code>DLA_SYRPVGRW</code> computes the reciprocal pivot growth factor norm(A)/norm(U) for a symmetric indefinite matrix.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "stellarium(1)"
 name: "stellarium"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-stellarium/"
 description: "stellarium – A real-time realistic planetarium"
 ---
 
+<h2 class="name">NAME</h2>
+<p> stellarium &#8211; A real-time realistic planetarium </p>
+<h2>SYNOPSIS</h2>
 <p> stellarium [<font SIZE="-1"><code>OPTIONS</code></font>]</p>
+<h2>DESCRIPTION</h2>
 <p> Stellarium is a free <font SIZE="-1">GPL</font> software which renders realistic skies in real time with OpenGL. It is available for Linux/Unix, Windows and MacOSX. With Stellarium, you really see what you can see with your eyes, binoculars or a small telescope.</p>
 <h2>OPTIONS</h2>
 <dl>

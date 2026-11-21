@@ -1,5 +1,4 @@
 ---
-
 title: "fstrcasecmp(3)"
 name: "fstrcasecmp"
 section: "3"
@@ -11,7 +10,9 @@ url: "/docs/linux/man/3-fstrcasecmp/"
 
  fstrcasecmp - fuzzy comparison of two strings ignoring case
 
-#include &lt;fstrcmp.h&gt; 
+<h2>SYNOPSIS</h2>
+
+ #include &lt;fstrcmp.h&gt; 
 
  #define FSTRCMP_IDENTICAL 
  #define FSTRCMP_THRESHOLD 
@@ -19,7 +20,9 @@ url: "/docs/linux/man/3-fstrcasecmp/"
 
  double fstrcasecmp(const char *string1, const char *string2);
 
-The fstrcmp() function compares the two strings, string1 and string2, ignoring case.
+<h2>DESCRIPTION</h2>
+
+ The fstrcmp() function compares the two strings, string1 and string2, ignoring case.
 
 <h2>RETURN VALUE</h2>
 

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_ext_import_subject_alt_names(3)"
 name: "gnutls_x509_ext_import_subject_alt_names"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_ext_import_subject_alt_names – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_ext_import_subject_alt_names &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509-ext.h&gt;</code> </p>
 <p> <code>int gnutls_x509_ext_import_subject_alt_names(const gnutls_datum_t * </code><i>ext</i><code>, gnutls_subject_alt_names_t </code><i>sans</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_x509_ext_import_subject_alt_names – API function"
 <dd> The alternative names structure</dd>
 <dt>unsigned int flags</dt>
 <dd> should be zero</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will export the alternative names in the provided DER-encoded SubjectAltName PKIX extension, to a <code>gnutls_subject_alt_names_t</code> structure. The structure must have been initialized. </p>
 <p> This function will succeed even if there no subject alternative names in the structure.</p>
 <h2>RETURNS</h2>

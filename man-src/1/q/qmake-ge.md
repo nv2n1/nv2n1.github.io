@@ -1,5 +1,4 @@
 ---
-
 title: "qmake-ge(1)"
 name: "qmake-ge"
 section: "1"
@@ -12,6 +11,7 @@ description: "qmake – distributed parallel make, scheduling by Grid Engine."
 <p> qmake &#8211; distributed parallel make, scheduling by Grid Engine. </p>
 <h2>SYNTAX</h2>
 <p> <code>qmake</code> [ <code>options</code> ] &#8212; [ <code>gmake options</code> ] </p>
+<h2>DESCRIPTION</h2>
 <p> <i>Qmake</i> is a parallel, distributed utility. Scheduling of the parallel <i>make</i> tasks is done by Grid Engine. It is based on <i>gmake</i> (GNU make), version 3.78.1. Both Grid Engine and <i>gmake</i> command line options can be specified. They are separated by &quot;&#8211;&quot;. </p>
 <p> All Grid Engine options valid with or can be specified with <i>qmake</i> &#8211; see for a description of all Grid Engine command line options. The manual page describes the <i>gmake</i> command line syntax. </p>
 <p> The syntax of <i>qmake</i> makefiles corresponds to <i>gmake</i> and is described in the &quot;GNU Make Manual&quot;. </p>

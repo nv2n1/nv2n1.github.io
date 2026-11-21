@@ -1,5 +1,4 @@
 ---
-
 title: "getdns_hostname_sync(3)"
 name: "getdns_hostname_sync"
 section: "3"
@@ -12,6 +11,7 @@ description: "getdns_hostname, getdns_hostname_sync — get hostname by address"
 <p> <code>getdns_hostname, </code> <code>getdns_hostname_sync</code> &#8212; get hostname by address </p>
 <h2>LIBRARY</h2>
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;getdns.h&gt; </p>
 <p> getdns_return_t<br />
  <code>getdns_hostname</code> (getdns_context *context,</p>
@@ -29,6 +29,7 @@ description: "getdns_hostname, getdns_hostname_sync — get hostname by address"
 </dt><dd> getdns_dict *address,<br />
  getdns_dict *extensions,<br />
  getdns_dict **response)</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <a href="/docs/linux/man/3-getdns_hostname/">getdns_hostname</a>(3) and getdns_hostname_sync functions provide public entry points into the getdns API library to retrieve the host name given an address. </p>
 <dl>
 <dt> <i>context</i></dt>

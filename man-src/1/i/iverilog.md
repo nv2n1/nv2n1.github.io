@@ -1,5 +1,4 @@
 ---
-
 title: "iverilog(1)"
 name: "iverilog"
 section: "1"
@@ -10,7 +9,9 @@ description: "iverilog – Icarus Verilog compiler"
 
 <h2>NAME</h2>
 <p> iverilog &#8211; Icarus Verilog compiler </p>
+<h2>SYNOPSIS</h2>
 <p> <code>iverilog</code> [-ESVv] [-Bpath] [-ccmdfile|-fcmdfile] [-Dmacro[=defn]] [-pflag=value] [-dname] [-g1995|-g2001|-g2005|-g&lt;feature&gt;] [-Iincludedir] [-mmodule] [-Mfile] [-Nfile] [-ooutputfilename] [-stopmodule] [-ttype] [-Tmin/typ/max] [-Wclass] [-ypath] sourcefile </p>
+<h2>DESCRIPTION</h2>
 <p> <i>iverilog</i> is a compiler that translates Verilog source code into executable programs for simulation, or other netlist formats for further processing. The currently supported targets are <i>vvp</i> for simulation, and <i>fpga</i> for synthesis. Other target types are added as code generators are implemented. </p>
 <h2>OPTIONS</h2>
 <p> <i>iverilog</i> accepts the following options:</p>

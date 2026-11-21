@@ -1,5 +1,4 @@
 ---
-
 title: "mysqloptimize(1)"
 name: "mysqloptimize"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mysqloptimize/"
 description: "mysqlcheck – a table maintenance program"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mysqlcheck &#8211; a table maintenance program </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqlcheck [</code><i>options</i><code>] [</code><i>db_name</i><code> [</code><i>tbl_name</i><code> &#8230;]]</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>mysqlcheck</code> client performs table maintenance: It checks, repairs, optimizes, or analyzes tables. </dd>
 <p> Each table is locked and therefore unavailable to other sessions while it is being processed, although for check operations, the table is locked with a READ lock only (see Section 13.3.6, &#8220;LOCK TABLES and UNLOCK TABLES Statements&#8221;, for more information about READ and WRITE locks). Table maintenance operations can be time-consuming, particularly for large tables. If you use the <code>&#8211;databases</code> or <code>&#8211;all-databases</code> option to process all tables in one or more databases, an invocation of <code>mysqlcheck</code> might take a long time. (This is also true for the MySQL upgrade procedure if it determines that table checking is needed because it processes tables the same way.) </p>
 <p> <code>mysqlcheck</code> must be used when the <code>mysqld</code> server is running, which means that you do not have to stop the server to perform table maintenance. </p>

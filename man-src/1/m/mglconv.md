@@ -1,5 +1,4 @@
 ---
-
 title: "mglconv(1)"
 name: "mglconv"
 section: "1"
@@ -10,7 +9,9 @@ description: "mglconv – Execute MathGL scripts to generate graphical output."
 
 <h2>NAME</h2>
 <p> mglconv &#8211; Execute MathGL scripts to generate graphical output.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mglconv</code> [parameters] scriptfile</p>
+<h2>DESCRIPTION</h2>
 <p> <code>mglconv</code> reads MGL scripts from <i>scriptfile</i> to produce plots of specified functions or data. Result can be saved in bitmap (PNG/JPEG/GIF/BMP) or vector (EPS/SVG/LaTeX/OFF/STL/OBJ/X3D) format. You can use <code>&#8211;</code> as file name for reading script from standard input.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "tap2deb(1)"
 name: "tap2deb"
 section: "1"
@@ -10,7 +9,9 @@ description: "tap2deb – create Debian packages which wrap .tap files"
 
 <h2>NAME</h2>
 <p> tap2deb &#8211; create Debian packages which wrap .tap files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>tap2deb</code> [options]</p>
+<h2>DESCRIPTION</h2>
 <p> Create a ready to upload Debian package in &quot;.build&quot;</p>
 <dl>
 <dt><code>-u</code>, <code>&#8211;unsigned</code></dt>

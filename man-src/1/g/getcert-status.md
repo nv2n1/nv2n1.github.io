@@ -1,5 +1,4 @@
 ---
-
 title: "getcert-status(1)"
 name: "getcert-status"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-getcert-status/"
 description: "getcert"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getcert</p>
+<h2>SYNOPSIS</h2>
 <p> getcert status [options] </p>
+<h2>DESCRIPTION</h2>
 <p> Queries <i>certmonger</i> for a status of a particular certificate request and sets an exit status to reflect that status. </p>
 <h2>SELECTION OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "mkjobtexmf(1)"
 name: "mkjobtexmf"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-mkjobtexmf/"
 description: "mkjobtexmf — Generate a texmf tree for a particular job"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mkjobtexmf &#8212; Generate a texmf tree for a particular job </p>
 <h2>VERSION</h2>
 <p> 2011-11-10 v0.8</p>
+<h2>SYNOPSIS</h2>
 <p> The progam <code>mkjobtexmf</code> runs a program and tries to find the used file names. Two methods are available, option <tt>&quot;-recorder&quot;</tt> of TeX (Web2C) or the program <code>strace</code>. </p>
 <p> Then it generates a directory with a texmf tree. It checks the found files and tries sort them in this texmf tree. </p>
 <p> It can be used for archiving purposes or to speed up following TeX runs. </p>
@@ -47,6 +49,7 @@ mkjobtexmf[options]--&lt;cmd&gt;[args]
     &#8211;help                 Brief help message<br />
     &#8211;man                  Full documentation<br />
     &#8211;version              Print version identification</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Running the program</code> </p>
 <p> First <code>mkjobtexmf</code> runs a program, usually TeX. The TeX compiler is configured by option <tt>&quot;--cmd-tex&quot;</tt>. Option <tt>&quot;--texname&quot;</tt> can be used, if the file name extension differs from <i>.tex</i>: </p>
 <pre>

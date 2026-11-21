@@ -1,5 +1,4 @@
 ---
-
 title: "rpms2solv(1)"
 name: "rpms2solv"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-rpms2solv/"
 description: "rpms2solv – convert one or more rpms into a solv file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rpms2solv &#8211; convert one or more rpms into a solv file </p>
+<h2>SYNOPSIS</h2>
 <p> <code>rpms2solv</code> [<i>OPTIONS</i>] <i>RPM1.rpm</i> &#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> The rpms2solv tool converts the header data from one or more rpms into the solv file written to standard output. </p>
 <p> <code>-m</code> <i>MANIFESTFILE</i></p>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "load_voc_pf(3)"
 name: "load_voc_pf"
 section: "3"
@@ -10,8 +9,10 @@ description: "load_voc_pf – Packfile version of load_voc. Allegro game program
 
 <h2>NAME</h2>
 <p> load_voc_pf &#8211; Packfile version of load_voc. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>SAMPLE *load_voc_pf(PACKFILE *f);</code></p>
+<h2>DESCRIPTION</h2>
 <p> A version of load_voc() which reads from a packfile. Example: </p>
 <pre><code>
 PACKFILE *packfile;

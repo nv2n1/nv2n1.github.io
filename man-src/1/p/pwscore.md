@@ -1,5 +1,4 @@
 ---
-
 title: "pwscore(1)"
 name: "pwscore"
 section: "1"
@@ -10,7 +9,9 @@ description: "pwscore – simple configurable tool for checking quality of a pas
 
 <h2>NAME</h2>
 <p> pwscore &#8211; simple configurable tool for checking quality of a password</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pwscore</code> [user]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pwscore</code> is a simple tool for checking quality of a password. The password is read from stdin. </p>
 <p> The tool uses the <code>libpwquality</code> library to perform configurable checks for minimum length, dictionary checking against cracklib dictionaries, and other checks. </p>
 <p> It either reports an error if the password fails any of the checks, or it prints out the password quality score as an integer value between <code>0</code> and <code>100</code>. </p>

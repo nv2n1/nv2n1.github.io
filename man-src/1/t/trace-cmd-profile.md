@@ -1,5 +1,4 @@
 ---
-
 title: "trace-cmd-profile(1)"
 name: "trace-cmd-profile"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-trace-cmd-profile/"
 description: "trace-cmd-profile – profile tasks running live"
 ---
 
+<h2 class="name">NAME</h2>
+<p> trace-cmd-profile &#8211; profile tasks running live </p>
+<h2>SYNOPSIS</h2>
 <p> <code>trace-cmd profile [</code><i>OPTIONS</i><code>]</code> [<i>command</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <a href="/docs/linux/man/1-trace-cmd/">trace-cmd</a>(1) profile will start tracing just like <a href="/docs/linux/man/1-trace-cmd-record/">trace-cmd-record</a>(1), with the <code>&#8211;profile</code> option, except that it does not write to a file, but instead, it will read the events as they happen and will update the accounting of the events. When the trace is finished, it will report the results just like <a href="/docs/linux/man/1-trace-cmd-report/">trace-cmd-report</a>(1) would do with its <code>&#8211;profile</code> option. In other words, the profile command does the work of trace-cmd record &#8211;profile, and trace-cmd report &#8211;profile without having to record the data to disk, in between. </p>
 <p> The advantage of using the profile command is that the profiling can be done over a long period of time where recording all events would take up too much disk space. </p>
 <p> This will enable several events as well as the function graph tracer with a depth of one (if the kernel supports it). This is to show where tasks enter and exit the kernel and how long they were in the kernel. </p>

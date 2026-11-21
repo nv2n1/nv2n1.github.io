@@ -1,5 +1,4 @@
 ---
-
 title: "aa_initmouse(3)"
 name: "aa_initmouse"
 section: "3"
@@ -10,6 +9,7 @@ description: "aa_initmouse – initialize the AA-lib mouse driver."
 
 <h2>NAME</h2>
 <p> aa_initmouse &#8211; initialize the AA-lib mouse driver.</p>
+<h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>
 <p> int aa_initmouse<br />
  (<br />
@@ -25,6 +25,7 @@ description: "aa_initmouse – initialize the AA-lib mouse driver."
 <dd> Driver you wish to use.</dd>
 <dt><code>int mode</code></dt>
 <dd> Mask of extra features you request. No such features are available in the current AA-lib version.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This is the most primitive AA-lib keyboard initialization function. Allows better control over the process than the easier to use aa_autoinitmouse function.</p>
 <h2>RETURNS</h2>
 <p> 1 on success and 0 on fail.</p>

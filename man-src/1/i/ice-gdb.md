@@ -1,5 +1,4 @@
 ---
-
 title: "ice-gdb(1)"
 name: "ice-gdb"
 section: "1"
@@ -8,9 +7,12 @@ url: "/docs/linux/man/1-ice-gdb/"
 description: "ice-gdb – JTAG ICE frontend for avr-gdb ice-insight – JTAG ICE frontend for avr-insight"
 ---
 
+<h2 class="name">NAME</h2>
 <p> ice-gdb &#8211; JTAG ICE frontend for avr-gdb<br />
  ice-insight &#8211; JTAG ICE frontend for avr-insight </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ice-gdb/ice-insight</code> [<code>&#8211;debugger</code> <i>debugger</i>] [<code>&#8211;capture</code>] [<code>&#8211;ignore-intr</code>] [<code>&#8211;external</code>] [<i>gdb_arguments</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>ice-gdb</code> (respectively <code>ice-insight</code>) starts <code>avr-gdb</code> (respectively <code>avr-insight</code>) and <code>avarice</code> to do on-chip debugging on Atmel AVR processors using their JTAG-based on-chip debug facilities, via the Atmel JTAG ICE pod. </p>
 <p> The executable for the program being debugged is downloaded to the processor unless the <code>&#8211;capture</code> option is specified. A number of extra commands are available within gdb when started, see their description in NEW GDB COMMANDS below. Restrictions on debugging with the JTAG ICE pod are discussed in more detail in DEBUGGING WITH JTAG ICE below. </p>
 <p> The arguments passed to <code>avarice</code> include the value of the <code>AVARICE_ARGS</code> environment variable. This is typically used to specify the serial port to which the JTAG ICE pod is connected by setting <code>AVARICE_ARGS</code> to &quot;-j &lt;serial port name&gt;&quot;.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "fuser(1)"
 name: "fuser"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-fuser/"
 description: "fuser – identify processes using files or sockets"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fuser &#8211; identify processes using files or sockets </p>
+<h2>SYNOPSIS</h2>
 <p> <code>fuser</code> [<code>-fuv</code>] [<code>-a</code>|<code>-s</code>] [<code>-4</code>|<code>-6</code>] [<code>-c</code>|<code>-m</code>|<code>-n</code> <i>space</i>] [<code>&nbsp;-k</code> [<code>-i</code>] [<code>-M</code>] [<code>-w</code>] [<code>&#8211;</code><i>SIGNAL</i>] ] <i>name</i> &#8230;<br />
  <code>fuser -l</code><br />
  <code>fuser -V</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>fuser</code> displays the PIDs of processes using the specified files or file systems. In the default display mode, each file name is followed by a letter denoting the type of access: </p>
 <dl>
 <dl>

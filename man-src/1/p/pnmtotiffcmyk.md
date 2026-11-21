@@ -1,5 +1,4 @@
 ---
-
 title: "pnmtotiffcmyk(1)"
 name: "pnmtotiffcmyk"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-pnmtotiffcmyk/"
 description: "pnmtotiffcmyk – convert a portable anymap into a CMYK encoded TIFF file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pnmtotiffcmyk &#8211; convert a portable anymap into a CMYK encoded TIFF file </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pnmtotiffcmyk </code> [<code>Compargs</code>][<code>Tiffargs</code>][<code>Convargs</code>][ <i>pnmfile</i> ]</p>
 <dl>
 <dt>Compargs:</dt>
@@ -20,6 +22,7 @@ description: "pnmtotiffcmyk – convert a portable anymap into a CMYK encoded TI
 <dd> [[<code>-default</code>][<code>Defargs</code>]|<code>-negative</code>]</dd>
 <dt>Defargs:</dt>
 <dd> [<code>-theta</code> <i>deg</i>] [<code>-gamma</code> <i>n</i>] [<code>-gammap</code> <i>-1</i>|<code>-gammap</code> <i>n</i>]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Reads a portable anymap as input. Produces a CMYK encoded TIFF file as output. Optionally modifies the colour balance and black level, and removes CMY from under K.</p>
 <h2>OPTIONS</h2>
 <p> The order of most options is not important, but options for particular conversion algorithms must appear after the algorithm is selected (<code>-default</code>,<code>-negative</code>). If no algorithm is selected then <code>-default</code> is assumed and the appropriate options (<code>-theta</code>,<code>-gamma</code>,<code>-gammap</code>) can appear anywhere.</p>

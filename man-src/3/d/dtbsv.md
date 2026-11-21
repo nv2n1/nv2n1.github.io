@@ -1,5 +1,4 @@
 ---
-
 title: "dtbsv(3)"
 name: "dtbsv"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dtbsv/"
 description: "dtbsv.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dtbsv.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dtbsv</code> (UPLO, TRANS, DIAG, N, K, A, LDA, X, INCX)<br />
  <i></i><code>DTBSV</code></p>

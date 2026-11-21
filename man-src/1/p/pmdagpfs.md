@@ -1,5 +1,4 @@
 ---
-
 title: "pmdagpfs(1)"
 name: "pmdagpfs"
 section: "1"
@@ -10,6 +9,7 @@ description: "pmdagpfs – gpfs filesystem statistics performance metrics domain
 
 <h2>NAME</h2>
 <p> <code>pmdagpfs</code> &#8211; gpfs filesystem statistics performance metrics domain agent (PMDA)</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdagpfs</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which exports metric values from the <i>/usr/lpp/mmfs/bin/mmpmon</i> program to provide information on mounted gpfs filesystems.</p>
 <h2>INSTALLATION</h2>
 <p> Install the gpfs PMDA by using the Install script as root: </p>

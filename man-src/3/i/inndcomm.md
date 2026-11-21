@@ -1,5 +1,4 @@
 ---
-
 title: "inndcomm(3)"
 name: "inndcomm"
 section: "3"
@@ -11,7 +10,9 @@ url: "/docs/linux/man/3-inndcomm/"
 
  inndcomm - INND communication part of InterNetNews library
 
-<pre><code>
+<h2>SYNOPSIS</h2>
+
+ <pre><code>
 #include "inn/inndcomm.h"
 int ICCopen() int ICCclose() void ICCsettimeout(i) int i;
 int ICCcommand(cmd, argv, replyp)
@@ -29,7 +30,9 @@ char *why;
 extern char *ICCfailure;
 </code></pre>
 
-The routines described in this manual page are part of the InterNetNews library, <i><a HREF="/docs/linux/man/3-libinn/">libinn</a></i>(3). They are used to send commands to a running <i><a HREF="/docs/linux/man/8-innd/">innd</a></i>(8) daemon on the local host. The letters ``ICC'' stand for <i>I</i>nnd <i>C</i>ontrol <i>C</i>ommand. 
+<h2>DESCRIPTION</h2>
+
+ The routines described in this manual page are part of the InterNetNews library, <i><a HREF="/docs/linux/man/3-libinn/">libinn</a></i>(3). They are used to send commands to a running <i><a HREF="/docs/linux/man/8-innd/">innd</a></i>(8) daemon on the local host. The letters ``ICC'' stand for <i>I</i>nnd <i>C</i>ontrol <i>C</i>ommand. 
 
  <i>ICCopen</i> creates a Unix-domain datagram socket and binds it to the server's control socket, if <i>&lt;HAVE_UNIX_DOMAIN_SOCKETS in include/config.h&gt;</i> is defined. Otherwise it creates a named pipe for communicating with the server. It returns -1 on failure or zero on success. This routine must be called before any other routine. 
 

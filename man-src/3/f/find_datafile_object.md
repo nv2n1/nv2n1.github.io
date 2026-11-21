@@ -1,5 +1,4 @@
 ---
-
 title: "find_datafile_object(3)"
 name: "find_datafile_object"
 section: "3"
@@ -10,8 +9,10 @@ description: "find_datafile_object – Searches a datafile for an object with a 
 
 <h2>NAME</h2>
 <p> find_datafile_object &#8211; Searches a datafile for an object with a name. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>DATAFILE *find_datafile_object(const DATAFILE *dat, const char *objectname);</code></p>
+<h2>DESCRIPTION</h2>
 <p> Searches an already loaded datafile for an object with the specified name. In the name you can use `/&#8217; and `#&#8217; separators for nested datafile paths. Example: </p>
 <pre><code>
 char level_name[10];

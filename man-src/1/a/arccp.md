@@ -1,5 +1,4 @@
 ---
-
 title: "arccp(1)"
 name: "arccp"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-arccp/"
 description: "arccp – copy files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> arccp &#8211; copy files</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>arccp</code> command copies files to, from and between grid storage elements. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>arccp [options] source destination</code> </p>
 <h2>OPTIONS</h2>
 <dl>

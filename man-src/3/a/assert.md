@@ -1,5 +1,4 @@
 ---
-
 title: "assert(3)"
 name: "assert"
 section: "3"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/3-assert/"
 description: "assert – abort the program if assertion is false"
 ---
 
+<h2 class="name">NAME</h2>
+<p> assert &#8211; abort the program if assertion is false </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;assert.h&gt;
 void assert(scalar expression);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> This macro can help programmers find bugs in their programs, or handle exceptional cases via a crash that will produce limited debugging output. </p>
 <p> If <i>expression</i> is false (i.e., compares equal to zero), <code>assert</code>() prints an error message to standard error and terminates the program by calling <code><a href="/docs/linux/man/3-abort/">abort</a></code>(3). The error message includes the name of the file and function containing the <code>assert</code>() call, the source code line number of the call, and the text of the argument; something like: </p>
 <p> prog: some_file.c:16: some_func: Assertion `val == 0&#8242; failed. </p>

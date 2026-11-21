@@ -1,5 +1,4 @@
 ---
-
 title: "myisampack(1)"
 name: "myisampack"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-myisampack/"
 description: "myisampack – generate compressed, read-only MyISAM tables"
 ---
 
+<h2 class="name">NAME</h2>
+<p> myisampack &#8211; generate compressed, read-only MyISAM tables </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>myisampack [</code><i>options</i><code>] </code><i>file_name</i><code> &#8230;</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>myisampack</code> utility compresses MyISAM tables. <code>myisampack</code> works by compressing each column in the table separately. Usually, <code>myisampack</code> packs the data file 40% to 70%. </dd>
 <p> When the table is used later, the server reads into memory the information needed to decompress columns. This results in much better performance when accessing individual rows, because you only have to uncompress exactly one row. </p>
 <p> MySQL uses mmap() when possible to perform memory mapping on compressed tables. If mmap() does not work, MySQL falls back to normal read/write file operations. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_dnssec_zone_free(3)"
 name: "ldns_dnssec_zone_free"
 section: "3"
@@ -10,6 +9,7 @@ description: "ldns_dnssec_zone_find_rrset, ldns_dnssec_zone_new, ldns_dnssec_zon
 
 <h2>NAME</h2>
 <p> ldns_dnssec_zone_find_rrset, ldns_dnssec_zone_new, ldns_dnssec_zone_free, ldns_dnssec_zone_add_rr, ldns_dnssec_zone_names_print, ldns_dnssec_zone_print, ldns_dnssec_zone_add_empty_nonterminals </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -20,6 +20,7 @@ description: "ldns_dnssec_zone_find_rrset, ldns_dnssec_zone_new, ldns_dnssec_zon
 <p> void ldns_dnssec_zone_names_print(FILE *out, ldns_rbtree_t *tree, bool print_soa); </p>
 <p> void ldns_dnssec_zone_print(FILE *out, ldns_dnssec_zone *zone); </p>
 <p> ldns_status ldns_dnssec_zone_add_empty_nonterminals(ldns_dnssec_zone *zone); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_dnssec_zone_find_rrset</i>()</dt>
 <dd>Find the RRset with the given name and type in the zone </dd>

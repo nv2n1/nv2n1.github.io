@@ -1,5 +1,4 @@
 ---
-
 title: "acl_to_text(3)"
 name: "acl_to_text"
 section: "3"
@@ -8,10 +7,13 @@ url: "/docs/linux/man/3-acl_to_text/"
 description: "acl_to_text – convert an ACL to text"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>acl_to_text</code> &#8211; convert an ACL to text </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>
+<h2>SYNOPSIS</h2>
 <p> In sys/types.h In sys/acl.h Ft char * Fn acl_to_text acl_t acl ssize_t *len_p</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn acl_to_text function translates the ACL pointed to by the argument <i>acl</i> into a <code>NULL</code> terminated character string. If the pointer <i>len_p</i> is not <code>NULL</code> then the function returns the length of the string (not including the <code>NULL</code> terminator) in the location pointed to by <i>len_p</i> The format of the text string returned by Fn acl_to_text is the long text form defined in <a href="/docs/linux/man/5-acl/">acl</a>(5). The ACL referred to by <i>acl</i> is not changed. </p>
 <p> This function allocates any memory necessary to contain the string and returns a pointer to the string. The caller should free any releasable memory, when the new string is no longer required, by calling acl_free3 with the <i>(void*)char</i> returned by Fn acl_to_text as an argument.</p>
 <h2>RETURN VALUE</h2>

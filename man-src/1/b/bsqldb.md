@@ -1,5 +1,4 @@
 ---
-
 title: "bsqldb(1)"
 name: "bsqldb"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-bsqldb/"
 description: "bsqldb – batch SQL script processor using DB-Library"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>bsqldb</code> &#8211; batch SQL script processor using DB-Library </p>
+<h2>SYNOPSIS</h2>
 <p> [-<code>hqv</code> ] [-<code>S </code><i>servername</i> ] [-<code>D </code><i>database</i> ] [-<code>U </code><i>username</i> ] [-<code>P </code><i>password</i> ] [-<code>i </code><i>input_file</i> ] [-<code>o </code><i>output_file</i> ] [-<code>e </code><i>error_file</i> ] [-<code>H </code><i>hostname</i> ] [-<code>t </code><i>field_term</i> ] [-<code>R </code><i>pivot_description</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> is a utility program distributed with FreeTDS. is a non-interactive equivalent of the &quot;isql&quot; utility programs distributed by Sybase and Microsoft. Like them, uses the command &quot;go&quot; on a line by itself as a separator between batches. The last batch need not be followed by &quot;go&quot;. makes use of the DB-Library API provided by FreeTDS. This API is of course also available to application developers. </p>
 <h2>OPTIONS</h2>
 <dl>

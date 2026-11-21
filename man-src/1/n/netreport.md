@@ -1,5 +1,4 @@
 ---
-
 title: "netreport(1)"
 name: "netreport"
 section: "1"
@@ -10,7 +9,9 @@ description: "netreport – request notification of network interface changes"
 
 <h2>NAME</h2>
 <p> netreport &#8211; request notification of network interface changes</p>
+<h2>SYNOPSIS</h2>
 <p> <code>netreport</code> <i>[</i>-r<i>]</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>netreport</code> tells the network management scripts to send a SIGIO signal to the process which called netreport when any network interface status changes occur.</p>
 <h2>OPTIONS</h2>
 <dl>

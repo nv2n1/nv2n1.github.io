@@ -1,5 +1,4 @@
 ---
-
 title: "dzen2-textwidth(1)"
 name: "dzen2-textwidth"
 section: "1"
@@ -10,8 +9,10 @@ description: "dzen2-textwidth – calculate the width in pixels of text for a gi
 
 <h2>NAME</h2>
 <p> dzen2-textwidth &#8211; calculate the width in pixels of text for a given font.</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>dzen2-textwidth</code> <i>fontname</i> <i>string</i></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>textwidth</code></p>
 <dd>is a simple utility to calculate the width in pixels of text with a given font. </dd>
 <p> This tool is provided as part of the <code>dzen2 (1)</code> package.</p>

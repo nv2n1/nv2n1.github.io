@@ -1,5 +1,4 @@
 ---
-
 title: "mid3iconv(1)"
 name: "mid3iconv"
 section: "1"
@@ -10,7 +9,9 @@ description: "mid3iconv – convert ID3 tag encodings"
 
 <h2>NAME</h2>
 <p> mid3iconv &#8211; convert ID3 tag encodings</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mid3iconv</code> [<i>options</i>] <i>filename</i> &#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>mid3iconv</code> converts ID3 tags from legacy encodings to Unicode and stores them using the ID3v2 format.</p>
 <h2>OPTIONS</h2>
 <dl>

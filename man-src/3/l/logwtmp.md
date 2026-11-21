@@ -1,5 +1,4 @@
 ---
-
 title: "logwtmp(3)"
 name: "logwtmp"
 section: "3"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/3-logwtmp/"
 description: "updwtmp, logwtmp – append an entry to the wtmp file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> updwtmp, logwtmp &#8211; append an entry to the wtmp file </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;utmp.h&gt;
 void updwtmp(const char *wtmp_file, const struct utmp *ut);
 void logwtmp(const char *line, const char *name, const char *host);
 </code></pre>
 <p> For <code>logwtmp</code>(), link with <i>-lutil</i>.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>updwtmp</code>() appends the utmp structure <i>ut</i> to the wtmp file. </p>
 <p> <code>logwtmp</code>() constructs a utmp structure using <i>line</i>, <i>name</i>, <i>host</i>, current time and current process ID. Then it calls <code>updwtmp</code>() to append the structure to the wtmp file.</p>
 <h2>FILES</h2>

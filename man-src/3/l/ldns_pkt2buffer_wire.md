@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_pkt2buffer_wire(3)"
 name: "ldns_pkt2buffer_wire"
 section: "3"
@@ -10,6 +9,7 @@ description: "ldns_pkt2buffer_str, ldns_pktheader2buffer_str, ldns_rr2buffer_str
 
 <h2>NAME</h2>
 <p> ldns_pkt2buffer_str, ldns_pktheader2buffer_str, ldns_rr2buffer_str, ldns_rr_list2buffer_str, ldns_rdf2buffer_str, ldns_key2buffer_str, ldns_pkt2buffer_wire, ldns_rr2buffer_wire, ldns_rdf2buffer_wire, ldns_rrsig2buffer_wire, ldns_rr_rdata2buffer_wire </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -24,6 +24,7 @@ description: "ldns_pkt2buffer_str, ldns_pktheader2buffer_str, ldns_rr2buffer_str
 <p> ldns_status ldns_rdf2buffer_wire(ldns_buffer *output, const ldns_rdf *rdf); </p>
 <p> ldns_status ldns_rrsig2buffer_wire(ldns_buffer *output, const ldns_rr *sigrr); </p>
 <p> ldns_status ldns_rr_rdata2buffer_wire(ldns_buffer *output, const ldns_rr *rr); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_pkt2buffer_str</i>()</dt>
 <dd>Converts the data in the DNS packet to presentation format (as char *) and appends it to the given buffer </dd>

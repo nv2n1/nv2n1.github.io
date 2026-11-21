@@ -1,5 +1,4 @@
 ---
-
 title: "finch(1)"
 name: "finch"
 section: "1"
@@ -10,10 +9,12 @@ description: "Finch – A Pimpin’ Penguin console frontend to libpurple. Insta
 
 <h2>NAME</h2>
 <p> Finch &#8211; A Pimpin&#8217; Penguin console frontend to libpurple. Instant Messaging client.</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>finch </code><i>[options]</i></dt>
 <dd>
 </dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>finch</code> is a console-based modular messaging client based on libpurple which is capable of connecting to AIM, MSN, Yahoo!, XMPP, ICQ, IRC, SILC, Novell GroupWise, Lotus Sametime, Zephyr, Gadu-Gadu, and QQ all at once. It has many common features found in other clients, as well as many unique features. Finch is not endorsed by or affiliated with America Online, ICQ, Microsoft, or Yahoo. </p>
 <h2>OPTIONS</h2>
 <p> The following options are provided by <code>finch</code> using the standard GNU command line syntax:</p>

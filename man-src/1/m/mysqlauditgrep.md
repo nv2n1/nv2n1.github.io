@@ -1,5 +1,4 @@
 ---
-
 title: "mysqlauditgrep(1)"
 name: "mysqlauditgrep"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mysqlauditgrep/"
 description: "mysqlauditgrep – Search an audit log"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mysqlauditgrep &#8211; Search an audit log </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code> mysqlauditgrep [</code><i>OPTIONS</i><code>]&#8230; </code><i>AUDIT_LOG_FILE</i><code> mysqlauditgrep &#8211;file-stats[&#8211;format=</code><i>FORMAT</i><code>] </code><i>AUDIT_LOG_FILE</i><code> mysqlauditgrep &#8211;format=</code><i>FORMAT</i><i>AUDIT_LOG_FILE</i><code> mysqlauditgrep [&#8211;users=</code><i>USERS</i><code>] [&#8211;start-date=</code><i>START_DATE</i><code>] [&#8211;end-date=</code><i>END_DATE</i><code>] [&#8211;pattern=</code><i>PATTERN</i><code>[&#8211;regexp]] [&#8211;query-type=</code><i>QUERY_TYPE</i><code>] [&#8211;event-type=</code><i>EVENT_TYPE</i><code>] [&#8211;status=</code><i>STATUS</i><code>] [&#8211;format=</code><i>FORMAT</i><code>] </code><i>AUDIT_LOG_FILE</i></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This utility allows you to search the current or archived audit logs, allowing you to display data from the audit log file according to the defined search criterion. It also allows you to output the results in different formats, namely GRID (default), TAB, CSV, VERTICAL, and RAW (the original XML format). </dd>
 <p> This utility allows you to search and filter the returned audit log records by: users (<code>&#8211;users</code>), date and time ranges (<code>&#8211;start-date</code> and <code>&#8211;end-date</code>), SQL query types (<code>&#8211;query-type</code>), logged event and record types (<code>&#8211;event-type</code>), status (<code>&#8211;status</code>), and matching patterns (<code>&#8211;pattern</code>). Any of these search options can be combined and used together, with the retrieved records resulting from all passed in options being true. </p>
 <p> The <code>&#8211;pattern</code> supports two types of pattern matching: standard SQL, used with the SQL <i>LIKE</i> operator (SQL patterns), and standard <i>REGEXP</i> (POSIX regular expression patterns). </p>

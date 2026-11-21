@@ -1,5 +1,4 @@
 ---
-
 title: "vcd2fst(1)"
 name: "vcd2fst"
 section: "1"
@@ -12,6 +11,7 @@ description: "vcd2fst – Converts VCD files to FST files"
 <p> vcd2fst &#8211; Converts VCD files to FST files</p>
 <h2>SYNTAX</h2>
 <p> vcd2fst [<i>option</i>]&#8230; [<i>VCDFILE</i>] [<i>FSTFILE</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Converts VCD files to FST files.</p>
 <h2>OPTIONS</h2>
 <dl>

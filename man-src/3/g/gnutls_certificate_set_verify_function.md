@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_certificate_set_verify_function(3)"
 name: "gnutls_certificate_set_verify_function"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_certificate_set_verify_function – API function"
 
 <h2>NAME</h2>
 <p> gnutls_certificate_set_verify_function &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_certificate_set_verify_function(gnutls_certificate_credentials_t </code><i>cred</i><code>, gnutls_certificate_verify_function * </code><i>func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_certificate_set_verify_function – API function"
 <dd> is a <code>gnutls_certificate_credentials_t</code> structure.</dd>
 <dt>gnutls_certificate_verify_function * func</dt>
 <dd> is the callback function</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function sets a callback to be called when peer&#8217;s certificate has been received in order to verify it on receipt rather than doing after the handshake is completed. </p>
 <p> The callback&#8217;s function prototype is: int (*callback)(gnutls_session_t); </p>
 <p> If the callback function is provided then gnutls will call it, in the handshake, just after the certificate message has been received. To verify or obtain the certificate the <code>gnutls_certificate_verify_peers2()</code>, <code>gnutls_certificate_type_get()</code>, <code>gnutls_certificate_get_peers()</code> functions can be used. </p>

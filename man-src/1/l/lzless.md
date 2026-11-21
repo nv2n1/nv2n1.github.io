@@ -1,5 +1,4 @@
 ---
-
 title: "lzless(1)"
 name: "lzless"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-lzless/"
 description: "xzless, lzless – view xz or lzma compressed (text) files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xzless, lzless &#8211; view xz or lzma compressed (text) files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xzless</code> [<i>file</i>&#8230;]<br />
  <code>lzless</code> [<i>file</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>xzless</code> is a filter that displays text from compressed files to a terminal. It works on files compressed with <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1) or <code><a href="/docs/linux/man/1-lzma/">lzma</a></code>(1). If no <i>files</i> are given, <code>xzless</code> reads from standard input. </p>
 <p> <code>xzless</code> uses <code><a href="/docs/linux/man/1-less/">less</a></code>(1) to present its output. Unlike <code>xzmore</code>, its choice of pager cannot be altered by setting an environment variable. Commands are based on both <code><a href="/docs/linux/man/1-more/">more</a></code>(1) and <code><a href="/docs/linux/man/1-vi/">vi</a></code>(1) and allow back and forth movement and searching. See the <code><a href="/docs/linux/man/1-less/">less</a></code>(1) manual for more information. </p>
 <p> The command named <code>lzless</code> is provided for backward compatibility with LZMA Utils.</p>

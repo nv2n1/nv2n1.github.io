@@ -1,5 +1,4 @@
 ---
-
 title: "getb_depth(3)"
 name: "getb_depth"
 section: "3"
@@ -10,11 +9,13 @@ description: "getr_depth, getg_depth, getb_depth, geta_depth – Extract a color
 
 <h2>NAME</h2>
 <p> getr_depth, getg_depth, getb_depth, geta_depth &#8211; Extract a color component from a color in a specified pixel format. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>int getr_depth(int color_depth, int c);</code> </p>
 <p> <code>int getg_depth(int color_depth, int c);</code> </p>
 <p> <code>int getb_depth(int color_depth, int c);</code> </p>
 <p> <code>int geta_depth(int color_depth, int c);</code></p>
+<h2>DESCRIPTION</h2>
 <p> Given a color in the format being used by the specified color depth, these functions extract one of the red, green, blue, or alpha components (ranging 0-255). The alpha part is only meaningful for 32-bit pixels. Example: </p>
 <pre><code>
 int r, g, b, color_value, bpp;

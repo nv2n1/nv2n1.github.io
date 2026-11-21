@@ -1,5 +1,4 @@
 ---
-
 title: "libssh2_sftp_read(3)"
 name: "libssh2_sftp_read"
 section: "3"
@@ -10,8 +9,10 @@ description: "libssh2_sftp_read – read data from an SFTP handle"
 
 <h2>NAME</h2>
 <p> libssh2_sftp_read &#8211; read data from an SFTP handle</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; #include &lt;libssh2_s<a href="ftp://ftp.h">ftp.h</a>&gt; </p>
 <p> ssize_t libssh2_sftp_read(LIBSSH2_SFTP_HANDLE *handle, char *buffer, size_t buffer_maxlen); </p>
+<h2>DESCRIPTION</h2>
 <p> <i>handle</i> is the SFTP File Handle as returned by <code><a href="/docs/linux/man/3-libssh2_sftp_open_ex/">libssh2_sftp_open_ex</a>(3)</code> </p>
 <p> <i>buffer</i> is a pointer to a pre-allocated buffer of at least </p>
 <p> <i>buffer_maxlen</i> bytes to read data into. </p>

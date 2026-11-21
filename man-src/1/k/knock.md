@@ -1,5 +1,4 @@
 ---
-
 title: "knock(1)"
 name: "knock"
 section: "1"
@@ -10,7 +9,9 @@ description: "knock – port-knock client"
 
 <h2>NAME</h2>
 <p> knock &#8211; port-knock client</p>
+<h2>SYNOPSIS</h2>
 <p> <code>knock [options] &lt;host&gt; &lt;port[:proto]&gt; [port[:proto]] &#8230;</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>knock</code> is a <i>port-knock</i> client. It sends TCP/UDP packets to each specified <i>port</i> on <i>host</i>, creating a special knock sequence on the listening server (see the <code>knockd</code> manpage for more info on this).</p>
 <h2>OPTIONS</h2>
 <dl>

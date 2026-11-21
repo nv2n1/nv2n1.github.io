@@ -1,5 +1,4 @@
 ---
-
 title: "libdspam(3)"
 name: "libdspam"
 section: "3"
@@ -8,7 +7,10 @@ url: "/docs/linux/man/3-libdspam/"
 description: "libdspam – Core message processing and classification library for DSPAM"
 ---
 
+<h2 class="name">NAME</h2>
+<p> libdspam &#8211; Core message processing and classification library for DSPAM </p>
 <p> <code>DSPAM</code> Core Analyis Engine Functions</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;libdspam.h&gt;
 DSPAM_CTX *dspam_init(const char *username, const char *group,
@@ -24,6 +26,7 @@ int dspam_getsource(DSPAM_CTX *CTX, char *buf, size_t size);
 int dspam_detach(DSPAM_CTX *CTX);
 int dspam_destroy(DSPAM_CTX *CTX);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>libdspam</code> provides core message processing and classification functionality. </p>
 <p> The <code>dspam_init()</code> function creates and initializes a new classification context and attaches the context to whatever backend storage facility was configured. The <code>user</code> and <code>group</code> arguments provided are used to read and write information stored for the user and group specified. The <code>home</code> argument is used to configure libdspam&#8217;s storage around the base directory specified. The <code>mode</code> specifies the operating mode to initialize the classification context with and may be one of: </p>
 <p>&nbsp;<wbr><code>DSM_PROCESS</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Classify and learn the supplied message using whatever training mode is specified<br />

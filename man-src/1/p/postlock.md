@@ -1,5 +1,4 @@
 ---
-
 title: "postlock(1)"
 name: "postlock"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-postlock/"
 description: "postlock – lock mail folder and execute command"
 ---
 
+<h2 class="name">NAME</h2>
+<p> postlock &#8211; lock mail folder and execute command </p>
+<h2>SYNOPSIS</h2>
 <p> <code>postlock</code> [<code>-c </code><i>config_dir</i>] [<code>-l </code><i>lock_style</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-v</code>]&nbsp;<i>file command&#8230;</i></p>
+<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/1-postlock/">postlock</a></code>(1) command locks <i>file</i> for exclusive access, and executes <i>command</i>. The locking method is compatible with the Postfix UNIX-style local delivery agent. </p>
 <p> Options:</p>
 <dl>

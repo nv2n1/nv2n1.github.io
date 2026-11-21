@@ -1,5 +1,4 @@
 ---
-
 title: "perlebcdic(1)"
 name: "perlebcdic"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-perlebcdic/"
 description: "perlebcdic – Considerations for running Perl on EBCDIC platforms"
 ---
 
+<h2 class="name">NAME</h2>
+<p> perlebcdic &#8211; Considerations for running Perl on EBCDIC platforms </p>
+<h2>DESCRIPTION</h2>
 <p> An exploration of some of the issues facing Perl programmers on <font SIZE="-1">EBCDIC</font> based computers. </p>
 <p> Portions of this document that are still incomplete are marked with <font SIZE="-1">XXX.</font> </p>
 <p> Early Perl versions worked on some <font SIZE="-1">EBCDIC</font> machines, but the last known version that ran on <font SIZE="-1">EBCDIC</font> was v5.8.7, until v5.22, when the Perl core again works on z/OS. Theoretically, it could work on <font SIZE="-1">OS/400</font> or Siemens&#8217; <font SIZE="-1">BS2000</font> (or their successors), but this is untested. In v5.22 and 5.24, not all the modules found on <font SIZE="-1">CPAN</font> but shipped with core Perl work on z/OS. </p>

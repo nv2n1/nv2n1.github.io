@@ -1,5 +1,4 @@
 ---
-
 title: "nautilus-file-management-properties(1)"
 name: "nautilus-file-management-properties"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-nautilus-file-management-properties/"
 description: "nautilus-file-management-properties – File Management Preferences"
 ---
 
+<h2 class="name">NAME</h2>
+<p> nautilus-file-management-properties &#8211; File Management Preferences </p>
+<h2>SYNOPSIS</h2>
 <p> <code>nautilus-file-management-properties</code> [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>nautilus-file-management-properties</code> command. </p>
 <p> File Management Preferences allows an user to configure the way nautilus looks. </p>
 <p> You can specify a default view, and select sort options and display options. You can also specify default settings for icon views and list views.</p>

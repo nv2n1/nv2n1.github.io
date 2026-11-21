@@ -6,6 +6,8 @@ letter: "e"
 url: "/docs/linux/man/3-elektra-keyname/"
 description: "Key :: Name Manipulation Methods –"
 ---
+<h2 class="name">NAME</h2>
+<p> Key :: Name Manipulation Methods - </p>
 <p> Methods to do various operations on Key names.  </p>
 <h3>Functions</h3>
 <p> <br />

@@ -1,5 +1,4 @@
 ---
-
 title: "mq_notify(2)"
 name: "mq_notify"
 section: "2"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/2-mq_notify/"
 description: "mq_notify – register for notification when a message is available"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mq_notify &#8211; register for notification when a message is available </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;mqueue.h&gt;
 int mq_notify(mqd_t mqdes, const struct sigevent *sevp);
 </code></pre>
 <p> Link with <i>-lrt</i>.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>mq_notify</code>() allows the calling process to register or unregister for delivery of an asynchronous notification when a new message arrives on the empty message queue referred to by the message queue descriptor <i>mqdes</i>. </p>
 <p> The <i>sevp</i> argument is a pointer to a <i>sigevent</i> structure. For the definition and general details of this structure, see <code><a href="/docs/linux/man/7-sigevent/">sigevent</a></code>(7). </p>
 <p> If <i>sevp</i> is a non-null pointer, then <code>mq_notify</code>() registers the calling process to receive message notification. The <i>sigev_notify</i> field of the <i>sigevent</i> structure to which <i>sevp</i> points specifies how notification is to be performed. This field has one of the following values:</p>

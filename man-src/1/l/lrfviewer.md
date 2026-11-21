@@ -1,5 +1,4 @@
 ---
-
 title: "lrfviewer(1)"
 name: "lrfviewer"
 section: "1"
@@ -8,9 +7,11 @@ url: "/docs/linux/man/1-lrfviewer/"
 description: "lrfviewer – view LRF ebook"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code> lrfviewer </code>&#8211; view LRF ebook </p>
 <h2>USAGE</h2>
 <p> lrfviewer [options] book.lrf</p>
+<h2>DESCRIPTION</h2>
 <p> Read the LRF ebook book.lrf </p>
 <p> Whenever you pass arguments to lrfviewer that have spaces in them, enclose the arguments in quotation marks.</p>
 <h2>MAIN OPTIONS</h2>

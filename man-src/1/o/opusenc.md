@@ -1,5 +1,4 @@
 ---
-
 title: "opusenc(1)"
 name: "opusenc"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-opusenc/"
 description: "opusenc – encode audio into the Opus format"
 ---
 
+<h2 class="name">NAME</h2>
+<p> opusenc &#8211; encode audio into the Opus format</p>
+<h2>SYNOPSIS</h2>
 <p> <code>opusenc</code> [ <code>-h</code> ] [ <code>-V</code> ] [ <code>&#8211;bitrate</code> <i>kbit/sec</i> ] [ <code>&#8211;vbr</code> ] [ <code>&#8211;cvbr</code> ] [ <code>&#8211;hard-cbr</code> ] [ <code>&#8211;comp</code> <i>complexity</i> ] [ <code>&#8211;framesize</code> <i>2.5, 5, 10, 20, 40, 60</i> ] [ <code>&#8211;expect-loss</code> <i>pct</i> ] [ <code>&#8211;downmix-mono</code> ] [ <code>&#8211;downmix-stereo</code> ] [ <code>&#8211;max-delay</code> <i>ms</i> ] [ <code>&#8211;save-range</code> <i>file</i> ] [ <code>&#8211;set-ctl-int</code> <i>ctl=value</i> ] [ <code>&#8211;comment</code> <i>tag=value</i> ] [ <code>&#8211;artist</code> <i>author</i> ] [ <code>&#8211;title</code> <i>track title</i> ] [ <code>&#8211;raw</code> ] [ <code>&#8211;raw-bits</code> <i>bits/sample</i> ] [ <code>&#8211;raw-rate</code> <i>Hz</i> ] [ <code>&#8211;raw-chan</code> <i>N</i> ] [ <code>&#8211;raw-endianness</code> <i>flag</i> ] [ <code>&#8211;ignorelength</code> ] <i>input.wav</i> <i>output.opus</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>opusenc</code> reads audio data in either raw, Wave, or AIFF format and encodes it into an Opus stream. If the input file is &quot;-&quot; audio data is read from stdin. Likewise, if the output file is &quot;-&quot; opus data is written to stdout. </p>
 <p> Unless quieted <code>opusenc</code> displays fancy statistics about the encoding progress. </p>
 <h2>OPTIONS</h2>

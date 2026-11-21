@@ -1,5 +1,4 @@
 ---
-
 title: "dlaqtr(3)"
 name: "dlaqtr"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlaqtr/"
 description: "dlaqtr.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlaqtr.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlaqtr</code> (LTRAN, LREAL, N, T, LDT, B, W, SCALE, X, WORK, INFO)<br />
  <i></i><code>DLAQTR</code> solves a real quasi-triangular system of equations, or a complex quasi-triangular system of special form, in real arithmetic.</p>

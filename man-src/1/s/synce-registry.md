@@ -1,5 +1,4 @@
 ---
-
 title: "synce-registry(1)"
 name: "synce-registry"
 section: "1"
@@ -10,6 +9,7 @@ description: "synce-registry – read or modify the registry on a PDA"
 
 <h2>NAME</h2>
 <p> synce-registry &#8211; read or modify the registry on a PDA </p>
+<h2>SYNOPSIS</h2>
 <p> <code>synce-registry</code> [-d <i>LEVEL</i>] [-p <i>DEVNAME</i>] [-h]<br />
 [-r]&nbsp;<wbr><i>PARENTKEY</i>&nbsp;<wbr><i>KEY</i>&nbsp;<wbr><i>VALUE</i><br />
 &nbsp;<wbr>&nbsp;<wbr>-w&nbsp;<wbr>[-t TYPE]&nbsp;<wbr><i>PARENTKEY</i>&nbsp;<wbr><i>KEY</i>&nbsp;<wbr><i>VALUE</i>&nbsp;<wbr><i>NEWVALUE</i><br />
@@ -17,6 +17,7 @@ description: "synce-registry – read or modify the registry on a PDA"
 &nbsp;<wbr>&nbsp;<wbr>-n&nbsp;<wbr><i>PARENTKEY</i>&nbsp;<wbr><i>NEWKEY</i><br />
 &nbsp;<wbr>&nbsp;<wbr>-x&nbsp;<wbr><i>PARENTKEY</i>&nbsp;<wbr><i>KEY</i>&nbsp;<wbr><i>VALUE</i>&nbsp;<wbr>(<code>not supported</code>)<br />
 &nbsp;<wbr>&nbsp;<wbr>-X&nbsp;<wbr><i>PARENTKEY</i>&nbsp;<wbr><i>KEY</i>&nbsp;<wbr>(<code>not supported</code>) </p>
+<h2>DESCRIPTION</h2>
 <p> <code>synce-registry</code> manipulates the registry on a device connected through SynCE. It can read and write values, add new keys and values, and list the values of a key. </p>
 <p> Forward slashes (&#8216;/&#8217;) in key names specified on the command line are converted to backward slashes (&#8216;\&#8217;). </p>
 <p> This tool must be run as the same user as the dccmd daemon. </p>

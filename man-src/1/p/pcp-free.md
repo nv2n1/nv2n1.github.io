@@ -1,5 +1,4 @@
 ---
-
 title: "pcp-free(1)"
 name: "pcp-free"
 section: "1"
@@ -10,7 +9,9 @@ description: "pcp-free – report on free and used memory in the system"
 
 <h2>NAME</h2>
 <p> <code>pcp-free</code> &#8211; report on free and used memory in the system</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pcp</code> [<i>pcp options</i>] <code>free</code> [<code>-bkmgoltV</code>] [<code>-c</code> <i>count</i>] [<code>-s</code> <i>interval</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pcp-free</code> gives a summary display of the total amount of free and used physical memory and swap in the system, as well as the caches used by the kernel. </p>
 <p> When invoked via the <code><a href="/docs/linux/man/1-pcp/">pcp</a></code>(1) command, the <code>-h</code>/<code>&#8211;host</code>, <code>-a</code>/<code>&#8211;archive</code>, <code>-O</code>/<code>&#8211;origin</code>, <code>-s</code>/<code>&#8211;samples</code>, <code>-t</code>/<code>&#8211;interval</code>, <code>-Z</code>/<code>&#8211;timezone</code> and several other <i>pcp options</i> become indirectly available.</p>
 <h3>Options</h3>

@@ -1,5 +1,4 @@
 ---
-
 title: "ck_ht_entry_value_direct(3)"
 name: "ck_ht_entry_value_direct"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_ht_entry_value_direct – return value as specified in hash tab
 <p> <code>ck_ht_entry_value_direct</code> &#8211; return value as specified in hash table entry</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_ht.h Ft uintptr_t Fn ck_ht_entry_value_direct ck_ht_entry_t *entry</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_ht_entry_value_direct function will return the value of the key-value pair as specified in the object pointed to by the Fa entry argument. </p>
 <p> It is expected that the entry is associated with a hash table initialized with <code>CK_HT_MODE_DIRECT</code> (see ck_ht_init3 for more information).</p>
 <h2>RETURN VALUES</h2>

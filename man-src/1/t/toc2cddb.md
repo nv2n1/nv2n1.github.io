@@ -1,5 +1,4 @@
 ---
-
 title: "toc2cddb(1)"
 name: "toc2cddb"
 section: "1"
@@ -8,10 +7,13 @@ url: "/docs/linux/man/1-toc2cddb/"
 description: "toc2cddb – translates a TOC file of"
 ---
 
+<h2 class="name">NAME</h2>
 <p> toc2cddb &#8211; translates a TOC file of <i></p>
 <p> <a href="/docs/linux/man/1-cdrdao/">cdrdao</a>(1)</i> into a cddb file and prints it to stdout </p>
+<h2>SYNOPSIS</h2>
 <p> <code>toc2cddb</code> <i>toc_file</i> </p>
 <p> <code>toc2cddb</code> <code>[</code>-h<code>|</code>-V<code>]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>toc2cddb</code> translates a TOC file of <i><a href="/docs/linux/man/1-cdrdao/">cdrdao</a>(1)</i> into a cddb file and prints it to stdout. </p>
 <h2>OPTIONS</h2>
 <dl>

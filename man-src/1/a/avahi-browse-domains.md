@@ -1,5 +1,4 @@
 ---
-
 title: "avahi-browse-domains(1)"
 name: "avahi-browse-domains"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-avahi-browse-domains/"
 description: "avahi-browse – Browse for mDNS/DNS-SD services using the Avahi daemon"
 ---
 
+<h2 class="name">NAME</h2>
+<p> avahi-browse &#8211; Browse for mDNS/DNS-SD services using the Avahi daemon </p>
+<h2>SYNOPSIS</h2>
 <p> <code>avahi-browse [</code><i>options</i><code>] </code><i>service-type</i><code> </p>
 <p> avahi-browse [</code><i>options</i><code>] &#8211;all </p>
 <p> avahi-browse [</code><i>options</i><code>] &#8211;browse-domains </p>
 <p> avahi-browse [</code><i>options</i><code>] &#8211;dump-db </p>
 <p> avahi-browse-domains [</code><i>options</i><code>] </code></p>
+<h2>DESCRIPTION</h2>
 <p> Browse for mDNS/DNS-SD network services and browsing domains using the Avahi daemon.</p>
 <h2>OPTIONS</h2>
 <p> Specify a DNS-SD service type (e.g. _http._tcp) to browse for on the command line, or <code>-a</code> to browse for all available service types. Items that appear on the network are prefixed with &quot;+&quot;, items that disappear are prefixed with &quot;-&quot;. If <code>&#8211;resolve</code> is passed items that are resolved are prefixed with &quot;=&quot;.</p>

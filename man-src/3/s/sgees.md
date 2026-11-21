@@ -1,5 +1,4 @@
 ---
-
 title: "sgees(3)"
 name: "sgees"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-sgees/"
 description: "sgees.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sgees.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sgees</code> (JOBVS, SORT, SELECT, N, A, LDA, SDIM, WR, WI, VS, LDVS, WORK, LWORK, BWORK, INFO)<br />
  <i></i><code> SGEES computes the eigenvalues, the Schur form, and, optionally, the matrix of Schur vectors for GE matrices</code></p>

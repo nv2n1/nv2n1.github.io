@@ -1,5 +1,4 @@
 ---
-
 title: "flickrdf(1)"
 name: "flickrdf"
 section: "1"
@@ -10,7 +9,9 @@ description: "flickrdf – call Flickr API"
 
 <h2>NAME</h2>
 <p> flickrdf &#8211; call Flickr API</p>
+<h2>SYNOPSIS</h2>
 <p> <code>flickrdf</code> [<code>-d </code><i>DELAY</i>] [<code>-a </code><i>FROB</i>] [<code>-h</code>] [<code>-v</code>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>flickrdf</code> is a utility that uses the <i>photos.getInfo</i> API to interpret the description fields and the tags for a photo URI into RDF triples. If raptor is present, it will be used to provide proper serializing to RDF rather than the built in and hacky ntriples/turtle output. </p>
 <p> Machine tags when they are found are scanned for <i>xmlns:prefix=uri</i> and then all other machine tags with that prefix turn into triples. Several prefixes are also pre-defined by the library to automatically get turned into triples without an xmlns, such as <i>blue:</i>, <i>cell:</i>, <i>filter:</i> and <i>geo:</i>. Non-machine tags are not yet interpreted. </p>
 <h2>OPTIONS</h2>

@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_gsi_gssapi/"
 description: "Globus GSSAPI –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Globus GSSAPI &#8211; </p>
 <p> GSI Implementation Details.</p>
 <h3>Modules</h3>
 <p> <code>Constants</code><br />

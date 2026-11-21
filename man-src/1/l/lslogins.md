@@ -1,5 +1,4 @@
 ---
-
 title: "lslogins(1)"
 name: "lslogins"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-lslogins/"
 description: "lslogins – display information about known users in the system"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lslogins &#8211; display information about known users in the system </p>
+<h2>SYNOPSIS</h2>
 <p> <code>lslogins</code> [options] [<code>-s</code>|<code>-u</code>[=<i>UID</i>]] [<code>-g</code> <i>groups</i>] [<code>-l</code> <i>logins</i>] [<i>username</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Examine the wtmp and btmp logs, <i>/etc/shadow</i> (if necessary) and <i>/passwd</i> and output the desired data. </p>
 <p> The optional argument <i>username</i> forces <code>lslogins</code> to print all available details about the specified user only. In this case the output format is different than in case of <code>-l</code> or <code>-g</code> and unknown is <i>username</i> reported as an error. </p>
 <p> The default action is to list info about all the users in the system.</p>

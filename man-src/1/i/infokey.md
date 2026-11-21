@@ -1,5 +1,4 @@
 ---
-
 title: "infokey(1)"
 name: "infokey"
 section: "1"
@@ -10,7 +9,9 @@ description: "infokey – compile customizations for Info"
 
 <h2>NAME</h2>
 <p> infokey &#8211; compile customizations for Info</p>
+<h2>SYNOPSIS</h2>
 <p> <code>infokey</code> [<i>OPTION</i>]&#8230; [<i>INPUT-FILE</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Compile infokey source file to infokey file. Reads INPUT-FILE (default $HOME/.infokey) and writes compiled key file to (by default) $HOME/.info.</p>
 <h2>OPTIONS</h2>
 <dl>

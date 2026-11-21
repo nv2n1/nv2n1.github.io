@@ -1,5 +1,4 @@
 ---
-
 title: "pnmalias(1)"
 name: "pnmalias"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pnmalias/"
 description: "pnmalias – antialias a portable anyumap."
 ---
 
+<h2 class="name">NAME</h2>
+<p> pnmalias &#8211; antialias a portable anyumap. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pnmalias</code> [<code>-bgcolor</code> <i>color</i>] [<code>-fgcolor</code> <i>color</i>] [<code>-bonly</code>] [<code>-fonly</code>] [<code>-balias</code>] [<code>-falias</code>] [<code>-weight</code> <i>w</i>] [<i>pnmfile</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Reads a portable anymap as input, and applies anti-aliasing to background and foreground pixels. If the input file is a portable bitmap, the output anti-aliased image is promoted to a graymap, and a message is printed informing the user of the change in format.</p>
 <h2>OPTIONS</h2>
 <p> <code>-bgcolor </code> <i>colorb,</i> <code>-fgcolor</code> <i>colorf</i></p>

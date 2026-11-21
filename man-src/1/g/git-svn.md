@@ -1,5 +1,4 @@
 ---
-
 title: "git-svn(1)"
 name: "git-svn"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-svn/"
 description: "git-svn – Bidirectional operation between a Subversion repository and Git"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-svn &#8211; Bidirectional operation between a Subversion repository and Git </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git svn&lt;command&gt;[options][arguments]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <i>git svn</i> is a simple conduit for changesets between Subversion and Git. It provides a bidirectional flow of changes between a Subversion and a Git repository. </p>
 <p> <i>git svn</i> can track a standard Subversion repository, following the common &quot;trunk/branches/tags&quot; layout, with the &#8211;stdlayout option. It can also follow branches and tags in any layout with the -T/-t/-b options (see options to <i>init</i> below, and also the <i>clone</i> command). </p>
 <p> Once tracking a Subversion repository (with any of the above methods), the Git repository can be updated from Subversion by the <i>fetch</i> command and Subversion updated from Git by the <i>dcommit</i> command.</p>

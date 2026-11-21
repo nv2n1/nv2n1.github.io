@@ -1,5 +1,4 @@
 ---
-
 title: "gfx_capabilities(3)"
 name: "gfx_capabilities"
 section: "3"
@@ -10,8 +9,10 @@ description: "gfx_capabilities – Bitfield describing video hardware capabiliti
 
 <h2>NAME</h2>
 <p> gfx_capabilities &#8211; Bitfield describing video hardware capabilities. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>extern int gfx_capabilities;</code></p>
+<h2>DESCRIPTION</h2>
 <p> Bitfield describing the capabilities of the current graphics driver and video hardware. This may contain combination any of the flags: </p>
 <p> <code>GFX_CAN_SCROLL:</code> Indicates that the scroll_screen() function may be used with this driver. </p>
 <p> <code>GFX_CAN_TRIPLE_BUFFER:</code> Indicates that the request_scroll() and poll_scroll() functions may be used with this driver. If this flag is not set, it is possible that the enable_triple_buffer() function may be able to activate it. </p>

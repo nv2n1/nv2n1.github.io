@@ -1,5 +1,4 @@
 ---
-
 title: "scotch_mord(1)"
 name: "scotch_mord"
 section: "1"
@@ -10,9 +9,11 @@ description: "mord – compute sparse matrix orderings of meshes"
 
 <h2>NAME</h2>
 <p> <code>mord </code>&#8211; compute sparse matrix orderings of meshes</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 mord[options][mfile][ofile][lfile]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>mord</code> program computes, in a sequential way, an ordering of a Scotch source mesh representing the pattern of some symmetric sparse matrix. Only nodes of the mesh are effectively ordered. Elements provide connectivity information, such that every node is considered to be linked to all of the nodes which share at least an element with it. </p>
 <p> Source mesh file <i>mfile</i> can only be a centralized mesh file. The resulting ordering is stored in file <i>ofile</i>. Eventual logging information (such as the one produced by option <code>-v</code>) is sent to file <i>lfile</i>. When file names are not specified, data is read from standard input and written to standard output. Standard streams can also be explicitely represented by a dash &#8216;-&#8216;. </p>
 <p> When the proper libraries have been included at compile time, gord can directly handle compressed meshes, both as input and output. A stream is treated as compressed whenever its name is postfixed with a compressed file extension, such as in &#8216;brol.msh.bz2&#8217; or &#8216;-.gz&#8217;. The compression formats which can be supported are the bzip2 format (&#8216;.bz2&#8217;), the gzip format (&#8216;.gz&#8217;), and the lzma format (&#8216;.lzma&#8217;, on input only).</p>

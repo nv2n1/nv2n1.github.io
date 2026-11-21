@@ -1,5 +1,4 @@
 ---
-
 title: "oggz-diff(1)"
 name: "oggz-diff"
 section: "1"
@@ -11,6 +10,7 @@ description: "oggz-diff — Hexdump the packets of two Ogg files and output diff
 <h2>NAME</h2>
 <p> oggz-diff &#8212; Hexdump the packets of two Ogg files and output differences<br />
 &nbsp;<wbr></p>
+<h2>SYNOPSIS</h2>
 <p> <code>oggz-diff</code> [options] [OGGZDUMP_OPTIONS] [DIFF_OPTIONS] file1.ogg file2.ogg </p>
 <p> <code>options:</code> [&#8211;verbose ] [-v | &#8211;version ] [-h | &#8211;help ] </p>
 <p> <code>OGGZDUMP_OPTIONS:</code> [-b | &#8211;binary ] [-x | &#8211;hexadecimal ] [-c content-type | &#8211;content-type content-type ] [-s serialno | &#8211;serialno serialno ] [-O | &#8211;hide-offset ] [-S | &#8211;hide-serialno ] [-G | &#8211;hide-granulepos ] [-P | &#8211;hide-packetno ] </p>

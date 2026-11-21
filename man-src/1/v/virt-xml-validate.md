@@ -1,5 +1,4 @@
 ---
-
 title: "virt-xml-validate(1)"
 name: "virt-xml-validate"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-virt-xml-validate/"
 description: "virt-xml-validate – validate libvirt XML files against a schema"
 ---
 
+<h2 class="name">NAME</h2>
+<p> virt-xml-validate &#8211; validate libvirt XML files against a schema </p>
+<h2>SYNOPSIS</h2>
 <p> <code>virt-xml-validate</code> <i>XML-FILE</i> [<i>SCHEMA-NAME</i>] </p>
 <p> <code>virt-xml-validate</code> <i></i><font SIZE="-1"><i>OPTION</i></font><i></i></p>
+<h2>DESCRIPTION</h2>
 <p> Validates a libvirt <font SIZE="-1">XML</font> for compliance with the published schema. The first compulsory argument is the path to the <font SIZE="-1">XML</font> file to be validated. The optional second argument is the name of the schema to validate against. If omitted, the schema name will be inferred from the name of the root element in the <font SIZE="-1">XML</font> document. </p>
 <p> Valid schema names currently include</p>
 <dl>

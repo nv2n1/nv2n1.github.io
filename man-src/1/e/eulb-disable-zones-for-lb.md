@@ -1,5 +1,4 @@
 ---
-
 title: "eulb-disable-zones-for-lb(1)"
 name: "eulb-disable-zones-for-lb"
 section: "1"
@@ -10,10 +9,12 @@ description: "eulb-disable-zones-for-lb – Remove a load balancer from one or m
 
 <h2>NAME</h2>
 <p> eulb-disable-zones-for-lb &#8211; Remove a load balancer from one or more availability zones</p>
+<h2>SYNOPSIS</h2>
 <p> eulb-disable-zones-for-lb <code>-z</code> ZONE1,ZONE2,&#8230; [&#8211;show-empty-fields]</p>
 <dl>
 <dt>[-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID]</dt>
 <dd> [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ELB</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Remove a load balancer from one or more availability zones</p>
 <h3>positional arguments:</h3>
 <dl>

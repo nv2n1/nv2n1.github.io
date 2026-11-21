@@ -1,5 +1,4 @@
 ---
-
 title: "avahi-resolve-host-name(1)"
 name: "avahi-resolve-host-name"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-avahi-resolve-host-name/"
 description: "avahi-resolve – Resolve one or more mDNS/DNS host name(s) to IP address(es) (and vice versa) using the Avahi daemon"
 ---
 
+<h2 class="name">NAME</h2>
+<p> avahi-resolve &#8211; Resolve one or more mDNS/DNS host name(s) to IP address(es) (and vice versa) using the Avahi daemon </p>
+<h2>SYNOPSIS</h2>
 <p> <code>avahi-resolve &#8211;name </code><i>host-name &#8230;</i><code> </p>
 <p> avahi-resolve-host-name </code><i>host-name &#8230;</i><code> </p>
 <p> avahi-resolve &#8211;address </code><i>address &#8230;</i><code> </p>
 <p> avahi-resolve-address </code><i>address &#8230;</i></p>
+<h2>DESCRIPTION</h2>
 <p> Resolve one or more mDNS/DNS host name(s) to IP address(es) (and vice versa) using the Avahi daemon.</p>
 <h2>OPTIONS</h2>
 <p> When passing -n, specify one or more fully qualified mDNS/DNS host name(s) (e.g. &quot;foo.local&quot;) to resolve into IP addresses on the command line. When passing -a, specify one or more IP address to resolve into host names. </p>

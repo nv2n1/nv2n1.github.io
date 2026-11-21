@@ -1,5 +1,4 @@
 ---
-
 title: "ctwill-refsort(1)"
 name: "ctwill-refsort"
 section: "1"
@@ -7,15 +6,28 @@ letter: "c"
 url: "/docs/linux/man/1-ctwill-refsort/"
 ---
 
-ctwill, ctwill-refsort, ctwill-twinx - translate CWEB to TeX with mini-indexes 
+<h2 class="name">NAME</h2>
+ 
 
-ctwill [options] webfile[.w] [{changefile[.ch]|-} [outfile[.tex]]] 
+ 
+
+ ctwill, ctwill-refsort, ctwill-twinx - translate CWEB to TeX with mini-indexes 
+
+<h2>SYNOPSIS</h2>
+
+ 
+
+ ctwill [options] webfile[.w] [{changefile[.ch]|-} [outfile[.tex]]] 
 
  ctwill-refsort &lt; indexfile.ref &gt; indexfile.sref 
 
  ctwill-twinx outfile.tex [outfile.tex ...] &gt; index.tex
 
-The ctwill program converts a CWEB source document into a TeX file that may be formatted and printed in the usual way. It takes appropriate care of typographic details like page layout and the use of indentation, italics, boldface, etc., and it supplies extensive cross-index information that it gathers automatically. 
+<h2>DESCRIPTION</h2>
+
+ 
+
+ The ctwill program converts a CWEB source document into a TeX file that may be formatted and printed in the usual way. It takes appropriate care of typographic details like page layout and the use of indentation, italics, boldface, etc., and it supplies extensive cross-index information that it gathers automatically. 
 
  CWEB allows you to prepare a single document containing all the information that is needed both to produce a compilable C/C++&nbsp;program and to produce a well-formatted document describing the program in as much detail as the writer may desire. The user of CWEB ought to be familiar with TeX as well as C/C++.
 

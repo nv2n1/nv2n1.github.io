@@ -1,5 +1,4 @@
 ---
-
 title: "fuse-zip(1)"
 name: "fuse-zip"
 section: "1"
@@ -10,6 +9,7 @@ description: "fuse-zip – a FUSE filesystem for zip archives with write support
 
 <h2>NAME</h2>
 <p> fuse-zip &#8211; a FUSE filesystem for zip archives with write support</p>
+<h2>SYNOPSIS</h2>
 <p> <code>fuse-zip</code> zip-file [<i>fusermount</i> <i>options</i>] mount-point</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -28,6 +28,7 @@ description: "fuse-zip – a FUSE filesystem for zip archives with write support
 <p> If you want to specify character set conversion for file names in archive, use the following fusermount options: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>-omodules=iconv,from_code=$charset1,to_code=$charset2 </p>
 <p> See FUSE documentation for details.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>fuse-zip</code> is a fuse filesystem, that enables any program to work with a ZIP archive as though it is a plain directory. Unlike KIO or Gnome VFS, it can be used in any application without modifications. </p>
 <p> Unlike other FUSE filesystems, only fuse-zip provides write support to ZIP archives. Also, fuse-zip is faster that all known implementations on large archives with many files.</p>
 <h2>USAGE</h2>

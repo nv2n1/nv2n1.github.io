@@ -1,5 +1,4 @@
 ---
-
 title: "totem-audio-preview(1)"
 name: "totem-audio-preview"
 section: "1"
@@ -10,7 +9,9 @@ description: "totem-audio-preview – play audio files"
 
 <h2>NAME</h2>
 <p> totem-audio-preview &#8211; play audio files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>totem-audio-preview</code> [<i>OPTION</i>]&#8230;<i> </i>[<i>FILE</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>totem-audio-preview </code> is primarily used by GNOME applications for audio preview purposes.</p>
 <h2>OPTIONS</h2>
 <dl>

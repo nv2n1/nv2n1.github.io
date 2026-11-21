@@ -1,5 +1,4 @@
 ---
-
 title: "reporter-kerneloops(1)"
 name: "reporter-kerneloops"
 section: "1"
@@ -7,11 +6,22 @@ letter: "r"
 url: "/docs/linux/man/1-reporter-kerneloops/"
 ---
 
-reporter-kerneloops - Reports kernel oops to kerneloops.org (or similar) site. 
+<h2 class="name">NAME</h2>
+ 
 
-<i>reporter-kerneloops</i> [-v] [-c CONFFILE]... [-d DIR]
+ reporter-kerneloops - Reports kernel oops to kerneloops.org (or similar) site. 
 
-The tool is used to report the crash to the Kerneloops tracker.
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <i>reporter-kerneloops</i> [-v] [-c CONFFILE]... [-d DIR]
+
+<h2>DESCRIPTION</h2>
+
+ 
+
+ The tool is used to report the crash to the Kerneloops tracker.
 
 <h3>Configuration file</h3>
 

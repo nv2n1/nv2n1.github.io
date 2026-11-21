@@ -1,5 +1,4 @@
 ---
-
 title: "gdal_grid(1)"
 name: "gdal_grid"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-gdal_grid/"
 description: "gdal_grid – gdal_grid creates regular grid from the scattered data"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gdal_grid &#8211; gdal_grid creates regular grid from the scattered data </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 gdal_grid[-ot{Byte / Int16 / UInt16 / UInt32 / Int32 / Float32 / Float64 /
               CInt16 / CInt32 / CFloat32 / CFloat64}]
@@ -22,6 +24,7 @@ gdal_grid[-ot{Byte / Int16 / UInt16 / UInt32 / Int32 / Float32 / Float64 /
                        [-txe xmin xmax][-tye ymin ymax][-outsize xsize ysize]
                        [-a algorithm[:parameter1 = value1] * ][-q]&lt;src_datasource&gt;&lt;dst_filename&gt;
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> This program creates regular grid (raster) from the scattered data read from the OGR datasource. Input data will be interpolated to fill grid nodes with values, you can choose from various interpolation methods. </p>
 <p> Starting with GDAL 1.10, it is possible to set the <code>GDAL_NUM_THREADS</code> configuration option to parallelize the processing. The value to specify is the number of worker threads, or <i>ALL_CPUS</i> to use all the cores/CPUs of the computer. </p>
 <dl>

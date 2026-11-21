@@ -1,5 +1,4 @@
 ---
-
 title: "atof(3)"
 name: "atof"
 section: "3"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/3-atof/"
 description: "atof – convert a string to a double"
 ---
 
+<h2 class="name">NAME</h2>
+<p> atof &#8211; convert a string to a double </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;
 double atof(const char *nptr);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>atof</code>() function converts the initial portion of the string pointed to by <i>nptr</i> to <i>double</i>. The behavior is the same as </p>
 <p> strtod(nptr, NULL); </p>
 <p> except that <code>atof</code>() does not detect errors.</p>

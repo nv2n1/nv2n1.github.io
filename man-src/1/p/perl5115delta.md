@@ -1,5 +1,4 @@
 ---
-
 title: "perl5115delta(1)"
 name: "perl5115delta"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-perl5115delta/"
 description: "perl5115delta – what is new for perl v5.11.5"
 ---
 
+<h2 class="name">NAME</h2>
+<p> perl5115delta &#8211; what is new for perl v5.11.5 </p>
+<h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.11.4 release and the 5.11.5 release. </p>
 <p> If you are upgrading from an earlier release such as 5.11.3, first read perl5114delta, which describes differences between 5.11.3 and 5.11.4.</p>
 <h2>Core Enhancements</h2>

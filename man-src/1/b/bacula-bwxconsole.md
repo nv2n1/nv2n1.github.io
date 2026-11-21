@@ -1,5 +1,4 @@
 ---
-
 title: "bacula-bwxconsole(1)"
 name: "bacula-bwxconsole"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-bacula-bwxconsole/"
 description: "bwx-console – Bacula’s management Console"
 ---
 
+<h2 class="name">NAME</h2>
 <p>&nbsp;<wbr>bwx-console &#8211; Bacula&#8217;s management Console </p>
+<h2>SYNOPSIS</h2>
 <p> <code>bwx-console</code> [options] </p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>bwx-console</code> command, the wxWidgets version of the Bacula administration console. </p>
 <h2>OPTIONS</h2>
 <p> bwx-console [-s] [-c config_file] [-d debug_level] [-t]</p>

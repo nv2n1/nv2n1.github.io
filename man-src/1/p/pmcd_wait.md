@@ -1,5 +1,4 @@
 ---
-
 title: "pmcd_wait(1)"
 name: "pmcd_wait"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmcd_wait – wait for PMCD to accept client connections"
 
 <h2>NAME</h2>
 <p> <code>pmcd_wait</code> &#8211; wait for PMCD to accept client connections</p>
+<h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/pmcd_wait</code> [<code>-h</code> <i>host</i>] [<code>-t</code> <i>interval</i>] [<code>-v</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmcd_wait</code> waits for the Performance Metrics Collector Daemon (PMCD) to be running and accepting client connections. </p>
 <p> Unless directed to another host by the <code>-h</code> option, <code>pmcd_wait</code> will try to contact <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) on the local host. </p>
 <p> <code>pmcd_wait</code> will timeout and abandon the attempt to connect to <code>pmcd</code> after 60 seconds. This default timeout interval may be changed using the <code>-t</code> option, where the <i>interval</i> argument follows the syntax described in <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1) and in the simplest form may be an unsigned integer (the implied units in this case are seconds). </p>

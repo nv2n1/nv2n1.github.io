@@ -1,5 +1,4 @@
 ---
-
 title: "ck_ht_reset_size_spmc(3)"
 name: "ck_ht_reset_size_spmc"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_ht_reset_size_spmc – remove all entries from a hash table and
 <p> <code>ck_ht_reset_size_spmc</code> &#8211; remove all entries from a hash table and reset size</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_ht.h Ft bool Fn ck_ht_reset_size_spmc ck_ht_t *ht uint64_t capacity</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_ht_reset_size_spmc function will remove all key-value pairs stored in the hash table pointed to by the Fa ht argument and create a new generation of the hash table that is preallocated for Fa capacity entries.</p>
 <h2>RETURN VALUES</h2>
 <p> If successful, Fn ck_ht_reset_size_spmc will return <code>true</code> and will otherwise return <code>false.</code> This function will only fail if a replacement hash table could not be allocated internally.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "me-tv(1)"
 name: "me-tv"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-me-tv/"
 description: "me-tv – a digital television (DVB) viewer for GNOME"
 ---
 
+<h2 class="name">NAME</h2>
+<p> me-tv &#8211; a digital television (DVB) viewer for GNOME</p>
+<h2>SYNOPSIS</h2>
 <p> <code>me-tv</code> <i>[-?|&#8211;help]</i> <i>[-v|&#8211;verbose]</i> <i>[-s|&#8211;safe-mode]</i> <i>[-m|&#8211;minimised]</i> <i>[&#8211;disable-epg]</i> <i>[&#8211;disable-epg-thread]</i> <i>[&#8211;no-screensaver-inhibit]</i> <i>[&#8211;devices]</i> <i>[&#8211;read-timeout]</i> <i>[&#8211;display=DISPLAY]</i> </p>
+<h2>DESCRIPTION</h2>
 <p> Me TV is a GTK desktop application for watching digital television services that use the DVB standard. Me TV works with DVB-T/C/S and ATSC cards that have kernel driver support. </p>
 <p> Me TV uses the xine video player to render its output onto its video window. Me TV reads the Electronic Program Guide (EPG) data that is transmitted over the air to populate a built-in program guide which can be used for scheduling recordings. </p>
 <p> Me TV has a built-in scanner which can autoscan certain countries or use an initial scan file. </p>

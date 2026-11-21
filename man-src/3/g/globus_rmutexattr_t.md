@@ -1,5 +1,4 @@
 ---
-
 title: "globus_rmutexattr_t(3)"
 name: "globus_rmutexattr_t"
 section: "3"
@@ -8,7 +7,10 @@ url: "/docs/linux/man/3-globus_rmutexattr_t/"
 description: "globus_thread_rmutex.h –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> globus_thread_rmutex.h &#8211; </p>
 <p> Recursive Mutex.</p>
+<h2>SYNOPSIS</h2>
 <p> #include &#8216;globus_common_include.h&#8217;<br />
  #include &#8216;globus_thread.h&#8217; </p>
 <h3>Data Structures</h3>

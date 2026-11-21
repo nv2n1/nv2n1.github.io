@@ -1,5 +1,4 @@
 ---
-
 title: "pnmquantall(1)"
 name: "pnmquantall"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-pnmquantall/"
 description: "pnmquantall – run Pnmquant on a bunch of files all at once, so they share a common colormap"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pnmquantall &#8211; run Pnmquant on a bunch of files all at once, so they share a common colormap</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pnmquantall</code> </p>
 <p> [<code>-ext</code> <i>extension</i>] <i>ncolors</i> <i>netpbm_file</i>&#8230; </p>
 <p> Note that the usual syntax rules for Netpbm programs <i>don&#8217;t apply</i> to this program. For example, you can&#8217;t abbreviation -ext and you can&#8217;t put it anywhere on the line you want. </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pnmquantall</code> takes a bunch of Netpbm image files as input, chooses <i>ncolors</i> colors to best represent all of the images, maps the existing colors to the new ones, and <code>overwrites the input files</code> with the new quantized versions. </p>
 <p> If you don&#8217;t want to overwrite your input files, use the <code>-ext</code> option. The output files are then named the same as the input files, plus a period and the extension text you specify. </p>

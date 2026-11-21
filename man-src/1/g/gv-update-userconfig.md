@@ -1,5 +1,4 @@
 ---
-
 title: "gv-update-userconfig(1)"
 name: "gv-update-userconfig"
 section: "1"
@@ -10,7 +9,9 @@ description: "gv-update-userconfig – update ~/.gv config file"
 
 <h2>NAME</h2>
 <p> gv-update-userconfig &#8211; update ~/.gv config file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gv-update-userconfig</code> [<i>filename</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>gv-update-userconfig</code> is a simple script to update an <code>.gv</code> config file to the current version of <code><a href="/docs/linux/man/1-gv/">gv</a></code>(1). </p>
 <p> You can specify a file which is used instead of <code>.gv</code> by using the optional filename argument. This is useful if the environment variable XUSERSEARCHPATH is used. </p>
 <p> This is done by removing all entries known to cause problems with the current version of GNU gv (i.e. the one the version of this program belongs to) and updating the version information in that file. This resets all problematic items back to the default values. </p>

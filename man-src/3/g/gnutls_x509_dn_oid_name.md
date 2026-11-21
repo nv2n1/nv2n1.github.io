@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_dn_oid_name(3)"
 name: "gnutls_x509_dn_oid_name"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_dn_oid_name – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_dn_oid_name &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>const char * gnutls_x509_dn_oid_name(const char * </code><i>oid</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_x509_dn_oid_name – API function"
 <dd> holds an Object Identifier in a null terminated string</dd>
 <dt>unsigned int flags</dt>
 <dd> 0 or GNUTLS_X509_DN_OID_*</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will return the name of a known DN OID. If <code>GNUTLS_X509_DN_OID_RETURN_OID</code> is specified this function will return the given OID if no descriptive name has been found.</p>
 <h2>RETURNS</h2>
 <p> A null terminated string or NULL otherwise.</p>

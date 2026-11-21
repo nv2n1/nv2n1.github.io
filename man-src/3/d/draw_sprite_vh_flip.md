@@ -1,5 +1,4 @@
 ---
-
 title: "draw_sprite_vh_flip(3)"
 name: "draw_sprite_vh_flip"
 section: "3"
@@ -10,10 +9,12 @@ description: "draw_sprite_v_flip, draw_sprite_h_flip, draw_sprite_vh_flip – Dr
 
 <h2>NAME</h2>
 <p> draw_sprite_v_flip, draw_sprite_h_flip, draw_sprite_vh_flip &#8211; Draws the sprite transformed to the destination bitmap. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>void draw_sprite_v_flip(BITMAP *bmp, BITMAP *sprite, int x, int y);</code> </p>
 <p> <code>void draw_sprite_h_flip(BITMAP *bmp, BITMAP *sprite, int x, int y);</code> </p>
 <p> <code>void draw_sprite_vh_flip(BITMAP *bmp, BITMAP *sprite, int x, int y);</code></p>
+<h2>DESCRIPTION</h2>
 <p> These are like draw_sprite(), but they additionally flip the image vertically, horizontally, or both, respectively. Flipping vertically means that the y-axis is reversed, while flipping horizontally means that the x-axis is reversed, between the source and the destination. This produces exact mirror images, which is not the same as rotating the sprite (and it is a lot faster than the rotation routine). The sprite must be a memory bitmap. Example: </p>
 <pre><code>
 if (key[KEY_RIGHT])

@@ -1,5 +1,4 @@
 ---
-
 title: "cd-create-profile(1)"
 name: "cd-create-profile"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-cd-create-profile/"
 description: "cd-create-profile – Color Manager Profile Creation Tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cd-create-profile &#8211; Color Manager Profile Creation Tool </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cd-create-profile</code> [<code>&#8211;verbose</code>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This manual page documents briefly the <code>cd-create-profile</code> command. </dd>
 <p> <code>cd-create-profile</code> allows an administrator to create ICC profiles on their system.</p>
 <h2>OPTIONS</h2>

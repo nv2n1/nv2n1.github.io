@@ -1,5 +1,4 @@
 ---
-
 title: "pmeth(1)"
 name: "pmeth"
 section: "1"
@@ -7,9 +6,14 @@ letter: "p"
 url: "/docs/linux/man/1-pmeth/"
 ---
 
-pmeth - show a Perl class's methods 
+<h2 class="name">NAME</h2>
+ 
 
-Given a class name, print out all methods available to that class. It does this by loading in the class module, and walking its symbol table and those of its ancestor classes. A regular method call shows up simply: 
+ pmeth - show a Perl class's methods 
+
+<h2>DESCRIPTION</h2>
+
+ Given a class name, print out all methods available to that class. It does this by loading in the class module, and walking its symbol table and those of its ancestor classes. A regular method call shows up simply: 
 
  <pre>
     $ pmeth IO::Socket | grep '^con'

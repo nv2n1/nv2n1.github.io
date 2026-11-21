@@ -1,5 +1,4 @@
 ---
-
 title: "secon(1)"
 name: "secon"
 section: "1"
@@ -10,10 +9,12 @@ description: "secon – See an SELinux context, from a file, program or user inp
 
 <h2>NAME</h2>
 <p> secon &#8211; See an SELinux context, from a file, program or user input.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>secon</code> [<code>-hVurtscmPRfLp</code>] [<i>CONTEXT</i>]<br />
  [<code>&#8211;file</code>] <i>FILE</i><br />
  [<code>&#8211;link</code>] <i>FILE</i><br />
  [<code>&#8211;pid</code>] <i>PID</i></p>
+<h2>DESCRIPTION</h2>
 <p> See a part of a context. The context is taken from a file, pid, user input or the context in which <code>secon</code> is originally executed.</p>
 <dl>
 <dt><code>-V</code>, <code>&#8211;version</code></dt>

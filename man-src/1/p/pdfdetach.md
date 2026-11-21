@@ -1,5 +1,4 @@
 ---
-
 title: "pdfdetach(1)"
 name: "pdfdetach"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pdfdetach/"
 description: "pdfdetach – Portable Document Format (PDF) document embedded file extractor (version 3.03)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pdfdetach &#8211; Portable Document Format (PDF) document embedded file extractor (version 3.03) </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pdfdetach</code> [options] [<i>PDF-file</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Pdfdetach</code> lists or extracts embedded files (attachments) from a Portable Document Format (PDF) file.</p>
 <h2>OPTIONS</h2>
 <p> Some of the following options can be set with configuration file commands. These are listed in square brackets with the description of the corresponding command line option.</p>

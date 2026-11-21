@@ -1,5 +1,4 @@
 ---
-
 title: "h5import(1)"
 name: "h5import"
 section: "1"
@@ -10,11 +9,13 @@ description: "h5import – Imports data into an existing or new HDF5 file."
 
 <h2>NAME</h2>
 <p> h5import &#8211; Imports data into an existing or new HDF5 file.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>h5import </code> infile <code>-d </code> dim_list [ <code>-p </code> pathname ] [ <code>-t </code> input_class ] [ <code>-s </code> input_size ] [infile &#8230;] <code>-o </code> outfile </p>
 <p> <code>h5import </code> infile <code>-dims </code> dim_list [ <code>-path </code> pathname ] [ <code>-type </code> input_class ] [ <code>-size </code> input_size ] [infile &#8230;] <code>-outfile </code> outfile </p>
 <p> <code>h5import </code> infile <code>-c </code> config_file [infile &#8230;] <code>-outfile </code> outfile </p>
 <p> <code>h5import </code> <code>-h </code> </p>
 <p> <code>h5import </code> <code>-help </code></p>
+<h2>DESCRIPTION</h2>
 <p> h5import converts data from one or more ASCII or binary files, infile, into the same number of HDF5 datasets in the existing or new HDF5 file, outfile. Data conversion is performed in accordance with the user-specified type and storage properties specified in in_options. </p>
 <p> The primary objective of h5import is to import floating point or integer data. The utility&#8217;s design allows for future versions that accept ASCII text files and store the contents as a compact array of one-dimensional strings, but that capability is not implemented in HDF5 Release 1.6. </p>
 <p> <code>Input data and options</code> </p>

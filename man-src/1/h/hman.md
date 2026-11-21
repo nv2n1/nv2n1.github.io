@@ -1,5 +1,4 @@
 ---
-
 title: "hman(1)"
 name: "hman"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-hman/"
 description: "hman – browse the on-line manual pages"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hman &#8211; browse the on-line manual pages </p>
+<h2>SYNOPSIS</h2>
 <p> <code>hman</code> [ -P <i>browser</i> ] [ -H <i>host</i> ] [ <i>section</i> ] <i>name</i><br />
  <code>hman</code> [ -P <i>browser</i> ] [ -H <i>host</i> ] [ <i>section</i> ] [ index ]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>hman</code> script is an interface to <a href="/docs/linux/man/1-man2html/">man2html</a>(1) that allows you to enter man page requests at the command line and view the output in your favourite browser. The behaviour reminds of that of <code><a href="/docs/linux/man/1-man/">man</a></code>(1) so that many people will be able to alias <code>hman</code> to <code>man</code>. If the browser used is netscape, and an incarnation of netscape is running already, <code>hman</code> will pass the request to the existing browser. </p>
 <h2>OPTIONS</h2>
 <dl>

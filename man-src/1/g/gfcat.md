@@ -1,5 +1,4 @@
 ---
-
 title: "gfcat(1)"
 name: "gfcat"
 section: "1"
@@ -10,7 +9,9 @@ description: "gfcat – manual page for gfcat (glusterfs-coreutils) 0.2.0"
 
 <h2>NAME</h2>
 <p> gfcat &#8211; manual page for gfcat (glusterfs-coreutils) 0.2.0</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gfcat</code> [<i>OPTION</i>]&#8230; <i>URL</i></p>
+<h2>DESCRIPTION</h2>
 <p> Read a file on a remote Gluster volume and write it to standard output.</p>
 <dl>
 <dt><code>-o</code>, <code>&#8211;xlator-option</code>=<i>OPTION</i></dt>

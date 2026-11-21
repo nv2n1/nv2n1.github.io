@@ -1,5 +1,4 @@
 ---
-
 title: "mhparam(1)"
 name: "mhparam"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mhparam/"
 description: "mhparam – print nmh profile and context components"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mhparam &#8211; print nmh profile and context components </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mhparam</code> [<i>components</i>] [<code>-all</code>] [<code>-component</code> | <code>-nocomponent</code>] [<code>-version</code>] [<code>-help</code>] [<code>-debug</code>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>mhparam</code></p>
 <dd>writes the value of the specified profile component to the standard output separated by newlines. Component name matching is case-insensitive. If the profile component is not present, the default value (or nothing if there is no default) is printed. </dd>
 <p> If the switch <code>-component</code> is given, then the component name is displayed along with the profile components value. This can be disabled with the switch <code>-nocomponent</code>. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ssconvert(1)"
 name: "ssconvert"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-ssconvert/"
 description: "ssconvert – a command line spreadsheet format converter"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ssconvert &#8211; a command line spreadsheet format converter</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ssconvert</code> [<i>OPTIONS</i>] <i>infile</i> <i>outfile</i> </p>
 <p> <code>ssconvert</code> [<i>OPTIONS</i>] <code>&#8211;merge-to</code> <i>outfile</i> <i>infile1</i> <i>infile2</i> <code>&#8230;</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>ssconvert</code> is a command line utility to convert spreadsheet files between various spreadsheet file formats. It is a companion utility to <code>Gnumeric</code>, the powerful spreadsheet program created by the GNOME project. </p>
 <p> <code>ssconvert</code> accepts either file names or URIs as <i>infile</i> <i>outfile</i>. The special URIs <i>fd://0</i> and <i>fd://1</i> can be used for standard input and standard output respectively. </p>
 <h2>OPTIONS</h2>

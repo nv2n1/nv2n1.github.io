@@ -1,5 +1,4 @@
 ---
-
 title: "berkeley_db_svc(1)"
 name: "berkeley_db_svc"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-berkeley_db_svc/"
 description: "berkeley_db5.3_svc – Berkeley DB RPC server"
 ---
 
+<h2 class="name">NAME</h2>
+<p> berkeley_db5.3_svc &#8211; Berkeley DB RPC server </p>
+<h2>SYNOPSIS</h2>
 <p> <code>berkeley_db5.3_svc</code> [-Vv] [-h home] [-I seconds] [-L file] [-t seconds] [-T seconds]</p>
+<h2>DESCRIPTION</h2>
 <p> The berkeley_db5.3_svc utility is the Berkeley DB RPC server.</p>
 <h2>OPTIONS</h2>
 <dl>

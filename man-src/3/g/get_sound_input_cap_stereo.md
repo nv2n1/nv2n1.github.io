@@ -1,5 +1,4 @@
 ---
-
 title: "get_sound_input_cap_stereo(3)"
 name: "get_sound_input_cap_stereo"
 section: "3"
@@ -10,8 +9,10 @@ description: "get_sound_input_cap_stereo – Tells if the input driver is capabl
 
 <h2>NAME</h2>
 <p> get_sound_input_cap_stereo &#8211; Tells if the input driver is capable of stereo recording. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>int get_sound_input_cap_stereo();</code></p>
+<h2>DESCRIPTION</h2>
 <p> Checks whether the current audio input driver is capable of stereo recording.</p>
 <h2>RETURN VALUE</h2>
 <p> Returns non-zero if the driver is capable of stereo recording. </p>

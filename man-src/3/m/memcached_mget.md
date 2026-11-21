@@ -1,5 +1,4 @@
 ---
-
 title: "memcached_mget(3)"
 name: "memcached_mget"
 section: "3"
@@ -10,6 +9,7 @@ description: "memcached_mget – Retrieving data from the server"
 
 <h2>NAME</h2>
 <p> memcached_mget &#8211; Retrieving data from the server</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
 <dt><code>memcached_result_st * memcached_fetch_result(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, memcached_result_st<i>&nbsp;<wbr>*result</i>, memcached_return_t<i>&nbsp;<wbr>*error</i>)</dt>
@@ -31,6 +31,7 @@ description: "memcached_mget – Retrieving data from the server"
 </dd><dt><code>memcached_return_t (*memcached_execute_fn)(const memcached_st</code><i>&nbsp;<wbr>*ptr</i>, memcached_result_st<i>&nbsp;<wbr>*result</i>, void<i>&nbsp;<wbr>*context</i>)</dt>
 <dd>
 <p> Compile and link with -lmemcached</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <i>memcached_get()</i> is used to fetch an individual value from the server. You must pass in a key and its length to fetch the object. You must supply three pointer variables which will give you the state of the returned object. A <code>uint32_t</code> pointer to contain whatever flags you stored with the value, a <code>size_t</code> pointer which will be filled with size of of the object, and a <code>memcached_return_t</code> pointer to hold any error. The object will be returned upon success and NULL will be returned on failure. Any object returned by <i>memcached_get()</i> must be released by the caller application. </p>
 <p> <i>memcached_mget()</i> is used to select multiple keys at once. For multiple key operations it is always faster to use this function. This function always works asynchronously. </p>
 <p> To retrieve data after a successful execution of <i>memcached_mget()</i>, you will need to call <i>memcached_fetch_result()</i>. You should continue to call this function until it returns a NULL (i.e. no more values). If you need to quit in the middle of a <i>memcached_mget()</i> call, you can execute a <code>memcached_quit()</code>, those this is not required. </p>

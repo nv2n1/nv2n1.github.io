@@ -1,5 +1,4 @@
 ---
-
 title: "bson_iter_as_bool(3)"
 name: "bson_iter_as_bool"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_iter_as_bool() – Fetches the current field as if it were a 
 
 <h2>NAME</h2>
 <p> bson_iter_as_bool() &#8211; Fetches the current field as if it were a boolean.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 bool bson_iter_as_bool(const bson_iter_t *iter);
 </code></pre>
@@ -17,6 +17,7 @@ bool bson_iter_as_bool(const bson_iter_t *iter);
 <dl>
 <dt><code>iter</code></dt>
 <dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Fetches the current field as if it were a boolean. </p>
 <p> <code><a href="/docs/linux/man/3-bson_iter_as_bool/">bson_iter_as_bool</a>(3)</code> currently knows how to determine a boolean value from the following types: </p>
 <dl>

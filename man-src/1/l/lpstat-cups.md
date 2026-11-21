@@ -1,5 +1,4 @@
 ---
-
 title: "lpstat-cups(1)"
 name: "lpstat-cups"
 section: "1"
@@ -10,7 +9,9 @@ description: "lpstat – print cups status information"
 
 <h2>NAME</h2>
 <p> lpstat &#8211; print cups status information</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lpstat</code> [ -E ] [ -H ] [ -U <i>username</i> ] [ -h <i>hostname[:port]</i> ] [ -l ] [ -W <i>which-jobs</i> ] [ -a [ <i>destination(s)</i> ] ] [ -c [ <i>class(es)</i> ] ] [ -d ] [ -o [ <i>destination(s)</i> ] ] [ -p [ <i>printer(s)</i> ] ] [ -r ] [ -R ] [ -s ] [ -t ] [ -u [ <i>user(s)</i> ] ] [ -v [ <i>printer(s)</i> ] ]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>lpstat</i> displays status information about the current classes, jobs, and printers. When run with no arguments, <i>lpstat</i> will list jobs queued by the current user.</p>
 <h2>OPTIONS</h2>
 <p> The <i>lpstat</i> command supports the following options:</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "memset(3)"
 name: "memset"
 section: "3"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/3-memset/"
 description: "memset – fill memory with a constant byte"
 ---
 
+<h2 class="name">NAME</h2>
+<p> memset &#8211; fill memory with a constant byte </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;string.h&gt;
 void *memset(void *s, int c, size_t n);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>memset</code>() function fills the first <i>n</i> bytes of the memory area pointed to by <i>s</i> with the constant byte <i>c</i>.</p>
 <h2>RETURN VALUE</h2>
 <p> The <code>memset</code>() function returns a pointer to the memory area <i>s</i>.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "voikkospell(1)"
 name: "voikkospell"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-voikkospell/"
 description: "voikkospell – test program for Voikko spell checker"
 ---
 
+<h2 class="name">NAME</h2>
+<p> voikkospell &#8211; test program for Voikko spell checker </p>
+<h2>SYNOPSIS</h2>
 <p> <code>voikkospell</code> [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>voikkospell</code> is a test program for spell checking functionality in libvoikko, library of Finnish language tools. It reads words from stdin (one word on a line) and print them to stdout, adding &quot;C: &quot; in front of correct words and &quot;W: &quot; in front of incorrect words. </p>
 <p> Common options of different Voikko test programs are listed in COMMON OPTIONS.</p>
 <h2>OPTIONS</h2>

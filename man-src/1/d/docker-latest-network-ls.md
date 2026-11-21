@@ -1,5 +1,4 @@
 ---
-
 title: "docker-latest-network-ls(1)"
 name: "docker-latest-network-ls"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-latest-network-ls/"
 description: "docker-network-ls – list networks"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-network-ls &#8211; list networks </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker network ls</code> [<code>-f</code>|<code>&#8211;filter</code>[=<i>[]</i>]] [<code>&#8211;no-trunc</code>[=<i>true</i>|<i>false</i>]] [<code>-q</code>|<code>&#8211;quiet</code>[=<i>true</i>|<i>false</i>]] [<code>&#8211;help</code>] </p>
+<h2>DESCRIPTION</h2>
 <p> Lists all the networks the Engine daemon knows about. This includes the networks that span across multiple hosts in a cluster, for example: </p>
 <dl>
 <dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "lavtrans(1)"
 name: "lavtrans"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-lavtrans/"
 description: "lavtrans – Convert MJPEG videos to other MJPEG video formats"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lavtrans &#8211; Convert MJPEG videos to other MJPEG video formats</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lavtrans -o</code> <i>outputfile</i> <code>-f a</code>|<code>q</code>|<code>i</code>|<code>w</code> [<code>-i</code> <i>num</i>] <i>lavfile1 </i>[<i>lavfile2 </i>&#8230;<i> lavfileN</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>lavtrans</code> can be used to convert the recorded videos from one MJPEG &quot;container&quot; format to another one. It can also be used to split the streams, or do destructive edits. </p>
 <p> Like all the other <code><a href="/docs/linux/man/1-mjpegtools/">mjpegtools</a></code>(1) lavtrans also accept a edit list file in place of actual video files. This allows it to be used to construct a stand-alone copy of the editted video sequence described in the editlist. </p>
 <p> Note that lavtrans can only change the container type of MJPEG video, not the format. As such it is not possible to use it combine streams of different format. </p>

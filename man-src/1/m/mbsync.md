@@ -1,5 +1,4 @@
 ---
-
 title: "mbsync(1)"
 name: "mbsync"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mbsync/"
 description: "mbsync – synchronize IMAP4 and Maildir mailboxes"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mbsync &#8211; synchronize IMAP4 and Maildir mailboxes </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mbsync</code> [<i>options</i> &#8230;] &#123;&#123;<i>channel</i>[<code>:</code><i>box</i>[{<code>,</code>|<code>
 </code>}&#8230;]]|<i>group</i>} &#8230;|<code>-a</code>}</p>
+<h2>DESCRIPTION</h2>
 <p> <code>mbsync</code> is a command line application which synchronizes mailboxes; currently Maildir and IMAP4 mailboxes are supported. New messages, message deletions and flag changes can be propagated both ways; the operation set can be selected in a fine-grained manner.<br />
  Synchronization is based on unique message identifiers (UIDs), so no identification conflicts can occur (as opposed to some other mail synchronizers). OTOH, <code>mbsync</code> is susceptible to UID validity changes (that <i>should</i> never happen, but see &quot;Compatibility&quot; in the README). Synchronization state is kept in one local text file per mailbox pair; multiple replicas of a mailbox can be maintained.</p>
 <h2>OPTIONS</h2>

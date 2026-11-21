@@ -1,5 +1,4 @@
 ---
-
 title: "captoinfo(1)"
 name: "captoinfo"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-captoinfo/"
 description: "captoinfo – convert a termcap description into a terminfo description"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>captoinfo</code> &#8211; convert a <i>termcap</i> description into a <i>terminfo</i> description </p>
+<h2>SYNOPSIS</h2>
 <p> <code>captoinfo</code> [<code>-v</code><i>n</i> <i>width</i>] [<code>-V</code>] [<code>-1</code>] [<code>-w</code> <i>width</i>] <i>file</i> &#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>captoinfo</code> looks in each given text <i>file</i> for <code>termcap</code> descriptions. For each one found, an equivalent <code>terminfo</code> description is written to standard output. Termcap <code>tc</code> capabilities are translated directly to terminfo <code>use</code> capabilities. </p>
 <p> If no <i>file</i> is given, then the environment variable <code>TERMCAP</code> is used for the filename or entry. If <code>TERMCAP</code> is a full pathname to a file, only the terminal whose name is specified in the environment variable <code>TERM</code> is extracted from that file. If the environment variable <code>TERMCAP</code> is not set, then the file <code>/etc/terminfo</code> is read.</p>
 <dl>

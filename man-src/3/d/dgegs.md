@@ -1,5 +1,4 @@
 ---
-
 title: "dgegs(3)"
 name: "dgegs"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dgegs/"
 description: "dgegs.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dgegs.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgegs</code> (JOBVSL, JOBVSR, N, A, LDA, B, LDB, ALPHAR, ALPHAI, BETA, VSL, LDVSL, VSR, LDVSR, WORK, LWORK, INFO)<br />
  <i></i><code> DGEEVX computes the eigenvalues and, optionally, the left and/or right eigenvectors for GE matrices</code></p>

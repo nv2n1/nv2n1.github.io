@@ -1,5 +1,4 @@
 ---
-
 title: "fluid(1)"
 name: "fluid"
 section: "1"
@@ -11,9 +10,13 @@ url: "/docs/linux/man/1-fluid/"
 
  fluid - the fast light user-interface designer 
 
-fluid [ -c [ -o <i>code-filename</i> -h <i>header-filename</i> ] ] [ <i>filename.fl</i> ]
+<h2>SYNOPSIS</h2>
 
-<i>fluid</i> is an interactive GUI designer for FLTK. When run with no arguments or with a filename, <i>fluid</i> will display the GUI hierarchy and any windows defined in the file. Functions, classes, windows, and GUI components can be manipulated as needed. 
+ fluid [ -c [ -o <i>code-filename</i> -h <i>header-filename</i> ] ] [ <i>filename.fl</i> ]
+
+<h2>DESCRIPTION</h2>
+
+ <i>fluid</i> is an interactive GUI designer for FLTK. When run with no arguments or with a filename, <i>fluid</i> will display the GUI hierarchy and any windows defined in the file. Functions, classes, windows, and GUI components can be manipulated as needed. 
 
  When used with the <i>-c</i> option, <i>fluid</i> will create the necessary C++ header and code files in the current directory. You can override the default extensions, filenames, and directories using the <i>-o</i> and <i>-h</i> options.
 

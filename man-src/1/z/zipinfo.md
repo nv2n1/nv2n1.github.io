@@ -1,5 +1,4 @@
 ---
-
 title: "zipinfo(1)"
 name: "zipinfo"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-zipinfo/"
 description: "zipinfo – list detailed information about a ZIP archive"
 ---
 
+<h2 class="name">NAME</h2>
+<p> zipinfo &#8211; list detailed information about a ZIP archive </p>
+<h2>SYNOPSIS</h2>
 <p> <code>zipinfo</code> [<code>-12smlvhMtTz</code>] <i>file</i>[<i>.zip</i>] [<i>file(s)</i>&nbsp;&#8230;] [<code>-x</code>&nbsp;<i>xfile(s)</i>&nbsp;&#8230;] </p>
 <p> <code>unzip</code> <code>-Z</code> [<code>-12smlvhMtTz</code>] <i>file</i>[<i>.zip</i>] [<i>file(s)</i>&nbsp;&#8230;] [<code>-x</code>&nbsp;<i>xfile(s)</i>&nbsp;&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>zipinfo</i> lists technical information about files in a ZIP archive, most commonly found on MS-DOS systems. Such information includes file access permissions, encryption status, type of compression, version and operating system or file system of compressing program, and the like. The default behavior (with no options) is to list single-line entries for each file in the archive, with header and trailer lines providing summary information for the entire archive. The format is a cross between Unix &#8220;ls -l&#8221; and &#8220;unzip -v&#8221; output. See <code>DETAILED DESCRIPTION</code> below. Note that <i>zipinfo</i> is the same program as <i>unzip</i> (under Unix, a link to it); on some systems, however, <i>zipinfo</i> support may have been omitted when <i>unzip</i> was compiled.</p>
 <h2>ARGUMENTS</h2>
 <dl>

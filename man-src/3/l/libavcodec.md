@@ -1,5 +1,4 @@
 ---
-
 title: "libavcodec(3)"
 name: "libavcodec"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-libavcodec/"
 description: "libavcodec – media streams decoding and encoding library"
 ---
 
+<h2 class="name">NAME</h2>
+<p> libavcodec &#8211; media streams decoding and encoding library </p>
+<h2>DESCRIPTION</h2>
 <p> The libavcodec library provides a generic encoding/decoding framework and contains multiple decoders and encoders for audio, video and subtitle streams, and several bitstream filters. </p>
 <p> The shared architecture provides various services ranging from bit stream I/O to <font SIZE="-1">DSP</font> optimizations, and makes it suitable for implementing robust and fast codecs as well as for experimentation.</p>
 <h2>SEE ALSO</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "b2m(1)"
 name: "b2m"
 section: "1"
@@ -10,7 +9,9 @@ description: "b2m – convert old Emacs Rmail Babyl format to mbox format"
 
 <h2>NAME</h2>
 <p> b2m &#8211; convert old Emacs Rmail Babyl format to mbox format</p>
+<h2>SYNOPSIS</h2>
 <p> <code>b2m</code> &lt; <i>babyl-file</i> &gt; <i>mbox-file</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>b2m</code> accepts Babyl format mail (as used by older versions of <code>Rmail</code> in <code>GNU Emacs</code>) on standard input, and converts it to mbox format on standard output. Babyl was the storage format used by Rmail prior to Emacs 23.1. Since then, it uses standard mbox format. This program is distributed with <code>GNU Emacs</code>. </p>
 <h2>OPTIONS</h2>
 <p> The program accepts unambiguous abbreviations for long option names.</p>

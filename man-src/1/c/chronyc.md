@@ -1,5 +1,4 @@
 ---
-
 title: "chronyc(1)"
 name: "chronyc"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-chronyc/"
 description: "chronyc – command-line interface for chrony daemon"
 ---
 
+<h2 class="name">NAME</h2>
+<p> chronyc &#8211; command-line interface for chrony daemon </p>
+<h2>SYNOPSIS</h2>
 <p> <code>chronyc</code> [<i>OPTION</i>]&#8230; [<i>COMMAND</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>chronyc</code> is a command-line interface program which can be used to monitor <code>chronyd</code>&#8216;s performance and to change various operating parameters whilst it is running. </p>
 <p> If no commands are specified on the command line, <code>chronyc</code> will expect input from the user. The prompt <i>chronyc&gt;</i> will be displayed when it is being run from a terminal. If <code>chronyc</code>&#8216;s input or output are redirected from or to a file, the prompt is not shown. </p>
 <p> There are two ways <code>chronyc</code> can access <code>chronyd</code>. One is the Internet Protocol (IPv4 or IPv6) and the other is a Unix domain socket, which is accessible locally by the root or <i>chrony</i> user. By default, <code>chronyc</code> first tries to connect to the Unix domain socket. The compiled-in default path is <i>/var/run/chrony/chronyd.sock</i>. If that fails (e.g. because <code>chronyc</code> is running under a non-root user), it will try to connect to 127.0.0.1 and then ::1. </p>

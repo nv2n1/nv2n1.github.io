@@ -1,5 +1,4 @@
 ---
-
 title: "riparrange(1)"
 name: "riparrange"
 section: "1"
@@ -10,7 +9,9 @@ description: "riparrange – FLAC file organiser"
 
 <h2>NAME</h2>
 <p> riparrange &#8211; FLAC file organiser</p>
+<h2>SYNOPSIS</h2>
 <p> <code>riparrange [-m|-c|-h] [-f] [-v] [-w] [-o format] &lt;file.flac&gt;</code> </p>
+<h2>DESCRIPTION</h2>
 <p> RipArrange is a tool for automatically moving flac files to a directory structure based upon Vorbis Comment tags. A format string is used to define how the comment tags are mapped into a filename and path. </p>
 <p> The default operation is to just print what would be changed if the tool were to be ran with -m, -c or -h specified. </p>
 <h2>OPTIONS</h2>

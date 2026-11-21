@@ -1,5 +1,4 @@
 ---
-
 title: "connect(2)"
 name: "connect"
 section: "2"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/2-connect/"
 description: "connect – initiate a connection on a socket"
 ---
 
+<h2 class="name">NAME</h2>
+<p> connect &#8211; initiate a connection on a socket </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/socket.h&gt;
 #include &lt;sys/types.h&gt; /* See NOTES */
 int connect(int sockfd, const struct sockaddr *addr,
             socklen_t addrlen);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>connect</code>() system call connects the socket referred to by the file descriptor <i>sockfd</i> to the address specified by <i>addr</i>. The <i>addrlen</i> argument specifies the size of <i>addr</i>. The format of the address in <i>addr</i> is determined by the address space of the socket <i>sockfd</i>; see <code><a href="/docs/linux/man/2-socket/">socket</a></code>(2) for further details. </p>
 <p> If the socket <i>sockfd</i> is of type <code>SOCK_DGRAM</code>, then <i>addr</i> is the address to which datagrams are sent by default, and the only address from which datagrams are received. If the socket is of type <code>SOCK_STREAM</code> or <code>SOCK_SEQPACKET</code>, this call attempts to make a connection to the socket that is bound to the address specified by <i>addr</i>. </p>
 <p> Some protocol sockets (e.g., UNIX domain stream sockets) may successfully <code>connect</code>() only once. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "munilist(1)"
 name: "munilist"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-munilist/"
 description: "munilist – Making listing from CCD photomtetry files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> munilist &#8211; Making listing from CCD photomtetry files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>munilist -os </code><i>[options</i>] <i>var comp chk1 chk2 &#8230; source_file &#8230;</i><br />
  <code>munilist -of </code><i>[options</i>] <i>s1 s2 &#8230; source_file &#8230;</i><br />
  <code>munilist -oa </code><i>[options</i>] <i>source_file &#8230;</i><br />
  <code>munilist -ot </code><i>[options</i>] <i>source_file &#8230;</i> </p>
+<h2>DESCRIPTION</h2>
 <p> The Munilist program reads photometry files and creates the table of magnitudes of selected stars in the dependence on a time. The table is written to a output file in text format. The format of the table depends on given parameters and on the number of selected stars. The Munilist is usually the last step of reduction process. </p>
 <p> The list of stars is given on command line, the stars are identified by index number according to their order in the file (not by the indices in the first column in the photometry file!), first star in the file has index 1, empty lines are included. </p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "nl(1)"
 name: "nl"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-nl/"
 description: "nl – number lines of files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> nl &#8211; number lines of files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>nl</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Write each FILE to standard output, with line numbers added. </p>
 <p> With no FILE, or when FILE is -, read standard input. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>

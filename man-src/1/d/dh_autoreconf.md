@@ -1,5 +1,4 @@
 ---
-
 title: "dh_autoreconf(1)"
 name: "dh_autoreconf"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dh_autoreconf/"
 description: "dh_autoreconf – Call autoreconf -f -i and keep track of the changed files."
 ---
 
+<h2 class="name">NAME</h2>
+<p> dh_autoreconf &#8211; Call autoreconf -f -i and keep track of the changed files. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dh_autoreconf</code> [<i>debhelper options</i>] [<code>-X</code><i>item</i>] [<code>&#8211;mode=</code><i>mode</i>] [<i>program</i>&nbsp;<code>&#8212;</code>&nbsp;<i>params</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> dh_autoreconf is responsible for calling autoreconf and creating the files debian/autoreconf.before and debian/autoreconf.after which contain checksums of all files before/after the build. It is complemented by dh_autoreconf_clean which creates a list of all changed and added files and removes them. </p>
 <p> Please note that dh_autoreconf can only be run once. Thus, if you need to run multiple commands, use a script or similar. An example is given in <i><a href="/docs/linux/man/7-dh-autoreconf/">dh-autoreconf</a></i>(7).</p>
 <h2>FILES</h2>

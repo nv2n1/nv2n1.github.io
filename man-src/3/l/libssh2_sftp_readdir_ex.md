@@ -1,5 +1,4 @@
 ---
-
 title: "libssh2_sftp_readdir_ex(3)"
 name: "libssh2_sftp_readdir_ex"
 section: "3"
@@ -10,6 +9,7 @@ description: "libssh2_sftp_readdir_ex – read directory data from an SFTP handl
 
 <h2>NAME</h2>
 <p> libssh2_sftp_readdir_ex &#8211; read directory data from an SFTP handle</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;libssh2.h&gt;
 #include &lt;libssh2_sftp.h&gt;
@@ -18,6 +18,7 @@ int libssh2_sftp_readdir_ex(LIBSSH2_SFTP_HANDLE *handle,
                             char *longentry, size_t longentry_maxlen,
                             LIBSSH2_SFTP_ATTRIBUTES *attrs);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Reads a block of data from a LIBSSH2_SFTP_HANDLE and returns file entry information for the next entry, if any. </p>
 <p> <i>handle</i> &#8211; is the SFTP File Handle as returned by <code><a href="/docs/linux/man/3-libssh2_sftp_open_ex/">libssh2_sftp_open_ex</a>(3)</code> </p>
 <p> <i>buffer</i> &#8211; is a pointer to a pre-allocated buffer of at least <i>buffer_maxlen</i> bytes to read data into. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "fddividendamericanengine(3)"
 name: "fddividendamericanengine"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-fddividendamericanengine/"
 description: "ql/pricingengines/vanilla/fddividendamericanengine.hpp – american engine with discrete deterministic dividends"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/pricingengines/vanilla/fddividendamericanengine.hpp &#8211; american engine with discrete deterministic dividends </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/dividendvanillaoption.hpp&gt;<br />
  #include &lt;ql/pricingengines/vanilla/fddividendengine.hpp&gt;<br />
  #include &lt;ql/pricingengines/vanilla/fdconditions.hpp&gt; </p>

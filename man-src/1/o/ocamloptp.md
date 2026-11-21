@@ -1,5 +1,4 @@
 ---
-
 title: "ocamloptp(1)"
 name: "ocamloptp"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-ocamloptp/"
 description: "ocamlcp, ocamloptp – The OCaml profiling compilers"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ocamlcp, ocamloptp &#8211; The OCaml profiling compilers</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ocamlcp</code> [ <i>ocamlc options</i> ] [ <code>-P</code><i>&nbsp;<wbr>flags</i> ] <i>filename &#8230;</i> </p>
 <p> <code>ocamloptp</code> [ <i>ocamlopt options</i> ] [ <code>-P</code><i>&nbsp;<wbr>flags</i> ] <i>filename &#8230;</i> </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>ocamlcp</code> and <code>ocamloptp</code> commands are front-ends to <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1) and <code><a href="/docs/linux/man/1-ocamlopt/">ocamlopt</a></code>(1) that instrument the source code, adding code to record how many times functions are called, branches of conditionals are taken, etc. Execution of instrumented code produces an execution profile in the file ocamlprof.dump, which can be read using <code><a href="/docs/linux/man/1-ocamlprof/">ocamlprof</a></code>(1). </p>
 <p> <code>ocamlcp</code> accepts the same arguments and options as <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1) and <code>ocamloptp</code> accepts the same arguments and options as <code><a href="/docs/linux/man/1-ocamlopt/">ocamlopt</a></code>(1). There is only one exception: in both cases, the <code>-pp</code> option is not supported. If you need to preprocess your source files, you will have to do it separately before calling <code>ocamlcp</code> or <code>ocamloptp</code>. </p>
 <h2>OPTIONS</h2>

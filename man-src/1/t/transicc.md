@@ -1,5 +1,4 @@
 ---
-
 title: "transicc(1)"
 name: "transicc"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-transicc/"
 description: "transicc – little cms ColorSpace conversion calculator."
 ---
 
+<h2 class="name">NAME</h2>
+<p> transicc &#8211; little cms ColorSpace conversion calculator. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>transicc</code> [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> lcms is a standalone CMM engine, which deals with the color management. It implements a fast transformation between ICC profiles. <code>transicc </code> is lcms ColorSpace conversion calculator.</p>
 <h2>OPTIONS</h2>
 <dl>

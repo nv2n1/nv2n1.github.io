@@ -1,5 +1,4 @@
 ---
-
 title: "ssyswapr(3)"
 name: "ssyswapr"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-ssyswapr/"
 description: "ssyswapr.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ssyswapr.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssyswapr</code> (UPLO, N, A, LDA, I1, I2)<br />
  <i></i><code>SSYSWAPR</code> applies an elementary permutation on the rows and columns of a symmetric matrix.</p>

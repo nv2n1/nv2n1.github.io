@@ -1,5 +1,4 @@
 ---
-
 title: "s390_runtime_instr(2)"
 name: "s390_runtime_instr"
 section: "2"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/2-s390_runtime_instr/"
 description: "s390_runtime_instr – enable/disable s390 CPU run-time instrumentation"
 ---
 
+<h2 class="name">NAME</h2>
+<p> s390_runtime_instr &#8211; enable/disable s390 CPU run-time instrumentation </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;asm/runtime_instr.h&gt;
 int s390_runtime_instr(int command, int signum);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>s390_runtime_instr</code>() system call starts or stops CPU run-time instrumentation for the calling thread. </p>
 <p> The <i>command</i> argument controls whether run-time instrumentation is started (<code>S390_RUNTIME_INSTR_START</code>, 1) or stopped (<code>S390_RUNTIME_INSTR_STOP</code>, 2) for the calling thread. </p>
 <p> The <i>signum</i> argument specifies the number of a real-time signal. This argument was used to specify a signal number that should be delivered to the thread if the run-time instrumentation buffer was full or if the run-time-instrumentation-halted interrupt had occurred. This feature was never used, and in Linux 4.4 support for this feature was removed; thus, in current kernels, this argument is ignored.</p>

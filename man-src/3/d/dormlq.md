@@ -1,5 +1,4 @@
 ---
-
 title: "dormlq(3)"
 name: "dormlq"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dormlq/"
 description: "dormlq.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dormlq.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dormlq</code> (SIDE, TRANS, M, N, K, A, LDA, TAU, C, LDC, WORK, LWORK, INFO)<br />
  <i></i><code>DORMLQ</code></p>

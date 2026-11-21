@@ -1,5 +1,4 @@
 ---
-
 title: "x86_64-w64-mingw32-strip(1)"
 name: "x86_64-w64-mingw32-strip"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-x86_64-w64-mingw32-strip/"
 description: "strip – Discard symbols from object files."
 ---
 
+<h2 class="name">NAME</h2>
+<p> strip &#8211; Discard symbols from object files. </p>
+<h2>SYNOPSIS</h2>
 <p> strip [<code>-F</code> <i>bfdname</i> |<code>&#8211;target=</code><i>bfdname</i>]<br />
 [<code>-I</code>&nbsp;<wbr><i>bfdname</i>&nbsp;<wbr>|<code>&#8211;input-target=</code><i>bfdname</i>]<br />
 [<code>-O</code>&nbsp;<wbr><i>bfdname</i>&nbsp;<wbr>|<code>&#8211;output-target=</code><i>bfdname</i>]<br />
@@ -27,6 +29,7 @@ description: "strip – Discard symbols from object files."
 [<code>-v</code>&nbsp;<wbr>|<code>&#8211;verbose</code>]&nbsp;<wbr>[<code>-V</code>|<code>&#8211;version</code>]<br />
 [<code>&#8211;help</code>]&nbsp;<wbr>[<code>&#8211;info</code>]<br />
 <i>objfile</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <font SIZE="-1">GNU </font><code>strip</code> discards all symbols from object files <i>objfile</i>. The list of object files may include archives. At least one object file must be given. </p>
 <p> <code>strip</code> modifies the files named in its argument, rather than writing modified copies under different names.</p>
 <h2>OPTIONS</h2>

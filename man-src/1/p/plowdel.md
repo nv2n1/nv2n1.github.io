@@ -1,5 +1,4 @@
 ---
-
 title: "plowdel(1)"
 name: "plowdel"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-plowdel/"
 description: "plowdel – Delete files from file sharing websites links"
 ---
 
+<h2 class="name">NAME</h2>
+<p> plowdel &#8211; Delete files from file sharing websites links</p>
+<h2>SYNOPSIS</h2>
 <p> <code>plowdel</code> [<i>OPTIONS</i>]&#8230; [<i>MODULE_OPTIONS</i>]&#8230; <i>URL</i>&#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> <code>plowdel</code> is a command-line tool designed for deleting files on file-sharing websites. It acts like a web browser, retrieving pages and filling HTML forms. </p>
 <p> Currently supported hosting sites list is available in README file. </p>
 <p> Some sites may require authentication (login) for deleting files. See specific module options below. Login process may sometimes require captcha solving. </p>

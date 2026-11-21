@@ -1,5 +1,4 @@
 ---
-
 title: "img2mercgrd(1)"
 name: "img2mercgrd"
 section: "1"
@@ -10,7 +9,9 @@ description: "img2mercgrd – Extract region of img, preserving Mercator, save a
 
 <h2>NAME</h2>
 <p> img2mercgrd &#8211; Extract region of img, preserving Mercator, save as grd</p>
+<h2>SYNOPSIS</h2>
 <p> <code>img2mercgrd</code> <i>imgfile</i> <code>-G</code><i>grdfile</i> <code>-R</code><i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[<code>r</code>] <code>-T</code><i>type</i> [ <code>-C</code> ] [ <code>-D</code><i>minlat/maxlat</i> ] [ <code>-N</code><i>navg</i> ] [ <code>-S</code><i>scale</i> ] [ <code>-V</code> ] [ <code>-W</code><i>maxlon</i> ] [ <code>-m</code><i>minutes</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>img2mercgrd</code> reads an img format file and creates a grid file. The Spherical Mercator projection of the img file is preserved, so that the region <code>-R</code> set by the user is modified slightly; the modified region corresponds to the edges of pixels [or groups of <i>navg</i> pixels]. The grid file header is set so that the x and y axis lengths represent distance from the west and south edges of the image, measured in user default units, with <code>-Jm</code>1 and the adjusted <code>-R</code>. By setting the default <code>ELLIPSOID</code> = Sphere, the user can make overlays with the adjusted <code>-R</code> so that they match. See <code>EXAMPLES</code> below. The adjusted <code>-R</code> is also written in the grdheader remark, so it can be found later. The <code>-T</code><i>type</i> selects all data or only data at constrained pixels, and can be used to create a grid of 1s and 0s indicating constraint locations. The output grid file is pixel registered; it inherits this from the img file.</p>
 <dl>
 <dt><i>imgfile</i></dt>

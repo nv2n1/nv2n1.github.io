@@ -1,5 +1,4 @@
 ---
-
 title: "libssh2_sftp_fstat_ex(3)"
 name: "libssh2_sftp_fstat_ex"
 section: "3"
@@ -10,6 +9,7 @@ description: "libssh2_sftp_fstat_ex – get or set attributes on an SFTP file ha
 
 <h2>NAME</h2>
 <p> libssh2_sftp_fstat_ex &#8211; get or set attributes on an SFTP file handle</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;libssh2.h&gt;
 #include &lt;libssh2_sftp.h&gt;
@@ -20,6 +20,7 @@ int libssh2_sftp_fstat_ex(LIBSSH2_SFTP_HANDLE *handle,
 #define libssh2_sftp_fsetstat(handle, attrs) \
     libssh2_sftp_fstat_ex((handle), (attrs), 1)
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <i>handle</i> &#8211; SFTP File Handle as returned by <code><a href="/docs/linux/man/3-libssh2_sftp_open_ex/">libssh2_sftp_open_ex</a>(3)</code> </p>
 <p> <i>attrs</i> &#8211; Pointer to an LIBSSH2_SFTP_ATTRIBUTES structure to set file metadata from or into depending on the value of setstat. </p>
 <p> <i>setstat</i> &#8211; When non-zero, the file&#8217;s metadata will be updated with the data found in attrs according to the values of attrs-&gt;flags and other relevant member attributes. </p>

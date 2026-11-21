@@ -1,5 +1,4 @@
 ---
-
 title: "docker-latest-inspect(1)"
 name: "docker-latest-inspect"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-latest-inspect/"
 description: "docker-inspect – Return low-level information on a container or image"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-inspect &#8211; Return low-level information on a container or image </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker inspect</code> [<code>&#8211;help</code>] [<code>-f</code>|<code>&#8211;format</code>[=<i>FORMAT</i>]] [<code>-s</code>|<code>&#8211;size</code>] [<code>&#8211;type</code>=<i>container</i>|<i>image</i>] CONTAINER|IMAGE [CONTAINER|IMAGE&#8230;] </p>
+<h2>DESCRIPTION</h2>
 <p> This displays all the information available in Docker for a given container or image. By default, this will render all results in a JSON array. If the container and image have the same name, this will return container JSON for unspecified type. If a format is specified, the given template will be executed for each result. </p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;help</code><br />

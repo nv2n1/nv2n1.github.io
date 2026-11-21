@@ -1,5 +1,4 @@
 ---
-
 title: "nasl(1)"
 name: "nasl"
 section: "1"
@@ -10,7 +9,9 @@ description: "nasl – Nessus Attack Scripting Language"
 
 <h2>NAME</h2>
 <p> nasl &#8211; Nessus Attack Scripting Language</p>
+<h2>SYNOPSIS</h2>
 <p> <code>nasl</code> <i>&lt;[-vh] [-T tracefile] [-s] [-t target] [-sX] &gt; files&#8230;</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>nasl</code> executes a set of NASL scripts against a given target host. It can also be used to determine if a NASL script has any syntax errors by running it in parse (<code>-p</code>) or lint (<code>-L</code>) mode. </p>
 <h2>OPTIONS</h2>
 <dl>

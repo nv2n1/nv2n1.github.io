@@ -1,5 +1,4 @@
 ---
-
 title: "zmq_proxy_steerable(3)"
 name: "zmq_proxy_steerable"
 section: "3"
@@ -7,9 +6,10 @@ letter: "z"
 url: "/docs/linux/man/3-zmq_proxy_steerable/"
 description: "zmq_proxy_steerable – built-in 0MQ proxy with control flow"
 ---
-
 <p>zmq_proxy_steerable &#8211; built-in 0MQ proxy with control flow </p>
+<h2>SYNOPSIS</h2>
 <p> <code>int zmq_proxy_steerable (const void </code><i>*frontend</i><code>, const void </code><i>*backend</i><code>, const void </code><i>*capture</i><code>, const void </code><i>*control</i><code>);</code>  </p>
+<h2>DESCRIPTION</h2>
 <p>The <i>zmq_proxy_steerable()</i> function starts the built-in 0MQ proxy in the current application thread, as <i>zmq_proxy()</i> do. Please, refer to this function for the general description and usage. We describe here only the additional control flow provided by the socket passed as the fourth argument &quot;control&quot;. </p>
 <p>If the control socket is not NULL, the proxy supports control flow. If <i>PAUSE</i> is received on this socket, the proxy suspends its activities. If <i>RESUME</i> is received, it goes on. If <i>TERMINATE</i> is received, it terminates smoothly. At start, the proxy runs normally as if zmq_proxy was used. </p>
 <p>If the control socket is NULL, the function behave exactly as if zmq_proxy had been called. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ideviceinfo(1)"
 name: "ideviceinfo"
 section: "1"
@@ -10,7 +9,9 @@ description: "ideviceinfo – Show information about the first connected device.
 
 <h2>NAME</h2>
 <p> ideviceinfo &#8211; Show information about the first connected device.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ideviceinfo</code> [OPTIONS] </p>
+<h2>DESCRIPTION</h2>
 <p> Show information about the first connected device. </p>
 <h2>OPTIONS</h2>
 <dl>

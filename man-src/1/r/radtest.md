@@ -1,5 +1,4 @@
 ---
-
 title: "radtest(1)"
 name: "radtest"
 section: "1"
@@ -10,7 +9,9 @@ description: "radtest – send packets to a RADIUS server, show reply"
 
 <h2>NAME</h2>
 <p> radtest &#8211; send packets to a RADIUS server, show reply</p>
+<h2>SYNOPSIS</h2>
 <p> <code>radtest</code> [<code>-d</code> <i>raddb_directory</i>] [<code>-P</code> <i>tcp/udp</i>] [<code>-t</code> <i>pap/chap/mschap/eap-md5</i>] [<code>-x</code> <i>]</i> [<code>-4</code> <i>]</i> [<code>-6</code> <i>]</i> <i>user password radius-server nas-port-number secret</i> [<code>ppphint</code>] [<code>nasname</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>radtest</code> is a frontend to <code><a href="/docs/linux/man/1-radclient/">radclient</a></code>(1). It generates a list of attribute/value pairs based on the command line arguments, and feeds these into <code>radclient</code>. It&#8217;s a fast and convenient way to test a radius server. </p>
 <h2>OPTIONS</h2>
 <dl>

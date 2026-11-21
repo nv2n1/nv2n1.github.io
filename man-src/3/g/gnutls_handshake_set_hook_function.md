@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_handshake_set_hook_function(3)"
 name: "gnutls_handshake_set_hook_function"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_handshake_set_hook_function – API function"
 
 <h2>NAME</h2>
 <p> gnutls_handshake_set_hook_function &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_handshake_set_hook_function(gnutls_session_t </code><i>session</i><code>, unsigned int </code><i>htype</i><code>, int </code><i>post</i><code>, gnutls_handshake_hook_func </code><i>func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,6 +22,7 @@ description: "gnutls_handshake_set_hook_function – API function"
 <dd> <code>GNUTLS_HOOK_</code>* depending on when the hook function should be called</dd>
 <dt>gnutls_handshake_hook_func func</dt>
 <dd> is the function to be called</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will set a callback to be called after or before the specified handshake message has been received or generated. This is a generalization of <code>gnutls_handshake_set_post_client_hello_function()</code>. </p>
 <p> To call the hook function prior to the message being sent/generated use <code>GNUTLS_HOOK_PRE</code> as <i>post</i> parameter, <code>GNUTLS_HOOK_POST</code> to call after, and <code>GNUTLS_HOOK_BOTH</code> for both cases. </p>
 <p> This callback must return 0 on success or a gnutls error code to terminate the handshake. </p>

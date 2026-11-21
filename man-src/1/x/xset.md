@@ -1,5 +1,4 @@
 ---
-
 title: "xset(1)"
 name: "xset"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-xset/"
 description: "xset – user preference utility for X"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xset &#8211; user preference utility for X </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xset</code> [-display <i>display</i>]<br />
  [-b] [b {on|off}] [b [<i>volume</i> [<i>pitch</i> [<i>duration</i>]]]]<br />
  [-bc] [bc]<br />
@@ -25,6 +27,7 @@ description: "xset – user preference utility for X"
  [s [<i>length</i> [<i>period</i>]]] [s {blank|noblank}] [s {expose|noexpose}] [s {on|off}] [s default] [s activate] [s reset]<br />
  [q]<br />
  [-version]</p>
+<h2>DESCRIPTION</h2>
 <p> This program is used to set various user preference options of the display.</p>
 <h2>OPTIONS</h2>
 <dl>

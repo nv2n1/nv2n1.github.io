@@ -1,5 +1,4 @@
 ---
-
 title: "dcmdrle(1)"
 name: "dcmdrle"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-dcmdrle/"
 description: "dcmdrle – Decode RLE-compressed DICOM file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dcmdrle &#8211; Decode RLE-compressed DICOM file </p>
+<h2>SYNOPSIS</h2>
 <pre>
 dcmdrle [options] dcmfile-in dcmfile-out
 </pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>dcmdrle</code> utility reads a RLE-compressed DICOM image (<i>dcmfile-in</i>), decompresses the image data (i.e. conversion to a native DICOM transfer syntax) and writes the converted image to an output file (<i>dcmfile-out</i>).</p>
 <h2>PARAMETERS</h2>
 <pre>

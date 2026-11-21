@@ -1,5 +1,4 @@
 ---
-
 title: "dgesv(3)"
 name: "dgesv"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dgesv/"
 description: "dgesv.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dgesv.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgesv</code> (N, NRHS, A, LDA, IPIV, B, LDB, INFO)<br />
  <i></i><code> DGESV computes the solution to system of linear equations A * X = B for GE matrices</code></p>

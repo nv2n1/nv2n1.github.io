@@ -1,5 +1,4 @@
 ---
-
 title: "malloc_hook(3)"
 name: "malloc_hook"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-malloc_hook/"
 description: "__malloc_hook, __malloc_initialize_hook, __memalign_hook, __free_hook, __realloc_hook, __after_morecore_hook – malloc debugging variables"
 ---
 
+<h2 class="name">NAME</h2>
+<p> __malloc_hook, __malloc_initialize_hook, __memalign_hook, __free_hook, __realloc_hook, __after_morecore_hook &#8211; malloc debugging variables </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;malloc.h&gt;
 void *(*__malloc_hook)(size_t size, const void *caller);
@@ -18,6 +20,7 @@ void (*__free_hook)(void *ptr, const void *caller);
 void (*__malloc_initialize_hook)(void);
 void (*__after_morecore_hook)(void);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The GNU C library lets you modify the behavior of <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3), <code><a href="/docs/linux/man/3-realloc/">realloc</a></code>(3), and <code><a href="/docs/linux/man/3-free/">free</a></code>(3) by specifying appropriate hook functions. You can use these hooks to help you debug programs that use dynamic memory allocation, for example. </p>
 <p> The variable <code>__malloc_initialize_hook</code> points at a function that is called once when the malloc implementation is initialized. This is a weak variable, so it can be overridden in the application with a definition like the following: </p>
 <p> void (*__malloc_initialize_hook)(void) = my_init_hook; </p>

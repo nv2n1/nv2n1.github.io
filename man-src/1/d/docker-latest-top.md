@@ -1,5 +1,4 @@
 ---
-
 title: "docker-latest-top(1)"
 name: "docker-latest-top"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-latest-top/"
 description: "docker-top – Display the running processes of a container"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-top &#8211; Display the running processes of a container </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker top</code> [<code>&#8211;help</code>] CONTAINER [ps OPTIONS] </p>
+<h2>DESCRIPTION</h2>
 <p> Display the running process of the container. ps-OPTION can be any of the options you would pass to a Linux ps command. </p>
 <p> All displayed information is from host&#8217;s point of view. </p>
 <h2>OPTIONS</h2>

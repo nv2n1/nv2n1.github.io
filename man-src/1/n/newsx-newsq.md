@@ -1,5 +1,4 @@
 ---
-
 title: "newsx-newsq(1)"
 name: "newsx-newsq"
 section: "1"
@@ -10,7 +9,9 @@ description: "newsq – list news server outgoing queue"
 
 <h2>NAME</h2>
 <p> newsq &#8211; list news server outgoing queue </p>
+<h2>SYNOPSIS</h2>
 <p> <code>newsq</code> [ <i>options</i> ] [ <i>hostname&#8230;</i> ] </p>
+<h2>DESCRIPTION</h2>
 <p> Unless options dictate otherwise, <code>newsq</code> lists the current outgoing queue for the specified hosts. If no name is given, the queues of all external news hosts are shown. </p>
 <h2>OPTIONS</h2>
 <dl>

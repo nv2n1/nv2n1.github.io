@@ -1,5 +1,4 @@
 ---
-
 title: "shtool-slo(1)"
 name: "shtool-slo"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-shtool-slo/"
 description: "shtool slo – GNU shtool separate linker options by library class"
 ---
 
+<h2 class="name">NAME</h2>
+<p> shtool slo &#8211; GNU shtool separate linker options by library class </p>
+<h2>SYNOPSIS</h2>
 <p> <code>shtool slo</code> [<code>-p</code>|<code>&#8211;prefix</code> <i>str</i>] &#8212; <code>-L</code><i>dir</i> <code>-l</code><i>lib</i> [<code>-L</code><i>dir</i> <code>-l</code><i>lib</i> &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> This command separates the linker options &#8220;<code>-L</code>&#8221; and &#8220;<code>-l</code>&#8221; by library class. It&#8217;s argument line can actually be an arbitrary command line where those options are contained. <code>slo</code> parses these two options only and ignores the remaining contents. The result is a trivial shell script on <tt>&quot;stdout&quot;</tt> which defines six variables containing the &#8220;<code>-L</code>&#8221; and &#8220;<code>-l</code>&#8221; options sorted by class: </p>
 <p> &#8220;<tt>&quot;SLO_DIRS_OBJ&quot;</tt>&#8221; and &#8220;<tt>&quot;SLO_LIBS_OBJ&quot;</tt>&#8221; contains the &#8220;<code>-L</code>&#8221; and &#8220;<code>-l</code>&#8221; options of static libraries, &#8220;<tt>&quot;SLO_DIRS_PIC&quot;</tt>&#8221; and &#8220;<tt>&quot;SLO_LIBS_PIC&quot;</tt>&#8221; contains the &#8220;<code>-L</code>&#8221; and &#8220;<code>-l</code>&#8221; options of static libraries containing <font SIZE="-1">PIC </font>(&#8220;Position Independent Code&#8221;) and &#8220;<tt>&quot;SLO_DIRS_DSO&quot;</tt>&#8221; and &#8220;<tt>&quot;SLO_LIBS_DSO&quot;</tt>&#8221; contains the &#8220;<code>-L</code>&#8221; and &#8220;<code>-l</code>&#8221; options of shared libraries. The <code>-p</code> option can be used to change the default variable prefix from &quot;<tt>&quot;SLO_&quot;</tt>&quot; to <i>str</i>. </p>
 <p> The intent of this separation is to provide a way between static and shared libraries which is important if one wants to link custom DSOs against libraries, because not all platforms all one to link these DSOs against shared libraries. So one first has to separate out the shared libraries and link the <font SIZE="-1">DSO</font> only against the static libraries. One can use this command also to just sort the options.</p>

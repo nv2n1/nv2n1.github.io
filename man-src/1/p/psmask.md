@@ -1,5 +1,4 @@
 ---
-
 title: "psmask(1)"
 name: "psmask"
 section: "1"
@@ -10,9 +9,11 @@ description: "psmask – Use data tables to clip or mask map areas with no cover
 
 <h2>NAME</h2>
 <p> psmask &#8211; Use data tables to clip or mask map areas with no coverage</p>
+<h2>SYNOPSIS</h2>
 <p> <code>psmask</code> [ <i>table</i> ] <i>increment</i> <i>parameters</i> <i>region</i> [ [<code>p</code>|<code>s</code>]<i>parameters</i> ] [ <i>dumpfile</i> ] [ [<code>l</code>|<code>r</code>] ] [ <i>fill</i> ] [ <code>z</code>|<code>Z</code><i>parameters</i> ] [ ] [ [<code>+</code>|<code>&#8211;</code>]<i>nodegrid</i> ] [ ] [ ] [ ] [ <i>cut</i> ] [ <i>search_radius</i>[<i>unit</i>] ] [ ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ [<i>level</i>] ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-c</code><i>copies</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-r</code> ] [ <code>-t</code><i>&lt;transp&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>psmask</code> <code>-C</code> [ <code>-K</code> ] [ <code>-O</code> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>psmask</code> reads a (<i>x</i>,<i>y</i>,<i>z</i>) file [or standard input] and uses this information to find out which grid cells are reliable. Only grid cells which have one or more data points are considered reliable. As an option, you may specify a radius of influence. Then, all grid cells that are within <i>radius</i> of a data point are considered reliable. Furthermore, an option is provided to reverse the sense of the test. Having found the reliable/not reliable points, <code>psmask</code> will either paint tiles to mask these nodes (with the <code>-T</code> switch), or use contouring to create polygons that will clip out regions of no interest. When clipping is initiated, it will stay in effect until turned off by a second call to <code>psmask</code> using the <code>-C</code> option.</p>
 <h2>REQUIRED</h2>
 <dl>

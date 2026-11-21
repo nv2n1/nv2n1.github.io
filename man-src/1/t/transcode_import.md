@@ -1,5 +1,4 @@
 ---
-
 title: "transcode_import(1)"
 name: "transcode_import"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-transcode_import/"
 description: "transcode_import – transcode import modules collection"
 ---
 
+<h2 class="name">NAME</h2>
+<p> transcode_import &#8211; transcode import modules collection </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>transcode</code> -x&nbsp;<wbr><i>name</i>&nbsp;<wbr>[&nbsp;<wbr><i>,name</i>&nbsp;<wbr>] [<i>other options</i>]</dt></dl>
 <h2>COPYRIGHT</h2>

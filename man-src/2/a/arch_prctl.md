@@ -1,5 +1,4 @@
 ---
-
 title: "arch_prctl(2)"
 name: "arch_prctl"
 section: "2"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/2-arch_prctl/"
 description: "arch_prctl – set architecture-specific thread state"
 ---
 
+<h2 class="name">NAME</h2>
+<p> arch_prctl &#8211; set architecture-specific thread state </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;asm/prctl.h&gt;
 #include &lt;sys/prctl.h&gt;
 int arch_prctl(int code, unsigned long addr);
 int arch_prctl(int code, unsigned long *addr);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>arch_prctl</code>() sets architecture-specific process or thread state. <i>code</i> selects a subfunction and passes argument <i>addr</i> to it; <i>addr</i> is interpreted as either an <i>unsigned long</i> for the &quot;set&quot; operations, or as an <i>unsigned long&nbsp;*</i>, for the &quot;get&quot; operations. </p>
 <p> Subfunctions for both x86 and x86-64 are:</p>
 <dl>

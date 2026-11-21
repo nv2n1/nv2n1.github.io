@@ -1,5 +1,4 @@
 ---
-
 title: "getdirentries(3)"
 name: "getdirentries"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-getdirentries/"
 description: "getdirentries – get directory entries in a filesystem-independent format"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getdirentries &#8211; get directory entries in a filesystem-independent format </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;dirent.h&gt;</code> </p>
 <p> <code>ssize_t getdirentries(int </code><i>fd</i><code>, char *</code><i>buf</i><code>, size_t </code><i>nbytes</i> <code>, off_t *</code><i>basep</i><code>);</code> </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
@@ -16,6 +18,7 @@ description: "getdirentries – get directory entries in a filesystem-independen
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</p>
+<h2>DESCRIPTION</h2>
 <p> Read directory entries from the directory specified by <i>fd</i> into <i>buf</i>. At most <i>nbytes</i> are read. Reading starts at offset <i>*basep</i>, and <i>*basep</i> is updated with the new position after reading.</p>
 <h2>RETURN VALUE</h2>
 <p> <code>getdirentries</code>() returns the number of bytes read or zero when at the end of the directory. If an error occurs, -1 is returned, and <i>errno</i> is set appropriately.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "slaqsp(3)"
 name: "slaqsp"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-slaqsp/"
 description: "slaqsp.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> slaqsp.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slaqsp</code> (UPLO, N, AP, S, SCOND, AMAX, EQUED)<br />
  <i></i><code>SLAQSP</code> scales a symmetric/Hermitian matrix in packed storage, using scaling factors computed by sppequ.</p>

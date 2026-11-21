@@ -1,5 +1,4 @@
 ---
-
 title: "gendarme(1)"
 name: "gendarme"
 section: "1"
@@ -10,7 +9,9 @@ description: "Gendarme – Rule-based code analysis for Mono::"
 
 <h2>NAME</h2>
 <p> Gendarme &#8211; Rule-based code analysis for Mono::</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gendarme [&#8211;config configfile] [&#8211;set ruleset] [&#8211;log file | &#8211;xml file | &#8211;html file] [options] assemblies &#8230;</code></p>
+<h2>DESCRIPTION</h2>
 <p> <i>Gendarme</i> is a extensible rule-based tool to find problems in .NET applications and libraries. Gendarme inspects programs and libraries that contain code in ECMA CIL format (Mono and .NET) and looks for common problems with the code, problems that compiler do not typically check or have not historically checked.</p>
 <h2>OPTIONS</h2>
 <dl>

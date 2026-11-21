@@ -1,5 +1,4 @@
 ---
-
 title: "plink(1)"
 name: "plink"
 section: "1"
@@ -10,12 +9,14 @@ description: "plink – PuTTY link, command line network connection tool"
 
 <h2>NAME</h2>
 <p> <code>plink</code> &#8211; PuTTY link, command line network connection tool</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 plink &amp;nbsp;
 [options] &amp; nbsp;
 [user @] host &amp;nbsp;
 [command]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>plink</code> is a network connection tool supporting several protocols.</p>
 <h2>OPTIONS</h2>
 <p> The command-line options supported by <code>plink</code> are:</p>

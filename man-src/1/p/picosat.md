@@ -1,5 +1,4 @@
 ---
-
 title: "picosat(1)"
 name: "picosat"
 section: "1"
@@ -10,7 +9,9 @@ description: "picosat – Satisfiability (SAT) solver with proof and core suppor
 
 <h2>NAME</h2>
 <p> picosat &#8211; Satisfiability (SAT) solver with proof and core support</p>
+<h2>SYNOPSIS</h2>
 <p> <code>picosat</code> [<i>OPTION</i>]&#8230; [<i>FILE</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> PicoSAT is a satisfiability (SAT) solver for boolean variables in boolean expressions. A SAT solver can determine if it is possible to find assignments to boolean variables that would make a given set of expressions true. If it&#8217;s satisfiable, it can also show a set of assignments that make the expression true. Many problems can be broken down into a large SAT problem (perhaps with thousands of variables), so SAT solvers have a variety of uses. </p>
 <p> The <code>picosat</code> binary is built with options that provide for the greatest speed. A second binary, <code>picosat.trace</code>, is built with proof and core capabilities, which incur some overhead. </p>
 <h2>OPTIONS</h2>

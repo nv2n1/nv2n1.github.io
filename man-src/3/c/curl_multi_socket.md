@@ -1,5 +1,4 @@
 ---
-
 title: "curl_multi_socket(3)"
 name: "curl_multi_socket"
 section: "3"
@@ -10,6 +9,7 @@ description: "curl_multi_socket – reads/writes available data"
 
 <h2>NAME</h2>
 <p> curl_multi_socket &#8211; reads/writes available data</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;curl/curl.h&gt;
 CURLMcode curl_multi_socket(CURLM *multi_handle, curl_socket_t sockfd,
@@ -17,6 +17,7 @@ CURLMcode curl_multi_socket(CURLM *multi_handle, curl_socket_t sockfd,
 CURLMcode curl_multi_socket_all(CURLM *multi_handle,
                                 int *running_handles);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> These functions are deprecated. Do not use! See <i><a href="/docs/linux/man/3-curl_multi_socket_action/">curl_multi_socket_action</a>(3)</i> instead! </p>
 <p> At return, the integer <code>running_handles</code> points to will contain the number of still running easy handles within the multi handle. When this number reaches zero, all transfers are complete/done. Note that when you call <i><a href="/docs/linux/man/3-curl_multi_socket_action/">curl_multi_socket_action</a>(3)</i> on a specific socket and the counter decreases by one, it DOES NOT necessarily mean that this exact socket/transfer is the one that completed. Use <i><a href="/docs/linux/man/3-curl_multi_info_read/">curl_multi_info_read</a>(3)</i> to figure out which easy handle that completed. </p>
 <p> The <code><a href="/docs/linux/man/3-curl_multi_socket_action/">curl_multi_socket_action</a>(3)</code> functions inform the application about updates in the socket (file descriptor) status by doing none, one, or multiple calls to the socket callback function set with the CURLMOPT_SOCKETFUNCTION option to <i><a href="/docs/linux/man/3-curl_multi_setopt/">curl_multi_setopt</a>(3)</i>. They update the status with changes since the previous time the callback was called. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "dbus-launch(1)"
 name: "dbus-launch"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-dbus-launch/"
 description: "dbus-launch – Utility to start a message bus from a shell script"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dbus-launch &#8211; Utility to start a message bus from a shell script </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>dbus-launch</code> [&#8211;version] [&#8211;help] [&#8211;sh-syntax] [&#8211;csh-syntax] [&#8211;auto-syntax] [&#8211;binary-syntax] [&#8211;close-stderr] [&#8211;exit-with-session] [&#8211;exit-with-x11] [&#8211;autolaunch=<i>MACHINEID</i>] [&#8211;config-file=<i>FILENAME</i>] [<i>PROGRAM</i>] [<i>ARGS</i>&#8230;]</dt>
 <dd>
 </dd></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>dbus-launch</code> command is used to start a session bus instance of <i>dbus-daemon</i> from a shell script. It would normally be called from a user&#8217;s login scripts. Unlike the daemon itself, <code>dbus-launch</code> exits, so backticks or the $() construct can be used to read information from <code>dbus-launch</code>. </dd>
 <p> With no arguments, <code>dbus-launch</code> will launch a session bus instance and print the address and PID of that instance to standard output. </p>
 <p> You may specify a program to be run; in this case, <code>dbus-launch</code> will launch a session bus instance, set the appropriate environment variables so the specified program can find the bus, and then execute the specified program, with the specified arguments. See below for examples. </p>

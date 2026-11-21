@@ -1,5 +1,4 @@
 ---
-
 title: "umask(2)"
 name: "umask"
 section: "2"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/2-umask/"
 description: "umask – set file mode creation mask"
 ---
 
+<h2 class="name">NAME</h2>
+<p> umask &#8211; set file mode creation mask </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code><br />
  <code>#include &lt;sys/stat.h&gt;</code> </p>
 <p> <code>mode_t umask(mode_t </code><i>mask</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>umask</code>() sets the calling process&#8217;s file mode creation mask (umask) to <i>mask</i> &amp; 0777 (i.e., only the file permission bits of <i>mask</i> are used), and returns the previous value of the mask. </p>
 <p> The umask is used by <code><a href="/docs/linux/man/2-open/">open</a></code>(2), <code><a href="/docs/linux/man/2-mkdir/">mkdir</a></code>(2), and other system calls that create files to modify the permissions placed on newly created files or directories. Specifically, permissions in the umask are turned off from the <i>mode</i> argument to <code><a href="/docs/linux/man/2-open/">open</a></code>(2) and <code><a href="/docs/linux/man/2-mkdir/">mkdir</a></code>(2). </p>
 <p> Alternatively, if the parent directory has a default ACL (see <code><a href="/docs/linux/man/5-acl/">acl</a></code>(5)), the umask is ignored, the default ACL is inherited, the permission bits are set based on the inherited ACL, and permission bits absent in the <i>mode</i> argument are turned off. For example, the following default ACL is equivalent to a umask of 022: </p>

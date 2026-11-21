@@ -1,5 +1,4 @@
 ---
-
 title: "orbd-java-1(1)"
 name: "orbd-java-1"
 section: "1"
@@ -10,12 +9,14 @@ description: "orbd – Enables clients to locate and call persistent objects on 
 
 <h2>NAME</h2>
 <p> orbd &#8211; Enables clients to locate and call persistent objects on servers in the CORBA environment.</p>
+<h2>SYNOPSIS</h2>
 <pre>
 <code>orbd</code> [ <i>options</i> ]
 </pre>
 <dl>
 <dt><i>options</i></dt>
 <dd> Command-line options. See Options.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code>orbd</code> command enables clients to transparently locate and call persistent objects on servers in the CORBA environment. The Server Manager included with the orbd tool is used to enable clients to transparently locate and call persistent objects on servers in the CORBA environment. The persistent servers, while publishing the persistent object references in the naming service, include the port number of the ORBD in the object reference instead of the port number of the server. The inclusion of an ORBD port number in the object reference for persistent object references has the following advantages:</p>
 <dl>
 <dt>&bull;</dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "ods-hsmutil(1)"
 name: "ods-hsmutil"
 section: "1"
@@ -10,7 +9,9 @@ description: "ods-hsmutil – OpenDNSSEC HSM utility"
 
 <h2>NAME</h2>
 <p> <code>ods-hsmutil</code> &#8211; OpenDNSSEC HSM utility</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ods-hsmutil</code> [<code>-c</code> <i>config</i>] [<code>-v</code>] <code>command </code> [<code>options</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> The ods-hsmutil utility is mainly used for debugging or testing. It is designed to interact directly with your HSM and can be used to manually list, create or delete keys. It can also be used to perform a set of basics HSM tests. Be careful before creating or deleting keys using ods-hsmutil, as the changes are not synchronized with the KASP Enforcer. </p>
 <p> The repositories are configured by the user in the OpenDNSSEC configuration file. The configuration contains the name of the repository, the token label, the user PIN, and the path to its shared library.</p>
 <h2>COMMANDS</h2>

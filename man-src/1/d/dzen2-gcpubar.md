@@ -1,5 +1,4 @@
 ---
-
 title: "dzen2-gcpubar(1)"
 name: "dzen2-gcpubar"
 section: "1"
@@ -10,8 +9,10 @@ description: "dzen2-gcpubar – graphical CPU usage meter"
 
 <h2>NAME</h2>
 <p> dzen2-gcpubar &#8211; graphical CPU usage meter</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>dzen2-gcpubar</code> [-i <i>interval</i>] [-c <i>count</i>] [-fg <i>color</i>] [-bg <i>color</i>] [-w <i>pixel</i>] [-h&nbsp;<wbr><i>pixel</i>] [-nonl]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>gcpubar</code></p>
 <dd>is a CPU utilization meter for Linux. It relies on the existence of the /proc/stat file and generates fully graphical meters viewable with dzen.</dd>
 <h2>OPTIONS</h2>

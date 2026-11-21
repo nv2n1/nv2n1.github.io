@@ -1,5 +1,4 @@
 ---
-
 title: "freelocale(3)"
 name: "freelocale"
 section: "3"
@@ -7,9 +6,14 @@ letter: "f"
 url: "/docs/linux/man/3-freelocale/"
 ---
 
-newlocale, freelocale - create, modify, and free a locale object 
+<h2 class="name">NAME</h2>
+ 
 
-<pre><code>
+ newlocale, freelocale - create, modify, and free a locale object 
+
+<h2>SYNOPSIS</h2>
+
+ <pre><code>
 #include &lt;locale.h&gt;
 locale_t newlocale(int category_mask, const char *locale,
                    locale_t base);
@@ -27,7 +31,9 @@ void freelocale(locale_t locobj);
 </dt><dd> _GNU_SOURCE</dd></dl>
 </dl>
 
-The <b>newlocale</b>() function creates a new locale object, or modifies an existing object, returning a reference to the new or modified object as the function result. Whether the call creates a new object or modifies an existing object is determined by the value of <i>base</i>:
+<h2>DESCRIPTION</h2>
+
+ The <b>newlocale</b>() function creates a new locale object, or modifies an existing object, returning a reference to the new or modified object as the function result. Whether the call creates a new object or modifies an existing object is determined by the value of <i>base</i>:
 <dl>
 <dt>*
 </dt><dd> If <i>base</i> is <i>(locale_t)&nbsp;0</i>, a new object is created.

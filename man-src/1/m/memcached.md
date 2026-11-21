@@ -1,5 +1,4 @@
 ---
-
 title: "memcached(1)"
 name: "memcached"
 section: "1"
@@ -10,7 +9,9 @@ description: "memcached – high-performance memory object caching system"
 
 <h2>NAME</h2>
 <p> memcached &#8211; high-performance memory object caching system</p>
+<h2>SYNOPSIS</h2>
 <p> <code>memcached</code> [<i>options</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>memcached</code> memory object caching daemon. </p>
 <p> <code>memcached</code> is a flexible memory object caching daemon designed to alleviate database load in dynamic web applications by storing objects in memory. It&#8217;s based on libevent to scale to any size needed, and is specifically optimized to avoid swapping and always use non-blocking I/O. </p>
 <h2>OPTIONS</h2>

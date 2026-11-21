@@ -1,5 +1,4 @@
 ---
-
 title: "mumble-overlay(1)"
 name: "mumble-overlay"
 section: "1"
@@ -10,7 +9,9 @@ description: "mumble-overlay – load OpenGL overlay for Mumble."
 
 <h2>NAME</h2>
 <p> mumble-overlay &#8211; load OpenGL overlay for Mumble.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mumble-overlay</code> executable</p>
+<h2>DESCRIPTION</h2>
 <p> This wrapper will load the OpenGL overlay for Mumble into the application of your choice. This allows you to easily see who is talking even in fullscreen games and applications. </p>
 <p> Nothing will be shown unless you have Mumble running and it is currently connected to a server.</p>
 <h2>ENVIRONMENT VARIABLES</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "virt-diff(1)"
 name: "virt-diff"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-virt-diff/"
 description: "virt-diff – Differences between files in two virtual machines"
 ---
 
+<h2 class="name">NAME</h2>
+<p> virt-diff &#8211; Differences between files in two virtual machines </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 virt - diff[--options] - d domain1 - D domain2 virt - diff[--options] - a disk1.img[-a...] - A disk2.img[-A...]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <tt>&quot;virt-diff&quot;</tt> lists the differences between files in two virtual machines or disk images. The usual use case is to show the changes in a <font SIZE="-1">VM</font> after it has been running for a while, by taking a snapshot, running the <font SIZE="-1">VM,</font> and then using this tool to show what changed between the new <font SIZE="-1">VM</font> state and the old snapshot. </p>
 <p> This tool will find differences in filenames, file sizes, checksums, extended attributes, file content and more from a virtual machine or disk image. However it <code>does not</code> look at the boot loader, unused space between partitions or within filesystems, &#8220;hidden&#8221; sectors and so on. In other words, it is not a security or forensics tool. </p>
 <p> To specify two guests, you have to use the <i>-a</i> or <i>-d</i> option(s) for the first guest, and the <i>-A</i> or <i>-D</i> option(s) for the second guest. The common case is: </p>

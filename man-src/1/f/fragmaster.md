@@ -1,5 +1,4 @@
 ---
-
 title: "fragmaster(1)"
 name: "fragmaster"
 section: "1"
@@ -7,7 +6,9 @@ letter: "f"
 url: "/docs/linux/man/1-fragmaster/"
 description: "fragmaster – Using psfrag constructs with pdflatex"
 ---
-
+<h2 class="name">NAME</h2>
+<p> fragmaster - Using psfrag constructs with pdflatex </p>
+<h2>SYNOPSIS</h2>
 <pre><code> fragmaster [options]
  Create EPS and PDF files with embedded psfrag substitutions.
  Options:
@@ -20,6 +21,7 @@ description: "fragmaster – Using psfrag constructs with pdflatex"
                      fragmaster fm control file instead of default
                      &quot;fragmaster.dfm&quot;.
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>fragmaster</code> is a perl script that helps using psfrag constructs with <code>pdflatex</code>. </p>
 <p> <code>psfrag</code> is a LaTeX package which allows one to replace text elements in included <font SIZE="-1">EPS</font> graphics by arbitrary LaTeX output. Because <code>psfrag</code> uses PostScript for making the replacements, in principle you can&#8217;t use <code>psfrag</code> with <code>pdflatex</code> which doesn&#8217;t have any interfaces to PostScript. </p>
 <p> <code>fragmaster</code> produces a new <font SIZE="-1">EPS</font> from your original <font SIZE="-1">EPS</font> which already contains all those <code>psfrag</code> replacements. This new <font SIZE="-1">EPS</font> graphic actually can be converted to <font SIZE="-1">PDF</font> including all replacements. The resulting ``encapsulated&#8217;&#8216; <font SIZE="-1">PDF</font> can then be used with pdflatex. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "acl_size(3)"
 name: "acl_size"
 section: "3"
@@ -8,10 +7,13 @@ url: "/docs/linux/man/3-acl_size/"
 description: "acl_size – get the size of the external representation of an ACL"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>acl_size</code> &#8211; get the size of the external representation of an ACL </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>
+<h2>SYNOPSIS</h2>
 <p> In sys/types.h In sys/acl.h Ft ssize_t Fn acl_size acl_t acl</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn acl_size function return the size, in bytes, of the buffer required to hold the exportable, contiguous, persistent form of the ACL pointed to by the argument <i>acl</i> when converted by Fn acl_copy_ext . </p>
 <p> Any existing ACL entry descriptors that refer to entries in <i>acl</i> continue to refer to the same entries. Any existing ACL pointers that refer to the ACL referred to by <i>acl</i> continue to refer to the ACL. The order of ACL entries within <i>acl</i> remains unchanged.</p>
 <h2>RETURN VALUE</h2>

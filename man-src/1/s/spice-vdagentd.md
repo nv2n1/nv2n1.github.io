@@ -1,5 +1,4 @@
 ---
-
 title: "spice-vdagentd(1)"
 name: "spice-vdagentd"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-spice-vdagentd/"
 description: "spice-vdagentd – Spice guest agent daemon"
 ---
 
+<h2 class="name">NAME</h2>
+<p> spice-vdagentd &#8211; Spice guest agent daemon </p>
+<h2>SYNOPSIS</h2>
 <p> <code>spice-vdagent</code> [<i>OPTIONS</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The spice guest agent for Linux consists of 2 parts, a system wide daemon <code>spice-vdagentd</code> and a X11 session agent <code>spice-vdagent</code> of which there is one per X11 session.<br />
  <code>spice-vdagentd</code> gets started through a Sys-V initscript or a systemd unit.</p>
 <h2>FEATURES</h2>

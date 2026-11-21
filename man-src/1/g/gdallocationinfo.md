@@ -1,5 +1,4 @@
 ---
-
 title: "gdallocationinfo(1)"
 name: "gdallocationinfo"
 section: "1"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/1-gdallocationinfo/"
 description: "gdallocationinfo – gdallocationinfo raster query tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gdallocationinfo &#8211; gdallocationinfo raster query tool </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 Usage : gdallocationinfo[--help - general][-xml][-lifonly][-valonly]
                         [-b band] *
         [-overview overview_level]
             [-l_srs srs_def][-geoloc][-wgs84] srcfile[x y]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The gdallocationinfo utility provide a mechanism to query information about a pixel given it&#8217;s location in one of a variety of coordinate systems. Several reporting options are provided. </p>
 <dl>
 <dt><code>-xml</code>:</dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "ibv_query_gid(3)"
 name: "ibv_query_gid"
 section: "3"
@@ -7,7 +6,14 @@ letter: "i"
 url: "/docs/linux/man/3-ibv_query_gid/"
 ---
 
-ibv_query_gid - query an InfiniBand port's GID table 
+<h2 class="name">NAME</h2>
+ 
+
+ 
+
+ ibv_query_gid - query an InfiniBand port's GID table 
+
+<h2>SYNOPSIS</h2>
 
 <dl>
 <dt>
@@ -19,7 +25,11 @@ int ibv_query_gid(struct ibv_context *context,
                   union ibv_gid *gid);
 </code></pre></dd></dl>
 
-ibv_query_gid() returns the GID value in entry index of port port_num for device context context through the pointer gid.
+<h2>DESCRIPTION</h2>
+
+ 
+
+ ibv_query_gid() returns the GID value in entry index of port port_num for device context context through the pointer gid.
 
 <h2>RETURN VALUE</h2>
 

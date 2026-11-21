@@ -1,5 +1,4 @@
 ---
-
 title: "virt-make-fs(1)"
 name: "virt-make-fs"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-virt-make-fs/"
 description: "virt-make-fs – Make a filesystem from a tar archive or files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> virt-make-fs &#8211; Make a filesystem from a tar archive or files </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 virt - make - fs[--options] input.tar output.img virt - make - fs[--options] input.tar.gz output.img virt - make - fs[--options] directory output.img
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Virt-make-fs is a command line tool for creating a filesystem from a tar archive or some files in a directory. It is similar to tools like <i><a href="/docs/linux/man/1-mkisofs/">mkisofs</a></i>(1), <i><a href="/docs/linux/man/1-genisoimage/">genisoimage</a></i>(1) and <i><a href="/docs/linux/man/1-mksquashfs/">mksquashfs</a></i>(1). Unlike those tools, it can create common filesystem types like ext2/3 or <font SIZE="-1">NTFS,</font> which can be useful if you want to attach these filesystems to existing virtual machines (eg. to import large amounts of read-only data to a <font SIZE="-1">VM</font>). </p>
 <p> To create blank disks, use <i><a href="/docs/linux/man/1-virt-format/">virt-format</a></i>(1). To create complex layouts, use <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1). </p>
 <p> Basic usage is: </p>

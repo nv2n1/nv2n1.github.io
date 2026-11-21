@@ -1,5 +1,4 @@
 ---
-
 title: "dtgexc(3)"
 name: "dtgexc"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dtgexc/"
 description: "dtgexc.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dtgexc.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dtgexc</code> (WANTQ, WANTZ, N, A, LDA, B, LDB, Q, LDQ, Z, LDZ, IFST, ILST, WORK, LWORK, INFO)<br />
  <i></i><code>DTGEXC</code></p>

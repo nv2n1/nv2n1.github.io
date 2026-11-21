@@ -1,5 +1,4 @@
 ---
-
 title: "timer_getoverrun(2)"
 name: "timer_getoverrun"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-timer_getoverrun/"
 description: "timer_getoverrun – get overrun count for a POSIX per-process timer"
 ---
 
+<h2 class="name">NAME</h2>
+<p> timer_getoverrun &#8211; get overrun count for a POSIX per-process timer </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;time.h&gt;
 int timer_getoverrun(timer_t timerid);
@@ -15,6 +17,7 @@ int timer_getoverrun(timer_t timerid);
 <p> Link with <i>-lrt</i>. </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>timer_getoverrun</code>(): _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;199309L</p>
+<h2>DESCRIPTION</h2>
 <p> <code>timer_getoverrun</code>() returns the &quot;overrun count&quot; for the timer referred to by <i>timerid</i>. An application can use the overrun count to accurately calculate the number of timer expirations that would have occurred over a given time interval. Timer overruns can occur both when receiving expiration notifications via signals (<code>SIGEV_SIGNAL</code>), and via threads (<code>SIGEV_THREAD</code>). </p>
 <p> When expiration notifications are delivered via a signal, overruns can occur as follows. Regardless of whether or not a real-time signal is used for timer notifications, the system queues at most one signal per timer. (This is the behavior specified by POSIX.1. The alternative, queuing one signal for each timer expiration, could easily result in overflowing the allowed limits for queued signals on the system.) Because of system scheduling delays, or because the signal may be temporarily blocked, there can be a delay between the time when the notification signal is generated and the time when it is delivered (e.g., caught by a signal handler) or accepted (e.g., using <code><a href="/docs/linux/man/2-sigwaitinfo/">sigwaitinfo</a></code>(2)). In this interval, further timer expirations may occur. The timer overrun count is the number of additional timer expirations that occurred between the time when the signal was generated and when it was delivered or accepted. </p>
 <p> Timer overruns can also occur when expiration notifications are delivered via invocation of a thread, since there may be an arbitrary delay between an expiration of the timer and the invocation of the notification thread, and in that delay interval, additional timer expirations may occur.</p>

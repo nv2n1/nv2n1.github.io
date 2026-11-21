@@ -1,5 +1,4 @@
 ---
-
 title: "fixdiv(3)"
 name: "fixdiv"
 section: "3"
@@ -10,8 +9,10 @@ description: "fixdiv – Fixed point division. Allegro game programming library.
 
 <h2>NAME</h2>
 <p> fixdiv &#8211; Fixed point division. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>fixed fixdiv(fixed x, fixed y);</code></p>
+<h2>DESCRIPTION</h2>
 <p> A fixed point value can be divided by an integer with the normal `/&#8217; operator. To divide two fixed point values, though, you must use this function. If a division by zero occurs, `errno&#8217; will be set and the maximum possible value will be returned, but `errno&#8217; is not cleared if the operation is successful. This means that if you are going to test for division by zero you should set `errno=0&#8242; before calling fixdiv(). Example: </p>
 <pre><code>
 fixed result;

@@ -1,5 +1,4 @@
 ---
-
 title: "gopen(1)"
 name: "gopen"
 section: "1"
@@ -10,7 +9,9 @@ description: "gopen – open files"
 
 <h2>NAME</h2>
 <p> gopen &#8211; open files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gopen</code> [<code>-a</code> <i>application</i>] [<code>-o</code>] [<code>-p</code>] [<code>-NXHost</code> <i>hostname</i>] [<i>filename</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>gopen</code> command allows you open a file (or directory) as if you had double clicked the object&#8217;s icon. </p>
 <p> It is possible to specify one or more <i>filenames</i> which are interpreted relative to the current working directory. </p>
 <p> By default, <code>gopen</code> will open <i>filename</i> with the application currently assigned to the file&#8217;s extension. But by specifing the <code>-a</code> flag on the command line you can tell <code>gopen</code> to open the file with another application. </p>

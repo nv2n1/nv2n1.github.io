@@ -1,5 +1,4 @@
 ---
-
 title: "perf-script-perl(1)"
 name: "perf-script-perl"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-perf-script-perl/"
 description: "perf-script-perl – Process trace data with a Perl script"
 ---
 
+<h2 class="name">NAME</h2>
+<p> perf-script-perl &#8211; Process trace data with a Perl script </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 perf script [-s[Perl]:script[.pl]]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> This perf script option is used to process perf script data using perf&#8217;s built-in Perl interpreter. It reads and processes the input file and displays the results of the trace analysis implemented in the given Perl script, if any.</p>
 <h2>STARTER SCRIPTS</h2>
 <p> You can avoid reading the rest of this document by running <i>perf script -g perl</i> in the same directory as an existing perf.data trace file. That will generate a starter script containing a handler for each of the event types in the trace file; it simply prints every available field for each event in the trace file. </p>

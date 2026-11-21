@@ -1,5 +1,4 @@
 ---
-
 title: "genhtml(1)"
 name: "genhtml"
 section: "1"
@@ -10,6 +9,7 @@ description: "genhtml – Generate HTML view from LCOV coverage data files"
 
 <h2>NAME</h2>
 <p> genhtml &#8211; Generate HTML view from LCOV coverage data files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>genhtml</code> [<code>-h</code>|<code>&#8211;help</code>] [<code>-v</code>|<code>&#8211;version</code>]</p>
 <dl>
 <dt>
@@ -30,6 +30,7 @@ description: "genhtml – Generate HTML view from LCOV coverage data files"
  [<code>&#8211;demangle-cpp</code>] [<code>&#8211;ignore-errors</code> <i>errors</i>]<br />
  [<code>&#8211;config-file</code> <i>config-file</i>] [<code>&#8211;rc</code> <i>keyword</i>=<i>value</i>]<br />
  <i>tracefile(s)</i></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Create an HTML view of coverage data found in <i>tracefile</i>. Note that <i>tracefile</i> may also be a list of filenames. </p>
 <p> HTML output files are created in the current working directory unless the &#8211;output-directory option is used. If <i>tracefile</i> ends with &quot;.gz&quot;, it is assumed to be GZIP-compressed and the gunzip tool will be used to decompress it transparently. </p>
 <p> Note that all source code files have to be present and readable at the exact file system location they were compiled. </p>

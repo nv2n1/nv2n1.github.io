@@ -1,5 +1,4 @@
 ---
-
 title: "ghc(1)"
 name: "ghc"
 section: "1"
@@ -10,8 +9,10 @@ description: "GHC – the Glasgow Haskell Compiler"
 
 <h2>NAME</h2>
 <p> GHC &#8211; the Glasgow Haskell Compiler </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ghc</code> [<i>option</i>|<i>filename</i>]&#8230;<br />
  <code>ghci</code> [<i>option</i>|<i>filename</i>]&#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>ghc</code> and <code>ghci</code> commands. Note that <code>ghci</code> is not yet available on all architectures. Extensive documentation is available in various other formats including DVI, PostScript and HTML; see below. </p>
 <p> Each of GHC&#8217;s command line options is classified as either <i>static</i> or <i>dynamic</i>. A static flag may only be specified on the command line, whereas a dynamic flag may also be given in an OPTIONS pragma in a source file or set from the GHCi command-line with :set. </p>
 <p> As a rule of thumb, all the language options are dynamic, as are the warning options and the debugging options. </p>

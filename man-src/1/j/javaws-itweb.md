@@ -1,5 +1,4 @@
 ---
-
 title: "javaws-itweb(1)"
 name: "javaws-itweb"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-javaws-itweb/"
 description: "javaws – a Java Web Start client"
 ---
 
+<h2 class="name">NAME</h2>
+<p> javaws &#8211; a Java Web Start client </p>
+<h2>SYNOPSIS</h2>
 <p> <code>javaws </code> [-run-options] jnlp file<br />
  <code>javaws </code> [-control-options]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>javaws </code> is an implementation of a JNLP client. It uses a JNLP (Java Network Launch Protocol) file to securely run a remote Java application or a Java applet. This implementation of <code>javaws </code> is from the IcedTea project and is based on the NetX project. </p>
 <p> A JNLP file is an xml file that describes how to securely run a remote Java application or a Java applet. </p>
 <h2>OPTIONS</h2>

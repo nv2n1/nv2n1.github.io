@@ -1,5 +1,4 @@
 ---
-
 title: "recvmmsg(2)"
 name: "recvmmsg"
 section: "2"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/2-recvmmsg/"
 description: "recvmmsg – receive multiple messages on a socket"
 ---
 
+<h2 class="name">NAME</h2>
+<p> recvmmsg &#8211; receive multiple messages on a socket </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;sys/socket.h&gt;
 int recvmmsg(int sockfd, struct mmsghdr *msgvec, unsigned int vlen,
              int flags, struct timespec *timeout);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>recvmmsg</code>() system call is an extension of <code><a href="/docs/linux/man/2-recvmsg/">recvmsg</a></code>(2) that allows the caller to receive multiple messages from a socket using a single system call. (This has performance benefits for some applications.) A further extension over <code><a href="/docs/linux/man/2-recvmsg/">recvmsg</a></code>(2) is support for a timeout on the receive operation. </p>
 <p> The <i>sockfd</i> argument is the file descriptor of the socket to receive data from. </p>
 <p> The <i>msgvec</i> argument is a pointer to an array of <i>mmsghdr</i> structures. The size of this array is specified in <i>vlen</i>. </p>

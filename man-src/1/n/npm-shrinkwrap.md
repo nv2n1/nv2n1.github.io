@@ -1,5 +1,4 @@
 ---
-
 title: "npm-shrinkwrap(1)"
 name: "npm-shrinkwrap"
 section: "1"
@@ -8,6 +7,7 @@ url: "/docs/linux/man/1-npm-shrinkwrap/"
 description: "npm-shrinkwrap – Lock down dependency versions for publication"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>npm-shrinkwrap</code> &#8211; Lock down dependency versions for publication </p>
 <h3>Synopsis</h3>
 <dl>

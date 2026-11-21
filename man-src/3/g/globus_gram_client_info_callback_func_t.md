@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_gram_client_info_callback_func_t/"
 description: "Job state callbacks –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Job state callbacks &#8211; </p>
 <h3>Data Structures</h3>
 <p> struct <code>globus_gram_client_job_info_s</code><br />
  <i>Extensible job information structure. </i></p>

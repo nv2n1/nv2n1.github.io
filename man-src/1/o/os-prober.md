@@ -1,5 +1,4 @@
 ---
-
 title: "os-prober(1)"
 name: "os-prober"
 section: "1"
@@ -10,7 +9,9 @@ description: "os-prober — Discover bootable partitions on the local system."
 
 <h2>NAME</h2>
 <p> os-prober &#8212; Discover bootable partitions on the local system.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>os-prober</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>os-prober</code> utility will scan all disks available on the system for other operating systems. For each discovered OS, it will output a line of the form: </p>
 <p> &lt;partition&gt;:&lt;descriptive name&gt;:&lt;short name&gt;:&lt;kind of loader&gt; </p>
 <p> For example, on system with Windows XP installed on <i>/dev/sda1</i>, <code>os-prober</code> will display: </p>

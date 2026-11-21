@@ -1,5 +1,4 @@
 ---
-
 title: "spellintian(1)"
 name: "spellintian"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-spellintian/"
 description: "spellintian – simple spellchecker based on Lintian’s data files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> spellintian &#8211; simple spellchecker based on Lintian&#8217;s data files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>spellintian</code> [<code>&#8211;picky</code>] [<i>text-file</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>spellintian</code> command parses one or more text files for spelling mistakes. It uses the same spellcheck algorithm and data set as <code>lintian</code>. </p>
 <p> If no file is specified on the command line, this command expects its input on stdin.</p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "msd-locate-pointer(1)"
 name: "msd-locate-pointer"
 section: "1"
@@ -11,9 +10,13 @@ url: "/docs/linux/man/1-msd-locate-pointer/"
 
  msd-locate-pointer - create ripples around mouse pointer
 
-msd-locate-pointer
+<h2>SYNOPSIS</h2>
 
-The <i>msd-locate-pointer</i> utility is a program that creates ripples (like throwing a stone into water) around the mouse pointer. This helps to locate the position of the mousepointer. 
+ msd-locate-pointer
+
+<h2>DESCRIPTION</h2>
+
+ The <i>msd-locate-pointer</i> utility is a program that creates ripples (like throwing a stone into water) around the mouse pointer. This helps to locate the position of the mousepointer. 
 
  With <i>mate-settings-daemon</i> i is possible to assign a hotkey for evoking the <i>msd-locate-pointer</i> command.
 

@@ -1,5 +1,4 @@
 ---
-
 title: "perlhpux(1)"
 name: "perlhpux"
 section: "1"
@@ -7,9 +6,14 @@ letter: "p"
 url: "/docs/linux/man/1-perlhpux/"
 ---
 
-perlhpux - Perl version 5 on Hewlett-Packard Unix (HP-UX) systems 
+<h2 class="name">NAME</h2>
+ 
 
-This document describes various features of <font SIZE="-1">HP</font>'s Unix operating system (HP-UX) that will affect how Perl version 5 (hereafter just Perl) is compiled and/or runs.
+ perlhpux - Perl version 5 on Hewlett-Packard Unix (HP-UX) systems 
+
+<h2>DESCRIPTION</h2>
+
+ This document describes various features of <font SIZE="-1">HP</font>'s Unix operating system (HP-UX) that will affect how Perl version 5 (hereafter just Perl) is compiled and/or runs.
 
 <h3>Using perl as shipped with HP-UX</h3>
 

@@ -1,5 +1,4 @@
 ---
-
 title: "darkbat(1)"
 name: "darkbat"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-darkbat/"
 description: "darkbat – CCD dark-frame correction"
 ---
 
+<h2 class="name">NAME</h2>
+<p> darkbat &#8211; CCD dark-frame correction</p>
+<h2>SYNOPSIS</h2>
 <p> <code>darkbat </code><i>[options] </i><code>dark=</code><i>file source_file &#8230;</i> </p>
+<h2>DESCRIPTION</h2>
 <p> The Darkbat program applies dark correction to a set of source frames. It means, that it subtracts the dark frame from source files and the results writes to the output file. </p>
 <p> The source frames and also dark frame must be in FITS format and of same dimensions. Frames of the same exposition duration should be used unless the advanced calibration scheme and scalable dark frame is used. The output file is in FITS format too. </p>
 <h2>OPTIONS</h2>

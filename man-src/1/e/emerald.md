@@ -1,5 +1,4 @@
 ---
-
 title: "emerald(1)"
 name: "emerald"
 section: "1"
@@ -10,7 +9,9 @@ description: "emerald – The Emerald Windows Decorator"
 
 <h2>NAME</h2>
 <p> emerald &#8211; The Emerald Windows Decorator</p>
+<h2>SYNOPSIS</h2>
 <p> <code>emerald [&#8211;replace] [&#8211;help] [&#8211;version]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <i>emerald</i> emerald is the windows decorator of the beryl project. .</p>
 <h2>OPTIONS</h2>
 <dl>

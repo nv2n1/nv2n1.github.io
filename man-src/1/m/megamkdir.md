@@ -1,5 +1,4 @@
 ---
-
 title: "megamkdir(1)"
 name: "megamkdir"
 section: "1"
@@ -7,14 +6,25 @@ letter: "m"
 url: "/docs/linux/man/1-megamkdir/"
 ---
 
-megamkdir - Create remote folder under your Mega.co.nz account 
+<h2 class="name">NAME</h2>
+ 
 
-<pre>
+ megamkdir - Create remote folder under your Mega.co.nz account 
+
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <pre>
 <i>megamkdir</i> &lt;remotepaths&gt;...
 <i>megamkdir</i> /Contacts/&lt;contactemail&gt;
 </pre>
 
-Creates folders on Mega.co.nz. 
+<h2>DESCRIPTION</h2>
+
+ 
+
+ Creates folders on Mega.co.nz. 
 
  As a special case, by creating a new folder under /Contacts, you're adding a &lt;contactemail&gt; to your contacts list.
 

@@ -1,5 +1,4 @@
 ---
-
 title: "settlementdays(3)"
 name: "settlementdays"
 section: "3"
@@ -7,8 +6,8 @@ letter: "s"
 url: "/docs/linux/man/3-settlementdays/"
 description: "QuantLib::SabrVolSurface – SABR volatility (smile) surface."
 ---
-
 <p>QuantLib::SabrVolSurface &#8211; <code>SABR</code> volatility (smile) surface. </p>
+<h2>SYNOPSIS</h2>
 <p> <br />
  </p>
 <p>#include &lt;ql/experimental/volatility/sabrvolsurface.hpp&gt; </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "grid-cert-request(1)"
 name: "grid-cert-request"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-grid-cert-request/"
 description: "grid-cert-request – Generate a X.509 certificate request and corresponding private key"
 ---
 
+<h2 class="name">NAME</h2>
+<p> grid-cert-request &#8211; Generate a X.509 certificate request and corresponding private key </p>
+<h2>SYNOPSIS</h2>
 <p> <code>grid-cert-request</code> -help | -h | -? | -usage | -version-versions </p>
 <p> <code>grid-cert-request</code> [OPTIONS]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>grid-cert-request</code> program generates an X.509 Certificate Request and corresponding private key for the specified name, host, or service. It is intended to be used with a CA implemented using the <code>globus_simple_ca</code> package. </p>
 <p> The default behavior of <code>grid-cert-request</code> is to generate a certificate request and private key for the user running the command. The subject name is derived from the gecos information in the local system&#8217;s password database, unless the <i>-commonname</i>, <i>-cn</i>, or <i>-host</i> command-line options are used. </p>
 <p> By default, <code>grid-cert-request</code> writes user certificate requests and keys to the $HOME/.globus directory, and host and service certificate requests and keys to /etc/grid-security. This can be overridden by using the <i>-dir</i> command-line option.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ck_elide(3)"
 name: "ck_elide"
 section: "3"
@@ -12,6 +11,7 @@ description: "CK_ELIDE_PROTOTYPE CK_ELIDE_LOCK_ADAPTIVE CK_ELIDE_UNLOCK_ADAPTIVE
 <p> <code>CK_ELIDE_PROTOTYPE</code> <code>CK_ELIDE_LOCK_ADAPTIVE</code> <code>CK_ELIDE_UNLOCK_ADAPTIVE</code> <code>CK_ELIDE_LOCK</code> <code>CK_ELIDE_UNLOCK</code> <code>CK_ELIDE_TRYLOCK_PROTOTYPE</code> <code>CK_ELIDE_TRYLOCK</code> &#8211; lock elision wrappers</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_elide.h </p>
 <p> <code>ck_elide_stat_t stat = CK_ELIDE_STAT_INITIALIZER;</code> </p>
 <p> Ft void Fn ck_elide_stat_init ck_elide_stat_t * </p>
@@ -27,6 +27,7 @@ struct ck_elide_config {
 };
 </code></pre>
 <p> Fn CK_ELIDE_PROTOTYPE NAME TYPE LOCK_PREDICATE LOCK_FUNCTION UNLOCK_PREDICATE UNLOCK_FUNCTION Fn CK_ELIDE_LOCK_ADAPTIVE NAME ck_elide_stat_t * struct ck_elide_config * TYPE * Fn CK_ELIDE_UNLOCK_ADAPTIVE NAME ck_elide_stat_t * TYPE * Fn CK_ELIDE_LOCK NAME TYPE * Fn CK_ELIDE_UNLOCK NAME TYPE * Fn CK_ELIDE_TRYLOCK_PROTOTYPE NAME TYPE LOCK_PREDICATE TRYLOCK_FUNCTION</p>
+<h2>DESCRIPTION</h2>
 <p> These macros implement lock elision wrappers for a user-specified single-argument lock interface. The wrappers will attempt to elide lock acquisition, allowing concurrent execution of critical sections that do not issue conflicting memory operations. If any threads have successfully elided a lock acquisition, conflicting memory operations will roll-back any side-effects of the critical section and force every thread to retry the lock acquisition regularly. </p>
 <p> Fn CK_ELIDE_LOCK , Fn CK_ELIDE_UNLOCK , Fn CK_ELIDE_LOCK_ADAPTIVE , and Fn CK_ELIDE_UNLOCK_ADAPTIVE macros require a previous Fn CK_ELIDE_PROTOTYPE with the same Fa NAME . Elision is attempted if the Fa LOCK_PREDICATE function returns false. If Fa LOCK_PREDICATE returns true then elision is aborted and Fa LOCK_FUNCTION is executed instead. If any threads are in an elided critical section, Fa LOCK_FUNCTION must force them to rollback through a conflicting memory operation. The Fa UNLOCK_PREDICATE function must return true if the lock is acquired by the caller, meaning that the lock was not successfully elided. If Fa UNLOCK_PREDICATE returns true, then the Fa UNLOCK_FUNCTION is executed. If RTM is unsupported (no CK_F_PR_RTM macro) then Fn CK_ELIDE_LOCK and Fn CK_ELIDE_LOCK_ADAPTIVE will immediately call Fn LOCK_FUNCTION . Fn CK_ELIDE_UNLOCK and Fn CK_ELIDE_UNLOCK_ADAPTIVE will immediately call Fn UNLOCK_FUNCTION . </p>
 <p> Fn CK_ELIDE_TRYLOCK requires a previous Fn CK_ELIDE_TRYLOCK_PROTOTYPE with the same name. Elision is attempted if the Fa LOCK_PREDICATE function returns false. If Fa LOCK_PREDICATE returns true or if elision fails then the operation is aborted. If RTM is unsupported (no CK_F_PR_RTM macro) then Fn CK_ELIDE_TRYLOCK will immediately call Fn TRYLOCK_FUNCTION . </p>

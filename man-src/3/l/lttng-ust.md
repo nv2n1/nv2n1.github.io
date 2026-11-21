@@ -1,5 +1,4 @@
 ---
-
 title: "lttng-ust(3)"
 name: "lttng-ust"
 section: "3"
@@ -7,13 +6,28 @@ letter: "l"
 url: "/docs/linux/man/3-lttng-ust/"
 ---
 
-lttng-ust --- Linux Trace Toolkit Next Generation User-Space Tracer 2.x
+<h2 class="name">NAME</h2>
+ 
 
-<pre>
+ lttng-ust --- Linux Trace Toolkit Next Generation User-Space Tracer 2.x
+
+<h2>SYNOPSIS</h2>
+
+ 
+
+ 
+
+ <pre>
 Link liblttng-ust.so with applications, following this manpage.
 </pre>
 
-LTTng-UST, the Linux Trace Toolkit Next Generation Userspace Tracer, is a port of the low-overhead tracing capabilities of the LTTng kernel tracer to user-space. The library &quot;liblttng-ust&quot; enables tracing of applications and libraries. 
+<h2>DESCRIPTION</h2>
+
+ 
+
+ 
+
+ LTTng-UST, the Linux Trace Toolkit Next Generation Userspace Tracer, is a port of the low-overhead tracing capabilities of the LTTng kernel tracer to user-space. The library &quot;liblttng-ust&quot; enables tracing of applications and libraries. 
 
 <h2>USAGE</h2>
 

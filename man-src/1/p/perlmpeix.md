@@ -1,5 +1,4 @@
 ---
-
 title: "perlmpeix(1)"
 name: "perlmpeix"
 section: "1"
@@ -7,9 +6,14 @@ letter: "p"
 url: "/docs/linux/man/1-perlmpeix/"
 ---
 
-perlmpeix - Perl/iX for HP e3000 MPE 
+<h2 class="name">NAME</h2>
+ 
 
-<pre>
+ perlmpeix - Perl/iX for HP e3000 MPE 
+
+<h2>SYNOPSIS</h2>
+
+ <pre>
    <a rel="nofollow" HREF="http://www.bixby.org/mark/perlix.html">http://www.bixby.org/mark/perlix.html</a>
    Perl language for MPE
    Last updated January 12, 2006 @ 2100 UTC

@@ -1,5 +1,4 @@
 ---
-
 title: "ovsdb-client(1)"
 name: "ovsdb-client"
 section: "1"
@@ -8,8 +7,10 @@ url: "/docs/linux/man/1-ovsdb-client/"
 description: "ovsdb-client – command-line interface to"
 ---
 
+<h2 class="name">NAME</h2>
 <p> ovsdb-client &#8211; command-line interface to <code></p>
 <p><a href="/docs/linux/man/1-ovsdb-server/">ovsdb-server</a></code>(1)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ovsdb-client </code>[<i>options</i>] <code>list-dbs </code>[<i>server</i>]<br />
  <code>ovsdb-client </code>[<i>options</i>] <code>get-schema </code>[<i>server</i>] [<i>database</i>]<br />
  <code>ovsdb-client </code>[<i>options</i>] <code>get-schema-version</code><i> </i>[<i>server</i>] [<i>database</i>]<br />
@@ -37,6 +38,7 @@ description: "ovsdb-client – command-line interface to"
 <dt>Common options:</dt>
 <dd> [<code>-h</code> | <code>&#8211;help</code>] [<code>-V</code> | <code>&#8211;version</code>] </dd>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> The <code>ovsdb-client</code> program is a command-line client for interacting with a running <code>ovsdb-server</code> process. Each command connects to an OVSDB server, which is <code>unix:/var/run/openvswitch/db.sock</code> by default, or may be specified as <i>server</i> in one of the following forms:</p>
 <dl>
 <dl>

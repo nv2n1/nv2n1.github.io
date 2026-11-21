@@ -1,5 +1,4 @@
 ---
-
 title: "git-standup(1)"
 name: "git-standup"
 section: "1"
@@ -10,7 +9,9 @@ description: "git-standup – Recall the commit history"
 
 <h2>NAME</h2>
 <p> <code>git-standup</code> &#8211; Recall the commit history</p>
+<h2>SYNOPSIS</h2>
 <p> <code>git-standup</code> [&lt;full name&gt;] [&lt;since&gt;] [&lt;until&gt;]</p>
+<h2>DESCRIPTION</h2>
 <p> Recall what you did on the last working day ..or be nosy and find what someone else did.</p>
 <h2>OPTIONS</h2>
 <p> &lt;full name&gt; </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "nicotine-import-winconfig(1)"
 name: "nicotine-import-winconfig"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-nicotine-import-winconfig/"
 description: "nicotine-import-winconfig is a script to convert SoulSeek Windows client configuration file to the Nicotine format."
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>nicotine-import-winconfig</code> is a script to convert SoulSeek Windows client configuration file to the Nicotine format. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>nicotine-import-winconfig</code> [options] &lt;path_to_the_windows_soulseek_files&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>nicotine-import-winconfig</code> will read the SoulSeek Windows client configuration file and will extract information like download queue, userlist, login information, list of autojoined chatrooms, list of banned users, user info/picture, and write them to $HOME/.nicotine/config, which is the default nicotine configuration file.</p>
 <h2>OPTIONS</h2>
 <p> If you don&#8217;t want to import the whole configuration, you may consider using the command line flags below.</p>

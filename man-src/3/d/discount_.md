@@ -1,5 +1,4 @@
 ---
-
 title: "discount_(3)"
 name: "discount_"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-discount_/"
 description: "QuantLib::HaganPricer – CMS-coupon pricer."
 ---
 
+<h2 class="name">NAME</h2>
+<p> QuantLib::HaganPricer &#8211; CMS-coupon pricer. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/cashflows/conundrumpricer.hpp&gt; </p>
 <p> Inherits <code>QuantLib::CmsCouponPricer</code>. </p>
 <p> Inherited by <code>AnalyticHaganPricer</code>, and <code>NumericHaganPricer</code>. </p>

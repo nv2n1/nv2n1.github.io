@@ -1,5 +1,4 @@
 ---
-
 title: "gnulib-tool(1)"
 name: "gnulib-tool"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-gnulib-tool/"
 description: "gnulib-tool – program for authors or maintainers which want to import modules from gnulib into their packages."
 ---
 
+<h2 class="name">NAME</h2>
+<p> gnulib-tool &#8211; program for authors or maintainers which want to import modules from gnulib into their packages.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gnulib-tool</code> &#8211;list </p>
 <p> <code>gnulib-tool</code> &#8211;import [module1 &#8230; moduleN] </p>
 <p> <code>gnulib-tool</code> &#8211;update </p>
@@ -24,6 +26,7 @@ description: "gnulib-tool – program for authors or maintainers which want to i
 <p> <code>gnulib-tool</code> &#8211;extract-license module </p>
 <p> <code>gnulib-tool</code> &#8211;extract-maintainer module </p>
 <p> <code>gnulib-tool</code> &#8211;extract-tests-module module </p>
+<h2>DESCRIPTION</h2>
 <p> The GNU portability library is a macro system and C declarations and definitions for commonly-used API elements and abstracted system behaviors. It can be used to improve portability and other functionality in your programs. </p>
 <h2>OPTIONS</h2>
 <p> Operation modes:</p>

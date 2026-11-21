@@ -1,5 +1,4 @@
 ---
-
 title: "logger(1)"
 name: "logger"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-logger/"
 description: "logger – enter messages into the system log"
 ---
 
+<h2 class="name">NAME</h2>
+<p> logger &#8211; enter messages into the system log </p>
+<h2>SYNOPSIS</h2>
 <p> <code>logger</code> [options] <i>message</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>logger</code> makes entries in the system log. </p>
 <p> When the optional <i>message</i> argument is present, it is written to the log. If it is not present, and the <code>-f</code> option is not given either, then standard input is logged.</p>
 <h2>OPTIONS</h2>

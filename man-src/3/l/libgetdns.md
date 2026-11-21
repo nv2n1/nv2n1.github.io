@@ -1,5 +1,4 @@
 ---
-
 title: "libgetdns(3)"
 name: "libgetdns"
 section: "3"
@@ -12,8 +11,10 @@ description: "libgetdns — an implementation of a modern asynchronous DNS API b
 <p> libgetdns &#8212; an implementation of a modern asynchronous DNS API by and for application developers </p>
 <h2>LIBRARY</h2>
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>
+<h2>SYNOPSIS</h2>
 <p> <code>libgetdns</code> </p>
 <p> This man page describes the getdns library, the general concepts behind the API and some of the common elements of the public interface to the library. Each of the public entry points and more complex data types are captured in separate man pages. </p>
+<h2>DESCRIPTION</h2>
 <p> getdns is modern asynchronous DNS API intended to be useful to application developers and operating system distributors as a way of making all types of DNS information easily available in many types of programs. The major features of this new API are: </p>
 <dl>
 <dt>

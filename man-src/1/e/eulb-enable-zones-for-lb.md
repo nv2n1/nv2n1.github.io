@@ -1,5 +1,4 @@
 ---
-
 title: "eulb-enable-zones-for-lb(1)"
 name: "eulb-enable-zones-for-lb"
 section: "1"
@@ -10,10 +9,12 @@ description: "eulb-enable-zones-for-lb – Add a load balancer to one or more av
 
 <h2>NAME</h2>
 <p> eulb-enable-zones-for-lb &#8211; Add a load balancer to one or more availability zones</p>
+<h2>SYNOPSIS</h2>
 <p> eulb-enable-zones-for-lb <code>-z</code> ZONE1,ZONE2,&#8230; [&#8211;show-empty-fields]</p>
 <dl>
 <dt>[-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID]</dt>
 <dd> [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ELB</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Add a load balancer to one or more availability zones</p>
 <h3>positional arguments:</h3>
 <dl>

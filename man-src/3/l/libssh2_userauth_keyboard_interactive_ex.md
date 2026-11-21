@@ -1,5 +1,4 @@
 ---
-
 title: "libssh2_userauth_keyboard_interactive_ex(3)"
 name: "libssh2_userauth_keyboard_interactive_ex"
 section: "3"
@@ -10,6 +9,7 @@ description: "libssh2_userauth_keyboard_interactive_ex – authenticate a sessio
 
 <h2>NAME</h2>
 <p> libssh2_userauth_keyboard_interactive_ex &#8211; authenticate a session using keyboard-interactive authentication</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;libssh2.h&gt;
 int libssh2_userauth_keyboard_interactive_ex(LIBSSH2_SESSION *session,
@@ -17,6 +17,7 @@ int libssh2_userauth_keyboard_interactive_ex(LIBSSH2_SESSION *session,
                                              unsigned int username_len,
                                              LIBSSH2_USERAUTH_KBDINT_RESPONSE_FUNC(*response_callback));
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <i>session</i> &#8211; Session instance as returned by <i><a href="/docs/linux/man/3-libssh2_session_init_ex/">libssh2_session_init_ex</a>(3)</i>. </p>
 <p> <i>username</i> &#8211; Name of user to attempt keyboard-interactive authentication for. </p>
 <p> <i>username_len</i> &#8211; Length of username parameter. </p>

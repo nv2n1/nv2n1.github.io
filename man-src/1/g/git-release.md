@@ -1,5 +1,4 @@
 ---
-
 title: "git-release(1)"
 name: "git-release"
 section: "1"
@@ -10,7 +9,9 @@ description: "git-release – Commit, tag and push changes to the repository"
 
 <h2>NAME</h2>
 <p> <code>git-release</code> &#8211; Commit, tag and push changes to the repository</p>
+<h2>SYNOPSIS</h2>
 <p> <code>git-release</code> &lt;tagname&gt; [-r &lt;remote&gt;] [-m &lt;commit info%gt;] [-c]</p>
+<h2>DESCRIPTION</h2>
 <p> Commits changes with message &quot;Release &lt;tagname&gt;&quot; or custom commit information, tags with the given &lt;tagname&gt; and pushes the branch / tags. Optionally it generates a changelog (see git-changelog) and a remote can be defined. The order of first -c or -r does not matter.</p>
 <h2>OPTIONS</h2>
 <p> &lt;tagname&gt; </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "grepdiff(1)"
 name: "grepdiff"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-grepdiff/"
 description: "grepdiff – show files modified by a diff containing a regex"
 ---
 
+<h2 class="name">NAME</h2>
+<p> grepdiff &#8211; show files modified by a diff containing a regex </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>grepdiff</code> [[-n] | [&#8211;line-number]] [[-N] | [&#8211;number-files]] [[-p&nbsp;<i>n</i>] | [&#8211;strip-match=<i>n</i>]] [&#8211;strip=<i>n</i>] [&#8211;addprefix=<i>PREFIX</i>] [&#8211;addoldprefix=<i>PREFIX</i>] [&#8211;addnewprefix=<i>PREFIX</i>] [[-s] | [&#8211;status]] [[-i&nbsp;<i>PATTERN</i>] | [&#8211;include=<i>PATTERN</i>]] [[-I&nbsp;<i>FILE</i>] | [&#8211;include-from-file=<i>FILE</i>]] [[-x&nbsp;<i>PATTERN</i>] | [&#8211;exclude=<i>PATTERN</i>]] [[-X&nbsp;<i>FILE</i>] | [&#8211;exclude-from-file=<i>FILE</i>]] [[-#&nbsp;<i>RANGE</i>] | [&#8211;hunks=<i>RANGE</i>]] [&#8211;lines=<i>RANGE</i>] [[-F<i>RANGE</i>] | [&#8211;files=<i>RANGE</i>]] [&#8211;annotate] [&#8211;as-numbered-lines=<i>WHEN</i>] [&#8211;format=<i>FORMAT</i>] [&#8211;remove-timestamps] [[-v] | [&#8211;verbose]] [[-z] | [&#8211;decompress]] [[-E] | [&#8211;extended-regexp]] [[-H] | [&#8211;with-filename]] [[-h] | [&#8211;no-filename]] [&#8211;output-matching=<i>WHAT</i>] {[<i>REGEX</i>] | [-f&nbsp;<i>FILE</i>]} [<i>file</i>&#8230;]</dt>
 <dt> <code>grepdiff</code> {[&#8211;help] | [&#8211;version] | [&#8211;list] | [&#8211;filter &#8230;]}</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>For each file modified by a patch, if the patch hunk contains the <i>REGEX</i> then the file&#8217;s name is printed. </dd>
 <p> The regular expression is treated as POSIX Basic Regular Expression syntax, unless the <code>-E</code> option is given in which case POSIX Extended Regular Expression syntax is used. </p>
 <p> For example, to see the patches in my.patch which contain the regular expression &#8220;pf_gfp_mask&#8221;, use: </p>

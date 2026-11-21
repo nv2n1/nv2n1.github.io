@@ -1,5 +1,4 @@
 ---
-
 title: "udp-receiver(1)"
 name: "udp-receiver"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-udp-receiver/"
 description: "udp-receiver – receive files broadcast by udp-sender"
 ---
 
+<h2 class="name">NAME</h2>
+<p> udp-receiver &#8211; receive files broadcast by udp-sender </p>
+<h2>SYNOPSIS</h2>
 <p> ./udp-receiver [&#8211;file <i>file</i>] [&#8211;pipe <i>pipe</i>] [&#8211;portbase <i>portbase</i>] [&#8211;interface <i>net-interface</i>] [&#8211;log <i>file</i>] [&#8211;ttl <i>time-to-live</i>] [&#8211;mcast-rdv-address <i>mcast-rdv-address</i>] [&#8211;nokbd] [&#8211;exitWait milliseconds] [&#8211;stat-period <i>n</i>] [&#8211;print-uncompressed-position <i>flag</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <tt>&quot;Udp-receiver&quot;</tt> is used to receive files sent by <tt>&quot;udp-sender&quot;</tt> (for instance a disk image).</p>
 <h2>OPTIONS</h2>
 <h3>Basic options</h3>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_hmac_deinit(3)"
 name: "gnutls_hmac_deinit"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_hmac_deinit – API function"
 
 <h2>NAME</h2>
 <p> gnutls_hmac_deinit &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/crypto.h&gt;</code> </p>
 <p> <code>void gnutls_hmac_deinit(gnutls_hmac_hd_t </code><i>handle</i><code>, void * </code><i>digest</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_hmac_deinit – API function"
 <dd> is a <code>gnutls_hmac_hd_t</code> structure.</dd>
 <dt>void * digest</dt>
 <dd> is the output value of the MAC</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will deinitialize all resources occupied by the given hmac context.</p>
 <h2>SINCE</h2>
 <p> 2.10.0</p>

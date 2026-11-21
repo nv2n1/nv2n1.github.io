@@ -1,5 +1,4 @@
 ---
-
 title: "docker-network-inspect(1)"
 name: "docker-network-inspect"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-network-inspect/"
 description: "docker-network-inspect – Display detailed information on one or more networks"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-network-inspect &#8211; Display detailed information on one or more networks </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker network inspect [OPTIONS] NETWORK [NETWORK&#8230;]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Returns information about one or more networks. By default, this command renders all results in a JSON object. For example, if you connect two containers to the default bridge network: </p>
 <dl>
 <dt>

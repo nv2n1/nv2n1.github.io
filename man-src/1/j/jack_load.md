@@ -1,5 +1,4 @@
 ---
-
 title: "jack_load(1)"
 name: "jack_load"
 section: "1"
@@ -10,7 +9,9 @@ description: "jack_load – JACK toolkit client for loading in-process clients"
 
 <h2>NAME</h2>
 <p> jack_load &#8211; JACK toolkit client for loading in-process clients</p>
+<h2>SYNOPSIS</h2>
 <p> <code>jack_load</code> [ <i>-i</i> initstring ] [ <i>-s</i> servername ] [<i>-w</i> ] client-name so-name [ initstring ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>jack_load</code> is a JACK toolkit client. It loads the specified plugin and creates an in-process client.</p>
 <h2>ARGUMENTS</h2>
 <p> The client-name must be a currently unused client name. </p>

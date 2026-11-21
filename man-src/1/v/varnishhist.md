@@ -1,5 +1,4 @@
 ---
-
 title: "varnishhist(1)"
 name: "varnishhist"
 section: "1"
@@ -10,7 +9,9 @@ description: "varnishhist – Varnish request histogram"
 
 <h2>NAME</h2>
 <p> varnishhist &#8211; Varnish request histogram</p>
+<h2>SYNOPSIS</h2>
 <p> varnishhist [-C] [-d] [-g &lt;request|vxid&gt;] [-h] [-L limit] [-n name] [-N filename] [-p period] [-P &lt;size|responsetime|tag:field_num:min:max&gt;] [-q query] [-r filename] [-T seconds] [-V]</p>
+<h2>DESCRIPTION</h2>
 <p> The varnishhist utility reads <a href="/docs/linux/man/1-varnishd/">varnishd</a>(1) shared memory logs and presents a continuously updated histogram showing the distribution of the last N requests by their processing. The value of N and the vertical scale are displayed in the top left corner. The horizontal scale is logarithmic. Hits are marked with a pipe character (&quot;|&quot;), and misses are marked with a hash character (&quot;#&quot;). </p>
 <p> The following options are available:</p>
 <dl>

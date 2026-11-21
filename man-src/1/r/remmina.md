@@ -1,5 +1,4 @@
 ---
-
 title: "remmina(1)"
 name: "remmina"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-remmina/"
 description: "remmina – Remmina the GTK+ Remote Desktop Client"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>remmina</code> &#8211; Remmina the GTK+ Remote Desktop Client </p>
+<h2>SYNOPSIS</h2>
 <p> <code>remmina</code> [-<code>a|i|n|q|v</code> ] [-<code>c </code><i>FILE</i> ] [-<code>e </code><i>FILE</i> ] [-<code>p </code><i>TABINDEX</i> ] [-<code>s </code><i>SERVER</i> ] [-<code>t </code><i>PROTOCOL</i> ] [-<code>x </code><i>PLUGIN</i> ] [-<code>-update-profile</code> ] [-<code>-set-option </code><i>OPTION[=VALUE]</i> ] [-<code>-display </code><i>DISPLAY</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> Remmina is a remote desktop client written in GTK+, aiming to be useful for system administrators and travellers, who need to work with lots of remote computers in front of either large monitors or tiny netbooks. Remmina supports multiple network protocols in an integrated and consistent user interface. Currently RDP, VNC, SSH, SPICE, and WWW are supported. Lp Remmina is released in separated source packages: Lp<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;remmina&quot;, the main GTK+&nbsp;application<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;&quot;remmina-plugins&quot;, a set of plugins Lp Remmina is free and open-source software, released under GNU GPL license.</p>

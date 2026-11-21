@@ -1,5 +1,4 @@
 ---
-
 title: "mysqld_multi(1)"
 name: "mysqld_multi"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mysqld_multi/"
 description: "mysqld_multi – manage multiple MySQL servers"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mysqld_multi &#8211; manage multiple MySQL servers </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqld_multi [</code><i>options</i><code>] {start|stop|report} [</code><i>GNR</i><code>[,</code><i>GNR</i><code>] &#8230;]</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>mysqld_multi</code></p>
 <dd>is designed to manage several <code>mysqld</code> processes that listen for connections on different Unix socket files and TCP/IP ports. It can start or stop servers, or report their current status. </dd>
 <dl>

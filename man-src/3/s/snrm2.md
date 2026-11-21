@@ -1,5 +1,4 @@
 ---
-
 title: "snrm2(3)"
 name: "snrm2"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-snrm2/"
 description: "snrm2.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> snrm2.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>snrm2</code> (N, X, INCX)<br />
  <i></i><code>SNRM2</code></p>

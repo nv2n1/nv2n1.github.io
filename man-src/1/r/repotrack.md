@@ -1,5 +1,4 @@
 ---
-
 title: "repotrack(1)"
 name: "repotrack"
 section: "1"
@@ -10,7 +9,9 @@ description: "repotrack – track a package and its dependencies and download th
 
 <h2>NAME</h2>
 <p> repotrack &#8211; track a package and its dependencies and download them</p>
+<h2>SYNOPSIS</h2>
 <p> <code>repotrack</code> [options] package1 [package2&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>repotrack</code> is a program for keeping track of a particular package and its dependencies. It will download one or more packages and all dependencies. </p>
 <h2>OPTIONS</h2>
 <dl>

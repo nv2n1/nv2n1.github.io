@@ -1,5 +1,4 @@
 ---
-
 title: "libxslt(3)"
 name: "libxslt"
 section: "3"
@@ -10,6 +9,7 @@ description: "libxslt – library used to do XSL transformations on XML document
 
 <h2>NAME</h2>
 <p> libxslt &#8211; library used to do XSL transformations on XML documents</p>
+<h2>DESCRIPTION</h2>
 <p> The <i>libxslt</i> library is used to do XSL transformations on XML documents that have been loaded into memory with functions from <i>libxml.</i> </p>
 <h2>FILES</h2>
 <dl>

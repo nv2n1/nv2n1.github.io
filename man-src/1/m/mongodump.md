@@ -1,5 +1,4 @@
 ---
-
 title: "mongodump(1)"
 name: "mongodump"
 section: "1"
@@ -10,6 +9,7 @@ description: "mongodump – MongoDB Data Dump Utility"
 
 <h2>NAME</h2>
 <p> mongodump &#8211; MongoDB Data Dump Utility</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mongodump</code> is a utility for creating a binary export of the contents of a database. Consider using this utility as part an effective <code>backup strategy</code>. Use <code>mongodump</code> in conjunction with <code>mongorestore</code> to restore databases. </p>
 <p> <code>mongodump</code> can read data from either <code>mongod</code> or <code>mongos</code> instances, in addition to reading directly from MongoDB data files without an active <code>mongod</code>. </p>
 <p> <code>SEE ALSO:</code> <code>mongorestore</code>, <a rel="nofollow" href="http://docs.mongodb.org/manual/tutorial/backup-sharded-cluster-with-database-dumps">http://docs.mongodb.org/manual/tutorial/backup-sharded-cluster-with-database-dumps</a> and <a rel="nofollow" href="http://docs.mongodb.org/manual/core/backups.">http://docs.mongodb.org/manual/core/backups.</a></p>

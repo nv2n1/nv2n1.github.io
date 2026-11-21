@@ -1,5 +1,4 @@
 ---
-
 title: "ldns-update(1)"
 name: "ldns-update"
 section: "1"
@@ -10,7 +9,9 @@ description: "ldns-update – send a dynamic update packet"
 
 <h2>NAME</h2>
 <p> ldns-update &#8211; send a dynamic update packet</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ldns-update </code> [ <i>zone</i> ] <i>ip</i> [ <i>tsig_name</i> <i>tsig_als</i> <i>tsig_hmac</i> ] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>ldns-update</code> is used to send a dynamic update packet. </p>
 <h2>OPTIONS</h2>
 <dl>

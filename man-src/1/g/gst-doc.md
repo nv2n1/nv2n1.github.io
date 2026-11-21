@@ -1,5 +1,4 @@
 ---
-
 title: "gst-doc(1)"
 name: "gst-doc"
 section: "1"
@@ -10,6 +9,7 @@ description: "gst-doc – GNU Smalltalk documentation generator"
 
 <h2>NAME</h2>
 <p> gst-doc &#8211; GNU Smalltalk documentation generator</p>
+<h2>DESCRIPTION</h2>
 <h3>Usage:</h3>
 <dl>
 <dt>

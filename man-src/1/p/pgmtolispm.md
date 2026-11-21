@@ -1,5 +1,4 @@
 ---
-
 title: "pgmtolispm(1)"
 name: "pgmtolispm"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pgmtolispm/"
 description: "pgmtolispm – convert a portable graymap into Lisp Machine format"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pgmtolispm &#8211; convert a portable graymap into Lisp Machine format </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pgmtolispm</code> [<i>pgmfile</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Reads a portable graymap as input. Produces a Lisp Machine bitmap as output. </p>
 <p> This is the file format read by the tv:read-bit-array-file function on TI Explorer and Symbolics lisp machines. </p>
 <p> Given a pgm (instead of a pbm) a multi-plane image will be output. This is probably not useful unless you have a color lisp machine. </p>

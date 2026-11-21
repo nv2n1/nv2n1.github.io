@@ -1,5 +1,4 @@
 ---
-
 title: "setup(1)"
 name: "setup"
 section: "1"
@@ -10,7 +9,9 @@ description: "setup – A text mode system configuration tool"
 
 <h2>NAME</h2>
 <p> setup &#8211; A text mode system configuration tool</p>
+<h2>SYNOPSIS</h2>
 <p> <code>setup</code></p>
+<h2>DESCRIPTION</h2>
 <p> The setuptool program (<code>setup</code>) is a front-end menu program for a group of other tools, mostly <code>system-config-*-tui</code> tools. The list of options which it presents is assembled by scanning /etc/setuptool.d and /usr/share/setuptool/setuptool.d for files. </p>
 <p> Each file in the directory should contain one or more lines of text. Each line contains from one to four fields which are separated by &quot;|&quot; characters. In order, they are:<br />
 &nbsp;<wbr>&nbsp;<wbr>&#8211; the path to the binary to invoke&nbsp;<wbr>(mandatory)<br />

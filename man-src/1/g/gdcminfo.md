@@ -1,5 +1,4 @@
 ---
-
 title: "gdcminfo(1)"
 name: "gdcminfo"
 section: "1"
@@ -8,9 +7,14 @@ url: "/docs/linux/man/1-gdcminfo/"
 description: "gdcminfo – .TH \"gdcminfo\" 1 \"Fri Oct 29 2010\" \"Version 2.0.16\" \"GDCM\""
 ---
 
+<h2 class="name">NAME</h2>
+<p> gdcminfo &#8211; .TH &quot;gdcminfo&quot; 1 &quot;Fri Oct 29 2010&quot; &quot;Version 2.0.16&quot; &quot;GDCM&quot; </p>
+<h2 class="name">NAME</h2>
+<p> gdcminfo &#8211; .SH &quot;SYNOPSIS&quot; </p>
 <pre>
 gdcminfo [options] file-in
 </pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>gdcminfo</code> command line program takes as input a DICOM file, or a directory and process it to extract meta- information about the DICOM file processed.</p>
 <h2>PARAMETERS</h2>
 <pre>

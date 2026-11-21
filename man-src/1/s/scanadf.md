@@ -1,5 +1,4 @@
 ---
-
 title: "scanadf(1)"
 name: "scanadf"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-scanadf/"
 description: "scanadf – acquire multiple images from a scanner equipped with an ADF"
 ---
 
+<h2 class="name">NAME</h2>
+<p> scanadf &#8211; acquire multiple images from a scanner equipped with an ADF </p>
+<h2>SYNOPSIS</h2>
 <p> <code>scanadf</code> [<code>-d</code>|<code>&#8211;device-name</code> <i>dev</i>] [<code>-h</code>|<code>&#8211;help</code>] [<code>-L</code>|<code>&#8211;list-devices</code>] [<code>-v</code>|<code>&#8211;verbose</code>] [<code>-V</code>|<code>&#8211;version</code>] [<code>-o</code>|<code>&#8211;output-file</code> <i>name</i>] [<code>-N</code>|<code>&#8211;no-overwrite</code>] [<code>-S</code>|<code>&#8211;scan-script</code> <i>name</i>] [<code>&#8211;script-wait</code>] [<code>-s</code>|<code>&#8211;start-count</code> <i>num</i>] [<code>-e</code>|<code>&#8211;end-count</code> <i>num</i>] [<code>-r</code>|<code>&#8211;raw</code>] [<i>device-specific-options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>scanadf</code> is a command-line interface to control image acquisition devices which are capable of returning a series of images (e.g. a scanner with an automatic document feeder (ADF)). The device is controlled via command-line options. After command-line processing, <code>scanadf</code> normally proceeds to acquire a series of images until the device returns the <code>SANE_STATUS_NO_DOCS</code> status code. </p>
 <p> The images are written to output files, specified by the <code>&#8211;output-file</code> option. These files are typically written in one of the PNM (portable aNyMaP) formats (PBM for black-and-white images, PGM for grayscale images, and PPM for color images). Several optional frame formats (SANE_FRAME_JPEG, SANE_FRAME_G31D, SANE_FRAME_G32D, SANE_FRAME_G42D, and SANE_FRAME_TEXT) are supported. In each case, the data is written out to the output file as-is without a header. Unrecognized frame formats are handled in the same way, although a warning message is printed in verbose mode. </p>
 <p> Typically, the optional frame formats are used in conjunction with a scan script (specified by the <code>&#8211;scanscript</code> option) which is invoked for each acquired image. The script is provided with a series of environment variables which describe the parameters and format of the image file. </p>

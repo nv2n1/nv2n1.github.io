@@ -1,5 +1,4 @@
 ---
-
 title: "texindex(1)"
 name: "texindex"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-texindex/"
 description: "texindex – sort Texinfo index files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> texindex &#8211; sort Texinfo index files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>texindex</code> [<i>,OPTION/</i>]&#8230; <i>,FILE/</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Generate a sorted index for each TeX output FILE. Usually FILE&#8230; is specified as `foo.??&#8217; for a document `foo.texi&#8217;.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "abrt-action-list-dsos(1)"
 name: "abrt-action-list-dsos"
 section: "1"
@@ -7,11 +6,22 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-action-list-dsos/"
 ---
 
-abrt-action-list-dsos - Prints out DSO from mapped memory regions. 
+<h2 class="name">NAME</h2>
+ 
 
-<i>abrt-action-list-dsos</i> [-o OUTFILE] -m PROC_PID_MAP_FILE
+ abrt-action-list-dsos - Prints out DSO from mapped memory regions. 
 
-The tool reads a file containing the mapped memory regions. Output is printed to <i>stdout</i> or <i>file</i>. 
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <i>abrt-action-list-dsos</i> [-o OUTFILE] -m PROC_PID_MAP_FILE
+
+<h2>DESCRIPTION</h2>
+
+ 
+
+ The tool reads a file containing the mapped memory regions. Output is printed to <i>stdout</i> or <i>file</i>. 
 
  Output format: 
 

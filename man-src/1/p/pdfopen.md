@@ -1,5 +1,4 @@
 ---
-
 title: "pdfopen(1)"
 name: "pdfopen"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-pdfopen/"
 description: "pdfopen, pdfclose – open or close a PDF file viewer"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pdfopen, pdfclose &#8211; open or close a PDF file viewer </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pdfopen </code> [ <i>options</i> ]&nbsp; [ <code>&#8211;file </code> ]&nbsp; <i>file.pdf</i><br />
  <code>pdfclose</code> [ <code>&#8211;file </code> ]&nbsp; <i>file.pdf</i></p>
 <h2>OPTIONS</h2>
@@ -27,6 +29,7 @@ description: "pdfopen, pdfclose – open or close a PDF file viewer"
 <h2>RATIONALE</h2>
 <p> At certain points of TeX document preparation, many people repeat a &quot;edit-compile-view&quot; cycle. Since PDF viewers such as Adobe&#8217;s Acrobat Reader (&quot;<code>acroread</code>&quot;) do not automatically refresh the display when the PDF file changes, this cycle can be more cumbersome than desired. The <code>pdfopen</code> program provides the ability to automate the reloading of the PDF document when it is changed. </p>
 <p> Note: there seems to be little need for <code>pdfclose</code> under GNU/Linux, since (unlike the situation for MS windows) <code>acroread</code> does not lock the PDF file, which would prevent <code>pdftex</code> (or a DVI to PDF converter) from creating a new version of the PDF output file. However, <code>pdfclose</code> is provided in case someone finds it useful.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pdfopen</code> searches for an instance of the specified (or default) PDF viewer displaying the specified PDF file. If there is already an instance of the given viewer displaying the given file, the viewer is instructed to reload the file. If no such instance is found, <code>pdfopen</code> attempts to run the specified viewer on the specified document. </p>
 <p> The default viewer is &quot;<code>acroread</code>&quot;, which could start any one of a number of versions of Acrobat Reader, depending on what is installed on your system. However, the commands to reload the current document vary from one version of <code>acroread</code> to another; consequently, if you are using a version of <code>acroread</code> other than AR9, you should explicitly specify the viewer program. </p>
 <p> This version of <code>pdfopen</code> accepts the following viewer options:<br />

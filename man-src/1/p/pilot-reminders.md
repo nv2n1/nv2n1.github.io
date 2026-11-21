@@ -1,5 +1,4 @@
 ---
-
 title: "pilot-reminders(1)"
 name: "pilot-reminders"
 section: "1"
@@ -12,7 +11,9 @@ description: "pilot-reminders – Exports your Palm Datebook database into a rem
 <p> pilot-reminders &#8211; Exports your Palm Datebook database into a remind(1) data file format.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>
+<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr><i>pilot-reminders</i>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;port</code>&nbsp;<wbr>&lt;<code>port</code>&gt;]&nbsp;<wbr>[<code>-q</code>|<code>&#8211;quiet</code>]&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr>[<code>-?</code>|<code>&#8211;help</code>]&nbsp;<wbr>[<code>&#8211;usage</code>]&nbsp;<wbr>[<code>-w</code>|<code>&#8211;write</code>] </p>
+<h2>DESCRIPTION</h2>
 <p> Your Datebook database will be written to STDOUT as it is converted unless redirected to a file. </p>
 <h2>OPTIONS</h2>
 <h3>Reminders Options</h3>

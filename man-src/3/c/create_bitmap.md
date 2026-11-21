@@ -1,5 +1,4 @@
 ---
-
 title: "create_bitmap(3)"
 name: "create_bitmap"
 section: "3"
@@ -10,8 +9,10 @@ description: "create_bitmap – Creates a memory bitmap. Allegro game programmin
 
 <h2>NAME</h2>
 <p> create_bitmap &#8211; Creates a memory bitmap. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>BITMAP *create_bitmap(int width, int height);</code></p>
+<h2>DESCRIPTION</h2>
 <p> Creates a memory bitmap sized width by height. The bitmap will have clipping turned on, and the clipping rectangle set to the full size of the bitmap. The image memory will not be cleared, so it will probably contain garbage: you should clear the bitmap before using it. This routine always uses the global pixel format, as specified by calling set_color_depth(). The minimum height of the BITMAP must be 1 and width can&#8217;t be negative. Example: </p>
 <pre><code>
 /* Create a 10 pixel tall bitmap, as wide as the screen. */

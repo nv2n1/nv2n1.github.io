@@ -1,5 +1,4 @@
 ---
-
 title: "pano_modify(1)"
 name: "pano_modify"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pano_modify/"
 description: "pano_modify – Change output parameters of project file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pano_modify &#8211; Change output parameters of project file </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pano_modify</code> [options] <i>input.pto</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>pano_modify</code> modifies a single Hugin .pto project.</p>
 <h2>OPTIONS</h2>
 <dl>

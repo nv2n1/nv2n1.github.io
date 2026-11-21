@@ -1,5 +1,4 @@
 ---
-
 title: "euca-modify-network-interface-attribute(1)"
 name: "euca-modify-network-interface-attribute"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-modify-network-interface-attribute – Modify an attribute of
 
 <h2>NAME</h2>
 <p> euca-modify-network-interface-attribute &#8211; Modify an attribute of a VPC network interface</p>
+<h2>SYNOPSIS</h2>
 <p> euca-modify-network-interface-attribute</p>
 <dl>
 <dt>(<code>-d</code> DESC | <code>&#8211;source-dest-check</code> (true|false)</dt>
 <dd> | <code>&#8211;group-id</code> GROUP | <code>-a</code> ATTACHMENT) [&#8211;delete-on-termination (true|false)] [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] INTERFACE</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Modify an attribute of a VPC network interface</p>
 <h3>positional arguments:</h3>
 <dl>

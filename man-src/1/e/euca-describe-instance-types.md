@@ -1,5 +1,4 @@
 ---
-
 title: "euca-describe-instance-types(1)"
 name: "euca-describe-instance-types"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-describe-instance-types – [Eucalyptus only] Show informatio
 
 <h2>NAME</h2>
 <p> euca-describe-instance-types &#8211; [Eucalyptus only] Show information about instance types</p>
+<h2>SYNOPSIS</h2>
 <p> euca-describe-instance-types [&#8211;by-zone] [&#8211;show-capacity]</p>
 <dl>
 <dt>[&#8211;show-empty-fields] [-U URL]</dt>
 <dd> [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] [INSTANCETYPE [INSTANCETYPE &#8230;]]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> [Eucalyptus only] Show information about instance types</p>
 <h3>positional arguments:</h3>
 <dl>

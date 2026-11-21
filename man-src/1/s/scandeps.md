@@ -1,5 +1,4 @@
 ---
-
 title: "scandeps(1)"
 name: "scandeps"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-scandeps/"
 description: "scandeps.pl – Scan file prerequisites"
 ---
 
+<h2 class="name">NAME</h2>
+<p> scandeps.pl &#8211; Scan file prerequisites </p>
+<h2>SYNOPSIS</h2>
 <pre>
     % scandeps.pl *.pm          # Print PREREQ_PM section for *.pm
     % scandeps.pl -e 'STRING'   # Scan an one-liner
@@ -16,6 +18,7 @@ description: "scandeps.pl – Scan file prerequisites"
     % scandeps.pl -R *.pm       # Don't recurse
     % scandeps.pl -C CACHEFILE  # use CACHEFILE to cache dependencies
 </pre>
+<h2>DESCRIPTION</h2>
 <p> <i>scandeps.pl</i> is a simple-minded utility that prints out the <tt>&quot;PREREQ_PM&quot;</tt> section needed by modules. </p>
 <p> If you have <font SIZE="-1"><code>CPANPLUS</code></font> installed, modules that are part of an earlier module&#8217;s distribution with be denoted with <tt>&quot;S&quot;</tt>; modules without a distribution name on <font SIZE="-1">CPAN</font> are marked with <tt>&quot;?&quot;</tt>. </p>
 <p> Also, if the <tt>&quot;-B&quot;</tt> option is specified, module belongs to a perl distribution on <font SIZE="-1">CPAN</font> (and thus uninstallable by <tt>&quot;CPAN.pm&quot;</tt> or <tt>&quot;CPANPLUS.pm&quot;</tt>) are marked with <tt>&quot;C&quot;</tt>. </p>

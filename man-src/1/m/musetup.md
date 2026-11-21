@@ -1,5 +1,4 @@
 ---
-
 title: "musetup(1)"
 name: "musetup"
 section: "1"
@@ -10,7 +9,9 @@ description: "Musetup – Configuration script for Museekd"
 
 <h2>NAME</h2>
 <p> <code>Musetup</code> &#8211; Configuration script for Museekd</p>
+<h2>SYNOPSIS</h2>
 <p> <code>musetup</code> &lt;<i>config-filename</i>&gt; [-h] [&#8211;help]</p>
+<h2>DESCRIPTION</h2>
 <p> Musetup is command-line Python script that configures <i><a href="/docs/linux/man/1-museekd/">museekd</a></i>(1). Configuration options are selected by entering one of the numbers displayed. Modifying those options are done by choosing an option&#8217;s number or by inputing text. </p>
 <h2>OPTIONS</h2>
 <p> Musetup accepts the following options:</p>

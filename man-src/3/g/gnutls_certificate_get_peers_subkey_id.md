@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_certificate_get_peers_subkey_id(3)"
 name: "gnutls_certificate_get_peers_subkey_id"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_certificate_get_peers_subkey_id – API function"
 
 <h2>NAME</h2>
 <p> gnutls_certificate_get_peers_subkey_id &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_certificate_get_peers_subkey_id(gnutls_session_t </code><i>session</i><code>, gnutls_datum_t * </code><i>id</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_certificate_get_peers_subkey_id – API function"
 <dd> is a gnutls session</dd>
 <dt>gnutls_datum_t * id</dt>
 <dd> will contain the ID</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Get the peer&#8217;s subkey ID when OpenPGP certificates are used. The returned <i>id</i> should be treated as constant.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise an error code is returned.</p>

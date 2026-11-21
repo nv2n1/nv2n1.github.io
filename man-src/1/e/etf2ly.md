@@ -1,5 +1,4 @@
 ---
-
 title: "etf2ly(1)"
 name: "etf2ly"
 section: "1"
@@ -10,7 +9,9 @@ description: "etf2ly – manual page for etf2ly (LilyPond) 2.12.2"
 
 <h2>NAME</h2>
 <p> etf2ly &#8211; manual page for etf2ly (LilyPond) 2.12.2</p>
+<h2>SYNOPSIS</h2>
 <p> <code>etf2ly</code> [<i>OPTION</i>]&#8230; <i>ETF-FILE</i></p>
+<h2>DESCRIPTION</h2>
 <p> Enigma Transport Format is a format used by Coda Music Technology&#8217;s Finale product. etf2ly converts a subset of ETF to a ready-to-use LilyPond file.</p>
 <h2>OPTIONS</h2>
 <dl>

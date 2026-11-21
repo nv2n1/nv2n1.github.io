@@ -1,5 +1,4 @@
 ---
-
 title: "list_config_entries(3)"
 name: "list_config_entries"
 section: "3"
@@ -10,8 +9,10 @@ description: "list_config_entries – Lists the names of all entries in a config
 
 <h2>NAME</h2>
 <p> list_config_entries &#8211; Lists the names of all entries in a config section Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>int list_config_entries(const char *section, const char ***names);</code></p>
+<h2>DESCRIPTION</h2>
 <p> This function can be used to get a list of all entries in the given config section. The names parameter is a pointer to an array of strings. If it points to a NULL pointer, the list will be allocated, else it will be re-allocated. You should free the list again with free_config_entries if you don&#8217;t need it anymore, or you can pass it again to list_config_entries and the memory will be re-used. See the following example for how you can use it, it will print out the complete contents of the current configuration: </p>
 <pre><code>
 int i, n;

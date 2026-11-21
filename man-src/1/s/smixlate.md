@@ -1,5 +1,4 @@
 ---
-
 title: "smixlate(1)"
 name: "smixlate"
 section: "1"
@@ -10,7 +9,9 @@ description: "smixlate – translate SMI/SPPI identifiers"
 
 <h2>NAME</h2>
 <p> smixlate &#8211; translate SMI/SPPI identifiers</p>
+<h2>SYNOPSIS</h2>
 <p> <code>smixlate</code> [ <code>-Vhm</code> ] [ <code>-c </code><i>file</i> ] [ <code>-p </code><i>module</i> ] [ <code>-l </code><i>level</i> ] <i>module(s)</i></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>smixlate</code> program is used to translate identifiers and especially OIDs into a more human readable format.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "init_dialog(3)"
 name: "init_dialog"
 section: "3"
@@ -10,8 +9,10 @@ description: "init_dialog – Low level initialisation of a dialog. Allegro game
 
 <h2>NAME</h2>
 <p> init_dialog &#8211; Low level initialisation of a dialog. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>DIALOG_PLAYER *init_dialog(DIALOG *dialog, int focus_obj);</code></p>
+<h2>DESCRIPTION</h2>
 <p> This function provides lower level access to the same functionality as do_dialog(), but allows you to combine a dialog box with your own program control structures. It initialises a dialog, returning a pointer to a player object that can be used with update_dialog() and shutdown_dialog(). With these functions, you could implement your own version of do_dialog() with the lines: </p>
 <pre><code>
 DIALOG_PLAYER *player = init_dialog(dialog, focus_obj);

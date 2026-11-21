@@ -1,5 +1,4 @@
 ---
-
 title: "dvips(1)"
 name: "dvips"
 section: "1"
@@ -7,8 +6,11 @@ letter: "d"
 url: "/docs/linux/man/1-dvips/"
 description: "dvips – convert a TeX DVI file to PostScript"
 ---
-
+<h2 class="name">NAME</h2>
+<p> dvips - convert a TeX DVI file to PostScript </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dvips</code> [<i>OPTIONS</i>] <i>file</i>[<code>.dvi</code>]  </p>
+<h2>DESCRIPTION</h2>
 <p> THIS MAN PAGE IS OBSOLETE! See the Texinfo documentation instead. You can read it either in Emacs or with the standalone <code>info</code> program which comes with the GNU texinfo distribution as <a href="ftp://ftp.gnu.org">ftp.gnu.org</a>:pub/gnu/texinfo/texinfo*.tar.gz. </p>
 <p> The program <code>dvips</code> takes a DVI file <i>file</i>[<code>.dvi</code>] produced by TeX (or by some other processor such as GFtoDVI) and converts it to PostScript, sending the output to a file or directly to a printer. The DVI file may be specified without the <code>.dvi</code> extension. Fonts used may either be resident in the printer or defined as bitmaps in PK files, or a `virtual&#8217; combination of both. If the <code>mktexpk</code> program is installed, <code>dvips</code> will automatically invoke METAFONT to generate fonts that don&#8217;t already exist. </p>
 <p> For more information, see the Texinfo manual <i>dvips.texi</i>, which should be installed somewhere on your system, hopefully accessible through the standard Info tree.  </p>

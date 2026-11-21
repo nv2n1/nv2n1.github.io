@@ -1,5 +1,4 @@
 ---
-
 title: "csytf2_rook(3)"
 name: "csytf2_rook"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-csytf2_rook/"
 description: "csytf2_rook.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> csytf2_rook.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>csytf2_rook</code> (UPLO, N, A, LDA, IPIV, INFO)<br />
  <i></i><code>CSYTF2_ROOK</code> computes the factorization of a complex symmetric indefinite matrix using the bounded Bunch-Kaufman (&#8216;rook&#8217;) diagonal pivoting method (unblocked algorithm).</p>

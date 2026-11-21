@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_gsi_proxy_sign_req/"
 description: "Proxy Operations –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Proxy Operations &#8211; </p>
 <p> Initiate a proxy operation.</p>
 <h3>Functions</h3>
 <p> globus_result_t <code>globus_gsi_proxy_create_req</code> (<code>globus_gsi_proxy_handle_t</code> handle, BIO *output_bio)<br />

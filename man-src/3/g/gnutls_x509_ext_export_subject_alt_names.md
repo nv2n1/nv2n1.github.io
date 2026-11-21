@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_ext_export_subject_alt_names(3)"
 name: "gnutls_x509_ext_export_subject_alt_names"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_ext_export_subject_alt_names – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_ext_export_subject_alt_names &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509-ext.h&gt;</code> </p>
 <p> <code>int gnutls_x509_ext_export_subject_alt_names(gnutls_subject_alt_names_t </code><i>sans</i><code>, gnutls_datum_t * </code><i>ext</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_x509_ext_export_subject_alt_names – API function"
 <dd> The alternative names structure</dd>
 <dt>gnutls_datum_t * ext</dt>
 <dd> The DER-encoded extension data; must be freed using <code>gnutls_free()</code>.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will convert the provided alternative names structure to a DER-encoded SubjectAltName PKIX extension. The output data in <i>ext</i> will be allocated using <code>gnutls_malloc()</code>.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

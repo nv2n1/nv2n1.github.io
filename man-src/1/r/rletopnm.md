@@ -1,5 +1,4 @@
 ---
-
 title: "rletopnm(1)"
 name: "rletopnm"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-rletopnm/"
 description: "rletopnm – convert a Utah Raster Tools RLE image file into a PNM image file."
 ---
 
+<h2 class="name">NAME</h2>
+<p> rletopnm &#8211; convert a Utah Raster Tools RLE image file into a PNM image file. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>rletopnm</code> [<code>&#8211;alphaout=</code>{<i>alpha-filename</i>,<code>&#8211;</code>}] [<code>&#8211;headerdump</code>|<code>-h</code>] [<code>&#8211;verbose</code>|<code>-v</code>] [<code>&#8211;plain</code>|<code>-p</code>] [<i>rlefile</i>|<i></i><code>&#8211;</code>] </p>
 <p> All options may be abbreviated to their minimum unique abbreviation and options and arguments may be in any order. </p>
+<h2>DESCRIPTION</h2>
 <p> This program converts Utah Raster Toolkit RLE image files into PNM image files. <code>rletopnm</code> handles four types of RLE files: Grayscale (8 bit data, no color map), Pseudocolor (8 bit data with a color map), Truecolor (24 bit data with color map), and Directcolor (24 bit data, no color map). <code>rletopnm</code> generates a PPM file for all these cases except for the Grayscale file, for which <code>rletopnm</code> generates a PGM file. </p>
 <p> <i>rlefile</i> is the RLE input file. If it is absent or <code>&#8211;</code>, the input comes from Standard Input. </p>
 <h2>OPTIONS</h2>

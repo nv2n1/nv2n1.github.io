@@ -1,5 +1,4 @@
 ---
-
 title: "getcert-add-scep-ca(1)"
 name: "getcert-add-scep-ca"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-getcert-add-scep-ca/"
 description: "getcert"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getcert</p>
+<h2>SYNOPSIS</h2>
 <p> getcert add-scep-ca [options] </p>
+<h2>DESCRIPTION</h2>
 <p> Adds a CA configuration to <i>certmonger</i>, which can subsequently be used to enroll certificates. The configuration will use the bundled <i>scep-submit</i> helper. The <i>add-scep-ca</i> command is more or less a wrapper for the <i>add-ca</i> command. </p>
 <h2>OPTIONS</h2>
 <dl>

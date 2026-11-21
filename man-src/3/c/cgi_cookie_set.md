@@ -1,5 +1,4 @@
 ---
-
 title: "cgi_cookie_set(3)"
 name: "cgi_cookie_set"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cgi_cookie_set/"
 description: "cgi_cookie_set – Set a browser Cookie"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cgi_cookie_set &#8211; Set a browser Cookie </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cgi/cgi.h&gt;
 </code></pre>
@@ -27,6 +29,7 @@ NEOERR *cgi_cookie_set(CGI *cgi, const char *name, const char *value,
  domain. Default is none, which is interpreted by<br />
  the browser as the sending domain only.<br />
  time_str &#8211; expiration time string in the following format </p>
+<h2>DESCRIPTION</h2>
 <p> cgi_cookie_set will issue a Set-Cookie header that should cause a browser to return a cookie when required. Note this function does no escaping of anything, you have to take care of that first. </p>
 <p> HH:MM: SS GMT. Only used if persistent. Default is one year from time of call. persistent &#8211; cookie will be stored by the browser between sessions secure &#8211; cookie will only be sent over secure connections </p>
 <h2>RETURN VALUE</h2>

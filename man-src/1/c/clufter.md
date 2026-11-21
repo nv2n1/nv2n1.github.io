@@ -1,5 +1,4 @@
 ---
-
 title: "clufter(1)"
 name: "clufter"
 section: "1"
@@ -10,7 +9,9 @@ description: "clufter – CLUster FilTER"
 
 <h2>NAME</h2>
 <p> clufter &#8211; CLUster FilTER</p>
+<h2>SYNOPSIS</h2>
 <p> <code>clufter</code> [<i>&lt;global option&gt; </i>&#8230;] [<i>&lt;cmd&gt; </i>[<i>&lt;cmd option </i>&#8230;<i>&gt;</i>]]</p>
+<h2>DESCRIPTION</h2>
 <p> Tool/library for transforming/analyzing cluster configuration formats </p>
 <p> While primarily aimed at (CMAN,rgmanager)-&gt;(Corosync/CMAN,Pacemaker) cluster stacks configuration conversion (as per RHEL trend), the command-filter-format framework (capable of XSLT) offers also other uses through its plugin library.</p>
 <h3>Commands (as available, but stable); built-in only, use &#8211;list to get all:</h3>

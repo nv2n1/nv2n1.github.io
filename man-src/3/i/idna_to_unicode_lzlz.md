@@ -1,5 +1,4 @@
 ---
-
 title: "idna_to_unicode_lzlz(3)"
 name: "idna_to_unicode_lzlz"
 section: "3"
@@ -10,6 +9,7 @@ description: "idna_to_unicode_lzlz – API function"
 
 <h2>NAME</h2>
 <p> idna_to_unicode_lzlz &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;idna.h&gt;</code> </p>
 <p> <code>int idna_to_unicode_lzlz(const char * </code><i>input</i><code>, char ** </code><i>output</i><code>, int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "idna_to_unicode_lzlz – API function"
 <dd> pointer to newly allocated output string encoded in the current locale&#8217;s character set.</dd>
 <dt>int flags</dt>
 <dd> an <code>Idna_flags</code> value, e.g., <code>IDNA_ALLOW_UNASSIGNED</code> or <code>IDNA_USE_STD3_ASCII_RULES</code>.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Convert possibly ACE encoded domain name in the locale&#8217;s character set into a string encoded in the current locale&#8217;s character set. The domain name may contain several labels, separated by dots. The output buffer must be deallocated by the caller.</p>
 <h2>RETURN VALUE</h2>
 <p> Returns <code>IDNA_SUCCESS</code> on success, or error code.</p>

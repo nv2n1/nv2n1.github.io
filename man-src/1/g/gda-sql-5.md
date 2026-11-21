@@ -1,5 +1,4 @@
 ---
-
 title: "gda-sql-5(1)"
 name: "gda-sql-5"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-gda-sql-5/"
 description: "gda-sql – an SQL console based on Libgda"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gda-sql &#8211; an SQL console based on Libgda</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gda-sql</code> [&#8211;help] [-v] [&#8211;version] [-o] [&#8211;output-file <i>&lt;filename&gt;</i>] [-C] [&#8211;command] [-f] [&#8211;commands-file <i>&lt;filename&gt;</i>] [-i] [&#8211;interactive] [-l] [&#8211;list-dsn] [-L] [&#8211;list-providers] [-s] [&#8211;http-port <i>&lt;port&gt;</i>] [-t] [&#8211;http-token <i>&lt;token phrase&gt;</i>] [&#8211;data-files-list] [&#8211;data-files-purge <i>&lt;criteria&gt;</i>] [connection&#8217;s spec] [connection&#8217;s spec&#8230;] </p>
+<h2>DESCRIPTION</h2>
 <p> gda-sql is an SQL console based on the <i>Libgda</i> library. </p>
 <p> It enables you to type in queries interactively, issue them to be executed by a connection, and see the query results. </p>
 <p> Several connections can be opened at the same time, allowing you to switch the active connection to any opened connection. When starting, gda-sql opens a connection for each connection specified on the command line (plus optionally one corresponding to the <code>GDA_SQL_CNC</code> environment variable). The prompt indicates the current connection used when executing commands. See the <code>.c</code> internal command for an explanation about the syntax to specify a connection on the command line. </p>

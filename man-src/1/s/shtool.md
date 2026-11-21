@@ -1,5 +1,4 @@
 ---
-
 title: "shtool(1)"
 name: "shtool"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-shtool/"
 description: "GNU shtool – The GNU Portable Shell Tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> GNU shtool &#8211; The GNU Portable Shell Tool </p>
 <h2>VERSION</h2>
 <p> <font SIZE="-1">GNU</font> shtool <font SIZE="-1">2.0.8 (18-Jul-2008)</font></p>
+<h2>SYNOPSIS</h2>
 <p> <code>shtool</code> [ <i>global_options</i> ] <i>command</i> [ <i>command_options</i> ] [ <i>command_args</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <font SIZE="-1"><code>GNU</code></font><code> shtool</code> is a compilation of small but very stable and portable shell scripts into a single shell tool. All ingredients were in successful use over many years in various free software projects. The compiled <code>shtool</code> script is intended to be used inside the source tree of those free software packages. There it can take over various (usually non-portable) tasks related to the building and installation of such packages.</p>
 <h2>GLOBAL OPTIONS</h2>
 <p> The following <i>global options</i> are available for <code>shtool</code>. Any <i>command</i>s are ignored if one of them is present on the <code>shtool</code> command line.</p>

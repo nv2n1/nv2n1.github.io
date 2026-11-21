@@ -1,5 +1,4 @@
 ---
-
 title: "fntsample(1)"
 name: "fntsample"
 section: "1"
@@ -10,8 +9,10 @@ description: "fntsample – PDF and PostScript font samples generator"
 
 <h2>NAME</h2>
 <p> fntsample &#8211; PDF and PostScript font samples generator</p>
+<h2>SYNOPSIS</h2>
 <p> <code>fntsample</code> <code>[ </code><i>OPTIONS</i><code> ]</code> <code>-f </code><i>FONT-FILE</i><code> -o </code><i>OUTPUT-FILE</i><br />
  <code>fntsample -h</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>fntsample</code> program can be used to generate font samples that show Unicode coverage of the font and are similar in appearance to Unicode charts. Samples can be saved into PDF (default) or PostScript file.</p>
 <h2>OPTIONS</h2>
 <p> <code>fntsample</code> supports the following options.</p>

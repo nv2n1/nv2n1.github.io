@@ -1,5 +1,4 @@
 ---
-
 title: "twistd(1)"
 name: "twistd"
 section: "1"
@@ -10,7 +9,9 @@ description: "twistd – run Twisted applications (TACs, TAPs)"
 
 <h2>NAME</h2>
 <p> twistd &#8211; run Twisted applications (TACs, TAPs)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>twistd</code> [options]</p>
+<h2>DESCRIPTION</h2>
 <p> Read a twisted.application.service.Application out of a file and run it.</p>
 <h2>OPTIONS</h2>
 <p> <code>-n</code>, <code>&#8211;nodaemon</code> Don&#8217;t daemonize (stay in foreground).</p>

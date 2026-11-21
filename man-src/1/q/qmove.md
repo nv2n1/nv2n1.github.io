@@ -1,5 +1,4 @@
 ---
-
 title: "qmove(1)"
 name: "qmove"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-qmove/"
 description: "qmove – move pbs batch job"
 ---
 
+<h2 class="name">NAME</h2>
+<p> qmove &#8211; move pbs batch job </p>
+<h2>SYNOPSIS</h2>
 <p> qmove destination job_identifier &#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> To move a job is to remove the job from the queue in which it resides and instantiate the job in another queue. The <code>qmove</code> command issues a <i>Move Job</i> batch request to the batch server that currently owns each job specified by <i> </p>
 <p> A job in the </i><code>Running ,</code> <code>Transiting ,</code> or <code>Exiting</code> state cannot be moved.</p>
 <h2>OPERANDS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "cunml2(3)"
 name: "cunml2"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cunml2/"
 description: "cunml2.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cunml2.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cunml2</code> (SIDE, TRANS, M, N, K, A, LDA, TAU, C, LDC, WORK, INFO)<br />
  <i></i><code>CUNML2</code> multiplies a general matrix by the unitary matrix from a LQ factorization determined by cgelqf (unblocked algorithm).</p>

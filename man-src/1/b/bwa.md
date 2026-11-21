@@ -1,5 +1,4 @@
 ---
-
 title: "bwa(1)"
 name: "bwa"
 section: "1"
@@ -10,6 +9,7 @@ description: "bwa – Burrows-Wheeler Alignment Tool"
 
 <h2>NAME</h2>
 <p> bwa &#8211; Burrows-Wheeler Alignment Tool</p>
+<h2>SYNOPSIS</h2>
 <p> bwa index ref.fa </p>
 <p> bwa mem ref.fa reads.fq &gt; aln-se.sam </p>
 <p> bwa mem ref.fa read1.fq read2.fq &gt; aln-pe.sam </p>
@@ -17,6 +17,7 @@ description: "bwa – Burrows-Wheeler Alignment Tool"
 <p> bwa samse ref.fa aln_sa.sai short_read.fq &gt; aln-se.sam </p>
 <p> bwa sampe ref.fa aln_sa1.sai aln_sa2.sai read1.fq read2.fq &gt; aln-pe.sam </p>
 <p> bwa bwasw ref.fa long_read.fq &gt; aln.sam </p>
+<h2>DESCRIPTION</h2>
 <p> BWA is a software package for mapping low-divergent sequences against a large reference genome, such as the human genome. It consists of three algorithms: BWA-backtrack, BWA-SW and BWA-MEM. The first algorithm is designed for Illumina sequence reads up to 100bp, while the rest two for longer sequences ranged from 70bp to 1Mbp. BWA-MEM and BWA-SW share similar features such as long-read support and split alignment, but BWA-MEM, which is the latest, is generally recommended for high-quality queries as it is faster and more accurate. BWA-MEM also has better performance than BWA-backtrack for 70-100bp Illumina reads. </p>
 <p> For all the algorithms, BWA first needs to construct the FM-index for the reference genome (the <code>index</code> command). Alignment algorithms are invoked with different sub-commands: <code>aln</code>/<code>samse</code>/<code>sampe</code> for BWA-backtrack, <code>bwasw</code> for BWA-SW and <code>mem</code> for the BWA-MEM algorithm. </p>
 <h2>COMMANDS AND OPTIONS</h2>

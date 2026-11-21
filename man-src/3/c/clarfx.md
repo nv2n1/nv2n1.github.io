@@ -1,5 +1,4 @@
 ---
-
 title: "clarfx(3)"
 name: "clarfx"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-clarfx/"
 description: "clarfx.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> clarfx.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clarfx</code> (SIDE, M, N, V, TAU, C, LDC, WORK)<br />
  <i></i><code>CLARFX</code> applies an elementary reflector to a general rectangular matrix, with loop unrolling when the reflector has order ≤ 10.</p>

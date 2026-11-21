@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_gss_assist_display_status/"
 description: "GSSAPI Result Status Strings –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> GSSAPI Result Status Strings &#8211; </p>
 <p> Display Error Status from a GSSAPI Result.</p>
 <h3>Functions</h3>
 <p> OM_uint32 <code>globus_gss_assist_display_status</code> (FILE *fp, char *comment, OM_uint32 major_status, OM_uint32 minor_status, int token_status) </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "fribidi_reorder_nsm_status(3)"
 name: "fribidi_reorder_nsm_status"
 section: "3"
@@ -7,13 +6,20 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_reorder_nsm_status/"
 ---
 
-fribidi_reorder_nsm_status - get current marks reordering status 
+<h2 class="name">NAME</h2>
+ 
 
-<b> #include &lt;fribidi.h&gt; 
+ fribidi_reorder_nsm_status - get current marks reordering status 
+
+<h2>SYNOPSIS</h2>
+
+ <b> #include &lt;fribidi.h&gt; 
 
  extern fribidi_boolean fribidi_reorder_nsm_status(void); </b>
 
-This function is deprecated and only used with other deprecated functions.
+<h2>DESCRIPTION</h2>
+
+ This function is deprecated and only used with other deprecated functions.
 
 <h2>SEE ALSO</h2>
 

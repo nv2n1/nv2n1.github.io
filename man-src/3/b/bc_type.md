@@ -1,5 +1,4 @@
 ---
-
 title: "bc_type(3)"
 name: "bc_type"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-bc_type/"
 description: "QuantLib::ExplicitEuler – Forward Euler scheme for finite difference methods"
 ---
 
+<h2 class="name">NAME</h2>
+<p> QuantLib::ExplicitEuler &#8211; Forward Euler scheme for finite difference methods </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/methods/finitedifferences/expliciteuler.hpp&gt; </p>
 <p> Inherits <code>MixedScheme&lt; Operator &gt;</code>. </p>
 <h3>Public Types</h3>

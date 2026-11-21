@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_openpgp_crt_verify_self(3)"
 name: "gnutls_openpgp_crt_verify_self"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_openpgp_crt_verify_self – API function"
 
 <h2>NAME</h2>
 <p> gnutls_openpgp_crt_verify_self &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>
 <p> <code>int gnutls_openpgp_crt_verify_self(gnutls_openpgp_crt_t </code><i>key</i><code>, unsigned int </code><i>flags</i><code>, unsigned int * </code><i>verify</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_openpgp_crt_verify_self – API function"
 <dd> unused (should be 0)</dd>
 <dt>unsigned int * verify</dt>
 <dd> will hold the key verification output.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Verifies the self signature in the key. The key verification output will be put in <i>verify</i> and will be one or more of the gnutls_certificate_status_t enumerated elements bitwise or&#8217;d.</p>
 <h2>RETURNS</h2>
 <p> <code>GNUTLS_E_SUCCESS</code> on success, or an error code.</p>

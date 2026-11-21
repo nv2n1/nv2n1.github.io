@@ -1,5 +1,4 @@
 ---
-
 title: "libnetpbm_image(3)"
 name: "libnetpbm_image"
 section: "3"
@@ -9,6 +8,9 @@ description: "libnetpbm_image – overview of netpbm image-processing functions"
 ---
 
 <p>Table Of Contents</p>
+<h2 class="name">NAME</h2>
+<p> libnetpbm_image &#8211; overview of netpbm image-processing functions </p>
+<h2>DESCRIPTION</h2>
 <p> This reference manual covers functions in the <code>libnetpbm</code> library for processing images, using the Netpbm image formats and the <code>libnetpbm</code> in-memory image formats. </p>
 <p> For historical reasons as well as to avoid clutter, it does not cover the largely obsolete PBM, PGM, PPM, and PNM classes of <code>libnetpbm</code> functions. For those, see <code>PBM</code> Function Manual (1) , <code>PGM</code>Function<code>Manual</code>(1) , <code>PPM</code>Function<code>Manual</code>(1) , and <code>PNM</code>Function<code>Manual</code>(1) <code>te that you do </code><i>not</i> need those functions to process PBM, PGM, PPM, and PNM images. The functions in this manual are sufficient for that. </p>
 <p> The PPM drawing functions are covered separately in <code>PPM</code>Drawing<code>Function</code>Manual<code>(1)</code> </p>

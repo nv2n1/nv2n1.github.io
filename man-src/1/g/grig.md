@@ -1,5 +1,4 @@
 ---
-
 title: "grig(1)"
 name: "grig"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-grig/"
 description: "grig – graphical user interface for the Ham Radio Control Libraries (hamlib)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> grig &#8211; graphical user interface for the Ham Radio Control Libraries (hamlib)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>grig</code> [<i>OPTION</i>]&#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> Grig is a simple Ham Radio control (CAT) program based on the Ham Radio Control Libraries. It is intended to be highly generic presenting the user to the same graphical user interface regardless of which radio is being controlled. </p>
 <p> Grig does not store any radio configuration, instead it takes a number of command line options.</p>
 <dl>

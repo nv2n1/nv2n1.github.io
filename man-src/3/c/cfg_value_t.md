@@ -1,5 +1,4 @@
 ---
-
 title: "cfg_value_t(3)"
 name: "cfg_value_t"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cfg_value_t/"
 description: "cfg_value_t – Data structure holding the value of a fundamental option value."
 ---
 
+<h2 class="name">NAME</h2>
+<p> cfg_value_t &#8211; Data structure holding the value of a fundamental option value. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;confuse.h&gt; </p>
 <h3>Data Fields</h3>
 <p> long int <code>number</code><br />

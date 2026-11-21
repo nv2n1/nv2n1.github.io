@@ -1,5 +1,4 @@
 ---
-
 title: "frepple(1)"
 name: "frepple"
 section: "1"
@@ -10,9 +9,11 @@ description: "frepple – open source production planning and scheduling"
 
 <h2>NAME</h2>
 <p> frepple &#8211; open source production planning and scheduling </p>
+<h2>SYNOPSIS</h2>
 <p> <code>frepple [options]</code> <i>&lt;files&gt;</i><br />
  <code>frepple [options]</code> <i>&lt;directories&gt;</i><br />
  <code>frepple [options]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> FrePPLe is an open source production planning and scheduling application. </p>
 <p> This program reads XML input data, and also embeds a Python interpeter to execute instructions in the Python language. </p>
 <p> The input data can be provided in the following ways:<br />

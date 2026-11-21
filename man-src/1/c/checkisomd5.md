@@ -1,5 +1,4 @@
 ---
-
 title: "checkisomd5(1)"
 name: "checkisomd5"
 section: "1"
@@ -10,7 +9,9 @@ description: "checkisomd5 — check an MD5 checksum implanted by implantisomd5"
 
 <h2>NAME</h2>
 <p> checkisomd5 &#8212; check an MD5 checksum implanted by <code>implantisomd5</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>checkisomd5</code> [<code>&#8211;md5sumonly</code>] [<code>&#8211;verbose</code>] [<code>&#8211;gauge</code>] [isofilename | blockdevice ]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>checkisomd5</code> command. <code>checkisomd5</code> is a program that checks an embedded MD5 checksum in a ISO9660 image (.iso), or block device. The checksum is embedded by the corresponding <code>implantisomd5</code> command. </p>
 <p> The check can be aborted by pressing Esc key.</p>
 <h2>EXIT STATUS</h2>

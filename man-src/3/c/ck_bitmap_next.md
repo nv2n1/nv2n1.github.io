@@ -1,5 +1,4 @@
 ---
-
 title: "ck_bitmap_next(3)"
 name: "ck_bitmap_next"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_bitmap_next – iterate to the next set bit in bitmap"
 <p> <code>ck_bitmap_next</code> &#8211; iterate to the next set bit in bitmap</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_bitmap.h Ft bool Fn ck_bitmap_next ck_bitmap_t *bitmap ck_bitmap_iterator_t iterator unsigned int *bit</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_bitmap_next function will increment the iterator object pointed to by Fa iterator to point to the next set bit in the bitmap. If Fn ck_bitmap_next returns <code>true</code> then the pointer pointed to by Fa bit is initialized to the number of the current set bit pointed to by the Fa iterator object. </p>
 <p> It is expected that Fa iterator has been initialized using the ck_bitmap_iterator_init3 function.</p>
 <h2>RETURN VALUES</h2>

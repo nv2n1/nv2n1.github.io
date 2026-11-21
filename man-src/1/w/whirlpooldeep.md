@@ -1,5 +1,4 @@
 ---
-
 title: "whirlpooldeep(1)"
 name: "whirlpooldeep"
 section: "1"
@@ -8,14 +7,17 @@ url: "/docs/linux/man/1-whirlpooldeep/"
 description: "md5deep – Compute and compare MD5 message digests sha1deep – Compute and compare SHA-1 message digests sha256deep – Compute and compare SHA-256 message digests sha3deep – Compute and compare SHA-3-..."
 ---
 
+<h2 class="name">NAME</h2>
 <p> md5deep &#8211; Compute and compare MD5 message digests<br />
  sha1deep &#8211; Compute and compare SHA-1 message digests<br />
  sha256deep &#8211; Compute and compare SHA-256 message digests<br />
  sha3deep &#8211; Compute and compare SHA-3-256 message digests<br />
  tigerdeep &#8211; Compute and compare Tiger message digests<br />
  whirlpooldeep &#8211; Compute and compare Whirlpool message digests</p>
+<h2>SYNOPSIS</h2>
 <p> <code>md5deep </code> -v | -V | -h<br />
  <code>md5deep</code> [-m|-M|-x|-X &lt;file&gt;] [-a|-A &lt;hash&gt;] [-f &lt;file&gt;] [-p &lt;size&gt;] [-i &lt;size&gt;] [-tnwzresS0lbkqZud] [-F &lt;bum&gt;] [-o &lt;fbcplsde&gt;] [-j &lt;num&gt;] [[<code>FILES</code>] </p>
+<h2>DESCRIPTION</h2>
 <p> Computes the hashes, or message digest, for any number of files while optionally recursively digging through the directory structure. Can also take a list of known hashes and display the filenames of input files whose hashes either do or do not match any of the known hashes. Errors are reported to standard error. If no FILES are specified, reads from standard input. </p>
 <dl>
 <dt><code>-p &lt;size&gt; </code></dt>

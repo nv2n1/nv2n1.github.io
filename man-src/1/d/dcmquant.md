@@ -1,5 +1,4 @@
 ---
-
 title: "dcmquant(1)"
 name: "dcmquant"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-dcmquant/"
 description: "dcmquant – Convert DICOM color images to palette color"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dcmquant &#8211; Convert DICOM color images to palette color </p>
+<h2>SYNOPSIS</h2>
 <pre>
 dcmquant [options] dcmfile-in dcmfile-out
 </pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>dcmquant</code> utility reads a DICOM color image, computes a palette color look-up table of the desired size for this image (based on the median cut algorithm published by Paul Heckbert) and converts the color image into a DICOM palette color image.</p>
 <h2>PARAMETERS</h2>
 <pre>

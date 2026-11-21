@@ -1,5 +1,4 @@
 ---
-
 title: "airodump-ng(1)"
 name: "airodump-ng"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-airodump-ng/"
 description: "airodump-ng – a wireless packet capture tool for aircrack-ng"
 ---
 
+<h2 class="name">NAME</h2>
+<p> airodump-ng &#8211; a wireless packet capture tool for aircrack-ng </p>
+<h2>SYNOPSIS</h2>
 <p> <code>airodump-ng</code> [options] &lt;interface name&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>airodump-ng</code> is used for packet capturing of raw 802.11 frames for the intent of using them with aircrack-ng. If you have a GPS receiver connected to the computer, airodump-ng is capable of logging the coordinates of the found access points. Additionally, airodump-ng writes out a text file containing the details of all access points and clients seen.</p>
 <h2>OPTIONS</h2>
 <dl>

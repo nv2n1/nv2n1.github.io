@@ -1,5 +1,4 @@
 ---
-
 title: "llc(1)"
 name: "llc"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-llc/"
 description: "llc – LLVM static compiler"
 ---
 
+<h2 class="name">NAME</h2>
+<p> llc &#8211; LLVM static compiler </p>
+<h2>SYNOPSIS</h2>
 <p> <code>llc</code> [<i>options</i>] [<i>filename</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>llc</code> command compiles <font SIZE="-1">LLVM</font> source inputs into assembly language for a specified architecture. The assembly language output can then be passed through a native assembler and linker to generate a native executable. </p>
 <p> The choice of architecture for the output assembly code is automatically determined from the input file, unless the <code>-march</code> option is used to override the default.</p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "hp-config_usb_printer(1)"
 name: "hp-config_usb_printer"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-hp-config_usb_printer/"
 description: "hp-config_usb_printer – HP device config using USB"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hp-config_usb_printer &#8211; HP device config using USB </p>
+<h2>DESCRIPTION</h2>
 <p> Udev invokes this tool. Tool detects the plugin, Smart Install (C/DVD-ROM) issues and notifies to logged-in user. Tool also downloads firmware to the device.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>hp-config_usb_printer [OPTIONS] [USB bus:device]</code></p>
 <h2>OPTIONS</h2>
 <dl>

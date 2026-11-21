@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_ia_free_client_credentials(3)"
 name: "gnutls_ia_free_client_credentials"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_ia_free_client_credentials – Used to free an allocated #g
 
 <h2>NAME</h2>
 <p> gnutls_ia_free_client_credentials &#8211; Used to free an allocated #gnutls_ia_client_credentials_t structure</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/extra.h">gnutls/extra.h</a>&gt;</code> </p>
 <p> <code>void gnutls_ia_free_client_credentials(gnutls_ia_client_credentials_t </code><i>sc</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_ia_client_credentials_t sc</dt>
 <dd> is a <code>gnutls_ia_client_credentials_t</code> structure.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This structure is complex enough to manipulate directly thus this helper function is provided in order to free (deallocate) it.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bug-gnutls [at] gnu.org&gt;. GnuTLS home page: <a rel="nofollow" href="http://www.gnu.org/software/gnutls/">http://www.gnu.org/software/gnutls/</a> General help using GNU software: <a rel="nofollow" href="http://www.gnu.org/gethelp/">http://www.gnu.org/gethelp/</a></p>

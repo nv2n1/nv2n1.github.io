@@ -1,5 +1,4 @@
 ---
-
 title: "monodocs2html(1)"
 name: "monodocs2html"
 section: "1"
@@ -10,7 +9,9 @@ description: "monodocs2html – Translate Monodoc XML to HTML"
 
 <h2>NAME</h2>
 <p> monodocs2html &#8211; Translate Monodoc XML to HTML</p>
+<h2>SYNOPSIS</h2>
 <p> <code>monodocs2html </code> -source:SOURCE_DIR -dest:DEST_DIR [OPTIONS]*</p>
+<h2>DESCRIPTION</h2>
 <p> <i>monodocs2html</i> has been obsoleted by <code><a href="/docs/linux/man/1-mdoc/">mdoc</a></code>(1). See the <code><a href="/docs/linux/man/1-mdoc-export-html/">mdoc-export-html</a></code>(1) man page. </p>
 <p> <i>monodocs2html</i> is a program that creates HTML documentation from the Monodoc documentation XML files.</p>
 <h2>OPTIONS</h2>

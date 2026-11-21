@@ -1,5 +1,4 @@
 ---
-
 title: "salt-key(1)"
 name: "salt-key"
 section: "1"
@@ -10,9 +9,11 @@ description: "salt-key – salt-key Documentation"
 
 <h2>NAME</h2>
 <p> salt-key &#8211; salt-key Documentation</p>
+<h2>SYNOPSIS</h2>
 <pre>
 salt-key [ options ]
 </pre>
+<h2>DESCRIPTION</h2>
 <p> Salt-key executes simple management of Salt server public keys used for authentication. </p>
 <p> On initial connection, a Salt minion sends its public key to the Salt master. This key must be accepted using the <code>salt-key</code> command on the Salt master. </p>
 <p> Salt minion keys can be in one of the following states:</p>

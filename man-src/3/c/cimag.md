@@ -1,5 +1,4 @@
 ---
-
 title: "cimag(3)"
 name: "cimag"
 section: "3"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/3-cimag/"
 description: "cimag, cimagf, cimagl – get imaginary part of a complex number"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cimag, cimagf, cimagl &#8211; get imaginary part of a complex number </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
 <p> <code>double cimag(double complex </code><i>z</i><code>);</code><br />
  <code>float cimagf(float complex </code><i>z</i><code>);</code><br />
  <code>long double cimagl(long double complex </code><i>z</i><code>);</code> </p>
 <p> Link with <i>-lm</i>.</p>
+<h2>DESCRIPTION</h2>
 <p> These functions return the imaginary part of the complex number <i>z</i>. </p>
 <p> One has: </p>
 <pre>

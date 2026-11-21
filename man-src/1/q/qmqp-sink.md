@@ -1,5 +1,4 @@
 ---
-
 title: "qmqp-sink(1)"
 name: "qmqp-sink"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-qmqp-sink/"
 description: "qmqp-sink – parallelized QMQP test server"
 ---
 
+<h2 class="name">NAME</h2>
+<p> qmqp-sink &#8211; parallelized QMQP test server </p>
+<h2>SYNOPSIS</h2>
 <p> <code>qmqp-sink</code> [<code>-46cv</code>] [<code>-x </code><i>time</i>] [<code>inet:</code>][<i>host</i>]:<i>port</i> <i>backlog</i> </p>
 <p> <code>qmqp-sink</code> [<code>-46cv</code>] [<code>-x </code><i>time</i>] <code>unix:</code><i>pathname</i> <i>backlog</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>qmqp-sink</code> listens on the named host (or address) and port. It receives messages from the network and throws them away. The purpose is to measure QMQP client performance, not protocol compliance. Connections can be accepted on IPv4 or IPv6 endpoints, or on UNIX-domain sockets. IPv4 and IPv6 are the default. This program is the complement of the <code><a href="/docs/linux/man/1-qmqp-source/">qmqp-source</a></code>(1) program. </p>
 <p> Note: this is an unsupported test program. No attempt is made to maintain compatibility between successive versions. </p>
 <p> Arguments:</p>

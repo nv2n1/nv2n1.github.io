@@ -1,5 +1,4 @@
 ---
-
 title: "ipa-addgroup(1)"
 name: "ipa-addgroup"
 section: "1"
@@ -10,7 +9,9 @@ description: "ipa-addgroup – Add a group"
 
 <h2>NAME</h2>
 <p> ipa-addgroup &#8211; Add a group </p>
+<h2>SYNOPSIS</h2>
 <p> ipa-addgroup [<i>OPTION</i>]&#8230; <i>group</i> </p>
+<h2>DESCRIPTION</h2>
 <p> Adds a group with name <i>group</i>.</p>
 <h2>OPTIONS</h2>
 <dl>

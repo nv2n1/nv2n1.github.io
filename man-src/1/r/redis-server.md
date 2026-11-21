@@ -1,5 +1,4 @@
 ---
-
 title: "redis-server(1)"
 name: "redis-server"
 section: "1"
@@ -10,8 +9,10 @@ description: "redis-server, redis-sentinel – Redis server"
 
 <h2>NAME</h2>
 <p> redis-server, redis-sentinel &#8211; Redis server </p>
+<h2>SYNOPSIS</h2>
 <p> <code>redis-server</code> [ <i>configuration_file</i> ] [ options ] [ &#8211;sentinel ] </p>
 <p> <code>redis-sentinel</code> [ <i>configuration_file</i> ] [ options ] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>Redis</code> is an open source (BSD licensed), in-memory data structure store, used as database, cache and message broker, found at <code><a rel="nofollow" href="http://redis.io/">http://redis.io/</a></code> </p>
 <p> The <code>redis-server</code> command is a command line to launch a Redis server. </p>
 <p> The <code>redis-sentinel</code> command is a symbolic link to the <code>redis-server</code> command which imply the <code>&#8211;sentionel</code> option. </p>

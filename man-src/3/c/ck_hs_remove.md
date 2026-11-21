@@ -1,5 +1,4 @@
 ---
-
 title: "ck_hs_remove(3)"
 name: "ck_hs_remove"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_hs_remove – remove key from a hash set"
 <p> <code>ck_hs_remove</code> &#8211; remove key from a hash set</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_hs.h Ft void * Fn ck_hs_remove ck_hs_t *hs unsigned long hash const void *key</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_hs_remove 3 function will attempt to remove the key specified by the Fa key argument in the hash set pointed to by the Fa hs argument. The key specified by Fa key is expected to have the hash value specified by the Fa hash argument (which was previously generated using the CK_HS_HASH3 macro). </p>
 <p> If the call to Fn ck_hs_remove 3 was successful then the key contained in the hash set is returned. If the key was not a member of the hash set then <code>NULL</code> is returned.</p>
 <h2>RETURN VALUES</h2>

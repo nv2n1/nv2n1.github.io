@@ -1,5 +1,4 @@
 ---
-
 title: "tiffinfo(1)"
 name: "tiffinfo"
 section: "1"
@@ -10,7 +9,9 @@ description: "tiffinfo – print information about TIFF files"
 
 <h2>NAME</h2>
 <p> tiffinfo &#8211; print information about <font SIZE="-1">TIFF</font> files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>tiffinfo</code> [ <i>options</i> ] <i>input.tif &#8230;</i></p>
+<h2>DESCRIPTION</h2>
 <p> <i>Tiffinfo</i> displays information about files created according to the Tag Image File Format, Revision 6.0. By default, the contents of each <font SIZE="-1">TIFF</font> directory in each file is displayed, with the value of each tag shown symbolically (where sensible).</p>
 <h2>OPTIONS</h2>
 <dl>

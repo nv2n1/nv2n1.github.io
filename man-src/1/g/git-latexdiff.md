@@ -1,5 +1,4 @@
 ---
-
 title: "git-latexdiff(1)"
 name: "git-latexdiff"
 section: "1"
@@ -7,7 +6,10 @@ letter: "g"
 url: "/docs/linux/man/1-git-latexdiff/"
 ---
 
-git-latexdiff - Call latexdiff on two Git revisions of a file 
+<h2 class="name">NAME</h2>
+ 
+
+ git-latexdiff - Call latexdiff on two Git revisions of a file 
 
 <h2>OPTIONS</h2>
 

@@ -1,5 +1,4 @@
 ---
-
 title: "pmlogrewrite(1)"
 name: "pmlogrewrite"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmlogrewrite – rewrite Performance Co-Pilot archives"
 
 <h2>NAME</h2>
 <p> <code>pmlogrewrite</code> &#8211; rewrite Performance Co-Pilot archives</p>
+<h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/pmlogrewrite</code> [<code>-Cdiqsvw </code>] [<code>-c</code> <i>config</i>] <i>inlog</i> [<i>outlog</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmlogrewrite</code> reads a set of Performance Co-Pilot (PCP) archive logs identified by <i>inlog</i> and creates a PCP archive log in <i>outlog</i>. Under normal usage, the <code>-c</code> option will be used to nominate a configuration file or files that contains specifications (see the <code>REWRITING RULES SYNTAX</code> section below) that describe how the data and metadata from <i>inlog</i> should be transformed to produce <i>outlog</i>. </p>
 <p> The typical uses for <code>pmlogrewrite</code> would be to accommodate the evolution of Performance Metric Domain Agents (PMDAs) where the names, metadata and semantics of metrics and their associated instance domains may change over time, e.g. promoting the type of a metric from a 32-bit to a 64-bit integer, or renaming a group of metrics. Refer to the <code>EXAMPLES</code> section for some additional use cases. </p>
 <p> <code>pmlogrewrite</code> is most useful where PMDA changes, or errors in the production environment, result in archives that cannot be combined with <code><a href="/docs/linux/man/1-pmlogextract/">pmlogextract</a></code>(1). By pre-processing the archives with <code>pmlogrewrite</code> the resulting archives may be able to be merged with <code><a href="/docs/linux/man/1-pmlogextract/">pmlogextract</a></code>(1). </p>

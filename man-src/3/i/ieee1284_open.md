@@ -1,5 +1,4 @@
 ---
-
 title: "ieee1284_open(3)"
 name: "ieee1284_open"
 section: "3"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/3-ieee1284_open/"
 description: "ieee1284_open – open a port"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ieee1284_open &#8211; open a port </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ieee1284.h&gt;
 </code></pre>
 <dl>
 <dt> <code>int ieee1284_open(struct parport&nbsp;<wbr>*</code><i>port</i><code>, int&nbsp;<wbr></code><i>flags</i><code>, int&nbsp;<wbr>*</code><i>capabilities</i><code>);</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>In order to begin using a port it must be opened. Any initial set-up of the port is done at this stage. When an open port is no longer needed it should be closed with <code>ieee1284_close</code>(3). </dd>
 <p> The possible <i>flags</i> are: </p>
 <p> <code>F1284_EXCL</code></p>

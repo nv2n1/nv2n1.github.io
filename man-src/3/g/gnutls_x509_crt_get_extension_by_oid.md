@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_crt_get_extension_by_oid(3)"
 name: "gnutls_x509_crt_get_extension_by_oid"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_crt_get_extension_by_oid – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_get_extension_by_oid &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_get_extension_by_oid(gnutls_x509_crt_t </code><i>cert</i><code>, const char * </code><i>oid</i><code>, int </code><i>indx</i><code>, void * </code><i>buf</i><code>, size_t * </code><i>buf_size</i><code>, unsigned int * </code><i>critical</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -26,6 +26,7 @@ description: "gnutls_x509_crt_get_extension_by_oid – API function"
 <dd> initially holds the size of <i>buf</i></dd>
 <dt>unsigned int * critical</dt>
 <dd> will be non-zero if the extension is marked as critical</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will return the extension specified by the OID in the certificate. The extensions will be returned as binary data DER encoded, in the provided buffer.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error code is returned. If the certificate does not contain the specified extension GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE will be returned.</p>

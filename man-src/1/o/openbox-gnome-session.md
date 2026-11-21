@@ -1,5 +1,4 @@
 ---
-
 title: "openbox-gnome-session(1)"
 name: "openbox-gnome-session"
 section: "1"
@@ -11,6 +10,7 @@ description: "openbox-gnome-session — Run a GNOME session with Openbox as the 
 <h2>NAME</h2>
 <p> openbox-gnome-session &#8212; Run a GNOME session with Openbox as the window manager<br />
 &nbsp;<wbr></p>
+<h2>DESCRIPTION</h2>
 <p> <code>openbox-gnome-session</code> runs a GNOME session with Openbox as the window manager. </p>
 <p> <code>openbox-gnome-session</code> does not take any command line arguments.</p>
 <h2>SEE ALSO</h2>

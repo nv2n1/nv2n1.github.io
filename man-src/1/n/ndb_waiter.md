@@ -1,5 +1,4 @@
 ---
-
 title: "ndb_waiter(1)"
 name: "ndb_waiter"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-ndb_waiter/"
 description: "ndb_waiter – wait for MySQL Cluster to reach a given status"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ndb_waiter &#8211; wait for MySQL Cluster to reach a given status </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ndb_waiter </code><i>options</i></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>ndb_waiter</code></p>
 <dd>repeatedly (each 100 milliseconds) prints out the status of all cluster data nodes until either the cluster reaches a given status or the <code>&#8211;timeout</code> limit is exceeded, then exits. By default, it waits for the cluster to achieve STARTED status, in which all nodes have started and connected to the cluster. This can be overridden using the <code>&#8211;no-contact</code> and <code>&#8211;not-started</code> options (see Additional Options). </dd>
 <p> The node states reported by this utility are as follows: </p>

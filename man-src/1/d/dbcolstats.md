@@ -1,5 +1,4 @@
 ---
-
 title: "dbcolstats(1)"
 name: "dbcolstats"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dbcolstats/"
 description: "dbcolstats – compute statistics on a fsdb column"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dbcolstats &#8211; compute statistics on a fsdb column </p>
+<h2>SYNOPSIS</h2>
 <p> dbcolstats [-amS] [-c ConfidenceFraction] [-q NumberOfQuantiles] column</p>
+<h2>DESCRIPTION</h2>
 <p> Compute statistics over a <font SIZE="-1">COLUMN</font> of data. Records containing non-numeric data are considered null do not contribute to the stats (with the <tt>&quot;-a&quot;</tt> option they are treated as zeros). </p>
 <p> Confidence intervals are a t-test (+/- (t_{a/2})*s/sqrt(n)) and assume the population takes a normal distribution with a small number of samples (&lt; 100). </p>
 <p> By default, all statistics are computed for as a population <i>sample</i> (with an &#8220;n-1&#8221; term), not as representing the whole population (using &#8220;n&#8221;). Select between them with <code>&#8211;sample</code> or <code>&#8211;nosample</code>. When you measure the entire population, use the latter option. </p>

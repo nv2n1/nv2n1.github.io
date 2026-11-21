@@ -1,5 +1,4 @@
 ---
-
 title: "amttool(1)"
 name: "amttool"
 section: "1"
@@ -10,7 +9,9 @@ description: "amttool – remotely control Intel AMT managed machines."
 
 <h2>NAME</h2>
 <p> amttool &#8211; remotely control Intel AMT managed machines.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>amttool host [ command ] [ arg(s) ]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>amttool</code> is a perl script which speaks SOAP to Intel AMT managed machines. It can query informations about the machine in question and also send some commands for basic remote control. </p>
 <p> <code>host</code> is the hostname or IP address of the machine amttool should control. <code>command</code> is an optional command. </p>
 <p> You must set fill AMT_PASSWORD environment variable with the AMT password. </p>

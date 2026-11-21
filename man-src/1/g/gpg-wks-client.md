@@ -1,5 +1,4 @@
 ---
-
 title: "gpg-wks-client(1)"
 name: "gpg-wks-client"
 section: "1"
@@ -8,12 +7,15 @@ url: "/docs/linux/man/1-gpg-wks-client/"
 description: "gpg-wks-client – Client for the Web Key Service"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>gpg-wks-client</code> &#8211; Client for the Web Key Service </p>
+<h2>SYNOPSIS</h2>
 <p> <code>gpg-wks-client</code> [<i>options</i>] <code>&#8211;supported</code> <i>user-id</i><br />
  <code>gpg-wks-client</code> [<i>options</i>] <code>&#8211;check</code> <i>user-id</i><br />
  <code>gpg-wks-client</code> [<i>options</i>] <code>&#8211;create</code> <i>fingerprint</i> <i>user-id</i><br />
  <code>gpg-wks-client</code> [<i>options</i>] <code>&#8211;receive</code><br />
  <code>gpg-wks-client</code> [<i>options</i>] <code>&#8211;read</code> </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>gpg-wks-client</code> is used to send requests to a Web Key Service provider. This is usuallay done to upload a key into a Web Key Directory. </p>
 <p> With the <code>&#8211;supported</code> command the caller can test whether a site supports the Web Key Service. The argument is an arbitrary address in the to be tested domain. For example &#8216;<i>foo [at] example.net</i>&#8216;. The command returns success if the Web Key Service is supported. The operation is silent; to get diagnostic output use the option <code>&#8211;verbose</code>. See option <code>&#8211;with-colons</code> for a variant of this command. </p>
 <p> With the <code>&#8211;check</code> command the caller can test whether a key exists for a supplied mail address. The command returns success if a key is available. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "git-am(1)"
 name: "git-am"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-git-am/"
 description: "git-am – Apply a series of patches from a mailbox"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-am &#8211; Apply a series of patches from a mailbox </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git am[--signoff][--keep][--[no - ] keep - cr][--[no - ] utf8]
       [--[no - ] 3way][--interactive][--committer - date - is - author - date]
@@ -18,6 +20,7 @@ git am[--signoff][--keep][--[no - ] keep - cr][--[no - ] utf8]
       [--quoted - cr = &lt;action&gt;]
       [(&lt;mbox&gt; | &lt;Maildir&gt;)...] git am(--continue | --skip | --abort | --quit | --show - current - patch[=(diff | raw)])
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Splits mail messages in a mailbox into commit log message, authorship information and patches, and applies them to the current branch.</p>
 <h2>OPTIONS</h2>
 <p> (&lt;mbox&gt;|&lt;Maildir&gt;)&#8230;</p>

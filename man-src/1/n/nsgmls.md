@@ -1,5 +1,4 @@
 ---
-
 title: "nsgmls(1)"
 name: "nsgmls"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-nsgmls/"
 description: "onsgmls – An SGML/XML parser and validator"
 ---
 
+<h2 class="name">NAME</h2>
+<p> onsgmls &#8211; An SGML/XML parser and validator </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>onsgmls</code> [<code>-BCdeghlnpRrsuvx</code>] [<code>-a</code><i>linktype</i>] [<code>-A</code><i>architecture</i>] [<code>-b</code><i>bctf</i>] [<code>-c</code><i>sysid</i>&#8230;] [<code>-D</code><i>directory</i>] [<code>-E</code><i>max_errors</i>] [<code>-f</code><i>file</i>] [<code>-i</code><i>name</i>] [<code>-o</code><i>output_option</i>&#8230;] [<code>-t</code><i>file</i>] [<code>-w</code><i>warning_type</i>&#8230;] [<i>sysid</i>&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>onsgmls</code></p>
 <dd>parses and validates the SGML document whose document entity is specified by the system identifiers</dd>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "pmkdir(1)"
 name: "pmkdir"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmkdir – make directory"
 
 <h2>NAME</h2>
 <p> pmkdir &#8211; make directory </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pmkdir</code> [-d <i>LEVEL</i>] [-p <i>DEVNAME</i>] [-h] <i>DIRECTORY</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmkdir</code> creates a directory on a device connected through SynCE. </p>
 <p> Forward slashes (&#8216;/&#8217;) on the command line are converted to backward slashes (&#8216;\&#8217;). </p>
 <h2>OPTIONS</h2>

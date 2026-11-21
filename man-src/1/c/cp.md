@@ -1,5 +1,4 @@
 ---
-
 title: "cp(1)"
 name: "cp"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-cp/"
 description: "cp – copy files and directories"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cp &#8211; copy files and directories </p>
+<h2>SYNOPSIS</h2>
 <p> <code>cp</code> [<i>,OPTION/</i>]&#8230; [<i>,-T/</i>] <i>,SOURCE DEST/</i><br />
  <code>cp</code> [<i>,OPTION/</i>]&#8230; <i>,SOURCE/</i>&#8230; <i>,DIRECTORY/</i><br />
  <code>cp</code> [<i>,OPTION/</i>]&#8230; <i>,-t DIRECTORY SOURCE/</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "blkcalc(1)"
 name: "blkcalc"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-blkcalc/"
 description: "blkcalc – Converts between unallocated disk unit numbers and regular disk unit numbers."
 ---
 
+<h2 class="name">NAME</h2>
+<p> blkcalc &#8211; Converts between unallocated disk unit numbers and regular disk unit numbers. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>blkcalc [-dsu unit_addr] [-vV] [-i imgtype] [-o imgoffset] [-b dev_sector_size] [-f fstype] image [images]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>blkcalc</code> creates a disk unit number mapping between two images, one normal and another that only contains the unallocated units of the first (the default behavior of the <code><a href="/docs/linux/man/1-blkls/">blkls</a>(1)</code> program). One of the <code>-d, -s, </code> or <code>-u </code> options must be given. If the <code>-d</code> option is given, then the <code>unit_addr</code> value is the disk unit address in the regular image (i.e. from <code>dd</code> ). If the unit is unallocated, its address in an unallocated image is given. If the <code>-u</code> option is given, then the <code>unit_addr</code> value is the disk unit address in the unallocated unit image (i.e. from <code><a href="/docs/linux/man/1-blkls/">blkls</a>(1)</code> ). Its disk unit address in the original image is determined. If the <code>-s</code> option is given, then the <code>unit_addr</code> value is the disk unit address in the slack image (i.e. from blkls -s). The <code>image</code> is the full, original image (i.e. from dd). <code>blkcalc</code> was called <code>dcalc</code> in TSK versions prior to 3.0.0. </p>
 <dl>
 <dt>-f fstype</dt>

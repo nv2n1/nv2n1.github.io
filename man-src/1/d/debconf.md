@@ -1,5 +1,4 @@
 ---
-
 title: "debconf(1)"
 name: "debconf"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-debconf/"
 description: "debconf – run a debconf-using program"
 ---
 
+<h2 class="name">NAME</h2>
+<p> debconf &#8211; run a debconf-using program </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 debconf[options] command[args]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Debconf is a configuration system for Debian packages. For a debconf overview and documentation for sysadmins, see <code><a href="/docs/linux/man/7-debconf/">debconf</a></code>(7) (in the debconf-doc package). </p>
 <p> The <code>debconf</code> program runs a program under debconf&#8217;s control, setting it up to talk with debconf on stdio. The program&#8217;s output is expected to be debconf protocol commands, and it is expected to read result codes on stdin. See <code><a href="/docs/linux/man/7-debconf-devel/">debconf-devel</a></code>(7) for details about the debconf protocol. </p>
 <p> The command to be run under debconf must be specified in a way that will let your <font SIZE="-1">PATH</font> find it. </p>

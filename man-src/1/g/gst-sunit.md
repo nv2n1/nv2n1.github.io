@@ -1,5 +1,4 @@
 ---
-
 title: "gst-sunit(1)"
 name: "gst-sunit"
 section: "1"
@@ -10,6 +9,7 @@ description: "gst-sunit – unit testing tool for GNU Smalltalk"
 
 <h2>NAME</h2>
 <p> gst-sunit &#8211; unit testing tool for GNU Smalltalk</p>
+<h2>DESCRIPTION</h2>
 <h3>Usage:</h3>
 <dl>
 <dt>

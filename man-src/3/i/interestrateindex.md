@@ -1,5 +1,4 @@
 ---
-
 title: "interestrateindex(3)"
 name: "interestrateindex"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-interestrateindex/"
 description: "ql/indexes/interestrateindex.hpp – base class for interest rate indexes"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/indexes/interestrateindex.hpp &#8211; base class for interest rate indexes </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/index.hpp&gt;<br />
  #include &lt;ql/time/calendar.hpp&gt;<br />
  #include &lt;ql/currency.hpp&gt;<br />

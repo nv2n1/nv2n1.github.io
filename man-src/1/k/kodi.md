@@ -1,5 +1,4 @@
 ---
-
 title: "kodi(1)"
 name: "kodi"
 section: "1"
@@ -10,7 +9,9 @@ description: "kodi.bin – Kodi main executable"
 
 <h2>NAME</h2>
 <p> kodi.bin &#8211; Kodi main executable</p>
+<h2>SYNOPSIS</h2>
 <p> <code>kodi.bin</code> [<i>OPTION</i>]&#8230; [<i>FILE</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> This is the main executable that will run Kodi.</p>
 <h3>Arguments:</h3>
 <dl>

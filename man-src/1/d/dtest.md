@@ -1,5 +1,4 @@
 ---
-
 title: "dtest(1)"
 name: "dtest"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-dtest/"
 description: "dtest – simple uDAPL send/receive and RDMA test"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dtest &#8211; simple uDAPL send/receive and RDMA test</p>
+<h2>SYNOPSIS</h2>
 <p> <code>dtest</code> [-P provider] [-b buf size] [-B burst count][-v] [-c] [-p] [-d]<code> [-s]</code> </p>
 <p> <code>dtest</code> [-P provider] [-b buf size] [-B burst count][-v] [-c] [-p] [-d]<code> [-h HOSTNAME]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> dtest is a simple test used to exercise and verify the uDAPL interfaces. At least two instantiations of the test must be run. One acts as the server and the other the client. The server side of the test, once invoked listens for connection requests, until timing out or killed. Upon receipt of a cd connection request, the connection is established, the server and client sides exchange information necessary to perform RDMA writes and reads. </p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "mccliquetoption(3)"
 name: "mccliquetoption"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-mccliquetoption/"
 description: "ql/legacy/pricers/mccliquetoption.hpp – Cliquet option priced with Monte Carlo simulation."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/legacy/pricers/mccliquetoption.hpp &#8211; Cliquet option priced with Monte Carlo simulation. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/option.hpp&gt;<br />
  #include &lt;ql/types.hpp&gt;<br />
  #include &lt;ql/legacy/pricers/mcpricer.hpp&gt;<br />

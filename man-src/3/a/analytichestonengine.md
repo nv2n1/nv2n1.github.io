@@ -1,5 +1,4 @@
 ---
-
 title: "analytichestonengine(3)"
 name: "analytichestonengine"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-analytichestonengine/"
 description: "ql/pricingengines/vanilla/analytichestonengine.hpp – analytic Heston-model engine"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/pricingengines/vanilla/analytichestonengine.hpp &#8211; analytic Heston-model engine </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/integrals/integral.hpp&gt;<br />
  #include &lt;ql/math/integrals/gaussianquadratures.hpp&gt;<br />
  #include &lt;ql/pricingengines/genericmodelengine.hpp&gt;<br />

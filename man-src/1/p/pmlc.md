@@ -1,5 +1,4 @@
 ---
-
 title: "pmlc(1)"
 name: "pmlc"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmlc – configure active Performance Co-Pilot pmlogger(s) interac
 
 <h2>NAME</h2>
 <p> <code>pmlc</code> &#8211; configure active Performance Co-Pilot pmlogger(s) interactively</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pmlc</code> [<code>-e</code>] [<code>-h</code> <i>host</i>] [<code>-i</code>] [<code>-n</code> <i>pmnsfile</i>] [<code>-P</code>] [<code>-p</code> <i>port</i>] [<code>-Z</code> <i>timezone</i>] [<code>-z</code>] [<code>pid</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmlc</code> may be used to change those metrics and instances which a <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1) writes to a Performance Co-Pilot archive (see <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1)), the frequency with which the metrics are collected and whether the logging is mandatory, advisory, on or off. It also reports the current logging status of metrics and instances. <code>pmlc</code> may be used to control pmlogger instances on remote hosts as well as those on the local host. </p>
 <p> Normally <code>pmlc</code> operates on the distributed Performance Metrics Name Space (PMNS), however if the <code>-n</code> option is specified an alternative local PMNS is loaded from the file <i>pmnsfile</i>. </p>
 <p> If the <code>-P</code> option is specified, <code>pmlc</code> will attempt to start with a connection to the primary pmlogger on the local host. If the <code>-p</code> option is specified, then <code>pmlc</code> will attempt to start with a connection to the pmlogger on this TCP/IP <i>port</i>. Alternatively, if <i>pid</i> is specified, a connection to the pmlogger instance with that process id will be attempted on startup. The <code>-h</code> option may only be used if <code>-P,</code> <code>-p</code> <i>port</i> or a <i>pid</i> is also specified. In that case <code>pmlc</code> will initially connect to the specified (remote) pmlogger instance on <i>host</i> rather than the local host. If the connection to the specified pmlogger instance cannot be established, <code>pmlc</code> will start with no connection. These options typically allow the same file of <code>pmlc</code> commands to be directed to multiple pmlogger instances by varying the command line arguments. Note that <code>-P</code>, <code>-p</code> <i>port</i>, <i>pid</i> and <code>-h</code> are used only when making an initial connection to a pmlogger instance. They are not used as defaults if subsequent connections are made interactively (see the <code>connect</code> command below). </p>

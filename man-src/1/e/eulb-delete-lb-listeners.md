@@ -1,5 +1,4 @@
 ---
-
 title: "eulb-delete-lb-listeners(1)"
 name: "eulb-delete-lb-listeners"
 section: "1"
@@ -10,10 +9,12 @@ description: "eulb-delete-lb-listeners – Delete one or more listeners from a l
 
 <h2>NAME</h2>
 <p> eulb-delete-lb-listeners &#8211; Delete one or more listeners from a load balancer</p>
+<h2>SYNOPSIS</h2>
 <p> eulb-delete-lb-listeners <code>-l</code> PORT1,PORT2,&#8230; [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ELB</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Delete one or more listeners from a load balancer</p>
 <h2>DESCRIPTION</h2>
 <p> If a listener named with <code>-l</code>/&#8211;lb-ports does not exist, this command still succeeds.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "mysqldbimport(1)"
 name: "mysqldbimport"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mysqldbimport/"
 description: "mysqldbimport – Import Object Definitions or Data into a Databases"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mysqldbimport &#8211; Import Object Definitions or Data into a Databases </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqldbimport [</code><i>options</i><code>] </code><i>import_file</i><code> &#8230;</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This utility imports metadata (object definitions) or data or both for one or more databases from one or more files. </dd>
 <p> If an object exists on the destination server with the same name as an imported object, it is dropped first before importing the new object. </p>
 <p> To skip objects by type, use the <code>&#8211;skip</code> option with a list of the objects to skip. This enables you to extract a particular set of objects, say, for importing only events (by excluding all other types). Similarly, to skip creation of <code>UPDATE</code> statements for BLOB data, specify the <code>&#8211;skip-blobs</code> option. </p>

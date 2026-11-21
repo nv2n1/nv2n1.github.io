@@ -1,5 +1,4 @@
 ---
-
 title: "elice(1)"
 name: "elice"
 section: "1"
@@ -10,7 +9,9 @@ description: "elice – compiler for programs written in PureBasic"
 
 <h2>NAME</h2>
 <p> elice &#8211; compiler for programs written in PureBasic</p>
+<h2>SYNOPSIS</h2>
 <p> <code>elice</code> [<i>options&#8230;</i>] [<code>-o</code> <i>outfile</i>] <i>sourcefile&#8230;</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>elice</code> is a compiler for programs written in the proprietary language PureBasic. It compiles such programs to C++ and then invokes <code>g++</code> to generate an executable. Its interface is similar to that of <code>g++</code>. </p>
 <p> Normal usage is to compile just one source file, which uses IncludeFile and XIncludeFile statements to incorporate whatever other source files are needed. Such include statements are resolved relative to the directory of the source file they are in. If there are multiple source files on the command line, they are compiled together to form one executable. </p>
 <p> <code>elice</code> comes with a library of builtin procedures which will be included in the executable when they are needed. Depending on which builtin procedures are used, the resulting executable may be dynamically linked to other libraries such as libSDL.</p>

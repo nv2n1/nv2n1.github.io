@@ -1,5 +1,4 @@
 ---
-
 title: "ssltap(1)"
 name: "ssltap"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-ssltap/"
 description: "ssltap – Tap into SSL connections and display the data going by"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ssltap &#8211; Tap into SSL connections and display the data going by </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ssltap</code> [-fhlsvx] [-p port] [hostname:port]</dt></dl>
 <h2>STATUS</h2>
 <dd>This documentation is still work in progress. Please contribute to the initial review in m[blue]<code>Mozilla NSS bug 836477</code>m[]<font SIZE="-2">[1]</font></dd>
+<h2>DESCRIPTION</h2>
 <p> The SSL Debugging Tool <code>ssltap</code> is an SSL-aware command-line proxy. It watches TCP connections and displays the data going by. If a connection is SSL, the data display includes interpreted SSL records and handshaking</p>
 <h2>OPTIONS</h2>
 <p> -f</p>

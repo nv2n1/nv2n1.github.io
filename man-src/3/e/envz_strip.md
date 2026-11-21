@@ -1,5 +1,4 @@
 ---
-
 title: "envz_strip(3)"
 name: "envz_strip"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-envz_strip/"
 description: "envz_add, envz_entry, envz_get, envz_merge, envz_remove, envz_strip – environment string support"
 ---
 
+<h2 class="name">NAME</h2>
+<p> envz_add, envz_entry, envz_get, envz_merge, envz_remove, envz_strip &#8211; environment string support </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;envz.h&gt;
 error_t envz_add(char **envz, size_t *envz_len,
@@ -19,6 +21,7 @@ error_t envz_merge(char **envz, size_t *envz_len,
 void envz_remove(char **envz, size_t *envz_len, const char *name);
 void envz_strip(char **envz, size_t *envz_len);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> These functions are glibc-specific. </p>
 <p> An argz vector is a pointer to a character buffer together with a length, see <code><a href="/docs/linux/man/3-argz_add/">argz_add</a></code>(3). An envz vector is a special argz vector, namely one where the strings have the form &quot;name=value&quot;. Everything after the first &#8216;=&#8217; is considered to be the value. If there is no &#8216;=&#8217;, the value is taken to be NULL. (While the value in case of a trailing &#8216;=&#8217; is the empty string &quot;&quot;.) </p>
 <p> These functions are for handling envz vectors. </p>

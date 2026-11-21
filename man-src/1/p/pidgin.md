@@ -1,5 +1,4 @@
 ---
-
 title: "pidgin(1)"
 name: "pidgin"
 section: "1"
@@ -10,10 +9,12 @@ description: "pidgin – Instant Messaging client"
 
 <h2>NAME</h2>
 <p> pidgin &#8211; Instant Messaging client</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>pidgin </code><i>[options]</i></dt>
 <dd>
 </dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>pidgin</code> is a graphical modular messaging client based on libpurple which is capable of connecting to AIM, MSN, Yahoo!, XMPP, ICQ, IRC, SILC, Novell GroupWise, Lotus Sametime, Zephyr, Gadu-Gadu, and QQ all at once. It has many common features found in other clients, as well as many unique features. Pidgin is not endorsed by or affiliated with America Online, ICQ, Microsoft, or Yahoo. </p>
 <p> Pidgin can be extended by plugins written in multiple programming languages and controlled through DBus or <code>purple-remote</code>. </p>
 <h2>OPTIONS</h2>

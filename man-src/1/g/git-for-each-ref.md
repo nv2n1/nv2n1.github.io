@@ -1,5 +1,4 @@
 ---
-
 title: "git-for-each-ref(1)"
 name: "git-for-each-ref"
 section: "1"
@@ -7,7 +6,9 @@ letter: "g"
 url: "/docs/linux/man/1-git-for-each-ref/"
 description: "git-for-each-ref – Output information on each ref"
 ---
-
+<h2 class="name">NAME</h2>
+<p> git-for-each-ref - Output information on each ref </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
  git for-each-ref  [--count=&lt;count&gt;] [--shell|--perl|--python|--tcl]
                    [(--sort=&lt;key&gt;)...] [--format=&lt;format&gt;] [&lt;pattern&gt;...]
@@ -15,6 +16,7 @@ description: "git-for-each-ref – Output information on each ref"
                    [--merged[=&lt;object&gt;]] [--no-merged[=&lt;object&gt;]]
                    [--contains[=&lt;object&gt;]] [--no-contains[=&lt;object&gt;]]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Iterate over all refs that match <code>&lt;pattern&gt;</code> and show them according to the given <code>&lt;format&gt;</code>, after sorting them according to the given set of <code>&lt;key&gt;</code>. If <code>&lt;count&gt;</code> is given, stop after showing that many refs. The interpolated values in <code>&lt;format&gt;</code> can optionally be quoted as string literals in the specified host language allowing their direct evaluation in that language.  </p>
 <h2>OPTIONS</h2>
 <p> &lt;pattern&gt;... </p>

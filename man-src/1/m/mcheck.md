@@ -1,5 +1,4 @@
 ---
-
 title: "mcheck(1)"
 name: "mcheck"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mcheck/"
 description: "mcheck – verify all files on an MS-DOS formatted disk"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mcheck &#8211; verify all files on an MS-DOS formatted disk </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mcheck</code> [<i>msdosdrive</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> mcheck is a script that verifies all files on a MS-DOS formatted disk by reading them using <code><a href="/docs/linux/man/1-mtype/">mtype</a></code>(1) </p>
 <p> The optional argument specifies the MS-DOS drive letter of the disk to be checked. A: is used by default. </p>
 <h2>LICENSE</h2>

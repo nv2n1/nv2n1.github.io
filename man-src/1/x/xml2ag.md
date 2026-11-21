@@ -1,5 +1,4 @@
 ---
-
 title: "xml2ag(1)"
 name: "xml2ag"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-xml2ag/"
 description: "xml2ag – XML to AutoGen Definiton Converter"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xml2ag &#8211; XML to AutoGen Definiton Converter </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xml2ag</code> [<code>&#8211;</code><i>flag</i> [<i>value</i>]]&#8230; [<code>&#8212;</code><i>opt-name</i>[[=| ]<i>value</i>]]&#8230;[ &lt;def-file&gt; ] </p>
 <p> This program will convert any arbitrary XML file into equivalent AutoGen definitions, and invoke AutoGen.</p>
+<h2>DESCRIPTION</h2>
 <p> The template will be derived from either:<br />
  * the <code>&#8211;override-tpl</code> command line option<br />
  * a top level XML attribute named, &quot;template&quot;<br />

@@ -1,5 +1,4 @@
 ---
-
 title: "abrt-action-analyze-java(1)"
 name: "abrt-action-analyze-java"
 section: "1"
@@ -7,11 +6,22 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-action-analyze-java/"
 ---
 
-abrt-action-analyze-java - Calculate and save UUID &amp; DUPHASH and determine the level of usability for reporting of a Java stack trace. 
+<h2 class="name">NAME</h2>
+ 
 
-<i>abrt-action-analyze-java</i> [-v] [-d DIR] [-o] [-f FILE]
+ abrt-action-analyze-java - Calculate and save UUID &amp; DUPHASH and determine the level of usability for reporting of a Java stack trace. 
 
-The tool reads the file named <i>backtrace</i> from a problem data directory, processes it and generates a universally unique identifier (UUID). Then it saves this data as new element <i>uuid</i>. It also checks whether the stack trace contains a remote address in any of its frames and if so it creates <i>not-reportable</i> element whose contents explains why the stack trace should not be reported into a bug tracking system.
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <i>abrt-action-analyze-java</i> [-v] [-d DIR] [-o] [-f FILE]
+
+<h2>DESCRIPTION</h2>
+
+ 
+
+ The tool reads the file named <i>backtrace</i> from a problem data directory, processes it and generates a universally unique identifier (UUID). Then it saves this data as new element <i>uuid</i>. It also checks whether the stack trace contains a remote address in any of its frames and if so it creates <i>not-reportable</i> element whose contents explains why the stack trace should not be reported into a bug tracking system.
 
 <h3>Integration with ABRT events</h3>
 

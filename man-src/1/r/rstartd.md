@@ -1,5 +1,4 @@
 ---
-
 title: "rstartd(1)"
 name: "rstartd"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-rstartd/"
 description: "rstartd – a sample implementation of a Remote Start rsh helper"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rstartd &#8211; a sample implementation of a Remote Start rsh helper </p>
+<h2>SYNOPSIS</h2>
 <p> <code>rstartd</code> </p>
 <p> <code>rstartd.real</code> [-c <i>configfilename</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Rstartd</i> is an implementation of a Remote Start &quot;helper&quot; as defined in &quot;A Flexible Remote Execution Protocol Based on <code>rsh</code>&quot;. </p>
 <p> This document describes the peculiarities of <i>rstartd</i> and how it is configured.</p>
 <h2>OPTIONS</h2>

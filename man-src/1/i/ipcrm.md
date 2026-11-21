@@ -1,5 +1,4 @@
 ---
-
 title: "ipcrm(1)"
 name: "ipcrm"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-ipcrm/"
 description: "ipcrm – remove certain IPC resources"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ipcrm &#8211; remove certain IPC resources </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ipcrm</code> [options] </p>
 <p> <code>ipcrm</code> [<code>shm</code>|<code>msg</code>|<code>sem</code>] <i>ID</i> &#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>ipcrm</code> removes System V inter-process communication (IPC) objects and associated data structures from the system. In order to delete such objects, you must be superuser, or the creator or owner of the object. </p>
 <p> System V IPC objects are of three types: shared memory, message queues, and semaphores. Deletion of a message queue or semaphore object is immediate (regardless of whether any process still holds an IPC identifier for the object). A shared memory object is only removed after all currently attached processes have detached (<code><a href="/docs/linux/man/2-shmdt/">shmdt</a></code>(2)) the object from their virtual address space. </p>
 <p> Two syntax styles are supported. The old Linux historical syntax specifies a three-letter keyword indicating which class of object is to be deleted, followed by one or more IPC identifiers for objects of this type. </p>

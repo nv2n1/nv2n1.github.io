@@ -1,5 +1,4 @@
 ---
-
 title: "msktutil(1)"
 name: "msktutil"
 section: "1"
@@ -10,7 +9,9 @@ description: "msktutil – fetches and manages kerberos keytabs in an Active Dir
 
 <h2>NAME</h2>
 <p> msktutil &#8211; fetches and manages kerberos keytabs in an Active Directory environment</p>
+<h2>SYNOPSIS</h2>
 <p> <code>msktutil</code> [command 1] [command 2] [command 3] &#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> msktutil is a Unix/Linux keytab client for Microsoft Active Directory environments. This program is capable of creating accounts in Active Directory, adding service principals to those accounts, and creating local keytab files so that kerberizied services can utilize Active directory as a Kerberos realm. msktutil will create and manage machine accounts by default. The &#8211;use-service-account option lets msktutil operate on service accounts. msktutil requires that the Kerberos client libraries are properly installed and configured to use Active Directory as a realm. </p>
 <p> Whenever a principal is added or a keytab is updated, the secret password for the corresponding account is changed. By default, the password is not stored, so it needs to be reset each time msktutil is executed. All entries in the keytab will be automatically updated whenever the password is reset. The previous entries will be left in the keytab, so sessions using the older key versions will not break. This behavior is similar to the way Windows hosts handle machine password changes.</p>
 <h2>CREDENTIALS</h2>

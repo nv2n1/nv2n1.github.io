@@ -1,5 +1,4 @@
 ---
-
 title: "sla_gbamv(3)"
 name: "sla_gbamv"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-sla_gbamv/"
 description: "sla_gbamv.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sla_gbamv.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sla_gbamv</code> (TRANS, M, N, KL, KU, ALPHA, AB, LDAB, X, INCX, BETA, Y, INCY)<br />
  <i></i><code>SLA_GBAMV</code> performs a matrix-vector operation to calculate error bounds.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_openpgp_keyring_get_crt(3)"
 name: "gnutls_openpgp_keyring_get_crt"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_openpgp_keyring_get_crt – API function"
 
 <h2>NAME</h2>
 <p> gnutls_openpgp_keyring_get_crt &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>
 <p> <code>int gnutls_openpgp_keyring_get_crt(gnutls_openpgp_keyring_t </code><i>ring</i><code>, unsigned int </code><i>idx</i><code>, gnutls_openpgp_crt_t * </code><i>cert</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_openpgp_keyring_get_crt – API function"
 <dd> the index of the certificate to export</dd>
 <dt>gnutls_openpgp_crt_t * cert</dt>
 <dd> An uninitialized <code>gnutls_openpgp_crt_t</code> type</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will extract an OpenPGP certificate from the given keyring. If the index given is out of range <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code> will be returned. The returned structure needs to be deinited.</p>
 <h2>RETURNS</h2>
 <p> <code>GNUTLS_E_SUCCESS</code> on success, or an error code.</p>

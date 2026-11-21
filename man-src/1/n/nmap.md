@@ -1,5 +1,4 @@
 ---
-
 title: "nmap(1)"
 name: "nmap"
 section: "1"
@@ -7,10 +6,13 @@ letter: "n"
 url: "/docs/linux/man/1-nmap/"
 description: "nmap – Network exploration tool and security / port scanner"
 ---
-
+<h2 class="name">NAME</h2>
+<p> nmap - Network exploration tool and security / port scanner </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>nmap</code> [<i>Scan Type</i>...] [<i>Options</i>] {<i>target specification</i>} </dt>
 </dl>
+<h2>DESCRIPTION</h2>
 <dd> <p> Nmap ("Network Mapper") is an open source tool for network exploration and security auditing. It was designed to rapidly scan large networks, although it works fine against single hosts. Nmap uses raw IP packets in novel ways to determine what hosts are available on the network, what services (application name and version) those hosts are offering, what operating systems (and OS versions) they are running, what type of packet filters/firewalls are in use, and dozens of other characteristics. While Nmap is commonly used for security audits, many systems and network administrators find it useful for routine tasks such as network inventory, managing service upgrade schedules, and monitoring host or service uptime. </p>
 <p> The output from Nmap is a list of scanned targets, with supplemental information on each depending on the options used. Key among that information is the "interesting ports table". That table lists the port number and protocol, service name, and state. The state is either open, filtered, closed, or unfiltered. Open means that an application on the target machine is listening for connections/packets on that port. Filtered means that a firewall, filter, or other network obstacle is blocking the port so that Nmap cannot tell whether it is open or closed. Closed ports have no application listening on them, though they could open up at any time. Ports are classified as unfiltered when they are responsive to Nmap&#8217;s probes, but Nmap cannot determine whether they are open or closed. Nmap reports the state combinations open|filtered and closed|filtered when it cannot determine which of the two states describe a port. The port table may also include software version details when version detection has been requested. When an IP protocol scan is requested (<code>-sO</code>), Nmap provides information on supported IP protocols rather than listening ports. </p>
 <p> In addition to the interesting ports table, Nmap can provide further information on targets, including reverse DNS names, operating system guesses, device types, and MAC addresses. </p>

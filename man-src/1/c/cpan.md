@@ -1,5 +1,4 @@
 ---
-
 title: "cpan(1)"
 name: "cpan"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-cpan/"
 description: "cpan – easily interact with CPAN from the command line"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cpan &#8211; easily interact with CPAN from the command line </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #with arguments and no switches, installs specified modules
 cpan module_name[module_name...]
@@ -27,6 +29,7 @@ cpan module_name[module_name...]
 #without arguments, but some switches
         cpan[-ahpruvACDLOPX]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> This script provides a command interface (not a shell) to <font SIZE="-1">CPAN.</font> At the moment it uses <font SIZE="-1">CPAN</font>.pm to do the work, but it is not a one-shot command runner for <font SIZE="-1">CPAN</font>.pm.</p>
 <h3>Options</h3>
 <dl>

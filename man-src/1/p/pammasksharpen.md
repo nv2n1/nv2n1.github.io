@@ -1,5 +1,4 @@
 ---
-
 title: "pammasksharpen(1)"
 name: "pammasksharpen"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-pammasksharpen/"
 description: "pammasksharpen – Sharpen an image via an unsharp mask"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pammasksharpen &#8211; Sharpen an image via an unsharp mask</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pammasksharpen</code> [<code>-sharpness=</code><i>realnum</i>] [<code>-threshold=</code><i>realnum</i>] <i>maskfile</i> [<i>inputfile</i>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one. You may separate an option name and its value with white space instead of an equals sign. </p>
 <h2>EXAMPLES</h2>
@@ -16,6 +18,7 @@ description: "pammasksharpen – Sharpen an image via an unsharp mask"
    pnmconvol -nooffset gauss.pgm myimage.ppm &gt;blurred.ppm
    pammasksharpen blurred.ppm myimage.ppm &gt;sharpened.ppm
 </pre>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pammasksharpen</code> reads a Netpbm image as input and produces a sharpened version of it, in the same format, as output. It does this via an unsharp mask, which you supply as another Netpbm image. </p>
 <p> An unsharp mask is generally a blurred version of the original image. The sharpening computation is this: Calculate the &#8216;edgeness&#8217; of a sample in the input image as the signed difference between the sample value and the corresponding sample in the unsharp mask. This tells how different the pixel is from its neighbors. Add a multiple of the edgeness to the original sample to get the corresponding output sample. Clip as necessary. This causes pixels that are brighter than their neighbors to get even brighter, while pixels that are dimmer than their neighbors get even dimmer. This makes edges &#8212; places where pixel values change quickly in space &#8212; stand out more. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "control_rancid(1)"
 name: "control_rancid"
 section: "1"
@@ -10,7 +9,9 @@ description: "control_rancid – run rancid for devices of a group"
 
 <h2>NAME</h2>
 <p> control_rancid &#8211; run rancid for devices of a group</p>
+<h2>SYNOPSIS</h2>
 <p> <code>control_rancid</code> [<code>-V</code>] [<code>-f&nbsp;<wbr></code>config_file]&nbsp;<wbr>[<code>-m&nbsp;<wbr></code>mail_rcpt]&nbsp;<wbr>[<code>-r&nbsp;<wbr></code>device_name]&nbsp;<wbr>group</p>
+<h2>DESCRIPTION</h2>
 <p> <code>control_rancid</code> is a <i><a href="/docs/linux/man/1-sh/">sh</a></i>(1) script to parse a group&#8217;s <code><a href="/docs/linux/man/5-router-db/">router.db</a></code>(5), run rancid for each of the devices, possibly re-run rancid for devices that failed collection, e-mail diffs, and e-mail error reports. </p>
 <p> <code>control_rancid</code> also creates and/or re-creates the .cvsignore/.gitignore files for each group. For the configs sub-directory, it includes &quot;.old&quot;, where a user may keep files they would like to be ignored. </p>
 <p> The command-line options are as follows:</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "vidalia(1)"
 name: "vidalia"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-vidalia/"
 description: "vidalia – Controller GUI for tor"
 ---
 
+<h2 class="name">NAME</h2>
+<p> vidalia &#8211; Controller GUI for tor</p>
+<h2>SYNOPSIS</h2>
 <p> <code>vidalia</code> [<i>options</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> Vidalia allows you to start and stop Tor, view the status of Tor at a glance, and monitor Tor&#8217;s bandwidth usage. Vidalia also makes it easy to contribute to the Tor network by helping you setup a Tor server, if you wish. To find more information about what Tor is and how to use it, see the Tor homepage: <a rel="nofollow" href="https://www.torproject.org/">https://www.torproject.org/</a></p>
 <h2>OPTIONS</h2>
 <p> <code>-help</code> Displays this usage message and exits.</p>

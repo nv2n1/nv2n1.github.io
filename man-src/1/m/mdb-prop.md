@@ -1,5 +1,4 @@
 ---
-
 title: "mdb-prop(1)"
 name: "mdb-prop"
 section: "1"
@@ -10,9 +9,11 @@ description: "mdb-prop – Get properties list from MDB database"
 
 <h2>NAME</h2>
 <p> <code>mdb-prop </code>&#8211; Get properties list from MDB database</p>
+<h2>SYNOPSIS</h2>
 <pre>
 <code>mdb-prop</code> <i>database</i> <i>name</i> [<i>propcol</i>]
 </pre>
+<h2>DESCRIPTION</h2>
 <p> <code>mdb-prop</code> is a utility program distributed with MDB Tools. </p>
 <p> Print a properties list from an MDB <i>database</i>. </p>
 <p> <i>name</i> is the <i>name</i> of the table, querry, or other object. </p>

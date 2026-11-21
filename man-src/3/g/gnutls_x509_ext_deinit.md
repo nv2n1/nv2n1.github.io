@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_ext_deinit(3)"
 name: "gnutls_x509_ext_deinit"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_x509_ext_deinit – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_ext_deinit &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>void gnutls_x509_ext_deinit(gnutls_x509_ext_st * </code><i>ext</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_x509_ext_st * ext</dt>
 <dd> The extensions structure</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will deinitialize an extensions structure.</p>
 <h2>SINCE</h2>
 <p> 3.3.8</p>

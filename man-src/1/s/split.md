@@ -1,5 +1,4 @@
 ---
-
 title: "split(1)"
 name: "split"
 section: "1"
@@ -7,8 +6,11 @@ letter: "s"
 url: "/docs/linux/man/1-split/"
 description: "split – split a file into pieces"
 ---
-
+<h2 class="name">NAME</h2>
+<p> split - split a file into pieces </p>
+<h2>SYNOPSIS</h2>
 <p> <code>split</code> [<i>,OPTION/</i>]... [<i>,FILE /</i>[<i>,PREFIX/</i>]]  </p>
+<h2>DESCRIPTION</h2>
 <p> Output pieces of FILE to PREFIXaa, PREFIXab, ...; default size is 1000 lines, and default PREFIX is &#8216;x&#8217;. </p>
 <p> With no FILE, or when FILE is -, read standard input. </p>
 <p> Mandatory arguments to long options are mandatory for short options too. </p>

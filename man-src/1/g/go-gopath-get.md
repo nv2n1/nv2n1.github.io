@@ -1,5 +1,4 @@
 ---
-
 title: "go-gopath-get(1)"
 name: "go-gopath-get"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-go-gopath-get/"
 description: "go-get – legacy GOPATH go get"
 ---
 
+<h2 class="name">NAME</h2>
+<p> go-get &#8211; legacy GOPATH go get </p>
+<h2>SYNOPSIS</h2>
 <p> The &#8216;go get&#8217; command changes behavior depending on whether the go command is running in module-aware mode or legacy GOPATH mode. This help text, accessible as &#8216;go help gopath-get&#8217; even in module-aware mode, describes &#8216;go get&#8217; as it operates in legacy GOPATH mode. </p>
 <p> <code>go get</code> [-d] [-f] [-t] [-u] [-v] [-fix] [<i>build flags</i>] [<i>packages</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Get downloads the packages named by the import paths, along with their dependencies. It then installs the named packages, like &#8216;go install&#8217;.</p>
 <dl>
 <dt><code>-d</code></dt>

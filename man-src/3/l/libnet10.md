@@ -1,5 +1,4 @@
 ---
-
 title: "libnet10(3)"
 name: "libnet10"
 section: "3"
@@ -10,8 +9,10 @@ description: "libnet – \"libpwrite\" Network Routine Library"
 
 <h2>NAME</h2>
 <p> libnet &#8211; &quot;libpwrite&quot; Network Routine Library </p>
+<h2>DESCRIPTION</h2>
 <p> The Network Library provides a simple API for commonly used low-level network functions (mainly packet injection). Using libnet, it is easy to build and write arbitrary network packets. It provides a portable framework for low-level network packet writing and handling (use libnet in conjunction with libpcap and you can write some really cool stuff). Libnet includes packet creation at the IP layer and at the link layer as well as a host of supplementary and complementary functionality. </p>
 <p> For a much more verbose treatment of libnet, including verbosely commented examples, please see the online web-based documentation at <a rel="nofollow" href="http://www.packetfactory.net/libnet/manual/.">http://www.packetfactory.net/libnet/manual/.</a> </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;libnet.h&gt;
 PACKET MEMORY MANAGEMENT ROUTINES int libnet_init_packet(size_t p_size, u_char **buf);

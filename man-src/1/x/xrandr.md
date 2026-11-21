@@ -1,5 +1,4 @@
 ---
-
 title: "xrandr(1)"
 name: "xrandr"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-xrandr/"
 description: "xrandr – primitive command line interface to RandR extension"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xrandr &#8211; primitive command line interface to RandR extension </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xrandr</code> [&#8211;help] [&#8211;display <i>display</i>] [-q] [-v] [&#8211;verbose] [&#8211;dryrun] [&#8211;screen <i>snum</i>] [&#8211;q1] [&#8211;q12] [&#8211;current] [&#8211;noprimary] [&#8211;panning <i>width</i>x<i>height</i>[+<i>x</i>+<i>y</i>[/<i>track_width</i>x<i>track_height</i>+<i>track_x</i>+<i>track_y</i>[/<i>border_left</i>/<i>border_top</i>/<i>border_right</i>/<i>border_bottom</i>]]]] [&#8211;scale <i>x</i>[x<i>y</i>]] [&#8211;scale-from <i>w</i>x<i>h</i>] [&#8211;transform <i>a</i>,<i>b</i>,<i>c</i>,<i>d</i>,<i>e</i>,<i>f</i>,<i>g</i>,<i>h</i>,<i>i</i>] [&#8211;primary] [&#8211;prop] [&#8211;fb <i>width</i>x<i>height</i>] [&#8211;fbmm <i>width</i>x<i>height</i>] [&#8211;dpi <i>dpi</i>] [&#8211;dpi <i>from-output</i>] [&#8211;newmode <i>name</i> <i>mode</i>] [&#8211;rmmode <i>name</i>] [&#8211;addmode <i>output</i> <i>name</i>] [&#8211;delmode <i>output</i> <i>name</i>] [&#8211;output <i>output</i>] [&#8211;auto] [&#8211;mode <i>mode</i>] [&#8211;preferred] [&#8211;pos <i>x</i>x<i>y</i>] [&#8211;rate <i>rate</i>] [&#8211;reflect <i>reflection</i>] [&#8211;rotate <i>orientation</i>] [&#8211;left-of <i>output</i>] [&#8211;right-of <i>output</i>] [&#8211;above <i>output</i>] [&#8211;below <i>output</i>] [&#8211;same-as <i>output</i>] [&#8211;set <i>property</i> <i>value</i>] [&#8211;off] [&#8211;crtc <i>crtc</i>] [&#8211;gamma <i>red</i>[:<i>green</i>:<i>blue</i>]] [&#8211;brightness <i>brightness</i>] [-o <i>orientation</i>] [-s <i>size</i>] [-r <i>rate</i>] [-x] [-y] [&#8211;listproviders] [&#8211;setprovideroutputsource <i>provider</i> <i>source</i>] [&#8211;setprovideroffloadsink <i>provider</i> <i>sink</i>] [&#8211;listmonitors] [&#8211;listactivemonitors] [&#8211;setmonitor <i>name</i> <i>geometry</i> <i>outputs</i>] [&#8211;delmonitor <i>name</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Xrandr</i> is used to set the size, orientation and/or reflection of the outputs for a screen. It can also set the screen size. </p>
 <p> If invoked without any option, it will dump the state of the outputs, showing the existing modes for each of them, with a &#8216;+&#8217; after the preferred modes and a &#8216;*&#8217; after the current mode. </p>
 <p> There are a few global options. Other options modify the last output that is specified in earlier parameters in the command line. Multiple outputs may be modified at the same time by passing multiple &#8211;output options followed immediately by their corresponding modifying options.</p>

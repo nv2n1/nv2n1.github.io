@@ -1,5 +1,4 @@
 ---
-
 title: "pmtrace(1)"
 name: "pmtrace"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmtrace – command line performance instrumentation"
 
 <h2>NAME</h2>
 <p> <code>pmtrace</code> &#8211; command line performance instrumentation</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pmtrace</code> [<code>-q</code>] [<code>-c</code> <i>value</i> | <code>-e</code> <i>command</i> | <code>-v</code> <i>value</i>] [<code>-h</code> <i>host</i>] [<code>-S</code> <i>state</i>] <i>tag</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmtrace</code> provides a simple command line interface to the trace Performance Metrics Domain Agent (PMDA) and the associated <i>pcp_trace</i> library. </p>
 <p> The default <code>pmtrace</code> behavior is to provide point trace data to the trace PMDA, using the <i>tag</i> argument as the identifying name associated with each trace point. The <i>tag</i> then becomes an instance identifier within the set of trace.point metrics. </p>
 <p> The <code>-e</code> option allows an arbitrary <i>command</i> to be executed. This <i>command</i> will be measured as a transaction since it has well defined start and end points. The information is made available through the trace.transact metrics. </p>

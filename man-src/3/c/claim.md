@@ -1,5 +1,4 @@
 ---
-
 title: "claim(3)"
 name: "claim"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-claim/"
 description: "ql/instruments/claim.hpp – Classes for default-event claims."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/instruments/claim.hpp &#8211; Classes for default-event claims. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/bond.hpp&gt; </p>
 <h3>Classes</h3>
 <p> class <code>Claim</code><br />

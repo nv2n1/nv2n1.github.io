@@ -1,5 +1,4 @@
 ---
-
 title: "fdblackscholesvanillaengine(3)"
 name: "fdblackscholesvanillaengine"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-fdblackscholesvanillaengine/"
 description: "ql/experimental/finitedifferences/fdblackscholesvanillaengine.hpp – Finite-Differences Black Scholes vanilla option engine."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/experimental/finitedifferences/fdblackscholesvanillaengine.hpp &#8211; Finite-Differences Black Scholes vanilla option engine. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/pricingengine.hpp&gt;<br />
  #include &lt;ql/instruments/dividendvanillaoption.hpp&gt;<br />
  #include &lt;ql/processes/blackscholesprocess.hpp&gt; </p>

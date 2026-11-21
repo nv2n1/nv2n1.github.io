@@ -1,5 +1,4 @@
 ---
-
 title: "formail(1)"
 name: "formail"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-formail/"
 description: "formail – mail (re)formatter"
 ---
 
+<h2 class="name">NAME</h2>
+<p> formail &#8211; mail (re)formatter </p>
+<h2>SYNOPSIS</h2>
 <p> <code>formail</code> [<i></i><code>+</code>skip] [<i></i><code>&#8211;</code>total] [<code>-bczfrktedqBY</code>] [<code>-p</code> <i>prefix</i>]<br />
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [<code>-D</code> <i>maxlen idcache</i>]<br />
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [<code>-l</code> <i>folder</i>]<br />
@@ -18,6 +20,7 @@ description: "formail – mail (re)formatter"
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [<code>-R</code> <i>oldfield</i> <i>newfield</i>]<br />
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [<code>-n</code> [<i>maxprocs</i> ]] [<code>-m</code> <i>minfields</i>] [<code>-s</code> [<i>command</i> [<i>arg</i> &#8230;]]]<br />
  <code>formail</code> <code>-v</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>formail</code> is a filter that can be used to force mail into mailbox format, perform `From &#8216; escaping, generate auto-replying headers, do simple header munging/extracting or split up a mailbox/digest/articles file. The mail/mailbox/article contents will be expected on stdin. </p>
 <p> If formail is supposed to determine the sender of the mail, but is unable to find any, it will substitute `foo@bar&#8217;. </p>
 <p> If formail is started without any command line options, it will force any mail coming from stdin into mailbox format and will escape <code>all</code> bogus `From &#8216; lines with a `&gt;&#8217;. </p>

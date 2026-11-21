@@ -1,5 +1,4 @@
 ---
-
 title: "cdk_dialog(3)"
 name: "cdk_dialog"
 section: "3"
@@ -10,6 +9,7 @@ description: "cdk_dialog – curses dialog widget"
 
 <h2>NAME</h2>
 <p> cdk_dialog &#8211; curses dialog widget</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>
 <p> #include &lt;cdk.h&gt; </p>
 <pre><code>
@@ -110,6 +110,7 @@ void setCDKDialogVerticalChar(
     chtype character);
 </code></pre>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> The Cdk dialog widget creates a dialog box with a message and a varied number of buttons to choose from. The following functions create or manipulate the Cdk dialog box widget. </p>
 <h2>AVAILABLE FUNCTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "fribidi_parse_charset(3)"
 name: "fribidi_parse_charset"
 section: "3"
@@ -7,9 +6,14 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_parse_charset/"
 ---
 
-fribidi_parse_charset - parse character set name 
+<h2 class="name">NAME</h2>
+ 
 
-<b> #include &lt;fribidi.h&gt; 
+ fribidi_parse_charset - parse character set name 
+
+<h2>SYNOPSIS</h2>
+
+ <b> #include &lt;fribidi.h&gt; 
 
  extern FriBidiCharSet fribidi_parse_charset(const char *s); </b>
 
@@ -19,7 +23,9 @@ fribidi_parse_charset - parse character set name
 <dt><b>const char *s</b>
 </dt><dd> Input name of the character set.</dd></dl>
 
-Parse character set name.
+<h2>DESCRIPTION</h2>
+
+ Parse character set name.
 
 <h2>RETURNS</h2>
 

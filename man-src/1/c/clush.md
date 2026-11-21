@@ -1,5 +1,4 @@
 ---
-
 title: "clush(1)"
 name: "clush"
 section: "1"
@@ -10,10 +9,12 @@ description: "clush – execute shell commands on a cluster"
 
 <h2>NAME</h2>
 <p> clush &#8211; execute shell commands on a cluster</p>
+<h2>SYNOPSIS</h2>
 <p> <code>clush</code> <code>-a</code> | <code>-g</code> <i>group</i> | <code>-w</code> <i>nodes</i> [OPTIONS] </p>
 <p> <code>clush</code> <code>-a</code> | <code>-g</code> <i>group</i> | <code>-w</code> <i>nodes</i> [OPTIONS] <i>command</i> </p>
 <p> <code>clush</code> <code>-a</code> | <code>-g</code> <i>group</i> | <code>-w</code> <i>nodes</i> [OPTIONS] &#8211;copy <i>file</i> | <i>dir</i> [ <i>file</i> | <i>dir</i> &#8230;] [ &#8211;dest <i>path</i> ] </p>
 <p> <code>clush</code> <code>-a</code> | <code>-g</code> <i>group</i> | <code>-w</code> <i>nodes</i> [OPTIONS] &#8211;rcopy <i>file</i> | <i>dir</i> [ <i>file</i> | <i>dir</i> &#8230;] [ &#8211;dest <i>path</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>clush</code> is a program for executing commands in parallel on a cluster and for gathering their results. <code>clush</code> executes commands interactively or can be used within shell scripts and other applications. It is a partial front-end to the ClusterShell library that ensures a light, unified and robust parallel command execution framework. Thus, it allows traditional shell scripts to benefit from some of the library features. <code>clush</code> currently makes use of the Ssh worker of ClusterShell, by default, that only requires <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1) (OpenSSH SSH client).</p>
 <h2>INVOCATION</h2>
 <p> <code>clush</code> can be started non-interactively to run a shell <i>command</i>, or can be invoked as an interactive shell. To start a <code>clush</code> interactive session, invoke the <code>clush</code> command without providing <i>command</i>.</p>

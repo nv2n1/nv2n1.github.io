@@ -1,5 +1,4 @@
 ---
-
 title: "thunar-volman(1)"
 name: "thunar-volman"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-thunar-volman/"
 description: "thunar-volman – controls configuration of thunar’s removable media"
 ---
 
+<h2 class="name">NAME</h2>
+<p> thunar-volman &#8211; controls configuration of thunar&#8217;s removable media </p>
 <h2>NOTE</h2>
 <p> Note that usually this command is invoked by thunar itself and you should only use this if you are having problems adding the device as per the documentation cited at the end of this manpage.</p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt>
 </dt><dd> thunar-volman [OPTION&#8230;]</dd>

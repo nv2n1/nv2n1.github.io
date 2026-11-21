@@ -1,5 +1,4 @@
 ---
-
 title: "ck_bitmap_iterator_init(3)"
 name: "ck_bitmap_iterator_init"
 section: "3"
@@ -12,8 +11,10 @@ description: "ck_bitmap_iterator_init – initialize bitmap iterator"
 <p> <code>ck_bitmap_iterator_init</code> &#8211; initialize bitmap iterator</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_ht.h </p>
 <p> Ft void Fn ck_bitmap_iterator_init ck_bitmap_iterator_t *iterator ck_bitmap_t *bitmap</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_bitmap_iterator_init function will initialize the object pointed to by the Fa iterator argument for use with Fa bitmap . </p>
 <p> An iterator is used to iterate through set bitmap bits with the ck_bitmap_next3 function.</p>
 <h2>RETURN VALUES</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "ffmpeg-filters(1)"
 name: "ffmpeg-filters"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-ffmpeg-filters/"
 description: "ffmpeg-filters – FFmpeg filters"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ffmpeg-filters &#8211; FFmpeg filters </p>
+<h2>DESCRIPTION</h2>
 <p> This document describes filters, sources, and sinks provided by the libavfilter library.</p>
 <h2>FILTERING INTRODUCTION</h2>
 <p> Filtering in FFmpeg is enabled through the libavfilter library. </p>

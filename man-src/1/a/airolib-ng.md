@@ -1,5 +1,4 @@
 ---
-
 title: "airolib-ng(1)"
 name: "airolib-ng"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-airolib-ng/"
 description: "airolib-ng – manage and create a WPA/WPA2 pre-computed hashes tables"
 ---
 
+<h2 class="name">NAME</h2>
+<p> airolib-ng &#8211; manage and create a WPA/WPA2 pre-computed hashes tables </p>
+<h2>SYNOPSIS</h2>
 <p> <code>airolib-ng</code> &lt;database&gt; &lt;operation&gt; [options]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>airolib-ng</code> is a tool for the aircrack-ng suite to store and manage essid and password lists, compute their Pairwise Master Keys (PMKs) and use them in WPA/WPA2 cracking. The program uses the lightweight SQLite3 database as the storage mechanism which is available on most platforms. The SQLite3 database was selected taking in consideration platform availability plus management, memory and disk overhead.</p>
 <h2>DATABASE</h2>
 <dl>

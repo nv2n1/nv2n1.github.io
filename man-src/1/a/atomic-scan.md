@@ -1,5 +1,4 @@
 ---
-
 title: "atomic-scan(1)"
 name: "atomic-scan"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-atomic-scan/"
 description: "atomic-scan – Scan for CVEs in a container or image"
 ---
 
+<h2 class="name">NAME</h2>
+<p> atomic-scan &#8211; Scan for CVEs in a container or image </p>
+<h2>SYNOPSIS</h2>
 <p> <code>atomic scan</code> [<code>-h</code>|<code>&#8211;help</code>] [<code>&#8211;list</code>] [<code>&#8211;scanner</code>] [<code>&#8211;scan_type</code>] [<code>&#8211;verbose</code>] [<code>&#8211;all</code> | <code>&#8211;images</code> | <code>&#8211;containers</code> | <code>&#8211;rootfs</code> rootfs path to scan| IMAGE or CONTAINER names &#8230;] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>atomic scan</code> will scan the a container or image looking for known Common Vulnerabilities and Exposures(CVEs) by default. It can also scan paths on the host filesystem as well using the <i>&#8211;rootfs</i> option. </p>
 <p> The architecture for <i>atomic scan</i> is very plug-in friendly. You can define additional scanners to use via the plug-in interface. To list the available scanners setup on your system, you can use <i>&#8211;list</i>. To use a different scanner, you simple pass its name with the <i>&#8211;scanner</i> switch. You can also select a different scan type using the <i>&#8211;scan_type</i> switch. </p>
 <h2>OPTIONS</h2>

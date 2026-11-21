@@ -1,5 +1,4 @@
 ---
-
 title: "envy24control(1)"
 name: "envy24control"
 section: "1"
@@ -10,7 +9,9 @@ description: "envy24control – GUI control tool for Envy24 (ice1712) based soun
 
 <h2>NAME</h2>
 <p> envy24control &#8211; GUI control tool for Envy24 (ice1712) based soundcards, under ALSA. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>envy24control</code> [<i>-c</i> card-number] [<i>-D</i> control-name] [<i>-o</i> 0-num DACs max 8] [<i>-i</i> 0-num ADCs max 8] [<i>-p</i> 0-8] [<i>-s</i> 0-2] [<i>-f</i> &lt;profiles file name&gt;] [<i>-v</i>] [&lt;profile number&gt;|&lt;profile name&gt;] [<i>-m</i> midi-channel] [<i>-M</i>] [<i>-w</i> window-width] [<i>-t</i> 0-9] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>envy24control</code> allows control of the digital mixer, channel gains and other hardware settings for sound cards based on the ice1712 chipset (Midiman Delta series, Terratec EWS and EWX series). It also displays a level meter for each input and output channel. </p>
 <h2>INVOKING</h2>
 <p> <code>envy24control</code> [<i>-c</i> card-number] [<i>-D</i> control-name] [<i>-o</i> 0-num DACs max 8] [<i>-i</i> 0-num ADCs max 8] [<i>-p</i> 0-8] [<i>-s</i> 0-2] [<i>-f</i> &lt;profiles file name&gt;] [<i>-v</i>] [&lt;profile number&gt;|&lt;profile name&gt;] [<i>-m</i> midi-channel] [<i>-M</i>] [<i>-w</i> window-width] [<i>-t</i> 0-9]</p>

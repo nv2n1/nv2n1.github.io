@@ -1,5 +1,4 @@
 ---
-
 title: "kate(1)"
 name: "kate"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-kate/"
 description: "kate – Advanced text editor for KDE"
 ---
 
+<h2 class="name">NAME</h2>
+<p> kate &#8211; Advanced text editor for KDE </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>kate</code> [<code>-s, &#8211;start</code><i></dt>
 <dd>name</i>] [<code>&#8211;startanon</code>] [<code>-n, &#8211;new</code>] [<code>-b, &#8211;block</code>] [<code>-p, &#8211;pid</code><i> pid</i>] [<code>-e, &#8211;encoding</code><i> name</i>] [<code>-l, &#8211;line</code><i> line</i>] [<code>-c, &#8211;column</code><i> column</i>] [<code>-i, &#8211;stdin</code>] [<code>-u, &#8211;use</code>] [KDE Generic Options] [Qt Generic Options]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Kate is the KDE Advanced Text Editor. </p>
 <p> Kate also provides the editor part for various applications, under the name KWrite. </p>
 <p> Some of Kate&#8217;s many features include configurable syntax highlighting for languages ranging from C and C++ to HTML to bash scripts, the ability to create and maintain projects, a multiple document interface (MDI), and a self-contained terminal emulator. </p>

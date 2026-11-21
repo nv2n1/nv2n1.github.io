@@ -1,5 +1,4 @@
 ---
-
 title: "pipewire(1)"
 name: "pipewire"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-pipewire/"
 description: "pipewire – The PipeWire media server"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pipewire &#8211; The PipeWire media server </p>
+<h2>SYNOPSIS</h2>
 <pre>
 <code>pipewire</code> [<i>options</i>]
 </pre>
+<h2>DESCRIPTION</h2>
 <p> PipeWire is a service that facilitates sharing of multimedia content between devices and applications. </p>
 <p> The <code>pipewire</code> daemon reads a config file that is further documented in <code><a href="/docs/linux/man/5-pipewire-conf/">pipewire.conf</a>(5)</code> manual page.</p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "memcp(1)"
 name: "memcp"
 section: "1"
@@ -11,7 +10,9 @@ description: "memcp – libmemcached Documentation"
 <h2>NAME</h2>
 <p> memcp &#8211; libmemcached Documentation </p>
 <p> Copies files to a collection of memcached servers</p>
+<h2>SYNOPSIS</h2>
 <p> memcp [options] [file] [server]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>memcp</code> copies one or more files into <a href="/docs/linux/man/1-memcached/">memcached</a>(1) servers. It is similar to the standard UNIX <a href="/docs/linux/man/1-cp/">cp</a>(1) command. </p>
 <p> The key names will be the names of the files, without any directory path.</p>
 <h2>OPTIONS</h2>

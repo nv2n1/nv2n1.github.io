@@ -1,5 +1,4 @@
 ---
-
 title: "pmdaroomtemp(1)"
 name: "pmdaroomtemp"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmdaroomtemp – room temperature performance metrics domain agent
 
 <h2>NAME</h2>
 <p> <code>pmdaroomtemp</code> &#8211; room temperature performance metrics domain agent (PMDA)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/roomtemp/pmdaroomtemp</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdaroomtemp</code> is a Performance Metrics Domain Agent (PMDA) which exports the temperature from one or more sensors built using the DS2480 and DS1280 chipsets and MicroLAN technology from Dallas Semiconductor Corporation. </p>
 <p> The <code>roomtemp</code> PMDA exports metrics that reflect the temperatures from one or more of these devices, in both degrees Celcius and Fahrenheit. Each metric has one instance for each temperature sensor device. The external instance identifiers are the serial numbers (in hex) of the DS1280 chips discovered when the MicroLAN was probed. </p>
 <p> A brief description of the <code>pmdaroomtemp</code> command line options follows:</p>

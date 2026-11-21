@@ -1,5 +1,4 @@
 ---
-
 title: "lxsession-logout(1)"
 name: "lxsession-logout"
 section: "1"
@@ -10,7 +9,9 @@ description: "lxsession-logout — program to logout from LXSession"
 
 <h2>NAME</h2>
 <p> lxsession-logout &#8212; program to logout from LXSession</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lxsession-logout</code> [<code>options</code> &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>lxsession-logout</code> command. </p>
 <p> <code>lxsession-logout</code> is a program that to logout from LXSession. It gives a good-looking logout dialog.<br />
 &nbsp;<wbr></p>

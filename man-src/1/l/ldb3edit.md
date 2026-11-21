@@ -1,5 +1,4 @@
 ---
-
 title: "ldb3edit(1)"
 name: "ldb3edit"
 section: "1"
@@ -13,6 +12,10 @@ ldbedit - Edit LDB databases using your preferred editor
 
 <dl>
 <dt> FCldbeditF[] [-?] [--usage] [-s base|one|sub] [-b basedn] [-a] [-e editor] [-H LDB-URL] [expression] [attributes...]</dt></dl>
+
+<h2>DESCRIPTION</h2>
+
+ 
 
 <dd>ldbedit is a utility that allows you to edit LDB entries (in tdb files, sqlite files or LDAP servers) using your preferred editor. ldbedit generates an LDIF file based on your query, allows you to edit the LDIF, and then merges that LDIF back into the LDB backend.
 

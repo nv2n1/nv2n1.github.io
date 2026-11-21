@@ -1,5 +1,4 @@
 ---
-
 title: "fribidi_charset_to_unicode(3)"
 name: "fribidi_charset_to_unicode"
 section: "3"
@@ -7,9 +6,14 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_charset_to_unicode/"
 ---
 
-fribidi_charset_to_unicode - convert string to Unicode 
+<h2 class="name">NAME</h2>
+ 
 
-<b> #include &lt;fribidi.h&gt; 
+ fribidi_charset_to_unicode - convert string to Unicode 
+
+<h2>SYNOPSIS</h2>
+
+ <b> #include &lt;fribidi.h&gt; 
 
  extern FriBidiStrIndex fribidi_charset_to_unicode 
  ( 
@@ -52,7 +56,9 @@ fribidi_charset_to_unicode - convert string to Unicode
 </dd><dt><b>FriBidiChar *us</b>
 </dt><dd> Output Unicode string.</dd></dl>
 
-This function converts an string from a character set, to a Unicode string.
+<h2>DESCRIPTION</h2>
+
+ This function converts an string from a character set, to a Unicode string.
 
 <h2>RETURNS</h2>
 

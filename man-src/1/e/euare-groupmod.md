@@ -1,5 +1,4 @@
 ---
-
 title: "euare-groupmod(1)"
 name: "euare-groupmod"
 section: "1"
@@ -10,10 +9,12 @@ description: "euare-groupmod – Change the name and/or path of a group"
 
 <h2>NAME</h2>
 <p> euare-groupmod &#8211; Change the name and/or path of a group</p>
+<h2>SYNOPSIS</h2>
 <p> euare-groupmod [-n GROUP] [-p PATH] [&#8211;as-account ACCOUNT] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] GROUP</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Change the name and/or path of a group</p>
 <h3>positional arguments:</h3>
 <dl>

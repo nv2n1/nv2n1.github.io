@@ -1,5 +1,4 @@
 ---
-
 title: "csscapture_py2(1)"
 name: "csscapture_py2"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-csscapture_py2/"
 description: "csscapture – Downloads CSS stylesheets."
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>csscapture</code> &#8211; Downloads CSS stylesheets. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>csscapture</code> [<i>options</i>&#8230;] <i>URL</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>CSSCapture</code> downloads all referenced CSS stylesheets of a given <i>URL</i> and saves them to a given target directory.</p>
 <h2>OPTIONS</h2>
 <dl>

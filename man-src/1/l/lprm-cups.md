@@ -1,5 +1,4 @@
 ---
-
 title: "lprm-cups(1)"
 name: "lprm-cups"
 section: "1"
@@ -10,7 +9,9 @@ description: "lprm – cancel print jobs"
 
 <h2>NAME</h2>
 <p> lprm &#8211; cancel print jobs</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lprm</code> [ -E ] [ -U <i>username</i> ] [ -h <i>server[:port]</i> ] [ -P <i>destination[/instance]</i> ] [ &#8211; ] [ <i>job ID(s)</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>lprm</i> cancels print jobs that have been queued for printing. If no arguments are supplied, the current job on the default destination is cancelled. You can specify one or more job ID numbers to cancel those jobs or use the <i>&#8211;</i> option to cancel all jobs.</p>
 <h2>OPTIONS</h2>
 <p> The <i>lprm</i> command supports the following options:</p>

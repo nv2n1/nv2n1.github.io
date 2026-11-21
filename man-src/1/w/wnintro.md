@@ -1,5 +1,4 @@
 ---
-
 title: "wnintro(1)"
 name: "wnintro"
 section: "1"
@@ -10,8 +9,10 @@ description: "wnintro – WordNet user commands"
 
 <h2>NAME</h2>
 <p> wnintro &#8211; WordNet user commands</p>
+<h2>SYNOPSIS</h2>
 <p> <code>wn</code> &#8211; command line interface to WordNet database </p>
 <p> <code>wnb</code> &#8211; window based WordNet browser</p>
+<h2>DESCRIPTION</h2>
 <p> This section of the <i>WordNet Reference Manual</i> contains manual pages that describe commands available with the various WordNet system packages. </p>
 <p> The WordNet interfaces <code><a href="/docs/linux/man/1-wn/">wn</a></code>(1) and <code><a href="/docs/linux/man/1-wnb/">wnb</a></code>(1) allow the user to search the WordNet database and display the information textually.</p>
 <h2>ENVIRONMENT VARIABLES (UNIX)</h2>

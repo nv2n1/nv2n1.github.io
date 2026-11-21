@@ -1,5 +1,4 @@
 ---
-
 title: "euscale-put-scaling-policy(1)"
 name: "euscale-put-scaling-policy"
 section: "1"
@@ -10,10 +9,12 @@ description: "euscale-put-scaling-policy – Create or update an auto-scaling gr
 
 <h2>NAME</h2>
 <p> euscale-put-scaling-policy &#8211; Create or update an auto-scaling group&#8217;s scaling policy</p>
+<h2>SYNOPSIS</h2>
 <p> euscale-put-scaling-policy <code>-g</code> ASGROUP <code>-a</code> SCALE <code>-t</code></p>
 <dl>
 <dt>{ChangeInCapacity,ExactCapacity,PercentChangeInCapacity}</dt>
 <dd> [&#8211;cooldown SECONDS] [-s PERCENT] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] POLICY</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Create or update an auto-scaling group&#8217;s scaling policy</p>
 <h3>positional arguments:</h3>
 <dl>

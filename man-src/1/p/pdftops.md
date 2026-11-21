@@ -1,5 +1,4 @@
 ---
-
 title: "pdftops(1)"
 name: "pdftops"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pdftops/"
 description: "pdftops – Portable Document Format (PDF) to PostScript converter (version 3.03)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pdftops &#8211; Portable Document Format (PDF) to PostScript converter (version 3.03) </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pdftops</code> [options] &lt;PDF-file&gt; [&lt;PS-file&gt;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Pdftops</code> converts Portable Document Format (PDF) files to PostScript so they can be printed. </p>
 <p> Pdftops reads the PDF file, <i>PDF-file</i>, and writes a PostScript file, <i>PS-file</i>. If <i>PS-file</i> is not specified, pdftops converts <i>file.pdf</i> to <i>file.ps</i> (or <i>file.eps</i> with the -eps option). If <i>PS-file</i> is &#8216;-&#8216;, the PostScript is sent to stdout. If <i>PDF-file</i> is &#8216;-&#8216;, Pdftops reads the PDF file from stdin.</p>
 <h2>OPTIONS</h2>

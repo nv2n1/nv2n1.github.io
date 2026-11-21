@@ -1,5 +1,4 @@
 ---
-
 title: "ps2epsi(1)"
 name: "ps2epsi"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-ps2epsi/"
 description: "ps2epsi – generate conforming Encapsulated PostScript"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ps2epsi &#8211; generate conforming Encapsulated PostScript </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ps2epsi</code> <i>infile.ps</i> [ <i>outfile.epsi</i> ] <code>(Unix)</code><br />
  <code>ps2epsi</code> <i>infile.ps</i> [ <i>outfile.epi</i> ] <code>(DOS)</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>ps2epsi</code> uses <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1) to process a <code>PostScript</code>(tm) file and generate as output a new file which conforms to Adobe&#8217;s <code>Encapsulated PostScript Interchange</code> (EPSI) format. EPSI is a special form of encapsulated PostScript (EPS) which adds to the beginning of the file in the form of PostScript comments a bitmapped version of the final displayed page. Programs which understand EPSI (usually word processors or DTP programs) can use this bitmap to give a preview version on screen of the PostScript. The displayed quality is often not very good (e.g., low resolution, no colours), but the final printed version uses the real PostScript, and thus has the normal PostScript quality.</p>
 <h2>USAGE</h2>
 <p> On Unix systems invoke <code>ps2epsi</code> like this: </p>

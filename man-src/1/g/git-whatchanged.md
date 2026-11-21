@@ -1,5 +1,4 @@
 ---
-
 title: "git-whatchanged(1)"
 name: "git-whatchanged"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-whatchanged/"
 description: "git-whatchanged – Show logs with difference each commit introduces"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-whatchanged &#8211; Show logs with difference each commit introduces </p>
+<h2>SYNOPSIS</h2>
 <pre>
 <i>git whatchanged</i> &lt;option&gt;...
 </pre>
+<h2>DESCRIPTION</h2>
 <p> Shows commit logs and diff output each commit introduces. </p>
 <p> New users are encouraged to use <code><a href="/docs/linux/man/1-git-log/">git-log</a></code>(1) instead. The <code>whatchanged</code> command is essentially the same as <code><a href="/docs/linux/man/1-git-log/">git-log</a></code>(1) but defaults to show the raw format diff output and to skip merges. </p>
 <p> The command is kept primarily for historical reasons; fingers of many people who learned Git long before <code>git log</code> was invented by reading Linux kernel mailing list are trained to type it.</p>

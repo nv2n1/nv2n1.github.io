@@ -1,5 +1,4 @@
 ---
-
 title: "robodoc(1)"
 name: "robodoc"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-robodoc/"
 description: "ROBODoc – Extract documentation from source code."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ROBODoc &#8211; Extract documentation from source code.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>robodoc</code> <i>&#8211;src</i> &lt;source&gt; <i>&#8211;doc</i> &lt;destination&gt; <code>[options]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> ROBODoc extracts specially formated documentation from the source code. It allows you to maintain a program and its documentation in a single file. </p>
 <h2>OPTIONS</h2>
 <dl>

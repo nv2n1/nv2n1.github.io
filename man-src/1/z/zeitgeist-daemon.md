@@ -1,5 +1,4 @@
 ---
-
 title: "zeitgeist-daemon(1)"
 name: "zeitgeist-daemon"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-zeitgeist-daemon/"
 description: "zeitgeist-daemon – D-Bus interface providing a log of activities"
 ---
 
+<h2 class="name">NAME</h2>
+<p> zeitgeist-daemon &#8211; D-Bus interface providing a log of activities</p>
+<h2>SYNOPSIS</h2>
 <p> <code>zeitgeist-daemon</code> <i>[OPTION]</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>zeitgeist-daemon</code> is daemon providing an activity log. That is, it consists of a central database for events such as file usage, browser history, calendar entries, etc. </p>
 <p> All this information is made available to external applications which communicate with <code>zeitgeist-daemon</code> over D-Bus. Interested applications can request information, insert new events or delete existing events. </p>
 <p> Zeitgeist is also capable of establishing relationships between activities. Its purpose is enabling an activity-aware desktop with adaptive user interfaces. </p>

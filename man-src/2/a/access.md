@@ -1,5 +1,4 @@
 ---
-
 title: "access(2)"
 name: "access"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-access/"
 description: "access, faccessat, faccessat2 – check user’s permissions for a file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> access, faccessat, faccessat2 &#8211; check user&#8217;s permissions for a file </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;unistd.h&gt;
 int access(const char *pathname, int mode);
@@ -26,6 +28,7 @@ int faccessat2(int dirfd, const char *pathname, int mode, int flags);
 <dt>Before glibc 2.10:</dt>
 <dd> _ATFILE_SOURCE</dd></dl>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> <code>access</code>() checks whether the calling process can access the file <i>pathname</i>. If <i>pathname</i> is a symbolic link, it is dereferenced. </p>
 <p> The <i>mode</i> specifies the accessibility check(s) to be performed, and is either the value <code>F_OK</code>, or a mask consisting of the bitwise OR of one or more of <code>R_OK</code>, <code>W_OK</code>, and <code>X_OK</code>. <code>F_OK</code> tests for the existence of the file. <code>R_OK</code>, <code>W_OK</code>, and <code>X_OK</code> test whether the file exists and grants read, write, and execute permissions, respectively. </p>
 <p> The check is done using the calling process&#8217;s <i>real</i> UID and GID, rather than the effective IDs as is done when actually attempting an operation (e.g., <code><a href="/docs/linux/man/2-open/">open</a></code>(2)) on the file. Similarly, for the root user, the check uses the set of permitted capabilities rather than the set of effective capabilities; and for non-root users, the check uses an empty set of capabilities. </p>

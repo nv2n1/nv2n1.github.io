@@ -1,5 +1,4 @@
 ---
-
 title: "gcore(1)"
 name: "gcore"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-gcore/"
 description: "gcore – Generate core files for running processes"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gcore &#8211; Generate core files for running processes </p>
+<h2>SYNOPSIS</h2>
 <p> <code>gcore</code> [-a] [-o <i>filename</i>] <i>pid[s]</i></p>
+<h2>DESCRIPTION</h2>
 <p> gcore generates a core file for the process(es) specified by process IDs, <i>pid[s]</i>. By default, each core file is written to core.<i>pid</i>, in the current directory.</p>
 <dl>
 <dt><code>-a</code></dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "codesnippets(1)"
 name: "codesnippets"
 section: "1"
@@ -10,7 +9,9 @@ description: "codesnippets – Stand-alone app for the codesnippets Code::Blocks
 
 <h2>NAME</h2>
 <p> codesnippets &#8211; Stand-alone app for the codesnippets Code::Blocks plugin.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>codesnippets</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>codesnippets</code> allows you to use codesnippets outside Code::Blocks, as a stand-alone application.</p>
 <h2>AUTHOR</h2>
 <pre>

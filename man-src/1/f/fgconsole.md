@@ -1,5 +1,4 @@
 ---
-
 title: "fgconsole(1)"
 name: "fgconsole"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-fgconsole/"
 description: "fgconsole – print the number of the active VT."
 ---
 
+<h2 class="name">NAME</h2>
+<p> fgconsole &#8211; print the number of the active VT.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>fgconsole</code> [ <code>-h &#8211;help</code> | <code>-V &#8211;version</code> | <code>-n &#8211;next-available</code> ]</p>
+<h2>DESCRIPTION</h2>
 <p> If the active Virtual Terminal is <i>/dev/ttyN</i>, then prints <i>N</i> on standard output. </p>
 <p> If the console is a serial console, then &quot;serial&quot; is printed instead.</p>
 <dl>

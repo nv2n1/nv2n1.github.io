@@ -1,5 +1,4 @@
 ---
-
 title: "mrtg-squid(1)"
 name: "mrtg-squid"
 section: "1"
@@ -7,9 +6,14 @@ letter: "m"
 url: "/docs/linux/man/1-mrtg-squid/"
 ---
 
-mrtg-squid - using mrtg to monitor Squid 
+<h2 class="name">NAME</h2>
+ 
 
-Squid 2.3 knows <font SIZE="-1">SNMP</font> and you can therefore use mrtg to monitor it quite easily. 
+ mrtg-squid - using mrtg to monitor Squid 
+
+<h2>DESCRIPTION</h2>
+
+ Squid 2.3 knows <font SIZE="-1">SNMP</font> and you can therefore use mrtg to monitor it quite easily. 
 
  I have made some modifications to mrtg which simplify this. My work is based on earlier modification made by: matija.grabnar [at] arnes.si and kostas [at] nlanr.net.
 

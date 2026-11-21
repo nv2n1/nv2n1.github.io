@@ -1,5 +1,4 @@
 ---
-
 title: "rrdgraph_examples(1)"
 name: "rrdgraph_examples"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-rrdgraph_examples/"
 description: "rrdgraph_examples – Examples for rrdtool graph"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rrdgraph_examples &#8211; Examples for rrdtool graph </p>
+<h2>SYNOPSIS</h2>
 <p> <code>rrdtool graph /home/httpd/html/test.png &#8211;img-format </code><font SIZE="-1"><code>PNG</code></font> </p>
 <p> followed by any of the examples below</p>
+<h2>DESCRIPTION</h2>
 <p> For your convenience some of the commands are explained here by using detailed examples. They are not always cut-and-paste ready because comments are intermixed with the examples.</p>
 <h2>EXAMPLES</h2>
 <h3>Data with multiple resolutions</h3>

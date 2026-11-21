@@ -1,5 +1,4 @@
 ---
-
 title: "daemon(3)"
 name: "daemon"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-daemon/"
 description: "daemon – run in the background"
 ---
 
+<h2 class="name">NAME</h2>
+<p> daemon &#8211; run in the background </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int daemon(int </code><i>nochdir</i><code>, int </code><i>noclose</i><code>);</code> </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
@@ -21,6 +23,7 @@ Since glibc 2.21 : _DEFAULT_SOURCE
                                          ||
                                          (_XOPEN_SOURCE &amp;&amp; _XOPEN_SOURCE &amp; nbsp; &lt; &amp;nbsp; 500)
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>daemon</code>() function is for programs wishing to detach themselves from the controlling terminal and run in the background as system daemons. </p>
 <p> If <i>nochdir</i> is zero, <code>daemon</code>() changes the process&#8217;s current working directory to the root directory (&quot;/&quot;); otherwise, the current working directory is left unchanged. </p>
 <p> If <i>noclose</i> is zero, <code>daemon</code>() redirects standard input, standard output and standard error to <i>/dev/null</i>; otherwise, no changes are made to these file descriptors.</p>

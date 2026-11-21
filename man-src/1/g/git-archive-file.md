@@ -1,5 +1,4 @@
 ---
-
 title: "git-archive-file(1)"
 name: "git-archive-file"
 section: "1"
@@ -10,7 +9,9 @@ description: "git-archive-file – Export the current HEAD of the git repository
 
 <h2>NAME</h2>
 <p> <code>git-archive-file</code> &#8211; Export the current HEAD of the git repository to a archive</p>
+<h2>SYNOPSIS</h2>
 <p> <code>git-archive-file</code></p>
+<h2>DESCRIPTION</h2>
 <p> Export the current HEAD of the repository into a archive with a identifiable and unique name.</p>
 <h2>OPTIONS</h2>
 <p> This command does not take any options.</p>

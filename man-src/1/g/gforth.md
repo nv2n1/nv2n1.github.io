@@ -1,5 +1,4 @@
 ---
-
 title: "gforth(1)"
 name: "gforth"
 section: "1"
@@ -10,8 +9,10 @@ description: "gforth, gforth-fast, gforthmi – a fast and portable Forth system
 
 <h2>NAME</h2>
 <p> gforth, gforth-fast, gforthmi &#8211; a fast and portable Forth system</p>
+<h2>SYNOPSIS</h2>
 <p> gforth [initialization options] [image-specific options] gforth-fast [initialization options] [image-specific options] </p>
 <p> gforthmi <i>filename</i> [initialization options] [image-specific options]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>GForth</code> is a fast and portable implementation of the Forth programming language. For details read the manual.</p>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> GFORTHPATH contains the search path for source and image files. </p>

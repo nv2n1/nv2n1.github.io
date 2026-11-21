@@ -1,5 +1,4 @@
 ---
-
 title: "logname(1)"
 name: "logname"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-logname/"
 description: "logname – print user’s login name"
 ---
 
+<h2 class="name">NAME</h2>
+<p> logname &#8211; print user&#8217;s login name </p>
+<h2>SYNOPSIS</h2>
 <p> <code>logname</code> [<i>,OPTION/</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Print the name of the current user.</p>
 <dl>
 <dt><code>&#8211;help</code></dt>

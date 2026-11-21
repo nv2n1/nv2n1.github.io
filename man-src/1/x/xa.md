@@ -1,5 +1,4 @@
 ---
-
 title: "xa(1)"
 name: "xa"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-xa/"
 description: "xa – 6502/R65C02/65816 cross-assembler"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xa &#8211; 6502/R65C02/65816 cross-assembler</p>
+<h2>SYNOPSIS</h2>
 <p> <code>xa</code> [<i>OPTION</i>]&#8230; <i>FILE</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>xa</code> is a multi-pass cross-assembler for the 8-bit processors in the 6502 series (such as the 6502, 65C02, 6504, 6507, 6510, 7501, 8500, 8501 and 8502), the Rockwell R65C02, and the 16-bit 65816 processor. For a description of syntax, see <code>ASSEMBLER SYNTAX</code> further in this manual page. </p>
 <h2>OPTIONS</h2>
 <dl>

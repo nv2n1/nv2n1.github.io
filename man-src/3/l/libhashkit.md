@@ -1,5 +1,4 @@
 ---
-
 title: "libhashkit(3)"
 name: "libhashkit"
 section: "3"
@@ -16,7 +15,11 @@ cc[flag...] file... - lhashkit
 #include &lt;libhashkit/hashkit.h&gt;
 </code></pre>
 
-libhashkit is a small and thread-safe client library that provides a collection of useful hashing algorithm. libhashkit is distributed with libmemcached.
+<h2>DESCRIPTION</h2>
+
+ 
+
+ libhashkit is a small and thread-safe client library that provides a collection of useful hashing algorithm. libhashkit is distributed with libmemcached.
 
 <h2>HOME</h2>
 

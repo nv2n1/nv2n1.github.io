@@ -1,5 +1,4 @@
 ---
-
 title: "gphoto2(1)"
 name: "gphoto2"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-gphoto2/"
 description: "gphoto2 – command-line gphoto2 client"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gphoto2 &#8211; command-line gphoto2 client </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gphoto2</code> [&#8211;debug] [&#8211;debug-logfile&nbsp;<wbr><i>FILENAME</i>] [[-q] | [&#8211;quiet]] [[-v] | [&#8211;verbose]] [[-h] | [&#8211;help]]</dt>
 <dd> [&#8211;hook-script&nbsp;<wbr><i>FILENAME</i>]</dd>
@@ -40,6 +42,7 @@ description: "gphoto2 – command-line gphoto2 client"
 <dd> [&#8211;show-info&nbsp;<wbr><i>RANGE</i>]</dd>
 <dd> [&#8211;show-exif&nbsp;<wbr><i>RANGE</i>]</dd>
 <dd> [&#8211;storage-info] [&#8211;summary] [&#8211;manual] [&#8211;about] [&#8211;shell]</dd></dl>
+<h2>DESCRIPTION</h2>
 <dd><a href="/docs/linux/man/3-libgphoto2/">libgphoto2</a>(3) is a cross-platform digital camera library, and <a href="/docs/linux/man/1-gphoto2/">gphoto2</a>(1) is a command-line client for it. </dd>
 <p> Where an option takes a <i>RANGE</i> of files, thumbnails, or other data, they are numbered beginning at 1. A range is a comma-separated list of numbers or spans (lq<i>first</i>&#8211;<i>last</i>rq). Ranges are XOR (exclusive or), so that lq1-5,3,7rq is equivalent to lq1,2,4,5,7rq. </p>
 <p> <code>&#8211;debug</code></p>

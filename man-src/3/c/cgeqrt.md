@@ -1,5 +1,4 @@
 ---
-
 title: "cgeqrt(3)"
 name: "cgeqrt"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cgeqrt/"
 description: "cgeqrt.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cgeqrt.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgeqrt</code> (M, N, NB, A, LDA, T, LDT, WORK, INFO)<br />
  <i></i><code>CGEQRT</code></p>

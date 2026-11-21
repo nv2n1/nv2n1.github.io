@@ -1,5 +1,4 @@
 ---
-
 title: "mm-config(1)"
 name: "mm-config"
 section: "1"
@@ -12,7 +11,9 @@ description: "mm-config – OSSP mm library configuration/build utility"
 <p> <code>mm-config</code> &#8211; OSSP mm library configuration/build utility</p>
 <h2>VERSION</h2>
 <p> <font SIZE="-1">OSSP</font> mm <font SIZE="-1">1.4.1 (10-Aug-2006)</font></p>
+<h2>SYNOPSIS</h2>
 <p> <code>mm-config</code> [<code>&#8211;help</code>] [<code>&#8211;version</code>] [<code>&#8211;cflags</code>] [<code>&#8211;ldflags</code>] [<code>&#8211;libs</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>mm-config</code> program is a little helper utility for easy configuring and building applications based on the <i><a href="/docs/linux/man/3-mm/">mm</a></i>(3) library. It can be used to query the C compiler and linker flags which are required to correctly compile and link the application against the <i><a href="/docs/linux/man/3-mm/">mm</a></i>(3) library.</p>
 <h2>OPTIONS</h2>
 <p> <code>mm-config</code> accepts the following options:</p>

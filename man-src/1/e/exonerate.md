@@ -1,5 +1,4 @@
 ---
-
 title: "exonerate(1)"
 name: "exonerate"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-exonerate/"
 description: "exonerate – a generic tool for sequence comparison"
 ---
 
+<h2 class="name">NAME</h2>
+<p> exonerate &#8211; a generic tool for sequence comparison</p>
+<h2>SYNOPSIS</h2>
 <p> <code>exonerate [ options ] &lt;query path&gt; &lt;target path&gt;</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>exonerate</code> is a general tool for sequence comparison. </p>
 <p> It uses the <code>C4</code> dynamic programming library. It is designed to be both general and fast. It can produce either gapped or ungapped alignments, according to a variety of different alignment models. The C4 library allows sequence alignment using a reduced space full dynamic programming implementation, but also allows automated generation of heuristics from the alignment models, using bounded sparse dynamic programming, so that these alignments may also be rapidly generated. Alignments generated using these heuristics will represent a valid path through the alignment model, yet (unlike the exhaustive alignments), the results are not guaranteed to be optimal. </p>
 <h2>CONVENTIONS</h2>

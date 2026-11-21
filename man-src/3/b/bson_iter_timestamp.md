@@ -1,5 +1,4 @@
 ---
-
 title: "bson_iter_timestamp(3)"
 name: "bson_iter_timestamp"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_iter_timestamp() – The BSON_TYPE_TIMESTAMP type is not a da
 
 <h2>NAME</h2>
 <p> bson_iter_timestamp() &#8211; The BSON_TYPE_TIMESTAMP type is not a date/time and is typically used for intra-server communication.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #define BSON_ITER_HOLDS_TIMESTAMP(iter) \
     (bson_iter_type((iter)) == BSON_TYPE_TIMESTAMP)
@@ -27,6 +27,7 @@ void bson_iter_timestamp(const bson_iter_t *iter,
 <dl>
 <dt><code>increment</code></dt>
 <dd> A uint32_t.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The BSON_TYPE_TIMESTAMP type is not a date/time and is typically used for intra-server communication. </p>
 <p> You probably want <code><a href="/docs/linux/man/3-bson_iter_date_time/">bson_iter_date_time</a>(3)</code> \&amp;. </p>
 <p> The <code><a href="/docs/linux/man/3-bson_iter_timestamp/">bson_iter_timestamp</a>(3)</code> function shall return the contents of a BSON_TYPE_TIMESTAMP element. It is invalid to call this function while observing an element that is not of type BSON_TYPE_TIMESTAMP. </p>

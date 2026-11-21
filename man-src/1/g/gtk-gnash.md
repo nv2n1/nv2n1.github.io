@@ -1,5 +1,4 @@
 ---
-
 title: "gtk-gnash(1)"
 name: "gtk-gnash"
 section: "1"
@@ -17,7 +16,9 @@ url: "/docs/linux/man/1-gtk-gnash/"
 gnash[option]...[URL]
 </code></pre>
 
-Run the SWF movie player.
+<h2>DESCRIPTION</h2>
+
+ Run the SWF movie player.
 <dl>
 <dt>-h, --help
 </dt><dd> Print usage info.

@@ -1,5 +1,4 @@
 ---
-
 title: "ocamlfind(1)"
 name: "ocamlfind"
 section: "1"
@@ -10,6 +9,7 @@ description: "ocamlfind – [Command-line interface of the Package manager]"
 
 <h2>NAME</h2>
 <p> ocamlfind &#8211; [Command-line interface of the Package manager]</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 &amp;nbsp;
 &amp;nbsp;

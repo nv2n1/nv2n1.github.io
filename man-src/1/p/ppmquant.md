@@ -1,5 +1,4 @@
 ---
-
 title: "ppmquant(1)"
 name: "ppmquant"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-ppmquant/"
 description: "ppmquant – quantize the colors in a portable pixmap down to a specified number"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ppmquant &#8211; quantize the colors in a portable pixmap down to a specified number </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ppmquant</code> [<code>-floyd</code>|<code>-fs</code>] <i>ncolors</i> [<i>ppmfile</i>]<br />
  <code>ppmquant</code> [<code>-floyd</code>|<code>-fs</code>] [<code>-nofloyd</code>|<code>-nofs</code>] <code>-mapfile</code> <i>mapfile</i> [<i>ppmfile</i>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one to designate an option. You may use either white space or equals signs between an option name and its value. </p>
+<h2>DESCRIPTION</h2>
 <p> <code>pnmquant </code> is a newer, more general program that is backward compatible with <code>ppmquant</code>. <code>ppmquant</code> may be faster, though. </p>
 <p> Reads a PPM image as input. Chooses <i>ncolors</i> colors to best represent the image, maps the existing colors to the new ones, and writes a PPM image as output. </p>
 <p> The quantization method is Heckbert&#8217;s &quot;median cut&quot;. </p>

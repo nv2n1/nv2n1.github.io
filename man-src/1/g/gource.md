@@ -1,5 +1,4 @@
 ---
-
 title: "gource(1)"
 name: "gource"
 section: "1"
@@ -10,7 +9,9 @@ description: "Gource – a software version control visualization"
 
 <h2>NAME</h2>
 <p> Gource &#8211; a software version control visualization</p>
+<h2>SYNOPSIS</h2>
 <p> <i>gource</i> &lt;options&gt; &lt;path&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> <i>gource</i> is an OpenGL-based 3D visualisation tool for source control repositories. </p>
 <p> The repository is displayed as a tree where the root of the repository is the centre, directories are branches and files are leaves. Contributors to the source code appear and disappear as they contribute to specific files and directories.</p>
 <h2>REQUIREMENTS</h2>

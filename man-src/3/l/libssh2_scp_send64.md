@@ -1,5 +1,4 @@
 ---
-
 title: "libssh2_scp_send64(3)"
 name: "libssh2_scp_send64"
 section: "3"
@@ -10,12 +9,14 @@ description: "libssh2_scp_send64 – Send a file via SCP"
 
 <h2>NAME</h2>
 <p> libssh2_scp_send64 &#8211; Send a file via SCP</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;libssh2.h&gt;
 LIBSSH2_CHANNEL *
 libssh2_scp_send64(LIBSSH2_SESSION *session, const char *path, int mode,
                    libssh2_uint64_t size, time_t mtime, time_t atime);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <i>session</i> &#8211; Session instance as returned by <code><a href="/docs/linux/man/3-libssh2_session_init_ex/">libssh2_session_init_ex</a>(3)</code> </p>
 <p> <i>path</i> &#8211; Full path and filename of file to transfer to. That is the remote file name. </p>
 <p> <i>mode</i> &#8211; File access mode to create file with </p>

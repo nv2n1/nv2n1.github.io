@@ -1,5 +1,4 @@
 ---
-
 title: "lit(1)"
 name: "lit"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-lit/"
 description: "lit – LLVM Integrated Tester"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lit &#8211; LLVM Integrated Tester </p>
+<h2>SYNOPSIS</h2>
 <p> <code>lit</code> [<i>options</i>] [<i>tests</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>lit</code> is a portable tool for executing <font SIZE="-1">LLVM</font> and Clang style test suites, summarizing their results, and providing indication of failures. <code>lit</code> is designed to be a lightweight testing tool with as simple a user interface as possible. </p>
 <p> <code>lit</code> should be run with one or more <i>tests</i> to run specified on the command line. Tests can be either individual test files or directories to search for tests (see &#8220;<font SIZE="-1">TEST</font> <font SIZE="-1">DISCOVERY</font>&#8221;). </p>
 <p> Each specified test will be executed (potentially in parallel) and once all tests have been run <code>lit</code> will print summary information on the number of tests which passed or failed (see &#8220;<font SIZE="-1">TEST</font> <font SIZE="-1">STATUS</font> <font SIZE="-1">RESULTS</font>&#8221;). The <code>lit</code> program will execute with a non-zero exit code if any tests fail. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ft2nfdump(1)"
 name: "ft2nfdump"
 section: "1"
@@ -10,8 +9,10 @@ description: "ft2nfdump – flow-tools data converter program"
 
 <h2>NAME</h2>
 <p> ft2nfdump &#8211; flow-tools data converter program</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ft2nfdump [options]</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>ft2nfdump</code></p>
 <dd>is the flow-tools converter program to read, convert and store netflow data, created with the flow-tools package. It works either as a pipe filter or reads flow-tools data format directly from file and exports nfdump data format at stdout. </dd>
 <h2>OPTIONS</h2>

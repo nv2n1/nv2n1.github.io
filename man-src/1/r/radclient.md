@@ -1,5 +1,4 @@
 ---
-
 title: "radclient(1)"
 name: "radclient"
 section: "1"
@@ -10,7 +9,9 @@ description: "radclient – send packets to a RADIUS server, show reply"
 
 <h2>NAME</h2>
 <p> radclient &#8211; send packets to a RADIUS server, show reply</p>
+<h2>SYNOPSIS</h2>
 <p> <code>radclient</code> [<code>-4</code>] [<code>-6</code>] [<code>-c</code> <i>count</i>] [<code>-d</code> <i>raddb_directory</i>] [<code>-D</code> <i>dictionary_directory</i>] [<code>-f</code> <i>file</i>] [<code>-F</code>] [<code>-h</code>] [<code>-i</code> <i>id</i>] [<code>-n</code> <i>num_requests_per_second</i>] [<code>-p</code> <i>num_requests_in_parallel</i>] [<code>-q</code>] [<code>-r</code> <i>num_retries</i>] [<code>-s</code>] [<code>-S</code> <i>shared_secret_file</i>] [<code>-t</code> <i>timeout</i>] [<code>-v</code>] [<code>-x</code>] <i>server {acct|auth|status|disconnect|auto} secret</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>radclient</code> is a radius client program. It can send arbitrary radius packets to a radius server, then shows the reply. It can be used to test changes you made in the configuration of the radius server, or it can be used to monitor if a radius server is up. </p>
 <p> <code>radclient</code> reads radius attribute/value pairs from it standard input, or from a file specified on the command line. It then encodes these attribute/value pairs using the dictionary, and sends them to the remote server. </p>
 <p> The <i>User-Password</i> and <i>CHAP-Password</i> attributes are automatically encrypted before the packet is sent to the server. </p>

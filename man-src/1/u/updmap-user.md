@@ -1,5 +1,4 @@
 ---
-
 title: "updmap-user(1)"
 name: "updmap-user"
 section: "1"
@@ -8,12 +7,15 @@ url: "/docs/linux/man/1-updmap-user/"
 description: "updmap – manage TeX font maps updmap-sys – manage TeX font maps, system-wide updmap-user – manage TeX font maps, per-user"
 ---
 
+<h2 class="name">NAME</h2>
 <p> updmap &#8211; manage TeX font maps<br />
  updmap-sys &#8211; manage TeX font maps, system-wide<br />
  updmap-user &#8211; manage TeX font maps, per-user </p>
+<h2>SYNOPSIS</h2>
 <p> <code>updmap</code> [<i>,-user|-sys/</i>] [<i>,OPTION/</i>] &#8230; [<i>,COMMAND/</i>]<br />
  <code>updmap-user</code> [<i>,OPTION/</i>] &#8230; [<i>,COMMAND/</i>]<br />
  <code>updmap-sys</code> [<i>,OPTION/</i>] &#8230; [<i>,COMMAND/</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> updmap version r59152 (2021-05-09 23:49:52 +0200) </p>
 <p> Update the default font map files used by pdftex and dvipdfm(x) (pdftex.map), dvips (psfonts.map), and optionally pxdvi, as determined by all configuration files updmap.cfg (usually the ones returned by running &quot;kpsewhich <code>&#8211;all</code> updmap.cfg&quot;, but see below). </p>
 <p> Among other things, these map files are used to determine which fonts should be used as bitmaps and which as outlines, and to determine which font files are included, typically subsetted, in the PDF or PostScript output. </p>

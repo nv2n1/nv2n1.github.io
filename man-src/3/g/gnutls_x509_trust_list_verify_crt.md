@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_trust_list_verify_crt(3)"
 name: "gnutls_x509_trust_list_verify_crt"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_trust_list_verify_crt – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_trust_list_verify_crt &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_trust_list_verify_crt(gnutls_x509_trust_list_t </code><i>list</i><code>, gnutls_x509_crt_t * </code><i>cert_list</i><code>, unsigned int </code><i>cert_list_size</i><code>, unsigned int </code><i>flags</i><code>, unsigned int * </code><i>voutput</i><code>, gnutls_verify_output_function </code><i>func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -26,6 +26,7 @@ description: "gnutls_x509_trust_list_verify_crt – API function"
 <dd> will hold the certificate verification output.</dd>
 <dt>gnutls_verify_output_function func</dt>
 <dd> If non-null will be called on each chain element verification with the output.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will try to verify the given certificate and return its status. The <i>verify</i> parameter will hold an OR&#8217;ed sequence of <code>gnutls_certificate_status_t</code> flags. </p>
 <p> Additionally a certificate verification profile can be specified from the ones in <code>gnutls_certificate_verification_profiles_t</code> by ORing the result of <code>GNUTLS_PROFILE_TO_VFLAGS()</code> to the verification flags.</p>
 <h2>RETURNS</h2>

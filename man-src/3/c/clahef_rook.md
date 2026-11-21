@@ -1,5 +1,4 @@
 ---
-
 title: "clahef_rook(3)"
 name: "clahef_rook"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-clahef_rook/"
 description: "clahef_rook.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> clahef_rook.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clahef_rook</code> (UPLO, N, NB, KB, A, LDA, IPIV, W, LDW, INFO)<br />
  <i> </i></p>

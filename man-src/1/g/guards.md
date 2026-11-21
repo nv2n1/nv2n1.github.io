@@ -1,5 +1,4 @@
 ---
-
 title: "guards(1)"
 name: "guards"
 section: "1"
@@ -7,12 +6,19 @@ letter: "g"
 url: "/docs/linux/man/1-guards/"
 ---
 
-guards - select from a list of files guarded by conditions 
+<h2 class="name">NAME</h2>
+ 
 
-<i>guards</i> [--prefix=<i>dir</i>] [--path=<i>dir1:dir2:...</i>] [--default=&lt;0|1&gt;] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> [--check|--list] [--invert-match] [--with-guards] [--config=&lt;file&gt;]
+ guards - select from a list of files guarded by conditions 
+
+<h2>SYNOPSIS</h2>
+
+ <i>guards</i> [--prefix=<i>dir</i>] [--path=<i>dir1:dir2:...</i>] [--default=&lt;0|1&gt;] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> [--check|--list] [--invert-match] [--with-guards] [--config=&lt;file&gt;]
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> <i>symbol</i> ...
 
-The script reads a configuration file that may contain so-called guards, file names, and comments, and writes those file names that satisfy all guards to standard output. The script takes a list of symbols as its arguments. Each line in the configuration file is processed separately. Lines may start with a number of guards. The following guards are defined: 
+<h2>DESCRIPTION</h2>
+
+ The script reads a configuration file that may contain so-called guards, file names, and comments, and writes those file names that satisfy all guards to standard output. The script takes a list of symbols as its arguments. Each line in the configuration file is processed separately. Lines may start with a number of guards. The following guards are defined: 
 
 <dl>
 <dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "pic(1)"
 name: "pic"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pic/"
 description: "pic – compile pictures for troff or TeX"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pic &#8211; compile pictures for troff or TeX </p>
+<h2>SYNOPSIS</h2>
 <p> [ <code>-nvCSU</code> ] [<i>file</i> &#8230;] <code>-t</code> [ <code>-cvzCSU</code> ] [<i>file</i> &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page describes the GNU version of <code>pic</code>, which is part of the groff document formatting system. <code>pic</code> compiles descriptions of pictures embedded within <code>troff</code> or TeX input files into commands that are understood by TeX or <code>troff</code>. Each picture starts with a line beginning with <code>.PS</code> and ends with a line beginning with <code>.PE</code>. Anything outside of <code>.PS</code> and <code>.PE</code> is passed through without change. </p>
 <p> It is the user&#8217;s responsibility to provide appropriate definitions of the <code>PS</code> and <code>PE</code> macros. When the macro package being used does not supply such definitions (for example, old versions of -ms), appropriate definitions can be obtained with <code>-mpic</code>: These will center each picture.</p>
 <h2>OPTIONS</h2>

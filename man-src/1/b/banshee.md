@@ -1,5 +1,4 @@
 ---
-
 title: "banshee(1)"
 name: "banshee"
 section: "1"
@@ -8,10 +7,13 @@ url: "/docs/linux/man/1-banshee/"
 description: "Banshee – Media Management and Playback application Muinshee – Media Management and Playback application"
 ---
 
+<h2 class="name">NAME</h2>
 <p> Banshee &#8211; Media Management and Playback application<br />
  Muinshee &#8211; Media Management and Playback application </p>
+<h2>SYNOPSIS</h2>
 <p> <code>banshee</code> [<i>options</i>&#8230;] [<i>files|URIs</i>&#8230;]<br />
  <code>muinshee</code> [<i>options</i>&#8230;] [<i>files|URIs</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> Banshee is an media management and playback application for the GNOME desktop, allowing users to import audio from CDs, search their library, create playlists of selections of their library, sync music to/from iPods and other media devices, play and manage video files and burn selections to a CD.</p>
 <h2>OPTIONS</h2>
 <dl>

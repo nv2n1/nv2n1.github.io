@@ -1,5 +1,4 @@
 ---
-
 title: "pic2graph(1)"
 name: "pic2graph"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pic2graph/"
 description: "pic2graph – convert a PIC diagram into a cropped image"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pic2graph &#8211; convert a PIC diagram into a cropped image </p>
+<h2>SYNOPSIS</h2>
 <p> [ <code>-unsafe</code> ] [ <code>-format </code><i>output-format</i> ] [ <code>-eqn </code><i>delimiters</i> ] [<i>convert-arguments</i>] <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>
+<h2>DESCRIPTION</h2>
 <p> <i>pic2graph</i> reads a <i><a href="/docs/linux/man/1-pic/">pic</a></i>(1) program from the standard input and writes an image file, by default in Portable Network Graphics (PNG) format, to the standard output. It furthermore translates <i><a href="/docs/linux/man/1-eqn/">eqn</a></i>(1) constructs, so it can be used for generating images of mathematical formulae. </p>
 <p> The input PIC code should <i>not</i> be wrapped with the <code>.PS</code> and <code>.PE</code> macros that normally guard it within <i><a href="/docs/linux/man/1-groff/">groff</a></i>(1) documents. </p>
 <p> Arguments not recognized by <i>pic2graph</i> are passed to the ImageMagick or GraphicsMagick program <i><a href="/docs/linux/man/1-convert/">convert</a></i>(1). By specifying these, you can give your image a border, set the image&#8217;s pixel density, or perform other useful transformations. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ganglia2pcp(1)"
 name: "ganglia2pcp"
 section: "1"
@@ -10,7 +9,9 @@ description: "ganglia2pcp – import ganglia data and create a PCP archive"
 
 <h2>NAME</h2>
 <p> <code>ganglia2pcp</code> &#8211; import ganglia data and create a PCP archive</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ganglia2pcp</code> [<code>-s</code> <i>start</i>] [<code>-e</code> <i>end</i>] [<code>-f</code> <i>outfile</i>] [<code>-d</code> <i>outdir</i>] [<code>-Z</code> <i>timezone</i>] [<code>-h</code> <i>hostname</i>] <i>input_dir</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>ganglia2pcp</code> is intended to read a set of ganglia files stored in the rrd format and translate them into a Performance Co-Pilot (<font SIZE="-1">PCP</font>) archive with the basename <i>outfile</i>. </p>
 <p> The intent of this converter is to take all of the rrd files found in the input_dir and generate a single pcp archive file. The mapping of ganglia metrics to pcp metrics is defined internally. </p>
 <p> The resultant <font SIZE="-1">PCP</font> achive may be used with all the <font SIZE="-1">PCP</font> client tools to graph subsets of the data using <code><a href="/docs/linux/man/1-pmchart/">pmchart</a></code>(1), perform data reduction and reporting, filter with the <font SIZE="-1">PCP</font> inference engine <code><a href="/docs/linux/man/1-pmie/">pmie</a></code>(1), etc. </p>

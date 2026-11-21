@@ -1,5 +1,4 @@
 ---
-
 title: "ttx2xgf(1)"
 name: "ttx2xgf"
 section: "1"
@@ -10,7 +9,9 @@ description: "ttx2xgf – extracts instructions from a TTX file and creates an X
 
 <h2>NAME</h2>
 <p> <code>ttx2xgf</code> &#8211; extracts instructions from a TTX file and creates an Xgridfit program.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ttx2xgf</code> <i>infile[.ttx]</i> <i>[outfile]</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>ttx2xgf</code> is a utility that extracts instructions (hints) and other information relating to instructions from a TTX file (an XML representation of a TrueType font) and creates a new Xgridfit program. </p>
 <p> If <i>infile</i> lacks the <i>.ttx</i> extension, it is assumed. If <i>outfile</i> is not given, output is written to <i>infile.xgf.</i></p>
 <h2>FILES</h2>

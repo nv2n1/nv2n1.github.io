@@ -1,5 +1,4 @@
 ---
-
 title: "automake-1(1)"
 name: "automake-1"
 section: "1"
@@ -10,7 +9,9 @@ description: "automake – manual page for automake 1.13.4"
 
 <h2>NAME</h2>
 <p> automake &#8211; manual page for automake 1.13.4</p>
+<h2>SYNOPSIS</h2>
 <p> <code>automake-1.13</code> [<i>OPTION</i>]&#8230; [<i>Makefile</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Generate Makefile.in for configure from Makefile.am.</p>
 <h3>Operation modes:</h3>
 <dl>

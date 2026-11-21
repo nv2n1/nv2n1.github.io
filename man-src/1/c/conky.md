@@ -1,5 +1,4 @@
 ---
-
 title: "conky(1)"
 name: "conky"
 section: "1"
@@ -10,7 +9,9 @@ description: "conky – A system monitor for X originally based on the torsmo co
 
 <h2>NAME</h2>
 <p> conky &#8211; A system monitor for X originally based on the torsmo code, but more kickass. It just keeps on given&#8217;er. Yeah.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>conky</code> [ <i>options</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> Conky is a system monitor for X originally based on torsmo. Since its inception, Conky has changed significantly from its predecessor, while maintaining simplicity and configurability. Conky can display just about anything, either on your root desktop or in its own window. Not only does Conky have many built-in objects, it can also display just about any piece of information by using scripts and other external programs. </p>
 <p> Conky has more than 250 built in objects, including support for a plethora of OS stats (uname, uptime, CPU usage, mem usage, disk usage, &quot;top&quot; like process stats, and network monitoring, just to name a few), built in IMAP and POP3 support, built in support for many popular music players (MPD, XMMS2, BMPx, Audacious), and much much more. Conky can display this info either as text, or using simple progress bars and graph widgets, with different fonts and colours. </p>
 <p> We are always looking for help, whether its reporting bugs, writing patches, or writing docs. Please use the facilities at SourceForge to make bug reports, feature requests, and submit patches, or stop by #conky on irc.freenode.net if you have questions or want to contribute. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "g_helix(1)"
 name: "g_helix"
 section: "1"
@@ -11,7 +10,9 @@ description: "g_helix – calculates basic properties of alpha helices"
 <h2>NAME</h2>
 <p> g_helix &#8211; calculates basic properties of alpha helices </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>g_helix</code> <code>-s</code><i> topol.tpr </i> <code>-n</code><i> index.ndx </i> <code>-f</code><i> traj.xtc </i> <code>-to</code><i> gtraj.g87 </i> <code>-cz</code><i> zconf.gro </i> <code>-co</code><i> waver.gro </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-[no]w</code><i></i> <code>-r0</code><i> int </i> <code>-[no]q</code><i></i> <code>-[no]F</code><i></i> <code>-[no]db</code><i></i> <code>-prop</code><i> enum </i> <code>-[no]ev</code><i></i> <code>-ahxstart</code><i> int </i> <code>-ahxend</code><i> int </i></p>
+<h2>DESCRIPTION</h2>
 <p> g_helix computes all kind of helix properties. First, the peptide is checked to find the longest helical part. This is determined by Hydrogen bonds and Phi/Psi angles. That bit is fitted to an ideal helix around the Z-axis and centered around the origin. Then the following properties are computed: </p>
 <p> <code> 1.</code> Helix radius (file radius.xvg). This is merely the RMS deviation in two dimensions for all Calpha atoms. it is calced as sqrt((SUM i(x2(i)+y2(i)))/N), where N is the number of backbone atoms. For an ideal helix the radius is 0.23 nm </p>
 <p> <code> 2.</code> Twist (file twist.xvg). The average helical angle per residue is calculated. For alpha helix it is 100 degrees, for 3-10 helices it will be smaller, for 5-helices it will be larger. </p>

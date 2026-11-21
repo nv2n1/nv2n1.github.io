@@ -1,5 +1,4 @@
 ---
-
 title: "chpgst(3)"
 name: "chpgst"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-chpgst/"
 description: "chpgst.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> chpgst.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chpgst</code> (ITYPE, UPLO, N, AP, BP, INFO)<br />
  <i></i><code>CHPGST</code></p>

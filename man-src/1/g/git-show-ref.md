@@ -1,5 +1,4 @@
 ---
-
 title: "git-show-ref(1)"
 name: "git-show-ref"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-show-ref/"
 description: "git-show-ref – List references in a local repository"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-show-ref &#8211; List references in a local repository </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git show - ref[-q | --quiet][--verify][--head][-d | --dereference][-s | --hash[=&lt;n&gt;]][--abbrev[=&lt;n&gt;]][--tags][--heads][--][&lt;pattern&gt;...] git show - ref-- exclude - existing[=&lt;pattern&gt;]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Displays references available in a local repository along with the associated commit IDs. Results can be filtered using a pattern and tags can be dereferenced into object IDs. Additionally, it can be used to test whether a particular ref exists. </p>
 <p> By default, shows the tags, heads, and remote refs. </p>
 <p> The &#8211;exclude-existing form is a filter that does the inverse. It reads refs from stdin, one ref per line, and shows those that don&#8217;t exist in the local repository. </p>

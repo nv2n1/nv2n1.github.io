@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-brlapi_version/"
 description: "Version of the BrlAPI library –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Version of the BrlAPI library &#8211; </p>
 <h3>Macros</h3>
 <p> #define <code>BRLAPI_RELEASE</code> &#8216;0.6.0&#8217; </p>
 <p> #define <code>BRLAPI_MAJOR</code> 0 </p>

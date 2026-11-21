@@ -1,5 +1,4 @@
 ---
-
 title: "xwud(1)"
 name: "xwud"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-xwud/"
 description: "xwud – image displayer for X"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xwud &#8211; image displayer for X </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xwud</code> [-in <i>file</i>] [-noclick] [-geometry <i>geom</i>] [-display <i>display</i>] [-new] [-std &lt;maptype&gt;] [-raw] [-vis &lt;vis-type-or-id&gt;] [-scale] [-help] [-rv] [-plane <i>number</i>] [-fg <i>color</i>] [-bg <i>color</i>] [-dumpheader] [-version]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Xwud</i> is an X Window System image undumping utility. <i>Xwud</i> allows X users to display in a window an image saved in a specially formatted dump file, such as produced by <i><a href="/docs/linux/man/1-xwd/">xwd</a>(1)</i>.</p>
 <h2>OPTIONS</h2>
 <dl>

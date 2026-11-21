@@ -1,5 +1,4 @@
 ---
-
 title: "dspr2(3)"
 name: "dspr2"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dspr2/"
 description: "dspr2.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dspr2.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dspr2</code> (UPLO, N, ALPHA, X, INCX, Y, INCY, AP)<br />
  <i></i><code>DSPR2</code></p>

@@ -1,5 +1,4 @@
 ---
-
 title: "bournal(1)"
 name: "bournal"
 section: "1"
@@ -10,7 +9,9 @@ description: "bournal – When nobody else cares what you have to say!"
 
 <h2>NAME</h2>
 <p> bournal &#8211; When nobody else cares what you have to say!</p>
+<h2>SYNOPSIS</h2>
 <p> <code>bournal</code> [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>bournal</code> is a program that allows you to write personal, password-protected journal entries, as well as search through and edit old entries. Bournal has no internet capabilities, so if you&#8217;re looking for a blogging app, boy, did you install the wrong package.</p>
 <h2>OPTIONS</h2>
 <p> These programs follow the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>

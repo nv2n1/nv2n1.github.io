@@ -1,5 +1,4 @@
 ---
-
 title: "db2x_texixml(1)"
 name: "db2x_texixml"
 section: "1"
@@ -10,7 +9,9 @@ description: "db2x_texixml – Make Texinfo files from Texi-XML"
 
 <h2>NAME</h2>
 <p> db2x_texixml &#8211; Make Texinfo files from Texi-XML</p>
+<h2>SYNOPSIS</h2>
 <p> <code>db2x_texixml</code> [options]&#8230; [<i>xml-document</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>db2x_texixml</code> converts a Texi-XML document into one or more Texinfo documents. </p>
 <p> If <i>xml-document</i> is not given, then the document to convert comes from standard input. </p>
 <p> The filenames of the Texinfo documents are determined by markup in the Texi-XML source. (If the filenames are not specified in the markup, then <code>db2x_texixml</code> attempts to deduce them from the name of the input file. However, the Texi-XML source should specify the filename, because it does not work when there are multiple output files or when the Texi-XML source comes from standard input.)</p>

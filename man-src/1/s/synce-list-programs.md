@@ -1,5 +1,4 @@
 ---
-
 title: "synce-list-programs(1)"
 name: "synce-list-programs"
 section: "1"
@@ -10,6 +9,7 @@ description: "synce-list-programs – shows a list of all installed programs"
 
 <h2>NAME</h2>
 <p> synce-list-programs &#8211; shows a list of all installed programs </p>
+<h2>SYNOPSIS</h2>
 <p> <code>synce-list-programs</code> [-d <i>LEVEL</i>] [-p <i>DEVNAME</i>] [-h] </p>
 <h2>OPTIONS</h2>
 <dl>
@@ -28,6 +28,7 @@ description: "synce-list-programs – shows a list of all installed programs"
 <dt>-h</dt>
 <dd> Display help message. </dd>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> <code>synce-list-programs</code> shows a list of all programs installed on a device connected through SynCE. </p>
 <h2>AUTHOR</h2>
 <p> David Eriksson &lt;twogood [at] users.sourceforge.net&gt;.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "url_handler(1)"
 name: "url_handler"
 section: "1"
@@ -10,7 +9,9 @@ description: "urlview – URL extractor/launcher"
 
 <h2>NAME</h2>
 <p> urlview &#8211; URL extractor/launcher</p>
+<h2>SYNOPSIS</h2>
 <p> <code>urlview </code> <i>filename</i> [ <i>filename</i> &#8230; ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>urlview</code> is a screen oriented program for extracting URLs from text files and displaying a menu from which you may launch a command to view a specific item.</p>
 <h2>CONFIGURATION</h2>
 <p> <code>urlview</code> attempts to read <i>~/.urlview</i> upon startup. If this file doesn&#8217;t exist, it will try to read a system wide file in <i>/etc/urlview.conf</i>. There are two configuration commands (order does not matter):</p>

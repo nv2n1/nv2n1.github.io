@@ -1,5 +1,4 @@
 ---
-
 title: "bcopy(3)"
 name: "bcopy"
 section: "3"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/3-bcopy/"
 description: "bcopy – copy byte sequence"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bcopy &#8211; copy byte sequence </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;strings.h&gt;
 void bcopy(const void *src, void *dest, size_t n);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>bcopy</code>() function copies <i>n</i> bytes from <i>src</i> to <i>dest</i>. The result is correct, even when both areas overlap.</p>
 <h2>RETURN VALUE</h2>
 <p> None.</p>

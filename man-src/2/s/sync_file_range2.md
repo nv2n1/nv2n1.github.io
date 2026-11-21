@@ -1,5 +1,4 @@
 ---
-
 title: "sync_file_range2(2)"
 name: "sync_file_range2"
 section: "2"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/2-sync_file_range2/"
 description: "sync_file_range – sync a file segment with disk"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sync_file_range &#8211; sync a file segment with disk </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;fcntl.h&gt;
 int sync_file_range(int fd, off64_t offset, off64_t nbytes,
                     unsigned int flags);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>sync_file_range</code>() permits fine control when synchronizing the open file referred to by the file descriptor <i>fd</i> with disk. </p>
 <p> <i>offset</i> is the starting byte of the file range to be synchronized. <i>nbytes</i> specifies the length of the range to be synchronized, in bytes; if <i>nbytes</i> is zero, then all bytes from <i>offset</i> through to the end of file are synchronized. Synchronization is in units of the system page size: <i>offset</i> is rounded down to a page boundary; <i>(offset+nbytes-1)</i> is rounded up to a page boundary. </p>
 <p> The <i>flags</i> bit-mask argument can include any of the following values:</p>

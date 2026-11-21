@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_dnssec_trust_tree_contains_keys(3)"
 name: "ldns_dnssec_trust_tree_contains_keys"
 section: "3"
@@ -10,6 +9,7 @@ description: "ldns_dnssec_trust_tree_new, ldns_dnssec_trust_tree_free, ldns_dnss
 
 <h2>NAME</h2>
 <p> ldns_dnssec_trust_tree_new, ldns_dnssec_trust_tree_free, ldns_dnssec_trust_tree_depth, ldns_dnssec_derive_trust_tree, ldns_dnssec_trust_tree_contains_keys, ldns_dnssec_trust_tree_print, ldns_dnssec_trust_tree_print_sm, ldns_dnssec_trust_tree_add_parent, ldns_dnssec_derive_trust_tree_normal_rrset, ldns_dnssec_derive_trust_tree_dnskey_rrset, ldns_dnssec_derive_trust_tree_ds_rrset, ldns_dnssec_derive_trust_tree_no_sig </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -25,6 +25,7 @@ description: "ldns_dnssec_trust_tree_new, ldns_dnssec_trust_tree_free, ldns_dnss
 <p> void ldns_dnssec_derive_trust_tree_dnskey_rrset( ldns_dnssec_trust_tree *new_tree, ldns_dnssec_data_chain *data_chain, ldns_rr *cur_rr, ldns_rr *cur_sig_rr); </p>
 <p> void ldns_dnssec_derive_trust_tree_ds_rrset( ldns_dnssec_trust_tree *new_tree, ldns_dnssec_data_chain *data_chain, ldns_rr *cur_rr); </p>
 <p> void ldns_dnssec_derive_trust_tree_no_sig( ldns_dnssec_trust_tree *new_tree, ldns_dnssec_data_chain *data_chain); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_dnssec_trust_tree_new</i>()</dt>
 <dd>Creates a new (empty) dnssec_trust_tree structure </dd>

@@ -1,5 +1,4 @@
 ---
-
 title: "asn1_create_element(3)"
 name: "asn1_create_element"
 section: "3"
@@ -10,6 +9,7 @@ description: "asn1_create_element – API function"
 
 <h2>NAME</h2>
 <p> asn1_create_element &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>
 <p> <code>int asn1_create_element(asn1_node </code><i>definitions</i><code>, const char * </code><i>source_name</i><code>, asn1_node * </code><i>element</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "asn1_create_element – API function"
 <dd> the name of the type of the new structure (must be inside p_structure).</dd>
 <dt>asn1_node * element</dt>
 <dd> pointer to the structure created.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Creates a structure of type <i>source_name</i> . Example using &quot;pkix.asn&quot;: </p>
 <p> rc = asn1_create_element(cert_def, &quot;PKIX1.Certificate&quot;, certptr);</p>
 <h2>RETURNS</h2>

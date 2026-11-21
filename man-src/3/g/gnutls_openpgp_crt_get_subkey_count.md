@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_openpgp_crt_get_subkey_count(3)"
 name: "gnutls_openpgp_crt_get_subkey_count"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_openpgp_crt_get_subkey_count – API function"
 
 <h2>NAME</h2>
 <p> gnutls_openpgp_crt_get_subkey_count &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>
 <p> <code>int gnutls_openpgp_crt_get_subkey_count(gnutls_openpgp_crt_t </code><i>key</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_openpgp_crt_t key</dt>
 <dd> is an OpenPGP key</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will return the number of subkeys present in the given OpenPGP certificate.</p>
 <h2>RETURNS</h2>
 <p> the number of subkeys, or a negative error code on error.</p>

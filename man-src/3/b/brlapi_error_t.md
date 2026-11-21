@@ -1,5 +1,4 @@
 ---
-
 title: "brlapi_error_t(3)"
 name: "brlapi_error_t"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-brlapi_error_t/"
 description: "brlapi_error_t –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> brlapi_error_t &#8211; </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;brlapi.h&gt;</p>
 <h3>Data Fields</h3>
 <p> int <code>brlerrno</code> </p>

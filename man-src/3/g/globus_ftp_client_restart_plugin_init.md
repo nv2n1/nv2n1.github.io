@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_ftp_client_restart_plugin_init/"
 description: "Restart Plugin –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Restart Plugin &#8211; </p>
 <h3>Macros</h3>
 <p> #define <code>GLOBUS_FTP_CLIENT_RESTART_PLUGIN_MODULE</code> (&amp;globus_i_ftp_client_restart_plugin_module) </p>
 <h3>Functions</h3>

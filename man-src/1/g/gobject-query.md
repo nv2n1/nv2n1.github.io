@@ -1,5 +1,4 @@
 ---
-
 title: "gobject-query(1)"
 name: "gobject-query"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-gobject-query/"
 description: "gobject-query – display a tree of types"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gobject-query &#8211; display a tree of types </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gobject-query</code> froots [OPTION&#8230;]</dt>
 <dt> <code>gobject-query</code> tree [OPTION&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>gobject-query</code></p>
 <dd>is a small utility that draws a tree of types. </dd>
 <p> <code>gobject-query</code> takes a mandatory argument that specifies whether it should iterate over the fundamental types or print a type tree.</p>

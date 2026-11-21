@@ -1,5 +1,4 @@
 ---
-
 title: "keyctl_set_reqkey_keyring(3)"
 name: "keyctl_set_reqkey_keyring"
 section: "3"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/3-keyctl_set_reqkey_keyring/"
 description: "keyctl_set_reqkey_keyring – Set the implicit destination keyring"
 ---
 
+<h2 class="name">NAME</h2>
+<p> keyctl_set_reqkey_keyring &#8211; Set the implicit destination keyring </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;keyutils.h&gt;
 long keyctl_set_reqkey_keyring(int reqkey_defl);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>keyctl_set_reqkey_keyring</code>() sets the default destination for implicit key requests for the current thread and returns the old setting. </p>
 <p> After this operation has been issued, keys acquired by implicit key requests, such as might be performed by open() on an AFS or NFS filesystem, will be linked by default to the specified keyring by this function. </p>
 <p> The valid values of <i>reqkey_defl</i> are:</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "papi_component_avail(1)"
 name: "papi_component_avail"
 section: "1"
@@ -7,7 +6,10 @@ letter: "p"
 url: "/docs/linux/man/1-papi_component_avail/"
 ---
 
-papi_component_avail - papi_component_avail utility. 
+<h2 class="name">NAME</h2>
+ 
+
+ papi_component_avail - papi_component_avail utility. 
 
  file component.c 
 

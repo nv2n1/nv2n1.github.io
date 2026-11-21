@@ -1,5 +1,4 @@
 ---
-
 title: "git-pull(1)"
 name: "git-pull"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-pull/"
 description: "git-pull – Fetch from and integrate with another repository or a local branch"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-pull &#8211; Fetch from and integrate with another repository or a local branch </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git pull[&lt;options&gt;][&lt;repository&gt;[&lt;refspec&gt;...]]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Incorporates changes from a remote repository into the current branch. If the current branch is behind the remote, then by default it will fast-forward the current branch to match the remote. If the current branch and the remote have diverged, the user needs to specify how to reconcile the divergent branches with <code>&#8211;rebase</code> or <code>&#8211;no-rebase</code> (or the corresponding configuration option in <code>pull.rebase</code>). </p>
 <p> More precisely, <code>git pull</code> runs <code>git fetch</code> with the given parameters and then depending on configuration options or command line flags, will call either <code>git rebase</code> or <code>git merge</code> to reconcile diverging branches. </p>
 <p> &lt;repository&gt; should be the name of a remote repository as passed to <code><a href="/docs/linux/man/1-git-fetch/">git-fetch</a></code>(1). &lt;refspec&gt; can name an arbitrary remote ref (for example, the name of a tag) or even a collection of refs with corresponding remote-tracking branches (e.g., refs/heads/*:refs/remotes/origin/*), but usually it is the name of a branch in the remote repository. </p>

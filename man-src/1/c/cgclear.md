@@ -1,5 +1,4 @@
 ---
-
 title: "cgclear(1)"
 name: "cgclear"
 section: "1"
@@ -10,7 +9,9 @@ description: "cgclear – unload the cgroup filesystem"
 
 <h2>NAME</h2>
 <p> cgclear &#8211; unload the cgroup filesystem </p>
+<h2>SYNOPSIS</h2>
 <p> <code>cgclear</code> [<code>-e</code>] [<code>-l</code> &lt;<i>filename</i>&gt;] [<code>-L</code> &lt;<i>directory</i>&gt;] [&#8230;] </p>
+<h2>DESCRIPTION</h2>
 <p> Without parameters, this command moves all the tasks inside the various cgroups to the root cgroup, deletes all the cgroups and finally unmounts the cgroup filesystem from the system. </p>
 <p> If one or more config files are specified, only groups defined in the config files are removed. The files are processed in reverse order, i.e. the last file on command line is processed first, so <code>cgclear</code> can have the same command line arguments as appropriate <code>cgconfigparser</code>. </p>
 <dl>

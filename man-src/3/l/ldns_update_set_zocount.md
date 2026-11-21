@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_update_set_zocount(3)"
 name: "ldns_update_set_zocount"
 section: "3"
@@ -10,6 +9,7 @@ description: "ldns_update_set_zocount, ldns_update_set_prcount, ldns_update_set_
 
 <h2>NAME</h2>
 <p> ldns_update_set_zocount, ldns_update_set_prcount, ldns_update_set_upcount, ldns_update_set_adcount </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -17,6 +17,7 @@ description: "ldns_update_set_zocount, ldns_update_set_prcount, ldns_update_set_
 <p> void ldns_update_set_prcount(ldns_pkt *p, uint16_t c); </p>
 <p> void ldns_update_set_upcount(ldns_pkt *p, uint16_t c); </p>
 <p> void ldns_update_set_adcount(ldns_pkt *p, uint16_t c); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_update_set_zocount</i>()</dt></dl>
 <dl>

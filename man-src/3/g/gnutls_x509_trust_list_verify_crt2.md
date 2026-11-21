@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_trust_list_verify_crt2(3)"
 name: "gnutls_x509_trust_list_verify_crt2"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_trust_list_verify_crt2 – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_trust_list_verify_crt2 &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_trust_list_verify_crt2(gnutls_x509_trust_list_t </code><i>list</i><code>, gnutls_x509_crt_t * </code><i>cert_list</i><code>, unsigned int </code><i>cert_list_size</i><code>, gnutls_typed_vdata_st * </code><i>data</i><code>, unsigned int </code><i>elements</i><code>, unsigned int </code><i>flags</i><code>, unsigned int * </code><i>voutput</i><code>, gnutls_verify_output_function </code><i>func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -30,6 +30,7 @@ description: "gnutls_x509_trust_list_verify_crt2 – API function"
 <dd> will hold the certificate verification output.</dd>
 <dt>gnutls_verify_output_function func</dt>
 <dd> If non-null will be called on each chain element verification with the output.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will try to verify the given certificate and return its status. The <i>verify</i> parameter will hold an OR&#8217;ed sequence of <code>gnutls_certificate_status_t</code> flags. </p>
 <p> Additionally a certificate verification profile can be specified from the ones in <code>gnutls_certificate_verification_profiles_t</code> by ORing the result of <code>GNUTLS_PROFILE_TO_VFLAGS()</code> to the verification flags. </p>
 <p> The acceptable <i>data</i> types are <code>GNUTLS_DT_DNS_HOSTNAME</code> and <code>GNUTLS_DT_KEY_PURPOSE_OID</code>. The former accepts as data a null-terminated hostname, and the latter a null-terminated object identifier (e.g., <code>GNUTLS_KP_TLS_WWW_SERVER</code>). If a DNS hostname is provided then this function will compare the hostname in the certificate against the given. If names do not match the <code>GNUTLS_CERT_UNEXPECTED_OWNER</code> status flag will be set. If a key purpose OID is provided and the end-certificate contains the extended key usage PKIX extension, it will be required to be have the provided key purpose or be marked for any purpose, otherwise verification will fail with <code>GNUTLS_CERT_SIGNER_CONSTRAINTS_FAILURE</code> status.</p>

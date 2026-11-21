@@ -1,5 +1,4 @@
 ---
-
 title: "git-remote(1)"
 name: "git-remote"
 section: "1"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/1-git-remote/"
 description: "git-remote – Manage set of tracked repositories"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-remote &#8211; Manage set of tracked repositories </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git remote[-v | --verbose] git remote add[-t&lt;branch&gt;][-m&lt;master&gt;][-f][--[no - ] tags][--mirror = (fetch | push)]&lt;name&gt;&lt;url&gt;
         git remote rename&lt;old&gt;&lt;new&gt;
             git remote remove&lt;name&gt;
                 git remote set - head&lt;name&gt;(-a | --auto | -d | --delete | &lt;branch&gt;) git remote set - branches[--add]&lt;name&gt;&lt;branch&gt;... git remote get - url[--push][--all]&lt;name&gt; git remote set - url[--push]&lt;name&gt;&lt;newurl&gt;[&lt;oldurl&gt;] git remote set - url-- add[--push]&lt;name&gt;&lt;newurl&gt; git remote set - url-- delete[--push]&lt;name&gt;&lt;url&gt; git remote[-v | --verbose] show[-n]&lt;name&gt;... git remote prune[-n | --dry - run]&lt;name&gt;... git remote[-v | --verbose] update[-p | --prune][(&lt;group&gt; | &lt;remote&gt;)...]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Manage the set of repositories (&quot;remotes&quot;) whose branches you track.</p>
 <h2>OPTIONS</h2>
 <p> -v, &#8211;verbose</p>

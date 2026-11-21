@@ -1,5 +1,4 @@
 ---
-
 title: "gnome-globalmenu(1)"
 name: "gnome-globalmenu"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-gnome-globalmenu/"
 description: "gnome-globalmenu – Global Menu for GNOME"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gnome-globalmenu &#8211; Global Menu for GNOME </p>
+<h2>SYNOPSIS</h2>
 <p> Global Menu is the globally-shared menu bar of all applications launched in your desktop session.<br />
  Global Menu consists two components:<br />
  &#8211; GTK Plugin (libglobalmenu-gnome.so)<br />

@@ -1,5 +1,4 @@
 ---
-
 title: "gausshermiteintegration(3)"
 name: "gausshermiteintegration"
 section: "3"
@@ -7,8 +6,8 @@ letter: "g"
 url: "/docs/linux/man/3-gausshermiteintegration/"
 description: "QuantLib::GaussHermiteIntegration – generalized Gauss-Hermite integration"
 ---
-
 <p>QuantLib::GaussHermiteIntegration &#8211; generalized Gauss-Hermite integration </p>
+<h2>SYNOPSIS</h2>
 <p> <br />
  </p>
 <p>#include &lt;ql/math/integrals/gaussianquadratures.hpp&gt; </p>

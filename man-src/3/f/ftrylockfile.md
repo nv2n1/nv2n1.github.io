@@ -1,5 +1,4 @@
 ---
-
 title: "ftrylockfile(3)"
 name: "ftrylockfile"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-ftrylockfile/"
 description: "flockfile, ftrylockfile, funlockfile – lock FILE for stdio"
 ---
 
+<h2 class="name">NAME</h2>
+<p> flockfile, ftrylockfile, funlockfile &#8211; lock FILE for stdio </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdio.h&gt;
 void flockfile(FILE *filehandle);
@@ -21,6 +23,7 @@ void funlockfile(FILE *filehandle);
 </dt><dd> /* Since glibc 2.24: */ _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;199309L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.23:&nbsp;*/&nbsp;_POSIX_C_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The stdio functions are thread-safe. This is achieved by assigning to each <i>FILE</i> object a lockcount and (if the lockcount is nonzero) an owning thread. For each library call, these functions wait until the <i>FILE</i> object is no longer locked by a different thread, then lock it, do the requested I/O, and unlock the object again. </p>
 <p> (Note: this locking has nothing to do with the file locking done by functions like <code><a href="/docs/linux/man/2-flock/">flock</a></code>(2) and <code><a href="/docs/linux/man/3-lockf/">lockf</a></code>(3).) </p>
 <p> All this is invisible to the C-programmer, but there may be two reasons to wish for more detailed control. On the one hand, maybe a series of I/O actions by one thread belongs together, and should not be interrupted by the I/O of some other thread. On the other hand, maybe the locking overhead should be avoided for greater efficiency. </p>

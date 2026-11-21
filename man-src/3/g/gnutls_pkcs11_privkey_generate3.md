@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pkcs11_privkey_generate3(3)"
 name: "gnutls_pkcs11_privkey_generate3"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_pkcs11_privkey_generate3 – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs11_privkey_generate3 &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs11.h&gt;</code> </p>
 <p> <code>int gnutls_pkcs11_privkey_generate3(const char * </code><i>url</i><code>, gnutls_pk_algorithm_t </code><i>pk</i><code>, unsigned int </code><i>bits</i><code>, const char * </code><i>label</i><code>, const gnutls_datum_t * </code><i>cid</i><code>, gnutls_x509_crt_fmt_t </code><i>fmt</i><code>, gnutls_datum_t * </code><i>pubkey</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -30,6 +30,7 @@ description: "gnutls_pkcs11_privkey_generate3 – API function"
 <dd> will hold the public key (may be <code>NULL</code>)</dd>
 <dt>unsigned int flags</dt>
 <dd> zero or an OR&#8217;ed sequence of <code>GNUTLS_PKCS11_OBJ_FLAGs</code></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will generate a private key in the specified by the <i>url</i> token. The private key will be generate within the token and will not be exportable. This function will store the DER-encoded public key in the SubjectPublicKeyInfo format in <i>pubkey</i> . The <i>pubkey</i> should be deinitialized using <code>gnutls_free()</code>. </p>
 <p> Note that when generating an elliptic curve key, the curve can be substituted in the place of the bits parameter using the <code>GNUTLS_CURVE_TO_BITS()</code> macro.</p>
 <h2>RETURNS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_crt_set_name_constraints(3)"
 name: "gnutls_x509_crt_set_name_constraints"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_crt_set_name_constraints – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_set_name_constraints &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_set_name_constraints(gnutls_x509_crt_t </code><i>crt</i><code>, gnutls_x509_name_constraints_t </code><i>nc</i><code>, unsigned int </code><i>critical</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_x509_crt_set_name_constraints – API function"
 <dd> The nameconstraints structure</dd>
 <dt>unsigned int critical</dt>
 <dd> whether this extension will be critical</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will set the provided name constraints to the certificate extension list. This extension is always marked as critical.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

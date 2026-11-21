@@ -1,5 +1,4 @@
 ---
-
 title: "perlmint(1)"
 name: "perlmint"
 section: "1"
@@ -7,9 +6,14 @@ letter: "p"
 url: "/docs/linux/man/1-perlmint/"
 ---
 
-README.mint - Perl version 5 on Atari MiNT 
+<h2 class="name">NAME</h2>
+ 
 
-There is a binary version of perl available from the FreeMiNT project <a rel="nofollow" HREF="http://freemint.de/">http://freemint.de/</a> You may wish to use this instead of trying to compile yourself. 
+ README.mint - Perl version 5 on Atari MiNT 
+
+<h2>DESCRIPTION</h2>
+
+ There is a binary version of perl available from the FreeMiNT project <a rel="nofollow" HREF="http://freemint.de/">http://freemint.de/</a> You may wish to use this instead of trying to compile yourself. 
 
  <b>The following advice is from perl 5.004_02 and is probably rather out of date.</b> 
 

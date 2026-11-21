@@ -1,5 +1,4 @@
 ---
-
 title: "iv_work_pool_put(3)"
 name: "iv_work_pool_put"
 section: "3"
@@ -10,6 +9,7 @@ description: "IV_WORK_POOL_INIT, iv_work_pool_create, iv_work_pool_put, IV_WORK_
 
 <h2>NAME</h2>
 <p> IV_WORK_POOL_INIT, iv_work_pool_create, iv_work_pool_put, IV_WORK_ITEM_INIT, iv_work_pool_submit_work &#8211; ivykis worker thread management</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;iv_work.h&gt;</code> </p>
 <pre><code>
 struct iv_work_pool {
@@ -29,6 +29,7 @@ struct iv_work_item {
  <code>int iv_work_pool_put(struct iv_work_pool *</code><i>this</i><code>);</code><br />
  <code>void IV_WORK_ITEM_INIT(struct iv_work_item *</code><i>work</i><code>);</code><br />
  <code>int iv_work_pool_submit_work(struct iv_work_pool *</code><i>this</i><code>, struct iv_work_item *</code><i>work</i><code>);</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Calling <code>iv_work_pool_create</code> on a <code>struct iv_work_pool</code> object previously initialised by <code>IV_WORK_POOL_INIT</code> creates a pool of worker threads that can be used to offload CPU intensive tasks to, so as to prevent negatively influencing event handling latency in the calling thread, and to enable the use of multiple host CPUs for CPU intensive tasks. </p>
 <p> <code>iv_work</code> dynamically adjusts the number of threads in the pool to the amount of work there is to do. The <code>-&gt;max_threads</code> member of <code>struct iv_work_pool</code> specifies the maximum number of threads that will be created in this pool. </p>
 <p> Calling <code>iv_work_pool_submit_work</code> on a <code>struct iv_work_item</code> object previously initialised by <code>IV_WORK_ITEM_INIT</code> submits a work item to a pool. The <code>-&gt;work</code> member of <code>struct iv_work_item</code> specifies the function that will be called in one of the worker threads in the pool specified by <code>-&gt;this,</code> with <code>-&gt;cookie</code> as its sole argument. When the work function has completed, <code>iv_work</code> will call the <code>-&gt;completion</code> callback to indicate this, also with <code>-&gt;cookie</code> as its sole argument, in the thread that <code>iv_work_pool_create</code> was called in for this pool object. </p>

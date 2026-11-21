@@ -1,5 +1,4 @@
 ---
-
 title: "fribidi_get_bidi_type(3)"
 name: "fribidi_get_bidi_type"
 section: "3"
@@ -7,9 +6,14 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_get_bidi_type/"
 ---
 
-fribidi_get_bidi_type - get character bidi type 
+<h2 class="name">NAME</h2>
+ 
 
-<b> #include &lt;fribidi.h&gt; 
+ fribidi_get_bidi_type - get character bidi type 
+
+<h2>SYNOPSIS</h2>
+
+ <b> #include &lt;fribidi.h&gt; 
 
  extern FriBidiCharType fribidi_get_bidi_type(FriBidiChar ch); </b>
 
@@ -19,7 +23,9 @@ fribidi_get_bidi_type - get character bidi type
 <dt><b>FriBidiChar ch</b>
 </dt><dd> Input character.</dd></dl>
 
-This function returns the bidi type of a character as defined in Table 3.7 Bidirectional Character Types of the Unicode Bidirectional Algorithm available at <a rel="nofollow" HREF="http://www.unicode.org/reports/tr9/#Bidirectional_Character_Types,">http://www.unicode.org/reports/tr9/#Bidirectional_Character_Types,</a> using data provided in file UnicodeData.txt of the Unicode Character Database available at <a rel="nofollow" HREF="http://www.unicode.org/Public/UNIDATA/UnicodeData.txt.">http://www.unicode.org/Public/UNIDATA/UnicodeData.txt.</a> 
+<h2>DESCRIPTION</h2>
+
+ This function returns the bidi type of a character as defined in Table 3.7 Bidirectional Character Types of the Unicode Bidirectional Algorithm available at <a rel="nofollow" HREF="http://www.unicode.org/reports/tr9/#Bidirectional_Character_Types,">http://www.unicode.org/reports/tr9/#Bidirectional_Character_Types,</a> using data provided in file UnicodeData.txt of the Unicode Character Database available at <a rel="nofollow" HREF="http://www.unicode.org/Public/UNIDATA/UnicodeData.txt.">http://www.unicode.org/Public/UNIDATA/UnicodeData.txt.</a> 
 
  There are a few macros defined in fribidi-bidi-types.h for querying a bidi type.
 

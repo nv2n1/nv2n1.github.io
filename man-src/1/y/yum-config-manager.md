@@ -1,5 +1,4 @@
 ---
-
 title: "yum-config-manager(1)"
 name: "yum-config-manager"
 section: "1"
@@ -10,7 +9,9 @@ description: "yum-config-manager – manage yum configuration options and yum re
 
 <h2>NAME</h2>
 <p> yum-config-manager &#8211; manage yum configuration options and yum repositories</p>
+<h2>SYNOPSIS</h2>
 <p> <code>yum-config-manager</code> [options] [section &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>yum-config-manager</code> is a program that can manage main yum configuration options, toggle which repositories are enabled or disabled, and add new repositories. </p>
 <p> Unless &#8211;add-repo is used, the program will output the current configuration of the selected sections, and optionally save it back to the corresponding files. </p>
 <p> By default, if no positional arguments are specified, the program will select the [main] section and each enabled repository. You can override this by specifying your own list of sections as arguments (these may also include disabled repositories). A section can either be main or a repoid. </p>

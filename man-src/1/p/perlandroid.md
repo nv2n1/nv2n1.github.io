@@ -1,5 +1,4 @@
 ---
-
 title: "perlandroid(1)"
 name: "perlandroid"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-perlandroid/"
 description: "perlandroid – Perl under Android"
 ---
 
+<h2 class="name">NAME</h2>
+<p> perlandroid &#8211; Perl under Android </p>
+<h2>SYNOPSIS</h2>
 <p> The first portions of this documents contains instructions to cross-compile Perl for Android 2.0 and later, using the binaries provided by Google. The latter portion describes how to build perl native using one of the toolchains available on the Play Store.</p>
+<h2>DESCRIPTION</h2>
 <p> This document describes how to set up your host environment when attempting to build Perl for Android.</p>
 <h2>Cross-compilation</h2>
 <p> These instructions assume an Unixish build environment on your host system; they&#8217;ve been tested on Linux and <font SIZE="-1">OS X,</font> and may work on Cygwin and <font SIZE="-1">MSYS.</font> While Google also provides an <font SIZE="-1">NDK</font> for Windows, these steps won&#8217;t work native there, although it may be possible to cross-compile through different means. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "barrier(3)"
 name: "barrier"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-barrier/"
 description: "QuantLib::BarrierOption::arguments – Arguments for barrier option calculation"
 ---
 
+<h2 class="name">NAME</h2>
+<p> QuantLib::BarrierOption::arguments &#8211; Arguments for barrier option calculation </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/barrieroption.hpp&gt; </p>
 <p> Inherits OneAssetOption::arguments. </p>
 <p> Inherited by <code>arguments</code>. </p>

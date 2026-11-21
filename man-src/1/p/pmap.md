@@ -1,5 +1,4 @@
 ---
-
 title: "pmap(1)"
 name: "pmap"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pmap/"
 description: "pmap – report memory map of a process"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pmap &#8211; report memory map of a process </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pmap</code> [<i>options</i>] <i>pid</i> [&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>pmap</code> command reports the memory map of a process or processes.</p>
 <h2>OPTIONS</h2>
 <dl>

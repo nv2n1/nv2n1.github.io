@@ -1,5 +1,4 @@
 ---
-
 title: "db2x_xsltproc(1)"
 name: "db2x_xsltproc"
 section: "1"
@@ -10,7 +9,9 @@ description: "db2x_xsltproc – XSLT processor invocation wrapper"
 
 <h2>NAME</h2>
 <p> db2x_xsltproc &#8211; XSLT processor invocation wrapper</p>
+<h2>SYNOPSIS</h2>
 <p> <code>db2x_xsltproc</code> [<i>options</i>] <i>xml-document</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>db2x_xsltproc</code> invokes the XSLT 1.0 processor for docbook2X. </p>
 <p> This command applies the XSLT stylesheet (usually given by the <code>&#8211;stylesheet</code> option) to the XML document in the file <i>xml-document</i>. The result is written to standard output (unless changed with <code>&#8211;output</code>). </p>
 <p> To read the source XML document from standard input, specify &#8211; as the input document.</p>

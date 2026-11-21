@@ -1,5 +1,4 @@
 ---
-
 title: "drmaa2_dict(3)"
 name: "drmaa2_dict"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-drmaa2_dict/"
 description: "drmaa2_dict_create, drmaa2_dict_free, drmaa2_dict_list, drmaa2_dict_has, drmaa2_dict_get, drmaa2_dict_del, drmaa2_dict_set – DRMAA2 dictionary routines"
 ---
 
+<h2 class="name">NAME</h2>
+<p> drmaa2_dict_create, drmaa2_dict_free, drmaa2_dict_list, drmaa2_dict_has, drmaa2_dict_get, drmaa2_dict_del, drmaa2_dict_set &#8211; DRMAA2 dictionary routines </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include drmaa.h</code> </p>
 <pre><code>
 typedef struct drmaa2_dict_s *drmaa2_dict;
@@ -20,6 +22,7 @@ const char *drmaa2_dict_get(const drmaa2_dict d, const char *key);
 drmaa2_error drmaa2_dict_del(drmaa2_dict d, const char *key);
 drmaa2_error drmaa2_dict_set(drmaa2_dict d, const char *key, const char *val);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt><code>drmaa2_dict_create</code>()</dt>
 <dd> creates a new dictionary instance. Returns a pointer to the dictionary or NULL on error. Optional parameter <i>callback</i> allows the application to provide a callback pointer to a collection element cleanup function. <code>DRMAA2_UNSET_CALLBACK</code> may be supplied instead of a valid callback pointer.</dd>

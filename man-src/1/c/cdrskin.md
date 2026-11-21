@@ -1,5 +1,4 @@
 ---
-
 title: "cdrskin(1)"
 name: "cdrskin"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-cdrskin/"
 description: "cdrskin – burns preformatted data to CD, DVD, and BD via libburn."
 ---
 
+<h2 class="name">NAME</h2>
+<p> cdrskin &#8211; burns preformatted data to CD, DVD, and BD via libburn. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>cdrskin</code> [<i>options</i>|<i>track_source_addresses</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>cdrskin</code> is a program that provides some of cdrecord&#8217;s options in a compatible way for CD media. With DVD and BD it has its own ways. You do not need to be superuser for its daily usage.</p>
 <h3><code>Overview of features:</code></h3>
 <p> Blanking of CD-RW and DVD-RW.<br />

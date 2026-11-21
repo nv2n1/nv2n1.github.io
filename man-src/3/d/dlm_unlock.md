@@ -1,5 +1,4 @@
 ---
-
 title: "dlm_unlock(3)"
 name: "dlm_unlock"
 section: "3"
@@ -10,6 +9,7 @@ description: "dlm_unlock – unlock a DLM lock"
 
 <h2>NAME</h2>
 <p> dlm_unlock &#8211; unlock a DLM lock</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;libdlm.h&gt;
 int dlm_unlock(uint32_t lkid,
@@ -17,6 +17,7 @@ int dlm_unlock(uint32_t lkid,
 int dlm_unlock_wait(uint32_t lkid,
                     uint32_t flags, struct dlm_lksb *lksb);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>dlm_unlock()</code> unlocks a lock previously acquired by dlm_lock and its variants. </p>
 <p> Unless <code>dlm_unlock_wait() </code> is used unlocks are also asynchronous. The AST routine is called when the resource is successfully unlocked (see below). </p>
 <p> <code>lkid</code> Lock ID as returned in the lksb </p>

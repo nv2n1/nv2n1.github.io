@@ -1,5 +1,4 @@
 ---
-
 title: "beagle-search(1)"
 name: "beagle-search"
 section: "1"
@@ -10,7 +9,9 @@ description: "beagle-search"
 
 <h2>NAME</h2>
 <p> beagle-search</p>
+<h2>SYNOPSIS</h2>
 <p> <code>beagle-search [</code><i>options</i>] [&lt;query string&gt;]</p>
+<h2>DESCRIPTION</h2>
 <p> GNOME-based graphical user interface to the Beagle search system </p>
 <h2>OPTIONS</h2>
 <dl>

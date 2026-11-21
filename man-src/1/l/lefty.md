@@ -1,5 +1,4 @@
 ---
-
 title: "lefty(1)"
 name: "lefty"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-lefty/"
 description: "lefty – A Programmable Graphics Editor"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lefty &#8211; A Programmable Graphics Editor </p>
+<h2>SYNOPSIS</h2>
 <p> <code>lefty</code> [ <i>options</i> ] [ <i>file</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>lefty</code> is a two-view graphics editor for technical pictures. This editor has no hardwired knowledge about specific picture layouts or editing operations. Each picture is described by a program that contains functions to draw the picture and functions to perform editing operations that are appropriate for the specific picture. Primitive user actions, like mouse and keyboard events, are also bound to functions in this program. Besides the graphical view of the picture itself, the editor presents a textual view of the program that describes the picture. Programmability and the two-view interface allow the editor to handle a variety of pictures, but are particularly useful for pictures used in technical contexts, e.g., graphs and trees. Also, <code>lefty</code> can communicate with other processes. This feature allows it to use existing tools to compute specific picture layouts and allows external processes to use the editor as a front end to display their data structures graphically.</p>
 <h2>USAGE</h2>
 <p> The file name is optional. It may be <code>&#8211;</code>, for reading from standard input. <code>lefty</code> uses two environment variables, <code>LEFTYPATH</code> and <code>LEFTYOPTIONS</code>. <code>LEFTYPATH</code> is a colon separated list of directories. When <code>lefty</code> tries to open a file, it searches that path for the file. When <code>lefty</code> tries to start up another process, it searches <code>LEFTYPATH</code> first, then the standard <code>PATH</code> variable. <code>LEFTYOPTIONS</code> can be used to set specific options. Options specified on the command line override options set through this variable.</p>

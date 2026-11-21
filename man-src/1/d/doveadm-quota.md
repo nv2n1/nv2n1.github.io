@@ -1,5 +1,4 @@
 ---
-
 title: "doveadm-quota(1)"
 name: "doveadm-quota"
 section: "1"
@@ -10,9 +9,11 @@ description: "doveadm-quota – Initialize/recalculate or show current quota usa
 
 <h2>NAME</h2>
 <p> doveadm-quota &#8211; Initialize/recalculate or show current quota usage</p>
+<h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] [<code>-f</code> <i>formatter</i>] <code>quota</code> [<code>-S</code> <i>socket_path</i>] <i>command</i><br />
  <code>doveadm</code> [<code>-Dv</code>] [<code>-f</code> <i>formatter</i>] <code>quota</code> [<code>-S</code> <i>socket_path</i>] <i>command&nbsp;<wbr></i><code>-A</code><br />
  <code>doveadm</code> [<code>-Dv</code>] [<code>-f</code> <i>formatter</i>] <code>quota</code> [<code>-S</code> <i>socket_path</i>] <i>command&nbsp;<wbr></i><code>-u</code><i>&nbsp;<wbr>user</i></p>
+<h2>DESCRIPTION</h2>
 <p> In the first form, <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will execute the <i>command</i> for the currently logged in user. </p>
 <p> In the second form, the <i>command</i> will be performed for all users. </p>
 <p> In the third form, the <i>command</i> will affect only the matching <i>user</i>(s).</p>

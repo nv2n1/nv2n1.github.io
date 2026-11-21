@@ -1,5 +1,4 @@
 ---
-
 title: "fusecompress_offline(1)"
 name: "fusecompress_offline"
 section: "1"
@@ -10,7 +9,9 @@ description: "fusecompress_offline – decompress or compress data without need 
 
 <h2>NAME</h2>
 <p> fusecompress_offline &#8211; decompress or compress data without need to mount the compressed virtual filesystem</p>
+<h2>SYNOPSIS</h2>
 <p> <code>fusecompress_offline</code> [-h] [-v] [-o OPTIONS] path</p>
+<h2>DESCRIPTION</h2>
 <p> If compression method is set the data will be compressed by required compression method. Files already compressed by a different compression method are recompressed to the required compression method. Files already compressed by the required compression method are left untouched. If compression method is not set (using -o fc_c) then file(s) are decompressed. </p>
 <p> Path may be directory or file. Directories are processed recursively. </p>
 <p> This allows you to, among other things, &quot;compress&quot; an existing folder (ex:) $ fusecompress_offline -o fc_c:lzma formerly_uncompressed_folder </p>

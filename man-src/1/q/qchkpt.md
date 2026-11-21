@@ -1,5 +1,4 @@
 ---
-
 title: "qchkpt(1)"
 name: "qchkpt"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-qchkpt/"
 description: "qchkpt – checkpoint pbs batch jobs"
 ---
 
+<h2 class="name">NAME</h2>
+<p> qchkpt &#8211; checkpoint pbs batch jobs </p>
+<h2>SYNOPSIS</h2>
 <p> qchkpt job_identifier &#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>qchkpt </code> command requests that the PBS Mom generate a checkpoint file for a running job. </p>
 <p> <font SIZE="-1">This is an extension to POSIX.2d.</font> </p>
 <p> The qchkpt command sends a <i>Chkpt Job</i> batch request to the server as described in the general section.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ncftpspooler(1)"
 name: "ncftpspooler"
 section: "1"
@@ -10,6 +9,7 @@ description: "ncftpspooler – Global batch FTP job processor daemon"
 
 <h2>NAME</h2>
 <p> ncftpspooler &#8211; Global batch FTP job processor daemon</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ncftpspooler</code> -d [<i>options</i>] </p>
 <p> <code>ncftpspooler</code> -l [<i>options</i>]</p>
 <h2>OPTIONS</h2>
@@ -25,6 +25,7 @@ description: "ncftpspooler – Global batch FTP job processor daemon"
 <dd> Lists the contents of the job queue directory.</dd>
 <dt><code>-s</code><i> XX</i></dt>
 <dd> When the job queue is empty, the program sleeps 120 seconds and then checks again to see if a new job has been submitted. Use this option to change the number of seconds used for this delay.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <i>ncftpspooler</i> program evolved from the <i>ncftpbatch</i> program. The <i>ncftpbatch</i> program was originally designed as a &#8220;personal FTP spooler&#8221; which would process a single background job a particular user and exit when it finished; the <i>ncftpspooler</i> program is a &#8220;global FTP spooler&#8221; which stays running and processes background jobs as they are submitted. </p>
 <p> The job queue directory is monitored for specially-named and formatted text files. Each file serves as a single FTP job. The name of the job file contains the type of FTP job (<i>get</i> or <i>put</i>), a timestamp indicating the earliest the job should be processed, and optionally some additional information to make it easier to create unique job files (i.e. a sequence number). The contents of the job files have information such as the remote server machine to FTP to, username, password, remote pathname, etc. </p>
 <p> Your job queue directory must be readable and writable by the user that you plan to run <i>ncftpspooler</i> as, so that jobs can be removed or renamed within the queue. </p>

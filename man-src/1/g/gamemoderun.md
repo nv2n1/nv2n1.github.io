@@ -1,5 +1,4 @@
 ---
-
 title: "gamemoderun(1)"
 name: "gamemoderun"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-gamemoderun/"
 description: "gamemoderun – invoke gamemode into any program"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gamemoderun &#8211; invoke gamemode into any program </p>
+<h2>SYNOPSIS</h2>
 <p> <code>gamemoderun</code> PROGRAM</p>
+<h2>DESCRIPTION</h2>
 <p> <code>GameMode</code> is a daemon/lib combo for Linux that allows games to request a set of optimisations be temporarily applied to the host OS. </p>
 <p> The design has a clear cut abstraction between the host daemon and library (<code>gamemoded</code> and <code>libgamemode</code>), and the client loaders (<code>libgamemodeauto</code> and <code>gamemode_client.h</code>) that allows for safe usage without worrying about whether the daemon is installed or running. This design also means that while the host library currently relies on systemd for exchanging messages with the daemon, it&#8217;s entirely possible to implement other internals that still work with the same clients. </p>
 <p> <code>GameMode</code> was designed primarily as a stop-gap solution to problems with the Intel and AMD CPU powersave or ondemand governors, but is intended to be expanded beyond just CPU governor states, as there are a wealth of automation tasks one might want to apply. </p>

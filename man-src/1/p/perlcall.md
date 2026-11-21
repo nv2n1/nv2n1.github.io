@@ -1,5 +1,4 @@
 ---
-
 title: "perlcall(1)"
 name: "perlcall"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-perlcall/"
 description: "perlcall – Perl calling conventions from C"
 ---
 
+<h2 class="name">NAME</h2>
+<p> perlcall &#8211; Perl calling conventions from C </p>
+<h2>DESCRIPTION</h2>
 <p> The purpose of this document is to show you how to call Perl subroutines directly from C, i.e., how to write <i>callbacks</i>. </p>
 <p> Apart from discussing the C interface provided by Perl for writing callbacks the document uses a series of examples to show how the interface actually works in practice. In addition some techniques for coding callbacks are covered. </p>
 <p> Examples where callbacks are necessary include</p>

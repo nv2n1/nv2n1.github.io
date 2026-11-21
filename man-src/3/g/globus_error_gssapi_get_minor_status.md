@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_error_gssapi_get_minor_status/"
 description: "Error Data Accessors and Modifiers –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Error Data Accessors and Modifiers &#8211; </p>
 <h3>Functions</h3>
 <p> OM_uint32 <code>globus_error_gssapi_get_major_status</code> (globus_object_t *error)<br />
  <i>Get Major Status. </i><br />

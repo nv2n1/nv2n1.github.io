@@ -1,5 +1,4 @@
 ---
-
 title: "ipa-dns-install(1)"
 name: "ipa-dns-install"
 section: "1"
@@ -10,7 +9,9 @@ description: "ipa-dns-install – Add DNS as a service to an IPA server"
 
 <h2>NAME</h2>
 <p> ipa-dns-install &#8211; Add DNS as a service to an IPA server</p>
+<h2>SYNOPSIS</h2>
 <p> ipa-dns-install [<i>OPTION</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Adds DNS as an IPA-managed service. This requires that the IPA server is already installed and configured.</p>
 <h2>OPTIONS</h2>
 <dl>

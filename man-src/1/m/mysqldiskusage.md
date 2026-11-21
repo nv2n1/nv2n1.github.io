@@ -1,5 +1,4 @@
 ---
-
 title: "mysqldiskusage(1)"
 name: "mysqldiskusage"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mysqldiskusage/"
 description: "mysqldiskusage – Show Database Disk Usage"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mysqldiskusage &#8211; Show Database Disk Usage </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqldiskusage [</code><i>options</i><code>] </code><i>db</i><code> &#8230;</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This utility displays disk space usage for one or more databases. The utility optionally displays disk usage for the binary log, slow query log, error log, general query log, relay log, and InnoDB tablespaces. The default is to show only database disk usage. </dd>
 <p> If the command line lists no databases, the utility shows the disk space usage for all databases. </p>
 <p> Sizes displayed without a unit indicator such as MB are in bytes. </p>

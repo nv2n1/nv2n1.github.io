@@ -1,5 +1,4 @@
 ---
-
 title: "euca-replace-route-table-association(1)"
 name: "euca-replace-route-table-association"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-replace-route-table-association – Change the route table as
 
 <h2>NAME</h2>
 <p> euca-replace-route-table-association &#8211; Change the route table associated with a VPC subnet</p>
+<h2>SYNOPSIS</h2>
 <p> euca-replace-route-table-association <code>-r</code> RTABLE [&#8211;show-empty-fields]</p>
 <dl>
 <dt>[-U URL] [&#8211;region USER [at] REGION]</dt>
 <dd> [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] RTBASSOC</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Change the route table associated with a VPC subnet</p>
 <h3>positional arguments:</h3>
 <dl>

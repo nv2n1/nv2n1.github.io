@@ -1,5 +1,4 @@
 ---
-
 title: "sgeql2(3)"
 name: "sgeql2"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-sgeql2/"
 description: "sgeql2.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sgeql2.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sgeql2</code> (M, N, A, LDA, TAU, WORK, INFO)<br />
  <i></i><code>SGEQL2</code> computes the QL factorization of a general rectangular matrix using an unblocked algorithm.</p>

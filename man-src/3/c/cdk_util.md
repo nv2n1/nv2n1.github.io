@@ -1,5 +1,4 @@
 ---
-
 title: "cdk_util(3)"
 name: "cdk_util"
 section: "3"
@@ -10,6 +9,7 @@ description: "cdk_util – Cdk utility functions"
 
 <h2>NAME</h2>
 <p> cdk_util &#8211; Cdk utility functions</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>
 <p> #include &lt;cdk.h&gt; </p>
 <pre><code>
@@ -102,6 +102,7 @@ int viewInfo(
     boolean interpret);
 </code></pre>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> These are utility functions that one may use to initialize, build or customize widgets.</p>
 <h2>AVAILABLE FUNCTIONS</h2>
 <dl>

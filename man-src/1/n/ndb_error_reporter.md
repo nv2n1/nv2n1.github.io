@@ -1,5 +1,4 @@
 ---
-
 title: "ndb_error_reporter(1)"
 name: "ndb_error_reporter"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-ndb_error_reporter/"
 description: "ndb_error_reporter – NDB error-reporting utility"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ndb_error_reporter &#8211; NDB error-reporting utility </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ndb_error_reporter </code><i>options</i></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>ndb_error_reporter</code></p>
 <dd>creates an archive from data node and management node log files that can be used to help diagnose bugs or other problems with a cluster. <i>It is highly recommended that you make use of this utility when filing reports of bugs in MySQL Cluster</i>. </dd>
 <p> <code>Usage</code>: </p>

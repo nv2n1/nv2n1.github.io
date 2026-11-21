@@ -1,5 +1,4 @@
 ---
-
 title: "plasmaengineexplorer(1)"
 name: "plasmaengineexplorer"
 section: "1"
@@ -10,10 +9,12 @@ description: "plasmaengineexplorer – Provides direct access to plasma data eng
 
 <h2>NAME</h2>
 <p> plasmaengineexplorer &#8211; Provides direct access to plasma data engines</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>plasmaengineexplorer</code> [<code>&#8211;height</code><i> pixels</i>] [<code>&#8211;width</code><i> pixels</i>] [<code>-x</code><i> pixels</i>] [<code>-y</code><i> pixels</i>] [<code>&#8211;engine</code><i> name</i>] [<code>&#8211;source</code><i> name</i>] [<code>&#8211;interval</code><i> ms</i>]</dt>
 <dt> <code>plasmaengineexplorer</code> [KDE Generic Options] [Qt Generic Options] </dt>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> <code>plasmaengineexplorer</code> is a graphical tool allowing developers to test Plasma data engines without writing a Plasma applet. </p>
 <dd>If no options are given, it will start without any data engine selected. The required data engine can be selected from a drop-down list. </dd>
 <p> Only installed data engines will be found. <code>kbuildsycoca4</code> may need to be run for newly-installed data engines to be found. </p>

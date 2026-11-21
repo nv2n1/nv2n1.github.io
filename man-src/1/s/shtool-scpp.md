@@ -1,5 +1,4 @@
 ---
-
 title: "shtool-scpp(1)"
 name: "shtool-scpp"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-shtool-scpp/"
 description: "shtool scpp – GNU shtool C source file pre-processor"
 ---
 
+<h2 class="name">NAME</h2>
+<p> shtool scpp &#8211; GNU shtool C source file pre-processor </p>
+<h2>SYNOPSIS</h2>
 <p> <code>shtool scpp</code> [<code>-v</code>|<code>&#8211;verbose</code>] [<code>-p</code>|<code>&#8211;preserve</code>] [<code>-f</code>|<code>&#8211;filter</code> <i>filter</i>] [<code>-o</code>|<code>&#8211;output</code> <i>ofile</i>] [<code>-t</code>|<code>&#8211;template</code> <i>tfile</i>] [<code>-M</code>|<code>&#8211;mark</code> <i>mark</i>] [<code>-D</code>|<code>&#8211;define</code> <i>dname</i>] [<code>-C</code>|<code>&#8211;class</code> <i>cname</i>] <i>file</i> [<i>file</i> &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> This command is an additional <font SIZE="-1">ANSI C</font> source file pre-processor for sharing <i><a href="/docs/linux/man/1-cpp/">cpp</a></i>(1) code segments, internal variables and internal functions. The intention for this comes from writing libraries in <font SIZE="-1">ANSI C.</font> Here a common shared internal header file is usually used for sharing information between the library source files. </p>
 <p> The operation is to parse special constructs in <i>file</i>s, generate a few things out of these constructs and insert them at position <i>mark</i> in <i>tfile</i> by writing the output to <i>ofile</i>. Additionally the <i>file</i>s are never touched or modified. Instead the constructs are removed later by the <i><a href="/docs/linux/man/1-cpp/">cpp</a></i>(1) phase of the build process. The only prerequisite is that every <i>file</i> has a &#8220;<tt>&quot;#include &quot;&quot;</tt><i>ofile</i><tt>&quot;&quot;&quot;</tt>&#8221; at the top. </p>
 <p> This command provides the following features: First it avoids namespace pollution and reduces prototyping efforts for internal symbols by recognizing functions and variables which are defined with the storage class identifier &#8220;<i>cname</i>&#8221;. For instance if <i>cname</i> is &#8220;intern&#8221;, a function &#8220;<tt>&quot;intern void *foobar(int quux)&quot;</tt>&#8221; in one of the <i>file</i>s is translated into both a &#8220;<tt>&quot;#define foobar __foobar&quot;</tt>&#8221; and a &#8220;<tt>&quot;extern void *foobar(int quux);&quot;</tt>&#8221; in <i>ofile</i>. Additionally a global &#8220;<tt>&quot;#define&quot;</tt> <i>cname</i> <tt>&quot;/**/&quot;</tt>&#8221; is also created in <i>ofile</i> to let the compiler silently ignore this additional storage class identifier. </p>

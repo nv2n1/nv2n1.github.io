@@ -1,5 +1,4 @@
 ---
-
 title: "encode_keychange(1)"
 name: "encode_keychange"
 section: "1"
@@ -10,7 +9,9 @@ description: "encode_keychange – produce the KeyChange string for SNMPv3"
 
 <h2>NAME</h2>
 <p> encode_keychange &#8211; produce the KeyChange string for SNMPv3</p>
+<h2>SYNOPSIS</h2>
 <p> <code>encode_keychange </code> -t md5|sha1 [<i>OPTIONS</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>encode_keychange</code> produces a KeyChange string using the old and new passphrases as described in Section 5 of RFC 2274 &quot;User-based Security Model (USM) for version 3 of the Simple Network Management Protocol (SNMPv3)&quot;. <code>-t</code> option is mandatory and specifies the hash transform type to use. </p>
 <p> The transform is used to convert passphrase to master key for a given user (Ku), convert master key to the localized key (Kul), and to hash the old Kul with the random bits. </p>
 <p> Passphrases are obtained by examining a number of sources until success (in order listed):</p>

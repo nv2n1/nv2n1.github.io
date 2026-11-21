@@ -1,5 +1,4 @@
 ---
-
 title: "licensecheck(1)"
 name: "licensecheck"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-licensecheck/"
 description: "licensecheck – simple license checker for source files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> licensecheck &#8211; simple license checker for source files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>licensecheck</code> <code>&#8211;help</code>|<code>&#8211;version</code> </p>
 <p> <code>licensecheck</code> [<code>&#8211;no-conf</code>] [<code>&#8211;verbose</code>] [<code>&#8211;copyright</code>] [<code>-l</code>|<code>&#8211;lines=</code><i>N</i>] [<code>-i</code>|<code>&#8211;ignore=</code><i>regex</i>] [<code>-c</code>|<code>&#8211;check=</code><i>regex</i>] [<code>-m</code>|<code>&#8211;machine</code>] [<code>-r</code>|<code>&#8211;recursive</code>] <i>list of files and directories to check</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>licensecheck</code> attempts to determine the license that applies to each file passed to it, by searching the start of the file for text belonging to various licenses. </p>
 <p> If any of the arguments passed are directories, <code>licensecheck</code> will add the files contained within to the list of files to process.</p>
 <h2>OPTIONS</h2>

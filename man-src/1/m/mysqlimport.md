@@ -1,5 +1,4 @@
 ---
-
 title: "mysqlimport(1)"
 name: "mysqlimport"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mysqlimport/"
 description: "mysqlimport – a data import program"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mysqlimport &#8211; a data import program </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqlimport [</code><i>options</i><code>] </code><i>db_name</i><i>textfile1</i><code> &#8230;</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>mysqlimport</code> client provides a command-line interface to the LOAD DATA SQL statement. Most options to <code>mysqlimport</code> correspond directly to clauses of LOAD DATA syntax. See Section 13.2.7, &#8220;LOAD DATA Statement&#8221;. </dd>
 <p> Invoke <code>mysqlimport</code> like this: </p>
 <dl>

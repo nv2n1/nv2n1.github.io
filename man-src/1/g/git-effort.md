@@ -1,5 +1,4 @@
 ---
-
 title: "git-effort(1)"
 name: "git-effort"
 section: "1"
@@ -10,7 +9,9 @@ description: "git-effort – Show effort statistics on file(s)"
 
 <h2>NAME</h2>
 <p> <code>git-effort</code> &#8211; Show effort statistics on file(s)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>git-effort</code> [&#8211;above &lt;value&gt;] [&lt;path&gt;&#8230;] [&#8211; [&lt;log options&gt;&#8230;]]</p>
+<h2>DESCRIPTION</h2>
 <p> Shows effort statistics about files in the repository. </p>
 <p> Display includes:<br />
  &#8211; Commits: number of commits per file &#8211; highlighting files with most activity.<br />

@@ -1,5 +1,4 @@
 ---
-
 title: "euare-useraddkey(1)"
 name: "euare-useraddkey"
 section: "1"
@@ -10,10 +9,12 @@ description: "euare-useraddkey – Create a new access key for a user"
 
 <h2>NAME</h2>
 <p> euare-useraddkey &#8211; Create a new access key for a user</p>
+<h2>SYNOPSIS</h2>
 <p> euare-useraddkey [-w] [-d DOMAIN] [-l] [&#8211;as-account ACCOUNT] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] USER</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Create a new access key for a user</p>
 <h3>positional arguments:</h3>
 <dl>

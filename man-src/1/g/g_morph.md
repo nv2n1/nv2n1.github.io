@@ -1,5 +1,4 @@
 ---
-
 title: "g_morph(1)"
 name: "g_morph"
 section: "1"
@@ -11,7 +10,9 @@ description: "g_morph – linear interpolation of conformations"
 <h2>NAME</h2>
 <p> g_morph &#8211; linear interpolation of conformations </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>g_morph</code> <code>-f1</code><i> conf1.gro </i> <code>-f2</code><i> conf2.gro </i> <code>-o</code><i> interm.xtc </i> <code>-or</code><i> rms-interm.xvg </i> <code>-n</code><i> index.ndx </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-ninterm</code><i> int </i> <code>-first</code><i> real </i> <code>-last</code><i> real </i> <code>-[no]fit</code><i></i></p>
+<h2>DESCRIPTION</h2>
 <p> g_morph does a linear interpolation of conformations in order to create intermediates. Of course these are completely unphysical, but that you may try to justify yourself. Output is in the form of a generic trajectory. The number of intermediates can be controlled with the -ninterm flag. The first and last flag correspond to the way of interpolating: 0 corresponds to input structure 1 while 1 corresponds to input strucutre 2. If you specify first 0 or last 1 extrapolation will be on the path from input structure x1 to x2. In general the coordinates of the intermediate x(i) out of N total intermidates correspond to: </p>
 <p> x(i) = x1 + (first+(i/(N-1))*(last-first))*(x2-x1) </p>
 <p> Finally the RMSD with respect to both input structures can be computed if explicitly selected (-or option). In that case an index file may be read to select what group RMS is computed from.</p>

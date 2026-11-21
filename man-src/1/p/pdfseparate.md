@@ -1,5 +1,4 @@
 ---
-
 title: "pdfseparate(1)"
 name: "pdfseparate"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pdfseparate/"
 description: "pdfseparate – Portable Document Format (PDF) page extractor"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pdfseparate &#8211; Portable Document Format (PDF) page extractor </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pdfseparate</code> [options] <i>PDF-file PDF-page-pattern</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>pdfseparate</code> extract single pages from a Portable Document Format (PDF). </p>
 <p> pdfseparate reads the PDF file <i>PDF-file</i>, extracts one or more pages, and writes one PDF file for each page to <i>PDF-page-pattern.</i> </p>
 <p> PDF-page-pattern should contain <code>%d</code> (or any variant respecting printf format), since %d is replaced by the page number.</p>

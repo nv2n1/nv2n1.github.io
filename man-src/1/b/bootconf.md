@@ -1,5 +1,4 @@
 ---
-
 title: "bootconf(1)"
 name: "bootconf"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-bootconf/"
 description: "bootconf – bootconf"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bootconf &#8211; bootconf </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>bootconf</code> [options&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>bootconf</code></p>
 <dd>is a small utility that provides a convenient way to set or inspect some common Linux kernel boot options. <code>bootconf</code> updates the <code>GRUB</code> configuration file (<i>/boot/grub/grub.conf</i> in most cases). The changes will take effect, naturally, at the next reboot. </dd>
 <p> The following parameters may be specified: </p>

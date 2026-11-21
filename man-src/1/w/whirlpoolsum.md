@@ -1,5 +1,4 @@
 ---
-
 title: "whirlpoolsum(1)"
 name: "whirlpoolsum"
 section: "1"
@@ -10,7 +9,9 @@ description: "whirlpoolsum – compute and check WHIRLPOOL message digest"
 
 <h2>NAME</h2>
 <p> whirlpoolsum &#8211; compute and check WHIRLPOOL message digest</p>
+<h2>SYNOPSIS</h2>
 <p> <code>whirlpoolsum</code> [<i>OPTION</i>]&#8230; [<i>FILE</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Print or check WHIRLPOOL (512-bit) checksums. With no FILE, or when FILE is -, read standard input.</p>
 <dl>
 <dt><code>-b</code>, <code>&#8211;binary</code></dt>

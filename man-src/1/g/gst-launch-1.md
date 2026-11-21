@@ -1,5 +1,4 @@
 ---
-
 title: "gst-launch-1(1)"
 name: "gst-launch-1"
 section: "1"
@@ -10,7 +9,9 @@ description: "gst-launch – build and run a GStreamer pipeline"
 
 <h2>NAME</h2>
 <p> gst-launch &#8211; build and run a GStreamer pipeline</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gst-launch</code> <i>[OPTION&#8230;]</i> PIPELINE-DESCRIPTION</p>
+<h2>DESCRIPTION</h2>
 <p> <i>gst-launch</i> is a tool that builds and runs basic <i>GStreamer</i> pipelines. </p>
 <p> In simple form, a PIPELINE-DESCRIPTION is a list of elements separated by exclamation marks (!). Properties may be appended to elements, in the form <i>property=value</i>. </p>
 <p> For a complete description of possible PIPELINE-DESCRIPTIONS see the section <i>pipeline description</i> below or consult the GStreamer documentation. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ipsec_initsubnet(3)"
 name: "ipsec_initsubnet"
 section: "3"
@@ -10,6 +9,7 @@ description: "ipsec_initsubnet, ipsec_addrtosubnet, ipsec_subnettypeof, ipsec_ma
 
 <h2>NAME</h2>
 <p> ipsec_initsubnet, ipsec_addrtosubnet, ipsec_subnettypeof, ipsec_masktocount, ipsec_networkof, ipsec_maskof &#8211; initialize an ip_subnet, initialize a singleton ip_subnet, get address type of an ip_subnet, convert subnet mask to bit count, get base address of an ip_subnet, get subnet mask of an ip_subnet</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libreswan.h&gt;</code> </p>
 <p> <code>const char *initsubnet(const ip_address *addr,</code><br />
  &nbsp;<wbr> <code>int maskbits, int clash, ip_subnet *dst);</code><br />
@@ -19,6 +19,7 @@ description: "ipsec_initsubnet, ipsec_addrtosubnet, ipsec_subnettypeof, ipsec_ma
  <code>int masktocount(const ip_address *src);</code><br />
  <code>void networkof(const ip_subnet *src, ip_address *dst);</code><br />
  <code>void maskof(const ip_subnet *src, ip_address *dst);</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>&lt;libreswan.h&gt;</code> library uses an internal type <i>ip_subnet</i> to contain a description of an IP subnet (base address plus mask). These functions provide basic tools for creating and examining this type. </p>
 <p> <i>Initsubnet</i> initializes a variable <i>*dst</i> of type <i>ip_subnet</i> from a base address and a count of mask bits. The <i>clash</i> parameter specifies what to do if the base address includes <code>1</code> bits outside the prefix specified by the mask (that is, in the &#8220;host number&#8221; part of the address):</p>
 <dl>

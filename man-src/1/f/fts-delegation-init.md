@@ -1,5 +1,4 @@
 ---
-
 title: "fts-delegation-init(1)"
 name: "fts-delegation-init"
 section: "1"
@@ -11,9 +10,13 @@ url: "/docs/linux/man/1-fts-delegation-init/"
 
  fts-delegation-init
 
-fts-delegation-init [options]
+<h2>SYNOPSIS</h2>
 
-fts-delegation-init is a tool for delegating a proxy certificate to FTS3 endpoint.
+ fts-delegation-init [options]
+
+<h2>DESCRIPTION</h2>
+
+ fts-delegation-init is a tool for delegating a proxy certificate to FTS3 endpoint.
 
 <h2>OPTIONS</h2>
 

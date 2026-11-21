@@ -1,5 +1,4 @@
 ---
-
 title: "gobby(1)"
 name: "gobby"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-gobby/"
 description: "gobby – a collaborative text editor"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>gobby</code> &#8211; a collaborative text editor </p>
+<h2>SYNOPSIS</h2>
 <p> <code>gobby</code> [<i>options</i>] [<i>file(s)</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>gobby</code> is an editor which allows to edit text documents and source files collaboratively over a network. Changes to the documents are syncronised instantly to the other clients. </p>
 <h2>OPTIONS</h2>
 <dl>

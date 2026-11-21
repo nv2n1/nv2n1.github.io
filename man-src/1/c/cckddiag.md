@@ -1,5 +1,4 @@
 ---
-
 title: "cckddiag(1)"
 name: "cckddiag"
 section: "1"
@@ -10,7 +9,9 @@ description: "cckddiag – Hercules CCKD DASD diagnostic tool"
 
 <h2>NAME</h2>
 <p> <code>cckddiag</code> &#8211; Hercules CCKD DASD diagnostic tool </p>
+<h2>SYNOPSIS</h2>
 <p> <code>cckddiag</code> [options&#8230;] <code>filename</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Hercules support tool used to assist in the diagnosis of CCKD DASD problems. Operates on Hercules CCKD DASD volumes in read-only mode, and displays various information contained in CCKD DASD files. Effective usage requires internal knowledge of Hercules CCKD DASD files. </p>
 <h2>OPTIONS</h2>
 <p> The following options are used to specify which portions of the CCKD DASD file are to be displayed. Options may not be combined; for example, -cd1 is not a valid option. Surround each option by blank(s). </p>

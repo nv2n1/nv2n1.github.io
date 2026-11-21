@@ -1,5 +1,4 @@
 ---
-
 title: "bson_init_static(3)"
 name: "bson_init_static"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_init_static() – The bson_init_static() function shall shall
 
 <h2>NAME</h2>
 <p> bson_init_static() &#8211; The bson_init_static() function shall shall initialize a read-only bson_t on the stack using the data provided. No copies of the data will be made and therefore must remain valid for the lifetime of the bson_t.</p>
+<h2>SYNOPSIS</h2>
 <pre>
 bool
 bson_init_static (bson_t        *b,
@@ -26,6 +26,7 @@ bson_init_static (bson_t        *b,
 <dl>
 <dt><code>length</code></dt>
 <dd> The length of <code>data</code> in bytes.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_init_static/">bson_init_static</a>(3)</code> function shall shall initialize a read-only <code>bson_t</code> on the stack using the data provided. No copies of the data will be made and therefore must remain valid for the lifetime of the <code>bson_t</code> \&amp;. </p>
 <h2>RETURNS</h2>
 <p> <code><a href="/docs/linux/man/3-bson_init_static/">bson_init_static</a>(3)</code> will return <code>true</code> if the <code>bson_t</code> was successfully initialized. </p>

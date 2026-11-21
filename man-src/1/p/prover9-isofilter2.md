@@ -1,5 +1,4 @@
 ---
-
 title: "prover9-isofilter2(1)"
 name: "prover9-isofilter2"
 section: "1"
@@ -10,9 +9,11 @@ description: "isofilter – removes isomorphic structures from mace4(1) models"
 
 <h2>NAME</h2>
 <p> isofilter &#8211; removes isomorphic structures from <code><a href="/docs/linux/man/1-mace4/">mace4</a></code>(1) models</p>
+<h2>SYNOPSIS</h2>
 <p> <code>isofilter</code> [<i>options</i>] &lt; <i>input-file</i> &gt; <i>output-file</i><br />
  <code>isofilter0</code> [<i>options</i>] &lt; <i>input-file</i> &gt; <i>output-file</i><br />
  <code>isofilter2</code> [<i>options</i>] &lt; <i>input-file</i> &gt; <i>output-file</i></p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>isofilter</code>, <code>isofilter0</code> and <code>isofilter2</code> commands. </p>
 <p> If <code><a href="/docs/linux/man/1-mace4/">mace4</a></code>(1) produces more than one structure, some of them are very likely to be isomorphic to others. The program <code>isofilter</code> can be used to remove isomorphic structures.</p>
 <h2>ALGORITHM</h2>

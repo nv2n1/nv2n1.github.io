@@ -1,5 +1,4 @@
 ---
-
 title: "python-nitrate(1)"
 name: "python-nitrate"
 section: "1"
@@ -11,7 +10,11 @@ url: "/docs/linux/man/1-python-nitrate/"
 
  python-nitrate - Python API for the Nitrate test case management system
 
-python-nitrate is a Python interface to the Nitrate test case management system. The package consists of a high-level Python module (provides natural object interface), a low-level driver (allows to directly access Nitrate's xmlrpc API) and a command line interpreter (useful for fast debugging and experimenting).
+<h2>DESCRIPTION</h2>
+
+ 
+
+ python-nitrate is a Python interface to the Nitrate test case management system. The package consists of a high-level Python module (provides natural object interface), a low-level driver (allows to directly access Nitrate's xmlrpc API) and a command line interpreter (useful for fast debugging and experimenting).
 
 <h2>FEATURES</h2>
 

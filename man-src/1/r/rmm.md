@@ -1,5 +1,4 @@
 ---
-
 title: "rmm(1)"
 name: "rmm"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-rmm/"
 description: "rmm – remove messages"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rmm &#8211; remove messages </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>rmm</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-unlink</code> | <code>-nounlink</code>] [<code>-rmmproc</code> <i>program</i>] [<code>-normmproc</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>By default, <code>rmm</code> will remove the specified messages by renaming each of the message files with a site-dependent prefix (usually a comma). Such files will then need to be removed in some manner after a certain amount of time. Many sites arrange for <code>cron</code> to remove these files once a day, so check with your system administrator. </dd>
 <p> Alternately, if you wish for <code>rmm</code> to really remove the files representing these messages, you can use the <code>-unlink</code> switch. But messages removed by this method cannot be later recovered. </p>
 <p> If you prefer a more sophisticated method of `removing&#8217; messages, you can define the <i>rmmproc</i> profile component. For example, you can add a profile component such as </p>

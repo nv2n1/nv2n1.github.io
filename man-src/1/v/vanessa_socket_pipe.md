@@ -1,5 +1,4 @@
 ---
-
 title: "vanessa_socket_pipe(1)"
 name: "vanessa_socket_pipe"
 section: "1"
@@ -10,7 +9,9 @@ description: "vanessa_socket_pipe – Trivial TCP/IP pipe based on libvanessa_so
 
 <h2>NAME</h2>
 <p> vanessa_socket_pipe &#8211; Trivial TCP/IP pipe based on libvanessa_socket</p>
+<h2>SYNOPSIS</h2>
 <p> <code>vanessa_socket_pipe</code> [options]</p>
+<h2>DESCRIPTION</h2>
 <p> A TCP/IP pipe is a user space programme that listens for TCP/IP connections on port on the local host and when a client connects makes a connection to a TCP port, possibly on another host. Once both connections are established data sent on one connection is relayed to the other, hence forming a bi-directional pipe. </p>
 <p> Uses include enabling connections to specific ports on hosts behind a packet filter. </p>
 <p> This code is intended primarily as an example of how many of the features of libvanessa_socket work.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "vltsv(1)"
 name: "vltsv"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-vltsv/"
 description: "vltsv – mutual converter between TSV and Villa database"
 ---
 
+<h2 class="name">NAME</h2>
+<p> vltsv &#8211; mutual converter between TSV and Villa database </p>
+<h2>SYNOPSIS</h2>
 <p> <code>vltsv import</code> [-bin] <i>name</i><br />
  <code>vltsv export</code> [-bin] <i>name</i></p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>vltsv</code> commands. </p>
 <p> The command <code>vltsv</code> features mutual conversion between a database of Villa and a TSV text. This command is useful when data exchange with another version of QDBM or another DBM, or when data exchange between systems which have different byte orders. This command is used in the above format. <i>name</i> specifies a database name. </p>
 <p> The subcommand <code>export</code> reads TSV data from the standard input. The subcommand <code>import</code> writes TSV data to the standard output.</p>

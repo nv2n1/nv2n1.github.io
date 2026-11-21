@@ -1,5 +1,4 @@
 ---
-
 title: "pcre2_substitute(3)"
 name: "pcre2_substitute"
 section: "3"
@@ -7,8 +6,8 @@ letter: "p"
 url: "/docs/linux/man/3-pcre2_substitute/"
 description: "PCRE2 – Perl-compatible regular expressions (revised API)"
 ---
-
 <p>PCRE2 &#8211; Perl-compatible regular expressions (revised API) </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;pcre2.h&gt;</code> </p>
 <pre><code>
  int pcre2_substitute(const pcre2_code *  code , PCRE2_SPTR subject ,
@@ -18,6 +17,7 @@ description: "PCRE2 – Perl-compatible regular expressions (revised API)"
    PCRE2_SIZE  rlength , PCRE2_UCHAR * outputbuffer ,
    PCRE2_SIZE *  outlengthptr );
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p>This function matches a compiled regular expression against a given subject string, using a matching algorithm that is similar to Perl&#8217;s. It then makes a copy of the subject, substituting a replacement string for what was matched. Its arguments are: </p>
 <p> <br />
 &nbsp;<wbr>&nbsp;<i>code</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Points to the compiled pattern <br />

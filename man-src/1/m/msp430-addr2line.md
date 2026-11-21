@@ -1,5 +1,4 @@
 ---
-
 title: "msp430-addr2line(1)"
 name: "msp430-addr2line"
 section: "1"
@@ -10,6 +9,7 @@ description: "addr2line – convert addresses into file names and line numbers."
 
 <h2>NAME</h2>
 <p> addr2line &#8211; convert addresses into file names and line numbers.</p>
+<h2>SYNOPSIS</h2>
 <p> addr2line [<code>-b</code> <i>bfdname</i>|<code>&#8211;target=</code><i>bfdname</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-C</code>|<code>&#8211;demangle</code>[=<i>style</i>]]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-e</code>&nbsp;<wbr><i>filename</i>|<code>&#8211;exe=</code><i>filename</i>]<br />
@@ -18,6 +18,7 @@ description: "addr2line – convert addresses into file names and line numbers."
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-j</code>|<code>&#8211;section=</code><i>name</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-H</code>|<code>&#8211;help</code>]&nbsp;<wbr>[<code>-V</code>|<code>&#8211;version</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[addr addr &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>addr2line</code> translates addresses into file names and line numbers. Given an address in an executable or an offset in a section of a relocatable object, it uses the debugging information to figure out which file name and line number are associated with it. </p>
 <p> The executable or relocatable object to use is specified with the <code>-e</code> option. The default is the file <i>a.out</i>. The section in the relocatable object to use is specified with the <code>-j</code> option. </p>
 <p> <code>addr2line</code> has two modes of operation. </p>

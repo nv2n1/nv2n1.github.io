@@ -1,5 +1,4 @@
 ---
-
 title: "pamtouil(1)"
 name: "pamtouil"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pamtouil/"
 description: "pamtouil – convert a PNM or PNM/alpha image into a Motif UIL icon file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pamtouil &#8211; convert a PNM or PNM/alpha image into a Motif UIL icon file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pamtouil</code> [<code>-name=</code><i>uilname</i>] [<i>pamfile</i>] </p>
 <p> You may abbreviate any option to its shortest unique prefix. You may use two hyphens instead of one to delimit an option. You may separate an option from its value with whitespace instead of <code>=</code>. </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamtouil</code> reads a PNM or PAM image as input and produces a Motif UIL icon file as output. If the input is PAM, it may be either a regular grayscale or color image or grayscale+alpha or color+alpha. Where the alpha channel is present, <code>pamtouil</code> renders pixels that are more than half transparent as transparent in the output. </p>
 <p> In the UIL&#8217;s colormap, <code>pamtouil</code> uses the color names from the RGB database &#8212; the same one <code><a href="/docs/linux/man/1-ppmmake/">ppmmake</a></code>(1) </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_sign_algorithm_get_requested(3)"
 name: "gnutls_sign_algorithm_get_requested"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_sign_algorithm_get_requested – API function"
 
 <h2>NAME</h2>
 <p> gnutls_sign_algorithm_get_requested &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_sign_algorithm_get_requested(gnutls_session_t </code><i>session</i><code>, size_t </code><i>indx</i><code>, gnutls_sign_algorithm_t * </code><i>algo</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_sign_algorithm_get_requested – API function"
 <dd> is an index of the signature algorithm to return</dd>
 <dt>gnutls_sign_algorithm_t * algo</dt>
 <dd> the returned certificate type will be stored there</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Returns the signature algorithm specified by index that was requested by the peer. If the specified index has no data available this function returns <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code>. If the negotiated TLS version does not support signature algorithms then <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code> will be returned even for the first index. The first index is 0. </p>
 <p> This function is useful in the certificate callback functions to assist in selecting the correct certificate.</p>
 <h2>RETURNS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_zone_push_rr_list(3)"
 name: "ldns_zone_push_rr_list"
 section: "3"
@@ -10,11 +9,13 @@ description: "ldns_zone_push_rr, ldns_zone_push_rr_list"
 
 <h2>NAME</h2>
 <p> ldns_zone_push_rr, ldns_zone_push_rr_list </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> bool ldns_zone_push_rr(ldns_zone *z, ldns_rr *rr); </p>
 <p> bool ldns_zone_push_rr_list(ldns_zone *z, ldns_rr_list *list); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_zone_push_rr</i>()</dt>
 <dd>push an single rr to a zone structure. This function use pointer copying, so the rr_list structure inside z is modified! .br <code>z</code>: the zone to add to .br <code>rr</code>: the rr to add .br Returns a true on succes otherwise falsed</dd></dl>

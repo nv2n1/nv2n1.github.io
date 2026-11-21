@@ -1,5 +1,4 @@
 ---
-
 title: "tzxlist(1)"
 name: "tzxlist"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-tzxlist/"
 description: "tzxlist – Sinclair ZX Spectrum \"real\" tape file lister"
 ---
 
+<h2 class="name">NAME</h2>
+<p> tzxlist &#8211; Sinclair ZX Spectrum &quot;real&quot; tape file lister </p>
+<h2>SYNOPSIS</h2>
 <p> <code>tzxlist</code> <i>tapefile</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> tzxlist outputs a description of the contents of TZX, TAP and Warajevo TAP tape files.</p>
 <h2>OPTIONS</h2>
 <dl>

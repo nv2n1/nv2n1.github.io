@@ -1,5 +1,4 @@
 ---
-
 title: "dpkg-gensymbols(1)"
 name: "dpkg-gensymbols"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dpkg-gensymbols/"
 description: "dpkg-gensymbols – generate symbols files (shared library dependency information)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dpkg-gensymbols &#8211; generate symbols files (shared library dependency information) </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dpkg-gensymbols</code> [<i>option</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>dpkg-gensymbols</code> scans a temporary build tree (debian/tmp by default) looking for libraries and generates a <i>symbols</i> file describing them. This file, if non-empty, is then installed in the <font SIZE="-1">DEBIAN</font> subdirectory of the build tree so that it ends up included in the control information of the package. </p>
 <p> When generating those files, it uses as input some symbols files provided by the maintainer. It looks for the following files (and uses the first that is found):</p>
 <dl>

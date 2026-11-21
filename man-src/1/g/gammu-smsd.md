@@ -1,5 +1,4 @@
 ---
-
 title: "gammu-smsd(1)"
 name: "gammu-smsd"
 section: "1"
@@ -10,7 +9,9 @@ description: "gammu-smsd – SMS daemon for Gammu"
 
 <h2>NAME</h2>
 <p> gammu-smsd &#8211; SMS daemon for Gammu</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gammu-smsd</code> [<i>OPTION</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>gammu-smsd</code> command. </p>
 <p> <code>gammu-smsd</code> is a program that periodically scans GSM modem for received messages, stores them in defined storage and also sends messages enqueued in this storage. </p>
 <p> The daemon can reload configuration file after sending hangup signal (SIGHUP) and properly terminates itself on SIGINT and SIGTERM. </p>

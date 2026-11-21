@@ -1,5 +1,4 @@
 ---
-
 title: "transmission-daemon(1)"
 name: "transmission-daemon"
 section: "1"
@@ -10,8 +9,10 @@ description: "transmission-daemon – a bittorrent client"
 
 <h2>NAME</h2>
 <p> <code>transmission-daemon</code> &#8211; a bittorrent client</p>
+<h2>SYNOPSIS</h2>
 <p> -words <code>transmission-daemon</code> &#8211;<code>h</code><br />
 <code>transmission-daemon</code> [-<code>a </code><i>x.x.x.x,&#8230;</i> ] [-<code>b | B</code> ] [-<code>c </code><i>directory</i> ] [-<code>C</code> ] [-<code>d</code> ] [-<code>f</code> ] [-<code>g </code><i>directory</i> ] [-<code>h</code> ] [-<code>p </code><i>port</i> ] [-<code>t | T</code> ] [-<code>u </code><i>username</i> ] [-<code>v </code><i>password</i> ] [-<code>P </code><i>port</i> ] [-<code>m | M</code> ] [-<code>l </code><i>limit</i> ] [-<code>L </code><i>limit</i> ] [-<code>er | ep | et</code> ] [-<code>utp | no-utp</code> ] [-<code>V</code> ] [-<code>w </code><i>download-dir</i> ] [-<code>e </code><i>logfile</i> ] [-<code>log-error | log-info | log-debug</code> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>transmission-daemon</code> is a daemon-based Transmission session that can be controlled via RPC commands from transmission&#8217;s web interface or transmission-remote1.</p>
 <h2>OPTIONS</h2>
 <dl>

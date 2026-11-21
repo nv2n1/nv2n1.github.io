@@ -1,5 +1,4 @@
 ---
-
 title: "dlasd0(3)"
 name: "dlasd0"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlasd0/"
 description: "dlasd0.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlasd0.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlasd0</code> (N, SQRE, D, E, U, LDU, VT, LDVT, SMLSIZ, IWORK, WORK, INFO)<br />
  <i></i><code>DLASD0</code> computes the singular values of a real upper bidiagonal n-by-m matrix B with diagonal d and off-diagonal e. Used by sbdsdc.</p>

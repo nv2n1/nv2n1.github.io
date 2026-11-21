@@ -1,5 +1,4 @@
 ---
-
 title: "ccache-swig(1)"
 name: "ccache-swig"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-ccache-swig/"
 description: "ccache-swig – a fast compiler cache"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ccache-swig &#8211; a fast compiler cache</p>
+<h2>SYNOPSIS</h2>
 <p> ccache-swig [OPTION] </p>
 <p> ccache-swig &lt;compiler&gt; [COMPILER OPTIONS] </p>
 <p> &lt;compiler&gt; [COMPILER OPTIONS] </p>
+<h2>DESCRIPTION</h2>
 <p> ccache-swig is a compiler cache. It speeds up re-compilation of C/C++/SWIG code by caching previous compiles and detecting when the same compile is being done again. ccache-swig is ccache plus support for SWIG. ccache and ccache-swig are used interchangeably in this document. </p>
 <h2>OPTIONS SUMMARY</h2>
 <p> Here is a summary of the options to ccache-swig. </p>

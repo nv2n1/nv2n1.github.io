@@ -1,5 +1,4 @@
 ---
-
 title: "get_auditfail_action(3)"
 name: "get_auditfail_action"
 section: "3"
@@ -10,11 +9,13 @@ description: "get_auditfail_action – Get failure_action tunable value"
 
 <h2>NAME</h2>
 <p> get_auditfail_action &#8211; Get failure_action tunable value</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;libaudit.h&gt; </p>
 <dl>
 <dt>
 </dt><dd>int&nbsp;<wbr><code>get_auditfail_action</code>&nbsp;<wbr>(int *<i>failmode</i>); </dd>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> This function gets the failure_action tunable value stored in <code>/etc/libaudit.conf</code>. <code>get_auditfail_action</code> should be called after an <code>audit_open</code> call returns an error to see what action the admin prefers. </p>
 <p> The failure_action value found in <code>/etc/libaudit.conf</code> is copied into the <i>failmode</i> argument upon function return. This value should then be used by the calling application to determine what action should be taken when the audit subsystem is unavailable. </p>
 <h2>RETURN VALUE</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_session_get_id(3)"
 name: "gnutls_session_get_id"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_session_get_id – API function"
 
 <h2>NAME</h2>
 <p> gnutls_session_get_id &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_session_get_id(gnutls_session_t </code><i>session</i><code>, void * </code><i>session_id</i><code>, size_t * </code><i>session_id_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_session_get_id – API function"
 <dd> is a pointer to space to hold the session id.</dd>
 <dt>size_t * session_id_size</dt>
 <dd> initially should contain the maximum <i>session_id</i> size and will be updated.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Returns the current session ID. This can be used if you want to check if the next session you tried to resume was actually resumed. That is because resumed sessions share the same session ID with the original session. </p>
 <p> The session ID is selected by the server, that identify the current session. In TLS 1.0 and SSL 3.0 session id is always less than 32 bytes.</p>
 <h2>RETURNS</h2>

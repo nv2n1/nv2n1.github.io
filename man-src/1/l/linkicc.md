@@ -1,5 +1,4 @@
 ---
-
 title: "linkicc(1)"
 name: "linkicc"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-linkicc/"
 description: "linkicc – little cms device link generator."
 ---
 
+<h2 class="name">NAME</h2>
+<p> linkicc &#8211; little cms device link generator. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>linkicc</code> [<i>options</i>]<i> &lt;profiles&gt;</i></p>
+<h2>DESCRIPTION</h2>
 <p> lcms is a standalone CMM engine, which deals with the color management. It implements a fast transformation between ICC profiles. <code>linkicc </code> is little cms device link generator. </p>
 <p> Links two or more profiles into a single devicelink profile. Colorspaces must be paired except Lab/XYZ, that can be interchanged.</p>
 <h2>OPTIONS</h2>

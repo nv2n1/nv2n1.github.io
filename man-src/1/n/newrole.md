@@ -1,5 +1,4 @@
 ---
-
 title: "newrole(1)"
 name: "newrole"
 section: "1"
@@ -10,7 +9,9 @@ description: "newrole – run a shell with a new SELinux role"
 
 <h2>NAME</h2>
 <p> newrole &#8211; run a shell with a new SELinux role</p>
+<h2>SYNOPSIS</h2>
 <p> <code>newrole</code> [<code>-r</code>|<code>&#8211;role</code>] <i>ROLE</i> [<code>-t</code>|<code>&#8211;type</code>] <i>TYPE</i> [<code>-l</code>|<code>&#8211;level</code>] [<code>-p</code>|<code>&#8211;preserve-environment</code>] <i>LEVEL</i> [&#8211; [<i>ARGS</i>]&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> Run a new shell in a new context. The new context is derived from the old context in which <code>newrole</code> is originally executed. If the <code>-r</code> or <code>&#8211;role</code> option is specified, then the new context will have the role specified by <i>ROLE</i>. If the <code>-t</code> or <code>&#8211;type</code> option is specified, then the new context will have the type (domain) specified by <i>TYPE</i>. If a role is specified, but no type is specified, the default type is derived from the specified role. If the <code>-l</code> or <code>&#8211;level</code> option is specified, then the new context will have the sensitivity level specified by <i>LEVEL</i>. If <i>LEVEL</i> is a range, the new context will have the sensitivity level and clearance specified by that range. If the <code>-p</code> or <code>&#8211;preserve-environment</code> option is specified, the shell with the new SELinux context will preserve environment variables, otherwise a new minimal enviroment is created. </p>
 <p> Additional arguments <i>ARGS</i> may be provided after a &#8212; option, in which case they are supplied to the new shell. In particular, an argument of &#8212; -c will cause the next argument to be treated as a command by most command interpreters. </p>
 <p> If a command argument is specified to newrole and the command name is found in /etc/selinux/newrole_pam.conf, then the pam service name listed in that file for the command will be used rather than the normal newrole pam configuration. This allows for per-command pam configuration when invoked via newrole, e.g. to skip the interactive re-authentication phase. </p>

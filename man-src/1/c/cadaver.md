@@ -1,5 +1,4 @@
 ---
-
 title: "cadaver(1)"
 name: "cadaver"
 section: "1"
@@ -10,7 +9,9 @@ description: "cadaver – A command-line WebDAV client for Unix."
 
 <h2>NAME</h2>
 <p> cadaver &#8211; A command-line WebDAV client for Unix.</p>
+<h2>SYNOPSIS</h2>
 <p> cadaver [-trp[-r file][-p host[:port]]][-V][-h] <a rel="nofollow" href="http://hostname[:port]/path">http://hostname[:port]/path</a></p>
+<h2>DESCRIPTION</h2>
 <p> <code>cadaver </code> supports file upload, download, on-screen display, namespace operations (move and copy), collection creation and deletion, and locking operations. </p>
 <p> Its operation is similar to the standard BSD <code><a href="/docs/linux/man/1-ftp/">ftp</a></code>(1) client and the Samba Project&#8217;s <code><a href="/docs/linux/man/1-smbclient/">smbclient</a></code>(1). A user familiar with these tools should be quite comfortable with cadaver. </p>
 <p> <code>cadaver</code> supports automatically logging in to servers requiring authentication via a .netrc file (similar to <code><a href="/docs/linux/man/1-ftp/">ftp</a></code>(1) &#8211; see section &quot;THE .netrc FILE&quot; below).</p>

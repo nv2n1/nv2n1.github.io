@@ -1,5 +1,4 @@
 ---
-
 title: "dpkg-scansources(1)"
 name: "dpkg-scansources"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dpkg-scansources/"
 description: "dpkg-scansources – create Sources index files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dpkg-scansources &#8211; create Sources index files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dpkg-scansources</code> [<i>option</i>&#8230;] <i>binary-dir</i> [<i>override-file</i> [<i>path-prefix</i>]] <code>&gt;</code> <i>Sources</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>dpkg-scansources</code> scans the given <i>binary-dir</i> for <i>.dsc</i> files. These are used to create a Debian source index, which is output to stdout. </p>
 <p> The <i>override-file</i>, if given, is used to set priorities in the resulting index records and to override the maintainer field given in the <i>.dsc</i> files. The file can be compressed (since dpkg 1.15.5). See <code><a href="/docs/linux/man/5-deb-override/">deb-override</a></code>(5) for the format of this file. </p>
 <p> <code>Note:</code> Since the override file is indexed by binary, not source packages, there&#8217;s a bit of a problem here. The current implementation uses the highest priority of all the binary packages produced by a <i>.dsc</i> file for the priority of the source package, and the override entry for the first binary package listed in the <i>.dsc</i> file to modify maintainer information. This might change. </p>

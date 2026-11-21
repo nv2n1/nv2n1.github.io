@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_crq_verify(3)"
 name: "gnutls_x509_crq_verify"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_crq_verify – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crq_verify &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crq_verify(gnutls_x509_crq_t </code><i>crq</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_x509_crq_verify – API function"
 <dd> is the crq to be verified</dd>
 <dt>unsigned int flags</dt>
 <dd> Flags that may be used to change the verification algorithm. Use OR of the gnutls_certificate_verify_flags enumerations.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will verify self signature in the certificate request and return its status.</p>
 <h2>RETURNS</h2>
 <p> In case of a verification failure <code>GNUTLS_E_PK_SIG_VERIFY_FAILED</code> is returned, and zero or positive code on success. </p>

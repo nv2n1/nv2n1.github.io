@@ -1,5 +1,4 @@
 ---
-
 title: "g_gmxcheck(1)"
 name: "g_gmxcheck"
 section: "1"
@@ -11,7 +10,9 @@ description: "gmxcheck – checks and compares files"
 <h2>NAME</h2>
 <p> gmxcheck &#8211; checks and compares files </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>gmxcheck</code> <code>-f</code><i> traj.xtc </i> <code>-f2</code><i> traj.xtc </i> <code>-s1</code><i> top1.tpr </i> <code>-s2</code><i> top2.tpr </i> <code>-c</code><i> topol.tpr </i> <code>-e</code><i> ener.edr </i> <code>-e2</code><i> ener2.edr </i> <code>-n</code><i> index.ndx </i> <code>-m</code><i> doc.tex </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-vdwfac</code><i> real </i> <code>-bonlo</code><i> real </i> <code>-bonhi</code><i> real </i> <code>-tol</code><i> real </i> <code>-[no]ab</code><i></i> <code>-lastener</code><i> string </i></p>
+<h2>DESCRIPTION</h2>
 <p> gmxcheck reads a trajectory (<code> .trj</code>, <code> .trr</code> or <code> .xtc</code>), an energy file (<code> .ene</code> or <code> .edr</code>) or an index file (<code> .ndx</code>) and prints out useful information about them. </p>
 <p> Option <code> -c</code> checks for presence of coordinates, velocities and box in the file, for close contacts (smaller than <code> -vdwfac</code> and not bonded, i.e. not between <code> -bonlo</code> and <code> -bonhi</code>, all relative to the sum of both Van der Waals radii) and atoms outside the box (these may occur often and are no problem). If velocities are present, an estimated temperature will be calculated from them. </p>
 <p> If an index file is given it&#8217;s contents will be sumamrized. </p>

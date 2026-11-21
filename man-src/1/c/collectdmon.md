@@ -1,5 +1,4 @@
 ---
-
 title: "collectdmon(1)"
 name: "collectdmon"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-collectdmon/"
 description: "collectdmon – Monitoring daemon for collectd"
 ---
 
+<h2 class="name">NAME</h2>
+<p> collectdmon &#8211; Monitoring daemon for collectd </p>
+<h2>SYNOPSIS</h2>
 <p> collectdmon <i>[options]</i> [&#8211; <i>collectd options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> collectdmon is a small &#8220;wrapper&#8221; daemon which starts and monitors the collectd daemon. If collectd terminates it will automatically be restarted, unless collectdmon was told to shut it down.</p>
 <h2>OPTIONS</h2>
 <p> collectdmon supports the following options:</p>

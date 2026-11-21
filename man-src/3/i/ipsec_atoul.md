@@ -1,5 +1,4 @@
 ---
-
 title: "ipsec_atoul(3)"
 name: "ipsec_atoul"
 section: "3"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/3-ipsec_atoul/"
 description: "ipsec_atoul, ipsec_ultoa – convert unsigned-long numbers to and from ASCII"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ipsec_atoul, ipsec_ultoa &#8211; convert unsigned-long numbers to and from ASCII </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;libreswan.h&gt;
 </code></pre>
 <dl>
 <dt> <code>const char *atoul(const char&nbsp;<wbr>*&nbsp;<wbr></code><i>src</i><code>, size_t&nbsp;<wbr></code><i>srclen</i><code>, int&nbsp;<wbr></code><i>base</i><code>, unsigned long&nbsp;<wbr>*&nbsp;<wbr></code><i>n</i><code>);</code> </dt>
 <dt> <code>size_t ultoa(unsigned long&nbsp;<wbr></code><i>n</i><code>, int&nbsp;<wbr></code><i>base</i><code>, char&nbsp;<wbr>*&nbsp;<wbr></code><i>dst</i><code>, size_t&nbsp;<wbr></code><i>dstlen</i><code>);</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>These functions are obsolete; see <code>ipsec_ttoul</code>(3) for their replacements. </dd>
 <p> <i>Atoul</i> converts an ASCII number into a binary <code>unsigned long</code> value. <i>Ultoa</i> does the reverse conversion, back to an ASCII version. </p>
 <p> Numbers are specified in ASCII as decimal (e.g. 123), octal with a leading zero (e.g. 012, which has value 10), or hexadecimal with a leading <code>0x</code> (e.g. <code>0x1f</code>, which has value 31) in either upper or lower case. </p>

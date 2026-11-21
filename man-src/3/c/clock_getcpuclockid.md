@@ -1,5 +1,4 @@
 ---
-
 title: "clock_getcpuclockid(3)"
 name: "clock_getcpuclockid"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-clock_getcpuclockid/"
 description: "clock_getcpuclockid – obtain ID of a process CPU-time clock"
 ---
 
+<h2 class="name">NAME</h2>
+<p> clock_getcpuclockid &#8211; obtain ID of a process CPU-time clock </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;time.h&gt;</code> </p>
 <pre><code>
 int clock_getcpuclockid(pid_t pid, clockid_t *clockid);
@@ -18,6 +20,7 @@ int clock_getcpuclockid(pid_t pid, clockid_t *clockid);
 <dl>
 <dt>
 </dt><dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code>clock_getcpuclockid</code>() function obtains the ID of the CPU-time clock of the process whose ID is <i>pid</i>, and returns it in the location pointed to by <i>clockid</i>. If <i>pid</i> is zero, then the clock ID of the CPU-time clock of the calling process is returned.</p>
 <h2>RETURN VALUE</h2>
 <p> On success, <code>clock_getcpuclockid</code>() returns 0; on error, it returns one of the positive error numbers listed in ERRORS.</p>

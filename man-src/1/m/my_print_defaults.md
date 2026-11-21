@@ -1,5 +1,4 @@
 ---
-
 title: "my_print_defaults(1)"
 name: "my_print_defaults"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-my_print_defaults/"
 description: "my_print_defaults – display options from option files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> my_print_defaults &#8211; display options from option files </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>my_print_defaults [</code><i>options</i><code>] </code><i>option_group</i><code> &#8230;</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>my_print_defaults</code></p>
 <dd>displays the options that are present in option groups of option files. The output indicates what options will be used by programs that read the specified option groups. For example, the <code>mysqlcheck</code> program reads the [mysqlcheck] and [client] option groups. To see what options are present in those groups in the standard option files, invoke <code>my_print_defaults</code> like this: </dd>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "ttf2pt1_x2gs(1)"
 name: "ttf2pt1_x2gs"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ttf2pt1_x2gs/"
 description: "ttf2pt1_x2gs – font installer for Ghostscript"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ttf2pt1_x2gs &#8211; font installer for Ghostscript </p>
+<h2>SYNOPSIS</h2>
 <p> ttf2pt1_x2gs <code>[config-file]</code></p>
+<h2>DESCRIPTION</h2>
 <p> The fonts generated with <code>ttf2pt1</code> work fine with Ghostscript by themselves. The script `<code>ttf2pt1_x2gs</code>&#8216; links the font files from the X11 direcotry into the Ghostscript directory and automatically creates the description file (<tt>&quot;Fontmap&quot;</tt>) in Ghostscript format. </p>
 <p> If the configuration file is not specified as an argument then the file `<tt>&quot;convert.cfg&quot;</tt>&#8216; in the current directory is used, just like the `<tt>&quot;convert&quot;</tt>&#8216; script does. Indeed, this configuration file is used for both scripts. </p>
 <p> The Ghostscript-related parameters in the configuration file are: </p>

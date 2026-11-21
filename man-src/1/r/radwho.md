@@ -1,5 +1,4 @@
 ---
-
 title: "radwho(1)"
 name: "radwho"
 section: "1"
@@ -10,7 +9,9 @@ description: "radwho – show online users"
 
 <h2>NAME</h2>
 <p> radwho &#8211; show online users</p>
+<h2>SYNOPSIS</h2>
 <p> <code>radwho</code> [<code>-c</code>] [<code>-d</code> <i>raddb_directory</i>] [<code>-F</code> <i>radutmp_file</i>] [<code>-i</code>] [<code>-n</code>] [<code>-N</code> <i>nas_ip_address</i>] [<code>-p</code>] [<code>-P</code> <i>nas_port</i>] [<code>-r</code>] [<code>-R</code>] [<code>-s</code>] [<code>-S</code>] [<code>-u</code> <i>user</i>] [<code>-U</code> <i>user</i>] [<code>-Z</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> The FreeRADIUS server can be configured to maintain an active session database in a file called <i>radutmp</i>. This utility shows the content of that session database.</p>
 <h2>OPTIONS</h2>
 <dl>

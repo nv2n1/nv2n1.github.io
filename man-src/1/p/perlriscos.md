@@ -1,5 +1,4 @@
 ---
-
 title: "perlriscos(1)"
 name: "perlriscos"
 section: "1"
@@ -7,9 +6,14 @@ letter: "p"
 url: "/docs/linux/man/1-perlriscos/"
 ---
 
-perlriscos - Perl version 5 for RISC OS 
+<h2 class="name">NAME</h2>
+ 
 
-This document gives instructions for building Perl for <font SIZE="-1">RISC OS.</font> It is complicated by the need to cross compile. There is a binary version of perl available from &lt;<a rel="nofollow" HREF="http://www.cp15.org/perl/">http://www.cp15.org/perl/</a>&gt; which you may wish to use instead of trying to compile it yourself.
+ perlriscos - Perl version 5 for RISC OS 
+
+<h2>DESCRIPTION</h2>
+
+ This document gives instructions for building Perl for <font SIZE="-1">RISC OS.</font> It is complicated by the need to cross compile. There is a binary version of perl available from &lt;<a rel="nofollow" HREF="http://www.cp15.org/perl/">http://www.cp15.org/perl/</a>&gt; which you may wish to use instead of trying to compile it yourself.
 
 <h2>BUILD</h2>
 

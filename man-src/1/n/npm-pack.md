@@ -1,5 +1,4 @@
 ---
-
 title: "npm-pack(1)"
 name: "npm-pack"
 section: "1"
@@ -8,6 +7,7 @@ url: "/docs/linux/man/1-npm-pack/"
 description: "npm-pack – Create a tarball from a package"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>npm-pack</code> &#8211; Create a tarball from a package </p>
 <h3>Synopsis</h3>
 <dl>

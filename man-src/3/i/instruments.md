@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-instruments/"
 description: "Financial instruments –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Financial instruments &#8211; </p>
 <h3>Classes</h3>
 <p> class <code>DigitalCoupon</code><br />
  <i>Digital-payoff coupon. </i><br />

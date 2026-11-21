@@ -1,5 +1,4 @@
 ---
-
 title: "mkhtmlindex(1)"
 name: "mkhtmlindex"
 section: "1"
@@ -10,7 +9,9 @@ description: "mkhtmlindex – generate index files for HTML man pages"
 
 <h2>NAME</h2>
 <p> mkhtmlindex &#8211; generate index files for HTML man pages</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mkhtmlindex</code> <i>htmlmandir</i></p>
+<h2>DESCRIPTION</h2>
 <p> The <i>mkhtmlindex</i> program generates index files for a directory of HTML-formatted manual pages. It searches for files whose names are of the form &#8220;name.1.html&#8221;, and outputs index files &#8220;manindex1.html&#8221;, &#8220;manindex.2.html&#8221;, and so on, one for each manual volume. Empty index files will be removed. Names and descriptions are found by scanning the first <i>&lt;H2&gt;</i> section of each page.</p>
 <h2>OPTIONS</h2>
 <p> <i>mkhtmlindex</i> takes only one argument: the directory to process.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "obabel(1)"
 name: "obabel"
 section: "1"
@@ -10,10 +9,12 @@ description: "babel , obabel – a converter for chemistry and molecular modelin
 
 <h2>NAME</h2>
 <p> <code>babel , obabel</code> &#8211; a converter for chemistry and molecular modeling data files</p>
+<h2>SYNOPSIS</h2>
 <p> [-<code>H </code><i>help-options</i> ]<br />
  [<i>OPTIONS</i> ] [-<code>i </code><i>input-type</i> ] <i>infile</i> [-<code>o </code><i>output-type</i> ] <i>outfile</i> </p>
 <p><code>obabel</code> [-<code>H </code><i>help-options</i> ]<br />
 <code>obabel</code> [<i>OPTIONS</i> ] [-<code>i </code><i>input-type | &#8211;</i><code>: Qo </code><i>SMILES-string Qc </i><i>infile</i> ] [-<code>o </code><i>output-type</i> ] &#8211;<code>O </code><i>outfile</i></p>
+<h2>DESCRIPTION</h2>
 <p> is a cross-platform program designed to interconvert between many file formats used in molecular modeling and computational chemistry and related areas. </p>
 <p> <code>obabel</code> and are slightly different. The first is closer to the normal Unix convention for commandline programs and more flexible when the user needs to specify parameter values on options. With <code>babel</code> this only works when the option is the last on the line; with <code>obabel</code> no such restriction applies. It further has a shortcut for entering SMILES strings, which can be used in place of an input file. </p>
 <p> Open Babel is also a complete programmers toolkit for developing chemistry software. For more information, se the Open Babel web pages &lt;<code><a rel="nofollow" href="http://openbabel.org/">http://openbabel.org/</a></code>&gt;.</p>

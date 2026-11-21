@@ -1,5 +1,4 @@
 ---
-
 title: "slamrg(3)"
 name: "slamrg"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-slamrg/"
 description: "slamrg.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> slamrg.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slamrg</code> (N1, N2, A, STRD1, STRD2, INDEX)<br />
  <i></i><code>SLAMRG</code> creates a permutation list to merge the entries of two independently sorted sets into a single set sorted in ascending order.</p>

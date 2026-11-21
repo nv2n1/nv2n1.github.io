@@ -1,5 +1,4 @@
 ---
-
 title: "setsid(2)"
 name: "setsid"
 section: "2"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/2-setsid/"
 description: "setsid – creates a session and sets the process group ID"
 ---
 
+<h2 class="name">NAME</h2>
+<p> setsid &#8211; creates a session and sets the process group ID </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code><br />
  <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>pid_t setsid(void);</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>setsid</code>() creates a new session if the calling process is not a process group leader. The calling process is the leader of the new session (i.e., its session ID is made the same as its process ID). The calling process also becomes the process group leader of a new process group in the session (i.e., its process group ID is made the same as its process ID). </p>
 <p> The calling process will be the only process in the new process group and in the new session. </p>
 <p> Initially, the new session has no controlling terminal. For details of how a session acquires a controlling terminal, see <code><a href="/docs/linux/man/7-credentials/">credentials</a></code>(7).</p>

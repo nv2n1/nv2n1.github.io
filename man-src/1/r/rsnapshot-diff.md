@@ -1,5 +1,4 @@
 ---
-
 title: "rsnapshot-diff(1)"
 name: "rsnapshot-diff"
 section: "1"
@@ -7,11 +6,18 @@ letter: "r"
 url: "/docs/linux/man/1-rsnapshot-diff/"
 ---
 
-rsnapshot-diff - a utility for comparing the disk usage of two snapshots taken by rsnapshot 
+<h2 class="name">NAME</h2>
+ 
 
-rsnapshot-diff [-h|vVi] dir1 dir2
+ rsnapshot-diff - a utility for comparing the disk usage of two snapshots taken by rsnapshot 
 
-rsnapshot-diff is a companion utility for rsnapshot, which traverses two parallel directory structures and calculates the difference between them. By default it is silent apart from displaying summary information at the end, but it can be made more verbose. 
+<h2>SYNOPSIS</h2>
+
+ rsnapshot-diff [-h|vVi] dir1 dir2
+
+<h2>DESCRIPTION</h2>
+
+ rsnapshot-diff is a companion utility for rsnapshot, which traverses two parallel directory structures and calculates the difference between them. By default it is silent apart from displaying summary information at the end, but it can be made more verbose. 
 
  In the summary, ``added'' files may very well include files which at first glance also appear at the same place in the older directory structure. However, because the files differ in some respect, they are different files. They have a different inode number. Consequently if you use -v most of its output may appear to be pairs of files with the same name being removed and added.
 

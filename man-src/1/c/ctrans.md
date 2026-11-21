@@ -1,5 +1,4 @@
 ---
-
 title: "ctrans(1)"
 name: "ctrans"
 section: "1"
@@ -10,7 +9,9 @@ description: "ctrans – a Computer Graphics Metafile ( CGM ) translator"
 
 <h2>NAME</h2>
 <p> ctrans &#8211; a Computer Graphics Metafile ( <i>CGM</i> ) translator</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ctrans</code> [ <code>-bell</code> ] [ <code>-d</code><i> device</i> ] [ <code>-f</code><i> font</i> ] [ <code>-lmin</code><i> min</i> ] [ <code>-lmax</code><i> max</i> ] [ <code>-lscale</code><i> scale</i> ] [ <code>-movie</code><i> time</i> ] [ <code>-outfile</code><i> file</i> ] [ <code>-pal</code><i> pal_fname</i> ] [ <code>-pause</code> ] [ <code>-quiet</code> ] [ <code>-record</code><i> record_num &#8230;</i> ] [ <code>-soft</code> ] [ <code>-verbose</code> ] [ <code>-Version</code> ] [ <code>-viewport</code><i> llx:lly:urx:ury</i> ] [ <code>-wid</code><i> window_id</i> ] [ <code>-window</code><i> llx:lly:urx:ury</i> ] [ <i>device-specific options</i> ] [ <code>&#8211; </code> | <i>metafile &#8230;</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>ctrans</code> is a metafile translator, taking <i>metafile(s),</i> a metafile stored in the <code>NCAR Computer Graphics Metafile (CGM)</code> standard, and interpreting its instructions on the device defined by the GRAPHCAP environment variable. Fonts are stroked according to specifications in the Fontcap file defined by the FONTCAP environment variable. <code>ctrans</code> utilizes <i>Graphcaps</i> by default, see <code>graphcap(5NCARG),</code> while providing optional processing by user provided libraries, if that is required by the device or desired by the user. Thus, <code>ctrans</code> is capable of driving any device for which a <i>Graphcap</i> is available; with programming modifications, <code>ctrans</code> can accommodate any device for which an external library of plotting routines is available. Currently, the following <i>Graphcap</i> independent devices are supported: <code>X11 </code> under release 4 and 5, version 11 of <i>X.</i> </p>
 <p> <code>ctrans</code> can also translate metacode into the following raster formats: <code>a60, avs, hdf, hppcl, nrif, sun</code> and <code>xwd</code>. The device specifier for these raster formats is the name of the format. For example &quot;-d xwd&quot; specifies translation to an xwd formatted raster file. Additionally, a clear text driver, &quot;-d CTXT&quot;, is available on any terminal. Not all of the aforementioned devices may be supported by your particular configuration of <code>ctrans</code>. For a list of supported devices see the <code>gcaps(1NCARG)</code> command. </p>
 <p> <code>ctrans</code> will read from the standard input if no metafile name is specified or the the name specified is `-&#8216;. </p>

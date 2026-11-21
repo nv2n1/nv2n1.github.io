@@ -1,5 +1,4 @@
 ---
-
 title: "euca-run-instances(1)"
 name: "euca-run-instances"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-run-instances – Launch instances of a machine image"
 
 <h2>NAME</h2>
 <p> euca-run-instances &#8211; Launch instances of a machine image</p>
+<h2>SYNOPSIS</h2>
 <p> euca-run-instances [-n MIN[-MAX]] [-g GROUP] [-k KEYPAIR]</p>
 <dl>
 <dt>[-d DATA | <code>&#8211;user-data-force</code> DATA | <code>-f</code> FILE]</dt>
 <dd> [&#8211;addressing {public,private}] [-t INSTANCETYPE] [-z ZONE] [&#8211;kernel KERNEL] [&#8211;ramdisk RAMDISK] [-b DEVICE=MAPPED] [-m] [&#8211;disable-api-termination] [&#8211;instance-initiated-shutdown-behavior {stop,terminate}] [&#8211;placement-group PLGROUP] [&#8211;tenancy {default,dedicated}] [&#8211;client-token TOKEN] [-s SUBNET] [&#8211;associate-public-ip-address ASSOCIATE_PUBLIC_IP_ADDRESS] [&#8211;private-ip-address ADDRESS] [&#8211;secondary-address ADDRESS | <code>&#8211;secondary-count</code> COUNT] [-a INTERFACE] [-p IPROFILE] [&#8211;ebs-optimized] [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] IMAGE</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Launch instances of a machine image</p>
 <h3>positional arguments:</h3>
 <dl>

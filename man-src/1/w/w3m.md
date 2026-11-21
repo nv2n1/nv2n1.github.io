@@ -1,5 +1,4 @@
 ---
-
 title: "w3m(1)"
 name: "w3m"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-w3m/"
 description: "w3m – a text based web browser and pager"
 ---
 
+<h2 class="name">NAME</h2>
+<p> w3m &#8211; a text based web browser and pager </p>
+<h2>SYNOPSIS</h2>
 <p> w3m [OPTION]&#8230; [ <i>file</i> | <i>URL</i> ]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <i>w3m</i> is a text based browser which can display local or remote web pages as well as other documents. It is able to process HTML tables and frames but it ignores JavaScript and Cascading Style Sheets. <i>w3m</i> can also serve as a pager for text files named as arguments or passed on standard input, and as a general purpose directory browser. </p>
 <p> <i>w3m</i> organizes its content in buffers or tabs, allowing easy navigation between them. With the w3m-img extension installed, <i>w3m</i> can display inline graphics in web pages. And whenever <i>w3m</i>&#8216;s HTML rendering capabilities do not meet your needs, the target URL can be handed over to a graphical browser with a single command. </p>
 <p> For help with runtime options, press &#8220;H&#8221; while running <i>w3m</i>. </p>

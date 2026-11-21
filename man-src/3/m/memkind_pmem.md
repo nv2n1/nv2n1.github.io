@@ -1,5 +1,4 @@
 ---
-
 title: "memkind_pmem(3)"
 name: "memkind_pmem"
 section: "3"
@@ -11,6 +10,7 @@ description: "memkind_pmem.h – file-backed memory memkind operations. Note: Th
 <h2>NAME</h2>
 <p> memkind_pmem.h &#8211; file-backed memory memkind operations.<br />
  Note: This is EXEPRIMENTAL API. The functionality and the header file itself can be changed (including non-backward compatible changes), or remove.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;memkind/internal/memkind_pmem.h&gt;
 Link with - lmemkind int memkind_pmem_create(struct memkind *kind, const struct memkind_ops *ops, const char *name);
@@ -19,6 +19,7 @@ void *memkind_pmem_mmap(struct memkind *kind, void *addr, size_t size);
 int memkind_pmem_get_mmap_flags(struct memkind *kind, int *flags);
 int memkind_pmem_get_size(struct memkind *kind, size_t *total, size_t *free);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The pmem memory memkind operations enable memory kinds built on memory-mapped files. These support traditional <code>volatile</code> memory allocation in a fashion similar to <code>libvmem</code>(3) library. It uses the <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) system call to create a pool of volatile memory. Such memory may have different attributes, depending on the file system containing the memory-mapped files. (See also <i><a rel="nofollow" href="http://pmem.io/nvml/libvmem">http://pmem.io/nvml/libvmem</a></i>). </p>
 <p> The pmem memkinds are most useful when used with <i>Direct Access</i> storage (DAX), which is memory-addressable persistent storage that supports load/store access without being paged via the system page cache. A Persistent Memory-aware file system is typically used to provide this type of access. </p>
 <p> The most convenient way to create pmem memkinds is to use <code>memkind_create_pmem</code>() (see <code><a href="/docs/linux/man/3-memkind/">memkind</a></code>(3)). </p>

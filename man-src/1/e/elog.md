@@ -1,5 +1,4 @@
 ---
-
 title: "elog(1)"
 name: "elog"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-elog/"
 description: "elog – utility program for Electronic Logbook ELOG"
 ---
 
+<h2 class="name">NAME</h2>
+<p> elog &#8211; utility program for Electronic Logbook ELOG </p>
+<h2>SYNOPSIS</h2>
 <p> <code>elog</code> <code>-a </code><i>attribute=value</i> [ <code>-e </code><i>id</i> ] [ <code>-f </code><i>file&#8230;</i> ] <code>-h </code><i>host</i> [ <code>-l </code><i>logbook</i> ] [ <code>-m </code><i>textfile</i> ] [ <code>-p </code><i>port</i> ] [ <code>-r </code><i>id</i> ] [ <code>-s </code><i>subdir</i> ] [ <code>-u </code><i>username</i><i>password</i> ] [ <code>-v</code> ] [ <code>-w </code><i>password</i> ] <i>message</i> [ <code>-x</code> ]</p>
+<h2>DESCRIPTION</h2>
 <p> The Electronic Logbook <code>ELOG</code> can be used to store and retrieve messages through a Web interface. Depending on the configuration, the <code>ELOG</code> system can host one or more logbooks which are stored in separate sections on the server. <code>elog</code> is the standalone client program which can be used from the command line to interact with the <code>ELOG</code> daemon (elogd). The <code>elog</code> message can either be submitted on the command line or piped through `stdin&#8217; or in a file with the `-m&#8217; flag. For the former case, message with blanks must be enclosed in quotes. Multiple attributes can be specified as well as several attachments. The password must match the write password defined on the server. If user level access is defined on the server (via the `Password file&#8217; option), a valid user name / password pair must be specified with the `-u&#8217; option. </p>
 <p> The <code>elog</code> program makes it possible to submit logbook entries automatically by the system or from scripts. In some shift logbooks this feature is used to enter alarm messages automatically into the logbook.</p>
 <h2>OPTIONS</h2>

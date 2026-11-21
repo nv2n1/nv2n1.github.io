@@ -1,5 +1,4 @@
 ---
-
 title: "lshal(1)"
 name: "lshal"
 section: "1"
@@ -10,7 +9,9 @@ description: "lshal – list HAL devices"
 
 <h2>NAME</h2>
 <p> lshal &#8211; list HAL devices</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lshal</code> [options] </p>
+<h2>DESCRIPTION</h2>
 <p> <i>lshal</i> is a utility for displaying items in the <code>HAL </code> device database. For more information about both the big picture and specific <code>HAL</code> properties, refer to the <i>HAL spec</i> which can be found in <i>/usr/share/doc/hal-0.5.13/spec/hal-spec.html</i> depending on the distribution. </p>
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>

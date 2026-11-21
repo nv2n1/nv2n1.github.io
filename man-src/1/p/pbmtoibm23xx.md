@@ -1,5 +1,4 @@
 ---
-
 title: "pbmtoibm23xx(1)"
 name: "pbmtoibm23xx"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pbmtoibm23xx/"
 description: "pbmtoibm23xx – convert a PBM image to IBM 23XX printer stream"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pbmtoibm23xx &#8211; convert a PBM image to IBM 23XX printer stream</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pbmtoibm23xxx</code> [<code>-xres=</code><i>dpi</i>] [<code>-yres=</code><i>dpi</i>] [<i>pbmfile</i> &#8230;] </p>
 <p> Minimum unique abbreviation of option is acceptable. You may use double hyphens instead of single hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pbmtoibm23xx</code> reads one or more PBM files as input and writes an IBM 23XX printer command stream to generate all the images in all the files to Standard Output. </p>
 <p> If you don&#8217;t specify any file names, <code>pbmtoibm23xx</code> reads from Standard Input. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "fbsetbg(1)"
 name: "fbsetbg"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-fbsetbg/"
 description: "fbsetbg – Set a background wallpaper or pattern"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fbsetbg &#8211; Set a background wallpaper or pattern </p>
+<h2>SYNOPSIS</h2>
 <p> <code>fbsetbg</code> [<code>-uU</code> <i>wallpapersetter</i>] [<code>-fFcCtTaA</code>] <i>wallpaper</i> </p>
 <p> <code>fbsetbg</code> [<code>-uU</code> <i>wallpapersetter</i>] <code>-rR</code> <i>path</i> </p>
 <p> <code>fbsetbg</code> <code>-bB</code> <i>fbsetrootoptions&#8230;</i> </p>
 <p> <code>fbsetbg</code> [-<code>l</code>|<code>h</code>|<code>i</code>|<code>p</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code><a href="/docs/linux/man/1-fbsetbg/">fbsetbg</a>(1)</code> is a wrapper that tries to find a suitable background-setting app and then tries to set the wallpaper using that app. You don&#8217;t have to configure fbsetbg. It just uses the first app it can find. </p>
 <p> Furthermore it supports remembering the last set wallpaper so you don&#8217;t have to edit the style or init-file to change the wallpaper. </p>
 <p> It aims to provide clear error messages in a window that make debugging problems easy.</p>

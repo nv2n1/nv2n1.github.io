@@ -1,5 +1,4 @@
 ---
-
 title: "gftp(1)"
 name: "gftp"
 section: "1"
@@ -10,7 +9,9 @@ description: "gftp – file transfer client for *NIX based machines."
 
 <h2>NAME</h2>
 <p> gftp &#8211; file transfer client for *NIX based machines.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gftp [options] [[<a href="proto://][">proto://][</a></code> <i>user</i> <code>:</code> <i>[pass]</i> <code>@]</code> <i>server</i> <code>[:</code> <i>port</i> <code>][/</code> <i>directory</i> <code>]]</code></p>
+<h2>DESCRIPTION</h2>
 <p> gFTP is a file transfer client for *NIX based machines. It currently has a text interface and a GTK+ 1.2/2.x graphical interface. It currently supports the FTP, FTPS (control connection only), HTTP, HTTPS, SSH and FSP protocols.</p>
 <h2>OPTIONS</h2>
 <p> You may enter a url on the command line that gFTP will automatically connect to when it starts up.</p>

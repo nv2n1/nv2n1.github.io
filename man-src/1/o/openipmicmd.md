@@ -1,5 +1,4 @@
 ---
-
 title: "openipmicmd(1)"
 name: "openipmicmd"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-openipmicmd/"
 description: "openipmicmd – An IPMI Command Interface"
 ---
 
+<h2 class="name">NAME</h2>
+<p> openipmicmd &#8211; An IPMI Command Interface</p>
+<h2>SYNOPSIS</h2>
 <p> <code>openipmicmd</code> [<code>-k</code> <i>entry-to-execute</i>] <code>&lt;connection parms&gt;</code> </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>openipmicmd</code> program allows a user to execute direct IPMI commands. It can work with direct interface with the OpenIPMI driver or with IPMI LAN interfaces. </p>
 <h2>OPTIONS</h2>
 <dl>

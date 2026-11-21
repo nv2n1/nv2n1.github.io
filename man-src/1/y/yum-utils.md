@@ -1,5 +1,4 @@
 ---
-
 title: "yum-utils(1)"
 name: "yum-utils"
 section: "1"
@@ -10,6 +9,7 @@ description: "yum-utils – tools for manipulating repositories and extended pac
 
 <h2>NAME</h2>
 <p> yum-utils &#8211; tools for manipulating repositories and extended package management</p>
+<h2>SYNOPSIS</h2>
 <pre>
 <code>debuginfo-install</code> - install debuginfo packages and their dependencies
 <code>find-repos-of-install</code> - report which repository the package was installed from
@@ -36,6 +36,7 @@ description: "yum-utils – tools for manipulating repositories and extended pac
 <code>yumdb</code> - query or alter the yum database
 <code>yumdownloader</code> - downloads packages from yum repositories including source RPMs
 </pre>
+<h2>DESCRIPTION</h2>
 <p> <code>yum-utils</code> is a collection of tools and programs for managing yum repositories, installing debug packages, source packages, extended information from repositories and administration.</p>
 <h2>NOTES</h2>
 <p> See respective tools for additional help for commands without a manual page</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "tic(1)"
 name: "tic"
 section: "1"
@@ -7,11 +6,18 @@ letter: "t"
 url: "/docs/linux/man/1-tic/"
 ---
 
-<b>tic</b> - the <i>terminfo</i> entry-description compiler 
+<h2 class="name">NAME</h2>
+ 
 
-<b>tic</b> [<b>-01CDGIKLNTUVWacfgqrstx</b>] [<b>-e</b> <i>names</i>] [<b>-o</b> <i>dir</i>] [<b>-Q</b>[<i>n</i>]] [<b>-R</b> <i>subset</i>] [<b>-v</b>[<i>n</i>]] [<b>-w</b>[<i>n</i>]] <i>file</i> 
+ <b>tic</b> - the <i>terminfo</i> entry-description compiler 
 
-The <b>tic</b> command translates a <b>terminfo</b> file from source format into compiled format. The compiled format is necessary for use with the library routines in <b>ncurses</b>(3NCURSES). 
+<h2>SYNOPSIS</h2>
+
+ <b>tic</b> [<b>-01CDGIKLNTUVWacfgqrstx</b>] [<b>-e</b> <i>names</i>] [<b>-o</b> <i>dir</i>] [<b>-Q</b>[<i>n</i>]] [<b>-R</b> <i>subset</i>] [<b>-v</b>[<i>n</i>]] [<b>-w</b>[<i>n</i>]] <i>file</i> 
+
+<h2>DESCRIPTION</h2>
+
+ The <b>tic</b> command translates a <b>terminfo</b> file from source format into compiled format. The compiled format is necessary for use with the library routines in <b>ncurses</b>(3NCURSES). 
 
  As described in <b><a HREF="/docs/linux/man/5-term/">term</a></b>(5), the database may be either a directory tree (one file per terminal entry) or a hashed database (one record per entry). The <b>tic</b> command writes only one type of entry, depending on how it was built: 
 &nbsp;.IP&nbsp;&bull;&nbsp;4 For directory trees, the top-level directory, e.g., /usr/share/terminfo, specifies the location of the database. 

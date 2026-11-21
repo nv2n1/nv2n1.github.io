@@ -1,5 +1,4 @@
 ---
-
 title: "perlsolaris(1)"
 name: "perlsolaris"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-perlsolaris/"
 description: "perlsolaris – Perl version 5 on Solaris systems"
 ---
 
+<h2 class="name">NAME</h2>
+<p> perlsolaris &#8211; Perl version 5 on Solaris systems </p>
+<h2>DESCRIPTION</h2>
 <p> This document describes various features of Sun&#8217;s Solaris operating system that will affect how Perl version 5 (hereafter just perl) is compiled and/or runs. Some issues relating to the older SunOS 4.x are also discussed, though they may be out of date. </p>
 <p> For the most part, everything should just work. </p>
 <p> Starting with Solaris 8, perl5.00503 (or higher) is supplied with the operating system, so you might not even need to build a newer version of perl at all. The Sun-supplied version is installed in /usr/perl5 with <i>/usr/bin/perl</i> pointing to <i>/usr/perl5/bin/perl</i>. Do not disturb that installation unless you really know what you are doing. If you remove the perl supplied with the <font SIZE="-1">OS,</font> you will render some bits of your system inoperable. If you wish to install a newer version of perl, install it under a different prefix from /usr/perl5. Common prefixes to use are /usr/local and /opt/perl. </p>

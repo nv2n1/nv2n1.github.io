@@ -1,5 +1,4 @@
 ---
-
 title: "wimlib-imagex-info(1)"
 name: "wimlib-imagex-info"
 section: "1"
@@ -10,7 +9,9 @@ description: "wimlib-imagex-info – Display information about a WIM file, or ch
 
 <h2>NAME</h2>
 <p> wimlib-imagex-info &#8211; Display information about a WIM file, or change information about an image</p>
+<h2>SYNOPSIS</h2>
 <p> <code>wimlib-imagex info</code> <i>WIMFILE</i> [<i>IMAGE</i> [<i>NEW_NAME</i> [<i>NEW_DESC</i>]]] [<i>OPTION</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>wimlib-imagex info</code> displays information about <i>WIMFILE</i>, and optionally changes which image is bootable, or what the name and description of an image are. This command is also available as simply <code>wiminfo</code> if the appropriate hard link or batch file has been installed. </p>
 <p> If neither an image nor any flags other than <code>&#8211;check</code> are specified, some basic information about the WIM archive as well as information about the images contained in it will be printed. If an image is specified by <i>IMAGE</i> (as a 1-based image index or an image name), the printed information is restricted to that concerning the specified image. </p>
 <p> Changes to the WIM are made if <i>NEW_NAME</i> and/or <code>&#8211;boot</code> and/or <code>&#8211;image-property</code> are specified. <i>NEW_NAME</i> is taken to be the new name of the image specified by <i>IMAGE</i> while <i>NEW_DESC</i> is taken to be its new description. If <i>NEW_DESC</i> is not specified, the image&#8217;s description is unchanged. </p>

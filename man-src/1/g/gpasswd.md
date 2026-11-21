@@ -1,5 +1,4 @@
 ---
-
 title: "gpasswd(1)"
 name: "gpasswd"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-gpasswd/"
 description: "gpasswd – administer /etc/group and /etc/gshadow"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gpasswd &#8211; administer /etc/group and /etc/gshadow </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gpasswd</code> [<i>option</i>] <i>group</i></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>gpasswd</code> command is used to administer /etc/group, and /etc/gshadow. Every group can have administrators, members and a password. </dd>
 <p> System administrators can use the <code>-A</code> option to define group administrator(s) and the <code>-M</code> option to define members. They have all rights of group administrators and members. </p>
 <p> <code>gpasswd</code> called by a group administrator with a group name only prompts for the new password of the <i>group</i>. </p>

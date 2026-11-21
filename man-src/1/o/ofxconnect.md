@@ -1,5 +1,4 @@
 ---
-
 title: "ofxconnect(1)"
 name: "ofxconnect"
 section: "1"
@@ -10,7 +9,9 @@ description: "ofxconnect – Create a statement request file"
 
 <h2>NAME</h2>
 <p> ofxconnect &#8211; Create a statement request file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ofxconnect</code> [<i>OPTIONS</i>]&#8230; [<i>FILES</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> ofxconnect 0.9.9 </p>
 <p> prints to stdout the created OFX file based on the options you pass it. currently it will only create a statement request file. you can POST this to an OFX server to request a statement from that financial institution for that account.</p>
 <dl>

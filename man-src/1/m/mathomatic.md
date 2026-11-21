@@ -1,5 +1,4 @@
 ---
-
 title: "mathomatic(1)"
 name: "mathomatic"
 section: "1"
@@ -8,10 +7,13 @@ url: "/docs/linux/man/1-mathomatic/"
 description: "mathomatic – a computer algebra system rmath – a computer algebra system with functions"
 ---
 
+<h2 class="name">NAME</h2>
 <p> mathomatic &#8211; a computer algebra system<br />
  rmath &#8211; a computer algebra system with functions</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mathomatic</code> [ <code>-bchqrtuvwx</code> ] [ <code>-s</code> level ] [ <code>-m</code> number ] [ input_files ]<br />
  <code>rmath</code> [ input_files ] </p>
+<h2>DESCRIPTION</h2>
 <p> Mathomatic is a portable Computer Algebra System (CAS) that can solve, simplify, combine, and compare algebraic equations, perform general complex number and polynomial arithmetic, etc. It does some calculus and handles all elementary algebra, except logarithms. Plotting expressions with gnuplot is also supported. </p>
 <p> <code>mathomatic</code> is the main Mathomatic application that does interactive symbolic-numeric mathematics through a console interface. The numerical arithmetic is double precision floating point with up to 14 decimal digits accuracy. Many results will be exact, because multiple combined floating point numbers can be used for a single mathematical value; for example: <code>2^(1/3),</code> which is the cubed root of 2 exactly. </p>
 <p> <code>rmath</code> allows you to use Mathomatic with input of functions like <code>sin(x)</code> and <code>sqrt(x)</code> automatically expanded to equivalent algebraic expressions by the <code>m4</code> macro processor. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "hpidomain(1)"
 name: "hpidomain"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-hpidomain/"
 description: "hpidomain – A openhpi sample application that shows information about domains. It can also set the domain tag."
 ---
 
+<h2 class="name">NAME</h2>
+<p> hpidomain &#8211; A openhpi sample application that shows information about domains. It can also set the domain tag. </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 hpidomain[-D id][-N host[:port]][-C&lt;cfgfile&gt;][-t tttt][-V - X - h] hpidomain[--domain = id][--host = host[:port]][--cfgfile = file]
                                                                             [--tag = tttt][--verbose][--debug][--help]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> hpidomain displays the domain info for the specified domain. If no domain or host is selected, ohparam uses the default domain as specified in the openhpiclient.conf file. </p>
 <p> In verbose mode, it walks the <font SIZE="-1">DRT</font> and displays domaininfo for all directly related domains. Option -t allows to change the domain tag. </p>
 <p> (No Option) Display domain info</p>

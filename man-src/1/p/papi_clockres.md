@@ -1,5 +1,4 @@
 ---
-
 title: "papi_clockres(1)"
 name: "papi_clockres"
 section: "1"
@@ -7,7 +6,10 @@ letter: "p"
 url: "/docs/linux/man/1-papi_clockres/"
 ---
 
-papi_clockres - The papi_clockres utility. 
+<h2 class="name">NAME</h2>
+ 
+
+ papi_clockres - The papi_clockres utility. 
 
  file clockres.c 
 

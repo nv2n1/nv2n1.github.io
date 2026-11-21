@@ -1,5 +1,4 @@
 ---
-
 title: "x86_64-linux-gnu-size(1)"
 name: "x86_64-linux-gnu-size"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-x86_64-linux-gnu-size/"
 description: "size – list section sizes and total size of binary files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> size &#8211; list section sizes and total size of binary files </p>
+<h2>SYNOPSIS</h2>
 <p> size [<code>-A</code>|<code>-B</code>|<code>-G</code>|<code>&#8211;format=</code><i>compatibility</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;help</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-d</code>|<code>-o</code>|<code>-x</code>|<code>&#8211;radix=</code><i>number</i>]<br />
@@ -15,6 +17,7 @@ description: "size – list section sizes and total size of binary files"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-t</code>|<code>&#8211;totals</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;target=</code><i>bfdname</i>]&nbsp;[<code>-V</code>|<code>&#8211;version</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<i>objfile</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> The <font SIZE="-1">GNU</font> <code>size</code> utility lists the section sizes and the total size for each of the binary files <i>objfile</i> on its argument list. By default, one line of output is generated for each file or each module if the file is an archive. </p>
 <p> <i>objfile</i>&#8230; are the files to be examined. If none are specified, the file <tt>&quot;a.out&quot;</tt> will be used instead.</p>
 <h2>OPTIONS</h2>

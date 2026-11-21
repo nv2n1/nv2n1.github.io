@@ -1,5 +1,4 @@
 ---
-
 title: "gmtregress(1)"
 name: "gmtregress"
 section: "1"
@@ -10,8 +9,10 @@ description: "gmtregress – Linear regression of 1-D data sets"
 
 <h2>NAME</h2>
 <p> gmtregress &#8211; Linear regression of 1-D data sets</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gmtregress</code> [ <i>table</i> ] [ <i>min</i>/<i>max</i>/<i>inc</i> ] [ <i>level</i> ] [ <code>x</code>|<code>y</code>|<code>o</code>|<code>r</code> ] [ <i>flags</i> ] [ <code>1</code>|<code>2</code>|<code>r</code>|<code>w</code> ] [ [<code>r</code>] ] [ <i>min</i>/<i>max</i>/<i>inc</i> | <i>n</i> ] [ [<code>w</code>][<code>x</code>][<code>y</code>][<code>r</code>] ] [ [<i>level</i>] ] [ <code>-a</code><i>&lt;flags&gt;</i> ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>gmtregress</code> reads one or more data tables [or <i>stdin</i>] and determines the best linear regression model <i>y</i> = <i>a</i> + <i>b</i>* <i>x</i> for each segment using the chosen parameters. The user may specify which data and model components should be reported. By default, the model will be evaluated at the input points, but alternatively you can specify an equidistant range over which to evaluate the model, or turn off evaluation completely. Instead of determining the best fit we can perform a scan of all possible regression lines (for a range of slope angles) and examine how the chosen misfit measure varies with slope. This is particularly useful when analyzing data with many outliers. Note: If you actually need to work with log10 of <i>x</i> or <i>y</i> you can accomplish that transformation during read by using the <code>-i</code> option.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <p> None</p>

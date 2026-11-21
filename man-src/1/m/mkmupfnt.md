@@ -1,5 +1,4 @@
 ---
-
 title: "mkmupfnt(1)"
 name: "mkmupfnt"
 section: "1"
@@ -10,7 +9,9 @@ description: "mkmupfnt – create fontfile for overriding Mup fonts"
 
 <h2>NAME</h2>
 <p> mkmupfnt &#8211; create fontfile for overriding Mup fonts</p>
+<h2>SYNOPSIS</h2>
 <p> mkmupfnt <i>PostScript_font_name Mup_font_name outfile [file]</i></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>mkmupfnt</code> program creates an <i>outfile</i> that can be used with the Mup &quot;fontfile&quot; statement to override a Mup font. </p>
 <p> The <i>PostScript_font_name</i> is the name of the font you want Mup to use. This would be something that could be given as a name to the PostScript <code>findfont</code> procedure. </p>
 <p> The <i>Mup_font_name</i> is the name of the Mup font you want to override, either an abbreviated name, like &quot;PR&quot; or a full name, like &quot;palatino rom&quot;. </p>

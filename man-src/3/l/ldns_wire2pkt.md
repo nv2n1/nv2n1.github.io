@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_wire2pkt(3)"
 name: "ldns_wire2pkt"
 section: "3"
@@ -10,6 +9,7 @@ description: "ldns_wire2rr, ldns_wire2pkt, ldns_wire2rdf, ldns_wire2dname"
 
 <h2>NAME</h2>
 <p> ldns_wire2rr, ldns_wire2pkt, ldns_wire2rdf, ldns_wire2dname </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -17,6 +17,7 @@ description: "ldns_wire2rr, ldns_wire2pkt, ldns_wire2rdf, ldns_wire2dname"
 <p> ldns_status ldns_wire2pkt(ldns_pkt **packet, const uint8_t *data, size_t len); </p>
 <p> ldns_status ldns_wire2rdf(ldns_rr *rr, const uint8_t *wire, size_t max, size_t *pos); </p>
 <p> ldns_status ldns_wire2dname(ldns_rdf **dname, const uint8_t *wire, size_t max, size_t *pos); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_wire2rr</i>()</dt>
 <dd>converts the data on the uint8_t bytearray (in wire format) to a DNS resource record. This function will initialize and allocate memory space for the rr structure. The length of the wiredata of this rr is added to the *pos value. </dd>

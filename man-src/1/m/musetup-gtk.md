@@ -1,5 +1,4 @@
 ---
-
 title: "musetup-gtk(1)"
 name: "musetup-gtk"
 section: "1"
@@ -10,7 +9,9 @@ description: "Musetup-GTK – PyGTK2 Configuration app for Museekd"
 
 <h2>NAME</h2>
 <p> <code>Musetup-GTK</code> &#8211; PyGTK2 Configuration app for Museekd</p>
+<h2>SYNOPSIS</h2>
 <p> <code>musetup-gtk </code> [-c | &#8211;config &lt;<i>config-filename</i>&gt;] [-h | &#8211;help]</p>
+<h2>DESCRIPTION</h2>
 <p> Musetup-GTK is PyGTK2 GUI that configures <i><a href="/docs/linux/man/1-museekd/">museekd</a></i>(1). There are two configuration modes: </p>
 <p> Dialogs &#8211; under General Settings &#8211; that provide the most commonly configured options, including the adding of shared directories, via a muscan frontend (add/removing &amp; rescanning take effect immediately). </p>
 <p> The Settings Tree allows you to modify all options and even remove entire settings nodes, so it is quite dangerous, and should be used with much care. </p>

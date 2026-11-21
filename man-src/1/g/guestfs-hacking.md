@@ -1,5 +1,4 @@
 ---
-
 title: "guestfs-hacking(1)"
 name: "guestfs-hacking"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-guestfs-hacking/"
 description: "guestfs-hacking – extending and contributing to libguestfs"
 ---
 
+<h2 class="name">NAME</h2>
+<p> guestfs-hacking &#8211; extending and contributing to libguestfs </p>
+<h2>DESCRIPTION</h2>
 <p> This manual page is for hackers who want to extend libguestfs itself.</p>
 <h2>THE SOURCE CODE</h2>
 <p> Libguestfs source is located in the github repository <a rel="nofollow" href="https://github.com/libguestfs/libguestfs">https://github.com/libguestfs/libguestfs</a> </p>

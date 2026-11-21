@@ -1,5 +1,4 @@
 ---
-
 title: "gdalbuildvrt(1)"
 name: "gdalbuildvrt"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-gdalbuildvrt/"
 description: "gdalbuildvrt – gdalbuildvrt Builds a VRT from a list of datasets. (compiled by default since GDAL 1.6.1)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gdalbuildvrt &#8211; gdalbuildvrt Builds a VRT from a list of datasets. (compiled by default since GDAL 1.6.1) </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 gdalbuildvrt[-tileindex field_name]
             [-resolution{highest | lowest | average | user}]
@@ -19,6 +21,7 @@ gdalbuildvrt[-tileindex field_name]
             [-a_srs srs_def]
             [-input_file_list my_liste.txt][-overwrite] output.vrt[gdalfile] *
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> This program builds a VRT (Virtual Dataset) that is a mosaic of the list of input GDAL datasets. The list of input GDAL datasets can be specified at the end of the command line, or put in a text file (one filename per line) for very long lists, or it can be a MapServer tileindex (see <code>gdaltindex</code> utility). In the later case, all entries in the tile index will be added to the VRT. </p>
 <p> With -separate, each files goes into a separate <i>stacked</i> band in the VRT band. Otherwise, the files are considered as tiles of a larger mosaic and the VRT file has as many bands as one of the input files. </p>
 <p> If one GDAL dataset is made of several subdatasets and has 0 raster bands, all the subdatasets will be added to the VRT rather than the dataset itself. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "rpcclient(1)"
 name: "rpcclient"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-rpcclient/"
 description: "rpcclient – tool for executing client side MS-RPC functions"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rpcclient &#8211; tool for executing client side MS-RPC functions </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt>
 </dt><dd>rpcclient [-A authfile] [-c&nbsp;&lt;command string&gt;] [-d debuglevel] [-l logdir] [-N] [-s&nbsp;&lt;smb config file&gt;] [-U username[%password]] [-W workgroup] [-I destinationIP] {BINDING-STRING|HOST}</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This tool is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> rpcclient is a utility initially developed to test MS-RPC functionality in Samba itself. It has undergone several stages of development and stability. Many system administrators have now written scripts around it to manage Windows NT clients from their UNIX workstation.</p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "chetrf_rook(3)"
 name: "chetrf_rook"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-chetrf_rook/"
 description: "chetrf_rook.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> chetrf_rook.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chetrf_rook</code> (UPLO, N, A, LDA, IPIV, WORK, LWORK, INFO)<br />
  <i></i><code>CHETRF_ROOK</code> computes the factorization of a complex Hermitian indefinite matrix using the bounded Bunch-Kaufman (&#8216;rook&#8217;) diagonal pivoting method (blocked algorithm, calling Level 3 BLAS).</p>

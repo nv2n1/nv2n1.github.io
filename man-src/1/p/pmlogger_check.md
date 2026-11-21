@@ -1,5 +1,4 @@
 ---
-
 title: "pmlogger_check(1)"
 name: "pmlogger_check"
 section: "1"
@@ -10,9 +9,11 @@ description: "pmlogger_check, pmlogger_daily, pmlogger_merge – administration 
 
 <h2>NAME</h2>
 <p> <code>pmlogger_check</code>, <code>pmlogger_daily</code>, <code>pmlogger_merge</code> &#8211; administration of Performance Co-Pilot archive log files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/pmlogger_check</code> [<code>-CNsTV</code>] [<code>-c</code> <i>control</i>] [<code>-l</code> <i>logfile</i>]<br />
  <code>$PCP_BINADM_DIR/pmlogger_daily</code> [<code>-NorV</code>] [<code>-c</code> <i>control</i>] [<code>-k</code> <i>discard</i>] [<code>-l</code> <i>logfile</i>] [<code>-m</code> <i>addresses</i>] [<code>-s</code> <i>size</i>] [<code>-t</code> <i>want</i>] [<code>-x</code> <i>compress</i>] [<code>-X</code> <i>program</i>] [<code>-Y</code> <i>regex</i>]<br />
  <code>$PCP_BINADM_DIR/pmlogger_merge</code> [<code>-fNV</code>] [<i>input-basename</i> &#8230; <i>output-name</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> This series of shell scripts and associated control files may be used to create a customized regime of administration and management for Performance Co-Pilot (see <code><a href="/docs/linux/man/1-pcpintro/">PCPintro</a></code>(1)) archive log files. </p>
 <p> <code>pmlogger_daily</code> is intended to be run once per day, preferably in the early morning, as soon after midnight as practicable. Its task is to aggregate and rotate one or more sets of PCP archives. After some period, old PCP archives are discarded. This period is 14 days by default, but may be changed using the <code>-k</code> option. Two special values are recognized for the period (<i>discard</i>), namely <code>0</code> to keep no archives beyond the current one, and <code>forever</code> to prevent any archives being discarded. </p>
 <p> Archive data files can optionally be compressed after some period to conserve disk space. This is particularly useful for large numbers of <code>pmlogger</code> processes under the control of <code>pmlogger_check</code>. By default no compression is done. The <code>-x</code> option enables compression and specifies the number of days after which to compress archive data files, and the <code>-X</code> option specifies the program to use for compression &#8211; by default this is <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1). Use of the <code>-Y</code> option allows a regular expression to be specified causing files in the set of files matched for compression to be omitted &#8211; this allows only the data file to be compressed, and also prevents the program from attempting to compress it more than once. The default <i>regex</i> is &quot;.(meta|index|Z|gz|bz2|zip|xz|lzma|lzo|lz4)$&quot; &#8211; such files are filtered using the <code>-v</code> option to <code><a href="/docs/linux/man/1-egrep/">egrep</a></code>(1). </p>

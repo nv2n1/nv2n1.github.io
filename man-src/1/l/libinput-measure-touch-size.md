@@ -1,5 +1,4 @@
 ---
-
 title: "libinput-measure-touch-size(1)"
 name: "libinput-measure-touch-size"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-libinput-measure-touch-size/"
 description: "libinput-measure-touch-size – measure touch size and orientation of devices"
 ---
 
+<h2 class="name">NAME</h2>
+<p> libinput-measure-touch-size &#8211; measure touch size and orientation of devices </p>
+<h2>SYNOPSIS</h2>
 <p> <code>libinput measure touch-size [&#8211;help] [options]</code> [<i>/dev/input/event0] </i></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>libinput measure touch-size</code> tool measures the size and orientation of a touch as provided by the kernel. This is an interactive tool. When executed, the tool will prompt the user to interact with the touch device. On termination, the tool prints a summary of the values seen. This data should be attached to any touch-size-related bug report. </p>
 <p> This is a debugging tool only, its output may change at any time. Do not rely on the output. </p>
 <p> This tool usually needs to be run as root to have access to the /dev/input/eventX nodes.</p>

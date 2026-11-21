@@ -1,5 +1,4 @@
 ---
-
 title: "systemd-id128(1)"
 name: "systemd-id128"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-systemd-id128/"
 description: "systemd-id128 – Generate and print sd-128 identifiers"
 ---
 
+<h2 class="name">NAME</h2>
+<p> systemd-id128 &#8211; Generate and print sd-128 identifiers </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>systemd-id128</code> [OPTIONS&#8230;] new</dt>
 <dt> <code>systemd-id128</code> [OPTIONS&#8230;] machine-id</dt>
 <dt> <code>systemd-id128</code> [OPTIONS&#8230;] boot-id</dt>
 <dt> <code>systemd-id128</code> [OPTIONS&#8230;] invocation-id</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>id128</code></p>
 <dd>may be used to conveniently print <code><a href="/docs/linux/man/3-sd-id128/">sd-id128</a></code>(3) UUIDs. What identifier is printed depends on the specific verb. </dd>
 <p> With <code>new</code>, a new random identifier will be generated. </p>

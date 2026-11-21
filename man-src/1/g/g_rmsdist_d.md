@@ -1,5 +1,4 @@
 ---
-
 title: "g_rmsdist_d(1)"
 name: "g_rmsdist_d"
 section: "1"
@@ -11,7 +10,9 @@ description: "g_rmsdist – calculates atom pair distances averaged with power 2
 <h2>NAME</h2>
 <p> g_rmsdist &#8211; calculates atom pair distances averaged with power 2, -3 or -6 </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>g_rmsdist</code> <code>-f</code><i> traj.xtc </i> <code>-s</code><i> topol.tpr </i> <code>-n</code><i> index.ndx </i> <code>-equiv</code><i> equiv.dat </i> <code>-o</code><i> distrmsd.xvg </i> <code>-rms</code><i> rmsdist.xpm </i> <code>-scl</code><i> rmsscale.xpm </i> <code>-mean</code><i> rmsmean.xpm </i> <code>-nmr3</code><i> nmr3.xpm </i> <code>-nmr6</code><i> nmr6.xpm </i> <code>-noe</code><i> noe.dat </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-nlevels</code><i> int </i> <code>-max</code><i> real </i> <code>-[no]sumh</code><i></i></p>
+<h2>DESCRIPTION</h2>
 <p> g_rmsdist computes the root mean square deviation of atom distances, which has the advantage that no fit is needed like in standard RMS deviation as computed by g_rms. The reference structure is taken from the structure file. The rmsd at time t is calculated as the rms of the differences in distance between atom-pairs in the reference structure and the structure at time t. </p>
 <p> g_rmsdist can also produce matrices of the rms distances, rms distances scaled with the mean distance and the mean distances and matrices with NMR averaged distances (1/r3 and 1/r6 averaging). Finally, lists of atom pairs with 1/r3 and 1/r6 averaged distance below the maximum distance (<code> -max</code>, which will default to 0.6 in this case) can be generated, by default averaging over equivalent hydrogens (all triplets of hydrogens named *[123]). Additionally a list of equivalent atoms can be supplied (<code> -equiv</code>), each line containing a set of equivalent atoms specified as residue number and name and atom name; e.g.: </p>
 <p> <code> 3 SER HB1 3 SER HB2</code> </p>

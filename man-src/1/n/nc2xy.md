@@ -1,5 +1,4 @@
 ---
-
 title: "nc2xy(1)"
 name: "nc2xy"
 section: "1"
@@ -10,7 +9,9 @@ description: "nc2xy – Converting netCDF column file(s) to ASCII xy data"
 
 <h2>NAME</h2>
 <p> nc2xy &#8211; Converting netCDF column file(s) to ASCII xy data</p>
+<h2>SYNOPSIS</h2>
 <p> <code>nc2xy</code> <i>files</i> [ <code>-F</code><i>var1/var2/&#8230;</i> ] [ <code>-S</code>[<code>r</code>] ] [ <code>-V</code> ] [ <code>-f</code><i>colinfo</i> ] [ <code>-b</code><code>o</code> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>nc2xy</code> reads one or more netCDF files with column data and writes out those columns in ASCII format to standard output, so that they can be used by <code>psxy</code>, <code>psxyz</code>, or <code>xyz2grd</code>. Modify the precision of the ASCII output format by editing the <code>D_FORMAT</code> parameter in your .gmtdefaults4 file or use <code>&#8211;D_FORMAT</code>=<i>value</i> on the command line.</p>
 <dl>
 <dt><i>files</i></dt>

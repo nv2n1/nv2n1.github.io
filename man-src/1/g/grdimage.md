@@ -1,5 +1,4 @@
 ---
-
 title: "grdimage(1)"
 name: "grdimage"
 section: "1"
@@ -10,8 +9,10 @@ description: "grdimage – Project grids or images and plot them on maps"
 
 <h2>NAME</h2>
 <p> grdimage &#8211; Project grids or images and plot them on maps</p>
+<h2>SYNOPSIS</h2>
 <p> <code>grdimage</code> <i>grd_z</i> | <i>grd_r grd_g grd_b</i> [ <i>out_img</i><code>=</code><i>driver</i> ] [ <i>cpt</i> ] [ [<code>r</code>] ] [ <code>i</code>[|<i>dpi</i>] ] <i>parameters</i> [ [<code>f</code>|<code>b</code>]<i>color</i> ] [ <i>intensfile</i>|<i>intensity</i> ] [ <code>z</code>|<code>-Z</code><i>parameters</i> ] [ ] [ ] [ ] [ ] [ ] [ ] [ <i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[/<i>zmin</i>/<i>zmax</i>][<code>r</code>] ] [ ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ [<i>level</i>] ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ <code>-c</code><i>copies</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-n</code><i>&lt;flags&gt;</i> ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-tr</code> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>grdimage</code> reads one 2-D grid file and produces a gray-shaded (or colored) map by plotting rectangles centered on each grid node and assigning them a gray-shade (or color) based on the z-value. Alternatively, <code>grdimage</code> reads three 2-D grid files with the red, green, and blue components directly (all must be in the 0-255 range). Optionally, illumination may be added by providing a file with intensities in the (-1,+1) range. Values outside this range will be clipped. Such intensity files can be created from the grid using <code>grdgradient</code> and, optionally, modified by <code>grdmath</code> or <code>grdhisteq</code>. Yet as a third alternative available when GMT is build with GDAL support the grd_z file can be an image referenced or not (than see <code>-Dr</code>). In this case the images can be illuminated with the file provided via the <code>-I</code> option. Here if image has no coordinates those of the intensity file will be used. </p>
 <p> When using map projections, the grid is first resampled on a new rectangular grid with the same dimensions. Higher resolution images can be obtained by using the <code>-E</code> option. To obtain the resampled value (and hence shade or color) of each map pixel, its location is inversely projected back onto the input grid after which a value is interpolated between the surrounding input grid values. By default bi-cubic interpolation is used. Aliasing is avoided by also forward projecting the input grid nodes. If two or more nodes are projected onto the same pixel, their average will dominate in the calculation of the pixel value. Interpolation and aliasing is controlled with the <code>-n</code> option. </p>
 <p> The <code>-R</code> option can be used to select a map region larger or smaller than that implied by the extent of the grid. </p>

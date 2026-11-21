@@ -1,5 +1,4 @@
 ---
-
 title: "darktable-cli(1)"
 name: "darktable-cli"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-darktable-cli/"
 description: "darktable-cli – a command line darktable variant"
 ---
 
+<h2 class="name">NAME</h2>
+<p> darktable-cli &#8211; a command line darktable variant </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 darktable - cli IMG_1234.{RAW, ...}[&lt;xmp file&gt;]&lt;output file&gt;[options][--core&lt;darktable options&gt;]
 </code></pre>
@@ -15,6 +17,7 @@ darktable - cli IMG_1234.{RAW, ...}[&lt;xmp file&gt;]&lt;output file&gt;[options
 <pre><code>
 --width&lt;max width&gt; --height&lt;max height&gt; --bpp&lt;bpp&gt; --hq&lt;0 | 1 | true | false&gt; --upscale&lt;0 | 1 | true | false&gt; --verbose
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>darktable</code> is a digital photography workflow application for <code>Linux</code>, <code>Mac </code><font SIZE="-1"><code>OS X</code></font> and several other <code>Unices</code>. It&#8217;s described further in <i><a href="/docs/linux/man/1-darktable/">darktable</a></i>(1). </p>
 <p> <code>darktable-cli</code> is a command line variant to be used to export images given the raw file and the accompanying xmp file.</p>
 <h2>OPTIONS</h2>

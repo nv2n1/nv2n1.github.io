@@ -1,5 +1,4 @@
 ---
-
 title: "dgelsx(3)"
 name: "dgelsx"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dgelsx/"
 description: "dgelsx.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dgelsx.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgelsx</code> (M, N, NRHS, A, LDA, B, LDB, JPVT, RCOND, RANK, WORK, INFO)<br />
  <i></i><code> DGELSX solves overdetermined or underdetermined systems for GE matrices</code></p>

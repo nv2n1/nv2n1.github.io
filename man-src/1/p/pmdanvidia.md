@@ -1,5 +1,4 @@
 ---
-
 title: "pmdanvidia(1)"
 name: "pmdanvidia"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmdanvidia – nvidia gpu metrics domain agent (PMDA)"
 
 <h2>NAME</h2>
 <p> <code>pmdanvidia</code> &#8211; nvidia gpu metrics domain agent (PMDA)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/nvidia/pmdanvidia</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdanvidia</code> is a Performance Metrics Domain Agent (PMDA) which extracts performance metrics describing the metrics available on NVIDIA GPU cards via the NVML library. </p>
 <p> The <code>nvidia</code> PMDA exports metrics that measure gpu activity, memory utilization, fan speed, etc on NVIDIA Tesla and Quadro cards. Metrics are unlikely to be available for consumer class cards. </p>
 <p> A brief description of the <code>pmdanvidia</code> command line options follows:</p>

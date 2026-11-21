@@ -1,5 +1,4 @@
 ---
-
 title: "fax(1)"
 name: "fax"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-fax/"
 description: "fax – make, send, receive, view or print a fax"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fax &#8211; make, send, receive, view or print a fax </p>
+<h2>SYNOPSIS</h2>
 <p> <code>fax</code> <code>help</code> </p>
 <p> <code>fax</code> <code>make</code> [<code>-l</code>] <i>file</i> </p>
 <p> <code>fax</code> <code>send</code> [<code>-l</code>] [<code>-v</code>] { <code>-m</code> | <i>number</i> } <i>filename</i>&#8230; </p>
@@ -26,6 +28,7 @@ description: "fax – make, send, receive, view or print a fax"
 </dl>
 <p> The commands make, send, receive, view and queue may be abbreviated to their first characters (e.g. &#8220;fax q&#8221;). </p>
 <p> Assignments of the form <i>VARIABLE</i><code>=</code><i>value</i> may appear before the command name to temporarily change the values of most fax script variables (e.g. &#8220;fax PAGE=A4 print letter.001&#8221;) </p>
+<h2>DESCRIPTION</h2>
 <p> <code>fax</code> provides a simple user interface to the <a href="/docs/linux/man/1-efax/">efax</a>(1) and <a href="/docs/linux/man/1-efix/">efix</a>(1) programs. It allows you to send text or Postscript files as faxes and receive, print or preview received faxes. The <code>fax help</code> command prints a summary of the possible commands. </p>
 <p> To send a fax, the original files need to be converted from ASCII or Postscript into a particular bit-map format (TIFF with Group 3 encoding). This can be done automatically by the <code>fax send</code> command or you can use the <code>fax make</code> command to do the conversion before sending the fax. The conversion will create one file per page. These files will have the name of the original file with the page number as an additional suffix. For example, running <code>fax make doc.ps</code> on the two-page postscript file doc.ps would generate the files doc.ps.001 and doc.ps.002. </p>
 <p> When sending a fax with the <code>fax send</code> command you may dial the number manually and use the <code>-m</code> option or you may give the phone number on the command line. The names of the files to be sent are given on the command line, usually by using wildcards. For example, to send a multi-page fax consisting of the files doc.ps.001, doc.ps.002, and so on, you could use the command <code>fax send 555-1212 doc.ps.0*</code> (if you had already run the <code>fax make</code> command) or simply <code>fax send 555-1212 doc.ps</code>. If the number is busy the script will wait and try again. </p>

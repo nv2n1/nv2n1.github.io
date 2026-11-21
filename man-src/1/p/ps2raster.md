@@ -1,5 +1,4 @@
 ---
-
 title: "ps2raster(1)"
 name: "ps2raster"
 section: "1"
@@ -10,7 +9,9 @@ description: "ps2raster – Converts one or several PostScript file(s) to other 
 
 <h2>NAME</h2>
 <p> ps2raster &#8211; Converts one or several <i>PostScript</i> file(s) to other formats using GhostScript</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ps2raster</code> <i>psfile(s)</i> [ <code>-A</code>[<code>u</code>|-] ] [ <code>-C</code><i>gs_option</i>] [ <code>-D</code><i>outdir</i> ] [ <code>-E</code><i>resolution</i> ] [ <code>-G</code><i>ghost_path</i> ] [ <code>-L</code><i>listfile</i>] [ <code>-P</code> ] [ <code>-Q</code>[<code>g</code>|<code>t</code>][1|2|4] ] [ <code>-S</code> ] [ <code>-Tb</code>|<code>e</code>|<code>f</code>|<code>j</code>|<code>g</code>|<code>G</code>|<code>m</code>|<code>t</code> ] [ <code>-V</code> ] [ <code>-W</code>[<code>+g</code>][<code>+t</code><i>docname</i>][<code>+n</code><i>layername</i>][<code>+a</code><i>altmode</i>[<i>alt</i>]][<code>+l</code><i>minLOD/maxLOD</i>][<code>+f</code><i>minfade/maxfade</i>][<code>+u</code><i>URL</i>] ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>ps2raster</code> converts one or more <i>PostScript</i> files to other formats (BMP, EPS, JPEG, PDF, PNG, PPM, TIFF) using GhostScript. Input file names are read from the command line or from a file that lists them. The size of the resulting images is determined by the BoundingBox (or HiResBoundingBox, if present). As an option, a tight (HiRes)BoundingBox may be computed first. As another option, it can compute ESRI type world files used to reference, for instance, tif files and make them be recognized as geotiff.</p>
 <dl>
 <dt><i>psfiles</i></dt>

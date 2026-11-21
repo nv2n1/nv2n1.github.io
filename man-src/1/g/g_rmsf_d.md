@@ -1,5 +1,4 @@
 ---
-
 title: "g_rmsf_d(1)"
 name: "g_rmsf_d"
 section: "1"
@@ -11,7 +10,9 @@ description: "g_rmsf – calculates atomic fluctuations"
 <h2>NAME</h2>
 <p> g_rmsf &#8211; calculates atomic fluctuations </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>g_rmsf</code> <code>-f</code><i> traj.xtc </i> <code>-s</code><i> topol.tpr </i> <code>-n</code><i> index.ndx </i> <code>-q</code><i> eiwit.pdb </i> <code>-oq</code><i> bfac.pdb </i> <code>-ox</code><i> xaver.pdb </i> <code>-o</code><i> rmsf.xvg </i> <code>-od</code><i> rmsdev.xvg </i> <code>-oc</code><i> correl.xvg </i> <code>-dir</code><i> rmsf.log </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-[no]res</code><i></i> <code>-[no]aniso</code><i></i> <code>-[no]fit</code><i></i></p>
+<h2>DESCRIPTION</h2>
 <p> g_rmsf computes the root mean square fluctuation (RMSF, i.e. standard deviation) of atomic positions after (optionally) fitting to a reference frame. </p>
 <p> With option <code> -oq</code> the RMSF values are converted to B-factor values, which are written to a pdb file with the coordinates, of the structure file, or of a pdb file when <code> -q</code> is specified. Option <code> -ox</code> writes the B-factors to a file with the average coordinates. </p>
 <p> With the option <code> -od</code> the root mean square deviation with respect to the reference structure is calculated. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "pawd(1)"
 name: "pawd"
 section: "1"
@@ -10,7 +9,9 @@ description: "pawd – print automounter working directory"
 
 <h2>NAME</h2>
 <p> pawd &#8211; print automounter working directory</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pawd</code> [ <i>path &#8230;</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pawd</code> is used to print the current working directory, adjusted to reflect proper paths that can be reused to go through the automounter for the shortest possible path. In particular, the path printed back does not include any of <code>Amd</code>&#8216;s local mount points. Using them is unsafe, because <code>Amd</code> may unmount managed file systems from the mount points, and thus including them in paths may not always find the files within. </p>
 <p> Without any arguments, <code>pawd</code> will print the automounter adjusted current working directory. With any number of arguments, it will print the adjusted path of each one of the arguments.</p>
 <h2>SEE ALSO</h2>

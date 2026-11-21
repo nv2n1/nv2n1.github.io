@@ -38,7 +38,7 @@ header.site nav a { margin-left: 1.2rem; }
   margin-bottom: 0.5rem;
 }
 
-/* hide the redundant NAME heading (the title already identifies the page) */
+/* hide the redundant NAME heading (first h2.name in content) */
 article > h2.name:first-of-type {
   display: none;
 }

@@ -1,5 +1,4 @@
 ---
-
 title: "docker-attach(1)"
 name: "docker-attach"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-attach/"
 description: "docker-attach – Attach local standard input, output, and error streams to a running container"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-attach &#8211; Attach local standard input, output, and error streams to a running container </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker attach [OPTIONS] CONTAINER</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Alias for docker container attach. </p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;detach-keys</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Override the key sequence for detaching a container</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "xrdb(1)"
 name: "xrdb"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-xrdb/"
 description: "xrdb – X server resource database utility"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xrdb &#8211; X server resource database utility </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xrdb</code> [-option &#8230;] [<i>filename</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Xrdb</i> is used to get or set the contents of the RESOURCE_MANAGER property on the root window of screen 0, or the SCREEN_RESOURCES property on the root window of any or all screens, or everything combined. You would normally run this program from your X startup file. </p>
 <p> Most X clients use the RESOURCE_MANAGER and SCREEN_RESOURCES properties to get user preferences about color, fonts, and so on for applications. Having this information in the server (where it is available to all clients) instead of on disk, solves the problem in previous versions of X that required you to maintain <i>defaults</i> files on every machine that you might use. It also allows for dynamic changing of defaults without editing files. </p>
 <p> The RESOURCE_MANAGER property is used for resources that apply to all screens of the display. The SCREEN_RESOURCES property on each screen specifies additional (or overriding) resources to be used for that screen. (When there is only one screen, SCREEN_RESOURCES is normally not used, all resources are just placed in the RESOURCE_MANAGER property.) </p>

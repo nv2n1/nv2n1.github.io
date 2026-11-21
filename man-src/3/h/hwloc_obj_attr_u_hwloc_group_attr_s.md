@@ -1,5 +1,4 @@
 ---
-
 title: "hwloc_obj_attr_u_hwloc_group_attr_s(3)"
 name: "hwloc_obj_attr_u_hwloc_group_attr_s"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-hwloc_obj_attr_u_hwloc_group_attr_s/"
 description: "hwloc_obj_attr_u::hwloc_group_attr_s –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hwloc_obj_attr_u::hwloc_group_attr_s &#8211; </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;hwloc.h&gt;</p>
 <h3>Data Fields</h3>
 <p> unsigned <code>depth</code> </p>

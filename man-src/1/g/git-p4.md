@@ -1,5 +1,4 @@
 ---
-
 title: "git-p4(1)"
 name: "git-p4"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-git-p4/"
 description: "git-p4 – Import from and submit to Perforce repositories"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-p4 &#8211; Import from and submit to Perforce repositories </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git p4 clone[&lt;sync options&gt;][&lt;clone options&gt;]&lt;p4 depot path&gt;... git p4 sync[&lt;sync options&gt;][&lt;p4 depot path&gt;...] git p4 rebase
     git p4 submit[&lt;submit options&gt;][&lt;master branch name&gt;]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> This command provides a way to interact with p4 repositories using Git. </p>
 <p> Create a new Git repository from an existing p4 repository using <i>git p4 clone</i>, giving it one or more p4 depot paths. Incorporate new commits from p4 changes with <i>git p4 sync</i>. The <i>sync</i> command is also used to include new branches from other p4 depot paths. Submit Git changes back to p4 using <i>git p4 submit</i>. The command <i>git p4 rebase</i> does a sync plus rebases the current branch onto the updated p4 remote branch.</p>
 <h2>EXAMPLE</h2>

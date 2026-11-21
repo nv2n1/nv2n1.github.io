@@ -1,5 +1,4 @@
 ---
-
 title: "tsplot(1)"
 name: "tsplot"
 section: "1"
@@ -10,7 +9,9 @@ description: "tsplot – Plot several tsung logs on the same charts, for compari
 
 <h2>NAME</h2>
 <p> tsplot &#8211; Plot several tsung logs on the same charts, for comparison purpose.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>tsplot</code> [ <code>-c configuration file</code> ] [ <code>-d images output directory</code> ] [ <code>-v verbose</code> ] [ <code>legend logfile</code> ]</p>
+<h2>DESCRIPTION</h2>
 <p> Tsung comes with a plotting tool using <code>gnuplot</code>, producing some graphs from the <i>tsung.log</i> file data. <code>tsplot</code> is able to plot data from several <i>tsung.log</i> files onto the same charts serie, for further comparison and analyze.</p>
 <h2>OPTIONS</h2>
 <dl>

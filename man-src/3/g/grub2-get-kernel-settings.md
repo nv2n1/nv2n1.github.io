@@ -1,5 +1,4 @@
 ---
-
 title: "grub2-get-kernel-settings(3)"
 name: "grub2-get-kernel-settings"
 section: "3"
@@ -10,7 +9,9 @@ description: "grub-get-kernel-settings — Evaluate the system’s kernel instal
 
 <h2>NAME</h2>
 <p> <code>grub-get-kernel-settings</code> &#8212; Evaluate the system&#8217;s kernel installation settings for use while making a grub configuration file. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>grub-get-kernel-settings</code> [OPTION] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>grub-get-kernel-settings</code> reads the kernel installation settings on the host system, and emits a set of grub settings suitable for use when creating a grub configuration file. </p>
 <h2>OPTIONS</h2>
 <dl>

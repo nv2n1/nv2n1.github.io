@@ -1,5 +1,4 @@
 ---
-
 title: "doveadm-force-resync(1)"
 name: "doveadm-force-resync"
 section: "1"
@@ -10,9 +9,11 @@ description: "doveadm-force-resync – Repair broken mailboxes"
 
 <h2>NAME</h2>
 <p> doveadm-force-resync &#8211; Repair broken mailboxes</p>
+<h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>force-resync</code> [<code>-S</code> <i>socket_path</i>] <i>mailbox</i><br />
  <code>doveadm</code> [<code>-Dv</code>] <code>force-resync</code> [<code>-S</code> <i>socket_path</i>] <code>-A</code><i>&nbsp;<wbr>mailbox</i><br />
  <code>doveadm</code> [<code>-Dv</code>] <code>force-resync</code> [<code>-S</code> <i>socket_path</i>] <code>-u</code><i> user mailbox</i></p>
+<h2>DESCRIPTION</h2>
 <p> Under certain circumstances it may happen, that <code><a href="/docs/linux/man/1-dovecot/">dovecot</a></code>(1) is unable to automatically solve problems with mailboxes. In such situations the <code>force-resync</code> command may be helpful. It tries to fix all problems. For sdbox and mdbox mailboxes the storage files will be also checked.</p>
 <h2>OPTIONS</h2>
 <p> Global <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) <i>options</i>:</p>

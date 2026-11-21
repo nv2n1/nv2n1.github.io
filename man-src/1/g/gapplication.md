@@ -1,5 +1,4 @@
 ---
-
 title: "gapplication(1)"
 name: "gapplication"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-gapplication/"
 description: "gapplication – D-Bus application launcher"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gapplication &#8211; D-Bus application launcher </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gapplication</code> help [<i>COMMAND</i>]</dt>
 <dt> <code>gapplication</code> version</dt>
@@ -16,6 +18,7 @@ description: "gapplication – D-Bus application launcher"
 <dt> <code>gapplication</code> launch <i>APPID</i> [<i>FILE</i>&#8230;]</dt>
 <dt> <code>gapplication</code> list-actions <i>APPID</i></dt>
 <dt> <code>gapplication</code> action <i>APPID</i> <i>ACTION</i> [<i>PARAMETER</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>gapplication</code></p>
 <dd>is a commandline implementation of the client-side of the org.freedesktop.Application interface as specified by the freedesktop.org Desktop Entry Specification. </dd>
 <p> <code>gapplication</code> can be used to start applications that have <i>DBusActivatable</i> set to true in their .desktop files and can be used to send messages to already-running instances of other applications. </p>

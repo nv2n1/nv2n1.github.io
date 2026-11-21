@@ -1,5 +1,4 @@
 ---
-
 title: "acl_get_qualifier(3)"
 name: "acl_get_qualifier"
 section: "3"
@@ -8,10 +7,13 @@ url: "/docs/linux/man/3-acl_get_qualifier/"
 description: "acl_get_qualifier – retrieve the qualifier from an ACL entry"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>acl_get_qualifier</code> &#8211; retrieve the qualifier from an ACL entry </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>
+<h2>SYNOPSIS</h2>
 <p> In sys/types.h In sys/acl.h Ft void * Fn acl_get_qualifier acl_entry_t entry_d</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn acl_get_qualifier function retrieves the qualifier from the ACL entry indicated by the argument <i>entry_d</i> into working storage and returns a pointer to that storage. </p>
 <p> If the value of the tag type in the ACL entry referred to by <i>entry_d</i> is ACL_USER, then the value returned by Fn acl_get_qualifier is a pointer to type <i>uid_t</i> If the value of the tag type in the ACL entry referred to by <i>entry_d</i> is ACL_GROUP, then the value returned by Fn acl_get_qualifier is a pointer to type <i>gid_t</i> If the tag type in the ACL entry referred to by <i>entry_d</i> is a tag type for which a qualifier is not supported, Fn acl_get_qualifier returns a value of <code>(void *)NULL</code> and the function fails. Subsequent operations using the returned pointer operate on an independent copy of the qualifier in working storage, and will not change the qualifier of the ACL entry. </p>
 <p> This function may cause memory to be allocated. The caller should free any releasable memory, when the new qualifier is no longer required, by calling Fn acl_free with the <i>void</i> value returned by Fn acl_get_qualifier as an argument. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "jrunscript-java-1(1)"
 name: "jrunscript-java-1"
 section: "1"
@@ -10,6 +9,7 @@ description: "jrunscript – command line script shell"
 
 <h2>Name</h2>
 <p> jrunscript &#8211; command line script shell </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 jrunscript[options][arguments...]
 </code></pre>
@@ -21,6 +21,7 @@ jrunscript[options][arguments...]
 <dt>arguments</dt>
 <dd> Arguments, if used, should follow immediately after options or command name.</dd></dl>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> <code>jrunscript</code> is a command line script shell. jrunscript supports both an interactive (read-eval-print) mode and a batch (-f option) mode of script execution. This is a scripting language independent shell. By default, JavaScript is the language used, but the -l option can be used to specify a different language. Through Java to scripting language communication, jrunscript supports &quot;exploratory programming&quot; style. </p>
 <p> <code>NOTE:</code> This tool is <code>experimental</code> and may <code>not</code> be available in future versions of the JDK. </p>
 <h2>OPTIONS</h2>

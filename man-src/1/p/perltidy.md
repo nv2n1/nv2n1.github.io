@@ -1,5 +1,4 @@
 ---
-
 title: "perltidy(1)"
 name: "perltidy"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-perltidy/"
 description: "perltidy – a perl script indenter and reformatter"
 ---
 
+<h2 class="name">NAME</h2>
+<p> perltidy &#8211; a perl script indenter and reformatter </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 perltidy[options] file1 file2 file3...(output goes to file1.tdy, file2.tdy, file3.tdy, ...)
             perltidy[options] file1
@@ -15,6 +17,7 @@ perltidy[options] file1 file2 file3...(output goes to file1.tdy, file2.tdy, file
     &gt; outfile
     perltidy[options]&lt;infile&gt; outfile
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Perltidy reads a perl script and writes an indented, reformatted script. </p>
 <p> Many users will find enough information in &#8220;<font SIZE="-1">EXAMPLES&#8221;</font> to get started. New users may benefit from the short tutorial which can be found at <a rel="nofollow" href="http://perltidy.sourceforge.net/tutorial.html">http://perltidy.sourceforge.net/tutorial.html</a> </p>
 <p> A convenient aid to systematically defining a set of style parameters can be found at <a rel="nofollow" href="http://perltidy.sourceforge.net/stylekey.html">http://perltidy.sourceforge.net/stylekey.html</a> </p>

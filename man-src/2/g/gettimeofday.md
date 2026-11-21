@@ -1,5 +1,4 @@
 ---
-
 title: "gettimeofday(2)"
 name: "gettimeofday"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-gettimeofday/"
 description: "gettimeofday, settimeofday – get / set time"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gettimeofday, settimeofday &#8211; get / set time </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/time.h&gt;
 int gettimeofday(struct timeval *tv, struct timezone *tz);
@@ -19,6 +21,7 @@ int settimeofday(const struct timeval *tv, const struct timezone *tz);
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE</p>
+<h2>DESCRIPTION</h2>
 <p> The functions <code>gettimeofday</code>() and <code>settimeofday</code>() can get and set the time as well as a timezone. </p>
 <p> The <i>tv</i> argument is a <i>struct timeval</i> (as specified in <i>&lt;sys/time.h&gt;</i>): </p>
 <p> struct timeval {<br />

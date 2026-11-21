@@ -1,5 +1,4 @@
 ---
-
 title: "nvme-read(1)"
 name: "nvme-read"
 section: "1"
@@ -7,9 +6,16 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-read/"
 ---
 
-nvme-read - Send an NVMe Read command, provide results 
+<h2 class="name">NAME</h2>
+ 
 
-<pre><code>
+ nvme-read - Send an NVMe Read command, provide results 
+
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <pre><code>
 nvme - read&lt;device&gt;[--start - block = &lt;slba&gt; | -s&lt;slba&gt;]
                    [--block - count = &lt;nlb&gt; | -c&lt;nlb&gt;]
                    [--data - size = &lt;size&gt; | -z&lt;size&gt;]
@@ -25,7 +31,11 @@ nvme - read&lt;device&gt;[--start - block = &lt;slba&gt; | -s&lt;slba&gt;]
                    [--force - unit - access | -f]
 </code></pre>
 
-The Read command reads the logical blocks specified by the command from the medium and copies to the data data buffer provided. Will use stdout by default if you don't provide a file.
+<h2>DESCRIPTION</h2>
+
+ 
+
+ The Read command reads the logical blocks specified by the command from the medium and copies to the data data buffer provided. Will use stdout by default if you don't provide a file.
 
 <h2>OPTIONS</h2>
 

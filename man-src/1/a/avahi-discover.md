@@ -1,5 +1,4 @@
 ---
-
 title: "avahi-discover(1)"
 name: "avahi-discover"
 section: "1"
@@ -10,7 +9,9 @@ description: "avahi-discover – Browse for mDNS/DNS-SD services using the Avahi
 
 <h2>NAME</h2>
 <p> avahi-discover &#8211; Browse for mDNS/DNS-SD services using the Avahi daemon</p>
+<h2>SYNOPSIS</h2>
 <p> <code>avahi-discover </code></p>
+<h2>DESCRIPTION</h2>
 <p> Show a real-time graphical browse list for mDNS/DNS-SD network services running on the local LAN using the Avahi daemon.</p>
 <h2>OPTIONS</h2>
 <p> avahi-discover takes no command line arguments at the moment.</p>

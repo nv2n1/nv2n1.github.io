@@ -1,5 +1,4 @@
 ---
-
 title: "mongostat(1)"
 name: "mongostat"
 section: "1"
@@ -10,6 +9,7 @@ description: "mongostat – MongoDB Use Statistics"
 
 <h2>NAME</h2>
 <p> mongostat &#8211; MongoDB Use Statistics</p>
+<h2>SYNOPSIS</h2>
 <p> The <code>mongostat</code> utility provides a quick overview of the status of a currently running <code>mongod</code> or <code>mongos</code> instance. <code>mongostat</code> is functionally similar to the UNIX/Linux file system utility <code>vmstat</code>, but provides data regarding <code>mongod</code> and <code>mongos</code> instances. </p>
 <p> <code>SEE ALSO:</code> For more information about monitoring MongoDB, see <a rel="nofollow" href="http://docs.mongodb.org/manual/administration/monitoring.">http://docs.mongodb.org/manual/administration/monitoring.</a> </p>
 <p> For more background on various other MongoDB status outputs see:</p>

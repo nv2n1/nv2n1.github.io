@@ -1,5 +1,4 @@
 ---
-
 title: "simplevisor-control(1)"
 name: "simplevisor-control"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-simplevisor-control/"
 description: "simplevisor-control – run simplevisor as a service"
 ---
 
+<h2 class="name">NAME</h2>
+<p> simplevisor-control &#8211; run simplevisor as a service </p>
+<h2>SYNOPSIS</h2>
 <p> <code>simplevisor-control</code> command [path]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>simplevisor-control</code> script can be used to run simplevisor as a service. </p>
 <p> If this script is used the pidfile value specified in the simplevisor configuration file will be ignored.</p>
 <h2>OPTIONS</h2>

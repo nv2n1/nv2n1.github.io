@@ -1,5 +1,4 @@
 ---
-
 title: "euca-reject-vpc-peering-connection(1)"
 name: "euca-reject-vpc-peering-connection"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-reject-vpc-peering-connection – Reject a request for a VPC 
 
 <h2>NAME</h2>
 <p> euca-reject-vpc-peering-connection &#8211; Reject a request for a VPC peering connection</p>
+<h2>SYNOPSIS</h2>
 <p> euca-reject-vpc-peering-connection [&#8211;show-empty-fields] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID]</dt>
 <dd> [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] PEERCON</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Reject a request for a VPC peering connection</p>
 <h2>DESCRIPTION</h2>
 <p> To delete an active VPC peering connection or a peering connection request you created, use <a href="/docs/linux/man/1-euca-delete-vpc-peering-connection/">euca-delete-vpc-peering-connection</a>(1).</p>

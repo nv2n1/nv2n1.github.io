@@ -1,5 +1,4 @@
 ---
-
 title: "g_make_ndx(1)"
 name: "g_make_ndx"
 section: "1"
@@ -11,7 +10,9 @@ description: "make_ndx – makes index files"
 <h2>NAME</h2>
 <p> make_ndx &#8211; makes index files </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>make_ndx</code> <code>-f</code><i> conf.gro </i> <code>-n</code><i> index.ndx </i> <code>-o</code><i> index.ndx </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-natoms</code><i> int </i></p>
+<h2>DESCRIPTION</h2>
 <p> Index groups are necessary for almost every gromacs program. All these programs can generate default index groups. You ONLY have to use make_ndx when you need SPECIAL index groups. There is a default index group for the whole system, 9 default index groups are generated for proteins, a default index group is generated for every other residue name. </p>
 <p> When no index file is supplied, also make_ndx will generate the default groups. With the index editor you can select on atom, residue and chain names and numbers. When a run input file is supplied you can also select on atom type. You can use NOT, AND and OR, you can split groups into chains, residues or atoms. You can delete and rename groups. </p>
 <p> The atom numbering in the editor and the index file starts at 1.</p>

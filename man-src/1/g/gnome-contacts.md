@@ -1,5 +1,4 @@
 ---
-
 title: "gnome-contacts(1)"
 name: "gnome-contacts"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-gnome-contacts/"
 description: "gnome-contacts – Access and store information about contacts"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gnome-contacts &#8211; Access and store information about contacts </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gnome-contacts </code><code>[OPTION&#8230;]</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>gnome-contacts</code></p>
 <dd>is a graphical user interface to access and store information about your contacts. </dd>
 <p> gnome-contacts uses the folks library to pull together contact information from various sources, including telepathy, evolution-data-server, your configured GNOME online accounts, etc.</p>

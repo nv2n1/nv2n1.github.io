@@ -1,5 +1,4 @@
 ---
-
 title: "kpsewhich(1)"
 name: "kpsewhich"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-kpsewhich/"
 description: "kpsewhich – standalone path lookup and and expansion for kpathsea"
 ---
 
+<h2 class="name">NAME</h2>
+<p> kpsewhich &#8211; standalone path lookup and and expansion for kpathsea </p>
+<h2>SYNOPSIS</h2>
 <p> <code>kpsewhich</code> [<i>options</i>] [<i>filenames</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page is not meant to be exhaustive. The complete documentation for this version of TeX can be found in the info file or manual <i>Kpathsea: A library for path searching</i>. </p>
 <p> <code>kpsewhich</code> is used as a standalone front-end of the kpathsea library that can be used to examine variables and find files. When the <code>-format</code> option is not given, the search path used when looking for a file is inferred from the name given, by looking for a known extension. If no known extension is found, the search path for TeX source files is used.</p>
 <h2>OPTIONS</h2>

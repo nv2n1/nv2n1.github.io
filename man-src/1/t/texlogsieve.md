@@ -1,5 +1,4 @@
 ---
-
 title: "texlogsieve(1)"
 name: "texlogsieve"
 section: "1"
@@ -7,8 +6,11 @@ letter: "t"
 url: "/docs/linux/man/1-texlogsieve/"
 description: "texlogsieve – filter and summarize LaTeX log files"
 ---
-
+<h2 class="name">NAME</h2>
+<p> texlogsieve - filter and summarize LaTeX log files  </p>
+<h2>SYNOPSIS</h2>
 <p> <code>texlogsieve</code> [<i>,OPTION/</i>]... [<i>,INPUT FILE/</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> texlogsieve reads a LaTeX log file (or the standard input if no file is specified), filters out less relevant messages, and displays a summary report. </p>
 <p> texlogsieve <code>must</code> be run from the same directory as [pdf|lua|xe]latex, because it searches for the files used during compilation (packages loaded from the current directory, files included with \input etc.). Also, since it cannot detect if LaTeX stops for user input, you should <code>really</code> run LaTeX in <i>,nonstopmode/</i> when texlogsieve is reading from a pipe. </p>
 <p> The program goes to great lengths to correctly handle TeX line wrapping. It understands the <i>,max_print_line/</i> TeX configuration variable and reads its value from the same places as TeX. Setting <i>,max_print_line/</i> to a value larger than 9999 makes texlogsieve ignore line wrapping. </p>

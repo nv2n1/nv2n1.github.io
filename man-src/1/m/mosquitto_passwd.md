@@ -1,5 +1,4 @@
 ---
-
 title: "mosquitto_passwd(1)"
 name: "mosquitto_passwd"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-mosquitto_passwd/"
 description: "mosquitto_passwd – manage password files for mosquitto"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mosquitto_passwd &#8211; manage password files for mosquitto </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mosquitto_passwd</code> [<code>-c</code> | <code>-D</code>] <i>passwordfile</i> <i>username</i></dt>
 <dt> <code>mosquitto_passwd</code> <code>-b</code> <i>passwordfile</i> <i>username</i> <i>password</i></dt>
 <dt> <code>mosquitto_passwd</code> <code>-U</code> <i>passwordfile</i></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>mosquitto_passwd</code></p>
 <dd>is a tool for managing password files the mosquitto MQTT broker. </dd>
 <p> Usernames must not contain &quot;:&quot;. Passwords are stored in a similar format to <code><a href="/docs/linux/man/3-crypt/">crypt</a></code>(3).</p>

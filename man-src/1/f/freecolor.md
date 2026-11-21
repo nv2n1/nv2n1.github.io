@@ -1,5 +1,4 @@
 ---
-
 title: "freecolor(1)"
 name: "freecolor"
 section: "1"
@@ -10,7 +9,9 @@ description: "freecolor – Display amount of free and used memory graphically"
 
 <h2>NAME</h2>
 <p> freecolor &#8211; Display amount of free and used memory graphically</p>
+<h2>SYNOPSIS</h2>
 <p> <code>freecolor</code> [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>freecolor</code> displays the total amount of free and used physical and swap memory in the system as a colored bargraph on the command line.</p>
 <h2>OPTIONS</h2>
 <dl>

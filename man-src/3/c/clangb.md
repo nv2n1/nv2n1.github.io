@@ -1,5 +1,4 @@
 ---
-
 title: "clangb(3)"
 name: "clangb"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-clangb/"
 description: "clangb.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> clangb.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>clangb</code> (NORM, N, KL, KU, AB, LDAB, WORK)<br />
  <i></i><code>CLANGB</code> returns the value of the 1-norm, Frobenius norm, infinity-norm, or the largest absolute value of any element of general band matrix.</p>

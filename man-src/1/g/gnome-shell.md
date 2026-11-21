@@ -1,5 +1,4 @@
 ---
-
 title: "gnome-shell(1)"
 name: "gnome-shell"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-gnome-shell/"
 description: "gnome-shell – Graphical shell for the GNOME desktop"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gnome-shell &#8211; Graphical shell for the GNOME desktop </p>
+<h2>SYNOPSIS</h2>
 <p> <code>gnome-shell</code> [<i>OPTION</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> GNOME shell provides core user interface functions for the GNOME 3 desktop, like switching to windows and launching applications. GNOME shell takes advantage of the capabilities of modern graphics hardware and introduces innovative user interface concepts to provide a visually attractive and easy to use experience. </p>
 <p> gnome-shell is a required component of the GNOME desktop, i.e. it is listed in the RequiredComponents field of /usr/share/gnome-session/sessions/gnome.session. It is started in the window manager phase of the session.</p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "perf_event_open(2)"
 name: "perf_event_open"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-perf_event_open/"
 description: "perf_event_open – set up performance monitoring"
 ---
 
+<h2 class="name">NAME</h2>
+<p> perf_event_open &#8211; set up performance monitoring </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/hw_breakpoint.h&gt;
 #include &lt;linux/perf_event.h&gt;
@@ -16,6 +18,7 @@ int perf_event_open(struct perf_event_attr *attr,
                     unsigned long flags);
 </code></pre>
 <p> <i>Note</i>: There is no glibc wrapper for this system call; see NOTES.</p>
+<h2>DESCRIPTION</h2>
 <p> Given a list of parameters, <code>perf_event_open</code>() returns a file descriptor, for use in subsequent system calls (<code><a href="/docs/linux/man/2-read/">read</a></code>(2), <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2), <code><a href="/docs/linux/man/2-prctl/">prctl</a></code>(2), <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2), etc.). </p>
 <p> A call to <code>perf_event_open</code>() creates a file descriptor that allows measuring performance information. Each file descriptor corresponds to one event that is measured; these can be grouped together to measure multiple events simultaneously. </p>
 <p> Events can be enabled and disabled in two ways: via <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) and via <code><a href="/docs/linux/man/2-prctl/">prctl</a></code>(2). When an event is disabled it does not count or generate overflows but does continue to exist and maintain its count value. </p>

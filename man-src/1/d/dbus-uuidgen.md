@@ -1,5 +1,4 @@
 ---
-
 title: "dbus-uuidgen(1)"
 name: "dbus-uuidgen"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-dbus-uuidgen/"
 description: "dbus-uuidgen – Utility to generate UUIDs"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dbus-uuidgen &#8211; Utility to generate UUIDs </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>dbus-uuidgen</code> [&#8211;version] [&#8211;ensure&nbsp;[<i>=FILENAME</i>]] [&#8211;get&nbsp;[<i>=FILENAME</i>]]</dt>
 <dd>
 </dd></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>dbus-uuidgen</code> command generates or reads a universally unique ID. </dd>
 <p> Note that the D-Bus UUID has no relationship to RFC 4122 and does not generate UUIDs compatible with that spec. Many systems have a separate command for that (often called &quot;uuidgen&quot;). </p>
 <p> See m[blue]<code><a rel="nofollow" href="http://www.freedesktop.org/software/dbus/">http://www.freedesktop.org/software/dbus/</a></code>m[] for more information about D-Bus. </p>

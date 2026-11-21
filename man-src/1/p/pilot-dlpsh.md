@@ -1,5 +1,4 @@
 ---
-
 title: "pilot-dlpsh(1)"
 name: "pilot-dlpsh"
 section: "1"
@@ -12,6 +11,7 @@ description: "pilot-dlpsh – An interactive Desktop Link Protocol (DLP) Shell f
 <p> pilot-dlpsh &#8211; An interactive Desktop Link Protocol (DLP) Shell for your Palm device.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Tools </p>
+<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr><i>pilot-dlpsh</i>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;port</code>&nbsp;<wbr>&lt;<code>port</code>&gt;]&nbsp;<wbr>[<code>-c</code>|<code>&#8211;command</code>&nbsp;<wbr>&nbsp;<wbr><code>STRING</code>]&nbsp;<wbr>[<code>-i</code>|<code>&#8211;interactive</code>]&nbsp;<wbr>[<code>&#8211;version</code>] </p>
 <h2>OPTIONS</h2>
 <h3>pilot-dlpsh options</h3>
@@ -31,6 +31,7 @@ description: "pilot-dlpsh – An interactive Desktop Link Protocol (DLP) Shell f
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>&#8211;version</code><br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> </p>
 <p> Display the copyright information, version number, license details and build details and exit without connecting. </p>
+<h2>DESCRIPTION</h2>
 <p>&nbsp;<wbr><i>pilot-dlpsh</i>&nbsp;<wbr>allows the user to connect to a Palm handheld and execute arbitrary DLP commands. </p>
 <p> pilot-dlpsh can query many different types of information from your Palm device, such as username, memory capacity, set the time, as well as other useful functions. </p>
 <p> Once connected, the user may execute most of the built-in <i>DLP</i> commands. (See <i>BUILT-IN COMMANDS </i> below for more detail on currently supported options). </p>

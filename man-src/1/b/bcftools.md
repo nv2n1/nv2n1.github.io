@@ -1,5 +1,4 @@
 ---
-
 title: "bcftools(1)"
 name: "bcftools"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-bcftools/"
 description: "bcftools – utilities for variant calling and manipulating VCFs and BCFs."
 ---
 
+<h2 class="name">NAME</h2>
+<p> bcftools &#8211; utilities for variant calling and manipulating VCFs and BCFs. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>bcftools</code> [&#8211;version|&#8211;version-only] [&#8211;help] [<i>COMMAND</i>] [<i>OPTIONS</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> BCFtools is a set of utilities that manipulate variant calls in the Variant Call Format (VCF) and its binary counterpart BCF. All commands work transparently with both VCFs and BCFs, both uncompressed and BGZF-compressed. </p>
 <p> Most commands accept VCF, bgzipped VCF and BCF with filetype detected automatically even when streaming from a pipe. Indexed VCF and BCF will work in all situations. Un-indexed VCF and BCF and streams will work in most, but not all situations. In general, whenever multiple VCFs are read simultaneously, they must be indexed and therefore also compressed. (Note that files with non-standard index names can be accessed as e.g. &quot;bcftools view -r X:2928329 file.vcf.gz##idx##non-standard-index-name&quot;.) </p>
 <p> BCFtools is designed to work on a stream. It regards an input file &quot;-&quot; as the standard input (stdin) and outputs to the standard output (stdout). Several commands can thus be combined with Unix pipes.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ogmcat(1)"
 name: "ogmcat"
 section: "1"
@@ -10,7 +9,9 @@ description: "ogmcat – Concatenate several OGG/OGM files into one big OGG/OGM 
 
 <h2>NAME</h2>
 <p> ogmcat &#8211; Concatenate several OGG/OGM files into one big OGG/OGM file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ogmcat</code> [<i>options</i>] -o <i>outname</i> <i>inname1</i> [<i>inname2</i> [<i>inname3</i> &#8230;]]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>ogmcat does NOT work at the moment. It is work in progress. I included it just out of laziness (otherwise I&#8217;d have to remove it from the Makefile/configure stuff prior to releasing this version).</code> </p>
 <p> <code>ogmcat</code> can be used to concatenate several OGG/OGM files into one big file if they are of the same type. For a more in-depth description refer to the <code>LIMITATIONS</code> section.</p>
 <dl>

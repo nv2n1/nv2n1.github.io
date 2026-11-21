@@ -1,5 +1,4 @@
 ---
-
 title: "slarfb(3)"
 name: "slarfb"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-slarfb/"
 description: "slarfb.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> slarfb.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slarfb</code> (SIDE, TRANS, DIRECT, STOREV, M, N, K, V, LDV, T, LDT, C, LDC, WORK, LDWORK)<br />
  <i></i><code>SLARFB</code> applies a block reflector or its transpose to a general rectangular matrix.</p>

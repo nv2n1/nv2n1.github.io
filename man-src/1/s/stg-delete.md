@@ -1,5 +1,4 @@
 ---
-
 title: "stg-delete(1)"
 name: "stg-delete"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-stg-delete/"
 description: "stg-delete – Delete patches"
 ---
 
+<h2 class="name">NAME</h2>
+<p> stg-delete &#8211; Delete patches </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 stg delete[options][--]&lt;patch1&gt;[&lt;patch2&gt;][&lt;patch3&gt;..&lt;patch4&gt;]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Delete the patches passed as arguments.</p>
 <h2>OPTIONS</h2>
 <p> &#8211;spill</p>

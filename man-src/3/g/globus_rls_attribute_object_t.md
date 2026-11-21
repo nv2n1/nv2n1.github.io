@@ -1,5 +1,4 @@
 ---
-
 title: "globus_rls_attribute_object_t(3)"
 name: "globus_rls_attribute_object_t"
 section: "3"
@@ -8,7 +7,10 @@ url: "/docs/linux/man/3-globus_rls_attribute_object_t/"
 description: "globus_rls_attribute_object_t –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> globus_rls_attribute_object_t &#8211; </p>
 <p> <code>globus_rls_client_lrc_attr_search()</code> returns a list of these structures which include the object name (LFN or PFN) and attribute value found by the query.</p>
+<h2>SYNOPSIS</h2>
 <h3>Data Fields</h3>
 <p> <code>globus_rls_attribute_t</code> <code>attr</code> </p>
 <p> char * <code>key</code> </p>

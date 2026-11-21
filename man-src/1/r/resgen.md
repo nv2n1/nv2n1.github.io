@@ -1,5 +1,4 @@
 ---
-
 title: "resgen(1)"
 name: "resgen"
 section: "1"
@@ -10,9 +9,11 @@ description: "resgen, resgen2 – Mono/CLI Resource Generator"
 
 <h2>NAME</h2>
 <p> resgen, resgen2 &#8211; Mono/CLI Resource Generator</p>
+<h2>SYNOPSIS</h2>
 <p> <code>resgen source.ext [dest.ext] </code> </p>
 <p> <code>resgen /compile source.ext[,dest.resources] [&#8230;]</code> </p>
 <p> <code>resgen2 </code></p>
+<h2>DESCRIPTION</h2>
 <p> Convert a resource file from one format to another. </p>
 <p> The currently supported formats are text, resources, resx and po.</p>
 <dl>

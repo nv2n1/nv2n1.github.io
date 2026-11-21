@@ -1,5 +1,4 @@
 ---
-
 title: "spufs(2)"
 name: "spufs"
 section: "2"
@@ -10,6 +9,7 @@ description: "spufs – the SPU file system"
 
 <h2>NAME</h2>
 <p> spufs &#8211; the SPU file system </p>
+<h2>DESCRIPTION</h2>
 <p> The SPU file system is used on PowerPC machines that implement the Cell Broadband Engine Architecture in order to access Synergistic Processor Units (SPUs). </p>
 <p> The file system provides a name space similar to posix shared memory or message queues. Users that have write permissions on the file system can use <code><a href="/docs/linux/man/2-spu_create/">spu_create</a></code>(2) to establish SPU contexts in the spufs root. </p>
 <p> Every SPU context is represented by a directory containing a predefined set of files. These files can be used for manipulating the state of the logical SPU. Users can change permissions on those files, but not actually add or remove files. </p>

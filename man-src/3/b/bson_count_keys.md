@@ -1,5 +1,4 @@
 ---
-
 title: "bson_count_keys(3)"
 name: "bson_count_keys"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_count_keys() – The bson_count_keys() function shall count t
 
 <h2>NAME</h2>
 <p> bson_count_keys() &#8211; The bson_count_keys() function shall count the number of elements within bson.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 uint32_t
 bson_count_keys(const bson_t *bson);
@@ -18,6 +18,7 @@ bson_count_keys(const bson_t *bson);
 <dl>
 <dt><code>bson</code></dt>
 <dd> A <code>bson_t</code> \&amp;.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_count_keys/">bson_count_keys</a>(3)</code> function shall count the number of elements within <code>bson</code> \&amp;. </p>
 <h2>RETURNS</h2>
 <p> A positive integer or zero. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "docker-latest-cp(1)"
 name: "docker-latest-cp"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-docker-latest-cp/"
 description: "docker-cp – Copy files/folders between a container and the local filesystem."
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-cp &#8211; Copy files/folders between a container and the local filesystem. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker cp</code> [<code>&#8211;help</code>] CONTAINER:SRC_PATH DEST_PATH|- </p>
 <p> <code>docker cp</code> [<code>&#8211;help</code>] SRC_PATH|- CONTAINER:DEST_PATH </p>
+<h2>DESCRIPTION</h2>
 <p> The docker cp utility copies the contents of SRC_PATH to the DEST_PATH. You can copy from the container&#8217;s file system to the local machine or the reverse, from the local filesystem to the container. If &#8211; is specified for either the SRC_PATH or DEST_PATH, you can also stream a tar archive from STDIN or to STDOUT. The CONTAINER can be a running or stopped container. The SRC_PATH or DEST_PATH can be a file or directory. </p>
 <p> The docker cp command assumes container paths are relative to the container&#8217;s / (root) directory. This means supplying the initial forward slash is optional; The command sees compassionate_darwin:/tmp/foo/myfile.txt and compassionate_darwin:tmp/foo/myfile.txt as identical. Local machine paths can be an absolute or relative value. The command interprets a local machine&#8217;s relative paths as relative to the current working directory where docker cp is run. </p>
 <p> The cp command behaves like the Unix cp -a command in that directories are copied recursively with permissions preserved if possible. Ownership is set to the user and primary group at the destination. For example, files copied to a container are created with UID:GID of the root user. Files copied to the local machine are created with the UID:GID of the user which invoked the docker cp command. If you specify the -L option, docker cp follows any symbolic link in the SRC_PATH. docker cp does <i>not</i> create parent directories for DEST_PATH if they do not exist. </p>

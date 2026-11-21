@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_handshake_set_post_client_hello_function(3)"
 name: "gnutls_handshake_set_post_client_hello_function"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_handshake_set_post_client_hello_function – API function"
 
 <h2>NAME</h2>
 <p> gnutls_handshake_set_post_client_hello_function &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_handshake_set_post_client_hello_function(gnutls_session_t </code><i>session</i><code>, gnutls_handshake_post_client_hello_func </code><i>func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_handshake_set_post_client_hello_function – API function"
 <dd> is a <code>gnutls_session_t</code> structure.</dd>
 <dt>gnutls_handshake_post_client_hello_func func</dt>
 <dd> is the function to be called</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will set a callback to be called after the client hello has been received (callback valid in server side only). This allows the server to adjust settings based on received extensions. </p>
 <p> Those settings could be ciphersuites, requesting certificate, or anything else except for version negotiation (this is done before the hello message is parsed). </p>
 <p> This callback must return 0 on success or a gnutls error code to terminate the handshake. </p>

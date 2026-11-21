@@ -1,5 +1,4 @@
 ---
-
 title: "sorgql(3)"
 name: "sorgql"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-sorgql/"
 description: "sorgql.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sorgql.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sorgql</code> (M, N, K, A, LDA, TAU, WORK, LWORK, INFO)<br />
  <i></i><code>SORGQL</code></p>

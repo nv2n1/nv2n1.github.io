@@ -1,5 +1,4 @@
 ---
-
 title: "clufter-pcs2pcscmd-flatiron(1)"
 name: "clufter-pcs2pcscmd-flatiron"
 section: "1"
@@ -10,7 +9,9 @@ description: "clufter – pcs2pcscmd-flatiron"
 
 <h2>NAME</h2>
 <p> clufter &#8211; pcs2pcscmd-flatiron</p>
+<h2>SYNOPSIS</h2>
 <p> <code>clufter</code> [<i>&lt;global option&gt; </i>&#8230;] <i>pcs2pcscmd-flatiron </i>[<i>&lt;cmd option </i>&#8230;<i>&gt;</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> (Corosync/CMAN,Pacemaker) cluster cfg. -&gt; reinstating pcs commands</p>
 <h2>OPTIONS</h2>
 <dl>

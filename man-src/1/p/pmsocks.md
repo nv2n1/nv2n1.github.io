@@ -1,5 +1,4 @@
 ---
-
 title: "pmsocks(1)"
 name: "pmsocks"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmsocks – shell wrapper for performance monitoring across firewa
 
 <h2>NAME</h2>
 <p> <code>pmsocks</code> &#8211; shell wrapper for performance monitoring across firewalls</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pmsocks</code> <i>path</i> [<i>args</i> &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmsocks</code> allows Performance Co-Pilot (PCP) clients running on hosts located on the internal side of a TCP/IP firewall to monitor remote hosts on the other side of the firewall. This assumes the firewall has been configured with a compliant <code>sockd</code> daemon and the necessary access controls are satisfied.</p>
 <h2>CONFIGURATION</h2>
 <p> <code>pmsocks</code> uses the <code><a href="/docs/linux/man/5-tsocks/">tsocks</a></code>(5) library, which is not included with PCP. You can get <code>tsocks </code> from <i><a rel="nofollow" href="http://www.progsoc.uts.edu.au/~delius/">http://www.progsoc.uts.edu.au/~delius/</a></i>.</p>

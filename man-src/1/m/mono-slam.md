@@ -1,5 +1,4 @@
 ---
-
 title: "mono-slam(1)"
 name: "mono-slam"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mono-slam/"
 description: "mono-slam – Monocular Visual Simultaneous Localization and Mapping (SLAM)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mono-slam &#8211; Monocular Visual Simultaneous Localization and Mapping (SLAM) </p>
+<h2>SYNOPSIS</h2>
 <p> mono-slam</p>
+<h2>DESCRIPTION</h2>
 <p> <code>mono-slam</code> is a <font SIZE="-1">GUI</font> application intended to demonstrate the usage of the Monocular <font SIZE="-1">SLAM</font> classes within <font SIZE="-1">MRPT</font>. The <font SIZE="-1">GUI</font> includes an embedded camera calibration routine.</p>
 <h2>BUGS</h2>
 <p> Please report bugs at <a rel="nofollow" href="http://sourceforge.net/tracker/?group_id=205280">http://sourceforge.net/tracker/?group_id=205280</a>&amp;atid=993006</p>

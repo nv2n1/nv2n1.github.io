@@ -1,5 +1,4 @@
 ---
-
 title: "check_updates(1)"
 name: "check_updates"
 section: "1"
@@ -7,15 +6,22 @@ letter: "c"
 url: "/docs/linux/man/1-check_updates/"
 ---
 
-&quot;check_updates&quot; - a Nagios plugin to check if Red Hat or Fedora system is up-to-date 
+<h2 class="name">NAME</h2>
+ 
 
-check_updates is a Nagios plugin to check if Red Hat or Fedora system is up-to-date
+ &quot;check_updates&quot; - a Nagios plugin to check if Red Hat or Fedora system is up-to-date 
+
+<h2>DESCRIPTION</h2>
+
+ check_updates is a Nagios plugin to check if Red Hat or Fedora system is up-to-date
 
 <h2>VERSION</h2>
 
  Version 1.6.18
 
-<pre><code>
+<h2>SYNOPSIS</h2>
+
+ <pre><code>
 check_updates[OPTIONS] - ?, --usage Print usage information - h, --help Print detailed help screen - V, --version Print version information-- extra - opts = [&lt;section&gt;[@&lt;config_file&gt;]] Section and / or config_file from which to load extra options(may repeat)-- boot - check Check if the machine was booted with the newest kernel(default)-- boot - check - warning Like-- boot - check but state is warning instead of critical-- no - boot - check Do not complain if the machine was booted with an old kernel-- clean Cleans YUM / DNF caches - w, --warning = INTEGER Exit with WARNING status if more than INTEGER updates are available - c, --critical = INTEGER Exit with CRITICAL status if more than INTEGER updates are available-- security - only Ignores non - security updates - a, --yum - arguments = STRING specific Yum arguments as STRING - t, --timeout = INTEGER Seconds before plugin times out(default : 15) - v, --verbose Show details for command - line debugging(can repeat up to 3 times)
 </code></pre>
 

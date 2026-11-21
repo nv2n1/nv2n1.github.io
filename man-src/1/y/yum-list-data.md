@@ -1,5 +1,4 @@
 ---
-
 title: "yum-list-data(1)"
 name: "yum-list-data"
 section: "1"
@@ -10,7 +9,9 @@ description: "yum list data plugin"
 
 <h2>NAME</h2>
 <p> yum list data plugin</p>
+<h2>SYNOPSIS</h2>
 <p> <code>yum</code> [options] [command] [package &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> This plugin extends <code>yum</code> for some commands that give aggregate package data based on lists of packages </p>
 <p> added yum <i>command</i>s are:<br />
  <i></i> * list-vendors<br />

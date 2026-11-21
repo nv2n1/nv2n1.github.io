@@ -1,5 +1,4 @@
 ---
-
 title: "dnsfilter(1)"
 name: "dnsfilter"
 section: "1"
@@ -7,10 +6,12 @@ letter: "d"
 url: "/docs/linux/man/1-dnsfilter/"
 ---
 
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>dnsfilter</code> [<code>OPTIONS</code>]</dt>
 <dd>
 </dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>dnsfilter</code> does the opposite of dnsip. It inverse queries the DNS to convert a given IP address to the corresponding host name. When a query returns the host name, <code>dnsfilter</code> prints the result as </p>
 <p> &lt;ip-address&gt;=&lt;host-name&gt; </p>
 <p> and in case of any error it goes like </p>

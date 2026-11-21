@@ -1,5 +1,4 @@
 ---
-
 title: "alsactl(1)"
 name: "alsactl"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-alsactl/"
 description: "alsactl – advanced controls for ALSA soundcard driver"
 ---
 
+<h2 class="name">NAME</h2>
+<p> alsactl &#8211; advanced controls for ALSA soundcard driver</p>
+<h2>SYNOPSIS</h2>
 <p> <code>alsactl</code> [<i>options</i>] [<i>store</i>|<i>restore</i>|<i>init</i>] &lt;card # or id or device&gt; </p>
 <p> <code>alsactl</code> <i>monitor</i> &lt;card # or id&gt; </p>
 <p> <code>alsactl</code> [<i>clean</i>] &lt;card # or id or device&gt; [[control identifiers]] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>alsactl</code> is used to control advanced settings for the ALSA soundcard drivers. It supports multiple soundcards. If your card has features that you can&#8217;t seem to control from a mixer application, you have come to the right place. </p>
 <h2>COMMANDS</h2>
 <h3>Introduction</h3>

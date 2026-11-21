@@ -1,5 +1,4 @@
 ---
-
 title: "pkaction(1)"
 name: "pkaction"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-pkaction/"
 description: "pkaction – Get details about a registered action"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pkaction &#8211; Get details about a registered action </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pkaction</code> [<code>&#8211;version</code>] [<code>&#8211;help</code>]</dt>
 <dt> <code>pkaction</code> [<code>&#8211;verbose</code>]</dt>
 <dt> <code>pkaction</code> <code>&#8211;action-id</code>&nbsp;<i>action</i> [<code>&#8211;verbose</code>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>pkaction</code></p>
 <dd>is used to obtain information about registered PolicyKit actions. If called with <code>&#8211;action-id</code> then all actions are displayed. Otherwise the action <i>action</i>. If called without the <code>&#8211;verbose</code> option only the name of the action is shown. Otherwise details about the actions are shown.</dd>
 <h2>RETURN VALUE</h2>

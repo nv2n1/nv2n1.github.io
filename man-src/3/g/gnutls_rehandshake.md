@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_rehandshake(3)"
 name: "gnutls_rehandshake"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_rehandshake – API function"
 
 <h2>NAME</h2>
 <p> gnutls_rehandshake &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_rehandshake(gnutls_session_t </code><i>session</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_session_t session</dt>
 <dd> is a <code>gnutls_session_t</code> structure.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will renegotiate security parameters with the client. This should only be called in case of a server. </p>
 <p> This message informs the peer that we want to renegotiate parameters (perform a handshake). </p>
 <p> If this function succeeds (returns 0), you must call the <code>gnutls_handshake()</code> function in order to negotiate the new parameters. </p>

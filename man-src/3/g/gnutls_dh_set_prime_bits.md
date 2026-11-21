@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_dh_set_prime_bits(3)"
 name: "gnutls_dh_set_prime_bits"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_dh_set_prime_bits – API function"
 
 <h2>NAME</h2>
 <p> gnutls_dh_set_prime_bits &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_dh_set_prime_bits(gnutls_session_t </code><i>session</i><code>, unsigned int </code><i>bits</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_dh_set_prime_bits – API function"
 <dd> is a <code>gnutls_session_t</code> structure.</dd>
 <dt>unsigned int bits</dt>
 <dd> is the number of bits</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function sets the number of bits, for use in a Diffie-Hellman key exchange. This is used both in DH ephemeral and DH anonymous cipher suites. This will set the minimum size of the prime that will be used for the handshake. </p>
 <p> In the client side it sets the minimum accepted number of bits. If a server sends a prime with less bits than that <code>GNUTLS_E_DH_PRIME_UNACCEPTABLE</code> will be returned by the handshake. </p>
 <p> Note that this function will warn via the audit log for value that are believed to be weak. </p>

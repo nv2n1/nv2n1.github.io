@@ -1,5 +1,4 @@
 ---
-
 title: "xkbevd(1)"
 name: "xkbevd"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-xkbevd/"
 description: "xkbevd – XKB event daemon"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xkbevd &#8211; XKB event daemon </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xkbevd</code> [ options ]</p>
+<h2>DESCRIPTION</h2>
 <p> This command is very raw and is therefore only partially implemented; we present it here as a rough prototype for developers, not as a general purpose tool for end users. Something like this might make a suitable replacement for xev; I&#8217;m not signing up, mind you, but it&#8217;s an interesting idea. </p>
 <p> The <i>xkbevd</i> event daemon listens for specified XKB events and executes requested commands if they occur. The configuration file consists of a list of event specification/action pairs and/or variable definitions. </p>
 <p> An event specification consists of a short XKB event name followed by a string or identifier which serves as a qualifier in parentheses; empty parenthesis indicate no qualification and serve to specify the default command which is applied to events which do not match any of the other specifications. The interpretation of the qualifier depends on the type of the event: Bell events match using the name of the bell, message events match on the contents of the message string and slow key events accept any of <i>press</i>, <i>release</i>, <i>accept</i>, or <i>reject</i>. No other events are currently recognized. </p>

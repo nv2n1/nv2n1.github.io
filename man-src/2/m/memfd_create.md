@@ -1,5 +1,4 @@
 ---
-
 title: "memfd_create(2)"
 name: "memfd_create"
 section: "2"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/2-memfd_create/"
 description: "memfd_create – create an anonymous file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> memfd_create &#8211; create an anonymous file </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;sys/mman.h&gt;
 int memfd_create(const char *name, unsigned int flags);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>memfd_create</code>() creates an anonymous file and returns a file descriptor that refers to it. The file behaves like a regular file, and so can be modified, truncated, memory-mapped, and so on. However, unlike a regular file, it lives in RAM and has a volatile backing storage. Once all references to the file are dropped, it is automatically released. Anonymous memory is used for all backing pages of the file. Therefore, files created by <code>memfd_create</code>() have the same semantics as other anonymous memory allocations such as those allocated using <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) with the <code>MAP_ANONYMOUS</code> flag. </p>
 <p> The initial size of the file is set to 0. Following the call, the file size should be set using <code><a href="/docs/linux/man/2-ftruncate/">ftruncate</a></code>(2). (Alternatively, the file may be populated by calls to <code><a href="/docs/linux/man/2-write/">write</a></code>(2) or similar.) </p>
 <p> The name supplied in <i>name</i> is used as a filename and will be displayed as the target of the corresponding symbolic link in the directory <i>/proc/self/fd/</i>. The displayed name is always prefixed with <i>memfd:</i> and serves only for debugging purposes. Names do not affect the behavior of the file descriptor, and as such multiple files can have the same name without any side effects. </p>

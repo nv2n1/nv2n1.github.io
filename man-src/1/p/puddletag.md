@@ -1,5 +1,4 @@
 ---
-
 title: "puddletag(1)"
 name: "puddletag"
 section: "1"
@@ -10,7 +9,9 @@ description: "puddletag – puddletag"
 
 <h2>NAME</h2>
 <p> puddletag &#8211; puddletag</p>
+<h2>SYNOPSIS</h2>
 <p> <code>puddletag</code> [<i>options</i>] [<i>directory path</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> puddletag is an audio tag editor (primarily created) for GNU/Linux similar to the Windows program, Mp3tag. Unlike most taggers for GNU/Linux, it uses a spreadsheet-like layout so that all the tags you want to edit by hand are visible and easily editable. </p>
 <p> The usual tag editor features are supported like extracting tag information from filenames, renaming files based on their tags by using patterns and basic tag editing. </p>
 <p> Then there&#8217;re Functions, which can do things like replace text, trim it, do case conversions, etc. Actions can automate repetitive tasks. You can import your QuodLibet library, lookup tags using Amazon (including cover art), Discogs (does cover art too!), FreeDB and MusicBrainz. There&#8217;s quite a bit more, but I&#8217;ve reached my comma quota. </p>

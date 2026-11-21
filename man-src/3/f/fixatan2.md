@@ -1,5 +1,4 @@
 ---
-
 title: "fixatan2(3)"
 name: "fixatan2"
 section: "3"
@@ -10,8 +9,10 @@ description: "fixatan2 – Fixed point version of the libc atan2() routine. Alle
 
 <h2>NAME</h2>
 <p> fixatan2 &#8211; Fixed point version of the libc atan2() routine. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>fixed fixatan2(fixed y, fixed x);</code></p>
+<h2>DESCRIPTION</h2>
 <p> This is a fixed point version of the libc atan2() routine. It computes the arc tangent of `y / x&#8217;, but the signs of both arguments are used to determine the quadrant of the result, and `x&#8217; is permitted to be zero. This function is useful to convert Cartesian coordinates to polar coordinates. Example: </p>
 <pre><code>
 fixed result;

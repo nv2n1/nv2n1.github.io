@@ -1,5 +1,4 @@
 ---
-
 title: "arch(1)"
 name: "arch"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-arch/"
 description: "arch – print machine hardware name (same as uname -m)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> arch &#8211; print machine hardware name (same as uname -m) </p>
+<h2>SYNOPSIS</h2>
 <p> <code>arch</code> [<i>,OPTION/</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Print machine architecture.</p>
 <dl>
 <dt><code>&#8211;help</code></dt>

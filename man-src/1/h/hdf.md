@@ -1,5 +1,4 @@
 ---
-
 title: "hdf(1)"
 name: "hdf"
 section: "1"
@@ -10,10 +9,12 @@ description: "hdf – Hierarchical Data Format library"
 
 <h2>NAME</h2>
 <p> hdf &#8211; Hierarchical Data Format library</p>
+<h2>SYNOPSIS</h2>
 <p> <code> -lmfhdf -ldf -ljpeg -lz [ -lsz ] </p>
 <p> {HDFLIBDIR}/libmfhdf.a {HDFLIBDIR}/libdf.a {JPEGLIBDIR}/libjpeg.a </p>
 <p> {GZIPLIBDIR}/libz.a [{SZIPLIBDIR}/libsz.a] </p>
 <p> </code></p>
+<h2>DESCRIPTION</h2>
 <p> HDF is a multi-object file format that facilitates the transfer of various types of scientific data between machines and operating systems. See <a rel="nofollow" href="http://www.hdfgroup.org/release4/platforms.html">http://www.hdfgroup.org/release4/platforms.html</a> for a list of platforms currently supported. </p>
 <p> HDF allows self-definitions of data content and easy extensibility for future enhancements or compatibility with other standard formats. HDF includes Fortran and C calling interfaces, and utilities for manipulating, viewing, and analyzing data in HDF files. The HDF library contains interfaces for storing and retrieving compressed or uncompressed 8-bit and 24-bit raster images with palettes, n-Dimensional scientific datasets and binary tables. An interface is also included that allows arbitrary grouping of other HDF objects. </p>
 <h3>HDF Raster Images</h3>

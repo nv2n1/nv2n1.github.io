@@ -1,5 +1,4 @@
 ---
-
 title: "gnome-lirc-properties(1)"
 name: "gnome-lirc-properties"
 section: "1"
@@ -10,7 +9,9 @@ description: "gnome-lirc-properties – A control panel to configure remote cont
 
 <h2>NAME</h2>
 <p> gnome-lirc-properties &#8211; A control panel to configure remote controls.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gnome-lirc-properties</code></p>
+<h2>DESCRIPTION</h2>
 <p> This control panel updates lirc&#8217;s configuration files to match your choices. It also allows editing, uploading and downloading of custom remote control configuration files. </p>
 <h2>AUTHORS</h2>
 <p> Written by Murray Cumming and Mathias Hasselmann.. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "myproxy-retrieve(1)"
 name: "myproxy-retrieve"
 section: "1"
@@ -10,7 +9,9 @@ description: "myproxy-retrieve – retrieve an end-entity credential"
 
 <h2>NAME</h2>
 <p> myproxy-retrieve &#8211; retrieve an end-entity credential</p>
+<h2>SYNOPSIS</h2>
 <p> <code>myproxy-retrieve</code> [ <i>options</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>myproxy-retrieve</code> command retrieves a credential directly from the <code><a href="/docs/linux/man/8-myproxy-server/">myproxy-server</a></code>(8) that was previously stored using <code><a href="/docs/linux/man/1-myproxy-init/">myproxy-init</a></code>(1) or <code><a href="/docs/linux/man/1-myproxy-store/">myproxy-store</a></code>(1). Unlike <code><a href="/docs/linux/man/1-myproxy-logon/">myproxy-logon</a></code>(1), this command transfers the private key in the repository over the network (over a private channel). To obtain a proxy credential, we recommend using <code><a href="/docs/linux/man/1-myproxy-logon/">myproxy-logon</a></code>(1) instead. </p>
 <p> In the default mode, the command prompts for the pass phrase associated with the credential to be retrieved and stores the retrieved credential in the standard location ( <i>~/.globus/usercert.pem</i> and <i>~/.globus/userkey.pem</i>). You could then run <code>grid-proxy-init</code> to create a proxy credential from the retrieved credentials.</p>
 <h2>OPTIONS</h2>

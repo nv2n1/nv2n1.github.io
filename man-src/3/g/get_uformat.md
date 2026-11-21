@@ -1,5 +1,4 @@
 ---
-
 title: "get_uformat(3)"
 name: "get_uformat"
 section: "3"
@@ -10,8 +9,10 @@ description: "get_uformat – Finds out what text encoding format is currently s
 
 <h2>NAME</h2>
 <p> get_uformat &#8211; Finds out what text encoding format is currently selected. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>int get_uformat(void);</code></p>
+<h2>DESCRIPTION</h2>
 <p> Finds out what text encoding format is currently selected. This function is probably useful only if you are writing an Allegro addon dealing with text strings and you use a different codepath for each possible format. Example: </p>
 <pre><code>
 switch (get_uformat()) {

@@ -1,5 +1,4 @@
 ---
-
 title: "jove(1)"
 name: "jove"
 section: "1"
@@ -10,8 +9,10 @@ description: "jove – an interactive display-oriented text editor"
 
 <h2>NAME</h2>
 <p> jove &#8211; an interactive display-oriented text editor</p>
+<h2>SYNOPSIS</h2>
 <p> <code>jove</code> [ <code>-d</code><i>&nbsp;<wbr>directory</i> ] [ <code>-l</code><i>&nbsp;<wbr>libdir</i> ] [ <code>-s</code><i>&nbsp;<wbr>sharedir</i> ] [ <code>-ls</code><i>&nbsp;<wbr>bothdir</i> ] [ <code>-J</code> ] [ <code>-j</code> ] [ <code>-w</code><i>n</i> ] [ <code>-t</code><i>&nbsp;<wbr>tag</i> ] [ <code>+</code><i>n file</i> ] [ <code>+/</code><i>pattern file</i> ] [ <code>-p</code><i>&nbsp;<wbr>file</i> ] [ <i>file</i>&#8230; ]<br />
  <code>jove -r</code></p>
+<h2>DESCRIPTION</h2>
 <p> JOVE is Jonathan&#8217;s Own Version of Emacs. It is based on the original EMACS editor written at MIT by Richard Stallman. Although JOVE is meant to be compatible with EMACS, there are some major differences between the two editors and you shouldn&#8217;t rely on their behaving identically. </p>
 <p> JOVE works on any reasonable display terminal that is described in the <i>termcap</i> file (see <a href="/docs/linux/man/5-termcap/">TERMCAP</a>(5) for more details). When you start up JOVE, it checks to see whether you have your <i>TERM</i> environment variable set. On most systems that will automatically be set up for you, but if it&#8217;s not JOVE will ask you what kind of terminal you are using. To avoid having to type this every time you run JOVE you can set your <i>TERM</i> environment variable yourself. How you do this depends on which shell you are running. If you are running the C Shell, as most of you are, you type </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>%&nbsp;<wbr>setenv TERM <i>type</i> </p>

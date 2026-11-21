@@ -1,5 +1,4 @@
 ---
-
 title: "apport-bug(1)"
 name: "apport-bug"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-apport-bug/"
 description: "apport-bug, apport-collect – file a bug report using Apport, or update an existing report"
 ---
 
+<h2 class="name">NAME</h2>
+<p> apport-bug, apport-collect &#8211; file a bug report using Apport, or update an existing report</p>
+<h2>SYNOPSIS</h2>
 <p> <code>apport-bug</code> </p>
 <p> <code>apport-bug</code> <i>symptom </i>|<i> pid </i>|<i> package </i>|<i> program path </i>|<i> .apport/.crash file</i> </p>
 <p> <code>apport-collect</code> <i>report-number</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>apport-bug</code> reports problems to your distribution&#8217;s bug tracking system, using Apport to collect a lot of local information about your system to help the developers to fix the problem and avoid unnecessary question/answer turnarounds. </p>
 <p> You should always start with running <code>apport-bug</code> without arguments, which will present a list of known symptoms. This will generate the most useful bug reports. </p>
 <p> If there is no matching symptom, you need to determine the affected program or package yourself. You can provide a package name or program name to <code>apport-bug</code>, e. g.: </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "rmdtovbox(1)"
 name: "rmdtovbox"
 section: "1"
@@ -11,7 +10,11 @@ url: "/docs/linux/man/1-rmdtovbox/"
 
  rmdtovbox - isdn voice box (converter backend)
 
-This is the real converter, the backend. Don’t call it directly; call it by one of its other names: autovbox, vboxtoau or vboxmode.
+<h2>DESCRIPTION</h2>
+
+ 
+
+ This is the real converter, the backend. Don’t call it directly; call it by one of its other names: autovbox, vboxtoau or vboxmode.
 
 <h2>SEE ALSO</h2>
 

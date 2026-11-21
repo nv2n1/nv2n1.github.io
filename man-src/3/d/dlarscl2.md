@@ -1,5 +1,4 @@
 ---
-
 title: "dlarscl2(3)"
 name: "dlarscl2"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlarscl2/"
 description: "dlarscl2.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlarscl2.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlarscl2</code> (M, N, D, X, LDX)<br />
  <i></i><code>DLARSCL2</code> performs reciprocal diagonal scaling on a vector.</p>

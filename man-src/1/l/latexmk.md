@@ -1,5 +1,4 @@
 ---
-
 title: "latexmk(1)"
 name: "latexmk"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-latexmk/"
 description: "latexmk – generate LaTeX document"
 ---
 
+<h2 class="name">NAME</h2>
+<p> latexmk &#8211; generate LaTeX document </p>
+<h2>SYNOPSIS</h2>
 <p> <code>latexmk [options] [file &#8230;] </code></p>
+<h2>DESCRIPTION</h2>
 <p> <i>Latexmk</i> completely automates the process of compiling a LaTeX document. Essentially, it is like a specialized relative of the general <i>make</i> utility, but one which determines dependencies automatically and has some other very useful features. In its basic mode of operation <i>latexmk</i> is given the name of the primary source file for a document, and it issues the appropriate sequence of commands to generate a .dvi, .ps, .pdf and/or hardcopy version of the document. </p>
 <p> By default <i>latexmk</i> will run the commands necessary to generate a .dvi file, which copies the behavior of earlier versions when only <i>latex</i> was available. </p>
 <p> <i>Latexmk</i> can also be set to run continuously with a suitable previewer. In that case the <i>latex</i> program (or one of its relatives), etc, are rerun whenever one of the source files is modified, and the previewer automatically updates the on-screen view of the compiled document. </p>

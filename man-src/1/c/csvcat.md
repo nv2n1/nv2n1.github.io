@@ -1,5 +1,4 @@
 ---
-
 title: "csvcat(1)"
 name: "csvcat"
 section: "1"
@@ -11,9 +10,13 @@ url: "/docs/linux/man/1-csvcat/"
 
  csvcat - Efficiently concatenate CSV
 
-csvcat file1 file2 [...] &gt; concatenated.csv
+<h2>SYNOPSIS</h2>
 
-Efficiently concatenate CSVs (or other tabular text files), stripping extra header lines. So far, is the fastest non-compiled script I've been able to devise. Plenty open to improvements and suggestions.
+ csvcat file1 file2 [...] &gt; concatenated.csv
+
+<h2>DESCRIPTION</h2>
+
+ Efficiently concatenate CSVs (or other tabular text files), stripping extra header lines. So far, is the fastest non-compiled script I've been able to devise. Plenty open to improvements and suggestions.
 
 <h2>AUTHOR</h2>
 

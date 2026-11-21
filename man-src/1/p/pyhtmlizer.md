@@ -1,5 +1,4 @@
 ---
-
 title: "pyhtmlizer(1)"
 name: "pyhtmlizer"
 section: "1"
@@ -12,6 +11,7 @@ description: "pyhtmlizer – pretty-print Python source as HTML"
 <p> pyhtmlizer &#8211; pretty-print Python source as HTML </p>
 <h2>SYNTAX</h2>
 <p> pyhtmlizer [<i>-s|&#8211;stylesheet</i> &lt;<i>url</i>&gt;] &lt;<i>filename</i>&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> This generates a HTML document with Python source marked up with span elements. To colorize, provide a stylesheet.</p>
 <h2>OPTIONS</h2>
 <dl>

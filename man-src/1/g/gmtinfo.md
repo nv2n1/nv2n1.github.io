@@ -1,5 +1,4 @@
 ---
-
 title: "gmtinfo(1)"
 name: "gmtinfo"
 section: "1"
@@ -10,8 +9,10 @@ description: "gmtinfo – Return information about data tables"
 
 <h2>NAME</h2>
 <p> gmtinfo &#8211; Return information about data tables</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gmtinfo</code> [ <i>table</i> ] [ <code>a</code>|<code>f</code>|<code>s</code> ] [ ] [ [<i>dx</i>[/<i>dy</i>]] ] [ <code>L</code>|<code>l</code>|<code>H</code>|<code>h</code><i>col</i> ] [ [<code>p</code>|<code>f</code>|<code>s</code>]<i>dx</i>[/<i>dy</i>[/<i>dz</i>&#8230;] ] [ [<code>x</code>][<code>y</code>] ] [ <i>dz</i>[/<i>col</i>] ] [ [<i>level</i>] ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-r</code> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>gmtinfo</code> reads its standard input [or from files] and finds the extreme values in each of the columns. It recognizes NaNs and will print warnings if the number of columns vary from record to record. As an option, <code>gmtinfo</code> will find the extent of the first <i>n</i> columns rounded up and down to the nearest multiple of the supplied increments. By default, this output will be in the form <code>-R</code><i>w/e/s/n</i> which can be used directly in the command line for other programs (hence only <i>dx</i> and <i>dy</i> are needed), or the output will be in column form for as many columns as there are increments provided. A similar option (<code>-T</code>) will provide a <code>-T</code><i>zmin/zmax/dz</i> string for makecpt.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <p> None.</p>

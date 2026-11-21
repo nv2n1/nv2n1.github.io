@@ -1,5 +1,4 @@
 ---
-
 title: "fixnt(1)"
 name: "fixnt"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-fixnt/"
 description: "fixnt – Filter for the Windows NT postscript printer driver."
 ---
 
+<h2 class="name">NAME</h2>
+<p> fixnt &#8211; Filter for the Windows NT postscript printer driver. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>fixnt </code> &lt; <i>BADFILE.ps </i> &gt; <i>GOODFILE.ps</i></p>
+<h2>DESCRIPTION</h2>
 <p> The Windows NT postscript driver has a tendency to make broken postscript files, that are incompatible with psutils. <code>fixnt</code> is a filter that fixes these problems, allowing the use of <a href="/docs/linux/man/1-psnup/">psnup</a>(1). </p>
 <p> The filter takes the broken postscript file on <code>stdin</code>, and outputs a fixed postscript file on <code>stdout</code>. It has no other form for invocation and takes no options on the command-line.</p>
 <h2>OPTIONS</h2>

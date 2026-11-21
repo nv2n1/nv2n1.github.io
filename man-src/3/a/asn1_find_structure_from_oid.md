@@ -1,5 +1,4 @@
 ---
-
 title: "asn1_find_structure_from_oid(3)"
 name: "asn1_find_structure_from_oid"
 section: "3"
@@ -10,6 +9,7 @@ description: "asn1_find_structure_from_oid – API function"
 
 <h2>NAME</h2>
 <p> asn1_find_structure_from_oid &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>
 <p> <code>const char * asn1_find_structure_from_oid(asn1_node </code><i>definitions</i><code>, const char * </code><i>oidValue</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "asn1_find_structure_from_oid – API function"
 <dd> ASN1 definitions</dd>
 <dt>const char * oidValue</dt>
 <dd> value of the OID to search (e.g. &quot;1.2.3.4&quot;).</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Search the structure that is defined just after an OID definition.</p>
 <h2>RETURNS</h2>
 <p> <code>NULL</code> when <i>oidValue</i> not found, otherwise the pointer to a constant string that contains the element name defined just after the OID.</p>

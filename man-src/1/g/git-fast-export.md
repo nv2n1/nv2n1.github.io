@@ -1,5 +1,4 @@
 ---
-
 title: "git-fast-export(1)"
 name: "git-fast-export"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-fast-export/"
 description: "git-fast-export – Git data exporter"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-fast-export &#8211; Git data exporter </p>
+<h2>SYNOPSIS</h2>
 <pre>
 <i>git fast-export [&lt;options&gt;]</i> | <i>git fast-import</i>
 </pre>
+<h2>DESCRIPTION</h2>
 <p> This program dumps the given revisions in a form suitable to be piped into <i>git fast-import</i>. </p>
 <p> You can use it as a human-readable bundle replacement (see <code><a href="/docs/linux/man/1-git-bundle/">git-bundle</a></code>(1)), or as a format that can be edited before being fed to <i>git fast-import</i> in order to do history rewrites (an ability relied on by tools like <i>git filter-repo</i>).</p>
 <h2>OPTIONS</h2>

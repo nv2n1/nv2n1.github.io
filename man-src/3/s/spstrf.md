@@ -1,5 +1,4 @@
 ---
-
 title: "spstrf(3)"
 name: "spstrf"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-spstrf/"
 description: "spstrf.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> spstrf.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>spstrf</code> (UPLO, N, A, LDA, PIV, RANK, TOL, WORK, INFO)<br />
  <i></i><code>SPSTRF</code></p>

@@ -1,5 +1,4 @@
 ---
-
 title: "rundig(1)"
 name: "rundig"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-rundig/"
 description: "rundig – sample script to create a search database for ht://Dig"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rundig &#8211; sample script to create a search database for ht://Dig </p>
+<h2>SYNOPSIS</h2>
 <p> <code>rundig</code> <i>[options]</i></p>
+<h2>DESCRIPTION</h2>
 <p> <i>rundig</i> is a sample script to create a search database for the ht://Dig search engine.</p>
 <h2>OPTIONS</h2>
 <dl>

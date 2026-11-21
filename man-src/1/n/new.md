@@ -1,5 +1,4 @@
 ---
-
 title: "new(1)"
 name: "new"
 section: "1"
@@ -8,9 +7,12 @@ url: "/docs/linux/man/1-new/"
 description: "new – report on folders with new messages"
 ---
 
+<h2 class="name">NAME</h2>
+<p> new &#8211; report on folders with new messages </p>
 <p> fnext &#8211; set current folder to next folder with new messages </p>
 <p> fprev &#8211; set current folder to previous folder with new messages </p>
 <p> unseen &#8211; scan new messages in all folders with new messages </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>new</code> [<i>sequences</i>] [<code>-mode</code> <i>mode</i>] [<code>-folders</code> <i>foldersfile</i>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
 <dl>
@@ -22,6 +24,7 @@ description: "new – report on folders with new messages"
 <dl>
 <dt> <code>unseen</code></dt>
 <dd>is equivalent to <code>new -mode unseen</code></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>New</code> in its default mode produces a one-line-per-folder listing of all folders containing messages in the listed <i>sequences</i> or in the sequences listed in the profile entry &#8220;<i>Unseen-Sequence</i>&#8221;. Each line contains the folder, the number of messages in the desired sequences, and the message lists from the .mh_sequences file. For example: </p>
 <dl>
 <dt>

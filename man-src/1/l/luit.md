@@ -1,5 +1,4 @@
 ---
-
 title: "luit(1)"
 name: "luit"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-luit/"
 description: "luit – Locale and ISO 2022 support for Unicode terminals"
 ---
 
+<h2 class="name">NAME</h2>
+<p> luit &#8211; Locale and ISO 2022 support for Unicode terminals </p>
+<h2>SYNOPSIS</h2>
 <p> <code>luit</code> [ <i>options</i> ] [ <code>&#8212;</code> ] [ <i>program</i> [ <i>args</i> ] ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Luit</code> is a filter that can be run between an arbitrary application and a UTF-8 terminal emulator. It will convert application output from the locale&#8217;s encoding into UTF-8, and convert terminal input from UTF-8 into the locale&#8217;s encoding. </p>
 <p> An application may also request switching to a different output encoding using ISO 2022 and ISO 6429 escape sequences. Use of this feature is discouraged: multilingual applications should be modified to directly generate UTF-8 instead. </p>
 <p> <code>Luit</code> is usually invoked transparently by the terminal emulator. For information about running <code>luit</code> from the command line, see EXAMPLES below.</p>

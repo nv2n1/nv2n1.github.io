@@ -1,5 +1,4 @@
 ---
-
 title: "xslate(1)"
 name: "xslate"
 section: "1"
@@ -7,7 +6,10 @@ letter: "x"
 url: "/docs/linux/man/1-xslate/"
 ---
 
-xslate - Process Xslate Templates 
+<h2 class="name">NAME</h2>
+ 
+
+ xslate - Process Xslate Templates 
 
 <h2>USAGE</h2>
 
@@ -33,7 +35,9 @@ $ xslate[options...] target - a-- cache Cache level - t-- type Output content ty
 #=&gt; 327b6f07435811239bc47e1544353273
 </code></pre>
 
-The xslate script is used to process entire directory trees containing template files, or to process one liners.
+<h2>DESCRIPTION</h2>
+
+ The xslate script is used to process entire directory trees containing template files, or to process one liners.
 
 <h2>ARGUMENTS</h2>
 

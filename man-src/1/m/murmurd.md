@@ -1,5 +1,4 @@
 ---
-
 title: "murmurd(1)"
 name: "murmurd"
 section: "1"
@@ -10,7 +9,9 @@ description: "murmurd – VoIP server."
 
 <h2>NAME</h2>
 <p> murmurd &#8211; VoIP server.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>murmurd</code> [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Murmur is the server component of Mumble, a low-latency, high quality VoIP application.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "gpgv2(1)"
 name: "gpgv2"
 section: "1"
@@ -10,7 +9,9 @@ description: "gpgv2 – Verify OpenPGP signatures"
 
 <h2>NAME</h2>
 <p> <code>gpgv2</code> &#8211; Verify OpenPGP signatures</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gpgv2</code> [<i>options</i>] <i>signed_files</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>gpgv2</code> is an OpenPGP signature verification tool. </p>
 <p> This program is actually a stripped-down version of <code>gpg</code> which is only able to check signatures. It is somewhat smaller than the fully-blown <code>gpg</code> and uses a different (and simpler) way to check that the public keys used to make the signature are valid. There are no configuration files and only a few options are implemented. </p>
 <p> <code>gpgv2</code> assumes that all keys in the keyring are trustworthy. By default it uses a keyring named &#8216;<i>trustedkeys.gpg</i>&#8216; which is assumed to be in the home directory as defined by GnuPG or set by an option or an environment variable. An option may be used to specify another keyring or even multiple keyrings. </p>

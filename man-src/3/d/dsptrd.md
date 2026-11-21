@@ -1,5 +1,4 @@
 ---
-
 title: "dsptrd(3)"
 name: "dsptrd"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dsptrd/"
 description: "dsptrd.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dsptrd.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dsptrd</code> (UPLO, N, AP, D, E, TAU, INFO)<br />
  <i></i><code>DSPTRD</code></p>

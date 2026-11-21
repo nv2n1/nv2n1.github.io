@@ -1,5 +1,4 @@
 ---
-
 title: "ipython3(1)"
 name: "ipython3"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-ipython3/"
 description: "ipython – Tools for Interactive Computing in Python."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ipython &#8211; Tools for Interactive Computing in Python. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ipython</code> [<i>options</i>]<i> files</i>&#8230; </p>
 <p> <code>ipython subcommand</code> [<i>options</i>]<i>&#8230;</i> </p>
+<h2>DESCRIPTION</h2>
 <p> An interactive Python shell with automatic history (input and output), dynamic object introspection, easier configuration, command completion, access to the system shell, integration with numerical and scientific computing tools, web notebook, Qt console, and more. </p>
 <p> For more information on how to use IPython, see &#8216;ipython &#8211;help&#8217;, or &#8216;ipython &#8211;help-all&#8217; for all available command-line options. </p>
 <h2>ENVIRONMENT VARIABLES</h2>

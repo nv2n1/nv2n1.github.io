@@ -1,5 +1,4 @@
 ---
-
 title: "ldns-key2ds(1)"
 name: "ldns-key2ds"
 section: "1"
@@ -10,7 +9,9 @@ description: "ldns-key2ds – transform a DNSKEY RR to a DS RR"
 
 <h2>NAME</h2>
 <p> ldns-key2ds &#8211; transform a DNSKEY RR to a DS RR</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ldns-key2ds </code> <i>file</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>ldns-key2ds</code> is used to transform a public DNSKEY RR to a DS RR. When run it will read <i>file</i> with a DNSKEY RR in it and it will create a .ds file with the DS RR in it. </p>
 <p> It prints out the basename for this file (K&lt;name&gt;+&lt;alg&gt;+&lt;id&gt;). </p>
 <p> By default it takes a pick of algorithm similar to the key algorithm, SHA1 for RSASHA1, and so on. </p>

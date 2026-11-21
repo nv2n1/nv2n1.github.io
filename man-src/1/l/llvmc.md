@@ -1,5 +1,4 @@
 ---
-
 title: "llvmc(1)"
 name: "llvmc"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-llvmc/"
 description: "llvmc – The LLVM Compiler Driver (WIP)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> llvmc &#8211; The LLVM Compiler Driver (WIP) </p>
+<h2>SYNOPSIS</h2>
 <p> <code>llvmc</code> [<i>options</i>] <i>filenames&#8230;</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>llvmc</code> is a configurable driver for invoking other <font SIZE="-1">LLVM</font> (and non-LLVM) tools in order to compile, optimize and link software for multiple languages. For those familiar with <font SIZE="-1">FSF</font>&#8216;s <code>gcc</code> tool, it is very similar. Please note that <code>llvmc</code> is considered an experimental tool.</p>
 <h2>OPTIONS</h2>
 <h2>Built-in Options</h2>

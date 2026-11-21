@@ -1,5 +1,4 @@
 ---
-
 title: "jrand48(3)"
 name: "jrand48"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-jrand48/"
 description: "drand48, erand48, lrand48, nrand48, mrand48, jrand48, srand48, seed48, lcong48 – generate uniformly distributed pseudo-random numbers"
 ---
 
+<h2 class="name">NAME</h2>
+<p> drand48, erand48, lrand48, nrand48, mrand48, jrand48, srand48, seed48, lcong48 &#8211; generate uniformly distributed pseudo-random numbers </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;
 double drand48(void);
@@ -24,6 +26,7 @@ void lcong48(unsigned short param[7]);
 <p> All functions shown above: _XOPEN_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE</p>
+<h2>DESCRIPTION</h2>
 <p> These functions generate pseudo-random numbers using the linear congruential algorithm and 48-bit integer arithmetic. </p>
 <p> The <code>drand48</code>() and <code>erand48</code>() functions return nonnegative double-precision floating-point values uniformly distributed over the interval [0.0, 1.0). </p>
 <p> The <code>lrand48</code>() and <code>nrand48</code>() functions return nonnegative long integers uniformly distributed over the interval [0, 2^31). </p>

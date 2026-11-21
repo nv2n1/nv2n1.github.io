@@ -1,5 +1,4 @@
 ---
-
 title: "libssh2_session_banner_set(3)"
 name: "libssh2_session_banner_set"
 section: "3"
@@ -10,8 +9,10 @@ description: "libssh2_session_banner_set – set the SSH prococol banner for the
 
 <h2>NAME</h2>
 <p> libssh2_session_banner_set &#8211; set the SSH prococol banner for the local client</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
 <p> int libssh2_session_banner_set(LIBSSH2_SESSION *session, const char *banner); </p>
+<h2>DESCRIPTION</h2>
 <p> <i>session</i> &#8211; Session instance as returned by <code><a href="/docs/linux/man/3-libssh2_session_init_ex/">libssh2_session_init_ex</a>(3)</code> </p>
 <p> <i>banner</i> &#8211; A pointer to a zero-terminated string holding the user defined banner </p>
 <p> Set the banner that will be sent to the remote host when the SSH session is started with <i>libssh2_session_handshake(3)</i> This is optional; a banner corresponding to the protocol and libssh2 version will be sent by default.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "lav2wav(1)"
 name: "lav2wav"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-lav2wav/"
 description: "lav2wav – Extract the audio out of MJPEG container files to stdout"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lav2wav &#8211; Extract the audio out of MJPEG container files to stdout</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lav2wav</code> [<code>-s</code> <i>num</i>] [<code>-c</code> <i>num</i>] [<code>-v</code> <i>num</i>] [<code>-I</code>] [<code>-R</code>] [<code>-r</code> <i>samplerate,</i> <i>bitesize,</i> <i>channels</i>] <i>lavfile1 </i>[<i>lavfile2 </i>&#8230;<i> lavfileN</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>lav2wav</code> can be used to extract the audio to stdout. This output goes to stdout and can be saved as a wav file or piped to another sound processing tool that is able to handle the wav format. This can be mp2enc and toolame for mpeg layer 2 audio, or for example lame for mpeg layer 3 audio. </p>
 <p> The input files may be any combination of AVI (.avi), Quicktime (.qt) or editlist files so long as they are all lavtools- readable (e.g. MJPEG-encoded AVI/Quicktime or DV type 2 AVI). </p>
 <h2>OPTIONS</h2>

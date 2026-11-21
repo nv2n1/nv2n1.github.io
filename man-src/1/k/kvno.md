@@ -1,5 +1,4 @@
 ---
-
 title: "kvno(1)"
 name: "kvno"
 section: "1"
@@ -10,7 +9,9 @@ description: "kvno – print key version numbers of Kerberos principals"
 
 <h2>NAME</h2>
 <p> kvno &#8211; print key version numbers of Kerberos principals</p>
+<h2>SYNOPSIS</h2>
 <p> <code>kvno</code> [<code>-c</code> <i>ccache</i>] [<code>-e</code> <i>etype</i>] [<code>-q</code>] [<code>-h</code>] [<code>-P</code>] [<code>-S</code> <i>sname</i>] [<code>-U</code> <i>for_user</i>] <i>service1 service2</i> &#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> kvno acquires a service ticket for the specified Kerberos principals and prints out the key version numbers of each.</p>
 <h2>OPTIONS</h2>
 <dl>

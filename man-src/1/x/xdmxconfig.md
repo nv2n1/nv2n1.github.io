@@ -1,5 +1,4 @@
 ---
-
 title: "xdmxconfig(1)"
 name: "xdmxconfig"
 section: "1"
@@ -10,7 +9,9 @@ description: "xdmxconfig – a graphical configuration tool for Xdmx configurati
 
 <h2>NAME</h2>
 <p> xdmxconfig &#8211; a graphical configuration tool for Xdmx configuration files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>xdmxconfig</code> [filename]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>xdmxconfig</i> reads, edits, and writes configuration files for the Xdmx server. The grammar for the configuration file is specified in the <a href="/docs/linux/man/1-xdmx/">Xdmx</a>(1) manual page. </p>
 <p> To start from scratch, create a &quot;New Global&quot; and specify the name and overall dimensions for the configuration. Then use &quot;New Display&quot; to enter more displays. </p>
 <p> If there is more than one configuration, the configuration name button will bring up a selection menu. </p>

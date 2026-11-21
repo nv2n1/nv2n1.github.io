@@ -1,5 +1,4 @@
 ---
-
 title: "byobu-export(1)"
 name: "byobu-export"
 section: "1"
@@ -10,7 +9,9 @@ description: "byobu-export – DEPRECATED"
 
 <h2>NAME</h2>
 <p> byobu-export &#8211; DEPRECATED </p>
+<h2>SYNOPSIS</h2>
 <p> <code>byobu-export</code> </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>byobu-export</code> utility is now deprecated. </p>
 <p> To install byobu on a system for which byobu is not packaged, or where you are not the root user, simply:<br />
 &nbsp;<wbr>*&nbsp;<wbr>Download the latest release&nbsp;<wbr>(&gt;=&nbsp;<wbr>3.0)&nbsp;<wbr>from:<br />

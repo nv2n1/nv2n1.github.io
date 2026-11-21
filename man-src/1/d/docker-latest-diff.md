@@ -1,5 +1,4 @@
 ---
-
 title: "docker-latest-diff(1)"
 name: "docker-latest-diff"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-latest-diff/"
 description: "docker-diff – Inspect changes on a container’s filesystem"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-diff &#8211; Inspect changes on a container&#8217;s filesystem </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker diff</code> [<code>&#8211;help</code>] CONTAINER </p>
+<h2>DESCRIPTION</h2>
 <p> Inspect changes on a container&#8217;s filesystem. You can use the full or shortened container ID or the container name set using <code>docker run &#8211;name</code> option. </p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;help</code><br />

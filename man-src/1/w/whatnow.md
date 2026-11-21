@@ -1,5 +1,4 @@
 ---
-
 title: "whatnow(1)"
 name: "whatnow"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-whatnow/"
 description: "whatnow – prompting front-end for sending messages"
 ---
 
+<h2 class="name">NAME</h2>
+<p> whatnow &#8211; prompting front-end for sending messages </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>whatnow</code> [<code>-draftfolder</code> <i>+folder</i>] [<code>-draftmessage</code> <i>msg</i>] [<code>-nodraftfolder</code>] [<code>-editor</code> <i>editor</i>] [<code>-noedit</code>] [<code>-prompt</code> <i>string</i>] [<i>file</i>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>Whatnow</code></p>
 <dd>is the default program that queries the user about the disposition of a composed draft. It is normally automatically invoked by one of the <code>nmh</code> commands <code>comp</code>, <code>dist</code>, <code>forw</code>, or <code>repl</code> after the initial edit. </dd>
 <p> When started, the editor is started on the draft (unless <code>-noedit</code> is given, in which case the initial edit is suppressed). Then, <code>whatnow</code> repetitively prompts the user with &#8220;What now?&#8221; and awaits a response. The valid responses are: </p>

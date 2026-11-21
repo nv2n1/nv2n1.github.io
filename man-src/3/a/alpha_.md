@@ -1,5 +1,4 @@
 ---
-
 title: "alpha_(3)"
 name: "alpha_"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-alpha_/"
 description: "QuantLib::GaussLobattoIntegral – Integral of a one-dimensional function."
 ---
 
+<h2 class="name">NAME</h2>
+<p> QuantLib::GaussLobattoIntegral &#8211; Integral of a one-dimensional function. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/integrals/gausslobattointegral.hpp&gt; </p>
 <p> Inherits QuantLib::Integrator. </p>
 <h3>Public Member Functions</h3>

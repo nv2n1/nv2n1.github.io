@@ -1,5 +1,4 @@
 ---
-
 title: "rootcint(1)"
 name: "rootcint"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-rootcint/"
 description: "rootcint – ROOT Dictionary generator"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rootcint &#8211; ROOT Dictionary generator </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 rootcint header_file[+][-][!]...[LinkDef.h] &gt; dict_file
                                                   rootcint[-f] dict_file[-c] header_file[+][-][!]...[LinkDef.h]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>rootcint </code> program generates the <i>Streamer()</i>, <i>TBuffer &amp;operator&gt;&gt;() </i> and <i>ShowMembers() </i> methods for <code>ROOT </code> classes, i.e. classes using the <i>ClassDef </i> and <i>ClassImp </i> macros. In addition <code>rootcint </code> can also generate the <code>CINT </code> dictionaries needed in order to get access to ones classes via the interpreter. </p>
 <p> <code>rootcint </code> can be used like: </p>
 <dl>

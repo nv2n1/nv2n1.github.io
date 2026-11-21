@@ -1,5 +1,4 @@
 ---
-
 title: "drill(1)"
 name: "drill"
 section: "1"
@@ -10,7 +9,9 @@ description: "drill – get (debug) information out of DNS(SEC)"
 
 <h2>NAME</h2>
 <p> drill &#8211; get (debug) information out of DNS(SEC)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>drill</code> [ <i>OPTIONS</i> ] <i>name</i> [ <i>@server</i> ] [ <i>type</i> ] [ <i>class</i> ] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>drill</code> is a tool to designed to get all sorts of information out of the DNS. It is specificly designed to be used with DNSSEC. </p>
 <p> The name <code>drill</code> is a pun on <code>dig</code>. With <code>drill</code> you should be able get even more information than with <code>dig</code>. </p>
 <p> If no arguments are given class defaults to &#8216;IN&#8217; and type to &#8216;A&#8217;. The server(s) specified in /etc/resolv.conf are used to query against. </p>

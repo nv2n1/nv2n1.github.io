@@ -1,5 +1,4 @@
 ---
-
 title: "papi_error_codes(1)"
 name: "papi_error_codes"
 section: "1"
@@ -7,7 +6,10 @@ letter: "p"
 url: "/docs/linux/man/1-papi_error_codes/"
 ---
 
-papi_error_codes - papi_error_codes utility. 
+<h2 class="name">NAME</h2>
+ 
+
+ papi_error_codes - papi_error_codes utility. 
 
  file error_codes.c 
 

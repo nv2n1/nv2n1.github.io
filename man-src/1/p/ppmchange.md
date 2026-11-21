@@ -1,5 +1,4 @@
 ---
-
 title: "ppmchange(1)"
 name: "ppmchange"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ppmchange/"
 description: "ppmchange – change all pixels of one color to another in a portable pixmap"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ppmchange &#8211; change all pixels of one color to another in a portable pixmap </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ppmchange</code> [ <code>-closeness </code><i>closeness_percent</i> ] [ <code>-remainder </code><i>remainder_color</i> ] [ <i>oldcolor newcolor</i> ] &#8230; [<i>ppmfile</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> Reads a portable pixmap as input. Changes all pixels of <i>oldcolor </i> to <i>newcolor</i>. You may specify up to 256 oldcolor/newcolor pairs on the command line. <code>ppmchange</code> leaves all colors not mentioned unchanged, unless you specify the <code>-remainder</code> option, in which case they are all changed to the single specified color. </p>
 <p> You can specify that colors similar, but not identical, to the ones you specify get replaced by specifying a &quot;closeness&quot; factor. </p>
 <p> The colors can be specified in five ways:</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "xmlcatalog(1)"
 name: "xmlcatalog"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-xmlcatalog/"
 description: "xmlcatalog – Command line tool to parse and manipulate XML or SGML catalog files."
 ---
 
+<h2 class="name">NAME</h2>
+<p> xmlcatalog &#8211; Command line tool to parse and manipulate XML or SGML catalog files. </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xmlcatalog</code> [<code>&#8211;sgml</code> | <code>&#8211;shell</code> | <code>&#8211;create</code> | <code>&#8211;del&nbsp;</code><i>VALUE(S)</i> | [&nbsp;<code>&#8211;add&nbsp;</code><i>TYPE</i><code>&nbsp;</code><i>ORIG</i><code>&nbsp;</code><i>REPLACE</i><code>&nbsp;</code>&nbsp;|&nbsp;<code>&#8211;add&nbsp;</code><i>FILENAME</i>] | <code>&#8211;noout</code> | <code>&#8211;no-super-update</code> | [<code>-v</code>&nbsp;|&nbsp;<code>&#8211;verbose</code>]] {<i>CATALOGFILE</i>} {<i>ENTITIES</i>&#8230;}</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>xmlcatalog</code></p>
 <dd>is a command line application allowing users to monitor and manipulate XML and SGML catalogs. It is included in <code><a href="/docs/linux/man/3-libxml/">libxml</a></code>(3). </dd>
 <p> Its functions can be invoked from a single command from the command line, or it can perform multiple functions in interactive mode. It can operate on both XML and SGML files.</p>

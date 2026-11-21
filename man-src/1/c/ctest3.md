@@ -1,5 +1,4 @@
 ---
-
 title: "ctest3(1)"
 name: "ctest3"
 section: "1"
@@ -10,9 +9,11 @@ description: "ctest – CTest Command-Line Reference"
 
 <h2>NAME</h2>
 <p> ctest &#8211; CTest Command-Line Reference</p>
+<h2>SYNOPSIS</h2>
 <pre>
 ctest3 [&lt;options&gt;]
 </pre>
+<h2>DESCRIPTION</h2>
 <p> The &quot;ctest3&quot; executable is the CMake test driver program. CMake-generated build trees created for projects that use the ENABLE_TESTING and ADD_TEST commands have testing support. This program will run the tests and report results.</p>
 <h2>OPTIONS</h2>
 <dl>

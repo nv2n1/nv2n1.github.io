@@ -1,5 +1,4 @@
 ---
-
 title: "ctrtri(3)"
 name: "ctrtri"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-ctrtri/"
 description: "ctrtri.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ctrtri.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctrtri</code> (UPLO, DIAG, N, A, LDA, INFO)<br />
  <i></i><code>CTRTRI</code></p>

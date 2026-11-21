@@ -1,5 +1,4 @@
 ---
-
 title: "audit_log_user_avc_message(3)"
 name: "audit_log_user_avc_message"
 section: "3"
@@ -10,8 +9,10 @@ description: "audit_log_user_avc_message – log a user avc message"
 
 <h2>NAME</h2>
 <p> audit_log_user_avc_message &#8211; log a user avc message</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libaudit.h&gt;</code> </p>
 <p> <code>int audit_log_user_avc_message(int audit_fd, int type, const char *message,</code> const char *hostname, const char *addr, const char *tty, uid_t uid) </p>
+<h2>DESCRIPTION</h2>
 <p> This function will log a message to the audit system using a predefined message format. This function should be used by all apps that are SE Linux object managers. The function parameters are as follows: </p>
 <pre>
 audit_fd - The fd returned by audit_open

@@ -1,5 +1,4 @@
 ---
-
 title: "zarafa-dagent(1)"
 name: "zarafa-dagent"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-zarafa-dagent/"
 description: "zarafa-dagent – Deliver mails to Zarafa."
 ---
 
+<h2 class="name">NAME</h2>
+<p> zarafa-dagent &#8211; Deliver mails to Zarafa. </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>zarafa-dagent</code> [<i>OPTION</i>&#8230;] <i>RECIPIENT</i></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>With <code>zarafa-dagent</code>, mail messages can be imported from Internet Mail format to Zarafa. The message is read from standard in and delivered to the Zarafa server in the mailbox of <i>RECIPIENT</i>. You can alter source and destination of this mail with various options. </dd>
 <p> The <i>RECIPIENT</i> value is resolved by zarafa-dagent prior to delivery, and therefore accepts any unique identifier for the recipient. In practice it is most useful to pass the emailaddress of the user as the <i>RECIPIENT</i> parameter since it is always unique (Note that login names are sometimes not unique since group names may overlap). </p>
 <p> The delivery agent will accept and deliver the message piped through it or specified by <code>-f</code> and exit immediately. </p>

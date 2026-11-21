@@ -1,5 +1,4 @@
 ---
-
 title: "dpkg-query(1)"
 name: "dpkg-query"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dpkg-query/"
 description: "dpkg-query – a tool to query the dpkg database"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dpkg-query &#8211; a tool to query the dpkg database </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dpkg-query</code> [<i>option</i>&#8230;] <i>command</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>dpkg-query</code> is a tool to show information about packages listed in the <code>dpkg</code> database.</p>
 <h2>COMMANDS</h2>
 <dl>

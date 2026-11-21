@@ -1,5 +1,4 @@
 ---
-
 title: "muffin(1)"
 name: "muffin"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-muffin/"
 description: "MUFFIN – Clutter based compositing GTK2 Window Manager"
 ---
 
+<h2 class="name">NAME</h2>
+<p> MUFFIN &#8211; Clutter based compositing GTK2 Window Manager </p>
+<h2>SYNOPSIS</h2>
 <p> <code>muffin</code> [&#8211;display=<i>DISPLAY</i>] [&#8211;replace] [&#8211;sm-client-id=<i>ID</i>] [&#8211;sm-disable] [&#8211;sm-save-file=<i>FILENAME</i>] [&#8211;version] [&#8211;help]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly <code>muffin</code>. </p>
 <p> <code>muffin</code> is a minimal X window manager aimed at nontechnical users and is designed to integrate well with the GNOME desktop. <code>muffin</code> lacks some features that may be expected by traditional UNIX or other technical users; these users may want to investigate other available window managers for use with GNOME or standalone.</p>
 <h2>OPTIONS</h2>

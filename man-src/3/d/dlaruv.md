@@ -1,5 +1,4 @@
 ---
-
 title: "dlaruv(3)"
 name: "dlaruv"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlaruv/"
 description: "dlaruv.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlaruv.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlaruv</code> (ISEED, N, X)<br />
  <i></i><code>DLARUV</code> returns a vector of n random real numbers from a uniform distribution.</p>

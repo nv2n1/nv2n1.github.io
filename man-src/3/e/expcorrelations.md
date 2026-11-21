@@ -1,5 +1,4 @@
 ---
-
 title: "expcorrelations(3)"
 name: "expcorrelations"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-expcorrelations/"
 description: "ql/models/marketmodels/correlations/expcorrelations.hpp – exponential correlation matrix"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/models/marketmodels/correlations/expcorrelations.hpp &#8211; exponential correlation matrix </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/matrix.hpp&gt;<br />
  #include &lt;ql/utilities/disposable.hpp&gt;<br />
  #include &lt;ql/models/marketmodels/piecewiseconstantcorrelation.hpp&gt; </p>

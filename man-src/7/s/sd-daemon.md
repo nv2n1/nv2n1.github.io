@@ -1,5 +1,4 @@
 ---
-
 title: "sd-daemon(7)"
 name: "sd-daemon"
 section: "7"
@@ -7,13 +6,14 @@ letter: "s"
 url: "/docs/linux/man/7-sd-daemon/"
 description: "sd-daemon – Reference implementation of APIs for new-style daemons"
 ---
-
 <p>sd-daemon &#8211; Reference implementation of APIs for new-style daemons </p>
+<h2>SYNOPSIS</h2>
 <pre><code>#include &lt;systemd/sd-daemon.h&gt;
 </code></pre>
 <dl>
 <dt><code>pkg-config --cflags --libs libsystemd-daemon</code></dt>
 </dl>
+<h2>DESCRIPTION</h2>
 <dd> <p> sd-daemon.c and sd-daemon.h provide a reference implementation of various APIs for new-style daemons, as implemented by the <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1) init system. </p>
 <p>See <code><a href="/docs/linux/man/3-sd_listen_fds/">sd_listen_fds</a></code>(3), <code><a href="/docs/linux/man/3-sd_notify/">sd_notify</a></code>(3), <code><a href="/docs/linux/man/3-sd_booted/">sd_booted</a></code>(3), <code><a href="/docs/linux/man/3-sd_is_fifo/">sd_is_fifo</a></code>(3) for more information about the functions implemented. In addition to these functions a couple of logging prefixes are defined as macros: </p>
  </dd>

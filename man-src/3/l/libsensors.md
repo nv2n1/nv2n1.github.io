@@ -1,5 +1,4 @@
 ---
-
 title: "libsensors(3)"
 name: "libsensors"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-libsensors/"
 description: "libsensors – publicly accessible functions provided by the sensors library"
 ---
 
+<h2 class="name">NAME</h2>
+<p> libsensors &#8211; publicly accessible functions provided by the sensors library</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sensors/sensors.h&gt;
 /* Library initialization and clean-up */
@@ -53,6 +55,7 @@ void (*sensors_parse_error_wfn)(const char *err,
                                 const char *filename, int lineno);
 void (*sensors_fatal_error)(const char *proc, const char *err);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>sensors_init()</code> loads the configuration file and the detected chips list. If this returns a value unequal to zero, you are in trouble; you can not assume anything will be initialized properly. If you want to reload the configuration file, or load a different configuration file, call sensors_cleanup() below before calling sensors_init() again. This means you can&#8217;t load multiple configuration files at once by calling sensors_init() multiple times. </p>
 <p> The configuration file format is described in <a href="/docs/linux/man/5-sensors-conf/">sensors.conf</a>(5). </p>
 <p> If FILE is NULL, the default configuration files are used (see the FILES section below). Most applications will want to do that. </p>

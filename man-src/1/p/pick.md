@@ -1,5 +1,4 @@
 ---
-
 title: "pick(1)"
 name: "pick"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-pick/"
 description: "pick – search for messages by content"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pick &#8211; search for messages by content </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pick</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-and</code> &#8230;] [<code>-or</code> &#8230;] [<code>-not</code> &#8230;] [<code>-lbrace</code> &#8230; <code>-rbrace</code>] [<code>&#8211;component</code> <i>pattern</i>] [<code>-cc</code> <i>pattern</i>] [<code>-date</code> <i>pattern</i>] [<code>-from</code> <i>pattern</i>] [<code>-search</code> <i>pattern</i>] [<code>-subject</code> <i>pattern</i>] [<code>-to</code> <i>pattern</i>] [<code>-after</code> <i>date</i>] [<code>-before</code> <i>date</i>] [<code>-datefield</code> <i>field</i>] [<code>-sequence</code> <i>name</i> &#8230;] [<code>-nosequence</code>] [<code>-public</code> | <code>-nopublic</code>] [<code>-zero</code> | <code>-nozero</code>] [<code>-list</code> | <code>-nolist</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
 <dd>typical usage: </dd>
@@ -20,6 +22,7 @@ pick -to holloway -sequence select
 show&nbsp;<wbr>`pick -before friday`
 </pre>
 </dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>Pick</code> searches within a folder for messages with the specified contents, and then identifies those messages. Two types of search primitives are available: pattern matching and date constraint operations. </p>
 <p> A modified <i><a href="/docs/linux/man/1-grep/">grep</a></i>(1) is used to perform the matching, so the full regular expression (see <i><a href="/docs/linux/man/1-ed/">ed</a></i>(1)) facility is available within <i>pattern</i>. With <code>-search</code>, <i>pattern</i> is used directly, and with the others, the grep pattern constructed is: </p>
 <dl>

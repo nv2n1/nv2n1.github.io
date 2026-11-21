@@ -1,5 +1,4 @@
 ---
-
 title: "racluster(1)"
 name: "racluster"
 section: "1"
@@ -10,7 +9,9 @@ description: "racluster – aggregate argus(8) data files."
 
 <h2>NAME</h2>
 <p> <code>racluster</code> &#8211; aggregate <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data files.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>racluster</code> [<code>-f</code> <i>conf</i>] [<code>-m</code> <i>agr(s)</i>] [<code>-M</code> <i>mode(s)</i>] [<code>raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Racluster</code> reads <code>argus</code> data from an <i>argus-data</i> source, and clusters/merges the records based on the flow key criteria specified either on the command line, or in a racluster configuration file, and outputs a valid <i>argus-stream</i>. This tool is primarily used for data mining, data management and report generation. </p>
 <p> The default action is to merge status records from the same flow and argus probe, providing in some cases huge data reduction with limited loss of flow information. Racluster provides the ability to modify the flow model key, either using the &quot;-m&quot; option, or in the racluster.conf file, allowing records to be clustered based on any number of attributes. This supports the development of important reports, such as MPLS LSP usage statistics, DiffServe flow marking policy verification, VLAN group behavior, IP distance related measurements, routing loop detection, traceroute path data recovery, and complex availability/reachability reports, to name just a few useful applications. </p>
 <p> Please see racluster.5 for detailed information regarding racluster configuration. </p>

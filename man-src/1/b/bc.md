@@ -1,5 +1,4 @@
 ---
-
 title: "bc(1)"
 name: "bc"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-bc/"
 description: "bc – An arbitrary precision calculator language"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bc &#8211; An arbitrary precision calculator language </p>
 <h2>SYNTAX</h2>
 <p> <code>bc</code> [ <code>-hlwsqv</code> ] [long-options] [ <i> file &#8230;</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>bc</code> is a language that supports arbitrary precision numbers with interactive execution of statements. There are some similarities in the syntax to the C programming language. A standard math library is available by command line option. If requested, the math library is defined before processing any files. <code>bc</code> starts by processing code from all the files listed on the command line in the order listed. After all files have been processed, <code>bc</code> reads from the standard input. All code is executed as it is read. (If a file contains a command to halt the processor, <code>bc</code> will never read from the standard input.) </p>
 <p> This version of <code>bc</code> contains several extensions beyond traditional <code>bc</code> implementations and the POSIX draft standard. Command line options can cause these extensions to print a warning or to be rejected. This document describes the language accepted by this processor. Extensions will be identified as such.</p>
 <h3>OPTIONS</h3>

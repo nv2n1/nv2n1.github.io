@@ -1,5 +1,4 @@
 ---
-
 title: "smiucv(1)"
 name: "smiucv"
 section: "1"
@@ -12,6 +11,7 @@ description: "smiucv – helper utility that provides an IUCV interface to the z
 <p> smiucv &#8211; helper utility that provides an IUCV interface to the z/VM System Management API (SMAPI).</p>
 <h2>SYNOPSYS</h2>
 <p> <code>smiucv</code> [user] [name] &lt;request&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>smiucv</code> is a utility which reads requests from stdin, sends them to the SMAPI server via IUCV and writes the response to stdout. It is intended to be used with the smaclient shell command.</p>
 <h2>OPTIONAL PARAMETERS</h2>
 <dl>

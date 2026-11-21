@@ -1,5 +1,4 @@
 ---
-
 title: "gpk-dbus-service(1)"
 name: "gpk-dbus-service"
 section: "1"
@@ -10,7 +9,9 @@ description: "gpk-dbus-service – GNOME PackageKit Session Service"
 
 <h2>NAME</h2>
 <p> gpk-dbus-service &#8211; GNOME PackageKit Session Service</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gpk-dbus-service</code> [ <code>&#8211;verbose</code> ]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>gpk-dbus-service</code> command. </p>
 <p> <code>gpk-dbus-service</code> provides the PackageKit D-Bus session API in GNOME.</p>
 <h2>SEE ALSO</h2>

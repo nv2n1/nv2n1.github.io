@@ -1,5 +1,4 @@
 ---
-
 title: "prwd(1)"
 name: "prwd"
 section: "1"
@@ -10,7 +9,9 @@ description: "prwd – universal shell prompt"
 
 <h2>NAME</h2>
 <p> <code>prwd</code> &#8211; universal shell prompt</p>
+<h2>SYNOPSIS</h2>
 <p> <code>prwd</code> [-<code>aVh </code></p>
+<h2>DESCRIPTION</h2>
 <p> ] <code>prwd</code> is a replacement for your shell&#8217;s PS1, it provides a simple templating language with commands to customize your prompt. <code>prwd</code> keeps your prompt consistent between shells, provides fast template commands to display contextual information such as hostname, path, current git/hg branch without an inordinate amount of slow shell scripting. </p>
 <p> The command-line options are as follows:</p>
 <dl>

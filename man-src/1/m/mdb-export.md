@@ -1,5 +1,4 @@
 ---
-
 title: "mdb-export(1)"
 name: "mdb-export"
 section: "1"
@@ -10,9 +9,11 @@ description: "mdb-export – Export data in an MDB database table to CSV format.
 
 <h2>NAME</h2>
 <p> <code>mdb-export </code>&#8211; Export data in an MDB database table to CSV format.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 mdb - export[-H][-d delimiter][-R row_delim][[-Q] | [-q quote[-X escape]]][-I backend][-D format][-N namespace][-b strip | raw | octal] database table
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>mdb-export</code> is a utility program distributed with MDB Tools. </p>
 <p> It produces a CSV (comma separated value) output for the given <i>table</i>. Such output is suitable for importation into databases or spreadsheets.</p>
 <h2>OPTIONS</h2>

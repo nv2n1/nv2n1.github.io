@@ -1,5 +1,4 @@
 ---
-
 title: "npm-link(1)"
 name: "npm-link"
 section: "1"
@@ -8,6 +7,7 @@ url: "/docs/linux/man/1-npm-link/"
 description: "npm-link – Symlink a package folder"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>npm-link</code> &#8211; Symlink a package folder </p>
 <h3>Synopsis</h3>
 <dl>

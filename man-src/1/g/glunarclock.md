@@ -1,5 +1,4 @@
 ---
-
 title: "glunarclock(1)"
 name: "glunarclock"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-glunarclock/"
 description: "glunarclock – A lunar clock applet for the gnome panel"
 ---
 
+<h2 class="name">NAME</h2>
+<p> glunarclock &#8211; A lunar clock applet for the gnome panel </p>
+<h2>SYNOPSIS</h2>
 <p> <code>glunarclock-applet-2</code> [<i>no</i>options<i>]</i></p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>glunarclock</code> commands. </p>
 <p> <code>glunarclock</code> displays the current phase of the moon as an applet for the gnome panel. It also provides astronomical data including various clock times, rise and set times for the moon, and the moon&#8217;s current coordinates. </p>
 <p> To add this applet to a Panel, right-click on the Panel and choose Add to panel-&gt;Accessories-&gt;Lunar Glock </p>

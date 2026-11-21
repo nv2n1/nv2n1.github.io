@@ -1,5 +1,4 @@
 ---
-
 title: "sshpk-verify(1)"
 name: "sshpk-verify"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-sshpk-verify/"
 description: "sshpk-verify – verify a signature on data using an SSH key"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sshpk-verify &#8211; verify a signature on data using an SSH key </p>
 <h2>SYNOPSYS</h2>
 <p> <code>sshpk-verify</code> -i KEYPATH -s SIGNATURE [OPTION&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> Takes in arbitrary bytes and a Base64-encoded signature, and verifies that the signature was produced by the private half of the given SSH public key.</p>
 <h2>EXAMPLES</h2>
 <dl>

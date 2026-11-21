@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_dname_new(3)"
 name: "ldns_dname_new"
 section: "3"
@@ -10,12 +9,14 @@ description: "ldns_dname_new, ldns_dname_new_frm_str, ldns_dname_new_frm_data"
 
 <h2>NAME</h2>
 <p> ldns_dname_new, ldns_dname_new_frm_str, ldns_dname_new_frm_data </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_rdf* ldns_dname_new(uint16_t s, void *data); </p>
 <p> ldns_rdf* ldns_dname_new_frm_str(const char *str); </p>
 <p> ldns_rdf* ldns_dname_new_frm_data(uint16_t size, const void *data); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_dname_new</i>()</dt>
 <dd>Create a new dname rdf from a string .br <code>s</code>: the size of the new dname .br <code>*data</code>: pointer to the actual data </dd>

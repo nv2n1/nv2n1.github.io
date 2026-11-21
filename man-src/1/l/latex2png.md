@@ -1,5 +1,4 @@
 ---
-
 title: "latex2png(1)"
 name: "latex2png"
 section: "1"
@@ -10,6 +9,7 @@ description: "latex2png – manual page for latex2png 1.1"
 
 <h2>NAME</h2>
 <p> latex2png &#8211; manual page for latex2png 1.1</p>
+<h2>DESCRIPTION</h2>
 <p> latex2png <code>&#8212;</code> Convert a LaTeX file to a PNG image </p>
 <p> USAGE: latex2png [-d density] [-h] [-k] [-c] [-g] [-m] [-H home dir] file[.tex|.eps] </p>
 <p> The <i>latex2png</i> command converts a LaTeX file into a PNG image. The first page is translated into an image at the specified resolution. <i>latex2png</i> can also be used to convert encapsulated postscript (EPS) files to PNG images.</p>

@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_gass_transfer_listener_get_base_url/"
 description: "Implementing Servers –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Implementing Servers &#8211; </p>
 <p> GASS Server Implementation.</p>
 <h3>Typedefs</h3>
 <p> typedef void(* <code>globus_gass_transfer_close_callback_t</code> )(void *callback_arg, globus_gass_transfer_listener_t listener) </p>

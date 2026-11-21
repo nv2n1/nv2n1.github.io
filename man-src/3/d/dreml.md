@@ -1,5 +1,4 @@
 ---
-
 title: "dreml(3)"
 name: "dreml"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dreml/"
 description: "drem, dremf, dreml, remainder, remainderf, remainderl – floating-point remainder function"
 ---
 
+<h2 class="name">NAME</h2>
+<p> drem, dremf, dreml, remainder, remainderf, remainderl &#8211; floating-point remainder function </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;
 /* The C99 versions */
@@ -39,6 +41,7 @@ long double dreml(long double x, long double y);
 <dt>
 </dt><dd> /* Since glibc 2.19: */ _DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> These functions compute the remainder of dividing <i>x</i> by <i>y</i>. The return value is <i>x</i>&#8211;<i>n</i>*<i>y</i>, where <i>n</i> is the value <i>x&nbsp;/&nbsp;y</i>, rounded to the nearest integer. If the absolute value of <i>x</i>&#8211;<i>n</i>*<i>y</i> is 0.5, <i>n</i> is chosen to be even. </p>
 <p> These functions are unaffected by the current rounding mode (see <code><a href="/docs/linux/man/3-fenv/">fenv</a></code>(3)). </p>
 <p> The <code>drem</code>() function does precisely the same thing.</p>

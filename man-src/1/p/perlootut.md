@@ -1,5 +1,4 @@
 ---
-
 title: "perlootut(1)"
 name: "perlootut"
 section: "1"
@@ -7,7 +6,10 @@ letter: "p"
 url: "/docs/linux/man/1-perlootut/"
 ---
 
-perlootut - Object-Oriented Programming in Perl Tutorial 
+<h2 class="name">NAME</h2>
+ 
+
+ perlootut - Object-Oriented Programming in Perl Tutorial 
 
 <h2>DATE</h2>
 
@@ -15,7 +17,9 @@ perlootut - Object-Oriented Programming in Perl Tutorial
 
  If you are reading this in the future then it's possible that the state of the art has changed. We recommend you start by reading the perlootut document in the latest stable release of Perl, rather than this version.
 
-This document provides an introduction to object-oriented programming in Perl. It begins with a brief overview of the concepts behind object oriented design. Then it introduces several different <font SIZE="-1">OO</font> systems from <font SIZE="-1">CPAN</font> &lt;<a rel="nofollow" HREF="http://search.cpan.org">http://search.cpan.org</a>&gt; which build on top of what Perl provides. 
+<h2>DESCRIPTION</h2>
+
+ This document provides an introduction to object-oriented programming in Perl. It begins with a brief overview of the concepts behind object oriented design. Then it introduces several different <font SIZE="-1">OO</font> systems from <font SIZE="-1">CPAN</font> &lt;<a rel="nofollow" HREF="http://search.cpan.org">http://search.cpan.org</a>&gt; which build on top of what Perl provides. 
 
  By default, Perl's built-in <font SIZE="-1">OO</font> system is very minimal, leaving you to do most of the work. This minimalism made a lot of sense in 1994, but in the years since Perl 5.0 we've seen a number of common patterns emerge in Perl <font SIZE="-1">OO.</font> Fortunately, Perl's flexibility has allowed a rich ecosystem of Perl <font SIZE="-1">OO</font> systems to flourish. 
 

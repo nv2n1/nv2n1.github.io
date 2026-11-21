@@ -1,5 +1,4 @@
 ---
-
 title: "gethostip(1)"
 name: "gethostip"
 section: "1"
@@ -10,7 +9,9 @@ description: "gethostip — convert an IP address into various formats"
 
 <h2>NAME</h2>
 <p> gethostip &#8212; convert an IP address into various formats</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gethostip</code> [<code>-dxnf</code>] [<i>HOSTNAME|IP</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>gethostip</code> command. </p>
 <p> The <code>gethostip</code> utility converts the given hostname or IP address into a variety formats. It is provided by the syslinux package to make it easier to calculate the appropriate names for pxelinux configuration files. These filenames can be the complete hexadecimal representation for a given IP address, or a partial hexadecimal representation to match a range of IP addresses. </p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "ibv_create_wq(3)"
 name: "ibv_create_wq"
 section: "3"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/3-ibv_create_wq/"
 description: "ibv_create_wq, ibv_destroy_wq – create or destroy a Work Queue (WQ)."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ibv_create_wq, ibv_destroy_wq &#8211; create or destroy a Work Queue (WQ). </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs_exp.h&gt;
 struct ibv_wq *ibv_create_wq(struct ibv_context *context,
                              struct ibv_wq_init_attr *wq_init_attr);
 int ibv_destroy_wq(struct ibv_wq *wq);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>ibv_create_wq()</code> creates a WQ associated with the ibv_context <i>context</i>. The argument <i>wq_init_attr</i> is an ibv_wq_init_attr struct, as defined in &lt;infiniband/verbs.h&gt;. </p>
 <pre><code>
 struct ibv_wq_init_attr {

@@ -1,5 +1,4 @@
 ---
-
 title: "kvm(1)"
 name: "kvm"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-kvm/"
 description: "kvm – kvm-enabling wrapper for qemu-system-x86_64"
 ---
 
+<h2 class="name">NAME</h2>
+<p> kvm &#8211; kvm-enabling wrapper for qemu-system-x86_64 </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>kvm</code> wrapper script is used to provide compatibility with old qemu-kvm package which has been merged into qemu as of version 1.3. </p>
 <p> The script executes</p>
 <dl>

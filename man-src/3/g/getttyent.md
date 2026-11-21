@@ -1,5 +1,4 @@
 ---
-
 title: "getttyent(3)"
 name: "getttyent"
 section: "3"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/3-getttyent/"
 description: "getttyent, getttynam, setttyent, endttyent – get ttys file entry"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getttyent, getttynam, setttyent, endttyent &#8211; get ttys file entry </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;ttyent.h&gt;</code> </p>
 <p> <code>struct ttyent *getttyent(void);</code> </p>
 <p> <code>struct ttyent *getttynam(const char *</code><i>name</i><code>);</code> </p>
 <p> <code>int setttyent(void);</code> </p>
 <p> <code>int endttyent(void);</code></p>
+<h2>DESCRIPTION</h2>
 <p> These functions provide an interface to the file <code>_PATH_TTYS</code> (e.g., <i>/etc/ttys</i>). </p>
 <p> The function <code>setttyent</code>() opens the file or rewinds it if already open. </p>
 <p> The function <code>endttyent</code>() closes the file. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "euwatch-put-data(1)"
 name: "euwatch-put-data"
 section: "1"
@@ -8,9 +7,12 @@ url: "/docs/linux/man/1-euwatch-put-data/"
 description: "euwatch-put-data – add data points to a CloudWatch metric"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>euwatch-put-data</code> &#8211; add data points to a CloudWatch metric </p>
+<h2>SYNOPSIS</h2>
 <p> &#8211;<code>n</code> <i>NAMESPACE</i> [-<code>v </code><i>FLOAT</i> ] <i>&#8230;</i><br />
  &#8211;<code>n</code> <i>NAMESPACE</i> [-<code>s </code><i>KEY1=VALUE1,KEY2-VALUE2,&#8230;</i> ] <i>&#8230;</i></p>
+<h2>DESCRIPTION</h2>
 <p> The utility adds data to a CloudWatch metric. A metric datum consists of a metric name, any of several attributes, and either a simple, numeric value (-<code>v</code> ) or a set of statistical values (-<code>s</code> ) </p>
 <p> All of the data in a given invocation of must belong to one namespace, whose name is specified with &#8211;<code>n</code> </p>
 <p> Metric data consist of one or more of the attributes below. These attributes may be specified using dedicated options that apply to all data in a given invocation of <code>,</code> or for individual data as part of an input to &#8211;<code>s</code> A metric name is required for all metric data.</p>

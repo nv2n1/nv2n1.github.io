@@ -1,5 +1,4 @@
 ---
-
 title: "urxvt256c-ml-kuake(1)"
 name: "urxvt256c-ml-kuake"
 section: "1"
@@ -7,7 +6,10 @@ letter: "u"
 url: "/docs/linux/man/1-urxvt256c-ml-kuake/"
 ---
 
-kuake - kuake-like hotkey terminal 
+<h2 class="name">NAME</h2>
+ 
+
+ kuake - kuake-like hotkey terminal 
 
 <h2>EXAMPLES</h2>
 
@@ -16,7 +18,9 @@ kuake - kuake-like hotkey terminal
   URxvt.kuake.hotkey: F10
 </pre>
 
-A very primitive quake-console-like extension. It was inspired by a description of how the programs <tt>&quot;kuake&quot;</tt> and <tt>&quot;yakuake&quot;</tt> work: Whenever the user presses a global accelerator key (by default <tt>&quot;F10&quot;</tt>), the terminal will show or hide itself. Another press of the accelerator key will hide or show it again. 
+<h2>DESCRIPTION</h2>
+
+ A very primitive quake-console-like extension. It was inspired by a description of how the programs <tt>&quot;kuake&quot;</tt> and <tt>&quot;yakuake&quot;</tt> work: Whenever the user presses a global accelerator key (by default <tt>&quot;F10&quot;</tt>), the terminal will show or hide itself. Another press of the accelerator key will hide or show it again. 
 
  Initially, the window will not be shown when using this extension. 
 

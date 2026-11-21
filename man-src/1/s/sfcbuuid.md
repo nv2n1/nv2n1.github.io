@@ -1,5 +1,4 @@
 ---
-
 title: "sfcbuuid(1)"
 name: "sfcbuuid"
 section: "1"
@@ -10,7 +9,9 @@ description: "sfcbuuid – Script to create a universally unique identifier for 
 
 <h2>NAME</h2>
 <p> sfcbuuid &#8211; Script to create a universally unique identifier for the installed Small-Footprint CIM Broker (sfcb)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>sfcbuuid</code> [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> sfcbuuid can be used to create a universally unique identifier (uuid) for sfcb. The uuid will be stored in a file (usually /var/lib/sfcb/uuid). Whenever sfcb needs to return it&#8217;s uuid to a requestor it will read the uuid file from this file.</p>
 <h2>OPTIONS</h2>
 <dl>

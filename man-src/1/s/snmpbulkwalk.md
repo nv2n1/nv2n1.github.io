@@ -1,5 +1,4 @@
 ---
-
 title: "snmpbulkwalk(1)"
 name: "snmpbulkwalk"
 section: "1"
@@ -10,7 +9,9 @@ description: "snmpbulkwalk – retrieve a subtree of management values using SNM
 
 <h2>NAME</h2>
 <p> snmpbulkwalk &#8211; retrieve a subtree of management values using SNMP GETBULK requests</p>
+<h2>SYNOPSIS</h2>
 <p> <code>snmpbulkwalk</code> [APPLICATION OPTIONS] [COMMON OPTIONS] AGENT [OID]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>snmpbulkwalk</code> is an SNMP application that uses SNMP GETBULK requests to query a network entity efficiently for a tree of information. </p>
 <p> An object identifier (OID) may be given on the command line. This OID specifies which portion of the object identifier space will be searched using GETBULK requests. All variables in the subtree below the given OID are queried and their values presented to the user. Each variable name is given in the format specified in <i><a href="/docs/linux/man/5-variables/">variables</a>(5)</i>. If no OID argument is present, <code>snmpbulkwalk</code> will search MIB-2. </p>
 <p> If the network entity has an error processing the request packet, an error packet will be returned and a message will be shown, helping to pinpoint why the request was malformed. </p>

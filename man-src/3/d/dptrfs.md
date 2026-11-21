@@ -1,5 +1,4 @@
 ---
-
 title: "dptrfs(3)"
 name: "dptrfs"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dptrfs/"
 description: "dptrfs.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dptrfs.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dptrfs</code> (N, NRHS, D, E, DF, EF, B, LDB, X, LDX, FERR, BERR, WORK, INFO)<br />
  <i></i><code>DPTRFS</code></p>

@@ -1,5 +1,4 @@
 ---
-
 title: "basis_(3)"
 name: "basis_"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-basis_/"
 description: "QuantLib::EnergyBasisSwap – Energy basis swap."
 ---
 
+<h2 class="name">NAME</h2>
+<p> QuantLib::EnergyBasisSwap &#8211; Energy basis swap. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/experimental/commodities/energybasisswap.hpp&gt; </p>
 <p> Inherits QuantLib::EnergySwap. </p>
 <h3>Public Member Functions</h3>

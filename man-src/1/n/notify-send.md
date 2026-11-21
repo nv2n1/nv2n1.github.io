@@ -1,5 +1,4 @@
 ---
-
 title: "notify-send(1)"
 name: "notify-send"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-notify-send/"
 description: "notify-send – a program to send desktop notifications"
 ---
 
+<h2 class="name">NAME</h2>
+<p> notify-send &#8211; a program to send desktop notifications </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>notify-send</code> [<i>OPTIONS</i>] {<i>summary</i>} [<i>body</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>With <code>notify-send</code> you can send desktop notifications to the user via a notification daemon from the command line. These notifications can be used to inform the user about an event or display some form of information without getting in the user&#8217;s way.</dd>
 <h2>OPTIONS</h2>
 <p> <code>-?</code>, <code>&#8211;help</code></p>

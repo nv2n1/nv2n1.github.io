@@ -1,5 +1,4 @@
 ---
-
 title: "colrm(1)"
 name: "colrm"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-colrm/"
 description: "colrm – remove columns from a file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> colrm &#8211; remove columns from a file </p>
+<h2>SYNOPSIS</h2>
 <p> <code>colrm</code> <i>[first [last]]</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>colrm</code> removes selected columns from a file. Input is taken from standard input. Output is sent to standard output. </p>
 <p> If called with one parameter the columns of each line will be removed starting with the specified <i>first</i> column. If called with two parameters the columns from the <i>first</i> column to the <i>last</i> column will be removed. </p>
 <p> Column numbering starts with column 1.</p>

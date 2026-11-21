@@ -1,5 +1,4 @@
 ---
-
 title: "h5repack(1)"
 name: "h5repack"
 section: "1"
@@ -10,7 +9,9 @@ description: "h5repack – Copy an HDF5 file to a new file with or without compr
 
 <h2>NAME</h2>
 <p> h5repack &#8211; Copy an HDF5 file to a new file with or without compression/chunking</p>
+<h2>SYNOPSIS</h2>
 <p> <code>h5repack</code> <code>-i</code> <i>file1</i> <code>-o</code> <i>file2 </i> [<code>-h</code>] [<code>-v</code>] [<code>-f</code> <i>&#8216;filter&#8217;</i>] [<code>-l</code> <i>&#8216;layout&#8217;</i>] [<code>-m</code> <i>number</i>] [<code>-e</code> <i>file</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>h5repack</code> is a command line tool that applies HDF5 filters to a input file <i>file1</i>, saving the output in a new file, <i>file2</i>. </p>
 <p> <i>&#8216;filter&#8217;</i> is a string with the format <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&lt;list of objects&gt; : &lt;name of filter&gt; = &lt;filter parameters&gt;.</p>
 <p> <i>&lt;list of objects&gt;</i> is a comma separated list of object names meaning apply compression only to those objects. If no object names are specified, the filter is applied to all objects. </p>

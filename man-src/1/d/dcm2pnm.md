@@ -1,5 +1,4 @@
 ---
-
 title: "dcm2pnm(1)"
 name: "dcm2pnm"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-dcm2pnm/"
 description: "dcm2pnm – Convert DICOM images to PGM/PPM, PNG, TIFF or BMP"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dcm2pnm &#8211; Convert DICOM images to PGM/PPM, PNG, TIFF or BMP </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 dcm2pnm[options] dcmfile - in[bitmap - out]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>dcm2pnm</code> utility reads a DICOM image, converts the pixel data according to the selected image processing options and writes back an image in the well-known PGM/PPM (portable gray map / portable pix map), PNG, TIFF or Windows BMP format. This utility only supports uncompressed and RLE compressed DICOM images. The command line tool <code>dcmj2pnm</code> also supports a number of JPEG compression schemes.</p>
 <h2>PARAMETERS</h2>
 <pre>

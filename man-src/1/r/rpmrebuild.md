@@ -1,5 +1,4 @@
 ---
-
 title: "rpmrebuild(1)"
 name: "rpmrebuild"
 section: "1"
@@ -10,7 +9,9 @@ description: "rpmrebuild – a tool to build an rpm package from an installed pa
 
 <h2>NAME</h2>
 <p> rpmrebuild &#8211; a tool to build an rpm package from an installed package </p>
+<h2>SYNOPSIS</h2>
 <p> rpmrebuild [<i>option</i>] &lt;<i>packagename</i>&gt; </p>
+<h2>DESCRIPTION</h2>
 <p> rpmrebuild is a tool to build easily rpm package. it can be used to build an rpm file from an installed package (lost rpm) or to quickly make change to a package: just have your change on installed files and call rpmrebuild. </p>
 <h2>OPTIONS</h2>
 <dl>

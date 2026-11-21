@@ -1,5 +1,4 @@
 ---
-
 title: "gfrm(1)"
 name: "gfrm"
 section: "1"
@@ -10,7 +9,9 @@ description: "gfrm – manual page for gfrm (glusterfs-coreutils) 0.2.0"
 
 <h2>NAME</h2>
 <p> gfrm &#8211; manual page for gfrm (glusterfs-coreutils) 0.2.0</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gfrm</code> [<i>OPTION</i>]&#8230; <i>URL</i></p>
+<h2>DESCRIPTION</h2>
 <p> Remove (unlink) the files (or directories) from a remote Gluster volume.</p>
 <dl>
 <dt><code>-f</code>, <code>&#8211;force</code></dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "endgrent(3)"
 name: "endgrent"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-endgrent/"
 description: "getgrent, setgrent, endgrent – get group file entry"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getgrent, setgrent, endgrent &#8211; get group file entry </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;grp.h&gt;
 #include &lt;sys/types.h&gt;
@@ -32,6 +34,7 @@ void endgrent(void);
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.12:&nbsp;*/&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code>getgrent</code>() function returns a pointer to a structure containing the broken-out fields of a record in the group database (e.g., the local group file <i>/etc/group</i>, NIS, and LDAP). The first time <code>getgrent</code>() is called, it returns the first entry; thereafter, it returns successive entries. </p>
 <p> The <code>setgrent</code>() function rewinds to the beginning of the group database, to allow repeated scans. </p>
 <p> The <code>endgrent</code>() function is used to close the group database after all processing has been performed. </p>

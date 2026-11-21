@@ -1,5 +1,4 @@
 ---
-
 title: "ssdeep(1)"
 name: "ssdeep"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-ssdeep/"
 description: "ssdeep – Computes context triggered piecewise hashes (fuzzy hashes)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ssdeep &#8211; Computes context triggered piecewise hashes (fuzzy hashes)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ssdeep [-m &lt;file&gt;] [-k &lt;file&gt;] [-vdprgsblcxa] [-t val] [FILES]</code><br />
  <code>ssdeep [-V|h]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Computes a signature based on context triggered piecewise hashes for each input file, also called a fuzzy hash. If requested, the program matches those signatures against a file of known signatures and reports any possible matches. It can also examine one or more files of signatures and find any matches in those files. Output is written to standard out and errors to standard error. </p>
 <dl>
 <dt><code>-m &lt;file&gt;</code></dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "dosepsbin(1)"
 name: "dosepsbin"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-dosepsbin/"
 description: "dosepsbin — Extract PS/WMF/TIFF sections from DOS EPS binary files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dosepsbin &#8212; Extract PS/WMF/TIFF sections from DOS EPS binary files </p>
 <h2>VERSION</h2>
 <p> 2012-03-22 v1.2</p>
+<h2>SYNOPSIS</h2>
 <p> The progam <code>dosepsbin</code> analyses an <font SIZE="-1">EPS</font> file that is not a plain <font SIZE="-1">ASCII</font> PostScript file but given as <font SIZE="-1">DOS</font> <font SIZE="-1">EPS</font> binary file. </p>
 <pre>
     dosepsbin [options] &lt;input file&gt;
@@ -20,6 +22,7 @@ description: "dosepsbin — Extract PS/WMF/TIFF sections from DOS EPS binary fil
 --eps - file&lt;file&gt; Write PS section to&lt;file&gt;.--wmf - file&lt;file&gt; Write WMF section to&lt;file&gt;.--tiff - file&lt;file&gt; Write TIFF section to&lt;file&gt;.--inputfile&lt;file&gt; The name of the input file.--verbose Verbose output.--quiet Only errors and warnings are printed.--help Brief help message.--man Full documentation.--version Print version identification.
 </code></pre>
 <p> The files for output must be different from the input file.</p>
+<h2>DESCRIPTION</h2>
 <p> <code><font SIZE="-1">DOS</font> <font SIZE="-1">EPS</font> Binary File Format</code> </p>
 <p> A Encapsulated PostScript (<font SIZE="-1">EPS</font>) file can also given in a special binary format to support the inclusion of a thumbnail. The file format starts with a binary header that contains the positions of the possible sections:</p>
 <dl>

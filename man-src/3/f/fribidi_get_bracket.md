@@ -1,5 +1,4 @@
 ---
-
 title: "fribidi_get_bracket(3)"
 name: "fribidi_get_bracket"
 section: "3"
@@ -7,9 +6,14 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_get_bracket/"
 ---
 
-fribidi_get_bracket - get bracketed character 
+<h2 class="name">NAME</h2>
+ 
 
-<b> #include &lt;fribidi.h&gt; 
+ fribidi_get_bracket - get bracketed character 
+
+<h2>SYNOPSIS</h2>
+
+ <b> #include &lt;fribidi.h&gt; 
 
  extern FriBidiBracketType fribidi_get_bracket(FriBidiChar ch); </b>
 
@@ -19,7 +23,9 @@ fribidi_get_bracket - get bracketed character
 <dt><b>FriBidiChar ch</b>
 </dt><dd> Input character.</dd></dl>
 
-This function finds the bracketed equivalent of a character as defined in the file BidiBrackets.txt of the Unicode Character Database available at <a rel="nofollow" HREF="http://www.unicode.org/Public/UNIDATA/BidiBrackets.txt.">http://www.unicode.org/Public/UNIDATA/BidiBrackets.txt.</a> 
+<h2>DESCRIPTION</h2>
+
+ This function finds the bracketed equivalent of a character as defined in the file BidiBrackets.txt of the Unicode Character Database available at <a rel="nofollow" HREF="http://www.unicode.org/Public/UNIDATA/BidiBrackets.txt.">http://www.unicode.org/Public/UNIDATA/BidiBrackets.txt.</a> 
 
  If the input character is a declared as a brackets character in the Unicode standard and has a bracketed equivalent. The matching bracketed character is put in the output, otherwise the input character itself is put.
 

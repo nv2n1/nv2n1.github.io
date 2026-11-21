@@ -1,5 +1,4 @@
 ---
-
 title: "qhold(1)"
 name: "qhold"
 section: "1"
@@ -8,9 +7,12 @@ url: "/docs/linux/man/1-qhold/"
 description: "qhold – hold back xxQS_NAMExx jobs from execution"
 ---
 
+<h2 class="name">NAME</h2>
+<p> qhold &#8211; hold back xxQS_NAMExx jobs from execution </p>
 <h2>SYNTAX</h2>
 <p> <code>qhold</code> [<code>-h</code> {<code>u</code>|<code>o</code>|<code>s</code>},&#8230;] [<code>-help</code>] [<i>job/task_id_list</i>] </p>
 <p> <code>qhold</code> [<code>-h</code> {<code>u</code>|<code>o</code>|<code>s</code>},&#8230;] [<code>-help</code>] <code>-u</code> <i>user_list</i></p>
+<h2>DESCRIPTION</h2>
 <p> <i>Qhold</i> provides a means for a user/operator/manager to place so called <i>holds</i> on one or more jobs pending scheduling for execution. As long as any type of hold is assigned to a job, the job is not eligible for scheduling. </p>
 <p> Holds can be removed with the or command. </p>
 <p> There are three different types of holds:</p>

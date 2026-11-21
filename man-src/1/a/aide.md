@@ -1,5 +1,4 @@
 ---
-
 title: "aide(1)"
 name: "aide"
 section: "1"
@@ -10,7 +9,9 @@ description: "aide – Advanced Intrusion Detection Environment"
 
 <h2>NAME</h2>
 <p> <code>aide</code> &#8211; Advanced Intrusion Detection Environment</p>
+<h2>SYNOPSIS</h2>
 <p> <code>aide</code> [<code>parameters</code>] <code>command</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>aide</code> is an intrusion detection system for checking the integrity of files. </p>
 <h2>COMMANDS</h2>
 <dl>

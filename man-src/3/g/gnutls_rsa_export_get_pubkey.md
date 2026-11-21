@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_rsa_export_get_pubkey(3)"
 name: "gnutls_rsa_export_get_pubkey"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_rsa_export_get_pubkey – API function"
 
 <h2>NAME</h2>
 <p> gnutls_rsa_export_get_pubkey &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/compat.h&gt;</code> </p>
 <p> <code>int gnutls_rsa_export_get_pubkey(gnutls_session_t </code><i>session</i><code>, gnutls_datum_t * </code><i>exponent</i><code>, gnutls_datum_t * </code><i>modulus</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_rsa_export_get_pubkey – API function"
 <dd> will hold the exponent.</dd>
 <dt>gnutls_datum_t * modulus</dt>
 <dd> will hold the modulus.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will return the peer&#8217;s public key exponent and modulus used in the last RSA-EXPORT authentication. The output parameters must be freed with <code>gnutls_free()</code>.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise an error code is returned.</p>

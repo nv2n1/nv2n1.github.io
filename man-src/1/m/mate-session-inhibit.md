@@ -1,5 +1,4 @@
 ---
-
 title: "mate-session-inhibit(1)"
 name: "mate-session-inhibit"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mate-session-inhibit/"
 description: "mate-session-inhibit – inhibit mate-session functionality"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mate-session-inhibit &#8211; inhibit mate-session functionality </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mate-session-inhibit</code> [OPTION&#8230;] {COMMAND}</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>mate-session-inhibit</code></p>
 <dd>can inhibit certain mate-session functionality while executing the given COMMAND. To achieve this, it calls the Inhibit() method of the mate-session D-Bus API and creates an inhibitor. The inhibitor is automatically removed when mate-session-inhibit exits. </dd>
 <p> A typical use case is to prevent the session from going idle (and thus locking the screen) while a movie player is running.</p>

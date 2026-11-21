@@ -1,5 +1,4 @@
 ---
-
 title: "mckey(1)"
 name: "mckey"
 section: "1"
@@ -11,11 +10,17 @@ url: "/docs/linux/man/1-mckey/"
 
  mckey - RDMA CM multicast setup and simple data transfer test.
 
-<pre><code>
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <pre><code>
 mckey - m multicast_address[-s][-b bind_address][-c connections][-C message_count][-S message_size][-p port_space] mckey - m multicast_address - s[-b bind_address][-c connections][-C message_count][-S message_size][-p port_space] mckey - M unmapped_multicast_address - b bind_address[-s][-c connections][-C message_count][-S message_size][-p port_space]
 </code></pre>
 
-Establishes a set of RDMA multicast communication paths between nodes using the librdmacm, optionally transfers datagrams to receiving nodes, then tears down the communication.
+<h2>DESCRIPTION</h2>
+
+ Establishes a set of RDMA multicast communication paths between nodes using the librdmacm, optionally transfers datagrams to receiving nodes, then tears down the communication.
 
 <h2>OPTIONS</h2>
 

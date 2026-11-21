@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_callback_add_wakeup_handler/"
 description: "Globus Callback Signal Handling –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Globus Callback Signal Handling &#8211; </p>
 <h3>Macros</h3>
 <p> #define <code>GLOBUS_SIGNAL_INTERRUPT</code> </p>
 <h3>Functions</h3>

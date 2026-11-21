@@ -1,5 +1,4 @@
 ---
-
 title: "cimconv(1)"
 name: "cimconv"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-cimconv/"
 description: "cimconv"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>cimconv</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>cimconv </code> [ <code>client</code> ] &#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>cimconv</code> command. </p>
 <p> <code>cimconv</code> is a tool for the centerim instant messaging client. It can be used to convert contact lists and history from other IM clients. So far the <code>client</code> parameter can be one of these: licq, kxicq2, gnomeicu, micq, trillian. </p>
 <h2>AUTHOR</h2>

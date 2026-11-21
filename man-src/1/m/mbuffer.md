@@ -1,5 +1,4 @@
 ---
-
 title: "mbuffer(1)"
 name: "mbuffer"
 section: "1"
@@ -12,6 +11,7 @@ description: "mbuffer – measuring buffer"
 <p> mbuffer &#8211; measuring buffer</p>
 <h2>SYNTAX</h2>
 <p> mbuffer [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> mbuffer buffers I/O operations and displays the throughput rate. It is multi-threaded, supports network connections, and offers more options than the standard buffer.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "w(1)"
 name: "w"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-w/"
 description: "w – Show who is logged on and what they are doing."
 ---
 
+<h2 class="name">NAME</h2>
+<p> w &#8211; Show who is logged on and what they are doing. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>w</code> [<i>options</i>] <i>user</i> [&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>w</code> displays information about the users currently on the machine, and their processes. The header shows, in this order, the current time, how long the system has been running, how many users are currently logged on, and the system load averages for the past 1, 5, and 15 minutes. </p>
 <p> The following entries are displayed for each user: login name, the tty name, the remote host, login time, idle time, JCPU, PCPU, and the command line of their current process. </p>
 <p> The JCPU time is the time used by all processes attached to the tty. It does not include past background jobs, but does include currently running background jobs. </p>

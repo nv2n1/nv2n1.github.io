@@ -1,5 +1,4 @@
 ---
-
 title: "dlaqge(3)"
 name: "dlaqge"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlaqge/"
 description: "dlaqge.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlaqge.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlaqge</code> (M, N, A, LDA, R, C, ROWCND, COLCND, AMAX, EQUED)<br />
  <i></i><code>DLAQGE</code> scales a general rectangular matrix, using row and column scaling factors computed by sgeequ.</p>

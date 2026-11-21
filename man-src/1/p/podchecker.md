@@ -1,5 +1,4 @@
 ---
-
 title: "podchecker(1)"
 name: "podchecker"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-podchecker/"
 description: "podchecker – check the syntax of POD format documentation files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> podchecker &#8211; check the syntax of POD format documentation files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>podchecker</code> [<code>-help</code>] [<code>-man</code>] [<code>-(no)warnings</code>] [<i>file</i> &#8230;]</p>
 <h2>OPTIONS AND ARGUMENTS</h2>
 <dl>
@@ -19,6 +21,7 @@ description: "podchecker – check the syntax of POD format documentation files"
 <dd> Turn on/off printing of warnings. Repeating <code>-warnings</code> increases the warning level, i.e. more warnings are printed. Currently increasing to level two causes flagging of unescaped &#8220;&lt;,&gt;&#8221; characters.</dd>
 <dt><i>file</i></dt>
 <dd> The pathname of a <font SIZE="-1">POD</font> file to syntax-check (defaults to standard input).</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>podchecker</code> will read the given input files looking for <font SIZE="-1">POD</font> syntax errors in the <font SIZE="-1">POD</font> documentation and will print any errors it find to <font SIZE="-1">STDERR.</font> At the end, it will print a status message indicating the number of errors found. </p>
 <p> Directories are ignored, an appropriate warning message is printed. </p>
 <p> <code>podchecker</code> invokes the <code>podchecker()</code> function exported by <code>Pod::Checker</code> Please see &#8220;<code>podchecker()</code>&#8221; in Pod::Checker for more details.</p>

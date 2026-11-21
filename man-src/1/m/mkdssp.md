@@ -1,5 +1,4 @@
 ---
-
 title: "mkdssp(1)"
 name: "mkdssp"
 section: "1"
@@ -10,7 +9,9 @@ description: "mkdssp – Calculate secondary structure for proteins in a PDB fil
 
 <h2>NAME</h2>
 <p> mkdssp &#8211; Calculate secondary structure for proteins in a PDB file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mkdssp</code> [OPTION] pdbfile [dsspfile]</p>
+<h2>DESCRIPTION</h2>
 <p> The <i>mkdssp</i> program was originally designed by Wolfgang Kabsch and Chris Sander to standardize secondary structure assignment. DSSP is a database of secondary structure assignments (and much more) for all protein entries in the Protein Data Bank (PDB) and <i>mkdssp</i> is the application that calculates the DSSP entries from PDB entries. Please note that <i>mkdssp</i> <code>does not predict</code> secondary structure.</p>
 <h2>OPTIONS</h2>
 <p> If you invoke <i>mkdssp</i> with only one parameter, it will be interpreted as the PDB file to process and output will be sent to stdout. If a second parameter is specified this is interpreted as the name of the DSSP file to create. Both the input and the output file names may have either .gz or .bz2 as extension resulting in the proper compression.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "slag2d(3)"
 name: "slag2d"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-slag2d/"
 description: "slag2d.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> slag2d.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slag2d</code> (M, N, SA, LDSA, A, LDA, INFO)<br />
  <i></i><code>SLAG2D</code> converts a single precision matrix to a double precision matrix.</p>

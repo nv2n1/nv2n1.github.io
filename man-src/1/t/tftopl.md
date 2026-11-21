@@ -1,5 +1,4 @@
 ---
-
 title: "tftopl(1)"
 name: "tftopl"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-tftopl/"
 description: "tftopl – convert TeX font metric (tfm) files to property lists"
 ---
 
+<h2 class="name">NAME</h2>
+<p> tftopl &#8211; convert TeX font metric (tfm) files to property lists </p>
+<h2>SYNOPSIS</h2>
 <p> <code>tftopl</code> [<i>OPTIONS</i>] <i>tfm_name</i>[<i></i><code>.tfm</code>] [<i>pl_name</i>[<i></i><code>.pl</code>]]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page is not meant to be exhaustive. The complete documentation for this version of TeX can be found in the info file or manual <i>Web2C: A TeX implementation</i>. </p>
 <p> The <code>tftopl</code> program translates a (program-oriented) font metric file to a (human-oriented) property list file. Thus, you can edit the contents of the TFM files, if the font designer has not done his or her job properly, or if you&#8217;re encountering strange difficulties, or if you&#8217;re just curious. It also serves as a TFM-file validating program, i.e., if no error messages are given, the input file is correct. </p>
 <p> The <i>pl_name</i> is extended with <code>.pl</code> if it lacks a suffix. If <i>pl_name</i> is not given, standard output is used. Likewise, <i>tfm_name</i> is extended with <code>.tfm</code> if it lacks a suffix. Also, path searching is done for the TFM file using the environment variable TEXFONTS. If that is not set, <code>tftopl</code> uses the system default. </p>

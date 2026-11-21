@@ -1,5 +1,4 @@
 ---
-
 title: "lv2ls(1)"
 name: "lv2ls"
 section: "1"
@@ -8,7 +7,9 @@ url: "/docs/linux/man/1-lv2ls/"
 description: "lv2ls – List all installed LV2 plugins."
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>lv2ls &#8211; List all installed LV2 plugins.</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>lv2ls [OPTION]&#8230;</code> </p>
 <h2>OPTIONS</h2>
 <dl>

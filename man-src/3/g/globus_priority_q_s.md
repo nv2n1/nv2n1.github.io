@@ -1,5 +1,4 @@
 ---
-
 title: "globus_priority_q_s(3)"
 name: "globus_priority_q_s"
 section: "3"
@@ -8,7 +7,10 @@ url: "/docs/linux/man/3-globus_priority_q_s/"
 description: "globus_priority_q_s –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> globus_priority_q_s &#8211; </p>
 <p> Priority Queue Structure.</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;globus_priority_q.h&gt;</p>
 <h2>Detailed Description</h2>
 <p> Priority Queue Structure. </p>

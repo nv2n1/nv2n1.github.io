@@ -1,5 +1,4 @@
 ---
-
 title: "flatpak-build-init(1)"
 name: "flatpak-build-init"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-flatpak-build-init/"
 description: "flatpak-build-init – Initialize a build directory"
 ---
 
+<h2 class="name">NAME</h2>
+<p> flatpak-build-init &#8211; Initialize a build directory </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak build-init</code> [OPTION&#8230;] DIRECTORY APPNAME SDK RUNTIME [BRANCH]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>Initializes a directory for building an application. DIRECTORY is the name of the directory. APPNAME is the application id of the app that will be built. SDK and RUNTIME specify the sdk and runtime that the application should be built against and run in. </dd>
 <p> The result of this command is that a metadata file is created inside the given directory. Additionally, empty files and var subdirectories are created. </p>
 <p> It is an error to run build-init on a directory that has already been initialized as a build directory.</p>

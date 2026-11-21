@@ -1,5 +1,4 @@
 ---
-
 title: "csytf2(3)"
 name: "csytf2"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-csytf2/"
 description: "csytf2.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> csytf2.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>csytf2</code> (UPLO, N, A, LDA, IPIV, INFO)<br />
  <i></i><code>CSYTF2</code> computes the factorization of a real symmetric indefinite matrix, using the diagonal pivoting method (unblocked algorithm).</p>

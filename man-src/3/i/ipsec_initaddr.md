@@ -1,5 +1,4 @@
 ---
-
 title: "ipsec_initaddr(3)"
 name: "ipsec_initaddr"
 section: "3"
@@ -10,6 +9,7 @@ description: "ipsec_initaddr, ipsec_addrtypeof, ipsec_addrlenof, ipsec_addrbytes
 
 <h2>NAME</h2>
 <p> ipsec_initaddr, ipsec_addrtypeof, ipsec_addrlenof, ipsec_addrbytesof, ipsec_addrbytesptr &#8211; initialize an ip_address, get address type of an ip_address, get length of address within an ip_address, get copy of address within an ip_address, get pointer to address within an ip_address</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libreswan.h&gt;</code> </p>
 <p> <code>const char *initaddr(const char *src, size_t srclen,</code><br />
  &nbsp;<wbr> <code>int af, ip_address *dst);</code><br />
@@ -19,6 +19,7 @@ description: "ipsec_initaddr, ipsec_addrtypeof, ipsec_addrlenof, ipsec_addrbytes
  &nbsp;<wbr> <code>unsigned char *dst, size_t dstlen);</code><br />
  <code>size_t addrbytesptr(const ip_address *src,</code><br />
  &nbsp;<wbr> <code>const unsigned char **dst);</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>&lt;libreswan.h&gt;</code> library uses an internal type <i>ip_address</i> to contain one of the (currently two) types of IP address. These functions provide basic tools for creating and examining this type. </p>
 <p> <i>Initaddr</i> initializes a variable <i>*dst</i> of type <i>ip_address</i> from an address (in network byte order, indicated by a pointer <i>src</i> and a length <i>srclen</i>) and an address family <i>af</i> (typically <code>AF_INET</code> or <code>AF_INET6</code>). The length must be consistent with the address family. </p>
 <p> <i>Addrtypeof</i> returns the address type of an address, normally <code>AF_INET</code> or <code>AF_INET6</code>. (The <code>&lt;libreswan.h&gt;</code> header file arranges to include the necessary headers for these names to be known.) </p>

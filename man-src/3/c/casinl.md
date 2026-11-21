@@ -1,5 +1,4 @@
 ---
-
 title: "casinl(3)"
 name: "casinl"
 section: "3"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/3-casinl/"
 description: "casin, casinf, casinl – complex arc sine"
 ---
 
+<h2 class="name">NAME</h2>
+<p> casin, casinf, casinl &#8211; complex arc sine </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
 <p> <code>double complex casin(double complex </code><i>z</i><code>);</code><br />
  <code>float complex casinf(float complex </code><i>z</i><code>);</code><br />
  <code>long double complex casinl(long double complex </code><i>z</i><code>);</code> </p>
 <p> Link with <i>-lm</i>.</p>
+<h2>DESCRIPTION</h2>
 <p> These functions calculate the complex arc sine of <i>z</i>. If <i>y&nbsp;=&nbsp;casin(z)</i>, then <i>z&nbsp;=&nbsp;csin(y)</i>. The real part of <i>y</i> is chosen in the interval [-pi/2,pi/2]. </p>
 <p> One has: </p>
 <pre>

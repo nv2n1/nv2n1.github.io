@@ -1,5 +1,4 @@
 ---
-
 title: "gammu(1)"
 name: "gammu"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-gammu/"
 description: "Gammu – Does some neat things with your cellular phone or modem."
 ---
 
+<h2 class="name">NAME</h2>
+<p> Gammu &#8211; Does some neat things with your cellular phone or modem.</p>
+<h2>SYNOPSIS</h2>
 <p> Usage: gammu [<i>parameters</i>] &lt;command&gt; [<i>options</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> This program is a tool for mobile phones. Many vendors and phones are supported, for actual listing see &lt;<a rel="nofollow" href="http://cihar.com/gammu/phonedb/">http://cihar.com/gammu/phonedb/</a>&gt;. </p>
 <h2>OPTIONS</h2>
 <p> Parameters before command configure gammu behaviour:<br />

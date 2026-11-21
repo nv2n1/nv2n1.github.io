@@ -1,5 +1,4 @@
 ---
-
 title: "db_to_html_table(1)"
 name: "db_to_html_table"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-db_to_html_table/"
 description: "db_to_html_table – convert db to an HTML table"
 ---
 
+<h2 class="name">NAME</h2>
+<p> db_to_html_table &#8211; convert db to an HTML table </p>
+<h2>SYNOPSIS</h2>
 <pre>
     db_to_html_table [-g N] &lt;source.fsdb &gt;dest.html
 </pre>
+<h2>DESCRIPTION</h2>
 <p> Covert an existing dbtable to an <font SIZE="-1">HTML</font> table. The output is a fragment of an <font SIZE="-1">HTML</font> page; we assume the user fills in the rest (head and body, etc.). </p>
 <p> Input is fsdb format. </p>
 <p> Output is <font SIZE="-1">HTML</font> code (<i>not</i> fsdb), with HTML-specific characters (less than, greater than, ampersand) are escaped. (The fsdb-1.x version assumed input was <font SIZE="-1">ISO-8859-1</font>; we now assume both input and output are unicode. This change is considered a feature of the 21st century.)</p>

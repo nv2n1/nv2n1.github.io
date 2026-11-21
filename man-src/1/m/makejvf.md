@@ -1,5 +1,4 @@
 ---
-
 title: "makejvf(1)"
 name: "makejvf"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-makejvf/"
 description: "makejvf – Make Japanese VF file from Japanese TeX TFM file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> makejvf &#8211; Make Japanese VF file from Japanese TeX TFM file </p>
+<h2>SYNOPSIS</h2>
 <p> <code>makejvf</code> [&lt;<i>options</i>&gt;] &lt;<i>TeX TFM file</i>&gt; &lt;<i>PS font TFM</i>&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>makejvf</code> is a tool to generate Japanese VF file from Japanese TeX TFM (JFM) file for use with dvips.</p>
 <dl>
 <dt>When processing Japanese texts, pTeX refers to JFM (min10.tfm, jis.tfm etc.), which includes definitions of some different character widths and metric glue/kerns. For most punctuations and quotation marks, the character widths are truncated to less than 1 zw (zenkaku-width; the width of ordinary Kanji characters), and metric glue/kerns are inserted as a substitute.</dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "dcl2inc(1)"
 name: "dcl2inc"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dcl2inc/"
 description: "dcl2inc – postprocess ftnchek .dcl files to create separate INCLUDE files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dcl2inc &#8211; postprocess ftnchek .dcl files to create separate INCLUDE files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dcl2inc</code> <i>*.dcl</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>dcl2inc</code> postprocessing declaration files output by <code><a href="/docs/linux/man/1-ftnchek/">ftnchek</a></code>(1), replacing unique COMMON block definitions by Fortran <i>INCLUDE</i> statements. For each input <i>.dcl</i> file, a modified output <i>.dcn</i> file is produced, together with include files named by the COMMON block name, with filename extension <i>.inc</i>. </p>
 <p> In addition, <code>dcl2inc</code> produces on <i>stdout</i> a list of <i>Makefile</i> dependencies for the UNIX <code><a href="/docs/linux/man/1-make/">make</a></code>(1) utility. These can be appended to the project <i>Makefile</i> to ensure that any subsequent changes to <i>.inc</i> files provoke recompilation of source files that include them. </p>
 <p> <code>dcl2inc</code> warns about COMMONs which differ from their first occurrence, and simply copies them to the output <i>.dcn</i> file, instead of replacing them with an INCLUDE statement. Thus, any COMMON statements that are found in the output <i>.dcn</i> files should be examined carefully to determine why they differ: they may well be in error. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "bson_get_minor_version(3)"
 name: "bson_get_minor_version"
 section: "3"
@@ -10,9 +9,11 @@ description: "bson_get_minor_version() – Get the middle number in libbson’s 
 
 <h2>NAME</h2>
 <p> bson_get_minor_version() &#8211; Get the middle number in libbson&#8217;s MAJOR.MINOR.MICRO release version.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 int bson_get_minor_version(void);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Get the middle number in libbson&#8217;s MAJOR.MINOR.MICRO release version. </p>
 <h2>RETURNS</h2>
 <p> The value of <code>BSON_MINOR_VERSION</code> when Libbson was compiled. </p>

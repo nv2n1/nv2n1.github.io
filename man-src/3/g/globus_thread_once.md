@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_thread_once/"
 description: "One-time execution –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> One-time execution &#8211; </p>
 <h3>Data Structures</h3>
 <p> union <code>globus_thread_once_t</code><br />
  <i>Thread once structure. </i></p>

@@ -1,5 +1,4 @@
 ---
-
 title: "engine_(3)"
 name: "engine_"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-engine_/"
 description: "QuantLib::Instrument – Abstract instrument class."
 ---
 
+<h2 class="name">NAME</h2>
+<p> QuantLib::Instrument &#8211; Abstract instrument class. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instrument.hpp&gt; </p>
 <p> Inherits <code>QuantLib::LazyObject</code>. </p>
 <p> Inherited by <code>Bond</code>, <code>CapFloor</code>, <code>CDO</code>, <code>CdsOption</code>, <code>Commodity</code>, <code>CompositeInstrument</code>, <code>CreditDefaultSwap</code>, <code>Forward</code>, <code>InflationSwap</code>, <code>NthToDefault</code>, <code>Option</code>, <code>PathMultiAssetOption</code>, <code>RiskyAssetSwap</code>, <code>Stock</code>, <code>Swap</code>, <code>SyntheticCDO</code>, <code>VarianceOption</code>, and <code>VarianceSwap</code>. </p>

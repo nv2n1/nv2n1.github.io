@@ -1,5 +1,4 @@
 ---
-
 title: "intel_panel_fitter(1)"
 name: "intel_panel_fitter"
 section: "1"
@@ -10,7 +9,9 @@ description: "intel_panel_fitter – Change the panel fitter settings"
 
 <h2>NAME</h2>
 <p> intel_panel_fitter &#8211; Change the panel fitter settings</p>
+<h2>SYNOPSIS</h2>
 <p> <code>intel_panel_fitter [options]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>intel_panel_fitter</code> is a tool that allows you to change the panel fitter settings, so you can change the size of the screen being displayed on your monitor without changing the real pixel size of your desktop. The biggest use case for this tool is to work around overscan done by TVs and some monitors in interlaced mode.</p>
 <h3>Options</h3>
 <dl>

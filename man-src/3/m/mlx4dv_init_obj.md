@@ -1,5 +1,4 @@
 ---
-
 title: "mlx4dv_init_obj(3)"
 name: "mlx4dv_init_obj"
 section: "3"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/3-mlx4dv_init_obj/"
 description: "mlx4dv_init_obj – Initialize mlx4 direct verbs object from ibv_xxx structures"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mlx4dv_init_obj &#8211; Initialize mlx4 direct verbs object from ibv_xxx structures </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/mlx4dv.h&gt;
 int mlx4dv_init_obj(struct mlx4dv_obj *obj, uint64_t obj_type);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>mlx4dv_init_obj()</code> This function will initialize mlx4dv_xxx structs based on supplied type. The information for initialization is taken from ibv_xx structs supplied as part of input. </p>
 <p> Request information of CQ marks its owned by direct verbs for all consumer index related actions. The initialization type can be combination of several types together. </p>
 <pre><code>

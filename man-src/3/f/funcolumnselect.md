@@ -1,5 +1,4 @@
 ---
-
 title: "funcolumnselect(3)"
 name: "funcolumnselect"
 section: "3"
@@ -10,6 +9,7 @@ description: "FunColumnSelect – select Funtools columns"
 
 <h2>NAME</h2>
 <p> <code>FunColumnSelect &#8211; select Funtools columns</code></p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;funtools.h&gt;
 </code></pre>
@@ -21,6 +21,7 @@ description: "FunColumnSelect – select Funtools columns"
 <p>int FunColumnSelectArr(Fun fun, int size, char *plist,<br />
                        char **names, char **types, char **modes,<br />
                        int *offsets, int nargs);</p>
+<h2>DESCRIPTION</h2>
 <p> The FunColumnSelect() routine is used to select the columns from a Funtools binary table extension or raw event file for processing. This routine allows you to specify how columns in a file are to be read into a user record structure or written from a user record structure to an output <font SIZE="-1">FITS</font> file. </p>
 <p> The first argument is the Fun handle associated with this set of columns. The second argument specifies the size of the user record structure into which columns will be read. Typically, the <i>sizeof()</i> macro is used to specify the size of a record structure. The third argument allows you to specify keyword directives for the selection and is described in more detail below. </p>
 <p> Following the first three required arguments is a variable length list of column specifications. Each column specification will consist of four arguments:</p>

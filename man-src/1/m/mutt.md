@@ -1,5 +1,4 @@
 ---
-
 title: "mutt(1)"
 name: "mutt"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-mutt/"
 description: "mutt – The Mutt Mail User Agent"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mutt &#8211; The Mutt Mail User Agent </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mutt</code> [-nRyzZ] [-e <i>cmd</i>] [-F <i>file</i>] [-m <i>type</i>] [-f <i>file</i>] </p>
 <p> <code>mutt </code> [-Enx] [-e <i>cmd</i>] [-F <i>file</i>] [-H <i>file</i>] [-i <i>file</i>] [-s <i>subj</i>] [-b <i>addr</i>] [-c <i>addr</i>] [-a <i>file</i> [&#8230;] &#8211;] <i>addr|mailto_url</i> [&#8230;] </p>
 <p> <code>mutt </code> [-nx] [-e <i>cmd</i>] [-F <i>file</i>] [-s <i>subj</i>] [-b <i>addr</i>] [-c <i>addr</i>] [-a <i>file</i> [&#8230;] &#8211;] <i>addr|mailto_url</i> [&#8230;] &lt; message </p>
@@ -16,6 +18,7 @@ description: "mutt – The Mutt Mail User Agent"
 <p> <code>mutt</code> [-n] [-e <i>cmd</i>] [-F <i>file</i>] -Q <i>query</i> </p>
 <p> <code>mutt </code> -v[v] </p>
 <p> <code>mutt </code> -D</p>
+<h2>DESCRIPTION</h2>
 <p> Mutt is a small but very powerful text based program for reading and sending electronic mail under unix operating systems, including support for color terminals, MIME, OpenPGP, and a threaded sorting mode. </p>
 <p> <i>Note:</i> This manual page gives a brief overview of mutt&#8217;s command line options. You should find a copy of the full manual in /usr/share/doc/mutt, in text, HTML, and/or PDF format.</p>
 <h2>OPTIONS</h2>

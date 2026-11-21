@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_certificate_get_x509_cas(3)"
 name: "gnutls_certificate_get_x509_cas"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_certificate_get_x509_cas – Used to export all the CAs fro
 
 <h2>NAME</h2>
 <p> gnutls_certificate_get_x509_cas &#8211; Used to export all the CAs from a gnutls_certificate_credentials_t structure</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/gnutls.h">gnutls/gnutls.h</a>&gt;</code> </p>
 <p> <code>void gnutls_certificate_get_x509_cas(gnutls_certificate_credentials_t </code><i>sc</i><code>, gnutls_x509_crt_t ** </code><i>x509_ca_list</i><code>, unsigned int * </code><i>ncas</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_certificate_get_x509_cas – Used to export all the CAs fro
 <dd> will point to the CA list. Should be treated as constant</dd>
 <dt>unsigned int * ncas</dt>
 <dd> the number of CAs</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will export all the CAs associated with the given credentials.</p>
 <h2>SINCE</h2>
 <p> 2.4.0</p>

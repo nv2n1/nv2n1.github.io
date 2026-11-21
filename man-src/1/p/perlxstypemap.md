@@ -1,5 +1,4 @@
 ---
-
 title: "perlxstypemap(1)"
 name: "perlxstypemap"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-perlxstypemap/"
 description: "perlxstypemap – Perl XS C/Perl type mapping"
 ---
 
+<h2 class="name">NAME</h2>
+<p> perlxstypemap &#8211; Perl XS C/Perl type mapping </p>
+<h2>DESCRIPTION</h2>
 <p> The more you think about interfacing between two languages, the more you&#8217;ll realize that the majority of programmer effort has to go into converting between the data structures that are native to either of the languages involved. This trumps other matter such as differing calling conventions because the problem space is so much greater. There are simply more ways to shove data into memory than there are ways to implement a function call. </p>
 <p> Perl <font SIZE="-1">XS</font>&#8216; attempt at a solution to this is the concept of typemaps. At an abstract level, a Perl <font SIZE="-1">XS</font> typemap is nothing but a recipe for converting from a certain Perl data structure to a certain C data structure and vice versa. Since there can be C types that are sufficiently similar to one another to warrant converting with the same logic, <font SIZE="-1">XS</font> typemaps are represented by a unique identifier, henceforth called an <font SIZE="-1"><code>XS</code></font><code> type</code> in this document. You can then tell the <font SIZE="-1">XS</font> compiler that multiple C types are to be mapped with the same <font SIZE="-1">XS</font> typemap. </p>
 <p> In your <font SIZE="-1">XS</font> code, when you define an argument with a C type or when you are using a <tt>&quot;CODE:&quot;</tt> and an <tt>&quot;OUTPUT:&quot;</tt> section together with a C return type of your <font SIZE="-1">XSUB,</font> it&#8217;ll be the typemapping mechanism that makes this easy.</p>

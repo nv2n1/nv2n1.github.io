@@ -1,5 +1,4 @@
 ---
-
 title: "pbsdsh(1)"
 name: "pbsdsh"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-pbsdsh/"
 description: "pbsdsh – distribute task to nodes under pbs"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pbsdsh &#8211; distribute task to nodes under pbs </p>
+<h2>SYNOPSIS</h2>
 <p> pbsdsh [-c copies] [-o] [-s] [-u] [-v] program [args]<br />
  pbsdsh [-n node] [-o] [-s] [-u] [-v] program [args]<br />
  pbsdsh [-h nodename] [-o] [-v] program [args]</p>
+<h2>DESCRIPTION</h2>
 <p> Executes (spawns) a normal Unix program on one or more nodes under control of the Portable Batch System, PBS. Pbsdsh uses the Task Manager API, see tm_spawn(3), to distribute the program on the allocated nodes. </p>
 <p> When run without the -c or the -n option, pbsdsh will spawn the program on all nodes allocated to the PBS job. The spawns take place concurrently &#8211; all execute at (about) the same time. </p>
 <p> Users will find the <code>PBS_TASKNUM</code> , <code>PBS_NODENUM</code> , and the <code>PBS_VNODENUM</code> environmental variables useful. They contain the TM task id, the node identifier, and the cpu (virtual node) identifier.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "git-check-mailmap(1)"
 name: "git-check-mailmap"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-check-mailmap/"
 description: "git-check-mailmap – Show canonical names and email addresses of contacts"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-check-mailmap &#8211; Show canonical names and email addresses of contacts </p>
+<h2>SYNOPSIS</h2>
 <pre>
 <i>git check-mailmap</i> [&lt;options&gt;] &lt;contact&gt;...
 </pre>
+<h2>DESCRIPTION</h2>
 <p> For each &#8220;Name &lt;user [at] host&gt;&#8221; or &#8220;&lt;user [at] host&gt;&#8221; from the command-line or standard input (when using <code>&#8211;stdin</code>), look up the person&#8217;s canonical name and email address (see &quot;Mapping Authors&quot; below). If found, print them; otherwise print the input as-is.</p>
 <h2>OPTIONS</h2>
 <p> &#8211;stdin</p>

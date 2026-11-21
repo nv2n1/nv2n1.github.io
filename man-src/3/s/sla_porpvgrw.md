@@ -1,5 +1,4 @@
 ---
-
 title: "sla_porpvgrw(3)"
 name: "sla_porpvgrw"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-sla_porpvgrw/"
 description: "sla_porpvgrw.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sla_porpvgrw.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>sla_porpvgrw</code> (UPLO, NCOLS, A, LDA, AF, LDAF, WORK)<br />
  <i></i><code>SLA_PORPVGRW</code> computes the reciprocal pivot growth factor norm(A)/norm(U) for a symmetric or Hermitian positive-definite matrix.</p>

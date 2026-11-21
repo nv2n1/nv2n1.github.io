@@ -1,5 +1,4 @@
 ---
-
 title: "setfsuid32(2)"
 name: "setfsuid32"
 section: "2"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/2-setfsuid32/"
 description: "setfsuid – set user identity used for filesystem checks"
 ---
 
+<h2 class="name">NAME</h2>
+<p> setfsuid &#8211; set user identity used for filesystem checks </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/fsuid.h&gt;</code> </p>
 <p> <code>int setfsuid(uid_t </code><i>fsuid</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> On Linux, a process has both a filesystem user ID and an effective user ID. The (Linux-specific) filesystem user ID is used for permissions checking when accessing filesystem objects, while the effective user ID is used for various other kinds of permissions checks (see <code><a href="/docs/linux/man/7-credentials/">credentials</a></code>(7)). </p>
 <p> Normally, the value of the process&#8217;s filesystem user ID is the same as the value of its effective user ID. This is so, because whenever a process&#8217;s effective user ID is changed, the kernel also changes the filesystem user ID to be the same as the new value of the effective user ID. A process can cause the value of its filesystem user ID to diverge from its effective user ID by using <code>setfsuid</code>() to change its filesystem user ID to the value given in <i>fsuid</i>. </p>
 <p> Explicit calls to <code>setfsuid</code>() and <code><a href="/docs/linux/man/2-setfsgid/">setfsgid</a></code>(2) are (were) usually used only by programs such as the Linux NFS server that need to change what user and group ID is used for file access without a corresponding change in the real and effective user and group IDs. A change in the normal user IDs for a program such as the NFS server is (was) a security hole that can expose it to unwanted signals. (However, this issue is historical; see below.) </p>

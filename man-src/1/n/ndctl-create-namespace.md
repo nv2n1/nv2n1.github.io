@@ -1,5 +1,4 @@
 ---
-
 title: "ndctl-create-namespace(1)"
 name: "ndctl-create-namespace"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-ndctl-create-namespace/"
 description: "ndctl-create-namespace – provision or reconfigure a namespace"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ndctl-create-namespace &#8211; provision or reconfigure a namespace </p>
+<h2>SYNOPSIS</h2>
 <pre>
 <i>ndctl create-namespace</i> [&lt;options&gt;]
 </pre>
+<h2>DESCRIPTION</h2>
 <p> A REGION, after resolving DPA aliasing and LABEL specified boundaries, surfaces one or more &quot;namespace&quot; devices. The arrival of a &quot;namespace&quot; device currently triggers either the nd_blk or nd_pmem driver to load and register a disk/block device.</p>
 <h2>EXAMPLES</h2>
 <p> Create a maximally sized pmem namespace in <i>memory</i> mode </p>

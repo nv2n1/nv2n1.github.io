@@ -1,5 +1,4 @@
 ---
-
 title: "pnmarith(1)"
 name: "pnmarith"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pnmarith/"
 description: "pnmarith – perform arithmetic on two portable anymaps"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pnmarith &#8211; perform arithmetic on two portable anymaps </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pnmarith</code> <code>-add</code>|<code>-subtract</code>|<code>-multiply</code>|<code>-difference</code>|<code>-minimum</code>|<code>-maximum.</code> <i>pnmfile1 pnmfile2</i></p>
+<h2>DESCRIPTION</h2>
 <p> Reads two portable anymaps as input. Performs the specified arithmetic operation, and produces a portable anymap as output. The two input anymaps must be the same width and height. </p>
 <p> The arithmetic is performed between corresponding pixels in the two anymaps, as if maxval was 1.0, black was 0.0, and a linear scale in between. Results that fall outside of [0..1) are truncated. </p>
 <p> The operator <i>-difference</i> calculates the absolute value of <i>pnmarith -subtract pnmfile1 pnmfile2,</i> i.e. no truncation is done. </p>

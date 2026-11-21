@@ -1,5 +1,4 @@
 ---
-
 title: "install_joystick(3)"
 name: "install_joystick"
 section: "3"
@@ -10,8 +9,10 @@ description: "install_joystick – Initialises the joystick. Allegro game progra
 
 <h2>NAME</h2>
 <p> install_joystick &#8211; Initialises the joystick. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>int install_joystick(int type);</code></p>
+<h2>DESCRIPTION</h2>
 <p> Installs Allegro&#8217;s joystick handler, and calibrates the centre position values. The type parameter should usually be JOY_TYPE_AUTODETECT, or see the platform specific documentation for a list of the available drivers. You must call this routine before using any other joystick functions, and you should make sure that all joysticks are in the middle position at the time. Example: </p>
 <pre><code>
 textout_centre_ex(screen, font,

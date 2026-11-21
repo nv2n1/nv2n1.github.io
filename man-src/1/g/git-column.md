@@ -1,5 +1,4 @@
 ---
-
 title: "git-column(1)"
 name: "git-column"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-git-column/"
 description: "git-column – Display data in columns"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-column &#8211; Display data in columns </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git column[--command = &lt;name&gt;][--[raw - ] mode = &lt;mode&gt;][--width = &lt;width&gt;]
           [--indent = &lt;string&gt;][--nl = &lt;string&gt;][--padding = &lt;n&gt;]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> This command formats the lines of its standard input into a table with multiple columns. Each input line occupies one cell of the table. It is used internally by other git commands to format output into columns.</p>
 <h2>OPTIONS</h2>
 <p> &#8211;command=&lt;name&gt;</p>

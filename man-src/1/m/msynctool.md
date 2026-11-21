@@ -1,5 +1,4 @@
 ---
-
 title: "msynctool(1)"
 name: "msynctool"
 section: "1"
@@ -13,6 +12,7 @@ description: "msynctool – Command line interface for OpenSync"
 <h2>SYNTAX</h2>
 <p> msynctool <i>option</i> [<i>arguments</i>] [<i>option</i>]<br />
  msynctool &#8211;sync SYNC_GROUP</p>
+<h2>DESCRIPTION</h2>
 <p> Command line interface for OpenSync<br />
  You can use this tool to synchronize your devices and applications using the OpenSync framework from the command line. </p>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "cmsutil(1)"
 name: "cmsutil"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-cmsutil/"
 description: "cmsutil – Performs basic cryptograpic operations, such as encryption and decryption, on Cryptographic Message Syntax (CMS) messages."
 ---
 
+<h2 class="name">NAME</h2>
+<p> cmsutil &#8211; Performs basic cryptograpic operations, such as encryption and decryption, on Cryptographic Message Syntax (CMS) messages. </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cmsutil</code> [<i>options</i>] [[<i>arguments</i>]]</dt></dl>
 <h2>STATUS</h2>
 <dd>This documentation is still work in progress. Please contribute to the initial review in m[blue]<code>Mozilla NSS bug 836477</code>m[]<font SIZE="-2">[1]</font></dd>
+<h2>DESCRIPTION</h2>
 <p> The <code>cmsutil</code> command-line uses the S/MIME Toolkit to perform basic operations, such as encryption and decryption, on Cryptographic Message Syntax (CMS) messages. </p>
 <p> To run cmsutil, type the command cmsutil option [arguments] where option and arguments are combinations of the options and arguments listed in the following section. Each command takes one option. Each option may take zero or more arguments. To see a usage string, issue the command without options.</p>
 <h2>OPTIONS AND ARGUMENTS</h2>

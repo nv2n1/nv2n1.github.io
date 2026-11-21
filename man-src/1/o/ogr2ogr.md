@@ -1,5 +1,4 @@
 ---
-
 title: "ogr2ogr(1)"
 name: "ogr2ogr"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-ogr2ogr/"
 description: "ogr2ogr – ogr2ogr converts simple features data between file formats"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ogr2ogr &#8211; ogr2ogr converts simple features data between file formats </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 Usage : ogr2ogr[--help - general][-skipfailures][-append][-update]
                [-select field_list][-where restricted_where]
@@ -33,6 +35,7 @@ Usage : ogr2ogr[--help - general][-skipfailures][-append][-update]
                                                                                                                              [-gcp pixel line easting northing[elevation]] *
                                                                                                                          [-order n | -tps].fi
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> This program can be used to convert simple features data between file formats performing various operations during the process such as spatial or attribute selections, reducing the set of attributes, setting the output coordinate system or even reprojecting the features during translation. </p>
 <dl>
 <dt><code> -f</code><i> format_name</i>:</dt>

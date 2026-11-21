@@ -1,5 +1,4 @@
 ---
-
 title: "findsmb(1)"
 name: "findsmb"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-findsmb/"
 description: "findsmb – list info about machines that respond to SMB name queries on a subnet"
 ---
 
+<h2 class="name">NAME</h2>
+<p> findsmb &#8211; list info about machines that respond to SMB name queries on a subnet </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt>
 </dt><dd>findsmb [subnet broadcast address]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This perl script is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> findsmb is a perl script that prints out several pieces of information about machines on a subnet that respond to SMB name query requests. It uses <code><a href="/docs/linux/man/1-nmblookup/">nmblookup</a></code>(1) and <code><a href="/docs/linux/man/1-smbclient/">smbclient</a></code>(1) to obtain this information.</p>
 <h2>OPTIONS</h2>

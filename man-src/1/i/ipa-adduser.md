@@ -1,5 +1,4 @@
 ---
-
 title: "ipa-adduser(1)"
 name: "ipa-adduser"
 section: "1"
@@ -10,7 +9,9 @@ description: "ipa-adduser – Add a user"
 
 <h2>NAME</h2>
 <p> ipa-adduser &#8211; Add a user </p>
+<h2>SYNOPSIS</h2>
 <p> ipa-adduser [<i>OPTION</i>]&#8230; <i>user</i> </p>
+<h2>DESCRIPTION</h2>
 <p> Adds a user with username <i>user</i>. </p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "geod(1)"
 name: "geod"
 section: "1"
@@ -11,8 +10,10 @@ description: "geod – direct geodesic computations invgeod – inverse geodesic
 <h2>NAME</h2>
 <p> geod &#8211; direct geodesic computations<br />
  invgeod &#8211; inverse geodesic computations</p>
+<h2>SYNOPSIS</h2>
 <p> <code>geod</code> <code>+ellps=&lt;ellipse&gt;</code> [ <code>-afFIlptwW</code> [ <i>args</i> ] ] [ <code>+args</code> ] file[s]<br />
  <code>invgeod</code> <code>+ellps=&lt;ellipse&gt;</code> [ <code>-afFIlptwW</code> [ <i>args</i> ] ] [ <code>+args</code> ] file[s]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Geod</i> (direct) and <i>invgeod</i> (inverse) perform geodesic (&#8220;Great Circle&#8221;) computations for determining latitude, longitude and back azimuth of a terminus point given a initial point latitude, longitude, azimuth and distance (direct) or the forward and back azimuths and distance between an initial and terminus point latitudes and longitudes (inverse). </p>
 <p> The following runline control parameters can appear in any order:</p>
 <dl>

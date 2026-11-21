@@ -1,5 +1,4 @@
 ---
-
 title: "dmlite_credentials(3)"
 name: "dmlite_credentials"
 section: "3"
@@ -8,7 +7,10 @@ url: "/docs/linux/man/3-dmlite_credentials/"
 description: "dmlite_credentials –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dmlite_credentials &#8211; </p>
 <p> Security credentials.</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;dmlite.h&gt;</p>
 <h3>Data Fields</h3>
 <p> const char * <code>mech</code> </p>

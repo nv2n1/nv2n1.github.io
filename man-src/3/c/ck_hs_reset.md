@@ -1,5 +1,4 @@
 ---
-
 title: "ck_hs_reset(3)"
 name: "ck_hs_reset"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_hs_reset – remove all keys from a hash set"
 <p> <code>ck_hs_reset</code> &#8211; remove all keys from a hash set</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_hs.h Ft bool Fn ck_hs_reset ck_hs_t *hs</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_hs_reset 3 function will remove all keys stored in the hash set pointed to by the Fa hs argument.</p>
 <h2>RETURN VALUES</h2>
 <p> If successful, Fn ck_hs_reset 3 will return true and will otherwise return false on failure. This function will only fail if a replacement hash set could not be allocated internally.</p>

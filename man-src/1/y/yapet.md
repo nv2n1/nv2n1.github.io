@@ -1,5 +1,4 @@
 ---
-
 title: "yapet(1)"
 name: "yapet"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-yapet/"
 description: "yapet – text based password manager"
 ---
 
+<h2 class="name">NAME</h2>
+<p> yapet &#8211; text based password manager </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>yapet</code> [[<code>-c</code>] | [<code>-h</code>] | [<code>-V</code>]] [[<code>-i</code>] | [<code>-r</code>&nbsp;<wbr>{<i>rcfile</i>}]] [[<code>-s</code>] | [<code>-S</code>]] [<code>-t</code>&nbsp;<wbr>{<i>sec</i>}] [<i>filename</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>yapet</code></p>
 <dd>provides a text user interface for storing passwords and associated information (referred to as password records) in files encrypted on disk. A password record is comprised of a record name, host name, user name, password, and comment. A master password is required to encrypt/decrypt the password records in a given file. <code>yapet</code> does not impose a limit of password records per file. </dd>
 <p> Files created by <code>yapet</code> always have the suffix .pet. Also, if a file is loaded using the command line, <code>yapet</code> appends the suffix .pet to the filename unless the filename includes this suffix already. By default, <code>yapet</code> refuses to load files not having a file mode of 0600. This behavior can be changed by providing the <code>-s</code> option when starting <code>yapet</code> or using a configuration file (see <code><a href="/docs/linux/man/5-yapet_config/">yapet_config</a></code>(5), and the section called &#8220;OPTIONS&#8221;). </p>

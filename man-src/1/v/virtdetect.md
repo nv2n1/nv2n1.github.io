@@ -1,5 +1,4 @@
 ---
-
 title: "virtdetect(1)"
 name: "virtdetect"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-virtdetect/"
 description: "virtdetect — Detect if this system is running as a virtual machine"
 ---
 
+<h2 class="name">NAME</h2>
+<p> virtdetect &#8212; Detect if this system is running as a virtual machine </p>
+<h2>SYNOPSIS</h2>
 <p> virtdetect [ &#8211;verbose ] [ &#8211;detect-host ]</p>
+<h2>DESCRIPTION</h2>
 <p> Attempts to determine if this system is running under some form of virtualization. </p>
 <p> If &#8211;verbose is enabled, each check will be output. Otherwise, only the result will be output. </p>
 <p> if &#8211;detect-host is enabled, try and detect virtualization host (as opposed to guest) platforms</p>

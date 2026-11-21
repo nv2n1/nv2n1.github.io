@@ -1,5 +1,4 @@
 ---
-
 title: "git-guilt(1)"
 name: "git-guilt"
 section: "1"
@@ -10,8 +9,10 @@ description: "git-guilt – calculate change between two revisions"
 
 <h2>NAME</h2>
 <p> <code>git-guilt</code> &#8211; calculate change between two revisions</p>
+<h2>SYNOPSIS</h2>
 <p> <code>git guilt</code> [&lt;option&gt;]<br />
  <code>git guilt</code> [&lt;option&gt;] &lt;since&gt; [&lt;until&gt;]</p>
+<h2>DESCRIPTION</h2>
 <p> In the first form, shows total blame count for files with unstaged changes. </p>
 <p> In the second form, calculates the change in blame between two revisions. If not specified, &lt;until&gt; will default to HEAD.</p>
 <h2>OPTIONS</h2>

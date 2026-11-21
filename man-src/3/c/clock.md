@@ -1,5 +1,4 @@
 ---
-
 title: "clock(3)"
 name: "clock"
 section: "3"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/3-clock/"
 description: "clock – determine processor time"
 ---
 
+<h2 class="name">NAME</h2>
+<p> clock &#8211; determine processor time </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;time.h&gt;
 clock_t clock(void);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>clock</code>() function returns an approximation of processor time used by the program.</p>
 <h2>RETURN VALUE</h2>
 <p> The value returned is the CPU time used so far as a <i>clock_t</i>; to get the number of seconds used, divide by <code>CLOCKS_PER_SEC</code>. If the processor time used is not available or its value cannot be represented, the function returns the value <i>(clock_t)&nbsp;-1</i>.</p>

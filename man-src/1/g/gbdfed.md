@@ -1,5 +1,4 @@
 ---
-
 title: "gbdfed(1)"
 name: "gbdfed"
 section: "1"
@@ -7,10 +6,11 @@ letter: "g"
 url: "/docs/linux/man/1-gbdfed/"
 description: "gbdfed – GTK-based BDF font editor"
 ---
-
 <h2>NAME</h2>
 <p> gbdfed - GTK-based BDF font editor </p>
+<h2>SYNOPSIS</h2>
 <p> <code>gbdfed</code> [<i>options</i>] [<i>fonts ...</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> <i>gbdfed</i> lets you interactively create new bitmap font files or modify existing ones. It allows editing multiple fonts and multiple glyphs, it allows cut and paste operations between fonts and glyphs and editing font properties. <i>gbdfed</i> can import Metafont PK/GF fonts, Han Bitmap Font Format (HBF) fonts, Linux console fonts (PSF, CP, and EGA/VGA) fonts, Sun VF fonts, OpenType/TrueType (OTF/TTF) fonts, or grab a font from the X server (when running under X11). <i>gbdfed</i> can export PSF2 Linux console fonts and HEX fonts (see online help). </p>
 <p> <i>gbdfed</i> works on X Window System Version 11 (X11), Release 5 or 6, with GTK+ 2.6 or greater. It may work on Windows, but hasn&#8217;t been tested yet. </p>
 <h2>OPTIONS</h2>

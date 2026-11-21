@@ -1,5 +1,4 @@
 ---
-
 title: "compose(1)"
 name: "compose"
 section: "1"
@@ -8,9 +7,12 @@ url: "/docs/linux/man/1-compose/"
 description: "run-mailcap, view, see, edit, compose, print – execute programs via entries in the mailcap file"
 ---
 
+<h2 class="name">NAME</h2>
 <p> run-mailcap, view, see, edit, compose, print &#8211; execute programs via entries in the <i>mailcap</i> file </p>
+<h2>SYNOPSIS</h2>
 <p> <code>run-mailcap</code> &#8211;action=ACTION [&#8211;option[=value]] [MIME-TYPE:[ENCODING:]]FILE [&#8230;] </p>
 <p> The <code>see</code>, <code>edit</code>, <code>compose</code> and <code>print</code> versions are just aliases that default to the view, edit, compose, and print actions (respectively). </p>
+<h2>DESCRIPTION</h2>
 <p> <code>run-mailcap</code> (or any of its aliases) will use the given action to process each mime-type/file in turn. Each file is specified as its mime-type, its encoding (e.g. compression), and filename together, separated by colons. If the mime-type is omitted, an attempt to determine the type is made by trying to match the file&#8217;s extension with those in the <i>mime.types</i> files. If no mime-type is found, a last attempt will be done by running the <code>file</code> command, if available. If the encoding is omitted, it will also be determined from the file&#8217;s extensions. Currently supported encodings are <code>gzip</code> (.gz), <code>bzip2</code> (.bz2), <code>xz</code> (.xz), and <code>compress</code> (.Z). A filename of &quot;-&quot; can be used to mean &quot;standard input&quot;, but then a mime-type <code>must</code> be specified. </p>
 <p> Both the user&#8217;s files (~/.mailcap; ~/.mime.types) and the system files (/etc/mailcap; /etc/mime.types) are searched in turn for information.</p>
 <h3>EXAMPLES</h3>

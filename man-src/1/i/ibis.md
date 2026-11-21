@@ -1,5 +1,4 @@
 ---
-
 title: "ibis(1)"
 name: "ibis"
 section: "1"
@@ -12,6 +11,7 @@ description: "ibis – IB management Inband Services – an extended TCL shell"
 <p> <code>ibis</code> &#8211; IB management Inband Services &#8211; an extended TCL shell</p>
 <h2>SYNOPSYS</h2>
 <p> ibis [-port_num &lt;port number to attach to&gt;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>ibis</code> is a <font SIZE="-1">TCL</font> shell extended with interface for sending and receiving <font SIZE="-1">IB</font> management datagrams (<font SIZE="-1">MADS</font>). To use this shell you will write <font SIZE="-1">TCL</font> code that excersizes the regular <font SIZE="-1">TCL</font> command and the special <font SIZE="-1">API</font> provided by this extension. Interactive use is also possible and is greatly enhanced if tclreadline package is available on the machine. </p>
 <p> The following sub sections provide detailed definition for the <font SIZE="-1">API</font> and global objects defined by the extension. The different MADs APIs are group by the management class.</p>
 <h2>IBIS Constants</h2>

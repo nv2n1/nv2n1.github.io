@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_rdf2native_sockaddr_storage(3)"
 name: "ldns_rdf2native_sockaddr_storage"
 section: "3"
@@ -10,6 +9,7 @@ description: "ldns_native2rdf_int8, ldns_native2rdf_int16, ldns_native2rdf_int32
 
 <h2>NAME</h2>
 <p> ldns_native2rdf_int8, ldns_native2rdf_int16, ldns_native2rdf_int32, ldns_native2rdf_int16_data, ldns_rdf2native_int8, ldns_rdf2native_int16, ldns_rdf2native_int32, ldns_rdf2native_sockaddr_storage, ldns_rdf2native_time_t </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -22,6 +22,7 @@ description: "ldns_native2rdf_int8, ldns_native2rdf_int16, ldns_native2rdf_int32
 <p> uint32_t ldns_rdf2native_int32(const ldns_rdf *rd); </p>
 <p> struct sockaddr_storage * ldns_rdf2native_sockaddr_storage(const ldns_rdf *rd, uint16_t port, size_t *size); </p>
 <p> time_t ldns_rdf2native_time_t(const ldns_rdf *rd); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_native2rdf_int8</i>()</dt>
 <dd>returns the rdf containing the native uint8_t repr. .br <code>type</code>: the ldns_rdf type to use .br <code>value</code>: the uint8_t to use .br Returns ldns_rdf* with the converted value</dd></dl>

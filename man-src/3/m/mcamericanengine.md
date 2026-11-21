@@ -1,5 +1,4 @@
 ---
-
 title: "mcamericanengine(3)"
 name: "mcamericanengine"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-mcamericanengine/"
 description: "ql/pricingengines/vanilla/mcamericanengine.hpp – American Monte Carlo engine."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/pricingengines/vanilla/mcamericanengine.hpp &#8211; American Monte Carlo engine. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/qldefines.hpp&gt;<br />
  #include &lt;ql/payoff.hpp&gt;<br />
  #include &lt;ql/exercise.hpp&gt;<br />

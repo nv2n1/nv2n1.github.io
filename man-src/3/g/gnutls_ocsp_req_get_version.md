@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_ocsp_req_get_version(3)"
 name: "gnutls_ocsp_req_get_version"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_ocsp_req_get_version – API function"
 
 <h2>NAME</h2>
 <p> gnutls_ocsp_req_get_version &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/ocsp.h&gt;</code> </p>
 <p> <code>int gnutls_ocsp_req_get_version(gnutls_ocsp_req_t </code><i>req</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_ocsp_req_t req</dt>
 <dd> should contain a <code>gnutls_ocsp_req_t</code> structure</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will return the version of the OCSP request. Typically this is always 1 indicating version 1.</p>
 <h2>RETURNS</h2>
 <p> version of OCSP request, or a negative error code on error.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_mac_list(3)"
 name: "gnutls_mac_list"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_mac_list – API function"
 
 <h2>NAME</h2>
 <p> gnutls_mac_list &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>const gnutls_mac_algorithm_t * gnutls_mac_list( </code><i>void</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt> void</dt>
 <dd></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Get a list of hash algorithms for use as MACs. Note that not necessarily all MACs are supported in TLS cipher suites. This function is not thread safe.</p>
 <h2>RETURNS</h2>
 <p> Return a (0)-terminated list of <code>gnutls_mac_algorithm_t</code> integers indicating the available MACs.</p>

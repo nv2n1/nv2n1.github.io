@@ -1,5 +1,4 @@
 ---
-
 title: "grub-mkimage(1)"
 name: "grub-mkimage"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-grub-mkimage/"
 description: "grub-mkimage – make a bootable image of GRUB"
 ---
 
+<h2 class="name">NAME</h2>
+<p> grub-mkimage &#8211; make a bootable image of GRUB </p>
+<h2>SYNOPSIS</h2>
 <p> <code>grub-mkimage</code> [<i>,OPTION/</i>&#8230;] [<i>,OPTION/</i>]&#8230; [<i>,MODULES/</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Make a bootable image of GRUB.</p>
 <dl>
 <dt><code>-c</code>, <code>&#8211;config</code>=<i>,FILE/</i></dt>

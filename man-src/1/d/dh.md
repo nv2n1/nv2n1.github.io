@@ -1,5 +1,4 @@
 ---
-
 title: "dh(1)"
 name: "dh"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dh/"
 description: "dh – debhelper command sequencer"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dh &#8211; debhelper command sequencer </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dh</code> <i>sequence</i> [<code>&#8211;with</code> <i>addon</i>[<code>,</code><i>addon</i> &#8230;]] [<code>&#8211;list</code>] [<i>debhelper options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>dh</code> runs a sequence of debhelper commands. The supported <i>sequence</i>s correspond to the targets of a <i>debian/rules</i> file: <code>build-arch</code>, <code>build-indep</code>, <code>build</code>, <code>clean</code>, <code>install-indep</code>, <code>install-arch</code>, <code>install</code>, <code>binary-arch</code>, <code>binary-indep</code>, and <code>binary</code>.</p>
 <h2>OVERRIDE TARGETS</h2>
 <p> A <i>debian/rules</i> file using <code>dh</code> can override the command that is run at any step in a sequence, by defining an override target. </p>

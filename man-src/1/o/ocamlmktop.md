@@ -1,5 +1,4 @@
 ---
-
 title: "ocamlmktop(1)"
 name: "ocamlmktop"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ocamlmktop/"
 description: "ocamlmktop – Building custom toplevel systems"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ocamlmktop &#8211; Building custom toplevel systems</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ocamlmktop</code> [ <code>-v</code>|<code>-version</code>|<code>-vnum</code> ] [ <code>-cclib</code><i>&nbsp;<wbr>libname</i> ] [ <code>-ccopt</code><i>&nbsp;<wbr>option</i> ] [ <code>-custom</code> [ <code>-o</code><i>&nbsp;<wbr>exec-file</i> ] [ <code>-I</code><i>&nbsp;<wbr>lib-dir</i> ] <i>filename &#8230;</i> </p>
+<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/1-ocamlmktop/">ocamlmktop</a></code>(1) command builds OCaml toplevels that contain user code preloaded at start-up. The <code><a href="/docs/linux/man/1-ocamlmktop/">ocamlmktop</a></code>(1) command takes as argument a set of <i>x</i>.cmo and <i>x</i>.cma files, and links them with the object files that implement the OCaml toplevel. If the <code>-custom</code> flag is given, C object files and libraries (.o and .a files) can also be given on the command line and are linked in the resulting toplevel. </p>
 <h2>OPTIONS</h2>
 <p> The following command-line options are recognized by <code><a href="/docs/linux/man/1-ocamlmktop/">ocamlmktop</a></code>(1).</p>

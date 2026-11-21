@@ -1,5 +1,4 @@
 ---
-
 title: "timer_settime(2)"
 name: "timer_settime"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-timer_settime/"
 description: "timer_settime, timer_gettime – arm/disarm and fetch state of POSIX per-process timer"
 ---
 
+<h2 class="name">NAME</h2>
+<p> timer_settime, timer_gettime &#8211; arm/disarm and fetch state of POSIX per-process timer </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;time.h&gt;
 int timer_settime(timer_t timerid, int flags,
@@ -18,6 +20,7 @@ int timer_gettime(timer_t timerid, struct itimerspec *curr_value);
 <p> Link with <i>-lrt</i>. </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>timer_settime</code>(), <code>timer_gettime</code>(): _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;199309L</p>
+<h2>DESCRIPTION</h2>
 <p> <code>timer_settime</code>() arms or disarms the timer identified by <i>timerid</i>. The <i>new_value</i> argument is pointer to an <i>itimerspec</i> structure that specifies the new initial value and the new interval for the timer. The <i>itimerspec</i> structure is defined as follows: </p>
 <p> struct timespec {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t tv_sec;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Seconds&nbsp;*/<br />

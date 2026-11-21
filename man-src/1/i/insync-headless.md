@@ -1,5 +1,4 @@
 ---
-
 title: "insync-headless(1)"
 name: "insync-headless"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-insync-headless/"
 description: "insync-headless – command line interface for the Insync process"
 ---
 
+<h2 class="name">NAME</h2>
+<p> insync-headless &#8211; command line interface for the Insync process </p>
+<h2>SYNOPSIS</h2>
 <p> <code>insync-headless [OPTION] [COMMAND] [ARGUMENT]&#8230;</code></p>
+<h2>DESCRIPTION</h2>
 <p> Command line interface for the Insync process. Insync is an application that syncs your Drive files to your computer. It has more advanced features than Google&#8217;s official client such as multiple account support, Google Doc conversion, symlink support, and built in sharing.</p>
 <h2>OPTIONS</h2>
 <dl>

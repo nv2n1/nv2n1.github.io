@@ -1,5 +1,4 @@
 ---
-
 title: "mytop(1)"
 name: "mytop"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-mytop/"
 description: "mytop – display MySQL server performance info like `top’"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mytop &#8211; display MySQL server performance info like `top&#8217; </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mytop</code> [options]</p>
 <h2>AVAILABILITY</h2>
 <p> The latest version of <code>mytop</code> is available from <a rel="nofollow" href="http://jeremy.zawodny.com/mysql/mytop/">http://jeremy.zawodny.com/mysql/mytop/</a> it <code>might</code> also be on <font SIZE="-1">CPAN</font> as well.</p>
@@ -44,6 +46,7 @@ description: "mytop – display MySQL server performance info like `top’"
   * Windows NT 4.x (ActivePerl)
 </pre>
 <p> If you find that it works on another platform, please let me know. Given that it is all Perl code, I expect it to be rather portable to Unix and Unix-like systems. Heck, it <i>might</i> even work on Win32 systems.</p>
+<h2>DESCRIPTION</h2>
 <p> Help is always welcome in improving this software. Feel free to contact the author (see &#8220;<font SIZE="-1">AUTHOR&#8221;</font> below) with bug reports, fixes, suggestions, and comments. Additionally &#8220;<font SIZE="-1">BUGS&#8221;</font> will provide a list of things this software is not able to do yet. </p>
 <p> Having said that, here are the details on how it works and what you can do with it.</p>
 <h3>The Basics</h3>

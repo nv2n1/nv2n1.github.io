@@ -1,5 +1,4 @@
 ---
-
 title: "cpg_initialize(3)"
 name: "cpg_initialize"
 section: "3"
@@ -10,8 +9,10 @@ description: "cpg_initialize – Create a new connection to the CPG service"
 
 <h2>NAME</h2>
 <p> cpg_initialize &#8211; Create a new connection to the CPG service</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cpg.h&gt;</code> </p>
 <p> <code>int cpg_initialize(cpg_handle_t *</code><i>handle</i><code>, cpg_callbacks_t *</code><i>callbacks</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>cpg_initialize</code> function is used to initialize a connection to the closed process groups API. This function is deprecated and <code>cpg_model_initialize</code> should be used in newly written code. </p>
 <p> Each application may have several connections to the CPG API. Each application uses the <i>handle</i> argument to uniquely identify the connection. The <i>handle</i> argument is then used in other function calls to identify the connection to be used for communication with the CPG service. </p>
 <p> Every time an CPG event occurs within the joined group, one of the callbacks specified by the argument <i>callbacks</i> is called. The callback functions are described by the following type definitions: </p>

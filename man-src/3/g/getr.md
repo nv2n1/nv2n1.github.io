@@ -1,5 +1,4 @@
 ---
-
 title: "getr(3)"
 name: "getr"
 section: "3"
@@ -10,11 +9,13 @@ description: "getr, getg, getb, geta – Extract a color component from the curr
 
 <h2>NAME</h2>
 <p> getr, getg, getb, geta &#8211; Extract a color component from the current pixel format. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>int getr(int c);</code> </p>
 <p> <code>int getg(int c);</code> </p>
 <p> <code>int getb(int c);</code> </p>
 <p> <code>int geta(int c);</code></p>
+<h2>DESCRIPTION</h2>
 <p> Given a color in the format being used by the current video mode, these functions extract one of the red, green, blue, or alpha components (ranging 0-255), calling the preceding 8, 15, 16, 24, or 32-bit get functions as appropriate. The alpha part is only meaningful for 32-bit pixels. Example: </p>
 <pre><code>
 int r, g, b, color_value;

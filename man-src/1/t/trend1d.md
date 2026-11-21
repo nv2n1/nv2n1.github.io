@@ -1,5 +1,4 @@
 ---
-
 title: "trend1d(1)"
 name: "trend1d"
 section: "1"
@@ -10,8 +9,10 @@ description: "trend1d – Fit a [weighted] [robust] polynomial [and/or Fourier] 
 
 <h2>NAME</h2>
 <p> trend1d &#8211; Fit a [weighted] [robust] polynomial [and/or Fourier] model for y = f(x) to xy[w] data</p>
+<h2>SYNOPSIS</h2>
 <p> <code>trend1d</code> [ <i>table</i> ] <code>xymrw|p</code> [<code>p</code>|<code>P</code>|<code>f</code>|<code>F</code>|<code>c</code>|<code>C</code>|<code>s</code>|<code>S</code>|<code>x</code>]<i>n</i>[,&#8230;][<code>+l</code><i>length</i>][<code>+o</code><i>origin</i>][<code>+r</code>] [ <i>xy[w]file</i> ] [ <i>condition_number</i> ] [ [<i>confidence_level</i>] ] [ [<i>level</i>] ] [ ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>trend1d</code> reads x,y [and w] values from the first two [three] columns on standard input [or <i>file</i>] and fits a regression model y = f(x) + e by [weighted] least squares. The functional form of f(x) may be chosen as polynomial or Fourier or a mix of the two, and the fit may be made robust by iterative reweighting of the data. The user may also search for the number of terms in f(x) which significantly reduce the variance in y.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "keyctl_chown(3)"
 name: "keyctl_chown"
 section: "3"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/3-keyctl_chown/"
 description: "keyctl_chown – Change the ownership of a key"
 ---
 
+<h2 class="name">NAME</h2>
+<p> keyctl_chown &#8211; Change the ownership of a key </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;keyutils.h&gt;
 long keyctl_chown(key_serial_t key, uid_t uid, gid_t gid);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>keyctl_chown</code>() changes the user and group ownership details of a key. </p>
 <p> A setting of <code>-1</code> on either <i>uid</i> or <i>gid</i> will cause that setting to be ignored. </p>
 <p> A process that does not have the <code>SysAdmin</code> capability may not change a key&#8217;s UID or set the key&#8217;s GID to a value that does not match the process&#8217;s GID or one of its group list. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ibv_uc_pingpong(1)"
 name: "ibv_uc_pingpong"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-ibv_uc_pingpong/"
 description: "ibv_uc_pingpong – simple InfiniBand UC transport test"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ibv_uc_pingpong &#8211; simple InfiniBand UC transport test</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ibv_uc_pingpong</code> [-p port] [-d device] [-i ib port] [-s size] [-r rx depth] [-n iters] [-l sl] [-e] <code>HOSTNAME</code> </p>
 <p> <code>ibv_uc_pingpong</code> [-p port] [-d device] [-i ib port] [-s size] [-r rx depth] [-n iters] [-l sl] [-e] </p>
+<h2>DESCRIPTION</h2>
 <p> Run a simple ping-pong test over InfiniBand via the reliable connected (RC) transport. </p>
 <h2>OPTIONS</h2>
 <dl>

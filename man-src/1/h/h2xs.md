@@ -1,5 +1,4 @@
 ---
-
 title: "h2xs(1)"
 name: "h2xs"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-h2xs/"
 description: "h2xs – convert .h C header files to Perl extensions"
 ---
 
+<h2 class="name">NAME</h2>
+<p> h2xs &#8211; convert .h C header files to Perl extensions </p>
+<h2>SYNOPSIS</h2>
 <p> <code>h2xs</code> [<font SIZE="-1"><code>OPTIONS</code></font> &#8230;] [headerfile &#8230; [extra_libraries]] </p>
 <p> <code>h2xs</code> <code>-h</code>|<code>-?</code>|<code>&#8211;help</code></p>
+<h2>DESCRIPTION</h2>
 <p> <i>h2xs</i> builds a Perl extension from C header files. The extension will include functions which can be used to retrieve the value of any #define statement which was in the C header files. </p>
 <p> The <i>module_name</i> will be used for the name of the extension. If module_name is not supplied then the name of the first header file will be used, with the first character capitalized. </p>
 <p> If the extension might need extra libraries, they should be included here. The extension Makefile.PL will take care of checking whether the libraries actually exist and how they should be loaded. The extra libraries should be specified in the form -lm -lposix, etc, just as on the cc command line. By default, the Makefile.PL will search through the library path determined by Configure. That path can be augmented by including arguments of the form <code>-L/another/library/path</code> in the extra-libraries argument. </p>

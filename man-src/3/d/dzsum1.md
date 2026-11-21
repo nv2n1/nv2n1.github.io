@@ -1,5 +1,4 @@
 ---
-
 title: "dzsum1(3)"
 name: "dzsum1"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dzsum1/"
 description: "dzsum1.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dzsum1.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> DOUBLE PRECISION function <code>dzsum1</code> (N, CX, INCX)<br />
  <i></i><code>DZSUM1</code> forms the 1-norm of the complex vector using the true absolute value.</p>

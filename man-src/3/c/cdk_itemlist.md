@@ -1,5 +1,4 @@
 ---
-
 title: "cdk_itemlist(3)"
 name: "cdk_itemlist"
 section: "3"
@@ -10,6 +9,7 @@ description: "cdk_itemlist – curses itemlist widget."
 
 <h2>NAME</h2>
 <p> cdk_itemlist &#8211; curses itemlist widget.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>
 <p> #include &lt;cdk.h&gt; </p>
 <pre><code>
@@ -113,6 +113,7 @@ void setCDKItemlistVerticalChar(
     chtype character);
 </code></pre>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> The Cdk itemlist widget creates a widget which allows a user to select from a list of preset character strings such as the days of the week or the months of the year. The following functions create or manipulate the Cdk itemlist widget.</p>
 <h2>AVAILABLE FUNCTIONS</h2>
 <dl>

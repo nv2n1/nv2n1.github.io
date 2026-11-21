@@ -1,5 +1,4 @@
 ---
-
 title: "gdalcompare(1)"
 name: "gdalcompare"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-gdalcompare/"
 description: "gdalcompare – gdalcompare.py compare two images"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gdalcompare &#8211; gdalcompare.py compare two images </p>
+<h2>SYNOPSIS</h2>
 <pre>
 gdalcompare.py [-sds] golden_file new_file
 </pre>
+<h2>DESCRIPTION</h2>
 <p> The gdalcompare.py script compares two GDAL supported datasets and reports the differences. In addition to reporting differences to the standard out the script will also return the difference count in it&#8217;s exit value. </p>
 <p> Image pixels, and various metadata are checked. There is also a byte by byte comparison done which will count as one difference. So if it is only important that the GDAL visible data is identical a difference count of 1 (the binary difference) should be considered acceptable. </p>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "supybot-adduser(1)"
 name: "supybot-adduser"
 section: "1"
@@ -10,7 +9,9 @@ description: "supybot-adduser – Adds a user to a Supybot users.conf file"
 
 <h2>NAME</h2>
 <p> supybot-adduser &#8211; Adds a user to a Supybot users.conf file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>supybot-adduser</code> [<i>options</i>]<i> users.conf</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>supybot-adduser</code> adds a user to the specified users.conf file.</p>
 <h2>OPTIONS</h2>
 <dl>

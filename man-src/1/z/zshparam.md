@@ -1,5 +1,4 @@
 ---
-
 title: "zshparam(1)"
 name: "zshparam"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-zshparam/"
 description: "zshparam – zsh parameters"
 ---
 
+<h2 class="name">NAME</h2>
+<p> zshparam &#8211; zsh parameters </p>
+<h2>DESCRIPTION</h2>
 <p> A parameter has a name, a value, and a number of attributes. A name may be any sequence of alphanumeric characters and underscores, or the single characters `<code>*</code>&#8216;, `<code>@</code>&#8216;, `<code>#</code>&#8216;, `<code>?</code>&#8216;, `<code>&#8211;</code>&#8216;, `<code>$</code>&#8216;, or `<code>!</code>&#8216;. A parameter whose name begins with an alphanumeric or underscore is also referred to as a <i>variable</i>. </p>
 <p> The attributes of a parameter determine the <i>type</i> of its value, often referred to as the parameter type or variable type, and also control other processing that may be applied to the value when it is referenced. The value type may be a <i>scalar</i> (a string, an integer, or a floating point number), an array (indexed numerically), or an <i>associative</i> array (an unordered set of name-value pairs, indexed by name, also referred to as a <i>hash</i>). </p>
 <p> Named scalar parameters may have the <i>exported</i>, <code>-x</code>, attribute, to copy them into the process environment, which is then passed from the shell to any new processes that it starts. Exported parameters are called <i>environment variables</i>. The shell also <i>imports</i> environment variables at startup time and automatically marks the corresponding parameters as exported. Some environment variables are not imported for reasons of security or because they would interfere with the correct operation of other shell features. </p>

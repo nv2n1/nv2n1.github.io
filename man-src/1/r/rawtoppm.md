@@ -1,5 +1,4 @@
 ---
-
 title: "rawtoppm(1)"
 name: "rawtoppm"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-rawtoppm/"
 description: "rawtoppm – convert raw RGB bytes into a portable pixmap"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rawtoppm &#8211; convert raw RGB bytes into a portable pixmap </p>
+<h2>SYNOPSIS</h2>
 <p> <code>rawtoppm</code> [<code>-headerskip</code> <i>N</i>] [<code>-rowskip</code> <i>N</i>] [<code>-rgb</code>|<code>-rbg</code>|<code>-grb</code> |<code>-gbr</code>|<code>-brg</code>|<code>-bgr</code> ] [<code>-interpixel</code>|<code>-interrow</code>] <i>width height</i> [<i>imagedata</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Reads raw RGB bytes as input. Produces a portable pixmap as output. The input file is just RGB bytes. You have to specify the width and height on the command line, since the program obviously can&#8217;t get them from the file. The maxval is assumed to be 255. If the resulting image is upside down, run it through <code>pnmflip -tb .</code></p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "getdns_context_create_with_memory_functions(3)"
 name: "getdns_context_create_with_memory_functions"
 section: "3"
@@ -7,13 +6,18 @@ letter: "g"
 url: "/docs/linux/man/3-getdns_context_create_with_memory_functions/"
 ---
 
-<b>getdns_context, </b> <b>getdns_context_create, </b> <b>getdns_context_create_with_memory_functions, </b> <b>getdns_context_create_with_extended_memory_functions, </b> <b>getdns_context_destroy, </b> <b>getdns_context_get_api_information </b> -- getdns context create and destroy routines
+<h2 class="name">NAME</h2>
+ 
+
+ <b>getdns_context, </b> <b>getdns_context_create, </b> <b>getdns_context_create_with_memory_functions, </b> <b>getdns_context_create_with_extended_memory_functions, </b> <b>getdns_context_destroy, </b> <b>getdns_context_get_api_information </b> -- getdns context create and destroy routines
 
 <h2>LIBRARY</h2>
 
  DNS Resolver library (libgetdns, -lgetdns) 
 
-#include &lt;getdns.h&gt; 
+<h2>SYNOPSIS</h2>
+
+ #include &lt;getdns.h&gt; 
 
  getdns_return_t 
  <b>getdns_context_create</b> (getdns_context ** context,
@@ -52,7 +56,13 @@ url: "/docs/linux/man/3-getdns_context_create_with_memory_functions/"
  getdns_dict * 
  <b>getdns_context_get_api_information</b> (getdns_context *context) 
 
-Calls to getdns functions require a DNS context, which is a group of API settings that affect how DNS calls are made. For most applications, a default context is sufficient. 
+<h2>DESCRIPTION</h2>
+
+ 
+
+ 
+
+ Calls to getdns functions require a DNS context, which is a group of API settings that affect how DNS calls are made. For most applications, a default context is sufficient. 
 
  
 

@@ -1,5 +1,4 @@
 ---
-
 title: "icecc-scheduler(1)"
 name: "icecc-scheduler"
 section: "1"
@@ -10,9 +9,11 @@ description: "scheduler – Icecream scheduler"
 
 <h2>NAME</h2>
 <p> scheduler &#8211; Icecream scheduler</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>scheduler</code> [<code>-n</code> | <code>&#8211;netname</code><i> name</i>] [<code>-p</code> | <code>&#8211;port</code><i> port</i>] [<code>-h</code> | <code>&#8211;help</code>] [<code>-l</code> | <code>&#8211;log-file</code><i> file</i>] [<code>-d</code> | <code>&#8211;daemonize</code>] [<code>-r</code> | <code>&#8211;allow-run-as-user</code>] [-v&nbsp;<wbr>[v&nbsp;<wbr>[v]]] </dt>
 </dl>
+<h2>DESCRIPTION</h2>
 <dd>The Icecream scheduler is the central instance of an Icecream compile network. It distributes the compile jobs and provides the data for the monitors. </dd>
 <h2>OPTIONS</h2>
 <dl>

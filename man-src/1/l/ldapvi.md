@@ -1,5 +1,4 @@
 ---
-
 title: "ldapvi(1)"
 name: "ldapvi"
 section: "1"
@@ -10,7 +9,9 @@ description: "ldapvi – LDAP client"
 
 <h2>NAME</h2>
 <p> ldapvi &#8211; LDAP client</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ldapvi</code> [<i>OPTION</i>]&#8230; [<i>FILTER</i>] [<i>AD</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <h3>Quickstart:</h3>
 <dl>
 <dt>

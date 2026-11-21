@@ -1,5 +1,4 @@
 ---
-
 title: "perl5123delta(1)"
 name: "perl5123delta"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-perl5123delta/"
 description: "perl5123delta – what is new for perl v5.12.3"
 ---
 
+<h2 class="name">NAME</h2>
+<p> perl5123delta &#8211; what is new for perl v5.12.3 </p>
+<h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.12.2 release and the 5.12.3 release. </p>
 <p> If you are upgrading from an earlier release such as 5.12.1, first read perl5122delta, which describes differences between 5.12.1 and 5.12.2. The major changes made in 5.12.0 are described in perl5120delta.</p>
 <h2>Incompatible Changes</h2>

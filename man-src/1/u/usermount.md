@@ -1,5 +1,4 @@
 ---
-
 title: "usermount(1)"
 name: "usermount"
 section: "1"
@@ -10,8 +9,10 @@ description: "usermount – A graphical tool to mount, unmount and format filesy
 
 <h2>NAME</h2>
 <p> usermount &#8211; A graphical tool to mount, unmount and format filesystems.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>usermount</code> [ <i>options</i> ] </p>
 <p> <code>userformat</code> [ <i>options</i> ] <i>device</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>usermount</code> is a graphical tool to allow users to easily manage removable media, such as floppy disks or zip disks. When the tool starts up, it scans <i>/etc/fstab</i> for all filesystems that have been configured to allow users to mount and unmount them. The filesystem can be mounted or unmounted by pressing the toggle button labeled <i>Mount</i>. </p>
 <p> Also, if the user has the appropriate permissions for the device, the <i>Format</i> button will be active. This allows the user to format disks using <code>fdformat</code> and create a new filesystem of the type listed (using <code>mkfs</code> with the appropriate option). Naturally, the user will be prompted for confirmation before actually destroying data on the device. </p>
 <p> Note that if a device is already mounted, the format button is inactive for all entries that share the same device. </p>

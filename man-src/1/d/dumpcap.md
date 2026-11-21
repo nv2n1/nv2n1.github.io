@@ -1,5 +1,4 @@
 ---
-
 title: "dumpcap(1)"
 name: "dumpcap"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dumpcap/"
 description: "dumpcap – Dump network traffic"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dumpcap &#8211; Dump network traffic </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dumpcap</code> [&nbsp;<wbr><code>-a</code>&nbsp;<wbr>&lt;capture autostop condition&gt;&nbsp;<wbr>]&nbsp;<wbr>&#8230; [&nbsp;<wbr><code>-b</code>&nbsp;<wbr>&lt;capture ring buffer option&gt;]&nbsp;<wbr>&#8230; [&nbsp;<wbr><code>-B</code>&nbsp;<wbr>&lt;capture buffer size&gt;&nbsp;<wbr>]&nbsp;<wbr> [&nbsp;<wbr><code>-c</code>&nbsp;<wbr>&lt;capture packet count&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-C</code>&nbsp;<wbr>&lt;byte limit&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-d</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-D</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-f</code>&nbsp;<wbr>&lt;capture filter&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-g</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-h</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-i</code>&nbsp;<wbr>&lt;capture interface&gt;|rpcap://&lt;host&gt;/&lt;capture interface&gt;|TCP@&lt;host&gt;:&lt;port&gt;|-&nbsp;<wbr>] [&nbsp;<wbr><code>-I</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-L</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-M</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-n</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-N</code>&nbsp;<wbr>&lt;packet limit&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-p</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-P</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-q</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-s</code>&nbsp;<wbr>&lt;capture snaplen&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-S</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-t</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-v</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-w</code>&nbsp;<wbr>&lt;outfile&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-y</code>&nbsp;<wbr>&lt;capture link type&gt;&nbsp;<wbr>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Dumpcap</code> is a network traffic dump tool. It lets you capture packet data from a live network and write the packets to a file. <code>Dumpcap</code>&#8216;s default capture file format is <code>pcap-ng</code> format. When the <code>-P</code> option is specified, the output file is written in the <code>pcap</code> format. </p>
 <p> Without any options set it will use the libpcap/WinPcap library to capture traffic from the first available network interface and writes the received raw packet data, along with the packets&#8217; time stamps into a pcap file. </p>
 <p> If the <code>-w</code> option is not specified, <code>Dumpcap</code> writes to a newly created pcap file with a randomly chosen name. If the <code>-w</code> option is specified, <code>Dumpcap</code> writes to the file specified by that option. </p>

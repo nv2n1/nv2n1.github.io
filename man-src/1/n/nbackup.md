@@ -1,5 +1,4 @@
 ---
-
 title: "nbackup(1)"
 name: "nbackup"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-nbackup/"
 description: "nbackup – Physical backup manager for Firebird"
 ---
 
+<h2 class="name">NAME</h2>
+<p> nbackup &#8211; Physical backup manager for Firebird </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>nbackup</code> [<i>option</i>&#8230;] -l|-u|-f <i>database</i></dt>
 <dd>
@@ -15,6 +17,7 @@ description: "nbackup – Physical backup manager for Firebird"
 <dd>
 </dd><dt><code>nbackup</code> [<i>option</i>&#8230;] -r <i>database</i> <i>file0</i> [<i>file1</i>&#8230;]</dt>
 <dd></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>nbackup</code> allows making incremental backups of firebird databases. It also allows database files to be locked for copying with <font SIZE="-1">OS</font> tools like <code><a href="/docs/linux/man/1-cp/">cp</a></code>(1).</p>
 <h2>COMMANDS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "stapref(1)"
 name: "stapref"
 section: "1"
@@ -10,7 +9,9 @@ description: "stapref – systemtap language reference"
 
 <h2>NAME</h2>
 <p> stapref &#8211; systemtap language reference </p>
+<h2>SYNOPSIS</h2>
 <p> <code>stapref</code> </p>
+<h2>DESCRIPTION</h2>
 <p> The reference for the systemtap scripting language. </p>
 <h2>LANGUAGE</h2>
 <p> Keywords </p>

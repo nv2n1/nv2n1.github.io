@@ -1,5 +1,4 @@
 ---
-
 title: "tabs(1)"
 name: "tabs"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-tabs/"
 description: "tabs – set tabs on a terminal"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>tabs</code> &#8211; set tabs on a terminal </p>
+<h2>SYNOPSIS</h2>
 <p> <code>tabs</code> [<i>options</i>]] <i>[tabstop-list]</i></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>tabs</code> program clears and sets tab-stops on the terminal. This uses the terminfo <i>clear_all_tabs</i> and <i>set_tab</i> capabilities. If either is absent, <code>tabs</code> is unable to clear/set tab-stops. The terminal should be configured to use hard tabs, e.g.,<br />
 &nbsp;.sp<br />
 &nbsp;.in&nbsp;+4 </p>

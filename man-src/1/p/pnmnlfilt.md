@@ -1,5 +1,4 @@
 ---
-
 title: "pnmnlfilt(1)"
 name: "pnmnlfilt"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pnmnlfilt/"
 description: "pnmnlfilt – non-linear filters: smooth, alpha trim mean, optimal estimation smoothing, edge enhancement."
 ---
 
+<h2 class="name">NAME</h2>
+<p> pnmnlfilt &#8211; non-linear filters: smooth, alpha trim mean, optimal estimation smoothing, edge enhancement. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pnmnlfilt</code> <i>alpha</i> <i>radius</i> [<i>pnmfile</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>pnmnlfilt</code> produces an output image where the pixels are a summary of multiple pixels near the corresponding location in an input image. </p>
 <p> This program works on multi-image streams. </p>
 <p> This is something of a swiss army knife filter. It has 3 distinct operating modes. In all of the modes each pixel in the image is examined and processed according to it and its surrounding pixels values. Rather than using the 9 pixels in a 3&#215;3 block, 7 hexagonal area samples are taken, the size of the hexagons being controlled by the radius parameter. A radius value of 0.3333 means that the 7 hexagons exactly fit into the center pixel (ie. there will be no filtering effect). A radius value of 1.0 means that the 7 hexagons exactly fit a 3&#215;3 pixel array.</p>

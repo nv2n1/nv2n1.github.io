@@ -1,5 +1,4 @@
 ---
-
 title: "abrt-action-generate-core-backtrace(1)"
 name: "abrt-action-generate-core-backtrace"
 section: "1"
@@ -7,11 +6,22 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-action-generate-core-backtrace/"
 ---
 
-abrt-action-generate-core-backtrace - Generates coredump-level backtrace 
+<h2 class="name">NAME</h2>
+ 
 
-<i>abrt-action-generate-core-backtrace</i> [-v] [-r] [-d DIR]
+ abrt-action-generate-core-backtrace - Generates coredump-level backtrace 
 
-This tool uses coredump from the file <i>coredump</i> and binary at the path stored in file <i>executable</i> in the problem directory to generate coredump-level backtrace. 
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <i>abrt-action-generate-core-backtrace</i> [-v] [-r] [-d DIR]
+
+<h2>DESCRIPTION</h2>
+
+ 
+
+ This tool uses coredump from the file <i>coredump</i> and binary at the path stored in file <i>executable</i> in the problem directory to generate coredump-level backtrace. 
 
  Coredump-level backtrace resembles ordinary backtrace in that it contains information about call frames present on the stack at the time of the crash. However, it only contains information that can be obtained from the coredump without debugging symbols available - mainly relative addresses of the stored instruction pointers. Such backtrace can still be useful for reporting and reproducing the bug and does not require debugging information files to be installed. 
 

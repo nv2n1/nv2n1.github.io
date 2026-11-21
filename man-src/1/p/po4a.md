@@ -1,5 +1,4 @@
 ---
-
 title: "po4a(1)"
 name: "po4a"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-po4a/"
 description: "po4a – update both the po files and translated documents in one shot"
 ---
 
+<h2 class="name">NAME</h2>
+<p> po4a &#8211; update both the po files and translated documents in one shot </p>
+<h2>SYNOPSIS</h2>
 <p> po4a [options] &lt;config_file&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> The po4a (po for anything) project goal is to ease translations (and more interestingly, the maintenance of translations) using gettext tools on areas where they were not expected like documentation. </p>
 <p> The <tt>&quot;po4a&quot;</tt> program is in charge of updating both the po files (to sync them to the original documents) and the translated documents (to sync them to the po files). The main point is to make the use of po4a easier without having to remember of the command line options. </p>
 <p> It also allows you to mix documents having different formats into the same pot file so that you can have only one such file per project. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "iswcntrl(3)"
 name: "iswcntrl"
 section: "3"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/3-iswcntrl/"
 description: "iswcntrl – test for control wide character"
 ---
 
+<h2 class="name">NAME</h2>
+<p> iswcntrl &#8211; test for control wide character </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;wctype.h&gt;
 int iswcntrl(wint_t wc);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>iswcntrl</code>() function is the wide-character equivalent of the <code>iscntrl</code>(3) function. It tests whether <i>wc</i> is a wide character belonging to the wide-character class &quot;cntrl&quot;. </p>
 <p> The wide-character class &quot;cntrl&quot; is disjoint from the wide-character class &quot;print&quot; and therefore also disjoint from its subclasses &quot;graph&quot;, &quot;alpha&quot;, &quot;upper&quot;, &quot;lower&quot;, &quot;digit&quot;, &quot;xdigit&quot;, &quot;punct&quot;. </p>
 <p> For an unsigned char <i>c</i>, <i>iscntrl(c)</i> implies <i>iswcntrl(btowc(c))</i>, but not vice versa.</p>

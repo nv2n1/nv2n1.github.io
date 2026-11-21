@@ -1,5 +1,4 @@
 ---
-
 title: "clipjoin(1)"
 name: "clipjoin"
 section: "1"
@@ -7,7 +6,10 @@ letter: "c"
 url: "/docs/linux/man/1-clipjoin/"
 ---
 
-clipjoin - Remove superfluous spaces from the clipboard. 
+<h2 class="name">NAME</h2>
+ 
+
+ clipjoin - Remove superfluous spaces from the clipboard. 
 
 <h2>MOTIVATION</h2>
 

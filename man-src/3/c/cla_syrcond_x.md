@@ -1,5 +1,4 @@
 ---
-
 title: "cla_syrcond_x(3)"
 name: "cla_syrcond_x"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cla_syrcond_x/"
 description: "cla_syrcond_x.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cla_syrcond_x.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>cla_syrcond_x</code> (UPLO, N, A, LDA, AF, LDAF, IPIV, X, INFO, WORK, RWORK)<br />
  <i></i><code>CLA_SYRCOND_X</code> computes the infinity norm condition number of op(A)*diag(x) for symmetric indefinite matrices.</p>

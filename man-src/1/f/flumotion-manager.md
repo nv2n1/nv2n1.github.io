@@ -1,5 +1,4 @@
 ---
-
 title: "flumotion-manager(1)"
 name: "flumotion-manager"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-flumotion-manager/"
 description: "flumotion-manager – streaming media server central management"
 ---
 
+<h2 class="name">NAME</h2>
+<p> flumotion-manager &#8211; streaming media server central management</p>
+<h2>SYNOPSIS</h2>
 <p> <code>flumotion-manager</code> [ <code>&#8211;</code> ] [ <code>&#8211;debug</code> <i>debug configuration</i> ] [ <code>-L</code> <i>logdir</i> ] [ <code>-R</code> <i>rundir</i> ] [ <code>-H</code> <i>host</i> ] [ <code>-P</code> <i>port</i> ] [ <code>-T</code> <i>protocol</i> ] [ <code>-C</code> <i>certificate</i> ] [ <code>-n</code> <i>name</i> ] [ <code>-s</code> <i>servicename</i> ] [ <code>-D</code> ] [ <code>&#8211;daemonize-to=directory</code> ] <i>manager.xml [flow1.xml flow2.xml &#8230;]</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>flumotion-manager</code> is the central management component of the flumotion streaming server. <code>flumotion-manager</code> does not actually perform any streaming or encoding itself, it simply acts as a central point for <i>flumotion-worker</i> instances and <i>flumotion-admin</i> administration consoles to connect to. You need to start it before any other flumotion component. When starting flumotion-manager, you need only specify a <i>planet configuration file</i> , but it is frequently helpful to set other options from the command line. </p>
 <p> <code>flumotion-manager</code> can load other configuration files as well, if more than one is specified. These additional configuration files define <i>flows</i> that the manager will run on the workers. This allows you to define your manager configuration in the first configuration file, and your streaming configuration or configurations in one or more additional configurations files. </p>
 <h2>OPTIONS</h2>

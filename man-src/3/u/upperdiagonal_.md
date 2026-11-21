@@ -1,5 +1,4 @@
 ---
-
 title: "upperdiagonal_(3)"
 name: "upperdiagonal_"
 section: "3"
@@ -7,8 +6,8 @@ letter: "u"
 url: "/docs/linux/man/3-upperdiagonal_/"
 description: "QuantLib::TridiagonalOperator – Base implementation for tridiagonal operator."
 ---
-
 <p>QuantLib::TridiagonalOperator &#8211; Base implementation for tridiagonal operator. </p>
+<h2>SYNOPSIS</h2>
 <p> <br />
  </p>
 <p>#include &lt;ql/methods/finitedifferences/tridiagonaloperator.hpp&gt; </p>

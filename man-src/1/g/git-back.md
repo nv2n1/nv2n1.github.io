@@ -1,5 +1,4 @@
 ---
-
 title: "git-back(1)"
 name: "git-back"
 section: "1"
@@ -10,7 +9,9 @@ description: "git-back – Undo and Stage latest commits"
 
 <h2>NAME</h2>
 <p> <code>git-back</code> &#8211; Undo and Stage latest commits</p>
+<h2>SYNOPSIS</h2>
 <p> <code>git-back</code> [&lt;commitcount&gt;]</p>
+<h2>DESCRIPTION</h2>
 <p> Removes the latest commits, and add their changes to your staging area.</p>
 <h2>OPTIONS</h2>
 <p> &lt;commitcount&gt; </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "dar_slave(1)"
 name: "dar_slave"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-dar_slave/"
 description: "dar_slave – disk archive slave for remote access to a dar archive"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dar_slave &#8211; disk archive slave for remote access to a dar archive </p>
+<h2>SYNOPSIS</h2>
 <p> dar_slave [options] [&lt;path&gt;/]source </p>
 <p> dar_slave -h </p>
 <p> dar_slave -V</p>
+<h2>DESCRIPTION</h2>
 <p> <code>dar_slave</code> reads an archive and listens for <code>dar</code> orders on standard input, sending asked parts of the archive on standard output. </p>
 <p> Source is the basename of the archive to read. By default, <code>dar_slave</code> uses standard input and output to communicate with a <code>dar</code> process, which may be running on the local host or on a remote host. It is possible to change the behavior of <code>dar_slave</code> to use named pipe instead of standard input and output </p>
 <h2>OPTIONS</h2>

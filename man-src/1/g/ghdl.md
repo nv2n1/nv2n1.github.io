@@ -1,5 +1,4 @@
 ---
-
 title: "ghdl(1)"
 name: "ghdl"
 section: "1"
@@ -10,7 +9,9 @@ description: "ghdl – VHDL compiler/simulator"
 
 <h2>NAME</h2>
 <p> ghdl &#8211; VHDL compiler/simulator</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ghdl</code> [<i>command</i>]<i> </i>[<i>options</i>]<i> files</i>&#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>ghdl</code> command. This manual page was written for user of man, but is not as complete as the reference documentation. </p>
 <p> Instead, users should read the GHDL texinfo manual</p>
 <h2>OPTIONS</h2>

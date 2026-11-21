@@ -1,5 +1,4 @@
 ---
-
 title: "errno(3)"
 name: "errno"
 section: "3"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/3-errno/"
 description: "errno – number of last error"
 ---
 
+<h2 class="name">NAME</h2>
+<p> errno &#8211; number of last error </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;errno.h&gt;</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <i>&lt;errno.h&gt;</i> header file defines the integer variable <i>errno</i>, which is set by system calls and some library functions in the event of an error to indicate what went wrong.</p>
 <h3>errno</h3>
 <p> The value in <i>errno</i> is significant only when the return value of the call indicated an error (i.e., -1 from most system calls; -1 or NULL from most library functions); a function that succeeds <i>is</i> allowed to change <i>errno</i>. The value of <i>errno</i> is never set to zero by any system call or library function. </p>

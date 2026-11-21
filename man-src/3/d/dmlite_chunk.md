@@ -1,5 +1,4 @@
 ---
-
 title: "dmlite_chunk(3)"
 name: "dmlite_chunk"
 section: "3"
@@ -8,7 +7,10 @@ url: "/docs/linux/man/3-dmlite_chunk/"
 description: "dmlite_chunk –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dmlite_chunk &#8211; </p>
 <p> Chunk of data.</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;pool.h&gt;</p>
 <h3>Data Fields</h3>
 <p> off_t <code>offset</code> </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ssh-import-id-lp(1)"
 name: "ssh-import-id-lp"
 section: "1"
@@ -8,7 +7,9 @@ url: "/docs/linux/man/1-ssh-import-id-lp/"
 description: "ssh-import-id – retrieve one or more public keys from a public keyserver and append them to the current user’s authorized_keys file (or some other specified file)"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>ssh-import-id</code> &#8211; retrieve one or more public keys from a public keyserver and append them to the current user&#8217;s authorized_keys file (or some other specified file)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ssh-import-id [options] USER_ID_1 [gh:USER_ID_2] &#8230; [lp:USER_ID_n]</code> </p>
 <p> <code>ssh-import-id-lp USER_ID_1 [USER_ID_2] &#8230; [USER_ID_n]</code> </p>
 <p> <code>ssh-import-id-gh USER_ID_1 [USER_ID_2] &#8230; [USER_ID_n]</code> </p>
@@ -18,6 +19,7 @@ description: "ssh-import-id – retrieve one or more public keys from a public k
 <p>&nbsp;-r | &#8211;remove&nbsp;<wbr>&nbsp;<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>remove keys from authorized keys file&nbsp;&#8216;F&#8217;</p>
 <p>&nbsp;-u | &#8211;useragent U<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>append U to the user agent string</p>
 <p>&nbsp;PROTO:USER_ID<tt>&nbsp;<wbr>&nbsp;</tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Protocol can be&nbsp;&#8216;lp&#8217;&nbsp;for Launchpad.net, or&nbsp;&#8216;gh&#8217;&nbsp;for Github.com</p>
+<h2>DESCRIPTION</h2>
 <p> This utility will securely contact a public keyserver and retrieve one or more user&#8217;s public keys, and append these to the current user&#8217;s <i>~/.ssh/authorized_keys</i> file, standard output or any other specified output file. </p>
 <p> User IDs can be prepended by a protocol: </p>
 <p>&nbsp;&#8211;&nbsp;<code>lp:</code>&nbsp;to use&nbsp;<i><a rel="nofollow" href="https://launchpad.net/~%s/+sshkeys">https://launchpad.net/~%s/+sshkeys</a></i><br />

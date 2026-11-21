@@ -1,5 +1,4 @@
 ---
-
 title: "dc1394_grab_gray_image(1)"
 name: "dc1394_grab_gray_image"
 section: "1"
@@ -10,7 +9,9 @@ description: "grab_gray_image – grab an image using libdc1394"
 
 <h2>NAME</h2>
 <p> grab_gray_image &#8211; grab an image using libdc1394</p>
+<h2>SYNOPSIS</h2>
 <p> <code>grab_gray_image</code></p>
+<h2>DESCRIPTION</h2>
 <p> Get one gray image using libdc1394 and store it in portable grayscale map format in Image.pgm</p>
 <h2>OPTIONS</h2>
 <dl>

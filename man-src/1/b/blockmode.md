@@ -1,5 +1,4 @@
 ---
-
 title: "blockmode(1)"
 name: "blockmode"
 section: "1"
@@ -10,8 +9,10 @@ description: "blockmode – Block average (x, y, z) data tables by mode estimati
 
 <h2>NAME</h2>
 <p> blockmode &#8211; Block average (x, y, z) data tables by mode estimation</p>
+<h2>SYNOPSIS</h2>
 <p> <code>blockmode</code> [ <i>table</i> ] <i>increment</i> <i>region</i> [ ] [ [<i>width</i>][<code>+c</code>][<code>+a</code>|<code>+l</code>|<code>+h</code> ] [ <code>r</code>|<code>s</code>[<code>&#8211;</code>] ] [ ] [ [<i>level</i>] ] [ [<code>i</code>|<code>o</code>] ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-r</code> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>blockmode</code> reads arbitrarily located (<i>x</i>,<i>y</i>,<i>z</i>) triples [or optionally weighted quadruples (<i>x</i>,<i>y</i>,<i>z</i>,<i>w</i>)] from standard input [or <i>table</i>] and writes to standard output mode estimates of position and value for every non-empty block in a grid region defined by the <code>-R</code> and <code>-I</code> arguments. Either <code>blockmean</code>, <code>blockmedian</code>, or <code>blockmode</code> should be used as a pre-processor before running <code>surface</code> to avoid aliasing short wavelengths. These routines are also generally useful for decimating or averaging (<i>x</i>,<i>y</i>,<i>z</i>) data. You can modify the precision of the output format by editing the <i>FORMAT_FLOAT_OUT</i> parameter in your <code>gmt.conf</code> file, or you may choose binary input and/or output to avoid loss of precision.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

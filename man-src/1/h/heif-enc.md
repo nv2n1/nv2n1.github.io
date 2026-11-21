@@ -1,5 +1,4 @@
 ---
-
 title: "heif-enc(1)"
 name: "heif-enc"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-heif-enc/"
 description: "heif-enc – convert image to HEIC/HEIF"
 ---
 
+<h2 class="name">NAME</h2>
+<p> heif-enc &#8211; convert image to HEIC/HEIF </p>
+<h2>SYNOPSIS</h2>
 <p> <code>heif-enc</code> [<code>-h</code>|<code>&#8211;help</code>] [<code>-q</code> <i>QUALITY</i>|<code>&#8211;quality</code> <i>QUALITY</i>] [<code>-L</code>|<code>&#8211;lossless</code>] [<code>-t</code> <i>SIZE</i>|<code>&#8211;thumb</code> <i>SIZE</i>] [<code>&#8211;no-alpha</code>] [<code>&#8211;no-thumb-alpha</code>] [<code>-o</code> <i>FILENAME</i>|<code>&#8211;output</code> <i>FILENAME</i>] [<code>-v</code>|<code>&#8211;verbose</code>] [<code>-P</code>|<code>&#8211;params</code>] [<code>-b</code> <i>DEPTH</i>] [<code>-p</code> <i>NAME</i><code>=</code><i>VALUE</i>] <i>filename[.jpg|.png|.y4m]</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>heif-enc</code> Convert image to HEIC/HEIF.</p>
 <h2>OPTIONS</h2>
 <dl>

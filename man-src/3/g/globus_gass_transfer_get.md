@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_gass_transfer_get/"
 description: "Client-Initiated Operations –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Client-Initiated Operations &#8211; </p>
 <p> GASS Transfer Client Operations.</p>
 <h3>Functions</h3>
 <p> int <code>globus_gass_transfer_register_get</code> (<code>globus_gass_transfer_request_t</code> *request, globus_gass_transfer_requestattr_t *attr, char *url, globus_gass_transfer_callback_t callback, void *user_arg) </p>

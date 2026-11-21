@@ -1,5 +1,4 @@
 ---
-
 title: "desktop-file-install(1)"
 name: "desktop-file-install"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-desktop-file-install/"
 description: "desktop-file-install, desktop-file-edit – Installation and edition of desktop files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> desktop-file-install, desktop-file-edit &#8211; Installation and edition of desktop files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>desktop-file-install [&#8211;dir=DIR] [-m MODE|&#8211;mode=MODE]</code> <code>[&#8211;vendor=VENDOR] [&#8211;delete-original]</code> <code>[&#8211;rebuild-mime-info-cache]</code> <code>[EDITOPTION]&#8230; FILE&#8230;</code> </p>
 <p> <code>desktop-file-edit [EDITOPTION]&#8230; FILE</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <i>desktop-file-install</i> program is a tool to install, and optionally edit, desktop files. The <i>desktop-file-edit</i> program is a tool to edit a desktop file. They are mostly useful for developers and packagers. </p>
 <p> Various options are available to edit the desktop files. The edit options can be specified more than once and will be processed in the same order as the options passed to the program. </p>
 <p> <i>desktop-file-install</i> and <i>desktop-file-edit</i> will always try to validate the resulting desktop file. A failure to validate might lead to the abortion of the installation of the desktop files. </p>

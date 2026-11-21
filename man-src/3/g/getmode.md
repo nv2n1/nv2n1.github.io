@@ -1,5 +1,4 @@
 ---
-
 title: "getmode(3)"
 name: "getmode"
 section: "3"
@@ -8,10 +7,13 @@ url: "/docs/linux/man/3-getmode/"
 description: "getmode setmode – modify mode bits"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>getmode</code> <code>setmode</code> &#8211; modify mode bits </p>
 <h2>LIBRARY</h2>
 <p> Lb libbsd</p>
+<h2>SYNOPSIS</h2>
 <p> In bsd/unistd.h Ft void * Fn setmode const char *mode_str Ft mode_t Fn getmode const void *set mode_t mode</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn setmode function accepts a string representation of a file mode change, compiles it to binary form, and returns an abstract representation that may be passed to Fn getmode . The string may be an numeric (octal) or symbolic string of the form accepted by <a href="/docs/linux/man/1-chmod/">chmod</a>(1), and may represent either an exact mode to set or a change to make to the existing mode. </p>
 <p> The Fn getmode function adjusts the file permission bits given by Fa mode according to the compiled change representation Fa set , and returns the adjusted mode. While only the permission bits are altered, other parts of the file mode, particularly the type, may be examined. </p>
 <p> Because some of the possible symbolic values are defined relative to the file creation mask, Fn setmode may call <a href="/docs/linux/man/2-umask/">umask</a>(2), temporarily changing the mask. If this occurs, the file creation mask will be restored before Fn setmode returns. If the calling program changes the value of its file creation mask after calling Fn setmode , Fn setmode must be called again to recompile the mode string if Fn getmode is to modify future file modes correctly. </p>

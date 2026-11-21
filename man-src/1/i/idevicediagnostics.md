@@ -1,5 +1,4 @@
 ---
-
 title: "idevicediagnostics(1)"
 name: "idevicediagnostics"
 section: "1"
@@ -10,7 +9,9 @@ description: "idevicediagnostics – Interact with the diagnostics interface of 
 
 <h2>NAME</h2>
 <p> idevicediagnostics &#8211; Interact with the diagnostics interface of a device.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>idevicediagnostics</code> [OPTIONS] COMMAND </p>
+<h2>DESCRIPTION</h2>
 <p> Interact with the diagnostics interface of a device which allows to retrive all kinds of information including diagnostics data, mobilegestalt data, remote access to the IORegistry and certain commands like restart, shutdown and sleep. Only available for iOS 4 and later. Accessing IORegistry is only supported on iOS 5 and later. </p>
 <h2>OPTIONS</h2>
 <dl>

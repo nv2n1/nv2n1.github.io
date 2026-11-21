@@ -1,5 +1,4 @@
 ---
-
 title: "nodeset(1)"
 name: "nodeset"
 section: "1"
@@ -10,7 +9,9 @@ description: "nodeset – compute advanced nodeset operations"
 
 <h2>NAME</h2>
 <p> nodeset &#8211; compute advanced nodeset operations</p>
+<h2>SYNOPSIS</h2>
 <p> <code>nodeset</code> [OPTIONS] [COMMAND] [nodeset1 [OPERATION] nodeset2|&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> Note: <code>nodeset</code> and <code>cluset</code> are the same command. </p>
 <p> <code>nodeset</code> is an utility command provided with the ClusterShell library which implements some features of ClusterShell&#8217;s NodeSet and RangeSet Python classes. It provides easy manipulation of 1D or nD-indexed cluster nodes and node groups and supports RFC 1123 (except that a node name can&#8217;t be entirely numeric). </p>
 <p> Also, <code>nodeset</code> is automatically bound to the library node group resolution mechanism. Thus, it is especially useful to enhance cluster aware administration shell scripts.</p>

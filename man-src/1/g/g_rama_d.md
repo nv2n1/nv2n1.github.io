@@ -1,5 +1,4 @@
 ---
-
 title: "g_rama_d(1)"
 name: "g_rama_d"
 section: "1"
@@ -11,7 +10,9 @@ description: "g_rama – computes Ramachandran plots"
 <h2>NAME</h2>
 <p> g_rama &#8211; computes Ramachandran plots </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>g_rama</code> <code>-f</code><i> traj.xtc </i> <code>-s</code><i> topol.tpr </i> <code>-o</code><i> rama.xvg </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i></p>
+<h2>DESCRIPTION</h2>
 <p> g_rama selects the Phi/Psi dihedral combinations from your topology file and computes these as a function of time. Using simple Unix tools such as <i> grep</i> you can select out specific residues.</p>
 <h2>FILES</h2>
 <p> <code>-f</code><i> traj.xtc</i> <code>Input</code><br />

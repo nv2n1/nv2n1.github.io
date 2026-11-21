@@ -1,5 +1,4 @@
 ---
-
 title: "ibv_rereg_mr(3)"
 name: "ibv_rereg_mr"
 section: "3"
@@ -7,7 +6,14 @@ letter: "i"
 url: "/docs/linux/man/3-ibv_rereg_mr/"
 ---
 
-ibv_rereg_mr - re-register a memory region (MR) 
+<h2 class="name">NAME</h2>
+ 
+
+ 
+
+ ibv_rereg_mr - re-register a memory region (MR) 
+
+<h2>SYNOPSIS</h2>
 
 <dl>
 <dt>
@@ -21,7 +27,11 @@ int ibv_rereg_mr(struct ibv_mr *mr,
                  int access);
 </code></pre></dd></dl>
 
-ibv_rereg_mr() Modifies the attributes of an existing memory region (MR) mr. Conceptually, this call performs the functions deregister memory region followed by register memory region. Where possible, resources are reused instead of deallocated and reallocated. 
+<h2>DESCRIPTION</h2>
+
+ 
+
+ ibv_rereg_mr() Modifies the attributes of an existing memory region (MR) mr. Conceptually, this call performs the functions deregister memory region followed by register memory region. Where possible, resources are reused instead of deallocated and reallocated. 
 
  flags is a bit-mask used to indicate which of the following properties of the memory region are being modified. Flags should be a combination (bit field) of:
 <dl>

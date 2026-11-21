@@ -1,5 +1,4 @@
 ---
-
 title: "underlying_(3)"
 name: "underlying_"
 section: "3"
@@ -7,8 +6,8 @@ letter: "u"
 url: "/docs/linux/man/3-underlying_/"
 description: "QuantLib::CappedFlooredCoupon – Capped and/or floored floating-rate coupon."
 ---
-
 <p>QuantLib::CappedFlooredCoupon &#8211; Capped and/or floored floating-rate coupon. </p>
+<h2>SYNOPSIS</h2>
 <p> <br />
  </p>
 <p>#include &lt;ql/cashflows/capflooredcoupon.hpp&gt; </p>

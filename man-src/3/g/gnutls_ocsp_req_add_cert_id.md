@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_ocsp_req_add_cert_id(3)"
 name: "gnutls_ocsp_req_add_cert_id"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_ocsp_req_add_cert_id – API function"
 
 <h2>NAME</h2>
 <p> gnutls_ocsp_req_add_cert_id &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/ocsp.h&gt;</code> </p>
 <p> <code>int gnutls_ocsp_req_add_cert_id(gnutls_ocsp_req_t </code><i>req</i><code>, gnutls_digest_algorithm_t </code><i>digest</i><code>, const gnutls_datum_t * </code><i>issuer_name_hash</i><code>, const gnutls_datum_t * </code><i>issuer_key_hash</i><code>, const gnutls_datum_t * </code><i>serial_number</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,6 +24,7 @@ description: "gnutls_ocsp_req_add_cert_id – API function"
 <dd> hash of issuer&#8217;s public key</dd>
 <dt>const gnutls_datum_t * serial_number</dt>
 <dd> serial number of certificate to check</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will add another request to the OCSP request for a particular certificate having the issuer name hash of<br />
 &nbsp;<wbr><i>issuer_name_hash</i>&nbsp;<wbr>and issuer key hash of&nbsp;<wbr>&nbsp;<wbr><i>issuer_key_hash</i>&nbsp;<wbr>(both hashed using <i>digest</i> ) and serial number <i>serial_number</i> . </p>
 <p> The information needed corresponds to the CertID structure: </p>

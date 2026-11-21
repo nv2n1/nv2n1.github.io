@@ -1,5 +1,4 @@
 ---
-
 title: "i(1)"
 name: "i"
 section: "1"
@@ -12,6 +11,7 @@ description: "i.zc – Zero-crossing \"edge detection\" raster function for imag
 <p> <i></i><code>i.zc</code> &#8211; Zero-crossing &quot;edge detection&quot; raster function for image processing.</p>
 <h2>KEYWORDS</h2>
 <p> imagery</p>
+<h2>SYNOPSIS</h2>
 <p> <code>i.zc</code><br />
  <code>i.zc help</code><br />
  <code>i.zc input</code>=<i>string</i> <code>output</code>=<i>string</i> [<code>width</code>=<i>integer</i>] [<code>threshold</code>=<i>float</i>] [<code>orientations</code>=<i>integer</i>] [&#8211;<code>overwrite</code>] [&#8211;<code>verbose</code>] [&#8211;<code>quiet</code>]</p>
@@ -46,6 +46,7 @@ description: "i.zc – Zero-crossing \"edge detection\" raster function for imag
 <dd>
  Number of azimuth directions categorized<br />
  Default: <i>1</i></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <i>i.zc</i> is an image processing program used for edge detection. The raster map produced shows the location of dqboundaries&quot; on the input map. Boundaries tend to be found in regions of changing cell values and tend to run perpendicular to the direction of the slope. The algorithm used for edge detection is one of the &quot;zero-crossing&quot; algorithms and is discussed briefly below. </p>
 <p> This program will be run interactively if the user types <code>i.zc</code> without program arguments on the command line. In this event, the program will prompt the user for parameter values using the standard interface described in the manual entry for <i>parser</i>. Alternately, the user can run the program non-interactively by specifying program parameter values on the command line.</p>
 <h2>OPTIONS</h2>

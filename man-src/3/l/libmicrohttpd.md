@@ -1,5 +1,4 @@
 ---
-
 title: "libmicrohttpd(3)"
 name: "libmicrohttpd"
 section: "3"
@@ -10,8 +9,10 @@ description: "GNU libmicrohttpd – library for embedding HTTP servers"
 
 <h2>NAME</h2>
 <p> GNU libmicrohttpd &#8211; library for embedding HTTP servers</p>
+<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr><code>#include&nbsp;<wbr>&lt;microhttpd.h&gt; </p>
 <p> </code></p>
+<h2>DESCRIPTION</h2>
 <p> GNU libmicrohttpd (short MHD) allows applications to easily integrate the functionality of a simple HTTP server. MHD is a GNU package. </p>
 <p> The details of the API are described in comments in the header file, a detailed reference documentation, a tutorial, and in brief on the MHD webpage. </p>
 <h2>SEE ALSO</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "lwres_getnameinfo(3)"
 name: "lwres_getnameinfo"
 section: "3"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/3-lwres_getnameinfo/"
 description: "lwres_getnameinfo – lightweight resolver socket address structure to hostname and service name"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lwres_getnameinfo &#8211; lightweight resolver socket address structure to hostname and service name </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;lwres/netdb.h&gt;
 </code></pre>
 <dl>
 <dt> <code>int lwres_getnameinfo(const struct sockaddr&nbsp;<wbr>*</code><i>sa</i><code>, size_t&nbsp;<wbr></code><i>salen</i><code>, char&nbsp;<wbr>*</code><i>host</i><code>, size_t&nbsp;<wbr></code><i>hostlen</i><code>, char&nbsp;<wbr>*</code><i>serv</i><code>, size_t&nbsp;<wbr></code><i>servlen</i><code>, int&nbsp;<wbr></code><i>flags</i><code>);</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This function is equivalent to the <code><a href="/docs/linux/man/3-getnameinfo/">getnameinfo</a></code>(3) function defined in RFC2133. <code>lwres_getnameinfo()</code> returns the hostname for the <code>struct sockaddr</code> <i>sa</i> which is <i>salen</i> bytes long. The hostname is of length <i>hostlen</i> and is returned via <i>*host.</i> The maximum length of the hostname is 1025 bytes: <code>NI_MAXHOST</code>. </dd>
 <p> The name of the service associated with the port number in <i>sa</i> is returned in <i>*serv.</i> It is <i>servlen</i> bytes long. The maximum length of the service name is <code>NI_MAXSERV</code> &#8211; 32 bytes. </p>
 <p> The <i>flags</i> argument sets the following bits: </p>

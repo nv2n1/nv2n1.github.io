@@ -1,5 +1,4 @@
 ---
-
 title: "id3tag(1)"
 name: "id3tag"
 section: "1"
@@ -10,7 +9,9 @@ description: "id3tag – Tags an mp3 file with id3v1 and/or id3v2 tags."
 
 <h2>NAME</h2>
 <p> id3tag &#8211; Tags an mp3 file with id3v1 and/or id3v2 tags.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>id3tag</code> [ <i>OPTION</i> ]<code>&#8230;</code> [ <i>FILE</i> ]<code>&#8230;</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>Id3tag</code> will render both types of tag by default. Only the last tag type indicated in the option list will be used. Non- rendered will remain unchanged in the original file. Will also parse and convert Lyrics3 v2.0 frames, but will not render them. </p>
 <h2>OPTIONS</h2>
 <dl>

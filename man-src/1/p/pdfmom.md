@@ -1,5 +1,4 @@
 ---
-
 title: "pdfmom(1)"
 name: "pdfmom"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pdfmom/"
 description: "pdfmom – produce PDF documents using the mom macro package for groff"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pdfmom &#8211; produce PDF documents using the mom macro package for groff </p>
+<h2>SYNOPSIS</h2>
 <p> [ <code>-Tpdf</code> ] [<i>groff-options</i>] <i>file</i> &#8230; <code>-Tps</code> [<i>pdfroff-options</i>] [<i>groff-options</i>] <i>file</i> &#8230; <code>-v</code></p>
+<h2>DESCRIPTION</h2>
 <p> <i>pdfmom</i> is a wrapper around <i><a href="/docs/linux/man/1-groff/">groff</a></i>(1) that facilitates the production of PDF documents from files formatted with the <i>mom</i> macros. </p>
 <p> <i>pdfmom</i> prints to the standard output, so output must usually be redirected to a destination file. The size of the final PDF can be reduced by piping the output through <i><a href="/docs/linux/man/1-ps2pdf/">ps2pdf</a></i>(1). </p>
 <p> If called with the <code>-Tpdf</code> option (which is the default), <i>pdfmom</i> processes files using groff&#8217;s native PDF driver, <i><a href="/docs/linux/man/1-gropdf/">gropdf</a></i>(1). If <code>-Tps</code> is given, processing is passed over to <i>pdfroff</i>, which uses <i>groff</i>&#8216;s PostScript driver. In either case, multiple runs of the source file are performed in order to satisfy any forward references in the document. </p>

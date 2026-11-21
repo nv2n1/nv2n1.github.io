@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_global_set_mutex(3)"
 name: "gnutls_global_set_mutex"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_global_set_mutex – API function"
 
 <h2>NAME</h2>
 <p> gnutls_global_set_mutex &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_global_set_mutex(mutex_init_func </code><i>init</i><code>, mutex_deinit_func </code><i>deinit</i><code>, mutex_lock_func </code><i>lock</i><code>, mutex_unlock_func </code><i>unlock</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,6 +22,7 @@ description: "gnutls_global_set_mutex – API function"
 <dd> mutex locking function</dd>
 <dt>mutex_unlock_func unlock</dt>
 <dd> mutex unlocking function</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> With this function you are allowed to override the default mutex locks used in some parts of gnutls and dependent libraries. This function should be used if you have complete control of your program and libraries. Do not call this function from a library, or preferrably from any application unless really needed to. GnuTLS will use the appropriate locks for the running system. </p>
 <p> This function must be called prior to any other gnutls function.</p>
 <h2>SINCE</h2>

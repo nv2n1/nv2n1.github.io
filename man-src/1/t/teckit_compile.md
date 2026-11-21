@@ -1,5 +1,4 @@
 ---
-
 title: "teckit_compile(1)"
 name: "teckit_compile"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-teckit_compile/"
 description: "teckit_compile – manual page for command line error at –version"
 ---
 
+<h2 class="name">NAME</h2>
+<p> teckit_compile &#8211; manual page for command line error at &#8211;version </p>
+<h2>SYNOPSIS</h2>
 <p> <code>teckit_compile</code> [<i>,-u/</i>] [<i>,-x/</i>] [<i>,-z/</i>] <i>,mapping_description /</i>[<i>,-o compiled_table/</i>]</p>
 <h2>OPTIONS</h2>
 <p> Required argument:</p>

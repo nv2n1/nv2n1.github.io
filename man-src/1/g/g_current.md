@@ -1,5 +1,4 @@
 ---
-
 title: "g_current(1)"
 name: "g_current"
 section: "1"
@@ -11,7 +10,9 @@ description: "g_current – calculates dielectric constants for charged systems"
 <h2>NAME</h2>
 <p> g_current &#8211; calculates dielectric constants for charged systems </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>g_current</code> <code>-s</code><i> topol.tpr </i> <code>-n</code><i> index.ndx </i> <code>-f</code><i> traj.xtc </i> <code>-o</code><i> current.xvg </i> <code>-caf</code><i> caf.xvg </i> <code>-dsp</code><i> dsp.xvg </i> <code>-md</code><i> md.xvg </i> <code>-mj</code><i> mj.xvg </i> <code>-mc</code><i> mc.xvg </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-sh</code><i> int </i> <code>-[no]nojump</code><i></i> <code>-eps</code><i> real </i> <code>-bfit</code><i> real </i> <code>-efit</code><i> real </i> <code>-bvit</code><i> real </i> <code>-evit</code><i> real </i> <code>-tr</code><i> real </i> <code>-temp</code><i> real </i></p>
+<h2>DESCRIPTION</h2>
 <p> This is a tool for calculating the current autocorrelation function, the correlation of the rotational and translational dipole moment of the system, and the resulting static dielectric constant. To obtain a reasonable result the index group has to be neutral. Furthermore the routine is capable of extracting the static conductivity from the current autocorrelation function, if velocities are given. Additionally an Einstein-Helfand fit also allows to get the static conductivity. </p>
 <p> The flag <code> -caf</code> is for the output of the current autocorrelation function and <code> -mc</code> writes the correlation of the rotational and translational part of the dipole moment in the corresponding file. However this option is only available for trajectories containing velocities.Options <code> -sh</code> and <code> -tr</code> are responsible for the averaging and integration of the autocorrelation functions. Since averaging proceeds by shifting the starting point through the trajectory, the shift can be modified with <code> -sh</code> to enable the choice of uncorrelated starting points. Towards the end, statistical inaccuracy grows and integrating the correlation function only yields reliable values until a certain point, depending on the number of frames. The option <code> -tr</code> controls the region of the integral taken into account for calculating the static dielectric constant. </p>
 <p> Option <code> -temp</code> sets the temperature required for the computation of the static dielectric constant. </p>

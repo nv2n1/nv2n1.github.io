@@ -1,5 +1,4 @@
 ---
-
 title: "iconv(1)"
 name: "iconv"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-iconv/"
 description: "iconv – convert text from one character encoding to another"
 ---
 
+<h2 class="name">NAME</h2>
+<p> iconv &#8211; convert text from one character encoding to another </p>
+<h2>SYNOPSIS</h2>
 <p> <code>iconv</code> [<i>options</i>] [-f <i>from-encoding</i>] [-t <i>to-encoding</i>] [<i>inputfile</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>iconv</code> program reads in text in one encoding and outputs the text in another encoding. If no input files are given, or if it is given as a dash (-), <code>iconv</code> reads from standard input. If no output file is given, <code>iconv</code> writes to standard output. </p>
 <p> If no <i>from-encoding</i> is given, the default is derived from the current locale&#8217;s character encoding. If no <i>to-encoding</i> is given, the default is derived from the current locale&#8217;s character encoding.</p>
 <h2>OPTIONS</h2>

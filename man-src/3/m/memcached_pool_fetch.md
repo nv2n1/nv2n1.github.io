@@ -1,5 +1,4 @@
 ---
-
 title: "memcached_pool_fetch(3)"
 name: "memcached_pool_fetch"
 section: "3"
@@ -10,6 +9,7 @@ description: "memcached_pool_fetch – libmemcached Documentation"
 
 <h2>NAME</h2>
 <p> memcached_pool_fetch &#8211; libmemcached Documentation</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached_pool.h&gt;</p>
 <dl>
 <dt><code>memcached_pool_st</code></dt>
@@ -38,6 +38,7 @@ description: "memcached_pool_fetch – libmemcached Documentation"
 </dd><dt><code>memcached_return_t memcached_pool_behavior_get(</code><i>memcached_pool_st</i><i>&nbsp;<wbr>*pool</i>, memcached_behavior_t<i>&nbsp;<wbr>flag</i>, uint64_t<i>&nbsp;<wbr>*value</i>)</dt>
 <dd>
 <p> Compile and link with -lmemcachedutil -lmemcached</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <i>memcached_pool()</i> is used to create a connection pool of objects you may use to remove the overhead of using memcached_clone for short lived <code>memcached_st</code> objects. Please see <code>libmemcached_configuration</code> for details on the format of the configuration string. </p>
 <p> <i>memcached_pool_destroy()</i> is used to destroy the connection pool created with <i>memcached_pool_create()</i> and release all allocated resources. It will return the pointer to the <code>memcached_st</code> structure passed as an argument to <i>memcached_pool_create()</i>, and returns the ownership of the pointer to the caller when created with <i>memcached_pool_create()</i>, otherwise NULL is returned.. </p>
 <p> <i>memcached_pool_fetch()</i> is used to fetch a connection structure from the connection pool. The relative_time argument specifies if the function should block and wait for a connection structure to be available if we try to exceed the maximum size. You need to specify time in relative time. </p>

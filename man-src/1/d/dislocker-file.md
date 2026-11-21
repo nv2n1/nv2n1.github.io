@@ -1,5 +1,4 @@
 ---
-
 title: "dislocker-file(1)"
 name: "dislocker-file"
 section: "1"
@@ -10,8 +9,10 @@ description: "Dislocker file – Read BitLocker encrypted volumes under Linux, O
 
 <h2>NAME</h2>
 <p> Dislocker file &#8211; Read BitLocker encrypted volumes under Linux, OSX and FreeBSD.</p>
+<h2>SYNOPSIS</h2>
 <p> dislocker-file [-hqrsv] [-l <i>LOG_FILE</i>] [-O <i>OFFSET</i>] [-V <i>VOLUME</i> <i>DECRYPTMETHOD</i> -F[<i>N</i>]] [&#8211;] <i>NTFS_FILE</i> </p>
 <p> Where DECRYPTMETHOD = {-p[<i>RECOVERY_PASSWORD</i>] | -f <i>BEK_FILE</i> | -u[<i>USER_PASSWORD</i>] | -k <i>FVEK_FILE</i> | -c}</p>
+<h2>DESCRIPTION</h2>
 <p> Given a decryption mean, the program is used to decrypt BitLocker encrypted volumes. </p>
 <p> This process may take a very long time, depending on the initial volume size, as the program will decrypt the encrypted partition linearly. About this size, note that the created NTFS file will be of the same size as the BitLocker encrypted partition, so you may want to check that you have enough free space on the volume where you put the NTFS file. </p>
 <p> This NTFS file won&#8217;t have any link with the original BitLocker encrypted partition, so you may modify it to suit your needs.</p>

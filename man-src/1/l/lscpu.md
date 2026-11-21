@@ -1,5 +1,4 @@
 ---
-
 title: "lscpu(1)"
 name: "lscpu"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-lscpu/"
 description: "lscpu – display information about the CPU architecture"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lscpu &#8211; display information about the CPU architecture </p>
+<h2>SYNOPSIS</h2>
 <p> <code>lscpu</code> [options]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>lscpu</code> gathers CPU architecture information from <i>sysfs</i>, <i>/proc/cpuinfo</i> and any applicable architecture-specific libraries (e.g. <code>librtas</code> on Powerpc). The command output can be optimized for parsing or for easy readability by humans. The information includes, for example, the number of CPUs, threads, cores, sockets, and Non-Uniform Memory Access (NUMA) nodes. There is also information about the CPU caches and cache sharing, family, model, bogoMIPS, byte order, and stepping. </p>
 <p> The default output formatting on terminal is subject to change and maybe optimized for better readability. The output for non-terminals (e.g., pipes) is never affected by this optimization and it is always in &quot;Field: data
 &quot; format. Use for example &quot;<code>lscpu | less</code>&quot; to see the default output without optimizations. </p>

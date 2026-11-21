@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-brlapi_keycodes/"
 description: "Types and Defines fore BrlAPI Key Codes –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Types and Defines fore BrlAPI Key Codes &#8211; </p>
 <h3>Macros</h3>
 <p> #define <code>BRLAPI_PRIxKEYCODE</code> PRIx64 </p>
 <p> #define <code>BRLAPI_PRIuKEYCODE</code> PRIu64 </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "perlreftut(1)"
 name: "perlreftut"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-perlreftut/"
 description: "perlreftut – Mark’s very short tutorial about references"
 ---
 
+<h2 class="name">NAME</h2>
+<p> perlreftut &#8211; Mark&#8217;s very short tutorial about references </p>
+<h2>DESCRIPTION</h2>
 <p> One of the most important new features in Perl 5 was the capability to manage complicated data structures like multidimensional arrays and nested hashes. To enable these, Perl 5 introduced a feature called <i>references</i>, and using references is the key to managing complicated, structured data in Perl. Unfortunately, there&#8217;s a lot of funny syntax to learn, and the main manual page can be hard to follow. The manual is quite complete, and sometimes people find that a problem, because it can be hard to tell what is important and what isn&#8217;t. </p>
 <p> Fortunately, you only need to know 10% of what&#8217;s in the main page to get 90% of the benefit. This page will show you that 10%.</p>
 <h2>Who Needs Complicated Data Structures?</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "tapeinfo(1)"
 name: "tapeinfo"
 section: "1"
@@ -10,7 +9,9 @@ description: "tapeinfo – report SCSI tape device info"
 
 <h2>NAME</h2>
 <p> tapeinfo &#8211; report SCSI tape device info</p>
+<h2>SYNOPSIS</h2>
 <p> tapeinfo -f &lt;scsi-generic-device&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>tapeinfo</code> command reads various information from SCSI tape drives that is not generally available via most vendors&#8217; tape drivers. It issues raw commands directly to the tape drive, using either the operating system&#8217;s SCSI generic device ( e.g. /dev/sg0 on Linux, /dev/pass0 on FreeBSD) or the raw SCSI I/O ioctl on a tape device on some operating systems. </p>
 <p> One good time to use &#8216;tapeinfo&#8217; is immediately after a tape i/o operation has failed. On tape drives that support HP&#8217;s &#8216;tapealert&#8217; API, &#8216;tapeinfo&#8217; will report a more exact description of what went wrong. </p>
 <p> Do be aware that &#8216;tapeinfo&#8217; is not a substitute for your operating system&#8217;s own &#8216;mt&#8217; or similar tape driver control program. It is intended to supplement, not replace, programs like &#8216;mt&#8217; that access your operating system&#8217;s tape driver in order to report or set information.</p>

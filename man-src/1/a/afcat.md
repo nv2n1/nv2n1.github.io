@@ -1,5 +1,4 @@
 ---
-
 title: "afcat(1)"
 name: "afcat"
 section: "1"
@@ -10,7 +9,9 @@ description: "afcat – Output contents of an image file to stdout."
 
 <h2>NAME</h2>
 <p> afcat &#8211; Output contents of an image file to stdout.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>afcat [options] </code> <i>image [images] </i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>affcat</code> outputs the contents of an image file to stdout. Image files that are not raw but are recognized by AFF will be output in raw format. Missing pages will not be padded, but the fact that they are missing will be noted on STDERR. </p>
 <p> The options are as follows:</p>
 <dl>

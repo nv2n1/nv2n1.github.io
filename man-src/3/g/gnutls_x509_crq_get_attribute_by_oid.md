@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_crq_get_attribute_by_oid(3)"
 name: "gnutls_x509_crq_get_attribute_by_oid"
 section: "3"
@@ -11,7 +10,9 @@ url: "/docs/linux/man/3-gnutls_x509_crq_get_attribute_by_oid/"
 
  gnutls_x509_crq_get_attribute_by_oid - API function
 
-<b>#include &lt;gnutls/x509.h&gt;</b> 
+<h2>SYNOPSIS</h2>
+
+ <b>#include &lt;gnutls/x509.h&gt;</b> 
 
  <b>int gnutls_x509_crq_get_attribute_by_oid(gnutls_x509_crq_t </b><i>crq</i><b>, const char * </b><i>oid</i><b>, int </b><i>indx</i><b>, void * </b><i>buf</i><b>, size_t * </b><i>buf_size</i><b>);</b>
 
@@ -29,7 +30,9 @@ url: "/docs/linux/man/3-gnutls_x509_crq_get_attribute_by_oid/"
 </dd><dt>size_t * buf_size
 </dt><dd> initially holds the size of <i>buf</i></dd></dl>
 
-This function will return the attribute in the certificate request specified by the given Object ID. The attribute will be DER encoded. 
+<h2>DESCRIPTION</h2>
+
+ This function will return the attribute in the certificate request specified by the given Object ID. The attribute will be DER encoded. 
 
  Attributes in a certificate request is an optional set of data appended to the request. Their interpretation depends on the CA policy.
 

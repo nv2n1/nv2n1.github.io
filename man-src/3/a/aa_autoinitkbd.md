@@ -1,5 +1,4 @@
 ---
-
 title: "aa_autoinitkbd(3)"
 name: "aa_autoinitkbd"
 section: "3"
@@ -10,6 +9,7 @@ description: "aa_autoinitkbd – easy to use AA-lib keyboard initialization func
 
 <h2>NAME</h2>
 <p> aa_autoinitkbd &#8211; easy to use AA-lib keyboard initialization function.</p>
+<h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>
 <p> int aa_autoinitkbd<br />
  (<br />
@@ -22,6 +22,7 @@ description: "aa_autoinitkbd – easy to use AA-lib keyboard initialization func
 <dd> Specifies the AA-lib context to operate on.</dd>
 <dt><code>int mode</code></dt>
 <dd> Mask of extra features you request. Can contain AA_SENDRELEASE if you are interested in release events too.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Attempts to find available keyboard driver supporting the specified mode. First attempts to initialize the recommended drivers and then in order drivers available in the aa_kbddrivers array (all regular output drivers compiled into AA-lib). </p>
 <p> Every AA-lib program ought to have call to aa_parseoptions before first call to aa_init.</p>
 <h2>RETURNS</h2>

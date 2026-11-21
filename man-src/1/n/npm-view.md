@@ -1,5 +1,4 @@
 ---
-
 title: "npm-view(1)"
 name: "npm-view"
 section: "1"
@@ -8,6 +7,7 @@ url: "/docs/linux/man/1-npm-view/"
 description: "npm-view – View registry info"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>npm-view</code> &#8211; View registry info </p>
 <h3>Synopsis</h3>
 <dl>

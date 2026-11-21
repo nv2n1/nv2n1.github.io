@@ -1,5 +1,4 @@
 ---
-
 title: "htsserver(1)"
 name: "htsserver"
 section: "1"
@@ -10,7 +9,9 @@ description: "htsserver – offline browser server : copy websites to a local di
 
 <h2>NAME</h2>
 <p> htsserver &#8211; offline browser server : copy websites to a local directory</p>
+<h2>SYNOPSIS</h2>
 <p> <code>htsserver [ path/ ] [ keyword value [ keyword value .. ] ]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>htsserver</code> this program is a web frontend server to <code><a href="/docs/linux/man/1-httrack/">httrack</a></code>(1). , a website copier, used by <code><a href="/docs/linux/man/1-webhttrack/">webhttrack</a></code>(1).</p>
 <h2>EXAMPLES</h2>
 <dl>

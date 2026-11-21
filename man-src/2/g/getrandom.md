@@ -1,5 +1,4 @@
 ---
-
 title: "getrandom(2)"
 name: "getrandom"
 section: "2"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/2-getrandom/"
 description: "getrandom – obtain a series of random bytes"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getrandom &#8211; obtain a series of random bytes </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/random.h&gt;</code> </p>
 <p> <code>ssize_t getrandom(void *buf</code><i>, size_t </i><code>buflen</code><i>, unsigned int </i><code>flags</code><i>);</i></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>getrandom</code>() system call fills the buffer pointed to by <i>buf</i> with up to <i>buflen</i> random bytes. These bytes can be used to seed user-space random number generators or for cryptographic purposes. </p>
 <p> By default, <code>getrandom</code>() draws entropy from the <i>urandom</i> source (i.e., the same source as the <i>/dev/urandom</i> device). This behavior can be changed via the <i>flags</i> argument. </p>
 <p> If the <i>urandom</i> source has been initialized, reads of up to 256 bytes will always return as many bytes as requested and will not be interrupted by signals. No such guarantees apply for larger buffer sizes. For example, if the call is interrupted by a signal handler, it may return a partially filled buffer, or fail with the error <code>EINTR</code>. </p>

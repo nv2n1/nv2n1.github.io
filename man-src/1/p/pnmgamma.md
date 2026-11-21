@@ -1,5 +1,4 @@
 ---
-
 title: "pnmgamma(1)"
 name: "pnmgamma"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pnmgamma/"
 description: "pnmgamma – perform gamma correction on a portable anymap"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pnmgamma &#8211; perform gamma correction on a portable anymap</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pnmgamma </code> [<code>-ungamma</code>] [<code>-cieramp</code>|<code>-srgbramp</code>] [<i>value</i> [<i>pnmfile</i>]]<br />
  <code>pnmgamma</code> [<code>-ungamma</code>] [<code>-cieramp</code>|<code>-srgbramp</code>] <i>redgamma greengamma bluegamma</i> [<i>pnmfile</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> Performs gamma correction on pseudo-PNM images. </p>
 <p> The PPM format specification specify that certain sample values in a file represent certain light intensities in an image. In particular, they specify that the sample values are directly proportional to gamma-corrected intensity values. The gamma correction they specify is CIE Rec. 709. </p>
 <p> However, people sometimes work with approximations of PPM and PGM where the relationship between the image intensities and the sample values are something else. For example, the sample value might be directly proportional to the intensity with no gamma correction (often called &quot;linear intensity&quot;). Or a different gamma transfer function may be used. </p>

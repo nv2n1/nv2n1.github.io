@@ -1,5 +1,4 @@
 ---
-
 title: "get_raw_filename(3)"
 name: "get_raw_filename"
 section: "3"
@@ -10,9 +9,11 @@ description: "get_raw_filename — retrieve the pathname of a binary file in a d
 
 <h2>NAME</h2>
 <p> get_raw_filename &#8212; retrieve the pathname of a binary file in a dirfile</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
 <dl>
 <dt> <code>const char *get_raw_filename(DIRFILE *</code><i>dirfile</i><code>, const char</code> <code>*</code><i>field_code</i><code>);</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>get_raw_filename</code>() function retrieves the pathname of the file backing the <code>RAW</code> field specified by <i>field_code</i> in the dirfile specified by <i>dirfile</i>. If <i>field_code</i> contains a valid representation suffix, it will be ignored. </dd>
 <h2>RETURN VALUE</h2>
 <p> On success, <code>get_raw_filename</code>() returns the full pathname of the binary file associated with the specified field. On error, NULL is returned and the dirfile error is set to a non-zero error value. Possible error values are:</p>

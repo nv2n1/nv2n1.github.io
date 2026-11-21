@@ -1,5 +1,4 @@
 ---
-
 title: "mysqlaccess(1)"
 name: "mysqlaccess"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mysqlaccess/"
 description: "mysqlaccess – client for checking access privileges"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mysqlaccess &#8211; client for checking access privileges </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqlaccess [</code><i>host_name</i><code> [</code><i>user_name</i><code> [</code><i>db_name</i><code>]]] [</code><i>options</i><code>]</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>mysqlaccess</code></p>
 <dd>is a diagnostic tool written by Yves Carlier. It checks the access privileges for a host name, user name, and database combination. Note that <code>mysqlaccess</code> checks access using only the user, db, and host tables. It does not check table, column, or routine privileges specified in the tables_priv, columns_priv, or procs_priv tables. </dd>
 <p> Invoke <code>mysqlaccess</code> like this: </p>

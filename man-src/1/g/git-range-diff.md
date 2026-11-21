@@ -1,5 +1,4 @@
 ---
-
 title: "git-range-diff(1)"
 name: "git-range-diff"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-git-range-diff/"
 description: "git-range-diff – Compare two commit ranges (e.g. two versions of a branch)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-range-diff &#8211; Compare two commit ranges (e.g. two versions of a branch) </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git range - diff[--color = [&lt;when&gt;]][--no - color][&lt;diff - options&gt;]
                 [--no - dual - color][--creation - factor = &lt;factor&gt;]
                 [--left - only | --right - only](&lt;range1&gt;&lt;range2&gt; | &lt;rev1&gt;...&lt;rev2&gt; | &lt;base&gt;&lt;rev1&gt;&lt;rev2&gt;)
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> This command shows the differences between two versions of a patch series, or more generally, two commit ranges (ignoring merge commits). </p>
 <p> To that end, it first finds pairs of commits from both commit ranges that correspond with each other. Two commits are said to correspond when the diff between their patches (i.e. the author information, the commit message and the commit diff) is reasonably small compared to the patches&#8217; size. See &#8220;Algorithm&#8220; below for details. </p>
 <p> Finally, the list of matching commits is shown in the order of the second commit range, with unmatched commits being inserted just after all of their ancestors have been shown. </p>

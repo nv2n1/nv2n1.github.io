@@ -1,5 +1,4 @@
 ---
-
 title: "localeconv(3)"
 name: "localeconv"
 section: "3"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/3-localeconv/"
 description: "localeconv – get numeric formatting information"
 ---
 
+<h2 class="name">NAME</h2>
+<p> localeconv &#8211; get numeric formatting information </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;locale.h&gt;
 struct lconv *localeconv(void);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>localeconv</code>() function returns a pointer to a <i>struct lconv</i> for the current locale. This structure is shown in <code><a href="/docs/linux/man/7-locale/">locale</a></code>(7), and contains all values associated with the locale categories <code>LC_NUMERIC</code> and <code>LC_MONETARY</code>. Programs may also use the functions <code><a href="/docs/linux/man/3-printf/">printf</a></code>(3) and <code><a href="/docs/linux/man/3-strfmon/">strfmon</a></code>(3), which behave according to the actual locale in use.</p>
 <h2>RETURN VALUE</h2>
 <p> The <code>localeconv</code>() function returns a pointer to a filled in <i>struct lconv</i>. This structure may be (in glibc, <i>is</i>) statically allocated, and may be overwritten by subsequent calls. According to POSIX, the caller should not modify the contents of this structure. The <code>localeconv</code>() function always succeeds.</p>

@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-brlapi_handles/"
 description: "BrlAPI handles –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> BrlAPI handles &#8211; </p>
 <h3>Typedefs</h3>
 <p> typedef struct <code>brlapi_handle_t</code> <code>brlapi_handle_t</code> </p>
 <h3>Functions</h3>

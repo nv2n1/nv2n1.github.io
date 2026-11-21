@@ -1,5 +1,4 @@
 ---
-
 title: "carbon-client(1)"
 name: "carbon-client"
 section: "1"
@@ -14,6 +13,7 @@ description: "carbon-client – Graphite client to reroute carbon data"
 <pre>
 carbon-client [options]
 </pre>
+<h2>DESCRIPTION</h2>
 <p> Graphite client to reroute carbon data </p>
 <p> The options are described below.</p>
 <h2>OPTIONS</h2>

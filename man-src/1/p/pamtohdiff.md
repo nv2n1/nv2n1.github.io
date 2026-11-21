@@ -1,5 +1,4 @@
 ---
-
 title: "pamtohdiff(1)"
 name: "pamtohdiff"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pamtohdiff/"
 description: "pamtohdiff – convert PAM image to horizontal difference image"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pamtohdiff &#8211; convert PAM image to horizontal difference image</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pamtohdiff</code> [<i>pamfile</i>] [<code>-verbose</code>] </p>
 <p> Minimum unique abbreviation of option is acceptable. You may use double hyphens instead of single hyphens to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamtohdiff</code> takes a PAM (or PNM) image as input and produced a horizontal difference image version of it as output. A horizontal difference image is one where the samples in each row indicate the difference between the sample value in the corresponding sample of the input image and the sample directly above it (in the previous row) in the input image. The horizontal difference image has the property that if a row of the original image is identical to the row above it over a long extent, the corresponding row in the horizontal difference image will contain all zeroes. That makes it compress better than the original image. </p>
 <p> Because the horizontal difference samples can be positive or negative, but PAM samples are unsigned integers, the samples in the horizontal difference image PAM are defined to be the difference modulus the range of the input (maxval + 1). This doesn&#8217;t lose any information, as it might seem, because: of the two differences that could result in the same <code>pamtohdiff</code> output value (e.g. if maxval is 99, +20 and -80 would both result in &quot;20&quot; in the output), only one is possible in context and the other would result, when reconstructing the original image, in a value less than 0 or greater than maxval. </p>

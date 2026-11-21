@@ -1,5 +1,4 @@
 ---
-
 title: "xcam(1)"
 name: "xcam"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-xcam/"
 description: "xcam – a graphical camera frontend for SANE"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xcam &#8211; a graphical camera frontend for SANE </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xcam</code> [<code>&#8211;buffersize</code>|<code>-B</code>] [<code>&#8211;version</code>|<code>-V</code>] [<code>&#8211;help</code>|<code>-h</code>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>xcam</code> provides a graphical user-interface to control an image acquisition device such as a flatbed scanner or a camera. It allows scanning invidual images and can be invoked directly from the command-line. </p>
 <p> <code>xcam</code> acts as a stand-alone program that saves acquired images in a suitable PNM format (PBM for black-and-white images, PGM for grayscale images, and PPM for color images). </p>
 <p> <code>xcam</code> accesses image acquisition devices through the SANE (Scanner Access Now Easy) interface. The list of available devices depends on installed hardware and configuration. </p>

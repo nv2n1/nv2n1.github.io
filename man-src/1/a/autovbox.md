@@ -1,5 +1,4 @@
 ---
-
 title: "autovbox(1)"
 name: "autovbox"
 section: "1"
@@ -10,7 +9,9 @@ description: "autovbox – ISDN voice box (sound converter)"
 
 <h2>NAME</h2>
 <p> autovbox &#8211; ISDN voice box (sound converter)</p>
+<h2>SYNOPSIS</h2>
 <p> autovbox [-2 | -3 | -4 | -h | -v] [-n name] [-p phone] [-l location]</p>
+<h2>DESCRIPTION</h2>
 <p> Convert .au files (Sun audio format) on standard input into vbox files (vbox audio header) on standard output. autovbox is a link to <a href="/docs/linux/man/1-vboxcnvt/">vboxcnvt</a>(1).</p>
 <h2>OPTIONS</h2>
 <p> Autovbox reads from stdin and writes to stdout.</p>

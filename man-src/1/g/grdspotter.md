@@ -1,5 +1,4 @@
 ---
-
 title: "grdspotter(1)"
 name: "grdspotter"
 section: "1"
@@ -10,8 +9,10 @@ description: "grdspotter – Create CVA image from a gravity or topography grid"
 
 <h2>NAME</h2>
 <p> grdspotter &#8211; Create CVA image from a gravity or topography grid</p>
+<h2>SYNOPSIS</h2>
 <p> <code>grdspotter</code> [<i>grdfile</i>] <i>rotfile</i> <i>CVAgrid</i> <i>increment</i> <i>region</i> [ <i>agegrid</i> ] [ <i>DIgrid</i> ] [ <i>IDgrid</i> ] [ ] [ <i>upper_age</i> ] [ <i>PAgrid</i> ] [ <i>IDinfo</i> ] [ ] [ <code>t</code>|<code>u</code><i>fixed_val</i> ] [ [ [<i>level</i>] ] [ <i>n_try</i> ]] [ <code>-Z</code><i>z_min</i>[/<i>z_max</i>[/<i>z_inc</i>]] ] [ <code>-r</code> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>grdspotter</code> reads a grid file with residual bathymetry or gravity and calculates flowlines from each node that exceeds a minimum value using the specified rotations file. These flowlines are then convolved with the volume of the prism represented by each grid node and added up to give a Cumulative Volcano Amplitude grid (CVA).</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

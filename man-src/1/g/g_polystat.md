@@ -1,5 +1,4 @@
 ---
-
 title: "g_polystat(1)"
 name: "g_polystat"
 section: "1"
@@ -11,7 +10,9 @@ description: "g_polystat – calculates static properties of polymers"
 <h2>NAME</h2>
 <p> g_polystat &#8211; calculates static properties of polymers </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>g_polystat</code> <code>-s</code><i> topol.tpr </i> <code>-f</code><i> traj.xtc </i> <code>-n</code><i> index.ndx </i> <code>-o</code><i> polystat.xvg </i> <code>-v</code><i> polyvec.xvg </i> <code>-p</code><i> persist.xvg </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-tu</code><i> enum </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-[no]mw</code><i></i> <code>-[no]pc</code><i></i></p>
+<h2>DESCRIPTION</h2>
 <p> g_polystat plots static properties of polymers as a function of time and prints the average. </p>
 <p> By default it determines the average end-to-end distance and radii of gyration of polymers. It asks for an index group and split this into molecules. The end-to-end distance is then determined using the first and the last atom in the index group for each molecules. For the radius of gyration the total and the three principal components for the average gyration tensor are written. With option <code> -v</code> the eigenvectors are written. With option <code> -pc</code> also the average eigenvalues of the individual gyration tensors are written. </p>
 <p> With option <code> -p</code> the presistence length is determined. The chosen index group should consist of atoms that are consecutively bonded in the polymer mainchains. The presistence length is then determined from the cosine of the angles between bonds with an index difference that is even, the odd pairs are not used, because straight polymer backbones are usually all trans and therefore only every second bond aligns. The persistence length is defined as number of bonds where the average cos reaches a value of 1/e. This point is determined by a linear interpolation of log(cos).</p>

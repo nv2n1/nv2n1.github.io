@@ -1,5 +1,4 @@
 ---
-
 title: "sddm-greeter(1)"
 name: "sddm-greeter"
 section: "1"
@@ -10,7 +9,9 @@ description: "sddm-greeter – sddm display manager greeter"
 
 <h2>NAME</h2>
 <p> sddm-greeter &#8211; sddm display manager greeter</p>
+<h2>SYNOPSIS</h2>
 <p> sddm-greeter [OPTIONS&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> sddm is a display and login manager based on Qt technologies. </p>
 <p> Using QtQuick and QML, designers are given the ability to easily create pleasant, modern looking interfaces for sddm. </p>
 <p> sddm-greeter is an auxiliary process that displays the greeter, a graphical user interface to perform the authentication and select the session to run. </p>

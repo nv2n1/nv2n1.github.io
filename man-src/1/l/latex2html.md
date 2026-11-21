@@ -1,5 +1,4 @@
 ---
-
 title: "latex2html(1)"
 name: "latex2html"
 section: "1"
@@ -7,8 +6,11 @@ letter: "l"
 url: "/docs/linux/man/1-latex2html/"
 description: "latex2html – translate LaTeX files to HTML (HyperText Markup Language)"
 ---
-
+<h2 class="name">NAME</h2>
+<p> latex2html - translate LaTeX files to HTML (HyperText Markup Language) </p>
+<h2>SYNOPSIS</h2>
 <p> <code>latex2html</code> <i>[options]</i> [target [target ...]]  </p>
+<h2>DESCRIPTION</h2>
 <p> This manual page explains the <code>LaTeX2HTML</code> utility, which is a <code>Perl </code> program that translates <code>LaTeX</code> document into <code>HTML </code> format. For each source file given as an argument the translator will create a directory containing the corresponding HTML files. For details and examples, please consult the online html documentation, a copy of which should be available in <i>/usr/share/doc/latex2html/manual.ps.gz</i> or <i>/usr/share/doc/latex2html/html/</i>  </p>
 <h2>CAVEAT</h2>
 <p> This documentation has been derived from the TeX manual, and may not be up to date. Please refer to the online manual for authoritative documentation.  </p>

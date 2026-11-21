@@ -1,5 +1,4 @@
 ---
-
 title: "csbuild(1)"
 name: "csbuild"
 section: "1"
@@ -10,6 +9,7 @@ description: "csbuild – tool for plugging static analyzers into the build proc
 
 <h2>NAME</h2>
 <p> csbuild &#8211; tool for plugging static analyzers into the build process</p>
+<h2>DESCRIPTION</h2>
 <p> usage: csbuild [-h] <code>-c</code> BUILD_CMD [-g GIT_COMMIT_RANGE] [&#8211;git-bisect]</p>
 <dl>
 <dt>

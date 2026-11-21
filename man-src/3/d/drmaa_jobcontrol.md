@@ -1,5 +1,4 @@
 ---
-
 title: "drmaa_jobcontrol(3)"
 name: "drmaa_jobcontrol"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-drmaa_jobcontrol/"
 description: "drmaa_job_ps, drmaa_control, – Monitor and control jobs"
 ---
 
+<h2 class="name">NAME</h2>
+<p> drmaa_job_ps, drmaa_control, &#8211; Monitor and control jobs</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include drmaa.h</code> </p>
 <pre><code>
 int drmaa_job_ps(
@@ -25,6 +27,7 @@ char *error_diagnosis,
 size_t&amp;nbsp;error_diag_len
 </code></pre>
 <p> <code>);</code> </p>
+<h2>DESCRIPTION</h2>
 <p> The drmaa_job_ps() function returns the status of the xxQS_NAMExx job <i>job_id</i> into the integer pointed to by <i>remote_ps</i>. Possible return values are listed below. See for the correspondence between them and the xxQS_NAMExx status. </p>
 <dl>
 <dt>

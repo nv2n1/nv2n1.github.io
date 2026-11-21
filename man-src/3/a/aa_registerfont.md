@@ -1,5 +1,4 @@
 ---
-
 title: "aa_registerfont(3)"
 name: "aa_registerfont"
 section: "3"
@@ -10,12 +9,14 @@ description: "aa_registerfont – add new font specification to aa_fonts array."
 
 <h2>NAME</h2>
 <p> aa_registerfont &#8211; add new font specification to aa_fonts array.</p>
+<h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>
 <p> int aa_registerfont(const struct aa_font *f); </code></p>
 <h2>PARAMETERS</h2>
 <dl>
 <dt><code>const struct aa_font *f</code></dt>
 <dd> Font specification structure.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Add new font specification to aa_fonts array.</p>
 <h2>RETURNS</h2>
 <p> 1 when succesfull or 0 on failure.</p>

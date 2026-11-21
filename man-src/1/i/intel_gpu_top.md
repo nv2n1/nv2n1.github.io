@@ -1,5 +1,4 @@
 ---
-
 title: "intel_gpu_top(1)"
 name: "intel_gpu_top"
 section: "1"
@@ -10,10 +9,12 @@ description: "intel_gpu_top – Display a top-like summary of Intel GPU usage"
 
 <h2>NAME</h2>
 <p> intel_gpu_top &#8211; Display a top-like summary of Intel GPU usage</p>
+<h2>SYNOPSIS</h2>
 <pre>
 <code>intel_gpu_top</code>
 <code>intel_gpu_top [ parameters ]</code>
 </pre>
+<h2>DESCRIPTION</h2>
 <p> <code>intel_gpu_top</code> is a tool to display usage information of an Intel GPU. It requires root privilege to map the graphics device.</p>
 <h3>Options</h3>
 <dl>

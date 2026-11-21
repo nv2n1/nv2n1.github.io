@@ -1,5 +1,4 @@
 ---
-
 title: "gcov2perl(1)"
 name: "gcov2perl"
 section: "1"
@@ -7,17 +6,24 @@ letter: "g"
 url: "/docs/linux/man/1-gcov2perl/"
 ---
 
-gcov2perl - convert gcov files to Devel::Cover databases 
+<h2 class="name">NAME</h2>
+ 
+
+ gcov2perl - convert gcov files to Devel::Cover databases 
 
 <h2>VERSION</h2>
 
  version 1.03
 
-<pre>
+<h2>SYNOPSIS</h2>
+
+ <pre>
  gcov2perl -h -i -v -db database gcov_files
 </pre>
 
-Convert gcov files to Devel::Cover databases.
+<h2>DESCRIPTION</h2>
+
+ Convert gcov files to Devel::Cover databases.
 
 <h2>OPTIONS</h2>
 

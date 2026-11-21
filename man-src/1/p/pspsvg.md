@@ -1,5 +1,4 @@
 ---
-
 title: "pspsvg(1)"
 name: "pspsvg"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pspsvg/"
 description: "pspsvg – convert PaintShop Pro® gradients (jgd, PspGradient) to the SVG format."
 ---
 
+<h2 class="name">NAME</h2>
+<p> pspsvg &#8211; convert PaintShop Pro&#174; gradients (jgd, PspGradient) to the SVG format. </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pspsvg</code> [-g&nbsp;<wbr><i>geometry</i>] [-h] [-o&nbsp;<wbr><i>file</i>] [-p] [-v] [-V] [<i>file</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>pspsvg</code> utility converts the gradient files used by PaintShop Pro (which usually have the extension jgd or PspGradient) to the Scalar Vector Graphics (SVG) format. </dd>
 <p> The program will read from stdin if a file is not specified as the final argument, and write to stdout if the <code>-o</code> option is not specified. </p>
 <p> The output is formatted for machines to read, rather than humans. A post-processor such as <code><a href="/docs/linux/man/1-tidy/">tidy</a></code>(1) could be used in the latter case.</p>

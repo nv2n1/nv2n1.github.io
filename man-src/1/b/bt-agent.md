@@ -1,5 +1,4 @@
 ---
-
 title: "bt-agent(1)"
 name: "bt-agent"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-bt-agent/"
 description: "bt-adapter – a bluetooth agent"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bt-adapter &#8211; a bluetooth agent </p>
+<h2>SYNOPSIS</h2>
 <p> bt-agent [<font SIZE="-1">OPTION&#8230;</font>] </p>
 <p> Help Options:<br />
 &nbsp;<wbr>&nbsp;<wbr>-h, &#8211;help </p>
@@ -15,6 +17,7 @@ description: "bt-adapter – a bluetooth agent"
 &nbsp;<wbr>&nbsp;<wbr>-c, &#8211;capability=&lt;capability&gt;<br />
 &nbsp;<wbr>&nbsp;<wbr>-p, &#8211;pin<br />
 &nbsp;<wbr>&nbsp;<wbr>-d, &#8211;daemon</p>
+<h2>DESCRIPTION</h2>
 <p> This interactive utility is used to manage incoming Bluetooth requests (eg. request of pincode, request of authorize a connection/service request, etc).</p>
 <h2>OPTIONS</h2>
 <p> <code>-h, &#8211;help</code><br />

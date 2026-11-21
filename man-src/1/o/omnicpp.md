@@ -1,5 +1,4 @@
 ---
-
 title: "omnicpp(1)"
 name: "omnicpp"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-omnicpp/"
 description: "omnicpp – OmniORB cpp preprocessor for IDL compiler"
 ---
 
+<h2 class="name">NAME</h2>
+<p> omnicpp &#8211; OmniORB cpp preprocessor for IDL compiler </p>
+<h2>SYNOPSIS</h2>
 <p> <code>omnicpp</code> [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>omnicpp</code> command. </p>
 <p> <code>omniidl</code> is omniORBs IDL compiler and uses <code>omnicpp</code> as it&#8217;s C preprocessor. <code>omnicpp</code> is really just the GNU C preprocessor under a different name. Normally you should not need to invoke this directly but should use <code>omniidl</code> instead.</p>
 <h2>OPTIONS</h2>

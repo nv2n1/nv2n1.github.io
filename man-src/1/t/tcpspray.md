@@ -1,5 +1,4 @@
 ---
-
 title: "tcpspray(1)"
 name: "tcpspray"
 section: "1"
@@ -10,6 +9,7 @@ description: "tcpspray – TCP/IP bandwidth measurement tool (Discard and Echo c
 
 <h2>NAME</h2>
 <p> tcpspray &#8211; TCP/IP bandwidth measurement tool (Discard and Echo client)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>tcpspray</code> [<code>-46ev</code>] [<code>-b block_size</code>] [<code>-d wait_81s</code>] [ <code>-f filename</code>] [<code>-n count</code>] &lt;<code>hostname</code>&gt; [<code>port</code>] </p>
 <h2>DESCRIPTON</h2>
 <p> <code>tcpspray</code> uses the <i>Discard</i> resp. <i>Echo</i> protocol (RFC 863 resp. RFC 862) to perform bandwidth measurements of <i>TCP</i> sessions between the local system, and a <i>Discard</i> resp. <i>Echo</i> server. </p>

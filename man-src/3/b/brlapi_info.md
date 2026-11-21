@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-brlapi_info/"
 description: "Getting Terminal information –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Getting Terminal information &#8211; </p>
 <p> How to get information about the connected Terminal.</p>
 <h3>Macros</h3>
 <p> #define <code>BRLAPI_MAXNAMELENGTH</code> 31 </p>

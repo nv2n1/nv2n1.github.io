@@ -1,5 +1,4 @@
 ---
-
 title: "acl_valid(3)"
 name: "acl_valid"
 section: "3"
@@ -8,10 +7,13 @@ url: "/docs/linux/man/3-acl_valid/"
 description: "acl_valid – validate an ACL"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>acl_valid</code> &#8211; validate an ACL </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>
+<h2>SYNOPSIS</h2>
 <p> In sys/types.h In sys/acl.h Ft int Fn acl_valid acl_t acl</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn acl_valid function checks the ACL referred to by the argument <i>acl</i> for validity. </p>
 <p> The three required entries ACL_USER_OBJ, ACL_GROUP_OBJ, and ACL_OTHER must exist exactly once in the ACL. If the ACL contains any ACL_USER or ACL_GROUP entries, then an ACL_MASK entry is also required. The ACL may contain at most one ACL_MASK entry. </p>
 <p> The user identifiers must be unique among all entries of type ACL_USER. The group identifiers must be unique among all entries of type ACL_GROUP.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "grind(1)"
 name: "grind"
 section: "1"
@@ -10,7 +9,9 @@ description: "grind – process WordNet lexicographer files"
 
 <h2>NAME</h2>
 <p> grind &#8211; process WordNet lexicographer files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>grind</code> [ <code>-v</code> ] [ <code>-s</code> ] [ <code>-L</code><i>logfile</i> ] [ <code>-a</code> ] [ <code>-d</code> ] [ <code>-i</code> ] [ <code>-o</code> ] [ <code>-n</code> ] <i>filename</i> [ <i>filename</i>&#8230; ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>grind()</code> processes WordNet lexicographer files, producing database files suitable for use with the WordNet search and interface code and other applications. The syntactic and structural integrity of the input files is verified. Warnings and errors are reported via <code>stderr</code> and a run-time log is produced on <code>stdout</code>. A database is generated only if there are no errors.</p>
 <h3>Input Files</h3>
 <p> Input files correspond to the syntactic categories implemented in WordNet &#8211; <code>noun</code>, <code>verb</code>, <code>adjective</code> and <code>adverb</code>. Each input lexicographer file consists of a list of synonym sets (<i>synsets</i>) for one part of speech. Although the basic synset syntax is the same for all of the parts of speech, some parts of the syntax only apply to a particular part of speech. See <code><a href="/docs/linux/man/5-wninput/">wninput</a></code>(5) for a description of the input file format. </p>

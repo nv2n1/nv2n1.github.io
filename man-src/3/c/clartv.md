@@ -1,5 +1,4 @@
 ---
-
 title: "clartv(3)"
 name: "clartv"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-clartv/"
 description: "clartv.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> clartv.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clartv</code> (N, X, INCX, Y, INCY, C, S, INCC)<br />
  <i></i><code>CLARTV</code> applies a vector of plane rotations with real cosines and complex sines to the elements of a pair of vectors.</p>

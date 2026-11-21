@@ -1,5 +1,4 @@
 ---
-
 title: "idevice_id(1)"
 name: "idevice_id"
 section: "1"
@@ -10,7 +9,9 @@ description: "idevice_id – Prints device name or a list of attached devices."
 
 <h2>NAME</h2>
 <p> idevice_id &#8211; Prints device name or a list of attached devices.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>idevice_id</code> [OPTIONS] [UDID] </p>
+<h2>DESCRIPTION</h2>
 <p> Prints device name or a list of attached devices. The UDID is a 40-digit hexadecimal number of the device for which the name should be retrieved. </p>
 <h2>OPTIONS</h2>
 <dl>

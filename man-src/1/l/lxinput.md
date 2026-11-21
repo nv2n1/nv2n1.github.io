@@ -1,5 +1,4 @@
 ---
-
 title: "lxinput(1)"
 name: "lxinput"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-lxinput/"
 description: "lxinput – a light-weight program to configure keyboard and mouse"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lxinput &#8211; a light-weight program to configure keyboard and mouse </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>lxinput</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This manual page documents briefly the <code>lxinput</code> command. </dd>
 <p> <code>lxinput</code> is a program to configure keyboard and mouse for desktop, usually for LXDE.</p>
 <h2>AUTHOR</h2>

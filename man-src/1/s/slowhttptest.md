@@ -1,5 +1,4 @@
 ---
-
 title: "slowhttptest(1)"
 name: "slowhttptest"
 section: "1"
@@ -10,7 +9,9 @@ description: "slowhttptest – Denial Of Service attacks simulator"
 
 <h2>NAME</h2>
 <p> <code>slowhttptest</code> &#8211; Denial Of Service attacks simulator</p>
+<h2>SYNOPSIS</h2>
 <p> <code>slowhttptest</code> -words [-<code>H|B|R|X</code> ] [-<code>g</code> ] [-<code>a </code><i>range start</i> ] [-<code>b </code><i>range limit</i> ] [-<code>c </code><i>number of connections</i> ] [-<code>d </code><i>all traffic directed through HTTP proxy at host:port</i> ] [-<code>e </code><i>probe traffic directed through HTTP proxy at host:port</i> ] [-<code>i </code><i>interval in seconds</i> ] [-<code>k </code><i>request multiply factor</i> ] [-<code>l </code><i>test duration in seconds</i> ] [-<code>n </code><i>slow read interval in seconds</i> ] [-<code>o </code><i>output file path and/or name</i> ] [-<code>p </code><i>timeout for probe connection in seconds</i> ] [-<code>r </code><i>connection per second</i> ] [-<code>s </code><i>value of Content-Length header</i> ] [-<code>t </code><i>HTTP verb</i> ] [-<code>u </code><i>absolute URL</i> ] [-<code>v </code><i>output verbosity level</i> ] [-<code>w </code><i>advertised window size range start </i> ] [-<code>x </code><i>max length of follow up data</i> ] [-<code>y </code><i>advertised window size range end</i> ] [-<code>z </code><i>slow read from recieve buffer in bytes</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>slowhttptest</code> implements most common low-bandwidth Application Layer DoS attacks and produces CSV and HTML files with test statistics. </p>
 <p> Currently supported attacks are: </p>
 <ul>

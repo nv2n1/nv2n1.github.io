@@ -1,5 +1,4 @@
 ---
-
 title: "mkwinpeimg(1)"
 name: "mkwinpeimg"
 section: "1"
@@ -10,7 +9,9 @@ description: "mkwinpeimg – Make a customized bootable image of Windows PE"
 
 <h2>NAME</h2>
 <p> mkwinpeimg &#8211; Make a customized bootable image of Windows PE</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mkwinpeimg</code> [<i>OPTIONS</i>] <i>IMAGE</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>mkwinpeimg</code> is able to make a bootable image of Windows PE by taking files from a mounted Windows installation ISO image (Vista or later) or the mounted ISO image for the Windows Automated Installation Kit (WAIK) or the WAIK supplement. The <code>&#8211;windows-dir</code> and <code>&#8211;waik-dir</code> options are used to specify the locations of these mounted ISOs. You only need one or the other. The files that <code>mkwinpeimg</code> will retrieve are <i>boot.wim</i>, <i>bootmgr</i>, <i>boot.sdi</i>, and <i>bcd</i>. If making an ISO image, the file <i>etfsboot.com</i> is also retrieved. Microsoft owns the rights to these files and they are not distributed with wimlib. </p>
 <p> <code>mkwinpeimg</code> can make two types of bootable images. The default is to make a bootable disk image. The image is not partitioned and is formatted into a FAT filesystem. <code><a href="/docs/linux/man/1-syslinux/">syslinux</a></code>(1) is required to make this type of image, as it is used to chainload <i>bootmgr</i>. Also, <code><a href="/docs/linux/man/1-mtools/">mtools</a></code>(1) is required so that the FAT filesystem can be created without root privileges. </p>
 <p> The other type of bootable image that <code>mkwinpeimg</code> can make is a bootable ISO image. To make this type of image, give the <code>&#8211;iso</code> option. <code><a href="/docs/linux/man/1-mkisofs/">mkisofs</a></code>(1) is required to make this type of image. In <code>&#8211;iso</code> mode, you can specify <i>IMAGE</i> as &quot;-&quot; to write the ISO image to standard output. </p>

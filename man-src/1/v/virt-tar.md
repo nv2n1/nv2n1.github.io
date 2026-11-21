@@ -1,5 +1,4 @@
 ---
-
 title: "virt-tar(1)"
 name: "virt-tar"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-virt-tar/"
 description: "virt-tar – Extract or upload files to a virtual machine"
 ---
 
+<h2 class="name">NAME</h2>
+<p> virt-tar &#8211; Extract or upload files to a virtual machine </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 virt - tar[--options] - x domname directory tarball virt - tar[--options] - u domname tarball directory virt - tar[--options] disk.img[disk.img...] - x directory tarball virt - tar[--options] disk.img[disk.img...] - u tarball directory
 </code></pre>
@@ -25,6 +27,7 @@ virt - tar[--options] - x domname directory tarball virt - tar[--options] - u do
 <h2>WARNING</h2>
 <p> You must <i>not</i> use <tt>&quot;virt-tar&quot;</tt> with the <tt>&quot;-u&quot;</tt> option (upload) on live virtual machines. If you do this, you risk disk corruption in the <font SIZE="-1">VM</font>. <tt>&quot;virt-tar&quot;</tt> tries to stop you from doing this, but doesn&#8217;t catch all cases. </p>
 <p> You can use <tt>&quot;-x&quot;</tt> (extract) on live virtual machines, but you might get inconsistent results or errors if there is filesystem activity inside the <font SIZE="-1">VM</font>. If the live <font SIZE="-1">VM</font> is synched and quiescent, then <tt>&quot;virt-tar&quot;</tt> will usually work, but the only way to guarantee consistent results is if the virtual machine is shut down.</p>
+<h2>DESCRIPTION</h2>
 <p> <tt>&quot;virt-tar&quot;</tt> is a general purpose archive tool for downloading and uploading parts of a guest filesystem. There are many possibilities: making backups, uploading data files, snooping on guest activity, fixing or customizing guests, etc. </p>
 <p> If you want to just view a single file, use <i><a href="/docs/linux/man/1-virt-cat/">virt-cat</a></i>(1). If you just want to edit a single file, use <i><a href="/docs/linux/man/1-virt-edit/">virt-edit</a></i>(1). For more complex cases you should look at the <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1) tool. </p>
 <p> There are two modes of operation: <tt>&quot;-x&quot;</tt> (eXtract) downloads a directory and its contents (recursively) from the virtual machine into a local tarball. <tt>&quot;-u&quot;</tt> uploads from a local tarball, unpacking it into a directory inside the virtual machine. You cannot use these two options together. </p>

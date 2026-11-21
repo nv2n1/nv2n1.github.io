@@ -1,5 +1,4 @@
 ---
-
 title: "idevicepair(1)"
 name: "idevicepair"
 section: "1"
@@ -10,7 +9,9 @@ description: "idevicepair – Manage pairings with devices and this host."
 
 <h2>NAME</h2>
 <p> idevicepair &#8211; Manage pairings with devices and this host.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>idevicepair</code> [OPTIONS] COMMAND </p>
+<h2>DESCRIPTION</h2>
 <p> Manage pairings with devices and this host. </p>
 <h2>OPTIONS</h2>
 <dl>

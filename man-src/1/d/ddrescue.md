@@ -1,5 +1,4 @@
 ---
-
 title: "ddrescue(1)"
 name: "ddrescue"
 section: "1"
@@ -10,7 +9,9 @@ description: "ddrescue – data recovery tool"
 
 <h2>NAME</h2>
 <p> ddrescue &#8211; data recovery tool</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ddrescue</code> [<i>,options/</i>] <i>,infile outfile /</i>[<i>,mapfile/</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> GNU ddrescue &#8211; Data recovery tool. Copies data from one file or block device to another, trying to rescue the good parts first in case of read errors. </p>
 <p> Always use a mapfile unless you know you won&#8217;t need it. Without a mapfile, ddrescue can&#8217;t resume a rescue, only reinitiate it. NOTE: In versions of ddrescue prior to 1.20 the mapfile was called &#8216;logfile&#8217;. The format is the same; only the name has changed. </p>
 <p> If you reboot, check the device names before restarting ddrescue. Don&#8217;t use options &#8216;-F&#8217; or &#8216;-G&#8217; without reading the manual first.</p>

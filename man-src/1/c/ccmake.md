@@ -1,5 +1,4 @@
 ---
-
 title: "ccmake(1)"
 name: "ccmake"
 section: "1"
@@ -17,6 +16,7 @@ description: "ccmake - Curses Interface for CMake. USAGE ccmake <path-to-source>
   ccmake &lt;path-to-source&gt;
   ccmake &lt;path-to-existing-build&gt;
 </pre>
+<h2>DESCRIPTION</h2>
 <p> The &quot;ccmake&quot; executable is the CMake curses interface. Project configuration settings may be specified interactively through this GUI. Brief instructions are provided at the bottom of the terminal when the program is running. </p>
 <p> CMake is a cross-platform build system generator. Projects specify their build process with platform-independent CMake listfiles included in each directory of a source tree with the name CMakeLists.txt. Users build a project by using CMake to generate a build system for a native tool on their platform. </p>
 <h2>OPTIONS</h2>

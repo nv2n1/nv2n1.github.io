@@ -1,5 +1,4 @@
 ---
-
 title: "rasort(1)"
 name: "rasort"
 section: "1"
@@ -10,7 +9,9 @@ description: "rasort – sort argus(8) data file."
 
 <h2>NAME</h2>
 <p> <code>rasort</code> &#8211; sort <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data file.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>rasort</code> [[<code>-M</code> <i>sortmode</i>] [<code>-m</code> <i>sort fields</i>] &#8230;] [<code>raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Rasort</code> reads <code>argus</code> data from an <i>argus-data</i> source, sorts the records based on the criteria specified on the command line, and outputs a valid <i>argus-stream</i>.</p>
 <h2>OPTIONS</h2>
 <p> Rasort, like all ra based clients, supports a number of <code>ra options</code> including filtering of input argus records through a terminating filter expression. See <code><a href="/docs/linux/man/1-ra/">ra</a>(1)</code> for a complete description of <code>ra options</code>. <code><a href="/docs/linux/man/1-rasort/">rasort</a>(1)</code> specific options are: </p>

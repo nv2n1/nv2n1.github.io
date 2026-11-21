@@ -1,5 +1,4 @@
 ---
-
 title: "psmegaplot(1)"
 name: "psmegaplot"
 section: "1"
@@ -10,7 +9,9 @@ description: "psmegaplot – To create poster-size PostScript plots from page-si
 
 <h2>NAME</h2>
 <p> psmegaplot &#8211; To create poster-size <i>PostScript</i> plots from page-size plot</p>
+<h2>SYNOPSIS</h2>
 <p> <code>psmegaplot</code> <i>plotfile</i> <code>-S</code><i>scale</i> [ <code>-C</code> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>psmegaplot</code> reads a <code>GMT</code>-produced <i>PostScript</i> file and &#8216;blows it up&#8217; by an arbitrary scale. The result is several plots that make up the pieces in a jigsaw puzzle. Cut and paste these pieces to make a &#8216;megaplot&#8217;. </p>
 <dl>
 <dt><i>plotfile</i></dt>

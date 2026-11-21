@@ -1,5 +1,4 @@
 ---
-
 title: "lwres_buffer_putuint16(3)"
 name: "lwres_buffer_putuint16"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-lwres_buffer_putuint16/"
 description: "lwres_buffer_init, lwres_buffer_invalidate, lwres_buffer_add, lwres_buffer_subtract, lwres_buffer_clear, lwres_buffer_first, lwres_buffer_forward, lwres_buffer_back, lwres_buffer_getuint8, lwres_bu..."
 ---
 
+<h2 class="name">NAME</h2>
+<p> lwres_buffer_init, lwres_buffer_invalidate, lwres_buffer_add, lwres_buffer_subtract, lwres_buffer_clear, lwres_buffer_first, lwres_buffer_forward, lwres_buffer_back, lwres_buffer_getuint8, lwres_buffer_putuint8, lwres_buffer_getuint16, lwres_buffer_putuint16, lwres_buffer_getuint32, lwres_buffer_putuint32, lwres_buffer_putmem, lwres_buffer_getmem &#8211; lightweight resolver buffer management </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;lwres/lwbuffer.h&gt;
 </code></pre>
@@ -28,6 +30,7 @@ description: "lwres_buffer_init, lwres_buffer_invalidate, lwres_buffer_add, lwre
 <dt> <code>void lwres_buffer_putuint32(lwres_buffer_t&nbsp;<wbr>*</code><i>b</i><code>, lwres_uint32_t&nbsp;<wbr></code><i>val</i><code>);</code></dt>
 <dt> <code>void lwres_buffer_putmem(lwres_buffer_t&nbsp;<wbr>*</code><i>b</i><code>, const unsigned char&nbsp;<wbr>*</code><i>base</i><code>, unsigned int&nbsp;<wbr></code><i>length</i><code>);</code></dt>
 <dt> <code>void lwres_buffer_getmem(lwres_buffer_t&nbsp;<wbr>*</code><i>b</i><code>, unsigned char&nbsp;<wbr>*</code><i>base</i><code>, unsigned int&nbsp;<wbr></code><i>length</i><code>);</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>These functions provide bounds checked access to a region of memory where data is being read or written. They are based on, and similar to, the isc_buffer_ functions in the ISC library. </dd>
 <p> A buffer is a region of memory, together with a set of related subregions. The <i>used region</i> and the <i>available</i> region are disjoint, and their union is the buffer&#8217;s region. The used region extends from the beginning of the buffer region to the last used byte. The available region extends from one byte greater than the last used byte to the end of the buffer&#8217;s region. The size of the used region can be changed using various buffer commands. Initially, the used region is empty. </p>
 <p> The used region is further subdivided into two disjoint regions: the <i>consumed region</i> and the <i>remaining region</i>. The union of these two regions is the used region. The consumed region extends from the beginning of the used region to the byte before the <i>current</i> offset (if any). The <i>remaining</i> region the current pointer to the end of the used region. The size of the consumed region can be changed using various buffer commands. Initially, the consumed region is empty. </p>

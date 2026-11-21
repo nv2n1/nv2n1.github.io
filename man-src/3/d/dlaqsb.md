@@ -1,5 +1,4 @@
 ---
-
 title: "dlaqsb(3)"
 name: "dlaqsb"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlaqsb/"
 description: "dlaqsb.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlaqsb.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlaqsb</code> (UPLO, N, KD, AB, LDAB, S, SCOND, AMAX, EQUED)<br />
  <i></i><code>DLAQSB</code> scales a symmetric/Hermitian band matrix, using scaling factors computed by spbequ.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "utf8trans(1)"
 name: "utf8trans"
 section: "1"
@@ -10,7 +9,9 @@ description: "utf8trans – Transliterate UTF-8 characters according to a table"
 
 <h2>NAME</h2>
 <p> utf8trans &#8211; Transliterate UTF-8 characters according to a table</p>
+<h2>SYNOPSIS</h2>
 <p> <code>utf8trans</code> <i>charmap</i> [<i>file</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>utf8trans</code> transliterates characters in the specified files (or standard input, if they are not specified) and writes the output to standard output. All input and output is in the UTF-8 encoding. </p>
 <p> This program is usually used to render characters in Unicode text files as some markup escapes or ASCII transliterations. (It is not intended for general charset conversions.) It provides functionality similar to the character maps in XSLT 2.0 (XML Stylesheet Language &#8211; Transformations, version 2.0).</p>
 <h2>OPTIONS</h2>

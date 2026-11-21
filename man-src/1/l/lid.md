@@ -1,5 +1,4 @@
 ---
-
 title: "lid(1)"
 name: "lid"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-lid/"
 description: "lid – Display user’s groups or group’s users"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lid &#8211; Display user&#8217;s groups or group&#8217;s users</p>
+<h2>SYNOPSIS</h2>
 <p> lid [<i>OPTION</i>]&#8230; [<i>name</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> Displays information about groups containing user <i>name</i>, or users contained in group <i>name</i>. </p>
 <p> By default <code>lid</code> lists groups containing user <i>name</i>, or groups containing the invoking user if <i>name</i> is not specified; the mode of operation can be changed using the <code>-g</code> option. </p>
 <h2>OPTIONS</h2>

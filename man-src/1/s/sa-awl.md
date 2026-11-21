@@ -1,5 +1,4 @@
 ---
-
 title: "sa-awl(1)"
 name: "sa-awl"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-sa-awl/"
 description: "sa-awl – examine and manipulate SpamAssassin’s auto-whitelist db"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sa-awl &#8211; examine and manipulate SpamAssassin&#8217;s auto-whitelist db </p>
+<h2>SYNOPSIS</h2>
 <p> <code>sa-awl</code> [&#8211;clean] [&#8211;min n] [dbfile]</p>
+<h2>DESCRIPTION</h2>
 <p> Check or clean a SpamAssassin auto-whitelist (<font SIZE="-1">AWL</font>) database file. </p>
 <p> The name of the file is specified after any options, as <tt>&quot;dbfile&quot;</tt>. The default is <tt>&quot;$HOME/.spamassassin/auto-whitelist&quot;</tt>.</p>
 <h2>OPTIONS</h2>

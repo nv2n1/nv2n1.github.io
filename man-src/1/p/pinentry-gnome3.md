@@ -1,5 +1,4 @@
 ---
-
 title: "pinentry-gnome3(1)"
 name: "pinentry-gnome3"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pinentry-gnome3/"
 description: "pinentry-gnome3 – PIN or pass-phrase entry dialog for GnuPG"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pinentry-gnome3 &#8211; PIN or pass-phrase entry dialog for GnuPG</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pinentry-gnome3 [</code><i>OPTION</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pinentry-gnome3</code> is a program that allows for secure entry of PINs or pass phrases. That means it tries to take care that the entered information is not swapped to disk or temporarily stored anywhere. This functionality is particularly useful for entering pass phrases when using encryption software such as GnuPG or e-mail clients using the same. It uses an open protocol and is therefore not tied to particular software. </p>
 <p> <code>pinentry-gnome3</code> implements a PIN entry dialog based on GNOME 3, which aims to follow the GNOME Human Interface Guidelines as closely as possible. If the X Window System is not active then an alternative text-mode dialog will be used. There are other flavors that implement PIN entry dialogs using other tool kits. </p>
 <p> <code>pinentry-gnome3</code> is typically used internally by <code>gpg-agent</code>. Users don&#8217;t normally have a reason to call it directly.</p>

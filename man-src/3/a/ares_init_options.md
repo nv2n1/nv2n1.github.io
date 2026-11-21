@@ -1,5 +1,4 @@
 ---
-
 title: "ares_init_options(3)"
 name: "ares_init_options"
 section: "3"
@@ -10,6 +9,7 @@ description: "ares_init, ares_init_options – Initialize a resolver channel"
 
 <h2>NAME</h2>
 <p> ares_init, ares_init_options &#8211; Initialize a resolver channel</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ares.h&gt;
 int ares_init(ares_channel *channelptr) int ares_init_options(ares_channel *channelptr,
@@ -17,6 +17,7 @@ int ares_init(ares_channel *channelptr) int ares_init_options(ares_channel *chan
         cc file.c
     - lcares
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>ares_init</code> function initializes a communications channel for name service lookups. If it returns successfully, <code>ares_init</code> will set the variable pointed to by <i>channelptr</i> to a handle used to identify the name service channel. The caller should invoke <code><a href="/docs/linux/man/3-ares_destroy/">ares_destroy</a></code>(3) on the handle when the channel is no longer needed. </p>
 <p> The <code>ares_init_options</code> function also initializes a name service channel, with additional options useful for applications requiring more control over name service configuration. The <i>optmask</i> parameter specifies which fields in the structure pointed to by <i>options</i> are set, as follows:</p>
 <dl>

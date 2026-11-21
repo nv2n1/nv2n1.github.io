@@ -1,5 +1,4 @@
 ---
-
 title: "groff(7)"
 name: "groff"
 section: "7"
@@ -7,8 +6,8 @@ letter: "g"
 url: "/docs/linux/man/7-groff/"
 description: "groff – a short reference for the GNU roff language"
 ---
-
 <p>groff &#8211; a short reference for the GNU roff language </p>
+<h2>DESCRIPTION</h2>
 <p>The name <i>groff</i> stands for <i>GNU roff</i> and is the free implementation of the roff type-setting system. See <code><a href="/docs/linux/man/7-roff/">roff</a></code>(7) for a survey and the background of the groff system. </p>
 <p>This document provides only short descriptions of roff language elements. <i>Groff: The GNU Implementation of troff</i>, by Trent A. Fisher and Werner Lemberg, is the primary <i>groff</i> manual, and is written in Texinfo. You can browse it interactively with "info groff". </p>
 <p>Historically, the <i>roff language</i> was called <i>troff</i>. <i>groff</i> is compatible with the classical system and provides proper extensions. So in GNU, the terms <i>roff</i>, <i>troff</i>, and <i>groff language</i> could be used as synonyms. However <i>troff</i> slightly tends to refer more to the classical aspects, whereas <i>groff</i> emphasizes the GNU extensions, and <i>roff</i> is the general term for the language. </p>

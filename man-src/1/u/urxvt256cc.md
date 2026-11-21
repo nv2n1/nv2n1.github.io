@@ -1,5 +1,4 @@
 ---
-
 title: "urxvt256cc(1)"
 name: "urxvt256cc"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-urxvt256cc/"
 description: "urxvt256cc – control the urxvt256cd daemon"
 ---
 
+<h2 class="name">NAME</h2>
+<p> urxvt256cc &#8211; control the urxvt256cd daemon </p>
+<h2>SYNOPSIS</h2>
 <p> <code>urxvt256cc</code> [same options as for urxvt256c]</p>
+<h2>DESCRIPTION</h2>
 <p> This manpage describes the <code>urxvt256cc</code> client program. It connects to the <code>urxvt256cd</code> daemon and requests a new terminal window. It takes the same arguments as the <code>urxvt256c</code> program. The environment will also be respected. Currently, it always returns immediately after contacting the daemon.</p>
 <h2>OPTIONS</h2>
 <p> If the first option is <code>-k</code>, <code>urxvt256cc</code> tries to kill the daemon process and returns. </p>

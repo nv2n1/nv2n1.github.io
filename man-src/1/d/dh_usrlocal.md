@@ -1,5 +1,4 @@
 ---
-
 title: "dh_usrlocal(1)"
 name: "dh_usrlocal"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dh_usrlocal/"
 description: "dh_usrlocal – migrate usr/local directories to maintainer scripts"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dh_usrlocal &#8211; migrate usr/local directories to maintainer scripts </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dh_usrlocal</code> [<i>debhelper options</i>] [<code>-n</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>dh_usrlocal</code> is a debhelper program that can be used for building packages that will provide a subdirectory in <i>/usr/local</i> when installed. </p>
 <p> It finds subdirectories of <i>usr/local</i> in the package build directory, and removes them, replacing them with maintainer script snippets (unless <code>-n</code> is used) to create the directories at install time, and remove them when the package is removed, in a manner compliant with Debian policy. These snippets are inserted into the maintainer scripts by <code>dh_installdeb</code>. See <i><a href="/docs/linux/man/1-dh_installdeb/">dh_installdeb</a></i>(1) for an explanation of debhelper maintainer script snippets. </p>
 <p> When the <i>Rules-Requires-Root</i> field is not (effectively) <i>binary-targets</i>, the directories in <i>/usr/local</i> will have ownership root:staff and the mode will be 02775. These values have been chosen to comply with the recommendations of the Debian policy for directories in <i>/usr/local</i>. </p>

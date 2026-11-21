@@ -1,5 +1,4 @@
 ---
-
 title: "winicontopam(1)"
 name: "winicontopam"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-winicontopam/"
 description: "winicontopam – convert a Microsoft Windows icon file into a Netpbm PAM file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> winicontopam &#8211; convert a Microsoft Windows icon file into a Netpbm PAM file </p>
+<h2>SYNOPSIS</h2>
 <p> <code>winicontopam</code> [<code>-image=</code><i>index</i> | <code>-allimages</code>] [<code>-andmasks</code>] [<code>-verbose</code>] [<i>icon_file</i>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one to designate an option. You may use either white space or equals signs between an option name and its value. </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>winicontopam</code> reads a Microsoft Windows icon file and converts it to one or more RGB_ALPHA Netpbm PAM files. </p>
 <p> The alpha channel is copied from the 8-bit transparency data from the icon, if present. If no 8-bit transparency data is available, the alpha channel is constructed from the so-called &amp;lsquo;AND mask&amp;rsquo;. </p>

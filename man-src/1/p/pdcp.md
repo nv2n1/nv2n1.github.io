@@ -1,5 +1,4 @@
 ---
-
 title: "pdcp(1)"
 name: "pdcp"
 section: "1"
@@ -8,10 +7,13 @@ url: "/docs/linux/man/1-pdcp/"
 description: "pdcp – copy files to groups of hosts in parallel rpdcp – (reverse pdcp) copy files from a group of hosts in parallel"
 ---
 
+<h2 class="name">NAME</h2>
 <p> pdcp &#8211; copy files to groups of hosts in parallel<br />
  rpdcp &#8211; (reverse pdcp) copy files from a group of hosts in parallel</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pdcp</code> [<i>options</i>]&#8230; src [src2&#8230;] dest<br />
  <code>rpdcp</code> [<i>options</i>]&#8230; src [src2&#8230;] dir </p>
+<h2>DESCRIPTION</h2>
 <p> <code>pdcp</code> is a variant of the <a href="/docs/linux/man/1-rcp/">rcp</a>(1) command. Unlike <a href="/docs/linux/man/1-rcp/">rcp</a>(1), which copies files to a single remote host, <code>pdcp</code> can copy files to multiple remote hosts in parallel. However, <code>pdcp</code> does not recognize files in the format &#8220;rname [at] rhost:path,&#8221; therefore all source files must be on the local host machine. Destination nodes must be listed on the <code>pdcp</code> command line using a suitable target nodelist option (See the <i>OPTIONS</i> section below). Each destination node listed must have <code>pdcp</code> installed for the copy to succeed. </p>
 <p> When <code>pdcp</code> receives SIGINT (ctrl-C), it lists the status of current threads. A second SIGINT within one second terminates the program. Pending threads may be canceled by issuing ctrl-Z within one second of ctrl-C. Pending threads are those that have not yet been initiated, or are still in the process of connecting to the remote host. </p>
 <p> Like <a href="/docs/linux/man/1-pdsh/">pdsh</a>(1), the functionality of <code>pdcp</code> may be supplemented by dynamically loadable modules. In <code>pdcp</code>, the modules may provide a new connect protocol (replacing the standard <a href="/docs/linux/man/1-rsh/">rsh</a>(1) protocol), filtering options (e.g. excluding hosts that are down), and/or host selection options (e.g. <i>-a</i> selects all nodes from a local config file). By default, <code>pdcp</code> requires at least one &quot;rcmd&quot; module to be loaded (to provide the channel for remote copy). </p>

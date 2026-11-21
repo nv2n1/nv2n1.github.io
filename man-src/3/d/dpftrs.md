@@ -1,5 +1,4 @@
 ---
-
 title: "dpftrs(3)"
 name: "dpftrs"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dpftrs/"
 description: "dpftrs.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dpftrs.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dpftrs</code> (TRANSR, UPLO, N, NRHS, A, B, LDB, INFO)<br />
  <i></i><code>DPFTRS</code></p>

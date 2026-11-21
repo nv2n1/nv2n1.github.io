@@ -1,5 +1,4 @@
 ---
-
 title: "mogautomount(1)"
 name: "mogautomount"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-mogautomount/"
 description: "mogautomount – automatically discover and mount MogileFS disks"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mogautomount &#8211; automatically discover and mount MogileFS disks </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 mogautomount[--verbose | -v] mogautomount[--help | -h]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Mounts all unmounted filesystems with labels of form &#8220;MogileDev&lt;n&gt;&#8221; at /var/mogdata/dev&lt;n&gt;, creating the needed directories as well. </p>
 <p> You can do this at runtime without restarting mogstored, assuming you can add new block devices at runtime via your SCSI/SATA/etc controller.</p>
 <h2>OPTIONS</h2>

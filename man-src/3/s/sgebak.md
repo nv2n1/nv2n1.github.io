@@ -1,5 +1,4 @@
 ---
-
 title: "sgebak(3)"
 name: "sgebak"
 section: "3"
@@ -7,7 +6,15 @@ letter: "s"
 url: "/docs/linux/man/3-sgebak/"
 ---
 
-sgebak.f - 
+<h2 class="name">NAME</h2>
+ 
+
+ sgebak.f - 
+
+<h2>SYNOPSIS</h2>
+
+ 
+ 
 
 <h3>Functions/Subroutines</h3>
 

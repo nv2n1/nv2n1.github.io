@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_crq_export(3)"
 name: "gnutls_x509_crq_export"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_crq_export – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crq_export &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crq_export(gnutls_x509_crq_t </code><i>crq</i><code>, gnutls_x509_crt_fmt_t </code><i>format</i><code>, void * </code><i>output_data</i><code>, size_t * </code><i>output_data_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,6 +22,7 @@ description: "gnutls_x509_crq_export – API function"
 <dd> will contain a certificate request PEM or DER encoded</dd>
 <dt>size_t * output_data_size</dt>
 <dd> holds the size of output_data (and will be replaced by the actual size of parameters)</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will export the certificate request to a PEM or DER encoded PKCS10 structure. </p>
 <p> If the buffer provided is not long enough to hold the output, then <code>GNUTLS_E_SHORT_MEMORY_BUFFER</code> will be returned and * <i>output_data_size</i> will be updated. </p>
 <p> If the structure is PEM encoded, it will have a header of &quot;BEGIN NEW CERTIFICATE REQUEST&quot;.</p>

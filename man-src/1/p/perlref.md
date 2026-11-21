@@ -1,5 +1,4 @@
 ---
-
 title: "perlref(1)"
 name: "perlref"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-perlref/"
 description: "perlref – Perl references and nested data structures"
 ---
 
+<h2 class="name">NAME</h2>
+<p> perlref &#8211; Perl references and nested data structures </p>
 <h2>NOTE</h2>
 <p> This is complete documentation about all aspects of references. For a shorter, tutorial introduction to just the essential features, see perlreftut.</p>
+<h2>DESCRIPTION</h2>
 <p> Before release 5 of Perl it was difficult to represent complex data structures, because all references had to be symbolic&#8212;and even then it was difficult to refer to a variable instead of a symbol table entry. Perl now not only makes it easier to use symbolic references to variables, but also lets you have &#8220;hard&#8221; references to any piece of data or code. Any scalar may hold a hard reference. Because arrays and hashes contain scalars, you can now easily build arrays of arrays, arrays of hashes, hashes of arrays, arrays of hashes of functions, and so on. </p>
 <p> Hard references are smart&#8212;they keep track of reference counts for you, automatically freeing the thing referred to when its reference count goes to zero. (Reference counts for values in self-referential or cyclic data structures may not go to zero without a little help; see &#8220;Circular References&#8221; for a detailed explanation.) If that thing happens to be an object, the object is destructed. See perlobj for more about objects. (In a sense, everything in Perl is an object, but we usually reserve the word for references to objects that have been officially &#8220;blessed&#8221; into a class package.) </p>
 <p> Symbolic references are names of variables or other objects, just as a symbolic link in a Unix filesystem contains merely the name of a file. The <tt>*glob</tt> notation is something of a symbolic reference. (Symbolic references are sometimes called &#8220;soft references&#8221;, but please don&#8217;t call them that; references are confusing enough without useless synonyms.) </p>

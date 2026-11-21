@@ -1,5 +1,4 @@
 ---
-
 title: "git-symbolic-ref(1)"
 name: "git-symbolic-ref"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-symbolic-ref/"
 description: "git-symbolic-ref – Read, modify and delete symbolic refs"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-symbolic-ref &#8211; Read, modify and delete symbolic refs </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git symbolic - ref[-m&lt;reason&gt;]&lt;name&gt;&lt;ref&gt; git symbolic - ref[-q][--short]&lt;name&gt; git symbolic - ref-- delete[-q]&lt;name&gt;
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Given one argument, reads which branch head the given symbolic ref refers to and outputs its path, relative to the <code>.git/</code> directory. Typically you would give <code>HEAD</code> as the &lt;name&gt; argument to see which branch your working tree is on. </p>
 <p> Given two arguments, creates or updates a symbolic ref &lt;name&gt; to point at the given branch &lt;ref&gt;. </p>
 <p> Given <code>&#8211;delete</code> and an additional argument, deletes the given symbolic ref. </p>

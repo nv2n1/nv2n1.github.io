@@ -1,5 +1,4 @@
 ---
-
 title: "hosts_access(3)"
 name: "hosts_access"
 section: "3"
@@ -11,7 +10,9 @@ url: "/docs/linux/man/3-hosts_access/"
 
  hosts_access, hosts_ctl, request_init, request_set - access control library
 
-<pre><code>
+<h2>SYNOPSIS</h2>
+
+ <pre><code>
 #include "tcpd.h"
 extern int allow_severity;
 extern int deny_severity;
@@ -26,7 +27,9 @@ char *client_addr;
 char *client_user;
 </code></pre>
 
-The routines described in this document are part of the <i>libwrap.a</i> library. They implement a rule-based access control language with optional shell commands that are executed when a rule fires. 
+<h2>DESCRIPTION</h2>
+
+ The routines described in this document are part of the <i>libwrap.a</i> library. They implement a rule-based access control language with optional shell commands that are executed when a rule fires. 
 
  request_init() initializes a structure with information about a client request. request_set() updates an already initialized request structure. Both functions take a variable-length list of key-value pairs and return their first argument. The argument lists are terminated with a zero key value. All string-valued arguments are copied. The expected keys (and corresponding value types) are:
 <dl>

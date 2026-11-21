@@ -1,5 +1,4 @@
 ---
-
 title: "delete_module(2)"
 name: "delete_module"
 section: "2"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/2-delete_module/"
 description: "delete_module – unload a kernel module"
 ---
 
+<h2 class="name">NAME</h2>
+<p> delete_module &#8211; unload a kernel module </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 int delete_module(const char *name, int flags);
 </code></pre>
 <p> <i>Note</i>: No declaration of this system call is provided in glibc headers; see NOTES.</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>delete_module</code>() system call attempts to remove the unused loadable module entry identified by <i>name</i>. If the module has an <i>exit</i> function, then that function is executed before unloading the module. The <i>flags</i> argument is used to modify the behavior of the system call, as described below. This system call requires privilege. </p>
 <p> Module removal is attempted according to the following rules:</p>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "logconv(1)"
 name: "logconv"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-logconv/"
 description: "logconv.pl – analyzes Directory Server access log files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> logconv.pl &#8211; analyzes Directory Server access log files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>logconv.pl </code> [<i>-h</i>] [<i>-d &lt;rootDN&gt;</i>] [<i>-s &lt;size limit&gt;</i>] [<i>-v</i>] [<i>-V</i>] [<i>-S &lt;start time&gt;</i>] [<i>-E &lt;end time&gt;</i>] [<i>-efcibaltnxgju</i>] [<i> access log &#8230; &#8230; </i>] </p>
+<h2>DESCRIPTION</h2>
 <p> Analyzes Directory Server access log files for specific information defined on the command line</p>
 <h2>OPTIONS</h2>
 <p> A summary of options is included below:</p>

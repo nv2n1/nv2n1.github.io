@@ -1,5 +1,4 @@
 ---
-
 title: "bkhive(1)"
 name: "bkhive"
 section: "1"
@@ -8,7 +7,9 @@ url: "/docs/linux/man/1-bkhive/"
 description: "bkhive dumps the syskey bootkey from a Windows NT/2K/XP/Vista system hive."
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>bkhive</code> dumps the syskey bootkey from a Windows NT/2K/XP/Vista system hive. </p>
+<h2>SYNOPSIS</h2>
 <p> bkhive &lt;system hive&gt; &lt;key file&gt;</p>
 <h2>EXAMPLE</h2>
 <p> bkhive /mnt/ntfs/WINDOWS/system32/config/system out</p>

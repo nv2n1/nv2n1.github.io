@@ -1,5 +1,4 @@
 ---
-
 title: "fusioninventory-esx(1)"
 name: "fusioninventory-esx"
 section: "1"
@@ -7,9 +6,14 @@ letter: "f"
 url: "/docs/linux/man/1-fusioninventory-esx/"
 ---
 
-fusioninventory-esx - vCenter/ESX/ESXi remote inventory from command line 
+<h2 class="name">NAME</h2>
+ 
 
-fusioninventory-esx --host &lt;host&gt; --user &lt;user&gt; --password &lt;password&gt; --directory &lt;directory&gt; 
+ fusioninventory-esx - vCenter/ESX/ESXi remote inventory from command line 
+
+<h2>SYNOPSIS</h2>
+
+ fusioninventory-esx --host &lt;host&gt; --user &lt;user&gt; --password &lt;password&gt; --directory &lt;directory&gt; 
 
  <pre><code>
   Options:
@@ -30,7 +34,9 @@ fusioninventory-esx --host &lt;host&gt; --user &lt;user&gt; --password &lt;passw
  You can import the .ocs file in your inventory server with the fusioninventory-injector tool. 
 &nbsp;<wbr><tt>%fusioninventory</tt>-injector -v --file&nbsp;<wbr>/tmp/*.ocs -u&nbsp;<wbr><a rel="nofollow" HREF="https://myserver/ocsinventory">https://myserver/ocsinventory</a>
 
-<i>fusioninventory-esx</i> creates inventory of remote ESX/ESXi and vCenter VMware. It uses the <font SIZE="-1">SOAP</font> interface of the remote server. 
+<h2>DESCRIPTION</h2>
+
+ <i>fusioninventory-esx</i> creates inventory of remote ESX/ESXi and vCenter VMware. It uses the <font SIZE="-1">SOAP</font> interface of the remote server. 
 
  Supported systems:
 <dl>

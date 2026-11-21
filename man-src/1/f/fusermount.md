@@ -1,5 +1,4 @@
 ---
-
 title: "fusermount(1)"
 name: "fusermount"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-fusermount/"
 description: "fusermount3 – mount and unmount FUSE filesystems"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>fusermount3</code> &#8211; mount and unmount FUSE filesystems</p>
+<h2>SYNOPSIS</h2>
 <p> <code>fusermount3</code> [<i>OPTIONS</i>] <i>MOUNTPOINT</i> </p>
+<h2>DESCRIPTION</h2>
 <p> Filesystem in Userspace (FUSE) is a simple interface for userspace programs to export a virtual filesystem to the Linux kernel. It also aims to provide a secure method for non privileged users to create and mount their own filesystem implementations. </p>
 <p> <code>fusermount3</code> is a program to mount and unmount FUSE filesystems. It should be called directly only for unmounting FUSE file systems. To allow mounting and unmounting by unprivileged users, <code>fusermount3</code> needs to be installed set-uid root.</p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "mkocp(1)"
 name: "mkocp"
 section: "1"
@@ -10,7 +9,9 @@ description: "mkocp – frontend to otp2ocp(1)"
 
 <h2>NAME</h2>
 <p> mkocp &#8211; frontend to <code><a href="/docs/linux/man/1-otp2ocp/">otp2ocp</a></code>(1)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mkocp</code> <i>OTPFILE</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>mkocp</code> is used to create or recreate Omega Compiled Process files (binary) from Omega Translation Process (text) files. </p>
 <p> Omega Translation Processes are used to translate one character set to another and to choose between characters with one or more context-sensitive variants. OTPs could also be used to change the case or hyphenation of text. </p>
 <p> OTPs are defined in text files, and compiled into binary code (OCPs) using <code>mkocp</code> (this script) or directly with <code><a href="/docs/linux/man/1-otp2ocp/">otp2ocp</a></code>(1). </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "libstorage(3)"
 name: "libstorage"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-libstorage/"
 description: "libstorage – routines for managing INN storage"
 ---
 
+<h2 class="name">NAME</h2>
+<p> libstorage &#8211; routines for managing INN storage </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;inn/storage.h&gt;
 typedef enum {
@@ -119,6 +121,7 @@ typedef struct _OVGE {
 } OVGE;
 void OVclose(void);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>libstorage</code> is a library of common utility (the storage manager) routines for accessing Usenet articles and related data independent of particular storage method; this is known as the storage <font SIZE="-1">API</font>. </p>
 <p> The storage manager&#8217;s function is to isolate the applications from the individual methods and make the policy decisions as to which storage method should be called to store an article. One of the core concepts in the storage <font SIZE="-1">API</font> is that articles are not manipulated using the message-ID or article number, but rather a token that uniquely identifies the article to the method that stored it. This may seem to be redundant since the message-ID already is a unique identifier for the article; however, since the storage method generates the token, it can encode all the information it needs to locate the article in the token. </p>
 <p> <font SIZE="-1"><code>OV</code></font> is a common utility routines for accessing newsgroups and overview data independent of particular overview method. </p>

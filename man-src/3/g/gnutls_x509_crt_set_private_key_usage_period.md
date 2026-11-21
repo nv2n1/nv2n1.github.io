@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_crt_set_private_key_usage_period(3)"
 name: "gnutls_x509_crt_set_private_key_usage_period"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_crt_set_private_key_usage_period – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_set_private_key_usage_period &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_set_private_key_usage_period(gnutls_x509_crt_t </code><i>crt</i><code>, time_t </code><i>activation</i><code>, time_t </code><i>expiration</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_x509_crt_set_private_key_usage_period – API function"
 <dd> The activation time</dd>
 <dt>time_t expiration</dt>
 <dd> The expiration time</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will set the private key usage period extension (2.5.29.16).</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

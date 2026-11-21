@@ -1,5 +1,4 @@
 ---
-
 title: "mbimcli(1)"
 name: "mbimcli"
 section: "1"
@@ -10,6 +9,7 @@ description: "mbimcli – Control MBIM devices"
 
 <h2>NAME</h2>
 <p> mbimcli &#8211; Control MBIM devices</p>
+<h2>DESCRIPTION</h2>
 <h3>Usage:</h3>
 <dl>
 <dt>

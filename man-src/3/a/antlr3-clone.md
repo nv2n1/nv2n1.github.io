@@ -1,5 +1,4 @@
 ---
-
 title: "antlr3-clone(3)"
 name: "antlr3-clone"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-antlr3-clone/"
 description: "ANTLR3_BITSET_struct –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ANTLR3_BITSET_struct &#8211; </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3bitset.h">antlr3bitset.h</a>&gt;</p>
 <h3>Data Fields</h3>
 <p> void(* <code>add</code> )(struct <code>ANTLR3_BITSET_struct</code> *bitset, <code>ANTLR3_INT32</code> bit) </p>

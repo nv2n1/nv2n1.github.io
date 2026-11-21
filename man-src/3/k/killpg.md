@@ -1,5 +1,4 @@
 ---
-
 title: "killpg(3)"
 name: "killpg"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-killpg/"
 description: "killpg – send signal to a process group"
 ---
 
+<h2 class="name">NAME</h2>
+<p> killpg &#8211; send signal to a process group </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;signal.h&gt;</code> </p>
 <p> <code>int killpg(int </code><i>pgrp</i><code>, int </code><i>sig</i><code>);</code> </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)):</p>
@@ -16,6 +18,7 @@ description: "killpg – send signal to a process group"
 <dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>killpg</code>() sends the signal <i>sig</i> to the process group <i>pgrp</i>. See <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7) for a list of signals. </p>
 <p> If <i>pgrp</i> is 0, <code>killpg</code>() sends the signal to the calling process&#8217;s process group. (POSIX says: if <i>pgrp</i> is less than or equal to 1, the behavior is undefined.) </p>
 <p> For the permissions required to send a signal to another process, see <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2).</p>

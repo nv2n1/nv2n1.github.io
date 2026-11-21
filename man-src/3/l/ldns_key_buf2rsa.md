@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_key_buf2rsa(3)"
 name: "ldns_key_buf2rsa"
 section: "3"
@@ -10,11 +9,13 @@ description: "ldns_key_buf2dsa, ldns_key_buf2rsa"
 
 <h2>NAME</h2>
 <p> ldns_key_buf2dsa, ldns_key_buf2rsa </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> DSA* ldns_key_buf2dsa(ldns_buffer *key); </p>
 <p> RSA* ldns_key_buf2rsa(ldns_buffer *key); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_key_buf2dsa</i>()</dt>
 <dd>converts a buffer holding key material to a DSA key in openssl. </dd>

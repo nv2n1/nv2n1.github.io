@@ -1,5 +1,4 @@
 ---
-
 title: "pear(1)"
 name: "pear"
 section: "1"
@@ -10,9 +9,11 @@ description: "pear, pecl, peardev – PEAR installer"
 
 <h2>NAME</h2>
 <p> pear, pecl, peardev &#8211; PEAR installer </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pear</code> [ options ] command [command-options] &lt;parameters&gt; </p>
 <p> <code>pecl</code> [ options ] command [command-options] &lt;parameters&gt; </p>
 <p> <code>peardev</code> [ options ] command [command-options] &lt;parameters&gt; </p>
+<h2>DESCRIPTION</h2>
 <p> <code>PEAR</code> is the PHP Extension and Application Repository, found at <code><a rel="nofollow" href="http://pear.php.net.">http://pear.php.net.</a></code> </p>
 <p> The <code>pear</code> command is used to install PEAR extensions. </p>
 <p> The <code>pecl</code> command is used to install PECL extensions. </p>

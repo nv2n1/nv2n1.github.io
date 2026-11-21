@@ -1,5 +1,4 @@
 ---
-
 title: "chklref(1)"
 name: "chklref"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-chklref/"
 description: "chklref – manual page for chklref 3.1.2"
 ---
 
+<h2 class="name">NAME</h2>
+<p> chklref &#8211; manual page for chklref 3.1.2 </p>
+<h2>SYNOPSIS</h2>
 <p> <code>chklref</code> [<i>,options/</i>] <i>,texfile/</i></p>
+<h2>DESCRIPTION</h2>
 <p> Check unused labels and bibitems in a LaTeX file</p>
 <h2>OPTIONS</h2>
 <dl>

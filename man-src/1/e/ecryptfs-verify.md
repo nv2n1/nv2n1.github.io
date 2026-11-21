@@ -1,5 +1,4 @@
 ---
-
 title: "ecryptfs-verify(1)"
 name: "ecryptfs-verify"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-ecryptfs-verify/"
 description: "ecryptfs-verify – validate an eCryptfs encrypted home or encrypted private configuration"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ecryptfs-verify &#8211; validate an eCryptfs encrypted home or encrypted private configuration</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ecryptfs-verify</code> [-h|&#8211;home] [-p|&#8211;private] [-e|&#8211;filenames-encrypted] [-n|&#8211;filenames-not-encrypted] [-u|&#8211;user USER] [&#8211;help] </p>
 <h2>OPTIONS</h2>
 <dl>
@@ -24,6 +26,7 @@ description: "ecryptfs-verify – validate an eCryptfs encrypted home or encrypt
 <dt><code>&#8211;help</code></dt>
 <dd> This usage information </dd>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> Note that options are additive. ALL checks must pass in order for this program to exit 0. Any failing check will cause this program to exit non-zero. </p>
 <h2>SEE ALSO</h2>
 <p> <i><a rel="nofollow" href="http://ecryptfs.org/">http://ecryptfs.org/</a></i> </p>

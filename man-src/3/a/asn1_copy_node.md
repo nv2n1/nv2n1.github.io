@@ -1,5 +1,4 @@
 ---
-
 title: "asn1_copy_node(3)"
 name: "asn1_copy_node"
 section: "3"
@@ -10,6 +9,7 @@ description: "asn1_copy_node – API function"
 
 <h2>NAME</h2>
 <p> asn1_copy_node &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>
 <p> <code>int asn1_copy_node(asn1_node </code><i>dst</i><code>, const char * </code><i>dst_name</i><code>, asn1_node </code><i>src</i><code>, const char * </code><i>src_name</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,6 +22,7 @@ description: "asn1_copy_node – API function"
 <dd> Source asn1 node.</dd>
 <dt>const char * src_name</dt>
 <dd> Field name in source node.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Create a deep copy of a asn1_node variable. That function requires <i>dst</i> to be expanded using <code>asn1_create_element()</code>.</p>
 <h2>RETURNS</h2>
 <p> Return <code>ASN1_SUCCESS</code> on success.</p>

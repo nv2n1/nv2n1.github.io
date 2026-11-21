@@ -1,5 +1,4 @@
 ---
-
 title: "reporter-upload(1)"
 name: "reporter-upload"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-reporter-upload/"
 description: "reporter-upload – Uploads compressed tarball of problem directory."
 ---
 
+<h2 class="name">NAME</h2>
+<p> reporter-upload &#8211; Uploads compressed tarball of problem directory. </p>
+<h2>SYNOPSIS</h2>
 <p> <i>reporter-upload</i> [-c CONFFILE]&#8230; [-d DIR] [-u URL] [-b FILE] [-r FILE]</p>
+<h2>DESCRIPTION</h2>
 <p> The tool is used to create a compressed tarball of the problem directory and upload it to a URL. Supported protocols include FTP, FTPS, HTTP, HTTPS, SCP, SFTP, TFTP and FILE.</p>
 <h3>Configuration file</h3>
 <p> Configuration file contains entries in a format &quot;Option = Value&quot;. </p>

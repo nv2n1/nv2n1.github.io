@@ -1,5 +1,4 @@
 ---
-
 title: "cpotf2(3)"
 name: "cpotf2"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cpotf2/"
 description: "cpotf2.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cpotf2.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cpotf2</code> (UPLO, N, A, LDA, INFO)<br />
  <i></i><code>CPOTF2</code> computes the Cholesky factorization of a symmetric/Hermitian positive definite matrix (unblocked algorithm).</p>

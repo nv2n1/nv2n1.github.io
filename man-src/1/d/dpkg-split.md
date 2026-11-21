@@ -1,5 +1,4 @@
 ---
-
 title: "dpkg-split(1)"
 name: "dpkg-split"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dpkg-split/"
 description: "dpkg-split – Debian package archive split/join tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dpkg-split &#8211; Debian package archive split/join tool </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dpkg-split</code> [<i>option</i>&#8230;] <i>command</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>dpkg-split</code> splits Debian binary package files into smaller parts and reassembles them again, to support the storage of large package files on small media such as floppy disks. </p>
 <p> It can be operated manually using the <code>&#8211;split</code>, <code>&#8211;join</code> and <code>&#8211;info</code> options. </p>
 <p> It also has an automatic mode, invoked using the <code>&#8211;auto</code> option, where it maintains a queue of parts seen but not yet reassembled and reassembles a package file when it has seen all of its parts. The <code>&#8211;listq</code> and <code>&#8211;discard</code> options allow the management of the queue. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "struct_usb_os_desc_ext_prop(9)"
 name: "struct_usb_os_desc_ext_prop"
 section: "9"
@@ -7,8 +6,8 @@ letter: "s"
 url: "/docs/linux/man/9-struct_usb_os_desc_ext_prop/"
 description: "struct_usb_os_desc_ext_prop – describes one “Extended Property”"
 ---
-
 <p>struct_usb_os_desc_ext_prop &#8211; describes one "Extended Property" </p>
+<h2>SYNOPSIS</h2>
 <pre><code>struct usb_os_desc_ext_prop {
   struct list_head entry;
   u8 type;

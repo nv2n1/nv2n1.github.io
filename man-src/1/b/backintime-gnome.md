@@ -1,5 +1,4 @@
 ---
-
 title: "backintime-gnome(1)"
 name: "backintime-gnome"
 section: "1"
@@ -10,7 +9,9 @@ description: "backintime-gnome – a simple backup tool for Gnome."
 
 <h2>NAME</h2>
 <p> backintime-gnome &#8211; a simple backup tool for Gnome.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>backintime-gnome</code> [ [&#8211;snapshots] path | &#8211;backup | &#8211;backup-job | &#8211;snapshots-path | &#8211;snapshots-list | &#8211;snapshots-list-path | &#8211;last-snapshot | &#8211;last-snapshot-path | &#8211;help | &#8211;version | &#8211;license ]</p>
+<h2>DESCRIPTION</h2>
 <p> Back In Time is a simple backup tool for Linux. This is the Gnome version. For more information about Back In Time see backintime man page. </p>
 <p> If you want to run it as root you need to use &#8216;gksu&#8217;.</p>
 <h2>OPTIONS</h2>

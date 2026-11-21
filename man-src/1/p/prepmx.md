@@ -1,5 +1,4 @@
 ---
-
 title: "prepmx(1)"
 name: "prepmx"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-prepmx/"
 description: "prepmx – preprocessor for PMX, easy music typesetting program"
 ---
 
+<h2 class="name">NAME</h2>
+<p> prepmx &#8211; preprocessor for PMX, easy music typesetting program </p>
+<h2>SYNOPSIS</h2>
 <p> <code>prepmx</code> [<i>options</i>] <i>jobname</i> [<i>outdir/</i>] [<i>stylefile</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>M-Tx</code> is an easy to use preprocessor language for the <code>PMX</code> music typesetting program, aimed at people who are not experts. For an easy example, have a look at the following example: </p>
 <p>&nbsp;<wbr>&nbsp;c2+&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;e4&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;g&nbsp;<wbr>&nbsp;<wbr>&nbsp;| b4d-&nbsp;<wbr>&nbsp;c1 d c2&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;|<br />
 &nbsp;<wbr>&nbsp;c8 g+&nbsp;e g c- g+&nbsp;e g | d g f g&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;c- g+&nbsp;e g | </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "pcp-vmstat(1)"
 name: "pcp-vmstat"
 section: "1"
@@ -10,8 +9,10 @@ description: "pcp-vmstat, pmstat – high-level system performance overview"
 
 <h2>NAME</h2>
 <p> <code>pcp-vmstat</code>, <code>pmstat</code> &#8211; high-level system performance overview</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pcp</code> [<i>pcp options</i>] <code>vmstat</code> [<i>interval</i> [<i>samples</i>]] </p>
 <p> <code>pmstat</code> [<code>-gLlPxz</code>] [<code>-A</code> <i>align</i>] [<code>-a</code> <i>archive</i>] [<code>-h</code> <i>host</i>] [<code>-H</code> <i>file</i>] [<code>-n</code> <i>pmnsfile</i>] [<code>-O</code> <i>offset</i>] [<code>-p</code> <i>port</i>] [<code>-S</code> <i>starttime</i>] [<code>-s</code> <i>samples</i>] [<code>-T</code> <i>endtime</i>] [<code>-t</code> <i>interval</i>] [<code>-Z</code> <i>timezone</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmstat</code> provides a one line summary of system performance every <i>interval</i> unit of time (the default is 5 seconds). <code>pmstat</code> is intended to monitor system performance at the highest level, after which other tools may be used to examine subsystems in which potential performance problems may be observed in greater detail. </p>
 <p> <code>pcp-vmstat</code> is a simple wrapper for use with the <code><a href="/docs/linux/man/1-pcp/">pcp</a></code>(1) command, providing a more familiar command line format for some users. It also enables the extended reporting option by default, see the <i>-x</i> option below. </p>
 <p> Multiple hosts may be monitored by supplying more than one host with multiple <code>-h</code> flags (for live monitoring) or by providing a name of the hostlist file, where each line contain one host name, with <code>-H,</code> or multiple <code>-a</code> flags (for retrospective monitoring from sets of archives). </p>

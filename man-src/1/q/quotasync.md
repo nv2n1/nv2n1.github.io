@@ -1,5 +1,4 @@
 ---
-
 title: "quotasync(1)"
 name: "quotasync"
 section: "1"
@@ -10,9 +9,11 @@ description: "quotasync – synchronize in-kernel file system usage and limits t
 
 <h2>NAME</h2>
 <p> quotasync &#8211; synchronize in-kernel file system usage and limits to disk format</p>
+<h2>SYNOPSIS</h2>
 <p> <code>quotasync</code> [ <code>-ug</code> ] <i>mount-point</i>&#8230;<br />
  <code>quotasync</code> [ <code>-ug</code> ] <code>-a</code><br />
  <code>quotasync</code> <code>-h</code> | <code>-V</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>quotasync</code> flushes file system usage and limits from kernel memory to quota files stored in the file system. By default only the user quotas are synchronized. </p>
 <p> This tool can be useful if you want to display accurate quotas by tools that parse quota files, like <code><a href="/docs/linux/man/8-repquota/">repquota</a></code>(8).</p>
 <h2>OPTIONS</h2>

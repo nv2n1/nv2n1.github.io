@@ -1,5 +1,4 @@
 ---
-
 title: "xlsfonts(1)"
 name: "xlsfonts"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-xlsfonts/"
 description: "xlsfonts – server font list displayer for X"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xlsfonts &#8211; server font list displayer for X </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xlsfonts</code> [<code>-display host:dpy</code>] [<code>-l</code>] [<code>-ll</code>] [<code>-lll</code>] [<code>-m</code>] [<code>-C</code>] [<code>-1</code>] [<code>-w width</code>] [<code>-n columns</code>] [<code>-u</code>] [<code>-o</code>] [<code>-fn pattern</code>] [<code>-v</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> xlsfonts lists the fonts that match the given pattern. The wildcard character &quot;*&quot; may be used to match any sequence of characters (including none), and &quot;?&quot; to match any single character. If no pattern is given, &quot;*&quot; is assumed. </p>
 <p> The &quot;*&quot; and &quot;?&quot; characters must be quoted to prevent them from being expanded by the shell.</p>
 <h2>OPTIONS</h2>

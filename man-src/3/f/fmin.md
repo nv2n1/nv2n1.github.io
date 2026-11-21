@@ -1,5 +1,4 @@
 ---
-
 title: "fmin(3)"
 name: "fmin"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-fmin/"
 description: "fmin, fminf, fminl – determine minimum of two floating-point numbers"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fmin, fminf, fminl &#8211; determine minimum of two floating-point numbers </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;math.h&gt;</code> </p>
 <p> <code>double fmin(double </code><i>x</i><code>, double </code><i>y</i><code>);</code><br />
  <code>float fminf(float </code><i>x</i><code>, float </code><i>y</i><code>);</code><br />
@@ -18,6 +20,7 @@ description: "fmin, fminf, fminl – determine minimum of two floating-point num
 <dl>
 <dt>
 </dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> These functions return the lesser value of <i>x</i> and <i>y</i>.</p>
 <h2>RETURN VALUE</h2>
 <p> These functions return the minimum of <i>x</i> and <i>y</i>. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "desktop_palette(3)"
 name: "desktop_palette"
 section: "3"
@@ -10,8 +9,10 @@ description: "desktop_palette – The palette used by the Atari ST low resolutio
 
 <h2>NAME</h2>
 <p> desktop_palette &#8211; The palette used by the Atari ST low resolution desktop. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>extern PALETTE desktop_palette;</code></p>
+<h2>DESCRIPTION</h2>
 <p> The palette used by the Atari ST low resolution desktop. I&#8217;m not quite sure why this is still here, except that the grabber and test programs use it. It is probably the only Atari legacy code left in Allegro, and it would be a shame to remove it :-) </p>
 <p> The contents of this palette are 16 colors repeated 16 times. Color entry zero is equal to color entry 16, which is equal to color entry 24, etc. </p>
 <pre>

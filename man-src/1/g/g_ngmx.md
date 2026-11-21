@@ -1,5 +1,4 @@
 ---
-
 title: "g_ngmx(1)"
 name: "g_ngmx"
 section: "1"
@@ -11,7 +10,9 @@ description: "ngmx – displays a trajectory"
 <h2>NAME</h2>
 <p> ngmx &#8211; displays a trajectory </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>ngmx</code> <code>-f</code><i> traj.xtc </i> <code>-s</code><i> topol.tpr </i> <code>-n</code><i> index.ndx </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i></p>
+<h2>DESCRIPTION</h2>
 <p> ngmx is the Gromacs trajectory viewer. This program reads a trajectory file, a run input file and an index file and plots a 3D structure of your molecule on your standard X Window screen. No need for a high end graphics workstation, it even works on Monochrome screens. </p>
 <p> The following features have been implemented: 3D view, rotation, translation and scaling of your molecule(s), labels on atoms, animation of trajectories, hardcopy in PostScript format, user defined atom-filters runs on MIT-X (real X), open windows and motif, user friendly menus, option to remove periodicity, option to show computational box. </p>
 <p> Some of the more common X command line options can be used: </p>

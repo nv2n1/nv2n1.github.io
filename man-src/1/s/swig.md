@@ -1,5 +1,4 @@
 ---
-
 title: "swig(1)"
 name: "swig"
 section: "1"
@@ -10,7 +9,9 @@ description: "swig – Simplified Wrapper and Interface Generator"
 
 <h2>NAME</h2>
 <p> swig &#8211; Simplified Wrapper and Interface Generator</p>
+<h2>SYNOPSIS</h2>
 <p> <code>swig</code> [<i>options</i>]<i> file</i> </p>
+<h2>DESCRIPTION</h2>
 <p> The swig command is used to create wrapper code to connect C and C++ code to scripting languages like Perl, Python, Tcl etc. from the definition of the interface. For detailed information on writing those interface definitions please refer to /usr/share/doc/swig-doc-2.0.9/Doc/Manual/index.html from the swig-doc package. This manpage concentrates on explaining the invocation of the swig command. </p>
 <h2>OPTIONS</h2>
 <h3>Target Language Options:</h3>

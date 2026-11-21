@@ -1,5 +1,4 @@
 ---
-
 title: "obexftp(1)"
 name: "obexftp"
 section: "1"
@@ -10,7 +9,9 @@ description: "obexftp – Mobile Equipment file transfer tool"
 
 <h2>NAME</h2>
 <p> obexftp &#8211; Mobile Equipment file transfer tool</p>
+<h2>SYNOPSIS</h2>
 <p> <code>obexftp</code> [<i>OPTION</i>] [<i>COMMANDS</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>obexftp</code> is used to access files on mobile equipment, i.e. cell phones. With <code>obexftpd</code> you can transfer files between any computers using <code>IrDA</code>, <code>Bluetooth</code> and <code>TCP/IP</code>. </p>
 <p> This tool lets you access the <code>ObexFTP</code> library by the means of a command line interface. You might consider using the other means available. E.g. the <code>ObexFS</code> filesystem for Linux.</p>
 <h2>OPTIONS</h2>

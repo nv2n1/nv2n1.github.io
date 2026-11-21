@@ -1,5 +1,4 @@
 ---
-
 title: "git-for-each-repo(1)"
 name: "git-for-each-repo"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-for-each-repo/"
 description: "git-for-each-repo – Run a Git command on a list of repositories"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-for-each-repo &#8211; Run a Git command on a list of repositories </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git for-each-repo --config=&lt;config&gt; [--] &lt;arguments&gt;
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Run a Git command on a list of repositories. The arguments after the known options or <code>&#8212;</code> indicator are used as the arguments for the Git subprocess. </p>
 <p> THIS COMMAND IS EXPERIMENTAL. THE BEHAVIOR MAY CHANGE. </p>
 <p> For example, we could run maintenance on each of a list of repositories stored in a <code>maintenance.repo</code> config variable using </p>

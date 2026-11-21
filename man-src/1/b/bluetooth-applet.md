@@ -1,5 +1,4 @@
 ---
-
 title: "bluetooth-applet(1)"
 name: "bluetooth-applet"
 section: "1"
@@ -10,7 +9,9 @@ description: "bluetooth-applet – GNOME applet for prompting the user for a Blu
 
 <h2>NAME</h2>
 <p> bluetooth-applet &#8211; GNOME applet for prompting the user for a Bluetooth passkey (PIN)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>bluetooth-applet</code></p>
+<h2>DESCRIPTION</h2>
 <p> <i>bluetooth-applet</i> will stay in your GNOME panel as a Bluetooth icon and will pop up a dialog whenever a passkey (aka PIN) is required from the Linux Bluetooth stack. <i>bluetooth-applet</i> is part of bluez-gnome, see also <a rel="nofollow" href="http://www.bluez.org">http://www.bluez.org</a></p>
 <h2>OPTIONS</h2>
 <p> <i>bluetooth-applet</i> takes no options</p>

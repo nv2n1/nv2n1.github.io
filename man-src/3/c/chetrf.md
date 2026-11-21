@@ -1,5 +1,4 @@
 ---
-
 title: "chetrf(3)"
 name: "chetrf"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-chetrf/"
 description: "chetrf.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> chetrf.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chetrf</code> (UPLO, N, A, LDA, IPIV, WORK, LWORK, INFO)<br />
  <i></i><code>CHETRF</code></p>

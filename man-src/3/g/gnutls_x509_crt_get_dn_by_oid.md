@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_crt_get_dn_by_oid(3)"
 name: "gnutls_x509_crt_get_dn_by_oid"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_crt_get_dn_by_oid – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_get_dn_by_oid &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_get_dn_by_oid(gnutls_x509_crt_t </code><i>cert</i><code>, const char * </code><i>oid</i><code>, int </code><i>indx</i><code>, unsigned int </code><i>raw_flag</i><code>, void * </code><i>buf</i><code>, size_t * </code><i>buf_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -26,6 +26,7 @@ description: "gnutls_x509_crt_get_dn_by_oid – API function"
 <dd> a pointer where the DN part will be copied (may be null).</dd>
 <dt>size_t * buf_size</dt>
 <dd> initially holds the size of <i>buf</i></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will extract the part of the name of the Certificate subject specified by the given OID. The output, if the raw flag is not used, will be encoded as described in RFC4514. Thus a string that is ASCII or UTF-8 encoded, depending on the certificate data. </p>
 <p> Some helper macros with popular OIDs can be found in gnutls/x509.h If raw flag is (0), this function will only return known OIDs as text. Other OIDs will be DER encoded, as described in RFC4514 &#8212; in hex format with a &#8216;#&#8217; prefix. You can check about known OIDs using <code>gnutls_x509_dn_oid_known()</code>. </p>
 <p> If <i>buf</i> is null then only the size will be filled. If the <i>raw_flag</i> is not specified the output is always null terminated, although the<br />

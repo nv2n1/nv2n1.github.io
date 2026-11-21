@@ -1,5 +1,4 @@
 ---
-
 title: "lxc-wait(1)"
 name: "lxc-wait"
 section: "1"
@@ -10,7 +9,9 @@ description: "lxc-wait – wait for a specific container state"
 
 <h2>NAME</h2>
 <p> lxc-wait &#8211; wait for a specific container state</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lxc-wait</code> {-n <i>name</i>} {-s <i>states</i>}</p>
+<h2>DESCRIPTION</h2>
 <p> <code>lxc-wait</code> waits for a specific container state before exiting, this is useful for scripting.</p>
 <h2>OPTIONS</h2>
 <dl>

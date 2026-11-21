@@ -1,5 +1,4 @@
 ---
-
 title: "ketchup(1)"
 name: "ketchup"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ketchup/"
 description: "ketchup – Utility to update the kernel source"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ketchup &#8211; Utility to update the kernel source </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ketchup</code> [<i>options</i>] <i>&lt;ver&gt;</i></p>
+<h2>DESCRIPTION</h2>
 <p> This tool synchronises a local kernel tree with a desired kernel version and patch set from a kernel.org mirror. The default requires a GPG key on your keyring, to verify the identity of the patches and source archives. Entire kernel images are not downloaded unless necessary, so bandwidth is saved. Patches are applied and removed as necessary to attain the requested version.</p>
 <h2>OPTIONS</h2>
 <dl>

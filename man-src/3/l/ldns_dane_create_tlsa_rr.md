@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_dane_create_tlsa_rr(3)"
 name: "ldns_dane_create_tlsa_rr"
 section: "3"
@@ -10,6 +9,7 @@ description: "ldns_dane_create_tlsa_owner, ldns_dane_cert2rdf, ldns_dane_select_
 
 <h2>NAME</h2>
 <p> ldns_dane_create_tlsa_owner, ldns_dane_cert2rdf, ldns_dane_select_certificate, ldns_dane_create_tlsa_rr </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -17,6 +17,7 @@ description: "ldns_dane_create_tlsa_owner, ldns_dane_cert2rdf, ldns_dane_select_
 <p> ldns_status ldns_dane_cert2rdf(ldns_rdf** rdf, X509* cert, ldns_tlsa_selector selector, ldns_tlsa_matching_type matching_type); </p>
 <p> ldns_status ldns_dane_select_certificate(X509** selected_cert, X509* cert, STACK_OF(X509)* extra_certs, X509_STORE* pkix_validation_store, ldns_tlsa_certificate_usage cert_usage, int index); </p>
 <p> ldns_status ldns_dane_create_tlsa_rr(ldns_rr** tlsa, ldns_tlsa_certificate_usage certificate_usage, ldns_tlsa_selector selector, ldns_tlsa_matching_type matching_type, X509* cert); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_dane_create_tlsa_owner</i>()</dt>
 <dd>Creates a dname consisting of the given name, prefixed by the service port and type of transport: _&lt;EM&gt;port&lt;/EM&gt;._&lt;EM&gt;transport&lt;/EM&gt;.&lt;EM&gt;name&lt;/EM&gt;. </dd>

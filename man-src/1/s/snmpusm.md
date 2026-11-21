@@ -1,5 +1,4 @@
 ---
-
 title: "snmpusm(1)"
 name: "snmpusm"
 section: "1"
@@ -10,12 +9,14 @@ description: "snmpusm – creates and maintains SNMPv3 users on a network entity
 
 <h2>NAME</h2>
 <p> snmpusm &#8211; creates and maintains SNMPv3 users on a network entity</p>
+<h2>SYNOPSIS</h2>
 <p> <code>snmpusm</code> [COMMON OPTIONS] [-Cw] AGENT <code>create</code> USER [CLONEFROM-USER]<br />
  <code>snmpusm</code> [COMMON OPTIONS] AGENT <code>delete</code> USER<br />
  <code>snmpusm</code> [COMMON OPTIONS] AGENT <code>cloneFrom</code> USER CLONEFROM-USER<br />
  <code>snmpusm</code> [COMMON OPTIONS] [-Ca] [-Cx] AGENT <code>passwd</code> OLD-PASSPHRASE NEW-PASSPHRASE [USER]<br />
  <code>snmpusm</code> [COMMON OPTIONS] &lt;-Ca | -Cx&gt; -Ck AGENT <code>passwd</code> OLD-KEY-OR-PASSPHRASE NEW-KEY-OR-PASSPHRASE [USER]<br />
  <code>snmpusm</code> [COMMON OPTIONS] [-Ca] [-Cx] AGENT <code>changekey</code> [USER] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>snmpusm</code> is an SNMP application that can be used to do simple maintenance on the users known to an SNMP agent, by manipulating the agent&#8217;s User-based Security Module (USM) table. The user needs write access to the usmUserTable MIB table. This tool can be used to create, delete, clone, and change the passphrase of users configured on a running SNMP agent. </p>
 <h2>OPTIONS</h2>
 <p> Common options for all <code>snmpusm</code> commands:</p>

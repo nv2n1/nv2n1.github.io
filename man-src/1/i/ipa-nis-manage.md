@@ -1,5 +1,4 @@
 ---
-
 title: "ipa-nis-manage(1)"
 name: "ipa-nis-manage"
 section: "1"
@@ -10,7 +9,9 @@ description: "ipa-nis-manage – Enables or disables the NIS listener plugin"
 
 <h2>NAME</h2>
 <p> ipa-nis-manage &#8211; Enables or disables the NIS listener plugin</p>
+<h2>SYNOPSIS</h2>
 <p> ipa-nis-manage [options] &lt;enable|disable|status&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> Run the command with the <code>enable</code> option to enable the NIS plugin. </p>
 <p> Run the command with the <code>disable</code> option to disable the NIS plugin. </p>
 <p> Run the command with the <code>status</code> option to read status of the NIS plugin. Return code 0 indicates enabled plugin, return code 4 indicates disabled plugin. </p>

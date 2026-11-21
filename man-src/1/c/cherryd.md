@@ -1,5 +1,4 @@
 ---
-
 title: "cherryd(1)"
 name: "cherryd"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-cherryd/"
 description: "cherryd – cherryd"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cherryd &#8211; cherryd </p>
+<h2>SYNOPSIS</h2>
 <p> <code>cherryd</code> [<i>options</i>]</p>
 <h2>OPTIONS</h2>
 <dl>

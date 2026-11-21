@@ -1,5 +1,4 @@
 ---
-
 title: "makepattern(1)"
 name: "makepattern"
 section: "1"
@@ -10,7 +9,9 @@ description: "makepattern – make GMT color pattern from b/w pattern or icon"
 
 <h2>NAME</h2>
 <p> makepattern &#8211; make GMT color pattern from b/w pattern or icon</p>
+<h2>SYNOPSIS</h2>
 <p> <code>makepattern</code> <i>1bit.ras</i> | <i>iconfile</i> <code>-Cf</code><i>r/g/b</i> <code>-Cb</code><i>r/g/b</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>makepattern</code> reads either a Sun 1-bit rasterfile OR a Sun icon file. It then accepts color choices for the foreground and background pixels and colorizes the pattern, writing it as a 8-bit Sun rasterfile on stdout. These patterns may then be used in <code>GMT</code> (3.1 or later) <code>-Gp</code> settings or by <code>psimage</code>.</p>
 <dl>
 <dt><i>1bit.ras</i> | <i>iconfile</i></dt>

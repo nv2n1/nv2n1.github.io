@@ -1,5 +1,4 @@
 ---
-
 title: "globus_ftp_client_data(3)"
 name: "globus_ftp_client_data"
 section: "3"
@@ -7,7 +6,10 @@ letter: "g"
 url: "/docs/linux/man/3-globus_ftp_client_data/"
 ---
 
-Reading and Writing Data - 
+<h2 class="name">NAME</h2>
+ 
+
+ Reading and Writing Data - 
 
 <h3>Typedefs</h3>
 

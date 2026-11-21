@@ -1,5 +1,4 @@
 ---
-
 title: "asn1_parser2tree(3)"
 name: "asn1_parser2tree"
 section: "3"
@@ -10,6 +9,7 @@ description: "asn1_parser2tree – API function"
 
 <h2>NAME</h2>
 <p> asn1_parser2tree &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>
 <p> <code>int asn1_parser2tree(const char * </code><i>file</i><code>, asn1_node * </code><i>definitions</i><code>, char * </code><i>error_desc</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "asn1_parser2tree – API function"
 <dd> return the pointer to the structure created from &quot;file&quot; ASN.1 declarations.</dd>
 <dt>char * error_desc</dt>
 <dd> return the error description or an empty string if success.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Function used to start the parse algorithm. Creates the structures needed to manage the definitions included in <i>file</i> file.</p>
 <h2>RETURNS</h2>
 <p> <code>ASN1_SUCCESS</code> if the file has a correct syntax and every identifier is known, <code>ASN1_ELEMENT_NOT_EMPTY</code> if <i>definitions</i> not <code>NULL</code>, <code>ASN1_FILE_NOT_FOUND</code> if an error occured while opening <i>file</i> , <code>ASN1_SYNTAX_ERROR</code> if the syntax is not correct, <code>ASN1_IDENTIFIER_NOT_FOUND</code> if in the file there is an identifier that is not defined, <code>ASN1_NAME_TOO_LONG</code> if in the file there is an identifier whith more than <code>ASN1_MAX_NAME_SIZE</code> characters.</p>

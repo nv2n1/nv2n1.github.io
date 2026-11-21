@@ -1,5 +1,4 @@
 ---
-
 title: "matho-primes(1)"
 name: "matho-primes"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-matho-primes/"
 description: "matho-primes – generate consecutive prime numbers"
 ---
 
+<h2 class="name">NAME</h2>
+<p> matho-primes &#8211; generate consecutive prime numbers</p>
+<h2>SYNOPSIS</h2>
 <p> <code>matho-primes</code> [start [stop]] [&quot;twin&quot;] [&quot;pal&quot; [base]]<br />
  <code>matho-primes</code> [-t] [-p base] [start [stop]] </p>
+<h2>DESCRIPTION</h2>
 <p> This command line utility is optionally part of the <code><a href="/docs/linux/man/1-mathomatic/">mathomatic</a></code>(1) package. It quickly computes any number of consecutive prime numbers using a windowing, memory efficient sieve of Eratosthenes algorithm, dumping them to standard output. They are displayed one prime per line in ascending order, unless the &quot;twin&quot; option is specified, which displays only twin primes, two primes per line. </p>
 <p> Generates up to 18 decimal digit primes, or whatever is the number of digits of precision for a <code>long double</code> in the C compiler used to compile this utility. </p>
 <p> A range may be specified on the command line, otherwise the starting number and the number of primes to output is prompted for. The range is <code>start</code> to <code>stop</code> inclusive, and <code>stop</code> must be greater than or equal to <code>start.</code> </p>

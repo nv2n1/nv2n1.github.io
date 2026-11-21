@@ -1,5 +1,4 @@
 ---
-
 title: "nlmconv(1)"
 name: "nlmconv"
 section: "1"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/1-nlmconv/"
 description: "nlmconv – converts object code into an NLM."
 ---
 
+<h2 class="name">NAME</h2>
+<p> nlmconv &#8211; converts object code into an NLM. </p>
+<h2>SYNOPSIS</h2>
 <p> nlmconv [<code>-I</code> <i>bfdname</i>|<code>&#8211;input-target=</code><i>bfdname</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>-O</code>&nbsp;<wbr><i>bfdname</i>|<code>&#8211;output-target=</code><i>bfdname</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>-T</code>&nbsp;<wbr><i>headerfile</i>|<code>&#8211;header-file=</code><i>headerfile</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>-d</code>|<code>&#8211;debug</code>]&nbsp;<wbr>[<code>-l</code>&nbsp;<wbr><i>linker</i>|<code>&#8211;linker=</code><i>linker</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>-h</code>|<code>&#8211;help</code>]&nbsp;<wbr>[<code>-V</code>|<code>&#8211;version</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr><i>infile</i>&nbsp;<wbr><i>outfile</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>nlmconv</code> converts the relocatable <code>i386</code> object file <i>infile</i> into the NetWare Loadable Module <i>outfile</i>, optionally reading <i>headerfile</i> for <font SIZE="-1">NLM</font> header information. For instructions on writing the <font SIZE="-1">NLM</font> command file language used in header files, see the <code>linkers</code> section, <font SIZE="-1"><code>NLMLINK</code></font> in particular, of the <i></i><font SIZE="-1"><i>NLM</i></font><i> Development and Tools Overview</i>, which is part of the <font SIZE="-1">NLM</font> Software Developer&#8217;s Kit (&#8220;<font SIZE="-1">NLM</font> <font SIZE="-1">SDK</font>&#8221;), available from Novell, Inc. <code>nlmconv</code> uses the <font SIZE="-1">GNU</font> Binary File Descriptor library to read <i>infile</i>; </p>
 <p> <code>nlmconv</code> can perform a link step. In other words, you can list more than one object file for input if you list them in the definitions file (rather than simply specifying one input file on the command line). In this case, <code>nlmconv</code> calls the linker for you.</p>
 <h2>OPTIONS</h2>

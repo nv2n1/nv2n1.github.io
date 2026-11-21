@@ -1,5 +1,4 @@
 ---
-
 title: "gvpr(1)"
 name: "gvpr"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-gvpr/"
 description: "gvpr – graph pattern scanning and processing language"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gvpr &#8211; graph pattern scanning and processing language </p>
+<h2>SYNOPSIS</h2>
 <p> <code>gvpr</code> [<code>-icnqV?</code>] [ <code>-o</code> <i>outfile</i> ] [ <code>-a</code> <i>args</i> ] [ <i>&#8216;prog&#8217;</i> | <code>-f</code> <i>progfile</i> ] [ <i>files </i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>gvpr</code> (previously known as <code>gpr</code>) is a graph stream editor inspired by <code>awk</code>. It copies input graphs to its output, possibly transforming their structure and attributes, creating new graphs, or printing arbitrary information. The graph model is that provided by <i>libcgraph</i>(3). In particular, <code>gvpr</code> reads and writes graphs using the dot language. </p>
 <p> Basically, <code>gvpr</code> traverses each input graph, denoted by <code>$G</code>, visiting each node and edge, matching it with the predicate-action rules supplied in the input program. The rules are evaluated in order. For each predicate evaluating to true, the corresponding action is performed. During the traversal, the current node or edge being visited is denoted by <code>$</code>. </p>
 <p> For each input graph, there is a target subgraph, denoted by <code>$T</code>, initially empty and used to accumulate chosen entities, and an output graph, <code>$O</code>, used for final processing and then written to output. By default, the output graph is the target graph. The output graph can be set in the program or, in a limited sense, on the command line.</p>

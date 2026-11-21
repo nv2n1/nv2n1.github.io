@@ -1,5 +1,4 @@
 ---
-
 title: "sshfs(1)"
 name: "sshfs"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-sshfs/"
 description: "SSHFS – filesystem client based on ssh"
 ---
 
+<h2 class="name">NAME</h2>
+<p> SSHFS &#8211; filesystem client based on ssh </p>
+<h2>SYNOPSIS</h2>
 <h3>mounting</h3>
 <dl>
 <dt><code>sshfs</code> [<i>user</i>@]<code>host</code>:[<i>dir</i>] <code>mountpoint</code> [<i>options</i>]</dt>
@@ -16,6 +18,7 @@ description: "SSHFS – filesystem client based on ssh"
 <dl>
 <dt><code> mountpoint</code></dt>
 <dd></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> SSHFS (Secure SHell FileSystem) is a file system for Linux (and other operating systems with a FUSE implementation, such as Mac OS X or FreeBSD) capable of operating on files on a remote computer using just a secure shell login on the remote computer. On the local computer where the SSHFS is mounted, the implementation makes use of the FUSE (Filesystem in Userspace) kernel module. The practical effect of this is that the end user can seamlessly interact with remote files being securely served over SSH just as if they were local files on his/her computer. On the remote computer the SFTP subsystem of SSH is used. </p>
 <p> If <i>host</i> is a numeric IPv6 address, it needs to be enclosed in square brackets.</p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "gstat(1)"
 name: "gstat"
 section: "1"
@@ -10,7 +9,9 @@ description: "gstat – manual page for Ganglia Status Tool"
 
 <h2>NAME</h2>
 <p> gstat &#8211; manual page for Ganglia Status Tool</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gstat</code> [<i>OPTIONS</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> The Ganglia Status Client (gstat) connects with a Ganglia Monitoring Daemon (gmond) and outputs a load-balanced list of hosts</p>
 <dl>
 <dt><code>-h</code>, <code>&#8211;help</code></dt>

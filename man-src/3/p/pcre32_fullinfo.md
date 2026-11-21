@@ -1,5 +1,4 @@
 ---
-
 title: "pcre32_fullinfo(3)"
 name: "pcre32_fullinfo"
 section: "3"
@@ -7,8 +6,8 @@ letter: "p"
 url: "/docs/linux/man/3-pcre32_fullinfo/"
 description: "PCRE – Perl-compatible regular expressions"
 ---
-
 <p>PCRE &#8211; Perl-compatible regular expressions </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;pcre.h&gt;</code> </p>
 <pre><code>
  int pcre_fullinfo(const pcre *  code , const pcre_extra * extra ,
@@ -18,6 +17,7 @@ description: "PCRE – Perl-compatible regular expressions"
  int pcre32_fullinfo(const pcre32 *  code , const pcre32_extra * extra ,
       int  what , void * where );
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p>This function returns information about a compiled pattern. Its arguments are: </p>
 <p> <br />
 &nbsp;<wbr>&nbsp;<i>code</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Compiled regular expression <br />

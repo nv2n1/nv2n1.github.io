@@ -1,5 +1,4 @@
 ---
-
 title: "encodedv(1)"
 name: "encodedv"
 section: "1"
@@ -10,7 +9,9 @@ description: "encodedv – encode a series of images to a digital video stream"
 
 <h2>NAME</h2>
 <p> encodedv &#8211; encode a series of images to a digital video stream</p>
+<h2>SYNOPSIS</h2>
 <p> <code>encodedv</code> [ <code>options</code> ] <i>video_pattern</i> <i>[ audio_input ]</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>encodedv</code> takes a series of images in PPM/PGM/video format and optionally an audio stream and compiles them into a DV-encoded video stream. <i>pattern</i> specifies where the input data is located and may be either <i>&#8211;</i> for stdin, or a <code>printf</code>-style pattern taking one numeric argument that gets replaced by the current frame number. Like image%03d.ppm, which gets expanded to image000.ppm, image001.ppm, etc.</p>
 <dl>
 <dt><code>&#8211;version</code></dt>

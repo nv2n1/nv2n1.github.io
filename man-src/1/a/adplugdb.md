@@ -1,5 +1,4 @@
 ---
-
 title: "adplugdb(1)"
 name: "adplugdb"
 section: "1"
@@ -10,7 +9,9 @@ description: "adplugdb – AdPlug database maintenance utility"
 
 <h2>NAME</h2>
 <p> adplugdb &#8211; AdPlug database maintenance utility</p>
+<h2>SYNOPSIS</h2>
 <p> <code>adplugdb</code> [OPTION]&#8230; COMMAND [ARGUMENT]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>adplugdb</code> maintains database files in AdPlug database format. It can <code>add</code>, <code>list</code> and <code>remove</code> records within a central database, or <code>merge</code> a set of databases together into one single database. </p>
 <p> <code>adplugdb</code> always operates on a central database file. The location of this database file is determined by first checking if the user has a home directory. If a home directory is present, the database file will be located in <code>~/.adplug/adplug.db</code>. If a home directory is not present, a database file <code>adplug.db</code> will be looked for in the current working directory. </p>
 <p> A system-wide database file can be used instead, by specifying the <code>-s</code> commandline option. The system-wide database file is located in <code>/var/lib/adplug/adplug.db</code> and may only be manipulated as the superuser. An arbitrary database file might be used as well, by specifying the <code>-d</code> commandline parameter. Only one database file may be manipulated at a time.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "podgrep(1)"
 name: "podgrep"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-podgrep/"
 description: "podgrep – grep in pod sections only"
 ---
 
+<h2 class="name">NAME</h2>
+<p> podgrep &#8211; grep in pod sections only </p>
+<h2>SYNOPSIS</h2>
 <p> podgrep [<code>-i</code>] [<code>-p</code>] [<code>-f</code>] [<code>-h</code>] <i>pattern</i> [ <i>files</i> &#8230; ]</p>
+<h2>DESCRIPTION</h2>
 <p> This program searches each paragraph in a pod document and prints each paragraph that matches the supplied pattern. This pod may be mixed with program code, such as in a module. </p>
 <p> Options are:</p>
 <dl>

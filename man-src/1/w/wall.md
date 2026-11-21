@@ -1,5 +1,4 @@
 ---
-
 title: "wall(1)"
 name: "wall"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-wall/"
 description: "wall – write a message to all users"
 ---
 
+<h2 class="name">NAME</h2>
+<p> wall &#8211; write a message to all users </p>
+<h2>SYNOPSIS</h2>
 <p> <code>wall</code> [<code>-n</code>] [<code>-t</code> <i>timeout</i>] [<code>-g</code> <i>group</i>] [<i>message</i> | <i>file</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>wall</code> displays a <i>message</i>, or the contents of a <i>file</i>, or otherwise its standard input, on the terminals of all currently logged in users. The command will wrap lines that are longer than 79 characters. Short lines are whitespace padded to have 79 characters. The command will always put a carriage return and new line at the end of each line. </p>
 <p> Only the superuser can write on the terminals of users who have chosen to deny messages or are using a program which automatically denies messages. </p>
 <p> Reading from a <i>file</i> is refused when the invoker is not superuser and the program is set-user-ID or set-group-ID.</p>

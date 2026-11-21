@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_cipher_get_name(3)"
 name: "gnutls_cipher_get_name"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_cipher_get_name – API function"
 
 <h2>NAME</h2>
 <p> gnutls_cipher_get_name &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>const char * gnutls_cipher_get_name(gnutls_cipher_algorithm_t </code><i>algorithm</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_cipher_algorithm_t algorithm</dt>
 <dd> is an encryption algorithm</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Convert a <code>gnutls_cipher_algorithm_t</code> type to a string.</p>
 <h2>RETURNS</h2>
 <p> a pointer to a string that contains the name of the specified cipher, or <code>NULL</code>.</p>

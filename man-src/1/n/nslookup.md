@@ -1,5 +1,4 @@
 ---
-
 title: "nslookup(1)"
 name: "nslookup"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-nslookup/"
 description: "nslookup – query Internet name servers interactively"
 ---
 
+<h2 class="name">NAME</h2>
+<p> nslookup &#8211; query Internet name servers interactively </p>
+<h2>SYNOPSIS</h2>
 <p> <code>nslookup</code> [-option] [name | -] [server]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>nslookup</code> is a program to query Internet domain name servers. <code>nslookup</code> has two modes: interactive and non-interactive. Interactive mode allows the user to query name servers for information about various hosts and domains or to print a list of hosts in a domain. Non-interactive mode prints just the name and requested information for a host or domain.</p>
 <h2>ARGUMENTS</h2>
 <p> Interactive mode is entered in the following cases:</p>

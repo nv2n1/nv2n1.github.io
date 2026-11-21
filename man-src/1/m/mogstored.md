@@ -1,5 +1,4 @@
 ---
-
 title: "mogstored(1)"
 name: "mogstored"
 section: "1"
@@ -7,7 +6,10 @@ letter: "m"
 url: "/docs/linux/man/1-mogstored/"
 ---
 
-mogstored -- MogileFS storage daemon 
+<h2 class="name">NAME</h2>
+ 
+
+ mogstored -- MogileFS storage daemon 
 
 <h2>USAGE</h2>
 

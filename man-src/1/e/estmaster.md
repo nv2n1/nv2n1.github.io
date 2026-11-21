@@ -1,5 +1,4 @@
 ---
-
 title: "estmaster(1)"
 name: "estmaster"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-estmaster/"
 description: "estmaster – master process of node servers"
 ---
 
+<h2 class="name">NAME</h2>
+<p> estmaster &#8211; master process of node servers</p>
+<h2>SYNOPSIS</h2>
 <p> <code>estmaster init [-ex] rootdir</code> </p>
 <p> <code>estmaster start [-bg] [-ro] [-st] rootdir</code> </p>
 <p> <code>estmaster stop rootdir</code> </p>
 <p> <code>estmaster unittest rootdir</code> </p>
 <p> <code>estmaster crypt key [hash]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>estmaster</code> is an aggregation of sub commands. The name of a sub command is specified by the first argument. Other arguments are parsed according to each sub command. The argument <i>rootdir</i> specifies the server root directory which contains configuration file and so on.</p>
 <dl>
 <dt><code>estmaster init [-ex] rootdir</code></dt>

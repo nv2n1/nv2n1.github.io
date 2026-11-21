@@ -1,5 +1,4 @@
 ---
-
 title: "gencfu(1)"
 name: "gencfu"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-gencfu/"
 description: "gencfu – Generates Unicode Confusable data files"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>gencfu</code> &#8211; Generates Unicode Confusable data files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>gencfu</code> [ <code>-h</code>, <code>-?</code>, <code>&#8211;help</code> ] [ <code>-V</code>, <code>&#8211;version</code> ] [ <code>-c</code>, <code>&#8211;copyright</code> ] [ <code>-v</code>, <code>&#8211;verbose</code> ] [ <code>-d</code>, <code>&#8211;destdir</code><i> destination</i> ] [ <code>-i</code>, <code>&#8211;icudatadir</code><i> directory</i> ] <code>-r</code>, <code>&#8211;rules</code><i> rule-file</i> <code>-w</code>, <code>&#8211;wsrules</code><i> whole-script-rule-file</i> <code>-o</code>, <code>&#8211;out</code><i> output-file</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>gencfu</code> reads confusable character definitions in the input file, which are plain text files containing confusable character definitions in the input format defined by Unicode UAX39 for the files <i>confusables.txt</i> and <i>confusablesWholeScript.txt.</i> This source (.txt) format is also accepted by ICU spoof detectors. The files must be encoded in utf-8 format, with or without a BOM. Normally the output data file has the <code>.cfu</code> extension.</p>
 <h2>OPTIONS</h2>
 <dl>

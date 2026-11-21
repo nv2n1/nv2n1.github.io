@@ -1,5 +1,4 @@
 ---
-
 title: "udisks(1)"
 name: "udisks"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-udisks/"
 description: "udisks – udisks command line tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> udisks &#8211; udisks command line tool </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>udisks</code> [<code>OPTIONS</code>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <i>udisks</i></p>
 <dd>is a simple command line client for the <code><a href="/docs/linux/man/7-udisks/">udisks</a></code>(7) system bus service.</dd>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "xerbla_array(3)"
 name: "xerbla_array"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-xerbla_array/"
 description: "xerbla_array.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xerbla_array.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>xerbla_array</code> (SRNAME_ARRAY, SRNAME_LEN, INFO)<br />
  <i></i><code>XERBLA_ARRAY</code></p>

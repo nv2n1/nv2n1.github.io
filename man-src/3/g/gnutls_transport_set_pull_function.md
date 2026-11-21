@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_transport_set_pull_function(3)"
 name: "gnutls_transport_set_pull_function"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_transport_set_pull_function – API function"
 
 <h2>NAME</h2>
 <p> gnutls_transport_set_pull_function &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_transport_set_pull_function(gnutls_session_t </code><i>session</i><code>, gnutls_pull_func </code><i>pull_func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_transport_set_pull_function – API function"
 <dd> is a <code>gnutls_session_t</code> structure.</dd>
 <dt>gnutls_pull_func pull_func</dt>
 <dd> a callback function similar to <code>read()</code></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This is the function where you set a function for gnutls to receive data. Normally, if you use berkeley style sockets, do not need to use this function since the default <a href="/docs/linux/man/2-recv/">recv</a>(2) will probably be ok. The callback should return 0 on connection termination, a positive number indicating the number of bytes received, and -1 on error. </p>
 <p>&nbsp;<wbr><i>gnutls_pull_func</i>&nbsp;<wbr>is of the form, ssize_t (*gnutls_pull_func)(gnutls_transport_ptr_t, void*, size_t);</p>
 <h2>REPORTING BUGS</h2>

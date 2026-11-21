@@ -1,5 +1,4 @@
 ---
-
 title: "hqx2bin(1)"
 name: "hqx2bin"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-hqx2bin/"
 description: "megatron, unhex, unbin, unsingle, hqx2bin, single2bin, macbinary â€“ Macintosh file format transformer"
 ---
 
+<h2 class="name">NAME</h2>
+<p> megatron, unhex, unbin, unsingle, hqx2bin, single2bin, macbinary &#8211; Macintosh file format transformer </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>megatron</code> [<i>sourcefile</i>&#8230;]</dt>
 <dd> <code>unbin</code> [<i>sourcefile</i>&#8230;]</dd>
@@ -16,6 +18,7 @@ description: "megatron, unhex, unbin, unsingle, hqx2bin, single2bin, macbinary â
 <dd> <code>hqx2bin</code> [<i>sourcefile</i>&#8230;]</dd>
 <dd> <code>single2bin</code> [<i>sourcefile</i>&#8230;]</dd>
 <dd> <code>macbinary</code> [<i>sourcefile</i>&#8230;]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>megatron</code></p>
 <dd>is used to transform files from BinHex, MacBinary, AppleSingle, or <code>netatalk</code> style AppleDouble formats into MacBinary or <code>netatalk</code> style AppleDouble formats. The <code>netatalk</code> style AppleDouble format is the file format used by <code>afpd,</code> the <code>netatalk</code> Apple Filing Protocol (AppleShare) server. BinHex, MacBinary, and AppleSingle are commonly used formats for transferring Macintosh files between machines via email or file transfer protocols. <code>megatron</code> uses its name to determine what type of tranformation is being asked of it. </dd>
 <p> If <code>megatron</code> is called as <code>unhex</code> , <code>unbin</code> or <code>unsingle</code>, it tries to convert file(s) from BinHex, MacBinary, or AppleSingle into AppleDouble format. BinHex is the format most often used to send Macintosh files by e-mail. Usually these files have an extension of &quot;.hqx&quot;. MacBinary is the format most often used by terminal emulators &quot;on the fly&quot; when transferring Macintosh files in binary mode. MacBinary files often have an extension of &quot;.bin&quot;. Some Macintosh LAN-based email packages use uuencoded AppleSingle format to &quot;attach&quot; or &quot;enclose&quot; files in email. AppleSingle files don&#8217;t have a standard filename extension. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "urxvt256c-ml(1)"
 name: "urxvt256c-ml"
 section: "1"
@@ -7,8 +6,11 @@ letter: "u"
 url: "/docs/linux/man/1-urxvt256c-ml/"
 description: "rxvt-unicode (ouR XVT, unicode) – (a VT102 emulator for the X window system)"
 ---
-
+<h2 class="name">NAME</h2>
+<p> rxvt-unicode (ouR XVT, unicode) - (a VT102 emulator for the X window system) </p>
+<h2>SYNOPSIS</h2>
 <p> <code>urxvt256c-ml</code> [options] [-e command [ args ]]  </p>
+<h2>DESCRIPTION</h2>
 <p> <code>rxvt-unicode</code>, version <code>9.21</code>, is a colour vt102 terminal emulator intended as an <i><a href="/docs/linux/man/1-xterm/">xterm</a></i>(1) replacement for users who do not require features such as Tektronix 4014 emulation and toolkit-style configurability. As a result, <code>rxvt-unicode</code> uses much less swap space --- a significant advantage on a machine serving many X sessions. </p>
 <p> This document is also available on the World-Wide-Web at &lt;<a rel="nofollow" href="http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod">http://pod.tst.eu/http://cvs.schmorp.de/rxvt-unicode/doc/rxvt.1.pod</a>&gt;.  </p>
 <h2>FREQUENTLY ASKED QUESTIONS</h2>

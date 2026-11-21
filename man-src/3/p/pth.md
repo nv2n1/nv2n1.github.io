@@ -1,5 +1,4 @@
 ---
-
 title: "pth(3)"
 name: "pth"
 section: "3"
@@ -7,10 +6,10 @@ letter: "p"
 url: "/docs/linux/man/3-pth/"
 description: "pth – GNU Portable Threads"
 ---
-
 <p> <code>pth</code> - GNU Portable Threads  </p>
 <h2>VERSION</h2>
 <p> <font SIZE="-1">GNU</font> Pth <font SIZE="-1">2.0.7 (08-Jun-2006)</font>  </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>Global Library Management</code></dt>
 <dd> <p> pth_init, pth_kill, pth_ctrl, pth_version. </p>
@@ -54,6 +53,7 @@ description: "pth – GNU Portable Threads"
 <dt><code>Standard </code><font SIZE="-1"><code>POSIX</code></font><code> Replacement </code><font SIZE="-1"><code>API</code></font></dt>
 <dd> <p> pth_nanosleep, pth_usleep, pth_sleep, pth_waitpid, pth_system, pth_sigmask, pth_sigwait, pth_accept, pth_connect, pth_select, pth_pselect, pth_poll, pth_read, pth_readv, pth_write, pth_writev, pth_pread, pth_pwrite, pth_recv, pth_recvfrom, pth_send, pth_sendto. </p>
  </dd></dl>
+<h2>DESCRIPTION</h2>
 <pre><code>  ____ _ _
  | _ \| |_| |__
  | |_) | __| '_ \ ``Only those who attempt

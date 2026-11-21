@@ -1,5 +1,4 @@
 ---
-
 title: "gfal-mkdir(1)"
 name: "gfal-mkdir"
 section: "1"
@@ -10,7 +9,9 @@ description: "gfal-mkdir – make directories"
 
 <h2>NAME</h2>
 <p> gfal-mkdir &#8211; make directories</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gfal-mkdir</code> [ <code>-h</code> ] [ <code>-V</code> ] [ <code>-v</code> ] [ <code>-D</code> <i>DEFINITION</i> ] [ <code>-C</code> <i>CLIENT-INFO</i> ] [ <code>-t</code> <i>TIMEOUT</i> ] [ <code>-p</code> ] <i>DIRECTORY</i>&#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> <code>gfal-mkdir</code> Create the DIRECTORY(ies), if they do not already exist. By default, it creates them with mode 0755. </p>
 <h2>OPTIONS</h2>
 <dl>

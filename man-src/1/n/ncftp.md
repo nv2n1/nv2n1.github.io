@@ -1,5 +1,4 @@
 ---
-
 title: "ncftp(1)"
 name: "ncftp"
 section: "1"
@@ -10,8 +9,10 @@ description: "ncftp – Browser program for the File Transfer Protocol"
 
 <h2>NAME</h2>
 <p> ncftp &#8211; Browser program for the File Transfer Protocol</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ncftp</code> [<i>host</i>] </p>
 <p> <code>ncftp</code> [<i><a href="ftp://host.name/directory/">ftp://host.name/directory/</a></i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The purpose of <i>ncftp</i> is to provide a powerful and flexible interface to the Internet standard <i>File Transfer Protocol</i>. It is intended to replace the stock <i>ftp</i> program that comes with the system. </p>
 <p> Although the program appears to be rather spartan, you&#8217;ll find that <i>ncftp</i> has a wealth of valuable performance and usage features. The program was designed with an emphasis on usability, and it does as much as it can for you automatically so you can do what you expect to do with a file transfer program, which is transfer files between two interconnected systems. </p>
 <p> Some of the cooler features include progress meters, filename completion, command-line editing, background processing, auto-resume downloads, bookmarking, cached directory listings, host redialing, working with firewalls and proxies, downloading entire directory trees, etc., etc. </p>

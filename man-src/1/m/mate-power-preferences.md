@@ -1,5 +1,4 @@
 ---
-
 title: "mate-power-preferences(1)"
 name: "mate-power-preferences"
 section: "1"
@@ -10,7 +9,9 @@ description: "mate-power-preferences – mate power preferences gui"
 
 <h2>NAME</h2>
 <p> mate-power-preferences &#8211; mate power preferences gui</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mate-power-preferences</code> [ <code>&#8211;verbose</code> ] [ <code>&#8211;help</code> ]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>mate-power-preferences</code> command. </p>
 <p> <code>mate-power-preferences</code> is the gui program for the mate power management infrastructure</p>
 <h2>OPTIONS</h2>

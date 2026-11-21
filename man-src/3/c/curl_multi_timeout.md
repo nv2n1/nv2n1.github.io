@@ -1,5 +1,4 @@
 ---
-
 title: "curl_multi_timeout(3)"
 name: "curl_multi_timeout"
 section: "3"
@@ -10,8 +9,10 @@ description: "curl_multi_timeout – how long to wait for action before proceedi
 
 <h2>NAME</h2>
 <p> curl_multi_timeout &#8211; how long to wait for action before proceeding</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;curl/curl.h&gt; </p>
 <p> CURLMcode curl_multi_timeout(CURLM *multi_handle, long *timeout);</p>
+<h2>DESCRIPTION</h2>
 <p> An application using the libcurl multi interface should call <code><a href="/docs/linux/man/3-curl_multi_timeout/">curl_multi_timeout</a>(3)</code> to figure out how long it should wait for socket actions &#8211; at most &#8211; before proceeding. </p>
 <p> Proceeding means either doing the socket-style timeout action: call the <code><a href="/docs/linux/man/3-curl_multi_socket_action/">curl_multi_socket_action</a>(3)</code> function with the <code>sockfd</code> argument set to CURL_SOCKET_TIMEOUT, or call <code><a href="/docs/linux/man/3-curl_multi_perform/">curl_multi_perform</a>(3)</code> if you&#8217;re using the simpler and older multi interface approach. </p>
 <p> The timeout value returned in the long <code>timeout</code> points to, is in number of milliseconds at this very moment. If 0, it means you should proceed immediately without waiting for anything. If it returns -1, there&#8217;s no timeout at all set. </p>

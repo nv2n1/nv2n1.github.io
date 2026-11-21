@@ -1,5 +1,4 @@
 ---
-
 title: "perlmodstyle(1)"
 name: "perlmodstyle"
 section: "1"
@@ -7,7 +6,10 @@ letter: "p"
 url: "/docs/linux/man/1-perlmodstyle/"
 ---
 
-perlmodstyle - Perl module style guide 
+<h2 class="name">NAME</h2>
+ 
+
+ perlmodstyle - Perl module style guide 
 
 <h2>INTRODUCTION</h2>
 

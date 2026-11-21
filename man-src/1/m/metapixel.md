@@ -1,5 +1,4 @@
 ---
-
 title: "metapixel(1)"
 name: "metapixel"
 section: "1"
@@ -10,12 +9,14 @@ description: "metapixel – generator for photomosaics"
 
 <h2>NAME</h2>
 <p> metapixel &#8211; generator for photomosaics</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>metapixel-prepare</code> [<i>options</i>] [<i>srcdir</i>] [<i>destdir</i>] </dt>
 <dd>prepares the pictures in <i>srcdir</i> by creating resized images and a table file in <i>destdir</i> </dd>
 <dt> <code>metapixel</code> [<i>options</i>] [&#8211;metapixel&nbsp;<wbr><i>input.jpg</i>&nbsp;<wbr><i>output.png</i>&nbsp;<wbr>&#8211;library&nbsp;<wbr><i>destdir</i>] </dt>
 <dd>creates a photomosaic <i>output.png</i> using <i>input.jpg</i> as the input image and <i>destdir/tables.mxt</i> as table file </dd>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>metapixel</code> and <code>metapixel-prepare</code> commands. For more information check the README file included in the distribution. </p>
 <p> <code>metapixel</code> is a program for generating photomosaics. It can generate classical photomosaics, in which the source image is viewed as a matrix of equally sized rectangles for each of which a matching image is substitued, as well as collage-style photomosaics, in which rectangular parts of the source image at arbitrary positions (i.e. not aligned to a matrix) are substituted by matching images. </p>
 <p> <code>metapixel-prepare</code> is a utility that needs to be run before metapixel can be used. It prepares your source images so that they can be used by <code>metapixel</code> to create the actual photomosaic. </p>

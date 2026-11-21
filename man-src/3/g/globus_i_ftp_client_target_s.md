@@ -1,5 +1,4 @@
 ---
-
 title: "globus_i_ftp_client_target_s(3)"
 name: "globus_i_ftp_client_target_s"
 section: "3"
@@ -8,7 +7,10 @@ url: "/docs/linux/man/3-globus_i_ftp_client_target_s/"
 description: "globus_i_ftp_client_target_s –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> globus_i_ftp_client_target_s &#8211; </p>
 <p> FTP Connection State.</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;globus_i_ftp_client.h&gt;</p>
 <h3>Data Fields</h3>
 <p> globus_ftp_client_target_state_t <code>state</code> </p>

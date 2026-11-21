@@ -1,5 +1,4 @@
 ---
-
 title: "hwloc-gather-topology(1)"
 name: "hwloc-gather-topology"
 section: "1"
@@ -10,6 +9,7 @@ description: "hwloc-gather-topology – Saves the relevant Linux topology files 
 
 <h2>NAME</h2>
 <p> hwloc-gather-topology &#8211; Saves the relevant Linux topology files and the lstopo output for later (possibly offline) usage</p>
+<h2>SYNOPSIS</h2>
 <p> <code>hwloc-gather-topology [</code><i>options</i>] <i>&lt;path&gt;</i></p>
 <h2>OPTIONS</h2>
 <dl>
@@ -17,6 +17,7 @@ description: "hwloc-gather-topology – Saves the relevant Linux topology files 
 <dd> Also gather I/O related files. The gathering may be much slower, and the generated archive may be much bigger. <code>&#8211;dmi</code> Also gather DMI/SMBIOS related files. The gathering requires root access, and the dmi-sysfs kernel module should be loaded.</dd>
 <dt><code>-h</code> <code>&#8211;help</code></dt>
 <dd> Display help message and exit</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>hwloc-gather-topology</code> saves all the relevant topology files into an archive (<code>&lt;path&gt;.tar.bz2</code>) and the lstopo output (<code>&lt;path&gt;.output</code>). The utility for example stores the <code>/proc/cpuinfo</code> file and the entire <code>/sys/devices/system/node/</code> directory tree. </p>
 <p> These files can be used later to explore the machine topology offline. Once the tarball has been extracted, it may for instance be given to some hwloc command-line utilities through their <code>&#8211;input</code> option. It is also possible to override the default topology that the hwloc library will read by setting the extracted path in the <code>HWLOC_FSROOT</code> environment variable. </p>
 <p> Both archive and lstopo output may also be submitted to hwloc developers to debug issues remotely. </p>

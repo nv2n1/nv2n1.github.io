@@ -1,5 +1,4 @@
 ---
-
 title: "g_make_edi(1)"
 name: "g_make_edi"
 section: "1"
@@ -11,7 +10,9 @@ description: "make_edi – generate input files for essential dynamics sampling"
 <h2>NAME</h2>
 <p> make_edi &#8211; generate input files for essential dynamics sampling </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>make_edi</code> <code>-f</code><i> eigenvec.trr </i> <code>-eig</code><i> eigenval.xvg </i> <code>-s</code><i> topol.tpr </i> <code>-n</code><i> index.ndx </i> <code>-tar</code><i> target.gro </i> <code>-ori</code><i> origin.gro </i> <code>-o</code><i> sam.edi </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-[no]xvgr</code><i></i> <code>-mon</code><i> string </i> <code>-linfix</code><i> string </i> <code>-linacc</code><i> string </i> <code>-flood</code><i> string </i> <code>-radfix</code><i> string </i> <code>-radacc</code><i> string </i> <code>-radcon</code><i> string </i> <code>-outfrq</code><i> int </i> <code>-slope</code><i> real </i> <code>-maxedsteps</code><i> int </i> <code>-deltaF0</code><i> real </i> <code>-deltaF</code><i> real </i> <code>-tau</code><i> real </i> <code>-eqsteps</code><i> int </i> <code>-Eflnull</code><i> real </i> <code>-T</code><i> real </i> <code>-alpha</code><i> real </i> <code>-linstep</code><i> string </i> <code>-accdir</code><i> string </i> <code>-radstep</code><i> real </i> <code>-[no]restrain</code><i></i> <code>-[no]hessian</code><i></i> <code>-[no]harmonic</code><i></i></p>
+<h2>DESCRIPTION</h2>
 <p> <code> make_edi</code> generates an essential dynamics (ED) sampling input file to be used with mdrun based on eigenvectors of a covariance matrix (<code> g_covar</code>) or from a normal modes anaysis (<code> g_nmeig</code>). ED sampling can be used to manipulate the position along collective coordinates (eigenvectors) of (biological) macromolecules during a simulation. Particularly, it may be used to enhance the sampling efficiency of MD simulations by stimulating the system to explore new regions along these collective coordinates. A number of different algorithms are implemented to drive the system along the eigenvectors (<code> -linfix</code>, <code> -linacc</code>, <code> -radfix</code>, <code> -radacc</code>, <code> -radcon</code>), to keep the position along a certain (set of) coordinate(s) fixed (<code> -linfix</code>), or to only monitor the projections of the positions onto these coordinates (<code> -mon</code>). </p>
 <p> References: </p>
 <p> A. Amadei, A.B.M. Linssen, B.L. de Groot, D.M.F. van Aalten and H.J.C. Berendsen; An efficient method for sampling the essential subspace of proteins., J. Biomol. Struct. Dyn. 13:615-626 (1996) </p>

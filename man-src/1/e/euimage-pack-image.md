@@ -1,5 +1,4 @@
 ---
-
 title: "euimage-pack-image(1)"
 name: "euimage-pack-image"
 section: "1"
@@ -10,10 +9,12 @@ description: "euimage-pack-image – ***TECH PREVIEW***"
 
 <h2>NAME</h2>
 <p> euimage-pack-image &#8211; ***TECH PREVIEW***</p>
+<h2>SYNOPSIS</h2>
 <p> euimage-pack-image [&#8211;progress | <code>&#8211;no-progress]</code> [&#8211;debug] [&#8211;debugger]</p>
 <dl>
 <dt>[&#8211;version] [-h]</dt>
 <dd> IMAGE_FILE MD_FILE</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> ***TECH PREVIEW***</p>
 <h2>DESCRIPTION</h2>
 <p> Pack an image for simple installation in a cloud</p>

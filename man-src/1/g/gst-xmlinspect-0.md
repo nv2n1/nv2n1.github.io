@@ -1,5 +1,4 @@
 ---
-
 title: "gst-xmlinspect-0(1)"
 name: "gst-xmlinspect-0"
 section: "1"
@@ -10,7 +9,9 @@ description: "gst-xmlinspect – print info about a GStreamer plugin or element"
 
 <h2>NAME</h2>
 <p> gst-xmlinspect &#8211; print info about a GStreamer plugin or element</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gst-xmlinspect [OPTION&#8230;] [PLUGIN|ELEMENT]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <i>gst-xmlinspect</i> is a tool that prints out information on available <i>GStreamer</i> plugins, information about a particular plugin, or information about a particular element. When executed with no PLUGIN or ELEMENT argument, <i>gst-xmlinspect</i> will print a list of all plugins and elements. When executed with a PLUGIN or ELEMENT argument, <i>gst-xmlinspect</i> will print information about that plug-in or element as an XML document.</p>
 <h2>OPTIONS</h2>
 <p> <i>gst-xmlinspect</i> accepts the following arguments and options:</p>

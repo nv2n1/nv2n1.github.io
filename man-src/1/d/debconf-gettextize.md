@@ -1,5 +1,4 @@
 ---
-
 title: "debconf-gettextize(1)"
 name: "debconf-gettextize"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-debconf-gettextize/"
 description: "debconf-gettextize – extract translations of debconf templates into PO files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> debconf-gettextize &#8211; extract translations of debconf templates into PO files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>debconf-gettextize</code> [<code>-v</code>] [<code>-h</code>] [<code>&#8211;podir=</code><font SIZE="-1">DIR</font>] [<code>&#8211;choices</code>] [<code>&#8211;merge</code>] <i>master</i> [<i>master</i> &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> The <i>/var/lib/dpkg/info/*.templates</i> files read by debconf contain English text and translations in the same file. But in source packages, translations are managed in separate files to help translators. In the initial implementation, a master <i>templates</i> file contained only English text, and <i>templates.xx</i> files contained both original and translated strings for the language <i>xx</i>. The <code>debconf-mergetemplate</code> program was merging master and translated templates files. </p>
 <p> The new implementation with <tt>&quot;po-debconf&quot;</tt> is based on <tt>&quot;gettext&quot;</tt>. Maintainers mark translatable fields by prepending them with an underscore, English strings are automatically extracted into a <font SIZE="-1">POT</font> file, translators work on normal <font SIZE="-1">PO</font> files, and <code>po2debconf</code> generates a merged templates file with the same structure. </p>
 <p> The <code>debconf-gettextize</code> program was initially designed to help migrating to the new implementation.</p>

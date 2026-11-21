@@ -1,5 +1,4 @@
 ---
-
 title: "ssgrep(1)"
 name: "ssgrep"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ssgrep/"
 description: "ssgrep – search spreadsheets for strings"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ssgrep &#8211; search spreadsheets for strings</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ssgrep </code> [<i>OPTIONS</i>] [<i>FILES</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> This manual page briefly documents the <code>ssgrep</code> command. </p>
 <p> <code>ssgrep</code> is a command line utility to search for strings in spreadsheets of any format supported by gnumeric. Without any output modifying options, <code>ssgrep</code> prints one line for each match. A match consists of the matching content of a cell or, if the <code>-R</code> option is given, the matching expression result of a cell. </p>
 <h2>OPTIONS</h2>

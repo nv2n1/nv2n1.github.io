@@ -1,5 +1,4 @@
 ---
-
 title: "mhstore(1)"
 name: "mhstore"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mhstore/"
 description: "mhstore – store contents of MIME messages into files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mhstore &#8211; store contents of MIME messages into files </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mhstore</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-file</code> <i>file</i>] [<code>-outfile</code> <i>outfile</i>] [<code>-part</code> <i>number</i>] &#8230; [<code>-type</code> <i>content</i>] &#8230; [<code>-auto</code> | <code>-noauto</code>] [<code>-clobber</code> <i>always</i> | <i>auto</i> | <i>suffix</i> | <i>ask</i> | <i>never</i>] [<code>-rcache</code> <i>policy</i>] [<code>-wcache</code> <i>policy</i>] [<code>-check</code> | <code>-nocheck</code>] [<code>-verbose</code> | <code>-noverbose</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>mhstore</code> command allows you to store the contents of a collection of MIME (multi-media) messages into files or other messages. </dd>
 <p> <code>mhstore</code> manipulates multi-media messages as specified in RFC 2045 to RFC 2049. </p>
 <p> By default, <code>mhstore</code> will store all the parts of each message. Each part will be store in a separate file. The header fields of the message are not stored. By using the <code>-part</code> and <code>-type</code> switches, you may limit the scope of <code>mhstore</code> to particular subparts (of a multipart content) and/or particular content types. </p>

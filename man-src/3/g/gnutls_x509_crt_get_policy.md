@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_crt_get_policy(3)"
 name: "gnutls_x509_crt_get_policy"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_crt_get_policy – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_get_policy &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_get_policy(gnutls_x509_crt_t </code><i>crt</i><code>, int </code><i>indx</i><code>, struct gnutls_x509_policy_st * </code><i>policy</i><code>, unsigned int * </code><i>critical</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,6 +22,7 @@ description: "gnutls_x509_crt_get_policy – API function"
 <dd> A pointer to a policy structure.</dd>
 <dt>unsigned int * critical</dt>
 <dd> will be non-zero if the extension is marked as critical</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will extract the certificate policy (extension 2.5.29.32) specified by the given index. </p>
 <p> The policy returned by this function must be deinitialized by using <code>gnutls_x509_policy_release()</code>.</p>
 <h2>RETURNS</h2>

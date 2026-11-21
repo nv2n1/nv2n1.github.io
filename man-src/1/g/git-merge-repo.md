@@ -1,5 +1,4 @@
 ---
-
 title: "git-merge-repo(1)"
 name: "git-merge-repo"
 section: "1"
@@ -10,7 +9,9 @@ description: "git-merge-repo – Merge two repo histories"
 
 <h2>NAME</h2>
 <p> <code>git-merge-repo</code> &#8211; Merge two repo histories</p>
+<h2>SYNOPSIS</h2>
 <p> <code>git-merge-repo</code> &lt;repo&gt; &lt;branch&gt; &lt;directory&gt; [&#8211;squash]</p>
+<h2>DESCRIPTION</h2>
 <p> Merges a repository&#8217;s history with the current repository, inside a specified directory. </p>
 <p> Optional <code>&#8211;squash</code> flag skips the full history and generates only one commit for the merge.</p>
 <h2>EXAMPLES</h2>

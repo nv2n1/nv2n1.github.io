@@ -1,5 +1,4 @@
 ---
-
 title: "mate-system-monitor(1)"
 name: "mate-system-monitor"
 section: "1"
@@ -10,7 +9,9 @@ description: "mate-system-monitor – view and control processes"
 
 <h2>NAME</h2>
 <p> mate-system-monitor &#8211; view and control processes</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mate-system-monitor [OPTIONS] </code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>mate-system-monitor</code> allows you to view and control the processes running on your system. You can access detailed memory maps, send signals, and terminate the processes. </p>
 <p> In addition, the <code>mate-system-monitor</code> provides an overall view of the resource usage on your system, including memory and CPU allocation, as well as network usage. It also allows you to view file system information such as Device, Type, Mountpoints, and Disk Usage. </p>
 <p> The System tab will display basic information about your system like Hostname, Kernel, MATE Version, Installed Memory, and Processor Information.</p>

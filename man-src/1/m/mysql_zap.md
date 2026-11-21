@@ -1,5 +1,4 @@
 ---
-
 title: "mysql_zap(1)"
 name: "mysql_zap"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mysql_zap/"
 description: "mysql_zap – kill processes that match a pattern"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mysql_zap &#8211; kill processes that match a pattern </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysql_zap [-</code><i>signal</i><code>] [-?Ift] </code><i>pattern</i></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>mysql_zap</code></p>
 <dd>kills processes that match a pattern. It uses the <code>ps</code> command and Unix signals, so it runs on Unix and Unix-like systems. </dd>
 <p> Invoke <code>mysql_zap</code> like this: </p>

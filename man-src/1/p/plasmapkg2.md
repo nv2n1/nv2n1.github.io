@@ -1,5 +1,4 @@
 ---
-
 title: "plasmapkg2(1)"
 name: "plasmapkg2"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-plasmapkg2/"
 description: "plasmapkg2 – Install, list, remove Plasma packages"
 ---
 
+<h2 class="name">NAME</h2>
+<p> plasmapkg2 &#8211; Install, list, remove Plasma packages </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>plasmapkg2</code> [<code>&#8211;hash</code><i> path</i>] [<code>-g, &#8211;global</code>] [<code>-t, &#8211;type</code><i> type</i>] [<code>-i, &#8211;install</code><i> path</i>] [<code>-s, &#8211;show</code><i> name</i>] [<code>-u, &#8211;upgrade</code><i> path</i>] [<code>-l, &#8211;list</code>] [<code>&#8211;list-types</code>] [<code>-r, &#8211;remove</code><i> name</i>] [<code>-p, &#8211;packageroot</code><i> path</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>plasmapkg2</code></p>
 <dd>is a command line tool to install, list, remove Plasma packages.</dd>
 <h2>OPTIONS</h2>

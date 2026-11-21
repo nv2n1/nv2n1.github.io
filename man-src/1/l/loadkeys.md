@@ -1,5 +1,4 @@
 ---
-
 title: "loadkeys(1)"
 name: "loadkeys"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-loadkeys/"
 description: "loadkeys – load keyboard translation tables"
 ---
 
+<h2 class="name">NAME</h2>
+<p> loadkeys &#8211; load keyboard translation tables </p>
+<h2>SYNOPSIS</h2>
 <p> <code>loadkeys</code> [ <i>-a &#8211;ascii</i> ] [ <i>-b &#8211;bkeymap</i> ] [ <i>-c &#8211;clearcompose</i> ] [ <i>-C &#8216;&lt;FILE&gt;&#8217;</i> | <i>&#8211;console=&lt;FILE&gt;</i> ] [ <i>-d &#8211;default</i> ] [ <i>-h &#8211;help</i> ] [ <i>-m &#8211;mktable</i> ] [ <i>-p &#8211;parse</i> ] [ <i>-q &#8211;quiet</i> ] [ <i>-s &#8211;clearstrings</i> ] [ <i>-u &#8211;unicode</i> ] [ <i>-v &#8211;verbose</i> ] [ <i>-V &#8211;version</i> ] [ <i>filename&#8230;</i> ] </p>
+<h2>DESCRIPTION</h2>
 <p> The program <code>loadkeys</code> reads the file or files specified by <i>filename&#8230;</i>. Its main purpose is to load the kernel keymap for the console. You can specify console device by the <i>-C</i> (or <i>&#8211;console</i> ) option.</p>
 <h2>RESET TO DEFAULT</h2>
 <p> If the <i>-d</i> (or <i>&#8211;default</i> ) option is given, <code>loadkeys</code> loads a default keymap, probably the file <i>defkeymap.map</i> either in <i>/usr/share/keymaps</i> or in <i>/usr/src/linux/drivers/char</i>. (Probably the former was user-defined, while the latter is a qwerty keyboard map for PCs &#8211; maybe not what was desired.) Sometimes, with a strange keymap loaded (with the minus on some obscure unknown modifier combination) it is easier to type `loadkeys defkeymap&#8217;.</p>

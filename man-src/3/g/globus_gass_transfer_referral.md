@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_gass_transfer_referral/"
 description: "Referrals –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Referrals &#8211; </p>
 <p> GASS Referrals.</p>
 <h3>Functions</h3>
 <p> globus_size_t <code>globus_gass_transfer_referral_get_count</code> (globus_gass_transfer_referral_t *referral) </p>

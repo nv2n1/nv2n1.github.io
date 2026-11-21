@@ -1,5 +1,4 @@
 ---
-
 title: "bmp2tiff(1)"
 name: "bmp2tiff"
 section: "1"
@@ -10,7 +9,9 @@ description: "bmp2tiff – create a TIFF file from a Microsoft Windows Device In
 
 <h2>NAME</h2>
 <p> bmp2tiff &#8211; create a <font SIZE="-1">TIFF</font> file from a Microsoft Windows Device Independent Bitmap image file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>bmp2tiff</code> [ <i>options</i> ] <i>input.bmp</i> [ <i>input2.bmp &#8230;</i> ] <i>output.tiff</i></p>
+<h2>DESCRIPTION</h2>
 <p> <i>bmp2tiff</i> converts a Microsoft Windows Device Independent Bitmap image file to <font SIZE="-1">TIFF.</font> If several input BMP files are being specified the multipage <font SIZE="-1">TIFF</font> output file will be created. By default, the <font SIZE="-1">TIFF</font> image is created with data samples packed (<i>PlanarConfiguration</i>=1), compressed with the PackBits algorithm (<i>Compression</i>=32773), and with each strip no more than 8 kilobytes. These characteristics can overridden, or explicitly specified with the options described below.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "git-rename-tag(1)"
 name: "git-rename-tag"
 section: "1"
@@ -10,7 +9,9 @@ description: "git-rename-tag – Rename a tag"
 
 <h2>NAME</h2>
 <p> <code>git-rename-tag</code> &#8211; Rename a tag</p>
+<h2>SYNOPSIS</h2>
 <p> <code>git-rename-tag</code> &lt;old-tag-name&gt; &lt;new-tag-name&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> Rename a tag (locally and remotely)</p>
 <h2>OPTIONS</h2>
 <p> &lt;old-tag-name&gt; </p>

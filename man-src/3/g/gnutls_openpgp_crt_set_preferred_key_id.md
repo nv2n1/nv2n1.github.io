@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_openpgp_crt_set_preferred_key_id(3)"
 name: "gnutls_openpgp_crt_set_preferred_key_id"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_openpgp_crt_set_preferred_key_id – API function"
 
 <h2>NAME</h2>
 <p> gnutls_openpgp_crt_set_preferred_key_id &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>
 <p> <code>int gnutls_openpgp_crt_set_preferred_key_id(gnutls_openpgp_crt_t </code><i>key</i><code>, const gnutls_openpgp_keyid_t </code><i>keyid</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_openpgp_crt_set_preferred_key_id – API function"
 <dd> the structure that contains the OpenPGP public key.</dd>
 <dt>const gnutls_openpgp_keyid_t keyid</dt>
 <dd> the selected keyid</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This allows setting a preferred key id for the given certificate. This key will be used by functions that involve key handling. </p>
 <p> If the provided <i>keyid</i> is <code>NULL</code> then the master key is set as preferred.</p>
 <h2>RETURNS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "djvm(1)"
 name: "djvm"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-djvm/"
 description: "djvm – Manipulate bundled multi-page DjVu documents."
 ---
 
+<h2 class="name">NAME</h2>
+<p> djvm &#8211; Manipulate bundled multi-page DjVu documents.</p>
+<h2>SYNOPSIS</h2>
 <h2>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Creating a bundled document:</h2>
 <p> <code>djvm -c[reate] </code><i>doc.djvu</i><i>page1.djvu</i><code> &#8230; </code><i>pageN.djvu</i></p>
 <h2>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Inserting:</h2>
@@ -16,6 +18,7 @@ description: "djvm – Manipulate bundled multi-page DjVu documents."
 <p> <code>djvm -d[elete] </code><i>doc.djvu</i><i>pagenum</i></p>
 <h2>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Listing:</h2>
 <p> <code>djvm -l[ist] </code><i>doc.djvu</i> </p>
+<h2>DESCRIPTION</h2>
 <p> This program creates or modifies a bundled multi-page DjVu document. Multi-page bundled documents can be used directly or converted to indirect document using command <code>djvmcvt</code>. </p>
 <h2>OPTIONS</h2>
 <dl>

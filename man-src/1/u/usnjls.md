@@ -1,5 +1,4 @@
 ---
-
 title: "usnjls(1)"
 name: "usnjls"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-usnjls/"
 description: "usnjls – List the contents of a NTFS Update Sequence Number journal"
 ---
 
+<h2 class="name">NAME</h2>
+<p> usnjls &#8211; List the contents of a NTFS Update Sequence Number journal </p>
+<h2>SYNOPSIS</h2>
 <p> <code>usnjls [-f</code> <i>fstype</i> <code>] [-vV] [-i imgtype] [-o imgoffset] [-b dev_sector_size]</code> <i>image [images] [inode]</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>usnjls</code> lists the records in a NTFS Update Sequence Number Journal. If inode is given, then it will look there for a journal. Otherwise, it will use the default location. The output lists the USN journal records. </p>
 <h2>ARGUMENTS</h2>
 <dl>

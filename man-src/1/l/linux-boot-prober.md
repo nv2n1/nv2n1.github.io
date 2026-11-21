@@ -1,5 +1,4 @@
 ---
-
 title: "linux-boot-prober(1)"
 name: "linux-boot-prober"
 section: "1"
@@ -10,7 +9,9 @@ description: "linux-boot-prober — Determine boot characteristics of a specifie
 
 <h2>NAME</h2>
 <p> linux-boot-prober &#8212; Determine boot characteristics of a specified device.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>linux-boot-prober</code> <i>&lt;partition&gt;</i></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>linux-boot-prober</code> utility will try to work out how to boot the linux root partition specified by <i>&lt;partition&gt;</i>. If successful, it will outoput one or more lines of the form: </p>
 <p> &lt;root partition&gt;:&lt;boot partition&gt;:&lt;label&gt;:&lt;kernel path&gt;:&lt;initrd path&gt;:&lt;kernel parameters&gt; </p>
 <p> For example, for a system with a kernel at <i>/boot/vmlinuz</i> and an initramfs at <i>/boot/initrd.gz</i>, and with <i>/</i> on <i>/dev/sda2</i> and <i>/boot</i> on <i>/dev/sda1</i>, the command &quot;linux-boot-prober /dev/sda1&quot; will display: </p>

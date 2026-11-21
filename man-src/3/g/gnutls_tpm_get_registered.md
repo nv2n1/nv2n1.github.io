@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_tpm_get_registered(3)"
 name: "gnutls_tpm_get_registered"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_tpm_get_registered – API function"
 
 <h2>NAME</h2>
 <p> gnutls_tpm_get_registered &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/tpm.h&gt;</code> </p>
 <p> <code>int gnutls_tpm_get_registered(gnutls_tpm_key_list_t * </code><i>list</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_tpm_key_list_t * list</dt>
 <dd> a list to store the keys</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will get a list of stored keys in the TPM. The uuid of those keys</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

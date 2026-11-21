@@ -1,5 +1,4 @@
 ---
-
 title: "mtrace(1)"
 name: "mtrace"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mtrace/"
 description: "mtrace – interpret the malloc trace log"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mtrace &#8211; interpret the malloc trace log </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mtrace</code> [<i>option</i>]&#8230; [<i>binary</i>] <i>mtracedata</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>mtrace</code> is a Perl script used to interpret and provide human readable output of the trace log contained in the file <i>mtracedata</i>, whose contents were produced by <code><a href="/docs/linux/man/3-mtrace/">mtrace</a></code>(3). If <i>binary</i> is provided, the output of <code>mtrace</code> also contains the source file name with line number information for problem locations (assuming that <i>binary</i> was compiled with debugging information). </p>
 <p> For more information about the <code><a href="/docs/linux/man/3-mtrace/">mtrace</a></code>(3) function and <code>mtrace</code> script usage, see <code><a href="/docs/linux/man/3-mtrace/">mtrace</a></code>(3).</p>
 <h2>OPTIONS</h2>

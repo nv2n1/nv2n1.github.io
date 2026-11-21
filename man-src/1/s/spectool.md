@@ -1,5 +1,4 @@
 ---
-
 title: "spectool(1)"
 name: "spectool"
 section: "1"
@@ -10,7 +9,9 @@ description: "spectool – manual page for spectool v1.0.10rpmdev1"
 
 <h2>NAME</h2>
 <p> spectool &#8211; manual page for spectool v1.0.10rpmdev1</p>
+<h2>SYNOPSIS</h2>
 <p> <code>spectool</code> [<i>&lt;options&gt;</i>] <i>&lt;specfile&gt;</i></p>
+<h2>DESCRIPTION</h2>
 <p> Spectool is a tool to expand and download sources and patches from specfiles. </p>
 <p> If you experience problems with specific specfiles, try to run</p>
 <dl>

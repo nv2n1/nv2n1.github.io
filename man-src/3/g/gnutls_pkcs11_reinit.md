@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pkcs11_reinit(3)"
 name: "gnutls_pkcs11_reinit"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_pkcs11_reinit – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs11_reinit &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs11.h&gt;</code> </p>
 <p> <code>int gnutls_pkcs11_reinit( </code><i>void</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt> void</dt>
 <dd></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will reinitialize the PKCS 11 subsystem in gnutls. This is required by PKCS 11 when an application uses <code>fork()</code>. The reinitialization function must be called on the child. </p>
 <p> Note that since GnuTLS 3.3.0, the reinitialization of the PKCS <code>11</code> subsystem occurs automatically after fork.</p>
 <h2>RETURNS</h2>

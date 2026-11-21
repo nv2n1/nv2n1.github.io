@@ -1,5 +1,4 @@
 ---
-
 title: "mlx5dv_dump(3)"
 name: "mlx5dv_dump"
 section: "3"
@@ -7,13 +6,20 @@ letter: "m"
 url: "/docs/linux/man/3-mlx5dv_dump/"
 ---
 
-mlx5dv_dump_dr_domain - Dump DR Domain 
+<h2 class="name">NAME</h2>
+ 
+
+ 
+
+ mlx5dv_dump_dr_domain - Dump DR Domain 
 
  mlx5dv_dump_dr_table - Dump DR Table 
 
  mlx5dv_dump_dr_matcher - Dump DR Matcher 
 
  mlx5dv_dump_dr_rule - Dump DR Rule 
+
+<h2>SYNOPSIS</h2>
 
 <dl>
 <dt>
@@ -25,7 +31,11 @@ int mlx5dv_dump_dr_matcher(FILE *fout, struct mlx5dv_dr_matcher *matcher);
 int mlx5dv_dump_dr_rule(FILE *fout, struct mlx5dv_dr_rule *rule);
 </code></pre></dd></dl>
 
-The Dump API (mlx5dv_dump_*) allows the dumping of the existing rdma-core resources to the provided file. The output file format is vendor specific. 
+<h2>DESCRIPTION</h2>
+
+ 
+
+ The Dump API (mlx5dv_dump_*) allows the dumping of the existing rdma-core resources to the provided file. The output file format is vendor specific. 
 
  mlx5dv_dump_dr_domain() dumps a DR Domain object properties to a specified file. 
 

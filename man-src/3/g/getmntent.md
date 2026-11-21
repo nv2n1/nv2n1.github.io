@@ -1,5 +1,4 @@
 ---
-
 title: "getmntent(3)"
 name: "getmntent"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-getmntent/"
 description: "getmntent, setmntent, addmntent, endmntent, hasmntopt, getmntent_r – get filesystem descriptor file entry"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getmntent, setmntent, addmntent, endmntent, hasmntopt, getmntent_r &#8211; get filesystem descriptor file entry </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;mntent.h&gt;
 #include &lt;stdio.h&gt;
@@ -27,6 +29,7 @@ struct mntent *getmntent_r(FILE *streamp, struct mntent *mntbuf,
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</p>
+<h2>DESCRIPTION</h2>
 <p> These routines are used to access the filesystem description file <i>/etc/fstab</i> and the mounted filesystem description file <i>/etc/mtab</i>. </p>
 <p> The <code>setmntent</code>() function opens the filesystem description file <i>filename</i> and returns a file pointer which can be used by <code>getmntent</code>(). The argument <i>type</i> is the type of access required and can take the same values as the <i>mode</i> argument of <code><a href="/docs/linux/man/3-fopen/">fopen</a></code>(3). The returned stream should be closed using <code>endmntent</code>() rather than <code><a href="/docs/linux/man/3-fclose/">fclose</a></code>(3). </p>
 <p> The <code>getmntent</code>() function reads the next line of the filesystem description file from <i>stream</i> and returns a pointer to a structure containing the broken out fields from a line in the file. The pointer points to a static area of memory which is overwritten by subsequent calls to <code>getmntent</code>(). </p>

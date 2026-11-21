@@ -1,5 +1,4 @@
 ---
-
 title: "dynamics(3)"
 name: "dynamics"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dynamics/"
 description: "QuantLib::OneFactorModel – Single-factor short-rate model abstract class."
 ---
 
+<h2 class="name">NAME</h2>
+<p> QuantLib::OneFactorModel &#8211; Single-factor short-rate model abstract class. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/models/shortrate/onefactormodel.hpp&gt; </p>
 <p> Inherits <code>QuantLib::ShortRateModel</code>. </p>
 <p> Inherited by <code>BlackKarasinski</code>, and <code>OneFactorAffineModel</code>. </p>

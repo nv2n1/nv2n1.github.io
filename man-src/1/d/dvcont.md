@@ -1,5 +1,4 @@
 ---
-
 title: "dvcont(1)"
 name: "dvcont"
 section: "1"
@@ -10,7 +9,9 @@ description: "dvcont – send control commands to DV cameras"
 
 <h2>NAME</h2>
 <p> dvcont &#8211; send control commands to DV cameras</p>
+<h2>SYNOPSIS</h2>
 <p> <code>dvcont</code> <i>&lt;command1&gt; </i><code>[ </code><i>&lt;command2&gt; </i>&#8230; <code>]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>dvcont</code> is a command line tool to send control commands via an IEEE1394 link to a device that implements the AV/C specifications by the 1394 Trade Association. Or for the non-techies: <code>dvcont</code> lets you remote control your DV camera via a Firewire cable. The following <i>command</i>s are understood:</p>
 <dl>
 <dt><code>dev </code><i>&lt;number&gt;</i></dt>

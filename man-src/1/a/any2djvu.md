@@ -1,5 +1,4 @@
 ---
-
 title: "any2djvu(1)"
 name: "any2djvu"
 section: "1"
@@ -10,7 +9,9 @@ description: "any2djvu – Convert .ps/.ps.gz/.pdf to .djvu"
 
 <h2>NAME</h2>
 <p> any2djvu &#8211; Convert .ps/.ps.gz/.pdf to .djvu </p>
+<h2>SYNOPSIS</h2>
 <p> <code>any2djvu</code> <i>url {filename(s)}</i></p>
+<h2>DESCRIPTION</h2>
 <p> Converts files from .ps/.ps.gz/.pdf to .djvu by running them through a web server willing to perform this task. </p>
 <p> Invoke with -h switch for usage information.</p>
 <h2>ENVIRONMENT</h2>

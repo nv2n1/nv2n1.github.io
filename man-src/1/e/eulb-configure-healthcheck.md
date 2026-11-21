@@ -1,5 +1,4 @@
 ---
-
 title: "eulb-configure-healthcheck(1)"
 name: "eulb-configure-healthcheck"
 section: "1"
@@ -10,10 +9,12 @@ description: "eulb-configure-healthcheck – Configure health checking for insta
 
 <h2>NAME</h2>
 <p> eulb-configure-healthcheck &#8211; Configure health checking for instance registerd with a load balancer</p>
+<h2>SYNOPSIS</h2>
 <p> eulb-configure-healthcheck <code>&#8211;healthy-threshold</code> COUNT <code>&#8211;interval</code> SECONDS</p>
 <dl>
 <dt><code>-t</code> PROTOCOL:PORT[/PATH] <code>&#8211;timeout</code> SECONDS</dt>
 <dd> <code>&#8211;unhealthy-threshold</code> COUNT [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ELB</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Configure health checking for instance registerd with a load balancer</p>
 <h3>positional arguments:</h3>
 <dl>

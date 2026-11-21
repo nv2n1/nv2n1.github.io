@@ -1,5 +1,4 @@
 ---
-
 title: "mwaw2csv(1)"
 name: "mwaw2csv"
 section: "1"
@@ -10,6 +9,7 @@ description: "mwaw2csv – convert Mac spreadsheet into CSV"
 
 <h2>NAME</h2>
 <p> mwaw2csv &#8211; convert Mac spreadsheet into CSV</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mwaw2csv</code> [<i>OPTION</i>] <i>&lt;Mac Spreadsheet Document&gt;</i></p>
 <h2>OPTIONS</h2>
 <dl>

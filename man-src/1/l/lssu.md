@@ -1,5 +1,4 @@
 ---
-
 title: "lssu(1)"
 name: "lssu"
 section: "1"
@@ -10,7 +9,9 @@ description: "lssu – list usage state of NILFS2 segments"
 
 <h2>NAME</h2>
 <p> lssu &#8211; list usage state of NILFS2 segments</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lssu</code> [<i>options</i>] [<i>device</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>lssu</code> is a utility for displaying usage state of NILFS2 segments in <i>device</i>, where a segment is contiguous lump of disk blocks and an allocation unit of NILFS2 disk space. When <i>device</i> is omitted, <i>/proc/mounts</i> is examined to find a NILFS2 file system. </p>
 <p> This command will fail if the <i>device</i> has no active mounts of a NILFS2 file system.</p>
 <h2>OPTIONS</h2>

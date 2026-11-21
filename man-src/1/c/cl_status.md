@@ -1,5 +1,4 @@
 ---
-
 title: "cl_status(1)"
 name: "cl_status"
 section: "1"
@@ -10,7 +9,9 @@ description: "cl_status – Check Status of the High-Availability Linux (Linux-H
 
 <h2>NAME</h2>
 <p> cl_status &#8211; Check Status of the High-Availability Linux (Linux-HA) Subsystem</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cl_status</code> &lt;sub-command&gt;<i>[&lt;options&gt;] [&lt;parameters&gt;]</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>cl_status</code> is used to check the status of the High-Availability Linux Subsystem </p>
 <h2>SUB-COMMANDS</h2>
 <dl>

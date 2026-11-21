@@ -1,5 +1,4 @@
 ---
-
 title: "find2perl(1)"
 name: "find2perl"
 section: "1"
@@ -7,13 +6,20 @@ letter: "f"
 url: "/docs/linux/man/1-find2perl/"
 ---
 
-find2perl - translate find command lines to Perl code 
+<h2 class="name">NAME</h2>
+ 
 
-<pre><code>
+ find2perl - translate find command lines to Perl code 
+
+<h2>SYNOPSIS</h2>
+
+ <pre><code>
 find2perl[paths][predicates] | perl
 </code></pre>
 
-find2perl is a little translator to convert find command lines to equivalent Perl code. The resulting code is typically faster than running find itself. 
+<h2>DESCRIPTION</h2>
+
+ find2perl is a little translator to convert find command lines to equivalent Perl code. The resulting code is typically faster than running find itself. 
 
  ``paths'' are a set of paths where find2perl will start its searches and ``predicates'' are taken from the following list.
 <dl>

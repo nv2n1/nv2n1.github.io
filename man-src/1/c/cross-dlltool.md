@@ -1,5 +1,4 @@
 ---
-
 title: "cross-dlltool(1)"
 name: "cross-dlltool"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-cross-dlltool/"
 description: "dlltool – Create files needed to build and use DLLs."
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlltool &#8211; Create files needed to build and use DLLs. </p>
+<h2>SYNOPSIS</h2>
 <p> dlltool [<code>-d</code>|<code>&#8211;input-def</code> <i>def-file-name</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>-b</code>|<code>&#8211;base-file</code>&nbsp;<wbr><i>base-file-name</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>-e</code>|<code>&#8211;output-exp</code>&nbsp;<wbr><i>exports-file-name</i>]<br />
@@ -32,6 +34,7 @@ description: "dlltool – Create files needed to build and use DLLs."
 &nbsp;<wbr>&nbsp;<wbr>[<code>-h</code>|<code>&#8211;help</code>]&nbsp;<wbr>[<code>-V</code>|<code>&#8211;version</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;no-leading-underscore</code>]&nbsp;<wbr>[<code>&#8211;leading-underscore</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[object-file &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>dlltool</code> reads its inputs, which can come from the <code>-d</code> and <code>-b</code> options as well as object files specified on the command line. It then processes these inputs and if the <code>-e</code> option has been specified it creates a exports file. If the <code>-l</code> option has been specified it creates a library file and if the <code>-z</code> option has been specified it creates a def file. Any or all of the <code>-e</code>, <code>-l</code> and <code>-z</code> options can be present in one invocation of dlltool. </p>
 <p> When creating a <font SIZE="-1">DLL,</font> along with the source for the <font SIZE="-1">DLL,</font> it is necessary to have three other files. <code>dlltool</code> can help with the creation of these files. </p>
 <p> The first file is a <i>.def</i> file which specifies which functions are exported from the <font SIZE="-1">DLL,</font> which functions the <font SIZE="-1">DLL</font> imports, and so on. This is a text file and can be created by hand, or <code>dlltool</code> can be used to create it using the <code>-z</code> option. In this case <code>dlltool</code> will scan the object files specified on its command line looking for those functions which have been specially marked as being exported and put entries for them in the <i>.def</i> file it creates. </p>

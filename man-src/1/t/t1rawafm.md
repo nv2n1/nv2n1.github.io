@@ -1,5 +1,4 @@
 ---
-
 title: "t1rawafm(1)"
 name: "t1rawafm"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-t1rawafm/"
 description: "t1rawafm – produce raw AFM metrics from a PostScript Type 1 font"
 ---
 
+<h2 class="name">NAME</h2>
+<p> t1rawafm &#8211; produce raw AFM metrics from a PostScript Type 1 font </p>
+<h2>SYNOPSIS</h2>
 <p> <code>t1rawafm</code> [OPTIONS&#8230;] [<i>font</i> [<i>outputfile</i>]]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>T1rawafm</code> generates an AFM file with the information available in a PostScript Type~1 font. The AFM file will lack kerns, ligature information, and composite characters, but is otherwise usable. The AFM file is written to the standard output (but see the <code>&#8211;output</code> option). If no input font file is supplied, <code>t1rawafm</code> reads a PFA or PFB font from the standard input.</p>
 <h2>OPTIONS</h2>
 <dl>

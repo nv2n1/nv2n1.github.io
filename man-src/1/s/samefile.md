@@ -1,5 +1,4 @@
 ---
-
 title: "samefile(1)"
 name: "samefile"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-samefile/"
 description: "samefile – find identical files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> samefile &#8211; find identical files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>samefile [-g size] [-l | -r] [-s sep] [-0aiqVvx]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>samefile</code> reads a list of filenames (one filename per line) from stdin. For each filename pair with identical contents, a line consisting of six fields is output: The size in bytes, two filenames, the character &#8220;=&#8221; if the two files are on the same device, &#8220;X&#8221; otherwise, and the link counts of the two files. The output is sorted in reverse order by size as the primary key and the filenames as the secondary key.</p>
 <h2>OPTIONS</h2>
 <dl>

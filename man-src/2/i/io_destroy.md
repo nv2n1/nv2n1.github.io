@@ -1,5 +1,4 @@
 ---
-
 title: "io_destroy(2)"
 name: "io_destroy"
 section: "2"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/2-io_destroy/"
 description: "io_destroy – destroy an asynchronous I/O context"
 ---
 
+<h2 class="name">NAME</h2>
+<p> io_destroy &#8211; destroy an asynchronous I/O context </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/aio_abi.h&gt; /* Defines needed types */
 int io_destroy(aio_context_t ctx_id);
 </code></pre>
 <p> <i>Note</i>: There is no glibc wrapper for this system call; see NOTES.</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Note</i>: this page describes the raw Linux system call interface. The wrapper function provided by <i>libaio</i> uses a different type for the <i>ctx_id</i> argument. See NOTES. </p>
 <p> The <code>io_destroy</code>() system call will attempt to cancel all outstanding asynchronous I/O operations against <i>ctx_id</i>, will block on the completion of all operations that could not be canceled, and will destroy the <i>ctx_id</i>.</p>
 <h2>RETURN VALUE</h2>

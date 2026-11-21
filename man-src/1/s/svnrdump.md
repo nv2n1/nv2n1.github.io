@@ -1,5 +1,4 @@
 ---
-
 title: "svnrdump(1)"
 name: "svnrdump"
 section: "1"
@@ -10,6 +9,7 @@ description: "svnrdump – Subversion remote repository dumper and loader"
 
 <h2>NAME</h2>
 <p> svnrdump &#8211; Subversion remote repository dumper and loader</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>svnrdump</code> <i>command</i> <i>url</i> [<i>options</i>] [<i>args</i>]</dt>
 <dd></dd></dl>

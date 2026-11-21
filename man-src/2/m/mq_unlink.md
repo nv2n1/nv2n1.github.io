@@ -1,5 +1,4 @@
 ---
-
 title: "mq_unlink(2)"
 name: "mq_unlink"
 section: "2"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/2-mq_unlink/"
 description: "mq_unlink – remove a message queue"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mq_unlink &#8211; remove a message queue </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;mqueue.h&gt;
 int mq_unlink(const char *name);
 </code></pre>
 <p> Link with <i>-lrt</i>.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>mq_unlink</code>() removes the specified message queue <i>name</i>. The message queue name is removed immediately. The queue itself is destroyed once any other processes that have the queue open close their descriptors referring to the queue.</p>
 <h2>RETURN VALUE</h2>
 <p> On success <code>mq_unlink</code>() returns 0; on error, -1 is returned, with <i>errno</i> set to indicate the error.</p>

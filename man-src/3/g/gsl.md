@@ -1,5 +1,4 @@
 ---
-
 title: "gsl(3)"
 name: "gsl"
 section: "3"
@@ -10,7 +9,9 @@ description: "gsl – GNU Scientific Library"
 
 <h2>NAME</h2>
 <p> gsl &#8211; GNU Scientific Library</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;gsl/&#8230;&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> The GNU Scientific Library (GSL) is a collection of routines for numerical computing. The routines are written from scratch by the GSL team in C, and present a modern Applications Programming Interface (API) for C programmers, allowing wrappers to be written for very high level languages. </p>
 <p> The library covers the following areas,</p>
 <dl>

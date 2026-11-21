@@ -1,5 +1,4 @@
 ---
-
 title: "func-inventory(1)"
 name: "func-inventory"
 section: "1"
@@ -11,9 +10,13 @@ url: "/docs/linux/man/1-func-inventory/"
 
  func-inventory -- Takes inventory of data from func minions, and stores them in git.
 
-func-inventory [--verbose] [--server-spec glob] [--methods list] [--modules list] [--tree path] [--no-git]
+<h2>SYNOPSIS</h2>
 
-func-inventory runs against func-minions to gather information, and stores this information on the filesystem, in a tree arranged by hostname, module name, and method name. 
+ func-inventory [--verbose] [--server-spec glob] [--methods list] [--modules list] [--tree path] [--no-git]
+
+<h2>DESCRIPTION</h2>
+
+ func-inventory runs against func-minions to gather information, and stores this information on the filesystem, in a tree arranged by hostname, module name, and method name. 
 
  After each update, differences are commited to version control (using git), where they can be examined with tools such as ``git log'' and ``gitk''.
 

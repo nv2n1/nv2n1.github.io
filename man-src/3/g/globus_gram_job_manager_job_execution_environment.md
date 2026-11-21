@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_gram_job_manager_job_execution_environment/"
 description: "globus_gram_job_manager_job_execution_environment – Job Execution Environment"
 ---
 
+<h2 class="name">NAME</h2>
+<p> globus_gram_job_manager_job_execution_environment &#8211; Job Execution Environment </p>
 <h2>Environment Variables</h2>
 <p> The GRAM Job Manager provides a minimal environment for user&#8217;s jobs. The following environment variables will be set by the job manager. Variables marked with an asterisk (*) will only be set if a related job manager configuration option or RSL attribute is provided. Local schedulers may set additional environment variables. </p>
 <p> <code>HOME</code></p>

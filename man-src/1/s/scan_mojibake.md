@@ -1,5 +1,4 @@
 ---
-
 title: "scan_mojibake(1)"
 name: "scan_mojibake"
 section: "1"
@@ -7,17 +6,24 @@ letter: "s"
 url: "/docs/linux/man/1-scan_mojibake/"
 ---
 
-scan_mojibake - scan Perl source and report bad character encoding 
+<h2 class="name">NAME</h2>
+ 
+
+ scan_mojibake - scan Perl source and report bad character encoding 
 
 <h2>VERSION</h2>
 
  version 0.9
 
-<pre>
+<h2>SYNOPSIS</h2>
+
+ <pre>
  scan_mojibake [FILES|DIRS]
 </pre>
 
-Standalone <font SIZE="-1">CLI</font> wrapper for the Test::Mojibake module. 
+<h2>DESCRIPTION</h2>
+
+ Standalone <font SIZE="-1">CLI</font> wrapper for the Test::Mojibake module. 
 
  Does exactly the same as: 
 

@@ -1,5 +1,4 @@
 ---
-
 title: "nvme-error-log(1)"
 name: "nvme-error-log"
 section: "1"
@@ -7,15 +6,26 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-error-log/"
 ---
 
-nvme-error-log - Send NVME Error log page request, return result and log 
+<h2 class="name">NAME</h2>
+ 
 
-<pre><code>
+ nvme-error-log - Send NVME Error log page request, return result and log 
+
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <pre><code>
 nvme error - log&lt;device&gt;[--namespace - id = &lt;nsid&gt; | -n&lt;nsid&gt;]
                         [--log - entries = &lt;entries&gt; | -e&lt;entries&gt;]
                         [--raw - binary | -b]
 </code></pre>
 
-Retrieves NVMe Error log page from an NVMe device and provides the retuned structure. 
+<h2>DESCRIPTION</h2>
+
+ 
+
+ Retrieves NVMe Error log page from an NVMe device and provides the retuned structure. 
 
  The &lt;device&gt; parameter is mandatory and may be either the NVMe character device (ex: /dev/nvme0), or a namespace block device (ex: /dev/nvme0n1). 
 

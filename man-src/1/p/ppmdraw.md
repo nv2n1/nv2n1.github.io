@@ -1,5 +1,4 @@
 ---
-
 title: "ppmdraw(1)"
 name: "ppmdraw"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-ppmdraw/"
 description: "ppmdraw – draw lines, text, etc on a PPM image"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ppmdraw &#8211; draw lines, text, etc on a PPM image</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ppmdraw</code> </p>
 <p> { <code>-script=</code><i>script</i> | <code>-scriptfile=</code><i>filename</i> } [<code>-verbose</code>] </p>
 <p> [<i>ppmfile</i>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one to designate an option. You may use either white space or an equals sign between an option name and its value. </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>ppmdraw</code> draws lines, shapes, text, etc. on a PPM image. It is essentially an easy-to-program front end to <code>libnetpbm</code>&#8216;s &#8216;ppmd&#8217; subroutines. It lets you create a human-friendly script to describe the drawing rather than write a C program. </p>
 <p> You supply drawing instructions with a script, which you supply either in a file named by a <code>-scriptfile</code> option or as the value of a <code>-script</code> option. Here is an example script: </p>

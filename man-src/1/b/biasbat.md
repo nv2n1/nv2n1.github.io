@@ -1,5 +1,4 @@
 ---
-
 title: "biasbat(1)"
 name: "biasbat"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-biasbat/"
 description: "biasbat – CCD bias-frame correction"
 ---
 
+<h2 class="name">NAME</h2>
+<p> biasbat &#8211; CCD bias-frame correction</p>
+<h2>SYNOPSIS</h2>
 <p> <code>biasbat </code><i>[options] </i><code>bias=</code><i>file source_file &#8230;</i> </p>
+<h2>DESCRIPTION</h2>
 <p> The biasbat program applies bias correction to a set of source frames. It means, that it subtracts the bias frame from source files and the results writes to the output file. </p>
 <p> The source frames and also bias frame must be in FITS format and of same dimensions. The output file is in FITS format too. </p>
 <h2>OPTIONS</h2>

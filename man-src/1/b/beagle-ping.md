@@ -1,5 +1,4 @@
 ---
-
 title: "beagle-ping(1)"
 name: "beagle-ping"
 section: "1"
@@ -10,7 +9,9 @@ description: "beagle-ping"
 
 <h2>NAME</h2>
 <p> beagle-ping</p>
+<h2>SYNOPSIS</h2>
 <p> <code>beagle-ping</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>beagle-ping</code> prints the version number of the beagle-daemon. It is identical to <code>beagle-info</code> <code>&#8211;daemon-version</code> </p>
 <h2>AUTHOR</h2>
 <p> Novell, Inc.</p>

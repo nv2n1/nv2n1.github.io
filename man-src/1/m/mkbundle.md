@@ -1,5 +1,4 @@
 ---
-
 title: "mkbundle(1)"
 name: "mkbundle"
 section: "1"
@@ -10,7 +9,9 @@ description: "mkbundle, mkbundle2 – Creates a bundled executable."
 
 <h2>NAME</h2>
 <p> mkbundle, mkbundle2 &#8211; Creates a bundled executable.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mkbundle [options] assembly1 [assembly2 &#8230;]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <i>mkbundle</i> generates an executable program that will contain static copies of the assemblies listed on the command line. By default only the assemblies specified in the command line will be included in the bundle. To automatically include all of the dependencies referenced, use the &quot;&#8211;deps&quot; command line option. </p>
 <p> Use <i>mkbundleFP when you want the startup runtime to load the 1.0 profile, and use mkbundle2</i> when you want the startup runtime to load the 2.0 profile. </p>
 <p> For example, to create a bundle for hello world, use the following command: </p>

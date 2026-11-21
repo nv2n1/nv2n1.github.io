@@ -1,5 +1,4 @@
 ---
-
 title: "syscalls(2)"
 name: "syscalls"
 section: "2"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/2-syscalls/"
 description: "syscalls – Linux system calls"
 ---
 
+<h2 class="name">NAME</h2>
+<p> syscalls &#8211; Linux system calls </p>
+<h2>SYNOPSIS</h2>
 <p> Linux system calls.</p>
+<h2>DESCRIPTION</h2>
 <p> The system call is the fundamental interface between an application and the Linux kernel.</p>
 <h3>System calls and library wrapper functions</h3>
 <p> System calls are generally not invoked directly, but rather via wrapper functions in glibc (or perhaps some other library). For details of direct invocation of a system call, see <code><a href="/docs/linux/man/2-intro/">intro</a></code>(2). Often, but not always, the name of the wrapper function is the same as the name of the system call that it invokes. For example, glibc contains a function <code>chdir</code>() which invokes the underlying &quot;chdir&quot; system call. </p>

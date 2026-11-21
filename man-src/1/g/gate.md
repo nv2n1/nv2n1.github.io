@@ -1,5 +1,4 @@
 ---
-
 title: "gate(1)"
 name: "gate"
 section: "1"
@@ -10,7 +9,9 @@ description: "gate – generate Ada applications from a GLADE XML file"
 
 <h2>NAME</h2>
 <p> gate &#8211; generate Ada applications from a GLADE XML file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gate</code> <i>file</i></p>
+<h2>DESCRIPTION</h2>
 <p> <i>gate</i> is the static version of the program transforming a file produced by <i><a href="/docs/linux/man/1-glade/">glade</a>(1)</i>, the Gtk GUI builder, into an Ada program. It will generate a set of Ada files that, when compiled, will recreate the interface you just designed in <i><a href="/docs/linux/man/1-glade/">glade</a>(1)</i>. The most important file created by Gate is called <i>callback_</i><code>&lt;project_name&gt;</code><i>.adb</i> and contains stubs for all the callbacks you declared in Glade. </p>
 <p> Note that you can easily go back to Glade any time, modify your interface, and have <i>gate</i> regenerate a set of files. All your modifications will be kept in the new files. For that, <i>gate</i> creates a directory <code>.gate</code> in the current directory. Please do not delete it if you want <i>gate</i> to be able to keep your changes from one version to the next. Also note that to be able to keep track of your modifications, gate relies on patch and diff being available on your system. If you don&#8217;t have a working set of diff/patch, configure will simply replace them by null operations.</p>
 <h2>SEE ALSO</h2>

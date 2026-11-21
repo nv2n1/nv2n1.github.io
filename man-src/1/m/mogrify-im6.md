@@ -1,5 +1,4 @@
 ---
-
 title: "mogrify-im6(1)"
 name: "mogrify-im6"
 section: "1"
@@ -8,13 +7,17 @@ url: "/docs/linux/man/1-mogrify-im6/"
 description: "mogrify – resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more. Mogrify overwrites the original image file, whereas,"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mogrify &#8211; resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more. Mogrify overwrites the original image file, whereas, </p>
 <p> <a href="/docs/linux/man/1-convert-im6-q16/">convert-im6.q16</a>(1) writes to a different image file.</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>mogrify-im6.q16</code> [<i>options</i>] <i>input-file</i></dt>
 <dd></dd></dl>
 <h2>OVERVIEW</h2>
 <p> The <code>mogrify-im6.q16</code> program is a member of the ImageMagick-ims6.q16(1) suite of tools. Use it to resize an image, blur, crop, despeckle, dither, draw on, flip, join, re-sample, and much more. This tool is similar to <a href="/docs/linux/man/1-convert-im6-q16/">convert-im6.q16</a>(1) except the original image file is overwritten with any changes you request. </p>
 <p> For more information about the mogrify command, point your browser to file:///usr/share/doc/imagemagick-6-common/html/www/mogrify.html (on debian system you may install the imagemagick-6 package) or <a rel="nofollow" href="https://www.imagemagick.org/script/mogrify.php.">https://www.imagemagick.org/script/mogrify.php.</a></p>
+<h2>DESCRIPTION</h2>
 <p> Image Settings:<br />
 &nbsp;<wbr>&nbsp;-adjoin&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;join images into a single multi-image file<br />
 &nbsp;<wbr>&nbsp;-affine matrix&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;affine transform matrix<br />

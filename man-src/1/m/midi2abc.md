@@ -1,5 +1,4 @@
 ---
-
 title: "midi2abc(1)"
 name: "midi2abc"
 section: "1"
@@ -10,7 +9,9 @@ description: "midi2abc – program to convert MIDI format files to abc notation"
 
 <h2>NAME</h2>
 <p> <code>midi2abc</code> &#8211; program to convert MIDI format files to abc notation</p>
+<h2>SYNOPSIS</h2>
 <p> midi2abc -f <i>infile</i> [-xa] [-ga] [-a <i>acbeats</i>] [-m <i>time signature</i>] [-ppu parts per unit] [-aul denominator of unit length] [-gu] [-b <i>bars</i>] [-Q <i>tempo</i>] [-u pulses] [-k <i>key</i>] [-c <i>channel</i>] [-obpl] [-bpl bars] [-bps bars] [-o <i>filename</i>] [-s] [-sr units] [-sum] [-nt] [-splitbars] [-splitvoices] [-midigram] [-mftext] [-nogr] [-title string] [-origin string]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>midi2abc</i> takes a MIDI format file and converts it to something as close as possible to abc text format. The user then has to add text fields not present in the MIDI header and possibly tidy up the abc note output. </p>
 <p> The output of midi2abc is printed to the screen. To save it to a file, use the redirection operator, (e.g. <i>midi2abc -f file.mid &gt; file.abc</i>) or specify the output file using the -o option. </p>
 <p> Use only one or none of the options -u -gu, -b and -Q. Midi2abc normally converts the MIDI time units into quantum units normally corresponding to the abc 1/16th note or 1/32nd note. If none of these is present, the program will use the PPQN information in the MIDI header to compute the suitable conversion factor. For most MIDI files on the web, it is recommended to rely on the MIDI header information and not use any of the options other than the formatting options. </p>

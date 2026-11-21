@@ -1,5 +1,4 @@
 ---
-
 title: "guilt-fork(1)"
 name: "guilt-fork"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-guilt-fork/"
 description: "guilt-fork – Fork the topmost applied patch"
 ---
 
+<h2 class="name">NAME</h2>
+<p> guilt-fork &#8211; Fork the topmost applied patch </p>
+<h2>SYNOPSIS</h2>
 <p> <i>guilt-fork</i> [&lt;new_name&gt;]</p>
+<h2>DESCRIPTION</h2>
 <p> Create a copy of the top most patch, and replace the entry in the series file to use this new patch file.</p>
 <h2>OPTIONS</h2>
 <p> &lt;new_name&gt;</p>

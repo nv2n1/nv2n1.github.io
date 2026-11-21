@@ -1,5 +1,4 @@
 ---
-
 title: "trace-cmd-snapshot(1)"
 name: "trace-cmd-snapshot"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-trace-cmd-snapshot/"
 description: "trace-cmd-snapshot – take, reset, free, or show a Ftrace kernel snapshot"
 ---
 
+<h2 class="name">NAME</h2>
+<p> trace-cmd-snapshot &#8211; take, reset, free, or show a Ftrace kernel snapshot </p>
+<h2>SYNOPSIS</h2>
 <p> <code>trace-cmd snapshot</code> [<i>OPTIONS</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <a href="/docs/linux/man/1-trace-cmd/">trace-cmd</a>(1) snapshot controls or displays the Ftrace Linux kernel snapshot feature (if the kernel supports it). This is useful to &quot;freeze&quot; an instance of a live trace but without stopping the trace. </p>
 <dl>
 <dt>

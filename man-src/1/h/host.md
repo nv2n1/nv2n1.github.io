@@ -1,5 +1,4 @@
 ---
-
 title: "host(1)"
 name: "host"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-host/"
 description: "host – DNS lookup utility"
 ---
 
+<h2 class="name">NAME</h2>
+<p> host &#8211; DNS lookup utility </p>
+<h2>SYNOPSIS</h2>
 <p> <code>host</code> [<code>-aACdlnrsTUwv</code>] [<code>-c</code> class] [<code>-N</code> ndots] [<code>-p</code> port] [<code>-R</code> number] [<code>-t</code> type] [<code>-W</code> wait] [<code>-m</code> flag] [ [<code>-4</code>] | [<code>-6</code>] ] [<code>-v</code>] [<code>-V</code>] {name} [server]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>host</code> is a simple utility for performing DNS lookups. It is normally used to convert names to IP addresses and vice versa. When no arguments or options are given, <code>host</code> prints a short summary of its command-line arguments and options. </p>
 <p> <code>name</code> is the domain name that is to be looked up. It can also be a dotted-decimal IPv4 address or a colon-delimited IPv6 address, in which case <code>host</code> by default performs a reverse lookup for that address. <code>server</code> is an optional argument which is either the name or IP address of the name server that <code>host</code> should query instead of the server or servers listed in <code>/etc/resolv.conf</code>.</p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "perlsec(1)"
 name: "perlsec"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-perlsec/"
 description: "perlsec – Perl security"
 ---
 
+<h2 class="name">NAME</h2>
+<p> perlsec &#8211; Perl security </p>
+<h2>DESCRIPTION</h2>
 <p> Perl is designed to make it easy to program securely even when running with extra privileges, like setuid or setgid programs. Unlike most command line shells, which are based on multiple substitution passes on each line of the script, Perl uses a more conventional evaluation scheme with fewer hidden snags. Additionally, because the language has more builtin functionality, it can rely less upon external (and possibly untrustworthy) programs to accomplish its purposes.</p>
 <h2>SECURITY VULNERABILITY CONTACT INFORMATION</h2>
 <p> If you believe you have found a security vulnerability in Perl, please email the details to perl5-security-report [at] perl.org. This creates a new Request Tracker ticket in a special queue which isn&#8217;t initially publicly accessible. The email will also be copied to a closed subscription unarchived mailing list which includes all the core committers, who will be able to help assess the impact of issues, figure out a resolution, and help co-ordinate the release of patches to mitigate or fix the problem across all platforms on which Perl is supported. Please only use this address for security issues in the Perl core, not for modules independently distributed on <font SIZE="-1">CPAN.</font> </p>

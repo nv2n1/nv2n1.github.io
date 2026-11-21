@@ -1,5 +1,4 @@
 ---
-
 title: "qrls-ge(1)"
 name: "qrls-ge"
 section: "1"
@@ -13,6 +12,7 @@ description: "qrls – release Grid Engine jobs from previous hold states"
 <h2>SYNTAX</h2>
 <p> <code>qrls</code> [ <code>-h</code> {<code>u</code>|<code>o</code>|<code>s</code>},&#8230; ] [ <code>-help</code> ] [ <code>job/task_id_list</code> ] </p>
 <p> <code>qrls</code> [ <code>-h</code> {<code>u</code>|<code>o</code>|<code>s</code>},&#8230; ] [ <code>-help</code> ] <code>-u user_list</code></p>
+<h2>DESCRIPTION</h2>
 <p> <i>Qrls</i> provides a means for a user/operator/manager to release so called <i>holds</i> from one or more jobs pending to be scheduled for execution. As long as any type of hold is assigned to a job, the job is not eligible for scheduling. </p>
 <p> Holds can be assigned to jobs with the or the command. </p>
 <p> There are three different types of holds:</p>

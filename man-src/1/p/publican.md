@@ -1,5 +1,4 @@
 ---
-
 title: "publican(1)"
 name: "publican"
 section: "1"
@@ -7,13 +6,18 @@ letter: "p"
 url: "/docs/linux/man/1-publican/"
 ---
 
-publican - a DocBook XML publishing tool. 
+<h2 class="name">NAME</h2>
+ 
+
+ publican - a DocBook XML publishing tool. 
 
 <h2>VERSION</h2>
 
  This document describes publican version 1.0
 
-publican &lt;command options&gt; 
+<h2>SYNOPSIS</h2>
+
+ publican &lt;command options&gt; 
 
  publican &lt;action&gt; &lt;action options&gt; 
 

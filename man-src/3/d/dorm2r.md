@@ -1,5 +1,4 @@
 ---
-
 title: "dorm2r(3)"
 name: "dorm2r"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dorm2r/"
 description: "dorm2r.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dorm2r.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dorm2r</code> (SIDE, TRANS, M, N, K, A, LDA, TAU, C, LDC, WORK, INFO)<br />
  <i></i><code>DORM2R</code> multiplies a general matrix by the orthogonal matrix from a QR factorization determined by sgeqrf (unblocked algorithm).</p>

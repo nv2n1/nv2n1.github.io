@@ -1,5 +1,4 @@
 ---
-
 title: "transcode_filter(1)"
 name: "transcode_filter"
 section: "1"
@@ -10,6 +9,7 @@ description: "transcode – filter modules collection"
 
 <h2>NAME</h2>
 <p> transcode &#8211; filter modules collection</p>
+<h2>SYNOPSIS</h2>
 <p> <code>transcode -J filters [other options]</code></p>
 <h2>COPYRIGHT</h2>
 <p> <code>transcode</code> is Copyright (C) 2001-2003 by Thomas Oestreich, 2003-2004 Tilmann Bitterberg, 2004-2008 Transcode Team </p>

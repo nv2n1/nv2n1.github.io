@@ -1,5 +1,4 @@
 ---
-
 title: "gtester(1)"
 name: "gtester"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-gtester/"
 description: "gtester – test running utility"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gtester &#8211; test running utility </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gtester</code> [OPTION&#8230;] [testprogram]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>gtester</code></p>
 <dd>is a utility to run unit tests that have been written using the GLib test framework. </dd>
 <p> Since GLib 2.62, <code>gtester-report</code> is deprecated. Use TAP for reporting test results instead, and feed it to the test harness provided by your build system. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "wait3(2)"
 name: "wait3"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-wait3/"
 description: "wait3, wait4 – wait for process to change state, BSD style"
 ---
 
+<h2 class="name">NAME</h2>
+<p> wait3, wait4 &#8211; wait for process to change state, BSD style </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/resource.h&gt;
 #include &lt;sys/time.h&gt;
@@ -33,6 +35,7 @@ pid_t wait4(pid_t pid, int *wstatus, int options,
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE</p>
+<h2>DESCRIPTION</h2>
 <p> These functions are nonstandard; in new programs, the use of <code><a href="/docs/linux/man/2-waitpid/">waitpid</a></code>(2) or <code><a href="/docs/linux/man/2-waitid/">waitid</a></code>(2) is preferable. </p>
 <p> The <code>wait3</code>() and <code>wait4</code>() system calls are similar to <code><a href="/docs/linux/man/2-waitpid/">waitpid</a></code>(2), but additionally return resource usage information about the child in the structure pointed to by <i>rusage</i>. </p>
 <p> Other than the use of the <i>rusage</i> argument, the following <code>wait3</code>() call: </p>

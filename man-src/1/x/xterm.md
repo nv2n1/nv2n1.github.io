@@ -1,5 +1,4 @@
 ---
-
 title: "xterm(1)"
 name: "xterm"
 section: "1"
@@ -7,8 +6,11 @@ letter: "x"
 url: "/docs/linux/man/1-xterm/"
 description: "xterm – terminal emulator for X"
 ---
-
+<h2 class="name">NAME</h2>
+<p> xterm - terminal emulator for X </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xterm</code> [-<i>toolkitoption</i> ...] [-<i>option</i> ...] [<i>shell</i>]  </p>
+<h2>DESCRIPTION</h2>
 <p> The <i>xterm</i> program is a terminal emulator for the X Window System. It provides DEC VT102/VT220 and selected features from higher-level terminals such as VT320/VT420/VT520 (VT <i>xxx</i>). It also provides Tektronix 4014 emulation for programs that cannot use the window system directly. If the underlying operating system supports terminal resizing capabilities (for example, the SIGWINCH signal in systems derived from 4.3BSD), <i>xterm</i> will use the facilities to notify programs running in the window whenever it is resized. </p>
 <p> The VT <i>xxx</i> and Tektronix 4014 terminals each have their own window so that you can edit text in one and look at graphics in the other at the same time. To maintain the correct aspect ratio (height/width), Tektronix graphics will be restricted to the largest box with a 4014&#8217;s aspect ratio that will fit in the window. This box is located in the upper left area of the window. </p>
 <p> Although both windows may be displayed at the same time, one of them is considered the ``active&#8217;&#8216; window for receiving keyboard input and terminal output. This is the window that contains the text cursor. The active window can be chosen through escape sequences, the <code>VT Options</code> menu in the VT <i>xxx</i> window, and the <code>Tek Options</code> menu in the 4014 window.  </p>

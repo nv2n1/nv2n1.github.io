@@ -1,5 +1,4 @@
 ---
-
 title: "ffado-bridgeco-downloader(1)"
 name: "ffado-bridgeco-downloader"
 section: "1"
@@ -10,7 +9,9 @@ description: "ffado-bridgeco-downloader – firmware download application for Br
 
 <h2>NAME</h2>
 <p> ffado-bridgeco-downloader &#8211; firmware download application for BridgeCo devices</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ffado-bridgeco-downloader [OPTION&#8230;] OPERATION</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>ffado-bridgeco-downloader</code> permits firmware updates to be made to BridgeCo (aka BeBoB) devices under Linux. <i>OPERATION</i> describes the action to be carried out. An <i>OPERATION</i> is introduced with the GUID of the device to operate on. This is followed by one of the following keywords and any arguments required by that keyword.</p>
 <dl>
 <dt><code>display</code></dt>

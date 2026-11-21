@@ -1,5 +1,4 @@
 ---
-
 title: "otr_toolkit(1)"
 name: "otr_toolkit"
 section: "1"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/1-otr_toolkit/"
 description: "otr_parse, otr_sesskeys, otr_mackey, otr_readforge, otr_modify, otr_remac – Process Off-the-Record Messaging transcripts"
 ---
 
+<h2 class="name">NAME</h2>
+<p> otr_parse, otr_sesskeys, otr_mackey, otr_readforge, otr_modify, otr_remac &#8211; Process Off-the-Record Messaging transcripts </p>
+<h2>SYNOPSIS</h2>
 <p> <code>otr_parse</code><br />
  <code>otr_sesskeys</code> <i>our_privkey their_pubkey</i><br />
  <code>otr_mackey</code> <i>aes_enc_key</i><br />
  <code>otr_readforge</code> <i>aes_enc_key [newmsg]</i><br />
  <code>otr_modify</code> <i>mackey old_text new_text offset</i><br />
  <code>otr_remac</code> <i>mackey sender_instance receiver_instance flags snd_keyid rcv_keyid pubkey counter encdata revealed_mackeys</i></p>
+<h2>DESCRIPTION</h2>
 <p> Off-the-Record (OTR) Messaging allows you to have private conversations over IM by providing:<br />
 &nbsp;<wbr>&#8211; Encryption<br />
 &#8211; No one else can read your instant messages.<br />

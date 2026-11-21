@@ -1,5 +1,4 @@
 ---
-
 title: "aa_getevent(3)"
 name: "aa_getevent"
 section: "3"
@@ -10,6 +9,7 @@ description: "aa_getevent – keyboard functions"
 
 <h2>NAME</h2>
 <p> aa_getevent &#8211; keyboard functions</p>
+<h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>
 <p> int aa_getevent<br />
  (<br />
@@ -22,6 +22,7 @@ description: "aa_getevent – keyboard functions"
 <dd> Specifies the AA-lib context to operate on.</dd>
 <dt><code>int wait</code></dt>
 <dd> 1 if you wish to wait for the even when queue is empty.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Return next event from queue. Return next even from queue. Optionally wait for even when queue is empty.</p>
 <h2>RETURNS</h2>
 <p> Next event from queue (values lower than 256 are used to report ascii values of pressed keys and higher values have special meanings) See the AA-lib texinfo documentation for more details. 0 is returned when queue is empty and wait is set to 0.</p>

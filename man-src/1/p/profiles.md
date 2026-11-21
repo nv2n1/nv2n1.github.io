@@ -1,5 +1,4 @@
 ---
-
 title: "profiles(1)"
 name: "profiles"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-profiles/"
 description: "profiles – A utility to report and change SIDs in registry files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> profiles &#8211; A utility to report and change SIDs in registry files </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt>
 </dt><dd>profiles [-v] [-c|&#8211;change-sid SID] [-n|&#8211;new-sid SID] {file}</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This tool is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> profiles is a utility that reports and changes SIDs in windows registry files. It currently only supports NT.</p>
 <h2>OPTIONS</h2>

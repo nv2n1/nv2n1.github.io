@@ -1,5 +1,4 @@
 ---
-
 title: "antlr3-printable16(3)"
 name: "antlr3-printable16"
 section: "3"
@@ -8,7 +7,10 @@ url: "/docs/linux/man/3-antlr3-printable16/"
 description: "src/antlr3string.c –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> src/antlr3string.c &#8211; </p>
 <p> Implementation of the ANTLR3 string and string factory classes.</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3string.h">antlr3string.h</a>&gt; </p>
 <h3>Functions</h3>
 <p> static <code>pANTLR3_UINT8</code> <code>addc16</code> (<code>pANTLR3_STRING</code> string, <code>ANTLR3_UINT32</code> c) </p>

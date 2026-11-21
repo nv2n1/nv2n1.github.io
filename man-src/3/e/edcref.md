@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-edcref/"
 description: "edcref – Edje Data Collection reference An Edje Data Collection, it’s a plain text file (normally identified with the .edc extension),consisting of instructions for the Edje Compiler."
 ---
 
+<h2 class="name">NAME</h2>
+<p> edcref &#8211; Edje Data Collection reference An Edje Data Collection, it&#8217;s a plain text file (normally identified with the .edc extension),consisting of instructions for the Edje Compiler. </p>
 <p> The syntax for the edje data collection files follows a simple structure of &#8216;blocks { .. }&#8217; that can contain &#8216;properties: ..&#8217;, more blocks, or both. </p>
 <p> <code>Author:</code></p>
 <dl>

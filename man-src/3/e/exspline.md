@@ -1,5 +1,4 @@
 ---
-
 title: "exspline(3)"
 name: "exspline"
 section: "3"
@@ -10,8 +9,10 @@ description: "exspline – Constructing smooth movement paths from spline curves
 
 <h2>NAME</h2>
 <p> exspline &#8211; Constructing smooth movement paths from spline curves. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>Example exspline</code></p>
+<h2>DESCRIPTION</h2>
 <p> This program demonstrates the use of spline curves to create smooth paths connecting a number of node points. This can be useful for constructing realistic motion and animations. </p>
 <p> The technique is to connect the series of guide points p1..p(n) with spline curves from p1-p2, p2-p3, etc. Each spline must pass though both of its guide points, so they must be used as the first and fourth of the spline control points. The fun bit is coming up with sensible values for the second and third spline control points, such that the spline segments will have equal gradients where they meet. I came up with the following solution: </p>
 <p> For each guide point p(n), calculate the desired tangent to the curve at that point. I took this to be the vector p(n-1) -&gt; p(n+1), which can easily be calculated with the inverse tangent function, and gives decent looking results. One implication of this is that two dummy guide points are needed at each end of the curve, which are used in the tangent calculations but not connected to the set of splines. </p>

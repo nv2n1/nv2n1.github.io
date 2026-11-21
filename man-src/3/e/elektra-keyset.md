@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-elektra-keyset/"
 description: "KeySet :: Class Methods –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> KeySet :: Class Methods &#8211; </p>
 <p> Methods to manipulate KeySets.</p>
 <h3>Functions</h3>
 <p> KeySet * <code>ksNew</code> (size_t alloc,&#8230;) </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "combine_tessdata(1)"
 name: "combine_tessdata"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-combine_tessdata/"
 description: "combine_tessdata – combine/extract/overwrite Tesseract data"
 ---
 
+<h2 class="name">NAME</h2>
+<p> combine_tessdata &#8211; combine/extract/overwrite Tesseract data </p>
+<h2>SYNOPSIS</h2>
 <p> <code>combine_tessdata</code> [<i>OPTION</i>] <i>FILE</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <a href="/docs/linux/man/1-combine_tessdata/">combine_tessdata</a>(1) is the main program to combine/extract/overwrite tessdata components in [lang].traineddata files. </p>
 <p> To combine all the individual tessdata components (unicharset, DAWGs, classifier templates, ambiguities, language configs) located at, say, /home/$USER/temp/eng.* run: </p>
 <dl>

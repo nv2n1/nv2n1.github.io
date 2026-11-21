@@ -1,5 +1,4 @@
 ---
-
 title: "rst2man(1)"
 name: "rst2man"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-rst2man/"
 description: "rst2man – generate unix manpages from reStructured text"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rst2man &#8211; generate unix manpages from reStructured text </p>
+<h2>SYNOPSIS</h2>
 <p> rst2man [options] [&lt;source&gt; [&lt;destination&gt;]]</p>
+<h2>DESCRIPTION</h2>
 <p> Generates plain unix manual documents. Reads from &lt;source&gt; (default is stdin) and writes to &lt;destination&gt; (default is stdout). See &lt;<i><a rel="nofollow" href="http://docutils.sf.net/docs/user/config.html">http://docutils.sf.net/docs/user/config.html</a></i>&gt; for the full reference.</p>
 <h2>OPTIONS</h2>
 <h3>General Docutils Options</h3>

@@ -1,5 +1,4 @@
 ---
-
 title: "libblkid(3)"
 name: "libblkid"
 section: "3"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/3-libblkid/"
 description: "libblkid – block device identification library"
 ---
 
+<h2 class="name">NAME</h2>
+<p> libblkid &#8211; block device identification library </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;blkid.h&gt;</code> </p>
 <p> <code>cc</code> <i>file.c</i> <code>-lblkid</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>libblkid</code> library is used to identify block devices (disks) as to their content (e.g. filesystem type) as well as extracting additional information such as filesystem labels/volume names, unique identifiers/serial numbers. A common use is to allow use of LABEL= and UUID= tags instead of hard-coding specific block device names into configuration files. </p>
 <p> The low-level part of the library also allows to extract information about partitions and block device topology. </p>
 <p> The high-level part of the library keeps information about block devices in a cache file and is verified to still be valid before being returned to the user (if the user has read permission on the raw block device, otherwise not). The cache file also allows unprivileged users (normally anyone other than root, or those not in the &quot;disk&quot; group) to locate devices by label/id. The standard location of the cache file can be overridden by the environment variable BLKID_FILE. </p>

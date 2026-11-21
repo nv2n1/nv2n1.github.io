@@ -1,5 +1,4 @@
 ---
-
 title: "abort(3)"
 name: "abort"
 section: "3"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/3-abort/"
 description: "abort – cause abnormal process termination"
 ---
 
+<h2 class="name">NAME</h2>
+<p> abort &#8211; cause abnormal process termination </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;
 void abort(void);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>abort</code>() function first unblocks the <code>SIGABRT</code> signal, and then raises that signal for the calling process (as though <code><a href="/docs/linux/man/3-raise/">raise</a></code>(3) was called). This results in the abnormal termination of the process unless the <code>SIGABRT</code> signal is caught and the signal handler does not return (see <code><a href="/docs/linux/man/3-longjmp/">longjmp</a></code>(3)). </p>
 <p> If the <code>SIGABRT</code> signal is ignored, or caught by a handler that returns, the <code>abort</code>() function will still terminate the process. It does this by restoring the default disposition for <code>SIGABRT</code> and then raising the signal for a second time.</p>
 <h2>RETURN VALUE</h2>

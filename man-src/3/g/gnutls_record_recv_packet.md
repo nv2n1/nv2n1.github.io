@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_record_recv_packet(3)"
 name: "gnutls_record_recv_packet"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_record_recv_packet – API function"
 
 <h2>NAME</h2>
 <p> gnutls_record_recv_packet &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>ssize_t gnutls_record_recv_packet(gnutls_session_t </code><i>session</i><code>, gnutls_packet_t * </code><i>packet</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_record_recv_packet – API function"
 <dd> is a <code>gnutls_session_t</code> structure.</dd>
 <dt>gnutls_packet_t * packet</dt>
 <dd> the structure that will hold the packet data</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This is a lower-level function thatn <code>gnutls_record_recv()</code> and allows to directly receive the whole decrypted packet. That avoids a memory copy, and is mostly applicable to applications seeking high performance. </p>
 <p> The received packet is accessed using <code>gnutls_packet_get()</code> and must be deinitialized using <code>gnutls_packet_deinit()</code>. The returned packet will be <code>NULL</code> if the return value is zero (EOF).</p>
 <h2>RETURNS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "ibv_get_device_name(3)"
 name: "ibv_get_device_name"
 section: "3"
@@ -7,7 +6,14 @@ letter: "i"
 url: "/docs/linux/man/3-ibv_get_device_name/"
 ---
 
-ibv_get_device_name - get an RDMA device's name 
+<h2 class="name">NAME</h2>
+ 
+
+ 
+
+ ibv_get_device_name - get an RDMA device's name 
+
+<h2>SYNOPSIS</h2>
 
 <dl>
 <dt>
@@ -16,7 +22,11 @@ ibv_get_device_name - get an RDMA device's name
 const char *ibv_get_device_name(struct ibv_device *device);
 </code></pre></dd></dl>
 
-ibv_get_device_name() returns a human-readable name associated with the RDMA device device.
+<h2>DESCRIPTION</h2>
+
+ 
+
+ ibv_get_device_name() returns a human-readable name associated with the RDMA device device.
 
 <h2>RETURN VALUE</h2>
 

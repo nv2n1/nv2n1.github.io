@@ -1,5 +1,4 @@
 ---
-
 title: "pycompile(1)"
 name: "pycompile"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pycompile/"
 description: "pycompile – byte compile Python source files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pycompile &#8211; byte compile Python source files </p>
+<h2>SYNOPSIS</h2>
 <p> pycompile [-V [X.Y][-][A.B]] DIR_OR_FILE [-X REGEXPR] </p>
 <p> pycompile -p PACKAGE</p>
+<h2>DESCRIPTION</h2>
 <p> Wrapper around Python standard library&#8217;s py_compile module to byte-compile Python files.</p>
 <h2>OPTIONS</h2>
 <dl>

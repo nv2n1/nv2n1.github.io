@@ -1,5 +1,4 @@
 ---
-
 title: "cpg_fd_get(3)"
 name: "cpg_fd_get"
 section: "3"
@@ -10,8 +9,10 @@ description: "cpg_fd_get – Dispatches callbacks from the CPG service"
 
 <h2>NAME</h2>
 <p> cpg_fd_get &#8211; Dispatches callbacks from the CPG service</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cpg.h&gt;</code> </p>
 <p> <code>int cpg_fd_get(cpg_handle_t </code><i>handle</i><code>, int *</code><i>fd</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>cpg_fd_get</code> function is used to retrieve the file descriptor that may be used with the poll system call to determine when <code><a href="/docs/linux/man/3-cpg_dispatch/">cpg_dispatch</a>(3)</code> won&#8217;t block. The <i>handle</i> argument may not be used directly with <code>poll</code> because it is not the file descriptor, but instead an internal identifier used by the CPG library.</p>
 <h2>RETURN VALUE</h2>
 <p> This call returns the CS_OK value if successful, otherwise an error is returned. </p>

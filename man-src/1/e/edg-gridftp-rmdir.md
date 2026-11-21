@@ -1,5 +1,4 @@
 ---
-
 title: "edg-gridftp-rmdir(1)"
 name: "edg-gridftp-rmdir"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-edg-gridftp-rmdir/"
 description: "edg-gridftp-rmdir – Remove a directory on a GridFTP server."
 ---
 
+<h2 class="name">NAME</h2>
+<p> edg-gridftp-rmdir &#8211; Remove a directory on a GridFTP server. </p>
+<h2>SYNOPSIS</h2>
 <p> edg-gridftp-rmdir [<code>&#8211;proxy</code>=<i>proxy</i>] [<code>&#8211;timeout</code>=<i>timeout</i>] <i></i><font SIZE="-1"><i>URL</i></font><i></i> [<i></i><font SIZE="-1"><i>URL</i></font><i></i> &#8230;] </p>
 <p> edg-gridftp-rmdir <code>&#8211;usage</code> </p>
 <p> edg-gridftp-rmdir <code>&#8211;help</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>edg-gridftp-rmdir</code> removes the directory from a GridFTP server. This command will return a status of 0 if the directory was successfully removed. In all other cases, it will return a non-zero value and print an error message to the standard error. </p>
 <p> If more than one <font SIZE="-1">URL</font> is given, then a successful return will only occur if all of the URLs were successfully deleted. The processing will stop with the first failure.</p>
 <h2>OPTIONS</h2>

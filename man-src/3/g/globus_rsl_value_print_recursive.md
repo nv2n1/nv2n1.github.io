@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_rsl_value_print_recursive/"
 description: "RSL Display –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> RSL Display &#8211; </p>
 <h3>Functions</h3>
 <p> int <code>globus_rsl_value_print_recursive</code> (globus_rsl_value_t *globus_rsl_value_ptr)<br />
  <i>Print the value of a globus_rsl_value_t to standard output. </i><br />

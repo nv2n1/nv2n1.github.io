@@ -1,5 +1,4 @@
 ---
-
 title: "gpk-prefs(1)"
 name: "gpk-prefs"
 section: "1"
@@ -10,7 +9,9 @@ description: "gpk-log – GNOME PackageKit Update Preferences"
 
 <h2>NAME</h2>
 <p> gpk-log &#8211; GNOME PackageKit Update Preferences</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gpk-log</code> [ <code>&#8211;verbose</code> ]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>gpk-log</code> command. </p>
 <p> <code>gpk-log</code> allows you to change preferences for keeping your system up to date.</p>
 <h2>SEE ALSO</h2>

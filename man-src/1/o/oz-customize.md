@@ -1,5 +1,4 @@
 ---
-
 title: "oz-customize(1)"
 name: "oz-customize"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-oz-customize/"
 description: "oz-customize – tool to automatically modify installed operating system files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> oz-customize &#8211; tool to automatically modify installed operating system files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>oz-customize [OPTIONS] &lt;tdl-file&gt; &lt;libvirt-xml-file&gt;</code> </p>
+<h2>DESCRIPTION</h2>
 <p> This is a tool to modify already installed operating systems. Modifications typically involve installing additional packages. This program can be used as a counterpart to oz-install, though it does not have to be used in conjunction. </p>
 <p> Note that oz-customize does the actual customization using a combination of KVM and libvirt, so both of these must be available (and working) for oz-customize to have a chance to succeed. </p>
 <h2>OPTIONS</h2>

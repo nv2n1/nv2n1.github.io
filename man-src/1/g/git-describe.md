@@ -1,5 +1,4 @@
 ---
-
 title: "git-describe(1)"
 name: "git-describe"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-describe/"
 description: "git-describe – Give an object a human readable name based on an available ref"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-describe &#8211; Give an object a human readable name based on an available ref </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git describe[--all][--tags][--contains][--abbrev = &lt;n&gt;][&lt;commit - ish&gt;...] git describe[--all][--tags][--contains][--abbrev = &lt;n&gt;]-- dirty[=&lt;mark&gt;] git describe&lt;blob&gt;
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The command finds the most recent tag that is reachable from a commit. If the tag points to the commit, then only the tag is shown. Otherwise, it suffixes the tag name with the number of additional commits on top of the tagged object and the abbreviated object name of the most recent commit. The result is a &quot;human-readable&quot; object name which can also be used to identify the commit to other git commands. </p>
 <p> By default (without &#8211;all or &#8211;tags) <code>git describe</code> only shows annotated tags. For more information about creating annotated tags see the -a and -s options to <code><a href="/docs/linux/man/1-git-tag/">git-tag</a></code>(1). </p>
 <p> If the given object refers to a blob, it will be described as <code>&lt;commit-ish&gt;:&lt;path&gt;</code>, such that the blob can be found at <code>&lt;path&gt;</code> in the <code>&lt;commit-ish&gt;</code>, which itself describes the first commit in which this blob occurs in a reverse revision walk from HEAD.</p>

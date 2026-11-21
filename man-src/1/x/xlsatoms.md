@@ -1,5 +1,4 @@
 ---
-
 title: "xlsatoms(1)"
 name: "xlsatoms"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-xlsatoms/"
 description: "xlsatoms – list interned atoms defined on server"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xlsatoms &#8211; list interned atoms defined on server </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xlsatoms</code> [-options &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Xlsatoms</i> lists the interned atoms. By default, all atoms starting from 1 (the lowest atom value defined by the protocol) are listed until unknown atom is found. If an explicit range is given, <i>xlsatoms</i> will try all atoms in the range, regardless of whether or not any are undefined.</p>
 <h2>OPTIONS</h2>
 <dl>

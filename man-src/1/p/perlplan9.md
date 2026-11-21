@@ -1,5 +1,4 @@
 ---
-
 title: "perlplan9(1)"
 name: "perlplan9"
 section: "1"
@@ -7,9 +6,14 @@ letter: "p"
 url: "/docs/linux/man/1-perlplan9/"
 ---
 
-perlplan9 - Plan 9-specific documentation for Perl 
+<h2 class="name">NAME</h2>
+ 
 
-These are a few notes describing features peculiar to Plan 9 Perl. As such, it is not intended to be a replacement for the rest of the Perl 5 documentation (which is both copious and excellent). If you have any questions to which you can't find answers in these man pages, contact Luther Huffman at lutherh [at] stratcom.com and we'll try to answer them.
+ perlplan9 - Plan 9-specific documentation for Perl 
+
+<h2>DESCRIPTION</h2>
+
+ These are a few notes describing features peculiar to Plan 9 Perl. As such, it is not intended to be a replacement for the rest of the Perl 5 documentation (which is both copious and excellent). If you have any questions to which you can't find answers in these man pages, contact Luther Huffman at lutherh [at] stratcom.com and we'll try to answer them.
 
 <h3>Invoking Perl</h3>
 

@@ -1,5 +1,4 @@
 ---
-
 title: "cdk_display(3)"
 name: "cdk_display"
 section: "3"
@@ -10,6 +9,7 @@ description: "cdk_display – Curses Development Kit Display Capabilities."
 
 <h2>NAME</h2>
 <p> cdk_display &#8211; <code>Curses Development Kit</code> Display Capabilities.</p>
+<h2>SYNOPSIS</h2>
 <p> Cdk has a number of pre-defined display types. The following are outlined in this manual page: </p>
 <dl>
 <dt>&bull; How To Use Colors</dt>
@@ -22,6 +22,7 @@ description: "cdk_display – Curses Development Kit Display Capabilities."
 <dd>
 </dd><dt>&bull; Edit/Display Type Codes (EDisplayType)</dt>
 <dd></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Cdk has special formatting commands which can be included in any string which add highlights, justification, or even colors to a basic string. These attributes, once set, remain in effect until changed explicitly, or until the end of the string. </p>
 <p> This manual page outlines and demonstrates how they work.</p>
 <h3>How To Use Colors</h3>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_aia_set(3)"
 name: "gnutls_x509_aia_set"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_aia_set – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_aia_set &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509-ext.h&gt;</code> </p>
 <p> <code>int gnutls_x509_aia_set(gnutls_x509_aia_t </code><i>aia</i><code>, const char * </code><i>oid</i><code>, unsigned </code><i>san_type</i><code>, const gnutls_datum_t * </code><i>san</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,6 +22,7 @@ description: "gnutls_x509_aia_set – API function"
 <dd> The type of the name (of <code>gnutls_subject_alt_names_t</code>)</dd>
 <dt>const gnutls_datum_t * san</dt>
 <dd> The alternative name data</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will store the specified alternative name in the <i>aia</i> structure. </p>
 <p> Typically the value for <i>oid</i> should be <code>GNUTLS_OID_AD_OCSP</code>, or <code>GNUTLS_OID_AD_CAISSUERS</code>.</p>
 <h2>RETURNS</h2>

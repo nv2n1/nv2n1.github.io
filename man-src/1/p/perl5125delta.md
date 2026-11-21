@@ -1,5 +1,4 @@
 ---
-
 title: "perl5125delta(1)"
 name: "perl5125delta"
 section: "1"
@@ -7,7 +6,9 @@ letter: "p"
 url: "/docs/linux/man/1-perl5125delta/"
 description: "perl5125delta – what is new for perl v5.12.5"
 ---
-
+<h2 class="name">NAME</h2>
+<p> perl5125delta - what is new for perl v5.12.5 </p>
+<h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.12.4 release and the 5.12.5 release. </p>
 <p> If you are upgrading from an earlier release such as 5.12.3, first read perl5124delta, which describes differences between 5.12.3 and 5.12.4.  </p>
 <h2>Security</h2>

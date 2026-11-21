@@ -1,5 +1,4 @@
 ---
-
 title: "ipa-advise(1)"
 name: "ipa-advise"
 section: "1"
@@ -10,7 +9,9 @@ description: "ipa-advise – Provide configurations advice for various use cases
 
 <h2>NAME</h2>
 <p> ipa-advise &#8211; Provide configurations advice for various use cases.</p>
+<h2>SYNOPSIS</h2>
 <p> ipa-advise ADVICE</p>
+<h2>DESCRIPTION</h2>
 <p> Provides customized advice for various IPA configuration issues.</p>
 <dl>
 <dt>For the list of possible ADVICEs available, run the ipa-advise with no arguments.</dt>

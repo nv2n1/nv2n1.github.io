@@ -1,5 +1,4 @@
 ---
-
 title: "mktexpk(1)"
 name: "mktexpk"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mktexpk/"
 description: "mktexpk – create a PK file for a font"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mktexpk &#8211; create a PK file for a font </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mktexpk</code> [<i>options</i>] <i>font</i> [<i>redirect</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page is not meant to be exhaustive. The complete documentation for this version of TeX can be found in the info file or manual <i>Kpathsea: A library for path searching</i>. </p>
 <p> <code>mktexpk</code> is used to generate a <i>pk</i> file from the Metafont source files or type1 sources for <i>font</i>, if possible. </p>
 <p> If <i>redirect</i> is given, it must be string of the form <code>&gt;&amp;</code><i>n</i> where <i>n</i> is the number of the file descriptor which is to receive, instead of standard output, the name of the generated file. </p>

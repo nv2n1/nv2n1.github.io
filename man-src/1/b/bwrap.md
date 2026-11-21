@@ -1,5 +1,4 @@
 ---
-
 title: "bwrap(1)"
 name: "bwrap"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-bwrap/"
 description: "bwrap – container setup utility"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bwrap &#8211; container setup utility </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>bwrap</code> [<i>OPTION</i>&#8230;] [<i>COMMAND</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>bwrap</code></p>
 <dd>is a privileged helper for container setup. You are unlikely to use it directly from the commandline, although that is possible. </dd>
 <p> It works by creating a new, completely empty, filesystem namespace where the root is on a tmpfs that is invisible from the host, and which will be automatically cleaned up when the last process exits. You can then use commandline options to construct the root filesystem and process environment for the command to run in the namespace. </p>

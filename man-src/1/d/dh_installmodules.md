@@ -1,5 +1,4 @@
 ---
-
 title: "dh_installmodules(1)"
 name: "dh_installmodules"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dh_installmodules/"
 description: "dh_installmodules – register kernel modules"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dh_installmodules &#8211; register kernel modules </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dh_installmodules</code> [<i>debhelper options</i>] [<code>-n</code>] [<code>&#8211;name=</code><i>name</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>dh_installmodules</code> is a debhelper program that is responsible for registering kernel modules. </p>
 <p> Kernel modules are searched for in the package build directory and if found, <i>preinst</i>, <i>postinst</i> and <i>postrm</i> commands are automatically generated to run <code>depmod</code> and register the modules when the package is installed. These commands are inserted into the maintainer scripts by <i><a href="/docs/linux/man/1-dh_installdeb/">dh_installdeb</a></i>(1).</p>
 <h2>FILES</h2>

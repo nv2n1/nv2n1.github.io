@@ -1,5 +1,4 @@
 ---
-
 title: "euca-import-volume(1)"
 name: "euca-import-volume"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-import-volume – Import a file to a volume in the cloud"
 
 <h2>NAME</h2>
 <p> euca-import-volume &#8211; Import a file to a volume in the cloud</p>
+<h2>SYNOPSIS</h2>
 <p> euca-import-volume <code>-f</code> FORMAT <code>-z</code> ZONE [-s GiB] [&#8211;image-size BYTES]</p>
 <dl>
 <dt>(<code>-b</code> BUCKET | <code>&#8211;manifest-url</code> URL) [&#8211;prefix PREFIX]</dt>
 <dd> [-x DAYS] [&#8211;no-upload] [-d DESCRIPTION] [&#8211;show-empty-fields] [&#8211;s3-url URL] [-o KEY_ID] [-w KEY] [&#8211;progress | <code>&#8211;no-progress]</code> [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] FILE</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Import a file to a volume in the cloud</p>
 <h3>positional arguments:</h3>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "flatpak-info(1)"
 name: "flatpak-info"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-flatpak-info/"
 description: "flatpak-info – Show information about an installed application or runtime"
 ---
 
+<h2 class="name">NAME</h2>
+<p> flatpak-info &#8211; Show information about an installed application or runtime </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak info</code> [OPTION&#8230;] NAME [BRANCH]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>Show info about an installed application or runtime. </dd>
 <p> By default, the output is formatted in a friendly format. If you specify any of the <code>&#8211;show-&#8230;</code> or <code>&#8211;file-access</code> options, the output is instead formatted in a machine-readable format. </p>
 <p> By default, both per-user and system-wide installations are queried. Use the <code>&#8211;user</code>, <code>&#8211;system</code> or <code>&#8211;installation</code> options to change this.</p>

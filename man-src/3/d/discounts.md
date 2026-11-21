@@ -1,5 +1,4 @@
 ---
-
 title: "discounts(3)"
 name: "discounts"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-discounts/"
 description: "QuantLib::InterpolatedDiscountCurve – Term structure based on interpolation of discount factors."
 ---
 
+<h2 class="name">NAME</h2>
+<p> QuantLib::InterpolatedDiscountCurve &#8211; Term structure based on interpolation of discount factors. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/yield/discountcurve.hpp&gt; </p>
 <p> Inherits <code>QuantLib::YieldTermStructure</code>, and boost::noncopyable. </p>
 <p> Inherited by <code>ExtendedDiscountCurve</code>. </p>

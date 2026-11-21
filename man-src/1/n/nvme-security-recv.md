@@ -1,5 +1,4 @@
 ---
-
 title: "nvme-security-recv(1)"
 name: "nvme-security-recv"
 section: "1"
@@ -7,9 +6,16 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-security-recv/"
 ---
 
-nvme-security-recv - Security Recv command 
+<h2 class="name">NAME</h2>
+ 
 
-<pre><code>
+ nvme-security-recv - Security Recv command 
+
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <pre><code>
 nvme security - recv[&lt;device&gt;][--size = &lt;size&gt; | -x&lt;size&gt;]
                     [--secp = &lt;security - protocol&gt; | -p&lt;security - protocol&gt;]
                     [--spsp = &lt;protocol - specific&gt; | -s&lt;protocol - specific&gt;]
@@ -19,7 +25,11 @@ nvme security - recv[&lt;device&gt;][--size = &lt;size&gt; | -x&lt;size&gt;]
                     [-b | --raw - binary]
 </code></pre>
 
-The Security Receive command transfers the status and data result of one or more Security Send commands that were previously submitted to the controller. 
+<h2>DESCRIPTION</h2>
+
+ 
+
+ The Security Receive command transfers the status and data result of one or more Security Send commands that were previously submitted to the controller. 
 
  The association between a Security Receive command and previous Security Send commands is dependent on the Security Protocol. The format of the data to be transferred is dependent on the Security Protocol. Refer to SPC-4 for Security Protocol details. 
 

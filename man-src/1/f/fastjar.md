@@ -1,5 +1,4 @@
 ---
-
 title: "fastjar(1)"
 name: "fastjar"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-fastjar/"
 description: "fastjar – archive tool for Java archives"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fastjar &#8211; archive tool for Java archives </p>
+<h2>SYNOPSIS</h2>
 <p> fastjar <code>-ctxu</code> [<font SIZE="-1"><code>OPTIONS</code></font>] [<i>jar-file</i>] [<i>manifest-file</i>] [<code>-C</code> <i>dir</i>] <i>files</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <tt>&quot;fastjar&quot;</tt> is an implementation of Sun&#8217;s jar utility that comes with the <font SIZE="-1">JDK</font>, written entirely in C, and runs in a fraction of the time while being feature compatible. </p>
 <p> If any file is a directory then it is processed recursively. The manifest file name and the archive file name needs to be specified in the same order the <code>-m</code> and <code>-f</code> flags are specified.</p>
 <h2>OPTIONS</h2>

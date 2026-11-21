@@ -1,5 +1,4 @@
 ---
-
 title: "ecpg(1)"
 name: "ecpg"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-ecpg/"
 description: "ecpg – embedded SQL C preprocessor"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ecpg &#8211; embedded SQL C preprocessor </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ecpg</code> [<i>option</i>&#8230;] <i>file</i>&#8230;</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>ecpg</code></p>
 <dd>is the embedded SQL preprocessor for C programs. It converts C programs with embedded SQL statements to normal C code by replacing the SQL invocations with special function calls. The output files can then be processed with any C compiler tool chain. </dd>
 <p> <code>ecpg</code> will convert each input file given on the command line to the corresponding C output file. Input files preferably have the extension .pgc, in which case the extension will be replaced by .c to determine the output file name. If the extension of the input file is not .pgc, then the output file name is computed by appending .c to the full file name. The output file name can also be overridden using the <code>-o</code> option. </p>

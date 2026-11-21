@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_priority_set_direct(3)"
 name: "gnutls_priority_set_direct"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_priority_set_direct – API function"
 
 <h2>NAME</h2>
 <p> gnutls_priority_set_direct &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_priority_set_direct(gnutls_session_t </code><i>session</i><code>, const char * </code><i>priorities</i><code>, const char ** </code><i>err_pos</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_priority_set_direct – API function"
 <dd> is a string describing priorities</dd>
 <dt>const char ** err_pos</dt>
 <dd> In case of an error this will have the position in the string the error occured</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Sets the priorities to use on the ciphers, key exchange methods, macs and compression methods. This function avoids keeping a priority cache and is used to directly set string priorities to a TLS session. For documentation check the <code>gnutls_priority_init()</code>. </p>
 <p> To simply use a reasonable default, consider using <code>gnutls_set_default_priority()</code>.</p>
 <h2>RETURNS</h2>

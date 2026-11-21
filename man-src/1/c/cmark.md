@@ -1,5 +1,4 @@
 ---
-
 title: "cmark(1)"
 name: "cmark"
 section: "1"
@@ -10,9 +9,11 @@ description: "cmark – convert CommonMark formatted text to HTML"
 
 <h2>NAME</h2>
 <p> <code>cmark</code> &#8211; convert CommonMark formatted text to HTML</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cmark</code> [options]</dt>
 <dd>file*</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>cmark</code> converts Markdown formatted plain text to either HTML, groff man, CommonMark XML, LaTeX, or CommonMark, using the conventions described in the CommonMark spec. It reads input from <i>stdin</i> or the specified files (concatenating their contents) and writes output to <i>stdout</i>.</p>
 <h2>OPTIONS</h2>
 <dl>

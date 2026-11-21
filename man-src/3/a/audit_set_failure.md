@@ -1,5 +1,4 @@
 ---
-
 title: "audit_set_failure(3)"
 name: "audit_set_failure"
 section: "3"
@@ -10,8 +9,10 @@ description: "audit_set_failure – Set audit failure flag"
 
 <h2>NAME</h2>
 <p> audit_set_failure &#8211; Set audit failure flag</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libaudit.h&gt;</code> </p>
 <p> int audit_set_failure(int fd, int failure); </p>
+<h2>DESCRIPTION</h2>
 <p> audit_set_failure sets the action that the kernel will perform when the backlog limit is reached or when it encounters an error and cannot proceed. Possible values are: </p>
 <dl>
 <dt>0 &#8211; AUDIT_FAIL_SILENT</dt>

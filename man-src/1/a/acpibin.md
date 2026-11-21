@@ -1,5 +1,4 @@
 ---
-
 title: "acpibin(1)"
 name: "acpibin"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-acpibin/"
 description: "acpibin – ACPI binary AML file utility"
 ---
 
+<h2 class="name">NAME</h2>
+<p> acpibin &#8211; ACPI binary AML file utility </p>
+<h2>SYNOPSIS</h2>
 <p> <code>acpibin</code> [<i>&lt;option&gt;</i>&#8230;<i>]</i> </p>
+<h2>DESCRIPTION</h2>
 <p> This manual page briefly documents the <code>acpibin</code> command. The option list is taken from the acpibin interactive help. </p>
 <p> <code>acpibin</code> is a command provided to perform some basic and common operations on AML binary files. </p>
 <p> Much more detailed documentation may be found at <a rel="nofollow" href="http://www.acpica.org/documentation/.">http://www.acpica.org/documentation/.</a> </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ck_hs_gc(3)"
 name: "ck_hs_gc"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_hs_gc – perform maintenance on a hash set"
 <p> <code>ck_hs_gc</code> &#8211; perform maintenance on a hash set</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_hs.h Ft bool Fn ck_hs_gc ck_hs_t *hs unsigned long cycles unsigned long seed</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_hs_gc 3 function will perform various maintenance routines on the hash set pointed to by Fa hs , including defragmentation of probe sequences with respect to tombstones and in the case that the delete workload hint has been passed, recalculation of probe sequence bounds. The Fa cycles argument is used to indicate how many hash set entries should be subject to attempted maintenance. If Fa cycles is 0, then maintenance is performed on the complete hash set. The Fa seed argument determines the start location of the maintenance process. If Fa cycles is non-zero, it is recommended that Fa seed is some random value. If the delete hint has been passed, the function will require an additional 12% of memory (with respect to existing memory usage of the set), until operation completion.</p>
 <h2>RETURN VALUES</h2>
 <p> Upon successful completion, Fn ck_hs_gc 3 returns true and otherwise returns false on failure due to memory allocation failure.</p>

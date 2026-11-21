@@ -1,5 +1,4 @@
 ---
-
 title: "jcat(1)"
 name: "jcat"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-jcat/"
 description: "jcat – Show the contents of a block in the file system journal."
 ---
 
+<h2 class="name">NAME</h2>
+<p> jcat &#8211; Show the contents of a block in the file system journal. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>jcat [-f</code> <i>fstype</i> <code>] [-vV] [-i imgtype] [-o imgoffset] [-b dev_sector_size] </code> <i>image [images]</i> <code>] [</code> <i>inode</i> <code>]</code> <i>jblk</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>jcat</code> shows the contents of a journal block in the file system journal. The inode address of the journal can be given or the default location will be used. Note that the block address is a journal block address and not a file system block. The raw output is given to STDOUT. </p>
 <h2>ARGUMENTS</h2>
 <dl>

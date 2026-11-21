@@ -1,5 +1,4 @@
 ---
-
 title: "soxi(1)"
 name: "soxi"
 section: "1"
@@ -10,7 +9,9 @@ description: "SoXI – Sound eXchange Information, display sound file metadata"
 
 <h2>NAME</h2>
 <p> SoXI &#8211; Sound eXchange Information, display sound file metadata</p>
+<h2>SYNOPSIS</h2>
 <p> <code>soxi</code> [<code>-V</code>[<i>level</i>]] [<code>-T</code>] [<code>-t</code>|<code>-r</code>|<code>-c</code>|<code>-s</code>|<code>-d</code>|<code>-D</code>|<code>-b</code>|<code>-B</code>|<code>-e</code>|<code>-a</code>] <i>infile1</i> &#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Displays information from the header of a given audio file or files. Supported audio file types are listed and described in <code><a href="/docs/linux/man/7-soxformat/">soxformat</a></code>(7). Note however, that <code>soxi</code> is intended for use only with audio files with a self-describing header. </p>
 <p> By default, as much information as is available is shown. An option may be given to select just a single piece of information (perhaps for use in a script or batch-file).</p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "perl5281delta(1)"
 name: "perl5281delta"
 section: "1"
@@ -7,9 +6,14 @@ letter: "p"
 url: "/docs/linux/man/1-perl5281delta/"
 ---
 
-perl5281delta - what is new for perl v5.28.1 
+<h2 class="name">NAME</h2>
+ 
 
-This document describes differences between the 5.28.0 release and the 5.28.1 release. 
+ perl5281delta - what is new for perl v5.28.1 
+
+<h2>DESCRIPTION</h2>
+
+ This document describes differences between the 5.28.0 release and the 5.28.1 release. 
 
  If you are upgrading from an earlier release such as 5.26.0, first read perl5280delta, which describes differences between 5.26.0 and 5.28.0.
 

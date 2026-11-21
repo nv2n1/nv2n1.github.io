@@ -1,5 +1,4 @@
 ---
-
 title: "psvelo(1)"
 name: "psvelo"
 section: "1"
@@ -10,8 +9,10 @@ description: "psvelo – Plot velocity vectors, crosses, and wedges on maps"
 
 <h2>NAME</h2>
 <p> psvelo &#8211; Plot velocity vectors, crosses, and wedges on maps</p>
+<h2>SYNOPSIS</h2>
 <p> <code>psvelo</code> [ <i>table</i> ] <i>parameters</i> <i>region</i> [ <i>parameters</i> ] [ [<code>p</code>|<code>s</code>]<i>parameters</i> ] [ <i>color</i> ] [ <i>color</i> ] [ <i>color</i> ] [ ] [ ] [ ] [ ] [ ] [ <i>symbol</i>/<i>scale</i>/<i>conf</i>/<i>font_size</i> ] [ [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ [<i>level</i>] ] [ <i>pen</i> ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ <code>-c</code><i>copies</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>psvelo</code> reads data values from <i>files</i> [or standard input] and generates PostScript code that will plot velocity arrows on a map. Most options are the same as for <code>psxy</code>, except <code>-S</code>. The PostScript code is written to standard output. The previous version (<code>psvelomeca</code>) is now obsolete. It has been replaced by <code>psvelo</code> and <code>psmeca</code>.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

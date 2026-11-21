@@ -1,5 +1,4 @@
 ---
-
 title: "euca-upload-bundle(1)"
 name: "euca-upload-bundle"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-upload-bundle – Upload a bundle prepared by euca-bundle-ima
 
 <h2>NAME</h2>
 <p> euca-upload-bundle &#8211; Upload a bundle prepared by euca-bundle-image to the cloud</p>
+<h2>SYNOPSIS</h2>
 <p> euca-upload-bundle <code>-m</code> FILE [-d DIR] [&#8211;skipmanifest] <code>-b</code> BUCKET[/PREFIX]</p>
 <dl>
 <dt>[&#8211;acl {public-read,aws-exec-read,ec2-bundle-read}]</dt>
 <dd> [&#8211;upload-policy POLICY | <code>&#8211;upload-policy-file</code> FILE] [&#8211;upload-policy-signature SIGNATURE] [&#8211;location LOCATION] [&#8211;retry] [&#8211;progress | <code>&#8211;no-progress]</code> [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Upload a bundle prepared by euca-bundle-image to the cloud</p>
 <h3>optional arguments:</h3>
 <dl>

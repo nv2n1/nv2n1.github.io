@@ -1,5 +1,4 @@
 ---
-
 title: "ccoshf(3)"
 name: "ccoshf"
 section: "3"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/3-ccoshf/"
 description: "ccosh, ccoshf, ccoshl – complex hyperbolic cosine"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ccosh, ccoshf, ccoshl &#8211; complex hyperbolic cosine </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
 <p> <code>double complex ccosh(double complex </code><i>z</i><code>);</code><br />
  <code>float complex ccoshf(float complex </code><i>z</i><code>);</code><br />
  <code>long double complex ccoshl(long double complex </code><i>z</i><code>);</code> </p>
 <p> Link with <i>-lm</i>.</p>
+<h2>DESCRIPTION</h2>
 <p> These functions calculate the complex hyperbolic cosine of <i>z</i>. </p>
 <p> The complex hyperbolic cosine function is defined as: </p>
 <pre>

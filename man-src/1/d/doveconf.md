@@ -1,5 +1,4 @@
 ---
-
 title: "doveconf(1)"
 name: "doveconf"
 section: "1"
@@ -10,9 +9,11 @@ description: "doveconf – Dovecot’s configuration dumping utility"
 
 <h2>NAME</h2>
 <p> doveconf &#8211; Dovecot&#8217;s configuration dumping utility</p>
+<h2>SYNOPSIS</h2>
 <p> <code>doveconf</code> [<code>-adnNSx</code>] [<code>-c</code> <i>config-file</i>] [<code>-f</code> <i>filter</i>] [<code>-m</code> <i>module</i>]<br />
  <code>doveconf</code> [<code>-n</code>] [<code>-c</code> <i>config-file</i>] <i>section_name</i>&nbsp;<wbr>&#8230;<br />
  <code>doveconf</code> [<code>-h</code>] [<code>-c</code> <i>config-file</i>] [<code>-f</code> <i>filter</i>] <i>setting_name</i>&nbsp;<wbr>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>doveconf</code> reads and parses Dovecot&#8217;s configuration files and converts them into a simpler format used by the rest of Dovecot. All standalone programs, such as <code><a href="/docs/linux/man/1-dovecot/">dovecot</a></code>(1) and <code><a href="/docs/linux/man/1-dovecot-lda/">dovecot-lda</a></code>(1), will first get their settings by executing doveconf. </p>
 <p> For system administrators, <code>doveconf</code> is mainly useful for dumping the configuration in easy human readable output.</p>
 <h2>OPTIONS</h2>

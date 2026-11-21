@@ -1,5 +1,4 @@
 ---
-
 title: "chroot(2)"
 name: "chroot"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-chroot/"
 description: "chroot – change root directory"
 ---
 
+<h2 class="name">NAME</h2>
+<p> chroot &#8211; change root directory </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int chroot(const char *</code><i>path</i><code>);</code> </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
@@ -22,6 +24,7 @@ _XOPEN_SOURCE &amp;&amp; !(_POSIX_C_SOURCE &amp; nbsp; &gt;= &amp;nbsp; 200112L)
 </dd><dt>Before glibc 2.2.2: none</dt>
 <dd></dd></dl>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> <code>chroot</code>() changes the root directory of the calling process to that specified in <i>path</i>. This directory will be used for pathnames beginning with <i>/</i>. The root directory is inherited by all children of the calling process. </p>
 <p> Only a privileged process (Linux: one with the <code>CAP_SYS_CHROOT</code> capability in its user namespace) may call <code>chroot</code>(). </p>
 <p> This call changes an ingredient in the pathname resolution process and does nothing else. In particular, it is not intended to be used for any kind of security purpose, neither to fully sandbox a process nor to restrict filesystem system calls. In the past, <code>chroot</code>() has been used by daemons to restrict themselves prior to passing paths supplied by untrusted users to system calls such as <code><a href="/docs/linux/man/2-open/">open</a></code>(2). However, if a folder is moved out of the chroot directory, an attacker can exploit that to get out of the chroot directory as well. The easiest way to do that is to <code><a href="/docs/linux/man/2-chdir/">chdir</a></code>(2) to the to-be-moved directory, wait for it to be moved out, then open a path like ../../../etc/passwd. </p>

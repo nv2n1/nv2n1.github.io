@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_rr_pop_rdf(3)"
 name: "ldns_rr_pop_rdf"
 section: "3"
@@ -10,11 +9,13 @@ description: "ldns_rr_push_rdf, ldns_rr_pop_rdf"
 
 <h2>NAME</h2>
 <p> ldns_rr_push_rdf, ldns_rr_pop_rdf </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> bool ldns_rr_push_rdf(ldns_rr *rr, const ldns_rdf *f); </p>
 <p> ldns_rdf* ldns_rr_pop_rdf(ldns_rr *rr); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_rr_push_rdf</i>()</dt>
 <dd>sets rd_field member, it will be placed in the next available spot. .br <code>*rr</code>: rr to operate on .br <code>*f</code>: the data field member to set .br Returns bool</dd></dl>

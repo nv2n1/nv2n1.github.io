@@ -1,5 +1,4 @@
 ---
-
 title: "conman(1)"
 name: "conman"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-conman/"
 description: "conman – ConMan client"
 ---
 
+<h2 class="name">NAME</h2>
+<p> conman &#8211; ConMan client</p>
+<h2>SYNOPSIS</h2>
 <p> <code>conman</code> [<i>OPTION</i>]&#8230; [<i>CONSOLE</i>]&#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> <code>conman</code> is a program for connecting to remote consoles being managed by <code>conmand</code>. Console names can be separated by spaces and/or commas. Globbing is used by default to match console names against the configuration, but regular expression matching can be enabled with the &#8216;<code>-r</code>&#8216; option. </p>
 <p> <code>conman</code> supports three modes of console access: monitor (read-only), interactive (read-write), and broadcast (write-only). If neither the &#8216;<code>-m</code>&#8216; (monitor) nor &#8216;<code>-b</code>&#8216; (broadcast) options are specified, the console session is opened in interactive mode. </p>
 <h2>OPTIONS</h2>

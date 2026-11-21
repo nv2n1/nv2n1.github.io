@@ -1,5 +1,4 @@
 ---
-
 title: "dggsvd(3)"
 name: "dggsvd"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dggsvd/"
 description: "dggsvd.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dggsvd.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dggsvd</code> (JOBU, JOBV, JOBQ, M, N, P, K, L, A, LDA, B, LDB, ALPHA, BETA, U, LDU, V, LDV, Q, LDQ, WORK, IWORK, INFO)<br />
  <i></i><code> DGGSVD computes the singular value decomposition (SVD) for OTHER matrices</code></p>

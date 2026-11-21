@@ -1,5 +1,4 @@
 ---
-
 title: "gliv(1)"
 name: "gliv"
 section: "1"
@@ -7,10 +6,11 @@ letter: "g"
 url: "/docs/linux/man/1-gliv/"
 description: "gliv – An OpenGL Image Viewer"
 ---
-
 <h2>NAME</h2>
 <p> gliv - An OpenGL Image Viewer  </p>
+<h2>SYNOPSIS</h2>
 <p> <code>gliv</code> [OPTIONS]... [FILES]...  </p>
+<h2>DESCRIPTION</h2>
 <p> <i>gliv</i> uses gdk-pixbuf to load images and OpenGL to render them. It allows to do some moving, rotating, zooming and slide show.  </p>
 <h2>OPTIONS</h2>
 <p> The options are first set to their default values, &quot;off&quot; for flags, then read either from ~/.glivrc or /etc/glivrc or a configuration file specified on the command line, and finally read from the command line. <br />

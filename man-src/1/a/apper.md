@@ -1,5 +1,4 @@
 ---
-
 title: "apper(1)"
 name: "apper"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-apper/"
 description: "apper – An application and package manager using PackageKit"
 ---
 
+<h2 class="name">NAME</h2>
+<p> apper &#8211; An application and package manager using PackageKit </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>apper</code> [<code>&#8211;updates</code>] [<code>&#8211;settings</code>] [<code>&#8211;backend-details</code>] [<code>&#8211;install-mime-type</code><i></dt>
 <dd>mime-type</i>] [<code>&#8211;install-package-name</code><i> name</i>] [<code>&#8211;install-provide-file</code><i> file</i>] [<code>&#8211;install-font-resource</code><i> font</i>] [<code>&#8211;install-catalog</code><i> file</i>] [<code>&#8211;remove-package-by-file</code><i> filename</i>] [KDE Generic Options] [Qt Generic Options]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Apper is the KDE interface for PackageKit </p>
 <p> Apper is able to manage packages, applications and updates in a cross-distribution way thanks to the PackageKit project. </p>
 <p> It is providing Linux users a single application that they can learn and use in whatever distribution they are.</p>

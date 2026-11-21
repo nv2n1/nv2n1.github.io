@@ -1,5 +1,4 @@
 ---
-
 title: "dsfrk(3)"
 name: "dsfrk"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dsfrk/"
 description: "dsfrk.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dsfrk.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dsfrk</code> (TRANSR, UPLO, TRANS, N, K, ALPHA, A, LDA, BETA, C)<br />
  <i></i><code>DSFRK</code> performs a symmetric rank-k operation for matrix in RFP format.</p>

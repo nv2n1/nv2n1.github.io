@@ -1,5 +1,4 @@
 ---
-
 title: "bogoupgrade(1)"
 name: "bogoupgrade"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-bogoupgrade/"
 description: "bogoupgrade – upgrades bogofilter database to current version"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bogoupgrade &#8211; upgrades bogofilter database to current version </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>bogoupgrade</code> [-h] -d&nbsp;<wbr><i>directory</i> [-i&nbsp;<wbr><i>input file</i>] [-o&nbsp;<wbr><i>output file</i>] [-b&nbsp;<wbr><i>path to bogoutil</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>bogoupgrade</code></p>
 <dd>is a command to upgrade bogofilter&#8217;s databases from an old format to the current format. Since the format of the database changes once in a while, the utility is designed to make the upgrade easy.</dd>
 <h2>OPTIONS</h2>

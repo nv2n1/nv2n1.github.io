@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_dtls_set_mtu(3)"
 name: "gnutls_dtls_set_mtu"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_dtls_set_mtu – API function"
 
 <h2>NAME</h2>
 <p> gnutls_dtls_set_mtu &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/dtls.h&gt;</code> </p>
 <p> <code>void gnutls_dtls_set_mtu(gnutls_session_t </code><i>session</i><code>, unsigned int </code><i>mtu</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_dtls_set_mtu – API function"
 <dd> is a <code>gnutls_session_t</code> structure.</dd>
 <dt>unsigned int mtu</dt>
 <dd> The maximum transfer unit of the transport</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will set the maximum transfer unit of the transport that DTLS packets are sent over. Note that this should exclude the IP (or IPv6) and UDP headers. So for DTLS over IPv6 on an Ethenet device with MTU 1500, the DTLS MTU set with this function would be 1500 &#8211; 40 (IPV6 header) &#8211; 8 (UDP header) = 1452.</p>
 <h2>SINCE</h2>
 <p> 3.0</p>

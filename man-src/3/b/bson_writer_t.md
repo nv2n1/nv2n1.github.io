@@ -1,5 +1,4 @@
 ---
-
 title: "bson_writer_t(3)"
 name: "bson_writer_t"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_writer_t – Bulk BSON serialization Abstraction"
 
 <h2>NAME</h2>
 <p> bson_writer_t &#8211; Bulk BSON serialization Abstraction</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;bson.h&gt;
 typedef struct _bson_writer_t bson_writer_t;
@@ -20,6 +20,7 @@ bson_writer_t *bson_writer_new(uint8_t **buf,
                                void *realloc_func_ctx);
 void bson_writer_destroy(bson_writer_t *writer);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>bson_writer_t</code> API provides an abstraction for serializing many BSON documents to a single memory region. The memory region may be dynamically allocated and re-allocated as more memory is demanded. This can be useful when building network packets from a high-level language. For example, you can serialize a Python Dictionary directly to a single buffer destined for a TCP packet. </p>
 <h2>EXAMPLE</h2>
 <pre><code>

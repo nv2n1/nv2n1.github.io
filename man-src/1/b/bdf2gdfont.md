@@ -1,5 +1,4 @@
 ---
-
 title: "bdf2gdfont(1)"
 name: "bdf2gdfont"
 section: "1"
@@ -7,13 +6,20 @@ letter: "b"
 url: "/docs/linux/man/1-bdf2gdfont/"
 ---
 
-bdf2gdfont.pl - Convert X11 &quot;BDF&quot; fonts into a loadable font format for GD. 
+<h2 class="name">NAME</h2>
+ 
 
-<pre>
+ bdf2gdfont.pl - Convert X11 &quot;BDF&quot; fonts into a loadable font format for GD. 
+
+<h2>SYNOPSIS</h2>
+
+ <pre>
   % bdf2gdfont.pl courR12.bdf &gt; courR12.fnt
 </pre>
 
-This script converts BDF-style X11 font files into a format that can be loaded by the <font SIZE="-1">GD</font> module using the GD::Font-&gt;<i>load()</i> method. There are a number of ways to obtain <font SIZE="-1">BDF</font> fonts.
+<h2>DESCRIPTION</h2>
+
+ This script converts BDF-style X11 font files into a format that can be loaded by the <font SIZE="-1">GD</font> module using the GD::Font-&gt;<i>load()</i> method. There are a number of ways to obtain <font SIZE="-1">BDF</font> fonts.
 <dl>
 <dt>1. The font is already present on your system.
 </dt><dd> Some <font SIZE="-1">BDF</font> fonts can be found in the standard X11R6 distribution. This script will automatically uncompress gzipped font files if their extension ends with .gz (the gunzip program must be on your path).

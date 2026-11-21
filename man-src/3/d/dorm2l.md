@@ -1,5 +1,4 @@
 ---
-
 title: "dorm2l(3)"
 name: "dorm2l"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dorm2l/"
 description: "dorm2l.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dorm2l.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dorm2l</code> (SIDE, TRANS, M, N, K, A, LDA, TAU, C, LDC, WORK, INFO)<br />
  <i></i><code>DORM2L</code> multiplies a general matrix by the orthogonal matrix from a QL factorization determined by sgeqlf (unblocked algorithm).</p>

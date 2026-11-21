@@ -1,5 +1,4 @@
 ---
-
 title: "pcregrep(1)"
 name: "pcregrep"
 section: "1"
@@ -10,7 +9,9 @@ description: "pcregrep – a grep with Perl-compatible regular expressions."
 
 <h2>NAME</h2>
 <p> pcregrep &#8211; a grep with Perl-compatible regular expressions.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pcregrep [options] [long options] [pattern] [path1 path2 &#8230;]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>pcregrep</code> searches files for character patterns, in the same way as other grep commands do, but it uses the PCRE regular expression library to support patterns that are compatible with the regular expressions of Perl 5. See <code><a href="/docs/linux/man/3-pcrepattern/">pcrepattern</a></code>(3) for a full description of syntax and semantics of the regular expressions that PCRE supports. </p>
 <p> Patterns, whether supplied on the command line or in a separate file, are given without delimiters. For example: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>pcregrep Thursday&nbsp;<wbr>/etc/motd </p>

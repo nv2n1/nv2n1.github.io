@@ -1,5 +1,4 @@
 ---
-
 title: "gimplut(1)"
 name: "gimplut"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-gimplut/"
 description: "gimplut – convert GIMP gradient (ggr) files to binary lookup tables (lut)."
 ---
 
+<h2 class="name">NAME</h2>
+<p> gimplut &#8211; convert GIMP gradient (ggr) files to binary lookup tables (lut). </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gimplut</code> [-h] [-o&nbsp;<wbr><i>file</i>] [-s&nbsp;<wbr><i>samples</i>] [-v] [-V] [<i>file</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>gimplut</code> utility converts gradient files from the <code><a href="/docs/linux/man/1-gimp/">GIMP</a></code>(1), the GNU Image Manipulation Program, to a binary lookup table format commonly used by medical imaging software; in particular the <code>Medcon</code>(1) package. </dd>
 <p> The LUT format consists of <code>n</code> red, <code>n</code> green and <code>n</code> blue bytes, interpreted as integers from 0 to 255. </p>
 <p> The program will read from stdin if a file is not specified as the final argument, and write to stdout if the <code>-o</code> option is not specified.</p>

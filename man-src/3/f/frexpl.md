@@ -1,5 +1,4 @@
 ---
-
 title: "frexpl(3)"
 name: "frexpl"
 section: "3"
@@ -7,9 +6,14 @@ letter: "f"
 url: "/docs/linux/man/3-frexpl/"
 ---
 
-frexp, frexpf, frexpl - convert floating-point number to fractional and integral components 
+<h2 class="name">NAME</h2>
+ 
 
-<pre><code>
+ frexp, frexpf, frexpl - convert floating-point number to fractional and integral components 
+
+<h2>SYNOPSIS</h2>
+
+ <pre><code>
 #include &lt;math.h&gt;
 double frexp(double x, int *exp);
 float frexpf(float x, int *exp);
@@ -27,7 +31,9 @@ long double frexpl(long double x, int *exp);
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
 
-These functions are used to split the number <i>x</i> into a normalized fraction and an exponent which is stored in <i>exp</i>.
+<h2>DESCRIPTION</h2>
+
+ These functions are used to split the number <i>x</i> into a normalized fraction and an exponent which is stored in <i>exp</i>.
 
 <h2>RETURN VALUE</h2>
 

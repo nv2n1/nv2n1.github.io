@@ -1,5 +1,4 @@
 ---
-
 title: "xml_spellcheck(1)"
 name: "xml_spellcheck"
 section: "1"
@@ -7,13 +6,20 @@ letter: "x"
 url: "/docs/linux/man/1-xml_spellcheck/"
 ---
 
-xml_spellcheck - spellcheck XML files 
+<h2 class="name">NAME</h2>
+ 
 
-<pre>
+ xml_spellcheck - spellcheck XML files 
+
+<h2>SYNOPSIS</h2>
+
+ <pre>
   xml_spellcheck [options] &lt;files&gt;
 </pre>
 
-xml_spellcheck lets you spell check the content of an <font SIZE="-1">XML</font> file. It extracts the text (the content of elements and optionally of attributes), call a spell checker on it and then recreates the <font SIZE="-1">XML</font> document.
+<h2>DESCRIPTION</h2>
+
+ xml_spellcheck lets you spell check the content of an <font SIZE="-1">XML</font> file. It extracts the text (the content of elements and optionally of attributes), call a spell checker on it and then recreates the <font SIZE="-1">XML</font> document.
 
 <h2>OPTIONS</h2>
 

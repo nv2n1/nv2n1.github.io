@@ -1,5 +1,4 @@
 ---
-
 title: "glabels(1)"
 name: "glabels"
 section: "1"
@@ -10,8 +9,10 @@ description: "glabels – Label and business card creation program for GNOME"
 
 <h2>NAME</h2>
 <p> glabels &#8211; Label and business card creation program for GNOME</p>
+<h2>SYNOPSIS</h2>
 <p> <code>glabels</code> [OPTIONS] [label-filename&#8230;] </p>
 <p> <code>glabels-batch</code> [OPTIONS] [label-filename&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>glabels</code> is a lightweight program for creating labels and business cards for the GNOME desktop environment. It is designed to work with various laser/ink-jet peel-off label and business card sheets that you&#8217;ll find at most office supply stores. <code>glabels</code> is pre-configured with templates for many of these products. It also provides an interactive template designer for creating new templates according to user specifications. </p>
 <p> For full documentation see the <code>gLabels</code> online help. </p>
 <p> <code>glabels-batch</code> is a command line utility to print labels previously prepared with <code>glabels.</code></p>

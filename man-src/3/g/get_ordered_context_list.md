@@ -1,5 +1,4 @@
 ---
-
 title: "get_ordered_context_list(3)"
 name: "get_ordered_context_list"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-get_ordered_context_list/"
 description: "get_ordered_context_list, get_ordered_context_list_with_level, get_default_context, get_default_context_with_level, get_default_context_with_role, get_default_context_with_rolelevel, query_user_con..."
 ---
 
+<h2 class="name">NAME</h2>
+<p> get_ordered_context_list, get_ordered_context_list_with_level, get_default_context, get_default_context_with_level, get_default_context_with_role, get_default_context_with_rolelevel, query_user_context, manual_user_enter_context, get_default_role &#8211; determine SELinux context(s) for user sessions </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/selinux.h&gt;</code><br />
  <code>#include &lt;selinux/get_context_list.h&gt;</code> </p>
 <p> <code>int get_ordered_context_list(const char *</code><i>user</i><code>, char *</code><i>fromcon</i><code>, char ***</code><i>list</i><code>);</code> </p>
@@ -19,6 +21,7 @@ description: "get_ordered_context_list, get_ordered_context_list_with_level, get
 <p> <code>int query_user_context(char **</code><i>list</i><code>, char **</code><i>newcon</i><code>);</code> </p>
 <p> <code>int manual_user_enter_context(const char *</code><i>user</i><code>, char **</code><i>newcon</i><code>);</code> </p>
 <p> <code>int get_default_type(const char *</code><i>role</i><code>, char **</code><i>type</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>get_ordered_context_list</code>() invokes the <code><a href="/docs/linux/man/3-security_compute_user/">security_compute_user</a></code>(3) function to obtain the list of contexts for the specified <i>user</i> that are reachable from the specified <i>fromcon</i> context. The function then orders the resulting list based on the global <i>/etc/selinux/{SELINUXTYPE}/contexts/default_contexts</i> file and the per-user <i>/etc/selinux/{SELINUXTYPE}/contexts/users/&lt;username&gt;</i> file if it exists. The <i>fromcon</i> parameter may be NULL to indicate that the current context should be used. The function returns the number of contexts in the list, or -1 upon errors. The list must be freed using the <code><a href="/docs/linux/man/3-freeconary/">freeconary</a></code>(3) function. </p>
 <p> <code>get_ordered_context_list_with_level</code>() invokes the <code>get_ordered_context_list</code>() function and applies the specified level. </p>
 <p> <code>get_default_context</code>() is the same as <code>get_ordered_context_list</code>() but only returns a single context which has to be freed with <code><a href="/docs/linux/man/3-freecon/">freecon</a></code>(3). </p>

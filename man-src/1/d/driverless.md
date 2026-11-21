@@ -1,5 +1,4 @@
 ---
-
 title: "driverless(1)"
 name: "driverless"
 section: "1"
@@ -8,10 +7,13 @@ url: "/docs/linux/man/1-driverless/"
 description: "driverless – PPD generator utility for driverless printing"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>driverless </code>&#8211; PPD generator utility for driverless printing </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 driverless[-h | --help | --version][-d | -v | --debug][list][_ipps._tcp][_ipp._tcp][--std - ipp - uris] | [cat driver URI] | [IPP printer URI]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>driverless</code> generates PPD files for printers which are designed for driverless IPP printing (currently IPP Everywhere, AirPrint, Mopria, and Wi-Fi-Direct printers, network printers and also IPP-over-USB printers with the help of <a href="/docs/linux/man/8-ippusbxd/">ippusbxd</a>(8)) by polling capability information from the printers via IPP. it can be either called for listing suitable printers in the network and for actually generating the PPD. It can also be called by CUPS when CUPS is listing available PPDs/drivers or creating print queues, making the setup of driverless printers with printer setup tools transparently working. </p>
 <p> driverless is placed in /usr/lib/cups/driver/ for listing available driverless-capable printers and generating PPDs for them. It should also be put in /usr/lib/cups/backend/ (preferably by a symbolic link) to list IPP device URIs for suitable printers. Printer setup tools like system-config-printer, the CUPS web interface at <a rel="nofollow" href="http://localhost:631/,">http://localhost:631/,</a> and CUPS&#8217; command line utilities can use driverless with CUPS to list available driverless-capable printers, determine their IPP device URIs and generate PPDs for them. The printers will be automatically and correctly set up for driverless printing. Note that driverless printing requires IPP communication with the printer. </p>
 <p> A second symbolic link to /usr/lib/cups/driver/driverless from /usr/bin/ allows driverless to be called directly by a user.</p>

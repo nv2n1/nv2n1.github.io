@@ -1,5 +1,4 @@
 ---
-
 title: "ares_getsock(3)"
 name: "ares_getsock"
 section: "3"
@@ -10,11 +9,13 @@ description: "ares_getsock – get socket descriptors to wait on"
 
 <h2>NAME</h2>
 <p> ares_getsock &#8211; get socket descriptors to wait on</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ares.h&gt;
 int ares_getsock(ares_channel channel, ares_socket_t *socks,
                  int numsocks);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>ares_getsock</code> function retrieves the set of socket descriptors which the calling application should wait on for reading and/or writing for the processing of name service queries pending on the name service channel identified by <i>channel</i>. Socket descriptors will be set in the socket descriptor array pointed to by <i>socks</i>. <i>numsocks</i> is the size of the given array in number of ints. </p>
 <p> This function can only return information about up to 16 sockets. If more are in use (however unlikely that is), they are simply not reported back.</p>
 <h2>RETURN VALUES</h2>

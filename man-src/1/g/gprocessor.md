@@ -1,5 +1,4 @@
 ---
-
 title: "gprocessor(1)"
 name: "gprocessor"
 section: "1"
@@ -17,7 +16,9 @@ url: "/docs/linux/man/1-gprocessor/"
 gprocessor (options)... (file)...
 </pre>
 
-Gprocessor is a debugging tool for SWF files, a companion to Gnash. It is most often used for debugging and running testcases, as it is equivalant to running Gnash with no graphic output. This tool is primarily used by Gnash developers, or anyone who wishes to run the Gnash test cases.
+<h2>DESCRIPTION</h2>
+
+ Gprocessor is a debugging tool for SWF files, a companion to Gnash. It is most often used for debugging and running testcases, as it is equivalant to running Gnash with no graphic output. This tool is primarily used by Gnash developers, or anyone who wishes to run the Gnash test cases.
 <dl>
 <dt>-h
 </dt><dd> Print usage info.

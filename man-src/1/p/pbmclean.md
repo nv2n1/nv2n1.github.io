@@ -1,5 +1,4 @@
 ---
-
 title: "pbmclean(1)"
 name: "pbmclean"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-pbmclean/"
 description: "pbmclean – flip isolated pixels in portable bitmap"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pbmclean &#8211; flip isolated pixels in portable bitmap</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pbmclean </code> [<code>-minneighbors=</code><i>N</i>] [<code>-black</code>|<code>-white</code>] [<i>pbmfile</i>] </p>
 <p> You can use the minimum unique abbreviation of the options. You can use two hyphens instead of one. You can separate an option name from its value with white space instead of an equals sign. </p>
 <p> Before December 2001, <code>pbmclean</code> accepted <code>&#8211;</code><i>N</i> instead of <code>-minneighbors</code>. </p>
+<h2>DESCRIPTION</h2>
 <p> <code>pbmclean</code> cleans up a PBM image of random specs. It reads a PBM image as input and outputs a PBM that is the same as the input except with every pixel which has less than <i>N</i> identical neighbours inverted. </p>
 <p> The default for <i>N</i> is 1 &#8211; only completely isolated pixels are flipped. </p>
 <p> (A value of <i>N</i> greater than 8 generates a completely inverted image (but use <code>pnminvert</code> to do that) &#8212; or a completely white or completely black image with the <code>-black</code> or <code>-white</code> option). </p>

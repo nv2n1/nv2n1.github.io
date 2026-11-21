@@ -1,5 +1,4 @@
 ---
-
 title: "setgid32(2)"
 name: "setgid32"
 section: "2"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/2-setgid32/"
 description: "setgid – set group identity"
 ---
 
+<h2 class="name">NAME</h2>
+<p> setgid &#8211; set group identity </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code><br />
  <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int setgid(gid_t </code><i>gid</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>setgid</code>() sets the effective group ID of the calling process. If the calling process is privileged (more precisely: has the <code>CAP_SETGID</code> capability in its user namespace), the real GID and saved set-group-ID are also set. </p>
 <p> Under Linux, <code>setgid</code>() is implemented like the POSIX version with the <code>_POSIX_SAVED_IDS</code> feature. This allows a set-group-ID program that is not set-user-ID-root to drop all of its group privileges, do some un-privileged work, and then reengage the original effective group ID in a secure manner.</p>
 <h2>RETURN VALUE</h2>

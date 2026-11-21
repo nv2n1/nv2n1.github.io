@@ -1,5 +1,4 @@
 ---
-
 title: "math(1)"
 name: "math"
 section: "1"
@@ -7,7 +6,10 @@ letter: "m"
 url: "/docs/linux/man/1-math/"
 ---
 
-math - Perform mathematics calculations
+<h2 class="name">NAME</h2>
+ 
+
+ math - Perform mathematics calculations
 
 <h3>Synopsis</h3>
 

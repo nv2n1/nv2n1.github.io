@@ -1,5 +1,4 @@
 ---
-
 title: "mairix(1)"
 name: "mairix"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-mairix/"
 description: "mairix – index and search mail folders"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mairix &#8211; index and search mail folders </p>
+<h2>SYNOPSIS</h2>
 <h3>Indexing</h3>
 <p> <code>mairix</code> [ <code>-v</code>|<code>&#8211;verbose</code> ] [ <code>-p</code>|<code>&#8211;purge</code> ] [ <code>-f</code>|<code>&#8211;rcfile</code> <i>mairixrc</i> ] [ <code>-F</code>|<code>&#8211;fast-index</code> ] </p>
 <h3>Searching</h3>
@@ -16,6 +18,7 @@ description: "mairix – index and search mail folders"
 <p> <code>mairix</code> [ <code>-h</code>|<code>&#8211;help</code> ] </p>
 <p> <code>mairix</code> [ <code>-V</code>|<code>&#8211;version</code> ] </p>
 <p> <code>mairix</code> [ <code>-d</code>|<code>&#8211;dump</code> ] </p>
+<h2>DESCRIPTION</h2>
 <p> <i>mairix</i> indexes and searches a collection of email messages. The folders containing the messages for indexing are defined in the configuration file. The indexing stage produces a database file. The database file provides rapid access to details of the indexed messages during searching operations. A search normally produces a folder (so-called <code>mfolder</code>) containing the matched messages. However, a raw mode (<code>-r</code>) exists which just lists the matched messages instead. </p>
 <p> It can operate with the following folder types</p>
 <dl>

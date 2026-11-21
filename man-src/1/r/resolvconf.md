@@ -1,5 +1,4 @@
 ---
-
 title: "resolvconf(1)"
 name: "resolvconf"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-resolvconf/"
 description: "resolvectl, resolvconf – Resolve domain names, IPV4 and IPv6 addresses, DNS resource records, and services; introspect and reconfigure the DNS resolver"
 ---
 
+<h2 class="name">NAME</h2>
+<p> resolvectl, resolvconf &#8211; Resolve domain names, IPV4 and IPv6 addresses, DNS resource records, and services; introspect and reconfigure the DNS resolver </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>resolvectl</code> [OPTIONS&#8230;] {COMMAND} [NAME&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>resolvectl</code></p>
 <dd>may be used to resolve domain names, IPv4 and IPv6 addresses, DNS resource records and services with the <code><a href="/docs/linux/man/8-systemd-resolved-service/">systemd-resolved.service</a></code>(8) resolver service. By default, the specified list of parameters will be resolved as hostnames, retrieving their IPv4 and IPv6 addresses. If the parameters specified are formatted as IPv4 or IPv6 operation the reverse operation is done, and a hostname is retrieved for the specified addresses. </dd>
 <p> The program&#8217;s output contains information about the protocol used for the look-up and on which network interface the data was discovered. It also contains information on whether the information could be authenticated. All data for which local DNSSEC validation succeeds is considered authenticated. Moreover all data originating from local, trusted sources is also reported authenticated, including resolution of the local host name, the &quot;localhost&quot; hostname or all data from /etc/hosts.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "texworks(1)"
 name: "texworks"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-texworks/"
 description: "texworks – a simple TeX front-end program"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>texworks</code> &#8211; a simple TeX front-end program</p>
+<h2>SYNOPSIS</h2>
 <p> <code>texworks</code> [OPTIONS] [FILES] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>TeXworks</code> is an environment for authoring TeX (LaTeX, ConTeXt, etc) documents, with a Unicode-based, TeX-aware editor, integrated PDF viewer, and a clean, simple interface accessible to casual and non-technical users. </p>
 <p> It is inspired by Dick Koch&#8217;s award-winning TeXShop program for Mac OS X, which has made quality typesetting through TeX accessible to a wider community of users, without a technical or intimidating face. The goal of <code>TeXworks</code> is to deliver a similarly integrated, easy-to-use environment for users on other platforms, especially GNU/Linux and Windows. </p>
 <h2>OPTIONS</h2>

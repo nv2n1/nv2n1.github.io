@@ -1,5 +1,4 @@
 ---
-
 title: "deluged(1)"
 name: "deluged"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-deluged/"
 description: "deluged – a bittorrent client daemon"
 ---
 
+<h2 class="name">NAME</h2>
+<p> deluged &#8211; a bittorrent client daemon</p>
+<h2>SYNOPSIS</h2>
 <p> <code>deluged [options]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Deluge utilizes a client/server model, with &#8216;deluged&#8217; being the daemon process and &#8216;deluge&#8217; being used to launch a user-interface. </p>
 <p> By default, &#8216;deluged&#8217; will run as a daemon, to prevent this you can run deluged with the -d option. This option is useful for running deluged with the start-stop-daemon. </p>
 <h2>OPTIONS</h2>

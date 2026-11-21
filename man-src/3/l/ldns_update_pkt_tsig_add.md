@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_update_pkt_tsig_add(3)"
 name: "ldns_update_pkt_tsig_add"
 section: "3"
@@ -10,10 +9,12 @@ description: "ldns_update_pkt_tsig_add"
 
 <h2>NAME</h2>
 <p> ldns_update_pkt_tsig_add </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_status ldns_update_pkt_tsig_add(ldns_pkt *p, ldns_resolver *r); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_update_pkt_tsig_add</i>()</dt>
 <dd>add tsig credentials to a packet from a resolver .br <code>p</code>: packet to copy to .br <code>r</code>: resolver to copy from </dd>

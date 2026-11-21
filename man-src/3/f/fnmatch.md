@@ -1,5 +1,4 @@
 ---
-
 title: "fnmatch(3)"
 name: "fnmatch"
 section: "3"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/3-fnmatch/"
 description: "fnmatch – match filename or pathname"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fnmatch &#8211; match filename or pathname </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;fnmatch.h&gt;
 int fnmatch(const char *pattern, const char *string, int flags);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>fnmatch</code>() function checks whether the <i>string</i> argument matches the <i>pattern</i> argument, which is a shell wildcard pattern (see <code><a href="/docs/linux/man/7-glob/">glob</a></code>(7)). </p>
 <p> The <i>flags</i> argument modifies the behavior; it is the bitwise OR of zero or more of the following flags:</p>
 <dl>

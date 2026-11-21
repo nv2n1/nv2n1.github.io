@@ -1,5 +1,4 @@
 ---
-
 title: "pidfd_send_signal(2)"
 name: "pidfd_send_signal"
 section: "2"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/2-pidfd_send_signal/"
 description: "pidfd_send_signal – send a signal to a process specified by a file descriptor"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pidfd_send_signal &#8211; send a signal to a process specified by a file descriptor </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;signal.h&gt;
 int pidfd_send_signal(int pidfd, int sig, siginfo_t *info,
                       unsigned int flags);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>pidfd_send_signal</code>() system call sends the signal <i>sig</i> to the target process referred to by <i>pidfd</i>, a PID file descriptor that refers to a process. </p>
 <p> If the <i>info</i> argument points to a <i>siginfo_t</i> buffer, that buffer should be populated as described in <code><a href="/docs/linux/man/2-rt_sigqueueinfo/">rt_sigqueueinfo</a></code>(2). </p>
 <p> If the <i>info</i> argument is a NULL pointer, this is equivalent to specifying a pointer to a <i>siginfo_t</i> buffer whose fields match the values that are implicitly supplied when a signal is sent using <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2): </p>

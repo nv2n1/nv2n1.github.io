@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-libtalloc_context/"
 description: "libtalloc_context – Chapter 1: Talloc context"
 ---
 
+<h2 class="name">NAME</h2>
+<p> libtalloc_context &#8211; Chapter 1: Talloc context</p>
 <h2>Talloc context</h2>
 <p> The talloc context is the most important part of this library and is responsible for every single feature of this memory allocator. It is a logical unit which represents a memory space managed by talloc. </p>
 <p> From the programmer&#8217;s point of view, the talloc context is completely equivalent to a pointer that would be returned by the memory routines from the C standard library. This means that every context that is returned from the talloc library can be used directly in functions that do not use talloc internally. For example we can do the following: </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "acl_get_file(3)"
 name: "acl_get_file"
 section: "3"
@@ -8,10 +7,13 @@ url: "/docs/linux/man/3-acl_get_file/"
 description: "acl_get_file – get an ACL by filename"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>acl_get_file</code> &#8211; get an ACL by filename </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>
+<h2>SYNOPSIS</h2>
 <p> In sys/types.h In sys/acl.h Ft acl_t Fn acl_get_file const char *path_p acl_type_t type</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn acl_get_file function retrieves the access ACL associated with a file or directory, or the default ACL associated with a directory. The pathname for the file or directory is pointed to by the argument <i>path_p</i> The ACL is placed into working storage and Fn acl_get_file returns a pointer to that storage. </p>
 <p> In order to read an ACL from an object, a process must have read access to the object&#8217;s attributes. </p>
 <p> The value of the argument <i>type</i> is used to indicate whether the access ACL or the default ACL associated with <i>path_p</i> is returned. If <i>type</i> is ACL_TYPE_ACCESS, the access ACL of <i>path_p</i> is returned. If <i>type</i> is ACL_TYPE_DEFAULT, the default ACL of <i>path_p</i> is returned. If <i>type</i> is ACL_TYPE_DEFAULT and no default ACL is associated with the directory <i>path_p</i> then an ACL containing zero ACL entries is returned. If <i>type</i> specifies a type of ACL that cannot be associated with <i>path_p</i> then the function fails. </p>

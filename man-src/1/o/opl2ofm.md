@@ -1,5 +1,4 @@
 ---
-
 title: "opl2ofm(1)"
 name: "opl2ofm"
 section: "1"
@@ -10,7 +9,9 @@ description: "opl2ofm – convert Omega and TeX property-list files to font-metr
 
 <h2>NAME</h2>
 <p> opl2ofm &#8211; convert Omega and TeX property-list files to font-metric files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>opl2ofm</code> [<i>OPTIONS</i>] <i>OPLFILE</i>[<i></i><code>.opl</code>] [<i>OFMFILE</i>[<i></i><code>.ofm</code>]] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>opl2ofm</code> translates a property-list format file, <i>OPLFILE</i>, into the binary Omega Font Metric format. The program writes to standard output (by default) or to a file specified as <i>OFMFILE</i>. </p>
 <p> The program also works with TeX PL files, producing TeX TFM files. (<code>opl2ofm</code> is based on the WEB source code for <code><a href="/docs/linux/man/1-pltotf/">pltotf</a></code>(1).) </p>
 <h2>OPTIONS</h2>

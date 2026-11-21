@@ -1,5 +1,4 @@
 ---
-
 title: "sgelsy(3)"
 name: "sgelsy"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-sgelsy/"
 description: "sgelsy.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sgelsy.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sgelsy</code> (M, N, NRHS, A, LDA, B, LDB, JPVT, RCOND, RANK, WORK, LWORK, INFO)<br />
  <i></i><code> SGELSY solves overdetermined or underdetermined systems for GE matrices</code></p>

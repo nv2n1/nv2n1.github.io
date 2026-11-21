@@ -1,5 +1,4 @@
 ---
-
 title: "infnan(3)"
 name: "infnan"
 section: "3"
@@ -10,11 +9,13 @@ description: "infnan – deal with infinite or not-a-number (NaN) result"
 
 <h2>NAME</h2>
 <p> infnan &#8211; deal with infinite or not-a-number (NaN) result</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;
 double infnan(int error);
 </code></pre>
 <p> Link with <i>-lm</i>.</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>infnan</code>() function returns a suitable value for infinity and &quot;not-a-number&quot; (NaN) results. The value of <i>error</i> can be <code>ERANGE</code> to represent infinity or anything else to represent NaN. <i>errno</i> is also set.</p>
 <h2>RETURN VALUE</h2>
 <p> If <i>error</i> is <code>ERANGE</code> (Infinity), <code>HUGE_VAL</code> is returned. </p>

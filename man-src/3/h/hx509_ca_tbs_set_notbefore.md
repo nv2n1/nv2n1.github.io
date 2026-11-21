@@ -8,6 +8,8 @@ url: "/docs/linux/man/3-hx509_ca_tbs_set_notbefore/"
 
 
  </p>
+<h2 class="name">NAME</h2>
+<p> hx509 CA functions &#8211; </p>
 <h3>Functions</h3>
 <p> <br />
  int <code>hx509_ca_tbs_init</code> (hx509_context context, hx509_ca_tbs *tbs) <br />

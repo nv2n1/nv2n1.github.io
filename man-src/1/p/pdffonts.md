@@ -1,5 +1,4 @@
 ---
-
 title: "pdffonts(1)"
 name: "pdffonts"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pdffonts/"
 description: "pdffonts – Portable Document Format (PDF) font analyzer (version 3.03)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pdffonts &#8211; Portable Document Format (PDF) font analyzer (version 3.03) </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pdffonts</code> [options] [<i>PDF-file</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Pdffonts</code> lists the fonts used in a Portable Document Format (PDF) file along with various information for each font. </p>
 <p> If <i>PDF-file</i> is &#8216;-&#8216;, it reads the PDF file from stdin. </p>
 <p> The following information is listed for each font:</p>

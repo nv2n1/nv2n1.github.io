@@ -1,5 +1,4 @@
 ---
-
 title: "tiptop(1)"
 name: "tiptop"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-tiptop/"
 description: "tiptop – display hardware performance counters for Linux tasks"
 ---
 
+<h2 class="name">NAME</h2>
+<p> tiptop &#8211; display hardware performance counters for Linux tasks</p>
+<h2>SYNOPSIS</h2>
 <p> <code>tiptop</code> [OPTION] </p>
 <p> <code>tiptop</code> [OPTION] &#8212; command (EXPERIMENTAL) </p>
 <p> <code>ptiptop</code> PATTERN [OPTIONS] </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>tiptop</code> program provides a dynamic real-time view of the tasks running in the system. tiptop is very similar to top (1), but the information displayed comes from hardware counters. </p>
 <p> tiptop has two running <i>modes</i>: live-mode and batch-mode. In both modes, the system is periodically queried for the values of hardware counters, and various ratios are printed for each task. In live-mode, the display is regularly updated with new values at constant time intervals. In batch-mode, the same information is emitted to stdout. Batch-mode is appropriate for saving to a file or for further processing. No interaction is possible in batch-mode. </p>
 <p> Unless tiptop is run by root, or the executable is setuid-root, a user can only monitor the tasks it owns. </p>

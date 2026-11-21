@@ -1,5 +1,4 @@
 ---
-
 title: "itaka(1)"
 name: "itaka"
 section: "1"
@@ -10,7 +9,9 @@ description: "itaka — On-demand screenshooting server"
 
 <h2>NAME</h2>
 <p> itaka &#8212; On-demand screenshooting server</p>
+<h2>SYNOPSIS</h2>
 <p> <code>itaka</code></p>
+<h2>DESCRIPTION</h2>
 <p> Itaka is a on-demand screenshooting server based on the HTTP protocol. It integrates a specifically coded server to take screenshots on-demand when your machine is queried through a remote browser. It has a GTK GUI for client notification.</p>
 <h2>OPTIONS</h2>
 <p> Itaka follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>

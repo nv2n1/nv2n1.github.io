@@ -1,5 +1,4 @@
 ---
-
 title: "test(1)"
 name: "test"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-test/"
 description: "test – check file types and compare values"
 ---
 
+<h2 class="name">NAME</h2>
+<p> test &#8211; check file types and compare values </p>
+<h2>SYNOPSIS</h2>
 <p> <code>test</code> <i>EXPRESSION</i><br />
  <code>test</code><br />
  <code>[</code> <i>EXPRESSION</i> <code>]</code><br />
  <code>[ ]</code><br />
  <code>[</code> <i>OPTION</i></p>
+<h2>DESCRIPTION</h2>
 <p> Exit with the status determined by EXPRESSION.</p>
 <dl>
 <dt><code>&#8211;help</code></dt>

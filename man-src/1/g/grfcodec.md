@@ -1,5 +1,4 @@
 ---
-
 title: "grfcodec(1)"
 name: "grfcodec"
 section: "1"
@@ -10,6 +9,7 @@ description: "GRFCodec – A tool to convert a GRF file into graphics files and 
 
 <h2>NAME</h2>
 <p> <code>GRFCodec</code> &#8211; A tool to convert a GRF file into graphics files and meta data, and vice versa.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>grfcodec</code> [-<code>sv</code> ] [-<code>d | e</code> ] [options] <i>GRF-file</i> [Directory] </p>
 <p> &lt;GRF-File&gt; denotes the .GRF file you want to work on, e.g. TRG1.GRF </p>
 <p> &lt;Directory&gt; is where the individual sprites should be saved. If omitted, they will default to a subdirectory called sprites/.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ibv_alloc_td(3)"
 name: "ibv_alloc_td"
 section: "3"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/3-ibv_alloc_td/"
 description: "ibv_alloc_td(), ibv_dealloc_td() – allocate and deallocate thread domain object"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ibv_alloc_td(), ibv_dealloc_td() &#8211; allocate and deallocate thread domain object </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 struct ibv_td *ibv_alloc_td(struct ibv_context *context,
                             struct ibv_td_init_attr *init_attr);
 int ibv_dealloc_td(struct ibv_td *td);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>ibv_alloc_td()</code> allocates a thread domain object for the RDMA device context <i>context</i>. </p>
 <p> The thread domain object defines how the verbs libraries and provider will use locks and additional hardware capabilities to achieve best performance for handling multi-thread or single-thread protection. An application assigns verbs resources to a thread domain when it creates a verbs object. </p>
 <p> If the <i>ibv_td</i> object is specified then any objects created under this thread domain will disable internal locking designed to protect against concurrent access to that object from multiple user threads. By default all verbs objects are safe for multi-threaded access, whether or not a thread domain is specified. </p>

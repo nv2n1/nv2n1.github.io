@@ -1,5 +1,4 @@
 ---
-
 title: "xclock(1)"
 name: "xclock"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-xclock/"
 description: "xclock – analog / digital clock for X"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xclock &#8211; analog / digital clock for X </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xclock</code> [ <code>-help</code> ] [ <code>-analog</code> | <code>-digital</code> ] [ <code>-brief</code> ] [ <code>-chime</code> ] [ <code>-hd</code> <i>color</i> ] [ <code>-hl</code> <i>color</i> ] [ <code>-update</code> <i>seconds</i> ] [ <code>-strftime</code> <i>format</i> ] [ <code>-twelve</code> | <code>-twentyfour</code> | <code>-utime</code> ] [ <code>-padding</code> <i>number</i> ] [ <code>-norender</code> ] [ <code>-render</code> ] [ <code>-sharp</code> ] [ <code>-face</code> <i>pattern</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> The <i>xclock</i> program displays the time in analog or digital form. The time is continuously updated at a frequency which may be specified by the user.</p>
 <h2>OPTIONS</h2>
 <p> <i>Xclock</i> accepts all of the standard X Toolkit command line options along with the additional options listed below:</p>

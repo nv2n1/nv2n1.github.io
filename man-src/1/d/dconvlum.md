@@ -1,5 +1,4 @@
 ---
-
 title: "dconvlum(1)"
 name: "dconvlum"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-dconvlum/"
 description: "dconvlum – Convert VeriLUM files to DCMTK display files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dconvlum &#8211; Convert VeriLUM files to DCMTK display files </p>
+<h2>SYNOPSIS</h2>
 <pre>
 dconvlum in-file out-file [ambient]
 </pre>
+<h2>DESCRIPTION</h2>
 <p> Command line program that converts VeriLUM file with characteristic curve data (<i>CCx_xx.dat</i>) to a format used for the Barten transformation in this toolkit. VeriLUM is a calibration package from ImageSmiths consisting of a photometer (with serial RS232 connector) and a Windows NT software.</p>
 <h2>PARAMETERS</h2>
 <pre>

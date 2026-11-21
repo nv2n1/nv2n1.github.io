@@ -1,5 +1,4 @@
 ---
-
 title: "cache-clean(1)"
 name: "cache-clean"
 section: "1"
@@ -10,8 +9,10 @@ description: "cache-clean – Administration tool for the A-REX cache."
 
 <h2>NAME</h2>
 <p> cache-clean &#8211; Administration tool for the A-REX cache. </p>
+<h2>SYNOPSIS</h2>
 <p> cache-clean [-h] [-s] [-S] [-m NN -M NN] [-E N] [-D debug_level]<br />
 &nbsp;<wbr>&nbsp;<wbr>[-f space_command]&nbsp;<wbr>[&nbsp;<wbr>-c&nbsp;<wbr>&lt;arex_config_file&gt;&nbsp;<wbr>|&nbsp;<wbr>&lt;dir1&gt;&nbsp;<wbr>[&lt;dir2&gt;&nbsp;<wbr>[&#8230;]]&nbsp;<wbr>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>cache-clean</code> is a tool for administrators of ARC server installations to safely remove A-REX cache data and to provide an overview of the contents of the cache. It is used by the A-REX to automatically manage cache contents. </p>
 <p> There are two modes of operation &#8211; printing statistics and deleting files. If <code>-s</code> is used, then statistics are printed on each cache. If <code>-m</code> and <code>-M</code> are used then files in each cache are deleted if the space used by the cache on the file system is more than that given by <code>-M,</code> in the order of least recently accessed, until the space used by the cache is equal to what is specified by <code>-m.</code> If <code>-E</code> is used, then all files accessed less recently than the given time are deleted. <code>-E</code> can be used in combination with <code>-m</code> and <code>-M</code> but deleting files using <code>-E</code> is carried out first. If after this the cache used space is still more than that given by <code>-M</code> then cleaning according to those options is performed. </p>
 <p> If the cache is on a file system shared with other data then <code>-S</code> should be specified so that the space used by the cache is calculated. Otherwise all the used space on the file system is assumed to be for the cache. Using <code>-S</code> is slower so should only be used when the cache is shared. </p>

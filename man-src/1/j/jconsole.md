@@ -1,5 +1,4 @@
 ---
-
 title: "jconsole(1)"
 name: "jconsole"
 section: "1"
@@ -10,6 +9,7 @@ description: "jconsole – Starts a graphical console that lets you monitor and 
 
 <h2>NAME</h2>
 <p> jconsole &#8211; Starts a graphical console that lets you monitor and manage Java applications.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 jconsole[options][connection...]
 </code></pre>
@@ -20,6 +20,7 @@ jconsole[options][connection...]
 <dd> The <code>pid</code> value is the process ID of a local Java Virtual Machine (JVM). The JVM must be running with the same user ID as the user ID running the <code>jconsole</code> command.The <code>host:port</code> values are the name of the host system on which the JVM is running, and the port number specified by the system property <code>com.sun.management.jmxremote.port</code> when the JVM was started.The <code>jmxUrl</code> value is the address of the JMX agent to be connected to as described in JMXServiceURL. </dd>
 <p> For more information about the <code>connection</code> parameter, see Monitoring and Management Using JMX Technology at <a rel="nofollow" href="http://docs.oracle.com/javase/8/docs/technotes/guides/management/agent.html">http://docs.oracle.com/javase/8/docs/technotes/guides/management/agent.html</a> </p>
 <p> See also the <code>JMXServiceURL</code> class description at <a rel="nofollow" href="http://docs.oracle.com/javase/8/docs/api/javax/management/remote/JMXServiceURL.html">http://docs.oracle.com/javase/8/docs/api/javax/management/remote/JMXServiceURL.html</a></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code>jconsole</code> command starts a graphical console tool that lets you monitor and manage Java applications and virtual machines on a local or remote machine. </p>
 <p> On Windows, the <code>jconsole</code> command does not associate with a console window. It does, however, display a dialog box with error information when the <code>jconsole</code> command fails.</p>
 <h2>OPTIONS</h2>

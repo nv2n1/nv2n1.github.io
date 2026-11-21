@@ -1,5 +1,4 @@
 ---
-
 title: "pmempool-create(1)"
 name: "pmempool-create"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmempool-create – Create Persistent Memory Pool of specified typ
 
 <h2>NAME</h2>
 <p> pmempool-create &#8211; Create Persistent Memory Pool of specified type</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pmempool create</code> [&lt;options&gt;] [&lt;type&gt;] [&lt;bsize&gt;] &lt;file&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>pmempool</code> invoked with <code>create</code> command creates a pool file of specified type. Depending on a pool type it is possible to provide more properties of pool. </p>
 <p> Valid pool types are: <code>blk</code>, <code>log</code> and <code>obj</code> which stands for <i>pmem</i>blk<i>,</i> <i>pmem</i>log and <i>pmem</i>obj pools respectively. By default the pool file is created with <i>minimum</i> allowed size for specified pool type. The minimum sizes for <code>blk</code>, <code>log</code> and <code>obj</code> pool types are <code>PMEMBLK_MIN_POOL</code>, <code>PMEMLOG_MIN_POOL</code> and <code>PMEMOBJ_MIN_POOL</code> respectively. See <code>libpmemblk</code>(3)<code>,</code> <code>libpmemlog</code>(3) and <code>libpmemobj</code>(3) for details. </p>
 <p> For <i>pmem</i>blk pool type block size <code>&lt;bsize&gt;</code> is a required argument. </p>

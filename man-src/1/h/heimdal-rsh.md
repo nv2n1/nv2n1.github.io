@@ -1,5 +1,4 @@
 ---
-
 title: "heimdal-rsh(1)"
 name: "heimdal-rsh"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-heimdal-rsh/"
 description: "rsh – remote shell"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>rsh</code> &#8211; remote shell </p>
+<h2>SYNOPSIS</h2>
 <p> [-<code>45FGKdefnuxz</code> ] [-<code>U string </code> ] [-<code>p </code><i>port</i> ] [-<code>l </code><i>username</i> ] [-<code>P </code><i>N|O</i> ] <i>host [command]</i></p>
+<h2>DESCRIPTION</h2>
 <p> authenticates to the rshd(8) daemon on the remote <i>host</i> and then executes the specified <i>command</i> </p>
 <p> copies its standard input to the remote command, and the standard output and error of the remote command to its own. </p>
 <p> Valid options are:</p>

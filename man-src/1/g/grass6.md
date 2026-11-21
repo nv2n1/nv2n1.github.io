@@ -1,5 +1,4 @@
 ---
-
 title: "grass6(1)"
 name: "grass6"
 section: "1"
@@ -10,7 +9,9 @@ description: "grass63 – The GRASS startup program"
 
 <h2>NAME</h2>
 <p> <i></i><code>grass63</code> &#8211; The GRASS startup program </p>
+<h2>SYNOPSIS</h2>
 <p> <code>grass63</code> [<code>&#8211;</code>] [<code>-v</code>] [<code>-h | -help | &#8211;help</code>] [<code>-text | -gui | -oldgui]</code>] [[[<code>/</code>]<code>/</code>] ] </p>
+<h2>DESCRIPTION</h2>
 <p> This program is used to start GRASS. It will parse the command line arguments and then initialize GRASS for the user. Since GRASS programs require a specific environment, this program must be called before any other GRASS program can run. The command line arguments are optional and provide the user with a method to indicate the desired user interface, as well as the desired mapset to work on.</p>
 <h2>FEATURES</h2>
 <p> The GRASS program will save both the desired user interface and mapset. Thus, the next time the user runs GRASS, typing <i>grass63</i> (without any options) will start grass with the previous settings for the user interface and mapset. </p>

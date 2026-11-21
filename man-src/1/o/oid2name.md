@@ -1,5 +1,4 @@
 ---
-
 title: "oid2name(1)"
 name: "oid2name"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-oid2name/"
 description: "oid2name – resolve OIDs and file nodes in a PostgreSQL data directory"
 ---
 
+<h2 class="name">NAME</h2>
+<p> oid2name &#8211; resolve OIDs and file nodes in a PostgreSQL data directory </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>oid2name</code> [<i>option</i>&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>oid2name is a utility program that helps administrators to examine the file structure used by PostgreSQL. To make use of it, you need to be familiar with the database file structure, which is described in Chapter 56, Database Physical Storage, in the documentation. </dd>
 <dl>
 <dt>

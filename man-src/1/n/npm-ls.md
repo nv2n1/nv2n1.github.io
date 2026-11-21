@@ -1,5 +1,4 @@
 ---
-
 title: "npm-ls(1)"
 name: "npm-ls"
 section: "1"
@@ -8,6 +7,7 @@ url: "/docs/linux/man/1-npm-ls/"
 description: "npm-ls – List installed packages"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>npm-ls</code> &#8211; List installed packages </p>
 <h3>Synopsis</h3>
 <dl>

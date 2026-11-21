@@ -1,5 +1,4 @@
 ---
-
 title: "lilypond-invoke-editor(1)"
 name: "lilypond-invoke-editor"
 section: "1"
@@ -10,7 +9,9 @@ description: "lilypond-invoke-editor – manual page for lilypond-invoke-editor 
 
 <h2>NAME</h2>
 <p> lilypond-invoke-editor &#8211; manual page for lilypond-invoke-editor 2.12.2</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lilypond-invoke-editor</code> [<i>textedit://</i>]<i>FILE:LINE:CHAR:COLUMN</i></p>
+<h2>DESCRIPTION</h2>
 <p> lilypond-invoke-editor (GNU LilyPond) 2.12.2 </p>
 <p> Visit a file and position the cursor.</p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "urxvt-mlc(1)"
 name: "urxvt-mlc"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-urxvt-mlc/"
 description: "urxvt-mlc – control the urxvt-mld daemon"
 ---
 
+<h2 class="name">NAME</h2>
+<p> urxvt-mlc &#8211; control the urxvt-mld daemon </p>
+<h2>SYNOPSIS</h2>
 <p> <code>urxvt-mlc</code> [same options as for urxvt-ml]</p>
+<h2>DESCRIPTION</h2>
 <p> This manpage describes the <code>urxvt-mlc</code> client program. It connects to the <code>urxvt-mld</code> daemon and requests a new terminal window. It takes the same arguments as the <code>urxvt-ml</code> program. The environment will also be respected. Currently, it always returns immediately after contacting the daemon.</p>
 <h2>OPTIONS</h2>
 <p> If the first option is <code>-k</code>, <code>urxvt-mlc</code> tries to kill the daemon process and returns. </p>

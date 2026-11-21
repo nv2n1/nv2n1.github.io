@@ -1,5 +1,4 @@
 ---
-
 title: "efence(3)"
 name: "efence"
 section: "3"
@@ -10,6 +9,7 @@ description: "efence – Electric Fence Malloc Debugger"
 
 <h2>NAME</h2>
 <p> efence &#8211; Electric Fence Malloc Debugger</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;
 </code></pre>
@@ -36,6 +36,7 @@ void *valloc(size_t size);
 <pre>
 <code>extern int EF_FILL;
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <i>Electric Fence</i> helps you detect two common programming bugs: software that overruns the boundaries of a malloc() memory allocation, and software that touches a memory allocation that has been released by free(). Unlike other malloc() debuggers, Electric Fence will detect <i>read</i> accesses as well as writes, and it will pinpoint the exact instruction that causes an error. It has been in use at Pixar since 1987, and at many other sites for years. </p>
 <p> Electric Fence uses the virtual memory hardware of your computer to place an inaccessible memory page immediately after (or before, at the user&#8217;s option) each memory allocation. When software reads or writes this inaccessible page, the hardware issues a segmentation fault, stopping the program at the offending instruction. It is then trivial to find the erroneous statement using your favorite debugger. In a similar manner, memory that has been released by free() is made inaccessible, and any code that touches it will get a segmentation fault. </p>
 <p> Simply linking your application with libefence.a will allow you to detect most, but not all, malloc buffer overruns and accesses of free memory. If you want to be reasonably sure that you&#8217;ve found <i>all</i> bugs of this type, you&#8217;ll have to read and understand the rest of this man page.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ohdomainlist(1)"
 name: "ohdomainlist"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-ohdomainlist/"
 description: "ohdomainlist – A openhpi sample application that shows information about domains on the level of the openhpi base library."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ohdomainlist &#8211; A openhpi sample application that shows information about domains on the level of the openhpi base library. </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 hpidomain[-h - V - X] hpidomain[--help][--verbose][--debug]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> ohdomainlist displays the list of domains known to the openhpi base library. In verbose mode, it displays more information about those domains. Clients can only access domains known to the library. </p>
 <p> Please note that ohdomainlist can only display the domains defined in the openhpiclient.conf file as specified in the <font SIZE="-1">OPENHPICLIEN_CONF</font> environment variable. Dynamic changes of the domain list done using the oHpiDomainAdd and oHpiDomainAddById <font SIZE="-1">API</font> are valid only for the life-time of the client library. </p>
 <p> If no domain or host is selected, ohdomainlist lists the domains as specified in the openhpiclient.conf file.</p>

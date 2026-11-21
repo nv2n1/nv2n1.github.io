@@ -1,5 +1,4 @@
 ---
-
 title: "x_update(1)"
 name: "x_update"
 section: "1"
@@ -10,7 +9,9 @@ description: "x_update – Archiving of Cross-Over Information"
 
 <h2>NAME</h2>
 <p> <code>x_update</code> &#8211; Archiving of Cross-Over Information</p>
+<h2>SYNOPSIS</h2>
 <p> <code>x_update</code> <i>cross-overfile</i> [ <code>-X</code><i>xbase</i> ] [ <code>-L</code><i>legbase</i> ] [ <code>-V</code> ] [ <code>-W</code><i>max</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>x_update</code> reads the ASCII file produced by <code>x_over</code> and writes the information to the database files <i>xx_base.b</i> and <i>xx_legs.b</i> (unless other filenames are specified on the command line) using a compact, binary format. The options recognized are:</p>
 <dl>
 <dt><code>-X</code></dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "qjackctl(1)"
 name: "qjackctl"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-qjackctl/"
 description: "qjackctl – User interface for controlling JACK (Jack Audio Connection Kit)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> qjackctl &#8211; User interface for controlling JACK (Jack Audio Connection Kit) </p>
+<h2>SYNOPSIS</h2>
 <p> <code>qjackctl </code> [options]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>qjackctl</code> command. This manual page was written for the Debian distribution because the original program does not have a manual page. </p>
 <p> <code>qjackctl </code> is used for controlling the Jack Audio Connection Kit (JACK) and as a patchbay for ALSA MIDI devices. Qjackctl also has support for the JACK transport control protocol, so you can use it to start and stop the JACK transport. Once you start qjackctl, you get presented with a single GUI window, the buttons are self-explanatory and have tooltips. </p>
 <h2>OPTIONS</h2>

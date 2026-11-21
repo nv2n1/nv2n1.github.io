@@ -1,5 +1,4 @@
 ---
-
 title: "plackup(1)"
 name: "plackup"
 section: "1"
@@ -7,9 +6,14 @@ letter: "p"
 url: "/docs/linux/man/1-plackup/"
 ---
 
-plackup - Run PSGI application with Plack servers 
+<h2 class="name">NAME</h2>
+ 
 
-<pre><code>
+ plackup - Run PSGI application with Plack servers 
+
+<h2>SYNOPSIS</h2>
+
+ <pre><code>
 #read your app from app.psgi file
 plackup
 #choose.psgi file from ARGV[0](or with - a option)
@@ -24,7 +28,9 @@ plackup
     s FCGI-- port 9090
 </code></pre>
 
-plackup is a command line utility to run <font SIZE="-1">PSGI</font> applications from the command line. 
+<h2>DESCRIPTION</h2>
+
+ plackup is a command line utility to run <font SIZE="-1">PSGI</font> applications from the command line. 
 
  plackup automatically figures out the environment it is run in, and runs your application in that environment. FastCGI, <font SIZE="-1">CGI,</font> AnyEvent and others can all be detected. See Plack::Loader for the authoritative list. 
 

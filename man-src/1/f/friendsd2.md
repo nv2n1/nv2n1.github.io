@@ -1,5 +1,4 @@
 ---
-
 title: "friendsd2(1)"
 name: "friendsd2"
 section: "1"
@@ -10,9 +9,11 @@ description: "friendsd2 – displays GPS position on a map"
 
 <h2>NAME</h2>
 <p> friendsd2 &#8211; displays GPS position on a map</p>
+<h2>SYNOPSIS</h2>
 <p> <code>friendsd2 [options]</code> </p>
 <h2>About this manual page</h2>
 <p> This manual page explain the basic functions of Friendsd2 for GpsDrive and some additional info. </p>
+<h2>DESCRIPTION</h2>
 <p> <code>Friendsd2</code> is a central daemon which takes UDP packets from gpsdrive clients and stores them. Later he sends them back to all the connecte gpsd-client so they can show all the Geo-Locations of all other users connected to this friendsd. One central friendsd is running at friends.gpsdrive.de.<br />
 &nbsp;<wbr></p>
 <h2>BUGS</h2>

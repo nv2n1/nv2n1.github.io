@@ -1,5 +1,4 @@
 ---
-
 title: "vstp(1)"
 name: "vstp"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-vstp/"
 description: "vstpg, vstpp – VisioBraille file transferring"
 ---
 
+<h2 class="name">NAME</h2>
+<p> vstpg, vstpp &#8211; VisioBraille file transferring </p>
+<h2>SYNOPSIS</h2>
 <p> vstpg [-ifbnd] [-s <i>socketport</i>] [-k <i>keyname</i>] [-o <i>configname</i>] file &#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <i>vstpg</i> (resp. <i>vstpp</i>) gets (resp. puts) files from (resp. onto) a VisioBraille terminal. </p>
 <p> For communicating with the terminal, you must launch brltty with the BrlNet driver, and telling BrlNet to use the VisioBraille driver. </p>
 <p> Before putting on the terminal, file names are truncated to 8 characters without any extension. </p>

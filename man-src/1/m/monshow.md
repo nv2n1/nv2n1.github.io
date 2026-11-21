@@ -1,5 +1,4 @@
 ---
-
 title: "monshow(1)"
 name: "monshow"
 section: "1"
@@ -10,7 +9,9 @@ description: "monshow – show operational status of mon server."
 
 <h2>NAME</h2>
 <p> monshow &#8211; show operational status of mon server.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>monshow</code> [<code>&#8211;help</code>] [<code>&#8211;showall</code>] [<code>&#8211;full</code>] [<code>&#8211;disabled</code>] [<code>&#8211;detail</code> <i>group,service</i>] [<code>&#8211;view</code> <i>name</i>] [<code>&#8211;auth</code>] [<code>&#8211;login</code> <i>user</i>] [<code>&#8211;old</code>] [<code>&#8211;server</code> <i>hostname</i>] [<code>&#8211;port</code> <i>portnum</i>] [<code>&#8211;prot</code> <i>protocol</i>] [<code>&#8211;rcfile</code> <i>file</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>monshow</code> show the operational status of the <code>mon</code> server. Both command-line and CGI interfaces are available.</p>
 <h2>OPTIONS</h2>
 <dl>

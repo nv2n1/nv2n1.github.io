@@ -1,5 +1,4 @@
 ---
-
 title: "pg_resetxlog(1)"
 name: "pg_resetxlog"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pg_resetxlog/"
 description: "pg_resetxlog – reset the write-ahead log and other control information of a PostgreSQL database cluster"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pg_resetxlog &#8211; reset the write-ahead log and other control information of a PostgreSQL database cluster </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pg_resetxlog</code> [<code>-f</code>] [<code>-n</code>] [<code>-o</code>&nbsp;<wbr><i>oid</i>] [<code>-x</code>&nbsp;<wbr><i>xid</i>] [<code>-e</code>&nbsp;<wbr><i>xid_epoch</i>] [<code>-m</code>&nbsp;<wbr><i>mxid</i>] [<code>-O</code>&nbsp;<wbr><i>mxoff</i>] [<code>-l</code>&nbsp;<wbr><i>timelineid</i>,<i>fileid</i>,<i>seg</i>] <i>datadir</i></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>pg_resetxlog</code></p>
 <dd>clears the write-ahead log (WAL) and optionally resets some other control information stored in the pg_control file. This function is sometimes needed if these files have become corrupted. It should be used only as a last resort, when the server will not start due to such corruption. </dd>
 <p> After running this command, it should be possible to start the server, but bear in mind that the database might contain inconsistent data due to partially-committed transactions. You should immediately dump your data, run <code>initdb</code>, and reload. After reload, check for inconsistencies and repair as needed. </p>

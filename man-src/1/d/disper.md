@@ -1,5 +1,4 @@
 ---
-
 title: "disper(1)"
 name: "disper"
 section: "1"
@@ -10,7 +9,9 @@ description: "disper – on-the-fly display switcher"
 
 <h2>NAME</h2>
 <p> disper &#8211; on-the-fly display switcher</p>
+<h2>SYNOPSIS</h2>
 <p> <code>disper</code> [<i>options</i>] <i>(-l|-s|-c|-e|-p|-i)</i></p>
+<h2>DESCRIPTION</h2>
 <p> Disper re-routes your screen output to one or more connected displays. For example when giving a presentation, all one wants is that the beamer, which has just been connected, is able to show whatever you prepared. </p>
 <p> There is the option to either clone all detected displays, or extend the desktop to them. Resolutions are automatically detected by default. For cloning, the highest resolution supported by all displays devices is chosen; for extending every display device gets its preferred or highest supported resolution. For special setups requiring more detailed control, one can still use the vendor-supplied display configuration utilities.</p>
 <h2>OPTIONS</h2>

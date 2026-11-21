@@ -1,5 +1,4 @@
 ---
-
 title: "iswalpha(3)"
 name: "iswalpha"
 section: "3"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/3-iswalpha/"
 description: "iswalpha – test for alphabetic wide character"
 ---
 
+<h2 class="name">NAME</h2>
+<p> iswalpha &#8211; test for alphabetic wide character </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;wctype.h&gt;
 int iswalpha(wint_t wc);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>iswalpha</code>() function is the wide-character equivalent of the <code>isalpha</code>(3) function. It tests whether <i>wc</i> is a wide character belonging to the wide-character class &quot;alpha&quot;. </p>
 <p> The wide-character class &quot;alpha&quot; is a subclass of the wide-character class &quot;alnum&quot;, and therefore also a subclass of the wide-character class &quot;graph&quot; and of the wide-character class &quot;print&quot;. </p>
 <p> Being a subclass of the wide-character class &quot;print&quot;, the wide-character class &quot;alpha&quot; is disjoint from the wide-character class &quot;cntrl&quot;. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "xargs(1)"
 name: "xargs"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-xargs/"
 description: "xargs – build and execute command lines from standard input"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xargs &#8211; build and execute command lines from standard input </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xargs</code> [<i>options</i>] [<i>command</i> [<i>initial-arguments</i>]]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents the GNU version of <code>xargs</code>. <code>xargs</code> reads items from the standard input, delimited by blanks (which can be protected with double or single quotes or a backslash) or newlines, and executes the <i>command</i> (default is <i>/bin/echo</i>) one or more times with any <i>initial-arguments</i> followed by items read from standard input. Blank lines on the standard input are ignored. </p>
 <p> The command line for <i>command</i> is built up until it reaches a system-defined limit (unless the <code>-n</code> and <code>-L</code> options are used). The specified <i>command</i> will be invoked as many times as necessary to use up the list of input items. In general, there will be many fewer invocations of <i>command</i> than there were items in the input. This will normally have significant performance benefits. Some commands can usefully be executed in parallel too; see the <code>-P</code> option. </p>
 <p> Because Unix filenames can contain blanks and newlines, this default behaviour is often problematic; filenames containing blanks and/or newlines are incorrectly processed by <code>xargs</code>. In these situations it is better to use the <code>-0</code> option, which prevents such problems. When using this option you will need to ensure that the program which produces the input for <code>xargs</code> also uses a null character as a separator. If that program is GNU <code>find</code> for example, the <code>-print0</code> option does this for you. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "grdblend(1)"
 name: "grdblend"
 section: "1"
@@ -10,8 +9,10 @@ description: "grdblend – Blend several partially over-lapping grids into one l
 
 <h2>NAME</h2>
 <p> grdblend &#8211; Blend several partially over-lapping grids into one large grid</p>
+<h2>SYNOPSIS</h2>
 <p> <code>grdblend</code> [ <i>blendfile</i> | <i>grid1</i> <i>grid2</i> &#8230; ] <i>outgrid</i> [ <i>increment</i> ] [ <i>region</i> ] [ <code>f</code>|<code>l</code>|<code>o</code>|<code>u</code> ] [ <i>nodata</i> ] [ ] [ <i>scale</i> ] [ [<i>level</i>] ] [ [<code>z</code>] ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-r</code> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>grdblend</code> reads a listing of grid files and blend parameters and creates a binary grid file by blending the other grids using cosine-taper weights. <code>grdblend</code> will report if some of the nodes are not filled in with data. Such unconstrained nodes are set to a value specified by the user [Default is NaN]. Nodes with more than one value will be set to the weighted average value. Any input grid that does not share the final output grid&#8217;s node registration and grid spacing will automatically be resampled via calls to grdsample. Note: Due to the row-by-row i/o nature of operations in grdblend we only support the netCDF and native binary grid formats for both input and output.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

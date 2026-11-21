@@ -1,5 +1,4 @@
 ---
-
 title: "psub(1)"
 name: "psub"
 section: "1"
@@ -7,7 +6,10 @@ letter: "p"
 url: "/docs/linux/man/1-psub/"
 ---
 
-psub - perform process substitution
+<h2 class="name">NAME</h2>
+ 
+
+ psub - perform process substitution
 
 <h3>Synopsis</h3>
 

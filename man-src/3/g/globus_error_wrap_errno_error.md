@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_error_wrap_errno_error/"
 description: "Error Handling Helpers –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Error Handling Helpers &#8211; </p>
 <h3>Error Match</h3>
 <p> <code>globus_bool_t</code> <code>globus_error_errno_match</code> (globus_object_t *error, <code>globus_module_descriptor_t</code> *module, int system_errno) </p>
 <h3>Wrap Errno Error</h3>

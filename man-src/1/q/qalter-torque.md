@@ -1,5 +1,4 @@
 ---
-
 title: "qalter-torque(1)"
 name: "qalter-torque"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-qalter-torque/"
 description: "qalter – alter pbs batch job"
 ---
 
+<h2 class="name">NAME</h2>
+<p> qalter &#8211; alter pbs batch job </p>
+<h2>SYNOPSIS</h2>
 <p> qalter [-a date_time] [-A account_string] [-c interval] [-e path] [-h hold_list] [-j join] [-k keep] [-l resource_list] [-m mail_options] [-M user_list] [-n node exclusive] [-N name] [-o path] [-p priority] [-r c] [-S path] [-t array_range] [-u user_list] [-W additional_attributes] job_identifier&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>qalter</code> command modifies the attributes of the job or jobs specified by <i> on the command line. Only those attributes listed as options on the command will be modified. If any of the specified attributes cannot be modified for a job for any reason, none of that job&#8217;s attributes will be modified. </p>
 <p> The qalter command accomplishes the modifications by sending a Modify Job</i> batch request to the batch server which owns each job.</p>
 <h2>OPTIONS</h2>

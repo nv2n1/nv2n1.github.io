@@ -1,5 +1,4 @@
 ---
-
 title: "gdal_rasterize(1)"
 name: "gdal_rasterize"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-gdal_rasterize/"
 description: "gdal_rasterize – gdal_rasterize burns vector geometries into a raster"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gdal_rasterize &#8211; gdal_rasterize burns vector geometries into a raster </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 Usage : gdal_rasterize[-b band] * [-i][-at][-burn value] * | [-a attribute_name][-3d]
                                                                                 [-l layername] *
@@ -18,6 +20,7 @@ Usage : gdal_rasterize[-b band] * [-i][-at][-burn value] * | [-a attribute_name]
                                                                                           [-ot{Byte / Int16 / UInt16 / UInt32 / Int32 / Float32 / Float64 /
                                                                                                CInt16 / CInt32 / CFloat32 / CFloat64}][-q]&lt;src_datasource&gt;&lt;dst_filename&gt;
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> This program burns vector geometries (points, lines and polygons) into the raster band(s) of a raster image. Vectors are read from OGR supported vector formats. </p>
 <p> Note that the vector data must in the same coordinate system as the raster data; on the fly reprojection is not provided. </p>
 <p> Since GDAL 1.8.0, the target GDAL file can be created by gdal_rasterize. One of -tr or -ts option must be used in that case. </p>

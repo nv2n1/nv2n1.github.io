@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_mutex_destroy/"
 description: "Mutual Exclusion –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Mutual Exclusion &#8211; </p>
 <h3>Data Structures</h3>
 <p> union <code>globus_mutex_t</code><br />
  <i>Mutex. </i><br />

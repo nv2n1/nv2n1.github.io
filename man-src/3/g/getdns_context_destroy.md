@@ -1,5 +1,4 @@
 ---
-
 title: "getdns_context_destroy(3)"
 name: "getdns_context_destroy"
 section: "3"
@@ -7,10 +6,13 @@ letter: "g"
 url: "/docs/linux/man/3-getdns_context_destroy/"
 ---
 
+
  </p>
+<h2 class="name">NAME</h2>
 <p> <code>getdns_context, </code> <code>getdns_context_create, </code> <code>getdns_context_create_with_memory_functions, </code> <code>getdns_context_create_with_extended_memory_functions, </code> <code>getdns_context_destroy, </code> <code>getdns_context_get_api_information </code> -- getdns context create and destroy routines  </p>
 <h2>LIBRARY</h2>
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;getdns.h&gt; </p>
 <p> getdns_return_t <br />
  <code>getdns_context_create</code> (getdns_context ** context, </p>
@@ -41,6 +43,7 @@ url: "/docs/linux/man/3-getdns_context_destroy/"
  <code>getdns_context_destroy</code> (getdns_context *context) </p>
 <p> getdns_dict * <br />
  <code>getdns_context_get_api_information</code> (getdns_context *context) </p>
+<h2>DESCRIPTION</h2>
 <p> Calls to getdns functions require a DNS context, which is a group of API settings that affect how DNS calls are made. For most applications, a default context is sufficient. </p>
 <p> To create a new DNS context, use the function: </p>
 <dl>

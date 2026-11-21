@@ -1,5 +1,4 @@
 ---
-
 title: "start-pulseaudio-kde(1)"
 name: "start-pulseaudio-kde"
 section: "1"
@@ -10,7 +9,9 @@ description: "start-pulseaudio-kde – PulseAudio Sound Server KDE Startup Scrip
 
 <h2>NAME</h2>
 <p> start-pulseaudio-kde &#8211; PulseAudio Sound Server KDE Startup Script</p>
+<h2>SYNOPSIS</h2>
 <p> <code>start-pulseaudio-kde [</code><i>pulseaudio options</i><code>] </code></p>
+<h2>DESCRIPTION</h2>
 <p> This script starts pulseaudio (if not already running) and loads module-device-manager to use KDE routing policies. </p>
 <p> All arguments are directly passed to pulseaudio.</p>
 <h2>AUTHORS</h2>

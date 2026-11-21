@@ -1,5 +1,4 @@
 ---
-
 title: "transmission-remote(1)"
 name: "transmission-remote"
 section: "1"
@@ -10,10 +9,12 @@ description: "transmission-remote – a remote control utility for transmission-
 
 <h2>NAME</h2>
 <p> <code>transmission-remote</code> &#8211; a remote control utility for transmission-daemon1 and <a href="/docs/linux/man/1-transmission/">transmission</a>(1)</p>
+<h2>SYNOPSIS</h2>
 <p> -words [<i>host:port | host | port</i> ] [-<code>a </code><i>filenames-or-URLs </i>[-<code>as</code> ] ] [-<code>AS</code> ] [-<code>asd </code><i>number</i> ] [-<code>asu </code><i>number</i> ] [-<code>asc</code> ] [-<code>ASC</code> ] [-<code>b</code> ] [-<code>c </code><i>path | &#8211;</i><code>C</code> ] [-<code>d </code><i>number | &#8211;</i><code>D</code> ] [-<code>e </code><i>size</i> ] [-<code>er | ep | et</code> ] [-<code>-exit</code> ] [-<code>f</code> ] [-<code>g </code><i>files</i> ] [-<code>G </code><i>files</i> ] [-<code>gsr </code><i>ratio</i> ] [-<code>GSR</code> ] [-<code>h</code> ] [-<code>i</code> ] [-<code>ic</code> ] [-<code>if</code> ] [-<code>ip</code> ] [-<code>it</code> ] [-<code>l</code> ] [-<code>m | M</code> ] [-<code>n </code><i>user:pass</i> ] [-<code>ne</code> ] [-<code>N </code><i>netrc</i> ] [-<code>o | O</code> ] [-<code>p </code><i>port</i> ] [-<code>Bh </code>[-<code>Bn </code>[-<code></p>
 <dl>
 <p> </code> ] ] ] [-<code>ph </code><i>files</i> ] [-<code>pl </code><i>files</i> ] [-<code>pn </code><i>files</i> ] [-<code>pr </code><i>peers</i> ] [-<code>r</code> ] [-<code>rad</code> ] [-<code>s | S</code> ] [-<code>sr </code><i>ratio</i> ] [-<code>SR</code> ] [-<code>srd</code> ] [-<code>si</code> ] [-<code>st</code> ] [-<code>t </code><i>all | active | id | hash</i> ] [-<code>hl</code> ] [-<code>HL</code> ] [-<code>u </code><i>number | &#8211;</i><code>U</code> ] [-<code>utp | no-utp</code> ] [-<code>v</code> ] [-<code>V</code> ] [-<code>w </code><i>download-dir</i> ] [-<code>x | X</code> ] [-<code>y | Y</code> ] [-<code>pi</code> ]</dl>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> is a remote control utility for <a href="/docs/linux/man/1-transmission/">transmission</a>(1) and transmission-daemon1. </p>
 <p> By default, connects to the transmission session at localhost:9091. Other sessions can be controlled by specifying a different host and/or port.</p>
 <h2>OPTIONS</h2>

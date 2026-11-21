@@ -1,5 +1,4 @@
 ---
-
 title: "dpkg-maintscript-helper(1)"
 name: "dpkg-maintscript-helper"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-dpkg-maintscript-helper/"
 description: "dpkg-maintscript-helper – works around known dpkg limitations in maintainer scripts"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dpkg-maintscript-helper &#8211; works around known dpkg limitations in maintainer scripts </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dpkg-maintscript-helper</code> <i>command</i> [<i>parameter</i>&#8230;] <code>&#8212;</code> <i>maint-script-parameter</i>&#8230;</p>
 <h2>COMMANDS AND PARAMETERS</h2>
 <dl>
@@ -21,6 +23,7 @@ description: "dpkg-maintscript-helper – works around known dpkg limitations in
 <dd>
 </dd><dt><code>dir_to_symlink</code> <i>pathname</i> <i>new-target</i> [<i>prior-version</i> [<i>package</i>]]</dt>
 <dd></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This program is designed to be run within maintainer scripts to achieve some tasks that <code>dpkg</code> can&#8217;t (yet) handle natively either because of design decisions or due to current limitations. </p>
 <p> Many of those tasks require coordinated actions from several maintainer scripts (<code>preinst</code>, <code>postinst</code>, <code>prerm</code>, <code>postrm</code>). To avoid mistakes the same call simply needs to be put in all scripts and the program will automatically adapt its behaviour based on the environment variable <font SIZE="-1"><code>DPKG_MAINTSCRIPT_NAME</code></font> and on the maintainer scripts arguments that you have to forward after a double hyphen.</p>
 <h2>COMMON PARAMETERS</h2>

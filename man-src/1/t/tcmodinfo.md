@@ -1,5 +1,4 @@
 ---
-
 title: "tcmodinfo(1)"
 name: "tcmodinfo"
 section: "1"
@@ -10,9 +9,11 @@ description: "tcmodinfo – Get and Set information in transcode modules"
 
 <h2>NAME</h2>
 <p> tcmodinfo &#8211; Get and Set information in transcode modules</p>
+<h2>SYNOPSIS</h2>
 <p> <code>tcmodinfo</code> [ <code>-i</code> <i>name</i> ] [ <code>-m</code> <i>path</i> ] [ <code>-t</code> <i>type</i> ] [ <code>-M</code> <i>param</i> ] [ <code>-C</code> <i>param</i> ] [ <code>-s</code> <i>socket</i> ] [ <code>-p</code> ] [ <code>-d</code> <i>verbosity</i> ] [ <code>-v</code> ]</p>
 <h2>COPYRIGHT</h2>
 <p> <code>tcmodinfo</code> is Copyright (C) by Tilmann Bitterberg/Transcode Team</p>
+<h2>DESCRIPTION</h2>
 <p> <code>tcmodinfo</code> loads a supplied <a href="/docs/linux/man/1-transcode/">transcode</a>(1) module and prints its parameters, or inquiry about default settings. It can also connect to transcode through a socket to do runtime configuration of transcode and its filters. Anyway, this last feature may be moved to some other helper program in future releases.</p>
 <h2>OPTIONS</h2>
 <dl>

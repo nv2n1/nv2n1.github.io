@@ -1,5 +1,4 @@
 ---
-
 title: "llvm-strip-14(1)"
 name: "llvm-strip-14"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-llvm-strip-14/"
 description: "llvm-strip – object stripping tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> llvm-strip &#8211; object stripping tool </p>
+<h2>SYNOPSIS</h2>
 <p> <code>llvm-strip</code> [<i>options</i>] <i>inputs…</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>llvm-strip</code> is a tool to strip sections and symbols from object files. If no other stripping or remove options are specified, <i>&#8211;strip-all</i> will be enabled. </p>
 <p> By default, the input files are modified in-place. If “-” is specified for the input file, the input is read from the program’s standard input stream. </p>
 <p> If the input is an archive, any requested operations will be applied to each archive member individually. </p>

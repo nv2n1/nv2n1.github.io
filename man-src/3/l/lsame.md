@@ -1,5 +1,4 @@
 ---
-
 title: "lsame(3)"
 name: "lsame"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-lsame/"
 description: "lsame.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lsame.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> LOGICAL function <code>lsame</code> (CA, CB)<br />
  <i></i><code>LSAME</code></p>

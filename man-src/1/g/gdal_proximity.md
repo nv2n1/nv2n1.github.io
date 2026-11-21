@@ -1,5 +1,4 @@
 ---
-
 title: "gdal_proximity(1)"
 name: "gdal_proximity"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-gdal_proximity/"
 description: "gdal_proximity – gdal_proximity.py produces a raster proximity map"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gdal_proximity &#8211; gdal_proximity.py produces a raster proximity map </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 gdal_proximity.py srcfile dstfile[-srcband n][-dstband n]
                                  [-of format][-co name = value] *
@@ -16,6 +18,7 @@ gdal_proximity.py srcfile dstfile[-srcband n][-dstband n]
         [-values n, n, n][-distunits PIXEL / GEO]
         [-maxdist n][-nodata n][-fixed - buf - val n]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The gdal_proximity.py script generates a raster proximity map indicating the distance from the center of each pixel to the center of the nearest pixel identified as a target pixel. Target pixels are those in the source raster for which the raster pixel value is in the set of target pixel values. </p>
 <dl>
 <dt><i>srcfile</i></dt>

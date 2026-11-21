@@ -1,5 +1,4 @@
 ---
-
 title: "setsockopt(2)"
 name: "setsockopt"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-setsockopt/"
 description: "getsockopt, setsockopt – get and set options on sockets"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getsockopt, setsockopt &#8211; get and set options on sockets </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/socket.h&gt;
 #include &lt;sys/types.h&gt; /* See NOTES */
@@ -16,6 +18,7 @@ int getsockopt(int sockfd, int level, int optname,
 int setsockopt(int sockfd, int level, int optname,
                const void *optval, socklen_t optlen);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>getsockopt</code>() and <code>setsockopt</code>() manipulate options for the socket referred to by the file descriptor <i>sockfd</i>. Options may exist at multiple protocol levels; they are always present at the uppermost socket level. </p>
 <p> When manipulating socket options, the level at which the option resides and the name of the option must be specified. To manipulate options at the sockets API level, <i>level</i> is specified as <code>SOL_SOCKET</code>. To manipulate options at any other level the protocol number of the appropriate protocol controlling the option is supplied. For example, to indicate that an option is to be interpreted by the <code>TCP</code> protocol, <i>level</i> should be set to the protocol number of <code>TCP</code>; see <code><a href="/docs/linux/man/3-getprotoent/">getprotoent</a></code>(3). </p>
 <p> The arguments <i>optval</i> and <i>optlen</i> are used to access option values for <code>setsockopt</code>(). For <code>getsockopt</code>() they identify a buffer in which the value for the requested option(s) are to be returned. For <code>getsockopt</code>(), <i>optlen</i> is a value-result argument, initially containing the size of the buffer pointed to by <i>optval</i>, and modified on return to indicate the actual size of the value returned. If no option value is to be supplied or returned, <i>optval</i> may be NULL. </p>

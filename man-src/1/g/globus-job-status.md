@@ -1,5 +1,4 @@
 ---
-
 title: "globus-job-status(1)"
 name: "globus-job-status"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-globus-job-status/"
 description: "globus-job-status – Check the status of a GRAM5 job"
 ---
 
+<h2 class="name">NAME</h2>
+<p> globus-job-status &#8211; Check the status of a GRAM5 job </p>
+<h2>SYNOPSIS</h2>
 <p> <code>globus-job-status</code> <i>JOBID</i> </p>
 <p> <code>globus-job-status</code> -help | -usage | -version | -versions</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>globus-job-status</code> program checks the status of a GRAM job by sending a status request to the job manager contact for that job specified by the <i>JOBID</i> parameter. If successful, it will print the job status to standard output. The states supported by <code>globus-job-status</code> are: </p>
 <p> <code>PENDING</code></p>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "gdcmviewer(1)"
 name: "gdcmviewer"
 section: "1"
@@ -8,9 +7,14 @@ url: "/docs/linux/man/1-gdcmviewer/"
 description: "gdcmviewer – .TH \"gdcmviewer\" 1 \"Fri Oct 29 2010\" \"Version 2.0.16\" \"GDCM\""
 ---
 
+<h2 class="name">NAME</h2>
+<p> gdcmviewer &#8211; .TH &quot;gdcmviewer&quot; 1 &quot;Fri Oct 29 2010&quot; &quot;Version 2.0.16&quot; &quot;GDCM&quot; </p>
+<h2 class="name">NAME</h2>
+<p> gdcmviewer &#8211; .SH &quot;SYNOPSIS&quot; </p>
 <pre>
 gdcmviewer [options] file-in
 </pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>gdcmviewer</code> is a simple tool that show how to use <code>vtkGDCMImageReader</code>. The class that use gdcm to make a layer to VTK. <code>gdcmviewer</code> is basically only just a wrapper around GDCM. </p>
 <p> This tool is meant for testing integration of GDCM in VTK. You should see it as a demo tool. It does compile with VTK ranging from 4.2 to 5.6, but only with VTK 5.2 (or above) can only play with the widgets (as described below).</p>
 <h2>PARAMETERS</h2>

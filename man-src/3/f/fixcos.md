@@ -1,5 +1,4 @@
 ---
-
 title: "fixcos(3)"
 name: "fixcos"
 section: "3"
@@ -10,8 +9,10 @@ description: "fixcos – Fixed point cosine of binary angles. Allegro game progr
 
 <h2>NAME</h2>
 <p> fixcos &#8211; Fixed point cosine of binary angles. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>fixed fixcos(fixed x);</code></p>
+<h2>DESCRIPTION</h2>
 <p> This function finds the cosine of a value using a lookup table. The input value must be a fixed point binary angle. Example: </p>
 <pre><code>
 fixed angle;

@@ -1,5 +1,4 @@
 ---
-
 title: "dgges(3)"
 name: "dgges"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dgges/"
 description: "dgges.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dgges.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgges</code> (JOBVSL, JOBVSR, SORT, SELCTG, N, A, LDA, B, LDB, SDIM, ALPHAR, ALPHAI, BETA, VSL, LDVSL, VSR, LDVSR, WORK, LWORK, BWORK, INFO)<br />
  <i></i><code> DGGES computes the eigenvalues, the Schur form, and, optionally, the matrix of Schur vectors for GE matrices</code></p>

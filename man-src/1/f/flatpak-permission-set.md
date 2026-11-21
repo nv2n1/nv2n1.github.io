@@ -1,5 +1,4 @@
 ---
-
 title: "flatpak-permission-set(1)"
 name: "flatpak-permission-set"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-flatpak-permission-set/"
 description: "flatpak-permission-set – Set permissions"
 ---
 
+<h2 class="name">NAME</h2>
+<p> flatpak-permission-set &#8211; Set permissions </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak permission-set</code> [OPTION&#8230;] TABLE ID APP_ID [PERMISSION&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>Set the permissions for an application in an entry in the permission store. The entry is identified by TABLE and ID, the application is identified by APP_ID. The PERMISSION strings must be in a format suitable for the table. </dd>
 <p> The permission store is used by portals. Each portal generally has its own table in the permission store, and the format of the table entries is specific to each portal.</p>
 <h2>OPTIONS</h2>

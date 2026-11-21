@@ -1,5 +1,4 @@
 ---
-
 title: "dlangt(3)"
 name: "dlangt"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlangt/"
 description: "dlangt.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlangt.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> DOUBLE PRECISION function <code>dlangt</code> (NORM, N, DL, D, DU)<br />
  <i></i><code>DLANGT</code> returns the value of the 1-norm, Frobenius norm, infinity-norm, or the largest absolute value of any element of a general tridiagonal matrix.</p>

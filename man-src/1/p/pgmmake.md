@@ -1,5 +1,4 @@
 ---
-
 title: "pgmmake(1)"
 name: "pgmmake"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pgmmake/"
 description: "pgmmake – create a PGM image of a specified gray level and dimensions"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pgmmake &#8211; create a PGM image of a specified gray level and dimensions</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pgmmake</code> [<code>-maxval=</code><i>maxval</i>] <i>graylevel</i> <i>width</i> <i>height</i> </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one to designate an option. You may use either white space or an equals sign between an option name and its value. </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pgmmake</code> produces a PGM image of the specified gray level, width, height, and maxval. </p>
 <p> Specify the gray level (<i>graylevel</i>) as a decimal floating point number in the range [0, 1]. E.g. 1 is white, 0 is black, and 0.5 is half luminosity gray. </p>

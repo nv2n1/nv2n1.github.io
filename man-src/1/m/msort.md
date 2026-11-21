@@ -1,5 +1,4 @@
 ---
-
 title: "msort(1)"
 name: "msort"
 section: "1"
@@ -10,7 +9,9 @@ description: "msort – sort records in complex ways"
 
 <h2>NAME</h2>
 <p> msort &#8211; sort records in complex ways</p>
+<h2>SYNOPSIS</h2>
 <p> <code>msort</code> &lt;options&gt; [&lt;input file&gt;]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>msort</i> is a program for sorting text files in sophisticated ways. It was developed initially for alphabetizing dictionaries of languages in which the ordering may be quite different from English but has many other uses. </p>
 <p> <i>msort</i> allows you to sort blocks of text delimited in a number of ways rather than just lines and to specify particular fields of a record as sort keys using either their position, counted from either end, or by matching regular expressions to their tags. </p>
 <p> <i>msort </i> is capable of sorting on multiple keys, so that when two records tie on one key, the tie may be broken on another. Any or all keys may be optional. How absent optional keys are ordered with respect to present keys may be set separately for each key. </p>

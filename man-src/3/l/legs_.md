@@ -1,5 +1,4 @@
 ---
-
 title: "legs_(3)"
 name: "legs_"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-legs_/"
 description: "QuantLib::Swap – Interest rate swap."
 ---
 
+<h2 class="name">NAME</h2>
+<p> QuantLib::Swap &#8211; Interest rate swap. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/swap.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Instrument</code>. </p>
 <p> Inherited by <code>AssetSwap</code>, <code>BMASwap</code>, and <code>VanillaSwap</code>. </p>

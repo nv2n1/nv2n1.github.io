@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_set_default_priority(3)"
 name: "gnutls_set_default_priority"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_set_default_priority – API function"
 
 <h2>NAME</h2>
 <p> gnutls_set_default_priority &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_set_default_priority(gnutls_session_t </code><i>session</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_session_t session</dt>
 <dd> is a <code>gnutls_session_t</code> structure.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Sets the default priority on the ciphers, key exchange methods, macs and compression methods. For more fine-tuning you could use <code>gnutls_priority_set_direct()</code> or <code>gnutls_priority_set()</code> instead.</p>
 <h2>RETURNS</h2>
 <p> <code>GNUTLS_E_SUCCESS</code> on success, or an error code.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "tv_imdb(1)"
 name: "tv_imdb"
 section: "1"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/1-tv_imdb/"
 description: "tv_imdb – Augment XMLTV listings files with imdb.com data."
 ---
 
+<h2 class="name">NAME</h2>
+<p> tv_imdb &#8211; Augment XMLTV listings files with imdb.com data. </p>
+<h2>SYNOPSIS</h2>
 <p> tv_imdb &#8211;imdbdir &lt;dir&gt; [&#8211;help] [&#8211;quiet] [&#8211;download]<br />
 &nbsp;<wbr>[&#8211;prepStage&nbsp;<wbr>(1-9,all)] </p>
 <p> tv_imdb &#8211;imdbdir &lt;dir&gt; [&#8211;help] [&#8211;quiet]<br />
 &nbsp;<wbr>[&#8211;with-keywords]&nbsp;<wbr>[&#8211;with-plot]<br />
 &nbsp;<wbr>[&#8211;movies-only]&nbsp;<wbr>[&#8211;stats]&nbsp;<wbr>[&#8211;debug]<br />
 &nbsp;<wbr>[&#8211;output&nbsp;<wbr><font SIZE="-1">FILE</font>]&nbsp;<wbr>[<font SIZE="-1">FILE&#8230;</font>]</p>
+<h2>DESCRIPTION</h2>
 <p> Very similar to tv_cat in semantics (see tv_cat), except whenever a programme appears with &#8220;date&#8221; entry the title and date are used to look up extra data by using the <font SIZE="-1">XMLTV::IMDB</font> package. </p>
 <p> <code>&#8211;output </code><font SIZE="-1"><code>FILE</code></font> write to <font SIZE="-1">FILE</font> rather than standard output. </p>
 <p> <code>&#8211;with-keywords</code> include IDMb keywords in the output file. </p>

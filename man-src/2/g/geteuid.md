@@ -1,5 +1,4 @@
 ---
-
 title: "geteuid(2)"
 name: "geteuid"
 section: "2"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/2-geteuid/"
 description: "getuid, geteuid – get user identity"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getuid, geteuid &#8211; get user identity </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code><br />
  <code>#include &lt;sys/types.h&gt;</code> </p>
 <p> <code>uid_t getuid(void);</code><br />
  <code>uid_t geteuid(void);</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>getuid</code>() returns the real user ID of the calling process. </p>
 <p> <code>geteuid</code>() returns the effective user ID of the calling process.</p>
 <h2>ERRORS</h2>

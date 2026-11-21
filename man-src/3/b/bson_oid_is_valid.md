@@ -1,5 +1,4 @@
 ---
-
 title: "bson_oid_is_valid(3)"
 name: "bson_oid_is_valid"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_oid_is_valid() – Checks if a string containing a hex encode
 
 <h2>NAME</h2>
 <p> bson_oid_is_valid() &#8211; Checks if a string containing a hex encoded string is a valid BSON ObjectID.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 bool bson_oid_is_valid(const char *str,
                        size_t length);
@@ -21,6 +21,7 @@ bool bson_oid_is_valid(const char *str,
 <dl>
 <dt><code>length</code></dt>
 <dd> The length of <code>str</code> \&amp;.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Checks if a string containing a hex encoded string is a valid BSON ObjectID. </p>
 <h2>RETURNS</h2>
 <p> true if <code>str</code> could be parsed. </p>

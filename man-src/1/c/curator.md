@@ -1,5 +1,4 @@
 ---
-
 title: "curator(1)"
 name: "curator"
 section: "1"
@@ -10,7 +9,9 @@ description: "curator – manual page for curator, version 3.0.3"
 
 <h2>NAME</h2>
 <p> curator &#8211; manual page for curator, version 3.0.3</p>
+<h2>SYNOPSIS</h2>
 <p> <code>curator</code> [<i>,OPTIONS/</i>] <i>,COMMAND /</i>[<i>,ARGS/</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Curator for Elasticsearch indices.</p>
 <dl>
 <dt>See <a rel="nofollow" href="http://elastic.co/guide/en/elasticsearch/client/curator/current">http://elastic.co/guide/en/elasticsearch/client/curator/current</a></dt>

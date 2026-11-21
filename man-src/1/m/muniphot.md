@@ -1,5 +1,4 @@
 ---
-
 title: "muniphot(1)"
 name: "muniphot"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-muniphot/"
 description: "muniphot – CCD photometry"
 ---
 
+<h2 class="name">NAME</h2>
+<p> muniphot &#8211; CCD photometry</p>
+<h2>SYNOPSIS</h2>
 <p> <code>muniphot </code><i>[options] source_file &#8230;</i> </p>
+<h2>DESCRIPTION</h2>
 <p> The Muniphot program applies photometry to a single frame or a set of frames. The output is written in text format to a file. (Such files are refered as photometry files in this paper.) Current version version uses aperture photometry algorithm only. </p>
 <p> The source file must be in FITS format. The output files are in Daophot-compatible text format. It does not generate <i>.coo</i> and <i>.ap</i> files in contrast to Muniphot of original Munipack. The output files have the same name as the corresponding source files, but extension is changed to <i>srt</i>. </p>
 <h2>OPTIONS</h2>

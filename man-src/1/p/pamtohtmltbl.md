@@ -1,5 +1,4 @@
 ---
-
 title: "pamtohtmltbl(1)"
 name: "pamtohtmltbl"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pamtohtmltbl/"
 description: "pamtohtmltbl – convert pnm/pam visual image to an HTML table"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pamtohtmltbl &#8211; convert pnm/pam visual image to an HTML table</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pamtohtmltbl</code> [<code>-transparent=</code><i>color</i>] [<code>-verbose</code>] [<i>file</i>] </p>
 <p> Minimum unique abbreviation of option is acceptable. You may use double hyphens instead of single hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamtohtmltbl</code> converts a visual image to an HTML table with one cell per pixel. The cell is empty, but its background color is that of the pixel. </p>
 <p> <i>file</i> is a PBM, PGM, PPM, or PAM file. If PAM, it must be a standard visual image of tuple type RGB, GRAYSCALE, or BLACKANDWHITE, or something equivalent with extra higher numbered channels, but <code>pamtohtmltbl</code> doesn&#8217;t check the tuple type; it just assumes. </p>

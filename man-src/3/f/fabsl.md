@@ -1,5 +1,4 @@
 ---
-
 title: "fabsl(3)"
 name: "fabsl"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-fabsl/"
 description: "fabs, fabsf, fabsl – absolute value of floating-point number"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fabs, fabsf, fabsl &#8211; absolute value of floating-point number </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;
 double fabs(double x);
@@ -22,6 +24,7 @@ long double fabsl(long double x);
 </dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> These functions return the absolute value of the floating-point number <i>x</i>.</p>
 <h2>RETURN VALUE</h2>
 <p> These functions return the absolute value of <i>x</i>. </p>

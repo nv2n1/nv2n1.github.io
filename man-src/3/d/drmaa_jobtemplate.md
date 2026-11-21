@@ -1,5 +1,4 @@
 ---
-
 title: "drmaa_jobtemplate(3)"
 name: "drmaa_jobtemplate"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-drmaa_jobtemplate/"
 description: "drmaa_allocate_job_template, drmaa_delete_job_template, drmaa_set_attribute, drmaa_get_attribute, drmaa_set_vector_attribute, drmaa_get_vector_attribute, drmaa_get_next_attr_value, drmaa_get_num_at..."
 ---
 
+<h2 class="name">NAME</h2>
+<p> drmaa_allocate_job_template, drmaa_delete_job_template, drmaa_set_attribute, drmaa_get_attribute, drmaa_set_vector_attribute, drmaa_get_vector_attribute, drmaa_get_next_attr_value, drmaa_get_num_attr_values, drmaa_release_attr_values &#8211; xxQS_NAMExx DRMAA job template handling</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include drmaa.h</code> </p>
 <pre>
 <code>int drmaa_allocate_job_template(
@@ -88,6 +90,7 @@ int *size
 </code></pre>
 <p> <code>); </p>
 <p> </code></p>
+<h2>DESCRIPTION</h2>
 <p> The drmaa_allocate_job_template() function allocates a new DRMAA job template into <i>jt</i>. DRMAA job templates describe specifics of jobs that are submitted using and</p>
 <h3>drmaa_delete_job_template()</h3>
 <p> The drmaa_delete_job_template() function releases all resources associated with the DRMAA job template <i>jt</i>. Jobs that were submitted using the job template are not affected. </p>

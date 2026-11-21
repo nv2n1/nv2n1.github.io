@@ -1,5 +1,4 @@
 ---
-
 title: "rapath(1)"
 name: "rapath"
 section: "1"
@@ -10,7 +9,9 @@ description: "rapath – print traceroute path information from argus(8) data."
 
 <h2>NAME</h2>
 <p> <code>rapath</code> &#8211; print traceroute path information from <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>rapath</code> [<code>-A</code>] [<code>-M [ aspath [dist] | asnode ] </code>] [<code>-m fields </code>] [<code>raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Rapath</code> reads <code>argus</code> data from an <i>argus-data</i> source, and generates the path information that can be formulated from flows that experience ICMP responses. When a packet cause the creation of an ICMP response, for whatever reason, the intermediate node that generates the ICMP packet is, by definition, on the path. Argus data perserves this intermediate node address, and <code>rapath</code> uses this information to generate path information, for arbitrary IP network traffic. <code>Rapath</code> is principally designed to recover traceroute.1 traffic, so that if a trace is done in the network, argus will pick it up and record the intermediate nodes and the RTT for the volleys. However the method is generalized such that it also picks up routing loop conditions, when they exist in the observed packet stream. </p>
 <p> <code>Rapath</code> will generate argus flow records that have the src address, dst address and src ttl of the transmitted packet, aggregated so that the average duration, standard deviation, max and min rtt&#8217;s are preserved. The most accurate estimate of the actual Round-Trip Time (RTT) between a src IP address and an ICMP based intermediate node is the MinDur field. As the number of samples gets larger, the MinDur field approaches the theoretical best case minimum RTT. RTT&#8217;s above this value, will include variations in network and device delay. </p>
 <p> When using the optional racluster.1 style flow descriptors, path information to and from CIDR based network addresses can be calculated, so that traces from and to multiple machines in the subnets can be grouped together. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "load_dat_font(3)"
 name: "load_dat_font"
 section: "3"
@@ -10,8 +9,10 @@ description: "load_dat_font – Loads a FONT from an Allegro datafile."
 
 <h2>NAME</h2>
 <p> load_dat_font &#8211; Loads a FONT from an Allegro datafile.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>FONT *load_dat_font(const char *filename, RGB *pal, void *param)</code></p>
+<h2>DESCRIPTION</h2>
 <p> Loads a FONT from an Allegro datafile. You can set param parameter to point to an array that holds two strings that identify the font and the palette in the datafile by name. The first string in this list is the name of the font. You can pass NULL here to just load the first font found in the datafile. The second string can be used to specify the name of the palette associated with the font. This is only returned if the pal parameter is not NULL. If you pass NULL for the name of the palette, the last palette found before the font was found is returned. You can also pass NULL for param, which is treated as if you had passed NULL for both strings separately. In this case, the function will simply load the first font it finds from the datafile and the palette that precedes it. </p>
 <p> For example, suppose you have a datafile named `fonts.dat&#8217; with the following contents: </p>
 <pre>

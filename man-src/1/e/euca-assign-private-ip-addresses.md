@@ -1,5 +1,4 @@
 ---
-
 title: "euca-assign-private-ip-addresses(1)"
 name: "euca-assign-private-ip-addresses"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-assign-private-ip-addresses – Assign one or more private IP
 
 <h2>NAME</h2>
 <p> euca-assign-private-ip-addresses &#8211; Assign one or more private IP addresses to a network interface</p>
+<h2>SYNOPSIS</h2>
 <p> euca-assign-private-ip-addresses [-n INTERFACE]</p>
 <dl>
 <dt>(<code>&#8211;secondary-address</code> ADDRESS | <code>&#8211;secondary-count</code> COUNT)</dt>
 <dd> [&#8211;allow-reassignment] [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Assign one or more private IP addresses to a network interface</p>
 <h2>DESCRIPTION</h2>
 <p> Note that an instance&#8217;s type may affect the number of addresses it can hold at once.</p>

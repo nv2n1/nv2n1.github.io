@@ -1,5 +1,4 @@
 ---
-
 title: "pamtilt(1)"
 name: "pamtilt"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-pamtilt/"
 description: "pamtilt – print the tilt angle of a PGM file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pamtilt &#8211; print the tilt angle of a PGM file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pamtilt</code> [<code>-angle=</code><i>maxangle</i>] [<code>-fast</code>] [<code>-quality=</code><i>q</i>] [<code>-hstep=</code><i>n</i>] [<code>-vstep=</code><i>n</i>] [<code>-dstep=</code><i>n</i>] [<code>-astep=</code><i>n</i>] [<code>-verbose</code>] [<i>pgmfile</i>] </p>
 <h2>EXAMPLES</h2>
 <pre>
@@ -17,6 +19,7 @@ description: "pamtilt – print the tilt angle of a PGM file"
 </tt>
     (then crop, threshold, etc.)
 </pre>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamtilt</code> tries to find the correct angle for untilting (de-skewing) a scanned text document. The output is a single floating-point number (the angle in degrees) for use as the argument to pnmrotate. </p>
 <p> &#8216;Document skew&#8217; is the name given to what happens when you feed a page into an image scanner at an angle: the resulting image is tilted. <code>pamtilt</code> aims to correct that. </p>

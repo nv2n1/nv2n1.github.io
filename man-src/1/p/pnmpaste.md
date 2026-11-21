@@ -1,5 +1,4 @@
 ---
-
 title: "pnmpaste(1)"
 name: "pnmpaste"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pnmpaste/"
 description: "pnmpaste – paste a rectangle into a portable anymap"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pnmpaste &#8211; paste a rectangle into a portable anymap </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pnmpaste</code> [<code>-replace</code>|<code>-or</code>|<code>-and</code> |<code>-xor</code>] <i>frompnmfile x y</i> [<i>intopnmfile</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Reads two portable anymaps as input. Inserts the first anymap into the second at the specified location, and produces a portable anymap the same size as the second as output. If the second anymap is not specified, it is read from stdin. The <i>x</i> and <i>y</i> can be negative, in which case they are interpreted relative to the right and bottom of the anymap, respectively. </p>
 <p> This tool is most useful in combination with <i>pnmcut</i>. For instance, if you want to edit a small segment of a large image, and your image editor cannot edit the large image, you can cut out the segment you are interested in, edit it, and then paste it back in. </p>
 <p> Another useful companion tool is <i>pbmmask</i>. </p>

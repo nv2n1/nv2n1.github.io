@@ -1,5 +1,4 @@
 ---
-
 title: "ddate(1)"
 name: "ddate"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ddate/"
 description: "ddate – convert Gregorian dates to Discordian dates"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ddate &#8211; convert Gregorian dates to Discordian dates </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ddate</code> [<i></i><code>+</code>format] [<i>date</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>ddate</code> prints the date in Discordian date format. </p>
 <p> If called with no arguments, <code>ddate</code> will get the current system date, convert this to the Discordian date format and print this on the standard output. Alternatively, a Gregorian date may be specified on the command line, in the form of a numerical day, month and year. </p>
 <p> If a format string is specified, the Discordian date will be printed in a format specified by the string. This mechanism works similarly to the format string mechanism of <code><a href="/docs/linux/man/1-date/">date</a>(1),</code> only almost completely differently. The fields are:</p>

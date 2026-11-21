@@ -1,5 +1,4 @@
 ---
-
 title: "shutter(1)"
 name: "shutter"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-shutter/"
 description: "Shutter – Feature-rich Screenshot Tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Shutter &#8211; Feature-rich Screenshot Tool </p>
+<h2>SYNOPSIS</h2>
 <p> shutter [options]</p>
 <h2>COPYRIGHT</h2>
 <p> Shutter is Copyright (C) by Mario Kemper and Shutter Team</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Shutter</code> is a feature-rich screenshot program. You can take a screenshot of a specific area, window, your whole screen, or even of a website &#8211; apply different effects to it, draw on it to highlight points, and then upload to an image hosting site, all within one window.</p>
 <h2>OPTIONS</h2>
 <dl>

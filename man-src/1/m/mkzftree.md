@@ -1,5 +1,4 @@
 ---
-
 title: "mkzftree(1)"
 name: "mkzftree"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mkzftree/"
 description: "mkzftree – Create a zisofs/RockRidge compressed file tree"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mkzftree &#8211; Create a zisofs/RockRidge compressed file tree </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mkzftree</code> [<i>OPTIONS</i>]&#8230; <i>INPUT</i> <i>OUTPUT</i></p>
+<h2>DESCRIPTION</h2>
 <p> Takes an input file tree (<i>INPUT</i>) and create a corresponding compressed file tree (<i>OUTPUT</i>) that can be used with an appropriately patched <code>mkisofs</code>(8) to create a transparent-compression ISO 9660/Rock Ridge filesystem using the &quot;ZF&quot; compression records.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "mcs(1)"
 name: "mcs"
 section: "1"
@@ -10,7 +9,9 @@ description: "mcs – Mono C# Compiler"
 
 <h2>NAME</h2>
 <p> mcs &#8211; Mono C# Compiler</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mcs </code> [option] [source-files]</p>
+<h2>DESCRIPTION</h2>
 <p> mcs is the Mono C# compiler, an implementation of the ECMA-334 language specification. You can pass one or more options to drive the compiler, and a set of source files. Extra options or arguments can be provided in a response file. Response files are referenced by prepending the @ symbol to the response file name. </p>
 <p> The <i>mcs</i> compiler is used to compile against the latest Mono Base Class Library version and fully implements C# 1.0, 2.0, 3.0 and 4.0 specifications. </p>
 <p> See the section on packages for more information. </p>

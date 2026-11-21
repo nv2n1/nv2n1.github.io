@@ -1,5 +1,4 @@
 ---
-
 title: "ustr(3)"
 name: "ustr"
 section: "3"
@@ -7,8 +6,8 @@ letter: "u"
 url: "/docs/linux/man/3-ustr/"
 description: "ustr – ustr string library functions"
 ---
-
 <p> ustr - ustr string library functions  </p>
+<h2>SYNOPSIS</h2>
 <p> #include &quot;ustr.h&quot; </p>
 <p> <br />
  <br />

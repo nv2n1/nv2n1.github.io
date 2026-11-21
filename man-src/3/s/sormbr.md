@@ -1,5 +1,4 @@
 ---
-
 title: "sormbr(3)"
 name: "sormbr"
 section: "3"
@@ -7,7 +6,11 @@ letter: "s"
 url: "/docs/linux/man/3-sormbr/"
 ---
 
+
  </p>
+<h2 class="name">NAME</h2>
+<p> sormbr.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <p> <br />
  </p>
 <h3>Functions/Subroutines</h3>

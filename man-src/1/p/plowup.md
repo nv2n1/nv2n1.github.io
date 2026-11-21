@@ -1,5 +1,4 @@
 ---
-
 title: "plowup(1)"
 name: "plowup"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-plowup/"
 description: "plowup – Simple upload manager for file sharing websites"
 ---
 
+<h2 class="name">NAME</h2>
+<p> plowup &#8211; Simple upload manager for file sharing websites</p>
+<h2>SYNOPSIS</h2>
 <p> <code>plowup</code> [<i>OPTIONS</i>]&#8230; [<i>MODULE_OPTIONS</i>]&#8230; <i>MODULE</i> <i>URL</i>|<i>FILE</i>[<i>:DESTNAME</i>]&#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> <code>plowup</code> is a command-line tool designed for automatic upload on file-sharing websites. It acts like a web browser, retrieving pages and filling HTML forms. </p>
 <p> Currently supported hosting sites list is available in README file. </p>
 <p> Anonymous upload is not allowed by all sites, some of them may require authentication. See specific module options below. </p>

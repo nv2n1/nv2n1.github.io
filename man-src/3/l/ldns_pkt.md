@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_pkt(3)"
 name: "ldns_pkt"
 section: "3"
@@ -10,11 +9,13 @@ description: "ldns_pkt, ldns_pkt_section, ldns_pkt_type"
 
 <h2>NAME</h2>
 <p> ldns_pkt, ldns_pkt_section, ldns_pkt_type </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p>&nbsp;<wbr>ldns_pkt_section(); </p>
 <p>&nbsp;<wbr>ldns_pkt_type(); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_pkt</i></dt>
 <dd>

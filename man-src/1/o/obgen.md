@@ -1,5 +1,4 @@
 ---
-
 title: "obgen(1)"
 name: "obgen"
 section: "1"
@@ -10,7 +9,9 @@ description: "obgen – generate 3D coordinates for a molecule"
 
 <h2>NAME</h2>
 <p> <code>obgen</code> &#8211; generate 3D coordinates for a molecule</p>
+<h2>SYNOPSIS</h2>
 <p> [<i>OPTIONS</i> ] <i>filename</i></p>
+<h2>DESCRIPTION</h2>
 <p> The obgen tool will generate 3D coordinates for molecules in a file (e.g. multi-molecule SMILES files). The resulting structure will be optimized using the given forcefield and checked for the lowest-energy conformer using a Monte Carlo search. Output will be sent to standard output in the SDF file format.</p>
 <h2>OPTIONS</h2>
 <p> If no filename is given, obgen will give all options including the available forcefields.</p>

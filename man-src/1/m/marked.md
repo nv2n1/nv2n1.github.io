@@ -1,5 +1,4 @@
 ---
-
 title: "marked(1)"
 name: "marked"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-marked/"
 description: "marked – a javascript markdown parser"
 ---
 
+<h2 class="name">NAME</h2>
+<p> marked &#8211; a javascript markdown parser</p>
+<h2>SYNOPSIS</h2>
 <p> <code>marked</code> [-o <i>&lt;output&gt;</i>] [-i <i>&lt;input&gt;</i>] [&#8211;help] [&#8211;tokens] [&#8211;pedantic] [&#8211;gfm] [&#8211;breaks] [&#8211;tables] [&#8211;sanitize] [&#8211;smart-lists] [&#8211;lang-prefix <i>&lt;prefix&gt;</i>] [&#8211;no-etc&#8230;] [&#8211;silent] [<i>filename</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>marked</code> is a full-featured javascript markdown parser, built for speed. It also includes multiple GFM features. </p>
 <h2>EXAMPLES</h2>
 <dl>

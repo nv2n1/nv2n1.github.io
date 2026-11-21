@@ -1,5 +1,4 @@
 ---
-
 title: "piconv(1)"
 name: "piconv"
 section: "1"
@@ -7,8 +6,10 @@ letter: "p"
 url: "/docs/linux/man/1-piconv/"
 description: "piconv —"
 ---
-
+<h2 class="name">NAME</h2>
+<p> piconv -- </p>
 <p> <a href="/docs/linux/man/1-iconv/">iconv</a>(1), reinvented in perl  </p>
+<h2>SYNOPSIS</h2>
 <pre><code>  piconv [-f from_encoding] [-t to_encoding]
          [-p|--perlqq|--htmlcref|--xmlcref] [-C N|-c] [-D] [-S scheme]
          [-s string|file...]
@@ -16,6 +17,7 @@ description: "piconv —"
   piconv -r encoding_alias
   piconv -h
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>piconv</code> is perl version of <code>iconv</code>, a character encoding converter widely available for various Unixen today. This script was primarily a technology demonstrator for Perl 5.8.0, but you can use piconv in the place of iconv for virtually any case. </p>
 <p> piconv converts the character encoding of either <font SIZE="-1">STDIN</font> or files specified in the argument and prints out to <font SIZE="-1">STDOUT.</font> </p>
 <p> Here is the list of options. Some options can be in short format (-f) or long (--from) one. </p>

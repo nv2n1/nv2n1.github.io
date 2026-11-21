@@ -1,5 +1,4 @@
 ---
-
 title: "ipa-restore(1)"
 name: "ipa-restore"
 section: "1"
@@ -10,7 +9,9 @@ description: "ipa-restore – Restore an IPA master"
 
 <h2>NAME</h2>
 <p> ipa-restore &#8211; Restore an IPA master</p>
+<h2>SYNOPSIS</h2>
 <p> ipa-restore [<i>OPTION</i>]&#8230; BACKUP</p>
+<h2>DESCRIPTION</h2>
 <p> Only the name of the backup needs to be passed in, not the full path. Backups are stored in a subdirectory in /var/lib/ipa/backup. If a backup is in another location then the full path must be provided.</p>
 <dl>
 <dt>The naming convention for full backups is ipa-full-YEAR-MM-DD-HH-MM-SS in the GMT time zone.</dt>

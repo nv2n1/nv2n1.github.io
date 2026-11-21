@@ -1,5 +1,4 @@
 ---
-
 title: "pcretest(1)"
 name: "pcretest"
 section: "1"
@@ -10,6 +9,7 @@ description: "pcretest – a program for testing Perl-compatible regular express
 
 <h2>NAME</h2>
 <p> pcretest &#8211; a program for testing Perl-compatible regular expressions.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pcretest [options] [input file [output file]]</code> </p>
 <p> <code>pcretest</code> was written as a test program for the PCRE regular expression library itself, but it can also be used for experimenting with regular expressions. This document describes the features of the test program; for details of the regular expressions themselves, see the <code>pcrepattern</code> documentation. For details of the PCRE library function calls and their options, see the <code>pcreapi</code> , <code>pcre16</code> and <code>pcre32</code> documentation. </p>
 <p> The input for <code>pcretest</code> is a sequence of regular expression patterns and strings to be matched, as described below. The output shows the result of each match. Options on the command line and the patterns control PCRE options and exactly what is output. </p>
@@ -81,6 +81,7 @@ description: "pcretest – a program for testing Perl-compatible regular express
 <dd> Run each compile, study, and match many times with a timer, and output resulting time per compile or match (in milliseconds). Do not set <code>-m</code> with <code>-t</code>, because you will then get the size output a zillion times, and the timing will be distorted. You can control the number of iterations that are used for timing by following <code>-t</code> with a number (as a separate item on the command line). For example, &quot;-t 1000&quot; would iterate 1000 times. The default is to iterate 500000 times.</dd>
 <dt><code>-tm</code></dt>
 <dd> This is like <code>-t</code> except that it times only the matching phase, not the compile or study phases.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> If <code>pcretest</code> is given two filename arguments, it reads from the first and writes to the second. If it is given only one filename argument, it reads from that file and writes to stdout. Otherwise, it reads from stdin and writes to stdout, and prompts for each line of input, using &quot;re&gt;&quot; to prompt for regular expressions, and &quot;data&gt;&quot; to prompt for data lines. </p>
 <p> When <code>pcretest</code> is built, a configuration option can specify that it should be linked with the <code>libreadline</code> library. When this is done, if the input is from a terminal, it is read using the <code>readline()</code> function. This provides line-editing and history facilities. The output from the <code>-help</code> option states whether or not <code>readline()</code> will be used. </p>
 <p> The program handles any number of sets of input on a single input file. Each set starts with a regular expression, and continues with any number of data lines to be matched against the pattern. </p>

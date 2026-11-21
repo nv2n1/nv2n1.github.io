@@ -1,5 +1,4 @@
 ---
-
 title: "xapian-config(1)"
 name: "xapian-config"
 section: "1"
@@ -10,7 +9,9 @@ description: "xapian-config – report information about the installed version o
 
 <h2>NAME</h2>
 <p> xapian-config &#8211; report information about the installed version of xapian</p>
+<h2>SYNOPSIS</h2>
 <p> <code>xapian-config</code> <i>OPTION</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> xapian-config &#8211; report information about the installed version of xapian</p>
 <h2>OPTIONS</h2>
 <dl>

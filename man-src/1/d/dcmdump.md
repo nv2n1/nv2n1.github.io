@@ -1,5 +1,4 @@
 ---
-
 title: "dcmdump(1)"
 name: "dcmdump"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-dcmdump/"
 description: "dcmdump – Dump DICOM file and data set"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dcmdump &#8211; Dump DICOM file and data set </p>
+<h2>SYNOPSIS</h2>
 <pre>
 dcmdump [options] dcmfile-in...
 </pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>dcmdump</code> utility dumps the contents of a DICOM file (file format or raw data set) to stdout in textual form. Attributes with very large value fields (e.g. pixel data) can be described as &#8216;(not loaded)&#8217;. String value fields will be delimited with square brackets ([]). Known UIDs will be displayed by their names prefixed by an equals sign (e.g. &#8216;=MRImageStorage&#8217;) unless this mapping would be explicitly switched off. Empty value fields are described as &#8216;(no value available)&#8217;. </p>
 <p> If <code>dcmdump</code> reads a raw data set (DICOM data without a file format meta-header) it will attempt to guess the transfer syntax by examining the first few bytes of the file. It is not always possible to correctly guess the transfer syntax and it is better to convert a data set to a file format whenever possible (using the <code>dcmconv</code> utility). It is also possible to use the <i>-f</i> and <i>-t[ieb]</i> options to force <code>dcmdump</code> to read a dataset with a particular transfer syntax.</p>
 <h2>PARAMETERS</h2>

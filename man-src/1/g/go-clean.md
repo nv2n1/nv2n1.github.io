@@ -1,5 +1,4 @@
 ---
-
 title: "go-clean(1)"
 name: "go-clean"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-go-clean/"
 description: "go-clean – remove object files and cached files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> go-clean &#8211; remove object files and cached files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>go clean</code> [<code>-i</code>] [<code>-r</code>] [<code>-n</code>] [<code>-x</code>] [<i>packages</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Clean removes object files from package source directories. The go command builds most objects in a temporary directory, so go clean is mainly concerned with object files left by other tools or by manual invocations of go build. </p>
 <p> If a package argument is given or the -i or -r flag is set, clean removes the following files from each of the source directories corresponding to the import paths:</p>
 <dl>

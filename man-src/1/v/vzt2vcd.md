@@ -1,5 +1,4 @@
 ---
-
 title: "vzt2vcd(1)"
 name: "vzt2vcd"
 section: "1"
@@ -12,6 +11,7 @@ description: "vzt2vcd – Converts VZT files to VCD"
 <p> vzt2vcd &#8211; Converts VZT files to VCD</p>
 <h2>SYNTAX</h2>
 <p> vzt2vcd [<i>option</i>]&#8230; [<i>VZTFILE</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Converts VZT files to VCD files. If an output filename is not specified, the VCD is emitted to stdout. </p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "pmdaapache(1)"
 name: "pmdaapache"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmdaapache – Apache2 web server performance metrics domain agent
 
 <h2>NAME</h2>
 <p> <code>pmdaapache</code> &#8211; Apache2 web server performance metrics domain agent (PMDA)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/apache/pmdaapache</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>] [<code>-S</code> <i>server</i>] [<code>-P</code> <i>port</i>] [<code>-L</code> <i>location</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdaapache</code> is a Performance Metrics Domain Agent (PMDA) which extracts performance metrics describing the state of an Apache web server. </p>
 <p> The <code>apache</code> PMDA exports metrics that measure the request rate, cumulative request sizes, uptime and various connection states for active clients. </p>
 <p> This information is obtained by performing a HTTP request to the server status URL, which must be enabled in the <i>httpd.conf</i> configuration file. </p>

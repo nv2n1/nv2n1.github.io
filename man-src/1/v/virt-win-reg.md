@@ -1,5 +1,4 @@
 ---
-
 title: "virt-win-reg(1)"
 name: "virt-win-reg"
 section: "1"
@@ -7,7 +6,9 @@ letter: "v"
 url: "/docs/linux/man/1-virt-win-reg/"
 description: "virt-win-reg – Export and merge Windows Registry entries from a Windows guest"
 ---
-
+<h2 class="name">NAME</h2>
+<p> virt-win-reg - Export and merge Windows Registry entries from a Windows guest </p>
+<h2>SYNOPSIS</h2>
 <pre><code> virt-win-reg domname 'HKLM\Path\To\Subkey'
  virt-win-reg domname 'HKLM\Path\To\Subkey' name
  virt-win-reg domname 'HKLM\Path\To\Subkey' @
@@ -17,6 +18,7 @@ description: "virt-win-reg – Export and merge Windows Registry entries from a 
 <h2>WARNING</h2>
 <p> You must <i>not</i> use <code>&quot;virt-win-reg&quot;</code> with the <i>--merge</i> option on live virtual machines. If you do this, you <i>will</i> get irreversible disk corruption in the <font SIZE="-1">VM. </font><code>&quot;virt-win-reg&quot;</code> tries to stop you from doing this, but doesn&#8217;t catch all cases. </p>
 <p> Modifying the Windows Registry is an inherently risky operation. The format is deliberately obscure and undocumented, and Registry changes can leave the system unbootable. Therefore when using the <i>--merge</i> option, make sure you have a reliable backup first.  </p>
+<h2>DESCRIPTION</h2>
 <p> This program can export and merge Windows Registry entries from a Windows guest. </p>
 <p> The first parameter is the libvirt guest name or the raw disk image of a Windows guest. </p>
 <p> If <i>--merge</i> is <i>not</i> specified, then the chosen registry key is displayed/exported (recursively). For example: </p>

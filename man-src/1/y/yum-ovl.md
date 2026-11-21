@@ -1,5 +1,4 @@
 ---
-
 title: "yum-ovl(1)"
 name: "yum-ovl"
 section: "1"
@@ -12,6 +11,7 @@ description: "yum-ovl – Performs an initial copy-up of yum(8) package database
 <p> yum-ovl &#8211; Performs an initial copy-up of <a href="/docs/linux/man/8-yum/">yum</a>(8) package database.</p>
 <h2>OPTIONS</h2>
 <p> <code>-d</code> <i>debug-level</i> If debug level is <i>2</i> and more, print out the number of files copied up from the lower layer</p>
+<h2>DESCRIPTION</h2>
 <p> Opening a file on OverlayFS in read-only mode causes the file from<br />
  lower layer to be opened, then later on, if the same file is opened<br />
  in write mode, a copy-up into the upper layer takes place,<br />

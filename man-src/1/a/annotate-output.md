@@ -1,5 +1,4 @@
 ---
-
 title: "annotate-output(1)"
 name: "annotate-output"
 section: "1"
@@ -10,7 +9,9 @@ description: "annotate-output – annotate program output with time and stream"
 
 <h2>NAME</h2>
 <p> annotate-output &#8211; annotate program output with time and stream</p>
+<h2>SYNOPSIS</h2>
 <p> <code>annotate-output</code> [<i>options</i>] <i>program</i> [<i>args</i> &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>annotate-output</code> will execute the specified program, while prepending every line with the current time and O for stdout and E for stderr. </p>
 <h2>OPTIONS</h2>
 <dl>

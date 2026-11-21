@@ -1,5 +1,4 @@
 ---
-
 title: "mecab(1)"
 name: "mecab"
 section: "1"
@@ -10,7 +9,9 @@ description: "mecab – manual page for mecab of 0.98pre1"
 
 <h2>NAME</h2>
 <p> mecab &#8211; manual page for mecab of 0.98pre1</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mecab</code> [<i>options</i>] <i>files</i></p>
+<h2>DESCRIPTION</h2>
 <p> MeCab: Yet Another Part-of-Speech and Morphological Analyzer </p>
 <p> Copyright(C) 2001-2008 Taku Kudo Copyright(C) 2004-2008 Nippon Telegraph and Telephone Corporation</p>
 <dl>

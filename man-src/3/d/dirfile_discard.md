@@ -1,5 +1,4 @@
 ---
-
 title: "dirfile_discard(3)"
 name: "dirfile_discard"
 section: "3"
@@ -10,10 +9,12 @@ description: "dirfile_close, dirfile_discard — close a dirfile and free associ
 
 <h2>NAME</h2>
 <p> dirfile_close, dirfile_discard &#8212; close a dirfile and free associated memory.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
 <dl>
 <dt> <code>int dirfile_close(DIRFILE *</code><i>dirfile</i><code>);</code></dt>
 <dt> <code>int dirfile_discard(DIRFILE *</code><i>dirfile</i><code>);</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>dirfile_close</code>() function first calls <code><a href="/docs/linux/man/3-dirfile_flush/">dirfile_flush</a></code>(3) to flush all metadata changes to disk and to close all file handles associated with <i>dirfile</i>. It then frees memory associated with the DIRFILE object. If <i>dirfile</i> is NULL, nothing happens, and the call succeeds. </dd>
 <p> The <code>dirfile_discard</code>() function behaves similarly, except modified metadata is not written to disk, but simply discarded. In order to ensure that modified data files associated with <code>RAW</code> fields are properly terminated, changes to <code>RAW</code> data files are still flushed to disk by this function. If <i>dirfile</i> was opened in read-only mode, <code>dirfile_discard()</code> and <code>dirfile_close()</code> behave identically. </p>
 <p> One of these functions should be called on all pointers returned by <code><a href="/docs/linux/man/3-dirfile_cbopen/">dirfile_cbopen</a></code>(3) and <code><a href="/docs/linux/man/3-dirfile_open/">dirfile_open</a></code>(3), even if the call to those function failed. After <code>dirfile_close</code>() or <code>dirfile_discard()</code> returns successfully, the pointer <i>dirfile</i> should be considered invalid.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ibv_read_counters(3)"
 name: "ibv_read_counters"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-ibv_read_counters/"
 description: "ibv_read_counters – Read counter values"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ibv_read_counters &#8211; Read counter values </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt>
 </dt><dd>
@@ -19,6 +21,7 @@ int ibv_read_counters(struct ibv_counters *counters,
                       uint32_t flags);
 </code></pre>
 </dd></dl>
+<h2>DESCRIPTION</h2>
 <p> ibv_read_counters() returns the values of the chosen counters into counters_value array of which can accumulate ncounters. The values are filled according to the configuration defined by the user in the ibv_attach_counters_point_xxx functions.</p>
 <h2>ARGUMENTS</h2>
 <dl>

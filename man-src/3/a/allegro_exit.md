@@ -1,5 +1,4 @@
 ---
-
 title: "allegro_exit(3)"
 name: "allegro_exit"
 section: "3"
@@ -10,8 +9,10 @@ description: "allegro_exit – Closes down the Allegro system."
 
 <h2>NAME</h2>
 <p> allegro_exit &#8211; Closes down the Allegro system.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>void allegro_exit();</code></p>
+<h2>DESCRIPTION</h2>
 <p> Closes down the Allegro system. This includes returning the system to text mode and removing whatever mouse, keyboard, and timer routines have been installed. You don&#8217;t normally need to bother making an explicit call to this function, because allegro_init() installs it as an atexit() routine so it will be called automatically when your program exits. </p>
 <p> Note that after you call this function, other functions like destroy_bitmap() will most likely crash. This is a problem for C++ global destructors, which usually get called after atexit(), so don&#8217;t put Allegro calls in them. You can write the destructor code in another method which you can manually call before your program exits, avoiding this problem. </p>
 <h2>SEE ALSO</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "euare-roleupdateassumepolicy(1)"
 name: "euare-roleupdateassumepolicy"
 section: "1"
@@ -10,10 +9,12 @@ description: "euare-roleupdateassumepolicy – Update a role’s trust policy, t
 
 <h2>NAME</h2>
 <p> euare-roleupdateassumepolicy &#8211; Update a role&#8217;s trust policy, the policy that allows entities to assume a role</p>
+<h2>SYNOPSIS</h2>
 <p> euare-roleupdateassumepolicy (<code>-f</code> FILE | <code>-s</code> SERVICE) [-o]</p>
 <dl>
 <dt>[&#8211;as-account ACCOUNT] [-U URL]</dt>
 <dd> [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ROLE</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Update a role&#8217;s trust policy, the policy that allows entities to assume a role</p>
 <h3>positional arguments:</h3>
 <dl>

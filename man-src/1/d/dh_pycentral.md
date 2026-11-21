@@ -1,5 +1,4 @@
 ---
-
 title: "dh_pycentral(1)"
 name: "dh_pycentral"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dh_pycentral/"
 description: "dh_pycentral – use the python-central framework to handle Python modules and extensions"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dh_pycentral &#8211; use the python-central framework to handle Python modules and extensions </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dh_pycentral</code> [<i>debhelper options</i>] [<code>-n</code>] [<code>-X</code><i>item</i>] [<code>-V</code> <i>version</i>] [<i>module dirs &#8230;</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> dh_pycentral is a debhelper program that will scan your package, detect public Python modules and move them in /usr/share/pycentral so that python-central can byte-compile those for all supported Python versions. Extensions are kept into the original installation location. </p>
 <p> Moving the files to the pycentral location and adding symbolic links to /usr/lib/pythonX.Y/*-packages can be done by setting the environment varibale <font SIZE="-1">DH_PYCENTRAL</font> to a string containing the string <code>include-links</code>. </p>
 <p> Moving the files to the pycentral location can be disabled by setting the environment varibale <font SIZE="-1">DH_PYCENTRAL</font> to a string containing the string <code>nomove</code>. </p>

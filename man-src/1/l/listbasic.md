@@ -1,5 +1,4 @@
 ---
-
 title: "listbasic(1)"
 name: "listbasic"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-listbasic/"
 description: "listbasic – Extract the BASIC from a ZX Spectrum file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> listbasic &#8211; Extract the BASIC from a ZX Spectrum file </p>
+<h2>SYNOPSIS</h2>
 <p> <code>listbasic</code> <i>file</i></p>
+<h2>DESCRIPTION</h2>
 <p> listbasic extracts the BASIC listing from a ZX Spectrum snapshot or tape file and prints it to standard output.</p>
 <h2>OPTIONS</h2>
 <dl>

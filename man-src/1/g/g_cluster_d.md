@@ -1,5 +1,4 @@
 ---
-
 title: "g_cluster_d(1)"
 name: "g_cluster_d"
 section: "1"
@@ -11,7 +10,9 @@ description: "g_cluster – clusters structures"
 <h2>NAME</h2>
 <p> g_cluster &#8211; clusters structures </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>g_cluster</code> <code>-f</code><i> traj.xtc </i> <code>-s</code><i> topol.tpr </i> <code>-n</code><i> index.ndx </i> <code>-dm</code><i> rmsd.xpm </i> <code>-o</code><i> rmsd-clust.xpm </i> <code>-g</code><i> cluster.log </i> <code>-dist</code><i> rmsd-dist.xvg </i> <code>-ev</code><i> rmsd-eig.xvg </i> <code>-sz</code><i> clust-size.xvg </i> <code>-tr</code><i> clust-trans.xpm </i> <code>-ntr</code><i> clust-trans.xvg </i> <code>-clid</code><i> clust-id.xvg </i> <code>-cl</code><i> clusters.pdb </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-tu</code><i> enum </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-[no]dista</code><i></i> <code>-nlevels</code><i> int </i> <code>-cutoff</code><i> real </i> <code>-[no]fit</code><i></i> <code>-max</code><i> real </i> <code>-skip</code><i> int </i> <code>-[no]av</code><i></i> <code>-wcl</code><i> int </i> <code>-nst</code><i> int </i> <code>-rmsmin</code><i> real </i> <code>-method</code><i> enum </i> <code>-minstruct</code><i> int </i> <code>-[no]binary</code><i></i> <code>-M</code><i> int </i> <code>-P</code><i> int </i> <code>-seed</code><i> int </i> <code>-niter</code><i> int </i> <code>-kT</code><i> real </i></p>
+<h2>DESCRIPTION</h2>
 <p> g_cluster can cluster structures with several different methods. Distances between structures can be determined from a trajectory or read from an XPM matrix file with the <code> -dm</code> option. RMS deviation after fitting or RMS deviation of atom-pair distances can be used to define the distance between structures. </p>
 <p> single linkage: add a structure to a cluster when its distance to any element of the cluster is less than <code> cutoff</code>. </p>
 <p> Jarvis Patrick: add a structure to a cluster when this structure and a structure in the cluster have each other as neighbors and they have a least <code> P</code> neighbors in common. The neighbors of a structure are the M closest structures or all structures within <code> cutoff</code>. </p>

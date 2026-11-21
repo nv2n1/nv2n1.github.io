@@ -1,5 +1,4 @@
 ---
-
 title: "ikiwiki-calendar(1)"
 name: "ikiwiki-calendar"
 section: "1"
@@ -11,9 +10,13 @@ url: "/docs/linux/man/1-ikiwiki-calendar/"
 
  ikiwiki-calendar - create calendar archive pages 
 
-ikiwiki-calendar [-f] your.setup [pagespec] [startyear [endyear]] 
+<h2>SYNOPSIS</h2>
 
-ikiwiki-calendar creates pages that use the ikiwiki/directive/calendar directive, allowing the archives to be browsed one month at a time, with calendar-based navigation. 
+ ikiwiki-calendar [-f] your.setup [pagespec] [startyear [endyear]] 
+
+<h2>DESCRIPTION</h2>
+
+ ikiwiki-calendar creates pages that use the ikiwiki/directive/calendar directive, allowing the archives to be browsed one month at a time, with calendar-based navigation. 
 
  You must specify the setup file for your wiki. The pages will be created inside its srcdir, beneath the archivebase directory used by the calendar plugin (default &quot;archives&quot;). 
 

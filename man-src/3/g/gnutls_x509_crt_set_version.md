@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_crt_set_version(3)"
 name: "gnutls_x509_crt_set_version"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_crt_set_version – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_set_version &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_set_version(gnutls_x509_crt_t </code><i>crt</i><code>, unsigned int </code><i>version</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_x509_crt_set_version – API function"
 <dd> a certificate of type <code>gnutls_x509_crt_t</code></dd>
 <dt>unsigned int version</dt>
 <dd> holds the version number. For X.509v1 certificates must be 1.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will set the version of the certificate. This must be one for X.509 version 1, and so on. Plain certificates without extensions must have version set to one. </p>
 <p> To create well-formed certificates, you must specify version 3 if you use any certificate extensions. Extensions are created by functions such as <code>gnutls_x509_crt_set_subject_alt_name()</code> or <code>gnutls_x509_crt_set_key_usage()</code>.</p>
 <h2>RETURNS</h2>

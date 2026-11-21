@@ -1,5 +1,4 @@
 ---
-
 title: "ykinfo(1)"
 name: "ykinfo"
 section: "1"
@@ -10,7 +9,9 @@ description: "ykinfo – Get basic information from a YubiKey"
 
 <h2>NAME</h2>
 <p> ykinfo &#8211; Get basic information from a YubiKey</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ykinfo</code> [<i>-s</i>] [<i>-m</i>] [<i>-H</i>] [<i>-v</i>] [<i>-t</i>] [<i>-p</i>] [<i>-1</i>] [<i>-2</i>] [<i>-q</i>] [<i>-V</i>] [<i>-h</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Get basic information from a YubiKey. Can get serial number, version and current touch level. Can get all parameters at once or one at a time. If <code>-q</code> is given only the relevant string from the YubiKey is written to screen.</p>
 <h2>OPTIONS</h2>
 <dl>

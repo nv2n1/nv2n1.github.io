@@ -1,5 +1,4 @@
 ---
-
 title: "libssh2_sftp_stat_ex(3)"
 name: "libssh2_sftp_stat_ex"
 section: "3"
@@ -10,6 +9,7 @@ description: "libssh2_sftp_stat_ex – get status about an SFTP file"
 
 <h2>NAME</h2>
 <p> libssh2_sftp_stat_ex &#8211; get status about an SFTP file</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;libssh2.h&gt;
 #include &lt;libssh2_sftp.h&gt;
@@ -17,6 +17,7 @@ int libssh2_sftp_stat_ex(LIBSSH2_SFTP *sftp, const char *path,
                          unsigned int path_len, int stat_type,
                          LIBSSH2_SFTP_ATTRIBUTES *attrs);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <i>sftp</i> &#8211; SFTP instance as returned by <code><a href="/docs/linux/man/3-libssh2_sftp_init/">libssh2_sftp_init</a>(3)</code> </p>
 <p> <i>path</i> &#8211; Remote filesystem object to stat/lstat/setstat. </p>
 <p> <i>path_len</i> &#8211; Length of the name of the remote filesystem object to stat/lstat/setstat. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ctgsen(3)"
 name: "ctgsen"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-ctgsen/"
 description: "ctgsen.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ctgsen.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctgsen</code> (IJOB, WANTQ, WANTZ, SELECT, N, A, LDA, B, LDB, ALPHA, BETA, Q, LDQ, Z, LDZ, M, PL, PR, DIF, WORK, LWORK, IWORK, LIWORK, INFO)<br />
  <i></i><code>CTGSEN</code></p>

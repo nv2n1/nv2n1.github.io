@@ -1,5 +1,4 @@
 ---
-
 title: "auparse_add_callback(3)"
 name: "auparse_add_callback"
 section: "3"
@@ -10,11 +9,13 @@ description: "auparse_add_callback – add a callback handler for notifications"
 
 <h2>NAME</h2>
 <p> auparse_add_callback &#8211; add a callback handler for notifications</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>
 <pre><code>
 void auparse_add_callback(auparse_state_t *au, auparse_callback_ptr callback,
                           void *user_data, user_destroy user_destroy_func);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> auparse_add_callback adds a callback function to the parse state which is invoked to notify the application of parsing events. This is part of the event feed API. </p>
 <p> The signature of the callback is: </p>
 <p>void auparse_callback(auparse_state_t *au, auparse_cb_event_t cb_event_type,<br />

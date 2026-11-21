@@ -1,5 +1,4 @@
 ---
-
 title: "pax11publish(1)"
 name: "pax11publish"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-pax11publish/"
 description: "pax11publish – PulseAudio X11 Credential Utility"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pax11publish &#8211; PulseAudio X11 Credential Utility </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pax11publish -h </p>
 <p> pax11publish [</code><i>options</i><code>] [-d] </p>
 <p> pax11publish [</code><i>options</i><code>] -e </p>
 <p> pax11publish [</code><i>options</i><code>] -i </p>
 <p> pax11publish [</code><i>options</i><code>] -r </code></p>
+<h2>DESCRIPTION</h2>
 <p> The <i>pax11publish</i> utility can be used to dump or manipulate the PulseAudio server credentials that can be stored as properties on the X11 root window. </p>
 <p> Please note that the loadable module <i>module-x11-publish</i> exports the same information directly from the PulseAudio sound server, and should in most cases be used in preference over this tool. </p>
 <p> Use the following command to dump the raw PulseAudio-specific data that is stored in your X11 root window: </p>

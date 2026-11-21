@@ -1,5 +1,4 @@
 ---
-
 title: "perl6-m(1)"
 name: "perl6-m"
 section: "1"
@@ -7,13 +6,20 @@ letter: "p"
 url: "/docs/linux/man/1-perl6-m/"
 ---
 
-perl6 - Rakudo Perl 6 Compiler 
+<h2 class="name">NAME</h2>
+ 
 
-<pre><code>
+ perl6 - Rakudo Perl 6 Compiler 
+
+<h2>SYNOPSIS</h2>
+
+ <pre><code>
 perl6[switches][--][programfile][arguments]
 </code></pre>
 
-With no arguments, enters a <font SIZE="-1">REPL.</font> With a <tt>&quot;[programfile]&quot;</tt> or the <tt>&quot;-e&quot;</tt> option, compiles the given program and by default also executes the compiled code. 
+<h2>DESCRIPTION</h2>
+
+ With no arguments, enters a <font SIZE="-1">REPL.</font> With a <tt>&quot;[programfile]&quot;</tt> or the <tt>&quot;-e&quot;</tt> option, compiles the given program and by default also executes the compiled code. 
 
  
   -c                   check syntax only (runs BEGIN and CHECK blocks)

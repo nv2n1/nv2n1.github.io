@@ -1,5 +1,4 @@
 ---
-
 title: "xscreensaver-command(1)"
 name: "xscreensaver-command"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-xscreensaver-command/"
 description: "xscreensaver-command – control a running xscreensaver process"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xscreensaver-command &#8211; control a running xscreensaver process </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xscreensaver-command</code> [-display <i>host:display.screen</i>] [-help | -demo | -prefs | -activate | -deactivate | -cycle | -next | -prev | -select <i>n</i> | -exit | -restart | -lock | -version | -time | -watch]</p>
+<h2>DESCRIPTION</h2>
 <p> The <i>xscreensaver-command</i> program controls a running <i>xscreensaver</i> process by sending it client-messages. </p>
 <p> <code><a href="/docs/linux/man/1-xscreensaver/">xscreensaver</a></code>(1) has a client-server model: the xscreensaver process is a daemon that runs in the background; it is controlled by other foreground programs such as <i>xscreensaver-command</i> and <code><a href="/docs/linux/man/1-xscreensaver-demo/">xscreensaver-demo</a></code>(1). </p>
 <p> This program, <i>xscreensaver-command</i>, is a command-line-oriented tool; the <code><a href="/docs/linux/man/1-xscreensaver-demo/">xscreensaver-demo</a></code>(1). program is a graphical tool.</p>

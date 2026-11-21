@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_privkey_get_type(3)"
 name: "gnutls_privkey_get_type"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_privkey_get_type – API function"
 
 <h2>NAME</h2>
 <p> gnutls_privkey_get_type &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/abstract.h&gt;</code> </p>
 <p> <code>gnutls_privkey_type_t gnutls_privkey_get_type(gnutls_privkey_t </code><i>key</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_privkey_t key</dt>
 <dd> should contain a <code>gnutls_privkey_t</code> structure</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will return the type of the private key. This is actually the type of the subsystem used to set this private key.</p>
 <h2>RETURNS</h2>
 <p> a member of the <code>gnutls_privkey_type_t</code> enumeration on success, or a negative error code on error.</p>

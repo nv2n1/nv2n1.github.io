@@ -1,5 +1,4 @@
 ---
-
 title: "sgsvj1(3)"
 name: "sgsvj1"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-sgsvj1/"
 description: "sgsvj1.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sgsvj1.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sgsvj1</code> (JOBV, M, N, N1, A, LDA, D, SVA, MV, V, LDV, EPS, SFMIN, TOL, NSWEEP, WORK, LWORK, INFO)<br />
  <i></i><code>SGSVJ1</code> pre-processor for the routine sgesvj, applies Jacobi rotations targeting only particular pivots.</p>

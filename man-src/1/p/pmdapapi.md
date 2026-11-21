@@ -1,5 +1,4 @@
 ---
-
 title: "pmdapapi(1)"
 name: "pmdapapi"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmdapapi – papi performance metrics domain agent (PMDA)"
 
 <h2>NAME</h2>
 <p> <code>pmdapapi</code> &#8211; papi performance metrics domain agent (PMDA)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/pmdapapi</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdapapi</code> is a papi Performance Metrics Domain Agent (PMDA) which exposes hardware performance counters via the library Performance API (PAPI). </p>
 <p> The metrics exported by the papi PMDA report values gathered from the hardware counters and metrics available, as reported by papi. Currently, only root users may access such metrics. </p>
 <p> A brief description of the <code>pmdapapi</code> command line options follows:</p>

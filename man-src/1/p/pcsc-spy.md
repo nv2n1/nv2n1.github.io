@@ -1,5 +1,4 @@
 ---
-
 title: "pcsc-spy(1)"
 name: "pcsc-spy"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pcsc-spy/"
 description: "pcsc-spy – A PC/SC spy command"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pcsc-spy &#8211; A PC/SC spy command </p>
+<h2>SYNOPSIS</h2>
 <p> pcsc-spy [<code>-n</code>|<code>&#8211;nocolor</code>] [<code>-d</code>|<code>&#8211;diffable</code>] [<code>-h</code>|<code>&#8211;help</code>] [<i>fifo_filename</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> pcsc-spy displays <font SIZE="-1">PC/SC</font> calls of an application. It must be used with the <i>libpcscspy.so</i> library. </p>
 <p> To be able to spy the <font SIZE="-1">PC/SC</font> layer, the application flow must be modified so that all <font SIZE="-1">PC/SC</font> calls are redirected. Two options are available:</p>
 <dl>

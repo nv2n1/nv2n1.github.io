@@ -1,5 +1,4 @@
 ---
-
 title: "quotactl(2)"
 name: "quotactl"
 section: "2"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/2-quotactl/"
 description: "quotactl – manipulate disk quotas"
 ---
 
+<h2 class="name">NAME</h2>
+<p> quotactl &#8211; manipulate disk quotas </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/quota.h&gt;
 #include &lt;xfs/xqm.h&gt; /* for XFS quotas */
 int quotactl(int cmd, const char *special, int id, caddr_t addr);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The quota system can be used to set per-user, per-group, and per-project limits on the amount of disk space used on a filesystem. For each user and/or group, a soft limit and a hard limit can be set for each filesystem. The hard limit can&#8217;t be exceeded. The soft limit can be exceeded, but warnings will ensue. Moreover, the user can&#8217;t exceed the soft limit for more than grace period duration (one week by default) at a time; after this, the soft limit counts as a hard limit. </p>
 <p> The <code>quotactl</code>() call manipulates disk quotas. The <i>cmd</i> argument indicates a command to be applied to the user or group ID specified in <i>id</i>. To initialize the <i>cmd</i> argument, use the <i>QCMD(subcmd, type)</i> macro. The <i>type</i> value is either <code>USRQUOTA</code>, for user quotas, <code>GRPQUOTA</code>, for group quotas, or (since Linux 4.1) <code>PRJQUOTA</code>, for project quotas. The <i>subcmd</i> value is described below. </p>
 <p> The <i>special</i> argument is a pointer to a null-terminated string containing the pathname of the (mounted) block special device for the filesystem being manipulated. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ioctl_console(2)"
 name: "ioctl_console"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-ioctl_console/"
 description: "ioctl_console – ioctls for console terminal and virtual consoles"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ioctl_console &#8211; ioctls for console terminal and virtual consoles </p>
+<h2>DESCRIPTION</h2>
 <p> The following Linux-specific <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) requests are supported for console terminals and virtual consoles. Each requires a third argument, assumed here to be <i>argp</i>.</p>
 <dl>
 <dt><code>KDGETLED</code></dt>

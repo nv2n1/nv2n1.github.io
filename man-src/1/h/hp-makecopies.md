@@ -1,5 +1,4 @@
 ---
-
 title: "hp-makecopies(1)"
 name: "hp-makecopies"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-hp-makecopies/"
 description: "hp-makecopies – Make Copies Utility"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hp-makecopies &#8211; Make Copies Utility </p>
+<h2>DESCRIPTION</h2>
 <p> PC initiated make copies function on supported HP AiO and MFP devices. (Note: Currently unsupported in Qt4.)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>hp-makecopies [DEVICE_URI|PRINTER_NAME] [MODE] [OPTIONS]</code></p>
 <h2>PRINTER|DEVICE-URI</h2>
 <dl>

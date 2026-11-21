@@ -1,5 +1,4 @@
 ---
-
 title: "nitrogen(1)"
 name: "nitrogen"
 section: "1"
@@ -10,7 +9,9 @@ description: "nitrogen – X11 background previewer and setter"
 
 <h2>NAME</h2>
 <p> nitrogen &#8211; X11 background previewer and setter</p>
+<h2>SYNOPSIS</h2>
 <p> <code>nitrogen [</code> <i>OPTIONS</i> <code>]</code> <i>DIRECTORY?</i></p>
+<h2>DESCRIPTION</h2>
 <p> In normal working mode, provides an interface which displays all pictures in the given DIRECTORY. From this interface, it is possible to set the X11 root pixmap either temporarily or set and store the picture, drawing mode, and X display for restoration later. If no directory is specified, it uses the stored directories in your &quot;library&quot; (as of 1.5). See the Preferences dialog. When the &#8211;restore option is passed, nitrogen sets all backgrounds that it has a configuration for and exits immediatly, for use in an .xinitrc or .xsession file.</p>
 <h2>OPTIONS</h2>
 <dl>

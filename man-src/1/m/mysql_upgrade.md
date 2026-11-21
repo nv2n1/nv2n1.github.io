@@ -1,5 +1,4 @@
 ---
-
 title: "mysql_upgrade(1)"
 name: "mysql_upgrade"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mysql_upgrade/"
 description: "mysql_upgrade – check and upgrade MySQL tables"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mysql_upgrade &#8211; check and upgrade MySQL tables </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysql_upgrade [</code><i>options</i><code>]</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dl>
 <dd> <font SIZE="+1"> <code>Note</code> </font></dd>
 <dd>

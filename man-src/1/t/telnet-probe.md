@@ -1,5 +1,4 @@
 ---
-
 title: "telnet-probe(1)"
 name: "telnet-probe"
 section: "1"
@@ -10,7 +9,9 @@ description: "telnet-probe – lightweight telnet-like port probe"
 
 <h2>NAME</h2>
 <p> <code>telnet-probe</code> &#8211; lightweight telnet-like port probe</p>
+<h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/telnet-probe</code> [<code>-c</code>] [<code>-v</code>] <i>host</i> <i>port</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>telnet-probe</code> allows the <code><a href="/docs/linux/man/1-pmdashping/">pmdashping</a></code>(1) daemons to establish connections to arbitrary local and remote service-providing daemons so that response time and service availability information can be obtained. </p>
 <p> The required <i>host</i> and <i>port</i> number arguments have the same meaning as their <code><a href="/docs/linux/man/1-telnet/">telnet</a></code>(1) equivalents. </p>
 <p> The <code>-c</code> option causes <code>telnet-probe</code> to perform a <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2) only. This skips the <code><a href="/docs/linux/man/2-read/">read</a></code>(2) and <code><a href="/docs/linux/man/2-write/">write</a></code>(2) exercise that would otherwise be done after connecting (see below). </p>

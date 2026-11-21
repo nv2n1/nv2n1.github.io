@@ -1,5 +1,4 @@
 ---
-
 title: "perlpod(1)"
 name: "perlpod"
 section: "1"
@@ -7,9 +6,14 @@ letter: "p"
 url: "/docs/linux/man/1-perlpod/"
 ---
 
-perlpod - the Plain Old Documentation format 
+<h2 class="name">NAME</h2>
+ 
 
-Pod is a simple-to-use markup language used for writing documentation for Perl, Perl programs, and Perl modules. 
+ perlpod - the Plain Old Documentation format 
+
+<h2>DESCRIPTION</h2>
+
+ Pod is a simple-to-use markup language used for writing documentation for Perl, Perl programs, and Perl modules. 
 
  Translators are available for converting Pod to various formats like plain text, <font SIZE="-1">HTML,</font> man pages, and more. 
 

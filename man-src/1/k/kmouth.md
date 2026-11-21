@@ -1,5 +1,4 @@
 ---
-
 title: "kmouth(1)"
 name: "kmouth"
 section: "1"
@@ -10,9 +9,11 @@ description: "kmouth – A type-and-say front end for speech synthesizers"
 
 <h2>NAME</h2>
 <p> kmouth &#8211; A type-and-say front end for speech synthesizers</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>kmouth</code> [<i>filename</i>] [KDE Generic Options] [Qt&#x2122;&nbsp;<wbr>Generic Options] </dt>
 </dl>
+<h2>DESCRIPTION</h2>
 <dd>KMouth is an application that enables persons that cannot speak to let their computers speak.It includes a history of spoken sentences from which the user can select sentences to be re-spoken. </dd>
 <p> Note that KMouth does not include speech synthesizer. Instead it requires a speech synthesizer installed in the system. </p>
 <h2>OPTIONS</h2>

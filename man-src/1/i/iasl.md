@@ -1,5 +1,4 @@
 ---
-
 title: "iasl(1)"
 name: "iasl"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-iasl/"
 description: "iasl – ACPI Source Language compiler/decompiler"
 ---
 
+<h2 class="name">NAME</h2>
+<p> iasl &#8211; ACPI Source Language compiler/decompiler </p>
+<h2>SYNOPSIS</h2>
 <p> <code>iasl</code> [<i>&lt;option&gt;</i>&#8230;<i>]</i> &lt;input-file&gt; <code>&#8230;</code></p>
+<h2>DESCRIPTION</h2>
 <p> This manual page briefly documents the <code>iasl</code> command. The option list is taken from the iasl interactive help. </p>
 <p> <code>iasl</code> is an ASL compiler and decompiler. This command provides both the ability to translate one or more ASL source files to their corresponding AML binary files, and the ability to translate AML binary files back to readable ASL source. </p>
 <p> Much more detailed documentation may be found at <a rel="nofollow" href="http://www.acpica.org/documentation/.">http://www.acpica.org/documentation/.</a> </p>

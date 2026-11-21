@@ -1,5 +1,4 @@
 ---
-
 title: "perltru64(1)"
 name: "perltru64"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-perltru64/"
 description: "perltru64 – Perl version 5 on Tru64 (formerly known as Digital UNIX formerly known as DEC OSF/1) systems"
 ---
 
+<h2 class="name">NAME</h2>
+<p> perltru64 &#8211; Perl version 5 on Tru64 (formerly known as Digital UNIX formerly known as DEC OSF/1) systems </p>
+<h2>DESCRIPTION</h2>
 <p> This document describes various features of <font SIZE="-1">HP</font>&#8216;s (formerly Compaq&#8217;s, formerly Digital&#8217;s) Unix operating system (Tru64) that will affect how Perl version 5 (hereafter just Perl) is configured, compiled and/or runs.</p>
 <h3>Compiling Perl 5 on Tru64</h3>
 <p> The recommended compiler to use in Tru64 is the native C compiler. The native compiler produces much faster code (the speed difference is noticeable: several dozen percentages) and also more correct code: if you are considering using the <font SIZE="-1">GNU C</font> compiler you should use at the very least the release of 2.95.3 since all older gcc releases are known to produce broken code when compiling Perl. One manifestation of this brokenness is the lib/sdbm test dumping core; another is many of the op/regexp and op/pat, or ext/Storable tests dumping core (the exact pattern of failures depending on the <font SIZE="-1">GCC</font> release and optimization flags). </p>

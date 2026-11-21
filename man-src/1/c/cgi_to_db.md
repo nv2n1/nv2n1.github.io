@@ -1,5 +1,4 @@
 ---
-
 title: "cgi_to_db(1)"
 name: "cgi_to_db"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-cgi_to_db/"
 description: "cgi_to_db – convert stored CGI files (from CGI.pm) to fsdb"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cgi_to_db &#8211; convert stored CGI files (from CGI.pm) to fsdb </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 cgi_to_db[-duU][-e EmptyValue][cgi - files...]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Converts all stored <font SIZE="-1">CGI</font> files (from <font SIZE="-1">CGI</font>.pm) to fsdb, optionally unescaping the contents. When contents are unescaped, <font SIZE="-1">CR NL</font> is recoded as &#8220;
 &#8221;. </p>
 <p> Output is always in fsdb list format with double space (type &#8220;S&#8221;) field separator. </p>

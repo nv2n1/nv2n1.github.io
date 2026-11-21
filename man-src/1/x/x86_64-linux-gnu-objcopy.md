@@ -1,5 +1,4 @@
 ---
-
 title: "x86_64-linux-gnu-objcopy(1)"
 name: "x86_64-linux-gnu-objcopy"
 section: "1"
@@ -7,9 +6,14 @@ letter: "x"
 url: "/docs/linux/man/1-x86_64-linux-gnu-objcopy/"
 ---
 
-objcopy - copy and translate object files 
+<h2 class="name">NAME</h2>
+ 
 
-objcopy [<b>-F</b> <i>bfdname</i>|<b>--target=</b><i>bfdname</i>] 
+ objcopy - copy and translate object files 
+
+<h2>SYNOPSIS</h2>
+
+ objcopy [<b>-F</b> <i>bfdname</i>|<b>--target=</b><i>bfdname</i>] 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<b>-I</b>&nbsp;<i>bfdname</i>|<b>--input-target=</b><i>bfdname</i>] 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<b>-O</b>&nbsp;<i>bfdname</i>|<b>--output-target=</b><i>bfdname</i>] 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<b>-B</b>&nbsp;<i>bfdarch</i>|<b>--binary-architecture=</b><i>bfdarch</i>] 
@@ -100,7 +104,9 @@ objcopy [<b>-F</b> <i>bfdname</i>|<b>--target=</b><i>bfdname</i>]
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<b>--help</b>]&nbsp;[<b>--info</b>] 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>infile</i>&nbsp;[<i>outfile</i>]
 
-The <font SIZE="-1">GNU</font> <b>objcopy</b> utility copies the contents of an object file to another. <b>objcopy</b> uses the <font SIZE="-1">GNU BFD</font> Library to read and write the object files. It can write the destination object file in a format different from that of the source object file. The exact behavior of <b>objcopy</b> is controlled by command-line options. Note that <b>objcopy</b> should be able to copy a fully linked file between any two formats. However, copying a relocatable object file between any two formats may not work as expected. 
+<h2>DESCRIPTION</h2>
+
+ The <font SIZE="-1">GNU</font> <b>objcopy</b> utility copies the contents of an object file to another. <b>objcopy</b> uses the <font SIZE="-1">GNU BFD</font> Library to read and write the object files. It can write the destination object file in a format different from that of the source object file. The exact behavior of <b>objcopy</b> is controlled by command-line options. Note that <b>objcopy</b> should be able to copy a fully linked file between any two formats. However, copying a relocatable object file between any two formats may not work as expected. 
 
  <b>objcopy</b> creates temporary files to do its translations and deletes them afterward. <b>objcopy</b> uses <font SIZE="-1">BFD</font> to do all its translation work; it has access to all the formats described in <font SIZE="-1">BFD</font> and thus is able to recognize most formats without being told explicitly. 
 

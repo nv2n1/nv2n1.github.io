@@ -1,5 +1,4 @@
 ---
-
 title: "pia(1)"
 name: "pia"
 section: "1"
@@ -10,7 +9,9 @@ description: "pia – play media files"
 
 <h2>NAME</h2>
 <p> pia &#8211; play media files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pia [ options ] movie</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>pia</code> is a small X11 tool which plays movie files.</p>
 <h2>OPTIONS</h2>
 <p> <code>pia</code> understands the usual toolkit options (-geometry + friends). Additional options are:</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "dlarrk(3)"
 name: "dlarrk"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlarrk/"
 description: "dlarrk.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlarrk.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlarrk</code> (N, IW, GL, GU, D, E2, PIVMIN, RELTOL, W, WERR, INFO)<br />
  <i></i><code>DLARRK</code> computes one eigenvalue of a symmetric tridiagonal matrix T to suitable accuracy.</p>

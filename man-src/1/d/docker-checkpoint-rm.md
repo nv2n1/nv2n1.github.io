@@ -1,5 +1,4 @@
 ---
-
 title: "docker-checkpoint-rm(1)"
 name: "docker-checkpoint-rm"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-checkpoint-rm/"
 description: "docker-checkpoint-rm – Remove a checkpoint"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-checkpoint-rm &#8211; Remove a checkpoint </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker checkpoint rm [OPTIONS] CONTAINER CHECKPOINT</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Remove a checkpoint </p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;checkpoint-dir</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Use a custom checkpoint storage directory</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "modpods(1)"
 name: "modpods"
 section: "1"
@@ -7,9 +6,14 @@ letter: "m"
 url: "/docs/linux/man/1-modpods/"
 ---
 
-modpods - print out paths for the standard modules 
+<h2 class="name">NAME</h2>
+ 
 
-This program outputs the paths to all installed modules on your systems. This includes both the standard modules (which the <i>stdpods</i> command produces) and the site-specific ones (which the <i>sitepods</i> command produces). 
+ modpods - print out paths for the standard modules 
+
+<h2>DESCRIPTION</h2>
+
+ This program outputs the paths to all installed modules on your systems. This includes both the standard modules (which the <i>stdpods</i> command produces) and the site-specific ones (which the <i>sitepods</i> command produces). 
 
  This is just a front-end for calling <i>pminst -l</i>, supplied to make it more obvious what it does.
 

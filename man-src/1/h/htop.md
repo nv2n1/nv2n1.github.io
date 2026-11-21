@@ -1,5 +1,4 @@
 ---
-
 title: "htop(1)"
 name: "htop"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-htop/"
 description: "htop – interactive process viewer"
 ---
 
+<h2 class="name">NAME</h2>
+<p> htop &#8211; interactive process viewer </p>
+<h2>SYNOPSIS</h2>
 <p> <code>htop</code> [<code>-dCFhpustvH</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>htop</code> is a cross-platform ncurses-based process viewer. </p>
 <p> It is similar to <code>top</code>, but allows you to scroll vertically and horizontally, and interact using a pointing device (mouse). You can observe all processes running on the system, along with their command line arguments, as well as view them in a tree format, select multiple processes and acting on them all at once. </p>
 <p> Tasks related to processes (killing, renicing) can be done without entering their PIDs. </p>

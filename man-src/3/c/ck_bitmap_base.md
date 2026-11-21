@@ -1,5 +1,4 @@
 ---
-
 title: "ck_bitmap_base(3)"
 name: "ck_bitmap_base"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_bitmap_base – determine the size of a bit array in bytes"
 <p> <code>ck_bitmap_base</code> &#8211; determine the size of a bit array in bytes</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_bitmap.h Ft unsigned int Fn ck_bitmap_base unsigned int n_bits</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_bitmap_base function returns the number of bytes that would be used to store the number of bits specified by Fa n_bits .</p>
 <h2>RETURN VALUES</h2>
 <p> This function returns a non-zero value that is guaranteed to be a multiple of <code>sizeof(CK_BITMAP_WORD)</code></p>

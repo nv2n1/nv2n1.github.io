@@ -1,5 +1,4 @@
 ---
-
 title: "pth-config(1)"
 name: "pth-config"
 section: "1"
@@ -12,7 +11,9 @@ description: "pth-config – Pth library build utility"
 <p> <code>pth-config</code> &#8211; Pth library build utility</p>
 <h2>VERSION</h2>
 <p> <font SIZE="-1">GNU</font> Pth <font SIZE="-1">2.0.7 (08-Jun-2006)</font></p>
+<h2>SYNOPSIS</h2>
 <p> <code>pth-config</code> [<code>&#8211;help</code>] [<code>&#8211;version</code>] [<code>&#8211;all</code>] [<code>&#8211;prefix</code>] [<code>&#8211;exec-prefix</code>] [<code>&#8211;bindir</code>] [<code>&#8211;libdir</code>] [<code>&#8211;includedir</code>] [<code>&#8211;mandir</code>] [<code>&#8211;datadir</code>] [<code>&#8211;acdir</code>] [<code>&#8211;cflags</code>] [<code>&#8211;ldflags</code>] [<code>&#8211;libs</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>pth-config</code> program is a little helper utility for easy configuring and building applications based on the <i><a href="/docs/linux/man/3-pth/">pth</a></i>(3) library. It can be used to query the C compiler and linker flags which are required to correctly compile and link the application against the <i><a href="/docs/linux/man/3-pth/">pth</a></i>(3) library.</p>
 <h2>OPTIONS</h2>
 <p> <code>pth-config</code> accepts the following options:</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "gresource(1)"
 name: "gresource"
 section: "1"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/1-gresource/"
 description: "gresource – GResource tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gresource &#8211; GResource tool </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gresource</code> [&#8211;section&nbsp;<i>SECTION</i>] list <i>FILE</i> [<i>PATH</i>]</dt>
 <dt> <code>gresource</code> [&#8211;section&nbsp;<i>SECTION</i>] details <i>FILE</i> [<i>PATH</i>]</dt>
 <dt> <code>gresource</code> [&#8211;section&nbsp;<i>SECTION</i>] extract <i>FILE</i> <i>PATH</i></dt>
 <dt> <code>gresource</code> sections <i>FILE</i></dt>
 <dt> <code>gresource</code> help [<i>COMMAND</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>gresource</code></p>
 <dd>offers a simple commandline interface to <code>GResource</code>. It lets you list and extract resources that have been compiled into a resource file or included in an elf file (a binary or a shared library). </dd>
 <p> The file to operate on is specified by the <i>FILE</i> argument. </p>

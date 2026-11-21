@@ -1,5 +1,4 @@
 ---
-
 title: "setrlimit(2)"
 name: "setrlimit"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-setrlimit/"
 description: "getrlimit, setrlimit, prlimit – get/set resource limits"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getrlimit, setrlimit, prlimit &#8211; get/set resource limits </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/time.h&gt;</code><br />
  <code>#include &lt;sys/resource.h&gt;</code> </p>
 <p> <code>int getrlimit(int </code><i>resource</i><code>, struct rlimit *</code><i>rlim</i><code>);</code><br />
@@ -16,6 +18,7 @@ description: "getrlimit, setrlimit, prlimit – get/set resource limits"
  <code> struct rlimit *</code><i>old_limit</i><code>);</code> </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>prlimit</code>(): _GNU_SOURCE</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>getrlimit</code>() and <code>setrlimit</code>() system calls get and set resource limits. Each resource has an associated soft and hard limit, as defined by the <i>rlimit</i> structure: </p>
 <p> struct rlimit {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;rlim_t rlim_cur;&nbsp;<wbr>&nbsp;/*&nbsp;Soft limit&nbsp;*/<br />

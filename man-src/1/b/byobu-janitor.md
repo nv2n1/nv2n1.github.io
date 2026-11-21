@@ -1,5 +1,4 @@
 ---
-
 title: "byobu-janitor(1)"
 name: "byobu-janitor"
 section: "1"
@@ -10,7 +9,9 @@ description: "byobu-janitor – script for cleaning and upgrading environment af
 
 <h2>NAME</h2>
 <p> byobu-janitor &#8211; script for cleaning and upgrading environment after upgrades </p>
+<h2>SYNOPSIS</h2>
 <p> <code>byobu-janitor</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>byobu-janitor</code> is script for cleaning environment after upgrades, it consists from several tasks where aim is to ensure that environment is ready for new version of byobu. </p>
 <h2>BUGS</h2>
 <p> None found, yet. </p>

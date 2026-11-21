@@ -1,5 +1,4 @@
 ---
-
 title: "od(1)"
 name: "od"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-od/"
 description: "od – dump files in octal and other formats"
 ---
 
+<h2 class="name">NAME</h2>
+<p> od &#8211; dump files in octal and other formats </p>
+<h2>SYNOPSIS</h2>
 <p> <code>od</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;<br />
  <code>od</code> [<i>,-abcdfilosx/</i>]&#8230; [<i>,FILE/</i>] [[<i>,+/</i>]<i>,OFFSET/</i>[<i>,./</i>][<i>,b/</i>]]<br />
  <code>od</code> <i>,&#8211;traditional /</i>[<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>] [[<i>,+/</i>]<i>,OFFSET/</i>[<i>,./</i>][<i>,b/</i>] [<i>,+/</i>][<i>,LABEL/</i>][<i>,./</i>][<i>,b/</i>]]</p>
+<h2>DESCRIPTION</h2>
 <p> Write an unambiguous representation, octal bytes by default, of FILE to standard output. With more than one FILE argument, concatenate them in the listed order to form the input. </p>
 <p> With no FILE, or when FILE is -, read standard input. </p>
 <p> If first and second call formats both apply, the second format is assumed if the last operand begins with + or (if there are 2 operands) a digit. An OFFSET operand means <code>-j</code> OFFSET. LABEL is the pseudo-address at first byte printed, incremented when dump is progressing. For OFFSET and LABEL, a 0x or 0X prefix indicates hexadecimal; suffixes may be . for octal and b for multiply by 512. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "pscoupe(1)"
 name: "pscoupe"
 section: "1"
@@ -10,8 +9,10 @@ description: "pscoupe – Plot cross-sections of focal mechanisms"
 
 <h2>NAME</h2>
 <p> pscoupe &#8211; Plot cross-sections of focal mechanisms</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pscoupe</code> [ <i>files</i> ] <i>parameters</i> <i>region</i> <i>parameters</i> [ [<code>p</code>|<code>s</code>]<i>parameters</i> ] [ <i>color</i> ] [ <i>mode</i>[<i>args</i>] ] [ <i>color</i> ] [ ] [ <i>[pen]</i> ] [ ] [ ] [ ] [ ] [ <i>&lt;symbol&gt;&lt;scale&gt;</i>[/<code>d</code>] ] [ <i>n</i> ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ [<i>level</i>] ] [ <i>pen</i> ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ <i>cpt</i> ] [ <code>-c</code><i>copies</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pscoupe</code> reads data values from <i>files</i> [or standard input] and generates PostScript code that will plot symbols, lines or polygons on a cross-section. Focal mechanisms may be specified and require additional columns of data. The PostScript code is written to standard output. </p>
 <p> Unless is used, new file is created with the new coordinates (<code>x</code>, <code>y</code>) and the mechanism (from lower focal half-sphere for horizontal plane, to half-sphere behind a vertical plane). When the plane is not horizontal, &#8211; north direction becomes upwards steepest descent direction of the plane (u) &#8211; east direction becomes strike direction of the plane (s) &#8211; down direction (= north^east) becomes u^s Axis angles are defined in the same way as in horizontal plane in the new system. Moment tensor (initially in r, t, f system that is up, south, east) is defined in (-u^s, -u, s) system.</p>
 <h2>REQUIRED ARGUMENTS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "git-annex-shell(1)"
 name: "git-annex-shell"
 section: "1"
@@ -10,7 +9,9 @@ description: "git-annex-shell – Restricted login shell for git-annex only SSH 
 
 <h2>NAME</h2>
 <p> git-annex-shell &#8211; Restricted login shell for git-annex only SSH access </p>
+<h2>SYNOPSIS</h2>
 <p> git-annex-shell [-c] command [params &#8230;] </p>
+<h2>DESCRIPTION</h2>
 <p> git-annex-shell is a restricted shell, similar to git-shell, which can be used as a login shell for SSH accounts. </p>
 <p> Since its syntax is identical to git-shell&#8217;s, it can be used as a drop-in replacement anywhere git-shell is used. For example it can be used as a user&#8217;s restricted login shell. </p>
 <h2>COMMANDS</h2>

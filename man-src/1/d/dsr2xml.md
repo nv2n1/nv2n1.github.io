@@ -1,5 +1,4 @@
 ---
-
 title: "dsr2xml(1)"
 name: "dsr2xml"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-dsr2xml/"
 description: "dsr2xml – Convert DICOM SR file and data set to XML"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dsr2xml &#8211; Convert DICOM SR file and data set to XML </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 dsr2xml[options] dsrfile - in[xmlfile - out]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>dsr2xml</code> utility converts the contents of a DICOM Structured Reporting (SR) document (file format or raw data set) to XML (Extensible Markup Language). The XML Schema <i>dsr2xml.xsd</i> does not yet follow any standard format. However, the <code>dsr2xml</code> application might be enhanced in this aspect in the future (e.g. by supporting HL7/CDA &#8211; Clinical Document Architecture). </p>
 <p> If <code>dsr2xml</code> reads a raw data set (DICOM data without a file format meta-header) it will attempt to guess the transfer syntax by examining the first few bytes of the file. It is not always possible to correctly guess the transfer syntax and it is better to convert a data set to a file format whenever possible (using the <code>dcmconv</code> utility). It is also possible to use the <i>-f</i> and <i>-t[ieb]</i> options to force <code>dsr2xml</code> to read a dataset with a particular transfer syntax.</p>
 <h2>PARAMETERS</h2>

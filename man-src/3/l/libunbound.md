@@ -1,5 +1,4 @@
 ---
-
 title: "libunbound(3)"
 name: "libunbound"
 section: "3"
@@ -8,7 +7,9 @@ url: "/docs/linux/man/3-libunbound/"
 description: "libunbound, unbound.h, ub_ctx, ub_result, ub_callback_t, ub_ctx_create, ub_ctx_delete, ub_ctx_set_option, ub_ctx_get_option, ub_ctx_config, ub_ctx_set_fwd, ub_ctx_resolvconf, ub_ctx_hosts, ub_ctx_a..."
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>libunbound,</code> <code>unbound.h,</code> <code>ub_ctx,</code> <code>ub_result,</code> <code>ub_callback_t,</code> <code>ub_ctx_create,</code> <code>ub_ctx_delete,</code> <code>ub_ctx_set_option,</code> <code>ub_ctx_get_option,</code> <code>ub_ctx_config,</code> <code>ub_ctx_set_fwd,</code> <code>ub_ctx_resolvconf,</code> <code>ub_ctx_hosts,</code> <code>ub_ctx_add_ta,</code> <code>ub_ctx_add_ta_file,</code> <code>ub_ctx_trustedkeys,</code> <code>ub_ctx_debugout,</code> <code>ub_ctx_debuglevel,</code> <code>ub_ctx_async,</code> <code>ub_poll,</code> <code>ub_wait,</code> <code>ub_fd,</code> <code>ub_process,</code> <code>ub_resolve,</code> <code>ub_resolve_async,</code> <code>ub_cancel,</code> <code>ub_resolve_free,</code> <code>ub_strerror,</code> <code>ub_ctx_print_local_zones,</code> <code>ub_ctx_zone_add,</code> <code>ub_ctx_zone_remove,</code> <code>ub_ctx_data_add,</code> <code>ub_ctx_data_remove</code> &#8211; Unbound DNS validating resolver 1.4.20 functions. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unbound.h&gt;</code> </p>
 <p> <i>struct ub_ctx *</i> <code>ub_ctx_create</code>(<i>void</i>); </p>
 <p> <i>void</i> <code>ub_ctx_delete</code>(<i>struct ub_ctx*</i> ctx); </p>
@@ -41,6 +42,7 @@ description: "libunbound, unbound.h, ub_ctx, ub_result, ub_callback_t, ub_ctx_cr
 <p> <i>int</i> <code>ub_ctx_zone_remove</code>(<i>struct ub_ctx*</i> ctx, <i>char*</i> zone_name); </p>
 <p> <i>int</i> <code>ub_ctx_data_add</code>(<i>struct ub_ctx*</i> ctx, <i>char*</i> data); </p>
 <p> <i>int</i> <code>ub_ctx_data_remove</code>(<i>struct ub_ctx*</i> ctx, <i>char*</i> data);</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Unbound </code> is an implementation of a DNS resolver, that does caching and DNSSEC validation. This is the library API, for using the -lunbound library. The server daemon is described in <i><a href="/docs/linux/man/8-unbound/">unbound</a></i>(8). The library can be used to convert hostnames to ip addresses, and back, and obtain other information from the DNS. The library performs public-key validation of results with DNSSEC. </p>
 <p> The library uses a variable of type <i>struct ub_ctx</i> to keep context between calls. The user must maintain it, creating it with <code>ub_ctx_create</code> and deleting it with <code>ub_ctx_delete</code>. It can be created and deleted at any time. Creating it anew removes any previous configuration (such as trusted keys) and clears any cached results. </p>
 <p> The functions are thread-safe, and a context an be used in a threaded (as well as in a non-threaded) environment. Also resolution (and validation) can be performed blocking and non-blocking (also called asynchronous). The async method returns from the call immediately, so that processing can go on, while the results become available later. </p>

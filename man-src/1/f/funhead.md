@@ -1,5 +1,4 @@
 ---
-
 title: "funhead(1)"
 name: "funhead"
 section: "1"
@@ -10,6 +9,7 @@ description: "funhead – display a header in a Funtools file"
 
 <h2>NAME</h2>
 <p> <code>funhead &#8211; display a header in a Funtools file</code></p>
+<h2>SYNOPSIS</h2>
 <p> funhead [-a] [-s] [-t] [-L] &lt;iname&gt; [oname ename]</p>
 <h2>OPTIONS</h2>
 <pre>
@@ -18,6 +18,7 @@ description: "funhead – display a header in a Funtools file"
   -t    # prepend data type char to each line of output
   -L    # output in rdb/starbase list format
 </pre>
+<h2>DESCRIPTION</h2>
 <p> <code>funhead</code> displays the <font SIZE="-1">FITS</font> header parameters in the specified <font SIZE="-1">FITS</font> Extension. </p>
 <p> The first argument to the program specifies the Funtools input file to display. If &#8220;stdin&#8221; is specified, data are read from the standard input. Funtools Bracket Notation is used to specify particular <font SIZE="-1">FITS</font> extension to process. Normally, the full 80 characters of each header card is output, followed by a new-line. </p>
 <p> If the <code>-a</code> switch is specified, the header from each <font SIZE="-1">FITS</font> extensions in the file is displayed. Note, however, that the <code>-a</code> switch does not work with <font SIZE="-1">FITS</font> files input via stdin. We hope to remove this restriction in a future release. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_dtls_prestate_set(3)"
 name: "gnutls_dtls_prestate_set"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_dtls_prestate_set – API function"
 
 <h2>NAME</h2>
 <p> gnutls_dtls_prestate_set &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/dtls.h&gt;</code> </p>
 <p> <code>void gnutls_dtls_prestate_set(gnutls_session_t </code><i>session</i><code>, gnutls_dtls_prestate_st * </code><i>prestate</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_dtls_prestate_set – API function"
 <dd> a new session</dd>
 <dt>gnutls_dtls_prestate_st * prestate</dt>
 <dd> contains the client&#8217;s prestate</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will associate the prestate acquired by the cookie authentication with the client, with the newly established session. </p>
 <p> This functions must be called after a successful <code>gnutls_dtls_cookie_verify()</code> and should be succeeded by the actual DTLS handshake using <code>gnutls_handshake()</code>.</p>
 <h2>SINCE</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "ccosl(3)"
 name: "ccosl"
 section: "3"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/3-ccosl/"
 description: "ccos, ccosf, ccosl – complex cosine function"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ccos, ccosf, ccosl &#8211; complex cosine function </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
 <p> <code>double complex ccos(double complex </code><i>z</i><code>);</code><br />
  <code>float complex ccosf(float complex </code><i>z</i><code>);</code><br />
  <code>long double complex ccosl(long double complex </code><i>z</i><code>);</code> </p>
 <p> Link with <i>-lm</i>.</p>
+<h2>DESCRIPTION</h2>
 <p> These functions calculate the complex cosine of <i>z</i>. </p>
 <p> The complex cosine function is defined as: </p>
 <pre>

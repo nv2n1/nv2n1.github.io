@@ -1,5 +1,4 @@
 ---
-
 title: "get_entry(3)"
 name: "get_entry"
 section: "3"
@@ -10,9 +9,11 @@ description: "get_entry — retrieve a dirfile field’s metadata"
 
 <h2>NAME</h2>
 <p> get_entry &#8212; retrieve a dirfile field&#8217;s metadata</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
 <dl>
 <dt> <code>int get_entry(DIRFILE *</code><i>dirfile</i><code>, const char *</code><i>field_code</i><code>,</code> <code>gd_entry_t *</code><i>entry</i><code>);</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>get_entry</code>() function queries a <a href="/docs/linux/man/5-dirfile/">dirfile</a>(5) database specified by <i>dirfile</i> and returns the metadata associated with the field specified by <i>field_code</i>. If <i>field_code</i> contains a valid representation suffix, the suffix will be ignored. </dd>
 <p> The <i>dirfile</i> argument must point to a valid DIRFILE object previously created by a call to <code><a href="/docs/linux/man/3-dirfile_open/">dirfile_open</a></code>(3). </p>
 <p> The entry will be stored in the gd_entry_t structure indicated by the <i>entry</i> argument, which must be allocated by the caller. Members available in this structure depend on the field type of the field queried. See below for a complete description of this data type. </p>

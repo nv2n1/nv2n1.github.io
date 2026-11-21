@@ -1,5 +1,4 @@
 ---
-
 title: "ansible-pull(1)"
 name: "ansible-pull"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ansible-pull/"
 description: "ansible-pull – pull playbooks from VCS server and run them using this machine as the target."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ansible-pull &#8211; pull playbooks from VCS server and run them using this machine as the target. </p>
+<h2>SYNOPSIS</h2>
 <p> ansible-pull -U URL [options] [ &lt;filename.yml&gt; ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Ansible</code> is an extra-simple tool/framework/API for doing &#8216;remote things&#8217;. </p>
 <p> Use ansible-pull to set up a remote copy of ansible on each managed node, each set to run via cron and update playbook source via a source repository. This inverts the default <code>push</code> architecture of ansible into a <code>pull</code> architecture, which has near-limitless scaling potential. </p>
 <p> The setup playbook can be tuned to change the cron frequency, logging locations, and parameters to ansible-pull. </p>

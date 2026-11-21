@@ -1,5 +1,4 @@
 ---
-
 title: "innconfval(1)"
 name: "innconfval"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-innconfval/"
 description: "innconfval – Get configuration parameters from inn.conf"
 ---
 
+<h2 class="name">NAME</h2>
+<p> innconfval &#8211; Get configuration parameters from inn.conf </p>
+<h2>SYNOPSIS</h2>
 <p> <code>innconfval</code> [<code>-pstv</code>] [<code>-i</code> <i>file</i>] [<i>parameter</i> &#8230;] </p>
 <p> <code>innconfval</code> <code>-C</code> [<code>-i</code> <i>file</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>innconfval</code> normally prints the values of the parameters specified on the command line. By default, it just prints the parameter values, but if <code>-p</code>, <code>-s</code>, or <code>-t</code> are given, it instead prints the parameter and value in the form of a variable assignment in Perl, Bourne shell, or Tcl respectively. If no parameters are specifically requested, <code>innconfval</code> prints out all parameter values (this isn&#8217;t particularly useful unless one of <code>-p</code>, <code>-s</code>, or <code>-t</code> were specified). </p>
 <p> All parameters are taken from <i>inn.conf</i> except for <i>version</i>, which is always the version string of <font SIZE="-1">INN</font>. </p>
 <p> If given the <code>-C</code> option, <code>innconfval</code> instead checks <i>inn.conf</i>, reporting any problems found to standard error. <code>innconfval</code> will exit with status 0 if no problems are found and with status 1 otherwise.</p>

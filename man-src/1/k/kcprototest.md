@@ -1,5 +1,4 @@
 ---
-
 title: "kcprototest(1)"
 name: "kcprototest"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-kcprototest/"
 description: "kcprototest – command line interface to test the prototype database"
 ---
 
+<h2 class="name">NAME</h2>
+<p> kcprototest &#8211; command line interface to test the prototype database</p>
+<h2>DESCRIPTION</h2>
 <p> The command `<code>kcprototest</code>&#8216; is a utility for facility test and performance test of the prototype database. This command is used in the following format. `<i>rnum</i>&#8216; specifies the number of iterations. </p>
 <dl>
 <dt>

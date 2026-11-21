@@ -1,5 +1,4 @@
 ---
-
 title: "sgerfs(3)"
 name: "sgerfs"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-sgerfs/"
 description: "sgerfs.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sgerfs.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sgerfs</code> (TRANS, N, NRHS, A, LDA, AF, LDAF, IPIV, B, LDB, X, LDX, FERR, BERR, WORK, IWORK, INFO)<br />
  <i></i><code>SGERFS</code></p>

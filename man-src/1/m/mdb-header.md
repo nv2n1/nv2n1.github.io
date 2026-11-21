@@ -1,5 +1,4 @@
 ---
-
 title: "mdb-header(1)"
 name: "mdb-header"
 section: "1"
@@ -10,9 +9,11 @@ description: "mdb-header – Write header file from an MDB database"
 
 <h2>NAME</h2>
 <p> <code>mdb-header </code>&#8211; Write header file from an MDB database</p>
+<h2>SYNOPSIS</h2>
 <pre>
 <code>mdb-header</code> [<i>database</i>]
 </pre>
+<h2>DESCRIPTION</h2>
 <p> <code>mdb-header</code> is a utility program distributed with MDB Tools. </p>
 <p> It will dump the names and types of the tables and columns in an MDB <i>database</i> in a C header format. </p>
 <p> It will create three files &#8211; types.h and dumptypes.[ch]</p>

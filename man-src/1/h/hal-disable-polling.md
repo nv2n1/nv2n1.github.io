@@ -1,5 +1,4 @@
 ---
-
 title: "hal-disable-polling(1)"
 name: "hal-disable-polling"
 section: "1"
@@ -10,7 +9,9 @@ description: "hal-disable-polling – disable polling on drives with removable m
 
 <h2>NAME</h2>
 <p> hal-disable-polling &#8211; disable polling on drives with removable media</p>
+<h2>SYNOPSIS</h2>
 <p> <code>hal-disable-polling</code> [options] </p>
+<h2>DESCRIPTION</h2>
 <p> <i>hal-disable-polling</i> can be used to to disable and enable media detection on drives with removable storage. For more information about both the big picture and specific <code>HAL</code> properties, refer to the <i>HAL spec</i> which can be found in <i>/usr/share/doc/hal-0.5.13/spec/hal-spec.html</i> depending on the distribution. </p>
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>

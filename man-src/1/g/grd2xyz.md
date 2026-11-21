@@ -1,5 +1,4 @@
 ---
-
 title: "grd2xyz(1)"
 name: "grd2xyz"
 section: "1"
@@ -10,8 +9,10 @@ description: "grd2xyz – Convert grid file to data table"
 
 <h2>NAME</h2>
 <p> grd2xyz &#8211; Convert grid file to data table</p>
+<h2>SYNOPSIS</h2>
 <p> <code>grd2xyz</code> <i>grid</i> [ [<code>f</code>|<code>i</code>] ] [ <i>region</i> ] [ [<i>level</i>] ] [ [<i>weight</i>] ] [ [<i>flags</i>] ] [ <code>-bo</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-ho</code>[<i>n</i>] ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-s</code><i>&lt;flags&gt;</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>grd2xyz</code> reads one or more binary 2-D grid files and writes out xyz-triplets in ASCII [or binary] format to standard output. Modify the precision of the ASCII output format by editing the <i>FORMAT_FLOAT_OUT</i> parameter in your <code>gmt.conf</code> file or use <code>&#8211;</code><code>-D_FORMAT</code>=<i>format</i> on the command line, or choose binary output using single or double precision storage. As an option you may output z-values without the (x,y) coordinates; see <code>-Z</code> below.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

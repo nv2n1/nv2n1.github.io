@@ -1,5 +1,4 @@
 ---
-
 title: "inetutils-ifconfig(1)"
 name: "inetutils-ifconfig"
 section: "1"
@@ -9,8 +8,11 @@ description: "ifconfig – configure network interfaces"
 ---
 
 <p>GNU Network Utilities</p>
+<h2 class="name">NAME</h2>
 <p> <code>ifconfig</code> &#8211; configure network interfaces </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ifconfig</code> [<i>option &#8230;</i> ] <i>name</i> [<i>addr</i> ] [<code>broadcast </code><i>brdaddr</i> ] [<code>{ pointopoint | dstaddr } </code><i>dstaddr</i> ] [<code>netmask </code><i>mask</i> ] [<code>{ ether | hwaddr | lladdr } </code><i>macaddr</i> ] [<code>metric </code><i>n</i> ] [<code>mtu </code><i>n</i> ] [<code>txqueuelen </code><i>n</i> ] [<code>up | down</code> ] [<i>flags</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> Configure network interfaces. </p>
 <p> Mandatory or optional arguments to long options are also mandatory or optional for any corresponding short options. </p>
 <p> Known flags are: <code>allmulti , arp , automedia , broadcast , debug , dynamic , master</code> <code>multicast , pointopoint , portsel , promisc , slave , trailers , up</code> Prepending <code>no</code> to any of these flags will negate their effect.</p>

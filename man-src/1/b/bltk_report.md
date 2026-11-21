@@ -1,5 +1,4 @@
 ---
-
 title: "bltk_report(1)"
 name: "bltk_report"
 section: "1"
@@ -10,9 +9,11 @@ description: "bltk_report – automated report creation bltk_report_table – su
 
 <h2>NAME</h2>
 <p> bltk_report &#8211; automated report creation bltk_report_table &#8211; summary table creation from several results folders bltk_plot &#8211; graph drawing</p>
+<h2>SYNOPSIS</h2>
 <p> <code>bltk_report</code> [-hdofI013EiS] [-r ] [-s ] [-b ] [-c ] [-U ] [-B ] [-D ] [-C ] [-P ] [-K ] [-R ] [-2 ] [-4 ] directory&#8230; </p>
 <p> <code>bltk_report_table</code> [-hdstfuEe13SR] [-2 ] [-4 ] [-F ] directory &#8230; </p>
 <p> <code>bltk_plot</code> [-hDswy1vnr] [-d ] [-f ] [-x ] [-X ] [-Y ] [-t ] [-o ] [-2 ] [-p ] results_dir &#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> The following tools are implemented for results analysis:</p>
 <dl>
 <dt><code>bltk_report</code></dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "fish_key_reader(1)"
 name: "fish_key_reader"
 section: "1"
@@ -8,6 +7,7 @@ url: "/docs/linux/man/1-fish_key_reader/"
 description: "fish_key_reader — explore what characters keyboard keys send"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>fish_key_reader</code> &#8212; explore what characters keyboard keys send </p>
 <h3>Synopsis</h3>
 <pre><code>

@@ -1,5 +1,4 @@
 ---
-
 title: "setvtrgb(1)"
 name: "setvtrgb"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-setvtrgb/"
 description: "setvtrgb – customize the console color map"
 ---
 
+<h2 class="name">NAME</h2>
+<p> setvtrgb &#8211; customize the console color map </p>
+<h2>SYNOPSIS</h2>
 <p> <code>setvtrgb</code> vga </p>
 <p> <code>setvtrgb</code> <i>FILE</i>|-</p>
+<h2>DESCRIPTION</h2>
 <p> <code>setvtrgb</code> sets the console color map in all virtual terminals according to custom values specified in a file or standard input. With the `vga&#8217; parameter, it can also be used to restore the settings built into the kernel. </p>
 <p> When invoked with a filename or `-&#8216;, <code>setvtrgb</code> expects input as follows: </p>
 <p>&nbsp;<wbr>&nbsp;color0_r,color1_r,&#8230;,color15_r<br />

@@ -1,5 +1,4 @@
 ---
-
 title: "asn1_delete_structure2(3)"
 name: "asn1_delete_structure2"
 section: "3"
@@ -10,6 +9,7 @@ description: "asn1_delete_structure2 – API function"
 
 <h2>NAME</h2>
 <p> asn1_delete_structure2 &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>
 <p> <code>int asn1_delete_structure2(asn1_node * </code><i>structure</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "asn1_delete_structure2 – API function"
 <dd> pointer to the structure that you want to delete.</dd>
 <dt>unsigned int flags</dt>
 <dd> additional flags (see <code>ASN1_DELETE_FLAG</code>)</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Deletes the structure * <i>structure</i> . At the end, * <i>structure</i> is set to NULL.</p>
 <h2>RETURNS</h2>
 <p> <code>ASN1_SUCCESS</code> if successful, <code>ASN1_ELEMENT_NOT_FOUND</code> if * <i>structure</i> was NULL.</p>

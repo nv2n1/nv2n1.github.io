@@ -1,5 +1,4 @@
 ---
-
 title: "cptclip(1)"
 name: "cptclip"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-cptclip/"
 description: "cptclip – extract a sub-table from a GMT colour palette table (cpt)."
 ---
 
+<h2 class="name">NAME</h2>
+<p> cptclip &#8211; extract a sub-table from a GMT colour palette table (cpt). </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cptclip</code> -R&nbsp;<wbr><i>min</i>/<i>max</i> [-h] [-o&nbsp;<wbr><i>file</i>] [-s] [-v] [-V] [<i>file</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>cptclip</code> utility extracts a sub-table from a cpt format file. The arguments to the mandatory <code>-R</code> option, <i>min</i>/<i>max</i>, are interpreted as the (z) limits of the output unless the <code>-s</code> switch is specified, in which case they are the segment numbers. </dd>
 <p> The program will read from stdin if a file is not specified as the final argument, and write to stdout if the <code>-o</code> option is not specified. </p>
 <p> Note that much of the functionality of this program is included in recent versions of the GMT program <code><a href="/docs/linux/man/1-makecpt/">makecpt</a></code>(1).</p>

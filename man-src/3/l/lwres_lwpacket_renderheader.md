@@ -1,5 +1,4 @@
 ---
-
 title: "lwres_lwpacket_renderheader(3)"
 name: "lwres_lwpacket_renderheader"
 section: "3"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/3-lwres_lwpacket_renderheader/"
 description: "lwres_lwpacket_renderheader, lwres_lwpacket_parseheader – lightweight resolver packet handling functions"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lwres_lwpacket_renderheader, lwres_lwpacket_parseheader &#8211; lightweight resolver packet handling functions </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;lwres/lwpacket.h&gt;
 </code></pre>
 <dl>
 <dt> <code>lwres_result_t lwres_lwpacket_renderheader(lwres_buffer_t&nbsp;<wbr>*</code><i>b</i><code>, lwres_lwpacket_t&nbsp;<wbr>*</code><i>pkt</i><code>);</code></dt>
 <dt> <code>lwres_result_t lwres_lwpacket_parseheader(lwres_buffer_t&nbsp;<wbr>*</code><i>b</i><code>, lwres_lwpacket_t&nbsp;<wbr>*</code><i>pkt</i><code>);</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>These functions rely on a <code>struct lwres_lwpacket</code> which is defined in <i>lwres/lwpacket.h</i>. </dd>
 <dl>
 <dt>

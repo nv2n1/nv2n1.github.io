@@ -1,5 +1,4 @@
 ---
-
 title: "docker-latest-export(1)"
 name: "docker-latest-export"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-latest-export/"
 description: "docker-export – Export the contents of a container’s filesystem as a tar archive"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-export &#8211; Export the contents of a container&#8217;s filesystem as a tar archive </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker export</code> [<code>&#8211;help</code>] [<code>-o</code>|<code>&#8211;output</code>[=<i>&quot;&quot;</i>]] CONTAINER </p>
+<h2>DESCRIPTION</h2>
 <p> Export the contents of a container&#8217;s filesystem using the full or shortened container ID or container name. The output is exported to STDOUT and can be redirected to a tar file. </p>
 <p> Stream to a file instead of STDOUT by using <code>-o</code>. </p>
 <h2>OPTIONS</h2>

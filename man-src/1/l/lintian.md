@@ -1,5 +1,4 @@
 ---
-
 title: "lintian(1)"
 name: "lintian"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-lintian/"
 description: "lintian – Static analysis tool for Debian packages"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lintian &#8211; Static analysis tool for Debian packages </p>
+<h2>SYNOPSIS</h2>
 <p> <code>lintian</code> [<i>action</i>] [<i>options</i>] [<i>packages</i>] &#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Lintian dissects Debian packages and reports bugs and policy violations. It contains automated checks for many aspects of Debian policy as well as some checks for common errors. </p>
 <p> There are two ways to specify binary, udeb or source packages for Lintian to process: by file name (the .deb file for a binary package or the .dsc file for a source package), or by naming a <i>.changes</i> file. </p>
 <p> If you specify a <i>.changes</i> file, Lintian will process all packages listed in that file. This is convenient when checking a new package before uploading it. </p>

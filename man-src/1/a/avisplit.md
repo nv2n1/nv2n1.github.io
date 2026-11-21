@@ -1,5 +1,4 @@
 ---
-
 title: "avisplit(1)"
 name: "avisplit"
 section: "1"
@@ -10,9 +9,11 @@ description: "avisplit – split AVI-files into chunks of a maximum size"
 
 <h2>NAME</h2>
 <p> avisplit &#8211; split AVI-files into chunks of a maximum size</p>
+<h2>SYNOPSIS</h2>
 <p> <code>avisplit</code> [ <code>-i</code> <i>file</i> <code>-o</code> <i>base</i> [ <code>-s</code> <i>size</i> ] [ <code>-H</code> <i>num</i> ] [ <code>-t</code> <i>s1-s2[,s3-s4,..]</i> <code>-c</code> <code>-m</code> <code>-b</code> <i>num</i> <code>-f</code> <i>commentfile</i> ] ] [ <code>-v</code> ]</p>
 <h2>COPYRIGHT</h2>
 <p> <code>avisplit</code> is Copyright (C) by Thomas Oestreich.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>avisplit</code> splits a single AVI-file into chunks of size <i>size</i>.<br />
  Each of the created chunks will be an independent file, i.e. it can be played without needing any other of the chunk.</p>
 <h2>OPTIONS</h2>

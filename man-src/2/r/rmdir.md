@@ -1,5 +1,4 @@
 ---
-
 title: "rmdir(2)"
 name: "rmdir"
 section: "2"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/2-rmdir/"
 description: "rmdir – delete a directory"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rmdir &#8211; delete a directory </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int rmdir(const char *</code><i>pathname</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>rmdir</code>() deletes a directory, which must be empty.</p>
 <h2>RETURN VALUE</h2>
 <p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>

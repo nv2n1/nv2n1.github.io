@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_register_md5_handler(3)"
 name: "gnutls_register_md5_handler"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_register_md5_handler – API function"
 
 <h2>NAME</h2>
 <p> gnutls_register_md5_handler &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/extra.h">gnutls/extra.h</a>&gt;</code> </p>
 <p> <code>int gnutls_register_md5_handler( </code><i>void</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt> void</dt>
 <dd></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Register a non-libgcrypt based MD5 and HMAC-MD5 handler. This is useful if you run Libgcrypt in FIPS-mode. Normally TLS requires use of MD5, so without this you cannot use GnuTLS with libgcrypt in FIPS mode.</p>
 <h2>RETURNS</h2>
 <p> <code>GNUTLS_E_SUCCESS</code> on success, otherwise an error.</p>

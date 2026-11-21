@@ -1,5 +1,4 @@
 ---
-
 title: "jday(1)"
 name: "jday"
 section: "1"
@@ -10,6 +9,7 @@ description: "jday, j2d – astronomical julian date conversion utilities"
 
 <h2>NAME</h2>
 <p> jday, j2d &#8211; astronomical julian date conversion utilities</p>
+<h2>SYNOPSIS</h2>
 <p> <code>jday</code></p>
 <dl>
 <dt><code>jday [-d [-]year-mm-dd hh:mm:ss]</code></dt>
@@ -24,6 +24,7 @@ description: "jday, j2d – astronomical julian date conversion utilities"
 <dd>
 </dd><dt><code>j2d [&#8211;h[elp]]</code></dt>
 <dd></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <i>jday and j2d</i> are command line utilities to convert calendar dates to astronomical julian dates, and julian dates to calendar dates. There is a corresponding library <i>libjday.a</i> which can be used for the same functionality within applications.</p>
 <h2>OPTIONS</h2>
 <p> <i>jday</i> accepts the following options:</p>

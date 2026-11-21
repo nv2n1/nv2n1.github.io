@@ -1,5 +1,4 @@
 ---
-
 title: "nfstest_cache(1)"
 name: "nfstest_cache"
 section: "1"
@@ -10,7 +9,9 @@ description: "nfstest_cache – NFS client side caching tests"
 
 <h2>NAME</h2>
 <p> nfstest_cache &#8211; NFS client side caching tests</p>
+<h2>SYNOPSIS</h2>
 <p> nfstest_cache &#8211;server &lt;server&gt; &#8211;client &lt;client&gt; [options]</p>
+<h2>DESCRIPTION</h2>
 <p> Verify consistency of attribute caching by varying acregmin, acregmax, acdirmin, acdirmax and actimo. Verify consistency of data caching by varying acregmin, acregmax, acdirmin, acdirmax and actimo. </p>
 <p> Valid for any version of NFS. </p>
 <h2>OPTIONS</h2>

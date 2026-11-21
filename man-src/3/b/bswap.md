@@ -1,5 +1,4 @@
 ---
-
 title: "bswap(3)"
 name: "bswap"
 section: "3"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/3-bswap/"
 description: "bswap_16, bswap_32, bswap_64 – reverse order of bytes"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bswap_16, bswap_32, bswap_64 &#8211; reverse order of bytes </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;byteswap.h&gt;
 bswap_16(x);
 bswap_32(x);
 bswap_64(x);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> These macros return a value in which the order of the bytes in their 2-, 4-, or 8-byte arguments is reversed.</p>
 <h2>RETURN VALUE</h2>
 <p> These macros return the value of their argument with the bytes reversed.</p>

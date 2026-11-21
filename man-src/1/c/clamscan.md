@@ -1,5 +1,4 @@
 ---
-
 title: "clamscan(1)"
 name: "clamscan"
 section: "1"
@@ -10,7 +9,9 @@ description: "clamscan – scan files and directories for viruses"
 
 <h2>NAME</h2>
 <p> clamscan &#8211; scan files and directories for viruses</p>
+<h2>SYNOPSIS</h2>
 <p> clamscan [options] [file/directory/-]</p>
+<h2>DESCRIPTION</h2>
 <p> clamscan is a command line anti-virus scanner.</p>
 <h2>OPTIONS</h2>
 <p> Most of the options are simple switches which enable or disable some features. Options marked with [=yes/no(*)] can be optionally followed by =yes/=no; if they get called without the boolean argument the scanner will assume &#8216;yes&#8217;. The asterisk marks the default internal setting for a given option.</p>

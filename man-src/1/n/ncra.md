@@ -1,5 +1,4 @@
 ---
-
 title: "ncra(1)"
 name: "ncra"
 section: "1"
@@ -12,6 +11,7 @@ description: "ncra – netCDF Record Averager"
 <p> ncra &#8211; netCDF Record Averager</p>
 <h2>SYNTAX</h2>
 <p> ncra [-3] [-4] [-6] [-7] [-A] [&#8211;bfr <i>sz</i>]<i>[-C]</i>[-c]<i>[&#8211;cnk_byt</i> <i>sz</i>]<i>[&#8211;cnk_dmn</i> <i>nm,sz</i>] [&#8211;cnk_map <i>map</i>] [&#8211;cnk_plc <i>plc</i>] [&#8211;cnk_scl <i>sz</i>]<i>[-D</i> <i>dbg_lvl</i>] [-d <i>dim</i>,[ <i>min</i>][,[ <i>max</i>]][, <i>stride</i>[[,[ <i>subcycle</i>]]]]] [&#8211;dbl|flt] [-F] [-G <i>gpe_dsc</i>] [-g <i>grp</i>[,&#8230;]] [-h] [&#8211;hdf] [&#8211;hdr_pad <i>sz</i>] [-L <i>dfl_lvl</i>] [-l <i>path</i>] [&#8211;mro] [&#8211;msa] [-n <i>loop</i>] [&#8211;no_cll_mth] [&#8211;no_tmp_fl] [-O] [-p <i>path</i>] [-R] [-r] [&#8211;ram_all] [&#8211;rec_apn] [-t <i>thr_nbr</i>] [&#8211;unn] [-v <i>var</i>[,&#8230;]] [-X <i>box</i>] [-x] [-y <i>op_typ</i>] <i>input-files</i> <i>output-file</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>ncra</code> averages record variables across an arbitrary number of input files. The record dimension is retained as a degenerate (size 1) dimension in the output variables. </p>
 <p> Input files may vary in size, but each must have a record dimension. The record coordinate, if any, should be monotonic for (or else non-fatal warnings may be generated). Hyperslabs of the record dimension which include more than one file are handled correctly. <code>ncra</code> supports the <i>stride</i> argument to the <code>-d</code> hyperslab option for the record dimension only, <i>stride</i> is not supported for non-record dimensions. </p>
 <p> <code>ncra</code> weights each record (e.g., time slice) in the <i>input-files</i> equally. <code>ncra</code> does not attempt to see if, say, the <code>time</code> coordinate is irregularly spaced and thus would require a weighted average in order to be a true time average.</p>

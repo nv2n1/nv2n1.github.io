@@ -1,5 +1,4 @@
 ---
-
 title: "icegridregistry(1)"
 name: "icegridregistry"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-icegridregistry/"
 description: "icegridregistry – The IceGrid registry server."
 ---
 
+<h2 class="name">NAME</h2>
+<p> icegridregistry &#8211; The IceGrid registry server.</p>
+<h2>SYNOPSIS</h2>
 <p> icegridregistry [options] [command&#8230;] </p>
+<h2>DESCRIPTION</h2>
 <p> The IceGrid registry is a centralized repository of information, including deployed applications and well-known objects. A registry can optionally be collocated with an IceGrid node, which conserves resources and can be convenient during development and testing. The registry server is implemented by the icegridregistry executable. Full documentation for icegridregistry is available online at:<br />
  &quot;<a rel="nofollow" href="http://doc.zeroc.com/display/Ice/icegridregistry">http://doc.zeroc.com/display/Ice/icegridregistry</a>&quot;. </p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "lppasswd(1)"
 name: "lppasswd"
 section: "1"
@@ -10,9 +9,11 @@ description: "lppasswd – add, change, or delete digest passwords."
 
 <h2>NAME</h2>
 <p> lppasswd &#8211; add, change, or delete digest passwords.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lppasswd</code> [ <i>username</i> ]<br />
  <code>lppasswd</code> -a [ -g <i>groupname</i> ] <i>username</i><br />
  <code>lppasswd</code> -x <i>username</i></p>
+<h2>DESCRIPTION</h2>
 <p> <i>lppasswd</i> adds, changes, or deletes passwords in the CUPS digest password file, <i>passwd.md5</i>. When run by a normal user, <i>lppasswd</i> will prompt for the old and new passwords. When run by the super-user, <i>lppasswd</i> can add new accounts (<i>-a username</i>), change existing accounts (<i>username</i>), or delete accounts (<i>-x username</i>) in the digest password file. Digest usernames do not have to match local UNIX usernames.</p>
 <h2>OPTIONS</h2>
 <p> <i>lppasswd</i> supports the following options:</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "sss_ssh_authorizedkeys(1)"
 name: "sss_ssh_authorizedkeys"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-sss_ssh_authorizedkeys/"
 description: "sss_ssh_authorizedkeys – get OpenSSH authorized keys"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sss_ssh_authorizedkeys &#8211; get OpenSSH authorized keys </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>sss_ssh_authorizedkeys</code> [<i>options</i>] <i>USER</i></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>sss_ssh_authorizedkeys</code></p>
 <dd>acquires SSH public keys for user <i>USER</i> and outputs them in OpenSSH authorized_keys format (see the &#8220;AUTHORIZED_KEYS FILE FORMAT&#8221; section of <code><a href="/docs/linux/man/8-sshd/">sshd</a></code>(8) for more information). </dd>
 <p> <code><a href="/docs/linux/man/8-sshd/">sshd</a></code>(8) can be configured to use <code>sss_ssh_authorizedkeys</code> for public key user authentication if it is compiled with support for &#8220;AuthorizedKeysCommand&#8221; option. Please refer to the <code><a href="/docs/linux/man/5-sshd_config/">sshd_config</a></code>(5) man page for more details about this option. </p>

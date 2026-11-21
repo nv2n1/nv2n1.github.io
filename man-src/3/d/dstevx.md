@@ -1,5 +1,4 @@
 ---
-
 title: "dstevx(3)"
 name: "dstevx"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dstevx/"
 description: "dstevx.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dstevx.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dstevx</code> (JOBZ, RANGE, N, D, E, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, IWORK, IFAIL, INFO)<br />
  <i></i><code> DSTEVX computes the eigenvalues and, optionally, the left and/or right eigenvectors for OTHER matrices</code></p>

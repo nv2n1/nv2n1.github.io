@@ -1,5 +1,4 @@
 ---
-
 title: "yumdownloader(1)"
 name: "yumdownloader"
 section: "1"
@@ -10,7 +9,9 @@ description: "yumdownloader – download RPM packages from Yum repositories"
 
 <h2>NAME</h2>
 <p> yumdownloader &#8211; download RPM packages from Yum repositories</p>
+<h2>SYNOPSIS</h2>
 <p> <code>yumdownloader</code> [options] package1 [package2&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>yumdownloader</code> is a program for downloading RPMs from Yum repositories. </p>
 <h2>GENERAL OPTIONS</h2>
 <dl>

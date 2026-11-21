@@ -1,5 +1,4 @@
 ---
-
 title: "socket(2)"
 name: "socket"
 section: "2"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/2-socket/"
 description: "socket – create an endpoint for communication"
 ---
 
+<h2 class="name">NAME</h2>
+<p> socket &#8211; create an endpoint for communication </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code> /* See NOTES */<br />
  <code>#include &lt;sys/socket.h&gt;</code> </p>
 <p> <code>int socket(int </code><i>domain</i><code>, int </code><i>type</i><code>, int </code><i>protocol</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>socket</code>() creates an endpoint for communication and returns a file descriptor that refers to that endpoint. The file descriptor returned by a successful call will be the lowest-numbered file descriptor not currently open for the process. </p>
 <p> The <i>domain</i> argument specifies a communication domain; this selects the protocol family which will be used for communication. These families are defined in <i>&lt;sys/socket.h&gt;</i>. The formats currently understood by the Linux kernel include: </p>
 <table>

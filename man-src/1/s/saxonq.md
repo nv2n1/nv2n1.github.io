@@ -1,5 +1,4 @@
 ---
-
 title: "saxonq(1)"
 name: "saxonq"
 section: "1"
@@ -10,7 +9,9 @@ description: "saxon8q – manual page for saxon8q"
 
 <h2>NAME</h2>
 <p> saxon8q &#8211; manual page for saxon8q</p>
+<h2>SYNOPSIS</h2>
 <p> <code>saxon8q</code> [<i>options</i>] <i>query </i>[ <i>params</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> saxon8q runs a query contained in a file. </p>
 <h2>OPTIONS</h2>
 <p> The options must come first, then the file name containing the query, then the params.</p>

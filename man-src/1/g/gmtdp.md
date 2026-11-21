@@ -1,5 +1,4 @@
 ---
-
 title: "gmtdp(1)"
 name: "gmtdp"
 section: "1"
@@ -10,7 +9,9 @@ description: "gmtdp – Line reduction using the Douglas-Peucker algorithm"
 
 <h2>NAME</h2>
 <p> gmtdp &#8211; Line reduction using the Douglas-Peucker algorithm</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gmtdp</code> <i>infiles</i> <code>-T</code><i>tolerance</i> [ <code>-H</code>[<code>i</code>][<i>nrec</i>] ] [ <code>-V</code> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] [ <code>-b</code>[<code>i</code>|<code>o</code>][<code>s</code>|<code>S</code>|<code>d</code>|<code>D</code>[<i>ncol</i>]|<code>c</code>[<i>var1</i><code>/</code><i>&#8230;</i>]] ] [ <code>-bo</code>[<code>s</code>|<code>S</code>|<code>d</code>|<code>D</code>[<i>ncol</i>]|<code>c</code>[<i>var1</i><code>/</code><i>&#8230;</i>]] ] [ <code>-m</code>[<code>i</code>|<code>o</code>][<i>flag</i>] ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>gmtdp</code> reads one or more data files (which may be multisegment files; see <code>-m</code>) and apply the Douglas-Peucker line simplification algorithm. The method recursively subdivides a polygon until a run of points can be replaced by a straight line segment, with no point in that run deviating from the straight line by more than the tolerance. Have a look at this site to get a visual insight on how the algorithm works <a rel="nofollow" href="http://geometryalgorithms.com/Archive/algorithm_0205/algorithm_0205.htm">http://geometryalgorithms.com/Archive/algorithm_0205/algorithm_0205.htm</a> WARNING: currently this program should be used only with geographical coordinates.</p>
 <dl>
 <dt><i>file(s)</i></dt>

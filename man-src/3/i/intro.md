@@ -1,5 +1,4 @@
 ---
-
 title: "intro(3)"
 name: "intro"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-intro/"
 description: "intro – introduction to library functions"
 ---
 
+<h2 class="name">NAME</h2>
+<p> intro &#8211; introduction to library functions </p>
+<h2>DESCRIPTION</h2>
 <p> Section 3 of the manual describes all library functions excluding the library functions (system call wrappers) described in Section 2, which implement system calls. </p>
 <p> Many of the functions described in the section are part of the Standard C Library (<i>libc</i>). Some functions are part of other libraries (e.g., the math library, <i>libm</i>, or the real-time library, <i>librt</i>) in which case the manual page will indicate the linker option needed to link against the required library (e.g., <i>-lm</i> and <i>-lrt</i>, respectively, for the aforementioned libraries). </p>
 <p> In some cases, the programmer must define a feature test macro in order to obtain the declaration of a function from the header file specified in the man page SYNOPSIS section. (Where required, these feature test macros must be defined before including <i>any</i> header files.) In such cases, the required macro is described in the man page. For further information on feature test macros, see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7).</p>

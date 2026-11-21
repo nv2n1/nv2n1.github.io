@@ -1,5 +1,4 @@
 ---
-
 title: "cert2spc(1)"
 name: "cert2spc"
 section: "1"
@@ -10,7 +9,9 @@ description: "cert2spc – Transform multiple X.509 certificates to a Software P
 
 <h2>NAME</h2>
 <p> cert2spc &#8211; Transform multiple X.509 certificates to a Software Publisher Certificate</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cert2spc certificate|crl [certificate|crl &#8230;] outputfile.spc</code></p>
+<h2>DESCRIPTION</h2>
 <p> Combine a list of X.509 certificates or X.509 CRL (Certificate Revocation List) into a Software Publisher Certificate (PKCS#7 file). The SPC file is required for signing a PE file (like an assembly) using signcode.</p>
 <h2>PARAMETERS</h2>
 <dl>

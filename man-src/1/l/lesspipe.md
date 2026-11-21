@@ -1,5 +1,4 @@
 ---
-
 title: "lesspipe(1)"
 name: "lesspipe"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-lesspipe/"
 description: "lessfile, lesspipe – \"input preprocessor\" for less."
 ---
 
+<h2 class="name">NAME</h2>
+<p> lessfile, lesspipe &#8211; &quot;input preprocessor&quot; for less. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>lessfile, lesspipe</code></p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <i>lessfile</i>, and <i>lesspipe</i> commands. This manual page was written for the Debian GNU/Linux distribution because the input preprocessor scripts are provided by Debian GNU/Linux and are not part of the original program. </p>
 <p> <i>lessfile</i> and <i>lesspipe</i> are programs that can be used to modify the way the contents of a file are displayed in <i>less.</i> What this means is that <i>less</i> can automatically open up tar files, uncompress gzipped files, and even display something reasonable for graphics files. </p>
 <p> <i>lesspipe</i> will toss the contents/info on STDOUT and <i>less</i> will read them as they come across. This means that you do not have to wait for the decoding to finish before less shows you the file. This also means that you will get a &#8216;byte N&#8217; instead of an N% as your file position. You can seek to the end and back to get the N% but that means you have to wait for the pipe to finish. </p>

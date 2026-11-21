@@ -1,5 +1,4 @@
 ---
-
 title: "pdf2dcm(1)"
 name: "pdf2dcm"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-pdf2dcm/"
 description: "pdf2dcm – Convert PDF file to DICOM"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pdf2dcm &#8211; Convert PDF file to DICOM </p>
+<h2>SYNOPSIS</h2>
 <pre>
 pdf2dcm [options] pdffile-in dcmfile-out
 </pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>pdf2dcm</code> utility reads a PDF file (<i>pdffile-in</i>), converts it to a DICOM Encapsulated PDF Storage SOP instance and stores the converted data to an output file (<i>dcmfile-out</i>).</p>
 <h2>PARAMETERS</h2>
 <pre>

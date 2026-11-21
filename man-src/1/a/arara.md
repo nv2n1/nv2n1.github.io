@@ -1,5 +1,4 @@
 ---
-
 title: "arara(1)"
 name: "arara"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-arara/"
 description: "arara – a TeX automation tool based on rules and directives."
 ---
 
+<h2 class="name">NAME</h2>
+<p> arara &#8211; a TeX automation tool based on rules and directives. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>arara</code> [<i>options</i>] <i>documents</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>arara</code> is a TeX automation tool based on rules and directives. It gives you a way to enhance your TeX experience. The tool is an effort to provide a concise way to automate the daily TeX workflow for users and also package writers. Users might write their own rules when the provided ones do not suffice. </p>
 <p> arara takes a list of documents as input. They will be processed according to their directives. Options apply to the execution of all documents.</p>
 <h2>OPTIONS</h2>

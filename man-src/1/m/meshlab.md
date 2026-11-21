@@ -1,5 +1,4 @@
 ---
-
 title: "meshlab(1)"
 name: "meshlab"
 section: "1"
@@ -15,7 +14,9 @@ url: "/docs/linux/man/1-meshlab/"
 
  meshlab [filename]
 
-MeshLab is an open source, portable, and extensible system for the processing and editing of unstructured 3D triangular meshes.The system is aimed to help the processing of the typical not-so-small unstructured models arising in 3D scanning, providing a set of tools for editing, cleaning, healing, inspecting, rendering and converting this kind of meshes.The system is based on the VCG library developed at the Visual Computing Lab of ISTI - CNR.
+<h2>DESCRIPTION</h2>
+
+ MeshLab is an open source, portable, and extensible system for the processing and editing of unstructured 3D triangular meshes.The system is aimed to help the processing of the typical not-so-small unstructured models arising in 3D scanning, providing a set of tools for editing, cleaning, healing, inspecting, rendering and converting this kind of meshes.The system is based on the VCG library developed at the Visual Computing Lab of ISTI - CNR.
 
 <h2>SEE ALSO</h2>
 

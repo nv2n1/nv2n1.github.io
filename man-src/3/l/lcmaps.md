@@ -1,5 +1,4 @@
 ---
-
 title: "lcmaps(3)"
 name: "lcmaps"
 section: "3"
@@ -10,7 +9,9 @@ description: "lcmaps – The Local Credential MAPping Service"
 
 <h2>NAME</h2>
 <p> lcmaps &#8211; The Local Credential MAPping Service</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lcmaps</code> </p>
+<h2>DESCRIPTION</h2>
 <p> The LCMAPS framework is designed to take various credentials as input, e.g. a certificate and/or VOMS credentials, and map them to Unix credentials as output. Unix credentials are the basic POSIX credentials, i.e. User ID, Group ID and Secondary Group IDs. LCMAPS is a framework that can load and run one or more &#8216;credential mapping&#8217; plugins. The framework will load and run plugins to perform the identity mapping. Site and organizations can create their own new functionality by creating new plugins. The LCMAPS framework exposes various APIs to push credentials into the framework and to get the account mapping results in return. The <code>lcmaps.db</code> configuration file configures the LCMAPS plugins and configures the order in which the plugins are launch. Some practical examples are shown below. </p>
 <p> LCMAPS is used by <code>gLExec</code>, the <code>lcas-lcmaps-gt(4)-interface</code> to interface with a Globus GT4 and GT5 Gatekeeper, GridFTP daemon and GSI-OpenSSHd, in StoRM and somewhere in XRootD. </p>
 <h2>INVOCATION</h2>

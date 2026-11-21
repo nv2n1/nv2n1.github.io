@@ -1,5 +1,4 @@
 ---
-
 title: "seahorse(1)"
 name: "seahorse"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-seahorse/"
 description: "seahorse – Passwords and Keys"
 ---
 
+<h2 class="name">NAME</h2>
+<p> seahorse &#8211; Passwords and Keys </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>seahorse</code> [OPTIONS&#8230;] [FILES&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>Seahorse is a graphical interface for managing and using encryption keys, passwords and certificates. Currently it supports PGP keys (using GPG/GPGME) and SSH keys. Its goal is to provide an easy to use Key Management Tool, along with an easy to use interface for encryption operations.</dd>
 <h2>OPTIONS</h2>
 <p> <code>-?</code>, <code>&#8211;help</code></p>

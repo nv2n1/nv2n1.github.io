@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pubkey_import_pkcs11_url(3)"
 name: "gnutls_pubkey_import_pkcs11_url"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_pubkey_import_pkcs11_url – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pubkey_import_pkcs11_url &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/abstract.h&gt;</code> </p>
 <p> <code>int gnutls_pubkey_import_pkcs11_url(gnutls_pubkey_t </code><i>key</i><code>, const char * </code><i>url</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_pubkey_import_pkcs11_url – API function"
 <dd> A PKCS 11 url</dd>
 <dt>unsigned int flags</dt>
 <dd> One of GNUTLS_PKCS11_OBJ_* flags</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will import a PKCS 11 certificate to a <code>gnutls_pubkey_t</code> structure.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

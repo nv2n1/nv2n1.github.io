@@ -1,5 +1,4 @@
 ---
-
 title: "dbpmda(1)"
 name: "dbpmda"
 section: "1"
@@ -10,7 +9,9 @@ description: "dbpmda – debugger for Performance Co-Pilot PMDAs"
 
 <h2>NAME</h2>
 <p> <code>dbpmda</code> &#8211; debugger for Performance Co-Pilot PMDAs</p>
+<h2>SYNOPSIS</h2>
 <p> <code>dbpmda</code> [<code>-efi</code>] [<code>-n</code> <i>pmnsfile</i>] [<code>-q</code> <i>timeout</i>] [<code>-U</code> <i>username</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>dbpmda</code> is an interactive interface to the interactions between a Performance Metric Domain Agent (<code><a href="/docs/linux/man/3-pmda/">PMDA</a></code>(3)) and the Performance Metric Collector Daemon (<code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1)). This allows PMDAs to be attached, initialized and exercised to test for correctness. </p>
 <p> <code>dbpmda</code> interactively prompts the user for commands, many of which emulate the Protocol Data Units (PDUs) that may be sent by a <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) process. After running <code>dbpmda</code>, enter the command <code>help</code> to get a list of the available commands. The example section below illustrates a session using <code>dbpmda</code> to test a PMDA. </p>
 <p> To simplify repetitive testing of a PMDA, the file <i>.dbpmdarc</i> in the current working directory can contain a list of commands that will be executed by <code>dbpmda</code> on startup, before the user is prompted to enter further commands interactively. While processing the <i>.dbpmdarc</i> file, interactive mode and command echoing are enabled and then reset at the end of the <i>.dbpmdarc</i> file (see the <code>-i</code> and <code>-e</code> command line arguments below). </p>

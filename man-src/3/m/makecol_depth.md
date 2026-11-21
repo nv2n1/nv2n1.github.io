@@ -1,5 +1,4 @@
 ---
-
 title: "makecol_depth(3)"
 name: "makecol_depth"
 section: "3"
@@ -10,8 +9,10 @@ description: "makecol_depth – Converts an RGB value into the specified pixel f
 
 <h2>NAME</h2>
 <p> makecol_depth &#8211; Converts an RGB value into the specified pixel format. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>int makecol_depth(int color_depth, int r, int g, int b);</code></p>
+<h2>DESCRIPTION</h2>
 <p> Converts colors from a hardware independent format (red, green, and blue values ranging 0-255) to the pixel format required by the specified color depth. Example: </p>
 <pre><code>
 /* Compose the green color for 15 bit color depth. */

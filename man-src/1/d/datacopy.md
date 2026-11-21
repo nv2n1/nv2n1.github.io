@@ -1,5 +1,4 @@
 ---
-
 title: "datacopy(1)"
 name: "datacopy"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-datacopy/"
 description: "datacopy – move table data between two servers"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>datacopy</code> &#8211; move table data between two servers </p>
+<h2>SYNOPSIS</h2>
 <p> [-<code>vdE</code> ] Br o &#8211;<code>t</code> | &#8211;<code>a</code> | &#8211;<code>c</code> <i>owner</i> Br c [-<code>b </code><i>batchsize</i> ] [-<code>p </code><i>packetsize</i> ] [-<code>S </code><i>server/username/password/database/table_or_view</i> ] [-<code>D </code><i>server/username/password/database/table</i> ] [-<code>T </code><i>textsize</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> is a utility distributed with FreeTDS. will move table data from one server to another without the need for intermediate files. is much faster and more efficient than is freebcp out/in. </p>
 <p> makes use of the db-lib bcp API built into FreeTDS. This API is also available to application developers. </p>
 <p> can be used to migrate data between Sybase ASE and SQL Server or vice versa.</p>

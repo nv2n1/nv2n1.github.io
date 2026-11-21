@@ -1,5 +1,4 @@
 ---
-
 title: "smbtorture(1)"
 name: "smbtorture"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-smbtorture/"
 description: "smbtorture – Run a series of tests against a SMB server"
 ---
 
+<h2 class="name">NAME</h2>
+<p> smbtorture &#8211; Run a series of tests against a SMB server </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>smbtorture</code> {//server/share} [-d debuglevel] [-U user%pass] [-k] [-N numprocs] [-n netbios_name] [-W workgroup] [-o num_operations] [-e num files(entries)] [-O socket_options] [-m maximum_protocol] [-L] [-c CLIENT.TXT] [-t timelimit] [-C filename] [-A] [-p port] [-s seed] [-f max_failures] [-X] {BINDING-STRING|UNC} {TEST1} [TEST2] [&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>smbtorture is a testsuite that runs several tests against a SMB server. All tests are known to succeed against a Windows 2003 server (?). Smbtorture&#8217;s primary goal is finding differences in implementations of the SMB protocol and testing SMB servers. </dd>
 <p> Any number of tests can be specified on the command-line. If no tests are specified, all tests are run. </p>
 <p> If no arguments are specified at all, all available options and tests are listed.</p>

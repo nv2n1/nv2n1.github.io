@@ -1,5 +1,4 @@
 ---
-
 title: "synce-remove-program(1)"
 name: "synce-remove-program"
 section: "1"
@@ -10,7 +9,9 @@ description: "synce-remove-program – removes a program from your device"
 
 <h2>NAME</h2>
 <p> synce-remove-program &#8211; removes a program from your device </p>
+<h2>SYNOPSIS</h2>
 <p> <code>synce-remove-program</code> [-d <i>LEVEL</i>] [-p <i>device_path</i>] [-o <i>UNLOAD_OPT</i>] <i>NAME</i> &#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> <code>synce-remove-program</code> removes a program on a device connected through SynCE. </p>
 <h2>OPTIONS</h2>
 <dl>

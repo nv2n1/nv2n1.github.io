@@ -1,5 +1,4 @@
 ---
-
 title: "npm-hook(1)"
 name: "npm-hook"
 section: "1"
@@ -8,6 +7,7 @@ url: "/docs/linux/man/1-npm-hook/"
 description: "npm-hook – Manage registry hooks"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>npm-hook</code> &#8211; Manage registry hooks </p>
 <h3>Synopsis</h3>
 <dl>

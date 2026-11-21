@@ -1,5 +1,4 @@
 ---
-
 title: "git-rm(1)"
 name: "git-rm"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-git-rm/"
 description: "git-rm – Remove files from the working tree and from the index"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-rm &#8211; Remove files from the working tree and from the index </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git rm[-f | --force][-n][-r][--cached][--ignore - unmatch]
       [--quiet][--pathspec - from - file = &lt;file&gt;[--pathspec - file - nul]]
       [--][&lt;pathspec&gt;...]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Remove files matching pathspec from the index, or from the working tree and the index. <code>git rm</code> will not remove a file from just your working directory. (There is no option to remove a file only from the working tree and yet keep it in the index; use <code>/bin/rm</code> if you want to do that.) The files being removed have to be identical to the tip of the branch, and no updates to their contents can be staged in the index, though that default behavior can be overridden with the <code>-f</code> option. When <code>&#8211;cached</code> is given, the staged content has to match either the tip of the branch or the file on disk, allowing the file to be removed from just the index. When sparse-checkouts are in use (see <code><a href="/docs/linux/man/1-git-sparse-checkout/">git-sparse-checkout</a></code>(1)), <code>git rm</code> will only remove paths within the sparse-checkout patterns.</p>
 <h2>OPTIONS</h2>
 <p> &lt;pathspec&gt;&#8230;</p>

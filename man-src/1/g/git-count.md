@@ -1,5 +1,4 @@
 ---
-
 title: "git-count(1)"
 name: "git-count"
 section: "1"
@@ -10,7 +9,9 @@ description: "git-count – Show commit count"
 
 <h2>NAME</h2>
 <p> <code>git-count</code> &#8211; Show commit count</p>
+<h2>SYNOPSIS</h2>
 <p> <code>git-count</code> [&#8211;all]</p>
+<h2>DESCRIPTION</h2>
 <p> Show commit count.</p>
 <h2>OPTIONS</h2>
 <p> &#8211;all </p>

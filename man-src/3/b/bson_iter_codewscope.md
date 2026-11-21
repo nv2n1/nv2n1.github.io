@@ -1,5 +1,4 @@
 ---
-
 title: "bson_iter_codewscope(3)"
 name: "bson_iter_codewscope"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_iter_codewscope() – The bson_iter_codewscope() function act
 
 <h2>NAME</h2>
 <p> bson_iter_codewscope() &#8211; The bson_iter_codewscope() function acts similar to bson_iter_code() except for BSON_TYPE_CODEWSCOPE elements. It also will provide a pointer to the buffer for scope, which can be loaded into a bson_t using bson_init_static().</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #define BSON_ITER_HOLDS_CODEWSCOPE(iter) \
     (bson_iter_type((iter)) == BSON_TYPE_CODEWSCOPE)
@@ -32,6 +32,7 @@ bson_iter_codewscope(const bson_iter_t *iter,
 <dl>
 <dt><code>scope</code></dt>
 <dd> An optional location to store the immutable raw scope BSON document.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_iter_codewscope/">bson_iter_codewscope</a>(3)</code> function acts similar to <code><a href="/docs/linux/man/3-bson_iter_code/">bson_iter_code</a>(3)</code> except for BSON_TYPE_CODEWSCOPE elements. It also will provide a pointer to the buffer for scope, which can be loaded into a <code>bson_t</code> using <code><a href="/docs/linux/man/3-bson_init_static/">bson_init_static</a>(3)</code> \&amp;. </p>
 <h2>RETURNS</h2>
 <p> An UTF-8 encoded string containing the JavaScript code which should not be modified or freed. </p>

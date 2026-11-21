@@ -1,5 +1,4 @@
 ---
-
 title: "bitmap_color_depth(3)"
 name: "bitmap_color_depth"
 section: "3"
@@ -10,8 +9,10 @@ description: "bitmap_color_depth – Returns the color depth of the specified bi
 
 <h2>NAME</h2>
 <p> bitmap_color_depth &#8211; Returns the color depth of the specified bitmap. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>int bitmap_color_depth(BITMAP *bmp);</code></p>
+<h2>DESCRIPTION</h2>
 <p> Returns the color depth of the specified bitmap (8, 15, 16, 24, or 32). Example: </p>
 <pre><code>
 switch (bitmap_color_depth(screen)) {

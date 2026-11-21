@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_certificate_set_x509_trust_dir(3)"
 name: "gnutls_certificate_set_x509_trust_dir"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_certificate_set_x509_trust_dir – API function"
 
 <h2>NAME</h2>
 <p> gnutls_certificate_set_x509_trust_dir &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_certificate_set_x509_trust_dir(gnutls_certificate_credentials_t </code><i>cred</i><code>, const char * </code><i>ca_dir</i><code>, gnutls_x509_crt_fmt_t </code><i>type</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_certificate_set_x509_trust_dir – API function"
 <dd> is a directory containing the list of trusted CAs (DER or PEM list)</dd>
 <dt>gnutls_x509_crt_fmt_t type</dt>
 <dd> is PEM or DER</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function adds the trusted CAs present in the directory in order to verify client or server certificates. This function is identical to <code>gnutls_certificate_set_x509_trust_file()</code> but loads all certificates in a directory.</p>
 <h2>RETURNS</h2>
 <p> the number of certificates processed</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "advdef(1)"
 name: "advdef"
 section: "1"
@@ -10,11 +9,13 @@ description: "advdef – AdvanceCOMP Deflate Compression Utility"
 
 <h2>NAME</h2>
 <p> advdef &#8211; AdvanceCOMP Deflate Compression Utility</p>
+<h2>SYNOPSIS</h2>
 <p> advdef [-z, &#8211;recompress] [-0, &#8211;shrink-store] </p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[-1, &#8211;shrink-fast] [-2, &#8211;shrink-normal] [-3, &#8211;shrink-extra]</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[-4, &#8211;shrink-insane] [-i, &#8211;iter N]</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[-f, &#8211;force] [-q, &#8211;quiet]</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[-h, &#8211;help] [-V, &#8211;version] FILES&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> The main purpose of this utility is to recompress the data present in the .png, .mng, .gz, .tgz and .svgz files. </p>
 <p> The internal structure of the files isn&#8217;t changed. Only the compressed data is modified.</p>
 <h2>OPTIONS</h2>

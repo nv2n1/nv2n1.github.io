@@ -1,5 +1,4 @@
 ---
-
 title: "pmdalogger(1)"
 name: "pmdalogger"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmdalogger – log file performance metrics domain agent (PMDA)"
 
 <h2>NAME</h2>
 <p> <code>pmdalogger</code> &#8211; log file performance metrics domain agent (PMDA)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/logger/pmdalogger</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-m</code> <i>memory</i>] [<code>-s</code> <i>interval</i>] [<code>-U</code> <i>username</i>] [<i>configfile</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdalogger</code> is a configurable log file monitoring Performance Metrics Domain Agent (PMDA). It can be seen as analogous to the <code>-f</code> option to <code><a href="/docs/linux/man/1-tail/">tail</a></code>(1) and converts each new log line into a performance event. It was the first PMDA to make extensive use of event metrics, which can be consumed by client tools like <code><a href="/docs/linux/man/1-pmevent/">pmevent</a></code>(1). </p>
 <p> The <code>logger</code> PMDA exports both event-style metrics reflecting timestamped event records for text logged to a file (or set of files or output from a process), as well as the more orthodox sample-style metrics such as event counts and throughput size values. </p>
 <p> The PMDA is configured via a <i>configfile</i> which contains one line for each source of events (file or process). This file is setup by the Install script described in the later section on &#8220;INSTALLATION&#8221; of the PMDA. </p>

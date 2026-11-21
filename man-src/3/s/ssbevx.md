@@ -1,5 +1,4 @@
 ---
-
 title: "ssbevx(3)"
 name: "ssbevx"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-ssbevx/"
 description: "ssbevx.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ssbevx.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssbevx</code> (JOBZ, RANGE, UPLO, N, KD, AB, LDAB, Q, LDQ, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, IWORK, IFAIL, INFO)<br />
  <i></i><code> SSBEVX computes the eigenvalues and, optionally, the left and/or right eigenvectors for OTHER matrices</code></p>

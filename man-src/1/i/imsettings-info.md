@@ -1,5 +1,4 @@
 ---
-
 title: "imsettings-info(1)"
 name: "imsettings-info"
 section: "1"
@@ -10,7 +9,9 @@ description: "imsettings-info – Display information about Input Method"
 
 <h2>NAME</h2>
 <p> imsettings-info &#8211; Display information about Input Method</p>
+<h2>SYNOPSIS</h2>
 <p> <code>imsettings-info</code> [ <code>-h</code> ] [ <code>&#8211;help</code> ] [Input Method name | configuration filename]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>imsettings-info</code> displays Input Method information. if no explicit <i>Input Method name</i> or <i>configuration filename</i> is specified, it displays one which is currently active.</p>
 <h2>OPTIONS</h2>
 <p> This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>

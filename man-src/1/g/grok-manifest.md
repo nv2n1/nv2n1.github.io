@@ -1,5 +1,4 @@
 ---
-
 title: "grok-manifest(1)"
 name: "grok-manifest"
 section: "1"
@@ -10,7 +9,9 @@ description: "GROK-MANIFEST – Create manifest for use with grokmirror"
 
 <h2>NAME</h2>
 <p> GROK-MANIFEST &#8211; Create manifest for use with grokmirror</p>
+<h2>SYNOPSIS</h2>
 <p> grok-manifest [opts] -m manifest.js[.gz] -t /path [/path/to/bare.git]</p>
+<h2>DESCRIPTION</h2>
 <p> Call grok-manifest from a git post-update or post-receive hook to create the latest repository manifest. This manifest file is downloaded by mirror slaves (if newer than what they already have) and used to only clone/pull the repositories that have changed since the mirror&#8217;s last run.</p>
 <h2>OPTIONS</h2>
 <dl>

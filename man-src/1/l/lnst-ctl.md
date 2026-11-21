@@ -1,5 +1,4 @@
 ---
-
 title: "lnst-ctl(1)"
 name: "lnst-ctl"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-lnst-ctl/"
 description: "lnst-ctl – Linux Network Stack Test controller"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lnst-ctl &#8211; Linux Network Stack Test controller </p>
+<h2>SYNOPSIS</h2>
 <p> <code>lnst-ctl</code> [<i>OPTION</i>]&#8230; <i>ACTION</i> <i>RECIPE</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Linux Network Stack Test is a tool that supports development and execution of automated and portable network tests. For detailed description of the architecture of LNST please refer to project website (link listed on <code>INTERNET RESOURCES</code> bellow). </p>
 <p> <code>lnst-ctl</code> is a script used for managing slaves. It reads a recipe XML file as an input and executes tests on the specified slave machines.</p>
 <h2>OPTIONS</h2>

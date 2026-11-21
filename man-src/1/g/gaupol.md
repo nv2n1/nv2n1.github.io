@@ -1,5 +1,4 @@
 ---
-
 title: "gaupol(1)"
 name: "gaupol"
 section: "1"
@@ -10,7 +9,9 @@ description: "gaupol – editor for text-based subtitle files"
 
 <h2>NAME</h2>
 <p> gaupol &#8211; editor for text-based subtitle files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gaupol</code> [<i>OPTION&#8230;</i>] [<i>FILE&#8230;</i>] [+[<i>NUM</i>]]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>gaupol</code> is an editor for text-based subtitle files. It supports multiple subtitle file formats and provides means of correcting texts and timing subtitles to match video.</p>
 <h2>OPTIONS</h2>
 <dl>

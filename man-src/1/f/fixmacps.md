@@ -1,5 +1,4 @@
 ---
-
 title: "fixmacps(1)"
 name: "fixmacps"
 section: "1"
@@ -10,7 +9,9 @@ description: "fixmacps – filter to fix Macintosh documents with saner version 
 
 <h2>NAME</h2>
 <p> fixmacps &#8211; filter to fix Macintosh documents with saner version of md</p>
+<h2>SYNOPSIS</h2>
 <p> <code>fixmacps </code> &lt; <i>Macintosh.ps</i> &gt; <i>Fixed.ps</i></p>
+<h2>DESCRIPTION</h2>
 <p> <i>Fixmacps</i> is a <i>perl </i> filter which &quot;fixes&quot; PostScript generated from a Macintosh PC that it works correctly with Angus Duggan&#8217;s <code>psutils</code> package.</p>
 <h2>FILES</h2>
 <p> /usr/share/psutils/md68_0.ps, /usr/share/psutils/md71_0.ps &#8211; sanitised versions of the md prologue.</p>

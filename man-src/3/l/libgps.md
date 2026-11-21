@@ -1,5 +1,4 @@
 ---
-
 title: "libgps(3)"
 name: "libgps"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-libgps/"
 description: "libgps – C service library for communicating with the GPS daemon"
 ---
 
+<h2 class="name">NAME</h2>
+<p> libgps &#8211; C service library for communicating with the GPS daemon </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 C:
 #include &lt;gps.h&gt;
@@ -32,6 +34,7 @@ for report in session:
 del session
 </pre>
 </dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>libgps</code> is a service library which supports communicating with an instance of the <code><a href="/docs/linux/man/8-gpsd/">gpsd</a></code>(8); link it with the linker option -lgps. </p>
 <dl>
 <dt>

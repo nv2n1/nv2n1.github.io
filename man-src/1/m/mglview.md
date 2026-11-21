@@ -1,5 +1,4 @@
 ---
-
 title: "mglview(1)"
 name: "mglview"
 section: "1"
@@ -10,7 +9,9 @@ description: "mglview – Execute MathGL scripts and show in an window"
 
 <h2>NAME</h2>
 <p> mglview &#8211; Execute MathGL scripts and show in an window</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mglview</code> [parameters] scriptfile</p>
+<h2>DESCRIPTION</h2>
 <p> <code>mglview</code> reads MGL scripts from <i>scriptfile</i> to produce plots of specified functions or data. The program will create a GUI window showing the script result. You can use <code>&#8211;</code> as file name for reading script from standard input. Another option is using *.mgld files for quick viewing 3d pictures.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "tv_extractinfo_ar(1)"
 name: "tv_extractinfo_ar"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-tv_extractinfo_ar/"
 description: "tv_extractinfo_ar – read Spanish (Argentinean) language listings and extract info from programme descriptions."
 ---
 
+<h2 class="name">NAME</h2>
+<p> tv_extractinfo_ar &#8211; read Spanish (Argentinean) language listings and extract info from programme descriptions. </p>
+<h2>SYNOPSIS</h2>
 <p> tv_extractinfo_ar [&#8211;help] [&#8211;output <font SIZE="-1">FILE</font>] [<font SIZE="-1">FILE&#8230;</font>]</p>
+<h2>DESCRIPTION</h2>
 <p> Read <font SIZE="-1">XMLTV</font> data and attempt to extract information from Spanish-language programme descriptions, putting it into machine-readable form. For example the human-readable text &#8216;(Repeticion)&#8217; in a programme description might be replaced by the <font SIZE="-1">XML</font> element &lt;previously-shown&gt;. </p>
 <p> <code>&#8211;output </code><font SIZE="-1"><code>FILE</code></font> write to <font SIZE="-1">FILE</font> rather than standard output </p>
 <p> This tool also attempts to split multipart programmes into their constituents, by looking for a description that seems to contain lots of times and titles. But this depends on the description following one particular style and is useful only for some listings sources (Ananova). </p>

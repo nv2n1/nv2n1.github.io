@@ -1,5 +1,4 @@
 ---
-
 title: "roundtrip(1)"
 name: "roundtrip"
 section: "1"
@@ -10,7 +9,9 @@ description: "roundtrip – a comparison program for testing roundtrip conversio
 
 <h2>NAME</h2>
 <p> <code>roundtrip</code> &#8211; a comparison program for testing roundtrip conversion</p>
+<h2>SYNOPSIS</h2>
 <p> <i>filename</i> <i>filename</i></p>
+<h2>DESCRIPTION</h2>
 <p> The roundtrip program is essentially a &quot;chemical diff.&quot; That is, it will return with an error if two files do not have the same number of atoms, the same number of molecules, and where appropriate, the same element and coordinates for each atom.</p>
 <h2>OPTIONS</h2>
 <p> If given two filenames, roundtrip will guess the file format from the extension.</p>

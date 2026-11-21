@@ -1,5 +1,4 @@
 ---
-
 title: "gmtlegs(1)"
 name: "gmtlegs"
 section: "1"
@@ -10,7 +9,9 @@ description: "gmtlegs – Find cruises in a given region"
 
 <h2>NAME</h2>
 <p> gmtlegs &#8211; Find cruises in a given region</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gmtlegs</code> <code>-R</code><i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[<code>r</code>] [ <code>-G</code> ] [ <code>-M</code> ] [ <code>-T</code> ] [ <code>-L</code> ] [ <code>-V</code> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>gmtlegs</code> will report the name of all the cruises that happened to be wholly or partially inside the specified region. As an option, only those cruises that collected a certain type of data can be reported.</p>
 <dl>
 <dt><code>-R</code></dt>

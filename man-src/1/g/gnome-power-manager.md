@@ -1,5 +1,4 @@
 ---
-
 title: "gnome-power-manager(1)"
 name: "gnome-power-manager"
 section: "1"
@@ -10,7 +9,9 @@ description: "gnome-power-manager – gnome power manager userspace daemon"
 
 <h2>NAME</h2>
 <p> gnome-power-manager &#8211; gnome power manager userspace daemon</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gnome-power-manager</code> [ <code>&#8211;verbose</code> ] [ <code>&#8211;debug</code> ] [ <code>&#8211;help</code> ]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documentsDone. ly the <code>gnome-power-manager</code> command. </p>
 <p> <code>gnome-power-manager</code> is the backend program of the GNOME power management infrastructure providing a complete and integrated solution to power management under the GNOME desktop environment. </p>
 <p> It supports features such as suspending, hibernating, screen blanking, cpu frequency switching and more in one small neat package.</p>

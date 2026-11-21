@@ -1,5 +1,4 @@
 ---
-
 title: "ocaml(1)"
 name: "ocaml"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ocaml/"
 description: "ocaml – The OCaml interactive toplevel"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ocaml &#8211; The OCaml interactive toplevel</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ocaml</code> [ <i>options</i> ] [ <i>object-files</i> ] [ <i>script-file</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/1-ocaml/">ocaml</a></code>(1) command is the toplevel system for OCaml, that permits interactive use of the OCaml system through a read-eval-print loop. In this mode, the system repeatedly reads OCaml phrases from the input, then typechecks, compiles and evaluates them, then prints the inferred type and result value, if any. The system prints a # (sharp) prompt before reading each phrase. </p>
 <p> A toplevel phrase can span several lines. It is terminated by ;; (a double-semicolon). The syntax of toplevel phrases is as follows. </p>
 <p> The toplevel system is started by the command <code><a href="/docs/linux/man/1-ocaml/">ocaml</a></code>(1). Phrases are read on standard input, results are printed on standard output, errors on standard error. End-of-file on standard input terminates <code><a href="/docs/linux/man/1-ocaml/">ocaml</a></code>(1). </p>

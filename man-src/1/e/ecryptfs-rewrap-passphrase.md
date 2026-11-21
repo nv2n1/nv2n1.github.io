@@ -1,5 +1,4 @@
 ---
-
 title: "ecryptfs-rewrap-passphrase(1)"
 name: "ecryptfs-rewrap-passphrase"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-ecryptfs-rewrap-passphrase/"
 description: "ecryptfs-rewrap-passphrase – unwrap an eCryptfs wrapped passphrase, rewrap it with a new passphrase, and write it back to file."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ecryptfs-rewrap-passphrase &#8211; unwrap an eCryptfs wrapped passphrase, rewrap it with a new passphrase, and write it back to file.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ecryptfs-rewrap-passphrase [file]</code> </p>
 <p> printf &quot;%s
 %s&quot; &quot;old wrapping passphrase&quot; &quot;new wrapping passphrase&quot; | <code>ecryptfs-rewrap-passphrase [file] &#8211;</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>ecryptfs-rewrap-passphrase</code> is a utility to change the wrapping passphrase on a wrapped passphrase file. </p>
 <h2>SEE ALSO</h2>
 <dl>

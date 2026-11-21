@@ -1,5 +1,4 @@
 ---
-
 title: "git-rerere(1)"
 name: "git-rerere"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-rerere/"
 description: "git-rerere – Reuse recorded resolution of conflicted merges"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-rerere &#8211; Reuse recorded resolution of conflicted merges </p>
+<h2>SYNOPSIS</h2>
 <pre>
 <i>git rerere</i> [<i>clear</i>|<i>forget</i> &lt;pathspec&gt;|<i>diff</i>|<i>remaining</i>|<i>status</i>|<i>gc</i>]
 </pre>
+<h2>DESCRIPTION</h2>
 <p> In a workflow employing relatively long lived topic branches, the developer sometimes needs to resolve the same conflicts over and over again until the topic branches are done (either merged to the &quot;release&quot; branch, or sent out and accepted upstream). </p>
 <p> This command assists the developer in this process by recording conflicted automerge results and corresponding hand resolve results on the initial manual merge, and applying previously recorded hand resolutions to their corresponding automerge results. </p>
 <dl>

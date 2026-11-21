@@ -1,5 +1,4 @@
 ---
-
 title: "rpmdb2solv(1)"
 name: "rpmdb2solv"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-rpmdb2solv/"
 description: "rpmdb2solv – convert the rpm database into a solv file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rpmdb2solv &#8211; convert the rpm database into a solv file </p>
+<h2>SYNOPSIS</h2>
 <p> <code>rpmdb2solv</code> [<i>OPTIONS</i>] [<i>REFFILE.solv</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The rpmdb2solv tool reads rpm&#8217;s installed packages database and writes it in solv file format to standard output. You can make use of an old version of the database by specifying a <i>REFFILE.solv</i> file. </p>
 <p> <code>-o</code> <i>OUTFILE</i></p>
 <dl>

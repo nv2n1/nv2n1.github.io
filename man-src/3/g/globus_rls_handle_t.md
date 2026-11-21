@@ -1,5 +1,4 @@
 ---
-
 title: "globus_rls_handle_t(3)"
 name: "globus_rls_handle_t"
 section: "3"
@@ -8,7 +7,10 @@ url: "/docs/linux/man/3-globus_rls_handle_t/"
 description: "globus_rls_handle_t –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> globus_rls_handle_t &#8211; </p>
 <p> RLS Client Handle.</p>
+<h2>SYNOPSIS</h2>
 <h3>Data Fields</h3>
 <p> globus_url_t <code>url</code> </p>
 <p> globus_io_handle_t <code>handle</code> </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "etherape(1)"
 name: "etherape"
 section: "1"
@@ -10,7 +9,9 @@ description: "etherape – graphical network traffic browser"
 
 <h2>NAME</h2>
 <p> etherape &#8211; graphical network traffic browser</p>
+<h2>SYNOPSIS</h2>
 <p> <code>etherape</code> [ <code>-m</code> operating mode ] [ <code>-i</code> interface ] [ <code>-f</code> filter ] [ <code>-r</code> inputfile ] [ <code>-n</code> ] [ <code>-d</code> ] [ <code>-F</code> ] [ <code>-N</code> color ] [ <code>-L</code> color ] [ <code>-T</code> color ] <code>-z ]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>etherape</code> is a network traffic browser. It displays network activity graphically. It uses GNOME libraries as its user interface, and libpcap, a packet capture and filtering library.</p>
 <h2>OPTIONS</h2>
 <p> These options can be supplied to the command:</p>

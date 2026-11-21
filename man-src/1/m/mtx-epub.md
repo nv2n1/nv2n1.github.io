@@ -1,5 +1,4 @@
 ---
-
 title: "mtx-epub(1)"
 name: "mtx-epub"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mtx-epub/"
 description: "mtx-epub – ConTeXt EPUB Helpers"
 ---
 
+<h2 class="name">NAME</h2>
+<p>&nbsp;mtx-epub &#8211; ConTeXt EPUB Helpers </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mtxrun &#8211;script epub [</code> <i>OPTIONS &#8230;</i> <code>] [</code> <i>FILENAMES</i> <code>]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>ConTeXt EPUB Helpers</code></p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "mhlist(1)"
 name: "mhlist"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mhlist/"
 description: "mhlist – list information about MIME messages"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mhlist &#8211; list information about MIME messages </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mhlist</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-file</code> <i>file</i>] [<code>-part</code> <i>number</i>] &#8230; [<code>-type</code> <i>content</i>] &#8230; [<code>-headers</code> | <code>-noheaders</code>] [<code>-realsize</code> | <code>-norealsize</code>] [<code>-rcache</code> <i>policy</i>] [<code>-wcache</code> <i>policy</i>] [<code>-check</code> | <code>-nocheck</code>] [<code>-changecur</code> | <code>-nochangecur</code>] [<code>-verbose</code> | <code>-noverbose</code>] [<code>-disposition</code> | <code>-nodisposition</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>mhlist</code> command allows you to list information (essentially a table of contents) about the various parts of a collection of MIME (multi-media) messages. </dd>
 <p> <code>mhlist</code> manipulates MIME (multi-media messages) as specified in RFC 2045 to RFC 2049 (See <i><a href="/docs/linux/man/1-mhbuild/">mhbuild</a></i>(1)). </p>
 <p> The <code>-headers</code> switch indicates that a one-line banner should be displayed above the listing. </p>

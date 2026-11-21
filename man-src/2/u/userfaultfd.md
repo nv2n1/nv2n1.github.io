@@ -1,5 +1,4 @@
 ---
-
 title: "userfaultfd(2)"
 name: "userfaultfd"
 section: "2"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/2-userfaultfd/"
 description: "userfaultfd – create a file descriptor for handling page faults in user space"
 ---
 
+<h2 class="name">NAME</h2>
+<p> userfaultfd &#8211; create a file descriptor for handling page faults in user space </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/userfaultfd.h&gt;
 #include &lt;sys/types.h&gt;
 int userfaultfd(int flags);
 </code></pre>
 <p> <i>Note</i>: There is no glibc wrapper for this system call; see NOTES.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>userfaultfd</code>() creates a new userfaultfd object that can be used for delegation of page-fault handling to a user-space application, and returns a file descriptor that refers to the new object. The new userfaultfd object is configured using <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2). </p>
 <p> Once the userfaultfd object is configured, the application can use <code><a href="/docs/linux/man/2-read/">read</a></code>(2) to receive userfaultfd notifications. The reads from userfaultfd may be blocking or non-blocking, depending on the value of <i>flags</i> used for the creation of the userfaultfd or subsequent calls to <code><a href="/docs/linux/man/2-fcntl/">fcntl</a></code>(2). </p>
 <p> The following values may be bitwise ORed in <i>flags</i> to change the behavior of <code>userfaultfd</code>():</p>

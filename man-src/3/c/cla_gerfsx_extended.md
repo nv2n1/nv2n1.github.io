@@ -1,5 +1,4 @@
 ---
-
 title: "cla_gerfsx_extended(3)"
 name: "cla_gerfsx_extended"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cla_gerfsx_extended/"
 description: "cla_gerfsx_extended.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cla_gerfsx_extended.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cla_gerfsx_extended</code> (PREC_TYPE, TRANS_TYPE, N, NRHS, A, LDA, AF, LDAF, IPIV, COLEQU, C, B, LDB, Y, LDY, BERR_OUT, N_NORMS, ERRS_N, ERRS_C, RES, AYB, DY, Y_TAIL, RCOND, ITHRESH, RTHRESH, DZ_UB, IGNORE_CWISE, INFO)<br />
  <i></i><code>CLA_GERFSX_EXTENDED</code></p>

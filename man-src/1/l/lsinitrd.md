@@ -1,5 +1,4 @@
 ---
-
 title: "lsinitrd(1)"
 name: "lsinitrd"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-lsinitrd/"
 description: "lsinitrd – tool to show the contents of an initramfs image"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lsinitrd &#8211; tool to show the contents of an initramfs image </p>
+<h2>SYNOPSIS</h2>
 <p> <code>lsinitrd</code> [<i>OPTION&#8230;</i>] [&lt;image&gt; [&lt;filename&gt; [&lt;filename&gt; [&#8230;] ]]] </p>
 <p> <code>lsinitrd</code> [<i>OPTION&#8230;</i>] -k &lt;kernel-version&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> lsinitrd shows the contents of an initramfs image. if &lt;image&gt; is omitted, then lsinitrd uses the default image <i>/boot/&lt;machine-id&gt;/&lt;kernel-version&gt;/initrd</i> or <i>/boot/initramfs-&lt;kernel-version&gt;.img</i>.</p>
 <h2>OPTIONS</h2>
 <p> <code>-h, &#8211;help</code></p>

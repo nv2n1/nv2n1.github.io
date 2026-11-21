@@ -1,5 +1,4 @@
 ---
-
 title: "sim_lsmplugin(1)"
 name: "sim_lsmplugin"
 section: "1"
@@ -10,6 +9,7 @@ description: "sim_lsmplugin — LibStorageMgmt simulator python plugin"
 
 <h2>NAME</h2>
 <p> sim_lsmplugin &#8212; LibStorageMgmt simulator python plugin </p>
+<h2>DESCRIPTION</h2>
 <p> LibstorageMgmt simulator plugin is for development or test use only. The plugin simulates an array which supports most features of the library. State is stored in a file, default is &#8216;/tmp/lsm_sim_data&#8217;. The &#8216;sim_lsmplugin&#8217; executable file is for libStorageMgmt daemon to execute when client user specifies sim plugin in the URI. </p>
 <p> This plugin is written in pure Python and is intended to be an example of a python plugin for the library. </p>
 <h2>URI</h2>

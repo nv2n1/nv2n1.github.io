@@ -1,5 +1,4 @@
 ---
-
 title: "fts(3)"
 name: "fts"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-fts/"
 description: "fts, fts_open, fts_read, fts_children, fts_set, fts_close – traverse a file hierarchy"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fts, fts_open, fts_read, fts_children, fts_set, fts_close &#8211; traverse a file hierarchy </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;fts.h&gt;
 #include &lt;sys/stat.h&gt;
@@ -19,6 +21,7 @@ FTSENT *fts_children(FTS *ftsp, int instr);
 int fts_set(FTS *ftsp, FTSENT *f, int instr);
 int fts_close(FTS *ftsp);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The fts functions are provided for traversing file hierarchies. A simple overview is that the <code>fts_open</code>() function returns a &quot;handle&quot; (of type <i>FTS&nbsp;*</i>) that refers to a file hierarchy &quot;stream&quot;. This handle is then supplied to the other fts functions. The function <code>fts_read</code>() returns a pointer to a structure describing one of the files in the file hierarchy. The function <code>fts_children</code>() returns a pointer to a linked list of structures, each of which describes one of the files contained in a directory in the hierarchy. </p>
 <p> In general, directories are visited two distinguishable times; in preorder (before any of their descendants are visited) and in postorder (after all of their descendants have been visited). Files are visited once. It is possible to walk the hierarchy &quot;logically&quot; (visiting the files that symbolic links point to) or physically (visiting the symbolic links themselves), order the walk of the hierarchy or prune and/or revisit portions of the hierarchy. </p>
 <p> Two structures (and associated types) are defined in the include file <i>&lt;fts.h&gt;</i>. The first type is <i>FTS</i>, the structure that represents the file hierarchy itself. The second type is <i>FTSENT</i>, the structure that represents a file in the file hierarchy. Normally, an <i>FTSENT</i> structure is returned for every file in the file hierarchy. In this manual page, &quot;file&quot; and &quot;FTSENT structure&quot; are generally interchangeable. </p>

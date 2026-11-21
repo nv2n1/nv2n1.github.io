@@ -1,5 +1,4 @@
 ---
-
 title: "mpop(1)"
 name: "mpop"
 section: "1"
@@ -10,6 +9,7 @@ description: "mpop – A POP3 client"
 
 <h2>NAME</h2>
 <p> mpop &#8211; A POP3 client</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt>Mail retrieval mode (default):</dt>
 <dd> <code>mpop</code> [option&#8230;] [&#8211;] [account&#8230;]<br />
@@ -17,6 +17,7 @@ description: "mpop – A POP3 client"
 <dt>Server information mode:</dt>
 <dd> <code>mpop</code> [option&#8230;] &#8211;serverinfo [account&#8230;]<br />
  <code>mpop</code> &#8211;host=host [option&#8230;] &#8211;serverinfo</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> In mail retrieval mode of operation, mpop retrieves mails from one or more POP3 mailboxes, optionally does some filtering, and delivers them through a mail delivery agent (MDA), to a maildir folder, or to an mbox file. Mails that were successfully delivered before will not be retrieved a second time, even if errors occur or mpop is terminated in the middle of a session.<br />
  In server information mode, mpop prints information about one or more POP3 servers.<br />
  If no account names are given on the command line, one named <i>default</i> will be used.<br />

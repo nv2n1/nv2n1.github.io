@@ -1,5 +1,4 @@
 ---
-
 title: "swapon(2)"
 name: "swapon"
 section: "2"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/2-swapon/"
 description: "swapon, swapoff – start/stop swapping to file/device"
 ---
 
+<h2 class="name">NAME</h2>
+<p> swapon, swapoff &#8211; start/stop swapping to file/device </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code><br />
  <code>#include &lt;sys/swap.h&gt;</code> </p>
 <p> <code>int swapon(const char *</code><i>path</i><code>, int </code><i>swapflags</i><code>);</code><br />
  <code>int swapoff(const char *</code><i>path</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>swapon</code>() sets the swap area to the file or block device specified by <i>path</i>. <code>swapoff</code>() stops swapping to the file or block device specified by <i>path</i>. </p>
 <p> If the <code>SWAP_FLAG_PREFER</code> flag is specified in the <code>swapon</code>() <i>swapflags</i> argument, the new swap area will have a higher priority than default. The priority is encoded within <i>swapflags</i> as: </p>
 <p> <i>(prio &lt;&lt; SWAP_FLAG_PRIO_SHIFT) &amp; SWAP_FLAG_PRIO_MASK</i> </p>

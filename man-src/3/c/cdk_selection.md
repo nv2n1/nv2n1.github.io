@@ -1,5 +1,4 @@
 ---
-
 title: "cdk_selection(3)"
 name: "cdk_selection"
 section: "3"
@@ -10,6 +9,7 @@ description: "cdk_selection – curses selection list widget."
 
 <h2>NAME</h2>
 <p> cdk_selection &#8211; curses selection list widget.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>
 <p> #include &lt;cdk.h&gt; </p>
 <pre><code>
@@ -142,6 +142,7 @@ void setCDKSelectionVerticalChar(
     chtype character);
 </code></pre>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> The Cdk selection widget creates a selection list. The following functions create or manipulate the Cdk selection list widget.</p>
 <h2>AVAILABLE FUNCTIONS</h2>
 <dl>

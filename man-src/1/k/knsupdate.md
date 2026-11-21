@@ -1,5 +1,4 @@
 ---
-
 title: "knsupdate(1)"
 name: "knsupdate"
 section: "1"
@@ -11,7 +10,9 @@ url: "/docs/linux/man/1-knsupdate/"
 <dl>
 <dt><code>knsupdate</code></dt>
 <dd> &#8211; Dynamic DNS update utility (libknot equivalent of ISC nsupdate)</dd></dl>
+<h2>SYNOPSIS</h2>
 <p> <code>knsupdate</code> [<i>options</i>] [<i>filename</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The utility sends Dynamic DNS update message to DNS server. Update content is read from a file (if the parameter <i>filename</i> is given) or from standard input. The format of the update is described in <code>INPUT FORMAT</code> section.</p>
 <h2>OPTIONS</h2>
 <dl>

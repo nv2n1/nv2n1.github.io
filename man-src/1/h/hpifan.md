@@ -1,5 +1,4 @@
 ---
-
 title: "hpifan(1)"
 name: "hpifan"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-hpifan/"
 description: "hpifan – An openhpi sample application that shows \"Fan Control\" management instruments"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hpifan &#8211; An openhpi sample application that shows &quot;Fan Control&quot; management instruments </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 hpifan[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-h][-s auto | nn][-X] hpifan[--domain = nn][--host = host[:port]][--cfgfile = file][--help][--speed = auto | nn][--debug]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> hpifan walks the <font SIZE="-1">RPT </font>(Resource Present Table) for resouces that have &#8220;Fan Control&#8221; management instruments (<font SIZE="-1">SAHPI_CTRL_FAN_SPEED</font>). </p>
 <p> If no domain or host is selected, hpifan uses the default domain as specified in the openhpiclient.conf file.</p>
 <h2>OPTIONS</h2>

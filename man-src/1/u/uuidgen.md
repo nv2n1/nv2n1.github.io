@@ -1,5 +1,4 @@
 ---
-
 title: "uuidgen(1)"
 name: "uuidgen"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-uuidgen/"
 description: "uuidgen – create a new UUID value"
 ---
 
+<h2 class="name">NAME</h2>
+<p> uuidgen &#8211; create a new UUID value </p>
+<h2>SYNOPSIS</h2>
 <p> <code>uuidgen</code> [options]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>uuidgen</code> program creates (and prints) a new universally unique identifier (UUID) using the <code>libuuid</code>(3) library. The new UUID can reasonably be considered unique among all UUIDs created on the local system, and among UUIDs created on other systems in the past and in the future. </p>
 <p> There are three types of UUIDs which <code>uuidgen</code> can generate: time-based UUIDs, random-based UUIDs, and hash-based UUIDs. By default <code>uuidgen</code> will generate a random-based UUID if a high-quality random number generator is present. Otherwise, it will choose a time-based UUID. It is possible to force the generation of one of these first two UUID types by using the <code>&#8211;random</code> or <code>&#8211;time</code> options. </p>
 <p> The third type of UUID is generated with the <code>&#8211;md5</code> or <code>&#8211;sha1</code> options, followed by <code>&#8211;namespace</code> <i>namespace</i> and <code>&#8211;name</code> <i>name</i>. The <i>namespace</i> may either be a well-known UUID, or else an alias to one of the well-known UUIDs defined in RFC 4122, that is <code>@dns</code>, <code>@url</code>, <code>@oid</code>, or <code>@x500</code>. The <i>name</i> is an arbitrary string value. The generated UUID is the digest of the concatenation of the namespace UUID and the name value, hashed with the MD5 or SHA1 algorithms. It is, therefore, a predictable value which may be useful when UUIDs are being used as handles or nonces for more complex values or values which shouldn&#8217;t be disclosed directly. See the RFC for more information.</p>

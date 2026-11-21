@@ -1,5 +1,4 @@
 ---
-
 title: "broadwayd(1)"
 name: "broadwayd"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-broadwayd/"
 description: "broadwayd – Broadway display server"
 ---
 
+<h2 class="name">NAME</h2>
+<p> broadwayd &#8211; Broadway display server </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>broadwayd</code> [&#8211;port&nbsp;<i>PORT</i>] [&#8211;address&nbsp;<i>ADDRESS</i>] [&#8211;unixsocket&nbsp;<i>ADDRESS</i>] [<i>:DISPLAY</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>broadwayd</code></p>
 <dd>is a display server for the Broadway GDK backend. It allows multiple GTK+ applications to display their windows in the same web browser, by connecting to broadwayd. </dd>
 <p> When using broadwayd, specify the display number to use, prefixed with a colon, similar to X. The default display number is 0. </p>

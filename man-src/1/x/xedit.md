@@ -1,5 +1,4 @@
 ---
-
 title: "xedit(1)"
 name: "xedit"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-xedit/"
 description: "xedit – simple text editor for X"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xedit &#8211; simple text editor for X </p>
 <h2>SYNTAX</h2>
 <p> <code>xedit</code> [ <i>-toolkitoption</i> &#8230; ] [ <i>filename</i> &#8230; ]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Xedit</i> provides a window consisting of the following four areas:</p>
 <dl>
 <dt>Commands Section</dt>

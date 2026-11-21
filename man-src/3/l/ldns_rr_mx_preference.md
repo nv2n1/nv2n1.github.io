@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_rr_mx_preference(3)"
 name: "ldns_rr_mx_preference"
 section: "3"
@@ -10,11 +9,13 @@ description: "ldns_rr_mx_preference, ldns_rr_mx_exchange"
 
 <h2>NAME</h2>
 <p> ldns_rr_mx_preference, ldns_rr_mx_exchange </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_rdf* ldns_rr_mx_preference(const ldns_rr *r); </p>
 <p> ldns_rdf* ldns_rr_mx_exchange(const ldns_rr *r); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_rr_mx_preference</i>()</dt>
 <dd>returns the mx pref. of a LDNS_RR_TYPE_MX rr .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the preference or NULL on failure</dd></dl>

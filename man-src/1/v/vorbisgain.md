@@ -1,5 +1,4 @@
 ---
-
 title: "vorbisgain(1)"
 name: "vorbisgain"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-vorbisgain/"
 description: "vorbisgain – calculate the replay gain for Ogg Vorbis files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> vorbisgain &#8211; calculate the replay gain for Ogg Vorbis files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>vorbisgain</code> [ <code>-acCdfhqrsv</code> ] [ <code>-g</code> <i>album gain</i> ] <i>input_files </i>&#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> <code>vorbisgain</code> calculates the ReplayGain values for the named Ogg Vorbis input files and writes back the result in the form of tags (comments) in the file. These values can be used by a playback program to maintain a uniform sound level during play. (See <a rel="nofollow" href="http://www.replaygain.org/">http://www.replaygain.org/</a> for more information.) <code>vorbisgain</code> uses a default target level of 89 dB, rather than the 83 dB recommended by the ReplayGain standard, when calculating the gain to apply. (Some players include a pre-amplification setting with which the target level can be changed.) </p>
 <p> <code>vorbisgain</code> input files must be Ogg Vorbis I files with 1 or 2 channels and a sample rate of 48 kHz, 44.1 kHz, 32 kHz, 24 kHz, 22050 Hz, 16 kHz, 12 kHz, 11025 Hz or 8 kHz. If an input file contains multiple streams (i.e., it is chained), the streams must all have the same format, in terms of sampling frequency and number of channels. </p>
 <p> All streams in a chained file are processed, but the ReplayGain tags are only written to (or removed from) the first stream. </p>

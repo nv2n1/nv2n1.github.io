@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_session_set_data(3)"
 name: "gnutls_session_set_data"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_session_set_data – API function"
 
 <h2>NAME</h2>
 <p> gnutls_session_set_data &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_session_set_data(gnutls_session_t </code><i>session</i><code>, const void * </code><i>session_data</i><code>, size_t </code><i>session_data_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_session_set_data – API function"
 <dd> is a pointer to space to hold the session.</dd>
 <dt>size_t session_data_size</dt>
 <dd> is the session&#8217;s size</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Sets all session parameters, in order to resume a previously established session. The session data given must be the one returned by <code>gnutls_session_get_data()</code>. This function should be called before <code>gnutls_handshake()</code>. </p>
 <p> Keep in mind that session resuming is advisory. The server may choose not to resume the session, thus a full handshake will be performed.</p>
 <h2>RETURNS</h2>

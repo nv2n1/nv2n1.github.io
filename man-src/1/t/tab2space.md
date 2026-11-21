@@ -1,5 +1,4 @@
 ---
-
 title: "tab2space(1)"
 name: "tab2space"
 section: "1"
@@ -8,7 +7,9 @@ url: "/docs/linux/man/1-tab2space/"
 description: "tab2space [options] [infile [outfile]] …"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>tab2space</code> [<i>options</i>] [<i>infile</i> [<i>outfile</i>]] &#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> Utility to expand tabs and ensure consistent line endings options. </p>
 <p> When the <i>infile</i> is not specified or is set to <i>&#8211;</i> (dash) the input file is read from standard input. </p>
 <p> This man page is rewritten from <i>-help</i> output. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "gifdiff(1)"
 name: "gifdiff"
 section: "1"
@@ -10,7 +9,9 @@ description: "gifdiff – compares GIF images"
 
 <h2>NAME</h2>
 <p> gifdiff &#8211; compares GIF images</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gifdiff</code> [options] GIF-file-1 GIF-file-2</p>
+<h2>DESCRIPTION</h2>
 <p> <code>gifdiff</code> compares two GIF files and determines if they appear identical. Differences that don&#8217;t affect appearance (like colormap ordering or how much an animation is optimized) are not reported. </p>
 <p> <code>gifdiff</code> prints details of any differences it finds. If the GIFs are the same, it prints nothing. It exits with status 0 if there were no differences, 1 if there were some differences, and 2 if there was trouble.</p>
 <h2>OPTIONS</h2>

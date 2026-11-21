@@ -1,5 +1,4 @@
 ---
-
 title: "gunzip(1)"
 name: "gunzip"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-gunzip/"
 description: "gzip, gunzip, zcat – compress or expand files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gzip, gunzip, zcat &#8211; compress or expand files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>gzip</code> [<code> -acdfhklLnNrtvV19 </code>] [<code>-S suffix</code>] [ <i>name &#8230;</i> ]<br />
  <code>gunzip</code> [<code> -acfhklLnNrtvV </code>] [<code>-S suffix</code>] [ <i>name &#8230;</i> ]<br />
  <code>zcat</code> [<code> -fhLV </code>] [ <i>name &#8230;</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Gzip</i> reduces the size of the named files using Lempel-Ziv coding (LZ77). Whenever possible, each file is replaced by one with the extension <code>.gz</code>, while keeping the same ownership modes, access and modification times. (The default extension is <code>z</code> for MSDOS, OS/2 FAT, Windows NT FAT and Atari.) If no files are specified, or if a file name is &quot;-&quot;, the standard input is compressed to the standard output. <i>Gzip</i> will only attempt to compress regular files. In particular, it will ignore symbolic links. </p>
 <p> If the compressed file name is too long for its file system, <i>gzip</i> truncates it. <i>Gzip</i> attempts to truncate only the parts of the file name longer than 3 characters. (A part is delimited by dots.) If the name consists of small parts only, the longest parts are truncated. For example, if file names are limited to 14 characters, gzip.msdos.exe is compressed to gzi.msd.exe.gz. Names are not truncated on systems which do not have a limit on file name length. </p>
 <p> By default, <i>gzip</i> keeps the original file name and timestamp in the compressed file. These are used when decompressing the file with the <code>-N</code> option. This is useful when the compressed file name was truncated or when the timestamp was not preserved after a file transfer. </p>

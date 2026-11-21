@@ -1,5 +1,4 @@
 ---
-
 title: "guestfs-python(3)"
 name: "guestfs-python"
 section: "3"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/3-guestfs-python/"
 description: "guestfs-python – How to use libguestfs from Python"
 ---
 
+<h2 class="name">NAME</h2>
+<p> guestfs-python &#8211; How to use libguestfs from Python </p>
+<h2>SYNOPSIS</h2>
 <pre>
  import guestfs
  g = guestfs.GuestFS (python_return_dict=True)
  g.add_drive_opts (&quot;disk.img&quot;, format=&quot;raw&quot;, readonly=1)
  g.launch ()
 </pre>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents how to call libguestfs from the Python programming language. This page just documents the differences from the C <font SIZE="-1">API</font> and gives some examples. If you are not familiar with using libguestfs, you also need to read <i>guestfs</i>(3).</p>
 <h3>python_return_dict=True</h3>
 <p> All new code should construct the handle using: </p>

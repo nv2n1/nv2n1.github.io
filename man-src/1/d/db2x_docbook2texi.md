@@ -1,5 +1,4 @@
 ---
-
 title: "db2x_docbook2texi(1)"
 name: "db2x_docbook2texi"
 section: "1"
@@ -10,7 +9,9 @@ description: "docbook2texi – Convert DocBook to Texinfo"
 
 <h2>NAME</h2>
 <p> docbook2texi &#8211; Convert DocBook to Texinfo</p>
+<h2>SYNOPSIS</h2>
 <p> <code>docbook2texi</code> [<i>options</i>] <i>xml-document</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>docbook2texi</code> converts the given DocBook XML document into one or more Texinfo documents. By default, these Texinfo documents will be output to the current directory. </p>
 <p> The <code>docbook2texi</code> command is a wrapper script for a two-step conversion process. See the section &#8220;CONVERSION PROCESS&#8221; below for details.</p>
 <h2>OPTIONS</h2>

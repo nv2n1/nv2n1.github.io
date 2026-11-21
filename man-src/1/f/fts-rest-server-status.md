@@ -1,5 +1,4 @@
 ---
-
 title: "fts-rest-server-status(1)"
 name: "fts-rest-server-status"
 section: "1"
@@ -12,6 +11,7 @@ description: "fts-rest-server-status"
 <p> fts-rest-server-status</p>
 <h2>SYNOPIS</h2>
 <p> Usage: fts-rest-server-status [options]</p>
+<h2>DESCRIPTION</h2>
 <p> Use this command to check on the service status.</p>
 <h2>OPTIONS</h2>
 <dl>

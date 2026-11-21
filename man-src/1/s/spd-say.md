@@ -1,5 +1,4 @@
 ---
-
 title: "spd-say(1)"
 name: "spd-say"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-spd-say/"
 description: "spd-say – send text-to-speech output request to speech-dispatcher"
 ---
 
+<h2 class="name">NAME</h2>
+<p> spd-say &#8211; send text-to-speech output request to speech-dispatcher </p>
+<h2>SYNOPSIS</h2>
 <p> <code>spd-say</code> [<i>,options/</i>] <i>,&quot;some text&quot;/</i></p>
+<h2>DESCRIPTION</h2>
 <p> send text-to-speech output request to speech-dispatcher</p>
 <h2>OPTIONS</h2>
 <dl>

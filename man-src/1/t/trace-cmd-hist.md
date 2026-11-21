@@ -1,5 +1,4 @@
 ---
-
 title: "trace-cmd-hist(1)"
 name: "trace-cmd-hist"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-trace-cmd-hist/"
 description: "trace-cmd-hist – show histogram of events in trace.dat file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> trace-cmd-hist &#8211; show histogram of events in trace.dat file </p>
+<h2>SYNOPSIS</h2>
 <p> <code>trace-cmd hist</code> [<i>OPTIONS</i>][<i>input-file</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <a href="/docs/linux/man/1-trace-cmd/">trace-cmd</a>(1) hist displays a histogram form from the trace.dat file. Instead of showing the events as they were ordered, it creates a histogram that can be displayed per task or for all tasks where the most common events appear first. It uses the function tracer and call stacks that it finds to try to put together a call graph of the events.</p>
 <h2>OPTIONS</h2>
 <p> <code>-i</code> <i>input-file</i></p>

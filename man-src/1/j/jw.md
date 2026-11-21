@@ -1,5 +1,4 @@
 ---
-
 title: "jw(1)"
 name: "jw"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-jw/"
 description: "jw, docbook2dvi, docbook2html, docbook2man, docbook2pdf, docbook2ps, docbook2rtf, docbook2tex, docbook2texi, docbook2txt – (Jade Wrapper) converts SGML files to other formats"
 ---
 
+<h2 class="name">NAME</h2>
+<p> jw, docbook2dvi, docbook2html, docbook2man, docbook2pdf, docbook2ps, docbook2rtf, docbook2tex, docbook2texi, docbook2txt &#8211; (Jade Wrapper) converts SGML files to other formats </p>
+<h2>SYNOPSIS</h2>
 <p> <code>jw</code> [ <code>-f </code><i>frontend</i> | <code>&#8211;frontend </code><i>frontend</i> ]<br />
 &nbsp;<wbr>[&nbsp;<wbr><code>-b </code><i>backend</i> | <code>&#8211;backend </code><i>backend</i> ]<br />
 &nbsp;<wbr>[&nbsp;<wbr><code>-c&nbsp;<wbr></code><i>file</i>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;cat&nbsp;<wbr></code><i>file</i>&nbsp;<wbr>]<br />
@@ -32,6 +34,7 @@ description: "jw, docbook2dvi, docbook2html, docbook2man, docbook2pdf, docbook2p
 <p> <code>docbook2tex</code> <i>SGML-file</i> </p>
 <p> <code>docbook2texi</code> <i>SGML-file</i> </p>
 <p> <code>docbook2txt</code> <i>SGML-file</i> </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>jw</code> shell script allows to convert a DocBook file (or some other SGML-based format) to other formats (including HTML, RTF, PS and PDF) with an easy-to-understand syntax. It hides most of Jade&#8217;s or OpenJade complexity and adds comfortable features. </p>
 <p> Other scripts like <code>docbook2html</code>, <code>docbook2rtf</code> or <code>docbook2ps</code> provide different ways of calling <code>jw</code> that might be easier to remember. </p>
 <p> For the moment, jw does not handle XML, but only SGML. </p>

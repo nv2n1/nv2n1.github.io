@@ -1,5 +1,4 @@
 ---
-
 title: "pnmcrop(1)"
 name: "pnmcrop"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pnmcrop/"
 description: "pnmcrop – crop a portable anymap"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pnmcrop &#8211; crop a portable anymap </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pnmcrop</code> [<code>-white</code>|<code>-black</code>|<code>-sides</code>] [<code>-left</code>] [<code>-right</code>] [<code>-top</code>] [<code>-bottom</code>] [<i>pnmfile</i>] </p>
 <p> All options may be abbreviated to their shortest unique prefix or specified with double hyphens. </p>
+<h2>DESCRIPTION</h2>
 <p> Reads a PBM, PGM, or PPM image as input. Removes borders that are the background color, and produces the same type of image as output. </p>
 <p> If you don&#8217;t specify otherwise, <code>pnmcrop</code> assumes the background color is whatever color the top left and right corners of the image are and if they are different colors, something midway between them. You can specify that the background is white or black with the <code>-white</code> and <code>-black</code> options or make <code>pnmcrop</code> base its guess on all four corners instead of just two with <code>-sides</code>. </p>
 <p> By default, <code>pnmcrop</code> chops off any stripe of background color it finds, on all four sides. You can tell <code>pnmcrop</code> to remove only specific borders with the <code>-left</code>, <code>-right</code>, <code>-top</code>, and <code>-bottom</code> options. </p>

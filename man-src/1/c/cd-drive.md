@@ -1,5 +1,4 @@
 ---
-
 title: "cd-drive(1)"
 name: "cd-drive"
 section: "1"
@@ -10,7 +9,9 @@ description: "cd-drive – show CD-ROM drive characteristics"
 
 <h2>NAME</h2>
 <p> cd-drive &#8211; show CD-ROM drive characteristics</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cd-drive</code> [<i>OPTION</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt><code>-d</code>, <code>&#8211;debug</code>=<i>INT</i></dt>
 <dd> Set debugging to LEVEL</dd>

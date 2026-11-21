@@ -1,5 +1,4 @@
 ---
-
 title: "gclose(1)"
 name: "gclose"
 section: "1"
@@ -10,7 +9,9 @@ description: "gclose – This tool terminates an application"
 
 <h2>NAME</h2>
 <p> gclose &#8211; This tool terminates an application</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gclose &lt;application&gt;</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>gclose</code> terminates an application from the command line</p>
 <h2>OPTIONS</h2>
 <h2>BUGS</h2>

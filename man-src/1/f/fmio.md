@@ -1,5 +1,4 @@
 ---
-
 title: "fmio(1)"
 name: "fmio"
 section: "1"
@@ -10,10 +9,12 @@ description: "fmio – small utility to manipulate fm radio card"
 
 <h2>NAME</h2>
 <p> <code>fmio</code> &#8211; small utility to manipulate fm radio card</p>
+<h2>SYNOPSIS</h2>
 <p> <code>fmio</code> [-<code>d </code><i>driver</i> ] [-<code>f </code><i>freq</i> ] [-<code>i</code> ] [-<code>m</code> ] [-<code>s</code> ] [-<code>v </code><i>vol</i> ] [-<code>x </code><i>vol</i> ] [-<code>X </code><i>vol</i> ]<br />
 <code>fmio</code> [-<code>d </code><i>driver</i> ] &#8211;<code>S</code> [-<code>c </code><i>count</i> ] [-<code>l </code><i>begin</i> ] [-<code>h </code><i>end</i> ]<br />
 <code>fmio</code> [-<code>d </code><i>driver</i> ] &#8211;<code>W </code><i>frequency</i><br />
 <code>fmio</code> &#8211;<code>D</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>fmio</code> is a small program to set and change fm radio card parameters. </p>
 <p> It sets frequency, volume of a card, reports signal strength on the working frequency and can set a radio card output to mono provided that the card driver supports it. </p>
 <p> The <code>fmio</code> has two additional modes &#8211; scanning and detection. In the scan mode <code>fmio</code> scans frequency range with step 10 kHz and outputs measured signal strength. Frequency range and number of probes for each frequency are configurable. In the detection mode <code>fmio</code> detects any supported radio card. Use this mode if you are not sure which card you have or do not know which port your card uses. </p>

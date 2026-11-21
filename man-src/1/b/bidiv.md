@@ -1,5 +1,4 @@
 ---
-
 title: "bidiv(1)"
 name: "bidiv"
 section: "1"
@@ -10,7 +9,9 @@ description: "bidiv – bidirectional text filter"
 
 <h2>NAME</h2>
 <p> bidiv &#8211; bidirectional text filter</p>
+<h2>SYNOPSIS</h2>
 <p> <code>bidiv</code> [ <code>-plj</code> ] [ <code>-w&nbsp;<wbr></code><i>width</i> ] <code>[</code><i>file&#8230;</i><code>]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>bidiv</code> is a filter, or viewer, for birectional text stored in logical-order. It converts such text into visual-order text which can be viewed on terminals that do not handle bidirectionality. The output visual-order text is formatted assuming a fixed number of characters per line (automatically determined or given with the <code>-w</code> parameter). </p>
 <p> <code>bidiv</code> is oriented towards Hebrew, and assumes the input to be a Hebrew and ASCII text encoded in one of the two common logical-order encodings: ISO-8859-8-i or UTF-8. Actually, bidiv guesses the encoding of its input at a character by character basis, so the input might be a mix of ISO-8859-8-i and Hebrew UTF-8. <code>bidiv</code>&#8216;s output is visual-order text, in either the ISO-8859-8 or UTF-8 encoding, depending on your locale setting. </p>
 <p> <code>bidiv</code> reads each <i>file</i> in sequence, converts it into visual order and writes it on the standard output. Thus: </p>

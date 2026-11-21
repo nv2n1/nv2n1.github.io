@@ -1,5 +1,4 @@
 ---
-
 title: "libssh2_channel_process_startup(3)"
 name: "libssh2_channel_process_startup"
 section: "3"
@@ -10,6 +9,7 @@ description: "libssh2_channel_process_startup – request a shell on a channel"
 
 <h2>NAME</h2>
 <p> libssh2_channel_process_startup &#8211; request a shell on a channel</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;libssh2.h&gt;
 int libssh2_channel_process_startup(LIBSSH2_CHANNEL *channel,
@@ -18,6 +18,7 @@ int libssh2_channel_process_startup(LIBSSH2_CHANNEL *channel,
                                     const char *message,
                                     unsigned int message_len);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <i>channel</i> &#8211; Active session channel instance. </p>
 <p> <i>request</i> &#8211; Type of process to startup. The SSH2 protocol currently defines shell, exec, and subsystem as standard process services. </p>
 <p> <i>request_len</i> &#8211; Length of request parameter. </p>

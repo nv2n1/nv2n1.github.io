@@ -1,5 +1,4 @@
 ---
-
 title: "spacecmd(1)"
 name: "spacecmd"
 section: "1"
@@ -10,6 +9,7 @@ description: "spacecmd – a command-line interface to Spacewalk and Satellite s
 
 <h2>NAME</h2>
 <p> spacecmd &#8211; a command-line interface to Spacewalk and Satellite servers</p>
+<h2>SYNOPSIS</h2>
 <p> <code>spacecmd</code> [<i>options</i>] [<i>command</i>]</p>
 <h2>OVERVIEW</h2>
 <pre>

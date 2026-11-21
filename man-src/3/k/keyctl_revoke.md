@@ -1,5 +1,4 @@
 ---
-
 title: "keyctl_revoke(3)"
 name: "keyctl_revoke"
 section: "3"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/3-keyctl_revoke/"
 description: "keyctl_revoke – Revoke a key"
 ---
 
+<h2 class="name">NAME</h2>
+<p> keyctl_revoke &#8211; Revoke a key </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;keyutils.h&gt;
 long keyctl_revoke(key_serial_t key);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>keyctl_revoke</code>() marks a key as being revoked. </p>
 <p> After this operation has been performed on a key, attempts to access it will meet with error <code>EKEYREVOKED</code>. </p>
 <p> The caller must have <code>write</code> permission on a key to be able revoke it.</p>

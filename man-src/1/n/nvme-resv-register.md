@@ -1,5 +1,4 @@
 ---
-
 title: "nvme-resv-register(1)"
 name: "nvme-resv-register"
 section: "1"
@@ -7,13 +6,24 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-resv-register/"
 ---
 
-nvme-resv-register - Register an nvme reservation 
+<h2 class="name">NAME</h2>
+ 
 
-<pre>
+ nvme-resv-register - Register an nvme reservation 
+
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <pre>
 <i>nvme resv-register</i> &lt;device&gt;
 </pre>
 
-The Reservation Register command is used to register, unregister, or replace a reservation key.
+<h2>DESCRIPTION</h2>
+
+ 
+
+ The Reservation Register command is used to register, unregister, or replace a reservation key.
 
 <h2>OPTIONS</h2>
 

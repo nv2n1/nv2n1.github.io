@@ -1,5 +1,4 @@
 ---
-
 title: "cgi_cs_init(3)"
 name: "cgi_cs_init"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cgi_cs_init/"
 description: "cgi_cs_init – initialize CS parser with the CGI defaults"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cgi_cs_init &#8211; initialize CS parser with the CGI defaults </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cgi/cgi.h&gt;
 </code></pre>
@@ -17,6 +19,7 @@ NEOERR *cgi_cs_init(CGI *cgi, CSPARSE **cs);
 <h2>ARGUMENTS</h2>
 <p> cgi &#8211; a pointer a CGI struct allocated with cgi_init<br />
  cs &#8211; a pointer to a CS struct pointer </p>
+<h2>DESCRIPTION</h2>
 <p> cgi_cs_init initializes a CS parser with the CGI HDF context, and registers the standard CGI filters </p>
 <h2>RETURN VALUE</h2>
 <p> cs &#8211; the allocated/initialized CS struct </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "isless(3)"
 name: "isless"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-isless/"
 description: "isgreater, isgreaterequal, isless, islessequal, islessgreater, isunordered – floating-point relational tests without exception for NaN"
 ---
 
+<h2 class="name">NAME</h2>
+<p> isgreater, isgreaterequal, isless, islessequal, islessgreater, isunordered &#8211; floating-point relational tests without exception for NaN </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;
 int isgreater(x, y);
@@ -23,6 +25,7 @@ int isunordered(x, y);
 <dl>
 <dt>
 </dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The normal relational operations (like <code>&lt;</code>, &quot;less than&quot;) fail if one of the operands is NaN. This will cause an exception. To avoid this, C99 defines the macros listed below. </p>
 <p> These macros are guaranteed to evaluate their arguments only once. The arguments must be of real floating-point type (note: do not pass integer values as arguments to these macros, since the arguments will <i>not</i> be promoted to real-floating types).</p>
 <dl>

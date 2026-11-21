@@ -1,5 +1,4 @@
 ---
-
 title: "cunbdb5(3)"
 name: "cunbdb5"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cunbdb5/"
 description: "cunbdb5.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cunbdb5.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cunbdb5</code> (M1, M2, N, X1, INCX1, X2, INCX2, Q1, LDQ1, Q2, LDQ2, WORK, LWORK, INFO)<br />
  <i></i><code>CUNBDB5</code></p>

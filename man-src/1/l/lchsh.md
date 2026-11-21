@@ -1,5 +1,4 @@
 ---
-
 title: "lchsh(1)"
 name: "lchsh"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-lchsh/"
 description: "lchsh – Change login shell"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lchsh &#8211; Change login shell</p>
+<h2>SYNOPSIS</h2>
 <p> lchsh [<i>OPTION</i>]&#8230; [<i>user</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> Displays and allows changing login shell of <i>user</i>. </p>
 <p> If the <i>user</i> argument is not provided, username of the invoking user is used; the <i>user</i> argument is ignored if <code>lchsh</code> is run set-uid to a different user. </p>
 <p> Entering an empty string (by pressing Enter) at the &quot;New Shell&quot; prompt is interpreted as accepting the current value. </p>

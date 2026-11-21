@@ -1,5 +1,4 @@
 ---
-
 title: "convcard(1)"
 name: "convcard"
 section: "1"
@@ -13,6 +12,7 @@ description: "convcard – converts a vCard version 2.1 in a vCard version 3.0 a
 <h2>SYNTAX</h2>
 <p> convcard <i>option</i> [<i>arguments</i>] [<i>option</i>] <i>FileName</i><br />
  convcard <i>FileName</i></p>
+<h2>DESCRIPTION</h2>
 <p> It converts a vCard version 2.1 in a vCard version 3.0 and vice versa.<br />
  By default the source file format is autodetected, and is converted to the other format.<br />
  <i>FileName</i> is the vCard to convert. Output will go to stdout.</p>

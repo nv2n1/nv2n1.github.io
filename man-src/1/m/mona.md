@@ -1,5 +1,4 @@
 ---
-
 title: "mona(1)"
 name: "mona"
 section: "1"
@@ -10,7 +9,9 @@ description: "mona – a decision procedure for the logics WS1S and WS2S"
 
 <h2>NAME</h2>
 <p> mona &#8211; a decision procedure for the logics WS1S and WS2S</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mona </code> [ <i>options</i> ] <i>mona-file</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>MONA </code> is a tool that translates formulas in the logics WS1S or WS2S into finite-state automata represented by BDDs. The formulas may express search patterns, temporal properties of reactive systems, parse tree constraints, etc. MONA also analyses the automaton resulting from the compilation, and determines whether the formula is valid and, if the formula is not valid, generates a counter-example. </p>
 <p> The MONA project is a research project at the BRICS Research Center at University of Aarhus, Denmark. </p>
 <p> Full documentation, GPL source code, and related research papers are available from the MONA project home page at <code><a rel="nofollow" href="http://www.brics.dk/mona">http://www.brics.dk/mona</a></code></p>

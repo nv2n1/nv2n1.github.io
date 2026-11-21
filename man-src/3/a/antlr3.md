@@ -1,5 +1,4 @@
 ---
-
 title: "antlr3(3)"
 name: "antlr3"
 section: "3"
@@ -7,9 +6,17 @@ letter: "a"
 url: "/docs/linux/man/3-antlr3/"
 ---
 
-include/antlr3.h - 
+<h2 class="name">NAME</h2>
+ 
 
-#include &lt;<a HREF="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt; 
+ include/antlr3.h - 
+
+<h2>SYNOPSIS</h2>
+
+ 
+ 
+
+ #include &lt;<a HREF="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt; 
  #include &lt;<a HREF="file:/usr/include/antlr3errors.h">antlr3errors.h</a>&gt; 
  #include &lt;<a HREF="file:/usr/include/antlr3exception.h">antlr3exception.h</a>&gt; 
  #include &lt;<a HREF="file:/usr/include/antlr3encodings.h">antlr3encodings.h</a>&gt; 

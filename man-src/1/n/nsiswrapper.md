@@ -1,5 +1,4 @@
 ---
-
 title: "nsiswrapper(1)"
 name: "nsiswrapper"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-nsiswrapper/"
 description: "nsiswrapper – Helper program for making NSIS Windows installers"
 ---
 
+<h2 class="name">NAME</h2>
+<p> nsiswrapper &#8211; Helper program for making NSIS Windows installers </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 nsiswrapper[options][roots...] nsiswrapper myprogram.exe anotherprog.exe docs / &gt; script.nsis
                                                                                           nsiswrapper-- run myprogram.exe anotherprog.exe docs /
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> nsiswrapper is a helper program for making it easier to create Windows installers in a cross-compiler environment. It still requires <font SIZE="-1">NSIS</font> (a Windows installer generator) but cuts out the tedium of writing the <font SIZE="-1">NSIS</font> command script, and can even invoke <font SIZE="-1">NSIS</font> automatically to generate a final Windows executable. </p>
 <p> The general way to use it is to list out some files that you want packaged. For example: </p>
 <pre>

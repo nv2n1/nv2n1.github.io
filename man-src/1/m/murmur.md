@@ -1,5 +1,4 @@
 ---
-
 title: "murmur(1)"
 name: "murmur"
 section: "1"
@@ -10,7 +9,9 @@ description: "Murmur – PyGTK2 client for museek"
 
 <h2>NAME</h2>
 <p> <code>Murmur</code> &#8211; PyGTK2 client for museek</p>
+<h2>SYNOPSIS</h2>
 <p> <code>murmur</code> [-c &#8211;config &lt;<i>filename</i>&gt;] [-l &#8211;log &lt;<i>directory</i>&gt;] [-v] [&#8211;version] [-d] [-h] [&#8211;help]</p>
+<h2>DESCRIPTION</h2>
 <p> Murmur provides a GTK2 interface for the Museek Daemon for chatting, transferring files, managing users, viewing user info and browsing shares on the Soulseek P2P network and Soulfind Servers. </p>
 <p> You will need a configured and running <i><a href="/docs/linux/man/1-museekd/">museekd</a></i>(1).</p>
 <h2>OPTIONS</h2>

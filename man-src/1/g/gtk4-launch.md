@@ -1,5 +1,4 @@
 ---
-
 title: "gtk4-launch(1)"
 name: "gtk4-launch"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-gtk4-launch/"
 description: "gtk4-launch – Launch an application"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gtk4-launch &#8211; Launch an application </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 gtk4 - launch[OPTIONS...]&lt;APPLICATION&gt;[URI...]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>gtk4-launch</code> launches an application using the given name. The application is started with proper startup notification on a default display, unless specified otherwise. </p>
 <p> <code>gtk4-launch</code> takes at least one argument, the name of the application to launch. The name should match application desktop file name, as residing in the applications subdirectories of the XDG data directories, with or without the <code>.desktop</code> suffix. </p>
 <p> If called with more than one argument, the rest of them besides the application name are considered URI locations and are passed as arguments to the launched application.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "perlos2(1)"
 name: "perlos2"
 section: "1"
@@ -7,9 +6,14 @@ letter: "p"
 url: "/docs/linux/man/1-perlos2/"
 ---
 
-perlos2 - Perl under OS/2, DOS, Win0.3*, Win0.95 and WinNT. 
+<h2 class="name">NAME</h2>
+ 
 
-One can read this document in the following formats: 
+ perlos2 - Perl under OS/2, DOS, Win0.3*, Win0.95 and WinNT. 
+
+<h2>SYNOPSIS</h2>
+
+ One can read this document in the following formats: 
 
  <pre>
         man perlos2
@@ -31,6 +35,8 @@ One can read this document in the following formats:
  in <i>?:\JUST_ADD\view.exe</i>. This gives one an access to <font SIZE="-1">EMX</font>'s <i>.INF</i> docs as well (text form is available in <i>/emx/doc</i> in <font SIZE="-1">EMX</font>'s distribution). There is also a different viewer named xview. 
 
  Note that if you have <i>lynx.exe</i> or <i>netscape.exe</i> installed, you can follow <font SIZE="-1">WWW</font> links from this document in <i>.INF</i> format. If you have <font SIZE="-1">EMX</font> docs installed correctly, you can follow library links (you need to have <tt>&quot;view emxbook&quot;</tt> working by setting <tt>&quot;EMXBOOK&quot;</tt> environment variable as it is described in <font SIZE="-1">EMX</font> docs).
+
+<h2>DESCRIPTION</h2>
 
 <h3>Target</h3>
 

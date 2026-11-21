@@ -1,5 +1,4 @@
 ---
-
 title: "rst-buildhtml(1)"
 name: "rst-buildhtml"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-rst-buildhtml/"
 description: "rst-buildhtml – convert many reST documents to HTML"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rst-buildhtml &#8211; convert many reST documents to HTML </p>
+<h2>SYNOPSIS</h2>
 <p> rst-buildhtml [options] [&lt;directory&gt; &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> Generates .html from all the reStructuredText .txt files (including PEPs) in each &lt;directory&gt; (default is the current directory).</p>
 <h2>OPTIONS</h2>
 <h3>General Docutils Options</h3>

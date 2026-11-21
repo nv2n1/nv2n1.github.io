@@ -1,5 +1,4 @@
 ---
-
 title: "dpotri(3)"
 name: "dpotri"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dpotri/"
 description: "dpotri.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dpotri.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dpotri</code> (UPLO, N, A, LDA, INFO)<br />
  <i></i><code>DPOTRI</code></p>

@@ -1,5 +1,4 @@
 ---
-
 title: "pamtotga(1)"
 name: "pamtotga"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pamtotga/"
 description: "pamtotga – convert a Netpbm image to a TrueVision Targa file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pamtotga &#8211; convert a Netpbm image to a TrueVision Targa file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pamtotga</code> [<code>-mono|-cmap|-rgb</code>] [<code>-norle</code>] [<code>-name=</code><i>name</i> [<i>pamfile</i>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one to designate an option. You may use either white space or equals signs between an option name and its value. </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamtotga</code> reads a PBM, PGM, PPM, or PAM image as input and produces a TrueVision Targa file as output. The PAM image may be either a BLACKANDWHITE, GRAYSCALE, RGB, or RGB_ALPHA image. </p>
 <p> To create a TGA image with transparency (i.e. with an alpha mask), use RGB_ALPHA PAM input. Some Netpbm programs that generate images with alpha masks generate them in that format. For another way to create the proper input stream, see <code><a href="/docs/linux/man/1-pamstack/">pamstack</a></code>(1) </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "pkcs15-tool(1)"
 name: "pkcs15-tool"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pkcs15-tool/"
 description: "pkcs15-tool – utility for manipulating PKCS #15 data structures on smart cards and similar security tokens"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pkcs15-tool &#8211; utility for manipulating PKCS #15 data structures on smart cards and similar security tokens </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pkcs15-tool</code> [OPTIONS]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>pkcs15-tool</code> utility is used to manipulate the PKCS #15 data structures on smart cards and similar security tokens. Users can list and read PINs, keys and certificates stored on the token. User PIN authentication is performed for those operations that require it.</p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;learn-card, -L</code></p>

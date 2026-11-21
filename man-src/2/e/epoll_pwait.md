@@ -1,5 +1,4 @@
 ---
-
 title: "epoll_pwait(2)"
 name: "epoll_pwait"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-epoll_pwait/"
 description: "epoll_wait, epoll_pwait – wait for an I/O event on an epoll file descriptor"
 ---
 
+<h2 class="name">NAME</h2>
+<p> epoll_wait, epoll_pwait &#8211; wait for an I/O event on an epoll file descriptor </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/epoll.h&gt;
 int epoll_wait(int epfd, struct epoll_event *events,
@@ -16,6 +18,7 @@ int epoll_pwait(int epfd, struct epoll_event *events,
                 int maxevents, int timeout,
                 const sigset_t *sigmask);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>epoll_wait</code>() system call waits for events on the <code><a href="/docs/linux/man/7-epoll/">epoll</a></code>(7) instance referred to by the file descriptor <i>epfd</i>. The buffer pointed to by <i>events</i> is used to return information from the ready list about file descriptors in the interest list that have some events available. Up to <i>maxevents</i> are returned by <code>epoll_wait</code>(). The <i>maxevents</i> argument must be greater than zero. </p>
 <p> The <i>timeout</i> argument specifies the number of milliseconds that <code>epoll_wait</code>() will block. Time is measured against the <code>CLOCK_MONOTONIC</code> clock. </p>
 <p> A call to <code>epoll_wait</code>() will block until either:</p>

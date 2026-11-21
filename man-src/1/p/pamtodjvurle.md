@@ -1,5 +1,4 @@
 ---
-
 title: "pamtodjvurle(1)"
 name: "pamtodjvurle"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-pamtodjvurle/"
 description: "pamtodjvurle – convert a Netpbm image to DjVu Color RLE format"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pamtodjvurle &#8211; convert a Netpbm image to DjVu Color RLE format</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pamtodjvurle</code> </p>
 <p> [<code>-transparent</code> <i>color</i>] [<i>netpbmfile</i> [<i>rlefile</i>]] </p>
 <p> Minimum unique abbreviation of options in acceptable. </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamtodjvurle</code> reads a Netpbm image (PNM or PAM equivalent of PNM) as input and produces DjVu Color RLE format as output. </p>
 <h2>OPTIONS</h2>

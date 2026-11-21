@@ -1,5 +1,4 @@
 ---
-
 title: "dash(1)"
 name: "dash"
 section: "1"
@@ -7,11 +6,13 @@ letter: "d"
 url: "/docs/linux/man/1-dash/"
 description: "dash – command interpreter (shell)"
 ---
-
+<h2 class="name">NAME</h2>
 <p> <code>dash</code> - command interpreter (shell) </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dash</code> [-<code>aCefnuvxIimqVEbp</code> ] [<code>+aCefnuvxIimqVEbp</code> ] [-<code>o </code><i>option_name</i> ] [<code>+o </code><i>option_name</i> ] [<i>command_file </i>[<i>argument ... </i>] ] <br />
 <code>dash</code> -<code>c</code> [-<code>aCefnuvxIimqVEbp</code> ] [<code>+aCefnuvxIimqVEbp</code> ] [-<code>o </code><i>option_name</i> ] [<code>+o </code><i>option_name</i> ] <i>command_string</i> [<i>command_name </i>[<i>argument ... </i>] ] <br />
 <code>dash</code> -<code>s</code> [-<code>aCefnuvxIimqVEbp</code> ] [<code>+aCefnuvxIimqVEbp</code> ] [-<code>o </code><i>option_name</i> ] [<code>+o </code><i>option_name</i> ] [<i>argument ...</i> ]  </p>
+<h2>DESCRIPTION</h2>
 <p> <code>dash</code> is the standard command interpreter for the system. The current version of <code>dash</code> is in the process of being changed to conform with the <code>POSIX</code> 1003.2 and 1003.2a specifications for the shell. This version has many features which make it appear similar in some respects to the Korn shell, but it is not a Korn shell clone (see ksh(1)). Only features designated by <code>POSIX</code> plus a few Berkeley extensions, are being incorporated into this shell. This man page is not intended to be a tutorial or a complete specification of the shell.  </p>
 <h3>Overview</h3>
 <p> The shell is a command that reads lines from either a file or the terminal, interprets them, and generally executes other commands. It is the program that is running when a user logs into the system (although a user can select a different shell with the <a href="/docs/linux/man/1-chsh/">chsh</a>(1) command). The shell implements a language that has flow control constructs, a macro facility that provides a variety of features in addition to data storage, along with built in history and line editing capabilities. It incorporates many features to aid interactive use and has the advantage that the interpretative language is common to both interactive and non-interactive use (shell scripts). That is, commands can be typed directly to the running shell or can be put into a file and the file can be executed directly by the shell.  </p>

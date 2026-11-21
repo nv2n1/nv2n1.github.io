@@ -1,5 +1,4 @@
 ---
-
 title: "fusioninventory-inventory(1)"
 name: "fusioninventory-inventory"
 section: "1"
@@ -7,9 +6,14 @@ letter: "f"
 url: "/docs/linux/man/1-fusioninventory-inventory/"
 ---
 
-fusioninventory-inventory - Standalone inventory 
+<h2 class="name">NAME</h2>
+ 
 
-fusioninventory-inventory [options] 
+ fusioninventory-inventory - Standalone inventory 
+
+<h2>SYNOPSIS</h2>
+
+ fusioninventory-inventory [options] 
 
  <pre><code>
   Options:
@@ -27,4 +31,6 @@ fusioninventory-inventory [options]
     --version                      print the task version and exit
 </code></pre>
 
-<i>fusioninventory-inventory</i> allows to run an inventory task without a <font SIZE="-1">GLPI</font> server.
+<h2>DESCRIPTION</h2>
+
+ <i>fusioninventory-inventory</i> allows to run an inventory task without a <font SIZE="-1">GLPI</font> server.

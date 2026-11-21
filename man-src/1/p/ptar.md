@@ -1,5 +1,4 @@
 ---
-
 title: "ptar(1)"
 name: "ptar"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ptar/"
 description: "ptar – a tar-like program written in perl"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ptar &#8211; a tar-like program written in perl </p>
+<h2>DESCRIPTION</h2>
 <p> ptar is a small, tar look-alike program that uses the perl module Archive::Tar to extract, create and list tar archives.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 ptar - c[-v][-z][-C][-f ARCHIVE_FILE | -] FILE FILE... ptar - c[-v][-z][-C][-T index | -][-f ARCHIVE_FILE | -] ptar - x[-v][-z][-f ARCHIVE_FILE | -] ptar - t[-z][-f ARCHIVE_FILE | -] ptar - h
 </code></pre>

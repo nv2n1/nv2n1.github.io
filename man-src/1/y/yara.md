@@ -1,5 +1,4 @@
 ---
-
 title: "yara(1)"
 name: "yara"
 section: "1"
@@ -10,7 +9,9 @@ description: "yara – find files matching patterns and rules written in a speci
 
 <h2>NAME</h2>
 <p> yara &#8211; find files matching patterns and rules written in a special-purpose language.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>yara</code> [OPTION]&#8230; RULES_FILE FILE | DIR | PID</p>
+<h2>DESCRIPTION</h2>
 <p> yara scans the given FILE, all files contained in directory DIR, or the process indentified by PID looking for matches of patterns and rules provided in a special purpose-language. The rules are read from RULES_FILE. </p>
 <p> The options to <i><a href="/docs/linux/man/1-yara/">yara</a></i>(1) are:</p>
 <dl>

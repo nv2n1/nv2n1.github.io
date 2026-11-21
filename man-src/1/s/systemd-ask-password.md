@@ -1,5 +1,4 @@
 ---
-
 title: "systemd-ask-password(1)"
 name: "systemd-ask-password"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-systemd-ask-password/"
 description: "systemd-ask-password – Query the user for a system password"
 ---
 
+<h2 class="name">NAME</h2>
+<p> systemd-ask-password &#8211; Query the user for a system password </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>systemd-ask-password </code><code>[OPTIONS&#8230;]</code><code>[MESSAGE]</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>systemd-ask-password</code></p>
 <dd>may be used to query a system password or passphrase from the user, using a question message specified on the command line. When run from a TTY it will query a password on the TTY and print it to standard output. When run with no TTY or with <code>&#8211;no-tty</code> it will use the system-wide query mechanism, which allows active users to respond via several agents, listed below. </dd>
 <p> The purpose of this tool is to query system-wide passwords &#8212; that is passwords not attached to a specific user account. Examples include: unlocking encrypted hard disks when they are plugged in or at boot, entering an SSL certificate passphrase for web and VPN servers. </p>

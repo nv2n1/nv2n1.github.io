@@ -1,5 +1,4 @@
 ---
-
 title: "cinder(1)"
 name: "cinder"
 section: "1"
@@ -10,9 +9,11 @@ description: "cinder – Client for OpenStack Block Storage API"
 
 <h2>NAME</h2>
 <p> cinder &#8211; Client for OpenStack Block Storage API</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cinder</code> [options] &lt;command&gt; [command-options] </p>
 <p> <code>cinder help</code> </p>
 <p> <code>cinder help</code> &lt;command&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>cinder</code> command line utility interacts with OpenStack Block Storage Service (Cinder). </p>
 <p> In order to use the CLI, you must provide your OpenStack username, password, project (historically called tenant), and auth endpoint. You can use configuration options <i>&#8211;os-username</i>, <i>&#8211;os-password</i>, <i>&#8211;os-tenant-name</i> or <i>&#8211;os-tenant-id</i>, and <i>&#8211;os-auth-url</i> or set corresponding environment variables: </p>
 <pre>

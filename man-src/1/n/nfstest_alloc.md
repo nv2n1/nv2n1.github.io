@@ -1,5 +1,4 @@
 ---
-
 title: "nfstest_alloc(1)"
 name: "nfstest_alloc"
 section: "1"
@@ -10,7 +9,9 @@ description: "nfstest_alloc – Space reservation tests"
 
 <h2>NAME</h2>
 <p> nfstest_alloc &#8211; Space reservation tests</p>
+<h2>SYNOPSIS</h2>
 <p> nfstest_alloc &#8211;server &lt;server&gt; [options]</p>
+<h2>DESCRIPTION</h2>
 <p> Verify correct functionality of space reservations so applications are able to reserve or unreserve space for a file. The system call fallocate is used to manipulate the allocated disk space for a file, either to preallocate or deallocate it. For filesystems which support the fallocate system call, preallocation is done quickly by allocating blocks and marking them as uninitialized, requiring no I/O to the data blocks. This is much faster than creating a file and filling it with zeros. </p>
 <p> Basic allocate tests verify the disk space is actually preallocated or reserved for the given range by filling up the device after the allocation and make sure data can be written to the allocated range without any problems. Also, any data written outside the allocated range will fail with NFS4ERR_NOSPC when there is no more space left on the device. On the other hand, deallocating space will give the disk space back so it can be used by either the same file on regions not already preallocated or by different files without the risk of getting a no space error. </p>
 <p> Performance testing using ALLOCATE versus initializing a file to all zeros is also included. The performance comparison is done with different file sizes. </p>

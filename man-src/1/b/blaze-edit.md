@@ -1,5 +1,4 @@
 ---
-
 title: "blaze-edit(1)"
 name: "blaze-edit"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-blaze-edit/"
 description: "blaze-edit – edit a blog post or a page in the BlazeBlogger repository"
 ---
 
+<h2 class="name">NAME</h2>
+<p> blaze-edit &#8211; edit a blog post or a page in the BlazeBlogger repository </p>
+<h2>SYNOPSIS</h2>
 <p> <code>blaze-edit</code> [<code>-fpqCPV</code>] [<code>-b</code> <i>directory</i>] <i>id</i> </p>
 <p> <code>blaze-edit</code> <code>-h</code> | <code>-v</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>blaze-edit</code> enables you to edit a blog post or a page in your favourite text editor. </p>
 <p> Note that inside your posts and pages, you can use several special placeholders to be replaced by appropriate data later, when the static content is being generated; the case is not significant, and supported placeholders are as follows:</p>
 <dl>

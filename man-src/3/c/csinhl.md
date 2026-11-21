@@ -1,5 +1,4 @@
 ---
-
 title: "csinhl(3)"
 name: "csinhl"
 section: "3"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/3-csinhl/"
 description: "csinh, csinhf, csinhl – complex hyperbolic sine"
 ---
 
+<h2 class="name">NAME</h2>
+<p> csinh, csinhf, csinhl &#8211; complex hyperbolic sine </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
 <p> <code>double complex csinh(double complex </code><i>z</i><code>);</code><br />
  <code>float complex csinhf(float complex </code><i>z</i><code>);</code><br />
  <code>long double complex csinhl(long double complex </code><i>z</i><code>);</code> </p>
 <p> Link with <i>-lm</i>.</p>
+<h2>DESCRIPTION</h2>
 <p> These functions calculate the complex hyperbolic sine of <i>z</i>. </p>
 <p> The complex hyperbolic sine function is defined as: </p>
 <pre>

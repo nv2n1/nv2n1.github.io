@@ -1,5 +1,4 @@
 ---
-
 title: "djbdns(1)"
 name: "djbdns"
 section: "1"
@@ -8,7 +7,9 @@ url: "/docs/linux/man/1-djbdns/"
 description: "djbdns – djbdns DNS tools"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>djbdns</code> &#8211; djbdns DNS tools</p>
+<h2>DESCRIPTION</h2>
 <p> <code>djbdns</code> is a collection of DNS tools, originally written by Dr D J Bernstein. This release of djbdns includes the following ones </p>
 <dl>
 <dt>+ dnscache</dt>

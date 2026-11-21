@@ -1,5 +1,4 @@
 ---
-
 title: "malrul(1)"
 name: "malrul"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-malrul/"
 description: "malrul – compile a Malaga rule file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> malrul &#8211; compile a Malaga rule file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>malrul</code> <i>symbol-file</i> <i>rule-file</i> </p>
+<h2>DESCRIPTION</h2>
 <p> Malaga is a development environment for natural-language grammars based on the Left-Associative Grammar formalism. Malaga grammars can be used for automatic morphological and/or syntactic analysis. </p>
 <p> The program <code>malrul</code> compiles a Malaga rule file. Give it the rule file that is to be translated (suffix <code>.mor</code>, <code>.syn</code> or <code>.all</code>) and the associated symbol file (suffix <code>.sym</code> or <code>.esym</code>) as command-line arguments. The order of the arguments is arbitrary. </p>
 <p> See <code>info Malaga</code> for details. </p>

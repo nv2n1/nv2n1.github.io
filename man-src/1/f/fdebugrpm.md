@@ -1,5 +1,4 @@
 ---
-
 title: "fdebugrpm(1)"
 name: "fdebugrpm"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-fdebugrpm/"
 description: "fdebugrpm – install missing debuginfo packages"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fdebugrpm &#8211; install missing debuginfo packages </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>fdebugrpm</code> [<i>options</i>] {<i>program</i>&nbsp;<wbr><i>arg</i>&nbsp;<wbr>&#8230; | <i>pid</i>&#8230; | <i>core-file</i>&nbsp;<wbr>[&nbsp;<wbr><i>core-executable</i>&nbsp;<wbr>]&#8230; }</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>fdebugrpm</code></p>
 <dd>is a bash script that uses the utility <a href="/docs/linux/man/1-fdebuginfo/">fdebuginfo</a>(1) to determine any missing Debug Information, allowing the user to install the missing debuginfo packages. User needs to be in the <a href="/docs/linux/man/5-sudoers/">sudoers</a>(5) file.</dd>
 <h3>Standard Frysk Options</h3>

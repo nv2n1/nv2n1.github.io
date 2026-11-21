@@ -1,5 +1,4 @@
 ---
-
 title: "g(1)"
 name: "g"
 section: "1"
@@ -12,6 +11,7 @@ description: "g.version – Displays version and copyright information."
 <p> <i></i><code>g.version</code> &#8211; Displays version and copyright information.</p>
 <h2>KEYWORDS</h2>
 <p> general</p>
+<h2>SYNOPSIS</h2>
 <p> <code>g.version</code><br />
  <code>g.version help</code><br />
  <code>g.version</code> [-<code>cb</code>] [&#8211;<code>verbose</code>] [&#8211;<code>quiet</code>]</p>
@@ -29,6 +29,7 @@ description: "g.version – Displays version and copyright information."
 <dt><code>&#8211;quiet</code></dt>
 <dd>
  Quiet module output</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <i>g.version</i> prints to standard output the GRASS version number, date, the GRASS copyright and GRASS build information.</p>
 <h2>NOTES</h2>
 <p> This program requires no command line arguments; the user simply types <code>g.version</code> on the command line to see the version number and date of the GRASS software currently being run by the user.</p>

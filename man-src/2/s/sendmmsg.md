@@ -1,5 +1,4 @@
 ---
-
 title: "sendmmsg(2)"
 name: "sendmmsg"
 section: "2"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/2-sendmmsg/"
 description: "sendmmsg – send multiple messages on a socket"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sendmmsg &#8211; send multiple messages on a socket </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;sys/socket.h&gt;
 int sendmmsg(int sockfd, struct mmsghdr *msgvec, unsigned int vlen,
              int flags);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>sendmmsg</code>() system call is an extension of <code><a href="/docs/linux/man/2-sendmsg/">sendmsg</a></code>(2) that allows the caller to transmit multiple messages on a socket using a single system call. (This has performance benefits for some applications.) </p>
 <p> The <i>sockfd</i> argument is the file descriptor of the socket on which data is to be transmitted. </p>
 <p> The <i>msgvec</i> argument is a pointer to an array of <i>mmsghdr</i> structures. The size of this array is specified in <i>vlen</i>. </p>

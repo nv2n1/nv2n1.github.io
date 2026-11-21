@@ -1,5 +1,4 @@
 ---
-
 title: "freetype-config(1)"
 name: "freetype-config"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-freetype-config/"
 description: "freetype-config – Get information about a libfreetype installation"
 ---
 
+<h2 class="name">NAME</h2>
+<p> freetype-config &#8211; Get information about a libfreetype installation </p>
+<h2>SYNOPSIS</h2>
 <p> <code>freetype-config</code> [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>freetype-config</code> returns information needed for compiling and linking programs with the FreeType library, such as linker flags and compilation parameters. Alternatively, it can be used to query information about the FreeType library version installed on the system, such as the installation (directory path) prefix or the FreeType version number. </p>
 <p> If <code><a href="/docs/linux/man/1-pkg-config/">pkg-config</a></code>(1) is found in the path, <code>freetype-config</code> acts as a wrapper for <code>pkg-config</code>. </p>
 <p> This program is part of the FreeType package.</p>

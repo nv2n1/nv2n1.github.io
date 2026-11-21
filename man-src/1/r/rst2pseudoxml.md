@@ -1,5 +1,4 @@
 ---
-
 title: "rst2pseudoxml(1)"
 name: "rst2pseudoxml"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-rst2pseudoxml/"
 description: "rst2pseudoxml – convert reST documents to pseudo-XML"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rst2pseudoxml &#8211; convert reST documents to pseudo-XML </p>
+<h2>SYNOPSIS</h2>
 <p> rst2pseudoxml [options] [&lt;source&gt; [&lt;destination&gt;]]</p>
+<h2>DESCRIPTION</h2>
 <p> Generates pseudo-XML from standalone reStructuredText sources (for testing purposes). Reads from &lt;source&gt; (default is stdin) and writes to &lt;destination&gt; (default is stdout). See &lt;<i><a rel="nofollow" href="http://docutils.sf.net/docs/user/config.html">http://docutils.sf.net/docs/user/config.html</a></i>&gt; for the full reference.</p>
 <h2>OPTIONS</h2>
 <h3>General Docutils Options</h3>

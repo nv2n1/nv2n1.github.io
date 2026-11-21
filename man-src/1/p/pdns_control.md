@@ -1,5 +1,4 @@
 ---
-
 title: "pdns_control(1)"
 name: "pdns_control"
 section: "1"
@@ -10,7 +9,9 @@ description: "pdns_control – Control the PowerDNS nameserver"
 
 <h2>NAME</h2>
 <p> pdns_control &#8211; Control the PowerDNS nameserver</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pdns_control </code><i>[options]</i> command</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pdns_control</code> is used to send commands to a running PowerDNS nameserver.</p>
 <h2>OPTIONS</h2>
 <p> A summary of options is included below.</p>

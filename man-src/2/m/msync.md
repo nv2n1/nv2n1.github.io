@@ -1,5 +1,4 @@
 ---
-
 title: "msync(2)"
 name: "msync"
 section: "2"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/2-msync/"
 description: "msync – synchronize a file with a memory map"
 ---
 
+<h2 class="name">NAME</h2>
+<p> msync &#8211; synchronize a file with a memory map </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/mman.h&gt;</code> </p>
 <p> <code>int msync(void *</code><i>addr</i><code>, size_t </code><i>length</i><code>, int </code><i>flags</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>msync</code>() flushes changes made to the in-core copy of a file that was mapped into memory using <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) back to the filesystem. Without use of this call, there is no guarantee that changes are written back before <code><a href="/docs/linux/man/2-munmap/">munmap</a></code>(2) is called. To be more precise, the part of the file that corresponds to the memory area starting at <i>addr</i> and having length <i>length</i> is updated. </p>
 <p> The <i>flags</i> argument should specify exactly one of <code>MS_ASYNC</code> and <code>MS_SYNC</code>, and may additionally include the <code>MS_INVALIDATE</code> bit. These bits have the following meanings:</p>
 <dl>

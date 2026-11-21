@@ -1,5 +1,4 @@
 ---
-
 title: "gst-package(1)"
 name: "gst-package"
 section: "1"
@@ -10,6 +9,7 @@ description: "gst-package – create and install GNU Smalltalk .star package fil
 
 <h2>NAME</h2>
 <p> gst-package &#8211; create and install GNU Smalltalk .star package files</p>
+<h2>DESCRIPTION</h2>
 <h3>Usage:</h3>
 <dl>
 <dt>

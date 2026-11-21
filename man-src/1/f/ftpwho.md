@@ -1,5 +1,4 @@
 ---
-
 title: "ftpwho(1)"
 name: "ftpwho"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ftpwho/"
 description: "ftpwho – show current process information for each FTP session"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ftpwho &#8211; show current process information for each FTP session </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ftpwho</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>ftpwho</code> command shows process information for all active proftpd connections, and a count of all connected users off of each server. Proftpd sesssions spawned from inetd are counted separately from those created by a master proftpd <i>standalone</i> server.</p>
 <h2>OPTIONS</h2>
 <dl>

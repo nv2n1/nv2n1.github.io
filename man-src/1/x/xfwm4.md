@@ -1,5 +1,4 @@
 ---
-
 title: "xfwm4(1)"
 name: "xfwm4"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-xfwm4/"
 description: "xfwm4 – Window manager for Xfce"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xfwm4 &#8211; Window manager for Xfce </p>
+<h2>DESCRIPTION</h2>
 <h3>Usage:</h3>
 <dl>
 <dt>

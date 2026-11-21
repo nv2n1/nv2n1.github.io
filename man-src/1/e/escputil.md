@@ -1,5 +1,4 @@
 ---
-
 title: "escputil(1)"
 name: "escputil"
 section: "1"
@@ -10,7 +9,9 @@ description: "escputil – maintain Epson Stylus inkjet printers"
 
 <h2>NAME</h2>
 <p> escputil &#8211; maintain Epson Stylus inkjet printers</p>
+<h2>SYNOPSIS</h2>
 <p> <code>escputil</code> [ <i>-P</i> <i>printer</i> | <i>-r</i> <i>device</i> ] [ <i>-m</i> <i>model</i> ] [ <i>-S</i> ] [ <i>-C</i> ] [ <i>-p</i> ] [ <i>-u</i> ] [ <i>-c</i> | <i>-n</i> | <i>-a</i> | <i>-i</i> | <i>-d</i> | <i>-o</i> | <i>-s</i> | <i>-l</i> | <i>-M</i> | <i>-h</i> ] [ <i>-q</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>escputil</code> is a command line utility to perform various maintenance tasks on Epson Stylus inkjet printers. These tasks include head alignment, head cleaning, nozzle check, printer identification, and retrieval of ink level from the printer.</p>
 <h2>OPTIONS</h2>
 <p> <code>escputil</code> accepts the following options:</p>

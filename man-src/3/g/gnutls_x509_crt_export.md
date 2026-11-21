@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_crt_export(3)"
 name: "gnutls_x509_crt_export"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_crt_export – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_export &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_export(gnutls_x509_crt_t </code><i>cert</i><code>, gnutls_x509_crt_fmt_t </code><i>format</i><code>, void * </code><i>output_data</i><code>, size_t * </code><i>output_data_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,6 +22,7 @@ description: "gnutls_x509_crt_export – API function"
 <dd> will contain a certificate PEM or DER encoded</dd>
 <dt>size_t * output_data_size</dt>
 <dd> holds the size of output_data (and will be replaced by the actual size of parameters)</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will export the certificate to DER or PEM format. </p>
 <p> If the buffer provided is not long enough to hold the output, then *output_data_size is updated and GNUTLS_E_SHORT_MEMORY_BUFFER will be returned. </p>
 <p> If the structure is PEM encoded, it will have a header of &quot;BEGIN CERTIFICATE&quot;.</p>

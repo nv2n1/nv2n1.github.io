@@ -1,5 +1,4 @@
 ---
-
 title: "set_tid_address(2)"
 name: "set_tid_address"
 section: "2"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/2-set_tid_address/"
 description: "set_tid_address – set pointer to thread ID"
 ---
 
+<h2 class="name">NAME</h2>
+<p> set_tid_address &#8211; set pointer to thread ID </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/unistd.h&gt;
 pid_t set_tid_address(int *tidptr);
 </code></pre>
 <p> <i>Note</i>: There is no glibc wrapper for this system call; see NOTES.</p>
+<h2>DESCRIPTION</h2>
 <p> For each thread, the kernel maintains two attributes (addresses) called <i>set_child_tid</i> and <i>clear_child_tid</i>. These two attributes contain the value NULL by default.</p>
 <dl>
 <dt><i>set_child_tid</i></dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_certificate_set_x509_key(3)"
 name: "gnutls_certificate_set_x509_key"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_certificate_set_x509_key – API function"
 
 <h2>NAME</h2>
 <p> gnutls_certificate_set_x509_key &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_certificate_set_x509_key(gnutls_certificate_credentials_t </code><i>res</i><code>, gnutls_x509_crt_t * </code><i>cert_list</i><code>, int </code><i>cert_list_size</i><code>, gnutls_x509_privkey_t </code><i>key</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,6 +22,7 @@ description: "gnutls_certificate_set_x509_key – API function"
 <dd> holds the size of the certificate list</dd>
 <dt>gnutls_x509_privkey_t key</dt>
 <dd> is a <code>gnutls_x509_privkey_t</code> key</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function sets a certificate/private key pair in the gnutls_certificate_credentials_t structure. This function may be called more than once, in case multiple keys/certificates exist for the server. For clients that wants to send more than their own end entity certificate (e.g., also an intermediate CA cert) then put the certificate chain in <i>cert_list</i> . </p>
 <p> Note that the certificates and keys provided, can be safely deinitialized after this function is called. </p>
 <p> If that function fails to load the <i>res</i> structure is at an undefined state, it must not be reused to load other keys or certificates.</p>

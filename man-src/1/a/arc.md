@@ -1,5 +1,4 @@
 ---
-
 title: "arc(1)"
 name: "arc"
 section: "1"
@@ -10,7 +9,9 @@ description: "arc – pc archive utility"
 
 <h2>NAME</h2>
 <p> arc &#8211; pc archive utility</p>
+<h2>SYNOPSIS</h2>
 <p> <code>arc</code> a|m|u|f|d|x|e|r|p|l|v|t|c [ biswnoq ] [ g<i>password</i> ] <i>archive </i> [ <i>filename</i> &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Arc</i> is a general archive and file compression utility, used to maintain a compressed archive of files. An <i>archive</i> is a single file that combines many files, reducing storage space and allowing multiple files to be handled as one. <i>Arc</i> uses one of several compression methods for each file within the <i>archive</i>, based on whichever method yields the smallest result.</p>
 <h2>INSTRUCTIONS</h2>
 <p> Execute <i>arc</i> with no arguments for fairly verbose, usable instructions.</p>

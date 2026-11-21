@@ -1,5 +1,4 @@
 ---
-
 title: "thinkjettopbm(1)"
 name: "thinkjettopbm"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-thinkjettopbm/"
 description: "thinkjettopbm – convert HP ThinkJet printer commands file to PBM"
 ---
 
+<h2 class="name">NAME</h2>
+<p> thinkjettopbm &#8211; convert HP ThinkJet printer commands file to PBM </p>
+<h2>SYNOPSIS</h2>
 <p> <code>thinkjettopbm</code> [<i>-d</i>] [<i>thinkjet_file</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> Reads HP ThinkJet printer commands from the standard input, or <i>thinkjet_file</i> if specified, and writes a PBM image to the standard output. Text and non-graphics command sequences are silently ignored. </p>
 <p> The <code>-d</code> option turns on debugging messages which are written to the standard error stream. </p>
 <h2>BUGS</h2>

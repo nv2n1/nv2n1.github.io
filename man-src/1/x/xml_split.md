@@ -1,5 +1,4 @@
 ---
-
 title: "xml_split(1)"
 name: "xml_split"
 section: "1"
@@ -7,11 +6,16 @@ letter: "x"
 url: "/docs/linux/man/1-xml_split/"
 ---
 
-<pre>
+<h2 class="name">NAME</h2>
+ 
+
+ <pre>
   xml_split - cut a big XML file into smaller chunks
 </pre> 
 
-<tt>&quot;xml_split&quot;</tt> takes a (presumably big) <font SIZE="-1">XML</font> file and split it in several smaller files. The memory used is the memory needed for the biggest chunk (ie memory is reused for each new chunk). 
+<h2>DESCRIPTION</h2>
+
+ <tt>&quot;xml_split&quot;</tt> takes a (presumably big) <font SIZE="-1">XML</font> file and split it in several smaller files. The memory used is the memory needed for the biggest chunk (ie memory is reused for each new chunk). 
 
  It can split at a given level in the tree (the default, splits children of the root), or on a condition (using the subset of XPath understood by XML::Twig, so <tt>&quot;section&quot;</tt> or <tt>&quot;/doc/section&quot;</tt>). 
 

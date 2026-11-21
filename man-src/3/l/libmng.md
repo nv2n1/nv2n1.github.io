@@ -1,5 +1,4 @@
 ---
-
 title: "libmng(3)"
 name: "libmng"
 section: "3"
@@ -10,8 +9,10 @@ description: "libmng – Multiple-image Network Graphics (MNG) Reference Library
 
 <h2>NAME</h2>
 <p> libmng &#8211; Multiple-image Network Graphics (MNG) Reference Library 1.0.9</p>
+<h2>SYNOPSIS</h2>
 <p> <i></i><code> </p>
 <p> #include &lt;libmng.h&gt;</code> </p>
+<h2>DESCRIPTION</h2>
 <p> The <i>libmng</i> library supports decoding, displaying, encoding, and various other manipulations of the Multiple-image Network Graphics (MNG) format image files. It uses the <i><a href="/docs/linux/man/3-zlib/">zlib</a>(3)</i> compression library, and optionally the JPEG library by the Independant JPEG Group (IJG) and/or lcms (little cms), a color-management library by Marti Maria Saguer. </p>
 <h2>I. Introduction</h2>
 <p> This file describes how to use and modify the MNG reference library (known as libmng) for your own use. There are seven sections to this file: introduction, callbacks, housekeeping, reading, displaying, writing, and modification and configuration notes for various special platforms. We assume that libmng is already installed; see the INSTALL.README file for instructions on how to install libmng. </p>

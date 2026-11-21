@@ -1,5 +1,4 @@
 ---
-
 title: "git-mktag(1)"
 name: "git-mktag"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-mktag/"
 description: "git-mktag – Creates a tag object with extra validation"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-mktag &#8211; Creates a tag object with extra validation </p>
+<h2>SYNOPSIS</h2>
 <pre>
 <i>git mktag</i>
 </pre>
+<h2>DESCRIPTION</h2>
 <p> Reads a tag contents on standard input and creates a tag object. The output is the new tag&#8217;s &lt;object&gt; identifier. </p>
 <p> This command is mostly equivalent to <code><a href="/docs/linux/man/1-git-hash-object/">git-hash-object</a></code>(1) invoked with <code>-t tag -w &#8211;stdin</code>. I.e. both of these will create and write a tag found in <code>my-tag</code>: </p>
 <dl>

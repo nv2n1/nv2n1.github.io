@@ -1,5 +1,4 @@
 ---
-
 title: "nip2(1)"
 name: "nip2"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-nip2/"
 description: "nip2 – image processing with the VIPS library"
 ---
 
+<h2 class="name">NAME</h2>
+<p> nip2 &#8211; image processing with the VIPS library</p>
+<h2>SYNOPSIS</h2>
 <p> <code>nip2 [filename1 &#8230;]</code><br />
  <code>nip2 -s filename [arg1 &#8230;]</code><br />
  <code>nip2 -e expression [arg1 &#8230;]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>nip2</code> (for New Image Processing) is a tool for manipulating images using the VIPS image processing library. </p>
 <p> There are three principal modes: </p>
 <p> <code>nip2 [filename1 &#8230;]</code> </p>

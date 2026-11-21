@@ -1,5 +1,4 @@
 ---
-
 title: "appstreamcli(1)"
 name: "appstreamcli"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-appstreamcli/"
 description: "appstreamcli – Handle AppStream metadata formats and query AppStream data"
 ---
 
+<h2 class="name">NAME</h2>
+<p> appstreamcli &#8211; Handle AppStream metadata formats and query AppStream data </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>appstreamcli</code> [<code>COMMAND</code>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This manual page documents briefly the <code>appstreamcli</code> command. </dd>
 <p> <code>appstreamcli</code> is a small helper tool to work with AppStream metadata and access the AppStream component index from the command-line. The AppStream component index contains a list of all available software components for your distribution, matched to their package names. It is generated using AppStream XML or Debian DEP-11 data, which is provided by your distributor. </p>
 <p> For more information about the AppStream project and the other components which are part of it, take a look at the AppStream pages at m[blue]<code>Freedesktop.org</code>m[]<font SIZE="-2">[1]</font>.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "makeglossaries-lite(1)"
 name: "makeglossaries-lite"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-makeglossaries-lite/"
 description: "makeglossaries-lite – Calls makeindex/xindy for LaTeX documents using glossaries package"
 ---
 
+<h2 class="name">NAME</h2>
+<p> makeglossaries-lite &#8211; Calls makeindex/xindy for LaTeX documents using glossaries package </p>
+<h2>SYNOPSIS</h2>
 <p> <code>makeglossaries</code> [<code>-o</code> <i>file</i>] [<code>-q</code>] [<code>-n</code>] [<code>-s</code> <i>file</i>] [<code>-t</code> <i>file</i>] [<code>-L</code> <i>language</i>] [<code>-c</code>] [<code>-g</code>] [<code>-l</code>] [<code>-p</code> <i>num</i>] [<code>-r</code>] [<code>-m</code> <i>file</i>] [<code>-x</code> <i>file</i>] [<code>&#8211;version</code>] [<code>&#8211;help</code>] <i>basename</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>makeglossaries-lite</code> is cut-down Lua alternative to the <code>makeglossaries</code> Perl script. It&#8217;s designed for use with LaTeX documents that use the glossaries package. Some options that are available to <code>makeglossaries</code> aren&#8217;t available with <code>makeglossaries-lite</code>. The mandatory argument <i>basename</i> should be the name of the LaTeX document without the .tex extension. <code>makeglossaries-lite</code> will read the auxiliary file to determine whether <code>makeindex</code> or <code>xindy</code> should be called. All the information required to be passed to the relevant indexing application should also be contained in the auxiliary file, but may be overridden by the option arguments to <code>makeglossaries-lite</code>.</p>
 <h2>OPTIONS</h2>
 <dl>

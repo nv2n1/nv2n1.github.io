@@ -1,5 +1,4 @@
 ---
-
 title: "octave(1)"
 name: "octave"
 section: "1"
@@ -10,7 +9,9 @@ description: "octave – A high-level interactive language for numerical computa
 
 <h2>NAME</h2>
 <p> octave &#8211; A high-level interactive language for numerical computations.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>octave</code> [<i>options</i>]&#8230; [<i>file</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Octave is a high-level language, primarily intended for numerical computations. It provides a convenient command line interface for solving linear and nonlinear problems numerically.</p>
 <h2>OPTIONS</h2>
 <p> The complete set of command-line options for <code>octave</code> is available by running the following command from the shell. </p>

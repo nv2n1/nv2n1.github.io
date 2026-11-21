@@ -1,5 +1,4 @@
 ---
-
 title: "pkcon(1)"
 name: "pkcon"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pkcon/"
 description: "pkcon – PackageKit console client"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pkcon &#8211; PackageKit console client </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pkcon</code> [<code>OPTION</code>&#8230;] [<code>COMMAND</code>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This manual page documents briefly the <code>pkcon</code> command. </dd>
 <p> <code>pkcon</code> is the command line client for PackageKit.</p>
 <h2>COMMANDS</h2>

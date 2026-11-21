@@ -1,5 +1,4 @@
 ---
-
 title: "ps2eps(1)"
 name: "ps2eps"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-ps2eps/"
 description: "ps2eps – convert PostScript to EPS (Encapsulated PostScript) files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ps2eps &#8211; convert PostScript to EPS (Encapsulated PostScript) files </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ps2eps</code> [<code>-f</code>] [<code>-q</code>] [<code>-N</code>] [<code>-O</code>] [<code>-n</code>] [<code>-P</code>] [<code>-c</code>] [<code>-C</code>] [<code>-m</code>] [<code>-B</code>] [<code>-E</code>] [<code>-s&nbsp;</code><i>pagedim</i>] [<code>-t&nbsp;</code><i>offset</i>] [<code>-r&nbsp;</code><i>resolution</i>] [<code>-R&nbsp;</code><i>+|-|^</i>] [<code>-l</code>] [<code>-g</code>] [<code>-H</code>] [<code>-d</code>] [<code>-h|&#8211;help</code>] [<code>-a</code>] [<code>-W</code>] [<code>-L</code>] [<code>-V|&#8211;version</code>] [<code>&#8212;</code>] [<i>psfile1</i>] [<i>psfile2</i>] [<i>&#8230;</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This manual page documents <code>ps2eps</code> version 1.68. </dd>
 <p> <code>ps2eps</code> is a tool (written in Perl) to produce Encapsulated PostScript Files (EPS/EPSF) from usual one-paged Postscript documents. It calculates correct Bounding Boxes for those EPS files and filters some special postscript command sequences that can produce erroneous results on printers. EPS files are often needed for including (scalable) graphics of high quality into TeX/LaTeX (or even Word) documents. </p>
 <p> Without any argument, ps2eps reads from standard input and writes to standard output. If filenames are given as arguments they are processed one by one and output files are written to filenames with extension .eps. If input filenames have the extension .ps or .prn, this extension is replaced with .eps. In all other cases .eps is appended to the input filename. Please note that PostScript files for input should contain only one single page (you can possibly use the <code>psselect</code> from the psutils package to extract a single page from a document that contains multiple pages). </p>

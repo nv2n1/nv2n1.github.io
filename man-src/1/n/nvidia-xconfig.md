@@ -1,5 +1,4 @@
 ---
-
 title: "nvidia-xconfig(1)"
 name: "nvidia-xconfig"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-nvidia-xconfig/"
 description: "nvidia-xconfig – manipulate X configuration files for the NVIDIA driver"
 ---
 
+<h2 class="name">NAME</h2>
+<p> nvidia-xconfig &#8211; manipulate X configuration files for the NVIDIA driver </p>
+<h2>SYNOPSIS</h2>
 <p> <code>nvidia-xconfig</code> [ <i>options</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>nvidia-xconfig</code> is a tool intended to provide basic control over configuration options available in the NVIDIA X driver. </p>
 <p> <code>nvidia-xconfig</code> performs its operations in several steps:</p>
 <dl>

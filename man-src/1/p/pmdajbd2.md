@@ -1,5 +1,4 @@
 ---
-
 title: "pmdajbd2(1)"
 name: "pmdajbd2"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmdajbd2 – journal block device (JBD) performance metrics domain
 
 <h2>NAME</h2>
 <p> <code>pmdajbd2</code> &#8211; journal block device (JBD) performance metrics domain agent (PMDA)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/jbd2/pmdajbd2</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-j</code> <i>path</i>] [<code>-U</code> <i>username</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdajbd2</code> is a Performance Metrics Domain Agent (PMDA) which extracts performance metrics from the Journal Block Device subsystem (version 2) in the Linux kernel. These metrics are exported by the kernel in procfs files, one file per block device. The JBD2 subsystem is used by several filesystems including ext3, ext4 and ocfs2. </p>
 <p> The <code>jbd2</code> PMDA exports metrics that measure detailed journal transaction information, such as time spent waiting and locked, request rates, blocks used and so on. </p>
 <p> A brief description of the <code>pmdajbd2</code> command line options follows (these are only relevant when running the PMDA as a daemon, and not as a shared library):</p>

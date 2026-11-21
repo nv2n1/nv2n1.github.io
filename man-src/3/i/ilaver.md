@@ -1,5 +1,4 @@
 ---
-
 title: "ilaver(3)"
 name: "ilaver"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-ilaver/"
 description: "ilaver.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ilaver.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ilaver</code> (VERS_MAJOR, VERS_MINOR, VERS_PATCH)<br />
  <i></i><code>ILAVER</code> returns the LAPACK version.</p>

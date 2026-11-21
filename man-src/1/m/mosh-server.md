@@ -1,5 +1,4 @@
 ---
-
 title: "mosh-server(1)"
 name: "mosh-server"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mosh-server/"
 description: "mosh-server – server-side helper for mosh"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mosh-server &#8211; server-side helper for mosh </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mosh-server</code> new [-s] [-v] [-i <i>IP</i>] [-p <i>PORT</i>[:<i>PORT2</i>]] [-c <i>COLORS</i>] [&#8211; command&#8230;] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>mosh-server</code> is a helper program for the <code><a href="/docs/linux/man/1-mosh/">mosh</a>(1)</code> remote terminal application. </p>
 <p> <code>mosh-server</code> binds to a high UDP port and chooses an encryption key to protect the session. It prints both on standard output, detaches from the terminal, and waits for the <code>mosh-client</code> to establish a connection. It will exit if no client has contacted it within 60 seconds. </p>
 <p> By default, <code>mosh-server</code> binds to a port between 60000 and 61000 and executes the user&#8217;s login shell. </p>

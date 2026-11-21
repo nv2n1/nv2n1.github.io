@@ -1,5 +1,4 @@
 ---
-
 title: "htsfile(1)"
 name: "htsfile"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-htsfile/"
 description: "htsfile – identify high-throughput sequencing data files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> htsfile &#8211; identify high-throughput sequencing data files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>htsfile</code> [<code>-chHv</code>] <i>FILE</i>&#8230;<br />
  <code>htsfile &#8211;copy</code> [<code>-v</code>] <i>FILE DESTFILE</i></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>htsfile</code> utility attempts to identify what kind of high-throughput sequencing data files the specified files are, and provides minimal viewing capabilities for some kinds of data file. </p>
 <p> It can identify sequencing data files such as SAM, BAM, and CRAM; variant calling data files such as VCF and BCF; index files used to index these data files; and compressed versions of many of them. </p>
 <p> For each <i>FILE</i> given, <code>htsfile</code> prints a description of the file format determined, using similar keyword conventions to <code><a href="/docs/linux/man/1-file/">file</a></code>(1): &quot;text&quot; indicates a textual file that can probably be viewed on a terminal; &quot;data&quot; indicates binary data; &quot;sequence&quot;, &quot;variant calling&quot;, and &quot;index&quot; indicate different categories of data file. When it can be identified, the name of the particular file format (such as &quot;BAM&quot; or &quot;VCF&quot;) is printed at the start of the description. </p>

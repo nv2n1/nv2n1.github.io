@@ -1,5 +1,4 @@
 ---
-
 title: "expect_autoexpect(1)"
 name: "expect_autoexpect"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-expect_autoexpect/"
 description: "autoexpect – generate an Expect script from watching a session"
 ---
 
+<h2 class="name">NAME</h2>
+<p> autoexpect &#8211; generate an Expect script from watching a session </p>
+<h2>SYNOPSIS</h2>
 <p> <code>autoexpect</code> [ <i>args</i> ] [ <i>program args&#8230;</i> ] </p>
 <h2>INTRODUCTION</h2>
 <p> autoexpect watches you interacting with another program and creates an Expect script that reproduces your interactions. For straightline scripts, autoexpect saves substantial time over writing scripts by hand. Even if you are an Expect expert, you will find it convenient to use autoexpect to automate the more mindless parts of interactions. It is much easier to cut/paste hunks of autoexpect scripts together than to write them from scratch. And if you are a beginner, you may be able to get away with learning nothing more about Expect than how to call autoexpect. </p>

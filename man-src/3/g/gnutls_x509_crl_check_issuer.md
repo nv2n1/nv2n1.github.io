@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_crl_check_issuer(3)"
 name: "gnutls_x509_crl_check_issuer"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_crl_check_issuer – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crl_check_issuer &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crl_check_issuer(gnutls_x509_crl_t </code><i>crl</i><code>, gnutls_x509_crt_t </code><i>issuer</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_x509_crl_check_issuer – API function"
 <dd> is the CRL to be checked</dd>
 <dt>gnutls_x509_crt_t issuer</dt>
 <dd> is the certificate of a possible issuer</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will check if the given CRL was issued by the given issuer certificate.</p>
 <h2>RETURNS</h2>
 <p> true (1) if the given CRL was issued by the given issuer, and false (0) if not.</p>

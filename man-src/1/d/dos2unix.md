@@ -1,5 +1,4 @@
 ---
-
 title: "dos2unix(1)"
 name: "dos2unix"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-dos2unix/"
 description: "dos2unix – DOS/Mac to Unix and vice versa text file format converter"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dos2unix &#8211; DOS/Mac to Unix and vice versa text file format converter </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 dos2unix[options][FILE...][-n INFILE OUTFILE...] unix2dos[options][FILE...][-n INFILE OUTFILE...]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The Dos2unix package includes utilities <tt>&quot;dos2unix&quot;</tt> and <tt>&quot;unix2dos&quot;</tt> to convert plain text files in <font SIZE="-1">DOS</font> or Mac format to Unix format and vice versa. </p>
 <p> In DOS/Windows text files a line break, also known as newline, is a combination of two characters: a Carriage Return (<font SIZE="-1">CR</font>) followed by a Line Feed (<font SIZE="-1">LF</font>). In Unix text files a line break is a single character: the Line Feed (<font SIZE="-1">LF</font>). In Mac text files, prior to Mac <font SIZE="-1">OS X,</font> a line break was single Carriage Return (<font SIZE="-1">CR</font>) character. Nowadays Mac <font SIZE="-1">OS</font> uses Unix style (<font SIZE="-1">LF</font>) line breaks. </p>
 <p> Besides line breaks Dos2unix can also convert the encoding of files. A few <font SIZE="-1">DOS</font> code pages can be converted to Unix Latin-1. And Windows Unicode (<font SIZE="-1">UTF-16</font>) files can be converted to Unix Unicode (<font SIZE="-1">UTF-8</font>) files. </p>

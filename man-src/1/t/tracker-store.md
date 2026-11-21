@@ -1,5 +1,4 @@
 ---
-
 title: "tracker-store(1)"
 name: "tracker-store"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-tracker-store/"
 description: "tracker-store – database indexer and query daemon"
 ---
 
+<h2 class="name">NAME</h2>
+<p> tracker-store &#8211; database indexer and query daemon</p>
+<h2>SYNOPSIS</h2>
 <p> <code>tracker-store</code> [<i>OPTION</i>&#8230;] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>tracker-store</code> provides both a powerful database daemon which allows clients to query or update their data using the highly descriptive <code>SPARQL</code> language. </p>
 <p> <code>tracker-store</code> does not do any file crawling or any mining of data itself, instead other processes do that while <code>tracker-store</code> serves as a daemon waiting for such requests from application miners like <code>tracker-miner-fs.</code> </p>
 <h2>OPTIONS</h2>

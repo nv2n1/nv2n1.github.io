@@ -1,5 +1,4 @@
 ---
-
 title: "pp(1)"
 name: "pp"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-pp/"
 description: "pp – Prints certificates, keys, crls, and pkcs7 files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pp &#8211; Prints certificates, keys, crls, and pkcs7 files </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pp -t type [-a] [-i input] [-o output] [-u] [-w]</code></dt></dl>
 <h2>STATUS</h2>
 <dd>This documentation is still work in progress. Please contribute to the initial review in m[blue]<code>Mozilla NSS bug 836477</code>m[]<font SIZE="-2">[1]</font></dd>
+<h2>DESCRIPTION</h2>
 <p> <code>pp </code>pretty-prints private and public key, certificate, certificate-request, pkcs7 or crl files</p>
 <h2>OPTIONS</h2>
 <p> <code>-t </code> <i>type</i></p>

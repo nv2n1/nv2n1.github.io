@@ -1,5 +1,4 @@
 ---
-
 title: "pssvg(1)"
 name: "pssvg"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pssvg/"
 description: "pssvg – convert Photoshop® gradients to SVG."
 ---
 
+<h2 class="name">NAME</h2>
+<p> pssvg &#8211; convert Photoshop&#174; gradients to SVG. </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pssvg</code> [-b&nbsp;<wbr><i>rgb</i>] [-f&nbsp;<wbr><i>rgb</i>] [-h] [-o&nbsp;<wbr><i>file</i>] [-t&nbsp;<wbr><i>format</i>] [-v] [-V] <i>file</i></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>pssvg</code> program converts Photoshop grd5 gradients to the SVG format. Unlike most of the other file formats handled by the cptutils package, grd5 files may contain multiple gradients and all of the input gradients will be converted to gradients in the output file. One can then use <code><a href="/docs/linux/man/1-svgx/">svgx</a></code>(1) to extract single gradients and convert them to other formats. </dd>
 <p> Photoshop gradient files will often contain a number of gradients with the same name. These names are used as the basis for the SVG titles (the id attributes), but since these must be unique, the program will append _01, _02, &#8230; to duplicate names in order to form the titles. Alternatively once can employ the <code>&#8211;title</code> option to generate a uniform sequence of titles. </p>
 <p> Atypically, the input Photoshop grd5 file is a mandatory argument. The program will write to stdout if the <code>&#8211;output</code> option is not specified.</p>

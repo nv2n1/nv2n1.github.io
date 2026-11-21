@@ -1,5 +1,4 @@
 ---
-
 title: "pnmhistmap(1)"
 name: "pnmhistmap"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pnmhistmap/"
 description: "pnmhistmap – draw a histogram for a PGM or PPM file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pnmhistmap &#8211; draw a histogram for a PGM or PPM file </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pnmhistmap</code> [<code>-black</code>] [<code>-white</code>] [<code>-max</code> <i>N</i>] [<code>-verbose</code>] [<i>pnmfile</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Reads a portable anymap as input, although bitmap (PBM) input produces an error message and no image. Produces an image showing a histogram of the color (or gray) values in the input. A graymap (PGM) input produces a bitmap output. A pixmap (PPM) input produces pixmap output with three overlaid histograms: a red one for the red input, a green one for the green input, and a blue one for the blue input. The output is fixed in size: 256 pixels wide by 200 pixels high.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "wks2csv(1)"
 name: "wks2csv"
 section: "1"
@@ -10,6 +9,7 @@ description: "wks2csv – convert Works spreadsheet into CSV"
 
 <h2>NAME</h2>
 <p> wks2csv &#8211; convert Works spreadsheet into CSV</p>
+<h2>SYNOPSIS</h2>
 <p> <code>wks2csv</code> [<i>OPTION</i>] <i>&lt;Works Spreadsheet Document&gt;</i></p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "vm-dump-metrics(1)"
 name: "vm-dump-metrics"
 section: "1"
@@ -10,7 +9,9 @@ description: "vm-dump-metrics – Dump VM metrics."
 
 <h2>NAME</h2>
 <p> vm-dump-metrics &#8211; Dump VM metrics.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>vm-dump-metrics</code> [ <i>OPTION</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>vm-dump-metrics</code> reads virtualization hosts provided metrics decription and dumps output</p>
 <h2>OPTIONS</h2>
 <p> <code>-f, &#8211;dest &lt;file&gt;</code> Specify a dump file to be used instead of &lt;stdout&gt; </p>

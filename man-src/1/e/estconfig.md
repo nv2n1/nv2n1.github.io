@@ -1,5 +1,4 @@
 ---
-
 title: "estconfig(1)"
 name: "estconfig"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-estconfig/"
 description: "estconfig – configuration utility of Hyper Estraier"
 ---
 
+<h2 class="name">NAME</h2>
+<p> estconfig &#8211; configuration utility of Hyper Estraier</p>
+<h2>SYNOPSIS</h2>
 <p> <code>estconfig &#8211;version</code> </p>
 <p> <code>estconfig &#8211;prefix</code> </p>
 <p> <code>estconfig &#8211;execprefix</code> </p>
@@ -20,6 +22,7 @@ description: "estconfig – configuration utility of Hyper Estraier"
 <p> <code>estconfig &#8211;ldflags</code> </p>
 <p> <code>estconfig &#8211;libs</code> </p>
 <p> <code>estconfig &#8211;mtlibs</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>estconfig</code> is useful for integration of an application or a system using Hyper Estraier. It outputs setting and configurations of Hyper Estraier.</p>
 <dl>
 <dt><code>estconfig &#8211;version</code></dt>

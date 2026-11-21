@@ -1,5 +1,4 @@
 ---
-
 title: "pcre_get_stringtable_entries(3)"
 name: "pcre_get_stringtable_entries"
 section: "3"
@@ -7,8 +6,8 @@ letter: "p"
 url: "/docs/linux/man/3-pcre_get_stringtable_entries/"
 description: "PCRE – Perl-compatible regular expressions"
 ---
-
 <p>PCRE &#8211; Perl-compatible regular expressions </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;pcre.h&gt;</code> </p>
 <pre><code>
  int pcre_get_stringtable_entries(const pcre *  code ,
@@ -18,6 +17,7 @@ description: "PCRE – Perl-compatible regular expressions"
  int pcre32_get_stringtable_entries(const pcre32 *  code ,
       PCRE_SPTR32  name , PCRE_UCHAR32 ** first , PCRE_UCHAR32 ** last );
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p>This convenience function finds, for a compiled pattern, the first and last entries for a given name in the table that translates capturing parenthesis names into numbers. When names are required to be unique (PCRE_DUPNAMES is <i>not</i> set), it is usually easier to use <code>pcre[16|32]_get_stringnumber()</code> instead. </p>
 <p> <br />
 &nbsp;<wbr>&nbsp;<i>code</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Compiled regular expression <br />

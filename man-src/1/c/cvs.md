@@ -1,5 +1,4 @@
 ---
-
 title: "cvs(1)"
 name: "cvs"
 section: "1"
@@ -7,7 +6,9 @@ letter: "c"
 url: "/docs/linux/man/1-cvs/"
 description: "cvs – Concurrent Versions System"
 ---
-
+<h2 class="name">NAME</h2>
+<p> cvs - Concurrent Versions System </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>cvs</code> [ <i>cvs_options</i> ]</dt>
 <dd> <p> <i>cvs_command</i> [ <i>command_options</i> ] [ <i>command_args</i> ] </p>

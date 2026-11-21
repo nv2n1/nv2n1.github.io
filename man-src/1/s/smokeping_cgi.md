@@ -1,5 +1,4 @@
 ---
-
 title: "smokeping_cgi(1)"
 name: "smokeping_cgi"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-smokeping_cgi/"
 description: "smokeping_cgi – SmokePing webfrontend"
 ---
 
+<h2 class="name">NAME</h2>
+<p> smokeping_cgi &#8211; SmokePing webfrontend </p>
 <h2>OVERVIEW</h2>
 <p> This script acts as a &#8216;website&#8217; for your SmokePing monitoring operation. It presents the targets you are looking at in a tree structure and draws graphs as they are required by people looking at the pages.</p>
+<h2>DESCRIPTION</h2>
 <p> To get <code>smokeping_cgi</code> going, you need a webserver which allows you to run <font SIZE="-1">CGI</font> or better FastCGI scripts. The system must be setup so that the cgi process is allowed to write to the image caching area as defined in the config file. </p>
 <p> This script runs fine as a normal <font SIZE="-1">CGI, </font><font SIZE="-1"><code>BUT</code></font> it will appear to be very slow, because it does a lot of things when starting up. So if the script has to be started a fresh on every click, this is both slow and a tough thing for your webserver. I therefore strongly recommend using FastCGI. </p>
 <p> Please refer to the installation document for detailed setup instructions.</p>

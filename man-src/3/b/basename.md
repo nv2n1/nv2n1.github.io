@@ -1,5 +1,4 @@
 ---
-
 title: "basename(3)"
 name: "basename"
 section: "3"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/3-basename/"
 description: "basename, dirname – parse pathname components"
 ---
 
+<h2 class="name">NAME</h2>
+<p> basename, dirname &#8211; parse pathname components </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;libgen.h&gt;
 char *dirname(char *path);
 char *basename(char *path);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Warning: there are two different functions <code>basename</code>() &#8211; see below. </p>
 <p> The functions <code>dirname</code>() and <code>basename</code>() break a null-terminated pathname string into directory and filename components. In the usual case, <code>dirname</code>() returns the string up to, but not including, the final &#8216;/&#8217;, and <code>basename</code>() returns the component following the final &#8216;/&#8217;. Trailing &#8216;/&#8217; characters are not counted as part of the pathname. </p>
 <p> If <i>path</i> does not contain a slash, <code>dirname</code>() returns the string &quot;.&quot; while <code>basename</code>() returns a copy of <i>path</i>. If <i>path</i> is the string &quot;/&quot;, then both <code>dirname</code>() and <code>basename</code>() return the string &quot;/&quot;. If <i>path</i> is a null pointer or points to an empty string, then both <code>dirname</code>() and <code>basename</code>() return the string &quot;.&quot;. </p>

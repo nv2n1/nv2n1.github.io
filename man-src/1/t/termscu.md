@@ -1,5 +1,4 @@
 ---
-
 title: "termscu(1)"
 name: "termscu"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-termscu/"
 description: "termscu – DICOM termination SCU"
 ---
 
+<h2 class="name">NAME</h2>
+<p> termscu &#8211; DICOM termination SCU </p>
+<h2>SYNOPSIS</h2>
 <pre>
 termscu [options] peer port
 </pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>termscu</code> application implements a Service Class User (SCU) for DCMTK&#8217;s private Shutdown SOP Class. It tries to negotiate this private Shutdown SOP Class with a Service Class Provider (SCP) which (if this feature is implemented) will immediately shutdown after refusing the association. The application can be used to shutdown some of DCMTK&#8217;s server applications.</p>
 <h2>PARAMETERS</h2>
 <pre>

@@ -1,5 +1,4 @@
 ---
-
 title: "ncftool(1)"
 name: "ncftool"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ncftool/"
 description: "ncftool – Network configuration tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ncftool &#8211; Network configuration tool </p>
+<h2>SYNOPSIS</h2>
 <p> ncftool [command [options]]</p>
+<h2>DESCRIPTION</h2>
 <p> ncftool is a command line utility to configure networking. It can be invoked with no arguments to bring up the interactive ncftool shell. Alternatively a command and optional arguments can be specified to have ncftool execute the command non-interactively.</p>
 <h2>COMMANDS</h2>
 <h3><code>list [&#8211;macs] [&#8211;all] [&#8211;inactive]</code></h3>

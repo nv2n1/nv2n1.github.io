@@ -1,5 +1,4 @@
 ---
-
 title: "dtrsen(3)"
 name: "dtrsen"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dtrsen/"
 description: "dtrsen.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dtrsen.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dtrsen</code> (JOB, COMPQ, SELECT, N, T, LDT, Q, LDQ, WR, WI, M, S, SEP, WORK, LWORK, IWORK, LIWORK, INFO)<br />
  <i></i><code>DTRSEN</code></p>

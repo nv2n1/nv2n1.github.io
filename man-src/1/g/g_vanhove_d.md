@@ -1,5 +1,4 @@
 ---
-
 title: "g_vanhove_d(1)"
 name: "g_vanhove_d"
 section: "1"
@@ -11,7 +10,9 @@ description: "g_vanhove – calculates Van Hove displacement functions"
 <h2>NAME</h2>
 <p> g_vanhove &#8211; calculates Van Hove displacement functions </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>g_vanhove</code> <code>-f</code><i> traj.xtc </i> <code>-s</code><i> topol.tpr </i> <code>-n</code><i> index.ndx </i> <code>-om</code><i> vanhove.xpm </i> <code>-or</code><i> vanhove_r.xvg </i> <code>-ot</code><i> vanhove_t.xvg </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-sqrt</code><i> real </i> <code>-fm</code><i> int </i> <code>-rmax</code><i> real </i> <code>-rbin</code><i> real </i> <code>-mmax</code><i> real </i> <code>-nlevels</code><i> int </i> <code>-nr</code><i> int </i> <code>-fr</code><i> int </i> <code>-rt</code><i> real </i> <code>-ft</code><i> int </i></p>
+<h2>DESCRIPTION</h2>
 <p> g_vanhove computes the Van Hove correlation function. The Van Hove G(r,t) is the probability that a particle that is at r0 at time zero can be found at position r0+r at time t. g_vanhove determines G not for a vector r, but for the length of r. Thus it gives the probability that a particle moves a distance of r in time t. Jumps across the periodic boundaries are removed. Corrections are made for scaling due to isotropic or anisotropic pressure coupling. </p>
 <p> With option <code> -om</code> the whole matrix can be written as a function of t and r or as a function of sqrt(t) and r (option <code> -sqrt</code>). </p>
 <p> With option <code> -or</code> the Van Hove function is plotted for one or more values of t. Option <code> -nr</code> sets the number of times, option <code> -fr</code> the number spacing between the times. The binwidth is set with option <code> -rbin</code>. The number of bins is determined automatically. </p>

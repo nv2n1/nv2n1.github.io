@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_key_purpose_init(3)"
 name: "gnutls_x509_key_purpose_init"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_x509_key_purpose_init – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_key_purpose_init &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509-ext.h&gt;</code> </p>
 <p> <code>int gnutls_x509_key_purpose_init(gnutls_x509_key_purposes_t * </code><i>p</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_x509_key_purposes_t * p</dt>
 <dd> The key purposes structure</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will initialize an alternative names structure.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

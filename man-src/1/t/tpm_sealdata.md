@@ -1,5 +1,4 @@
 ---
-
 title: "tpm_sealdata(1)"
 name: "tpm_sealdata"
 section: "1"
@@ -10,7 +9,11 @@ description: "tpm_sealdata – seal input data to the system’s TPM"
 
 <p>TPM Management &#8211; tpm_sealdata<br />
  </center></p>
+<h2 class="name">NAME</h2>
+<p> tpm_sealdata &#8211; seal input data to the system&#8217;s TPM </p>
+<h2>SYNOPSIS</h2>
 <p> <code>tpm_sealdata</code> [<code>OPTION</code>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>tpm_sealdata</code> seals sensitive input data to the SRK of the system&#8217;s TPM and optionally a PCR configuration. Backup your data, it is unrecoverable from this format if the SRK changes or the specified PCR configuration is unreproducable. The result can be unsealed by functions in libtpm_unseal, such as <code><a href="/docs/linux/man/3-tpmunsealfile/">tpmUnsealFile</a></code>(3). </p>
 <dl>
 <dt><code>-h</code>, <code>&#8211;help</code></dt>

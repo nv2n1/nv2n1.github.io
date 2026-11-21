@@ -1,5 +1,4 @@
 ---
-
 title: "ck_ht_count(3)"
 name: "ck_ht_count"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_ht_count – return count of key-value pairs in hash table"
 <p> <code>ck_ht_count</code> &#8211; return count of key-value pairs in hash table</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_ht.h Ft uint64_t Fn ck_ht_count ck_ht_t *ht</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_ht_count function will return the number of entries in the hash table pointed to be the Fa ht argument. The function may only be called without the presence of concurrent write operations.</p>
 <h2>ERRORS</h2>
 <p> Behavior is undefined if Fa ht has not been initialized.</p>

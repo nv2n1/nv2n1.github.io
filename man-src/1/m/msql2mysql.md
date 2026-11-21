@@ -1,5 +1,4 @@
 ---
-
 title: "msql2mysql(1)"
 name: "msql2mysql"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-msql2mysql/"
 description: "msql2mysql – convert mSQL programs for use with MySQL"
 ---
 
+<h2 class="name">NAME</h2>
+<p> msql2mysql &#8211; convert mSQL programs for use with MySQL </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>msql2mysql</code><i>C-source-file</i><code> &#8230;</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>Initially, the MySQL C API was developed to be very similar to that for the mSQL database system. Because of this, mSQL programs often can be converted relatively easily for use with MySQL by changing the names of the C API functions. </dd>
 <p> The <code>msql2mysql</code> utility performs the conversion of mSQL C API function calls to their MySQL equivalents. <code>msql2mysql</code> converts the input file in place, so make a copy of the original before converting it. For example, use <code>msql2mysql</code> like this: </p>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "grdrotater(1)"
 name: "grdrotater"
 section: "1"
@@ -10,8 +9,10 @@ description: "grdrotater – Finite rotation reconstruction of geographic grid"
 
 <h2>NAME</h2>
 <p> grdrotater &#8211; Finite rotation reconstruction of geographic grid</p>
+<h2>SYNOPSIS</h2>
 <p> <code>grdrotate</code> <i>ingrdfile</i> <i>rot_file</i>|<i>lon</i>/<i>lat</i>/<i>angle</i> <i>outgrdfile</i> [ <i>rotoutline</i> ] [ <i>polygonfile</i> ] [ ] [ <i>region</i> ] [ ] [ <i>ages</i> ] [ [<i>level</i>] ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-n</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>grdrotater</code> reads a geographical grid and reconstructs it given total reconstruction rotations. Optionally, the user may supply a clipping polygon in multiple-segment format; then, only the part of the grid inside the polygon is used to determine the reconstructed region. The outlines of the reconstructed region is also returned provided the rotated region is not the entire globe.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "smbcquotas(1)"
 name: "smbcquotas"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-smbcquotas/"
 description: "smbcquotas – Set or get QUOTAs of NTFS 5 shares"
 ---
 
+<h2 class="name">NAME</h2>
+<p> smbcquotas &#8211; Set or get QUOTAs of NTFS 5 shares </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt>
 </dt><dd>smbcquotas {//server/share} [-u|&#8211;user user] [-L|&#8211;list] [-F|&#8211;fs] [-S|&#8211;set QUOTA_SET_COMMAND] [-n|&#8211;numeric] [-t|&#8211;test-args] [-v|&#8211;verbose] [-d debuglevel] [-s configfile] [-l logdir] [-V] [-U username] [-m|&#8211;max-protocol LEVEL] [-N] [-k] [-A]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This tool is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> The smbcquotas program manipulates NT Quotas on SMB file shares.</p>
 <h2>OPTIONS</h2>

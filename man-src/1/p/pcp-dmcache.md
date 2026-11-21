@@ -1,5 +1,4 @@
 ---
-
 title: "pcp-dmcache(1)"
 name: "pcp-dmcache"
 section: "1"
@@ -10,7 +9,9 @@ description: "pcp-dmcache, pcp-lvmcache – report on logical storage device cac
 
 <h2>NAME</h2>
 <p> <code>pcp-dmcache</code>, <code>pcp-lvmcache</code> &#8211; report on logical storage device caches</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pcp</code> [<i>pcp options</i>] <code>dmcache</code> [<code>-i</code>/<code>&#8211;iops</code>] [<code>-R</code>/<code>&#8211;repeat</code> <i>N</i>] [<i>device</i> &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pcp-dmcache</code> reports on the activity of any configured Device Mapper Cache targets. The reported information includes device IOPs, cache and metadata device utilization, as well as hit and miss rates and ratios for both reads and writes for each cache device. </p>
 <p> <code>pcp-lvmcache</code> (Logical Volume Manager cache) is an exact synonym for <code>pcp-dmcache</code> (Device Mapper cache). </p>
 <p> When invoked via the <code><a href="/docs/linux/man/1-pcp/">pcp</a></code>(1) command, the <code>-h</code>/<code>&#8211;host</code>, <code>-a</code>/<code>&#8211;archive</code>, <code>-O</code>/<code>&#8211;origin</code>, <code>-s</code>/<code>&#8211;samples</code>, <code>-t</code>/<code>&#8211;interval</code>, <code>-Z</code>/<code>&#8211;timezone</code> and several other <i>pcp options</i> become indirectly available. </p>

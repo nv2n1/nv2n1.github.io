@@ -1,5 +1,4 @@
 ---
-
 title: "hp-levels(1)"
 name: "hp-levels"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-hp-levels/"
 description: "hp-levels – Supply Levels Utility"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hp-levels &#8211; Supply Levels Utility </p>
+<h2>DESCRIPTION</h2>
 <p> Display bar graphs of current supply levels for supported HPLIP printers.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>hp-levels [DEVICE_URI|PRINTER_NAME] [MODE] [OPTIONS]</code></p>
 <h2>PRINTER|DEVICE-URI</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "net-snmp-config(1)"
 name: "net-snmp-config"
 section: "1"
@@ -10,7 +9,9 @@ description: "net-snmp-config – returns information about installed net-snmp l
 
 <h2>NAME</h2>
 <p> net-snmp-config &#8211; returns information about installed net-snmp libraries and binaries</p>
+<h2>SYNOPSIS</h2>
 <p> <code>net-snmp-config</code> [OPTIONS]</p>
+<h2>DESCRIPTION</h2>
 <p> The <i>net-snmp-config</i> shell script is designed to retrieve the configuration information about the libraries and binaries dealing with the Simple Network Management Protocol (SNMP), built from the <code>net-snmp </code> source package. The information is particularly useful for applications that need to link against the SNMP libraries and hence must know about any other libraries that must be linked in as well. </p>
 <h2>OPTIONS</h2>
 <dl>

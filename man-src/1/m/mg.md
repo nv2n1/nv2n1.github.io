@@ -1,5 +1,4 @@
 ---
-
 title: "mg(1)"
 name: "mg"
 section: "1"
@@ -10,7 +9,9 @@ description: "mg – emacs-like text editor"
 
 <h2>NAME</h2>
 <p> <code>mg</code> &#8211; emacs-like text editor</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mg</code> [-<code>n</code> ] [-<code>f </code><i>mode</i> ] [+ <i>number</i> ] [<i>file &#8230;</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>mg</code> is intended to be a small, fast, and portable editor for people who can&#8217;t (or don&#8217;t want to) run emacs for one reason or another, or are not familiar with the <a href="/docs/linux/man/1-vi/">vi</a>(1) editor. It is compatible with emacs because there shouldn&#8217;t be any reason to learn more editor types than emacs or <a href="/docs/linux/man/1-vi/">vi</a>(1). </p>
 <p> The options are as follows:</p>
 <dl>

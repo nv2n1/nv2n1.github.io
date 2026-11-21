@@ -1,5 +1,4 @@
 ---
-
 title: "findorule(1)"
 name: "findorule"
 section: "1"
@@ -7,7 +6,10 @@ letter: "f"
 url: "/docs/linux/man/1-findorule/"
 ---
 
-findorule - command line wrapper to File::Find::Object::Rule 
+<h2 class="name">NAME</h2>
+ 
+
+ findorule - command line wrapper to File::Find::Object::Rule 
 
 <h2>USAGE</h2>
 
@@ -15,7 +17,9 @@ findorule - command line wrapper to File::Find::Object::Rule
 findorule[path...][expression]
 </code></pre>
 
-<tt>&quot;findorule&quot;</tt> mostly borrows the interface from <font SIZE="-1">GNU</font> <i><a HREF="/docs/linux/man/1-find/">find</a></i>(1) to provide a command-line interface onto the File::Find::Object::Rule heirarchy of modules. 
+<h2>DESCRIPTION</h2>
+
+ <tt>&quot;findorule&quot;</tt> mostly borrows the interface from <font SIZE="-1">GNU</font> <i><a HREF="/docs/linux/man/1-find/">find</a></i>(1) to provide a command-line interface onto the File::Find::Object::Rule heirarchy of modules. 
 
  The syntax for expressions is the rule name, preceded by a dash, followed by an optional argument. If the argument is an opening parenthesis it is taken as a list of arguments, terminated by a closing parenthesis. 
 

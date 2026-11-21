@@ -1,5 +1,4 @@
 ---
-
 title: "rhythmbox(1)"
 name: "rhythmbox"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-rhythmbox/"
 description: "rhythmbox – music player and library for tagged files using GStreamer"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rhythmbox &#8211; music player and library for tagged files using GStreamer </p>
+<h2>SYNOPSIS</h2>
 <p> <code>rhythmbox</code> [<i>option&#8230;</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>rhythmbox</code> is a very easy to use music playing and management program which supports a wide range of audio formats (including mp3 and ogg). Originally inspired by Apple&#8217;s iTunes, the current version also supports Internet Radio and Last.fm integration, iPod syncing and generic portable audio player support. Audio CD playback, ripping and encoding, music sharing, and Podcasts. </p>
 <p> For performance reasons, the remote control abilities have been moved from the rhythmbox binary to a separate program. See <code>rhythmbox-client</code> and the corresponding man page for documentation.</p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "kaya(1)"
 name: "kaya"
 section: "1"
@@ -10,7 +9,9 @@ description: "Kaya – Top-level interpreter for the kaya language"
 
 <h2>NAME</h2>
 <p> Kaya &#8211; Top-level interpreter for the kaya language</p>
+<h2>SYNOPSIS</h2>
 <p> <code>kaya</code> <i>FILE [-L DIRECTORY [-L &#8230;]] [-libdir DIRECTORY [-libdir &#8230;]] [-force] [-nochase] [-noprelude] [-nortchecks] [-noopts] [-htmldocs] [-xmldocs] [-static] [-profile] [-seedkey STRING] [-dumptac] [-dumpraw] [-dumptree] [-dumpsimpl] [-dumpeqns] [-dumpcg] [-dumpdeps] [-keepc] [-showgcc]</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>kaya</code> is a top-level interpreter for the kaya language. It implements a read-eval-print loop, useful for quick evaluation and testing of functions.</p>
 <h2>OPTIONS</h2>
 <p> <code>kaya</code> takes the same options as <code><a href="/docs/linux/man/1-kayac/">kayac</a>(1)</code> with the same meaning (although not all options are necessarily useful in this context.</p>

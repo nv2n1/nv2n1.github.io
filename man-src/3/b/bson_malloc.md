@@ -1,5 +1,4 @@
 ---
-
 title: "bson_malloc(3)"
 name: "bson_malloc"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_malloc() – This is a portable malloc() wrapper."
 
 <h2>NAME</h2>
 <p> bson_malloc() &#8211; This is a portable malloc() wrapper.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 void *
 bson_malloc(size_t num_bytes);
@@ -18,6 +18,7 @@ bson_malloc(size_t num_bytes);
 <dl>
 <dt><code>num_bytes</code></dt>
 <dd> A size_t containing the number of bytes to allocate.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This is a portable <code><a href="/docs/linux/man/3-malloc/">malloc</a>(3)</code> wrapper. </p>
 <p> In general, this function will return an allocation at least <code>sizeof(void*)</code> bytes or bigger. </p>
 <p> If there was a failure to allocate <code>num_bytes</code> bytes, the process will be aborted. </p>

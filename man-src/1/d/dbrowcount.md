@@ -1,5 +1,4 @@
 ---
-
 title: "dbrowcount(1)"
 name: "dbrowcount"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dbrowcount/"
 description: "dbrowcount – count the number of rows in an Fsdb stream"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dbrowcount &#8211; count the number of rows in an Fsdb stream </p>
+<h2>SYNOPSIS</h2>
 <p> dbrowcount</p>
+<h2>DESCRIPTION</h2>
 <p> Count the number of rows and write out a new fsdb file with one column (n) and one value: the number of rows. This program is a strict subset of dbcolstats. </p>
 <p> Although there are other ways to get a count of rows (<tt>&quot;dbcolstats&quot;</tt>, or <tt>&quot;dbrowaccumulate -C 1&quot;</tt> and some processing), counting is so common it warrants its own command. (For example, consider how often <tt>&quot;wc -l&quot;</tt> is used in regular shell scripting.) There are some gross and subtle differences, though, in that <tt>&quot;dbrowcount&quot;</tt> doesn&#8217;t require one to specify a column to search, and it also doesn&#8217;t look for and skip null data items.</p>
 <h2>OPTIONS</h2>

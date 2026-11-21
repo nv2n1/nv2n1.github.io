@@ -1,5 +1,4 @@
 ---
-
 title: "syslinux2ansi(1)"
 name: "syslinux2ansi"
 section: "1"
@@ -10,7 +9,9 @@ description: "syslinux2ansi – converts a syslinux-format screen to pc-ansi"
 
 <h2>NAME</h2>
 <p> syslinux2ansi &#8211; converts a syslinux-format screen to pc-ansi</p>
+<h2>SYNOPSIS</h2>
 <p> <code>syslinux2ansi</code> &lt; filename.input &gt; filename.output</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Syslinux2ansi</i> is a filter which converts a screen formatted for syslinux to one compatible with PC ANSI. It will only read from standard in, and has no command line options.</p>
 <h2>BUGS</h2>
 <p> Help and version command line options would be useful. </p>

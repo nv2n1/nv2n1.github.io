@@ -1,5 +1,4 @@
 ---
-
 title: "src2man(1)"
 name: "src2man"
 section: "1"
@@ -10,9 +9,11 @@ description: "src2man – extract man pages from source files."
 
 <h2>NAME</h2>
 <p> <code>src2man </code>&#8211; extract man pages from source files.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 src2man[-n][-d date][-v volume][-r release][srcfile...]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>src2man</code> scans source file <i>srcfile</i>. Only C source files are supported for now. Comments blocks starting by &quot;/** num&quot;, where num is a section number, are converted into a man file, using <code><a href="/docs/linux/man/1-txt2man/">txt2man</a></code>(1). </p>
 <p> The first line of the comment block must contain the name of the manpage, usually the function name, followed by a &quot;-&quot; and a short description. The following lines are the &quot;DESCRIPTION&quot; section content, except if they are in upper case, in which case they define a new section. </p>
 <p> If the next line after a comment block is empty, Then no &quot;SYNOPSIS&quot; section will be generated. Otherwise, <code>src2man</code> will look in the following source lines for a function prototype or a type definion (struct, union, typedef, &#8230;) matching the manpage name, and include it in a &quot;SYNOPSIS&quot; section. This avoids to duplicate the type or function prototype in the comment block. </p>

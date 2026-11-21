@@ -1,5 +1,4 @@
 ---
-
 title: "memcached_behavior_get(3)"
 name: "memcached_behavior_get"
 section: "3"
@@ -11,6 +10,7 @@ description: "memcached_behavior_get – libmemcached Documentation"
 <h2>NAME</h2>
 <p> memcached_behavior_get &#8211; libmemcached Documentation </p>
 <p> Manipulate the behavior of a memcached_st structure.</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
 <dt><code>memcached_behavior_t</code></dt>
@@ -20,6 +20,7 @@ description: "memcached_behavior_get – libmemcached Documentation"
 </dd><dt><code>memcached_return_t memcached_behavior_set(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, <i>memcached_behavior_t</i><i>&nbsp;<wbr>flag</i>, uint64_t<i>&nbsp;<wbr>data</i>)</dt>
 <dd>
 <p> Compile and link with -lmemcached</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <i><a href="/docs/linux/man/3-libmemcached/">libmemcached</a>(3)</i> behavior can be modified by using <i>memcached_behavior_set()</i>. Default behavior is the library strives to be quick and accurate. Some behavior, while being faster, can also result in not entirely accurate behavior (for instance, <code>memcached_set()</code> will always respond with <code>MEMCACHED_SUCCESS</code>). </p>
 <p> <i>memcached_behavior_get()</i> takes a behavior flag and returns whether or not that behavior is currently enabled in the client. </p>
 <p> <i>memcached_behavior_set()</i> changes the value of a particular option of the client. It takes both a flag (listed below) and a value. For simple on or off options you just need to pass in a value of 1. Calls to <i>memcached_behavior_set()</i> will flush and reset all connections.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "rzxtool(1)"
 name: "rzxtool"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-rzxtool/"
 description: "rzxtool – Modify Sinclair ZX Spectrum input recording files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rzxtool &#8211; Modify Sinclair ZX Spectrum input recording files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>rzxtool</code> [-d<i>block number</i>] [-e<i>block number</i>,<i>filename</i>] [-i<i>block number</i>,<i>filename</i>] [-u] <i>rzxfile</i> [<i>outfile</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> rzxtool allows some simple modifications to be made to Sinclair ZX Spectrum input recording files: blocks can be removed, snapshot data can be extracted or snapshots can be inserted into the file. The file can also be uncompressed.</p>
 <h2>OPTIONS</h2>
 <p> -d<i>block number</i></p>

@@ -1,5 +1,4 @@
 ---
-
 title: "asn1_bit_der(3)"
 name: "asn1_bit_der"
 section: "3"
@@ -10,6 +9,7 @@ description: "asn1_bit_der – API function"
 
 <h2>NAME</h2>
 <p> asn1_bit_der &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>
 <p> <code>void asn1_bit_der(const unsigned char * </code><i>str</i><code>, int </code><i>bit_len</i><code>, unsigned char * </code><i>der</i><code>, int * </code><i>der_len</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,6 +22,7 @@ description: "asn1_bit_der – API function"
 <dd> string returned.</dd>
 <dt>int * der_len</dt>
 <dd> number of meaningful bytes of DER (der[0]..der[ans_len-1]).</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Creates a length-value DER encoding for the input data as it would have been for a BIT STRING. The DER encoded data will be copied in <i>der</i> . </p>
 <p> Note that the BIT STRING tag is not included in the output. </p>
 <p> This function does not return any value because it is expected that <i>der_len</i> will contain enough bytes to store the string plus the DER encoding. The DER encoding size can be obtained using <code>asn1_length_der()</code>.</p>

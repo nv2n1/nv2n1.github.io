@@ -1,5 +1,4 @@
 ---
-
 title: "memcached_get_memory_allocators(3)"
 name: "memcached_get_memory_allocators"
 section: "3"
@@ -11,6 +10,7 @@ description: "memcached_get_memory_allocators – libmemcached Documentation"
 <h2>NAME</h2>
 <p> memcached_get_memory_allocators &#8211; libmemcached Documentation </p>
 <p> Manage memory allocator functions</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
 <dt><code>memcached_return_t memcached_set_memory_allocators(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, <i>memcached_malloc_fn</i><i>&nbsp;<wbr>mem_malloc</i>, <i>memcached_free_fn</i><i>&nbsp;<wbr>mem_free</i>, <i>memcached_realloc_fn</i><i>&nbsp;<wbr>mem_realloc</i>, <i>memcached_calloc_fn</i><i>&nbsp;<wbr>mem_calloc</i>, void<i>&nbsp;<wbr>*context</i>)</dt>
@@ -28,6 +28,7 @@ description: "memcached_get_memory_allocators – libmemcached Documentation"
 </dd><dt><code>void * (*memcached_calloc_fn)(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, size_t<i>&nbsp;<wbr>nelem</i>, const size_t<i>&nbsp;<wbr>elsize</i>, void<i>&nbsp;<wbr>*context</i>)</dt>
 <dd>
 <p> Compile and link with -lmemcached</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <a href="/docs/linux/man/3-libmemcached/">libmemcached</a>(3) allows you to specify your own memory allocators, optimized for your application. This enables libmemcached to be used inside of applications that have their own malloc implementation. </p>
 <p> <i>memcached_set_memory_allocators()</i> is used to set the memory allocators used by the memcached instance specified by ptr. Please note that you cannot override only one of the memory allocators, you have to specify a complete new set if you want to override one of them. All of the memory allocation functions should behave as specified in the C99 standard. Specify NULL as all functions to reset them to the default values. </p>
 <p> <i>memcached_get_memory_allocators()</i> is used to get the currently used memory allocators by a mamcached handle. </p>

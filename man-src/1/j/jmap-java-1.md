@@ -1,5 +1,4 @@
 ---
-
 title: "jmap-java-1(1)"
 name: "jmap-java-1"
 section: "1"
@@ -7,9 +6,9 @@ letter: "j"
 url: "/docs/linux/man/1-jmap-java-1/"
 description: "jmap – Memory Map"
 ---
-
 <h2>Name</h2>
 <p> jmap - Memory Map </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
  jmap  [ option ] pid
  jmap  [ option ] executable core
@@ -43,6 +42,7 @@ description: "jmap – Memory Map"
  </p>
  </dd></dl>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> <code>jmap</code> prints shared object memory maps or heap memory details of a given process or core file or a remote debug server. If the given process is running on a 64-bit VM, you may need to specify the <i>-J-d64</i> option, e.g.: </p>
 <pre><code>
  jmap -J-d64 -heap pid 

@@ -1,5 +1,4 @@
 ---
-
 title: "include(3)"
 name: "include"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-include/"
 description: "QuantLib::ProjectedCostFunction – Parameterized cost function."
 ---
 
+<h2 class="name">NAME</h2>
+<p> QuantLib::ProjectedCostFunction &#8211; Parameterized cost function. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/optimization/projectedcostfunction.hpp&gt; </p>
 <p> Inherits <code>QuantLib::CostFunction</code>. </p>
 <h3>Public Member Functions</h3>

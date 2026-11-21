@@ -1,5 +1,4 @@
 ---
-
 title: "dlaev2(3)"
 name: "dlaev2"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlaev2/"
 description: "dlaev2.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlaev2.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlaev2</code> (A, B, C, RT1, RT2, CS1, SN1)<br />
  <i></i><code>DLAEV2</code> computes the eigenvalues and eigenvectors of a 2-by-2 symmetric/Hermitian matrix.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "podofopages(1)"
 name: "podofopages"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-podofopages/"
 description: "podofopages – move and delete pages in a PDF document"
 ---
 
+<h2 class="name">NAME</h2>
+<p> podofopages &#8211; move and delete pages in a PDF document</p>
+<h2>SYNOPSIS</h2>
 <p> <code>podofopages</code> [&#8211;delete] [&#8211;move] [inputfile] [outputfile] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>podofopages</code> is one of the command line tools from the PoDoFo library that provide several useful operations to work with PDF files. It can move and delete pages in a PDF document. </p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;delete NUMBER</code></p>

@@ -1,5 +1,4 @@
 ---
-
 title: "systemd-machine-id-commit(1)"
 name: "systemd-machine-id-commit"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-systemd-machine-id-commit/"
 description: "systemd-machine-id-commit – Commit transient machine ID to /etc/machine-id"
 ---
 
+<h2 class="name">NAME</h2>
+<p> systemd-machine-id-commit &#8211; Commit transient machine ID to /etc/machine-id </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>systemd-machine-id-commit</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>systemd-machine-id-commit</code></p>
 <dd>may be used to write on disk any transient machine ID mounted as a temporary file system in /etc/machine-id at boot time. See <code><a href="/docs/linux/man/5-machine-id/">machine-id</a></code>(5) for more information about this file. </dd>
 <p> This tool will execute no operation if /etc/machine-id doesn&#8217;t contain any valid machine ID, isn&#8217;t mounted as an independent temporary file system, of /etc is read-only. If those conditions are met, it will then write current machine ID to disk and unmount the transient /etc/machine-id file in a race-free manner to ensure that this file is always valid for other processes. </p>

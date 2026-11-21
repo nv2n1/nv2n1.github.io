@@ -1,5 +1,4 @@
 ---
-
 title: "systemd-inhibit(1)"
 name: "systemd-inhibit"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-systemd-inhibit/"
 description: "systemd-inhibit – Execute a program with an inhibition lock taken"
 ---
 
+<h2 class="name">NAME</h2>
+<p> systemd-inhibit &#8211; Execute a program with an inhibition lock taken </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>systemd-inhibit </code><code>[OPTIONS&#8230;]</code><code>[COMMAND]</code><code>[ARGUMENTS&#8230;]</code></dt>
 <dt> <code>systemd-inhibit </code><code>[OPTIONS&#8230;]</code><code> &#8211;list</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>systemd-inhibit</code></p>
 <dd>may be used to execute a program with a shutdown, sleep, or idle inhibitor lock taken. The lock will be acquired before the specified command line is executed and released afterwards. </dd>
 <p> Inhibitor locks may be used to block or delay system sleep and shutdown requests from the user, as well as automatic idle handling of the OS. This is useful to avoid system suspends while an optical disc is being recorded, or similar operations that should not be interrupted. </p>

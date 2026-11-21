@@ -1,5 +1,4 @@
 ---
-
 title: "libtool(1)"
 name: "libtool"
 section: "1"
@@ -10,6 +9,7 @@ description: "libtool – manual page for libtool 2.4.2"
 
 <h2>NAME</h2>
 <p> libtool &#8211; manual page for libtool 2.4.2</p>
+<h2>SYNOPSIS</h2>
 <p> <code>libtool</code> [<i>OPTION</i>]&#8230; [<i>MODE-ARG</i>]&#8230;<br />
  <code>libtool</code> [<i>OPTION</i>]&#8230; <i>&#8211;mode=compile COMPILE-COMMAND</i>&#8230; <i>SOURCEFILE</i><br />
  <code>libtool</code> [<i>OPTION</i>]&#8230; <i>&#8211;mode=link LINK-COMMAND</i>&#8230;<br />
@@ -18,6 +18,7 @@ description: "libtool – manual page for libtool 2.4.2"
  <code>libtool</code> [<i>OPTION</i>]&#8230; <i>&#8211;mode=finish </i>[<i>LIBDIR</i>]&#8230;<br />
  <code>libtool</code> [<i>OPTION</i>]&#8230; <i>&#8211;mode=uninstall RM </i>[<i>RM-OPTION</i>]&#8230; <i>FILE</i>&#8230;<br />
  <code>libtool</code> [<i>OPTION</i>]&#8230; <i>&#8211;mode=clean RM </i>[<i>RM-OPTION</i>]&#8230; <i>FILE</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Provide generalized library-building support services.</p>
 <dl>
 <dt><code>&#8211;config</code></dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "git-diff(1)"
 name: "git-diff"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-git-diff/"
 description: "git-diff – Show changes between commits, commit and working tree, etc"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-diff &#8211; Show changes between commits, commit and working tree, etc </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git diff[&lt;options&gt;][&lt;commit&gt;][--][&lt;path&gt;...] git diff[&lt;options&gt;]-- cached[--merge - base][&lt;commit&gt;][--][&lt;path&gt;...] git diff[&lt;options&gt;][--merge - base]&lt;commit&gt;[&lt;commit&gt;...]&lt;commit&gt;[--][&lt;path&gt;...] git diff[&lt;options&gt;]&lt;commit&gt;...&lt;commit&gt;[--][&lt;path&gt;...] git diff[&lt;options&gt;]&lt;blob&gt;&lt;blob&gt;
         git diff[&lt;options&gt;]-- no - index[--]&lt;path&gt;&lt;path&gt;
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Show changes between the working tree and the index or a tree, changes between the index and a tree, changes between two trees, changes resulting from a merge, changes between two blob objects, or changes between two files on disk. </p>
 <p> <i>git diff</i> [&lt;options&gt;] [&#8211;] [&lt;path&gt;&#8230;]</p>
 <dl>

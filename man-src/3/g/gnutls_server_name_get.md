@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_server_name_get(3)"
 name: "gnutls_server_name_get"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_server_name_get – API function"
 
 <h2>NAME</h2>
 <p> gnutls_server_name_get &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_server_name_get(gnutls_session_t </code><i>session</i><code>, void * </code><i>data</i><code>, size_t * </code><i>data_length</i><code>, unsigned int * </code><i>type</i><code>, unsigned int </code><i>indx</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,6 +24,7 @@ description: "gnutls_server_name_get – API function"
 <dd> will hold the server name indicator type</dd>
 <dt>unsigned int indx</dt>
 <dd> is the index of the server_name</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will allow you to get the name indication (if any), a client has sent. The name indication may be any of the enumeration gnutls_server_name_type_t. </p>
 <p> If <i>type</i> is GNUTLS_NAME_DNS, then this function is to be used by servers that support virtual hosting, and the data will be a null terminated UTF-8 string. </p>
 <p> If <i>data</i> has not enough size to hold the server name GNUTLS_E_SHORT_MEMORY_BUFFER is returned, and <i>data_length</i> will hold the required size. </p>

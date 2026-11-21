@@ -1,5 +1,4 @@
 ---
-
 title: "curl_easy_setopt(3)"
 name: "curl_easy_setopt"
 section: "3"
@@ -10,8 +9,10 @@ description: "curl_easy_setopt – set options for a curl easy handle"
 
 <h2>NAME</h2>
 <p> curl_easy_setopt &#8211; set options for a curl easy handle</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;curl/curl.h&gt; </p>
 <p> CURLcode curl_easy_setopt(CURL *handle, CURLoption option, parameter);</p>
+<h2>DESCRIPTION</h2>
 <p> curl_easy_setopt() is used to tell libcurl how to behave. By using the appropriate options to <i>curl_easy_setopt</i>, you can change libcurl&#8217;s behavior. All options are set with the <i>option</i> followed by a <i>parameter</i>. That parameter can be a <code>long</code>, a <code>function pointer</code>, an <code>object pointer</code> or a <code>curl_off_t</code>, depending on what the specific option expects. Read this manual carefully as bad input values may cause libcurl to behave badly! You can only set one option in each function call. A typical application uses many curl_easy_setopt() calls in the setup phase. </p>
 <p> Options set with this function call are valid for all forthcoming transfers performed using this <i>handle</i>. The options are not in any way reset between transfers, so if you want subsequent transfers with different options, you must change them between the transfers. You can optionally reset all options back to internal default with <i><a href="/docs/linux/man/3-curl_easy_reset/">curl_easy_reset</a>(3)</i>. </p>
 <p> Strings passed to libcurl as &#8216;char *&#8217; arguments, are copied by the library; thus the string storage associated to the pointer argument may be overwritten after curl_easy_setopt() returns. Exceptions to this rule are described in the option details below. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "slasy2(3)"
 name: "slasy2"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-slasy2/"
 description: "slasy2.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> slasy2.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slasy2</code> (LTRANL, LTRANR, ISGN, N1, N2, TL, LDTL, TR, LDTR, B, LDB, SCALE, X, LDX, XNORM, INFO)<br />
  <i></i><code>SLASY2</code> solves the Sylvester matrix equation where the matrices are of order 1 or 2.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pkcs12_set_bag(3)"
 name: "gnutls_pkcs12_set_bag"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_pkcs12_set_bag – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs12_set_bag &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs12.h&gt;</code> </p>
 <p> <code>int gnutls_pkcs12_set_bag(gnutls_pkcs12_t </code><i>pkcs12</i><code>, gnutls_pkcs12_bag_t </code><i>bag</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_pkcs12_set_bag – API function"
 <dd> should contain a gnutls_pkcs12_t structure</dd>
 <dt>gnutls_pkcs12_bag_t bag</dt>
 <dd> An initialized bag</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will insert a Bag into the PKCS12 structure.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

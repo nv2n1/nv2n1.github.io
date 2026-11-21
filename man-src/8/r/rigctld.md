@@ -1,5 +1,4 @@
 ---
-
 title: "rigctld(8)"
 name: "rigctld"
 section: "8"
@@ -7,9 +6,10 @@ letter: "r"
 url: "/docs/linux/man/8-rigctld/"
 description: "rigctld – Hamlib TCP rig control daemon"
 ---
-
 <p>rigctld &#8211; Hamlib TCP rig control daemon </p>
+<h2>SYNOPSIS</h2>
 <p> <code>rigctld</code> [<i>OPTION</i>]...  </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>rigctld</code> program is a NEW <code>Hamlib</code> rig control daemon ready for testing that handles client requests via TCP sockets. This allows multiple user programs to share one radio (this needs testing), except on Win32 where pthreads are not available. Multiple radios can be controlled on different TCP ports by use of multiple <code>rigctld</code> processes. The syntax of the commands are the same as <code>rigctl</code>. It is hoped that <code>rigctld</code> will be especially useful for client authors using languages such as Perl, Python, PHP, and others. </p>
 <p> <code>rigctld</code> communicates to a client through a TCP socket using text commands shared with <code>rigctl</code>. The protocol is simple; commands are sent to <code>rigctld</code> on one line and <code>rigctld</code> responds to &quot;get&quot; commands with the requested values, one per line, when successful, otherwise, it responds with one line &quot;RPRT x&quot;, where x is a negative number indicating the error code. Commands that do not return values respond with the line &quot;RPRT x&quot;, where x is zero when successful, otherwise is a regative number indicating the error code. Each line is terminated with a newline &#8216;\n&#8217; character. This protocol is primarily for use by the <i>NET rigctl</i> (rig model 2)backend. </p>
 <p>A separate <code>Extended Response</code> protocol extends the above behavior by echoing the received command string as a header, any returned values as a key: value pair, and the &quot;RPRT x&quot; string as the end of response marker which includes the <code>Hamlib</code> success or failure value. See the <i>PROTOCOL</i> section for details. Consider using this protocol for clients that will interact with <code>rigctld</code> directly through a TCP socket. </p>

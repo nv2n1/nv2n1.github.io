@@ -1,5 +1,4 @@
 ---
-
 title: "euca-bundle-image(1)"
 name: "euca-bundle-image"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-bundle-image – Prepare an image for use in the cloud"
 
 <h2>NAME</h2>
 <p> euca-bundle-image &#8211; Prepare an image for use in the cloud</p>
+<h2>SYNOPSIS</h2>
 <p> euca-bundle-image [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] <code>-i</code> FILE</p>
 <dl>
 <dt>[-p PREFIX] [-d DIR] <code>-r</code></dt>
 <dd> {i386,x86_64,armhf,ppc,ppc64,ppc64le} [-k FILE] [-c FILE] [&#8211;ec2cert FILE] [-u ACCOUNT] [&#8211;kernel IMAGE] [&#8211;ramdisk IMAGE] [&#8211;bootstrap-url BOOTSTRAP_URL] [-B VIRTUAL1=DEVICE1,VIRTUAL2=DEVICE2,&#8230;] [&#8211;productcodes CODE1,CODE2,&#8230;] [&#8211;image-size IMAGE_SIZE] [&#8211;progress | <code>&#8211;no-progress]</code> [&#8211;region USER [at] REGION] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Prepare an image for use in the cloud</p>
 <h3>optional arguments:</h3>
 <dl>

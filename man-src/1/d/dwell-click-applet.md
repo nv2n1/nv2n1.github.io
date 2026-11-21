@@ -1,5 +1,4 @@
 ---
-
 title: "dwell-click-applet(1)"
 name: "dwell-click-applet"
 section: "1"
@@ -10,7 +9,9 @@ description: "dwell-click-applet – Useful to select click type when using dwel
 
 <h2>NAME</h2>
 <p> dwell-click-applet &#8211; Useful to select click type when using dwell click</p>
+<h2>SYNOPSIS</h2>
 <p> <code>dwell-click-applet</code></p>
+<h2>DESCRIPTION</h2>
 <p> The Dwell Click applet is part of the mousetweaks package. It can be used in conjuction with the &quot;Choose type of click beforehand&quot; mode of the dwell click function that resides in the Accessibility tab of the GNOME Mouse Preferences dialog. By clicking on the items on the Dwell Click applet, the user can select which automatic click type to perform next.</p>
 <h2>BUGS</h2>
 <p> Report bugs to &lt;<a rel="nofollow" href="http://bugzilla.gnome.org/">http://bugzilla.gnome.org/</a>&gt;</p>

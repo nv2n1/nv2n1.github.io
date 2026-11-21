@@ -1,5 +1,4 @@
 ---
-
 title: "aa_fastrender(3)"
 name: "aa_fastrender"
 section: "3"
@@ -10,6 +9,7 @@ description: "aa_fastrender – simple and fast AA-lib rendering function."
 
 <h2>NAME</h2>
 <p> aa_fastrender &#8211; simple and fast AA-lib rendering function.</p>
+<h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>
 <p> void aa_fastrender<br />
  (<br />
@@ -31,6 +31,7 @@ description: "aa_fastrender – simple and fast AA-lib rendering function."
 <dd> Column of bottom right coner of rendered area.</dd>
 <dt><code>int y2</code></dt>
 <dd> Row of bottom right coner of rendered area.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function does the trick of converting the emulated framebuffer into high quality ASCII-art. It is slightly faster and less flexible the aa_render function. </p>
 <p> Note that to see the effect you need to call aa_flush too. </p>
 <p> First call to this function may take a while, because the rendering tables are produced.</p>

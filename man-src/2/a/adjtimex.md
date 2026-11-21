@@ -1,5 +1,4 @@
 ---
-
 title: "adjtimex(2)"
 name: "adjtimex"
 section: "2"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/2-adjtimex/"
 description: "adjtimex, clock_adjtime, ntp_adjtime – tune kernel clock"
 ---
 
+<h2 class="name">NAME</h2>
+<p> adjtimex, clock_adjtime, ntp_adjtime &#8211; tune kernel clock </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/timex.h&gt;
 int adjtimex(struct timex *buf);
 int clock_adjtime(clockid_t clk_id, struct timex *buf);
 int ntp_adjtime(struct timex *buf);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Linux uses David L. Mills&#8217; clock adjustment algorithm (see RFC 5905). The system call <code>adjtimex</code>() reads and optionally sets adjustment parameters for this algorithm. It takes a pointer to a <i>timex</i> structure, updates kernel parameters from (selected) field values, and returns the same structure updated with the current kernel values. This structure is declared as follows: </p>
 <p> struct timex {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;int&nbsp;<wbr>&nbsp;modes;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Mode selector&nbsp;*/<br />

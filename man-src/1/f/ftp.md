@@ -1,5 +1,4 @@
 ---
-
 title: "ftp(1)"
 name: "ftp"
 section: "1"
@@ -8,9 +7,12 @@ url: "/docs/linux/man/1-ftp/"
 description: "tnftp – Internet file transfer program"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>tnftp</code> &#8211; Internet file transfer program </p>
+<h2>SYNOPSIS</h2>
 <p> <code>tnftp</code> [-<code>46AadefginpRtVv?</code> ] [-<code>N </code><i>netrc</i> ] [-<code>o </code><i>output</i> ] [-<code>P </code><i>port</i> ] [-<code>q </code><i>quittime</i> ] [-<code>r </code><i>retry</i> ] [-<code>s </code><i>srcaddr</i> ] [-<code>T </code> <i>dir</i> <i>max</i> [, <i>inc</i> ] ] [-<code>x </code><i>xfersize</i> ] [[<i>user </i><code>@ </code><i>host </i>[<i>port </i>] ] ] [[<i>user </i><code>@</code> ] <i>host </i><code>:</code> [<i>path</i> ] [<code>/</code> ] ] [<code>file:/// </code><i>path</i> ] [<code>ftp://</code> [<i>user</i> [<code>: </code><i>password</i> ] <code>@ </code>] <i>host </i>[<code>: </code><i>port </i>] <code>/ </code><i>path</i> [<code>/</code> ] [<code>;type= </code><i>type</i> ] ] [<code>http://</code> [<i>user</i> [<code>: </code><i>password</i> ] <code>@ </code>] <i>host </i>[<code>: </code><i>port </i>] <code>/ </code><i>path</i> ] [<code>https://</code> [<i>user</i> [<code>: </code><i>password</i> ] <code>@ </code>] <i>host </i>[<code>: </code><i>port </i>] <code>/ </code><i>path</i> ] <i>&#8230;</i><br />
 <code>tnftp</code> &#8211;<code>u </code><i>url file &#8230;</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>tnftp</code> is the user interface to the Internet standard File Transfer Protocol. The program allows a user to transfer files to and from a remote network site. </p>
 <p> The last five arguments will fetch a file using the <code>FTP</code> or <code>HTTP</code> protocols, or by direct copying, into the current directory. This is ideal for scripts. Refer to Sx AUTO-FETCHING FILES below for more information. </p>
 <p> Options may be specified at the command line, or to the command interpreter.</p>

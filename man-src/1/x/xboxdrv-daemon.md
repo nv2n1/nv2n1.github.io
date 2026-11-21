@@ -1,5 +1,4 @@
 ---
-
 title: "xboxdrv-daemon(1)"
 name: "xboxdrv-daemon"
 section: "1"
@@ -10,7 +9,9 @@ description: "xboxdrv-daemon – A simple daemon that automatically launches xbo
 
 <h2>NAME</h2>
 <p> xboxdrv-daemon &#8211; A simple daemon that automatically launches xboxdrv when it detects a controller.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>xboxdrv</code> [OPTION]&#8230; [&#8211;] {XBOXDRV} [ARGS]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd> Display help text and exit.</dd>

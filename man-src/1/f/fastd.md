@@ -1,5 +1,4 @@
 ---
-
 title: "fastd(1)"
 name: "fastd"
 section: "1"
@@ -10,7 +9,9 @@ description: "fastd – Fast and Secure Tunnelling Daemon"
 
 <h2>NAME</h2>
 <p> fastd &#8211; Fast and Secure Tunnelling Daemon</p>
+<h2>SYNOPSIS</h2>
 <p> <code>fastd</code> <i>OPTION</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> fastd is a very small VPN daemon which tunnels IP packets and Ethernet frames over UDP. It supports various modern encryption and authentication schemes and can be used in many different network topologies (1:1, 1:n, meshed).</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "distccmon-text(1)"
 name: "distccmon-text"
 section: "1"
@@ -12,6 +11,7 @@ description: "distccmon-text – Displays current compilation jobs in text form.
 <p> distccmon-text &#8211; Displays current compilation jobs in text form.</p>
 <h2>SYNTAX</h2>
 <p> distccmon-text [DELAY]</p>
+<h2>DESCRIPTION</h2>
 <p> Displays current compilation jobs in text form. distccmon-text must be run on the client machine, with the same setting for <i>DISTCC_DIR</i> (or home directory) as the user running the distcc client.</p>
 <h2>OPTIONS</h2>
 <dl>

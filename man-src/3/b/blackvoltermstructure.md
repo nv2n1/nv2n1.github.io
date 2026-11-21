@@ -1,5 +1,4 @@
 ---
-
 title: "blackvoltermstructure(3)"
 name: "blackvoltermstructure"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-blackvoltermstructure/"
 description: "ql/termstructures/volatility/equityfx/blackvoltermstructure.hpp – Black volatility term structure base classes."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/termstructures/volatility/equityfx/blackvoltermstructure.hpp &#8211; Black volatility term structure base classes. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/voltermstructure.hpp&gt;<br />
  #include &lt;ql/patterns/visitor.hpp&gt; </p>
 <h3>Classes</h3>

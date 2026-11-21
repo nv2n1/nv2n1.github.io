@@ -1,5 +1,4 @@
 ---
-
 title: "ssptri(3)"
 name: "ssptri"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-ssptri/"
 description: "ssptri.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ssptri.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssptri</code> (UPLO, N, AP, IPIV, WORK, INFO)<br />
  <i></i><code>SSPTRI</code></p>

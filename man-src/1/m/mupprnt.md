@@ -1,5 +1,4 @@
 ---
-
 title: "mupprnt(1)"
 name: "mupprnt"
 section: "1"
@@ -13,9 +12,17 @@ url: "/docs/linux/man/1-mupprnt/"
 
  mupprnt - print output from Mup music publisher
 
-mupprnt <i>[mup_options] file</i>
+<h2>SYNOPSIS</h2>
 
-mupprnt provides a way to print Mup output on your printer. The <i>file</i> is Mup input. Any other Mup options can be given, except -C, -E, -f, -F, -l, -m, -M, or -v, which don't produce print output. 
+ 
+
+ mupprnt <i>[mup_options] file</i>
+
+<h2>DESCRIPTION</h2>
+
+ 
+
+ mupprnt provides a way to print Mup output on your printer. The <i>file</i> is Mup input. Any other Mup options can be given, except -C, -E, -f, -F, -l, -m, -M, or -v, which don't produce print output. 
 
  Under UNIX, if the environment variable COPIES is set to a number, that number of copies will be printed. Otherwise only 1 copy will be printed. 
 

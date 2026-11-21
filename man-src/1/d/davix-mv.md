@@ -1,5 +1,4 @@
 ---
-
 title: "davix-mv(1)"
 name: "davix-mv"
 section: "1"
@@ -10,7 +9,9 @@ description: "davix-mv – Rename tool based on libdavix"
 
 <h2>NAME</h2>
 <p> davix-mv &#8211; Rename tool based on libdavix</p>
+<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr>davix-mv&nbsp;<wbr>[options]&#8230; original-url new-url </p>
+<h2>DESCRIPTION</h2>
 <p> <code>davix-mv</code> is a tool to rename/move resources with HTTP, Webdav or REST compatible services.<br />
  The commands can rename/move resources and resources containers. </p>
 <p> davix-mv is powered by libdavix. See <a href="/docs/linux/man/3-libdavix/">libdavix</a>(3) for details. </p>

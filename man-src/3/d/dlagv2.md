@@ -1,5 +1,4 @@
 ---
-
 title: "dlagv2(3)"
 name: "dlagv2"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlagv2/"
 description: "dlagv2.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlagv2.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlagv2</code> (A, LDA, B, LDB, ALPHAR, ALPHAI, BETA, CSL, SNL, CSR, SNR)<br />
  <i></i><code>DLAGV2</code> computes the Generalized Schur factorization of a real 2-by-2 matrix pencil (A,B) where B is upper triangular.</p>

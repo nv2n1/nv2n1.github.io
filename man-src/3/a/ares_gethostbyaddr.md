@@ -1,5 +1,4 @@
 ---
-
 title: "ares_gethostbyaddr(3)"
 name: "ares_gethostbyaddr"
 section: "3"
@@ -10,6 +9,7 @@ description: "ares_gethostbyaddr – Initiate a host query by address"
 
 <h2>NAME</h2>
 <p> ares_gethostbyaddr &#8211; Initiate a host query by address</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ares.h&gt;
 typedef void (*ares_host_callback)(void *arg, int status,
@@ -17,6 +17,7 @@ void ares_gethostbyaddr(ares_channel channel, const void *addr,
 int addrlen, int family, ares_host_callback callback,
 void *arg)
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>ares_gethostbyaddr</code> function initiates a host query by address on the name service channel identified by <i>channel</i>. The parameters <i>addr</i> and <i>addrlen</i> give the address as a series of bytes, and <i>family</i> gives the type of address. When the query is complete or has failed, the ares library will invoke <i>callback</i>. Completion or failure of the query may happen immediately, or may happen during a later call to <i><a href="/docs/linux/man/3-ares_process/">ares_process</a>(3)</i>, <i><a href="/docs/linux/man/3-ares_destroy/">ares_destroy</a>(3)</i> or <i><a href="/docs/linux/man/3-ares_cancel/">ares_cancel</a>(3)</i>. </p>
 <p> The callback argument <i>arg</i> is copied from the <code>ares_gethostbyaddr</code> argument <i>arg</i>. The callback argument <i>status</i> indicates whether the query succeeded and, if not, how it failed. It may have any of the following values:</p>
 <dl>

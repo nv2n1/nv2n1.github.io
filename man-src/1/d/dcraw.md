@@ -1,5 +1,4 @@
 ---
-
 title: "dcraw(1)"
 name: "dcraw"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dcraw/"
 description: "dcraw – command-line decoder for raw digital photos"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dcraw &#8211; command-line decoder for raw digital photos </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dcraw</code> [<i>OPTION</i>]&#8230; [<i>FILE</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>dcraw</code> decodes raw photos, displays metadata, and extracts thumbnails.</p>
 <h2>GENERAL OPTIONS</h2>
 <dl>

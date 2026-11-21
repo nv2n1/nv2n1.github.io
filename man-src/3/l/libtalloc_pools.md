@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-libtalloc_pools/"
 description: "libtalloc_pools – Chapter 5: Memory pools"
 ---
 
+<h2 class="name">NAME</h2>
+<p> libtalloc_pools &#8211; Chapter 5: Memory pools</p>
 <h2>Memory pools</h2>
 <p> Allocation of a new memory is an expensive operation and large programs can contain thousands of calls of malloc() for a single computation, where every call allocates only a very small amount of the memory. This can result in an undesirable slowdown of the application. We can avoid this slowdown by decreasing the number of malloc() calls by using a memory pool. </p>
 <p> A memory pool is a preallocated memory space with a fixed size. If we need to allocate new data we will take the desired amount of the memory from the pool instead of requesting a new memory from the system. This is done by creating a pointer that points inside the preallocated memory. Such a pool must not be reallocated as it would change its location &#8211; pointers that were pointing inside the pool would become invalid. Therefore, a memory pool requires a very good estimate of the required memory space. </p>

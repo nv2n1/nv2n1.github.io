@@ -1,5 +1,4 @@
 ---
-
 title: "numconv(1)"
 name: "numconv"
 section: "1"
@@ -10,7 +9,9 @@ description: "numconv – convert numbers from one number system to another"
 
 <h2>NAME</h2>
 <p> numconv &#8211; convert numbers from one number system to another</p>
+<h2>SYNOPSIS</h2>
 <p> <code>Numconv</code> &lt;options&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> numconv is a filter that converts integers from one number system to another. For example, it can convert from Roman Numerals such as &quot;CCLVI&quot; to ordinary Western numbers such as &quot;256&quot; or from Western numbers to Chinese. The great majority of number systems, both modern and ancient, are supported, including numerous variants. </p>
 <p> If the input number system is &#8216;all&#8217;, the number system will be autodetected. </p>
 <p> <code>numconv</code> is a command line interface to <code>libuninum</code> a library for converting between textual representations of numbers and machine-internal representations. Further information about the conversions performed is available in the documentation for this library.</p>

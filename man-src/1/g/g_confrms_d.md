@@ -1,5 +1,4 @@
 ---
-
 title: "g_confrms_d(1)"
 name: "g_confrms_d"
 section: "1"
@@ -11,7 +10,9 @@ description: "g_confrms – fits two structures and calculates the rmsd"
 <h2>NAME</h2>
 <p> g_confrms &#8211; fits two structures and calculates the rmsd </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>g_confrms</code> <code>-f1</code><i> conf1.gro </i> <code>-f2</code><i> conf2.gro </i> <code>-o</code><i> fit.pdb </i> <code>-n1</code><i> fit1.ndx </i> <code>-n2</code><i> fit2.ndx </i> <code>-no</code><i> match.ndx </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-[no]w</code><i></i> <code>-[no]one</code><i></i> <code>-[no]mw</code><i></i> <code>-[no]pbc</code><i></i> <code>-[no]fit</code><i></i> <code>-[no]name</code><i></i> <code>-[no]label</code><i></i> <code>-[no]bfac</code><i></i></p>
+<h2>DESCRIPTION</h2>
 <p> g_confrms computes the root mean square deviation (RMSD) of two structures after LSQ fitting the second structure on the first one. The two structures do NOT need to have the same number of atoms, only the two index groups used for the fit need to be identical. With <code> -name</code> only matching atom names from the selected groups will be used for the fit and RMSD calculation. This can be useful when comparing mutants of a protein. </p>
 <p> The superimposed structures are written to file. In a <code> .pdb</code> file the two structures will be written as separate models (use <code> rasmol -nmrpdb</code>). Also in a <code> .pdb</code> file, B-factors calculated from the atomic MSD values can be written with <code> -bfac</code>.</p>
 <h2>FILES</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "slapy3(3)"
 name: "slapy3"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-slapy3/"
 description: "slapy3.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> slapy3.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>slapy3</code> (X, Y, Z)<br />
  <i></i><code>SLAPY3</code> returns sqrt(x2+y2+z2).</p>

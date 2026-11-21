@@ -1,5 +1,4 @@
 ---
-
 title: "ck_pr_fence_atomic(3)"
 name: "ck_pr_fence_atomic"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_pr_fence_atomic – enforce partial ordering of atomic read-mod
 <p> <code>ck_pr_fence_atomic</code> &#8211; enforce partial ordering of atomic read-modify-write operations</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_pr.h Ft void Fn ck_pr_fence_atomic void Ft void Fn ck_pr_fence_strict_atomic void</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_pr_fence_atomic function enfores the ordering of any atomic read-modify-write operations relative to the invocation of the function. This function always serve as an implicit compiler barrier. On architectures implementing CK_MD_TSO, this operation only serves as a compiler barrier and no fences are emitted. On architectures implementing CK_MD_PSO and CK_MD_RMO, a store fence is emitted. To force the unconditional emission of a fence, use Fn ck_pr_fence_strict_atomic .</p>
 <h2>EXAMPLE</h2>
 <blockquote>

@@ -1,5 +1,4 @@
 ---
-
 title: "pamditherbw(1)"
 name: "pamditherbw"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-pamditherbw/"
 description: "pamditherbw – dither grayscale image to black and white"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pamditherbw &#8211; dither grayscale image to black and white</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pamditherbw</code> </p>
 <p> [<code>-floyd</code> | <code>-fs</code> | <code>-atkinson</code> | <code>-threshold</code> | <code>-hilbert</code> | <code>-dither8</code> | <code>-d8</code> | <code>-cluster3</code> | <code>-c3</code> | <code>-cluster4</code> | <code>-c4</code> | <code>-cluster8</code> | <code>-c8</code>] </p>
 <p> [<code>-value</code> <i>val</i>] </p>
@@ -15,6 +17,7 @@ description: "pamditherbw – dither grayscale image to black and white"
 <p> [<code>-randomseed=</code><i>integer</i>] </p>
 <p> [<i>pamfile</i>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamditherbw</code> dithers a grayscale image. Dithering means turning each shade of gray into a pattern of black and white pixels that, from a distance, look the same as the gray. </p>
 <p> The input should be a PGM image or a PAM image of tuple type GRAYSCALE. However, <code>pamditherbw</code> doesn&#8217;t check, so if you feed it e.g. a PPM image, it will produce arbitrary results (actually, it just takes the first channel of whatever you give it and treats it as if it represented gray levels). </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "make_absolute_filename(3)"
 name: "make_absolute_filename"
 section: "3"
@@ -10,8 +9,10 @@ description: "make_absolute_filename – Makes an absolute filename from a path 
 
 <h2>NAME</h2>
 <p> make_absolute_filename &#8211; Makes an absolute filename from a path and relative filename. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>char *make_absolute_filename(char *dest, const char *path, const char *filename, int size);</code></p>
+<h2>DESCRIPTION</h2>
 <p> Makes an absolute filename from an absolute path and a relative filename, storing at most `size&#8217; bytes into the `dest&#8217; buffer. This is like calling replace_filename() and then canonicalize_filename(). Example: </p>
 <pre><code>
 char buf[256];

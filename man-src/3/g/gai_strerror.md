@@ -1,5 +1,4 @@
 ---
-
 title: "gai_strerror(3)"
 name: "gai_strerror"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-gai_strerror/"
 description: "getaddrinfo, freeaddrinfo, gai_strerror – network address and service translation"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getaddrinfo, freeaddrinfo, gai_strerror &#8211; network address and service translation </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;netdb.h&gt;
 #include &lt;sys/socket.h&gt;
@@ -22,6 +24,7 @@ const char *gai_strerror(int errcode);
 <p> <code>getaddrinfo</code>(), <code>freeaddrinfo</code>(), <code>gai_strerror</code>():<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Since glibc 2.22:&nbsp;_POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.21 and earlier:&nbsp;_POSIX_C_SOURCE</p>
+<h2>DESCRIPTION</h2>
 <p> Given <i>node</i> and <i>service</i>, which identify an Internet host and a service, <code>getaddrinfo</code>() returns one or more <i>addrinfo</i> structures, each of which contains an Internet address that can be specified in a call to <code><a href="/docs/linux/man/2-bind/">bind</a></code>(2) or <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2). The <code>getaddrinfo</code>() function combines the functionality provided by the <code><a href="/docs/linux/man/3-gethostbyname/">gethostbyname</a></code>(3) and <code><a href="/docs/linux/man/3-getservbyname/">getservbyname</a></code>(3) functions into a single interface, but unlike the latter functions, <code>getaddrinfo</code>() is reentrant and allows programs to eliminate IPv4-versus-IPv6 dependencies. </p>
 <p> The <i>addrinfo</i> structure used by <code>getaddrinfo</code>() contains the following fields: </p>
 <p> struct addrinfo {<br />

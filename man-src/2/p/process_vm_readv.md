@@ -1,5 +1,4 @@
 ---
-
 title: "process_vm_readv(2)"
 name: "process_vm_readv"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-process_vm_readv/"
 description: "process_vm_readv, process_vm_writev – transfer data between process address spaces"
 ---
 
+<h2 class="name">NAME</h2>
+<p> process_vm_readv, process_vm_writev &#8211; transfer data between process address spaces </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/uio.h&gt;
 ssize_t process_vm_readv(pid_t pid,
@@ -28,6 +30,7 @@ ssize_t process_vm_writev(pid_t pid,
 <dl>
 <dt>
 </dt><dd> <code>_GNU_SOURCE</code></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> These system calls transfer data between the address space of the calling process (&quot;the local process&quot;) and the process identified by <i>pid</i> (&quot;the remote process&quot;). The data moves directly between the address spaces of the two processes, without passing through kernel space. </p>
 <p> The <code>process_vm_readv</code>() system call transfers data from the remote process to the local process. The data to be transferred is identified by <i>remote_iov</i> and <i>riovcnt</i>: <i>remote_iov</i> is a pointer to an array describing address ranges in the process <i>pid</i>, and <i>riovcnt</i> specifies the number of elements in <i>remote_iov</i>. The data is transferred to the locations specified by <i>local_iov</i> and <i>liovcnt</i>: <i>local_iov</i> is a pointer to an array describing address ranges in the calling process, and <i>liovcnt</i> specifies the number of elements in <i>local_iov</i>. </p>
 <p> The <code>process_vm_writev</code>() system call is the converse of <code>process_vm_readv</code>()&#8212;it transfers data from the local process to the remote process. Other than the direction of the transfer, the arguments <i>liovcnt</i>, <i>local_iov</i>, <i>riovcnt</i>, and <i>remote_iov</i> have the same meaning as for <code>process_vm_readv</code>(). </p>

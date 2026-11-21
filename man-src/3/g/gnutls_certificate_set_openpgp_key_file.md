@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_certificate_set_openpgp_key_file(3)"
 name: "gnutls_certificate_set_openpgp_key_file"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_certificate_set_openpgp_key_file – API function"
 
 <h2>NAME</h2>
 <p> gnutls_certificate_set_openpgp_key_file &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>
 <p> <code>int gnutls_certificate_set_openpgp_key_file(gnutls_certificate_credentials_t </code><i>res</i><code>, const char * </code><i>certfile</i><code>, const char * </code><i>keyfile</i><code>, gnutls_openpgp_crt_fmt_t </code><i>format</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,6 +22,7 @@ description: "gnutls_certificate_set_openpgp_key_file – API function"
 <dd> the file that contains the secret key.</dd>
 <dt>gnutls_openpgp_crt_fmt_t format</dt>
 <dd> the format of the keys</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This funtion is used to load OpenPGP keys into the GnuTLS credentials structure. The file should contain at least one valid non encrypted subkey.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

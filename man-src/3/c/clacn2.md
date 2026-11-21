@@ -1,5 +1,4 @@
 ---
-
 title: "clacn2(3)"
 name: "clacn2"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-clacn2/"
 description: "clacn2.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> clacn2.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clacn2</code> (N, V, X, EST, KASE, ISAVE)<br />
  <i></i><code>CLACN2</code> estimates the 1-norm of a square matrix, using reverse communication for evaluating matrix-vector products.</p>

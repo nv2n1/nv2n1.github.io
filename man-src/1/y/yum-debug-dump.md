@@ -1,5 +1,4 @@
 ---
-
 title: "yum-debug-dump(1)"
 name: "yum-debug-dump"
 section: "1"
@@ -10,7 +9,9 @@ description: "yum-debug-dump – write system RPM configuration to a debug-dump 
 
 <h2>NAME</h2>
 <p> yum-debug-dump &#8211; write system RPM configuration to a debug-dump file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>yum-debug-dump</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>yum-debug-dump</code> is a program which creates a gzipped file containing a lot of information useful to developers trying to debug a problem. </p>
 <p> By default it will output a file to the current working directory named yum_debug_dump-&lt;hostname&gt;-&lt;time&gt;.txt.gz. This file contains no private information but does contain a complete list of all packages you have installed, all packages available in any repository, important configuration and system information. You can view this file using the &#8216;zless&#8217; command. </p>
 <p> You can use the coresponding program <code>yum-debug-restore</code> to act on this file and restore a set of packages (much like dump/restore). </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ndctl-disable-namespace(1)"
 name: "ndctl-disable-namespace"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-ndctl-disable-namespace/"
 description: "ndctl-disable-namespace – disable the given namespace(s)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ndctl-disable-namespace &#8211; disable the given namespace(s) </p>
+<h2>SYNOPSIS</h2>
 <pre>
 <i>ndctl disable-namespace</i> &lt;namespace&gt; [&lt;options&gt;]
 </pre>
+<h2>DESCRIPTION</h2>
 <p> A REGION, after resolving DPA aliasing and LABEL specified boundaries, surfaces one or more &quot;namespace&quot; devices. The arrival of a &quot;namespace&quot; device currently triggers either the nd_blk or nd_pmem driver to load and register a disk/block device.</p>
 <h2>OPTIONS</h2>
 <p> &lt;namespace&gt;</p>

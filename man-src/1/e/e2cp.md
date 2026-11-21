@@ -1,5 +1,4 @@
 ---
-
 title: "e2cp(1)"
 name: "e2cp"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-e2cp/"
 description: "e2cp – copies files from/to an e2fs filesystem"
 ---
 
+<h2 class="name">NAME</h2>
+<p> e2cp &#8211; copies files from/to an e2fs filesystem </p>
+<h2>SYNOPSIS</h2>
 <p> <code>e2cp</code> [<i>options</i>]<i> files&#8230; dest</i></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>e2cp</code> command copies files to/from an e2fs filesystem from/to the machine&#8217;s filesystem.</p>
 <h2>OPTIONS</h2>
 <p> A single `-&#8216; (dash) can be used instead of a file name to indicate standard input/output.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "nkf(1)"
 name: "nkf"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-nkf/"
 description: "nkf – Network Kanji Filter"
 ---
 
+<h2 class="name">NAME</h2>
+<p> nkf &#8211; Network Kanji Filter </p>
+<h2>SYNOPSIS</h2>
 <p> nkf <code>[-butjnesliohrTVvwWJESZxXFfmMBOcdILg]</code> <code>[</code><i>file &#8230;</i><code>]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>Nkf</code> is a yet another kanji code converter among networks, hosts and terminals. It converts input kanji code to designated kanji code such as <font SIZE="-1">ISO-2022-JP</font>, Shift_JIS, EUC-JP, <font SIZE="-1">UTF-8</font>, <font SIZE="-1">UTF-16</font> or <font SIZE="-1">UTF-32</font>. </p>
 <p> One of the most unique faculty of <code>nkf</code> is the guess of the input kanji encodings. It currently recognizes <font SIZE="-1">ISO-2022-JP</font>, Shift_JIS, EUC-JP, <font SIZE="-1">UTF-8</font>, <font SIZE="-1">UTF-16</font> and <font SIZE="-1">UTF-32</font>. So users needn&#8217;t set the input kanji code explicitly. </p>
 <p> By default, X0201 kana is converted into X0208 kana. For X0201 kana, <font SIZE="-1">SO/SI</font>, <font SIZE="-1">SSO</font> and <font SIZE="-1">ESC-</font>(-I methods are supported. For automatic code detection, nkf assumes no X0201 kana in Shift_JIS. To accept X0201 in Shift_JIS, use <code>-X</code>, <code>-x</code> or <code>-S</code>.</p>

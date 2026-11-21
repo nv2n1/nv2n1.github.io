@@ -1,5 +1,4 @@
 ---
-
 title: "airscan-discover(1)"
 name: "airscan-discover"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-airscan-discover/"
 description: "airscan-discover – Discover sane-airscan compatible scanners"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>airscan-discover</code> &#8211; Discover sane-airscan compatible scanners </p>
+<h2>SYNOPSIS</h2>
 <p> <code>airscan-discover [-h] [-d] [-t]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>airscan-discover</code> is a command-line tool to find eSCL and WSD scanners on a local network </p>
 <p> It uses Avahi to discover DNS-SD devices and its own implementation of WS-Discovery to discover WSD devices. </p>
 <p> On success, it outputs a fragment of sane-airscan configuration file, that can be directly added to <code>/etc/sane.d/airscan.conf</code></p>

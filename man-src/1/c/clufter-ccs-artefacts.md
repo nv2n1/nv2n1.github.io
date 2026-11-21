@@ -1,5 +1,4 @@
 ---
-
 title: "clufter-ccs-artefacts(1)"
 name: "clufter-ccs-artefacts"
 section: "1"
@@ -10,7 +9,9 @@ description: "clufter – ccs-artefacts"
 
 <h2>NAME</h2>
 <p> clufter &#8211; ccs-artefacts</p>
+<h2>SYNOPSIS</h2>
 <p> <code>clufter</code> [<i>&lt;global option&gt; </i>&#8230;] <i>ccs-artefacts </i>[<i>&lt;cmd option </i>&#8230;<i>&gt;</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Output artefacts referenced in the config. in CVS format</p>
 <h2>OPTIONS</h2>
 <dl>

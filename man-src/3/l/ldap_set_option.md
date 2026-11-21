@@ -1,5 +1,4 @@
 ---
-
 title: "ldap_set_option(3)"
 name: "ldap_set_option"
 section: "3"
@@ -8,13 +7,17 @@ url: "/docs/linux/man/3-ldap_set_option/"
 description: "ldap_get_option, ldap_set_option – LDAP option handling routines"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ldap_get_option, ldap_set_option &#8211; LDAP option handling routines </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ldap.h&gt;
 int ldap_get_option(LDAP *ld, int option, void *outvalue);
 int ldap_set_option(LDAP *ld, int option, const void *invalue);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> These routines provide access to options stored either in a LDAP handle or as global options, where applicable. They make use of a neutral interface, where the type of the value either retrieved by <code><a href="/docs/linux/man/3-ldap_get_option/">ldap_get_option</a></code>(3) or set by <code><a href="/docs/linux/man/3-ldap_set_option/">ldap_set_option</a></code>(3) is cast to <code>void *</code>. The actual type is determined based on the value of the <code>option</code> argument. Global options are set/retrieved by passing a NULL LDAP handle. LDAP handles inherit their default settings from the global options in effect at the time the handle is created.</p>
 <dl>
 <dt><code>LDAP_OPT_API_FEATURE_INFO</code></dt>

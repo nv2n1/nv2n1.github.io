@@ -1,5 +1,4 @@
 ---
-
 title: "git-show-merged-branches(1)"
 name: "git-show-merged-branches"
 section: "1"
@@ -10,7 +9,9 @@ description: "git-show-merged-branches – Show merged branches"
 
 <h2>NAME</h2>
 <p> <code>git-show-merged-branches</code> &#8211; Show merged branches</p>
+<h2>SYNOPSIS</h2>
 <p> <code>git-show-merged-branches</code></p>
+<h2>DESCRIPTION</h2>
 <p> Show all branches merged in to current HEAD.</p>
 <h2>EXAMPLES</h2>
 <pre>

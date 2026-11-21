@@ -1,5 +1,4 @@
 ---
-
 title: "sdl-config(1)"
 name: "sdl-config"
 section: "1"
@@ -10,7 +9,9 @@ description: "sdl-config – script to get information about the installed versi
 
 <h2>NAME</h2>
 <p> sdl-config &#8211; script to get information about the installed version of SDL</p>
+<h2>SYNOPSIS</h2>
 <p> <code>sdl-config [~&#8211;prefix[=</code><i>DIR</i>]~] [~&#8211;exec-prefix[=<i>DIR</i>]~] [~&#8211;version~] [~&#8211;cflags~] [~&#8211;libs~] [~&#8211;static-libs~]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>sdl-config</code> is a tool that is used to configure and determine the compiler and linker flags that should be used to compile and link programs, and libraries, and plugins that use SDL. It is also used internally by the m4 macros that are included with SDL.</p>
 <h2>OPTIONS</h2>
 <dl>

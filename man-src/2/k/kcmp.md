@@ -1,5 +1,4 @@
 ---
-
 title: "kcmp(2)"
 name: "kcmp"
 section: "2"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/2-kcmp/"
 description: "kcmp – compare two processes to determine if they share a kernel resource"
 ---
 
+<h2 class="name">NAME</h2>
+<p> kcmp &#8211; compare two processes to determine if they share a kernel resource </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/kcmp.h&gt;
 int kcmp(pid_t pid1, pid_t pid2, int type,
          unsigned long idx1, unsigned long idx2);
 </code></pre>
 <p> <i>Note</i>: There is no glibc wrapper for this system call; see NOTES.</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>kcmp</code>() system call can be used to check whether the two processes identified by <i>pid1</i> and <i>pid2</i> share a kernel resource such as virtual memory, file descriptors, and so on. </p>
 <p> Permission to employ <code>kcmp</code>() is governed by ptrace access mode <code>PTRACE_MODE_READ_REALCREDS</code> checks against both <i>pid1</i> and <i>pid2</i>; see <code><a href="/docs/linux/man/2-ptrace/">ptrace</a></code>(2). </p>
 <p> The <i>type</i> argument specifies which resource is to be compared in the two processes. It has one of the following values:</p>

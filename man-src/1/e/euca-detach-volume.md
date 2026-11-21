@@ -1,5 +1,4 @@
 ---
-
 title: "euca-detach-volume(1)"
 name: "euca-detach-volume"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-detach-volume – Detach a volume from an instance"
 
 <h2>NAME</h2>
 <p> euca-detach-volume &#8211; Detach a volume from an instance</p>
+<h2>SYNOPSIS</h2>
 <p> euca-detach-volume [-i INSTANCE] [-d DEVICE] [-f] [&#8211;show-empty-fields]</p>
 <dl>
 <dt>[-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] VOLUME</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Detach a volume from an instance</p>
 <h3>positional arguments:</h3>
 <dl>

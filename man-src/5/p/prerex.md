@@ -1,5 +1,4 @@
 ---
-
 title: "prerex(5)"
 name: "prerex"
 section: "5"
@@ -7,8 +6,8 @@ letter: "p"
 url: "/docs/linux/man/5-prerex/"
 description: "prerex_format — a format for prerequisite-chart descriptions"
 ---
-
 <p>prerex_format -- a format for prerequisite-chart descriptions </p>
+<h2>DESCRIPTION</h2>
 <p> This manual describes the format of prerequisite-chart descriptions that can be processed by <code>[pdf]latex</code> (normally using a suitable <code>prerex.sty</code>(7) style file) and edited using the <code><a href="/docs/linux/man/1-prerex/">prerex</a></code>(1) interactive editor (or by any conventional text editor).  </p>
 <h2>TERMINOLOGY</h2>
 <p> A prerequisite chart consists of a number of <i>course boxes,</i> linked by <i>arrows.</i> Courses are either <i>half</i> or <i>full,</i> and may be <i>required</i> or <i>optional</i> (or neither). Each course box can contain a course <i>code</i> (upper left corner), a course <i>title</i> (lower half), and <i>timetable</i> information (upper right corner). An arrow can be either a <i>prerequisite </i> (solid), a <i>corequisite </i> (dotted), or <i>recommended</i> (dashed). When a conventional arrow would be inappropriate, a <i>mini </i> course just above a target box can be used.  </p>

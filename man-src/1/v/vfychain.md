@@ -1,5 +1,4 @@
 ---
-
 title: "vfychain(1)"
 name: "vfychain"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-vfychain/"
 description: "vfychain_ – vfychain [options] [revocation options] certfile [[options] certfile] …"
 ---
 
+<h2 class="name">NAME</h2>
+<p> vfychain_ &#8211; vfychain [options] [revocation options] certfile [[options] certfile] &#8230; </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>vfychain</code></dt></dl>
 <h2>STATUS</h2>
 <dd>This documentation is still work in progress. Please contribute to the initial review in m[blue]<code>Mozilla NSS bug 836477</code>m[]<font SIZE="-2">[1]</font></dd>
+<h2>DESCRIPTION</h2>
 <p> The verification Tool, <code>vfychain</code>, verifies certificate chains. <code>modutil</code> can add and delete PKCS #11 modules, change passwords on security databases, set defaults, list module contents, enable or disable slots, enable or disable FIPS 140-2 compliance, and assign default providers for cryptographic operations. This tool can also create certificate, key, and module security database files. </p>
 <p> The tasks associated with security module database management are part of a process that typically also involves managing key databases and certificate databases.</p>
 <h2>OPTIONS</h2>

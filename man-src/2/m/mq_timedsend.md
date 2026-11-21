@@ -1,5 +1,4 @@
 ---
-
 title: "mq_timedsend(2)"
 name: "mq_timedsend"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-mq_timedsend/"
 description: "mq_send, mq_timedsend – send a message to a message queue"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mq_send, mq_timedsend &#8211; send a message to a message queue </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;mqueue.h&gt;
 int mq_send(mqd_t mqdes, const char *msg_ptr,
@@ -24,6 +26,7 @@ int mq_timedsend(mqd_t mqdes, const char *msg_ptr,
 <dl>
 <dt>
 </dt><dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>mq_send</code>() adds the message pointed to by <i>msg_ptr</i> to the message queue referred to by the message queue descriptor <i>mqdes</i>. The <i>msg_len</i> argument specifies the length of the message pointed to by <i>msg_ptr</i>; this length must be less than or equal to the queue&#8217;s <i>mq_msgsize</i> attribute. Zero-length messages are allowed. </p>
 <p> The <i>msg_prio</i> argument is a nonnegative integer that specifies the priority of this message. Messages are placed on the queue in decreasing order of priority, with newer messages of the same priority being placed after older messages with the same priority. See <code><a href="/docs/linux/man/7-mq_overview/">mq_overview</a></code>(7) for details on the range for the message priority. </p>
 <p> If the message queue is already full (i.e., the number of messages on the queue equals the queue&#8217;s <i>mq_maxmsg</i> attribute), then, by default, <code>mq_send</code>() blocks until sufficient space becomes available to allow the message to be queued, or until the call is interrupted by a signal handler. If the <code>O_NONBLOCK</code> flag is enabled for the message queue description, then the call instead fails immediately with the error <code>EAGAIN</code>. </p>

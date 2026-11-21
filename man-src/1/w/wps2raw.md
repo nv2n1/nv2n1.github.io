@@ -1,5 +1,4 @@
 ---
-
 title: "wps2raw(1)"
 name: "wps2raw"
 section: "1"
@@ -10,6 +9,7 @@ description: "wps2raw – debug the conversion library"
 
 <h2>NAME</h2>
 <p> wps2raw &#8211; debug the conversion library</p>
+<h2>SYNOPSIS</h2>
 <p> <code>wps2raw</code> [<i>OPTION</i>] <i>&lt;Works Document&gt;</i></p>
 <h2>OPTIONS</h2>
 <dl>

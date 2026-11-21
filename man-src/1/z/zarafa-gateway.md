@@ -1,5 +1,4 @@
 ---
-
 title: "zarafa-gateway(1)"
 name: "zarafa-gateway"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-zarafa-gateway/"
 description: "zarafa-gateway – Start the Zarafa IMAP/POP3 Gateway."
 ---
 
+<h2 class="name">NAME</h2>
+<p> zarafa-gateway &#8211; Start the Zarafa IMAP/POP3 Gateway. </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>zarafa-gateway</code> [<i>OPTION</i>&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The gateway enables other e-mail clients to connect through POP3 or IMAP to the Zarafa server to read their e-mail. With IMAP, it is also possible to view the contents of other folders and subfolders. The gateway can be configured to listen for POP3, POP3S, IMAP and/or IMAPS. </dd>
 <p> The default settings of the gateway program are defined in <code><a href="/docs/linux/man/5-zarafa-gateway-cfg/">zarafa-gateway.cfg</a></code>(5).</p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "abrt-harvest-vmcore(1)"
 name: "abrt-harvest-vmcore"
 section: "1"
@@ -7,11 +6,22 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-harvest-vmcore/"
 ---
 
-abrt-harvest-vmcore - Converts VMCores to ABRT problems 
+<h2 class="name">NAME</h2>
+ 
 
-<i>abrt-harvest-vmcore</i>
+ abrt-harvest-vmcore - Converts VMCores to ABRT problems 
 
-This script is meant to be run once at system startup after abrtd is up and running. It moves all vmcore directories in /var/crash (which are presumably created by kdump) to abrtd spool directory. 
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <i>abrt-harvest-vmcore</i>
+
+<h2>DESCRIPTION</h2>
+
+ 
+
+ This script is meant to be run once at system startup after abrtd is up and running. It moves all vmcore directories in /var/crash (which are presumably created by kdump) to abrtd spool directory. 
 
  The goal is to let abrtd notice and process them as new problem data dirs.
 

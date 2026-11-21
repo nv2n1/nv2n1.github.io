@@ -1,5 +1,4 @@
 ---
-
 title: "pbmtext(1)"
 name: "pbmtext"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pbmtext/"
 description: "pbmtext – render text into a bitmap"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pbmtext &#8211; render text into a bitmap </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pbmtext</code> [<code>-font</code> <i>fontfile</i>] [<code>-builtin</code> <i>fontname</i>] [<code>-space</code> <i>pixels</i>] [<code>-lspace</code> <i>pixels</i>] [<i>text</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> Takes the specified text, either a single line from the command line or multiple lines from standard input, and renders it into a bitmap. </p>
 <p> In the bitmap, each line of input is a line of output. Formatting characters such as newline have no effect on the formatting; like any unprintable character, they turn into spaces. </p>
 <p> The bitmap is just wide enough for the longest line of text, plus margins, and just high enough to contain the lines of text, plus margins. The left and right margins are twice the width of the widest character in the font; the top and bottom margins are the height of the tallest character in the font. But if the text is only one line, all the margins are half of this. </p>

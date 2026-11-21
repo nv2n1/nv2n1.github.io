@@ -1,5 +1,4 @@
 ---
-
 title: "transmission-show(1)"
 name: "transmission-show"
 section: "1"
@@ -10,7 +9,9 @@ description: "transmission-show – command-line utility to show .torrent file m
 
 <h2>NAME</h2>
 <p> <code>transmission-show</code> &#8211; command-line utility to show .torrent file metadata</p>
+<h2>SYNOPSIS</h2>
 <p> -words [-<code>h</code> ] [-<code>m</code> ] [-<code>s</code> ] [<i>torrentfile</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> shows BitTorrent .torrent file metadata</p>
 <h2>OPTIONS</h2>
 <dl>

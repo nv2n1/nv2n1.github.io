@@ -1,5 +1,4 @@
 ---
-
 title: "x2sys_init(1)"
 name: "x2sys_init"
 section: "1"
@@ -10,8 +9,10 @@ description: "x2sys_init – Initialize a new x2sys track database"
 
 <h2>NAME</h2>
 <p> x2sys_init &#8211; Initialize a new x2sys track database</p>
+<h2>SYNOPSIS</h2>
 <p> <code>x2sys_init</code> <i>TAG</i> <i>deffile</i> [ <code>c</code>|<code>f</code>|<code>g</code>|<code>e</code> ] [ <i>suffix</i> ] [ ] [ <code>d</code>|<code>g</code> ] [ <i>dx</i>[/<i>dy</i>] ] [ <code>d</code>|<code>s</code><i>unit</i> ] [ <i>region</i> ] [ [<i>level</i>] ] [ <code>t</code>|<code>d</code><i>gap</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>x2sys_init</code> is the starting point for anyone wishing to use x2sys; it initializes a set of data bases that are particular to one kind of track data. These data, their associated data bases, and key parameters are given a short-hand notation called an x2sys TAG. The TAG keeps track of settings such as file format, whether the data are geographic or not, and the binning resolution for track indices. Running <code>x2sys_init</code> is a prerequisite to running any of the other x2sys programs, such as <code>x2sys_binlist</code>, which will create a crude representation of where each data track go within the domain and which observations are available; this information serves as input to <code>x2sys_put</code> which updates the track data base. Then, <code>x2sys_get</code> can be used to find which tracks and data are available inside a given region. With that list of tracks you can use <code>x2sys_cross</code> to calculate track crossovers, use <code>x2sys_report</code> to report crossover statistics or <code>x2sys_list</code> to pull out selected crossover information that <code>x2sys_solve</code> can use to determine track-specific systematic corrections. These corrections may be used with <code>x2sys_datalist</code> to extract corrected data values for use in subsequent work. Because you can run <code>x2sys_init</code> you <i>must</i> set the environmental parameter X2SYS_HOME to a directory where you have write permission, which is where x2sys can keep track of your settings.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

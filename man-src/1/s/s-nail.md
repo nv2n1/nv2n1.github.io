@@ -1,5 +1,4 @@
 ---
-
 title: "s-nail(1)"
 name: "s-nail"
 section: "1"
@@ -7,8 +6,9 @@ letter: "s"
 url: "/docs/linux/man/1-s-nail/"
 description: "S-nail [v14.9.23] – send and receive Internet mail"
 ---
-
+<h2 class="name">NAME</h2>
 <p> <code>S-nail [v14.9.23]</code> - send and receive Internet mail </p>
+<h2>SYNOPSIS</h2>
 <p> <code>s-nail</code> [-<code>DdEFinv~#</code> ] [-<code>: </code><i>spec</i> ] [-<code>A </code><i>account</i> ] [: <code>-a </code><i>attachment </i><code>:</code> ] [: <code>-b </code><i>bcc-addr </i><code>:</code> ] [: <code>-C </code><i>field: body </i><code>:</code> ] [: <code>-c </code><i>cc-addr </i><code>:</code> ] [-<code>M </code><i>type | -</i><code>m </code><i>file | -</i><code>q </code><i>file | -</i><code>t</code> ] [-<code>r </code><i>from-addr</i> ] [: <code>-S&nbsp; </code><i>var </i>[<code>= </code><i>value </i><code>: </code>] ] [-<code>s </code><i>subject</i> ] [: <code>-T </code><i>field: addr </i><code>:</code> ] [: <code>-X </code><i>cmd </i><code>:</code> ] [: <code>-Y </code><i>cmd </i><code>:</code> ] [-<code>.</code> ] : <i>to-addr </i><code>:</code> [-<code>-~ : </code><i>mta-option </i><code>:</code> ] </p>
 <p> <br />
 <code>s-nail</code> [-<code>DdEeHiNnRv~#</code> ] [-<code>: </code><i>spec</i> ] [-<code>A </code><i>account</i> ] [: <code>-C </code><i>field: body </i><code>:</code> ] [-<code>L </code><i>spec</i> ] [-<code>r </code><i>from-addr</i> ] [: <code>-S&nbsp; </code><i>var </i>[<code>= </code><i>value </i><code>: </code>] ] [-<code>u </code><i>user</i> ] [: <code>-X </code><i>cmd </i><code>:</code> ] [: <code>-Y </code><i>cmd </i><code>:</code> ] [-<code>-~ : </code><i>mta-option </i><code>:</code> ] <br />
@@ -16,6 +16,7 @@ description: "S-nail [v14.9.23] – send and receive Internet mail"
 <p> <br />
 <code>s-nail</code> -<code>h | --help</code> <br />
 <code>s-nail</code> -<code>V | --version</code>  </p>
+<h2>DESCRIPTION</h2>
 <blockquote><p> <code>Note:</code> S-nail (S-nail) will see major changes in v15.0 (circa 2022). Some backward incompatibilities cannot be avoided. Sx COMMANDS change to Sx Shell-style argument quoting , and shell metacharacters will become (more) meaningful. Some commands accept new syntax today via <code>wysh</code> ( Sx Command modifiers ) Behaviour is flagged [v15-compat] and [no v15-compat], <code>set ting</code> <i>v15-compat</i> ( Sx INTERNAL VARIABLES will choose new behaviour when applicable; giving it a value makes <code>wysh</code> an implied default. [Obsolete] flags what will vanish. </p>
 <p> <code>Warning!</code> <i>v15-compat</i> (with value) will be a default in v14.10.0! </p>
 </blockquote>

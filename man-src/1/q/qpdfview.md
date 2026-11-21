@@ -1,5 +1,4 @@
 ---
-
 title: "qpdfview(1)"
 name: "qpdfview"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-qpdfview/"
 description: "qpdfview – tabbed document viewer"
 ---
 
+<h2 class="name">NAME</h2>
+<p> qpdfview &#8211; tabbed document viewer </p>
+<h2>SYNOPSIS</h2>
 <p> <code>qpdfview</code> <i>[options] [&#8211;] [file[#page]] [file[#src:name:line:column]] &#8230;</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>qpdfview</code> is a simple viewer for document files in the portable document format (PDF). It uses the Poppler library for rendering and the Qt toolkit for its interface.</p>
 <h2>OPTIONS</h2>
 <dl>

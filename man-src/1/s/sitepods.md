@@ -1,5 +1,4 @@
 ---
-
 title: "sitepods(1)"
 name: "sitepods"
 section: "1"
@@ -7,9 +6,14 @@ letter: "s"
 url: "/docs/linux/man/1-sitepods/"
 ---
 
-sitepods - print out the paths to the modules that this site added 
+<h2 class="name">NAME</h2>
+ 
 
-This program shows the paths to module pods that are in the <i>site_perl</i> directories.
+ sitepods - print out the paths to the modules that this site added 
+
+<h2>DESCRIPTION</h2>
+
+ This program shows the paths to module pods that are in the <i>site_perl</i> directories.
 
 <h2>EXAMPLES</h2>
 

@@ -1,5 +1,4 @@
 ---
-
 title: "testsolv(1)"
 name: "testsolv"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-testsolv/"
 description: "testsolv – run a libsolv testcase through the solver"
 ---
 
+<h2 class="name">NAME</h2>
+<p> testsolv &#8211; run a libsolv testcase through the solver </p>
+<h2>SYNOPSIS</h2>
 <p> <code>testsolv</code> [<i>OPTIONS</i>] <i>TESTCASE</i></p>
+<h2>DESCRIPTION</h2>
 <p> The testsolv tools can be used to run a testcase. Testcases can either be manually created to test specific features, or they can be written by libsolv&#8217;s testcase_write function. This is useful to evaluate bug reports about the solver. </p>
 <p> <code>-v</code></p>
 <dl>

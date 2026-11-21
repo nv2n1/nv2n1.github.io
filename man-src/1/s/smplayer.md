@@ -1,5 +1,4 @@
 ---
-
 title: "smplayer(1)"
 name: "smplayer"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-smplayer/"
 description: "SMPlayer – The best GUI frontend for MPlayer"
 ---
 
+<h2 class="name">NAME</h2>
+<p> SMPlayer &#8211; The best GUI frontend for MPlayer </p>
+<h2>SYNOPSIS</h2>
 <p> <code>smplayer</code> <i>[-minigui</i>] [<i>-mpcgui</i>] [<i>-defaultgui</i>] [<i>-config-path &lt;directory&gt;</i>] [<i>-send-action &lt;action_name&gt;</i>] [<i>-actions &lt;action_list&gt;</i>] [<i>[-no]-close-at-end</i>] [<i>[-no]-fullscreen</i>] [<i>-sub &lt;subtitle_file&gt;</i>] [<i>-pos &lt;x&gt; &lt;y&gt;</i>] [<i>-size &lt;width&gt; &lt;height&gt;</i>] [<i>-add-to-playlist</i>] [<i>-disable-server] [-help|&#8211;help|-h|-?</i>] [<i>&lt;media1&gt;</i>] [<i>&lt;media2&gt;</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt>SMPlayer is a GUI media player based on Qt, using <code><a href="/docs/linux/man/1-mplayer/">mplayer</a></code>(1) as its backend.</dt>
 <dd></dd></dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "razor-report(1)"
 name: "razor-report"
 section: "1"
@@ -7,16 +6,23 @@ letter: "r"
 url: "/docs/linux/man/1-razor-report/"
 ---
 
-&quot;razor-report&quot; - Razor Reporting Agent 
+<h2 class="name">NAME</h2>
+ 
 
-<pre>
+ &quot;razor-report&quot; - Razor Reporting Agent 
+
+<h2>SYNOPSIS</h2>
+
+ <pre>
     razor-report [options]  file_with_mail_in_rfc822_format
     $ cat mail | razor-report
     $ razor-report ./mail 
     $ razor-report -d ./mail
 </pre>
 
-<tt>&quot;razor-report&quot;</tt> is the Razor Reporting Agent which is used for reporting spam messages to a Razor Nomination Server. <tt>&quot;razor-report&quot;</tt> should be generally called from a <font SIZE="-1">MUA,</font> although there are no restrictions on invoking it from the command-line. <tt>&quot;razor-report&quot;</tt> is a filter, which means that spam messages should be piped through it. By default, <tt>&quot;razor-report&quot;</tt> backgrounds and detaches itself from the control terminal at start-up. 
+<h2>DESCRIPTION</h2>
+
+ <tt>&quot;razor-report&quot;</tt> is the Razor Reporting Agent which is used for reporting spam messages to a Razor Nomination Server. <tt>&quot;razor-report&quot;</tt> should be generally called from a <font SIZE="-1">MUA,</font> although there are no restrictions on invoking it from the command-line. <tt>&quot;razor-report&quot;</tt> is a filter, which means that spam messages should be piped through it. By default, <tt>&quot;razor-report&quot;</tt> backgrounds and detaches itself from the control terminal at start-up. 
 
  If <tt>&quot;razor-report&quot;</tt> is passed more than one mail, it will report each against the database. Please use this with caution, we don't want the database filled up with mails incorrectly identified as spam. <tt>&quot;razor-report&quot;</tt> supports mbox-formatted files with 1 or more mails in them as well as files containing a single <font SIZE="-1">RFC 822 </font>(non-mbox) mail. More than one file may be present on the command line, can be either a non-mbox or mbox in any order. 
 

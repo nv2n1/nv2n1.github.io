@@ -1,5 +1,4 @@
 ---
-
 title: "cla_gbrcond_c(3)"
 name: "cla_gbrcond_c"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cla_gbrcond_c/"
 description: "cla_gbrcond_c.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cla_gbrcond_c.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>cla_gbrcond_c</code> (TRANS, N, KL, KU, AB, LDAB, AFB, LDAFB, IPIV, C, CAPPLY, INFO, WORK, RWORK)<br />
  <i></i><code>CLA_GBRCOND_C</code> computes the infinity norm condition number of op(A)*inv(diag(c)) for general banded matrices.</p>

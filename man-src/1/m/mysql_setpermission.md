@@ -1,5 +1,4 @@
 ---
-
 title: "mysql_setpermission(1)"
 name: "mysql_setpermission"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mysql_setpermission/"
 description: "mysql_setpermission – interactively set permissions in grant tables"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mysql_setpermission &#8211; interactively set permissions in grant tables </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysql_setpermission [</code><i>options</i><code>]</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>mysql_setpermission</code></p>
 <dd>is a Perl script that was originally written and contributed by Luuk de Boer. It interactively sets permissions in the MariaDB grant tables. <code>mysql_setpermission</code> is written in Perl and requires that the DBI and DBD::mysql Perl modules be installed. </dd>
 <p> Invoke <code>mysql_setpermission</code> like this: </p>

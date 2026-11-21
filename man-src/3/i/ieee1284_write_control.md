@@ -1,5 +1,4 @@
 ---
-
 title: "ieee1284_write_control(3)"
 name: "ieee1284_write_control"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-ieee1284_write_control/"
 description: "ieee1284_read_control, ieee1284_write_control, ieee1284_frob_control, ieee1284_do_nack_handshake – manipulate control lines"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ieee1284_read_control, ieee1284_write_control, ieee1284_frob_control, ieee1284_do_nack_handshake &#8211; manipulate control lines </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ieee1284.h&gt;
 </code></pre>
@@ -16,6 +18,7 @@ description: "ieee1284_read_control, ieee1284_write_control, ieee1284_frob_contr
 <dt> <code>void ieee1284_write_control(struct parport&nbsp;<wbr>*</code><i>port</i><code>, unsigned char&nbsp;<wbr></code><i>ct</i><code>);</code></dt>
 <dt> <code>void ieee1284_frob_control(struct parport&nbsp;<wbr>*</code><i>port</i><code>, unsigned char&nbsp;<wbr></code><i>mask</i><code>, unsigned char&nbsp;<wbr></code><i>val</i><code>);</code></dt>
 <dt> <code>int ieee1284_do_nack_handshake(struct parport&nbsp;<wbr>*</code><i>port</i><code>, unsigned char&nbsp;<wbr></code><i>ct_before</i><code>, unsigned char&nbsp;<wbr></code><i>ct_after</i><code>, struct timeval&nbsp;<wbr>*</code><i>timeout</i><code>);</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>There are four control lines, three of which are usually inverted on PC-style ports. Where they differ, libieee1284 operates on the IEEE 1284 values, not the PC-style inverted values. The control lines are represented by the following enumeration: </dd>
 <dl>
 <dt>

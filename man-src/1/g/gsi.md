@@ -1,5 +1,4 @@
 ---
-
 title: "gsi(1)"
 name: "gsi"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-gsi/"
 description: "gsi – Gambit-C Scheme Interpreter and Compiler"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gsi &#8211; Gambit-C Scheme Interpreter and Compiler </p>
+<h2>SYNOPSIS</h2>
 <p> <code>gsi </code> [ &#8211;<code>:</code><i>arg</i>,&#8230; ] [ <code>-f</code> ] [ <code>-v</code> ] [[-] [ <code>-e</code> ] [ <i>file</i> ]]&#8230;<br />
  <code>gsc </code> [<i>options</i>] [<i>files</i>] </p>
 <p> <code>gsc-script, gsi-script, scheme-ieee-1178-1990, scheme-r4rs, scheme-srfi-0, six</code>, and <code>six-script</code>: currently synonyms for <code>gsi</code>. </p>
 <p> <code>scheme-r5rs</code> is registered in the Debian alternatives system and can be configured to point at <code>gsi</code>. </p>
+<h2>DESCRIPTION</h2>
 <p> This manual page briefly documents the <code>gsi</code> and <code>gsc</code> commands. </p>
 <p> The <code>Gambit-C</code> programming system is a full implementation of the Scheme language which conforms to the R4RS, R5RS, and IEEE Scheme standards. It consists of two main programs: <code>gsi</code>, the Gambit Scheme interpreter, and <code>gsc</code>, the Gambit Scheme compiler. The interpreter provides an interactive environment with a debugger, while the compiler can produce stand-alone executables or modules which can be linked or loaded at run time. Interpreted code and compiled code can be freely mixed. C modules can be linked with Scheme modules. </p>
 <p> The interpreter is executed in <code>interactive mode</code> when no file or `-&#8216; or `-e&#8217; option is given on the command line. When at least one file or `-&#8216; or `-e&#8217; option is present the interpreter is executed in <code>batch mode</code>. </p>

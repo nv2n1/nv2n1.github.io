@@ -1,5 +1,4 @@
 ---
-
 title: "git-cpan-import(1)"
 name: "git-cpan-import"
 section: "1"
@@ -7,9 +6,14 @@ letter: "g"
 url: "/docs/linux/man/1-git-cpan-import/"
 ---
 
-git-cpan-import - Import a module into a git repository 
+<h2 class="name">NAME</h2>
+ 
 
-<pre>
+ git-cpan-import - Import a module into a git repository 
+
+<h2>SYNOPSIS</h2>
+
+ <pre>
     # takes any string CPANPLUS handles:
     % git cpan-import Foo::Bar
     % git cpan-import A/AU/AUTHORID/Foo-Bar-0.03.tar.gz
@@ -19,7 +23,9 @@ git-cpan-import - Import a module into a git repository
     git cpan-import
 </pre>
 
-This command is used internally by <tt>&quot;git-cpan-init&quot;</tt>, <tt>&quot;git-cpan-update&quot;</tt> and <tt>&quot;git-backpan-init&quot;</tt>. 
+<h2>DESCRIPTION</h2>
+
+ This command is used internally by <tt>&quot;git-cpan-init&quot;</tt>, <tt>&quot;git-cpan-update&quot;</tt> and <tt>&quot;git-backpan-init&quot;</tt>. 
 
  This command takes a tarball, extracts it, and imports it into the repository. 
 

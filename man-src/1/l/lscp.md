@@ -1,5 +1,4 @@
 ---
-
 title: "lscp(1)"
 name: "lscp"
 section: "1"
@@ -10,7 +9,9 @@ description: "lscp – list NILFS2 checkpoints"
 
 <h2>NAME</h2>
 <p> lscp &#8211; list NILFS2 checkpoints</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lscp</code> [<i>options</i>] [<i>device</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>lscp</code> is a utility for displaying checkpoints or snapshots of the NILFS2 file system found in <i>device</i>. When <i>device</i> is omitted, <i>/proc/mounts</i> is examined to find a NILFS2 file system. </p>
 <p> This command will fail if the <i>device</i> has no active mounts of a NILFS2 file system.</p>
 <h2>OPTIONS</h2>

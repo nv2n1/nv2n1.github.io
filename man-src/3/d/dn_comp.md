@@ -1,5 +1,4 @@
 ---
-
 title: "dn_comp(3)"
 name: "dn_comp"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dn_comp/"
 description: "res_ninit, res_nclose, res_nquery, res_nsearch, res_nquerydomain, res_nmkquery, res_nsend, res_init, res_query, res_search, res_querydomain, res_mkquery, res_send, dn_comp, dn_expand – resolver rou..."
 ---
 
+<h2 class="name">NAME</h2>
+<p> res_ninit, res_nclose, res_nquery, res_nsearch, res_nquerydomain, res_nmkquery, res_nsend, res_init, res_query, res_search, res_querydomain, res_mkquery, res_send, dn_comp, dn_expand &#8211; resolver routines </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;arpa/nameser.h&gt;
 #include &lt;netinet/in.h&gt;
@@ -61,6 +63,7 @@ int res_send(const unsigned char *msg, int msglen,
              unsigned char *answer, int anslen);
 </code></pre>
 <p> Link with <i>-lresolv</i>.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Note:</code> This page is incomplete (various resolver functions provided by glibc are not described) and likely out of date. </p>
 <p> The functions described below make queries to and interpret the responses from Internet domain name servers. </p>
 <p> The API consists of a set of more modern, reentrant functions and an older set of nonreentrant functions that have been superseded. The traditional resolver interfaces such as <code>res_init</code>() and <code>res_query</code>() use some static (global) state stored in the <i>_res</i> structure, rendering these functions non-thread-safe. BIND 8.2 introduced a set of new interfaces <code>res_ninit</code>(), <code>res_nquery</code>(), and so on, which take a <i>res_state</i> as their first argument, so you can use a per-thread resolver state. </p>

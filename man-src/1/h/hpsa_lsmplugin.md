@@ -1,5 +1,4 @@
 ---
-
 title: "hpsa_lsmplugin(1)"
 name: "hpsa_lsmplugin"
 section: "1"
@@ -10,6 +9,7 @@ description: "hpsa_lsmplugin — LibstorageMgmt HP SmartArray plugin"
 
 <h2>NAME</h2>
 <p> hpsa_lsmplugin &#8212; LibstorageMgmt HP SmartArray plugin </p>
+<h2>DESCRIPTION</h2>
 <p> LibstorageMgmt hpsa plugin allows user to manage HP SmartArray via vendor tool <code>hpssacli</code>[1]. The &#8216;hpsa_lsmplugin&#8217; executable file is for libStorageMgmt daemon to execute when client user specifies hpsa plugin in the URI. </p>
 <h2>URI</h2>
 <p> To use this plugin, users should set their URI to this format: </p>

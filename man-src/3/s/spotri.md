@@ -1,5 +1,4 @@
 ---
-
 title: "spotri(3)"
 name: "spotri"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-spotri/"
 description: "spotri.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> spotri.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>spotri</code> (UPLO, N, A, LDA, INFO)<br />
  <i></i><code>SPOTRI</code></p>

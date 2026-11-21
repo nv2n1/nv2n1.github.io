@@ -1,5 +1,4 @@
 ---
-
 title: "mkfifo(1)"
 name: "mkfifo"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mkfifo/"
 description: "mkfifo – make FIFOs (named pipes)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mkfifo &#8211; make FIFOs (named pipes) </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mkfifo</code> [<i>,OPTION/</i>]&#8230; <i>,NAME/</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Create named pipes (FIFOs) with the given NAMEs. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>

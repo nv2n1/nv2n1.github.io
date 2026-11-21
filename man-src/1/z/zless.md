@@ -1,5 +1,4 @@
 ---
-
 title: "zless(1)"
 name: "zless"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-zless/"
 description: "zless – file perusal filter for crt viewing of compressed text"
 ---
 
+<h2 class="name">NAME</h2>
+<p> zless &#8211; file perusal filter for crt viewing of compressed text </p>
+<h2>SYNOPSIS</h2>
 <p> <code>zless</code> [ name &#8230; ]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Zless</i> is a filter which allows examination of compressed or plain text files one screenful at a time on a soft-copy terminal. It is the equivalent of setting the environment variable LESSOPEN to &#8216;|gzip -cdfq &#8212; %s&#8217;, and the environment variable LESSMETACHARS to &#8216;&lt;space&gt;&lt;tab&gt;&lt;newline&gt;;*?&quot;()&lt;&gt;[|&amp;^`#\$%=~&#8217;, and then running <i>less</i>. However, enough people seem to think that having the command <i>zless</i> available is important to be worth providing it.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-zmore/">zmore</a>(1), <a href="/docs/linux/man/1-less/">less</a>(1)</p>

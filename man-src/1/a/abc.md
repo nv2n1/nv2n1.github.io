@@ -1,5 +1,4 @@
 ---
-
 title: "abc(1)"
 name: "abc"
 section: "1"
@@ -10,7 +9,9 @@ description: "abc – sequential logic synthesis and formal verification"
 
 <h2>NAME</h2>
 <p> abc &#8211; sequential logic synthesis and formal verification</p>
+<h2>SYNOPSIS</h2>
 <p> <code>abc</code> [<i>OPTIONS</i>] <i>FILE</i></p>
+<h2>DESCRIPTION</h2>
 <p> ABC is a growing software system for synthesis and verification of binary sequential logic circuits appearing in synchronous hardware designs. ABC combines scalable logic optimization based on And-Inverter Graphs (AIGs), optimal-delay DAG-based technology mapping for look-up tables and standard cells, and innovative algorithms for sequential synthesis and verification. </p>
 <p> ABC provides an experimental implementation of these algorithms and a programming environment for building similar applications. Future development will focus on improving the algorithms and making most of the packages stand-alone. This will allow the user to customize ABC for their needs as if it were a toolbox rather than a complete tool.</p>
 <h2>OPTIONS</h2>

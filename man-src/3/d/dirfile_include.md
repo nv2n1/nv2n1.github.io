@@ -1,5 +1,4 @@
 ---
-
 title: "dirfile_include(3)"
 name: "dirfile_include"
 section: "3"
@@ -10,9 +9,11 @@ description: "dirfile_include — add a format file fragment to a dirfile"
 
 <h2>NAME</h2>
 <p> dirfile_include &#8212; add a format file fragment to a dirfile</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
 <dl>
 <dt> <code>int dirfile_include(DIRFILE *</code><i>dirfile</i><code>, const char *</code><i>include_file</i><code>,</code> <code>int </code><i>parent_fragment</i><code>, unsigned long </code><i>flags</i><code>);</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>dirfile_include</code>() adds the format file fragment specified by the path <i>include_file</i> to the specified dirfile, possibly creating the fragment. This occurs as if, in the existing fragment indexed by <i>parent_fragment</i>, the following directive were present:</dd>
 <dl>
 <dt>

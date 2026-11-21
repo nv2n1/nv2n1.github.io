@@ -1,5 +1,4 @@
 ---
-
 title: "ibv_alloc_parent_domain(3)"
 name: "ibv_alloc_parent_domain"
 section: "3"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/3-ibv_alloc_parent_domain/"
 description: "ibv_alloc_parent_domain(), ibv_dealloc_pd() – allocate and deallocate the parent domain object"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ibv_alloc_parent_domain(), ibv_dealloc_pd() &#8211; allocate and deallocate the parent domain object </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 struct ibv_pd *ibv_alloc_parent_domain(struct ibv_context *context, structibv_parent_domain_init_attr *attr);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>ibv_alloc_parent_domain()</code> allocates a parent domain object for the RDMA device context <i>context</i>. </p>
 <p> The parent domain object extends the normal protection domain with additional objects, such as a thread domain. </p>
 <p> A parent domain is completely interchangeable with the <i>struct ibv_pd</i> used to create it, and can be used as an input argument to any function accepting a <i>struct ibv_pd.</i> </p>

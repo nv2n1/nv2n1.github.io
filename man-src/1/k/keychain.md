@@ -1,5 +1,4 @@
 ---
-
 title: "keychain(1)"
 name: "keychain"
 section: "1"
@@ -10,7 +9,9 @@ description: "keychain – re-use ssh-agent and/or gpg-agent between logins"
 
 <h2>NAME</h2>
 <p> keychain &#8211; re-use ssh-agent and/or gpg-agent between logins</p>
+<h2>SYNOPSIS</h2>
 <p> keychain&nbsp;<wbr>[&nbsp;<wbr>-hkQqV&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;clear &#8211;help &#8211;ignore-missing &#8211;noask &#8211;nocolor &#8211;nogui &#8211;nolock &#8211;quick &#8211;quiet &#8211;version&nbsp;<wbr>] [&nbsp;<wbr>&#8211;agents&nbsp;<wbr><i>list</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;attempts&nbsp;<wbr><i>num</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;dir&nbsp;<wbr><i>dirname</i>&nbsp;<wbr>] [&nbsp;<wbr>&#8211;host&nbsp;<wbr><i>name</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;lockwait&nbsp;<wbr><i>seconds</i>&nbsp;<wbr>] [&nbsp;<wbr>&#8211;stop&nbsp;<wbr><i>which</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>&#8211;timeout&nbsp;<wbr><i>minutes</i>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>keys&#8230;&nbsp;<wbr>]</p>
+<h2>DESCRIPTION</h2>
 <p> keychain is a manager for ssh-agent, typically run from ~/.bash_profile. It allows your shells and cron jobs to share a single ssh-agent process. By default, the ssh-agent started by keychain is long-running and will continue to run, even after you have logged out from the system. If you want to change this behavior, take a look at the &#8211;clear and &#8211;timeout options, described below. </p>
 <p> When keychain is run, it checks for a running ssh-agent, otherwise it starts one. It saves the ssh-agent environment variables to ~/.keychain/${<font SIZE="-1">HOSTNAME</font>}-sh, so that subsequent logins and non-interactive shells such as cron jobs can source the file and make passwordless ssh connections. In addition, when keychain runs, it verifies that the key files specified on the command-line are known to ssh-agent, otherwise it loads them, prompting you for a password if necessary. </p>
 <p> Keychain also supports gpg-agent in the same ways that ssh-agent is supported. By default keychain attempts to start all available agents but will fall back to only gpg-agent or only ssh-agent if either is unavailable. You can specifically limit keychain using the &#8211;agents option. </p>

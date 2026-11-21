@@ -1,5 +1,4 @@
 ---
-
 title: "rigmem(1)"
 name: "rigmem"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-rigmem/"
 description: "rigmem – backup and restore memory of radio transceivers and receivers"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rigmem &#8211; backup and restore memory of radio transceivers and receivers </p>
+<h2>SYNOPSIS</h2>
 <p> <code>rigmem</code> [<i>OPTION</i>]&#8230; [<i>COMMAND</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Backup and restore memory of radio transceivers and receivers. <code>rigmem</code> accepts <i>commands</i> from the command line only. </p>
 <p> Keep in mind that <code>Hamlib</code> is BETA level software. While a lot of backend libraries lack complete rig support, the basic functions are usually well supported. The API may change without publicized notice, while an advancement of the minor version (e.g. 1.1.x to 1.2.x) indicates such a change. </p>
 <p> Please report bugs and provide feedback at the e-mail address given in the REPORTING BUGS section. Patches and code enhancements are also welcome.</p>

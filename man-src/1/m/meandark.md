@@ -1,5 +1,4 @@
 ---
-
 title: "meandark(1)"
 name: "meandark"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-meandark/"
 description: "meandark – CCD dark-frame composition"
 ---
 
+<h2 class="name">NAME</h2>
+<p> meandark &#8211; CCD dark-frame composition</p>
+<h2>SYNOPSIS</h2>
 <p> <code>meandark </code><i>[options] source_file &#8230;</i> </p>
+<h2>DESCRIPTION</h2>
 <p> The Meandark program compose a set of dark-fields and performs one dark-field called master-dark. It applies the robust median algorithm to the corresponding pixels to get the resulting value. Applying this function, you can achieve high quality correction frame to reduce the noise. </p>
 <p> All source frames must be in FITS format and of same dimensions. Frames of the same exposition duration should be used. The output file is in FITS format too. </p>
 <h2>OPTIONS</h2>

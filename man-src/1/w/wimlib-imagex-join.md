@@ -1,5 +1,4 @@
 ---
-
 title: "wimlib-imagex-join(1)"
 name: "wimlib-imagex-join"
 section: "1"
@@ -10,7 +9,9 @@ description: "wimlib-imagex-join – Join split WIMs into a standalone one-part 
 
 <h2>NAME</h2>
 <p> wimlib-imagex-join &#8211; Join split WIMs into a standalone one-part WIM</p>
+<h2>SYNOPSIS</h2>
 <p> <code>wimlib-imagex join</code> [<i>OPTION</i>&#8230;] <i>OUT_WIMFILE</i> <i>SPLIT_WIM_PART</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Joins the <i>SPLIT_WIM_PARTs</i> into a standalone one-part WIM <i>OUT_WIMFILE</i>. This command is also available as simply <code>wimjoin</code> if the appropriate hard link or batch file has been installed. </p>
 <p> All parts of the split WIM must be specified. You probably want to do so using a shell wildcard. </p>
 <p> <code>wimlib-imagex join</code> can join both non-pipable and pipable split WIMs.</p>

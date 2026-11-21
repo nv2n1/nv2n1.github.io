@@ -1,5 +1,4 @@
 ---
-
 title: "autoinst(1)"
 name: "autoinst"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-autoinst/"
 description: "autoinst – wrapper around the LCDF TypeTools, for installing and using OpenType fonts in LaTeX."
 ---
 
+<h2 class="name">NAME</h2>
+<p> autoinst &#8211; wrapper around the LCDF TypeTools, for installing and using OpenType fonts in LaTeX. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>autoinst</code> <i>-help</i> </p>
 <p> <code>autoinst</code> [<i>options</i>] <code>font(s)</code></p>
+<h2>DESCRIPTION</h2>
 <p> Eddie Kohler&#8217;s <i></i><font SIZE="-1"><i>LCDF</i></font><i> TypeTools</i> are superb tools for installing OpenType fonts in LaTeX, but they can be hard to use: they need many, often long, command lines and don&#8217;t generate the <i>fd</i> and <i>sty</i> files LaTeX needs. <code>autoinst</code> simplifies the use of the <i>TypeTools</i> for font installation by generating and executing all commands for <i>otftotfm</i>, and by creating and installing all necessary <i>fd</i> and <i>sty</i> files. </p>
 <p> Given a family of font files (in <i>otf</i> or <i>ttf</i> format), <code>autoinst</code> will create several LaTeX font families:</p>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "curl_easy_recv(3)"
 name: "curl_easy_recv"
 section: "3"
@@ -10,8 +9,10 @@ description: "curl_easy_recv – receives raw data on an \"easy\" connection"
 
 <h2>NAME</h2>
 <p> curl_easy_recv &#8211; receives raw data on an &quot;easy&quot; connection</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;curl/easy.h&gt;</code> </p>
 <p> <code>CURLcode curl_easy_recv( CURL *</code><i>curl</i><code>, void *</code><i>buffer</i><code>,</code> <code>size_t </code><i>buflen</i><code>, size_t *</code><i>n</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> This function receives raw data from the established connection. You may use it together with <i><a href="/docs/linux/man/3-curl_easy_send/">curl_easy_send</a>(3)</i> to implement custom protocols using libcurl. This functionality can be particularly useful if you use proxies and/or SSL encryption: libcurl will take care of proxy negotiation and connection set-up. </p>
 <p> <code>buffer</code> is a pointer to your buffer that will get the received data. <code>buflen</code> is the maximum amount of data you can get in that buffer. The variable <code>n</code> points to will receive the number of received bytes. </p>
 <p> To establish the connection, set <code>CURLOPT_CONNECT_ONLY</code> option before calling <i><a href="/docs/linux/man/3-curl_easy_perform/">curl_easy_perform</a>(3)</i>. Note that <i><a href="/docs/linux/man/3-curl_easy_recv/">curl_easy_recv</a>(3)</i> does not work on connections that were created without this option. </p>

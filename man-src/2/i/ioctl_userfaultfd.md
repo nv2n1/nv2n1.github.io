@@ -1,5 +1,4 @@
 ---
-
 title: "ioctl_userfaultfd(2)"
 name: "ioctl_userfaultfd"
 section: "2"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/2-ioctl_userfaultfd/"
 description: "ioctl_userfaultfd – create a file descriptor for handling page faults in user space"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ioctl_userfaultfd &#8211; create a file descriptor for handling page faults in user space </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/ioctl.h&gt;
 int ioctl(int fd, int cmd, ...);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Various <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) operations can be performed on a userfaultfd object (created by a call to <code><a href="/docs/linux/man/2-userfaultfd/">userfaultfd</a></code>(2)) using calls of the form: </p>
 <p> ioctl(fd, cmd, argp); In the above, <i>fd</i> is a file descriptor referring to a userfaultfd object, <i>cmd</i> is one of the commands listed below, and <i>argp</i> is a pointer to a data structure that is specific to <i>cmd</i>. </p>
 <p> The various <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) operations are described below. The <code>UFFDIO_API</code>, <code>UFFDIO_REGISTER</code>, and <code>UFFDIO_UNREGISTER</code> operations are used to <i>configure</i> userfaultfd behavior. These operations allow the caller to choose what features will be enabled and what kinds of events will be delivered to the application. The remaining operations are <i>range</i> operations. These operations enable the calling application to resolve page-fault events.</p>

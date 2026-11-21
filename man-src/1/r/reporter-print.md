@@ -1,5 +1,4 @@
 ---
-
 title: "reporter-print(1)"
 name: "reporter-print"
 section: "1"
@@ -7,11 +6,22 @@ letter: "r"
 url: "/docs/linux/man/1-reporter-print/"
 ---
 
-reporter-print - Prints problem information to standard output or FILE. 
+<h2 class="name">NAME</h2>
+ 
 
-<i>reporter-print</i> [-v] [-d DIR] [-o FILE] [-a yes/no] [-r]
+ reporter-print - Prints problem information to standard output or FILE. 
 
-The tool reads problem directory DIR and prints its text representation to stdout or to a specified FILE.
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <i>reporter-print</i> [-v] [-d DIR] [-o FILE] [-a yes/no] [-r]
+
+<h2>DESCRIPTION</h2>
+
+ 
+
+ The tool reads problem directory DIR and prints its text representation to stdout or to a specified FILE.
 
 <h3>Integration with ABRT events</h3>
 

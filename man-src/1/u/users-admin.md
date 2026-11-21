@@ -1,5 +1,4 @@
 ---
-
 title: "users-admin(1)"
 name: "users-admin"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-users-admin/"
 description: "users-admin – Users Administration Tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> users-admin &#8211; Users Administration Tool </p>
+<h2>SYNOPSIS</h2>
 <p> <code>users-admin</code> [<i>OPTION&#8230;</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>users-admin</code> is part of the GNOME system tools, a set of tools to easily access and manage system configuration. </p>
 <p> <code>users-admin</code> allows you add, delete and modify the existing users and groups in your system.</p>
 <h2>OPTIONS</h2>

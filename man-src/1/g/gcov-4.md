@@ -1,5 +1,4 @@
 ---
-
 title: "gcov-4(1)"
 name: "gcov-4"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-gcov-4/"
 description: "gcov – coverage testing tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gcov &#8211; coverage testing tool </p>
+<h2>SYNOPSIS</h2>
 <p> gcov [<code>-v</code>|<code>&#8211;version</code>] [<code>-h</code>|<code>&#8211;help</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>-a</code>|<code>&#8211;all-blocks</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>-b</code>|<code>&#8211;branch-probabilities</code>]<br />
@@ -22,6 +24,7 @@ description: "gcov – coverage testing tool"
 &nbsp;<wbr>&nbsp;<wbr>[<code>-s</code>|<code>&#8211;source-prefix</code>&nbsp;<wbr><i>directory</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>-d</code>|<code>&#8211;display-progress</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr><i>files</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>gcov</code> is a test coverage program. Use it in concert with <font SIZE="-1">GCC</font> to analyze your programs to help create more efficient, faster running code and to discover untested parts of your program. You can use <code>gcov</code> as a profiling tool to help discover where your optimization efforts will best affect your code. You can also use <code>gcov</code> along with the other profiling tool, <code>gprof</code>, to assess which parts of your code use the greatest amount of computing time. </p>
 <p> Profiling tools help you analyze your code&#8217;s performance. Using a profiler such as <code>gcov</code> or <code>gprof</code>, you can find out some basic performance statistics, such as:</p>
 <dl>

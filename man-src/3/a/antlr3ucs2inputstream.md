@@ -1,5 +1,4 @@
 ---
-
 title: "antlr3ucs2inputstream(3)"
 name: "antlr3ucs2inputstream"
 section: "3"
@@ -8,7 +7,10 @@ url: "/docs/linux/man/3-antlr3ucs2inputstream/"
 description: "src/antlr3ucs2inputstream.c –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> src/antlr3ucs2inputstream.c &#8211; </p>
 <p> Base functions to initialize and manipulate a UCS2 input stream.</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3input.h">antlr3input.h</a>&gt; </p>
 <h3>Functions</h3>
 <p> static void <code>antlr3UCS2Consume</code> (<code>pANTLR3_INT_STREAM</code> is)<br />

@@ -1,5 +1,4 @@
 ---
-
 title: "gsm_option(3)"
 name: "gsm_option"
 section: "3"
@@ -11,14 +10,18 @@ url: "/docs/linux/man/3-gsm_option/"
 
  gsm_option --- customizing the GSM 06.10 implementation
 
-#include &quot;gsm.h&quot; 
+<h2>SYNOPSIS</h2>
+
+ #include &quot;gsm.h&quot; 
 
  int gsm_option(handle, option, valueP); 
  gsm handle; 
  int option; 
  int * valueP;
 
-The gsm library is an implementation of the final draft GSM 06.10 standard for full-rate speech transcoding, a lossy speech compression algorithm. 
+<h2>DESCRIPTION</h2>
+
+ The gsm library is an implementation of the final draft GSM 06.10 standard for full-rate speech transcoding, a lossy speech compression algorithm. 
 
  The gsm_option() function can be used to set and query various options or flags that are not needed for regular GSM 06.10 encoding or decoding, but might be of interest in special cases. 
 

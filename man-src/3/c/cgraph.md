@@ -1,5 +1,4 @@
 ---
-
 title: "cgraph(3)"
 name: "cgraph"
 section: "3"
@@ -10,6 +9,7 @@ description: "libcgraph – abstract graph library"
 
 <h2>NAME</h2>
 <p> <code>libcgraph</code> &#8211; abstract graph library</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;graphviz/cgraph.h&gt;
 </code></pre>
@@ -113,6 +113,7 @@ void agerrorf(char *fmt, &#8230;);<br />
 void agwarningf(char *fmt, &#8230;);<br />
 int agerrors(void);<br />
 agusererrf agseterrf(agusererrf);</p>
+<h2>DESCRIPTION</h2>
 <p> Libcgraph supports graph programming by maintaining graphs in memory and reading and writing graph files. Graphs are composed of nodes, edges, and nested subgraphs. These graph objects may be attributed with string name-value pairs and programmer-defined records (see Attributes). </p>
 <p> All of Libcgraph&#8217;s global symbols have the prefix <code>ag</code> (case varying).</p>
 <h2>GRAPH AND SUBGRAPHS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "holland_cvmysqlsv(1)"
 name: "holland_cvmysqlsv"
 section: "1"
@@ -10,7 +9,9 @@ description: "holland_cvmysqlsv – Holland Addon for CommVault Support"
 
 <h2>NAME</h2>
 <p> holland_cvmysqlsv &#8211; Holland Addon for CommVault Support</p>
+<h2>SYNOPSIS</h2>
 <p> holland_cvmysqlsv [&#8211;config-file|-c &lt;config-file&gt;]</p>
+<h2>DESCRIPTION</h2>
 <p> holland_cvmysqlsv is a wrapper script that is called by the commvault backup system. This script runs the backup subcommand with no arguments.</p>
 <h2>OPTIONS</h2>
 <dl>

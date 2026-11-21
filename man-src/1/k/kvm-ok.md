@@ -1,5 +1,4 @@
 ---
-
 title: "kvm-ok(1)"
 name: "kvm-ok"
 section: "1"
@@ -8,7 +7,9 @@ url: "/docs/linux/man/1-kvm-ok/"
 description: "kvm-ok – determine if this system is capable of running hardware accelerated KVM virtual machines (ie, possesses Virtualization Technology)"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>kvm-ok</code> &#8211; determine if this system is capable of running hardware accelerated KVM virtual machines (ie, possesses Virtualization Technology)</p>
+<h2>DESCRIPTION</h2>
 <p> <code>kvm-ok</code> is a program that will determine if the locate system can host hardware accelerated KVM virtual machines. </p>
 <p> The program will first determine if <i>/proc/cpuinfo</i> contains the flags indicating that the CPU has the Virtualization Technology (VT) capability. </p>
 <p> Next, it will check if the <i>/dev/kvm</i> device exists. </p>

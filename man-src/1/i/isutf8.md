@@ -1,5 +1,4 @@
 ---
-
 title: "isutf8(1)"
 name: "isutf8"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-isutf8/"
 description: "isutf8 – check whether files are valid UTF-8"
 ---
 
+<h2 class="name">NAME</h2>
+<p> isutf8 &#8211; check whether files are valid UTF-8 </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>isutf8</code> [<code>-hqliv</code>] [<code>&#8211;help</code>] [<code>&#8211;quiet</code>] [<code>&#8211;list</code>] [<code>&#8211;invert</code>] [<code>&#8211;verbose</code>] [[<i>file</i>&#8230;]]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>isutf8</code></p>
 <dd>checks whether files are syntactically valid UTF-8. Input is either files named on the command line, or the standard input. Notices about files with invalid UTF-8 are printed to standard output.</dd>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "cmake-gui(1)"
 name: "cmake-gui"
 section: "1"
@@ -16,6 +15,7 @@ description: "cmake-gui - CMake GUI. USAGE cmake - gui[options] cmake - gui[opti
 <pre><code>
 cmake - gui[options] cmake - gui[options]&lt;path - to - source&gt; cmake - gui[options]&lt;path - to - existing - build&gt;
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The &quot;cmake-gui&quot; executable is the CMake GUI. Project configuration settings may be specified interactively. Brief instructions are provided at the bottom of the window when the program is running. </p>
 <p> CMake is a cross-platform build system generator. Projects specify their build process with platform-independent CMake listfiles included in each directory of a source tree with the name CMakeLists.txt. Users build a project by using CMake to generate a build system for a native tool on their platform. </p>
 <h2>OPTIONS</h2>

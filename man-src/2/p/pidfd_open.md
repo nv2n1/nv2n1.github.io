@@ -1,5 +1,4 @@
 ---
-
 title: "pidfd_open(2)"
 name: "pidfd_open"
 section: "2"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/2-pidfd_open/"
 description: "pidfd_open – obtain a file descriptor that refers to a process"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pidfd_open &#8211; obtain a file descriptor that refers to a process </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/types.h&gt;
 int pidfd_open(pid_t pid, unsigned int flags);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>pidfd_open</code>() system call creates a file descriptor that refers to the process whose PID is specified in <i>pid</i>. The file descriptor is returned as the function result; the close-on-exec flag is set on the file descriptor. </p>
 <p> The <i>flags</i> argument is reserved for future use; currently, this argument must be specified as 0.</p>
 <h2>RETURN VALUE</h2>

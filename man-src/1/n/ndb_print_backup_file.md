@@ -1,5 +1,4 @@
 ---
-
 title: "ndb_print_backup_file(1)"
 name: "ndb_print_backup_file"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-ndb_print_backup_file/"
 description: "ndb_print_backup_file – print NDB backup file contents"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ndb_print_backup_file &#8211; print NDB backup file contents </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ndb_print_backup_file </code><i>file_name</i></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>ndb_print_backup_file</code></p>
 <dd>obtains diagnostic information from a cluster backup file. </dd>
 <p> <code>Usage</code>: </p>

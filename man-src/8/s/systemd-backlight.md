@@ -1,5 +1,4 @@
 ---
-
 title: "systemd-backlight(8)"
 name: "systemd-backlight"
 section: "8"
@@ -7,11 +6,12 @@ letter: "s"
 url: "/docs/linux/man/8-systemd-backlight/"
 description: "systemd-backlight [at] .service, systemd-backlight – Load and save the display backlight brightness at boot and shutdown"
 ---
-
 <p>systemd-backlight [at] .service, systemd-backlight &#8211; Load and save the display backlight brightness at boot and shutdown </p>
+<h2>SYNOPSIS</h2>
 <p>systemd-backlight [at] .service </p>
 <p>/lib/systemd/systemd-backlight save [backlight|leds]:DEVICE </p>
 <p>/lib/systemd/systemd-backlight load [backlight|leds]:DEVICE  </p>
+<h2>DESCRIPTION</h2>
 <p>systemd-backlight [at] .service is a service that restores the display backlight brightness at early boot and saves it at shutdown. On disk, the backlight brightness is stored in /var/lib/systemd/backlight/. During loading, if the udev property <code>ID_BACKLIGHT_CLAMP</code> is not set to false, the brightness is clamped to a value of at least 1 or 5% of maximum brightness, whichever is greater. This restriction will be removed when the kernel allows user space to reliably set a brightness value which does not turn off the display.  </p>
 <h2>KERNEL COMMAND LINE</h2>
 <p>systemd-backlight understands the following kernel command line parameter: </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "euca-associate-dhcp-options(1)"
 name: "euca-associate-dhcp-options"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-associate-dhcp-options – Associate a DHCP option set with a
 
 <h2>NAME</h2>
 <p> euca-associate-dhcp-options &#8211; Associate a DHCP option set with a VPC</p>
+<h2>SYNOPSIS</h2>
 <p> euca-associate-dhcp-options <code>-c</code> VPC [&#8211;show-empty-fields] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] DHCPOPTS</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Associate a DHCP option set with a VPC</p>
 <h3>positional arguments:</h3>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "png2icns(1)"
 name: "png2icns"
 section: "1"
@@ -10,7 +9,9 @@ description: "png2icns – convert png images to Mac OS icns files"
 
 <h2>NAME</h2>
 <p> png2icns &#8211; convert png images to Mac OS icns files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>png2icns</code> file.icns <i>file1.png</i> [<i>file2.png</i> &#8230; <i>fileN.png</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> png2icns imports one or more png images and converts them to an icns file</p>
 <h2>EXAMPLES</h2>
 <p> png2icns icon.icns big.png small.png # Convert big.png and small.png to icon.icns</p>

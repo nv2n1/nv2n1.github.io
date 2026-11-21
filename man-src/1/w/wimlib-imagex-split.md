@@ -1,5 +1,4 @@
 ---
-
 title: "wimlib-imagex-split(1)"
 name: "wimlib-imagex-split"
 section: "1"
@@ -10,7 +9,9 @@ description: "wimlib-imagex-split – Split a WIM into multiple parts"
 
 <h2>NAME</h2>
 <p> wimlib-imagex-split &#8211; Split a WIM into multiple parts</p>
+<h2>SYNOPSIS</h2>
 <p> <code>wimlib-imagex split</code> <i>WIMFILE</i> <i>SPLIT_WIM_PART_1</i> <i>PART_SIZE</i> [<i>OPTION&#8230;</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Splits <i>WIMFILE</i> into parts with size at most <i>PART_SIZE</i> mebibytes, with the first part having the name <i>SPLIT_WIM_PART_1</i> and the other parts having names numbered in order of the parts. This command is also available as simply <code>wimsplit</code> if the appropriate hard link or batch file has been installed. </p>
 <p> <code>wimlib-imagex split</code> can split both non-pipable and pipable WIMs.</p>
 <h2>OPTIONS</h2>

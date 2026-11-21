@@ -1,5 +1,4 @@
 ---
-
 title: "global(1)"
 name: "global"
 section: "1"
@@ -10,6 +9,7 @@ description: "global – print the locations of specified object."
 
 <h2>NAME</h2>
 <p> global &#8211; print the locations of specified object.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>global</code> [-aGilnqrstTvx][-e] <i>pattern</i><br />
  <code>global</code> -c[qrsv] <i>prefix</i><br />
  <code>global</code> -f[anqrstvx] <i>files</i><br />
@@ -18,6 +18,7 @@ description: "global – print the locations of specified object."
  <code>global</code> -P[aGilnoOqtvx][-e] <i>pattern</i><br />
  <code>global</code> -p[qrv]<br />
  <code>global</code> -u[qv] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>Global</code> find the locations of specified object in C, C++, Yacc, Java, PHP and Assembly source files. <code>Global</code> can treat a source tree, that is, a directory that has sub-directories and source files as a project. You can get the relative path of objects from anywhere within the project. <code>Global</code> can locate not only object definitions but also object references and other symbols. </p>
 <p> In advance of using this command, you must execute <code><a href="/docs/linux/man/1-gtags/">gtags</a></code>(1) at the root directory of the project to make tag files. Then you can execute this command at anywhere in the project.</p>
 <h2>COMMANDS</h2>

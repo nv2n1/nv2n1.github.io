@@ -1,5 +1,4 @@
 ---
-
 title: "glade(1)"
 name: "glade"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-glade/"
 description: "glade – Create GTK+ user interfaces"
 ---
 
+<h2 class="name">NAME</h2>
+<p> glade &#8211; Create GTK+ user interfaces </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>glade </code><code>[OPTION&#8230;]</code><code>[FILE&#8230;]</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>glade</code></p>
 <dd>is a tool to create or edit user interfaces for GTK+ or GNOME applications. It saves the user interface descriptions in xml files which can be read by the GtkBuilder API that is part of GTK+.</dd>
 <h2>OPTIONS</h2>

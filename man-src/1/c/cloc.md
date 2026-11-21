@@ -1,5 +1,4 @@
 ---
-
 title: "cloc(1)"
 name: "cloc"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-cloc/"
 description: "cloc – Count, and compute differences of, lines of source code and comments."
 ---
 
+<h2 class="name">NAME</h2>
+<p> cloc &#8211; Count, and compute differences of, lines of source code and comments. </p>
+<h2>SYNOPSIS</h2>
 <pre>
   cloc [options] &lt;FILE|DIR&gt; ...
 </pre>
+<h2>DESCRIPTION</h2>
 <p> Count, or compute differences of, physical lines of source code in the given files (may be archives such as compressed tarballs or zip files) and/or recursively below the given directories. It is written entirely in Perl, using only modules from the standard distribution.</p>
 <h2>OPTIONS</h2>
 <h3>Input Options</h3>

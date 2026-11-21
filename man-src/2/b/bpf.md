@@ -1,5 +1,4 @@
 ---
-
 title: "bpf(2)"
 name: "bpf"
 section: "2"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/2-bpf/"
 description: "bpf – perform a command on an extended BPF map or program"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bpf &#8211; perform a command on an extended BPF map or program </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/bpf.h&gt;
 int bpf(int cmd, union bpf_attr *attr, unsigned int size);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>bpf</code>() system call performs a range of operations related to extended Berkeley Packet Filters. Extended BPF (or eBPF) is similar to the original (&quot;classic&quot;) BPF (cBPF) used to filter network packets. For both cBPF and eBPF programs, the kernel statically analyzes the programs before loading them, in order to ensure that they cannot harm the running system. </p>
 <p> eBPF extends cBPF in multiple ways, including the ability to call a fixed set of in-kernel helper functions (via the <code>BPF_CALL</code> opcode extension provided by eBPF) and access shared data structures such as eBPF maps.</p>
 <h3>Extended BPF Design/Architecture</h3>

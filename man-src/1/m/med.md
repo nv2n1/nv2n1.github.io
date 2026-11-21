@@ -1,5 +1,4 @@
 ---
-
 title: "med(1)"
 name: "med"
 section: "1"
@@ -10,7 +9,9 @@ description: "med – NCAR CGM metafile frame editor"
 
 <h2>NAME</h2>
 <p> med &#8211; NCAR CGM metafile frame editor</p>
+<h2>SYNOPSIS</h2>
 <p> <code>med</code> [ <code>-e</code><i> command</i> ]* [ <code>-f</code><i> sfilename</i> ] [ <code>-l</code><i> local_dir</i> ] [ <code>-V</code> ] [ <i>filename</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>med </code> is a frame-level, metafile editor designed to resemble syntactically <font SIZE="-1">UNIX&#8217;s </font> <code><a href="/docs/linux/man/1-sed/">sed</a></code>(1) and <code><a href="/docs/linux/man/1-ed/">ed</a>(1).</code> <code>med </code> operates on a copy of <i>filename</i>, called a buffer, and overwrites a file only when you issue the <code>w </code> (write) command. <code>med </code> provides line oriented editing commands to display or delete frames from the buffer, to move, copy or merge frames within the buffer, or to write frames from and read frames into the buffer. By default <code>med</code> reads in commands from standard input.</p>
 <h2>OPTIONS</h2>
 <dl>

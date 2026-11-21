@@ -1,5 +1,4 @@
 ---
-
 title: "ccls(1)"
 name: "ccls"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-ccls/"
 description: "ccls – C/C++/Objective-C language server"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ccls &#8211; C/C++/Objective-C language server</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ccls [options]</code> </p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "fltk(3)"
 name: "fltk"
 section: "3"
@@ -11,7 +10,9 @@ url: "/docs/linux/man/3-fltk/"
 
  fltk - the fast light tool kit 
 
-The Fast Light Tool Kit (&quot;FLTK&quot;, pronounced &quot;fulltick&quot;) is a C++ graphical user interface toolkit for the X Window System, MacOS(r), and Microsoft Windows(r) that supports OpenGL(r). It was originally developed by Mr. Bill Spitzak and is currently maintained by a small group of developers across the world with a central repository in the US. 
+<h2>SYNOPSIS</h2>
+
+ The Fast Light Tool Kit (&quot;FLTK&quot;, pronounced &quot;fulltick&quot;) is a C++ graphical user interface toolkit for the X Window System, MacOS(r), and Microsoft Windows(r) that supports OpenGL(r). It was originally developed by Mr. Bill Spitzak and is currently maintained by a small group of developers across the world with a central repository in the US. 
 
  FLTK is provides under the terms of the GNU Library General Public License, with the following exceptions:
 <dl>

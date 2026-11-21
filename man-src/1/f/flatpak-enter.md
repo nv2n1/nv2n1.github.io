@@ -1,5 +1,4 @@
 ---
-
 title: "flatpak-enter(1)"
 name: "flatpak-enter"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-flatpak-enter/"
 description: "flatpak-enter – Enter an application or runtime’s sandbox"
 ---
 
+<h2 class="name">NAME</h2>
+<p> flatpak-enter &#8211; Enter an application or runtime&#8217;s sandbox </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak enter</code> [OPTION&#8230;] INSTANCE COMMAND [ARG&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>Enter a running sandbox. </dd>
 <p> INSTANCE must be either the pid of a process running in a flatpak sandbox, or the ID of a running application, or the instance ID of a running sandbox. You can use <code>flatpak ps</code> to find the instance IDs of running flatpaks. </p>
 <p> COMMAND is the command to run in the sandbox. Extra arguments are passed on to the command. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ioprio_get(2)"
 name: "ioprio_get"
 section: "2"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/2-ioprio_get/"
 description: "ioprio_get, ioprio_set – get/set I/O scheduling class and priority"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ioprio_get, ioprio_set &#8211; get/set I/O scheduling class and priority </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 int ioprio_get(int which, int who);
 int ioprio_set(int which, int who, int ioprio);
 </code></pre>
 <p> <i>Note</i>: There are no glibc wrappers for these system calls; see NOTES.</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>ioprio_get</code>() and <code>ioprio_set</code>() system calls get and set the I/O scheduling class and priority of one or more threads. </p>
 <p> The <i>which</i> and <i>who</i> arguments identify the thread(s) on which the system calls operate. The <i>which</i> argument determines how <i>who</i> is interpreted, and has one of the following values:</p>
 <dl>

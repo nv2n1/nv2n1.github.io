@@ -1,5 +1,4 @@
 ---
-
 title: "folder(1)"
 name: "folder"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-folder/"
 description: "folder, folders – set/list current folder/message"
 ---
 
+<h2 class="name">NAME</h2>
+<p> folder, folders &#8211; set/list current folder/message </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>folder</code> [<i>+folder</i>] [<i>msg</i>] [<code>-all</code> | <code>-noall</code>] [<code>-create</code> | <code>-nocreate</code>] [<code>-fast</code> | <code>-nofast</code>] [<code>-header</code> | <code>-noheader</code>] [<code>-recurse</code> | <code>-norecurse</code>] [<code>-total</code> | <code>-nototal</code>] [<code>-list</code> | <code>-nolist</code>] [<code>-push</code> | <code>-pop</code>] [<code>-pack</code> | <code>-nopack</code>] [<code>-print</code>] [<code>-verbose</code> | <code>-noverbose</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
 <dl>
 <dt> <code>folders</code></dt>
 <dd>is equivalent to <code>folder</code> <code>-all</code></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Since the <code>nmh</code> environment is the shell, it is easy to lose track of the current folder from day to day. When <code>folder</code> is given the <code>-print</code> switch (the default), <code>folder</code> will list the current folder, the number of messages in it, the range of the messages (low-high), and the current message within the folder, and will flag extra files if they exist. An example of this summary is: </p>
 <dl>
 <dt>

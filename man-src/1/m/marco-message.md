@@ -1,5 +1,4 @@
 ---
-
 title: "marco-message(1)"
 name: "marco-message"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-marco-message/"
 description: "marco-message – A command to send messages to Marco."
 ---
 
+<h2 class="name">NAME</h2>
+<p> marco-message &#8211; A command to send messages to Marco. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>marco-message [OPTIONS]</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>marco-message</code> command is used to perform some simple window manager tasks while Marco is running. </p>
 <h2>OPTIONS</h2>
 <dl>

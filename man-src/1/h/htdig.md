@@ -1,5 +1,4 @@
 ---
-
 title: "htdig(1)"
 name: "htdig"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-htdig/"
 description: "htdig – retrieve HTML documents for ht://Dig search engine"
 ---
 
+<h2 class="name">NAME</h2>
+<p> htdig &#8211; retrieve HTML documents for ht://Dig search engine </p>
+<h2>SYNOPSIS</h2>
 <p> <code>htdig</code> <i>[options]</i></p>
+<h2>DESCRIPTION</h2>
 <p> Htdig retrieves HTML documents using the HTTP protocol and gathers information from these documents which can later be used to search these documents. This program can be referred to as the search robot.</p>
 <h2>OPTIONS</h2>
 <dl>

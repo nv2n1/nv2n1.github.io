@@ -1,5 +1,4 @@
 ---
-
 title: "ffserver(1)"
 name: "ffserver"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ffserver/"
 description: "ffserver – ffserver video server"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ffserver &#8211; ffserver video server </p>
+<h2>SYNOPSIS</h2>
 <p> ffserver [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>ffserver</code> is a streaming server for both audio and video. It supports several live feeds, streaming from files and time shifting on live feeds. You can seek to positions in the past on each live feed, provided you specify a big enough feed storage. </p>
 <p> <code>ffserver</code> is configured through a configuration file, which is read at startup. If not explicitly specified, it will read from <i>/etc/ffserver.conf</i>. </p>
 <p> <code>ffserver</code> receives prerecorded files or <font SIZE="-1">FFM</font> streams from some <code>ffmpeg</code> instance as input, then streams them over <font SIZE="-1">RTP/RTSP/HTTP.</font> </p>

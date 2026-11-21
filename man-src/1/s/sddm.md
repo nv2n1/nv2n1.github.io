@@ -1,5 +1,4 @@
 ---
-
 title: "sddm(1)"
 name: "sddm"
 section: "1"
@@ -10,7 +9,9 @@ description: "sddm – the simple desktop display manager"
 
 <h2>NAME</h2>
 <p> sddm &#8211; the simple desktop display manager</p>
+<h2>SYNOPSIS</h2>
 <p> sddm [OPTIONS&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> sddm is a display and login manager based on Qt technologies. </p>
 <p> Using QtQuick and QML, designers are given the ability to easily create pleasant, modern looking interfaces for sddm. </p>
 <p> sddm runs the greeter as a system user named <code>sddm</code> whose home directory needs to be set to <code>/var/lib/sddm</code>. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "seed(1)"
 name: "seed"
 section: "1"
@@ -10,7 +9,9 @@ description: "seed – libseed JavaScript REPL/Interpreter."
 
 <h2>NAME</h2>
 <p> seed &#8211; libseed JavaScript REPL/Interpreter.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>seed</code> [OPTION&#8230;] [SCRIPT]</p>
+<h2>DESCRIPTION</h2>
 <p> seed acts as a simple read-eval-print loop for libseed&#8217;s GObject JavaScriptCore bindings, unless the path to a script to interpret is specified.</p>
 <h2>OPTIONS</h2>
 <dl>

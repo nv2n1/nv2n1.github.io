@@ -1,5 +1,4 @@
 ---
-
 title: "dspam_merge(1)"
 name: "dspam_merge"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dspam_merge/"
 description: "dspam_merge – merge several users’ metadata into a composite"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dspam_merge &#8211; merge several users&#8217; metadata into a composite</p>
+<h2>SYNOPSIS</h2>
 <p> <code>dspam_merge</code> [<code>&#8211;profile=</code><i>PROFILE</i>] <code>&nbsp;<wbr>user1 user2 &#8230; userN</code><code>&nbsp;<wbr>-o</code><i>&nbsp;<wbr>username</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>dspam_merge</code> merges several users&#8217; metadata into a single user&#8217;s dictionary. This tool is designed to create global users and seeded data. The hit sounds for each token and per-user totals are added together to produce a single composite dataset. After creating a composite user, <code>dspam_clean</code> should be run with the -p option to clean up extraneous data. </p>
 <p> <code>NOTE</code> : Merges may take a considerable amount of time. This could potentially increase the load on the server or even slow down the delivery of email. A merge should only be performed when the system is fairly acquiesce. </p>
 <h2>OPTIONS</h2>

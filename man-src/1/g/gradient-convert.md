@@ -1,5 +1,4 @@
 ---
-
 title: "gradient-convert(1)"
 name: "gradient-convert"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-gradient-convert/"
 description: "gradient-convert – convert gradients between formats"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gradient-convert &#8211; convert gradients between formats </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gradient-convert</code> [-b&nbsp;<wbr><i>rgb</i>] [-B] [-c] [-f&nbsp;<wbr><i>rgb</i>] [-g&nbsp;<wbr><i>geometry</i>] [-h] [-i&nbsp;<wbr><i>format</i>] [-n&nbsp;<wbr><i>rgb</i>] [-o&nbsp;<wbr><i>format</i>] [-p] [-T&nbsp;<wbr><i>rgb</i>] [-v] [-V] <i>infile</i> <i>outfile</i></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>gradient-convert</code> program converts gradients to other formats. It is a wrapper script which make a number of calls the individual programs from the cptutils package so, for example, to convert an Arcview legend (avl) to a PNG image, the programs <code>avlcpt</code>, <code>cptsvg</code> and <code>svgpng</code> would be called in sequence to generate the required file. </dd>
 <p> The formats of the mandatory <i>infile</i> and <i>outfile</i> arguments are determined from the file extensions, or can be specified explicitly by the <code>-i</code> and <code>-o</code> options.</p>
 <h2>OPTIONS</h2>

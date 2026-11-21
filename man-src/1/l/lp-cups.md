@@ -1,5 +1,4 @@
 ---
-
 title: "lp-cups(1)"
 name: "lp-cups"
 section: "1"
@@ -10,8 +9,10 @@ description: "lp – print files"
 
 <h2>NAME</h2>
 <p> lp &#8211; print files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lp</code> [ -E ] [ -U <i>username</i> ] [ -c ] [ -d <i>destination[/instance]</i> ] [ -h <i>hostname[:port]</i> ] [ -m ] [ -n <i>num-copies</i> ] [ -o <i>option[=value]</i> ] [ -q <i>priority</i> ] [ -s ] [ -t <i>title</i> ] [ -H <i>handling</i> ] [ -P <i>page-list</i> ] [ &#8212; ] [ <i>file(s)</i> ]<br />
  <code>lp</code> [ -E ] [ -U <i>username</i> ] [ -c ] [ -h <i>hostname[:port]</i> ] [ -i <i>job-id</i> ] [ -n <i>num-copies</i> ] [ -o <i>option[=value]</i> ] [ -q <i>priority</i> ] [ -t <i>title</i> ] [ -H <i>handling</i> ] [ -P <i>page-list</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>lp</i> submits files for printing or alters a pending job. Use a filename of &quot;-&quot; to force printing from the standard input.</p>
 <h2>THE DEFAULT DESTINATION</h2>
 <p> CUPS provides many ways to set the default destination. The &quot;LPDEST&quot; and &quot;PRINTER&quot; environment variables are consulted first. If neither are set, the current default set using the <i><a href="/docs/linux/man/1-lpoptions/">lpoptions</a>(1)</i> command is used, followed by the default set using the <i><a href="/docs/linux/man/8-lpadmin/">lpadmin</a>(8)</i> command.</p>

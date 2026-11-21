@@ -1,5 +1,4 @@
 ---
-
 title: "mktap(1)"
 name: "mktap"
 section: "1"
@@ -10,8 +9,10 @@ description: "mktap – create twisted.servers"
 
 <h2>NAME</h2>
 <p> mktap &#8211; create twisted.servers</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mktap</code> [<i>options</i>] <i>apptype</i> [<i>application_option</i>]&#8230; </p>
 <p> <code>mktap</code> <i>apptype</i> &#8211;help</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>&#8211;help</code> prints out a usage message to standard output.</p>
 <dl>
 <dt><code>&#8211;debug</code>, <code>-d</code></dt>

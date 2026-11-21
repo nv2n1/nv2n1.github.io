@@ -1,5 +1,4 @@
 ---
-
 title: "qslog(1)"
 name: "qslog"
 section: "1"
@@ -7,11 +6,18 @@ letter: "q"
 url: "/docs/linux/man/1-qslog/"
 ---
 
-qslog - collects request statistics from access log data. 
+<h2 class="name">NAME</h2>
+ 
 
-qslog -f &lt;format_string&gt; -o &lt;out_file&gt; [-p[c|u[c]] [-v]] [-x [&lt;num&gt;]] [-u &lt;name&gt;] [-m] [-c &lt;path&gt;]
+ qslog - collects request statistics from access log data. 
 
-qslog is a real time access log analyzer. It collects the data from stdin. The output is written to the specified file every minute and includes the following entries: 
+<h2>SYNOPSIS</h2>
+
+ qslog -f &lt;format_string&gt; -o &lt;out_file&gt; [-p[c|u[c]] [-v]] [-x [&lt;num&gt;]] [-u &lt;name&gt;] [-m] [-c &lt;path&gt;]
+
+<h2>DESCRIPTION</h2>
+
+ qslog is a real time access log analyzer. It collects the data from stdin. The output is written to the specified file every minute and includes the following entries: 
 &nbsp;<wbr>&nbsp;<wbr>- requests per second&nbsp;<wbr>(r/s) 
 &nbsp;<wbr>&nbsp;<wbr>- number of requests within measured time&nbsp;<wbr>(req) 
 &nbsp;<wbr>&nbsp;<wbr>- bytes sent to the client per second&nbsp;<wbr>(b/s) 

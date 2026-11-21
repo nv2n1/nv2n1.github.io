@@ -1,5 +1,4 @@
 ---
-
 title: "plotfont(1)"
 name: "plotfont"
 section: "1"
@@ -10,7 +9,9 @@ description: "plotfont – produce character maps of fonts supported by the plot
 
 <h2>NAME</h2>
 <p> plotfont &#8211; produce character maps of fonts supported by the plotting utilities</p>
+<h2>SYNOPSIS</h2>
 <p> <code>plotfont</code> [ <i>options </i> ] <i>fonts</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>plotfont</code> produces a character map for any font that is supported by the plotting utilities, which include <code>graph</code>(1), <code><a href="/docs/linux/man/1-plot/">plot</a></code>(1), <code>pic2plot</code>(1), <code><a href="/docs/linux/man/1-tek2plot/">tek2plot</a></code>(1), and the GNU libplot 2-D graphics export library (see <code>plot</code>(3)). Which fonts are supported depends on the output format, which is specified by the <code>-T</code> option. A listing of the fonts available in any specified output format may be obtained with the <code>&#8211;help-fonts</code> option (see below). </p>
 <p> The character map, or maps, will be written to standard output in the specified format. For example, the Times-Roman font is available when producing Postscript output. The command <code>plotfont -T ps Times-Roman &gt; charmap.ps</code> will yield a character map of the Times-Roman font, in a Postscript format that can be viewed or edited with the <code>idraw</code>(1) drawing editor. The Times-Roman font is also available when producing Fig output, which can be viewed or edited with the <code><a href="/docs/linux/man/1-xfig/">xfig</a></code>(1) drawing editor. The command <code>plotfont -T fig Times-Roman &gt; charmap.fig</code> will yield the same character map, but in Fig format rather than in Postscript format. </p>
 <p> As another example, the Univers font is available when producing PCL 5 output. The command <code>plotfont -T pcl Univers &gt; charmap.pcl</code> will produce a character map of the Univers font, in PCL 5 format. </p>

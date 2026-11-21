@@ -1,5 +1,4 @@
 ---
-
 title: "webcam(1)"
 name: "webcam"
 section: "1"
@@ -10,7 +9,9 @@ description: "webcam – capture images and upload them to a webserver using ftp
 
 <h2>NAME</h2>
 <p> webcam &#8211; capture images and upload them to a webserver using ftp</p>
+<h2>SYNOPSIS</h2>
 <p> <code>webcam [ config file ]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>webcam</code> captures images from a video4linux device like bttv, annotates them and and uploads them to a webserver using ftp in a endless loop.</p>
 <h2>CONFIGURATION</h2>
 <p> At startup <code>webcam</code> reads the configuration from the given config file or ~/.webcamrc if none is specified in the command line. </p>

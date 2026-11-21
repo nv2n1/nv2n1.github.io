@@ -1,5 +1,4 @@
 ---
-
 title: "docker-network-disconnect(1)"
 name: "docker-network-disconnect"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-network-disconnect/"
 description: "docker-network-disconnect – Disconnect a container from a network"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-network-disconnect &#8211; Disconnect a container from a network </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker network disconnect [OPTIONS] NETWORK CONTAINER</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Disconnects a container from a network. </p>
 <dl>
 <dt>

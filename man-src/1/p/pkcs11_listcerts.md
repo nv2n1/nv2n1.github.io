@@ -1,5 +1,4 @@
 ---
-
 title: "pkcs11_listcerts(1)"
 name: "pkcs11_listcerts"
 section: "1"
@@ -12,6 +11,7 @@ description: "pkcs11_listcerts – SmartCard PKCS#11 certificates listing"
 <p> pkcs11_listcerts &#8211; SmartCard PKCS#11 certificates listing</p>
 <h2>SYNTAX</h2>
 <p> pkcs11_listcerts [<i>debug</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> pkcs11_listcerts display all the certificates.</p>
 <h2>OPTIONS</h2>
 <dl>

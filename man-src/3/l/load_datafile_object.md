@@ -1,5 +1,4 @@
 ---
-
 title: "load_datafile_object(3)"
 name: "load_datafile_object"
 section: "3"
@@ -10,8 +9,10 @@ description: "load_datafile_object – Loads a specific object from a datafile. 
 
 <h2>NAME</h2>
 <p> load_datafile_object &#8211; Loads a specific object from a datafile. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>DATAFILE *load_datafile_object(const char *filename, </code> <code>const char *objectname);</code></p>
+<h2>DESCRIPTION</h2>
 <p> Loads a specific object from a datafile. This won&#8217;t work if you strip the object names from the file, and it will be very slow if you save the file with global compression. Example: </p>
 <pre><code>
 /* Load only the music from the datafile. */

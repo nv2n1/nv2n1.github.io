@@ -1,5 +1,4 @@
 ---
-
 title: "apt-java-1(1)"
 name: "apt-java-1"
 section: "1"
@@ -8,7 +7,9 @@ url: "/docs/linux/man/1-apt-java-1/"
 description: "apt – annotation processing tool"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <i>apt</i> &#8211; annotation processing tool</p>
+<h2>SYNOPSIS</h2>
 <p> <i>apt [-classpath </i><i>classpath</i>] [-sourcepath <i>sourcepath</i>] [-d <i>directory</i>] [-s <i>directory</i>] [-factorypath <i>path</i>] [-factory <i>class</i>] [-print] [-nocompile] [-A<i>key</i>[<i>=val</i>] &#8230;] [<i>javac option</i>] sourcefiles [@files] </p>
 <h2>PARAMETERS</h2>
 <p> Options may be in any order. For a discussion of parameters which apply to a specific option, see OPTIONS below. </p>
@@ -19,6 +20,7 @@ description: "apt – annotation processing tool"
 <dt>@files</dt>
 <dd> One or more files that list source files or other options</dd></dl>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> <code>Note</code>: The <i>apt</i> tool and its associated API contained in the package <i>com.sun.mirror</i> have been deprecated since JDK 7 and are planned to be removed in the next major JDK release. Use the options available in the <i><a href="/docs/linux/man/1-javac/">javac</a>(1)</i> tool and the APIs contained in the packages <i>javax.annotation.processing</i> and <i>javax.lang.model</i> to process annotations. </p>
 <p> The tool <i>apt</i>, annotation processing tool, includes reflective APIs and supporting infrastructure to process program annotations. The <i>apt</i> reflective APIs provide a build-time, source-based, read-only view of program structure. These reflective APIs are designed to cleanly model the Java(TM) programming language&#8217;s type system after the addition of generics. First, <i>apt</i> runs annotation processors that can produce new source code and other files. Next, <i>apt</i> can cause compilation of both original and generated source files, easing development. The reflective APIs and other APIs used to interact with the tool are subpackages of <i>com.sun.mirror</i>. </p>
 <p> A fuller discussion of how the tool operates as well as instructions for developing with <i>apt</i> are in <tt>Getting Started with </tt><tt>apt</tt>. @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/technotes/guides/apt/GettingStarted.html">http://docs.oracle.com/javase/7/docs/technotes/guides/apt/GettingStarted.html</a> </p>

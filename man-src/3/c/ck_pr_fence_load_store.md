@@ -1,5 +1,4 @@
 ---
-
 title: "ck_pr_fence_load_store(3)"
 name: "ck_pr_fence_load_store"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_pr_fence_load_store – enforce ordering of load operations to 
 <p> <code>ck_pr_fence_load_store</code> &#8211; enforce ordering of load operations to store operations</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_pr.h Ft void Fn ck_pr_fence_load_store void Ft void Fn ck_pr_fence_strict_load_store void</p>
+<h2>DESCRIPTION</h2>
 <p> This function enforces the ordering of any memory load and Fn ck_pr_load 3 operations with respect to store operations relative to the invocation of the function. Any store operations that were committed on remote processors and received by the calling processor before the invocation of Fn ck_pr_fence_load_store is also be made visible only after a call to the ck_pr_fence_load family of functions. This function always serves as an implicit compiler barrier. On architectures with CK_MD_TSO or CK_MD_PSO specified (total store ordering and partial store ordering respectively), this operation only serves as a compiler barrier and no fence instructions will be emitted. To force the unconditional emission of a load fence, use Fn ck_pr_fence_strict_load_store . Architectures implementing CK_MD_RMO always emit a fence.</p>
 <h2>EXAMPLE</h2>
 <blockquote>

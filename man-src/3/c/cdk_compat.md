@@ -1,5 +1,4 @@
 ---
-
 title: "cdk_compat(3)"
 name: "cdk_compat"
 section: "3"
@@ -10,6 +9,7 @@ description: "cdk_compat – Cdk4 compatibility functions"
 
 <h2>NAME</h2>
 <p> cdk_compat &#8211; Cdk4 compatibility functions</p>
+<h2>SYNOPSIS</h2>
 <h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>
 <p> #include &lt;cdk/cdk_compat.h&gt; </p>
@@ -28,6 +28,7 @@ int splitString(
     char splitChar);
 </code></pre>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> These functions and macros make it simpler to port applications from the older Cdk4 library to Cdk5. </p>
 <p> A few functions are deprecated in Cdk5, because they rely upon the caller to know in advance the size of data which will be returned by the function. </p>
 <p> Additionally, some macros are deprecated because they serve no realistic purpose: they have direct (standard) equivalents in all modern curses implementations. </p>

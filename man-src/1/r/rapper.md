@@ -1,5 +1,4 @@
 ---
-
 title: "rapper(1)"
 name: "rapper"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-rapper/"
 description: "rapper – Raptor RDF parsing and serializing utility"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rapper &#8211; Raptor RDF parsing and serializing utility </p>
+<h2>SYNOPSIS</h2>
 <p> <code>rapper</code> [<code>OPTIONS</code>] <i>INPUT-URI</i> <i>[INPUT-BASE-URI]</i></p>
 <h2>EXAMPLE</h2>
 <pre>
@@ -17,6 +19,7 @@ description: "rapper – Raptor RDF parsing and serializing utility"
 <br>
 <code>rapper --count <a rel="nofollow" href="http://example.org/index.rdf">http://example.org/index.rdf</a></code>
 </pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>rapper</code> utility allows parsing of RDF content by the <code>Raptor</code> RDF parser toolkit emitting the results as RDF triples in a choice of syntaxes. The <i>INPUT-URI</i> can be a file name, &#8216;-&#8216; for standard input or if Raptor is built with a WWW retrieval library, a general URI. The optional <i>INPUT-BASE-URI</i> is used as the document parser base URI if present otherwise defaults to the <i>INPUT-URI</i>. A value of &#8216;-&#8216; means no base URI.</p>
 <h2>OPTIONS</h2>
 <p> rapper uses the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;) if supported by the getopt_long function. Otherwise the short options are only available.</p>

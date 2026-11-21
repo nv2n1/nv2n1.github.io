@@ -1,5 +1,4 @@
 ---
-
 title: "foomatic-combo-xml(1)"
 name: "foomatic-combo-xml"
 section: "1"
@@ -10,7 +9,9 @@ description: "foomatic-combo-xml – <put a short description here>"
 
 <h2>NAME</h2>
 <p> foomatic-combo-xml &#8211; &lt;put a short description here&gt;</p>
+<h2>SYNOPSIS</h2>
 <p> <code>foomatic-combo-xml</code> [<i>OPTION</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> The Foomatic acceleration engine written in C (by Till), it computes printer/driver combo XML files and the printer overview XML file. </p>
 <h2>EXIT STATUS</h2>
 <p> <code>foomatic-combo-xml</code> returns ??? </p>

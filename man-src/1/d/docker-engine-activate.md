@@ -1,5 +1,4 @@
 ---
-
 title: "docker-engine-activate(1)"
 name: "docker-engine-activate"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-engine-activate/"
 description: "docker-engine-activate – Activate Enterprise Edition"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-engine-activate &#8211; Activate Enterprise Edition </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker engine activate [OPTIONS]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Activate Enterprise Edition. </p>
 <p> With this command you may apply an existing Docker enterprise license, or interactively download one from Docker. In the interactive exchange, you can sign up for a new trial, or download an existing license. If you are currently running a Community Edition engine, the daemon will be updated to the Enterprise Edition Docker engine with additional capabilities and long term support. </p>
 <p> For more information about different Docker Enterprise license types visit </p>

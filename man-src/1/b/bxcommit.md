@@ -1,5 +1,4 @@
 ---
-
 title: "bxcommit(1)"
 name: "bxcommit"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-bxcommit/"
 description: "bxcommit – Interactive Tool to Commit Redologs into flat Disk Images for Bochs"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bxcommit &#8211; Interactive Tool to Commit Redologs into flat Disk Images for Bochs </p>
 <h2>USAGE</h2>
 <p> <code>bxcommit</code></p>
+<h2>DESCRIPTION</h2>
 <p> Bxcommit is an easy to use console based tool for committing redologs into flat disk images, particularly for use with Bochs. It is completely interactive, so no command line arguments are needed to use bxcommit.</p>
 <h2>LICENSE</h2>
 <p> This program is distributed under the terms of the GNU Lesser General Public License as published by the Free Software Foundation. See the COPYING file located in /usr/share/doc/bochs-2.3.8/ for details on the license and the lack of warranty.</p>

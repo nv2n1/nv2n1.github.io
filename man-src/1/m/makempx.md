@@ -1,5 +1,4 @@
 ---
-
 title: "makempx(1)"
 name: "makempx"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-makempx/"
 description: "makempx – typeset labels in MetaPost pictures with TeX or Troff"
 ---
 
+<h2 class="name">NAME</h2>
+<p> makempx &#8211; typeset labels in MetaPost pictures with TeX or Troff </p>
+<h2>SYNOPSIS</h2>
 <p> <code>makempx</code> [<i>&#8211;tex</i>|<i>&#8211;troff</i>] <i>mpfile mpxfile</i></p>
+<h2>DESCRIPTION</h2>
 <p> This manual page is not meant to be exhaustive. The complete documentation for this version of TeX can be found in the info file or manual <i>Web2C: A TeX implementation</i>. </p>
 <p> If <i>mpxfile</i> is older than <i>mpfile</i>, translate the labels from the MetaPost input file <i>mpfile</i> to low-level commands in <i>MPXFILE</i>, by running <code>mpto -tex</code>, <code>tex</code>, and <code>dvitomp</code> by default; or, if <code>-troff</code> is specified, <code>mpto -troff</code>, <code>eqn -d\$\$ | troff -Tpost</code>, and <code>dmp</code>. </p>
 <p> The current directory is used for writing temporary files. Errors are left in <i>mpxerr.{tex,log,dvi}</i>. </p>

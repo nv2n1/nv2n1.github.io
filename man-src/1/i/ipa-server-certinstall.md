@@ -1,5 +1,4 @@
 ---
-
 title: "ipa-server-certinstall(1)"
 name: "ipa-server-certinstall"
 section: "1"
@@ -10,7 +9,9 @@ description: "ipa-server-certinstall – Install new SSL server certificates"
 
 <h2>NAME</h2>
 <p> ipa-server-certinstall &#8211; Install new SSL server certificates</p>
+<h2>SYNOPSIS</h2>
 <p> ipa-server-certinstall [<i>OPTION</i>]&#8230; FILE&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Replace the current SSL Directory and/or Apache server certificate(s) with the certificate in the specified files. The files are accepted in PEM and DER certificate, PKCS#7 certificate chain, PKCS#8 and raw private key and PKCS#12 formats. </p>
 <p> PKCS#12 is a file format used to safely transport SSL certificates and public/private keypairs. </p>
 <p> They may be generated and managed using the NSS pk12util command or the OpenSSL pkcs12 command. </p>

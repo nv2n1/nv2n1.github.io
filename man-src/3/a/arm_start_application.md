@@ -1,5 +1,4 @@
 ---
-
 title: "arm_start_application(3)"
 name: "arm_start_application"
 section: "3"
@@ -10,6 +9,7 @@ description: "arm_start_application – check application is running"
 
 <h2>NAME</h2>
 <p> arm_start_application &#8211; check application is running</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/arm4.h">arm4.h</a>&gt;</code> </p>
 <p> <code>arm_error_t<br />
  arm_start_application( </p>
@@ -19,6 +19,7 @@ description: "arm_start_application – check application is running"
 <p>&nbsp;<wbr>const arm_int32_t&nbsp;<wbr></code><i>flags</i><code>, </p>
 <p>&nbsp;<wbr>const arm_buffer4_t&nbsp;<wbr>*</code><i>buffer4</i><code>,&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>arm_app_start_handle_t&nbsp;<wbr>*</code><i>app_handle</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>arm_start_application()</code> indicates that an instance of an application has started running and is prepared to make ARM calls. In many cases, there will be only one application instance in a process, but there are cases in which there could be multiple instances. An example of multiple application instances in the same process is if several Java applications run in the same JVM (Java Virtual Machine) in the same process, and they each call the ARM 4.0 C interface (either directly, or indirectly via an implementation of the ARM 4.0 Java interface). They might share the same application ID or they might be separately registered. </p>
 <p> Application context properties may be used to differentiate between instances. The values do not have to be different from other instances, though making them unique is suggested. The context properties are provided through function parameters and/or a sub-buffer. </p>
 <p> The group and instance names are provided as function parameters. </p>

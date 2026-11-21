@@ -1,5 +1,4 @@
 ---
-
 title: "ncftpls(1)"
 name: "ncftpls"
 section: "1"
@@ -10,6 +9,7 @@ description: "ncftpls – Internet file transfer program for scripts"
 
 <h2>NAME</h2>
 <p> ncftpls &#8211; Internet file transfer program for scripts</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ncftpls</code> [<i>options</i>] <i><a href="ftp://url.style/host/path/name/">ftp://url.style/host/path/name/</a></i></p>
 <h2>OPTIONS</h2>
 <h3>Command line flags:</h3>
@@ -60,6 +60,7 @@ description: "ncftpls – Internet file transfer program for scripts"
 <dd> Set advanced option <i>XX</i>.</dd>
 <dt>
 </dt><dd> This option is used primarily for debugging. It sets the value of an internal variable to an integer value. An example usage would be: <code>-o </code><i>useFEAT=0,useCLNT=1</i> which in this case, disables use of the FEAT command and enables the CLNT command. The available variables include: usePASV, useSIZE, useMDTM, useREST, useNLST_a, useNLST_d, useFEAT, useMLSD, useMLST, useCLNT, useHELP_SITE, useSITE_UTIME, STATfileParamWorks, NLSTfileParamWorks, require20, allowProxyForPORT, doNotGetStartCWD.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The purpose of <i>ncftpls</i> is to do remote directory listings using the File Transfer Protocol without entering an interactive shell. This lets you write shell scripts or other unattended processes that can do FTP. </p>
 <p> The default behavior is to print the directory listing in columnized format (i.e. ls -CF), but that is not very useful for scripting. This example uses the <code>-1</code> flag, to print one file per line:</p>
 <dl>

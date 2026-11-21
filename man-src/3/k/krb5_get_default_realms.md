@@ -1,5 +1,4 @@
 ---
-
 title: "krb5_get_default_realms(3)"
 name: "krb5_get_default_realms"
 section: "3"
@@ -8,10 +7,13 @@ url: "/docs/linux/man/3-krb5_get_default_realms/"
 description: "krb5_copy_host_realm krb5_free_host_realm krb5_get_default_realm krb5_get_default_realms krb5_get_host_realm krb5_set_default_realm – default and host realm read and manipulation routines"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>krb5_copy_host_realm</code> <code>krb5_free_host_realm</code> <code>krb5_get_default_realm</code> <code>krb5_get_default_realms</code> <code>krb5_get_host_realm</code> <code>krb5_set_default_realm</code> &#8211; default and host realm read and manipulation routines </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>
+<h2>SYNOPSIS</h2>
 <p> In krb5.h Ft krb5_error_code Fo krb5_copy_host_realm Fa krb5_context context Fa const krb5_realm *from Fa krb5_realm **to Fc Ft krb5_error_code Fo krb5_free_host_realm Fa krb5_context context Fa krb5_realm *realmlist Fc Ft krb5_error_code Fo krb5_get_default_realm Fa krb5_context context Fa krb5_realm *realm Fc Ft krb5_error_code Fo krb5_get_default_realms Fa krb5_context context Fa krb5_realm **realm Fc Ft krb5_error_code Fo krb5_get_host_realm Fa krb5_context context Fa const char *host Fa krb5_realm **realms Fc Ft krb5_error_code Fo krb5_set_default_realm Fa krb5_context context Fa const char *realm Fc</p>
+<h2>DESCRIPTION</h2>
 <p> Fn krb5_copy_host_realm copies the list of realms from Fa from to Fa to . Fa to should be freed by the caller using Fa krb5_free_host_realm . </p>
 <p> Fn krb5_free_host_realm frees all memory allocated by Fa realmlist . </p>
 <p> Fn krb5_get_default_realm returns the first default realm for this host. The realm returned should be freed with Fn krb5_xfree . </p>

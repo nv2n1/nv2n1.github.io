@@ -1,5 +1,4 @@
 ---
-
 title: "mconfig(1)"
 name: "mconfig"
 section: "1"
@@ -10,7 +9,9 @@ description: "mconfig, – Utility for modifying .NET configuration files"
 
 <h2>NAME</h2>
 <p> mconfig, &#8211; Utility for modifying .NET configuration files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mconfig [options] command [command_parameters]</code></p>
+<h2>DESCRIPTION</h2>
 <p> mconfig can be used to edit .NET configuration files, by adding &quot;features&quot; (that is sets of xml statements) defined in one of the config files read by mconfig. The config file can also define layouts of default configuration files, which may be useful for bootstrapping your .NET projects. </p>
 <p> To see the list of recognized commands, default configuration files and features, run mconfig without passing any parameters.</p>
 <h2>OPTIONS</h2>

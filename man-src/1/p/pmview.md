@@ -1,5 +1,4 @@
 ---
-
 title: "pmview(1)"
 name: "pmview"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmview – performance metrics 3D visualization back-end"
 
 <h2>NAME</h2>
 <p> <code>pmview</code> &#8211; performance metrics 3D visualization back-end</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pmview</code> [<code>-Cz</code>] [<code>-A</code> <i>align</i>] [<code>-a</code> <i>archive</i>[<code>,</code><i>archive</i><code>,</code>&#8230;]] [<code>-c</code> <i>configfile</i>] [<code>-h</code> <i>host</i>] [<code>-n</code> <i>pmnsfile</i>] [<code>-O</code> <i>origin</i>] [<code>-p</code> <i>port</i>] [<code>-R</code> <i>logconfig</i>] [<code>-r</code> <i>addconfig</i>] [<code>-S</code> <i>starttime</i>] [<code>-t</code> <i>interval</i>] [<code>-T</code> <i>endtime</i>] [<code>-x</code> <i>version</i>] [<code>-Z</code> <i>timezone</i>] [<code>-geometry</code> <i>geometry</i>] [<code>-display</code> <i>display</i>] [<code>-name</code> <i>name</i>] [<code>-title</code> <i>title</i>] [<code>-xrm &quot;</code><i>resourceName</i><code>:</code><i> value</i><code>&quot;</code> &#8230;] [<i>other X11-args</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmview </code> is a generalized 3D performance metrics visualization tool for the Performance Co-Pilot (<code><a href="/docs/linux/man/1-pcp/">PCP</a></code>(1)). </p>
 <p> <code>pmview</code> is the base utility behind performance metrics visualization tools such as <code>dkvis</code>(1), <code>mpvis</code>(1), <code>osvis</code>(1) and <code>nfsvis</code>(1), It is also used by a range of related tools that are specific to optional Performance Domain Agents (PMDA) and/or PCP add-on products. <code>pmview</code> may also be used to construct customized 3D performance displays. </p>
 <p> <code>pmview</code> displays performance metrics as colored blocks and cylinders arranged on monochrome base planes. Each object may represent a single performance metric, or a stack of several performance metrics. Since the objects are modulated by the value of the metric they represent, only numerical metrics may be visualized. Objects representing a single metric may be modulated in terms of height, color, or height and color. Objects in a stack may only be height modulated, but the stack can be normalized to the maximum height. Labels may be added to the scene to help identify groups of metrics. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "dblink_build_sql_insert(3)"
 name: "dblink_build_sql_insert"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dblink_build_sql_insert/"
 description: "dblink_build_sql_insert – builds an INSERT statement using a local tuple, replacing the primary key field values with alternative supplied values"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dblink_build_sql_insert &#8211; builds an INSERT statement using a local tuple, replacing the primary key field values with alternative supplied values </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 dblink_build_sql_insert(text relname,
                         int2vector primary_key_attnums,
@@ -15,6 +17,7 @@ dblink_build_sql_insert(text relname,
                         text[] src_pk_att_vals_array,
                         text[] tgt_pk_att_vals_array) returns text
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>dblink_build_sql_insert</code> can be useful in doing selective replication of a local table to a remote database. It selects a row from the local table based on primary key, and then builds a SQL <code>INSERT</code> command that will duplicate that row, but with the primary key values replaced by the values in the last argument. (To make an exact copy of the row, just specify the same values for the last two arguments.)</p>
 <h2>ARGUMENTS</h2>
 <p> <i>relname</i></p>

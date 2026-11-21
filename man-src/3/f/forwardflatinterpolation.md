@@ -1,5 +1,4 @@
 ---
-
 title: "forwardflatinterpolation(3)"
 name: "forwardflatinterpolation"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-forwardflatinterpolation/"
 description: "ql/math/interpolations/forwardflatinterpolation.hpp – forward-flat interpolation between discrete points"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/math/interpolations/forwardflatinterpolation.hpp &#8211; forward-flat interpolation between discrete points </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/interpolation.hpp&gt;<br />
  #include &lt;vector&gt; </p>
 <h3>Classes</h3>

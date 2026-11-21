@@ -1,5 +1,4 @@
 ---
-
 title: "acl_copy_ext(3)"
 name: "acl_copy_ext"
 section: "3"
@@ -8,10 +7,13 @@ url: "/docs/linux/man/3-acl_copy_ext/"
 description: "acl_copy_ext – copy an ACL from internal to external representation"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>acl_copy_ext</code> &#8211; copy an ACL from internal to external representation </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>
+<h2>SYNOPSIS</h2>
 <p> In sys/types.h In sys/acl.h Ft ssize_t Fn acl_copy_ext void *buf_p acl_t acl ssize_t size</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn acl_copy_ext function copies the ACL pointed to by <i>acl</i> from system-managed space to the user managed space pointed to by <i>buf_p</i> The <i>size</i> parameter represents the size in bytes of the buffer pointed to by <i>buf_p</i> The format of the ACL placed in the buffer pointed to by <i>buf_p</i> is a contiguous, persistent data item, the format of which is unspecified. It is the responsibility of the invoker to allocate an area large enough to hold the copied ACL. The size of the exportable, contiguous, persistent form of the ACL may be obtained by invoking the Fn acl_size function. </p>
 <p> Any ACL entry descriptors that refer to an entry in the ACL referenced by <i>acl</i> continue to refer to those entries. Any existing ACL pointers that refer to the ACL referenced by <i>acl</i> continue to refer to the ACL.</p>
 <h2>RETURN VALUE</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "fbgs(1)"
 name: "fbgs"
 section: "1"
@@ -9,8 +8,12 @@ description: "fbgs – Poor man’s PostScript/pdf viewer for the linux framebuf
 ---
 
 <p>#</p>
+<h2 class="name">NAME</h2>
+<p> fbgs &#8211; Poor man&#8217;s PostScript/pdf viewer for the linux framebuffer console. # # </p>
+<h2>SYNOPSIS</h2>
 <p> <code>fbgs</code><br />
 &nbsp;<wbr>[<code>-l</code>|<code>-xl</code>|<code>-xxl</code>|<code>-r</code>&nbsp;<wbr><i>n</i>]&nbsp;<wbr>[<code>-c</code>]&nbsp;<wbr>[<code>-b</code>]&nbsp;<wbr>[<code>-p</code>&nbsp;<wbr><i>password</i>]&nbsp;<wbr>[<code>&#8211;fp</code>&nbsp;<wbr><i>number</i>]&nbsp;<wbr>[<code>&#8211;lp</code>&nbsp;<wbr><i>number</i>]&nbsp;<wbr>[<i>fbi options</i>]&nbsp;<wbr><i>file</i> # #</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Fbgs</code> is a simple wrapper script which takes a <i>PostScript</i> (PS) or <i>Portable Document Format</i> (PDF) file as input, renders the pages using <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1) &#8211; GhostScript &#8211; into a temporary directory and finally calls <code><a href="/docs/linux/man/1-fbi/">fbi</a></code>(1) to display them.</p>
 <h2>OPTIONS</h2>
 <p> <code>Fbgs</code> understands all <code><a href="/docs/linux/man/1-fbi/">fbi</a></code>(1) options (they are passed through), except: store, list, text, (no)comments, e, (no)edit, (no)backup, (no)preserve, (no)readahead, cachemem, blend. </p>

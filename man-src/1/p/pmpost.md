@@ -1,5 +1,4 @@
 ---
-
 title: "pmpost(1)"
 name: "pmpost"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmpost – append messages to the Performance Co-Pilot notice boar
 
 <h2>NAME</h2>
 <p> <code>pmpost</code> &#8211; append messages to the Performance Co-Pilot notice board</p>
+<h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/pmpost</code> <i>message</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmpost</code> will append the text <i>message</i> to the end of the Performance Co-Pilot (PCP) notice board file (<code>$PCP_LOG_DIR/NOTICES</code>) in an atomic manner that guards against corruption of the notice board file by concurrent invocations of <code>pmpost</code>. </p>
 <p> The PCP notice board is intended to be a persistent store and clearing house for important messages relating to the operation of the PCP and the notification of performance alerts from <code><a href="/docs/linux/man/1-pmie/">pmie</a></code>(1) when other notification options are either unavailable or unsuitable. </p>
 <p> Before being written, messages are prefixed by the current time, and when the current day is different to the last time the notice board file was written, <code>pmpost</code> will prepend the message with the full date. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "diff(1)"
 name: "diff"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-diff/"
 description: "diff – compare files line by line"
 ---
 
+<h2 class="name">NAME</h2>
+<p> diff &#8211; compare files line by line </p>
+<h2>SYNOPSIS</h2>
 <p> <code>diff</code> [<i>OPTION</i>]&#8230; <i>FILES</i></p>
+<h2>DESCRIPTION</h2>
 <p> Compare FILES line by line. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "smbencrypt(1)"
 name: "smbencrypt"
 section: "1"
@@ -10,7 +9,9 @@ description: "smbencrypt – produce LM & NT password hashes from cleartext pass
 
 <h2>NAME</h2>
 <p> smbencrypt &#8211; produce LM &amp; NT password hashes from cleartext passwords</p>
+<h2>SYNOPSIS</h2>
 <p> <code>smbencrypt </code><i>password</i> [<i>password &#8230;</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>smbencrypt</code> For each cleartext password passed on the command line emit the LM-Password and NT-Password hashes for that password. </p>
 <h2>EXAMPLE</h2>
 <pre><code>

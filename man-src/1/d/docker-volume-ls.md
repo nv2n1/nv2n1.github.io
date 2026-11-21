@@ -1,5 +1,4 @@
 ---
-
 title: "docker-volume-ls(1)"
 name: "docker-volume-ls"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-volume-ls/"
 description: "docker-volume-ls – List volumes"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-volume-ls &#8211; List volumes </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker volume ls [OPTIONS]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Lists all the volumes Docker manages. You can filter using the -f or &#8211;filter flag. The filtering format is a key=value pair. To specify more than one filter, pass multiple flags (for example, &#8211;filter &quot;foo=bar&quot; &#8211;filter &quot;bif=baz&quot;) </p>
 <p> The currently supported filters are: </p>
 <dl>

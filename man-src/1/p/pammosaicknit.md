@@ -1,5 +1,4 @@
 ---
-
 title: "pammosaicknit(1)"
 name: "pammosaicknit"
 section: "1"
@@ -10,7 +9,11 @@ description: "pammosaicknit – validate a mosaic knitting pattern"
 
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&quot;<a rel="nofollow" href="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd</a>&quot;&gt; </p>
 <p> Table Of Contents </p>
+<h2 class="name">NAME</h2>
+<p> pammosaicknit &#8211; validate a mosaic knitting pattern </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pammosaicknit</code> [<i>in_netpbmfile</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pammosaicknit</code> helps the user create mosaic knitting patterns . The program inputs a black-and-white Netpbm image that describes a mosaic knitting pattern and outputs a color Netpbm image of the same pattern but with invalid runs shown in red. </p>
 <p> A valid knitting pattern starts with a &lt;q&gt;black&lt;/q&gt; row on the bottom and alternates &lt;q&gt;white&lt;/q&gt; and &lt;q&gt;black&lt;/q&gt; rows. A &lt;q&gt;black&lt;/q&gt; row can contain any arrangement of black pixels but no more than three consecutive white pixels. A &lt;q&gt;white&lt;/q&gt; row can contain any arrangement of white pixels but no more than three consecutive black pixels. Columns wrap horizontally, so a &lt;q&gt;white&lt;/q&gt; row that both begins and ends with two black pixels is deemed to contain four consecutive black pixels. Because this is an invalid number for a &lt;q&gt;white&lt;/q&gt; row, those four pixels will be recolored red in the output image. </p>

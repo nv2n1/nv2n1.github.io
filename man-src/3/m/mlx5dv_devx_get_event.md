@@ -1,5 +1,4 @@
 ---
-
 title: "mlx5dv_devx_get_event(3)"
 name: "mlx5dv_devx_get_event"
 section: "3"
@@ -7,7 +6,14 @@ letter: "m"
 url: "/docs/linux/man/3-mlx5dv_devx_get_event/"
 ---
 
-mlx5dv_devx_get_event - Get an asynchronous event. 
+<h2 class="name">NAME</h2>
+ 
+
+ 
+
+ mlx5dv_devx_get_event - Get an asynchronous event. 
+
+<h2>SYNOPSIS</h2>
 
 <dl>
 <dt>
@@ -22,7 +28,11 @@ ssize_t mlx5dv_devx_get_event(struct mlx5dv_devx_event_channel *event_channel,
                               size_t event_resp_len)
 </code></pre></dd></dl>
 
-Get a device event on the given event_channel. Post a successful subscription over the event channel by calling to mlx5dv_devx_subscribe_devx_event() the application should use this API to get the response once an event has occurred. 
+<h2>DESCRIPTION</h2>
+
+ 
+
+ Get a device event on the given event_channel. Post a successful subscription over the event channel by calling to mlx5dv_devx_subscribe_devx_event() the application should use this API to get the response once an event has occurred. 
 
  Upon response the cookie that was supplied upon the subscription is returned and the out_data includes the data itself. The out_data may be omitted in case the channel was created with the omit data flag. 
 

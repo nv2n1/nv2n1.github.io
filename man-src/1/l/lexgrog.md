@@ -1,5 +1,4 @@
 ---
-
 title: "lexgrog(1)"
 name: "lexgrog"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-lexgrog/"
 description: "lexgrog – parse header information in man pages"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lexgrog &#8211; parse header information in man pages </p>
+<h2>SYNOPSIS</h2>
 <p> <code>lexgrog</code> [<code>-m</code>|<code>-c</code>] [<code>-dfw?V</code>] [<code>-E</code> <i>encoding</i>] <i>file</i> &#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>lexgrog</code> is an implementation of the traditional &#8220;groff guess&#8221; utility in <code>lex</code>. It reads the list of files on its command line as either man page source files or preformatted &#8220;cat&#8221; pages, and displays their name and description as used by <code>apropos</code> and <code>whatis</code>, the list of preprocessing filters required by the man page before it is passed to <code>nroff</code> or <code>troff</code>, or both. </p>
 <p> If its input is badly formatted, <code>lexgrog</code> will print &#8220;parse failed&#8221;; this may be useful for external programs that need to check man pages for correctness. If one of <code>lexgrog</code>&#8216;s input files is &#8220;-&#8220;, it will read from standard input; if any input file is compressed, a decompressed version will be read automatically.</p>
 <h2>OPTIONS</h2>

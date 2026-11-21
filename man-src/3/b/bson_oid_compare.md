@@ -1,5 +1,4 @@
 ---
-
 title: "bson_oid_compare(3)"
 name: "bson_oid_compare"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_oid_compare() – The bson_oid_compare() function shall retur
 
 <h2>NAME</h2>
 <p> bson_oid_compare() &#8211; The bson_oid_compare() function shall return a qsort() style value of a lexicographical sort of _oid1_ and _oid2_.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 int bson_oid_compare(const bson_oid_t *oid1,
                      const bson_oid_t *oid2);
@@ -21,6 +21,7 @@ int bson_oid_compare(const bson_oid_t *oid1,
 <dl>
 <dt><code>oid2</code></dt>
 <dd> A <code>bson_oid_t</code> \&amp;.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_oid_compare/">bson_oid_compare</a>(3)</code> function shall return a qsort() style value of a lexicographical sort of _oid1_ and _oid2_. </p>
 <h2>RETURNS</h2>
 <p> less than 0, 0, or greater than 0 based on the comparison. </p>

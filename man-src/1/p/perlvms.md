@@ -1,5 +1,4 @@
 ---
-
 title: "perlvms(1)"
 name: "perlvms"
 section: "1"
@@ -7,7 +6,9 @@ letter: "p"
 url: "/docs/linux/man/1-perlvms/"
 description: "perlvms – VMS-specific documentation for Perl"
 ---
-
+<h2 class="name">NAME</h2>
+<p> perlvms - VMS-specific documentation for Perl </p>
+<h2>DESCRIPTION</h2>
 <p> Gathered below are notes describing details of Perl 5&#8217;s behavior on <font SIZE="-1">VMS.</font> They are a supplement to the regular Perl 5 documentation, so we have focussed on the ways in which Perl 5 functions differently under <font SIZE="-1">VMS</font> than it does under Unix, and on the interactions between Perl and the rest of the operating system. We haven&#8217;t tried to duplicate complete descriptions of Perl features from the main Perl documentation, which can be found in the <i>[.pod]</i> subdirectory of the Perl distribution. </p>
 <p> We hope these notes will save you from confusion and lost sleep when writing Perl scripts on <font SIZE="-1">VMS.</font> If you find we&#8217;ve missed something you think should appear here, please don&#8217;t hesitate to drop a line to vmsperl [at] perl.org.  </p>
 <h2>Installation</h2>

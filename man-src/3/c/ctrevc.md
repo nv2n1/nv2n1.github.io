@@ -1,5 +1,4 @@
 ---
-
 title: "ctrevc(3)"
 name: "ctrevc"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-ctrevc/"
 description: "ctrevc.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ctrevc.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctrevc</code> (SIDE, HOWMNY, SELECT, N, T, LDT, VL, LDVL, VR, LDVR, MM, M, WORK, RWORK, INFO)<br />
  <i></i><code>CTREVC</code></p>

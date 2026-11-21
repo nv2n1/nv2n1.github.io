@@ -1,5 +1,4 @@
 ---
-
 title: "al_ffblk(3)"
 name: "al_ffblk"
 section: "3"
@@ -10,8 +9,10 @@ description: "al_ffblk – Cross platform structure storing file information. Al
 
 <h2>NAME</h2>
 <p> al_ffblk &#8211; Cross platform structure storing file information. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>struct al_ffblk</code></p>
+<h2>DESCRIPTION</h2>
 <pre><code>
 int attrib;
 - actual attributes of the file found

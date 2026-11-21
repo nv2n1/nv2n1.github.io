@@ -1,5 +1,4 @@
 ---
-
 title: "gpixpod(1)"
 name: "gpixpod"
 section: "1"
@@ -10,7 +9,9 @@ description: "gpixpod – organize photos on your iPod, freely"
 
 <h2>NAME</h2>
 <p> gpixpod &#8211; organize photos on your iPod, freely</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gpixpod</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>GPixPod </code> is a photo manager for all Apple iPod models which support them, written in pygtk and released under the GNU GPL 2 license or later. The project home is at <a rel="nofollow" href="http://www.gpixpod.org">http://www.gpixpod.org</a></p>
 <h2>OPTIONS</h2>
 <p> Don&#8217;t pass any option to launch the regular GPixPod gtk graphical user interface. GPixPod has also a basic command-line interface that is activated just passing the supported options, described below:</p>

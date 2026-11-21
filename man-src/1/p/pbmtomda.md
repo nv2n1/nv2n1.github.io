@@ -1,5 +1,4 @@
 ---
-
 title: "pbmtomda(1)"
 name: "pbmtomda"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pbmtomda/"
 description: "pbmtomda – convert a portable bitmap to a Microdesign .mda"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pbmtomda &#8211; convert a portable bitmap to a Microdesign .mda </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pbmtomda</code> [<code>-d</code>][<code>-i</code>][<code>&#8212;</code>] <i>[ pbmfile ]</i></p>
+<h2>DESCRIPTION</h2>
 <p> Reads a portable bitmap file as input. Reads from stdin if input file is omitted. Produces a MicroDesign 2 area file (.MDA) as output.</p>
 <h2>OPTIONS</h2>
 <dl>

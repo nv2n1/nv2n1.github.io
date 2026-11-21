@@ -1,5 +1,4 @@
 ---
-
 title: "procmail(1)"
 name: "procmail"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-procmail/"
 description: "procmail – autonomous mail processor"
 ---
 
+<h2 class="name">NAME</h2>
+<p> procmail &#8211; autonomous mail processor </p>
+<h2>SYNOPSIS</h2>
 <p> <code>procmail</code> [<code>-ptoY</code>] [<code>-f </code><i>fromwhom</i>]<br />
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [<i>parameter</i><code>=</code>value |<i> rcfile</i>] &#8230;<br />
  <code>procmail</code> [<code>-toY</code>] [<code>-f </code><i>fromwhom</i>] [<code>-a </code><i>argument</i>] &#8230;<br />
@@ -15,6 +17,7 @@ description: "procmail – autonomous mail processor"
  <code>procmail</code> [<code>-ptY</code>] <code>-m</code> [<i>parameter</i><code>=</code>value] &#8230; <i>rcfile</i><br />
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp; [<i>argument</i>] &#8230;<br />
  <code>procmail</code> <code>-v</code> </p>
+<h2>DESCRIPTION</h2>
 <p> For a quick start, see <code>NOTES</code> at the end. </p>
 <p> <code>Procmail</code> should be invoked automatically over the <code>.forward</code> file mechanism as soon as mail arrives. Alternatively, when installed by a system administrator, it can be invoked from within the mailer immediately. When invoked, it first sets some environment variables to default values, reads the mail message from stdin until an EOF, separates the body from the header, and then, if no command line arguments are present, it starts to look for a file named <code>$HOME/.procmailrc</code>. According to the processing recipes in this file, the mail message that just arrived gets distributed into the right folder (and more). If no rcfile is found, or processing of the rcfile falls off the end, procmail will store the mail in the default system mailbox. </p>
 <p> If no rcfiles and no <code>-p</code> have been specified on the command line, procmail will, prior to reading $HOME/.procmailrc, interpret commands from <code>/etc/procmailrc</code> (if present). Care must be taken when creating /etc/procmailrc, because, if circumstances permit, it will be executed with root privileges (contrary to the $HOME/.procmailrc file of course). </p>

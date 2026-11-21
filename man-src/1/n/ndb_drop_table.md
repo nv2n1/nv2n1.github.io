@@ -1,5 +1,4 @@
 ---
-
 title: "ndb_drop_table(1)"
 name: "ndb_drop_table"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-ndb_drop_table/"
 description: "ndb_drop_table – drop an NDB table"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ndb_drop_table &#8211; drop an NDB table </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ndb_drop_table </code><i>options</i></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>ndb_drop_table</code></p>
 <dd>drops the specified NDB table. (If you try to use this on a table created with a storage engine other than NDB, it fails with the error 723: No such table exists.) This operation is extremely fast &#8212; in some cases, it can be an order of magnitude faster than using DROP TABLE on an NDB table from MySQL. </dd>
 <p> <code>Usage</code>: </p>

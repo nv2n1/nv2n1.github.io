@@ -1,5 +1,4 @@
 ---
-
 title: "pybabelfish(1)"
 name: "pybabelfish"
 section: "1"
@@ -10,7 +9,9 @@ description: "pybabelfish – convert Python objects into human-readable strings
 
 <h2>NAME</h2>
 <p> pybabelfish &#8211; convert Python objects into human-readable strings</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pybabelfish</code> [options]</p>
+<h2>DESCRIPTION</h2>
 <p> This script converts Python objects into human-readable strings for the NWS web interface.</p>
 <dl>
 <dt><code>-h</code> <i>&lt;host&gt;</i></dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "mysqldumpslow(1)"
 name: "mysqldumpslow"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mysqldumpslow/"
 description: "mysqldumpslow – Summarize slow query log files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mysqldumpslow &#8211; Summarize slow query log files </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqldumpslow [</code><code>options</code><code>] [</code><i>log_file</i><code> &#8230;]</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The MySQL slow query log contains information about queries that take a long time to execute (see Section 5.4.5, &#8220;The Slow Query Log&#8221;). <code>mysqldumpslow</code> parses MySQL slow query log files and summarizes their contents. </dd>
 <p> Normally, <code>mysqldumpslow</code> groups queries that are similar except for the particular values of number and string data values. It &#8220;abstracts&#8221; these values to N and &#8216;S&#8217; when displaying summary output. To modify value abstracting behavior, use the <code>-a</code> and <code>-n</code> options. </p>
 <p> Invoke <code>mysqldumpslow</code> like this: </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "galeon(1)"
 name: "galeon"
 section: "1"
@@ -10,7 +9,9 @@ description: "Galeon – gecko-based GNOME web browser"
 
 <h2>NAME</h2>
 <p> Galeon &#8211; gecko-based GNOME web browser</p>
+<h2>SYNOPSIS</h2>
 <p> <code>galeon [OPTION&#8230;] [URL&#8230;]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <i>Galeon</i> is a GNOME web browser using the Mozilla rendering and networking engines.</p>
 <h2>OPTIONS</h2>
 <p> Galeon accepts the following options: <code>Help options</code></p>

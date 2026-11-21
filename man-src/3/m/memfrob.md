@@ -1,5 +1,4 @@
 ---
-
 title: "memfrob(3)"
 name: "memfrob"
 section: "3"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/3-memfrob/"
 description: "memfrob – frobnicate (encrypt) a memory area"
 ---
 
+<h2 class="name">NAME</h2>
+<p> memfrob &#8211; frobnicate (encrypt) a memory area </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;string.h&gt;
 void *memfrob(void *s, size_t n);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>memfrob</code>() function encrypts the first <i>n</i> bytes of the memory area <i>s</i> by exclusive-ORing each character with the number 42. The effect can be reversed by using <code>memfrob</code>() on the encrypted memory area. </p>
 <p> Note that this function is not a proper encryption routine as the XOR constant is fixed, and is suitable only for hiding strings.</p>
 <h2>RETURN VALUE</h2>

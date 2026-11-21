@@ -1,5 +1,4 @@
 ---
-
 title: "pki-client(1)"
 name: "pki-client"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-pki-client/"
 description: "pki-client – Command-Line Interface for managing the security database on Certificate System client."
 ---
 
+<h2 class="name">NAME</h2>
+<p> pki-client &#8211; Command-Line Interface for managing the security database on Certificate System client. </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 pki[CLI options] client
         pki[CLI options] client -
     init[command options] pki[CLI options] client - cert - find[command options] pki[CLI options] client - cert - request[subject DN][command options] pki[CLI options] client - cert - import[nickname][command options] pki[CLI options] client - cert - mod&lt;nickname&gt;[command options] pki[CLI options] client - cert - show&lt;nickname&gt;[command options] pki[CLI options] client - cert - del&lt;nickname&gt;[command options]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>pki-client</code> commands provide command-line interfaces to manage the security database on the client&#8217;s machine. </p>
 <p> <code>pki</code> [CLI options] <code>client</code></p>
 <dl>

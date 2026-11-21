@@ -1,5 +1,4 @@
 ---
-
 title: "json-glib-validate(1)"
 name: "json-glib-validate"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-json-glib-validate/"
 description: "json-glib-validate – JSON-GLib validation tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> json-glib-validate &#8211; JSON-GLib validation tool </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>json-glib-validate</code> [<code>-h</code>,&nbsp;<wbr><code>&#8211;help</code>] URI [URI&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>json-glib-validate</code></p>
 <dd>offers a simple command line interface to validate JSON data. It lets you list URIs that point to JSON data and checks that the data conforms to the JSON syntax. </dd>
 <p> The resources to operate on are specified by the <i>URI</i> argument. </p>

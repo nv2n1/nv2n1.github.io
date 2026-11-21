@@ -1,5 +1,4 @@
 ---
-
 title: "split2po(1)"
 name: "split2po"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-split2po/"
 description: "split2po – Creates a po file from two DocBook XML files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> split2po &#8211; Creates a po file from two DocBook XML files </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>split2po</code> {<i>Original-XML</i><i>Translated-XML</i>}</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>split2po</code></p>
 <dd>is a command-line tool that takes the two given DocBook XML files and produces a <code>gettext</code> message file (PO-file) that represents the changes between them. The resulting PO-file is sent to standard output. </dd>
 <p> translated-XML must be the result of translating original-XML into another language. It is this translation that the resulting PO-file will represent. </p>

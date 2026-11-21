@@ -1,5 +1,4 @@
 ---
-
 title: "repodiffer(1)"
 name: "repodiffer"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-repodiffer/"
 description: "repodiffer – report differences between repository histories"
 ---
 
+<h2 class="name">NAME</h2>
+<p> repodiffer &#8211; report differences between repository histories </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>repodiffer</code> [&#8211;ignore&nbsp;<wbr><i>parts</i>] [&#8211;quiet] [&#8211;verbose&nbsp;<wbr><i>level</i>] [&#8211;show-equal] [&#8211;changes-only] [&#8211;full-hash] [&#8211;tree-diff] [&#8211;legacy-map&nbsp;<wbr><i>mapfile</i>] [&#8211;single&nbsp;<wbr><i>id1=id2</i>] <i>repo-or-stream1</i> <i>repo-or-stream2</i></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This tool reports differences between two repository histories. The histories may be presented as git repository directories or as fast-import streams, or as one of each. </dd>
 <p> Revisions are first paired into correspondence by committer and commit date. Any revision in the left-hand (L) history that cannot be paired with a revision in the right-hand (R) history is interpreted as having been deleted; any revision in the R history that cannot be paired with a revision in the L history is interpreted as having been inserted. </p>
 <p> For each changed, inserted, or deleted revision, a summary line is emitted identifying it by commit ID (for a repo) or mark (for a stream file) in the first history. In change reports, the corresponding revision in the second history is similarly identified and the report indicates the nature of the changes. </p>

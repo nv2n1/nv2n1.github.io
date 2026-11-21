@@ -1,5 +1,4 @@
 ---
-
 title: "fwb_ipf(1)"
 name: "fwb_ipf"
 section: "1"
@@ -10,7 +9,9 @@ description: "fwb_ipf – Policy compiler for ipfilter"
 
 <h2>NAME</h2>
 <p> fwb_ipf &#8211; Policy compiler for ipfilter</p>
+<h2>SYNOPSIS</h2>
 <p> <code>fwb_ipf</code> <code>[-vVx]</code> <code>[-d wdir]</code> <code>[-o output.fw]</code> <code>[-i]</code> <code>-f data_file.xml</code> object_name </p>
+<h2>DESCRIPTION</h2>
 <p> <code>fwb_ipf</code> is a firewall policy compiler component of Firewall Builder (see <a href="/docs/linux/man/1-fwbuilder/">fwbuilder</a>(1)). This compiler generates code for ipfilter. Compiler reads objects definitions and firewall description from the data file specified with &quot;-f&quot; option and generates ipfilter configuration files and firewall activation script. </p>
 <p> All generated files have names that start with the name of the firewall object. Firewall activation script has extension &quot;.fw&quot; and is simple shell script that flushes current policy, loads new filter and nat rules and then activates ipfilter. IPFilter configuration file name starts with the name of the firewall object, plus &quot;-ipf.conf&quot;. NAT configuration file name also starts with the name of the firewall object, plus &quot;-nat.conf&quot;. For example, if firewall object has name &quot;myfirewall&quot;, then compiler will create three files: &quot;myfirewall.fw&quot;, &quot;myfirewall-pf.conf&quot;, &quot;myfirewall-nat.conf&quot;. </p>
 <p> The data file and the name of the firewall objects must be specified on the command line. Other command line parameters are optional. </p>

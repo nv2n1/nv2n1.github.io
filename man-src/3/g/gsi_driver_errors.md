@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-gsi_driver_errors/"
 description: "Error Types –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Error Types &#8211; </p>
 <p> The GSI driver uses mostly GSSAPI calls, so it generally just wraps the underlying GSSAPI errors or uses generic xio errors.</p>
 <h3>Enumerations</h3>
 <p> enum <code>globus_xio_gsi_error_t</code> { <code>GLOBUS_XIO_GSI_ERROR_INVALID_PROTECTION_LEVEL</code>, <code>GLOBUS_XIO_GSI_ERROR_WRAP_GSSAPI</code>, <code>GLOBUS_XIO_GSI_ERROR_EMPTY_TARGET_NAME</code>, <code>GLOBUS_XIO_GSI_ERROR_EMPTY_HOST_NAME</code>, <code>GLOBUS_XIO_GSI_AUTHORIZATION_FAILED</code>, <code>GLOBUS_XIO_GSI_ERROR_TOKEN_TOO_BIG</code> } </p>

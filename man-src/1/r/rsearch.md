@@ -1,5 +1,4 @@
 ---
-
 title: "rsearch(1)"
 name: "rsearch"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-rsearch/"
 description: "rsearch – Stress test an LDAP server with search operations"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rsearch &#8211; Stress test an LDAP server with search operations </p>
+<h2>SYNOPSIS</h2>
 <p> <code>rsearch</code> <code>-D</code> binddn <code>-w</code> bindpw <code>-s</code> suffix <code>-f</code> filter [<i>options</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> Stress tests an LDAP server with search operations. </p>
 <h2>OPTIONS</h2>
 <p> A summary of options is included below:</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "git-clone(1)"
 name: "git-clone"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-git-clone/"
 description: "git-clone – Clone a repository into a new directory"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-clone &#8211; Clone a repository into a new directory </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git clone[--template = &lt;template_directory&gt;]
          [-l][-s][--no - hardlinks][-q][-n][--bare][--mirror]
@@ -18,6 +20,7 @@ git clone[--template = &lt;template_directory&gt;]
          [--[no - ] remote - submodules][--jobs&lt;n&gt;][--sparse][--[no - ] reject - shallow]
          [--filter = &lt;filter&gt;][--]&lt;repository&gt;[&lt;directory&gt;]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Clones a repository into a newly created directory, creates remote-tracking branches for each branch in the cloned repository (visible using <code>git branch &#8211;remotes</code>), and creates and checks out an initial branch that is forked from the cloned repository&#8217;s currently active branch. </p>
 <p> After the clone, a plain <code>git fetch</code> without arguments will update all the remote-tracking branches, and a <code>git pull</code> without arguments will in addition merge the remote master branch into the current master branch, if any (this is untrue when &quot;&#8211;single-branch&quot; is given; see below). </p>
 <p> This default configuration is achieved by creating references to the remote branch heads under <code>refs/remotes/origin</code> and by initializing <code>remote.origin.url</code> and <code>remote.origin.fetch</code> configuration variables.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "jigdo-lite(1)"
 name: "jigdo-lite"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-jigdo-lite/"
 description: "jigdo-lite – Download jigdo files using wget"
 ---
 
+<h2 class="name">NAME</h2>
+<p> jigdo-lite &#8211; Download jigdo files using wget </p>
+<h2>SYNOPSIS</h2>
 <p> <code>jigdo-lite</code> [ <code>URL</code> ] </p>
+<h2>DESCRIPTION</h2>
 <p> See <code><a href="/docs/linux/man/1-jigdo-file/">jigdo-file</a></code>(1) for an introduction to Jigsaw Download. </p>
 <p> Given the URL of a `<i>.jigdo</i>&#8216; file, <code>jigdo-lite</code> downloads the large file (e.g. a CD image) that has been made available through that URL. <code><a href="/docs/linux/man/1-wget/">wget</a></code>(1) is used to download the necessary pieces of administrative data (contained in the `<i>.jigdo</i>&#8216; file and a corresponding `<i>.template</i>&#8216; file) as well as the many pieces that the large file is made from. The <code><a href="/docs/linux/man/1-jigdo-file/">jigdo-file</a></code>(1) utility is used to reconstruct the large file from the pieces. </p>
 <p> `<i>.jigdo</i>&#8216; files that contain references to Debian mirrors are treated specially: When such a file is recognized, you are asked to select one mirror out of a list of all Debian mirrors. </p>

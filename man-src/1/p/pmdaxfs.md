@@ -1,5 +1,4 @@
 ---
-
 title: "pmdaxfs(1)"
 name: "pmdaxfs"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmdaxfs – XFS filesystem performance metrics domain agent (PMDA)
 
 <h2>NAME</h2>
 <p> <code>pmdaxfs</code> &#8211; XFS filesystem performance metrics domain agent (PMDA)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/xfs/pmdaxfs</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdaxfs</code> is a Performance Metrics Domain Agent (PMDA) which extracts performance metrics describing the state of the XFS filesystem from the Linux kernel. </p>
 <p> The <code>xfs</code> PMDA exports metrics that measure information about metadata buffer usage, the journal, btree operations, inode operations, extended attributes, directories, quotas, read and write operation counts and of course throughput. </p>
 <p> The PMDA provides a facility to reset the values of all counters to zero using <code><a href="/docs/linux/man/1-pmstore/">pmstore</a></code>(1) with the xfs.control.reset metric. </p>

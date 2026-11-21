@@ -1,5 +1,4 @@
 ---
-
 title: "alevtd(1)"
 name: "alevtd"
 section: "1"
@@ -10,7 +9,9 @@ description: "alevtd – webserver for videotext pages"
 
 <h2>NAME</h2>
 <p> alevtd &#8211; webserver for videotext pages</p>
+<h2>SYNOPSIS</h2>
 <p> <code>alevtd [ options ]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>alevtd</code> is http daemon which serves videotext pages as HTML. Tune in some station with a utility like v4lctl or some TV application. Then start it and point your browser to <a rel="nofollow" href="http://localhost:5654/">http://localhost:5654/</a> </p>
 <p> Pages may be requested either in HTML format (<a rel="nofollow" href="http://localhost:5654/">http://localhost:5654/</a>&lt;page&gt;/ or <a rel="nofollow" href="http://localhost:5654/">http://localhost:5654/</a>&lt;page&gt;/&lt;subpage&gt;.html) or in ASCII text format (<a rel="nofollow" href="http://localhost:5654/">http://localhost:5654/</a>&lt;page&gt;/&lt;subpage&gt;.txt). Subpage &quot;00&quot; can be used for pages without subpages.</p>
 <h2>OPTIONS</h2>

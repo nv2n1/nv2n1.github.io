@@ -1,5 +1,4 @@
 ---
-
 title: "getdns_dict_set(3)"
 name: "getdns_dict_set"
 section: "3"
@@ -12,6 +11,7 @@ description: "getdns_dict_set, getdns_dict_set_bindata, getdns_dict_set_dict, ge
 <p> <code>getdns_dict_set, </code> <code>getdns_dict_set_bindata, </code> <code>getdns_dict_set_dict, </code> <code>getdns_dict_set_int, </code> <code>getdns_dict_set_list, </code> &#8212; set a value by name in a getdns dict </p>
 <h2>LIBRARY</h2>
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;getdns.h&gt; </p>
 <p> getdns_return_t<br />
  <code>getdns_dict_set_bindata</code> (getdns_dict *this_dict,</p>
@@ -37,6 +37,7 @@ description: "getdns_dict_set, getdns_dict_set_bindata, getdns_dict_set_dict, ge
 <dt>
 </dt><dd> char *name,<br />
  getdns_list *child_list)</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The getdns_dict type is used to manage name/value pairs in which the names are strings and the data types of the values are heterogeneous and include</p>
 <dl>
 <dt>

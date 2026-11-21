@@ -1,5 +1,4 @@
 ---
-
 title: "euare-instanceprofilelistbypath(1)"
 name: "euare-instanceprofilelistbypath"
 section: "1"
@@ -10,10 +9,12 @@ description: "euare-instanceprofilelistbypath – List your account’s instance
 
 <h2>NAME</h2>
 <p> euare-instanceprofilelistbypath &#8211; List your account&#8217;s instance profiles</p>
+<h2>SYNOPSIS</h2>
 <p> euare-instanceprofilelistbypath [-p PREFIX] [&#8211;as-account ACCOUNT]</p>
 <dl>
 <dt>[-U URL] [&#8211;region USER [at] REGION]</dt>
 <dd> [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> List your account&#8217;s instance profiles</p>
 <h3>optional arguments:</h3>
 <dl>

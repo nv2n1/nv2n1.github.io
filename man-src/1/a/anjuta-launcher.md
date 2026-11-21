@@ -1,5 +1,4 @@
 ---
-
 title: "anjuta-launcher(1)"
 name: "anjuta-launcher"
 section: "1"
@@ -13,6 +12,7 @@ description: "anjuta-launcher – GNOME Integrated Development Environment"
 <p> anjuta-launcher normally is not called directly by the user but invoked by anjuta</p>
 <h2>SYNTAX</h2>
 <p> anjuta-launcher [ <i>option</i> ] program_name [ <i>program_parameter &#8230; </i>]</p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of the Anjuta GNOME IDE. It is used to launch programs from within the IDE and to initialize a terminal for a debugging session.</p>
 <h2>OPTIONS</h2>
 <dl>

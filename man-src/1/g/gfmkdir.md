@@ -1,5 +1,4 @@
 ---
-
 title: "gfmkdir(1)"
 name: "gfmkdir"
 section: "1"
@@ -10,7 +9,9 @@ description: "gfmkdir – manual page for gfmkdir (glusterfs-coreutils) 0.2.0"
 
 <h2>NAME</h2>
 <p> gfmkdir &#8211; manual page for gfmkdir (glusterfs-coreutils) 0.2.0</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gfmkdir</code> [<i>OPTION</i>]&#8230; <i>URL</i></p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt><code>-o</code>, <code>&#8211;xlator-option</code>=<i>OPTION</i></dt>
 <dd> specify a translator option for the connection. Multiple options are supported and take the form xlator.key=value.</dd>

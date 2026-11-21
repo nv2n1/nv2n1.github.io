@@ -1,5 +1,4 @@
 ---
-
 title: "kmag(1)"
 name: "kmag"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-kmag/"
 description: "kmag – Screen magnifier"
 ---
 
+<h2 class="name">NAME</h2>
+<p> kmag &#8211; Screen magnifier </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>kmag</code> [KDE Generic Options] [Qt(TM)&nbsp;<wbr>Generic Options]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>kmag</code>, also known as</p>
 <dd>KMagnifier is a screen magnifier. You can use KMagnifier to magnify a part of the screen just as you would use a lens to magnify a newspaper fine-print or a photograph. This application is useful for a variety of people: from researchers to artists to web-designers to people with low vision.</dd>
 <h2>SEE ALSO</h2>

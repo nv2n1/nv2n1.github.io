@@ -1,5 +1,4 @@
 ---
-
 title: "g_chi(1)"
 name: "g_chi"
 section: "1"
@@ -11,7 +10,9 @@ description: "g_chi – calculates everything you want to know about chi and oth
 <h2>NAME</h2>
 <p> g_chi &#8211; calculates everything you want to know about chi and other dihedrals </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>g_chi</code> <code>-s</code><i> conf.gro </i> <code>-f</code><i> traj.xtc </i> <code>-o</code><i> order.xvg </i> <code>-p</code><i> order.pdb </i> <code>-ss</code><i> ssdump.dat </i> <code>-jc</code><i> Jcoupling.xvg </i> <code>-corr</code><i> dihcorr.xvg </i> <code>-g</code><i> chi.log </i> <code>-ot</code><i> dihtrans.xvg </i> <code>-oh</code><i> trhisto.xvg </i> <code>-rt</code><i> restrans.xvg </i> <code>-cp</code><i> chiprodhisto.xvg </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-r0</code><i> int </i> <code>-[no]phi</code><i></i> <code>-[no]psi</code><i></i> <code>-[no]omega</code><i></i> <code>-[no]rama</code><i></i> <code>-[no]viol</code><i></i> <code>-[no]periodic</code><i></i> <code>-[no]all</code><i></i> <code>-[no]rad</code><i></i> <code>-[no]shift</code><i></i> <code>-binwidth</code><i> int </i> <code>-core_rotamer</code><i> real </i> <code>-maxchi</code><i> enum </i> <code>-[no]normhisto</code><i></i> <code>-[no]ramomega</code><i></i> <code>-bfact</code><i> real </i> <code>-[no]chi_prod</code><i></i> <code>-[no]HChi</code><i></i> <code>-bmax</code><i> real </i> <code>-acflen</code><i> int </i> <code>-[no]normalize</code><i></i> <code>-P</code><i> enum </i> <code>-fitfn</code><i> enum </i> <code>-ncskip</code><i> int </i> <code>-beginfit</code><i> real </i> <code>-endfit</code><i> real </i></p>
+<h2>DESCRIPTION</h2>
 <p> g_chi computes phi, psi, omega and chi dihedrals for all your amino acid backbone and sidechains. It can compute dihedral angle as a function of time, and as histogram distributions. The distributions (histo-(dihedral)(RESIDUE).xvg) are cumulative over all residues of each type. </p>
 <p> If option <code> -corr</code> is given, the program will calculate dihedral autocorrelation functions. The function used is C(t) = cos(chi(tau)) cos(chi(tau+t)) . The use of cosines rather than angles themselves, resolves the problem of periodicity. (Van der Spoel &amp; Berendsen (1997), <code> Biophys. J. 72</code>, 2032-2041). Separate files for each dihedral of each residue (corr(dihedral)(RESIDUE)(nresnr).xvg) are output, as well as a file containing the information for all residues (argument of <code> -corr</code>). </p>
 <p> With option <code> -all</code>, the angles themselves as a function of time for each residue are printed to separate files (dihedral)(RESIDUE)(nresnr).xvg. These can be in radians or degrees. </p>

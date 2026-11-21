@@ -1,5 +1,4 @@
 ---
-
 title: "watchgnupg(1)"
 name: "watchgnupg"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-watchgnupg/"
 description: "watchgnupg – Read and print logs from a socket"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>watchgnupg</code> &#8211; Read and print logs from a socket </p>
+<h2>SYNOPSIS</h2>
 <p> <code>watchgnupg</code> [<code>&#8211;force</code>] [<code>&#8211;verbose</code>] <i>socketname</i> </p>
+<h2>DESCRIPTION</h2>
 <p> Most of the main utilities are able to write their log files to a Unix Domain socket if configured that way. <code>watchgnupg</code> is a simple listener for such a socket. It ameliorates the output with a time stamp and makes sure that long lines are not interspersed with log output from other utilities. This tool is not available for Windows. </p>
 <p> <code>watchgnupg</code> is commonly invoked as </p>
 <dl>

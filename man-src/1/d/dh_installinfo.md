@@ -1,5 +1,4 @@
 ---
-
 title: "dh_installinfo(1)"
 name: "dh_installinfo"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dh_installinfo/"
 description: "dh_installinfo – install info files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dh_installinfo &#8211; install info files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dh_installinfo</code> [<i>debhelper options</i>] [<code>-A</code>] [<i>file</i> &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>dh_installinfo</code> is a debhelper program that is responsible for installing info files into <i>usr/share/info</i> in the package build directory. </p>
 <p> From debhelper compatibility level 11 on, <code>dh_install</code> will fall back to looking in <i>debian/tmp</i> for files, if it does not find them in the current directory (or wherever you&#8217;ve told it to look using <code>&#8211;sourcedir</code>).</p>
 <h2>FILES</h2>

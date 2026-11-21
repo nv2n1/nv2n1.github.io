@@ -1,5 +1,4 @@
 ---
-
 title: "ssytd2(3)"
 name: "ssytd2"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-ssytd2/"
 description: "ssytd2.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ssytd2.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssytd2</code> (UPLO, N, A, LDA, D, E, TAU, INFO)<br />
  <i></i><code>SSYTD2</code> reduces a symmetric matrix to real symmetric tridiagonal form by an orthogonal similarity transformation (unblocked algorithm).</p>

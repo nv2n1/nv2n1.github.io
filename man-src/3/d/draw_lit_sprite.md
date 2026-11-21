@@ -1,5 +1,4 @@
 ---
-
 title: "draw_lit_sprite(3)"
 name: "draw_lit_sprite"
 section: "3"
@@ -10,8 +9,10 @@ description: "draw_lit_sprite – Draws a sprite tinted with a specific color. A
 
 <h2>NAME</h2>
 <p> draw_lit_sprite &#8211; Draws a sprite tinted with a specific color. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>void draw_lit_sprite(BITMAP *bmp, BITMAP *sprite, int x, int y, int color);</code></p>
+<h2>DESCRIPTION</h2>
 <p> In 256-color modes, uses the global color_map table to tint the sprite image to the specified color or to light it to the level specified by (create_trans_table or create_light_table), and draws the resulting image to the destination bitmap. In truecolor modes, uses the blender functions to light the sprite image using the alpha level specified by &#8216;color&#8217; (the alpha level which was passed to the blender functions is ignored) and draws the resulting image to the destination bitmap. The &#8216;color&#8217; parameter must be in the range [0-255] whatever its actual meaning is. This must only be used after you have set up the color mapping table (for 256-color modes) or blender functions (for truecolor modes). Example: </p>
 <pre><code>
 /* Some one time initialisation code. */

@@ -1,5 +1,4 @@
 ---
-
 title: "get-oui(1)"
 name: "get-oui"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-get-oui/"
 description: "get-oui – Fetch the arp-scan OUI file from the IEEE website"
 ---
 
+<h2 class="name">NAME</h2>
+<p> get-oui &#8211; Fetch the arp-scan OUI file from the IEEE website </p>
+<h2>SYNOPSIS</h2>
 <p> <code>get-oui</code> [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>get-oui</code> fetches the Ethernet OUI file from the IEEE website, and saves it in the format used by arp-scan. </p>
 <p> The OUI file contains all of the OUIs (Organizationally Unique Identifiers) that have been registered with IEEE. Each OUI entry in the file specifies the first 24-bits of the 48-bit Ethernet hardware address, leaving the remaining 24-bits for use by the registering organisation. For example the OUI entry &quot;080020&quot;, registered to Sun Microsystems, applies to any Ethernet hardware address from <i>08:00:20:00:00:00</i> to <i>08:00:20:ff:ff:ff</i> inclusive. Each OUI assignment represents a total of 2^24 (16,777,216) Ethernet addresses. </p>
 <p> Every major Ethernet hardware vendor registers an OUI for their equipment, and larger vendors will need to register more than one. For example, 3Com have a total of 37 OUI entries. Organisations that only produce a small number of Ethernet devices will often obtain an IAB registration instead. See <code><a href="/docs/linux/man/1-get-iab/">get-iab</a></code>(1) for details. </p>

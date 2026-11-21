@@ -1,5 +1,4 @@
 ---
-
 title: "chetf2(3)"
 name: "chetf2"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-chetf2/"
 description: "chetf2.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> chetf2.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chetf2</code> (UPLO, N, A, LDA, IPIV, INFO)<br />
  <i></i><code>CHETF2</code> computes the factorization of a complex Hermitian matrix, using the diagonal pivoting method (unblocked algorithm calling Level 2 BLAS).</p>

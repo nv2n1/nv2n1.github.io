@@ -1,5 +1,4 @@
 ---
-
 title: "dlasq1(3)"
 name: "dlasq1"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlasq1/"
 description: "dlasq1.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlasq1.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlasq1</code> (N, D, E, WORK, INFO)<br />
  <i></i><code>DLASQ1</code> computes the singular values of a real square bidiagonal matrix. Used by sbdsqr.</p>

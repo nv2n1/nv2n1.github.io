@@ -1,5 +1,4 @@
 ---
-
 title: "dnsscope(1)"
 name: "dnsscope"
 section: "1"
@@ -10,7 +9,9 @@ description: "dnsscope – A PowerDNS nameserver debugging tool"
 
 <h2>NAME</h2>
 <p> dnsscope &#8211; A PowerDNS nameserver debugging tool</p>
+<h2>SYNOPSIS</h2>
 <p> <code>dnsscope </code><i>[infile]</i></p>
+<h2>DESCRIPTION</h2>
 <p> dnsscope takes an <i>infile</i> in PCAP format. It generates some simple statistics outputs these to STDOUT.</p>
 <h2>OPTIONS</h2>
 <p> None.</p>

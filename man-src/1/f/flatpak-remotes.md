@@ -1,5 +1,4 @@
 ---
-
 title: "flatpak-remotes(1)"
 name: "flatpak-remotes"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-flatpak-remotes/"
 description: "flatpak-remotes – List remote repositories"
 ---
 
+<h2 class="name">NAME</h2>
+<p> flatpak-remotes &#8211; List remote repositories </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak remotes</code> [OPTION&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>Lists the known remote repositories, in priority order. </dd>
 <p> By default, both per-user and system-wide installations are shown. Use the <code>&#8211;user</code>, <code>&#8211;system</code> or <code>&#8211;installation</code> options to change this.</p>
 <h2>OPTIONS</h2>

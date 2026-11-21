@@ -1,5 +1,4 @@
 ---
-
 title: "fax2ps(1)"
 name: "fax2ps"
 section: "1"
@@ -10,7 +9,9 @@ description: "fax2ps – convert a TIFF facsimile to compressed PostScript™"
 
 <h2>NAME</h2>
 <p> fax2ps &#8211; convert a <font SIZE="-1">TIFF</font> facsimile to compressed PostScript&trade;</p>
+<h2>SYNOPSIS</h2>
 <p> <code>fax2ps</code> [ <i>options</i> ] [ <i>file &#8230;</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>fax2ps</i> reads one or more <font SIZE="-1">TIFF</font> facsimile image files and prints a compressed form of PostScript on the standard output that is suitable for printing. </p>
 <p> By default, each page is scaled to reflect the image dimensions and resolutions stored in the file. The <code>-x</code> and <code>-y</code> options can be used to specify the horizontal and vertical image resolutions (lines/inch), respectively. If the <code>-S</code> option is specified, each page is scaled to fill an output page. The default output page is 8.5 by 11 inches. Alternate page dimensions can be specified in inches with the <code>-W</code> and <code>-H</code> options. </p>
 <p> By default <i>fax2ps</i> generates PostScript for all pages in the file. The <code>-p</code> option can be used to select one or more pages from a multi-page document. </p>

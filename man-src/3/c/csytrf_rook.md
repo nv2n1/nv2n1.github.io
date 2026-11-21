@@ -1,5 +1,4 @@
 ---
-
 title: "csytrf_rook(3)"
 name: "csytrf_rook"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-csytrf_rook/"
 description: "csytrf_rook.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> csytrf_rook.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>csytrf_rook</code> (UPLO, N, A, LDA, IPIV, WORK, LWORK, INFO)<br />
  <i></i><code>CSYTRF_ROOK</code></p>

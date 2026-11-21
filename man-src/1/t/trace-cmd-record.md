@@ -1,5 +1,4 @@
 ---
-
 title: "trace-cmd-record(1)"
 name: "trace-cmd-record"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-trace-cmd-record/"
 description: "trace-cmd-record – record a trace from the Ftrace Linux internal tracer"
 ---
 
+<h2 class="name">NAME</h2>
+<p> trace-cmd-record &#8211; record a trace from the Ftrace Linux internal tracer </p>
+<h2>SYNOPSIS</h2>
 <p> <code>trace-cmd record</code> [<i>OPTIONS</i>] [<i>command</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <a href="/docs/linux/man/1-trace-cmd/">trace-cmd</a>(1) record command will set up the Ftrace Linux kernel tracer to record the specified plugins or events that happen while the <i>command</i> executes. If no command is given, then it will record until the user hits Ctrl-C. </p>
 <p> The record command of trace-cmd will set up the Ftrace tracer to start tracing the various events or plugins that are given on the command line. It will then create a number of tracing processes (one per CPU) that will start recording from the kernel ring buffer straight into temporary files. When the command is complete (or Ctrl-C is hit) all the files will be combined into a trace.dat file that can later be read (see <a href="/docs/linux/man/1-trace-cmd-report/">trace-cmd-report</a>(1)).</p>
 <h2>OPTIONS</h2>

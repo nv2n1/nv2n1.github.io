@@ -1,5 +1,4 @@
 ---
-
 title: "mib2c(1)"
 name: "mib2c"
 section: "1"
@@ -10,7 +9,9 @@ description: "mib2c — generate template code for extending the agent"
 
 <h2>NAME</h2>
 <p> mib2c &#8212; generate template code for extending the agent</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mib2c</code> [-h] -c CONFIGFILE [-I PATH] [-f OUTNAME] [-i][-s][-q][-S VAR=VAL] MIBNODE</p>
+<h2>DESCRIPTION</h2>
 <p> The mib2c tool is designed to take a portion of the MIB tree (as defined by a MIB file) and generate the template C code necessary to implement the relevant management objects within it. </p>
 <p> In order to implement a new MIB module, three files are necessary: </p>
 <p> &#8211; MIB definition file<br />

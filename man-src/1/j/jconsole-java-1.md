@@ -1,5 +1,4 @@
 ---
-
 title: "jconsole-java-1(1)"
 name: "jconsole-java-1"
 section: "1"
@@ -10,6 +9,7 @@ description: "jconsole – Java Monitoring and Management Console"
 
 <h2>Name</h2>
 <p> jconsole &#8211; Java Monitoring and Management Console </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 jconsole[options][connection...]
 </code></pre>
@@ -31,6 +31,7 @@ jconsole[options][connection...]
 </dl>
 </dl>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> The <code>jconsole</code> command launches a graphical console tool that enables you to monitor and manage Java applications and virtual machines on a local or remote machine. </p>
 <p> On Windows, <code>jconsole</code> does not associate with a console window. It will, however, display a dialog box with error information if the <code>jconsole</code> command fails for some reason. </p>
 <h2>OPTIONS</h2>

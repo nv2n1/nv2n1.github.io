@@ -1,5 +1,4 @@
 ---
-
 title: "f2c(1)"
 name: "f2c"
 section: "1"
@@ -7,8 +6,11 @@ letter: "f"
 url: "/docs/linux/man/1-f2c/"
 description: "f2c – Convert Fortran 77 to C or C++"
 ---
-
+<h2 class="name">NAME</h2>
+<p> f2c - Convert Fortran 77 to C or C++ </p>
+<h2>SYNOPSIS</h2>
 <p> <code>f2c</code> [ <i>option ...</i> ] <i>file ...</i>  </p>
+<h2>DESCRIPTION</h2>
 <p> <i>F2c</i> converts Fortran 77 source code in <i>files</i> with names ending in or to C (or C++) source files in the current directory, with substituted for the final or `.F&#8217;. If no Fortran files are named, <i>f2c</i> reads Fortran from standard input and writes C on standard output. <i>File</i> names that end with or are taken to be prototype files, as produced by option `-P&#8217;, and are read first. </p>
 <p> The following options have the same meaning as in <i><a href="/docs/linux/man/1-f77/">f77</a></i>(1). </p>
 <dl>

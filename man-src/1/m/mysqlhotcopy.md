@@ -1,5 +1,4 @@
 ---
-
 title: "mysqlhotcopy(1)"
 name: "mysqlhotcopy"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mysqlhotcopy/"
 description: "mysqlhotcopy – a database backup program"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mysqlhotcopy &#8211; a database backup program </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqlhotcopy </code><i>arguments</i></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>mysqlhotcopy</code></p>
 <dd>is a Perl script that was originally written and contributed by Tim Bunce. It uses FLUSH TABLES, LOCK TABLES, and cp or scp to make a database backup. It is a fast way to make a backup of the database or single tables, but it can be run only on the same machine where the database directories are located. <code>mysqlhotcopy</code> works only for backing up MyISAM and ARCHIVE tables. It runs on Unix and NetWare. </dd>
 <p> To use <code>mysqlhotcopy</code>, you must have read access to the files for the tables that you are backing up, the SELECT privilege for those tables, the RELOAD privilege (to be able to execute FLUSH TABLES), and the LOCK TABLES privilege (to be able to lock the tables). </p>

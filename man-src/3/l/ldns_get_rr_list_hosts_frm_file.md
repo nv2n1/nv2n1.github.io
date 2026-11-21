@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_get_rr_list_hosts_frm_file(3)"
 name: "ldns_get_rr_list_hosts_frm_file"
 section: "3"
@@ -10,11 +9,13 @@ description: "ldns_get_rr_list_hosts_frm_fp, ldns_get_rr_list_hosts_frm_file"
 
 <h2>NAME</h2>
 <p> ldns_get_rr_list_hosts_frm_fp, ldns_get_rr_list_hosts_frm_file </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_rr_list* ldns_get_rr_list_hosts_frm_fp(FILE *fp); </p>
 <p> ldns_rr_list* ldns_get_rr_list_hosts_frm_file(char *filename); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_get_rr_list_hosts_frm_fp</i>()</dt>
 <dd>wade through fp (a /etc/hosts like file) and return a rr_list containing all the defined hosts in there .br <code>fp</code>: the file pointer to use .br Returns ldns_rr_list * with the names</dd></dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_alert_get_strname(3)"
 name: "gnutls_alert_get_strname"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_alert_get_strname – API function"
 
 <h2>NAME</h2>
 <p> gnutls_alert_get_strname &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>const char * gnutls_alert_get_strname(gnutls_alert_description_t </code><i>alert</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_alert_description_t alert</dt>
 <dd> is an alert number.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will return a string of the name of the alert.</p>
 <h2>RETURNS</h2>
 <p> string corresponding to <code>gnutls_alert_description_t</code> value.</p>

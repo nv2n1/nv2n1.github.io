@@ -1,5 +1,4 @@
 ---
-
 title: "freehostent(3)"
 name: "freehostent"
 section: "3"
@@ -7,9 +6,14 @@ letter: "f"
 url: "/docs/linux/man/3-freehostent/"
 ---
 
-getipnodebyname, getipnodebyaddr, freehostent - get network hostnames and addresses 
+<h2 class="name">NAME</h2>
+ 
 
-<pre><code>
+ getipnodebyname, getipnodebyaddr, freehostent - get network hostnames and addresses 
+
+<h2>SYNOPSIS</h2>
+
+ <pre><code>
 #include &lt;netdb.h&gt;
 #include &lt;sys/socket.h&gt;
 #include &lt;sys/types.h&gt;
@@ -20,7 +24,9 @@ struct hostent *getipnodebyaddr(const void *addr, size_t len,
 void freehostent(struct hostent *ip);
 </code></pre>
 
-These functions are deprecated (and unavailable in glibc). Use <b><a HREF="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></b>(3) and <b><a HREF="/docs/linux/man/3-getnameinfo/">getnameinfo</a></b>(3) instead. 
+<h2>DESCRIPTION</h2>
+
+ These functions are deprecated (and unavailable in glibc). Use <b><a HREF="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></b>(3) and <b><a HREF="/docs/linux/man/3-getnameinfo/">getnameinfo</a></b>(3) instead. 
 
  The <b>getipnodebyname</b>() and <b>getipnodebyaddr</b>() functions return the names and addresses of a network host. These functions return a pointer to the following structure: 
 

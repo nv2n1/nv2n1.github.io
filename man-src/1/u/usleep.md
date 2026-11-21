@@ -1,5 +1,4 @@
 ---
-
 title: "usleep(1)"
 name: "usleep"
 section: "1"
@@ -10,7 +9,9 @@ description: "usleep – sleep some number of microseconds"
 
 <h2>NAME</h2>
 <p> usleep &#8211; sleep some number of microseconds</p>
+<h2>SYNOPSIS</h2>
 <p> <code>usleep</code> [<i>number</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>usleep</code> sleeps some number of microseconds. The default is 1.</p>
 <h2>OPTIONS</h2>
 <p> <i>&#8211;usage</i> Show short usage message.</p>

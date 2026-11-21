@@ -1,5 +1,4 @@
 ---
-
 title: "perlport(1)"
 name: "perlport"
 section: "1"
@@ -7,9 +6,14 @@ letter: "p"
 url: "/docs/linux/man/1-perlport/"
 ---
 
-perlport - Writing portable Perl 
+<h2 class="name">NAME</h2>
+ 
 
-Perl runs on numerous operating systems. While most of them share much in common, they also have their own unique features. 
+ perlport - Writing portable Perl 
+
+<h2>DESCRIPTION</h2>
+
+ Perl runs on numerous operating systems. While most of them share much in common, they also have their own unique features. 
 
  This document is meant to help you to find out what constitutes portable Perl code. That way once you make a decision to write portably, you know where the lines are drawn, and you can stay within them. 
 

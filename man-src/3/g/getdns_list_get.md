@@ -1,5 +1,4 @@
 ---
-
 title: "getdns_list_get(3)"
 name: "getdns_list_get"
 section: "3"
@@ -12,6 +11,7 @@ description: "getdns_list_get, getdns_list_get_bindata, getdns_list_get_data_typ
 <p> <code>getdns_list_get, </code> <code>getdns_list_get_bindata, </code> <code>getdns_list_get_data_type, </code> <code>getdns_list_get_dict, </code> <code>getdns_list_get_length,</code> <code>getdns_list_get_list, </code> <code>getdns_list_get_int</code> &#8212; get a value by index from a getdns list </p>
 <h2>LIBRARY</h2>
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;getdns.h&gt; </p>
 <p> getdns_return_t<br />
  <code>getdns_list_get_bindata</code> (getdns_list *this_list,</p>
@@ -48,6 +48,7 @@ description: "getdns_list_get, getdns_list_get_bindata, getdns_list_get_data_typ
 <dt>
 </dt><dd> size_t index,<br />
  uint32_t *answer)</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The getdns_list type is used to manage heterogeneous lists in which the objects are each one of the data types:</p>
 <dl>
 <dt>

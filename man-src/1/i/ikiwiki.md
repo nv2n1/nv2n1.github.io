@@ -1,5 +1,4 @@
 ---
-
 title: "ikiwiki(1)"
 name: "ikiwiki"
 section: "1"
@@ -11,11 +10,15 @@ url: "/docs/linux/man/1-ikiwiki/"
 
  ikiwiki - a wiki compiler 
 
-ikiwiki [options] source destination 
+<h2>SYNOPSIS</h2>
+
+ ikiwiki [options] source destination 
 
  ikiwiki --setup setupfile 
 
-ikiwiki is a wiki compiler. It builds static HTML pages for a wiki, from source in the ikiwiki/Markdown language (or others), and writes it out to destination. 
+<h2>DESCRIPTION</h2>
+
+ ikiwiki is a wiki compiler. It builds static HTML pages for a wiki, from source in the ikiwiki/Markdown language (or others), and writes it out to destination. 
 
  Note that most options can be shortened to single letters, and boolean flags such as --verbose can be negated with --no-verbose. 
 

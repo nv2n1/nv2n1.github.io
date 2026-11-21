@@ -1,5 +1,4 @@
 ---
-
 title: "get_protection(3)"
 name: "get_protection"
 section: "3"
@@ -10,9 +9,11 @@ description: "get_protection — report the protection level of a dirfile fragme
 
 <h2>NAME</h2>
 <p> get_protection &#8212; report the protection level of a dirfile fragment</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
 <dl>
 <dt> <code>int get_protection(DIRFILE *</code><i>dirfile</i><code>, int </code><i>fragment_index</i><code>);</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>get_protection</code>() function queries a <a href="/docs/linux/man/5-dirfile/">dirfile</a>(5) database specified by <i>dirfile</i> and returns the advisory protection level for the fragment indexed by <i>fragment_index</i>. </dd>
 <h2>RETURN VALUE</h2>
 <p> Upon successful completion, <code>get_protection</code>() returns the advisory protection level of the specified fragment, which will be one of the following symbols.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "virt-copy-out(1)"
 name: "virt-copy-out"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-virt-copy-out/"
 description: "virt-copy-out – Copy files and directories out of a virtual machine disk image."
 ---
 
+<h2 class="name">NAME</h2>
+<p> virt-copy-out &#8211; Copy files and directories out of a virtual machine disk image. </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 virt - copy - out - a disk.img / file | dir[/ file | dir...] localdir virt - copy - out - d domain / file | dir[/ file | dir...] localdir
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <tt>&quot;virt-copy-out&quot;</tt> copies files and directories out of a virtual machine disk image or named libvirt domain. </p>
 <p> You can give one of more filenames and directories on the command line. Directories are copied out recursively.</p>
 <h2>EXAMPLES</h2>

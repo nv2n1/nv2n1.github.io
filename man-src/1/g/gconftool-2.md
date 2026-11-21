@@ -1,5 +1,4 @@
 ---
-
 title: "gconftool-2(1)"
 name: "gconftool-2"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-gconftool-2/"
 description: "gconftool-2 – GNOME configuration tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gconftool-2 &#8211; GNOME configuration tool </p>
+<h2>SYNOPSIS</h2>
 <p> <code>gconftool-2</code> [-?] [-?|&#8211;help] [&#8211;usage] [-s|&#8211;set] [-g|&#8211;get] [&#8211;set-schema] [-u|&#8211;unset] [&#8211;recursive-unset] [-a|&#8211;all-entries] [&#8211;all-dirs] [&#8211;dump] [&#8211;load=STRING] [-R|&#8211;recursive-list] [&#8211;dir-exists=STRING] [&#8211;shutdown] [-p|&#8211;ping] [&#8211;spawn] [-t|&#8211;type int|bool|float|string|list|pair] [-T|&#8211;get-type] [&#8211;get-list-size] [&#8211;get-list-element] [&#8211;list-type=int|bool|float|string] [&#8211;car-type=int|bool|float|string] [&#8211;cdr-type=int|bool|float|string] [&#8211;short-desc=DESCRIPTION] [&#8211;long-desc=DESCRIPTION] [&#8211;owner=OWNER] [&#8211;install-schema-file=FILENAME] [&#8211;config-source=SOURCE] [&#8211;direct] [&#8211;makefile-install-rule] [&#8211;makefile-uninstall-rule] [&#8211;break-key] [&#8211;break-directory] [&#8211;short-docs] [&#8211;long-docs] [&#8211;get-schema-name] [&#8211;apply-schema] [&#8211;unapply-schema] [&#8211;get-default-source] [-v|&#8211;version]</p>
+<h2>DESCRIPTION</h2>
 <p> Each preference in the GConf repository is expressed as a key-value pair. A GConf preference key is an element in the GConf repository that corresponds to an application preference. Preference keys typically have simple values such as strings, integers, or lists of strings and integers. The default key-value pairs are installed on the system, and are known as schemas. gconftool-2 is the command-line interface tool that enables you to set the values of keys, display the values of keys, and install schemas from schema definition files when you install an application. The GConf preference keys are stored and managed by the GConf daemon (gconfd-2). These keys are cached in memory, and saved to disk in XML format when appropriate.</p>
 <h2>OPTIONS</h2>
 <dl>

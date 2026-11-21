@@ -1,5 +1,4 @@
 ---
-
 title: "mvl2vcd(1)"
 name: "mvl2vcd"
 section: "1"
@@ -19,7 +18,11 @@ url: "/docs/linux/man/1-mvl2vcd/"
 
  mvl2vcd &lt;<i>filename.aet</i>&gt;
 
-Converts AET files to VCD on stdout. This is experimental as it is not a complete implementation and is not intended for general use.
+<h2>DESCRIPTION</h2>
+
+ 
+
+ Converts AET files to VCD on stdout. This is experimental as it is not a complete implementation and is not intended for general use.
 
 <h2>AUTHORS</h2>
 

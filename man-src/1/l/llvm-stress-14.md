@@ -1,5 +1,4 @@
 ---
-
 title: "llvm-stress-14(1)"
 name: "llvm-stress-14"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-llvm-stress-14/"
 description: "llvm-stress – generate random .ll files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> llvm-stress &#8211; generate random .ll files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>llvm-stress</code> [-size=filesize] [-seed=initialseed] [-o=outfile]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>llvm-stress</code> tool is used to generate random <code>.ll</code> files that can be used to test different components of LLVM.</p>
 <h2>OPTIONS</h2>
 <dl>

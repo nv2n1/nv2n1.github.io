@@ -1,5 +1,4 @@
 ---
-
 title: "gfal-legacy-register(1)"
 name: "gfal-legacy-register"
 section: "1"
@@ -10,7 +9,9 @@ description: "gfal-legacy-register – register a replica"
 
 <h2>NAME</h2>
 <p> gfal-legacy-register &#8211; register a replica</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gfal-legacy-register</code> [ <code>-h</code> ] [ <code>-V</code> ] [ <code>-v</code> ] [ <code>-D</code> <i>DEFINITION</i> ] [ <code>-C</code> <i>CLIENT-INFO</i> ] [ <code>-t</code> <i>TIMEOUT</i> ] <i> lfc surl</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>gfal-legacy-register</code> Register a new replica into a catalog </p>
 <h2>OPTIONS</h2>
 <dl>

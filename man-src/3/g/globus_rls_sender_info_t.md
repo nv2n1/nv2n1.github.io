@@ -1,5 +1,4 @@
 ---
-
 title: "globus_rls_sender_info_t(3)"
 name: "globus_rls_sender_info_t"
 section: "3"
@@ -8,7 +7,10 @@ url: "/docs/linux/man/3-globus_rls_sender_info_t/"
 description: "globus_rls_sender_info_t –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> globus_rls_sender_info_t &#8211; </p>
 <p> Information about server sending updates to an rli, returned by <code>globus_rls_client_rli_sender_list()</code>.</p>
+<h2>SYNOPSIS</h2>
 <h3>Data Fields</h3>
 <p> char <code>url</code> [256] </p>
 <p> time_t <code>lastupdate</code> </p>

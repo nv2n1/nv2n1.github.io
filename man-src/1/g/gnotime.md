@@ -1,5 +1,4 @@
 ---
-
 title: "gnotime(1)"
 name: "gnotime"
 section: "1"
@@ -10,7 +9,9 @@ description: "gnotime – GnoTime – a time tracker"
 
 <h2>NAME</h2>
 <p> gnotime &#8211; GnoTime &#8211; a time tracker</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gnotime</code> [<code>&#8211;display</code> <i>displayname</i>] [<code>&#8211;geometry</code> <i>geometry</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>GnoTime</i> is a simple combination of a stopwatch, a to-do-list organizer and time-keeping/billing system. </p>
 <p> In its simplest mode of operation, as a stopwatch, it simply counts the number of elapsed seconds while the timer is running. Unlike ordinary stopwatches, it will keep a log of each time that the timer was started and stopped. The log, or &#8216;journal&#8217;, can be annotated with comments, allowing a diary of events to be kept. </p>
 <p> <i>GnoTime</i> functions as a billing system by allowing you to assign a value to an hour&#8217;s worth of time. You can specify overtime, double-overtime rates and fixed flat-fees. Individual chunks of time as &#8216;billable&#8217;, </p>

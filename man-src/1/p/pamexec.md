@@ -1,5 +1,4 @@
 ---
-
 title: "pamexec(1)"
 name: "pamexec"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-pamexec/"
 description: "pamexec – Execute a shell command on each image in a Netpbm image stream"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pamexec &#8211; Execute a shell command on each image in a Netpbm image stream</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pamexec</code> </p>
 <p> [&#8216;<i>command</i>&#8216;] </p>
 <p> [<i>netpbmfile</i>] </p>
 <p> [<code>-check</code>] </p>
 <p> Minimum unique abbreviation of option is acceptable. You may use double hyphens instead of single hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamexec</code> reads a Netpbm image stream as input. For each image, it runs a specified shell command and supplies the image to it as Standard Input (with a pipe). </p>
 <p> <i>netpbmfile</i> is the file name of the input file, or <code>&#8211;</code> to indicate Standard Input. The default is Standard Input. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "nfsometer(1)"
 name: "nfsometer"
 section: "1"
@@ -10,7 +9,9 @@ description: "nfsometer – NFS performance measurement tool"
 
 <h2>NAME</h2>
 <p> nfsometer &#8211; NFS performance measurement tool</p>
+<h2>SYNOPSIS</h2>
 <p> nfsometer [options] [mode] [[&lt;server:path&gt;] [workloads&#8230;]]</p>
+<h2>DESCRIPTION</h2>
 <p> nfsometer is a performance measurement framework for running workloads and reporting results across NFS protocol versions, NFS options and Linux NFS client implementations</p>
 <h2>MODES</h2>
 <p> Basic usage (no mode specified): </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "git-mergetool(1)"
 name: "git-mergetool"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-mergetool/"
 description: "git-mergetool – Run merge conflict resolution tools to resolve merge conflicts"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-mergetool &#8211; Run merge conflict resolution tools to resolve merge conflicts </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git mergetool[--tool = &lt;tool&gt;][-y | --[no - ] prompt][&lt;file&gt;...]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Use <code>git mergetool</code> to run one of several merge utilities to resolve merge conflicts. It is typically run after <i>git merge</i>. </p>
 <p> If one or more &lt;file&gt; parameters are given, the merge tool program will be run to resolve differences on each file (skipping those without conflicts). Specifying a directory will include all unresolved files in that path. If no &lt;file&gt; names are specified, <i>git mergetool</i> will run the merge tool program on every file with merge conflicts.</p>
 <h2>OPTIONS</h2>

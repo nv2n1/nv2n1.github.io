@@ -1,5 +1,4 @@
 ---
-
 title: "libsox(3)"
 name: "libsox"
 section: "3"
@@ -10,6 +9,7 @@ description: "libsox – SoX, an audio file-format and effect library"
 
 <h2>NAME</h2>
 <p> libsox &#8211; SoX, an audio file-format and effect library</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sox.h&gt;
 int sox_format_init(void);
@@ -28,6 +28,7 @@ void sox_delete_effects_chain(sox_effects_chain_t *ecp);
 int sox_add_effect(sox_effects_chaint_t *chain, sox_effect_t *effp, sox_signalinfo_t *in, sox_signalinfo_t const *out);
 cc file.c - o file - lsox
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <i>libsox</i> is a library of sound sample file format readers/writers and sound effects processors. It is mainly developed for use by SoX but is useful for any sound application. </p>
 <p> <code>sox_format_init</code> function performs some required initialization related to all file format handlers. If compiled with dynamic library support then this will detect and initialize all external libraries. This should be called before any other file operations are performed. </p>
 <p> <code>sox_format_quit</code> function performs some required cleanup related to all file format handlers. </p>

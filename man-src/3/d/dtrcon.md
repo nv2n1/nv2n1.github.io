@@ -1,5 +1,4 @@
 ---
-
 title: "dtrcon(3)"
 name: "dtrcon"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dtrcon/"
 description: "dtrcon.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dtrcon.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dtrcon</code> (NORM, UPLO, DIAG, N, A, LDA, RCOND, WORK, IWORK, INFO)<br />
  <i></i><code>DTRCON</code></p>

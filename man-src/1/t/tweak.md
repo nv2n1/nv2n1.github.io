@@ -1,5 +1,4 @@
 ---
-
 title: "tweak(1)"
 name: "tweak"
 section: "1"
@@ -10,6 +9,7 @@ description: "tweak – efficient hex editor"
 
 <h2>NAME</h2>
 <p> <code>tweak</code> &#8211; efficient hex editor</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 tweak &amp;nbsp;
 [-l &amp; nbsp; | &amp;nbsp; - f] &amp; nbsp;
@@ -18,6 +18,7 @@ tweak &amp;nbsp;
 [-o &amp; nbsp; offset] &amp; nbsp;
 filename
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>tweak</code> is a hex editor. It allows you to edit a file at very low level, letting you see the full and exact binary contents of the file. It can be useful for modifying binary files such as executables, editing disk or CD images, debugging programs that generate binary file formats incorrectly, and many other things. </p>
 <p> Unlike simpler hex editors, <code>tweak</code> possesses a fully functional insert mode. This is not useful when editing many of the types of file described above, but can be useful in other situations. Also, an insert mode makes it easy to use <code>tweak</code> to construct new files from scratch. </p>
 <p> When you open a file in <code>tweak</code>, you can expect to see the screen contents looking something like this: </p>

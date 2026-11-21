@@ -1,5 +1,4 @@
 ---
-
 title: "beagle-query(1)"
 name: "beagle-query"
 section: "1"
@@ -10,7 +9,9 @@ description: "beagle-query – search your personal information space"
 
 <h2>NAME</h2>
 <p> beagle-query &#8211; search your personal information space</p>
+<h2>SYNOPSIS</h2>
 <p> <code>beagle-query</code> [<i>options</i>] <i>query</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>beagle-query</code> is used to search your personal information space via Beagle, on the command line. It is a command-line form of the beagle-search GNOME program.</p>
 <h2>OPTIONS</h2>
 <h3>Search options</h3>

@@ -1,5 +1,4 @@
 ---
-
 title: "fadvise64(2)"
 name: "fadvise64"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-fadvise64/"
 description: "posix_fadvise – predeclare an access pattern for file data"
 ---
 
+<h2 class="name">NAME</h2>
+<p> posix_fadvise &#8211; predeclare an access pattern for file data </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;fcntl.h&gt;
 int posix_fadvise(int fd, off_t offset, off_t len, int advice);
@@ -17,6 +19,7 @@ int posix_fadvise(int fd, off_t offset, off_t len, int advice);
 <dl>
 <dt>
 </dt><dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Programs can use <code>posix_fadvise</code>() to announce an intention to access file data in a specific pattern in the future, thus allowing the kernel to perform appropriate optimizations. </p>
 <p> The <i>advice</i> applies to a (not necessarily existent) region starting at <i>offset</i> and extending for <i>len</i> bytes (or until the end of the file if <i>len</i> is 0) within the file referred to by <i>fd</i>. The <i>advice</i> is not binding; it merely constitutes an expectation on behalf of the application. </p>
 <p> Permissible values for <i>advice</i> include:</p>

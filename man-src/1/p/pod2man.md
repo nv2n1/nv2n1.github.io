@@ -1,5 +1,4 @@
 ---
-
 title: "pod2man(1)"
 name: "pod2man"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-pod2man/"
 description: "pod2man – Convert POD data to formatted *roff input"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pod2man &#8211; Convert POD data to formatted *roff input </p>
+<h2>SYNOPSIS</h2>
 <p> pod2man [<code>&#8211;center</code>=<i>string</i>] [<code>&#8211;date</code>=<i>string</i>] [<code>&#8211;errors</code>=<i>style</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;fixed</code>=<i>font</i>]&nbsp;[<code>&#8211;fixedbold</code>=<i>font</i>]&nbsp;[<code>&#8211;fixeditalic</code>=<i>font</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;fixedbolditalic</code>=<i>font</i>]&nbsp;[<code>&#8211;name</code>=<i>name</i>]&nbsp;[<code>&#8211;nourls</code>]<br />
@@ -15,6 +17,7 @@ description: "pod2man – Convert POD data to formatted *roff input"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;quotes</code>=<i>quotes</i>]&nbsp;[<code>&#8211;lquote</code>=<i>quote</i>]&nbsp;[<code>&#8211;rquote</code>=<i>quote</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>&#8211;stderr</code>]&nbsp;[<code>&#8211;utf8</code>]&nbsp;[<code>&#8211;verbose</code>]&nbsp;[<i>input</i>&nbsp;[<i>output</i>]&nbsp;&#8230;] </p>
 <p> pod2man <code>&#8211;help</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>pod2man</code> is a front-end for Pod::Man, using it to generate *roff input from <font SIZE="-1">POD</font> source. The resulting *roff code is suitable for display on a terminal using <code><a href="/docs/linux/man/1-nroff/">nroff</a></code>(1), normally via <code><a href="/docs/linux/man/1-man/">man</a></code>(1), or printing using <code><a href="/docs/linux/man/1-troff/">troff</a></code>(1). </p>
 <p> <i>input</i> is the file to read for <font SIZE="-1">POD</font> source (the <font SIZE="-1">POD</font> can be embedded in code). If <i>input</i> isn&#8217;t given, it defaults to <tt>&quot;STDIN&quot;</tt>. <i>output</i>, if given, is the file to which to write the formatted output. If <i>output</i> isn&#8217;t given, the formatted output is written to <tt>&quot;STDOUT&quot;</tt>. Several <font SIZE="-1">POD</font> files can be processed in the same <code>pod2man</code> invocation (saving module load and compile times) by providing multiple pairs of <i>input</i> and <i>output</i> files on the command line. </p>
 <p> <code>&#8211;section</code>, <code>&#8211;release</code>, <code>&#8211;center</code>, <code>&#8211;date</code>, and <code>&#8211;official</code> can be used to set the headers and footers to use; if not given, Pod::Man will assume various defaults. See below or Pod::Man for details. </p>

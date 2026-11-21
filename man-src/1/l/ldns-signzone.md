@@ -1,5 +1,4 @@
 ---
-
 title: "ldns-signzone(1)"
 name: "ldns-signzone"
 section: "1"
@@ -10,7 +9,9 @@ description: "ldns-signzone – sign a zonefile with DNSSEC data"
 
 <h2>NAME</h2>
 <p> ldns-signzone &#8211; sign a zonefile with DNSSEC data</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ldns-signzone </code> [ <i>OPTIONS</i> ] <i>ZONEFILE</i> KEY [KEY [KEY] &#8230; ] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>ldns-signzone</code> is used to generate a DNSSEC signed zone. When run it will create a new zonefile that contains RRSIG and NSEC resource records, as specified in RFC 4033, RFC 4034 and RFC 4035. </p>
 <p> Keys must be specified by their base name (i.e. without .private). If the DNSKEY that belongs to the key in the .private file is not present in the zone, it will be read from the file &lt;base name&gt;.key. If that file does not exist, the DNSKEY value will be generated from the private key. </p>
 <p> Multiple keys can be specified, Key Signing Keys are used as such when they are either already present in the zone, or specified in a .key file, and have the KSK bit set. </p>

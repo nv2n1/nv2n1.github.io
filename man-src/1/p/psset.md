@@ -1,5 +1,4 @@
 ---
-
 title: "psset(1)"
 name: "psset"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-psset/"
 description: "psset – insert page device request in PostScript files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> psset &#8211; insert page device request in PostScript files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>psset</code> <i>FILE</i></p>
+<h2>DESCRIPTION</h2>
 <p> Produce a version of the PostScript FILE with a protected call to the PostScript operator `setpagedevice&#8217;. Typical use is making FILE print duplex, or on the manual tray etc.</p>
 <h2>OPTIONS</h2>
 <dl>

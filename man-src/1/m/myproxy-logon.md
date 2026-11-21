@@ -1,5 +1,4 @@
 ---
-
 title: "myproxy-logon(1)"
 name: "myproxy-logon"
 section: "1"
@@ -10,8 +9,10 @@ description: "myproxy-logon – retrieve a credential"
 
 <h2>NAME</h2>
 <p> myproxy-logon &#8211; retrieve a credential</p>
+<h2>SYNOPSIS</h2>
 <p> <code>myproxy-logon</code> [ <i>options</i> ] </p>
 <p> <code>myproxy-get-delegation</code> [ <i>options</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>myproxy-logon</code> command retrieves a proxy credential from the <code><a href="/docs/linux/man/8-myproxy-server/">myproxy-server</a></code>(8) that was previously stored using <code><a href="/docs/linux/man/1-myproxy-init/">myproxy-init</a></code>(1) or <code><a href="/docs/linux/man/1-myproxy-store/">myproxy-store</a></code>(1). It can also be used to retrieve short-lived end entity credentials from a <code><a href="/docs/linux/man/8-myproxy-server/">myproxy-server</a></code>(8) configured to act as a Certificate Authority. In the default mode, the command prompts for the MyProxy pass phrase associated with the credential to be retrieved and stores the retrieved credential in the location specified by the <code>X509_USER_PROXY environment variable</code> or <i>/tmp/x509up_u&lt;uid&gt;</i> if that environment variable is not set. </p>
 <p> The <code>myproxy-logon</code> command is also available under the name <code>myproxy-get-delegation</code> for backward compatibility.</p>
 <h2>OPTIONS</h2>

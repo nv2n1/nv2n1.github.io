@@ -1,5 +1,4 @@
 ---
-
 title: "git-pull-request(1)"
 name: "git-pull-request"
 section: "1"
@@ -10,7 +9,9 @@ description: "git-pull-request – Create pull request for GitHub project"
 
 <h2>NAME</h2>
 <p> <code>git-pull-request</code> &#8211; Create pull request for GitHub project</p>
+<h2>SYNOPSIS</h2>
 <p> <code>git-pull-request</code> [&lt;target branch&gt;]</p>
+<h2>DESCRIPTION</h2>
 <p> Create pull request for a project on GitHub via commandline. </p>
 <p> Uses the email from <code>git config user.email</code> to open the pull request.</p>
 <h2>OPTIONS</h2>

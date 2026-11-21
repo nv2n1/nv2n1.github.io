@@ -1,5 +1,4 @@
 ---
-
 title: "makekeys(1)"
 name: "makekeys"
 section: "1"
@@ -10,7 +9,9 @@ description: "makekeys — write cjdns keys generated via libnacl to stdout"
 
 <h2>NAME</h2>
 <p> <code>makekeys</code> &#8212; write cjdns keys generated via libnacl to stdout</p>
+<h2>SYNOPSIS</h2>
 <p> <code>makekeys</code></p>
+<h2>DESCRIPTION</h2>
 <p> Generates cjdns private keys and writes them to stdout forever with corresponding IP6 address and public key. Sample:</p>
 <dl>
 <dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "afile(1)"
 name: "afile"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-afile/"
 description: "afile – display type and creator of Apple Macintosh files (netatalk format)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> afile &#8211; display type and creator of Apple Macintosh files (netatalk format) </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>afile</code> [-a] <i>file</i>&#8230;</dt>
 <dd>
 </dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>afile</code></p>
 <dd>displays the name and Macintosh type and creator of the <i>file</i> arguments. Tests whether the file is an AppleDouble header, in which case it checks the corresponding data fork exists, or assumes it is a data fork in which case it looks for the corresponding AppleDouble to find the type/creator information. </dd>
 <p> <code>afile</code> does not look at any of the extension mapping files such as AppleVolumes.system.</p>

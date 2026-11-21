@@ -1,5 +1,4 @@
 ---
-
 title: "ck_ht_iterator_init(3)"
 name: "ck_ht_iterator_init"
 section: "3"
@@ -12,9 +11,11 @@ description: "ck_ht_iterator_init – initialize hash table iterator"
 <p> <code>ck_ht_iterator_init</code> &#8211; initialize hash table iterator</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_ht.h </p>
 <p> <code>ck_ht_iterator_t iterator = CK_HT_ITERATOR_INITIALIZER</code> </p>
 <p> Ft void Fn ck_ht_iterator_init ck_ht_iterator_t *iterator</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_ht_iterator_init function will initialize the object pointed to by the Fa iterator argument. Alternatively, an iterator may be statically initialized by assigning it the <code>CK_HT_ITERATOR_INITIALIZER</code> value. </p>
 <p> An iterator is used to iterate through hash table entries with the ck_ht_next3 function.</p>
 <h2>RETURN VALUES</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "podofoimg2pdf(1)"
 name: "podofoimg2pdf"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-podofoimg2pdf/"
 description: "podofoimg2pdf – Convert images to PDF files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> podofoimg2pdf &#8211; Convert images to PDF files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>podofoimg2pdf</code> [output.pdf] [-useimgsize] [image1 image2 image3 &#8230;] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>podofoimg2pdf</code> is one of the command line tools from the PoDoFo library that provide several useful operations to work with PDF files. This tool will combine any number of images into a single PDF. This is useful for creating a document from scanned images. Large pages will be scaled to fit the page and images smaller than the defined page size will be centered. </p>
 <p> Supported image formats:</p>
 <dl>

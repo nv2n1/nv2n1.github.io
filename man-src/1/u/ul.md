@@ -1,5 +1,4 @@
 ---
-
 title: "ul(1)"
 name: "ul"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ul/"
 description: "ul – do underlining"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ul &#8211; do underlining </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ul</code> [options] [<i>file</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>ul</code> reads the named files (or standard input if none are given) and translates occurrences of underscores to the sequence which indicates underlining for the terminal in use, as specified by the environment variable <code>TERM</code>. The <i>terminfo</i> database is read to determine the appropriate sequences for underlining. If the terminal is incapable of underlining but is capable of a standout mode, then that is used instead. If the terminal can overstrike, or handles underlining automatically, <code>ul</code> degenerates to <code><a href="/docs/linux/man/1-cat/">cat</a></code>(1). If the terminal cannot underline, underlining is ignored.</p>
 <h2>OPTIONS</h2>
 <p> <code>-i</code>, <code>&#8211;indicated</code></p>

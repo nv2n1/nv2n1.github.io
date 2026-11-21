@@ -1,5 +1,4 @@
 ---
-
 title: "obconformer(1)"
 name: "obconformer"
 section: "1"
@@ -10,7 +9,9 @@ description: "obconformer – generate conformer coordinates"
 
 <h2>NAME</h2>
 <p> <code>obconformer</code> &#8211; generate conformer coordinates</p>
+<h2>SYNOPSIS</h2>
 <p> <i># of conformers</i> <i># of optimization steps</i> <i>filename</i></p>
+<h2>DESCRIPTION</h2>
 <p> The obconformer tool can be used as part of a conformational study by generating random conformers using a Monte Carlo search. The best conformer out of the batch of conformers will be output, after taking the supplied number of geometry optimization steps. By default, obconformer uses the MMFF94 force field.</p>
 <h2>EXAMPLES</h2>
 <blockquote><p><tt>&quot;obconformer 250 100 baseconformer.sdf &gt;rotamer1.sdf&quot;</tt></p></blockquote>

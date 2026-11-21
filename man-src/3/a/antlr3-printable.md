@@ -1,5 +1,4 @@
 ---
-
 title: "antlr3-printable(3)"
 name: "antlr3-printable"
 section: "3"
@@ -8,7 +7,10 @@ url: "/docs/linux/man/3-antlr3-printable/"
 description: "ANTLR3_STRING_FACTORY_struct –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ANTLR3_STRING_FACTORY_struct &#8211; </p>
 <p> Definition of the string factory interface, which creates and tracks strings for you of various shapes and sizes.</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3string.h">antlr3string.h</a>&gt;</p>
 <h3>Data Fields</h3>
 <p> void(* <code>close</code> )(struct <code>ANTLR3_STRING_FACTORY_struct</code> *factory)<br />

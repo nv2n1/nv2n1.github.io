@@ -1,5 +1,4 @@
 ---
-
 title: "pdfgrep(1)"
 name: "pdfgrep"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pdfgrep/"
 description: "pdfgrep – search pdf files for a regular expression"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pdfgrep &#8211; search pdf files for a regular expression </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pdfgrep</code> [<i>OPTION</i>&#8230;] <i>PATTERN</i> <i>FILE</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Search for <i>PATTERN</i> in each <i>FILE</i>. <i>PATTERN</i> is an extended regular expression. </p>
 <p> <code>pdfgrep</code> works much like grep, with one distinction: It operates on pages and not on lines.</p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "dpkg-architecture(1)"
 name: "dpkg-architecture"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dpkg-architecture/"
 description: "dpkg-architecture – set and determine the architecture for package building"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dpkg-architecture &#8211; set and determine the architecture for package building </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dpkg-architecture</code> [<i>option</i>&#8230;] [<i>command</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>dpkg-architecture</code> provides a facility to determine and set the build and host architecture for package building. </p>
 <p> The build architecture is always determined by either the <font SIZE="-1"><code>DEB_BUILD_ARCH</code></font> variable if set (and <code>&#8211;force</code> not being specified) or by an external call to <code><a href="/docs/linux/man/1-dpkg/">dpkg</a></code>(1), and cannot be set at the command line. </p>
 <p> You can specify the host architecture by providing one or both of the options <code>&#8211;host-arch</code> and <code>&#8211;host-type</code>, otherwise the <font SIZE="-1"><code>DEB_HOST_ARCH</code></font> variable is used if set (and <code>&#8211;force</code> not being specified). The default is determined by an external call to <code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1), or the same as the build architecture if <font SIZE="-1"><code>CC</code></font> or gcc are both not available. One out of <code>&#8211;host-arch</code> and <code>&#8211;host-type</code> is sufficient, the value of the other will be set to a usable default. Indeed, it is often better to only specify one, because <code>dpkg-architecture</code> will warn you if your choice does not match the default.</p>

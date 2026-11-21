@@ -1,5 +1,4 @@
 ---
-
 title: "evince-previewer(1)"
 name: "evince-previewer"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-evince-previewer/"
 description: "evince-previewer – show a printing preview of PostScript and PDF documents"
 ---
 
+<h2 class="name">NAME</h2>
+<p> evince-previewer &#8211; show a printing preview of PostScript and PDF documents </p>
+<h2>SYNOPSIS</h2>
 <p> <code>evince-previewer</code> [options] <code>input</code></p>
+<h2>DESCRIPTION</h2>
 <p> evince-previewer is a GNOME program to show a printing preview from PostScript (PS), Portable Document Format (PDF), DjVu and DVI files.</p>
 <h2>OPTIONS</h2>
 <p> evince-previewer obeys all normal GNOME and GTK+ command line options. The application options are</p>

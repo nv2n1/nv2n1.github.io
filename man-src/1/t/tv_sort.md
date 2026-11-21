@@ -1,5 +1,4 @@
 ---
-
 title: "tv_sort(1)"
 name: "tv_sort"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-tv_sort/"
 description: "tv_sort – Sort XMLTV listings files by date, and add stop times."
 ---
 
+<h2 class="name">NAME</h2>
+<p> tv_sort &#8211; Sort XMLTV listings files by date, and add stop times. </p>
+<h2>SYNOPSIS</h2>
 <p> tv_sort [&#8211;help] [&#8211;by-channel] [&#8211;output <font SIZE="-1">FILE</font>] [<font SIZE="-1">FILE&#8230;</font>]</p>
+<h2>DESCRIPTION</h2>
 <p> Read <font SIZE="-1">XMLTV</font> data and write out the same data sorted in date order. Where stop times of programmes are missing, guess them from the start time of the next programme on the same channel. For the last programme of a channel, no stop time can be added. </p>
 <p> Tv_sort also performs some sanity checks such as making sure no two programmes on the same channel overlap. </p>
 <p> <code>&#8211;output </code><font SIZE="-1"><code>FILE</code></font> write to <font SIZE="-1">FILE</font> rather than standard output </p>

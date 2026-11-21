@@ -1,5 +1,4 @@
 ---
-
 title: "lrzuntar(1)"
 name: "lrzuntar"
 section: "1"
@@ -7,13 +6,20 @@ letter: "l"
 url: "/docs/linux/man/1-lrzuntar/"
 ---
 
-lrzuntar - Extract whole tarball from .tar.lrz files 
+<h2 class="name">NAME</h2>
+ 
 
-<pre>
+ lrzuntar - Extract whole tarball from .tar.lrz files 
+
+<h2>SYNOPSIS</h2>
+
+ <pre>
   lrzuntar [options] DIRECTORY.tar.lrz
 </pre>
 
-lrzuntar is identical to <tt>&quot;lrztar -d&quot;</tt> used to decompress lrzip compressed tarballs.
+<h2>DESCRIPTION</h2>
+
+ lrzuntar is identical to <tt>&quot;lrztar -d&quot;</tt> used to decompress lrzip compressed tarballs.
 
 <h2>OPTIONS</h2>
 

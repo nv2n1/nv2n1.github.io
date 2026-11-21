@@ -1,5 +1,4 @@
 ---
-
 title: "lxc-cgroup(1)"
 name: "lxc-cgroup"
 section: "1"
@@ -10,7 +9,9 @@ description: "lxc-cgroup – manage the control group associated with a containe
 
 <h2>NAME</h2>
 <p> lxc-cgroup &#8211; manage the control group associated with a container</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lxc-cgroup</code> {-n <i>name</i>} {<i>state-object</i>} [value]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>lxc-cgroup</code> gets or sets the value of a <i>state-object</i> (e.g., &#8216;cpuset.cpus&#8217;) in the container&#8217;s cgroup for the corresponding subsystem (e.g., &#8216;cpuset&#8217;). If no [value] is specified, the current value of the <i>state-object</i> is displayed; otherwise it is set. </p>
 <p> Note that <code>lxc-cgroup</code> does not check that the <i>state-object</i> is valid for the running kernel, or that the corresponding subsystem is contained in any mounted cgroup hierarchy.</p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "tcucodec(1)"
 name: "tcucodec"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-tcucodec/"
 description: "tcucodec – popular encoders and decoders"
 ---
 
+<h2 class="name">NAME</h2>
+<p> tcucodec &#8211; popular encoders and decoders</p>
+<h2>DESCRIPTION</h2>
 <p> The command `<code>tcucodec</code>&#8216; is a tool to use encoding and decoding features. This command is used in the following format. `<i>file</i>&#8216; specifies a input file. If it is omitted, the standard input is read. </p>
 <dl>
 <dt>

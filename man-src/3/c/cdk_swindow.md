@@ -1,5 +1,4 @@
 ---
-
 title: "cdk_swindow(3)"
 name: "cdk_swindow"
 section: "3"
@@ -10,6 +9,7 @@ description: "cdk_swindow – a curses scrolling window widget."
 
 <h2>NAME</h2>
 <p> cdk_swindow &#8211; a curses scrolling window widget.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>
 <p> #include &lt;cdk.h&gt; </p>
 <pre><code>
@@ -125,6 +125,7 @@ void trimCDKSwindow(
     int finish);
 </code></pre>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> The Cdk scrolling window (swindow) widget can be used to display messages. The following functions create or manipulate the Cdk swindow box widget.</p>
 <h2>AVAILABLE FUNCTIONS</h2>
 <dl>

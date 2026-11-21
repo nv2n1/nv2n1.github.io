@@ -1,5 +1,4 @@
 ---
-
 title: "db_tuner(1)"
 name: "db_tuner"
 section: "1"
@@ -10,7 +9,9 @@ description: "db_tuner – analyze and tune btree database"
 
 <h2>NAME</h2>
 <p> db_tuner &#8211; analyze and tune btree database</p>
+<h2>SYNOPSIS</h2>
 <p> <code>db_tuner</code> [-c <i>cachesize</i>] -d <i>file</i> [-h <i>home</i>] [-s <i>database</i>] [-v]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>db_tuner</code> utility analyzes the data in a btree database, and suggests a page size that is likely to deliver optimal operation.</p>
 <h2>OPTIONS</h2>
 <dl>

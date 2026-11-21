@@ -1,5 +1,4 @@
 ---
-
 title: "ipa-finduser(1)"
 name: "ipa-finduser"
 section: "1"
@@ -10,7 +9,9 @@ description: "ipa-finduser – Find a user"
 
 <h2>NAME</h2>
 <p> ipa-finduser &#8211; Find a user</p>
+<h2>SYNOPSIS</h2>
 <p> ipa-finduser [<i>OPTION</i>]&#8230; <i>string</i> </p>
+<h2>DESCRIPTION</h2>
 <p> Searches for a user that contains <i>string</i>. </p>
 <p> The search is a substring search in the username, given name, family name, telephone number, organization and title attributes. </p>
 <p> All entries that match are displayed.</p>

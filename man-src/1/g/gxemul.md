@@ -1,5 +1,4 @@
 ---
-
 title: "gxemul(1)"
 name: "gxemul"
 section: "1"
@@ -10,9 +9,11 @@ description: "gxemul – an experimental framework for full-system machine emula
 
 <h2>NAME</h2>
 <p> <code>gxemul</code> &#8211; an experimental framework for full-system machine emulation</p>
+<h2>SYNOPSIS</h2>
 <p> [machine, other, and general options] [file <i>&#8230;</i> ]<br />
  [general options] <i>@configfile</i><br />
  [userland, other, and general options] <i>file </i>[<i>args &#8230;</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> is a framework for full-system computer architecture emulation. Several processor architectures and machine types have been implemented. It is working well enough to allow unmodified &quot;guest&quot; operating systems (e.g. NetBSD) to run inside the emulator, as if they were running on real hardware. </p>
 <p> The emulator emulates (networks of) real machines. The machines may consist of ARM, MIPS, Motorola 88K, PowerPC, and SuperH processors, and various surrounding hardware components such as framebuffers, busses, interrupt controllers, ethernet controllers, disk controllers, and serial port controllers. </p>
 <p> The emulator can be invoked in the following ways: </p>

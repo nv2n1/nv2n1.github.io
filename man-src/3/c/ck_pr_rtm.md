@@ -1,5 +1,4 @@
 ---
-
 title: "ck_pr_rtm(3)"
 name: "ck_pr_rtm"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_pr_rtm_begin ck_pr_rtm_end ck_pr_rtm_abort ck_pr_rtm_test – r
 <p> <code>ck_pr_rtm_begin</code> <code>ck_pr_rtm_end</code> <code>ck_pr_rtm_abort</code> <code>ck_pr_rtm_test</code> &#8211; restricted transactional memory</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_pr.h Ft unsigned int Fn ck_pr_rtm_begin void Ft void Fn ck_pr_rtm_end void Ft void Fn ck_pr_rtm_abort const unsigned int status Ft bool Fn ck_pr_rtm_test void</p>
+<h2>DESCRIPTION</h2>
 <p> These family of functions implement support for restricted transactional memory, if available on the underlying platform. Currently, support is only provided for Intel Haswell and newer x86 microarchitectures that have the TSX-NI feature. </p>
 <p> The Fn ck_pr_rtm_begin function returns CK_PR_RTM_STARTED if a transaction was successfully started. In case of an abort, either internal (through a ck_pr_rtm_abort) or external, program flow will return to the point which the function was called except the return value will consist of a bitmap with one or more of the following bits set:</p>
 <dl>

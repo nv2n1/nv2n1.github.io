@@ -1,5 +1,4 @@
 ---
-
 title: "hpiwdt(1)"
 name: "hpiwdt"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-hpiwdt/"
 description: "hpiwdt – This sample openhpi application reads and enables the watchdog timer."
 ---
 
+<h2 class="name">NAME</h2>
+<p> hpiwdt &#8211; This sample openhpi application reads and enables the watchdog timer. </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 hpiwdt[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-t sec][-X][-h] hpiwdt[--domain = nn][--host = host[:port]][--cfgfile = file]
                                                                  [--disable][--enable][--reset][--timeout n][--debug][--help]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> hpiwdt reads and enables the watchdog timer. </p>
 <p> If no domain or host is selected, hpiwdt uses the default domain as specified in the openhpiclient.conf file.</p>
 <h2>OPTIONS</h2>

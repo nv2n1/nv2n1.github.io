@@ -1,5 +1,4 @@
 ---
-
 title: "dlamrg(3)"
 name: "dlamrg"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlamrg/"
 description: "dlamrg.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlamrg.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlamrg</code> (N1, N2, A, DTRD1, DTRD2, INDEX)<br />
  <i></i><code>DLAMRG</code> creates a permutation list to merge the entries of two independently sorted sets into a single set sorted in ascending order.</p>

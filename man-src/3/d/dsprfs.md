@@ -1,5 +1,4 @@
 ---
-
 title: "dsprfs(3)"
 name: "dsprfs"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dsprfs/"
 description: "dsprfs.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dsprfs.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dsprfs</code> (UPLO, N, NRHS, AP, AFP, IPIV, B, LDB, X, LDX, FERR, BERR, WORK, IWORK, INFO)<br />
  <i></i><code>DSPRFS</code></p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ck_ht_hash_direct(3)"
 name: "ck_ht_hash_direct"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_ht_hash_direct – generate a hash value for a hash table"
 <p> <code>ck_ht_hash_direct</code> &#8211; generate a hash value for a hash table</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_ht.h Ft void Fn ck_ht_hash_direct ck_ht_hash_t *h ck_ht_t *ht uintptr_t key</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_ht_hash_direct function will generate a hash value in the object pointed to by the Fa h argument. The hash value is valid for use in the hash table pointed to by the Fa ht argument for the key (of direct type) specified by the Fa key argument.</p>
 <h2>RETURN VALUES</h2>
 <p> Fn ck_ht_hash_direct has no return value.</p>

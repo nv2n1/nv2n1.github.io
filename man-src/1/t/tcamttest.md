@@ -1,5 +1,4 @@
 ---
-
 title: "tcamttest(1)"
 name: "tcamttest"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-tcamttest/"
 description: "tcamttest – test cases of the abstract database API"
 ---
 
+<h2 class="name">NAME</h2>
+<p> tcamttest &#8211; test cases of the abstract database API</p>
+<h2>DESCRIPTION</h2>
 <p> The command `<code>tcamttest</code>&#8216; is a utility for facility test under multi-thread situation. This command is used in the following format. `<i>name</i>&#8216; specifies the database name. `<i>tnum</i>&#8216; specifies the number of running threads. `<i>rnum</i>&#8216; specifies the number of iterations. </p>
 <dl>
 <dt>

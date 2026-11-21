@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_rsa_params_import_pkcs1(3)"
 name: "gnutls_rsa_params_import_pkcs1"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_rsa_params_import_pkcs1 – API function"
 
 <h2>NAME</h2>
 <p> gnutls_rsa_params_import_pkcs1 &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/compat.h&gt;</code> </p>
 <p> <code>int gnutls_rsa_params_import_pkcs1(gnutls_rsa_params_t </code><i>params</i><code>, const gnutls_datum_t * </code><i>pkcs1_params</i><code>, gnutls_x509_crt_fmt_t </code><i>format</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_rsa_params_import_pkcs1 – API function"
 <dd> should contain a PKCS1 RSAPrivateKey structure PEM or DER encoded</dd>
 <dt>gnutls_x509_crt_fmt_t format</dt>
 <dd> the format of params. PEM or DER.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will extract the RSAPrivateKey found in a PKCS1 formatted structure. </p>
 <p> If the structure is PEM encoded, it should have a header of &quot;BEGIN RSA PRIVATE KEY&quot;.</p>
 <h2>RETURNS</h2>

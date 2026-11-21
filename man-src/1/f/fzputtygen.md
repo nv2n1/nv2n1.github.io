@@ -1,5 +1,4 @@
 ---
-
 title: "fzputtygen(1)"
 name: "fzputtygen"
 section: "1"
@@ -10,6 +9,7 @@ description: "fzputtygen – SFTP private key converter of FileZilla"
 
 <h2>NAME</h2>
 <p> fzputtygen &#8211; SFTP private key converter of FileZilla</p>
+<h2>DESCRIPTION</h2>
 <p> <code>fzputtygen</code> is part of FileZilla. It is used to convert private keys from OpenSSH or ssh.com format into a format understood by fzsftp. It usually gets called by FileZilla and is not intended to be used directly. </p>
 <p> <code>fzputtygen</code> is based on the puttygen component of PuTTY.</p>
 <h2>SUPPORT</h2>

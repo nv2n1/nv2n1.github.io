@@ -1,5 +1,4 @@
 ---
-
 title: "df(1)"
 name: "df"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-df/"
 description: "df – report file system disk space usage"
 ---
 
+<h2 class="name">NAME</h2>
+<p> df &#8211; report file system disk space usage </p>
+<h2>SYNOPSIS</h2>
 <p> <code>df</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents the GNU version of <code>df</code>. <code>df</code> displays the amount of disk space available on the file system containing each file name argument. If no file name is given, the space available on all currently mounted file systems is shown. Disk space is shown in 1K blocks by default, unless the environment variable POSIXLY_CORRECT is set, in which case 512-byte blocks are used. </p>
 <p> If an argument is the absolute file name of a disk device node containing a mounted file system, <code>df</code> shows the space available on that file system rather than on the file system containing the device node. This version of <code>df</code> cannot show the space available on unmounted file systems, because on most kinds of systems doing so requires very nonportable intimate knowledge of file system structures.</p>
 <h2>OPTIONS</h2>

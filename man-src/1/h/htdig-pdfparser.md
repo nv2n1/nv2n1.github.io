@@ -1,5 +1,4 @@
 ---
-
 title: "htdig-pdfparser(1)"
 name: "htdig-pdfparser"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-htdig-pdfparser/"
 description: "htdig-pdfparser – parse a PDF document (wrapper script for htdig)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> htdig-pdfparser &#8211; parse a PDF document (wrapper script for htdig) </p>
+<h2>SYNOPSIS</h2>
 <p> <code>htdig-pdfparser</code></p>
+<h2>DESCRIPTION</h2>
 <p> This script acts as a wrapper script for the htdig program. The exact program that htdig uses to search in pdf documents for index words, can be set in the htdig config file. Set the program by using the <i>debian_pdf_parser</i> directive.</p>
 <h2>OPTIONS</h2>
 <dl>

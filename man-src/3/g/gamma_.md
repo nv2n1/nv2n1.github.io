@@ -1,5 +1,4 @@
 ---
-
 title: "gamma_(3)"
 name: "gamma_"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-gamma_/"
 description: "QuantLib::MultiAssetOption – Base class for options on multiple assets."
 ---
 
+<h2 class="name">NAME</h2>
+<p> QuantLib::MultiAssetOption &#8211; Base class for options on multiple assets. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/multiassetoption.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Option</code>. </p>
 <p> Inherited by <code>BasketOption</code>, EverestOption, <code>HimalayaOption</code>, and <code>PagodaOption</code>. </p>

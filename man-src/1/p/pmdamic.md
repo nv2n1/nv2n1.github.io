@@ -1,5 +1,4 @@
 ---
-
 title: "pmdamic(1)"
 name: "pmdamic"
 section: "1"
@@ -10,6 +9,7 @@ description: "pmdamic – MIC card PMDA"
 
 <h2>NAME</h2>
 <p> <code>pmdamic</code> &#8211; MIC card PMDA</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdamic</code> is a Performance Metrics Domain Agent (PMDA) which exports metric values about Intel MIC cards using the <code>libmicmgmt</code>(7) python bindings. </p>
 <p> This provides information on core, memory and power utilization </p>
 <h2>INSTALLATION</h2>

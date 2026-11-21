@@ -1,5 +1,4 @@
 ---
-
 title: "docker-service-logs(1)"
 name: "docker-service-logs"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-service-logs/"
 description: "docker-service-logs – Fetch the logs of a service or task"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-service-logs &#8211; Fetch the logs of a service or task </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker service logs [OPTIONS] SERVICE|TASK</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Fetch the logs of a service or task </p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;details</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Show extra details provided to logs</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "mcpp(1)"
 name: "mcpp"
 section: "1"
@@ -10,7 +9,9 @@ description: "mcpp – Matsui CPP, an alternative C preprocessor"
 
 <h2>NAME</h2>
 <p> mcpp &#8211; Matsui CPP, an alternative C preprocessor</p>
+<h2>SYNOPSIS</h2>
 <p> mcpp [<i>options</i>] [<i>&lt;infile&gt;</i> [<i>&lt;outfile&gt;</i>]]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>mcpp</code> is a C/C++ preprocessor with the highest conformance which implements C90, C99 and C++98. <code>mcpp</code> has plentiful diagnostics and many #pragmas. It is useful to check portability of your program, and also useful to debug complicated macro. This is a man-page for <code>mcpp</code> of GCC-specific-build.</p>
 <h2>OPTIONS</h2>
 <p> <code>mcpp</code> expects two file names as arguments, <i>&lt;infile&gt;</i> and <i>&lt;outfile&gt;</i>. If not specified, <i>&lt;infile&gt;</i> defaults to standard input and <i>&lt;outfile&gt;</i> defaults to standard output. </p>

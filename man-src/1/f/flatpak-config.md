@@ -1,5 +1,4 @@
 ---
-
 title: "flatpak-config(1)"
 name: "flatpak-config"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-flatpak-config/"
 description: "flatpak-config – Manage configuration"
 ---
 
+<h2 class="name">NAME</h2>
+<p> flatpak-config &#8211; Manage configuration </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak config</code> [OPTION&#8230;]</dt>
 <dt> <code>flatpak config</code> [OPTION&#8230;] &#8211;set KEY VALUE</dt>
 <dt> <code>flatpak config</code> [OPTION&#8230;] &#8211;unset|&#8211;get KEY</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The flatpak config command shows or modifies the configuration of a flatpak installation. The following keys are supported: </dd>
 <p> <i>languages</i></p>
 <dl>

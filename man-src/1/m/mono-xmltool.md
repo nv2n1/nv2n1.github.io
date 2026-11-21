@@ -1,5 +1,4 @@
 ---
-
 title: "mono-xmltool(1)"
 name: "mono-xmltool"
 section: "1"
@@ -10,6 +9,7 @@ description: "mono-xmltool – Mono XML validation and transformation tool."
 
 <h2>NAME</h2>
 <p> mono-xmltool &#8211; Mono XML validation and transformation tool.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mono-xmltool &#8211;validate [*.rng | *.rnc | *.nvdl | *.xsd] [instances]</code> </p>
 <p> <code>mono-xmltool &#8211;validate-rng relax-ng-grammar-xml [instances]</code> </p>
 <p> <code>mono-xmltool &#8211;validate-rnc relax-ng-compact-grammar-file [instances]</code> </p>
@@ -17,6 +17,7 @@ description: "mono-xmltool – Mono XML validation and transformation tool."
 <p> <code>mono-xmltool &#8211;validate-xsd xml-schema [instances]</code> </p>
 <p> <code>mono-xmltool &#8211;transform stylesheet instance-xml</code> </p>
 <p> <code>mono-xmltool &#8211;prettyprint [source [result]]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <i>mono-xmltool</i> is a command line front end for various functions available in the Mono XML class libraries. It currently it offers validation with various different kinds of schemas, xslt transformations and pretty printing. </p>
 <h2>XML VALIDATION</h2>
 <p> mono-xmltool can validate a given set of XML files (the instances parameter) using the given schema file. Currently supported schema files include Relax NG (*.rng), Compact Relax NG (*.rnc), Namespace-based Validation Dispatching Language (*.nvdl) and XML Schema (*.xsd). </p>

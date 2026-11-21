@@ -1,5 +1,4 @@
 ---
-
 title: "firehol(1)"
 name: "firehol"
 section: "1"
@@ -10,9 +9,11 @@ description: "firehol – An easy to use but powerful iptables stateful firewall
 
 <h2>NAME</h2>
 <p> firehol &#8211; An easy to use but powerful iptables stateful firewall</p>
+<h2>SYNOPSIS</h2>
 <p> <code>firehol</code> start|try|stop|restart|condrestart|status|panic|save|debug|helpme </p>
 <p> <code>firehol</code> <i>configfile</i> [start|debug|try] </p>
 <p> <code>firehol</code> <i>nothing</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>firehol</code> is an <code>iptables</code> firewall generator producing stateful <code>iptables</code> packet filtering firewalls, on Linux hosts and routers with any number of network interfaces, any number of routes, any number of services served, any number of complexity between variations of the services (including positive and negative expressions). </p>
 <p> <code>firehol</code> is a language to express firewalling rules, not just a script that produces some kind of a firewall. </p>
 <p> The goals of <code>firehol</code> are:</p>

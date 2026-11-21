@@ -1,5 +1,4 @@
 ---
-
 title: "get_mfield_list_by_type(3)"
 name: "get_mfield_list_by_type"
 section: "3"
@@ -10,9 +9,11 @@ description: "get_mfield_list_by_type — retrieve a list of fields in a dirfile
 
 <h2>NAME</h2>
 <p> get_mfield_list_by_type &#8212; retrieve a list of fields in a dirfile</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
 <dl>
 <dt> <code>const char **get_mfield_list_by_type(DIRFILE *</code><i>dirfile</i><code>,</code> <code>const char *</code><i>parent</i><code>, gd_entype_t </code><i>type</i><code>);</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>get_mfield_list_by_type</code>() function queries a <a href="/docs/linux/man/5-dirfile/">dirfile</a>(5) database specified by <i>dirfile</i> and returns a read-only list of names of the all metafields of the indicated type for the supplied parent field. </dd>
 <p> The <i>dirfile</i> argument must point to a valid DIRFILE object previously created by a call to <code><a href="/docs/linux/man/3-dirfile_open/">dirfile_open</a></code>(3). The <i>type</i> argument should be one of the following symbols indicating the desired field type:</p>
 <dl>

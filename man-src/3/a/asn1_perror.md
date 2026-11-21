@@ -1,5 +1,4 @@
 ---
-
 title: "asn1_perror(3)"
 name: "asn1_perror"
 section: "3"
@@ -10,12 +9,14 @@ description: "asn1_perror – API function"
 
 <h2>NAME</h2>
 <p> asn1_perror &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>
 <p> <code>void asn1_perror(int </code><i>error</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>int error</dt>
 <dd> is an error returned by a libtasn1 function.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Prints a string to stderr with a description of an error. This function is like <code>perror()</code>. The only difference is that it accepts an error returned by a libtasn1 function.</p>
 <h2>SINCE</h2>
 <p> 1.6</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "dbcolpercentile(1)"
 name: "dbcolpercentile"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-dbcolpercentile/"
 description: "dbcolpercentile – compute percentiles or ranks for an existing column"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dbcolpercentile &#8211; compute percentiles or ranks for an existing column </p>
+<h2>SYNOPSIS</h2>
 <pre>
     dbcolpercentile [-rplhS] column
 </pre>
+<h2>DESCRIPTION</h2>
 <p> Compute a percentile of a column of numbers. The new column will be called <i>percentile</i> or <i>rank</i>. Non-numeric records are handled as in other programs. </p>
 <p> If the data is pre-sorted and only a rank is requested, no extra storage is required. In all other cases, a full copy of data is buffered on disk.</p>
 <h2>OPTIONS</h2>

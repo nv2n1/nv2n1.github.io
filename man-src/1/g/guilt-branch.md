@@ -1,5 +1,4 @@
 ---
-
 title: "guilt-branch(1)"
 name: "guilt-branch"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-guilt-branch/"
 description: "guilt-branch – Branch the entire patch series"
 ---
 
+<h2 class="name">NAME</h2>
+<p> guilt-branch &#8211; Branch the entire patch series </p>
+<h2>SYNOPSIS</h2>
 <p> <i>guilt-branch</i> [&lt;new_name&gt;]</p>
+<h2>DESCRIPTION</h2>
 <p> Create a copy of the entire branch patch directory (.git/patches/&lt;branch&gt;) to (.git/patches/&lt;new_name&gt;), create a new git branch &lt;new_name&gt; and check it out.</p>
 <h2>OPTIONS</h2>
 <p> &lt;new_name&gt;</p>

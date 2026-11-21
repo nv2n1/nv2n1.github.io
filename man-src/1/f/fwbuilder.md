@@ -1,5 +1,4 @@
 ---
-
 title: "fwbuilder(1)"
 name: "fwbuilder"
 section: "1"
@@ -10,8 +9,10 @@ description: "fwbuilder – Multiplatform firewall configuration tool"
 
 <h2>NAME</h2>
 <p> fwbuilder &#8211; Multiplatform firewall configuration tool</p>
+<h2>SYNOPSIS</h2>
 <p> <code>/usr/bin/fwbuilder</code> [-f<code>file.fwb]</code> [-d] [-h] [-o<code>file]</code> [-P<code>object_name]</code> [-r] [-v]<br />
 &nbsp;<wbr> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>fwbuilder</code> is the Graphic User Interface (GUI) component of Firewall Builder. </p>
 <p> Firewall Builder consists of a GUI and set of policy compilers for various firewall platforms. It helps users maintain a database of objects and allows policy editing using simple drag-and-drop operations. GUI generates firewall description in the form of XML file, which compilers then interpret and generate platform-specific code. Several algorithms are provided for automated network objects discovery and bulk import of data. The GUI and policy compilers are completely independent, this provides for a consistent abstract model and the same GUI for different firewall platforms. </p>
 <p> Firewall Builder supports firewalls based on iptables (Linux kernel 2.4.x and 2.6.x, see <a href="/docs/linux/man/1-fwb_ipt/">fwb_ipt</a>(1)), ipfilter (variety of platforms including *BSD, Solaris and others, see <a href="/docs/linux/man/1-fwb_ipf/">fwb_ipf</a>(1)), pf (OpenBSD and FreeBSD, see <a href="/docs/linux/man/1-fwb_pf/">fwb_pf</a>(1)), ipfw (FreeBSD and others), Cisco PIX (v6.x and 7.x) and Cisco IOS extended access lists. </p>

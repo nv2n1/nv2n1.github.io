@@ -1,5 +1,4 @@
 ---
-
 title: "npm-unpublish(1)"
 name: "npm-unpublish"
 section: "1"
@@ -8,6 +7,7 @@ url: "/docs/linux/man/1-npm-unpublish/"
 description: "npm-unpublish – Remove a package from the registry"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>npm-unpublish</code> &#8211; Remove a package from the registry </p>
 <h3>Synopsis</h3>
 <h3>Unpublishing a single version of a package</h3>

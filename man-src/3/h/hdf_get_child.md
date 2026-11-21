@@ -1,5 +1,4 @@
 ---
-
 title: "hdf_get_child(3)"
 name: "hdf_get_child"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-hdf_get_child/"
 description: "hdf_get_child – return the first child of the named node"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hdf_get_child &#8211; return the first child of the named node </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;util/neo_hdf.h&gt;
 </code></pre>
@@ -17,6 +19,7 @@ HDF *hdf_get_child(HDF *hdf, const char *name);
 <h2>ARGUMENTS</h2>
 <p> hdf -&gt; the dataset node to start from<br />
  name -&gt; the name to walk to </p>
+<h2>DESCRIPTION</h2>
 <p> hdf_get_child will walk the dataset starting at hdf to name, and return the first child of that node </p>
 <h2>RETURN VALUE</h2>
 <p> None </p>

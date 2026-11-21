@@ -1,5 +1,4 @@
 ---
-
 title: "xdg-email(1)"
 name: "xdg-email"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-xdg-email/"
 description: "xdg-email – command line tool for sending mail using the user’s preferred e-mail composer"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xdg-email &#8211; command line tool for sending mail using the user&#8217;s preferred e-mail composer </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xdg-email</code> [<code>&#8211;utf8</code>] [<code>&#8211;cc</code>&nbsp;<i>address</i>] [<code>&#8211;bcc</code>&nbsp;<i>address</i>] [<code>&#8211;subject</code>&nbsp;<i>text</i>] [<code>&#8211;body</code>&nbsp;<i>text</i>] [<code>&#8211;attach</code>&nbsp;<i>file</i>] [<i>mailto-uri</i> | <i>address(es)</i>]</dt>
 <dt> <code>xdg-email</code> {<code>&#8211;help</code> | <code>&#8211;manual</code> | <code>&#8211;version</code>}</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>xdg-email opens the user&#8217;s preferred e-mail composer in order to send a mail to <i>address(es)</i> or <i>mailto-uri</i>. RFC2368 defines mailto: URIs. xdg-email limits support to, cc, subject and body fields in <i>mailto-uri</i>, all other fields are silently ignored. <i>address(es)</i> must follow the syntax of RFC822. Multiple addresses may be provided as separate arguments. </dd>
 <p> All information provided on the command line is used to prefill corresponding fields in the user&#8217;s e-mail composer. The user will have the opportunity to change any of this information before actually sending the e-mail. </p>
 <p> xdg-email is for use inside a desktop session only. It is not recommended to use xdg-email as root.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "smistrip(1)"
 name: "smistrip"
 section: "1"
@@ -10,7 +9,9 @@ description: "smistrip – extract MIB or PIB modules from text files, like RFCs
 
 <h2>NAME</h2>
 <p> smistrip &#8211; extract MIB or PIB modules from text files, like RFCs or I-Ds</p>
+<h2>SYNOPSIS</h2>
 <p> <code>smistrip</code> [ <code>-Vhn</code> ] [ <code>-d </code><i>dir</i> ] [ <code>-m </code><i>module</i> ] [ <i>file(s)</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>smistrip</code> program is used to extract MIB and PIB module files from ASCII documents like RFCs or Internet Drafts. Modules are identified by a starting ASN.1 DEFINITIONS clause and the matching END clause. The output is written to files named by the modules&#8217; names.</p>
 <h2>OPTIONS</h2>
 <dl>

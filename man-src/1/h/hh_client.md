@@ -1,5 +1,4 @@
 ---
-
 title: "hh_client(1)"
 name: "hh_client"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-hh_client/"
 description: "hh_client – Interface to Hack language typechecker"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hh_client &#8211; Interface to Hack language typechecker</p>
+<h2>SYNOPSIS</h2>
 <p> <code>hh_client</code> [<i>MODE</i>] [<i>OPTIONS</i>] [<i>DIRECTORY</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code><a href="/docs/linux/man/1-hh_client/">hh_client</a></code>(1) is an interface to a static analysis tool which is what enforces most of the Hack language&#8217;s type system. Code must pass validation of this tool in order to be considered valid code in the Hack language. </p>
 <p> There are several possible <i>MODE</i>s for <code><a href="/docs/linux/man/1-hh_client/">hh_client</a></code>(1) (see below). By default, it will invoke the <code>check</code> mode, with the current directory as <i>DIRECTORY</i>. These are reasonable defaults, meaning that most users can simply invoke the command as </p>
 <pre>

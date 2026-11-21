@@ -1,5 +1,4 @@
 ---
-
 title: "fundisp(1)"
 name: "fundisp"
 section: "1"
@@ -10,6 +9,7 @@ description: "fundisp – display data in a Funtools data file"
 
 <h2>NAME</h2>
 <p> <code>fundisp &#8211; display data in a Funtools data file</code></p>
+<h2>SYNOPSIS</h2>
 <p> fundisp [-f format] [-l] [-n] [-T] &lt;iname&gt; [columns|bitpix=n]</p>
 <h2>OPTIONS</h2>
 <pre>
@@ -19,6 +19,7 @@ description: "fundisp – display data in a Funtools data file"
   -F [c]  # use specified character as column separator (def: space)
   -T      # output in rdb/starbase format (tab separators)
 </pre>
+<h2>DESCRIPTION</h2>
 <p> <code>fundisp</code> displays the data in the specified <font SIZE="-1">FITS</font> Extension and/or Image Section of a <font SIZE="-1">FITS</font> file, or in a Section of a non-FITS array or raw event file. </p>
 <p> The first argument to the program specifies the <font SIZE="-1">FITS</font> input image, array, or raw event file to display. If &#8220;stdin&#8221; is specified, data are read from the standard input. Use Funtools Bracket Notation to specify <font SIZE="-1">FITS</font> extensions, image sections, and filters. </p>
 <p> If the data being displayed are columns (either in a <font SIZE="-1">FITS</font> binary table or a raw event file), the individual rows are listed. Filters can be added using bracket notation. Thus: </p>

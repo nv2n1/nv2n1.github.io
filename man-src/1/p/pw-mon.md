@@ -1,5 +1,4 @@
 ---
-
 title: "pw-mon(1)"
 name: "pw-mon"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-pw-mon/"
 description: "pw-mon – The PipeWire monitor"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pw-mon &#8211; The PipeWire monitor </p>
+<h2>SYNOPSIS</h2>
 <pre>
 <code>pw-mon</code> [<i>options</i>]
 </pre>
+<h2>DESCRIPTION</h2>
 <p> Monitor objects on the PipeWire instance.</p>
 <h2>OPTIONS</h2>
 <dl>

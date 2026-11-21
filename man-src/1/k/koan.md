@@ -1,5 +1,4 @@
 ---
-
 title: "koan(1)"
 name: "koan"
 section: "1"
@@ -7,11 +6,18 @@ letter: "k"
 url: "/docs/linux/man/1-koan/"
 ---
 
-koan - kickstart over a network, client side helper for cobbler 
+<h2 class="name">NAME</h2>
+ 
 
-koan --server=hostname [--list=type] [--virt|--replace-self|--display] [--profile=name] [--system=name] [--image=name] [--add-reinstall-entry] [--virt-name=name] [--virt-path=path] [--virt-type=type] [--nogfx] [--static-interface=name] [--kexec]
+ koan - kickstart over a network, client side helper for cobbler 
 
-Koan stands for ``kickstart-over-a-network'' and is a client-side helper program for use with Cobbler. koan allows for both network provisioning of new virtualized guests (Xen, <font SIZE="-1">QEMU/KVM,</font> VMware) and re-installation of an existing system. 
+<h2>SYNOPSIS</h2>
+
+ koan --server=hostname [--list=type] [--virt|--replace-self|--display] [--profile=name] [--system=name] [--image=name] [--add-reinstall-entry] [--virt-name=name] [--virt-path=path] [--virt-type=type] [--nogfx] [--static-interface=name] [--kexec]
+
+<h2>DESCRIPTION</h2>
+
+ Koan stands for ``kickstart-over-a-network'' and is a client-side helper program for use with Cobbler. koan allows for both network provisioning of new virtualized guests (Xen, <font SIZE="-1">QEMU/KVM,</font> VMware) and re-installation of an existing system. 
 
  When invoked, koan requests install information from a remote cobbler boot server, it then kicks off installations based on what is retrieved from cobbler and fed in on the koan command line. The examples below show the various use cases.
 

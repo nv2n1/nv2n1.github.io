@@ -1,5 +1,4 @@
 ---
-
 title: "ms_print(1)"
 name: "ms_print"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-ms_print/"
 description: "ms_print – post-processing tool for Massif"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ms_print &#8211; post-processing tool for Massif </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ms_print</code> [<i>options</i>] <i>massif-out-file</i></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>ms_print</code></p>
 <dd>takes an output file produced by the Valgrind tool Massif and prints the information in an easy-to-read form.</dd>
 <h2>OPTIONS</h2>

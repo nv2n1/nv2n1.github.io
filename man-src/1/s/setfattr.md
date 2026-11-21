@@ -1,5 +1,4 @@
 ---
-
 title: "setfattr(1)"
 name: "setfattr"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-setfattr/"
 description: "setfattr – set extended attributes of filesystem objects"
 ---
 
+<h2 class="name">NAME</h2>
+<p> setfattr &#8211; set extended attributes of filesystem objects </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 setfattr[-h] - n name[-v value] pathname... setfattr[-h] - x name pathname... setfattr[-h]-- restore = file
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>setfattr</code> command associates a new <i>value</i> with an extended attribute <i>name</i> for each specified file.</p>
 <h2>OPTIONS</h2>
 <dl>

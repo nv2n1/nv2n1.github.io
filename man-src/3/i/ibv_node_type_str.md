@@ -1,5 +1,4 @@
 ---
-
 title: "ibv_node_type_str(3)"
 name: "ibv_node_type_str"
 section: "3"
@@ -7,11 +6,18 @@ letter: "i"
 url: "/docs/linux/man/3-ibv_node_type_str/"
 ---
 
-ibv_event_type_str - Return string describing event_type enum value 
+<h2 class="name">NAME</h2>
+ 
+
+ 
+
+ ibv_event_type_str - Return string describing event_type enum value 
 
  ibv_node_type_str - Return string describing node_type enum value 
 
  ibv_port_state_str - Return string describing port_state enum value 
+
+<h2>SYNOPSIS</h2>
 
 <dl>
 <dt>
@@ -22,7 +28,11 @@ const char *ibv_node_type_str(enum ibv_node_type node_type);
 const char *ibv_port_state_str(enum ibv_port_state port_state);
 </code></pre></dd></dl>
 
-ibv_node_type_str() returns a string describing the node type enum value node_type. 
+<h2>DESCRIPTION</h2>
+
+ 
+
+ ibv_node_type_str() returns a string describing the node type enum value node_type. 
 
  ibv_port_state_str() returns a string describing the port state enum value port_state. 
 

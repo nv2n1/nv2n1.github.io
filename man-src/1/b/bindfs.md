@@ -1,5 +1,4 @@
 ---
-
 title: "bindfs(1)"
 name: "bindfs"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-bindfs/"
 description: "bindfs – mount –bind in user-space"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bindfs &#8211; mount &#8211;bind in user-space </p>
+<h2>SYNOPSIS</h2>
 <p> <code>bindfs</code> [<i>options</i>]<i> dir mountpoint </p>
 <p> </i></p>
+<h2>DESCRIPTION</h2>
 <p> A FUSE filesystem for mirroring the contents of a directory to another directory. Additionally, one can change the permissions of files in the mirrored directory. </p>
 <h2>OPTIONS</h2>
 <dl>

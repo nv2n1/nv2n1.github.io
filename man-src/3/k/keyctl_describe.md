@@ -1,5 +1,4 @@
 ---
-
 title: "keyctl_describe(3)"
 name: "keyctl_describe"
 section: "3"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/3-keyctl_describe/"
 description: "keyctl_describe – Describe a key"
 ---
 
+<h2 class="name">NAME</h2>
+<p> keyctl_describe &#8211; Describe a key </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;keyutils.h&gt;
 long keyctl_describe(key_serial_t key, char *buffer,
                      size_tbuflen);
 long keyctl_describe_alloc(key_serial_t key, char **_buffer);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>keyctl_describe</code>() describes the attributes of a key as a NUL-terminated string. </p>
 <p> The caller must have <code>view</code> permission on a key to be able to get a description of it. </p>
 <p> <i>buffer</i> and <i>buflen</i> specify the buffer into which the key description will be placed. If the buffer is too small, the full size of the description will be returned, and no copy will take place. </p>

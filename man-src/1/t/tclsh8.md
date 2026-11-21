@@ -1,5 +1,4 @@
 ---
-
 title: "tclsh8(1)"
 name: "tclsh8"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-tclsh8/"
 description: "tclsh – Simple shell containing Tcl interpreter"
 ---
 
+<h2 class="name">NAME</h2>
+<p> tclsh &#8211; Simple shell containing Tcl interpreter </p>
+<h2>SYNOPSIS</h2>
 <p> <code>tclsh</code> ?<code>-encoding </code><i>name</i>? ?<i>fileName arg arg &#8230;</i>? </p>
+<h2>DESCRIPTION</h2>
 <p> <code>Tclsh</code> is a shell-like application that reads Tcl commands from its standard input or from a file and evaluates them. If invoked with no arguments then it runs interactively, reading Tcl commands from standard input and printing command results and error messages to standard output. It runs until the <code>exit</code> command is invoked or until it reaches end-of-file on its standard input. If there exists a file <code>.tclshrc</code> (or <code>tclshrc.tcl</code> on the Windows platforms) in the home directory of the user, interactive <code>tclsh</code> evaluates the file as a Tcl script just before reading the first command from standard input.</p>
 <h2>SCRIPT FILES</h2>
 <p> If <code>tclsh</code> is invoked with arguments then the first few arguments specify the name of a script file, and, optionally, the encoding of the text data stored in that script file. Any additional arguments are made available to the script as variables (see below). Instead of reading commands from standard input <code>tclsh</code> will read Tcl commands from the named file; <code>tclsh</code> will exit when it reaches the end of the file. The end of the file may be marked either by the physical end of the medium, or by the character, &#8220;&#8221; (&#8220;&#8221;, control-Z). If this character is present in the file, the <code>tclsh</code> application will read text up to but not including the character. An application that requires this character in the file may safely encode it as &#8220;&#8221;, &#8220;&#8221;, or &#8220;&#8221;; or may generate it by use of commands such as <code>format</code> or <code>binary</code>. There is no automatic evaluation of <code>.tclshrc</code> when the name of a script file is presented on the <code>tclsh</code> command line, but the script file can always <code>source</code> it if desired. </p>

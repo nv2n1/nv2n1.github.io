@@ -1,5 +1,4 @@
 ---
-
 title: "globus_net_manager_python(3)"
 name: "globus_net_manager_python"
 section: "3"
@@ -7,7 +6,10 @@ letter: "g"
 url: "/docs/linux/man/3-globus_net_manager_python/"
 ---
 
-Python Module - 
+<h2 class="name">NAME</h2>
+ 
+
+ Python Module - 
 
  Net Manager Python Module. Net Manager Python Module. 
 

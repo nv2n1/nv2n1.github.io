@@ -1,5 +1,4 @@
 ---
-
 title: "git-read-tree(1)"
 name: "git-read-tree"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-git-read-tree/"
 description: "git-read-tree – Reads tree information into the index"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-read-tree &#8211; Reads tree information into the index </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git read - tree[[-m[--trivial][--aggressive] | --reset | --prefix = &lt;prefix&gt;]
                     [-u | -i]][--index - output = &lt;file&gt;][--no - sparse - checkout](--empty | &lt;tree - ish1&gt;[&lt;tree - ish2&gt;[&lt;tree - ish3&gt;]])
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Reads the tree information given by &lt;tree-ish&gt; into the index, but does not actually <code>update</code> any of the files it &quot;caches&quot;. (see: <code><a href="/docs/linux/man/1-git-checkout-index/">git-checkout-index</a></code>(1)) </p>
 <p> Optionally, it can merge a tree into the index, perform a fast-forward (i.e. 2-way) merge, or a 3-way merge, with the <code>-m</code> flag. When used with <code>-m</code>, the <code>-u</code> flag causes it to also update the files in the work tree with the result of the merge. </p>
 <p> Trivial merges are done by <i>git read-tree</i> itself. Only conflicting paths will be in unmerged state when <i>git read-tree</i> returns.</p>

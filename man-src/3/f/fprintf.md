@@ -1,5 +1,4 @@
 ---
-
 title: "fprintf(3)"
 name: "fprintf"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-fprintf/"
 description: "printf, fprintf, dprintf, sprintf, snprintf, vprintf, vfprintf, vdprintf, vsprintf, vsnprintf – formatted output conversion"
 ---
 
+<h2 class="name">NAME</h2>
+<p> printf, fprintf, dprintf, sprintf, snprintf, vprintf, vfprintf, vdprintf, vsprintf, vsnprintf &#8211; formatted output conversion </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdio.h&gt;
 int printf(const char *format, ...);
@@ -36,6 +38,7 @@ int vsnprintf(char *str, size_t size, const char *format, va_list ap);
 <dt>Before glibc 2.10:</dt>
 <dd> _GNU_SOURCE</dd></dl>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> The functions in the <code>printf</code>() family produce output according to a <i>format</i> as described below. The functions <code>printf</code>() and <code>vprintf</code>() write output to <i>stdout</i>, the standard output stream; <code>fprintf</code>() and <code>vfprintf</code>() write output to the given output <i>stream</i>; <code>sprintf</code>(), <code>snprintf</code>(), <code>vsprintf</code>(), and <code>vsnprintf</code>() write to the character string <i>str</i>. </p>
 <p> The function <code>dprintf</code>() is the same as <code>fprintf</code>() except that it outputs to a file descriptor, <i>fd</i>, instead of to a <i>stdio</i> stream. </p>
 <p> The functions <code>snprintf</code>() and <code>vsnprintf</code>() write at most <i>size</i> bytes (including the terminating null byte (&#8216;\0&#8217;)) to <i>str</i>. </p>

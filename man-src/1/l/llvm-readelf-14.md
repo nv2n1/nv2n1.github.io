@@ -1,5 +1,4 @@
 ---
-
 title: "llvm-readelf-14(1)"
 name: "llvm-readelf-14"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-llvm-readelf-14/"
 description: "llvm-readelf – GNU-style LLVM Object Reader"
 ---
 
+<h2 class="name">NAME</h2>
+<p> llvm-readelf &#8211; GNU-style LLVM Object Reader </p>
+<h2>SYNOPSIS</h2>
 <p> <code>llvm-readelf</code> [<i>options</i>] [<i>input…</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>llvm-readelf</code> tool displays low-level format-specific information about one or more object files. </p>
 <p> If <code>input</code> is “<code>&#8211;</code>”, <code>llvm-readelf</code> reads from standard input. Otherwise, it will read from the specified <code>filenames</code>.</p>
 <h2>OPTIONS</h2>

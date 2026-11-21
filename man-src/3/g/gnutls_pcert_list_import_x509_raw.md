@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pcert_list_import_x509_raw(3)"
 name: "gnutls_pcert_list_import_x509_raw"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_pcert_list_import_x509_raw – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pcert_list_import_x509_raw &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/abstract.h&gt;</code> </p>
 <p> <code>int gnutls_pcert_list_import_x509_raw(gnutls_pcert_st * </code><i>pcerts</i><code>, unsigned int * </code><i>pcert_max</i><code>, const gnutls_datum_t * </code><i>data</i><code>, gnutls_x509_crt_fmt_t </code><i>format</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,6 +24,7 @@ description: "gnutls_pcert_list_import_x509_raw – API function"
 <dd> One of DER or PEM.</dd>
 <dt>unsigned int flags</dt>
 <dd> must be (0) or an OR&#8217;d sequence of gnutls_certificate_import_flags.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will convert the given PEM encoded certificate list to the native gnutls_x509_crt_t format. The output will be stored in <i>certs</i> . They will be automatically initialized. </p>
 <p> If the Certificate is PEM encoded it should have a header of &quot;X509 CERTIFICATE&quot;, or &quot;CERTIFICATE&quot;.</p>
 <h2>RETURNS</h2>

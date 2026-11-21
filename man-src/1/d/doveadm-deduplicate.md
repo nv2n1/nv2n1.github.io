@@ -1,5 +1,4 @@
 ---
-
 title: "doveadm-deduplicate(1)"
 name: "doveadm-deduplicate"
 section: "1"
@@ -10,7 +9,9 @@ description: "doveadm-deduplicate – expunge duplicate messages"
 
 <h2>NAME</h2>
 <p> doveadm-deduplicate &#8211; expunge duplicate messages</p>
+<h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>deduplicate</code> [<code>-u</code> <i>user</i>|<code>-A</code>] [<code>-S</code> <i>socket_path</i>] [<code>-m</code>] <i>search_query</i></p>
+<h2>DESCRIPTION</h2>
 <p> This command is used to expunge duplicated messages in mailboxes. <code>doveadm deduplicate</code> is mainly useful to revert some (more or less) accidental duplication of messages, e.g. after <code>doveadm copy</code> or <code>doveadm import</code>. <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will delete the newest duplicated messages from the mailbox and keep the oldest.<br />
  Deduplication across multiple mailboxes is not supported.</p>
 <h2>OPTIONS</h2>

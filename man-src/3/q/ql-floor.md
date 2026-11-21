@@ -1,5 +1,4 @@
 ---
-
 title: "ql-floor(3)"
 name: "ql-floor"
 section: "3"
@@ -7,8 +6,8 @@ letter: "q"
 url: "/docs/linux/man/3-ql-floor/"
 description: "QuantLib::CappedFlooredCoupon – Capped and/or floored floating-rate coupon."
 ---
-
 <p>QuantLib::CappedFlooredCoupon &#8211; Capped and/or floored floating-rate coupon. </p>
+<h2>SYNOPSIS</h2>
 <p> <br />
  </p>
 <p>#include &lt;ql/cashflows/capflooredcoupon.hpp&gt; </p>

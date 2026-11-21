@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_packet_get(3)"
 name: "gnutls_packet_get"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_packet_get – API function"
 
 <h2>NAME</h2>
 <p> gnutls_packet_get &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_packet_get(gnutls_packet_t </code><i>packet</i><code>, gnutls_datum_t * </code><i>data</i><code>, unsigned char * </code><i>sequence</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_packet_get – API function"
 <dd> will contain the data present in the <i>packet</i> structure (may be <code>NULL</code>)</dd>
 <dt>unsigned char * sequence</dt>
 <dd> the 8-bytes of the packet sequence number (may be <code>NULL</code>)</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function returns the data and sequence number associated with the received packet.</p>
 <h2>SINCE</h2>
 <p> 3.3.5</p>

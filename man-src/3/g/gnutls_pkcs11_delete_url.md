@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pkcs11_delete_url(3)"
 name: "gnutls_pkcs11_delete_url"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_pkcs11_delete_url – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs11_delete_url &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs11.h&gt;</code> </p>
 <p> <code>int gnutls_pkcs11_delete_url(const char * </code><i>object_url</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_pkcs11_delete_url – API function"
 <dd> The URL of the object to delete.</dd>
 <dt>unsigned int flags</dt>
 <dd> One of GNUTLS_PKCS11_OBJ_* flags</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will delete objects matching the given URL. Note that not all tokens support the delete operation.</p>
 <h2>RETURNS</h2>
 <p> On success, the number of objects deleted is returned, otherwise a negative error value.</p>

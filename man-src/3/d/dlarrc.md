@@ -1,5 +1,4 @@
 ---
-
 title: "dlarrc(3)"
 name: "dlarrc"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlarrc/"
 description: "dlarrc.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlarrc.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlarrc</code> (JOBT, N, VL, VU, D, E, PIVMIN, EIGCNT, LCNT, RCNT, INFO)<br />
  <i></i><code>DLARRC</code> computes the number of eigenvalues of the symmetric tridiagonal matrix.</p>

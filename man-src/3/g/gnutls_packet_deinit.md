@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_packet_deinit(3)"
 name: "gnutls_packet_deinit"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_packet_deinit – API function"
 
 <h2>NAME</h2>
 <p> gnutls_packet_deinit &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_packet_deinit(gnutls_packet_t </code><i>packet</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_packet_t packet</dt>
 <dd> is a pointer to a <code>gnutls_packet_st</code> structure.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will deinitialize all data associated with the received packet.</p>
 <h2>SINCE</h2>
 <p> 3.3.5</p>

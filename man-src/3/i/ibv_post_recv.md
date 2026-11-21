@@ -1,5 +1,4 @@
 ---
-
 title: "ibv_post_recv(3)"
 name: "ibv_post_recv"
 section: "3"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/3-ibv_post_recv/"
 description: "ibv_post_recv – post a list of work requests (WRs) to a receive queue"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ibv_post_recv &#8211; post a list of work requests (WRs) to a receive queue </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 int ibv_post_recv(struct ibv_qp *qp, struct ibv_recv_wr *wr,
                   struct ibv_recv_wr **bad_wr);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>ibv_post_recv()</code> posts the linked list of work requests (WRs) starting with <i>wr</i> to the receive queue of the queue pair <i>qp</i>. It stops processing WRs from this list at the first failure (that can be detected immediately while requests are being posted), and returns this failing WR through <i>bad_wr</i>. </p>
 <p> The argument <i>wr</i> is an ibv_recv_wr struct, as defined in &lt;infiniband/verbs.h&gt;. </p>
 <pre><code>

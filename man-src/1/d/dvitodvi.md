@@ -1,5 +1,4 @@
 ---
-
 title: "dvitodvi(1)"
 name: "dvitodvi"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dvitodvi/"
 description: "dvitodvi – rearrange pages in a DVI file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dvitodvi &#8211; rearrange pages in a DVI file </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dvitodvi</code> [ <code>-q</code> ] [ <code>-i</code> <i>infile</i> ] [ <code>-o</code> <i>outfile</i> ] [ <code>-w</code><i>width</i> ] [ <code>-h</code><i>height</i> ] <i>pagespecs</i> [ <i>infile</i> [ <i>outfile</i> ] ]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Dvitodvi</i> rearranges pages from a DVI file, creating a new DVI file. <i>Dvitodvi</i> can be used to perform a large number of arbitrary re-arrangements of Documents, including arranging for printing 2-up, 4-up, booklets, reversing, selecting front or back sides of documents, scaling, etc. </p>
 <p> <i>pagespecs</i> follow the syntax:</p>
 <dl>

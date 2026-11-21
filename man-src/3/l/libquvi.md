@@ -1,5 +1,4 @@
 ---
-
 title: "libquvi(3)"
 name: "libquvi"
 section: "3"
@@ -7,9 +6,14 @@ letter: "l"
 url: "/docs/linux/man/3-libquvi/"
 ---
 
-libquvi - Overview of query media library 
+<h2 class="name">NAME</h2>
+ 
 
-libquvi is a cross-platform library for parsing flash media stream URLs with C <font SIZE="-1">API</font>. The term ``quvi'' is a shorthand for ``query video''.
+ libquvi - Overview of query media library 
+
+<h2>DESCRIPTION</h2>
+
+ libquvi is a cross-platform library for parsing flash media stream URLs with C <font SIZE="-1">API</font>. The term ``quvi'' is a shorthand for ``query video''.
 
 <h3><font SIZE="-1">API</font> documentation</h3>
 

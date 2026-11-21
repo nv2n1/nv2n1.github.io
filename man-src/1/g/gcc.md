@@ -1,5 +1,4 @@
 ---
-
 title: "gcc(1)"
 name: "gcc"
 section: "1"
@@ -7,8 +6,8 @@ letter: "g"
 url: "/docs/linux/man/1-gcc/"
 description: "gcc – GNU project C and C++ compiler"
 ---
-
 <p>gcc &#8211; GNU project C and C++ compiler </p>
+<h2>SYNOPSIS</h2>
 <p> gcc [<code>-c</code>|<code>-S</code>|<code>-E</code>] [<code>-std=</code><i>standard</i>] <br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-g</code>]&nbsp;[<code>-pg</code>]&nbsp;[<code>-O</code><i>level</i>] <br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-W</code><i>warn</i>...]&nbsp;[<code>-Wpedantic</code>] <br />
@@ -17,6 +16,7 @@ description: "gcc – GNU project C and C++ compiler"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-f</code><i>option</i>...]&nbsp;[<code>-m</code><i>machine-option</i>...] <br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-o</code>&nbsp;<i>outfile</i>]&nbsp;[@<i>file</i>]&nbsp;<i>infile</i>... </p>
 <p>Only the most useful options are listed here; see below for the remainder. <code>g++</code> accepts mostly the same options as <code>gcc</code>.  </p>
+<h2>DESCRIPTION</h2>
 <p> When you invoke <font SIZE="-1">GCC,</font> it normally does preprocessing, compilation, assembly and linking. The ``overall options&#8217;&#8216; allow you to stop this process at an intermediate stage. For example, the <code>-c</code> option says not to run the linker. Then the output consists of object files output by the assembler. </p>
 <p>Other options are passed on to one or more stages of processing. Some options control the preprocessor and others the compiler itself. Yet other options control the assembler and linker; most of these are not documented here, since you rarely need to use any of them. </p>
 <p>Most of the command-line options that you can use with <font SIZE="-1">GCC</font> are useful for C programs; when an option is only useful with another language (usually C<font SIZE="-2">++</font>), the explanation says so explicitly. If the description for a particular option does not mention a source language, you can use that option with all supported languages. </p>

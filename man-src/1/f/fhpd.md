@@ -1,5 +1,4 @@
 ---
-
 title: "fhpd(1)"
 name: "fhpd"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-fhpd/"
 description: "fhpd – a command line debugger"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fhpd &#8211; a command line debugger </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>fhpd</code> [<i>options</i>] {<i>program</i>&nbsp;<wbr><i>arg</i>&nbsp;<wbr>&#8230; | <i>pid</i>&#8230; | <i>core-file</i>&nbsp;<wbr>[&nbsp;<wbr><i>core-executable</i>&nbsp;<wbr>]&#8230; }</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>fhpd</code></p>
 <dd>is a command line oriented debugger implemented using the <a href="/docs/linux/man/7-frysk/">frysk</a>(7) framework with a command set loosely based on the High Performance Debugger Forum&#8217;s Version 1 standard.</dd>
 <h3>Standard Frysk Options</h3>

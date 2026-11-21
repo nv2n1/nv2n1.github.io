@@ -1,5 +1,4 @@
 ---
-
 title: "gnokii(1)"
 name: "gnokii"
 section: "1"
@@ -10,7 +9,9 @@ description: "gnokii – tool suite for mobile phones"
 
 <h2>NAME</h2>
 <p> gnokii &#8211; tool suite for mobile phones</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gnokii</code> <i>[CONFIG OPTIONS]</i> [<i>OPTIONS</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>gnokii</code> is a multiple systems tool suite and driver for mobile phones. </p>
 <p> <code>gnokii</code> supports the AT protocol defined by the GSM standard (with workarounds for some vendor&#8217;s quirks), some proprietary protocols of Nokia phones (the so called FBUS and FBUS2) and SIM cards in PC/SC compatible Smart Card readers. Limited support for the older and slow Nokia MBUS protocol is also available. </p>
 <p> You can assume that your phone will work with <code>gnokii</code> when using the AT protocol, however some phones implement only a subset of the protocol and in those cases you will get very limited functionality. The recommended model setting for your config file are:<br />

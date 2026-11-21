@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_rsa_export_get_modulus_bits(3)"
 name: "gnutls_rsa_export_get_modulus_bits"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_rsa_export_get_modulus_bits – API function"
 
 <h2>NAME</h2>
 <p> gnutls_rsa_export_get_modulus_bits &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/compat.h&gt;</code> </p>
 <p> <code>int gnutls_rsa_export_get_modulus_bits(gnutls_session_t </code><i>session</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_session_t session</dt>
 <dd> is a gnutls session</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Get the export RSA parameter&#8217;s modulus size.</p>
 <h2>RETURNS</h2>
 <p> The bits used in the last RSA-EXPORT key exchange with the peer, or a negative error code in case of error.</p>

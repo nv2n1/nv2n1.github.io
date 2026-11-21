@@ -1,5 +1,4 @@
 ---
-
 title: "defncopy(1)"
 name: "defncopy"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-defncopy/"
 description: "defncopy – extract procedures and views from a Microsoft server."
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>defncopy</code> &#8211; extract procedures and views from a Microsoft server. </p>
+<h2>SYNOPSIS</h2>
 <p> [-<code>v</code> ] [-<code>U </code><i>username</i> ] [-<code>P </code><i>password</i> ] [-<code>S </code><i>server</i> ] [-<code>D </code><i>database</i> ] [-<code>i </code><i>input_file</i> ] [-<code>o </code><i>output_file</i> ] Bo <i>owner.object_name</i> [<i>owner.object_name &#8230;</i> ] Bc</p>
+<h2>DESCRIPTION</h2>
 <p> is a utility program distributed with FreeTDS. It replaces a similar program of the same name distributed by Sybase. </p>
 <p> reads the text of a stored procedure or view, and writes a script suitable for recreating the procedure or view. For tables, it reads the output of sp_help and constructs a `CREATE&#8217; TABLE statement, complete with `CREATE&#8217; INDEX Ns , too. <i>owner</i> is optional if you or the database owner is the owner of the procedure/view being copied. <i>object_name</i> is the name of the system object you wish to extract.</p>
 <h2>OPTIONS</h2>

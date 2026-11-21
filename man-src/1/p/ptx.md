@@ -1,5 +1,4 @@
 ---
-
 title: "ptx(1)"
 name: "ptx"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-ptx/"
 description: "ptx – produce a permuted index of file contents"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ptx &#8211; produce a permuted index of file contents </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ptx</code> [<i>,OPTION/</i>]&#8230; [<i>,INPUT/</i>]&#8230; <i>,(without -G)/</i><br />
  <code>ptx</code> <i>,-G /</i>[<i>,OPTION/</i>]&#8230; [<i>,INPUT /</i>[<i>,OUTPUT/</i>]]</p>
+<h2>DESCRIPTION</h2>
 <p> Output a permuted index, including context, of the words in the input files. </p>
 <p> With no FILE, or when FILE is -, read standard input. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>

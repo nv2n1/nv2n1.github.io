@@ -1,5 +1,4 @@
 ---
-
 title: "dmsetup(8)"
 name: "dmsetup"
 section: "8"
@@ -7,8 +6,8 @@ letter: "d"
 url: "/docs/linux/man/8-dmsetup/"
 description: "dmsetup — low level logical volume management"
 ---
-
 <p>dmsetup --- low level logical volume management </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>dmsetup</code><code>clear</code><i>device_name</i></dt>
 <dt><code>dmsetup</code><code>create</code><i>device_name</i> [<code>-u</code>|<code>--uuid</code><i>uuid</i>] [<code>--addnodeoncreate</code>|<code>--addnodeonresume</code>] [<code>-n</code>|<code>--notable</code>|<code>--table</code><i>table</i>|<i>table_file</i>] [<code>--readahead</code> [<code>+</code>]<i>sectors</i>|<code>auto</code>|<code>none</code>] </dt>
@@ -49,6 +48,7 @@ description: "dmsetup — low level logical volume management"
 <dt><code>devmap_name </code><i>major minor</i></dt>
 <dt><code>devmap_name </code><i>major:minor</i></dt>
 </dl>
+<h2>DESCRIPTION</h2>
 <dd> <p> dmsetup manages logical devices that use the device-mapper driver. Devices are created by loading a table that specifies a target for each sector (512 bytes) in the logical device. </p>
 <p>The first argument to dmsetup is a command. The second argument is the logical device name or uuid. </p>
 <p>Invoking the dmsetup tool as <code>devmap_name</code> (which is not normally distributed and is supported only for historical reasons) is equivalent to <code>dmsetup info -c --noheadings -j</code><i>&nbsp;major&nbsp;</i><code>-m</code><i>&nbsp;minor</i>.  </p>

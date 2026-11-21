@@ -1,5 +1,4 @@
 ---
-
 title: "claqr1(3)"
 name: "claqr1"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-claqr1/"
 description: "claqr1.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> claqr1.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>claqr1</code> (N, H, LDH, S1, S2, V)<br />
  <i></i><code>CLAQR1</code> sets a scalar multiple of the first column of the product of 2-by-2 or 3-by-3 matrix H and specified shifts.</p>

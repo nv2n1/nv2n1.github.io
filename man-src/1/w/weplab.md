@@ -1,5 +1,4 @@
 ---
-
 title: "weplab(1)"
 name: "weplab"
 section: "1"
@@ -10,7 +9,9 @@ description: "weplab – Wireless WEP encryption security analyzer"
 
 <h2>NAME</h2>
 <p> weplab &#8211; Wireless WEP encryption security analyzer</p>
+<h2>SYNOPSIS</h2>
 <p> <code>weplab</code> {-a | -r | -b | -y | -c} [options] {<code>pcap file</code>}</p>
+<h2>DESCRIPTION</h2>
 <p> weplab is a tool to review the security of WEP encryption in wireless networks from an educational point of view. Several attacks are available (including advanced statistical attacks) so it can be measured the efectiveness and minimun requirements of each one. </p>
 <p> On the other hand, weplab can also be saw as an advanced Wireless WEP encryption cracker that aims to support a big variety of attacks. At the moment the attacks supported are dictionary based, bruteforce and several kind of statistical based.</p>
 <h2>OPTIONS</h2>

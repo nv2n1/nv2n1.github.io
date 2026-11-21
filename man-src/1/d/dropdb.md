@@ -1,5 +1,4 @@
 ---
-
 title: "dropdb(1)"
 name: "dropdb"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-dropdb/"
 description: "dropdb – remove a PostgreSQL database"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dropdb &#8211; remove a PostgreSQL database </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>dropdb</code> [<i>connection-option</i>&#8230;] [<i>option</i>&#8230;] <i>dbname</i></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>dropdb destroys an existing PostgreSQL database. The user who executes this command must be a database superuser or the owner of the database. </dd>
 <p> dropdb is a wrapper around the SQL command DROP DATABASE (<code><a href="/docs/linux/man/7-drop_database/">DROP_DATABASE</a></code>(7)). There is no effective difference between dropping databases via this utility and via other methods for accessing the server.</p>
 <h2>OPTIONS</h2>

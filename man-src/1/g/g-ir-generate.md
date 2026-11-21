@@ -1,5 +1,4 @@
 ---
-
 title: "g-ir-generate(1)"
 name: "g-ir-generate"
 section: "1"
@@ -10,7 +9,9 @@ description: "g-ir-generate – typelib generator"
 
 <h2>NAME</h2>
 <p> g-ir-generate &#8211; typelib generator</p>
+<h2>SYNOPSIS</h2>
 <p> <code>g-ir-generate</code> [OPTION&#8230;] FILES&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> g-ir-generate is an GIR generator, using the repository API. It generates GIR files from a raw typelib or in a shared library (&#8211;shlib). The output will be written to standard output unless the &#8211;output is specified.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "preconv(1)"
 name: "preconv"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-preconv/"
 description: "preconv – convert encoding of input files to something GNU troff understands"
 ---
 
+<h2 class="name">NAME</h2>
+<p> preconv &#8211; convert encoding of input files to something GNU troff understands </p>
+<h2>SYNOPSIS</h2>
 <p> [ <code>-dr</code> ] [ <code>-D </code><i>default_encoding</i> ] [ <code>-e </code><i>encoding</i> ] [<i>file</i> &#8230;] <code>-h</code> <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>preconv</code> reads <i>files</i> and converts its encoding(s) to a form GNU <code><a href="/docs/linux/man/1-troff/">troff</a></code>(1) can process, sending the data to standard output. Currently, this means ASCII characters and &#8216;\[uXXXX]&#8217; entities, where &#8216;XXXX&#8217; is a hexadecimal number with four to six digits, representing a Unicode input code. Normally, <code>preconv</code> should be invoked with the <code>-k</code> and <code>-K</code> options of <code>groff</code>.</p>
 <h2>OPTIONS</h2>
 <p> Whitespace is permitted between a command-line option and its argument.</p>

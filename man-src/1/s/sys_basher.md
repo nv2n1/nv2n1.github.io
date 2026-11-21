@@ -1,5 +1,4 @@
 ---
-
 title: "sys_basher(1)"
 name: "sys_basher"
 section: "1"
@@ -10,7 +9,9 @@ description: "sys_basher – manual page for sys_basher version 2.0.2"
 
 <h2>NAME</h2>
 <p> sys_basher &#8211; manual page for sys_basher version 2.0.2</p>
+<h2>SYNOPSIS</h2>
 <p> <code>sys_basher</code> [<i>OPTIONS</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> sys_basher (c)2006-2015 Polybus Systems Corp., Westford, MA, USA</p>
 <dl>
 <dt>

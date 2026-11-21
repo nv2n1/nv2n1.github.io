@@ -1,5 +1,4 @@
 ---
-
 title: "stg-mail(1)"
 name: "stg-mail"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-stg-mail/"
 description: "stg-mail – Send a patch or series of patches by e-mail"
 ---
 
+<h2 class="name">NAME</h2>
+<p> stg-mail &#8211; Send a patch or series of patches by e-mail </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 stg mail[options][--][&lt;patch1&gt;][&lt;patch2&gt;][&lt;patch3&gt;..&lt;patch4&gt;]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Send a patch or a range of patches by e-mail using the SMTP server specified by the <i>stgit.smtpserver</i> configuration option, or the <i>&#8211;smtp-server</i> command line option. This option can also be an absolute path to <i>sendmail</i> followed by command line arguments. </p>
 <p> The From address and the e-mail format are generated from the template file passed as argument to <i>&#8211;template</i> (defaulting to <i>.git/patchmail.tmpl</i> or <i>~/.stgit/templates/patchmail.tmpl</i> or <i>/usr/share/stgit/templates/patchmail.tmpl</i>). A patch can be sent as attachment using the &#8211;attach option in which case the <i>mailattch.tmpl</i> template will be used instead of <i>patchmail.tmpl</i>. </p>
 <p> The To/Cc/Bcc addresses can either be added to the template file or passed via the corresponding command line options. They can be e-mail addresses or aliases which are automatically expanded to the values stored in the [mail &quot;alias&quot;] section of GIT configuration files. </p>

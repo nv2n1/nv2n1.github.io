@@ -1,5 +1,4 @@
 ---
-
 title: "perlcygwin(1)"
 name: "perlcygwin"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-perlcygwin/"
 description: "perlcygwin – Perl for Cygwin"
 ---
 
+<h2 class="name">NAME</h2>
+<p> perlcygwin &#8211; Perl for Cygwin </p>
+<h2>SYNOPSIS</h2>
 <p> This document will help you configure, make, test and install Perl on Cygwin. This document also describes features of Cygwin that will affect how Perl behaves at runtime. </p>
 <p> <font SIZE="-1"><code>NOTE:</code></font> There are pre-built Perl packages available for Cygwin and a version of Perl is provided in the normal Cygwin install. If you do not need to customize the configuration, consider using one of those packages.</p>
 <h2>PREREQUISITES FOR COMPILING PERL ON CYGWIN</h2>

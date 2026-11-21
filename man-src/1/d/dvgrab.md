@@ -1,5 +1,4 @@
 ---
-
 title: "dvgrab(1)"
 name: "dvgrab"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dvgrab/"
 description: "dvgrab — Capture DV or MPEG-2 Transport Stream (HDV) video and audio data from FireWire"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dvgrab &#8212; Capture DV or MPEG-2 Transport Stream (HDV) video and audio data from FireWire</p>
+<h2>SYNOPSIS</h2>
 <p> <code>dvgrab</code> [<i>options</i>] [<i>base</i>] [-] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>dvgrab</code> is a program that captures DV or HDV (MPEG2-TS) video and audio data from digital camcorders via FireWire (IEEE 1394). The data is stored in one or several files and can later be processed by video editing software. <code>dvgrab</code> can remote control the camcorder but it does not show the video&#8217;s content on screen. </p>
 <p> <code>dvgrab</code> also supports UVC (USB Video Class) compliant DV devices using Linux kernel module uvcvideo, which is a V4L2 driver. In this mode, there is no AV/C VTR control and therefore interactive mode is almost useless. interactive feature is </p>
 <p> The <i>base</i> argument is used to construct the filename to store video data: <i>base</i>&#8211;<i>num</i>.<i>ext</i>. <i>num</i> is a running number starting from 001, and <i>ext</i> is the file name extension specifying the file format used, e.g. avi. A different naming scheme is used whenever the <code>-timestamp</code>, <code>-timecode</code>, or <code>-timesys</code> is given (see below). If <i>base</i> is a full filename including extension, then <code>dvgrab</code> attempts to determine the output file format from the extension, but it still inserts <i>num</i>. The default value for <i>base</i> is &quot;dvgrab-&quot;. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ipa-compat-manage(1)"
 name: "ipa-compat-manage"
 section: "1"
@@ -10,7 +9,9 @@ description: "ipa-compat-manage – Enables or disables the schema compatibility
 
 <h2>NAME</h2>
 <p> ipa-compat-manage &#8211; Enables or disables the schema compatibility plugin</p>
+<h2>SYNOPSIS</h2>
 <p> ipa-compat-manage [options] &lt;enable|disable|status&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> Run the command with the <code>enable</code> option to enable the compat plugin. </p>
 <p> Run the command with the <code>disable</code> option to disable the compat plugin. </p>
 <p> Run the command with the <code>status</code> to determine the current status of the compat plugin. </p>

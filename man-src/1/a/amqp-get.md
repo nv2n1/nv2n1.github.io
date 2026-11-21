@@ -1,5 +1,4 @@
 ---
-
 title: "amqp-get(1)"
 name: "amqp-get"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-amqp-get/"
 description: "amqp-get – Get a message from a queue on an AMQP server"
 ---
 
+<h2 class="name">NAME</h2>
+<p> amqp-get &#8211; Get a message from a queue on an AMQP server </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>amqp-get</code> [<i>OPTION</i>&#8230;] {-q&nbsp;<wbr><i>queue name</i>}</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>amqp-get</code></p>
 <dd>attempts to consume a single message from a queue on an AMQP server, and exits. Unless the queue was empty, the body of the resulting message is sent to standard output.</dd>
 <h2>OPTIONS</h2>

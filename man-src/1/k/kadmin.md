@@ -1,5 +1,4 @@
 ---
-
 title: "kadmin(1)"
 name: "kadmin"
 section: "1"
@@ -10,8 +9,10 @@ description: "kadmin – Kerberos V5 database administration program"
 
 <h2>NAME</h2>
 <p> kadmin &#8211; Kerberos V5 database administration program</p>
+<h2>SYNOPSIS</h2>
 <p> <code>kadmin</code> [<code>-O</code>|<code>-N</code>] [<code>-r</code> <i>realm</i>] [<code>-p</code> <i>principal</i>] [<code>-q</code> <i>query</i>] [[<code>-c</code> <i>cache_name</i>]|[<code>-k</code> [<code>-t</code> <i>keytab</i>]]|<code>-n</code>] [<code>-w</code> <i>password</i>] [<code>-s</code> <i>admin_server</i>[:<i>port</i>]] [command args&#8230;] </p>
 <p> <code>kadmin.local</code> [<code>-r</code> <i>realm</i>] [<code>-p</code> <i>principal</i>] [<code>-q</code> <i>query</i>] [<code>-d</code> <i>dbname</i>] [<code>-e</code> <i>enc</i>:<i>salt</i> &#8230;] [<code>-m</code>] [<code>-x</code> <i>db_args</i>] [command args&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> kadmin and kadmin.local are command-line interfaces to the Kerberos V5 administration system. They provide nearly identical functionalities; the difference is that kadmin.local directly accesses the KDC database, while kadmin performs operations using <i><a href="/docs/linux/man/8-kadmind/">kadmind</a>(8)</i>. Except as explicitly noted otherwise, this man page will use &quot;kadmin&quot; to refer to both versions. kadmin provides for the maintenance of Kerberos principals, password policies, and service key tables (keytabs). </p>
 <p> The remote kadmin client uses Kerberos to authenticate to kadmind using the service principal <code>kadmin/ADMINHOST</code> (where <i>ADMINHOST</i> is the fully-qualified hostname of the admin server) or <code>kadmin/admin</code>. If the credentials cache contains a ticket for one of these principals, and the <code>-c</code> credentials_cache option is specified, that ticket is used to authenticate to kadmind. Otherwise, the <code>-p</code> and <code>-k</code> options are used to specify the client Kerberos principal name used to authenticate. Once kadmin has determined the principal name, it requests a service ticket from the KDC, and uses that service ticket to authenticate to kadmind. </p>
 <p> Since kadmin.local directly accesses the KDC database, it usually must be run directly on the master KDC with sufficient permissions to read the KDC database. If the KDC database uses the LDAP database module, kadmin.local can be run on any host which can access the LDAP server.</p>

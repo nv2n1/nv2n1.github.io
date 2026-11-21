@@ -1,5 +1,4 @@
 ---
-
 title: "sesearch(1)"
 name: "sesearch"
 section: "1"
@@ -10,7 +9,9 @@ description: "sesearch – SELinux policy query tool"
 
 <h2>NAME</h2>
 <p> sesearch &#8211; SELinux policy query tool</p>
+<h2>SYNOPSIS</h2>
 <p> <code>sesearch</code> [OPTIONS] RULE_TYPE [RULE_TYPE &#8230;] [EXPRESSION] [POLICY &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>sesearch</code> allows the user to search the rules in a SELinux policy.</p>
 <h2>POLICY</h2>
 <p> <code>sesearch</code> supports loading a SELinux policy in one of four formats.</p>

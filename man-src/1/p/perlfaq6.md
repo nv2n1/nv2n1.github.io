@@ -1,5 +1,4 @@
 ---
-
 title: "perlfaq6(1)"
 name: "perlfaq6"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-perlfaq6/"
 description: "perlfaq6 – Regular Expressions"
 ---
 
+<h2 class="name">NAME</h2>
+<p> perlfaq6 &#8211; Regular Expressions </p>
 <h2>VERSION</h2>
 <p> version 5.20190126</p>
+<h2>DESCRIPTION</h2>
 <p> This section is surprisingly small because the rest of the <font SIZE="-1">FAQ</font> is littered with answers involving regular expressions. For example, decoding a <font SIZE="-1">URL</font> and checking whether something is a number can be handled with regular expressions, but those answers are found elsewhere in this document (in perlfaq9: &#8220;How do I decode or create those %-encodings on the web&#8221; and perlfaq4: &#8220;How do I determine whether a scalar is a number/whole/integer/float&#8221;, to be precise).</p>
 <h3>How can I hope to use regular expressions without creating illegible and unmaintainable code?</h3>
 <p> Three techniques can make regular expressions maintainable and understandable.</p>

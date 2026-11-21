@@ -1,5 +1,4 @@
 ---
-
 title: "packf(1)"
 name: "packf"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-packf/"
 description: "packf – pack messages in nmh folder into a single file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> packf &#8211; pack messages in nmh folder into a single file </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>packf</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-file</code> <i>name</i>] [<code>-mbox</code>] [<code>-mmdf</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>Packf</code></p>
 <dd>will pack copies of messages from a folder, into a single file. </dd>
 <p> If the <code>-mbox</code> switch is given (the default), then the messages are separated using mbox (uucp) style delimiters. This is the format used by most mail clients (elm, mailx, etc.). </p>

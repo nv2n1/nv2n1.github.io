@@ -1,5 +1,4 @@
 ---
-
 title: "cjdns-online(1)"
 name: "cjdns-online"
 section: "1"
@@ -10,7 +9,9 @@ description: "cjdns-online — check whether cjdns tunnel devices are available"
 
 <h2>NAME</h2>
 <p> <code>cjdns-online</code> &#8212; check whether cjdns tunnel devices are available</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cjdns-online</code> [&lt;options&gt;&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> Cjdns-online waits for cjdns to make its tunnel device available so that services that listen on the cjdns IP can start. If you have configured services to listen on the cjdns IP, then you can use:</p>
 <dl>
 <dt>
@@ -33,6 +34,7 @@ systemctl enable cjdns-wait-online
 <dt>&bull;</dt>
 <dd> <code>-s</code>, <code>&#8211;wait-for-startup</code>: Wait for full startup instead of just tun dev. This is not implemented.</dd>
 </dl>
+<h2 class="name">NAME</h2>
 <p> <code>cjdns-online</code> &#8212; check whether cjdns tunnel devices are available </p>
 <h2>SYNOPSIS</h2>
 <p> <code>cjdns-online</code> [&lt;options&gt;&#8230;]</p>

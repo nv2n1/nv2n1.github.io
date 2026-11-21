@@ -1,5 +1,4 @@
 ---
-
 title: "jinfo(1)"
 name: "jinfo"
 section: "1"
@@ -7,9 +6,9 @@ letter: "j"
 url: "/docs/linux/man/1-jinfo/"
 description: "jinfo – Generates configuration information. This command is experimental and unsupported."
 ---
-
 <h2>NAME</h2>
 <p> jinfo - Generates configuration information. This command is experimental and unsupported.  </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
  jinfo  [ option  ] pid 
 </code></pre>
@@ -38,6 +37,7 @@ description: "jinfo – Generates configuration information. This command is exp
 <dt><i>server-id</i></dt>
 <dd> <p> An optional unique ID to use when multiple debug servers are running on the same remote host. </p>
  </dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code>jinfo</code> command prints Java configuration information for a specified Java process or core file or a remote debug server. The configuration information includes Java system properties and Java Virtual Machine (JVM) command-line flags. If the specified process is running on a 64-bit JVM, then you might need to specify the <code>-J-d64</code> option, for example: <code>jinfo</code><code>-J-d64 -sysprops pid</code>. </p>
 <p> This utility is unsupported and might not be available in future releases of the JDK. In Windows Systems where <code>dbgeng.dll</code> is not present, Debugging Tools For Windows must be installed to have these tools working. The <code>PATH</code> environment variable should contain the location of the jvm.dll that is used by the target process or the location from which the crash dump file was produced. For example, <code>set PATH=%JDK_HOME%\jre\bin\client;%PATH%</code> .  </p>
 <h2>OPTIONS</h2>

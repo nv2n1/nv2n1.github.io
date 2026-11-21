@@ -1,5 +1,4 @@
 ---
-
 title: "wmc(1)"
 name: "wmc"
 section: "1"
@@ -10,7 +9,9 @@ description: "wmc – Wine Message Compiler"
 
 <h2>NAME</h2>
 <p> wmc &#8211; Wine Message Compiler</p>
+<h2>SYNOPSIS</h2>
 <p> <code>wmc</code> [<i>options</i>]&nbsp;<wbr>[<i>inputfile</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>wmc</code> compiles messages from <code>inputfile</code> into FormatMessage[AW] compatible format encapsulated in a resourcescript format. <code>wmc</code> outputs the data either in a standard <i>.bin</i> formatted binary file, or can generated inline resource data. </p>
 <p> <code>wmc</code> takes only one <i>inputfile</i> as argument (see <code>BUGS</code>). The <i>inputfile</i> normally has extension <i>.mc</i>. The messages are read from standard input if no inputfile is given. If the outputfile is not specified with <code>-o</code>, then <code>wmc</code> will write the output to <i>inputfile.{rc,h}</i>. The outputfile is named <i>wmc.tab.{rc,h}</i> if no inputfile was given.</p>
 <h2>OPTIONS</h2>

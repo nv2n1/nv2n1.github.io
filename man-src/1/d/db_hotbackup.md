@@ -1,5 +1,4 @@
 ---
-
 title: "db_hotbackup(1)"
 name: "db_hotbackup"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-db_hotbackup/"
 description: "db5.3_hotbackup – Create \"hot backup\" or \"hot failover\" snapshots"
 ---
 
+<h2 class="name">NAME</h2>
+<p> db5.3_hotbackup &#8211; Create &quot;hot backup&quot; or &quot;hot failover&quot; snapshots </p>
+<h2>SYNOPSIS</h2>
 <p> <code>db5.3_hotbackup</code> [-cDuVv] [-d data_dir &#8230;] [-h home] [-l log_dir] [-P password] -b backup_dir</p>
+<h2>DESCRIPTION</h2>
 <p> The db5.3_hotbackup utility creates &quot;hot backup&quot; or &quot;hot failover&quot; snapshots of Berkeley DB database environments. </p>
 <p> The db5.3_hotbackup utility performs the following steps:</p>
 <dl>

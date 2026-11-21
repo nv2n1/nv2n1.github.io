@@ -1,5 +1,4 @@
 ---
-
 title: "dbformmail(1)"
 name: "dbformmail"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dbformmail/"
 description: "dbformmail – write a shell script that will send e-mail to many people"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dbformmail &#8211; write a shell script that will send e-mail to many people </p>
+<h2>SYNOPSIS</h2>
 <p> dbformmail [-m <font SIZE="-1">MECHANISM</font>] format_file.txt</p>
+<h2>DESCRIPTION</h2>
 <p> Read a &#8220;form mail&#8221; message from the file <font SIZE="-1">FORMAT_FILE.TXT,</font> filling in underscore-preceded column-names with data. Output a shell script which will send each message through some mail transport <font SIZE="-1">MECHANISM.</font> </p>
 <p> Do not use this program for evil or I will have to come over and have words with you. </p>
 <p> Note that this program does <font SIZE="-1">NOT</font> actually <font SIZE="-1">SEND</font> the mail. It writes a shell script that will send the mail for you. I recommend you save it to a file, check it (one last time!), then run it with sh. </p>

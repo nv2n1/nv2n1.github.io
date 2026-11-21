@@ -1,5 +1,4 @@
 ---
-
 title: "snmpget(1)"
 name: "snmpget"
 section: "1"
@@ -10,7 +9,9 @@ description: "snmpget – communicates with a network entity using SNMP GET requ
 
 <h2>NAME</h2>
 <p> snmpget &#8211; communicates with a network entity using SNMP GET requests</p>
+<h2>SYNOPSIS</h2>
 <p> <code>snmpget</code> [COMMON OPTIONS] [-Cf] AGENT OID [OID]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>snmpget</code> is an SNMP application that uses the SNMP GET request to query for information on a network entity. One or more object identifiers (OIDs) may be given as arguments on the command line. Each variable name is given in the format specified in <i><a href="/docs/linux/man/5-variables/">variables</a>(5)</i>.</p>
 <h2>OPTIONS</h2>
 <dl>

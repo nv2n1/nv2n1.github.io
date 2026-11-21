@@ -1,5 +1,4 @@
 ---
-
 title: "swapcontext(2)"
 name: "swapcontext"
 section: "2"
@@ -10,10 +9,12 @@ description: "swapcontext – Swap out old context with new context"
 
 <h2>NAME</h2>
 <p> swapcontext &#8211; Swap out old context with new context</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt>
 </dt><dd>int&nbsp;<wbr><code>sys_swapcontext</code>&nbsp;<wbr>(struct ucontext&nbsp;<wbr><i>*old_ctx</i>, struct ucontext&nbsp;<wbr><i>*new_ctx</i>, int&nbsp;<wbr><i>r5</i>, int&nbsp;<wbr><i>r6</i>, int&nbsp;<wbr><i>r7</i>, int&nbsp;<wbr><i>r8</i>, struct pt_regs&nbsp;<wbr><i>*regs</i>); </dd>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> <code>swapcontext</code> swaps out context <i>old_ctx</i> with new context <i>new_ctx</i>. The <i>int r#</i> values have no place in the system call functionality. The <i>regs</i> value indicates the current user register values from the user stack. </p>
 <h2>RETURN VALUE</h2>
 <p> <code>swapcontext</code> returns 0 on success; otherwise, <code>swapcontext</code> returns one of the errors listed in the &quot;Errors&quot; section. </p>

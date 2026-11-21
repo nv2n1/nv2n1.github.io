@@ -1,5 +1,4 @@
 ---
-
 title: "pshortcut(1)"
 name: "pshortcut"
 section: "1"
@@ -10,7 +9,9 @@ description: "pshortcut – create a shortcut"
 
 <h2>NAME</h2>
 <p> pshortcut &#8211; create a shortcut </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pshortcut</code> [-d <i>LEVEL</i>] [-p <i>DEVNAME</i>] [-h] <i>SHORTCUT</i> <i>TARGET</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>pshortcut</code> creates a shortcut to a file on a device connected through SynCE. </p>
 <p> Forward slashes (&#8216;/&#8217;) in remote file names specified on the command line are converted to backward slashes (&#8216;\&#8217;). </p>
 <p> This tool must be run as the same user as the dccmd daemon. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "slice2docbook(1)"
 name: "slice2docbook"
 section: "1"
@@ -10,7 +9,9 @@ description: "slice2docbook – translate Slice to DocBook"
 
 <h2>NAME</h2>
 <p> slice2docbook &#8211; translate Slice to DocBook</p>
+<h2>SYNOPSIS</h2>
 <p> <code>slice2docbook [OPTIONS]&#8230; FILES&#8230;</code></p>
+<h2>DESCRIPTION</h2>
 <p> Slice to DocBook compiler. </p>
 <p> Full documentation of this tool is available online at <i><a rel="nofollow" href="http://www.zeroc.com/doc/Ice-3.3.0/manual/Slice.html">http://www.zeroc.com/doc/Ice-3.3.0/manual/Slice.html</a></i></p>
 <h2>COPYRIGHT</h2>

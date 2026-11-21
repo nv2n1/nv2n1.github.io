@@ -1,5 +1,4 @@
 ---
-
 title: "ramon(1)"
 name: "ramon"
 section: "1"
@@ -12,7 +11,9 @@ description: "ramon – provide RMON2 style reports from argus(8) data."
 <p> <code>ramon</code> &#8211; provide RMON2 style reports from <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2000-2003 QoSient. All rights reserved.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ramon</code> [ra-options] <code>-M (TopN | Matrix | HostProto | HostSvc | Svc) [-M Net/masklen] </code> [ <i>expression</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Ramon</code> reads <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data from an <i>argus data</i> source, aggregates the records, sorts them based on user supplied criteria and generates modified argus data that supports RMON2 style tables and data reporting. </p>
 <p> <code>Ramon</code> supports the same sorting capabilites and calling syntax as <code>rasort()</code> for specifying the sorting algorithm and order. </p>
 <p> The output is valid argus data, and can be operated on using any ra*() program. </p>

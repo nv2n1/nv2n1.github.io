@@ -1,5 +1,4 @@
 ---
-
 title: "scotch_gout(1)"
 name: "scotch_gout"
 section: "1"
@@ -10,9 +9,11 @@ description: "gout – output graphics from matrices and graphs"
 
 <h2>NAME</h2>
 <p> <code>gout </code>&#8211; output graphics from matrices and graphs</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 gout[options][gfile][xfile][mfile][vfile]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>gout</code> program creates graphics files of various types, representing the Scotch graph and mapping data which is passed to it. </p>
 <p> Source graph file <i>gfile</i> can only be a centralized graph file. File <i>xfile</i> stores its associated geometry, whenever necessary. File <i>mfile</i> represents label information attached to each of the graph vertices, for instance the index of the part to which each vertex belongs in the case of a mapping file. File <i>vfile</i> is the output graphics file, the type of which may differ according to the input parameters. When file names are not specified, data is read from standard input and written to standard output. Standard streams can also be explicitly represented by a dash &#8216;-&#8216;. </p>
 <p> When the proper libraries have been included at compile time, gtst can directly handle compressed graphs, both as input and output. A stream is treated as compressed whenever its name is postfixed with a compressed file extension, such as in &#8216;brol.grf.bz2&#8217; or &#8216;-.gz&#8217;. The compression formats which can be supported are the bzip2 format (&#8216;.bz2&#8217;), the gzip format (&#8216;.gz&#8217;), and the lzma format (&#8216;.lzma&#8217;, on input only).</p>

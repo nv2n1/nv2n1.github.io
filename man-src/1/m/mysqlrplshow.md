@@ -1,5 +1,4 @@
 ---
-
 title: "mysqlrplshow(1)"
 name: "mysqlrplshow"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mysqlrplshow/"
 description: "mysqlrplshow – Show Slaves for Master Server"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mysqlrplshow &#8211; Show Slaves for Master Server </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqlrplshow [</code><i>options</i><code>]</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This utility shows the replication slaves for a master. It prints a graph of the master and its slaves labeling each with the host name and port number. </dd>
 <p> You must specify the <code>&#8211;discover-slaves-login </code> option to provide the user name and password to discover any slaves in the topology. </p>
 <p> To explore the slaves for each client, use the <code>&#8211;recurse</code> option. This causes the utility to connect to each slave found and attempt to determine whether it has any slaves. If slaves are found, the process continues until the slave is found in the list of servers serving as masters (a circular topology). The graph displays the topology with successive indents. A notation is made for circular topologies. </p>

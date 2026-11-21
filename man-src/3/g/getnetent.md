@@ -1,5 +1,4 @@
 ---
-
 title: "getnetent(3)"
 name: "getnetent"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-getnetent/"
 description: "getnetent, getnetbyname, getnetbyaddr, setnetent, endnetent – get network entry"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getnetent, getnetbyname, getnetbyaddr, setnetent, endnetent &#8211; get network entry </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;netdb.h&gt;
 struct netent *getnetent(void);
@@ -16,6 +18,7 @@ struct netent *getnetbyaddr(uint32_t net, int type);
 void setnetent(int stayopen);
 void endnetent(void);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>getnetent</code>() function reads the next entry from the networks database and returns a <i>netent</i> structure containing the broken-out fields from the entry. A connection is opened to the database if necessary. </p>
 <p> The <code>getnetbyname</code>() function returns a <i>netent</i> structure for the entry from the database that matches the network <i>name</i>. </p>
 <p> The <code>getnetbyaddr</code>() function returns a <i>netent</i> structure for the entry from the database that matches the network number <i>net</i> of type <i>type</i>. The <i>net</i> argument must be in host byte order. </p>

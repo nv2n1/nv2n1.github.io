@@ -1,5 +1,4 @@
 ---
-
 title: "radeontop(1)"
 name: "radeontop"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-radeontop/"
 description: "radeontop – tool to show GPU utilization"
 ---
 
+<h2 class="name">NAME</h2>
+<p> radeontop &#8211; tool to show GPU utilization </p>
+<h2>SYNOPSIS</h2>
 <p> <code>radeontop [-chv] [-b </code><i>bus</i><code>] [-d </code><i>file</i><code>] [-l </code><i>limit</i><code>] [-t </code><i>ticks</i><code>]</code></p>
+<h2>DESCRIPTION</h2>
 <p> RadeonTop shows the utilization of your GPU, both in general and by blocks. </p>
 <p> Supported cards are R600 and up.</p>
 <h2>OPTIONS</h2>

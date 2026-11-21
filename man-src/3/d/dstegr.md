@@ -1,5 +1,4 @@
 ---
-
 title: "dstegr(3)"
 name: "dstegr"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dstegr/"
 description: "dstegr.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dstegr.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dstegr</code> (JOBZ, RANGE, N, D, E, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, ISUPPZ, WORK, LWORK, IWORK, LIWORK, INFO)<br />
  <i></i><code>DSTEGR</code></p>

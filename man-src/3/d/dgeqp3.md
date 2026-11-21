@@ -1,5 +1,4 @@
 ---
-
 title: "dgeqp3(3)"
 name: "dgeqp3"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dgeqp3/"
 description: "dgeqp3.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dgeqp3.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgeqp3</code> (M, N, A, LDA, JPVT, TAU, WORK, LWORK, INFO)<br />
  <i></i><code>DGEQP3</code></p>

@@ -1,5 +1,4 @@
 ---
-
 title: "perf-kmem(1)"
 name: "perf-kmem"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-perf-kmem/"
 description: "perf-kmem – Tool to trace/measure kernel memory(slab) properties"
 ---
 
+<h2 class="name">NAME</h2>
+<p> perf-kmem &#8211; Tool to trace/measure kernel memory(slab) properties </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 perf kmem{record | stat}[&lt;options&gt;]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> There are two variants of perf kmem: </p>
 <dl>
 <dt>

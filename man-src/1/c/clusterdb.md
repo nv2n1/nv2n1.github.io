@@ -1,5 +1,4 @@
 ---
-
 title: "clusterdb(1)"
 name: "clusterdb"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-clusterdb/"
 description: "clusterdb – cluster a PostgreSQL database"
 ---
 
+<h2 class="name">NAME</h2>
+<p> clusterdb &#8211; cluster a PostgreSQL database </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>clusterdb</code> [<i>connection-option</i>&#8230;] [<code>&#8211;verbose</code> | <code>-v</code>] [<code>&#8211;table</code>&nbsp;<wbr>|&nbsp;<wbr><code>-t</code>&nbsp;<wbr><i>table</i>] [<i>dbname</i>]</dt>
 <dt> <code>clusterdb</code> [<i>connection-option</i>&#8230;] [<code>&#8211;verbose</code> | <code>-v</code>] <code>&#8211;all</code> | <code>-a</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>clusterdb is a utility for reclustering tables in a PostgreSQL database. It finds tables that have previously been clustered, and clusters them again on the same index that was last used. Tables that have never been clustered are not affected. </dd>
 <p> clusterdb is a wrapper around the SQL command <code><a href="/docs/linux/man/7-cluster/">CLUSTER</a></code>(7). There is no effective difference between clustering databases via this utility and via other methods for accessing the server.</p>
 <h2>OPTIONS</h2>

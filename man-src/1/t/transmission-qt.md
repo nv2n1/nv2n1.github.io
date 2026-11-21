@@ -1,5 +1,4 @@
 ---
-
 title: "transmission-qt(1)"
 name: "transmission-qt"
 section: "1"
@@ -10,9 +9,11 @@ description: "transmission-qt – a bittorrent client"
 
 <h2>NAME</h2>
 <p> <code>transmission-qt</code> &#8211; a bittorrent client</p>
+<h2>SYNOPSIS</h2>
 <p> <code>transmission-qt</code> &#8211;<code>h</code><br />
 <code>transmission-qt</code> [<br />
 <code>options</code> ] [<i>torrent-file &#8230;</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>transmission-qt</code> is a fast and easy BitTorrent client. </p>
 <p> BitTorrent is a peer-to-peer file transfer protocol which uses a metainfo file (usually with the .torrent file extension) and a central tracker to distribute file data amongst a group of peers. For more information on the BitTorrent protocol see <a rel="nofollow" href="http://www.bittorrent.org/">http://www.bittorrent.org/</a></p>
 <h2>OPTIONS</h2>

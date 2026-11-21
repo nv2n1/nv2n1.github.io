@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_crt_get_dn(3)"
 name: "gnutls_x509_crt_get_dn"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_crt_get_dn – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_get_dn &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_get_dn(gnutls_x509_crt_t </code><i>cert</i><code>, char * </code><i>buf</i><code>, size_t * </code><i>buf_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_x509_crt_get_dn – API function"
 <dd> a pointer to a structure to hold the name (may be null)</dd>
 <dt>size_t * buf_size</dt>
 <dd> initially holds the size of <i>buf</i></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will copy the name of the Certificate in the provided buffer. The name will be in the form &quot;C=xxxx,O=yyyy,CN=zzzz&quot; as described in RFC4514. The output string will be ASCII or UTF-8 encoded, depending on the certificate data. </p>
 <p> If <i>buf</i> is null then only the size will be filled.</p>
 <h2>RETURNS</h2>

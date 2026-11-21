@@ -1,5 +1,4 @@
 ---
-
 title: "cgelq2(3)"
 name: "cgelq2"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cgelq2/"
 description: "cgelq2.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cgelq2.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgelq2</code> (M, N, A, LDA, TAU, WORK, INFO)<br />
  <i></i><code>CGELQ2</code> computes the LQ factorization of a general rectangular matrix using an unblocked algorithm.</p>

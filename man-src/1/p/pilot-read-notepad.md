@@ -1,5 +1,4 @@
 ---
-
 title: "pilot-read-notepad(1)"
 name: "pilot-read-notepad"
 section: "1"
@@ -12,7 +11,9 @@ description: "pilot-read-notepad – List the record information found in the Pa
 <p> pilot-read-notepad &#8211; List the record information found in the Palm Notepad</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>
+<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr><i>pilot-read-notepad</i>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;port</code>&nbsp;<wbr>&lt;<code>port</code>&gt;]&nbsp;<wbr>[<code>-q</code>|<code>&#8211;quiet</code>]&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr>[<code>-?</code>|<code>&#8211;help</code>]&nbsp;<wbr>[<code>&#8211;usage</code>]&nbsp;<wbr>[<code>-l</code>|<code>&#8211;list</code>]&nbsp;<wbr>[<code>-t</code>|<code>&#8211;type</code>&nbsp;<wbr>&nbsp;<wbr><code>ppm|png</code>] </p>
+<h2>DESCRIPTION</h2>
 <p> Connect to the Palm handheld and list the record information found in the Palm Notepad application (found on OS4 and newer devices). If <code>&#8211;type</code> is specified, each record&#8217;s image will be converted to files, using Portable Network Graphic (.png) or Portable Pixmap (.ppm) format. </p>
 <p>&nbsp;<wbr><i>pilot-read-notepad</i>&nbsp;<wbr>allows a user running PalmOS 4.0 or later to read the data stored in the Palm Notepad application and extract the data into images and convert them to Portable Network Graphics&nbsp;<wbr>(.png)&nbsp;<wbr>or Portable Pixmap&nbsp;<wbr>(.ppm)&nbsp;<wbr>files. </p>
 <h2>OPTIONS</h2>

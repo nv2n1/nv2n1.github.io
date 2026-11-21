@@ -1,5 +1,4 @@
 ---
-
 title: "memcached_set_user_data(3)"
 name: "memcached_set_user_data"
 section: "3"
@@ -13,6 +12,7 @@ description: "memcached_set_user_data – libmemcached Documentation"
 <p> Manage user specific data</p>
 <h2>LIBRARY</h2>
 <p> C Client Library for memcached (libmemcached, -lmemcached)</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
 <dt><code>void *memcached_get_user_data(memcached_st</code><i>&nbsp;<wbr>*ptr</i>)</dt>
@@ -20,6 +20,7 @@ description: "memcached_set_user_data – libmemcached Documentation"
 </dd><dt><code>void *memcached_set_user_data(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, void<i>&nbsp;<wbr>*data</i>)</dt>
 <dd>
 <p> Compile and link with -lmemcached</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <a href="/docs/linux/man/3-libmemcached/">libmemcached</a>(3) allows you to store a pointer to a user specific data inside the memcached_st structure. </p>
 <p> <i>memcached_set_user_data()</i> is used to set the user specific data in the <code>memcached_st</code> structure. </p>
 <p> <i>memcached_get_user_data()</i> is used to retrieve the user specific data in the <code>memcached_st</code> structure.</p>

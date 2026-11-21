@@ -1,5 +1,4 @@
 ---
-
 title: "perlopentut(1)"
 name: "perlopentut"
 section: "1"
@@ -7,9 +6,14 @@ letter: "p"
 url: "/docs/linux/man/1-perlopentut/"
 ---
 
-perlopentut - simple recipes for opening files and pipes in Perl 
+<h2 class="name">NAME</h2>
+ 
 
-Whenever you do I/O on a file in Perl, you do so through what in Perl is called a <b>filehandle</b>. A filehandle is an internal name for an external file. It is the job of the <tt>&quot;open&quot;</tt> function to make the association between the internal name and the external name, and it is the job of the <tt>&quot;close&quot;</tt> function to break that association. 
+ perlopentut - simple recipes for opening files and pipes in Perl 
+
+<h2>DESCRIPTION</h2>
+
+ Whenever you do I/O on a file in Perl, you do so through what in Perl is called a <b>filehandle</b>. A filehandle is an internal name for an external file. It is the job of the <tt>&quot;open&quot;</tt> function to make the association between the internal name and the external name, and it is the job of the <tt>&quot;close&quot;</tt> function to break that association. 
 
  For your convenience, Perl sets up a few special filehandles that are already open when you run. These include <tt>&quot;STDIN&quot;</tt>, <tt>&quot;STDOUT&quot;</tt>, <tt>&quot;STDERR&quot;</tt>, and <tt>&quot;ARGV&quot;</tt>. Since those are pre-opened, you can use them right away without having to go to the trouble of opening them yourself: 
 

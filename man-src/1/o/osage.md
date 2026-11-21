@@ -1,5 +1,4 @@
 ---
-
 title: "osage(1)"
 name: "osage"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-osage/"
 description: "osage – filter for drawing clustered graphs"
 ---
 
+<h2 class="name">NAME</h2>
+<p> osage &#8211; filter for drawing clustered graphs </p>
+<h2>SYNOPSIS</h2>
 <p> <code>osage</code> [<code>&#8211;</code>(<code>G</code>|<code>N</code>|<code>E</code>)<i>name=value</i>] [<code>-T</code><i>lang</i>] [<code>-l</code><i>libfile</i>] [<code>-o</code><i>outfile</i>] [<code>-O</code>] [<code>-P</code>] [<code>-v</code>] [<code>-V</code>] [files]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>osage</i> draws clustered graphs. As input, it takes any graph in the <i>dot</i> format. It draws the graph recursively. At each level, there will be a collection of nodes and a collection of cluster subgraphs. The internals of each cluster subgraph are laid out, then the cluster subgraphs and nodes at the current level are positioned relative to each other, treating each cluster subgraph as a node. </p>
 <p> At each level, the nodes and cluster subgraphs are viewed as rectangles to be packed together. At present, edges are ignored during packing. Packing is done using the standard packing functions. In particular, the graph attributes <code>pack</code> and <code>packmode</code> control the layout. Each graph and cluster can specify its own values for these attributes. Remember also that a cluster inherits its attribute values from its parent graph. </p>
 <p> After all nodes and clusters, edges are routed based on the value of the <code>splines</code> attribute.</p>

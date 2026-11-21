@@ -1,5 +1,4 @@
 ---
-
 title: "load_datafile_callback(3)"
 name: "load_datafile_callback"
 section: "3"
@@ -10,8 +9,10 @@ description: "load_datafile_callback – Loads a datafile into memory, calling a
 
 <h2>NAME</h2>
 <p> load_datafile_callback &#8211; Loads a datafile into memory, calling a hook per object. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>DATAFILE *load_datafile_callback(const char *filename,</code> <code>void (*callback)(DATAFILE *d));</code></p>
+<h2>DESCRIPTION</h2>
 <p> Loads a datafile into memory, calling the specified hook function once for each object in the file, passing it a pointer to the object just read. You can use this to implement very simple loading screens where every time the hook is called, the screen is updated to let the user know your program is still loading from disk: </p>
 <pre><code>
 void load_callback(DATAFILE *dat_obj)

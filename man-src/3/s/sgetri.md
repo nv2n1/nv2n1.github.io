@@ -1,5 +1,4 @@
 ---
-
 title: "sgetri(3)"
 name: "sgetri"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-sgetri/"
 description: "sgetri.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sgetri.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sgetri</code> (N, A, LDA, IPIV, WORK, LWORK, INFO)<br />
  <i></i><code>SGETRI</code></p>

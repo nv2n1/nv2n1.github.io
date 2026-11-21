@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_rr_ns_nsdname(3)"
 name: "ldns_rr_ns_nsdname"
 section: "3"
@@ -10,10 +9,12 @@ description: "ldns_rr_ns_nsdname"
 
 <h2>NAME</h2>
 <p> ldns_rr_ns_nsdname </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_rdf* ldns_rr_ns_nsdname(const ldns_rr *r); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_rr_ns_nsdname</i>()</dt>
 <dd>returns the name of a LDNS_RR_TYPE_NS rr .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the name or NULL on failure</dd></dl>

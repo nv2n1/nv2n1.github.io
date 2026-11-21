@@ -1,5 +1,4 @@
 ---
-
 title: "mwaw2svg(1)"
 name: "mwaw2svg"
 section: "1"
@@ -10,6 +9,7 @@ description: "mwaw2svg – convert Mac drawing into SVG"
 
 <h2>NAME</h2>
 <p> mwaw2svg &#8211; convert Mac drawing into SVG</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mwaw2svg</code> [<i>-h</i>] [<i>-v</i>] [<i>-t</i>] [<i>-b body | -o file.svg</i>] <i>&lt;Mac Graphic/Presentation Document&gt;</i></p>
 <h2>OPTIONS</h2>
 <dl>

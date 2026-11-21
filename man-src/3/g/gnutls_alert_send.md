@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_alert_send(3)"
 name: "gnutls_alert_send"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_alert_send – API function"
 
 <h2>NAME</h2>
 <p> gnutls_alert_send &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_alert_send(gnutls_session_t </code><i>session</i><code>, gnutls_alert_level_t </code><i>level</i><code>, gnutls_alert_description_t </code><i>desc</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_alert_send – API function"
 <dd> is the level of the alert</dd>
 <dt>gnutls_alert_description_t desc</dt>
 <dd> is the alert description</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will send an alert to the peer in order to inform him of something important (eg. his Certificate could not be verified). If the alert level is Fatal then the peer is expected to close the connection, otherwise he may ignore the alert and continue. </p>
 <p> The error code of the underlying record send function will be returned, so you may also receive <code>GNUTLS_E_INTERRUPTED</code> or <code>GNUTLS_E_AGAIN</code> as well.</p>
 <h2>RETURNS</h2>

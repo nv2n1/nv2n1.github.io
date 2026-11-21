@@ -1,5 +1,4 @@
 ---
-
 title: "oz-cleanup-cache(1)"
 name: "oz-cleanup-cache"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-oz-cleanup-cache/"
 description: "oz-cleanup-cache – tool to remove cached oz data"
 ---
 
+<h2 class="name">NAME</h2>
+<p> oz-cleanup-cache &#8211; tool to remove cached oz data</p>
+<h2>SYNOPSIS</h2>
 <p> <code>oz-cleanup-cache [OPTIONS]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> This is a tool to remove all of the data that Oz has cached. Because the data that Oz caches can grow fairly large, it may be worthwhile to periodically clean it up. This is a simple script to do so. Note that if you do cleanup the Oz cache, subsequent operating system installs will be slower since Oz will have to re-download the installation media. </p>
 <h2>OPTIONS</h2>
 <dl>

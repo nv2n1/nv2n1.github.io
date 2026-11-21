@@ -1,5 +1,4 @@
 ---
-
 title: "docker-network-create(1)"
 name: "docker-network-create"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-network-create/"
 description: "docker-network-create – Create a network"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-network-create &#8211; Create a network </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker network create [OPTIONS] NETWORK</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Creates a new network. The DRIVER accepts bridge or overlay which are the built-in network drivers. If you have installed a third party or your own custom network driver you can specify that DRIVER here also. If you don&#8217;t specify the &#8211;driver option, the command automatically creates a bridge network for you. When you install Docker Engine it creates a bridge network automatically. This network corresponds to the docker0 bridge that Engine has traditionally relied on. When you launch a new container with docker run it automatically connects to this bridge network. You cannot remove this default bridge network but you can create new ones using the network create command. </p>
 <dl>
 <dt>

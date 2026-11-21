@@ -1,5 +1,4 @@
 ---
-
 title: "busybox(1)"
 name: "busybox"
 section: "1"
@@ -8,11 +7,14 @@ url: "/docs/linux/man/1-busybox/"
 description: "BusyBox – The Swiss Army Knife of Embedded Linux"
 ---
 
+<h2 class="name">NAME</h2>
+<p> BusyBox &#8211; The Swiss Army Knife of Embedded Linux </p>
 <h2>SYNTAX</h2>
 <pre><code>
 busybox&lt;applet&gt;[arguments...] # or
     &lt;applet&gt;[arguments...] #if symlinked
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> BusyBox combines tiny versions of many common <font SIZE="-1">UNIX</font> utilities into a single small executable. It provides minimalist replacements for most of the utilities you usually find in <font SIZE="-1">GNU</font> coreutils, util-linux, etc. The utilities in BusyBox generally have fewer options than their full-featured <font SIZE="-1">GNU</font> cousins; however, the options that are included provide the expected functionality and behave very much like their <font SIZE="-1">GNU</font> counterparts. </p>
 <p> BusyBox has been written with size-optimization and limited resources in mind. It is also extremely modular so you can easily include or exclude commands (or features) at compile time. This makes it easy to customize your embedded systems. To create a working system, just add /dev, /etc, and a Linux kernel. BusyBox provides a fairly complete <font SIZE="-1">POSIX</font> environment for any small or embedded system. </p>
 <p> BusyBox is extremely configurable. This allows you to include only the components you need, thereby reducing binary size. Run &#8216;make config&#8217; or &#8216;make menuconfig&#8217; to select the functionality that you wish to enable. Then run &#8216;make&#8217; to compile BusyBox using your configuration. </p>

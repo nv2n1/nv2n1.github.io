@@ -1,5 +1,4 @@
 ---
-
 title: "pilot-read-expenses(1)"
 name: "pilot-read-expenses"
 section: "1"
@@ -12,7 +11,9 @@ description: "pilot-read-expenses – Export Palm Expense application data in a 
 <p> pilot-read-expenses &#8211; Export Palm Expense application data in a text format.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>
+<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr><i>pilot-read-expenses</i>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;port</code>&nbsp;<wbr>&lt;<code>port</code>&gt;]&nbsp;<wbr>[<code>-q</code>|<code>&#8211;quiet</code>]&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr>[<code>-?</code>|<code>&#8211;help</code>]&nbsp;<wbr>[<code>&#8211;usage</code>]&nbsp;<wbr>[<code>-w</code>|<code>&#8211;write</code>] </p>
+<h2>DESCRIPTION</h2>
 <p>&nbsp;<wbr><i>pilot-read-expenses</i>&nbsp;<wbr>is used to output the Expense data in a simple text format, which can be used to import into any other application you wish, such as Excel or other application. </p>
 <p> If you have expense entries saved on your Palm in the ExpenseDB.pdb file, you can export them to a simple text format, and redirect that to a file/pipe, or STDOUT (the default) using <i>pilot-read-expenses</i>. </p>
 <p> The output data will resemble something like the following: </p>

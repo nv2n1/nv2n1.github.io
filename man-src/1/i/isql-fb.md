@@ -1,5 +1,4 @@
 ---
-
 title: "isql-fb(1)"
 name: "isql-fb"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-isql-fb/"
 description: "isql — Firebird Interactive SQL shell"
 ---
 
+<h2 class="name">NAME</h2>
+<p> isql &#8212; Firebird Interactive SQL shell </p>
+<h2>SYNOPSIS</h2>
 <p> <code>isql</code> [-a] [-cache <i>number</i>] [-database <i>path</i>] [-echo] [-input <i>file</i>] [-merge_stderr] [-noautocommit] [-nowarnings] [-output <i>file</i>] [-password <i>string</i>] [-page <i>number</i>] [-role <i>string</i>] [-s <i>number</i>] [-terminator <i>string</i>] [-user <i>name</i>] [-x] [-z]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>isql</code> is a program that allows the user to issue arbitrary <font SIZE="-1">SQL</font> commands as well as exctacting the metadata. </p>
 <p> <code>isql</code> in <code>Debian</code> is available under the <code>isql-fb</code> name due to filename conflict with an executable from another package.</p>
 <h2>OPTIONS</h2>

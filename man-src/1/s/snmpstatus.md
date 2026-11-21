@@ -1,5 +1,4 @@
 ---
-
 title: "snmpstatus(1)"
 name: "snmpstatus"
 section: "1"
@@ -10,7 +9,9 @@ description: "snmpstatus – retrieves a fixed set of management information fro
 
 <h2>NAME</h2>
 <p> snmpstatus &#8211; retrieves a fixed set of management information from a network entity</p>
+<h2>SYNOPSIS</h2>
 <p> <code>snmpstatus</code> [COMMON OPTIONS] [-Cf] AGENT</p>
+<h2>DESCRIPTION</h2>
 <p> <code>snmpstatus</code> is an SNMP application that retrieves several important statistics from a network entity. </p>
 <p> AGENT identifies a target SNMP agent, which is instrumented to monitor the given objects. At its simplest, the AGENT specification will consist of a hostname or an IPv4 address. n this situation, the command will attempt communication with the agent, using UDP/IPv4 to port 161 of the given target host. </p>
 <p> See the <i><a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1)</i> manual page for a full list of the possible formats for AGENT. </p>

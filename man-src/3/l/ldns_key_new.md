@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_key_new(3)"
 name: "ldns_key_new"
 section: "3"
@@ -10,10 +9,12 @@ description: "ldns_key_new"
 
 <h2>NAME</h2>
 <p> ldns_key_new </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_key* ldns_key_new(); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_key_new</i>()</dt>
 <dd>Creates a new empty key structure .br Returns a new ldns_key * structure</dd></dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "dia(1)"
 name: "dia"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-dia/"
 description: "dia – a diagram drawing program"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dia &#8211; a diagram drawing program </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>dia</code> [<code>-c</code>] [<code>&#8211;credits</code>] [<code>-e&nbsp;<wbr></code><i>OUTPUT</i>] [<code>&#8211;export=</code><i>OUTPUT</i>] [<code>-L&nbsp;<wbr></code><i>LAYER,LAYER,&#8230;</i>] [<code>&#8211;show-layers=</code><i>LAYER,LAYER,&#8230;</i>] [<code>-h</code>] [<code>&#8211;help</code>] [<code>-n</code>] [<code>&#8211;nosplash</code>] [<code>-s&nbsp;<wbr></code><i>WxH</i>] [<code>&#8211;size=</code><i>WxH</i>] [<code>-t&nbsp;<wbr></code><i>FORMAT</i>] [<code>&#8211;filter=</code><i>FORMAT</i>] [<code>-v</code>] [<code>&#8211;version</code>] [file &#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>Dia</code></p>
 <dd>is used to create diagrams. Dia has a number of basic tools, like lines and boxes but can also dynamically load <i>sheets</i>. A sheet is a collection of tools that are used in a certain type of diagram. </dd>
 <p> Most diagram objects in <code>Dia</code> have <i>connection points</i>. Lines can be connected to these connection points and this way graph structures can be formed. When objects are moved or resized the connections will follow the objects. </p>

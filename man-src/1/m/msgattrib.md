@@ -1,5 +1,4 @@
 ---
-
 title: "msgattrib(1)"
 name: "msgattrib"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-msgattrib/"
 description: "msgattrib – attribute matching and manipulation on message catalog"
 ---
 
+<h2 class="name">NAME</h2>
+<p> msgattrib &#8211; attribute matching and manipulation on message catalog </p>
+<h2>SYNOPSIS</h2>
 <p> <code>msgattrib</code> [<i>OPTION</i>] [<i>INPUTFILE</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Filters the messages of a translation catalog according to their attributes, and manipulates the attributes. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <h3>Input file location:</h3>

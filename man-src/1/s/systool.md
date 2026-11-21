@@ -1,5 +1,4 @@
 ---
-
 title: "systool(1)"
 name: "systool"
 section: "1"
@@ -10,7 +9,9 @@ description: "systool – view system device information by bus, class, and topo
 
 <h2>NAME</h2>
 <p> systool &#8211; view system device information by bus, class, and topology </p>
+<h2>SYNOPSIS</h2>
 <p> <code>systool</code> [<i>options </i>[<i>device</i>]] </p>
+<h2>DESCRIPTION</h2>
 <p> Calling <code>systool</code> without parameters will present all available bus types, device classes, and root devices. </p>
 <p> When <i>device</i> is supplied, the information requested by <i>options</i> is shown only for the specified device, otherwise all present devices are displayed. </p>
 <p> <code>systool</code> uses APIs provided by <code>libsysfs</code> to gather information. <code>systool</code> runs only on Linux systems running kernels 2.5 or later, with the sysfs filesystem mounted. </p>

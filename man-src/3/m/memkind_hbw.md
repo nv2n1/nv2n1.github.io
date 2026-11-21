@@ -1,5 +1,4 @@
 ---
-
 title: "memkind_hbw(3)"
 name: "memkind_hbw"
 section: "3"
@@ -11,6 +10,7 @@ description: "memkind_hbw.h – high bandwidth memory memkind operations. Note: 
 <h2>NAME</h2>
 <p> memkind_hbw.h &#8211; high bandwidth memory memkind operations.<br />
  Note: This is EXEPRIMENTAL API. The functionality and the header file itself can be changed (including non-backward compatible changes), or remove.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;memkind/internal/memkind_hbw.h&gt;
 Link with - lmemkind int memkind_hbw_check_available(struct memkind *kind);
@@ -24,6 +24,7 @@ void memkind_hbw_preferred_init_once(void);
 void memkind_hbw_preferred_hugetlb_init_once(void);
 void memkind_hbw_interleave_init_once(void);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> High bandwidth memory memkind operations. </p>
 <p> <code>memkind_hbw_check_available</code>() returns zero if library was able to detect heterogeneous NUMA node bandwidths. Returns <code>MEMKIND_UNAVAILABLE</code> if the detection mechanism failed. Detection mechanism can be also overridden by the environment variable <code>MEMKIND_HBW_NODES</code> as described in the <code><a href="/docs/linux/man/3-memkind/">memkind</a></code>(3) man page. </p>
 <p> <code>memkind_hbw_hugetlb_check_available</code>() In addition to checking for high bandwidth memory as is done by memkind_hbw_check_available (), this also checks for 2MB huge pages as is done by memkind_hugetlb_check_available_2mb(). </p>

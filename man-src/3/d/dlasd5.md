@@ -1,5 +1,4 @@
 ---
-
 title: "dlasd5(3)"
 name: "dlasd5"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlasd5/"
 description: "dlasd5.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlasd5.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlasd5</code> (I, D, Z, DELTA, RHO, DSIGMA, WORK)<br />
  <i></i><code>DLASD5</code> computes the square root of the i-th eigenvalue of a positive symmetric rank-one modification of a 2-by-2 diagonal matrix. Used by sbdsdc.</p>

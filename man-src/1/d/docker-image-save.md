@@ -1,5 +1,4 @@
 ---
-
 title: "docker-image-save(1)"
 name: "docker-image-save"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-image-save/"
 description: "docker-image-save – Save one or more images to a tar archive (streamed to STDOUT by default)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-image-save &#8211; Save one or more images to a tar archive (streamed to STDOUT by default) </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker image save [OPTIONS] IMAGE [IMAGE&#8230;]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Produces a tarred repository to the standard output stream. Contains all parent layers, and all tags + versions, or specified repo:tag. </p>
 <p> Stream to a file instead of STDOUT by using <code>-o</code>. </p>
 <h2>EXAMPLES</h2>

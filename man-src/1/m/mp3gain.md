@@ -1,5 +1,4 @@
 ---
-
 title: "mp3gain(1)"
 name: "mp3gain"
 section: "1"
@@ -10,7 +9,9 @@ description: "mp3gain — lossless mp3 normalizer"
 
 <h2>NAME</h2>
 <p> mp3gain &#8212; lossless mp3 normalizer</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mp3gain</code> [<code>options</code>] [<i>infile</i>] [<i>infile 2</i> &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>mp3gain</code> command. </p>
 <p> This manual page was written for the <code>Debian</code> distribution because the original program does not have a manual page.<br />
 &nbsp;<wbr> </p>

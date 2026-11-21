@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-asianengines/"
 description: "Asian option engines –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Asian option engines &#8211; </p>
 <h3>Classes</h3>
 <p> class <code>AnalyticContinuousGeometricAveragePriceAsianEngine</code><br />
  <i>Pricing engine for European continuous geometric average price Asian. </i><br />

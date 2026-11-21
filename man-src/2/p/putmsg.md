@@ -1,5 +1,4 @@
 ---
-
 title: "putmsg(2)"
 name: "putmsg"
 section: "2"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/2-putmsg/"
 description: "afs_syscall, break, fattach, fdetach, ftime, getmsg, getpmsg, gtty, isastream, lock, madvise1, mpx, prof, profil, putmsg, putpmsg, security, stty, tuxcall, ulimit, vserver – unimplemented system calls"
 ---
 
+<h2 class="name">NAME</h2>
+<p> afs_syscall, break, fattach, fdetach, ftime, getmsg, getpmsg, gtty, isastream, lock, madvise1, mpx, prof, profil, putmsg, putpmsg, security, stty, tuxcall, ulimit, vserver &#8211; unimplemented system calls </p>
+<h2>SYNOPSIS</h2>
 <p> Unimplemented system calls.</p>
+<h2>DESCRIPTION</h2>
 <p> These system calls are not implemented in the Linux kernel.</p>
 <h2>RETURN VALUE</h2>
 <p> These system calls always return -1 and set <i>errno</i> to <code>ENOSYS</code>.</p>

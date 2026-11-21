@@ -1,5 +1,4 @@
 ---
-
 title: "splice(2)"
 name: "splice"
 section: "2"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/2-splice/"
 description: "splice – splice data to/from a pipe"
 ---
 
+<h2 class="name">NAME</h2>
+<p> splice &#8211; splice data to/from a pipe </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;fcntl.h&gt;
 ssize_t splice(int fd_in, loff_t *off_in, int fd_out,
                loff_t *off_out, size_t len, unsigned int flags);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>splice</code>() moves data between two file descriptors without copying between kernel address space and user address space. It transfers up to <i>len</i> bytes of data from the file descriptor <i>fd_in</i> to the file descriptor <i>fd_out</i>, where one of the file descriptors must refer to a pipe. </p>
 <p> The following semantics apply for <i>fd_in</i> and <i>off_in</i>:</p>
 <dl>

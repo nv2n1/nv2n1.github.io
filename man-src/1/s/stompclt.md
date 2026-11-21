@@ -1,5 +1,4 @@
 ---
-
 title: "stompclt(1)"
 name: "stompclt"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-stompclt/"
 description: "stompclt – versatile STOMP client"
 ---
 
+<h2 class="name">NAME</h2>
+<p> stompclt &#8211; versatile STOMP client </p>
+<h2>SYNOPSIS</h2>
 <p> <code>stompclt</code> [<i></i><font SIZE="-1"><i>OPTIONS</i></font><i></i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>stompclt</code> is a versatile tool to interact with messaging brokers speaking <font SIZE="-1">STOMP</font> and/or message queues (see Messaging::Message::Queue) on disk. </p>
 <p> It receives messages (see Messaging::Message) from an incoming module, optionally massaging them (i.e. filtering and/or modifying), and sends them to an outgoing module. Depending on which modules are used, the tool can perform different operations. </p>
 <p> Here are the supported incoming modules:</p>

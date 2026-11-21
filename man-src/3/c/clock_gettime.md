@@ -1,5 +1,4 @@
 ---
-
 title: "clock_gettime(3)"
 name: "clock_gettime"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-clock_gettime/"
 description: "clock_getres, clock_gettime, clock_settime – clock and time functions"
 ---
 
+<h2 class="name">NAME</h2>
+<p> clock_getres, clock_gettime, clock_settime &#8211; clock and time functions </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;time.h&gt;</code> </p>
 <p> <code>int clock_getres(clockid_t </code><i>clk_id</i><code>, struct timespec *</code><i>res</i><code>);</code> </p>
 <p> <code>int clock_gettime(clockid_t </code><i>clk_id</i><code>, struct timespec *</code><i>tp</i><code>);</code> </p>
@@ -18,6 +20,7 @@ description: "clock_getres, clock_gettime, clock_settime – clock and time func
 <dl>
 <dt>
 </dt><dd> _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;199309L</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The function <code>clock_getres</code>() finds the resolution (precision) of the specified clock <i>clk_id</i>, and, if <i>res</i> is non-NULL, stores it in the <i>struct timespec</i> pointed to by <i>res</i>. The resolution of clocks depends on the implementation and cannot be configured by a particular process. If the time value pointed to by the argument <i>tp</i> of <code>clock_settime</code>() is not a multiple of <i>res</i>, then it is truncated to a multiple of <i>res</i>. </p>
 <p> The functions <code>clock_gettime</code>() and <code>clock_settime</code>() retrieve and set the time of the specified clock <i>clk_id</i>. </p>
 <p> The <i>res</i> and <i>tp</i> arguments are <i>timespec</i> structures, as specified in <i>&lt;time.h&gt;</i>: </p>

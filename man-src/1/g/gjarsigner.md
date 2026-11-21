@@ -1,5 +1,4 @@
 ---
-
 title: "gjarsigner(1)"
 name: "gjarsigner"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-gjarsigner/"
 description: "gjarsigner – Java ARchive (JAR) file signing and verification tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gjarsigner &#8211; Java ARchive (JAR) file signing and verification tool </p>
+<h2>SYNOPSIS</h2>
 <p> jarsigner [<i></i><font SIZE="-1"><i>OPTION</i></font><i></i>]&#8230; <i></i><font SIZE="-1"><i>FILE</i></font><i></i> <i></i><font SIZE="-1"><i>ALIAS</i></font><i></i> </p>
 <p> jarsigner <code>-verify</code> [<i></i><font SIZE="-1"><i>OPTION</i></font><i></i>]&#8230; <i></i><font SIZE="-1"><i>FILE</i></font><i></i></p>
+<h2>DESCRIPTION</h2>
 <p> When the first form is used, the tool signs the designated <font SIZE="-1">JAR</font> file. The second form, on the other hand, is used to verify a previously signed <font SIZE="-1">JAR</font> file. </p>
 <p> <i></i><font SIZE="-1"><i>FILE</i></font><i></i> is the .JAR file to process; i.e., to sign if the first syntax form is used, or to verify if the second syntax form is used instead. </p>
 <p> <i></i><font SIZE="-1"><i>ALIAS</i></font><i></i> must be a known <i>Alias</i> of a <i>Key Entry</i> in the designated <i>Key Store</i>. The private key material associated with this <i>Alias</i> is then used for signing the designated .JAR file.</p>

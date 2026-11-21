@@ -1,5 +1,4 @@
 ---
-
 title: "gsmartcontrol(1)"
 name: "gsmartcontrol"
 section: "1"
@@ -10,7 +9,9 @@ description: "GSmartControl – Hard disk drive health inspection tool"
 
 <h2>NAME</h2>
 <p> GSmartControl &#8211; Hard disk drive health inspection tool</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gsmartcontrol</code> [OPTIONS]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>GSmartControl</code> is a graphical user interface for smartctl (from smartmontools), which is a tool for querying and controlling SMART (Self-Monitoring, Analysis, and Reporting Technology) data on modern hard disk drives. It allows you to inspect the drive&#8217;s SMART data to determine its health, as well as run various tests on it. </p>
 <p> This manual page documents briefly the <code>gsmartcontrol</code> command. </p>
 <h2>OPTIONS</h2>

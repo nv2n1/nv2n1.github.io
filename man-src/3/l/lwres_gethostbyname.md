@@ -1,5 +1,4 @@
 ---
-
 title: "lwres_gethostbyname(3)"
 name: "lwres_gethostbyname"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-lwres_gethostbyname/"
 description: "lwres_gethostbyname, lwres_gethostbyname2, lwres_gethostbyaddr, lwres_gethostent, lwres_sethostent, lwres_endhostent, lwres_gethostbyname_r, lwres_gethostbyaddr_r, lwres_gethostent_r, lwres_sethost..."
 ---
 
+<h2 class="name">NAME</h2>
+<p> lwres_gethostbyname, lwres_gethostbyname2, lwres_gethostbyaddr, lwres_gethostent, lwres_sethostent, lwres_endhostent, lwres_gethostbyname_r, lwres_gethostbyaddr_r, lwres_gethostent_r, lwres_sethostent_r, lwres_endhostent_r &#8211; lightweight resolver get network host entry </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;lwres/netdb.h&gt;
 </code></pre>
@@ -23,6 +25,7 @@ description: "lwres_gethostbyname, lwres_gethostbyname2, lwres_gethostbyaddr, lw
 <dt> <code>struct hostent * lwres_gethostent_r(struct hostent&nbsp;<wbr>*</code><i>resbuf</i><code>, char&nbsp;<wbr>*</code><i>buf</i><code>, int&nbsp;<wbr></code><i>buflen</i><code>, int&nbsp;<wbr>*</code><i>error</i><code>);</code></dt>
 <dt> <code>void lwres_sethostent_r(int&nbsp;<wbr></code><i>stayopen</i><code>);</code></dt>
 <dt> <code>void lwres_endhostent_r(void);</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>These functions provide hostname-to-address and address-to-hostname lookups by means of the lightweight resolver. They are similar to the standard <code><a href="/docs/linux/man/3-gethostent/">gethostent</a></code>(3) functions provided by most operating systems. They use a <code>struct hostent</code> which is usually defined in <i>&lt;namedb.h&gt;</i>. </dd>
 <dl>
 <dt>

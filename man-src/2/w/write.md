@@ -1,5 +1,4 @@
 ---
-
 title: "write(2)"
 name: "write"
 section: "2"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/2-write/"
 description: "write – write to a file descriptor"
 ---
 
+<h2 class="name">NAME</h2>
+<p> write &#8211; write to a file descriptor </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>ssize_t write(int </code><i>fd</i><code>, const void *</code><i>buf</i><code>, size_t </code><i>count</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>write</code>() writes up to <i>count</i> bytes from the buffer starting at <i>buf</i> to the file referred to by the file descriptor <i>fd</i>. </p>
 <p> The number of bytes written may be less than <i>count</i> if, for example, there is insufficient space on the underlying physical medium, or the <code>RLIMIT_FSIZE</code> resource limit is encountered (see <code><a href="/docs/linux/man/2-setrlimit/">setrlimit</a></code>(2)), or the call was interrupted by a signal handler after having written less than <i>count</i> bytes. (See also <code><a href="/docs/linux/man/7-pipe/">pipe</a></code>(7).) </p>
 <p> For a seekable file (i.e., one to which <code><a href="/docs/linux/man/2-lseek/">lseek</a></code>(2) may be applied, for example, a regular file) writing takes place at the file offset, and the file offset is incremented by the number of bytes actually written. If the file was <code><a href="/docs/linux/man/2-open/">open</a></code>(2)ed with <code>O_APPEND</code>, the file offset is first set to the end of the file before writing. The adjustment of the file offset and the write operation are performed as an atomic step. </p>

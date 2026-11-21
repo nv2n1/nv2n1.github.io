@@ -1,5 +1,4 @@
 ---
-
 title: "mtx-youless(1)"
 name: "mtx-youless"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mtx-youless/"
 description: "mtx-youless – youless Fetcher"
 ---
 
+<h2 class="name">NAME</h2>
+<p>&nbsp;mtx-youless &#8211; youless Fetcher </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mtxrun &#8211;script youless [</code> <i>OPTIONS &#8230;</i> <code>] [</code> <i>FILENAMES</i> <code>]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>youless Fetcher</code></p>
 <h2>OPTIONS</h2>
 <dl>

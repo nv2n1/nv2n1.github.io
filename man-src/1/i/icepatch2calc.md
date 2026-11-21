@@ -1,5 +1,4 @@
 ---
-
 title: "icepatch2calc(1)"
 name: "icepatch2calc"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-icepatch2calc/"
 description: "icepatch2calc – IcePatch2 tool to compress files and calculate checksums."
 ---
 
+<h2 class="name">NAME</h2>
+<p> icepatch2calc &#8211; IcePatch2 tool to compress files and calculate checksums.</p>
+<h2>SYNOPSIS</h2>
 <p> icepatch2calc [options] data_dir [file&#8230;] </p>
+<h2>DESCRIPTION</h2>
 <p> IcePatch2 tool to compress files and calculate checksums. Full documentation for icepatch2calc is available online at:<br />
  &quot;<a rel="nofollow" href="http://doc.zeroc.com/display/Ice/Using+icepatch2calc">http://doc.zeroc.com/display/Ice/Using+icepatch2calc</a>&quot;. </p>
 <h2>OPTIONS</h2>

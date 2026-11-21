@@ -1,5 +1,4 @@
 ---
-
 title: "osx(1)"
 name: "osx"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-osx/"
 description: "osx – An SGML to XML converter"
 ---
 
+<h2 class="name">NAME</h2>
+<p> osx &#8211; An SGML to XML converter </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>osx</code> [<code>-CeghnRvx</code>] [<code>-a</code><i>name</i>] [<code>-A</code><i>architecture</i>] [<code>-b</code><i>encoding</i>] [<code>-c</code><i>catalog_file</i>] [<code>-d</code><i>directory</i>] [<code>-D</code><i>directory</i>] [<code>-i</code><i>name</i>] [<code>-f</code><i>file</i>] [<code>-l</code><i>dtd_file</i>] [<code>-w</code><i>warning_type</i>] [<code>-x</code><i>xml_output_option</i>&#8230;] [<i>sysid</i>&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>osx</code></p>
 <dd>converts SGML to XML. <code>osx</code> parses and validates the SGML document contained in</dd>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "ipsec_atoasr(3)"
 name: "ipsec_atoasr"
 section: "3"
@@ -10,11 +9,13 @@ description: "ipsec_atoasr, ipsec_rangetoa – convert ASCII to Internet address
 
 <h2>NAME</h2>
 <p> ipsec_atoasr, ipsec_rangetoa &#8211; convert ASCII to Internet address, subnet, or range, convert Internet address range to ASCII</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libreswan.h&gt;</code> </p>
 <p> <code>const char *atoasr(const char *src, size_t srclen,</code><br />
  &nbsp;<wbr> <code>char *type, struct in_addr *addrs);</code><br />
  <code>size_t rangetoa(struct in_addr *addrs, int format,</code><br />
  &nbsp;<wbr> <code>char *dst, size_t dstlen);</code></p>
+<h2>DESCRIPTION</h2>
 <p> These functions are obsolete; there is no current equivalent, because so far they have not proved useful. </p>
 <p> <i>Atoasr</i> converts an ASCII address, subnet, or address range into a suitable combination of binary addresses (in network byte order). <i>Rangetoa</i> converts an address range back into ASCII, using dotted-decimal form for the addresses (the other reverse conversions are handled by <i>ipsec_addrtoa</i>(3) and <i>ipsec_subnettoa</i>(3)). </p>
 <p> A single address can be any form acceptable to <i>ipsec_atoaddr</i>(3): dotted decimal, DNS name, or hexadecimal number. A subnet specification uses the form <i>network</i><code>/</code><i>mask</i> interpreted by <i>ipsec_atosubnet</i>(3). </p>

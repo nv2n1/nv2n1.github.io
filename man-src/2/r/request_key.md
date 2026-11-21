@@ -1,5 +1,4 @@
 ---
-
 title: "request_key(2)"
 name: "request_key"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-request_key/"
 description: "request_key – request a key from the kernel’s key management facility"
 ---
 
+<h2 class="name">NAME</h2>
+<p> request_key &#8211; request a key from the kernel&#8217;s key management facility </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;keyutils.h&gt;
 #include &lt;sys/types.h&gt;
@@ -16,6 +18,7 @@ key_serial_t request_key(const char *type, const char *description,
                          key_serial_t dest_keyring);
 </code></pre>
 <p> No glibc wrapper is provided for this system call; see NOTES.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>request_key</code>() attempts to find a key of the given <i>type</i> with a description (name) that matches the specified <i>description</i>. If such a key could not be found, then the key is optionally created. If the key is found or created, <code>request_key</code>() attaches it to the keyring whose ID is specified in <i>dest_keyring</i> and returns the key&#8217;s serial number. </p>
 <p> <code>request_key</code>() first recursively searches for a matching key in all of the keyrings attached to the calling process. The keyrings are searched in the order: thread-specific keyring, process-specific keyring, and then session keyring. </p>
 <p> If <code>request_key</code>() is called from a program invoked by <code>request_key</code>() on behalf of some other process to generate a key, then the keyrings of that other process will be searched next, using that other process&#8217;s user ID, group ID, supplementary group IDs, and security context to determine access. </p>

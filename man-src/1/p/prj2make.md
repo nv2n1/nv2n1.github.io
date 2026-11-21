@@ -1,5 +1,4 @@
 ---
-
 title: "prj2make(1)"
 name: "prj2make"
 section: "1"
@@ -10,6 +9,7 @@ description: "prj2make – Makefile generator from Visual Studio and Sharp Devel
 
 <h2>NAME</h2>
 <p> prj2make &#8211; Makefile generator from Visual Studio and Sharp Develop solution files.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>prj2make options file</code></p>
 <h2>DESCRIPTIOn</h2>
 <p> The <i>prj2make</i> tool will produce Makefiles or NMakefiles from Visual Studio solution files (files ending in .sln or .csproj) or SharpDevelop combine files (files ending in .cmbx or .prjx). </p>

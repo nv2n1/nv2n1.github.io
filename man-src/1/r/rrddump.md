@@ -1,5 +1,4 @@
 ---
-
 title: "rrddump(1)"
 name: "rrddump"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-rrddump/"
 description: "rrddump – dump the contents of an RRD to XML format"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rrddump &#8211; dump the contents of an RRD to XML format </p>
+<h2>SYNOPSIS</h2>
 <p> <code>rrdtool</code> <code>dump</code> <i>filename.rrd</i> [<i>filename.xml</i>] [<code>&#8211;header</code>|<code>-h</code>&nbsp;<wbr>{none,xsd,dtd}] [<code>&#8211;no-header</code>] [<code>&#8211;daemon</code>&nbsp;<wbr><i>address</i>] &gt;&nbsp;<wbr><i>filename.xml</i></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>dump</code> function writes the contents of an <font SIZE="-1"><code>RRD</code></font> in human readable (?) <font SIZE="-1">XML</font> format to a file or to stdout. This format can be read by rrdrestore. Together they allow you to transfer your files from one computer architecture to another as well to manipulate the contents of an <font SIZE="-1"><code>RRD</code></font> file in a somewhat more convenient manner.</p>
 <dl>
 <dt><i>filename.rrd</i></dt>

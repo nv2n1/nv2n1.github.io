@@ -1,5 +1,4 @@
 ---
-
 title: "passenger-config(1)"
 name: "passenger-config"
 section: "1"
@@ -10,7 +9,9 @@ description: "passenger-config – Show configuration settings for Phusion Passe
 
 <h2>NAME</h2>
 <p> passenger-config &#8211; Show configuration settings for Phusion Passenger</p>
+<h2>SYNOPSIS</h2>
 <p> <code>passenger-config</code> <i>&#8211;root</i> | <i>&#8211;version</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>passenger-config</code> shows the current configuration settings for Phusion Passenger. You need to select one of the following options.</p>
 <h2>OPTIONS</h2>
 <dl>

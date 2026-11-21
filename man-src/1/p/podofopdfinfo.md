@@ -1,5 +1,4 @@
 ---
-
 title: "podofopdfinfo(1)"
 name: "podofopdfinfo"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-podofopdfinfo/"
 description: "podofopdfinfo – provide information about a PDF file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> podofopdfinfo &#8211; provide information about a PDF file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>podofopdfinfo</code> [DCPON] [inputfile] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>podofopdfinfo</code> is one of the command line tools from the PoDoFo library that provide several useful operations to work with PDF files. It can provide a number of facts about a PDF document according to the formatting instructions. If the instructions are not provided, complete information is shown. </p>
 <h2>OPTIONS</h2>
 <p> <code>D</code></p>

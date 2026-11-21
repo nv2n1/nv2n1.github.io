@@ -1,5 +1,4 @@
 ---
-
 title: "grub2-render-label(1)"
 name: "grub2-render-label"
 section: "1"
@@ -10,6 +9,7 @@ description: "grub-render-label — Render an Apple disk label."
 
 <h2>NAME</h2>
 <p> <code>grub-render-label</code> &#8212; Render an Apple disk label. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>grub-render-label</code> [-b | &#8211;bgcolor=<i>COLOR</i>] [-c | &#8211;color=<i>COLOR</i>]</p>
 <dl>
 <dt>
@@ -21,6 +21,7 @@ description: "grub-render-label — Render an Apple disk label."
 <dt>
 </dt><dd> [-v | &#8211;verbose] </dd>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> <code>grub-render-label</code> renders an Apple disk label (.disk_label) file. </p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "getdns_service_sync(3)"
 name: "getdns_service_sync"
 section: "3"
@@ -12,6 +11,7 @@ description: "getdns_service, getdns_service_sync — getdns lookup of a service
 <p> <code>getdns_service, </code> <code>getdns_service_sync</code> &#8212; getdns lookup of a service </p>
 <h2>LIBRARY</h2>
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;getdns.h&gt; </p>
 <p> getdns_return_t<br />
  <code>getdns_service</code> (getdns_context *context,</p>
@@ -29,6 +29,7 @@ description: "getdns_service, getdns_service_sync — getdns lookup of a service
 </dt><dd> const char *name,<br />
  getdns_dict *extensions,<br />
  getdns_dict **response)</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The getdns_service (3) and getdns_service_sync functions provide public entry points into the getdns API library to retrieve the SRV information given a name. </p>
 <dl>
 <dt> <i>context</i></dt>

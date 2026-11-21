@@ -1,5 +1,4 @@
 ---
-
 title: "pmdaoracle(1)"
 name: "pmdaoracle"
 section: "1"
@@ -10,6 +9,7 @@ description: "pmdaoracle – Oracle database PMDA"
 
 <h2>NAME</h2>
 <p> <code>pmdaoracle</code> &#8211; Oracle database PMDA</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdaoracle</code> is a Performance Co-Pilot <font SIZE="-1">PMDA</font> which extracts live performance data from a running Oracle database.</p>
 <h2>INSTALLATION</h2>
 <p> <code>pmdaoracle</code> uses a configuration file from (in this order):</p>

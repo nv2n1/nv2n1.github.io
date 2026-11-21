@@ -1,5 +1,4 @@
 ---
-
 title: "rawtopgm(1)"
 name: "rawtopgm"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-rawtopgm/"
 description: "rawtopgm – convert raw grayscale bytes into a portable graymap"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rawtopgm &#8211; convert raw grayscale bytes into a portable graymap </p>
+<h2>SYNOPSIS</h2>
 <p> <code>rawtopgm</code> [<code>-bpp </code>[<code>1</code>|<code>2</code>]] [<code>-littleendian</code>] [<code>-maxval</code> <i>N</i>] [<code>-headerskip</code> <i>N</i>] [<code>-rowskip</code> <i>N</i>] [<code>-tb</code>|<code>-topbottom</code>] [<i>width</i> <i>height</i>] [<i>imagefile</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> Reads raw grayscale values as input. Produces a PGM file as output. The input file is just a sequence of pure binary numbers, either one or two bytes each, either bigendian or littleendian, representing gray values. They may be arranged either top to bottom, left to right or bottom to top, left to right. There may be arbitrary header information at the start of the file (to which <code>rawtopgm</code> pays no attention at all other than the header&#8217;s size). </p>
 <p> Arguments to <code>rawtopgm</code> tell how to interpret the pixels (a function that is served by a header in a regular graphics format). </p>
 <p> The <i>width</i> and <i>height</i> parameters tell the dimensions of the image. If you omit these parameters, <code>rawtopgm</code> assumes it is a quadratic image and bases the dimensions on the size of the input stream. If this size is not a perfect square, <code>rawtopgm</code> fails. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "rifle(1)"
 name: "rifle"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-rifle/"
 description: "rifle – ranger’s file opener"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rifle &#8211; ranger&#8217;s file opener </p>
+<h2>SYNOPSIS</h2>
 <p> <code>rifle</code> [<code>&#8211;help</code>] [<code>-f</code> <i></i><font SIZE="-1"><i>FLAGS</i></font><i></i>] [<code>-l</code>] [<code>-p</code> <i></i><font SIZE="-1"><i>KEYWORD</i></font><i></i>] [<code>-w</code> <i></i><font SIZE="-1"><i>PROGRAM</i></font><i></i>] [<code>-c</code> <i></i><font SIZE="-1"><i>CONFIG_FILE</i></font><i></i>] <i>files</i></p>
+<h2>DESCRIPTION</h2>
 <p> rifle is a powerful file executor that allows for complex file type checking, written to meet the needs of the file manager <i>ranger</i>. rifle&#8217;s strength lies in automatically determining file types, depending on which programs are installed on the system, even without any user interaction.</p>
 <h2>OPTIONS</h2>
 <dl>

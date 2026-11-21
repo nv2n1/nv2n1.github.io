@@ -1,5 +1,4 @@
 ---
-
 title: "ibv_dereg_mr(3)"
 name: "ibv_dereg_mr"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-ibv_dereg_mr/"
 description: "ibv_reg_mr, ibv_reg_mr_iova, ibv_dereg_mr – register or deregister a memory region (MR)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ibv_reg_mr, ibv_reg_mr_iova, ibv_dereg_mr &#8211; register or deregister a memory region (MR) </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 struct ibv_mr *ibv_reg_mr(struct ibv_pd *pd, void *addr,
@@ -17,6 +19,7 @@ struct ibv_mr *ibv_reg_mr_iova(struct ibv_pd *pd, void *addr,
                                int access);
 int ibv_dereg_mr(struct ibv_mr *mr);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>ibv_reg_mr()</code> registers a memory region (MR) associated with the protection domain <i>pd</i>. The MR&#8217;s starting address is <i>addr</i> and its size is <i>length</i>. The argument <i>access</i> describes the desired memory protection attributes; it is either 0 or the bitwise OR of one or more of the following flags: </p>
 <dl>
 <dt><code>IBV_ACCESS_LOCAL_WRITE </code> Enable Local Write Access</dt>

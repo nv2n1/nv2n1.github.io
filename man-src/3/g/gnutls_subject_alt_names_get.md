@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_subject_alt_names_get(3)"
 name: "gnutls_subject_alt_names_get"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_subject_alt_names_get – API function"
 
 <h2>NAME</h2>
 <p> gnutls_subject_alt_names_get &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509-ext.h&gt;</code> </p>
 <p> <code>int gnutls_subject_alt_names_get(gnutls_subject_alt_names_t </code><i>sans</i><code>, unsigned int </code><i>seq</i><code>, unsigned int * </code><i>san_type</i><code>, gnutls_datum_t * </code><i>san</i><code>, gnutls_datum_t * </code><i>othername_oid</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,6 +24,7 @@ description: "gnutls_subject_alt_names_get – API function"
 <dd> The alternative name data (should be treated as constant)</dd>
 <dt>gnutls_datum_t * othername_oid</dt>
 <dd> The object identifier if <i>san_type</i> is <code>GNUTLS_SAN_OTHERNAME</code> (should be treated as constant)</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will return a specific alternative name as stored in the <i>sans</i> structure. The returned values should be treated as constant and valid for the lifetime of <i>sans</i> .</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code> if the index is out of bounds, otherwise a negative error value.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "encrypt_r(3)"
 name: "encrypt_r"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-encrypt_r/"
 description: "encrypt, setkey, encrypt_r, setkey_r – encrypt 64-bit messages"
 ---
 
+<h2 class="name">NAME</h2>
+<p> encrypt, setkey, encrypt_r, setkey_r &#8211; encrypt 64-bit messages </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #define _XOPEN_SOURCE /* See feature_test_macros(7) */
 #include &lt;unistd.h&gt;
@@ -21,6 +23,7 @@ void setkey_r(const char *key, struct crypt_data *data);
 void encrypt_r(char *block, int edflag, struct crypt_data *data);
 </code></pre>
 <p> Each of these requires linking with <i>-lcrypt</i>.</p>
+<h2>DESCRIPTION</h2>
 <p> These functions encrypt and decrypt 64-bit messages. The <code>setkey</code>() function sets the key used by <code>encrypt</code>(). The <i>key</i> argument used here is an array of 64 bytes, each of which has numerical value 1 or 0. The bytes key[n] where n=8*i-1 are ignored, so that the effective key length is 56 bits. </p>
 <p> The <code>encrypt</code>() function modifies the passed buffer, encoding if <i>edflag</i> is 0, and decoding if 1 is being passed. Like the <i>key</i> argument, also <i>block</i> is a bit vector representation of the actual value that is encoded. The result is returned in that same vector. </p>
 <p> These two functions are not reentrant, that is, the key data is kept in static storage. The functions <code>setkey_r</code>() and <code>encrypt_r</code>() are the reentrant versions. They use the following structure to hold the key data: </p>

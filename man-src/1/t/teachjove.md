@@ -1,5 +1,4 @@
 ---
-
 title: "teachjove(1)"
 name: "teachjove"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-teachjove/"
 description: "teachjove – learn how to use the JOVE editor"
 ---
 
+<h2 class="name">NAME</h2>
+<p> teachjove &#8211; learn how to use the JOVE editor </p>
+<h2>SYNOPSIS</h2>
 <p> <code>teachjove</code> [ <code>-s</code><i>&nbsp;<wbr>sharedir</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> TEACHJOVE is a simple program that calls up the JOVE editor on a special file that is an interactive tutorial for the JOVE editor. Once in JOVE all you do is follow the instructions and by doing so you will learn all about JOVE! NOTE: TEACHJOVE actually makes a copy of the tutorial in your home directory; if you ever want to start over (if you trash the file by accident) all you need to do is remove the file <i>~/teach-jove</i> and run teachjove again. </p>
 <p> TEACHJOVE recognizes the following switch:</p>
 <dl>

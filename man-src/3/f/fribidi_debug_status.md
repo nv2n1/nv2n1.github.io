@@ -1,5 +1,4 @@
 ---
-
 title: "fribidi_debug_status(3)"
 name: "fribidi_debug_status"
 section: "3"
@@ -7,13 +6,20 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_debug_status/"
 ---
 
-fribidi_debug_status - get current debug state 
+<h2 class="name">NAME</h2>
+ 
 
-<b> #include &lt;fribidi.h&gt; 
+ fribidi_debug_status - get current debug state 
+
+<h2>SYNOPSIS</h2>
+
+ <b> #include &lt;fribidi.h&gt; 
 
  extern int fribidi_debug_status(void); </b>
 
-Get current debug state.
+<h2>DESCRIPTION</h2>
+
+ Get current debug state.
 
 <h2>SEE ALSO</h2>
 

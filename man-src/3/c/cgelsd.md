@@ -1,5 +1,4 @@
 ---
-
 title: "cgelsd(3)"
 name: "cgelsd"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cgelsd/"
 description: "cgelsd.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cgelsd.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgelsd</code> (M, N, NRHS, A, LDA, B, LDB, S, RCOND, RANK, WORK, LWORK, RWORK, IWORK, INFO)<br />
  <i></i><code> CGELSD computes the minimum-norm solution to a linear least squares problem for GE matrices</code></p>

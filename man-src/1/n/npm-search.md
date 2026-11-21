@@ -1,5 +1,4 @@
 ---
-
 title: "npm-search(1)"
 name: "npm-search"
 section: "1"
@@ -8,6 +7,7 @@ url: "/docs/linux/man/1-npm-search/"
 description: "npm-search – Search for packages"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>npm-search</code> &#8211; Search for packages </p>
 <h3>Synopsis</h3>
 <dl>

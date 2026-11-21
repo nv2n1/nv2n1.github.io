@@ -1,5 +1,4 @@
 ---
-
 title: "cunmbr(3)"
 name: "cunmbr"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cunmbr/"
 description: "cunmbr.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cunmbr.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cunmbr</code> (VECT, SIDE, TRANS, M, N, K, A, LDA, TAU, C, LDC, WORK, LWORK, INFO)<br />
  <i></i><code>CUNMBR</code></p>

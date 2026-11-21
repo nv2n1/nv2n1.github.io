@@ -1,5 +1,4 @@
 ---
-
 title: "git-upload-pack(1)"
 name: "git-upload-pack"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-upload-pack/"
 description: "git-upload-pack – Send objects packed back to git-fetch-pack"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-upload-pack &#8211; Send objects packed back to git-fetch-pack </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git - upload - pack[--[no - ] strict][--timeout = &lt;n&gt;][--stateless - rpc][--advertise - refs]&lt;directory&gt;
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Invoked by <i>git fetch-pack</i>, learns what objects the other side is missing, and sends them after packing. </p>
 <p> This command is usually not invoked directly by the end user. The UI for the protocol is on the <i>git fetch-pack</i> side, and the program pair is meant to be used to pull updates from a remote repository. For push operations, see <i>git send-pack</i>.</p>
 <h2>OPTIONS</h2>

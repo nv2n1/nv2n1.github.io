@@ -1,5 +1,4 @@
 ---
-
 title: "nvidia-persistenced(1)"
 name: "nvidia-persistenced"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-nvidia-persistenced/"
 description: "nvidia-persistenced – A daemon to maintain persistent software state in the NVIDIA driver."
 ---
 
+<h2 class="name">NAME</h2>
+<p> nvidia-persistenced &#8211; A daemon to maintain persistent software state in the NVIDIA driver.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>nvidia-persistenced</code> </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>nvidia-persistenced</code> utility is used to enable persistent software state in the NVIDIA driver. When persistence mode is enabled, the daemon prevents the driver from releasing device state when the device is not in use. This can improve the startup time of new clients in this scenario. </p>
 <h2>OPTIONS</h2>
 <dl>

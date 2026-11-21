@@ -1,5 +1,4 @@
 ---
-
 title: "perlfangkuai(1)"
 name: "perlfangkuai"
 section: "1"
@@ -7,9 +6,14 @@ letter: "p"
 url: "/docs/linux/man/1-perlfangkuai/"
 ---
 
-tetris - A tetris game 
+<h2 class="name">NAME</h2>
+ 
 
-perl tetris.pl
+ tetris - A tetris game 
+
+<h2>SYNOPSIS</h2>
+
+ perl tetris.pl
 
 <h2>CONFIGURATION</h2>
 

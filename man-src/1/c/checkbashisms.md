@@ -1,5 +1,4 @@
 ---
-
 title: "checkbashisms(1)"
 name: "checkbashisms"
 section: "1"
@@ -10,8 +9,10 @@ description: "checkbashisms – check for bashisms in /bin/sh scripts"
 
 <h2>NAME</h2>
 <p> checkbashisms &#8211; check for bashisms in /bin/sh scripts</p>
+<h2>SYNOPSIS</h2>
 <p> <code>checkbashisms</code> <i>script</i> &#8230;<br />
  <code>checkbashisms &#8211;help</code>|<code>&#8211;version</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>checkbashisms</code>, based on one of the checks from the <code>lintian</code> system, performs basic checks on <i>/bin/sh</i> shell scripts for the possible presence of bashisms. It takes the names of the shell scripts on the command line, and outputs warnings if possible bashisms are detected. </p>
 <p> Note that the definition of a bashism in this context roughly equates to &quot;a shell feature that is not required to be supported by POSIX&quot;; this means that some issues flagged may be permitted under optional sections of POSIX, such as XSI or User Portability. </p>
 <p> In cases where POSIX and Debian Policy disagree, <code>checkbashisms</code> by default allows extensions permitted by Policy but may also provide options for stricter checking.</p>

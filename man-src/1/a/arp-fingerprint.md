@@ -1,5 +1,4 @@
 ---
-
 title: "arp-fingerprint(1)"
 name: "arp-fingerprint"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-arp-fingerprint/"
 description: "arp-fingerprint – Fingerprint a system using ARP"
 ---
 
+<h2 class="name">NAME</h2>
+<p> arp-fingerprint &#8211; Fingerprint a system using ARP </p>
+<h2>SYNOPSIS</h2>
 <p> <code>arp-fingerprint</code> [<i>options</i>] <i>target</i> </p>
 <p> The target should be specified as a single IP address or hostname. You cannot specify multiple targets, IP networks or ranges. </p>
 <p> If you use an IP address for the target, you can use the <code>-o</code> option to pass the <code>&#8211;numeric</code> option to <code>arp-scan</code>, which will prevent it from attempting DNS lookups. This can speed up the fingerprinting process, especially on systems with a slow or faulty DNS configuration.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>arp-fingerprint</code> fingerprints the specified target host using the ARP protocol. </p>
 <p> It sends various different types of ARP request to the target, and records which types it responds to. From this, it constructs a fingerprint string consisting of &quot;1&quot; where the target responded and &quot;0&quot; where it did not. An example of a fingerprint string is <i>01000100000</i>. This fingerprint string is then used to lookup the likely target operating system. </p>
 <p> Many of the fingerprint strings are shared by several operating systems, so there is not always a one-to-one mapping between fingerprint strings and operating systems. Also the fact that a system&#8217;s fingerprint matches a certain operating system (or list of operating systems) does not necessarily mean that the system being fingerprinted is that operating system, although it is quite likely. This is because the list of operating systems is not exhaustive; it is just what I have discovered to date, and there are bound to be operating systems that are not listed. </p>

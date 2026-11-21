@@ -1,5 +1,4 @@
 ---
-
 title: "rawlog-grabber(1)"
 name: "rawlog-grabber"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-rawlog-grabber/"
 description: "rawlog-grabber – Collects data from robotic sensors"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rawlog-grabber &#8211; Collects data from robotic sensors </p>
+<h2>SYNOPSIS</h2>
 <p> rawlog-grabber <i>config_file.ini</i></p>
+<h2>DESCRIPTION</h2>
 <p> This program creates a thread for each sensor declared in the config file and then saves the timestamp-ordered observations to a rawlog file. </p>
 <p> The valuable utiliy of this program is to collect datasets from mobile robots for off-line processing.</p>
 <h2>BUGS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "pam_issue(8)"
 name: "pam_issue"
 section: "8"
@@ -7,11 +6,12 @@ letter: "p"
 url: "/docs/linux/man/8-pam_issue/"
 description: "pam_issue – PAM module to add issue file to user prompt"
 ---
-
 <p>pam_issue &#8211; PAM module to add issue file to user prompt </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>pam_issue.so</code> [noesc] [issue=<i>issue-file-name</i>] </dt>
 </dl>
+<h2>DESCRIPTION</h2>
 <dd> <p> pam_issue is a PAM module to prepend an issue file to the username prompt. It also by default parses escape codes in the issue file similar to some common getty&#8217;s (using \x format). </p>
 <p>Recognized escapes: </p>
 <p> <code>\d</code> </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "fbpanel(1)"
 name: "fbpanel"
 section: "1"
@@ -10,7 +9,9 @@ description: "fbpanel – a NETWM compliant lightweight GTK2-based panel for UNI
 
 <h2>NAME</h2>
 <p> fbpanel &#8211; a NETWM compliant lightweight GTK2-based panel for UNIX desktop.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>fbpanel</code> [<i>OPTION</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> fbpanel is desktop panel which provides graphical information and feedback about desktop activity and allows interaction with the window manager. It features:</p>
 <dl>
 <dt> * taskbar &#8211; shows a list of the managed windows (tasks)</dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "ctest(1)"
 name: "ctest"
 section: "1"
@@ -8,6 +7,8 @@ url: "/docs/linux/man/1-ctest/"
 description: "ctest – CTest Command-Line Reference"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ctest &#8211; CTest Command-Line Reference </p>
 <h3>Contents</h3>
 <dl>
 <dt>&bull;</dt>
@@ -64,9 +65,11 @@ description: "ctest – CTest Command-Line Reference"
 <dd> <i>Environment Variables</i></dd>
 <dt>&bull;</dt>
 <dd> <i>See Also</i></dd></dl>
+<h2>SYNOPSIS</h2>
 <pre><code>
 ctest[&lt;options&gt;] ctest-- build - and-test&lt;path - to - source&gt;&lt;path - to - build&gt; --build - generator&lt;generator&gt;[&lt;options&gt;...][--build - options&lt;opts&gt;...][--test - command&lt;command&gt;[&lt;args&gt;...]] ctest { -D&lt;dashboard&gt; | -M&lt;model&gt; - T&lt;action&gt; | -S&lt;script&gt; | -SP&lt;script&gt; }[--&lt;dashboard - options&gt;...]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>ctest</code> executable is the CMake test driver program. CMake-generated build trees created for projects that use the <code>enable_testing()</code> and <code>add_test()</code> commands have testing support. This program will run the tests and report results.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "zile(1)"
 name: "zile"
 section: "1"
@@ -10,7 +9,9 @@ description: "Zile – Zile Is Lossy Emacs"
 
 <h2>NAME</h2>
 <p> Zile &#8211; Zile Is Lossy Emacs</p>
+<h2>SYNOPSIS</h2>
 <p> <code>zile</code> [<i>OPTION-OR-FILENAME</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Zile is a lightweight Emacs clone that provides a subset of Emacs&#8217;s functionality suitable for basic editing. </p>
 <p> Run Zile, the lightweight Emacs clone. </p>
 <p> Initialization options:</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "xclipboard(1)"
 name: "xclipboard"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-xclipboard/"
 description: "xclipboard – X clipboard client"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xclipboard &#8211; X clipboard client </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xclipboard</code> [ <i>-toolkitoption</i> &#8230; ] [ <code>-w</code> ] [ <code>-nw</code> ]</p>
+<h2>DESCRIPTION</h2>
 <p> The <i>xclipboard</i> program is used to collect and display text selections that are sent to the CLIPBOARD by other clients. It is typically used to save CLIPBOARD selections for later use. It stores each CLIPBOARD selection as a separate string, each of which can be selected. Each time CLIPBOARD is asserted by another application, <i>xclipboard</i> transfers the contents of that selection to a new buffer and displays it in the text window. Buffers are never automatically deleted, so you&#8217;ll want to use the delete button to get rid of useless items. </p>
 <p> Since <i>xclipboard</i> uses a Text Widget to display the contents of the clipboard, text sent to the CLIPBOARD may be re-selected for use in other applications. <i>xclipboard</i> also responds to requests for the CLIPBOARD selection from other clients by sending the entire contents of the currently displayed buffer. </p>
 <p> An <i>xclipboard</i> window has the following buttons across the top:</p>

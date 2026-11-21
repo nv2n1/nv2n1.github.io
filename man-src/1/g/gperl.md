@@ -1,5 +1,4 @@
 ---
-
 title: "gperl(1)"
 name: "gperl"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-gperl/"
 description: "gperl – groff preprocessor for Perl parts in roff files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gperl &#8211; groff preprocessor for Perl parts in roff files </p>
+<h2>SYNOPSIS</h2>
 <p> [<i>filespec</i> &#8230; ] <code>-h</code> <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>
+<h2>DESCRIPTION</h2>
 <p> This is a preprocessor for <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1). It allows the use of <code>perl</code>(7) code in <code><a href="/docs/linux/man/7-groff/">groff</a></code>(7) files. The result of a <i>Perl part</i> can be stored in groff <i>strings</i> or <i>numerical registers</i> based on the arguments at a final line of a <i>Perl part</i>.</p>
 <h2>OPTIONS</h2>
 <p> So far, there are only <i>filespec</i> or <i>breaking</i> options. </p>

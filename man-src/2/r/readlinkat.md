@@ -1,5 +1,4 @@
 ---
-
 title: "readlinkat(2)"
 name: "readlinkat"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-readlinkat/"
 description: "readlink, readlinkat – read value of a symbolic link"
 ---
 
+<h2 class="name">NAME</h2>
+<p> readlink, readlinkat &#8211; read value of a symbolic link </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;unistd.h&gt;
 ssize_t readlink(const char *pathname, char *buf, size_t bufsiz);
@@ -30,6 +32,7 @@ ssize_t readlinkat(int dirfd, const char *pathname,
 <dt>Before glibc 2.10:</dt>
 <dd> _ATFILE_SOURCE</dd></dl>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> <code>readlink</code>() places the contents of the symbolic link <i>pathname</i> in the buffer <i>buf</i>, which has size <i>bufsiz</i>. <code>readlink</code>() does not append a null byte to <i>buf</i>. It will (silently) truncate the contents (to a length of <i>bufsiz</i> characters), in case the buffer is too small to hold all of the contents.</p>
 <h3>readlinkat()</h3>
 <p> The <code>readlinkat</code>() system call operates in exactly the same way as <code>readlink</code>(), except for the differences described here. </p>

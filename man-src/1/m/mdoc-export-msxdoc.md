@@ -1,5 +1,4 @@
 ---
-
 title: "mdoc-export-msxdoc(1)"
 name: "mdoc-export-msxdoc"
 section: "1"
@@ -10,7 +9,9 @@ description: "mdoc export-msxdoc – Convert mdoc(5) XML to Microsoft XML Docume
 
 <h2>NAME</h2>
 <p> mdoc export-msxdoc &#8211; Convert <code><a href="/docs/linux/man/5-mdoc/">mdoc</a></code>(5) XML to Microsoft XML Documentation</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mdoc export-msxdoc</code> [OPTION]* DIRECTORIES</p>
+<h2>DESCRIPTION</h2>
 <p> <code>mdoc export-msxdoc</code> creates <i>Microsoft XML Documentation</i> (as produced by <i>csc /doc</i>) from the <code><a href="/docs/linux/man/5-mdoc/">mdoc</a></code>(5)-formatted documentation XML files within <i>DIRECTORIES</i>.</p>
 <h2>OPTIONS</h2>
 <dl>

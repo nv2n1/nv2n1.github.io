@@ -1,5 +1,4 @@
 ---
-
 title: "ngspice(1)"
 name: "ngspice"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ngspice/"
 description: "ngspice – circuit simulator derived from spice]3f5"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ngspice &#8211; circuit simulator derived from spice]3f5 </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ngspice</code> [<i>options</i>] [<i>file</i> &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> This man page is just a small overview. The primary documentation of ngspice is in the ngspice] User&#8217;s Manual, which is available as a pdf file.</p>
 <h2>OPTIONS</h2>
 <dl>

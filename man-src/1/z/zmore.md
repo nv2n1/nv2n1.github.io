@@ -1,5 +1,4 @@
 ---
-
 title: "zmore(1)"
 name: "zmore"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-zmore/"
 description: "zmore – file perusal filter for crt viewing of compressed text"
 ---
 
+<h2 class="name">NAME</h2>
+<p> zmore &#8211; file perusal filter for crt viewing of compressed text </p>
+<h2>SYNOPSIS</h2>
 <p> <code>zmore</code> [ name &#8230; ]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Zmore</i> is a filter which allows examination of compressed or plain text files one screenful at a time on a soft-copy terminal. <i>zmore</i> works on files compressed with <i>compress</i>, <i>pack</i> or <i>gzip</i>, and also on uncompressed files. If a file does not exist, <i>zmore</i> looks for a file of the same name with the addition of a .gz, .z or .Z suffix. </p>
 <p> <i>Zmore</i> normally pauses after each screenful, printing &#8211;More&#8211; at the bottom of the screen. If the user then types a carriage return, one more line is displayed. If the user hits a space, another screenful is displayed. Other possibilities are enumerated later. </p>
 <p> <i>Zmore</i> looks in the file <i>/etc/termcap</i> to determine terminal characteristics, and to determine the default window size. On a terminal capable of displaying 24 lines, the default window size is 22 lines. To use a pager other than the default <i>more</i>, set environment variable PAGER to the name of the desired program, such as <i>less</i>. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ssh-keyscan(1)"
 name: "ssh-keyscan"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-ssh-keyscan/"
 description: "ssh-keyscan – gather SSH public keys from servers"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>ssh-keyscan</code> &#8211; gather SSH public keys from servers </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ssh-keyscan</code> [-<code>46cDHv </code>[-<code>f </code><i>file</i> ] ] [-<code>p </code><i>port</i> ] [-<code>T </code><i>timeout</i> ] [-<code>t </code><i>type</i> ] [<i>host | addrlist namelist</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>ssh-keyscan</code> is a utility for gathering the public SSH host keys of a number of hosts. It was designed to aid in building and verifying ssh_known_hosts files, the format of which is documented in <a href="/docs/linux/man/8-sshd/">sshd</a>(8). <code>ssh-keyscan</code> provides a minimal interface suitable for use by shell and perl scripts. </p>
 <p> <code>ssh-keyscan</code> uses non-blocking socket I/O to contact as many hosts as possible in parallel, so it is very efficient. The keys from a domain of 1,000 hosts can be collected in tens of seconds, even when some of those hosts are down or do not run <a href="/docs/linux/man/8-sshd/">sshd</a>(8). For scanning, one does not need login access to the machines that are being scanned, nor does the scanning process involve any encryption. </p>
 <p> The options are as follows:</p>

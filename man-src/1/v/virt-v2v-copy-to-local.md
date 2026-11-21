@@ -1,5 +1,4 @@
 ---
-
 title: "virt-v2v-copy-to-local(1)"
 name: "virt-v2v-copy-to-local"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-virt-v2v-copy-to-local/"
 description: "virt-v2v-copy-to-local – Copy a remote guest to the local machine"
 ---
 
+<h2 class="name">NAME</h2>
+<p> virt-v2v-copy-to-local &#8211; Copy a remote guest to the local machine </p>
+<h2>SYNOPSIS</h2>
 <pre>
  virt-v2v-copy-to-local -ic LIBVIRT_URI GUEST
  virt-v2v-copy-to-local -ic xen+<a href="ssh://root@xen.example.com">ssh://root@xen.example.com</a> xen_guest
  virt-v2v-copy-to-local -ic <a href="esx://root@esxi.example.com">esx://root@esxi.example.com</a> vmware_guest
 </pre>
+<h2>DESCRIPTION</h2>
 <p> <tt>&quot;virt-v2v-copy-to-local&quot;</tt> copies a guest from a remote hypervisor to the local machine, in preparation for conversion by <i><a href="/docs/linux/man/1-virt-v2v/">virt-v2v</a></i>(1). Note this tool alone <code>does not</code> do the virt-v2v conversion.</p>
 <h3>When to use this tool</h3>
 <p> This tool is not usually necessary, but there are a few special cases (see list below) where you might need it. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "virt-p2v-make-kickstart(1)"
 name: "virt-p2v-make-kickstart"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-virt-p2v-make-kickstart/"
 description: "virt-p2v-make-kickstart – Build the virt-p2v kickstart"
 ---
 
+<h2 class="name">NAME</h2>
+<p> virt-p2v-make-kickstart &#8211; Build the virt-p2v kickstart </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
  virt-p2v-make-kickstart [-o p2v.ks] [--proxy=http://...] repo [repo...]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <i><a href="/docs/linux/man/1-virt-p2v/">virt-p2v</a></i>(1) converts a physical machine to run virtualized on <font SIZE="-1">KVM,</font> managed by libvirt, OpenStack, oVirt, Red Hat Enterprise Virtualisation (<font SIZE="-1">RHEV</font>), or one of the other targets supported by <i><a href="/docs/linux/man/1-virt-v2v/">virt-v2v</a></i>(1). </p>
 <p> Kickstart is a format used by Red Hat-derived distributions (such as Fedora, Red Hat Enterprise Linux, CentOS, Scientific Linux, and others) to describe how to make live CDs, install the distro, make &#8220;Spins&#8221; and so on. It is driven by a kickstart file. </p>
 <p> virt-p2v-make-kickstart builds a kickstart file which can be used to build a bootable P2V <font SIZE="-1">ISO,</font> live <font SIZE="-1">CD, USB</font> key, or <font SIZE="-1">PXE</font> image. This tool only builds the kickstart file, but this manual page describes some of the ways you can use the kickstart file.</p>

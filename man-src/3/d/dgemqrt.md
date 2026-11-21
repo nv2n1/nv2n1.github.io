@@ -1,5 +1,4 @@
 ---
-
 title: "dgemqrt(3)"
 name: "dgemqrt"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dgemqrt/"
 description: "dgemqrt.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dgemqrt.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgemqrt</code> (SIDE, TRANS, M, N, K, NB, V, LDV, T, LDT, C, LDC, WORK, INFO)<br />
  <i></i><code>DGEMQRT</code></p>

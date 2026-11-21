@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_str2period(3)"
 name: "ldns_str2period"
 section: "3"
@@ -10,10 +9,12 @@ description: "ldns_str2period"
 
 <h2>NAME</h2>
 <p> ldns_str2period </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> uint32_t ldns_str2period(const char *nptr, const char **endptr); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_str2period</i>()</dt>
 <dd>converts a ttl value (like 5d2h) to a long. .br <code>nptr</code>: the start of the string .br <code>endptr</code>: points to the last char in case of error .br Returns the convert duration value</dd></dl>

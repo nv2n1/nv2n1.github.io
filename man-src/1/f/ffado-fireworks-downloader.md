@@ -1,5 +1,4 @@
 ---
-
 title: "ffado-fireworks-downloader(1)"
 name: "ffado-fireworks-downloader"
 section: "1"
@@ -10,7 +9,9 @@ description: "ffado-fireworks-downloader – firmware download application for E
 
 <h2>NAME</h2>
 <p> ffado-fireworks-downloader &#8211; firmware download application for Echo Fireworks devices</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ffado-fireworks-downloader [OPTION&#8230;] OPERATION</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>ffado-bridgeco-downloader</code> permits firmware updates to be made to Echo Fireworks devices under Linux. <i>OPERATION</i> describes the action to be carried out. An <i>OPERATION</i> comprises one of the following keywords and any arguments required by that keyword.</p>
 <dl>
 <dt><code>list</code></dt>

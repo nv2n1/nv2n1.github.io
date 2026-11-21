@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_credentials_set(3)"
 name: "gnutls_credentials_set"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_credentials_set – API function"
 
 <h2>NAME</h2>
 <p> gnutls_credentials_set &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_credentials_set(gnutls_session_t </code><i>session</i><code>, gnutls_credentials_type_t </code><i>type</i><code>, void * </code><i>cred</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_credentials_set – API function"
 <dd> is the type of the credentials</dd>
 <dt>void * cred</dt>
 <dd> is a pointer to a structure.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Sets the needed credentials for the specified type. Eg username, password &#8211; or public and private keys etc. The <i>cred</i> parameter is a structure that depends on the specified type and on the current session (client or server). </p>
 <p> In order to minimize memory usage, and share credentials between several threads gnutls keeps a pointer to cred, and not the whole cred structure. Thus you will have to keep the structure allocated until you call <code>gnutls_deinit()</code>. </p>
 <p> For <code>GNUTLS_CRD_ANON</code>, <i>cred</i> should be <code>gnutls_anon_client_credentials_t</code> in case of a client. In case of a server it should be <code>gnutls_anon_server_credentials_t</code>. </p>

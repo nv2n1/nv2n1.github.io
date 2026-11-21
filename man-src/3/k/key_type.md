@@ -1,5 +1,4 @@
 ---
-
 title: "key_type(3)"
 name: "key_type"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-key_type/"
 description: "QuantLib::TimeSeries – Container for historical data."
 ---
 
+<h2 class="name">NAME</h2>
+<p> QuantLib::TimeSeries &#8211; Container for historical data. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/timeseries.hpp&gt; </p>
 <h3>Public Types</h3>
 <p> typedef <code>Date</code> <code>key_type</code> </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "pmempool-rm(1)"
 name: "pmempool-rm"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmempool-rm – Remove (unlink) poolset files"
 
 <h2>NAME</h2>
 <p> pmempool-rm &#8211; Remove (unlink) poolset files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pmempool rm</code> [&lt;options&gt;] &lt;file&gt;..</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>pmempool</code> invoked with <code>rm</code> command removes (unlinks) all files specified in command line arguments. If the specified file is a poolset file all parts will be removed. All files are removed using the <code>unlink (3)</code> call. Without specifying the <code>-i|&#8211;interactive</code> option, the <code>rm</code> command prompts only before removing <i>write-protected</i> files. If specified file does not exist the <code>rm</code> command terminates with error code. The <code>-f|&#8211;force</code> command ignores non-existing files and never prompts before removing a file. See <code>EXAMPLES</code> section for example usage of the <code>rm</code> command.</p>
 <h3>Available options:</h3>
 <p> <code>-h, &#8211;help</code></p>

@@ -1,5 +1,4 @@
 ---
-
 title: "uustat(1)"
 name: "uustat"
 section: "1"
@@ -10,6 +9,7 @@ description: "uustat – UUCP status inquiry and control"
 
 <h2>NAME</h2>
 <p> uustat &#8211; UUCP status inquiry and control</p>
+<h2>SYNOPSIS</h2>
 <p> <code>uustat -a</code> </p>
 <p> <code>uustat &#8211;all</code> </p>
 <p> <code>uustat</code> [ <code>-eKRiMNQ ] [</code> <code>-sS</code> system ] [ <code>-uU</code> user ] [ <code>-cC</code> command ] [ <code>-oy</code> hours ] [ <code>-B</code> lines ] [ <code>&#8211;executions</code> ] [ <code>&#8211;kill-all</code> ] [ <code>&#8211;rejuvenate-all</code> ] [ <code>&#8211;prompt</code> ] [ <code>&#8211;mail</code> ] [ <code>&#8211;notify</code> ] [ <code>&#8211;no-list</code> ] [ <code>&#8211;system</code> system ] [ <code>&#8211;not-system</code> system ] [ <code>&#8211;user</code> user ] [ <code>&#8211;not-user</code> user ] [ <code>&#8211;command</code> command ] [ <code>&#8211;not-command</code> command ] [ <code>&#8211;older-than</code> hours ] [ <code>&#8211;younger-than</code> hours ] [ <code>&#8211;mail-lines</code> lines ] </p>
@@ -20,6 +20,7 @@ description: "uustat – UUCP status inquiry and control"
 <p> <code>uustat &#8211;status</code> </p>
 <p> <code>uustat -p</code> </p>
 <p> <code>uustat &#8211;ps</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <i>uustat</i> command can display various types of status information about the UUCP system. It can also be used to cancel or rejuvenate requests made by <i>uucp</i> (1) or <i>uux</i> (1). </p>
 <p> By default <i>uustat</i> displays all jobs queued up for the invoking user, as if given the <code>&#8211;user</code> option with the appropriate argument. </p>
 <p> If any of the <code>-a,</code> <code>&#8211;all,</code> <code>-e,</code> <code>&#8211;executions,</code> <code>-s,</code> <code>&#8211;system,</code> <code>-S,</code> <code>&#8211;not-system,</code> <code>-u,</code> <code>&#8211;user,</code> <code>-U,</code> <code>&#8211;not-user,</code> <code>-c,</code> <code>&#8211;command,</code> <code>-C,</code> <code>&#8211;not-command,</code> <code>-o,</code> <code>&#8211;older-than,</code> <code>-y,</code> <code>&#8211;younger-than</code> options are given, then all jobs which match the combined specifications are displayed. </p>

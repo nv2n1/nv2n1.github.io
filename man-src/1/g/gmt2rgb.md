@@ -1,5 +1,4 @@
 ---
-
 title: "gmt2rgb(1)"
 name: "gmt2rgb"
 section: "1"
@@ -10,7 +9,9 @@ description: "gmt2rgb – Converting a grid file, a raw, or a Sun raster file to
 
 <h2>NAME</h2>
 <p> gmt2rgb &#8211; Converting a grid file, a raw, or a Sun raster file to r/g/b grids</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gmt2rgb</code> <i>infile</i> <code>-G</code><i>template</i> [ <code>-C</code><i>cptfile</i> ] [ <code>-F</code> ] [ <code>-I</code><i>xinc</i>[<code>m</code>|<code>c</code>][/<i>yinc</i>[<code>m</code>|<code>c</code>]] ] [ <code>-L</code><i>layer</i> ] [ <code>-R</code><i>xmin</i>/<i>xmax</i>/<i>ymin</i>/<i>ymax</i>[<code>r</code>] ] [ <code>-V</code> ] [ <code>-W</code><i>width</i>/<i>height</i>[/<i>n_bytes</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>gmt2rgb</code> reads one of three types of input files: (1) A Sun 8-, 24-, or 32-bit raster file; we the write out the red, green, and blue components (0-255 range) to separate grid files. Since the raster file header is limited you may use the <code>-R</code>, <code>-F</code>, <code>-I</code> options to set a complete header record [Default is simply based on the number of rows and columns]. (2) A binary 2-D grid file; we then convert the z-values to red, green, blue via the provided cpt file. Optionally, only write out one of the r, g, b, layers. (3) A RGB or RGBA raw raster file. Since raw rasterfiles have no header, you have to give the image dimensions via the <code>-W</code> option.</p>
 <dl>
 <dt><i>infile</i></dt>

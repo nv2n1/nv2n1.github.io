@@ -1,5 +1,4 @@
 ---
-
 title: "xml-resolver(1)"
 name: "xml-resolver"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-xml-resolver/"
 description: "xml-resolver – A simple command-line resolver"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xml-resolver &#8211; A simple command-line resolver</p>
+<h2>SYNOPSIS</h2>
 <p> <code>xml-resolver</code> [options] keyword </p>
+<h2>DESCRIPTION</h2>
 <p> <code>xml-resolver</code> is a simple command-line resolver. It takes some parameters and passes them through the resolver, printing the result. </p>
 <p> The process ends with error-level 1, if there were errors. </p>
 <h2>OPTIONS</h2>

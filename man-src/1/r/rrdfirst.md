@@ -1,5 +1,4 @@
 ---
-
 title: "rrdfirst(1)"
 name: "rrdfirst"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-rrdfirst/"
 description: "rrdfirst – Return the date of the first data sample in an RRA within an RRD"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rrdfirst &#8211; Return the date of the first data sample in an RRA within an RRD </p>
+<h2>SYNOPSIS</h2>
 <p> <code>rrdtool</code> <code>first</code> <i>filename</i> [<i>&#8211;rraindex number</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>first</code> function returns the <font SIZE="-1">UNIX</font> timestamp of the first data sample entered into the specified <font SIZE="-1">RRA</font> of the <font SIZE="-1">RRD</font> file.</p>
 <dl>
 <dt><i>filename</i></dt>

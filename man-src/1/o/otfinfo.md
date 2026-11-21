@@ -1,5 +1,4 @@
 ---
-
 title: "otfinfo(1)"
 name: "otfinfo"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-otfinfo/"
 description: "otfinfo – report information about OpenType fonts"
 ---
 
+<h2 class="name">NAME</h2>
+<p> otfinfo &#8211; report information about OpenType fonts </p>
+<h2>SYNOPSIS</h2>
 <p> <code>otfinfo</code> [<code>-sfzpvag</code>] [<i>FILE&#8230;</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Otfinfo</code> reports information about the named OpenType font <i>FILE</i>s (or standard input, if no <i>FILE</i>s are given). Results are printed to standard output. Each line is prefaced with the relevant <i>FILE</i> if more than one <i>FILE</i> was supplied.</p>
 <h2>OPTIONS</h2>
 <p> With long options, you need type only as many characters as will make the option unique.</p>

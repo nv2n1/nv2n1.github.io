@@ -1,5 +1,4 @@
 ---
-
 title: "byobu-ctrl-a(1)"
 name: "byobu-ctrl-a"
 section: "1"
@@ -10,6 +9,7 @@ description: "byobu-ctrl-a – Configure Byobu’s ctrl-a behavior"
 
 <h2>NAME</h2>
 <p> byobu-ctrl-a &#8211; Configure Byobu&#8217;s ctrl-a behavior </p>
+<h2>DESCRIPTION</h2>
 <p> <code>byobu-ctrl-a</code> is an interactive program that allows a user to configure the behavior of the &#8216;ctrl-a&#8217; key sequence. </p>
 <p> Traditional GNU <code><a href="/docs/linux/man/1-screen/">screen</a></code>(1) uses ctrl-a as its escape character, while GNU <code><a href="/docs/linux/man/1-emacs/">emacs</a></code>(1) uses ctrl-a to move the cursor to the beginning of the line. This conflict has caused unending amounts of grief among Screen, Byobu, and Emacs-mode users. </p>
 <p> Thus, this program exists to allow each user to choose the behavior of ctrl-a in their local environment. </p>

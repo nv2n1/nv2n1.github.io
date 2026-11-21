@@ -1,5 +1,4 @@
 ---
-
 title: "cpbcon(3)"
 name: "cpbcon"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cpbcon/"
 description: "cpbcon.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cpbcon.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cpbcon</code> (UPLO, N, KD, AB, LDAB, ANORM, RCOND, WORK, RWORK, INFO)<br />
  <i></i><code>CPBCON</code></p>

@@ -1,5 +1,4 @@
 ---
-
 title: "grl-inspect(1)"
 name: "grl-inspect"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-grl-inspect/"
 description: "grl-inspect – show information about Grilo sources and keys"
 ---
 
+<h2 class="name">NAME</h2>
+<p> grl-inspect &#8211; show information about Grilo sources and keys </p>
+<h2>SYNOPSIS</h2>
 <p> <code>grl-inspect</code> [<i>options</i>] [<i>source</i>|<i>key</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>grl-inspect</code> command. </p>
 <p> <code>grl-inspect</code> is a tool that prints out information on available Grilo sources and metadata keys. When executed with no SOURCE argument, grl-inspect will print the list of all plugins and sources. When executed with a SOURCE, grl-inspect will print information about that source. </p>
 <p> Alternatively, using <code>-k</code> prints out information about the available metadata keys.</p>

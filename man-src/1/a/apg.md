@@ -1,5 +1,4 @@
 ---
-
 title: "apg(1)"
 name: "apg"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-apg/"
 description: "apg – generates several random passwords"
 ---
 
+<h2 class="name">NAME</h2>
+<p> apg &#8211; generates several random passwords</p>
+<h2>SYNOPSIS</h2>
 <p> <code>apg</code> [<code>-a algorithm</code>] [<code>-M mode</code>] [<code>-E char_string</code>] [<code>-n num_of_pass</code>] [<code>-m min_pass_len</code>] [<code>-x max_pass_len</code>] [<code>-r</code> <i>dictfile</i>] [<code>-b</code> <i>filter_file</i>] [<code>-p min_substr_len</code>] [<code>-s</code>] [<code>-c cl_seed</code>] [<code>-d</code>] [<code>-y</code>] [<code>-l</code>] [<code>-t</code>] [<code>-q</code>] [<code>-h</code>] [<code>-v</code>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>apg</code> generates several random passwords. It uses several password generation algorithms (currently two) and a built-in pseudo random number generator. </p>
 <p> Default algorithm is pronounceable password generation algorithm designed by <code>Morrie Gasser</code> and described in <code>A Random Word Generator For Pronounceable Passwords</code> <i>National Technical Information Service (NTIS)</i> <code>AD-A-017676.</code> The original paper is very old and had never been put online, so I have to use <i>NIST</i> implementation described in <code>FIPS-181.</code> </p>
 <p> Another algorithm is simple random character generation algorithm, but it uses four user-defined symbol sets to produce random password. It means that user can choose type of symbols that should appear in password. Symbol sets are: numeric symbol set (0,&#8230;,9), capital letters symbol set (A,&#8230;,Z), small letters symbol set (a,&#8230;,z) and special symbols symbol set (#,@,!,&#8230;). </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "cg_annotate(1)"
 name: "cg_annotate"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-cg_annotate/"
 description: "cg_annotate – post-processing tool for Cachegrind"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cg_annotate &#8211; post-processing tool for Cachegrind </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cg_annotate</code> [<i>options</i>] <i>cachegrind-out-file</i> [<i>source-files</i>&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>cg_annotate</code></p>
 <dd>takes an output file produced by the Valgrind tool Cachegrind and prints the information in an easy-to-read form.</dd>
 <h2>OPTIONS</h2>

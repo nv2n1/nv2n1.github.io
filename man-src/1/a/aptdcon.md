@@ -1,5 +1,4 @@
 ---
-
 title: "aptdcon(1)"
 name: "aptdcon"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-aptdcon/"
 description: "aptdcon – command line client for aptdaemon"
 ---
 
+<h2 class="name">NAME</h2>
+<p> aptdcon &#8211; command line client for aptdaemon </p>
+<h2>SYNOPSIS</h2>
 <p> <code>aptdcon</code> [<i>OPTIONS</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>aptdcon</code> allows to perform package management tasks, e.g. installing or removing software, using aptdaemon. There isn&#8217;t any need to be root to run this programme.</p>
 <h2>OPTIONS</h2>
 <dl>

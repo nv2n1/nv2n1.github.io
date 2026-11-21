@@ -1,5 +1,4 @@
 ---
-
 title: "memcapable(1)"
 name: "memcapable"
 section: "1"
@@ -10,7 +9,9 @@ description: "memcapable – libmemcached Documentation"
 
 <h2>NAME</h2>
 <p> memcapable &#8211; libmemcached Documentation</p>
+<h2>SYNOPSIS</h2>
 <p> memcapable [options]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>memcapable</code> connects to the specified memcached server and tries to determine its capabilities by running the various commands and verifying the response.</p>
 <h2>LIMITATIONS</h2>
 <p> The current version of memcapable will only verify the binary protocol.</p>

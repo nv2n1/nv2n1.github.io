@@ -1,5 +1,4 @@
 ---
-
 title: "gdk-pixbuf-query-loaders(1)"
 name: "gdk-pixbuf-query-loaders"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-gdk-pixbuf-query-loaders/"
 description: "gdk-pixbuf-query-loaders – GdkPixbuf loader registration utility"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gdk-pixbuf-query-loaders &#8211; GdkPixbuf loader registration utility </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gdk-pixbuf-query-loaders</code> [&#8211;update-cache] [MODULE&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>gdk-pixbuf-query-loaders</code></p>
 <dd>collects information about loadable modules for gdk-pixbuf and writes it to the default cache file location, or to stdout. </dd>
 <p> If called without arguments, it looks for modules in the gdk-pixbuf loader directory. </p>

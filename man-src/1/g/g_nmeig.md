@@ -1,5 +1,4 @@
 ---
-
 title: "g_nmeig(1)"
 name: "g_nmeig"
 section: "1"
@@ -11,7 +10,9 @@ description: "g_nmeig – diagonalizes the Hessian"
 <h2>NAME</h2>
 <p> g_nmeig &#8211; diagonalizes the Hessian </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>g_nmeig</code> <code>-f</code><i> hessian.mtx </i> <code>-s</code><i> topol.tpr </i> <code>-of</code><i> eigenfreq.xvg </i> <code>-ol</code><i> eigenval.xvg </i> <code>-v</code><i> eigenvec.trr </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-[no]xvgr</code><i></i> <code>-[no]m</code><i></i> <code>-first</code><i> int </i> <code>-last</code><i> int </i></p>
+<h2>DESCRIPTION</h2>
 <p> g_nmeig calculates the eigenvectors/values of a (Hessian) matrix, which can be calculated with <code> mdrun</code>. The eigenvectors are written to a trajectory file (<code> -v</code>). The structure is written first with t=0. The eigenvectors are written as frames with the eigenvector number as timestamp. The eigenvectors can be analyzed with <code> g_anaeig</code>. An ensemble of structures can be generated from the eigenvectors with <code> g_nmens</code>. When mass weighting is used, the generated eigenvectors will be scaled back to plain cartesian coordinates before generating the output &#8211; in this case they will no longer be exactly orthogonal in the standard cartesian norm (But in the mass weighted norm they would be).</p>
 <h2>FILES</h2>
 <p> <code>-f</code><i> hessian.mtx</i> <code>Input</code><br />

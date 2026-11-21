@@ -1,5 +1,4 @@
 ---
-
 title: "docker-latest-push(1)"
 name: "docker-latest-push"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-latest-push/"
 description: "docker-push – Push an image or a repository to a registry"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-push &#8211; Push an image or a repository to a registry </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker push</code> [<code>&#8211;help</code>] NAME[:TAG] | [REGISTRY_HOST[:REGISTRY_PORT]/]NAME[:TAG] </p>
+<h2>DESCRIPTION</h2>
 <p> Use docker push to share your images to the &lt;<a rel="nofollow" href="https://hub.docker.com">https://hub.docker.com</a>&gt; registry or to a self-hosted one. </p>
 <p> Refer to <code><a href="/docs/linux/man/1-docker-tag/">docker-tag</a>(1)</code> for more information about valid image and tag names. </p>
 <p> Killing the <code>docker push</code> process, for example by pressing <code>CTRL-c</code> while it is running in a terminal, terminates the push operation. </p>

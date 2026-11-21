@@ -1,5 +1,4 @@
 ---
-
 title: "cmsg(3)"
 name: "cmsg"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cmsg/"
 description: "CMSG_ALIGN, CMSG_SPACE, CMSG_NXTHDR, CMSG_FIRSTHDR – access ancillary data"
 ---
 
+<h2 class="name">NAME</h2>
+<p> CMSG_ALIGN, CMSG_SPACE, CMSG_NXTHDR, CMSG_FIRSTHDR &#8211; access ancillary data </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/socket.h&gt;
 struct cmsghdr *CMSG_FIRSTHDR(struct msghdr *msgh);
@@ -18,6 +20,7 @@ size_t CMSG_SPACE(size_t length);
 size_t CMSG_LEN(size_t length);
 unsigned char *CMSG_DATA(struct cmsghdr *cmsg);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> These macros are used to create and access control messages (also called ancillary data) that are not a part of the socket payload. This control information may include the interface the packet was received on, various rarely used header fields, an extended error description, a set of file descriptors, or UNIX credentials. For instance, control messages can be used to send additional header fields such as IP options. Ancillary data is sent by calling <code><a href="/docs/linux/man/2-sendmsg/">sendmsg</a></code>(2) and received by calling <code><a href="/docs/linux/man/2-recvmsg/">recvmsg</a></code>(2). See their manual pages for more information. </p>
 <p> Ancillary data is a sequence of <i>cmsghdr</i> structures with appended data. See the specific protocol man pages for the available control message types. The maximum ancillary buffer size allowed per socket can be set using <i>/proc/sys/net/core/optmem_max</i>; see <code><a href="/docs/linux/man/7-socket/">socket</a></code>(7). </p>
 <p> The <i>cmsghdr</i> structure is defined as follows: </p>

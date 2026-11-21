@@ -1,5 +1,4 @@
 ---
-
 title: "dlaqr1(3)"
 name: "dlaqr1"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlaqr1/"
 description: "dlaqr1.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlaqr1.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlaqr1</code> (N, H, LDH, SR1, SI1, SR2, SI2, V)<br />
  <i></i><code>DLAQR1</code> sets a scalar multiple of the first column of the product of 2-by-2 or 3-by-3 matrix H and specified shifts.</p>

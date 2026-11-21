@@ -1,5 +1,4 @@
 ---
-
 title: "bdflush(2)"
 name: "bdflush"
 section: "2"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/2-bdflush/"
 description: "bdflush – start, flush, or tune buffer-dirty-flush daemon"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bdflush &#8211; start, flush, or tune buffer-dirty-flush daemon </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/kdaemon.h&gt;
 int bdflush(int func, long *address);
 int bdflush(int func, long data);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <i>Note</i>: Since Linux 2.6, this system call is deprecated and does nothing. It is likely to disappear altogether in a future kernel release. Nowadays, the task performed by <code>bdflush</code>() is handled by the kernel <i>pdflush</i> thread. </p>
 <p> <code>bdflush</code>() starts, flushes, or tunes the buffer-dirty-flush daemon. Only a privileged process (one with the <code>CAP_SYS_ADMIN</code> capability) may call <code>bdflush</code>(). </p>
 <p> If <i>func</i> is negative or 0, and no daemon has been started, then <code>bdflush</code>() enters the daemon code and never returns. </p>

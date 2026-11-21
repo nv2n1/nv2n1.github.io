@@ -1,5 +1,4 @@
 ---
-
 title: "v4lctl(1)"
 name: "v4lctl"
 section: "1"
@@ -10,8 +9,10 @@ description: "xawtv-remote, v4lctl — control video4linux devices"
 
 <h2>NAME</h2>
 <p> xawtv-remote, v4lctl &#8212; control video4linux devices</p>
+<h2>SYNOPSIS</h2>
 <p> <code>xawtv-remote [ options ] command</code><br />
  <code>v4lctl [ options ] command</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>xawtv-remote</code> and <code>v4lctl</code> can be used to control a video4linux driven TV card. <code>xawtv-remote</code> passes the command to a already running xawtv or motv instance using X11 properties. <code>v4lctl</code> sets the parameters directly.</p>
 <h2>OPTIONS</h2>
 <p> <code>xawtv-remote</code> knows the following options:</p>

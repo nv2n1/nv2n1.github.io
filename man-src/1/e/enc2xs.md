@@ -1,5 +1,4 @@
 ---
-
 title: "enc2xs(1)"
 name: "enc2xs"
 section: "1"
@@ -7,11 +6,14 @@ letter: "e"
 url: "/docs/linux/man/1-enc2xs/"
 description: "enc2xs — Perl Encode Module Generator"
 ---
-
+<h2 class="name">NAME</h2>
+<p> enc2xs -- Perl Encode Module Generator </p>
+<h2>SYNOPSIS</h2>
 <pre><code>  enc2xs -[options]
   enc2xs -M ModName mapfiles...
   enc2xs -C
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <i>enc2xs</i> builds a Perl extension for use by Encode from either Unicode Character Mapping files (.ucm) or Tcl Encoding Files (.enc). Besides being used internally during the build process of the Encode module, you can use <i>enc2xs</i> to add your own encoding to perl. No knowledge of <font SIZE="-1">XS</font> is necessary.  </p>
 <h2>Quick Guide</h2>
 <p> If you want to know as little about Perl as possible but need to add a new encoding, just read this chapter and forget the rest. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "pg_config(1)"
 name: "pg_config"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pg_config/"
 description: "pg_config – retrieve information about the installed version of PostgreSQL"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pg_config &#8211; retrieve information about the installed version of PostgreSQL </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pg_config</code> [<i>option</i>&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The pg_config utility prints configuration parameters of the currently installed version of PostgreSQL. It is intended, for example, to be used by software packages that want to interface to PostgreSQL to facilitate finding the required header files and libraries.</dd>
 <h2>OPTIONS</h2>
 <p> To use pg_config, supply one or more of the following options: </p>

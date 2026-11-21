@@ -1,5 +1,4 @@
 ---
-
 title: "ksflatten(1)"
 name: "ksflatten"
 section: "1"
@@ -10,7 +9,9 @@ description: "ksflatten — flatten a kickstart file"
 
 <h2>NAME</h2>
 <p> ksflatten &#8212; flatten a kickstart file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ksflatten</code> [<code>-c</code> | <code>&#8211;config INFILE</code>] [<code>-o</code> | <code>&#8211;output OUTFILE</code>] [<code>-v</code> | <code>&#8211;version VERSION</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>ksflatten</code> is a program that takes an input kickstart file potentially containing includes and generates an output file with all the includes inlined.</p>
 <h2>EXIT STATUS</h2>
 <p> <code>ksflatten</code> returns 0 on success, and 1 if INFILE does not exist or there is an error parsing the kickstart file.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "glib-gettextize(1)"
 name: "glib-gettextize"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-glib-gettextize/"
 description: "glib-gettextize – gettext internationalization utility"
 ---
 
+<h2 class="name">NAME</h2>
+<p> glib-gettextize &#8211; gettext internationalization utility </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>glib-gettextize</code> [OPTION&#8230;] [DIRECTORY]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>glib-gettextize</code></p>
 <dd>helps to prepare a source package for being internationalized through gettext. It is a variant of the <code>gettextize</code> that ships with gettext. </dd>
 <p> <code>glib-gettextize</code> differs from <code>gettextize</code> in that it doesn&#8217;t create an intl/ subdirectory and doesn&#8217;t modify po/ChangeLog (note that newer versions of <code>gettextize</code> behave like this when called with the <code>&#8211;no-changelog</code> option).</p>

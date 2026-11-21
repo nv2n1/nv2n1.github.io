@@ -1,5 +1,4 @@
 ---
-
 title: "llvm-nm(1)"
 name: "llvm-nm"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-llvm-nm/"
 description: "llvm-nm – list LLVM bitcode file’s symbol table"
 ---
 
+<h2 class="name">NAME</h2>
+<p> llvm-nm &#8211; list LLVM bitcode file&#8217;s symbol table </p>
+<h2>SYNOPSIS</h2>
 <p> <code>llvm-nm</code> [<i>options</i>] [<i>filenames&#8230;</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>llvm-nm</code> utility lists the names of symbols from the <font SIZE="-1">LLVM</font> bitcode files, or <code>ar</code> archives containing <font SIZE="-1">LLVM</font> bitcode files, named on the command line. Each symbol is listed along with some simple information about its provenance. If no file name is specified, or <i>&#8211;</i> is used as a file name, <code>llvm-nm</code> will process a bitcode file on its standard input stream. </p>
 <p> <code>llvm-nm</code>&#8216;s default output format is the traditional <font SIZE="-1">BSD</font> <code>nm</code> output format. Each such output record consists of an (optional) 8-digit hexadecimal address, followed by a type code character, followed by a name, for each symbol. One record is printed per line; fields are separated by spaces. When the address is omitted, it is replaced by 8 spaces. </p>
 <p> Type code characters currently supported, and their meanings, are as follows:</p>

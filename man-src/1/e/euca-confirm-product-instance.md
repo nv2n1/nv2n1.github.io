@@ -1,5 +1,4 @@
 ---
-
 title: "euca-confirm-product-instance(1)"
 name: "euca-confirm-product-instance"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-confirm-product-instance – Verify if a product code is asso
 
 <h2>NAME</h2>
 <p> euca-confirm-product-instance &#8211; Verify if a product code is associated with an instance</p>
+<h2>SYNOPSIS</h2>
 <p> euca-confirm-product-instance <code>-i</code> INSTANCE [&#8211;show-empty-fields]</p>
 <dl>
 <dt>[-U URL] [&#8211;region USER [at] REGION]</dt>
 <dd> [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] CODE</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Verify if a product code is associated with an instance</p>
 <h3>positional arguments:</h3>
 <dl>

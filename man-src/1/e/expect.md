@@ -1,5 +1,4 @@
 ---
-
 title: "expect(1)"
 name: "expect"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-expect/"
 description: "expect – programmed dialogue with interactive programs, Version 5"
 ---
 
+<h2 class="name">NAME</h2>
+<p> expect &#8211; programmed dialogue with interactive programs, Version 5 </p>
+<h2>SYNOPSIS</h2>
 <p> <code>expect</code> [ <code>-dDinN</code> ] [ <code>-c</code> <i>cmds</i> ] [ [ <code>&#8211;</code>[<code>f</code>|<code>b</code>] ] <i>cmdfile</i> ] [ <i>args</i> ]</p>
 <h2>INTRODUCTION</h2>
 <p> <code>Expect</code> is a program that &quot;talks&quot; to other interactive programs according to a script. Following the script, <code>Expect</code> knows what can be expected from a program and what the correct response should be. An interpreted language provides branching and high-level control structures to direct the dialogue. In addition, the user can take control and interact directly when desired, afterward returning control to the script. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "bson_check_version(3)"
 name: "bson_check_version"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_check_version() – Check at runtime if this release of libbs
 
 <h2>NAME</h2>
 <p> bson_check_version() &#8211; Check at runtime if this release of libbson meets a required version.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 bool bson_check_version(int required_major,
                         int required_minor,
@@ -25,6 +25,7 @@ bool bson_check_version(int required_major,
 <dl>
 <dt><code>required_micro</code></dt>
 <dd> The minimum micro version required.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Check at runtime if this release of libbson meets a required version. </p>
 <h2>RETURNS</h2>
 <p> True if libbson&#8217;s version is greater than or equal to the required version. </p>

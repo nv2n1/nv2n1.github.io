@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-krb5_keytab_intro/"
 description: "krb5_keytab_intro – The keytab handing functions"
 ---
 
+<h2 class="name">NAME</h2>
+<p> krb5_keytab_intro &#8211; The keytab handing functions</p>
 <h2>Kerberos Keytabs</h2>
 <p> See the library functions here: <code>Heimdal Kerberos 5 keytab handling functions</code> </p>
 <p> Keytabs are long term key storage for servers, their equvalment of password files. </p>

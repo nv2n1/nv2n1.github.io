@@ -1,5 +1,4 @@
 ---
-
 title: "pq2-put(1)"
 name: "pq2-put"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pq2-put/"
 description: "pq2-put – Register one or more datasets in a dataset meta-repository based on ROOT files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pq2-put &#8211; Register one or more datasets in a dataset meta-repository based on ROOT files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pq2-put</code> [options] datasetfile</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>pq2-put</code> program. </p>
 <p> <code>pq2-put</code> is a script invoking the <code>pq2</code> ROOT application to register one or more datasets in a dataset meta-repository based on ROOT files; the repository can be accessed via the local file system or a remote file server daemon or a PROOF facility. </p>
 <p> More details about the underlying &#8216;pq2&#8217; application can be found in the man page <i><a href="/docs/linux/man/1-pq2/">pq2</a></i>(1).</p>

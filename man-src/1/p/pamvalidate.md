@@ -1,5 +1,4 @@
 ---
-
 title: "pamvalidate(1)"
 name: "pamvalidate"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pamvalidate/"
 description: "pamvalidate – validate Netpbm image format"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pamvalidate &#8211; validate Netpbm image format</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pamvalidate</code> </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamvalidate</code> copies a Netpbm image from Standard Input to Standard Output, except that if there are certain violations of the image format in the input, <code>pamvalidate</code> fails <i>without producing any output</i>. </p>
 <p> This is most useful in a pipeline, before a stage you don&#8217;t want to start working on Netpbm input until it knows it can get all the way through it. For example, assume you are converting PPM images to PNG and you don&#8217;t want to produce a partial PNG file under any circumstance. If you just use <code>pnmtopng</code>, and the PPM input is truncated halfway through the raster, <code>pnmtopng</code> fails, but also produces about half of a PNG file. To prevent that, pass your PPM input through <code>pamvalidate</code> on its way to <code>pnmtopng</code>. Then, <code>pamvalidate</code> will fail, and consequently the pipeline will fail, before <code>pnmtopng</code> has seen any input and therefore before <code>pnmtopng</code> has produced any output. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ares_save_options(3)"
 name: "ares_save_options"
 section: "3"
@@ -10,10 +9,12 @@ description: "ares_save_options – Save configuration values obtained from init
 
 <h2>NAME</h2>
 <p> ares_save_options &#8211; Save configuration values obtained from initialized ares_channel</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ares.h&gt;
 int ares_save_options(ares_channel channel, struct ares_options *options, int *optmask)
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-ares_save_options/">ares_save_options</a>(3)</code> function saves the channel data identified by <i>channel</i>, into the options struct identified by <i>options</i>, and saves the mask of options which are set to the integer pointer (passed by reference) identified by <i>optmask</i>. </p>
 <p> The resultant options and optmask are then able to be passed directly to ares_init_options. When the options are no longer needed, ares_destroy_options should be called to free any associated memory.</p>
 <h2>RETURN VALUES</h2>

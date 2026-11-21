@@ -1,5 +1,4 @@
 ---
-
 title: "sgghrd(3)"
 name: "sgghrd"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-sgghrd/"
 description: "sgghrd.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sgghrd.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sgghrd</code> (COMPQ, COMPZ, N, ILO, IHI, A, LDA, B, LDB, Q, LDQ, Z, LDZ, INFO)<br />
  <i></i><code>SGGHRD</code></p>

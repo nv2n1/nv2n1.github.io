@@ -1,5 +1,4 @@
 ---
-
 title: "yapp(1)"
 name: "yapp"
 section: "1"
@@ -7,7 +6,10 @@ letter: "y"
 url: "/docs/linux/man/1-yapp/"
 ---
 
-yapp - A perl frontend to the Parse::Yapp module 
+<h2 class="name">NAME</h2>
+ 
+
+ yapp - A perl frontend to the Parse::Yapp module 
 
 <h2>SYNOPSYS</h2>
 
@@ -17,7 +19,9 @@ yapp - A perl frontend to the Parse::Yapp module
 
  yapp <i>-h</i>
 
-yapp is a frontend to the Parse::Yapp module, which lets you compile Parse::Yapp grammar input files into Perl <font SIZE="-1"><i>LALR</i></font><i></i>(1) <font SIZE="-1">OO</font> parser modules.
+<h2>DESCRIPTION</h2>
+
+ yapp is a frontend to the Parse::Yapp module, which lets you compile Parse::Yapp grammar input files into Perl <font SIZE="-1"><i>LALR</i></font><i></i>(1) <font SIZE="-1">OO</font> parser modules.
 
 <h2>OPTIONS</h2>
 

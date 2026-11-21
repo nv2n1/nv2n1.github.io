@@ -1,5 +1,4 @@
 ---
-
 title: "davix-ls(1)"
 name: "davix-ls"
 section: "1"
@@ -10,7 +9,9 @@ description: "davix-ls – Listing tool based on libdavix"
 
 <h2>NAME</h2>
 <p> davix-ls &#8211; Listing tool based on libdavix</p>
+<h2>SYNOPSIS</h2>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> davix-ls [options]&#8230; url</p>
+<h2>DESCRIPTION</h2>
 <p> <code>davix-ls</code> is a tool to list resources in directories or collection with HTTP, Webdav or REST compatible services.<br />
  The command supports the WebDav (dav(s)://) and S3 (s3(s)://). </p>
 <p> davix-ls is powered by libdavix. See <a href="/docs/linux/man/3-libdavix/">libdavix</a>(3) for details. </p>

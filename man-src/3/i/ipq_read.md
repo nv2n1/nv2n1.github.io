@@ -1,5 +1,4 @@
 ---
-
 title: "ipq_read(3)"
 name: "ipq_read"
 section: "3"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/3-ipq_read/"
 description: "ipq_read — read queue messages from ip_queue and read into supplied buffer"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ipq_read &#8212; read queue messages from ip_queue and read into supplied buffer </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/linux/netfilter.h">linux/netfilter.h</a>&gt;</code><br />
  <code>#include &lt;<a href="file:/usr/include/libipq.h">libipq.h</a>&gt;</code> </p>
 <p> <code>ssize_t ipq_read(const struct ipq_handle *</code><i>h</i><code>, unsigned char *</code><i>buf</i><code>, size_t </code><i>len</i><code>, int </code><i>timeout</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>ipq_read</code> function reads a queue message from the kernel and copies it to the memory pointed to by <i>buf</i> to a maximum length of <i>len</i>. </p>
 <p> The <i>h</i> parameter is a context handle which must previously have been returned successfully from a call to <code>ipq_create_handle</code>. </p>
 <p> The caller is responsible for ensuring that the memory pointed to by <i>buf</i> is large enough to contain <i>len</i> bytes. </p>

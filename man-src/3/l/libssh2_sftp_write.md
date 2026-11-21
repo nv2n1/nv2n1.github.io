@@ -1,5 +1,4 @@
 ---
-
 title: "libssh2_sftp_write(3)"
 name: "libssh2_sftp_write"
 section: "3"
@@ -10,6 +9,7 @@ description: "libssh2_sftp_write – write SFTP data"
 
 <h2>NAME</h2>
 <p> libssh2_sftp_write &#8211; write SFTP data</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;libssh2.h&gt;
 #include &lt;libssh2_sftp.h&gt;
@@ -17,6 +17,7 @@ ssize_t libssh2_sftp_write(LIBSSH2_SFTP_HANDLE *handle,
                            const char *buffer,
                            size_t count);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_sftp_write/">libssh2_sftp_write</a>(3)</code> writes a block of data to the SFTP server. This method is modeled after the POSIX write() function and uses the same calling semantics. </p>
 <p> <i>handle</i> &#8211; SFTP file handle as returned by <i><a href="/docs/linux/man/3-libssh2_sftp_open_ex/">libssh2_sftp_open_ex</a>(3)</i>. </p>
 <p> <i>buffer</i> &#8211; points to the data to send off. </p>

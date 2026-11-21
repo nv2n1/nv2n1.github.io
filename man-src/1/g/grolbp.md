@@ -1,5 +1,4 @@
 ---
-
 title: "grolbp(1)"
 name: "grolbp"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-grolbp/"
 description: "grolbp – groff driver for Canon CAPSL printers (LBP-4 and LBP-8 series laser printers)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> grolbp &#8211; groff driver for Canon CAPSL printers (LBP-4 and LBP-8 series laser printers) </p>
+<h2>SYNOPSIS</h2>
 <p> [ <code>-l</code> ] [ <code>-c </code><i>num-copies</i> ] [ <code>-F </code><i>font-directory</i> ] [ <code>-o </code><i>orientation</i> ] [ <code>-p </code><i>paper-size</i> ] [ <code>-w </code><i>width</i> ] [<i>file</i> &#8230;] [<code>&#8211;copies=</code><i>num-copies</i>] [<code>&#8211;fontdir=</code><i>font-directory</i>] [<code>&#8211;landscape</code>] [<code>&#8211;linewidth=</code><i>width</i>] [<code>&#8211;orientation=</code><i>orientation</i>] [<code>&#8211;papersize=</code><i>paper-size</i>] [<i>file</i> &#8230;] <code>-h</code> <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>grolbp</code> is a driver for <code>groff</code> that produces output in CAPSL and VDM format suitable for Canon LBP-4 and LBP-8 printers. </p>
 <p> For compatibility with <code><a href="/docs/linux/man/1-grolj4/">grolj4</a></code>(1) there is an additional drawing command available:</p>
 <dl>

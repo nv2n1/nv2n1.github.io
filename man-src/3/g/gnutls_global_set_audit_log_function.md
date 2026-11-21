@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_global_set_audit_log_function(3)"
 name: "gnutls_global_set_audit_log_function"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_global_set_audit_log_function – API function"
 
 <h2>NAME</h2>
 <p> gnutls_global_set_audit_log_function &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_global_set_audit_log_function(gnutls_audit_log_func </code><i>log_func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_audit_log_func log_func</dt>
 <dd> it is the audit log function</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This is the function to set the audit logging function. This is a function to report important issues, such as possible attacks in the protocol. This is different from <code>gnutls_global_set_log_function()</code> because it will report also session-specific events. The session parameter will be null if there is no corresponding TLS session. </p>
 <p>&nbsp;<wbr><i>gnutls_audit_log_func</i>&nbsp;<wbr>is of the form, void (*gnutls_audit_log_func)( gnutls_session_t, const char*);</p>
 <h2>SINCE</h2>

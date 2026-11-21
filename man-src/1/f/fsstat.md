@@ -1,5 +1,4 @@
 ---
-
 title: "fsstat(1)"
 name: "fsstat"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-fsstat/"
 description: "fsstat – Display general details of a file system"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fsstat &#8211; Display general details of a file system </p>
+<h2>SYNOPSIS</h2>
 <p> <code>fsstat [-f </code> <i>fstype </i> <code>] [-i imgtype] [-o imgoffset] [-b dev_sector_size] [-tvV] </code> <i>image [images] </i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>fsstat</code> displays the details associated with a file system. The output of this command is file system specific. At a minimum, the range of meta-data values (inode numbers) and content units (blocks or clusters) are given. Also given are details from the Super Block, such as mount times and and features. For file systems that use groups (FFS and EXT2FS), the layout of each group is listed. </p>
 <p> For a FAT file system, the FAT table is displayed in a condensed format. Note that the data is in sectors and not in clusters. </p>
 <h2>ARGUMENTS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "hugin_stitch_project(1)"
 name: "hugin_stitch_project"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-hugin_stitch_project/"
 description: "hugin_stitch_project – Stitch a hugin project"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hugin_stitch_project &#8211; Stitch a hugin project </p>
+<h2>SYNOPSIS</h2>
 <p> <code>hugin_stitch_project</code> [options] [<i>&lt;project</i>&gt; <i>&lt;images</i>&gt; &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> A <font SIZE="-1">GUI</font> tool to stitch a single hugin project.</p>
 <h2>OPTIONS</h2>
 <dl>

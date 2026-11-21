@@ -1,5 +1,4 @@
 ---
-
 title: "lv2_list(1)"
 name: "lv2_list"
 section: "1"
@@ -8,7 +7,9 @@ url: "/docs/linux/man/1-lv2_list/"
 description: "lv2_list – List all installed LV2 plugins."
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>lv2_list &#8211; List all installed LV2 plugins.</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>lv2_list</code> </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-slv2/">slv2</a>(3),</code> <code><a href="/docs/linux/man/1-lv2_list/">lv2_list</a>(1),</code> <code><a href="/docs/linux/man/1-lv2_jack_host/">lv2_jack_host</a>(1),</code> <code><a href="/docs/linux/man/1-lv2_simple_jack_host/">lv2_simple_jack_host</a>(1)</code> </p>

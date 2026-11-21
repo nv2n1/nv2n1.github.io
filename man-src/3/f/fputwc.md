@@ -1,5 +1,4 @@
 ---
-
 title: "fputwc(3)"
 name: "fputwc"
 section: "3"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/3-fputwc/"
 description: "fputwc, putwc – write a wide character to a FILE stream"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fputwc, putwc &#8211; write a wide character to a FILE stream </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdio.h&gt;
 #include &lt;wchar.h&gt;
 wint_t fputwc(wchar_t wc, FILE *stream);
 wint_t putwc(wchar_t wc, FILE *stream);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>fputwc</code>() function is the wide-character equivalent of the <code><a href="/docs/linux/man/3-fputc/">fputc</a></code>(3) function. It writes the wide character <i>wc</i> to <i>stream</i>. If <i>ferror(stream)</i> becomes true, it returns <code>WEOF</code>. If a wide-character conversion error occurs, it sets <i>errno</i> to <code>EILSEQ</code> and returns <code>WEOF</code>. Otherwise, it returns <i>wc</i>. </p>
 <p> The <code>putwc</code>() function or macro functions identically to <code>fputwc</code>(). It may be implemented as a macro, and may evaluate its argument more than once. There is no reason ever to use it. </p>
 <p> For nonlocking counterparts, see <code><a href="/docs/linux/man/3-unlocked_stdio/">unlocked_stdio</a></code>(3).</p>

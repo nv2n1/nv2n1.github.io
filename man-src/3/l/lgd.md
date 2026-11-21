@@ -1,5 +1,4 @@
 ---
-
 title: "lgd(3)"
 name: "lgd"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-lgd/"
 description: "QuantLib::Basket –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> QuantLib::Basket &#8211; </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/experimental/credit/basket.hpp&gt; </p>
 <h3>Public Member Functions</h3>
 <p> <code>Basket</code> (const std::vector&lt; std::string &gt; &amp;names, const std::vector&lt; <code>Real</code> &gt; &amp;notionals, const boost::shared_ptr&lt; Pool &gt; pool, <code>Real</code> attachmentRatio=0.0, <code>Real</code> detachmentRatio=1.0) </p>

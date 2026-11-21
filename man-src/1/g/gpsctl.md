@@ -1,5 +1,4 @@
 ---
-
 title: "gpsctl(1)"
 name: "gpsctl"
 section: "1"
@@ -7,10 +6,13 @@ letter: "g"
 url: "/docs/linux/man/1-gpsctl/"
 description: "gpsctl – control the modes of a GPS"
 ---
-
+<h2 class="name">NAME</h2>
+<p> gpsctl - control the modes of a GPS </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>gpsctl</code> [-h] [-b | -n] [-x&nbsp;<wbr><i>control</i>] [-e] [-f] [-l] [-s&nbsp;<wbr><i>speed</i>] [-t&nbsp;<wbr><i>devicetype</i>] [-D&nbsp;<wbr><i>debuglevel</i>] [-V] [<i>serial-port</i>] </dt>
 </dl>
+<h2>DESCRIPTION</h2>
 <dd> <p> gpsctl can switch a dual-mode GPS between NMEA and vendor-binary modes. It can also be used to set the device baudrate. Note: Not all devices have these capabilities. </p>
 <p> If you have only one GPS attached to your machine, and gpsd is running, it is not necessary to specify the device; gpsctl does its work through gpsd, which will locate it for you. </p>
 <p> When gpsd is not running, the device specification is required, and you will need to be running as root or be a member of the device&#8217;s owning group in order to have write access to the device. On many Unix variants the owning group will be named &#8216;dialout&#8217;. </p>

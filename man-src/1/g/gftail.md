@@ -1,5 +1,4 @@
 ---
-
 title: "gftail(1)"
 name: "gftail"
 section: "1"
@@ -10,7 +9,9 @@ description: "gftail – manual page for gftail (glusterfs-coreutils) 0.2.0"
 
 <h2>NAME</h2>
 <p> gftail &#8211; manual page for gftail (glusterfs-coreutils) 0.2.0</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gftail</code> [<i>OPTION</i>]&#8230; <i>URL</i></p>
+<h2>DESCRIPTION</h2>
 <p> Print the last 10 lines (default) of the file to standard output.</p>
 <dl>
 <dt><code>-c</code>, <code>&#8211;bytes</code>=<i>K</i></dt>

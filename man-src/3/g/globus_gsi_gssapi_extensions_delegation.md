@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_gsi_gssapi_extensions_delegation/"
 description: "Delegation –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Delegation &#8211; </p>
 <p> Delegation Functions.</p>
 <h3>Functions</h3>
 <p> OM_uint32 GSS_CALLCONV <code>gss_accept_delegation</code> (OM_uint32 *minor_status, const gss_ctx_id_t context_handle, const gss_OID_set extension_oids, const gss_buffer_set_t extension_buffers, const gss_buffer_t input_token, OM_uint32 req_flags, OM_uint32 time_req, OM_uint32 *time_rec, gss_cred_id_t *delegated_cred_handle, gss_OID *mech_type, gss_buffer_t output_token)<br />

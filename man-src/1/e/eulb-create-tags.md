@@ -1,5 +1,4 @@
 ---
-
 title: "eulb-create-tags(1)"
 name: "eulb-create-tags"
 section: "1"
@@ -10,10 +9,12 @@ description: "eulb-create-tags – Add one or more tags to a load balancer"
 
 <h2>NAME</h2>
 <p> eulb-create-tags &#8211; Add one or more tags to a load balancer</p>
+<h2>SYNOPSIS</h2>
 <p> eulb-create-tags <code>-t</code> KEY=VALUE [-U URL] [&#8211;region USER [at] REGION]</p>
 <dl>
 <dt>[-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN]</dt>
 <dd> [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ELB</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Add one or more tags to a load balancer</p>
 <h3>positional arguments:</h3>
 <dl>

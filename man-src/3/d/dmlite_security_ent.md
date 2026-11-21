@@ -1,5 +1,4 @@
 ---
-
 title: "dmlite_security_ent(3)"
 name: "dmlite_security_ent"
 section: "3"
@@ -8,7 +7,10 @@ url: "/docs/linux/man/3-dmlite_security_ent/"
 description: "dmlite_security_ent –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dmlite_security_ent &#8211; </p>
 <p> Used to handle user and group information.</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;dmlite.h&gt;</p>
 <h3>Data Fields</h3>
 <p> const char * <code>name</code> </p>

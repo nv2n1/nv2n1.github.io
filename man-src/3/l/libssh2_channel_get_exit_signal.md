@@ -1,5 +1,4 @@
 ---
-
 title: "libssh2_channel_get_exit_signal(3)"
 name: "libssh2_channel_get_exit_signal"
 section: "3"
@@ -11,11 +10,15 @@ url: "/docs/linux/man/3-libssh2_channel_get_exit_signal/"
 
  libssh2_channel_get_exit_signal - get the remote exit signal
 
-#include &lt;libssh2.h&gt; 
+<h2>SYNOPSIS</h2>
+
+ #include &lt;libssh2.h&gt; 
 
  int libssh2_channel_get_exit_signal(LIBSSH2_CHANNEL *channel, char **exitsignal, size_t *exitsignal_len, char **errmsg, size_t *errmsg_len, char **langtag, size_t *langtag_len); 
 
-<i>channel</i> - Closed channel stream to retrieve exit signal from. 
+<h2>DESCRIPTION</h2>
+
+ <i>channel</i> - Closed channel stream to retrieve exit signal from. 
 
  <i>exitsignal</i> - If not NULL, is populated by reference with the exit signal (without leading &quot;SIG&quot;). Note that the string is stored in a newly allocated buffer. If the remote program exited cleanly, the referenced string pointer will be set to NULL. 
 

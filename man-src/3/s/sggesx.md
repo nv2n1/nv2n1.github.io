@@ -1,5 +1,4 @@
 ---
-
 title: "sggesx(3)"
 name: "sggesx"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-sggesx/"
 description: "sggesx.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sggesx.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sggesx</code> (JOBVSL, JOBVSR, SORT, SELCTG, SENSE, N, A, LDA, B, LDB, SDIM, ALPHAR, ALPHAI, BETA, VSL, LDVSL, VSR, LDVSR, RCONDE, RCONDV, WORK, LWORK, IWORK, LIWORK, BWORK, INFO)<br />
  <i></i><code> SGGESX computes the eigenvalues, the Schur form, and, optionally, the matrix of Schur vectors for GE matrices</code></p>

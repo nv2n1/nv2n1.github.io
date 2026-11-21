@@ -1,5 +1,4 @@
 ---
-
 title: "pilot-foto(1)"
 name: "pilot-foto"
 section: "1"
@@ -12,7 +11,9 @@ description: "pilot-foto – Palm ‘Foto’ Image Installer/Remover/Fetcher/Con
 <p> pilot-foto &#8211; Palm &#8216;Foto&#8217; Image Installer/Remover/Fetcher/Converter</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>
+<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr><i>pilot-foto</i>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;port</code>&nbsp;<wbr>&lt;<code>port</code>&gt;]&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr>[<code>-?</code>|<code>&#8211;help</code>]&nbsp;<wbr>[<code>-q</code>|<code>&#8211;quiet</code>]&nbsp;<wbr>[<code>&#8211;usage</code>]&nbsp;<wbr>[<code>-d</code>|<code>&#8211;delete</code>]&nbsp;<wbr>[<code>&#8211;delete-all</code>]&nbsp;<wbr>[<code>-i</code>|<code>&#8211;install</code>]&nbsp;<wbr>[<code>-l</code>|<code>&#8211;list</code>]&nbsp;<wbr>[<code>-f</code>|<code>&#8211;fetch</code>]&nbsp;<wbr>[<code>-F</code>|<code>&#8211;fetch-all</code>]&nbsp;<wbr>[<code>-c</code>|<code>&#8211;convert</code>] </p>
+<h2>DESCRIPTION</h2>
 <p> This is a palm conduit to fetch, install, or remove, Foto files from a Palm. It can also convert *.jpg.pdb files that have already been fetched from the Palm to jpeg files. </p>
 <p> Delete all, or named fotos from handheld. </p>
 <p> Install one, or many jpeg images to handheld. </p>

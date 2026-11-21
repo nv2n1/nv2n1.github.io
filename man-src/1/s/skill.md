@@ -1,5 +1,4 @@
 ---
-
 title: "skill(1)"
 name: "skill"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-skill/"
 description: "skill, snice – send a signal or report process status"
 ---
 
+<h2 class="name">NAME</h2>
+<p> skill, snice &#8211; send a signal or report process status </p>
+<h2>SYNOPSIS</h2>
 <p> <code>skill</code> [<i>signal</i>] [<i>options</i>] <i>expression</i><br />
  <code>snice</code> [<i>new priority</i>] [<i>options</i>] <i>expression</i></p>
+<h2>DESCRIPTION</h2>
 <p> These tools are obsolete and unportable. The command syntax is poorly defined. Consider using the killall, pkill, and pgrep commands instead. </p>
 <p> The default signal for skill is TERM. Use -l or -L to list available signals. Particularly useful signals include HUP, INT, KILL, STOP, CONT, and 0. Alternate signals may be specified in three ways: -9 -SIGKILL -KILL. </p>
 <p> The default priority for snice is +4. Priority numbers range from +20 (slowest) to -20 (fastest). Negative priority numbers are restricted to administrative users.</p>

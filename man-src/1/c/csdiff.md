@@ -1,5 +1,4 @@
 ---
-
 title: "csdiff(1)"
 name: "csdiff"
 section: "1"
@@ -10,7 +9,9 @@ description: "csdiff – manual page for csdiff 1.3.2"
 
 <h2>NAME</h2>
 <p> csdiff &#8211; manual page for csdiff 1.3.2</p>
+<h2>SYNOPSIS</h2>
 <p> <code>csdiff</code> [<i>options</i>] <i>old.err new.err, where options are:</i></p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt><code>-x</code> [ <code>&#8211;fixed</code> ]</dt>
 <dd> print fixed defects (just swaps the arguments)</dd>

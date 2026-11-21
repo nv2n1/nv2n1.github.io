@@ -1,5 +1,4 @@
 ---
-
 title: "obenergy(1)"
 name: "obenergy"
 section: "1"
@@ -10,7 +9,9 @@ description: "obenergy – calculate the energy for a molecule"
 
 <h2>NAME</h2>
 <p> <code>obenergy</code> &#8211; calculate the energy for a molecule</p>
+<h2>SYNOPSIS</h2>
 <p> [<i>OPTIONS</i> ] <i>filename</i></p>
+<h2>DESCRIPTION</h2>
 <p> The obenergy tool can be used to calculate the energy for molecules inside (multi-)molecule files (e.g., MOL2, etc.)</p>
 <h2>OPTIONS</h2>
 <p> If no filename is given, obenergy will give all options including the available forcefields.</p>

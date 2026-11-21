@@ -1,5 +1,4 @@
 ---
-
 title: "ocamldebug(1)"
 name: "ocamldebug"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ocamldebug/"
 description: "ocamldebug – the OCaml source-level replay debugger."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ocamldebug &#8211; the OCaml source-level replay debugger. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ocamldebug</code> [&nbsp;<wbr><i>options</i>&nbsp;<wbr>]&nbsp;<wbr><i>program</i>&nbsp;<wbr>[&nbsp;<wbr><i>arguments</i>&nbsp;<wbr>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>ocamldebug</code> is the OCaml source-level replay debugger. </p>
 <p> Before the debugger can be used, the program must be compiled and linked with the <code>-g</code> option: all .cmo and .cma files that are part of the program should have been created with <code>ocamlc -g</code>, and they must be linked together with <code>ocamlc -g</code>. </p>
 <p> Compiling with <code>-g</code> entails no penalty on the running time of programs: object files and bytecode executable files are bigger and take longer to produce, but the executable files run at exactly the same speed as if they had been compiled without <code>-g</code>. </p>

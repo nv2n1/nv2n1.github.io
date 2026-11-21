@@ -1,5 +1,4 @@
 ---
-
 title: "zarafa-passwd(1)"
 name: "zarafa-passwd"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-zarafa-passwd/"
 description: "zarafa-passwd – Change Zarafa user password."
 ---
 
+<h2 class="name">NAME</h2>
+<p> zarafa-passwd &#8211; Change Zarafa user password. </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>zarafa-passwd</code> <i>ACTION</i> [<i>OPTION</i>&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This tool can be used to change a user password. The Zarafa server must be running for <code>zarafa-passwd</code> to work. </dd>
 <p> If no action is given, an error message is printed. When invalid actions or not enough options for an action are given, an error message is printed. </p>
 <p> The Zarafa passwd works only with the dbplugin. Please see the <code>EXTERNAL USERS</code>() section for more information.</p>

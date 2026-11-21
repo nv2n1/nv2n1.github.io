@@ -1,5 +1,4 @@
 ---
-
 title: "vi(1)"
 name: "vi"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-vi/"
 description: "vim – Vi IMproved, a programmer’s text editor"
 ---
 
+<h2 class="name">NAME</h2>
+<p> vim &#8211; Vi IMproved, a programmer&#8217;s text editor </p>
+<h2>SYNOPSIS</h2>
 <p> <code>vim</code> [options] [file ..]<br />
  <code>vim</code> [options] &#8211;<br />
  <code>vim</code> [options] -t tag<br />
@@ -16,6 +18,7 @@ description: "vim – Vi IMproved, a programmer’s text editor"
  <code>view</code><br />
  <code>gvim</code> <code>gview</code> <code>evim</code> <code>eview</code><br />
  <code>rvim</code> <code>rview</code> <code>rgvim</code> <code>rgview</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>Vim</code> is a text editor that is upwards compatible to Vi. It can be used to edit all kinds of plain text. It is especially useful for editing programs. </p>
 <p> There are a lot of enhancements above Vi: multi level undo, multi windows and buffers, syntax highlighting, command line editing, filename completion, on-line help, visual selection, etc.. See &quot;:help vi_diff.txt&quot; for a summary of the differences between <code>Vim</code> and Vi. </p>
 <p> While running <code>Vim</code> a lot of help can be obtained from the on-line help system, with the &quot;:help&quot; command. See the ON-LINE HELP section below. </p>

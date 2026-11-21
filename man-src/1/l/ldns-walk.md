@@ -1,5 +1,4 @@
 ---
-
 title: "ldns-walk(1)"
 name: "ldns-walk"
 section: "1"
@@ -10,7 +9,9 @@ description: "ldns-walk – Retrieve the contents of a DNSSEC signed zone"
 
 <h2>NAME</h2>
 <p> ldns-walk &#8211; Retrieve the contents of a DNSSEC signed zone</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ldns-walk</code> [ <i>OPTION</i> ] <i>ZONE</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>ldns-walk</code> is used to retrieve the contents of a DNSSEC signed zone. It does this through NSEC-walking (following the chain of NSEC records) and &#8216;guessing&#8217; the next non-existent owner name for each NSEC. </p>
 <p> Note that it might get stuck on some wildcard records when used through a caching forwarder. This problem can be circumvented by querying the authoritative nameserver directly (with the @ argument). </p>
 <p> Of course the nameserver that is used must be DNSSEC-aware. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ioctl_fat(2)"
 name: "ioctl_fat"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-ioctl_fat/"
 description: "ioctl_fat – manipulating the FAT filesystem"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ioctl_fat &#8211; manipulating the FAT filesystem </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/msdos_fs.h&gt;
 #include &lt;sys/ioctl.h&gt;
@@ -19,6 +21,7 @@ int ioctl(int fd, VFAT_IOCTL_READDIR_BOTH,
 int ioctl(int fd, VFAT_IOCTL_READDIR_SHORT,
           struct __fat_dirent[2] entry);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) system call can be used to read and write metadata of FAT filesystems that are not accessible using other system calls.</p>
 <h3>Reading and setting file attributes</h3>
 <p> Files and directories in the FAT filesystem possess an attribute bit mask that can be read with <code>FAT_IOCTL_GET_ATTRIBUTES</code> and written with <code>FAT_IOCTL_SET_ATTRIBUTES</code>. </p>

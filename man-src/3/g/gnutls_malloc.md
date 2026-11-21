@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_malloc(3)"
 name: "gnutls_malloc"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_malloc – Allocates and returns data"
 
 <h2>NAME</h2>
 <p> gnutls_malloc &#8211; Allocates and returns data</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/gnutls.h">gnutls/gnutls.h</a>&gt;</code> </p>
 <p> <code>void * gnutls_malloc(size_t </code><i>s</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>size_t s</dt>
 <dd></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will allocate &#8216;s&#8217; bytes data, and return a pointer to memory. This function is supposed to be used by callbacks. </p>
 <p> The allocation function used is the one set by <code>gnutls_global_set_mem_functions()</code>.</p>
 <h2>REPORTING BUGS</h2>

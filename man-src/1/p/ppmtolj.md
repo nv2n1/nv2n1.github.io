@@ -1,5 +1,4 @@
 ---
-
 title: "ppmtolj(1)"
 name: "ppmtolj"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ppmtolj/"
 description: "ppmtolj – convert a portable pixmap to an HP LaserJet PCL 5 Color file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ppmtolj &#8211; convert a portable pixmap to an HP LaserJet PCL 5 Color file </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ppmtolj</code> [-gamma <i>val</i>] [<code>-resolution</code> <code>75|100|150|300|600</code>] [<code>-delta</code>] [<code>-float]</code> <code>[</code>-noreset] [<i>ppmfile</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Reads a portable pixmap as input and converts it into a color file suitable to be printed by an HP color PCL 5 printer. </p>
 <h2>OPTIONS</h2>
 <dl>

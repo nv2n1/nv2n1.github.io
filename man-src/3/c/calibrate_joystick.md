@@ -1,5 +1,4 @@
 ---
-
 title: "calibrate_joystick(3)"
 name: "calibrate_joystick"
 section: "3"
@@ -10,8 +9,10 @@ description: "calibrate_joystick – Calibrates the specified joystick. Allegro 
 
 <h2>NAME</h2>
 <p> calibrate_joystick &#8211; Calibrates the specified joystick. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>int calibrate_joystick(int n);</code></p>
+<h2>DESCRIPTION</h2>
 <p> Most joysticks need to be calibrated before they can provide full analogue input. This function performs the next operation in the calibration series for the specified stick, assuming that the joystick has been positioned in the manner described by a previous call to calibrate_joystick_name(), returning zero on success. For example, a simple routine to fully calibrate all the joysticks might look like: </p>
 <pre><code>
 int i;

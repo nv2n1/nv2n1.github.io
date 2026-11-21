@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_ocsp_status_request_enable_client(3)"
 name: "gnutls_ocsp_status_request_enable_client"
 section: "3"
@@ -11,7 +10,9 @@ url: "/docs/linux/man/3-gnutls_ocsp_status_request_enable_client/"
 
  gnutls_ocsp_status_request_enable_client - API function
 
-<b>#include &lt;gnutls/gnutls.h&gt;</b> 
+<h2>SYNOPSIS</h2>
+
+ <b>#include &lt;gnutls/gnutls.h&gt;</b> 
 
  <b>int gnutls_ocsp_status_request_enable_client(gnutls_session_t </b><i>session</i><b>, gnutls_datum_t * </b><i>responder_id</i><b>, size_t </b><i>responder_id_size</i><b>, gnutls_datum_t * </b><i>extensions</i><b>);</b>
 
@@ -27,7 +28,9 @@ url: "/docs/linux/man/3-gnutls_ocsp_status_request_enable_client/"
 </dd><dt>gnutls_datum_t * extensions
 </dt><dd> a <b>gnutls_datum_t</b> with DER encoded OCSP extensions</dd></dl>
 
-This function is to be used by clients to request OCSP response from the server, using the &quot;status_request&quot; TLS extension. Only OCSP status type is supported. A typical server has a single OCSP response cached, so <i>responder_id</i> and <i>extensions</i> should be null.
+<h2>DESCRIPTION</h2>
+
+ This function is to be used by clients to request OCSP response from the server, using the &quot;status_request&quot; TLS extension. Only OCSP status type is supported. A typical server has a single OCSP response cached, so <i>responder_id</i> and <i>extensions</i> should be null.
 
 <h2>RETURNS</h2>
 

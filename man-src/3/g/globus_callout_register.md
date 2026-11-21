@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_callout_register/"
 description: "Callout Configuration –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Callout Configuration &#8211; </p>
 <p> Register callouts.</p>
 <h3>Functions</h3>
 <p> globus_result_t <code>globus_callout_read_config</code> (<code>globus_callout_handle_t</code> handle, char *filename) </p>

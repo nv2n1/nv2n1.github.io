@@ -1,5 +1,4 @@
 ---
-
 title: "pylint(1)"
 name: "pylint"
 section: "1"
@@ -10,7 +9,9 @@ description: "pylint – python code static checker"
 
 <h2>NAME</h2>
 <p> <code>pylint </code> &#8211; python code static checker </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pylint</code> [ <i>OPTIONS</i> ] [ <i>&lt;arguments&gt;</i> ] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>pylint </code> is a Python source code analyzer which looks for programming errors, helps enforcing a coding standard and sniffs for some code smells (as defined in Martin Fowler&#8217;s Refactoring book) </p>
 <p> Pylint can be seen as another PyChecker since nearly all tests you can do with PyChecker can also be done with Pylint. However, Pylint offers some more features, like checking length of lines of code, checking if variable names are well-formed according to your coding standard, or checking if declared interfaces are truly implemented, and much more. </p>
 <p> Additionally, it is possible to write plugins to add your own checks. </p>

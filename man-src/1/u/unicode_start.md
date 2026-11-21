@@ -1,5 +1,4 @@
 ---
-
 title: "unicode_start(1)"
 name: "unicode_start"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-unicode_start/"
 description: "unicode_start – put keyboard and console in unicode mode"
 ---
 
+<h2 class="name">NAME</h2>
+<p> unicode_start &#8211; put keyboard and console in unicode mode </p>
+<h2>SYNOPSIS</h2>
 <p> <code>unicode_start</code> [<i>font</i> [<i>umap</i>]]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>unicode_start</code> command will put the keyboard and console into Unicode (UTF-8) mode. </p>
 <p> For the keyboard this means that one can attach 16-bit U+xxxx values to keyboard keys using <code><a href="/docs/linux/man/1-loadkeys/">loadkeys</a></code>(1), and have these appear as UTF-8 input to user programs. Also, that one can type hexadecimal Alt-xxxx using the numeric keypad, and again produce UTF-8. </p>
 <p> For the console this means that the kernel expects UTF-8 output from user programs, and displays the output accordingly. </p>

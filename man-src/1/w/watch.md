@@ -1,5 +1,4 @@
 ---
-
 title: "watch(1)"
 name: "watch"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-watch/"
 description: "watch – execute a program periodically, showing output fullscreen"
 ---
 
+<h2 class="name">NAME</h2>
+<p> watch &#8211; execute a program periodically, showing output fullscreen </p>
+<h2>SYNOPSIS</h2>
 <p> <code>watch</code> [<i>options</i>] <i>command</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>watch</code> runs <i>command</i> repeatedly, displaying its output and errors (the first screenfull). This allows you to watch the program output change over time. By default, <i>command</i> is run every 2 seconds and <code>watch</code> will run until interrupted.</p>
 <h2>OPTIONS</h2>
 <dl>

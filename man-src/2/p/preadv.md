@@ -1,5 +1,4 @@
 ---
-
 title: "preadv(2)"
 name: "preadv"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-preadv/"
 description: "readv, writev, preadv, pwritev, preadv2, pwritev2 – read or write data into multiple buffers"
 ---
 
+<h2 class="name">NAME</h2>
+<p> readv, writev, preadv, pwritev, preadv2, pwritev2 &#8211; read or write data into multiple buffers </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/uio.h&gt;
 ssize_t readv(int fd, const struct iovec *iov, int iovcnt);
@@ -27,6 +29,7 @@ ssize_t pwritev2(int fd, const struct iovec *iov, int iovcnt,
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>readv</code>() system call reads <i>iovcnt</i> buffers from the file associated with the file descriptor <i>fd</i> into the buffers described by <i>iov</i> (&quot;scatter input&quot;). </p>
 <p> The <code>writev</code>() system call writes <i>iovcnt</i> buffers of data described by <i>iov</i> to the file associated with the file descriptor <i>fd</i> (&quot;gather output&quot;). </p>
 <p> The pointer <i>iov</i> points to an array of <i>iovec</i> structures, defined in <i>&lt;sys/uio.h&gt;</i> as: </p>

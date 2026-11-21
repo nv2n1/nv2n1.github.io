@@ -1,5 +1,4 @@
 ---
-
 title: "gchempaint(1)"
 name: "gchempaint"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-gchempaint/"
 description: "gchempaint – 2D chemical structures editor for the GNOME2 desktop"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gchempaint &#8211; 2D chemical structures editor for the GNOME2 desktop </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gchempaint</code> [<code>OPTIONS</code>&#8230;] [<i>FILE</i>&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>gchempaint</code></p>
 <dd>is a 2D chemical structures editor for the GNOME2 desktop. It is a multi document application. You can read different file types with <code>gchempaint</code>. E.g. chemical/x-cml, chemical/x-mdl-molfile, chemical/x-mdl-sdfile or chemical/x-pdb. But be aware, that you will maybe loose 3D-data from these file-formats.</dd>
 <h2>OPTIONS</h2>

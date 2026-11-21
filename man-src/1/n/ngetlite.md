@@ -1,5 +1,4 @@
 ---
-
 title: "ngetlite(1)"
 name: "ngetlite"
 section: "1"
@@ -10,7 +9,9 @@ description: "ngetlite – retrieve files from NNTP hosts"
 
 <h2>NAME</h2>
 <p> ngetlite &#8211; retrieve files from NNTP hosts</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ngetlite &lt;listfiles&#8230;&gt;</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>ngetlite</code> retrieves messages as described in each listfile. Listfiles are generated with:<br />
  <code>nget -w &lt;listfile&gt; &lt;retrieval args&gt;</code> </p>
 <p> In almost all circumstances, you will want to download and decode directly with nget. However, in some cases ngetlite can be useful on computers with low ram or cpu, that can&#8217;t handle the large cache files needed for some groups. You can run nget -w on some other computer and then do the actual downloading with ngetlite using very little resources.</p>

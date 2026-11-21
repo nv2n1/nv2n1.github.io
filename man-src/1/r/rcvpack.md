@@ -1,5 +1,4 @@
 ---
-
 title: "rcvpack(1)"
 name: "rcvpack"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-rcvpack/"
 description: "rcvpack – append message to file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rcvpack &#8211; append message to file </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>/usr/libexec/nmh/rcvpack</code> <i>file</i> [<code>-mbox</code>] [<code>-mmdf</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>rcvpack</code> program will append a copy of the message to the file listed on its command line. </dd>
 <p> If the <code>-mbox</code> switch is given (the default), then the messages are separated using mbox (uucp) style delimiters. This is the format used by most mail clients (elm, mailx, etc.). </p>
 <p> If the <code>-mmdf</code> switch is given, then the messages are separated by mmdf style delimiters. Each message in the file is separated by four CTRL-A&#8217;s and a newline. </p>

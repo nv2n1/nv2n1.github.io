@@ -1,5 +1,4 @@
 ---
-
 title: "ck_pr_fence_store_load(3)"
 name: "ck_pr_fence_store_load"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_pr_fence_store_load – enforce ordering of store operations to
 <p> <code>ck_pr_fence_store_load</code> &#8211; enforce ordering of store operations to load operations</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_pr.h Ft void Fn ck_pr_fence_store_load void Ft void Fn ck_pr_fence_strict_store_load void</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_pr_fence_store_load function enfores the ordering of any memory store, Fn ck_pr_store and atomic read-modify-write operations to load operations relative to the invocation of the function. This function always serve as an implicit compiler barrier. A fence will currently always be emitted for this operation, including for TSO memory model targets.</p>
 <h2>EXAMPLE</h2>
 <blockquote>

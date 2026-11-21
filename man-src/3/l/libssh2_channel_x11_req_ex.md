@@ -1,5 +1,4 @@
 ---
-
 title: "libssh2_channel_x11_req_ex(3)"
 name: "libssh2_channel_x11_req_ex"
 section: "3"
@@ -10,9 +9,11 @@ description: "libssh2_channel_x11_req_ex – request an X11 forwarding channel"
 
 <h2>NAME</h2>
 <p> libssh2_channel_x11_req_ex &#8211; request an X11 forwarding channel</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
 <p> int libssh2_channel_x11_req_ex(LIBSSH2_CHANNEL *channel, int single_connection, const char *auth_proto, const char *auth_cookie, int screen_number); </p>
 <p> int libssh2_channel_x11_req(LIBSSH2_CHANNEL *channel, int screen_number); </p>
+<h2>DESCRIPTION</h2>
 <p> <i>channel</i> &#8211; Previously opened channel instance such as returned by <code><a href="/docs/linux/man/3-libssh2_channel_open_ex/">libssh2_channel_open_ex</a>(3)</code> </p>
 <p> <i>single_connection</i> &#8211; non-zero to only forward a single connection. </p>
 <p> <i>auth_proto</i> &#8211; X11 authentication protocol to use </p>

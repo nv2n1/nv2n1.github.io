@@ -1,5 +1,4 @@
 ---
-
 title: "binomialtree(3)"
 name: "binomialtree"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-binomialtree/"
 description: "ql/methods/lattices/binomialtree.hpp – Binomial tree class."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/methods/lattices/binomialtree.hpp &#8211; Binomial tree class. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/methods/lattices/tree.hpp&gt;<br />
  #include &lt;ql/instruments/dividendschedule.hpp&gt;<br />
  #include &lt;ql/stochasticprocess.hpp&gt; </p>

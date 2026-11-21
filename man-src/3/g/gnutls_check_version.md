@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_check_version(3)"
 name: "gnutls_check_version"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_check_version – API function"
 
 <h2>NAME</h2>
 <p> gnutls_check_version &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>const char * gnutls_check_version(const char * </code><i>req_version</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>const char * req_version</dt>
 <dd> version string to compare with, or <code>NULL</code>.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Check GnuTLS Library version. </p>
 <p> See <code>GNUTLS_VERSION</code> for a suitable <i>req_version</i> string.</p>
 <h2>RETURNS</h2>

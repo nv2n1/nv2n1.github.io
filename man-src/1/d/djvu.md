@@ -7,6 +7,8 @@ url: "/docs/linux/man/1-djvu/"
 description: "DjVu – DjVu and DjVuLibre."
 ---
 
+<h2 class="name">NAME</h2>
+<p> DjVu &#8211; DjVu and DjVuLibre.</p>
 <h2>INTRODUCTION</h2>
 <p> Although the Internet has given us a worldwide infrastructure on which to build the universal library, much of the world knowledge, history, and literature is still trapped on paper in the basements of the world&#8217;s traditional libraries. Many libraries and content owners are in the process of digitizing their collections. While many such efforts involve the painstaking process of converting paper documents to computer-friendly form, such as <font SIZE="-1">SGML</font> based formats, the high cost of such conversions limits their extent. Scanning documents, and distributing the resulting images electronically is not only considerably cheaper, but also more faithful to the original document because it preserves its visual aspect. </p>
 <p> Despite the quickly improving speed of network connections and computers, the number of scanned document images accessible on the Web today is relatively small. There are several reasons for this. </p>

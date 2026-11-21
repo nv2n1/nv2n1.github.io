@@ -1,5 +1,4 @@
 ---
-
 title: "dc_snoop(1)"
 name: "dc_snoop"
 section: "1"
@@ -10,7 +9,9 @@ description: "dc_snoop – Distributed session cache traffic analysis"
 
 <h2>NAME</h2>
 <p> dc_snoop &#8211; Distributed session cache traffic analysis</p>
+<h2>SYNOPSIS</h2>
 <p> <code>dc_snoop</code> -listen &lt;address&gt; -server &lt;address&gt; [options]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>dc_snoop</code> runs as a transparent proxy supporting the <i><a href="/docs/linux/man/8-distcache/">distcache</a></i>(8) protocol and (in theory) should work when inserted between any compliant tools. Ie. this can be used to monitor cache operation requests and responses between applications and <code>dc_client</code>, or between <code>dc_client</code> and <code>dc_server</code>. </p>
 <p> This tool is still in early stages of development and is provided very much &#8220;as-is&#8221;. It is intended to be used by developers with access to the source code &#8211; for now, most configurable behaviour of <code>dc_snoop</code> is set in source code and can not be manipulated on the command-line.</p>
 <h2>OPTIONS</h2>

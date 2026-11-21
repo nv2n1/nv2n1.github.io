@@ -1,5 +1,4 @@
 ---
-
 title: "git-mailsplit(1)"
 name: "git-mailsplit"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-mailsplit/"
 description: "git-mailsplit – Simple UNIX mbox splitter program"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-mailsplit &#8211; Simple UNIX mbox splitter program </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git mailsplit[-b][-f&lt;nn&gt;][-d&lt;prec&gt;][--keep - cr][--mboxrd] - o&lt;directory&gt;[--][(&lt;mbox&gt; | &lt;Maildir&gt;)...]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Splits a mbox file or a Maildir into a list of files: &quot;0001&quot; &quot;0002&quot; .. in the specified directory so you can process them further from there. </p>
 <dl>
 <dt>

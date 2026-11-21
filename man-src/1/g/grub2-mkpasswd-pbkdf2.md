@@ -1,5 +1,4 @@
 ---
-
 title: "grub2-mkpasswd-pbkdf2(1)"
 name: "grub2-mkpasswd-pbkdf2"
 section: "1"
@@ -10,11 +9,13 @@ description: "grub-mkpasswd-pbkdf2 — Generate a PBKDF2 password hash."
 
 <h2>NAME</h2>
 <p> <code>grub-mkpasswd-pbkdf2</code> &#8212; Generate a PBKDF2 password hash. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>grub-mkpasswd-pbkdf2</code> [-c | &#8211;iteration-count=<i>NUM</i>] [-l | &#8211;buflen=<i>NUM</i>]</p>
 <dl>
 <dt>
 </dt><dd> [-s | &#8211;salt=<i>NUM</i>] </dd>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> <code>grub-mkpasswd-pbkdf2</code> generates a PBKDF2 password string suitable for use in a GRUB configuration file. </p>
 <h2>OPTIONS</h2>
 <dl>

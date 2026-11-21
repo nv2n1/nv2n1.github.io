@@ -1,5 +1,4 @@
 ---
-
 title: "csv_to_db(1)"
 name: "csv_to_db"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-csv_to_db/"
 description: "csv_to_db – convert comma-separated-value data into fsdb"
 ---
 
+<h2 class="name">NAME</h2>
+<p> csv_to_db &#8211; convert comma-separated-value data into fsdb </p>
+<h2>SYNOPSIS</h2>
 <pre>
     csv_to_db &lt;source.csv
 </pre>
+<h2>DESCRIPTION</h2>
 <p> Converts a comma-separated-value data stream to Fsdb format. </p>
 <p> The input is CSV-format (<i>not</i> fsdb). The first row is taken to be the names of the columns. </p>
 <p> The output is two-space-separated fsdb. (Someday more general field separators should be supported.) Fsdb fields are normalized version of the <font SIZE="-1">CSV</font> file: spaces are converted to single underscores. </p>

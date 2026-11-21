@@ -1,5 +1,4 @@
 ---
-
 title: "x2sys_put(1)"
 name: "x2sys_put"
 section: "1"
@@ -10,8 +9,10 @@ description: "x2sys_put – Update track index database from track bin file"
 
 <h2>NAME</h2>
 <p> x2sys_put &#8211; Update track index database from track bin file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>x2sys_put</code> [ <i>info.tbf</i> ] <i>TAG</i> [ ] [ ] [ [<i>level</i>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>x2sys_put</code> accepts a track bin-index file created by <code>x2sys_binlist</code> and adds this information about the data tracks to the relevant data base. You may chose to overwrite existing data with new information for older tracks (<code>-F</code>) and even completely remove information for certain tracks (<code>-D</code>). The x2sys <i>TAG</i> must match the tag encoded in the <i>info.tbf</i> file. To inquire about tracks in the data base, use <code>x2sys_get</code>.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "camlp5(1)"
 name: "camlp5"
 section: "1"
@@ -13,6 +12,7 @@ description: "camlp5 – Pre-Precessor-Pretty-Printer for OCaml mkcamlp5 – Cre
  mkcamlp5 &#8211; Create custom camlp5<br />
  mkcamlp5.opt &#8211; Create custom camlp5 (native code)<br />
  ocpp5 &#8211; Universal preprocessor </p>
+<h2>SYNOPSIS</h2>
 <p> <code>camlp5</code> [ load-options ] [&#8211;] [ other-options ]<br />
  <code>camlp5o</code> [ load-options ] [&#8211;] [ other-options ]<br />
  <code>camlp5r</code> [ load-options ] [&#8211;] [ other-options ]<br />
@@ -25,6 +25,7 @@ description: "camlp5 – Pre-Precessor-Pretty-Printer for OCaml mkcamlp5 – Cre
  <code>ocpp5</code> [ load-options ] file </p>
 <p> <code>camlp5o.opt</code> [&#8211;] [ other-options ]<br />
  <code>camlp5r.opt</code> [&#8211;] [ other-options ] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>camlp5</code> is a Pre-Processor-Pretty-Printer for OCaml, parsing a source file and printing some result on standard output. </p>
 <p> <code>camlp5o,</code> <code>camlp5r</code> and <code>camlp5sch</code> are versions of <code>camlp5</code> with some files already loaded (see further). </p>
 <p> <code>camlp5o.cma,</code> <code>camlp5r.cma</code> and <code>camlp5sch.cma</code> are files to be loaded in ocaml toplevel to use the camlp5 machinery </p>

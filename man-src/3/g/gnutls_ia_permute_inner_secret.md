@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_ia_permute_inner_secret(3)"
 name: "gnutls_ia_permute_inner_secret"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_ia_permute_inner_secret – API function"
 
 <h2>NAME</h2>
 <p> gnutls_ia_permute_inner_secret &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/extra.h">gnutls/extra.h</a>&gt;</code> </p>
 <p> <code>int gnutls_ia_permute_inner_secret(gnutls_session_t </code><i>session</i><code>, size_t </code><i>session_keys_size</i><code>, const char * </code><i>session_keys</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_ia_permute_inner_secret – API function"
 <dd> Size of generated session keys (0 if none).</dd>
 <dt>const char * session_keys</dt>
 <dd> Generated session keys, used to permute inner secret (NULL if none).</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Permute the inner secret using the generated session keys. </p>
 <p> This can be called in the TLS/IA AVP callback to mix any generated session keys with the TLS/IA inner secret.</p>
 <h2>RETURN VALUE</h2>

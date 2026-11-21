@@ -1,5 +1,4 @@
 ---
-
 title: "beep(1)"
 name: "beep"
 section: "1"
@@ -10,11 +9,13 @@ description: "beep – beep the pc speaker any number of ways"
 
 <h2>NAME</h2>
 <p> beep &#8211; beep the pc speaker any number of ways</p>
+<h2>SYNOPSIS</h2>
 <p> <code>beep</code> [-f N] [-l N] [-r N] [-d N] [-D N] [-s] [-c]</p>
 <dl>
 <dt> <code>beep</code> [ OPTIONS ] [-n] [&#8211;new] [ OPTIONS ]</dt>
 <dt> <code>beep</code> [-h] [&#8211;help]</dt>
 <dt> <code>beep</code> [-v] [-V] [&#8211;version]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>beep</code> allows the user to control the pc-speaker with precision, allowing different sounds to indicate different events. While it can be run quite happily on the command line, it&#8217;s intended place of residence is within shell/perl scripts, notifying the user when something interesting occurs. Of course, it has no notion of what&#8217;s interesting, but it&#8217;s real good at that notifying part. </p>
 <dd>All options have default values, meaning that just typing &#8216;<code>beep</code>&#8216; will work. If an option is specified more than once on the command line, subsequent options override their predecessors. So &#8216;<code>beep</code> -f 200 -f 300&#8242; will beep at 300Hz.</dd>
 <h2>OPTIONS</h2>

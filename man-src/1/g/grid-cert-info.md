@@ -1,5 +1,4 @@
 ---
-
 title: "grid-cert-info(1)"
 name: "grid-cert-info"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-grid-cert-info/"
 description: "grid-cert-info – Display information about a certificate"
 ---
 
+<h2 class="name">NAME</h2>
+<p> grid-cert-info &#8211; Display information about a certificate </p>
+<h2>SYNOPSIS</h2>
 <p> <code>grid-cert-info</code> <i>-help</i> | <i>-usage</i> | <i>-version</i> | <i>-versions</i> </p>
 <p> <code>grid-cert-info</code> OPTIONS</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>grid-cert-info</code> program displays information contained within a certificate file. By default it shows a text representation of the entire certificate. Specific facts about the certificate can be shown instead by using command-line options. If any of those options are used, then the default display is suppressed. This can be added to the output by using the <i>-all</i> command-line option. </p>
 <p> If multiple display options are included on the command-line, the facts related to those will be displayed on separate lines in the order that they occur. If an option is specified multiple time, that fact will be displayed multiple times.</p>
 <h2>OPTIONS</h2>

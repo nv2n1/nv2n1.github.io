@@ -1,5 +1,4 @@
 ---
-
 title: "dm-tool(1)"
 name: "dm-tool"
 section: "1"
@@ -10,7 +9,9 @@ description: "dm-tool – a tool to control the display manager"
 
 <h2>NAME</h2>
 <p> dm-tool &#8211; a tool to control the display manager</p>
+<h2>SYNOPSIS</h2>
 <p> <code>dm-tool</code> [ <i>OPTIONS</i> ] <i>COMMAND</i> [ <i>ARGS</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>dm-tool</code> is a tool to communicate with the LightDM display manager.</p>
 <h2>OPTIONS</h2>
 <dl>

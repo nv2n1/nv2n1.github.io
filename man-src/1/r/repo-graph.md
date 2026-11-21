@@ -1,5 +1,4 @@
 ---
-
 title: "repo-graph(1)"
 name: "repo-graph"
 section: "1"
@@ -10,7 +9,9 @@ description: "repo-graph – output a full package dependency graph in dot forma
 
 <h2>NAME</h2>
 <p> repo-graph &#8211; output a full package dependency graph in dot format</p>
+<h2>SYNOPSIS</h2>
 <p> <code>repo-graph</code> [options]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>repo-graph</code> is a program that generates a full package dependency list from a yum repository and outputs it in dot format. </p>
 <h2>OPTIONS</h2>
 <dl>

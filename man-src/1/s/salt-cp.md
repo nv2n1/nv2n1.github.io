@@ -1,5 +1,4 @@
 ---
-
 title: "salt-cp(1)"
 name: "salt-cp"
 section: "1"
@@ -11,9 +10,11 @@ description: "salt-cp – salt-cp Documentation"
 <h2>NAME</h2>
 <p> salt-cp &#8211; salt-cp Documentation </p>
 <p> Copy a file to a set of systems</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 salt - cp '*'[options] SOURCE DEST salt - cp - E '.*'[options] SOURCE DEST salt - cp - G 'os:Arch.*'[options] SOURCE DEST
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Salt copy copies a local file out to all of the Salt minions matched by the given target.</p>
 <h2>OPTIONS</h2>
 <dl>

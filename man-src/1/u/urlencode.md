@@ -1,5 +1,4 @@
 ---
-
 title: "urlencode(1)"
 name: "urlencode"
 section: "1"
@@ -10,7 +9,9 @@ description: "urlencode – convert strings to or from URL-encoded form"
 
 <h2>NAME</h2>
 <p> <code>urlencode</code> &#8211; convert strings to or from URL-encoded form</p>
+<h2>SYNOPSIS</h2>
 <p> <code>urlencode </code> [-m|-d] <i>string [string &#8230;]</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>urlencode</code> encodes strings according to RFC 1738. </p>
 <p> That is, characters A-Z a-z 0-9 . _ and &#8211; are passed through unmodified, but all other characters are represented as %HH, where HH is their two-digit upper-case hexadecimal ASCII representation. For example, the URL <a rel="nofollow" href="http://www.gridpp.ac.uk/">http://www.gridpp.ac.uk/</a> becomes http%3A%2F%2F<a rel="nofollow" href="http://www.gridpp.ac.uk">www.gridpp.ac.uk</a>%2F </p>
 <p> <code>urlencode</code> converts each character in all the strings given on the command line. If multiple strings are given, they are concatenated with separating spaces before conversion. </p>

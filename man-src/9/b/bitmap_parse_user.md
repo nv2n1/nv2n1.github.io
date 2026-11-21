@@ -1,5 +1,4 @@
 ---
-
 title: "bitmap_parse_user(9)"
 name: "bitmap_parse_user"
 section: "9"
@@ -7,8 +6,8 @@ letter: "b"
 url: "/docs/linux/man/9-bitmap_parse_user/"
 description: "bitmap_parse_user – convert an ASCII hex string in a user buffer into a bitmap"
 ---
-
 <p>bitmap_parse_user &#8211; convert an ASCII hex string in a user buffer into a bitmap </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>int bitmap_parse_user(const char&nbsp;<wbr>__user&nbsp;<wbr>*&nbsp;<wbr></code><i>ubuf</i><code>, unsigned int&nbsp;<wbr></code><i>ulen</i><code>, unsigned long&nbsp;<wbr>*&nbsp;<wbr></code><i>maskp</i><code>, int&nbsp;<wbr></code><i>nmaskbits</i><code>);</code></dt>
 </dl>
@@ -30,6 +29,7 @@ description: "bitmap_parse_user – convert an ASCII hex string in a user buffer
 <dl>
 <dd> <p> size of bitmap, in bits. </p>
  </dd></dl>
+<h2>DESCRIPTION</h2>
 <p>Wrapper for <code>__bitmap_parse</code>, providing it with user buffer. </p>
 <p>We cannot have this as an inline function in bitmap.h because it needs linux/uaccess.h to get the <code>access_ok</code> declaration and this causes cyclic dependencies.  </p>
 <h2>COPYRIGHT</h2>

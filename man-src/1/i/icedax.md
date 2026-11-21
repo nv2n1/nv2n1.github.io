@@ -1,5 +1,4 @@
 ---
-
 title: "icedax(1)"
 name: "icedax"
 section: "1"
@@ -10,7 +9,9 @@ description: "icedax – a sampling utility that dumps CD audio data into wav so
 
 <h2>NAME</h2>
 <p> icedax &#8211; a sampling utility that dumps CD audio data into wav sound files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>icedax</code> [<code>-c</code> <i>chans</i>] [<code>-s</code>] [<code>-m</code>] [<code>-b</code> <i>bits</i>] [<code>-r</code> <i>rate</i>] [<code>-a</code> <i>divider</i>] [<code>-t</code> <i>track</i>[<i>+endtrack</i>]] [<code>-i</code> <i>index</i>] [<code>-o</code> <i>offset</i>] [<code>-d</code> <i>duration</i>] [<code>-x</code>] [<code>-q</code>] [<code>-w</code>] [<code>-v</code> <i>optlist</i>] [<code>-V</code>] [<code>-Q</code>] [<code>-J</code>] [<code>-L</code> <i>cddbmode</i>] [<code>-R</code>] [<code>-P</code> <i>sectors</i>] [<code>-F</code>] [<code>-G</code>] [<code>-T</code>] [<code>-e</code>] [<code>-p</code> <i>percentage</i>] [<code>-n</code> <i>sectors</i>] [<code>-l</code> <i>buffers</i>] [<code>-N</code>] [<code>-J</code>] [<code>-H</code>] [<code>-g</code>] [<code>-B</code>] [<code>-D</code> <i>device</i>] [<code>-A</code> <i>auxdevice</i>] [<code>-I</code> <i>interface</i>] [<code>-O</code> <i>audiotype</i>] [<code>-C</code> <i>input-endianess</i>] [<code>-E</code> <i>output-endianess</i>] [<code>-M</code> <i>count</i>] [<code>-S</code> <i>speed</i>] [<code>-paranoia</code>] [<code>cddbp-server=servername</code>] [<code>cddbp-port=portnumber</code>] [<i>filename(s)</i> or <i>directories</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>icedax</code> stands for InCrEdible Digital Audio eXtractor. It can retrieve audio tracks (<code>CDDA</code>) from CDROM drives that are capable of reading audio data digitally to the host (see README for a list of drives). </p>
 <h2>OPTIONS</h2>
 <dl>

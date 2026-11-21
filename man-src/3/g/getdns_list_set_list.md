@@ -1,5 +1,4 @@
 ---
-
 title: "getdns_list_set_list(3)"
 name: "getdns_list_set_list"
 section: "3"
@@ -12,6 +11,7 @@ description: "getdns_list_set, getdns_list_set_bindata, getdns_list_set_dict, ge
 <p> <code>getdns_list_set, </code> <code>getdns_list_set_bindata, </code> <code>getdns_list_set_dict, </code> <code>getdns_list_set_int, </code> <code>getdns_list_set_list, </code> &#8212; set a value by index from a getdns list </p>
 <h2>LIBRARY</h2>
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;getdns.h&gt; </p>
 <p> getdns_return_t<br />
  <code>getdns_list_set_bindata</code> (getdns_list *this_list,</p>
@@ -37,6 +37,7 @@ description: "getdns_list_set, getdns_list_set_bindata, getdns_list_set_dict, ge
 <dt>
 </dt><dd> size_t index,<br />
  getdns_list *child_list)</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The getdns_list type is used to manage a heterogeneous indexed list of values that include:</p>
 <dl>
 <dt>

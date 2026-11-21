@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_ia_set_client_avp_ptr(3)"
 name: "gnutls_ia_set_client_avp_ptr"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_ia_set_client_avp_ptr – Sets a pointer to be sent to TLS/
 
 <h2>NAME</h2>
 <p> gnutls_ia_set_client_avp_ptr &#8211; Sets a pointer to be sent to TLS/IA callback</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/extra.h">gnutls/extra.h</a>&gt;</code> </p>
 <p> <code>void gnutls_ia_set_client_avp_ptr(gnutls_ia_client_credentials_t </code><i>cred</i><code>, void * </code><i>ptr</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_ia_set_client_avp_ptr – Sets a pointer to be sent to TLS/
 <dd> is a <code>gnutls_ia_client_credentials_t</code> structure.</dd>
 <dt>void * ptr</dt>
 <dd> is the pointer</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Sets the pointer that will be provided to the TLS/IA callback function as the first argument.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bug-gnutls [at] gnu.org&gt;. GnuTLS home page: <a rel="nofollow" href="http://www.gnu.org/software/gnutls/">http://www.gnu.org/software/gnutls/</a> General help using GNU software: <a rel="nofollow" href="http://www.gnu.org/gethelp/">http://www.gnu.org/gethelp/</a></p>

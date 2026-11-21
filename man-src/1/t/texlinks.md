@@ -1,5 +1,4 @@
 ---
-
 title: "texlinks(1)"
 name: "texlinks"
 section: "1"
@@ -10,7 +9,9 @@ description: "texlinks – maintain symbolic links from format to engine"
 
 <h2>NAME</h2>
 <p> texlinks &#8211; maintain symbolic links from format to engine </p>
+<h2>SYNOPSIS</h2>
 <p> <code>texlinks</code> [ <i>OPTIONS</i>&#8230; ] <i>DIRECTORIES</i>&#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> <code>texlinks</code> is used to create or recreate symbolic links from formats to engines according to the information in <i>fmtutil.cnf</i> or a file specified with <code>&#8211;cnffile</code>. </p>
 <p> <i>DIRECTORIES</i> is an optional list of directories in which to operate. If no directories are specified the list of directories depends on the <code>&#8211;multiplatform</code> option. </p>
 <h2>OPTIONS</h2>

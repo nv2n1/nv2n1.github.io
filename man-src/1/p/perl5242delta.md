@@ -1,5 +1,4 @@
 ---
-
 title: "perl5242delta(1)"
 name: "perl5242delta"
 section: "1"
@@ -7,9 +6,14 @@ letter: "p"
 url: "/docs/linux/man/1-perl5242delta/"
 ---
 
-perl5242delta - what is new for perl v5.24.2 
+<h2 class="name">NAME</h2>
+ 
 
-This document describes differences between the 5.24.1 release and the 5.24.2 release. 
+ perl5242delta - what is new for perl v5.24.2 
+
+<h2>DESCRIPTION</h2>
+
+ This document describes differences between the 5.24.1 release and the 5.24.2 release. 
 
  If you are upgrading from an earlier release such as 5.24.0, first read perl5241delta, which describes differences between 5.24.0 and 5.24.1.
 

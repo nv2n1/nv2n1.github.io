@@ -1,5 +1,4 @@
 ---
-
 title: "nviz(1)"
 name: "nviz"
 section: "1"
@@ -12,6 +11,7 @@ description: "nviz – nviz – Visualization and animation tool for GRASS data"
 <p> <i></i><code>nviz</code> &#8211; nviz &#8211; Visualization and animation tool for GRASS data</p>
 <h2>KEYWORDS</h2>
 <p> raster, vector, visualization</p>
+<h2>SYNOPSIS</h2>
 <p> <code>nviz</code><br />
  <code>nviz help</code><br />
  <code>nviz</code> [-<code>q</code>] [<code>elevation</code>=<i>string</i>] [<code>color</code>=<i>string</i>] [<code>vector</code>=<i>string</i>] [<code>points</code>=<i>string</i>] [<code>volume</code>=<i>string</i>] [<code>path</code>=<i>string</i>] [<code>script</code>=<i>string</i>] [<code>state</code>=<i>string</i>] [&#8211;<code>verbose</code>] [&#8211;<code>quiet</code>]</p>

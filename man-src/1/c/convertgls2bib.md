@@ -1,5 +1,4 @@
 ---
-
 title: "convertgls2bib(1)"
 name: "convertgls2bib"
 section: "1"
@@ -7,7 +6,9 @@ letter: "c"
 url: "/docs/linux/man/1-convertgls2bib/"
 ---
 
+<h2>SYNOPSIS</h2>
 <p> <code>convertgls2bib</code> [<i>option</i>]+ <i>auxfile</i></p>
+<h2>DESCRIPTION</h2>
 <p> Converts a <code>.tex</code> file containing glossary definitions using commands like <tt>&quot;
 ewglossaryentry&quot;</tt> and <tt>&quot;
 ewacronym&quot;</tt> to a <code>.bib</code> file in the format required for <code>bib2gls</code>.</p>

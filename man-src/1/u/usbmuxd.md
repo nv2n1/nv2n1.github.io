@@ -1,5 +1,4 @@
 ---
-
 title: "usbmuxd(1)"
 name: "usbmuxd"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-usbmuxd/"
 description: "usbmuxd – Expose a socket to multiplex connections from and to iOS devices."
 ---
 
+<h2 class="name">NAME</h2>
+<p> usbmuxd &#8211; Expose a socket to multiplex connections from and to iOS devices. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>usbmuxd</code> [OPTIONS] </p>
+<h2>DESCRIPTION</h2>
 <p> usbmuxd stands for &quot;USB multiplexing daemon&quot;. This daemon is in charge of multiplexing connections over USB to an iOS device. To users, it means you can sync your music, contacts, photos, etc. over USB. To developers, it means you can connect to any listening localhost socket on the device. usbmuxd is not used for tethering data transfer which uses a dedicated USB interface as a virtual network device. Multiple connections to different TCP ports can happen in parallel. The higher-level layers are handled by libimobiledevice. </p>
 <p> When usbmuxd is running (normally started, or stopped as a result of &quot;udev&quot; auto-insertion messages or by systemd) it provides a socket interface in &quot;/var/run/usbmuxd&quot; that is designed to be compatible with the socket interface that is provided on Mac OS X. </p>
 <p> You should also create a &quot;usbmux&quot; user that has access to USB devices on your system. Alternatively, you can pass a different username using the -U argument. </p>

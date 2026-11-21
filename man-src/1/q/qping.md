@@ -1,5 +1,4 @@
 ---
-
 title: "qping(1)"
 name: "qping"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-qping/"
 description: "qping – check application status of xxQS_NAMExx daemons."
 ---
 
+<h2 class="name">NAME</h2>
+<p> qping &#8211; check application status of xxQS_NAMExx daemons.</p>
 <h2>SYNTAX</h2>
 <p> <code>qping</code> [<code>-help</code>] [<code>-noalias</code>] [<code>-ssl</code>|<code>-tcp</code>] [[[<code>-i</code> <i>interval</i>] [<code>-info</code>] [<code>-f</code>]] | [[ <code>-dump_tag</code> <i>tag</i> [<i>param</i>]] [<code>-dump</code>] [<code>-nonewline</code>]]] <i>host port name id</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <i>Qping</i> is used to validate the runtime status of a xxQS_NAMExx service daemon. The current xxQS_NAMExx implementation allows one to query the xxQS_NAME_Sxx_QMASTER daemon and any running xxQS_NAME_Sxx_EXECD daemon. The command is used to send a SIM (Status Information Message) to the destination daemon. The communication layer of the specified daemon will respond with a SIRM (Status Information Response Message) which contains status information about that daemon. It also has options allow an administrator to observe the communication protocol data flow of a xxQS_NAMExx service daemon. </p>
 <h2>OPTIONS</h2>
 <h3><code>-f</code></h3>

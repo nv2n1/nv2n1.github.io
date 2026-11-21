@@ -1,5 +1,4 @@
 ---
-
 title: "postgres(1)"
 name: "postgres"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-postgres/"
 description: "postgres – PostgreSQL database server"
 ---
 
+<h2 class="name">NAME</h2>
+<p> postgres &#8211; PostgreSQL database server </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>postgres</code> [<i>option</i>&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>postgres</code></p>
 <dd>is the PostgreSQL database server. In order for a client application to access a database it connects (over a network or locally) to a running <code>postgres</code> instance. The <code>postgres</code> instance then starts a separate server process to handle the connection. </dd>
 <p> One <code>postgres</code> instance always manages the data of exactly one database cluster. A database cluster is a collection of databases that is stored at a common file system location (the &#8220;data area&#8221;). More than one <code>postgres</code> instance can run on a system at one time, so long as they use different data areas and different communication ports (see below). When <code>postgres</code> starts it needs to know the location of the data area. The location must be specified by the <code>-D</code> option or the <code>PGDATA</code> environment variable; there is no default. Typically, <code>-D</code> or <code>PGDATA</code> points directly to the data area directory created by <code><a href="/docs/linux/man/1-initdb/">initdb</a></code>(1). Other possible file layouts are discussed in Section 18.2, &#8220;File Locations&#8221;, in the documentation. </p>

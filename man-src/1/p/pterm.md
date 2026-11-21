@@ -1,5 +1,4 @@
 ---
-
 title: "pterm(1)"
 name: "pterm"
 section: "1"
@@ -10,10 +9,12 @@ description: "pterm – yet another X terminal emulator"
 
 <h2>NAME</h2>
 <p> pterm &#8211; yet another X terminal emulator</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 pterm &amp;nbsp;
 [&amp;nbsp; options &amp; nbsp;]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>pterm</code> is a terminal emulator for X. It is based on a port of the terminal emulation engine in the Windows SSH client PuTTY.</p>
 <h2>OPTIONS</h2>
 <p> The command-line options supported by <code>pterm</code> are:</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "git-checkout-index(1)"
 name: "git-checkout-index"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-git-checkout-index/"
 description: "git-checkout-index – Copy files from the index to the working tree"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-checkout-index &#8211; Copy files from the index to the working tree </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git checkout - index[-u][-q][-a][-f][-n][--prefix = &lt;string&gt;]
                     [--stage = &lt;number&gt; | all]
@@ -15,6 +17,7 @@ git checkout - index[-u][-q][-a][-f][-n][--prefix = &lt;string&gt;]
                     [-z][--stdin]
                     [--][&lt;file&gt;...]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Will copy all files listed from the index to the working directory (not overwriting existing files).</p>
 <h2>OPTIONS</h2>
 <p> -u, &#8211;index</p>

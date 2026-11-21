@@ -1,5 +1,4 @@
 ---
-
 title: "docker-container-exec(1)"
 name: "docker-container-exec"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-container-exec/"
 description: "docker-container-exec – Run a command in a running container"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-container-exec &#8211; Run a command in a running container </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker container exec [OPTIONS] CONTAINER COMMAND [ARG&#8230;]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Run a process in a running container. </p>
 <p> The command started using docker exec will only run while the container&#8217;s primary process (PID 1) is running, and will not be restarted if the container is restarted. </p>
 <p> If the container is paused, then the docker exec command will wait until the container is unpaused, and then run </p>

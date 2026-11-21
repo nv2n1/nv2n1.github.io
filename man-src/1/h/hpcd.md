@@ -1,5 +1,4 @@
 ---
-
 title: "hpcd(1)"
 name: "hpcd"
 section: "1"
@@ -10,6 +9,7 @@ description: "hpcd — change directory on an HFS+ volume"
 
 <h2>NAME</h2>
 <p> hpcd &#8212; change directory on an HFS+ volume</p>
+<h2>SYNOPSIS</h2>
 <p> <code>hpcd</code> <i>hfs-path</i></p>
 <h2>Description</h2>
 <p> <code>hpcd</code> changes the current working directory on the previously mounted HFS+ volume. Subsequent commands will interpret filenames relative to this directory.<br />

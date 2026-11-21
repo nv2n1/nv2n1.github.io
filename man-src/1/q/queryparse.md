@@ -1,5 +1,4 @@
 ---
-
 title: "queryparse(1)"
 name: "queryparse"
 section: "1"
@@ -10,7 +9,9 @@ description: "queryparse – extract DNS queries from pcap capture files."
 
 <h2>NAME</h2>
 <p> queryparse &#8211; extract DNS queries from pcap capture files.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>queryparse [-i </code> <i>input file</i> <code>] [-o</code> <i>output file</i> <code>] [-r</code> <i>recursion only</i> <code>] [-R</code> <i>parse responses</i> <code>]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>queryparse</code> is a tool designed to extract DNS queries from pcap-formatted packet capture files and save them in a form suitable for input to Nominum&#8217;s dnsperf or resperf benchmarking tools. <code>queryparse</code> will only examine UDP packets, and currently supports Ethernet and Cisco HDLC frame types.</p>
 <h2>OPTIONS</h2>
 <dl>

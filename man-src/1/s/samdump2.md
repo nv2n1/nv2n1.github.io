@@ -1,5 +1,4 @@
 ---
-
 title: "samdump2(1)"
 name: "samdump2"
 section: "1"
@@ -8,7 +7,9 @@ url: "/docs/linux/man/1-samdump2/"
 description: "samdump2 retrieves syskey and extract hashes from Windows 2k/NT/XP/Vista SAM."
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>samdump2</code> retrieves syskey and extract hashes from Windows 2k/NT/XP/Vista SAM. </p>
+<h2>SYNOPSIS</h2>
 <p> samdump2 [-d] [-o file] &lt;system hive&gt; &lt;sam hive&gt;</p>
 <h2>OPTIONS</h2>
 <dl>

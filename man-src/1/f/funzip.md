@@ -1,5 +1,4 @@
 ---
-
 title: "funzip(1)"
 name: "funzip"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-funzip/"
 description: "funzip – filter for extracting from a ZIP archive in a pipe"
 ---
 
+<h2 class="name">NAME</h2>
+<p> funzip &#8211; filter for extracting from a ZIP archive in a pipe </p>
+<h2>SYNOPSIS</h2>
 <p> <code>funzip</code> [<code>-password</code>] [<i>input[.zip|.gz]</i>]</p>
 <h2>ARGUMENTS</h2>
 <dl>
@@ -15,6 +17,7 @@ description: "funzip – filter for extracting from a ZIP archive in a pipe"
 <dd> Optional password to be used if ZIP archive is encrypted. Decryption may not be supported at some sites. See DESCRIPTION for more details.</dd>
 <dt>[<i>input[.zip|.gz]</i>]</dt>
 <dd> Optional input archive file specification. See DESCRIPTION for details.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <i>funzip</i> without a file argument acts as a filter; that is, it assumes that a ZIP archive (or a <i>gzip</i>&#8216;<a href="/docs/linux/man/1-d/">d</a>(1) file) is being piped into standard input, and it extracts the first member from the archive to stdout. When stdin comes from a tty device, <i>funzip</i> assumes that this cannot be a stream of (binary) compressed data and shows a short help text, instead. If there is a file argument, then input is read from the specified file instead of from stdin. </p>
 <p> A password for encrypted zip files can be specified on the command line (preceding the file name, if any) by prefixing the password with a dash. Note that this constitutes a security risk on many systems; currently running processes are often visible via simple commands (e.g., <i><a href="/docs/linux/man/1-ps/">ps</a></i>(1) under Unix), and command-line histories can be read. If the first entry of the zip file is encrypted and no password is specified on the command line, then the user is prompted for a password and the password is not echoed on the console. </p>
 <p> Given the limitation on single-member extraction, <i>funzip</i> is most useful in conjunction with a secondary archiver program such as <i><a href="/docs/linux/man/1-tar/">tar</a></i>(1). The following section includes an example illustrating this usage in the case of disk backups to tape.</p>

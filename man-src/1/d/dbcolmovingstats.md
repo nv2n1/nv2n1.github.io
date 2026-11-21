@@ -1,5 +1,4 @@
 ---
-
 title: "dbcolmovingstats(1)"
 name: "dbcolmovingstats"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dbcolmovingstats/"
 description: "dbcolmovingstats – compute moving statistics over a window of a column of data"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dbcolmovingstats &#8211; compute moving statistics over a window of a column of data </p>
+<h2>SYNOPSIS</h2>
 <p> dbcolmovingstats [-am] [-w window-width] [-e EmptyValue] column</p>
+<h2>DESCRIPTION</h2>
 <p> Compute moving statistics over a <font SIZE="-1">COLUMN</font> of data. Records containing non-numeric data are considered null do not contribute to the stats (optionally they are treated as zeros with <tt>&quot;-a&quot;</tt>). </p>
 <p> Currently we compute mean and sample standard deviation. (Note we only compute sample standard deviation, not full population.) Optionally, with <tt>&quot;-m&quot;</tt> we also compute median. (Currently there is no support for generalized quantiles.) </p>
 <p> Values before a sufficient number have been accumulated are given the empty value (if specified with <tt>&quot;-e&quot;</tt>). If no empty value is given, stats are computed on as many are possible if no empty value is specified. </p>

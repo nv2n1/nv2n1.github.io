@@ -1,5 +1,4 @@
 ---
-
 title: "ldbadd(1)"
 name: "ldbadd"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-ldbadd/"
 description: "ldbadd – Command-line utility for adding records to an LDB"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ldbadd &#8211; Command-line utility for adding records to an LDB </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ldbadd</code> [-h] [-H LDB-URL] [ldif-file1] [ldif-file2] [&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>ldbadd adds records to an <a href="/docs/linux/man/3-ldb/">ldb</a>(3) database. It reads the <a href="/docs/linux/man/5-ldif/">ldif</a>(5) files specified on the command line and adds the records from these files to the LDB database, which is specified by the -H option or the LDB_URL environment variable. </dd>
 <p> If &#8211; is specified as a ldb file, the ldif input is read from standard input.</p>
 <h2>OPTIONS</h2>

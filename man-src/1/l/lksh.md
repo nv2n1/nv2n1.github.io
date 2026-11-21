@@ -1,5 +1,4 @@
 ---
-
 title: "lksh(1)"
 name: "lksh"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-lksh/"
 description: "lksh – Legacy Korn shell built on mksh"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>lksh</code> &#8211; Legacy Korn shell built on mksh </p>
+<h2>SYNOPSIS</h2>
 <p> -words [-<code>+abCefhiklmnprUuvXx </code>[-<code>+o </code><i>opt</i> ] ] [-<code>c </code><i>string |</i> &#8211;<code>s |</code> <i>file</i> [<i>args &#8230;</i> ] ]</p>
+<h2>DESCRIPTION</h2>
 <p> is a command interpreter intended exclusively for running legacy shell scripts. It is built on <code>mksh</code> refer to its manual page for details on the scripting language. It is recommended to port scripts to <code>mksh</code> instead of relying on legacy or idiotic POSIX-mandated behaviour, since the MirBSD Korn Shell scripting language is much more consistent.</p>
 <h2>LEGACY MODE</h2>
 <p> has the following differences from <code>mksh</code> </p>

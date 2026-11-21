@@ -1,5 +1,4 @@
 ---
-
 title: "phoa2d(1)"
 name: "phoa2d"
 section: "1"
@@ -10,8 +9,10 @@ description: "phoa2d, phod2a – gcin’s Bopomofo tools"
 
 <h2>NAME</h2>
 <p> phoa2d, phod2a &#8211; gcin&#8217;s Bopomofo tools</p>
+<h2>SYNOPSIS</h2>
 <p> <code>phoa2d</code><br />
  <code>phod2a</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>phoa2d</code> converts $HOME/.gcin/pho.tab.src to $HOME/.gcin/pho.tab, which is used by Bopomofo and Tsin input methods. </p>
 <p> <code>phod2a</code> converts $HOME/.gcin/pho.tab to $HOME/.gcin/pho.tab.src, which may be edited by users.</p>
 <h2>ENVIRONMENT VARIABLES</h2>

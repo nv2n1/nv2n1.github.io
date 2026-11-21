@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_rr_compress(3)"
 name: "ldns_rr_compress"
 section: "3"
@@ -10,9 +9,11 @@ description: "ldns_rr, ldns_rr_class, ldns_rr_type, ldns_rr_compress, ldns_rr_li
 
 <h2>NAME</h2>
 <p> ldns_rr, ldns_rr_class, ldns_rr_type, ldns_rr_compress, ldns_rr_list </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_rr</i></dt>
 <dd>

@@ -1,5 +1,4 @@
 ---
-
 title: "chatzilla(1)"
 name: "chatzilla"
 section: "1"
@@ -10,7 +9,9 @@ description: "chatzilla – standalone Mozilla IRC client, no browsers attached"
 
 <h2>NAME</h2>
 <p> chatzilla &#8211; standalone Mozilla IRC client, no browsers attached</p>
+<h2>SYNOPSIS</h2>
 <p> <code>chatzilla</code> [-h] [-chat URL]</p>
+<h2>DESCRIPTION</h2>
 <p> ChatZilla is normally used as part of SeaMonkey, or an extension to other browsers. However, it can also run under XULRunner, allowing ChatZilla to be used standalone, independent of a web browser.</p>
 <h2>OPTIONS</h2>
 <dl>

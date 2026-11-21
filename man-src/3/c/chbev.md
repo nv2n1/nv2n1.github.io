@@ -1,5 +1,4 @@
 ---
-
 title: "chbev(3)"
 name: "chbev"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-chbev/"
 description: "chbev.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> chbev.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chbev</code> (JOBZ, UPLO, N, KD, AB, LDAB, W, Z, LDZ, WORK, RWORK, INFO)<br />
  <i></i><code> CHBEV computes the eigenvalues and, optionally, the left and/or right eigenvectors for OTHER matrices</code></p>

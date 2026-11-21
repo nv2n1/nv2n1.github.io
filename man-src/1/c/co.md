@@ -1,5 +1,4 @@
 ---
-
 title: "co(1)"
 name: "co"
 section: "1"
@@ -10,7 +9,9 @@ description: "co – check out RCS revisions"
 
 <h2>NAME</h2>
 <p> co &#8211; check out RCS revisions</p>
+<h2>SYNOPSIS</h2>
 <p> <code>co</code> [<i>options</i>]<i> file </i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>co</code> retrieves a revision from each <font SIZE="-1">RCS</font> file and stores it into the corresponding working file. </p>
 <p> Filenames matching an <font SIZE="-1">RCS</font> suffix denote <font SIZE="-1">RCS</font> files; all others denote working files. Names are paired as explained in <code><a href="/docs/linux/man/1-ci/">ci</a></code>(1). </p>
 <p> Revisions of an <font SIZE="-1">RCS</font> file can be checked out locked or unlocked. Locking a revision prevents overlapping updates. A revision checked out for reading or processing (e.g., compiling) need not be locked. A revision checked out for editing and later checkin must normally be locked. Checkout with locking fails if the revision to be checked out is currently locked by another user. (A lock can be broken with <code><a href="/docs/linux/man/1-rcs/">rcs</a></code>(1).)&nbsp;<wbr> Checkout with locking also requires the caller to be on the access list of the <font SIZE="-1">RCS</font> file, unless he is the owner of the file or the superuser, or the access list is empty. Checkout without locking is not subject to accesslist restrictions, and is not affected by the presence of locks. </p>

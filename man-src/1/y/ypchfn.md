@@ -1,5 +1,4 @@
 ---
-
 title: "ypchfn(1)"
 name: "ypchfn"
 section: "1"
@@ -10,9 +9,11 @@ description: "yppasswd, ypchfn, ypchsh – change your password in the NIS datab
 
 <h2>NAME</h2>
 <p> yppasswd, ypchfn, ypchsh &#8211; change your password in the NIS database</p>
+<h2>SYNOPSIS</h2>
 <p> <code>yppasswd [-f] [-l] [-p] [user]</code><br />
  <code>ypchfn [user]</code><br />
  <code>ypchsh [user]</code></p>
+<h2>DESCRIPTION</h2>
 <p> In the old days, the standard <code><a href="/docs/linux/man/1-passwd/">passwd</a></code>(1), <code><a href="/docs/linux/man/1-chfn/">chfn</a></code>(1) and <code><a href="/docs/linux/man/1-chsh/">chsh</a></code>(1) tools could not be used under Linux to change the users NIS password, shell and GECOS information. For changing the NIS information, they were replaced by their NIS counterparts, <code>yppasswd</code>, <code>ypchfn</code> and <code>ypchsh</code>. </p>
 <p> Today, this versions are deprecated and should not be used any longer. </p>
 <p> Using the command line switches, you can choose whether to update your password <code>-p</code>, your login shell <code>-l</code>, or your GECOS field <code>-f</code>, or a combination of them. <code>yppasswd</code> implies the <code>-p</code> option, if no other option is given. If you use the <code>-f</code> or <code>-l</code> option, you also need to add the <code>-p</code> flag. <code>ypchfn</code> implies the <code>-f</code> option, and <code>ypchsh</code> <code>-l</code>. </p>

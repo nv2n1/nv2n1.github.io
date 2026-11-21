@@ -1,5 +1,4 @@
 ---
-
 title: "bson_iter_as_int64(3)"
 name: "bson_iter_as_int64"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_iter_as_int64() – The bson_iter_as_int64() function shall r
 
 <h2>NAME</h2>
 <p> bson_iter_as_int64() &#8211; The bson_iter_as_int64() function shall return the contents of the current element as if it were a BSON_TYPE_INT64 element. The currently supported casts include:</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 int64_t
 bson_iter_as_int64(const bson_iter_t *iter);
@@ -18,6 +18,7 @@ bson_iter_as_int64(const bson_iter_t *iter);
 <dl>
 <dt><code>iter</code></dt>
 <dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_iter_as_int64/">bson_iter_as_int64</a>(3)</code> function shall return the contents of the current element as if it were a BSON_TYPE_INT64 element. The currently supported casts include: </p>
 <dl>
 <dt>\[bu]</dt>

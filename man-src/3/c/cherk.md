@@ -1,5 +1,4 @@
 ---
-
 title: "cherk(3)"
 name: "cherk"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cherk/"
 description: "cherk.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cherk.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cherk</code> (UPLO, TRANS, N, K, ALPHA, A, LDA, BETA, C, LDC)<br />
  <i></i><code>CHERK</code></p>

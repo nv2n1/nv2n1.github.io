@@ -1,5 +1,4 @@
 ---
-
 title: "lavplay(1)"
 name: "lavplay"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-lavplay/"
 description: "lavplay – Playback and edit MJPEG video"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lavplay &#8211; Playback and edit MJPEG video</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lavplay</code> [<i>options</i>] <i>lavfile1 [lavfile2 &#8230; lavfileN]</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>lavplay</code> can be used to playback video in MJPEG format (either quicktime or AVI) on a zoran video-capture device, such as the Miro/Pinnacle DC10(+), the Iomega Buz or Linux Media Labs&#8217; LML33, or in software mode (using SDL). </p>
 <p> It also provides mechanisms for non-destructive editting video using an interactive front-end such as <code>glav</code>(1). See <code>SEARCHING AND EDITING</code> below for details. </p>
 <h2>OPTIONS</h2>

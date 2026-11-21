@@ -1,5 +1,4 @@
 ---
-
 title: "lnst-pool-wizard(1)"
 name: "lnst-pool-wizard"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-lnst-pool-wizard/"
 description: "lnst-pool-wizard – Linux Network Stack Test Pool Wizard"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lnst-pool-wizard &#8211; Linux Network Stack Test Pool Wizard </p>
+<h2>SYNOPSIS</h2>
 <p> <code>lnst-pool-wizard</code> [<code>-h</code>] [<i>MODE</i>] [<code>-p </code><i>pool_dir</i>] [<i>HOSTNAME[:PORT]</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> Linux Network Stack Test is a tool that supports development and execution of automated and portable network tests. For detailed description of the architecture of LNST please refer to project website (link listed on <code>INTERNET RESOURCES</code> bellow). </p>
 <p> <code>lnst-pool-wizard</code> is a script that runs wizard for creating slave machine description XML files</p>
 <h2>MODES</h2>

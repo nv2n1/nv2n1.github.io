@@ -1,5 +1,4 @@
 ---
-
 title: "ares_send(3)"
 name: "ares_send"
 section: "3"
@@ -10,12 +9,14 @@ description: "ares_send – Initiate a DNS query"
 
 <h2>NAME</h2>
 <p> ares_send &#8211; Initiate a DNS query</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ares.h&gt;
 typedef void (*ares_callback)(void *arg, int status,
 void ares_send(ares_channel channel, const unsigned char *qbuf,
 int qlen, ares_callback callback, void *arg)
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>ares_send</code> function initiates a DNS query on the name service channel identified by <i>channel</i>. The parameters <i>qbuf</i> and <i>qlen</i> give the DNS query, which should already have been formatted according to the DNS protocol. When the query is complete or has failed, the ares library will invoke <i>callback</i>. Completion or failure of the query may happen immediately, or may happen during a later call to <code><a href="/docs/linux/man/3-ares_process/">ares_process</a></code>(3) or <code><a href="/docs/linux/man/3-ares_destroy/">ares_destroy</a></code>(3). </p>
 <p> The callback argument <i>arg</i> is copied from the <code>ares_send</code> argument <i>arg</i>. The callback argument <i>status</i> indicates whether the query succeeded and, if not, how it failed. It may have any of the following values:</p>
 <dl>

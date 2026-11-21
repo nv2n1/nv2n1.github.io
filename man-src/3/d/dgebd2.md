@@ -1,5 +1,4 @@
 ---
-
 title: "dgebd2(3)"
 name: "dgebd2"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dgebd2/"
 description: "dgebd2.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dgebd2.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgebd2</code> (M, N, A, LDA, D, E, TAUQ, TAUP, WORK, INFO)<br />
  <i></i><code>DGEBD2</code> reduces a general matrix to bidiagonal form using an unblocked algorithm.</p>

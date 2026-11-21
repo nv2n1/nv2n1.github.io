@@ -1,5 +1,4 @@
 ---
-
 title: "remunge(1)"
 name: "remunge"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-remunge/"
 description: "remunge – MUNGE credential benchmark"
 ---
 
+<h2 class="name">NAME</h2>
+<p> remunge &#8211; MUNGE credential benchmark</p>
+<h2>SYNOPSIS</h2>
 <p> <code>remunge</code> [<i>OPTION</i>]&#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>remunge</code> program benchmarks the performance of MUNGE. A benchmark runs for the specified duration or until the specified number of credentials are processed, whichever comes first. At its conclusion, the number of credentials processed per second is written to stdout. </p>
 <p> By default, credentials are encoded for one second using a single thread. </p>
 <h2>OPTIONS</h2>

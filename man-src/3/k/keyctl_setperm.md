@@ -1,5 +1,4 @@
 ---
-
 title: "keyctl_setperm(3)"
 name: "keyctl_setperm"
 section: "3"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/3-keyctl_setperm/"
 description: "keyctl_setperm – Change the permissions mask on a key"
 ---
 
+<h2 class="name">NAME</h2>
+<p> keyctl_setperm &#8211; Change the permissions mask on a key </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;keyutils.h&gt;
 long keyctl_setperm(key_serial_t key, key_perm_t perm);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>keyctl_setperm</code>() changes the permissions mask on a key. </p>
 <p> A process that does not have the <code>SysAdmin</code> capability may not change the permissions mask on a key that doesn&#8217;t have the same UID as the caller. </p>
 <p> The caller must have <code>setattr</code> permission on a key to be able change its permissions mask. </p>

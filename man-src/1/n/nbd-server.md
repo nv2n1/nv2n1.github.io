@@ -1,5 +1,4 @@
 ---
-
 title: "nbd-server(1)"
 name: "nbd-server"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-nbd-server/"
 description: "nbd-server – serve a file as a block device to other computers running the GNU/Linux(tm) or GNU/Hurd Operating System"
 ---
 
+<h2 class="name">NAME</h2>
+<p> nbd-server &#8211; serve a file as a block device to other computers running the GNU/Linux(tm) or GNU/Hurd Operating System </p>
+<h2>SYNOPSIS</h2>
 <p> <code>nbd-server </code> <i>[ip@]port</i> <i>filename</i> [ <i>size</i> ] [ <code>-r</code> ] [ <code>-m</code> ] [ <code>-c</code> ] [ <code>-l </code><i>host list filename</i> ] [ <code>-o </code><i>section name</i> ] [ <code>-C </code><i>config file</i> ] [ <code>-M </code><i>max connections</i> ] [ <code>-V</code> ] [ <code>-d</code> ] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>nbd-server</code> is the server for the Linux Network Block Device (NBD). With NBD, a client can use a file, exported over the network from a server, as a block device. It can then be used for whatever purpose a normal block device (harddisk, CD-ROM, &#8230;) can be used for. </p>
 <p> NBD can be useful for diskless clients that need swapspace, but you can also create a filesystem on it and use it as though it were a local filesystem. </p>
 <p> <code>nbd-server</code> implements some security through a file called &quot;/etc/nbd-server/allow&quot; (by default; a different file can be chosen with the &#8216;-l&#8217; option or through a config file specification). This file must list the IP-addresses or network masks of clients that are allowed to connect. If it does not exist, all clients are able to connect. If the file is empty, no clients can connect. </p>

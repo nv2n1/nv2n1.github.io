@@ -1,5 +1,4 @@
 ---
-
 title: "load_pcx_pf(3)"
 name: "load_pcx_pf"
 section: "3"
@@ -10,8 +9,10 @@ description: "load_pcx_pf – Packfile version of load_pcx. Allegro game program
 
 <h2>NAME</h2>
 <p> load_pcx_pf &#8211; Packfile version of load_pcx. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>BITMAP *load_pcx_pf(PACKFILE *f, RGB *pal);</code></p>
+<h2>DESCRIPTION</h2>
 <p> A version of load_pcx() which reads from a packfile. Example: </p>
 <pre><code>
 PACKFILE *packfile;

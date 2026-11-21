@@ -1,5 +1,4 @@
 ---
-
 title: "dssi_list_plugins(1)"
 name: "dssi_list_plugins"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dssi_list_plugins/"
 description: "dssi_list_plugins – list available DSSI plugins"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dssi_list_plugins &#8211; list available DSSI plugins </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dssi_list_plugins</code> [-v|&#8211;verbose]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>dssi_list_plugins</code> scans a list of directories specified by the environment variable <code>DSSI_PATH</code>, looking for DSSI (or LADSPA) shared libraries. It reports each library found, and lists the plugins contained within the library. It ignores subdirectories and libtool *.la files; otherwise it will complain if any of the files found are not DSSI or LADSPA shared libraries.</p>
 <h2>OPTIONS</h2>
 <dl>

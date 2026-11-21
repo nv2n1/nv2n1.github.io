@@ -1,5 +1,4 @@
 ---
-
 title: "endspent(3)"
 name: "endspent"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-endspent/"
 description: "getspnam, getspnam_r, getspent, getspent_r, setspent, endspent, fgetspent, fgetspent_r, sgetspent, sgetspent_r, putspent, lckpwdf, ulckpwdf – get shadow password file entry"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getspnam, getspnam_r, getspent, getspent_r, setspent, endspent, fgetspent, fgetspent_r, sgetspent, sgetspent_r, putspent, lckpwdf, ulckpwdf &#8211; get shadow password file entry </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 /* General shadow password file API */
 #include &lt;shadow.h&gt;
@@ -37,6 +39,7 @@ int sgetspent_r(const char *s, struct spwd *spbuf,
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</p>
+<h2>DESCRIPTION</h2>
 <p> Long ago it was considered safe to have encrypted passwords openly visible in the password file. When computers got faster and people got more security-conscious, this was no longer acceptable. Julianne Frances Haugh implemented the shadow password suite that keeps the encrypted passwords in the shadow password database (e.g., the local shadow password file <i>/etc/shadow</i>, NIS, and LDAP), readable only by root. </p>
 <p> The functions described below resemble those for the traditional password database (e.g., see <code><a href="/docs/linux/man/3-getpwnam/">getpwnam</a></code>(3) and <code><a href="/docs/linux/man/3-getpwent/">getpwent</a></code>(3)). </p>
 <p> The <code>getspnam</code>() function returns a pointer to a structure containing the broken-out fields of the record in the shadow password database that matches the username <i>name</i>. </p>

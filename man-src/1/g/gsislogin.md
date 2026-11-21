@@ -1,5 +1,4 @@
 ---
-
 title: "gsislogin(1)"
 name: "gsislogin"
 section: "1"
@@ -10,7 +9,9 @@ description: "ssh – OpenSSH SSH client (remote login program)"
 
 <h2>NAME</h2>
 <p> <code>ssh</code> &#8211; OpenSSH SSH client (remote login program)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ssh</code> -words [-<code>1246AaCfgKkMNnqsTtVvXxYy </code>[-<code>b </code><i>bind_address</i> ] ] [-<code>c </code><i>cipher_spec</i> ] [-<code>D </code>[<i>bind_address : </i><i>port</i> ] ] [-<code>E </code><i>log_file</i> ] [-<code>e </code><i>escape_char</i> ] [-<code>F </code><i>configfile</i> ] [-<code>I </code><i>pkcs11</i> ] [-<code>i </code><i>identity_file</i> ] [-<code>L </code>[<i>bind_address : </i><i>port : </i><i>host : </i><i>hostport</i> ] ] [-<code>l </code><i>login_name</i> ] [-<code>m </code><i>mac_spec</i> ] [-<code>O </code><i>ctl_cmd</i> ] [-<code>o </code><i>option</i> ] [-<code>p </code><i>port</i> ] [-<code>Q cipher | cipher-auth | mac | kex | key</code> ] [-<code>R </code>[<i>bind_address : </i><i>port : </i><i>host : </i><i>hostport</i> ] ] [-<code>S </code><i>ctl_path</i> ] [-<code>W </code><i>host : </i><i>port</i> ] [-<code>w </code><i>local_tun </i>[: <i>remote_tun</i> ] ] [<i>user </i><code>@ </code><i>hostname</i> ] [<i>command</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>ssh</code> (SSH client) is a program for logging into a remote machine and for executing commands on a remote machine. It is intended to replace rlogin and rsh, and provide secure encrypted communications between two untrusted hosts over an insecure network. X11 connections and arbitrary TCP ports can also be forwarded over the secure channel. </p>
 <p> <code>ssh</code> connects and logs into the specified <i>hostname</i> (with optional <i>user</i> name). The user must prove his/her identity to the remote machine using one of several methods depending on the protocol version used (see below). </p>
 <p> If <i>command</i> is specified, it is executed on the remote host instead of a login shell. </p>

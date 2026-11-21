@@ -1,5 +1,4 @@
 ---
-
 title: "ldap_next_entry(3)"
 name: "ldap_next_entry"
 section: "3"
@@ -8,14 +7,18 @@ url: "/docs/linux/man/3-ldap_next_entry/"
 description: "ldap_first_entry, ldap_next_entry, ldap_count_entries – LDAP result entry parsing and counting routines"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ldap_first_entry, ldap_next_entry, ldap_count_entries &#8211; LDAP result entry parsing and counting routines </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ldap.h&gt;
 int ldap_count_entries(LDAP *ld, LDAPMessage *result)
     LDAPMessage *ldap_first_entry(LDAP *ld, LDAPMessage *result)
         LDAPMessage *ldap_next_entry(LDAP *ld, LDAPMessage *entry)
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> These routines are used to parse results received from <code><a href="/docs/linux/man/3-ldap_result/">ldap_result</a></code>(3) or the synchronous LDAP search operation routines <code><a href="/docs/linux/man/3-ldap_search_s/">ldap_search_s</a></code>(3) and <code><a href="/docs/linux/man/3-ldap_search_st/">ldap_search_st</a></code>(3). </p>
 <p> The <code>ldap_first_entry()</code> routine is used to retrieve the first entry in a chain of search results. It takes the <i>result</i> as returned by a call to <code><a href="/docs/linux/man/3-ldap_result/">ldap_result</a></code>(3) or <code><a href="/docs/linux/man/3-ldap_search_s/">ldap_search_s</a></code>(3) or <code><a href="/docs/linux/man/3-ldap_search_st/">ldap_search_st</a></code>(3) and returns a pointer to the first entry in the result. </p>
 <p> This pointer should be supplied on a subsequent call to <code>ldap_next_entry()</code> to get the next entry, the result of which should be supplied to the next call to <code>ldap_next_entry()</code>, etc. <code>ldap_next_entry()</code> will return NULL when there are no more entries. The entries returned from these calls are used in calls to the routines described in <code><a href="/docs/linux/man/3-ldap_get_dn/">ldap_get_dn</a></code>(3), <code><a href="/docs/linux/man/3-ldap_first_attribute/">ldap_first_attribute</a></code>(3), <code><a href="/docs/linux/man/3-ldap_get_values/">ldap_get_values</a></code>(3), etc. </p>

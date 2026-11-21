@@ -1,5 +1,4 @@
 ---
-
 title: "dmtxquery(1)"
 name: "dmtxquery"
 section: "1"
@@ -10,7 +9,9 @@ description: "dmtxquery – extract information from dmtxread output"
 
 <h2>NAME</h2>
 <p> dmtxquery &#8211; extract information from dmtxread output</p>
+<h2>SYNOPSIS</h2>
 <p> <code>dmtxquery</code> <i>PROPERTY</i> [<i>OPTION</i>]&#8230; [<i>FILE</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> dmtxquery extracts information from the XML output from dmtxread for individual or grouped barcode scan results.</p>
 <h2>PROPERTY</h2>
 <p> barcode.count count of all barcodes found in image </p>

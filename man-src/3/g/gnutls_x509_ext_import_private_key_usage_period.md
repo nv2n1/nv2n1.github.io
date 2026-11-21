@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_ext_import_private_key_usage_period(3)"
 name: "gnutls_x509_ext_import_private_key_usage_period"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_ext_import_private_key_usage_period – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_ext_import_private_key_usage_period &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509-ext.h&gt;</code> </p>
 <p> <code>int gnutls_x509_ext_import_private_key_usage_period(const gnutls_datum_t * </code><i>ext</i><code>, time_t * </code><i>activation</i><code>, time_t * </code><i>expiration</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_x509_ext_import_private_key_usage_period – API function"
 <dd> Will hold the activation time</dd>
 <dt>time_t * expiration</dt>
 <dd> Will hold the expiration time</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will return the expiration and activation times of the private key as written in the PKIX extension 2.5.29.16.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

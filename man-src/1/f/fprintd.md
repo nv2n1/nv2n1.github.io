@@ -1,5 +1,4 @@
 ---
-
 title: "fprintd(1)"
 name: "fprintd"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-fprintd/"
 description: "fprintd – Fingerprint management daemon, and test applications"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fprintd &#8211; Fingerprint management daemon, and test applications </p>
+<h2>SYNOPSIS</h2>
 <p> <code>fprintd-enroll</code> [-f finger] [usename] </p>
 <p> <code>fprintd-list</code> username [usernames&#8230;] </p>
 <p> <code>fprintd-verify</code> [-f finger] [usename] </p>
 <p> <code>fprintd-delete</code> username [usernames&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>fprintd</code> command-line utilities. </p>
 <p> The <code>fprintd</code> daemon is accessed through <code>D-Bus</code> by those command-line utilities.</p>
 <h2>ARGUMENTS</h2>

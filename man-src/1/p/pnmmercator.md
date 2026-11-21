@@ -1,5 +1,4 @@
 ---
-
 title: "pnmmercator(1)"
 name: "pnmmercator"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pnmmercator/"
 description: "pnmmercator – transform a worldmap from rectangular projection to Mercator projection and vice-versa"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pnmmercator &#8211; transform a worldmap from rectangular projection to Mercator projection and vice-versa</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pnmmercator</code> [<code>-inverse</code>] [<code>-nomix</code>] [<code>-[v]verbose</code>] [<i>filename</i>] </p>
 <p> Minimum unique abbreviation of option is acceptable. You may use double hyphens instead of single hyphen to denote options. </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> The <code>pnmmercator</code> utility, converts a rectangular projection worldmap to a Mercator projection format, as used for maps.google.com and many other online maps. The map used as input for <code>pnmmercator</code> must have rows for -90 to 90 degrees latitude and columns for -180 to +180 degrees longitude. The file will typically be twice as wide as high, but this is not a requirement. The output file will be using the Mercator projection and will get double the height of the input file. </p>
 <p> Maps using the Mercator projection are stretched more the closer a row is to the North or South Pole. The last few degrees (&gt; 85 or &lt; -85 degrees) are not part of a Mercator map at all because they would be stretched too much and the rows close to the edge will show banding, because they originate from the same row in the original map. </p>

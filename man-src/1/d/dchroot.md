@@ -1,5 +1,4 @@
 ---
-
 title: "dchroot(1)"
 name: "dchroot"
 section: "1"
@@ -10,7 +9,9 @@ description: "dchroot – enter a chroot environment"
 
 <h2>NAME</h2>
 <p> dchroot &#8211; enter a chroot environment</p>
+<h2>SYNOPSIS</h2>
 <p> <code>dchroot</code> [<code>-h</code>|<code>&#8211;help</code> | <code>-V</code>|<code>&#8211;version</code> | <code>-l</code>|<code>&#8211;list</code> | <code>-i</code>|<code>&#8211;info</code> | <code>&#8211;config</code> | <code>&#8211;location</code>] [<code>&#8211;directory=</code><i>directory</i>] [<code>-d</code>|<code>&#8211;preserve-environment</code>] [<code>-q</code>|<code>&#8211;quiet</code> | <code>-v</code>|<code>&#8211;verbose</code>] [<code>-c </code><i>chroot</i>|<code>&#8211;chroot=</code><i>chroot</i> | <code>&#8211;all</code>] [<code>COMMAND</code> [ <code>ARG1</code> [ <code>ARG2</code> [ <code>ARGn</code>]]]]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>dchroot</code> allows the user to run a command or a login shell in a chroot environment. If no command is specified, a login shell will be started in the user&#8217;s home directory inside the chroot. </p>
 <p> The command is one or more arguments which will be run in the user&#8217;s default shell using its <i>-c</i> option. As a result, shell code may be embedded in this argument. If multiple command options are used, they are concatenated together, separated by spaces. Users should be aware of the shell quoting issues this presents, and should use <code>schroot</code> if necessary, which does not have any quoting issues. </p>
 <p> The directory the command or login shell is run in depends upon the context. See <i>&#8211;directory</i> option below for a complete description. </p>

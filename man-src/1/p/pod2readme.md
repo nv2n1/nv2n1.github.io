@@ -1,5 +1,4 @@
 ---
-
 title: "pod2readme(1)"
 name: "pod2readme"
 section: "1"
@@ -7,9 +6,14 @@ letter: "p"
 url: "/docs/linux/man/1-pod2readme/"
 ---
 
-pod2readme - script to convert POD to README file 
+<h2 class="name">NAME</h2>
+ 
 
-<pre>
+ pod2readme - script to convert POD to README file 
+
+<h2>SYNOPSIS</h2>
+
+ <pre>
   pod2readme lib/Some/Module.pm
 </pre>
 

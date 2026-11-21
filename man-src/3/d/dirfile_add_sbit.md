@@ -1,5 +1,4 @@
 ---
-
 title: "dirfile_add_sbit(3)"
 name: "dirfile_add_sbit"
 section: "3"
@@ -10,6 +9,7 @@ description: "dirfile_add_bit, dirfile_add_clincom, dirfile_add_const, dirfile_a
 
 <h2>NAME</h2>
 <p> dirfile_add_bit, dirfile_add_clincom, dirfile_add_const, dirfile_add_cpolynom, dirfile_add_lincom, dirfile_add_linterp, dirfile_add_multiply, dirfile_add_phase, dirfile_add_polynom, dirfile_add_raw, dirfile_add_sbit, dirfile_add_string &#8212; add a field to a dirfile</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
 <dl>
 <dt> <code>int dirfile_add_bit(DIRFILE *</code><i>dirfile</i><code>, const char *</code><i>field_name</i><code>,</code> <code>const char *</code><i>in_field</i><code>, gd_bit_t </code><i>bitnum</i><code>, gd_bit_t </code><i>numbits</i><code>,</code> <code>int </code><i>fragment_index</i><code>);</code></dt>
@@ -24,6 +24,7 @@ description: "dirfile_add_bit, dirfile_add_clincom, dirfile_add_const, dirfile_a
 <dt> <code>int dirfile_add_raw(DIRFILE *</code><i>dirfile</i><code>, const char *</code><i>field_name</i><code>,</code> <code>gd_type_t </code><i>data_type</i><code>, gd_spf_t </code><i>spf</i><code>, int </code><i>fragment_index</i><code>);</code></dt>
 <dt> <code>int dirfile_add_sbit(DIRFILE *</code><i>dirfile</i><code>, const char *</code><i>field_name</i><code>,</code> <code>const char *</code><i>in_field</i><code>, gd_bit_t </code><i>bitnum</i><code>, gd_bit_t </code><i>numbits</i><code>,</code> <code>int </code><i>fragment_index</i><code>);</code></dt>
 <dt> <code>int dirfile_add_string(DIRFILE *</code><i>dirfile</i><code>, const char *</code><i>field_name</i><code>,</code> <code>const char *</code><i>value</i><code>, int </code><i>fragment_index</i><code>);</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>These functions provide alternatives to using the <code><a href="/docs/linux/man/3-dirfile_add/">dirfile_add</a></code>(3) function to add a new field of the indicated type to the dirfile specified by <i>dirfile</i>. In all of these calls, <i>field_name</i> indicates the name of the field to be added. Further, <i>fragment_index</i> is the index of the format file fragment into which the field should be added. (To convert a fragment index to its file name, see <code><a href="/docs/linux/man/3-get_fragmentname/">get_fragmentname</a></code>(3).) The meaning and valid types of other arguments may be obtained from the <code><a href="/docs/linux/man/3-get_entry/">get_entry</a></code>(3) and <code><a href="/docs/linux/man/5-dirfile-format/">dirfile-format</a></code>(5) manual pages. </dd>
 <p> The <code>dirfile_add_clincom</code>() and <code>dirfile_add_cpolynom</code>() functions are identical to <code>dirfile_add_lincom</code>() and <code>dirfile_add_polynom</code>(), except they take complex scalar parameters, instead of purely real values. </p>
 <p> The <code>dirfile_add_lincom</code>() and <code>dirfile_add_clincom</code>() functions takes pointers to three arrays of length <i>n_fields</i> containing the input field names (<i>in_fields</i>), the gain factors (<i>m</i> or <i>cm</i>), and the offset terms (<i>b</i> or <i>cb</i>). Similarly, <code>dirfile_add_polynom</code>() and <code>dirfile_add_cpolynom</code>() take an array of length <i>poly_ord</i> + 1 containing the polynomial co-efficients (<i>a</i> or <i>ca</i>). </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "sdptool(1)"
 name: "sdptool"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-sdptool/"
 description: "sdptool – control and interrogate SDP servers"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sdptool &#8211; control and interrogate SDP servers </p>
+<h2>SYNOPSIS</h2>
 <p> <code>sdptool</code> [<i>OPTIONS</i>] [<i>COMMAND</i> [<i>PARAMETERS</i>]]</p>
+<h2>DESCRIPTION</h2>
 <p> <code><a href="/docs/linux/man/1-sdptool/">sdptool</a>(1)</code> provides the interface for performing SDP queries on Bluetooth devices, and administering a local SDP database.</p>
 <h2>COMMANDS</h2>
 <p> The following commands are available. In all cases <code>bdaddr</code> specifies the device to search or browse. If <i>local</i> is used for <code>bdaddr</code>, then the local SDP database is searched. </p>

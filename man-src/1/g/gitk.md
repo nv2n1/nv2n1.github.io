@@ -1,5 +1,4 @@
 ---
-
 title: "gitk(1)"
 name: "gitk"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-gitk/"
 description: "gitk – The Git repository browser"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gitk &#8211; The Git repository browser </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 gitk[&lt;options&gt;][&lt;revision range&gt;][--][&lt;path&gt;...]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Displays changes in a repository or a selected set of commits. This includes visualizing the commit graph, showing information related to each commit, and the files in the trees of each revision.</p>
 <h2>OPTIONS</h2>
 <p> To control which revisions to show, gitk supports most options applicable to the <i>git rev-list</i> command. It also supports a few options applicable to the <i>git diff-*</i> commands to control how the changes each commit introduces are shown. Finally, it supports some gitk-specific options. </p>

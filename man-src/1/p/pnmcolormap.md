@@ -1,5 +1,4 @@
 ---
-
 title: "pnmcolormap(1)"
 name: "pnmcolormap"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pnmcolormap/"
 description: "pnmcolormap – create quantization color map for a portable anymap"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pnmcolormap &#8211; create quantization color map for a portable anymap</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pnmcolormap</code> [<code>-center</code>|<code>-meancolor</code>|<code>-meanpixel</code>] [<code>-spreadbrightness</code>|<code>-spreadluminosity</code>] [<code>-sort</code>] [<code>-square</code>] <i>ncolors</i>|<i></i><code>all</code> [<i>pnmfile</i>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one to designate an option. You may use either white space or an equals sign between an option name and its value. </p>
+<h2>DESCRIPTION</h2>
 <p> Reads a PNM image as input. Chooses <i>ncolors</i> colors to best represent the image, maps the existing colors to the new ones, and writes a PNM color map defining them as output. </p>
 <p> You can use this map as input to <code>pnmremap</code> on the same input image to quantize the colors in that image, I.e. produce a similar image with fewer colors. <code>pnmquant</code> does both the <code>pnmcolormap</code> and <code>pnmremap</code> steps for you. </p>
 <p> A PNM colormap is a PNM image of any dimensions that contains at least one pixel of each color in the set of colors it represents. </p>

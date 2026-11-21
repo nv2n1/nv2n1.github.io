@@ -1,5 +1,4 @@
 ---
-
 title: "rootv(1)"
 name: "rootv"
 section: "1"
@@ -10,7 +9,9 @@ description: "rootv – display TV using the Xvideo extension"
 
 <h2>NAME</h2>
 <p> rootv &#8211; display TV using the Xvideo extension</p>
+<h2>SYNOPSIS</h2>
 <p> <code>rootv [ options ]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>rootv</code> puts a video to some window. By default it creates its own window, but you can also ask it to use the root window (thus the name) or any other window. <code>rootv</code> needs the Xvideo extension. </p>
 <p> <code>rootv</code> itself provides no way to control video/audio/tuner. You can use v4lctl to do this.</p>
 <h2>OPTIONS</h2>

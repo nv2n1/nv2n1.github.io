@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_gass_transfer_listenerattr_init/"
 description: "Listener attributes –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Listener attributes &#8211; </p>
 <h3>Functions</h3>
 <p> int <code>globus_gass_transfer_listenerattr_init</code> (globus_gass_transfer_listenerattr_t *attr, char *url_scheme) </p>
 <h3>Listener Backlog</h3>

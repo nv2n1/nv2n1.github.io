@@ -1,5 +1,4 @@
 ---
-
 title: "git-commit(1)"
 name: "git-commit"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-git-commit/"
 description: "git-commit – Record changes to the repository"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-commit &#8211; Record changes to the repository </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git commit [-a | --interactive | --patch] [-s] [-v] [-u&lt;mode&gt;] [--amend]
            [--dry-run] [(-c | -C | --squash) &lt;commit&gt; | --fixup [(amend|reword):]&lt;commit&gt;)]
@@ -18,6 +20,7 @@ git commit [-a | --interactive | --patch] [-s] [-v] [-u&lt;mode&gt;] [--amend]
            [(--trailer &lt;token&gt;[(=|:)&lt;value&gt;])...] [-S[&lt;keyid&gt;]]
            [--] [&lt;pathspec&gt;...]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Create a new commit containing the current contents of the index and the given log message describing the changes. The new commit is a direct child of HEAD, usually the tip of the current branch, and the branch is updated to point to it (unless no branch is associated with the working tree, in which case HEAD is &quot;detached&quot; as described in <code><a href="/docs/linux/man/1-git-checkout/">git-checkout</a></code>(1)). </p>
 <p> The content to be committed can be specified in several ways: </p>
 <dl>

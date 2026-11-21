@@ -1,5 +1,4 @@
 ---
-
 title: "pbzip2(1)"
 name: "pbzip2"
 section: "1"
@@ -10,7 +9,9 @@ description: "pbzip2 – parallel bzip2 file compressor, v1.1.10"
 
 <h2>NAME</h2>
 <p> pbzip2 &#8211; parallel bzip2 file compressor, v1.1.10</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pbzip2</code> [<code> -123456789 </code>] [<code> -b#cdfhklm#p#qrS#tvVz </code>] [ <i>filenames &#8230;</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>pbzip2</i> is a parallel implementation of the bzip2 block-sorting file compressor that uses pthreads and achieves near-linear speedup on SMP machines. The output of this version is fully compatible with bzip2 v1.0.2 or newer (ie: anything compressed with <i>pbzip2</i> can be decompressed with bzip2). </p>
 <p> <i>pbzip2</i> should work on any system that has a pthreads compatible C++ compiler (such as gcc). It has been tested on: Linux, Windows (cygwin), Solaris, Tru64/OSF1, HP-UX, and Irix. </p>
 <p> The default settings for <i>pbzip2</i> will work well in most cases. The only switch you will likely need to use is -d to decompress files and -p to set the # of processors for <i>pbzip2</i> to use if autodetect is not supported on your system, or you want to use a specific # of CPUs.</p>

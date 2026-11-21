@@ -1,5 +1,4 @@
 ---
-
 title: "hp-colorcal(1)"
 name: "hp-colorcal"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-hp-colorcal/"
 description: "hp-colorcal – Printer Cartridge Color Calibration Utility"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hp-colorcal &#8211; Printer Cartridge Color Calibration Utility </p>
+<h2>DESCRIPTION</h2>
 <p> Perform color calibration on HPLIP supported inkjet printers. (Note: Not all printers require the use of this utility).</p>
+<h2>SYNOPSIS</h2>
 <p> <code>hp-colorcal [DEVICE_URI|PRINTER_NAME] [MODE] [OPTIONS]</code></p>
 <h2>PRINTER|DEVICE-URI</h2>
 <dl>

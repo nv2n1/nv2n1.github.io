@@ -1,5 +1,4 @@
 ---
-
 title: "gpsman(1)"
 name: "gpsman"
 section: "1"
@@ -10,8 +9,10 @@ description: "gpsman – a (graphical) manager of GPS data"
 
 <h2>NAME</h2>
 <p> gpsman &#8211; a (graphical) manager of GPS data</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gpsman</code> [<code>-dev</code> <i>[usb=]DEVICE</i>]<br />
  <code>gpsman</code> [<i>OPTIONS</i>] <i>COMMAND</i> [<i>COMMAND_ARGS</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>gpsman</code> GPS Manager (GPSMan) is a graphical manager of GPS data that makes possible the preparation, inspection and edition of GPS data in a friendly environment. GPSMan supports communication and real-time logging with Garmin, Lowrance and Magellan receivers and accepts real-time logging information in NMEA 0183 from any GPS receiver. </p>
 <p> To comunicate with the GPS port the user must have been granted read/write permissions for the corresponding device. </p>
 <p> For use in graphical mode GPSMan must be invoked as in the first form above, where the <code>usb=</code> prefix to the device path enforces the use of the Garmin USB protocol. The use in this mode is not further described here, a full description being given in the User Manual available along with the GPSMan distribution. </p>

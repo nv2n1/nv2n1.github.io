@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_psk_set_server_credentials_file(3)"
 name: "gnutls_psk_set_server_credentials_file"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_psk_set_server_credentials_file – API function"
 
 <h2>NAME</h2>
 <p> gnutls_psk_set_server_credentials_file &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_psk_set_server_credentials_file(gnutls_psk_server_credentials_t </code><i>res</i><code>, const char * </code><i>password_file</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_psk_set_server_credentials_file – API function"
 <dd> is a <code>gnutls_psk_server_credentials_t</code> structure.</dd>
 <dt>const char * password_file</dt>
 <dd> is the PSK password file (passwd.psk)</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function sets the password file, in a <code>gnutls_psk_server_credentials_t</code> structure. This password file holds usernames and keys and will be used for PSK authentication.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise an error code is returned.</p>

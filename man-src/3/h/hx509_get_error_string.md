@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-hx509_get_error_string/"
 description: "hx509 error functions –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hx509 error functions &#8211; </p>
 <h3>Functions</h3>
 <p> void <code>hx509_clear_error_string</code> (hx509_context context) </p>
 <p> void <code>hx509_set_error_stringv</code> (hx509_context context, int flags, int code, const char *fmt, va_list ap) </p>

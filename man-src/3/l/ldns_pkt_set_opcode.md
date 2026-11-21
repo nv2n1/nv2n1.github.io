@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_pkt_set_opcode(3)"
 name: "ldns_pkt_set_opcode"
 section: "3"
@@ -10,6 +9,7 @@ description: "ldns_pkt_set_flags, ldns_pkt_set_id, ldns_pkt_set_qr, ldns_pkt_set
 
 <h2>NAME</h2>
 <p> ldns_pkt_set_flags, ldns_pkt_set_id, ldns_pkt_set_qr, ldns_pkt_set_aa, ldns_pkt_set_tc, ldns_pkt_set_rd, ldns_pkt_set_cd, ldns_pkt_set_ra, ldns_pkt_set_ad, ldns_pkt_set_opcode, ldns_pkt_set_rcode, ldns_pkt_set_qdcount, ldns_pkt_set_ancount, ldns_pkt_set_nscount, ldns_pkt_set_arcount, ldns_pkt_set_answerfrom, ldns_pkt_set_querytime, ldns_pkt_set_size, ldns_pkt_set_section_count, ldns_pkt_set_tsig </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -33,6 +33,7 @@ description: "ldns_pkt_set_flags, ldns_pkt_set_id, ldns_pkt_set_qr, ldns_pkt_set
 <p> void ldns_pkt_set_size(ldns_pkt *p, size_t s); </p>
 <p> void ldns_pkt_set_section_count(ldns_pkt *p, ldns_pkt_section s, uint16_t x); </p>
 <p> void ldns_pkt_set_tsig(ldns_pkt *p, ldns_rr *t); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_pkt_set_flags</i>()</dt>
 <dd>sets the flags in a packet. .br <code>pkt</code>: the packet to operate on .br <code>flags</code>: ORed values: LDNS_QR| LDNS_AR for instance .br Returns true on success otherwise false</dd></dl>

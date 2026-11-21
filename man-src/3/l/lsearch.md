@@ -1,5 +1,4 @@
 ---
-
 title: "lsearch(3)"
 name: "lsearch"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-lsearch/"
 description: "lfind, lsearch – linear search of an array"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lfind, lsearch &#8211; linear search of an array </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;search.h&gt;
 void *lfind(const void *key, const void *base, size_t *nmemb,
@@ -15,6 +17,7 @@ void *lfind(const void *key, const void *base, size_t *nmemb,
 void *lsearch(const void *key, void *base, size_t *nmemb,
               size_t size, int (*compar)(const void *, const void *));
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>lfind</code>() and <code>lsearch</code>() perform a linear search for <i>key</i> in the array <i>base</i> which has <i>*nmemb</i> elements of <i>size</i> bytes each. The comparison function referenced by <i>compar</i> is expected to have two arguments which point to the <i>key</i> object and to an array member, in that order, and which returns zero if the <i>key</i> object matches the array member, and nonzero otherwise. </p>
 <p> If <code>lsearch</code>() does not find a matching element, then the <i>key</i> object is inserted at the end of the table, and <i>*nmemb</i> is incremented. In particular, one should know that a matching element exists, or that more room is available.</p>
 <h2>RETURN VALUE</h2>

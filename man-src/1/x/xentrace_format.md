@@ -1,5 +1,4 @@
 ---
-
 title: "xentrace_format(1)"
 name: "xentrace_format"
 section: "1"
@@ -10,7 +9,9 @@ description: "xentrace_format – pretty-print Xen trace data"
 
 <h2>NAME</h2>
 <p> xentrace_format &#8211; pretty-print Xen trace data</p>
+<h2>SYNOPSIS</h2>
 <p> <code>xentrace_format</code> [ <i>DEFS-FILE</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>xentrace_format</code> parses trace data in <code>xentrace</code> binary format from standard input and reformats it according to the rules in a file of definitions (<i>DEFS-FILE</i>), printing to standard output. </p>
 <p> The rules in <i>DEFS-FILE</i> should have the format shown below: </p>
 <p> <i>event_id</i> <i>whitespace</i> <i>format</i> </p>

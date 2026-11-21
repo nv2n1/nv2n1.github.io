@@ -1,5 +1,4 @@
 ---
-
 title: "cpg_model_initialize(3)"
 name: "cpg_model_initialize"
 section: "3"
@@ -10,8 +9,10 @@ description: "cpg_model_initialize – Create a new connection to the CPG servic
 
 <h2>NAME</h2>
 <p> cpg_model_initialize &#8211; Create a new connection to the CPG service</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cpg.h&gt;</code> </p>
 <p> <code>cs_error_t cpg_model_initialize(cpg_handle_t *</code><i>handle</i><code>, cpg_model_t </code><i>model</i><code>, cpg_model_data_t *</code><i>model_data</i><code>, void *</code><i>context</i><code>);</code> </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>cpg_model_initialize</code> function is used to initialize a connection to the closed process groups API. </p>
 <p> Each application may have several connections to the CPG API. Each application uses the <i>handle</i> argument to uniquely identify the connection. The <i>handle</i> argument is then used in other function calls to identify the connection to be used for communication with the CPG service. </p>
 <p> Argument <i>model</i> is used to explicitly choose set of callbacks and internal parameters. Currently only model <i>CPG_MODEL_V1</i> is defined. </p>

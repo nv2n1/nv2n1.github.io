@@ -1,5 +1,4 @@
 ---
-
 title: "offlineimap(1)"
 name: "offlineimap"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-offlineimap/"
 description: "offlineimap – Synchronize mailboxes and Maildirs both ways or one either way."
 ---
 
+<h2 class="name">NAME</h2>
+<p> offlineimap &#8211; Synchronize mailboxes and Maildirs both ways or one either way. </p>
+<h2>SYNOPSIS</h2>
 <pre>
 <i>offlineimap</i> (options)
 </pre>
+<h2>DESCRIPTION</h2>
 <p> Synchronize the accounts configured in the configuration file via IMAP. Each account has two sides. One of the side must be an IMAP server. The other side can either be a Maildir or another IMAP server. </p>
 <p> Works with Python 2.</p>
 <h2>OPTIONS</h2>

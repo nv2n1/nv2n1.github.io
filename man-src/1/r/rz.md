@@ -1,5 +1,4 @@
 ---
-
 title: "rz(1)"
 name: "rz"
 section: "1"
@@ -10,10 +9,12 @@ description: "rx, rb, rz – XMODEM, YMODEM, ZMODEM (Batch) file receive"
 
 <h2>NAME</h2>
 <p> rx, rb, rz &#8211; XMODEM, YMODEM, ZMODEM (Batch) file receive</p>
+<h2>SYNOPSIS</h2>
 <p> <code>rz</code> [-<code>&nbsp;<wbr>+8abeOpqRtTuUvy</code>]<br />
  <code>rb</code> [-<code>&nbsp;<wbr>+abqRtuUvy</code>]<br />
  <code>rx</code> [-<code>&nbsp;<wbr>abceqRtuUv</code>] <i>file</i><br />
  [<code>&#8211;</code>][<code>v</code>]<code>rzCOMMAND</code></p>
+<h2>DESCRIPTION</h2>
 <p> This program uses error correcting protocols to receive files over a dial-in serial port from a variety of programs running under PC-DOS, CP/M, <font SIZE="-1">Unix,</font> and other operating systems. It is invoked from a shell prompt manually, or automatically as a result of an &quot;sz file &#8230;&quot; command given to the calling program. </p>
 <p> While <i>rz</i> is smart enough to be called from <i><a href="/docs/linux/man/1-cu/">cu</a>(1),</i> very few versions of <i><a href="/docs/linux/man/1-cu/">cu</a>(1)</i> are smart enough to allow <i>rz</i> to work properly. Unix flavors of Professional-YAM are available for such dial-out application. </p>
 <p> <code>Rz</code> (Receive ZMODEM) receives files with the ZMODEM batch protocol. Pathnames are supplied by the sending program, and directories are made if necessary (and possible). Normally, the &quot;rz&quot; command is automatically issued by the calling ZMODEM program, but some defective ZMODEM implementations may require starting <i>rz</i> the old fashioned way. </p>

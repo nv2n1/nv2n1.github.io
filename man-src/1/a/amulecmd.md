@@ -1,5 +1,4 @@
 ---
-
 title: "amulecmd(1)"
 name: "amulecmd"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-amulecmd/"
 description: "amulecmd – Console-based program to control aMule"
 ---
 
+<h2 class="name">NAME</h2>
+<p> amulecmd &#8211; Console-based program to control aMule </p>
+<h2>SYNOPSIS</h2>
 <p> [<code>-h</code> <i>&lt;host&gt;</i>] [<code>-p</code> <i>&lt;port&gt;</i>] [<code>-P</code> <i>&lt;password&gt;</i>] [<code>-f</code> <i>&lt;path&gt;</i>] _untranslated<code>[</code>-q<code>]</code> _untranslated<code>[</code>-v<code>]</code> [<code>-l</code> <i>&lt;lang&gt;</i>] {[<code>-w</code>]|[<code>-c</code> <i>&lt;command&gt;</i>]} </p>
 <p> [<code>&#8211;create-config-from</code>=<i>&lt;path&gt;</i>] </p>
 <p> _untranslated<code>[</code>&#8211;version<code>]</code> </p>
 <p> _untranslated<code>[</code>&#8211;help<code>]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>amulecmd</code> is a console-based client to control aMule.</p>
 <dl>
 <dt><code>[ -h</code> <i>&lt;host&gt;</i>, <code>&#8211;host</code>=<i>&lt;host&gt;</i> <code>]</code></dt>

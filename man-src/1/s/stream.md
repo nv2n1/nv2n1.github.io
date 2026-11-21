@@ -1,5 +1,4 @@
 ---
-
 title: "stream(1)"
 name: "stream"
 section: "1"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/1-stream/"
 description: "stream – a lightweight tool to stream one or more pixel components of the image or portion of the image to your choice of storage formats."
 ---
 
+<h2 class="name">NAME</h2>
+<p> stream &#8211; a lightweight tool to stream one or more pixel components of the image or portion of the image to your choice of storage formats. </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>stream-im6.q16</code> [<i>options</i>] <i>input-file</i> <i>output-file</i></dt>
 <dd></dd></dl>
 <h2>OVERVIEW</h2>
 <p> <code>Stream</code> is a lightweight tool to stream one or more pixel components of the image or portion of the image to your choice of storage formats. It writes the pixel components as they are read from the input image a row at a time making <code>stream-im6.q16</code> desirable when working with large images or when you require raw pixel components. </p>
 <p> For more information about the stream command, point your browser to file:///usr/share/doc/imagemagick-6-common/html/www/stream.html (on debian system you may install the imagemagick-6 package) or <a rel="nofollow" href="https://www.imagemagick.org/script/stream.php.">https://www.imagemagick.org/script/stream.php.</a></p>
+<h2>DESCRIPTION</h2>
 <p> Image Settings:<br />
 &nbsp;<wbr>&nbsp;-authenticate value&nbsp;<wbr>&nbsp;decrypt image with this password<br />
 &nbsp;<wbr>&nbsp;-channel type&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;apply option to select image channels<br />

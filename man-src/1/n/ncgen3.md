@@ -1,5 +1,4 @@
 ---
-
 title: "ncgen3(1)"
 name: "ncgen3"
 section: "1"
@@ -10,9 +9,11 @@ description: "ncgen3 – From a CDL file generate a netCDF classic or 64 bit cla
 
 <h2>NAME</h2>
 <p> ncgen3 &#8211; From a CDL file generate a netCDF classic or 64 bit classicfile, a C program, or a Fortran program</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt>
 </dt><dd>ncgen3 [-b] [-c] [-f] [-k <i>kind_of_file</i>] [-x] [-n] [-o <i>netcdf_filename</i>] <i>input_file</i></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>ncgen3</code> generates either a netCDF file, or C or Fortran source code to create a netCDF file. The input to <code>ncgen3</code> is a description of a netCDF file in a small language known as CDL (network Common Data form Language), described below. If no options are specified in invoking <code>ncgen3</code>, it merely checks the syntax of the input CDL file, producing error messages for any violations of CDL syntax. Other options can be used to create the corresponding netCDF file, to generate a C program that uses the netCDF C interface to create the netCDF file, or to generate a Fortran program that uses the netCDF Fortran interface to create the same netCDF file. </p>
 <p> <code>ncgen3</code> may be used with the companion program <code>ncdump</code> to perform some simple operations on netCDF files. For example, to rename a dimension in a netCDF file, use <code>ncdump</code> to get a CDL version of the netCDF file, edit the CDL file to change the name of the dimensions, and use <code>ncgen3</code> to generate the corresponding netCDF file from the edited CDL file.</p>
 <h2>OPTIONS</h2>

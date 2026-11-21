@@ -1,5 +1,4 @@
 ---
-
 title: "xrdgsiproxy(1)"
 name: "xrdgsiproxy"
 section: "1"
@@ -10,9 +9,11 @@ description: "xrdgsiproxy – generate a proxy X.509 certificate"
 
 <h2>NAME</h2>
 <p> xrdgsiproxy &#8211; generate a proxy X.509 certificate</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 xrdgsiproxy[-h][mode][-debug][-f[-out] file]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>xrdgsiproxy</code> utility displays, creates, and destroys X.509 user proxy certificates used by the grid security infrastructure (<code>gsi</code>) security protocol.</p>
 <h2>OPERANDS</h2>
 <p> <i>mode</i></p>

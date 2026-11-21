@@ -1,5 +1,4 @@
 ---
-
 title: "sqlite(1)"
 name: "sqlite"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-sqlite/"
 description: "sqlite – A command line interface for SQLite"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sqlite &#8211; A command line interface for SQLite </p>
+<h2>SYNOPSIS</h2>
 <p> <code>sqlite</code> [<i>options</i>]<i> filename </i>[<i>SQL</i>]</p>
 <h3>SUMMARY</h3>
 <p> sqlite is a terminal-based front-end to the SQLite library. It enables you to type in queries interactively, issue them to SQLite and see the results. Alternatively, you can specify SQL code on the command-line. In addition it provides a number of meta-commands. </p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>sqlite</code> command. This manual page was written for the Debian GNU/Linux distribution because the original program does not have a manual page.</p>
 <h3>GETTING STARTED</h3>
 <p> To start the sqlite program, just type &quot;sqlite&quot; followed by the name the file that holds the SQLite database. If the file does not exist, a new one is created automatically. The sqlite program will then prompt you to enter SQL. Type in SQL statements (terminated by a semicolon), press &quot;Enter&quot; and the SQL will be executed. </p>

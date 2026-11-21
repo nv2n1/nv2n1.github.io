@@ -1,5 +1,4 @@
 ---
-
 title: "fwcscmp(3)"
 name: "fwcscmp"
 section: "3"
@@ -11,7 +10,9 @@ url: "/docs/linux/man/3-fwcscmp/"
 
  fwcscmp - fuzzy comparison of two wide-character strings
 
-#include &lt;fstrcmp.h&gt; 
+<h2>SYNOPSIS</h2>
+
+ #include &lt;fstrcmp.h&gt; 
 
  #define FSTRCMP_IDENTICAL 
  #define FSTRCMP_THRESHOLD 
@@ -19,7 +20,9 @@ url: "/docs/linux/man/3-fwcscmp/"
 
  double fwcscmp(const wchar_t *string1, const wchar_t *string2);
 
-The fwcscmp() function compares the two wide-character strings, string1 and string2.
+<h2>DESCRIPTION</h2>
+
+ The fwcscmp() function compares the two wide-character strings, string1 and string2.
 
 <h2>RETURN VALUE</h2>
 

@@ -1,5 +1,4 @@
 ---
-
 title: "bson_append_bool(3)"
 name: "bson_append_bool"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_append_bool() – The bson_append_bool() function shall appen
 
 <h2>NAME</h2>
 <p> bson_append_bool() &#8211; The bson_append_bool() function shall append a new element to bson containing the boolean provided.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 bool bson_append_bool(bson_t *bson,
                       const char *key,
@@ -29,6 +29,7 @@ bool bson_append_bool(bson_t *bson,
 <dl>
 <dt><code>value</code></dt>
 <dd> true or false.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_append_bool/">bson_append_bool</a>(3)</code> function shall append a new element to <code>bson</code> containing the boolean provided. </p>
 <h2>RETURNS</h2>
 <p> true if the operation was applied successfully, otherwise false and <code>bson</code> should be discarded. </p>

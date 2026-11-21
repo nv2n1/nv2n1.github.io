@@ -1,5 +1,4 @@
 ---
-
 title: "gribtocdl(1)"
 name: "gribtocdl"
 section: "1"
@@ -10,9 +9,11 @@ description: "gribtocdl – create netCDF CDL-file from GRIB dataset"
 
 <h2>NAME</h2>
 <p> gribtocdl &#8211; create netCDF CDL-file from GRIB dataset</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code></dt>
 <dd>gribtocdl [-v] [-g&nbsp;<wbr></code><i>tabfile</i>] [-q&nbsp;<wbr><i>qspecs</i>] <i>gribfiles</i></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This program decodes GRIB products and generates to stdout the corresponding CDL code that can be used in <code><a href="/docs/linux/man/1-gribtonc/">gribtonc</a></code>(1) to convert the GRIB products to netCDF format. The default parameter translation is made according to a definition by UCAR, but the user may supply specific translations in a separate file by the -g tabfile option. The user-supplied translations will override the default ones. </p>
 <h2>OPTIONS</h2>
 <dl>

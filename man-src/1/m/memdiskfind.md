@@ -1,5 +1,4 @@
 ---
-
 title: "memdiskfind(1)"
 name: "memdiskfind"
 section: "1"
@@ -11,6 +10,12 @@ url: "/docs/linux/man/1-memdiskfind/"
 
  memdiskfind --- Simple utility to find a resident <b>memdisk</b> instance.
 
-<b>memdiskfind</b>
+<h2>SYNOPSIS</h2>
 
-The <b>memdiskfind</b> utility searches memory for a <b>memdisk</b> instance, and, if found, outputs the parameters needed to use the hram driver in Linux to map it.
+ <b>memdiskfind</b>
+
+<h2>DESCRIPTION</h2>
+
+ 
+
+ The <b>memdiskfind</b> utility searches memory for a <b>memdisk</b> instance, and, if found, outputs the parameters needed to use the hram driver in Linux to map it.

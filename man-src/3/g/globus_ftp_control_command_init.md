@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_ftp_control_command_init/"
 description: "GridFTP Server Control –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> GridFTP Server Control &#8211; </p>
 <p> Manage GridFTP Server Control Connections.</p>
 <h3>Typedefs</h3>
 <p> typedef void(* <code>globus_ftp_control_server_callback_t</code> )(void *callback_arg, struct globus_ftp_control_server_s *server_handle, globus_object_t *error)<br />

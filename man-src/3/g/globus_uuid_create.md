@@ -1,5 +1,4 @@
 ---
-
 title: "globus_uuid_create(3)"
 name: "globus_uuid_create"
 section: "3"
@@ -8,7 +7,10 @@ url: "/docs/linux/man/3-globus_uuid_create/"
 description: "globus_uuid.h –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> globus_uuid.h &#8211; </p>
 <p> Globus UUID Generator.</p>
+<h2>SYNOPSIS</h2>
 <p> #include &#8216;globus_common_include.h&#8217;<br />
  #include &#8216;globus_libc.h&#8217; </p>
 <h3>Functions</h3>

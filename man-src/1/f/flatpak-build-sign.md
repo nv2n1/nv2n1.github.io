@@ -1,5 +1,4 @@
 ---
-
 title: "flatpak-build-sign(1)"
 name: "flatpak-build-sign"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-flatpak-build-sign/"
 description: "flatpak-build-sign – Sign an application or runtime"
 ---
 
+<h2 class="name">NAME</h2>
+<p> flatpak-build-sign &#8211; Sign an application or runtime </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak build-sign</code> [OPTION&#8230;] LOCATION ID [BRANCH]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>Signs the commit for a specified application or runtime in a local repository. LOCATION is the location of the repository. ID is the name of the application, or runtime if &#8211;runtime is specified. If BRANCH is not specified, it is assumed to be &quot;master&quot;. </dd>
 <p> Applications can also be signed during build-export, but it is sometimes useful to add additional signatures later.</p>
 <h2>OPTIONS</h2>

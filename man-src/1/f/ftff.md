@@ -1,5 +1,4 @@
 ---
-
 title: "ftff(1)"
 name: "ftff"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ftff/"
 description: "ftff – fault tolerant file find utility"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ftff &#8211; fault tolerant file find utility </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ftff</code> [-#fFhIpq][-t#][start_directory] file_to_find</p>
+<h2>DESCRIPTION</h2>
 <p> <code>ftff</code> recursively descends the directory hierarchy and reports all objects in the file system with a name that approximately matches the given filename. </p>
 <p> <code>ftff</code> achieves fault tolerance by calculating the so called Weighted Levenshtein Distance. The Levenshtein Distance is defined as the minimum number of character insertions, deletions and replacements that transform a string <i>A </i> into a string <i>B.</i> </p>
 <p> <code>ftff</code> behaves like </p>

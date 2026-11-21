@@ -1,5 +1,4 @@
 ---
-
 title: "qmod(1)"
 name: "qmod"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-qmod/"
 description: "qmod – modify a xxQS_NAMExx queue and running job"
 ---
 
+<h2 class="name">NAME</h2>
+<p> qmod &#8211; modify a xxQS_NAMExx queue and running job </p>
 <h2>SYNTAX</h2>
 <p> <code>qmod</code> [<i>options</i>] [<i>wc_job_range_list</i>|<i>wc_queue_list</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> <i>Qmod</i> enables users classified as <i>owners</i> (see for details) of a workstation to modify the state of xxQS_NAMExx queues for their machine as well as the state of their own jobs. A manager/operator, or root, can execute <i>qmod</i> for any queue and job in a cluster, but only from administrative hosts. Find additional information concerning <i>wc_queue_list</i> and <i>wc_job_list</i> in</p>
 <h2>OPTIONS</h2>
 <dl>

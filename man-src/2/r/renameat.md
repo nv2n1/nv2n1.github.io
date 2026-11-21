@@ -1,5 +1,4 @@
 ---
-
 title: "renameat(2)"
 name: "renameat"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-renameat/"
 description: "rename, renameat, renameat2 – change the name or location of a file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rename, renameat, renameat2 &#8211; change the name or location of a file </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdio.h&gt;
 int rename(const char *oldpath, const char *newpath);
@@ -33,6 +35,7 @@ int renameat2(int olddirfd, const char *oldpath,
 <dt>_GNU_SOURCE</dt>
 <dd></dd></dl>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> <code>rename</code>() renames a file, moving it between directories if required. Any other hard links to the file (as created using <code><a href="/docs/linux/man/2-link/">link</a></code>(2)) are unaffected. Open file descriptors for <i>oldpath</i> are also unaffected. </p>
 <p> Various restrictions determine whether or not the rename operation succeeds: see ERRORS below. </p>
 <p> If <i>newpath</i> already exists, it will be atomically replaced, so that there is no point at which another process attempting to access <i>newpath</i> will find it missing. However, there will probably be a window in which both <i>oldpath</i> and <i>newpath</i> refer to the file being renamed. </p>

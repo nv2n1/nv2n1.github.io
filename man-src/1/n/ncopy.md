@@ -1,5 +1,4 @@
 ---
-
 title: "ncopy(1)"
 name: "ncopy"
 section: "1"
@@ -10,10 +9,12 @@ description: "ncopy – NetWare file copy"
 
 <h2>NAME</h2>
 <p> ncopy &#8211; NetWare file copy </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ncopy -V</code> </p>
 <p> <code>ncopy</code> [ <code>-vmMnpptu</code> ] [ <code>-s</code> <i>amount</i> ] <code>file</code> <code>destinationfile</code>|<code>directory</code> </p>
 <p> <code>ncopy</code> [ <code>-vmMnpptu</code> ] [ <code>-s</code> <i>amount</i> ] <code>file1</code> [ <code>file2 &#8230;</code> ] <code>directory</code> </p>
 <p> <code>ncopy</code> <code>-r</code> [ <code>-vmMnpptu</code> ] [ <code>-s</code> <i>amount</i> ] <code>srcdir</code> <code>dstdir</code> </p>
+<h2>DESCRIPTION</h2>
 <p> With <code>ncopy</code> you can copy files to different locations on a single NetWare file server without generating excess network traffic. The program uses a NetWare function to do the copy rather than transferring the file across the network for both the read and write. </p>
 <p> If the last argument is a directory, <code>ncopy</code> will copy the source file(s) into the directory. If only two files are given and the last argument is not a directory, it will copy the source file to the destination file. </p>
 <p> If the source and destination files are not on the same NetWare server (or are not on NetWare servers at all), <code>ncopy</code> will do a normal file copy.</p>

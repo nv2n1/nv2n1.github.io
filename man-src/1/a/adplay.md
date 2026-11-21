@@ -1,5 +1,4 @@
 ---
-
 title: "adplay(1)"
 name: "adplay"
 section: "1"
@@ -10,7 +9,9 @@ description: "adplay – AdPlay/UNIX console-based OPL2 audio player"
 
 <h2>NAME</h2>
 <p> adplay &#8211; AdPlay/UNIX console-based OPL2 audio player</p>
+<h2>SYNOPSIS</h2>
 <p> <code>adplay</code> [OPTION]&#8230; FILE&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> AdPlay/UNIX is AdPlug&#8217;s UNIX console-based frontend. It tries to play back all given FILEs, using one of many available output mechanisms. </p>
 <p> AdPlay/UNIX plays endlessly, if only one file is given. With multiple files, it plays them in a sequence and exits after the last file. The same can also be accomplished with only one file, by using the <code>-o</code> option. When using the disk writer, <code>-o</code> is implied.</p>
 <h2>EXIT STATUS</h2>

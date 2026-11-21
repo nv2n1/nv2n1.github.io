@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-gss_wrap_iov_length/"
 description: "Heimdal GSS-API functions –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Heimdal GSS-API functions &#8211; </p>
 <h3>Functions</h3>
 <p> GSSAPI_LIB_FUNCTION OM_uint32<br />
  GSSAPI_LIB_CALL <code>gss_add_oid_set_member</code> (OM_uint32 *minor_status, const gss_OID member_oid, gss_OID_set *oid_set)&quot; </p>

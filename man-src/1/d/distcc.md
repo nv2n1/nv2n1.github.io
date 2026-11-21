@@ -1,5 +1,4 @@
 ---
-
 title: "distcc(1)"
 name: "distcc"
 section: "1"
@@ -10,10 +9,12 @@ description: "distcc – distributed C/C++/ObjC compiler with distcc-pump extens
 
 <h2>NAME</h2>
 <p> distcc &#8211; distributed C/C++/ObjC compiler with distcc-pump extensions</p>
+<h2>SYNOPSIS</h2>
 <p> <code>distcc </code> <i>&lt;compiler&gt; [COMPILER OPTIONS] </i> </p>
 <p> <code>distcc</code> <i>[COMPILER OPTIONS]</i> </p>
 <p> <code>&lt;compiler&gt;</code> <i>[COMPILER OPTIONS]</i> </p>
 <p> <code>distcc</code> <i>[DISTCC OPTIONS]</i></p>
+<h2>DESCRIPTION</h2>
 <p> distcc distributes compilation of C code across several machines on a network. distcc should always generate the same results as a local compile, it is simple to install and use, and it is often much faster than a local compile. </p>
 <p> This version incorporates plain distcc as well as an enhancement called pump mode or distcc-pump. </p>
 <p> For each job, distcc in plain mode sends the complete preprocessed source code and compiler arguments across the network from the client to a compilation server. In pump mode, distcc sends the source code and recursively included header files (excluding those from the default system header directories), so that both preprocessing and compilation can take place on the compilation servers. This speeds up the delivery of compilations by up to an order of magnitude over plain distcc. </p>

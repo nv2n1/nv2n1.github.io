@@ -1,5 +1,4 @@
 ---
-
 title: "cb_console_runner(1)"
 name: "cb_console_runner"
 section: "1"
@@ -10,7 +9,9 @@ description: "cb_console_runner – The Code::Blocks IDE console programs launch
 
 <h2>NAME</h2>
 <p> cb_console_runner &#8211; The Code::Blocks IDE console programs launcher</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cb_console_runner</code> <i>args</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>cb_console_runner</code> is part of the Code::Blocks IDE. It is used to launch console programs and wait for them to finish. When the console program is finished, cb_console_runner displays &quot;Press ENTER to continue&quot;. </p>
 <p> That&#8217;s its sole job.</p>
 <h2>OPTIONS</h2>

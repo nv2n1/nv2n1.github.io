@@ -1,5 +1,4 @@
 ---
-
 title: "mate-keyboard-properties(1)"
 name: "mate-keyboard-properties"
 section: "1"
@@ -10,7 +9,9 @@ description: "mate-keyboard-properties – manage keyboard behaviour in MATE"
 
 <h2>NAME</h2>
 <p> mate-keyboard-properties &#8211; manage keyboard behaviour in MATE</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mate-keyboard-properties</code> [<i>OPTIONS&#8230;</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> This executable is part of the package &#8216;mate-control-center&#8217;: The MATE Control Center. </p>
 <p> Keyboard Preferences manages all settings related to the keyboard in a MATE environment. This includes key repeat delay, cursor blinking, layouts and layout options. You can also configure a typing break which locks the screen and enforces a break from work.</p>
 <h2>OPTIONS</h2>

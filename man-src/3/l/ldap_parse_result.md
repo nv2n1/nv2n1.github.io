@@ -1,5 +1,4 @@
 ---
-
 title: "ldap_parse_result(3)"
 name: "ldap_parse_result"
 section: "3"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/3-ldap_parse_result/"
 description: "ldap_parse_result – Parsing results"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ldap_parse_result &#8211; Parsing results </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ldap.h&gt;
 int ldap_parse_result(LDAP *ld, LDAPMessage *result,
@@ -19,6 +21,7 @@ int ldap_parse_result(LDAP *ld, LDAPMessage *result,
                                                                   struct berval **servercredp, int freeit) int ldap_parse_extended_result(LDAP *ld, LDAPMessage *result,
                                                                                                                                           char **retoidp, struct berval **retdatap, int freeit)
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> These routines are used to extract information from a result message. They will operate on the first result message in a chain of search results (skipping past other message types). They take the <i>result</i> as returned by a call to <code><a href="/docs/linux/man/3-ldap_result/">ldap_result</a></code>(3), <code><a href="/docs/linux/man/3-ldap_search_s/">ldap_search_s</a></code>(3) or <code><a href="/docs/linux/man/3-ldap_search_st/">ldap_search_st</a></code>(3). In addition to <code>ldap_parse_result()</code>, the routines <code>ldap_parse_sasl_bind_result()</code> and <code>ldap_parse_extended_result()</code> are used to get all the result information from SASL bind and extended operations. </p>
 <p> The <i>errcodep</i> parameter will be filled in with the result code from the result message. </p>
 <p> The server might supply a matched DN string in the message indicating how much of a name in a request was recognized. The <i>matcheddnp</i> parameter will be filled in with this string if supplied, else it will be NULL. If a string is returned, it should be freed using <code><a href="/docs/linux/man/3-ldap_memfree/">ldap_memfree</a></code>(3). </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "bson_append_date_time(3)"
 name: "bson_append_date_time"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_append_date_time() – The bson_append_date_time() function s
 
 <h2>NAME</h2>
 <p> bson_append_date_time() &#8211; The bson_append_date_time() function shall append a new element to a bson document containing a date and time with no timezone information. value is assumed to be in UTC format of milliseconds since the UNIX epoch. value MAY be negative.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 bool bson_append_date_time(bson_t *bson,
                            const char *key,
@@ -29,6 +29,7 @@ bool bson_append_date_time(bson_t *bson,
 <dl>
 <dt><code>value</code></dt>
 <dd> The date and time as specified in milliseconds since the UNIX epoch.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_append_date_time/">bson_append_date_time</a>(3)</code> function shall append a new element to a <code>bson</code> document containing a date and time with no timezone information. <code>value</code> is assumed to be in UTC format of milliseconds since the UNIX epoch. <code>value</code> </p>
 <p> <code>MAY</code> be negative. </p>
 <h2>RETURNS</h2>

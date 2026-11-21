@@ -1,5 +1,4 @@
 ---
-
 title: "csmock(1)"
 name: "csmock"
 section: "1"
@@ -10,6 +9,7 @@ description: "csmock – run static analysis of the given SRPM using mock"
 
 <h2>NAME</h2>
 <p> csmock &#8211; run static analysis of the given SRPM using mock</p>
+<h2>DESCRIPTION</h2>
 <p> usage: csmock [-h] [-r MOCK_PROFILE] [-t TOOLS] [-a] [-l]</p>
 <dl>
 <dt>

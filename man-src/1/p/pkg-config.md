@@ -1,5 +1,4 @@
 ---
-
 title: "pkg-config(1)"
 name: "pkg-config"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pkg-config/"
 description: "pkg-config – Return metainformation about installed libraries"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pkg-config &#8211; Return metainformation about installed libraries </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pkg-config</code> [&#8211;modversion] [&#8211;version] [&#8211;help] [&#8211;atleast-pkgconfig-version=VERSION] [&#8211;print-errors] [&#8211;short-errors] [&#8211;silence-errors] [&#8211;errors-to-stdout] [&#8211;debug] [&#8211;cflags] [&#8211;libs] [&#8211;libs-only-L] [&#8211;libs-only-l] [&#8211;cflags-only-I] [&#8211;libs-only-other] [&#8211;cflags-only-other] [&#8211;variable=VARIABLENAME] [&#8211;define-variable=VARIABLENAME=VARIABLEVALUE] [&#8211;print-variables] [&#8211;uninstalled] [&#8211;exists] [&#8211;atleast-version=VERSION] [&#8211;exact-version=VERSION] [&#8211;max-version=VERSION] [&#8211;validate] [&#8211;list-all] [&#8211;print-provides] [&#8211;print-requires] [&#8211;print-requires-private] [LIBRARIES&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> The <i>pkg-config</i> program is used to retrieve information about installed libraries in the system. It is typically used to compile and link against one or more libraries. Here is a typical usage scenario in a Makefile: </p>
 <pre>
 program: program.c

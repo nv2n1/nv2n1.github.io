@@ -1,5 +1,4 @@
 ---
-
 title: "hadd(1)"
 name: "hadd"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-hadd/"
 description: "hadd – Merge ROOT histogram files into one file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hadd &#8211; Merge ROOT histogram files into one file </p>
+<h2>SYNOPSIS</h2>
 <p> <code>hadd</code> <i>outputfile inputfiles &#8230;</i></p>
+<h2>DESCRIPTION</h2>
 <p> This program will add histograms from a list of <code>ROOT</code> files and write them to a target <code>ROOT</code> file. The target file is newly created and must not be identical to one of the source files.</p>
 <h2>SEE ALSO</h2>
 <p> <font SIZE="-1"></font> <i><a href="/docs/linux/man/1-root/">root</a></i>(1) </p>

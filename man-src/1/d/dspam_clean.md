@@ -1,5 +1,4 @@
 ---
-
 title: "dspam_clean(1)"
 name: "dspam_clean"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dspam_clean/"
 description: "dspam_clean – perform periodic maintenance of metadata"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dspam_clean &#8211; perform periodic maintenance of metadata</p>
+<h2>SYNOPSIS</h2>
 <p> <code>dspam_clean</code> [<code>&#8211;profile</code>=PROFILE] [<i>-s[signature_life]</i>] [<i>-p[probability_life]</i>] [<i>-u[sl,hcl,shl,ihl]</i>] [<i>user1 user2 &#8230; userN</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>dspam_clean</code> is used to perform periodic housecleaning on DSPAM&#8217;s metadata dictionary by deleting old or useless data. </p>
 <p> <code>dspam_clean</code> has no effect if you use the &quot;hash&quot; storage driver. In that case, you should use the tools <code>cssclean</code> and <code>csscompress</code> (which do not currently have manual pages). </p>
 <h2>OPTIONS</h2>

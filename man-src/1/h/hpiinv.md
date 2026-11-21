@@ -1,5 +1,4 @@
 ---
-
 title: "hpiinv(1)"
 name: "hpiinv"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-hpiinv/"
 description: "hpiinv – An openhpi sample application that shows resources’ inventory records."
 ---
 
+<h2 class="name">NAME</h2>
+<p> hpiinv &#8211; An openhpi sample application that shows resources&#8217; inventory records. </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 hpiinv[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-V][-X][-a tag][-h] hpiinv[--domain = nn][--host = host[:port]][--cfgfile = file][--verbose][--debug][--asset - tag = tag][--help]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> hpiinv walks the <font SIZE="-1">RPT </font>(Resource Present Table) looking for resources that have Inventory Capability. It displays all inventory records found. </p>
 <p> If no domain is selected, hpiinv uses a session with the default domain. The selected domain id must be configured via the openhpidclient.conf file specified in the environment.</p>
 <h2>OPTIONS</h2>

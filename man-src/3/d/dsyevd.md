@@ -1,5 +1,4 @@
 ---
-
 title: "dsyevd(3)"
 name: "dsyevd"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dsyevd/"
 description: "dsyevd.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dsyevd.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dsyevd</code> (JOBZ, UPLO, N, A, LDA, W, WORK, LWORK, IWORK, LIWORK, INFO)<br />
  <i></i><code> DSYEVD computes the eigenvalues and, optionally, the left and/or right eigenvectors for SY matrices</code></p>

@@ -1,5 +1,4 @@
 ---
-
 title: "cpg_mcast_joined(3)"
 name: "cpg_mcast_joined"
 section: "3"
@@ -10,8 +9,10 @@ description: "cpg_mcast_joined – Multicasts to all groups joined to a handle"
 
 <h2>NAME</h2>
 <p> cpg_mcast_joined &#8211; Multicasts to all groups joined to a handle</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/uio.h&gt;</code> <code>#include &lt;corosync/cpg.h&gt;</code> </p>
 <p> <code>int cpg_mcast_joined(cpg_handle_t </code><i>handle</i><code>, cpg_guarantee_t </code><i>guarantee</i><code>, struct iovec *</code><i>iovec</i><code>, int </code><i>iov_len</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>cpg_mcast_joined</code> function will multicast a message to all the processes that have been joined with the <code><a href="/docs/linux/man/3-cpg_join/">cpg_join</a>(3)</code> function for the same group name. Messages that are sent to any of the groups joined to the parameter <i>handle</i> will be delivered to all subscribed processes in the system. </p>
 <p> The argument <i>guarantee</i> requests a delivery guarantee for the message to be sent. The cpg_guarantee_t type is defined by:</p>
 <dl>

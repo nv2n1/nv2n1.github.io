@@ -1,5 +1,4 @@
 ---
-
 title: "rredtool(1)"
 name: "rredtool"
 section: "1"
@@ -10,10 +9,12 @@ description: "rredtool – merge or apply a very restricted subset of ed patches
 
 <h2>NAME</h2>
 <p> rredtool &#8211; merge or apply a very restricted subset of ed patches</p>
+<h2>SYNOPSIS</h2>
 <p> <code>rredtool &#8211;help</code> </p>
 <p> <code>rredtool</code> [ <i>options</i> ] <code>&#8211;merge</code> <i>patches&#8230;</i> </p>
 <p> <code>rredtool</code> [ <i>options</i> ] <code>&#8211;patch</code> <i>file-to-patch</i> <i>patches&#8230;</i> </p>
 <p> <code>rredtool</code> <i>directory</i> <i>newfile</i> <i>oldfile</i> <i>mode</i></p>
+<h2>DESCRIPTION</h2>
 <p> rredtool is a tool to handle a subset of ed patches in a safe way. It is especially targeted at ed patches as used in Packages.diff and Sources.diff. Is also has a mode supposed to be called from reprepro as Index Hook to generate and update a <code>Packages.diff/Index</code> file.</p>
 <h2>MODI</h2>
 <p> One of the following has to be given, so that rredtool know that to do.</p>

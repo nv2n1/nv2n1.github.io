@@ -1,5 +1,4 @@
 ---
-
 title: "nanosleep(2)"
 name: "nanosleep"
 section: "2"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/2-nanosleep/"
 description: "nanosleep – high-resolution sleep"
 ---
 
+<h2 class="name">NAME</h2>
+<p> nanosleep &#8211; high-resolution sleep </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;time.h&gt;</code> </p>
 <p> <code>int nanosleep(const struct timespec *</code><i>req</i><code>, struct timespec *</code><i>rem</i><code>);</code> </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>nanosleep</code>(): _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;199309L</p>
+<h2>DESCRIPTION</h2>
 <p> <code>nanosleep</code>() suspends the execution of the calling thread until either at least the time specified in <i>*req</i> has elapsed, or the delivery of a signal that triggers the invocation of a handler in the calling thread or that terminates the process. </p>
 <p> If the call is interrupted by a signal handler, <code>nanosleep</code>() returns -1, sets <i>errno</i> to <code>EINTR</code>, and writes the remaining time into the structure pointed to by <i>rem</i> unless <i>rem</i> is NULL. The value of <i>*rem</i> can then be used to call <code>nanosleep</code>() again and complete the specified pause (but see NOTES). </p>
 <p> The structure <i>timespec</i> is used to specify intervals of time with nanosecond precision. It is defined as follows: </p>

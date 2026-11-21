@@ -1,5 +1,4 @@
 ---
-
 title: "snmptest(1)"
 name: "snmptest"
 section: "1"
@@ -10,7 +9,9 @@ description: "snmptest – communicates with a network entity using SNMP request
 
 <h2>NAME</h2>
 <p> snmptest &#8211; communicates with a network entity using SNMP requests</p>
+<h2>SYNOPSIS</h2>
 <p> <code>snmptest</code> [COMMON OPTIONS] AGENT</p>
+<h2>DESCRIPTION</h2>
 <p> <code>snmptest</code> is a flexible SNMP application that can monitor and manage information on a network entity. </p>
 <p> After invoking the program, a command line interpreter proceeds to accept commands. This intepreter enables the user to send different types of SNMP requests to target agents. </p>
 <p> AGENT identifies a target SNMP agent, which is instrumented to monitor the given objects. At its simplest, the AGENT specification will consist of a hostname or an IPv4 address. In this situation, the command will attempt communication with the agent, using UDP/IPv4 to port 161 of the given target host. See <a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1) for a full list of the possible formats for AGENT. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "update(3)"
 name: "update"
 section: "3"
@@ -7,8 +6,8 @@ letter: "u"
 url: "/docs/linux/man/3-update/"
 description: "QuantLib::CappedFlooredCoupon – Capped and/or floored floating-rate coupon."
 ---
-
 <p>QuantLib::CappedFlooredCoupon &#8211; Capped and/or floored floating-rate coupon. </p>
+<h2>SYNOPSIS</h2>
 <p> <br />
  </p>
 <p>#include &lt;ql/cashflows/capflooredcoupon.hpp&gt; </p>

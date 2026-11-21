@@ -1,5 +1,4 @@
 ---
-
 title: "dahdi_scan(8)"
 name: "dahdi_scan"
 section: "8"
@@ -7,9 +6,10 @@ letter: "d"
 url: "/docs/linux/man/8-dahdi_scan/"
 description: "dahdi_scan — Print Configuration of DAHDI Spans"
 ---
-
 <p> dahdi_scan --- Print Configuration of DAHDI Spans  </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dahdi_scan</code> <i>[spans]</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>dahdi_scan</code> prints information about DAHDI spans in the system. For analog spans it also provides a list of channels. </p>
 <p>By default it prints information about all the spans in the system. However if parameters are provided, they will be considered to be a list of span numbers and information will be printed for them. </p>
 <p>Output is printed to the standard output. The format is that of an Asterisk configuration file (similar to a &quot;ini&quot; configuration file), where the name of the section is the number of the span. Note that the specifically for analog spans some keys may appear more than once, and hence you can not use a parser for an &quot;ini&quot; format and assume you have a dictionary. </p>

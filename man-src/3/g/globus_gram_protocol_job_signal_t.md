@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_gram_protocol_job_signal_t/"
 description: "GRAM Signals –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> GRAM Signals &#8211; </p>
 <p> GRAM Signals.</p>
 <h3>Enumerations</h3>
 <p> enum <code>globus_gram_protocol_job_signal_t</code> { <code>GLOBUS_GRAM_PROTOCOL_JOB_SIGNAL_CANCEL</code> =1, <code>GLOBUS_GRAM_PROTOCOL_JOB_SIGNAL_SUSPEND</code> =2, <code>GLOBUS_GRAM_PROTOCOL_JOB_SIGNAL_RESUME</code> =3, <code>GLOBUS_GRAM_PROTOCOL_JOB_SIGNAL_PRIORITY</code> =4, <code>GLOBUS_GRAM_PROTOCOL_JOB_SIGNAL_COMMIT_REQUEST</code> =5, <code>GLOBUS_GRAM_PROTOCOL_JOB_SIGNAL_COMMIT_EXTEND</code> =6, <code>GLOBUS_GRAM_PROTOCOL_JOB_SIGNAL_STDIO_UPDATE</code> =7, <code>GLOBUS_GRAM_PROTOCOL_JOB_SIGNAL_STDIO_SIZE</code> =8, <code>GLOBUS_GRAM_PROTOCOL_JOB_SIGNAL_STOP_MANAGER</code> =9, <code>GLOBUS_GRAM_PROTOCOL_JOB_SIGNAL_COMMIT_END</code> =10 } </p>

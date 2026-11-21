@@ -1,5 +1,4 @@
 ---
-
 title: "iv_fd_unregister(3)"
 name: "iv_fd_unregister"
 section: "3"
@@ -10,6 +9,7 @@ description: "iv_fd_register, iv_fd_register_try, iv_fd_unregister, iv_fd_regist
 
 <h2>NAME</h2>
 <p> iv_fd_register, iv_fd_register_try, iv_fd_unregister, iv_fd_registered, iv_fd_set_handler_in, iv_fd_set_handler_err, iv_fd_set_handler_out &#8211; deal with ivykis file descriptors</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;iv.h&gt;</code> </p>
 <pre><code>
 struct iv_fd {
@@ -28,6 +28,7 @@ struct iv_fd {
  <code>void iv_fd_set_handler_in(struct iv_fd *</code><i>fd</i><code>, void (*</code><i>handler</i><code>)(void *));</code><br />
  <code>void iv_fd_set_handler_out(struct iv_fd *</code><i>fd</i><code>, void (*</code><i>handler</i><code>)(void *));</code><br />
  <code>void iv_fd_set_handler_err(struct iv_fd *</code><i>fd</i><code>, void (*</code><i>handler</i><code>)(void *));</code> </p>
+<h2>DESCRIPTION</h2>
 <p> The functions <code>iv_fd_register</code> and <code>iv_fd_unregister</code> register, respectively unregister, a file descriptor with the current thread&#8217;s ivykis event loop. Calling <code>iv_fd_registered</code> on a file descriptor returns true if that file descriptor is currently registered with ivykis. </p>
 <p> When a file descriptor that is registered with ivykis becomes ready for input or output, or an error condition occurs on that file descriptor, and a callback function for that event has been specified, that callback function will be called in the thread that the file descriptor was registered in. </p>
 <p> And conversely, when a file descriptor that is already ready for input or output or already has an error condition set is registered with ivykis, and the corresponding callback function pointer is not NULL, the callback function will be called in the next iteration of the current thread&#8217;s ivykis event loop. </p>

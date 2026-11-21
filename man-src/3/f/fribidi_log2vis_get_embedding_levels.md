@@ -1,5 +1,4 @@
 ---
-
 title: "fribidi_log2vis_get_embedding_levels(3)"
 name: "fribidi_log2vis_get_embedding_levels"
 section: "3"
@@ -7,9 +6,14 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_log2vis_get_embedding_levels/"
 ---
 
-fribidi_log2vis_get_embedding_levels - get embedding levels 
+<h2 class="name">NAME</h2>
+ 
 
-<b> #include &lt;fribidi.h&gt; 
+ fribidi_log2vis_get_embedding_levels - get embedding levels 
+
+<h2>SYNOPSIS</h2>
+
+ <b> #include &lt;fribidi.h&gt; 
 
  extern FriBidiLevel fribidi_log2vis_get_embedding_levels 
  ( 
@@ -51,7 +55,9 @@ fribidi_log2vis_get_embedding_levels - get embedding levels
 <dt><b>FriBidiLevel *embedding_levels</b>
 </dt><dd> Output list of embedding levels.</dd></dl>
 
-Deprecated. Replaced by fribidi_get_par_embedding_levels_ex.
+<h2>DESCRIPTION</h2>
+
+ Deprecated. Replaced by fribidi_get_par_embedding_levels_ex.
 
 <h2>SEE ALSO</h2>
 

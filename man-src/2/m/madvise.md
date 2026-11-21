@@ -1,5 +1,4 @@
 ---
-
 title: "madvise(2)"
 name: "madvise"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-madvise/"
 description: "madvise – give advice about use of memory"
 ---
 
+<h2 class="name">NAME</h2>
+<p> madvise &#8211; give advice about use of memory </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/mman.h&gt;</code> </p>
 <p> <code>int madvise(void *</code><i>addr</i><code>, size_t </code><i>length</i><code>, int </code><i>advice</i><code>);</code> </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
@@ -19,6 +21,7 @@ description: "madvise – give advice about use of memory"
 <dt>Up to and including glibc 2.19:</dt>
 <dd> _BSD_SOURCE</dd></dl>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> The <code>madvise</code>() system call is used to give advice or directions to the kernel about the address range beginning at address <i>addr</i> and with size <i>length</i> bytes In most cases, the goal of such advice is to improve system or application performance. </p>
 <p> Initially, the system call supported a set of &quot;conventional&quot; <i>advice</i> values, which are also available on several other implementations. (Note, though, that <code>madvise</code>() is not specified in POSIX.) Subsequently, a number of Linux-specific <i>advice</i> values have been added.</p>
 <h3>Conventional advice values</h3>

@@ -1,5 +1,4 @@
 ---
-
 title: "perf-buildid-cache(1)"
 name: "perf-buildid-cache"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-perf-buildid-cache/"
 description: "perf-buildid-cache – Manage build-id cache."
 ---
 
+<h2 class="name">NAME</h2>
+<p> perf-buildid-cache &#8211; Manage build-id cache. </p>
+<h2>SYNOPSIS</h2>
 <pre>
 <i>perf buildid-cache &lt;options&gt;</i>
 </pre>
+<h2>DESCRIPTION</h2>
 <p> This command manages the build-id cache. It can add and remove files to/from the cache. In the future it should as well purge older entries, set upper limits for the space used by the cache, etc.</p>
 <h2>OPTIONS</h2>
 <p> -a, &#8211;add=</p>

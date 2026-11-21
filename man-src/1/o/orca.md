@@ -1,5 +1,4 @@
 ---
-
 title: "orca(1)"
 name: "orca"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-orca/"
 description: "orca – a scriptable screen reader"
 ---
 
+<h2 class="name">NAME</h2>
+<p> orca &#8211; a scriptable screen reader </p>
+<h2>SYNOPSIS</h2>
 <p> <code>orca</code> [<i>option&#8230;</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>orca</code> is a screen reader for people with visual impairments, it provides alternative access to the desktop by using speech synthesis and braille. </p>
 <p> <code>orca</code> works with applications and toolkits that support the Assistive Technology Service Provider Interface (AT-SPI), which is the primary assistive technology infrastructure for Linux and Solaris. Applications and toolkits supporting the AT-SPI include the GNOME Gtk+ toolkit, the Java platform&#8217;s Swing toolkit, LibreOffice, Gecko, and WebKitGtk. AT-SPI support for the KDE Qt toolkit is being pursued.</p>
 <h2>OPTIONS</h2>

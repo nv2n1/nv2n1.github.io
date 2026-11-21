@@ -1,5 +1,4 @@
 ---
-
 title: "sa-learn(1)"
 name: "sa-learn"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-sa-learn/"
 description: "sa-learn – train SpamAssassin’s Bayesian classifier"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sa-learn &#8211; train SpamAssassin&#8217;s Bayesian classifier </p>
+<h2>SYNOPSIS</h2>
 <p> <code>sa-learn</code> [options] [file]&#8230; </p>
 <p> <code>sa-learn</code> [options] &#8211;dump [ all | data | magic ] </p>
 <p> Options: </p>
@@ -53,6 +55,7 @@ description: "sa-learn – train SpamAssassin’s Bayesian classifier"
  -V, --version         Print version
  -h, --help            Print usage message
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Given a typical selection of your incoming mail classified as spam or ham (non-spam), this tool will feed each mail to SpamAssassin, allowing it to &#8216;learn&#8217; what signs are likely to mean spam, and which are likely to mean ham. </p>
 <p> Simply run this command once for each of your mail folders, and it will &#8221;learn&#8221; from the mail therein. </p>
 <p> Note that csh-style <i>globbing</i> in the mail folder names is supported; in other words, listing a folder name as <tt>&quot;*&quot;</tt> will scan every folder that matches. See <tt>&quot;Mail::SpamAssassin::ArchiveIterator&quot;</tt> for more details. </p>

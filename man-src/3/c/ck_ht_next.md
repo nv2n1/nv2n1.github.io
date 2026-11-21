@@ -1,5 +1,4 @@
 ---
-
 title: "ck_ht_next(3)"
 name: "ck_ht_next"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_ht_next – iterate to next entry in hash table"
 <p> <code>ck_ht_next</code> &#8211; iterate to next entry in hash table</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_ht.h Ft bool Fn ck_ht_next ck_ht_t *ht ck_ht_iterator_t *iterator ck_ht_entry_t **entry</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_ht_next function will increment the iterator object pointed to by Fa iterator to point to the next non-empty hash table entry. If Fn ck_ht_next returns <code>true</code> then the pointer pointed to by Fa entry is initialized to the current hash table entry pointed to by the Fa iterator object. </p>
 <p> It is expected that Fa iterator has been initialized using the ck_ht_iterator_init3 function or statically initialized using <code>CK_HT_ITERATOR_INITIALIZER.</code></p>
 <h2>RETURN VALUES</h2>

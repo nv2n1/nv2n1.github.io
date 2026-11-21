@@ -1,5 +1,4 @@
 ---
-
 title: "img2google(1)"
 name: "img2google"
 section: "1"
@@ -10,7 +9,9 @@ description: "img2google – Create Google Earth KML overlay tiles from bathymet
 
 <h2>NAME</h2>
 <p> img2google &#8211; Create Google Earth KML overlay tiles from bathymetry Mercator img grid</p>
+<h2>SYNOPSIS</h2>
 <p> <code>img2google</code> <code>-R</code><i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[<code>r</code>] [ <i>imgfile</i> ] [ <code>-A</code><i>mode</i>[<i>altitude</i>] ] [ <code>-C</code> ] [ <code>-F</code><i>fademin/fademax</i>] [ <code>-G</code><i>prefix</i> ] [ <code>-L</code><i>LODmin/LODmax</i>] [ [ <code>-N</code><i>layername</i> ] ] [ [ <code>-T</code><i>doctitle</i> ] [ <code>-U</code><i>URL</i> ] [ <code>-V</code> ] [ <code>-Z</code> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>img2google</code> reads a 1&#215;1 minute Mercator surface relief img file and creates a Google Earth overlay KML file and associated PNG tile for the specified region. If no input file is given we use topo.11.1.img.</p>
 <dl>
 <dt><code>-R</code></dt>

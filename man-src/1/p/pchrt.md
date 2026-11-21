@@ -1,5 +1,4 @@
 ---
-
 title: "pchrt(1)"
 name: "pchrt"
 section: "1"
@@ -10,6 +9,7 @@ description: "pchrt (python-schedutils) – manipulate the real-time attributes 
 
 <h2>NAME</h2>
 <p> <code>pchrt (python-schedutils) &#8211; manipulate the real-time attributes of a process</code></p>
+<h2>SYNOPSIS</h2>
 <p> pchrt [options] [prio] [pid | cmd [args&#8230;]]</p>
 <h2>OPTIONS</h2>
 <dl>

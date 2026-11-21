@@ -1,5 +1,4 @@
 ---
-
 title: "historicalratesanalysis(3)"
 name: "historicalratesanalysis"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-historicalratesanalysis/"
 description: "ql/models/marketmodels/historicalratesanalysis.hpp – Statistical analysis of historical rates."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/models/marketmodels/historicalratesanalysis.hpp &#8211; Statistical analysis of historical rates. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/statistics/sequencestatistics.hpp&gt;<br />
  #include &lt;ql/time/date.hpp&gt; </p>
 <h3>Classes</h3>

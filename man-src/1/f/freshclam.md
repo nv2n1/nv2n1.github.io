@@ -1,5 +1,4 @@
 ---
-
 title: "freshclam(1)"
 name: "freshclam"
 section: "1"
@@ -10,7 +9,9 @@ description: "freshclam – update virus databases"
 
 <h2>NAME</h2>
 <p> freshclam &#8211; update virus databases</p>
+<h2>SYNOPSIS</h2>
 <p> freshclam [options]</p>
+<h2>DESCRIPTION</h2>
 <p> freshclam is a virus database update tool for ClamAV.</p>
 <h2>OPTIONS</h2>
 <p> Freshclam reads its configuration from freshclam.conf. The settings can be overwritten with command line options.</p>

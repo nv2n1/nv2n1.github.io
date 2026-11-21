@@ -1,5 +1,4 @@
 ---
-
 title: "tig(1)"
 name: "tig"
 section: "1"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/1-tig/"
 description: "tig – text-mode interface for Git"
 ---
 
+<h2 class="name">NAME</h2>
+<p> tig &#8211; text-mode interface for Git </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 tig[options][revisions][--][paths] tig log[options][revisions][--][paths] tig show[options][revisions][--][paths] tig reflog[options][revisions] tig blame[options][rev][--] path
         tig grep[options][pattern] tig refs[options] tig stash
             tig status
                 tig &lt; [Git command output]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Tig is an ncurses-based text-mode interface for <a href="/docs/linux/man/1-git/">git</a>(1). It functions mainly as a Git repository browser, but can also assist in staging changes for commit at chunk level and act as a pager for output from various Git commands.</p>
 <h2>OPTIONS</h2>
 <p> Command line options recognized by Tig include all valid <a href="/docs/linux/man/1-git-log/">git-log</a>(1) and <a href="/docs/linux/man/1-git-diff/">git-diff</a>(1) options, as well as the following subcommands and Tig-specific options. The first command line parameter not starting with &quot;-&quot; is interpreted as being either a revision specification or a path and will end the option parsing. All additional options will be passed to the underlying Git command. </p>

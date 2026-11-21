@@ -1,5 +1,4 @@
 ---
-
 title: "ibv_create_ah_from_wc(3)"
 name: "ibv_create_ah_from_wc"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-ibv_create_ah_from_wc/"
 description: "ibv_init_ah_from_wc, ibv_create_ah_from_wc – initialize or create an address handle (AH) from a work completion"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ibv_init_ah_from_wc, ibv_create_ah_from_wc &#8211; initialize or create an address handle (AH) from a work completion </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 int ibv_init_ah_from_wc(struct ibv_context *context, uint8_t port_num,
@@ -18,6 +20,7 @@ struct ibv_ah *ibv_create_ah_from_wc(struct ibv_pd *pd,
                                      struct ibv_grh *grh,
                                      uint8_t port_num);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>ibv_init_ah_from_wc()</code> initializes the address handle (AH) attribute structure <i>ah_attr</i> for the RDMA device context <i>context</i> using the port number <i>port_num</i>, using attributes from the work completion <i>wc</i> and the Global Routing Header (GRH) structure <i>grh</i>. </p>
 <p> <code>ibv_create_ah_from_wc()</code> creates an AH associated with the protection domain <i>pd</i> using the port number <i>port_num</i>, using attributes from the work completion <i>wc</i> and the Global Routing Header (GRH) structure <i>grh</i>.</p>
 <h2>RETURN VALUE</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "kde4-config(1)"
 name: "kde4-config"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-kde4-config/"
 description: "kde4-config – Prints KDE installation paths"
 ---
 
+<h2 class="name">NAME</h2>
+<p> kde4-config &#8211; Prints KDE installation paths </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>kde4-config</code> [&#8211;expandvars] [&#8211;prefix] [&#8211;exec-prefix] [&#8211;libsuffix] [&#8211;localprefix] [&#8211;version] [&#8211;types] [&#8211;path&nbsp;<wbr><i>type</i>] [&#8211;userpath&nbsp;<wbr><i>type</i>] [&#8211;install&nbsp;<wbr><i>type</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>kde4-config is a command line program used to retrieve information about KDE installation or user paths. </dd>
 <p> Use this program to determine where the various aspects of the KDE installation reside on your system.</p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "fribidi_mirroring_status(3)"
 name: "fribidi_mirroring_status"
 section: "3"
@@ -7,13 +6,20 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_mirroring_status/"
 ---
 
-fribidi_mirroring_status - get current mirroring status 
+<h2 class="name">NAME</h2>
+ 
 
-<b> #include &lt;fribidi.h&gt; 
+ fribidi_mirroring_status - get current mirroring status 
+
+<h2>SYNOPSIS</h2>
+
+ <b> #include &lt;fribidi.h&gt; 
 
  extern fribidi_boolean fribidi_mirroring_status(void); </b>
 
-This function is deprecated and only used with other deprecated functions.
+<h2>DESCRIPTION</h2>
+
+ This function is deprecated and only used with other deprecated functions.
 
 <h2>SEE ALSO</h2>
 

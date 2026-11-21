@@ -1,5 +1,4 @@
 ---
-
 title: "docker-swarm-unlock-key(1)"
 name: "docker-swarm-unlock-key"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-swarm-unlock-key/"
 description: "docker-swarm-unlock-key – Manage the unlock key"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-swarm-unlock-key &#8211; Manage the unlock key </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker swarm unlock-key [OPTIONS]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Manage the unlock key </p>
 <h2>OPTIONS</h2>
 <p> <code>-h</code>, <code>&#8211;help</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>help for unlock-key</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "gc(3)"
 name: "gc"
 section: "3"
@@ -11,7 +10,9 @@ url: "/docs/linux/man/3-gc/"
 
  GC_malloc, GC_malloc_atomic, GC_free, GC_realloc, GC_enable_incremental, GC_register_finalizer, GC_malloc_ignore_off_page, GC_malloc_atomic_ignore_off_page, GC_set_warn_proc - Garbage collecting malloc replacement
 
-#include &quot;gc.h&quot; 
+<h2>SYNOPSIS</h2>
+
+ #include &quot;gc.h&quot; 
  void * GC_malloc(size_t size); 
  void GC_free(void *ptr); 
  void * GC_realloc(void *ptr, size_t size); 
@@ -19,7 +20,9 @@ url: "/docs/linux/man/3-gc/"
 
  cc ... gc.a 
 
-<i>GC_malloc</i> and <i>GC_free</i> are plug-in replacements for standard malloc and free. However, <i>GC_malloc</i> will attempt to reclaim inaccessible space automatically by invoking a conservative garbage collector at appropriate points. The collector traverses all data structures accessible by following pointers from the machines registers, stack(s), data, and bss segments. Inaccessible structures will be reclaimed. A machine word is considered to be a valid pointer if it is an address inside an object allocated by <i>GC_malloc</i> or friends. 
+<h2>DESCRIPTION</h2>
+
+ <i>GC_malloc</i> and <i>GC_free</i> are plug-in replacements for standard malloc and free. However, <i>GC_malloc</i> will attempt to reclaim inaccessible space automatically by invoking a conservative garbage collector at appropriate points. The collector traverses all data structures accessible by following pointers from the machines registers, stack(s), data, and bss segments. Inaccessible structures will be reclaimed. A machine word is considered to be a valid pointer if it is an address inside an object allocated by <i>GC_malloc</i> or friends. 
 
  In most cases it is preferable to call the macros GC_MALLOC, GC_FREE, etc. instead of calling GC_malloc and friends directly. This allows debugging versions of the routines to be substituted by defining GC_DEBUG before including gc.h. 
 

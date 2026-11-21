@@ -1,5 +1,4 @@
 ---
-
 title: "euca-create-vpc-peering-connection(1)"
 name: "euca-create-vpc-peering-connection"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-create-vpc-peering-connection – Request a peering connectio
 
 <h2>NAME</h2>
 <p> euca-create-vpc-peering-connection &#8211; Request a peering connection between two VPCs</p>
+<h2>SYNOPSIS</h2>
 <p> euca-create-vpc-peering-connection <code>-c</code> VPC <code>-p</code> VPC [-o ACCOUNT]</p>
 <dl>
 <dt>[&#8211;show-empty-fields] [-U URL]</dt>
 <dd> [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Request a peering connection between two VPCs</p>
 <h2>DESCRIPTION</h2>
 <p> The owner of the VPC you wish to peer with must accept the peering request to activate the peering connection</p>

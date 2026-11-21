@@ -1,5 +1,4 @@
 ---
-
 title: "euimage-install-pack(1)"
 name: "euimage-install-pack"
 section: "1"
@@ -10,10 +9,12 @@ description: "euimage-install-pack – ***TECH PREVIEW***"
 
 <h2>NAME</h2>
 <p> euimage-install-pack &#8211; ***TECH PREVIEW***</p>
+<h2>SYNOPSIS</h2>
 <p> euimage-install-pack [&#8211;profile PROFILE] [-b BUCKET[/PREFIX]]</p>
 <dl>
 <dt>[&#8211;location LOCATION] [&#8211;privatekey FILE]</dt>
 <dd> [&#8211;cert FILE] [&#8211;ec2cert FILE] [&#8211;user ACCOUNT] [&#8211;kernel IMAGE] [&#8211;ramdisk IMAGE] [&#8211;ec2-url EC2_URL] [&#8211;progress | <code>&#8211;no-progress]</code> [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] FILE</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> ***TECH PREVIEW***</p>
 <h2>DESCRIPTION</h2>
 <p> Install a packed image into the cloud</p>

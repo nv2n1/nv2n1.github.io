@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pem_base64_decode(3)"
 name: "gnutls_pem_base64_decode"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_pem_base64_decode – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pem_base64_decode &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_pem_base64_decode(const char * </code><i>header</i><code>, const gnutls_datum_t * </code><i>b64_data</i><code>, unsigned char * </code><i>result</i><code>, size_t * </code><i>result_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,6 +22,7 @@ description: "gnutls_pem_base64_decode – API function"
 <dd> the place where decoded data will be copied</dd>
 <dt>size_t * result_size</dt>
 <dd> holds the size of the result</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will decode the given encoded data. If the header given is non null this function will search for &quot;&#8212;&#8211;BEGIN header&quot; and decode only this part. Otherwise it will decode the first PEM packet found.</p>
 <h2>RETURNS</h2>
 <p> On success <code>GNUTLS_E_SUCCESS</code> (0) is returned, <code>GNUTLS_E_SHORT_MEMORY_BUFFER</code> is returned if the buffer given is not long enough, or 0 on success.</p>

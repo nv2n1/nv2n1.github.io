@@ -1,5 +1,4 @@
 ---
-
 title: "ether_ntohost(3)"
 name: "ether_ntohost"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-ether_ntohost/"
 description: "ether_aton, ether_ntoa, ether_ntohost, ether_hostton, ether_line, ether_ntoa_r, ether_aton_r – Ethernet address manipulation routines"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ether_aton, ether_ntoa, ether_ntohost, ether_hostton, ether_line, ether_ntoa_r, ether_aton_r &#8211; Ethernet address manipulation routines </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;netinet/ether.h&gt;
 char *ether_ntoa(const struct ether_addr *addr);
@@ -21,6 +23,7 @@ char *ether_ntoa_r(const struct ether_addr *addr, char *buf);
 struct ether_addr *ether_aton_r(const char *asc,
                                 struct ether_addr *addr);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>ether_aton</code>() converts the 48-bit Ethernet host address <i>asc</i> from the standard hex-digits-and-colons notation into binary data in network byte order and returns a pointer to it in a statically allocated buffer, which subsequent calls will overwrite. <code>ether_aton</code>() returns NULL if the address is invalid. </p>
 <p> The <code>ether_ntoa</code>() function converts the Ethernet host address <i>addr</i> given in network byte order to a string in standard hex-digits-and-colons notation, omitting leading zeros. The string is returned in a statically allocated buffer, which subsequent calls will overwrite. </p>
 <p> The <code>ether_ntohost</code>() function maps an Ethernet address to the corresponding hostname in <i>/etc/ethers</i> and returns nonzero if it cannot be found. </p>

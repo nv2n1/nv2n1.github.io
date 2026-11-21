@@ -1,5 +1,4 @@
 ---
-
 title: "cap_copy_int(3)"
 name: "cap_copy_int"
 section: "3"
@@ -10,11 +9,13 @@ description: "cap_copy_ext, cap_size, cap_copy_int – capability state external
 
 <h2>NAME</h2>
 <p> cap_copy_ext, cap_size, cap_copy_int &#8211; capability state external representation translation</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/capability.h&gt;</code> </p>
 <p> <code>ssize_t cap_size(cap_t </code><i>cap_p</i><code>);</code> </p>
 <p> <code>ssize_t cap_copy_ext(void *</code><i>ext_p</i><code>, cap_t </code><i>cap_p</i><code>, ssize_t </code><i>size</i><code>);</code> </p>
 <p> <code>cap_t cap_copy_int(const void *</code><i>ext_p</i><code>);</code> </p>
 <p> Link with <i>-lcap</i>.</p>
+<h2>DESCRIPTION</h2>
 <p> These functions translate between internal and external representations of a capability state. The external representation is an exportable, contiguous, persistent representation of a capability state in user-managed space. The internal representation is managed by the capability functions in working storage. </p>
 <p> <code>cap_size</code>() returns the total length (in bytes) that the capability state in working storage identified by <i>cap_p</i> would require when converted by <code>cap_copy_ext</code>(). This function is used primarily to determine the amount of buffer space that must be provided to the <code>cap_copy_ext</code>() function in order to hold the capability data record created from <i>cap_p</i>. </p>
 <p> <code>cap_copy_ext</code>() copies a capability state in working storage, identified by <i>cap_p</i>, from system managed space to user-managed space (pointed to by <i>ext_p</i>) and returns the length of the resulting data record. The size parameter represents the maximum size, in bytes, of the resulting data record. The <code>cap_copy_ext</code>() function will do any conversions necessary to convert the capability state from the undefined internal format to an exportable, contiguous, persistent data record. It is the responsibility of the user to allocate a buffer large enough to hold the copied data. The buffer length required to hold the copied data may be obtained by a call to the <code>cap_size</code>() function. </p>

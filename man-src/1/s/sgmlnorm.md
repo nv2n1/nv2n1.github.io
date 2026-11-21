@@ -1,5 +1,4 @@
 ---
-
 title: "sgmlnorm(1)"
 name: "sgmlnorm"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-sgmlnorm/"
 description: "osgmlnorm – An SGML/XML document normalizer"
 ---
 
+<h2 class="name">NAME</h2>
+<p> osgmlnorm &#8211; An SGML/XML document normalizer </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>osgmlnorm</code> [<code>-CdeghmnrRvx</code>] [<code>-a</code><i>linktype</i>] [<code>-A</code><i>architecture</i>] [<code>-b</code><i>bctf</i>] [<code>-c</code><i>catalog</i>] [<code>-D</code><i>directory</i>&#8230;] [<code>-E</code><i>max_errors</i>&#8230;] [<code>-i</code><i>name</i>&#8230;] [<code>-f</code><i>name</i>&#8230;] [<code>-w</code><i>warning</i>&#8230;] [<i>sysid</i>&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>osgmlnorm</code></p>
 <dd>prints on the standard output a normalized document instance for the SGML document contained in the concatenation of the entities with system identifiers</dd>
 <dl>

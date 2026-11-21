@@ -1,5 +1,4 @@
 ---
-
 title: "kupfer(1)"
 name: "kupfer"
 section: "1"
@@ -10,10 +9,12 @@ description: "kupfer – Convenient command and access tool for applications and
 
 <h2>NAME</h2>
 <p> kupfer &#8211; Convenient command and access tool for applications and documents</p>
+<h2>SYNOPSIS</h2>
 <pre>
 <code>kupfer</code> [ <i>OPTIONS</i> | <i>FILE</i> ... ]
 <code>kupfer-exec</code> <i>FILE</i> ...
 </pre>
+<h2>DESCRIPTION</h2>
 <p> Kupfer is an interface for quick and convenient access to applications and their documents. </p>
 <p> The most typical use is to find a specific application and launch it. We have tried to make Kupfer easy to extend with plugins so that this quick-access paradigm can be extended to many more objects than just applications. </p>
 <p> <code>kupfer-exec</code> is a helper script that can execute commands saved to file, but only by connecting to an already running instance of Kupfer.</p>

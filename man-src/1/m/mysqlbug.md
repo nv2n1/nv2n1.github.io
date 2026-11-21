@@ -1,5 +1,4 @@
 ---
-
 title: "mysqlbug(1)"
 name: "mysqlbug"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mysqlbug/"
 description: "mysqlbug – generate bug report"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mysqlbug &#8211; generate bug report </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqlbug</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>To report MariaDB bugs, see <a rel="nofollow" href="https://mariadb.com/kb/en/mariadb/reporting-bugs/">https://mariadb.com/kb/en/mariadb/reporting-bugs/</a> &#8211; the mysqlbug program has now been deprecated by Oracle, and was never useful for MariaDB. </dd>
 <p> Originally, the program enabled you to generate a bug report and send it to Oracle Corporation. It is a shell script and runs on Unix. </p>
 <p> The normal way to report MySQL bugs is to visit m[blue]<code><a rel="nofollow" href="http://bugs.mysql.com/">http://bugs.mysql.com/</a></code>m[], which is the address for MySQL&#8217;s bugs database. This database is public and can be browsed and searched by anyone. If you log in to the system, you can enter new reports. If you have no Web access, you can generate a bug report by using the <code>mysqlbug</code> script. </p>

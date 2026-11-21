@@ -1,5 +1,4 @@
 ---
-
 title: "ijs-config(1)"
 name: "ijs-config"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ijs-config/"
 description: "ijs-config – script to get information about the installed version of ijs"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ijs-config &#8211; script to get information about the installed version of ijs </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ijs-config</code> [&#8211;prefix<i>[=DIR]</i>] [&#8211;exec-prefix<i>[=DIR]</i>] [&#8211;version] [&#8211;libs] [&#8211;cflags]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>ijs-config</i> is a program that is used to determine the compiler and linker flags that should be used to compile and link programs that use <i>IJS</i>.</p>
 <h2>OPTIONS</h2>
 <p> This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>

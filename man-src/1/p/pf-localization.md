@@ -1,5 +1,4 @@
 ---
-
 title: "pf-localization(1)"
 name: "pf-localization"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pf-localization/"
 description: "pf-localization – MonteCarlo mobile robot localization"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pf-localization &#8211; MonteCarlo mobile robot localization </p>
+<h2>SYNOPSIS</h2>
 <p> pf-localization <i>config_file.ini</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>pf-localization</code> is a command-line application which processes a rawlog and tracks a mobile robot pose from the sequence of odometry and observations. It can also perform global localization.</p>
 <h2>BUGS</h2>
 <p> Please report bugs at <a rel="nofollow" href="http://sourceforge.net/tracker/?group_id=205280">http://sourceforge.net/tracker/?group_id=205280</a>&amp;atid=993006</p>

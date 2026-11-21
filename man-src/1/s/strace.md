@@ -1,5 +1,4 @@
 ---
-
 title: "strace(1)"
 name: "strace"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-strace/"
 description: "strace – trace system calls and signals"
 ---
 
+<h2 class="name">NAME</h2>
+<p> strace &#8211; trace system calls and signals </p>
+<h2>SYNOPSIS</h2>
 <p> [ <code>-ACdffhikqqrtttTvVwxxyyzZ</code> ] [ <code>-I </code><i>n</i> ] [ <code>-b </code><i>execve</i> ] [<code>-e</code><i>&nbsp;expr</i>]&#8230; [ <code>-O </code><i>overhead</i> ] [ <code>-S </code><i>sortby</i> ] [ <code>-U </code><i>columns</i> ] [ <code>-a </code><i>column</i> ] [ <code>-o </code><i>file</i> ] [ <code>-s </code><i>strsize</i> ] [ <code>-X </code><i>format</i> ] [<code>-P</code><i>&nbsp;path</i>]&#8230; [<code>-p</code><i>&nbsp;pid</i>]&#8230; [ <code>&#8211;seccomp-bpf</code> ] { <code>-p</code><i>&nbsp;pid</i> | [ <code>-DDD</code> ] [<code>-E</code><i>&nbsp;var[=<i>val</i>]</i>]&#8230; [ <code>-u </code><i>username</i> ] <i>command</i> [<i>args</i>] } <code>-c</code> [ <code>-dfwzZ</code> ] [ <code>-I </code><i>n</i> ] [ <code>-b </code><i>execve</i> ] [<code>-e</code><i>&nbsp;expr</i>]&#8230; [ <code>-O </code><i>overhead</i> ] [ <code>-S </code><i>sortby</i> ] [ <code>-U </code><i>columns</i> ] [<code>-P</code><i>&nbsp;path</i>]&#8230; [<code>-p</code><i>&nbsp;pid</i>]&#8230; [ <code>&#8211;seccomp-bpf</code> ] { <code>-p</code><i>&nbsp;pid</i> | [ <code>-DDD</code> ] [<code>-E</code><i>&nbsp;var[=<i>val</i>]</i>]&#8230; [ <code>-u </code><i>username</i> ] <i>command</i> [<i>args</i>] }</p>
+<h2>DESCRIPTION</h2>
 <p> In the simplest case <code>strace</code> runs the specified <i>command</i> until it exits. It intercepts and records the system calls which are called by a process and the signals which are received by a process. The name of each system call, its arguments and its return value are printed on standard error or to the file specified with the <code>-o</code> option. </p>
 <p> <code>strace</code> is a useful diagnostic, instructional, and debugging tool. System administrators, diagnosticians and trouble-shooters will find it invaluable for solving problems with programs for which the source is not readily available since they do not need to be recompiled in order to trace them. Students, hackers and the overly-curious will find that a great deal can be learned about a system and its system calls by tracing even ordinary programs. And programmers will find that since system calls and signals are events that happen at the user/kernel interface, a close examination of this boundary is very useful for bug isolation, sanity checking and attempting to capture race conditions. </p>
 <p> Each line in the trace contains the system call name, followed by its arguments in parentheses and its return value. An example from stracing the command &quot;cat /dev/null&quot; is: </p>

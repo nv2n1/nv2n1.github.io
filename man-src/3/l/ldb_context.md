@@ -1,5 +1,4 @@
 ---
-
 title: "ldb_context(3)"
 name: "ldb_context"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-ldb_context/"
 description: "ldb_context –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ldb_context &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Data Structures</h3>
 <p> struct <code>ldb_extended_match_entry</code> </p>
 <p> struct <code>ldb_opaque</code> </p>

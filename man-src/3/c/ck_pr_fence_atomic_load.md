@@ -1,5 +1,4 @@
 ---
-
 title: "ck_pr_fence_atomic_load(3)"
 name: "ck_pr_fence_atomic_load"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_pr_fence_atomic_load – enforce ordering of atomic read-modify
 <p> <code>ck_pr_fence_atomic_load</code> &#8211; enforce ordering of atomic read-modify-write operations to load operations</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_pr.h Ft void Fn ck_pr_fence_atomic_load void Ft void Fn ck_pr_fence_strict_atomic_load void</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_pr_fence_atomic_load function enfores the ordering of any atomic read-modify-write operations relative to any load operations following the function invocation. This function always serve as an implicit compiler barrier. On architectures implementing CK_MD_TSO, this operation only serves as a compiler barrier and no fences are emitted. To force the unconditional emission of a fence, use Fn ck_pr_fence_strict_atomic_load .</p>
 <h2>EXAMPLE</h2>
 <blockquote>

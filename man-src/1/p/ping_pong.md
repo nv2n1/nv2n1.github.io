@@ -1,5 +1,4 @@
 ---
-
 title: "ping_pong(1)"
 name: "ping_pong"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-ping_pong/"
 description: "ping_pong – measures the ping-pong byte range lock latency"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ping_pong &#8211; measures the ping-pong byte range lock latency </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ping_pong</code> {-r | -w | -rw} [-m] [-c] {<i>FILENAME</i>} {<i>NUM-LOCKS</i>}</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>ping_pong measures the byte range lock latency. It is especially useful on a cluster of nodes sharing a common lock manager as it will give some indication of the lock manager&#8217;s performance under stress. </dd>
 <p> FILENAME is a file on shared storage to use for byte range locking tests. </p>
 <p> NUM-LOCKS is the number of byte range locks, so needs to be (strictly) greater than the number of nodes in the cluster.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "endnetgrent(3)"
 name: "endnetgrent"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-endnetgrent/"
 description: "setnetgrent, endnetgrent, getnetgrent, getnetgrent_r, innetgr – handle network group entries"
 ---
 
+<h2 class="name">NAME</h2>
+<p> setnetgrent, endnetgrent, getnetgrent, getnetgrent_r, innetgr &#8211; handle network group entries </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;netdb.h&gt;
 int setnetgrent(const char *netgroup);
@@ -24,6 +26,7 @@ int innetgr(const char *netgroup, const char *host,
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</p>
+<h2>DESCRIPTION</h2>
 <p> The <i>netgroup</i> is a SunOS invention. A netgroup database is a list of string triples (<i>hostname</i>, <i>username</i>, <i>domainname</i>) or other netgroup names. Any of the elements in a triple can be empty, which means that anything matches. The functions described here allow access to the netgroup databases. The file <i>/etc/nsswitch.conf</i> defines what database is searched. </p>
 <p> The <code>setnetgrent</code>() call defines the netgroup that will be searched by subsequent <code>getnetgrent</code>() calls. The <code>getnetgrent</code>() function retrieves the next netgroup entry, and returns pointers in <i>host</i>, <i>user</i>, <i>domain</i>. A null pointer means that the corresponding entry matches any string. The pointers are valid only as long as there is no call to other netgroup-related functions. To avoid this problem you can use the GNU function <code>getnetgrent_r</code>() that stores the strings in the supplied buffer. To free all allocated buffers use <code>endnetgrent</code>(). </p>
 <p> In most cases you want to check only if the triplet (<i>hostname</i>, <i>username</i>, <i>domainname</i>) is a member of a netgroup. The function <code>innetgr</code>() can be used for this without calling the above three functions. Again, a null pointer is a wildcard and matches any string. The function is thread-safe.</p>

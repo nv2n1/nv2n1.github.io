@@ -1,5 +1,4 @@
 ---
-
 title: "bookman(1)"
 name: "bookman"
 section: "1"
@@ -10,10 +9,12 @@ description: "bookman – Generate a book from man pages"
 
 <h2>NAME</h2>
 <p> <code>bookman </code>&#8211; Generate a book from man pages</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 bookman[-pPxn][-o outfile][-a author][-d date][-r release]
        [-t title][-v volume][-c coverfile][manfile]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>bookman</code> compiles a set of man pages files specified by <i>manfile</i> arguments, or if no <i>manfile</i> is given, filenames are read from standard input.</p>
 <h2>OPTIONS</h2>
 <dl>

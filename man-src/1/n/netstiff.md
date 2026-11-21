@@ -1,5 +1,4 @@
 ---
-
 title: "netstiff(1)"
 name: "netstiff"
 section: "1"
@@ -10,7 +9,9 @@ description: "netstiff – powerful and easy tool to check for Web and FTP updat
 
 <h2>NAME</h2>
 <p> netstiff &#8211; powerful and easy tool to check for Web and FTP updates </p>
+<h2>SYNOPSIS</h2>
 <p> <code>netstiff</code> [<i>options</i>] [<i>command</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> Netstiff (formerly known as webdiff) is a powerful and easy-to-use tool which checks for Web page and/or FTP site updates. </p>
 <p> For the Web, updates are recognized using several test criteria (diff, html, size, date, md5sum, regexp). The FTP update checker is only able to diff on directory listings and files and to compare size and date of files. </p>
 <p> Without a given command, netstiff will check for updates of the specified URIs and then print the changes. If no configuration file exists, the configurator is launched instead. </p>

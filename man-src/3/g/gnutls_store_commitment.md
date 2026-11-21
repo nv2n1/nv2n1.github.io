@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_store_commitment(3)"
 name: "gnutls_store_commitment"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_store_commitment – API function"
 
 <h2>NAME</h2>
 <p> gnutls_store_commitment &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_store_commitment(const char * </code><i>db_name</i><code>, gnutls_tdb_t </code><i>tdb</i><code>, const char * </code><i>host</i><code>, const char * </code><i>service</i><code>, gnutls_digest_algorithm_t </code><i>hash_algo</i><code>, const gnutls_datum_t * </code><i>hash</i><code>, time_t </code><i>expiration</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -30,6 +30,7 @@ description: "gnutls_store_commitment – API function"
 <dd> The expiration time (use 0 to disable expiration)</dd>
 <dt>unsigned int flags</dt>
 <dd> should be 0.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will store the provided hash commitment to the list of stored public keys. The key with the given hash will be considered valid until the provided expiration time. </p>
 <p> The <i>store</i> variable if non-null specifies a custom backend for the storage of entries. If it is NULL then the default file backend will be used. </p>
 <p> Note that this function is not thread safe with the default backend.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "globus_gram_client_job_info_s(3)"
 name: "globus_gram_client_job_info_s"
 section: "3"
@@ -8,7 +7,10 @@ url: "/docs/linux/man/3-globus_gram_client_job_info_s/"
 description: "globus_gram_client_job_info_s –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> globus_gram_client_job_info_s &#8211; </p>
 <p> Extensible job information structure.</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;globus_gram_client.h&gt;</p>
 <h3>Data Fields</h3>
 <p> globus_hashtable_t <code>extensions</code> </p>

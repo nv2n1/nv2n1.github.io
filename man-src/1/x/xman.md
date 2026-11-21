@@ -1,5 +1,4 @@
 ---
-
 title: "xman(1)"
 name: "xman"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-xman/"
 description: "xman – Manual page display program for the X Window System"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xman &#8211; Manual page display program for the X Window System </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xman</code> [ <i>-options</i> &#8230; ]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Xman</i> is a manual page browser. The default size of the initial <i>xman</i> window is small so that you can leave it running throughout your entire login session. In the initial window there are three options: <i>Help</i> will pop up a window with on-line help, <i>Quit</i> will exit, and <i>Manual Page</i> will pop up a window with a manual page browser in it. Typing Control-S will pop up a window prompting for a specific manual page to display. You may display more than one manual page browser window at a time from a single execution of <i>xman</i>. </p>
 <p> For further information on using <i>xman</i>, please read the on-line help information. Most of this manual will discuss customization of <i>xman</i>.</p>
 <h2>OPTIONS</h2>

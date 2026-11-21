@@ -1,5 +1,4 @@
 ---
-
 title: "filter1d(1)"
 name: "filter1d"
 section: "1"
@@ -10,8 +9,10 @@ description: "filter1d – Do time domain filtering of 1-D data tables"
 
 <h2>NAME</h2>
 <p> filter1d &#8211; Do time domain filtering of 1-D data tables</p>
+<h2>SYNOPSIS</h2>
 <p> <code>filter1d</code> [ <i>table</i> ] <i>type&lt;width&gt;</i>[<i>mode</i>] [ <i>increment</i> ] [ ] [ <i>ignore_val</i> ] [ <i>lack_width</i> ] [ <i>t_col</i> ] [ <i>q_factor</i> ] [ <i>symmetry_factor</i> ] [ <i>t_min/t_max/t_inc</i>[<code>+</code>] ] [ [<i>level</i>] ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>filter1d</code> is a general time domain filter for multiple column time series data. The user specifies which column is the time (i.e., the independent variable). (See <code>-N</code> option below). The fastest operation occurs when the input time series are equally spaced and have no gaps or outliers and the special options are not needed. <code>filter1d</code> has options <code>-L</code>, <code>-Q</code>, and <code>-S</code> for unevenly sampled data with gaps.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

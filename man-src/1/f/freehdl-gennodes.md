@@ -1,5 +1,4 @@
 ---
-
 title: "freehdl-gennodes(1)"
 name: "freehdl-gennodes"
 section: "1"
@@ -10,7 +9,9 @@ description: "FreeHDL-GENNODES – Abstract syntax tree generator used by the VH
 
 <h2>NAME</h2>
 <p> FreeHDL-GENNODES &#8211; Abstract syntax tree generator used by the VHDL compiler/simulator FreeHDL.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>freehdl-gennodes</code> CMD CHUNK IN-FILE OUT-FILE</p>
+<h2>DESCRIPTION</h2>
 <p> <code>FreeHDL-GENNODES</code> is an extensible framework for representing an abstract syntax tree. The program reads the IN-FILE and generates output for CHUNK in OUT-FILE, according to CMD. </p>
 <p> When CMD is `header&#8217;, FreeHDL-GENNODES writes a header file to OUT-FILE that should be included by the users of the CHUNK. When it is `impl&#8217;, it writes the implementation of CHUNK.</p>
 <h2>SEE ALSO</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_openpgp_crt_check_hostname2(3)"
 name: "gnutls_openpgp_crt_check_hostname2"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_openpgp_crt_check_hostname2 – API function"
 
 <h2>NAME</h2>
 <p> gnutls_openpgp_crt_check_hostname2 &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>
 <p> <code>int gnutls_openpgp_crt_check_hostname2(gnutls_openpgp_crt_t </code><i>key</i><code>, const char * </code><i>hostname</i><code>, unsigned </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_openpgp_crt_check_hostname2 – API function"
 <dd> A null terminated string that contains a DNS name</dd>
 <dt>unsigned flags</dt>
 <dd> gnutls_certificate_verify_flags</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will check if the given key&#8217;s owner matches the given hostname. </p>
 <p> Unless, the flag <code>GNUTLS_VERIFY_DO_NOT_ALLOW_WILDCARDS</code> is specified, wildcards are only considered if the domain name consists of three components or more, and the wildcard starts at the leftmost position.</p>
 <h2>RETURNS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "ao_string_tokenize(3)"
 name: "ao_string_tokenize"
 section: "3"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/3-ao_string_tokenize/"
 description: "ao_string_tokenize – tokenize an input string"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ao_string_tokenize &#8211; tokenize an input string</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;<i>your-opts.h</i>&gt;<br />
  cc [&#8230;] -o outfile infile.c -l<code>opts</code> [&#8230;] </p>
 <p> token_list_t* <code>ao_string_tokenize</code>(char const* <i>string</i>); </p>
+<h2>DESCRIPTION</h2>
 <p> This function will convert one input string into a list of strings. The list of strings is derived by separating the input based on white space separation. However, if the input contains either single or double quote characters, then the text after that character up to a matching quote will become the string in the list. </p>
 <p> The returned pointer should be deallocated with <code>free(3C)</code> when are done using the data. The data are placed in a single block of allocated memory. Do not deallocate individual token/strings. </p>
 <p> The structure pointed to will contain at least these two fields: </p>

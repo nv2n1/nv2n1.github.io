@@ -1,5 +1,4 @@
 ---
-
 title: "dlasd7(3)"
 name: "dlasd7"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlasd7/"
 description: "dlasd7.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlasd7.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlasd7</code> (ICOMPQ, NL, NR, SQRE, K, D, Z, ZW, VF, VFW, VL, VLW, ALPHA, BETA, DSIGMA, IDX, IDXP, IDXQ, PERM, GIVPTR, GIVCOL, LDGCOL, GIVNUM, LDGNUM, C, S, INFO)<br />
  <i></i><code>DLASD7</code> merges the two sets of singular values together into a single sorted set. Then it tries to deflate the size of the problem. Used by sbdsdc.</p>

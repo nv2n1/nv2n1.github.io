@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_privkey_import2(3)"
 name: "gnutls_x509_privkey_import2"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_privkey_import2 – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_privkey_import2 &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_privkey_import2(gnutls_x509_privkey_t </code><i>key</i><code>, const gnutls_datum_t * </code><i>data</i><code>, gnutls_x509_crt_fmt_t </code><i>format</i><code>, const char * </code><i>password</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,6 +24,7 @@ description: "gnutls_x509_privkey_import2 – API function"
 <dd> A password (optional)</dd>
 <dt>unsigned int flags</dt>
 <dd> an ORed sequence of gnutls_pkcs_encrypt_flags_t</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will import the given DER or PEM encoded key, to the native <code>gnutls_x509_privkey_t</code> format, irrespective of the input format. The input format is auto-detected. </p>
 <p> The supported formats are basic unencrypted key, PKCS8, PKCS12, and the openssl format. </p>
 <p> If the provided key is encrypted but no password was given, then <code>GNUTLS_E_DECRYPTION_FAILED</code> is returned.</p>

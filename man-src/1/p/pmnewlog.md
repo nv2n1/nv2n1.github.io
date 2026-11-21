@@ -1,5 +1,4 @@
 ---
-
 title: "pmnewlog(1)"
 name: "pmnewlog"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmnewlog – stop and restart archive logging for PCP performance 
 
 <h2>NAME</h2>
 <p> <code>pmnewlog</code> &#8211; stop and restart archive logging for PCP performance metrics</p>
+<h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/pmnewlog</code> [<code>-a</code> <i>accessfile</i>] [<code>-C</code> <i>saveconfig</i>] [<code>-c</code> <i>configfile</i>] [<code>-N</code>] [<code>-n</code> <i>pmnsfile</i>] [<code>-P</code>] [<code>-p</code> <i>pid</i>] [<code>-s</code>] [<code>-V</code>] [<i>other pmlogger options</i>] <i>archive</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmnewlog</code> may be used to stop and restart a running instance of <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1). This is most useful for managing multiple sets of Performance Co-Pilot (PCP) archive logs. These archive logs record the history of performance metric values that may be &#8220;played back&#8221; by other PCP tools, and they form the basis of the VCR paradigm and retrospective performance analysis services common to the PCP toolkit. </p>
 <p> In normal usage, <code>pmnewlog</code> would be executed by <code>cron</code>(1) in the wee hours to terminate one PCP archive log and start another, i.e. to perform log rotation. </p>
 <p> Even more common, would be the execution of <code>pmnewlog</code> from the PCP archive management script <code>pmlogger_daily</code>(1). In this case, direct end-user execution of <code>pmnewlog</code> is most unlikely. </p>

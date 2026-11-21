@@ -1,5 +1,4 @@
 ---
-
 title: "ibv_destroy_rwq_ind_table(3)"
 name: "ibv_destroy_rwq_ind_table"
 section: "3"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/3-ibv_destroy_rwq_ind_table/"
 description: "ibv_create_rwq_ind_table, ibv_destroy_rwq_ind_table – create or destroy a Receive Work Queue Indirection Table (RWQ IND TBL)."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ibv_create_rwq_ind_table, ibv_destroy_rwq_ind_table &#8211; create or destroy a Receive Work Queue Indirection Table (RWQ IND TBL). </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 struct ibv_rwq_ind_table *ibv_create_rwq_ind_table(struct ibv_context *context,
                                                    struct ibv_rwq_ind_table_init_attr *init_attr);
 int ibv_destroy_rwq_ind_table(struct ibv_rwq_ind_table *rwq_ind_table);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>ibv_create_rwq_ind_table()</code> creates a RWQ IND TBL associated with the ibv_context <i>context</i>. The argument <i>init_attr</i> is an ibv_rwq_ind_table_init_attr struct, as defined in &lt;infiniband/verbs.h&gt;. </p>
 <pre><code>
 struct ibv_rwq_ind_table_init_attr {

@@ -1,5 +1,4 @@
 ---
-
 title: "coshl(3)"
 name: "coshl"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-coshl/"
 description: "cosh, coshf, coshl – hyperbolic cosine function"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cosh, coshf, coshl &#8211; hyperbolic cosine function </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;
 double cosh(double x);
@@ -22,6 +24,7 @@ long double coshl(long double x);
 </dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> These functions return the hyperbolic cosine of <i>x</i>, which is defined mathematically as: </p>
 <pre>
     cosh(x) = (exp(x) + exp(-x)) / 2

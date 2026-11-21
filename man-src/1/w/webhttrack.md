@@ -1,5 +1,4 @@
 ---
-
 title: "webhttrack(1)"
 name: "webhttrack"
 section: "1"
@@ -10,7 +9,9 @@ description: "webhttrack – offline browser : copy websites to a local director
 
 <h2>NAME</h2>
 <p> webhttrack &#8211; offline browser : copy websites to a local directory</p>
+<h2>SYNOPSIS</h2>
 <p> <code>webhttrack [ keyword value [ keyword value .. ] ]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>webhttrack</code> this program is a script frontend to <code><a href="/docs/linux/man/1-httrack/">httrack</a></code>(1) and <code><a href="/docs/linux/man/1-htsserver/">htsserver</a></code>(1) , a website copier.</p>
 <h2>EXAMPLES</h2>
 <dl>

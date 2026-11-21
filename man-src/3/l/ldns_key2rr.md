@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_key2rr(3)"
 name: "ldns_key2rr"
 section: "3"
@@ -10,10 +9,12 @@ description: "ldns_key2rr"
 
 <h2>NAME</h2>
 <p> ldns_key2rr </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_rr* ldns_key2rr(const ldns_key *k); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_key2rr</i>()</dt>
 <dd>converts a ldns_key to a public key rr If the key data exists at an external point, the corresponding rdata field must still be added with ldns_rr_rdf_push() to the result rr of this function </dd>

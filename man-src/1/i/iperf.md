@@ -1,5 +1,4 @@
 ---
-
 title: "iperf(1)"
 name: "iperf"
 section: "1"
@@ -10,10 +9,12 @@ description: "iperf – perform network throughput tests"
 
 <h2>NAME</h2>
 <p> iperf &#8211; perform network throughput tests</p>
+<h2>SYNOPSIS</h2>
 <p> <code>iperf -s [</code> <i>options</i> <code>]</code> </p>
 <p> <code>iperf -c </code> <i>server</i> <code>[</code> <i>options</i> <code>]</code> </p>
 <p> <code>iperf -u -s [</code> <i>options</i> <code>]</code> </p>
 <p> <code>iperf -u -c </code> <i>server</i> <code>[</code> <i>options</i> <code>]</code></p>
+<h2>DESCRIPTION</h2>
 <p> iperf is a tool for performing network throughput measurements. It can test either TCP or UDP throughput. To perform an iperf test the user must establish both a server (to discard traffic) and a client (to generate traffic).</p>
 <h2>GENERAL OPTIONS</h2>
 <dl>

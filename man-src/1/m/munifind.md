@@ -1,5 +1,4 @@
 ---
-
 title: "munifind(1)"
 name: "munifind"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-munifind/"
 description: "munifind – Finding variable stars on CCD photometry files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> munifind &#8211; Finding variable stars on CCD photometry files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>munifind </code><i>[options] source_file &#8230;</i> </p>
+<h2>DESCRIPTION</h2>
 <p> The munifind program is the useful tool used in semi-automatic scaning of variable stars in the series of source files. It is based on the relation between the standard deviations of the brightness of the stars and their mean brightness. The program reads all photometry files and compute the mean brightness and standard deviations of brightness of all stars. The algorithm automatically removes stars that are missing on majority of source frames (threshold parameter). The comparison star is automaticaly selected or given by a optional parameter. </p>
 <p> The output file is saved in text format and contains the table of mean magnitudes and standard deviations. </p>
 <h2>OPTIONS</h2>

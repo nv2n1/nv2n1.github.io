@@ -1,5 +1,4 @@
 ---
-
 title: "glib-compile-resources(1)"
 name: "glib-compile-resources"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-glib-compile-resources/"
 description: "glib-compile-resources – GLib resource compiler"
 ---
 
+<h2 class="name">NAME</h2>
+<p> glib-compile-resources &#8211; GLib resource compiler </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>glib-compile-resources</code> [OPTION&#8230;] {FILE}</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>glib-compile-resources</code></p>
 <dd>reads the resource description from <i>FILE</i> and the files that it references and creates a binary resource bundle that is suitable for use with the <code>GResource</code> API. The resulting bundle is then written out as-is, or as C source for linking into an application. </dd>
 <p> The XML resource files normally have the filename extension .gresource.xml. For a detailed description of the XML file format, see the <code>GResource</code> documentation.</p>

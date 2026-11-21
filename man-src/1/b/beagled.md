@@ -1,5 +1,4 @@
 ---
-
 title: "beagled(1)"
 name: "beagled"
 section: "1"
@@ -10,7 +9,9 @@ description: "beagled – the Beagle desktop search daemon"
 
 <h2>NAME</h2>
 <p> beagled &#8211; the Beagle desktop search daemon</p>
+<h2>SYNOPSIS</h2>
 <p> <code>beagled</code> [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>beagled,</code> the Beagle daemon, is the heart of Beagle, a system for searching and managing your personal information space. The Beagle daemon should normally be started as part of user&#8217;s desktop startup process. </p>
 <p> Running <code>beagled</code> by hand is of use for those wishing to customize the Beagle daemon&#8217;s execution via command-line options, developers testing Beagle, or those who use Beagle only infrequently.</p>
 <h2>OPTIONS</h2>

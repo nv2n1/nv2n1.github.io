@@ -1,5 +1,4 @@
 ---
-
 title: "podebconf-display-po(1)"
 name: "podebconf-display-po"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-podebconf-display-po/"
 description: "podebconf-display-po – display content of a PO file in a debconf interface"
 ---
 
+<h2 class="name">NAME</h2>
+<p> podebconf-display-po &#8211; display content of a PO file in a debconf interface </p>
+<h2>SYNOPSIS</h2>
 <p> <code>podebconf-display-po</code> [<code>-h</code>] [<code>-f</code> <i></i><font SIZE="-1"><i>FRONTEND</i></font><i></i>] <i>file.po</i></p>
+<h2>DESCRIPTION</h2>
 <p> As with any other localization work, translators should test their translations by running the program they are working on. But this is a very hard job with complicated configuration scripts because there is no automatic way to have all messages displayed. </p>
 <p> The <code>podebconf-display-po</code> program could be called the <i>Poor Man Localization Checker</i> for debconf. It parses a <font SIZE="-1">PO</font> file, tries to guess what the original templates file did look like, and displays messages in a debconf interface. </p>
 <p> Of course being root is not mandatory, and there is no interaction between <code>podebconf-display-po</code> and system-wide debconf settings.</p>

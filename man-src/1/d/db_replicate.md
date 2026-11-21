@@ -1,5 +1,4 @@
 ---
-
 title: "db_replicate(1)"
 name: "db_replicate"
 section: "1"
@@ -10,7 +9,9 @@ description: "db_replicate – Provide replication services"
 
 <h2>NAME</h2>
 <p> db_replicate &#8211; Provide replication services</p>
+<h2>SYNOPSIS</h2>
 <p> <code>db_replicate</code> [-MVv] [-h <i>home</i>] [-L <i>file</i>] [-P <i>password</i>] [-T <i>num-threads</i>] [-t <i>secs</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>db_replicate</code> utility is a daemon process that provides replication/HA services on a transactional environment. This utility enables you to upgrade an existing Transactional Data Store application to an HA application with minor modifications.</p>
 <h2>OPTIONS</h2>
 <dl>

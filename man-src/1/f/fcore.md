@@ -1,5 +1,4 @@
 ---
-
 title: "fcore(1)"
 name: "fcore"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-fcore/"
 description: "fcore – extract a core file from a process"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fcore &#8211; extract a core file from a process </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>fcore</code> [<i>options</i>] {<i>pid</i>&#8230;}</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>fcore</code></p>
 <dd>constructs a core-file from a running process, and writes it to disk. </dd>
 <p> <code>-a</code>, <code>-allmaps</code></p>

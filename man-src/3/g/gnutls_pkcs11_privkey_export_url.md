@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pkcs11_privkey_export_url(3)"
 name: "gnutls_pkcs11_privkey_export_url"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_pkcs11_privkey_export_url – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs11_privkey_export_url &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs11.h&gt;</code> </p>
 <p> <code>int gnutls_pkcs11_privkey_export_url(gnutls_pkcs11_privkey_t </code><i>key</i><code>, gnutls_pkcs11_url_type_t </code><i>detailed</i><code>, char ** </code><i>url</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_pkcs11_privkey_export_url – API function"
 <dd> non zero if a detailed URL is required</dd>
 <dt>char ** url</dt>
 <dd> will contain an allocated url</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will export a URL identifying the given key.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

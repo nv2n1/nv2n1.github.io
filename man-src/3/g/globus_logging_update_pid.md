@@ -1,5 +1,4 @@
 ---
-
 title: "globus_logging_update_pid(3)"
 name: "globus_logging_update_pid"
 section: "3"
@@ -8,7 +7,10 @@ url: "/docs/linux/man/3-globus_logging_update_pid/"
 description: "globus_logging.h –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> globus_logging.h &#8211; </p>
 <p> Debug Logging.</p>
+<h2>SYNOPSIS</h2>
 <p> #include &#8216;globus_common_include.h&#8217;<br />
  #include &#8216;globus_time.h&#8217; </p>
 <h3>Functions</h3>

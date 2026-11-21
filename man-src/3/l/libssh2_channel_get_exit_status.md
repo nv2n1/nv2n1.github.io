@@ -1,5 +1,4 @@
 ---
-
 title: "libssh2_channel_get_exit_status(3)"
 name: "libssh2_channel_get_exit_status"
 section: "3"
@@ -11,11 +10,15 @@ url: "/docs/linux/man/3-libssh2_channel_get_exit_status/"
 
  libssh2_channel_get_exit_status - get the remote exit code
 
-#include &lt;libssh2.h&gt; 
+<h2>SYNOPSIS</h2>
+
+ #include &lt;libssh2.h&gt; 
 
  int libssh2_channel_get_exit_status(LIBSSH2_CHANNEL* channel) 
 
-<i>channel</i> - Closed channel stream to retreive exit status from. 
+<h2>DESCRIPTION</h2>
+
+ <i>channel</i> - Closed channel stream to retreive exit status from. 
 
  Returns the exit code raised by the process running on the remote host at the other end of the named channel. Note that the exit status may not be available if the remote end has not yet set its status to closed. 
 

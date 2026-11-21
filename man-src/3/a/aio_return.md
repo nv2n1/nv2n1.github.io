@@ -1,5 +1,4 @@
 ---
-
 title: "aio_return(3)"
 name: "aio_return"
 section: "3"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/3-aio_return/"
 description: "aio_return – get return status of asynchronous I/O operation"
 ---
 
+<h2 class="name">NAME</h2>
+<p> aio_return &#8211; get return status of asynchronous I/O operation </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;aio.h&gt;</code> </p>
 <p> <code>ssize_t aio_return(struct aiocb *</code><i>aiocbp</i><code>);</code> </p>
 <p> Link with <i>-lrt</i>.</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>aio_return</code>() function returns the final return status for the asynchronous I/O request with control block pointed to by <i>aiocbp</i>. (See <code><a href="/docs/linux/man/7-aio/">aio</a></code>(7) for a description of the <i>aiocb</i> structure.) </p>
 <p> This function should be called only once for any given request, after <code><a href="/docs/linux/man/3-aio_error/">aio_error</a></code>(3) returns something other than <code>EINPROGRESS</code>.</p>
 <h2>RETURN VALUE</h2>

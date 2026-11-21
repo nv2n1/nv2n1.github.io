@@ -1,5 +1,4 @@
 ---
-
 title: "mate-control-center(1)"
 name: "mate-control-center"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mate-control-center/"
 description: "mate-control-center – Configure MATE settings"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mate-control-center &#8211; Configure MATE settings </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mate-control-center</code> [<i>OPTION&#8230;</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>mate-control-center</code> is a graphical user interface to configure various aspects of MATE. </p>
 <p> When run without arguments, the shell displays the control center overview, which shows all available configuration panels. The overview allows one to open individual panels by clicking on them. It also has a search entry to find panels by searching keywords.</p>
 <h2>OPTIONS</h2>

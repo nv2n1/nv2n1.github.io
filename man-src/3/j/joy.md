@@ -1,5 +1,4 @@
 ---
-
 title: "joy(3)"
 name: "joy"
 section: "3"
@@ -10,8 +9,10 @@ description: "joy – Global array of joystick state information. Allegro game p
 
 <h2>NAME</h2>
 <p> joy &#8211; Global array of joystick state information. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>extern JOYSTICK_INFO joy[n];</code></p>
+<h2>DESCRIPTION</h2>
 <p> Global array of joystick state information, which is updated by the poll_joystick() function. Only the first num_joysticks elements will contain meaningful information. The JOYSTICK_INFO structure is defined as: </p>
 <pre><code>
 typedef struct JOYSTICK_INFO {

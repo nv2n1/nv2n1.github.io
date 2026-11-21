@@ -1,5 +1,4 @@
 ---
-
 title: "perlivp(1)"
 name: "perlivp"
 section: "1"
@@ -7,11 +6,18 @@ letter: "p"
 url: "/docs/linux/man/1-perlivp/"
 ---
 
-perlivp - Perl Installation Verification Procedure 
+<h2 class="name">NAME</h2>
+ 
 
-<b>perlivp</b> [<b>-p</b>] [<b>-v</b>] [<b>-h</b>]
+ perlivp - Perl Installation Verification Procedure 
 
-The <b>perlivp</b> program is set up at Perl source code build time to test the Perl version it was built under. It can be used after running: 
+<h2>SYNOPSIS</h2>
+
+ <b>perlivp</b> [<b>-p</b>] [<b>-v</b>] [<b>-h</b>]
+
+<h2>DESCRIPTION</h2>
+
+ The <b>perlivp</b> program is set up at Perl source code build time to test the Perl version it was built under. It can be used after running: 
 
  <pre>
     make install

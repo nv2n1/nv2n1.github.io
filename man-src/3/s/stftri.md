@@ -1,5 +1,4 @@
 ---
-
 title: "stftri(3)"
 name: "stftri"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-stftri/"
 description: "stftri.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> stftri.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>stftri</code> (TRANSR, UPLO, DIAG, N, A, INFO)<br />
  <i></i><code>STFTRI</code></p>

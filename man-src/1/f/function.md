@@ -1,5 +1,4 @@
 ---
-
 title: "function(1)"
 name: "function"
 section: "1"
@@ -7,7 +6,10 @@ letter: "f"
 url: "/docs/linux/man/1-function/"
 ---
 
-function - create a function
+<h2 class="name">NAME</h2>
+ 
+
+ function - create a function
 
 <h3>Synopsis</h3>
 

@@ -1,5 +1,4 @@
 ---
-
 title: "dl_iterate_phdr(3)"
 name: "dl_iterate_phdr"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dl_iterate_phdr/"
 description: "dl_iterate_phdr – walk through list of shared objects"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dl_iterate_phdr &#8211; walk through list of shared objects </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;link.h&gt;
@@ -16,6 +18,7 @@ int dl_iterate_phdr(
                     size_t size, void *data),
     void *data);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>dl_iterate_phdr</code>() function allows an application to inquire at run time to find out which shared objects it has loaded, and the order in which they were loaded. </p>
 <p> The <code>dl_iterate_phdr</code>() function walks through the list of an application&#8217;s shared objects and calls the function <i>callback</i> once for each object, until either all shared objects have been processed or <i>callback</i> returns a nonzero value. </p>
 <p> Each call to <i>callback</i> receives three arguments: <i>info</i>, which is a pointer to a structure containing information about the shared object; <i>size</i>, which is the size of the structure pointed to by <i>info</i>; and <i>data</i>, which is a copy of whatever value was passed by the calling program as the second argument (also named <i>data</i>) in the call to <code>dl_iterate_phdr</code>(). </p>

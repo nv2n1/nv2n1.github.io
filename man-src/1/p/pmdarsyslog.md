@@ -1,5 +1,4 @@
 ---
-
 title: "pmdarsyslog(1)"
 name: "pmdarsyslog"
 section: "1"
@@ -10,6 +9,7 @@ description: "pmdarsyslog – rsyslog (reliable and extended syslog) PMDA"
 
 <h2>NAME</h2>
 <p> <code>pmdarsyslog</code> &#8211; rsyslog (reliable and extended syslog) PMDA</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdarsyslog</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which exports metric values from the <code><a href="/docs/linux/man/8-rsyslogd/">rsyslogd</a></code>(8) server. Further details about rsyslog can be found at <a rel="nofollow" href="http://www.rsyslog.com/.">http://www.rsyslog.com/.</a></p>
 <h2>INSTALLATION</h2>
 <p> If you want access to the names and values for the rsyslog performance metrics, do the following as root: </p>

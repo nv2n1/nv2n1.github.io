@@ -1,5 +1,4 @@
 ---
-
 title: "pslatex(1)"
 name: "pslatex"
 section: "1"
@@ -10,7 +9,9 @@ description: "pslatex – utility to typeset LaTeX files using PostScript fonts"
 
 <h2>NAME</h2>
 <p> pslatex &#8211; utility to typeset LaTeX files using PostScript fonts </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pslatex</code> [<i>LATEXARGS</i>] <i>LATEXFILE</i>[.tex] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>pslatex</code> allows you to typeset a LaTeX source file using basic Adobe Type 1 PostScript fonts (Times, Helvetica, and Courier) <i>without</i> editing the file to load the necessary packages. </p>
 <p> It takes any arguments that <code><a href="/docs/linux/man/1-latex/">latex</a></code>(1) can take. </p>
 <h2>OPTIONS</h2>

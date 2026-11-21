@@ -1,5 +1,4 @@
 ---
-
 title: "augtool(1)"
 name: "augtool"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-augtool/"
 description: "augtool – inspect and modify configuration files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> augtool &#8211; inspect and modify configuration files </p>
+<h2>SYNOPSIS</h2>
 <p> augtool [<font SIZE="-1">OPTIONS</font>] [<font SIZE="-1">COMMAND</font>]</p>
+<h2>DESCRIPTION</h2>
 <p> Augeas is a configuration editing tool. It parses configuration files in their native formats and transforms them into a tree. Configuration changes are made by manipulating this tree and saving it back into native config files. </p>
 <p> augtool provides a command line interface to the generated tree. <font SIZE="-1">COMMAND</font> can be a single command as described under &#8220;<font SIZE="-1">COMMANDS&#8221;</font>. When called with no <font SIZE="-1">COMMAND,</font> it reads commands from standard input until an end-of-file is encountered.</p>
 <h2>OPTIONS</h2>

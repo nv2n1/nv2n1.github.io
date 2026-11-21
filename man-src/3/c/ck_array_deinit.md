@@ -1,5 +1,4 @@
 ---
-
 title: "ck_array_deinit(3)"
 name: "ck_array_deinit"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_array_deinit – destroy and deinitialize a pointer array"
 <p> <code>ck_array_deinit</code> &#8211; destroy and deinitialize a pointer array</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_array.h Ft void Fn ck_array_deinit ck_array_t *array bool defer</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_array_deinit 3 destroys the memory associated with the array pointed to by Fa array . The Fa defer argument is true if the allocator must destroy the memory using safe memory reclamation or false if the allocator can destroy this memory immediately.</p>
 <h2>RETURN VALUES</h2>
 <p> This function has no return value.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "impressive(1)"
 name: "impressive"
 section: "1"
@@ -10,7 +9,9 @@ description: "Impressive – presentation tool with eye candy"
 
 <h2>NAME</h2>
 <p> Impressive &#8211; presentation tool with eye candy</p>
+<h2>SYNOPSIS</h2>
 <p> <code>impressive</code> [OPTIONS&#8230;] FILES&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Impressive is a simple presentation program that displays slideshows of image files (JPEG, PNG, TIFF and BMP) or PDF documents. Rendering is done via OpenGL, which allows for some &quot;eye candy&quot; effects. </p>
 <h2>OPTIONS</h2>
 <p> <code>-a </code><i>&lt;seconds&gt;</i> or <code>&#8211;auto </code><i>&lt;seconds&gt;</i></p>

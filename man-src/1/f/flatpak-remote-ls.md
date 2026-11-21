@@ -1,5 +1,4 @@
 ---
-
 title: "flatpak-remote-ls(1)"
 name: "flatpak-remote-ls"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-flatpak-remote-ls/"
 description: "flatpak-remote-ls – Show available runtimes and applications"
 ---
 
+<h2 class="name">NAME</h2>
+<p> flatpak-remote-ls &#8211; Show available runtimes and applications </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak remote-ls</code> [OPTION&#8230;] [REMOTE]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>Shows runtimes and applications that are available in the remote repository with the name REMOTE, or all remotes if one isn&#8217;t specified. You can find all configured remote repositories with <code>flatpak remotes</code>. </dd>
 <p> REMOTE can be a file:// URI pointing to a local repository instead of a remote name. </p>
 <p> Unless overridden with the <code>&#8211;system</code>, <code>&#8211;user</code>, or <code>&#8211;installation</code> options, this command uses either the default system-wide installation or the per-user one, depending on which has the specified REMOTE.</p>

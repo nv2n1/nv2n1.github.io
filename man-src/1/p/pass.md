@@ -1,5 +1,4 @@
 ---
-
 title: "pass(1)"
 name: "pass"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pass/"
 description: "pass – stores, retrieves, generates, and synchronizes passwords securely"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pass &#8211; stores, retrieves, generates, and synchronizes passwords securely</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pass</code> [ <i>COMMAND</i> ] [ <i>OPTIONS</i> ]&#8230; [ <i>ARGS</i> ]&#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> <code>pass </code> is a very simple password store that keeps passwords inside <code><a href="/docs/linux/man/1-gpg2/">gpg2</a></code>(1) encrypted files inside a simple directory tree residing at <i>~/.password-store</i>. The <code>pass</code> utility provides a series of commands for manipulating the password store, allowing the user to add, remove, edit, synchronize, generate, and manipulate passwords. </p>
 <p> If no COMMAND is specified, COMMAND defaults to either <code>show</code> or <code>ls</code>, depending on the type of specifier in ARGS. Otherwise COMMAND must be one of the valid commands listed below. </p>
 <p> Several of the commands below rely on or provide additional functionality if the password store directory is also a git repository. If the password store directory is a git repository, all password store modification commands will cause a corresponding git commit. See the <i>EXTENDED GIT EXAMPLE</i> section for a detailed description using <code>init</code> and <code><a href="/docs/linux/man/1-git/">git</a></code>(1). </p>

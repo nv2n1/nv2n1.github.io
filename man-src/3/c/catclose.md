@@ -1,5 +1,4 @@
 ---
-
 title: "catclose(3)"
 name: "catclose"
 section: "3"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/3-catclose/"
 description: "catopen, catclose – open/close a message catalog"
 ---
 
+<h2 class="name">NAME</h2>
+<p> catopen, catclose &#8211; open/close a message catalog </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;nl_types.h&gt;</code> </p>
 <p> <code>nl_catd catopen(const char *</code><i>name</i><code>, int </code><i>flag</i><code>);</code> </p>
 <p> <code>int catclose(nl_catd </code><i>catalog</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> The function <code>catopen</code>() opens a message catalog and returns a catalog descriptor. The descriptor remains valid until <code>catclose</code>() or <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2). If a file descriptor is used to implement catalog descriptors, then the <code>FD_CLOEXEC</code> flag will be set. </p>
 <p> The argument <i>name</i> specifies the name of the message catalog to be opened. If <i>name</i> specifies an absolute path (i.e., contains a &#8216;/&#8217;), then <i>name</i> specifies a pathname for the message catalog. Otherwise, the environment variable <code>NLSPATH</code> is used with <i>name</i> substituted for <code>%N</code> (see <code><a href="/docs/linux/man/7-locale/">locale</a></code>(7)). It is unspecified whether <code>NLSPATH</code> will be used when the process has root privileges. If <code>NLSPATH</code> does not exist in the environment, or if a message catalog cannot be opened in any of the paths specified by it, then an implementation defined path is used. This latter default path may depend on the <code>LC_MESSAGES</code> locale setting when the <i>flag</i> argument is <code>NL_CAT_LOCALE</code> and on the <code>LANG</code> environment variable when the <i>flag</i> argument is 0. Changing the <code>LC_MESSAGES</code> part of the locale may invalidate open catalog descriptors. </p>
 <p> The <i>flag</i> argument to <code>catopen</code>() is used to indicate the source for the language to use. If it is set to <code>NL_CAT_LOCALE</code>, then it will use the current locale setting for <code>LC_MESSAGES</code>. Otherwise, it will use the <code>LANG</code> environment variable. </p>

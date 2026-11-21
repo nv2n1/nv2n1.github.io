@@ -1,5 +1,4 @@
 ---
-
 title: "xml-xparse(1)"
 name: "xml-xparse"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-xml-xparse/"
 description: "xml-xparse – A simple command-line XML parsing application"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xml-xparse &#8211; A simple command-line XML parsing application</p>
+<h2>SYNOPSIS</h2>
 <p> <code>xml-xparse</code> [options] document.xml </p>
+<h2>DESCRIPTION</h2>
 <p> <code>xml-xparse</code> is a simple command-line XML Parser. It&#8217;s just a little wrapper around the JAXP Parser with support for catalogs. </p>
 <p> The process ends with error-level 1, if there were errors. </p>
 <h2>OPTIONS</h2>

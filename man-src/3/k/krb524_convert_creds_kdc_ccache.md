@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-krb524_convert_creds_kdc_ccache/"
 description: "Heimdal Kerberos 4 compatiblity functions –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Heimdal Kerberos 4 compatiblity functions &#8211; </p>
 <h3>Functions</h3>
 <p> KRB5_LIB_FUNCTION<br />
  krb5_error_code KRB5_LIB_CALL <code>krb524_convert_creds_kdc</code> (krb5_context context, krb5_creds *in_cred, struct credentials *v4creds) <code>KRB5_DEPRECATED_FUNCTION</code>(&#8216;Use X instead&#8217;)&quot; </p>

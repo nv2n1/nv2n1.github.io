@@ -1,5 +1,4 @@
 ---
-
 title: "ck_pr_stall(3)"
 name: "ck_pr_stall"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_pr_stall – busy-wait primitive"
 <p> <code>ck_pr_stall</code> &#8211; busy-wait primitive</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_pr.h Ft void Fn ck_pr_stall void</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_pr_stall 3 function should be used inside retry paths of busy-wait loops. It not only serves as a compiler barrier, but on some architectures it emits cycle-saving instructions.</p>
 <h2>EXAMPLE</h2>
 <blockquote>

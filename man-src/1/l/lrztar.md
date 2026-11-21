@@ -1,5 +1,4 @@
 ---
-
 title: "lrztar(1)"
 name: "lrztar"
 section: "1"
@@ -7,16 +6,23 @@ letter: "l"
 url: "/docs/linux/man/1-lrztar/"
 ---
 
-lrztar - Directory wrapper for lrzip 
+<h2 class="name">NAME</h2>
+ 
 
-<pre><code>
+ lrztar - Directory wrapper for lrzip 
+
+<h2>SYNOPSIS</h2>
+
+ <pre><code>
 lrztar[options] DIRECTORY
         lrztar -
     d[options] DIRECTORY.tar.lrz
         lrzuntar[options] DIRECTORY.tar.lrz
 </code></pre>
 
-lrztar is a wrapper for compressing and decompressing whole directories with <i><a HREF="/docs/linux/man/1-lrzip/">lrzip</a></i>(1) to corresponding file <tt>&quot;DIRECTORY.tar.lrz&quot;</tt>. lrzuntar is identical to <tt>&quot;lrztar -d&quot;</tt>. lrztar takes the same options as lrzip.
+<h2>DESCRIPTION</h2>
+
+ lrztar is a wrapper for compressing and decompressing whole directories with <i><a HREF="/docs/linux/man/1-lrzip/">lrzip</a></i>(1) to corresponding file <tt>&quot;DIRECTORY.tar.lrz&quot;</tt>. lrzuntar is identical to <tt>&quot;lrztar -d&quot;</tt>. lrztar takes the same options as lrzip.
 
 <h2>OPTIONS</h2>
 

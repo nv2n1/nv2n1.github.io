@@ -1,5 +1,4 @@
 ---
-
 title: "kjs(1)"
 name: "kjs"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-kjs/"
 description: "kjs – KDE ECMAScript compatible interpreter"
 ---
 
+<h2 class="name">NAME</h2>
+<p> kjs &#8211; KDE ECMAScript compatible interpreter </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>kjs</code> [[&#8211;help] | [-help] | [-h]] [[-e<i>&nbsp;<wbr>statement</i>]] [<i>script</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>kjs</code></p>
 <dd>is KDE ECMAScript/JavaScript engine.</dd>
 <h2>APPLICATION OPTIONS</h2>

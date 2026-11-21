@@ -1,5 +1,4 @@
 ---
-
 title: "gpsprof(1)"
 name: "gpsprof"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-gpsprof/"
 description: "gpsprof – profile a GPS and gpsd, plotting latency information"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gpsprof &#8211; profile a GPS and gpsd, plotting latency information </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gpsprof</code> [-f&nbsp;<wbr><i>plot_type</i>] [-m&nbsp;<wbr><i>threshold</i>] [-n&nbsp;<wbr><i>packetcount</i>] [-t&nbsp;<wbr><i>title</i>] [-T&nbsp;<wbr><i>terminal</i>] [-d&nbsp;<wbr><i>dumpfile</i>] [-l&nbsp;<wbr><i>logfile</i>] [-r] [-D&nbsp;<wbr><i>debuglevel</i>] [-h] [[server[:port[:device]]]]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>gpsprof performs accuracy, latency, and time drift profiling on a GPS. It emits to standard output a GNUPLOT program that draws one of several illustrative graphs. It can also be told to emit the raw profile data. </dd>
 <p> Information from the default spatial plot it provides can be useful for establishing an upper bound on latency, and thus on position accuracy of a GPS in motion. </p>
 <p> gpsprof uses instrumentation built into gpsd. </p>

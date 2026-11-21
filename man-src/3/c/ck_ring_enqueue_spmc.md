@@ -1,5 +1,4 @@
 ---
-
 title: "ck_ring_enqueue_spmc(3)"
 name: "ck_ring_enqueue_spmc"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_ring_enqueue_spmc – enqueue pointer into bounded FIFO"
 <p> <code>ck_ring_enqueue_spmc</code> &#8211; enqueue pointer into bounded FIFO</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_ring.h Ft bool Fn ck_ring_enqueue_spmc ck_ring_t *ring ck_ring_buffer_t *buffer void *entry</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_ring_enqueue_spmc 3 function enqueues the pointer Fa entry into the bounded buffer pointed to by Fa ring in FIFO fashion. The buffer pointed to by Fa buffer must be unique to Fa ring and point to an array of ck_ring_buffer_t of sufficient length (according to the power-of-2 elements in the buffer). The decoupling of the ring from the buffer serves to address use-cases involving multiple address spaces and DMA, among others. If you are on non-POSIX platforms or wish for strict compliance with C, then it is recommended to pass a pointer of type void ** for Fa entry . This function is safe to call without locking for UINT_MAX concurrent invocations of Fn ck_ring_dequeue_spmc 3 or Fn ck_ring_trydequeue_spmc 3 . This function provides wait-free progress guarantees for one active invocation.</p>
 <h2>EXAMPLE</h2>
 <blockquote>

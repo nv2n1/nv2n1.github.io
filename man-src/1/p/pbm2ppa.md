@@ -1,5 +1,4 @@
 ---
-
 title: "pbm2ppa(1)"
 name: "pbm2ppa"
 section: "1"
@@ -10,7 +9,9 @@ description: "pbm2ppa – convert portable bitmap (PBM) to HP’s Printing Perfo
 
 <h2>NAME</h2>
 <p> pbm2ppa &#8211; convert portable bitmap (PBM) to HP&#8217;s Printing Performance Architecture (PPA) file format</p>
+<h2>SYNOPSIS</h2>
 <p> pbm2ppa [options] [ &lt;<i>infile</i>] &gt; [ &lt;<i>outfile</i>]&gt; ] ] </p>
+<h2>DESCRIPTION</h2>
 <p> Reads portable bitmap (PBM) format as input. Outputs a stream suitable for processing by Hewlett-Packard&#8217;s range of Printing Performance Architecture (PPA) printers. pnm2ppa supports the HP 710c, 712c, 720c, 722c, 820c, and 1000c series printers. </p>
 <p> (Portable bitmap (PBM) format output can be produced from PostScript(tm) input by the GhostScript driver &quot;pbmraw&quot;.) </p>
 <h2>OPTIONS</h2>

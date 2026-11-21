@@ -1,5 +1,4 @@
 ---
-
 title: "dtgsna(3)"
 name: "dtgsna"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dtgsna/"
 description: "dtgsna.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dtgsna.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dtgsna</code> (JOB, HOWMNY, SELECT, N, A, LDA, B, LDB, VL, LDVL, VR, LDVR, S, DIF, MM, M, WORK, LWORK, IWORK, INFO)<br />
  <i></i><code>DTGSNA</code></p>

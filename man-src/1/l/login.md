@@ -1,5 +1,4 @@
 ---
-
 title: "login(1)"
 name: "login"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-login/"
 description: "login – begin session on the system"
 ---
 
+<h2 class="name">NAME</h2>
+<p> login &#8211; begin session on the system </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>login</code> [-p] [-h&nbsp;<i>host</i>] [<i>username</i>] [<i>ENV=VAR</i>&#8230;]</dt>
 <dt> <code>login</code> [-p] [-h&nbsp;<i>host</i>] -f <i>username</i></dt>
 <dt> <code>login</code> [-p] -r&nbsp;<i>host</i></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>login</code> program is used to establish a new session with the system. It is normally invoked automatically by responding to the <i>login:</i> prompt on the user&#8217;s terminal. <code>login</code> may be special to the shell and may not be invoked as a sub-process. When called from a shell, <code>login</code> should be executed as <code>exec login</code> which will cause the user to exit from the current shell (and thus will prevent the new logged in user to return to the session of the caller). Attempting to execute <code>login</code> from any shell but the login shell will produce an error message. </dd>
 <p> The user is then prompted for a password, where appropriate. Echoing is disabled to prevent revealing the password. Only a small number of password failures are permitted before <code>login</code> exits and the communications link is severed. </p>
 <p> If password aging has been enabled for your account, you may be prompted for a new password before proceeding. You will be forced to provide your old password and the new password before continuing. Please refer to <code><a href="/docs/linux/man/1-passwd/">passwd</a></code>(1) for more information. </p>

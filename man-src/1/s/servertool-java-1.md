@@ -1,5 +1,4 @@
 ---
-
 title: "servertool-java-1(1)"
 name: "servertool-java-1"
 section: "1"
@@ -10,6 +9,7 @@ description: "servertool – Provides an easy-to-use interface for developers to
 
 <h2>NAME</h2>
 <p> servertool &#8211; Provides an easy-to-use interface for developers to register, unregister, start up, and shut down a persistent server.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 servertool - ORBInitialPort nameserverport[options][commands]
 </code></pre>
@@ -18,6 +18,7 @@ servertool - ORBInitialPort nameserverport[options][commands]
 <dd> The command-line options. See Options.</dd>
 <dt>commands</dt>
 <dd> The command-line commands. See Commands.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code>servertool</code> command provides the command-line interface for developers to register, unregister, start up, and shut down a persistent server. Command-line commands let you obtain various statistical information about the server. See Commands.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "cabs(3)"
 name: "cabs"
 section: "3"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/3-cabs/"
 description: "cabs, cabsf, cabsl – absolute value of a complex number"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cabs, cabsf, cabsl &#8211; absolute value of a complex number </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
 <p> <code>double cabs(double complex </code><i>z</i><code>);</code><br />
  <code>float cabsf(float complex </code><i>z</i><code>);</code><br />
  <code>long double cabsl(long double complex </code><i>z</i><code>);</code> </p>
 <p> Link with <i>-lm</i>.</p>
+<h2>DESCRIPTION</h2>
 <p> These functions return the absolute value of the complex number <i>z</i>. The result is a real number.</p>
 <h2>VERSIONS</h2>
 <p> These functions first appeared in glibc in version 2.1.</p>

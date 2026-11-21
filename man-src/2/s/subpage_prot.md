@@ -1,5 +1,4 @@
 ---
-
 title: "subpage_prot(2)"
 name: "subpage_prot"
 section: "2"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/2-subpage_prot/"
 description: "subpage_prot – define a subpage protection for an address range"
 ---
 
+<h2 class="name">NAME</h2>
+<p> subpage_prot &#8211; define a subpage protection for an address range </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 int subpage_prot(unsigned long addr, unsigned long len,
                  uint32_t *map);
 </code></pre>
 <p> <i>Note</i>: There is no glibc wrapper for this system call; see NOTES.</p>
+<h2>DESCRIPTION</h2>
 <p> The PowerPC-specific <code>subpage_prot</code>() system call provides the facility to control the access permissions on individual 4 kB subpages on systems configured with a page size of 64 kB. </p>
 <p> The protection map is applied to the memory pages in the region starting at <i>addr</i> and continuing for <i>len</i> bytes. Both of these arguments must be aligned to a 64-kB boundary. </p>
 <p> The protection map is specified in the buffer pointed to by <i>map</i>. The map has 2 bits per 4 kB subpage; thus each 32-bit word specifies the protections of 16 4 kB subpages inside a 64 kB page (so, the number of 32-bit words pointed to by <i>map</i> should equate to the number of 64-kB pages specified by <i>len</i>). Each 2-bit field in the protection map is either 0 to allow any access, 1 to prevent writes, or 2 or 3 to prevent all accesses.</p>

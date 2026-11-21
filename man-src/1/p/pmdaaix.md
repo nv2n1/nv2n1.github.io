@@ -1,5 +1,4 @@
 ---
-
 title: "pmdaaix(1)"
 name: "pmdaaix"
 section: "1"
@@ -10,6 +9,7 @@ description: "pmdaaix, pmdadarwin, pmdafreebsd, pmdalinux, pmdanetbsd, pmdasolar
 
 <h2>NAME</h2>
 <p> <code>pmdaaix</code>, <code>pmdadarwin</code>, <code>pmdafreebsd</code>, <code>pmdalinux</code>, <code>pmdanetbsd</code>, <code>pmdasolaris</code>, <code>pmdawindows</code> &#8211; operating system kernel performance metrics domain agents</p>
+<h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/aix/pmdaaix</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>]<br />
  <code>$PCP_PMDAS_DIR/darwin/pmdadarwin</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>]<br />
  <code>$PCP_PMDAS_DIR/freebsd/pmdafreebsd</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>]<br />
@@ -17,6 +17,7 @@ description: "pmdaaix, pmdadarwin, pmdafreebsd, pmdalinux, pmdanetbsd, pmdasolar
  <code>$PCP_PMDAS_DIR/netbsd/pmdanetbsd</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>]<br />
  <code>$PCP_PMDAS_DIR/solaris/pmdasolaris</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>]<br />
  <code>$PCP_PMDAS_DIR/windows/pmdawindows</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Each supported platform has a kernel Performance Metrics Domain Agent (PMDA) which extracts performance metrics from the kernel of that platfrom. A variety of platform-specific metrics are available, with an equally varied set of access mechanisms &#8211; typically this involves special system calls, or reading from files in kernel virtual filesystems such as the Linux <i>sysfs</i> and <i>procfs</i> filesystems. </p>
 <p> The platform kernel PMDA is one of the most critical components of the PCP installation, and must be as efficient and reliable as possible. In all installations the default kernel PMDA will be installed as a shared library and thus executes directly within the <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) process. This slightly reduces overheads associated with querying the metadata and values associated with these metrics (no message passing is required). </p>
 <p> Unlike many other PMDAs, the kernel PMDA exports a number of metric namespace subtrees, such as kernel, network, swap, mem, ipc, filesys, nfs, disk and hinv (hardware inventory). </p>

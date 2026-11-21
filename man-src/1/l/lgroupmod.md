@@ -1,5 +1,4 @@
 ---
-
 title: "lgroupmod(1)"
 name: "lgroupmod"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-lgroupmod/"
 description: "lgroupmod – Modify an user group"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lgroupmod &#8211; Modify an user group</p>
+<h2>SYNOPSIS</h2>
 <p> lgroupmod [<i>OPTION</i>]&#8230; <i>group</i> </p>
+<h2>DESCRIPTION</h2>
 <p> Modifies the user group with name <i>group</i>. </p>
 <h2>OPTIONS</h2>
 <dl>

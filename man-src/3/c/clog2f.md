@@ -1,5 +1,4 @@
 ---
-
 title: "clog2f(3)"
 name: "clog2f"
 section: "3"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/3-clog2f/"
 description: "clog2, clog2f, clog2l – base-2 logarithm of a complex number"
 ---
 
+<h2 class="name">NAME</h2>
+<p> clog2, clog2f, clog2l &#8211; base-2 logarithm of a complex number </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
 <p> <code>double complex clog2(double complex </code><i>z</i><code>);</code><br />
  <code>float complex clog2f(float complex </code><i>z</i><code>);</code><br />
  <code>long double complex clog2l(long double complex </code><i>z</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> The call <i>clog2(z)</i> is equivalent to <i>clog(z)/log(2)</i>. </p>
 <p> The other functions perform the same task for <i>float</i> and <i>long double</i>. </p>
 <p> Note that <i>z</i> close to zero will cause an overflow.</p>

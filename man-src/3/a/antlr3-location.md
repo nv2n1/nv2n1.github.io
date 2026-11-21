@@ -1,5 +1,4 @@
 ---
-
 title: "antlr3-location(3)"
 name: "antlr3-location"
 section: "3"
@@ -8,7 +7,10 @@ url: "/docs/linux/man/3-antlr3-location/"
 description: "src/antlr3debughandlers.c –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> src/antlr3debughandlers.c &#8211; </p>
 <p> Provides the debugging functions invoked by a recognizer built using the debug generator mode of the antlr tool.</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3.h">antlr3.h</a>&gt; </p>
 <h3>Functions</h3>
 <p> static void <code>ack</code> (<code>pANTLR3_DEBUG_EVENT_LISTENER</code> delboy) </p>

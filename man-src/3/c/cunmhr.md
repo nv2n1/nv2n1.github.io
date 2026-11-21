@@ -1,5 +1,4 @@
 ---
-
 title: "cunmhr(3)"
 name: "cunmhr"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cunmhr/"
 description: "cunmhr.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cunmhr.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cunmhr</code> (SIDE, TRANS, M, N, ILO, IHI, A, LDA, TAU, C, LDC, WORK, LWORK, INFO)<br />
  <i></i><code>CUNMHR</code></p>

@@ -1,5 +1,4 @@
 ---
-
 title: "cacafire(1)"
 name: "cacafire"
 section: "1"
@@ -10,8 +9,10 @@ description: "cacademo, cacafire – libcaca’s demonstration applications"
 
 <h2>NAME</h2>
 <p> cacademo, cacafire &#8211; libcaca&#8217;s demonstration applications</p>
+<h2>SYNOPSIS</h2>
 <p> cacademo </p>
 <p> cacafire</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the cacademo and cacafire programs. </p>
 <p> <code>cacademo</code> displays ASCII art effects with animated transitions: metaballs, moire pattern of concentric circles, old school plasma, Matrix-like scrolling. </p>
 <p> <code>cacafire</code> displays burning ASCII art flames.</p>

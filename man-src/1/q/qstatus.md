@@ -1,5 +1,4 @@
 ---
-
 title: "qstatus(1)"
 name: "qstatus"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-qstatus/"
 description: "qstatus – xxQS_NAMExx qstatus script"
 ---
 
+<h2 class="name">NAME</h2>
+<p> qstatus &#8211; xxQS_NAMExx qstatus script </p>
+<h2>SYNOPSIS</h2>
 <p> <code>qstatus</code> [<code>-acghjlmnot</code>] [<code>-s </code><i>SORT_FIELD_LIST</i>] [<i>USER</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents <code>qstatus</code>, a script to reformat the output of the xxQS_NAMExx command </p>
 <p> The reformatted list is by default limited to the actual user account. This can be changed to request a job list of any user by supplying the username <i>USER</i> as the last argument, or requesting an output for all users by the <code>-a</code> switch (see below).</p>
 <h3>Options</h3>

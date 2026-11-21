@@ -1,5 +1,4 @@
 ---
-
 title: "lwres_getipnodebyname(3)"
 name: "lwres_getipnodebyname"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-lwres_getipnodebyname/"
 description: "lwres_getipnodebyname, lwres_getipnodebyaddr, lwres_freehostent â€“ lightweight resolver nodename / address translation API"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lwres_getipnodebyname, lwres_getipnodebyaddr, lwres_freehostent &#8211; lightweight resolver nodename / address translation API </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;lwres/netdb.h&gt;
 </code></pre>
@@ -15,6 +17,7 @@ description: "lwres_getipnodebyname, lwres_getipnodebyaddr, lwres_freehostent â€
 <dt> <code>struct hostent * lwres_getipnodebyname(const char&nbsp;<wbr>*</code><i>name</i><code>, int&nbsp;<wbr></code><i>af</i><code>, int&nbsp;<wbr></code><i>flags</i><code>, int&nbsp;<wbr>*</code><i>error_num</i><code>);</code></dt>
 <dt> <code>struct hostent * lwres_getipnodebyaddr(const void&nbsp;<wbr>*</code><i>src</i><code>, size_t&nbsp;<wbr></code><i>len</i><code>, int&nbsp;<wbr></code><i>af</i><code>, int&nbsp;<wbr>*</code><i>error_num</i><code>);</code></dt>
 <dt> <code>void lwres_freehostent(struct hostent&nbsp;<wbr>*</code><i>he</i><code>);</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>These functions perform thread safe, protocol independent nodename-to-address and address-to-nodename translation as defined in RFC2553. </dd>
 <p> They use a <code>struct hostent</code> which is defined in <i>namedb.h</i>: </p>
 <dl>

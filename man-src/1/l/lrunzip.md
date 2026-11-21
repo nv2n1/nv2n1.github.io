@@ -1,5 +1,4 @@
 ---
-
 title: "lrunzip(1)"
 name: "lrunzip"
 section: "1"
@@ -7,13 +6,20 @@ letter: "l"
 url: "/docs/linux/man/1-lrunzip/"
 ---
 
-lrunzip - Uncompress LRZ files 
+<h2 class="name">NAME</h2>
+ 
 
-<pre><code>
+ lrunzip - Uncompress LRZ files 
+
+<h2>SYNOPSIS</h2>
+
+ <pre><code>
 lrunzip[options] FILE[... FILE]
 </code></pre>
 
-lrunzip is identical to <tt>&quot;lrzip -d&quot;</tt> used to decompress files.
+<h2>DESCRIPTION</h2>
+
+ lrunzip is identical to <tt>&quot;lrzip -d&quot;</tt> used to decompress files.
 
 <h2>OPTIONS</h2>
 

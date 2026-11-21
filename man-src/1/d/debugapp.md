@@ -1,5 +1,4 @@
 ---
-
 title: "debugapp(1)"
 name: "debugapp"
 section: "1"
@@ -10,7 +9,9 @@ description: "debugapp – A wrapper for openapp."
 
 <h2>NAME</h2>
 <p> debugapp &#8211; A wrapper for openapp.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>debugapp</code> [<code>&#8211;find</code>] [<code>&#8211;gdb=&#8230;</code>] <i>application</i> [<i>arguments&#8230;</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>debugapp</code> is a tool that helps you start or find applications by name in debugging mode. It acts as a wrapper around <code>openapp</code> , and calls openapp with the <code>&#8211;debug</code> option; we recommend using openapp directly. </p>
 <p> By default gdb is used as the debugger, but this can be changed with the <code>&#8211;gdb=</code> option or through the <code>GDB</code> environment variable. </p>
 <p> The <i>arguments</i> are the arguments passed to the application. </p>

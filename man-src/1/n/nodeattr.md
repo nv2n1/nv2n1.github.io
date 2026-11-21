@@ -1,5 +1,4 @@
 ---
-
 title: "nodeattr(1)"
 name: "nodeattr"
 section: "1"
@@ -10,6 +9,7 @@ description: "nodeattr – query genders file"
 
 <h2>NAME</h2>
 <p> nodeattr &#8211; query genders file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>nodeattr</code> <i>[-f genders] [-q | -c | -n | -s] [-X exclude_query] query</i><br />
  <code>nodeattr</code> <i>[-f genders] [-q | -c | -n | -s] -A</i><br />
  <code>nodeattr</code> <i>[-f genders] [-v] [node] attr[=val]</i><br />
@@ -20,6 +20,7 @@ description: "nodeattr – query genders file"
  <code>nodeattr</code> <i>[-f genders] -d genders</i><br />
  <code>nodeattr</code> <i>[-f genders] &#8211;expand</i><br />
  <code>nodeattr</code> <i>[-f genders] &#8211;compress</i> </p>
+<h2>DESCRIPTION</h2>
 <p> When invoked with the <i>-q</i> , <i>-c</i> , <i>-n</i> , or <i>-s</i> arguments, <code>nodeattr</code> reads the genders file and outputs a list of nodes that match the specified query. The nodes are listed in hostlist format, comma separated lists, newline separated lists, or space separated lists respectively. Genders queries will query the genders database for a set of nodes based on the union, intersection, difference, or complement of genders attributes and values. The set operation union is represented by two pipe symbols (&#8216;||&#8217;), intersection by two ampersand symbols (&#8216;&amp;&amp;&#8217;), difference by two minus symbols (&#8216;&#8211;&#8216;), and complement by a tilde (&#8216;~&#8217;). Parentheses may be used to change the order of operations. The <i>-X</i> argument and query can be used to exclude nodes from the resulting output. A query can be replaced with the <i>-A</i> option to cause <code>nodeattr</code> to print all the nodes listed in the genders database. </p>
 <p> When called with a node name (optional) and attribute name, <code>nodeattr</code> returns <i>0</i> to the environment if the node has the attribute; else <i>1</i>. If <i>-v</i> is present, the attribute name and any value (see below) is printed on the standard output. If a node name is not specified, the local host is assumed. </p>
 <p> When called with the <i>-Q</i> argument, <code>nodeattr</code> will check if the node name (optional) is met by the attribute and value conditions specified in the query. If the conditions are met, <code>nodeattr</code> returns <i>0</i> to the environment; else <i>1</i>. The query format is identical to the format listed above. If a node name is not specified, the local host is assumed. </p>

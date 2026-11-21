@@ -1,5 +1,4 @@
 ---
-
 title: "s2p(1)"
 name: "s2p"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-s2p/"
 description: "psed – a stream editor"
 ---
 
+<h2 class="name">NAME</h2>
+<p> psed &#8211; a stream editor </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 psed[-an] script[file...] psed[-an][-e script][-f script - file][file...] s2p[-an][-e script][-f script - file]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> A stream editor reads the input stream consisting of the specified files (or standard input, if none are given), processes is line by line by applying a script consisting of edit commands, and writes resulting lines to standard output. The filename &#8216;<tt>&quot;-&quot;</tt>&#8216; may be used to read standard input. </p>
 <p> The edit script is composed from arguments of <code>-e</code> options and script-files, in the given order. A single script argument may be specified as the first parameter. </p>
 <p> If this program is invoked with the name <i>s2p</i>, it will act as a sed-to-Perl translator. See &#8220;<font SIZE="-1">SED</font> <font SIZE="-1">SCRIPT</font> <font SIZE="-1">TRANSLATION</font>&#8221;. </p>

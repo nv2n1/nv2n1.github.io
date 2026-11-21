@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_dh_get_peers_public_bits(3)"
 name: "gnutls_dh_get_peers_public_bits"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_dh_get_peers_public_bits – API function"
 
 <h2>NAME</h2>
 <p> gnutls_dh_get_peers_public_bits &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_dh_get_peers_public_bits(gnutls_session_t </code><i>session</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_session_t session</dt>
 <dd> is a gnutls session</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Get the Diffie-Hellman public key bit size. Can be used for both anonymous and ephemeral Diffie-Hellman.</p>
 <h2>RETURNS</h2>
 <p> The public key bit size used in the last Diffie-Hellman key exchange with the peer, or a negative error code in case of error.</p>

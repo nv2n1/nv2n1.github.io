@@ -1,5 +1,4 @@
 ---
-
 title: "antlr3cyclicdfa(3)"
 name: "antlr3cyclicdfa"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-antlr3cyclicdfa/"
 description: "include/antlr3cyclicdfa.h –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> include/antlr3cyclicdfa.h &#8211; </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3baserecognizer.h">antlr3baserecognizer.h</a>&gt;<br />
  #include &lt;<a href="file:/usr/include/antlr3intstream.h">antlr3intstream.h</a>&gt; </p>
 <h3>Data Structures</h3>

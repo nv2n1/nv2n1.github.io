@@ -1,5 +1,4 @@
 ---
-
 title: "rpkg(1)"
 name: "rpkg"
 section: "1"
@@ -10,9 +9,11 @@ description: "rpkg – RPM Packaging utility"
 
 <h2>NAME</h2>
 <p> rpkg &#8211; RPM Packaging utility</p>
+<h2>SYNOPSIS</h2>
 <p> <code>rpkg</code> [ <i>global_options</i> ] <i>command</i> [ <i>command_options</i> ] [ <i>command_arguments</i> ]<br />
  <code>rpkg</code> <code>help</code><br />
  <code>rpkg</code> <i>command</i> <code>&#8211;help</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>rpkg</code> is a script to interact with the RPM Packaging system.</p>
 <h3>Global Options</h3>
 <p>&nbsp;<wbr>&nbsp;<wbr>&#8211;config CONFIG, -C CONFIG<br />

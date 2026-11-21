@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_gram_job_manager_callout_error/"
 description: "Globus GRAM Job Manager Callout Error –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Globus GRAM Job Manager Callout Error &#8211; </p>
 <h3>Modules</h3>
 <p> <code>Activation</code> </p>
 <p> <code>Datatypes</code> </p>

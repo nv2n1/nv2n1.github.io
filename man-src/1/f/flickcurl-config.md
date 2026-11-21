@@ -1,5 +1,4 @@
 ---
-
 title: "flickcurl-config(1)"
 name: "flickcurl-config"
 section: "1"
@@ -10,7 +9,9 @@ description: "flickcurl-config – script to get information about the installed
 
 <h2>NAME</h2>
 <p> flickcurl-config &#8211; script to get information about the installed version of flickcurl</p>
+<h2>SYNOPSIS</h2>
 <p> <code>flickcurl-config</code> [ <i>OPTION</i> ]</p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt>
 </dt><dd> This program is <code>DEPRECATED</code> and <a href="/docs/linux/man/1-pkg-config/">pkg-config</a>(1) should be used to get flickcurl library parameters and dependencies. The compiling and linking flags are likely to not work since they do not import dependendent libraries (such as Raptor).</dd></dl>

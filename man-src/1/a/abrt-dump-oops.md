@@ -1,5 +1,4 @@
 ---
-
 title: "abrt-dump-oops(1)"
 name: "abrt-dump-oops"
 section: "1"
@@ -7,11 +6,22 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-dump-oops/"
 ---
 
-abrt-dump-oops - Extract oops from FILE (or standard input) 
+<h2 class="name">NAME</h2>
+ 
 
-<i>abrt-dump-oops</i> [-vusoxtm] [-d DIR]/[-D] [FILE]
+ abrt-dump-oops - Extract oops from FILE (or standard input) 
 
-This tool creates problem directory from, updates problem directory with or prints oops extracted from FILE or standard input.
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <i>abrt-dump-oops</i> [-vusoxtm] [-d DIR]/[-D] [FILE]
+
+<h2>DESCRIPTION</h2>
+
+ 
+
+ This tool creates problem directory from, updates problem directory with or prints oops extracted from FILE or standard input.
 
 <h2>FILES</h2>
 

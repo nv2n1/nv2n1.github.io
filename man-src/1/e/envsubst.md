@@ -1,5 +1,4 @@
 ---
-
 title: "envsubst(1)"
 name: "envsubst"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-envsubst/"
 description: "envsubst – substitutes environment variables in shell format strings"
 ---
 
+<h2 class="name">NAME</h2>
+<p> envsubst &#8211; substitutes environment variables in shell format strings </p>
+<h2>SYNOPSIS</h2>
 <p> <code>envsubst</code> [<i>,OPTION/</i>] [<i>,SHELL-FORMAT/</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Substitutes the values of environment variables.</p>
 <h3>Operation mode:</h3>
 <dl>

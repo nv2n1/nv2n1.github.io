@@ -1,5 +1,4 @@
 ---
-
 title: "scidavis(1)"
 name: "scidavis"
 section: "1"
@@ -10,7 +9,9 @@ description: "scidavis – Scientific Data Analysis and Visualization"
 
 <h2>NAME</h2>
 <p> scidavis &#8211; Scientific Data Analysis and Visualization</p>
+<h2>SYNOPSIS</h2>
 <p> <code>scidavis</code> [ <i> OPTIONS </i> ] [ <i> file_name </i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>scidavis</code> is a user-friendly data analysis and visualization program primarily aimed at high-quality plotting of scientific data. It strives to combine an intuitive, easy-to-use graphical user interface with powerful features such as Python scriptability.</p>
 <h2>OPTIONS</h2>
 <p> This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below. For a complete description, run <code>scidavis &#8211;help</code>.</p>

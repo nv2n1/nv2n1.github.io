@@ -1,5 +1,4 @@
 ---
-
 title: "mpiexec(1)"
 name: "mpiexec"
 section: "1"
@@ -8,7 +7,10 @@ url: "/docs/linux/man/1-mpiexec/"
 description: "orterun, mpirun, mpiexec – Execute serial and parallel jobs in Open MPI. oshrun, shmemrun – Execute serial and parallel jobs in Open SHMEM."
 ---
 
+<h2 class="name">NAME</h2>
+<p> orterun, mpirun, mpiexec &#8211; Execute serial and parallel jobs in Open MPI. oshrun, shmemrun &#8211; Execute serial and parallel jobs in Open SHMEM. </p>
 <p> <code>Note:</code> <i>mpirun</i>, <i>mpiexec</i>, and <i>orterun</i> are all synonyms for each other as well as <i>oshrun</i>, <i>shmemrun</i> in case Open SHMEM is installed. Using any of the names will produce the same behavior. </p>
+<h2>SYNOPSIS</h2>
 <p> Single Process Multiple Data (SPMD) Model: </p>
 <p> <code>mpirun</code> [ options ] <code>&lt;program&gt;</code> [ &lt;args&gt; ] </p>
 <p> Multiple Instruction Multiple Data (MIMD) Model: </p>
@@ -263,6 +265,7 @@ description: "orterun, mpirun, mpiexec – Execute serial and parallel jobs in O
 <dl>
 <dt><code>MPIEXEC_TIMEOUT</code></dt>
 <dd> Synonym for the <code>&#8211;timeout</code> command line option.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> One invocation of <i>mpirun</i> starts an MPI application running under Open MPI. If the application is single process multiple data (SPMD), the application can be specified on the <i>mpirun</i> command line. </p>
 <p> If the application is multiple instruction multiple data (MIMD), comprising of multiple programs, the set of programs and argument can be specified in one of two ways: Extended Command Line Arguments, and Application Context. </p>
 <p> An application context describes the MIMD program set including all arguments in a separate file. This file essentially contains multiple <i>mpirun</i> command lines, less the command name itself. The ability to specify different options for different instantiations of a program is another reason to use an application context. </p>

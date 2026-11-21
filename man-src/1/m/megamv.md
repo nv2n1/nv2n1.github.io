@@ -1,5 +1,4 @@
 ---
-
 title: "megamv(1)"
 name: "megamv"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-megamv/"
 description: "megamv – move or rename files or folders on your Mega.co.nz account"
 ---
 
+<h2 class="name">NAME</h2>
+<p> megamv &#8211; move or rename files or folders on your Mega.co.nz account </p>
+<h2>SYNOPSIS</h2>
 <pre>
 <i>megamv</i> &lt;srcpaths&gt;... &lt;destpath&gt;
 </pre>
+<h2>DESCRIPTION</h2>
 <p> Moves or renames files or folders on your Mega.co.nz account. </p>
 <p> <code>NOTE</code>: This tool is not implemented yet!</p>
 <h2>OPTIONS</h2>

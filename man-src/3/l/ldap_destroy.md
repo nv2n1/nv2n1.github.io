@@ -1,5 +1,4 @@
 ---
-
 title: "ldap_destroy(3)"
 name: "ldap_destroy"
 section: "3"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/3-ldap_destroy/"
 description: "ldap_dup, ldap_destroy, – Duplicate and destroy LDAP session handles"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ldap_dup, ldap_destroy, &#8211; Duplicate and destroy LDAP session handles </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ldap.h&gt;
 LDAP *ldap_dup(
@@ -17,6 +19,7 @@ LDAP *ldap_dup(
 int ldap_destroy(
     LDAP *old);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>ldap_dup()</code> duplicates an existing LDAP (<code>LDAP *</code>) session handle. The new session handle may be used concurrently with the original session handle. In a threaded environment, different threads may execute concurrent requests on the same connection/session without fear of contamination. Each session handle manages its own private error results. </p>
 <p> <code>ldap_destroy()</code> destroys an existing session handle. </p>
 <p> The <code>ldap_dup()</code> and <code>ldap_destroy()</code> functions are used in conjunction with a &quot;thread safe&quot; version of <code>libldap</code> (<code>libldap_r</code>) to enable operation thread safe API calls, so that a single session may be simultaneously used across multiple threads with consistent error handling. </p>

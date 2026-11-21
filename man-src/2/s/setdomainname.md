@@ -1,5 +1,4 @@
 ---
-
 title: "setdomainname(2)"
 name: "setdomainname"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-setdomainname/"
 description: "getdomainname, setdomainname – get/set NIS domain name"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getdomainname, setdomainname &#8211; get/set NIS domain name </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int getdomainname(char *</code><i>name</i><code>, size_t </code><i>len</i><code>);</code><br />
  <code>int setdomainname(const char *</code><i>name</i><code>, size_t </code><i>len</i><code>);</code> </p>
@@ -22,6 +24,7 @@ Since glibc 2.21 : _DEFAULT_SOURCE
                                          ||
                                          (_XOPEN_SOURCE &amp;&amp; _XOPEN_SOURCE &amp; nbsp; &lt; &amp;nbsp; 500)
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> These functions are used to access or to change the NIS domain name of the host system. More precisely, they operate on the NIS domain name associated with the calling process&#8217;s UTS namespace. </p>
 <p> <code>setdomainname</code>() sets the domain name to the value given in the character array <i>name</i>. The <i>len</i> argument specifies the number of bytes in <i>name</i>. (Thus, <i>name</i> does not require a terminating null byte.) </p>
 <p> <code>getdomainname</code>() returns the null-terminated domain name in the character array <i>name</i>, which has a length of <i>len</i> bytes. If the null-terminated domain name requires more than <i>len</i> bytes, <code>getdomainname</code>() returns the first <i>len</i> bytes (glibc) or gives an error (libc).</p>

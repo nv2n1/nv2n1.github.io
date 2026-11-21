@@ -1,5 +1,4 @@
 ---
-
 title: "simple-scan(1)"
 name: "simple-scan"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-simple-scan/"
 description: "simple-scan – Scanning utility"
 ---
 
+<h2 class="name">NAME</h2>
+<p> simple-scan &#8211; Scanning utility </p>
+<h2>SYNOPSIS</h2>
 <p> <code>simple-scan [</code><i>DEVICE</i><code>]</code></p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>simple-scan</code> command. </p>
 <p> <code>Document Scanner</code> is an easy-to-use application, designed to let users connect their scanner and quickly have the image/document in an appropriate format. </p>
 <p> <code>Document Scanner</code> has been written with GTK+ libraries, and after installing the application you can run it from the <code>Applications</code> menu.</p>

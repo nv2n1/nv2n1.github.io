@@ -1,5 +1,4 @@
 ---
-
 title: "mysql_ssl_rsa_setup(1)"
 name: "mysql_ssl_rsa_setup"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mysql_ssl_rsa_setup/"
 description: "mysql_ssl_rsa_setup – create SSL/RSA files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mysql_ssl_rsa_setup &#8211; create SSL/RSA files </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysql_ssl_rsa_setup [</code><i>options</i><code>]</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This program creates the SSL certificate and key files and RSA key-pair files required to support secure connections using SSL and secure password exchange using RSA over unencrypted connections, if those files are missing. <code>mysql_ssl_rsa_setup</code> can also be used to create new SSL files if the existing ones have expired. </dd>
 <dl>
 <dt>

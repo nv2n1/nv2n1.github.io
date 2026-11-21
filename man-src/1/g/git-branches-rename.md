@@ -1,5 +1,4 @@
 ---
-
 title: "git-branches-rename(1)"
 name: "git-branches-rename"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-git-branches-rename/"
 description: "git-branches-rename – Batch renames branches with a matching prefix to another prefix"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-branches-rename &#8211; Batch renames branches with a matching prefix to another prefix </p>
+<h2>SYNOPSIS</h2>
 <p> <code>git-branches-rename</code> [<i>options</i>] <i>BRANCH_PREFIX NEW_PREFIX</i></p>
+<h2>DESCRIPTION</h2>
 <p> Batch renames branches with a matching prefix to another prefix.</p>
 <h2>OPTIONS</h2>
 <dl>

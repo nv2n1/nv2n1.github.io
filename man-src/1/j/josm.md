@@ -1,5 +1,4 @@
 ---
-
 title: "josm(1)"
 name: "josm"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-josm/"
 description: "josm – Java OpenStreetMap Editor"
 ---
 
+<h2 class="name">NAME</h2>
+<p> josm &#8211; Java OpenStreetMap Editor </p>
+<h2>SYNOPSIS</h2>
 <p> <code>josm</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>JOSM </code> is an editor for OpenStreetMap written in Java 7. </p>
 <p> <code>OpenStreetMap </code> is a project aimed squarely at creating and providing free geographic data such as street maps to anyone who wants them. It allows you to view, edit and use geographical data in a collaborative way from anywhere on earth. The project was started because most maps you think of as free actually have legal or technical restrictions on their use, holding back people from using them in creative, productive or unexpected ways.</p>
 <h2>OPTIONS</h2>

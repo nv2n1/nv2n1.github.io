@@ -1,5 +1,4 @@
 ---
-
 title: "socat(1)"
 name: "socat"
 section: "1"
@@ -7,12 +6,15 @@ letter: "s"
 url: "/docs/linux/man/1-socat/"
 description: "socat – Multipurpose relay (SOcket CAT)"
 ---
-
+<h2 class="name">NAME</h2>
+<p> socat - Multipurpose relay (SOcket CAT)  </p>
+<h2>SYNOPSIS</h2>
 <p> <code>socat [options] &lt;address&gt; &lt;address&gt;</code> <br />
  <code>socat -V</code> <br />
  <code>socat -h[h[h]] | -?[?[?]]</code> <br />
  <code>filan</code> <br />
  <code>procan</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>Socat</code> is a command line based utility that establishes two bidirectional byte streams and transfers data between them. Because the streams can be constructed from a large set of different types of data sinks and sources (see address types), and because lots of address options may be applied to the streams, socat can be used for many different purposes. </p>
 <p> <code>Filan</code> is a utility that prints information about its active file descriptors to stdout. It has been written for debugging <code>socat</code>, but might be useful for other purposes too. Use the -h option to find more infos. </p>
 <p> <code>Procan</code> is a utility that prints information about process parameters to stdout. It has been written to better understand some UNIX process properties and for debugging <code>socat</code>, but might be useful for other purposes too. </p>

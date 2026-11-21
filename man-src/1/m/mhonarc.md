@@ -1,5 +1,4 @@
 ---
-
 title: "mhonarc(1)"
 name: "mhonarc"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mhonarc/"
 description: "mhonarc – convert mail/news messages to HTML"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mhonarc &#8211; convert mail/news messages to HTML </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mhonarc</code>&nbsp;<wbr>[<i>options</i>]&nbsp;<wbr>[<i>arguments</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>MHonArc</code> is a Perl program for converting mail, or news, messages into <font SIZE="-1">HTML</font> archives. <code>MHonArc</code> can also be used to convert individual messages into <font SIZE="-1">HTML</font> documents. </p>
 <p> The documentation for <code>MHonArc</code> is distributed in <font SIZE="-1">HTML</font> format. Due to its size and organization, it is not suited for manpage format. Consult your system administrator for where the documentation has been installed, or see &#8220;<font SIZE="-1">AVAILABILITY</font>&#8221; on where you can access the documentation on the web. </p>
 <p> Running &quot;<tt>&quot;mhonarc -help&quot;</tt>&quot; will give a summary of the command-line options available.</p>

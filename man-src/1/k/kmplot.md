@@ -1,5 +1,4 @@
 ---
-
 title: "kmplot(1)"
 name: "kmplot"
 section: "1"
@@ -10,9 +9,11 @@ description: "kmplot – mathematical function plotter"
 
 <h2>NAME</h2>
 <p> kmplot &#8211; mathematical function plotter</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>kmplot</code> [<i>file</i>] [KDE Generic Options] [Qt&#x2122;&nbsp;<wbr>Generic Options] </dt>
 </dl>
+<h2>DESCRIPTION</h2>
 <dd>KmPlot is a mathematical function plotter for KDE. It has a powerful built-in parser. You can plot different functions simultaneously and combine them to build new functions. </dd>
 <p> KmPlot supports parametric functions and functions in polar coordinates. Several grid modes are supported. Plots may be printed with high precision in the correct scale. </p>
 <p> KmPlot also provides some numerical and visual features, like filling and calculating the area between the plot and the first axis, finding maximum and minimum values, changing function parameters dynamically and plotting derivatives and integral functions. </p>

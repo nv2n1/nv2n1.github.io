@@ -1,5 +1,4 @@
 ---
-
 title: "sgesvj(3)"
 name: "sgesvj"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-sgesvj/"
 description: "sgesvj.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sgesvj.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sgesvj</code> (JOBA, JOBU, JOBV, M, N, A, LDA, SVA, MV, V, LDV, WORK, LWORK, INFO)<br />
  <i></i><code>SGESVJ</code></p>

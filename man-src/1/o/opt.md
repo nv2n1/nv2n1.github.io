@@ -1,5 +1,4 @@
 ---
-
 title: "opt(1)"
 name: "opt"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-opt/"
 description: "opt – LLVM optimizer"
 ---
 
+<h2 class="name">NAME</h2>
+<p> opt &#8211; LLVM optimizer </p>
+<h2>SYNOPSIS</h2>
 <p> <code>opt</code> [<i>options</i>] [<i>filename</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>opt</code> command is the modular <font SIZE="-1">LLVM</font> optimizer and analyzer. It takes <font SIZE="-1">LLVM</font> source files as input, runs the specified optimizations or analyses on it, and then outputs the optimized file or the analysis results. The function of <code>opt</code> depends on whether the <code>-analyze</code> option is given. </p>
 <p> When <code>-analyze</code> is specified, <code>opt</code> performs various analyses of the input source. It will usually print the results on standard output, but in a few cases, it will print output to standard error or generate a file with the analysis output, which is usually done when the output is meant for another program. </p>
 <p> While <code>-analyze</code> is <i>not</i> given, <code>opt</code> attempts to produce an optimized output file. The optimizations available via <code>opt</code> depend upon what libraries were linked into it as well as any additional libraries that have been loaded with the <code>-load</code> option. Use the <code>-help</code> option to determine what optimizations you can use. </p>

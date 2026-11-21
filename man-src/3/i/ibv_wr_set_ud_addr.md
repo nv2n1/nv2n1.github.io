@@ -1,5 +1,4 @@
 ---
-
 title: "ibv_wr_set_ud_addr(3)"
 name: "ibv_wr_set_ud_addr"
 section: "3"
@@ -7,7 +6,12 @@ letter: "i"
 url: "/docs/linux/man/3-ibv_wr_set_ud_addr/"
 ---
 
-ibv_wr_abort, ibv_wr_complete, ibv_wr_start - Manage regions allowed to post work 
+<h2 class="name">NAME</h2>
+ 
+
+ 
+
+ ibv_wr_abort, ibv_wr_complete, ibv_wr_start - Manage regions allowed to post work 
 
  ibv_wr_atomic_cmp_swp, ibv_wr_atomic_fetch_add - Post remote atomic operation work requests 
 
@@ -26,6 +30,8 @@ ibv_wr_abort, ibv_wr_complete, ibv_wr_start - Manage regions allowed to post wor
  ibv_wr_set_ud_addr - Attach UD addressing info to the last work request 
 
  ibv_wr_set_xrc_srqn - Attach an XRC SRQN to the last work request 
+
+<h2>SYNOPSIS</h2>
 
 <dl>
 <dt>
@@ -65,7 +71,11 @@ void ibv_wr_set_ud_addr(struct ibv_qp_ex *qp, struct ibv_ah *ah,
 void ibv_wr_set_xrc_srqn(struct ibv_qp_ex *qp, uint32_t remote_srqn);
 </code></pre></dd></dl>
 
-The verbs work request API (ibv_wr_*) allows efficient posting of work to a send queue using function calls instead of the struct based ibv_post_send() scheme. This approach is designed to minimize CPU branching and locking during the posting process. 
+<h2>DESCRIPTION</h2>
+
+ 
+
+ The verbs work request API (ibv_wr_*) allows efficient posting of work to a send queue using function calls instead of the struct based ibv_post_send() scheme. This approach is designed to minimize CPU branching and locking during the posting process. 
 
  This API is intended to be used to access additional functionality beyond what is provided by ibv_post_send(). 
 

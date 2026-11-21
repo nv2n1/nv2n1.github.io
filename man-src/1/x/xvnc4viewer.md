@@ -1,5 +1,4 @@
 ---
-
 title: "xvnc4viewer(1)"
 name: "xvnc4viewer"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-xvnc4viewer/"
 description: "vncviewer – VNC viewer for X"
 ---
 
+<h2 class="name">NAME</h2>
+<p> vncviewer &#8211; VNC viewer for X </p>
+<h2>SYNOPSIS</h2>
 <p> <code>vncviewer</code> [<i>options</i>] [<i>host</i>][:<i>display#</i>]<br />
  <code>vncviewer</code> [<i>options</i>] <code>-listen</code> [<i>port</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>vncviewer</code> is a viewer (client) for Virtual Network Computing. This manual page documents version 4 for the X window system. </p>
 <p> If you run the viewer with no arguments it will prompt you for a VNC server to connect to. Alternatively, specify the VNC server as an argument, e.g.: </p>
 <dl>

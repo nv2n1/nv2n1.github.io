@@ -1,5 +1,4 @@
 ---
-
 title: "doveadm-director(1)"
 name: "doveadm-director"
 section: "1"
@@ -10,12 +9,14 @@ description: "doveadm-director – Manage Dovecot directors"
 
 <h2>NAME</h2>
 <p> doveadm-director &#8211; Manage Dovecot directors</p>
+<h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>director add</code> [<code>-a</code> <i>director_socket_path</i>] <i>host</i> [<i>vhost_count</i>]<br />
  <code>doveadm</code> [<code>-Dv</code>] <code>director flush</code> [<code>-a</code> <i>director_socket_path</i>] <i>host</i>|<code>all</code><br />
  <code>doveadm</code> [<code>-Dv</code>] <code>director map</code> [<code>-a</code> <i>director_socket_path</i>] [<code>-f</code> <i>users_file</i>] [<i>host</i>]<br />
  <code>doveadm</code> [<code>-Dv</code>] <code>director remove</code> [<code>-a</code> <i>director_socket_path</i>] <i>host</i><br />
  <code>doveadm</code> [<code>-Dv</code>] <code>director dump</code> [<code>-a</code> <i>director_socket_path</i>]<br />
  <code>doveadm</code> [<code>-Dv</code>] <code>director status</code> [<code>-a</code> <i>director_socket_path</i>] [<i>user</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>doveadm director</code> can be used to manage and query the status of the list of backend mail servers where Dovecot proxy can redirect connections to.</p>
 <h2>OPTIONS</h2>
 <p> Global <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) <i>options</i>:</p>

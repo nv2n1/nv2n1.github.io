@@ -1,5 +1,4 @@
 ---
-
 title: "hb_addnode(1)"
 name: "hb_addnode"
 section: "1"
@@ -10,7 +9,9 @@ description: "hb_addnode – hb_addnode is a simple linux-ha shell script. It se
 
 <h2>NAME</h2>
 <p> hb_addnode &#8211; hb_addnode is a simple linux-ha shell script. It sends a message to the cluster to add new nodes.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>hb_addnode</code> <code>&lt;node1&gt;</code> <code>[node2]</code> <code>[node3]</code> <code>&#8230;</code></p>
+<h2>DESCRIPTION</h2>
 <p> The full path is usually /usr/lib/heartbeat/hb_addnode. To get a list of the options, issue the command, <code> &quot;/usr/lib/heartbeat/hb_addnode &#8211;help&quot; </code> </p>
 <p> If there is any node in the arguments has already been in the cluster, the command will fail and no node will be added. </p>
 <h2>SEE ALSO</h2>

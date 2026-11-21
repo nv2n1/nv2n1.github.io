@@ -1,5 +1,4 @@
 ---
-
 title: "get_reference(3)"
 name: "get_reference"
 section: "3"
@@ -10,10 +9,12 @@ description: "dirfile_reference, get_reference — retrieve or set the reference
 
 <h2>NAME</h2>
 <p> dirfile_reference, get_reference &#8212; retrieve or set the reference field for a dirfile</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
 <dl>
 <dt> <code>const char *dirfile_reference(DIRFILE *</code><i>dirfile</i><code>, const char</code> <code>*</code><i>field_code</i><code>);</code></dt>
 <dt> <code>const char *get_reference(DIRFILE *</code><i>dirfile</i><code>);</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>dirfile_reference</code>() function sets or retrieves the reference field (see <code><a href="/docs/linux/man/5-dirfile/">dirfile</a></code>(5)) associated with the dirfile specified by <i>dirfile</i>. If the <i>field_code</i> argument is non-NULL, the reference field for the dirfile will be set to the field specified. If <i>field_code</i> is NULL, the reference field is not modified. The field code should refer to a RAW field, and may not contain a representation suffix. </dd>
 <p> <code>get_reference</code>() is equivalent to calling <code>dirfile_reference</code>() with <i>field_code</i> set to NULL. </p>
 <h2>RETURN VALUE</h2>

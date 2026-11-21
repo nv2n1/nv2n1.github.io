@@ -1,5 +1,4 @@
 ---
-
 title: "gatttool(1)"
 name: "gatttool"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-gatttool/"
 description: "gatttool – tool for Bluetooth Low Energy device"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gatttool &#8211; tool for Bluetooth Low Energy device </p>
+<h2>SYNOPSIS</h2>
 <p> <code>gatttool</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>gatttool</code> is tool that can be used to manipulate these attributes with a Bluetooth Low Energy device.</p>
 <h2>USAGE</h2>
 <p>&nbsp;<wbr>&nbsp;gatttool&nbsp;[OPTION&#8230;] </p>

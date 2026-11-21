@@ -1,5 +1,4 @@
 ---
-
 title: "kaya-rekey(1)"
 name: "kaya-rekey"
 section: "1"
@@ -10,7 +9,9 @@ description: "kaya-rekey – Binary key regeneration for kaya web applications"
 
 <h2>NAME</h2>
 <p> kaya-rekey &#8211; Binary key regeneration for kaya web applications</p>
+<h2>SYNOPSIS</h2>
 <p> <code>kaya-rekey</code> <i>FILE1 [FILE2 [&#8230;]]</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>kaya-rekey</code> gives all Kaya binaries specified on the command line a new application secret key </p>
 <p> The application secret key makes webapps and CGI programs secure, by encrypting the state transfers. If you receive a webapp or CGI binary from someone else, or you believe someone untrusted has had read access to your binary, you can use the kaya-rekey application to generate a new application secret key without needing a recompile. </p>
 <p> Binary distributors of Kaya applications are strongly recommended to use &#8216;kaya-rekey&#8217; as part of the installation process. </p>

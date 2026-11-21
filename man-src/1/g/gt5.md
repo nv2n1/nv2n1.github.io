@@ -1,5 +1,4 @@
 ---
-
 title: "gt5(1)"
 name: "gt5"
 section: "1"
@@ -10,7 +9,9 @@ description: "gt5 – a diff-capable ‘du-browser’"
 
 <h2>NAME</h2>
 <p> gt5 &#8211; a diff-capable &#8216;du-browser&#8217;</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gt5</code> [ dir | file | dir file | file file2 ] [options]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>gt5</code> reads the output of <code>du</code>, compares it with a du-log saved by the last run, converts it into HTML and opens the resulting file with a <code>textbrowser</code>. </p>
 <p> If files are given on the commandline they are expected to be (optionally <i>gzip</i>/<i>bzip2</i>-compressed) logfiles of <code>du -akx /some/dir</code>. It is up to you to take care that the given directories/files represent the same directory. <i>gt5</i> will show lots of new files if you don&#8217;t. ;-)</p>
 <h2>OPTIONS</h2>

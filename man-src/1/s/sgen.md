@@ -1,5 +1,4 @@
 ---
-
 title: "sgen(1)"
 name: "sgen"
 section: "1"
@@ -10,7 +9,9 @@ description: "sgen – Mono XML Serializer GENerator"
 
 <h2>NAME</h2>
 <p> sgen &#8211; Mono XML Serializer GENerator</p>
+<h2>SYNOPSIS</h2>
 <p> <code>sgen [options]</code></p>
+<h2>DESCRIPTION</h2>
 <p> Generates pre-compilable custom XML serializer classes for specific types.</p>
 <h2>OPTIONS</h2>
 <dl>

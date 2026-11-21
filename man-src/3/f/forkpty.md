@@ -1,5 +1,4 @@
 ---
-
 title: "forkpty(3)"
 name: "forkpty"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-forkpty/"
 description: "openpty, login_tty, forkpty – terminal utility functions"
 ---
 
+<h2 class="name">NAME</h2>
+<p> openpty, login_tty, forkpty &#8211; terminal utility functions </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;pty.h&gt;
 int openpty(int *amaster, int *aslave, char *name,
@@ -20,6 +22,7 @@ pid_t forkpty(int *amaster, char *name,
 int login_tty(int fd);
 Link with - lutil.
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>openpty</code>() function finds an available pseudoterminal and returns file descriptors for the master and slave in <i>amaster</i> and <i>aslave</i>. If <i>name</i> is not NULL, the filename of the slave is returned in <i>name</i>. If <i>termp</i> is not NULL, the terminal parameters of the slave will be set to the values in <i>termp</i>. If <i>winp</i> is not NULL, the window size of the slave will be set to the values in <i>winp</i>. </p>
 <p> The <code>login_tty</code>() function prepares for a login on the terminal referred to by the file descriptor <i>fd</i> (which may be a real terminal device, or the slave of a pseudoterminal as returned by <code>openpty</code>()) by creating a new session, making <i>fd</i> the controlling terminal for the calling process, setting <i>fd</i> to be the standard input, output, and error streams of the current process, and closing <i>fd</i>. </p>
 <p> The <code>forkpty</code>() function combines <code>openpty</code>(), <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2), and <code>login_tty</code>() to create a new process operating in a pseudoterminal. A file descriptor referring to master side of the pseudoterminal is returned in <i>amaster</i>. If <i>name</i> is not NULL, the buffer it points to is used to return the filename of the slave. The <i>termp</i> and <i>winp</i> arguments, if not NULL, will determine the terminal attributes and window size of the slave side of the pseudoterminal.</p>

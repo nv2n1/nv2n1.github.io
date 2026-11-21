@@ -1,5 +1,4 @@
 ---
-
 title: "apt-file(1)"
 name: "apt-file"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-apt-file/"
 description: "apt-file — APT package searching utility — command-line interface"
 ---
 
+<h2 class="name">NAME</h2>
+<p> apt-file &#8212; APT package searching utility &#8212; command-line interface </p>
+<h2>SYNOPSIS</h2>
 <p> <code>apt-file</code> [<i>options</i>] search <i>pattern</i> </p>
 <p> <code>apt-file</code> [<i>options</i>] show <i>package</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>apt-file</code> is a command line tool for searching files in packages for the <font SIZE="-1">APT</font> package management system. </p>
 <p> Some actions are required to run the search:</p>
 <dl>

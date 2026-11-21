@@ -1,5 +1,4 @@
 ---
-
 title: "gdaltindex(1)"
 name: "gdaltindex"
 section: "1"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/1-gdaltindex/"
 description: "gdaltindex – gdaltindex Builds a shapefile as a raster tileindex"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gdaltindex &#8211; gdaltindex Builds a shapefile as a raster tileindex </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 gdaltindex [-f format] [-tileindex field_name] [-write_absolute_path]
            [-skip_different_projection] [-t_srs target_srs]
            [-src_srs_name field_name] [-src_srs_format [AUTO|WKT|EPSG|PROJ]
            [-lyr_name name] index_file [gdal_file]*
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> This program builds a shapefile with a record for each input raster file, an attribute containing the filename, and a polygon geometry outlining the raster. This output is suitable for use with MapServer as a raster tileindex. </p>
 <dl>
 <dt><code>-f</code> format:</dt>

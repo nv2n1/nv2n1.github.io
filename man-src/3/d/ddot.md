@@ -1,5 +1,4 @@
 ---
-
 title: "ddot(3)"
 name: "ddot"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-ddot/"
 description: "ddot.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ddot.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> DOUBLE PRECISION function <code>ddot</code> (N, DX, INCX, DY, INCY)<br />
  <i></i><code>DDOT</code></p>

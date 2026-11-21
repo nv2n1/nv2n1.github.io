@@ -1,5 +1,4 @@
 ---
-
 title: "difftime(3)"
 name: "difftime"
 section: "3"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/3-difftime/"
 description: "difftime – calculate time difference"
 ---
 
+<h2 class="name">NAME</h2>
+<p> difftime &#8211; calculate time difference </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;time.h&gt;
 double difftime(time_t time1, time_t time0);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>difftime</code>() function returns the number of seconds elapsed between time <i>time1</i> and time <i>time0</i>, represented as a <i>double</i>. Each of the times is specified in calendar time, which means its value is a measurement (in seconds) relative to the Epoch, 1970-01-01 00:00:00 +0000 (UTC).</p>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "mlx4dv_set_context_attr(3)"
 name: "mlx4dv_set_context_attr"
 section: "3"
@@ -7,7 +6,14 @@ letter: "m"
 url: "/docs/linux/man/3-mlx4dv_set_context_attr/"
 ---
 
-mlx4dv_set_context_attr - Set context attributes 
+<h2 class="name">NAME</h2>
+ 
+
+ 
+
+ mlx4dv_set_context_attr - Set context attributes 
+
+<h2>SYNOPSIS</h2>
 
 <dl>
 <dt>
@@ -18,7 +24,11 @@ int mlx4dv_set_context_attr(struct ibv_context *context,
                             void *attr);
 </code></pre></dd></dl>
 
-mlx4dv_set_context_attr gives the ability to set vendor specific attributes on the RDMA context.
+<h2>DESCRIPTION</h2>
+
+ 
+
+ mlx4dv_set_context_attr gives the ability to set vendor specific attributes on the RDMA context.
 
 <h2>ARGUMENTS</h2>
 

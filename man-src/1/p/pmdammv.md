@@ -1,5 +1,4 @@
 ---
-
 title: "pmdammv(1)"
 name: "pmdammv"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmdammv – memory mapped values performance metrics domain agent 
 
 <h2>NAME</h2>
 <p> <code>pmdammv</code> &#8211; memory mapped values performance metrics domain agent (PMDA)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/mmv/pmdammv</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdammv</code> is a Performance Metrics Domain Agent (PMDA) which exports application level performance metrics using memory mapped files. It offers an extremely low overhead instrumentation facility that is well-suited to long running, mission critical applications where it is desirable to have performance metrics and availability information permanently enabled. </p>
 <p> The <code>mmv</code> PMDA exports instrumentation that has been added to an application using the MMV APIs (refer to <code><a href="/docs/linux/man/3-mmv_stats_init/">mmv_stats_init</a></code>(3) and <code><a href="/docs/linux/man/5-mmv/">mmv</a></code>(5) for further details). These APIs can be called from several languages, including C, C++, Perl, Python and Java (via the separate &#8220;Parfait&#8221; class library). </p>
 <p> A brief description of the <code>pmdammv</code> command line options follows:</p>

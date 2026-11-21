@@ -1,5 +1,4 @@
 ---
-
 title: "evtest(1)"
 name: "evtest"
 section: "1"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/1-evtest/"
 description: "evtest – Input device event monitor and query tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> evtest &#8211; Input device event monitor and query tool </p>
+<h2>SYNOPSIS</h2>
 <pre>
 evtest [--grab] /dev/input/eventX
 </pre>
 <pre>
 evtest --query /dev/input/eventX &lt;type&gt; &lt;value&gt;
 </pre>
+<h2>DESCRIPTION</h2>
 <p> The first invocation type displayed above (&quot;capture mode&quot;) causes evtest to display information about the specified input device, including all the events supported by the device. It then monitors the device and displays all the events layer events generated. </p>
 <p> If the &#8211;grab flag is given in capture mode, evtest keeps an EVIOCGRAB on the device. While this grab is active, other processes will not receive events from the kernel devices. The grab is released again when evtest quits. </p>
 <p> In the second invocation type (&quot;query mode&quot;), evtest performs a one-shot query of the state of a specific key <code>value</code> of an event <code>type</code>. </p>

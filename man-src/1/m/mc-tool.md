@@ -1,5 +1,4 @@
 ---
-
 title: "mc-tool(1)"
 name: "mc-tool"
 section: "1"
@@ -10,6 +9,7 @@ description: "mc-tool – manipulate Mission Control accounts from the command l
 
 <h2>NAME</h2>
 <p> mc-tool &#8211; manipulate Mission Control accounts from the command line</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mc-tool list</code> </p>
 <p> <code>mc-tool add</code> <i>PROFILE</i> <i>DISPLAY-NAME</i> <i></i>[<i>PARAMETER-SETTINGS</i>&#8230;] </p>
 <p> <code>mc-tool add</code> <i>MANAGER</i>/<i>PROTOCOL</i> [<i>PARAMETER-SETTINGS</i>&#8230;] </p>
@@ -24,6 +24,7 @@ description: "mc-tool – manipulate Mission Control accounts from the command l
 <p> <code>mc-tool request</code> <i>ACCOUNT</i> <i>STATUS</i> [<i>MESSAGE</i>] </p>
 <p> <code>mc-tool auto-connect</code> <i>ACCOUNT</i> <code>on</code>|<code>off</code> </p>
 <p> <code>mc-tool remove</code> <i>ACCOUNT</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>mc-tool</code>&#8216;s usage depends on its first argument (the &quot;command&quot;) </p>
 <h3>SPECIFYING ACCOUNTS</h3>
 <p> Where an account name is needed, it may be given as a full object path (e.g. <code>/org/freedesktop/Telepathy/Account/gabble/jabber/example</code>), or as the unique account-specific suffix (e.g. <code>gabble/jabber/example</code>). </p>

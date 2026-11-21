@@ -1,5 +1,4 @@
 ---
-
 title: "globus_gss_assist_wrap_send(3)"
 name: "globus_gss_assist_wrap_send"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-globus_gss_assist_wrap_send/"
 description: "globus_gss_assist.h – GSS Assist Header."
 ---
 
+<h2 class="name">NAME</h2>
+<p> globus_gss_assist.h &#8211; GSS Assist Header.</p>
+<h2>SYNOPSIS</h2>
 <p> #include &#8216;gssapi.h&#8217;<br />
  #include &lt;stdio.h&gt;<br />
  #include &lt;stdlib.h&gt;<br />

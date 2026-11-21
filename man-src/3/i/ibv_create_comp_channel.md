@@ -1,5 +1,4 @@
 ---
-
 title: "ibv_create_comp_channel(3)"
 name: "ibv_create_comp_channel"
 section: "3"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/3-ibv_create_comp_channel/"
 description: "ibv_create_comp_channel, ibv_destroy_comp_channel – create or destroy a completion event channel"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ibv_create_comp_channel, ibv_destroy_comp_channel &#8211; create or destroy a completion event channel </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 struct ibv_comp_channel *ibv_create_comp_channel(struct ibv_context
                                                      *context);
 int ibv_destroy_comp_channel(struct ibv_comp_channel *channel);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>ibv_create_comp_channel()</code> creates a completion event channel for the RDMA device context <i>context</i>. </p>
 <p> <code>ibv_destroy_comp_channel()</code> destroys the completion event channel <i>channel</i>.</p>
 <h2>RETURN VALUE</h2>

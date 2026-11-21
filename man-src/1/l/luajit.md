@@ -1,5 +1,4 @@
 ---
-
 title: "luajit(1)"
 name: "luajit"
 section: "1"
@@ -10,9 +9,11 @@ description: "luajit – Just-In-Time Compiler for the Lua Language"
 
 <h2>NAME</h2>
 <p> luajit &#8211; Just-In-Time Compiler for the Lua Language</p>
+<h2>SYNOPSIS</h2>
 <p> <code>luajit</code> [<i>options</i>]&#8230; [<i>script</i> [<i>args</i>]&#8230;]</p>
 <h2>WEB SITE</h2>
 <p> <i><a rel="nofollow" href="http://luajit.org">http://luajit.org</a></i></p>
+<h2>DESCRIPTION</h2>
 <p> This is the command-line program to run Lua programs with <code>LuaJIT</code>. </p>
 <p> <code>LuaJIT</code> is a just-in-time (JIT) compiler for the Lua language. The virtual machine (VM) is based on a fast interpreter combined with a trace compiler. It can significantly improve the performance of Lua programs. </p>
 <p> <code>LuaJIT</code> is API- and ABI-compatible with the VM of the standard Lua 5.1 interpreter. When embedding the VM into an application, the built library can be used as a drop-in replacement.</p>

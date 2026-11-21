@@ -1,5 +1,4 @@
 ---
-
 title: "krb5_verify_user_opt(3)"
 name: "krb5_verify_user_opt"
 section: "3"
@@ -8,10 +7,13 @@ url: "/docs/linux/man/3-krb5_verify_user_opt/"
 description: "krb5_verify_user krb5_verify_user_lrealm krb5_verify_user_opt krb5_verify_opt_init krb5_verify_opt_alloc krb5_verify_opt_free krb5_verify_opt_set_ccache krb5_verify_opt_set_flags krb5_verify_opt_se..."
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>krb5_verify_user</code> <code>krb5_verify_user_lrealm</code> <code>krb5_verify_user_opt</code> <code>krb5_verify_opt_init</code> <code>krb5_verify_opt_alloc</code> <code>krb5_verify_opt_free</code> <code>krb5_verify_opt_set_ccache</code> <code>krb5_verify_opt_set_flags</code> <code>krb5_verify_opt_set_service</code> <code>krb5_verify_opt_set_secure</code> <code>krb5_verify_opt_set_keytab</code> &#8211; Heimdal password verifying functions </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>
+<h2>SYNOPSIS</h2>
 <p> In krb5.h Ft krb5_error_code Fn krb5_verify_user krb5_context context krb5_principal principal krb5_ccache ccache const char *password krb5_boolean secure const char *service Ft krb5_error_code Fn krb5_verify_user_lrealm krb5_context context krb5_principal principal krb5_ccache ccache const char *password krb5_boolean secure const char *service Ft void Fn krb5_verify_opt_init krb5_verify_opt *opt Ft void Fn krb5_verify_opt_alloc krb5_verify_opt **opt Ft void Fn krb5_verify_opt_free krb5_verify_opt *opt Ft void Fn krb5_verify_opt_set_ccache krb5_verify_opt *opt krb5_ccache ccache Ft void Fn krb5_verify_opt_set_keytab krb5_verify_opt *opt krb5_keytab keytab Ft void Fn krb5_verify_opt_set_secure krb5_verify_opt *opt krb5_boolean secure Ft void Fn krb5_verify_opt_set_service krb5_verify_opt *opt const char *service Ft void Fn krb5_verify_opt_set_flags krb5_verify_opt *opt unsigned int flags Ft krb5_error_code Fo krb5_verify_user_opt Fa krb5_context context Fa krb5_principal principal Fa const char *password Fa krb5_verify_opt *opt Fc</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>krb5_verify_user</code> function verifies the password supplied by a user. The principal whose password will be verified is specified in Fa principal . New tickets will be obtained as a side-effect and stored in Fa ccache (if <code>NULL</code> the default ccache is used). Fn krb5_verify_user will call Fn krb5_cc_initialize on the given Fa ccache , so Fa ccache must only initialized with Fn krb5_cc_resolve or Fn krb5_cc_gen_new . If the password is not supplied in Fa password (and is given as <code>NULL</code> the user will be prompted for it. If Fa secure the ticket will be verified against the locally stored service key Fa service (by default `host&#8217; if given as <code>NULL</code> ). </p>
 <p> The Fn krb5_verify_user_lrealm function does the same, except that it ignores the realm in Fa principal and tries all the local realms (see krb5.conf5). After a successful return, the principal is set to the authenticated realm. If the call fails, the principal will not be meaningful, and should only be freed with krb5_free_principal3. </p>
 <p> Fn krb5_verify_opt_alloc and Fn krb5_verify_opt_free allocates and frees a <code>krb5_verify_opt</code> You should use the the alloc and free function instead of allocation the structure yourself, this is because in a future release the structure wont be exported. </p>

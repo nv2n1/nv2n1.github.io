@@ -1,5 +1,4 @@
 ---
-
 title: "metalink(1)"
 name: "metalink"
 section: "1"
@@ -10,7 +9,9 @@ description: "metalink — commandline metalink generator"
 
 <h2>NAME</h2>
 <p> metalink &#8212; commandline metalink generator</p>
+<h2>SYNOPSIS</h2>
 <p> <code>metalink</code> [<i>input files</i>] [ &lt; <i>mirror list</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>metalink</code> command. </p>
 <p> This manual page was written for the <code>Debian</code> distribution because the original program does not have a manual page. </p>
 <p> <code>metalink</code> allows you to generate metalinks from a list of mirrors and a collection of files. The files are hashed and the resulting metalink is generated on the stdout.</p>

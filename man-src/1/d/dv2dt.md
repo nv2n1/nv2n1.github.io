@@ -1,5 +1,4 @@
 ---
-
 title: "dv2dt(1)"
 name: "dv2dt"
 section: "1"
@@ -7,9 +6,12 @@ letter: "d"
 url: "/docs/linux/man/1-dv2dt/"
 description: "dv2dt – convert a binary TeX DVI file to DTL text representation"
 ---
-
+<h2 class="name">NAME</h2>
+<p> dv2dt - convert a binary TeX DVI file to DTL text representation </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dv2dt</code> <i>input-DVI-file</i> <i>output-DTL-file</i> </p>
 <p> If the filenames are omitted, then <i>stdin</i> and <i>stdout</i> are assumed.  </p>
+<h2>DESCRIPTION</h2>
 <p> <code>dv2dt</code> converts a binary TeX DVI file to an editable text file in DTL (<i>DVI Text Language</i>) format. The companion <code><a href="/docs/linux/man/1-dt2dv/">dt2dv</a></code>(1) utility can convert the DTL file back to a binary DVI file.  </p>
 <h2>DVI COMMAND DESCRIPTION</h2>
 <p> TeX DVI files contain a compact binary description of typeset pages, as a stream of operation code bytes, each immediately followed by zero or more parameter bytes. The format of DVI files is fully described in Donald E. Knuth, <i>TeX: The Program</i>, Addison-Wesley (1986), ISBN 0-201-13437-3, as well as in the <code><a href="/docs/linux/man/1-dvitype/">dvitype</a></code>(1) literate program source code. </p>

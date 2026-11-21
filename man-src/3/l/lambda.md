@@ -1,5 +1,4 @@
 ---
-
 title: "lambda(3)"
 name: "lambda"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-lambda/"
 description: "QuantLib::BatesModel – Bates stochastic-volatility model."
 ---
 
+<h2 class="name">NAME</h2>
+<p> QuantLib::BatesModel &#8211; Bates stochastic-volatility model. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/models/equity/batesmodel.hpp&gt; </p>
 <p> Inherits <code>QuantLib::HestonModel</code>. </p>
 <p> Inherited by BatesDetJumpModel. </p>

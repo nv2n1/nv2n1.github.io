@@ -1,5 +1,4 @@
 ---
-
 title: "udaddy(1)"
 name: "udaddy"
 section: "1"
@@ -11,14 +10,20 @@ url: "/docs/linux/man/1-udaddy/"
 
  udaddy - RDMA CM datagram setup and simple ping-pong test.
 
-<pre><code>
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <pre><code>
 udaddy[-s server_address][-b bind_address][-c connections]
       [-C message_count][-S message_size][-p port_space] udaddy -
     s server_address[-b bind_address][-c connections]
                     [-C message_count][-S message_size][-t tos][-p port_space]
 </code></pre>
 
-Establishes a set of unreliable RDMA datagram communication paths between two nodes using the librdmacm, optionally transfers datagrams between the nodes, then tears down the communication.
+<h2>DESCRIPTION</h2>
+
+ Establishes a set of unreliable RDMA datagram communication paths between two nodes using the librdmacm, optionally transfers datagrams between the nodes, then tears down the communication.
 
 <h2>OPTIONS</h2>
 

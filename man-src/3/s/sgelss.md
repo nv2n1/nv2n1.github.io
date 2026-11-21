@@ -1,5 +1,4 @@
 ---
-
 title: "sgelss(3)"
 name: "sgelss"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-sgelss/"
 description: "sgelss.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sgelss.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sgelss</code> (M, N, NRHS, A, LDA, B, LDB, S, RCOND, RANK, WORK, LWORK, INFO)<br />
  <i></i><code> SGELSS solves overdetermined or underdetermined systems for GE matrices</code></p>

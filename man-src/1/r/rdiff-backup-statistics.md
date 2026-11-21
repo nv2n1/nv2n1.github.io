@@ -1,5 +1,4 @@
 ---
-
 title: "rdiff-backup-statistics(1)"
 name: "rdiff-backup-statistics"
 section: "1"
@@ -10,7 +9,9 @@ description: "rdiff-backup-statistics – summarize rdiff-backup statistics file
 
 <h2>NAME</h2>
 <p> rdiff-backup-statistics &#8211; summarize rdiff-backup statistics files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>rdiff-backup-statistics</code> <code>[&#8211;begin-time</code><i> time</i><code>]</code> <code>[&#8211;end-time</code><i> time</i><code>]</code> <code>[&#8211;minimum-ratio</code><i> ratio</i><code>]</code> <code>[&#8211;null-separator]</code> <code>[&#8211;quiet]</code> <i>repository</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>rdiff-backup-statistics</code> reads the matching statistics files in a backup repository made by <code>rdiff-backup</code> and prints some summary statistics to the screen. It does not alter the repository in any way. </p>
 <p> The required argument is the pathname of the root of an rdiff-backup repository. For instance, if you ran &quot;rdiff-backup in out&quot;, you could later run &quot;rdiff-backup-statistics out&quot;. </p>
 <p> The output has two parts. The first is simply an average of the all matching session_statistics files. The meaning of these fields is explained in the FAQ included in the package, and also at <i><a rel="nofollow" href="http://rdiff-backup.nongnu.org/FAQ.html#statistics">http://rdiff-backup.nongnu.org/FAQ.html#statistics</a></i>. </p>

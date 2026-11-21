@@ -1,5 +1,4 @@
 ---
-
 title: "dlclose(3)"
 name: "dlclose"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlclose/"
 description: "dlclose, dlopen, dlmopen – open and close a shared object"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlclose, dlopen, dlmopen &#8211; open and close a shared object </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;dlfcn.h&gt;</code> </p>
 <p> <code>void *dlopen(const char *</code><i>filename</i><code>, int </code><i>flags</i><code>);</code> </p>
 <p> <code>int dlclose(void *</code><i>handle</i><code>);</code> </p>
@@ -15,6 +17,7 @@ description: "dlclose, dlopen, dlmopen – open and close a shared object"
  <code>#include &lt;dlfcn.h&gt;</code> </p>
 <p> <code>void *dlmopen(Lmid_t </code><i>lmid</i><code>, const char *</code><i>filename</i><code>, int </code><i>flags</i><code>);</code> </p>
 <p> Link with <i>-ldl</i>.</p>
+<h2>DESCRIPTION</h2>
 <h3>dlopen()</h3>
 <p> The function <code>dlopen</code>() loads the dynamic shared object (shared library) file named by the null-terminated string <i>filename</i> and returns an opaque &quot;handle&quot; for the loaded object. This handle is employed with other functions in the dlopen API, such as <code><a href="/docs/linux/man/3-dlsym/">dlsym</a></code>(3), <code><a href="/docs/linux/man/3-dladdr/">dladdr</a></code>(3), <code><a href="/docs/linux/man/3-dlinfo/">dlinfo</a></code>(3), and <code>dlclose</code>(). </p>
 <p> If <i>filename</i> is NULL, then the returned handle is for the main program. If <i>filename</i> contains a slash (&quot;/&quot;), then it is interpreted as a (relative or absolute) pathname. Otherwise, the dynamic linker searches for the object as follows (see <code><a href="/docs/linux/man/8-ld-so/">ld.so</a></code>(8) for further details):</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_crl_set_number(3)"
 name: "gnutls_x509_crl_set_number"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_crl_set_number – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crl_set_number &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crl_set_number(gnutls_x509_crl_t </code><i>crl</i><code>, const void * </code><i>nr</i><code>, size_t </code><i>nr_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_x509_crl_set_number – API function"
 <dd> The CRL number</dd>
 <dt>size_t nr_size</dt>
 <dd> Holds the size of the nr field.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will set the CRL&#8217;s number extension. This is to be used as a unique and monotonic number assigned to the CRL by the authority.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

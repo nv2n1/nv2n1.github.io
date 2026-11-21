@@ -1,5 +1,4 @@
 ---
-
 title: "mkindex(1)"
 name: "mkindex"
 section: "1"
@@ -10,7 +9,9 @@ description: "mkindex – script to process LaTeX index and glossary files"
 
 <h2>NAME</h2>
 <p> mkindex &#8211; script to process LaTeX index and glossary files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mkindex</code> <i>BASENAME</i>[.idx] &#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> <code>mkindex</code> runs <code><a href="/docs/linux/man/1-makeindex/">makeindex</a></code>(1) on any index (<tt>.idx</tt>) or glossary (<tt>.glo</tt>) files created by TeXing the file <i>BASENAME</i>.tex. </p>
 <h2>FILES</h2>
 <dl>

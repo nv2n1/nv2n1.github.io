@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_openpgp_crt_export2(3)"
 name: "gnutls_openpgp_crt_export2"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_openpgp_crt_export2 – API function"
 
 <h2>NAME</h2>
 <p> gnutls_openpgp_crt_export2 &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>
 <p> <code>int gnutls_openpgp_crt_export2(gnutls_openpgp_crt_t </code><i>key</i><code>, gnutls_openpgp_crt_fmt_t </code><i>format</i><code>, gnutls_datum_t * </code><i>out</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_openpgp_crt_export2 – API function"
 <dd> One of gnutls_openpgp_crt_fmt_t elements.</dd>
 <dt>gnutls_datum_t * out</dt>
 <dd> will contain the raw or base64 encoded key</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will convert the given key to RAW or Base64 format. The output buffer is allocated using <code>gnutls_malloc()</code>.</p>
 <h2>RETURNS</h2>
 <p> <code>GNUTLS_E_SUCCESS</code> on success, or an error code.</p>

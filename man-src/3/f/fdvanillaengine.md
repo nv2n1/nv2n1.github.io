@@ -1,5 +1,4 @@
 ---
-
 title: "fdvanillaengine(3)"
 name: "fdvanillaengine"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-fdvanillaengine/"
 description: "ql/pricingengines/vanilla/fdvanillaengine.hpp – Finite-differences vanilla-option engine."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/pricingengines/vanilla/fdvanillaengine.hpp &#8211; Finite-differences vanilla-option engine. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/pricingengine.hpp&gt;<br />
  #include &lt;ql/methods/finitedifferences/tridiagonaloperator.hpp&gt;<br />
  #include &lt;ql/methods/finitedifferences/boundarycondition.hpp&gt;<br />

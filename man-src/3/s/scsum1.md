@@ -1,5 +1,4 @@
 ---
-
 title: "scsum1(3)"
 name: "scsum1"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-scsum1/"
 description: "scsum1.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> scsum1.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>scsum1</code> (N, CX, INCX)<br />
  <i></i><code>SCSUM1</code> forms the 1-norm of the complex vector using the true absolute value.</p>

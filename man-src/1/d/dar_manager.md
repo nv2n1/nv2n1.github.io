@@ -1,5 +1,4 @@
 ---
-
 title: "dar_manager(1)"
 name: "dar_manager"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-dar_manager/"
 description: "dar_manager – compiles several archives contents in a database to ease file restoration"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dar_manager &#8211; compiles several archives contents in a database to ease file restoration </p>
+<h2>SYNOPSIS</h2>
 <p> dar_manager [-v] -C [&lt;path&gt;/]&lt;database&gt; </p>
 <p> dar_manager [-v] -B [&lt;path&gt;/]&lt;database&gt; -A [&lt;path&gt;/]&lt;basename&gt; [-9 &lt;min-digits&gt;] [[&lt;path&gt;/]&lt;archive_basename&gt;] </p>
 <p> dar_manager [-v] -B [&lt;path&gt;/]&lt;database&gt; -l </p>
@@ -26,6 +28,7 @@ description: "dar_manager – compiles several archives contents in a database t
 <p> dar_manager [-v] -B [&lt;path&gt;/]&lt;database&gt; -@ { &lt;filename&gt; | &quot;-&quot; } </p>
 <p> dar_manager -h </p>
 <p> dar_manager -V </p>
+<h2>DESCRIPTION</h2>
 <p> <code>dar_manager</code> is part of the Disk Archive suite. Its purpose is to simplify the restoration of a set of few files present in many backup, full or differential. This is achieved by gathering the catalogue of each archive (this has to be done once). At any time you just have to give the relative path to the files you want to restore, dar_manager will call dar with the proper options and restore the last version of each file (or the last version before given date). Note that dar_manager is to be used when you have remove some files by accident some time ago and wish to recover them. It thus not adapted to restore the state a directory tree had at a given time, in particular when some files have to be removed. For that you must use dar directly with the corresponding archive to the date for which you wish to restore the state. </p>
 <p> you can restore any file by hand without <code>dar_manager</code> , but if you make a lot of differential backup, you may spend many time to find the archive that contains the last version of your file, as dar will not save it if it has not changed since previous backup. <code>dar_manager</code> simplify the process by looking in its internal database, built from archive &quot;catalogues&quot;.</p>
 <h2>OPTIONS</h2>

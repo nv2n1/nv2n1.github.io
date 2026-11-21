@@ -1,5 +1,4 @@
 ---
-
 title: "bgldepend(1)"
 name: "bgldepend"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-bgldepend/"
 description: "bgldepend – create Bigloo dependencies in makefiles"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bgldepend &#8211; create Bigloo dependencies in makefiles</p>
+<h2>SYNOPSIS</h2>
 <p> <code>bgldepend</code> [ options ] <i>sourcefile &#8230;</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>bgldepend</code> program reads each <i>sourcefile</i> in sequence and parses it to find the module <code>include</code> and <code>import</code> module directives. <code>bgldepend</code> computes the transitive closure of the import relationship. That is, it is sufficient to provide <code>bgldepend</code> with a single Bigloo file that imports all the project file (e.g. the &quot;main&quot; file.) </p>
 <p> Every file that a <i>sourcefile</i> includes, directly or indirectly, is what <code>bgldepend</code> calls a <i>dependency</i>. These dependencies are then written to a <i>makefile</i> in such a way that <code><a href="/docs/linux/man/1-make/">make</a>(1)</code> will know which object files must be recompiled when a dependency has changed. </p>
 <p> By default, <code>bgldepend</code> writes its output on the standard output device. If <code>bgldepend</code> is provided with a <code>-o</code> <i>makefile</i> option, it will update the <i>makefile</i> file. That is, it will search the makefile for the line: </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ncat(1)"
 name: "ncat"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-ncat/"
 description: "ncat – Concatenate and redirect sockets"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ncat &#8211; Concatenate and redirect sockets </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ncat</code> [<i>OPTIONS</i>&#8230;] [<i>hostname</i>] [<i>port</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>Ncat is a feature-packed networking utility which reads and writes data across networks from the command line. Ncat was written for the Nmap Project and is the culmination of the currently splintered family of Netcat incarnations. It is designed to be a reliable back-end tool to instantly provide network connectivity to other applications and users. Ncat will not only work with IPv4 and IPv6 but provides the user with a virtually limitless number of potential uses. </dd>
 <p> Among Ncat&#8217;s vast number of features there is the ability to chain Ncats together; redirection of TCP, UDP, and SCTP ports to other sites; SSL support; and proxy connections via SOCKS4 or HTTP proxies (with optional proxy authentication as well). Some general principles apply to most applications and thus give you the capability of instantly adding networking support to software that would normally never support it.</p>
 <h2>OPTIONS SUMMARY</h2>

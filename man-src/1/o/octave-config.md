@@ -1,5 +1,4 @@
 ---
-
 title: "octave-config(1)"
 name: "octave-config"
 section: "1"
@@ -10,7 +9,9 @@ description: "octave-config – GNU Octave component and library information ret
 
 <h2>NAME</h2>
 <p> octave-config &#8211; GNU Octave component and library information retrieval</p>
+<h2>SYNOPSIS</h2>
 <p> <code>octave-config</code> [<i>OPTION</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>octave-config</code> is a tool to obtain directory information for <code>.oct</code> and <code>.m</code> files for <code><a href="/docs/linux/man/1-octave/">octave</a></code>(1).</p>
 <h2>OPTIONS</h2>
 <dl>

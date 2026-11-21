@@ -1,5 +1,4 @@
 ---
-
 title: "ffmpegthumbnailer(1)"
 name: "ffmpegthumbnailer"
 section: "1"
@@ -10,7 +9,9 @@ description: "ffmpegthumbnailer – fast and lightweight video thumbnailer"
 
 <h2>NAME</h2>
 <p> ffmpegthumbnailer &#8211; fast and lightweight video thumbnailer</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ffmpegthumbnailer</code> [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Ffmpegthumbnailer</i> is a lightweight video thumbnailer that can be used by file managers to create thumbnails for your video files. The thumbnailer uses ffmpeg to decode frames from the video files, so supported videoformats depend on the configuration flags of ffmpeg.</p>
 <h2>OPTIONS</h2>
 <dl>

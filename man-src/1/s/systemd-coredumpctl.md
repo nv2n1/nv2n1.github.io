@@ -1,5 +1,4 @@
 ---
-
 title: "systemd-coredumpctl(1)"
 name: "systemd-coredumpctl"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-systemd-coredumpctl/"
 description: "systemd-coredumpctl – Retrieve coredumps from the journal"
 ---
 
+<h2 class="name">NAME</h2>
+<p> systemd-coredumpctl &#8211; Retrieve coredumps from the journal </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>systemd-coredumpctl</code> [OPTIONS&#8230;] {COMMAND} [PID|COMM|EXE|MATCH&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>systemd-coredumpctl</code></p>
 <dd>may be used to retrieve coredumps from <code><a href="/docs/linux/man/8-systemd-journald/">systemd-journald</a></code>(8).</dd>
 <h2>OPTIONS</h2>

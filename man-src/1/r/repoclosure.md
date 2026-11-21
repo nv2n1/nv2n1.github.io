@@ -1,5 +1,4 @@
 ---
-
 title: "repoclosure(1)"
 name: "repoclosure"
 section: "1"
@@ -10,7 +9,9 @@ description: "repoclosure – display a list of unresolved dependencies for a yu
 
 <h2>NAME</h2>
 <p> repoclosure &#8211; display a list of unresolved dependencies for a yum repository</p>
+<h2>SYNOPSIS</h2>
 <p> <code>repoclosure</code> [options]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>repoclosure</code> is a program that reads package metadata from one or more yum repositories, checks all dependencies, and displays a list of packages with unresolved dependencies. </p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "orage(1)"
 name: "orage"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-orage/"
 description: "orage – Calendar for the Xfce Desktop Environment"
 ---
 
+<h2 class="name">NAME</h2>
+<p> orage &#8211; Calendar for the Xfce Desktop Environment </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>orage</code> [options] [[FILE]&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>orage</code></p>
 <dd>is a fast and easy to use graphical calendar for the Xfce Desktop Environment. It uses portable ical format and includes common calendar features like repeating appointments and multiple alarming possibilities. <code>orage</code> does not have group calendar features, but can only be used for single user. </dd>
 <p> <code>orage</code> takes a list of <i>FILE</i>s for ical files that should be imported. Contents of those files are read and converted into <code>orage</code>, but those files are left untouched. </p>

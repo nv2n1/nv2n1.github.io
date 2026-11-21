@@ -1,5 +1,4 @@
 ---
-
 title: "euform-get-template(1)"
 name: "euform-get-template"
 section: "1"
@@ -10,10 +9,12 @@ description: "euform-get-template – Show a stack’s template"
 
 <h2>NAME</h2>
 <p> euform-get-template &#8211; Show a stack&#8217;s template</p>
+<h2>SYNOPSIS</h2>
 <p> euform-get-template [&#8211;show-empty-fields] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] STACK</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Show a stack&#8217;s template</p>
 <h3>positional arguments:</h3>
 <dl>

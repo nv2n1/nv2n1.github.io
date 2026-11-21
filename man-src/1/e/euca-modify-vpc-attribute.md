@@ -1,5 +1,4 @@
 ---
-
 title: "euca-modify-vpc-attribute(1)"
 name: "euca-modify-vpc-attribute"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-modify-vpc-attribute – Modify an attribute of a VPC"
 
 <h2>NAME</h2>
 <p> euca-modify-vpc-attribute &#8211; Modify an attribute of a VPC</p>
+<h2>SYNOPSIS</h2>
 <p> euca-modify-vpc-attribute [-c VPC] (<code>-d</code> (true|false) | <code>-s</code> (true|false))</p>
 <dl>
 <dt>[&#8211;show-empty-fields] [-U URL]</dt>
 <dd> [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Modify an attribute of a VPC</p>
 <h3>optional arguments:</h3>
 <dl>

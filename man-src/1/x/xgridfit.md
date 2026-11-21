@@ -1,5 +1,4 @@
 ---
-
 title: "xgridfit(1)"
 name: "xgridfit"
 section: "1"
@@ -10,7 +9,9 @@ description: "xgridfit – a program for gridfitting, or \"hinting,\" TrueType f
 
 <h2>NAME</h2>
 <p> <code>xgridfit </code> &#8211; a program for gridfitting, or &quot;hinting,&quot; TrueType fonts</p>
+<h2>SYNOPSIS</h2>
 <p> <code>xgridfit [options]</code> <i>file.</i>{<i>xgf</i> or <i>xml</i>}&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Xgridfit</code> is a simple program that implements an XML-based language for gridfitting, or &quot;hinting,&quot; TrueType fonts. It compiles an XML source file into tables and instructions that relate to the gridfitting of glyphs. <code>Xgridfit</code> does not insert these elements into a font itself, but rather relies on FontForge, the Open Source font editor, to do this. </p>
 <p> For each input file specified on the command line, the <code>xgridfit</code> command generates a script named <i>file.pe.</i> You may run this script in <i>FontForge</i> thus: </p>
 <p>&nbsp;<wbr>$&nbsp;<wbr>fontforge -script file.pe </p>

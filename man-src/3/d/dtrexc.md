@@ -1,5 +1,4 @@
 ---
-
 title: "dtrexc(3)"
 name: "dtrexc"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dtrexc/"
 description: "dtrexc.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dtrexc.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dtrexc</code> (COMPQ, N, T, LDT, Q, LDQ, IFST, ILST, WORK, INFO)<br />
  <i></i><code>DTREXC</code></p>

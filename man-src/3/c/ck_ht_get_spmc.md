@@ -1,5 +1,4 @@
 ---
-
 title: "ck_ht_get_spmc(3)"
 name: "ck_ht_get_spmc"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_ht_get_spmc – load a key-value pair from a hash table"
 <p> <code>ck_ht_get_spmc</code> &#8211; load a key-value pair from a hash table</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_ht.h Ft bool Fn ck_ht_get_spmc ck_ht_t *ht ck_ht_hash_t h ck_ht_entry_t *entry</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_ht_get_spmc function will return the value associated with the key specified in the Fa entry argument in the hash table pointed to by the Fa ht argument. The key specified in Fa entry is expected to have the hash value specified by the Fa h argument. </p>
 <p> If Fa ht was created with CK_HT_MODE_BYTESTRING then Fa entry must have been initialized with the ck_ht_entry_set_key3 or ck_ht_entry_set3 functions. If Fa ht was created with CK_HT_MODE_DIRECT then Fa entry must have been initialized with the ck_ht_entry_key_set_direct3 or ck_ht_entry_set_direct3 functions. </p>
 <p> It is expected that Fa h was initialized with ck_ht_hash3 if Fa ht was created with CK_HT_MODE_BYTESTRING. If Fa ht was initialized with CK_HT_MODE_DIRECT then it is expected that Fa h was initialized with the ck_ht_hash_direct3 function. </p>

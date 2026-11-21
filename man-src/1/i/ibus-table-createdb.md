@@ -1,5 +1,4 @@
 ---
-
 title: "ibus-table-createdb(1)"
 name: "ibus-table-createdb"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-ibus-table-createdb/"
 description: "ibus-table-createdb – create ibus-table database from table source"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ibus-table-createdb &#8211; create ibus-table database from table source </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ibus-table-createdb</code> [ <code>-n </code><i>name</i> | <code>&#8211;name </code><i>name</i> ] [ <code>-s </code><i>source</i> | <code>&#8211;source </code><i>source</i> ] [ <code>-e </code><i>extra</i> | <code>&#8211;extra </code><i>extra</i> ] [ <code>-p </code><i>pinyin</i> | <code>&#8211;pinyin </code><i>pinyin</i> ] [ <code>-o</code> ] [ <code>&#8211;no-create-index</code> ] [ <code>-i</code> ] [ <code>&#8211;create-index-only</code> ] [ <code>-d</code> ] [ <code>&#8211;debug</code> ]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp; </p>
+<h2>DESCRIPTION</h2>
 <p> <code>ibus-table-createdb</code> creates a database for ibus-table from a source table.</p>
 <h2>OPTIONS</h2>
 <p> This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>

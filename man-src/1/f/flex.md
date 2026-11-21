@@ -1,5 +1,4 @@
 ---
-
 title: "flex(1)"
 name: "flex"
 section: "1"
@@ -10,7 +9,9 @@ description: "flex – the fast lexical analyser generator"
 
 <h2>NAME</h2>
 <p> flex &#8211; the fast lexical analyser generator</p>
+<h2>SYNOPSIS</h2>
 <p> <code>flex</code> [<i>OPTIONS</i>] [<i>FILE</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Generates programs that perform pattern-matching on text.</p>
 <h3>Table Compression:</h3>
 <dl>

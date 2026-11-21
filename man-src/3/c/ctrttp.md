@@ -1,5 +1,4 @@
 ---
-
 title: "ctrttp(3)"
 name: "ctrttp"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-ctrttp/"
 description: "ctrttp.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ctrttp.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctrttp</code> (UPLO, N, A, LDA, AP, INFO)<br />
  <i></i><code>CTRTTP</code> copies a triangular matrix from the standard full format (TR) to the standard packed format (TP).</p>

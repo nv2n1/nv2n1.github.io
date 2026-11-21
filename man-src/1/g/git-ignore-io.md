@@ -1,5 +1,4 @@
 ---
-
 title: "git-ignore-io(1)"
 name: "git-ignore-io"
 section: "1"
@@ -10,7 +9,9 @@ description: "git-ignore-io – Get sample gitignore file"
 
 <h2>NAME</h2>
 <p> <code>git-ignore-io</code> &#8211; Get sample gitignore file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>git ignore-io</code> [&lt;OPTIONS&gt;]</p>
+<h2>DESCRIPTION</h2>
 <p> Get sample gitignore file from gitignore.io <i><a rel="nofollow" href="https://www.gitignore.io">https://www.gitignore.io</a></i></p>
 <h2>OPTIONS</h2>
 <p> &lt;OPTIONS&gt; </p>

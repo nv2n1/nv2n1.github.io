@@ -1,5 +1,4 @@
 ---
-
 title: "lwres_resutil(3)"
 name: "lwres_resutil"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-lwres_resutil/"
 description: "lwres_string_parse, lwres_addr_parse, lwres_getaddrsbyname, lwres_getnamebyaddr – lightweight resolver utility functions"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lwres_string_parse, lwres_addr_parse, lwres_getaddrsbyname, lwres_getnamebyaddr &#8211; lightweight resolver utility functions </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;lwres/lwres.h&gt;
 </code></pre>
@@ -16,6 +18,7 @@ description: "lwres_string_parse, lwres_addr_parse, lwres_getaddrsbyname, lwres_
 <dt> <code>lwres_result_t lwres_addr_parse(lwres_buffer_t&nbsp;<wbr>*</code><i>b</i><code>, lwres_addr_t&nbsp;<wbr>*</code><i>addr</i><code>);</code></dt>
 <dt> <code>lwres_result_t lwres_getaddrsbyname(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>, const char&nbsp;<wbr>*</code><i>name</i><code>, lwres_uint32_t&nbsp;<wbr></code><i>addrtypes</i><code>, lwres_gabnresponse_t&nbsp;<wbr>**</code><i>structp</i><code>);</code></dt>
 <dt> <code>lwres_result_t lwres_getnamebyaddr(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>, lwres_uint32_t&nbsp;<wbr></code><i>addrtype</i><code>, lwres_uint16_t&nbsp;<wbr></code><i>addrlen</i><code>, const unsigned char&nbsp;<wbr>*</code><i>addr</i><code>, lwres_gnbaresponse_t&nbsp;<wbr>**</code><i>structp</i><code>);</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>lwres_string_parse()</code></p>
 <dd>retrieves a DNS-encoded string starting the current pointer of lightweight resolver buffer <i>b</i>: i.e. <code>b-&gt;current</code>. When the function returns, the address of the first byte of the encoded string is returned via <i>*c</i> and the length of that string is given by <i>*len</i>. The buffer&#8217;s current pointer is advanced to point at the character following the string length, the encoded string, and the trailing <code>NULL</code> character. </dd>
 <p> <code>lwres_addr_parse()</code> extracts an address from the buffer <i>b</i>. The buffer&#8217;s current pointer <code>b-&gt;current</code> is presumed to point at an encoded address: the address preceded by a 32-bit protocol family identifier and a 16-bit length field. The encoded address is copied to <code>addr-&gt;address</code> and <code>addr-&gt;length</code> indicates the size in bytes of the address that was copied. <code>b-&gt;current</code> is advanced to point at the next byte of available data in the buffer following the encoded address. </p>

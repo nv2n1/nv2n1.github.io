@@ -1,5 +1,4 @@
 ---
-
 title: "bson_oid_init_from_string(3)"
 name: "bson_oid_init_from_string"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_oid_init_from_string() – Parses the string containing hex e
 
 <h2>NAME</h2>
 <p> bson_oid_init_from_string() &#8211; Parses the string containing hex encoded oid and initialize the bytes in oid.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 void bson_oid_init_from_string(bson_oid_t *oid,
                                const char *str);
@@ -21,6 +21,7 @@ void bson_oid_init_from_string(bson_oid_t *oid,
 <dl>
 <dt><code>str</code></dt>
 <dd> A string containing a hex encoded version of the oid.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Parses the string containing hex encoded oid and initialize the bytes in <code>oid</code> \&amp;. </p>
 <h2>EXAMPLE</h2>
 <pre>

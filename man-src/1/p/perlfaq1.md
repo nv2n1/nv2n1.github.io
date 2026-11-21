@@ -1,5 +1,4 @@
 ---
-
 title: "perlfaq1(1)"
 name: "perlfaq1"
 section: "1"
@@ -7,13 +6,18 @@ letter: "p"
 url: "/docs/linux/man/1-perlfaq1/"
 ---
 
-perlfaq1 - General Questions About Perl 
+<h2 class="name">NAME</h2>
+ 
+
+ perlfaq1 - General Questions About Perl 
 
 <h2>VERSION</h2>
 
  version 5.20190126
 
-This section of the <font SIZE="-1">FAQ</font> answers very general, high-level questions about Perl.
+<h2>DESCRIPTION</h2>
+
+ This section of the <font SIZE="-1">FAQ</font> answers very general, high-level questions about Perl.
 
 <h3>What is Perl?</h3>
 

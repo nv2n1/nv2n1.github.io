@@ -1,5 +1,4 @@
 ---
-
 title: "uclampset(1)"
 name: "uclampset"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-uclampset/"
 description: "uclampset – manipulate the utilization clamping attributes of the system or a process"
 ---
 
+<h2 class="name">NAME</h2>
+<p> uclampset &#8211; manipulate the utilization clamping attributes of the system or a process </p>
+<h2>SYNOPSIS</h2>
 <p> <code>uclampset</code> [options] [<code>-m</code> <i>uclamp_min</i>] [<code>-M</code> <i>uclamp_max] _command argument</i> </p>
 <p> <code>uclampset</code> [options] [<code>-m</code> <i>uclamp_min</i>] [<code>-M</code> <i>uclamp_max</i>] <code>-p</code> <i>PID</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>uclampset</code> sets or retrieves the utilization clamping attributes of an existing <i>PID</i>, or runs <i>command</i> with the given attributes. </p>
 <p> Utilization clamping is a new feature added in v5.3. It gives a hint to the scheduler about the allowed range of utilization the task should be operating at. </p>
 <p> The utilization of the task affects frequency selection and task placement. Only schedutil cpufreq governor understands handling util clamp hints at the time of writing. Consult your kernel docs for further info about other cpufreq governors support. </p>

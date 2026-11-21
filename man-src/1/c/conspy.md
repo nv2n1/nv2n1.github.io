@@ -1,5 +1,4 @@
 ---
-
 title: "conspy(1)"
 name: "conspy"
 section: "1"
@@ -10,7 +9,9 @@ description: "conspy – virtual console spy tool"
 
 <h2>NAME</h2>
 <p> conspy &#8211; virtual console spy tool</p>
+<h2>SYNOPSIS</h2>
 <p> <code>conspy</code> [ options ] [ <i>console</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Conspy</i> allows the user to take control of a Linux virtual console. The user can see what is displayed on the console and their keystrokes are sent to it. </p>
 <p> To exit from <i>conspy</i> press the escape key three times in quick succession. </p>
 <h2>COMMAND LINE</h2>

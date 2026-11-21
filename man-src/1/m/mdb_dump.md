@@ -1,5 +1,4 @@
 ---
-
 title: "mdb_dump(1)"
 name: "mdb_dump"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mdb_dump/"
 description: "mdb_dump – LMDB environment export tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mdb_dump &#8211; LMDB environment export tool </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mdb_dump</code> [<code>-V</code>] [<code>-f</code><i>&nbsp;<wbr>file</i>] [<code>-l</code>] [<code>-n</code>] [<code>-p</code>] [<code>-a</code>&nbsp;<wbr>| <code>-s</code><i>&nbsp;<wbr>subdb</i>] <code>&nbsp;<wbr>envpath</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>mdb_dump</code> utility reads a database and writes its contents to the standard output using a portable flat-text format understood by the <code><a href="/docs/linux/man/1-mdb_load/">mdb_load</a></code>(1) utility.</p>
 <h2>OPTIONS</h2>
 <dl>

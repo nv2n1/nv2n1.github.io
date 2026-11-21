@@ -1,5 +1,4 @@
 ---
-
 title: "fi_pingpong(1)"
 name: "fi_pingpong"
 section: "1"
@@ -7,7 +6,14 @@ letter: "f"
 url: "/docs/linux/man/1-fi_pingpong/"
 ---
 
-fi_pingpong - Quick and simple pingpong test for libfabric 
+<h2 class="name">NAME</h2>
+ 
+
+ 
+
+ fi_pingpong - Quick and simple pingpong test for libfabric 
+
+<h2>SYNOPSIS</h2>
 
 <dl>
 <dt>
@@ -48,7 +54,11 @@ fi_pingpong &amp;nbsp;
 connect to server
 </code></pre></dd></dl>
 
-fi_pingpong is a pingpong test for the core feature of the libfabric library: transmitting data between two processes. fi_pingpong also displays aggregated statistics after each test run, and can additionally verify data integrity upon receipt. 
+<h2>DESCRIPTION</h2>
+
+ 
+
+ fi_pingpong is a pingpong test for the core feature of the libfabric library: transmitting data between two processes. fi_pingpong also displays aggregated statistics after each test run, and can additionally verify data integrity upon receipt. 
 
  By default, the datagram (FI_EP_DGRAM) endpoint is used for the test, unless otherwise specified via -e.
 

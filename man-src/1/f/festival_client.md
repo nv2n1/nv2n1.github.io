@@ -1,5 +1,4 @@
 ---
-
 title: "festival_client(1)"
 name: "festival_client"
 section: "1"
@@ -10,7 +9,9 @@ description: "festival_client – client access to festiva; text-to-speech serve
 
 <h2>NAME</h2>
 <p> festival_client &#8211; client access to festiva; text-to-speech server mode</p>
+<h2>SYNOPSIS</h2>
 <p> <code>festival_client</code> <i>[options]</i> <i>[file0]</i> <i>[file1]</i> <i>&#8230;</i> </p>
+<h2>DESCRIPTION</h2>
 <p> Allows sending commands and/or test to a festival test-to-speech server. Festival may be started in server mode using the option <code>&#8211;server</code> </p>
 <p> festival-clinet allows waveforms ot be generated faster as not time is required for start up. See the festival manual for more details on recommended use. </p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "rastream(1)"
 name: "rastream"
 section: "1"
@@ -10,7 +9,9 @@ description: "rastream – stream block processor for argus(8) data."
 
 <h2>NAME</h2>
 <p> <code>rastream</code> &#8211; stream block processor for <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>rastream</code> [[<code>-M</code> <i>splitmode</i>] [<i>splitmode options</i>]] [<code>-f</code> <i>file processing program</i> -B secs] [<code>raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Rastream</code> reads <code>argus</code> data from an <i>argus-data</i> source, and splits the resulting output into consecutive sections of records based on size, count time, or flow event, writing the output into a set of output-files. </p>
 <p> <code>Rastream</code> provides the option to run a program against the output files, <code>seconds</code> after the file is understood to be finished. The program must be specified in a manner so that <code>rastream</code> can find it, either within the system $PATH, or provided as a full pathname. </p>
 <p> By default, <code>rastream</code> splits the stream by output file record count, putting 10,000 records of input into each <code>argus</code> output file, or standard out, as needed. The behavior is similar to the unix split.1 command. </p>

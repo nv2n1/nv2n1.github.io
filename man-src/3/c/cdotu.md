@@ -1,5 +1,4 @@
 ---
-
 title: "cdotu(3)"
 name: "cdotu"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cdotu/"
 description: "cdotu.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cdotu.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> COMPLEX function <code>cdotu</code> (N, CX, INCX, CY, INCY)<br />
  <i></i><code>CDOTU</code></p>

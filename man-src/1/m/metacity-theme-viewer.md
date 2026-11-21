@@ -1,5 +1,4 @@
 ---
-
 title: "metacity-theme-viewer(1)"
 name: "metacity-theme-viewer"
 section: "1"
@@ -10,7 +9,9 @@ description: "metacity-theme-viewer – view metacity themes"
 
 <h2>NAME</h2>
 <p> metacity-theme-viewer &#8211; view metacity themes</p>
+<h2>SYNOPSIS</h2>
 <p> <code>metacity-theme-viewer</code> [ <i>THEMENAME</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>metacity-theme-viewer</code> allows you to preview any installed Metacity theme. </p>
 <p> When designing a new Metacity theme, you can use <code>metacity-theme-viewer</code> to measure the performance of a window frame option, and to preview the option.</p>
 <h2>OPTIONS</h2>

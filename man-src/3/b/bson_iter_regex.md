@@ -1,5 +1,4 @@
 ---
-
 title: "bson_iter_regex(3)"
 name: "bson_iter_regex"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_iter_regex() – The bson_iter_regex() function shall retriev
 
 <h2>NAME</h2>
 <p> bson_iter_regex() &#8211; The bson_iter_regex() function shall retrieve the contents of a BSON_TYPE_REGEX element currently observed by iter.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 const char *
 bson_iter_regex(const bson_iter_t *iter,
@@ -22,6 +22,7 @@ bson_iter_regex(const bson_iter_t *iter,
 <dl>
 <dt><code>options</code></dt>
 <dd> A (null).</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_iter_regex/">bson_iter_regex</a>(3)</code> function shall retrieve the contents of a BSON_TYPE_REGEX element currently observed by <code>iter</code> \&amp;. </p>
 <p> It is invalid to call this function when not observing an element of type BSON_TYPE_REGEX. </p>
 <h2>RETURNS</h2>

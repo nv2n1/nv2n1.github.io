@@ -1,5 +1,4 @@
 ---
-
 title: "slice2html(1)"
 name: "slice2html"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-slice2html/"
 description: "slice2html – The Slice to HTML documentation tool."
 ---
 
+<h2 class="name">NAME</h2>
+<p> slice2html &#8211; The Slice to HTML documentation tool.</p>
+<h2>SYNOPSIS</h2>
 <p> slice2html [options] [files] </p>
+<h2>DESCRIPTION</h2>
 <p> slice2html generates HTML documentation from Slice files. </p>
 <p> Full documentation for slice2html is available online at:<br />
  &quot;<a rel="nofollow" href="http://doc.zeroc.com/display/Ice/Generating+Slice+Documentation">http://doc.zeroc.com/display/Ice/Generating+Slice+Documentation</a>&quot;. </p>

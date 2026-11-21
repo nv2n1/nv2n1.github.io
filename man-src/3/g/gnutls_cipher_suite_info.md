@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_cipher_suite_info(3)"
 name: "gnutls_cipher_suite_info"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_cipher_suite_info – API function"
 
 <h2>NAME</h2>
 <p> gnutls_cipher_suite_info &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>const char * gnutls_cipher_suite_info(size_t </code><i>idx</i><code>, unsigned char * </code><i>cs_id</i><code>, gnutls_kx_algorithm_t * </code><i>kx</i><code>, gnutls_cipher_algorithm_t * </code><i>cipher</i><code>, gnutls_mac_algorithm_t * </code><i>mac</i><code>, gnutls_protocol_t * </code><i>min_version</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -26,6 +26,7 @@ description: "gnutls_cipher_suite_info – API function"
 <dd> output variable indicating MAC algorithm, or <code>NULL</code>.</dd>
 <dt>gnutls_protocol_t * min_version</dt>
 <dd> output variable indicating TLS protocol version, or <code>NULL</code>.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Get information about supported cipher suites. Use the function iteratively to get information about all supported cipher suites. Call with idx=0 to get information about first cipher suite, then idx=1 and so on until the function returns NULL.</p>
 <h2>RETURNS</h2>
 <p> the name of <i>idx</i> cipher suite, and set the information about the cipher suite in the output variables. If <i>idx</i> is out of bounds, <code>NULL</code> is returned.</p>

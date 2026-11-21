@@ -1,5 +1,4 @@
 ---
-
 title: "guestfs-security(1)"
 name: "guestfs-security"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-guestfs-security/"
 description: "guestfs-security – security of libguestfs"
 ---
 
+<h2 class="name">NAME</h2>
+<p> guestfs-security &#8211; security of libguestfs </p>
+<h2>DESCRIPTION</h2>
 <p> This manual page discusses security implications of using libguestfs, particularly with untrusted or malicious guests or disk images.</p>
 <h2>REPORTING SECURITY PROBLEMS</h2>
 <p> If you wish to privately report a security issue, please follow the Red Hat security procedure at <a rel="nofollow" href="https://access.redhat.com/security/team/contact">https://access.redhat.com/security/team/contact</a> </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "hwloc_bitmap_dup(3)"
 name: "hwloc_bitmap_dup"
 section: "3"
@@ -7,7 +6,10 @@ letter: "h"
 url: "/docs/linux/man/3-hwloc_bitmap_dup/"
 ---
 
-hwlocality_bitmap - The bitmap API 
+<h2 class="name">NAME</h2>
+ 
+
+ hwlocality_bitmap - The bitmap API 
 
 <h3>Macros</h3>
 

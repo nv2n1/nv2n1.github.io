@@ -1,5 +1,4 @@
 ---
-
 title: "git-reset(1)"
 name: "git-reset"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-reset/"
 description: "git-reset – Reset current HEAD to the specified state"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-reset &#8211; Reset current HEAD to the specified state </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git reset[-q][&lt;tree - ish&gt;][--]&lt;pathspec&gt;... git reset[-q][--pathspec - from - file = &lt;file&gt;[--pathspec - file - nul]][&lt;tree - ish&gt;] git reset(--patch | -p)[&lt;tree - ish&gt;][--][&lt;pathspec&gt;...] git reset[--soft | --mixed[-N] | --hard | --merge | --keep][-q][&lt;commit&gt;]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> In the first three forms, copy entries from <code>&lt;tree-ish&gt;</code> to the index. In the last form, set the current branch head (<code>HEAD</code>) to <code>&lt;commit&gt;</code>, optionally modifying index and working tree to match. The <code>&lt;tree-ish&gt;</code>/<code>&lt;commit&gt;</code> defaults to <code>HEAD</code> in all forms. </p>
 <p> <i>git reset</i> [-q] [&lt;tree-ish&gt;] [&#8211;] &lt;pathspec&gt;&#8230;, <i>git reset</i> [-q] [&#8211;pathspec-from-file=&lt;file&gt; [&#8211;pathspec-file-nul]] [&lt;tree-ish&gt;]</p>
 <dl>

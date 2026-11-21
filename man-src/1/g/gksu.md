@@ -1,5 +1,4 @@
 ---
-
 title: "gksu(1)"
 name: "gksu"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-gksu/"
 description: "gksu – GTK+ frontend for su and sudo"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gksu &#8211; GTK+ frontend for su and sudo </p>
+<h2>SYNOPSIS</h2>
 <p> <code>gksu</code> </p>
 <p> <code>gksu</code> [<i>-u &lt;user&gt;</i>] [<i>options</i>] <i>&lt;command&gt;</i> </p>
 <p> <code>gksudo</code> [<i>-u &lt;user&gt;</i>] [<i>options</i>] <i>&lt;command&gt;</i></p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly <code>gksu</code> and <code>gksudo</code> </p>
 <p> gksu is a frontend to su and gksudo is a frontend to sudo. Their primary purpose is to run graphical commands that need root without the need to run an X terminal emulator and using su directly. </p>
 <p> Notice that all the magic is done by the underlying library, libgksu. Also notice that the library will decide if it should use su or sudo as backend using the <code>/apps/gksu/sudo-mode</code> gconf key, if you call the <code>gksu</code> command. You can force the backend by using the <code>gksudo</code> command, or by using the <code>&#8211;sudo-mode</code> and <code>&#8211;su-mode</code> options. </p>

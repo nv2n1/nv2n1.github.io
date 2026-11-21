@@ -1,5 +1,4 @@
 ---
-
 title: "virt-tar-in(1)"
 name: "virt-tar-in"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-virt-tar-in/"
 description: "virt-tar-in – Unpack a tarball into a virtual machine disk image."
 ---
 
+<h2 class="name">NAME</h2>
+<p> virt-tar-in &#8211; Unpack a tarball into a virtual machine disk image. </p>
+<h2>SYNOPSIS</h2>
 <pre>
  virt-tar-in -a disk.img data.tar /destination
  virt-tar-in -d domain data.tar /destination
@@ -15,6 +17,7 @@ description: "virt-tar-in – Unpack a tarball into a virtual machine disk image
 </pre>
 <h2>WARNING</h2>
 <p> Using <tt>&quot;virt-tar-in&quot;</tt> on live virtual machines, or concurrently with other disk editing tools, can be dangerous, potentially causing disk corruption. The virtual machine must be shut down before you use this command, and disk images must not be edited concurrently.</p>
+<h2>DESCRIPTION</h2>
 <p> <tt>&quot;virt-tar-in&quot;</tt> unpacks an uncompressed tarball into a virtual machine disk image or named libvirt domain. </p>
 <p> The first parameter is the tar file. Use <tt>&quot;-&quot;</tt> to read the tar file from standard input. The second parameter is the absolute target directory to unpack into.</p>
 <h2>EXAMPLES</h2>

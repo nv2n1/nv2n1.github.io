@@ -1,5 +1,4 @@
 ---
-
 title: "acl_cmp(3)"
 name: "acl_cmp"
 section: "3"
@@ -8,10 +7,13 @@ url: "/docs/linux/man/3-acl_cmp/"
 description: "acl_cmp – compare two ACLs"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>acl_cmp</code> &#8211; compare two ACLs </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>
+<h2>SYNOPSIS</h2>
 <p> In sys/types.h In acl/libacl.h Ft int Fn acl_cmp acl_t acl1 acl_t acl2</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn acl_cmp function compares the ACLs pointed to by the arguments <i>acl1</i> and <i>acl2</i> for equality. The two ACLs are considered equal if for each entry in <i>acl1</i> there is an entry in <i>acl2</i> with matching tag type, qualifier, and permissions, and vice versa.</p>
 <h2>RETURN VALUE</h2>
 <p> If successful, the Fn acl_cmp function returns <code>0</code> if the two ACLs <i>acl1</i> and <i>acl2</i> are equal, and <code>1</code> if they differ. Otherwise, the value <code>-1</code> is returned and the global variable <i>errno</i> is set to indicate the error.</p>

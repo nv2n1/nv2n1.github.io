@@ -1,5 +1,4 @@
 ---
-
 title: "gribtonc(1)"
 name: "gribtonc"
 section: "1"
@@ -10,9 +9,11 @@ description: "gribtonc – GRIB to netCDF decoder"
 
 <h2>NAME</h2>
 <p> gribtonc &#8211; GRIB to netCDF decoder</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code></dt>
 <dd>gribtonc [-l&nbsp;<wbr></code><i>logpath</i>] [-v] [-t&nbsp;<wbr><i>timeout</i>] [-e&nbsp;<wbr><i>errpath</i>] [-g&nbsp;<wbr><i>userparams.tbl</i>] [-q&nbsp;<wbr><i>qspecs</i>] <i>CDL_path</i> <i>netCDF_path</i></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This program decodes GRIB products (embedded in WMO product envelopes) on the NWS High-Resolution Data Service (HRS) feed, writing the decoded products into a single netCDF output file, specified by <i>netCDF_path</i>. In case the output netCDF file does not already exist, the <i>CDL_path</i> must be supplied to specify the structure for the desired netCDF file, which <code>gribtonc</code> creates. The default parameter translation is made according to a definition by UCAR, but the user may supply specific translations in a separate file by the -g tabfile option. The user-supplied translations will override the default ones. GRIB products are converted to the units specified for the appropriate netCDF variable, if this differs from the units used for the GRIB parameter. A set of CDL files for all the model outputs appearing on the HRS data stream is provided with <code>gribtonc</code> for use in decoding HRS GRIB data. </p>
 <h2>FORMAT OF GRIB TO NETCDF TRANSLATION TABLE</h2>
 <p> The format of the translation table is as follows: Each line contains</p>

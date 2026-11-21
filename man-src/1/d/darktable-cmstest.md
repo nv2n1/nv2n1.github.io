@@ -1,5 +1,4 @@
 ---
-
 title: "darktable-cmstest(1)"
 name: "darktable-cmstest"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-darktable-cmstest/"
 description: "darktable-cmstest – test if the color management subsystem of your computer is correctly configured"
 ---
 
+<h2 class="name">NAME</h2>
+<p> darktable-cmstest &#8211; test if the color management subsystem of your computer is correctly configured </p>
+<h2>SYNOPSIS</h2>
 <pre>
     darktable-cmstest
 </pre>
+<h2>DESCRIPTION</h2>
 <p> <code>darktable</code> is a digital photography workflow application for <code>Linux</code>, <code>Mac </code><font SIZE="-1"><code>OS X</code></font> and several other <code>Unices</code>. It&#8217;s described further in <i><a href="/docs/linux/man/1-darktable/">darktable</a></i>(1). </p>
 <p> <code>darktable-cmstest</code> investigates if the color management subsystem of your computer is correctly configured and it displays some useful information about the installed monitor profile(s).</p>
 <h2>SEE ALSO</h2>

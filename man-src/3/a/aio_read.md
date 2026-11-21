@@ -1,5 +1,4 @@
 ---
-
 title: "aio_read(3)"
 name: "aio_read"
 section: "3"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/3-aio_read/"
 description: "aio_read – asynchronous read"
 ---
 
+<h2 class="name">NAME</h2>
+<p> aio_read &#8211; asynchronous read </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;aio.h&gt;</code> </p>
 <p> <code>int aio_read(struct aiocb *</code><i>aiocbp</i><code>);</code> </p>
 <p> Link with <i>-lrt</i>.</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>aio_read</code>() function queues the I/O request described by the buffer pointed to by <i>aiocbp</i>. This function is the asynchronous analog of <code><a href="/docs/linux/man/2-read/">read</a></code>(2). The arguments of the call </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;read(fd, buf, count) </p>
 <p> correspond (in order) to the fields <i>aio_fildes</i>, <i>aio_buf</i>, and <i>aio_nbytes</i> of the structure pointed to by <i>aiocbp</i>. (See <code><a href="/docs/linux/man/7-aio/">aio</a></code>(7) for a description of the <i>aiocb</i> structure.) </p>

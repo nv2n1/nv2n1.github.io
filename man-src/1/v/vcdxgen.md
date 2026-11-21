@@ -1,5 +1,4 @@
 ---
-
 title: "vcdxgen(1)"
 name: "vcdxgen"
 section: "1"
@@ -10,7 +9,9 @@ description: "vcdxgen – manual page for vcdxgen 0.7.24"
 
 <h2>NAME</h2>
 <p> vcdxgen &#8211; manual page for vcdxgen 0.7.24</p>
+<h2>SYNOPSIS</h2>
 <p> <code>vcdxgen</code> <i>mpeg-track1 </i>[<i>mpeg-track2</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt><code>-o</code>, <code>&#8211;output-file</code>=<i>FILE</i></dt>
 <dd> specify xml file for output (default: &#8216;videocd.xml&#8217;)</dd>

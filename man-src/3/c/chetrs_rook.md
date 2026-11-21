@@ -1,5 +1,4 @@
 ---
-
 title: "chetrs_rook(3)"
 name: "chetrs_rook"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-chetrs_rook/"
 description: "chetrs_rook.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> chetrs_rook.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chetrs_rook</code> (UPLO, N, NRHS, A, LDA, IPIV, B, LDB, INFO)<br />
  <i></i><code>CHETRS_ROOK</code> computes the solution to a system of linear equations A * X = B for HE matrices using factorization obtained with one of the bounded diagonal pivoting methods (max 2 interchanges)</p>

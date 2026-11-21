@@ -1,5 +1,4 @@
 ---
-
 title: "ipa-adtrust-install(1)"
 name: "ipa-adtrust-install"
 section: "1"
@@ -10,7 +9,9 @@ description: "ipa-adtrust-install – Prepare an IPA server to be able to establ
 
 <h2>NAME</h2>
 <p> ipa-adtrust-install &#8211; Prepare an IPA server to be able to establish trust relationships with AD domains</p>
+<h2>SYNOPSIS</h2>
 <p> ipa-adtrust-install [<i>OPTION</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Adds all necessary objects and configuration to allow an IPA server to create a trust to an Active Directory domain. This requires that the IPA server is already installed and configured. </p>
 <p> Please note you will not be able to estabilish an trust to an Active Directory domain unless the realm name of the IPA server matches its domain name. </p>
 <p> ipa-adtrust-install can be run multiple times to reinstall deleted objects or broken configuration files. E.g. a fresh samba configuration (smb.conf file and registry based configuration can be created. Other items like e.g. the configuration of the local range cannot be changed by running ipa-adtrust-install a second time because with changes here other objects might be affected as well. </p>

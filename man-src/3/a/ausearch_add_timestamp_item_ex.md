@@ -1,5 +1,4 @@
 ---
-
 title: "ausearch_add_timestamp_item_ex(3)"
 name: "ausearch_add_timestamp_item_ex"
 section: "3"
@@ -10,8 +9,10 @@ description: "ausearch_add_timestamp_item_ex – build up search rule"
 
 <h2>NAME</h2>
 <p> ausearch_add_timestamp_item_ex &#8211; build up search rule</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>
 <p> int ausearch_add_timestamp_item_ex(auparse_state_t *au, const char *op, time_t sec, unsigned milli, unsigned serial, ausearch_rule_t how) </p>
+<h2>DESCRIPTION</h2>
 <p> ausearch_add_timestamp_item adds an event time condition to the current audit search expression. The search conditions can then be used to scan logs, files, or buffers for something of interest. The op parameter specifies the desired comparison. Legal op values are <i>&lt;</i>, <i>&lt;=</i>, <i>&gt;=</i>, <i>&gt;</i> and <i>=</i>. The left operand of the comparison operator is the timestamp of the examined event, the right operand is specified by the sec, milli, and serial parameters. </p>
 <p> The how value determines how this search condition will affect the existing search expression if one is already defined. The possible values are:</p>
 <dl>

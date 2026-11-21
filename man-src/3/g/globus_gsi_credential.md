@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_gsi_credential/"
 description: "Globus GSI Credential –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Globus GSI Credential &#8211; </p>
 <h3>Modules</h3>
 <p> <code>Activation</code> </p>
 <p> <code>Credential Handle Management</code> </p>

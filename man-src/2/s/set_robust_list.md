@@ -1,5 +1,4 @@
 ---
-
 title: "set_robust_list(2)"
 name: "set_robust_list"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-set_robust_list/"
 description: "get_robust_list, set_robust_list – get/set list of robust futexes"
 ---
 
+<h2 class="name">NAME</h2>
+<p> get_robust_list, set_robust_list &#8211; get/set list of robust futexes </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/futex.h&gt;
 #include &lt;sys/types.h&gt;
@@ -17,6 +19,7 @@ long get_robust_list(int pid, struct robust_list_head **head_ptr,
 long set_robust_list(struct robust_list_head *head, size_t len);
 </code></pre>
 <p> <i>Note</i>: There are no glibc wrappers for these system calls; see NOTES.</p>
+<h2>DESCRIPTION</h2>
 <p> These system calls deal with per-thread robust futex lists. These lists are managed in user space: the kernel knows only about the location of the head of the list. A thread can inform the kernel of the location of its robust futex list using <code>set_robust_list</code>(). The address of a thread&#8217;s robust futex list can be obtained using <code>get_robust_list</code>(). </p>
 <p> The purpose of the robust futex list is to ensure that if a thread accidentally fails to unlock a futex before terminating or calling <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2), another thread that is waiting on that futex is notified that the former owner of the futex has died. This notification consists of two pieces: the <code>FUTEX_OWNER_DIED</code> bit is set in the futex word, and the kernel performs a <code><a href="/docs/linux/man/2-futex/">futex</a></code>(2) <code>FUTEX_WAKE</code> operation on one of the threads waiting on the futex. </p>
 <p> The <code>get_robust_list</code>() system call returns the head of the robust futex list of the thread whose thread ID is specified in <i>pid</i>. If <i>pid</i> is 0, the head of the list for the calling thread is returned. The list head is stored in the location pointed to by <i>head_ptr</i>. The size of the object pointed to by <i>**head_ptr</i> is stored in <i>len_ptr</i>. </p>

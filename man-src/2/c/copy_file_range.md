@@ -1,5 +1,4 @@
 ---
-
 title: "copy_file_range(2)"
 name: "copy_file_range"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-copy_file_range/"
 description: "copy_file_range – Copy a range of data from one file to another"
 ---
 
+<h2 class="name">NAME</h2>
+<p> copy_file_range &#8211; Copy a range of data from one file to another </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE
 #include &lt;unistd.h&gt;
@@ -15,6 +17,7 @@ ssize_t copy_file_range(int fd_in, loff_t *off_in,
                         int fd_out, loff_t *off_out,
                         size_t len, unsigned int flags);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>copy_file_range</code>() system call performs an in-kernel copy between two file descriptors without the additional cost of transferring data from the kernel to user space and then back into the kernel. It copies up to <i>len</i> bytes of data from the source file descriptor <i>fd_in</i> to the target file descriptor <i>fd_out</i>, overwriting any data that exists within the requested range of the target file. </p>
 <p> The following semantics apply for <i>off_in</i>, and similar statements apply to <i>off_out</i>:</p>
 <dl>

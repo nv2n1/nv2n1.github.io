@@ -1,5 +1,4 @@
 ---
-
 title: "config_data(1)"
 name: "config_data"
 section: "1"
@@ -7,9 +6,14 @@ letter: "c"
 url: "/docs/linux/man/1-config_data/"
 ---
 
-config_data - Query or change configuration of Perl modules 
+<h2 class="name">NAME</h2>
+ 
 
-<pre><code>
+ config_data - Query or change configuration of Perl modules 
+
+<h2>SYNOPSIS</h2>
+
+ <pre><code>
 #Get config / feature values
 config_data-- module Foo::Bar-- feature bazzable
     config_data-- module Foo::Bar-- config magic_number
@@ -19,7 +23,9 @@ config_data-- module Foo::Bar-- feature bazzable
     config_data-- help
 </code></pre>
 
-The <tt>&quot;config_data&quot;</tt> tool provides a command-line interface to the configuration of Perl modules. By ``configuration'', we mean something akin to ``user preferences'' or ``local settings''. This is a formalization and abstraction of the systems that people like Andreas Koenig (<tt>&quot;CPAN::Config&quot;</tt>), Jon Swartz (<tt>&quot;HTML::Mason::Config&quot;</tt>), Andy Wardley (<tt>&quot;Template::Config&quot;</tt>), and Larry Wall (perl's own Config.pm) have developed independently. 
+<h2>DESCRIPTION</h2>
+
+ The <tt>&quot;config_data&quot;</tt> tool provides a command-line interface to the configuration of Perl modules. By ``configuration'', we mean something akin to ``user preferences'' or ``local settings''. This is a formalization and abstraction of the systems that people like Andreas Koenig (<tt>&quot;CPAN::Config&quot;</tt>), Jon Swartz (<tt>&quot;HTML::Mason::Config&quot;</tt>), Andy Wardley (<tt>&quot;Template::Config&quot;</tt>), and Larry Wall (perl's own Config.pm) have developed independently. 
 
  The configuration system employed here was developed in the context of <tt>&quot;Module::Build&quot;</tt>. Under this system, configuration information for a module <tt>&quot;Foo&quot;</tt>, for example, is stored in a module called <tt>&quot;Foo::ConfigData&quot;</tt>) (I would have called it <tt>&quot;Foo::Config&quot;</tt>, but that was taken by all those other systems mentioned in the previous paragraph...). These <tt>&quot;...::ConfigData&quot;</tt> modules contain the configuration data, as well as publicly accessible methods for querying and setting (yes, actually re-writing) the configuration data. The <tt>&quot;config_data&quot;</tt> script (whose docs you are currently reading) is merely a front-end for those methods. If you wish, you may create alternate front-ends. 
 

@@ -1,5 +1,4 @@
 ---
-
 title: "groffer(1)"
 name: "groffer"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-groffer/"
 description: "groffer – display groff files and man pages on X and tty"
 ---
 
+<h2 class="name">NAME</h2>
+<p> groffer &#8211; display groff files and man pages on X and tty </p>
+<h2>SYNOPSIS</h2>
 <p> [<i>mode-option</i> &#8230; ] [<i>groff-option</i> &#8230; ] [<i>man-option</i> &#8230; ] [<i>X-option</i> &#8230; ] [ <code>&#8212;</code> ] [<i>filespec</i> &#8230; ] <code>-h</code> <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>groffer</code> program is the easiest way to use <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1). It can display arbitrary documents written in the <i>groff</i> language, see <code><a href="/docs/linux/man/7-groff/">groff</a></code>(7), or other <i>roff</i> languages, see <code><a href="/docs/linux/man/7-roff/">roff</a></code>(7), that are compatible to the original <i>troff</i> language. It finds and runs all necessary <i>groff</i> preprocessors, such as <code>chem</code>. </p>
 <p> The <code>groffer</code> program also includes many of the features for finding and displaying the Unix manual pages (<i>man~pages</i>), such that it can be used as a replacement for a <code><a href="/docs/linux/man/1-man/">man</a></code>(1) program. Moreover, compressed files that can be handled by <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1) or <code><a href="/docs/linux/man/1-bzip2/">bzip2</a></code>(1) are decompressed on-the-fly. </p>
 <p> The normal usage is quite simple by supplying a file name or name of a <i>man~page</i> without further options. But the option handling has many possibilities for creating special behaviors. This can be done either in configuration files, with the shell environment variable <i>GROFFER_OPT</i>, or on the command line. </p>

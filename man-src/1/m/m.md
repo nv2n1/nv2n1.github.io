@@ -1,5 +1,4 @@
 ---
-
 title: "m(1)"
 name: "m"
 section: "1"
@@ -12,6 +11,7 @@ description: "m.proj – Convert coordinates from one projection to another (cs2
 <p> <i></i><code>m.proj</code> &#8211; Convert coordinates from one projection to another (cs2cs frontend).</p>
 <h2>KEYWORDS</h2>
 <p> miscellaneous, projection</p>
+<h2>SYNOPSIS</h2>
 <p> <code>m.proj</code><br />
  <code>m.proj help</code><br />
  <code>m.proj</code> [-<code>iodv</code>] [<code>input</code>=<i>filename</i>] [<code>output</code>=<i>filename</i>] [<code>fs</code>=<i>character</i>] [<code>proj_in</code>=<i>string</i>] [<code>proj_out</code>=<i>string</i>] [&#8211;<code>verbose</code>] [&#8211;<code>quiet</code>]</p>
@@ -53,6 +53,7 @@ description: "m.proj – Convert coordinates from one projection to another (cs2
 <dt><code>proj_out</code>=<i>string</i></dt>
 <dd>
  Output projection parameters (PROJ.4 style)</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This program allows a user to convert coordinates from one projection to another. Coordinates can be read from one file, converted, and results written to another file. Alternatively, if the <code>input</code> and/or <code>output</code> options are omitted, eastings and northings may be passed to the program directly from stdin and results sent directly to stdout. In this way <i>m.proj</i> can be used as a simple frontend to the PROJ.4 <i>cs2cs</i> utility. The <code>-i</code> or <code>-o</code> flags make the task especially easy for the common problem of converting to or from lat/long WGS84. </p>
 <p> <i>Note</i>: This program does not transform GRASS maps, it is designed to determine the equivalent coordinate values of an individual position or list of positions. Use <i>v.proj</i> or <i>r.proj</i> to reproject GRASS maps.</p>
 <h2>NOTES</h2>

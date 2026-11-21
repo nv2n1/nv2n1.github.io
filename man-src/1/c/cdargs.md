@@ -1,5 +1,4 @@
 ---
-
 title: "cdargs(1)"
 name: "cdargs"
 section: "1"
@@ -10,11 +9,13 @@ description: "cdargs – bookmarks and browser for cd shell built-in"
 
 <h2>NAME</h2>
 <p> cdargs &#8211; bookmarks and browser for cd shell built-in</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cdargs</code> [<i>OPTIONS</i>] </p>
 <p> <code>function cv () { </code><br />
  <code> cdargs $1 &amp;&amp; cd `cat $HOME/.cdargsresult` ;</code><br />
  <code>}</code><br />
  <code>cv </code> [<i>Needle</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> With <i>cdargs</i> you can jump to various places throughout the file-system that are defined using a plain text, line oriented bookmarks file. </p>
 <p> You can create bookmarks by editing your bookmarks file &quot;$HOME/.cdargs&quot; using your favorite editor, by using the &quot;&#8211;add&quot; option to <i>cdargs</i> or by using the built-in mechanism that will be described later. </p>
 <p> While you are in <i>cdargs</i> you can use various commands to navigate through your list of bookmarks and through the file-system. These are described below in the section &quot;COMMANDS&quot;. The most commonly used and most obvious commands are the up/down keys for navigation, &quot;ENTER&quot; for selection of a path and &quot;q&quot; for quit. </p>

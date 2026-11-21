@@ -1,5 +1,4 @@
 ---
-
 title: "docker-latest-rmi(1)"
 name: "docker-latest-rmi"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-latest-rmi/"
 description: "docker-rmi – Remove one or more images"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-rmi &#8211; Remove one or more images </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker rmi</code> [<code>-f</code>|<code>&#8211;force</code>] [<code>&#8211;help</code>] [<code>&#8211;no-prune</code>] IMAGE [IMAGE&#8230;] </p>
+<h2>DESCRIPTION</h2>
 <p> Removes one or more images from the host node. This does not remove images from a registry. You cannot remove an image of a running container unless you use the <code>-f</code> option. To see all images on a host use the <code>docker images</code> command. </p>
 <h2>OPTIONS</h2>
 <p> <code>-f</code>, <code>&#8211;force</code>=<i>true</i>|<i>false</i><br />

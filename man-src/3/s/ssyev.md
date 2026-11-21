@@ -1,5 +1,4 @@
 ---
-
 title: "ssyev(3)"
 name: "ssyev"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-ssyev/"
 description: "ssyev.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ssyev.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssyev</code> (JOBZ, UPLO, N, A, LDA, W, WORK, LWORK, INFO)<br />
  <i></i><code> SSYEV computes the eigenvalues and, optionally, the left and/or right eigenvectors for SY matrices</code></p>

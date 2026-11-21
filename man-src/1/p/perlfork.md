@@ -1,5 +1,4 @@
 ---
-
 title: "perlfork(1)"
 name: "perlfork"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-perlfork/"
 description: "perlfork – Perl’s fork() emulation"
 ---
 
+<h2 class="name">NAME</h2>
+<p> perlfork &#8211; Perl&#8217;s fork() emulation </p>
+<h2>SYNOPSIS</h2>
 <pre>
     NOTE:  As of the 5.8.0 release, fork() emulation has considerably
     matured.  However, there are still a few known bugs and differences
@@ -17,6 +19,7 @@ description: "perlfork – Perl’s fork() emulation"
 <p> Perl provides a <code>fork()</code> keyword that corresponds to the Unix system call of the same name. On most Unix-like platforms where the <code>fork()</code> system call is available, Perl&#8217;s <code>fork()</code> simply calls it. </p>
 <p> On some platforms such as Windows where the <code>fork()</code> system call is not available, Perl can be built to emulate <code>fork()</code> at the interpreter level. While the emulation is designed to be as compatible as possible with the real <code>fork()</code> at the level of the Perl program, there are certain important differences that stem from the fact that all the pseudo child &#8220;processes&#8221; created this way live in the same real process as far as the operating system is concerned. </p>
 <p> This document provides a general overview of the capabilities and limitations of the <code>fork()</code> emulation. Note that the issues discussed here are not applicable to platforms where a real <code>fork()</code> is available and Perl has been configured to use it.</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>fork()</code> emulation is implemented at the level of the Perl interpreter. What this means in general is that running <code>fork()</code> will actually clone the running interpreter and all its state, and run the cloned interpreter in a separate thread, beginning execution in the new thread just after the point where the <code>fork()</code> was called in the parent. We will refer to the thread that implements this child &#8220;process&#8221; as the pseudo-process. </p>
 <p> To the Perl program that called <code>fork()</code>, all this is designed to be transparent. The parent returns from the <code>fork()</code> with a pseudo-process <font SIZE="-1">ID</font> that can be subsequently used in any process-manipulation functions; the child returns from the <code>fork()</code> with a value of <tt>0</tt> to signify that it is the child pseudo-process.</p>
 <h3>Behavior of other Perl features in forked pseudo-processes</h3>

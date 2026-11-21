@@ -1,5 +1,4 @@
 ---
-
 title: "pnmtops(1)"
 name: "pnmtops"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pnmtops/"
 description: "pnmtops – convert portable anymap to PostScript"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pnmtops &#8211; convert portable anymap to PostScript </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pnmtops</code> [<code>-scale</code> <i>s</i>] [<code>-dpi</code> <i>n</i>] [<code>-imagewidth</code> <i>n</i>] [<code>-imageheight</code> <i>n</i>] [<code>-width=</code><i>N</i>] [<code>-height=</code><i>N</i>] [<code>-equalpixels</code>] [<code>-turn</code>|<code>-noturn</code>] [<code>-rle</code>|<code>-runlength</code>] [<code>-nocenter</code>] [<code>-setpage</code>] [<code>-nosetpage</code>] [<i>pnmfile</i>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one. You may separate an option name and its value with white space instead of an equals sign. </p>
+<h2>DESCRIPTION</h2>
 <p> Reads a Netpbm image as input. Produces Encapsulated PostScript as output. </p>
 <p> If the input file is in color (PPM), <code>pnmtops</code> generates a color PostScript file. Some PostScript interpreters can&#8217;t handle color PostScript. If you have one of these you will need to run your image through <code>ppmtopgm</code> first. </p>
 <p> If you specify no output dimensioning options, the output image is dimensioned as if you had specified <code>-scale=1.0</code>, which means aproximately 72 pixels of the input image generate one inch of output (if that fits the page). </p>

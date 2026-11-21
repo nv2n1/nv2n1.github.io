@@ -1,5 +1,4 @@
 ---
-
 title: "cap_clear(3)"
 name: "cap_clear"
 section: "3"
@@ -10,6 +9,7 @@ description: "cap_clear, cap_clear_flag, cap_get_flag, cap_set_flag, cap_compare
 
 <h2>NAME</h2>
 <p> cap_clear, cap_clear_flag, cap_get_flag, cap_set_flag, cap_compare &#8211; capability data object manipulation</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/capability.h&gt;
 int cap_clear(cap_t cap_p);
@@ -21,6 +21,7 @@ int cap_set_flag(cap_t cap_p, cap_flag_t flag, int ncap,
 int cap_compare(cap_t cap_a, cap_t cap_b);
 Link with - lcap.
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> These functions work on a capability state held in working storage. A <i>cap_t</i> holds information about the capabilities in each of the three sets, Permitted, Inheritable, and Effective. Each capability in a set may be clear (disabled, 0) or set (enabled, 1). </p>
 <p> These functions work with the following data types:</p>
 <dl>

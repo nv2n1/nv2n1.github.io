@@ -1,5 +1,4 @@
 ---
-
 title: "psorder(1)"
 name: "psorder"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-psorder/"
 description: "psorder – PostScript pageorder filter"
 ---
 
+<h2 class="name">NAME</h2>
+<p> psorder &#8211; PostScript pageorder filter </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>psorder</code> [-duf] <i>sourcefile</i></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>psorder</code></p>
 <dd>is a filter that re-orders the pages of a PostScript document. The result is written to the standard output. By default, documents are processed into ascending order (the lowest numbered page is printed first). Some PostScript documents specify that the order of their pages should never be changed; the default action of <code>psorder</code> is to follow this specification. </dd>
 <p> If no source file is given, or if <i>sourcefile</i> is `<code>&#8211;</code>&#8216;, <code>psorder</code> reads from the standard input file.</p>

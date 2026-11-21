@@ -1,5 +1,4 @@
 ---
-
 title: "movescu(1)"
 name: "movescu"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-movescu/"
 description: "movescu – DICOM retrieve (C-MOVE) SCU"
 ---
 
+<h2 class="name">NAME</h2>
+<p> movescu &#8211; DICOM retrieve (C-MOVE) SCU </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 movescu[options] peer port[dcmfile - in...]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>movescu</code> application implements both an SCU for the Query/Retrieve Service Class and an SCP for the Storage Service Class. <code>movescu</code> supports retrieve functionality using the C-MOVE message. It sends query keys to an SCP and awaits responses. It will accept associations for the purpose of receiving images sent as a result of the C-MOVE request. The application can be used to test SCPs of the Query/Retrieve Service Class. The <code>movescu</code> application can initiate the transfer of images to a third party or can retrieve images to itself. Note that the use of the term &#8216;move&#8217; is a misnomer. The C-MOVE operation actually performs an image copy (no images will be deleted from the SCP).</p>
 <h2>PARAMETERS</h2>
 <pre>

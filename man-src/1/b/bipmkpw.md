@@ -1,5 +1,4 @@
 ---
-
 title: "bipmkpw(1)"
 name: "bipmkpw"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-bipmkpw/"
 description: "bipmkpw – Password hasher for BIP"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bipmkpw &#8211; Password hasher for BIP</p>
+<h2>SYNOPSIS</h2>
 <p> <code>bipmkpw</code> </p>
+<h2>DESCRIPTION</h2>
 <p> bipmkpw converts a password into the double-hash used by bip. Copy the generated output from bipmkpw into bip config file. </p>
 <p> Password cannot contain spaces. </p>
 <h2>SEE ALSO</h2>

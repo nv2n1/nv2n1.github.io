@@ -1,5 +1,4 @@
 ---
-
 title: "abcde(1)"
 name: "abcde"
 section: "1"
@@ -10,7 +9,9 @@ description: "abcde – Grab an entire CD and compress it to Ogg/Vorbis, MP3, FL
 
 <h2>NAME</h2>
 <p> abcde &#8211; Grab an entire CD and compress it to Ogg/Vorbis, MP3, FLAC, Ogg/Speex and/or MPP/MP+(Musepack) format.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>abcde</code> <i>[options] [tracks]</i></p>
+<h2>DESCRIPTION</h2>
 <p> Ordinarily, the process of grabbing the data off a CD and encoding it, then tagging or commenting it, is very involved. <code>abcde</code> is designed to automate this. It will take an entire CD and convert it into a compressed audio format &#8211; Ogg/Vorbis, MPEG Audio Layer III, Free Lossless Audio Codec (FLAC), Ogg/Speex, MPP/MP+(Musepack) and/or M4A (AAC) format(s). With one command, it will:</p>
 <dl>
 <dt><code>*</code></dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "fixadd(3)"
 name: "fixadd"
 section: "3"
@@ -10,8 +9,10 @@ description: "fixadd – Safe function to add fixed point numbers clamping overf
 
 <h2>NAME</h2>
 <p> fixadd &#8211; Safe function to add fixed point numbers clamping overflow. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>fixed fixadd(fixed x, fixed y);</code></p>
+<h2>DESCRIPTION</h2>
 <p> Although fixed point numbers can be added with the normal &#8216;+&#8217; integer operator, that doesn&#8217;t provide any protection against overflow. If overflow is a problem, you should use this function instead. It is slower than using integer operators, but if an overflow occurs it will set `errno&#8217; and clamp the result, rather than just letting it wrap. Example: </p>
 <pre><code>
 fixed result;

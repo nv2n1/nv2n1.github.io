@@ -1,5 +1,4 @@
 ---
-
 title: "kismet_drone(1)"
 name: "kismet_drone"
 section: "1"
@@ -10,11 +9,13 @@ description: "kismet_drone – Wireless sniffing and monitoring remote drone"
 
 <h2>NAME</h2>
 <p> <code>kismet_drone </code>&#8211; Wireless sniffing and monitoring remote drone</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 kismet_drone[-svh][-f config - file][-c capture - source]
             [-C enable - capture - sources][-p port][-a allowed - hosts]
             [-N server - name]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>kismet_drone</code> supports all the capture sources available to Kismet. Instead of processing packets locally, kismet_drone makes them available via TCP to a remote kismet_server using the &#8216;drone&#8217; capture source.</p>
 <h2>USAGE</h2>
 <p> <code>kismet_drone</code> should be configured as you would <code>kismet_server</code>. All logging, packet dissection, etc will take place on the remote kismet server using the &#8216;drone&#8217; capture source. </p>

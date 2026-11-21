@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_ftp_client_register_write/"
 description: "Reading and Writing Data –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Reading and Writing Data &#8211; </p>
 <h3>Typedefs</h3>
 <p> typedef void(* <code>globus_ftp_client_data_callback_t</code> )(void *user_arg, <code>globus_ftp_client_handle_t</code> *handle, globus_object_t *error, globus_byte_t *buffer, globus_size_t length, globus_off_t offset, globus_bool_t eof) </p>
 <h3>Functions</h3>

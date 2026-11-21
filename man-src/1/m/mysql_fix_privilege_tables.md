@@ -1,5 +1,4 @@
 ---
-
 title: "mysql_fix_privilege_tables(1)"
 name: "mysql_fix_privilege_tables"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mysql_fix_privilege_tables/"
 description: "mysql_fix_privilege_tables – upgrade MySQL system tables"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mysql_fix_privilege_tables &#8211; upgrade MySQL system tables </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysql_fix_privilege_tables &#8211;password=</code><i>root_password</i></dt></dl>
+<h2>DESCRIPTION</h2>
 <dl>
 <dd> <font SIZE="+1"> <code>Note</code> </font></dd>
 <dd>

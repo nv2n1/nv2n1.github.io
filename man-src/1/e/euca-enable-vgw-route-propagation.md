@@ -1,5 +1,4 @@
 ---
-
 title: "euca-enable-vgw-route-propagation(1)"
 name: "euca-enable-vgw-route-propagation"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-enable-vgw-route-propagation – Allow a VPC route table to o
 
 <h2>NAME</h2>
 <p> euca-enable-vgw-route-propagation &#8211; Allow a VPC route table to obtain routes from a virtual private gateway</p>
+<h2>SYNOPSIS</h2>
 <p> euca-enable-vgw-route-propagation <code>&#8211;route-table</code> RTABLE <code>&#8211;vgw</code> VGATEWAY</p>
 <dl>
 <dt>[&#8211;show-empty-fields] [-U URL]</dt>
 <dd> [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Allow a VPC route table to obtain routes from a virtual private gateway</p>
 <h3>optional arguments:</h3>
 <dl>

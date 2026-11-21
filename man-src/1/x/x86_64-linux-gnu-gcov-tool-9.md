@@ -1,5 +1,4 @@
 ---
-
 title: "x86_64-linux-gnu-gcov-tool-9(1)"
 name: "x86_64-linux-gnu-gcov-tool-9"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-x86_64-linux-gnu-gcov-tool-9/"
 description: "gcov-tool – offline gcda profile processing tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gcov-tool &#8211; offline gcda profile processing tool </p>
+<h2>SYNOPSIS</h2>
 <p> gcov-tool [<code>-v</code>|<code>&#8211;version</code>] [<code>-h</code>|<code>&#8211;help</code>] </p>
 <p> gcov-tool merge [merge-options] <i>directory1</i> <i>directory2</i><br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-o</code>|<code>&#8211;output</code>&nbsp;<i>directory</i>]<br />
@@ -25,6 +27,7 @@ description: "gcov-tool – offline gcda profile processing tool"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-o</code>|<code>&#8211;object</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-t</code>|<code>&#8211;hot_threshold</code>]&nbsp;<i>float</i><br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-v</code>|<code>&#8211;verbose</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>gcov-tool</code> is an offline tool to process gcc&#8217;s gcda profile files. </p>
 <p> Current gcov-tool supports the following functionalities:</p>
 <dl>

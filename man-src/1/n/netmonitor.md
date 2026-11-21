@@ -1,5 +1,4 @@
 ---
-
 title: "netmonitor(1)"
 name: "netmonitor"
 section: "1"
@@ -10,7 +9,9 @@ description: "netmonitor – Network Bandwidth Monitor"
 
 <h2>NAME</h2>
 <p> netmonitor &#8211; Network Bandwidth Monitor</p>
+<h2>SYNOPSIS</h2>
 <p> <code>netmonitor</code> <i>[options&#8230;..]</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>netmonitor </code> is a console application that monitors network interfaces. It displays the transfer rate (upload and download) for each device and the data consumed by each device. The main features of netmon are low resource usage, a simple yet effective design, and an easy to understand tabular output. It displays values whose units change dynamically to scale with the value. Its compact display fits in a 9&#215;66 size terminal window. </p>
 <h2>GENERAL OPTIONS</h2>
 <dl>

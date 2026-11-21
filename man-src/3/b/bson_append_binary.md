@@ -1,5 +1,4 @@
 ---
-
 title: "bson_append_binary(3)"
 name: "bson_append_binary"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_append_binary() – The bson_append_binary() function shall a
 
 <h2>NAME</h2>
 <p> bson_append_binary() &#8211; The bson_append_binary() function shall append a new element to bson containing the binary data provided.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 bool bson_append_binary(bson_t *bson,
                         const char *key,
@@ -37,6 +37,7 @@ bool bson_append_binary(bson_t *bson,
 <dl>
 <dt><code>length</code></dt>
 <dd> The length of <code>buffer</code> in bytes.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_append_binary/">bson_append_binary</a>(3)</code> function shall append a new element to <code>bson</code> containing the binary data provided. </p>
 <h2>RETURNS</h2>
 <p> true if the operation was applied successfully, otherwise false and <code>bson</code> should be discarded. </p>

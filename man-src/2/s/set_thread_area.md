@@ -1,5 +1,4 @@
 ---
-
 title: "set_thread_area(2)"
 name: "set_thread_area"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-set_thread_area/"
 description: "get_thread_area, set_thread_area – manipulate thread-local storage information"
 ---
 
+<h2 class="name">NAME</h2>
+<p> get_thread_area, set_thread_area &#8211; manipulate thread-local storage information </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/unistd.h&gt;
 #if defined __i386__ || defined __x86_64__
@@ -22,6 +24,7 @@ int set_thread_area(unsigned long addr);
 #endif
 </code></pre>
 <p> <i>Note</i>: There are no glibc wrappers for these system calls; see NOTES.</p>
+<h2>DESCRIPTION</h2>
 <p> These calls provide architecture-specific support for a thread-local storage implementation. At the moment, <code>set_thread_area</code>() is available on m68k, MIPS, and x86 (both 32-bit and 64-bit variants); <code>get_thread_area</code>() is available on m68k and x86. </p>
 <p> On m68k and MIPS, <code>set_thread_area</code>() allows storing an arbitrary pointer (provided in the <code>tp</code> argument on m68k and in the <code>addr</code> argument on MIPS) in the kernel data structure associated with the calling thread; this pointer can later be retrieved using <code>get_thread_area</code>() (see also NOTES for information regarding obtaining the thread pointer on MIPS). </p>
 <p> On x86, Linux dedicates three global descriptor table (GDT) entries for thread-local storage. For more information about the GDT, see the Intel Software Developer&#8217;s Manual or the AMD Architecture Programming Manual. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "filebench(1)"
 name: "filebench"
 section: "1"
@@ -10,7 +9,9 @@ description: "filebench – interprets WML script and generates appropriate file
 
 <h2>NAME</h2>
 <p> filebench &#8211; interprets WML script and generates appropriate filesystem workload</p>
+<h2>SYNOPSIS</h2>
 <p> <code>filebench [-f &lt;filename&gt;] [-h]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>Filebench</code> is a file system and storage benchmark that allows to generate a large variety of workloads. Unlike typical benchmarks it is very flexible and allows to minutely specify (any) applications&#8217; behaviour using extensive Workload Model Language (WML). Filebench uses loadable workload personalities to allow easy emulation of complex applications (e.g., mail, web, file, and database servers). Filebench is quick to set up and easy to use compared to deploying real applications. It is also a handy tool for micro-benchmarking. </p>
 <p> <code>Filebench</code> includes many features to facilitate file system benchmarking:</p>
 <dl>

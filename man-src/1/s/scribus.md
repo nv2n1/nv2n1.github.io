@@ -1,5 +1,4 @@
 ---
-
 title: "scribus(1)"
 name: "scribus"
 section: "1"
@@ -10,7 +9,9 @@ description: "scribus – cross platform WYSIWYG desktop publishing app"
 
 <h2>NAME</h2>
 <p> scribus &#8211; cross platform WYSIWYG desktop publishing app</p>
+<h2>SYNOPSIS</h2>
 <p> scribus [-h|&#8211;help] [-v|&#8211;version] [-l|&#8211;lang language] [-la|&#8211;langs-available] [-f|&#8211;file|&#8211;] [filename]</p>
+<h2>DESCRIPTION</h2>
 <p> Scribus is an open source desktop publishing program. It provides true WYSIWYG editing, excellent PDF export facilities, and a wide range of other input and output options. </p>
 <p> Please see the scribus documentation at <i><a rel="nofollow" href="http://docs.scribus.net/">http://docs.scribus.net/</a></i> or the program&#8217;s built in help for more comprehensive and up-to-date documentation. </p>
 <p> This man page only provides summaries of some aspects of the program&#8217;s use. It&#8217;s main purpose is to make sure you can find the full documentation quickly and easily.</p>

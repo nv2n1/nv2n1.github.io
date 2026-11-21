@@ -1,5 +1,4 @@
 ---
-
 title: "pva-addvo(1)"
 name: "pva-addvo"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pva-addvo/"
 description: "pva-addvo – PHP VOMS-Admin(PVA) tool to add a new VO"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pva-addvo &#8211; PHP VOMS-Admin(PVA) tool to add a new VO</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>pva-addvo</code> command can be used to add new VO for serving by PHP VOMS-Admin. It also generates configuration files for voms-server for use in conjunction with PVA. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pva-addvo [vo config]</code> </p>
 <h2>ARGUMENTS</h2>
 <dl>

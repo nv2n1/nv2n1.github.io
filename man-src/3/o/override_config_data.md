@@ -1,5 +1,4 @@
 ---
-
 title: "override_config_data(3)"
 name: "override_config_data"
 section: "3"
@@ -7,10 +6,11 @@ letter: "o"
 url: "/docs/linux/man/3-override_config_data/"
 description: "override_config_data – Specifies a block of data containing config overrides. Allegro game programming library."
 ---
-
 <p> override_config_data - Specifies a block of data containing config overrides. Allegro game programming library.  </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>void override_config_data(const char *data, int length);</code>  </p>
+<h2>DESCRIPTION</h2>
 <p> Version of override_config_file() which uses a block of data that has already been read into memory. The length of the block has to be specified in bytes. Example: </p>
 <pre><code>   /* Force German as system language, Spanish keyboard map. */
    const char *override_data = &quot;[system]\n&quot;

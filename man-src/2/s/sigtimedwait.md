@@ -1,5 +1,4 @@
 ---
-
 title: "sigtimedwait(2)"
 name: "sigtimedwait"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-sigtimedwait/"
 description: "sigwaitinfo, sigtimedwait, rt_sigtimedwait – synchronously wait for queued signals"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sigwaitinfo, sigtimedwait, rt_sigtimedwait &#8211; synchronously wait for queued signals </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;signal.h&gt;
 int sigwaitinfo(const sigset_t *set, siginfo_t *info);
@@ -16,6 +18,7 @@ int sigtimedwait(const sigset_t *set, siginfo_t *info,
 </code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>sigwaitinfo</code>(), <code>sigtimedwait</code>(): _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;199309L</p>
+<h2>DESCRIPTION</h2>
 <p> <code>sigwaitinfo</code>() suspends execution of the calling thread until one of the signals in <i>set</i> is pending (If one of the signals in <i>set</i> is already pending for the calling thread, <code>sigwaitinfo</code>() will return immediately.) </p>
 <p> <code>sigwaitinfo</code>() removes the signal from the set of pending signals and returns the signal number as its function result. If the <i>info</i> argument is not NULL, then the buffer that it points to is used to return a structure of type <i>siginfo_t</i> (see <code><a href="/docs/linux/man/2-sigaction/">sigaction</a></code>(2)) containing information about the signal. </p>
 <p> If multiple signals in <i>set</i> are pending for the caller, the signal that is retrieved by <code>sigwaitinfo</code>() is determined according to the usual ordering rules; see <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7) for further details. </p>

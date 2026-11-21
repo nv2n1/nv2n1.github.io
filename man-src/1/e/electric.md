@@ -1,5 +1,4 @@
 ---
-
 title: "electric(1)"
 name: "electric"
 section: "1"
@@ -10,7 +9,9 @@ description: "electric – a VLSI design system"
 
 <h2>NAME</h2>
 <p> electric &#8211; a VLSI design system </p>
+<h2>SYNOPSIS</h2>
 <p> <code>electric</code> [<i>-m</i>] [<i>-t technology</i>] [<i>library</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> Electric is a general purpose system for all electrical design. It currently knows about nMOS, CMOS, Bipolar, artwork, schematics, printed-circuit boards, and many other technologies. Its has a large set of tools including multiple design-rule checkers (both incremental and hierarchical), an electrical rules checker, over a dozen simulator interfaces, multiple generators (PLA and pad frame), multiple routers (stitching, maze, river), network comparison, compaction, compensation, a VHDL compiler, and a silicon compiler that places-and-routes standard cells. </p>
 <p> In addition to the text terminal used to invoke the program, Electric uses a color display with a mouse as a work station. Separate windows are used for text and graphics. </p>
 <p> If a <i>library</i> disk file is mentioned on the command line, that file is read as the initial design for editing. In addition, the following switches are recognized:</p>

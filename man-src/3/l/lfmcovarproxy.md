@@ -1,5 +1,4 @@
 ---
-
 title: "lfmcovarproxy(3)"
 name: "lfmcovarproxy"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-lfmcovarproxy/"
 description: "ql/legacy/libormarketmodels/lfmcovarproxy.hpp – proxy for libor forward covariance parameterization"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/legacy/libormarketmodels/lfmcovarproxy.hpp &#8211; proxy for libor forward covariance parameterization </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/legacy/libormarketmodels/lfmcovarparam.hpp&gt;<br />
  #include &lt;ql/legacy/libormarketmodels/lmvolmodel.hpp&gt;<br />
  #include &lt;ql/legacy/libormarketmodels/lmcorrmodel.hpp&gt; </p>

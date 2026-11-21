@@ -1,5 +1,4 @@
 ---
-
 title: "cargo-run(1)"
 name: "cargo-run"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-cargo-run/"
 description: "cargo-run – Run the current project"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cargo-run &#8211; Run the current project </p>
+<h2>SYNOPSIS</h2>
 <p> cargo run [OPTIONS] [&#8211;] [&lt;ARGS&gt;&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> Run the main binary of the local package (src/main.rs). </p>
 <p> If neither &#8211;bin nor &#8211;example are given, then if the project only has one bin target it will be run. Otherwise &#8211;bin specifies the bin target to run, and &#8211;example specifies the example target to run. At most one of &#8211;bin or &#8211;example can be provided. </p>
 <p> All of the trailing arguments are passed to the binary to run. If you&#8217;re passing arguments to both Cargo and the binary, the ones after &#8212; go to the binary, the ones before go to Cargo.</p>

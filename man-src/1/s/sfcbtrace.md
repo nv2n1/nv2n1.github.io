@@ -1,5 +1,4 @@
 ---
-
 title: "sfcbtrace(1)"
 name: "sfcbtrace"
 section: "1"
@@ -10,6 +9,7 @@ description: "sfcbtrace – toggle the tracemask for SFCB trace output"
 
 <h2>NAME</h2>
 <p> sfcbtrace &#8211; toggle the tracemask for SFCB trace output</p>
+<h2>SYNOPSIS</h2>
 <p> <code>sfcbtrace</code> &lt;trace_mask&gt; &lt;shm_key&gt;</p>
 <h2>OPTIONS</h2>
 <dl>

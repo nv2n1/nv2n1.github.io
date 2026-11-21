@@ -1,5 +1,4 @@
 ---
-
 title: "grdproject(1)"
 name: "grdproject"
 section: "1"
@@ -10,8 +9,10 @@ description: "grdproject – Forward and inverse map transformation of grids"
 
 <h2>NAME</h2>
 <p> grdproject &#8211; Forward and inverse map transformation of grids</p>
+<h2>SYNOPSIS</h2>
 <p> <code>grdproject</code> <i>in_grdfile</i> <i>out_grdfile</i> <i>parameters</i> [ [<i>dx/dy</i>] ] [ <i>xinc</i>[<i>unit</i>][<code>=</code>|<code>+</code>][/<i>yinc</i>[<i>unit</i>][<code>=</code>|<code>+</code>]] ] [ <i>dpi</i> ] [ [<code>c|i|p|e|f|k|M|n|u</code>] ] [ ] [ <code>c</code>|<code>i</code>|<code>p</code> ] [ <i>region</i> ] [ [<i>level</i>] ] [ <code>-n</code><i>&lt;flags&gt;</i> ] [ <code>-r</code> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>grdproject</code> will do one of two things depending whether <code>-I</code> has been set. If set, it will transform a gridded data set from a rectangular coordinate system onto a geographical system by resampling the surface at the new nodes. If not set, it will project a geographical gridded data set onto a rectangular grid. To obtain the value at each new node, its location is inversely projected back onto the input grid after which a value is interpolated between the surrounding input grid values. By default bi-cubic interpolation is used. Aliasing is avoided by also forward projecting the input grid nodes. If two or more nodes are projected onto the same new node, their average will dominate in the calculation of the new node value. Interpolation and aliasing is controlled with the <code>-n</code> option. The new node spacing may be determined in one of several ways by specifying the grid spacing, number of nodes, or resolution. Nodes not constrained by input data are set to NaN. </p>
 <p> The <code>-R</code> option can be used to select a map region larger or smaller than that implied by the extent of the grid file.</p>
 <h2>REQUIRED ARGUMENTS</h2>

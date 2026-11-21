@@ -1,5 +1,4 @@
 ---
-
 title: "statgrab-make-mrtg-config(1)"
 name: "statgrab-make-mrtg-config"
 section: "1"
@@ -10,7 +9,9 @@ description: "statgrab-make-mrtg-config – generates MRTG configuration"
 
 <h2>NAME</h2>
 <p> statgrab-make-mrtg-config &#8211; generates MRTG configuration</p>
+<h2>SYNOPSIS</h2>
 <p> <code>statgrab-make-mrtg-config</code> [OPTION]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>statgrab-make-mrtg-config</code> generates MRTG configuration from statgrab output and writes it to stdout.</p>
 <h2>OPTIONS</h2>
 <p> The following options are supported.</p>

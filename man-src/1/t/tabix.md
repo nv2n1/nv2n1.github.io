@@ -1,5 +1,4 @@
 ---
-
 title: "tabix(1)"
 name: "tabix"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-tabix/"
 description: "tabix – Generic indexer for TAB-delimited genome position files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> tabix &#8211; Generic indexer for TAB-delimited genome position files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>tabix</code> [<code>-0lf</code>] [<code>-p</code> gff|bed|sam|vcf] [<code>-s</code> <i>seqCol</i>] [<code>-b</code> <i>begCol</i>] [<code>-e</code> <i>endCol</i>] [<code>-S</code> <i>lineSkip</i>] [<code>-c</code> <i>metaChar</i>] <i>in.tab.bgz</i> [<i>region1 </i>[<i>region2 </i>[<i>&#8230;</i>]]] </p>
+<h2>DESCRIPTION</h2>
 <p> Tabix indexes a TAB-delimited genome position file <i>in.tab.bgz</i> and creates an index file (<i>in.tab.bgz.tbi</i> or <i>in.tab.bgz.csi</i>) when <i>region</i> is absent from the command-line. The input data file must be position sorted and compressed by <code>bgzip</code> which has a <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1) like interface. </p>
 <p> After indexing, tabix is able to quickly retrieve data lines overlapping <i>regions</i> specified in the format &quot;chr:beginPos-endPos&quot;. (Coordinates specified in this region format are 1-based and inclusive.) </p>
 <p> Fast data retrieval also works over network if URI is given as a file name and in this case the index file will be downloaded if it is not present locally. </p>

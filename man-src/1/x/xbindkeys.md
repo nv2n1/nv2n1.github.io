@@ -1,5 +1,4 @@
 ---
-
 title: "xbindkeys(1)"
 name: "xbindkeys"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-xbindkeys/"
 description: "xbindkeys – a grabbing keys program for X"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xbindkeys &#8211; a grabbing keys program for X </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xbindkeys</code> [ <i>options</i> ] </p>
+<h2>DESCRIPTION</h2>
 <p> <i>XbindKeys</i> is a program that grab keys and mouse button events in X and starts associated shell command. </p>
 <h2>COMMAND LINE OPTIONS</h2>
 <p> Available command line options are as follows:</p>

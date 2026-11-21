@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pubkey_import_tpm_raw(3)"
 name: "gnutls_pubkey_import_tpm_raw"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_pubkey_import_tpm_raw – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pubkey_import_tpm_raw &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/abstract.h&gt;</code> </p>
 <p> <code>int gnutls_pubkey_import_tpm_raw(gnutls_pubkey_t </code><i>pkey</i><code>, const gnutls_datum_t * </code><i>fdata</i><code>, gnutls_tpmkey_fmt_t </code><i>format</i><code>, const char * </code><i>srk_password</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,6 +24,7 @@ description: "gnutls_pubkey_import_tpm_raw – API function"
 <dd> The password for the SRK key (optional)</dd>
 <dt>unsigned int flags</dt>
 <dd> One of the GNUTLS_PUBKEY_* flags</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will import the public key from the provided TPM key structure. </p>
 <p> With respect to passwords the same as in <code>gnutls_pubkey_import_tpm_url()</code> apply.</p>
 <h2>RETURNS</h2>

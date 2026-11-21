@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_tdb_set_store_commitment_func(3)"
 name: "gnutls_tdb_set_store_commitment_func"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_tdb_set_store_commitment_func – API function"
 
 <h2>NAME</h2>
 <p> gnutls_tdb_set_store_commitment_func &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_tdb_set_store_commitment_func(gnutls_tdb_t </code><i>tdb</i><code>, gnutls_tdb_store_commitment_func </code><i>cstore</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_tdb_set_store_commitment_func – API function"
 <dd> The trust storage</dd>
 <dt>gnutls_tdb_store_commitment_func cstore</dt>
 <dd> The commitment storage function</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will associate a commitment (hash) storage function with the trust storage structure. The function is of the following form. </p>
 <p> int gnutls_tdb_store_commitment_func(const char* db_name, const char* host, const char* service, time_t expiration, gnutls_digest_algorithm_t, const gnutls_datum_t* hash); </p>
 <p> The <i>db_name</i> should be used to pass any private data to this function.</p>

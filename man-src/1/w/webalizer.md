@@ -1,5 +1,4 @@
 ---
-
 title: "webalizer(1)"
 name: "webalizer"
 section: "1"
@@ -10,8 +9,10 @@ description: "webalizer – A web server log file analysis tool."
 
 <h2>NAME</h2>
 <p> webalizer &#8211; A web server log file analysis tool.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>webalizer</code> [<i> option &#8230; </i>] [<i> log-file </i>] </p>
 <p> <code>webazolver</code> [<i> option &#8230; </i>] [<i> log-file </i>] </p>
+<h2>DESCRIPTION</h2>
 <p> The <i>Webalizer</i> is a web server log file analysis program which produces usage statistics in HTML format for viewing with a browser. The results are presented in both columnar and graphical format, which facilitates interpretation. Yearly, monthly, daily and hourly usage statistics are presented, along with the ability to display usage by site, URL, referrer, user agent (browser), username, search strings, entry/exit pages, and country (some information may not be available if not present in the log file being processed). </p>
 <p> The <i>Webalizer</i> supports <code>CLF</code> (common log format) log files, as well as <code>Combined</code> log formats as defined by NCSA and others, and variations of these which it attempts to handle intelligently. In addition, the <i>Webalizer</i> supports <code>xferlog</code> formatted (<i>FTP</i>) log files, <code>squid</code> proxy logs and <code>W3C</code> extended format logs. Logs may also be compressed, via <i>gzip</i> (.gz) or, if enabled at compile time, <i>bzip2</i> (.bz2). If a compressed log file is detected, it will be automatically uncompressed while it is read. Compressed logs must have the standard <i>gzip</i> extension of <code>.gz</code> or <i>bzip2</i> extension of <code>.bz2</code>. </p>
 <p> <i>webazolver</i> is normally just a symbolic link to the <i>Webalizer</i>. When run as <i>webazolver</i>, only DNS file creation/updates are performed, and the program will exit once complete. All normal options and configuration directives are available, however many will not be used. In addition, a DNS cache file must be specified. If the number of DNS children processes to use are not specified, the <i>webazolver</i> will default to <code>5</code>. </p>

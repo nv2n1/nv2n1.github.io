@@ -1,5 +1,4 @@
 ---
-
 title: "ophelp(1)"
 name: "ophelp"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ophelp/"
 description: "ophelp – list OProfile events"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ophelp &#8211; list OProfile events </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ophelp</code> [ <i>options</i> ] [event name]</p>
+<h2>DESCRIPTION</h2>
 <p> By default, <code>ophelp</code> lists the available performance counter options. If you give it a symbolic event name, it will return the hardware value (e.g. &quot;ophelp DATA_MEM_REFS&quot;). </p>
 <h2>OPTIONS</h2>
 <dl>

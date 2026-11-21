@@ -1,5 +1,4 @@
 ---
-
 title: "atomic-sign(1)"
 name: "atomic-sign"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-atomic-sign/"
 description: "atomic-sign- Create a signature for an image"
 ---
 
+<h2 class="name">NAME</h2>
+<p> atomic-sign- Create a signature for an image </p>
 <p> <code>WARNING</code> </p>
 <p> Only use <code>atomic sign</code> if you trust the remote registry which contains the image (preferably by being the only administrator of it). </p>
+<h2>SYNOPSIS</h2>
 <p> <code>atomic sign</code> [<code>-h</code>|<code>&#8211;help</code>] [<code>-d</code>, <code>&#8211;directory</code>] [<code>&#8211;sign-by</code>] [<code>-g</code>, <code>&#8211;gnupghome</code>] [ image &#8230; ] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>atomic sign</code> will create a local signature for one or more local images that have been pulled from a registry. By default, the signature will be written into a directory derived from the registry configuration files as configured by <code>registry_confdir</code> in /etc/atomic.conf. </p>
 <h2>OPTIONS</h2>
 <p> <code>-h</code> <code>&#8211;help</code><br />

@@ -1,5 +1,4 @@
 ---
-
 title: "gsf(1)"
 name: "gsf"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-gsf/"
 description: "gsf – archiving utility using the G Structured File library"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gsf &#8211; archiving utility using the G Structured File library</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gsf</code> [<i>OPTION&#8230;</i>] <i>SUBCOMMAND</i> <i>ARCHIVE&#8230;</i> </p>
+<h2>DESCRIPTION</h2>
 <p> This manual page briefly documents the <code>gsf</code> command. </p>
 <p> <code>gsf</code> is a simple archive utility, somewhat similar to <code><a href="/docs/linux/man/1-tar/">tar</a></code>(1). It operates on files following one of the structured file formats understood by the G Structured File library, for example, Microsoft Excel(TM) files. </p>
 <h2>OPTIONS</h2>

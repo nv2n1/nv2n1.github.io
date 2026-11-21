@@ -1,5 +1,4 @@
 ---
-
 title: "hpipower(1)"
 name: "hpipower"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-hpipower/"
 description: "hpipower – This sample openhpi application exercises HPI Power Management APIs."
 ---
 
+<h2 class="name">NAME</h2>
+<p> hpipower &#8211; This sample openhpi application exercises HPI Power Management APIs. </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 hpipower[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-d - p - r - u - X - h][-b n] hpipower[--domain = nn][--host = host[:port]][--cfgfile = file]
                                                                                    [--power - down-- power - up-- reset-- unattended-- debug-- help][--blade = n]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> hpipower searches the Resource Presence Table (<font SIZE="-1">RPT</font>) for resources with Power Capability. It sends the requested power action to the selected target. </p>
 <p> If no domain or host is selected, hpipower uses the default domain as specified in the openhpiclient.conf file.</p>
 <h2>OPTIONS</h2>

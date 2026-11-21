@@ -1,5 +1,4 @@
 ---
-
 title: "ptargrep(1)"
 name: "ptargrep"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-ptargrep/"
 description: "ptargrep – Apply pattern matching to the contents of files in a tar archive"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ptargrep &#8211; Apply pattern matching to the contents of files in a tar archive </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 ptargrep[options]&lt;pattern&gt;&lt;tar file&gt;... Options : --basename | -b ignore directory paths from archive-- ignore - case | -i do case -insensitive pattern matching-- list - only | -l list matching filenames rather than extracting matches-- verbose | -v write debugging message to STDERR-- help | -? detailed help message
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> This utility allows you to apply pattern matching to <code>the contents</code> of files contained in a tar archive. You might use this to identify all files in an archive which contain lines matching the specified pattern and either print out the pathnames or extract the files. </p>
 <p> The pattern will be used as a Perl regular expression (as opposed to a simple grep regex). </p>
 <p> Multiple tar archive filenames can be specified &#8211; they will each be processed in turn.</p>

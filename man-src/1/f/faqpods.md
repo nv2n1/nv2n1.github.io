@@ -1,5 +1,4 @@
 ---
-
 title: "faqpods(1)"
 name: "faqpods"
 section: "1"
@@ -7,9 +6,14 @@ letter: "f"
 url: "/docs/linux/man/1-faqpods/"
 ---
 
-faqpods - print out pod paths for the standard perl faqs 
+<h2 class="name">NAME</h2>
+ 
 
-This program uses your configuration's <tt>&quot;installprivlib&quot;</tt> directory to look up the full paths to those pod pages. Any files in that directory whose names start in <tt>&quot;perlfaq&quot;</tt> will be printed to the standard output, one per line. This is normally used in backticks to produce a list of filenames for other commands.
+ faqpods - print out pod paths for the standard perl faqs 
+
+<h2>DESCRIPTION</h2>
+
+ This program uses your configuration's <tt>&quot;installprivlib&quot;</tt> directory to look up the full paths to those pod pages. Any files in that directory whose names start in <tt>&quot;perlfaq&quot;</tt> will be printed to the standard output, one per line. This is normally used in backticks to produce a list of filenames for other commands.
 
 <h2>EXAMPLES</h2>
 

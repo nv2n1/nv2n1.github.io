@@ -1,5 +1,4 @@
 ---
-
 title: "data2inc(1)"
 name: "data2inc"
 section: "1"
@@ -10,7 +9,9 @@ description: "data2inc – Free Pascal binary to pascal include file converter."
 
 <h2>NAME</h2>
 <p> data2inc &#8211; Free Pascal binary to pascal include file converter. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>data2inc [-ABSVH] msgfile [incfile] [constname]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>data2inc</code> reads a binary or text file and converts it to a pascal typed constant declaration. The constant is an array of characters (zero based), in which each character&#8217;s ascii value is the value of the byte at the offset <i>index</i> in the binary file. (index is the index in the array). If the input file is a text file, options will be read from the file and an output file will be generated according to the options encountered. </p>
 <h2>USAGE</h2>
 <p> <code>data2inc</code> with the <code>-B</code> option accepts a filename of a binary file, and needs the name of an include file and constant name. The output is written to <code>incfile</code> The name of the constant <code>constname</code> is mandatory for a binary file. </p>

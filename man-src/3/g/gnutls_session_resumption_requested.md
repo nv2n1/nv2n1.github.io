@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_session_resumption_requested(3)"
 name: "gnutls_session_resumption_requested"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_session_resumption_requested – API function"
 
 <h2>NAME</h2>
 <p> gnutls_session_resumption_requested &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_session_resumption_requested(gnutls_session_t </code><i>session</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_session_t session</dt>
 <dd> is a <code>gnutls_session_t</code> structure.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Check whether the client has asked for session resumption. This function is valid only on server side.</p>
 <h2>RETURNS</h2>
 <p> non zero if session resumption was asked, or a zero if not.</p>

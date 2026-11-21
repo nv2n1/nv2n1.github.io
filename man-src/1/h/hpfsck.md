@@ -1,5 +1,4 @@
 ---
-
 title: "hpfsck(1)"
 name: "hpfsck"
 section: "1"
@@ -10,6 +9,7 @@ description: "hpfsck — check integrity of an HFS+ volume"
 
 <h2>NAME</h2>
 <p> hpfsck &#8212; check integrity of an HFS+ volume</p>
+<h2>SYNOPSIS</h2>
 <p> <code>hpfsck</code> [<code>-v</code>] <i>source-path</i></p>
 <h2>Description</h2>
 <p> <code>hpfsck</code> checks the integrity of an HFS+ volume. With the <code>-v</code> option, the data contained in the volume header is output as well.<br />

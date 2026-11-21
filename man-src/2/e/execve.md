@@ -1,5 +1,4 @@
 ---
-
 title: "execve(2)"
 name: "execve"
 section: "2"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/2-execve/"
 description: "execve – execute program"
 ---
 
+<h2 class="name">NAME</h2>
+<p> execve &#8211; execute program </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int execve(const char *</code><i>pathname</i><code>, char *const </code><i>argv</i><code>[],</code><br />
  <code> char *const </code><i>envp</i><code>[]);</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>execve</code>() executes the program referred to by <i>pathname</i>. This causes the program that is currently being run by the calling process to be replaced with a new program, with newly initialized stack, heap, and (initialized and uninitialized) data segments. </p>
 <p> <i>pathname</i> must be either a binary executable, or a script starting with a line of the form: </p>
 <p> <code>#!</code><i>interpreter </i>[optional-arg] </p>

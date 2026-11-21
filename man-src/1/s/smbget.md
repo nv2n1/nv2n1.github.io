@@ -1,5 +1,4 @@
 ---
-
 title: "smbget(1)"
 name: "smbget"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-smbget/"
 description: "smbget – wget-like utility for download files over SMB"
 ---
 
+<h2 class="name">NAME</h2>
+<p> smbget &#8211; wget-like utility for download files over SMB </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt>
 </dt><dd>smbget [-a, &#8211;guest] [-r, &#8211;resume] [-R, &#8211;recursive] [-U, &#8211;user=STRING] [-w, &#8211;workgroup=STRING] [-n, &#8211;nonprompt] [-d, &#8211;debuglevel=INT] [-D, &#8211;dots] [-o, &#8211;outputfile] [-f, &#8211;rcfile] [-q, &#8211;quiet] [-v, &#8211;verbose] [-b, &#8211;blocksize] [-O, &#8211;stdout] [-u, &#8211;update] [-?, &#8211;help] [&#8211;usage] {<a href="smb://host/share/path/to/file}">smb://host/share/path/to/file}</a> [<a href="smb://url2/]">smb://url2/]</a> [&#8230;]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This tool is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> smbget is a simple utility with wget-like semantics, that can download files from SMB servers. You can specify the files you would like to download on the command-line. </p>
 <p> The files should be in the smb-URL standard, e.g. use <a href="smb://host/share/file">smb://host/share/file</a> for the UNC path <i>\\HOST\SHARE\file</i>.</p>

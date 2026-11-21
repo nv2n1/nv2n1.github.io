@@ -1,5 +1,4 @@
 ---
-
 title: "dcmdjpeg(1)"
 name: "dcmdjpeg"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-dcmdjpeg/"
 description: "dcmdjpeg – Decode JPEG-compressed DICOM file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dcmdjpeg &#8211; Decode JPEG-compressed DICOM file </p>
+<h2>SYNOPSIS</h2>
 <pre>
 dcmdjpeg [options] dcmfile-in dcmfile-out
 </pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>dcmdjpeg</code> utility reads a JPEG-compressed DICOM image (<i>dcmfile-in</i>), decompresses the JPEG data (i. e. conversion to a native DICOM transfer syntax) and writes the converted image to an output file (<i>dcmfile-out</i>).</p>
 <h2>PARAMETERS</h2>
 <pre>

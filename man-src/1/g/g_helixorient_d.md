@@ -1,5 +1,4 @@
 ---
-
 title: "g_helixorient_d(1)"
 name: "g_helixorient_d"
 section: "1"
@@ -11,7 +10,9 @@ description: "g_helixorient – calculates local pitch/bending/rotation/orientat
 <h2>NAME</h2>
 <p> g_helixorient &#8211; calculates local pitch/bending/rotation/orientation inside helices </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>g_helixorient</code> <code>-s</code><i> topol.tpr </i> <code>-f</code><i> traj.xtc </i> <code>-n</code><i> index.ndx </i> <code>-oaxis</code><i> helixaxis.dat </i> <code>-ocenter</code><i> center.dat </i> <code>-orise</code><i> rise.xvg </i> <code>-oradius</code><i> radius.xvg </i> <code>-otwist</code><i> twist.xvg </i> <code>-obending</code><i> bending.xvg </i> <code>-otilt</code><i> tilt.xvg </i> <code>-orot</code><i> rotation.xvg </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-[no]xvgr</code><i></i> <code>-[no]sidechain</code><i></i> <code>-[no]incremental</code><i></i></p>
+<h2>DESCRIPTION</h2>
 <p> g_helixorient calculates coordinates and direction of the average axis inside an alpha helix, and the direction/vectors of both the alpha carbon and (optionally) a sidechain atom relative to the axis. </p>
 <p> As input, you need to specify an index group with alpha carbon atoms corresponding to an alpha helix of continuous residues. Sidechain directions require a second index group of the same size, containing the heavy atom in each residue that should represent the sidechain. </p>
 <p> Note that this program does not do any fitting of structures. </p>

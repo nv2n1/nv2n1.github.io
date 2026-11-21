@@ -1,5 +1,4 @@
 ---
-
 title: "fts-rest-whoami(1)"
 name: "fts-rest-whoami"
 section: "1"
@@ -12,6 +11,7 @@ description: "fts-rest-whoami"
 <p> fts-rest-whoami</p>
 <h2>SYNOPIS</h2>
 <p> Usage: fts-rest-whoami [options]</p>
+<h2>DESCRIPTION</h2>
 <p> This command exists for convenience. It can be used to check, as the name suggests, who are we for the server.</p>
 <h2>OPTIONS</h2>
 <dl>

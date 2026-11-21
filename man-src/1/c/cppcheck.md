@@ -1,5 +1,4 @@
 ---
-
 title: "cppcheck(1)"
 name: "cppcheck"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-cppcheck/"
 description: "cppcheck – Tool for static C/C++ code analysis"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cppcheck &#8211; Tool for static C/C++ code analysis </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cppcheck</code> [<code>&#8211;append=&lt;file&gt;</code>] [<code>&#8211;check-config</code>] [<code>&#8211;check-library</code>] [<code>-D&lt;id&gt;</code>] [<code>-U&lt;id&gt;</code>] [<code>&#8211;enable=&lt;id&gt;</code>] [<code>&#8211;error-exitcode=&lt;n&gt;</code>] [<code>&#8211;errorlist</code>] [<code>&#8211;exitcode-suppressions=&lt;file&gt;</code>] [<code>&#8211;file-list=&lt;file&gt;</code>] [<code>&#8211;force</code>] [<code>&#8211;help</code>] [<code>-I&lt;dir&gt;</code>] [<code>&#8211;includes-file=&lt;file&gt;</code>] [<code>&#8211;config-exclude=&lt;dir&gt;</code>] [<code>&#8211;config-excludes-file=&lt;file&gt;</code>] [<code>&#8211;include=&lt;file&gt;</code>] [<code>-i&lt;dir&gt;</code>] [<code>&#8211;inconclusive</code>] [<code>&#8211;inline-suppr</code>] [<code>-j&lt;jobs&gt;</code>] [<code>-l&lt;load&gt;</code>] [<code>&#8211;language=&lt;language&gt;</code>] [<code>&#8211;library=&lt;cfg&gt;</code>] [<code>&#8211;max-configs=&lt;limit&gt;</code>] [<code>&#8211;platform=&lt;type&gt;</code>] [<code>&#8211;quiet</code>] [<code>&#8211;relative-paths=&lt;paths&gt;</code>] [<code>&#8211;report-progress</code>] [<code>&#8211;rule=&lt;rule&gt;</code>] [<code>&#8211;rule-file=&lt;file&gt;</code>] [<code>&#8211;std=&lt;id&gt;</code>] [<code>&#8211;suppress=&lt;spec&gt;</code>] [<code>&#8211;suppressions-list=&lt;file&gt;</code>] [<code>&#8211;template='&lt;text&gt;&#8217;</code>] [<code>&#8211;verbose</code>] [<code>&#8211;version</code>] [<code>&#8211;xml</code>] [<code>&#8211;xml-version=&lt;version&gt;]</code>] [<code>file or path</code>] <code>&#8230;</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>Cppcheck is a command-line tool that tries to detect bugs that your C/C++ compiler doesn&#8217;t see. It is versatile, and can check non-standard code including various compiler extensions, inline assembly code, etc. Its internal preprocessor can handle includes, macros, and several preprocessor commands. While Cppcheck is highly configurable, you can start using it just by giving it a path to the source code.</dd>
 <h2>OPTIONS</h2>
 <p> Analyze given C/C++ files for common errors. </p>

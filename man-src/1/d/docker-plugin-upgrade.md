@@ -1,5 +1,4 @@
 ---
-
 title: "docker-plugin-upgrade(1)"
 name: "docker-plugin-upgrade"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-plugin-upgrade/"
 description: "docker-plugin-upgrade – Upgrade an existing plugin"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-plugin-upgrade &#8211; Upgrade an existing plugin </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker plugin upgrade [OPTIONS] PLUGIN [REMOTE]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Upgrade an existing plugin </p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;disable-content-trust</code>[=true] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Skip image verification</p>

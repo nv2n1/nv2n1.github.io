@@ -1,5 +1,4 @@
 ---
-
 title: "fftw-wisdom-to-conf(1)"
 name: "fftw-wisdom-to-conf"
 section: "1"
@@ -10,7 +9,9 @@ description: "fftw-wisdom-to-conf – generate FFTW wisdom (pre-planned transfor
 
 <h2>NAME</h2>
 <p> fftw-wisdom-to-conf &#8211; generate FFTW wisdom (pre-planned transforms)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>fftw-wisdom-to-conf</code> [&lt; <i>INPUT</i>] [&gt; <i>OUTPUT</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>fftw-wisdom-to-conf</i> is a utility to generate C <code>configuration</code> routines from FFTW <code>wisdom</code> files, where the latter contain saved information about how to optimally compute (Fourier) transforms of various sizes. A configuration routine is a C subroutine that you link into your program, replacing a routine of the same name in the FFTW library, that determines which parts of FFTW are callable by your program. </p>
 <p> The reason to do this is that, if you only need transforms of a limited set of sizes and types, and if you are statically linking your program, then using a configuration file generated from wisdom for those types can substantially reduce the size of your executable. (Otherwise, because of FFTW&#8217;s dynamic nature, all of FFTW&#8217;s transform code must be linked into any program using FFTW.) </p>
 <p> FFTW is a free library to compute discrete Fourier transforms in one or more dimensions, for arbitrary sizes, and of both real and complex data, among other related operations. More information on FFTW can be found at the FFTW home page: <i><a rel="nofollow" href="http://www.fftw.org">http://www.fftw.org</a></i> </p>

@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_gsi_gssapi_activation/"
 description: "Activation –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Activation &#8211; </p>
 <p> Module Activation.</p>
 <h3>Macros</h3>
 <p> #define <code>GLOBUS_GSI_GSSAPI_MODULE</code> </p>

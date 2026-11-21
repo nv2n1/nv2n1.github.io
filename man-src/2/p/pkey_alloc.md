@@ -1,5 +1,4 @@
 ---
-
 title: "pkey_alloc(2)"
 name: "pkey_alloc"
 section: "2"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/2-pkey_alloc/"
 description: "pkey_alloc, pkey_free – allocate or free a protection key"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pkey_alloc, pkey_free &#8211; allocate or free a protection key </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;sys/mman.h&gt;
 int pkey_alloc(unsigned int flags, unsigned int access_rights);
 int pkey_free(int pkey);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>pkey_alloc</code>() allocates a protection key (pkey) and allows it to be passed to <code><a href="/docs/linux/man/2-pkey_mprotect/">pkey_mprotect</a></code>(2). </p>
 <p> The <code>pkey_alloc</code>() <i>flags</i> is reserved for future use and currently must always be specified as 0. </p>
 <p> The <code>pkey_alloc</code>() <i>access_rights</i> argument may contain zero or more disable operations:</p>

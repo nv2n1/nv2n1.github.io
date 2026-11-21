@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_callout_handle/"
 description: "Callout Handle Operations –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Callout Handle Operations &#8211; </p>
 <p> Manage a Globus Callout Handle structure.</p>
 <h3>Typedefs</h3>
 <p> typedef struct<br />

@@ -1,5 +1,4 @@
 ---
-
 title: "dropuser(1)"
 name: "dropuser"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-dropuser/"
 description: "dropuser – remove a PostgreSQL user account"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dropuser &#8211; remove a PostgreSQL user account </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>dropuser</code> [<i>connection-option</i>&#8230;] [<i>option</i>&#8230;] [<i>username</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>dropuser removes an existing PostgreSQL user. Only superusers and users with the CREATEROLE privilege can remove PostgreSQL users. (To remove a superuser, you must yourself be a superuser.) </dd>
 <p> dropuser is a wrapper around the SQL command DROP ROLE (<code><a href="/docs/linux/man/7-drop_role/">DROP_ROLE</a></code>(7)). There is no effective difference between dropping users via this utility and via other methods for accessing the server.</p>
 <h2>OPTIONS</h2>

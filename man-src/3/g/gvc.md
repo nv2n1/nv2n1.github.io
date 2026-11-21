@@ -1,5 +1,4 @@
 ---
-
 title: "gvc(3)"
 name: "gvc"
 section: "3"
@@ -10,6 +9,7 @@ description: "libgvc – Graphviz context library"
 
 <h2>NAME</h2>
 <p> <code>libgvc</code> &#8211; Graphviz context library</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;graphviz/gvc.h&gt;
 /* set up a graphviz context */
@@ -44,6 +44,7 @@ extern int gvFreeContext(GVC_t *gvc);
 /* See comment in gvc.h            */
 extern char **gvPluginList(GVC_t *gvc, char *kind, int *cnt, char *);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <i>libgvc</i> provides a context for applications wishing to manipulate and render graphs. It provides a command line parsing, common rendering code, and a plugin mechanism for renderers. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dot/">dot</a></code>(1), <code><a href="/docs/linux/man/1-neato/">neato</a></code>(1), <code>libcdt</code>(3) <code>libgraph</code>(3) </p>

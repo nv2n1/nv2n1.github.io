@@ -1,5 +1,4 @@
 ---
-
 title: "pdftosrc(1)"
 name: "pdftosrc"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pdftosrc/"
 description: "pdftosrc – extract source file or stream from PDF file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pdftosrc &#8211; extract source file or stream from PDF file </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pdftosrc</code> <i>PDF-file</i> [<i>stream-object-number</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> If only <i>PDF-file</i> is given as argument, <code>pdftosrc</code> extracts the embedded source file from the first found stream object with /Type /SourceFile within the <i>PDF-file</i> and writes it to a file with the name /SourceName as defined in that PDF stream object (see application example below). </p>
 <p> If both <i>PDF-file</i> and <i>stream-object-number</i> are given as arguments, and <i>stream-object-number</i> is positive, <code>pdftosrc</code> extracts and uncompresses the PDF stream of the object given by its <i>stream-object-number</i> from the <i>PDF-file</i> and writes it to a file named <i>PDF-file</i>.<i>stream-object-number</i> with the ending <code>.pdf</code> or <code>.PDF</code> stripped from the original <i>PDF-file</i> name. </p>
 <p> A special case is related to XRef object streams that are part of the PDF standard from PDF-1.5 onward: If <i>stream-object-number</i> equals -1, then <code>pdftosrc</code> decompresses the XRef stream from the PDF file and writes it in human-readable PDF cross-reference table format to a file named <i>PDF-file</i><code>.xref</code> (these XRef streams can not be extracted just by giving their object number). </p>

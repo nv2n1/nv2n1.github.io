@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pkcs12_bag_set_data(3)"
 name: "gnutls_pkcs12_bag_set_data"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_pkcs12_bag_set_data – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs12_bag_set_data &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs12.h&gt;</code> </p>
 <p> <code>int gnutls_pkcs12_bag_set_data(gnutls_pkcs12_bag_t </code><i>bag</i><code>, gnutls_pkcs12_bag_type_t </code><i>type</i><code>, const gnutls_datum_t * </code><i>data</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_pkcs12_bag_set_data – API function"
 <dd> The data&#8217;s type</dd>
 <dt>const gnutls_datum_t * data</dt>
 <dd> the data to be copied.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will insert the given data of the given type into the bag.</p>
 <h2>RETURNS</h2>
 <p> the index of the added bag on success, or a negative value on error.</p>

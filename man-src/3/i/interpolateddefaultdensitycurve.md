@@ -1,5 +1,4 @@
 ---
-
 title: "interpolateddefaultdensitycurve(3)"
 name: "interpolateddefaultdensitycurve"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-interpolateddefaultdensitycurve/"
 description: "ql/termstructures/credit/interpolateddefaultdensitycurve.hpp – interpolated default-density term structure"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/termstructures/credit/interpolateddefaultdensitycurve.hpp &#8211; interpolated default-density term structure </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/termstructures/credit/defaultdensitystructure.hpp&gt;<br />
  #include &lt;ql/math/interpolation.hpp&gt;<br />
  #include &lt;boost/noncopyable.hpp&gt; </p>

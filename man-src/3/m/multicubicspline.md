@@ -1,5 +1,4 @@
 ---
-
 title: "multicubicspline(3)"
 name: "multicubicspline"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-multicubicspline/"
 description: "ql/math/interpolations/multicubicspline.hpp – N-dimensional cubic spline interpolation between discrete points."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/math/interpolations/multicubicspline.hpp &#8211; N-dimensional cubic spline interpolation between discrete points. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/errors.hpp&gt;<br />
  #include &lt;ql/types.hpp&gt;<br />
  #include &lt;functional&gt;<br />

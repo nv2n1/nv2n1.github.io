@@ -1,5 +1,4 @@
 ---
-
 title: "perl595delta(1)"
 name: "perl595delta"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-perl595delta/"
 description: "perl595delta – what is new for perl v5.9.5"
 ---
 
+<h2 class="name">NAME</h2>
+<p> perl595delta &#8211; what is new for perl v5.9.5 </p>
+<h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.9.4 and the 5.9.5 development releases. See perl590delta, perl591delta, perl592delta, perl593delta and perl594delta for the differences between 5.8.0 and 5.9.4.</p>
 <h2>Incompatible Changes</h2>
 <h3>Tainting and printf</h3>

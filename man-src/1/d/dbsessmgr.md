@@ -1,5 +1,4 @@
 ---
-
 title: "dbsessmgr(1)"
 name: "dbsessmgr"
 section: "1"
@@ -10,7 +9,9 @@ description: "dbsessmgr – session state database manager"
 
 <h2>NAME</h2>
 <p> dbsessmgr &#8211; session state database manager</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mono dbsessmgr.exe</code> [options]</p>
+<h2>DESCRIPTION</h2>
 <p> dbsessmgr allows you to manage the ASP.NET session state database.</p>
 <h2>OPTIONS</h2>
 <dl>

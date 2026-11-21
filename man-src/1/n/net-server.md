@@ -1,5 +1,4 @@
 ---
-
 title: "net-server(1)"
 name: "net-server"
 section: "1"
@@ -7,15 +6,22 @@ letter: "n"
 url: "/docs/linux/man/1-net-server/"
 ---
 
-net-server - Base Net::Server starting module 
+<h2 class="name">NAME</h2>
+ 
 
-<pre><code>
+ net-server - Base Net::Server starting module 
+
+<h2>SYNOPSIS</h2>
+
+ <pre><code>
 net - server[base type][net server arguments] net - server PreFork ipv '*' net - server HTTP net - server HTTP app foo.cgi net - server HTTP app foo.cgi app /= bar.cgi
                                                                                                                                                                     net -
                                                                                                                                                                 server HTTP port 8080 port 8443 / ssl ipv '*' server_type PreFork-- SSL_key_file = my.key-- SSL_cert_file = my.crt access_log_file STDERR
 </code></pre>
 
-The net-server program gives a simple way to test out code and try port connection parameters. Though the running server can be robust enough for full tim use, it is anticipated that this binary will just be used for basic testing of net-server ports, acting as a simple echo server, or for running development scripts as <font SIZE="-1">CGI.</font>
+<h2>DESCRIPTION</h2>
+
+ The net-server program gives a simple way to test out code and try port connection parameters. Though the running server can be robust enough for full tim use, it is anticipated that this binary will just be used for basic testing of net-server ports, acting as a simple echo server, or for running development scripts as <font SIZE="-1">CGI.</font>
 
 <h2>OPTIONS</h2>
 

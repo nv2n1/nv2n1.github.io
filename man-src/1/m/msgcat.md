@@ -1,5 +1,4 @@
 ---
-
 title: "msgcat(1)"
 name: "msgcat"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-msgcat/"
 description: "msgcat – combines several message catalogs"
 ---
 
+<h2 class="name">NAME</h2>
+<p> msgcat &#8211; combines several message catalogs </p>
+<h2>SYNOPSIS</h2>
 <p> <code>msgcat</code> [<i>OPTION</i>] [<i>INPUTFILE</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Concatenates and merges the specified PO files. Find messages which are common to two or more of the specified PO files. By using the <code>&#8211;more-than</code> option, greater commonality may be requested before messages are printed. Conversely, the <code>&#8211;less-than</code> option may be used to specify less commonality before messages are printed (i.e. <code>&#8211;less-than</code>=<i>2</i> will only print the unique messages). Translations, comments, extracted comments, and file positions will be cumulated, except that if <code>&#8211;use-first</code> is specified, they will be taken from the first PO file to define them. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <h3>Input file location:</h3>

@@ -1,5 +1,4 @@
 ---
-
 title: "kcdirtest(1)"
 name: "kcdirtest"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-kcdirtest/"
 description: "kcdirtest – command line interface to test the directory hash database"
 ---
 
+<h2 class="name">NAME</h2>
+<p> kcdirtest &#8211; command line interface to test the directory hash database</p>
+<h2>DESCRIPTION</h2>
 <p> The command `<code>kcdirtest</code>&#8216; is a utility for facility test and performance test of the directory hash database. This command is used in the following format. `<i>path</i>&#8216; specifies the path of a database file. `<i>rnum</i>&#8216; specifies the number of iterations. </p>
 <dl>
 <dt>

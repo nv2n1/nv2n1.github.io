@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_xio_udp_driver_cntls/"
 description: "Attributes and Cntls –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Attributes and Cntls &#8211; </p>
 <h3>Enumerations</h3>
 <p> enum <code>globus_xio_udp_cmd_t</code> { <code>GLOBUS_XIO_UDP_SET_HANDLE</code>, <code>GLOBUS_XIO_UDP_SET_SERVICE</code>, <code>GLOBUS_XIO_UDP_GET_SERVICE</code>, <code>GLOBUS_XIO_UDP_SET_PORT</code>, <code>GLOBUS_XIO_UDP_GET_PORT</code>, <code>GLOBUS_XIO_UDP_SET_LISTEN_RANGE</code>, <code>GLOBUS_XIO_UDP_GET_LISTEN_RANGE</code>, <code>GLOBUS_XIO_UDP_SET_INTERFACE</code>, <code>GLOBUS_XIO_UDP_GET_INTERFACE</code>, <code>GLOBUS_XIO_UDP_SET_RESTRICT_PORT</code>, <code>GLOBUS_XIO_UDP_GET_RESTRICT_PORT</code>, <code>GLOBUS_XIO_UDP_SET_REUSEADDR</code>, <code>GLOBUS_XIO_UDP_GET_REUSEADDR</code>, <code>GLOBUS_XIO_UDP_SET_NO_IPV6</code>, <code>GLOBUS_XIO_UDP_GET_NO_IPV6</code>, <code>GLOBUS_XIO_UDP_GET_HANDLE</code>, <code>GLOBUS_XIO_UDP_SET_SNDBUF</code>, <code>GLOBUS_XIO_UDP_GET_SNDBUF</code>, <code>GLOBUS_XIO_UDP_SET_RCVBUF</code>, <code>GLOBUS_XIO_UDP_GET_RCVBUF</code>, <code>GLOBUS_XIO_UDP_GET_CONTACT</code>, <code>GLOBUS_XIO_UDP_GET_NUMERIC_CONTACT</code>, <code>GLOBUS_XIO_UDP_SET_CONTACT</code>, <code>GLOBUS_XIO_UDP_CONNECT</code>, <code>GLOBUS_XIO_UDP_SET_MULTICAST</code> } </p>
 <h3>Functions</h3>

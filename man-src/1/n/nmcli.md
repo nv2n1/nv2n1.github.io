@@ -1,5 +1,4 @@
 ---
-
 title: "nmcli(1)"
 name: "nmcli"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-nmcli/"
 description: "nmcli – command-line tool for controlling NetworkManager"
 ---
 
+<h2 class="name">NAME</h2>
+<p> nmcli &#8211; command-line tool for controlling NetworkManager </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>nmcli</code> [<i>OPTIONS</i>&#8230;] {<code>help</code> | <code>general</code> | <code>networking</code> | <code>radio</code> | <code>connection</code> | <code>device</code> | <code>agent</code> | <code>monitor</code>} [<i>COMMAND</i>] [<i>ARGUMENTS</i>&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>nmcli</code></p>
 <dd>is a command-line tool for controlling NetworkManager and reporting network status. It can be utilized as a replacement for <code>nm-applet</code> or other graphical clients. <code>nmcli</code> is used to create, display, edit, delete, activate, and deactivate network connections, as well as control and display network device status. See <code><a href="/docs/linux/man/7-nmcli-examples/">nmcli-examples</a></code>(7) for ready to run nmcli examples. </dd>
 <p> Typical uses include: </p>

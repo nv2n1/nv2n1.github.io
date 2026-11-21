@@ -1,5 +1,4 @@
 ---
-
 title: "lsblk(8)"
 name: "lsblk"
 section: "8"
@@ -7,9 +6,10 @@ letter: "l"
 url: "/docs/linux/man/8-lsblk/"
 description: "lsblk – list block devices"
 ---
-
 <p>lsblk &#8211; list block devices </p>
+<h2>SYNOPSIS</h2>
 <p> <code>lsblk</code> [options] [<i>device</i>...]  </p>
+<h2>DESCRIPTION</h2>
 <p> <code>lsblk</code> lists information about all available or the specified block devices. The <code>lsblk</code> command reads the <code>sysfs</code> filesystem and <code>udev db</code> to gather information. If the udev db is not available or <code>lsblk</code> is compiled without udev support, then it tries to read LABELs, UUIDs and filesystem types from the block device. In this case root permissions are necessary. </p>
 <p>The command prints all block devices (except RAM disks) in a tree-like format by default. Use <code>lsblk --help</code> to get a list of all available columns. </p>
 <p>The default output, as well as the default output from options like <code>--fs</code> and <code>--topology</code>, is subject to change. So whenever possible, you should avoid using default outputs in your scripts. Always explicitly define expected columns by using <code>--output</code> <i>columns-list</i> and <code>--list</code> in environments where a stable output is required. </p>

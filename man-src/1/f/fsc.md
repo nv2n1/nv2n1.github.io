@@ -1,5 +1,4 @@
 ---
-
 title: "fsc(1)"
 name: "fsc"
 section: "1"
@@ -8,7 +7,9 @@ url: "/docs/linux/man/1-fsc/"
 description: "fsc – Fast offline compiler for the Scala 2 language"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>fsc</code> &#8211; Fast offline compiler for the Scala 2 language </p>
+<h2>SYNOPSIS</h2>
 <p> <code>fsc</code> [ &lt;<i>options</i>&gt; ] &lt;<i>source files</i>&gt;</p>
 <h2>PARAMETERS</h2>
 <dl>
@@ -27,6 +28,7 @@ description: "fsc – Fast offline compiler for the Scala 2 language"
 <dd> Specify compile server host at port number. Usually this option is not needed. Note that the hostname must be for a host that shares the same filesystem.</dd>
 <dt><code>-J</code>&lt;<i>flag</i>&gt;</dt>
 <dd> Pass &lt;<i>flag</i>&gt; directly to the Java VM for the compilation daemon.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code>fsc</code> tool submits Scala compilation jobs to a compilation daemon. The first time it is executed, the daemon is started automatically. On subsequent runs, the same daemon can be reused, thus resulting in a faster compilation. The tool is especially effective when repeatedly compiling with the same class paths, because the compilation daemon can reuse a compiler instance. </p>
 <p> The compilation daemon is smart enough to flush its cached compiler when the class path changes. However, if the contents of the class path change, for example due to upgrading a library, then the daemon should be explicitly shut down with <code>-shutdown</code>. </p>
 <p> Note that the <code>scala</code> script runner will also use the offline compiler by default, with the same advantages and caveats.</p>

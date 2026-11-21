@@ -1,5 +1,4 @@
 ---
-
 title: "bson_iter_next(3)"
 name: "bson_iter_next"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_iter_next() – Advances iter to the next element in the docu
 
 <h2>NAME</h2>
 <p> bson_iter_next() &#8211; Advances iter to the next element in the document if one exists.</p>
+<h2>SYNOPSIS</h2>
 <pre>
 bool
 bson_iter_next (bson_iter_t *iter);
@@ -18,6 +18,7 @@ bson_iter_next (bson_iter_t *iter);
 <dl>
 <dt><code>iter</code></dt>
 <dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Advances <code>iter</code> to the next element in the document if one exists. </p>
 <h2>RETURNS</h2>
 <p> true if <code>iter</code> was advanced, otherwise false and <code>iter</code> should be considered invalid. </p>

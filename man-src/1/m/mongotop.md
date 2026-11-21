@@ -1,5 +1,4 @@
 ---
-
 title: "mongotop(1)"
 name: "mongotop"
 section: "1"
@@ -10,6 +9,7 @@ description: "mongotop – MongoDB Activity Monitor"
 
 <h2>NAME</h2>
 <p> mongotop &#8211; MongoDB Activity Monitor</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mongotop</code> provides a method to track the amount of time a MongoDB instance spends reading and writing data. <code>mongotop</code> provides statistics on a per-collection level. By default, <code>mongotop</code> returns values every second. </p>
 <p> <code>SEE ALSO:</code> For more information about monitoring MongoDB, see <a rel="nofollow" href="http://docs.mongodb.org/manual/administration/monitoring.">http://docs.mongodb.org/manual/administration/monitoring.</a> </p>
 <p> For additional background on various other MongoDB status outputs see:</p>

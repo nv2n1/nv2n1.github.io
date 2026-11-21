@@ -1,5 +1,4 @@
 ---
-
 title: "repoquery(1)"
 name: "repoquery"
 section: "1"
@@ -10,8 +9,10 @@ description: "repoquery – query information from Yum repositories"
 
 <h2>NAME</h2>
 <p> repoquery &#8211; query information from Yum repositories</p>
+<h2>SYNOPSIS</h2>
 <p> <code>repoquery</code> [options] &lt;item &#8230;&gt;<br />
  <code>repoquery</code> -a [options]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>repoquery</code> is a program for querying information from YUM repositories similarly to rpm queries. </p>
 <h2>GENERAL OPTIONS</h2>
 <dl>

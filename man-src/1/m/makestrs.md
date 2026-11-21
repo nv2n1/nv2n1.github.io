@@ -1,5 +1,4 @@
 ---
-
 title: "makestrs(1)"
 name: "makestrs"
 section: "1"
@@ -10,7 +9,9 @@ description: "makestrs – makes string table C source and header(s)"
 
 <h2>NAME</h2>
 <p> makestrs &#8211; makes string table C source and header(s)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>makestrs [-f source] [-i includedir] [-abioptions &#8230;]</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <i>makestrs</i> command creates string table C source files and headers. If <i>-f</i> <i>source</i> is not specified <i>makestrs</i> will read from <i>stdin</i>. The C source file is always written to <i>stdout</i>. <i>makestrs</i> creates one or more C header files as specified in the source file. The following options may be specified: <i>-sparcabi</i>, <i>-intelabi</i>, <i>-functionabi</i>, <i>-arrayperabi</i>, and <i>-defaultabi.</i> </p>
 <p> <i>-sparcabi </i> is used on SPARC platforms conforming to the SPARC Compliance Definition, i.e. SVR4/Solaris. </p>
 <p> <i>-intelabi </i> is used on Intel platforms conforming to the System V Application Binary Interface, i.e. SVR4. </p>

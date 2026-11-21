@@ -1,5 +1,4 @@
 ---
-
 title: "runtest(1)"
 name: "runtest"
 section: "1"
@@ -10,7 +9,9 @@ description: "runtest – DejaGnu test driver"
 
 <h2>NAME</h2>
 <p> runtest &#8211; DejaGnu test driver</p>
+<h2>SYNOPSIS</h2>
 <p> <code>runtest</code> [OPTION]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <i>DejaGnu</i> is a framework for testing programs using Expect. <code>runtest</code> is the driver program for <i>DejaGnu.</i> It controls what tests to run and how to run them.</p>
 <h2>OPTIONS</h2>
 <dl>

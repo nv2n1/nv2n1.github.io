@@ -1,5 +1,4 @@
 ---
-
 title: "lorder(1)"
 name: "lorder"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-lorder/"
 description: "lorder – list dependencies for object files"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>lorder</code> &#8211; list dependencies for object files </p>
+<h2>SYNOPSIS</h2>
 <p> <i>file &#8230;</i></p>
+<h2>DESCRIPTION</h2>
 <p> The utility uses <a href="/docs/linux/man/1-nm/">nm</a>(1) to determine interdependencies in the list of object files and library archives specified on the command line. The utility outputs a list of file names where the first file contains a symbol which is defined by the second file. </p>
 <p> The output is normally used with <a href="/docs/linux/man/1-tsort/">tsort</a>(1) when a library is created to determine the optimum ordering of the object modules so that all references may be resolved in a single pass of the loader. </p>
 <p> When linking static binaries, and <a href="/docs/linux/man/1-tsort/">tsort</a>(1) can be used to properly order library archives automatically.</p>

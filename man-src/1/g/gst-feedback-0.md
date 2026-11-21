@@ -1,5 +1,4 @@
 ---
-
 title: "gst-feedback-0(1)"
 name: "gst-feedback-0"
 section: "1"
@@ -10,7 +9,9 @@ description: "gst-feedback – generate debug info for GStreamer bug reports"
 
 <h2>NAME</h2>
 <p> gst-feedback &#8211; generate debug info for GStreamer bug reports</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gst-feedback-0.10</code></p>
+<h2>DESCRIPTION</h2>
 <p> <i>gst-feedback</i> is a utility that scans the system for various information that is useful to GStreamer developers to help diagnose user problem. </p>
 <p> Depending on the type of bug report, it may be useful to attach the output of <i>gst-feedback</i> when you contact the developers. </p>
 <p> NOTE: The current version of this script scans many dirs: /usr/lib /usr/local/lib /home /usr/include /usr/local/include /home (again) for various GStreamer installations. Depending on your system you may not want to do this. Improvements to the script are welcome.</p>

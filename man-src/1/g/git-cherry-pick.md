@@ -1,5 +1,4 @@
 ---
-
 title: "git-cherry-pick(1)"
 name: "git-cherry-pick"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-cherry-pick/"
 description: "git-cherry-pick – Apply the changes introduced by some existing commits"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-cherry-pick &#8211; Apply the changes introduced by some existing commits </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git cherry - pick[--edit][-n][-m parent - number][-s][-x][--ff][-S[&lt;keyid&gt;]]&lt;commit&gt;... git cherry - pick(--continue | --skip | --abort | --quit)
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Given one or more existing commits, apply the change each one introduces, recording a new commit for each. This requires your working tree to be clean (no modifications from the HEAD commit). </p>
 <p> When it is not obvious how to apply a change, the following happens: </p>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "euscale-delete-scheduled-action(1)"
 name: "euscale-delete-scheduled-action"
 section: "1"
@@ -10,10 +9,12 @@ description: "euscale-delete-scheduled-action – Delete a scheduled action"
 
 <h2>NAME</h2>
 <p> euscale-delete-scheduled-action &#8211; Delete a scheduled action</p>
+<h2>SYNOPSIS</h2>
 <p> euscale-delete-scheduled-action <code>-g</code> ASGROUP [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID]</dt>
 <dd> [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ACTION</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Delete a scheduled action</p>
 <h3>positional arguments:</h3>
 <dl>

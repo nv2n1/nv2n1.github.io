@@ -1,5 +1,4 @@
 ---
-
 title: "ldb_schema(3)"
 name: "ldb_schema"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-ldb_schema/"
 description: "ldb_schema –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ldb_schema &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Data Fields</h3>
 <p> void * <code>attribute_handler_override_private</code> </p>
 <p> ldb_attribute_handler_override_fn_t <code>attribute_handler_override</code> </p>

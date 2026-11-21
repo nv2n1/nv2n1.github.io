@@ -1,5 +1,4 @@
 ---
-
 title: "pmcd(1)"
 name: "pmcd"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmcd – performance metrics collector daemon"
 
 <h2>NAME</h2>
 <p> <code>pmcd</code> &#8211; performance metrics collector daemon</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pmcd</code> [<code>-AfQSv</code>] [<code>-c</code> <i>config</i>] [<code>-C</code> <i>dirname</i>] [<code>-H</code> <i>hostname</i>] [<code>-i</code> <i>ipaddress</i>] [<code>-l</code> <i>logfile</i>] [<code>-L</code> <i>bytes</i>] [<code>-M</code> <i>certname</i>] [<code>&#8211;</code>[<code>n</code>|<code>N</code>] <i>pmnsfile</i>] [<code>-p</code> <i>port</i>[,<i>port</i> &#8230;]] [<code>-P</code> <i>passfile</i>] [<code>-q</code> <i>timeout</i>] [<code>-s</code> <i>sockname</i>] [<code>-T</code> <i>traceflag</i>] [<code>-t</code> <i>timeout</i>] [<code>-U</code> <i>username</i>] [<code>-x</code> <i>file</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmcd</code> is the collector used by the Performance Co-Pilot (see <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1)) to gather performance metrics on a system. As a rule, there must be an instance of <code>pmcd</code> running on a system for any performance metrics to be available to the PCP. </p>
 <p> <code>pmcd</code> accepts connections from client applications running either on the same machine or remotely and provides them with metrics and other related information from the machine that <code>pmcd</code> is executing on. <code>pmcd</code> delegates most of this request servicing to a collection of Performance Metrics Domain Agents (or just agents), where each agent is responsible for a particular group of metrics, known as the domain of the agent. For example the <code>postgresql</code> agent is responsible for reporting information relating to the PostgreSQL database, such as the transaction and query counts, indexing and replication statistics, and so on. </p>
 <p> The agents may be processes started by <code>pmcd</code>, independent processes or Dynamic Shared Objects (DSOs, see <code><a href="/docs/linux/man/3-dlopen/">dlopen</a></code>(3)) attached to <code>pmcd</code>&#8216;s address space. The configuration section below describes how connections to agents are specified. </p>

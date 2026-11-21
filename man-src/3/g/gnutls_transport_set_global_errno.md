@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_transport_set_global_errno(3)"
 name: "gnutls_transport_set_global_errno"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_transport_set_global_errno – API function"
 
 <h2>NAME</h2>
 <p> gnutls_transport_set_global_errno &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/gnutls.h">gnutls/gnutls.h</a>&gt;</code> </p>
 <p> <code>void gnutls_transport_set_global_errno(int </code><i>err</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>int err</dt>
 <dd> error value to store in global errno variable.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Store <i>err</i> in the global errno variable. Useful values for <i>err</i> is EAGAIN and EINTR, other values are treated will be treated as real errors in the push/pull function. </p>
 <p> This function is useful in replacement push/pull functions set by gnutls_transport_set_push_function and gnutls_transport_set_pullpush_function under Windows, where the replacement push/pull may not have access to the same <i>errno</i> variable that is used by GnuTLS (e.g., the application is linked to msvcr71.dll and gnutls is linked to msvcrt.dll). </p>
 <p> Whether this function is thread safe or not depends on whether the global variable errno is thread safe, some system libraries make it a thread-local variable. When feasible, using the guaranteed thread-safe <code>gnutls_transport_set_errno()</code> may be better.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "fixtof(3)"
 name: "fixtof"
 section: "3"
@@ -10,8 +9,10 @@ description: "fixtof – Converts a fixed point to floating point. Allegro game 
 
 <h2>NAME</h2>
 <p> fixtof &#8211; Converts a fixed point to floating point. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>double fixtof(fixed x);</code></p>
+<h2>DESCRIPTION</h2>
 <p> Converts fixed point to floating point. Example: </p>
 <pre><code>
 float result;

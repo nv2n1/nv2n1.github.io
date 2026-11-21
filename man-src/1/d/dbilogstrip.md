@@ -1,5 +1,4 @@
 ---
-
 title: "dbilogstrip(1)"
 name: "dbilogstrip"
 section: "1"
@@ -7,9 +6,14 @@ letter: "d"
 url: "/docs/linux/man/1-dbilogstrip/"
 ---
 
-dbilogstrip - filter to normalize DBI trace logs for diff'ing 
+<h2 class="name">NAME</h2>
+ 
 
-Read <font SIZE="-1">DBI</font> trace file <tt>&quot;dbitrace.log&quot;</tt> and write out a stripped version to <tt>&quot;dbitrace_stripped.log&quot;</tt> 
+ dbilogstrip - filter to normalize DBI trace logs for diff'ing 
+
+<h2>SYNOPSIS</h2>
+
+ Read <font SIZE="-1">DBI</font> trace file <tt>&quot;dbitrace.log&quot;</tt> and write out a stripped version to <tt>&quot;dbitrace_stripped.log&quot;</tt> 
 
  <pre>
   dbilogstrip dbitrace.log &gt; dbitrace_stripped.log
@@ -23,7 +27,9 @@ Read <font SIZE="-1">DBI</font> trace file <tt>&quot;dbitrace.log&quot;</tt> and
   diff -u dbitrace1.log dbitrace2.log
 </pre>
 
-Replaces any hex addresses, e.g, <tt>0x128f72ce</tt> with <tt>&quot;0xN&quot;</tt>. 
+<h2>DESCRIPTION</h2>
+
+ Replaces any hex addresses, e.g, <tt>0x128f72ce</tt> with <tt>&quot;0xN&quot;</tt>. 
 
  Replaces any references to process id or thread id, like <tt>&quot;pid#6254&quot;</tt> with <tt>&quot;pidN&quot;</tt>. 
 

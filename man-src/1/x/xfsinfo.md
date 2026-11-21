@@ -1,5 +1,4 @@
 ---
-
 title: "xfsinfo(1)"
 name: "xfsinfo"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-xfsinfo/"
 description: "xfsinfo – X font server information utility"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xfsinfo &#8211; X font server information utility </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xfsinfo</code> [-server <i>servername</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Xfsinfo</i> is a utility for displaying information about an X font server. It is used to examine the capabilities of a server, the predefined values for various parameters used in communicating between clients and the server, and the font catalogues and alternate servers that are available.</p>
 <h2>OPTIONS</h2>
 <dl>

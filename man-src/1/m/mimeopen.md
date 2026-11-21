@@ -1,5 +1,4 @@
 ---
-
 title: "mimeopen(1)"
 name: "mimeopen"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mimeopen/"
 description: "mimeopen – Open files by mimetype"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mimeopen &#8211; Open files by mimetype </p>
+<h2>SYNOPSIS</h2>
 <p> mimeopen [options] [-] files</p>
+<h2>DESCRIPTION</h2>
 <p> This script tries to determine the mimetype of a file and open it with the default desktop application. If no default application is configured the user is prompted with an &#8220;open with&#8221; menu in the terminal. </p>
 <p> To use this script you need the freedesktop mime-info database and the freedesktop desktop-file-utils package. See <i>File::MimeInfo::Applications</i>(3) for more details.</p>
 <h2>OPTIONS</h2>

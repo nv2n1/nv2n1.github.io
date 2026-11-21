@@ -1,5 +1,4 @@
 ---
-
 title: "dlasd2(3)"
 name: "dlasd2"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlasd2/"
 description: "dlasd2.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlasd2.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlasd2</code> (NL, NR, SQRE, K, D, Z, ALPHA, BETA, U, LDU, VT, LDVT, DSIGMA, U2, LDU2, VT2, LDVT2, IDXP, IDX, IDXC, IDXQ, COLTYP, INFO)<br />
  <i></i><code>DLASD2</code> merges the two sets of singular values together into a single sorted set. Used by sbdsdc.</p>

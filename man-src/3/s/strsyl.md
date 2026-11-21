@@ -1,5 +1,4 @@
 ---
-
 title: "strsyl(3)"
 name: "strsyl"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-strsyl/"
 description: "strsyl.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> strsyl.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>strsyl</code> (TRANA, TRANB, ISGN, M, N, A, LDA, B, LDB, C, LDC, SCALE, INFO)<br />
  <i></i><code>STRSYL</code></p>

@@ -1,5 +1,4 @@
 ---
-
 title: "euca-get-password(1)"
 name: "euca-get-password"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-get-password – Retrieve the administrator password for an i
 
 <h2>NAME</h2>
 <p> euca-get-password &#8211; Retrieve the administrator password for an instance running Windows</p>
+<h2>SYNOPSIS</h2>
 <p> euca-get-password <code>-k</code> FILE [&#8211;show-empty-fields] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] INSTANCE</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Retrieve the administrator password for an instance running Windows</p>
 <h3>positional arguments:</h3>
 <dl>

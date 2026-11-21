@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_alert_get(3)"
 name: "gnutls_alert_get"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_alert_get – API function"
 
 <h2>NAME</h2>
 <p> gnutls_alert_get &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>gnutls_alert_description_t gnutls_alert_get(gnutls_session_t </code><i>session</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_session_t session</dt>
 <dd> is a <code>gnutls_session_t</code> structure.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will return the last alert number received. This function should be called when <code>GNUTLS_E_WARNING_ALERT_RECEIVED</code> or <code>GNUTLS_E_FATAL_ALERT_RECEIVED</code> errors are returned by a gnutls function. The peer may send alerts if he encounters an error. If no alert has been received the returned value is undefined.</p>
 <h2>RETURNS</h2>
 <p> the last alert received, a <code>gnutls_alert_description_t</code> value.</p>

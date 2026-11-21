@@ -1,5 +1,4 @@
 ---
-
 title: "tz_convert(1)"
 name: "tz_convert"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-tz_convert/"
 description: "tz_convert – Timezone converter from operating system tz format into libical format used by Orage and several other calander tools."
 ---
 
+<h2 class="name">NAME</h2>
+<p> tz_convert &#8211; Timezone converter from operating system tz format into libical format used by Orage and several other calander tools. </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>tz_convert [OPTION&#8230;] [INFILE]</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>tz_convert</code></p>
 <dd>is a command line tool, which can be used to convert timezone data from so called tz binary format, usually used in operating systems, to libical format, used by several calenders like Orage. </dd>
 <p> There are several options available to only convert certain files or files in certain directory. Or only convert part of the file and ignore for example old data. It is also possible to add new timezone files, which are based on old timezone data. </p>

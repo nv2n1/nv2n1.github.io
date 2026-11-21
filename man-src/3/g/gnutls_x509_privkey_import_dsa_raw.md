@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_privkey_import_dsa_raw(3)"
 name: "gnutls_x509_privkey_import_dsa_raw"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_privkey_import_dsa_raw – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_privkey_import_dsa_raw &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_privkey_import_dsa_raw(gnutls_x509_privkey_t </code><i>key</i><code>, const gnutls_datum_t * </code><i>p</i><code>, const gnutls_datum_t * </code><i>q</i><code>, const gnutls_datum_t * </code><i>g</i><code>, const gnutls_datum_t * </code><i>y</i><code>, const gnutls_datum_t * </code><i>x</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -26,6 +26,7 @@ description: "gnutls_x509_privkey_import_dsa_raw – API function"
 <dd> holds the y</dd>
 <dt>const gnutls_datum_t * x</dt>
 <dd> holds the x</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will convert the given DSA raw parameters to the native <code>gnutls_x509_privkey_t</code> format. The output will be stored in <i>key</i> .</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

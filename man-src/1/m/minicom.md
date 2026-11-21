@@ -1,5 +1,4 @@
 ---
-
 title: "minicom(1)"
 name: "minicom"
 section: "1"
@@ -7,10 +6,11 @@ letter: "m"
 url: "/docs/linux/man/1-minicom/"
 description: "minicom – friendly serial communication program"
 ---
-
 <h2>NAME</h2>
 <p> minicom - friendly serial communication program  </p>
+<h2>SYNOPSIS</h2>
 <p> <code>minicom</code> [options] [<i>configuration</i>]  </p>
+<h2>DESCRIPTION</h2>
 <p> <code>minicom</code> is a communication program which somewhat resembles the shareware program TELIX but is free with source code and runs under most Unices. Features include dialing directory with auto-redial, support for UUCP-style lock files on serial devices, a separate script language interpreter, capture to file, multiple users with individual configurations, and more.  </p>
 <h2>COMMAND-LINE</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "mlton(1)"
 name: "mlton"
 section: "1"
@@ -10,7 +9,9 @@ description: "mlton – whole-program compiler for the Standard ML (SML) program
 
 <h2>NAME</h2>
 <p> <code>mlton</code> &#8211; whole-program compiler for the Standard ML (SML) programming language</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mlton</code> <i>[option &#8230;] file</i><code>.</code>{<code>c</code>|<code>cm</code>|<code>mlb</code>|<code>o</code>|<code>sml</code>} [file<code>.</code>{<code>c</code>|<code>o</code>|<code>s</code>|<code>S</code>} &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>MLton</code> is run from the command line with a collection of options followed by a file name and a list of files with which to compile, assemble, and link with. The simplest case is to run <code>mlton foo.sml</code>, where <code>foo.sml</code> contains a valid SML program, in which case MLton compiles the program to produce an executable <code>foo</code>. Since <code>MLton</code> does not support separate compilation, the program must be the entire program you wish to compile. However, the program may refer to signatures and structures defined in the Basis Library. </p>
 <p> Larger programs, spanning many files, may be compiled with the ML Basis system. In this case, <code>mlton foo.mlb</code> will compile the complete SML program described by the basis <code>foo.mlb</code>, which may specify both SML files and additional bases. See the <code>MLton Guide</code> for details. </p>
 <p> <code>MLton</code> also supports a limited subset of SML/NJ Compilation Manager (CM) files. For example, <code>mlton foo.cm</code> will compile the complete SML program consisting of the concatenation of all the SML files referred to (either directly or indirectly) by <code>foo.cm</code>. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "euca-replace-network-acl-association(1)"
 name: "euca-replace-network-acl-association"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-replace-network-acl-association – Associate a new VPC netwo
 
 <h2>NAME</h2>
 <p> euca-replace-network-acl-association &#8211; Associate a new VPC network ACL with a subnet</p>
+<h2>SYNOPSIS</h2>
 <p> euca-replace-network-acl-association <code>-a</code> ACL [&#8211;show-empty-fields]</p>
 <dl>
 <dt>[-U URL] [&#8211;region USER [at] REGION]</dt>
 <dd> [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ACLASSOC</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Associate a new VPC network ACL with a subnet</p>
 <h3>positional arguments:</h3>
 <dl>

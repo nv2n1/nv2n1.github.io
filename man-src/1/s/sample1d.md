@@ -1,5 +1,4 @@
 ---
-
 title: "sample1d(1)"
 name: "sample1d"
 section: "1"
@@ -10,8 +9,10 @@ description: "sample1d – Resample 1-D table data using splines"
 
 <h2>NAME</h2>
 <p> sample1d &#8211; Resample 1-D table data using splines</p>
+<h2>SYNOPSIS</h2>
 <p> <code>sample1d</code> [ <i>table</i> ] [ <code>f</code>|<code>p</code>|<code>m</code>|<code>r</code>|<code>R</code>[<code>+l</code>] ] [ <code>l</code>|<code>a</code>|<code>c</code>|<code>n</code>[<code>+1</code>|<code>+2</code>] ] [ <i>inc</i>[<i>unit</i>] ] [ <i>knotfile</i> ] [ <i>start</i>[/<i>stop</i>] ] [ <i>col</i> ] [ [<i>level</i>] ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>sample1d</code> reads a multi-column ASCII [or binary] data set from file [or standard input] and interpolates the time-series or spatial profile at locations where the user needs the values. The user must provide the column number of the independent (monotonically increasing <code>or</code> decreasing) variable. Equidistant or arbitrary sampling can be selected. All columns are resampled based on the new sampling interval. Several interpolation schemes are available. Extrapolation outside the range of the input data is not supported.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <p> None.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "virt-what(1)"
 name: "virt-what"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-virt-what/"
 description: "virt-what – detect if we are running in a virtual machine"
 ---
 
+<h2 class="name">NAME</h2>
+<p> virt-what &#8211; detect if we are running in a virtual machine </p>
 <h2>SUMMARY</h2>
 <p> virt-what [options]</p>
+<h2>DESCRIPTION</h2>
 <p> <tt>&quot;virt-what&quot;</tt> is a shell script which can be used to detect if the program is running in a virtual machine. </p>
 <p> The program prints out a list of &#8220;facts&#8221; about the virtual machine, derived from heuristics. One fact is printed per line. </p>
 <p> If nothing is printed and the script exits with code 0 (no error), then it can mean <i>either</i> that the program is running on bare-metal <i>or</i> the program is running inside a type of virtual machine which we don&#8217;t know about or cannot detect.</p>

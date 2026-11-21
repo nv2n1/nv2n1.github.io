@@ -1,5 +1,4 @@
 ---
-
 title: "asciinema(1)"
 name: "asciinema"
 section: "1"
@@ -10,7 +9,9 @@ description: "asciinema – terminal session recorder"
 
 <h2>NAME</h2>
 <p> asciinema &#8211; terminal session recorder</p>
+<h2>SYNOPSIS</h2>
 <p> <code>asciinema</code> <i>[-h] [&#8211;version] command [&lt;args&gt;]</i></p>
+<h2>DESCRIPTION</h2>
 <p> Terminal session recorder and the best companion of asciinema.org service. </p>
 <p> asciinema is composed of multiple commands, similar to git, apt-get or brew. </p>
 <p> When you run asciinema with no arguments help messages is displayed, listing all available commands with their options.</p>

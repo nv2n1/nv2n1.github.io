@@ -1,5 +1,4 @@
 ---
-
 title: "night_darks(1)"
 name: "night_darks"
 section: "1"
@@ -10,7 +9,9 @@ description: "night_darks – non-iteractive dark snapshoting with CCD camera"
 
 <h2>NAME</h2>
 <p> night_darks &#8211; non-iteractive dark snapshoting with CCD camera</p>
+<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr>night_darks&nbsp;<wbr>[options]&nbsp;<wbr>exptime1&nbsp;<wbr>[exptime2]&nbsp;<wbr>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> The options are as follows:</p>
 <dl>
 <dt><code>-oo</code></dt>

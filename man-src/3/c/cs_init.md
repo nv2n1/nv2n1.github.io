@@ -1,5 +1,4 @@
 ---
-
 title: "cs_init(3)"
 name: "cs_init"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cs_init/"
 description: "cs_init – create and initialize a CS context"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cs_init &#8211; create and initialize a CS context </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cs/cs.h&gt;
 </code></pre>
@@ -18,6 +20,7 @@ NEOERR *cs_init (CSPARSE **parse, HDF *hdf);
 <p> parse &#8211; a pointer to a pointer to a CSPARSE structure that<br />
  will be created<br />
  hdf &#8211; the HDF dataset to be used during parsing and rendering </p>
+<h2>DESCRIPTION</h2>
 <p> cs_init will create a CSPARSE structure and initialize it. This structure maintains the state and information necessary for parsing and rendering a CS template. </p>
 <p> MT-Level: cs routines perform no locking, and neither do hdf routines. They should be safe in an MT environment as long as they are confined to a single thread. </p>
 <h2>RETURN VALUE</h2>

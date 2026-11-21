@@ -1,5 +1,4 @@
 ---
-
 title: "lsamen(3)"
 name: "lsamen"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-lsamen/"
 description: "lsamen.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lsamen.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> LOGICAL function <code>lsamen</code> (N, CA, CB)<br />
  <i></i><code>LSAMEN</code></p>

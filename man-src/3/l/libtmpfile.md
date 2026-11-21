@@ -1,5 +1,4 @@
 ---
-
 title: "libtmpfile(3)"
 name: "libtmpfile"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-libtmpfile/"
 description: "pm_tmpfile() – create a temporary unnamed file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pm_tmpfile() &#8211; create a temporary unnamed file</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;netpbm/pm.h&gt;
 FILE *
@@ -27,6 +29,7 @@ fprintf(STDOUT, 'temp file contains ' % s '
 ', buffer);
 fclose(myfileP);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> This library function is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pm_tmpfile()</code> creates and opens an unnamed temporary file. It is basically the same thing as the standard C library <code>tmpfile()</code> function, except that it uses the <code>TMPFILE</code> environment variable to decide where to create the temporary file. If <code>TMPFILE</code> is not set or is set to something unusable (e.g. too long), <code>pm_tmpfile()</code> falls back to the value of the standard C library symbol <code>P_tmpdir</code>, just like <code>tmpfile()</code>. </p>
 <p> Unlike <code>tmpfile()</code>, <code>pm_tmpfile()</code> never returns NULL. If it fails, it issues a message to Standard Error and aborts the program, like most libnetpbm routines do. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "systemd-analyze(1)"
 name: "systemd-analyze"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-systemd-analyze/"
 description: "systemd-analyze – Analyze and debug system manager"
 ---
 
+<h2 class="name">NAME</h2>
+<p> systemd-analyze &#8211; Analyze and debug system manager </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>systemd-analyze</code> [OPTIONS&#8230;] [time]</dt>
 <dt> <code>systemd-analyze</code> [OPTIONS&#8230;] blame</dt>
@@ -26,6 +28,7 @@ description: "systemd-analyze – Analyze and debug system manager"
 <dt> <code>systemd-analyze</code> [OPTIONS&#8230;] cat-config <i>NAME</i>|<i>PATH</i>&#8230;</dt>
 <dt> <code>systemd-analyze</code> [OPTIONS&#8230;] verify [<i>FILE</i>&#8230;]</dt>
 <dt> <code>systemd-analyze</code> [OPTIONS&#8230;] security <i>UNIT</i>&#8230;</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>systemd-analyze</code></p>
 <dd>may be used to determine system boot-up performance statistics and retrieve other state and tracing information from the system and service manager, and to verify the correctness of unit files. It is also used to access special functions useful for advanced system manager debugging. </dd>
 <p> If no command is passed, <code>systemd-analyze time</code> is implied.</p>

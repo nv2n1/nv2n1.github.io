@@ -1,5 +1,4 @@
 ---
-
 title: "libinput-record(1)"
 name: "libinput-record"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-libinput-record/"
 description: "libinput-record – record kernel events"
 ---
 
+<h2 class="name">NAME</h2>
+<p> libinput-record &#8211; record kernel events </p>
+<h2>SYNOPSIS</h2>
 <p> <code>libinput record [options] [</code><i>/dev/input/event0</i><code> [</code><i>/dev/input/event1</i><code> &#8230;]]</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>libinput record</code> tool records kernel events from a device and prints them in a format that can later be replayed with the <code>libinput replay(1)</code> tool. This tool needs to run as root to read from the device. </p>
 <p> The output of this tool is YAML, see <code>FILE FORMAT</code> for more details. By default it prints to stdout unless the <code>-o</code> option is given. </p>
 <p> The events recorded are independent of libinput itself, updating or removing libinput will not change the event stream.</p>

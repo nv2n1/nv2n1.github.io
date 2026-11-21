@@ -1,5 +1,4 @@
 ---
-
 title: "perlfaq5(1)"
 name: "perlfaq5"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-perlfaq5/"
 description: "perlfaq5 – Files and Formats"
 ---
 
+<h2 class="name">NAME</h2>
+<p> perlfaq5 &#8211; Files and Formats </p>
 <h2>VERSION</h2>
 <p> version 5.20190126</p>
+<h2>DESCRIPTION</h2>
 <p> This section deals with I/O and the &#8220;f&#8221; issues: filehandles, flushing, formats, and footers.</p>
 <h3>How do I flush/unbuffer an output filehandle? Why must I do this?</h3>
 <p> (contributed by brian d foy) </p>

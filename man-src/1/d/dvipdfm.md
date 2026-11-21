@@ -1,5 +1,4 @@
 ---
-
 title: "dvipdfm(1)"
 name: "dvipdfm"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dvipdfm/"
 description: "dvipdfmx, xdvipdfmx, dvipdfm – produce PDF files directly from DVI files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dvipdfmx, xdvipdfmx, dvipdfm &#8211; produce PDF files directly from DVI files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dvipdfmx</code> or <code>dvipdfm</code> [<i>options</i>] <i>file</i>[<code>.dvi</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> The program <code>dvipdfmx</code> generates a PDF file from a DVI file. DVI files are the output produced by TeX. <code>groff</code> can also generate DVI files using <code>grodvi</code>(-Tdvi). </p>
 <p> In TeX Live, <code>dvipdfm</code> is another incarnation of <code>dvipdfmx</code> rather than a separate program. Compatibility is attempted as best as possible. </p>
 <p> <code>xdvipdfmx</code> is another incarnation. It is used as the back end for <code><a href="/docs/linux/man/1-xetex/">xetex</a></code>(1) and is not intended to be invoked directly. </p>

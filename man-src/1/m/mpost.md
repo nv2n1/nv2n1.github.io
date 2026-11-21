@@ -1,5 +1,4 @@
 ---
-
 title: "mpost(1)"
 name: "mpost"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mpost/"
 description: "mpost, pmpost, upmpost – MetaPost, a system for creating graphics r-mpost, r-pmpost, r-upmpost – restricted MetaPost"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mpost, pmpost, upmpost &#8211; MetaPost, a system for creating graphics r-mpost, r-pmpost, r-upmpost &#8211; restricted MetaPost </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mpost</code> [<i>options</i>] [<i>commands</i>] </p>
 <p> <code>mpost </code> <code>&#8211;dvitomp</code> <i>dvifile</i>[<code>.dvi</code>] [<i>mpxfile</i>[<code>.mpx</code>]] </p>
+<h2>DESCRIPTION</h2>
 <p> MetaPost interprets the MetaPost language and produces PostScript (EPS) or Scalable Vector Graphics (SVG) pictures. The MetaPost language is similar to Knuth&#8217;s Metafont with additional features for including <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1) or <code><a href="/docs/linux/man/1-troff/">troff</a></code>(1) commands and accessing features of PostScript not found in Metafont. </p>
 <p> MetaPost is normally used with a set of basic macros, and it will use its executable name as the name of the preload file to use. For example, when called as <code>mpost</code> the <i>mpost.mp</i> file is used, which simply reads <i>plain.mp</i>. When the <code>&#8211;ini</code> option is given, preloading does not happen. </p>
 <p> The <i>commands</i> given on the command line to the MetaPost program are passed to it as the first input line. (But it is often easier to type extended arguments as the first input line, since UNIX shells tend to gobble up or misinterpret MetaPost&#8217;s favorite symbols, like semicolons, unless you quote them.) The normal usage is to say <i>mpost figs</i> to process the file <i>figs.mp</i>. The basename of <i>figs</i> becomes the &#8220;jobname&#8221;, and is used in forming output file names. If no file is named, the jobname becomes <i>mpout</i>. The default extension, <i>.mp</i>, can be overridden by specifying an extension explicitly. </p>

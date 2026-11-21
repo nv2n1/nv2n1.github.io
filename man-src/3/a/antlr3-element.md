@@ -1,5 +1,4 @@
 ---
-
 title: "antlr3-element(3)"
 name: "antlr3-element"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-antlr3-element/"
 description: "ANTLR3_VECTOR_ELEMENT_struct –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ANTLR3_VECTOR_ELEMENT_struct &#8211; </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3collections.h">antlr3collections.h</a>&gt;</p>
 <h3>Public Member Functions</h3>
 <p> <code>void</code> (ANTLR3_CDECL *freeptr)(void *) </p>

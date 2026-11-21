@@ -1,5 +1,4 @@
 ---
-
 title: "poe-gen-tests(1)"
 name: "poe-gen-tests"
 section: "1"
@@ -7,13 +6,20 @@ letter: "p"
 url: "/docs/linux/man/1-poe-gen-tests/"
 ---
 
-poe-gen-tests - generate standard POE tests for third-party modules 
+<h2 class="name">NAME</h2>
+ 
 
-<pre><code>
+ poe-gen-tests - generate standard POE tests for third-party modules 
+
+<h2>SYNOPSIS</h2>
+
+ <pre><code>
 poe - gen - tests-- dirbase t / loops-- loop Glib-- loop Kqueue-- loop Event::Lib-- loop POE::XS::Loop::Poll
 </code></pre>
 
-This program and the accompanying POE::Test::Loop::* modules make up <font SIZE="-1">POE</font>'s tests for POE::Loop subclasses. These tests are designed to run identically regardless of the current event loop. <font SIZE="-1">POE</font> uses them to test the event loops it bundles: 
+<h2>DESCRIPTION</h2>
+
+ This program and the accompanying POE::Test::Loop::* modules make up <font SIZE="-1">POE</font>'s tests for POE::Loop subclasses. These tests are designed to run identically regardless of the current event loop. <font SIZE="-1">POE</font> uses them to test the event loops it bundles: 
 
  <pre>
   POE::Loop::Gtk

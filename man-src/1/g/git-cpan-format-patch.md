@@ -1,5 +1,4 @@
 ---
-
 title: "git-cpan-format-patch(1)"
 name: "git-cpan-format-patch"
 section: "1"
@@ -7,13 +6,20 @@ letter: "g"
 url: "/docs/linux/man/1-git-cpan-format-patch/"
 ---
 
-git-cpan-format-patch - Format patches using <tt>&quot;cpan/master&quot;</tt> as the origin reference 
+<h2 class="name">NAME</h2>
+ 
 
-<pre>
+ git-cpan-format-patch - Format patches using <tt>&quot;cpan/master&quot;</tt> as the origin reference 
+
+<h2>SYNOPSIS</h2>
+
+ <pre>
     % git cpan-format-patch
 </pre>
 
-This is just like running <tt>&quot;git format-patch cpan/master&quot;</tt>.
+<h2>DESCRIPTION</h2>
+
+ This is just like running <tt>&quot;git format-patch cpan/master&quot;</tt>.
 
 <h2>VERSION</h2>
 

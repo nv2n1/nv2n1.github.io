@@ -1,5 +1,4 @@
 ---
-
 title: "lavrec(1)"
 name: "lavrec"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-lavrec/"
 description: "lavrec – Record MJPEG-video from a zoran/video4linux-device"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lavrec &#8211; Record MJPEG-video from a zoran/video4linux-device</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lavrec</code> [<i>options</i>] <i>filename(s)</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>lavrec</code> can be used to record video in MJPEG format (either quicktime or AVI) from a zoran video-capture device, such as the Miro/Pinnacle DC10(+), the Iomega Buz or Linux Media Labs&#8217; LML33, or from a generic video4linux device, such as the cheap Bt848 or Bt878 based TV-cards that are being sold in every computer shop around the corner. </p>
 <h2>OPTIONS</h2>
 <p> <code>lavrec</code> accepts the following options: </p>

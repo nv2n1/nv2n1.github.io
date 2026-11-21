@@ -1,5 +1,4 @@
 ---
-
 title: "cerfcl(3)"
 name: "cerfcl"
 section: "3"
@@ -10,6 +9,7 @@ description: "cerf, cerff, cerfl, cerfc, cerfcf, cerfcl – complex error functi
 
 <h2>NAME</h2>
 <p> cerf, cerff, cerfl, cerfc, cerfcf, cerfcl &#8211; complex error function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
 <p> <code>double complex cerf(double complex </code><i>z</i><code>);</code><br />
  <code>float complex cerff(float complex </code><i>z</i><code>);</code><br />
@@ -18,6 +18,7 @@ description: "cerf, cerff, cerfl, cerfc, cerfcf, cerfcl – complex error functi
  <code>float complex cerfcf(float complex </code><i>z</i><code>);</code><br />
  <code>long double complex cerfcl(long double complex </code><i>z</i><code>);</code> </p>
 <p> Link with <i>-lm</i>.</p>
+<h2>DESCRIPTION</h2>
 <p> The (unimplemented) function <code>cerf</code>() is the complex version of the error function. erf(z) = 2/sqrt(pi) * integral from 0 to z of exp(-t*t) dt. The function <code>cerfc</code>() is defined as cerfc(z) = 1-cerf(z).</p>
 <h2>CONFORMING TO</h2>
 <p> The function names are reserved for future use in C99.</p>

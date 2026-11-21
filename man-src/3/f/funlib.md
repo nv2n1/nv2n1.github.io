@@ -1,5 +1,4 @@
 ---
-
 title: "funlib(3)"
 name: "funlib"
 section: "3"
@@ -10,7 +9,9 @@ description: "FunLib: the Funtools Programming Interface"
 
 <h2>NAME</h2>
 <p> <code>FunLib: the Funtools Programming Interface</code></p>
+<h2>SYNOPSIS</h2>
 <p> A description of the Funtools library.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Introduction to the Funtools Programming Interface</code> </p>
 <p> To create a Funtools application, you need to include the funtools.h definitions file in your code: </p>
 <pre><code>

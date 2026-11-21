@@ -1,5 +1,4 @@
 ---
-
 title: "libssh2_sftp_rmdir_ex(3)"
 name: "libssh2_sftp_rmdir_ex"
 section: "3"
@@ -10,12 +9,14 @@ description: "libssh2_sftp_rmdir_ex – remove an SFTP directory"
 
 <h2>NAME</h2>
 <p> libssh2_sftp_rmdir_ex &#8211; remove an SFTP directory</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;libssh2.h&gt;
 #include &lt;libssh2_sftp.h&gt;
 int libssh2_sftp_rmdir_ex(LIBSSH2_SFTP *sftp, const char *path,
                           unsigned int path_len);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Remove a directory from the remote file system. </p>
 <p> <i>sftp</i> &#8211; SFTP instance as returned by <code><a href="/docs/linux/man/3-libssh2_sftp_init/">libssh2_sftp_init</a>(3)</code> </p>
 <p> <i>sourcefile</i> &#8211; Full path of the existing directory to remove. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "apgbfm(1)"
 name: "apgbfm"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-apgbfm/"
 description: "apgbfm – APG Bloom filter management program"
 ---
 
+<h2 class="name">NAME</h2>
+<p> apgbfm &#8211; APG Bloom filter management program</p>
+<h2>SYNOPSIS</h2>
 <p> <code>apgbfm</code> <code>-f</code> <i>filter</i> <code>-n</code> <code>numofwords</code> [<code>-q</code>] [<code>-s</code>]<br />
  <code>apgbfm</code> <code>-f</code> <i>filter</i> <code>-d</code> <i>dictfile</i> [<code>-q</code>] [<code>-s</code>]<br />
  <code>apgbfm</code> <code>-f</code> <i>filter</i> <code>-a</code> <code>word</code> [<code>-q</code>]<br />
@@ -16,6 +18,7 @@ description: "apgbfm – APG Bloom filter management program"
  <code>apgbfm</code> <code>-f</code> <i>filter</i> <code>-C</code> <i>dictfile</i> [<code>-q</code>]<br />
  <code>apgbfm</code> <code>-i</code> <i>filter</i><br />
  <code>apgbfm</code> [<code>-v</code>] [<code>-h</code>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>apgbfm</code> is used to manage Bloom filter that is used to restrict password generation in <code>APG</code> pasword generation software. Usage of the Bloom filter allows to speed up password check for large dictionaries and has some other benefits. </p>
 <p> The idea to use Bloom filter for that purpose is came from the description of the <code>OPUS</code> project <code>OPUS: Preventing Weak Password Choices</code> <i>Purdue Technical Report CSD-TR 92-028</i> writen by <i>Eugene H. Spafford</i>. </p>
 <p> You can obtain this article from:<br />

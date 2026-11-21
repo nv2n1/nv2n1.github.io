@@ -1,5 +1,4 @@
 ---
-
 title: "texexpand(1)"
 name: "texexpand"
 section: "1"
@@ -7,7 +6,9 @@ letter: "t"
 url: "/docs/linux/man/1-texexpand/"
 description: "texexpand – expand \\input and \\include statements in a TeX file"
 ---
-
+<h2 class="name">NAME</h2>
+<p> texexpand - expand \input and \include statements in a TeX file </p>
+<h2>DESCRIPTION</h2>
 <p> General translation mechanism: </p>
 <p> The main program latex2html calls texexpand with the document name in order to expand some of its \input and \include statements, here also called `merging&#8217;, and to write a list of sensitized style, class, input, or include file names. When texexpand has finished, all is contained in one file, TMP_foo. (assumed foo.tex is the name of the document to translate). </p>
 <p> In this version, texexpand cares for following environments that may span include files / section boundaries: a) \begin{comment} b) <code>%begin</code>{comment} c) \begin{any} introduced with \excludecomment d) <code>%begin</code>{any} e) \begin{verbatim} f) \begin{latexonly} g) <code>%begin</code>{latexonly} </p>

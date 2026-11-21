@@ -1,5 +1,4 @@
 ---
-
 title: "xdg-dbus-proxy(1)"
 name: "xdg-dbus-proxy"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-xdg-dbus-proxy/"
 description: "xdg-dbus-proxy – D-Bus proxy"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xdg-dbus-proxy &#8211; D-Bus proxy </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xdg-dbus-proxy</code> [<i>OPTION</i>&#8230;] [<i>ADDRESS</i>&nbsp;<i>PATH</i>&nbsp;[<i>OPTION</i>&#8230;]&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>xdg-dbus-proxy</code></p>
 <dd>is a filtering proxy for D-Bus connections. Its arguments are one or more <i>ADDRESS</i>&#8211;<i>PATH</i> pairs specifying the buses to proxy, with options that specify what filtering to apply.</dd>
 <h3>Basic Operation</h3>

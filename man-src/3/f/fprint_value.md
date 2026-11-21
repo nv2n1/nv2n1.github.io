@@ -1,5 +1,4 @@
 ---
-
 title: "fprint_value(3)"
 name: "fprint_value"
 section: "3"
@@ -10,6 +9,7 @@ description: "snmp_pdu_add_variable, snmp_varlist_add_variable, snmp_add_null_va
 
 <h2>NAME</h2>
 <p> snmp_pdu_add_variable, snmp_varlist_add_variable, snmp_add_null_var, snmp_clone_varbind, snmp_set_var_objid, snmp_set_var_value, snmp_set_var_typed_value, snmp_set_var_typed_integer, print_variable, fprint_variable, snprint_variable, print_value, fprint_value, snprint_value, snmp_free_var, snmp_free_varbind &#8211; netsnmp_varbind_api functions</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;net-snmp/varbind_api.h&gt;</code></p>
 <h3>Creation</h3>
 <p> <code>netsnmp_variable_list *snmp_pdu_add_variable(</code><br />
@@ -55,6 +55,7 @@ description: "snmp_pdu_add_variable, snmp_varlist_add_variable, snmp_add_null_va
 <h3>Deletion</h3>
 <p> <code>void snmp_free_var( netsnmp_variable_list *</code><i>variable</i><code>);</code><br />
  <code>void snmp_free_varbind( netsnmp_variable_list *</code><i>variables</i><code>);</code> </p>
+<h2>DESCRIPTION</h2>
 <p> The functions dealing with variable bindings fall into four groups &#8211; dealing with the creation, setting of values, output and deletion of varbinds.</p>
 <h3>Creation</h3>
 <p> <code>snmp_pdu_add_variable</code> will create a new varbind structure, initialised with the name ( <i>objid</i>, <i>objidlen</i> ), syntax ( <i>type</i> ) and value ( <i>value , len</i> ) provided. This varbind is then added to the end of the varbind list in the given PDU. </p>

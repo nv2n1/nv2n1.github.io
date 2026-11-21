@@ -1,5 +1,4 @@
 ---
-
 title: "min12xxw(1)"
 name: "min12xxw"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-min12xxw/"
 description: "min12xxw – Convert pbmraw streams to Minolta PagePro 12xxW languages"
 ---
 
+<h2 class="name">NAME</h2>
+<p> min12xxw &#8211; Convert pbmraw streams to Minolta PagePro 12xxW languages </p>
+<h2>SYNOPSIS</h2>
 <p> min12xxw [options] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>Min12xxw</code> is a filter which converts pbmraw streams (produced by ghostscript, for example) to the printer language of Minolta PagePro 1[234]xxW printers. </p>
 <h2>COMMAND-LINE OPTIONS</h2>
 <dl>

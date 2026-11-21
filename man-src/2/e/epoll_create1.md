@@ -1,5 +1,4 @@
 ---
-
 title: "epoll_create1(2)"
 name: "epoll_create1"
 section: "2"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/2-epoll_create1/"
 description: "epoll_create, epoll_create1 – open an epoll file descriptor"
 ---
 
+<h2 class="name">NAME</h2>
+<p> epoll_create, epoll_create1 &#8211; open an epoll file descriptor </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/epoll.h&gt;
 int epoll_create(int size);
 int epoll_create1(int flags);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>epoll_create</code>() creates a new <code><a href="/docs/linux/man/7-epoll/">epoll</a></code>(7) instance. Since Linux 2.6.8, the <i>size</i> argument is ignored, but must be greater than zero; see NOTES. </p>
 <p> <code>epoll_create</code>() returns a file descriptor referring to the new epoll instance. This file descriptor is used for all the subsequent calls to the <code>epoll</code> interface. When no longer required, the file descriptor returned by <code>epoll_create</code>() should be closed by using <code><a href="/docs/linux/man/2-close/">close</a></code>(2). When all file descriptors referring to an epoll instance have been closed, the kernel destroys the instance and releases the associated resources for reuse.</p>
 <h3>epoll_create1()</h3>

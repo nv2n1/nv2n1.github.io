@@ -1,5 +1,4 @@
 ---
-
 title: "uhd_images_downloader(1)"
 name: "uhd_images_downloader"
 section: "1"
@@ -10,8 +9,10 @@ description: "uhd_images_downloader – USRP Hardware Driver firmware/FPGA downl
 
 <h2>NAME</h2>
 <p> uhd_images_downloader &#8211; USRP Hardware Driver firmware/FPGA downloader</p>
+<h2>DESCRIPTION</h2>
 <p> The UHD package is the universal hardware driver for Ettus Research products. The goal of the UHD is to provide a host driver and API for current and future Ettus Research products. Users will be able to use the UHD driver standalone or with 3rd party applications. </p>
 <p> This program installs the firmware and FPGA binaries from Ettus Research matching this UHD driver release onto the host system. If the uhd-images package is installed, there is no need to run this installer.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>uhd_images_downloader</code> Usage: uhd_images_downloader.py [options]</p>
 <h2>OPTIONS</h2>
 <p> This program works best without any arguments. </p>

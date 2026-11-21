@@ -1,5 +1,4 @@
 ---
-
 title: "obxprop(1)"
 name: "obxprop"
 section: "1"
@@ -10,7 +9,9 @@ description: "openbox — A minimalistic, highly configurable, next generation w
 
 <h2>NAME</h2>
 <p> openbox &#8212; A minimalistic, highly configurable, next generation window manager with extensive standards support.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>openbox</code> [&#8211;help] [&#8211;display DISPLAY] [&#8211;id ID] [&#8211;root] [&#8211;] [PROPERTY &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> obxprop is a tool for displaying the properties on an x window. </p>
 <p> This tool has a similar functionality to <code>xprop</code>, but obxprop allows you to see UTF-8 strings as text. </p>
 <p> You may use the <code>&#8211;id</code> option to specify a window identifier, otherwise obxprop will allow you to select a window by clicking on it. </p>

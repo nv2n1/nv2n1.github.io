@@ -1,5 +1,4 @@
 ---
-
 title: "gtags(1)"
 name: "gtags"
 section: "1"
@@ -10,7 +9,9 @@ description: "gtags – create tag files for global."
 
 <h2>NAME</h2>
 <p> gtags &#8211; create tag files for global.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gtags</code> [-ciIOqvw][-f <i>file</i>][-n <i>number</i>][<i>dbpath</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>Gtags</code> recursively collect the source files under the current directory, pickup symbols and write the cross-reference data into tag files (&#8216;GTAGS&#8217;, &#8216;GRTAGS&#8217;, &#8216;GSYMS&#8217; and &#8216;GPATH&#8217;). You should execute this command at the root of the source tree. </p>
 <p> C, C++, yacc, java, PHP and Assembly source files are supported. Files whose names end in &#8216;.c&#8217; or &#8216;.h&#8217; are assumed to be C source files. Files whose names end in &#8216;.c++&#8217; &#8216;.cc&#8217; &#8216;.cpp&#8217; &#8216;.cxx&#8217; &#8216;.hxx&#8217; &#8216;.hpp&#8217; &#8216;.C&#8217; &#8216;.H&#8217; are assumed to be C++ source files. Files whose names end in &#8216;.y&#8217; are assumed to be YACC source files. Files whose names end in &#8216;.java&#8217; are assumed to be Java source files. Files whose names end in &#8216;.php&#8217; &#8216;.php3&#8217; &#8216;.phtml&#8217; are assumed to be PHP source files. Files whose names end in &#8216;.s&#8217; or &#8216;.S&#8217; are assumed to be Assembly source files. Other files are assumed to be text files.</p>
 <h2>OPTIONS</h2>

@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-hx509_cms_unenvelope/"
 description: "hx509 CMS/pkcs7 functions –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hx509 CMS/pkcs7 functions &#8211; </p>
 <h3>Functions</h3>
 <p> int <code>hx509_cms_wrap_ContentInfo</code> (const heim_oid *oid, const heim_octet_string *buf, heim_octet_string *res) </p>
 <p> int <code>hx509_cms_unwrap_ContentInfo</code> (const heim_octet_string *in, heim_oid *oid, heim_octet_string *out, int *have_data) </p>

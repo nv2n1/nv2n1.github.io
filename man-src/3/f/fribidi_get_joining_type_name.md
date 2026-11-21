@@ -1,5 +1,4 @@
 ---
-
 title: "fribidi_get_joining_type_name(3)"
 name: "fribidi_get_joining_type_name"
 section: "3"
@@ -7,9 +6,14 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_get_joining_type_name/"
 ---
 
-fribidi_get_joining_type_name - get joining type name 
+<h2 class="name">NAME</h2>
+ 
 
-<b> #include &lt;fribidi.h&gt; 
+ fribidi_get_joining_type_name - get joining type name 
+
+<h2>SYNOPSIS</h2>
+
+ <b> #include &lt;fribidi.h&gt; 
 
  extern const char *fribidi_get_joining_type_name(FriBidiJoiningType j); </b>
 
@@ -38,7 +42,9 @@ fribidi_get_joining_type_name - get joining type name
 </dl>
 </dl>
 
-This function returns the joining type name of a joining type. The returned string is a static string and should not be freed. 
+<h2>DESCRIPTION</h2>
+
+ This function returns the joining type name of a joining type. The returned string is a static string and should not be freed. 
 
  The type names are the same as ones defined in Table 8-2 Primary Arabic Joining Classes of the Unicode standard available at <a rel="nofollow" HREF="http://www.unicode.org/versions/Unicode4.0.0/ch08.pdf#G7462.">http://www.unicode.org/versions/Unicode4.0.0/ch08.pdf#G7462.</a>
 

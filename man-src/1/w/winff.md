@@ -1,5 +1,4 @@
 ---
-
 title: "winff(1)"
 name: "winff"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-winff/"
 description: "winff – video and audio batch converter using ffmpeg or avconv"
 ---
 
+<h2 class="name">NAME</h2>
+<p> winff &#8211; video and audio batch converter using ffmpeg or avconv </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>winff</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This manual page documents briefly the <code>winff</code> command. This manual page was written for the Debian(TM) distribution because the original program does not have a manual page. Instead, it has documentation pdf format; see below. </dd>
 <p> WinFF is a graphical user interface for the command line video converter ffmpeg or avconv. It runs ffmpeg or avconv from the command line. So, you just pick your files and it does the rest. </p>
 <p> WinFF doesn&#8217;t actually convert any video files. It just runs ffmpeg or avconv. Therefore, It will convert any video file that ffmpeg or avconv will convert. Conversely, if ffmpeg or avconv will not convert the file, then WinFF will not either.</p>

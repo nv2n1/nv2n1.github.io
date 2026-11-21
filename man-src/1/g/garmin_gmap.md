@@ -1,5 +1,4 @@
 ---
-
 title: "garmin_gmap(1)"
 name: "garmin_gmap"
 section: "1"
@@ -10,6 +9,7 @@ description: "garmin_gmap – convert .gmn files into xml data for use with gool
 
 <h2>NAME</h2>
 <p> garmin_gmap &#8211; convert .gmn files into xml data for use with goole maps</p>
+<h2>SYNOPSIS</h2>
 <p> <code>garmin_gmap</code> <i>file</i> </p>
 <p> <code>garmin_gmap</code> reads a .gmp file as produced by <code>garmin_save_runs</code>, and writes to standard output the encoded polyline representation (for Google maps) along with other information such as the start and center latitude/longitude, and the lat/lon bounding box.</p>
 <h2>SEE ALSO</h2>

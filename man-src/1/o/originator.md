@@ -1,5 +1,4 @@
 ---
-
 title: "originator(1)"
 name: "originator"
 section: "1"
@@ -10,8 +9,10 @@ description: "originator – Associate seamounts with nearest hotspot point sour
 
 <h2>NAME</h2>
 <p> originator &#8211; Associate seamounts with nearest hotspot point sources</p>
+<h2>SYNOPSIS</h2>
 <p> <code>originator</code> [ <i>tables</i> ] [<code>+</code>]<i>rotfile</i> [<code>+</code>]<i>hs_file</i> [ <i>d_km</i> ] [ [<i>flag</i>] ] [ <i>upper_age</i> ] [ <i>r/t</i> ] [ [<i>n_hs</i>] ] [ ] [ [<i>level</i>] ] [ <i>maxdist</i> ] [ ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>originator</code> reads (longitude, latitude, height, radius, crustal_age) records from <i>tables</i> [or standard input] and uses the given Absolute Plate Motion (APM) stage or total reconstruction rotation file and the list of hotspot locations to determine the most likely origin (hotspot) for each seamount. It does so by calculating flowlines back in time and determining the closest approach to all hotspots. The output consists of the input records with four additional fields added for each of the <i>n_hs</i> closest hotspots. The four fields are the hotspot id (e.g., HWI), the stage id of the flowline segment that came closest, the pseudo-age of the seamount, and the closest distance to the hotspot (in km). See option <code>-:</code> on how to read (latitude, longitude,height, radius, crustal_age) files.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

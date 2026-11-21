@@ -1,5 +1,4 @@
 ---
-
 title: "euscale-describe-metric-collection-types(1)"
 name: "euscale-describe-metric-collection-types"
 section: "1"
@@ -10,10 +9,12 @@ description: "euscale-describe-metric-collection-types – Describe auto-scaling
 
 <h2>NAME</h2>
 <p> euscale-describe-metric-collection-types &#8211; Describe auto-scaling metrics and granularities</p>
+<h2>SYNOPSIS</h2>
 <p> euscale-describe-metric-collection-types [&#8211;show-empty-fields] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION]</dt>
 <dd> [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Describe auto-scaling metrics and granularities</p>
 <h3>optional arguments:</h3>
 <dl>

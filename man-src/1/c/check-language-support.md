@@ -1,5 +1,4 @@
 ---
-
 title: "check-language-support(1)"
 name: "check-language-support"
 section: "1"
@@ -8,7 +7,9 @@ url: "/docs/linux/man/1-check-language-support/"
 description: "check-language-support – returns the list of missing packages in order to provide a complete language environment"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>check-language-support</code> &#8211; returns the list of missing packages in order to provide a complete language environment </p>
+<h2>SYNOPSIS</h2>
 <p> <code>check-language-support</code> [<i>options</i>]</p>
 <h2>OPTIONS</h2>
 <dl>

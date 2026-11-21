@@ -1,5 +1,4 @@
 ---
-
 title: "find-repos-of-install(1)"
 name: "find-repos-of-install"
 section: "1"
@@ -10,7 +9,9 @@ description: "find-repos-of-install – report which Yum repository a package wa
 
 <h2>NAME</h2>
 <p> find-repos-of-install &#8211; report which Yum repository a package was installed from</p>
+<h2>SYNOPSIS</h2>
 <p> <code>find-repos-of-install</code> [options] package1 [package2&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>find-repos-of-install</code> is a program which reports the Yum repository that a specified package was installed from. </p>
 <h2>OPTIONS</h2>
 <dl>

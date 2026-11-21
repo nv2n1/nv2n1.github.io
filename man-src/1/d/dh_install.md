@@ -1,5 +1,4 @@
 ---
-
 title: "dh_install(1)"
 name: "dh_install"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dh_install/"
 description: "dh_install – install files into package build directories"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dh_install &#8211; install files into package build directories </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dh_install</code> [<code>-X</code><i>item</i>] [<code>&#8211;autodest</code>] [<code>&#8211;sourcedir=</code><i>dir</i>] [<i>debhelper options</i>] [<i>file|dir</i> &#8230; <i>destdir</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>dh_install</code> is a debhelper program that handles installing files into package build directories. There are many <code>dh_install</code><i>*</i> commands that handle installing specific types of files such as documentation, examples, man pages, and so on, and they should be used when possible as they often have extra intelligence for those particular tasks. <code>dh_install</code>, then, is useful for installing everything else, for which no particular intelligence is needed. It is a replacement for the old <code>dh_movefiles</code> command. </p>
 <p> This program may be used in one of two ways. If you just have a file or two that the upstream Makefile does not install for you, you can run <code>dh_install</code> on them to move them into place. On the other hand, maybe you have a large package that builds multiple binary packages. You can use the upstream <i>Makefile</i> to install it all into <i>debian/tmp</i>, and then use <code>dh_install</code> to copy directories and files from there into the proper package build directories. </p>
 <p> From debhelper compatibility level 7 on, <code>dh_install</code> will fall back to looking in <i>debian/tmp</i> for files, if it does not find them in the current directory (or wherever you&#8217;ve told it to look using <code>&#8211;sourcedir</code>).</p>

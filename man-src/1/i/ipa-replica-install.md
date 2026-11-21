@@ -1,5 +1,4 @@
 ---
-
 title: "ipa-replica-install(1)"
 name: "ipa-replica-install"
 section: "1"
@@ -10,6 +9,7 @@ description: "ipa-replica-install – Create an IPA replica"
 
 <h2>NAME</h2>
 <p> ipa-replica-install &#8211; Create an IPA replica</p>
+<h2>SYNOPSIS</h2>
 <h3>DOMAIN LEVEL 0</h3>
 <dl>
 <dt>ipa-replica-install [<i>OPTION</i>]&#8230; [replica_file]</dt>
@@ -18,6 +18,7 @@ description: "ipa-replica-install – Create an IPA replica"
 <dl>
 <dt>ipa-replica-install [<i>OPTION</i>]&#8230;</dt>
 <dd></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Configures a new IPA server that is a replica of the server. Once it has been created it is an exact copy of the original IPA server and is an equal master. Changes made to any master are automatically replicated to other masters. </p>
 <p> To create a replica in a domain at domain level 0, you need to provide an replica file. The replica_file is created using the ipa-replica-prepare utility. </p>
 <p> To create a replica in a domain at domain level 1, you don&#8217;t have to provide a replica file, the machine only needs to be enrolled in the FreeIPA domain first. This process of turning the IPA client into a replica is also referred to as replica promotion. </p>

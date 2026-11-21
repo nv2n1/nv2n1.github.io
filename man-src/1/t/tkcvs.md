@@ -1,5 +1,4 @@
 ---
-
 title: "tkcvs(1)"
 name: "tkcvs"
 section: "1"
@@ -10,7 +9,9 @@ description: "TkCVS – a Tk/Tcl Graphical Interface to CVS and Subversion"
 
 <h2>NAME</h2>
 <p> TkCVS &#8211; a Tk/Tcl Graphical Interface to CVS and Subversion</p>
+<h2>SYNOPSIS</h2>
 <p> <code>tkcvs</code> [-dir directory] [-root cvsroot] [-win workdir|module|merge] [-log file]</p>
+<h2>DESCRIPTION</h2>
 <p> TkCVS is a Tcl/Tk-based graphical interface to the CVS and Subversion configuration management systems. It displays the status of the files in the current working directory, and provides buttons and menus to execute configuration-management commands on the selected files. Limited RCS functionality is also present. TkDiff is bundled in for browsing and merging your changes. </p>
 <p> TkCVS also aids in browsing the repository. For Subversion, the repository tree is browsed like an ordinary file tree. For CVS, the CVSROOT/modules file is read. TkCVS extends CVS with a method to produce a browsable, &quot;user friendly&quot; listing of modules. This requires special comments in the CVSROOT/modules file. See &quot;CVS Modules File&quot; for more guidance.</p>
 <h2>OPTIONS</h2>

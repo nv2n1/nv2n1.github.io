@@ -1,5 +1,4 @@
 ---
-
 title: "urxvt256c-mld(1)"
 name: "urxvt256c-mld"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-urxvt256c-mld/"
 description: "urxvt256c-mld – urxvt256c-ml terminal daemon"
 ---
 
+<h2 class="name">NAME</h2>
+<p> urxvt256c-mld &#8211; urxvt256c-ml terminal daemon </p>
+<h2>SYNOPSIS</h2>
 <p> <code>urxvt256c-mld</code> [-q|&#8211;quiet] [-o|&#8211;opendisplay] [-f|&#8211;fork] [-m|&#8211;mlock] [-e|&#8211;eval <i>perlstring</i>] </p>
 <p> <code>urxvt256c-mld</code> -q -o -f # for .xsession use</p>
+<h2>DESCRIPTION</h2>
 <p> This manpage describes the urxvt256c-mld daemon, which is the same vt102 terminal emulator as urxvt256c-ml, but runs as a daemon that can open multiple terminal windows within the same process. </p>
 <p> You can run it from your X startup scripts, for example, although it is not dependent on a working <font SIZE="-1">DISPLAY</font> and, in fact, can open windows on multiple X displays on the same time. </p>
 <p> Advantages of running a urxvt256c-ml daemon include faster creation time for terminal windows and a lot of saved memory. </p>

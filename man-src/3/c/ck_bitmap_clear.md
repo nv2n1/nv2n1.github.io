@@ -1,5 +1,4 @@
 ---
-
 title: "ck_bitmap_clear(3)"
 name: "ck_bitmap_clear"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_bitmap_clear – reset all bits"
 <p> <code>ck_bitmap_clear</code> &#8211; reset all bits</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_bitmap.h Ft void Fn ck_bitmap_clear ck_bitmap_t *bitmap</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_bitmap_clear function sets all bits in the bitmap pointed to by Fa bitmap to 0.</p>
 <h2>RETURN VALUES</h2>
 <p> This function has no return value.</p>

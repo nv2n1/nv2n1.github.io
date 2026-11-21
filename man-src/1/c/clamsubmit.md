@@ -1,5 +1,4 @@
 ---
-
 title: "clamsubmit(1)"
 name: "clamsubmit"
 section: "1"
@@ -10,7 +9,9 @@ description: "clamsubmit – File submission utility for ClamAV"
 
 <h2>NAME</h2>
 <p> clamsubmit &#8211; File submission utility for ClamAV</p>
+<h2>SYNOPSIS</h2>
 <p> clamsubmit [options]</p>
+<h2>DESCRIPTION</h2>
 <p> clamsubmit submits files to Sourcefire for further analysis.</p>
 <h2>OPTIONS</h2>
 <dl>

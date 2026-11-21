@@ -1,5 +1,4 @@
 ---
-
 title: "mysqldbcopy(1)"
 name: "mysqldbcopy"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mysqldbcopy/"
 description: "mysqldbcopy – Copy Database Objects Between Servers"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mysqldbcopy &#8211; Copy Database Objects Between Servers </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqldbcopy [</code><i>options</i><code>] </code><i>db_name</i><code> [</code><i>:new_db_name</i><code>]</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This utility copies a database on a source server to a database on a destination server. If the source and destination servers are different, the database names can be the same or different. If the source and destination servers are the same, the database names must be different. </dd>
 <p> The utility accepts one or more database pairs on the command line. To name a database pair, use <i>db_name</i>:<i>new_db_name</i> syntax to specify the source and destination names explicitly. If the source and destination database names are the same, <i>db_name</i> can be used as shorthand for <i>db_name</i>:<i>db_name</i>. </p>
 <p> By default, the operation copies all objects (tables, views, triggers, events, procedures, functions, and database-level grants) and data to the destination server. There are options to turn off copying any or all of the objects as well as not copying the data. </p>

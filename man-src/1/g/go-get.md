@@ -1,5 +1,4 @@
 ---
-
 title: "go-get(1)"
 name: "go-get"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-go-get/"
 description: "go-get – add dependencies to current module and install them"
 ---
 
+<h2 class="name">NAME</h2>
+<p> go-get &#8211; add dependencies to current module and install them </p>
+<h2>SYNOPSIS</h2>
 <p> <code>go get</code> [-d] [-t] [-u] [-v] [<i>build flags</i>] [<i>packages</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Get resolves its command-line arguments to packages at specific module versions, updates go.mod to require those versions, downloads source code into the module cache, then builds and installs the named packages. </p>
 <p> To add a dependency for a package or upgrade it to its latest version: </p>
 <pre>

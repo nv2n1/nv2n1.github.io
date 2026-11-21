@@ -1,5 +1,4 @@
 ---
-
 title: "antlr3-special(3)"
 name: "antlr3-special"
 section: "3"
@@ -8,7 +7,10 @@ url: "/docs/linux/man/3-antlr3-special/"
 description: "ANTLR3_CYCLIC_DFA_struct –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ANTLR3_CYCLIC_DFA_struct &#8211; </p>
 <p> Definition of a cyclic dfa structure such that it can be initialized at compile time and have only a single runtime function that can deal with all cyclic dfa structures and show Java how it is done ;-).</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3cyclicdfa.h">antlr3cyclicdfa.h</a>&gt;</p>
 <h3>Data Fields</h3>
 <p> const <code>ANTLR3_INT32</code> *const <code>accept</code> </p>

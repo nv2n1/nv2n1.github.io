@@ -1,5 +1,4 @@
 ---
-
 title: "argument_type(3)"
 name: "argument_type"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-argument_type/"
 description: "QuantLib::Interpolation – base class for 1-D interpolations."
 ---
 
+<h2 class="name">NAME</h2>
+<p> QuantLib::Interpolation &#8211; base class for 1-D interpolations. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/interpolation.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Extrapolator</code>. </p>
 <p> Inherited by <code>BackwardFlatInterpolation</code>, <code>ConvexMonotoneInterpolation&lt; I1, I2 &gt;</code>, <code>CubicInterpolation</code>, <code>ForwardFlatInterpolation</code>, <code>LinearInterpolation</code>, <code>LogCubicInterpolation</code>, <code>LogLinearInterpolation</code>, and <code>SABRInterpolation</code>. </p>

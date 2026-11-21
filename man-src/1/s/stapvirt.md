@@ -1,5 +1,4 @@
 ---
-
 title: "stapvirt(1)"
 name: "stapvirt"
 section: "1"
@@ -10,7 +9,9 @@ description: "stapvirt – prepare libvirt domains for systemtap probing"
 
 <h2>NAME</h2>
 <p> stapvirt &#8211; prepare libvirt domains for systemtap probing </p>
+<h2>SYNOPSIS</h2>
 <p> <code>stapvirt</code> [<code>-c</code> <i>URI</i>] [<code>-d</code> <i>PATH</i>] [<code>-v</code>] <i>COMMAND</i> <i>ARGUMENTS</i> </p>
+<h2>DESCRIPTION</h2>
 <p> The <i>stapvirt</i> program can be used to add ports to domains managed by libvirt (see &lt;<a rel="nofollow" href="http://libvirt.org/">http://libvirt.org/</a>&gt;). These ports can then be used by <i>stap</i> to run scripts inside the domains (see the &#8216;&#8211;remote&#8217; option in <i><a href="/docs/linux/man/1-stap/">stap</a></i>(1) for more information). </p>
 <p> Ports are added to the definition of the domain using the <code>port-add</code> command. These ports can later be removed using the <code>port-remove</code> command. Note that there can only be as many simultaneous <i>stap</i> sessions as there are ports. </p>
 <p> Starting from libvirt v1.1.1 and QEMU v0.10.0, SystemTap ports can be hotplugged and thus do not need to be added first using the <code>port-add</code> command. However, you need to ensure that there is a virtio-serial controller in place so that hotplugged ports can be connected. If creating a domain using virt-install, you can do this by adding this option: </p>

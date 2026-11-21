@@ -1,5 +1,4 @@
 ---
-
 title: "dimension(3)"
 name: "dimension"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dimension/"
 description: "QuantLib::FaureRsg – Faure low-discrepancy sequence generator."
 ---
 
+<h2 class="name">NAME</h2>
+<p> QuantLib::FaureRsg &#8211; Faure low-discrepancy sequence generator. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/randomnumbers/faurersg.hpp&gt; </p>
 <h3>Public Types</h3>
 <p> typedef <code>Sample</code>&lt; std::vector&lt; <code>Real</code> &gt; &gt; <code>sample_type</code> </p>

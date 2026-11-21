@@ -1,5 +1,4 @@
 ---
-
 title: "euca-describe-internet-gateways(1)"
 name: "euca-describe-internet-gateways"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-describe-internet-gateways – Describe one or more VPC Inter
 
 <h2>NAME</h2>
 <p> euca-describe-internet-gateways &#8211; Describe one or more VPC Internet gateways</p>
+<h2>SYNOPSIS</h2>
 <p> euca-describe-internet-gateways [&#8211;show-empty-fields] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID]</dt>
 <dd> [-S KEY] [&#8211;security-token TOKEN] [&#8211;filter NAME=VALUE] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] [IGATEWAY [IGATEWAY &#8230;]]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Describe one or more VPC Internet gateways</p>
 <h3>positional arguments:</h3>
 <dl>

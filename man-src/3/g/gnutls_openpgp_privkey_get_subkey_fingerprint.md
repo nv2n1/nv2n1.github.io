@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_openpgp_privkey_get_subkey_fingerprint(3)"
 name: "gnutls_openpgp_privkey_get_subkey_fingerprint"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_openpgp_privkey_get_subkey_fingerprint – API function"
 
 <h2>NAME</h2>
 <p> gnutls_openpgp_privkey_get_subkey_fingerprint &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>
 <p> <code>int gnutls_openpgp_privkey_get_subkey_fingerprint(gnutls_openpgp_privkey_t </code><i>key</i><code>, unsigned int </code><i>idx</i><code>, void * </code><i>fpr</i><code>, size_t * </code><i>fprlen</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,6 +22,7 @@ description: "gnutls_openpgp_privkey_get_subkey_fingerprint – API function"
 <dd> the buffer to save the fingerprint, must hold at least 20 bytes.</dd>
 <dt>size_t * fprlen</dt>
 <dd> the integer to save the length of the fingerprint.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Get the fingerprint of an OpenPGP subkey. Depends on the algorithm, the fingerprint can be 16 or 20 bytes.</p>
 <h2>RETURNS</h2>
 <p> On success, 0 is returned, or an error code.</p>

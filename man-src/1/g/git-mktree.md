@@ -1,5 +1,4 @@
 ---
-
 title: "git-mktree(1)"
 name: "git-mktree"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-mktree/"
 description: "git-mktree – Build a tree-object from ls-tree formatted text"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-mktree &#8211; Build a tree-object from ls-tree formatted text </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git mktree[-z][--missing][--batch]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Reads standard input in non-recursive <code>ls-tree</code> output format, and creates a tree object. The order of the tree entries is normalized by mktree so pre-sorting the input is not required. The object name of the tree object built is written to the standard output.</p>
 <h2>OPTIONS</h2>
 <p> -z</p>

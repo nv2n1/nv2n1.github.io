@@ -1,5 +1,4 @@
 ---
-
 title: "etex(1)"
 name: "etex"
 section: "1"
@@ -7,8 +6,11 @@ letter: "e"
 url: "/docs/linux/man/1-etex/"
 description: "etex – extended (plain) TeX"
 ---
-
+<h2 class="name">NAME</h2>
+<p> etex - extended (plain) TeX </p>
+<h2>SYNOPSIS</h2>
 <p> <code>etex</code> [<i>options</i>] [<i></i><code>&amp;</code>format] [<i>file</i>|<i></i><code>\</code>commands]  </p>
+<h2>DESCRIPTION</h2>
 <p> Run the e-TeX typesetter on <i>file</i>, by default creating <i>file.dvi</i>. If the file argument has no extension, &quot;.tex&quot; will be appended to it. Instead of a filename, a set of e-TeX commands can be given, the first of which must start with a backslash. With a <code>&amp;</code><i>format</i> argument e-TeX uses a different set of precompiled commands, contained in <i>format</i><code>.fmt</code>; it is usually better to use the <code>-fmt</code> <i>format</i> option instead. </p>
 <p> e-TeX is the first concrete result of an international research &amp; development project, the NTS Project, which was established under the aegis of DANTE e.V. during 1992. The aims of the project are to perpetuate and develop the spirit and philosophy of TeX, whilst respecting Knuth&#8217;s wish that TeX should remain frozen. </p>
 <p> e-TeX can be used in two different modes: in <i>compatibility mode</i> it is supposed to be completely interchangable with standard TeX. In <i>extended mode</i> several new primitives are added that facilitate (among other things) bidirectional typesetting. </p>

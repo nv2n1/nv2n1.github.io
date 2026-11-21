@@ -1,5 +1,4 @@
 ---
-
 title: "tblgen-14(1)"
 name: "tblgen-14"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-tblgen-14/"
 description: "tblgen – Description to C++ Code"
 ---
 
+<h2 class="name">NAME</h2>
+<p> tblgen &#8211; Description to C++ Code </p>
+<h2>SYNOPSIS</h2>
 <p> <code>clang-tblgen</code> [<i>options</i>] [<i>filename</i>] </p>
 <p> <code>lldb-tblgen</code> [<i>options</i>] [<i>filename</i>] </p>
 <p> <code>llvm-tblgen</code> [<i>options</i>] [<i>filename</i>] </p>
 <p> <code>mlir-tblgen</code> [<i>options</i>] [<i>filename</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>*-tblgen</code> is a family of programs that translates target description (<code>.td</code>) files into C++ code and other output formats. Most users of LLVM will not need to use this program. It is used only for writing parts of the compiler, debugger, and LLVM target backends. </p>
 <p> The details of the input and output of the <code>*-tblgen</code> programs is beyond the scope of this short introduction; please see the TableGen Overview for an introduction and for references to additional TableGen documents. </p>
 <p> The <i>filename</i> argument specifies the name of the Target Description (<code>.td</code>) file that TableGen processes.</p>

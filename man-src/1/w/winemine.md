@@ -1,5 +1,4 @@
 ---
-
 title: "winemine(1)"
 name: "winemine"
 section: "1"
@@ -10,7 +9,9 @@ description: "winemine – Wine Minesweeper game"
 
 <h2>NAME</h2>
 <p> winemine &#8211; Wine Minesweeper game</p>
+<h2>SYNOPSIS</h2>
 <p> <code>winemine</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>winemine</code> is the Wine Minesweeper game. The object of the game is to try to find all the hidden mines by uncovering the tiles to see how many mines each tile is adjacent to, without uncovering a mine.</p>
 <h2>BUGS</h2>
 <p> Bugs can be reported on the <code>Wine bug tracker</code></p>

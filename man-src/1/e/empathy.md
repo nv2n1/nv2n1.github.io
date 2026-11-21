@@ -1,5 +1,4 @@
 ---
-
 title: "empathy(1)"
 name: "empathy"
 section: "1"
@@ -10,7 +9,9 @@ description: "empathy – GNOME multi-protocol chat and call client"
 
 <h2>NAME</h2>
 <p> empathy &#8211; GNOME multi-protocol chat and call client</p>
+<h2>SYNOPSIS</h2>
 <p> empathy</p>
+<h2>DESCRIPTION</h2>
 <p> GNOME multi-protocol chat and call client Instant messaging program supporting text, voice, video, file transfers and inter-application communication over many different protocols, including: AIM, MSN, Google Talk (Jabber/XMPP), Facebook, Yahoo!, Salut, Gadu-Gadu, Groupwise, ICQ and QQ. </p>
 <p> The main user interface consists of a contact list window and an icon in the notification area.</p>
 <h2>OPTIONS</h2>

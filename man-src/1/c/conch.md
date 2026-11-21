@@ -1,5 +1,4 @@
 ---
-
 title: "conch(1)"
 name: "conch"
 section: "1"
@@ -10,7 +9,9 @@ description: "conch – Conch SSH client"
 
 <h2>NAME</h2>
 <p> <code>conch</code> &#8211; Conch SSH client</p>
+<h2>SYNOPSIS</h2>
 <p> <code>conch</code> [-<code>AaCfINnrsTtVvx</code> ] [-<code>c </code><i>cipher_spec</i> ] [-<code>e </code><i>escape_char</i> ] [-<code>i </code><i>identity_file</i> ] [-<code>K </code><i>connection_spec</i> ] -words [-<code>L </code> <i>port</i> <i>host</i> <i>hostport</i> ] [-<code>l </code><i>user</i> ] [-<code>m </code><i>mac_spec</i> ] [-<code>o </code><i>openssh_option</i> ] [-<code>p </code><i>port</i> ] -words [-<code>R </code> <i>port</i> <i>host</i> <i>hostport</i> ] [<i>user </i><code>@ </code><i>hostname</i> ] [<i>command</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>conch</code> is a SSHv2 client for logging into a remote machine and executing commands. It provides encrypted and secure communications across a possibly insecure network. Arbitrary TCP/IP ports can also be forwarded over the secure connection. </p>
 <p> <code>conch</code> connects and logs into <i>hostname</i> (as <i>user</i> or the current username). The user must prove her/his identity through a public-key or a password. Alternatively, if a connection is already open to a server, a new shell can be opened over the connection without having to reauthenticate. </p>
 <p> If <i>command</i> is specified, <i>command</i> is executed instead of a shell. If the &#8211;<code>s</code> option is given, <i>command</i> is treated as an SSHv2 subsystem name.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pubkey_get_verify_algorithm(3)"
 name: "gnutls_pubkey_get_verify_algorithm"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_pubkey_get_verify_algorithm – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pubkey_get_verify_algorithm &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/abstract.h&gt;</code> </p>
 <p> <code>int gnutls_pubkey_get_verify_algorithm(gnutls_pubkey_t </code><i>key</i><code>, const gnutls_datum_t * </code><i>signature</i><code>, gnutls_digest_algorithm_t * </code><i>hash</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_pubkey_get_verify_algorithm – API function"
 <dd> contains the signature</dd>
 <dt>gnutls_digest_algorithm_t * hash</dt>
 <dd> The result of the call with the hash algorithm used for signature</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will read the certifcate and the signed data to determine the hash algorithm used to generate the signature.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

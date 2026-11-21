@@ -1,5 +1,4 @@
 ---
-
 title: "getcert-list-cas(1)"
 name: "getcert-list-cas"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-getcert-list-cas/"
 description: "getcert"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getcert</p>
+<h2>SYNOPSIS</h2>
 <p> getcert list-cas [options] </p>
+<h2>DESCRIPTION</h2>
 <p> Queries <i>certmonger</i> for a list of known CAs. </p>
 <h2>OPTIONS</h2>
 <dl>

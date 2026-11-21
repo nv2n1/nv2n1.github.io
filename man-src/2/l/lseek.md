@@ -1,5 +1,4 @@
 ---
-
 title: "lseek(2)"
 name: "lseek"
 section: "2"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/2-lseek/"
 description: "lseek – reposition read/write file offset"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lseek &#8211; reposition read/write file offset </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code><br />
  <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>off_t lseek(int </code><i>fd</i><code>, off_t </code><i>offset</i><code>, int </code><i>whence</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>lseek</code>() repositions the file offset of the open file description associated with the file descriptor <i>fd</i> to the argument <i>offset</i> according to the directive <i>whence</i> as follows:</p>
 <dl>
 <dt><code>SEEK_SET</code></dt>

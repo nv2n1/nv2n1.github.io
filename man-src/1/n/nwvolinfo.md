@@ -1,5 +1,4 @@
 ---
-
 title: "nwvolinfo(1)"
 name: "nwvolinfo"
 section: "1"
@@ -10,7 +9,9 @@ description: "nwvolinfo – Diplay info on NetWare Volumes"
 
 <h2>NAME</h2>
 <p> nwvolinfo &#8211; Diplay info on NetWare Volumes</p>
+<h2>SYNOPSIS</h2>
 <p> <code>nwvolinfo</code> [ <code>-h</code> ] [ <code>-S</code> <i>server</i> ] [ <code>-U</code> <i>user name</i> ] [ <code>-P</code> <i>password</i> | <code>-n</code> ] [ <code>-C</code> ] [ <code>-v</code> <i>volume</i> ] [ <code>-N</code> ] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>nwvolinfo</code> displays information on a NetWare Server Volume. </p>
 <p> <code>nwvolinfo</code> looks up the file <i>$HOME/.nwclient</i> to find a file server, a user name and possibly a password. See <a href="/docs/linux/man/5-nwclient/">nwclient</a>(5) for more information. Please note that the access permissions of $HOME/.nwclient MUST be 600 for security reasons. </p>
 <h2>OPTIONS</h2>

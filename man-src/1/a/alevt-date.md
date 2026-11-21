@@ -1,5 +1,4 @@
 ---
-
 title: "alevt-date(1)"
 name: "alevt-date"
 section: "1"
@@ -10,7 +9,9 @@ description: "alevt-date – display/set time received via Teletext"
 
 <h2>NAME</h2>
 <p> alevt-date &#8211; display/set time received via Teletext </p>
+<h2>SYNOPSIS</h2>
 <p> <code>alevt-date</code> [<i>options</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>alevt-date</code> displays the time received from a Teletext source. It can be used to set the system time. The date is not interpreted (not even transmitted on most channels). So it allows only adjustment of +/-12 hours. The default allowed adjustment is limited to +/-2 hours (use -delta to change). Without the -set option it just displays the date in the format of the <code><a href="/docs/linux/man/1-date/">date</a></code>(1) command. </p>
 <h2>OPTIONS</h2>
 <p> A summary of options is included below.</p>

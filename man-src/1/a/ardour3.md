@@ -1,5 +1,4 @@
 ---
-
 title: "ardour3(1)"
 name: "ardour3"
 section: "1"
@@ -10,8 +9,10 @@ description: "ardour – a digital audio workstation"
 
 <h2>NAME</h2>
 <p> ardour &#8211; a digital audio workstation</p>
+<h2>SYNOPSIS</h2>
 <p> ardour <code>-b</code> [<code>-U</code> <i>file</i>] [<i>session</i>]<br />
  ardour <code>&#8211;help</code></p>
+<h2>DESCRIPTION</h2>
 <p> Ardour is a multichannel hard disk recorder (HDR) and digital audio workstation (DAW). It is capable of simultaneous recording 24 or more channels of 32 bit audio at 48kHz. Ardour is intended to function as a &quot;professional&quot; HDR system, replacing dedicated hardware solutions such as the Mackie HDR, the Tascam 2424 and more traditional tape systems like the Alesis ADAT series. It is also intended to provide the same or better functionality as software systems such as ProTools, Samplitude, Logic Audio, Nuendo and Cubase VST (we acknowledge these and all other names as trademarks of their respective owners). It supports MIDI Machine Control, and so can be controlled from any MMC controller, such as the Mackie Digital 8 Bus mixer and many other modern digital mixers.</p>
 <h2>OPTIONS</h2>
 <dl>

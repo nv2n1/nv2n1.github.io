@@ -1,5 +1,4 @@
 ---
-
 title: "attr_set(3)"
 name: "attr_set"
 section: "3"
@@ -20,6 +19,7 @@ int attr_setf(int fd, const char *attrname,
               const char *attrvalue, const int valuelength,
               int flags);
 [</code></pre>
+<h2>DESCRIPTION</h2>
 <p> ] The <code>attr_set</code> and <code>attr_setf</code> functions provide a way to create attributes and set/change their values. </p>
 <p> <i>Path</i> points to a path name for a filesystem object, and <i>fd</i> refers to the file descriptor associated with a file. If the attribute <i>attrname</i> does not exist, an attribute with the given name and value will be created and associated with that indicated filesystem object. If an attribute with that name already exists on that filesystem object, the existing value is replaced with the new value given in this call. The new attribute value is copied from the <i>attrvalue</i> buffer for a total of <i>valuelength</i> bytes. The <i>flags</i> argument can contain the following symbols bitwise OR&#8217;ed together:</p>
 <dl>

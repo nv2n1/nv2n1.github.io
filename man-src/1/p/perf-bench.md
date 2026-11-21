@@ -1,5 +1,4 @@
 ---
-
 title: "perf-bench(1)"
 name: "perf-bench"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-perf-bench/"
 description: "perf-bench – General framework for benchmark suites"
 ---
 
+<h2 class="name">NAME</h2>
+<p> perf-bench &#8211; General framework for benchmark suites </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 perf bench[&lt;common options&gt;]&lt;subsystem&gt;&lt;suite&gt;[&lt;options&gt;]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> This <i>perf bench</i> command is a general framework for benchmark suites.</p>
 <h2>COMMON OPTIONS</h2>
 <p> -r, &#8211;repeat=</p>

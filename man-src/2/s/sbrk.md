@@ -1,5 +1,4 @@
 ---
-
 title: "sbrk(2)"
 name: "sbrk"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-sbrk/"
 description: "brk, sbrk – change data segment size"
 ---
 
+<h2 class="name">NAME</h2>
+<p> brk, sbrk &#8211; change data segment size </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int brk(void *</code><i>addr</i><code>);</code> </p>
 <p> <code>void *sbrk(intptr_t </code><i>increment</i><code>);</code> </p>
@@ -32,6 +34,7 @@ _BSD_SOURCE || _SVID_SOURCE ||
 </dd><dt>Before glibc 2.12:</dt>
 <dd> _BSD_SOURCE || _SVID_SOURCE || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500</dd></dl>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> <code>brk</code>() and <code>sbrk</code>() change the location of the <i>program break</i>, which defines the end of the process&#8217;s data segment (i.e., the program break is the first location after the end of the uninitialized data segment). Increasing the program break has the effect of allocating memory to the process; decreasing the break deallocates memory. </p>
 <p> <code>brk</code>() sets the end of the data segment to the value specified by <i>addr</i>, when that value is reasonable, the system has enough memory, and the process does not exceed its maximum data size (see <code><a href="/docs/linux/man/2-setrlimit/">setrlimit</a></code>(2)). </p>
 <p> <code>sbrk</code>() increments the program&#8217;s data space by <i>increment</i> bytes. Calling <code>sbrk</code>() with an <i>increment</i> of 0 can be used to find the current location of the program break.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "mlx5dv_devx_destroy_event_channel(3)"
 name: "mlx5dv_devx_destroy_event_channel"
 section: "3"
@@ -7,9 +6,16 @@ letter: "m"
 url: "/docs/linux/man/3-mlx5dv_devx_destroy_event_channel/"
 ---
 
-mlx5dv_devx_create_event_channel - Create an event channel to be used for DEVX asynchronous events. 
+<h2 class="name">NAME</h2>
+ 
+
+ 
+
+ mlx5dv_devx_create_event_channel - Create an event channel to be used for DEVX asynchronous events. 
 
  mlx5dv_devx_destroy_event_channel - Destroy a DEVX event channel. 
+
+<h2>SYNOPSIS</h2>
 
 <dl>
 <dt>
@@ -23,7 +29,11 @@ mlx5dv_devx_create_event_channel(struct ibv_context *context,
                                  enum mlx5dv_devx_create_event_channel_flags flags) void mlx5dv_devx_destroy_event_channel(struct mlx5dv_devx_event_channel *event_channel)
 </code></pre></dd></dl>
 
-Create or destroy a channel to be used for DEVX asynchronous events. 
+<h2>DESCRIPTION</h2>
+
+ 
+
+ Create or destroy a channel to be used for DEVX asynchronous events. 
 
  The create verb exposes an mlx5dv_devx_event_channel object that can be used to read asynchronous DEVX events. This lets an application to subscribe to get device events and once an event occurred read it from this object.
 

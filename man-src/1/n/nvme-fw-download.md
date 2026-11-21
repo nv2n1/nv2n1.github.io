@@ -1,5 +1,4 @@
 ---
-
 title: "nvme-fw-download(1)"
 name: "nvme-fw-download"
 section: "1"
@@ -7,15 +6,26 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-fw-download/"
 ---
 
-nvme-fw-download - Download all or a portion of an nvme firmware image. 
+<h2 class="name">NAME</h2>
+ 
 
-<pre><code>
+ nvme-fw-download - Download all or a portion of an nvme firmware image. 
+
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <pre><code>
 nvme fw - download&lt;device&gt;[--fw = &lt;firmware - file&gt; | -f&lt;firmware - file&gt;]
                           [--xfer = &lt;transfer - size&gt; | -x&lt;transfer - size&gt;]
                           [--offset = &lt;offset&gt; | -o&lt;offset&gt;]
 </code></pre>
 
-The Firmware Image Download command is used to download all or a portion of the firmware image for a future update to the controller. The Firmware Image Download command may be submitted while other commands on the Admin Submission Queue or I/O Submission Queues are outstanding. The Firmware Image Download command copies the new firmware image (in whole or in part) to the controller. 
+<h2>DESCRIPTION</h2>
+
+ 
+
+ The Firmware Image Download command is used to download all or a portion of the firmware image for a future update to the controller. The Firmware Image Download command may be submitted while other commands on the Admin Submission Queue or I/O Submission Queues are outstanding. The Firmware Image Download command copies the new firmware image (in whole or in part) to the controller. 
 
  The firmware image may be constructed of multiple pieces that are individually downloaded with separate Firmware Image Download commands. Each Firmware Image Download command includes a Dword Offset and Number of Dwords that specify a Dword range. The host software shall ensure that firmware pieces do not have Dword ranges that overlap. Firmware portions may be submitted out of order to the controller. 
 

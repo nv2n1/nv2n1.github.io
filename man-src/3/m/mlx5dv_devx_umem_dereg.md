@@ -1,5 +1,4 @@
 ---
-
 title: "mlx5dv_devx_umem_dereg(3)"
 name: "mlx5dv_devx_umem_dereg"
 section: "3"
@@ -7,9 +6,16 @@ letter: "m"
 url: "/docs/linux/man/3-mlx5dv_devx_umem_dereg/"
 ---
 
-mlx5dv_devx_umem_reg - Register a user memory to be used by the devx interface 
+<h2 class="name">NAME</h2>
+ 
+
+ 
+
+ mlx5dv_devx_umem_reg - Register a user memory to be used by the devx interface 
 
  mlx5dv_devx_umem_dereg - Deregister a devx umem object 
+
+<h2>SYNOPSIS</h2>
 
 <dl>
 <dt>
@@ -23,7 +29,11 @@ mlx5dv_devx_umem_reg(struct ibv_context *context, void *addr, size_t size,
                      uint32_t access) int mlx5dv_devx_umem_dereg(struct mlx5dv_devx_umem *dv_devx_umem)
 </code></pre></dd></dl>
 
-Register or deregister a user memory to be used by the devx interface. 
+<h2>DESCRIPTION</h2>
+
+ 
+
+ Register or deregister a user memory to be used by the devx interface. 
 
  The register verb exposes a UMEM DEVX object for user memory registration for DMA. The API to register the user memory gets as input the user address, length and access flags, and provides to the user as output an object which holds the UMEM ID returned by the firmware to this registered memory. 
 

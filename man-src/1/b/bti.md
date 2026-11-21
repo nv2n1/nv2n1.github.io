@@ -1,5 +1,4 @@
 ---
-
 title: "bti(1)"
 name: "bti"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-bti/"
 description: "bti – send a tweet to twitter.com from the command line"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bti &#8211; send a tweet to twitter.com from the command line </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>bti</code> [<code>&#8211;account account</code>] [<code>&#8211;password password</code>] [<code>&#8211;action action</code>] [<code>&#8211;user screenname</code>] [<code>&#8211;host HOST_NAME</code>] [<code>&#8211;proxy PROXY:PORT</code>] [<code>&#8211;logfile LOGFILE</code>] [<code>&#8211;config CONFIGFILE</code>] [<code>&#8211;replyto ID</code>] [<code>&#8211;retweet ID</code>] [<code>&#8211;page PAGENUMBER</code>] [<code>&#8211;bash</code>] [<code>&#8211;shrink-urls</code>] [<code>&#8211;debug</code>] [<code>&#8211;dry-run</code>] [<code>&#8211;verbose</code>] [<code>&#8211;version</code>] [<code>&#8211;help</code>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>bti sends a tweet message to twitter.com.</dd>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;account account</code></p>

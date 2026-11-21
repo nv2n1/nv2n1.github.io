@@ -1,5 +1,4 @@
 ---
-
 title: "ltximg(1)"
 name: "ltximg"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ltximg/"
 description: "ltximg – LaTeX environments to image and standalone files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ltximg &#8211; LaTeX environments to image and standalone files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ltximg</code> [&lt;<i>options</i>&gt;] [&#8211;] &lt;<i>filename</i>&gt;.&lt;<i>tex</i>|<i>ltx</i>&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>ltximg</code> automates the process of extracting and converting environments from LaTeX file to image formats and <i>standalone</i> files using <i>ghostscript</i> and <i>poppler-utils</i>. Generates a one file with only extracted environments and other with all extracted environments converted to <tt>&quot;\includegraphics&quot;</tt>. </p>
 <p> By default the extracted environments are: </p>
 <p> <code>preview</code> <code>pspicture</code> <code>tikzpicture</code> <code>pgfpicture</code> <code>psgraph</code> <code>postscript</code> <code>PSTexample</code></p>

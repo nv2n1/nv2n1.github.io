@@ -1,5 +1,4 @@
 ---
-
 title: "clone3(2)"
 name: "clone3"
 section: "2"
@@ -7,9 +6,14 @@ letter: "c"
 url: "/docs/linux/man/2-clone3/"
 ---
 
-clone, __clone2, clone3 - create a child process 
+<h2 class="name">NAME</h2>
+ 
 
-<pre><code>
+ clone, __clone2, clone3 - create a child process 
+
+<h2>SYNOPSIS</h2>
+
+ <pre><code>
 /* Prototype for the glibc wrapper function */
 #define _GNU_SOURCE
 #include &lt;sched.h&gt;
@@ -21,7 +25,9 @@ long clone3(struct clone_args *cl_args, size_t size);
 
  <i>Note</i>: There is not yet a glibc wrapper for <b>clone3</b>(); see NOTES.
 
-These system calls create a new (&quot;child&quot;) process, in a manner similar to <b><a HREF="/docs/linux/man/2-fork/">fork</a></b>(2). 
+<h2>DESCRIPTION</h2>
+
+ These system calls create a new (&quot;child&quot;) process, in a manner similar to <b><a HREF="/docs/linux/man/2-fork/">fork</a></b>(2). 
 
  By contrast with <b><a HREF="/docs/linux/man/2-fork/">fork</a></b>(2), these system calls provide more precise control over what pieces of execution context are shared between the calling process and the child process. For example, using these system calls, the caller can control whether or not the two processes share the virtual address space, the table of file descriptors, and the table of signal handlers. These system calls also allow the new child process to be placed in separate <b><a HREF="/docs/linux/man/7-namespaces/">namespaces</a></b>(7). 
 

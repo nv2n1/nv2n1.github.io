@@ -1,5 +1,4 @@
 ---
-
 title: "papi_xml_event_info(1)"
 name: "papi_xml_event_info"
 section: "1"
@@ -7,7 +6,10 @@ letter: "p"
 url: "/docs/linux/man/1-papi_xml_event_info/"
 ---
 
-papi_xml_event_info - papi_xml_event_info utility. 
+<h2 class="name">NAME</h2>
+ 
+
+ papi_xml_event_info - papi_xml_event_info utility. 
 
  file event_info.c 
 

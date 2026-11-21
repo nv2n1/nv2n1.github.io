@@ -1,5 +1,4 @@
 ---
-
 title: "perlos400(1)"
 name: "perlos400"
 section: "1"
@@ -7,11 +6,16 @@ letter: "p"
 url: "/docs/linux/man/1-perlos400/"
 ---
 
-perlos400 - Perl version 5 on OS/400 
+<h2 class="name">NAME</h2>
+ 
+
+ perlos400 - Perl version 5 on OS/400 
 
  This document needs to be updated, but we don't know what it should say. Please email comments to perlbug [at] perl.org &lt;mailto:perlbug [at] perl.org&gt;. 
 
-This document describes various features of <font SIZE="-1">IBM</font>'s <font SIZE="-1">OS/400</font> operating system that will affect how Perl version 5 (hereafter just Perl) is compiled and/or runs. 
+<h2>DESCRIPTION</h2>
+
+ This document describes various features of <font SIZE="-1">IBM</font>'s <font SIZE="-1">OS/400</font> operating system that will affect how Perl version 5 (hereafter just Perl) is compiled and/or runs. 
 
  By far the easiest way to build Perl for <font SIZE="-1">OS/400</font> is to use the <font SIZE="-1">PASE</font> (Portable Application Solutions Environment), for more information see &lt;<a rel="nofollow" HREF="http://www.iseries.ibm.com/developer/factory/pase/index.html">http://www.iseries.ibm.com/developer/factory/pase/index.html</a>&gt; This environment allows one to use <font SIZE="-1">AIX</font> APIs while programming, and it provides a runtime that allows <font SIZE="-1">AIX</font> binaries to execute directly on the PowerPC iSeries.
 

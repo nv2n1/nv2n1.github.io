@@ -1,5 +1,4 @@
 ---
-
 title: "mkfontdir(1)"
 name: "mkfontdir"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mkfontdir/"
 description: "mkfontdir – create an index of X font files in a directory"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mkfontdir &#8211; create an index of X font files in a directory </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mkfontdir</code> [<code>-n</code>] [<code>-x</code> <i>suffix</i>] [<code>-r</code>] [<code>-p</code> <i>prefix</i>] [<code>-e</code> <i>encoding-directory-name</i>] &#8230; [<code>&#8212;</code>] [<i>directory-name</i> &#8230; ]</p>
+<h2>DESCRIPTION</h2>
 <p> For each directory argument, <i>mkfontdir</i> reads all of the font files in the directory searching for properties named &quot;FONT&quot;, or (failing that) the name of the file stripped of its suffix. These are converted to lower case and used as font names, and, along with the name of the font file, are written out to the file &quot;fonts.dir&quot; in the directory. The X server and font server use &quot;fonts.dir&quot; to find font files. </p>
 <p> The kinds of font files read by <i>mkfontdir</i> depend on configuration parameters, but typically include PCF (suffix &quot;.pcf&quot;), SNF (suffix &quot;.snf&quot;) and BDF (suffix &quot;.bdf&quot;). If a font exists in multiple formats, <i>mkfontdir</i> will first choose PCF, then SNF and finally BDF. </p>
 <p> The first line of fonts.dir gives the number of fonts in the file. The remaining lines list the fonts themselves, one per line, in two fields. First is the name of the font file, followed by a space and the name of the font.</p>

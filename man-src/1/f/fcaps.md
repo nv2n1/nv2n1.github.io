@@ -1,5 +1,4 @@
 ---
-
 title: "fcaps(1)"
 name: "fcaps"
 section: "1"
@@ -10,7 +9,9 @@ description: "fcaps – report available fontcaps"
 
 <h2>NAME</h2>
 <p> fcaps &#8211; report available fontcaps</p>
+<h2>SYNOPSIS</h2>
 <p> <code>fcaps</code> [ <code>-V</code> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>fcaps</code> is a simple script that reports all the available fontcaps for use in metafile translation by the metafile translator <code>ctrans(1NCARG)</code>.</p>
 <h2>OPTIONS</h2>
 <dl>

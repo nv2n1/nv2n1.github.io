@@ -1,5 +1,4 @@
 ---
-
 title: "gramps(1)"
 name: "gramps"
 section: "1"
@@ -10,7 +9,9 @@ description: "gramps – Genealogical Research and Analysis Management Programmi
 
 <h2>NAME</h2>
 <p> gramps &#8211; Genealogical Research and Analysis Management Programming System. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>gramps</code> [<code>-?|&#8211;help</code>] [<code>&#8211;usage</code>] [<code>&#8211;version</code>] [<code>-l</code>] [<code>-u|&#8211;force-unlock</code>] [<code>-O|&#8211;open=</code> <i>DATABASE</i> [<code>-f|&#8211;format=</code> <i>FORMAT</i>]] [<code>-i|&#8211;import=</code> <i>FILE</i> [<code>-f|&#8211;format=</code> <i>FORMAT</i>]] [<code>-i|&#8211;import=</code> <i>&#8230;</i>] [<code>-e|&#8211;export=</code> <i>FILE</i> [<code>-f|&#8211;format=</code> <i>FORMAT</i>]] [<code>-a|&#8211;action=</code> <i>ACTION</i>] [<code>-p|&#8211;options=</code> <i>OPTIONSTRING</i>]] [ <i>FILE</i> ] [<code>&#8211;version</code>] </p>
+<h2>DESCRIPTION</h2>
 <p> <i>Gramps</i> is a Free/OpenSource genealogy program. It is written in Python, using the GTK+/GNOME interface. Gramps should seem familiar to anyone who has used other genealogy programs before such as <i>Family Tree Maker (TM)</i>, <i>Personal Ancestral Files (TM)</i>, or the GNU Geneweb. It supports importing of the ever popular GEDCOM format which is used world wide by almost all other genealogy software. </p>
 <h2>OPTIONS</h2>
 <dl>

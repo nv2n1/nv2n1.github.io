@@ -1,5 +1,4 @@
 ---
-
 title: "grub2-syslinux2cfg(1)"
 name: "grub2-syslinux2cfg"
 section: "1"
@@ -10,6 +9,7 @@ description: "grub-syslinux2cfg — Transform a syslinux config file into a GRUB
 
 <h2>NAME</h2>
 <p> <code>grub-syslinux2cfg</code> &#8212; Transform a syslinux config file into a GRUB config. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>grub-syslinux2cfg</code> [-c | &#8211;cwd=DIR<i>] [-r | &#8211;root=DIR</i>] [-v | &#8211;verbose]</p>
 <dl>
 <dt>
@@ -26,6 +26,7 @@ description: "grub-syslinux2cfg — Transform a syslinux config file into a GRUB
 </dt><dd>
 &nbsp;<wbr>[-p | &#8211;pxelinux]]&nbsp;<wbr><i>FILE</i> </dd>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> <code>grub-syslinux2cfg</code> builds a GRUB configuration file out of an existing syslinux configuration file. </p>
 <h2>OPTIONS</h2>
 <dl>

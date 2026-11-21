@@ -1,5 +1,4 @@
 ---
-
 title: "dscal(3)"
 name: "dscal"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dscal/"
 description: "dscal.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dscal.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dscal</code> (N, DA, DX, INCX)<br />
  <i></i><code>DSCAL</code></p>

@@ -1,5 +1,4 @@
 ---
-
 title: "metacity-window-demo(1)"
 name: "metacity-window-demo"
 section: "1"
@@ -10,7 +9,9 @@ description: "metacity-window-demo – demo of window features"
 
 <h2>NAME</h2>
 <p> metacity-window-demo &#8211; demo of window features</p>
+<h2>SYNOPSIS</h2>
 <p> <code>metacity-window-demo</code></p>
+<h2>DESCRIPTION</h2>
 <p> This program demonstrates various kinds of windows that window managers and window manager themes should handle. </p>
 <p> Be sure to tear off the menu and toolbar, those are also a special kind of window.</p>
 <h2>AUTHOR</h2>

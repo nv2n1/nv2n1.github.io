@@ -1,5 +1,4 @@
 ---
-
 title: "cwebp(1)"
 name: "cwebp"
 section: "1"
@@ -10,7 +9,9 @@ description: "cwebp – compress an image file to a WebP file"
 
 <h2>NAME</h2>
 <p> cwebp &#8211; compress an image file to a WebP file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cwebp</code> [<i>options</i>]<i> input_file -o output_file.webp</i> </p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents the <code>cwebp</code> command. </p>
 <p> <code>cwebp</code> compresses an image using the WebP format. Input format can be either PNG, JPEG, TIFF or raw Y&#8217;CbCr samples.</p>
 <h2>OPTIONS</h2>

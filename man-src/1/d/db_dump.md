@@ -1,5 +1,4 @@
 ---
-
 title: "db_dump(1)"
 name: "db_dump"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-db_dump/"
 description: "db5.3_dump – Write database to flat-text format"
 ---
 
+<h2 class="name">NAME</h2>
+<p> db5.3_dump &#8211; Write database to flat-text format </p>
+<h2>SYNOPSIS</h2>
 <p> <code>db5.3_dump</code> [-klNpRrV] [-d ahr] [-f output] [-h home] [-P password] [-s database] file</p>
+<h2>DESCRIPTION</h2>
 <p> The db5.3_dump utility reads the database file file and writes it to the standard output using a portable flat-text format understood by the db5.3_load utility. The file argument must be a file produced using the Berkeley DB library functions.</p>
 <h2>OPTIONS</h2>
 <dl>

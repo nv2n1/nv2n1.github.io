@@ -1,5 +1,4 @@
 ---
-
 title: "gcrystal(1)"
 name: "gcrystal"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-gcrystal/"
 description: "gcrystal – light model visualizer for crystal structures"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gcrystal &#8211; light model visualizer for crystal structures </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gcrystal</code> [<code>OPTION(S)</code>&#8230;] [<i>FILE</i>&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>gcrystal</code></p>
 <dd>is a light model visualizer for crystal structures, based on the GNOME Chemistry Utils, that displays models of all sorts of crystal microscopic structures using OpenGL.</dd>
 <h2>OPTIONS</h2>

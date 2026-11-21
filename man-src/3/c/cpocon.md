@@ -1,5 +1,4 @@
 ---
-
 title: "cpocon(3)"
 name: "cpocon"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cpocon/"
 description: "cpocon.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cpocon.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cpocon</code> (UPLO, N, A, LDA, ANORM, RCOND, WORK, RWORK, INFO)<br />
  <i></i><code>CPOCON</code></p>

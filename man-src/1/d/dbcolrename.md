@@ -1,5 +1,4 @@
 ---
-
 title: "dbcolrename(1)"
 name: "dbcolrename"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dbcolrename/"
 description: "dbcolrename – change the names of columns in a fsdb schema"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dbcolrename &#8211; change the names of columns in a fsdb schema </p>
+<h2>SYNOPSIS</h2>
 <p> dbcolrename OldName1 NewName1 [OldName2 NewName2] &#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Dbcolrename changes the names of columns in a fsdb schema, mapping OldName1 to NewName1, and so on for multiple pairs of column names. </p>
 <p> Note that it is valid to do &#8220;overlapping&#8221; renames like <tt>&quot;dbcolrename a b b a&quot;</tt>.</p>
 <h2>OPTIONS</h2>

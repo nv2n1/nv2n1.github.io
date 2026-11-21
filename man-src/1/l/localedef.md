@@ -1,5 +1,4 @@
 ---
-
 title: "localedef(1)"
 name: "localedef"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-localedef/"
 description: "localedef – compile locale definition files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> localedef &#8211; compile locale definition files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>localedef</code> [<i>options</i>] <i>outputpath</i><br />
  <code>localedef &#8211;add-to-archive</code> [<i>options</i>] <i>compiledpath</i><br />
  <code>localedef &#8211;delete-from-archive</code> [<i>options</i>] <i>localename</i> &#8230;<br />
@@ -15,6 +17,7 @@ description: "localedef – compile locale definition files"
  <code>localedef &#8211;help</code><br />
  <code>localedef &#8211;usage</code><br />
  <code>localedef &#8211;version</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>localedef</code> program reads the indicated <i>charmap</i> and <i>input</i> files, compiles them to a binary form quickly usable by the locale functions in the C library (<code><a href="/docs/linux/man/3-setlocale/">setlocale</a></code>(3), <code><a href="/docs/linux/man/3-localeconv/">localeconv</a></code>(3), etc.), and places the output in <i>outputpath</i>. </p>
 <p> The <i>outputpath</i> argument is interpreted as follows:</p>
 <dl>

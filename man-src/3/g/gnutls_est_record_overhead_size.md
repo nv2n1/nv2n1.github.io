@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_est_record_overhead_size(3)"
 name: "gnutls_est_record_overhead_size"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_est_record_overhead_size – API function"
 
 <h2>NAME</h2>
 <p> gnutls_est_record_overhead_size &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>size_t gnutls_est_record_overhead_size(gnutls_protocol_t </code><i>version</i><code>, gnutls_cipher_algorithm_t </code><i>cipher</i><code>, gnutls_mac_algorithm_t </code><i>mac</i><code>, gnutls_compression_method_t </code><i>comp</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,6 +24,7 @@ description: "gnutls_est_record_overhead_size – API function"
 <dd> is a <code>gnutls_compression_method_t</code> value</dd>
 <dt>unsigned int flags</dt>
 <dd> must be zero</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will return the set size in bytes of the overhead due to TLS (or DTLS) per record. </p>
 <p> Note that this function may provide inacurate values when TLS extensions that modify the record format are negotiated. In these cases a more accurate value can be obtained using <code>gnutls_record_overhead_size()</code> after a completed handshake.</p>
 <h2>SINCE</h2>

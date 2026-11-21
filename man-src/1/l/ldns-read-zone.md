@@ -1,5 +1,4 @@
 ---
-
 title: "ldns-read-zone(1)"
 name: "ldns-read-zone"
 section: "1"
@@ -10,7 +9,9 @@ description: "ldns-read-zone – read a zonefile and print it"
 
 <h2>NAME</h2>
 <p> ldns-read-zone &#8211; read a zonefile and print it</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ldns-read-zone </code> <i>ZONEFILE</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>ldns-read-zone</code> reads a DNS zone file and prints it. The output has 1 resource record per line, and no pretty-printing makeup. </p>
 <h2>OPTIONS</h2>
 <dl>

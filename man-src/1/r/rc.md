@@ -1,5 +1,4 @@
 ---
-
 title: "rc(1)"
 name: "rc"
 section: "1"
@@ -10,7 +9,9 @@ description: "rc – shell"
 
 <h2>NAME</h2>
 <p> rc &#8211; shell</p>
+<h2>SYNOPSIS</h2>
 <p> <code>rc</code> [<code>-deiIlnopsvx</code>] [<code>-c</code> <i>command</i>] [<i>arguments</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>rc</i> is a command interpreter and programming language similar to <i><a href="/docs/linux/man/1-sh/">sh</a></i>(1). It is based on the AT&amp;T Plan 9 shell of the same name. The shell offers a C-like syntax (much more so than the C shell), and a powerful mechanism for manipulating variables. It is reasonably small and reasonably fast, especially when compared to contemporary shells. Its use is intended to be interactive, but the language lends itself well to scripts.</p>
 <h2>OPTIONS</h2>
 <dl>

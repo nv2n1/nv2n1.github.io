@@ -1,5 +1,4 @@
 ---
-
 title: "pki-user(1)"
 name: "pki-user"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-pki-user/"
 description: "pki-user – Command-Line Interface for managing Certificate System users."
 ---
 
+<h2 class="name">NAME</h2>
+<p> pki-user &#8211; Command-Line Interface for managing Certificate System users.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 pki[CLI options]&lt;subsystem&gt; - user pki[CLI options]&lt;subsystem&gt; - user - find[command options] pki[CLI options]&lt;subsystem&gt; - user - show&lt;user ID&gt;[command options] pki[CLI options]&lt;subsystem&gt; - user - add&lt;user ID&gt;[command options] pki[CLI options]&lt;subsystem&gt; - user - mod&lt;user ID&gt;[command options] pki[CLI options]&lt;subsystem&gt; - user - del&lt;user ID&gt;[command options]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>pki-user</code> commands provide command-line interfaces to manage users on the specified subsystem. </p>
 <p> Valid subsystems are <code>ca</code>, <code>kra</code>, <code>ocsp</code>, <code>tks</code>, and <code>tps</code>. If the <code>&lt;subsystem&gt;-</code> prefix is omitted, it will default to <code>ca</code>. </p>
 <p> <code>pki</code> [CLI options] <code>&lt;subsystem&gt;-user</code></p>

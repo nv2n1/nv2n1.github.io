@@ -1,5 +1,4 @@
 ---
-
 title: "lli(1)"
 name: "lli"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-lli/"
 description: "lli – directly execute programs from LLVM bitcode"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lli &#8211; directly execute programs from LLVM bitcode </p>
+<h2>SYNOPSIS</h2>
 <p> <code>lli</code> [<i>options</i>] [<i>filename</i>] [<i>program args</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>lli</code> directly executes programs in <font SIZE="-1">LLVM</font> bitcode format. It takes a program in <font SIZE="-1">LLVM</font> bitcode format and executes it using a just-in-time compiler, if one is available for the current architecture, or an interpreter. <code>lli</code> takes all of the same code generator options as llc, but they are only effective when <code>lli</code> is using the just-in-time compiler. </p>
 <p> If <i>filename</i> is not specified, then <code>lli</code> reads the <font SIZE="-1">LLVM</font> bitcode for the program from standard input. </p>
 <p> The optional <i>args</i> specified on the command line are passed to the program as arguments.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "libcurl-share(3)"
 name: "libcurl-share"
 section: "3"
@@ -10,6 +9,7 @@ description: "libcurl-share – how to use the share interface"
 
 <h2>NAME</h2>
 <p> libcurl-share &#8211; how to use the share interface</p>
+<h2>DESCRIPTION</h2>
 <p> This is an overview on how to use the libcurl share interface in your C programs. There are specific man pages for each function mentioned in here. </p>
 <p> All functions in the share interface are prefixed with curl_share. </p>
 <h2>OBJECTIVES</h2>

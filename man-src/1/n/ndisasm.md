@@ -1,5 +1,4 @@
 ---
-
 title: "ndisasm(1)"
 name: "ndisasm"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ndisasm/"
 description: "ndisasm – the Netwide Disassembler, an 80×86 binary file disassembler"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ndisasm &#8211; the Netwide Disassembler, an 80&#215;86 binary file disassembler </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ndisasm</code> [ <code>-o</code> origin ] [ <code>-s</code> sync-point [&#8230;]] [ <code>-a</code> | <code>-i</code> ] [ <code>-b</code> bits ] [ <code>-u</code> ] [ <code>-e</code> hdrlen ] [ <code>-p</code> vendor ] [ <code>-k</code> offset,length [&#8230;]] infile</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>ndisasm</code> command generates a disassembly listing of the binary file infile and directs it to stdout.</p>
 <h2>OPTIONS</h2>
 <p> <code>-h</code></p>

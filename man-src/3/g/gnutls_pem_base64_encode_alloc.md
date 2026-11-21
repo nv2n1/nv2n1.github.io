@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pem_base64_encode_alloc(3)"
 name: "gnutls_pem_base64_encode_alloc"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_pem_base64_encode_alloc – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pem_base64_encode_alloc &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_pem_base64_encode_alloc(const char * </code><i>msg</i><code>, const gnutls_datum_t * </code><i>data</i><code>, gnutls_datum_t * </code><i>result</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_pem_base64_encode_alloc – API function"
 <dd> contains the raw data</dd>
 <dt>gnutls_datum_t * result</dt>
 <dd> will hold the newly allocated encoded data</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will convert the given data to printable data, using the base64 encoding. This is the encoding used in PEM messages. This function will allocate the required memory to hold the encoded data. </p>
 <p> You should use <code>gnutls_free()</code> to free the returned data.</p>
 <h2>RETURNS</h2>

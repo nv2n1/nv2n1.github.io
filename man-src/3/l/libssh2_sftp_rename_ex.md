@@ -1,5 +1,4 @@
 ---
-
 title: "libssh2_sftp_rename_ex(3)"
 name: "libssh2_sftp_rename_ex"
 section: "3"
@@ -10,9 +9,11 @@ description: "libssh2_sftp_rename_ex – rename an SFTP file"
 
 <h2>NAME</h2>
 <p> libssh2_sftp_rename_ex &#8211; rename an SFTP file</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; #include &lt;libssh2_s<a href="ftp://ftp.h">ftp.h</a>&gt; </p>
 <p> int libssh2_sftp_rename_ex(LIBSSH2_SFTP *sftp, const char *source_filename, unsigned int source_filename_len, const char *dest_filename, unsigned int dest_filename_len, long flags); </p>
 <p> int libssh2_sftp_rename_ex(LIBSSH2_SFTP *sftp, const char *source_filename, const char *dest_filename); </p>
+<h2>DESCRIPTION</h2>
 <p> <i>sftp</i> &#8211; SFTP instance as returned by <code><a href="/docs/linux/man/3-libssh2_sftp_init/">libssh2_sftp_init</a>(3)</code> </p>
 <p> <i>sourcefile</i> &#8211; Path and name of the existing filesystem entry </p>
 <p> <i>sourcefile_len</i> &#8211; Length of the path and name of the existing filesystem entry </p>

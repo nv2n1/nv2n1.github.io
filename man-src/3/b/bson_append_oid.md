@@ -1,5 +1,4 @@
 ---
-
 title: "bson_append_oid(3)"
 name: "bson_append_oid"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_append_oid() – The bson_append_oid() function shall append 
 
 <h2>NAME</h2>
 <p> bson_append_oid() &#8211; The bson_append_oid() function shall append a new element to bson of type BSON_TYPE_OID. oid MUST be a pointer to a bson_oid_t.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 bool bson_append_oid(bson_t *bson,
                      const char *key,
@@ -29,6 +29,7 @@ bool bson_append_oid(bson_t *bson,
 <dl>
 <dt><code>oid</code></dt>
 <dd> A bson_oid_t.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_append_oid/">bson_append_oid</a>(3)</code> function shall append a new element to <code>bson</code> of type BSON_TYPE_OID. <code>oid</code> </p>
 <p> <code>MUST</code> be a pointer to a <code>bson_oid_t</code> \&amp;. </p>
 <h2>RETURNS</h2>

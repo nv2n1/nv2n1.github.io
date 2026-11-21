@@ -1,5 +1,4 @@
 ---
-
 title: "lxc-freeze(1)"
 name: "lxc-freeze"
 section: "1"
@@ -10,7 +9,9 @@ description: "lxc-freeze – freeze all the container’s processes"
 
 <h2>NAME</h2>
 <p> lxc-freeze &#8211; freeze all the container&#8217;s processes</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lxc-freeze</code> {-n <i>name</i>}</p>
+<h2>DESCRIPTION</h2>
 <p> <code>lxc-freeze</code> freezes all the processes running inside the container. The processes will be blocked until they are explicitly thawed by the <code>lxc-unfreeze</code> command. This command is useful for batch managers to schedule a group of processes.</p>
 <h2>COMMON OPTIONS</h2>
 <p> These options are common to most of lxc commands.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "get_constant(3)"
 name: "get_constant"
 section: "3"
@@ -10,9 +9,11 @@ description: "get_constant — retrieve a scalar constant from a dirfile databas
 
 <h2>NAME</h2>
 <p> get_constant &#8212; retrieve a scalar constant from a dirfile database</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
 <dl>
 <dt> <code>int get_constant(DIRFILE *</code><i>dirfile</i><code>, const char *</code><i>field_code</i><code>,</code> <code>gd_type_t </code><i>return_type</i><code>, void *</code><i>data_out</i><code>);</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>get_constant</code>() function queries a <a href="/docs/linux/man/5-dirfile/">dirfile</a>(5) database specified by <i>dirfile</i> for the <code>CONST</code> scalar <i>field_code</i>, which may contain a representation suffix. The constant is converted to the data type specified by <i>return_type</i>, and stored in the user-supplied buffer <i>data_out</i>. </dd>
 <p> The <i>dirfile</i> argument must point to a valid DIRFILE object previously created by a call to <code><a href="/docs/linux/man/3-dirfile_open/">dirfile_open</a></code>(3). The argument <i>data_out</i> must point to a valid memory location of sufficient size to hold a value of the return type specified. </p>
 <p> The <i>return_type</i> argument should be one of the following symbols, which indicates the desired return type of the data:</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pkcs11_token_get_info(3)"
 name: "gnutls_pkcs11_token_get_info"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_pkcs11_token_get_info – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs11_token_get_info &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs11.h&gt;</code> </p>
 <p> <code>int gnutls_pkcs11_token_get_info(const char * </code><i>url</i><code>, gnutls_pkcs11_token_info_t </code><i>ttype</i><code>, void * </code><i>output</i><code>, size_t * </code><i>output_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,6 +22,7 @@ description: "gnutls_pkcs11_token_get_info – API function"
 <dd> where output will be stored</dd>
 <dt>size_t * output_size</dt>
 <dd> contains the maximum size of the output and will be overwritten with actual</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will return information about the PKCS 11 token such as the label, id, etc.</p>
 <h2>RETURNS</h2>
 <p> <code>GNUTLS_E_SUCCESS</code> (0) on success or a negative error code on error.</p>

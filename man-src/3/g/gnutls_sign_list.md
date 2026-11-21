@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_sign_list(3)"
 name: "gnutls_sign_list"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_sign_list – API function"
 
 <h2>NAME</h2>
 <p> gnutls_sign_list &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>const gnutls_sign_algorithm_t * gnutls_sign_list( </code><i>void</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt> void</dt>
 <dd></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Get a list of supported public key signature algorithms.</p>
 <h2>RETURNS</h2>
 <p> a (0)-terminated list of <code>gnutls_sign_algorithm_t</code> integers indicating the available ciphers.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "rdiff-backup(1)"
 name: "rdiff-backup"
 section: "1"
@@ -7,13 +6,14 @@ letter: "r"
 url: "/docs/linux/man/1-rdiff-backup/"
 description: "rdiff-backup – local/remote mirror and incremental backup"
 ---
-
 <h2>NAME</h2>
 <p> rdiff-backup - local/remote mirror and incremental backup  </p>
+<h2>SYNOPSIS</h2>
 <p> <code>rdiff-backup</code> <code>[</code><i>options</i><code>]</code> <code>[[[</code><i>user@</i><code>]</code><i>host1.foo</i><code>]::</code><i>source_directory</i><code>]</code> <code>[[[</code><i>user@</i><code>]</code><i>host2.foo</i><code>]::</code><i>destination_directory</i><code>]</code> </p>
 <p> <code>rdiff-backup</code> <code>{{ -l | --list-increments }</code> <code>| --remove-older-than </code><i>time_interval</i> <code>| --list-at-time </code><i>time</i> <code>| --list-changed-since </code><i>time</i> <code>| --list-increment-sizes </code> <code>| --verify</code> <code>| --verify-at-time </code><i>time</i><code>}</code> <code>[[[</code><i>user@</i><code>]</code><i>host2.foo</i><code>]::</code><i>destination_directory</i><code>]</code> </p>
 <p> <code>rdiff-backup --calculate-average</code> <i>statfile1 statfile2 ...</i> </p>
 <p> <code>rdiff-backup --test-server</code> <code>[</code><i>user1</i><code>]</code><i>@host1.net1</i><code>::</code><i>path</i> <code>[[</code><i>user2</i><code>]</code><i>@host2.net2</i><code>::</code><i>path</i><code>]</code> <i>...</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>rdiff-backup</code> is a script, written in <code><a href="/docs/linux/man/1-python/">python</a></code>(1) that backs up one directory to another. The target directory ends up a copy (mirror) of the source directory, but extra reverse diffs are stored in a special subdirectory of that target directory, so you can still recover files lost some time ago. The idea is to combine the best features of a mirror and an incremental backup. rdiff-backup also preserves symlinks, special files, hardlinks, permissions, uid/gid ownership, and modification times. </p>
 <p> <code>rdiff-backup</code> can also operate in a bandwidth efficient manner over a pipe, like <code><a href="/docs/linux/man/1-rsync/">rsync</a></code>(1). Thus you can use ssh and rdiff-backup to securely back a hard drive up to a remote location, and only the differences will be transmitted. Using the default settings, rdiff-backup requires that the remote system accept ssh connections, and that <code>rdiff-backup</code> is installed in the user&#8217;s PATH on the remote system. For information on other options, see the section on <code>REMOTE OPERATION.</code> </p>
 <p> Note that you <code>should not write to the mirror directory</code> except with rdiff-backup. Many of the increments are stored as reverse diffs, so if you delete or modify a file, you may lose the ability to restore previous versions of that file. </p>

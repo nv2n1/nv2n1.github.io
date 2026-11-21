@@ -1,5 +1,4 @@
 ---
-
 title: "mrxvt(1)"
 name: "mrxvt"
 section: "1"
@@ -10,7 +9,9 @@ description: "mrxvt – A tabbed VT102 terminal emulator for X Window System"
 
 <h2>NAME</h2>
 <p> <code>mrxvt</code> &#8211; A tabbed VT102 terminal emulator for X Window System</p>
+<h2>SYNOPSIS</h2>
 <p> [options] [-<code>e </code><i>cmd</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> The program is a terminal emulator for X Window System. It provides <code>DEC VT102</code> compatible terminals for programs that cannot use the window system directly. </p>
 <p> is based on rxvt(1) version 2.7.11 CVS, and features most of functionality of rxvt, with a few major enhancements (namely multiple tabs, and transparency). Like rxvt, aims to be light, fast, flexible and desktop independent, thus KDE or GNOME are not required. </p>
 <p> The primary features of include (but are not limited to) multiple tabs, dynamically changeable tab titles, customisable command for each tab, input broadcasting, true translucent window, fast pseudo transparency with tinting, user supplied background images (XPM, JPEG, PNG), off-focus fading, text shadow, multiple style (NeXT, Rxvt, Xterm, SGI, Plain) scrollbars, XIM, multi-language support (Chinese, Korean, Japanese), freetype font and logging. </p>

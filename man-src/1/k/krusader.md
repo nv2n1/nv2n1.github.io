@@ -1,5 +1,4 @@
 ---
-
 title: "krusader(1)"
 name: "krusader"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-krusader/"
 description: "krusader – advanced twin-panel file manager and FTP client for KDE"
 ---
 
+<h2 class="name">NAME</h2>
+<p> krusader &#8211; advanced twin-panel file manager and FTP client for KDE </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>krusader</code> [KDE Generic Options] [Qt Generic Options] [Options] url</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>Krusader is an advanced twin panel (commander style) file manager for KDE and other desktops in the *nix world, similar to Midnight or Total Commander. It provides all the file management features you could possibly want. Plus: extensive archive handling, mounted filesystem support, FTP, advanced search module, viewer/editor, directory synchronisation, file content comparisons, powerful batch renaming and much much more. It supports the following archive formats: ace, arj, bzip2, deb, gzip, iso, lha, rar, rpm, tar, xz, zip, and 7-zip and can handle other KIOSlaves such as smb:// or fish:// It is (almost) completely customizable, very user friendly, fast and looks great on your desktop! :-) You should give it a try.</dd>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;left</code> <i>&lt;path&gt;</i></p>

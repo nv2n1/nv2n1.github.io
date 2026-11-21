@@ -1,5 +1,4 @@
 ---
-
 title: "masked_blit(3)"
 name: "masked_blit"
 section: "3"
@@ -10,8 +9,10 @@ description: "masked_blit – Copies a rectangle skipping pixels with the mask c
 
 <h2>NAME</h2>
 <p> masked_blit &#8211; Copies a rectangle skipping pixels with the mask color. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>void masked_blit(BITMAP *source, BITMAP *dest, int source_x, int source_y,</code> <code>int dest_x, int dest_y, int width, int height);</code></p>
+<h2>DESCRIPTION</h2>
 <p> Like blit(), but skips transparent pixels, which are marked by a zero in 256-color modes or bright pink for truecolor data (maximum red and blue, zero green), and requires the source and destination bitmaps to be of the same color depth. The source and destination regions must not overlap. Example: </p>
 <pre><code>
 BITMAP *hud_overlay;

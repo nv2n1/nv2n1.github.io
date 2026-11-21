@@ -1,5 +1,4 @@
 ---
-
 title: "libmaketmpfile(3)"
 name: "libmaketmpfile"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-libmaketmpfile/"
 description: "pm_make_tmpfile() – create a temporary named file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pm_make_tmpfile() &#8211; create a temporary named file</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;netpbm/pm.h&gt;
 pm_make_tmpfile(FILE **fileP,
@@ -31,6 +33,7 @@ strfree(grepCommand);
 unlink(myfilename);
 strfree(myfilename);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> This library function is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pm_make_tmpfile()</code> creates and opens a temporary file, returning to you a stream file handle for it and its name. </p>
 <p> <code>pm_make_tmpfile()</code> chooses a file name that is not already in use, with proper interlocking to make sure that it actually creates a file and opens the new file, as opposed to merely opening an existing file. </p>

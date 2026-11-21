@@ -1,5 +1,4 @@
 ---
-
 title: "spamass-milter(1)"
 name: "spamass-milter"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-spamass-milter/"
 description: "spamass-milter – sendmail milter for passing emails through SpamAssassin"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>spamass-milter</code> &#8211; sendmail milter for passing emails through SpamAssassin </p>
+<h2>SYNOPSIS</h2>
 <p> &#8211;<code>p </code><i>socket</i> [-<code>b | -B </code><i>spamaddress</i> ] [-<code>C rejectcode</code> ] [-<code>d </code><i>debugflags</i> ] [-<code>D </code><i>host</i> ] [-<code>e </code><i>defaultdomain</i> ] [-<code>f</code> ] [-<code>g </code><i>group</i> ] [-<code>i </code><i>networks</i> ] [-<code>I</code> ] [-<code>m</code> ] [-<code>M</code> ] [-<code>P </code><i>pidfile</i> ] [-<code>r </code><i>nn</i> ] [-<code>r rejectmsg</code> ] [-<code>u </code><i>defaultuser</i> ] [-<code>x</code> ] [-<code>S /path/to/sendmail</code> ] [-<code>&#8211; </code><i>spamc flags &#8230;</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> The utility is a sendmail milter that checks and modifies incoming email messages with SpamAssassin. </p>
 <p> The following options are available:</p>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "create_color_table(3)"
 name: "create_color_table"
 section: "3"
@@ -10,8 +9,10 @@ description: "create_color_table – Fills a color mapping table for customised 
 
 <h2>NAME</h2>
 <p> create_color_table &#8211; Fills a color mapping table for customised effects. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>void create_color_table(COLOR_MAP *table, const PALETTE pal,</code> <code>void (*blend)(PALETTE pal, int x, int y, RGB *rgb),</code> <code>void (*callback)(int pos));</code></p>
+<h2>DESCRIPTION</h2>
 <p> Fills the specified color mapping table with lookup data for doing customised effects with the specified palette, calling the blend function to determine the results of each color combination. </p>
 <p> Your blend routine will be passed a pointer to the palette and the two indices of the colors which are to be combined, and should fill in the RGB structure with the desired result in 0-63 format. Allegro will then search the palette for the closest match to the RGB color that you requested, so it doesn&#8217;t matter if the palette has no exact match for this color. </p>
 <p> If the callback function is not NULL, it will be called 256 times during the calculation, allowing you to display a progress indicator. Example: </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "pbmupc(1)"
 name: "pbmupc"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pbmupc/"
 description: "pbmupc – create a Universal Product Code bitmap"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pbmupc &#8211; create a Universal Product Code bitmap </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pbmupc</code> [<code>-s1</code>|<code>-s2</code>] <i>type manufac product</i></p>
+<h2>DESCRIPTION</h2>
 <p> Generates a Universal Product Code symbol. The three arguments are: a one digit product type, a five digit manufacturer code, and a five digit product code. For example, &quot;0 72890 00011&quot; is the code for Heineken. </p>
 <p> As presently configured, <i>pbmupc</i> produces a bitmap 230 bits wide and 175 bits high. The size can be altered by changing the defines at the beginning of the program, or by running the output through <i>pnmenlarge</i> or <i>pnmscale</i>.</p>
 <h2>OPTIONS</h2>

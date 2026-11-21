@@ -1,5 +1,4 @@
 ---
-
 title: "voikkogc(1)"
 name: "voikkogc"
 section: "1"
@@ -10,7 +9,9 @@ description: "voikkogc – test program for Voikko grammar checker"
 
 <h2>NAME</h2>
 <p> voikkogc &#8211; test program for Voikko grammar checker</p>
+<h2>SYNOPSIS</h2>
 <p> <code>voikkogc</code> [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>voikkogc</code> is a test program for grammar checking functionality in libvoikko, library of Finnish language tools. It reads sentences or paragraphs from stdin (one per line) and print the results to stdout. The results are structures containing information about grammar errors found in the input paragraph.</p>
 <h2>OPTIONS</h2>
 <dl>

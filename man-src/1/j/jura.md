@@ -1,5 +1,4 @@
 ---
-
 title: "jura(1)"
 name: "jura"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-jura/"
 description: "jura – Job Usage Reporter of ARC"
 ---
 
+<h2 class="name">NAME</h2>
+<p> jura &#8211; Job Usage Reporter of ARC</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>jura</code> application is a resource-side accounting (usage logging) client. </p>
+<h2>SYNOPSIS</h2>
 <p> jura [<code>-E</code> <i>exp_time</i>] [<code>-L</code>] [<code>-u</code> <i>url</i> [<code>-u</code> <i>url</i> <code>-t</code> <i>topic</i> <code>-u</code> <i>url</i> &#8230;] ] [<code>-r</code> <i>time_range</i>] <i>ctrl_dir</i> [<i>ctrl_dir</i> &#8230;] </p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_heartbeat_set_timeouts(3)"
 name: "gnutls_heartbeat_set_timeouts"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_heartbeat_set_timeouts – API function"
 
 <h2>NAME</h2>
 <p> gnutls_heartbeat_set_timeouts &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_heartbeat_set_timeouts(gnutls_session_t </code><i>session</i><code>, unsigned int </code><i>retrans_timeout</i><code>, unsigned int </code><i>total_timeout</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_heartbeat_set_timeouts – API function"
 <dd> The time at which a retransmission will occur in milliseconds</dd>
 <dt>unsigned int total_timeout</dt>
 <dd> The time at which the connection will be aborted, in milliseconds.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will override the timeouts for the DTLS heartbeat protocol. The retransmission timeout is the time after which a message from the peer is not received, the previous request will be retransmitted. The total timeout is the time after which the handshake will be aborted with <code>GNUTLS_E_TIMEDOUT</code>. </p>
 <p> If the retransmission timeout is zero then the handshake will operate in a non-blocking way, i.e., return <code>GNUTLS_E_AGAIN</code>.</p>
 <h2>SINCE</h2>

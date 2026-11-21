@@ -1,5 +1,4 @@
 ---
-
 title: "endfsent(3)"
 name: "endfsent"
 section: "3"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/3-endfsent/"
 description: "getfsent, getfsspec, getfsfile, setfsent, endfsent – handle fstab entries"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getfsent, getfsspec, getfsfile, setfsent, endfsent &#8211; handle fstab entries </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;fstab.h&gt;</code> </p>
 <p> <code>void endfsent(void);</code> </p>
 <p> <code>struct fstab *getfsent(void);</code> </p>
 <p> <code>struct fstab *getfsfile(const char *</code><i>mount_point</i><code>);</code> </p>
 <p> <code>struct fstab *getfsspec(const char *</code><i>special_file</i><code>);</code> </p>
 <p> <code>int setfsent(void);</code></p>
+<h2>DESCRIPTION</h2>
 <p> These functions read from the file <i>/etc/fstab</i>. The <i>struct fstab</i> is defined by: </p>
 <p> struct fstab {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;char&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;*fs_spec;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;block device name&nbsp;*/<br />

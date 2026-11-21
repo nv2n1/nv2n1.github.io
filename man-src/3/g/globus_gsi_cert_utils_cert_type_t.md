@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_gsi_cert_utils_cert_type_t/"
 description: "Cert Utils Constants –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Cert Utils Constants &#8211; </p>
 <h3>Typedefs</h3>
 <p> typedef enum<br />
  <code>globus_gsi_cert_utils_cert_type_e</code> <code>globus_gsi_cert_utils_cert_type_t</code>&quot; </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_certificate_set_x509_system_trust(3)"
 name: "gnutls_certificate_set_x509_system_trust"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_certificate_set_x509_system_trust – API function"
 
 <h2>NAME</h2>
 <p> gnutls_certificate_set_x509_system_trust &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_certificate_set_x509_system_trust(gnutls_certificate_credentials_t </code><i>cred</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_certificate_credentials_t cred</dt>
 <dd> is a <code>gnutls_certificate_credentials_t</code> structure.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function adds the system&#8217;s default trusted CAs in order to verify client or server certificates. </p>
 <p> In the case the system is currently unsupported <code>GNUTLS_E_UNIMPLEMENTED_FEATURE</code> is returned.</p>
 <h2>RETURNS</h2>

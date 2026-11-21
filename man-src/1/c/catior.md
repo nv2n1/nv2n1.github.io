@@ -1,5 +1,4 @@
 ---
-
 title: "catior(1)"
 name: "catior"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-catior/"
 description: "catior – Utility for viewing components of a stringified IOR"
 ---
 
+<h2 class="name">NAME</h2>
+<p> catior &#8211; Utility for viewing components of a stringified IOR</p>
+<h2>SYNOPSIS</h2>
 <p> <code>catior</code> [-x] &lt;stringified IOR&gt; </p>
+<h2>DESCRIPTION</h2>
 <p> catior displays the components of the stringified object reference supplied to it. </p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "docker-container-ls(1)"
 name: "docker-container-ls"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-container-ls/"
 description: "docker-container-ls – List containers"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-container-ls &#8211; List containers </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker container ls [OPTIONS]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> List the containers in the local repository. By default this shows only the running containers. </p>
 <h2>Filters</h2>
 <p> Filter output based on these conditions:<br />

@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_net_manager_register/"
 description: "Net Manager –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Net Manager &#8211; </p>
 <p> Net Manager API.</p>
 <h3>Modules</h3>
 <p> <code>Attributes</code><br />

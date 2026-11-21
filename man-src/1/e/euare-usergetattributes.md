@@ -1,5 +1,4 @@
 ---
-
 title: "euare-usergetattributes(1)"
 name: "euare-usergetattributes"
 section: "1"
@@ -10,10 +9,12 @@ description: "euare-usergetattributes – Display a user’s ARN and GUID"
 
 <h2>NAME</h2>
 <p> euare-usergetattributes &#8211; Display a user&#8217;s ARN and GUID</p>
+<h2>SYNOPSIS</h2>
 <p> euare-usergetattributes [&#8211;show-extra] [&#8211;as-account ACCOUNT] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] [USER]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Display a user&#8217;s ARN and GUID</p>
 <h3>positional arguments:</h3>
 <dl>

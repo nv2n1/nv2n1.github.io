@@ -1,5 +1,4 @@
 ---
-
 title: "bson_append_now_utc(3)"
 name: "bson_append_now_utc"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_append_now_utc() – The bson_append_now_utc() function is a 
 
 <h2>NAME</h2>
 <p> bson_append_now_utc() &#8211; The bson_append_now_utc() function is a helper to get the current date and time in UTC and append it to bson as a BSON_TYPE_DATE_TIME element.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 bool bson_append_now_utc(bson_t *bson,
                          const char *key,
@@ -25,6 +25,7 @@ bool bson_append_now_utc(bson_t *bson,
 <dl>
 <dt><code>key_length</code></dt>
 <dd> The length of <code>key</code> in bytes, or -1 to determine the length with <code><a href="/docs/linux/man/3-strlen/">strlen</a>(3)</code> \&amp;.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_append_now_utc/">bson_append_now_utc</a>(3)</code> function is a helper to get the current date and time in UTC and append it to <code>bson</code> as a BSON_TYPE_DATE_TIME element. </p>
 <p> This function calls <code><a href="/docs/linux/man/3-bson_append_date_time/">bson_append_date_time</a>(3)</code> internally. </p>
 <h2>RETURNS</h2>

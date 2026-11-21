@@ -1,5 +1,4 @@
 ---
-
 title: "pmdads389log(1)"
 name: "pmdads389log"
 section: "1"
@@ -10,6 +9,7 @@ description: "pmdads389log – 389 Directory Server Log PMDA"
 
 <h2>NAME</h2>
 <p> <code>pmdads389log</code> &#8211; 389 Directory Server Log PMDA</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdads389log</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which extracts statistics from 389 Directory Server access log using the <code><a href="/docs/linux/man/1-logconv-pl/">logconv.pl</a></code>(1) utility.</p>
 <h2>INSTALLATION</h2>
 <p> <code>pmdads389log</code> uses a configuration file</p>

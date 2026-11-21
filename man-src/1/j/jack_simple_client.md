@@ -1,5 +1,4 @@
 ---
-
 title: "jack_simple_client(1)"
 name: "jack_simple_client"
 section: "1"
@@ -13,6 +12,7 @@ description: "jack_simple_client – The JACK Audio Connection Kit example clien
 <h2>SYNOPSYS</h2>
 <p> <code>jack_simple_client</code> client-name </p>
 <p> The client-name must be a yet unused client name.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>jack_simple_client</code> is an example client for the JACK Audio Connection Kit. It creates two ports (client-name:input and client-name:output) that pass the data unmodified.</p>
 <h2>EXAMPLE</h2>
 <p> jack_simple_client in_process_test</p>

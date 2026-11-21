@@ -1,5 +1,4 @@
 ---
-
 title: "pldd(1)"
 name: "pldd"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-pldd/"
 description: "pldd – display dynamic shared objects linked into a process"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pldd &#8211; display dynamic shared objects linked into a process </p>
+<h2>SYNOPSIS</h2>
 <pre>
 <code>pldd </code><i>pid</i>
 <code>pldd</code><i> option</i>
 </pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>pldd</code> command displays a list of the dynamic shared objects (DSOs) that are linked into the process with the specified process ID (PID). The list includes the libraries that have been dynamically loaded using <code><a href="/docs/linux/man/3-dlopen/">dlopen</a></code>(3).</p>
 <h2>OPTIONS</h2>
 <dl>

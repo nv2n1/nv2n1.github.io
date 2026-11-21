@@ -1,5 +1,4 @@
 ---
-
 title: "callback(3)"
 name: "callback"
 section: "3"
@@ -10,6 +9,7 @@ description: "callback – closures with variable arguments as first-class C fun
 
 <h2>NAME</h2>
 <p> callback &#8211; closures with variable arguments as first-class C functions</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/callback.h">callback.h</a>&gt;</code> </p>
 <pre><code>
 void function(data, alist) void *data;
@@ -27,6 +27,7 @@ va_alist alist;
 <code>callback_address(</code><i>callback</i><code>)</code>
 <code>callback_data(</code><i>callback</i><code>)</code>
 </pre>
+<h2>DESCRIPTION</h2>
 <p> These functions implement <i>closures</i> with variable arguments as first-class C functions. </p>
 <p> Closures as <i>first-class C functions</i> means that they fit into a function pointer and can be called exactly like any other C function. Moreover, they can be called with variable arguments and can return variable return values. </p>
 <p> <i>callback</i><code> = alloc_callback(</code><i>&amp;function</i><code>, </code><i>data</i><code>)</code> allocates a callback. When <i>callback</i> gets called, it arranges to call <i>function</i>, passing <i>data</i> as first argument and, as second argument, the entire sequence of arguments passed to <i>callback</i>. </p>

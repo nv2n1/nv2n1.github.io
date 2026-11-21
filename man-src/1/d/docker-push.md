@@ -1,5 +1,4 @@
 ---
-
 title: "docker-push(1)"
 name: "docker-push"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-push/"
 description: "docker-push – Push an image or a repository to a registry"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-push &#8211; Push an image or a repository to a registry </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker push [OPTIONS] NAME[:TAG]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Alias for docker image push. </p>
 <h2>OPTIONS</h2>
 <p> <code>-a</code>, <code>&#8211;all-tags</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Push all tagged images in the repository</p>

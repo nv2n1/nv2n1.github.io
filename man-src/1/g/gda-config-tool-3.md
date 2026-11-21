@@ -1,5 +1,4 @@
 ---
-
 title: "gda-config-tool-3(1)"
 name: "gda-config-tool-3"
 section: "1"
@@ -10,7 +9,9 @@ description: "gda-config-tool-3.0 – Tool for managing libgda configuration fil
 
 <h2>NAME</h2>
 <p> gda-config-tool-3.0 &#8211; Tool for managing libgda configuration file.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gda-config-tool-3.0 [OPTIONS]</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <i>gda-config-tool-3.0</i> program can be used create/edit/remove a libgda provider. It can be used both as a command line program and an interactive program.</p>
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>
@@ -48,6 +49,8 @@ description: "gda-config-tool-3.0 – Tool for managing libgda configuration fil
 </dt><dd> User settings. Override global settings.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>mergeant(1),</code> <code>gda-config-3.0(5)</code> </p>
+<h2 class="name">NAME</h2>
+<p> gda-config-tool-3.0 &#8211; Tool for managing libgda configuration file. </p>
 <h2>SYNOPSIS</h2>
 <p> <code>gda-config-tool-3.0 [OPTIONS]</code></p>
 <h2>DESCRIPTION</h2>

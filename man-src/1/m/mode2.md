@@ -1,5 +1,4 @@
 ---
-
 title: "mode2(1)"
 name: "mode2"
 section: "1"
@@ -10,7 +9,9 @@ description: "mode2, xmode2 – shows the pulse/space length of infrared signals
 
 <h2>NAME</h2>
 <p> mode2, xmode2 &#8211; shows the pulse/space length of infrared signals</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mode2</code> [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The main purpose of these programs is to check operation of your home-brew LIRC receiver hardware and to see the IR waveform of the remote controller without an expensive oscilloscope. Very useful for debugging. Of course this program won&#8217;t work with hardware that decodes the signals itself like e.g. TV cards or the Irman. </p>
 <p> mode2 will simply print pulse&amp;space lengths to stdout. </p>
 <h2>OPTIONS</h2>

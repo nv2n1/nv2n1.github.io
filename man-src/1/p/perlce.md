@@ -7,6 +7,8 @@ url: "/docs/linux/man/1-perlce/"
 description: "perlce – Perl for WinCE"
 ---
 
+<h2 class="name">NAME</h2>
+<p> perlce &#8211; Perl for WinCE </p>
 <h2>Building Perl for WinCE</h2>
 <h3><font SIZE="-1">WARNING</font></h3>
 <p> <code>Much of this document has become very out of date and needs updating, rewriting or deleting. The build process was overhauled during the 5.19 development track and the current instructions as of that time are given in &#8220;</code><font SIZE="-1"><code>CURRENT BUILD INSTRUCTIONS&#8221;</code></font><code>; the previous build instructions, which are largely superseded but may still contain some useful information, are left in &#8220;</code><font SIZE="-1"><code>OLD BUILD INSTRUCTIONS&#8221;</code></font><code> but really need removing after anything of use has been extracted from them.</code></p>

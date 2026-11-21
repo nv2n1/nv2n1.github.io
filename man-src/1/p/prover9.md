@@ -1,5 +1,4 @@
 ---
-
 title: "prover9(1)"
 name: "prover9"
 section: "1"
@@ -10,8 +9,10 @@ description: "prover9 – resolution/paramodulation theorem prover"
 
 <h2>NAME</h2>
 <p> prover9 &#8211; resolution/paramodulation theorem prover</p>
+<h2>SYNOPSIS</h2>
 <p> <code>prover9</code> [<i>options</i>] &lt; <i>input-file</i> &gt; <i>output-file</i><br />
  <code>prover9</code> [<i>options</i>] -f <i>input-file</i> &gt; <i>output-file</i></p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>prover9</code> command. </p>
 <p> <code>prover9</code> is an automated theorem prover for first-order and equational logic. It is a successor of the <code>otter</code>(1) prover. <code>prover9</code> uses the inference techniques of ordered resolution and paramodulation with literal selection.</p>
 <h2>OPTIONS</h2>

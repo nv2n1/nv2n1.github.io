@@ -1,5 +1,4 @@
 ---
-
 title: "argtable2(3)"
 name: "argtable2"
 section: "3"
@@ -10,6 +9,7 @@ description: "argtable2 – an ANSI C library for parsing GNU style command line
 
 <h2>NAME</h2>
 <p> argtable2 &#8211; an ANSI C library for parsing GNU style command line options</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;argtable2.h&gt;
 struct arg_lit
@@ -54,6 +54,7 @@ void arg_print_glossary_gnu(FILE *fp, void **argtable)
 void arg_print_errors(FILE *fp, struct arg_end *end, const char *progname)
 void arg_freetable(void **argtable, size_t n)
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Argtable is an ANSI C library for parsing GNU style command line arguments with a minimum of fuss. It enables the programmer to define their program&#8217;s argument syntax directly in the source code as an array of structs. The command line is then parsed according to that specification and the resulting values stored directly into user-defined program variables where they are accessible to the main program. </p>
 <p> This man page is only for reference. Introductory documentation and example source code is typically installed under <code>/usr/share/doc/argtable2/</code> and is also available from the argtable homepage at <a rel="nofollow" href="http://argtable.sourceforge.net.">http://argtable.sourceforge.net.</a> </p>
 <h3>Constructing an arg_&lt;xxx&gt; data structure</h3>

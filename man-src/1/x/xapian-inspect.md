@@ -1,5 +1,4 @@
 ---
-
 title: "xapian-inspect(1)"
 name: "xapian-inspect"
 section: "1"
@@ -10,7 +9,9 @@ description: "xapian-inspect – Inspect the contents of a flint table for devel
 
 <h2>NAME</h2>
 <p> xapian-inspect &#8211; Inspect the contents of a flint table for development or debugging</p>
+<h2>SYNOPSIS</h2>
 <p> <code>xapian-inspect</code> [<i>OPTIONS</i>] <i>TABLE</i></p>
+<h2>DESCRIPTION</h2>
 <p> xapian-inspect &#8211; Inspect the contents of a flint table for development or debugging</p>
 <h2>OPTIONS</h2>
 <dl>

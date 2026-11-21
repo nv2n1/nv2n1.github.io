@@ -1,5 +1,4 @@
 ---
-
 title: "ods-server(1)"
 name: "ods-server"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ods-server/"
 description: "ods-server – minimal OBEX server based on obex-data-server"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ods-server &#8211; minimal OBEX server based on obex-data-server </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ods-server</code> [<i>options</i>] <i>profile path</i></p>
+<h2>DESCRIPTION</h2>
 <p> ods-server provides a minimal OBEX server based on obex-data-server for receiving files over bluetooth. <i>profile</i> selects the UUID-128 profile ID to use, currently <i>opp</i> and <i>ftp</i> can be used as aliases for object push and obex ftp respectively. <i>path</i> is the target directory for received files.</p>
 <h2>OPTIONS</h2>
 <dl>

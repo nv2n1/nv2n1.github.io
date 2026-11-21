@@ -1,5 +1,4 @@
 ---
-
 title: "foomatic-configure(1)"
 name: "foomatic-configure"
 section: "1"
@@ -10,6 +9,7 @@ description: "foomatic-configure – the main configuration program of the fooma
 
 <h2>NAME</h2>
 <p> foomatic-configure &#8211; the main configuration program of the foomatic printing system.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>foomatic-configure</code> [<i>OPTION</i>]&#8230; </p>
 <p> <code>foomatic-configure -n</code><i>&nbsp;<wbr>queuename</i><code>&nbsp;<wbr>[&nbsp;<wbr>-N</code><i>&nbsp;<wbr>description</i><code>&nbsp;<wbr>]</code><i>&nbsp;<wbr>[&nbsp;<wbr>-L</i><code>&nbsp;<wbr>location</code><i>&nbsp;<wbr>]</i><code>&nbsp;<wbr>[&nbsp;<wbr>-c</code><i>&nbsp;<wbr>connect</i><code>&nbsp;<wbr>]</code><i>&nbsp;<wbr>[&nbsp;<wbr>-d</i><code>&nbsp;<wbr>driver</code><i>&nbsp;<wbr>]</i><code>&nbsp;<wbr>[&nbsp;<wbr>-p</code><i>&nbsp;<wbr>printer</i><code>&nbsp;<wbr>]</code><i>&nbsp;<wbr>[&nbsp;<wbr>&#8211;ppd</i><code>&nbsp;<wbr>ppdfile</code><i>&nbsp;<wbr>]</i><code>&nbsp;<wbr>[&nbsp;<wbr>-s</code><i>&nbsp;<wbr>spooler</i><code>&nbsp;<wbr>]</code><i>&nbsp;<wbr></i><code>[&nbsp;<wbr>-C&nbsp;<wbr>[&nbsp;<wbr></code><i>sourcespooler</i><code>&nbsp;<wbr>]&nbsp;<wbr></code><i>sourcequeue</i><i>&nbsp;<wbr></i><code>]&nbsp;<wbr>[&nbsp;<wbr>-o</code><i>&nbsp;<wbr>option1</i><code>=</code><i>value1</i><code>&nbsp;<wbr>-o</code><i>&nbsp;<wbr></i><code>&#8230;&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>-q&nbsp;<wbr>]</code> <code>foomatic-configure -D -n</code><i>&nbsp;<wbr>queuename</i><code>&nbsp;<wbr>[&nbsp;<wbr>-s</code><i>&nbsp;<wbr>spooler</i><code>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>-q&nbsp;<wbr>]</code> </p>
 <p> <code>foomatic-configure -R -n</code><i>&nbsp;<wbr>queuename</i><code>&nbsp;<wbr>[&nbsp;<wbr>-s</code><i>&nbsp;<wbr>spooler</i><code>&nbsp;<wbr>]&nbsp;<wbr>[&nbsp;<wbr>-q&nbsp;<wbr>]</code> </p>
@@ -19,6 +19,7 @@ description: "foomatic-configure – the main configuration program of the fooma
 <p> <code>foomatic-configure -O</code> </p>
 <p> <code>foomatic-configure -h</code> </p>
 <p> <code>foomatic-configure &#8211;help</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>foomatic-configure </code> is a program to set up and configure print queues for every known spooler (CUPS, LPRng, LPD, GNUlpr, PPR, PDQ. CPS, no spooler) and every valid printer/driver combo in the Foomatic database or every PPD file coming with PostScript printers. As RIP filter (Raster Image Processor, translation from PostScript to the native language of the printer) always <code><a href="/docs/linux/man/1-foomatic-rip/">foomatic-rip</a>(1)</code> will be used, except for PPD files of PostScript printers under CUPS or PPR, they will be used without RIP filter. </p>
 <p> It also comprises half of a programatic API for user tools: you can learn and control everything about the static properties of print queues here. With the sister program <code><a href="/docs/linux/man/1-foomatic-printjob/">foomatic-printjob</a>(1)</code>, you can do everything related to the print queue&#8217;s dynamic state: submit jobs, and query, cancel, reorder, and redirect them. </p>
 <h3>Options</h3>

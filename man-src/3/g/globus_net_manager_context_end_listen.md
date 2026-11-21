@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_net_manager_context_end_listen/"
 description: "Context –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Context &#8211; </p>
 <p> Net Manager Context Management Functions.</p>
 <h3>Typedefs</h3>
 <p> typedef struct<br />

@@ -1,5 +1,4 @@
 ---
-
 title: "fts-config-set(1)"
 name: "fts-config-set"
 section: "1"
@@ -11,9 +10,13 @@ url: "/docs/linux/man/1-fts-config-set/"
 
  fts-config-set
 
-fts-config-set [options] CONFIG [CONFIG...]
+<h2>SYNOPSIS</h2>
 
-fts-config-set is a tool for configuring SEs (storage elements) and SE groups. Each configuration is in JSON format (see details at <a rel="nofollow" HREF="https://svnweb.cern.ch/trac/fts3/wiki/AdminGuide)">https://svnweb.cern.ch/trac/fts3/wiki/AdminGuide)</a>
+ fts-config-set [options] CONFIG [CONFIG...]
+
+<h2>DESCRIPTION</h2>
+
+ fts-config-set is a tool for configuring SEs (storage elements) and SE groups. Each configuration is in JSON format (see details at <a rel="nofollow" HREF="https://svnweb.cern.ch/trac/fts3/wiki/AdminGuide)">https://svnweb.cern.ch/trac/fts3/wiki/AdminGuide)</a>
 
 <h2>OPTIONS</h2>
 

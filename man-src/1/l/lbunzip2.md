@@ -1,5 +1,4 @@
 ---
-
 title: "lbunzip2(1)"
 name: "lbunzip2"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-lbunzip2/"
 description: "lbzip2 – parallel bzip2 utility"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lbzip2 &#8211; parallel bzip2 utility</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lbzip2</code>|<code>bzip2</code> [<code>-n</code> <i>WTHRS</i>] [<code>-k</code>|<code>-c</code>|<code>-t</code>] [<code>-d</code>] [<code>-1</code> .. <code>-9</code>] [<code>-f</code>] [<code>-s</code>] [<code>-u</code>] [<code>-v</code>] [<code>-S</code>] [ <i>FILE &#8230; </i>] </p>
 <p> <code>lbunzip2</code>|<code>bunzip2</code> [<code>-n</code> <i>WTHRS</i>] [<code>-k</code>|<code>-c</code>|<code>-t</code>] [<code>-z</code>] [<code>-f</code>] [<code>-s</code>] [<code>-u</code>] [<code>-v</code>] [<code>-S</code>] [ <i>FILE &#8230; </i>] </p>
 <p> <code>lbzcat</code>|<code>bzcat</code> [<code>-n</code> <i>WTHRS</i>] [<code>-z</code>] [<code>-f</code>] [<code>-s</code>] [<code>-u</code>] [<code>-v</code>] [<code>-S</code>] [ <i>FILE &#8230; </i>] </p>
 <p> <code>lbzip2</code>|<code>bzip2</code>|<code>lbunzip2</code>|<code>bunzip2</code>|<code>lbzcat</code>|<code>bzcat</code> <code>-h</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Compress or decompress <i>FILE</i> operands or standard input to regular files or standard output using the Burrows-Wheeler block-sorting text compression algorithm. The <code>lbzip2</code> utility employs multiple threads and an input-bound splitter even when decompressing <code>.bz2</code> files created by standard bzip2. </p>
 <p> Compression is generally considerably better than that achieved by more conventional LZ77/LZ78-based compressors, and competitive with all but the best of the PPM family of statistical compressors. </p>
 <p> Compression is always performed, even if the compressed file is slightly larger than the original. The worst case expansion is for files of zero length, which expand to fourteen bytes. Random data (including the output of most file compressors) is coded with asymptotic expansion of around 0.5%. </p>

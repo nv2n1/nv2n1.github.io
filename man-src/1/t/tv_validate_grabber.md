@@ -1,5 +1,4 @@
 ---
-
 title: "tv_validate_grabber(1)"
 name: "tv_validate_grabber"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-tv_validate_grabber/"
 description: "tv_validate_grabber – Validate that an xmltv grabber works correctly"
 ---
 
+<h2 class="name">NAME</h2>
+<p> tv_validate_grabber &#8211; Validate that an xmltv grabber works correctly </p>
+<h2>SYNOPSIS</h2>
 <p> tv_validate_grabber &#8211;help </p>
 <p> tv_validate_grabber [&#8211;config-file &lt;configfile&gt;] [&#8211;keep-files] &lt;cmd&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> tv_validate_grabber runs a grabber through a series of test to determine if it follows the recommendations described at &lt;<a rel="nofollow" href="http://wiki.xmltv.org/index.php/XmltvCapabilities">http://wiki.xmltv.org/index.php/XmltvCapabilities</a>&gt; </p>
 <p> tv_validate_grabber does not assume that the grabber is written in perl. The command does not have to be a single executable, it can also be a complete command-line: </p>
 <p> tv_validate_grabber &#8220;perl -I lib grab/new/tv_grab_new&#8221;</p>

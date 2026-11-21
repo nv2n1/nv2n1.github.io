@@ -1,5 +1,4 @@
 ---
-
 title: "libssh2_base64_decode(3)"
 name: "libssh2_base64_decode"
 section: "3"
@@ -11,13 +10,17 @@ url: "/docs/linux/man/3-libssh2_base64_decode/"
 
  libssh2_base64_decode - decode a base64 encoded string
 
-#include &lt;libssh2.h&gt; 
+<h2>SYNOPSIS</h2>
+
+ #include &lt;libssh2.h&gt; 
 
  int libssh2_base64_decode(LIBSSH2_SESSION *session, char **dest, 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>unsigned int&nbsp;<wbr>*dest_len, const char&nbsp;<wbr>*src, 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>unsigned int src_len);
 
-This function is deemed DEPRECATED and will be removed from libssh2 in a future version. Don't use it! 
+<h2>DESCRIPTION</h2>
+
+ This function is deemed DEPRECATED and will be removed from libssh2 in a future version. Don't use it! 
 
  Decode a base64 chunk and store it into a newly allocated buffer. 'dest_len' will be set to hold the length of the returned buffer that '*dest' will point to. 
 

@@ -1,5 +1,4 @@
 ---
-
 title: "ck_rwcohort(3)"
 name: "ck_rwcohort"
 section: "3"
@@ -12,9 +11,11 @@ description: "ck_rwcohort – generalized interface for reader-writer locks usin
 <p> <code>ck_rwcohort</code> &#8211; generalized interface for reader-writer locks using cohort locks</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_rwcohort.h In each of the following macros, &quot;STRATEGY&quot; should be replaced with either &quot;NEUTRAL&quot;, &quot;RP&quot;, or &quot;WP&quot; depending on which locking strategy the user prefers. RP and WP represent reader preference and writer preference, respectively, while NEUTRAL represents a strategy neutral to reads vs. writes. Fn CK_RWCOHORT_STRATEGY_PROTOTYPE COHORT_NAME cohort_name Fn CK_RWCOHORT_STRATEGY_NAME COHORT_NAME cohort_name Fn CK_RWCOHORT_STRATEGY_INSTANCE COHORT_NAME cohort_name Fn CK_RWCOHORT_STRATEGY_INIT COHORT_NAME cohort_name RWCOHORT lock unsigned int wait_limit Note: the wait_limit argument should be omitted for locks using the neutral strategy Fn CK_RWCOHORT_STRATEGY_READ_LOCK COHORT_NAME cohort_name RWCOHORT lock COHORT cohort void *global_context void *local_context Fn CK_RWCOHORT_STRATEGY_READ_UNLOCK COHORT_NAME cohort_name RWCOHORT lock COHORT cohort void *global_context void *local_context Fn CK_RWCOHORT_STRATEGY_WRITE_LOCK COHORT_NAME cohort_name RWCOHORT lock COHORT cohort void *global_context void *local_context Fn CK_RWCOHORT_STRATEGY_WRITE_UNLOCK COHORT_NAME cohort_name RWCOHORT lock COHORT cohort void *global_context void *local_context </p>
 <p> Arguments of type RWCOHORT must be pointers to structs defined using the CK_RWCOHORT_STRATEGY_PROTOTYPE3 macro with the same strategy and cohort name as the current call. </p>
 <p> Arguments of type COHORT must be pointers to structs defined using the CK_COHORT_PROTOTYPE3 macro.</p>
+<h2>DESCRIPTION</h2>
 <p> ck_rwcohort.h provides an interface for defining reader-writer locks that use cohort locks internally to increase performance on NUMA architectures. See ck_cohort3 for more information about cohort locks. </p>
 <p> Before using a reader-writer cohort lock, the user must define a cohort type using either the CK_COHORT_PROTOTYPE3 or the CK_COHORT_TRYLOCK_PROTOTYPE3 macros, and define a reader-writer lock type using the CK_RWCOHORT_PROTOTYPE3 macro. </p>
 <h2>EXAMPLE</h2>

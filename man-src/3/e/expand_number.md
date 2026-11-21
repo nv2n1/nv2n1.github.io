@@ -1,5 +1,4 @@
 ---
-
 title: "expand_number(3)"
 name: "expand_number"
 section: "3"
@@ -8,10 +7,13 @@ url: "/docs/linux/man/3-expand_number/"
 description: "expand_number – format a number from human readable form"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>expand_number</code> &#8211; format a number from human readable form </p>
 <h2>LIBRARY</h2>
 <p> Lb libbsd</p>
+<h2>SYNOPSIS</h2>
 <p> In bsd/libutil.h Ft int Fo expand_number Fa const char *buf uint64_t *num Fc</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn expand_number function unformats the Fa buf string and stores a unsigned 64-bit quantity at address pointed out by the Fa num argument. </p>
 <p> The Fn expand_number function follows the SI power of two convention. </p>
 <p> The prefixes are:</p>

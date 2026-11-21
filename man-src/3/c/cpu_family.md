@@ -1,5 +1,4 @@
 ---
-
 title: "cpu_family(3)"
 name: "cpu_family"
 section: "3"
@@ -10,8 +9,10 @@ description: "cpu_family – Contains the CPU type. Allegro game programming lib
 
 <h2>NAME</h2>
 <p> cpu_family &#8211; Contains the CPU type. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>extern int cpu_family;</code></p>
+<h2>DESCRIPTION</h2>
 <p> Contains the Intel type, where applicable. Allegro defines the following CPU family types: </p>
 <pre>
    CPU_FAMILY_UNKNOWN  - The type of processor is unknown

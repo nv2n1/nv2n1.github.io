@@ -1,5 +1,4 @@
 ---
-
 title: "mib_api(3)"
 name: "mib_api"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-mib_api/"
 description: "init_mib, add_mibdir, init_mib_internals, add_module_replacement, read_module, read_mib, read_all_mibs, read_objid, read_module_node, get_module_node, snmp_set_mib_warnings, snmp_set_save_descripti..."
 ---
 
+<h2 class="name">NAME</h2>
+<p> init_mib, add_mibdir, init_mib_internals, add_module_replacement, read_module, read_mib, read_all_mibs, read_objid, read_module_node, get_module_node, snmp_set_mib_warnings, snmp_set_save_descriptions, shutdown_mib, print_mib, print_variable, fprint_variable, snprint_variable, sprint_realloc_variable, print_value, fprint_value, snprint_value, sprint_realloc_value, print_objid, fprint_objid, snprint_objid, sprint_realloc_objid, print_description, fprint_description &#8211; mib_api functions </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/net-snmp/mib_api.h">net-snmp/mib_api.h</a>&gt;</code> </p>
 <p> <code>void init_mib(void);</code><br />
  <code>int add_mibdir(const char *</code><i>dirname</i><code>);</code><br />
@@ -36,6 +38,7 @@ description: "init_mib, add_mibdir, init_mib_internals, add_module_replacement, 
  <code>void fprint_description(FILE *</code><i>fp</i><code>, const oid *</code><i>objid</i><code>, size_t </code><i>objidlen</i><code>, int </code><i>width</i><code>);</code> </p>
 <p> <code>void snmp_set_mib_warnings(int </code><i>level</i><code>);</code><br />
  <code>void snmp_set_save_descriptions(int </code><i>save</i><code>);</code> </p>
+<h2>DESCRIPTION</h2>
 <p> The functions dealing with MIB modules fall into four groups. Those dealing with initialisation and shutdown, those that read in and parse MIB files, those that search the MIB tree, and various output routines.</p>
 <h3>Initialisation and Shutdown</h3>
 <p> <code>init_mib</code> is a convenience function that handles all calls to <code>add_mibdir</code>, <code>read_module</code> and <code>read_mib</code> for standard applications. It should be called before any other routine that manipulates or accesses the MIB tree. This routine sets up various internal structures, as well as reading in the default MIB modules, as detailed below. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "nwboprops(1)"
 name: "nwboprops"
 section: "1"
@@ -10,7 +9,9 @@ description: "nwboprops – List properies of a NetWare Bindery Object"
 
 <h2>NAME</h2>
 <p> nwboprops &#8211; List properies of a NetWare Bindery Object</p>
+<h2>SYNOPSIS</h2>
 <p> <code>nwboprops</code> [ <code>-h</code> ] [ <code>-S</code> <i>server</i> ] [ <code>-U</code> <i>user name</i> ] [ <code>-P</code> <i>password</i> | <code>-n</code> ] [ <code>-C</code> ] [ <code>-o</code> <i>object name</i> ] [ <code>-t</code> <i>type</i> ] [ <code>-v</code> ] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>nwboprops</code> lists all the properties of the specified NetWare Bindery Objects. </p>
 <p> <code>nwboprops</code> looks up the file <i>$HOME/.nwclient</i> to find a file server, a user name and possibly a password. See <a href="/docs/linux/man/5-nwclient/">nwclient</a>(5) for more information. Please note that the access permissions of $HOME/.nwclient MUST be 600 for security reasons. </p>
 <h2>OPTIONS</h2>

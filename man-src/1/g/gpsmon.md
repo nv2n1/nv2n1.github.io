@@ -1,5 +1,4 @@
 ---
-
 title: "gpsmon(1)"
 name: "gpsmon"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-gpsmon/"
 description: "gpsmon – real-time GPS packet monitor and control utility"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gpsmon &#8211; real-time GPS packet monitor and control utility </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gpsmon</code> [-L] [-V] [-h] [-n] [-a] [-l&nbsp;<wbr><i>logfile</i>] [-t&nbsp;<wbr><i>driver-prefix</i>] [[&nbsp;<wbr><i>server</i>&nbsp;<wbr>[<i>:port</i>&nbsp;<wbr>[<i>:device</i>]]&nbsp;<wbr>|&nbsp;<wbr><i>device</i>]] [-D&nbsp;<wbr><i>debuglevel</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>gpsmon is a monitor that watches packets coming from a GPS and displays them along with diagnostic information. It supports commands that can be used to tweak GPS settings in various ways; some are device-independent, some vary with the GPS chipset type. It will behave sanely, just dumping packets, when connected to a GPS type it knows nothing about. </dd>
 <p> gpsmon differs from a navigation client in that it mostly dumps raw data from the GPS, with only enough data-massaging to allow checks against expected output. In particular, this tool does not do any interpolation or modeling to derive climb/sink or error estimates. Nor does it discard altitude reports when the fix quality is too low. </p>
 <p> gpsmon is a designed to run in a terminal emulator with a minimum 25&#215;80 size; the non-GUI interface is a design choice made to accommodate users operating in constrained environments and over telnet or ssh connections. If run in a larger window, the size of the packet-log window will be increased to fit. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "grub2-script-check(1)"
 name: "grub2-script-check"
 section: "1"
@@ -10,7 +9,9 @@ description: "grub-script-check — Check GRUB configuration file for syntax err
 
 <h2>NAME</h2>
 <p> <code>grub-script-check</code> &#8212; Check GRUB configuration file for syntax errors. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>grub-script-check</code> [-v | &#8211;verbose] <i>PATH</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>grub-script-check</code> verifies that a specified GRUB configuration file does not contain syntax errors. </p>
 <h2>OPTIONS</h2>
 <dl>

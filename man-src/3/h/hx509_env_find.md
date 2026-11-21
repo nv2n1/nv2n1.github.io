@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-hx509_env_find/"
 description: "hx509 enviroment functions –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hx509 enviroment functions &#8211; </p>
 <h3>Functions</h3>
 <p> int <code>hx509_env_add</code> (hx509_context context, hx509_env *env, const char *key, const char *value) </p>
 <p> int <code>hx509_env_add_binding</code> (hx509_context context, hx509_env *env, const char *key, hx509_env list) </p>

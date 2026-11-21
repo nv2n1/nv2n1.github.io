@@ -1,5 +1,4 @@
 ---
-
 title: "dlahrd(3)"
 name: "dlahrd"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlahrd/"
 description: "dlahrd.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlahrd.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlahrd</code> (N, K, NB, A, LDA, TAU, T, LDT, Y, LDY)<br />
  <i></i><code>DLAHRD</code> reduces the first nb columns of a general rectangular matrix A so that elements below the k-th subdiagonal are zero, and returns auxiliary matrices which are needed to apply the transformation to the unreduced part of A.</p>

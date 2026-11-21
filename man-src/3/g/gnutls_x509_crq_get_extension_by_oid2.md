@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_crq_get_extension_by_oid2(3)"
 name: "gnutls_x509_crq_get_extension_by_oid2"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_crq_get_extension_by_oid2 – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crq_get_extension_by_oid2 &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crq_get_extension_by_oid2(gnutls_x509_crq_t </code><i>crq</i><code>, const char * </code><i>oid</i><code>, int </code><i>indx</i><code>, gnutls_datum_t * </code><i>output</i><code>, unsigned int * </code><i>critical</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,6 +24,7 @@ description: "gnutls_x509_crq_get_extension_by_oid2 – API function"
 <dd> will hold the allocated extension data</dd>
 <dt>unsigned int * critical</dt>
 <dd> will be non-zero if the extension is marked as critical</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will return the extension specified by the OID in the certificate. The extensions will be returned as binary data DER encoded, in the provided buffer.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error code in case of an error. If the certificate does not contain the specified extension <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code> will be returned.</p>

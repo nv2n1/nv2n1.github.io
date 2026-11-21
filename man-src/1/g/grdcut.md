@@ -1,5 +1,4 @@
 ---
-
 title: "grdcut(1)"
 name: "grdcut"
 section: "1"
@@ -10,8 +9,10 @@ description: "grdcut – Extract subregion from a grid"
 
 <h2>NAME</h2>
 <p> grdcut &#8211; Extract subregion from a grid</p>
+<h2>SYNOPSIS</h2>
 <p> <code>grdcut</code> <i>ingrid</i> <i>outgrid</i> <i>region</i> [ [<i>nodata</i>] ] [ [<code>n</code>]<i>lon/lat/radius</i>[<i>unit</i>] ] [ [<i>level</i>] ] [ [<code>n</code>|<code>r</code>]<i>min/max</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>grdcut</code> will produce a new <i>outgrid</i> file which is a subregion of <i>ingrid</i>. The subregion is specified with <code>-R</code> as in other programs; the specified range must not exceed the range of <i>ingrid</i> (but see <code>-N</code>). If in doubt, run <code>grdinfo</code> to check range. Alternatively, define the subregion indirectly via a range check on the node values or via distances from a given point. Complementary to <code>grdcut</code> there is <code>grdpaste</code>, which will join together two grid files along a common edge.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

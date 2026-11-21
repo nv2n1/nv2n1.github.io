@@ -1,5 +1,4 @@
 ---
-
 title: "bson_reader_new_from_handle(3)"
 name: "bson_reader_new_from_handle"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_reader_new_from_handle() – This function allows for a plugg
 
 <h2>NAME</h2>
 <p> bson_reader_new_from_handle() &#8211; This function allows for a pluggable data stream for the reader. This can be used to read from sockets, files, memory, or other arbitrary sources.</p>
+<h2>SYNOPSIS</h2>
 <pre>
 bson_reader_t *
 bson_reader_new_from_handle (void                      *handle,
@@ -26,6 +26,7 @@ bson_reader_new_from_handle (void                      *handle,
 <dl>
 <dt><code>df</code></dt>
 <dd> A <code>bson_reader_destroy_func_t</code> \&amp;.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function allows for a pluggable data stream for the reader. This can be used to read from sockets, files, memory, or other arbitrary sources. </p>
 <h2>RETURNS</h2>
 <p> A newly allocated bson_reader_t if successful; otherwise NULL. </p>

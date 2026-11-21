@@ -1,5 +1,4 @@
 ---
-
 title: "aircrack-ng(1)"
 name: "aircrack-ng"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-aircrack-ng/"
 description: "aircrack-ng – a 802.11 WEP / WPA-PSK key cracker"
 ---
 
+<h2 class="name">NAME</h2>
+<p> aircrack-ng &#8211; a 802.11 WEP / WPA-PSK key cracker </p>
+<h2>SYNOPSIS</h2>
 <p> <code>aircrack-ng</code> [options] &lt;.cap / .ivs file(s)&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>aircrack-ng</code> is an 802.11 WEP and WPA/WPA2-PSK key cracking program.<br />
  It can recover the WEP key once enough encrypted packets have been captured with airodump-ng. This part of the aircrack-ng suite determines the WEP key using two fundamental methods. The first method is via the PTW approach (Pyshkin, Tews, Weinmann). The main advantage of the PTW approach is that very few data packets are required to crack the WEP key. The second method is the FMS/KoreK method. The FMS/KoreK method incorporates various statistical attacks to discover the WEP key and uses these in combination with brute forcing.<br />
  Additionally, the program offers a dictionary method for determining the WEP key. For cracking WPA/WPA2 pre-shared keys, a wordlist (file or stdin) or an airolib-ng has to be used.</p>

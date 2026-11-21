@@ -1,5 +1,4 @@
 ---
-
 title: "rdma_client(1)"
 name: "rdma_client"
 section: "1"
@@ -11,11 +10,17 @@ url: "/docs/linux/man/1-rdma_client/"
 
  rdma_client - simple RDMA CM connection and ping-pong test.
 
-<pre><code>
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <pre><code>
 rdma_client[-s server_address][-p server_port]
 </code></pre>
 
-Uses synchronous librdmam calls to establish an RDMA connection between two nodes. This example is intended to provide a very simple coding example of how to use RDMA.
+<h2>DESCRIPTION</h2>
+
+ Uses synchronous librdmam calls to establish an RDMA connection between two nodes. This example is intended to provide a very simple coding example of how to use RDMA.
 
 <h2>OPTIONS</h2>
 

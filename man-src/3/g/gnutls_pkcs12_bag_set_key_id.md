@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pkcs12_bag_set_key_id(3)"
 name: "gnutls_pkcs12_bag_set_key_id"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_pkcs12_bag_set_key_id – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs12_bag_set_key_id &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs12.h&gt;</code> </p>
 <p> <code>int gnutls_pkcs12_bag_set_key_id(gnutls_pkcs12_bag_t </code><i>bag</i><code>, int </code><i>indx</i><code>, const gnutls_datum_t * </code><i>id</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_pkcs12_bag_set_key_id – API function"
 <dd> The bag&#8217;s element to add the id</dd>
 <dt>const gnutls_datum_t * id</dt>
 <dd> the ID</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will add the given key ID, to the specified, by the index, bag element. The key ID will be encoded as a &#8216;Local key identifier&#8217; bag attribute, which is usually used to distinguish the local private key and the certificate pair.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value. or a negative error code on error.</p>

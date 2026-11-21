@@ -1,5 +1,4 @@
 ---
-
 title: "ibmsquit(1)"
 name: "ibmsquit"
 section: "1"
@@ -12,6 +11,7 @@ description: "ibmsquit – Quit the management simulator"
 <p> <code>ibmsquit</code> &#8211; Quit the management simulator</p>
 <h2>SYNOPSYS</h2>
 <p> ibmsquit &lt;simulator host&gt; &lt;simulator port&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> Causes the <font SIZE="-1">IB</font> management simulator at the given host and port to quit</p>
 <h2>ARGUMENTS</h2>
 <dl>

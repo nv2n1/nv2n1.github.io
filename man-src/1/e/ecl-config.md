@@ -1,5 +1,4 @@
 ---
-
 title: "ecl-config(1)"
 name: "ecl-config"
 section: "1"
@@ -10,7 +9,9 @@ description: "ecl-config – Embeddable Common LISP configuration query"
 
 <h2>NAME</h2>
 <p> ecl-config &#8211; Embeddable Common LISP configuration query</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ecl-config</code> [<code>-cflags] [-libs] [-ldflags] [ LIBS] </code></p>
+<h2>DESCRIPTION</h2>
 <p> ecl-config will return through the standard output the set of compiler or linker flags needed to build applications that embed ecl.</p>
 <h2>OPTIONS</h2>
 <dl>

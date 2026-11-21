@@ -1,5 +1,4 @@
 ---
-
 title: "systemd-cgls(1)"
 name: "systemd-cgls"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-systemd-cgls/"
 description: "systemd-cgls – Recursively show control group contents"
 ---
 
+<h2 class="name">NAME</h2>
+<p> systemd-cgls &#8211; Recursively show control group contents </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>systemd-cgls</code> [OPTIONS&#8230;] [CGROUP&#8230;]</dt>
 <dt> <code>systemd-cgls</code> [OPTIONS&#8230;] <code>&#8211;unit</code>|<code>&#8211;user-unit</code> [UNIT&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>systemd-cgls</code></p>
 <dd>recursively shows the contents of the selected Linux control group hierarchy in a tree. If arguments are specified, shows all member processes of the specified control groups plus all their subgroups and their members. The control groups may either be specified by their full file paths or are assumed in the systemd control group hierarchy. If no argument is specified and the current working directory is beneath the control group mount point /sys/fs/cgroup/, shows the contents of the control group the working directory refers to. Otherwise, the full systemd control group hierarchy is shown. </dd>
 <p> By default, empty control groups are not shown.</p>

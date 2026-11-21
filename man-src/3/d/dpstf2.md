@@ -1,5 +1,4 @@
 ---
-
 title: "dpstf2(3)"
 name: "dpstf2"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dpstf2/"
 description: "dpstf2.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dpstf2.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dpstf2</code> (UPLO, N, A, LDA, PIV, RANK, TOL, WORK, INFO)<br />
  <i></i><code>DPSTF2</code> computes the Cholesky factorization with complete pivoting of a real symmetric or complex Hermitian positive semi-definite matrix.</p>

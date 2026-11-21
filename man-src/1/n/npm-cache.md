@@ -1,5 +1,4 @@
 ---
-
 title: "npm-cache(1)"
 name: "npm-cache"
 section: "1"
@@ -8,6 +7,7 @@ url: "/docs/linux/man/1-npm-cache/"
 description: "npm-cache – Manipulates packages cache"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>npm-cache</code> &#8211; Manipulates packages cache </p>
 <h3>Synopsis</h3>
 <dl>

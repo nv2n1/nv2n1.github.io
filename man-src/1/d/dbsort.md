@@ -1,5 +1,4 @@
 ---
-
 title: "dbsort(1)"
 name: "dbsort"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-dbsort/"
 description: "dbsort – sort rows based on the the specified columns"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dbsort &#8211; sort rows based on the the specified columns </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 dbsort[-M MemLimit][-T TemporaryDirectory][-nNrR] column[column...]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Sort all input rows as specified by the numeric or lexical columns. </p>
 <p> Dbsort consumes a fixed amount of memory regardless of input size. (It reverts to temporary files on disk if necessary, based on the -M and -T options.) </p>
 <p> The sort should be stable, but this has not yet been verified. </p>

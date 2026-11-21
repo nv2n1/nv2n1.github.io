@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_srtp_set_mki(3)"
 name: "gnutls_srtp_set_mki"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_srtp_set_mki – API function"
 
 <h2>NAME</h2>
 <p> gnutls_srtp_set_mki &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_srtp_set_mki(gnutls_session_t </code><i>session</i><code>, const gnutls_datum_t * </code><i>mki</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_srtp_set_mki – API function"
 <dd> is a <code>gnutls_session_t</code> structure.</dd>
 <dt>const gnutls_datum_t * mki</dt>
 <dd> holds the MKI</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function sets the Master Key Identifier, to be used by this session (if any).</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error code is returned. </p>

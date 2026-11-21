@@ -1,5 +1,4 @@
 ---
-
 title: "gtkada-config(1)"
 name: "gtkada-config"
 section: "1"
@@ -10,7 +9,9 @@ description: "gtkada-config – script to get information about the installed ve
 
 <h2>NAME</h2>
 <p> gtkada-config &#8211; script to get information about the installed version of GTKADA</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gtkada-config</code> [&#8211;prefix<i>[=DIR]</i>] [&#8211;version] [&#8211;libs] [&#8211;cflags] [&#8211;static]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>gtkada-config</i> is a tool that is used to configure to determine the compiler and linker flags that should be used to compile and link programs that use <i>GTKADA</i>.</p>
 <h2>OPTIONS</h2>
 <p> <i>gtkada-config</i> accepts the following options:</p>

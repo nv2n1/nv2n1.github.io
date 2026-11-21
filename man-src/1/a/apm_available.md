@@ -1,5 +1,4 @@
 ---
-
 title: "apm_available(1)"
 name: "apm_available"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-apm_available/"
 description: "apm_available – test whether APM subsystem is available"
 ---
 
+<h2 class="name">NAME</h2>
+<p> apm_available &#8211; test whether APM subsystem is available</p>
+<h2>SYNOPSIS</h2>
 <p> <code>apm_available</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>apm_available</code> checks whether the APM (&quot;Advanced Power Management&quot;) subsystem is available, as evidenced by the presence of the /proc/apm file. </p>
 <h2>OPTIONS</h2>
 <p> None.</p>

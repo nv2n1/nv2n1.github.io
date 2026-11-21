@@ -1,5 +1,4 @@
 ---
-
 title: "mergecap(1)"
 name: "mergecap"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mergecap/"
 description: "mergecap – Merges two or more capture files into one"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mergecap &#8211; Merges two or more capture files into one </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mergecap</code> [&nbsp;<wbr><code>-a</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-F</code>&nbsp;<wbr>&lt;<i>file format</i>&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-h</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-s</code>&nbsp;<wbr>&lt;<i>snaplen</i>&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-T</code>&nbsp;<wbr>&lt;<i>encapsulation type</i>&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-v</code>&nbsp;<wbr>] <code>-w</code>&nbsp;<wbr>&lt;<i>outfile</i>&gt;|- &lt;<i>infile</i>&gt; [&lt;<i>infile</i>&gt; <i>&#8230;</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Mergecap</code> is a program that combines multiple saved capture files into a single output file specified by the <code>-w</code> argument. <code>Mergecap</code> knows how to read <code>pcap</code> capture files, including those of <code>tcpdump</code>, <code>Wireshark</code>, and other tools that write captures in that format. </p>
 <p> By default, <code>Mergecap</code> writes the capture file in <code>pcap</code> format, and writes all of the packets from the input capture files to the output file. </p>
 <p> <code>Mergecap</code> is able to detect, read and write the same capture files that are supported by <code>Wireshark</code>. The input files don&#8217;t need a specific filename extension; the file format and an optional gzip compression will be automatically detected. Near the beginning of the <font SIZE="-1">DESCRIPTION</font> section of <i><a href="/docs/linux/man/1-wireshark/">wireshark</a></i>(1) or &lt;<a rel="nofollow" href="http://www.wireshark.org/docs/man-pages/wireshark.html">http://www.wireshark.org/docs/man-pages/wireshark.html</a>&gt; is a detailed description of the way <code>Wireshark</code> handles this, which is the same way <code>Mergecap</code> handles this. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "g_clustsize_d(1)"
 name: "g_clustsize_d"
 section: "1"
@@ -11,7 +10,9 @@ description: "g_clustsize – calculate size distributions of atomic clusters"
 <h2>NAME</h2>
 <p> g_clustsize &#8211; calculate size distributions of atomic clusters </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>g_clustsize</code> <code>-f</code><i> traj.xtc </i> <code>-s</code><i> topol.tpr </i> <code>-n</code><i> index.ndx </i> <code>-o</code><i> csize.xpm </i> <code>-ow</code><i> csizew.xpm </i> <code>-nc</code><i> nclust.xvg </i> <code>-mc</code><i> maxclust.xvg </i> <code>-ac</code><i> avclust.xvg </i> <code>-hc</code><i> histo-clust.xvg </i> <code>-temp</code><i> temp.xvg </i> <code>-mcn</code><i> maxclust.ndx </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-tu</code><i> enum </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-cut</code><i> real </i> <code>-[no]mol</code><i></i> <code>-[no]pbc</code><i></i> <code>-nskip</code><i> int </i> <code>-nlevels</code><i> int </i> <code>-ndf</code><i> int </i> <code>-rgblo</code><i> vector </i> <code>-rgbhi</code><i> vector </i></p>
+<h2>DESCRIPTION</h2>
 <p> This program computes the size distributions of molecular/atomic clusters in the gas phase. The output is given in the form of a XPM file. The total number of clusters is written to a XVG file. </p>
 <p> When the <code> -mol</code> option is given clusters will be made out of molecules rather than atoms, which allows clustering of large molecules. In this case an index file would still contain atom numbers or your calculcation will die with a SEGV. </p>
 <p> When velocities are present in your trajectory, the temperature of the largest cluster will be printed in a separate xvg file assuming that the particles are free to move. If you are using constraints, please correct the temperature. For instance water simulated with SHAKE or SETTLE will yield a temperature that is 1.5 times too low. You can compensate for this with the -ndf option. Remember to take the removal of center of mass motion into account. </p>

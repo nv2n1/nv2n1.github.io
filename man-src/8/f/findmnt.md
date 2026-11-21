@@ -1,5 +1,4 @@
 ---
-
 title: "findmnt(8)"
 name: "findmnt"
 section: "8"
@@ -7,11 +6,12 @@ letter: "f"
 url: "/docs/linux/man/8-findmnt/"
 description: "findmnt – find a filesystem"
 ---
-
 <p>findmnt &#8211; find a filesystem </p>
+<h2>SYNOPSIS</h2>
 <p> <code>findmnt</code> [options] </p>
 <p> <code>findmnt</code> [options] <i>device</i>|<i>mountpoint</i> </p>
 <p> <code>findmnt</code> [options] [<code>--source</code>] <i>device</i> [<code>--target</code> <i>path</i>|<code>--mountpoint</code> <i>mountpoint</i>]  </p>
+<h2>DESCRIPTION</h2>
 <p> <code>findmnt</code> will list all mounted filesystems or search for a filesystem. The <code>findmnt</code> command is able to search in <i>/etc/fstab</i>, <i>/etc/mtab</i> or <i>/proc/self/mountinfo</i>. If <i>device</i> or <i>mountpoint</i> is not given, all filesystems are shown. </p>
 <p>The device may be specified by device name, major:minor numbers, filesystem label or UUID, or partition label or UUID. Note that <code>findmnt</code> follows <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8) behavior where a device name may be interpreted as a mountpoint (and vice versa) if the <code>--target</code>, <code>--mountpoint</code> or <code>--source</code> options are not specified. </p>
 <p>The command-line option <code>--target</code> accepts any file or directory and then <code>findmnt</code> displays the filesystem for the given path. </p>

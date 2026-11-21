@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_psk_set_client_credentials(3)"
 name: "gnutls_psk_set_client_credentials"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_psk_set_client_credentials – API function"
 
 <h2>NAME</h2>
 <p> gnutls_psk_set_client_credentials &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_psk_set_client_credentials(gnutls_psk_client_credentials_t </code><i>res</i><code>, const char * </code><i>username</i><code>, const gnutls_datum_t * </code><i>key</i><code>, gnutls_psk_key_flags </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,6 +22,7 @@ description: "gnutls_psk_set_client_credentials – API function"
 <dd> is the user&#8217;s key</dd>
 <dt>gnutls_psk_key_flags flags</dt>
 <dd> indicate the format of the key, either <code>GNUTLS_PSK_KEY_RAW</code> or <code>GNUTLS_PSK_KEY_HEX</code>.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function sets the username and password, in a gnutls_psk_client_credentials_t structure. Those will be used in PSK authentication. <i>username</i> should be an ASCII string or UTF-8 strings prepared using the &quot;SASLprep&quot; profile of &quot;stringprep&quot;. The key can be either in raw byte format or in Hex format (without the 0x prefix).</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise an error code is returned.</p>

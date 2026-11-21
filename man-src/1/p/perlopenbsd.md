@@ -1,5 +1,4 @@
 ---
-
 title: "perlopenbsd(1)"
 name: "perlopenbsd"
 section: "1"
@@ -7,9 +6,14 @@ letter: "p"
 url: "/docs/linux/man/1-perlopenbsd/"
 ---
 
-perlopenbsd - Perl version 5 on OpenBSD systems 
+<h2 class="name">NAME</h2>
+ 
 
-This document describes various features of OpenBSD that will affect how Perl version 5 (hereafter just Perl) is compiled and/or runs.
+ perlopenbsd - Perl version 5 on OpenBSD systems 
+
+<h2>DESCRIPTION</h2>
+
+ This document describes various features of OpenBSD that will affect how Perl version 5 (hereafter just Perl) is compiled and/or runs.
 
 <h3>OpenBSD core dumps from getprotobyname_r and getservbyname_r with ithreads</h3>
 

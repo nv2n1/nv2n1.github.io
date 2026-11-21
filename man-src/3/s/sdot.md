@@ -1,5 +1,4 @@
 ---
-
 title: "sdot(3)"
 name: "sdot"
 section: "3"
@@ -7,7 +6,15 @@ letter: "s"
 url: "/docs/linux/man/3-sdot/"
 ---
 
-sdot.f - 
+<h2 class="name">NAME</h2>
+ 
+
+ sdot.f - 
+
+<h2>SYNOPSIS</h2>
+
+ 
+ 
 
 <h3>Functions/Subroutines</h3>
 

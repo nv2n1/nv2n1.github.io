@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_rr_list_free(3)"
 name: "ldns_rr_list_free"
 section: "3"
@@ -10,11 +9,13 @@ description: "ldns_rr_list_new, ldns_rr_list_free"
 
 <h2>NAME</h2>
 <p> ldns_rr_list_new, ldns_rr_list_free </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_rr_list* ldns_rr_list_new(); </p>
 <p> void ldns_rr_list_free(ldns_rr_list *rr_list); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_rr_list_new</i>()</dt>
 <dd>creates a new rr_list structure. .br Returns a new rr_list structure</dd></dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "shotwell(1)"
 name: "shotwell"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-shotwell/"
 description: "shotwell – Digital photo manager"
 ---
 
+<h2 class="name">NAME</h2>
+<p> shotwell &#8211; Digital photo manager</p>
+<h2>SYNOPSIS</h2>
 <p> <code>shotwell </code>[<i>OPTION</i>]&#8230; [<i>FILE</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> Shotwell is a digital photo organizer designed for the GNOME desktop environment. It allows you to import photos from disk or camera, organize them in various ways, view them in full-window or fullscreen mode, and export them to share with others. </p>
 <h2>OPTIONS</h2>
 <p> <code>-h, &#8211;help</code> Show help options </p>

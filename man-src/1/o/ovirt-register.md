@@ -1,5 +1,4 @@
 ---
-
 title: "ovirt-register(1)"
 name: "ovirt-register"
 section: "1"
@@ -10,7 +9,9 @@ description: "ovirt-register – oVirt registration tool for hosts"
 
 <h2>NAME</h2>
 <p> ovirt-register &#8211; oVirt registration tool for hosts</p>
+<h2>SYNOPSIS</h2>
 <p> ovirt-register &#8211;engine-fqdn ENGINE_FQDN [options]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>ovirt-register</code> is a command line tool to register hosts to Engine.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "entangle(1)"
 name: "entangle"
 section: "1"
@@ -7,11 +6,18 @@ letter: "e"
 url: "/docs/linux/man/1-entangle/"
 ---
 
-entangle - tethered camera control &amp; capture 
+<h2 class="name">NAME</h2>
+ 
 
-entangle [<font SIZE="-1">OPTION...</font>]
+ entangle - tethered camera control &amp; capture 
 
-Entangle provides a graphical interface for ``tethered shooting'', aka taking photographs with a digital camera completely controlled from the computer. 
+<h2>SYNOPSIS</h2>
+
+ entangle [<font SIZE="-1">OPTION...</font>]
+
+<h2>DESCRIPTION</h2>
+
+ Entangle provides a graphical interface for ``tethered shooting'', aka taking photographs with a digital camera completely controlled from the computer. 
 
  Valid command options:
 <dl>

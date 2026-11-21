@@ -1,5 +1,4 @@
 ---
-
 title: "funtbl(1)"
 name: "funtbl"
 section: "1"
@@ -10,7 +9,9 @@ description: "funtbl – extract a table from Funtools ASCII output"
 
 <h2>NAME</h2>
 <p> <code>funtbl &#8211; extract a table from Funtools ASCII output</code></p>
+<h2>SYNOPSIS</h2>
 <p> funtable [-c cols] [-h] [-n table] [-p prog] [-s sep] &lt;iname&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> [<font SIZE="-1">NB:</font> This program has been deprecated in favor of the <font SIZE="-1">ASCII</font> text processing support in funtools. You can now perform fundisp on funtools <font SIZE="-1">ASCII</font> output files (specifying the table using bracket notation) to extract tables and columns.] </p>
 <p> The <code>funtbl</code> script extracts a specified table (without the header and comments) from a funtools <font SIZE="-1">ASCII</font> output file and writes the result to the standard output. The first non-switch argument is the <font SIZE="-1">ASCII</font> input file name (i.e. the saved output from funcnts, fundisp, funhist, etc.). If no filename is specified, stdin is read. The -n switch specifies which table (starting from 1) to extract. The default is to extract the first table. The -c switch is a space-delimited list of column numbers to output, e.g. -c &#8220;1 3 5&#8221; will extract the first three odd-numbered columns. The default is to extract all columns. The -s switch specifies the separator string to put between columns. The default is a single space. The -h switch specifies that column names should be added in a header line before the data is output. Without the switch, no header is prepended. The -p program switch allows you to specify an awk-like program to run instead of the default (which is host-specific and is determined at build time). The -T switch will output the data in rdb format (i.e., with a 2-row header of column names and dashes, and with data columns separated by tabs). The -help switch will print out a message describing program usage. </p>
 <p> For example, consider the output from the following funcnts command: </p>

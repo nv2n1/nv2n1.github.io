@@ -1,5 +1,4 @@
 ---
-
 title: "istanbul(1)"
 name: "istanbul"
 section: "1"
@@ -10,7 +9,9 @@ description: "istanbul – a desktop session recorder"
 
 <h2>NAME</h2>
 <p> istanbul &#8211; a desktop session recorder</p>
+<h2>SYNOPSIS</h2>
 <p> <code>istanbul</code> [options]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>istanbul</code> command. </p>
 <p> <code>istanbul</code> is a program that allow you to record your desktop session. After you started it, you can control it with the icon in the notification area: a click on the icon to start recording, another click to stop. </p>
 <p> <code>istanbul</code> preferences can be configured with a right click on the icon.</p>

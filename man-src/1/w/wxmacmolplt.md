@@ -1,5 +1,4 @@
 ---
-
 title: "wxmacmolplt(1)"
 name: "wxmacmolplt"
 section: "1"
@@ -10,7 +9,9 @@ description: "wxMacMolPlt – molecular visualization program"
 
 <h2>NAME</h2>
 <p> wxMacMolPlt &#8211; molecular visualization program</p>
+<h2>SYNOPSIS</h2>
 <p> <code>wxmacmolplt [options] [input file]</code></p>
+<h2>DESCRIPTION</h2>
 <p> wxMacMolPlt is designed to display the input and output of the GAMESS quantum chemistry package. It produces animations and/or publication quality output from a variety of input file formats. </p>
 <pre>
 Complete documentation is usually installed at

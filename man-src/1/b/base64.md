@@ -1,5 +1,4 @@
 ---
-
 title: "base64(1)"
 name: "base64"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-base64/"
 description: "base64 – base64 encode/decode data and print to standard output"
 ---
 
+<h2 class="name">NAME</h2>
+<p> base64 &#8211; base64 encode/decode data and print to standard output </p>
+<h2>SYNOPSIS</h2>
 <p> <code>base64</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Base64 encode or decode FILE, or standard input, to standard output. </p>
 <p> With no FILE, or when FILE is -, read standard input. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>

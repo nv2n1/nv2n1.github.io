@@ -1,5 +1,4 @@
 ---
-
 title: "key-mon(1)"
 name: "key-mon"
 section: "1"
@@ -10,6 +9,7 @@ description: "Keymon – Keyboard and mouse monitor window for GTK."
 
 <h2>NAME</h2>
 <p> Keymon &#8211; Keyboard and mouse monitor window for GTK.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>key-mon [options]</code></p>
 <h2>OPTIONS</h2>
 <dl>

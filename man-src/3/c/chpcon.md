@@ -1,5 +1,4 @@
 ---
-
 title: "chpcon(3)"
 name: "chpcon"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-chpcon/"
 description: "chpcon.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> chpcon.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chpcon</code> (UPLO, N, AP, IPIV, ANORM, RCOND, WORK, INFO)<br />
  <i></i><code>CHPCON</code></p>

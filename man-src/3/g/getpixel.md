@@ -1,5 +1,4 @@
 ---
-
 title: "getpixel(3)"
 name: "getpixel"
 section: "3"
@@ -10,8 +9,10 @@ description: "getpixel – Reads a pixel from a bitmap. Allegro game programming
 
 <h2>NAME</h2>
 <p> getpixel &#8211; Reads a pixel from a bitmap. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>int getpixel(BITMAP *bmp, int x, int y);</code></p>
+<h2>DESCRIPTION</h2>
 <p> Reads a pixel from point (x, y) in the bitmap.</p>
 <h2>RETURN VALUE</h2>
 <p> Returns -1 if the point lies outside the bitmap (ignoring the clipping rectangle), otherwise the value of the pixel in the color format of the bitmap. </p>

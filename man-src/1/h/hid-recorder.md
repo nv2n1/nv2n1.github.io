@@ -1,5 +1,4 @@
 ---
-
 title: "hid-recorder(1)"
 name: "hid-recorder"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-hid-recorder/"
 description: "hid-recorder – HID Input device recorder."
 ---
 
+<h2 class="name">NAME</h2>
+<p> hid-recorder &#8211; HID Input device recorder. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>hid-recorder</code> </p>
 <p> <code>hid-recorder</code> [OPTIONS] [/dev/hidrawX] [[/dev/hidrawY] &#8230; ]</p>
 <h2>OPTIONS</h2>
@@ -15,6 +17,7 @@ description: "hid-recorder – HID Input device recorder."
 <dl>
 <dt>
 </dt><dd> use HID debugfs node. Some devices (like &quot;Logitech USB Receiver&quot; or &quot;Apple Magic Mouse&quot;) grabs the hidraw output leading to an empty output. Fortunately, relying on HID debugfs can help us most of the time. However, if hte device does report two many events at once (multitouch panles for example), the HID debugfs node is missing a lot of events, preventing us to make this the default behaviour.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>hid-recorder</code> is a tool that allow users to capture hidraw description and events in order to replay them through the uhid kernel module. </p>
 <p> The first invocation type displayed above (without arguments) causes hid-recorder to let the user choose which hidraw she will use, including the name the device. </p>
 <p> Several hidraw nodes can be given to <code>hid-recorder</code>. In this case, the recording of each node are multiplexed thanks to the tag <code>D:</code> as seen below. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "elftoaout(1)"
 name: "elftoaout"
 section: "1"
@@ -10,7 +9,9 @@ description: "elftoaout – ELF to a.out convertor"
 
 <h2>NAME</h2>
 <p> elftoaout &#8211; ELF to a.out convertor</p>
+<h2>SYNOPSIS</h2>
 <p> <code>elftoaout</code> [ <code>-b</code> ] [ <code>-o</code> <i>outfile</i> ] [ <code>-V</code> ] <i>infile</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>elftoaout</code> converts a 32bit or 64bit SPARC ELF image to a.out format. This is needed for SPARC bootstraps, as Sun PROM expects a.out image when booting via net or tape or from the disk. On the disk, most of the people use <code>SILO, </code> which uses <i>elftoaout</i> to create first stage loader, but understands ELF format, so you don&#8217;t need to convert a kernel if you will boot it with <code>SILO.</code> </p>
 <h2>OPTIONS</h2>
 <dl>

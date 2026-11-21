@@ -1,5 +1,4 @@
 ---
-
 title: "fribidi_get_bidi_type_name(3)"
 name: "fribidi_get_bidi_type_name"
 section: "3"
@@ -7,9 +6,14 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_get_bidi_type_name/"
 ---
 
-fribidi_get_bidi_type_name - get bidi type name 
+<h2 class="name">NAME</h2>
+ 
 
-<b> #include &lt;fribidi.h&gt; 
+ fribidi_get_bidi_type_name - get bidi type name 
+
+<h2>SYNOPSIS</h2>
+
+ <b> #include &lt;fribidi.h&gt; 
 
  extern const char *fribidi_get_bidi_type_name(FriBidiCharType t); </b>
 
@@ -20,7 +24,9 @@ fribidi_get_bidi_type_name - get bidi type name
 </dt><dd> Input bidi type. 
  Since there are 23 possible values for a <b>FriBidiCharType</b>, they are not all listed here.</dd></dl>
 
-This function returns the bidi type name of a character type. The returned string is a static string and should not be freed. 
+<h2>DESCRIPTION</h2>
+
+ This function returns the bidi type name of a character type. The returned string is a static string and should not be freed. 
 
  The type names are the same as ones defined in Table 3.7 Bidirectional Character Types of the Unicode Bidirectional Algorithm available at <a rel="nofollow" HREF="http://www.unicode.org/reports/tr9/#Bidirectional_Character_Types,">http://www.unicode.org/reports/tr9/#Bidirectional_Character_Types,</a> with a few modifications: L-&gt;LTR, R-&gt;RTL, B-&gt;BS, S-&gt;SS.
 

@@ -1,5 +1,4 @@
 ---
-
 title: "flatpak-build(1)"
 name: "flatpak-build"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-flatpak-build/"
 description: "flatpak-build – Build in a directory"
 ---
 
+<h2 class="name">NAME</h2>
+<p> flatpak-build &#8211; Build in a directory </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak build</code> [OPTION&#8230;] DIRECTORY [COMMAND&nbsp;[ARG&#8230;]]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>Runs a build command in a directory. DIRECTORY must have been initialized with <code>flatpak build-init</code>. </dd>
 <p> The sdk that is specified in the metadata file in the directory is mounted at /usr and the files and var subdirectories are mounted at /app and /var, respectively. They are writable, and their contents are preserved between build commands, to allow accumulating build artifacts there.</p>
 <h2>OPTIONS</h2>

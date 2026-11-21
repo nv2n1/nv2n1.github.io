@@ -1,5 +1,4 @@
 ---
-
 title: "mate-typing-monitor(1)"
 name: "mate-typing-monitor"
 section: "1"
@@ -10,7 +9,9 @@ description: "mate-typing-monitor – configure MATE network proxy"
 
 <h2>NAME</h2>
 <p> mate-typing-monitor &#8211; configure MATE network proxy</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mate-typing-monitor</code> [<i>OPTIONS&#8230;</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> This executable is part of the package &#8216;mate-control-center&#8217;: The MATE Control Center. </p>
 <p> If you use too much computer you may be risking your health. Use this tool for reminding yourself to take little (typing) breaks in regular intervals. </p>
 <p> During the break, you can: </p>

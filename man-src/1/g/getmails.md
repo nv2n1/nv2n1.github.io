@@ -1,5 +1,4 @@
 ---
-
 title: "getmails(1)"
 name: "getmails"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-getmails/"
 description: "getmails – wrapper for getmail to access multiple mailboxes"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getmails &#8211; wrapper for getmail to access multiple mailboxes </p>
+<h2>SYNOPSIS</h2>
 <p> <code>getmails</code> [<code>-p</code>] [<i>OPTION</i>] &#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>getmails</code> is a wrapper script for <code>getmail </code> to retrieve messages with multiple independent configuration files <i>~/.getmail/config/*</i> instead of a single <i>~/.getmailrc</i> file. </p>
 <p> The configuration file name can be any arbitrary names. It&#8217;s good idea to use the corresponding email address as its name since it is the most intuitive choice. For example <i>~/.getmail/config/foo [at] example.org .</i> </p>
 <p> To disable operation for an email account temporary, rename its configuration file to the hidden file such as <i>~/.getmail/config/.foo [at] example.org .</i> Then, it is ignored as the configuration file. </p>

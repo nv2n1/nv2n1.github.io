@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_cipher_init(3)"
 name: "gnutls_cipher_init"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_cipher_init – API function"
 
 <h2>NAME</h2>
 <p> gnutls_cipher_init &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/crypto.h&gt;</code> </p>
 <p> <code>int gnutls_cipher_init(gnutls_cipher_hd_t * </code><i>handle</i><code>, gnutls_cipher_algorithm_t </code><i>cipher</i><code>, const gnutls_datum_t * </code><i>key</i><code>, const gnutls_datum_t * </code><i>iv</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,6 +22,7 @@ description: "gnutls_cipher_init – API function"
 <dd> The key to be used for encryption</dd>
 <dt>const gnutls_datum_t * iv</dt>
 <dd> The IV to use (if not applicable set NULL)</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will initialize an context that can be used for encryption/decryption of data. This will effectively use the current crypto backend in use by gnutls or the cryptographic accelerator in use.</p>
 <h2>RETURNS</h2>
 <p> Zero or a negative error code on error.</p>

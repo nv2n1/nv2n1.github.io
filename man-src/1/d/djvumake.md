@@ -1,5 +1,4 @@
 ---
-
 title: "djvumake(1)"
 name: "djvumake"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-djvumake/"
 description: "djvumake – Assemble DjVu image files."
 ---
 
+<h2 class="name">NAME</h2>
+<p> djvumake &#8211; Assemble DjVu image files.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>djvumake </code><i>djvufile</i><code> [</code><i>chkid</i><code>=</code><i>argument</i><code>]&#8230;</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Program <code>djvumake</code> assembles a single-page DjVu file <i>djvufile</i> by copying or creating chunks according to the provided arguments. Supported arguments are as follows:</p>
 <dl>
 <dt><code>INFO=</code><i>w</i><code>,</code><i>h</i><code>,</code><i>dpi</i></dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "pluma(1)"
 name: "pluma"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pluma/"
 description: "Pluma – The MATE Text Editor"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Pluma &#8211; The MATE Text Editor </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pluma [OPTIONS&#8230;] [FILES&#8230;]</code></p>
+<h2>DESCRIPTION</h2>
 <p> Pluma is the official text editor of the MATE desktop environment. While aiming at simplicity and ease of use, Pluma is a powerful general purpose text editor. It can be used to create and edit all sorts of text files. </p>
 <p> Pluma features a flexible plugin system which can be used to dynamically add new advanced features to Pluma itself. </p>
 <p> This manual page briefly documents the <code>pluma</code> command. </p>

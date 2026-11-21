@@ -1,5 +1,4 @@
 ---
-
 title: "canonicalize_file_name(3)"
 name: "canonicalize_file_name"
 section: "3"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/3-canonicalize_file_name/"
 description: "canonicalize_file_name – return the canonicalized absolute pathname"
 ---
 
+<h2 class="name">NAME</h2>
+<p> canonicalize_file_name &#8211; return the canonicalized absolute pathname </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#define _GNU_SOURCE</code> /* See <a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a>(7) */<br />
  <code>#include &lt;stdlib.h&gt;</code> </p>
 <p> <code>char *canonicalize_file_name(const char *</code><i>path</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>canonicalize_file_name</code>() function returns a null-terminated string containing the canonicalized absolute pathname corresponding to <i>path</i>. In the returned string, symbolic links are resolved, as are <i>.</i> and <i>..</i> pathname components. Consecutive slash (<i>/</i>) characters are replaced by a single slash. </p>
 <p> The returned string is dynamically allocated by <code>canonicalize_file_name</code>() and the caller should deallocate it with <code><a href="/docs/linux/man/3-free/">free</a></code>(3) when it is no longer required. </p>
 <p> The call <i>canonicalize_file_name(path)</i> is equivalent to the call: </p>

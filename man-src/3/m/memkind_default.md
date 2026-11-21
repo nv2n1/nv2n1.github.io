@@ -1,5 +1,4 @@
 ---
-
 title: "memkind_default(3)"
 name: "memkind_default"
 section: "3"
@@ -11,6 +10,7 @@ description: "memkind_default.h – default implementations for memkind operatio
 <h2>NAME</h2>
 <p> memkind_default.h &#8211; default implementations for memkind operations.<br />
  Note: This is EXEPRIMENTAL API. The functionality and the header file itself can be changed (including non-backward compatible changes), or remove.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;memkind/internal/memkind_default.h&gt;
 Link with - lmemkind int memkind_default_create(struct memkind *kind, const struct memkind_ops *ops, const char *name);
@@ -30,6 +30,7 @@ int memkind_nohugepage_madvise(struct memkind *kind, void *addr, size_t size);
 int memkind_default_get_size(struct memkind *kind, size_t *total, size_t *free);
 int memkind_posix_check_alignment(struct memkind *kind, size_t alignment);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Default implementations for memkind operations which include a several useful methods that are not part of the <code>MEMKIND_DEFAULT</code> kind which is a fall through to the jemalloc implementation. </p>
 <p> <code>memkind_default_create</code>() implements the required start up for every kind. If a kind does not point to this function directly for its <code>ops.create</code>() operation, then the function that it points to must call <code>memkind_default_create</code>() at its start. </p>
 <p> <code>memkind_default_destroy</code>() implements the required shutdown for every kind. If a kind does not point to this function directly for its <code>ops.destroy</code>() operation, then the function that it points to must call <code>memkind_default_destroy</code>() at its end. </p>

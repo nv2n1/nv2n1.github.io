@@ -1,5 +1,4 @@
 ---
-
 title: "setxkbmap(1)"
 name: "setxkbmap"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-setxkbmap/"
 description: "setxkbmap – set the keyboard using the X Keyboard Extension"
 ---
 
+<h2 class="name">NAME</h2>
+<p> setxkbmap &#8211; set the keyboard using the X Keyboard Extension </p>
+<h2>SYNOPSIS</h2>
 <p> <code>setxkbmap [</code> <i>args</i> <code>] [</code> <i>layout</i> <code>[</code> <i>variant</i> <code>[</code> <i>option &#8230;</i> <code>] ] ]</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>setxkbmap</code> command maps the keyboard to use the layout determined by the options specified on the command line. </p>
 <p> An XKB keymap is constructed from a number of components which are compiled only as needed. The source for all of the components can be found in <i>/usr/share/X11/xkb</i>.</p>
 <h2>OPTIONS</h2>

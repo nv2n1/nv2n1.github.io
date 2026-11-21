@@ -1,5 +1,4 @@
 ---
-
 title: "machinectl(1)"
 name: "machinectl"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-machinectl/"
 description: "machinectl – Control the systemd machine manager"
 ---
 
+<h2 class="name">NAME</h2>
+<p> machinectl &#8211; Control the systemd machine manager </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>machinectl</code> [OPTIONS&#8230;] {COMMAND} [NAME&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>machinectl</code></p>
 <dd>may be used to introspect and control the state of the <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1) virtual machine and container registration manager <code><a href="/docs/linux/man/8-systemd-machined-service/">systemd-machined.service</a></code>(8).</dd>
 <h2>OPTIONS</h2>

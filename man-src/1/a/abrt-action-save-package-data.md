@@ -1,5 +1,4 @@
 ---
-
 title: "abrt-action-save-package-data(1)"
 name: "abrt-action-save-package-data"
 section: "1"
@@ -7,11 +6,22 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-action-save-package-data/"
 ---
 
-abrt-action-save-package-data - Query package database and save package and component name. 
+<h2 class="name">NAME</h2>
+ 
 
-<i>abrt-action-save-package-data</i> [-v] [-c CONFFILE] -d DIR
+ abrt-action-save-package-data - Query package database and save package and component name. 
 
-The tool reads problem directory DIR. It analyzes contents of <i>analyzer</i>, <i>executable</i>, <i>cmdline</i> and <i>remote</i> elements, checks database of installed packages, and creates new elements <i>package</i> and <i>component</i>. 
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <i>abrt-action-save-package-data</i> [-v] [-c CONFFILE] -d DIR
+
+<h2>DESCRIPTION</h2>
+
+ 
+
+ The tool reads problem directory DIR. It analyzes contents of <i>analyzer</i>, <i>executable</i>, <i>cmdline</i> and <i>remote</i> elements, checks database of installed packages, and creates new elements <i>package</i> and <i>component</i>. 
 
  This data is usually necessary if the problem will be reported to a bug tracking database.
 

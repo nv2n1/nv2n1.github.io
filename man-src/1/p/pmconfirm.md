@@ -1,5 +1,4 @@
 ---
-
 title: "pmconfirm(1)"
 name: "pmconfirm"
 section: "1"
@@ -10,9 +9,11 @@ description: "pmconfirm, pmmessage, pmquery – general purpose dialog box"
 
 <h2>NAME</h2>
 <p> <code>pmconfirm</code>, <code>pmmessage</code>, <code>pmquery</code> &#8211; general purpose dialog box</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pmconfirm</code> [<code>-c</code>] [<code>-b</code> <i>button-name</i>] [<code>-B</code> <i>default-button-name</i>] [<code>-t</code> <i>string</i>] [<code>-file</code> <i>filename</i>] [<code>-icon</code> <i>icontype</i>] [<code>-font</code> <i>font</i>] [<code>-header</code> <i>titlebar-string</i>] [<code>-useslider</code>] [<code>-noslider</code>] [<code>-noframe</code>] [<code>-exclusive</code>] </p>
 <p> <code>pmmessage</code> [<code>-buttons</code> <i>label1</i>[:<i>value1</i>][,<i>label2</i>[:<i>value2</i>][,&#8230;]]] [<code>-center</code>] [<code>-nearmouse</code>] [<code>-default</code> <i>button</i>] [<code>-file</code> <i>filename</i>] [<code>-print</code>] [<code>-timeout</code> <i>sec</i>] <i>message&#8230;</i> </p>
 <p> <code>pmquery [-input</code>] [<code>all above options&#8230;</code>] [<i>message&#8230;</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmquery</code> provides a command-line-option compatible implementation of the <code>xconfirm</code> and <code>xmessage</code> tools, using a look-and-feel that is consistent with <code>pmchart</code>. Several extensions to the functionality of the original tools have been made, in order to improve their specific utility for <code>pmchart</code>, but wherever possible the original semantics remain. </p>
 <p> <code>pmconfirm</code> displays a line of text for each <code>-t</code> argument specified (or a file when the <code>-file</code> argument is used), and a button for each <code>-b</code> argument specified. When one of the buttons is pressed, the label of that button is written to <code>pmquery&#8217;s</code> standard output. This provides a means of communication/feedback from within shell scripts and a means to display useful information to a user from an application. </p>
 <p> <code>pmmessage</code> displays a window containing a message from the command line, a file, or standard input. It additionally allows buttons to be associated with an exit status, and only optionally will write the label of the button to standard output. </p>

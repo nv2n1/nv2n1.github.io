@@ -1,5 +1,4 @@
 ---
-
 title: "dspam(1)"
 name: "dspam"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dspam/"
 description: "dspam – DSPAM Anti-Spam Agent"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dspam &#8211; DSPAM Anti-Spam Agent</p>
+<h2>SYNOPSIS</h2>
 <p> <code>dspam</code> [<code>&#8211;mode=</code><i>teft|toe|tum|notrain|unlearn</i>] [<code>&#8211;user</code><i>&nbsp;<wbr>user1</i> user2 &#8230; userN] [<code>&#8211;feature=</code><i>noise|no,tb=N,whitelist|wh</i>] [<code>&#8211;class=</code><i>spam|innocent</i>] [<code>&#8211;source=</code><i>error|corpus|inoculation</i>] [<code>&#8211;profile=</code><i>PROFILE</i>] [<code>&#8211;deliver=</code><i>spam,innocent|nonspam,summary,stdout</i>] [<code>&#8211;help</code>] [<code>&#8211;version</code>] [<code>&#8211;process</code>] [<code>&#8211;classify</code>] [<code>&#8211;signature=</code><i>signature</i>] [<code>&#8211;stdout</code>] [<code>&#8211;debug</code>] [<code>&#8211;daemon</code>] [<code>&#8211;nofork</code>]] [<code>&#8211;client</code>] [<code>&#8211;rcpt-to</code><i>&nbsp;<wbr>recipient-address(es)</i>] [<code>&#8211;mail-from=</code><i>sender-address</i>] [<code>passthru-delivery-arguments</code>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>The DSPAM agent </code> provides a direct interface to mail servers for command-line spam filtering. The agent can masquerade as the mail server&#8217;s local delivery agent and will process any email passed to it. The agent will then call whatever delivery agent was specified at compile time or quarantine/tag/drop messages identified as spam. The DSPAM agent can function locally or as a proxy. It is also responsible for processing classification errors so that DSPAM can learn from its mistakes. </p>
 <h2>OPTIONS</h2>
 <dl>

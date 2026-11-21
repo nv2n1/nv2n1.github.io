@@ -1,5 +1,4 @@
 ---
-
 title: "foomatic-datafile(1)"
 name: "foomatic-datafile"
 section: "1"
@@ -10,9 +9,11 @@ description: "foomatic-ppdfile – Generate a PPD file for a given printer/drive
 
 <h2>NAME</h2>
 <p> foomatic-ppdfile &#8211; Generate a PPD file for a given printer/driver combo</p>
+<h2>SYNOPSIS</h2>
 <p> <code>foomatic-ppdfile [-w] [-d &lt;driver&gt;] -p &lt;printerid&gt;</code><br />
  <code>foomatic-ppdfile [-A] [-P pattern]</code><br />
  <code>foomatic-ppdfile -h</code> </p>
+<h2>DESCRIPTION</h2>
 <p> The first form of the <code>foomatic-ppdfile</code> to compute the spooler-independent Foomatic PPD file for any valid printer/driver combo available in the Foomatic database, both for printing with <code><a href="/docs/linux/man/1-foomatic-rip/">foomatic-rip</a>(1)</code> and for applications/clients being able to access the printer&#8217;s options. The PPD file is returned on standard ouput. If the driver is not specified, the default driver is used. </p>
 <p> The second form of the <code>foomatic-ppdfile</code> program will search the printer database and return either all printer entries or those whose name and/or model information match a regular expression. </p>
 <p> The last form prints a help message and exits. </p>

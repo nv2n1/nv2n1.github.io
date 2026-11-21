@@ -1,5 +1,4 @@
 ---
-
 title: "rpmdev-packager(1)"
 name: "rpmdev-packager"
 section: "1"
@@ -10,7 +9,9 @@ description: "rpmdev-packager – manual page for rpmdev-packager version 1.1"
 
 <h2>NAME</h2>
 <p> rpmdev-packager &#8211; manual page for rpmdev-packager version 1.1</p>
+<h2>SYNOPSIS</h2>
 <p> <code>rpmdev-packager</code> [<i>option</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> rpmdev-packager guesses rpm packager info from various sources:</p>
 <dl>
 <dt>$RPM_PACKAGER</dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "clutter-scan-immodules(1)"
 name: "clutter-scan-immodules"
 section: "1"
@@ -10,7 +9,9 @@ description: "clutter-scan-immodules — program to scan immodules and generate 
 
 <h2>NAME</h2>
 <p> clutter-scan-immodules &#8212; program to scan immodules and generate configuration files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>clutter-scan-immodules</code></p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>clutter-scan-immodules</code> command. </p>
 <p> This manual page was written for the <code>Debian</code> distribution because the original program does not have a manual page. </p>
 <p> <code>clutter-scan-immodules</code> is a prgram that scans immodules for Clutter and generate a configuration file which is suitable to be used as /etc/clutter-imcontext/clutter.immodules<br />

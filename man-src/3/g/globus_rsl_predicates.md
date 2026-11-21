@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_rsl_predicates/"
 description: "RSL Predicates –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> RSL Predicates &#8211; </p>
 <h3>Functions</h3>
 <p> int <code>globus_rsl_is_relation</code> (globus_rsl_t *ast)<br />
  <i>RSL relation test. </i><br />

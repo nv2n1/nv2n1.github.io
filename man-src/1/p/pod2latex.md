@@ -1,5 +1,4 @@
 ---
-
 title: "pod2latex(1)"
 name: "pod2latex"
 section: "1"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/1-pod2latex/"
 description: "pod2latex – convert pod documentation to latex format"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pod2latex &#8211; convert pod documentation to latex format </p>
+<h2>SYNOPSIS</h2>
 <pre>
   pod2latex *.pm
   pod2latex -out mytex.tex *.pod
   pod2latex -full -sections 'DESCRIPTION|NAME' SomeDir
   pod2latex -prefile h.tex -postfile t.tex my.pod
 </pre>
+<h2>DESCRIPTION</h2>
 <p> <tt>&quot;pod2latex&quot;</tt> is a program to convert <font SIZE="-1">POD</font> format documentation (perlpod) into latex. It can process multiple input documents at a time and either generate a latex file per input document or a single combined output file.</p>
 <h2>OPTIONS AND ARGUMENTS</h2>
 <p> This section describes the supported command line options. Minimum matching is supported.</p>

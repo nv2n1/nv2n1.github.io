@@ -1,5 +1,4 @@
 ---
-
 title: "btt(1)"
 name: "btt"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-btt/"
 description: "btt – analyse block i/o traces produces by blktrace"
 ---
 
+<h2 class="name">NAME</h2>
+<p> btt &#8211; analyse block i/o traces produces by blktrace </p>
+<h2>SYNOPSIS</h2>
 <p> <code>btt </code><br />
  [ -a | &#8211;seek-absolute ]<br />
  [ -A | &#8211;all-data ]<br />
@@ -38,6 +40,7 @@ description: "btt – analyse block i/o traces produces by blktrace"
  [ -X | &#8211;easy-parse-avgs ]<br />
  [ -z &lt;<i>output name</i>&gt; | &#8211;q2d-latencies=&lt;<i>output name</i>&gt; ]<br />
  [ -Z | &#8211;do-active ] </p>
+<h2>DESCRIPTION</h2>
 <p> btt is a post-processing tool for the block layer IO tracing tool called <a href="/docs/linux/man/8-blktrace/">blktrace</a>(8). As noted in its documentation, blktrace is a block layer IO tracing mechanism which provides detailed information about request queue operations up to user space. </p>
 <p> btt will take in binary dump data from blkparse, and analyse the events, producing a series of output from the analysis. It will also build .dat files containing &quot;range data&quot; &#8212; showing things like Q activity (periods of time while Q events are being produced), C activity (likewise for command completions), and etc. </p>
 <p> Included with the distribution is a simple 3D plotting utility, <i>bno_plot</i>, which can plot the block numbers btt outputs if the <i>-B</i> option is specified. The display will display each IO generated, with the time (seconds) along the X-axis, the block number (start) along the Y-axis and the number of blocks transferred in the IO represented along the Z-axis. </p>

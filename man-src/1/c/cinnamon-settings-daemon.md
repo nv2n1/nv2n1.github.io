@@ -1,5 +1,4 @@
 ---
-
 title: "cinnamon-settings-daemon(1)"
 name: "cinnamon-settings-daemon"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-cinnamon-settings-daemon/"
 description: "cinnamon-settings-daemon – Cinnamon settings daemon"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cinnamon-settings-daemon &#8211; Cinnamon settings daemon </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cinnamon-settings-daemon </code><code>[OPTION&#8230;]</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>cinnamon-settings-daemon</code></p>
 <dd>provides many session-wide services and functions that require a long-running process. Among the services implemented by cinnamon-settings-daemon are an XSettings manager, which provides theming, font and other settings to GTK+ applications, and a clipboard manager, which preserves clipboard contents when an application exits. Many user interface elements of <code>cinnamon</code> and <code>cinnamon-settings</code> rely on cinnamon-settings-daemon for their functionality. </dd>
 <p> The internal architecture of cinnamon-settings-daemon consists of a number of plugins, which provide functionality such as printer notifications, software update monitoring, background changing, etc. For debugging purposes, these plugins can be individually disabled by changing the gsettings key org.cinnamon.settings-daemon.plugins.<i>plugin-name</i>.active, where <i>plugin-name</i> is the name of the plugin. To see a list of all plugins, use the command <code> gsettings list-children org.cinnamon.settings-daemon.plugins </code> </p>

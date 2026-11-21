@@ -1,5 +1,4 @@
 ---
-
 title: "clagtm(3)"
 name: "clagtm"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-clagtm/"
 description: "clagtm.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> clagtm.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clagtm</code> (TRANS, N, NRHS, ALPHA, DL, D, DU, X, LDX, BETA, B, LDB)<br />
  <i></i><code>CLAGTM</code> performs a matrix-matrix product of the form C = αAB+βC, where A is a tridiagonal matrix, B and C are rectangular matrices, and α and β are scalars, which may be 0, 1, or -1.</p>

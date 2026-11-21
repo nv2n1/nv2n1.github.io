@@ -1,5 +1,4 @@
 ---
-
 title: "qconf(1)"
 name: "qconf"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-qconf/"
 description: "qconf – xxQS_NAMExx Queue Configuration"
 ---
 
+<h2 class="name">NAME</h2>
+<p> qconf &#8211; xxQS_NAMExx Queue Configuration </p>
 <h2>SYNTAX</h2>
 <p> <code>qconf options</code></p>
+<h2>DESCRIPTION</h2>
 <p> <i>Qconf</i> allows the system administrator to add, delete, and modify the current xxQS_NAMExx configuration, including queue management, host management, complex management and user management. <i>Qconf</i> also allows you to examine the current queue configuration for existing queues. </p>
 <p> <i>Qconf</i> allows the use of the backslash, &#8216;\&#8217;, character at the end of a line to indicate that the next line is a continuation of the current line. When displaying settings, such as the output of one of the <code>-s</code><i>*</i> options, <i>qconf</i> will break up long lines (lines greater than 80 characters) into smaller lines using backslash line continuation where possible. Lines will only be broken up at commas or whitespace. This feature can be disabled by setting the SGE_SINGLE_LINE environment variable.</p>
 <h2>OPTIONS</h2>

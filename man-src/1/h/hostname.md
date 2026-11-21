@@ -1,5 +1,4 @@
 ---
-
 title: "hostname(1)"
 name: "hostname"
 section: "1"
@@ -8,11 +7,13 @@ url: "/docs/linux/man/1-hostname/"
 description: "hostname – show or set the system’s host name domainname – show or set the system’s NIS/YP domain name ypdomainname – show or set the system’s NIS/YP domain name nisdomainname – show or set the sys..."
 ---
 
+<h2 class="name">NAME</h2>
 <p> hostname &#8211; show or set the system&#8217;s host name<br />
  domainname &#8211; show or set the system&#8217;s NIS/YP domain name<br />
  ypdomainname &#8211; show or set the system&#8217;s NIS/YP domain name<br />
  nisdomainname &#8211; show or set the system&#8217;s NIS/YP domain name<br />
  dnsdomainname &#8211; show the system&#8217;s DNS domain name </p>
+<h2>SYNOPSIS</h2>
 <p> <code>hostname</code> [<code>-a|&#8211;alias</code>] [<code>-d|&#8211;domain</code>] [<code>-f|&#8211;fqdn|&#8211;long</code>] [<code>-A|&#8211;all-fqdns</code>] [<code>-i|&#8211;ip-address</code>] [<code>-I|&#8211;all-ip-addresses</code>] [<code>-s|&#8211;short</code>] [<code>-y|&#8211;yp|&#8211;nis</code>]<br />
  <code>hostname</code> [<code>-b|&#8211;boot</code>] [<code>-F|&#8211;file filename</code>] [<code>hostname</code>]<br />
  <code>hostname</code> [<code>-h|&#8211;help</code>] [<code>-V|&#8211;version</code>] </p>
@@ -20,6 +21,7 @@ description: "hostname – show or set the system’s host name domainname – s
  <code>ypdomainname</code> [<code>nisdomain</code>] [<code>-F file</code>]<br />
  <code>nisdomainname</code> [<code>nisdomain</code>] [<code>-F file</code>] </p>
 <p> <code>dnsdomainname</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>Hostname</code> is used to display the system&#8217;s DNS name, and to display or set its hostname or NIS domain name. </p>
 <h3>GET NAME</h3>
 <p> When called without any arguments, the program displays the current names: </p>

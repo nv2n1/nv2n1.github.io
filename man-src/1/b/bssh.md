@@ -1,5 +1,4 @@
 ---
-
 title: "bssh(1)"
 name: "bssh"
 section: "1"
@@ -10,9 +9,11 @@ description: "bssh/bvnc/bshell – Browse for SSH/VNC servers on the local netwo
 
 <h2>NAME</h2>
 <p> bssh/bvnc/bshell &#8211; Browse for SSH/VNC servers on the local network</p>
+<h2>SYNOPSIS</h2>
 <p> <code>bssh </p>
 <p> bvnc </p>
 <p> bshell </code></p>
+<h2>DESCRIPTION</h2>
 <p> bssh/bvnc/bshell browses for SSH/VNC servers on the local network, shows them in a GUI for the user to select one and finally calls ssh/vncviewer after a selection was made. </p>
 <p> If the binary is called as bssh only ssh servers will be shown. If the binary is called as bvnc only VNC servers will be shown. If the binary is called as bshell both VNC and SSH servers are shown.</p>
 <h2>OPTIONS</h2>

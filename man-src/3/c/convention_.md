@@ -1,5 +1,4 @@
 ---
-
 title: "convention_(3)"
 name: "convention_"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-convention_/"
 description: "QuantLib::IborIndex – base class for Inter-Bank-Offered-Rate indexes (e.g. Libor, etc.)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> QuantLib::IborIndex &#8211; base class for Inter-Bank-Offered-Rate indexes (e.g. Libor, etc.) </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/indexes/iborindex.hpp&gt; </p>
 <p> Inherits <code>QuantLib::InterestRateIndex</code>. </p>
 <p> Inherited by <code>Cdor</code>, <code>DailyTenorEuribor</code>, <code>DailyTenorEuribor365</code>, <code>DailyTenorEURLibor</code>, <code>DailyTenorLibor</code>, <code>Euribor</code>, <code>Euribor365</code>, <code>EURLibor</code>, <code>Jibar</code>, <code>Libor</code>, <code>Tibor</code>, <code>TRLibor</code>, and <code>Zibor</code>. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "dviselect(1)"
 name: "dviselect"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dviselect/"
 description: "dviselect – extract pages from DVI files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dviselect &#8211; extract pages from DVI files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dviselect</code> [ <code>-s</code> ] [ <code>-i</code> <i>infile</i> ] [ <code>-o</code> <i>outfile</i> ] <i>list of pages</i> [ <i>infile</i> [ <i>outfile</i> ] ]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Dviselect</i> selects pages from a DVI file produced by TeX, creating a new DVI file usable by any of the TeX conversion programs, or even by <i>dviselect</i> itself. </p>
 <p> A <i>range</i> is a string of the form <i>even</i>, <i>odd</i>, or <i>first:last</i> where both <i>first</i> and <i>last</i> are optional numeric strings, with negative numbers indicated by a leading underscore character &#8220;_&#8221;. If both <i>first</i> and <i>last</i> are omitted, the colon may also be omitted, or may be replaced with an asterisk &#8220;*&#8221;. A <i>page range</i> is a list of ranges separated by periods. A <i>list of pages</i> is described by a set of page ranges separated by commas and/or white space. </p>
 <p> <i>Dviselect</i> actually looks at the ten <i>count</i> variables that TeX writes; the first of these (\count0) is the page number, with \count1 through \count9 having varied uses depending on which macro packages are in use. (Typically \count1 might be a chapter or section number.) A page is included in <i>dviselect</i>&#8216;s output if all its \count values match any one of the ranges listed on the command line. For example, the command ``dviselect *.1,35:&#8216;&#8216; might select everything in chapter 1, as well as pages 35 and up. ``dviselect 10:30&#8217;&#8216; would select pages 10 through 30 (inclusive). ``:43&#8217;&#8216; means everything up to and including page 43 (including negative-numbered pages). To get all even-numbered pages, use ``even&#8217;&#8216;; to get all odd-numbered pages, use ``odd&#8217;&#8216;. If a Table of Contents has negative page numbers, ``:_1&#8217;&#8216; will select it. Note that ``*&#8216;&#8216; must be quoted from the shell; the empty string is more convenient to use, if harder to read. </p>

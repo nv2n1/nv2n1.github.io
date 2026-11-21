@@ -1,5 +1,4 @@
 ---
-
 title: "clascl(3)"
 name: "clascl"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-clascl/"
 description: "clascl.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> clascl.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clascl</code> (TYPE, KL, KU, CFROM, CTO, M, N, A, LDA, INFO)<br />
  <i></i><code>CLASCL</code> multiplies a general rectangular matrix by a real scalar defined as cto/cfrom.</p>

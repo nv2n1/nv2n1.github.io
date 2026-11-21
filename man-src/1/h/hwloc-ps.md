@@ -1,5 +1,4 @@
 ---
-
 title: "hwloc-ps(1)"
 name: "hwloc-ps"
 section: "1"
@@ -10,6 +9,7 @@ description: "hwloc-ps – List currently-running processes or threads that are 
 
 <h2>NAME</h2>
 <p> hwloc-ps &#8211; List currently-running processes or threads that are bound</p>
+<h2>SYNOPSIS</h2>
 <p> <code>hwloc-ps</code> [<i>options</i>]</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -29,6 +29,7 @@ description: "hwloc-ps – List currently-running processes or threads that are 
 <dd> Do not consider administration limitations.</dd>
 <dt><code>&#8211;pid-cmd &lt;cmd&gt;</code></dt>
 <dd> Append the output of the given command to each PID line. For each displayed process ID, execute the command <i>&lt;cmd&gt; &lt;pid&gt;</i> and append <code>the first line</code> of its output to the regular hwloc-ps line.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> By default, hwloc-ps lists only those currently-running processes that are bound. If <code>-t</code> is given, processes that are not bound but contain at least one bound thread are also displayed, as well as all their threads. </p>
 <p> hwloc-ps displays process identifier, command-line and binding. The binding may be reported as objects or cpusets. </p>
 <p> By default, process bindings are restricted to the currently available topology. If some processes are bound to processors that are not available to the current process, they are ignored unless <code>&#8211;whole-system</code> is given. </p>

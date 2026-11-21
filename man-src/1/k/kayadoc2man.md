@@ -1,5 +1,4 @@
 ---
-
 title: "kayadoc2man(1)"
 name: "kayadoc2man"
 section: "1"
@@ -10,7 +9,9 @@ description: "kayadoc2man – Automatic man pages for Kaya modules"
 
 <h2>NAME</h2>
 <p> kayadoc2man &#8211; Automatic man pages for Kaya modules</p>
+<h2>SYNOPSIS</h2>
 <p> <code>kayadoc2man</code> <i>XMLFILE [DONEFILE] [LICENSEFILE]</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>kayadoc2man</code> creates a man page for every function and data type from an .xml file generated with the -xmldocs option of <code><a href="/docs/linux/man/1-kayac/">kayac</a>(1)</code>. Pass it the path to the XML documentation file to parse, and optionally (to ease Makefile writing) the name of a file to create when processing is complete. The third option allows you to specify your own author and license information (if this is omitted, <code>kayadoc2man</code> will assume that it is generating documentation for the Kaya standard library). If you want to specify the third option but not the second, you can of course use <code>/dev/null</code> for the <i>DONEFILE</i> on most systems. </p>
 <p> Prior to Kaya 0.3.0 this utility was called xml2man </p>
 <h2>OBTAINING</h2>

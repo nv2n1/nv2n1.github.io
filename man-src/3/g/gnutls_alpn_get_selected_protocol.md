@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_alpn_get_selected_protocol(3)"
 name: "gnutls_alpn_get_selected_protocol"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_alpn_get_selected_protocol – API function"
 
 <h2>NAME</h2>
 <p> gnutls_alpn_get_selected_protocol &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_alpn_get_selected_protocol(gnutls_session_t </code><i>session</i><code>, gnutls_datum_t * </code><i>protocol</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_alpn_get_selected_protocol – API function"
 <dd> is a <code>gnutls_session_t</code> structure.</dd>
 <dt>gnutls_datum_t * protocol</dt>
 <dd> will hold the protocol name</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function allows you to get the negotiated protocol name. The returned protocol should be treated as opaque, constant value and only valid during the session life. </p>
 <p> The selected protocol is the first supported by the list sent by the client.</p>
 <h2>RETURNS</h2>

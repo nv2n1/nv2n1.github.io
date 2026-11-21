@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_crypto_pk_register2(3)"
 name: "gnutls_crypto_pk_register2"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_crypto_pk_register2 – register a public key interface"
 
 <h2>NAME</h2>
 <p> gnutls_crypto_pk_register2 &#8211; register a public key interface</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/gnutls.h">gnutls/gnutls.h</a>&gt;</code> </p>
 <p> <code>int gnutls_crypto_pk_register2(int </code><i>priority</i><code>, int </code><i>version</i><code>, gnutls_crypto_pk_st * </code><i>s</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_crypto_pk_register2 – register a public key interface"
 <dd> should be set to <code>GNUTLS_CRYPTO_API_VERSION</code></dd>
 <dt>gnutls_crypto_pk_st * s</dt>
 <dd> is a structure holding new interface&#8217;s data</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will register an interface for gnutls to operate on public key operations. Any interface registered will override the included interface. The interface with the lowest priority will be used by gnutls. </p>
 <p> Note that the bigint interface must interoperate with the bigint interface. Thus if this interface is updated the <code>gnutls_crypto_bigint_register()</code> should also be used. </p>
 <p> This function should be called before <code>gnutls_global_init()</code>. </p>

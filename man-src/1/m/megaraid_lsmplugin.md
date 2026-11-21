@@ -1,5 +1,4 @@
 ---
-
 title: "megaraid_lsmplugin(1)"
 name: "megaraid_lsmplugin"
 section: "1"
@@ -10,6 +9,7 @@ description: "megaraid_lsmplugin — LibstorageMgmt MegaRAID plugin"
 
 <h2>NAME</h2>
 <p> megaraid_lsmplugin &#8212; LibstorageMgmt MegaRAID plugin </p>
+<h2>DESCRIPTION</h2>
 <p> LibstorageMgmt megaraid plugin allows user to manage LSI MegaRAID via vendor tool <code>storcli</code>[1] or Dell PERC via <code>perccli</code>[2]. The &#8216;megaraid_lsmplugin&#8217; executable file is for libStorageMgmt daemon to execute when client user specifies megaraid plugin in the URI. </p>
 <p> Extra SELinux actions are required to allowing plugin access the hardware. </p>
 <p> When both storcli and percli is installed, the plugin will use storcli by default even that will result in no system found on Dell PERC server. In this case, please remove storcli. </p>

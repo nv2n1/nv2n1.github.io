@@ -1,5 +1,4 @@
 ---
-
 title: "gnc-fq-helper(1)"
 name: "gnc-fq-helper"
 section: "1"
@@ -7,13 +6,20 @@ letter: "g"
 url: "/docs/linux/man/1-gnc-fq-helper/"
 ---
 
-gnc-fq-helper - allows gnucash to communicate with Finance::Quote 
+<h2 class="name">NAME</h2>
+ 
+
+ gnc-fq-helper - allows gnucash to communicate with Finance::Quote 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>over pipes from guile. The requests and responses 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>are scheme forms. 
 
-gnc-fq-helper
+<h2>SYNOPSIS</h2>
 
-Input: (on standard input - one entry per line and one line per entry, and double quotes must only be delimiters, not string content --- remember, we don't have a real scheme parser on the perl side :&gt;). 
+ gnc-fq-helper
+
+<h2>DESCRIPTION</h2>
+
+ Input: (on standard input - one entry per line and one line per entry, and double quotes must only be delimiters, not string content --- remember, we don't have a real scheme parser on the perl side :&gt;). 
 
  (&lt;method-name&gt; symbol symbol symbol ...) 
 

@@ -1,5 +1,4 @@
 ---
-
 title: "logresolve(1)"
 name: "logresolve"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-logresolve/"
 description: "logresolve – Resolve IP-addresses to hostnames in Apache log files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> logresolve &#8211; Resolve IP-addresses to hostnames in Apache log files</p>
+<h2>SYNOPSIS</h2>
 <p>&nbsp; </p>
 <p> <code>logresolve</code> [ &#8211;<code>s</code> <i>filename</i> ] [ &#8211;<code>c</code> ] &lt; <i>access_log</i> &gt; <i>access_log.new</i><br />
 &nbsp; </p>

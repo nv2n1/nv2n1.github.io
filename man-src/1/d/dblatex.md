@@ -1,5 +1,4 @@
 ---
-
 title: "dblatex(1)"
 name: "dblatex"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-dblatex/"
 description: "dblatex – convert DocBook to LaTeX, DVI, PostScript, and PDF"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dblatex &#8211; convert DocBook to LaTeX, DVI, PostScript, and PDF </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>dblatex</code> [<code>options</code>] {<i>file</i>&nbsp;<wbr>| -}</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This manual page briefly documents the <code>dblatex</code> command. For more details read the PDF manual; see below. </dd>
 <p> <code>dblatex</code> is a program that transforms your SGML/XML DocBook documents to DVI, PostScript or PDF by translating them into pure LaTeX as a first process. MathML 2.0 markups are supported, too. It started as a clone of DB2LaTeX.</p>
 <h2>OPTIONS</h2>

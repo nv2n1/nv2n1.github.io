@@ -1,5 +1,4 @@
 ---
-
 title: "virt-admin(1)"
 name: "virt-admin"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-virt-admin/"
 description: "virt-admin – daemon administration interface"
 ---
 
+<h2 class="name">NAME</h2>
+<p> virt-admin &#8211; daemon administration interface </p>
+<h2>SYNOPSIS</h2>
 <p> <code>virt-admin</code> [<i></i><font SIZE="-1"><i>OPTION</i></font><i></i>]&#8230; [<i></i><font SIZE="-1"><i>COMMAND_STRING</i></font><i></i>] </p>
 <p> <code>virt-admin</code> [<i></i><font SIZE="-1"><i>OPTION</i></font><i></i>]&#8230; <i></i><font SIZE="-1"><i>COMMAND</i></font><i></i> [<i></i><font SIZE="-1"><i>ARG</i></font><i></i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>virt-admin</code> program is the main administration interface for modifying the libvirt daemon configuration at runtime, changing daemon behaviour as well as for monitoring and managing all clients connected to the daemon. </p>
 <p> The basic structure of most virt-admin usage is: </p>
 <pre><code>

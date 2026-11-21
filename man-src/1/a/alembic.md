@@ -1,5 +1,4 @@
 ---
-
 title: "alembic(1)"
 name: "alembic"
 section: "1"
@@ -10,6 +9,7 @@ description: "alembic – manual page for alembic 0.8.7"
 
 <h2>NAME</h2>
 <p> alembic &#8211; manual page for alembic 0.8.7</p>
+<h2>DESCRIPTION</h2>
 <p> usage: <code>-c</code> [-h] [-c CONFIG] [-n NAME] [-x X] [&#8211;raiseerr]</p>
 <dl>
 <dt>

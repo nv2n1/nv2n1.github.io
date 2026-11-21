@@ -1,5 +1,4 @@
 ---
-
 title: "git-authors(1)"
 name: "git-authors"
 section: "1"
@@ -10,7 +9,9 @@ description: "git-authors – Generate authors report"
 
 <h2>NAME</h2>
 <p> <code>git-authors</code> &#8211; Generate authors report</p>
+<h2>SYNOPSIS</h2>
 <p> <code>git-authors</code> [-l, &#8211;list]</p>
+<h2>DESCRIPTION</h2>
 <p> Populates the file matching <i>authors|contributors -i</i> with the authors of commits, according to the number of commits per author. Opens the file in <code>$EDITOR</code> when set. </p>
 <p> See the &quot;MAPPING AUTHORS&quot; section of <code><a href="/docs/linux/man/1-git-shortlog/">git-shortlog</a></code>(1) to coalesce together commits by the same person.</p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "llvm-bcanalyzer-14(1)"
 name: "llvm-bcanalyzer-14"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-llvm-bcanalyzer-14/"
 description: "llvm-bcanalyzer – LLVM bitcode analyzer"
 ---
 
+<h2 class="name">NAME</h2>
+<p> llvm-bcanalyzer &#8211; LLVM bitcode analyzer </p>
+<h2>SYNOPSIS</h2>
 <p> <code>llvm-bcanalyzer</code> [<i>options</i>] [<i>filename</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>llvm-bcanalyzer</code> command is a small utility for analyzing bitcode files. The tool reads a bitcode file (such as generated with the <code>llvm-as</code> tool) and produces a statistical report on the contents of the bitcode file. The tool can also dump a low level but human readable version of the bitcode file. This tool is probably not of much interest or utility except for those working directly with the bitcode file format. Most LLVM users can just ignore this tool. </p>
 <p> If <i>filename</i> is omitted or is <code>&#8211;</code>, then <code>llvm-bcanalyzer</code> reads its input from standard input. This is useful for combining the tool into a pipeline. Output is written to the standard output.</p>
 <h2>OPTIONS</h2>

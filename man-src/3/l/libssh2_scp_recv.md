@@ -1,5 +1,4 @@
 ---
-
 title: "libssh2_scp_recv(3)"
 name: "libssh2_scp_recv"
 section: "3"
@@ -10,8 +9,10 @@ description: "libssh2_scp_recv – request a remote file via SCP"
 
 <h2>NAME</h2>
 <p> libssh2_scp_recv &#8211; request a remote file via SCP</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
 <p> LIBSSH2_CHANNEL * libssh2_scp_recv(LIBSSH2_SESSION *session, const char *path, struct stat *sb); </p>
+<h2>DESCRIPTION</h2>
 <p> <i>session</i> &#8211; Session instance as returned by <code><a href="/docs/linux/man/3-libssh2_session_init_ex/">libssh2_session_init_ex</a>(3)</code> </p>
 <p> <i>path</i> &#8211; Full path and filename of file to transfer. That is the remote file name. </p>
 <p> <i>sb</i> &#8211; Populated with remote file&#8217;s size, mode, mtime, and atime </p>

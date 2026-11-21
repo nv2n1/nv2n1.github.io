@@ -1,5 +1,4 @@
 ---
-
 title: "plowlist(1)"
 name: "plowlist"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-plowlist/"
 description: "plowlist – List links from shared folders websites"
 ---
 
+<h2 class="name">NAME</h2>
+<p> plowlist &#8211; List links from shared folders websites</p>
+<h2>SYNOPSIS</h2>
 <p> <code>plowlist</code> [<i>OPTIONS</i>]&#8230; [<i>MODULE_OPTIONS</i>]&#8230; <i>URL</i>&#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> <code>plowlist</code> is a command-line tool designed for listing links (files) on file-sharing websites. Provided links can be downloaded with <a href="/docs/linux/man/1-plowdown/">plowdown</a>(1). </p>
 <p> Currently supported hosting sites list is available in README file. </p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "pilot-install-expenses(1)"
 name: "pilot-install-expenses"
 section: "1"
@@ -12,7 +11,9 @@ description: "pilot-install-expenses – Install an expense record entries onto 
 <p> pilot-install-expenses &#8211; Install an expense record entries onto your Palm handheld device.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>
+<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr><i>pilot-install-expenses</i>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;port</code>&nbsp;<wbr>&lt;<code>port</code>&gt;]&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr>[<code>-q</code>|<code>&#8211;quiet</code>]&nbsp;<wbr>[<code>-?</code>|<code>&#8211;help</code>]&nbsp;<wbr>[<code>&#8211;usage</code>]&nbsp;<wbr>[<code>-t</code>|<code>&#8211;ptype</code>&nbsp;<wbr>&nbsp;<wbr><code>STRING</code>]&nbsp;<wbr>[<code>-e</code>|<code>&#8211;etype</code>&nbsp;<wbr>&nbsp;<wbr><code>STRING</code>]&nbsp;<wbr>[<code>-a</code>|<code>&#8211;amount</code>&nbsp;<wbr>&nbsp;<wbr><code>STRING</code>]&nbsp;<wbr>[<code>-V</code>|<code>&#8211;vendor</code>&nbsp;<wbr>&nbsp;<wbr><code>STRING</code>]&nbsp;<wbr>[<code>-i</code>|<code>&#8211;city</code>&nbsp;<wbr>&nbsp;<wbr><code>STRING</code>]&nbsp;<wbr>[<code>-g</code>|<code>&#8211;guests</code>&nbsp;<wbr>&nbsp;<wbr><code>NUMBER</code>]&nbsp;<wbr>[<code>-n</code>|<code>&#8211;note</code>&nbsp;<wbr>&nbsp;<wbr><code>STRING</code>]&nbsp;<wbr>[<code>-c</code>|<code>&#8211;category</code>&nbsp;<wbr>&nbsp;<wbr><code>STRING</code>]&nbsp;<wbr>[<code>&#8211;replace</code>] </p>
+<h2>DESCRIPTION</h2>
 <p>&nbsp;<wbr><i>pilot-install-expenses</i>&nbsp;<wbr>allows a Palm handheld with the Expense application to have expense records synchronized to it from the commandline. You can pass any of the fields&nbsp;<wbr>(except categories, currently)&nbsp;<wbr>to&nbsp;<wbr><i>pilot-install-expenses</i>&nbsp;<wbr>and create new expense records on your Palm handheld. </p>
 <h2>OPTIONS</h2>
 <h3>pilot-install-expenses options</h3>

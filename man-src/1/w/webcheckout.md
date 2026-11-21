@@ -1,5 +1,4 @@
 ---
-
 title: "webcheckout(1)"
 name: "webcheckout"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-webcheckout/"
 description: "webcheckout – check out repositories referenced on a web page"
 ---
 
+<h2 class="name">NAME</h2>
+<p> webcheckout &#8211; check out repositories referenced on a web page </p>
+<h2>SYNOPSIS</h2>
 <p> <code>webcheckout</code> [options] url [destdir]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>webcheckout</code> downloads an url and parses it, looking for version control repositories referenced by the page. It checks out each repository into a subdirectory of the current directory, using whatever <font SIZE="-1">VCS</font> program is appropriate for that repository (git, svn, etc). </p>
 <p> The information about the repositories is embedded in the web page using the rel=vcs-* microformat, which is documented at &lt;<a rel="nofollow" href="http://kitenet.net/~joey/rfc/rel-vcs/">http://kitenet.net/~joey/rfc/rel-vcs/</a>&gt;. </p>
 <p> If the optional destdir parameter is specified, <font SIZE="-1">VCS</font> programs will be asked to check out repositories into that directory. If there are multiple repositories to check out, each will be checked out into a separate subdirectory of the destdir.</p>

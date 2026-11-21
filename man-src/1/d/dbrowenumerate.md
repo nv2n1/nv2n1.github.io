@@ -1,5 +1,4 @@
 ---
-
 title: "dbrowenumerate(1)"
 name: "dbrowenumerate"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dbrowenumerate/"
 description: "dbrowenumerate – enumerate rows, starting from zero"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dbrowenumerate &#8211; enumerate rows, starting from zero </p>
+<h2>SYNOPSIS</h2>
 <p> dbrowenumerate</p>
+<h2>DESCRIPTION</h2>
 <p> Add a new column &#8220;count&#8221;, incremented for each row of data, starting with zero. Use dbrowaccumulate for control over initial value or increment; this module is just a wrapper around that.</p>
 <h2>OPTIONS</h2>
 <dl>

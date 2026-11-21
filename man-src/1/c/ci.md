@@ -1,5 +1,4 @@
 ---
-
 title: "ci(1)"
 name: "ci"
 section: "1"
@@ -10,7 +9,9 @@ description: "ci – check in RCS revisions"
 
 <h2>NAME</h2>
 <p> ci &#8211; check in RCS revisions</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ci</code> [<i>options</i>]<i> file </i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>ci</code> stores new revisions into <font SIZE="-1">RCS</font> files. Each file name matching an <font SIZE="-1">RCS</font> suffix is taken to be an <font SIZE="-1">RCS</font> file. All others are assumed to be working files containing new revisions. <code>ci</code> deposits the contents of each working file into the corresponding <font SIZE="-1">RCS</font> file. If only a working file is given, <code>ci</code> tries to find the corresponding <font SIZE="-1">RCS</font> file in an <font SIZE="-1">RCS</font> subdirectory and then in the working file&#8217;s directory. For more details, see <font SIZE="-1">FILE NAMING</font> below. </p>
 <p> For <code>ci</code> to work, the caller&#8217;s login must be on the access list, except if the access list is empty or the caller is the superuser or the owner of the file. To append a new revision to an existing branch, the tip revision on that branch must be locked by the caller. Otherwise, only a new branch can be created. This restriction is not enforced for the owner of the file if non-strict locking is used (see <code><a href="/docs/linux/man/1-rcs/">rcs</a></code>(1)). A lock held by someone else can be broken with the <code>rcs</code> command. </p>
 <p> Unless the <code>-f</code> option is given, <code>ci</code> checks whether the revision to be deposited differs from the preceding one. If not, instead of creating a new revision <code>ci</code> reverts to the preceding one. To revert, ordinary <code>ci</code> removes the working file and any lock; <code>ci -l</code> keeps and <code>ci -u</code> removes any lock, and then they both generate a new working file much as if <code>co -l</code> or <code>co -u</code> had been applied to the preceding revision. When reverting, any <code>-n</code> and <code>-s</code> options apply to the preceding revision. </p>

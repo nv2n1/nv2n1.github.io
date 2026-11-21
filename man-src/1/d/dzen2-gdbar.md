@@ -1,5 +1,4 @@
 ---
-
 title: "dzen2-gdbar(1)"
 name: "dzen2-gdbar"
 section: "1"
@@ -10,8 +9,10 @@ description: "dzen2-gdbar – generates fully graphical progress meters"
 
 <h2>NAME</h2>
 <p> dzen2-gdbar &#8211; generates fully graphical progress meters</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>dzen2-gdbar</code> [-w <i>characters</i>] [-s <i>symbol</i>] [-fg <i>color</i>] [-bg <i>color</i>] [-min <i>minvalue</i>] [-max <i>maxvalue</i>] [-l <i>string</i>] [-nonl] [-o]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>gdbar</code></p>
 <dd>application that generates fully graphical progress meters, from some values you supply to it. </dd>
 <p> It has the same input semantics as dbar (see <code>dbar (1)</code> ). In contrast to dbar, gdbar draws fully graphical meters which are only useful in combination with dzen. </p>

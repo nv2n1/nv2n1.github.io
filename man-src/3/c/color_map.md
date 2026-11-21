@@ -1,5 +1,4 @@
 ---
-
 title: "color_map(3)"
 name: "color_map"
 section: "3"
@@ -10,8 +9,10 @@ description: "color_map – Global pointer to the color mapping table. Allegro g
 
 <h2>NAME</h2>
 <p> color_map &#8211; Global pointer to the color mapping table. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>extern COLOR_MAP *color_map;</code></p>
+<h2>DESCRIPTION</h2>
 <p> Global pointer to the color mapping table. You must allocate your own COLOR_MAP either statically or dynamically and set color_map to it before using any translucent or lit drawing functions in a 256-color video mode! Example: </p>
 <pre><code>
 color_map = malloc(sizeof(COLOR_MAP));

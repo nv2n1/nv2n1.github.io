@@ -1,5 +1,4 @@
 ---
-
 title: "pullnews(1)"
 name: "pullnews"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-pullnews/"
 description: "pullnews – Pull news from multiple news servers and feed it to another"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pullnews &#8211; Pull news from multiple news servers and feed it to another </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pullnews</code> [<code>-BhnOqRx</code>] [<code>-a</code> <i>hashfeed</i>] [<code>-b</code> <i>fraction</i>] [<code>-c</code> <i>config</i>] [<code>-C</code> <i>width</i>] [<code>-d</code> <i>level</i>] [<code>-f</code> <i>fraction</i>] [<code>-F</code> <i>fakehop</i>] [<code>-g</code> <i>groups</i>] [<code>-G</code> <i>newsgroups</i>] [<code>-H</code> <i>headers</i>] [<code>-k</code> <i>checkpt</i>] [<code>-l</code> <i>logfile</i>] [<code>-m</code> <i>header_pats</i>] [<code>-M</code> <i>num</i>] [<code>-N</code> <i>timeout</i>] [<code>-p</code> <i>port</i>] [<code>-P</code> <i>hop_limit</i>] [<code>-Q</code> <i>level</i>] [<code>-r</code> <i>file</i>] [<code>-s</code> <i>to-server</i>[:<i>port</i>]] [<code>-S</code> <i>max-run</i>] [<code>-t</code> <i>retries</i>] [<code>-T</code> <i>connect-pause</i>] [<code>-w</code> <i>num</i>] [<code>-z</code> <i>article-pause</i>] [<code>-Z</code> <i>group-pause</i>] [<i>from-server</i> &#8230;]</p>
 <h2>REQUIREMENTS</h2>
 <p> The <tt>&quot;Net::NNTP&quot;</tt> module must be installed. This module is available as part of the libnet distribution and comes with recent versions of Perl. For older versions of Perl, you can download it from &lt;<a rel="nofollow" href="http://www.cpan.org/">http://www.cpan.org/</a>&gt;.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pullnews</code> reads a config file in the running user&#8217;s home directory (normally called <i>~/.pullnews</i>) and connects to the upstream servers given there as a reader client. By default, it connects to all servers listed in the configuration file, but you can limit <code>pullnews</code> to specific servers by listing them on the command line: a whitespace-separated list of server names can be specified, like <i>from-server</i> for one of them. For each server it connects to, it pulls over articles and feeds them to the destination server via the <font SIZE="-1">IHAVE</font> or <font SIZE="-1">POST</font> commands. This means that the system <code>pullnews</code> is run on must have feeding access to the destination news server. </p>
 <p> <code>pullnews</code> is designed for very small sites that do not want to bother setting up traditional peering and is not meant for handling large feeds.</p>
 <h2>OPTIONS</h2>

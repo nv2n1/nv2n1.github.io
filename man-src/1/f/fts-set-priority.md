@@ -1,5 +1,4 @@
 ---
-
 title: "fts-set-priority(1)"
 name: "fts-set-priority"
 section: "1"
@@ -11,9 +10,13 @@ url: "/docs/linux/man/1-fts-set-priority/"
 
  fts-set-priority
 
-fts-set-priority [options] JOB_ID PRIORITY
+<h2>SYNOPSIS</h2>
 
-fts-set-priority is a tool for setting the priority of a transfer job
+ fts-set-priority [options] JOB_ID PRIORITY
+
+<h2>DESCRIPTION</h2>
+
+ fts-set-priority is a tool for setting the priority of a transfer job
 
 <h2>OPTIONS</h2>
 

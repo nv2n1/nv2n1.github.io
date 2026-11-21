@@ -1,5 +1,4 @@
 ---
-
 title: "timedatectl(1)"
 name: "timedatectl"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-timedatectl/"
 description: "timedatectl – Control the system time and date"
 ---
 
+<h2 class="name">NAME</h2>
+<p> timedatectl &#8211; Control the system time and date </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>timedatectl</code> [OPTIONS&#8230;] {COMMAND}</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>timedatectl</code></p>
 <dd>may be used to query and change the system clock and its settings, and enable or disable time synchronization services. </dd>
 <p> Use <code><a href="/docs/linux/man/1-systemd-firstboot/">systemd-firstboot</a></code>(1) to initialize the system time zone for mounted (but not booted) system images. </p>

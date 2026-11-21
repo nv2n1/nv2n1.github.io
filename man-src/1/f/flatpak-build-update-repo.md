@@ -1,5 +1,4 @@
 ---
-
 title: "flatpak-build-update-repo(1)"
 name: "flatpak-build-update-repo"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-flatpak-build-update-repo/"
 description: "flatpak-build-update-repo – Create a repository from a build directory"
 ---
 
+<h2 class="name">NAME</h2>
+<p> flatpak-build-update-repo &#8211; Create a repository from a build directory </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak build-update-repo</code> [OPTION&#8230;] LOCATION</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>Updates repository metadata for the repository at LOCATION. This command generates an OSTree summary file that lists the contents of the repository. The summary is used by flatpak remote-ls and other commands to display the contents of remote repositories. </dd>
 <p> After this command, LOCATION can be used as the repository location for flatpak remote-add, either by exporting it over http, or directly with a file: url.</p>
 <h2>OPTIONS</h2>

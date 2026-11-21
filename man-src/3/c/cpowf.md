@@ -1,5 +1,4 @@
 ---
-
 title: "cpowf(3)"
 name: "cpowf"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cpowf/"
 description: "cpow, cpowf, cpowl – complex power function"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cpow, cpowf, cpowl &#8211; complex power function </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;complex.h&gt;
 double complex cpow(double complex x, complex double z);
@@ -16,6 +18,7 @@ long double complex cpowl(long double complex x,
                           complex long double z);
 Link with - lm.
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> These functions calculate <i>x</i> raised to the power <i>z</i> (with a branch cut for <i>x</i> along the negative real axis.)</p>
 <h2>VERSIONS</h2>
 <p> These functions first appeared in glibc in version 2.1.</p>

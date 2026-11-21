@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-libsolv/"
 description: "libsolv – package dependency solver library using a satisfiability algorithm"
 ---
 
+<h2 class="name">NAME</h2>
+<p> libsolv &#8211; package dependency solver library using a satisfiability algorithm </p>
 <h2>DOCUMENTATION</h2>
 <p> The libsolv documentation is split into multiple parts: </p>
 <p> <code>libsolv-history</code></p>

@@ -1,5 +1,4 @@
 ---
-
 title: "bibtexu(1)"
 name: "bibtexu"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-bibtexu/"
 description: "bibtexu – UTF-8 Big BibTeX"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bibtexu &#8211; UTF-8 Big BibTeX </p>
+<h2>SYNOPSIS</h2>
 <p> <code>bibtexu</code> [<i>options</i>] <i>aux-file</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>BibTeXu</code> is the Unicode-compliant version of BibTeX. It is largely based on Niel Kempson&#8217;s BibTeX8, and it provides a better support for UTF-8 by integrating ICU library. Therefore, <code>BibTeXu</code> no longer requires the Codepage and Sort order (&quot;CS&quot;) file; instead, the method of sorting and case-changing can be controled via command-line options.</p>
 <h2>OPTIONS</h2>
 <dl>

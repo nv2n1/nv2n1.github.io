@@ -1,5 +1,4 @@
 ---
-
 title: "mft(1)"
 name: "mft"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mft/"
 description: "mft – translate Metafont or MetaPost code to TeX code for prettyprinting"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mft &#8211; translate Metafont or MetaPost code to TeX code for prettyprinting </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mft</code> [<i>OPTIONS</i>] <i>mf_file_name</i>[<code>.mf</code>|<code>.mp</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page is not meant to be exhaustive. The complete documentation for this version of TeX can be found in the info file or manual <i>Web2C: A TeX implementation</i>. </p>
 <p> The <code>mft</code> program creates a TeX file from a Metafont or MetaPost program. It takes appropriate care of typographic details like page layout and the use of indentation, italics, boldface, etc., as illustrated in the book <i>Computer Modern Typefaces</i>. Special conventions in Metafont and MetaPost comments allow you to control things that would not otherwise come out right; section 1 of the MFT source program in the <i>Metafontware</i> report explains these rules. </p>
 <p> The <code>mft</code> program uses an optional change file (which works just as the change files to <code><a href="/docs/linux/man/1-tangle/">tangle</a></code>(1) and <code><a href="/docs/linux/man/1-weave/">weave</a></code>(1) do) and one or several style files (which are prepended to everything). If no style file is specified, the style file <code>plain.mft</code> for Metafont (or <code>mplain.mft</code> for MetaPost) is automatically used. </p>

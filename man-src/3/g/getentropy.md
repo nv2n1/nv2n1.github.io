@@ -1,5 +1,4 @@
 ---
-
 title: "getentropy(3)"
 name: "getentropy"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-getentropy/"
 description: "getentropy – fill a buffer with random bytes"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getentropy &#8211; fill a buffer with random bytes </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int getentropy(void *</code><i>buffer</i><code>, size_t </code><i>length</i><code>);</code> </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
@@ -15,6 +17,7 @@ description: "getentropy – fill a buffer with random bytes"
 <dl>
 <dt>
 </dt><dd> _DEFAULT_SOURCE</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code>getentropy</code>() function writes <i>length</i> bytes of high-quality random data to the buffer starting at the location pointed to by <i>buffer</i>. The maximum permitted value for the <i>length</i> argument is 256. </p>
 <p> A successful call to <code>getentropy</code>() always provides the requested number of bytes of entropy.</p>
 <h2>RETURN VALUE</h2>

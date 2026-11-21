@@ -1,5 +1,4 @@
 ---
-
 title: "nwtrustee(1)"
 name: "nwtrustee"
 section: "1"
@@ -10,7 +9,9 @@ description: "nwtrustee – List an object’s trustee directory assignments"
 
 <h2>NAME</h2>
 <p> nwtrustee &#8211; List an object&#8217;s trustee directory assignments</p>
+<h2>SYNOPSIS</h2>
 <p> <code>nwtrustee</code> [ <code>-h</code> ] [ <code>-S</code> <i>server</i> ] [ <code>-U</code> <i>user name</i> ] [ <code>-P</code> <i>password</i> | <code>-n</code> ] [ <code>-C</code> ] [ <code>-l</code> <i>volume number</i> ] [ <code>-L</code> <i>volume name</i> ] [ <code>-O</code> <i>object id</i> ] [ <code>-o</code> <i>object name</i> ] [ <code>-t</code> <i>object type</i> ] [ <code>-v</code> ] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>nwtrustee</code> lists the trustee directory assignments a user has on a specific volume. </p>
 <p> <code>nwtrustee</code> looks up the file <i>$HOME/.nwclient</i> to find a file server, a user name and possibly a password. See <a href="/docs/linux/man/5-nwclient/">nwclient</a>(5) for more information. Please note that the access permissions of $HOME/.nwclient MUST be 600 for security reasons. </p>
 <h2>OPTIONS</h2>

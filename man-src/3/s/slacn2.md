@@ -1,5 +1,4 @@
 ---
-
 title: "slacn2(3)"
 name: "slacn2"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-slacn2/"
 description: "slacn2.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> slacn2.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slacn2</code> (N, V, X, ISGN, EST, KASE, ISAVE)<br />
  <i></i><code>SLACN2</code> estimates the 1-norm of a square matrix, using reverse communication for evaluating matrix-vector products.</p>

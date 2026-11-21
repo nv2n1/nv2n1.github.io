@@ -1,5 +1,4 @@
 ---
-
 title: "xrootdfs(1)"
 name: "xrootdfs"
 section: "1"
@@ -10,9 +9,11 @@ description: "xrootdfs – xrootd FUSE file system daemon"
 
 <h2>NAME</h2>
 <p> xrootdfs &#8211; xrootd FUSE file system daemon</p>
+<h2>SYNOPSIS</h2>
 <pre>
 <code>xrootdfs</code> [<i>options</i>] <i>parameters</i>
 </pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>xrootdfs</code> daemon provides a file system view of an xrootd cluster using FUSE. Usage synopsis can be displayed by typing &quot;<code>xrootdfs -h</code>&quot;. Short documentation can be found in a README file in the src/XrdFfs source directory. </p>
 <h2>EXAMPLES</h2>
 <p> Assuming the redirector is <code>rdr:port</code> </p>

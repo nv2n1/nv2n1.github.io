@@ -1,5 +1,4 @@
 ---
-
 title: "pminclude(1)"
 name: "pminclude"
 section: "1"
@@ -7,9 +6,14 @@ letter: "p"
 url: "/docs/linux/man/1-pminclude/"
 ---
 
-pminclude - show the include path for modules (@INC) 
+<h2 class="name">NAME</h2>
+ 
 
-This is mostly here for people too lazy to type: 
+ pminclude - show the include path for modules (@INC) 
+
+<h2>DESCRIPTION</h2>
+
+ This is mostly here for people too lazy to type: 
 
  <pre>
     $ perl -V | tail

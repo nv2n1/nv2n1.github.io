@@ -1,5 +1,4 @@
 ---
-
 title: "irqbalance(1)"
 name: "irqbalance"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-irqbalance/"
 description: "irqbalance – distribute hardware interrupts across processors on a multiprocessor system"
 ---
 
+<h2 class="name">NAME</h2>
+<p> irqbalance &#8211; distribute hardware interrupts across processors on a multiprocessor system </p>
+<h2>SYNOPSIS</h2>
 <pre>
 <code>irqbalance</code>
 </pre>
+<h2>DESCRIPTION</h2>
 <p> The purpose of <code>irqbalance</code> is to distribute hardware interrupts across processors on a multiprocessor system in order to increase performance. </p>
 <h2>OPTIONS</h2>
 <dl>

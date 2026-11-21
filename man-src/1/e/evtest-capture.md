@@ -1,5 +1,4 @@
 ---
-
 title: "evtest-capture(1)"
 name: "evtest-capture"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-evtest-capture/"
 description: "evtest-capture – Input device event capture program"
 ---
 
+<h2 class="name">NAME</h2>
+<p> evtest-capture &#8211; Input device event capture program </p>
+<h2>SYNOPSIS</h2>
 <pre>
 evtest-capture &quot;/dev/input/eventX&quot; [evtest-capture.xml]
 </pre>
+<h2>DESCRIPTION</h2>
 <p> evtest-capture captures the information and events from the input device specified on the command line and writes it to the xml file given. If no filename is given for the output file, evtest-capture.xml is chosen as default. </p>
 <p> evtest-capture needs to be able to read from the device; in most cases this means it must be run as root. </p>
 <p> Together with with evtest-create-device.xsl, a simple uinput-based software input device can be created that replays the events as if the same input was performed on the physical device. This can be useful to replicate bugs with input devices in upper layers of the stack. </p>

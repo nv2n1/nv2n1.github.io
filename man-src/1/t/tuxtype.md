@@ -1,5 +1,4 @@
 ---
-
 title: "tuxtype(1)"
 name: "tuxtype"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-tuxtype/"
 description: "tuxtype – TuxTyping typing tutor"
 ---
 
+<h2 class="name">NAME</h2>
+<p> tuxtype &#8211; TuxTyping typing tutor </p>
+<h2>SYNOPSIS</h2>
 <p> <code>tuxtype</code><i> [OPTION] &#8230;</i></p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>tuxtype</code> command. </p>
 <p> <code>TuxTyping</code> is an educational typing tutorial game starring Tux, the Linux Penguin. The player guides Tux to eat fish which are falling from the top of the screen. Each fish has a letter written on it. When the player presses the corresponding key, Tux will position himself to eat the fish. The game is intended for children learning to type, though it does have higher difficulty levels which even experienced typers may find challenging.</p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_deinit(3)"
 name: "gnutls_deinit"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_deinit – API function"
 
 <h2>NAME</h2>
 <p> gnutls_deinit &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_deinit(gnutls_session_t </code><i>session</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_session_t session</dt>
 <dd> is a <code>gnutls_session_t</code> structure.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function clears all buffers associated with the <i>session</i> . This function will also remove session data from the session database if the session was terminated abnormally.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />

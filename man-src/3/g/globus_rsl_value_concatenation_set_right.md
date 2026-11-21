@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_rsl_value_concatenation_set_right/"
 description: "RSL Value Accessors –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> RSL Value Accessors &#8211; </p>
 <h3>Functions</h3>
 <p> int <code>globus_rsl_value_concatenation_set_left</code> (globus_rsl_value_t *concatenation_node, globus_rsl_value_t *new_left_node)<br />
  <i>Set the left-hand value of a concatenation. </i><br />

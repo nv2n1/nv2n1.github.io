@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_rr2canonical(3)"
 name: "ldns_rr2canonical"
 section: "3"
@@ -10,10 +9,12 @@ description: "ldns_rr2canonical"
 
 <h2>NAME</h2>
 <p> ldns_rr2canonical </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> void ldns_rr2canonical(ldns_rr *rr); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_rr2canonical</i>()</dt>
 <dd>converts each dname in a rr to its canonical form. .br <code>rr</code>: the rr to work on .br Returns void</dd></dl>

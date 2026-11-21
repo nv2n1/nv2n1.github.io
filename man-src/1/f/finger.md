@@ -1,5 +1,4 @@
 ---
-
 title: "finger(1)"
 name: "finger"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-finger/"
 description: "finger – user information lookup program"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>finger</code> &#8211; user information lookup program </p>
+<h2>SYNOPSIS</h2>
 <p> <code>finger</code> [-<code>lmsp</code> ] [<i>user &#8230;</i> ] [<i>user [at] host &#8230;</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>finger</code> displays information about the system users. </p>
 <p> Options are:</p>
 <dl>

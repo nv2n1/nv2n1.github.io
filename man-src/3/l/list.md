@@ -1,5 +1,4 @@
 ---
-
 title: "list(3)"
 name: "list"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-list/"
 description: "list – list routines"
 ---
 
+<h2 class="name">NAME</h2>
+<p> list &#8211; list routines </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;inn/list.h&gt;
 struct node {
@@ -32,6 +34,7 @@ struct node *list_remove(struct node *node);
 struct node *list_insert(struct list *list, struct node *node, struct node *pred);
 bool list_isempty(struct list *list);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>list_new</code> initialises the list header <i>list</i> so as to create an empty list. </p>
 <p> <code>list_addhead</code> adds <i>node</i> to the head of <i>list</i>, returning the node just added. </p>
 <p> <code>list_addtail</code> adds <i>node</i> to the tail of <i>list</i>, returning the node just added. </p>

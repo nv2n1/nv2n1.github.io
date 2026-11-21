@@ -1,5 +1,4 @@
 ---
-
 title: "dselect(1)"
 name: "dselect"
 section: "1"
@@ -10,7 +9,9 @@ description: "dselect – Debian package management frontend"
 
 <h2>NAME</h2>
 <p> dselect &#8211; Debian package management frontend</p>
+<h2>SYNOPSIS</h2>
 <p> <code>dselect</code> [<i>option</i>&#8230;] [<i>action</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>dselect</code> is one of the primary user interfaces for managing packages on a Debian system. At the <code>dselect</code> main menu, the system administrator can:<br />
 &nbsp;<wbr>&#8211; Update the list of available package versions,<br />
 &nbsp;<wbr>&#8211; View the status of installed and available packages,<br />

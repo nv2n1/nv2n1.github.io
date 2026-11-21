@@ -1,5 +1,4 @@
 ---
-
 title: "asn1_der_coding(3)"
 name: "asn1_der_coding"
 section: "3"
@@ -10,6 +9,7 @@ description: "asn1_der_coding – API function"
 
 <h2>NAME</h2>
 <p> asn1_der_coding &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>
 <p> <code>int asn1_der_coding(asn1_node </code><i>element</i><code>, const char * </code><i>name</i><code>, void * </code><i>ider</i><code>, int * </code><i>len</i><code>, char * </code><i>ErrorDescription</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,6 +24,7 @@ description: "asn1_der_coding – API function"
 <dd> number of bytes of * <i>ider</i> : <i>ider</i> [0].. <i>ider</i> [len-1], Initialy holds the sizeof of der vector.</dd>
 <dt>char * ErrorDescription</dt>
 <dd> return the error description or an empty string if success.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Creates the DER encoding for the NAME structure (inside *POINTER structure).</p>
 <h2>RETURNS</h2>
 <p> <code>ASN1_SUCCESS</code> if DER encoding OK, <code>ASN1_ELEMENT_NOT_FOUND</code> if <i>name</i> is not a valid element, <code>ASN1_VALUE_NOT_FOUND</code> if there is an element without a value, <code>ASN1_MEM_ERROR</code> if the <i>ider</i> vector isn&#8217;t big enough and in this case <i>len</i> will contain the length needed.</p>

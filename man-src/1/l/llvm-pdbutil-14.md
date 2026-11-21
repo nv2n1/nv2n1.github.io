@@ -1,5 +1,4 @@
 ---
-
 title: "llvm-pdbutil-14(1)"
 name: "llvm-pdbutil-14"
 section: "1"
@@ -8,6 +7,8 @@ url: "/docs/linux/man/1-llvm-pdbutil-14/"
 description: "llvm-pdbutil – PDB File forensics and diagnostics"
 ---
 
+<h2 class="name">NAME</h2>
+<p> llvm-pdbutil &#8211; PDB File forensics and diagnostics</p>
 <dl>
 <dt>&bull;</dt>
 <dd> <i>Synopsis</i></dd>
@@ -77,7 +78,9 @@ description: "llvm-pdbutil – PDB File forensics and diagnostics"
 <dd> <i>Summary</i></dd>
 <dt>&bull;</dt>
 <dd> <i>Options</i></dd></dl>
+<h2>SYNOPSIS</h2>
 <p> <code>llvm-pdbutil</code> [<i>subcommand</i>] [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Display types, symbols, CodeView records, and other information from a PDB file, as well as manipulate and create PDB files. <code>llvm-pdbutil</code> is normally used by FileCheck-based tests to test LLVM’s PDB reading and writing functionality, but can also be used for general PDB file investigation and forensics, or as a replacement for cvdump.</p>
 <h2>SUBCOMMANDS</h2>
 <p> <code>llvm-pdbutil</code> is separated into several subcommands each tailored to a different purpose. A brief summary of each command follows, with more detail in the sections that follow.</p>

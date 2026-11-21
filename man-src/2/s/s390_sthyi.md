@@ -1,5 +1,4 @@
 ---
-
 title: "s390_sthyi(2)"
 name: "s390_sthyi"
 section: "2"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/2-s390_sthyi/"
 description: "s390_sthyi – emulate STHYI instruction"
 ---
 
+<h2 class="name">NAME</h2>
+<p> s390_sthyi &#8211; emulate STHYI instruction </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;asm/unistd.h&gt;
 int s390_sthyi(unsigned long function_code, void *resp_buffer,
                uint64_t *return_code, unsigned long flags);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>s390_sthyi</code>() system call emulates the STHYI (Store Hypervisor Information) instruction. It provides hardware resource information for the machine and its virtualization levels. This includes CPU type and capacity, as well as the machine model and other metrics. </p>
 <p> The <i>function_code</i> argument indicates which function to perform. The following code(s) are supported:</p>
 <dl>

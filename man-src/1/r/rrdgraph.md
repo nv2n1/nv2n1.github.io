@@ -1,5 +1,4 @@
 ---
-
 title: "rrdgraph(1)"
 name: "rrdgraph"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-rrdgraph/"
 description: "rrdgraph – Round Robin Database tool graphing functions"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rrdgraph &#8211; Round Robin Database tool graphing functions </p>
+<h2>SYNOPSIS</h2>
 <p> <code>rrdtool graph|graphv</code> <i>filename</i> [<i>option</i> &#8230;] [<i>data definition</i> &#8230;] [<i>data calculation</i> &#8230;] [<i>variable definition</i> &#8230;] [<i>graph element</i> &#8230;] [<i>print element</i> &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>graph</code> function of <code>RRDtool</code> is used to present the data from an <font SIZE="-1"><code>RRD</code></font> to a human viewer. Its main purpose is to create a nice graphical representation, but it can also generate a numerical report.</p>
 <h2>OVERVIEW</h2>
 <p> <code>rrdtool graph</code> needs data to work with, so you must use one or more <code>data definition</code> statements to collect this data. You are not limited to one database, it&#8217;s perfectly legal to collect data from two or more databases (one per statement, though). </p>

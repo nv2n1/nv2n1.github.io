@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_certificate_server_set_request(3)"
 name: "gnutls_certificate_server_set_request"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_certificate_server_set_request – API function"
 
 <h2>NAME</h2>
 <p> gnutls_certificate_server_set_request &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_certificate_server_set_request(gnutls_session_t </code><i>session</i><code>, gnutls_certificate_request_t </code><i>req</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_certificate_server_set_request – API function"
 <dd> is a <code>gnutls_session_t</code> structure.</dd>
 <dt>gnutls_certificate_request_t req</dt>
 <dd> is one of GNUTLS_CERT_REQUEST, GNUTLS_CERT_REQUIRE</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function specifies if we (in case of a server) are going to send a certificate request message to the client. If <i>req</i> is GNUTLS_CERT_REQUIRE then the server will return an error if the peer does not provide a certificate. If you do not call this function then the client will not be asked to send a certificate.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />

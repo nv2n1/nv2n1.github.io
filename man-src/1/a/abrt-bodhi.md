@@ -1,5 +1,4 @@
 ---
-
 title: "abrt-bodhi(1)"
 name: "abrt-bodhi"
 section: "1"
@@ -7,11 +6,22 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-bodhi/"
 ---
 
-abrt-bodhi - The ABRT bodhi client. 
+<h2 class="name">NAME</h2>
+ 
 
-<i>abrt-bodhi</i> [-v] [-r[RELEASE]] (-b ID1[,ID2,...] | PKG-NAME) [PKG-NAME]...
+ abrt-bodhi - The ABRT bodhi client. 
 
-<i>abrt-bodhi</i> is the command-line tool for listing a new updates. Bodhi can be queried by release, bug id or package name.
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <i>abrt-bodhi</i> [-v] [-r[RELEASE]] (-b ID1[,ID2,...] | PKG-NAME) [PKG-NAME]...
+
+<h2>DESCRIPTION</h2>
+
+ 
+
+ <i>abrt-bodhi</i> is the command-line tool for listing a new updates. Bodhi can be queried by release, bug id or package name.
 
 <h2>OPTIONS</h2>
 

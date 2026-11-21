@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_name_constraints_check(3)"
 name: "gnutls_x509_name_constraints_check"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_name_constraints_check – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_name_constraints_check &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>unsigned gnutls_x509_name_constraints_check(gnutls_x509_name_constraints_t </code><i>nc</i><code>, gnutls_x509_subject_alt_name_t </code><i>type</i><code>, const gnutls_datum_t * </code><i>name</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_x509_name_constraints_check – API function"
 <dd> the type of the constraint to check (of type gnutls_x509_subject_alt_name_t)</dd>
 <dt>const gnutls_datum_t * name</dt>
 <dd> the name to be checked</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will check the provided name against the constraints in<br />
 &nbsp;<wbr><i>nc</i>&nbsp;<wbr>using the RFC5280 rules. Currently this function is limited to DNS names and emails (of type <code>GNUTLS_SAN_DNSNAME</code> and <code>GNUTLS_SAN_RFC822NAME</code>).</p>
 <h2>RETURNS</h2>

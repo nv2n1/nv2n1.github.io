@@ -1,5 +1,4 @@
 ---
-
 title: "lua(1)"
 name: "lua"
 section: "1"
@@ -10,7 +9,9 @@ description: "lua – Lua interpreter"
 
 <h2>NAME</h2>
 <p> lua &#8211; Lua interpreter</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lua</code> [ <i>options</i> ] [ <i>script</i> [ <i>args</i> ] ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>lua</code> is the stand-alone Lua interpreter. It loads and executes Lua programs, either in textual source form or in precompiled binary form. (Precompiled binaries are output by <code>luac</code>, the Lua compiler.) <code>lua</code> can be used as a batch interpreter and also interactively. </p>
 <p> The given <i>options</i> (see below) are executed and then the Lua program in file <i>script</i> is loaded and executed. The given <i>args</i> are available to <i>script</i> as strings in a global table named <code>arg</code>. If these arguments contain spaces or other characters special to the shell, then they should be quoted (but note that the quotes will be removed by the shell). The arguments in <code>arg</code> start at 0, which contains the string &#8216;<i>script</i>&#8216;. The index of the last argument is stored in <code>arg.n</code>. The arguments given in the command line before <i>script</i>, including the name of the interpreter, are available in negative indices in <code>arg</code>. </p>
 <p> At the very start, before even handling the command line, <code>lua</code> executes the contents of the environment variable <code>LUA_INIT</code>, if it is defined. If the value of <code>LUA_INIT</code> is of the form &#8216;@<i>filename</i>&#8216;, then <i>filename</i> is executed. Otherwise, the string is assumed to be a Lua statement and is executed. </p>

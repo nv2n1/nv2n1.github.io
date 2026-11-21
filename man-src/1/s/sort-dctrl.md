@@ -1,5 +1,4 @@
 ---
-
 title: "sort-dctrl(1)"
 name: "sort-dctrl"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-sort-dctrl/"
 description: "sort-dctrl – sort Debian control files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sort-dctrl &#8211; sort Debian control files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>sort-dctrl</code> [options] [ <i>file</i> &#8230; ] </p>
 <p> <code>sort-dctrl</code> &#8211;copying | &#8211;help | &#8211;version | -ChV</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>sort-dctrl</code> program sorts Debian control files according to specified criteria. </p>
 <p> A Debian control (dctrl) file is a semistructured single-table database stored in a machine-parseable text file. Such a database consists of a set of records; each record is a mapping from field names to field content. Textually, records are separated by empty lines, while each field is encoded as one or more nonempty lines inside a record. A field starts with its name, followed by a colon, followed by the field content. The colon must reside on the first line of the field, and the first line must start with no whitespace. Subsequent lines, in contrast, always start with linear whitespace (one or more space or tab characters). </p>
 <p> The <code>sort-dctrl</code> program recognizes two field types: string fields and version fields. Version fields act also as numeric fields. String fields are compared according to strict lexicographical octet-by-octet comparison, after ignoring any initial whitespace after the colon. Version fields are parsed and compared as Debian version numbers. When comparing version numbers, if a field content does not in fact conform to the version number syntax, it compares less than any field content that does conform, and equal to any other nonconforming field content. The <code>sort-dctrl</code> program assumes all fields are string fields unless told otherwise. </p>

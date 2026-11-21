@@ -1,5 +1,4 @@
 ---
-
 title: "npm-adduser(1)"
 name: "npm-adduser"
 section: "1"
@@ -8,6 +7,7 @@ url: "/docs/linux/man/1-npm-adduser/"
 description: "npm-adduser – Add a registry user account"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>npm-adduser</code> &#8211; Add a registry user account </p>
 <h3>Synopsis</h3>
 <dl>

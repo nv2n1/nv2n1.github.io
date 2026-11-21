@@ -1,5 +1,4 @@
 ---
-
 title: "nvme-create-ns(1)"
 name: "nvme-create-ns"
 section: "1"
@@ -7,9 +6,16 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-create-ns/"
 ---
 
-nvme-create-ns - Send NVMe Namespace management command to create namespace, returns results. 
+<h2 class="name">NAME</h2>
+ 
 
-<pre><code>
+ nvme-create-ns - Send NVMe Namespace management command to create namespace, returns results. 
+
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <pre><code>
 nvme create - ns&lt;device&gt;[--nsze = &lt;nsze&gt; | -s&lt;nsze&gt;]
                         [--ncap = &lt;ncap&gt; | -c&lt;ncap&gt;]
                         [--flbas = &lt;flbas&gt; | -f&lt;flbas&gt;]
@@ -17,7 +23,11 @@ nvme create - ns&lt;device&gt;[--nsze = &lt;nsze&gt; | -s&lt;nsze&gt;]
                         [--nmic = &lt;nmic&gt; | -m&lt;nmic&gt;]
 </code></pre>
 
-For the NVMe device given, sends a namespace management command to create the namespace with the requested settings. On success, the namespace identifier assigned by the controller is returned. 
+<h2>DESCRIPTION</h2>
+
+ 
+
+ For the NVMe device given, sends a namespace management command to create the namespace with the requested settings. On success, the namespace identifier assigned by the controller is returned. 
 
  The &lt;device&gt; parameter is mandatory and may be either the NVMe character device (ex: /dev/nvme0), or a namespace block device (ex: /dev/nvme0n1).
 

@@ -1,5 +1,4 @@
 ---
-
 title: "doveadm-search(1)"
 name: "doveadm-search"
 section: "1"
@@ -10,9 +9,11 @@ description: "doveadm-search – Show a list of mailbox GUIDs and message UIDs m
 
 <h2>NAME</h2>
 <p> doveadm-search &#8211; Show a list of mailbox GUIDs and message UIDs matching given search query.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] [<code>-f</code> <i>formatter</i>] <code>search</code> [<code>-S</code> <i>socket_path</i>] <i>search_query</i><br />
  <code>doveadm</code> [<code>-Dv</code>] [<code>-f</code> <i>formatter</i>] <code>search</code> [<code>-S</code> <i>socket_path</i>] <code>-A</code><i>&nbsp;<wbr>search_query</i><br />
  <code>doveadm</code> [<code>-Dv</code>] [<code>-f</code> <i>formatter</i>] <code>search</code> [<code>-S</code> <i>socket_path</i>] <code>-u</code><i> user search_query</i></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>search</code> command is used to find matching messages. <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will print the mailbox&#8217;s guid and the message&#8217;s uid for each match.<br />
  When used with the <code>-A</code> or <code>-u</code><i>&nbsp;<wbr>wildcard</i> options, <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will print the fields <code>username</code>, <code>mailbox-guid</code>&nbsp;<wbr>and <code>uid</code> for each matching message. </p>
 <p> In the first form, <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) will executed the <code>search</code> action with the environment of the logged in system user. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_heartbeat_ping(3)"
 name: "gnutls_heartbeat_ping"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_heartbeat_ping – API function"
 
 <h2>NAME</h2>
 <p> gnutls_heartbeat_ping &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_heartbeat_ping(gnutls_session_t </code><i>session</i><code>, size_t </code><i>data_size</i><code>, unsigned int </code><i>max_tries</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,6 +22,7 @@ description: "gnutls_heartbeat_ping – API function"
 <dd> if flags is <code>GNUTLS_HEARTBEAT_WAIT</code> then this sets the number of retransmissions. Use zero for indefinite (until timeout).</dd>
 <dt>unsigned int flags</dt>
 <dd> if <code>GNUTLS_HEARTBEAT_WAIT</code> then wait for pong or timeout instead of returning immediately.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function sends a ping to the peer. If the <i>flags</i> is set to <code>GNUTLS_HEARTBEAT_WAIT</code> then it waits for a reply from the peer. </p>
 <p> Note that it is highly recommended to use this function with the flag <code>GNUTLS_HEARTBEAT_WAIT</code>, or you need to handle retransmissions and timeouts manually.</p>
 <h2>RETURNS</h2>

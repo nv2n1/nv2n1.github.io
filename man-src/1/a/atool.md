@@ -1,5 +1,4 @@
 ---
-
 title: "atool(1)"
 name: "atool"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-atool/"
 description: "atool – A script for managing file archives of various types"
 ---
 
+<h2 class="name">NAME</h2>
+<p> atool &#8211; A script for managing file archives of various types </p>
+<h2>SYNOPSIS</h2>
 <p> <code>atool</code> [<i>OPTION</i>]&#8230;<i> ARCHIVE </i>[<i>FILE</i>]&#8230;<br />
  <code>aunpack</code> [<i>OPTION</i>]&#8230;<i> ARCHIVE </i>[<i>FILE</i>]&#8230;<br />
  <code>apack</code> [<i>OPTION</i>]&#8230;<i> ARCHIVE </i>[<i>FILE</i>]&#8230;<br />
@@ -15,6 +17,7 @@ description: "atool – A script for managing file archives of various types"
  <code>acat</code> [<i>OPTION</i>]&#8230;<i> ARCHIVE </i>[<i>FILE</i>]&#8230;<br />
  <code>adiff</code> [<i>OPTION</i>]&#8230;<i> ARCHIVE </i><i>ARCHIVE</i><br />
  <code>arepack</code> [<i>OPTION</i>]&#8230;<i> OLD-ARCHIVE </i><i>NEW-ARCHIVE</i></p>
+<h2>DESCRIPTION</h2>
 <p> This manual page document describes the <code>atool</code> commands. These commands are used for managing file archives of various types, such as tar and Zip archives. Each command can be executed individually or by giving the appropriate options to <code>atool</code> (see <code>OPTIONS</code> below). </p>
 <p> <code>aunpack</code> extracts files from an archive. Often one wants to extract all files in an archive to a single subdirectory. However, some archives contain multiple files in their root directories. The aunpack program overcomes this problem by first extracting files to a unique (temporary) directory, and then moving its contents back if possible. This also prevents local files from being overwritten by mistake. </p>
 <p> <code>apack</code> creates archives (or compresses files). If no file arguments are specified, filenames to add are read from standard in. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "msmtp(1)"
 name: "msmtp"
 section: "1"
@@ -10,6 +9,7 @@ description: "msmtp – An SMTP client"
 
 <h2>NAME</h2>
 <p> msmtp &#8211; An SMTP client</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt>Sendmail mode (default):</dt>
 <dd> <code>msmtp</code> [option&#8230;] [&#8211;] recipient&#8230;<br />
@@ -18,6 +18,7 @@ description: "msmtp – An SMTP client"
 <dd> <code>msmtp</code> [option&#8230;] &#8211;serverinfo</dd>
 <dt>Remote Message Queue Starting mode:</dt>
 <dd> <code>msmtp</code> [option&#8230;] &#8211;rmqs=<i>host</i>|<i>@domain</i>|<i>#queue</i></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> In the default sendmail mode, msmtp reads a mail from standard input and sends it to an SMTP server for delivery.<br />
  In server information mode, msmtp prints information about an SMTP server.<br />
  In Remote Message Queue Starting mode, msmtp sends a Remote Message Queue Starting request for a host, domain, or queue to an SMTP server.</p>

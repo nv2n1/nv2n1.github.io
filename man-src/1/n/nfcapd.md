@@ -1,5 +1,4 @@
 ---
-
 title: "nfcapd(1)"
 name: "nfcapd"
 section: "1"
@@ -10,8 +9,10 @@ description: "nfcapd – netflow capture daemon"
 
 <h2>NAME</h2>
 <p> nfcapd &#8211; netflow capture daemon</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>nfcapd [options]</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>nfcapd</code></p>
 <dd>is the netflow capture daemon of the nfdump tools. It reads netflow data from the network and stores it into files. The output file is automatically rotated and renamed every n minutes &#8211; typically 5 min &#8211; according the timestamp YYYYMMddhhmm of the interval e.g. nfcapd.201107110845 contains the data from July 11th 2011 08:45 onward. </dd>
 <p> Netflow version v1, v5, v7 and v9 and IPFIX are transparently supported. </p>

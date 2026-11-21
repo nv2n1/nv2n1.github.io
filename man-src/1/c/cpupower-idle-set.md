@@ -1,5 +1,4 @@
 ---
-
 title: "cpupower-idle-set(1)"
 name: "cpupower-idle-set"
 section: "1"
@@ -12,6 +11,7 @@ description: "cpupower idle-set – Utility to set cpu idle state specific kerne
 <p> cpupower idle-set &#8211; Utility to set cpu idle state specific kernel options</p>
 <h2>SYNTAX</h2>
 <p> cpupower [ -c cpulist ] idle-info [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The cpupower idle-set subcommand allows to set cpu idle, also called cpu sleep state, specific options offered by the kernel. One example is disabling sleep states. This can be handy for power vs performance tuning.</p>
 <h2>OPTIONS</h2>
 <dl>

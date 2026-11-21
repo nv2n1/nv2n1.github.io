@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_transport_set_lowat(3)"
 name: "gnutls_transport_set_lowat"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_transport_set_lowat – Used to set the lowat value in orde
 
 <h2>NAME</h2>
 <p> gnutls_transport_set_lowat &#8211; Used to set the lowat value in order for select to check for pending data.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/gnutls.h">gnutls/gnutls.h</a>&gt;</code> </p>
 <p> <code>void gnutls_transport_set_lowat(gnutls_session_t </code><i>session</i><code>, int </code><i>num</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_transport_set_lowat – Used to set the lowat value in orde
 <dd> is a <code>gnutls_session_t</code> structure.</dd>
 <dt>int num</dt>
 <dd> is the low water value.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Used to set the lowat value in order for select to check if there are pending data to socket buffer. Used only if you have changed the default low water value (default is 1). Normally you will not need that function. This function is only useful if using berkeley style sockets. Otherwise it must be called and set lowat to zero.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bug-gnutls [at] gnu.org&gt;. GnuTLS home page: <a rel="nofollow" href="http://www.gnu.org/software/gnutls/">http://www.gnu.org/software/gnutls/</a> General help using GNU software: <a rel="nofollow" href="http://www.gnu.org/gethelp/">http://www.gnu.org/gethelp/</a></p>

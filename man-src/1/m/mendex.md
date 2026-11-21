@@ -1,5 +1,4 @@
 ---
-
 title: "mendex(1)"
 name: "mendex"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mendex/"
 description: "mendex – Japanese index processor"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mendex &#8211; Japanese index processor </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mendex</code> [-ilqrcgfEJSU] [<code>-s</code><i> sty</i>] [<code>-d</code><i> dic</i>] [<code>-o</code><i> ind</i>] [<code>-t</code><i> log</i>] [<code>-p</code><i> no</i>] [<code>-I</code><i> enc</i>] [<code>&#8211;help</code>] [<code>&#8212;</code>] [<i> idx0 idx1 idx2 &#8230;</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The program <i>mendex</i> is a general purpose hierarchical index generator; it accepts one or more input files (<i>.idx</i>; often produced by a text formatter such as LaTeX), sorts the entries, and produces an output file which can be formatted. It is almost compatible with <i>makeindex</i>, and additional feature for handling readings of kanji words is also available. The formats of the input and output files are specified in a style file. The readings of kanji words can be specified in a dictionary file. The index can have up to three levels (0, 1, and 2) of subitem nesting.</p>
 <h2>OPTIONS</h2>
 <dl>

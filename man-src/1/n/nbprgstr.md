@@ -1,5 +1,4 @@
 ---
-
 title: "nbprgstr(1)"
 name: "nbprgstr"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-nbprgstr/"
 description: "nbp, nbplkup, nbprgstr, nbpunrgstr – access NBP database"
 ---
 
+<h2 class="name">NAME</h2>
+<p> nbp, nbplkup, nbprgstr, nbpunrgstr &#8211; access NBP database </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>nbplkup</code> [-r&nbsp;<wbr><i>maxresponses</i>] [-A&nbsp;<wbr><i>address</i>] [-m&nbsp;<wbr><i>maccodepage</i>] <i>nbpname</i></dt>
 <dt> <code>nbprgstr</code> [-A&nbsp;<wbr><i>address</i>] [-p&nbsp;<wbr><i>port</i>] [-m&nbsp;<wbr><i>maccodepage</i>] <i>nbpname</i></dt>
 <dt> <code>nbpunrgstr</code> [-A&nbsp;<wbr><i>address</i>] [-m&nbsp;<wbr><i>maccodepage</i>] <i>nbpname</i></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>nbprgstr</code></p>
 <dd>registers <i>nbpname</i> with <code><a href="/docs/linux/man/8-atalkd/">atalkd</a></code>(8), at the given <i>port</i>. <code>nbpunrgstr</code> informs <code>atalkd</code> that <i>nbpname</i> is no longer to be advertised. </dd>
 <p> <code>nbplkup</code> displays up to <i>maxresponses</i> (default 1000) entities registered on the AppleTalk internet. <i>nbpname</i> is parsed by <code><a href="/docs/linux/man/3-nbp_name/">nbp_name</a></code>(3). An `<code>=</code>&#8216; for the <i>object</i> or <i>type</i> matches anything, and an `<code>*</code>&#8216; for <i>zone</i> means the local zone. The default values are taken from the <code>NBPLKUP</code> environment variable, parsed as an <i>nbpname</i>.</p>

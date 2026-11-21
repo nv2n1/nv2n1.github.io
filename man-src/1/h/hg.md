@@ -1,5 +1,4 @@
 ---
-
 title: "hg(1)"
 name: "hg"
 section: "1"
@@ -10,7 +9,9 @@ description: "hg – Mercurial source code management system"
 
 <h2>NAME</h2>
 <p> hg &#8211; Mercurial source code management system</p>
+<h2>SYNOPSIS</h2>
 <p> <code>hg</code> <i>command</i> [<i>option</i>]&#8230; [<i>argument</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>hg</code> command provides a command line interface to the Mercurial system.</p>
 <h2>COMMAND ELEMENTS</h2>
 <dl>

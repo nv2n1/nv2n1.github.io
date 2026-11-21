@@ -1,5 +1,4 @@
 ---
-
 title: "jack_iodelay(1)"
 name: "jack_iodelay"
 section: "1"
@@ -10,7 +9,9 @@ description: "jack_iodelay – JACK toolkit client to measure roundtrip latency"
 
 <h2>NAME</h2>
 <p> jack_iodelay &#8211; JACK toolkit client to measure roundtrip latency</p>
+<h2>SYNOPSIS</h2>
 <p> <code>jack_iodelay</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>jack_iodelay</code> will create one input and one output port, and then measures the latency (signal delay) between them. For this to work, the output port must be connected to its input port. The measurement is accurate to a resolution of greater than 1 sample. </p>
 <p> The expected use is to connect jack_iodelay&#8217;s output port to a hardware playback port, then use a physical loopback cable from the corresponding hardware output connector to an input connector, and to connect that corresponding hardware capture port to jack_iodelay&#8217;s input port. This creates a roundtrip that goes through any analog-to-digital and digital-to-analog converters that are present in the audio hardware. </p>
 <p> Although the hardware loopback latency is the expected use, it is also possible to use jack_iodelay to measure the latency along any fully connected signal path, such as those involving other JACK clients. </p>

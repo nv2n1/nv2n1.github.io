@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_gsi_gssapi_constants/"
 description: "Constants –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Constants &#8211; </p>
 <p> Implementation-specific Constants.</p>
 <h3>Enumerations</h3>
 <p> enum <code>globus_gsi_gssapi_error_t</code><br />

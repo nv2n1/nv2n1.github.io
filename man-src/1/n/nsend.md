@@ -1,5 +1,4 @@
 ---
-
 title: "nsend(1)"
 name: "nsend"
 section: "1"
@@ -10,7 +9,9 @@ description: "nsend – Send messages to users or groups"
 
 <h2>NAME</h2>
 <p> nsend &#8211; Send messages to users or groups</p>
+<h2>SYNOPSIS</h2>
 <p> <code>nsend</code> [ <code>-h</code> ] [ <code>-S</code> <i>server</i> ] [ <code>-U</code> <i>user name</i> ] [ <code>-P</code> <i>password</i> | <code>-n</code> ] [ <code>-C</code> ] [ <code>-a</code> ] <code>-i</code> <i>objectID</i> | <code>-c</code> <i>connNum</i>[,<i>&#8230;</i>] | { [ <code>-t</code> <i>recipient type</i> ] <code>-o</code> <i>recipient name</i> | <i>recipient name</i> } <i>message</i> </p>
+<h2>DESCRIPTION</h2>
 <p> With <code>nsend</code>, you can send messages to the user&#8217;s workstations. </p>
 <p> <code>nsend</code> looks up the file <i>$HOME/.nwclient</i> to find a file server, a user name and possibly a password. See <a href="/docs/linux/man/5-nwclient/">nwclient</a>(5) for more information. Please note that the access permissions of <i>.nwclient</i> MUST be 0600, for security reasons. </p>
 <h2>OPTIONS</h2>

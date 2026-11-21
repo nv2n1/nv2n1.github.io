@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_crt_set_authority_info_access(3)"
 name: "gnutls_x509_crt_set_authority_info_access"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_crt_set_authority_info_access – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_set_authority_info_access &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_set_authority_info_access(gnutls_x509_crt_t </code><i>crt</i><code>, int </code><i>what</i><code>, gnutls_datum_t * </code><i>data</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_x509_crt_set_authority_info_access – API function"
 <dd> what data to get, a <code>gnutls_info_access_what_t</code> type.</dd>
 <dt>gnutls_datum_t * data</dt>
 <dd> output data to be freed with <code>gnutls_free()</code>.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function sets the Authority Information Access (AIA) extension, see RFC 5280 section 4.2.2.1 for more information. </p>
 <p> The type of data stored in <i>data</i> is specified via <i>what</i> which should be <code>gnutls_info_access_what_t</code> values. </p>
 <p> If <i>what</i> is <code>GNUTLS_IA_OCSP_URI</code>, <i>data</i> will hold the OCSP URI. If <i>what</i> is <code>GNUTLS_IA_CAISSUERS_URI</code>, <i>data</i> will hold the caIssuers URI.</p>

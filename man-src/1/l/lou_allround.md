@@ -1,5 +1,4 @@
 ---
-
 title: "lou_allround(1)"
 name: "lou_allround"
 section: "1"
@@ -10,7 +9,9 @@ description: "lou_allround – Test every capability of the liblouis library"
 
 <h2>NAME</h2>
 <p> lou_allround &#8211; Test every capability of the liblouis library</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lou_allround</code> [<i>OPTION</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> This program tests every capability of the liblouis library. It is completely interactive.</p>
 <dl>
 <dt><code>-h</code>, <code>&#8211;help</code></dt>

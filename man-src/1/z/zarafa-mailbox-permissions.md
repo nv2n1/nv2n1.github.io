@@ -1,5 +1,4 @@
 ---
-
 title: "zarafa-mailbox-permissions(1)"
 name: "zarafa-mailbox-permissions"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-zarafa-mailbox-permissions/"
 description: "zarafa-mailbox-permissions – Manage mailbox delegate permissions."
 ---
 
+<h2 class="name">NAME</h2>
+<p> zarafa-mailbox-permissions &#8211; Manage mailbox delegate permissions. </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>zarafa-mailbox-permissions</code> <i>ACTION</i> [<i>MAILBOXES</i>&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This script can be used to show delegate permissions and settings for users. The Zarafa server must be running for <code>zarafa-mailbox-permissions</code> to work. </dd>
 <p> You can show delegates and permissions information, and add or update delegate permissions on a mailbox.</p>
 <h2>ACTIONS</h2>

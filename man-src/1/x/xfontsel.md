@@ -1,5 +1,4 @@
 ---
-
 title: "xfontsel(1)"
 name: "xfontsel"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-xfontsel/"
 description: "xfontsel – point and click selection of X11 font names"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xfontsel &#8211; point and click selection of X11 font names </p>
 <h2>SYNTAX</h2>
 <p> <code>xfontsel</code> [-<i>toolkitoption</i> &#8230;] [<code>-pattern </code><i>fontname</i>] [<code>-print</code>] [<code>-sample </code><i>text</i>] [<code>-sample16 </code><i>text16</i>] [<code>-sampleUCS </code><i>textUCS</i>] [<code>-scaled</code>] </p>
+<h2>DESCRIPTION</h2>
 <p> The <i>xfontsel</i> application provides a simple way to display the fonts known to your X server, examine samples of each, and retrieve the X Logical Font Description (&quot;XLFD&quot;) full name for a font. </p>
 <p> If <code>-pattern</code> is not specified, all fonts with XLFD 14-part names will be selectable. To work with only a subset of the fonts, specify <code>-pattern</code> followed by a partially or fully qualified font name; e.g., &#8220;-pattern *medium*&#8221; will select that subset of fonts which contain the string &#8220;medium&#8221; somewhere in their font name. Be careful about escaping wildcard characters in your shell. </p>
 <p> If <code>-print</code> is specified on the command line the selected font specifier will be written to standard output when the <i>quit</i> button is activated. Regardless of whether or not <code>-print</code> was specified, the font specifier may be made the PRIMARY (text) selection by activating the <i>select</i> button. </p>

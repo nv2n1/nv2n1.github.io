@@ -1,5 +1,4 @@
 ---
-
 title: "disco(1)"
 name: "disco"
 section: "1"
@@ -10,7 +9,9 @@ description: "disco – Mono’s Web Service Discovery Tool"
 
 <h2>NAME</h2>
 <p> disco &#8211; Mono&#8217;s Web Service Discovery Tool</p>
+<h2>SYNOPSIS</h2>
 <p> <code>disco</code> [options] url</p>
+<h2>DESCRIPTION</h2>
 <p> <i>disco</i> is a tool for discovering web services and for retireving the documents that describe those services. </p>
 <p> <i>url</i> is the location of a DISCO document, which includes a list of WSDL documents, XML schemas and references to other DISCO documents. </p>
 <p> <i>disco</i> downloads the DISCO document and all referenced documents (unless the <i>-nosave</i> option is specified), and saves them to disk.</p>

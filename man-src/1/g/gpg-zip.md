@@ -1,5 +1,4 @@
 ---
-
 title: "gpg-zip(1)"
 name: "gpg-zip"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-gpg-zip/"
 description: "gpg-zip – encrypt or sign files into an archive"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gpg-zip &#8211; encrypt or sign files into an archive</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gpg-zip</code> [<code>OPTIONS</code>] <i>filename1</i> [<i>filename2, &#8230;</i>] <i>directory1</i> [<i>directory2, &#8230;</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>gpg-zip</code> command. </p>
 <p> <code>gpg-zip</code> IS DEPRECATED. PLEASE USE <a href="/docs/linux/man/1-gpgtar/">gpgtar</a>(1) instead. </p>
 <p> <code>gpg-zip</code> encrypts or signs files into an archive. It is an gpg-ized tar using the same format as PGP&#8217;s PGP Zip. </p>

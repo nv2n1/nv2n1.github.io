@@ -1,5 +1,4 @@
 ---
-
 title: "tv_cat(1)"
 name: "tv_cat"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-tv_cat/"
 description: "tv_cat – Concatenate XMLTV listings files."
 ---
 
+<h2 class="name">NAME</h2>
+<p> tv_cat &#8211; Concatenate XMLTV listings files. </p>
+<h2>SYNOPSIS</h2>
 <p> tv_cat [&#8211;help] [&#8211;utf8] [&#8211;output <font SIZE="-1">FILE</font>] [<font SIZE="-1">FILE&#8230;</font>]</p>
+<h2>DESCRIPTION</h2>
 <p> Read one or more <font SIZE="-1">XMLTV</font> files and write a file to standard ouput whose programmes are the concatenation of the programmes in the input files, and whose channels are the union of the channels in the input files. </p>
 <p> <code>&#8211;output </code><font SIZE="-1"><code>FILE</code></font> write to <font SIZE="-1">FILE</font> rather than standard output </p>
 <p> The treatment of programmes and channels is slightly different because for programmes, the ordering is important (typically programmes are processed or displayed in the same order as they appear in the input) whereas channels are just a set indexed by channel id. There is a warning if channel details clash for the same id. </p>

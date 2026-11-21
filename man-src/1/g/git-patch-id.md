@@ -1,5 +1,4 @@
 ---
-
 title: "git-patch-id(1)"
 name: "git-patch-id"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-patch-id/"
 description: "git-patch-id – Compute unique ID for a patch"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-patch-id &#8211; Compute unique ID for a patch </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git patch - id[--stable | --unstable]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Read a patch from the standard input and compute the patch ID for it. </p>
 <p> A &quot;patch ID&quot; is nothing but a sum of SHA-1 of the file diffs associated with a patch, with whitespace and line numbers ignored. As such, it&#8217;s &quot;reasonably stable&quot;, but at the same time also reasonably unique, i.e., two patches that have the same &quot;patch ID&quot; are almost guaranteed to be the same thing. </p>
 <p> IOW, you can use this thing to look for likely duplicate commits. </p>

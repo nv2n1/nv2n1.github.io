@@ -1,5 +1,4 @@
 ---
-
 title: "davix-put(1)"
 name: "davix-put"
 section: "1"
@@ -10,7 +9,9 @@ description: "davix-put – Upload tool based on libdavix"
 
 <h2>NAME</h2>
 <p> davix-put &#8211; Upload tool based on libdavix</p>
+<h2>SYNOPSIS</h2>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> davix-put [options]&#8230; local_file url</p>
+<h2>DESCRIPTION</h2>
 <p> <code>davix-put</code> is a tool to upload resources to http, Webdav or REST compatible services.<br />
  The command supports the protocol Http (http(s)://), WebDav (dav(s)://) and S3 (s3(s)://). </p>
 <p> Local resources can either be a single file or a collection.<br />

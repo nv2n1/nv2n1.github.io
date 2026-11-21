@@ -1,5 +1,4 @@
 ---
-
 title: "mhfixmsg(1)"
 name: "mhfixmsg"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-mhfixmsg/"
 description: "mhfixmsg – rewrite MIME messages with various transformations"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mhfixmsg &#8211; rewrite MIME messages with various transformations </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mhfixmsg</code> [<i>+folder</i>] [<i>msgs</i> | <i>absolute pathname</i> | -file <i>file</i>] [<code>-decodetext</code></dt>
 <dd>8bit/7bit | <code>-nodecodetext</code>] [<code>-textcharset</code> <i>charset</i> | <code>-notextcharset</code>] [<code>-reformat</code> | <code>-noreformat</code>] [<code>-replacetextplain</code> | <code>-noreplacetextplain</code>] [<code>-fixboundary</code> | <code>-nofixboundary</code>] [<code>-fixcte</code> | <code>-nofixcte</code>] [<code>-outfile</code> <i>outfile</i>] [<code>-rmmproc</code> <i>program</i>] [<code>-normmproc</code>] [<code>-verbose</code> | <code>-noverbose</code>] [<code>-version</code>] [<code>-help</code>]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>mhfixmsg</code> rewrites MIME messages, applying specific transformations such as decoding of MIME-encoded message parts and repairing invalid MIME headers. </p>
 <p> MIME messages are specified in RFC 2045 to RFC 2049 (see <i><a href="/docs/linux/man/1-mhbuild/">mhbuild</a></i>(1)). The <code>mhlist</code> command is invaluable for viewing the content structure of MIME messages. <code>mhfixmsg</code> passes non-MIME messages through without any transformations. If no transformations apply to a MIME message, the original message or file is not modified or removed. </p>
 <p> The <code>-decodetext</code> switch enables a transformation to decode each base64 and quoted-printable text message part to the selected 8bit or 7bit encoding. If 7bit is selected for a base64 part but it will only fit 8bit, as defined by RFC 2045, then it will be decoded to 8bit quoted-printable. Otherwise, if the decoded text would not fit the selected encoding, the part is not decoded (and a message will be displayed if <code>-verbose</code> is enabled). </p>

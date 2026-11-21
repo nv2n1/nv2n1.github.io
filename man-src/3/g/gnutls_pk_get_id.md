@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pk_get_id(3)"
 name: "gnutls_pk_get_id"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_pk_get_id – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pk_get_id &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>gnutls_pk_algorithm_t gnutls_pk_get_id(const char * </code><i>name</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>const char * name</dt>
 <dd> is a string containing a public key algorithm name.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Convert a string to a <code>gnutls_pk_algorithm_t</code> value. The names are compared in a case insensitive way. For example, gnutls_pk_get_id(&quot;RSA&quot;) will return <code>GNUTLS_PK_RSA</code>.</p>
 <h2>RETURNS</h2>
 <p> a <code>gnutls_pk_algorithm_t</code> id of the specified public key algorithm string, or <code>GNUTLS_PK_UNKNOWN</code> on failures.</p>

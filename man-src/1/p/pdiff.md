@@ -1,5 +1,4 @@
 ---
-
 title: "pdiff(1)"
 name: "pdiff"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pdiff/"
 description: "pdiff – produce a pretty comparison between files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pdiff &#8211; produce a pretty comparison between files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pdiff</code> <i>FILE1 FILE2 </i>[<i>&#8212; A2PS-OPTIONS</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> Pretty print the differences between FILE1 and FILE2.</p>
 <h2>OPTIONS</h2>
 <dl>

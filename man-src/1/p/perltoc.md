@@ -1,5 +1,4 @@
 ---
-
 title: "perltoc(1)"
 name: "perltoc"
 section: "1"
@@ -7,8 +6,8 @@ letter: "p"
 url: "/docs/linux/man/1-perltoc/"
 description: "perltoc – perl documentation table of contents"
 ---
-
 <p>perltoc &#8211; perl documentation table of contents </p>
+<h2>DESCRIPTION</h2>
 <p> This page provides a brief table of contents for the rest of the Perl documentation set. It is meant to be scanned quickly or grepped through to locate the proper section you&#8217;re looking for.  </p>
 <h2>BASIC DOCUMENTATION</h2>
 <h3>perl - The Perl 5 language interpreter</h3>

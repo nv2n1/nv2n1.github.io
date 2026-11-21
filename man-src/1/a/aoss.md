@@ -1,5 +1,4 @@
 ---
-
 title: "aoss(1)"
 name: "aoss"
 section: "1"
@@ -10,7 +9,9 @@ description: "aoss – Wrapper script to facilitate use of the ALSA OSS compatib
 
 <h2>NAME</h2>
 <p> aoss &#8211; Wrapper script to facilitate use of the ALSA OSS compatibility library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>aoss</code> [-32] <i>osscommand</i> [arguments] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>aoss</code> is a simple wrapper script which facilitates the use of the ALSA OSS compatibility library. It just sets the appropriate LD_PRELOAD path and then runs the command. </p>
 <p> This is useful in cases where routing settings (which can be made in your .asoundrc file) need to be applied to commands that use the OSS API. </p>
 <p> Examples of asoundrc configuration: </p>

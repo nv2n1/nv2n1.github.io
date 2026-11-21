@@ -1,5 +1,4 @@
 ---
-
 title: "ppmtoxpm(1)"
 name: "ppmtoxpm"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-ppmtoxpm/"
 description: "ppmtoxpm – convert a portable pixmap into an X11 pixmap"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ppmtoxpm &#8211; convert a portable pixmap into an X11 pixmap</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ppmtoxpm </code> [<code>-name=</code><i>xpmname</i>] [<code>-rgb=</code><i>rgb-textfile</i>] [<code>-alphamask=</code><i>pgmfile</i>] [<i>ppmfile</i>] </p>
 <p> Minimum unique abbrevations are acceptable. </p>
+<h2>DESCRIPTION</h2>
 <p> Reads a portable pixmap as input. Produces X11 pixmap (version 3) as output which can be loaded directly by the XPM library. </p>
 <p> For example, to convert the file &quot;dot&quot; (found in /usr/include/X11/bitmaps), from xbm to xpm one could specify</p>
 <dl>

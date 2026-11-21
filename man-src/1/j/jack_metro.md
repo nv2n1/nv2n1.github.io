@@ -1,5 +1,4 @@
 ---
-
 title: "jack_metro(1)"
 name: "jack_metro"
 section: "1"
@@ -10,7 +9,9 @@ description: "jack_metro – JACK toolkit metronome"
 
 <h2>NAME</h2>
 <p> jack_metro &#8211; JACK toolkit metronome</p>
+<h2>SYNOPSIS</h2>
 <p> <code>jack_metro</code> [ <i>-n</i> name ] [ <i>-f</i> hz ] [ <i>-D</i> msecs ] [<i>-a</i> % ] [ <i>-d</i> % ] <i>-b</i> bpm</p>
+<h2>DESCRIPTION</h2>
 <p> <code>jack_metro</code> is a simple metronome for JACK. It generates a synthetic &quot;tick&quot; sound for every beat. Note that is does <code>not</code> connect its output port by default &#8211; to hear the sound it makes you must connect them using some other tool.</p>
 <h2>OPTIONS</h2>
 <dl>

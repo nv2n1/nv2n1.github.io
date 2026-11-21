@@ -1,5 +1,4 @@
 ---
-
 title: "digitemp(1)"
 name: "digitemp"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-digitemp/"
 description: "digitemp – program to read from 1-wire temperature sensors."
 ---
 
+<h2 class="name">NAME</h2>
+<p> digitemp &#8211; program to read from 1-wire temperature sensors. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>digitemp</code> [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> DigiTemp uses the Dallas 1-wire bus to read temperatures from digital sensors attached to a serial port adapter. It handles initializing the bus, searching for attached devices, reading devices and custom log strings. It suports the following temperature devices: DS1820, DS18S20, DS18B20, DS1822 </p>
 <p> It also handles the DS2406 1-wire hub switches, and DS2422 and DS2423 counters. </p>
 <p> DigiTemp uses either the DS9097 passive serial port adapter, or the DS2480B based DS9097U adapter. 1-wire adapters from ibuttonlink.com, such as the Link45 are also supported.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "mountpoint(1)"
 name: "mountpoint"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mountpoint/"
 description: "mountpoint – see if a directory or file is a mountpoint"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mountpoint &#8211; see if a directory or file is a mountpoint </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mountpoint</code> [<code>-d</code>|<code>-q</code>] <i>directory</i>|<i>file</i> </p>
 <p> <code>mountpoint</code> <code>-x</code> <i>device</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>mountpoint</code> checks whether the given <i>directory</i> or <i>file</i> is mentioned in the <i>/proc/self/mountinfo</i> file.</p>
 <h2>OPTIONS</h2>
 <p> <code>-d</code>, <code>&#8211;fs-devno</code></p>

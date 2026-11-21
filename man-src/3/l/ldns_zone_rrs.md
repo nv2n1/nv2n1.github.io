@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_zone_rrs(3)"
 name: "ldns_zone_rrs"
 section: "3"
@@ -10,11 +9,13 @@ description: "ldns_zone_rrs, ldns_zone_soa"
 
 <h2>NAME</h2>
 <p> ldns_zone_rrs, ldns_zone_soa </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_rr_list * ldns_zone_rrs(const ldns_zone *z); </p>
 <p> ldns_rr * ldns_zone_soa(const ldns_zone *z); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_zone_rrs</i>()</dt>
 <dd>Get a list of a zone&#8217;s content. Note that the SOA isn&#8217;t included in this list. You need to get the with ldns_zone_soa. .br <code>z</code>: the zone to read from .br Returns the rrs from this zone</dd></dl>

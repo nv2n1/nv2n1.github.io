@@ -1,5 +1,4 @@
 ---
-
 title: "dvipdft(1)"
 name: "dvipdft"
 section: "1"
@@ -10,7 +9,9 @@ description: "dvipdft – create thumbnail images for use with dvipdfm"
 
 <h2>NAME</h2>
 <p> dvipdft &#8211; create thumbnail images for use with dvipdfm </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dvipdft</code> [<i>DVIPDFM-OPTIONS</i>&#8230;] <i>filename</i>[<code>.dvi</code>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>dvipdft</code> creates thumbnail pictures of the pages in your file and subsequently runs dvipdfm to create a PDF file with these thumbnails. </p>
 <h2>OPTIONS</h2>
 <dl>

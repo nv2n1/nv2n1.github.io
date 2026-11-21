@@ -1,5 +1,4 @@
 ---
-
 title: "euscale-delete-launch-config(1)"
 name: "euscale-delete-launch-config"
 section: "1"
@@ -10,10 +9,12 @@ description: "euscale-delete-launch-config – Delete an auto-scaling instance l
 
 <h2>NAME</h2>
 <p> euscale-delete-launch-config &#8211; Delete an auto-scaling instance launch configuration</p>
+<h2>SYNOPSIS</h2>
 <p> euscale-delete-launch-config [-U URL] [&#8211;region USER [at] REGION]</p>
 <dl>
 <dt>[-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] LAUNCHCONFIG</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Delete an auto-scaling instance launch configuration</p>
 <h3>positional arguments:</h3>
 <dl>

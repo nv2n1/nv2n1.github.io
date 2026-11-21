@@ -1,5 +1,4 @@
 ---
-
 title: "ntsc-cc(1)"
 name: "ntsc-cc"
 section: "1"
@@ -10,7 +9,9 @@ description: "ntsc-cc – closed caption decoder"
 
 <h2>NAME</h2>
 <p> ntsc-cc &#8211; closed caption decoder</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ntsc-cc [ options ]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>ntsc-cc</code> reads vbi data from /dev/vbi0 and decodes the enclosed cc data. Start it with &#8216;-h&#8217; to get a list of cmd line options.</p>
 <h2>SEE ALSO</h2>
 <p> alevt(1)</p>

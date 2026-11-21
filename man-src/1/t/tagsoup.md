@@ -1,5 +1,4 @@
 ---
-
 title: "tagsoup(1)"
 name: "tagsoup"
 section: "1"
@@ -10,7 +9,9 @@ description: "tagsoup – convert nasty, ugly HTML to clean XHTML"
 
 <h2>NAME</h2>
 <p> tagsoup &#8211; convert nasty, ugly HTML to clean XHTML</p>
+<h2>SYNOPSIS</h2>
 <p> <code>java -jar tagsoup</code> [ <i>options</i> ] [ <i>files</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> Rectify arbitrary HTML into clean XHTML, using a tailored description of HTML. The output will be well-formed XML, but not necessarily <i>valid</i> XHTML. </p>
 <dl>
 <dt><code>&#8211;files</code></dt>

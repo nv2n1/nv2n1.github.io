@@ -1,5 +1,4 @@
 ---
-
 title: "mcookie(1)"
 name: "mcookie"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mcookie/"
 description: "mcookie – generate magic cookies for xauth"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mcookie &#8211; generate magic cookies for xauth </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mcookie</code> [options]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>mcookie</code> generates a 128-bit random hexadecimal number for use with the X authority system. Typical usage:</p>
 <dl>
 <dt>

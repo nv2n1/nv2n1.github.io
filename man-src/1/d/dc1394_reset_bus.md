@@ -1,5 +1,4 @@
 ---
-
 title: "dc1394_reset_bus(1)"
 name: "dc1394_reset_bus"
 section: "1"
@@ -10,7 +9,9 @@ description: "dc1394_reset_bus – resets the IEEE1394 bus"
 
 <h2>NAME</h2>
 <p> dc1394_reset_bus &#8211; resets the IEEE1394 bus</p>
+<h2>SYNOPSIS</h2>
 <p> <code>dc1394_reset_bus</code></p>
+<h2>DESCRIPTION</h2>
 <p> Finds the 1394 bus of the first camera found and resets it</p>
 <h2>OPTIONS</h2>
 <p> There are no command-line options for this program. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "perlnewmod(1)"
 name: "perlnewmod"
 section: "1"
@@ -7,9 +6,14 @@ letter: "p"
 url: "/docs/linux/man/1-perlnewmod/"
 ---
 
-perlnewmod - preparing a new module for distribution 
+<h2 class="name">NAME</h2>
+ 
 
-This document gives you some suggestions about how to go about writing Perl modules, preparing them for distribution, and making them available via <font SIZE="-1">CPAN.</font> 
+ perlnewmod - preparing a new module for distribution 
+
+<h2>DESCRIPTION</h2>
+
+ This document gives you some suggestions about how to go about writing Perl modules, preparing them for distribution, and making them available via <font SIZE="-1">CPAN.</font> 
 
  One of the things that makes Perl really powerful is the fact that Perl hackers tend to want to share the solutions to problems they've faced, so you and I don't have to battle with the same problem again. 
 

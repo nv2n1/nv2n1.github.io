@@ -1,5 +1,4 @@
 ---
-
 title: "git-index-pack(1)"
 name: "git-index-pack"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-index-pack/"
 description: "git-index-pack – Build pack index file for an existing packed archive"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-index-pack &#8211; Build pack index file for an existing packed archive </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git index - pack[-v][-o&lt;index - file&gt;][--[no - ] rev - index]&lt;pack - file&gt; git index - pack-- stdin[--fix - thin][--keep][-v][-o&lt;index - file&gt;][--[no - ] rev - index][&lt;pack - file&gt;]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Reads a packed archive (.pack) from the specified file, and builds a pack index file (.idx) for it. Optionally writes a reverse-index (.rev) for the specified pack. The packed archive together with the pack index can then be placed in the objects/pack/ directory of a Git repository.</p>
 <h2>OPTIONS</h2>
 <p> -v</p>

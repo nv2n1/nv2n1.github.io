@@ -1,5 +1,4 @@
 ---
-
 title: "neon-config(1)"
 name: "neon-config"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-neon-config/"
 description: "neon-config – script providing information about installed copy of neon library"
 ---
 
+<h2 class="name">NAME</h2>
+<p> neon-config &#8211; script providing information about installed copy of neon library </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>neon-config</code> [<code>&#8211;prefix</code>] [[<code>&#8211;cflags</code>] | [<code>&#8211;libs</code>] | [<code>&#8211;la-file</code>] | [<code>&#8211;support</code>&nbsp;<wbr><i>feature</i>] | [<code>&#8211;help</code>] | [<code>&#8211;version</code>]]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>neon-config</code> script provides information about an installed copy of the neon library. The <code>&#8211;cflags</code> and <code>&#8211;libs</code> options instruct how to compile and link an application against the library; the <code>&#8211;version</code> and <code>&#8211;support</code> options can help determine whether the library meets the applications requirements.</dd>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;cflags</code></p>

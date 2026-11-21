@@ -1,5 +1,4 @@
 ---
-
 title: "globus_net_manager_s(3)"
 name: "globus_net_manager_s"
 section: "3"
@@ -8,7 +7,10 @@ url: "/docs/linux/man/3-globus_net_manager_s/"
 description: "globus_net_manager_s –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> globus_net_manager_s &#8211; </p>
 <p> Net Manager Definition.</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;globus_net_manager.h&gt;</p>
 <h3>Data Fields</h3>
 <p> const char * <code>name</code> </p>

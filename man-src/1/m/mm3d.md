@@ -1,5 +1,4 @@
 ---
-
 title: "mm3d(1)"
 name: "mm3d"
 section: "1"
@@ -10,7 +9,9 @@ description: "mm3d – Misfit Model 3D"
 
 <h2>NAME</h2>
 <p> mm3d &#8211; Misfit Model 3D</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mm3d</code> [<i>options</i>]<i> files</i>&#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>mm3d</code> command. </p>
 <p> <code>mm3d</code> is an OpenGL-based 3D model editor that works with triangle-based models. It supports multi-level undo, skeletal animations, simple texturing, scripting, command-line batch processing, and a plugin system for adding new model and image filters. Complete online help is included. It is designed to be easy to use and easy to extend with plugins and scripts.</p>
 <h2>OPTIONS</h2>

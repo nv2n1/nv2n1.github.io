@@ -1,5 +1,4 @@
 ---
-
 title: "forward_(3)"
 name: "forward_"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-forward_/"
 description: "QuantLib::BlackCalculator – Black 1976 calculator class."
 ---
 
+<h2 class="name">NAME</h2>
+<p> QuantLib::BlackCalculator &#8211; Black 1976 calculator class. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/pricingengines/blackcalculator.hpp&gt; </p>
 <p> Inherited by <code>BlackScholesCalculator</code>. </p>
 <h3>Public Member Functions</h3>

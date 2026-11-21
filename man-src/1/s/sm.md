@@ -1,5 +1,4 @@
 ---
-
 title: "sm(1)"
 name: "sm"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-sm/"
 description: "sm – Command-line interface to the INN storage manager"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sm &#8211; Command-line interface to the INN storage manager </p>
+<h2>SYNOPSIS</h2>
 <p> <code>sm</code> [<code>-cdHiqRrSs</code>] [<i>token</i> &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> The <font SIZE="-1">INN</font> storage manager is the subsystem that stores and keeps track of all of the articles and what storage backend they&#8217;re in. All stored articles are assigned a storage <font SIZE="-1">API</font> token. <code>sm</code> is a command-line interface to that storage manager, primarily used to retrieve articles by those tokens but also to perform other operations on the storage subsystem. </p>
 <p> <i>token</i> is the token of an article (the same thing that&#8217;s returned by <code>grephistory</code> or stored in the <i>history</i> file). It looks something like: </p>
 <pre>

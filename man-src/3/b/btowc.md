@@ -1,5 +1,4 @@
 ---
-
 title: "btowc(3)"
 name: "btowc"
 section: "3"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/3-btowc/"
 description: "btowc – convert single byte to wide character"
 ---
 
+<h2 class="name">NAME</h2>
+<p> btowc &#8211; convert single byte to wide character </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;wchar.h&gt;
 wint_t btowc(int c);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>btowc</code>() function converts <i>c</i>, interpreted as a multibyte sequence of length 1, starting in the initial shift state, to a wide character and returns it. If <i>c</i> is <code>EOF</code> or not a valid multibyte sequence of length 1, the <code>btowc</code>() function returns <code>WEOF</code>.</p>
 <h2>RETURN VALUE</h2>
 <p> The <code>btowc</code>() function returns the wide character converted from the single byte <i>c</i>. If <i>c</i> is <code>EOF</code> or not a valid multibyte sequence of length 1, it returns <code>WEOF</code>.</p>

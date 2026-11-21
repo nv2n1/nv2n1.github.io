@@ -1,5 +1,4 @@
 ---
-
 title: "stoken(1)"
 name: "stoken"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-stoken/"
 description: "stoken – software token for cryptographic authentication"
 ---
 
+<h2 class="name">NAME</h2>
+<p> stoken &#8211; software token for cryptographic authentication </p>
+<h2>SYNOPSIS</h2>
 <p> <code>stoken</code> [<code>tokencode</code>] [<code>&#8211;stdin</code>] [<code>&#8211;force</code>] [<code>&#8211;next</code>] [<i>opts</i>] </p>
 <p> <code>stoken</code> <code>import</code> {<code>&#8211;file=</code><i>file</i> | <code>&#8211;token=</code><i>token_string</i>} [<code>&#8211;force</code>] [<i>opts</i>] </p>
 <p> <code>stoken</code> <code>setpin</code> [<i>opts</i>] </p>
@@ -17,6 +19,7 @@ description: "stoken – software token for cryptographic authentication"
 <p> <code>stoken</code> <code>issue</code> [&#8211;<code>template</code>=<i>file</i>] </p>
 <p> <code>stoken</code> <code>help</code> </p>
 <p> <code>stoken</code> <code>version</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>stoken</code> is a software token compatible with RSA SecurID 128-bit (AES) tokens. The command-line interface provides facilities for importing new tokens, displaying the current tokencode, encrypting the seed with a user-specified password, storing the user&#8217;s PIN alongside the token, and viewing or exporting the token data.</p>
 <h2>BASIC USAGE</h2>
 <p> Use <code>stoken import</code> to decode a token string and write it into <i>~/.stokenrc</i>. This may prompt for a device ID and/or password, depending on what options your administrator used to create the token. The token string can be provided on the command line, or read from a text file. </p>

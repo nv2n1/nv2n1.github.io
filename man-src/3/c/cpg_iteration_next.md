@@ -1,5 +1,4 @@
 ---
-
 title: "cpg_iteration_next(3)"
 name: "cpg_iteration_next"
 section: "3"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/3-cpg_iteration_next/"
 description: "cpg_iteration_next – Return next item in iteration of CPG"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cpg_iteration_next &#8211; Return next item in iteration of CPG</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cpg.h&gt;</code> </p>
 <p> <code>cs_error_t cpg_iteration_next (cpg_iteration_handle_t </code><i>handle</i><code>, struct cpg_iteration_description_t *</code><i>description</i><code>);</code> </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>cpg_iter_next</code> function is used to get next value in iteration. The <i>handle</i> argument is iterator handle obtained by <code>cpg_iteration_initalize(3)</code> function. <i>description</i> is pointer to structure with following definition:</p>
 <dl>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_openpgp_crt_verify_ring(3)"
 name: "gnutls_openpgp_crt_verify_ring"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_openpgp_crt_verify_ring – API function"
 
 <h2>NAME</h2>
 <p> gnutls_openpgp_crt_verify_ring &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>
 <p> <code>int gnutls_openpgp_crt_verify_ring(gnutls_openpgp_crt_t </code><i>key</i><code>, gnutls_openpgp_keyring_t </code><i>keyring</i><code>, unsigned int </code><i>flags</i><code>, unsigned int * </code><i>verify</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,6 +22,7 @@ description: "gnutls_openpgp_crt_verify_ring – API function"
 <dd> unused (should be 0)</dd>
 <dt>unsigned int * verify</dt>
 <dd> will hold the certificate verification output.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Verify all signatures in the key, using the given set of keys (keyring). </p>
 <p> The key verification output will be put in <i>verify</i> and will be one or more of the <code>gnutls_certificate_status_t</code> enumerated elements bitwise or&#8217;d. </p>
 <p> Note that this function does not verify using any &quot;web of trust&quot;. You may use GnuPG for that purpose, or any other external PGP application.</p>

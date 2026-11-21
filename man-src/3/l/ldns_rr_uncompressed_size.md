@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_rr_uncompressed_size(3)"
 name: "ldns_rr_uncompressed_size"
 section: "3"
@@ -10,10 +9,12 @@ description: "ldns_rr_uncompressed_size"
 
 <h2>NAME</h2>
 <p> ldns_rr_uncompressed_size </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> size_t ldns_rr_uncompressed_size(const ldns_rr *r); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_rr_uncompressed_size</i>()</dt>
 <dd>calculates the uncompressed size of an RR. .br <code>r</code>: the rr to operate on .br Returns size of the rr</dd></dl>

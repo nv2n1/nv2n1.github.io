@@ -1,5 +1,4 @@
 ---
-
 title: "switch(1)"
 name: "switch"
 section: "1"
@@ -7,7 +6,10 @@ letter: "s"
 url: "/docs/linux/man/1-switch/"
 ---
 
-switch - conditionally execute a block of commands
+<h2 class="name">NAME</h2>
+ 
+
+ switch - conditionally execute a block of commands
 
 <h3>Synopsis</h3>
 

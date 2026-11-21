@@ -1,5 +1,4 @@
 ---
-
 title: "urxvt256c-ml-background(1)"
 name: "urxvt256c-ml-background"
 section: "1"
@@ -7,9 +6,14 @@ letter: "u"
 url: "/docs/linux/man/1-urxvt256c-ml-background/"
 ---
 
-background - manage terminal background 
+<h2 class="name">NAME</h2>
+ 
 
-<pre>
+ background - manage terminal background 
+
+<h2>SYNOPSIS</h2>
+
+ <pre>
    urxvt --background-expr 'background expression'
          --background-border
          --background-interval seconds
@@ -47,7 +51,9 @@ background - manage terminal background
    rootalign keep { blur 10, root }
 </pre>
 
-This extension manages the terminal background by creating a picture that is behind the text, replacing the normal background colour. 
+<h2>DESCRIPTION</h2>
+
+ This extension manages the terminal background by creating a picture that is behind the text, replacing the normal background colour. 
 
  It does so by evaluating a Perl expression that <i>calculates</i> the image on the fly, for example, by grabbing the root background or loading a file. 
 

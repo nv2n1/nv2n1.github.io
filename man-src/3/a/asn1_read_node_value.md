@@ -1,5 +1,4 @@
 ---
-
 title: "asn1_read_node_value(3)"
 name: "asn1_read_node_value"
 section: "3"
@@ -10,6 +9,7 @@ description: "asn1_read_node_value – API function"
 
 <h2>NAME</h2>
 <p> asn1_read_node_value &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>
 <p> <code>int asn1_read_node_value(asn1_node </code><i>node</i><code>, asn1_data_node_st * </code><i>data</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "asn1_read_node_value – API function"
 <dd> pointer to a node.</dd>
 <dt>asn1_data_node_st * data</dt>
 <dd> a point to a asn1_data_node_st</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Returns the value a data node inside a asn1_node structure. The data returned should be handled as constant values.</p>
 <h2>RETURNS</h2>
 <p> <code>ASN1_SUCCESS</code> if the node exists.</p>

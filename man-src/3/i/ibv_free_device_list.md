@@ -1,5 +1,4 @@
 ---
-
 title: "ibv_free_device_list(3)"
 name: "ibv_free_device_list"
 section: "3"
@@ -7,7 +6,14 @@ letter: "i"
 url: "/docs/linux/man/3-ibv_free_device_list/"
 ---
 
-ibv_get_device_list, ibv_free_device_list - get and release list of available RDMA devices 
+<h2 class="name">NAME</h2>
+ 
+
+ 
+
+ ibv_get_device_list, ibv_free_device_list - get and release list of available RDMA devices 
+
+<h2>SYNOPSIS</h2>
 
 <dl>
 <dt>
@@ -17,7 +23,11 @@ struct ibv_device **ibv_get_device_list(int *num_devices);
 void ibv_free_device_list(struct ibv_device **list);
 </code></pre></dd></dl>
 
-ibv_get_device_list() returns a NULL-terminated array of RDMA devices currently available. The argument num_devices is optional; if not NULL, it is set to the number of devices returned in the array. 
+<h2>DESCRIPTION</h2>
+
+ 
+
+ ibv_get_device_list() returns a NULL-terminated array of RDMA devices currently available. The argument num_devices is optional; if not NULL, it is set to the number of devices returned in the array. 
 
  ibv_free_device_list() frees the array of devices list returned by ibv_get_device_list().
 

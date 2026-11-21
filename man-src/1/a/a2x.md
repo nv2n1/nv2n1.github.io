@@ -1,5 +1,4 @@
 ---
-
 title: "a2x(1)"
 name: "a2x"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-a2x/"
 description: "a2x – A toolchain manager for AsciiDoc (converts Asciidoc text files to other file formats)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> a2x &#8211; A toolchain manager for AsciiDoc (converts Asciidoc text files to other file formats) </p>
+<h2>SYNOPSIS</h2>
 <p> <code>a2x</code> [<i>OPTIONS</i>] <i>SOURCE_FILE</i></p>
+<h2>DESCRIPTION</h2>
 <p> A DocBook toolchain manager that translates an AsciiDoc text file <i>SOURCE_FILE</i> to PDF, EPUB, DVI, PS, LaTeX, XHTML (single page or chunked), man page, HTML Help or plain text formats using <i><a href="/docs/linux/man/1-asciidoc/">asciidoc</a>(1)</i> and other applications (see REQUISITES section). <i>SOURCE_FILE</i> can also be a DocBook file with an .xml extension.</p>
 <h2>OPTIONS</h2>
 <p> <code>-a, &#8211;attribute</code>=<i>ATTRIBUTE</i></p>

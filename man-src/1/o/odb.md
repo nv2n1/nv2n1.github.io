@@ -1,5 +1,4 @@
 ---
-
 title: "odb(1)"
 name: "odb"
 section: "1"
@@ -10,7 +9,9 @@ description: "odb – object-relational mapping (ORM) compiler for C++"
 
 <h2>NAME</h2>
 <p> odb &#8211; object-relational mapping (ORM) compiler for C++</p>
+<h2>SYNOPSIS</h2>
 <p> <code>odb</code> <code>[</code> <i>options</i> <code>]</code> <i>file</i> <code>[</code> <i>file&#8230;</i> <code>]</code></p>
+<h2>DESCRIPTION</h2>
 <p> Given a set of C++ classes in a header file, <code>odb</code> generates C++ code that allows you to persist, query, and update objects of these classes in a relational database (RDBMS). The relational database that the generated code should target is specified with the required <code>&#8211;database</code> option (see below). </p>
 <p> For an input file in the form <code>name.hxx</code> (other file extensions can be used instead of <code>.hxx</code>), in the single-database mode (the default), the generated C++ files by default have the following names: <code>name-odb.hxx</code> (header file), <code>name-odb.ixx</code> (inline file), and <code>name-odb.cxx</code> (source file). Additionally, if the <code>&#8211;generate-schema</code> option is specified and the <code>sql</code> schema format is requested (see <code>&#8211;schema-format</code>), the <code>name.sql</code> database schema file is generated. If the <code>separate</code> schema format is requested, the database creation code is generated into the separate <code>name-schema.cxx</code> file. </p>
 <p> In the multi-database mode (see the <code>&#8211;multi-database</code> option below), the generated files corresponding to the <code>common</code> database have the same names as in the single-database mode. For other databases, the file names include the database name: <code>name-odb-</code><i>db</i><code>.hxx</code>, <code>name-odb-</code><i>db</i><code>.ixx</code>, <code>name-odb-</code><i>db</i><code>.cxx</code>, <code>name-</code><i>db</i><code>.sql</code>, and <code>name-schema-</code><i>db</i><code>.cxx</code> (where <i>db</i> is the database name).</p>

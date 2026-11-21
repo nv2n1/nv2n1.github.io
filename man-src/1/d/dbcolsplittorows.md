@@ -1,5 +1,4 @@
 ---
-
 title: "dbcolsplittorows(1)"
 name: "dbcolsplittorows"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dbcolsplittorows/"
 description: "dbcolsplittorows – split an existing column into multiple new rows"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dbcolsplittorows &#8211; split an existing column into multiple new rows </p>
+<h2>SYNOPSIS</h2>
 <p> dbcolsplittorows [-C ElementSeperator] [-e null] [-E] [-N enumerated-name] column [column&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> Split column into pieces, outputting one row for each piece. </p>
 <p> By default, any empty fields are ignored. If an empty field value is given with -e, then they produce output. </p>
 <p> When a null value is given, empty fields at the beginning and end of lines are suppressed (like perl split). Unlike perl, if <font SIZE="-1">ALL</font> fields are empty, we generate one (and not zero) empty fields.</p>

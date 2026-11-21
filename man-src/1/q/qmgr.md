@@ -1,5 +1,4 @@
 ---
-
 title: "qmgr(1)"
 name: "qmgr"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-qmgr/"
 description: "qmgr – pbs batch system manager"
 ---
 
+<h2 class="name">NAME</h2>
+<p> qmgr &#8211; pbs batch system manager </p>
+<h2>SYNOPSIS</h2>
 <p> qmgr [-a] [-c command] [-e] [-n] [-z] [server&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>qmgr</code> command provides an administrator interface to the batch system. </p>
 <p> The command reads directives from standard input. The syntax of each directive is checked and the appropriate request is sent to the batch server or servers. </p>
 <p> The list or print subcommands of qmgr can be executed by general users. Creating or deleting a queue requries PBS Manager privilege. Setting or unsetting server or queue attributes requires PBS Operator or Manager privilege.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "wimlib-imagex-unmount(1)"
 name: "wimlib-imagex-unmount"
 section: "1"
@@ -10,9 +9,11 @@ description: "wimlib-imagex-mount, wimlib-imagex-mountrw, wimlib-imagex-unmount 
 
 <h2>NAME</h2>
 <p> wimlib-imagex-mount, wimlib-imagex-mountrw, wimlib-imagex-unmount &#8211; Mount and unmount an image from a WIM archive</p>
+<h2>SYNOPSIS</h2>
 <p> <code>wimlib-imagex mount</code> <i>WIMFILE</i> [<i>IMAGE</i>] <i>DIRECTORY</i> [<i>OPTION</i>&#8230;]<br />
  <code>wimlib-imagex mountrw</code> <i>WIMFILE</i> [<i>IMAGE</i>] <i>DIRECTORY</i> [<i>OPTION</i>&#8230;]<br />
  <code>wimlib-imagex unmount</code> <i>DIRECTORY</i> [<i>OPTION</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> On Linux-based systems, the <code>wimlib-imagex mount</code> and <code>wimlib-imagex mountrw</code> commands will mount the image in the Windows Imaging (WIM) file <i>WIMFILE</i> specified by <i>IMAGE</i> on the directory <i>DIRECTORY</i> using FUSE (Filesystem in Userspace). <code>wimlib-imagex mount</code> will mount the image read-only, while <code>wimlib-imagex mountrw</code> will mount the image read-write. These commands are also available as simply <code>wimmount</code>, <code>wimmountrw</code>, and <code>wimunmount</code> if the appropriate hard links are installed. </p>
 <p> <i>IMAGE</i> may be a 1-based index of the image in the WIM to mount, or it may be the name of an image in the WIM. Use the <code>wimlib-imagex info</code> (1) command to see the available images in the WIM. <i>IMAGE</i> may be omitted if <i>WIMFILE</i> contains only one image. </p>
 <p> The WIM image can be unmounted using the <code>wimlib-imagex unmount</code> command. Changes made to a WIM mounted read-write will be discarded unless the <code>&#8211;commit</code> flag is provided to <code>wimlib-imagex unmount</code>.</p>

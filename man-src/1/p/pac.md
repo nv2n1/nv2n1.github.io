@@ -1,5 +1,4 @@
 ---
-
 title: "pac(1)"
 name: "pac"
 section: "1"
@@ -10,7 +9,9 @@ description: "pac – Perl Auto Connector"
 
 <h2>NAME</h2>
 <p> pac &#8211; Perl Auto Connector</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pac [-start_tray]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>pac</code> is a (simple?) GUI to manage/launch connections to remote machines with: </p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&#8211; Configurable [Pre|Post]-connection local commands execution.</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&#8211; Configurable list of macros (commands) to send to connected client.</p>

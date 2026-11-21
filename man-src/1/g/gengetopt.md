@@ -1,5 +1,4 @@
 ---
-
 title: "gengetopt(1)"
 name: "gengetopt"
 section: "1"
@@ -10,7 +9,9 @@ description: "gengetopt – manual page for gengetopt 2.22.6"
 
 <h2>NAME</h2>
 <p> gengetopt &#8211; manual page for gengetopt 2.22.6</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gengetopt</code> [<i>OPTIONS</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> GNU gengetopt 2.22.6 </p>
 <p> This program generates a C function that uses getopt_long function to parse the command line options, validate them and fill a struct.</p>
 <dl>

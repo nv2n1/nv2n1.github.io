@@ -1,5 +1,4 @@
 ---
-
 title: "gpointing-device-settings(1)"
 name: "gpointing-device-settings"
 section: "1"
@@ -10,7 +9,9 @@ description: "gpointing-device-settings – program to configure pointing device
 
 <h2>NAME</h2>
 <p> gpointing-device-settings &#8211; program to configure pointing devices</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gpointing-device-settings</code> [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>gpointing-device-settings</code> command. </p>
 <p> <code>gpointing-device-settings</code> is a program that allow you to control pointing devices in X session.</p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "zshall(1)"
 name: "zshall"
 section: "1"
@@ -8,6 +7,8 @@ url: "/docs/linux/man/1-zshall/"
 description: "zshall – the Z shell meta-man page"
 ---
 
+<h2 class="name">NAME</h2>
+<p> zshall &#8211; the Z shell meta-man page </p>
 <h2>OVERVIEW</h2>
 <p> Because zsh contains many features, the zsh manual has been split into a number of sections. This manual page includes all the separate manual pages in the following order: </p>
 <dl>
@@ -43,6 +44,7 @@ description: "zshall – the Z shell meta-man page"
 <dd>
 </dd><dt><i>zshcontrib</i> Additional zsh functions and utilities</dt>
 <dd></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Zsh is a UNIX command interpreter (shell) usable as an interactive login shell and as a shell script command processor. Of the standard shells, zsh most closely resembles <code>ksh</code> but includes many enhancements. It does not provide compatibility with POSIX or other shells in its default operating mode: see the section Compatibility below. </p>
 <p> Zsh has command line editing, builtin spelling correction, programmable command completion, shell functions (with autoloading), a history mechanism, and a host of other features.</p>
 <h2>AUTHOR</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "git-shell(1)"
 name: "git-shell"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-git-shell/"
 description: "git-shell – Restricted login shell for Git-only SSH access"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-shell &#8211; Restricted login shell for Git-only SSH access </p>
+<h2>SYNOPSIS</h2>
 <pre>
 <i>chsh</i> -s $(command -v git-shell) &lt;user&gt;
 <i>git clone</i> &lt;user&gt;<code>@localhost:/path/to/repo.git</code>
 <i>ssh</i> &lt;user&gt;<code>@localhost</code>
 </pre>
+<h2>DESCRIPTION</h2>
 <p> This is a login shell for SSH accounts to provide restricted Git access. It permits execution only of server-side Git commands implementing the pull/push functionality, plus custom commands present in a subdirectory named <code>git-shell-commands</code> in the user&#8217;s home directory.</p>
 <h2>COMMANDS</h2>
 <p> <i>git shell</i> accepts the following commands after the <code>-c</code> option: </p>

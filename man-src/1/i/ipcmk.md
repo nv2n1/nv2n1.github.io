@@ -1,5 +1,4 @@
 ---
-
 title: "ipcmk(1)"
 name: "ipcmk"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ipcmk/"
 description: "ipcmk – make various IPC resources"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ipcmk &#8211; make various IPC resources </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ipcmk</code> [options]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>ipcmk</code> allows you to create System V inter-process communication (IPC) objects: shared memory segments, message queues, and semaphore arrays.</p>
 <h2>OPTIONS</h2>
 <p> Resources can be specified with these options: </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_openpgp_crt_get_subkey_usage(3)"
 name: "gnutls_openpgp_crt_get_subkey_usage"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_openpgp_crt_get_subkey_usage – API function"
 
 <h2>NAME</h2>
 <p> gnutls_openpgp_crt_get_subkey_usage &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>
 <p> <code>int gnutls_openpgp_crt_get_subkey_usage(gnutls_openpgp_crt_t </code><i>key</i><code>, unsigned int </code><i>idx</i><code>, unsigned int * </code><i>key_usage</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_openpgp_crt_get_subkey_usage – API function"
 <dd> the subkey index</dd>
 <dt>unsigned int * key_usage</dt>
 <dd> where the key usage bits will be stored</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will return certificate&#8217;s key usage, by checking the key algorithm. The key usage value will ORed values of <code>GNUTLS_KEY_DIGITAL_SIGNATURE</code> or <code>GNUTLS_KEY_KEY_ENCIPHERMENT</code>. </p>
 <p> A negative error code may be returned in case of parsing error.</p>
 <h2>RETURNS</h2>

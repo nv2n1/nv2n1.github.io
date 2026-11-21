@@ -1,5 +1,4 @@
 ---
-
 title: "bluetooth-properties(1)"
 name: "bluetooth-properties"
 section: "1"
@@ -10,7 +9,9 @@ description: "bluetooth-properties – GTK dialog for managing properties of the
 
 <h2>NAME</h2>
 <p> bluetooth-properties &#8211; GTK dialog for managing properties of the Linux Bluetooth stack</p>
+<h2>SYNOPSIS</h2>
 <p> <code>bluetooth-properties</code></p>
+<h2>DESCRIPTION</h2>
 <p> <i>bluetooth-properties</i> will display a dialog for changing Bluetooth preferences. <i>bluetooth-properties</i> is part of bluez-gnome, see also <a rel="nofollow" href="http://www.bluez.org">http://www.bluez.org</a></p>
 <h2>OPTIONS</h2>
 <p> <i>bluetooth-properties</i> takes no options</p>

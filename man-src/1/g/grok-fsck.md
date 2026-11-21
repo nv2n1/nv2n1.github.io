@@ -1,5 +1,4 @@
 ---
-
 title: "grok-fsck(1)"
 name: "grok-fsck"
 section: "1"
@@ -10,7 +9,9 @@ description: "GROK-FSCK – Check mirrored repositories for corruption"
 
 <h2>NAME</h2>
 <p> GROK-FSCK &#8211; Check mirrored repositories for corruption</p>
+<h2>SYNOPSIS</h2>
 <p> grok-fsck -c /path/to/fsck.conf</p>
+<h2>DESCRIPTION</h2>
 <p> Git repositories can get corrupted whether they are frequently updated or not, which is why it is useful to routinely check them using &quot;git fsck&quot;. Grokmirror ships with a &quot;grok-fsck&quot; utility that will run &quot;git fsck&quot; on all mirrored git repositories. It is supposed to be run nightly from cron, and will do its best to randomly stagger the checks so only a subset of repositories is checked each night. Any errors will be sent to the user set in MAILTO.</p>
 <h2>OPTIONS</h2>
 <dl>

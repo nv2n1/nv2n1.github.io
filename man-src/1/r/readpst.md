@@ -1,5 +1,4 @@
 ---
-
 title: "readpst(1)"
 name: "readpst"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-readpst/"
 description: "readpst – convert PST (MS Outlook Personal Folders) files to mbox and other formats"
 ---
 
+<h2 class="name">NAME</h2>
+<p> readpst &#8211; convert PST (MS Outlook Personal Folders) files to mbox and other formats </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>readpst</code> [<code>-C&nbsp;<wbr></code><i>default-charset</i>] [<code>-D</code>] [<code>-M</code>] [<code>-S</code>] [<code>-V</code>] [<code>-b</code>] [<code>-c&nbsp;<wbr></code><i>format</i>] [<code>-d&nbsp;<wbr></code><i>debug-file</i>] [<code>-e</code>] [<code>-h</code>] [<code>-j&nbsp;<wbr></code><i>jobs</i>] [<code>-k</code>] [<code>-m</code>] [<code>-o&nbsp;<wbr></code><i>output-directory</i>] [<code>-q</code>] [<code>-r</code>] [<code>-t&nbsp;<wbr></code><i>output-type-codes</i>] [<code>-u</code>] [<code>-w</code>] pstfile</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>readpst</code></p>
 <dd>is a program that can read an Outlook PST (Personal Folders) file and convert it into an mbox file, a format suitable for KMail, a recursive mbox structure, or separate emails.</dd>
 <h2>OPTIONS</h2>

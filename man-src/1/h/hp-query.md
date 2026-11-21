@@ -1,5 +1,4 @@
 ---
-
 title: "hp-query(1)"
 name: "hp-query"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-hp-query/"
 description: "hp-query – Model Query Utility"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hp-query &#8211; Model Query Utility </p>
+<h2>DESCRIPTION</h2>
 <p> Query a printer model for static model information. Designed to be called from other processes.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>hp-query [MODE] [OPTIONS]</code></p>
 <h2>MODE</h2>
 <dl>

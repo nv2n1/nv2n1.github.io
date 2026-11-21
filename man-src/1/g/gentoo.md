@@ -1,5 +1,4 @@
 ---
-
 title: "gentoo(1)"
 name: "gentoo"
 section: "1"
@@ -10,7 +9,9 @@ description: "gentoo – A highly configurable file manager for X"
 
 <h2>NAME</h2>
 <p> gentoo &#8211; A highly configurable file manager for X</p>
+<h2>SYNOPSIS</h2>
 <p> gentoo [&#8211;version] [&#8211;root-ok] [&#8211;no-rc] [&#8211;no-gtkrc] [&#8211;no-fam] [&#8211;left=path] [&#8211;right=path]</p>
+<h2>DESCRIPTION</h2>
 <p> gentoo is a file manager for Linux and compatible systems. It allows you to interactively navigate your file system using the mouse, and also to perform various fairly standard operations (such as copy, move, rename, &#8230;) on the files and directories contained therein. </p>
 <p> gentoo always shows you the contents of two directories at once. Each of these is displayed in its own scrollable list, called a pane. At any time, exactly one pane is the <i>current</i> pane, and has a highlighted bar running across its top region. The current pane acts as the source for all file operations, while the other pane is the destination. You can select rows in panes using selection methods of varying complexity (from simply clicking a row, to selecting rows by name using a regular expression). Once you have a selection, you can click a button to perform some command on the selected files. </p>
 <p> All file operations performed by gentoo are implemented natively. When you use gentoo to copy a file, for example, gentoo does <i>not</i> simply execute the system&#8217;s <code>cp</code>(1L) command. Rather, gentoo contains its own code for opening source and destination files, and then reading and writing the right amount of data between them. This way of doing things makes gentoo independent of the availability of shell commands to do things. </p>

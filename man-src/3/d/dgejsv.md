@@ -1,5 +1,4 @@
 ---
-
 title: "dgejsv(3)"
 name: "dgejsv"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dgejsv/"
 description: "dgejsv.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dgejsv.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgejsv</code> (JOBA, JOBU, JOBV, JOBR, JOBT, JOBP, M, N, A, LDA, SVA, U, LDU, V, LDV, WORK, LWORK, IWORK, INFO)<br />
  <i></i><code>DGEJSV</code></p>

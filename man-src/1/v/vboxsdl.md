@@ -1,5 +1,4 @@
 ---
-
 title: "vboxsdl(1)"
 name: "vboxsdl"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-vboxsdl/"
 description: "VBoxSDL – x86 virtualization solution"
 ---
 
+<h2 class="name">NAME</h2>
+<p> VBoxSDL &#8211; x86 virtualization solution </p>
+<h2>DESCRIPTION</h2>
 <p> Oracle VM VirtualBox SDL GUI version (C) 2005-2019 Oracle Corporation All rights reserved.</p>
 <h3>Usage:</h3>
 <dl>

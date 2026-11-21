@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-datetime/"
 description: "Date and time calculations –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Date and time calculations &#8211; </p>
 <h3>Classes</h3>
 <p> class <code>DateInterval</code><br />
  <i></i><code>Date</code> interval described by a number of a given time unit.<br />

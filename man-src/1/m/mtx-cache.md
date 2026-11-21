@@ -1,5 +1,4 @@
 ---
-
 title: "mtx-cache(1)"
 name: "mtx-cache"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mtx-cache/"
 description: "mtx-cache – ConTeXt & MetaTeX Cache Management"
 ---
 
+<h2 class="name">NAME</h2>
+<p>&nbsp;mtx-cache &#8211; ConTeXt&nbsp;&amp;&nbsp;MetaTeX Cache Management </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mtxrun &#8211;script cache [</code> <i>OPTIONS &#8230;</i> <code>] [</code> <i>FILENAMES</i> <code>]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>ConTeXt &amp; MetaTeX Cache Management</code></p>
 <h2>OPTIONS</h2>
 <dl>

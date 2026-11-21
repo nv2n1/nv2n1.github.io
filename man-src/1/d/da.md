@@ -1,5 +1,4 @@
 ---
-
 title: "da(1)"
 name: "da"
 section: "1"
@@ -10,9 +9,11 @@ description: "da – setup development environment and create basic projects in 
 
 <h2>NAME</h2>
 <p> da &#8211; setup development environment and create basic projects in various languages </p>
+<h2>SYNOPSIS</h2>
 <p> <code>da [&#8211;debug] [&#8211;no-cache] [ ASSISTANT_TYPE ] [ OPTIONS ] [[ SUBASSISTANT ] [OPTIONS] &#8230;] </p>
 <p> da [&#8211;debug] [&#8211;no-cache] [ ACTION ] [ OPTIONS ] </p>
 <p> </code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>da</code> is the main command of DevAssistant. It is responsible for dispatching commandline calls to assistants or actions. It accepts some optional flags: </p>
 <dl>
 <dt><code>&#8211;debug</code></dt>

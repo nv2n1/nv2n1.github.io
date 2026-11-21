@@ -1,5 +1,4 @@
 ---
-
 title: "cgi_parse(3)"
 name: "cgi_parse"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cgi_parse/"
 description: "cgi_parse – Parse incoming CGI data"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cgi_parse &#8211; Parse incoming CGI data </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cgi/cgi.h&gt;
 </code></pre>
@@ -16,6 +18,7 @@ NEOERR *cgi_parse (CGI *cgi);
 </pre>
 <h2>ARGUMENTS</h2>
 <p> cgi &#8211; a pointer to a CGI pointer </p>
+<h2>DESCRIPTION</h2>
 <p> We split cgi_init into two sections, one that parses <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>just the basics, and the second is cgi_parse. cgi_parse<br />
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>is responsible for parsing the entity body of the HTTP<br />
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>request. This payload is typically only sent (expected)<br />

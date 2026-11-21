@@ -1,5 +1,4 @@
 ---
-
 title: "nvidia-smi(1)"
 name: "nvidia-smi"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-nvidia-smi/"
 description: "nvidia-smi – NVIDIA System Management Interface program"
 ---
 
+<h2 class="name">NAME</h2>
+<p> nvidia-smi &#8211; NVIDIA System Management Interface program </p>
+<h2>SYNOPSIS</h2>
 <p> nvidia-smi [OPTION1 [ARG1]] [OPTION2 [ARG2]] &#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> nvidia-smi (also NVSMI) provides monitoring and management capabilities for each of NVIDIA&#8217;s Tesla, Quadro, GRID and GeForce devices from Fermi and higher architecture families. GeForce Titan series devices are supported for most functions with very limited information provided for the remainder of the Geforce brand. NVSMI is a cross platform tool that supports all standard NVIDIA driver-supported Linux distros, as well as 64bit versions of Windows starting with Windows Server 2008 R2. Metrics can be consumed directly by users via stdout, or provided by file via CSV and XML formats for scripting purposes. </p>
 <p> Note that much of the functionality of NVSMI is provided by the underlying NVML C-based library. See the NVIDIA developer website link below for more information about NVML. NVML-based python bindings are also available. </p>
 <p> The output of NVSMI is not guaranteed to be backwards compatible. However, both NVML and the Python bindings are backwards compatible, and should be the first choice when writing any tools that must be maintained across NVIDIA driver releases. </p>

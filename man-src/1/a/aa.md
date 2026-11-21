@@ -1,5 +1,4 @@
 ---
-
 title: "aa(1)"
 name: "aa"
 section: "1"
@@ -10,7 +9,9 @@ description: "aa, autoarchive – simple backup utility"
 
 <h2>NAME</h2>
 <p> aa, autoarchive &#8211; simple backup utility</p>
+<h2>SYNOPSIS</h2>
 <p> <code>aa/autoarchive</code> &nbsp;<wbr>[<i>options</i>] <i>AA_SPEC</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Simple backup utility. </p>
 <p> <code>AutoArchive</code> is a simple python script for making backups more easily. It uses <code><a href="/docs/linux/man/1-tar/">tar</a></code>(1) for creating archives. The idea of the program is that every information needed for making a backup is in one file &#8211; the <code>archive spec file</code> (<i>AA_SPEC</i>). Path to this file is passed as a parameter to &#8216;aa&#8217; command which reads informations from it and creates desired backup. </p>
 <p> Command &#8216;autoarchive&#8217; is alias for &#8216;aa&#8217;; commands are equivalent.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "mprof-heap-viewer(1)"
 name: "mprof-heap-viewer"
 section: "1"
@@ -10,7 +9,9 @@ description: "mprof-heap-viewer – GUI viewer for the logging profiler heap sna
 
 <h2>NAME</h2>
 <p> mprof-heap-viewer &#8211; GUI viewer for the logging profiler heap snapshots</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mprof-heap-viewer</code> file</p>
+<h2>DESCRIPTION</h2>
 <p> <code>mprof-heap-viewer</code> GUI viewer for the logging profiler heap snapshots </p>
 <p> WARNING: this application is unfinished and experimental. Nevertheless it should work, and bug reports are encouraged. </p>
 <p> This program decodes the contents of a logging profiler output file and locates all the heap snapshots inside it. The user can then select each individual snapshot and decide to load it in memory and explore its contents. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "jointcalendar(3)"
 name: "jointcalendar"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-jointcalendar/"
 description: "ql/time/calendars/jointcalendar.hpp – Joint calendar."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/time/calendars/jointcalendar.hpp &#8211; Joint calendar. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/time/calendar.hpp&gt; </p>
 <h3>Classes</h3>
 <p> class <code>JointCalendar</code><br />

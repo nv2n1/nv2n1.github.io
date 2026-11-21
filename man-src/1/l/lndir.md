@@ -1,5 +1,4 @@
 ---
-
 title: "lndir(1)"
 name: "lndir"
 section: "1"
@@ -10,7 +9,9 @@ description: "lndir – create a shadow directory of symbolic links to another d
 
 <h2>NAME</h2>
 <p> lndir &#8211; create a shadow directory of symbolic links to another directory tree</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lndir</code> [ <code>-silent</code> ] [ <code>-ignorelinks</code> ] [ <code>-withrevinfo</code> ] <i>fromdir</i> [ <i>todir</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> The <i>lndir</i> program makes a shadow copy <i>todir </i> of a directory tree <i>fromdir, </i> except that the shadow is not populated with real files but instead with symbolic links pointing at the real files in the <i>fromdir</i> directory tree. This is usually useful for maintaining source code for different machine architectures. You create a shadow directory containing links to the real source, which you will have usually mounted from a remote machine. You can build in the shadow tree, and the object files will be in the shadow directory, while the source files in the shadow directory are just symlinks to the real files. </p>
 <p> This scheme has the advantage that if you update the source, you need not propagate the change to the other architectures by hand, since all source in all shadow directories are symlinks to the real thing: just cd to the shadow directory and recompile away. </p>
 <p> The <i>todir</i> argument is optional and defaults to the current directory. The <i>fromdir</i> argument may be relative (e.g., ../src) and is relative to <i>todir</i> (not the current directory). </p>

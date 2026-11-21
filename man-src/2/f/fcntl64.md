@@ -1,5 +1,4 @@
 ---
-
 title: "fcntl64(2)"
 name: "fcntl64"
 section: "2"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/2-fcntl64/"
 description: "fcntl – manipulate file descriptor"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fcntl &#8211; manipulate file descriptor </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;fcntl.h&gt;
 #include &lt;unistd.h&gt;
 int fcntl(int fd, int cmd, ... /* arg */);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>fcntl</code>() performs one of the operations described below on the open file descriptor <i>fd</i>. The operation is determined by <i>cmd</i>. </p>
 <p> <code>fcntl</code>() can take an optional third argument. Whether or not this argument is required is determined by <i>cmd</i>. The required argument type is indicated in parentheses after each <i>cmd</i> name (in most cases, the required type is <i>int</i>, and we identify the argument using the name <i>arg</i>), or <i>void</i> is specified if the argument is not required. </p>
 <p> Certain of the operations below are supported only since a particular Linux kernel version. The preferred method of checking whether the host kernel supports a particular operation is to invoke <code>fcntl</code>() with the desired <i>cmd</i> value and then test whether the call failed with <code>EINVAL</code>, indicating that the kernel does not recognize this value.</p>

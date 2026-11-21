@@ -1,5 +1,4 @@
 ---
-
 title: "align_image_stack(1)"
 name: "align_image_stack"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-align_image_stack/"
 description: "align_image_stack – Align overlapping images for HDR or focus stack creation"
 ---
 
+<h2 class="name">NAME</h2>
+<p> align_image_stack &#8211; Align overlapping images for HDR or focus stack creation </p>
+<h2>SYNOPSIS</h2>
 <p> <code>align_image_stack</code> [options] <i>input files</i></p>
+<h2>DESCRIPTION</h2>
 <p> align_image_stack is used for the alignment of slightly misaligned images or for the registration of a stereo images pair. When several differently exposed images are taken in the process of creating a High Dynamic Range image, the images are not perfectly aligned, and the quality of the <font SIZE="-1">HDR</font> image created will suffer from this. align_image_stack uses the tools available to hugin to optimize the roll, pitch and yaw, as well as some parameters of the lens geometry, to align the images.</p>
 <h2>OPTIONS</h2>
 <p> Modes of operation:</p>

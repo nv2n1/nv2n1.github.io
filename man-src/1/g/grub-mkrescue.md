@@ -1,5 +1,4 @@
 ---
-
 title: "grub-mkrescue(1)"
 name: "grub-mkrescue"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-grub-mkrescue/"
 description: "grub-mkrescue – make a GRUB rescue image"
 ---
 
+<h2 class="name">NAME</h2>
+<p> grub-mkrescue &#8211; make a GRUB rescue image </p>
+<h2>SYNOPSIS</h2>
 <p> <code>grub-mkrescue</code> [<i>,OPTION/</i>&#8230;] [<i>,OPTION/</i>] <i>,SOURCE/</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Make GRUB CD-ROM, disk, pendrive and floppy bootable image.</p>
 <dl>
 <dt><code>&#8211;compress</code>=<i>,no/</i>|xz|gz|lzo</dt>

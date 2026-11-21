@@ -1,5 +1,4 @@
 ---
-
 title: "ac(1)"
 name: "ac"
 section: "1"
@@ -10,6 +9,7 @@ description: "ac – print statistics about users’ connect time"
 
 <h2>NAME</h2>
 <p> ac &#8211; print statistics about users&#8217; connect time</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>ac</code></dt>
 <dd> [ <code>-d</code> | <code>&#8211;daily-totals</code> ] [ <code>-y</code> | <code>&#8211;print-year</code> ]<br />
@@ -20,6 +20,7 @@ description: "ac – print statistics about users’ connect time"
  [ <code>&#8211;tw-leniency</code> <i>num</i> ] [ <code>&#8211;tw-suspicious</code> <i>num</i> ]<br />
  [ <code>-z</code> | <code>&#8211;print-zeros</code> ] [ <code>&#8211;debug</code> ]<br />
  [ <code>-V</code> | <code>&#8211;version </code> ] [ <code>-h</code> | <code>&#8211;help </code> ]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>ac </code> prints out a report of connect time (in hours) based on the logins/logouts in the current <i>wtmp</i> file. A total is also printed out. </p>
 <p> The accounting file <i>wtmp</i> is maintained by <code><a href="/docs/linux/man/8-init/">init</a></code>(8) and <code><a href="/docs/linux/man/1-login/">login</a></code>(1). Neither <code>ac</code> nor <code>login</code> creates the <i>wtmp</i> if it doesn&#8217;t exist, no accounting is done. To begin accounting, create the file with a length of zero. </p>
 <p> NOTE: The <i>wtmp</i> file can get really big, really fast. You might want to trim it every once and a while. </p>

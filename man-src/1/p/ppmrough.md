@@ -1,5 +1,4 @@
 ---
-
 title: "ppmrough(1)"
 name: "ppmrough"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-ppmrough/"
 description: "ppmrough – create PPM image of two colors with a ragged border between them"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ppmrough &#8211; create PPM image of two colors with a ragged border between them</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ppmrough</code> </p>
 <p> [<code>-left </code><i>pixels</i>] </p>
 <p> [<code>-right </code><i>pixels</i>] </p>
@@ -21,6 +23,7 @@ description: "ppmrough – create PPM image of two colors with a ragged border b
 <p> [<code>-randomseed </code><i>seed</i>] </p>
 <p> [<code>-verbose</code>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one. You may separate an option name and its value with white space instead of an equals sign. </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>ppmrough</code> generates a PPM image of the specified width, height, and colors. <code>ppmrough</code> tiles the image into semi-rectangular regions with a ragged borders between them. It calculates the fluctuations with the <code>rand()</code> standard C library function. </p>
 <p> <code>ppmrough</code> writes the PPM image to Standard Output. </p>

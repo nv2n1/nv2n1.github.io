@@ -1,5 +1,4 @@
 ---
-
 title: "bogotune(1)"
 name: "bogotune"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-bogotune/"
 description: "bogotune – find optimum parameter settings for bogofilter"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bogotune &#8211; find optimum parameter settings for bogofilter </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>bogotune</code> [-v] [-c&nbsp;<wbr><i>config</i>] [-C] [-d&nbsp;<wbr><i>dir</i>] [-D] [-r&nbsp;<wbr><i>value</i>] [-T&nbsp;<wbr><i>value</i>] -n&nbsp;<wbr><i>okfile</i>&nbsp;<wbr>[[-n]&nbsp;<wbr><i>okfile</i>&nbsp;<wbr>[&#8230;]] -s&nbsp;<wbr><i>spamfile</i>&nbsp;<wbr>[[-s]&nbsp;<wbr><i>spamfile</i>&nbsp;<wbr>[&#8230;]] [-M&nbsp;<wbr><i>file</i>]</dt>
 <dt> <code>bogotune</code> [-h]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>Bogotune tries to find optimum parameter settings for bogofilter. It needs at least one set each of spam and non-spam messages. The production wordlist is normally used, but it can be directed to read a different wordlist, or to build its own from half the supplied messages. </dd>
 <p> In order to produce useful results, bogotune has minimum message count requirements. The wordlist it uses must have at least 2,000 spam and 2,000 non-spam in it and the message files must contain at least 500 spam and 500 non-spam messages. Also, the ratio of spam to non-spam should be in the range 0.2 to 5. If you direct bogotune to build its own wordlist, it will use the half the input or 2000 messages (whichever is larger) for the wordlist. </p>
 <p> Message files may be in mbox, maildir, or MH folder or any combination. Msg-count files can also be used, but not mixed with other formats.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ansifilter(1)"
 name: "ansifilter"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ansifilter/"
 description: "Ansifilter – ANSI escape code processor and converter"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Ansifilter &#8211; ANSI escape code processor and converter</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ansifilter</code> [d:i:F:o:s:e:fhptvHRT] [-i input file] [-o output file] [&#8211;text] [&#8211;html] [&#8211;latex] [&#8211;tex] [&#8211;rtf] [input files] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>Ansifilter</code> is a small utility to handle text files containing ANSI terminal escape codes. The command sequences may be stripped or be interpreted to generate formatted output (HTML, LaTeX, TeX, RTF). </p>
 <p> See the README file for details.</p>
 <h2>File options</h2>

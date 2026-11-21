@@ -1,5 +1,4 @@
 ---
-
 title: "smispy_lsmplugin(1)"
 name: "smispy_lsmplugin"
 section: "1"
@@ -10,6 +9,7 @@ description: "smispy_lsmplugin — LibstorageMgmt SMI-S Plugin"
 
 <h2>NAME</h2>
 <p> smispy_lsmplugin &#8212; LibstorageMgmt SMI-S Plugin </p>
+<h2>DESCRIPTION</h2>
 <p> LibstorageMgmt SMI-S Plugin allows LibstorageMgmt user to manage storage arrays like: EMC VNX/VMAX, HDS AMS and LSI MegaRAID etc. via SNIA SMI-S standard. The &#8216;smispy_lsmplugin&#8217; executable file is for LibstorageMgmt daemon to execute when client user requests SMI-S plugin. </p>
 <h2>URI</h2>
 <p> To use this plugin, users should set their URI to this format: </p>

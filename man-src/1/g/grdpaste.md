@@ -1,5 +1,4 @@
 ---
-
 title: "grdpaste(1)"
 name: "grdpaste"
 section: "1"
@@ -10,8 +9,10 @@ description: "grdpaste – Join two grids along their common edge"
 
 <h2>NAME</h2>
 <p> grdpaste &#8211; Join two grids along their common edge</p>
+<h2>SYNOPSIS</h2>
 <p> <code>grdpaste</code> <i>file_a.nc file_b.nc</i> <i>outfile.nc</i> [ [<i>level</i>] ] [ <code>-f</code><i>&lt;flags&gt;</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>grdpaste</code> will combine <i>file_a.nc</i> and <i>file_b.nc</i> into <i>outfile.nc</i> by pasting them together along their common edge. Files <i>file_a.nc</i> and <i>file_b.nc</i> must have the same dx, dy and have one edge in common. If in doubt, check with <code>grdinfo</code> and use <code>grdcut</code> and/or <code>grdsample</code> if necessary to prepare the edge joint. Note: For geographical grids, you may have to use <code>-f</code> to handle periodic longitudes unless the input grids are properly recognized as such via their meta-data.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

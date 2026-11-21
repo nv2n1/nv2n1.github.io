@@ -1,5 +1,4 @@
 ---
-
 title: "g_anaeig_d(1)"
 name: "g_anaeig_d"
 section: "1"
@@ -11,7 +10,9 @@ description: "g_anaeig – analyzes the eigenvectors"
 <h2>NAME</h2>
 <p> g_anaeig &#8211; analyzes the eigenvectors </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>g_anaeig</code> <code>-v</code><i> eigenvec.trr </i> <code>-v2</code><i> eigenvec2.trr </i> <code>-f</code><i> traj.xtc </i> <code>-s</code><i> topol.tpr </i> <code>-n</code><i> index.ndx </i> <code>-eig</code><i> eigenval.xvg </i> <code>-eig2</code><i> eigenval2.xvg </i> <code>-comp</code><i> eigcomp.xvg </i> <code>-rmsf</code><i> eigrmsf.xvg </i> <code>-proj</code><i> proj.xvg </i> <code>-2d</code><i> 2dproj.xvg </i> <code>-3d</code><i> 3dproj.pdb </i> <code>-filt</code><i> filtered.xtc </i> <code>-extr</code><i> extreme.pdb </i> <code>-over</code><i> overlap.xvg </i> <code>-inpr</code><i> inprod.xpm </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-tu</code><i> enum </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-first</code><i> int </i> <code>-last</code><i> int </i> <code>-skip</code><i> int </i> <code>-max</code><i> real </i> <code>-nframes</code><i> int </i> <code>-[no]split</code><i></i> <code>-[no]entropy</code><i></i> <code>-temp</code><i> real </i> <code>-nevskip</code><i> int </i></p>
+<h2>DESCRIPTION</h2>
 <p> <code> g_anaeig</code> analyzes eigenvectors. The eigenvectors can be of a covariance matrix (<code> g_covar</code>) or of a Normal Modes anaysis (<code> g_nmeig</code>). </p>
 <p> When a trajectory is projected on eigenvectors, all structures are fitted to the structure in the eigenvector file, if present, otherwise to the structure in the structure file. When no run input file is supplied, periodicity will not be taken into account. Most analyses are performed on eigenvectors <code> -first</code> to <code> -last</code>, but when <code> -first</code> is set to -1 you will be prompted for a selection. </p>
 <p> <code> -comp</code>: plot the vector components per atom of eigenvectors <code> -first</code> to <code> -last</code>. </p>

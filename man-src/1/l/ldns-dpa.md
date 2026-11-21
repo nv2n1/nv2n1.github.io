@@ -1,5 +1,4 @@
 ---
-
 title: "ldns-dpa(1)"
 name: "ldns-dpa"
 section: "1"
@@ -10,7 +9,9 @@ description: "dpa – DNS Packet Analyzer. Analyze DNS packets in ip trace files
 
 <h2>NAME</h2>
 <p> dpa &#8211; DNS Packet Analyzer. Analyze DNS packets in ip trace files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>dpa</code> [ <i>OPTION</i> ] <i>TRACEFILE</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>dpa</code> is used to analyze dns packets in trace files. It has 3 main options: count, filter, and count uniques (i.e. count all different occurences). </p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "davix-mkdir(1)"
 name: "davix-mkdir"
 section: "1"
@@ -10,7 +9,9 @@ description: "davix-mkdir – Directory creation tool based on libdavix."
 
 <h2>NAME</h2>
 <p> davix-mkdir &#8211; Directory creation tool based on libdavix.</p>
+<h2>SYNOPSIS</h2>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> davix-mkdir [options]&#8230; url</p>
+<h2>DESCRIPTION</h2>
 <p> <code>davix-mkdir</code> is a tool to creat directories or collections with HTTP, Webdav or REST compatible services.<br />
  The command supports the protocol Http (http(s)://), WebDav (dav(s)://) and S3 (s3(s)://). </p>
 <p> davix-mkdir is powered by libdavix. See <a href="/docs/linux/man/3-libdavix/">libdavix</a>(3) for details. </p>

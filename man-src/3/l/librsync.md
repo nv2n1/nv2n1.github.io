@@ -1,5 +1,4 @@
 ---
-
 title: "librsync(3)"
 name: "librsync"
 section: "3"
@@ -8,11 +7,14 @@ url: "/docs/linux/man/3-librsync/"
 description: "librsync – library for delta compression of streams"
 ---
 
+<h2 class="name">NAME</h2>
+<p> librsync &#8211; library for delta compression of streams </p>
 <h2>SYNOPSYS</h2>
 <p>&nbsp;<wbr>#include&nbsp;<wbr><code>&lt;stdio.h&gt;</code> </p>
 <p>&nbsp;<wbr>#include&nbsp;<wbr><code>&lt;stdlib.h&gt;</code> </p>
 <p>&nbsp;<wbr>#include&nbsp;<wbr><code>&lt;librsync.h&gt;</code> </p>
 <p>&nbsp;<wbr>cc &#8230;&nbsp;<wbr><code>-lrsync</code> </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>librsync</code> library implements network delta-compression of streams and files. The algorithm is similar to that used in the <code><a href="/docs/linux/man/1-rsync/">rsync</a>(1)</code> and <code>xdelta(2)</code> programs, but specialized for transfer of arbitrary-length octet streams. Unlike most diff programs, <code>librsync</code> does not require access to both of the files on the same machine, but rather only a short &#8220;signature&#8221; of the old file and the complete contents of the new file. </p>
 <p> The canonical use of <code>librsync</code> is in the <code>rproxy(8)</code> reference implementation of the <i>rsync</i> proposed extension to HTTP. It may be useful to other programs which wish to do delta-compression in HTTP, or within their own protocol. There are HTTP-specific utility functions within <code>librsync</code>, but they need not be used. </p>
 <p> A number of tools such as <code><a href="/docs/linux/man/1-rdiff/">rdiff</a>(1)</code> provide command-line and scriptable access to rsync functions.</p>

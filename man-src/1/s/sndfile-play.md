@@ -1,5 +1,4 @@
 ---
-
 title: "sndfile-play(1)"
 name: "sndfile-play"
 section: "1"
@@ -10,7 +9,9 @@ description: "sndfile-play – play a sound file"
 
 <h2>NAME</h2>
 <p> sndfile-play &#8211; play a sound file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>sndfile-play</code> file</p>
+<h2>DESCRIPTION</h2>
 <p> sndfile-play plays the specified sound file using : </p>
 <pre>
 ALSA on Linux

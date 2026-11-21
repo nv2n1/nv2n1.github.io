@@ -1,5 +1,4 @@
 ---
-
 title: "lv(1)"
 name: "lv"
 section: "1"
@@ -10,6 +9,7 @@ description: "lv – a Powerful Multilingual File Viewer / Grep"
 
 <h2>NAME</h2>
 <p> lv &#8211; a Powerful Multilingual File Viewer / Grep</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lv, lgrep</code><br />
  <code>lv</code> -h<br />
  <code>lv</code> -V<br />
@@ -20,6 +20,7 @@ description: "lv – a Powerful Multilingual File Viewer / Grep"
 <p>&nbsp;<wbr>&nbsp;<wbr>[-T<i>number</i>]&nbsp;<wbr>[-W<i>width</i>]&nbsp;<wbr>[-H<i>height</i>]&nbsp;<wbr>[-E&#8217;<i>editor&#8217;</i>]&nbsp;<wbr>[-+] </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>[+<i>number</i>]&nbsp;<wbr>[+/<i>grep-pattern</i>] </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>[-]&nbsp;<wbr>(<i>grep-pattern</i>)&nbsp;<wbr>[<i>files &#8230;</i>]</p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt><i>Multilingual file viewer</i></dt>
 <dd> <i>lv</i> is a powerful multilingual file viewer. Apparently, lv looks like <i>less</i> (1), a representative file viewer on UNIX as you know, so UNIX people (and <i>less</i> people on other OSs) don&#8217;t have to learn a burdensome new interface. lv can be used on MSDOS ANSI terminals and almost all UNIX platforms. lv is a currently growing software, so your feedback is welcome and helpful for us to refine the future lv.</dd>

@@ -1,5 +1,4 @@
 ---
-
 title: "hspell(1)"
 name: "hspell"
 section: "1"
@@ -10,7 +9,9 @@ description: "hspell – Hebrew spellchecker"
 
 <h2>NAME</h2>
 <p> hspell &#8211; Hebrew spellchecker</p>
+<h2>SYNOPSIS</h2>
 <p> <code>hspell</code> [ <code>-acDhHilnsvV</code> ] <code>[</code><i>file&#8230;</i><code>]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>hspell</code> tries to find incorrectly spelled Hebrew words in its input files. </p>
 <p> Like the traditional Unix spell(1), <code>hspell</code> outputs the sorted list of incorrect words, and does not have a more friendly interface for making corrections for you. However, unlike spell(1), <code>hspell</code> can suggest possible corrections for some spelling errors. Such suggestions can be enabled with the <code>-c</code> (correct) and <code>-n</code> (notes) options. </p>
 <p> <code>Hspell</code> currently expects ISO-8859-8-encoded input files. Non-Hebrew characters in the input files are ignored, allowing the easy spellchecking of Hebrew-English texts, as well as HTML or TeX files. If files using a different encoding (e.g., UTF-8) are to be checked, they must be converted first to ISO-8859-8 (e.g., see <a href="/docs/linux/man/1-iconv/">iconv</a>(1), <a href="/docs/linux/man/1-recode/">recode</a>(1)). </p>

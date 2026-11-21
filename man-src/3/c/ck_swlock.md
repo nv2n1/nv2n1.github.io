@@ -1,5 +1,4 @@
 ---
-
 title: "ck_swlock(3)"
 name: "ck_swlock"
 section: "3"
@@ -12,9 +11,11 @@ description: "ck_swlock_init ck_swlock_write_latch ck_swlock_write_unlatch ck_sw
 <p> <code>ck_swlock_init</code> <code>ck_swlock_write_latch</code> <code>ck_swlock_write_unlatch</code> <code>ck_swlock_write_lock</code> <code>ck_swlock_write_unlock</code> <code>ck_swlock_write_trylock</code> <code>ck_swlock_write_downgrade</code> <code>ck_swlock_locked_writer</code> <code>ck_swlock_read_lock</code> <code>ck_swlock_read_trylock</code> <code>ck_swlock_read_unlock</code> <code>ck_swlock_locked_reader</code> &#8211; centralized copy-safe write-biased single-writer read-write locks</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_swlock.h </p>
 <p> <code>ck_swlock_t lock = CK_SWLOCK_INITIALIZER;</code> </p>
 <p> Ft void Fn ck_swlock_init ck_swlock_t *lock Ft void Fn ck_swlock_write_lock ck_swlock_t *lock Ft void Fn ck_swlock_write_unlock ck_swlock_t *lock Ft void Fn ck_swlatch_write_latch ck_swlatch_t *latch Ft void Fn ck_swlatch_write_unlatch ck_swlatch_t *latch Ft bool Fn ck_swlock_write_trylock ck_swlock_t *lock Ft bool Fn ck_swlock_write_downgrade ck_swlock_t *lock Ft bool Fn ck_swlock_locked_writer ck_swlock_t *lock Ft void Fn ck_swlock_read_lock ck_swlock_t *lock Ft bool Fn ck_swlock_read_trylock ck_swlock_t *lock Ft void Fn ck_swlock_read_unlock ck_swlock_t *lock Ft bool Fn ck_swlock_locked_reader ck_swlock_t *lock</p>
+<h2>DESCRIPTION</h2>
 <p> This is a centralized write-biased single-writer reader-writer lock. It requires half the space that ck_rwlock does and has a low latency fast path. The lock supports latch and unlatch operations that allow it to be used in a copy-safe manner (reader-bits may be over-written safely).</p>
 <h2>EXAMPLE</h2>
 <blockquote>

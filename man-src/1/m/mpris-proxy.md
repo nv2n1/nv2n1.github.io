@@ -1,5 +1,4 @@
 ---
-
 title: "mpris-proxy(1)"
 name: "mpris-proxy"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-mpris-proxy/"
 description: "mpris-proxy – Bluetooth mpris-proxy"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mpris-proxy &#8211; Bluetooth mpris-proxy </p>
+<h2>DESCRIPTION</h2>
 <h3>Usage:</h3>
 <dl>
 <dt>

@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_xio_mode_e_error_type_t/"
 description: "Error Types –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Error Types &#8211; </p>
 <h3>Enumerations</h3>
 <p> enum <code>globus_xio_mode_e_error_type_t</code> { <code>GLOBUS_XIO_MODE_E_HEADER_ERROR</code> } </p>
 <h2>Detailed Description</h2>

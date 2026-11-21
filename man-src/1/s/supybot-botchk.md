@@ -1,5 +1,4 @@
 ---
-
 title: "supybot-botchk(1)"
 name: "supybot-botchk"
 section: "1"
@@ -10,7 +9,9 @@ description: "supybot-botchk – A script to start Supybot if it’s not already
 
 <h2>NAME</h2>
 <p> supybot-botchk &#8211; A script to start Supybot if it&#8217;s not already running.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>supybot-botchk</code> [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>supybot-botchk</code> is a script that will start Supybot if it detects that one is not currently running. This can be useful for scheduling <i><a href="/docs/linux/man/1-supybot/">supybot</a></i>(1) to run via <i><a href="/docs/linux/man/8-cron/">cron</a></i>(8).</p>
 <h2>OPTIONS</h2>
 <dl>

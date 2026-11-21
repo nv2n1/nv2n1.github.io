@@ -1,5 +1,4 @@
 ---
-
 title: "ack(1)"
 name: "ack"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-ack/"
 description: "ack – grep-like text finder"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ack &#8211; grep-like text finder </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 ack[options] PATTERN[FILE...] ack - f[options][DIRECTORY...]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Ack is designed as a replacement for 99% of the uses of <i>grep</i>. </p>
 <p> Ack searches the named input FILEs (or standard input if no files are named, or the file name &#8211; is given) for lines containing a match to the given <font SIZE="-1">PATTERN. </font> By default, ack prints the matching lines. </p>
 <p> <font SIZE="-1">PATTERN</font> is a Perl regular expression. Perl regular expressions are commonly found in other programming languages, but for the particulars of their behavior, please consult &lt;<a rel="nofollow" href="http://perldoc.perl.org/perlreref.html|perlreref">http://perldoc.perl.org/perlreref.html|perlreref</a>&gt;. If you don&#8217;t know how to use regular expression but are interested in learning, you may consult &lt;<a rel="nofollow" href="http://perldoc.perl.org/perlretut.html|perlretut">http://perldoc.perl.org/perlretut.html|perlretut</a>&gt;. If you do not need or want ack to use regular expressions, please see the <tt>&quot;-Q&quot;</tt>/<tt>&quot;--literal&quot;</tt> option. </p>

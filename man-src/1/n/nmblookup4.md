@@ -1,5 +1,4 @@
 ---
-
 title: "nmblookup4(1)"
 name: "nmblookup4"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-nmblookup4/"
 description: "nmblookup4 – NetBIOS over TCP/IP client used to lookup NetBIOS names"
 ---
 
+<h2 class="name">NAME</h2>
+<p> nmblookup4 &#8211; NetBIOS over TCP/IP client used to lookup NetBIOS names </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>nmblookup4</code> [-M] [-R] [-S] [-r] [-A] [-h] [-B&nbsp;<wbr>&lt;broadcast address&gt;] [-U&nbsp;<wbr>&lt;unicast address&gt;] [-d&nbsp;<wbr>&lt;debug level&gt;] [-s&nbsp;<wbr>&lt;smb config file&gt;] [-i&nbsp;<wbr>&lt;NetBIOS scope&gt;] [-T] [-f] {name}</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This tool is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </dd>
 <p> <code>nmblookup4</code> is used to query NetBIOS names and map them to IP addresses in a network using NetBIOS over TCP/IP queries. The options allow the name queries to be directed at a particular IP broadcast area or to a particular machine. All queries are done over UDP.</p>
 <h2>OPTIONS</h2>

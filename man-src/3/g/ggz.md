@@ -1,5 +1,4 @@
 ---
-
 title: "ggz(3)"
 name: "ggz"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-ggz/"
 description: "ggz.h –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ggz.h &#8211; </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/sys/types.h">sys/types.h</a>&gt; </p>
 <h3>Defines</h3>
 <p> #define <code>LIBGGZ_VERSION_MAJOR</code> 0 </p>

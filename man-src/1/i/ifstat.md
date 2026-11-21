@@ -1,5 +1,4 @@
 ---
-
 title: "ifstat(1)"
 name: "ifstat"
 section: "1"
@@ -10,7 +9,9 @@ description: "ifstat – Report InterFace STATistics"
 
 <h2>NAME</h2>
 <p> ifstat &#8211; Report InterFace STATistics</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ifstat</code> [<code>-a</code>] [<code>-l</code>] [<code>-z</code>] [<code>-n</code>] [<code>-v</code>] [<code>-h</code>] [<code>-t</code>] [<code>-i</code> if0,if1,&#8230;] [<code>-d</code> drv[:opt]] [<code>-s</code> [comm@][#]host[/nn]] [<code>-T</code>] [<code>-A</code>] [<code>-w</code>] [<code>-W</code>] [<code>-S</code>] [<code>-b</code>] [<code>-q</code>] [delay[/delay] [count]]</p>
+<h2>DESCRIPTION</h2>
 <p> Ifstat is a little tool to report interface activity, just like iostat/vmstat do for other system statistics.</p>
 <h2>OPTIONS</h2>
 <p> <code>ifstat</code> accepts the following options:</p>

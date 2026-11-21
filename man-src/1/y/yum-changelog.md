@@ -1,5 +1,4 @@
 ---
-
 title: "yum-changelog(1)"
 name: "yum-changelog"
 section: "1"
@@ -10,7 +9,9 @@ description: "yum-changelog"
 
 <h2>NAME</h2>
 <p> <code>yum-changelog</code></p>
+<h2>SYNOPSIS</h2>
 <p> The <code>yum-changelog</code> package</p>
+<h2>DESCRIPTION</h2>
 <p> <code><a href="/docs/linux/man/1-yum-changelog/">yum-changelog</a>(1)</code> is a Yum plugin for viewing package changelogs before/after updating. yum will invoke <code><a href="/docs/linux/man/1-yum-changelog/">yum-changelog</a>(1)</code> plugin if the <code>&#8211;changelog</code> option or the <code>changelog</code> command is used with yum.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "mgd77magref(1)"
 name: "mgd77magref"
 section: "1"
@@ -10,8 +9,10 @@ description: "mgd77magref – Evaluate the IGRF or CM4 magnetic field models"
 
 <h2>NAME</h2>
 <p> mgd77magref &#8211; Evaluate the IGRF or CM4 magnetic field models</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mgd77magref</code> [ <i>inputfile</i> ] [ [<code>+a</code><i>alt</i><code>+t</code><i>date</i><code>+y</code>] ] [ <i>cm4file</i> ] [ <i>Dstfile</i> ] [ <i>f107file</i> ] [ <i>flags</i> ] [ ] [ <code>c</code>|<code>l</code><i>low/high</i> ] [ [<i>level</i>] ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>mgd77magref</code> will evaluate the IGRF or the CM4 geomagnetic models at the specified locations and times.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <p> None.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "getmail(1)"
 name: "getmail"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-getmail/"
 description: "getmail – retrieve messages from one or more POP3, IMAP4, or SDPS mailboxes and deliver to a maildir, mboxrd-format mbox file, or external MDA"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getmail &#8211; retrieve messages from one or more POP3, IMAP4, or SDPS mailboxes and deliver to a maildir, mboxrd-format mbox file, or external MDA </p>
+<h2>SYNOPSIS</h2>
 <p> <code>getmail</code> [<i>OPTION</i>] &#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> getmail can retrieve messages from POP3, IMAP4, and SDPS mailboxes. SSL-wrapped POP3 and IMAP are also supported. Single-user and domain (multi-drop) mailboxes are supported. </p>
 <p> getmail has built-in support for delivering to maildirs, mboxrd-format mbox files, and external MDAs.</p>
 <h2>OPTIONS</h2>

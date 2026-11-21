@@ -1,5 +1,4 @@
 ---
-
 title: "hesiod_to_bind(3)"
 name: "hesiod_to_bind"
 section: "3"
@@ -10,6 +9,7 @@ description: "hesiod, hesiod_init, hesiod_resolve, hesiod_free_list, hesiod_to_b
 
 <h2>NAME</h2>
 <p> hesiod, hesiod_init, hesiod_resolve, hesiod_free_list, hesiod_to_bind, hesiod_free_string, hesiod_end &#8211; Hesiod name server interface library</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;hesiod.h&gt;
 int hesiod_init(void **context) char **hesiod_resolve(void *context, const char *name,
@@ -20,6 +20,7 @@ char **hesiod_parse_result(void *context,
 void hesiod_end(void *context)
 cc file.c -lhesiod
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> This family of functions allows you to perform lookups of Hesiod information, which is stored as text records in the Domain Name Service. To perform lookups, you must first initialize a <i>context</i>, an opaque object which stores information used internally by the library between calls. <i>hesiod_init</i> initializes a context, storing a pointer to the context in the location pointed to by the <i>context</i> argument. <i>hesiod_end</i> frees the resources used by a context. </p>
 <p> <i>hesiod_resolve</i> is the primary interface to the library. If successful, it returns a list of one or more strings giving the records matching <i>name</i> and <i>type</i>. The last element of the list is followed by a NULL pointer. It is the caller&#8217;s responsibility to call <i>hesiod_free_list</i> to free the resources used by the returned list. </p>
 <p> <i>hesiod_to_bind</i> converts <i>name</i> and <i>type</i> into the DNS name used by <i>hesiod_resolve</i>. It is the caller&#8217;s responsibility to free the returned string using <i>hesiod_free_string</i>. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "muscan(1)"
 name: "muscan"
 section: "1"
@@ -10,7 +9,9 @@ description: "Muscan – File scanner for Museek"
 
 <h2>NAME</h2>
 <p> <code>Muscan</code> &#8211; File scanner for Museek</p>
+<h2>SYNOPSIS</h2>
 <p> <code>muscan</code> [-c &lt;<i>filename</i>&gt;] [&#8211;config &lt;<i>filename</i>&gt;] [-b] [&#8211;buddy] [-v] [&#8211;verbose] [-r] [&#8211;rescan] [-n] [&#8211;noscan] [-s &lt;<i>directory</i>&gt;] [&#8211;share &lt;<i>directory</i>&gt;] [-u &lt;<i>directory</i>&gt;] [&#8211;unshare &lt;<i>directory</i>&gt;] [-l] [&#8211;list] [-h] [&#8211;help]</p>
+<h2>DESCRIPTION</h2>
 <p> Muscan scans paths &amp; files to be shared by <i><a href="/docs/linux/man/1-museekd/">museekd</a></i>(1). It creates a database of files, with meta-data for MP3 and OGG Vorbis files, if Vorbis support was compiled in. There are two available shares databases, Normal and Buddies-Only. Buddies-Only is an optional shares database that, if enabled, is only accessable by the users you&#8217;ve chosen as &quot;Buddies&quot;. </p>
 <p> Before running muscan, you will need a configured museekd, which can be done with <i><a href="/docs/linux/man/1-musetup/">musetup</a></i>(1) or fI&gt;<a href="/docs/linux/man/1-musetup-gtk/">musetup-gtk</a>(1), and add some shared paths with either of the setup tools or with <i><a href="/docs/linux/man/1-muscan/">muscan</a></i>(1).</p>
 <h2>OPTIONS</h2>

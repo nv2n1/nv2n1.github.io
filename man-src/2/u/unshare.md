@@ -1,5 +1,4 @@
 ---
-
 title: "unshare(2)"
 name: "unshare"
 section: "2"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/2-unshare/"
 description: "unshare – disassociate parts of the process execution context"
 ---
 
+<h2 class="name">NAME</h2>
+<p> unshare &#8211; disassociate parts of the process execution context </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE
 #include &lt;sched.h&gt;
 int unshare(int flags);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>unshare</code>() allows a process (or thread) to disassociate parts of its execution context that are currently being shared with other processes (or threads). Part of the execution context, such as the mount namespace, is shared implicitly when a new process is created using <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2) or <code><a href="/docs/linux/man/2-vfork/">vfork</a></code>(2), while other parts, such as virtual memory, may be shared by explicit request when creating a process or thread using <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2). </p>
 <p> The main use of <code>unshare</code>() is to allow a process to control its shared execution context without creating a new process. </p>
 <p> The <i>flags</i> argument is a bit mask that specifies which parts of the execution context should be unshared. This argument is specified by ORing together zero or more of the following constants:</p>

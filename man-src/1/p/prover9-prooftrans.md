@@ -1,5 +1,4 @@
 ---
-
 title: "prover9-prooftrans(1)"
 name: "prover9-prooftrans"
 section: "1"
@@ -10,10 +9,12 @@ description: "prooftrans – tool for transforming Prover9 proofs"
 
 <h2>NAME</h2>
 <p> prooftrans &#8211; tool for transforming Prover9 proofs</p>
+<h2>SYNOPSIS</h2>
 <p> <code>prooftrans</code> [<i>parents_only</i>] [<i>expand</i>] [<i>renumber</i>] [<i>striplabels</i>] [<i>-f file</i>]<br />
  <code>prooftrans</code> xml [<i>expand</i>] [<i>renumber</i>] [<i>striplabels</i>] [<i>-f file</i>]<br />
  <code>prooftrans</code> ivy [<i>renumber</i>] [<i>-f file</i>]<br />
  <code>prooftrans</code> hints [<i>-label label</i>] [<i>expand</i>] [<i>striplabels</i>] [<i>-f file</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>prooftrans</code> command. </p>
 <p> <code>prooftrans</code> can extract proofs from <code><a href="/docs/linux/man/1-prover9/">prover9</a></code>(1) output files and transform them in various ways. </p>
 <h2>OPTIONS</h2>

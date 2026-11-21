@@ -1,5 +1,4 @@
 ---
-
 title: "dbrowdiff(1)"
 name: "dbrowdiff"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dbrowdiff/"
 description: "dbrowdiff – compute row-by-row differences of some column"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dbrowdiff &#8211; compute row-by-row differences of some column </p>
+<h2>SYNOPSIS</h2>
 <p> dbrowdiff [-B|-I] column</p>
+<h2>DESCRIPTION</h2>
 <p> For a given column, compute the differences between each row of the table. Differences are output to two new columns, <tt>&quot;absdiff&quot;</tt> and <tt>&quot;pctdiff&quot;</tt>. </p>
 <p> Differences are either relative to the previous column (<i>incremental</i> mode), or relative to the first row (<i>baseline</i> mode), the default.</p>
 <h2>OPTIONS</h2>

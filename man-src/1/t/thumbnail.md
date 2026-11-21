@@ -1,5 +1,4 @@
 ---
-
 title: "thumbnail(1)"
 name: "thumbnail"
 section: "1"
@@ -7,10 +6,13 @@ letter: "t"
 url: "/docs/linux/man/1-thumbnail/"
 ---
 
+
  </p>
 <h2>NAME</h2>
 <p> thumbnail &#8211; create a <font SIZE="-1">TIFF</font> file with thumbnail images  </p>
+<h2>SYNOPSIS</h2>
 <p> <code>thumbnail</code> [ <i>options</i> ] <i>input.tif</i> <i>output.tif</i>  </p>
+<h2>DESCRIPTION</h2>
 <p> <i>thumbnail</i> is a program written to show how one might use the SubIFD tag (#330) to store thumbnail images. <i>thumbnail</i> copies a <font SIZE="-1">TIFF</font> Class F facsimile file to the output file and for each image an 8-bit greyscale <i>thumbnail sketch</i>. The output file contains the thumbnail image with the associated full-resolution page linked below with the SubIFD tag. </p>
 <p> By default, thumbnail images are 216 pixels wide by 274 pixels high. Pixels are calculated by sampling and filtering the input image with each pixel value passed through a contrast curve.  </p>
 <h2>OPTIONS</h2>

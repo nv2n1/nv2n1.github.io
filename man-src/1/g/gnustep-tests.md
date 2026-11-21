@@ -1,5 +1,4 @@
 ---
-
 title: "gnustep-tests(1)"
 name: "gnustep-tests"
 section: "1"
@@ -10,7 +9,9 @@ description: "gnustep-tests – script to run a GNUstep testsuite"
 
 <h2>NAME</h2>
 <p> gnustep-tests &#8211; script to run a GNUstep testsuite</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gnustep-tests</code> [ <i>directory</i> | <i>test.m</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>gnustep-tests</code> runs the specified tests, or any tests found in the directory. If no arguments are given, the current directory and its subdirectories are scanned and processed accordingly.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "metalink_parse_fd(3)"
 name: "metalink_parse_fd"
 section: "3"
@@ -10,11 +9,13 @@ description: "metalink_parse_file, metalink_parse_fp, metalink_parse_fd, metalin
 
 <h2>NAME</h2>
 <p> metalink_parse_file, metalink_parse_fp, metalink_parse_fd, metalink_parse_memory &#8211; Parse Metalink file and create metalink_t object.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/metalink/metalink_parser.h">metalink/metalink_parser.h</a>&gt;</code> </p>
 <p> <code>metalink_error_t metalink_parse_file(const char *</code><i>filename</i><code>, metalink_t **</code><i>res</i><code>);</code><br />
  <code>metalink_error_t metalink_parse_fp(FILE *</code><i>docfp</i><code>, metalink_t **</code><i>res</i><code>);</code><br />
  <code>metalink_error_t metalink_parse_fd(int </code><i>docfd</i><code>, metalink_t **</code><i>res</i><code>);</code><br />
  <code>metalink_error_t metalink_parse_memory(const char *</code><i>buf</i><code>, size_t </code><i>len</i><code>, metalink_t **</code><i>res</i><code>);</code> </p>
+<h2>DESCRIPTION</h2>
 <p> These functions parse Metalink file data and constructs metalink_t structure. You don&#8217;t have to allocate memory for metalink_t structure. They take the pointer of metalink_t pointer and allocate memory for that pointer. </p>
 <p> <code>metalink_parse_file</code>() parses Metalink file denoted by <i>filename</i> and constructs metalink_t structure. </p>
 <p> <code>metalink_parse_fp</code>() reads data from file stream <i>docfp</i> and construtcts metalink_t structure. </p>

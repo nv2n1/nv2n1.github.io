@@ -1,5 +1,4 @@
 ---
-
 title: "dtpsv(3)"
 name: "dtpsv"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dtpsv/"
 description: "dtpsv.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dtpsv.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dtpsv</code> (UPLO, TRANS, DIAG, N, AP, X, INCX)<br />
  <i></i><code>DTPSV</code></p>

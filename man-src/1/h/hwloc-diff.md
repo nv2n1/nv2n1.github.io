@@ -1,5 +1,4 @@
 ---
-
 title: "hwloc-diff(1)"
 name: "hwloc-diff"
 section: "1"
@@ -10,6 +9,7 @@ description: "hwloc-diff – Compute differences between two XML topologies"
 
 <h2>NAME</h2>
 <p> hwloc-diff &#8211; Compute differences between two XML topologies</p>
+<h2>SYNOPSIS</h2>
 <p> <code>hwloc-diff</code> [<i>options</i>] <i>&lt;input1.xml&gt;</i> <i>&lt;input2.xml&gt;</i> </p>
 <p> <code>hwloc-diff</code> [<i>options</i>] <i>&lt;input1.xml&gt;</i> <i>&lt;input2.xml&gt;</i> <i>&lt;output.xml&gt;</i></p>
 <h2>OPTIONS</h2>
@@ -18,6 +18,7 @@ description: "hwloc-diff – Compute differences between two XML topologies"
 <dd> Use &lt;name&gt; as the identifier for the reference topology in the output XML difference. It is meant to tell which topology should be used when applying the resulting difference. hwloc-patch may use that name to automatically load the relevant reference topology XML. By default, &lt;input1.xml&gt; is used without its full path.</dd>
 <dt><code>&#8211;version</code></dt>
 <dd> Report version and exit.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> hwloc-diff computes the difference between two XML topologies and stores the result into &lt;output.xml&gt; if any, or dumps it to stdout otherwise. </p>
 <p> The output difference may later be applied to another topology with hwloc-patch. </p>
 <p> hwloc-compress-dir may be used for computing the diffs between all XML files in a directory. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "dh_dkms(1)"
 name: "dh_dkms"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dh_dkms/"
 description: "dh_dkms – correctly handle DKMS usage by a kernel module package"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dh_dkms &#8211; correctly handle DKMS usage by a kernel module package </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dh_dkms</code> [<i>debhelper options</i>] [<code>-l</code>] [<code>-V</code>[<i>version</i>]] [<code>&#8212;</code>&nbsp;<i>file</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> dh_dkms is a debhelper program that is responsible for correctly setting postinst, postrm and dependencies in kernel module packages using <font SIZE="-1">DKMS</font>. </p>
 <p> If a file named debian/package.dkms exists, then different actions are performed, depending on its contents.</p>
 <h2>FILES</h2>

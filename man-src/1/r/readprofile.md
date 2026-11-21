@@ -1,5 +1,4 @@
 ---
-
 title: "readprofile(1)"
 name: "readprofile"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-readprofile/"
 description: "readprofile – read kernel profiling information"
 ---
 
+<h2 class="name">NAME</h2>
+<p> readprofile &#8211; read kernel profiling information </p>
+<h2>SYNOPSIS</h2>
 <p> <code>readprofile</code> [<i>options</i>] </p>
 <h2>VERSION</h2>
 <p> This manpage documents version 2.0 of the program. </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>readprofile</code> command uses the <code>/proc/profile</code> information to print ascii data on standard output. The output is organized in three columns: the first is the number of clock ticks, the second is the name of the C function in the kernel where those many ticks occurred, and the third is the normalized `load&#8217; of the procedure, calculated as a ratio between the number of ticks and the length of the procedure. The output is filled with blanks to ease readability. </p>
 <p> Available command line options are the following: </p>
 <dl>

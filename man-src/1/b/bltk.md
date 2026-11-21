@@ -1,5 +1,4 @@
 ---
-
 title: "bltk(1)"
 name: "bltk"
 section: "1"
@@ -10,7 +9,9 @@ description: "bltk – tool kit is used to measure battery life and performance 
 
 <h2>NAME</h2>
 <p> bltk &#8211; tool kit is used to measure battery life and performance under different workloads on Linux.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>bltk</code> [-hVvaNAcCBXswiIRDPGOYZyQzxul] [-t sec] [-r results_dir] [-m {0,1}] [-U path] [-g setup] [-J pid] [-T time] [-F file] [-W app] [-L title] [-K comment] [-e app] [-E app] [-p percent] [-d percent] [-o {0,1,2}] [-q file] [-b percent] [-f command] [-k num]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>The BLTK</code> can be used with various workloads to simulate different types of laptop usage. The following workloads are currently implemented:</p>
 <dl>
 <dl>

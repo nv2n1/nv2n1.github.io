@@ -1,5 +1,4 @@
 ---
-
 title: "removing-npm(1)"
 name: "removing-npm"
 section: "1"
@@ -8,7 +7,9 @@ url: "/docs/linux/man/1-removing-npm/"
 description: "npm-removal – Cleaning the Slate"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>npm-removal</code> &#8211; Cleaning the Slate </p>
+<h2>SYNOPSIS</h2>
 <p> So sad to see you go.</p>
 <dl>
 <dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "vermin(1)"
 name: "vermin"
 section: "1"
@@ -12,6 +11,7 @@ description: "vermin – Parses and processes Verilog HDL files"
 <p> vermin &#8211; Parses and processes Verilog HDL files</p>
 <h2>SYNTAX</h2>
 <p> vermin [<i>VERILOGFILE</i>]&#8230; [<i>option</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Parses Verilog HDL files for use by other tools. The Verilog grammar used is 1364-1995.</p>
 <h2>OPTIONS</h2>
 <dl>

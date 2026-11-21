@@ -1,5 +1,4 @@
 ---
-
 title: "qorder(1)"
 name: "qorder"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-qorder/"
 description: "qorder – exchange order of two pbs batch jobs in a queue."
 ---
 
+<h2 class="name">NAME</h2>
+<p> qorder &#8211; exchange order of two pbs batch jobs in a queue. </p>
+<h2>SYNOPSIS</h2>
 <p> qorder job_identifier job_identifier</p>
+<h2>DESCRIPTION</h2>
 <p> To order two jobs is to exchange the jobs positions in the queue or queues in which the jobs resides. The two jobs must be located at the same server. No attribute of the job, such as priority is changed. The impact of interchanging the order with the queue(s) is dependent on local job scheduled policy, contact your systems administrator. </p>
 <p> A job in the <code>running</code> state cannot be reordered.</p>
 <h2>OPERANDS</h2>

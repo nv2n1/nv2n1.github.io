@@ -1,5 +1,4 @@
 ---
-
 title: "neofetch(1)"
 name: "neofetch"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-neofetch/"
 description: "Neofetch – A fast, highly customizable system info script"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Neofetch &#8211; A fast, highly customizable system info script </p>
+<h2>SYNOPSIS</h2>
 <p> <code>neofetch</code> <i>,func_name &#8211;option &quot;value&quot; &#8211;option &quot;value&quot;/</i></p>
+<h2>DESCRIPTION</h2>
 <p> Neofetch is a CLI system information tool written in BASH. Neofetch displays information about your system next to an image, your OS logo, or any ASCII file of your choice. </p>
 <p> NOTE: Every launch flag has a config option.</p>
 <h2>OPTIONS</h2>

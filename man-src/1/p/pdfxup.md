@@ -1,5 +1,4 @@
 ---
-
 title: "pdfxup(1)"
 name: "pdfxup"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pdfxup/"
 description: "pdfxup – n-up tool with reduced margins"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pdfxup &#8211; n-up tool with reduced margins </p>
+<h2>SYNOPSIS</h2>
 <p> pdfxup [OPTIONS] [FILE]</p>
+<h2>DESCRIPTION</h2>
 <p> pdfxup creates a PDF document where each page is obtained by combining several pages of a PDF file given as output. The important feature of pdfxup, compared to similar programs, is that it tries to compute the (global) bounding box of the input PDF file, in order to remove the margins and to keep the text only. Instead of having the font size divided by 2 (for the case of 2-up output), in some case you may end up with almost the same font size as in the original document (as is the case for a default &#8216;article&#8217; document produced by LaTeX). </p>
 <p> pdfxup uses ghostscript for computing the maximal bounding box of (some of) the pages of the document, and then uses pdflatex (with graphicx package) in order to produce the new document.</p>
 <h2>OPTIONS</h2>

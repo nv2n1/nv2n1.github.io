@@ -1,5 +1,4 @@
 ---
-
 title: "mysqluc(1)"
 name: "mysqluc"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mysqluc/"
 description: "mysqluc – Command line client for running MySQL Utilities"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mysqluc &#8211; Command line client for running MySQL Utilities </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqluc [&#8211;help | &#8211;version | [ | &#8211;verbose | &#8211;quiet |] &#8211;width=&lt;num&gt; | &#8211;utildir=&lt;path&gt; | &#8211;execute &lt;command list&gt; &lt;variable&gt;=&lt;value&gt;]</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This utility provides a command line environment for running MySQL Utilities. </dd>
 <p> The mysqluc utility, hence console, allows users to execute any of the currently installed MySQL Utilities command. The option <code>&#8211;utildir</code> is used to provide a path to the MySQL Utilities if the location is different from when the utility is executed. </p>
 <p> The console has a list of console or base commands. These allow the user to interact with the features of the console itself. The list of base commands is shown below along with a brief description.: </p>

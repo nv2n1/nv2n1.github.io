@@ -1,5 +1,4 @@
 ---
-
 title: "git-send-pack(1)"
 name: "git-send-pack"
 section: "1"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/1-git-send-pack/"
 description: "git-send-pack – Push objects over Git protocol to another repository"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-send-pack &#8211; Push objects over Git protocol to another repository </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git send - pack[--dry - run][--force][--receive - pack = &lt;git - receive - pack&gt;]
                [--verbose][--thin][--atomic]
                [--[no - ] signed | --signed = (true | false | if - asked)]
     [&lt;host&gt;:]&lt;directory&gt;(--all | &lt;ref&gt;...)
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Usually you would want to use <i>git push</i>, which is a higher-level wrapper of this command, instead. See <code><a href="/docs/linux/man/1-git-push/">git-push</a></code>(1). </p>
 <p> Invokes <i>git-receive-pack</i> on a possibly remote repository, and updates it from the current repository, sending named refs.</p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "fixtan(3)"
 name: "fixtan"
 section: "3"
@@ -10,8 +9,10 @@ description: "fixtan – Fixed point tangent of binary angles. Allegro game prog
 
 <h2>NAME</h2>
 <p> fixtan &#8211; Fixed point tangent of binary angles. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>fixed fixtan(fixed x);</code></p>
+<h2>DESCRIPTION</h2>
 <p> This function finds the tangent of a value using a lookup table. The input value must be a fixed point binary angle. Example: </p>
 <pre><code>
 fixed angle, res_a, res_b;

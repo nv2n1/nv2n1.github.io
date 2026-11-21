@@ -1,5 +1,4 @@
 ---
-
 title: "transcode(1)"
 name: "transcode"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-transcode/"
 description: "transcode – LINUX video stream processing tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> transcode &#8211; LINUX video stream processing tool </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>transcode</code> -i&nbsp;<wbr><i>name</i> [-o&nbsp;<wbr><i>name</i>] [-y&nbsp;<wbr><i>vmod,amod</i>] [-w&nbsp;<wbr><i>vbitrate</i>&nbsp;<wbr>[&nbsp;<wbr><i>,vkeyframes</i>&nbsp;<wbr>[&nbsp;<wbr><i>,vcrispness</i>&nbsp;<wbr>]&nbsp;<wbr>]] [-a&nbsp;<wbr><i>atrack</i>&nbsp;<wbr>[&nbsp;<wbr><i>,vtrack</i>&nbsp;<wbr>]] [-b&nbsp;<wbr><i>abitrate</i>&nbsp;<wbr>[&nbsp;<wbr><i>,is_vbr</i>&nbsp;<wbr>[&nbsp;<wbr><i>,quality</i>&nbsp;<wbr>[&nbsp;<wbr><i>,mode</i>&nbsp;<wbr>]&nbsp;<wbr>]&nbsp;<wbr>]] [-M&nbsp;<wbr><i>demuxer_mode</i>] [-F&nbsp;<wbr><i>codec_string</i>] [<i>other</i>&nbsp;<wbr><i>options</i>]</dt></dl>
 <h2>QUICK SUMMARY</h2>
 <p> <code>transcode</code></p>
 <dd>supports a huge range of options, as described in detail in further section. Only one option is mandatory: <code>-i name</code>, for supplying the input main (video) source. All other options are discretionary and they can be skipped. Most commonly needed options are <code>-o</code>, <code>-y</code>, <code>-w</code>, <code>-a</code>, <code>-b</code>, <code>-M</code>, <code>-F</code> and a fair number of transcode session needs a little more than those. See section below for full description of all transcode options. To inspect the properties of a module, such as their parameters or the help text, use the &#8216;tcmodinfo&#8217; tool.</dd>
+<h2>DESCRIPTION</h2>
 <p> <code>transcode</code> is a linux text-console utility for video stream processing, running on a platform that supports shared libraries and threads. </p>
 <p> It supports a huge range of options, as described in detail in further section. Only one option is mandatory: <code>-i name</code>, for supplying the input main (video) source. All other options are discretionary and they can be skipped. Most commonly needed options are <code>-o</code>, <code>-y</code>, <code>-w</code>, <code>-a</code>, <code>-b</code>, <code>-M</code>, <code>-F</code> and a fair number of transcode session needs a little more than those. See section below for full description of all transcode options. </p>
 <p> Decoding and encoding is done by loading modules that are responsible for feeding transcode with raw video/audio streams (import modules) and encoding the frames (export modules). </p>

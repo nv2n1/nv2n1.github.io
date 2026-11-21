@@ -1,5 +1,4 @@
 ---
-
 title: "zshmodules(1)"
 name: "zshmodules"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-zshmodules/"
 description: "zshmodules – zsh loadable modules"
 ---
 
+<h2 class="name">NAME</h2>
+<p> zshmodules &#8211; zsh loadable modules </p>
+<h2>DESCRIPTION</h2>
 <p> Some optional parts of zsh are in modules, separate from the core of the shell. Each of these modules may be linked in to the shell at build time, or can be dynamically linked while the shell is running if the installation supports this feature. Modules are linked at runtime with the <code>zmodload</code> command, see <i><a href="/docs/linux/man/1-zshbuiltins/">zshbuiltins</a></i>(1). </p>
 <p> The modules that are bundled with the zsh distribution are: </p>
 <dl>

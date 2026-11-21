@@ -1,5 +1,4 @@
 ---
-
 title: "krenew(1)"
 name: "krenew"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-krenew/"
 description: "krenew – Renew a Kerberos ticket"
 ---
 
+<h2 class="name">NAME</h2>
+<p> krenew &#8211; Renew a Kerberos ticket </p>
+<h2>SYNOPSIS</h2>
 <p> <code>krenew</code> [<code>-bhiLstvx</code>] [<code>-c</code> <i>child pid file</i>] [<code>-H</code> <i>minutes</i>]<br />
 &nbsp;<wbr>[<code>-K</code>&nbsp;<wbr><i>minutes</i>]&nbsp;<wbr>[<code>-k</code>&nbsp;<wbr><i>ticket cache</i>]&nbsp;<wbr>[<code>-p</code>&nbsp;<wbr><i>pid file</i>]<br />
 &nbsp;<wbr>[<i>command</i>&nbsp;<wbr>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>krenew</code> renews an existing renewable ticket. When run without any arguments, it just attempts to renew the existing ticket-granting ticket in the current ticket cache, equivalent to <tt>&quot;kinit -R&quot;</tt>, but it can optionally run a program like <code>aklog</code> to refresh <font SIZE="-1">AFS</font> tokens, can run as a daemon and wake up periodically to renew the ticket cache, or can run a specified command and keep renewing the ticket cache until the command finishes (or renewal is no longer possible). If a command is specified, <code>krenew</code> by default wakes up every 60 minutes (1 hour) to check the ticket cache. </p>
 <p> If a command is given, <code>krenew</code> makes a copy of the ticket cache and creates a private ticket cache just for that command, thus isolating it from later destruction of the original ticket cache. This allows krenew to maintain authentication for a command even if, for example, the user running the command logs out and OpenSSH destroys their original ticket cache. </p>
 <p> If a command is given, it will not be run using the shell, so if you want to use shell metacharacters in the command with their special meaning, give <tt>&quot;sh -c </tt>command<tt>&quot;</tt> as the command to run and quote <i>command</i>. If the command contains command-line options (like <tt>&quot;-c&quot;</tt>), put <tt>&quot;--&quot;</tt> on the command line before the beginning of the command to tell <code>krenew</code> to not parse those options as its own. </p>

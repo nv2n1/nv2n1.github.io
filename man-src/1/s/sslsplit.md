@@ -1,5 +1,4 @@
 ---
-
 title: "sslsplit(1)"
 name: "sslsplit"
 section: "1"
@@ -10,12 +9,14 @@ description: "sslsplit — transparent SSL/TLS interception"
 
 <h2>NAME</h2>
 <p> sslsplit &#8212; transparent SSL/TLS interception</p>
+<h2>SYNOPSIS</h2>
 <p> <code>sslsplit</code> [<code>-kCKwWOPZdDgGsrReumjplLSFi</code>] <code>-c</code> <i>pem</i> <i>proxyspecs</i> [&#8230;]<br />
  <code>sslsplit</code> [<code>-kCKwWOPZdDgGsrReumjplLSFi</code>] <code>-c</code> <i>pem</i> <code>-t</code> <i>dir</i> <i>proxyspecs</i> [&#8230;]<br />
  <code>sslsplit</code> [<code>-OPZwWdDgGsrReumjplLSFi</code>] <code>-t</code> <i>dir</i> <i>proxyspecs</i> [&#8230;]<br />
  <code>sslsplit -E</code><br />
  <code>sslsplit -V</code><br />
  <code>sslsplit -h</code> </p>
+<h2>DESCRIPTION</h2>
 <p> SSLsplit is a tool for man-in-the-middle attacks against SSL/TLS encrypted network connections. It is intended to be useful for network forensics, application security analysis and penetration testing. </p>
 <p> SSLsplit is designed to transparently terminate connections that are redirected to it using a network address translation engine. SSLsplit then terminates SSL/TLS and initiates a new SSL/TLS connection to the original destination address, while logging all data transmitted. Besides NAT based operation, SSLsplit also supports static destinations and using the server name indicated by SNI as upstream destination. SSLsplit is purely a transparent proxy and cannot act as a HTTP or SOCKS proxy configured in a browser. See NAT ENGINES and PROXY SPECIFICATIONS below for specifics on the different modes of operation. </p>
 <p> SSLsplit supports plain TCP, plain SSL, HTTP and HTTPS connections over both IPv4 and IPv6. SSLsplit fully supports Server Name Indication (SNI) and is able to work with RSA, DSA and ECDSA keys and DHE and ECDHE cipher suites. Depending on the version of OpenSSL, SSLsplit supports SSL 3.0, TLS 1.0, TLS 1.1 and TLS 1.2, and optionally SSL 2.0 as well. </p>

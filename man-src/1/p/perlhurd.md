@@ -1,5 +1,4 @@
 ---
-
 title: "perlhurd(1)"
 name: "perlhurd"
 section: "1"
@@ -7,9 +6,14 @@ letter: "p"
 url: "/docs/linux/man/1-perlhurd/"
 ---
 
-perlhurd - Perl version 5 on Hurd 
+<h2 class="name">NAME</h2>
+ 
 
-If you want to use Perl on the Hurd, I recommend using the Debian GNU/Hurd distribution ( see &lt;<a rel="nofollow" HREF="http://www.debian.org/">http://www.debian.org/</a>&gt; ), even if an official, stable release has not yet been made. The old ``gnu-0.2'' binary distribution will most certainly have additional problems.
+ perlhurd - Perl version 5 on Hurd 
+
+<h2>DESCRIPTION</h2>
+
+ If you want to use Perl on the Hurd, I recommend using the Debian GNU/Hurd distribution ( see &lt;<a rel="nofollow" HREF="http://www.debian.org/">http://www.debian.org/</a>&gt; ), even if an official, stable release has not yet been made. The old ``gnu-0.2'' binary distribution will most certainly have additional problems.
 
 <h3>Known Problems with Perl on Hurd</h3>
 

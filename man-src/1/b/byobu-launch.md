@@ -1,5 +1,4 @@
 ---
-
 title: "byobu-launch(1)"
 name: "byobu-launch"
 section: "1"
@@ -10,6 +9,7 @@ description: "byobu-launcher – Byobu Launcher"
 
 <h2>NAME</h2>
 <p> byobu-launcher &#8211; Byobu Launcher </p>
+<h2>DESCRIPTION</h2>
 <p> <code>byobu-launcher</code> is a simple application that will launch <code><a href="/docs/linux/man/1-screen/">screen</a></code>(1) in a <code><a href="/docs/linux/man/1-byobu/">byobu</a></code>(1) configuration, reconnecting to an existing detached session (if available). </p>
 <h2>SEE ALSO</h2>
 <dl>

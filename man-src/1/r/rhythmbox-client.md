@@ -1,5 +1,4 @@
 ---
-
 title: "rhythmbox-client(1)"
 name: "rhythmbox-client"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-rhythmbox-client/"
 description: "rhythmbox-client – controls a running instance of rhythmbox"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rhythmbox-client &#8211; controls a running instance of rhythmbox </p>
+<h2>SYNOPSIS</h2>
 <p> <code>rhythmbox-client</code> [<i>option&#8230;</i>]<i>[</i>file&#8230;<i>]</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>rhythmbox-client</code> is a tool for controlling an already running instance of <code>rhythmbox. </code> It&#8217;s useful for remote control scripting, adding specific files to the library from the shell, or printing details of what&#8217;s playing. It also has an interactive mode, useful for controlling playback remotely via ssh. Any files specified after the option arguments will be added to the library. If the <code>&#8211;enqueue</code> option is given, the files will also be added to the play queue.</p>
 <h2>OPTIONS</h2>
 <dl>

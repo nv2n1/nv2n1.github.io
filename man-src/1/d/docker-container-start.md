@@ -1,5 +1,4 @@
 ---
-
 title: "docker-container-start(1)"
 name: "docker-container-start"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-container-start/"
 description: "docker-container-start – Start one or more stopped containers"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-container-start &#8211; Start one or more stopped containers </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker container start [OPTIONS] CONTAINER [CONTAINER&#8230;]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Start one or more containers. </p>
 <h2>OPTIONS</h2>
 <p> <code>-a</code>, <code>&#8211;attach</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Attach STDOUT/STDERR and forward signals</p>

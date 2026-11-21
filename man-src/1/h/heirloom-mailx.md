@@ -1,5 +1,4 @@
 ---
-
 title: "heirloom-mailx(1)"
 name: "heirloom-mailx"
 section: "1"
@@ -7,12 +6,15 @@ letter: "h"
 url: "/docs/linux/man/1-heirloom-mailx/"
 description: "mailx – send and receive Internet mail"
 ---
-
+<h2 class="name">NAME</h2>
+<p> mailx - send and receive Internet mail </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>mailx</code> [<code>-BDdEFintv~</code>] [<code>-s</code><i>&nbsp;<wbr>subject</i>] [<code>-a</code><i>&nbsp;<wbr>attachment</i> ] [<code>-c</code><i>&nbsp;<wbr>cc-addr</i>] [<code>-b</code><i>&nbsp;<wbr>bcc-addr</i>] [<code>-r</code><i>&nbsp;<wbr>from-addr</i>] [<code>-h</code><i>&nbsp;<wbr>hops</i>] [<code>-A</code><i>&nbsp;<wbr>account</i>] [<code>-S</code><i>&nbsp;<wbr>variable</i>[<code>=</code><i>value</i>]] <i>to-addr</i> . . . </dt>
 <dt><code>mailx</code> [<code>-BDdeEHiInNRv~</code>] [<code>-T</code><i>&nbsp;<wbr>name</i>] [<code>-A</code><i>&nbsp;<wbr>account</i>] [<code>-S</code><i>&nbsp;<wbr>variable</i>[<code>=</code><i>value</i>]] <code>-f</code> [<i>name</i>] </dt>
 <dt><code>mailx</code> [<code>-BDdeEinNRv~</code>] [<code>-A</code><i>&nbsp;<wbr>account</i>] [<code>-S</code><i>&nbsp;<wbr>variable</i>[<code>=</code><i>value</i>]] [<code>-u</code><i>&nbsp;<wbr>user</i>] </dt>
 <dd>  </dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <i>Mailx</i> is an intelligent mail processing system, which has </p>
 <dd> <p> a command syntax reminiscent of <i><a href="/docs/linux/man/1-ed/">ed</a></i>(1) with lines replaced by messages. It is based on Berkeley Mail 8.1, is intended to provide the functionality of the POSIX <code>mailx</code> command, and offers extensions for MIME, IMAP, POP3, SMTP, and S/MIME. <i>Mailx</i> provides enhanced features for interactive use, such as caching and disconnected operation for IMAP, message threading, scoring, and filtering. It is also usable as a mail batch language, both for sending and receiving mail. </p>
 <p> The following options are accepted: </p>

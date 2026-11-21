@@ -1,5 +1,4 @@
 ---
-
 title: "g_tpbconv_d(1)"
 name: "g_tpbconv_d"
 section: "1"
@@ -11,7 +10,9 @@ description: "tpbconv – makes a run input file for restarting a crashed run"
 <h2>NAME</h2>
 <p> tpbconv &#8211; makes a run input file for restarting a crashed run </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>tpbconv</code> <code>-s</code><i> topol.tpr </i> <code>-f</code><i> traj.trr </i> <code>-e</code><i> ener.edr </i> <code>-n</code><i> index.ndx </i> <code>-o</code><i> tpxout.tpr </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-nsteps</code><i> int </i> <code>-runtime</code><i> real </i> <code>-time</code><i> real </i> <code>-extend</code><i> real </i> <code>-until</code><i> real </i> <code>-[no]zeroq</code><i></i> <code>-[no]cont</code><i></i></p>
+<h2>DESCRIPTION</h2>
 <p> tpbconv can edit run input files in four ways. </p>
 <p> <code> 1st.</code> by modifying the number of steps in a run input file with option <code> -nsteps</code> or option <code> -runtime</code>. </p>
 <p> <code> 2st.</code> (OBSOLETE) by creating a run input file for a continuation run when your simulation has crashed due to e.g. a full disk, or by making a continuation run input file. This option is obsolete, since mdrun now writes and reads checkpoint files. Note that a frame with coordinates and velocities is needed. When pressure and/or Nose-Hoover temperature coupling is used an energy file can be supplied to get an exact continuation of the original run. </p>

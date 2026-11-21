@@ -1,5 +1,4 @@
 ---
-
 title: "dpkg-distaddfile(1)"
 name: "dpkg-distaddfile"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dpkg-distaddfile/"
 description: "dpkg-distaddfile – add entries to debian/files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dpkg-distaddfile &#8211; add entries to debian/files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dpkg-distaddfile</code> [<i>option</i>&#8230;] <i>filename section priority</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>dpkg-distaddfile</code> adds an entry for a named file to <code>debian/files</code>. </p>
 <p> It takes three non-option arguments, the filename and the section and priority for the <code>.changes</code> file. </p>
 <p> The filename should be specified relative to the directory where <code>dpkg-genchanges</code> will expect to find the files, usually <code>..</code>, rather than being a pathname relative to the current directory when <code>dpkg-distaddfile</code> is run.</p>

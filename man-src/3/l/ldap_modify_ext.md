@@ -1,5 +1,4 @@
 ---
-
 title: "ldap_modify_ext(3)"
 name: "ldap_modify_ext"
 section: "3"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/3-ldap_modify_ext/"
 description: "ldap_modify_ext, ldap_modify_ext_s – Perform an LDAP modify operation"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ldap_modify_ext, ldap_modify_ext_s &#8211; Perform an LDAP modify operation </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ldap.h&gt;
 int ldap_modify_ext(
@@ -29,6 +31,7 @@ void ldap_mods_free(
     LDAPMod **mods,
     int freemods);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The routine <code>ldap_modify_ext_s()</code> is used to perform an LDAP modify operation. <i>dn</i> is the DN of the entry to modify, and <i>mods</i> is a null-terminated array of modifications to make to the entry. Each element of the <i>mods</i> array is a pointer to an LDAPMod structure, which is defined below. </p>
 <pre><code>
 typedef struct ldapmod {

@@ -1,5 +1,4 @@
 ---
-
 title: "qacct(1)"
 name: "qacct"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-qacct/"
 description: "qacct – report and account for xxQS_NAMExx usage"
 ---
 
+<h2 class="name">NAME</h2>
+<p> qacct &#8211; report and account for xxQS_NAMExx usage </p>
+<h2>SYNOPSIS</h2>
 <p> <code>qacct</code> [<code>-ar</code> [<i>ar_id</i>]] [<code>-A</code> <i>Account</i>] [<code>-b</code> <i>BeginTime</i>] [<code>-d</code> <i>Days</i>] [<code>-e</code> <i>EndTime</i>] [<code>-g</code> [<i>GroupId</i>|<i>GroupName</i>]] [<code>-h</code> [<i>HostName</i>]] [<code>-help</code>] [<code>-j</code> [<i>job_id</i>|<i>job_name</i>|<i>pattern</i>]] [<code>-l</code> <i>attr</i>=<i>val</i>,&#8230;] [<code>-m</code>] [<code>-o</code> [<i>Owner</i>]] [<code>-u</code> [<i>Owner</i>]] [<code>-pe</code> [<i>PEname</i>]] [<code>-q</code> [<i>wc_queue</i>]] [<code>-slots</code> [<i>SlotNumber</i>]] [<code>-t</code> <i>task_id_range_list</i>] [<code>-P</code> [<i>Project</i>]] [<code>-D</code> [<i>Department</i>]] [<code>-f</code> <i>AcctFileName</i>] [<code>-E</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <i>qacct</i> utility scans the accounting data file (see and produces a summary of information for wall-clock time, CPU time, and system time for the categories of host name, queue name, group name, owner name, job name, job ID, and for the queues meeting the resource requirements as specified with the <code>-l</code> switch. Combinations of each category are permitted. Alternatively, all or specific jobs can be listed with the <code>-j</code> switch. For example the search criteria could include summarizing for a queue and an owner, but not for two queues in the same request. </p>
 <p> Note that results including parallel jobs depend on the value of <code>accounting_summary</code> in the parallel environment definition (see If it is false, there is an accounting record for slave tasks as well as master tasks so that, for example, there is a contribution to CPU time from each task. Note that the slot count reported for each task is the total for the job, not that allocated to the slave.</p>
 <h2>OPTIONS</h2>

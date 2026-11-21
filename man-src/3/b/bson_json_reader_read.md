@@ -1,5 +1,4 @@
 ---
-
 title: "bson_json_reader_read(3)"
 name: "bson_json_reader_read"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_json_reader_read() – Reads the next BSON document from the 
 
 <h2>NAME</h2>
 <p> bson_json_reader_read() &#8211; Reads the next BSON document from the underlying JSON source.</p>
+<h2>SYNOPSIS</h2>
 <pre>
 int
 bson_json_reader_read (bson_json_reader_t *reader,
@@ -26,6 +26,7 @@ bson_json_reader_read (bson_json_reader_t *reader,
 <dl>
 <dt><code>error</code></dt>
 <dd> A <code>bson_error_t</code> \&amp;.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Reads the next BSON document from the underlying JSON source. </p>
 <h2>ERRORS</h2>
 <p> Errors are propagated via the <code>error</code> parameter. </p>

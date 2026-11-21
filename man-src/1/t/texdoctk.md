@@ -1,5 +1,4 @@
 ---
-
 title: "texdoctk(1)"
 name: "texdoctk"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-texdoctk/"
 description: "texdoctk – GUI for easier access of TeX package and program documentations"
 ---
 
+<h2 class="name">NAME</h2>
+<p> texdoctk &#8211; GUI for easier access of TeX package and program documentations </p>
+<h2>SYNOPSIS</h2>
 <p> <code>texdoctk</code> -[aq]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>texdoctk</code> is a GUI for easier access to a large part of the vast amount of package and program documentations and tutorials for TeX and its different derivatives (mainly LaTeX). It is optimized and included in the teTeX and fpTeX distributions and also available with TeXLive. </p>
 <p> The documentation is grouped into 17 categories; the 18th button of the main panel is inactive by default and intended for use with local additions (see section <code>CONFIGURATION</code> below). </p>
 <p> In the settings window you see a checkbox in the html-&gt;ps and text-&gt;ps converter menus for switching on/off output redirect. This is due to the fact that some converters do not write their output into a file but to stdout by default, so a redirect is needed, e.g. </p>

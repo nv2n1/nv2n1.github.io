@@ -1,5 +1,4 @@
 ---
-
 title: "doveadm-pw(1)"
 name: "doveadm-pw"
 section: "1"
@@ -10,9 +9,11 @@ description: "doveadm-pw – Dovecot’s password hash generator"
 
 <h2>NAME</h2>
 <p> doveadm-pw &#8211; Dovecot&#8217;s password hash generator</p>
+<h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>pw -l</code><br />
  <code>doveadm</code> [<code>-Dv</code>] <code>pw</code> [<code>-p</code> <i>password</i>] [<code>-r</code> <i>rounds</i>] [<code>-s</code> <i>scheme</i>] [<code>-u</code> <i>user</i>] [<code>-V</code>]<br />
  <code>doveadm</code> [<code>-Dv</code>] <code>pw -t</code> <i>hash</i> [<code>-p</code> <i>password</i>] [<code>-u</code> <i>user</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>doveadm pw</code> is used to generate password hashes for different password <i>scheme</i>s and optionally verify the generated hash. </p>
 <p> All generated password hashes have a {<i>scheme</i>} prefix, for example {<code>SHA512-CRYPT.HEX</code>}. All passdbs have a default scheme for passwords stored without the {<i>scheme</i>} prefix. The default scheme can be overridden by storing the password with the scheme prefix. </p>
 <h2>OPTIONS</h2>

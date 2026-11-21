@@ -1,5 +1,4 @@
 ---
-
 title: "ipa-modgroup(1)"
 name: "ipa-modgroup"
 section: "1"
@@ -10,7 +9,9 @@ description: "ipa-modgroup – Modify a group"
 
 <h2>NAME</h2>
 <p> ipa-modgroup &#8211; Modify a group</p>
+<h2>SYNOPSIS</h2>
 <p> ipa-modgroup [<i>OPTION</i>]&#8230; <i>group</i> </p>
+<h2>DESCRIPTION</h2>
 <p> Updates the members or description of <i>group</i>.</p>
 <h2>OPTIONS</h2>
 <dl>

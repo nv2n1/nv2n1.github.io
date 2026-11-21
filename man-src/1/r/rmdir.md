@@ -1,5 +1,4 @@
 ---
-
 title: "rmdir(1)"
 name: "rmdir"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-rmdir/"
 description: "rmdir – remove empty directories"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rmdir &#8211; remove empty directories </p>
+<h2>SYNOPSIS</h2>
 <p> <code>rmdir</code> [<i>,OPTION/</i>]&#8230; <i>,DIRECTORY/</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Remove the DIRECTORY(ies), if they are empty.</p>
 <dl>
 <dt> <code>&#8211;ignore-fail-on-non-empty</code></dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "xqodem(1)"
 name: "xqodem"
 section: "1"
@@ -10,7 +9,9 @@ description: "xqodem – Qodem Terminal Emulator"
 
 <h2>NAME</h2>
 <p> xqodem &#8211; Qodem Terminal Emulator</p>
+<h2>SYNOPSIS</h2>
 <p> <code>xqodem</code> <i>qodem-options</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>xqodem</code> is a script wrapper around <code>qodem.</code> It tries to find a UTF-8 and color capable X11-based terminal on your system, and then runs qodem in a terminal session.</p>
 <h2>OPTIONS</h2>
 <p> See <i>qodem</i> (1).</p>

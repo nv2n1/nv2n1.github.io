@@ -1,5 +1,4 @@
 ---
-
 title: "lxappearance(1)"
 name: "lxappearance"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-lxappearance/"
 description: "lxappearance – GTK+ theme switcher"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lxappearance &#8211; GTK+ theme switcher </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>lxappearance</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This manual page documents briefly the <code>lxappearance</code> command. </dd>
 <p> <code>lxappearance</code> is a program to change GTK+ themes, icon themes, and fonts used by applications. It is a feature-rich GTK+ theme switcher.</p>
 <h2>AUTHOR</h2>

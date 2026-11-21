@@ -1,5 +1,4 @@
 ---
-
 title: "icedtea-web-plugin(1)"
 name: "icedtea-web-plugin"
 section: "1"
@@ -8,7 +7,9 @@ url: "/docs/linux/man/1-icedtea-web-plugin/"
 description: "icedtea-web-plugin – allow to run java applets in your favorite browser"
 ---
 
+<h2 class="name">NAME</h2>
 <p> icedtea-web-plugin &#8211; allow to run <code>java applets </code> in your favorite <code>browser</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>icedtea-web-plugin </code> is working in your browser, once your browser knows about this files. </p>
 <p> The IcedTeaPlugin.so must be placed, or linked inside specific directories. See <a rel="nofollow" href="http://icedtea.classpath.org/wiki/IcedTea-Web#Plugin">http://icedtea.classpath.org/wiki/IcedTea-Web#Plugin</a> </p>
 <p> <code>Mozilla compatible browsers </code> like Firefox, Midori, Epiphany, Chrome or Chromium use: </p>

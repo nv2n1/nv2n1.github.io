@@ -1,5 +1,4 @@
 ---
-
 title: "avimerge(1)"
 name: "avimerge"
 section: "1"
@@ -10,9 +9,11 @@ description: "avimerge – merge several AVI-files into one"
 
 <h2>NAME</h2>
 <p> avimerge &#8211; merge several AVI-files into one</p>
+<h2>SYNOPSIS</h2>
 <p> <code>avimerge</code> <code>-o</code> <i>name</i> <code>-i</code> <i>file1</i><code> [ </code><i>file2</i><code> [ </code><i>&#8230;</i><code> ] ] </code> [ <code>-p</code> <i>file</i> ] [ <code>-a</code> <i>num</i> ] [ <code>-A</code> <i>num</i> ] [ <code>-b</code> <i>num</i> ] [ <code>-c</code> ] [ <code>-f</code> <i>commentfile</i> ] [ <code>-x</code> <i>indexfile</i> ]</p>
 <h2>COPYRIGHT</h2>
 <p> <code>avimerge</code> is Copyright (C) by Thomas Oestreich.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>avimerge</code> is a versatile tool. It can contatenate several AVI files into one. It can also be used to fix an index of a broken file and can also replace audio tracks or muxes new ones. It can read raw AC3 and MP3 files for multplexing.</p>
 <h2>OPTIONS</h2>
 <dl>

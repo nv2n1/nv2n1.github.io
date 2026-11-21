@@ -1,5 +1,4 @@
 ---
-
 title: "dirfd(3)"
 name: "dirfd"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dirfd/"
 description: "dirfd – get directory stream file descriptor"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dirfd &#8211; get directory stream file descriptor </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code><br />
  <code>#include &lt;dirent.h&gt;</code> </p>
 <p> <code>int dirfd(DIR *</code><i>dirp</i><code>);</code> </p>
@@ -17,6 +19,7 @@ description: "dirfd – get directory stream file descriptor"
 <dt>
 </dt><dd> /* Since glibc 2.10: */ _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The function <code>dirfd</code>() returns the file descriptor associated with the directory stream <i>dirp</i>. </p>
 <p> This file descriptor is the one used internally by the directory stream. As a result, it is useful only for functions which do not depend on or alter the file position, such as <code><a href="/docs/linux/man/2-fstat/">fstat</a></code>(2) and <code><a href="/docs/linux/man/2-fchdir/">fchdir</a></code>(2). It will be automatically closed when <code><a href="/docs/linux/man/3-closedir/">closedir</a></code>(3) is called.</p>
 <h2>RETURN VALUE</h2>

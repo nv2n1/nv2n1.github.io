@@ -1,5 +1,4 @@
 ---
-
 title: "fmt(1)"
 name: "fmt"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-fmt/"
 description: "fmt – simple optimal text formatter"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fmt &#8211; simple optimal text formatter </p>
+<h2>SYNOPSIS</h2>
 <p> <code>fmt</code> [<i>,-WIDTH/</i>] [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Reformat each paragraph in the FILE(s), writing to standard output. The option <code>-WIDTH</code> is an abbreviated form of <code>&#8211;width</code>=<i>,DIGITS/</i>. </p>
 <p> With no FILE, or when FILE is -, read standard input. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>

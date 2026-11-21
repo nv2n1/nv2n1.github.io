@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_hmac_init(3)"
 name: "gnutls_hmac_init"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_hmac_init – API function"
 
 <h2>NAME</h2>
 <p> gnutls_hmac_init &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/crypto.h&gt;</code> </p>
 <p> <code>int gnutls_hmac_init(gnutls_hmac_hd_t * </code><i>dig</i><code>, gnutls_mac_algorithm_t </code><i>algorithm</i><code>, const void * </code><i>key</i><code>, size_t </code><i>keylen</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,6 +22,7 @@ description: "gnutls_hmac_init – API function"
 <dd> The key to be used for encryption</dd>
 <dt>size_t keylen</dt>
 <dd> The length of the key</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will initialize an context that can be used to produce a Message Authentication Code (MAC) of data. This will effectively use the current crypto backend in use by gnutls or the cryptographic accelerator in use. </p>
 <p> Note that despite the name of this function, it can be used for other MAC algorithms than HMAC.</p>
 <h2>RETURNS</h2>

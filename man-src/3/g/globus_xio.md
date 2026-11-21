@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_xio/"
 description: "Globus XIO –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Globus XIO &#8211; </p>
 <p> eXtensible Input Output library</p>
 <h3>Modules</h3>
 <p> <code>Globus XIO File Driver</code> </p>

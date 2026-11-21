@@ -1,5 +1,4 @@
 ---
-
 title: "molrender(1)"
 name: "molrender"
 section: "1"
@@ -7,7 +6,10 @@ letter: "m"
 url: "/docs/linux/man/1-molrender/"
 ---
 
-molrender - The molrender program reads a molecule from an input file and can render it in a variety of ways. 
+<h2 class="name">NAME</h2>
+ 
+
+ molrender - The molrender program reads a molecule from an input file and can render it in a variety of ways. 
 
  The output is an OOGL file that the Geomview program can read and display.
 

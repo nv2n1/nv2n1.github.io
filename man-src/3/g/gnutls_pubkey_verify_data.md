@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pubkey_verify_data(3)"
 name: "gnutls_pubkey_verify_data"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_pubkey_verify_data – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pubkey_verify_data &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/abstract.h&gt;</code> </p>
 <p> <code>int gnutls_pubkey_verify_data(gnutls_pubkey_t </code><i>pubkey</i><code>, unsigned int </code><i>flags</i><code>, const gnutls_datum_t * </code><i>data</i><code>, const gnutls_datum_t * </code><i>signature</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,6 +22,7 @@ description: "gnutls_pubkey_verify_data – API function"
 <dd> holds the signed data</dd>
 <dt>const gnutls_datum_t * signature</dt>
 <dd> contains the signature</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will verify the given signed data, using the parameters from the certificate. </p>
 <p> Deprecated. This function cannot be easily used securely. Use <code>gnutls_pubkey_verify_data2()</code> instead.</p>
 <h2>RETURNS</h2>

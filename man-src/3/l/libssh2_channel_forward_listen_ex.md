@@ -1,5 +1,4 @@
 ---
-
 title: "libssh2_channel_forward_listen_ex(3)"
 name: "libssh2_channel_forward_listen_ex"
 section: "3"
@@ -10,9 +9,11 @@ description: "libssh2_channel_forward_listen_ex – listen to inbound connection
 
 <h2>NAME</h2>
 <p> libssh2_channel_forward_listen_ex &#8211; listen to inbound connections</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
 <p> LIBSSH2_LISTENER * libssh2_channel_forward_listen_ex(LIBSSH2_SESSION *session, char *host, int port, int *bound_port, int queue_maxsize); </p>
 <p> LIBSSH2_LISTENER * libssh2_channel_forward_listen(LIBSSH2_SESSION *session, int port); </p>
+<h2>DESCRIPTION</h2>
 <p> Instruct the remote SSH server to begin listening for inbound TCP/IP connections. New connections will be queued by the library until accepted by <i><a href="/docs/linux/man/3-libssh2_channel_forward_accept/">libssh2_channel_forward_accept</a>(3)</i>. </p>
 <p> <i>session</i> &#8211; instance as returned by libssh2_session_init(). </p>
 <p> <i>host</i> &#8211; specific address to bind to on the remote host. Binding to 0.0.0.0 (default when NULL is passed) will bind to all available addresses. </p>

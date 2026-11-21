@@ -1,5 +1,4 @@
 ---
-
 title: "dlabad(3)"
 name: "dlabad"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlabad/"
 description: "dlabad.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlabad.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlabad</code> (SMALL, LARGE)<br />
  <i></i><code>DLABAD</code></p>

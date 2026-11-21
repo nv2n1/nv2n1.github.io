@@ -1,5 +1,4 @@
 ---
-
 title: "csepdjvu(1)"
 name: "csepdjvu"
 section: "1"
@@ -10,7 +9,9 @@ description: "csepdjvu – DjVu encoder for separated data files."
 
 <h2>NAME</h2>
 <p> csepdjvu &#8211; DjVu encoder for separated data files. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>csepdjvu [</code><i>options</i><code>] [</code><i>sepfiles</i><code>]&#8230; </code><i>outputdjvufile</i> </p>
+<h2>DESCRIPTION</h2>
 <p> This program creates a DjVuDocument file <i>outputdjvufile</i> from separated data files <i>sepfiles</i>. It can read separated data from the standard input when given a single dash instead of the separated data file names. This feature is intended for pre-processing programs that push separated data into <code>csepdjvu</code> via a pipe. </p>
 <p> Each separated data file represents one or more page images. When the program arguments specify multiple pages, all the pages are encoded and saved as a bundled multi-page document. When the program arguments specify a single page, the page is encoded and saved as a single page file. </p>
 <h2>OPTIONS</h2>

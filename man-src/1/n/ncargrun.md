@@ -1,5 +1,4 @@
 ---
-
 title: "ncargrun(1)"
 name: "ncargrun"
 section: "1"
@@ -10,7 +9,9 @@ description: "ncargrun – to run a user program and redirect the metafile outpu
 
 <h2>NAME</h2>
 <p> ncargrun &#8211; to run a user program and redirect the metafile output</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ncargrun</code> <code>program-name</code> [<code>-t</code>] [<code>-o metafile-name</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>ncargrun</i> is a script that invokes &quot;program-name&quot;, which uses the NCAR GKS library, and applies the specified options. </p>
 <p> Prior to running your program, this script sets the environment variables NCARG_GKS_OUTPUT, NCARG_GKS_PSOUTPUT, and NCARG_GKS_PDFOUTPUT to produce the desired effect.</p>
 <h2>OPTIONS</h2>

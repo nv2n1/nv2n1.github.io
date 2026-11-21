@@ -1,5 +1,4 @@
 ---
-
 title: "euwatch-enable-alarm-actions(1)"
 name: "euwatch-enable-alarm-actions"
 section: "1"
@@ -10,10 +9,12 @@ description: "euwatch-enable-alarm-actions – Enable all actions for one or mor
 
 <h2>NAME</h2>
 <p> euwatch-enable-alarm-actions &#8211; Enable all actions for one or more alarms</p>
+<h2>SYNOPSIS</h2>
 <p> euwatch-enable-alarm-actions [&#8211;show-empty-fields] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID]</dt>
 <dd> [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ALARM [ALARM &#8230;]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Enable all actions for one or more alarms</p>
 <h3>positional arguments:</h3>
 <dl>

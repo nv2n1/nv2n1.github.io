@@ -1,5 +1,4 @@
 ---
-
 title: "npm-install-ci-test(1)"
 name: "npm-install-ci-test"
 section: "1"
@@ -8,6 +7,7 @@ url: "/docs/linux/man/1-npm-install-ci-test/"
 description: "npm"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>npm</code> </p>
 <h3>Synopsis</h3>
 <dl>

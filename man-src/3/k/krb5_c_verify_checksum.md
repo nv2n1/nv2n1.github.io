@@ -1,5 +1,4 @@
 ---
-
 title: "krb5_c_verify_checksum(3)"
 name: "krb5_c_verify_checksum"
 section: "3"
@@ -8,11 +7,14 @@ url: "/docs/linux/man/3-krb5_c_verify_checksum/"
 description: "krb5_c_block_size krb5_c_decrypt krb5_c_encrypt krb5_c_encrypt_length krb5_c_enctype_compare krb5_c_get_checksum krb5_c_is_coll_proof_cksum krb5_c_is_keyed_cksum krb5_c_keylength krb5_c_make_checks..."
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>krb5_c_block_size</code> <code>krb5_c_decrypt</code> <code>krb5_c_encrypt</code> <code>krb5_c_encrypt_length</code> <code>krb5_c_enctype_compare</code> <code>krb5_c_get_checksum</code> <code>krb5_c_is_coll_proof_cksum</code> <code>krb5_c_is_keyed_cksum</code> <code>krb5_c_keylength</code> <code>krb5_c_make_checksum</code> <code>krb5_c_make_random_key</code> <code>krb5_c_set_checksum</code> <code>krb5_c_valid_cksumtype</code> <code>krb5_c_valid_enctype</code> <code>krb5_c_verify_checksum</code> <code>krb5_c_checksum_length</code> &#8211; Kerberos 5 crypto API </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>
+<h2>SYNOPSIS</h2>
 <p> In krb5.h </p>
 <p> Ft krb5_error_code Fo krb5_c_block_size Fa krb5_context context Fa krb5_enctype enctype Fa size_t *blocksize Fc Ft krb5_error_code Fo krb5_c_decrypt Fa krb5_context context Fa const krb5_keyblock key Fa krb5_keyusage usage Fa const krb5_data *ivec Fa krb5_enc_data *input Fa krb5_data *output Fc Ft krb5_error_code Fo krb5_c_encrypt Fa krb5_context context Fa const krb5_keyblock *key Fa krb5_keyusage usage Fa const krb5_data *ivec Fa const krb5_data *input Fa krb5_enc_data *output Fc Ft krb5_error_code Fo krb5_c_encrypt_length Fa krb5_context context Fa krb5_enctype enctype Fa size_t inputlen Fa size_t *length Fc Ft krb5_error_code Fo krb5_c_enctype_compare Fa krb5_context context Fa krb5_enctype e1 Fa krb5_enctype e2 Fa krb5_boolean *similar Fc Ft krb5_error_code Fo krb5_c_make_random_key Fa krb5_context context Fa krb5_enctype enctype Fa krb5_keyblock *random_key Fc Ft krb5_error_code Fo krb5_c_make_checksum Fa krb5_context context Fa krb5_cksumtype cksumtype Fa const krb5_keyblock *key Fa krb5_keyusage usage Fa const krb5_data *input Fa krb5_checksum *cksum Fc Ft krb5_error_code Fo krb5_c_verify_checksum Fa krb5_context context Fa const krb5_keyblock *key Fa krb5_keyusage usage Fa const krb5_data *data Fa const krb5_checksum *cksum Fa krb5_boolean *valid Fc Ft krb5_error_code Fo krb5_c_checksum_length Fa krb5_context context Fa krb5_cksumtype cksumtype Fa size_t *length Fc Ft krb5_error_code Fo krb5_c_get_checksum Fa krb5_context context Fa const krb5_checksum *cksum Fa krb5_cksumtype *type Fa krb5_data **data Fc Ft krb5_error_code Fo krb5_c_set_checksum Fa krb5_context context Fa krb5_checksum *cksum Fa krb5_cksumtype type Fa const krb5_data *data Fc Ft krb5_boolean Fo krb5_c_valid_enctype Fa krb5_enctype etype Fc Ft krb5_boolean Fo krb5_c_valid_cksumtype Fa krb5_cksumtype ctype Fc Ft krb5_boolean Fo krb5_c_is_coll_proof_cksum Fa krb5_cksumtype ctype Fc Ft krb5_boolean Fo krb5_c_is_keyed_cksum Fa krb5_cksumtype ctype Fc Ft krb5_error_code Fo krb5_c_keylengths Fa krb5_context context Fa krb5_enctype enctype Fa size_t *inlength Fa size_t *keylength Fc</p>
+<h2>DESCRIPTION</h2>
 <p> The functions starting with krb5_c are compat functions with MIT kerberos. </p>
 <p> The <code>krb5_enc_data</code> structure holds and encrypted data. There are two public accessable members of <code>krb5_enc_data</code> <code>enctype</code> that holds the encryption type of the data encrypted and <code>ciphertext</code> that is a Ft krb5_data that might contain the encrypted data. </p>
 <p> Fn krb5_c_block_size returns the blocksize of the encryption type. </p>

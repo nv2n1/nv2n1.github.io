@@ -1,5 +1,4 @@
 ---
-
 title: "pqlist(1)"
 name: "pqlist"
 section: "1"
@@ -10,8 +9,10 @@ description: "pqlist – List available NetWare print queues"
 
 <h2>NAME</h2>
 <p> pqlist &#8211; List available NetWare print queues</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pqlist</code> [ <code>-h</code> ] [ <code>-S</code> <i>server</i> ] [ <code>-U</code> <i>user name</i> ] [ <code>-P</code> <i>password</i><br />
 &nbsp;<wbr>| <code>-n</code> ] [ <code>-C</code> ] [ <i>pattern</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pqlist</code> lists all the NetWare print queues available to you on some server. If you are already connected to some server, this one is used. </p>
 <p> If pqlist does not print to a tty, the decorative header line is not printed, so that you can count the printing queue available on your server by doing </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>pqlist -S server | wc -l </p>

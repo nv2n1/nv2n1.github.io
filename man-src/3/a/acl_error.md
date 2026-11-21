@@ -1,5 +1,4 @@
 ---
-
 title: "acl_error(3)"
 name: "acl_error"
 section: "3"
@@ -8,10 +7,13 @@ url: "/docs/linux/man/3-acl_error/"
 description: "acl_error – convert an ACL error code to a text message"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>acl_error</code> &#8211; convert an ACL error code to a text message </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>
+<h2>SYNOPSIS</h2>
 <p> In sys/types.h In acl/libacl.h Ft const char * Fn acl_error int code</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn acl_error function converts an ACL error code such as returned by the Fn acl_check function to a text message describing the error condition. In the &#8220;POSIX&#8221; locale, Fn acl_check returns the following descriptions for the error codes.</p>
 <dl>
 <dt><code>ACL_MULTI_ERROR</code></dt>

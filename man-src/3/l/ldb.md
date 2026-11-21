@@ -1,5 +1,4 @@
 ---
-
 title: "ldb(3)"
 name: "ldb"
 section: "3"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/3-ldb/"
 description: "ldb – A light-weight database library"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ldb &#8211; A light-weight database library </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ldb.h&gt;
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> ldb is a light weight embedded database library and API. With a programming interface that is very similar to LDAP, ldb can store its data either in a tdb(3) database or in a real LDAP database. </p>
 <p> When used with the tdb backend ldb does not require any database daemon. Instead, ldb function calls are processed immediately by the ldb library, which does IO directly on the database, while allowing multiple readers/writers using operating system byte range locks. This leads to an API with very low overheads, often resulting in speeds of more than 10x what can be achieved with a more traditional LDAP architecture. </p>
 <p> In a taxonomy of databases ldb would sit half way between key/value pair databases (such as berkley db or tdb) and a full LDAP database. With a structured attribute oriented API like LDAP and good indexing capabilities, ldb can be used for quite sophisticated applications that need a light weight database, without the administrative overhead of a full LDAP installation. </p>

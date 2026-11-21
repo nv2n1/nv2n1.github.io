@@ -1,5 +1,4 @@
 ---
-
 title: "gdal_contour(1)"
 name: "gdal_contour"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-gdal_contour/"
 description: "gdal_contour – gdal_contour builds vector contour lines from a raster elevation model"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gdal_contour &#8211; gdal_contour builds vector contour lines from a raster elevation model </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 Usage : gdal_contour[-b&lt;band&gt;][-a&lt;attribute_name&gt;][-3d][-inodata]
                     [-snodata n][-i&lt;interval&gt;]
@@ -15,6 +17,7 @@ Usage : gdal_contour[-b&lt;band&gt;][-a&lt;attribute_name&gt;][-3d][-inodata]
                     [-off&lt;offset&gt;][-fl&lt;level&gt;&lt;level&gt;...]
                     [-nln&lt;outlayername&gt;]&lt;src_filename&gt;&lt;dst_filename&gt;
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> This program generates a vector contour file from the input raster elevation model (DEM). </p>
 <p> Starting from version 1.7 the contour line-strings will be oriented consistently. The high side will be on the right, i.e. a line string goes clockwise around a top. </p>
 <dl>

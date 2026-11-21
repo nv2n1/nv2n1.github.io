@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-hwloc_cpuset_from_linux_libnuma_bitmask/"
 description: "hwlocality_linux_libnuma_bitmask – Interoperability with Linux libnuma bitmask"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hwlocality_linux_libnuma_bitmask &#8211; Interoperability with Linux libnuma bitmask </p>
 <h3>Functions</h3>
 <p> static struct bitmask * <code>hwloc_cpuset_to_linux_libnuma_bitmask</code> (<code>hwloc_topology_t</code> topology, <code>hwloc_const_cpuset_t</code> cpuset) </p>
 <p> static struct bitmask * <code>hwloc_nodeset_to_linux_libnuma_bitmask</code> (<code>hwloc_topology_t</code> topology, <code>hwloc_const_nodeset_t</code> nodeset) </p>

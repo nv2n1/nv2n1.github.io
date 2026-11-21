@@ -1,5 +1,4 @@
 ---
-
 title: "ginsh(1)"
 name: "ginsh"
 section: "1"
@@ -12,6 +11,7 @@ description: "ginsh – GiNaC Interactive Shell"
 <p> ginsh &#8211; GiNaC Interactive Shell</p>
 <h2>SYNPOSIS</h2>
 <p> <code>ginsh</code> [<i>file&#8230;</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>ginsh</code> is an interactive frontend for the GiNaC symbolic computation framework. It is intended as a tool for testing and experimenting with GiNaC&#8217;s features, not as a replacement for traditional interactive computer algebra systems. Although it can do many things these traditional systems can do, ginsh provides no programming constructs like loops or conditional expressions. If you need this functionality you are advised to write your program in C++, using the &quot;native&quot; GiNaC class framework.</p>
 <h2>USAGE</h2>
 <h3>INPUT FORMAT</h3>

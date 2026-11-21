@@ -1,5 +1,4 @@
 ---
-
 title: "ctprfb(3)"
 name: "ctprfb"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-ctprfb/"
 description: "ctprfb.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ctprfb.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctprfb</code> (SIDE, TRANS, DIRECT, STOREV, M, N, K, L, V, LDV, T, LDT, A, LDA, B, LDB, WORK, LDWORK)<br />
  <i></i><code>CTPRFB</code> applies a real or complex &#8216;triangular-pentagonal&#8217; blocked reflector to a real or complex matrix, which is composed of two blocks.</p>

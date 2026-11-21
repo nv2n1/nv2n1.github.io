@@ -1,5 +1,4 @@
 ---
-
 title: "tp-magic-config(1)"
 name: "tp-magic-config"
 section: "1"
@@ -15,6 +14,7 @@ description: "tp-magic-config — Helps creating ‘Magic’ tool plugins for Tu
 <dt><code>tp-magic-config [&#8211;apiversion | &#8211;version | &#8211;cflags | &#8211;pluginprefix | &#8211;plugindocprefix | &#8211;dataprefix | &#8211;localpluginprefix | &#8211;localdataprefix]</code></dt>
 <dd>
 </dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <i>tp-magic-config</i> is a simple shell script that responds with various pieces of information about the currently-installed version of <i>Tux Paint</i>(1) that are useful when building &#8216;Magic&#8217; tool plugins. </p>
 <h2>OPTIONS</h2>
 <dl>

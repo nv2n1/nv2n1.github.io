@@ -1,5 +1,4 @@
 ---
-
 title: "html2markdown(1)"
 name: "html2markdown"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-html2markdown/"
 description: "html2markdown – converts a page of HTML into markdown."
 ---
 
+<h2 class="name">NAME</h2>
+<p> html2markdown &#8211; converts a page of HTML into markdown. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>html2markdown</code> [options&#8230;] [(<i>filename</i>|<i>url</i>) [<i>encoding</i>]]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>html2markdown</code> downloads the specified HTML page, and converts it to text marked up with markdown. The source HTML page may be a local file or remote URL. If not specified, it will be read from standard input. The output is printed to standard output. </p>
 <p> If an <i>encoding</i> is specified, it will override any encoding information provided by the HTTP Server. When not specified, <code>python-feedparser</code> (if available) will be used to determine the source encoding. If not available, or when reading local files, the encoding is assumed to be UTF-8.</p>
 <h2>OPTIONS</h2>

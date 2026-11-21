@@ -1,5 +1,4 @@
 ---
-
 title: "dgeqr2p(3)"
 name: "dgeqr2p"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dgeqr2p/"
 description: "dgeqr2p.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dgeqr2p.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgeqr2p</code> (M, N, A, LDA, TAU, WORK, INFO)<br />
  <i></i><code>DGEQR2P</code> computes the QR factorization of a general rectangular matrix with non-negative diagonal elements using an unblocked algorithm.</p>

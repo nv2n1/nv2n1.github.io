@@ -1,5 +1,4 @@
 ---
-
 title: "arduino(1)"
 name: "arduino"
 section: "1"
@@ -11,9 +10,13 @@ url: "/docs/linux/man/1-arduino/"
 
  arduino - An IDE for Arduino-compatible electronics prototyping platforms
 
-arduino
+<h2>SYNOPSIS</h2>
 
-The Arduino development environment consists of a text editor, example code, and tools for compiling and uploading code to Arduino and compatible microcontroller boards.
+ arduino
+
+<h2>DESCRIPTION</h2>
+
+ The Arduino development environment consists of a text editor, example code, and tools for compiling and uploading code to Arduino and compatible microcontroller boards.
 
 <h2>SEE ALSO</h2>
 

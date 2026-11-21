@@ -1,5 +1,4 @@
 ---
-
 title: "pmdabash(1)"
 name: "pmdabash"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmdabash – Bourne-Again SHell trace performance metrics domain a
 
 <h2>NAME</h2>
 <p> <code>pmdabash</code> &#8211; Bourne-Again SHell trace performance metrics domain agent</p>
+<h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/bash/pmdabash</code> [<code>-C</code>] [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-I</code> <i>interval</i>] [<code>-t</code> <i>timeout</i>] [<code>-U</code> <i>username</i>] <i>configfile</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdabash</code> is an experimental Performance Metrics Domain Agent (PMDA) which exports &quot;xtrace&quot; events from a traced <code><a href="/docs/linux/man/1-bash/">bash</a></code>(1) process. This includes the command execution information that would usually be sent to standard error with the <code>set -x</code> option to the shell. </p>
 <p> Event metrics are exported showing each command executed, the function name and line number in the script, and a timestamp. Additionally, the process identifier for the shell and its parent process are exported. </p>
 <p> This requires <code>bash</code> version 4 or later. </p>

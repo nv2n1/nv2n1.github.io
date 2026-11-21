@@ -1,5 +1,4 @@
 ---
-
 title: "ssdiff(1)"
 name: "ssdiff"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ssdiff/"
 description: "ssdiff – compare two spreadsheets"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ssdiff &#8211; compare two spreadsheets</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ssdiff </code> [<i>OPTIONS</i>] <i>OLDFILE</i> <i>NEWFILE</i> </p>
+<h2>DESCRIPTION</h2>
 <p> This manual page briefly documents the <code>ssdiff</code> command. </p>
 <p> <code>ssdiff</code> is a command line utility to compare two spreadsheets and list their differences </p>
 <h2>OPTIONS</h2>

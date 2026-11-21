@@ -1,5 +1,4 @@
 ---
-
 title: "ekg(1)"
 name: "ekg"
 section: "1"
@@ -10,7 +9,9 @@ description: "ekg – A Gadu-Gadu compatible client."
 
 <h2>NAME</h2>
 <p> ekg &#8211; A Gadu-Gadu compatible client.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ekg [</code> <code>options</code> <code>]</code> <code>[</code> <code>commands</code> <code>]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>ekg</code> is an experimental Gadu-Gadu client. </p>
 <h2>OPTIONS</h2>
 <dl>

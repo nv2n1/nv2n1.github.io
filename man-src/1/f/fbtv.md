@@ -1,5 +1,4 @@
 ---
-
 title: "fbtv(1)"
 name: "fbtv"
 section: "1"
@@ -10,7 +9,9 @@ description: "fbtv – a console program for watching TV"
 
 <h2>NAME</h2>
 <p> fbtv &#8211; a console program for watching TV</p>
+<h2>SYNOPSIS</h2>
 <p> <code>fbtv [ options ] [ station name ]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>fbtv</code> is a program for watching TV with your linux box. It runs on top of a graphic framebuffer device (/dev/fb0). You&#8217;ll need a new 2.1.x kernel to play with this. <code>fbtv</code> shares the config file ($HOME/.xawtv) with the <code>xawtv</code> application. Check the <a href="/docs/linux/man/1-xawtv/">xawtv</a>(1) manpage for details about the config file format.</p>
 <h2>OPTIONS</h2>
 <dl>

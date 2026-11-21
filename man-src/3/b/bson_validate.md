@@ -1,5 +1,4 @@
 ---
-
 title: "bson_validate(3)"
 name: "bson_validate"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_validate() – Validates a BSON document by walking through t
 
 <h2>NAME</h2>
 <p> bson_validate() &#8211; Validates a BSON document by walking through the document and inspecting the fields for valid content.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 typedef enum {
     BSON_VALIDATE_NONE = 0,
@@ -32,6 +32,7 @@ bool bson_validate(const bson_t *bson,
 <dl>
 <dt><code>offset</code></dt>
 <dd> A location for the offset within <code>bson</code> where the error ocurred.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Validates a BSON document by walking through the document and inspecting the fields for valid content. </p>
 <p> You can modify how the validation occurs through the use of the <code>flags</code> parameter. A description of their effect is below. </p>
 <dl>

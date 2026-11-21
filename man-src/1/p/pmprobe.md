@@ -1,5 +1,4 @@
 ---
-
 title: "pmprobe(1)"
 name: "pmprobe"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmprobe – lightweight probe for performance metrics"
 
 <h2>NAME</h2>
 <p> <code>pmprobe</code> &#8211; lightweight probe for performance metrics</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pmprobe</code> [<code>-fIiLVvz</code>] [<code>-a</code> <i>archive</i>] [<code>-h</code> <i>hostname</i>] [<code>-K</code> <i>spec</i>] [<code>-n</code> <i>pmnsfile</i>] [<code>-O</code> <i>time</i>] [<code>-Z</code> <i>timezone</i>] [<i>metricname</i> &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmprobe</code> determines the availability of performance metrics exported through the facilities of the Performance Co-Pilot (PCP). </p>
 <p> The metrics of interest are named in the <i>metricname</i> arguments. If <i>metricname</i> is a non-leaf node in the Performance Metrics Name Space (<code><a href="/docs/linux/man/5-pmns/">pmns</a></code>(5)), then <code>pmprobe</code> will recursively descend the PMNS and report on all leaf nodes. If no <i>metricname</i> argument is given, the root of the namespace is used. </p>
 <p> The output format is spartan and intended for use in wrapper scripts creating configuration files for other PCP tools. By default, there is one line of output per metric, with the metric name followed by a count of the number of available values. Error conditions are encoded as a negative value count (as per the <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3) protocols, but may be decoded using <code><a href="/docs/linux/man/1-pmerr/">pmerr</a></code>(1)) and followed by a textual description of the error. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ircat(1)"
 name: "ircat"
 section: "1"
@@ -10,7 +9,9 @@ description: "ircat – print strings when pressing buttons"
 
 <h2>NAME</h2>
 <p> ircat &#8211; print strings when pressing buttons</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ircat</code> [<i>options</i>] <i>&lt;prog&gt;</i></p>
+<h2>DESCRIPTION</h2>
 <p> This program prints config strings to standard output. It can be used to provide remote control input to scripts and to debug your .lircrc file. </p>
 <p> The argument to the program is the program name, as it appears in the prog entries in .lircrc.</p>
 <dl>

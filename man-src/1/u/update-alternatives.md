@@ -1,5 +1,4 @@
 ---
-
 title: "update-alternatives(1)"
 name: "update-alternatives"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-update-alternatives/"
 description: "update-alternatives – maintain symbolic links determining default commands"
 ---
 
+<h2 class="name">NAME</h2>
+<p> update-alternatives &#8211; maintain symbolic links determining default commands </p>
+<h2>SYNOPSIS</h2>
 <p> <code>update-alternatives</code> [<i>option</i>&#8230;] <i>command</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>update-alternatives</code> creates, removes, maintains and displays information about the symbolic links comprising the Debian alternatives system. </p>
 <p> It is possible for several programs fulfilling the same or similar functions to be installed on a single system at the same time. For example, many systems have several text editors installed at once. This gives choice to the users of a system, allowing each to use a different editor, if desired, but makes it difficult for a program to make a good choice for an editor to invoke if the user has not specified a particular preference. </p>
 <p> Debian&#8217;s alternatives system aims to solve this problem. A generic name in the filesystem is shared by all files providing interchangeable functionality. The alternatives system and the system administrator together determine which actual file is referenced by this generic name. For example, if the text editors <code><a href="/docs/linux/man/1-ed/">ed</a></code>(1) and <code>nvi</code>(1) are both installed on the system, the alternatives system will cause the generic name <i>/usr/bin/editor</i> to refer to <i>/usr/bin/nvi</i> by default. The system administrator can override this and cause it to refer to <i>/usr/bin/ed</i> instead, and the alternatives system will not alter this setting until explicitly requested to do so. </p>

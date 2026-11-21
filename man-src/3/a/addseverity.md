@@ -1,5 +1,4 @@
 ---
-
 title: "addseverity(3)"
 name: "addseverity"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-addseverity/"
 description: "addseverity – introduce new severity classes"
 ---
 
+<h2 class="name">NAME</h2>
+<p> addseverity &#8211; introduce new severity classes </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;fmtmsg.h&gt;
 int addseverity(int severity, const char *s);
@@ -18,6 +20,7 @@ int addseverity(int severity, const char *s);
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_SVID_SOURCE</p>
+<h2>DESCRIPTION</h2>
 <p> This function allows the introduction of new severity classes which can be addressed by the <i>severity</i> argument of the <code><a href="/docs/linux/man/3-fmtmsg/">fmtmsg</a></code>(3) function. By default, that function knows only how to print messages for severity 0-4 (with strings (none), HALT, ERROR, WARNING, INFO). This call attaches the given string <i>s</i> to the given value <i>severity</i>. If <i>s</i> is NULL, the severity class with the numeric value <i>severity</i> is removed. It is not possible to overwrite or remove one of the default severity classes. The severity value must be nonnegative.</p>
 <h2>RETURN VALUE</h2>
 <p> Upon success, the value <code>MM_OK</code> is returned. Upon error, the return value is <code>MM_NOTOK</code>. Possible errors include: out of memory, attempt to remove a nonexistent or default severity class.</p>

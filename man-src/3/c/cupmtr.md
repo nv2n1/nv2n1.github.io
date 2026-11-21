@@ -1,5 +1,4 @@
 ---
-
 title: "cupmtr(3)"
 name: "cupmtr"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cupmtr/"
 description: "cupmtr.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cupmtr.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cupmtr</code> (SIDE, UPLO, TRANS, M, N, AP, TAU, C, LDC, WORK, INFO)<br />
  <i></i><code>CUPMTR</code></p>

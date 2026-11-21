@@ -1,5 +1,4 @@
 ---
-
 title: "imgsize(1)"
 name: "imgsize"
 section: "1"
@@ -8,10 +7,13 @@ url: "/docs/linux/man/1-imgsize/"
 description: "imgsize – read the dimensions of an image in several popular formats"
 ---
 
+<h2 class="name">NAME</h2>
+<p> imgsize &#8211; read the dimensions of an image in several popular formats </p>
 <h2>USAGE</h2>
 <pre><code>
 imgsize[-r | -a | -f fmt] file[file...]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> No-brainer to size an image supplied on the command-line. All the real work is done in Image::Size.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <p> <code>imgsize</code> expects file names on the command-line. If more than one file is provided, the file name will be included in the output: </p>

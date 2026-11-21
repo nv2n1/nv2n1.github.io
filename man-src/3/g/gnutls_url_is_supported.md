@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_url_is_supported(3)"
 name: "gnutls_url_is_supported"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_url_is_supported – API function"
 
 <h2>NAME</h2>
 <p> gnutls_url_is_supported &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_url_is_supported(const char * </code><i>url</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>const char * url</dt>
 <dd> A PKCS 11 url</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Check whether url is supported. Depending on the system libraries GnuTLS may support pkcs11 or tpmkey URLs.</p>
 <h2>RETURNS</h2>
 <p> return non-zero if the given URL is supported, and zero if it is not known.</p>

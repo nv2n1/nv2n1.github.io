@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-mapiconcepts/"
 description: "mapiconcepts – MAPI Concepts"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mapiconcepts &#8211; MAPI Concepts </p>
 <h3>MAPI objects</h3>
 <p> Almost any MAPI data you access, read or edit is associated with an object. No matter whether you intend to browse mailbox hierarchy, open folders, create tables or access items (messages, appointments, contacts, tasks, notes), you will have to initialize and use MAPI objects: <i>object understanding and manipulation is fundamental</i>. </p>
 <dl>

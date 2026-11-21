@@ -1,5 +1,4 @@
 ---
-
 title: "install-tl(1)"
 name: "install-tl"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-install-tl/"
 description: "install-tl – TeX Live cross-platform installer"
 ---
 
+<h2 class="name">NAME</h2>
+<p> install-tl &#8211; TeX Live cross-platform installer </p>
+<h2>SYNOPSIS</h2>
 <p> install-tl [<i>option</i>]&#8230; </p>
 <p> install-tl-windows.bat [<i>option</i>]&#8230; </p>
 <p> install-tl-advanced.bat [<i>option</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> This installer creates a runnable TeX Live installation from various media, including over the network, from local hard disk, a <font SIZE="-1">DVD,</font> etc. The installer works on all platforms supported by TeX Live. For information on initially downloading TeX Live, see &lt;<a rel="nofollow" href="https://tug.org/texlive/acquire.html">https://tug.org/texlive/acquire.html</a>&gt;. </p>
 <p> The basic idea of TeX Live installation is for you to choose one of the top-level <i>schemes</i>, each of which is defined as a different set of <i>collections</i> and <i>packages</i>, where a collection is a set of packages, and a package is what contains actual files. </p>
 <p> Within the installer, you can choose a scheme, and further customize the set of collections to install, but not the set of the packages. To work at the package level, use <tt>&quot;tlmgr&quot;</tt> (reference just below) after the initial installation is complete. </p>

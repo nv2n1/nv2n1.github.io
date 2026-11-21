@@ -1,5 +1,4 @@
 ---
-
 title: "ifuse(1)"
 name: "ifuse"
 section: "1"
@@ -10,7 +9,9 @@ description: "ifuse – Mount directories of an iOS device locally using fuse."
 
 <h2>NAME</h2>
 <p> ifuse &#8211; Mount directories of an iOS device locally using fuse.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ifuse MOUNTPOINT [OPTIONS]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Mount directories of an iOS device locally using fuse. By default the media directory is mounted, options allow to also mount the sandbox container of an app, an app&#8217;s documents folder or even the root filesystem on jailbroken devices. </p>
 <p> Example: </p>
 <p> $ ifuse /media/iPhone &#8211;root </p>

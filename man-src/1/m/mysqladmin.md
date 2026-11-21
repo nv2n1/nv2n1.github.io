@@ -1,5 +1,4 @@
 ---
-
 title: "mysqladmin(1)"
 name: "mysqladmin"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mysqladmin/"
 description: "mysqladmin – client for administering a MySQL server"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mysqladmin &#8211; client for administering a MySQL server </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqladmin [</code><i>options</i><code>] </code><i>command</i><code> [</code><i>command-options</i><code>] [</code><i>command</i><code> [</code><i>command-options</i><code>]] &#8230;</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>mysqladmin</code></p>
 <dd>is a client for performing administrative operations. You can use it to check the server&#8217;s configuration and current status, to create and drop databases, and more. </dd>
 <p> Invoke <code>mysqladmin</code> like this: </p>

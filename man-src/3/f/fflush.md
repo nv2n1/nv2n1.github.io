@@ -1,5 +1,4 @@
 ---
-
 title: "fflush(3)"
 name: "fflush"
 section: "3"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/3-fflush/"
 description: "fflush – flush a stream"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fflush &#8211; flush a stream </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;stdio.h&gt;</code> </p>
 <p> <code>int fflush(FILE *</code><i>stream</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> For output streams, <code>fflush</code>() forces a write of all user-space buffered data for the given output or update <i>stream</i> via the stream&#8217;s underlying write function. </p>
 <p> For input streams associated with seekable files (e.g., disk files, but not pipes or terminals), <code>fflush</code>() discards any buffered data that has been fetched from the underlying file, but has not been consumed by the application. </p>
 <p> The open status of the stream is unaffected. </p>

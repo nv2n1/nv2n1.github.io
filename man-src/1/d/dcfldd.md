@@ -1,5 +1,4 @@
 ---
-
 title: "dcfldd(1)"
 name: "dcfldd"
 section: "1"
@@ -10,7 +9,9 @@ description: "dcfldd – manual page for dcfldd (dcfldd) 1.3.4"
 
 <h2>NAME</h2>
 <p> dcfldd &#8211; manual page for dcfldd (dcfldd) 1.3.4</p>
+<h2>SYNOPSIS</h2>
 <p> <code>dcfldd</code> [<i>OPTION</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Copy a file, converting and formatting according to the options.</p>
 <dl>
 <dt>bs=BYTES</dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "dggevx(3)"
 name: "dggevx"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dggevx/"
 description: "dggevx.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dggevx.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dggevx</code> (BALANC, JOBVL, JOBVR, SENSE, N, A, LDA, B, LDB, ALPHAR, ALPHAI, BETA, VL, LDVL, VR, LDVR, ILO, IHI, LSCALE, RSCALE, ABNRM, BBNRM, RCONDE, RCONDV, WORK, LWORK, IWORK, BWORK, INFO)<br />
  <i></i><code> DGGEVX computes the eigenvalues and, optionally, the left and/or right eigenvectors for GE matrices</code></p>

@@ -1,5 +1,4 @@
 ---
-
 title: "krb5plugin_kuserok_ftable_desc(3)"
 name: "krb5plugin_kuserok_ftable_desc"
 section: "3"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/3-krb5plugin_kuserok_ftable_desc/"
 description: "krb5plugin_kuserok_ftable_desc –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> krb5plugin_kuserok_ftable_desc &#8211; </p>
 <p> Description of the </p>
 <p><a href="/docs/linux/man/3-krb5_kuserok/">krb5_kuserok</a>(3) plugin facility. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;kuserok_plugin.h&gt;</p>
 <h2>Detailed Description</h2>
 <p> Description of the <a href="/docs/linux/man/3-krb5_kuserok/">krb5_kuserok</a>(3) plugin facility. </p>

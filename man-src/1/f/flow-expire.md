@@ -1,5 +1,4 @@
 ---
-
 title: "flow-expire(1)"
 name: "flow-expire"
 section: "1"
@@ -10,7 +9,9 @@ description: "flow-expire – Manage storage of flow file archives by expiring o
 
 <h2>NAME</h2>
 <p> flow-expire &#8211; Manage storage of flow file archives by expiring old data.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>flow-expire</code> [ <code>-h</code> ] [ <code>-d</code><i> debug_level</i> ] [ <code>-e</code><i> expire_count</i> ] [ <code>-E</code><i> expire_size</i> ] <code>-w</code><i> workdir</i></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>flow-expire</code> utility will remove the oldest flow files in a directory based on either a count of files or space utilization. The directory is recursively searched for flow files. Files that do not have a flow-tools signature will be ignored. The internal timestamp is used so backups or copies of the flow files that do not retain the original timestamp will not impact the operation of <code>flow-expire</code>. <code>flow-expire</code> is typically used to manage storage in a distributed environment where flows are collected on a different server than they are archived.</p>
 <h2>OPTIONS</h2>
 <dl>

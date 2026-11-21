@@ -1,5 +1,4 @@
 ---
-
 title: "kde4-gnash(1)"
 name: "kde4-gnash"
 section: "1"
@@ -17,7 +16,9 @@ url: "/docs/linux/man/1-kde4-gnash/"
 gnash[option]...[URL]
 </code></pre>
 
-Run the SWF movie player.
+<h2>DESCRIPTION</h2>
+
+ Run the SWF movie player.
 <dl>
 <dt>-h
 </dt><dd> Print usage info.

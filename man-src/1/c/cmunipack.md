@@ -1,5 +1,4 @@
 ---
-
 title: "cmunipack(1)"
 name: "cmunipack"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-cmunipack/"
 description: "cmunipack – CCD astrophotometry software package"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cmunipack &#8211; CCD astrophotometry software package</p>
+<h2>DESCRIPTION</h2>
 <p> The software package C-Munipack presents the complete system for reduction of images carried out by CCD camera, oriented at the observation of variable stars. The specific programs of reduction process can be called from command line or via intuitive graphical user interface. For developers a dynamic-link library with powerfull interface is available. </p>
 <p> The project is based on the previous Munipack package, the programs have the same name, but contrary to Munipack, it is coded in C language and it contains a several new functions and tools in addition. Assignment of the command-line parameters and the configuration files is similar in both projects, exceptions are described in the project documentation. </p>
 <h2>DIRECTORIES</h2>

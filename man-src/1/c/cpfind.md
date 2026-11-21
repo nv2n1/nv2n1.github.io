@@ -1,5 +1,4 @@
 ---
-
 title: "cpfind(1)"
 name: "cpfind"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-cpfind/"
 description: "cpfind – Feature matching for panoramic stitching"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cpfind &#8211; Feature matching for panoramic stitching </p>
+<h2>SYNOPSIS</h2>
 <p> <code>cpfind</code> [options] -o <i>output_project</i> <i>project.pto</i> </p>
 <p> <code>cpfind</code> [options] -k i0 -k i1 [&#8230;] <i>project.pto</i> </p>
 <p> <code>cpfind</code> [options] &#8211;kall <i>project.pto</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>cpfind</code> cpfind is a control-point detector for Hugin. It expects a project file as input and writes a project file with control-points on success. It depends on reasonable lens information in the input project file. </p>
 <p> The first step is the feature description: In this step the images of the project file are loaded and so called keypoints are searched. They describe destinctive features in the image. <code>cpfind</code> uses a gradient based descriptor for the feature description of the keypoints. </p>
 <p> In a second step, the feature matching, all keypoints of two images are matched against each other to find features which are on both images. If this matching was successfull two keypoints in the two images become one control point.</p>

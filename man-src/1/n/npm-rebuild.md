@@ -1,5 +1,4 @@
 ---
-
 title: "npm-rebuild(1)"
 name: "npm-rebuild"
 section: "1"
@@ -8,6 +7,7 @@ url: "/docs/linux/man/1-npm-rebuild/"
 description: "npm-rebuild – Rebuild a package"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>npm-rebuild</code> &#8211; Rebuild a package </p>
 <h3>Synopsis</h3>
 <dl>

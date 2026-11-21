@@ -1,5 +1,4 @@
 ---
-
 title: "pbmtoescp2(1)"
 name: "pbmtoescp2"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-pbmtoescp2/"
 description: "pbmtoescp2 – convert a PBM image to a ESC/P2 printer file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pbmtoescp2 &#8211; convert a PBM image to a ESC/P2 printer file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pbmtoescp2</code> </p>
 <p> [<code>-compress=</code><i>compressionmode</i>] [<code>-resolution=</code><i>dpi</i>] [<i>pbmfile</i>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one to designate an option. You may use either white space or equals signs between an option name and its value. </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pbmtoescp2</code> reads a PBM image as input. It produces an ESC/P2 raster graphic printer control stream as output. </p>
 <p>&nbsp;<wbr>This program creates an output that is printable on Epson printers that understand the ESC/P2 printer control language (e.g. the Stylus models). For older Epson 9-pin dot matrix printers, which use the ESC/P protocol, see <code>pbmtoepson</code>. </p>

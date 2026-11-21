@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_session_get_ptr(3)"
 name: "gnutls_session_get_ptr"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_session_get_ptr – API function"
 
 <h2>NAME</h2>
 <p> gnutls_session_get_ptr &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void * gnutls_session_get_ptr(gnutls_session_t </code><i>session</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_session_t session</dt>
 <dd> is a <code>gnutls_session_t</code> structure.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Get user pointer for session. Useful in callbacks. This is the pointer set with <code>gnutls_session_set_ptr()</code>.</p>
 <h2>RETURNS</h2>
 <p> the user given pointer from the session structure, or <code>NULL</code> if it was never set.</p>

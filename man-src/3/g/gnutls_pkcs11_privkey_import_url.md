@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pkcs11_privkey_import_url(3)"
 name: "gnutls_pkcs11_privkey_import_url"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_pkcs11_privkey_import_url – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs11_privkey_import_url &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs11.h&gt;</code> </p>
 <p> <code>int gnutls_pkcs11_privkey_import_url(gnutls_pkcs11_privkey_t </code><i>pkey</i><code>, const char * </code><i>url</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_pkcs11_privkey_import_url – API function"
 <dd> a PKCS 11 url identifying the key</dd>
 <dt>unsigned int flags</dt>
 <dd> Or sequence of GNUTLS_PKCS11_OBJ_* flags</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will &quot;import&quot; a PKCS 11 URL identifying a private key to the <code>gnutls_pkcs11_privkey_t</code> structure. In reality since in most cases keys cannot be exported, the private key structure is being associated with the available operations on the token.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

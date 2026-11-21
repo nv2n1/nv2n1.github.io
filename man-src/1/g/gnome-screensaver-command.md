@@ -1,5 +1,4 @@
 ---
-
 title: "gnome-screensaver-command(1)"
 name: "gnome-screensaver-command"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-gnome-screensaver-command/"
 description: "gnome-screensaver-command – controls GNOME screensaver"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gnome-screensaver-command &#8211; controls GNOME screensaver </p>
+<h2>SYNOPSIS</h2>
 <p> <code>gnome-screensaver-command</code> [<i>OPTION&#8230;</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> gnome-screensaver-command is a tool for controlling an already running instance of gnome-screensaver.</p>
 <h2>OPTIONS</h2>
 <dl>

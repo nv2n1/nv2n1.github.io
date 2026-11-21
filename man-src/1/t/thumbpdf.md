@@ -1,5 +1,4 @@
 ---
-
 title: "thumbpdf(1)"
 name: "thumbpdf"
 section: "1"
@@ -10,7 +9,9 @@ description: "thumbpdf – generate thumbnail images for a PDF file created with
 
 <h2>NAME</h2>
 <p> thumbpdf &#8211; generate thumbnail images for a PDF file created with <code>pdftex</code> </p>
+<h2>SYNOPSIS</h2>
 <p> <code>thumbpdf</code> [ <i>OPTION</i>&#8230; ] <i>PDF_FILE</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>thumbpdf</code> is used to create thumbnail images of individual pages within a PDF (Portable Document Format) document. </p>
 <h2>USAGE</h2>
 <p> First run <code><a href="/docs/linux/man/1-pdftex/">pdftex</a></code>(1) on your document to create a PDF file. Then run <code>thumbpdf</code> to generate the thumbnails, a PDF file containing the thumbnails, and a pdfTeX file to include the thumbnails in the PDF file. Finally, run <code><a href="/docs/linux/man/1-pdftex/">pdftex</a></code>(1) on your file again to create the final PDF file. </p>

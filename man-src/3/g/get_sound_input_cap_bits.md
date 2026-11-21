@@ -1,5 +1,4 @@
 ---
-
 title: "get_sound_input_cap_bits(3)"
 name: "get_sound_input_cap_bits"
 section: "3"
@@ -10,8 +9,10 @@ description: "get_sound_input_cap_bits – Checks which audio input sample forma
 
 <h2>NAME</h2>
 <p> get_sound_input_cap_bits &#8211; Checks which audio input sample formats are supported. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>int get_sound_input_cap_bits();</code></p>
+<h2>DESCRIPTION</h2>
 <p> Checks which sample formats are supported by the current audio input driver, returning one of the bitfield values: </p>
 <pre>
    0 = audio input not supported

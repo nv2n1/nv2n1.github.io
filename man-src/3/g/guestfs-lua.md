@@ -1,5 +1,4 @@
 ---
-
 title: "guestfs-lua(3)"
 name: "guestfs-lua"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-guestfs-lua/"
 description: "guestfs-lua – How to use libguestfs from Lua"
 ---
 
+<h2 class="name">NAME</h2>
+<p> guestfs-lua &#8211; How to use libguestfs from Lua </p>
+<h2>SYNOPSIS</h2>
 <pre>
  local G = require &quot;guestfs&quot;
  g = G.create ()
@@ -16,6 +18,7 @@ description: "guestfs-lua – How to use libguestfs from Lua"
  devices = g:list_devices ()
  g:close ()
 </pre>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents how to call libguestfs from the Lua programming language. This page just documents the differences from the C <font SIZE="-1">API</font> and gives some examples. If you are not familiar with using libguestfs, you also need to read <i>guestfs</i>(3).</p>
 <h3><font SIZE="-1">REQUIRING THE MODULE</font></h3>
 <p> <tt>&quot;require &quot;guestfs&quot;&quot;</tt> returns the module, so you have to assign it to a local variable. Typical usage is: </p>

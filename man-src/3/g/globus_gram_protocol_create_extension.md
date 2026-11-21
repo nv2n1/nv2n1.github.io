@@ -1,5 +1,4 @@
 ---
-
 title: "globus_gram_protocol_create_extension(3)"
 name: "globus_gram_protocol_create_extension"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-globus_gram_protocol_create_extension/"
 description: "globus_gram_protocol.h – GRAM Protocol API."
 ---
 
+<h2 class="name">NAME</h2>
+<p> globus_gram_protocol.h &#8211; GRAM Protocol API.</p>
+<h2>SYNOPSIS</h2>
 <p> #include &#8216;globus_io.h&#8217;<br />
  #include &#8216;globus_gram_protocol_constants.h&#8217; </p>
 <h3>Typedefs</h3>

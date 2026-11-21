@@ -1,5 +1,4 @@
 ---
-
 title: "rubber-info(1)"
 name: "rubber-info"
 section: "1"
@@ -10,7 +9,9 @@ description: "rubber-info – extract information from LaTeX documents"
 
 <h2>NAME</h2>
 <p> rubber-info &#8211; extract information from LaTeX documents </p>
+<h2>SYNOPSIS</h2>
 <p> <code>rubber-info</code> [<i>options</i>] [<i>action</i>] <i>source</i> </p>
+<h2>DESCRIPTION</h2>
 <p> Rubber-info is a utility for extracting various kinds of information from a LaTeX document. Information can be extracted from the source (for instance when calculating dependencies) or from the compilation log files (to extract errors and warnings). This program is a complement for the compilation system <code><a href="/docs/linux/man/1-rubber/">rubber</a></code>(1). </p>
 <p> The command-line options are those used by <code><a href="/docs/linux/man/1-rubber/">rubber</a></code>(1) plus one of the actions described below. </p>
 <h2>ACTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "pmfunc(1)"
 name: "pmfunc"
 section: "1"
@@ -7,9 +6,14 @@ letter: "p"
 url: "/docs/linux/man/1-pmfunc/"
 ---
 
-pmfunc - cat out a function from a module 
+<h2 class="name">NAME</h2>
+ 
 
-Given a fully-qualified function, this program opens up the file and attempts to cat out the source for that function.
+ pmfunc - cat out a function from a module 
+
+<h2>DESCRIPTION</h2>
+
+ Given a fully-qualified function, this program opens up the file and attempts to cat out the source for that function.
 
 <h2>EXAMPLES</h2>
 

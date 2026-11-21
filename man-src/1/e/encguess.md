@@ -1,5 +1,4 @@
 ---
-
 title: "encguess(1)"
 name: "encguess"
 section: "1"
@@ -7,13 +6,18 @@ letter: "e"
 url: "/docs/linux/man/1-encguess/"
 ---
 
-encguess - guess character encodings of files 
+<h2 class="name">NAME</h2>
+ 
+
+ encguess - guess character encodings of files 
 
 <h2>VERSION</h2>
 
  <tt>$Id:</tt> encguess,v 0.3 2020/12/02 01:28:17 dankogai Exp dankogai $
 
-<pre>
+<h2>SYNOPSIS</h2>
+
+ <pre>
   encguess [switches] filename...
 </pre>
 
@@ -49,7 +53,9 @@ encguess - guess character encodings of files
    encguess -us euc-jp,shiftjis,7bit-jis test*.txt
 </pre></dd></dl>
 
-The encoding identification is done by checking one encoding type at a time until all but the right type are eliminated. The set of encoding types to try is defined by the -s parameter and defaults to ascii, utf8 and <font SIZE="-1">UTF-16/32</font> with <font SIZE="-1">BOM.</font> This can be overridden by passing one or more encoding types via the -s parameter. If you need to pass in multiple suspect encoding types, use a quoted string with the a space separating each value.
+<h2>DESCRIPTION</h2>
+
+ The encoding identification is done by checking one encoding type at a time until all but the right type are eliminated. The set of encoding types to try is defined by the -s parameter and defaults to ascii, utf8 and <font SIZE="-1">UTF-16/32</font> with <font SIZE="-1">BOM.</font> This can be overridden by passing one or more encoding types via the -s parameter. If you need to pass in multiple suspect encoding types, use a quoted string with the a space separating each value.
 
 <h2>SEE ALSO</h2>
 

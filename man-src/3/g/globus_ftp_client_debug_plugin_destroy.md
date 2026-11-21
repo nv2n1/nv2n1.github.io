@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_ftp_client_debug_plugin_destroy/"
 description: "Debugging Plugin –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Debugging Plugin &#8211; </p>
 <h3>Macros</h3>
 <p> #define <code>GLOBUS_FTP_CLIENT_DEBUG_PLUGIN_MODULE</code> (&amp;globus_i_ftp_client_debug_plugin_module) </p>
 <h3>Functions</h3>

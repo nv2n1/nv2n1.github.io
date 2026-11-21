@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_openpgp_keyring_get_crt_count(3)"
 name: "gnutls_openpgp_keyring_get_crt_count"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_openpgp_keyring_get_crt_count – API function"
 
 <h2>NAME</h2>
 <p> gnutls_openpgp_keyring_get_crt_count &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>
 <p> <code>int gnutls_openpgp_keyring_get_crt_count(gnutls_openpgp_keyring_t </code><i>ring</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_openpgp_keyring_t ring</dt>
 <dd> is an OpenPGP key ring</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will return the number of OpenPGP certificates present in the given keyring.</p>
 <h2>RETURNS</h2>
 <p> the number of subkeys, or a negative error code on error.</p>

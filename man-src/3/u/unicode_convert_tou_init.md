@@ -1,5 +1,4 @@
 ---
-
 title: "unicode_convert_tou_init(3)"
 name: "unicode_convert_tou_init"
 section: "3"
@@ -7,8 +6,8 @@ letter: "u"
 url: "/docs/linux/man/3-unicode_convert_tou_init/"
 description: "unicode_u_ucs4_native, unicode_u_ucs2_native, unicode_convert_init, unicode_convert, unicode_convert_deinit, unicode_convert_tocbuf_init, unicode_convert_tou_init, unicode_convert_fromu_init, unico..."
 ---
-
 <p>unicode_u_ucs4_native, unicode_u_ucs2_native, unicode_convert_init, unicode_convert, unicode_convert_deinit, unicode_convert_tocbuf_init, unicode_convert_tou_init, unicode_convert_fromu_init, unicode_convert_uc, unicode_convert_tocbuf_toutf8_init, unicode_convert_tocbuf_fromutf8_init, unicode_convert_toutf8, unicode_convert_fromutf8, unicode_convert_tobuf, unicode_convert_tou_tobuf, unicode_convert_fromu_tobuf &#8211; unicode character set conversion </p>
+<h2>SYNOPSIS</h2>
 <pre><code>#include &lt;courier-unicode.h&gt;
             extern const char unicode_u_ucs4_native[];
             extern const char unicode_u_ucs2_native[];
@@ -29,6 +28,7 @@ description: "unicode_u_ucs4_native, unicode_u_ucs2_native, unicode_convert_init
 <dt><code>int unicode_convert_toubuf(const char&nbsp;<wbr>*</code><i>text</i><code>, size_t&nbsp;<wbr></code><i>text_l</i><code>, const char&nbsp;<wbr>*</code><i>charset</i><code>, unicode_char&nbsp;<wbr>**</code><i>uc</i><code>, size_t&nbsp;<wbr>*</code><i>ucsize</i><code>, int&nbsp;<wbr>*</code><i>error</i><code>);</code></dt>
 <dt><code>int unicode_convert_fromu_tobuf(const unicode_char&nbsp;<wbr>*</code><i>utext</i><code>, size_t&nbsp;<wbr></code><i>utext_l</i><code>, const char&nbsp;<wbr>*</code><i>charset</i><code>, char&nbsp;<wbr>**</code><i>c</i><code>, size_t&nbsp;<wbr>*</code><i>csize</i><code>, int&nbsp;<wbr>*</code><i>error</i><code>);</code></dt>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> <i>unicode_u_ucs4_native</i>[] contains the string "UCS-4BE" </p>
 <dd> <p> or "UCS-4LE", matching the native unicode_char endianness. </p>
 <p> <i>unicode_u_ucs2_native</i>[] contains the string "UCS-2BE" or "UCS-2LE", matching the native unicode_char endianness. </p>

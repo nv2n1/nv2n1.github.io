@@ -1,5 +1,4 @@
 ---
-
 title: "isympy(1)"
 name: "isympy"
 section: "1"
@@ -10,7 +9,9 @@ description: "isympy – interactive shell for SymPy"
 
 <h2>NAME</h2>
 <p> isympy &#8211; interactive shell for SymPy</p>
+<h2>SYNOPSIS</h2>
 <p> <code>isympy</code> [<code>-c</code> | <code>&#8211;console</code>] [<code>-p</code> ENCODING | <code>&#8211;pretty</code> ENCODING] [<code>-t</code> TYPE | <code>&#8211;types</code> TYPE] [<code>-o</code> ORDER | <code>&#8211;order</code> ORDER] [<code>-q</code> | <code>&#8211;quiet</code>] [<code>-d</code> | <code>&#8211;doctest</code>] [<code>-C</code> | <code>&#8211;no-cache</code>] [<code>-a</code> | <code>&#8211;auto</code>] [<code>-D</code> | <code>&#8211;debug</code>] [ &#8212; | PYTHONOPTIONS] <code>isympy</code> [ {<code>-h</code> | <code>&#8211;help</code>} | {<code>-v</code> | <code>&#8211;version</code>} ]</p>
+<h2>DESCRIPTION</h2>
 <p> isympy is a Python shell for SymPy. It is just a normal python shell (ipython shell if you have the ipython package installed) that executes the following commands so that you don&#8217;t have to: </p>
 <pre>
 &gt;&gt;&gt; from __future__ import division

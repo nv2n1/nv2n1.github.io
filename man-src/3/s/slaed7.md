@@ -1,5 +1,4 @@
 ---
-
 title: "slaed7(3)"
 name: "slaed7"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-slaed7/"
 description: "slaed7.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> slaed7.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slaed7</code> (ICOMPQ, N, QSIZ, TLVLS, CURLVL, CURPBM, D, Q, LDQ, INDXQ, RHO, CUTPNT, QSTORE, QPTR, PRMPTR, PERM, GIVPTR, GIVCOL, GIVNUM, WORK, IWORK, INFO)<br />
  <i></i><code>SLAED7</code> used by sstedc. Computes the updated eigensystem of a diagonal matrix after modification by a rank-one symmetric matrix. Used when the original matrix is dense.</p>

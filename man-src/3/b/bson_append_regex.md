@@ -1,5 +1,4 @@
 ---
-
 title: "bson_append_regex(3)"
 name: "bson_append_regex"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_append_regex() – Appends a new field to bson of type BSON_T
 
 <h2>NAME</h2>
 <p> bson_append_regex() &#8211; Appends a new field to bson of type BSON_TYPE_REGEX. regex should be the regex string. options should contain the options for the regex.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 bool bson_append_regex(bson_t *bson,
                        const char *key,
@@ -33,6 +33,7 @@ bool bson_append_regex(bson_t *bson,
 <dl>
 <dt><code>options</code></dt>
 <dd> An optional string containing the regex options as a string.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Appends a new field to <code>bson</code> of type BSON_TYPE_REGEX. <code>regex</code> should be the regex string. <code>options</code> should contain the options for the regex. </p>
 <p> Valid characters for <code>options</code> include: </p>
 <dl>

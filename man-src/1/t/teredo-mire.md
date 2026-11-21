@@ -1,5 +1,4 @@
 ---
-
 title: "teredo-mire(1)"
 name: "teredo-mire"
 section: "1"
@@ -10,6 +9,7 @@ description: "teredo-mire – Stateless Teredo IPv6 responder"
 
 <h2>NAME</h2>
 <p> teredo-mire &#8211; Stateless Teredo IPv6 responder</p>
+<h2>SYNOPSIS</h2>
 <p> <code>teredo-mire</code> </p>
 <h2>DESCRIPTON</h2>
 <p> <code>Teredo-Mire</code> is a test back-end for the Teredo IPv6 tunneling protocol. It listens for requests from other Teredo clients or IPv6 nodes (through Teredo relays) and answers to them statelessly. Currently only ICMPv6 Echo Requests (&quot;pings&quot;) are handled. </p>

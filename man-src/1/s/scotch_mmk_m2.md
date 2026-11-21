@@ -1,5 +1,4 @@
 ---
-
 title: "scotch_mmk_m2(1)"
 name: "scotch_mmk_m2"
 section: "1"
@@ -10,9 +9,11 @@ description: "mmk_m2, mmk_m3 – create source meshes"
 
 <h2>NAME</h2>
 <p> <code>mmk_m2, mmk_m3 </code>&#8211; create source meshes</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 mmk_m2[options][-gcfile] dimX dimY[ofile] mmk_m3[options][-gcfile] dimX dimY dimZ[ofile]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>mmk_</code>* programs create source mesh files for some common, regular topologies. </p>
 <p> <code>mmk_m2</code> creates a 2D regular mesh of <i>dimX</i> times <i>dimY</i> elements and (<i>dimX</i>+1) times (<i>dimY</i>+1) nodes, such that element (i,j) is connected to nodes (i,j), (i,j+1), (i+1,j) and (i+1,j+1). </p>
 <p> <code>mmk_m3</code> creates a 3D regular mesh of <i>dimX</i> times <i>dimY</i> times <i>dimZ</i> elements and (<i>dimX</i>+1) times (<i>dimY</i>+1) times (<i>dimZ</i>+1) nodes, such that element (i,j,k) is connected to nodes (i,j,k), (i,j,k+1), (i,j+1,k), (i,j+1,k+1), (i+1,j,k), (i+1,j,k+1), (i+1,j+1,k) and (i+1,j+1,k+1).</p>

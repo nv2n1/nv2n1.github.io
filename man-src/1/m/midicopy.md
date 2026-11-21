@@ -1,5 +1,4 @@
 ---
-
 title: "midicopy(1)"
 name: "midicopy"
 section: "1"
@@ -10,8 +9,10 @@ description: "midicopy – Copy selected track, channel, time interval of a MIDI
 
 <h2>NAME</h2>
 <p> midicopy &#8211; Copy selected track, channel, time interval of a MIDI file to another MIDI file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>midicopy</code> [<code>-ver</code>] [<code>-trks</code> <i>n1,n2,..</i>] [<code>-chans</code> <i>n1,n2,&#8230;</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-from</code>&nbsp;<wbr><i>n&nbsp;<wbr>(in midi ticks)</i>]&nbsp;<wbr>[<code>-to</code>&nbsp;<wbr><i>n&nbsp;<wbr>(in midi ticks)</i>]&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-fromsec&nbsp;<wbr>%f</code>&nbsp;<wbr><i>n&nbsp;<wbr>(in seconds)</i>]&nbsp;<wbr>[<code>-tosec</code>&nbsp;<wbr><i>n&nbsp;<wbr>(in seconds)</i>]&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-frombeat&nbsp;<wbr>%f</code>&nbsp;<wbr><i>n&nbsp;<wbr>(in beats)</i>]&nbsp;<wbr>[<code>-tosec</code>&nbsp;<wbr><i>n&nbsp;<wbr>(in beats)</i>]&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-replace</code>&nbsp;<wbr><i>trk,loc,val</i>]&nbsp;<wbr><i>input.mid output.mid</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>midicopy</code> is used to copy part of a MIDI file to another MIDI file. You can select a particular time interval, particular channels, and particular tracks or any combinations. If one or both of the run time parameters -from or -to are included, the program returns the playing time in seconds of the output file. Midicopy was developed by Seymour Shlien from the midifilelib distribution available from <i><a rel="nofollow" href="http://www.harmony-central.com/MIDI/midifilelib.tar.gz">http://www.harmony-central.com/MIDI/midifilelib.tar.gz</a></i>.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "bson_equal(3)"
 name: "bson_equal"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_equal() – The bson_equal() function shall return true if bo
 
 <h2>NAME</h2>
 <p> bson_equal() &#8211; The bson_equal() function shall return true if both documents are equal.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 bool bson_equal(const bson_t *bson,
                 const bson_t *other);
@@ -21,6 +21,7 @@ bool bson_equal(const bson_t *bson,
 <dl>
 <dt><code>other</code></dt>
 <dd> A <code>bson_t</code> \&amp;.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_equal/">bson_equal</a>(3)</code> function shall return true if both documents are equal. </p>
 <h2>RETURNS</h2>
 <p> true if both documents are equal. </p>

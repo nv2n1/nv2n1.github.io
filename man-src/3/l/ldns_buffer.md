@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_buffer(3)"
 name: "ldns_buffer"
 section: "3"
@@ -10,9 +9,11 @@ description: "ldns_buffer"
 
 <h2>NAME</h2>
 <p> ldns_buffer </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_buffer</i></dt>
 <dd>

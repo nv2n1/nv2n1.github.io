@@ -1,5 +1,4 @@
 ---
-
 title: "pcp-atopsar(1)"
 name: "pcp-atopsar"
 section: "1"
@@ -10,8 +9,10 @@ description: "pcp-atopsar – Advanced System Activity Report (pcp-atop related)
 
 <h2>NAME</h2>
 <p> <code>pcp-atopsar</code> &#8211; Advanced System Activity Report (pcp-atop related)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pcp</code> [<i>pcp options</i>] <code>atopsar</code> [<i>atop options</i>] [-r <i>file|date</i>] [-h <i>host</i>] [-R <i>cnt</i>] [-b <i>hh:mm</i>] [-e <i>hh:mm</i>]<br />
  <code>pcp</code> [<i>pcp options</i>] <code>atopsar</code> [<i>atop options</i>] <i>interval</i> [<i>samples</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>pcp-atopsar</code> program can be used to report statistics at the system level. </p>
 <p> In the first synopsis line (no sampling interval specified), <code>pcp-atopsar</code> extracts data from a raw logfile that has been recorded previously by <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1) (or via the <code>-w </code> option of the <code>pcp-atop</code> program).<br />
  You can specify the name of the logfile with the <code>-r</code> option of the <code>pcp-atopsar</code> program. When a <code>pmlogger</code> daily logfile is used, named <code>$PCP_LOG_DIR/pmlogger/[host]/YYYYMMDD</code> (where YYYYMMDD reflects the date), the required date of the form YYYYMMDD can be specified with the <code>-r</code> option instead of the filename, or the symbolic name &#8216;y&#8217; can be used for yesterday&#8217;s daily logfile (this can be repeated so &#8216;yyyy&#8217; indicates the logfile of four days ago). If the <code>-r</code> option is not specified at all, today&#8217;s daily logfile is used by default.<br />

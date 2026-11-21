@@ -1,5 +1,4 @@
 ---
-
 title: "pmconfig(1)"
 name: "pmconfig"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmconfig – Performance Co-Pilot configuration parameters"
 
 <h2>NAME</h2>
 <p> <code>pmconfig</code> &#8211; Performance Co-Pilot configuration parameters</p>
+<h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/pmconfig</code> [<code>-a</code>|<code>-l</code>] [<code>-L</code>] [<code>-s</code>] [<i>name &#8230;</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmconfig</code> displays the values for some or all configuration parameters of the local Performance Co-Pilot toolkit installation. </p>
 <p> The <code>-L</code> option may be used to change the default reporting mode so that the capabilities of the PCP library are reported, rather than the PCP environment. </p>
 <p> An output format suitable for sourcing in shell scripts can be obtained using the <code>-s</code> option, which ensures configuration information is quoted and preceded by an export statement. When not reporting the library capabilities, this mode will produce a statement that does not override an existing setting in the environment for PCP configuration variables. </p>

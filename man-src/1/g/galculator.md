@@ -1,5 +1,4 @@
 ---
-
 title: "galculator(1)"
 name: "galculator"
 section: "1"
@@ -10,7 +9,9 @@ description: "galculator – a GTK 2 based scientific calculator"
 
 <h2>NAME</h2>
 <p> galculator &#8211; a GTK 2 based scientific calculator</p>
+<h2>SYNOPSIS</h2>
 <p> <code>galculator</code> [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page gives a short description of <code>galculator</code> and documents its command line arguments.<br />
  <code>galculator</code> is a GTK 2 based calculator with basic and scientific modes. It supports algebraic notation, RPN (Reverse Polish Notation) and formula entry mode, different number bases (decimal, hexadecimal, octal, and binary) and angle bases (radiant, degree, and grad). Further features include arithmetic operations plus precedence handling, trigonometric functions, power, sqare root, natural and common logarithm, constants (e, PI, user defined), memory and inverse and hyperbolic functions and user defined functions. </p>
 <h2>OPTIONS</h2>

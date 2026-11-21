@@ -1,5 +1,4 @@
 ---
-
 title: "chat(8)"
 name: "chat"
 section: "8"
@@ -7,9 +6,10 @@ letter: "c"
 url: "/docs/linux/man/8-chat/"
 description: "chat – Automated conversational script with a modem"
 ---
-
 <p>chat &#8211; Automated conversational script with a modem </p>
+<h2>SYNOPSIS</h2>
 <p> <code>chat</code> [ <i>options</i> ] <i>script</i>  </p>
+<h2>DESCRIPTION</h2>
 <p>The <i>chat</i> program defines a conversational exchange between the computer and the modem. Its primary purpose is to establish the connection between the Point-to-Point Protocol Daemon (<i>pppd</i>) and the remote&#8217;s <i>pppd</i> process.  </p>
 <h2>OPTIONS</h2>
 <dl>

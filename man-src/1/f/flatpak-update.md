@@ -1,5 +1,4 @@
 ---
-
 title: "flatpak-update(1)"
 name: "flatpak-update"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-flatpak-update/"
 description: "flatpak-update – Update an application or runtime"
 ---
 
+<h2 class="name">NAME</h2>
+<p> flatpak-update &#8211; Update an application or runtime </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak update</code> [OPTION&#8230;] [REF&#8230;]</dt>
 <dt> <code>flatpak update</code> [OPTION&#8230;] &#8211;appstream [REMOTE]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>Updates applications and runtimes. REF is a reference to the application or runtime to update. If no REF is given, everything is updated, as well as appstream info for all remotes. </dd>
 <p> Each REF argument is a full or partial identifier in the flatpak ref format, which looks like &quot;(app|runtime)/ID/ARCH/BRANCH&quot;. All elements except ID are optional and can be left out, including the slashes, so most of the time you need only specify ID. Any part left out will be matched against what is installed, and if there are multiple matches an error message will list the alternatives. </p>
 <p> By default this looks for both apps and runtimes with the given REF, but you can limit this by using the <code>&#8211;app</code> or <code>&#8211;runtime</code> option, or by supplying the initial element in the REF. </p>

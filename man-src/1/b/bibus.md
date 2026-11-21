@@ -1,5 +1,4 @@
 ---
-
 title: "bibus(1)"
 name: "bibus"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-bibus/"
 description: "bibus – Bibus is a bibliographic database"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bibus &#8211; Bibus is a bibliographic database </p>
+<h2>SYNOPSIS</h2>
 <p> <code>bibus</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>bibus</code> command does not take any arguments or options at the moment. </p>
 <p> <code>bibus</code> is a bibliographic database compatible with two database engines:<br />
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>&#8211; MySQL &lt;<a rel="nofollow" href="http://www.mysql.com/">http://www.mysql.com/</a>&gt;</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "euare-useraddloginprofile(1)"
 name: "euare-useraddloginprofile"
 section: "1"
@@ -10,10 +9,12 @@ description: "euare-useraddloginprofile – Create a password for the specified 
 
 <h2>NAME</h2>
 <p> euare-useraddloginprofile &#8211; Create a password for the specified user</p>
+<h2>SYNOPSIS</h2>
 <p> euare-useraddloginprofile [-p PASSWORD] [&#8211;as-account ACCOUNT] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] USER</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Create a password for the specified user</p>
 <h3>positional arguments:</h3>
 <dl>

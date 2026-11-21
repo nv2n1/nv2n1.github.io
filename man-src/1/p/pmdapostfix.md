@@ -1,5 +1,4 @@
 ---
-
 title: "pmdapostfix(1)"
 name: "pmdapostfix"
 section: "1"
@@ -10,6 +9,7 @@ description: "pmdapostfix – Postfix performance metrics domain agent (PMDA)"
 
 <h2>NAME</h2>
 <p> <code>pmdapostfix</code> &#8211; Postfix performance metrics domain agent (PMDA)</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdapostfix</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which exports mail queue sizes as reported by <code><a href="/docs/linux/man/1-qshape/">qshape</a></code>(1), as well as aggregate statistics collected from mail.log.</p>
 <h2>INSTALLATION</h2>
 <p> If you want access to the names and values for the Postfix performance metrics, do the following as root: </p>

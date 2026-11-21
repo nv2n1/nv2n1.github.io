@@ -1,5 +1,4 @@
 ---
-
 title: "antlr3convertutf(3)"
 name: "antlr3convertutf"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-antlr3convertutf/"
 description: "include/antlr3convertutf.h –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> include/antlr3convertutf.h &#8211; </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt; </p>
 <h3>Defines</h3>
 <p> #define <code>UNI_MAX_BMP</code> (<code>UTF32</code>)0x0000FFFF </p>

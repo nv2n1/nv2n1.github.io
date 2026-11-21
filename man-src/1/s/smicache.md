@@ -1,5 +1,4 @@
 ---
-
 title: "smicache(1)"
 name: "smicache"
 section: "1"
@@ -10,7 +9,9 @@ description: "smicache – caching method for use with libsmi"
 
 <h2>NAME</h2>
 <p> smicache &#8211; caching method for use with libsmi</p>
+<h2>SYNOPSIS</h2>
 <p> <code>smicache</code> [ <code>-Vh</code> ] [ <code>-d </code><i>dir</i> ] [ <code>-p </code><i>prefix</i> ] [ <i>mib</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>smicache</code> program can be used by libsmi to fetch MIB modules that cannot be found in regular local MIB directories.</p>
 <h2>OPTIONS</h2>
 <dl>

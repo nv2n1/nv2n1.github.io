@@ -1,5 +1,4 @@
 ---
-
 title: "daemonize(1)"
 name: "daemonize"
 section: "1"
@@ -10,7 +9,9 @@ description: "daemonize – run a program as a Unix daemon"
 
 <h2>NAME</h2>
 <p> daemonize &#8211; run a program as a Unix daemon</p>
+<h2>SYNOPSIS</h2>
 <p> <code>daemonize</code> [-a] [-c <i>directory</i>] [-e <i>stderr</i>] [-o <i>stdout</i>] [-p <i>pidfile</i>] [-l <i>lockfile</i>] [-u <i>user</i>] [-v] <i>path [arg] &#8230;</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>daemonize</code> runs a command as a Unix daemon. As defined in W. Richard Stevens&#8217; 1990 book, <i>Unix Network Programming</i> (Addison-Wesley, 1990), a daemon is &#8220;a process that executes `in the background&#8217; (i.e., without an associated terminal or login shell) either waiting for some event to occur, or waiting to perform some specified task on a periodic basis.&#8221; Upon startup, a typical daemon program will:</p>
 <dl>
 <dt>o</dt>

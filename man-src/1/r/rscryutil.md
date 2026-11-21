@@ -1,5 +1,4 @@
 ---
-
 title: "rscryutil(1)"
 name: "rscryutil"
 section: "1"
@@ -10,9 +9,11 @@ description: "rscryutil – Manage Encrypted Log Files"
 
 <h2>NAME</h2>
 <p> rscryutil &#8211; Manage Encrypted Log Files</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 rscryutil[OPTIONS][FILE]...
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> This tool performs various operations on encrypted log files. Most importantly, it provides the ability to decrypt them.</p>
 <h2>OPTIONS</h2>
 <dl>

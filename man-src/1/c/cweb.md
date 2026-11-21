@@ -1,5 +1,4 @@
 ---
-
 title: "cweb(1)"
 name: "cweb"
 section: "1"
@@ -7,13 +6,26 @@ letter: "c"
 url: "/docs/linux/man/1-cweb/"
 ---
 
-ctangle, cweave - translate CWEB to C/C++ and/or TeX 
+<h2 class="name">NAME</h2>
+ 
 
-ctangle [options] webfile[.w] [{changefile[.ch]|-} [outfile[.c]]] 
+ 
+
+ ctangle, cweave - translate CWEB to C/C++ and/or TeX 
+
+<h2>SYNOPSIS</h2>
+
+ 
+
+ ctangle [options] webfile[.w] [{changefile[.ch]|-} [outfile[.c]]] 
 
  cweave [options] webfile[.w] [{changefile[.ch]|-} [outfile[.tex]]]
 
-The ctangle program converts a CWEB source document into a C/C++&nbsp;program that may be compiled in the usual way. The output file includes #line specifications so that debugging can be done in terms of the CWEB source file. 
+<h2>DESCRIPTION</h2>
+
+ 
+
+ The ctangle program converts a CWEB source document into a C/C++&nbsp;program that may be compiled in the usual way. The output file includes #line specifications so that debugging can be done in terms of the CWEB source file. 
 
  The cweave program converts the same CWEB file into a TeX file that may be formatted and printed in the usual way. It takes appropriate care of typographic details like page layout and the use of indentation, italics, boldface, etc., and it supplies extensive cross-index information that it gathers automatically. 
 

@@ -1,5 +1,4 @@
 ---
-
 title: "dlaed9(3)"
 name: "dlaed9"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlaed9/"
 description: "dlaed9.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlaed9.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlaed9</code> (K, KSTART, KSTOP, N, D, Q, LDQ, RHO, DLAMDA, W, S, LDS, INFO)<br />
  <i></i><code>DLAED9</code> used by sstedc. Finds the roots of the secular equation and updates the eigenvectors. Used when the original matrix is dense.</p>

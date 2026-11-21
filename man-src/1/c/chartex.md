@@ -1,5 +1,4 @@
 ---
-
 title: "chartex(1)"
 name: "chartex"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-chartex/"
 description: "chartex – A utility to extract charts from an Excel file for insertion into a Spreadsheet::WriteExcel file."
 ---
 
+<h2 class="name">NAME</h2>
+<p> chartex &#8211; A utility to extract charts from an Excel file for insertion into a Spreadsheet::WriteExcel file. </p>
+<h2>DESCRIPTION</h2>
 <p> This program is used for extracting one or more charts from an Excel file in binary format. The charts can then be included in a <tt>&quot;Spreadsheet::WriteExcel&quot;</tt> file. </p>
 <p> See the <tt>&quot;add_chart_ext()&quot;</tt> section of the Spreadsheet::WriteExcel documentation for more details.</p>
+<h2>SYNOPSIS</h2>
 <p> chartex [&#8211;chartname &#8211;help &#8211;man] file.xls </p>
 <pre>
     Options:

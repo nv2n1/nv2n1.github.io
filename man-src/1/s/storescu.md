@@ -1,5 +1,4 @@
 ---
-
 title: "storescu(1)"
 name: "storescu"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-storescu/"
 description: "storescu – DICOM storage (C-STORE) SCU"
 ---
 
+<h2 class="name">NAME</h2>
+<p> storescu &#8211; DICOM storage (C-STORE) SCU </p>
+<h2>SYNOPSIS</h2>
 <pre>
 storescu [options] peer port dcmfile-in...
 </pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>storescu</code> application implements a Service Class User (SCU) for the Storage Service Class. For each DICOM file on the command line it sends a C-STORE message to a Storage Service Class Provider (SCP) and waits for a response. The application can be used to transmit DICOM images and other DICOM composite objects.</p>
 <h2>PARAMETERS</h2>
 <pre>

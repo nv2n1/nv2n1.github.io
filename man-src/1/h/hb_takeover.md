@@ -1,5 +1,4 @@
 ---
-
 title: "hb_takeover(1)"
 name: "hb_takeover"
 section: "1"
@@ -10,7 +9,9 @@ description: "hb_takeover – hb_takeover is a simple linux-ha shell script. It 
 
 <h2>NAME</h2>
 <p> hb_takeover &#8211; hb_takeover is a simple linux-ha shell script. It issues a command to takeover resources from the other node, if available.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>hb_takeover</code> [all|foreign|local|failback]</p>
+<h2>DESCRIPTION</h2>
 <p> The full path is usually /usr/lib/heartbeat/hb_takeover. Performing an hb_takeover on the current node is equivalent to performing an hb_standby on the other node. </p>
 <h2>CAVEATS</h2>
 <p> <code>hb_takeover</code> is only usable in R1-style configurations (i.e., those configured using the <i>haresources</i> file). </p>

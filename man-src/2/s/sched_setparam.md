@@ -1,5 +1,4 @@
 ---
-
 title: "sched_setparam(2)"
 name: "sched_setparam"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-sched_setparam/"
 description: "sched_setparam, sched_getparam – set and get scheduling parameters"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sched_setparam, sched_getparam &#8211; set and get scheduling parameters </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sched.h&gt;
 int sched_setparam(pid_t pid, const struct sched_param *param);
@@ -17,6 +19,7 @@ struct sched_param {
     ...
 };
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>sched_setparam</code>() sets the scheduling parameters associated with the scheduling policy for the thread whose thread ID is specified in <i>pid</i>. If <i>pid</i> is zero, then the parameters of the calling thread are set. The interpretation of the argument <i>param</i> depends on the scheduling policy of the thread identified by <i>pid</i>. See <code><a href="/docs/linux/man/7-sched/">sched</a></code>(7) for a description of the scheduling policies supported under Linux. </p>
 <p> <code>sched_getparam</code>() retrieves the scheduling parameters for the thread identified by <i>pid</i>. If <i>pid</i> is zero, then the parameters of the calling thread are retrieved. </p>
 <p> <code>sched_setparam</code>() checks the validity of <i>param</i> for the scheduling policy of the thread. The value <i>param-&gt;sched_priority</i> must lie within the range given by <code><a href="/docs/linux/man/2-sched_get_priority_min/">sched_get_priority_min</a></code>(2) and <code><a href="/docs/linux/man/2-sched_get_priority_max/">sched_get_priority_max</a></code>(2). </p>

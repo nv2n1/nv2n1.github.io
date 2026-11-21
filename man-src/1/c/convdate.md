@@ -1,5 +1,4 @@
 ---
-
 title: "convdate(1)"
 name: "convdate"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-convdate/"
 description: "convdate – Convert to/from RFC 5322 dates and seconds since epoch"
 ---
 
+<h2 class="name">NAME</h2>
+<p> convdate &#8211; Convert to/from RFC 5322 dates and seconds since epoch </p>
+<h2>SYNOPSIS</h2>
 <p> <code>convdate</code> [<code>-dhl</code>] [<code>-c</code> | <code>-n</code> | <code>-s</code>] [<i>date</i> &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>convdate</code> translates the date/time strings given on the command line, outputting the results one to a line. The input can either be a date in <font SIZE="-1">RFC</font>&nbsp;<wbr>5322 format (accepting the variations on that format that <i><a href="/docs/linux/man/8-innd/">innd</a></i>(8) is willing to accept), or the number of seconds since epoch (if <code>-c</code> is given). The output is either <i><a href="/docs/linux/man/3-ctime/">ctime</a></i>(3) results, the number of seconds since epoch, or a Usenet Date: header, depending on the options given. </p>
 <p> If <i>date</i> is not given, <code>convdate</code> outputs the current date.</p>
 <h2>OPTIONS</h2>

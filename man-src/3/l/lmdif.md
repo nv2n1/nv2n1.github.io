@@ -1,5 +1,4 @@
 ---
-
 title: "lmdif(3)"
 name: "lmdif"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-lmdif/"
 description: "ql/math/optimization/lmdif.hpp – wrapper for MINPACK minimization routine"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/math/optimization/lmdif.hpp &#8211; wrapper for MINPACK minimization routine </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/qldefines.hpp&gt;<br />
  #include &lt;boost/function.hpp&gt; </p>
 <h3>Typedefs</h3>

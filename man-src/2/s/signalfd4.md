@@ -1,5 +1,4 @@
 ---
-
 title: "signalfd4(2)"
 name: "signalfd4"
 section: "2"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/2-signalfd4/"
 description: "signalfd – create a file descriptor for accepting signals"
 ---
 
+<h2 class="name">NAME</h2>
+<p> signalfd &#8211; create a file descriptor for accepting signals </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/signalfd.h&gt;</code> </p>
 <p> <code>int signalfd(int </code><i>fd</i><code>, const sigset_t *</code><i>mask</i><code>, int </code><i>flags</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>signalfd</code>() creates a file descriptor that can be used to accept signals targeted at the caller. This provides an alternative to the use of a signal handler or <code><a href="/docs/linux/man/2-sigwaitinfo/">sigwaitinfo</a></code>(2), and has the advantage that the file descriptor may be monitored by <code><a href="/docs/linux/man/2-select/">select</a></code>(2), <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2), and <code><a href="/docs/linux/man/7-epoll/">epoll</a></code>(7). </p>
 <p> The <i>mask</i> argument specifies the set of signals that the caller wishes to accept via the file descriptor. This argument is a signal set whose contents can be initialized using the macros described in <code><a href="/docs/linux/man/3-sigsetops/">sigsetops</a></code>(3). Normally, the set of signals to be received via the file descriptor should be blocked using <code><a href="/docs/linux/man/2-sigprocmask/">sigprocmask</a></code>(2), to prevent the signals being handled according to their default dispositions. It is not possible to receive <code>SIGKILL</code> or <code>SIGSTOP</code> signals via a signalfd file descriptor; these signals are silently ignored if specified in <i>mask</i>. </p>
 <p> If the <i>fd</i> argument is -1, then the call creates a new file descriptor and associates the signal set specified in <i>mask</i> with that file descriptor. If <i>fd</i> is not -1, then it must specify a valid existing signalfd file descriptor, and <i>mask</i> is used to replace the signal set associated with that file descriptor. </p>

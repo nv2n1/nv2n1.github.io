@@ -1,5 +1,4 @@
 ---
-
 title: "podofocountpages(1)"
 name: "podofocountpages"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-podofocountpages/"
 description: "podofocountpages – count the number of pages in a pdf file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> podofocountpages &#8211; count the number of pages in a pdf file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>podofocountpages</code> [-s] [-t] file1.pdf &#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> <code>podofocountpages</code> is one of the command line tools from the PoDoFo library that provide several useful operations to work with PDF files. It counts the pages in a PDF file. </p>
 <h2>OPTIONS</h2>
 <p> <code>-s</code></p>

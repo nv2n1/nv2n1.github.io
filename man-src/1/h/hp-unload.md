@@ -1,5 +1,4 @@
 ---
-
 title: "hp-unload(1)"
 name: "hp-unload"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-hp-unload/"
 description: "hp-unload – Photo Card Access Utility"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hp-unload &#8211; Photo Card Access Utility </p>
+<h2>DESCRIPTION</h2>
 <p> Access inserted photo cards on supported HPLIP printers. This provides an alternative for older devices that do not support USB mass storage or for access to photo cards over a network.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>hp-unload [DEVICE_URI|PRINTER_NAME] [MODE] [OPTIONS]</code></p>
 <h2>PRINTER|DEVICE-URI</h2>
 <dl>

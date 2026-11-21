@@ -1,5 +1,4 @@
 ---
-
 title: "mmstat(1)"
 name: "mmstat"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mmstat/"
 description: "mmstat – Display details about the volume system (partition tables)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mmstat &#8211; Display details about the volume system (partition tables) </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mmstat [-t</code> <i>mmtype </i> <code>] [-o</code> <i>offset</i> <code>] [ -i</code> <i>imgtype</i> <code>] [-b dev_sector_size] [-vV] </code> <i>image [images]</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>mmstat </code> displays the general details of a volume system, which includes partition tables and disk labels. Mainly, the type is given. </p>
 <h2>ARGUMENTS</h2>
 <dl>

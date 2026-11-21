@@ -1,5 +1,4 @@
 ---
-
 title: "nvme-resv-acquire(1)"
 name: "nvme-resv-acquire"
 section: "1"
@@ -7,13 +6,24 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-resv-acquire/"
 ---
 
-nvme-resv-acquire - Acquire an nvme reservation 
+<h2 class="name">NAME</h2>
+ 
 
-<pre>
+ nvme-resv-acquire - Acquire an nvme reservation 
+
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <pre>
 <i>nvme resv-acquire</i> &lt;device&gt;
 </pre>
 
-The Reservation Acquire command is used to acquire a reservation on a namespace, preempt a reservation held on a namespace, and abort a reservation held on a namespace.
+<h2>DESCRIPTION</h2>
+
+ 
+
+ The Reservation Acquire command is used to acquire a reservation on a namespace, preempt a reservation held on a namespace, and abort a reservation held on a namespace.
 
 <h2>OPTIONS</h2>
 

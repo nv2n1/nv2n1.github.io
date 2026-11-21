@@ -1,5 +1,4 @@
 ---
-
 title: "mrtg-contrib(1)"
 name: "mrtg-contrib"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-mrtg-contrib/"
 description: "mrtg-contrib – Contribution Guidelines for MRTG"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mrtg-contrib &#8211; Contribution Guidelines for MRTG </p>
+<h2>DESCRIPTION</h2>
 <p> If you have written an extension to mrtg or created a bug fix, please consider contributing it to the project. As I get quite a number of contributions every week, here are a few guidelines which explain how to contribute so that I can use the contribution without too much additional work.</p>
 <h3>Translations</h3>
 <p> <font SIZE="-1">MRTG</font> messages have been translated to a number of languages but there are still many which have not been covered yet. If you want to add yours, go into the <i>mrtg-2.17.4/translate</i> directory and follow the instructions given in the <i></i><font SIZE="-1"><i>README</i></font><i></i> file.</p>

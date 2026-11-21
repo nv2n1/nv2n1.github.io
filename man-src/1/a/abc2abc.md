@@ -1,5 +1,4 @@
 ---
-
 title: "abc2abc(1)"
 name: "abc2abc"
 section: "1"
@@ -10,7 +9,9 @@ description: "abc2abc – a simple abc checker/re-formatter/transposer"
 
 <h2>NAME</h2>
 <p> abc2abc &#8211; a simple abc checker/re-formatter/transposer</p>
+<h2>SYNOPSIS</h2>
 <p> <code>abc2abc</code> <i>file</i> [ <code>-s</code> ] [ <code>-n</code> ] [ <code>-b</code> ] [ <code>-r</code> ] [ <code>-e</code> ] [ <code>-t </code><i>semitones</i> ] [ <code>-nda</code> ] [ <code>-u</code> ] [ <code>-d</code> ] [ <code>-v</code> ] [ <code>-v</code>] [<code>-nokeys</code>] [ <code>-nokeyf</code>] [ <code>-usekey</code><i>(sharps/flats)</i>] [ <code>-OCC</code> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>abc2abc</code> is a simple abc checker/re-formatter/transposer. It will check whether the <i>file</i> given on the command line obeys basic abc syntax. </p>
 <p> If you want to check an abc tune, it is recommended that you use <code>abc2midi</code> with the <code>-c</code> option. This performs extra checks that <code>abc2abc</code> does not do. </p>
 <p> The output of <code>abc2abc</code> goes to standard output. Use redirection to save it to a file.</p>

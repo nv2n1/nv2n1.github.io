@@ -1,5 +1,4 @@
 ---
-
 title: "mtx-package(1)"
 name: "mtx-package"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mtx-package/"
 description: "mtx-package – Distribution Related Goodies"
 ---
 
+<h2 class="name">NAME</h2>
+<p>&nbsp;mtx-package &#8211; Distribution Related Goodies </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mtxrun &#8211;script package [</code> <i>OPTIONS &#8230;</i> <code>] [</code> <i>FILENAMES</i> <code>]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>Distribution Related Goodies</code></p>
 <h2>OPTIONS</h2>
 <dl>

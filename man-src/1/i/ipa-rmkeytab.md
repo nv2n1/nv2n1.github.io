@@ -1,5 +1,4 @@
 ---
-
 title: "ipa-rmkeytab(1)"
 name: "ipa-rmkeytab"
 section: "1"
@@ -10,7 +9,9 @@ description: "ipa-rmkeytab – Remove a kerberos principal from a keytab"
 
 <h2>NAME</h2>
 <p> ipa-rmkeytab &#8211; Remove a kerberos principal from a keytab</p>
+<h2>SYNOPSIS</h2>
 <p> ipa-rmkeytab [ <code>-p</code> principal-name ] [ <code>-k</code> keytab-file ] [ <code>-r</code> realm ] [ <code>-d</code> ] </p>
+<h2>DESCRIPTION</h2>
 <p> Removes a kerberos principal from a <i>keytab</i>. </p>
 <p> Kerberos keytabs are used for services (like sshd) to perform kerberos authentication. A keytab is a file with one or more secrets (or keys) for a kerberos principal. </p>
 <p> A kerberos service principal is a kerberos identity that can be used for authentication. Service principals contain the name of the service, the hostname of the server, and the realm name. </p>

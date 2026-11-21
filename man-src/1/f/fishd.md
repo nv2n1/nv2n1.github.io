@@ -1,5 +1,4 @@
 ---
-
 title: "fishd(1)"
 name: "fishd"
 section: "1"
@@ -7,7 +6,10 @@ letter: "f"
 url: "/docs/linux/man/1-fishd/"
 ---
 
-fishd - universal variable daemon
+<h2 class="name">NAME</h2>
+ 
+
+ fishd - universal variable daemon
 
 <h3>Synopsis</h3>
 

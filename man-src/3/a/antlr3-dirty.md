@@ -1,5 +1,4 @@
 ---
-
 title: "antlr3-dirty(3)"
 name: "antlr3-dirty"
 section: "3"
@@ -8,7 +7,10 @@ url: "/docs/linux/man/3-antlr3-dirty/"
 description: "ANTLR3_REWRITE_RULE_ELEMENT_STREAM_struct –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ANTLR3_REWRITE_RULE_ELEMENT_STREAM_struct &#8211; </p>
 <p> A generic list of elements tracked in an alternative to be used in a -&gt; rewrite rule.</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3rewritestreams.h">antlr3rewritestreams.h</a>&gt;</p>
 <h3>Data Fields</h3>
 <p> void *(* <code>_next</code> )(struct <code>ANTLR3_REWRITE_RULE_ELEMENT_STREAM_struct</code> *stream) </p>

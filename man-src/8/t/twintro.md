@@ -1,5 +1,4 @@
 ---
-
 title: "twintro(8)"
 name: "twintro"
 section: "8"
@@ -7,9 +6,11 @@ letter: "t"
 url: "/docs/linux/man/8-twintro/"
 ---
 
+
  </p>
 <h2>NAME</h2>
 <p> twintro &#8211; introduction to <i>Tripwire</i> software  </p>
+<h2>DESCRIPTION</h2>
 <p> <i>Tripwire 2.4</i> is a file integrity assessment product for Linux networks. Rather than preventing an intruder or virus from attacking system files, <i>Tripwire</i> detects intrusions when they do occur. By comparing system files and directories against a previously stored &quot;baseline&quot; database, <i>Tripwire</i> finds any additions, deletions, or changes to specified properties. This allows the system administrator to determine the extent of the problem and begin necessary damage control. </p>
 <p> After <i>Tripwire</i> is installed on a system, the following four commands are used: </p>
 <dl>

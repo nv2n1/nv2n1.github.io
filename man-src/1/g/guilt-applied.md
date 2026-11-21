@@ -1,5 +1,4 @@
 ---
-
 title: "guilt-applied(1)"
 name: "guilt-applied"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-guilt-applied/"
 description: "guilt-applied – List applied patches"
 ---
 
+<h2 class="name">NAME</h2>
+<p> guilt-applied &#8211; List applied patches </p>
+<h2>SYNOPSIS</h2>
 <p> <i>guilt-applied</i> [-c]</p>
+<h2>DESCRIPTION</h2>
 <p> Prints a list of all applied patches.</p>
 <h2>AUTHOR</h2>
 <p> Written by Josef &quot;Jeff&quot; Sipek &lt;m[blue]<code>jeffpc [at] josefsipek.net</code>m[]<font SIZE="-2">[1]</font>&gt;</p>

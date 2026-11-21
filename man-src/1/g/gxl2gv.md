@@ -1,5 +1,4 @@
 ---
-
 title: "gxl2gv(1)"
 name: "gxl2gv"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-gxl2gv/"
 description: "gxl2gv,gv2gxl – GXL-GV converters"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gxl2gv,gv2gxl &#8211; GXL-GV converters </p>
+<h2>SYNOPSIS</h2>
 <p> <code>gxl2gv</code> [ <code>-gd?</code> ] [ <code>-o</code><i>outfile</i> ] [ <i>files</i> ]<br />
  <code>gv2gxl</code> [ <code>-gd?</code> ] [ <code>-o</code><i>outfile</i> ] [ <i>files</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>gxl2gv</code> converts between graphs represented in GXL and in the GV language. Unless a conversion type is specified using a flag, <code>gxl2gv</code> will deduce the type of conversion from the suffix of the input file, a &quot;.gv&quot; suffix causing a conversion from GV to GXL, and a &quot;.gxl&quot; suffix causing a conversion from GXL to GV. If no suffix is available, e.g. when the input is from a pipe, and no flags are used then <code>gxl2gv</code> assumes the type of the input file from its executable name so that <code>gxl2gv</code> converts from GXL to GV, and <code>gv2gxl</code> converts from GV to GXL. </p>
 <p> GXL supports a much richer graph model than GV. <code>gxl2gv</code> will attempt to map GXL constructs into the analogous GV construct when this is possible. If not, the GXL information is stored as an attribute. The intention is that applying <code>gxl2gv|gv2gxl</code> is semantically equivalent to the identity operator.</p>
 <h2>OPTIONS</h2>

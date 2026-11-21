@@ -1,5 +1,4 @@
 ---
-
 title: "acl_entries(3)"
 name: "acl_entries"
 section: "3"
@@ -8,10 +7,13 @@ url: "/docs/linux/man/3-acl_entries/"
 description: "acl_entries – return the number of entries in an ACL"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>acl_entries</code> &#8211; return the number of entries in an ACL </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>
+<h2>SYNOPSIS</h2>
 <p> In sys/types.h In acl/libacl.h Ft int Fn acl_entries acl_t acl</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn acl_entries function returns the number of ACL entries that are contained in the ACL referred to by the argument <i>acl</i></p>
 <h2>RETURN VALUE</h2>
 <p> The Fn acl_entries function returns the number of entries in <i>acl</i> if successful; otherwise the value <code>-1</code> is returned and the global variable <i>errno</i> is set to indicate the error.</p>

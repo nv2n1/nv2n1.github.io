@@ -1,5 +1,4 @@
 ---
-
 title: "abrt-action-analyze-backtrace(1)"
 name: "abrt-action-analyze-backtrace"
 section: "1"
@@ -7,11 +6,22 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-action-analyze-backtrace/"
 ---
 
-abrt-action-analyze-backtrace - Analyzes C/C++ backtrace, generates duplication hash, backtrace rating, and identifies crash function in problem directory DIR. 
+<h2 class="name">NAME</h2>
+ 
 
-<i>abrt-action-analyze-backtrace</i> [-v] [-d DIR]
+ abrt-action-analyze-backtrace - Analyzes C/C++ backtrace, generates duplication hash, backtrace rating, and identifies crash function in problem directory DIR. 
 
-The tool reads a file named <i>backtrace</i> from problem directory, generates duplication hash, backtrace rating, and identifies crash function. Then it saves this data as new elements <i>duphash</i>, <i>rating</i>, <i>crash_function</i> in this problem directory.
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <i>abrt-action-analyze-backtrace</i> [-v] [-d DIR]
+
+<h2>DESCRIPTION</h2>
+
+ 
+
+ The tool reads a file named <i>backtrace</i> from problem directory, generates duplication hash, backtrace rating, and identifies crash function. Then it saves this data as new elements <i>duphash</i>, <i>rating</i>, <i>crash_function</i> in this problem directory.
 
 <h3>Integration with libreport events</h3>
 

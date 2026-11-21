@@ -1,5 +1,4 @@
 ---
-
 title: "ldns-notify(1)"
 name: "ldns-notify"
 section: "1"
@@ -10,7 +9,9 @@ description: "ldns-notify – notify DNS servers that updates are available"
 
 <h2>NAME</h2>
 <p> ldns-notify &#8211; notify DNS servers that updates are available</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ldns-notify</code> [options] -z zone <i>servers</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>ldns-notify</code> sends a NOTIFY message to DNS servers. This tells them that an updated zone is available at the master servers. It can perform TSIG signatures and it can add a SOA serial number of the updated zone. If a server already has that serial number it will disregard the message. </p>
 <h2>OPTIONS</h2>
 <dl>

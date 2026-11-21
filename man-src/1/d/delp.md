@@ -1,5 +1,4 @@
 ---
-
 title: "delp(1)"
 name: "delp"
 section: "1"
@@ -10,7 +9,9 @@ description: "delp – The Free Pascal file deletion tool."
 
 <h2>NAME</h2>
 <p> delp &#8211; The Free Pascal file deletion tool. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>delp [options] directory</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>delp</code> deletes files in the specified directory that are left over from a Free Pascal compilation process. It knows what files can be produced by the compile steps and deletes any such files it finds. At the end it gives a summary of the number of files that were deleted, together with the amount of bytes freed by this process. </p>
 <h2>USAGE</h2>
 <p> <code>delp </code> takes the following options at this time:</p>

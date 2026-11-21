@@ -1,5 +1,4 @@
 ---
-
 title: "glances(1)"
 name: "glances"
 section: "1"
@@ -10,7 +9,9 @@ description: "glances – A cross-platform curses-based monitoring tool"
 
 <h2>NAME</h2>
 <p> glances &#8211; A cross-platform curses-based monitoring tool</p>
+<h2>SYNOPSIS</h2>
 <p> <code>glances</code> [-bdehmnrsvyz1] [-B bind] [-c server] [-C conffile] [-p port] [-P password] [&#8211;password] [-t refresh] [-f file] [-o output]</p>
+<h2>DESCRIPTION</h2>
 <p> Glances is a free (LGPL) cross-platform curses-based monitoring tool which aims to present a maximum of information in a minimum of space, ideally to fit in a classical 80&#215;24 terminal or higher to have additionnal information. </p>
 <p> Glances can adapt dynamically the displayed information depending on the terminal size. It can also work in a client/server mode for remote monitoring. </p>
 <p> This tool is written in Python and uses the psutil library to fetch the statistical values from key elements, like CPU, load average, memory, network, disks, file systems, processes, etc.</p>

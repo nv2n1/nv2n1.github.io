@@ -1,5 +1,4 @@
 ---
-
 title: "mlx5dv_devx_alloc_uar(3)"
 name: "mlx5dv_devx_alloc_uar"
 section: "3"
@@ -7,9 +6,16 @@ letter: "m"
 url: "/docs/linux/man/3-mlx5dv_devx_alloc_uar/"
 ---
 
-mlx5dv_devx_alloc_uar - Allocates a DEVX UAR 
+<h2 class="name">NAME</h2>
+ 
+
+ 
+
+ mlx5dv_devx_alloc_uar - Allocates a DEVX UAR 
 
  mlx5dv_devx_free_uar - Frees a DEVX UAR 
+
+<h2>SYNOPSIS</h2>
 
 <dl>
 <dt>
@@ -20,7 +26,11 @@ struct mlx5dv_devx_uar *mlx5dv_devx_alloc_uar(struct ibv_context *context,
 void mlx5dv_devx_free_uar(struct mlx5dv_devx_uar *devx_uar);
 </code></pre></dd></dl>
 
-Create / free a DEVX UAR which is needed for other device commands over the DEVX interface. 
+<h2>DESCRIPTION</h2>
+
+ 
+
+ Create / free a DEVX UAR which is needed for other device commands over the DEVX interface. 
 
  The DEVX API enables direct access from the user space area to the mlx5 device driver, the UAR information is needed for few commands as of QP creation.
 

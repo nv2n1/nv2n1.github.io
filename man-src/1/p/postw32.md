@@ -1,5 +1,4 @@
 ---
-
 title: "postw32(1)"
 name: "postw32"
 section: "1"
@@ -10,7 +9,9 @@ description: "postw32 – Free Pascal Windows 32-bit executable post processor."
 
 <h2>NAME</h2>
 <p> postw32 &#8211; Free Pascal Windows 32-bit executable post processor. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>postw32 [-vh] [-m subsystem] [-i file] [-V version] [-s size]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>postw32</code> does some post-processing on a Windows 32 bit executable file or library. It can set the windows subsystem, stack size, and file version. </p>
 <h2>USAGE</h2>
 <p> <code>postw32</code> needs at least 2 options. One is the input filename (option <code>-i</code> ) and the other is one of the possible operations, with their arguments. </p>

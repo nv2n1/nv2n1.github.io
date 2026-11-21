@@ -1,5 +1,4 @@
 ---
-
 title: "db_log_verify(1)"
 name: "db_log_verify"
 section: "1"
@@ -10,7 +9,9 @@ description: "db_log_verify – Verify log files of a database environment"
 
 <h2>NAME</h2>
 <p> db_log_verify &#8211; Verify log files of a database environment</p>
+<h2>SYNOPSIS</h2>
 <p> <code>db_log_verify</code> [-cNvV] [-h <i>home-to-verify</i>] [-H <i>temporary-home</i>] [-P <i>password</i>] [-C <i>cache-size</i>] [-b <i>start-lsn</i>] [-e <i>end-lsn</i>] [-s <i>start-time</i>] [-z <i>end-time</i>] [-d <i>database-filename</i>] [-D <i>database-name</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>db_log_verify</code> utility verifies the log files of a specific database environment. This utility verifies a specific range of log records, or changed log records of a specific database.</p>
 <h2>OPTIONS</h2>
 <dl>

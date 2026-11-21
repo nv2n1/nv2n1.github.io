@@ -1,5 +1,4 @@
 ---
-
 title: "ncftpput(1)"
 name: "ncftpput"
 section: "1"
@@ -10,6 +9,7 @@ description: "ncftpput – Internet file transfer program for scripts"
 
 <h2>NAME</h2>
 <p> ncftpput &#8211; Internet file transfer program for scripts</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ncftpput</code> [<i>options</i>] <i>remote-host remote-directory local-files&#8230;</i> </p>
 <p> <code>ncftpput</code> [<i>options</i>] <i>bookmark-name remote-directory local-files&#8230;</i> </p>
 <p> <code>ncftpput</code> -f <i>login.cfg</i> [<i>options</i>] <i>remote-directory local-files&#8230;</i> </p>
@@ -86,6 +86,7 @@ description: "ncftpput – Internet file transfer program for scripts"
 <dd> Set advanced option <i>XX</i>.</dd>
 <dt>
 </dt><dd> This option is used primarily for debugging. It sets the value of an internal variable to an integer value. An example usage would be: <code>-o </code><i>useFEAT=0,useCLNT=1</i> which in this case, disables use of the FEAT command and enables the CLNT command. The available variables include: usePASV, useSIZE, useMDTM, useREST, useNLST_a, useNLST_d, useFEAT, useMLSD, useMLST, useCLNT, useHELP_SITE, useSITE_UTIME, STATfileParamWorks, NLSTfileParamWorks, require20, allowProxyForPORT, doNotGetStartCWD.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The purpose of <i>ncftpput</i> is to do file transfers from the command-line without entering an interactive shell. This lets you write shell scripts or other unattended processes that can do FTP. It is also useful for advanced users who want to send files from the shell command line without entering an interactive FTP program such as <i>ncftp</i>. </p>
 <p> By default the program tries to open the remote host and login anonymously, but you can specify a username and password information. The <code>-u</code> option is used to specify the username to login as, and the <code>-p</code> option is used to specify the password. If you are running the program from the shell, you may omit the <code>-p</code> option and the program will prompt you for the password. </p>
 <p> Using the <code>-u</code> and <code>-p</code> options are not recommended, because your account information is exposed to anyone who can see your shell script or your process information. For example, someone using the <i>ps</i> program could see your password while the program runs. </p>

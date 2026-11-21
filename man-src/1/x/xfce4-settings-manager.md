@@ -1,5 +1,4 @@
 ---
-
 title: "xfce4-settings-manager(1)"
 name: "xfce4-settings-manager"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-xfce4-settings-manager/"
 description: "xfce4-settings-manager – Settings manager for Xfce"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xfce4-settings-manager &#8211; Settings manager for Xfce </p>
+<h2>DESCRIPTION</h2>
 <h3>Usage:</h3>
 <dl>
 <dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "rabins(1)"
 name: "rabins"
 section: "1"
@@ -10,7 +9,9 @@ description: "rabins – process argus(8) data within specified bins."
 
 <h2>NAME</h2>
 <p> <code>rabins</code> &#8211; process <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data within specified bins.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>rabins</code> <code>[-B </code><i>secs</i><code>] -M</code> <i>splitmode</i> [<i>options</i>]] [<code>raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Rabins</code> reads <code>argus</code> data from an <i>argus-data</i> source, and adjusts the data so that it is aligned to a set of bins, or slots, that are based on either time, input size, or count. The resulting output is split, modified, and optionally aggregated so that the data fits to the constraints of the specified bins. <code>rabins</code> is designed to be a combination of <code>rasplit</code> and <code>racluster</code>, acting on multiple contexts of argus data. </p>
 <p> The principal function of <code>rabins</code> is to align input data to a series of bins, and then process the data within the context of each bin. This is the basis for real-time stream block processing. Time series stream block processing is cricital for flow data graphing, comparing, analyzing, and correlation. Fixed load stream block processing, based on the number of argus data records (&#8216;count&#8217;), or a fixed volume of data (&#8216;size&#8217;) allows for control of resources in processing. While load based options are very useful, they are rather esoteric. See the online examples and rasplit.1 for examples of using these modes of operation. </p>
 <h2>Time Series Bins</h2>

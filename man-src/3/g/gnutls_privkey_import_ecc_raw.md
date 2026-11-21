@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_privkey_import_ecc_raw(3)"
 name: "gnutls_privkey_import_ecc_raw"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_privkey_import_ecc_raw – API function"
 
 <h2>NAME</h2>
 <p> gnutls_privkey_import_ecc_raw &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/abstract.h&gt;</code> </p>
 <p> <code>int gnutls_privkey_import_ecc_raw(gnutls_privkey_t </code><i>key</i><code>, gnutls_ecc_curve_t </code><i>curve</i><code>, const gnutls_datum_t * </code><i>x</i><code>, const gnutls_datum_t * </code><i>y</i><code>, const gnutls_datum_t * </code><i>k</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,6 +24,7 @@ description: "gnutls_privkey_import_ecc_raw – API function"
 <dd> holds the y</dd>
 <dt>const gnutls_datum_t * k</dt>
 <dd> holds the k</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will convert the given elliptic curve parameters to the native <code>gnutls_privkey_t</code> format. The output will be stored in <i>key</i> .</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

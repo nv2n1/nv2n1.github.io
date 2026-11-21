@@ -1,5 +1,4 @@
 ---
-
 title: "oz-generate-icicle(1)"
 name: "oz-generate-icicle"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-oz-generate-icicle/"
 description: "oz-generate-icicle – tool to generate an ICICLE (package manifest) of a disk image"
 ---
 
+<h2 class="name">NAME</h2>
+<p> oz-generate-icicle &#8211; tool to generate an ICICLE (package manifest) of a disk image</p>
+<h2>SYNOPSIS</h2>
 <p> <code>oz-generate-icicle [OPTIONS] &lt;tdl-file&gt; &lt;libvirt-xml-file&gt;</code> </p>
+<h2>DESCRIPTION</h2>
 <p> This is a tool to generate a package manifest (also called ICICLE) from a disk image. This program can be used as a counterpart to oz-install, though it does not have to be used in conjunction. </p>
 <p> Note that oz-generate-icicle does the actual work using a combination of KVM and libvirt, so both of these must be available (and working) for oz-generate-icicle to have a chance to succeed. </p>
 <h2>OPTIONS</h2>

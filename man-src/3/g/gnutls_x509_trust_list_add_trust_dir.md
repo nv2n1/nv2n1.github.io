@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_trust_list_add_trust_dir(3)"
 name: "gnutls_x509_trust_list_add_trust_dir"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_trust_list_add_trust_dir – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_trust_list_add_trust_dir &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_trust_list_add_trust_dir(gnutls_x509_trust_list_t </code><i>list</i><code>, const char * </code><i>ca_dir</i><code>, const char * </code><i>crl_dir</i><code>, gnutls_x509_crt_fmt_t </code><i>type</i><code>, unsigned int </code><i>tl_flags</i><code>, unsigned int </code><i>tl_vflags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -26,6 +26,7 @@ description: "gnutls_x509_trust_list_add_trust_dir – API function"
 <dd> GNUTLS_TL_*</dd>
 <dt>unsigned int tl_vflags</dt>
 <dd> gnutls_certificate_verify_flags if flags specifies GNUTLS_TL_VERIFY_CRL</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will add the given certificate authorities to the trusted list. Only directories are accepted by this function.</p>
 <h2>RETURNS</h2>
 <p> The number of added elements is returned.</p>

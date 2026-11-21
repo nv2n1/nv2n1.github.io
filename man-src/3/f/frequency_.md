@@ -1,5 +1,4 @@
 ---
-
 title: "frequency_(3)"
 name: "frequency_"
 section: "3"
@@ -7,9 +6,17 @@ letter: "f"
 url: "/docs/linux/man/3-frequency_/"
 ---
 
-QuantLib::AmortizingFixedRateBond - amortizing fixed-rate bond 
+<h2 class="name">NAME</h2>
+ 
 
-#include &lt;ql/experimental/amortizingbonds/amortizingfixedratebond.hpp&gt; 
+ QuantLib::AmortizingFixedRateBond - amortizing fixed-rate bond 
+
+<h2>SYNOPSIS</h2>
+
+ 
+ 
+
+ #include &lt;ql/experimental/amortizingbonds/amortizingfixedratebond.hpp&gt; 
 
  Inherits <b>QuantLib::Bond</b>. 
 

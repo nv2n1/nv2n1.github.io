@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pubkey_get_key_id(3)"
 name: "gnutls_pubkey_get_key_id"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_pubkey_get_key_id – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pubkey_get_key_id &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/abstract.h&gt;</code> </p>
 <p> <code>int gnutls_pubkey_get_key_id(gnutls_pubkey_t </code><i>key</i><code>, unsigned int </code><i>flags</i><code>, unsigned char * </code><i>output_data</i><code>, size_t * </code><i>output_data_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,6 +22,7 @@ description: "gnutls_pubkey_get_key_id – API function"
 <dd> will contain the key ID</dd>
 <dt>size_t * output_data_size</dt>
 <dd> holds the size of output_data (and will be replaced by the actual size of parameters)</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will return a unique ID that depends on the public key parameters. This ID can be used in checking whether a certificate corresponds to the given public key. </p>
 <p> If the buffer provided is not long enough to hold the output, then *output_data_size is updated and <code>GNUTLS_E_SHORT_MEMORY_BUFFER</code> will be returned. The output will normally be a SHA-1 hash output, which is 20 bytes.</p>
 <h2>RETURNS</h2>

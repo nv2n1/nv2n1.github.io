@@ -1,5 +1,4 @@
 ---
-
 title: "ppmcolormask(1)"
 name: "ppmcolormask"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ppmcolormask/"
 description: "ppmcolormask – produce mask of areas of a certain color in a PPM file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ppmcolormask &#8211; produce mask of areas of a certain color in a PPM file </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ppmcolormask</code> <i>color</i> [<i>ppmfile</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Reads a PPM file as input. Produces a PBM (bitmap) file as output. The output file is the same dimensions as the input file and is black in all places where the input file is the color <i>color</i>, and white everywhere else. </p>
 <p> The output of <code>ppmcolormask</code> is useful as an alpha mask input to <code>pnmcomp</code>. Note that you can generate such an alpha mask automatically as you convert to PNG format with <code><a href="/docs/linux/man/1-pnmtopng/">pnmtopng</a></code>(1). Use its <code>-transparent</code> option. </p>
 <p> <i>ppmfile</i> is the input file. If you don&#8217;t specify <i>ppmfile</i>, the input is from Standard Input. </p>

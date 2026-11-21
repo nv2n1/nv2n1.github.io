@@ -1,5 +1,4 @@
 ---
-
 title: "inxi(1)"
 name: "inxi"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-inxi/"
 description: "inxi – Command line system information script for console and IRC"
 ---
 
+<h2 class="name">NAME</h2>
+<p> inxi &#8211; Command line system information script for console and IRC </p>
+<h2>SYNOPSIS</h2>
 <p> <code>inxi</code> </p>
 <p> <code>inxi</code> [<code>-AbBCdDfFGhiIlmMnNopPrRsSuUVwzZ</code>] </p>
 <p> <code>inxi</code> [<code>-c NUMBER</code>] [<code>-t</code> [<code>c</code>|<code>m</code>|<code>cm</code>|<code>mc</code>][<code>NUMBER</code>]] [<code>-v NUMBER</code>] [<code>-W LOCATION</code>] [<code>&#8211;weather-unit</code> {<code>m</code>|<code>i</code>|<code>mi</code>|<code>im</code>}] [<code>-y WIDTH</code>] <code>inxi</code> [<code>&#8211;memory-modules</code>] [<code>&#8211;memory-short</code>] [<code>&#8211;recommends</code>] [<code>&#8211;slots</code>] [<code>&#8211;usb</code>] </p>
 <p> <code>inxi [-x</code>|<code>-xx</code>|<code>-xxx</code>|<code>-a</code>|<code>&#8211;admin</code>] <code>-OPTION(s)</code> </p>
 <p> All options have long form variants &#8211; see below for these and more advanced options. </p>
+<h2>DESCRIPTION</h2>
 <p> <code>inxi</code> is a command line system information script built for console and IRC. It is also used a debugging tool for forum technical support to quickly ascertain users&#8217; system configurations and hardware. inxi shows system hardware, CPU, drivers, Xorg, Desktop, Kernel, gcc version(s), Processes, RAM usage, and a wide variety of other useful information. </p>
 <p> <code>inxi</code> output varies depending on whether it is being used on CLI or IRC, with some default filters and color options applied only for IRC use. Script colors can be turned off if desired with <code>-c 0</code>, or changed using the <code>-c</code> color options listed in the STANDARD OPTIONS section below. </p>
 <h2>PRIVACY AND SECURITY</h2>

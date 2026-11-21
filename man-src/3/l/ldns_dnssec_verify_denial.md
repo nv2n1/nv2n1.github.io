@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_dnssec_verify_denial(3)"
 name: "ldns_dnssec_verify_denial"
 section: "3"
@@ -10,11 +9,13 @@ description: "ldns_dnssec_verify_denial, ldns_dnssec_verify_denial_nsec3"
 
 <h2>NAME</h2>
 <p> ldns_dnssec_verify_denial, ldns_dnssec_verify_denial_nsec3 </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_status ldns_dnssec_verify_denial(ldns_rr *rr, ldns_rr_list *nsecs, ldns_rr_list *rrsigs); </p>
 <p> ldns_status ldns_dnssec_verify_denial_nsec3(ldns_rr *rr, ldns_rr_list *nsecs, ldns_rr_list *rrsigs, ldns_pkt_rcode packet_rcode, ldns_rr_type packet_qtype, bool packet_nodata); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_dnssec_verify_denial</i>()</dt>
 <dd>denial is not just a river in egypt </dd>

@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_is_rrset(3)"
 name: "ldns_is_rrset"
 section: "3"
@@ -10,10 +9,12 @@ description: "ldns_is_rrset"
 
 <h2>NAME</h2>
 <p> ldns_is_rrset </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> bool ldns_is_rrset(ldns_rr_list *rr_list); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_is_rrset</i>()</dt>
 <dd>checks if an rr_list is a rrset. .br <code>rr_list</code>: the rr_list to check .br Returns true if it is an rrset otherwise false</dd></dl>

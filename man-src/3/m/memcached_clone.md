@@ -1,5 +1,4 @@
 ---
-
 title: "memcached_clone(3)"
 name: "memcached_clone"
 section: "3"
@@ -10,6 +9,7 @@ description: "memcached_clone – libmemcached Documentation"
 
 <h2>NAME</h2>
 <p> memcached_clone &#8211; libmemcached Documentation</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
 <dt><code>memcached_st</code></dt>
@@ -23,6 +23,7 @@ description: "memcached_clone – libmemcached Documentation"
 </dd><dt><code>void memcached_servers_reset(</code><i>memcached_st</i>)</dt>
 <dd>
 <p> Compile and link with -lmemcached</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <i>memcached_create()</i> is used to create a <i>memcached_st</i> structure that will then be used by other <a href="/docs/linux/man/3-libmemcached/">libmemcached</a>(3) functions to communicate with the server. You should either pass a statically declared <i>memcached_st</i> to <i>memcached_create()</i> or a NULL. If a NULL passed in then a structure is allocated for you. </p>
 <p> Please note, when you write new application use <code>memcached()</code> over <i>memcached_create()</i>. </p>
 <p> <i>memcached_clone()</i> is similar to <i>memcached_create()</i> but it copies the defaults and list of servers from the source <i>memcached_st</i>. If you pass a null as the argument for the source to clone, it is the same as a call to <i>memcached_create()</i>. If the destination argument is NULL a <i>memcached_st</i> will be allocated for you. </p>

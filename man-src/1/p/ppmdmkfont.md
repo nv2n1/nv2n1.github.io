@@ -1,5 +1,4 @@
 ---
-
 title: "ppmdmkfont(1)"
 name: "ppmdmkfont"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ppmdmkfont/"
 description: "ppmdmkfont – Create Ppmdfont ‘standard’."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ppmdmkfont &#8211; Create Ppmdfont &#8216;standard&#8217;.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ppmdmkfont</code> </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>ppmdmkfont</code> creates the &#8216;standard&#8217; Ppmdfont font as a Ppmdfont file. It has no input; it always generates identical files. </p>
 <p> (There are no arguments or options) </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "virt-clone(1)"
 name: "virt-clone"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-virt-clone/"
 description: "virt-clone – clone existing virtual machine images"
 ---
 
+<h2 class="name">NAME</h2>
+<p> virt-clone &#8211; clone existing virtual machine images </p>
+<h2>SYNOPSIS</h2>
 <p> <code>virt-clone</code> [<font SIZE="-1">OPTION</font>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>virt-clone</code> is a command line tool for cloning existing virtual machine images using the <tt>&quot;libvirt&quot;</tt> hypervisor management library. It will copy the disk images of any existing virtual machine, and define a new guest with an identical virtual hardware configuration. Elements which require uniqueness will be updated to avoid a clash between old and new guests. </p>
 <p> By default, virt-clone will show an error if the necessary information to clone the guest is not provided. The &#8211;auto-clone option will generate all needed input, aside from the source guest to clone. </p>
 <p> Please note, virt-clone does not change anything _inside_ the guest <font SIZE="-1">OS,</font> it only duplicates disks and does host side changes. So things like changing passwords, changing static <font SIZE="-1">IP</font> address, etc are outside the scope of this tool. For these types of changes, please see <code>virt-sysprep</code>.</p>

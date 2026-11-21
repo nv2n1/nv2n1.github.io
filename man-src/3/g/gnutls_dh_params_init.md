@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_dh_params_init(3)"
 name: "gnutls_dh_params_init"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_dh_params_init – API function"
 
 <h2>NAME</h2>
 <p> gnutls_dh_params_init &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_dh_params_init(gnutls_dh_params_t * </code><i>dh_params</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_dh_params_t * dh_params</dt>
 <dd> Is a structure that will hold the prime numbers</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will initialize the DH parameters structure.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error code is returned.</p>

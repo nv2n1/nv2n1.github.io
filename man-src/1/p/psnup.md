@@ -1,5 +1,4 @@
 ---
-
 title: "psnup(1)"
 name: "psnup"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-psnup/"
 description: "psnup – multiple pages per sheet"
 ---
 
+<h2 class="name">NAME</h2>
+<p> psnup &#8211; multiple pages per sheet </p>
+<h2>SYNOPSIS</h2>
 <p> <code>psnup</code> [ <code>-w</code><i>width</i> ] [ <code>-h</code><i>height</i> ] [ <code>-p</code><i>paper</i> ] [ <code>-W</code><i>width</i> ] [ <code>-H</code><i>height</i> ] [ <code>-P</code><i>paper</i> ] [ <code>-l</code> ] [ <code>-r</code> ] [ <code>-f</code> ] [ <code>-c</code> ] [ <code>-m</code><i>margin</i> ] [ <code>-b</code><i>border</i> ] [ <code>-d</code><i>lwidth</i> ] [ <code>-s</code><i>scale</i> ] [ <code>&#8211;</code><i>nup</i> ] [ <code>-q</code> ] [ <i>infile</i> [ <i>outfile</i> ] ]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Psnup</i> puts multiple logical pages onto each physical sheet of paper. The input PostScript file should follow the Adobe Document Structuring Conventions. </p>
 <p> The <i>-w</i> option gives the paper width, and the <i>-h</i> option gives the paper height, normally specified in <code>cm</code> or <code>in</code>. The <i>-p</i> option can be used as an alternative, to set the paper size to <code>a0, a1, a2, a3, a4, a5, b5, letter, legal, tabloid, statement,</code> executive, folio, quarto or <code>10&#215;14.</code> The default paper size is normally <code>a4,</code> but on a Debian system, /etc/papersize is consulted. The <i>-W, -H,</i> and <i>-P</i> options set the input paper size, if it is different from the output size. This makes it easy to impose pages of one size on a different size of paper. </p>
 <p> The <i>-l</i> option should be used for pages which are in landscape orientation (rotated 90 degrees anticlockwise). The <i>-r</i> option should be used for pages which are in seascape orientation (rotated 90 degrees clockwise), and the <i>-f</i> option should be used for pages which have the width and height interchanged, but are not rotated. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "yum-builddep(1)"
 name: "yum-builddep"
 section: "1"
@@ -10,9 +9,11 @@ description: "yum-builddep – install missing dependencies for building an RPM 
 
 <h2>NAME</h2>
 <p> yum-builddep &#8211; install missing dependencies for building an RPM package</p>
+<h2>SYNOPSIS</h2>
 <p> <code>yum-builddep</code> package </p>
 <p> <code>yum-builddep</code> /path/to/local/package.src.rpm </p>
 <p> <code>yum-builddep</code> /path/to/local/package.spec</p>
+<h2>DESCRIPTION</h2>
 <p> <code>yum-builddep</code> is a program which installs the RPMs needed to build the specified package. The source RPM for the specified package must be available in a Yum repository (which will be automatically enabled, if it is disabled) or it can be a local source RPM or a spec file. </p>
 <p> Note, that only the BuildRequires information within the SRPM header information is used to determine build dependencies. This will specifically omit any dependencies that are required only for specific architectures. </p>
 <h2>EXAMPLES</h2>

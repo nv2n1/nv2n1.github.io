@@ -1,5 +1,4 @@
 ---
-
 title: "funcen(1)"
 name: "funcen"
 section: "1"
@@ -10,6 +9,7 @@ description: "funcen – find centroid (for binary tables)"
 
 <h2>NAME</h2>
 <p> <code>funcen &#8211; find centroid (for binary tables)</code></p>
+<h2>SYNOPSIS</h2>
 <p> funcen [-i] [-n iter] [-t tol] [-v lev] &lt;iname&gt; &lt;region&gt;</p>
 <h2>OPTIONS</h2>
 <pre>
@@ -18,6 +18,7 @@ description: "funcen – find centroid (for binary tables)"
   -t tol        # pixel tolerance distance (default: 1.0)
   -v [0,1,2,3]  # output verbosity level (default: 0)
 </pre>
+<h2>DESCRIPTION</h2>
 <p> <code>funcen</code> iteratively calculates the centroid position within one or more regions of a Funtools table (<font SIZE="-1">FITS</font> binary table or raw event file). Starting with an input table, an initial region specification, and an iteration count, the program calculates the average x and y position within the region and then uses this new position as the region center for the next iteration. Iteration terminates when the maximum number of iterations is reached or when the input tolerance distance is met for that region. A count of events in the final region is then output, along with the pixel position value (and, where available, <font SIZE="-1">WCS</font> position). </p>
 <p> The first argument to the program specifies the Funtools table file to process. Since the file must be read repeatedly, a value of &#8220;stdin&#8221; is not permitted when the number of iterations is non-zero. Use Funtools Bracket Notation to specify <font SIZE="-1">FITS</font> extensions and filters. </p>
 <p> The second required argument is the initial region descriptor. Multiple regions are permitted. However, compound regions (accelerators, variable argument regions and regions connected via boolean algebra) are not permitted. Points and polygons also are illegal. These restrictions might be lifted in a future version, if warranted. </p>

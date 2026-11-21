@@ -1,5 +1,4 @@
 ---
-
 title: "go(1)"
 name: "go"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-go/"
 description: "go – tool for managing Go source code"
 ---
 
+<h2 class="name">NAME</h2>
+<p> go &#8211; tool for managing Go source code </p>
+<h2>SYNOPSIS</h2>
 <p> <code>go</code> command [<i>arguments</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The Go distribution includes a command, named <code>go</code>, that automates the downloading, building, installation, and testing of Go packages and commands.</p>
 <h2>COMMANDS</h2>
 <p> Each command is documented in its own manpage. For example, the <code>build</code> command is documented in <code><a href="/docs/linux/man/1-go-build/">go-build</a></code>(1). The commands are:</p>

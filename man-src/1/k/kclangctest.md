@@ -1,5 +1,4 @@
 ---
-
 title: "kclangctest(1)"
 name: "kclangctest"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-kclangctest/"
 description: "kclangctest – command line interface to test the C language binding"
 ---
 
+<h2 class="name">NAME</h2>
+<p> kclangctest &#8211; command line interface to test the C language binding</p>
+<h2>DESCRIPTION</h2>
 <p> The command `<code>kclangctest</code>&#8216; is a utility for facility test and performance test of the C language binding. This command is used in the following format. `<i>path</i>&#8216; specifies the path of a database file. `<i>rnum</i>&#8216; specifies the number of iterations. </p>
 <dl>
 <dt>

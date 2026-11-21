@@ -1,5 +1,4 @@
 ---
-
 title: "pdl2(1)"
 name: "pdl2"
 section: "1"
@@ -7,9 +6,14 @@ letter: "p"
 url: "/docs/linux/man/1-pdl2/"
 ---
 
-pdl2 - Simple shell (version 2) for PDL 
+<h2 class="name">NAME</h2>
+ 
 
-Use <font SIZE="-1">PDL</font> interactively: 
+ pdl2 - Simple shell (version 2) for PDL 
+
+<h2>SYNOPSIS</h2>
+
+ Use <font SIZE="-1">PDL</font> interactively: 
 
  <pre>
   %&gt; pdl2
@@ -18,7 +22,9 @@ Use <font SIZE="-1">PDL</font> interactively:
   $a = [0 1 2 3 4 5 6 7 8 9]
 </pre>
 
-The <tt>&quot;pdl2&quot;</tt> program, also known as the Perldl2 shell, is a second generation version of the original <tt>&quot;perldl&quot;</tt> interactive <font SIZE="-1">PDL</font> shell. It attempts to be backward compatible in usage while providing improved features, better support for Perl syntax, and an more easily extended framework based on the Devel::REPL shell. 
+<h2>DESCRIPTION</h2>
+
+ The <tt>&quot;pdl2&quot;</tt> program, also known as the Perldl2 shell, is a second generation version of the original <tt>&quot;perldl&quot;</tt> interactive <font SIZE="-1">PDL</font> shell. It attempts to be backward compatible in usage while providing improved features, better support for Perl syntax, and an more easily extended framework based on the Devel::REPL shell. 
 
  If you have Devel::REPL version 1.003011 or later, then <tt>&quot;pdl2&quot;</tt> will start with full functionality. If Devel::REPL is not installed or found then <tt>&quot;pdl2&quot;</tt> will print a warning and run the legacy <tt>&quot;perldl&quot;</tt> shell command instead. 
 

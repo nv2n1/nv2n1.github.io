@@ -1,5 +1,4 @@
 ---
-
 title: "haproxy(1)"
 name: "haproxy"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-haproxy/"
 description: "HAProxy – fast and reliable http reverse proxy and load balancer"
 ---
 
+<h2 class="name">NAME</h2>
+<p> HAProxy &#8211; fast and reliable http reverse proxy and load balancer</p>
+<h2>SYNOPSIS</h2>
 <p> haproxy -f &lt;configuration file&gt; [-L&nbsp;<wbr>&lt;name&gt;] [-n maxconn] [-N maxconn] [-C&nbsp;<wbr>&lt;dir&gt;] [-v|-vv] [-d] [-D] [-q] [-V] [-c] [-p&nbsp;<wbr>&lt;pidfile&gt;] [-dk] [-ds] [-de] [-dp] [-db] [-dM[&lt;byte&gt;]] [-m&nbsp;<wbr>&lt;megs&gt;] [{-sf|-st}&nbsp;<wbr>pidlist&#8230;] </p>
+<h2>DESCRIPTION</h2>
 <p> HAProxy is a TCP/HTTP reverse proxy which is particularly suited for high availability environments. Indeed, it can:<br />
 &nbsp;<wbr>&#8211; route HTTP requests depending on statically assigned cookies&nbsp;<wbr>;<br />
 &nbsp;<wbr>&#8211; spread the load among several servers while assuring server<br />

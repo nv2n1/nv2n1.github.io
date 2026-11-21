@@ -1,5 +1,4 @@
 ---
-
 title: "doveadm-who(1)"
 name: "doveadm-who"
 section: "1"
@@ -10,7 +9,9 @@ description: "doveadm-who – Show who is logged in to the Dovecot server"
 
 <h2>NAME</h2>
 <p> doveadm-who &#8211; Show who is logged in to the Dovecot server</p>
+<h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] [<code>-f</code> <i>formatter</i>] <code>who&nbsp;<wbr></code>[<code>-1</code>] [<code>-a</code> <i>anvil_socket_path</i>] [<i>user</i>] [<i>ip</i>[<code>/</code><i>mask</i>]]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>who</code> command is used to show which users from which hosts are currently connected to which service.</p>
 <h2>OPTIONS</h2>
 <p> Global <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) <i>options</i>:</p>

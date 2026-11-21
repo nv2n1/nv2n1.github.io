@@ -1,5 +1,4 @@
 ---
-
 title: "nessus-fetch(1)"
 name: "nessus-fetch"
 section: "1"
@@ -10,7 +9,9 @@ description: "nessus-fetch – A simple utility to retrieve plugins from www.nes
 
 <h2>NAME</h2>
 <p> nessus-fetch &#8211; A simple utility to retrieve plugins from <a rel="nofollow" href="http://www.nessus.org">www.nessus.org</a></p>
+<h2>SYNOPSIS</h2>
 <p> <code>nessus-fetch &#8211;plugins </code> <code>nessus-fetch &#8211;plugins-md5</code> <code>nessus-fetch &#8211;register &lt;code&gt; </code> <code>nessus-fetch &#8211;check</code> <code>nessus-fetch &#8211;url &lt;url&gt; &lt;localfile&gt; [&lt;http_login&gt; &lt;http_password&gt;]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>nessus-fetch</code> is a simple utility is used by <code>nessus-update-plugins</code> to fetch the newest Nessus plugins from <a rel="nofollow" href="http://www.nessus.org">www.nessus.org</a> and to register a Nessus installation with plugins.nessus.org. It can also be used to retrieve arbitrary files from third party servers. </p>
 <h2>OPTIONS</h2>
 <dl>

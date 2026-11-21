@@ -1,5 +1,4 @@
 ---
-
 title: "cptts2(3)"
 name: "cptts2"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cptts2/"
 description: "cptts2.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cptts2.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cptts2</code> (IUPLO, N, NRHS, D, E, B, LDB)<br />
  <i></i><code>CPTTS2</code> solves a tridiagonal system of the form AX=B using the L D LH factorization computed by spttrf.</p>

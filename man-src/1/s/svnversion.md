@@ -1,5 +1,4 @@
 ---
-
 title: "svnversion(1)"
 name: "svnversion"
 section: "1"
@@ -10,6 +9,7 @@ description: "svnversion – Produce a compact version number for a working copy
 
 <h2>NAME</h2>
 <p> svnversion &#8211; Produce a compact version number for a working copy.</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>svnversion</code> [<i>wc_path</i> [<i>trail_url</i>]]</dt>
 <dd></dd></dl>

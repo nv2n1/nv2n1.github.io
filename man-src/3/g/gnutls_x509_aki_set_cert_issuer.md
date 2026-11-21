@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_aki_set_cert_issuer(3)"
 name: "gnutls_x509_aki_set_cert_issuer"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_aki_set_cert_issuer – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_aki_set_cert_issuer &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509-ext.h&gt;</code> </p>
 <p> <code>int gnutls_x509_aki_set_cert_issuer(gnutls_x509_aki_t </code><i>aki</i><code>, unsigned int </code><i>san_type</i><code>, const gnutls_datum_t * </code><i>san</i><code>, const char * </code><i>othername_oid</i><code>, const gnutls_datum_t * </code><i>serial</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,6 +24,7 @@ description: "gnutls_x509_aki_set_cert_issuer – API function"
 <dd> The object identifier if <i>san_type</i> is <code>GNUTLS_SAN_OTHERNAME</code></dd>
 <dt>const gnutls_datum_t * serial</dt>
 <dd> The authorityCertSerialNumber number (may be null)</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will set the authorityCertIssuer name and the authorityCertSerialNumber to be stored in the <i>aki</i> structure. When storing multiple names, the serial should be set on the first call, and subsequent calls should use a <code>NULL</code> serial.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

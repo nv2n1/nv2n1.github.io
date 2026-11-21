@@ -1,5 +1,4 @@
 ---
-
 title: "gdal_fillnodata(1)"
 name: "gdal_fillnodata"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-gdal_fillnodata/"
 description: "gdal_fillnodata – gdal_fillnodata.py fill raster regions by interpolation from edges"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gdal_fillnodata &#8211; gdal_fillnodata.py fill raster regions by interpolation from edges </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 gdal_fillnodata.py[-q][-md max_distance][-si smooth_iterations]
                   [-o name = value][-b band] srcfile[-nomask][-mask filename][-of format][dstfile]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The gdal_fillnodata.py script fills selection regions (usually nodata areas) by interpolating from valid pixels around the edges of the area. </p>
 <p> Additional details on the algorithm are available in the GDALFillNodata() docs. </p>
 <dl>

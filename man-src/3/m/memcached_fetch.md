@@ -1,5 +1,4 @@
 ---
-
 title: "memcached_fetch(3)"
 name: "memcached_fetch"
 section: "3"
@@ -10,11 +9,13 @@ description: "memcached_fetch – Retrieving data from the server"
 
 <h2>NAME</h2>
 <p> memcached_fetch &#8211; Retrieving data from the server</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
 <dt><code>char *memcached_fetch(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>*key_length</i>, size_t<i>&nbsp;<wbr>*value_length</i>, uint32_t<i>&nbsp;<wbr>*flags</i>, memcached_return_t<i>&nbsp;<wbr>*error</i>)</dt>
 <dd> Deprecated since version 0.50: Use <code>memcached_fetch_result()</code> instead. </dd>
 <p> Compile and link with -lmemcached</dl>
+<h2>DESCRIPTION</h2>
 <p> <i>memcached_fetch()</i> is used to fetch an individual value from the server. <code>memcached_mget()</code> must always be called before using this method. You must pass in a key and its length to fetch the object. You must supply three pointer variables which will give you the state of the returned object. A <code>uint32_t</code> pointer to contain whatever flags you stored with the value, a <code>size_t</code> pointer which will be filled with size of of the object, and a <code>memcached_return_t</code> pointer to hold any error. The object will be returned upon success and NULL will be returned on failure. <code>MEMCACHED_END</code> is returned by the *error value when all objects that have been found are returned. The final value upon <code>MEMCACHED_END</code> is null. </p>
 <p> Values returned by <i>memcached_fetch()</i> must be freed by the caller. </p>
 <p> All of the above functions are not tested when the <code>MEMCACHED_BEHAVIOR_USE_UDP</code> has been set. Executing any of these functions with this behavior on will result in <code>MEMCACHED_NOT_SUPPORTED</code> being returned, or for those functions which do not return a <code>memcached_return_t</code>, the error function parameter will be set to <code>MEMCACHED_NOT_SUPPORTED</code>.</p>

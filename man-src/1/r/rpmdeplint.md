@@ -1,5 +1,4 @@
 ---
-
 title: "rpmdeplint(1)"
 name: "rpmdeplint"
 section: "1"
@@ -10,9 +9,11 @@ description: "rpmdeplint – a tool to find errors in RPM packages in the contex
 
 <h2>NAME</h2>
 <p> rpmdeplint &#8211; a tool to find errors in RPM packages in the context of their dependency graph</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 rpmdeplint COMMAND[--repo NAME, PATH][RPMPATH]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>rpmdeplint</code> command will test dependency satisfiability of given RPM packages against given repositories.</p>
 <h2>OPTIONS</h2>
 <dl>

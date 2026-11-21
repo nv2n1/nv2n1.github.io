@@ -1,5 +1,4 @@
 ---
-
 title: "oggz-info(1)"
 name: "oggz-info"
 section: "1"
@@ -11,6 +10,7 @@ description: "oggz-info — Display information about one or more Ogg files and 
 <h2>NAME</h2>
 <p> oggz-info &#8212; Display information about one or more Ogg files and their bitstreams.<br />
 &nbsp;<wbr></p>
+<h2>SYNOPSIS</h2>
 <p> <code>oggz-info</code> [-l | &#8211;length ] [-b | &#8211;bitrate ] [-g | &#8211;page-stats ] [-p | &#8211;packet-stats ] [-k | &#8211;skeleton ] [-a | &#8211;all ] filename &#8230; </p>
 <p> <code>oggz-info</code> [-h | &#8211;help ] [-v | &#8211;version ]</p>
 <h2>Description</h2>

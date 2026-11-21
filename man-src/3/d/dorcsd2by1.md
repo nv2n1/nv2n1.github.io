@@ -1,5 +1,4 @@
 ---
-
 title: "dorcsd2by1(3)"
 name: "dorcsd2by1"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dorcsd2by1/"
 description: "dorcsd2by1.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dorcsd2by1.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dorcsd2by1</code> (JOBU1, JOBU2, JOBV1T, M, P, Q, X11, LDX11, X21, LDX21, THETA, U1, LDU1, U2, LDU2, V1T, LDV1T, WORK, LWORK, IWORK, INFO)<br />
  <i></i><code>DORCSD2BY1</code></p>

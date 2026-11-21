@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_global_set_time_function(3)"
 name: "gnutls_global_set_time_function"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_global_set_time_function – API function"
 
 <h2>NAME</h2>
 <p> gnutls_global_set_time_function &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_global_set_time_function(gnutls_time_func </code><i>time_func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_time_func time_func</dt>
 <dd> it&#8217;s the system time function, a <code>gnutls_time_func()</code> callback.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This is the function where you can override the default system time function. The application provided function should behave the same as the standard function.</p>
 <h2>SINCE</h2>
 <p> 2.12.0</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "tint2(1)"
 name: "tint2"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-tint2/"
 description: "tint2 – lightweight panel/taskbar"
 ---
 
+<h2 class="name">NAME</h2>
+<p> tint2 &#8211; lightweight panel/taskbar </p>
+<h2>SYNOPSIS</h2>
 <p> <code>tint2</code><br />
  <code>tint2</code> -c <i>/path_to_config_file</i></p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>tint2</code> command. </p>
 <p> <code>tint2</code> is a simple panel/taskbar intentionally made for openbox3, but should also work with other window managers. It&#8217;s based on ttm code. The goal is to keep a clean and unintrusive look with code lightweight and compliance with freedesktop specifications. </p>
 <p> On the first startup tint2 creates a config file in $HOME/.config/tint2/tint2rc. </p>

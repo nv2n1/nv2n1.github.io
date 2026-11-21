@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_verify_stored_pubkey(3)"
 name: "gnutls_verify_stored_pubkey"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_verify_stored_pubkey – API function"
 
 <h2>NAME</h2>
 <p> gnutls_verify_stored_pubkey &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_verify_stored_pubkey(const char * </code><i>db_name</i><code>, gnutls_tdb_t </code><i>tdb</i><code>, const char * </code><i>host</i><code>, const char * </code><i>service</i><code>, gnutls_certificate_type_t </code><i>cert_type</i><code>, const gnutls_datum_t * </code><i>cert</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -28,6 +28,7 @@ description: "gnutls_verify_stored_pubkey – API function"
 <dd> The raw (der) data of the certificate</dd>
 <dt>unsigned int flags</dt>
 <dd> should be 0.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will try to verify the provided (raw or DER-encoded) certificate using a list of stored public keys. The <i>service</i> field if non-NULL should be a port number. </p>
 <p> The <i>retrieve</i> variable if non-null specifies a custom backend for the retrieval of entries. If it is NULL then the default file backend will be used. In POSIX-like systems the file backend uses the $HOME/.gnutls/known_hosts file. </p>
 <p> Note that if the custom storage backend is provided the retrieval function should return <code>GNUTLS_E_CERTIFICATE_KEY_MISMATCH</code> if the host/service pair is found but key doesn&#8217;t match, <code>GNUTLS_E_NO_CERTIFICATE_FOUND</code> if no such host/service with the given key is found, and 0 if it was found. The storage function should return 0 on success.</p>

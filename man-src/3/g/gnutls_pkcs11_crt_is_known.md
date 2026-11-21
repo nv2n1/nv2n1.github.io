@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pkcs11_crt_is_known(3)"
 name: "gnutls_pkcs11_crt_is_known"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_pkcs11_crt_is_known – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs11_crt_is_known &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs11.h&gt;</code> </p>
 <p> <code>int gnutls_pkcs11_crt_is_known(const char * </code><i>url</i><code>, gnutls_x509_crt_t </code><i>cert</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_pkcs11_crt_is_known – API function"
 <dd> is the certificate to find issuer for</dd>
 <dt>unsigned int flags</dt>
 <dd> Use zero or flags from <code>GNUTLS_PKCS11_OBJ_FLAG</code>.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will check whether the provided certificate is stored in the specified token. This is useful in combination with <code>GNUTLS_PKCS11_OBJ_FLAG_RETRIEVE_TRUSTED</code> or <code>GNUTLS_PKCS11_OBJ_FLAG_RETRIEVE_DISTRUSTED</code>, to check whether a CA is present or a certificate is blacklisted in a trust PKCS <code>11</code> module. </p>
 <p> This function can be used with a <i>url</i> of &quot;pkcs11:&quot;, and in that case all modules will be searched. To restrict the modules to the marked as trusted in p11-kit use the <code>GNUTLS_PKCS11_OBJ_FLAG_PRESENT_IN_TRUSTED_MODULE</code> flag. </p>
 <p> Note that the flag <code>GNUTLS_PKCS11_OBJ_FLAG_RETRIEVE_DISTRUSTED</code> is specific to p11-kit trust modules.</p>

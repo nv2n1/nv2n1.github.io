@@ -1,5 +1,4 @@
 ---
-
 title: "a2ps(1)"
 name: "a2ps"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-a2ps/"
 description: "a2ps – format files for printing on a PostScript printer"
 ---
 
+<h2 class="name">NAME</h2>
+<p> a2ps &#8211; format files for printing on a PostScript printer </p>
+<h2>SYNOPSIS</h2>
 <p> <code>a2ps</code> [<i>OPTION</i>]&#8230; [<i>FILE</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Convert FILE(s) or standard input to PostScript. By default, the output is sent to the default printer. An output file may be specified with <code>-o</code>. </p>
 <p> Mandatory arguments to long options are mandatory for short options too. Long options marked with * require a yes/no argument, corresponding short options stand for `yes&#8217;.</p>
 <h3>Tasks:</h3>

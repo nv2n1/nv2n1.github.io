@@ -1,5 +1,4 @@
 ---
-
 title: "libssh2_channel_open_ex(3)"
 name: "libssh2_channel_open_ex"
 section: "3"
@@ -10,9 +9,11 @@ description: "libssh2_channel_open_ex – establish a generic session channel"
 
 <h2>NAME</h2>
 <p> libssh2_channel_open_ex &#8211; establish a generic session channel</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
 <p> LIBSSH2_CHANNEL * libssh2_channel_open_ex(LIBSSH2_SESSION *session, const char *channel_type, unsigned int channel_type_len, unsigned int window_size, unsigned int packet_size, const char *message, unsigned int message_len); </p>
 <p> LIBSSH2_CHANNEL * libssh2_channel_open_session(session); </p>
+<h2>DESCRIPTION</h2>
 <p> <i>session</i> &#8211; Session instance as returned by <code><a href="/docs/linux/man/3-libssh2_session_init_ex/">libssh2_session_init_ex</a>(3)</code> </p>
 <p> <i>channel_type</i> &#8211; Channel type to open. Typically one of session, direct-tcpip, or tcpip-forward. The SSH2 protocol allowed for additional types including local, custom channel types. </p>
 <p> <i>channel_type_len</i> &#8211; Length of channel_type </p>

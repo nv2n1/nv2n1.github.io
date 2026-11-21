@@ -1,5 +1,4 @@
 ---
-
 title: "gstream-set_cursor_drawer(3)"
 name: "gstream-set_cursor_drawer"
 section: "3"
@@ -10,8 +9,10 @@ description: "set_cursor_drawer"
 
 <h2>NAME</h2>
 <p> set_cursor_drawer</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gstream.h">gstream.h</a>&gt;</code> </p>
 <p> <code>void set_cursor_drawer(void (*cd)(BITMAP *, int, int, int, int, int, bool));</code></p>
+<h2>DESCRIPTION</h2>
 <p> This will set the function for drawing the cursor, which is useful if you want to customize it with your own favourite cursor (perhaps a BITMAP). Before you can actually use the cursor for inputting, you also have to call set_cursor_dimensions with the width and height of your cursor, in both insert and overwrite mode. </p>
 <p> The parameters of the drawer function are: destination bitmap (the BITMAP you draw on); x-coordinate; y-coordinate; the width (if you passed gbuf::DYNAMIC_CURSOR_SIZE it is the width of the character under the cursor, else it is the width you specified); the height (ditto); the colour of the font (watch out for a -1!); whether in insert mode (true if so). </p>
 <p> A simple example of a standard console cursor: </p>

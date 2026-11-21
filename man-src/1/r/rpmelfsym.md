@@ -1,5 +1,4 @@
 ---
-
 title: "rpmelfsym(1)"
 name: "rpmelfsym"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-rpmelfsym/"
 description: "rpmelfsym – list symbols from object files in RPM packages"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rpmelfsym &#8211; list symbols from object files in RPM packages </p>
+<h2>SYNOPSIS</h2>
 <p> <code>rpmelfsym</code> [<code>-h</code>] [<code>-a</code>] [<code>-p</code>] [<i></i><font SIZE="-1"><i>FILE</i></font><i></i>&#8230;] [<i></i><font SIZE="-1"><i>DIR</i></font><i></i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>rpmelfsym</code> produces three-column output: file name, symbol type, and symbol name, as determined by <i><a href="/docs/linux/man/1-nm/">nm</a></i>(1). Only dynamically linked executable files and shared libraries are processed, and only dynamic symbols are listed. When processing a directory, an additional column is prepended to the output, which is typically <font SIZE="-1">RPM</font> file basename.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "nvme-smart-log(1)"
 name: "nvme-smart-log"
 section: "1"
@@ -7,14 +6,25 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-smart-log/"
 ---
 
-nvme-smart-log - Send NVMe SMART log page request, returns result and log 
+<h2 class="name">NAME</h2>
+ 
 
-<pre><code>
+ nvme-smart-log - Send NVMe SMART log page request, returns result and log 
+
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <pre><code>
 nvme smart - log&lt;device&gt;[--namespace - id = &lt;nsid&gt; | -n&lt;nsid&gt;]
                         [--raw - binary | -b]
 </code></pre>
 
-Retrieves the NVMe SMART log page from an NVMe device and provides the retuned structure. 
+<h2>DESCRIPTION</h2>
+
+ 
+
+ Retrieves the NVMe SMART log page from an NVMe device and provides the retuned structure. 
 
  The &lt;device&gt; parameter is mandatory and may be either the NVMe character device (ex: /dev/nvme0), or a namespace block device (ex: /dev/nvme0n1). 
 

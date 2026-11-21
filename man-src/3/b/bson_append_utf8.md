@@ -1,5 +1,4 @@
 ---
-
 title: "bson_append_utf8(3)"
 name: "bson_append_utf8"
 section: "3"
@@ -7,9 +6,9 @@ letter: "b"
 url: "/docs/linux/man/3-bson_append_utf8/"
 description: "bson_append_utf8() – The bson_append_utf8() function shall append a UTF-8 encoded string to bson."
 ---
-
 <h2>NAME</h2>
 <p> bson_append_utf8() - The bson_append_utf8() function shall append a UTF-8 encoded string to bson.  </p>
+<h2>SYNOPSIS</h2>
 <pre><code>bool
 bson_append_utf8 (bson_t *bson,
                   const char *key,
@@ -38,6 +37,7 @@ bson_append_utf8 (bson_t *bson,
 <dt><code>length</code></dt>
 <dd> <p> The number of bytes in <code>value</code> excluding the trailing <code>\0</code> , or -1 to determine the length with <code><a href="/docs/linux/man/3-strlen/">strlen</a>(3)</code> \&amp;. </p>
  </dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_append_utf8/">bson_append_utf8</a>(3)</code> function shall append a UTF-8 encoded string to <code>bson</code> \&amp;. </p>
 <p> _value_ <code>MUST</code> be valid UTF-8. </p>
 <p> Some UTF-8 implementations allow for <code>\0</code> to be contained within the string (excluding the termination <code>\0</code> \&amp;. This is allowed, but remember that it could cause issues with communicating with external systems that do not support it. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_dnssec_rrsets(3)"
 name: "ldns_dnssec_rrsets"
 section: "3"
@@ -10,10 +9,12 @@ description: "ldns_dnssec_zone, ldns_dnssec_name, ldns_dnssec_rrs, ldns_dnssec_r
 
 <h2>NAME</h2>
 <p> ldns_dnssec_zone, ldns_dnssec_name, ldns_dnssec_rrs, ldns_dnssec_rrsets </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p>&nbsp;<wbr>ldns_dnssec_zone(); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_dnssec_zone</i>()</dt></dl>
 <dl>

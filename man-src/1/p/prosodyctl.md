@@ -1,5 +1,4 @@
 ---
-
 title: "prosodyctl(1)"
 name: "prosodyctl"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-prosodyctl/"
 description: "prosodyctl – Manage a Prosody XMPP server"
 ---
 
+<h2 class="name">NAME</h2>
+<p> prosodyctl &#8211; Manage a Prosody XMPP server</p>
+<h2>SYNOPSIS</h2>
 <p> <code>prosodyctl</code> <i>command</i> [<i>&#8211;help</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>prosodyctl</code> is the control tool for the Prosody XMPP server. It may be used to control the server daemon and manage users. </p>
 <p> <code>prosodyctl</code> needs to be executed with sufficient privileges to perform its commands. This typically means executing <code>prosodyctl</code> as the root user. If a user named &quot;prosody&quot; is found then <code>prosodyctl</code> will change to that user before executing its commands. </p>
 <h2>COMMANDS</h2>

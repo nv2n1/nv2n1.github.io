@@ -1,5 +1,4 @@
 ---
-
 title: "innotop(1)"
 name: "innotop"
 section: "1"
@@ -7,9 +6,14 @@ letter: "i"
 url: "/docs/linux/man/1-innotop/"
 ---
 
-innotop - MySQL and InnoDB transaction/status monitor. 
+<h2 class="name">NAME</h2>
+ 
 
-To monitor servers normally: 
+ innotop - MySQL and InnoDB transaction/status monitor. 
+
+<h2>SYNOPSIS</h2>
+
+ To monitor servers normally: 
 
  <pre>
  innotop
@@ -33,7 +37,9 @@ To monitor servers normally:
  innotop -u &lt;username&gt; -p &lt;password&gt; -h &lt;hostname&gt;
 </pre>
 
-innotop monitors MySQL servers. Each of its modes shows you a different aspect of what's happening in the server. For example, there's a mode for monitoring replication, one for queries, and one for transactions. innotop refreshes its data periodically, so you see an updating view. 
+<h2>DESCRIPTION</h2>
+
+ innotop monitors MySQL servers. Each of its modes shows you a different aspect of what's happening in the server. For example, there's a mode for monitoring replication, one for queries, and one for transactions. innotop refreshes its data periodically, so you see an updating view. 
 
  innotop has lots of features for power users, but you can start and run it with virtually no configuration. If you're just getting started, see ``QUICK-START''. Press '?' at any time while running innotop for context-sensitive help.
 

@@ -1,5 +1,4 @@
 ---
-
 title: "byobu-layout(1)"
 name: "byobu-layout"
 section: "1"
@@ -12,6 +11,7 @@ description: "byobu-layout – Save and restore byobu-tmux laouts"
 <p> byobu-layout &#8211; Save and restore byobu-tmux laouts </p>
 <h2>USAGE</h2>
 <p> byobu-layout [save|restore] [name] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>byobu-layout</code> will save and restore <code><a href="/docs/linux/man/1-byobu-tmux/">byobu-tmux</a></code>(1) split window layouts. </p>
 <p> If &#8216;name&#8217; is blank, it operates interactively. </p>
 <p> Note that this only works with Byobu when backed by <code><a href="/docs/linux/man/1-tmux/">tmux</a></code>(1), and not <code><a href="/docs/linux/man/1-screen/">screen</a></code>(1). </p>

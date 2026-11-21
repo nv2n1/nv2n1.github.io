@@ -1,5 +1,4 @@
 ---
-
 title: "r2e(1)"
 name: "r2e"
 section: "1"
@@ -10,7 +9,9 @@ description: "r2e – receive RSS feeds by email"
 
 <h2>NAME</h2>
 <p> r2e &#8211; receive RSS feeds by email</p>
+<h2>SYNOPSIS</h2>
 <p> <code>r2e action [options]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>r2e</code> is a simple program which you can run in your crontab. It watches RSS feeds and sends you a nicely formatted email message for each new item. </p>
 <p> The program is configured by ~/.rss2email/config.py </p>
 <p> For a quick start with r2e, try these steps: </p>

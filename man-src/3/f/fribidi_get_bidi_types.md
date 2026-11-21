@@ -1,5 +1,4 @@
 ---
-
 title: "fribidi_get_bidi_types(3)"
 name: "fribidi_get_bidi_types"
 section: "3"
@@ -7,9 +6,14 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_get_bidi_types/"
 ---
 
-fribidi_get_bidi_types - get bidi types for an string of characters 
+<h2 class="name">NAME</h2>
+ 
 
-<b> #include &lt;fribidi.h&gt; 
+ fribidi_get_bidi_types - get bidi types for an string of characters 
+
+<h2>SYNOPSIS</h2>
+
+ <b> #include &lt;fribidi.h&gt; 
 
  extern void fribidi_get_bidi_types 
  ( 
@@ -32,7 +36,9 @@ fribidi_get_bidi_types - get bidi types for an string of characters
 </dt><dd> Output bidi types. 
  Since there are 23 possible values for a <b>FriBidiCharType</b>, they are not all listed here.</dd></dl>
 
-This function finds the bidi types of an string of characters. See fribidi_get_bidi_type() for more information about the bidi types returned by this function.
+<h2>DESCRIPTION</h2>
+
+ This function finds the bidi types of an string of characters. See fribidi_get_bidi_type() for more information about the bidi types returned by this function.
 
 <h2>SEE ALSO</h2>
 

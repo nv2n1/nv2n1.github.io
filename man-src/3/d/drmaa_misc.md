@@ -1,5 +1,4 @@
 ---
-
 title: "drmaa_misc(3)"
 name: "drmaa_misc"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-drmaa_misc/"
 description: "drmaa_strerror, drmaa_get_contact, drmaa_version, drmaa_get_DRM_system – Miscellaneous DRMAA functions."
 ---
 
+<h2 class="name">NAME</h2>
+<p> drmaa_strerror, drmaa_get_contact, drmaa_version, drmaa_get_DRM_system &#8211; Miscellaneous DRMAA functions.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include drmaa.h</code> </p>
 <pre><code>
 const char *drmaa_strerror(
@@ -40,6 +42,7 @@ char *error_diagnosis,
 size_t&amp;nbsp;error_diag_len
 </code></pre>
 <p> <code>);</code> </p>
+<h2>DESCRIPTION</h2>
 <p> The drmaa_strerror() function returns a message text associated with the DRMAA error number, <i>drmaa_errno</i>. For invalid DRMAA error codes `NULL&#8217; is returned.</p>
 <h3>drmaa_get_contact()</h3>
 <p> The drmaa_get_contact() returns an opaque string containing contact information related to the current DRMAA session to be used with the function. The opaque string contains the information required by drmaa_init() to reconnect to the current session instead of creating a new session. function. </p>

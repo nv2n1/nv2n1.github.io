@@ -1,5 +1,4 @@
 ---
-
 title: "slrnpull(1)"
 name: "slrnpull"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-slrnpull/"
 description: "slrnpull – Pull a small newsfeed for offline reading."
 ---
 
+<h2 class="name">NAME</h2>
+<p> slrnpull &#8211; Pull a small newsfeed for offline reading. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>slrnpull</code> [-d&nbsp;<wbr><i>spooldir</i>] [-h&nbsp;<wbr><i>server</i>] [&#8211;debug&nbsp;<wbr><i>file</i>] [&#8211;expire] [&#8211;fetch-score <i>n</i>] [&#8211;help] [&#8211;kill-log&nbsp;<wbr><i>file</i>] [&#8211;kill-score <i>n</i>] [&#8211;logfile&nbsp;<wbr><i>file</i>] [&#8211;marked-bodies] [&#8211;new-groups] [&#8211;no-post] [&#8211;post] [&#8211;post-only] [&#8211;rebuild] [&#8211;version] </p>
+<h2>DESCRIPTION</h2>
 <p> <i>slrnpull</i> pulls a small newsfeed from an NNTP server. It puts the articles into a spool directory from which <i>slrn</i> can later read them, even if the server is unreachable at that time. Typically, this is useful if you do not have a permanent network connection.</p>
 <h2>OPTIONS</h2>
 <p> The following options can be used when calling <i>slrnpull</i> from the command line.</p>

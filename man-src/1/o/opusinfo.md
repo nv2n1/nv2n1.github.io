@@ -1,5 +1,4 @@
 ---
-
 title: "opusinfo(1)"
 name: "opusinfo"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-opusinfo/"
 description: "opusinfo – gives information about Opus files and does extensive validity checking"
 ---
 
+<h2 class="name">NAME</h2>
+<p> opusinfo &#8211; gives information about Opus files and does extensive validity checking</p>
+<h2>SYNOPSIS</h2>
 <p> <code>opusinfo</code> [ <code>-q</code> | <code>-v</code> ] [ <code>-h</code> ] [ <code>-V</code> ] <i>file1.opus</i> <code>&#8230;</code> <i>fileN.opus</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>opusinfo</code> reads one or more Opus files and prints information about stream contents (including chained and/or multiplexed streams) to standard output. It will detect (but not correct) a wide range of common defects, with many additional checks specifically for Opus streams. </p>
 <p> For all stream types <code>opusinfo</code> will print the filename being processed, the stream serial numbers, and various common error conditions. </p>
 <p> For <code>Opus</code> streams, information including the version used for encoding, number of channels and other header information, the bitrate and playback length, the contents of the comment header, and general statistics about the stream are printed. </p>

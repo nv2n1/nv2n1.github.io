@@ -1,5 +1,4 @@
 ---
-
 title: "dlapmr(3)"
 name: "dlapmr"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlapmr/"
 description: "dlapmr.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlapmr.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlapmr</code> (FORWRD, M, N, X, LDX, K)<br />
  <i></i><code>DLAPMR</code> rearranges rows of a matrix as specified by a permutation vector.</p>

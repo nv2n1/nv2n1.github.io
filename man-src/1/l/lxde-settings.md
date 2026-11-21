@@ -1,5 +1,4 @@
 ---
-
 title: "lxde-settings(1)"
 name: "lxde-settings"
 section: "1"
@@ -10,7 +9,9 @@ description: "lxde-settings — lightweight XSettings daemon for LXDE"
 
 <h2>NAME</h2>
 <p> lxde-settings &#8212; lightweight XSettings daemon for LXDE</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lxde-settings</code></p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>lxde-settings</code> command. </p>
 <p> <code>lxde-settings</code> is a program that provides XSettings daemon. The daemon handles the session settings for applications. <code>lxde-settings</code> is part of the LXDE project.<br />
 &nbsp;<wbr></p>

@@ -1,5 +1,4 @@
 ---
-
 title: "printerbanner(1)"
 name: "printerbanner"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-printerbanner/"
 description: "printerbanner – print large banner on printer"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>printerbanner</code> &#8211; print large banner on printer </p>
+<h2>SYNOPSIS</h2>
 <p> [-<code>d</code> ] [-<code>t</code> ] [-<code>w </code><i>width</i> ] <i>message &#8230;</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>Banner</code> prints a large, high quality banner on the standard output. If the message is omitted, it prompts for and reads one line of its standard input. </p>
 <p> The output should be printed on paper of the appropriate width, with no breaks between the pages. </p>
 <p> The following options are available:</p>

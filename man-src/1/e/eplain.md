@@ -1,5 +1,4 @@
 ---
-
 title: "eplain(1)"
 name: "eplain"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-eplain/"
 description: "eplain – expanded plain TeX"
 ---
 
+<h2 class="name">NAME</h2>
+<p> eplain &#8211; expanded plain TeX </p>
+<h2>SYNOPSIS</h2>
 <p> <code>eplain</code> [ first-line ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>eplain</code> is an extension of plain TeX originally described in the book <i>TeX for nroff for the Impatient</i>. It adds these features (among others) to plain TeX:</p>
 <dl>
 <dt>&bull;</dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_crq_get_attribute_info(3)"
 name: "gnutls_x509_crq_get_attribute_info"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_crq_get_attribute_info – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crq_get_attribute_info &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crq_get_attribute_info(gnutls_x509_crq_t </code><i>crq</i><code>, int </code><i>indx</i><code>, void * </code><i>oid</i><code>, size_t * </code><i>sizeof_oid</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,6 +22,7 @@ description: "gnutls_x509_crq_get_attribute_info – API function"
 <dd> a pointer to a structure to hold the OID</dd>
 <dt>size_t * sizeof_oid</dt>
 <dd> initially holds the maximum size of <i>oid</i> , on return holds actual size of <i>oid</i> .</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will return the requested attribute OID in the certificate, and the critical flag for it. The attribute OID will be stored as a string in the provided buffer. Use <code>gnutls_x509_crq_get_attribute_data()</code> to extract the data. </p>
 <p> If the buffer provided is not long enough to hold the output, then * <i>sizeof_oid</i> is updated and <code>GNUTLS_E_SHORT_MEMORY_BUFFER</code> will be returned.</p>
 <h2>RETURNS</h2>

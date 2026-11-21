@@ -1,5 +1,4 @@
 ---
-
 title: "initgroups(3)"
 name: "initgroups"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-initgroups/"
 description: "initgroups – initialize the supplementary group access list"
 ---
 
+<h2 class="name">NAME</h2>
+<p> initgroups &#8211; initialize the supplementary group access list </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;grp.h&gt;
 #include &lt;sys/types.h&gt;
@@ -19,6 +21,7 @@ int initgroups(const char *user, gid_t group);
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>initgroups</code>() function initializes the group access list by reading the group database <i>/etc/group</i> and using all groups of which <i>user</i> is a member. The additional group <i>group</i> is also added to the list. </p>
 <p> The <i>user</i> argument must be non-NULL.</p>
 <h2>RETURN VALUE</h2>

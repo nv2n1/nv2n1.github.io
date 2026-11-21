@@ -1,5 +1,4 @@
 ---
-
 title: "tracker3-endpoint(1)"
 name: "tracker3-endpoint"
 section: "1"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/1-tracker3-endpoint/"
 description: "tracker3-endpoint – Create a SPARQL endpoint"
 ---
 
+<h2 class="name">NAME</h2>
+<p> tracker3-endpoint &#8211; Create a SPARQL endpoint </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 tracker3 endpoint[--dbus - service | -b]&lt;service_name&gt;[--database - path | -d]&lt;database_path&gt;[[--ontology | -o]&lt;ontology_name&gt; |
                                                                                               [--ontology - path | -p]&lt;ontology_path&gt;]
                                                                                              [--http - port]&lt;port&gt;[--loopback]
                                                                                                                   [[--system | --session]]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> This command allows creating SPARQL endpoints. The endpoint will be able to handle SPARQL select and update queries, and notify about changes in it. </p>
 <p> The endpoint is exported via DBus, accessible through the given <i>service_name</i>, either using it in a <code>SERVICE</code> clause, or by creating a dedicated bus-based SPARQL connection. </p>
 <p> When creating a database, the <i>ontology_name</i> (or alternatively, a <i>ontology_path</i>) must be provided in order to generate the database. If <i>ontology_name</i> is used, the ontology must exist in <i>$datadir/tracker/ontologies</i> </p>

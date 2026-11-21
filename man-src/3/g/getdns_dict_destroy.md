@@ -1,5 +1,4 @@
 ---
-
 title: "getdns_dict_destroy(3)"
 name: "getdns_dict_destroy"
 section: "3"
@@ -8,9 +7,11 @@ url: "/docs/linux/man/3-getdns_dict_destroy/"
 description: "getdns_dict, getdns_dict_create, getdns_dict_create_with_extended_memory_functions, getdns_dict_create_with_memory_functions, getdns_dict_destroy — getdns dict create and destroy routines"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>getdns_dict, </code> <code>getdns_dict_create, </code> <code>getdns_dict_create_with_extended_memory_functions, </code> <code>getdns_dict_create_with_memory_functions, </code> <code>getdns_dict_destroy </code> &#8212; getdns dict create and destroy routines</p>
 <h2>LIBRARY</h2>
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;getdns.h&gt; </p>
 <p> getdns_dict *<br />
  <code>getdns_dict_create</code> () </p>
@@ -31,6 +32,7 @@ description: "getdns_dict, getdns_dict_create, getdns_dict_create_with_extended_
  void (*free)(void *buf)</dd></dl>
 <p> void<br />
  <code>getdns_dict_destroy</code> (getdns_dict *this_dict) </p>
+<h2>DESCRIPTION</h2>
 <p> The getdns_dict type is used to manage name/value pairs in which the names are strings and the data types of the values are heterogeneous and include</p>
 <dl>
 <dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "edac-util(1)"
 name: "edac-util"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-edac-util/"
 description: "edac-util – EDAC error reporting utility."
 ---
 
+<h2 class="name">NAME</h2>
+<p> edac-util &#8211; EDAC error reporting utility.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>edac-util </code> [<i>OPTION</i>]&#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>edac-util</code> program reads information from EDAC (Error Detection and Correction) drivers in the kernel, using files exported by these drivers in sysfs. With no options, <code>edac-util</code> will report any uncorrected error (UE) or corrected error (CE) information recorded by EDAC, along with any DIMM label information registered with EDAC. </p>
 <h2>OPTIONS</h2>
 <dl>

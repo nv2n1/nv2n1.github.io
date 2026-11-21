@@ -1,5 +1,4 @@
 ---
-
 title: "tabdelim_to_db(1)"
 name: "tabdelim_to_db"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-tabdelim_to_db/"
 description: "tabdelim_to_db – convert tab-delimited data into fsdb"
 ---
 
+<h2 class="name">NAME</h2>
+<p> tabdelim_to_db &#8211; convert tab-delimited data into fsdb </p>
+<h2>SYNOPSIS</h2>
 <pre>
     tabdelim_to_db &lt;source.tabdelim &gt;target.fsdb
 </pre>
+<h2>DESCRIPTION</h2>
 <p> Converts a tab-delimited data stream to Fsdb format. </p>
 <p> The input is tab-delimited (<i>not</i> fsdb): the first row is taken to be the names of the columns; tabs separate columns. </p>
 <p> The output is a fsdb file with a proper header and a tab field-separator. </p>

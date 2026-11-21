@@ -1,5 +1,4 @@
 ---
-
 title: "docker-system-events(1)"
 name: "docker-system-events"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-system-events/"
 description: "docker-system-events – Get real time events from the server"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-system-events &#8211; Get real time events from the server </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker system events [OPTIONS]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Get event information from the Docker daemon. Information can include historical information and real-time information. </p>
 <p> Docker containers will report the following events: </p>
 <dl>

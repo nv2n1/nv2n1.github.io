@@ -1,5 +1,4 @@
 ---
-
 title: "nwbols(1)"
 name: "nwbols"
 section: "1"
@@ -10,7 +9,9 @@ description: "nwbols – List NetWare Bindery Objects"
 
 <h2>NAME</h2>
 <p> nwbols &#8211; List NetWare Bindery Objects</p>
+<h2>SYNOPSIS</h2>
 <p> <code>nwbols</code> [ <code>-h</code> ] [ <code>-S</code> <i>server</i> ] [ <code>-U</code> <i>user name</i> ] [ <code>-P</code> <i>password</i> | <code>-n</code> ] [ <code>-C</code> ] [ <code>-t</code> <i>type</i> ] [ <code>-o</code> <i>pattern</i> ] [ <code>-v</code> ] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>nwbols</code> lists the specified NetWare Bindery Objects visible for the user. </p>
 <p> <code>nwbols</code> looks up the file <i>$HOME/.nwclient</i> to find a file server, a user name and possibly a password. See <a href="/docs/linux/man/5-nwclient/">nwclient</a>(5) for more information. Please note that the access permissions of $HOME/.nwclient MUST be 600 for security reasons. </p>
 <h2>OPTIONS</h2>

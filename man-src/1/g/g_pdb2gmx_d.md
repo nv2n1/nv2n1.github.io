@@ -1,5 +1,4 @@
 ---
-
 title: "g_pdb2gmx_d(1)"
 name: "g_pdb2gmx_d"
 section: "1"
@@ -11,7 +10,9 @@ description: "pdb2gmx – converts pdb files to topology and coordinate files"
 <h2>NAME</h2>
 <p> pdb2gmx &#8211; converts pdb files to topology and coordinate files </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>pdb2gmx</code> <code>-f</code><i> eiwit.pdb </i> <code>-o</code><i> conf.gro </i> <code>-p</code><i> topol.top </i> <code>-i</code><i> posre.itp </i> <code>-n</code><i> clean.ndx </i> <code>-q</code><i> clean.pdb </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-[no]merge</code><i></i> <code>-ff</code><i> string </i> <code>-water</code><i> enum </i> <code>-[no]inter</code><i></i> <code>-[no]ss</code><i></i> <code>-[no]ter</code><i></i> <code>-[no]lys</code><i></i> <code>-[no]arg</code><i></i> <code>-[no]asp</code><i></i> <code>-[no]glu</code><i></i> <code>-[no]gln</code><i></i> <code>-[no]his</code><i></i> <code>-angle</code><i> real </i> <code>-dist</code><i> real </i> <code>-[no]una</code><i></i> <code>-[no]ignh</code><i></i> <code>-[no]missing</code><i></i> <code>-[no]v</code><i></i> <code>-posrefc</code><i> real </i> <code>-vsite</code><i> enum </i> <code>-[no]heavyh</code><i></i> <code>-[no]deuterate</code><i></i></p>
+<h2>DESCRIPTION</h2>
 <p> This program reads a pdb file, reads some database files, adds hydrogens to the molecules and generates coordinates in Gromacs (Gromos) format and a topology in Gromacs format. These files can subsequently be processed to generate a run input file. </p>
 <p> The force fields in the distribution are currently: </p>
 <p> oplsaa OPLS-AA/L all-atom force field (2001 aminoacid dihedrals) </p>

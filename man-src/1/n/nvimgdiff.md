@@ -1,5 +1,4 @@
 ---
-
 title: "nvimgdiff(1)"
 name: "nvimgdiff"
 section: "1"
@@ -10,6 +9,7 @@ description: "NVIDIA – manual page for NVIDIA Texture Tools – Copyright NVID
 
 <h2>NAME</h2>
 <p> NVIDIA &#8211; manual page for NVIDIA Texture Tools &#8211; Copyright NVIDIA Corporation 2007</p>
+<h2>DESCRIPTION</h2>
 <p> NVIDIA Texture Tools &#8211; Copyright NVIDIA Corporation 2007 </p>
 <p> usage: nvimgdiff [options] original_file updated_file [output]</p>
 <h3>Diff options:</h3>

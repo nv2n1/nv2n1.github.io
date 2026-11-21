@@ -1,5 +1,4 @@
 ---
-
 title: "cdlabelgen(1)"
 name: "cdlabelgen"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-cdlabelgen/"
 description: "cdlabelgen – CD/DVD labels, jewel case inserts, and envelopes creator. Generates frontcards and traycards for CD cases, single-cd envelopes, DVD case inserts, as well as output suitable for direct ..."
 ---
 
+<h2 class="name">NAME</h2>
+<p> cdlabelgen &#8211; CD/DVD labels, jewel case inserts, and envelopes creator. Generates frontcards and traycards for CD cases, single-cd envelopes, DVD case inserts, as well as output suitable for direct printing on CD/DVD. </p>
+<h2>SYNOPSIS</h2>
 <p> cdlabelgen [ <code>-c</code> &lt;category&gt; <code>-s</code> &lt;subcategory&gt; <code>-i</code> &lt;item1%item2%etc&gt; <code>-f</code> &lt;itemsfile&gt; <code>-v</code> &lt;num_items_cover&gt; <code>-e</code> &lt;cover_epsfile&gt; <code>-S</code> &lt;cover_eps_scaleratio&gt;[,&lt;image_x_offset&gt;,&lt;image_y_offset_inches&gt;] <code>-E</code> &lt;tray_epsfile&gt; <code>-T</code> &lt;tray_eps_scaleratio&gt;[,&lt;image_x_offset&gt;,&lt;image_y_offset_inches&gt;] <code>-d</code> &lt;date&gt; <code>-D</code> <code>-o</code> &lt;outputfile&gt; <code>-t</code> &lt;template&gt; <code>-b</code> <code>-C</code> <code>-w</code> <code>-h</code> <code>-m</code> <code>-M</code> <code>-O</code> <code>-p</code> <code>-y</code> &lt;page_offset_inches&gt; <code>-l</code> &lt;line_width_points&gt;] <code>&#8211;create-dvd-inside</code> <code>&#8211;create-dvd-outside</code> <code>&#8211;slim-double-case</code> <code>&#8211;double-case</code> <code>&#8211;create-cdlabel</code> <code>&#8211;rotate-endcaps</code> <code>&#8211;plaque-color</code> &lt;r,g,b&gt; <code>&#8211;category-color</code> &lt;r,g,b&gt; <code>&#8211;subcategory-color</code> &lt;r,g,b&gt; <code>&#8211;text-color</code> &lt;r,g,b&gt; <code>-n</code> &lt;volume/number in set&gt; <code>&#8211;rows-columns</code> &lt;row_count_for_items,column_count_for_items&gt; <code>&#8211;tray-overlay</code> &lt;overlay_epsfile&gt; <code>&#8211;tray-overlay-scaleratio</code> &lt;tray_overlay_image_scaleratio&gt;[,&lt;image_x_offset&gt;,&lt;image_y_offset_inches&gt;]</p>
 <h2>VERSION</h2>
 <dl>
 <dt>Version 4.2.0, April 2012</dt>
 <dd></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> cdlabelgen&#8217;s purpose in life is twofold:</p>
 <dl>
 <dt>&bull;</dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "kermit(1)"
 name: "kermit"
 section: "1"
@@ -8,6 +7,7 @@ url: "/docs/linux/man/1-kermit/"
 description: "kermit – C-Kermit 9.0: transport- and platform-independent interactive and scriptable communications software."
 ---
 
+<h2 class="name">NAME</h2>
 <p> kermit &#8211; <code>C-Kermit 9.0:</code> transport- and platform-independent interactive and scriptable communications software.</p>
 <dl>
 <dt>
@@ -18,6 +18,7 @@ description: "kermit – C-Kermit 9.0: transport- and platform-independent inter
 <dt>
 </dt><dd>
 <p><a rel="nofollow" href="http://www.columbia.edu/kermit/ckututor.html">http://www.columbia.edu/kermit/ckututor.html</a></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> C-Kermit is an all-purpose communications software package from the Kermit Project at Columbia University that: </p>
 <pre><code>
 &amp;bull;
@@ -40,6 +41,7 @@ Is customizable in every aspect of its operation.
 <p> This manual page offers an overview of C-Kermit 9.0 for Unix (&quot;Unix&quot; is an operating system family that includes AIX, DG/UX, FreeBSD, HP-UX, IRIX, Linux, Mac OS X, NetBSD, OpenBSD, Open Server, Open Unix, QNX, Solaris, SunOS, System V R3, System V R4, Tru64 Unix, Unixware, Xenix, and many others). For thorough coverage, please consult the published C-Kermit manual and supplements (see DOCUMENTATION below). For further information about C-Kermit, Kermit software for other platforms, and Kermit manuals, visit the Kermit Project website: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://www.columbia.edu/kermit/">http://www.columbia.edu/kermit/</a> </p>
 <p> This is a longer-than-average manual page, and yet it barely scratches the surface. Don&#8217;t be daunted. C-Kermit is a large and complex package, evolving over decades of practice and experience, but that doesn&#8217;t mean it&#8217;s hard to learn or use. Its most commonly used functions are explained here with pointers to additional information elsewhere.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>kermit [</code> <i>filename</i> <code>] [</code> <i>options</i> <code>] [ {=,&#8211;,+}</code> <i>text</i> <code>] ]</code> </p>
 <p> or: </p>
 <p> <code>kermit </code> <i>URL</i> </p>

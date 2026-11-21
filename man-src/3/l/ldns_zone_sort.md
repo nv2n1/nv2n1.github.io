@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_zone_sort(3)"
 name: "ldns_zone_sort"
 section: "3"
@@ -10,11 +9,13 @@ description: "ldns_zone_sort, ldns_zone_glue_rr_list"
 
 <h2>NAME</h2>
 <p> ldns_zone_sort, ldns_zone_glue_rr_list </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> void ldns_zone_sort(ldns_zone *zone); </p>
 <p> ldns_rr_list* ldns_zone_glue_rr_list(const ldns_zone *z); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_zone_sort</i>()</dt>
 <dd>Sort the rrs in a zone, with the current impl. this is slow .br <code>zone</code>: the zone to sort</dd></dl>

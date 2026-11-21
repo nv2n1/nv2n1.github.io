@@ -1,5 +1,4 @@
 ---
-
 title: "dt(3)"
 name: "dt"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dt/"
 description: "QuantLib::TsiveriotisFernandesLattice – Binomial lattice approximating the Tsiveriotis-Fernandes model."
 ---
 
+<h2 class="name">NAME</h2>
+<p> QuantLib::TsiveriotisFernandesLattice &#8211; Binomial lattice approximating the Tsiveriotis-Fernandes model. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/methods/lattices/tflattice.hpp&gt; </p>
 <p> Inherits <code>BlackScholesLattice&lt; T &gt;</code>. </p>
 <h3>Public Member Functions</h3>

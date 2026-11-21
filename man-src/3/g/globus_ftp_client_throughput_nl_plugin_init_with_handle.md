@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_ftp_client_throughput_nl_plugin_init_with_handle/
 description: "Netlogger Throughput Plugin –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Netlogger Throughput Plugin &#8211; </p>
 <h3>Macros</h3>
 <p> #define <code>GLOBUS_FTP_CLIENT_THROUGHPUT_NL_PLUGIN_MODULE</code> (&amp;globus_i_ftp_client_throughput_nl_plugin_module) </p>
 <h3>Functions</h3>

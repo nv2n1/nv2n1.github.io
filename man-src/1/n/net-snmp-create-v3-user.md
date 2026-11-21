@@ -1,5 +1,4 @@
 ---
-
 title: "net-snmp-create-v3-user(1)"
 name: "net-snmp-create-v3-user"
 section: "1"
@@ -10,7 +9,9 @@ description: "net-snmp-create-v3-user – create a SNMPv3 user in net-snmp confi
 
 <h2>NAME</h2>
 <p> net-snmp-create-v3-user &#8211; create a SNMPv3 user in net-snmp configuration file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>net-snmp-create-v3-user [-ro] [-a authpass] [-x privpass] [-X DES|AES]</code> <code>[username]</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <i>net-snmp-create-v3-user</i> shell script is designed to create a new user in net-snmp configuration file (/var/net-snmp/snmpd.conf by default). </p>
 <h2>OPTIONS</h2>
 <dl>

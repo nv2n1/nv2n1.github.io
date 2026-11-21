@@ -1,5 +1,4 @@
 ---
-
 title: "http(1)"
 name: "http"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-http/"
 description: "httpie – CLI, cURL-like tool for humans"
 ---
 
+<h2 class="name">NAME</h2>
+<p> httpie &#8211; CLI, cURL-like tool for humans </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>http</code></dt>
 <dd> [&#8211;json] [&#8211;form] [&#8211;pretty {all,colors,format,none}] [&#8211;style STYLE] [&#8211;print WHAT] [&#8211;verbose] [&#8211;headers] [&#8211;body] [&#8211;stream] [&#8211;output FILE] [&#8211;download] [&#8211;continue] [&#8211;session SESSION_NAME_OR_PATH | &#8211;session-read-only SESSION_NAME_OR_PATH] [&#8211;auth USER[:PASS]] [&#8211;auth-type {basic,digest}] [&#8211;proxy PROTOCOL:PROXY_URL] [&#8211;follow] [&#8211;verify VERIFY] [&#8211;cert CERT] [&#8211;cert-key CERT_KEY] [&#8211;timeout SECONDS] [&#8211;check-status] [&#8211;ignore-stdin] [&#8211;help] [&#8211;version] [&#8211;traceback] [&#8211;debug]<br />
  [METHOD] <i>URL</i> [REQUEST_ITEM [REQUEST_ITEM &#8230;]] </dd>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> <code>HTTPie</code> is a CLI HTTP utility built out of frustration with existing tools. The goal is to make CLI interaction with HTTP-based services as human-friendly as possible. </p>
 <p> HTTPie does so by providing an http command that allows for issuing arbitrary HTTP requests using a simple and natural syntax and displaying colorized responses. </p>
 <h2>OPTIONS</h2>

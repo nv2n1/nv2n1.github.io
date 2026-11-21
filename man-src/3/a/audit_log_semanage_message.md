@@ -1,5 +1,4 @@
 ---
-
 title: "audit_log_semanage_message(3)"
 name: "audit_log_semanage_message"
 section: "3"
@@ -10,8 +9,10 @@ description: "audit_log_semanage_message – log a semanage message"
 
 <h2>NAME</h2>
 <p> audit_log_semanage_message &#8211; log a semanage message</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libaudit.h&gt;</code> </p>
 <p> <code>int audit_log_semanage_message(int audit_fd, int type,</code> <code>const char *pgname, const char *op, const char *name, unsigned int id,</code> <code>const char *new_seuser, const char *new_role, const char *new_range,</code> <code>const char *old_seuser, const char *old_role, const char *old_range,</code> <code>const char *host, const char *addr, const char *tty, int result)</code> </p>
+<h2>DESCRIPTION</h2>
 <p> This function will log a message to the audit system using a predefined message format. It should be used for all SE linux user and role manipulation operations. The function parameters are as follows: </p>
 <pre><code>
 audit_fd - The fd returned by audit_open

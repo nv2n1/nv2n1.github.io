@@ -1,5 +1,4 @@
 ---
-
 title: "datefudge(1)"
 name: "datefudge"
 section: "1"
@@ -10,7 +9,9 @@ description: "datefudge – pretend the system time is different"
 
 <h2>NAME</h2>
 <p> datefudge &#8211; pretend the system time is different</p>
+<h2>SYNOPSIS</h2>
 <p> <code>datefudge</code> [<i>-s</i>|<i>&#8211;static</i>] <i>at_date program</i> [<i>arguments</i> &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>datefudge</code> is a small utility that pretends that the system time is different by pre-loading a small library which modifies the <code><a href="/docs/linux/man/2-time/">time</a></code>(2), <code><a href="/docs/linux/man/2-gettimeofday/">gettimeofday</a></code>(2) and <code><a href="/docs/linux/man/2-clock_gettime/">clock_gettime</a></code>(2) system calls.</p>
 <h2>DATE FORMAT</h2>
 <p> The <i>at_date</i> argument can be given in any format accepted by the <code><a href="/docs/linux/man/1-date/">date</a></code>(1) program, for example &quot;2007-04-01 12:21&quot; or &quot;yesterday&quot;, or &quot;next Friday&quot;.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_certificate_free_cas(3)"
 name: "gnutls_certificate_free_cas"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_certificate_free_cas – API function"
 
 <h2>NAME</h2>
 <p> gnutls_certificate_free_cas &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_certificate_free_cas(gnutls_certificate_credentials_t </code><i>sc</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_certificate_credentials_t sc</dt>
 <dd> is a <code>gnutls_certificate_credentials_t</code> structure.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will delete all the CAs associated with the given credentials. Servers that do not use <code>gnutls_certificate_verify_peers2()</code> may call this to save some memory.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />

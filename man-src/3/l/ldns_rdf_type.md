@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_rdf_type(3)"
 name: "ldns_rdf_type"
 section: "3"
@@ -10,9 +9,11 @@ description: "ldns_rdf, ldns_rdf_type"
 
 <h2>NAME</h2>
 <p> ldns_rdf, ldns_rdf_type </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_rdf</i></dt>
 <dd>

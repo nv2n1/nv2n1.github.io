@@ -1,5 +1,4 @@
 ---
-
 title: "pmdagluster(1)"
 name: "pmdagluster"
 section: "1"
@@ -10,6 +9,7 @@ description: "pmdagluster – Gluster Filesystem PMDA"
 
 <h2>NAME</h2>
 <p> <code>pmdagluster</code> &#8211; Gluster Filesystem PMDA</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdagluster</code> is a Performance Metrics Domain Agent (PMDA) which exports metric values about mounted gluster filesystems using the <code><a href="/docs/linux/man/8-gluster/">gluster</a></code>(8) command. This PMDA exports metrics about volumes and bricks both local and remote to the node where pmdagluster is running. </p>
 <p> The gluster filesystem supports fine-grained control over enabling statistics on individual volumes, so that the values are optionally enabled or disabled on systems where they are not desired to be monitored. </p>
 <p> The <code><a href="/docs/linux/man/1-pmstore/">pmstore</a></code>(1) command can be used to enable and disable profiling of volumes. Using the individual instances of the gluster.volume.profile metric, one can set their values (and associated profiling) either on (1) or off (0). Additionally, <code><a href="/docs/linux/man/1-pminfo/">pminfo</a></code>(1) can report on the current status of profiling of each volume. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "bson_json_reader_new(3)"
 name: "bson_json_reader_new"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_json_reader_new() – Creates a new bson_json_reader_t that c
 
 <h2>NAME</h2>
 <p> bson_json_reader_new() &#8211; Creates a new bson_json_reader_t that can read from an arbitrary data source in a streaming fashion.</p>
+<h2>SYNOPSIS</h2>
 <pre>
 bson_json_reader_t *
 bson_json_reader_new (void                *data,
@@ -34,6 +34,7 @@ bson_json_reader_new (void                *data,
 <dl>
 <dt><code>buf_size</code></dt>
 <dd> A size_t containing the requested internal buffer size.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Creates a new bson_json_reader_t that can read from an arbitrary data source in a streaming fashion. </p>
 <h2>RETURNS</h2>
 <p> A newly allocated bson_json_reader_t that should be freed with bson_json_reader_destroy(). </p>

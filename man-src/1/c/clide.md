@@ -1,5 +1,4 @@
 ---
-
 title: "clide(1)"
 name: "clide"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-clide/"
 description: "clide – color and style highlighting program for text"
 ---
 
+<h2 class="name">NAME</h2>
+<p> clide &#8211; color and style highlighting program for text </p>
+<h2>SYNOPSIS</h2>
 <p> <code>clide</code> [options] [file1] [file2] [&#8230;fileN] </p>
 <p> <code>| clide</code> [options] (<font SIZE="-1">STDIN</font> through pipe) </p>
 <p> <code>clide</code> [options] (<font SIZE="-1">STDIN.</font> Use Ctrl-D to finish input)</p>
+<h2>DESCRIPTION</h2>
 <p> clide is a program that allows you to colorize and add various display altering attributes to text based on search patterns and expressions. Currently the focus is on creating <font SIZE="-1">ANSI</font> color and style escape codes for use in terminal displays.</p>
 <h2>OPTIONS</h2>
 <pre><code>

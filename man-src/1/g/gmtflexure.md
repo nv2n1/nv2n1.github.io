@@ -1,5 +1,4 @@
 ---
-
 title: "gmtflexure(1)"
 name: "gmtflexure"
 section: "1"
@@ -10,8 +9,10 @@ description: "gmtflexure – Compute flexural deformation of 2-D loads, forces, 
 
 <h2>NAME</h2>
 <p> gmtflexure &#8211; Compute flexural deformation of 2-D loads, forces, bending and moments</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gmtflexure</code> <i>rm</i>/<i>rl</i>[/<i>ri</i>]/<i>rw</i> <code>-E</code><i>Te</i>[<code>u</code>]|<i>D</i>|<i>file</i> [ [<code>l</code>|<code>r</code>][/<i>args</i>] ] [ <code>p</code><i>Poisson</i> ] [ <code>y</code><i>Young</i> ] [ <i>force</i> ] [ <i>args</i>] [ ] [ <i>wfile</i>] [ [<i>level</i>] ] [ <i>wd</i>] [ <i>zm</i>] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>gmtflexure</code> computes the flexural response to 2-D loads using a range of user-selectable options, such as boundary conditions, pre-existing deformations, variable rigidity and restoring force, and more. The solutions are obtained using finite difference approximations to the differential equations.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

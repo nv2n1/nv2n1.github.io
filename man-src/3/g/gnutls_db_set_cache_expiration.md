@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_db_set_cache_expiration(3)"
 name: "gnutls_db_set_cache_expiration"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_db_set_cache_expiration – API function"
 
 <h2>NAME</h2>
 <p> gnutls_db_set_cache_expiration &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_db_set_cache_expiration(gnutls_session_t </code><i>session</i><code>, int </code><i>seconds</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_db_set_cache_expiration – API function"
 <dd> is a <code>gnutls_session_t</code> structure.</dd>
 <dt>int seconds</dt>
 <dd> is the number of seconds.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Set the expiration time for resumed sessions. The default is 3600 (one hour) at the time of this writing.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />

@@ -1,5 +1,4 @@
 ---
-
 title: "texexec(1)"
 name: "texexec"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-texexec/"
 description: "texexec – TeXExec"
 ---
 
+<h2 class="name">NAME</h2>
+<p>&nbsp;texexec &#8211; TeXExec </p>
+<h2>SYNOPSIS</h2>
 <p> <code>texexec [</code> <i>OPTIONS &#8230;</i> <code>] [</code> <i>FILENAMES</i> <code>]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>TeXExec</code></p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "gcloseall(1)"
 name: "gcloseall"
 section: "1"
@@ -10,7 +9,9 @@ description: "gcloseall – This tool terminates all applications"
 
 <h2>NAME</h2>
 <p> gcloseall &#8211; This tool terminates all applications</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gcloseall</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>gcloseall</code> terminates all applications. It does this by not asking any questions. It just terminates all applications. You have been warned!</p>
 <h2>OPTIONS</h2>
 <h2>BUGS</h2>

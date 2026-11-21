@@ -1,5 +1,4 @@
 ---
-
 title: "ipa-adddelegation(1)"
 name: "ipa-adddelegation"
 section: "1"
@@ -10,7 +9,9 @@ description: "ipa-adddelegation – Add a delegation"
 
 <h2>NAME</h2>
 <p> ipa-adddelegation &#8211; Add a delegation </p>
+<h2>SYNOPSIS</h2>
 <p> ipa-adddelegation [<i>OPTION</i>]&#8230; <i>name</i> </p>
+<h2>DESCRIPTION</h2>
 <p> Adds a delegation named <i>name</i>. </p>
 <p> A delegation is used to grant write access to certain attributes from one group to another. </p>
 <p> For example, a secretary group may be granted write access to modify the phone attribute of all users in a manager&#8217;s group.</p>

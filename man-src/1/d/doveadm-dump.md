@@ -1,5 +1,4 @@
 ---
-
 title: "doveadm-dump(1)"
 name: "doveadm-dump"
 section: "1"
@@ -10,7 +9,9 @@ description: "doveadm-dump – Dump the content of Dovecot’s binary mailbox in
 
 <h2>NAME</h2>
 <p> doveadm-dump &#8211; Dump the content of Dovecot&#8217;s binary mailbox index/log</p>
+<h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>dump</code> [<code>-t</code> <i>type</i>] <i>path</i></p>
+<h2>DESCRIPTION</h2>
 <p> Dovecot uses several binary index and log files in order to improve performance for accessing mails. For some mailbox formats, such as sdbox and mdbox, the index files are part of the format itself. For details about index files, see also: <a rel="nofollow" href="http://wiki2.dovecot.org/IndexFiles">http://wiki2.dovecot.org/IndexFiles</a> </p>
 <p> <code>doveadm dump</code> is used to show the contents of those mailbox index/log files, in human readable format. This is mainly useful for Dovecot developers when debugging some problem.</p>
 <h2>OPTIONS</h2>

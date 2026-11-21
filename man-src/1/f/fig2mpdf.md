@@ -1,5 +1,4 @@
 ---
-
 title: "fig2mpdf(1)"
 name: "fig2mpdf"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-fig2mpdf/"
 description: "fig2mpdf – creation of multilayer pdf or eps figures from fig files using latex for typesetting"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fig2mpdf &#8211; creation of multilayer pdf or eps figures from fig files using latex for typesetting </p>
+<h2>SYNOPSIS</h2>
 <p> <code>fig2mpdf</code> [<i>OPTION</i>]&#8230; <i>FILE</i></p>
+<h2>DESCRIPTION</h2>
 <p> This tool can create pdf or eps figures using fig files as source. For beamer presentations, for example, you can use the multilayer mode to create multiple figures that can be overlayed to get a dynamic figure. For proper appearance you can use latex to typeset some or all texts, possibly containing formulas. </p>
 <p> The default interpretation of the given fig <i>FILE</i> depends on its suffix.</p>
 <dl>

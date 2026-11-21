@@ -1,5 +1,4 @@
 ---
-
 title: "gsl-histogram(1)"
 name: "gsl-histogram"
 section: "1"
@@ -12,6 +11,7 @@ description: "gsl-histogram – compute histogram of data on stdin"
 <p> gsl-histogram &#8211; compute histogram of data on stdin</p>
 <h2>SYNOPSYS</h2>
 <p> <code>gsl-histogram xmin xmax [n]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>gsl-histogram </code> is a demonstration program for the GNU Scientific Library. It takes three arguments, specifying the upper and lower bounds of the histogram and the number of bins. It then reads numbers from `stdin&#8217;, one line at a time, and adds them to the histogram. When there is no more data to read it prints out the accumulated histogram using gsl_histogram_fprintf. If n is unspecified then bins of integer width are used.</p>
 <h2>EXAMPLE</h2>
 <p> Here is an example. We generate 10000 random samples from a Cauchy distribution with a width of 30 and histogram them over the range -100 to 100, using 200 bins.<br />

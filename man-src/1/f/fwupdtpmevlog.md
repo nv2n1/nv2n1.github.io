@@ -1,5 +1,4 @@
 ---
-
 title: "fwupdtpmevlog(1)"
 name: "fwupdtpmevlog"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-fwupdtpmevlog/"
 description: "fwupdtpmevlog – Debugging utility for the TPM event log"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fwupdtpmevlog &#8211; Debugging utility for the TPM event log </p>
+<h2>DESCRIPTION</h2>
 <h3>Usage:</h3>
 <dl>
 <dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "zipcloak(1)"
 name: "zipcloak"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-zipcloak/"
 description: "zipcloak – encrypt entries in a zipfile"
 ---
 
+<h2 class="name">NAME</h2>
+<p> zipcloak &#8211; encrypt entries in a zipfile</p>
+<h2>SYNOPSIS</h2>
 <p> <i>zipcloak</i> [<code>-d</code>] [<code>-b path</code>] [<code>-h</code>] [<code>-v</code>] [<code>-L</code>] zipfile </p>
 <h2>ARGUMENTS</h2>
 <p> zipfile Zipfile to encrypt entries in </p>
@@ -42,6 +44,7 @@ description: "zipcloak – encrypt entries in a zipfile"
 </dd><dt><code>&#8211;version</code></dt>
 <dd> Show version information. </dd>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> <i>zipcloak</i> encrypts all unencrypted entries in the zipfile. This is the default action. </p>
 <dl>
 <dt>The -d option is used to decrypt encrypted entries in the zipfile.</dt>

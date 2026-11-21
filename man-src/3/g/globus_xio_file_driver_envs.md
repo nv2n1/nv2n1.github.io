@@ -1,5 +1,4 @@
 ---
-
 title: "globus_xio_file_driver_envs(3)"
 name: "globus_xio_file_driver_envs"
 section: "3"
@@ -7,7 +6,10 @@ letter: "g"
 url: "/docs/linux/man/3-globus_xio_file_driver_envs/"
 ---
 
-Environment Variables - The file driver uses the following environment variables
+<h2 class="name">NAME</h2>
+ 
+
+ Environment Variables - The file driver uses the following environment variables
 <dl>
 <dt>&bull;
 </dt><dd> GLOBUS_XIO_FILE_DEBUG Available if using a debug build. See globus_debug.h for format. The File driver defines the levels TRACE for all function call tracing and INFO for write buffer sizes

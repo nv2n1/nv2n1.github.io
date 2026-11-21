@@ -1,5 +1,4 @@
 ---
-
 title: "isc-config(1)"
 name: "isc-config"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-isc-config/"
 description: "isc-config.sh – Get information about the installed version of ISC BIND"
 ---
 
+<h2 class="name">NAME</h2>
+<p> isc-config.sh &#8211; Get information about the installed version of ISC BIND </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>isc-config.sh</code> [<code>&#8211;cflags</code>] [<code>&#8211;exec-prefix</code>] [<code>&#8211;libs</code>] [<code>&#8211;prefix</code>] [<code>&#8211;version</code>] [libraries&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>isc-config.sh</code></p>
 <dd>prints information related to the installed version of ISC BIND, such as the compiler and linker flags required to compile and link programs that use ISC BIND libraries. </dd>
 <p> The optional libraries are used to report specific details for compiling and linking for the listed libraries. The allowed choices are: <code>isc</code>, <code>isccc</code>, <code>isccfg</code>, <code>dns</code>, <code>lwres</code>, and <code>bind9</code>. Multiple libraries may be listed on the command line. (Some libraries require other libraries, so are implied.)</p>

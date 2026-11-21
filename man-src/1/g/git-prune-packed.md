@@ -1,5 +1,4 @@
 ---
-
 title: "git-prune-packed(1)"
 name: "git-prune-packed"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-prune-packed/"
 description: "git-prune-packed – Remove extra objects that are already in pack files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-prune-packed &#8211; Remove extra objects that are already in pack files </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git prune - packed[-n | --dry - run][-q | --quiet]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> This program searches the <code>$GIT_OBJECT_DIRECTORY</code> for all objects that currently exist in a pack file as well as the independent object directories. </p>
 <p> All such extra objects are removed. </p>
 <p> A pack is a collection of objects, individually compressed, with delta compression applied, stored in a single file, with an associated index file. </p>

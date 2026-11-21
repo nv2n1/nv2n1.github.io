@@ -1,5 +1,4 @@
 ---
-
 title: "msgexec(1)"
 name: "msgexec"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-msgexec/"
 description: "msgexec – process translations of message catalog"
 ---
 
+<h2 class="name">NAME</h2>
+<p> msgexec &#8211; process translations of message catalog </p>
+<h2>SYNOPSIS</h2>
 <p> <code>msgexec</code> [<i>OPTION</i>] <i>COMMAND </i>[<i>COMMAND-OPTION</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Applies a command to all translations of a translation catalog. The COMMAND can be any program that reads a translation from standard input. It is invoked once for each translation. Its output becomes msgexec&#8217;s output. msgexec&#8217;s return code is the maximum return code across all invocations. </p>
 <p> A special builtin command called &#8216;0&#8217; outputs the translation, followed by a null byte. The output of &quot;msgexec 0&quot; is suitable as input for &quot;xargs <code>-0</code>&quot;.</p>
 <h3>Command input:</h3>

@@ -1,5 +1,4 @@
 ---
-
 title: "gshhs_dp(1)"
 name: "gshhs_dp"
 section: "1"
@@ -10,7 +9,9 @@ description: "gshhs_dp – Line reduction using the Douglas-Peucker algorithm"
 
 <h2>NAME</h2>
 <p> gshhs_dp &#8211; Line reduction using the Douglas-Peucker algorithm</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gshhs_dp</code> <i>input.b tolerance output.b</i> [<code>-v</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>gshhs_dp</code> reads the binary coastline (GSHHS) or political boundary or river (WDBII) files and and reduces the complexity of the line by applying the Douglas-Peucker algorithm. It automatically handles byte-swabbing between different architectures.</p>
 <dl>
 <dt><i>input.b</i></dt>

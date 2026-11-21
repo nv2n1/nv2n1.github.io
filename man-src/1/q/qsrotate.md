@@ -1,5 +1,4 @@
 ---
-
 title: "qsrotate(1)"
 name: "qsrotate"
 section: "1"
@@ -7,11 +6,18 @@ letter: "q"
 url: "/docs/linux/man/1-qsrotate/"
 ---
 
-qsrotate - a log rotation tool (similar to Apache's rotatelogs). 
+<h2 class="name">NAME</h2>
+ 
 
-qsrotate -o &lt;file&gt; [-s &lt;sec&gt; [-t &lt;hours&gt;]] [-f] [-z] [-g &lt;num&gt;] [-u &lt;name&gt;] [-p]
+ qsrotate - a log rotation tool (similar to Apache's rotatelogs). 
 
-qsrotate reads from stdin (piped log) and writes the data to the provided file rotating the file after the specified time.
+<h2>SYNOPSIS</h2>
+
+ qsrotate -o &lt;file&gt; [-s &lt;sec&gt; [-t &lt;hours&gt;]] [-f] [-z] [-g &lt;num&gt;] [-u &lt;name&gt;] [-p]
+
+<h2>DESCRIPTION</h2>
+
+ qsrotate reads from stdin (piped log) and writes the data to the provided file rotating the file after the specified time.
 
 <h2>OPTIONS</h2>
 

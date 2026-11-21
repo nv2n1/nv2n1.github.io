@@ -1,5 +1,4 @@
 ---
-
 title: "grid-ca-sign(1)"
 name: "grid-ca-sign"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-grid-ca-sign/"
 description: "grid-ca-sign – Sign a certificate with a SimpleCA for use on a grid"
 ---
 
+<h2 class="name">NAME</h2>
+<p> grid-ca-sign &#8211; Sign a certificate with a SimpleCA for use on a grid </p>
+<h2>SYNOPSIS</h2>
 <p> <code>grid-ca-sign</code> -in <i>REQUEST</i> -out <i>CERTIFICATE</i> [OPTIONS] </p>
 <p> <code>grid-ca-sign</code> [ -help | -h | -usage | -version | -versions ]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>grid-ca-sign</code> program signs a certificate based on a request file with a CA certificate created by <code>grid-ca-create</code>. The new certificate is written to a file. If the CA has already signed a certificate with the same subject name as contained in the certificate request, it will refuse to sign the new request unless the <i>-force</i> option is provided on the command-line. </p>
 <p> If run as a privileged user, <code>grid-ca-sign</code> uses the CA certificate and sign the certificate. For a non-privileged user, <code>grid-ca-sign</code> uses the CA certificate and configuration located in $HOME/.globus/simpleCA. The <code>grid-ca-sign</code> program an use a different CA configuration and certificate by using the <i>-dir</i> option.</p>
 <h2>OPTIONS</h2>

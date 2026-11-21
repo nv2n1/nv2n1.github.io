@@ -1,5 +1,4 @@
 ---
-
 title: "pkgenpack(1)"
 name: "pkgenpack"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pkgenpack/"
 description: "pkgenpack – PackageKit Pack Generator"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pkgenpack &#8211; PackageKit Pack Generator </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pkgenpack</code> [<code>&#8211;help</code>] [<code>&#8211;verbose</code>] [<code>&#8211;with-package-list</code>] [<code>&#8211;output</code>] [<code>&#8211;package</code>] [<code>&#8211;updates</code>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This manual page documents briefly the <code>pkgenpack</code> command. </dd>
 <p> <code>pkgenpack</code> is the command line client for PackageKit for creating service packs.</p>
 <h2>WHAT IS A SERVICE PACK?</h2>

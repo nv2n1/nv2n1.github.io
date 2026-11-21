@@ -1,5 +1,4 @@
 ---
-
 title: "gst-install(1)"
 name: "gst-install"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-gst-install/"
 description: "gst-install – installs missing GStreamer plugins"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gst-install &#8211; installs missing GStreamer plugins </p>
+<h2>SYNOPSIS</h2>
 <p> <code>gst-install</code> [<i>OPTIONS</i>] plugin <code>&#8230;</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>Gst-install</code> makes use of the PackageKit session D-Bus interface to install missing GStreamer plugins, e.g. encoders, decoders or URI handlers. It isn&#8217;t supposed to be executed directly but instead by the <code>gst_install_plugins_async</code> and <code>gst_install_plugins</code> functions of the GStreamer base library <code>gstpbutilsinstallplugins</code>. </p>
 <p> PackageKit or the alternative session-installer implementation will handle the complete installation process with confirmation, progress and error dialogs. </p>
 <p> See the documentation of <code>gstpbutilsinstallplugins</code> for the argument construction and exit states.</p>

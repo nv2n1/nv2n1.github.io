@@ -1,5 +1,4 @@
 ---
-
 title: "lzmore(1)"
 name: "lzmore"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-lzmore/"
 description: "xzmore, lzmore – view xz or lzma compressed (text) files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xzmore, lzmore &#8211; view xz or lzma compressed (text) files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xzmore</code> [<i>file&#8230;</i>]<br />
  <code>lzmore</code> [<i>file&#8230;</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>xzmore</code> is a filter which allows examination of <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1) or <code><a href="/docs/linux/man/1-lzma/">lzma</a></code>(1) compressed text files one screenful at a time on a soft-copy terminal. </p>
 <p> To use a pager other than the default <code>more,</code> set environment variable <code>PAGER</code> to the name of the desired program. The name <code>lzmore</code> is provided for backward compatibility with LZMA Utils.</p>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_key_new_frm_fp(3)"
 name: "ldns_key_new_frm_fp"
 section: "3"
@@ -10,12 +9,14 @@ description: "ldns_key_new_frm_algorithm, ldns_key_new_frm_fp, ldns_key_new_frm_
 
 <h2>NAME</h2>
 <p> ldns_key_new_frm_algorithm, ldns_key_new_frm_fp, ldns_key_new_frm_fp_l </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_key* ldns_key_new_frm_algorithm(ldns_signing_algorithm a, uint16_t size); </p>
 <p> ldns_status ldns_key_new_frm_fp(ldns_key **k, FILE *fp); </p>
 <p> ldns_status ldns_key_new_frm_fp_l(ldns_key **k, FILE *fp, int *line_nr); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_key_new_frm_algorithm</i>()</dt>
 <dd>Creates a new key based on the algorithm </dd>

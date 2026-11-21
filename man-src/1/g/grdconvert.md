@@ -1,5 +1,4 @@
 ---
-
 title: "grdconvert(1)"
 name: "grdconvert"
 section: "1"
@@ -10,8 +9,10 @@ description: "grdconvert – Convert between different grid formats"
 
 <h2>NAME</h2>
 <p> grdconvert &#8211; Convert between different grid formats</p>
+<h2>SYNOPSIS</h2>
 <p> <code>grdconvert</code> <i>ingrdfile</i>[<i>=id</i>[<i>/scale/offset</i>[<i>/NaNvalue</i>]]] <i>outgrdfile</i>[<i>=id</i>[<i>/scale/offset</i>[<i>/NaNvalue</i>]][<i>:driver</i>[<i>/datatype</i>]]] [ ] [ <i>region</i> ] [ [<i>level</i>] ] [ <code>-f</code><i>&lt;flags&gt;</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>grdconvert</code> reads a grid file in one format and writes it out using another format. As an option the user may select a subset of the data to be written and to specify scaling, translation, and NaN-value.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

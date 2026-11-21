@@ -1,5 +1,4 @@
 ---
-
 title: "adjtime(3)"
 name: "adjtime"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-adjtime/"
 description: "adjtime – correct the time to synchronize the system clock"
 ---
 
+<h2 class="name">NAME</h2>
+<p> adjtime &#8211; correct the time to synchronize the system clock </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/time.h&gt;
 int adjtime(const struct timeval *delta, struct timeval *olddelta);
@@ -18,6 +20,7 @@ int adjtime(const struct timeval *delta, struct timeval *olddelta);
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>adjtime</code>() function gradually adjusts the system clock (as returned by <code><a href="/docs/linux/man/2-gettimeofday/">gettimeofday</a></code>(2)). The amount of time by which the clock is to be adjusted is specified in the structure pointed to by <i>delta</i>. This structure has the following form: </p>
 <p> struct timeval {<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;time_t&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;tv_sec;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;seconds&nbsp;*/<br />

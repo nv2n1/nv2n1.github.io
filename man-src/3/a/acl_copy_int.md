@@ -1,5 +1,4 @@
 ---
-
 title: "acl_copy_int(3)"
 name: "acl_copy_int"
 section: "3"
@@ -8,10 +7,13 @@ url: "/docs/linux/man/3-acl_copy_int/"
 description: "acl_copy_int – copy an ACL from external to internal representation"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>acl_copy_int</code> &#8211; copy an ACL from external to internal representation </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>
+<h2>SYNOPSIS</h2>
 <p> In sys/types.h In sys/acl.h Ft acl_t Fn acl_copy_int const void *buf_p</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn acl_copy_int function copies an exportable, contiguous, persistent form of an ACL, pointed to by <i>buf_p</i> to the internal representation. </p>
 <p> This function may cause memory to be allocated. The caller should free any releasable memory, when the new ACL is no longer required, by calling acl_free3 with the <i>(void*)acl_t</i> returned by Fn acl_copy_int as an argument.</p>
 <h2>RETURN VALUE</h2>

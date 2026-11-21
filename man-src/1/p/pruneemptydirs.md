@@ -1,5 +1,4 @@
 ---
-
 title: "pruneemptydirs(1)"
 name: "pruneemptydirs"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pruneemptydirs/"
 description: "pruneemptydirs – Detects stale source directories in a CVS tree"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pruneemptydirs &#8211; Detects stale source directories in a CVS tree </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pruneemptydirs</code> [<code>-f</code>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>pruneemptydirs</code></p>
 <dd>is used to clean up a local CVS tree. It detects directories containing remnants of old stuff which has been removed from the CVS. Such stale directories often break compilation. The current directory and all directories beneath it will be examined. </dd>
 <p> Note that this tool does not remove anything; it simply prints what to do as a series of remove commands. You can copy and paste these commands, or use them with eval in a script. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "iotop(1)"
 name: "iotop"
 section: "1"
@@ -10,7 +9,9 @@ description: "iotop – simple top-like I/O monitor"
 
 <h2>NAME</h2>
 <p> iotop &#8211; simple top-like I/O monitor</p>
+<h2>SYNOPSIS</h2>
 <p> <code>iotop</code> [<i>OPTIONS</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> iotop watches I/O usage information output by the Linux kernel (requires 2.6.20 or later) and displays a table of current I/O usage by processes or threads on the system. At least the CONFIG_TASK_DELAY_ACCT and CONFIG_TASK_IO_ACCOUNTING options need to be enabled in your Linux kernel build configuration, these options depend on CONFIG_TASKSTATS. </p>
 <p> iotop displays columns for the I/O bandwidth read and written by each process/thread during the sampling period. It also displays the percentage of time the thread/process spent while swapping in and while waiting on I/O. For each process, its I/O priority (class/level) is shown. In addition, the total I/O bandwidth read and written during the sampling period is displayed at the top of the interface. </p>
 <p> Use the left and right arrows to change the sorting, r to reverse the sorting order, o to toggle the &#8211;only option, p to toggle the &#8211;processes option, a to toggle the &#8211;accumulated option, q to quit or i to change the priority of a thread or a process&#8217; thread(s). Any other key will force a refresh.</p>

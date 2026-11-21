@@ -1,5 +1,4 @@
 ---
-
 title: "empathy-accounts(1)"
 name: "empathy-accounts"
 section: "1"
@@ -10,7 +9,9 @@ description: "empathy-accounts – Accounts configuration dialog for Empathy ins
 
 <h2>NAME</h2>
 <p> empathy-accounts &#8211; Accounts configuration dialog for Empathy instant messaging client</p>
+<h2>SYNOPSIS</h2>
 <p> empathy-accounts [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Accounts configuration dialog for Empathy instant messaging client </p>
 <p> This utility allows you to configure your instant messaging accounts for Empathy.</p>
 <h2>OPTIONS</h2>

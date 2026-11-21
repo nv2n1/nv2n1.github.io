@@ -1,5 +1,4 @@
 ---
-
 title: "ssprfs(3)"
 name: "ssprfs"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-ssprfs/"
 description: "ssprfs.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ssprfs.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssprfs</code> (UPLO, N, NRHS, AP, AFP, IPIV, B, LDB, X, LDX, FERR, BERR, WORK, IWORK, INFO)<br />
  <i></i><code>SSPRFS</code></p>

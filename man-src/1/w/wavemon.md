@@ -1,5 +1,4 @@
 ---
-
 title: "wavemon(1)"
 name: "wavemon"
 section: "1"
@@ -10,7 +9,9 @@ description: "wavemon – a wireless network monitor"
 
 <h2>NAME</h2>
 <p> wavemon &#8211; a wireless network monitor</p>
+<h2>SYNOPSIS</h2>
 <p> <code>wavemon [-h] [-i</code> <i>ifname</i> <code>] [-l] [-r] [-v]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <i>wavemon</i> is a ncurses-based monitoring application for wireless network devices. It plots levels in real-time as well as showing wireless and network related device information. Currently, wavemon is still based on the wireless extensions by Jean Tourrilhes &lt;jt [at] hpl.hp.com&gt;. </p>
 <p> The <i>wavemon</i> interface splits into different &quot;screens&quot;. Each screen presents information in a specific manner. For example, the &quot;info&quot; screen shows current levels as bargraphs, whereas the &quot;level&quot; screen represents the same levels as a moving histogram. </p>
 <p> On startup, you&#8217;ll see (depending on configuration) one of the different monitor screens. At the bottom, you&#8217;ll find a <i>menu-bar</i> listing the screens and their activating keys. Each screen is activated by either the corresponding function key or the key corresponding to the first character of the screen name. The following screens can be selected:</p>

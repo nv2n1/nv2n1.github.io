@@ -1,5 +1,4 @@
 ---
-
 title: "hwloc-patch(1)"
 name: "hwloc-patch"
 section: "1"
@@ -10,6 +9,7 @@ description: "hwloc-patch – Apply a topology difference to an existing XML top
 
 <h2>NAME</h2>
 <p> hwloc-patch &#8211; Apply a topology difference to an existing XML topology</p>
+<h2>SYNOPSIS</h2>
 <p> <code>hwloc-patch</code> [<i>options</i>] <i>[&lt;topology.xml&gt; | refname]</i> <i>[&lt;diff.xml&gt; | -]</i> <i>&lt;output.xml&gt;</i> </p>
 <p> <code>hwloc-patch</code> [<i>options</i>] <i>[&lt;topology.xml&gt; | refname]</i> <i>[&lt;diff.xml&gt; | -]</i></p>
 <h2>OPTIONS</h2>
@@ -18,6 +18,7 @@ description: "hwloc-patch – Apply a topology difference to an existing XML top
 <dd> Reverse the sense the difference file.</dd>
 <dt><code>&#8211;version</code></dt>
 <dd> Report version and exit.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> hwloc-patch loads the difference between two topologies from a XML file (or from the standard input) and applies it to an existing topology, generating a new, modified one. </p>
 <p> The XML difference may have been computed earlier with hwloc-diff or hwloc-compress-dir. </p>
 <p> If &lt;output.xml&gt; is given, the new, modified topology is stored in that new file. Otherwise, &lt;topology.xml&gt; is modified in place. </p>

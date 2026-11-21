@@ -1,5 +1,4 @@
 ---
-
 title: "euare-oidcprovidercreate(1)"
 name: "euare-oidcprovidercreate"
 section: "1"
@@ -10,10 +9,12 @@ description: "euare-oidcprovidercreate – Create a new OpenID Connect provider"
 
 <h2>NAME</h2>
 <p> euare-oidcprovidercreate &#8211; Create a new OpenID Connect provider</p>
+<h2>SYNOPSIS</h2>
 <p> euare-oidcprovidercreate [-c CLIENT] [-t HEX] [&#8211;as-account ACCOUNT]</p>
 <dl>
 <dt>[-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID]</dt>
 <dd> [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] URL</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Create a new OpenID Connect provider</p>
 <h3>positional arguments:</h3>
 <dl>

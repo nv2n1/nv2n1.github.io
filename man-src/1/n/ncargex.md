@@ -1,5 +1,4 @@
 ---
-
 title: "ncargex(1)"
 name: "ncargex"
 section: "1"
@@ -10,6 +9,7 @@ description: "ncargex – NCAR Graphics Fortran and C Low-Level Utility Examples
 
 <h2>NAME</h2>
 <p> ncargex &#8211; NCAR Graphics Fortran and C Low-Level Utility Examples</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 ncargex[-A][-E][-F][-P][-T]
        [-U][-C][-Fortran][-class][-ps]
@@ -27,6 +27,7 @@ ncargex[-A][-E][-F][-P][-T]
        [-vaspackt][-vectors][-wmap][-misc]
        [-clean][-n][-ncarbd][-noX11][-onebyone] example_name...
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <i>ncargex</i> provides the user with access to over 300 complete example NCAR Graphics Fortran and C source codes, including the examples in the NCAR Graphics Tutorial. <i>ncargex</i> copies the source code for the specified example(s) into the current directory and then compiles, links, and executes the example. Depending on the type of workstation specified on the command line, the output may either be an NCGM (NCAR Graphics Metafile) file, one of many types of PostScript files, or a text dump. It is also possible for no output to be produced if you select the &quot;x11&quot; workstation, in which case each frame is displayed directly to a separate X window after it is generated. If no workstation is specified on the command line, then it defaults to an &quot;NCGM&quot;, unless the example is a special one which is discussed below. </p>
 <p> If you select one of the workstation types that produces an output file, then the file name will have the same name as the example and ending with an appropriate suffix: &quot;.ncgm&quot;, &quot;.txt&quot;, &quot;.ps&quot;, etc. </p>
 <p> Certain examples were created to demonstrate a particular function, like how to rename your metafile from within the program, how to use the full page when going to PostScript output, how to use the X11 driver and produce a graphic file at the same time, etc. If the example that you ask for is one of these, a message will be printed to this effect to alert you. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ioctl_ficlone(2)"
 name: "ioctl_ficlone"
 section: "2"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/2-ioctl_ficlone/"
 description: "ioctl_ficlonerange, ioctl_ficlone – share some the data of one file with another file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ioctl_ficlonerange, ioctl_ficlone &#8211; share some the data of one file with another file </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/ioctl.h&gt;</code><br />
  <code>#include &lt;linux/fs.h&gt;</code> </p>
 <p> <code>int ioctl(int </code><i>dest_fd</i><code>, FICLONERANGE, struct file_clone_range *</code><i>arg</i><code>);</code><br />
  <code>int ioctl(int </code><i>dest_fd</i><code>, FICLONE, int </code><i>src_fd</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> If a filesystem supports files sharing physical storage between multiple files (&quot;reflink&quot;), this <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) operation can be used to make some of the data in the <i>src_fd</i> file appear in the <i>dest_fd</i> file by sharing the underlying storage, which is faster than making a separate physical copy of the data. Both files must reside within the same filesystem. If a file write should occur to a shared region, the filesystem must ensure that the changes remain private to the file being written. This behavior is commonly referred to as &quot;copy on write&quot;. </p>
 <p> This ioctl reflinks up to <i>src_length</i> bytes from file descriptor <i>src_fd</i> at offset <i>src_offset</i> into the file <i>dest_fd</i> at offset <i>dest_offset</i>, provided that both are files. If <i>src_length</i> is zero, the ioctl reflinks to the end of the source file. This information is conveyed in a structure of the following form: </p>
 <p> struct file_clone_range {<br />

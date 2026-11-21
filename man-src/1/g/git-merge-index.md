@@ -1,5 +1,4 @@
 ---
-
 title: "git-merge-index(1)"
 name: "git-merge-index"
 section: "1"
@@ -7,13 +6,24 @@ letter: "g"
 url: "/docs/linux/man/1-git-merge-index/"
 ---
 
-git-merge-index - Run a merge for files needing merging 
+<h2 class="name">NAME</h2>
+ 
 
-<pre><code>
+ git-merge-index - Run a merge for files needing merging 
+
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <pre><code>
 git merge - index[-o][-q]&lt;merge - program&gt;(-a | [--]&lt;file&gt; *)
 </code></pre> 
 
-This looks up the &lt;file&gt;(s) in the index and, if there are any merge entries, passes the SHA-1 hash for those files as arguments 1, 2, 3 (empty argument if no file), and &lt;file&gt; as argument 4. File modes for the three files are passed as arguments 5, 6 and 7.
+<h2>DESCRIPTION</h2>
+
+ 
+
+ This looks up the &lt;file&gt;(s) in the index and, if there are any merge entries, passes the SHA-1 hash for those files as arguments 1, 2, 3 (empty argument if no file), and &lt;file&gt; as argument 4. File modes for the three files are passed as arguments 5, 6 and 7.
 
 <h2>OPTIONS</h2>
 

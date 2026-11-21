@@ -1,5 +1,4 @@
 ---
-
 title: "getgid32(2)"
 name: "getgid32"
 section: "2"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/2-getgid32/"
 description: "getgid, getegid – get group identity"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getgid, getegid &#8211; get group identity </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code><br />
  <code>#include &lt;sys/types.h&gt;</code> </p>
 <p> <code>gid_t getgid(void);</code><br />
  <code>gid_t getegid(void);</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>getgid</code>() returns the real group ID of the calling process. </p>
 <p> <code>getegid</code>() returns the effective group ID of the calling process.</p>
 <h2>ERRORS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "pg_dump(1)"
 name: "pg_dump"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pg_dump/"
 description: "pg_dump – extract a PostgreSQL database into a script file or other archive file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pg_dump &#8211; extract a PostgreSQL database into a script file or other archive file </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pg_dump</code> [<i>connection-option</i>&#8230;] [<i>option</i>&#8230;] [<i>dbname</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>pg_dump is a utility for backing up a PostgreSQL database. It makes consistent backups even if the database is being used concurrently. pg_dump does not block other users accessing the database (readers or writers). </dd>
 <p> Dumps can be output in script or archive file formats. Script dumps are plain-text files containing the SQL commands required to reconstruct the database to the state it was in at the time it was saved. To restore from such a script, feed it to <code><a href="/docs/linux/man/1-psql/">psql</a></code>(1). Script files can be used to reconstruct the database even on other machines and other architectures; with some modifications, even on other SQL database products. </p>
 <p> The alternative archive file formats must be used with <code><a href="/docs/linux/man/1-pg_restore/">pg_restore</a></code>(1) to rebuild the database. They allow pg_restore to be selective about what is restored, or even to reorder the items prior to being restored. The archive file formats are designed to be portable across architectures. </p>

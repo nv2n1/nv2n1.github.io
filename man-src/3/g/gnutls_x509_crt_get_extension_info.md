@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_crt_get_extension_info(3)"
 name: "gnutls_x509_crt_get_extension_info"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_crt_get_extension_info – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_get_extension_info &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_get_extension_info(gnutls_x509_crt_t </code><i>cert</i><code>, int </code><i>indx</i><code>, void * </code><i>oid</i><code>, size_t * </code><i>oid_size</i><code>, unsigned int * </code><i>critical</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,6 +24,7 @@ description: "gnutls_x509_crt_get_extension_info – API function"
 <dd> initially holds the maximum size of <i>oid</i> , on return holds actual size of <i>oid</i> .</dd>
 <dt>unsigned int * critical</dt>
 <dd> output variable with critical flag, may be NULL.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will return the requested extension OID in the certificate, and the critical flag for it. The extension OID will be stored as a string in the provided buffer. Use <code>gnutls_x509_crt_get_extension()</code> to extract the data. </p>
 <p> If the buffer provided is not long enough to hold the output, then<br />
 &nbsp;<wbr><i>oid_size</i>&nbsp;<wbr>is updated and&nbsp;<wbr><code>GNUTLS_E_SHORT_MEMORY_BUFFER</code>&nbsp;<wbr>will be returned. The <i>oid</i> returned will be null terminated, although<br />

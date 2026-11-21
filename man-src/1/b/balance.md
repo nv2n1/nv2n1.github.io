@@ -1,5 +1,4 @@
 ---
-
 title: "balance(1)"
 name: "balance"
 section: "1"
@@ -10,9 +9,11 @@ description: "balance 3.42 – A simple TCP proxy with load balancing and failov
 
 <h2>NAME</h2>
 <p> balance 3.42 &#8211; A simple TCP proxy with load balancing and failover mechanisms.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>balance </code> [ <code>-b addr</code> ] [ <code>-B addr</code> ] [ <code>-t sec</code> ] [ <code>-T sec</code> ] [ <code>-adfpHM</code> ] port host1[:port1[:maxc]] [!|%] [ &#8230; hostn[:portn[:maxc]]] </p>
 <p> <code>balance</code> [ <code>-b addr </code> ] <code>-i</code> [ <code>-d</code> ] [ <code>-M</code> ] port </p>
 <p> <code>balance</code> [ <code>-b addr</code> ] <code>-c cmd</code> [ <code>-d</code> ] [ <code>-M</code> ] port</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Balance</i> is a simple, generic &quot;userland&quot; TCP proxy, which allows simple round-robin load balancing and graceful failover between several destination servers. </p>
 <p> <i>Balance </i> supports IPv6 on the listening side which makes it a very useful tool for IPv6 migration of IPv4 only services and servers. </p>
 <p> <i>Balance </i> is available at <a rel="nofollow" href="http://balance.sourceforge.net.">http://balance.sourceforge.net.</a> </p>

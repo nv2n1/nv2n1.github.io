@@ -1,5 +1,4 @@
 ---
-
 title: "smbtar(1)"
 name: "smbtar"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-smbtar/"
 description: "smbtar – shell script for backing up SMB/CIFS shares directly to UNIX tape drives"
 ---
 
+<h2 class="name">NAME</h2>
+<p> smbtar &#8211; shell script for backing up SMB/CIFS shares directly to UNIX tape drives </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt>
 </dt><dd>smbtar [-r] [-i] [-a] [-v] {-s server} [-p password] [-x services] [-X] [-N filename] [-b blocksize] [-d directory] [-l loglevel] [-u user] [-t tape] {filenames}</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This tool is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> smbtar is a very small shell script on top of <code><a href="/docs/linux/man/1-smbclient/">smbclient</a></code>(1) which dumps SMB shares directly to tape.</p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "pointer-capture-applet(1)"
 name: "pointer-capture-applet"
 section: "1"
@@ -10,7 +9,9 @@ description: "pointer-capture-applet – Creates an area on the panel to capture
 
 <h2>NAME</h2>
 <p> pointer-capture-applet &#8211; Creates an area on the panel to capture the pointer</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pointer-capture-applet</code></p>
+<h2>DESCRIPTION</h2>
 <p> The Pointer Capture applet is part of the mousetweaks package. It creates an area on the panel which can capture the pointer until the user releases it with a predefined button and modifier key combination.</p>
 <h2>BUGS</h2>
 <p> Report bugs to &lt;<a rel="nofollow" href="http://bugzilla.gnome.org/">http://bugzilla.gnome.org/</a>&gt;</p>

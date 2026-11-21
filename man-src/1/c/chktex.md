@@ -1,5 +1,4 @@
 ---
-
 title: "chktex(1)"
 name: "chktex"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-chktex/"
 description: "chktex – finds typographic errors in LaTeX."
 ---
 
+<h2 class="name">NAME</h2>
+<p> chktex &#8211; finds typographic errors in LaTeX. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>chktex</code> <i>[-hiqrW] [-v[0-&#8230;]] [-l &lt;rcfile&gt;] [-[wemn] &lt;[1-42]|all&gt;]</i> <i>[-d[0-&#8230;]] [-p &lt;name&gt;] [-o &lt;outfile&gt;] [-[btxgI][0|1]]</i> <code>file1 file2 &#8230;</code></p>
+<h2>DESCRIPTION</h2>
 <p> <i>chktex</i> finds typographic errors in <i>LaTeX</i></p>
 <h2>OPTIONS</h2>
 <p> Miscellaneous options:</p>

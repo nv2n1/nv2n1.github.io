@@ -1,5 +1,4 @@
 ---
-
 title: "idn(1)"
 name: "idn"
 section: "1"
@@ -10,7 +9,9 @@ description: "idn – Internationalized Domain Names command line tool"
 
 <h2>NAME</h2>
 <p> idn &#8211; Internationalized Domain Names command line tool</p>
+<h2>SYNOPSIS</h2>
 <p> <code>idn</code> [<i>OPTION</i>]&#8230; [<i>STRINGS</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Internationalized Domain Name (IDN) convert STRINGS, or standard input. </p>
 <p> Command line interface to the internationalized domain name library. </p>
 <p> All strings are expected to be encoded in the preferred charset used by your locale. Use `&#8211;debug&#8217; to find out what this charset is. You can override the charset used by setting environment variable CHARSET. </p>

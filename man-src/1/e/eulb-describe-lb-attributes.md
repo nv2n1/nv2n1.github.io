@@ -1,5 +1,4 @@
 ---
-
 title: "eulb-describe-lb-attributes(1)"
 name: "eulb-describe-lb-attributes"
 section: "1"
@@ -10,10 +9,12 @@ description: "eulb-describe-lb-attributes – Show a load balancer’s attribute
 
 <h2>NAME</h2>
 <p> eulb-describe-lb-attributes &#8211; Show a load balancer&#8217;s attributes</p>
+<h2>SYNOPSIS</h2>
 <p> eulb-describe-lb-attributes [&#8211;show-empty-fields] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ELB</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Show a load balancer&#8217;s attributes</p>
 <h3>positional arguments:</h3>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "expand(1)"
 name: "expand"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-expand/"
 description: "expand – convert tabs to spaces"
 ---
 
+<h2 class="name">NAME</h2>
+<p> expand &#8211; convert tabs to spaces </p>
+<h2>SYNOPSIS</h2>
 <p> <code>expand</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Convert tabs in each FILE to spaces, writing to standard output. </p>
 <p> With no FILE, or when FILE is -, read standard input. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>

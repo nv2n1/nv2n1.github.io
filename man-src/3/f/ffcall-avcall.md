@@ -1,5 +1,4 @@
 ---
-
 title: "ffcall-avcall(3)"
 name: "ffcall-avcall"
 section: "3"
@@ -10,11 +9,13 @@ description: "avcall – build a C argument list incrementally and call a C func
 
 <h2>NAME</h2>
 <p> avcall &#8211; build a C argument list incrementally and call a C function on it.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;avcall.h&gt;</code> </p>
 <p> <code>av_alist </code><i>alist</i><code>;</code> </p>
 <p> <code>av_start_</code><i>type</i><code>(</code><i>alist</i><code>, </code><i>&amp;func</i> [[<code>, </code><i>return_type</i>]<code>, </code><i>&amp;return_value</i>]<code>);</code> </p>
 <p> <code>av_</code><i>type</i><code>(</code><i>alist</i><code>, </code>[<i>arg_type</i><code>,</code>] <i>value</i><code>);</code> </p>
 <p> <code>av_call(</code><i>alist</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> This set of macros builds an argument list for a C function and calls the function on it. It significantly reduces the amount of `glue&#8217; code required for parsers, debuggers, imbedded interpreters, C extensions to application programs and other situations where collections of functions need to be called on lists of externally-supplied arguments. </p>
 <p> Function calling conventions differ considerably on different machines and <i>avcall</i> attempts to provide some degree of isolation from such architecture dependencies. </p>
 <p> The interface is like <code><a href="/docs/linux/man/3-stdarg/">stdarg</a></code>(3) in reverse. All of the macros return 0 for success, &lt; 0 for failure (e.g., argument list overflow or type-not-supported).</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "otpprint(1)"
 name: "otpprint"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-otpprint/"
 description: "otpprint – print lists of one-time passwords"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>otpprint</code> &#8211; print lists of one-time passwords </p>
+<h2>SYNOPSIS</h2>
 <p> <code>otp</code> [-<code>n </code><i>count</i> ] [-<code>e</code> ] [-<code>h</code> ] [-<code>f </code><i>algorithm</i> ] <i>sequence-number</i> <i>seed</i></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>otp</code> program prints lists of OTPs. </p>
 <p> Use this to print out a series of one-time passwords. You will have to supply the <i>sequence number</i> and the <i>seed</i> as arguments and then the program will prompt you for your pass-phrase. </p>
 <p> There are several different print formats. The default is to print each password with six short english words. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "edac(3)"
 name: "edac"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-edac/"
 description: "libedac – EDAC error reporting library"
 ---
 
+<h2 class="name">NAME</h2>
+<p> libedac &#8211; EDAC error reporting library</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;edac.h&gt;
 cc... - ledac
@@ -36,6 +38,7 @@ edac_for_each_mc_info(edac_handle *edac, edac_mc *mc,
     ...
 }
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <i>libedac</i> library offers a very simple programming interface to the information exported from in-kernel EDAC (Error Detection and Correction) drivers in sysfs. The <i>edac-util</i>(8) utility uses <i>libedac</i> to report errors in a user-friendly manner from the command line. </p>
 <p> EDAC errors for most systems are recorded in sysfs on a per memory controller (MC) basis. Memory controllers are further subdivided by csrow and channel. The <i>libedac</i> library provides a method to loop through multiple MCs, and their corresponding csrows, obtaining information about each component from sysfs along the way. There is also a simple single call to retrieve the total error counts for a given machine. </p>
 <p> In order to use <i>libedac</i> an <code>edac_handle</code> must first be opened via the call <code>edac_handle_create</code>(). Once the handle is created, sysfs data can be loaded into the handle with <code>edac_handle_init</code>(). A final call to <code>edac_handle_destroy</code>() will free all memory and open files associated with the edac handle. </p>

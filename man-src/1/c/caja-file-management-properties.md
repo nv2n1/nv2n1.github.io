@@ -1,5 +1,4 @@
 ---
-
 title: "caja-file-management-properties(1)"
 name: "caja-file-management-properties"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-caja-file-management-properties/"
 description: "Caja-file-management-properties – Caja File Management Preferences"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Caja-file-management-properties &#8211; Caja File Management Preferences </p>
+<h2>SYNOPSIS</h2>
 <p> <code>caja-file-management-properties</code></p>
+<h2>DESCRIPTION</h2>
 <p> Caja File Management Properties is distributed as a part of the caja package and is used to configure Caja&#8217;s preferences. It is typically accessible through the &quot;Edit&quot; menu in Caja browser windows, or by pressing &quot;ALT+E&quot; and then &quot;N&quot; once the menu opens. </p>
 <p> File Management Preferences allows the user to configure the way caja behaves. </p>
 <p> You can specify appearance preferences for the Default View; and defaults for Icon, Compact, List, and Tree View; and select sort options and display options. You can configure Caja to recognize Single or Double Click input; as well as Include a Delete command and menu option that bypasses the Trash. Caja File Management Preferences (<code>caja-file-management-properties</code>) also allows you to tell Caja how to handle certain files; whether to View or Run executable text files; Automatically view or play Media like CDs, DVDs, or photos, and which applications to use when performing these tasks. Among some other options, this dialog also allows you to adjust file-preview settings, and settings for installed plugins if they exist.</p>

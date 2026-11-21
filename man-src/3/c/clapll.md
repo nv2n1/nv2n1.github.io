@@ -1,5 +1,4 @@
 ---
-
 title: "clapll(3)"
 name: "clapll"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-clapll/"
 description: "clapll.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> clapll.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clapll</code> (N, X, INCX, Y, INCY, SSMIN)<br />
  <i></i><code>CLAPLL</code> measures the linear dependence of two vectors.</p>

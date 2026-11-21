@@ -1,5 +1,4 @@
 ---
-
 title: "gendict(1)"
 name: "gendict"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-gendict/"
 description: "gendict – Compiles word list into ICU string trie dictionary"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>gendict</code> &#8211; Compiles word list into ICU string trie dictionary </p>
+<h2>SYNOPSIS</h2>
 <p> <code>gendict</code> [ <code>&#8211;uchars</code> | <code>&#8211;bytes</code> <code>&#8211;transform</code><i> transform</i> ] [ <code>-h</code>, <code>-?</code>, <code>&#8211;help</code> ] [ <code>-V</code>, <code>&#8211;version</code> ] [ <code>-c</code>, <code>&#8211;copyright</code> ] [ <code>-v</code>, <code>&#8211;verbose</code> ] [ <code>-i</code>, <code>&#8211;icudatadir</code><i> directory</i> ] <i> input-file</i> <i> output-file</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>gendict</code> reads the word list from <i>dictionary-file</i> and creates a string trie dictionary file. Normally this data file has the <code>.dict</code> extension. </p>
 <p> Words begin at the beginning of a line and are terminated by the first whitespace. Lines that begin with whitespace are ignored.</p>
 <h2>OPTIONS</h2>

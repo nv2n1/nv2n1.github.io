@@ -1,5 +1,4 @@
 ---
-
 title: "uhd_cal_rx_iq_balance(1)"
 name: "uhd_cal_rx_iq_balance"
 section: "1"
@@ -10,6 +9,7 @@ description: "uhd_cal_rx_iq_balance – Generate RX IQ Balance Calibration Table
 
 <h2>NAME</h2>
 <p> uhd_cal_rx_iq_balance &#8211; Generate RX IQ Balance Calibration Table for a UHD Device</p>
+<h2>DESCRIPTION</h2>
 <p> The Universal Software Radio Peripheral Hardware Drivers handle calibration information. This application reduces RX IQ imbalance within the specified frequency range using transmit leakage into the receive path. Remove all external hardware from the RF antenna ports before using this application. This can take up to several minutes with default settings. </p>
 <p> NOTE: This application can only be used with the WBX, SBX, XCVR2450, and RFX daughterboards.</p>
 <h2>OPTIONS</h2>

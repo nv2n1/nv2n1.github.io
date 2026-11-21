@@ -1,5 +1,4 @@
 ---
-
 title: "libnutclient_variables(3)"
 name: "libnutclient_variables"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-libnutclient_variables/"
 description: "libnutclient_variables, nutclient_get_device_variables, nutclient_get_device_rw_variables, nutclient_has_device_variable, nutclient_get_device_variable_description, nutclient_get_device_variable_va..."
 ---
 
+<h2 class="name">NAME</h2>
+<p> libnutclient_variables, nutclient_get_device_variables, nutclient_get_device_rw_variables, nutclient_has_device_variable, nutclient_get_device_variable_description, nutclient_get_device_variable_values, nutclient_set_device_variable_value, nutclient_set_device_variable_values &#8211; Variable related functions in Network UPS Tools high-level client access library </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;nutclient.h&gt;
 </code></pre>
@@ -23,6 +25,7 @@ strarr nutclient_get_device_variable_values(NUTCLIENT_t client, const char *dev,
 void nutclient_set_device_variable_value(NUTCLIENT_t client, const char *dev, const char *var, const char *value);
 void nutclient_set_device_variable_values(NUTCLIENT_t client, const char *dev, const char *var, const strarr values);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> These functions allow to manage variables of devices. </p>
 <p> The <code>nutclient_get_device_variables()</code> function retrieve the list of variables names for a device. The returned strarr must be freed by <i>strarr_free</i>. </p>
 <p> The <code>nutclient_get_device_rw_variables</code> function retrieve the list of read-write variables names for a device. The returned strarr must be freed by <i>strarr_free</i>. </p>

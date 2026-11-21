@@ -1,5 +1,4 @@
 ---
-
 title: "kig(1)"
 name: "kig"
 section: "1"
@@ -10,9 +9,11 @@ description: "kig – an interactive geometry program for KDE"
 
 <h2>NAME</h2>
 <p> kig &#8211; an interactive geometry program for KDE</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>kig</code> [<code>-c, &#8211;convert-to-native</code> [<code>-o, &#8211;outfile </code><i>filename</i>]] [KDE Generic Options] [Qt Generic Options] </dt>
 </dl>
+<h2>DESCRIPTION</h2>
 <dd>Kig is an application for interactive geometry. It is intended to serve two purposes: </dd>
 <dl>
 <dt>*</dt>

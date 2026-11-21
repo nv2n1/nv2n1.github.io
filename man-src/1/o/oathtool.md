@@ -1,5 +1,4 @@
 ---
-
 title: "oathtool(1)"
 name: "oathtool"
 section: "1"
@@ -10,7 +9,9 @@ description: "oathtool – OATH one-time password tool"
 
 <h2>NAME</h2>
 <p> oathtool &#8211; OATH one-time password tool</p>
+<h2>SYNOPSIS</h2>
 <p> <code>oathtool</code> [<i>OPTIONS</i>]&#8230; [<i>KEY </i>[<i>OTP</i>]]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> oathtool 2.4.1 </p>
 <p> Generate and validate OATH one-time passwords.</p>
 <dl>

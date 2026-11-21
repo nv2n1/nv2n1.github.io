@@ -1,5 +1,4 @@
 ---
-
 title: "arguments_(3)"
 name: "arguments_"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-arguments_/"
 description: "QuantLib::LmCorrelationModel – libor forward correlation model"
 ---
 
+<h2 class="name">NAME</h2>
+<p> QuantLib::LmCorrelationModel &#8211; libor forward correlation model </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/legacy/libormarketmodels/lmcorrmodel.hpp&gt; </p>
 <p> Inherited by LmConstWrapperCorrelationModel, <code>LmExponentialCorrelationModel</code>, and <code>LmLinearExponentialCorrelationModel</code>. </p>
 <h3>Public Member Functions</h3>

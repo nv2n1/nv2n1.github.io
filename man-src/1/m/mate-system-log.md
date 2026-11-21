@@ -1,5 +1,4 @@
 ---
-
 title: "mate-system-log(1)"
 name: "mate-system-log"
 section: "1"
@@ -10,8 +9,10 @@ description: "mate-system-log – the MATE System Log Viewer"
 
 <h2>NAME</h2>
 <p> mate-system-log &#8211; the MATE System Log Viewer</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mate-system-log</code> </p>
 <p> or select <code>System Log</code> from the <code>System Tools</code> submenu of the Applications menu.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>MATE System Log Viewer</code> is a simple utility to display system log files.</p>
 <h2>AUTHOR</h2>
 <p> The <code>MATE System Log Viewer</code> was written by Cesar Miquel &lt;miquel [at] df.uba.ar&gt;. </p>

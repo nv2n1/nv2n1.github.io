@@ -1,5 +1,4 @@
 ---
-
 title: "mysql_tzinfo_to_sql(1)"
 name: "mysql_tzinfo_to_sql"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mysql_tzinfo_to_sql/"
 description: "mysql_tzinfo_to_sql – load the time zone tables"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mysql_tzinfo_to_sql &#8211; load the time zone tables </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysql_tzinfo_to_sql </code><i>arguments</i></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>mysql_tzinfo_to_sql</code> program loads the time zone tables in the mysql database. It is used on systems that have a <i>zoneinfo</i> database (the set of files describing time zones). Examples of such systems are Linux, FreeBSD, Solaris, and macOS. One likely location for these files is the /usr/share/zoneinfo directory (/usr/share/lib/zoneinfo on Solaris). If your system does not have a zoneinfo database, you can use the downloadable package described in Section 5.1.13, &#8220;MySQL Server Time Zone Support&#8221;. </dd>
 <p> <code>mysql_tzinfo_to_sql</code> can be invoked several ways: </p>
 <dl>

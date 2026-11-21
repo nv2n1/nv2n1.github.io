@@ -1,5 +1,4 @@
 ---
-
 title: "grdgradient(1)"
 name: "grdgradient"
 section: "1"
@@ -10,8 +9,10 @@ description: "grdgradient – Compute directional derivative or gradient from a 
 
 <h2>NAME</h2>
 <p> grdgradient &#8211; Compute directional derivative or gradient from a grid</p>
+<h2>SYNOPSIS</h2>
 <p> <code>grdgradient</code> <i>in_grdfile</i> <i>out_grdfile</i> [ <i>azim</i>[/<i>azim2</i>] ] [ [<code>a</code>][<code>c</code>][<code>o</code>][<code>n</code>] ] [ [<code>s|p</code>]<i>azim/elev</i>[/<i>ambient</i>/<i>diffuse</i>/<i>specular</i>/<i>shine</i>] ] [ <i>flag</i> ] [ [<code>e</code>][<code>t</code>][<i>amp</i>][/<i>sigma</i>[/<i>offset</i>]] ] [ <i>region</i> ] [ <i>slopefile</i> ] [ [<i>level</i>] ] [ <code>-fg</code> ] [ <code>-n</code><i>&lt;flags&gt;</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>grdgradient</code> may be used to compute the directional derivative in a given direction (<code>-A</code>), or the direction (<code>-S</code>) [and the magnitude (<code>-D</code>)] of the vector gradient of the data. </p>
 <p> Estimated values in the first/last row/column of output depend on boundary conditions (see <code>-L</code>).</p>
 <h2>REQUIRED ARGUMENTS</h2>

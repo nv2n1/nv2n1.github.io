@@ -1,5 +1,4 @@
 ---
-
 title: "irsim-analyzer(3)"
 name: "irsim-analyzer"
 section: "3"
@@ -10,7 +9,9 @@ description: "irsim-analyzer"
 
 <h2>NAME</h2>
 <p> irsim-analyzer</p>
+<h2>SYNOPSIS</h2>
 <p> <code>analyzer </code><i>node&#8230;</i></p>
+<h2>DESCRIPTION</h2>
 <p> The analyzer provides a graphical interface to irsim; displaying the state of the nodes (or vectors) <i>node&#8230;</i> </p>
 <p> Every invocation of the <code>analyzer</code> command adds a new set of signals to the display list. </p>
 <p> The view is split into 3 regions: a trace window, a text window, and a banner. The banner displays the name of the simulation (from the sim file), and the <i>pull-down</i> menu headers. The text window is a 1-line window used to request and display certain information. </p>

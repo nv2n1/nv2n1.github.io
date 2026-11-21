@@ -1,5 +1,4 @@
 ---
-
 title: "g_anadock(1)"
 name: "g_anadock"
 section: "1"
@@ -11,7 +10,9 @@ description: "anadock – cluster structures from Autodock runs"
 <h2>NAME</h2>
 <p> anadock &#8211; cluster structures from Autodock runs </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>anadock</code> <code>-f</code><i> eiwit.pdb </i> <code>-ox</code><i> cluster.pdb </i> <code>-od</code><i> edocked.xvg </i> <code>-of</code><i> efree.xvg </i> <code>-g</code><i> anadock.log </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-[no]xvgr</code><i></i> <code>-[no]free</code><i></i> <code>-[no]rms</code><i></i> <code>-cutoff</code><i> real </i></p>
+<h2>DESCRIPTION</h2>
 <p> anadock analyses the results of an Autodock run and clusters the structures together, based on distance or RMSD. The docked energy and free energy estimates are analysed, and for each cluster the energy statistics are printed. </p>
 <p> An alternative approach to this is to cluster the structures first (using <code> g_cluster</code> and then sort the clusters on either lowest energy or average energy.</p>
 <h2>FILES</h2>

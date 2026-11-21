@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_status(3)"
 name: "ldns_status"
 section: "3"
@@ -10,10 +9,12 @@ description: "ldns_status"
 
 <h2>NAME</h2>
 <p> ldns_status </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p>&nbsp;<wbr>ldns_status(); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_status</i>()</dt></dl>
 <h2>AUTHOR</h2>

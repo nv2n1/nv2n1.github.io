@@ -1,5 +1,4 @@
 ---
-
 title: "cggesx(3)"
 name: "cggesx"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cggesx/"
 description: "cggesx.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cggesx.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cggesx</code> (JOBVSL, JOBVSR, SORT, SELCTG, SENSE, N, A, LDA, B, LDB, SDIM, ALPHA, BETA, VSL, LDVSL, VSR, LDVSR, RCONDE, RCONDV, WORK, LWORK, RWORK, IWORK, LIWORK, BWORK, INFO)<br />
  <i></i><code> CGGESX computes the eigenvalues, the Schur form, and, optionally, the matrix of Schur vectors for GE matrices</code></p>

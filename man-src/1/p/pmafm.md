@@ -1,5 +1,4 @@
 ---
-
 title: "pmafm(1)"
 name: "pmafm"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmafm – Performance Co-Pilot archive folio manager"
 
 <h2>NAME</h2>
 <p> <code>pmafm</code> &#8211; Performance Co-Pilot archive folio manager</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pmafm</code> <i>folioname</i> [<i>command</i> [<i>arg</i> &#8230;]]</p>
+<h2>DESCRIPTION</h2>
 <p> A collection of one or more Performance Co-Pilot (PCP) archive logs may be combined with a control file to produce a PCP archive folio. Archive folios are created using either <code><a href="/docs/linux/man/1-mkaf/">mkaf</a></code>(1) or the interactive &#8220;record mode&#8221; services of PCP clients like <code><a href="/docs/linux/man/1-pmchart/">pmchart</a></code>(1). </p>
 <p> <code>pmafm</code> provides a number of services that may be used to process folios. In particular, it provides support for execution of PCP tools using one or more of the component archive logs within an archive folio. </p>
 <p> The target folio is identified by the folio control file <i>folioname</i>. The syntax for a folio control file is described in <code><a href="/docs/linux/man/1-mkaf/">mkaf</a></code>(1). </p>

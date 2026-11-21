@@ -1,5 +1,4 @@
 ---
-
 title: "oggz-chop(1)"
 name: "oggz-chop"
 section: "1"
@@ -11,6 +10,7 @@ description: "oggz-chop — Extract the part of an Ogg file between given start 
 <h2>NAME</h2>
 <p> oggz-chop &#8212; Extract the part of an Ogg file between given start and/or end times.<br />
 &nbsp;<wbr></p>
+<h2>SYNOPSIS</h2>
 <p> <code>oggz-chop</code> [-o <code>filename</code> | &#8211;output <code>filename</code> ] [-s <code>start_time</code> | &#8211;start <code>start_time</code> ] [-e <code>end_time</code> | &#8211;end <code>end_time</code> ] [-k | &#8211;no-skeleton ] filename </p>
 <p> <code>oggz-chop</code> [-h | &#8211;help ] [-v | &#8211;version ]</p>
 <h2>Description</h2>

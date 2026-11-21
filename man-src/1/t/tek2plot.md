@@ -1,5 +1,4 @@
 ---
-
 title: "tek2plot(1)"
 name: "tek2plot"
 section: "1"
@@ -10,7 +9,9 @@ description: "tek2plot – translate Tektronix files to other graphics formats"
 
 <h2>NAME</h2>
 <p> tek2plot &#8211; translate Tektronix files to other graphics formats</p>
+<h2>SYNOPSIS</h2>
 <p> <code>tek2plot </code> [ <i>options </i> ] [ <i>files </i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>tek2plot </code> translates Tektronix graphics files to other formats, or displays them on an X Window System display. The output format is specified with the <code>-T</code> option. The possible output formats are the same as those supported by <code>graph</code>(1), <code><a href="/docs/linux/man/1-plot/">plot</a></code>(1), <code>pic2plot</code>(1), and <code><a href="/docs/linux/man/1-plotfont/">plotfont</a></code>(1). If an output file is produced, it is written to standard output. </p>
 <p> Options and file names may be interspersed on the command line, but the options are processed before the file names are read. If <code>&#8212; </code> is seen, it is interpreted as the end of the options. If no file names are specified, or the file name <code>&#8211; </code> is encountered, the standard input is read.</p>
 <h2>OPTIONS</h2>

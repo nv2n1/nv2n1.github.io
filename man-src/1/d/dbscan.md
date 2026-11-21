@@ -1,5 +1,4 @@
 ---
-
 title: "dbscan(1)"
 name: "dbscan"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dbscan/"
 description: "dbscan – scans a Directory Server database index file and dumps the contents"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dbscan &#8211; scans a Directory Server database index file and dumps the contents </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dbscan</code> <code>-f &lt;filename&gt;</code> [<i>-R</i>] [<i>-t &lt;size&gt;</i>] [<i>-K &lt;entry_id&gt;</i>] [<i>-k &lt;key&gt;</i>] [<i>-l &lt;size&gt;</i>] [<i>-G &lt;n&gt;</i>] [<i>-n</i>] [<i>-r</i>] [<i>-s</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> Scans a Directory Server database index file and dumps the contents. </p>
 <h2>OPTIONS</h2>
 <p> A summary of options is included below:</p>

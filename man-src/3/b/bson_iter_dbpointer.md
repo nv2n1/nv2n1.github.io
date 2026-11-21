@@ -1,5 +1,4 @@
 ---
-
 title: "bson_iter_dbpointer(3)"
 name: "bson_iter_dbpointer"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_iter_dbpointer() – Fetches the contents of a BSON_TYPE_DBPO
 
 <h2>NAME</h2>
 <p> bson_iter_dbpointer() &#8211; Fetches the contents of a BSON_TYPE_DBPOINTER element.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 void bson_iter_dbpointer(const bson_iter_t *iter,
                          uint32_t *collection_len,
@@ -29,6 +29,7 @@ void bson_iter_dbpointer(const bson_iter_t *iter,
 <dl>
 <dt><code>oid</code></dt>
 <dd> A location for a <code>bson_oid_t</code> \&amp;.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Fetches the contents of a BSON_TYPE_DBPOINTER element. </p>
 <p> <code>NOTE</code></p>
 <dl>

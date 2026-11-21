@@ -1,5 +1,4 @@
 ---
-
 title: "ilbmtoppm(1)"
 name: "ilbmtoppm"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ilbmtoppm/"
 description: "ilbmtoppm – convert an ILBM file into a portable pixmap"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ilbmtoppm &#8211; convert an ILBM file into a portable pixmap </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ilbmtoppm</code> [<code>-verbose</code>] [<code>-ignore</code>&lt;chunkID&gt;<code>]</code> [<code>-isham</code>|<code>-isehb</code>] [<code>-adjustcolors</code>] [<i>ILBMfile</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Reads an IFF ILBM file as input. Produces a portable pixmap as output. Supported ILBM types are:</p>
 <dl>
 <dt>Normal ILBMs with 1-16 planes.</dt>

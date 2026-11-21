@@ -1,5 +1,4 @@
 ---
-
 title: "gtklpq(1)"
 name: "gtklpq"
 section: "1"
@@ -10,6 +9,7 @@ description: "gtklpq – manage print queues via CUPS"
 
 <h2>NAME</h2>
 <p> gtklpq &#8211; manage print queues via CUPS</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gtklpq</code> [-P|-d <i>printer</i>] [-S <i>server</i>] [-p <i>port</i>] [-D] [-V] [-U <i>user</i>] [-t <i>timeout</i>] [-g <i>X</i>x<i>Y</i>] [-C] [-h] [-E] </p>
 <p> <code>lpq</code> [-P|-d <i>printer</i>] [-S <i>server</i>] [-p <i>port</i>] [-D] [-V] [-U <i>user</i>] [-t <i>timeout</i>] [-E] </p>
 <p> <code>lprm</code> [-P|-d <i>printer</i>] [-S <i>server</i>] [-p <i>port</i>] [-D] [-V] [-U <i>user</i>] [-E] [-] [job ID(s)] </p>
@@ -17,6 +17,7 @@ description: "gtklpq – manage print queues via CUPS"
 <p> <code>accept</code> [-h <i>server</i>] [-p <i>port</i>] [-D] [-V] [-U <i>user</i>] [-E] [-r <i>reason</i>] [destination(s)] </p>
 <p> <code>disable</code> [-h <i>server</i>] [-c] [-p <i>port</i>] [-D] [-V] [-U <i>user</i>] [-E] [-r <i>reason</i>] [destination(s)] </p>
 <p> <code>enable</code> [-h <i>server</i>] [-p <i>port</i>] [-D] [-V] [-U <i>user</i>] [-E] [-r <i>reason</i>] [destination(s)]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>GtkLPQ</code> is an graphical frontend for <i>CUPS</i>, the Common UNIX Printing System.<br />
  It is used to manage CUPS-Printqueues. </p>
 <dl>

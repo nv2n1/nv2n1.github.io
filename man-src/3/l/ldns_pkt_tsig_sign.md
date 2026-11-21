@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_pkt_tsig_sign(3)"
 name: "ldns_pkt_tsig_sign"
 section: "3"
@@ -10,11 +9,13 @@ description: "ldns_pkt_tsig_verify, ldns_pkt_tsig_sign"
 
 <h2>NAME</h2>
 <p> ldns_pkt_tsig_verify, ldns_pkt_tsig_sign </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> bool ldns_pkt_tsig_verify(ldns_pkt *pkt, uint8_t *wire, size_t wire_size, const char *key_name, const char *key_data, ldns_rdf *mac); </p>
 <p> ldns_status ldns_pkt_tsig_sign(ldns_pkt *pkt, const char *key_name, const char *key_data, uint16_t fudge, const char *algorithm_name, ldns_rdf *query_mac); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_pkt_tsig_verify</i>()</dt>
 <dd>verifies the tsig rr for the given packet and key. The wire must be given too because tsig does not sign normalized packets. .br <code>pkt</code>: the packet to verify .br <code>wire</code>: needed to verify the mac .br <code>wire_size</code>: size of wire .br <code>key_name</code>: the name of the shared key .br <code>key_data</code>: the key in base 64 format .br <code>mac</code>: original mac .br Returns true if tsig is correct, false if not, or if tsig is not set</dd></dl>

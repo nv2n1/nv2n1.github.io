@@ -1,5 +1,4 @@
 ---
-
 title: "pamtompfont(1)"
 name: "pamtompfont"
 section: "1"
@@ -10,8 +9,10 @@ description: "pamtompfont – Convert Netpbm image to Mplayer bitmap font file"
 
 <h2>NAME</h2>
 <p> pamtompfont &#8211; Convert Netpbm image to Mplayer bitmap font file </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pamtompfont</code> [<i>imagefile</i>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one. You may separate an option name and its value with white space instead of an equals sign. </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamtompfont</code> reads a Netpbm image (PNM or PAM) and converts it to an Mplayer bitmap font raster file. </p>
 <p> This is the original font format used by Mplayer (for subtitles, on-screen messages, etc.), before it had the ability to use Freetype to access standard fonts. </p>

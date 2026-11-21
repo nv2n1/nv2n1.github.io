@@ -1,5 +1,4 @@
 ---
-
 title: "freebcp(1)"
 name: "freebcp"
 section: "1"
@@ -10,7 +9,9 @@ description: "freebcp – bulk loading utility for Sybase and Microsoft database
 
 <h2>NAME</h2>
 <p> <code>freebcp</code> &#8211; bulk loading utility for Sybase and Microsoft databases</p>
+<h2>SYNOPSIS</h2>
 <p> Bo Bo Ao Ar database Ac Ns . Bc Ns Ao Ar owner Ac Ns . Bc Ns Aq Ar object_name Br o <i>in</i> | <i>[query] </i><i>out</i> Br c <i>datafile</i> Br o &#8211;<code>c</code> | &#8211;<code>n</code> | &#8211;<code>f </code><i>formatfile</i> Br c [-<code>S </code><i>servername</i> ] [-<code>D </code><i>dbname</i> ] [-<code>U </code><i>username</i> ] [-<code>P </code><i>password</i> ] [-<code>b </code><i>batchsize</i> ] [-<code>F </code><i>firstrow</i> ] [-<code>L </code><i>lastrow</i> ] [-<code>e </code><i>errfile</i> ] [-<code>I </code><i>interfaces</i> ] [-<code>m </code><i>maxerror</i> ] [-<code>t </code><i>field_term</i> ] [-<code>r </code><i>row_term</i> ] [-<code>h </code><i>hints</i> ] [-<code>T </code><i>textsize</i> ] [-<code>A </code><i>packet_size</i> ] [-<code>O </code><i>options</i> ] [-<code>i </code><i>inputfile</i> ] [-<code>o </code><i>outputfile</i> ] [-<code>C </code><i>charset</i> ] [-<code>EdVv </code> ]</p>
+<h2>DESCRIPTION</h2>
 <p> is a utility program distributed with FreeTDS. replicates (in part at least) the functionality of the bcp utility programs distributed by Sybase and Microsoft. makes use of the DB-Library bcp API provided by FreeTDS. This API is also available to application developers. </p>
 <p> The manual pages or online help for Sybase or SQL Server can be referenced for more detailed information on bcp functionality.</p>
 <h2>TABLES AND FILES</h2>

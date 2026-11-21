@@ -1,5 +1,4 @@
 ---
-
 title: "cptsv(3)"
 name: "cptsv"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cptsv/"
 description: "cptsv.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cptsv.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cptsv</code> (N, NRHS, D, E, B, LDB, INFO)<br />
  <i></i><code> CPTSV computes the solution to system of linear equations A * X = B for PT matrices</code></p>

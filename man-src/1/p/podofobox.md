@@ -1,5 +1,4 @@
 ---
-
 title: "podofobox(1)"
 name: "podofobox"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-podofobox/"
 description: "podofocolor – modify colors in a PDF file."
 ---
 
+<h2 class="name">NAME</h2>
+<p> podofocolor &#8211; modify colors in a PDF file.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>podofocolor</code> [converter] [inputfile] [outpufile] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>podofocolor</code> is one of the command line tools from the PoDoFo library that provide several useful operations to work with colors in PDF files. It can parse and/or modify all colors or colorspaces in a PDF file. The modifications can be defined via C++ or a Lua script. Custom conversions like onvert all colors to grayscaleare included. Please note that only colors of vector objects on pages and in XObjects are affected. This tool does not transform colos in images at the moment. </p>
 <h2>CONVERTERS</h2>
 <p> [converter] can be any of</p>

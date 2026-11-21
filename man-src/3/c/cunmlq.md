@@ -1,5 +1,4 @@
 ---
-
 title: "cunmlq(3)"
 name: "cunmlq"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cunmlq/"
 description: "cunmlq.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cunmlq.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cunmlq</code> (SIDE, TRANS, M, N, K, A, LDA, TAU, C, LDC, WORK, LWORK, INFO)<br />
  <i></i><code>CUNMLQ</code></p>

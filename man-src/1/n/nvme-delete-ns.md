@@ -1,5 +1,4 @@
 ---
-
 title: "nvme-delete-ns(1)"
 name: "nvme-delete-ns"
 section: "1"
@@ -7,13 +6,24 @@ letter: "n"
 url: "/docs/linux/man/1-nvme-delete-ns/"
 ---
 
-nvme-delete-ns - Send NVMe Namespace Management delete namespace command, return result. 
+<h2 class="name">NAME</h2>
+ 
 
-<pre>
+ nvme-delete-ns - Send NVMe Namespace Management delete namespace command, return result. 
+
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <pre>
 <i>nvme delete-ns</i> &lt;device&gt; [--namespace-id=&lt;nsid&gt; | -n &lt;nsid&gt;]
 </pre>
 
-For the NVMe device given, sends an nvme namespace management command to delete the requested namespace and provides the result. 
+<h2>DESCRIPTION</h2>
+
+ 
+
+ For the NVMe device given, sends an nvme namespace management command to delete the requested namespace and provides the result. 
 
  The &lt;device&gt; parameter is mandatory and may be either the NVMe character device (ex: /dev/nvme0), or a namespace block device (ex: /dev/nvme0n1). The '--namespace-id' option is mandatory.
 

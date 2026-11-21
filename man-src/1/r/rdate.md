@@ -1,5 +1,4 @@
 ---
-
 title: "rdate(1)"
 name: "rdate"
 section: "1"
@@ -10,7 +9,9 @@ description: "rdate – get the time via the network"
 
 <h2>NAME</h2>
 <p> rdate &#8211; get the time via the network</p>
+<h2>SYNOPSIS</h2>
 <p> <code>rdate</code> [-p] [-s] [-u] [-l] [-t sec] [host&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>rdate</code> connects to an RFC 868 time server over a TCP/IP network, printing the returned time and/or setting the system clock.</p>
 <h3>OPTIONS</h3>
 <dl>

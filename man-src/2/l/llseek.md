@@ -1,5 +1,4 @@
 ---
-
 title: "llseek(2)"
 name: "llseek"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-llseek/"
 description: "_llseek – reposition read/write file offset"
 ---
 
+<h2 class="name">NAME</h2>
+<p> _llseek &#8211; reposition read/write file offset </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/types.h&gt;
 #include &lt;unistd.h&gt;
@@ -16,6 +18,7 @@ int _llseek(unsigned int fd, unsigned long offset_high,
             unsigned int whence);
 </code></pre>
 <p> <i>Note</i>: There is no glibc wrapper for this system call; see NOTES.</p>
+<h2>DESCRIPTION</h2>
 <p> Note: for information about the <code>llseek</code>(3) library function, see <code><a href="/docs/linux/man/3-lseek64/">lseek64</a></code>(3). </p>
 <p> The <code>_llseek</code>() system call repositions the offset of the open file description associated with the file descriptor <i>fd</i> to the value</p>
 <dl>

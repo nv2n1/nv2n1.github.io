@@ -1,5 +1,4 @@
 ---
-
 title: "cptinfo(1)"
 name: "cptinfo"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-cptinfo/"
 description: "cptinfo – print summary information on GMT colour palette table (cpt) files."
 ---
 
+<h2 class="name">NAME</h2>
+<p> cptinfo &#8211; print summary information on GMT colour palette table (cpt) files. </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>cptinfo</code> [-c] [-h] [-o&nbsp;<wbr><i>file</i>] [-p] [-v] [-V] [<i>file</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>cptinfo</code> utility prints summary information on the colour palette table (cpt) file which is its input. </dd>
 <p> The program will read from stdin if a file is not specified as the final argument, and write to stdout if the <code>-o</code> option is not specified.</p>
 <h2>OPTIONS</h2>

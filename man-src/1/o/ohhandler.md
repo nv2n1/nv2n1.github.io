@@ -1,5 +1,4 @@
 ---
-
 title: "ohhandler(1)"
 name: "ohhandler"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-ohhandler/"
 description: "ohhandler – An openhpi sample application that uses the openhpi additional interfaces to control openhpi configuration. That is plugins can be loaded, plugin instances (handlers) created, unloaded ..."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ohhandler &#8211; An openhpi sample application that uses the openhpi additional interfaces to control openhpi configuration. That is plugins can be loaded, plugin instances (handlers) created, unloaded or their configuration displayed. </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 ohhandler[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-X] command&lt;specific arguments&gt;
     ohhandler[--domain nn][--host = host[:port]][--cfgfile = file][--debug] command&lt;specific arguments&gt;
@@ -19,6 +21,7 @@ ohhandler[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-X] command&lt;specific argu
                             ohhandler[-D nn][-X] retry&lt;handler - id&gt;
                                 ohhandler[-D nn][-X] create plugin&lt;plugin - name&gt;&lt;configuration - parameters&gt;
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> ohhandler list will display a list of all plugin instances (handlers) currently defined in the openhpi daemon for the specified domain. Part of the output is the handler-id that can be used in subsequent commands. </p>
 <p> ohhandler info will display specific info for the handler with the specified id. This information includes all configuration parameters of the handler as specified in the openhpi.conf file or as dynamically defined during a &#8220;ohhandler create&#8221; call. </p>
 <p> ohhandler destroy will unload the specified handler and delete all its configuration information. </p>

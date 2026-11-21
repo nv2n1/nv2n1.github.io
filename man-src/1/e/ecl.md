@@ -1,5 +1,4 @@
 ---
-
 title: "ecl(1)"
 name: "ecl"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-ecl/"
 description: "ecl – Embeddable Common LISP"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ecl &#8211; Embeddable Common LISP </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ecl</code> [<code>-dir</code> <i>dir</i>] [<code>-load</code> <i>file</i>] [<code>-eval</code> <i>expr</i>]<br />
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [<code>-compile</code> <i>file</i><br />
  &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> [<code>-o</code> <i>ofile</i>] [<code>-c</code> [<i>cfile</i>]] [<code>-h</code> [<i>hfile</i>]] [<code>-data</code> [<i>datafile</i>]] [<code>-s</code>] [<code>-q</code>]] </p>
+<h2>DESCRIPTION</h2>
 <p> ECL stands for Embeddable Common-Lisp. The ECL project is an effort to modernize Giuseppe Attardi&#8217;s ECL environment to produce an implementation of the Common-Lisp language which complies to the ANSI X3J13 definition of the language. </p>
 <p> The current ECL implementation features:</p>
 <dl>

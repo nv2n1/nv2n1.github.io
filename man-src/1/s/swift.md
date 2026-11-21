@@ -1,5 +1,4 @@
 ---
-
 title: "swift(1)"
 name: "swift"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-swift/"
 description: "swift – OpenStack Swift client tool"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>swift</code> &#8211; OpenStack Swift client tool</p>
+<h2>SYNOPSIS</h2>
 <p> <code>swift</code> [options] &lt;command&gt; [args] </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>swift</code> tool is a command line utility for communicating with an OpenStack Object Storage (Swift) environment. It allows one to perform several types of operations. </p>
 <h2>COMMANDS</h2>
 <p> <code>stat</code> [<i>container</i>] [<i>object</i>]</p>

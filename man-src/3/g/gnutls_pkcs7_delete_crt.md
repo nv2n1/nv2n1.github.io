@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pkcs7_delete_crt(3)"
 name: "gnutls_pkcs7_delete_crt"
 section: "3"
@@ -11,7 +10,9 @@ url: "/docs/linux/man/3-gnutls_pkcs7_delete_crt/"
 
  gnutls_pkcs7_delete_crt - API function
 
-<b>#include &lt;gnutls/x509.h&gt;</b> 
+<h2>SYNOPSIS</h2>
+
+ <b>#include &lt;gnutls/x509.h&gt;</b> 
 
  <b>int gnutls_pkcs7_delete_crt(gnutls_pkcs7_t </b><i>pkcs7</i><b>, int </b><i>indx</i><b>);</b>
 
@@ -23,7 +24,9 @@ url: "/docs/linux/man/3-gnutls_pkcs7_delete_crt/"
 </dd><dt>int indx
 </dt><dd> the index of the certificate to delete</dd></dl>
 
-This function will delete a certificate from a PKCS7 or RFC2630 certificate set. Index starts from 0. Returns 0 on success.
+<h2>DESCRIPTION</h2>
+
+ This function will delete a certificate from a PKCS7 or RFC2630 certificate set. Index starts from 0. Returns 0 on success.
 
 <h2>RETURNS</h2>
 

@@ -1,5 +1,4 @@
 ---
-
 title: "java(1)"
 name: "java"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-java/"
 description: "java – Launches a Java application."
 ---
 
+<h2 class="name">NAME</h2>
+<p> java &#8211; Launches a Java application. </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt>
 </dt><dd>
@@ -36,6 +38,7 @@ java[options] &#8211; jar filename[args]
 <dl>
 <dt>
 </dt><dd> The arguments passed to the <code>main()</code> method separated by spaces.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code>java</code> command starts a Java application. It does this by starting the Java Runtime Environment (JRE), loading the specified class, and calling that class&#8217;s <code>main()</code> method. The method must be declared <i>public</i> and <i>static</i>, it must not return any value, and it must accept a <code>String</code> array as a parameter. The method declaration has the following form: </p>
 <dl>
 <dt>

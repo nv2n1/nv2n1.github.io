@@ -1,5 +1,4 @@
 ---
-
 title: "abrt-action-analyze-oops(1)"
 name: "abrt-action-analyze-oops"
 section: "1"
@@ -7,11 +6,22 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-action-analyze-oops/"
 ---
 
-abrt-action-analyze-oops - Calculate and save UUID and duplicate hash for a problem data directory DIR with kernel oops. 
+<h2 class="name">NAME</h2>
+ 
 
-<i>abrt-action-analyze-oops</i> [-v] [-d DIR]
+ abrt-action-analyze-oops - Calculate and save UUID and duplicate hash for a problem data directory DIR with kernel oops. 
 
-The tool reads the file named <i>backtrace</i> from a problem data directory, parses it as a kernel oops record and generates a duplication hash and a universally unique identifier (UUID). Then it saves this data as new elements <i>duphash</i> and <i>uuid</i>.
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <i>abrt-action-analyze-oops</i> [-v] [-d DIR]
+
+<h2>DESCRIPTION</h2>
+
+ 
+
+ The tool reads the file named <i>backtrace</i> from a problem data directory, parses it as a kernel oops record and generates a duplication hash and a universally unique identifier (UUID). Then it saves this data as new elements <i>duphash</i> and <i>uuid</i>.
 
 <h3>Integration with ABRT events</h3>
 

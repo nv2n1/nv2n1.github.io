@@ -1,5 +1,4 @@
 ---
-
 title: "aldo(1)"
 name: "aldo"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-aldo/"
 description: "aldo – A fully console morse code trainer written in ISO C++."
 ---
 
+<h2 class="name">NAME</h2>
+<p> aldo &#8211; A fully console morse code trainer written in ISO C++.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>aldo</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>Aldo</code> is developed from scratch in ISO C++ using GNU C++ Standard Library and libao (<a rel="nofollow" href="http://www.xiph.org">www.xiph.org</a>/ao).<br />
  It is a morse code learning tool which provides four type of training methods: </p>
 <dl>

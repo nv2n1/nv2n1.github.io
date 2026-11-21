@@ -1,5 +1,4 @@
 ---
-
 title: "yuvfps(1)"
 name: "yuvfps"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-yuvfps/"
 description: "yuvfps – Converts to a different frame rate"
 ---
 
+<h2 class="name">NAME</h2>
+<p> yuvfps &#8211; Converts to a different frame rate</p>
+<h2>SYNOPSIS</h2>
 <p> <code>yuvfps </code> [<code>-r</code> <i>Num:Den</i>] [<code>-s</code> <i>Num:Den</i>] [<code>-i</code> <i>Interlacing</i>] [<code>-I</code> <i>Interlacing</i>] [<code>-c</code>] [<code>-n</code>] [<code>-w</code>] [<code>-v 0</code>&#8211;<code>2</code>] [<code>-h</code>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>yuvfps</code> is a general (UP or DOWN) resampling utility that is provided to allow the generation of video streams with the frame rates required for each standard video format. <code>yuvfps</code> reads a YUV4MPEG stream from the standard input and outputs a YUV4MPEG stream to the standard output in which frames from the original ones are skipped (downsampling) or duplicated (upsampling). This allows for other mjpegtools that require a specific frame rate to process the stream. </p>
 <p> <code>yuvfps</code> uses by default Bresenham&#8217;s algorithm to do the resampling so that the new video stream is similar to the original one. Note, however, that downscaling is a non-reversible operation because frames are dropped. Moreover, the resulting video stream may not have the exact same duration as the original one if the new frame rate is not a whole multiple of the original rate.<br />
 &nbsp;<wbr>&nbsp;<wbr> As an alternative to simply dropping or duplicating frames each output frame/field can be produced as a weighted average of the two temporally closest input frames/fields. In this mode, <code>yuvfps</code> can also change the interlacing mode of the stream. </p>

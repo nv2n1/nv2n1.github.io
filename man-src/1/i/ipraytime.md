@@ -1,5 +1,4 @@
 ---
-
 title: "ipraytime(1)"
 name: "ipraytime"
 section: "1"
@@ -10,7 +9,9 @@ description: "ipraytime – An Islamic Prayer Times Calculator"
 
 <h2>NAME</h2>
 <p> ipraytime &#8211; An Islamic Prayer Times Calculator</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ipraytime</code> [<code>&#8211;date</code> yyyymmdd<i>]</i> [<code>&#8211;latitude</code> real_num<i>]</i> [<code>&#8211;longitude</code> real_num<i>]</i> [<code>&#8211;utcdiff</code> real_num<i>]</i> [<code>&#8211;method</code> int_num<i>]</i> [<code>&#8211;ishaangle</code> real_num<i>]</i> [<code>&#8211;fajrangle</code> real_num<i>]</i> [<code>&#8211;dst</code> int_num<i>]</i> [<code>&#8211;dst-start</code> yyyymmdd<i>]</i> [<code>&#8211;dst-end</code> yyyymmdd<i>]</i> [<code>&#8211;round</code> int_num<i>]</i> [<code>&#8211;extreme</code> int_num<i>]</i> [<code>&#8211;sea-level</code> int_num<i>]</i> [<code>&#8211;month</code> [int_num]<i>]</i> [<code>&#8211;year</code> [int_num]<i>]</i> [<code>&#8211;file</code> pref_file<i>]</i> [<code>&#8211;end</code>] [<code>&#8211;brief</code>] [<code>&#8211;help</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>ipraytime</code> program is a generator of Islamic prayer time schedules for any given location. <code>ipraytime</code> also calculates the appropriate Qibla direction (heading towards the Kabaa) based on the given location. <code>ipraytime</code> in its single day format is also capable of calculating Imsaak times (ie. the times when one is to start fasting). <code>ipraytime</code> is also capable of generating a schedule for an entire month or year based on command-line arguments. The program is also able to print the schedules for the rest of the current month so as to skip days that have already passed. <code>ipraytime</code> also has a minimalistic option to simply show a one liner of the prayer times in its single day format. </p>
 <p> <code>ipraytime</code> has multiple ways of conveying info and settings to it. The order of precedence (from highest to lowest) is, the command-line followed by the environment variable setting (IPT_DATA) to the data being presented in <code>ipraytime</code>&#8216;s RC file (<i>~/.iprayrc</i>) in one&#8217;s home directory. If none of the above is found, <code>ipraytime</code> defaults to using Makkah&#8217;s location with the host machine&#8217;s current date settings.</p>
 <h2>OPTIONS</h2>

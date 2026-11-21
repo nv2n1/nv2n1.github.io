@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_global_init(3)"
 name: "gnutls_global_init"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_global_init – API function"
 
 <h2>NAME</h2>
 <p> gnutls_global_init &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_global_init( </code><i>void</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt> void</dt>
 <dd></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function performs any required precalculations, detects the supported CPU capabilities and initializes the underlying cryptographic backend. In order to free any resources taken by this call you should <code>gnutls_global_deinit()</code> when gnutls usage is no longer needed. </p>
 <p> This function increments a global counter, so that <code>gnutls_global_deinit()</code> only releases resources when it has been called as many times as <code>gnutls_global_init()</code>. This is useful when GnuTLS is used by more than one library in an application. This function can be called many times, but will only do something the first time. </p>
 <p> Since GnuTLS 3.3.0 this function is only required in systems that do not support library constructors and static linking. This function also became thread safe. </p>

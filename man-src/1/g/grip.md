@@ -1,5 +1,4 @@
 ---
-
 title: "grip(1)"
 name: "grip"
 section: "1"
@@ -10,7 +9,9 @@ description: "Grip – Grip is a cd-player and cd-ripper for the Gnome desktop."
 
 <h2>NAME</h2>
 <p> Grip &#8211; Grip is a cd-player and cd-ripper for the Gnome desktop.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>grip</code> [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Grip is a cd-player and cd-ripper for the Gnome desktop. It has the ripping capabilities of <code><a href="/docs/linux/man/1-cd-paranoia/">cd-paranoia</a></code>(1) builtin, but can also use external rippers (such as <code>cdda2wav</code>(1)). It also provides an automated frontend for audio encoders, letting you take a disc and transform it easily straight into compressed audio files. Internet disc lookups are supported for retrieving track information from disc database servers.</p>
 <h2>OPTIONS</h2>
 <dl>

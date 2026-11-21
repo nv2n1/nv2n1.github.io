@@ -1,5 +1,4 @@
 ---
-
 title: "cb_s(3)"
 name: "cb_s"
 section: "3"
@@ -7,7 +6,15 @@ letter: "c"
 url: "/docs/linux/man/3-cb_s/"
 ---
 
-cb_s - 
+<h2 class="name">NAME</h2>
+ 
+
+ cb_s - 
+
+<h2>SYNOPSIS</h2>
+
+ 
+ 
 
 <h2>Detailed Description</h2>
 

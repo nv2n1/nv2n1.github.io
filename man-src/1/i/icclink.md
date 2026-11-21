@@ -1,5 +1,4 @@
 ---
-
 title: "icclink(1)"
 name: "icclink"
 section: "1"
@@ -10,7 +9,9 @@ description: "icclink – little cms device link generator."
 
 <h2>NAME</h2>
 <p> icclink &#8211; little cms device link generator.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>icclink</code> [<i>options</i>]<i> &lt;profiles&gt;</i></p>
+<h2>DESCRIPTION</h2>
 <p> lcms is a standalone CMM engine, which deals with the color management. It implements a fast transformation between ICC profiles. <code>icclink </code> is little cms device link generator. </p>
 <p> Links two or more profiles into a single devicelink profile. Colorspaces must be paired except Lab/XYZ, that can be interchanged.</p>
 <h2>OPTIONS</h2>

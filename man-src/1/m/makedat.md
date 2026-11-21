@@ -1,5 +1,4 @@
 ---
-
 title: "makedat(1)"
 name: "makedat"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-makedat/"
 description: "makedat – create GDBM/DB files for maildrop"
 ---
 
+<h2 class="name">NAME</h2>
+<p> makedat &#8211; create GDBM/DB files for maildrop </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>makedat</code> {-src=<i>textfile</i>} {-tmp=<i>tmpfile</i>} {-file=<i>gdbmfile</i>} [-cidr]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The gdbm family of functions in <code>maildrop</code> provides access to GDBM/DB databases &#8211; simple database files. The gdbm family of functions provide a way of quickly storing and looking up key/data pairs. </dd>
 <p> You can use any program to create GDBM/DB database files. <code>makedat</code> is a quick utility to create GDBM or DB files from plain text files. </p>
 <p> The system administrator selects whether <code>maildrop</code> uses GDBM or DB database files and whether <code>makedat</code> creates GDBM or DB database files as well. </p>

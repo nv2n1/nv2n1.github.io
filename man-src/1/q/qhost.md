@@ -1,5 +1,4 @@
 ---
-
 title: "qhost(1)"
 name: "qhost"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-qhost/"
 description: "qhost – show the status of xxQS_NAMExx hosts, queues, jobs"
 ---
 
+<h2 class="name">NAME</h2>
+<p> qhost &#8211; show the status of xxQS_NAMExx hosts, queues, jobs </p>
 <h2>SYNTAX</h2>
 <p> <code>qhost</code> [<code>-F</code> [<i>resource_name</i><code>,</code>&#8230;]] [<code>-help</code>] [<code>-h</code> <i>host_list</i>] [<code>-j</code>] [<code>-l</code> <i>resource</i>[<code>=</code><i>val</i>]<code>,</code>&#8230;] [<code>-ncb</code>] [<code>-u</code> <i>user</i><code>,</code>&#8230;] [<code>-xml</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>qhost</i> shows the current status of the available xxQS_NAMExx hosts, queues and the jobs associated with the queues. Selection options allow you to get information about specific hosts, queues, jobs or users. If multiple selections are done a host is only displayed if all selection criteria for a host are met. Without any options <i>qhost</i> will display a list of all hosts without queue or job information. </p>
 <h2>OPTIONS</h2>
 <dl>

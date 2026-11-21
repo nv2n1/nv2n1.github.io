@@ -1,5 +1,4 @@
 ---
-
 title: "ipsec_portof(3)"
 name: "ipsec_portof"
 section: "3"
@@ -10,11 +9,13 @@ description: "ipsec_portof, ipsec_setportof, ipsec_sockaddrof, ipsec_sockaddrlen
 
 <h2>NAME</h2>
 <p> ipsec_portof, ipsec_setportof, ipsec_sockaddrof, ipsec_sockaddrlenof &#8211; get port field of an ip_address, set port field of an ip_address, get pointer to internal sockaddr of an ip_address, get length of internal sockaddr of an ip_address</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libreswan.h&gt;</code> </p>
 <p> <code>int portof(const ip_address *src);</code><br />
  <code>void setportof(int port, ip_address *dst);</code><br />
  <code>struct sockaddr *sockaddrof(ip_address *src);</code><br />
  <code>size_t sockaddrlenof(const ip_address *src);</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>&lt;libreswan.h&gt;</code> internal type <i>ip_address</i> contains one of the <i>sockaddr</i> types internally. <i>Reliance on this feature is discouraged</i>, but it may occasionally be necessary. These functions provide low-level tools for this purpose. </p>
 <p> <i>Portof</i> and <i>setportof</i> respectively read and write the port-number field of the internal <i>sockaddr</i>. The values are in network byte order. </p>
 <p> <i>Sockaddrof</i> returns a pointer to the internal <i>sockaddr</i>, for passing to other functions. </p>

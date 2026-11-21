@@ -1,5 +1,4 @@
 ---
-
 title: "cvtsudoers(1)"
 name: "cvtsudoers"
 section: "1"
@@ -9,8 +8,11 @@ description: "cvtsudoers – convert between sudoers file formats"
 ---
 
 <p>Sudo 1.9.9</p>
+<h2 class="name">NAME</h2>
 <p> <code>cvtsudoers</code> &#8211; convert between sudoers file formats </p>
+<h2>SYNOPSIS</h2>
 <p> <code>cvtsudoers</code> [-<code>ehMpV</code> ] [-<code>b </code><i>dn</i> ] [-<code>c </code><i>conf_file</i> ] [-<code>d </code><i>deftypes</i> ] [-<code>f </code><i>output_format</i> ] [-<code>i </code><i>input_format</i> ] [-<code>I </code><i>increment</i> ] [-<code>l </code><i>log_file</i> ] [-<code>m </code><i>filter</i> ] [-<code>o </code><i>output_file</i> ] [-<code>O </code><i>start_point</i> ] [-<code>P </code><i>padding</i> ] [-<code>s </code><i>sections</i> ] [<i>input_file &#8230;</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>cvtsudoers</code> utility accepts one or more security policies in either <i>sudoers</i> or LDIF format as input, and generates a single policy of the specified format as output. The default input format is <i>sudoers.</i> The default output format is LDIF. It is only possible to convert a policy file that is syntactically correct. </p>
 <p> If no <i>input_file</i> is specified, or if it is `-&#8216; , the policy is read from the standard input. Input files may be optionally prefixed with a host name followed by a colon (`:&#8217; ) to make the policy rules specific to a host when merging multiple files. By default, the result is written to the standard output. </p>
 <p> The options are as follows:</p>

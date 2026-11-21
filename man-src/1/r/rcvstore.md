@@ -1,5 +1,4 @@
 ---
-
 title: "rcvstore(1)"
 name: "rcvstore"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-rcvstore/"
 description: "rcvstore – asynchronously incorporate mail into a folder"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rcvstore &#8211; asynchronously incorporate mail into a folder </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>/usr/libexec/nmh/rcvstore</code> [<i>+folder</i>] [<code>-create</code> | <code>-nocreate</code>] [<code>-unseen</code> | <code>-nounseen</code>] [<code>-zero</code> | <code>-nozero</code>] [<code>-sequence</code> <i>name</i> &#8230;] [<code>-public</code> | <code>-nopublic</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>Rcvstore</code></p>
 <dd>incorporates a message from the standard input into an <code>nmh</code> folder. This command is typically used in conjunction with mail filtering programs such as <code>slocal</code> and <code>procmail</code>, to filter your mail into different folders. </dd>
 <p> You may specify which folder to use with <i>+folder</i>. If no folder is specified, <code>rcvstore</code> will use the folder given by a non-empty &#8220;Inbox:&#8221; entry in the user&#8217;s profile, else it will use the folder named &#8220;inbox&#8221;. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "hwloc_topology_diff_u(3)"
 name: "hwloc_topology_diff_u"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-hwloc_topology_diff_u/"
 description: "hwloc_topology_diff_u –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hwloc_topology_diff_u &#8211; </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;diff.h&gt;</p>
 <h3>Data Structures</h3>
 <p> struct <code>hwloc_topology_diff_generic_s</code> </p>

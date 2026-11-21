@@ -1,5 +1,4 @@
 ---
-
 title: "dlantp(3)"
 name: "dlantp"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlantp/"
 description: "dlantp.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlantp.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> DOUBLE PRECISION function <code>dlantp</code> (NORM, UPLO, DIAG, N, AP, WORK)<br />
  <i></i><code>DLANTP</code> returns the value of the 1-norm, or the Frobenius norm, or the infinity norm, or the element of largest absolute value of a triangular matrix supplied in packed form.</p>

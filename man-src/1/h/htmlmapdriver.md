@@ -1,5 +1,4 @@
 ---
-
 title: "htmlmapdriver(1)"
 name: "htmlmapdriver"
 section: "1"
@@ -10,8 +9,10 @@ description: "htmlmapdriver"
 
 <h2>NAME</h2>
 <p> <i></i><code>htmlmapdriver</code></p>
+<h2 class="name">NAME</h2>
 <p> <i></i><code>HTMLMAP driver</code> &#8211; driver to create HTML image maps<br />
  <i>(drivers)</i> </p>
+<h2>DESCRIPTION</h2>
 <p> The HTMLMAP driver allows the generation of HTML image maps for area vector data. HTML image maps are used in conjunction with images to provide unique URL targets for different portions of an image. The HTMLMAP driver can create both client-side image maps embedded into HTML files, or server-side image maps used by web server software. </p>
 <p> Note that GRASS display commands that require the MOUSE will not work correctly (or at all!) </p>
 <p> Polygons can at most have 100 vertices (this limit imposed by HTML image map formats, see <code>GRASS_HTMLMAXPOINTS </code> below.) The driver will attempt to trim polygons that have more that 100 vertices by removing vertices with the least amount of angle to the next vertice. Also, any polygon that is entirely bounded by another polygon will be discarded. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "pmd2svg(1)"
 name: "pmd2svg"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmd2svg – manual page for pmd2svg 0.0.3"
 
 <h2>NAME</h2>
 <p> pmd2svg &#8211; manual page for pmd2svg 0.0.3</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pmd2svg</code> [<i>OPTION</i>] <i>INPUT</i></p>
+<h2>DESCRIPTION</h2>
 <p> `pmd2svg&#8217; converts Adobe PageMaker documents to SVG.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "kawa(1)"
 name: "kawa"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-kawa/"
 description: "kawa – Scheme language implemented using on a Java VM"
 ---
 
+<h2 class="name">NAME</h2>
+<p> kawa &#8211; Scheme language implemented using on a Java VM </p>
+<h2>SYNOPSIS</h2>
 <p> <code>kawa</code> <i>[options]</i><br />
  <code>java kawa.repl</code> <i>[options]</i></p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>kawa</code> package, a Scheme dialect written completely in the Java language. Scheme forms are compiled into Java bytecodes for efficiency. </p>
 <p> Scheme is a high-level non-pure functional language in the Lisp family, with lexical scoping dynamically-types. The Kawa dialect of Scheme contains hooks to access and control Java objects. </p>
 <p> Using the <code>kawa</code> script is equivalent to invoking an interpreter of the Java language on the <code>kawa.repl</code> class. </p>

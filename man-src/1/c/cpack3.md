@@ -1,5 +1,4 @@
 ---
-
 title: "cpack3(1)"
 name: "cpack3"
 section: "1"
@@ -10,9 +9,11 @@ description: "cpack – CPack Command-Line Reference"
 
 <h2>NAME</h2>
 <p> cpack &#8211; CPack Command-Line Reference</p>
+<h2>SYNOPSIS</h2>
 <pre>
 cpack3 -G &lt;generator&gt; [&lt;options&gt;]
 </pre>
+<h2>DESCRIPTION</h2>
 <p> The &quot;cpack&quot; executable is the CMake packaging program. CMake-generated build trees created for projects that use the INSTALL_* commands have packaging support. This program will generate the package. </p>
 <p> CMake is a cross-platform build system generator. Projects specify their build process with platform-independent CMake listfiles included in each directory of a source tree with the name CMakeLists.txt. Users build a project by using CMake to generate a build system for a native tool on their platform.</p>
 <h2>OPTIONS</h2>

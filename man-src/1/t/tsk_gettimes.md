@@ -1,5 +1,4 @@
 ---
-
 title: "tsk_gettimes(1)"
 name: "tsk_gettimes"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-tsk_gettimes/"
 description: "tsk_gettimes – Collect MAC times from a disk image into a body file."
 ---
 
+<h2 class="name">NAME</h2>
+<p> tsk_gettimes &#8211; Collect MAC times from a disk image into a body file. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>tsk_gettimes [-vV] [ -f</code> <i>fstype</i> <code>] [ -i</code> <i>imgtype</i> <code>] [ -b</code> <i>dev_sector_size</i> <code>] [ -z</code> <i>zone</i> <code>] [ -s</code> <i>seconds</i> <code>] </code> <i>image [images]</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>tsk_gettimes</code> examines each of the file systems in a disk image and returns the data about them in the MACtime body format (the same as running &#8216;fls -m&#8217; on each file system). The output of this can be used as input to mactime to make a timeline of file activity. The data is printed to STDOUT, which can then be redirected to a file. </p>
 <p> The arguments are as follows:</p>
 <dl>

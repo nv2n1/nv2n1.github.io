@@ -1,5 +1,4 @@
 ---
-
 title: "rustc(1)"
 name: "rustc"
 section: "1"
@@ -10,7 +9,9 @@ description: "rustc – The Rust compiler"
 
 <h2>NAME</h2>
 <p> rustc &#8211; The Rust compiler</p>
+<h2>SYNOPSIS</h2>
 <p> <code>rustc</code> [<i>OPTIONS</i>] <i>INPUT</i> </p>
+<h2>DESCRIPTION</h2>
 <p> This program is a compiler for the Rust language, available at <a rel="nofollow" href="https://www.rust-lang.org.">https://www.rust-lang.org.</a> </p>
 <h2>OPTIONS</h2>
 <dl>

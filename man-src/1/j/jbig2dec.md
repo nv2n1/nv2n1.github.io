@@ -1,5 +1,4 @@
 ---
-
 title: "jbig2dec(1)"
 name: "jbig2dec"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-jbig2dec/"
 description: "jbig2dec – File format converter specialized in JBIG2 decoding"
 ---
 
+<h2 class="name">NAME</h2>
+<p> jbig2dec &#8211; File format converter specialized in JBIG2 decoding</p>
+<h2>SYNOPSIS</h2>
 <p> <code>jbig2dec</code> [<i>options</i>] <i>file.jbig2</i><br />
  <code>jbig2dec</code> [<i>options</i>] <i>global-stream page-stream</i> </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>jbig2dec</code> command converts JBIG2 files to png or pbm files. </p>
 <p> When passed a single <i>file</i> argument it is interpreted as a JBIG2 file stream, with either sequential or random-access organization. </p>
 <p> When passed two stream arguments, they are interpreted as the global and page-specific portions of an embedded organzation, as used in PDF. If a particular page references no global segment stream, /dev/null can be passed for the <i>global-stream</i> argument to request the embedded parser. </p>

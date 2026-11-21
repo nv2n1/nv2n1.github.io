@@ -1,5 +1,4 @@
 ---
-
 title: "observations2map(1)"
 name: "observations2map"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-observations2map/"
 description: "observations2map – Transforms a set of pairs <pose,observation> into metric maps."
 ---
 
+<h2 class="name">NAME</h2>
+<p> observations2map &#8211; Transforms a set of pairs &lt;pose,observation&gt; into metric maps. </p>
+<h2>SYNOPSIS</h2>
 <p> observations2map <i>config_file.ini</i> <i>observations.simplemap</i> <i>output_maps_prefix</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>observations2map</code> reads a multi metric map description from the config file and insert all the observations into it. Then it saves all the metric maps to independent files. It can be used to generate point maps, occupancy grid maps, or any kind of maps from a sequence of localized observations.</p>
 <h2>BUGS</h2>
 <p> Please report bugs at <a rel="nofollow" href="http://sourceforge.net/tracker/?group_id=205280">http://sourceforge.net/tracker/?group_id=205280</a>&amp;atid=993006</p>

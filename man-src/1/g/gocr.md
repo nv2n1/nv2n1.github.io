@@ -1,5 +1,4 @@
 ---
-
 title: "gocr(1)"
 name: "gocr"
 section: "1"
@@ -10,7 +9,9 @@ description: "gocr – command line text recognition tool"
 
 <h2>NAME</h2>
 <p> gocr &#8211; command line text recognition tool</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gocr</code> [<i>OPTION</i>] [<code>-i</code>] <i>pnm-file</i></p>
+<h2>DESCRIPTION</h2>
 <p> gocr is an optical character recognition program that can be used from the command line. It takes input in PNM, PGM, PBM, PPM, or PCX format, and writes recognized text to <code>stdout</code>. If the <i>pnm file</i> is a single dash, PNM data is read from <code>stdin</code>. If gzip, bzip2 and netpbm-progs are installed and your system supports <a href="/docs/linux/man/3-popen/">popen</a>(3) also pnm.gz, pnm.bz2, png, jpg, jpeg, tiff, gif, bmp, ps (only single pages) and eps are supported as input files (not as input stream), where pnm can be replaced by one of ppm, pgm and pbm.</p>
 <h2>OPTIONS</h2>
 <dl>

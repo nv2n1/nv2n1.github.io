@@ -1,5 +1,4 @@
 ---
-
 title: "sshpass(1)"
 name: "sshpass"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-sshpass/"
 description: "sshpass – noninteractive ssh password provider"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sshpass &#8211; noninteractive ssh password provider </p>
+<h2>SYNOPSIS</h2>
 <p> <code>sshpass</code> [<code>-f</code><i>filename</i>|<code>-d</code><i>num</i>|<code>-p</code><i>password</i>|<code>-e</code>] [<i>options</i>]<i> command arguments</i> </p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents the <code>sshpass</code> command. </p>
 <p> <code>sshpass</code> is a utility designed for running <code>ssh</code> using the mode referred to as &quot;keyboard-interactive&quot; password authentication, but in non-interactive mode. </p>
 <p> ssh uses direct TTY access to make sure that the password is indeed issued by an interactive keyboard user. Sshpass runs ssh in a dedicated tty, fooling it into thinking it is getting the password from an interactive user. </p>

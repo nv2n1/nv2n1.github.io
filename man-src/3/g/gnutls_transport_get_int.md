@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_transport_get_int(3)"
 name: "gnutls_transport_get_int"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_transport_get_int – API function"
 
 <h2>NAME</h2>
 <p> gnutls_transport_get_int &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_transport_get_int(gnutls_session_t </code><i>session</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_session_t session</dt>
 <dd> is a <code>gnutls_session_t</code> structure.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Used to get the first argument of the transport function (like PUSH and PULL). This must have been set using <code>gnutls_transport_set_int()</code>.</p>
 <h2>RETURNS</h2>
 <p> The first argument of the transport function.</p>

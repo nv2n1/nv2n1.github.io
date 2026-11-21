@@ -1,5 +1,4 @@
 ---
-
 title: "getauxval(3)"
 name: "getauxval"
 section: "3"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/3-getauxval/"
 description: "getauxval – retrieve a value from the auxiliary vector"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getauxval &#8211; retrieve a value from the auxiliary vector </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/auxv.h&gt;
 unsigned long getauxval(unsigned long type);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>getauxval</code>() function retrieves values from the auxiliary vector, a mechanism that the kernel&#8217;s ELF binary loader uses to pass certain information to user space when a program is executed. </p>
 <p> Each entry in the auxiliary vector consists of a pair of values: a type that identifies what this entry represents, and a value for that type. Given the argument <i>type</i>, <code>getauxval</code>() returns the corresponding value. </p>
 <p> The value returned for each <i>type</i> is given in the following list. Not all <i>type</i> values are present on all architectures.</p>

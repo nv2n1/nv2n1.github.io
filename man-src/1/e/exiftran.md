@@ -1,5 +1,4 @@
 ---
-
 title: "exiftran(1)"
 name: "exiftran"
 section: "1"
@@ -9,6 +8,9 @@ description: "exiftran – transform digital camera jpeg images # #"
 ---
 
 <p>#</p>
+<h2 class="name">NAME</h2>
+<p> exiftran &#8211; transform digital camera jpeg images # # </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>exiftran</code> [<i>options</i>] <i>file1 file2 &#8230; fileN</i></dt>
 <dd>
@@ -18,6 +20,7 @@ description: "exiftran – transform digital camera jpeg images # #"
 <dd>
 </dd><dt><code>exiftran</code> -d <i>file1 file2 &#8230; fileN</i> &gt; <i>exifinfo</i></dt>
 <dd> # #</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>Exiftran</code> is a command line utility to transform digital camera <i>jpeg</i> images. It can do lossless rotations like <code><a href="/docs/linux/man/1-jpegtran/">jpegtran</a></code>(1), but unlike <code><a href="/docs/linux/man/1-jpegtran/">jpegtran</a></code>(1) it cares about the <i>EXIF</i> data: It can rotate images automatically by checking the exif orientation tag; it updates the exif informations if needed (image dimension, orientation); it also rotates the exif thumbnail. It can process multiple images at once. # #</p>
 <h2>TRANSFORM OPTIONS</h2>
 <dl>

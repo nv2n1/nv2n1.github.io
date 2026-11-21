@@ -1,5 +1,4 @@
 ---
-
 title: "iswprint(3)"
 name: "iswprint"
 section: "3"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/3-iswprint/"
 description: "iswprint – test for printing wide character"
 ---
 
+<h2 class="name">NAME</h2>
+<p> iswprint &#8211; test for printing wide character </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;wctype.h&gt;
 int iswprint(wint_t wc);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>iswprint</code>() function is the wide-character equivalent of the <code>isprint</code>(3) function. It tests whether <i>wc</i> is a wide character belonging to the wide-character class &quot;print&quot;. </p>
 <p> The wide-character class &quot;print&quot; is disjoint from the wide-character class &quot;cntrl&quot;. </p>
 <p> The wide-character class &quot;print&quot; contains the wide-character class &quot;graph&quot;.</p>

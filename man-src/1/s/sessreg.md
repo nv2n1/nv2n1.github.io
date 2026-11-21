@@ -1,5 +1,4 @@
 ---
-
 title: "sessreg(1)"
 name: "sessreg"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-sessreg/"
 description: "sessreg – manage utmpx/wtmpx entries for non-init clients"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sessreg &#8211; manage utmpx/wtmpx entries for non-init clients </p>
+<h2>SYNOPSIS</h2>
 <p> <code>sessreg</code> [-w <i>wtmpx-file</i>] [-u <i>utmpx-file</i>] [-L <i>lastlog-file</i>] [-l <i>line-name</i>] [-h <i>host-name</i>] [-s <i>slot-number</i>] [-x <i>Xservers-file</i>] [-t <i>ttys-file</i>] [-V] [-a] [-d] <i>user-name</i></p>
+<h2>DESCRIPTION</h2>
 <p> <i>Sessreg</i> is a simple program for managing utmpx/wtmpx and lastlog entries for xdm sessions. </p>
 <p> This version of <i>sessreg</i> is built using the modern POSIX <code>pututxline</code>(3c) interfaces, which no longer require the slot-number, ttys-file, or Xservers-file mappings. For compatibility with older versions and other operating systems, the <code>-s</code>, <code>-t</code>, and <code>-x</code> flags are accepted, but ignored.</p>
 <h2>USAGE</h2>

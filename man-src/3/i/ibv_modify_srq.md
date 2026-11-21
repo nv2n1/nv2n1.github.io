@@ -1,5 +1,4 @@
 ---
-
 title: "ibv_modify_srq(3)"
 name: "ibv_modify_srq"
 section: "3"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/3-ibv_modify_srq/"
 description: "ibv_modify_srq – modify attributes of a shared receive queue (SRQ)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ibv_modify_srq &#8211; modify attributes of a shared receive queue (SRQ) </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 int ibv_modify_srq(struct ibv_srq *srq,
                    struct ibv_srq_attr *srq_attr,
                    int srq_attr_mask);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>ibv_modify_srq()</code> modifies the attributes of SRQ <i>srq</i> with the attributes in <i>srq_attr</i> according to the mask <i>srq_attr_mask</i>. The argument <i>srq_attr</i> is an ibv_srq_attr struct, as defined in &lt;infiniband/verbs.h&gt;. </p>
 <pre><code>
 struct ibv_srq_attr {

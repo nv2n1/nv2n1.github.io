@@ -1,5 +1,4 @@
 ---
-
 title: "transset(1)"
 name: "transset"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-transset/"
 description: "transset – Set transparency on a window"
 ---
 
+<h2 class="name">NAME</h2>
+<p> transset &#8211; Set transparency on a window </p>
+<h2>SYNOPSIS</h2>
 <p> <code>transset</code> [<i>-options &#8230;</i>] [<i>opacity</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>transset</code> is a simple program for X servers supporting the XFIXES, DAMAGE, and COMPOSITE extensions. It lets the user set the transparency on a window. </p>
 <p> The <i>opacity</i> value is a number from 0 to 1, with zero being fully transparent and 1 being fully opaque. If no <i>opacity</i> argument is given, a default value of 0.75 is used for the opacity value. If neither <code>&#8211;inc</code> nor <code>&#8211;dec</code> are given, the opacity is treated as an absolute value and set to the given opacity value. If <code>&#8211;inc</code> or <code>&#8211;dec</code> is specified, then the opacity is treated as a relative value to increase or decrease the current opacity by.</p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "heimdal-login(1)"
 name: "heimdal-login"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-heimdal-login/"
 description: "login – authenticate a user and start new session"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>login</code> &#8211; authenticate a user and start new session </p>
+<h2>SYNOPSIS</h2>
 <p> [-<code>fp</code> ] [-<code>a </code><i>level</i> ] [-<code>h </code><i>hostname</i> ] <i>[username]</i></p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents the <code>login</code> program distributed with the Heimdal Kerberos 5 implementation, it may differ in important ways from your system version. </p>
 <p> The <code>login</code> programs logs users into the system. It is intended to be run by system daemons like <a href="/docs/linux/man/8-getty/">getty</a>(8) or telnetd(8). If you are already logged in, but want to change to another user, you should use <a href="/docs/linux/man/1-su/">su</a>(1). </p>
 <p> A username can be given on the command line, else one will be prompted for. </p>

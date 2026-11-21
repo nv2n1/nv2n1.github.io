@@ -1,5 +1,4 @@
 ---
-
 title: "virt-df(1)"
 name: "virt-df"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-virt-df/"
 description: "virt-df – Display free space on virtual filesystems"
 ---
 
+<h2 class="name">NAME</h2>
+<p> virt-df &#8211; Display free space on virtual filesystems </p>
+<h2>SYNOPSIS</h2>
 <p> All guests: </p>
 <pre>
  virt-df [--options]
@@ -18,6 +20,7 @@ virt - df[--options] - d domname virt - df[--options] - a disk.img[-a disk.img..
 </code></pre>
 <p> Old style: </p>
 <p>virt &#8211; df[&#8211;options] domname virt &#8211; df[&#8211;options] disk.img[disk.img&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <tt>&quot;virt-df&quot;</tt> is a command line tool to display free space on virtual machine filesystems. Unlike other tools, it doesn&#8217;t just display the size of disk allocated to a virtual machine, but can look inside disk images to see how much space is really being used. </p>
 <p> If used without any <i>-a</i> or <i>-d</i> arguments, <tt>&quot;virt-df&quot;</tt> checks with libvirt to get a list of all active and inactive guests, and performs a <tt>&quot;df&quot;</tt>-type operation on each one in turn, printing out the results. </p>
 <p> If any <i>-a</i> or <i>-d</i> arguments are specified, <tt>&quot;virt-df&quot;</tt> performs a <tt>&quot;df&quot;</tt>-type operation on either the single named libvirt domain, or on the disk image(s) listed on the command line (which must all belong to a single <font SIZE="-1">VM</font>). <code>In this mode (with arguments), </code>&quot;virt-df&quot;<code> will only work for a single guest</code>. If you want to run on multiple guests, then you have to invoke <tt>&quot;virt-df&quot;</tt> multiple times. </p>

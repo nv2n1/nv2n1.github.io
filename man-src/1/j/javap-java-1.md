@@ -1,5 +1,4 @@
 ---
-
 title: "javap-java-1(1)"
 name: "javap-java-1"
 section: "1"
@@ -11,9 +10,11 @@ description: "javap – The Java Class File Disassembler"
 <h2>Name</h2>
 <p> javap &#8211; The Java Class File Disassembler </p>
 <p> Disassembles class files. </p>
+<h2>SYNOPSIS</h2>
 <pre>
 <code>javap [ </code><code>options</code><code> ] classes</code>
 </pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>javap</code> command disassembles one or more class files. Its output depends on the options used. If no options are used, <code>javap</code> prints out the package, protected, and public fields and methods of the classes passed to it. <code>javap</code> prints its output to stdout. </p>
 <dl>
 <dl>

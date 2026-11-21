@@ -1,5 +1,4 @@
 ---
-
 title: "sty2dtx(1)"
 name: "sty2dtx"
 section: "1"
@@ -8,6 +7,8 @@ url: "/docs/linux/man/1-sty2dtx/"
 description: "sty2dtx — Converts a LaTeX .sty file to a documented .dtx file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sty2dtx &#8212; Converts a LaTeX .sty file to a documented .dtx file </p>
 <h2>VERSION</h2>
 <p> Version: v2.3</p>
 <h2>COPYRIGHT</h2>
@@ -15,6 +16,7 @@ description: "sty2dtx — Converts a LaTeX .sty file to a documented .dtx file"
 <p> This program is free software: you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. </p>
 <p> This program is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT</font> <font SIZE="-1">ANY</font> <font SIZE="-1">WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS</font> <font SIZE="-1">FOR</font> A <font SIZE="-1">PARTICULAR</font> <font SIZE="-1">PURPOSE</font>. See the <font SIZE="-1">GNU</font> General Public License for more details. </p>
 <p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program. If not, see &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>&gt;.</p>
+<h2>DESCRIPTION</h2>
 <p> Converts a .sty file (LaTeX package) to .dtx format (documented LaTeX source), by surrounding macro definitions with &#8216;macro&#8217; and &#8216;macrocode&#8217; environments. The macro name is automatically inserted as an argument to the &#8216;macro&#8217; environemnt. Code lines outside macro definitions are wrapped only in &#8216;macrocode&#8217; environments. Empty lines are removed. The script is not thought to be fool proof and 100% accurate but rather as a good start to convert undocumented style files to .dtx files.</p>
 <h3>Basic Usage</h3>
 <pre>

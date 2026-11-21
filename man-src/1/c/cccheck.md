@@ -1,5 +1,4 @@
 ---
-
 title: "cccheck(1)"
 name: "cccheck"
 section: "1"
@@ -10,7 +9,9 @@ description: "cccheck – Perform static code contracts verification for CLR ass
 
 <h2>NAME</h2>
 <p> cccheck &#8211; Perform static code contracts verification for CLR assemblies.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cccheck &#8211;assembly=&lt;assembly&gt; [options]</code></p>
+<h2>DESCRIPTION</h2>
 <p> Perform static code contracts verification to find bugs and inconsistences between code and specification. This includes non-null, integer analyses. </p>
 <p> The assembly must have been built with the symbol CONTRACTS_FULL defined, otherwise the calls to the contract methods will have been removed by the compiler. </p>
 <p> Currently only Contract.Assume() and Contract.Assert() methods are supported. Only non-null analysis is supported, the consecutive analyses are in development. An error message will be shown if cccheck is unable to process all or some of the methods of specified assembly.</p>

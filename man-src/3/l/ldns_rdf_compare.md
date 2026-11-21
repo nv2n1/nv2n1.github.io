@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_rdf_compare(3)"
 name: "ldns_rdf_compare"
 section: "3"
@@ -10,6 +9,7 @@ description: "ldns_rdf_size, ldns_rdf_get_type, ldns_rdf_data, ldns_rdf_compare"
 
 <h2>NAME</h2>
 <p> ldns_rdf_size, ldns_rdf_get_type, ldns_rdf_data, ldns_rdf_compare </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -17,6 +17,7 @@ description: "ldns_rdf_size, ldns_rdf_get_type, ldns_rdf_data, ldns_rdf_compare"
 <p> ldns_rdf_type ldns_rdf_get_type(const ldns_rdf *rd); </p>
 <p> uint8_t* ldns_rdf_data(const ldns_rdf *rd); </p>
 <p> int ldns_rdf_compare(const ldns_rdf *rd1, const ldns_rdf *rd2); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_rdf_size</i>()</dt>
 <dd>returns the size of the rdf. .br <code>*rd</code>: the rdf to read from .br Returns uint16_t with the size</dd></dl>

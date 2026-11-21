@@ -1,5 +1,4 @@
 ---
-
 title: "mateconf-gsettings-data-convert(1)"
 name: "mateconf-gsettings-data-convert"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mateconf-gsettings-data-convert/"
 description: "mateconf-gsettings-data-convert – MateConf to GSettings data migration"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mateconf-gsettings-data-convert &#8211; MateConf to GSettings data migration </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mateconf-gsettings-data-convert</code> [option&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>mateconf-gsettings-data-convert</code></p>
 <dd>reads values out of the users MateConf database and stores them in GSettings. </dd>
 <p> The information about the mapping from MateConf keys to GSettings keys is taken from files in <i>/usr/share/MateConf/gsettings</i>. Each file in that directory is read as a key file, with sections for each GSettings schema that is being converted. The entries in each section map GSettings keys to paths in the MateConf database. Currently, <code>mateconf-gsettings-data-convert</code> supports all basic MateConf types as well as lists of strings and lists of integers. </p>

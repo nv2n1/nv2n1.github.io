@@ -1,5 +1,4 @@
 ---
-
 title: "iso-info(1)"
 name: "iso-info"
 section: "1"
@@ -10,7 +9,9 @@ description: "iso-info – shows Information about an ISO 9660 image"
 
 <h2>NAME</h2>
 <p> iso-info &#8211; shows Information about an ISO 9660 image</p>
+<h2>SYNOPSIS</h2>
 <p> <code>iso-info</code> [<i>OPTION</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt><code>-d</code>, <code>&#8211;debug</code>=<i>UINT</i></dt>
 <dd> Set debugging to LEVEL</dd>

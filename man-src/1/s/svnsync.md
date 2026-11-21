@@ -1,5 +1,4 @@
 ---
-
 title: "svnsync(1)"
 name: "svnsync"
 section: "1"
@@ -10,6 +9,7 @@ description: "svnsync – Subversion repository synchronization tool"
 
 <h2>NAME</h2>
 <p> svnsync &#8211; Subversion repository synchronization tool</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>svnsync</code> <i>command</i> <i>dest-url</i> [<i>options</i>] [<i>args</i>]</dt>
 <dd></dd></dl>

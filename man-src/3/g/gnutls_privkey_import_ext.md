@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_privkey_import_ext(3)"
 name: "gnutls_privkey_import_ext"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_privkey_import_ext – API function"
 
 <h2>NAME</h2>
 <p> gnutls_privkey_import_ext &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/abstract.h&gt;</code> </p>
 <p> <code>int gnutls_privkey_import_ext(gnutls_privkey_t </code><i>pkey</i><code>, gnutls_pk_algorithm_t </code><i>pk</i><code>, void * </code><i>userdata</i><code>, gnutls_privkey_sign_func </code><i>sign_func</i><code>, gnutls_privkey_decrypt_func </code><i>decrypt_func</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -26,6 +26,7 @@ description: "gnutls_privkey_import_ext – API function"
 <dd> callback for decryption operations</dd>
 <dt>unsigned int flags</dt>
 <dd> Flags for the import</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will associate the given callbacks with the <code>gnutls_privkey_t</code> structure. At least one of the two callbacks must be non-null. </p>
 <p> See also <code>gnutls_privkey_import_ext2()</code>.</p>
 <h2>RETURNS</h2>

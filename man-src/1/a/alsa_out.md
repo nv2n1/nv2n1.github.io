@@ -1,5 +1,4 @@
 ---
-
 title: "alsa_out(1)"
 name: "alsa_out"
 section: "1"
@@ -10,8 +9,10 @@ description: "alsa_in, alsa_out – Jack clients that perform I/O with an altern
 
 <h2>NAME</h2>
 <p> <code>alsa_in</code>, <code>alsa_out</code> &#8211; Jack clients that perform I/O with an alternate audio interface</p>
+<h2>SYNOPSIS</h2>
 <p> <code>alsa_in</code> [<i>options</i>]<br />
  <code>alsa_out</code> [<i>options</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> A JACK client that opens a specified audio interface (different to the one used by the JACK server, if any) and moves audio data between its JACK ports and the interface. alsa_in will provide data from the interface (potentially for capture); alsa_out will deliver data to it (for playback). </p>
 <p> The audio interface used by alsa_in/alsa_out does not need to be synchronized with JACK backend (or the hardware it might be using). alsa_in/alsa_out tries to resample the output stream in an attempt to compensate for drift between the two clocks. </p>
 <p> As of jack-0.116.3 this works almost perfectly. It takes some time, to reach absolute resample-rate stability. So give it some minutes (its intended to be running permanently anyways) </p>

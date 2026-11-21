@@ -1,5 +1,4 @@
 ---
-
 title: "sysinfo(2)"
 name: "sysinfo"
 section: "2"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/2-sysinfo/"
 description: "sysinfo – return system information"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sysinfo &#8211; return system information </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/sysinfo.h&gt;</code> </p>
 <p> <code>int sysinfo(struct sysinfo *</code><i>info</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>sysinfo</code>() returns certain statistics on memory and swap usage, as well as the load average. </p>
 <p> Until Linux 2.3.16, <code>sysinfo</code>() returned information in the following structure: </p>
 <p> struct sysinfo {<br />

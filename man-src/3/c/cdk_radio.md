@@ -1,5 +1,4 @@
 ---
-
 title: "cdk_radio(3)"
 name: "cdk_radio"
 section: "3"
@@ -10,6 +9,7 @@ description: "cdk_radio – curses radio list widget."
 
 <h2>NAME</h2>
 <p> cdk_radio &#8211; curses radio list widget.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>
 <p> #include &lt;cdk.h&gt; </p>
 <pre><code>
@@ -133,6 +133,7 @@ void setCDKRadioVerticalChar(
     chtype character);
 </code></pre>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> The Cdk radio widget creates a radio list. The following are functions which create or manipulate the Cdk radio box widget.</p>
 <h2>AVAILABLE FUNCTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "openbox-kde-session(1)"
 name: "openbox-kde-session"
 section: "1"
@@ -11,6 +10,7 @@ description: "openbox-kde-session — Run a KDE session with Openbox as the wind
 <h2>NAME</h2>
 <p> openbox-kde-session &#8212; Run a KDE session with Openbox as the window manager<br />
 &nbsp;<wbr></p>
+<h2>DESCRIPTION</h2>
 <p> <code>openbox-kde-session</code> runs a KDE session with Openbox as the window manager. </p>
 <p> <code>openbox-kde-session</code> does not take any command line arguments.</p>
 <h2>SEE ALSO</h2>

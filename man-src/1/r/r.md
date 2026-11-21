@@ -1,5 +1,4 @@
 ---
-
 title: "r(1)"
 name: "r"
 section: "1"
@@ -12,6 +11,7 @@ description: "r.what.color – Queries colors for a raster map layer."
 <p> <i></i><code>r.what.color</code> &#8211; Queries colors for a raster map layer.</p>
 <h2>KEYWORDS</h2>
 <p> raster</p>
+<h2>SYNOPSIS</h2>
 <p> <code>r.what.color</code><br />
  <code>r.what.color help</code><br />
  <code>r.what.color</code> [-<code>i</code>] <code>input</code>=<i>string</i> [<code>value</code>=<i>float</i>[,<i>float</i>,&#8230;]] [<code>format</code>=<i>string</i>] [&#8211;<code>verbose</code>] [&#8211;<code>quiet</code>]</p>
@@ -38,6 +38,7 @@ description: "r.what.color – Queries colors for a raster map layer."
 <dd>
  Output format (printf-style)<br />
  Default: <i>%d:%d:%d</i></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <i>r.what.color</i> outputs the color associated with user-specified category values in a raster input map. </p>
 <p> Values may be specified either using the <code>values=</code> option, or by specifying the <code>-i</code> flag and passing the values on stdin, one per line. </p>
 <p> For each value which is specified, a line of output will be generated consisting of the category value followed by the color, e.g.:<br />

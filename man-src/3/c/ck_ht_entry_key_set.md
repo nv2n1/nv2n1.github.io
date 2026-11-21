@@ -1,5 +1,4 @@
 ---
-
 title: "ck_ht_entry_key_set(3)"
 name: "ck_ht_entry_key_set"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_ht_entry_key_set – initialize pointer to key in hash table en
 <p> <code>ck_ht_entry_key_set</code> &#8211; initialize pointer to key in hash table entry</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_ht.h Ft void Fn ck_ht_entry_key_set ck_ht_entry_t *entry const void *key uint16_t key_length</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_ht_entry_key_set function will initialize the object pointed to by Fa entry with a key pointed to by the Fa key argument. The length of the key is specified by Fa key_length. The maximum value of Fa key_length is defined by the CK_HT_KEY_LENGTH macro. This function is typically used to initialize an entry for ck_ht_get_spmc3 and ck_ht_remove_spmc3 operations. It is expected that the entry will be associated with a hash table initialized with <code>CK_HT_MODE_BYTESTRING</code> (see ck_ht_init3 for more information).</p>
 <h2>RETURN VALUES</h2>
 <p> Fn ck_ht_entry_key_set has no return value.</p>

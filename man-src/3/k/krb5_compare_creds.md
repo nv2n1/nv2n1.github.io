@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-krb5_compare_creds/"
 description: "Heimdal Kerberos 5 library –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Heimdal Kerberos 5 library &#8211; </p>
 <h3>Functions</h3>
 <p> KRB5_LIB_FUNCTION<br />
  krb5_error_code KRB5_LIB_CALL <code>krb5_add_et_list</code> (krb5_context context, void(*func)(struct et_list **))&quot; </p>

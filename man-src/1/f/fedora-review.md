@@ -1,5 +1,4 @@
 ---
-
 title: "fedora-review(1)"
 name: "fedora-review"
 section: "1"
@@ -10,10 +9,12 @@ description: "fedora-review – Customized review template for Fedora packages"
 
 <h2>NAME</h2>
 <p> fedora-review &#8211; Customized review template for Fedora packages </p>
+<h2>SYNOPSIS</h2>
 <p> <code>fedora-review</code> [options] -b &lt;bug&gt;<br />
  <code>fedora-review</code> [options] [&#8211;prebuilt] -n &lt;package name&gt;<br />
  <code>fedora-review</code> [options] [&#8211;prebuilt] -rn &lt;srpm path&gt;<br />
  <code>fedora-review</code> [options] -u &lt;url&gt; </p>
+<h2>DESCRIPTION</h2>
 <p> Makes reviews of rpm packages for Fedora easier by providing a customized review template, automating some trivial tasks. The tool runs a number of checks to test whether a package complies to the Fedora Packaing Guidelines before creating the template. Through a bash API the checks can be extended. We have at the moment checks for C/C++, R, Java and Perl packages. </p>
 <h2>USAGE</h2>
 <p> Basic usage:</p>

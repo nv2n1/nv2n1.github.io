@@ -1,5 +1,4 @@
 ---
-
 title: "ebb(1)"
 name: "ebb"
 section: "1"
@@ -10,7 +9,9 @@ description: "extractbb, ebb – extract bounding box information from graphics 
 
 <h2>NAME</h2>
 <p> extractbb, ebb &#8211; extract bounding box information from graphics files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>extractbb</code> [<code>-v</code>|<code>-q</code>] [<code>-O</code>] [<code>-m</code>|<code>-x</code>] <i>file</i>&#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> For each <font SIZE="-1">JPEG</font>, <font SIZE="-1">PNG</font>, or <font SIZE="-1">PDF</font> file given on the command line, <code>extractbb</code> extracts the bounding box information and writes it into a file with extension <code>.xbb</code>, together with some header information. These files can then be used by <code>dvipdfmx</code> or other programs. For <font SIZE="-1">PDF</font> files, the number of pages and the <font SIZE="-1">PDF</font> version number are reported as well. The input filename extension may be in upper or lower case. </p>
 <p> If called as <code>ebb</code>, the output is written in the &#8220;bb&#8221; format (and with extension <code>.bb</code>) as used by <code>dvipdfm</code>. <code>Xbb</code> may be defined as a synomym for <code>extractbb</code> on your system. </p>
 <h2>OPTIONS</h2>

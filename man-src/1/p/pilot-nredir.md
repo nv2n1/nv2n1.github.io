@@ -1,5 +1,4 @@
 ---
-
 title: "pilot-nredir(1)"
 name: "pilot-nredir"
 section: "1"
@@ -12,7 +11,9 @@ description: "pilot-nredir – Accept connection and redirect via Network Hotsyn
 <p> pilot-nredir &#8211; Accept connection and redirect via Network Hotsync Protocol.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Tools </p>
+<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr><i>pilot-nredir</i>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;port</code>&nbsp;<wbr>&lt;<code>port</code>&gt;]&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr>[<code>-q</code>|<code>&#8211;quiet</code>]&nbsp;<wbr>[<code>-?</code>|<code>&#8211;help</code>]&nbsp;<wbr>[<code>&#8211;usage</code>]&nbsp;<wbr>[<code>-n</code>|<code>&#8211;net</code>] </p>
+<h2>DESCRIPTION</h2>
 <p> This will bind your locally connected device to a network port, and redirect them through the network device to a listening server as specified in the LANSync Preferences panel on your Palm. </p>
 <h2>PILOT-NREDIR COMMAND</h2>
 <p> -n, &#8211;net </p>

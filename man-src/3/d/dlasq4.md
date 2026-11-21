@@ -1,5 +1,4 @@
 ---
-
 title: "dlasq4(3)"
 name: "dlasq4"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlasq4/"
 description: "dlasq4.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlasq4.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlasq4</code> (I0, N0, Z, PP, N0IN, DMIN, DMIN1, DMIN2, DN, DN1, DN2, TAU, TTYPE, G)<br />
  <i></i><code>DLASQ4</code> computes an approximation to the smallest eigenvalue using values of d from the previous transform. Used by sbdsqr.</p>

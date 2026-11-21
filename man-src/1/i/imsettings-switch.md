@@ -1,5 +1,4 @@
 ---
-
 title: "imsettings-switch(1)"
 name: "imsettings-switch"
 section: "1"
@@ -10,7 +9,9 @@ description: "imsettings-switch – Switch Input Method"
 
 <h2>NAME</h2>
 <p> imsettings-switch &#8211; Switch Input Method</p>
+<h2>SYNOPSIS</h2>
 <p> <code>imsettings-switch</code> [ <code>-hnqrx</code> ] [ <code>&#8211;no-update</code> ] [ <code>&#8211;quiet</code> ] [ <code>&#8211;restart</code> ] [ <code>&#8211;read-xinputrc</code> ] [ <code>&#8211;help</code> ] [Input Method name | configuration filename]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>imsettings-switch</code> switches Input Method which is managed under imsettings. Either <i>Input Method name</i> or <i>configuration filename</i> are required unless <code>&#8211;read-xinputrc</code> option is specified to determine the target from <i>$HOME/.config/imsettings/xinputrc</i> or <i>$xinputrcdir/xinputrc</i>.</p>
 <h2>OPTIONS</h2>
 <p> This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "pstopnm(1)"
 name: "pstopnm"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pstopnm/"
 description: "pstopnm – convert a PostScript file into a portable anymap"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pstopnm &#8211; convert a PostScript file into a portable anymap </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pstopnm</code> [<code>-stdout</code>] [<code>-forceplain</code>] [<code>-help</code>] [<code>-llx</code> <i>s</i>] [<code>-lly</code> <i>s</i>] [<code>-landscape</code>] [<code>-portrait</code>] [<code>-nocrop</code>] [<code>-pbm</code> |<code>-pgm</code> |<code>-ppm</code>] [<code>-urx</code> <i>s</i>] [<code>-ury</code> <i>s</i>] [<code>-verbose</code>] [<code>-xborder</code> <i>n</i>] [<code>-xmax</code> <i>n</i>] [<code>-xsize</code> <i>f</i>] [<code>-yborder</code> <i>f</i>] [<code>-ymax</code> <i>n</i>] [<code>-ysize</code> <i>n</i>] <i>psfile</i>[<i></i><code>.ps</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> Reads a PostScript file as input. Produces PBM, PGM, or PPM files as output. This program simply uses <code>GhostScript</code> to render a PostScript file with its PNM device drivers. If you don&#8217;t have <code>GhostScript</code> installed (invoked by a <code>gs</code> command), or the version you have installed was not built with the relevant PNM device drivers, <code>pstopnm</code> will fail. You can see if you have the proper environment by issuing the command <code>gs &#8211;help </code>. If it responds and lists under &quot;Available Devices&quot; <code>pbm</code>, <code>pbmraw</code>, <code>pgm</code>, <code>pgmraw</code>, <code>pnm</code>, <code>pnmraw</code>, <code>ppm</code>, or <code>ppmraw</code>, you&#8217;re in business. </p>
 <p> <code>pstopnm</code> does not use the Netpbm libraries to generate the output files, so may not be entirely consistent with most Netpbm programs. </p>
 <p> <i>psfile</i>[<i></i><code>.ps</code>] is the name of the input file. <code>.pstopnm</code> will add the <code>ps</code> to the end of the name you specify if no file exists by the exact name you specify, but one with added does. Use <code>&#8211;</code> to indicate Standard Input. </p>

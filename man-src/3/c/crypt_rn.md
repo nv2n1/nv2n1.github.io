@@ -1,5 +1,4 @@
 ---
-
 title: "crypt_rn(3)"
 name: "crypt_rn"
 section: "3"
@@ -9,10 +8,13 @@ description: "crypt , crypt_r , crypt_rn , crypt_ra – passphrase hashing"
 ---
 
 <p>Openwall Project</p>
+<h2 class="name">NAME</h2>
 <p> <code>crypt , crypt_r , crypt_rn , crypt_ra</code> &#8211; passphrase hashing </p>
 <h2>LIBRARY</h2>
 <p> Lb libcrypt</p>
+<h2>SYNOPSIS</h2>
 <p> In crypt.h Ft char * Fo crypt Fa const char *phrase Fa const char *setting Fc Ft char * Fo crypt_r Fa const char *phrase Fa const char *setting Fa struct crypt_data *data Fc Ft char * Fo crypt_rn Fa const char *phrase Fa const char *setting Fa struct crypt_data *data Fa int size Fc Ft char * Fo crypt_ra Fa const char *phrase Fa const char *setting Fa void **data Fa int *size Fc</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>crypt</code> <code>crypt_r</code> <code>crypt_rn</code> and <code>crypt_ra</code> functions irreversibly &#8220;hash&#8221; Fa phrase for storage in the system password database (<a href="/docs/linux/man/5-shadow/">shadow</a>(5) ) using a cryptographic &#8220;hashing method.&#8221; The result of this operation is called a &#8220;hashed passphrase&#8221; or just a &#8220;hash.&#8221; Hashing methods are described in <a href="/docs/linux/man/5-crypt/">crypt</a>(5). </p>
 <p> Fa setting controls which hashing method to use, and also supplies various parameters to the chosen method, most importantly a random &#8220;salt&#8221; which ensures that no two stored hashes are the same, even if the Fa phrase strings are the same. </p>
 <p> The Fa data argument to <code>crypt_r</code> is a structure of type Vt struct crypt_data . It has at least these fields: </p>

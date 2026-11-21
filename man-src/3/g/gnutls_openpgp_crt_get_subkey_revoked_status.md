@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_openpgp_crt_get_subkey_revoked_status(3)"
 name: "gnutls_openpgp_crt_get_subkey_revoked_status"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_openpgp_crt_get_subkey_revoked_status – API function"
 
 <h2>NAME</h2>
 <p> gnutls_openpgp_crt_get_subkey_revoked_status &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>
 <p> <code>int gnutls_openpgp_crt_get_subkey_revoked_status(gnutls_openpgp_crt_t </code><i>key</i><code>, unsigned int </code><i>idx</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_openpgp_crt_get_subkey_revoked_status – API function"
 <dd> the structure that contains the OpenPGP public key.</dd>
 <dt>unsigned int idx</dt>
 <dd> is the subkey index</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Get subkey revocation status. A negative error code indicates an error.</p>
 <h2>RETURNS</h2>
 <p> true (1) if the key has been revoked, or false (0) if it has not.</p>

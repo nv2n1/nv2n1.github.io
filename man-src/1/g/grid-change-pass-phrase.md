@@ -1,5 +1,4 @@
 ---
-
 title: "grid-change-pass-phrase(1)"
 name: "grid-change-pass-phrase"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-grid-change-pass-phrase/"
 description: "grid-change-pass-phrase – Change the pass phrase of a private key"
 ---
 
+<h2 class="name">NAME</h2>
+<p> grid-change-pass-phrase &#8211; Change the pass phrase of a private key </p>
+<h2>SYNOPSIS</h2>
 <p> <code>grid-change-pass-phrase</code> -help | -usage | -version | -versions </p>
 <p> <code>grid-change-pass-phrase</code> [-file <i>PRIVATE-KEY</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>grid-change-pass-phrase</code> program changes the pass phrase protecting a private key or PKCS12 bundle containing a private key and certificate. By default, <code>grid-change-pass-phrase</code> uses the <i>X509_USER_KEY</i> environment variable to locate the private key. If that is not set, then it looks for $HOME/.globus/userkey.pem and $HOME/.globus/usercred.p12 in succession. The path to a key can be specified by using the <i>-file</i> command-line option.</p>
 <h2>OPTIONS</h2>
 <p> The full set of command-line options to <code>grid-change-pass-phrase</code> are: </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "djvuxmlparser(1)"
 name: "djvuxmlparser"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-djvuxmlparser/"
 description: "djvutoxml, djvuxmlparser – DjVuLibre XML Tools."
 ---
 
+<h2 class="name">NAME</h2>
+<p> djvutoxml, djvuxmlparser &#8211; DjVuLibre XML Tools.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>djvutoxml [</code><i>options</i><code>] </code><i>inputdjvufile</i><code> [</code><i>outputxmlfile</i><code>]</code><br />
  <code>djvuxmlparser [ -o </code><i>djvufile</i><code> ] </code><i>inputxmlfile</i> </p>
+<h2>DESCRIPTION</h2>
 <p> The DjVuLibre XML Tools provide for editing the metadata, hyperlinks and hidden text associated with DjVu files. Unlike <code><a href="/docs/linux/man/1-djvused/">djvused</a></code>(1) the DjVuLibre XML Tools rely on the XML technology and can take advantage of XML editors and verifiers. </p>
 <h2>DJVUTOXML</h2>
 <p> Program <code>djvutoxml</code> creates a XML file <i>outputxmlfile</i> containing a reference to the original DjVu document <i>inputdjvufile</i> as well as tags describing the metadata, hyperlinks, and hidden text associated with the DjVu file. </p>

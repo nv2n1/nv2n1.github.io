@@ -1,5 +1,4 @@
 ---
-
 title: "cargo-owner(1)"
 name: "cargo-owner"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-cargo-owner/"
 description: "cargo-owner – Manage the owners of a crate of the registry"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cargo-owner &#8211; Manage the owners of a crate of the registry </p>
+<h2>SYNOPSIS</h2>
 <p> cargo owner [OPTIONS] [&lt;CRATE&gt;]</p>
+<h2>DESCRIPTION</h2>
 <p> This command will modify the owners for a package on the specified registry (or default). Note that owners of a package can upload new versions, and yank old versions. Explicitly named owners can also modify the set of owners, so take caution! </p>
 <h2>OPTIONS</h2>
 <dl>

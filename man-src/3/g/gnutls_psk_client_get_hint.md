@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_psk_client_get_hint(3)"
 name: "gnutls_psk_client_get_hint"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_psk_client_get_hint – API function"
 
 <h2>NAME</h2>
 <p> gnutls_psk_client_get_hint &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>const char * gnutls_psk_client_get_hint(gnutls_session_t </code><i>session</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_session_t session</dt>
 <dd> is a gnutls session</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The PSK identity hint may give the client help in deciding which username to use. This should only be called in case of PSK authentication and in case of a client.</p>
 <h2>RETURNS</h2>
 <p> the identity hint of the peer, or <code>NULL</code> in case of an error.</p>

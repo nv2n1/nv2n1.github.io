@@ -1,5 +1,4 @@
 ---
-
 title: "word-list-compress(1)"
 name: "word-list-compress"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-word-list-compress/"
 description: "word-list-compress – word list compressor/decompressor for GNU Aspell"
 ---
 
+<h2 class="name">NAME</h2>
+<p> word-list-compress &#8211; word list compressor/decompressor for GNU Aspell </p>
+<h2>SYNOPSIS</h2>
 <p> <code>word-list-compress</code> <code>c</code>[<code>ompress</code>] | <code>d</code>[<code>ecompress</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>word-list-compress</code> compresses or decompresses sorted word lists for use with the GNU Aspell spell checker.</p>
 <h2>COMMANDS</h2>
 <dl>

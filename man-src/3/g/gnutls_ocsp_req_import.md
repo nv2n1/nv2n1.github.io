@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_ocsp_req_import(3)"
 name: "gnutls_ocsp_req_import"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_ocsp_req_import – API function"
 
 <h2>NAME</h2>
 <p> gnutls_ocsp_req_import &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/ocsp.h&gt;</code> </p>
 <p> <code>int gnutls_ocsp_req_import(gnutls_ocsp_req_t </code><i>req</i><code>, const gnutls_datum_t * </code><i>data</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_ocsp_req_import – API function"
 <dd> The structure to store the parsed request.</dd>
 <dt>const gnutls_datum_t * data</dt>
 <dd> DER encoded OCSP request.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will convert the given DER encoded OCSP request to the native <code>gnutls_ocsp_req_t</code> format. The output will be stored in<br />
 &nbsp;<wbr><i>req</i>&nbsp;<wbr>.</p>
 <h2>RETURNS</h2>

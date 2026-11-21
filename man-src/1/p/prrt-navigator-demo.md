@@ -1,5 +1,4 @@
 ---
-
 title: "prrt-navigator-demo(1)"
 name: "prrt-navigator-demo"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-prrt-navigator-demo/"
 description: "prrt-navigator-demo – Mobile robot navigation simulator"
 ---
 
+<h2 class="name">NAME</h2>
+<p> prrt-navigator-demo &#8211; Mobile robot navigation simulator </p>
+<h2>SYNOPSIS</h2>
 <p> prrt-navigator-demo</p>
+<h2>DESCRIPTION</h2>
 <p> <code>prrt-navigator-demo</code> is a <font SIZE="-1">GUI</font> program that allows experimenting with a new robot navigation algorithm based on Rapidly-exploring Random Tree (<font SIZE="-1">RTT</font>) exploration using Parameterized Trajectory Generators (PTGs). </p>
 <p> Refer to the source code and related papers for more information about the method itself.</p>
 <h2>BUGS</h2>

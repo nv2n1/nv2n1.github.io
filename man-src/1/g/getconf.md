@@ -1,5 +1,4 @@
 ---
-
 title: "getconf(1)"
 name: "getconf"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-getconf/"
 description: "getconf – Query system configuration variables"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getconf &#8211; Query system configuration variables </p>
+<h2>SYNOPSIS</h2>
 <p> <code>getconf</code> -a </p>
 <p> <code>getconf</code> [<code>-v specification</code>] system_var </p>
 <p> <code>getconf</code> [<code>-v specification</code>] path_var pathname</p>
+<h2>DESCRIPTION</h2>
 <p> <code>-a</code> </p>
 <pre>
         Displays all configuration variables for the current system

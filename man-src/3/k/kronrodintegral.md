@@ -1,5 +1,4 @@
 ---
-
 title: "kronrodintegral(3)"
 name: "kronrodintegral"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-kronrodintegral/"
 description: "ql/math/integrals/kronrodintegral.hpp – Integral of a 1-dimensional function using the Gauss-Kronrod method."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/math/integrals/kronrodintegral.hpp &#8211; Integral of a 1-dimensional function using the Gauss-Kronrod method. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/errors.hpp&gt;<br />
  #include &lt;ql/types.hpp&gt;<br />
  #include &lt;ql/utilities/null.hpp&gt;<br />

@@ -1,5 +1,4 @@
 ---
-
 title: "grub-mkpasswd-pbkdf2(1)"
 name: "grub-mkpasswd-pbkdf2"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-grub-mkpasswd-pbkdf2/"
 description: "grub-mkpasswd-pbkdf2 – generate hashed password for GRUB"
 ---
 
+<h2 class="name">NAME</h2>
+<p> grub-mkpasswd-pbkdf2 &#8211; generate hashed password for GRUB </p>
+<h2>SYNOPSIS</h2>
 <p> <code>grub-mkpasswd-pbkdf2</code> [<i>,OPTION/</i>&#8230;] [<i>,OPTIONS/</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Generate PBKDF2 password hash.</p>
 <dl>
 <dt><code>-c</code>, <code>&#8211;iteration-count</code>=<i>,NUM/</i></dt>

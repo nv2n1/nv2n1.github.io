@@ -1,5 +1,4 @@
 ---
-
 title: "ddr_crypt(1)"
 name: "ddr_crypt"
 section: "1"
@@ -10,9 +9,11 @@ description: "ddr_crypt – Data de/encryption plugin for dd_rescue"
 
 <h2>NAME</h2>
 <p> ddr_crypt &#8211; Data de/encryption plugin for dd_rescue</p>
+<h2>SYNOPSIS</h2>
 <p> <code>-L crypt[=option[:option[:&#8230;]]]</code><br />
  or<br />
  <code>-L /path/to/libddr_crypt.so[=option[:option[:&#8230;]]]</code></p>
+<h2>DESCRIPTION</h2>
 <h3>About</h3>
 <p> This plugin allows to en/decrypt data on the fly as it is written out by <code>dd_rescue.</code> It supports a variance of AES ciphers and uses the hardware acceleration on x86 (AESNI) and ARMv8 &#8212; if available &#8212; to provide good performance. </p>
 <p> This plugin has been written for <code>dd_rescue</code> and uses the plugin interface from it. See the <code><a href="/docs/linux/man/1-dd_rescue/">dd_rescue</a>(1)</code> man page for more information on <code>dd_rescue.</code></p>

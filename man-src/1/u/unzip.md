@@ -1,5 +1,4 @@
 ---
-
 title: "unzip(1)"
 name: "unzip"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-unzip/"
 description: "unzip – list, test and extract compressed files in a ZIP archive"
 ---
 
+<h2 class="name">NAME</h2>
+<p> unzip &#8211; list, test and extract compressed files in a ZIP archive </p>
+<h2>SYNOPSIS</h2>
 <p> <code>unzip</code> [<code>-Z</code>] [<code>-cflptTuvz</code>[<code>abjnoqsCDKLMUVWX$/:^</code>]] <i>file</i>[<i>.zip</i>] [<i>file(s)</i>&nbsp;&#8230;] [<code>-x</code>&nbsp;<i>xfile(s)</i>&nbsp;&#8230;] [<code>-d</code>&nbsp;<i>exdir</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>unzip</i> will list, test, or extract files from a ZIP archive, commonly found on MS-DOS systems. The default behavior (with no options) is to extract into the current directory (and subdirectories below it) all files from the specified ZIP archive. A companion program, <i><a href="/docs/linux/man/1-zip/">zip</a></i>(1), creates ZIP archives; both programs are compatible with archives created by PKWARE&#8217;s <i>PKZIP</i> and <i>PKUNZIP</i> for MS-DOS, but in many cases the program options or default behaviors differ.</p>
 <h2>ARGUMENTS</h2>
 <dl>

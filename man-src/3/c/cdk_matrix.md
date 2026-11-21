@@ -1,5 +1,4 @@
 ---
-
 title: "cdk_matrix(3)"
 name: "cdk_matrix"
 section: "3"
@@ -10,6 +9,7 @@ description: "cdk_matrix – curses matrix widget."
 
 <h2>NAME</h2>
 <p> cdk_matrix &#8211; curses matrix widget.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>
 <p> #include &lt;cdk.h&gt; </p>
 <pre><code>
@@ -137,6 +137,7 @@ void setCDKMatrixVerticalChar(
     chtype character);
 </code></pre>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> The Cdk matrix widget creates a matrix widget. The following are functions which create or manipulate the Cdk matrix box widget.</p>
 <h2>AVAILABLE FUNCTIONS</h2>
 <dl>

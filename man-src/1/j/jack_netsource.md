@@ -1,5 +1,4 @@
 ---
-
 title: "jack_netsource(1)"
 name: "jack_netsource"
 section: "1"
@@ -10,7 +9,9 @@ description: "jack_netsource – Netjack Master client for one slave"
 
 <h2>NAME</h2>
 <p> jack_netsource &#8211; Netjack Master client for one slave</p>
+<h2>SYNOPSIS</h2>
 <p> <code>jack_netsource</code> [ <i>-H</i> hostname ] [ <i>options</i> ] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>jack_netsource</code> The Master side of a netjack connection. Represents the slave jackd -dnet in the master jack graph. Most connection parameters are configured via the netsource, and the slave will set itself up according to the commandline option given to jack_netsource.<br />
  Netjack allows low latency audio connections over general IP networks. When using celt for compression, it is even possible to establish transatlantic links, with latencies not much over the actual ping time.<br />
  But the main usecase is of course a LAN, where it can achieve one jack period of latency. </p>

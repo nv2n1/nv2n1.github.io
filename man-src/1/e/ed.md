@@ -1,5 +1,4 @@
 ---
-
 title: "ed(1)"
 name: "ed"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ed/"
 description: "ed – line-oriented text editor"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ed &#8211; line-oriented text editor </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ed</code> [<i>,options/</i>] [<i>,file/</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> GNU ed is a line-oriented text editor. It is used to create, display, modify and otherwise manipulate text files, both interactively and via shell scripts. A restricted version of ed, red, can only edit files in the current directory and cannot execute shell commands. Ed is the &#8216;standard&#8217; text editor in the sense that it is the original editor for Unix, and thus widely available. For most purposes, however, it is superseded by full-screen editors such as GNU Emacs or GNU Moe.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "ctanbib(1)"
 name: "ctanbib"
 section: "1"
@@ -7,11 +6,18 @@ letter: "c"
 url: "/docs/linux/man/1-ctanbib/"
 ---
 
-ctanbib - retrieve bibliographic information for packages hosted on CTAN. 
+<h2 class="name">NAME</h2>
+ 
 
-ctanbib &lt;options&gt; [package name]
+ ctanbib - retrieve bibliographic information for packages hosted on CTAN. 
 
-This command can retrieve bibliographic information for TeX packages hosted on CTAN in the BibTeX format.
+<h2>SYNOPSIS</h2>
+
+ ctanbib &lt;options&gt; [package name]
+
+<h2>DESCRIPTION</h2>
+
+ This command can retrieve bibliographic information for TeX packages hosted on CTAN in the BibTeX format.
 
 <h2>OPTIONS</h2>
 

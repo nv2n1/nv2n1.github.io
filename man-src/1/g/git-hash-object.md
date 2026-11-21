@@ -1,5 +1,4 @@
 ---
-
 title: "git-hash-object(1)"
 name: "git-hash-object"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-hash-object/"
 description: "git-hash-object – Compute object ID and optionally creates a blob from a file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-hash-object &#8211; Compute object ID and optionally creates a blob from a file </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git hash - object[-t&lt;type&gt;][-w][--path = &lt;file&gt; | --no - filters][--stdin[--literally]][--]&lt;file&gt;... git hash - object[-t&lt;type&gt;][-w]-- stdin - paths[--no - filters]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Computes the object ID value for an object with specified type with the contents of the named file (which can be outside of the work tree), and optionally writes the resulting object into the object database. Reports its object ID to its standard output. When &lt;type&gt; is not specified, it defaults to &quot;blob&quot;.</p>
 <h2>OPTIONS</h2>
 <p> -t &lt;type&gt;</p>

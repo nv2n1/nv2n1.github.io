@@ -1,5 +1,4 @@
 ---
-
 title: "grolj4(1)"
 name: "grolj4"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-grolj4/"
 description: "grolj4 – groff driver for HP LaserJet 4 family"
 ---
 
+<h2 class="name">NAME</h2>
+<p> grolj4 &#8211; groff driver for HP LaserJet 4 family </p>
+<h2>SYNOPSIS</h2>
 <p> [ <code>-l</code> ] [ <code>-c </code><i>num-copies</i> ] [<code>-d</code> [<i>n</i>]] [ <code>-F </code><i>font-directory</i> ] [ <code>-p </code><i>paper-size</i> ] [ <code>-w </code><i>line-width</i> ] [<i>file</i> &#8230;] <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>grolj4</code> is a driver for <code>groff</code> that produces output in PCL5 format suitable for an HP LaserJet 4 printer. </p>
 <p> There is an additional drawing command available:</p>
 <dl>

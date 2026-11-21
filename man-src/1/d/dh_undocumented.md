@@ -1,5 +1,4 @@
 ---
-
 title: "dh_undocumented(1)"
 name: "dh_undocumented"
 section: "1"
@@ -7,11 +6,18 @@ letter: "d"
 url: "/docs/linux/man/1-dh_undocumented/"
 ---
 
-dh_undocumented - undocumented.7 symlink program (deprecated no-op) 
+<h2 class="name">NAME</h2>
+ 
 
-Do not run!
+ dh_undocumented - undocumented.7 symlink program (deprecated no-op) 
 
-This program used to make symlinks to the <i>undocumented.7</i> man page for man pages not present in a package. Debian policy now frowns on use of the <i>undocumented.7</i> man page, and so this program does nothing, and should not be used.
+<h2>SYNOPSIS</h2>
+
+ Do not run!
+
+<h2>DESCRIPTION</h2>
+
+ This program used to make symlinks to the <i>undocumented.7</i> man page for man pages not present in a package. Debian policy now frowns on use of the <i>undocumented.7</i> man page, and so this program does nothing, and should not be used.
 
 <h2>SEE ALSO</h2>
 

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_crq_set_dn_by_oid(3)"
 name: "gnutls_x509_crq_set_dn_by_oid"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_crq_set_dn_by_oid – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crq_set_dn_by_oid &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crq_set_dn_by_oid(gnutls_x509_crq_t </code><i>crq</i><code>, const char * </code><i>oid</i><code>, unsigned int </code><i>raw_flag</i><code>, const void * </code><i>data</i><code>, unsigned int </code><i>sizeof_data</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,6 +24,7 @@ description: "gnutls_x509_crq_set_dn_by_oid – API function"
 <dd> a pointer to the input data</dd>
 <dt>unsigned int sizeof_data</dt>
 <dd> holds the size of <i>data</i></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will set the part of the name of the Certificate request subject, specified by the given OID. The input string should be ASCII or UTF-8 encoded. </p>
 <p> Some helper macros with popular OIDs can be found in gnutls/x509.h With this function you can only set the known OIDs. You can test for known OIDs using <code>gnutls_x509_dn_oid_known()</code>. For OIDs that are not known (by gnutls) you should properly DER encode your data, and call this function with raw_flag set.</p>
 <h2>RETURNS</h2>

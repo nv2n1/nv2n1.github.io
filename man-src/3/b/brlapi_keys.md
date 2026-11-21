@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-brlapi_keys/"
 description: "Reading key presses –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Reading key presses &#8211; </p>
 <p> How to read key presses from the braille terminal.</p>
 <h3>Data Structures</h3>
 <p> struct <code>brlapi_expandedKeyCode_t</code> </p>

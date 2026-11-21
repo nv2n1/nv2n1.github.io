@@ -1,5 +1,4 @@
 ---
-
 title: "griv(1)"
 name: "griv"
 section: "1"
@@ -10,7 +9,9 @@ description: "griv – Gtk RIVchat"
 
 <h2>NAME</h2>
 <p> griv &#8211; Gtk RIVchat </p>
+<h2>SYNOPSIS</h2>
 <p> <code>griv</code> [<i>OPTIONS</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>griv</code> is a serverless lan chat program, with the protocol based on RivChat by Arkadiusz Kolacz (Wielebny K.)<br />
  Specification available at:<br />
  <a rel="nofollow" href="http://akolacz.googlepages.com/RivChat-specyfikacja.PDF">http://akolacz.googlepages.com/RivChat-specyfikacja.PDF</a> </p>

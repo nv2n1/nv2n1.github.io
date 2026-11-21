@@ -1,5 +1,4 @@
 ---
-
 title: "globus_xio_http(3)"
 name: "globus_xio_http"
 section: "3"
@@ -8,7 +7,10 @@ url: "/docs/linux/man/3-globus_xio_http/"
 description: "globus_xio_http.h –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> globus_xio_http.h &#8211; </p>
 <p> Globus XIO HTTP Driver Header.</p>
+<h2>SYNOPSIS</h2>
 <h3>Data Structures</h3>
 <p> struct <code>globus_xio_http_header_t</code><br />
  <i>doxygen varargs filter stuff </i></p>

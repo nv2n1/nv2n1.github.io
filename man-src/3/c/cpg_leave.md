@@ -1,5 +1,4 @@
 ---
-
 title: "cpg_leave(3)"
 name: "cpg_leave"
 section: "3"
@@ -10,8 +9,10 @@ description: "cpg_leave – Leave a group in the CPG library"
 
 <h2>NAME</h2>
 <p> cpg_leave &#8211; Leave a group in the CPG library</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cpg.h&gt;</code> </p>
 <p> <code>int cpg_leave(cpg_handle_t </code><i>handle</i><code>, struct cpg_name *</code><i>group</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>cpg_leave</code> function is used to leave a group. Once a group has been left the process will no longer receive messages or notifications about events in that group. Note that a process is only deemed to have left the group once it has been notified (by its confchg callback) that is has left. So expect to receive at least one confchg callback after calling this function. </p>
 <p> The argument <i>group</i> is used to specify the group to leave. It is currently ignored as only one group can be joined per handle. It is included here for to allow for future development. </p>
 <h2>RETURN VALUE</h2>

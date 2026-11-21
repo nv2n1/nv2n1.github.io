@@ -1,5 +1,4 @@
 ---
-
 title: "qquota(1)"
 name: "qquota"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-qquota/"
 description: "qquota – shows current usage of xxQS_NAMExx resource quotas"
 ---
 
+<h2 class="name">NAME</h2>
+<p> qquota &#8211; shows current usage of xxQS_NAMExx resource quotas </p>
 <h2>SYNTAX</h2>
 <p> <code>qquota</code> [ <code>-h wc_host|wc_hostgroup,&#8230;</code> ] [ <code>-help</code> ] [ <code>-l resource_name,&#8230;</code> ] [ <code>-u wc_user,&#8230;</code> ] [ <code>-P wc_project,&#8230;</code> ] [ <code>-pe wc_pe_name,&#8230;</code> ] [ <code>-q wc_cqueue,&#8230;</code> ] [ <code>-xml</code> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>qquota</i> shows the current xxQS_NAMExx resource quota sets. Only resource quota sets with a positive usage count or a static limit are printed, as described in OUTPUT FORMATS below. </p>
 <p> Selection options allow you to filter for specific hosts, cluster queues, projects, parallel environments (pe), resources or users. Without any option <i>qquota</i> will display a list of all resource quota sets for the calling user. </p>
 <h2>OPTIONS</h2>

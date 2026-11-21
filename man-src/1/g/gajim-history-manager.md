@@ -1,5 +1,4 @@
 ---
-
 title: "gajim-history-manager(1)"
 name: "gajim-history-manager"
 section: "1"
@@ -8,10 +7,13 @@ url: "/docs/linux/man/1-gajim-history-manager/"
 description: "gajim-history-manager – a tool to manage"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>gajim-history-manager</code> &#8211; a tool to manage </p>
 <p><a href="/docs/linux/man/1-gajim/">gajim</a>(1) logs</p>
+<h2>SYNOPSIS</h2>
 <p> &#8211;<code>h</code><br />
  [-<code>c </code><i>directory</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> is a tool to manage Po do some cleanup Pc log file of <a href="/docs/linux/man/1-gajim/">gajim</a>(1). Use this program to delete or export logs. For more information on database logs see &lt;<a rel="nofollow" href="https://trac.gajim.org/wiki/LogsDatabase">https://trac.gajim.org/wiki/LogsDatabase</a>&gt;.</p>
 <h2>OPTIONS</h2>
 <dl>

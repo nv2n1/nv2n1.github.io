@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_zone_set_soa(3)"
 name: "ldns_zone_set_soa"
 section: "3"
@@ -10,11 +9,13 @@ description: "ldns_zone_set_rrs, ldns_zone_set_soa"
 
 <h2>NAME</h2>
 <p> ldns_zone_set_rrs, ldns_zone_set_soa </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> void ldns_zone_set_rrs(ldns_zone *z, ldns_rr_list *rrlist); </p>
 <p> void ldns_zone_set_soa(ldns_zone *z, ldns_rr *soa); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_zone_set_rrs</i>()</dt>
 <dd>Set the zone&#8217;s contents .br <code>z</code>: the zone to put the new soa in .br <code>rrlist</code>: the rrlist to use</dd></dl>

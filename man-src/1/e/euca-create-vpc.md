@@ -1,5 +1,4 @@
 ---
-
 title: "euca-create-vpc(1)"
 name: "euca-create-vpc"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-create-vpc – Create a new VPC"
 
 <h2>NAME</h2>
 <p> euca-create-vpc &#8211; Create a new VPC</p>
+<h2>SYNOPSIS</h2>
 <p> euca-create-vpc [&#8211;tenancy {default,dedicated}] [&#8211;show-empty-fields]</p>
 <dl>
 <dt>[-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] CIDR</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Create a new VPC</p>
 <h3>positional arguments:</h3>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "pmls(1)"
 name: "pmls"
 section: "1"
@@ -7,9 +6,14 @@ letter: "p"
 url: "/docs/linux/man/1-pmls/"
 ---
 
-pmls - long list the module path 
+<h2 class="name">NAME</h2>
+ 
 
-This is mostly here for people too lazy to type 
+ pmls - long list the module path 
+
+<h2>DESCRIPTION</h2>
+
+ This is mostly here for people too lazy to type 
 
  <pre>
     $ ls -l `pmpath CGI`

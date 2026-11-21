@@ -1,5 +1,4 @@
 ---
-
 title: "lwp-download(1)"
 name: "lwp-download"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-lwp-download/"
 description: "lwp-download – Fetch large files from the web"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lwp-download &#8211; Fetch large files from the web </p>
+<h2>SYNOPSIS</h2>
 <p> <code>lwp-download</code> [<code>-a</code>] [<code>-s</code>] &lt;<i>url</i>&gt; [&lt;<i>local path</i>&gt;]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>lwp-download</code> program will save the file at <i>url</i> to a local file. </p>
 <p> If <i>local path</i> is not specified, then the current directory is assumed. </p>
 <p> If <i>local path</i> is a directory, then the last segment of the path of the <i>url</i> is appended to form a local filename. If the <i>url</i> path ends with slash the name &#8220;index&#8221; is used. With the <code>-s</code> option pick up the last segment of the filename from server provided sources like the Content-Disposition header or any redirect URLs. A file extension to match the server reported Content-Type might also be appended. If a file with the produced filename already exists, then <code>lwp-download</code> will prompt before it overwrites and will fail if its standard input is not a terminal. This form of invocation will also fail is no acceptable filename can be derived from the sources mentioned above. </p>

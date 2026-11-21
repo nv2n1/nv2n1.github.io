@@ -1,5 +1,4 @@
 ---
-
 title: "sftp(1)"
 name: "sftp"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-sftp/"
 description: "sftp – OpenSSH secure file transfer"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>sftp</code> &#8211; OpenSSH secure file transfer </p>
+<h2>SYNOPSIS</h2>
 <p> <code>sftp</code> [-<code>46AaCfNpqrv</code> ] [-<code>B </code><i>buffer_size</i> ] [-<code>b </code><i>batchfile</i> ] [-<code>c </code><i>cipher</i> ] [-<code>D </code><i>sftp_server_path</i> ] [-<code>F </code><i>ssh_config</i> ] [-<code>i </code><i>identity_file</i> ] [-<code>J </code><i>destination</i> ] [-<code>l </code><i>limit</i> ] [-<code>o </code><i>ssh_option</i> ] [-<code>P </code><i>port</i> ] [-<code>R </code><i>num_requests</i> ] [-<code>S </code><i>program</i> ] [-<code>s </code><i>subsystem | sftp_server</i> ] <i>destination</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>sftp</code> is a file transfer program, similar to <a href="/docs/linux/man/1-ftp/">ftp</a>(1), which performs all operations over an encrypted <a href="/docs/linux/man/1-ssh/">ssh</a>(1) transport. It may also use many features of ssh, such as public key authentication and compression. </p>
 <p> The <i>destination</i> may be specified either as [user @ host [: path] ] or as a URI in the form <code>sftp:// </code>[user @ host [: port [/ path] ] ] </p>
 <p> If the <i>destination</i> includes a <i>path</i> and it is not a directory, <code>sftp</code> will retrieve files automatically if a non-interactive authentication method is used; otherwise it will do so after successful interactive authentication. </p>

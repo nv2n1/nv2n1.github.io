@@ -1,5 +1,4 @@
 ---
-
 title: "rmic-java-1(1)"
 name: "rmic-java-1"
 section: "1"
@@ -11,9 +10,11 @@ description: "rmic – The Java RMI Compiler"
 <h2>Name</h2>
 <p> rmic &#8211; The Java RMI Compiler </p>
 <p> <code>rmic</code> generates stub, skeleton, and tie classes for remote objects using either the JRMP or IIOP protocols. Also generates OMG IDL. </p>
+<h2>SYNOPSIS</h2>
 <pre>
 <code>rmic [ </code><code>options</code><code> ] </code><tt>package-qualified-class-name(s)</tt>
 </pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>rmic</code> compiler generates stub and skeleton class files (JRMP protocol) and stub and tie class files (IIOP protocol) for remote objects. These classes files are generated from compiled Java programming language classes that are remote object implementation classes. A remote implementation class is a class that implements the interface <i>java.rmi.Remote</i>. The class names in the <code>rmic</code> command must be for classes that have been compiled successfully with the <code>javac</code> command and must be fully package qualified. For example, running <code>rmic</code> on the class file name <i>HelloImpl</i> as shown here: </p>
 <pre>
 <code>rmic hello.HelloImpl</code>

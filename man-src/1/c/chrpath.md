@@ -1,5 +1,4 @@
 ---
-
 title: "chrpath(1)"
 name: "chrpath"
 section: "1"
@@ -10,7 +9,9 @@ description: "chrpath – change the rpath or runpath in binaries"
 
 <h2>NAME</h2>
 <p> chrpath &#8211; change the rpath or runpath in binaries</p>
+<h2>SYNOPSIS</h2>
 <p> <code>chrpath</code> [ <code>-v</code> | <code>&#8211;version</code> ] [ <code>-d</code> | <code>&#8211;delete</code> ] [ <code>-r</code> <i>&lt;path&gt;</i> |&nbsp;<wbr> <code>&#8211;replace</code> <i>&lt;path&gt;</i> ] [ <code>-c</code> | <code>&#8211;convert</code> ] [ <code>-l</code> | <code>&#8211;list</code> ] [ <code>-h</code> | <code>&#8211;help</code> ] <i>&lt;program&gt;</i> [ <i>&lt;program&gt;</i> &#8230; ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>chrpath</code> changes, lists or removes the rpath or runpath setting in a binary. The rpath, or runpath if it is present, is where the runtime linker should look for the libraries needed for a program.</p>
 <h2>OPTIONS</h2>
 <dl>

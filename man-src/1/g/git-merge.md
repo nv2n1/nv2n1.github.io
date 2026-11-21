@@ -1,5 +1,4 @@
 ---
-
 title: "git-merge(1)"
 name: "git-merge"
 section: "1"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/1-git-merge/"
 description: "git-merge – Join two or more development histories together"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-merge &#8211; Join two or more development histories together </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git merge[-n][--stat][--no - commit][--squash][--[no - ] edit]
          [--no - verify][-s&lt;strategy&gt;][-X&lt;strategy - option&gt;][-S[&lt;keyid&gt;]]
          [--[no - ] allow - unrelated - histories]
          [--[no - ] rerere - autoupdate][-m&lt;msg&gt;][-F&lt;file&gt;][&lt;commit&gt;...] git merge(--continue | --abort | --quit)
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Incorporates changes from the named commits (since the time their histories diverged from the current branch) into the current branch. This command is used by <i>git pull</i> to incorporate changes from another repository and can be used by hand to merge changes from one branch into another. </p>
 <p> Assume the following history exists and the current branch is &quot;<code>master</code>&quot;: </p>
 <dl>

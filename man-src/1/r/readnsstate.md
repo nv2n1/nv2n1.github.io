@@ -1,5 +1,4 @@
 ---
-
 title: "readnsstate(1)"
 name: "readnsstate"
 section: "1"
@@ -10,6 +9,7 @@ description: "readnsstate – interpret the contents of cn=replica’s nsState v
 
 <h2>NAME</h2>
 <p> readnsstate &#8211; interpret the contents of cn=replica&#8217;s nsState value <code>readnsstate</code> /etc/dirsrv/slapd-INSTANCE/dse.ldif </p>
+<h2>DESCRIPTION</h2>
 <p> Decode and display the content of the nsState attribute from a directory servers cn=replicate object. </p>
 <h2>EXAMPLES</h2>
 <pre>

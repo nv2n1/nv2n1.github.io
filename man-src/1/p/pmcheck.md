@@ -1,5 +1,4 @@
 ---
-
 title: "pmcheck(1)"
 name: "pmcheck"
 section: "1"
@@ -7,9 +6,14 @@ letter: "p"
 url: "/docs/linux/man/1-pmcheck/"
 ---
 
-pmcheck - check that Perl is set up correctly for Perl modules 
+<h2 class="name">NAME</h2>
+ 
 
-pmcheck checks that Perl is correctly set up for Perl modules. For now, pmcheck just verifies that the entries in <tt>@INC</tt> are existing readable directories.
+ pmcheck - check that Perl is set up correctly for Perl modules 
+
+<h2>DESCRIPTION</h2>
+
+ pmcheck checks that Perl is correctly set up for Perl modules. For now, pmcheck just verifies that the entries in <tt>@INC</tt> are existing readable directories.
 
 <h2>SEE ALSO</h2>
 

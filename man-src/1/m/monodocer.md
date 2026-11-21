@@ -1,5 +1,4 @@
 ---
-
 title: "monodocer(1)"
 name: "monodocer"
 section: "1"
@@ -10,6 +9,7 @@ description: "monodocer – ECMA Documentation Format Support"
 
 <h2>NAME</h2>
 <p> monodocer &#8211; ECMA Documentation Format Support</p>
+<h2>SYNOPSIS</h2>
 <p> <code>monodocer</code> [OPTIONS]*</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -51,6 +51,7 @@ description: "monodocer – ECMA Documentation Format Support"
 <dd> When updating documentation, write the updated documentation files into the directory <i>PATH</i> .</dd>
 <dt><i>-V, -version</i></dt>
 <dd> Display version and licensing information.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>monodocer</code> has been obsoleted by <code><a href="/docs/linux/man/1-mdoc/">mdoc</a></code>(1). See the <code><a href="/docs/linux/man/1-mdoc-update/">mdoc-update</a></code>(1) man page. </p>
 <p> <i>monodocer</i> is a program that creates XML documentation stubs in the ECMA Documentation Format. It does not rely on documentation found within the source code. </p>
 <p> The advantages are:</p>

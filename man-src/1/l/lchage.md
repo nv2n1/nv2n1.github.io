@@ -1,5 +1,4 @@
 ---
-
 title: "lchage(1)"
 name: "lchage"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-lchage/"
 description: "lchage – Display or change user password policy"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lchage &#8211; Display or change user password policy</p>
+<h2>SYNOPSIS</h2>
 <p> lchage [<i>OPTION</i>]&#8230; <i>user</i> </p>
+<h2>DESCRIPTION</h2>
 <p> Displays or allows changing password policy of <i>user</i>. </p>
 <h2>OPTIONS</h2>
 <dl>

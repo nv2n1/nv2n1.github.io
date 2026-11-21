@@ -1,5 +1,4 @@
 ---
-
 title: "cdk_traverse(3)"
 name: "cdk_traverse"
 section: "3"
@@ -10,6 +9,7 @@ description: "cdk_traverse – functions to support keyboard traversal"
 
 <h2>NAME</h2>
 <p> cdk_traverse &#8211; functions to support keyboard traversal</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>
 <pre><code>
 #include &lt;cdk.h&gt;
@@ -34,6 +34,7 @@ void traverseCDKOnce(
     CHECK_KEYCODE funcMenuKey);
 </code></pre>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> The functions above handle the traversal of a screen populated with various widgets. Once the screen has been created and populated with widgets, a single call to <code>traverseCDKScreen()</code> will allow the user to move between widgets and enter data (or otherwise manipulate widgets). Other functions are provided for use as callbacks by the widgets on the screen. Finally, there are several functions which allow the caller to manipulate the state of the traversal, i.e., the object which has focus. </p>
 <p> In order for widgets to be used on a screen which is to be handled by <code>traverseCDKScreen()</code>, it must have the following methods available: </p>
 <pre>

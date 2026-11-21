@@ -1,5 +1,4 @@
 ---
-
 title: "tiffmedian(1)"
 name: "tiffmedian"
 section: "1"
@@ -10,7 +9,9 @@ description: "tiffmedian – apply the median cut algorithm to data in a TIFF fi
 
 <h2>NAME</h2>
 <p> tiffmedian &#8211; apply the median cut algorithm to data in a <font SIZE="-1">TIFF</font> file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>tiffmedian</code> [ <i>options</i> ] <i>input.tif</i> <i>output.tif</i></p>
+<h2>DESCRIPTION</h2>
 <p> <i>tiffmedian</i> applies the median cut algorithm to an <font SIZE="-1">RGB</font> image in <i>input.tif</i> to generate a palette image that is written to <i>output.tif</i>. The generated colormap has, by default, 256 entries. The image data is quantized by mapping each pixel to the closest color values in the colormap.</p>
 <h2>OPTIONS</h2>
 <dl>

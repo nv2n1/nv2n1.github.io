@@ -1,5 +1,4 @@
 ---
-
 title: "buffer(1)"
 name: "buffer"
 section: "1"
@@ -39,6 +38,7 @@ description: "buffer – very fast reblocking program"
 <dt><code>-Z</code></dt>
 <dd> If reading/writing directly to a character device (like a tape drive) then after each gigabyte perform an lseek to the start of the file. Use this flag with extreme care. It can only be used on devices where an lseek does not rewind the tape but does reset the kernels position flags. It is used to allow more than 2 gigabytes to be written.</dd></dl>
 <p> Sizes are a number with an optional trailing character. A &#8216;b&#8217; multiplies the size by 512, a &#8216;k&#8217; by 1024 and an &#8216;m&#8217; by a meg.</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Buffer</i> reads from standard input reblocking to the given blocksize and writes each block to standard output. </p>
 <p> Internally <i>buffer</i> is a pair of processes communicating via a large circular queue held in shared memory. The reader process only has to block when the queue is full and the writer process when the queue is empty. <i>Buffer</i> is designed to try and keep the writer side continuously busy so that it can stream when writing to tape drives. When used to write tapes with an intervening network <i>buffer</i> can result in a considerable increase in throughput. </p>
 <p> The default settings for <i>buffer</i> are normally good enough. If you are a heavy tape user then it is worth your while trying out various different combinations of options. In particular running a <i>buffer</i> at both ends of the pipe can provide a substantial increase (see last example below).</p>

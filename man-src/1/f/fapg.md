@@ -1,5 +1,4 @@
 ---
-
 title: "fapg(1)"
 name: "fapg"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-fapg/"
 description: "fapg – Fast Audio Playlist Generator"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fapg &#8211; Fast Audio Playlist Generator</p>
+<h2>SYNOPSIS</h2>
 <p> <code>fapg [</code> <i>options</i> <code>]</code> <i>/path/to/mp3/dir1 </i> <code>[</code> <i>/path/to/mp3/dir2 </i> <code>&#8230; ]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>fapg</code> is a tool to generate list of audio files (Wav, MP2, MP3, Ogg, etc) in various formats (M3U, PLS, XSPF, HTML, RSS, etc). It is very useful if you have a large amount of audio files and you want to quickly and frequently build a playlist. It is coded in C to be as fast as possible, and does not use any specific audio library (like ID3Lib). This allow you to deploy it faster and easier, and to have better performances since the less informations are loaded. On the other hand, this tool is not (yet) compatible with all the known formats. </p>
 <h2>OPTIONS</h2>
 <dl>

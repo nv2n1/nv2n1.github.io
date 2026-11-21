@@ -1,5 +1,4 @@
 ---
-
 title: "gpasm(1)"
 name: "gpasm"
 section: "1"
@@ -10,9 +9,11 @@ description: "gpasm – GNU PIC assembler"
 
 <h2>NAME</h2>
 <p> gpasm &#8211; GNU PIC assembler</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gpasm [options] file</code></p>
 <h2>WARNING</h2>
 <p> The information in this man page is an extract from the full documentation of gputils and is limited to the meaning of the options. For complete and current documentation, refer to &quot;gputils.ps&quot; located in the gputils docs directory.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>gpasm</code> is an assembler for Microchip (TM) PIC (TM) micro-controllers. It&#8217;s intended to be compatible with the manufacturer&#8217;s MPASM assembler. <code>gpasm</code> is part of gputils. Check the <code><a href="/docs/linux/man/1-gputils/">gputils</a></code>(1) manpage for details on other GNU PIC utilities.</p>
 <h2>OPTIONS</h2>
 <p> Below is a summary of the <code>gpasm</code> options. <code>gpasm</code> options always supersede any settings in the source code.</p>

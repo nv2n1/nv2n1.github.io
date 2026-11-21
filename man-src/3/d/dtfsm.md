@@ -1,5 +1,4 @@
 ---
-
 title: "dtfsm(3)"
 name: "dtfsm"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dtfsm/"
 description: "dtfsm.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dtfsm.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dtfsm</code> (TRANSR, SIDE, UPLO, TRANS, DIAG, M, N, ALPHA, A, B, LDB)<br />
  <i></i><code>DTFSM</code> solves a matrix equation (one operand is a triangular matrix in RFP format).</p>

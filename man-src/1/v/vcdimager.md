@@ -1,5 +1,4 @@
 ---
-
 title: "vcdimager(1)"
 name: "vcdimager"
 section: "1"
@@ -10,7 +9,9 @@ description: "vcdimager – manual page for vcdimager 0.7.24"
 
 <h2>NAME</h2>
 <p> vcdimager &#8211; manual page for vcdimager 0.7.24</p>
+<h2>SYNOPSIS</h2>
 <p> <code>vcdimager</code> [<i>OPTION</i>&#8230;] <i>&lt;mpeg-tracks</i>&#8230;<i>&gt;</i></p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt><code>-t</code>, <code>&#8211;type</code>=<i>TYPE</i></dt>
 <dd> select VideoCD type (&#8216;vcd11&#8217;, &#8216;vcd2&#8217;, &#8216;svcd&#8217; or &#8216;hqvcd&#8217;) (default: &#8216;vcd2&#8217;)</dd>

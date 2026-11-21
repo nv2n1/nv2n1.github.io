@@ -1,5 +1,4 @@
 ---
-
 title: "pycolor(1)"
 name: "pycolor"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pycolor/"
 description: "pycolor – Colorize a python file or stdin using ANSI and print to stdout."
 ---
 
+<h2 class="name">NAME</h2>
+<p> pycolor &#8211; Colorize a python file or stdin using ANSI and print to stdout. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pycolor</code> [<i>options</i>] [<i>file</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Prints a colorized version of the input file (or standard input if no file is given, or the file name &#8211; is given) to standard out.</p>
 <h2>OPTIONS</h2>
 <dl>

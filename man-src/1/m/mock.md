@@ -1,5 +1,4 @@
 ---
-
 title: "mock(1)"
 name: "mock"
 section: "1"
@@ -32,6 +31,7 @@ description: "mock – build SRPMs in a chroot"
 <p> mock [options] <code>&#8211;pm-cmd</code> [<i>arguments &#8230;</i>] </p>
 <p> mock [options] <code>&#8211;yum-cmd</code> [<i>arguments &#8230;</i>] </p>
 <p> mock [options] <code>&#8211;dnf-cmd</code> [<i>arguments &#8230;</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> Mock is a simple program that will build source RPMs inside a chroot. It doesn&#8217;t do anything terribly fancy other than populate a chroot with the contents specified by a configuration file, then build any input SRPM(s) in that chroot. </p>
 <p> The content of a chroot is specified by the configuration specified with the <code>-r</code> option. The default configuration file is /etc/mock/default.cfg, which is usually a symlink to one of the installed configurations. </p>
 <p> There is a site-wide configuration file, /etc/mock/site-defaults.cfg, which can be used to specify site-wide options. The shipped version of this file has no active options, but does have a list of all of the configuration options, examples of how to set them, and their default values. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "sgttrs(3)"
 name: "sgttrs"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-sgttrs/"
 description: "sgttrs.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sgttrs.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sgttrs</code> (TRANS, N, NRHS, DL, D, DU, DU2, IPIV, B, LDB, INFO)<br />
  <i></i><code>SGTTRS</code></p>

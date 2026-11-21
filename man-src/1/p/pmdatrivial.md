@@ -1,5 +1,4 @@
 ---
-
 title: "pmdatrivial(1)"
 name: "pmdatrivial"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmdatrivial – trivial performance metrics domain agent (PMDA)"
 
 <h2>NAME</h2>
 <p> <code>pmdatrivial</code> &#8211; trivial performance metrics domain agent (PMDA)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/trivial/pmdatrivial</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdatrivial</code> is the simplest possible Performance Metrics Domain Agent (PMDA) which exports a single performance metric, the time in seconds since the 1st of January, 1970. </p>
 <p> The trivial PMDA is shipped as source code and is designed to be an aid for PMDA developers. </p>
 <p> A brief description of the <code>pmdatrivial</code> command line options follows:</p>

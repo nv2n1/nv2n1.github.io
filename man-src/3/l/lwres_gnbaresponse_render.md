@@ -1,5 +1,4 @@
 ---
-
 title: "lwres_gnbaresponse_render(3)"
 name: "lwres_gnbaresponse_render"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-lwres_gnbaresponse_render/"
 description: "lwres_gnbarequest_render, lwres_gnbaresponse_render, lwres_gnbarequest_parse, lwres_gnbaresponse_parse, lwres_gnbaresponse_free, lwres_gnbarequest_free – lightweight resolver getnamebyaddress messa..."
 ---
 
+<h2 class="name">NAME</h2>
+<p> lwres_gnbarequest_render, lwres_gnbaresponse_render, lwres_gnbarequest_parse, lwres_gnbaresponse_parse, lwres_gnbaresponse_free, lwres_gnbarequest_free &#8211; lightweight resolver getnamebyaddress message handling </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;lwres/lwres.h&gt;
 </code></pre>
@@ -18,6 +20,7 @@ description: "lwres_gnbarequest_render, lwres_gnbaresponse_render, lwres_gnbareq
 <dt> <code>lwres_result_t lwres_gnbaresponse_parse(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>, lwres_buffer_t&nbsp;<wbr>*</code><i>b</i><code>, lwres_lwpacket_t&nbsp;<wbr>*</code><i>pkt</i><code>, lwres_gnbaresponse_t&nbsp;<wbr>**</code><i>structp</i><code>);</code></dt>
 <dt> <code>void lwres_gnbaresponse_free(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>, lwres_gnbaresponse_t&nbsp;<wbr>**</code><i>structp</i><code>);</code></dt>
 <dt> <code>void lwres_gnbarequest_free(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>, lwres_gnbarequest_t&nbsp;<wbr>**</code><i>structp</i><code>);</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>These are low-level routines for creating and parsing lightweight resolver address-to-name lookup request and response messages. </dd>
 <p> There are four main functions for the getnamebyaddr opcode. One render function converts a getnamebyaddr request structure &#8212; <code>lwres_gnbarequest_t</code> &#8212; to the lightweight resolver&#8217;s canonical format. It is complemented by a parse function that converts a packet in this canonical format to a getnamebyaddr request structure. Another render function converts the getnamebyaddr response structure &#8212; <code>lwres_gnbaresponse_t</code> to the canonical format. This is complemented by a parse function which converts a packet in canonical format to a getnamebyaddr response structure. </p>
 <p> These structures are defined in <i>lwres/lwres.h</i>. They are shown below. </p>

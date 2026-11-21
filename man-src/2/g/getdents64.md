@@ -1,5 +1,4 @@
 ---
-
 title: "getdents64(2)"
 name: "getdents64"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-getdents64/"
 description: "getdents, getdents64 – get directory entries"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getdents, getdents64 &#8211; get directory entries </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 long getdents(unsigned int fd, struct linux_dirent *dirp,
               unsigned int count);
@@ -16,6 +18,7 @@ long getdents(unsigned int fd, struct linux_dirent *dirp,
 ssize_t getdents64(int fd, void *dirp, size_t count);
 </code></pre>
 <p> <i>Note</i>: There is no glibc wrapper for <code>getdents</code>(); see NOTES.</p>
+<h2>DESCRIPTION</h2>
 <p> These are not the interfaces you are interested in. Look at <code><a href="/docs/linux/man/3-readdir/">readdir</a></code>(3) for the POSIX-conforming C library interface. This page documents the bare kernel system call interfaces.</p>
 <h3>getdents()</h3>
 <p> The system call <code>getdents</code>() reads several <i>linux_dirent</i> structures from the directory referred to by the open file descriptor <i>fd</i> into the buffer pointed to by <i>dirp</i>. The argument <i>count</i> specifies the size of that buffer. </p>

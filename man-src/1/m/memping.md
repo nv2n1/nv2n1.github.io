@@ -1,5 +1,4 @@
 ---
-
 title: "memping(1)"
 name: "memping"
 section: "1"
@@ -10,7 +9,9 @@ description: "memping – libmemcached Documentation"
 
 <h2>NAME</h2>
 <p> memping &#8211; libmemcached Documentation</p>
+<h2>SYNOPSIS</h2>
 <p> memping [options] [server]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>memping</code> can be used to ping a memcached server to see if it is taking connections.</p>
 <h2>OPTIONS</h2>
 <p> You can specify servers via the option:</p>

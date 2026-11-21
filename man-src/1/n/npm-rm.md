@@ -1,5 +1,4 @@
 ---
-
 title: "npm-rm(1)"
 name: "npm-rm"
 section: "1"
@@ -10,10 +9,12 @@ description: "npm-rm — Remove a package"
 
 <h2>NAME</h2>
 <p> <code>npm-rm</code> &#8212; Remove a package</p>
+<h2>SYNOPSIS</h2>
 <pre>
 npm rm &lt;name&gt;
 npm uninstall &lt;name&gt;
 </pre>
+<h2>DESCRIPTION</h2>
 <p> This uninstalls a package, completely removing everything npm installed on its behalf.</p>
 <h2>SEE ALSO</h2>
 <dl>

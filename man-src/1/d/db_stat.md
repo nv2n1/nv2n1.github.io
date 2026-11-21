@@ -1,5 +1,4 @@
 ---
-
 title: "db_stat(1)"
 name: "db_stat"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-db_stat/"
 description: "db5.3_stat – Display statistics for Berkeley DB environments"
 ---
 
+<h2 class="name">NAME</h2>
+<p> db5.3_stat &#8211; Display statistics for Berkeley DB environments </p>
+<h2>SYNOPSIS</h2>
 <p> <code>db5.3_stat</code> -d file [-fN] [-h home] [-P password] [-s database] </p>
 <p> <code>db5.3_stat</code> [-cEelmNrtVZ] [-C Aclop] [-h home] [-L A] [-M A] [-R A] [-P password]</p>
+<h2>DESCRIPTION</h2>
 <p> The db5.3_stat utility displays statistics for Berkeley DB environments.</p>
 <h2>OPTIONS</h2>
 <dl>

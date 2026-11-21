@@ -1,5 +1,4 @@
 ---
-
 title: "ffado-dbus-server(1)"
 name: "ffado-dbus-server"
 section: "1"
@@ -10,7 +9,9 @@ description: "dbus – expose the mixer features of connected FFADO devices thro
 
 <h2>NAME</h2>
 <p> dbus &#8211; expose the mixer features of connected FFADO devices through DBus</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ffado-dbus-server [OPTION&#8230;]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>ffado-dbus-server</code> exposes the mixer and control features of connected FFADO devices though a DBUS interface. The extent of support for controls on a given device depends entirely on the status of that device&#8217;s FFADO driver. </p>
 <p> By using DBus it is possible for control applications to be developed independently of FFADO. The DBus interface provided by <code>ffado-dbus-server</code> is used by <code>ffado-mixer</code> but there is no reason other implementations could not be written.</p>
 <h2>OPTIONS</h2>

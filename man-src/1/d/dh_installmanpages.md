@@ -1,5 +1,4 @@
 ---
-
 title: "dh_installmanpages(1)"
 name: "dh_installmanpages"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dh_installmanpages/"
 description: "dh_installmanpages – old-style man page installer (deprecated)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dh_installmanpages &#8211; old-style man page installer (deprecated) </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dh_installmanpages</code> [<i>debhelper options</i>] [<i>file</i> &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>dh_installmanpages</code> is a debhelper program that is responsible for automatically installing man pages into <i>usr/share/man/</i> in package build directories. </p>
 <p> This is a DWIM-style program, with an interface unlike the rest of debhelper. It is deprecated, and you are encouraged to use <i><a href="/docs/linux/man/1-dh_installman/">dh_installman</a></i>(1) instead. </p>
 <p> <code>dh_installmanpages</code> scans the current directory and all subdirectories for filenames that look like man pages. (Note that only real files are looked at; symlinks are ignored.) It uses <i><a href="/docs/linux/man/1-file/">file</a></i>(1) to verify that the files are in the correct format. Then, based on the files&#8217; extensions, it installs them into the correct man directory. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "timer_create(2)"
 name: "timer_create"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-timer_create/"
 description: "timer_create – create a POSIX per-process timer"
 ---
 
+<h2 class="name">NAME</h2>
+<p> timer_create &#8211; create a POSIX per-process timer </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;signal.h&gt;
 #include &lt;time.h&gt;
@@ -17,6 +19,7 @@ int timer_create(clockid_t clockid, struct sigevent *sevp,
 <p> Link with <i>-lrt</i>. </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>timer_create</code>(): _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;199309L</p>
+<h2>DESCRIPTION</h2>
 <p> <code>timer_create</code>() creates a new per-process interval timer. The ID of the new timer is returned in the buffer pointed to by <i>timerid</i>, which must be a non-null pointer. This ID is unique within the process, until the timer is deleted. The new timer is initially disarmed. </p>
 <p> The <i>clockid</i> argument specifies the clock that the new timer uses to measure time. It can be specified as one of the following values:</p>
 <dl>

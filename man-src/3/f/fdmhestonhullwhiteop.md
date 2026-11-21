@@ -1,5 +1,4 @@
 ---
-
 title: "fdmhestonhullwhiteop(3)"
 name: "fdmhestonhullwhiteop"
 section: "3"
@@ -7,9 +6,17 @@ letter: "f"
 url: "/docs/linux/man/3-fdmhestonhullwhiteop/"
 ---
 
-ql/experimental/finitedifferences/fdmhestonhullwhiteop.hpp - Heston Hull White linear operator. 
+<h2 class="name">NAME</h2>
+ 
 
-#include &lt;ql/processes/hestonprocess.hpp&gt; 
+ ql/experimental/finitedifferences/fdmhestonhullwhiteop.hpp - Heston Hull White linear operator. 
+
+<h2>SYNOPSIS</h2>
+
+ 
+ 
+
+ #include &lt;ql/processes/hestonprocess.hpp&gt; 
  #include &lt;ql/processes/hullwhiteprocess.hpp&gt; 
  #include &lt;ql/experimental/finitedifferences/firstderivativeop.hpp&gt; 
  #include &lt;ql/experimental/finitedifferences/triplebandlinearop.hpp&gt; 

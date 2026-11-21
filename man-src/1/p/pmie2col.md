@@ -1,5 +1,4 @@
 ---
-
 title: "pmie2col(1)"
 name: "pmie2col"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmie2col – convert pmie output to multi-column format"
 
 <h2>NAME</h2>
 <p> <code>pmie2col</code> &#8211; convert pmie output to multi-column format</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pmie2col</code> [<code>-d</code> <i>delimiter</i>] [<code>-p</code> <i>precision</i>] [<code>-w</code> <i>width</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmie2col</code> is a simple tool that converts output from <code><a href="/docs/linux/man/1-pmie/">pmie</a></code>(1) into regular column format. Each column is 7 characters wide (by default, may be changed with the <code>-w</code> option) with a single space between columns. That single space can be substituted with an alternate delimiter using the <code>-d</code> option (this is useful for importing the data into a spreadsheet, for example). </p>
 <p> The precision of the tabulated values from <code>pmie</code> can be specified with the <code>-p</code> option (default is 2 decimal places). This option can and will override any width setting in order to present the requested precision. </p>
 <p> The <code><a href="/docs/linux/man/1-pmie/">pmie</a></code>(1) configuration must follow these rules:</p>

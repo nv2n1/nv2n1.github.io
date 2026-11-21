@@ -1,5 +1,4 @@
 ---
-
 title: "gvfsd-fuse(1)"
 name: "gvfsd-fuse"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-gvfsd-fuse/"
 description: "gvfsd-fuse – Fuse daemon for gvfs"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gvfsd-fuse &#8211; Fuse daemon for gvfs </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gvfsd-fuse</code> PATH</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>gvfsd-fuse</code></p>
 <dd>maintains a fuse mount to make gvfs backends available to POSIX applications. The mount point for the fuse filesystem is provided by the [PATH] argument. </dd>
 <p> <code>gvfsd-fuse</code> is normally started by <code><a href="/docs/linux/man/1-gvfsd/">gvfsd</a></code>(1). In this case, the mount point is <code>$XDG_RUNTIME_DIR</code>/gvfs or <code>$HOME</code>/.gvfs.</p>

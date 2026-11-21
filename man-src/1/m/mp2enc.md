@@ -1,5 +1,4 @@
 ---
-
 title: "mp2enc(1)"
 name: "mp2enc"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mp2enc/"
 description: "mp2enc – Simple MPEG-1 layer-II audio encoder"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mp2enc &#8211; Simple MPEG-1 layer-II audio encoder </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mp2enc</code> [<code>-v</code> <i>num</i>] [<code>-b</code> <i>bitrate_kbps</i>] [<code>-r</code> <i>output_sampling_rate_hz</i>] [<code>-R</code> <i>rate,chans,bits</i>] [<code>-s</code> ] [<code>-m</code> ] [<code>-e</code> ] [<code>-V</code> ] [<code>-?</code>] <code>-o</code><i>&nbsp;<wbr>output_filename</i> </p>
+<h2>DESCRIPTION</h2>
 <p> Mp2enc is a simple MPEG-1 layer-I/II audio encoder. It is actually a very mildly warmed over version of the MPEG Software Simulation Group&#8217;s reference encoder. It accepts a WAV file or stream on stdin and ouputs an a layer-I/II elementary audio stream. It is included in the <code><a href="/docs/linux/man/1-mjpegtools/">mjpegtools</a></code>(1) primarily for reasons of completeness and because it is able to perform sampling rate conversion. </p>
 <p> Those seeking a faster (and probably higher quality) layer II encoder are recommended to use <code>toolame</code>(1) which can be obtained from:</p>
 <dl>

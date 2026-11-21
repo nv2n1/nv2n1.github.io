@@ -1,5 +1,4 @@
 ---
-
 title: "dbcolcopylast(1)"
 name: "dbcolcopylast"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-dbcolcopylast/"
 description: "dbcolcopylast – create new columns that are copies of prior columns"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dbcolcopylast &#8211; create new columns that are copies of prior columns </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 dbcolcopylast[-e EMPTY][column...]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> For each <font SIZE="-1">COLUMN,</font> create a new column copylast_COLUMN that is the last value for that column&#8212;that is, the value of that column from the row before.</p>
 <h2>OPTIONS</h2>
 <dl>

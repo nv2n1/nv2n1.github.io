@@ -1,5 +1,4 @@
 ---
-
 title: "gif2tiff(1)"
 name: "gif2tiff"
 section: "1"
@@ -10,7 +9,9 @@ description: "gif2tiff – create a TIFF file from a GIF87 format image file"
 
 <h2>NAME</h2>
 <p> gif2tiff &#8211; create a <font SIZE="-1">TIFF</font> file from a GIF87 format image file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gif2tiff</code> [ <i>options</i> ] <i>input.gif</i> <i>output.tif</i></p>
+<h2>DESCRIPTION</h2>
 <p> <i>Gif2tiff</i> converts a file in the GIF87 format to <font SIZE="-1">TIFF.</font> The <font SIZE="-1">TIFF</font> image is created as a palette image, with samples compressed with the Lempel-Ziv &amp; Welch algorithm (<i>Compression</i>=5). These characteristics can overridden, or explicitly specified with the options described below.</p>
 <h2>OPTIONS</h2>
 <dl>

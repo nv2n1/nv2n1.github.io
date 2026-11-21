@@ -1,5 +1,4 @@
 ---
-
 title: "fslsfonts(1)"
 name: "fslsfonts"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-fslsfonts/"
 description: "fslsfonts – list fonts served by X font server"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fslsfonts &#8211; list fonts served by X font server </p>
+<h2>SYNOPSIS</h2>
 <p> <code>fslsfonts</code> [-options &#8230;] [-fn pattern]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>fslsfonts</i> lists the fonts that match the given <i>pattern</i>. The wildcard character &quot;*&quot; may be used to match any sequence of characters (including none), and &quot;?&quot; to match any single character. If no pattern is given, &quot;*&quot; is assumed. </p>
 <p> The &quot;*&quot; and &quot;?&quot; characters must be quoted to prevent them from being expanded by the shell.</p>
 <h2>OPTIONS</h2>

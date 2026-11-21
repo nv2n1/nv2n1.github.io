@@ -1,5 +1,4 @@
 ---
-
 title: "gettextize(1)"
 name: "gettextize"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-gettextize/"
 description: "gettextize – install or upgrade gettext infrastructure"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gettextize &#8211; install or upgrade gettext infrastructure </p>
+<h2>SYNOPSIS</h2>
 <p> <code>gettextize</code> [<i>OPTION</i>]&#8230; [<i>package-dir</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Prepares a source package to use gettext.</p>
 <h2>OPTIONS</h2>
 <dl>

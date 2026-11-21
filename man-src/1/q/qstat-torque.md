@@ -1,5 +1,4 @@
 ---
-
 title: "qstat-torque(1)"
 name: "qstat-torque"
 section: "1"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/1-qstat-torque/"
 description: "qstat – show status of pbs batch jobs"
 ---
 
+<h2 class="name">NAME</h2>
+<p> qstat &#8211; show status of pbs batch jobs </p>
+<h2>SYNOPSIS</h2>
 <p> qstat [-f [-1]] [-l] [-W site_specific] [-x] [job_identifier&#8230; | destination&#8230;] </p>
 <p> qstat [-a|-i|-r|-e] [-l] [-n [-1]] [-s] [-G|-M] [-R] [-u user_list] [job_identifier&#8230; |&nbsp;<wbr> destination&#8230;] </p>
 <p> qstat -Q [-f [-1]][-W site_specific] [-l] [destination&#8230;] </p>
 <p> qstat -q [-G|-M] [-l] [destination&#8230;] </p>
 <p> qstat -B [-f [-1]][-W site_specific] [-l] [server_name&#8230;] </p>
 <p> qstat -t</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>qstat</code> command is used to request the status of jobs, queues, or a batch server. The requested status is written to standard out. </p>
 <p> When requesting job status, synopsis format 1 or 2, <code>qstat</code> will output information about each <i> or all jobs at each Jobs for which the user does not have status privilege are not displayed. </p>
 <p> When requesting queue or server status, synopsis format 3 through 5, qstat will output information about each </i></p>

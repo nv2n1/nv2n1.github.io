@@ -1,5 +1,4 @@
 ---
-
 title: "npm-org(1)"
 name: "npm-org"
 section: "1"
@@ -8,6 +7,7 @@ url: "/docs/linux/man/1-npm-org/"
 description: "npm-org – Manage orgs"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>npm-org</code> &#8211; Manage orgs </p>
 <h3>Synopsis</h3>
 <dl>

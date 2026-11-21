@@ -1,5 +1,4 @@
 ---
-
 title: "dbfilealter(1)"
 name: "dbfilealter"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dbfilealter/"
 description: "dbfilealter – alter the format of an Fsdb file, changing the row/column separator"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dbfilealter &#8211; alter the format of an Fsdb file, changing the row/column separator </p>
+<h2>SYNOPSIS</h2>
 <p> dbfilealter [-c] [-F fs] [-R rs] [-Z compression] [column&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> This program reformats a Fsdb file, altering the row (<tt>&quot;-R rs&quot;</tt>) or column (<tt>&quot;-F fs&quot;</tt>) separator. It verifies that this action does not violate the file constraints (for example, if spaces appear in data and the new format has space as a separator), and optionally corrects things. </p>
 <p> With <tt>&quot;-Z compression&quot;</tt> it controls compression on the file</p>
 <h2>OPTIONS</h2>

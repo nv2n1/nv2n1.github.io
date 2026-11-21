@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_buffer2pkt_wire(3)"
 name: "ldns_buffer2pkt_wire"
 section: "3"
@@ -10,10 +9,12 @@ description: "ldns_buffer2pkt_wire"
 
 <h2>NAME</h2>
 <p> ldns_buffer2pkt_wire </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_status ldns_buffer2pkt_wire(ldns_pkt **packet, ldns_buffer *buffer); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_buffer2pkt_wire</i>()</dt>
 <dd>converts the data on the uint8_t bytearray (in wire format) to a DNS packet. This function will initialize and allocate memory space for the packet structure. </dd>

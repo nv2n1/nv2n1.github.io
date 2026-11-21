@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_gsi_gssapi_buffer_set/"
 description: "Buffer Set Utilities –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Buffer Set Utilities &#8211; </p>
 <p> Buffer Set Utilities.</p>
 <h3>Functions</h3>
 <p> OM_uint32 GSS_CALLCONV <code>gss_create_empty_buffer_set</code> (OM_uint32 *minor_status, gss_buffer_set_t *buffer_set)<br />

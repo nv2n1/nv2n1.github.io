@@ -1,5 +1,4 @@
 ---
-
 title: "cporfsx(3)"
 name: "cporfsx"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cporfsx/"
 description: "cporfsx.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cporfsx.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cporfsx</code> (UPLO, EQUED, N, NRHS, A, LDA, AF, LDAF, S, B, LDB, X, LDX, RCOND, BERR, N_ERR_BNDS, ERR_BNDS_NORM, ERR_BNDS_COMP, NPARAMS, PARAMS, WORK, RWORK, INFO)<br />
  <i></i><code>CPORFSX</code></p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ibdiagnet(1)"
 name: "ibdiagnet"
 section: "1"
@@ -8,12 +7,15 @@ url: "/docs/linux/man/1-ibdiagnet/"
 description: "ibdiagnet – IB diagnostic net"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ibdiagnet &#8211; IB diagnostic net </p>
 <h2>SYNOPSYS</h2>
 <p> ibdiagnet [-c &lt;count&gt;] [-v] [-r] [-vlr] [-u] [-o &lt;out-dir&gt;]<br />
 &nbsp;<wbr>&nbsp;<wbr>[-t&nbsp;<wbr>&lt;topo-file&gt;]&nbsp;<wbr>[-s&nbsp;<wbr>&lt;sys-name&gt;]&nbsp;<wbr>[-i&nbsp;<wbr>&lt;dev-index&gt;]&nbsp;<wbr>[-p&nbsp;<wbr>&lt;port-num&gt;]&nbsp;<wbr>[-wt]<br />
 &nbsp;<wbr>&nbsp;<wbr>[-pm]&nbsp;<wbr>[-pc]&nbsp;<wbr>[-P&nbsp;<wbr>&lt;&lt;<font SIZE="-1">PM</font>&gt;=&lt;Value&gt;&gt;]<br />
 &nbsp;<wbr>&nbsp;<wbr>[-lw&nbsp;<wbr>&lt;1x|4x|12x&gt;]&nbsp;<wbr>[-ls&nbsp;<wbr>&lt;2.5|5|10&gt;]<br />
 &nbsp;<wbr>&nbsp;<wbr>[-skip&nbsp;<wbr>&lt;ibdiag_check/s&gt;]&nbsp;<wbr>[-load_db&nbsp;<wbr>&lt;db_file&gt;]</p>
+<h2>DESCRIPTION</h2>
 <p> ibdiagnet scans the fabric using directed route packets and extracts all the available information regarding its connectivity and devices. It then produces the following files in the output directory (which defined by the -o option (see below)).</p>
 <h2>FILES</h2>
 <dl>

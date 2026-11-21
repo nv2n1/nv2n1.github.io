@@ -1,5 +1,4 @@
 ---
-
 title: "splain(1)"
 name: "splain"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-splain/"
 description: "diagnostics, splain – produce verbose warning diagnostics"
 ---
 
+<h2 class="name">NAME</h2>
+<p> diagnostics, splain &#8211; produce verbose warning diagnostics </p>
+<h2>SYNOPSIS</h2>
 <p> Using the <tt>&quot;diagnostics&quot;</tt> pragma: </p>
 <pre><code>
 use diagnostics;
@@ -22,6 +24,7 @@ disable diagnostics;
 <pre>
     perl -Mdiagnostics=-traceonly my_script.pl
 </pre>
+<h2>DESCRIPTION</h2>
 <h3>The diagnostics Pragma</h3>
 <p> This module extends the terse diagnostics normally emitted by both the perl compiler and the perl interpreter (from running perl with a -w switch or <tt>&quot;use warnings&quot;</tt>), augmenting them with the more explicative and endearing descriptions found in perldiag. Like the other pragmata, it affects the compilation phase of your program rather than merely the execution phase. </p>
 <p> To use in your program as a pragma, merely invoke </p>

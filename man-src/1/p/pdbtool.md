@@ -1,5 +1,4 @@
 ---
-
 title: "pdbtool(1)"
 name: "pdbtool"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pdbtool/"
 description: "pdbtool – An application to test and convert syslog-ng pattern database rules"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pdbtool &#8211; An application to test and convert syslog-ng pattern database rules </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pdbtool</code> [command] [options]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This manual page is only an abstract; for the complete documentation of syslog-ng and pdbtool, see m[blue]<code>The syslog-ng Administrator Guide</code>m[]<font SIZE="-2">[1]</font>. </dd>
 <p> The syslog-ng application can match the contents of the log messages to a database of predefined message patterns (also called patterndb). By comparing the messages to the known patterns, syslog-ng is able to identify the exact type of the messages, tag the messages, and sort them into message classes. The message classes can be used to classify the type of the event described in the log message. The functionality of the pattern database is similar to that of the logcheck project, but the syslog-ng approach is faster, scales better, and is much easier to maintain compared to the regular expressions of logcheck. </p>
 <p> The <code>pdbtool</code> application is a utility that can be used to: </p>

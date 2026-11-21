@@ -1,5 +1,4 @@
 ---
-
 title: "dcmpsmk(1)"
 name: "dcmpsmk"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-dcmpsmk/"
 description: "dcmpsmk – Create DICOM grayscale softcopy presentation state"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dcmpsmk &#8211; Create DICOM grayscale softcopy presentation state </p>
+<h2>SYNOPSIS</h2>
 <pre>
 dcmpsmk [options] dcmfile-in dcmfile-out
 </pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>dcmpsmk</code> utility reads a DICOM image file and creates a grayscale softcopy presentation state object according to Supplement 33. The presentation state object is written back to file. A number of command line options allow to specify how certain constructs that might be present in the image file should be referenced or activated in the presentation state. The newly created presentation state references the source image and contains values that should allow for a &#8216;reasonable&#8217; display of the image when rendered under control of the presentation state.</p>
 <h2>PARAMETERS</h2>
 <pre>

@@ -1,5 +1,4 @@
 ---
-
 title: "yuvscaler(1)"
 name: "yuvscaler"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-yuvscaler/"
 description: "yuvscaler – UPscales or DOWNscales a YUV4MPEG2 stream to a specified format"
 ---
 
+<h2 class="name">NAME</h2>
+<p> yuvscaler &#8211; UPscales or DOWNscales a YUV4MPEG2 stream to a specified format</p>
+<h2>SYNOPSIS</h2>
 <p> <code>yuvscaler </code> [<code>-I</code> <i>input_keyword</i>] [<code>-M</code> <i>mode_keyword</i>] [<code>-O</code> <i>output_keyword</i>] [<code>-n p</code>|<code>s</code>|<code>n</code>] [<code>-v 0</code>&#8211;<code>2</code>] [<code>-h</code>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>yuvscaler</code> is a general (UP or DOWN) scaling utility that is provided to allow conversion between different video formats. It reads in a YUV4MPEG2 format stream from stdin (such as that produced by <code>lav2yuv</code>) and outputs such stream to stdout (e.g. to be consumed by <code>mpeg2enc</code>). The most common use of yuvscaler is to generate input suitable for MPEG encoding to VCD or SVCD formats using <code><a href="/docs/linux/man/1-mpeg2enc/">mpeg2enc</a></code>(1). </p>
 <p> <code>yuvscaler</code> will automatically take into account PAL/SECAM and NTSC format, as well as widescreen (16:9) format and interlacing. Use of yuvscaler was designed to be straightforward. </p>
 <h2>EXAMPLES</h2>

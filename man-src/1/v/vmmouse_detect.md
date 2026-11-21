@@ -1,5 +1,4 @@
 ---
-
 title: "vmmouse_detect(1)"
 name: "vmmouse_detect"
 section: "1"
@@ -10,9 +9,11 @@ description: "vmmouse_detect – VMware mouse device autodetection tool"
 
 <h2>NAME</h2>
 <p> vmmouse_detect &#8211; VMware mouse device autodetection tool</p>
+<h2>SYNOPSIS</h2>
 <p> vmmouse_detect</p>
 <h2>OPTIONS</h2>
 <p> vmmouse_detect has no options</p>
+<h2>DESCRIPTION</h2>
 <p> <code>vmmouse_detect</code> is a tool for detecting if running in a VMware environment where vmmouse is used. It exits with a 0 return value if the vmmouse client is enabled, and 1 if not.</p>
 <h2>DIAGNOSTICS</h2>
 <p> <code>vmmouse_detect</code>&#8216;s exit status is used to communicate information.</p>

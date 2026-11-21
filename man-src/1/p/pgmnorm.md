@@ -1,5 +1,4 @@
 ---
-
 title: "pgmnorm(1)"
 name: "pgmnorm"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-pgmnorm/"
 description: "pnmnorm – normalize the contrast in a Netbpm image"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pnmnorm &#8211; normalize the contrast in a Netbpm image </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pnmnorm</code> [<code>-bpercent</code> <i>N</i> | <code>-bvalue</code> <i>N</i>] [<code>-wpercent</code> <i>N</i> | <code>-wvalue</code> <i>N</i>] [<code>-keephues</code>] [<code>-brightmax</code>] </p>
 <p> [<i>ppmfile</i>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one to designate an option. You may use either white space or an equals sign between an option name and its value. </p>
+<h2>DESCRIPTION</h2>
 <p> Reads a PNM image (PBM, PGM, or PPM). Normalizes the contrast by forcing the lightest pixels to white, the darkest pixels to black, and linearly rescaling the ones in between; and produces the same kind of file as output. This is pretty useless for a PBM image. </p>
 <p> The program first determines a mapping of old brightness to new brightness. For each possible brightness of a pixel, the program determines a corresponding brightness for the output image. </p>
 <p> Then for each pixel in the image, the program computes a color which has the desired output brightness and puts that in the output. With a color image, it is not always possible to compute such a color and retain any semblance of the original hue, so the brightest and dimmest pixels may only approximate the desired brightness. </p>

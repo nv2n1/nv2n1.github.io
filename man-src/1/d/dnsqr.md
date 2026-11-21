@@ -1,5 +1,4 @@
 ---
-
 title: "dnsqr(1)"
 name: "dnsqr"
 section: "1"
@@ -7,10 +6,12 @@ letter: "d"
 url: "/docs/linux/man/1-dnsqr/"
 ---
 
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>dnsqr</code> [<code>OPTIONS</code>] &lt;record-type&gt; &lt;domain-name&gt;</dt>
 <dd>
 </dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>dnsqr</code> lets you query for specific type of records about a given domain name. <code>dnsqr</code> supports the following options: </p>
 <h2>OPTIONS</h2>
 <dl>

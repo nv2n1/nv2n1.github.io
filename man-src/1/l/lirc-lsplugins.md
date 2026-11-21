@@ -1,5 +1,4 @@
 ---
-
 title: "lirc-lsplugins(1)"
 name: "lirc-lsplugins"
 section: "1"
@@ -10,9 +9,11 @@ description: "lirc-lsplugins – print dynamic modules info"
 
 <h2>NAME</h2>
 <p> lirc-lsplugins &#8211; print dynamic modules info</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lirc-lsplugins</code> <i>[-l] [-q] [-U plugindir]</i> <i>[drivers]</i><br />
  <code>lirc-lsplugins</code> <i>-e [-q] [-U plugindir]</i><br />
  <code>lirc-lsplugins</code> <i>-e [-q|-p|-h|-v]</i></p>
+<h2>DESCRIPTION</h2>
 <p> Tool which writes a simple list with info for each driver found. In particular, it writes info if a plugin can&#8217;t be loaded e. g., due to unresolved references. </p>
 <p> The <i>[drivers]</i> argument is an optional selector which limits the output to matching drivers. The match is a glob-type match as done by fnmatch()</p>
 <h2>OPTIONS</h2>

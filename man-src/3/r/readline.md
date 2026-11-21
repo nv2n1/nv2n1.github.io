@@ -1,5 +1,4 @@
 ---
-
 title: "readline(3)"
 name: "readline"
 section: "3"
@@ -7,8 +6,8 @@ letter: "r"
 url: "/docs/linux/man/3-readline/"
 description: "readline – get a line from a user with editing"
 ---
-
 <p>readline &#8211; get a line from a user with editing </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
  #include &lt;stdio.h&gt;
 #include &lt;readline/readline.h&gt;
@@ -22,6 +21,7 @@ description: "readline – get a line from a user with editing"
 </code></pre>
 <h2>COPYRIGHT</h2>
 <p> Readline is Copyright (C) 1989-2011 Free Software Foundation, Inc.  </p>
+<h2>DESCRIPTION</h2>
 <p> <code>readline</code> will read a line from the terminal and return it, using <code>prompt</code> as a prompt. If <code>prompt</code> is <code>NULL</code> or the empty string, no prompt is issued. The line returned is allocated with <i><a href="/docs/linux/man/3-malloc/">malloc</a></i>(3); the caller must free it when finished. The line returned has the final newline removed, so only the text of the line remains. </p>
 <p> <code>readline</code> offers editing capabilities while the user is entering the line. By default, the line editing commands are similar to those of emacs. A vi-style line editing interface is also available. </p>
 <p>This manual page describes only the most basic use of <code>readline</code>. Much more functionality is available; see <i>The GNU Readline Library</i> and <i>The GNU History Library</i> for additional information.  </p>

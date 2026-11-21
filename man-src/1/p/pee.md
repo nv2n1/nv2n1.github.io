@@ -1,5 +1,4 @@
 ---
-
 title: "pee(1)"
 name: "pee"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pee/"
 description: "pee – tee standard input to pipes"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pee &#8211; tee standard input to pipes </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pee</code> [&#8211;[no-]ignore-sigpipe] [&#8211;[no-]ignore-write-errors] [[<i>&quot;command&quot;</i>&#8230;]]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>pee</code></p>
 <dd>is like <code>tee</code> but for pipes. Each command is run and fed a copy of the standard input. The output of all commands is sent to stdout. </dd>
 <p> Note that while this is similar to <code>tee</code>, a copy of the input is not sent to stdout, like tee does. If that is desired, use <code>pee cat &#8230;</code></p>

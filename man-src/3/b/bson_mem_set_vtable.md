@@ -1,5 +1,4 @@
 ---
-
 title: "bson_mem_set_vtable(3)"
 name: "bson_mem_set_vtable"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_mem_set_table() – This function shall install a new memory 
 
 <h2>NAME</h2>
 <p> bson_mem_set_table() &#8211; This function shall install a new memory allocator to be used by Libbson.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 typedef struct _bson_mem_vtable_t {
     void *(*malloc)(size_t num_bytes);
@@ -26,6 +26,7 @@ void bson_mem_set_vtable(const bson_mem_vtable_t *vtable);
 <dl>
 <dt><code>vtable</code></dt>
 <dd> A bson_mem_vtable_t with every non-padding field set.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function shall install a new memory allocator to be used by Libbson. </p>
 <p> <code>NOTE</code></p>
 <dl>

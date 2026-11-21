@@ -1,5 +1,4 @@
 ---
-
 title: "pmdaweblog(1)"
 name: "pmdaweblog"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmdaweblog – performance metrics domain agent (PMDA) for Web ser
 
 <h2>NAME</h2>
 <p> <code>pmdaweblog</code> &#8211; performance metrics domain agent (PMDA) for Web server logs</p>
+<h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/weblog/pmdaweblog</code> [<code>-Cp</code>] [<code>-d</code> <i>domain</i>] [<code>-h</code> <i>helpfile</i>] [<code>-i</code> <i>port</i>] [<code>-l</code> <i>logfile</i>] [<code>-n</code> <i>idlesec</i>] [<code>-S</code> <i>num</i>] [<code>-t</code> <i>delay</i>] [<code>-u</code> <i>socket</i>] [<code>-U</code> <i>username</i>] <i>configfile</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdaweblog</code> is a Performance Metrics Domain Agent (<code><a href="/docs/linux/man/3-pmda/">PMDA</a></code>(3)) that scans Web server logs to extract metrics characterizing Web server activity. These performance metrics are then made available through the infrastructure of the Performance Co-Pilot (PCP). </p>
 <p> The <i>configfile</i> specifies which Web servers are to be monitored, their associated access logs and error logs, and a regular-expression based scheme for extracting detailed information about each Web access. This file is maintained as part of the PMDA installation and/or de-installation by the scripts <code>Install</code> and <code>Remove</code> in the directory <code>$PCP_PMDAS_DIR/weblog</code>. For more details, refer to the section below covering installation. </p>
 <p> Once started, <code>pmdaweblog</code> monitors a set of log files and in response to a request for information, will process any new information that has been appended to the log files, similar to a <code><a href="/docs/linux/man/1-tail/">tail</a></code>(1). There is also periodic &quot;catch up&quot; to process new information from all log files, and a scheme to detect the rotation of log files. </p>

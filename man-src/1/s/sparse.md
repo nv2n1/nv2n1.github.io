@@ -1,5 +1,4 @@
 ---
-
 title: "sparse(1)"
 name: "sparse"
 section: "1"
@@ -10,7 +9,9 @@ description: "sparse – Semantic Parser for C"
 
 <h2>NAME</h2>
 <p> sparse &#8211; Semantic Parser for C</p>
+<h2>SYNOPSIS</h2>
 <p> <code>sparse</code> [<i>WARNING OPTIONS</i>]&#8230; <i>file.c</i></p>
+<h2>DESCRIPTION</h2>
 <p> Sparse parses C source and looks for errors, producing warnings on standard error. </p>
 <p> Sparse accepts options controlling the set of warnings to generate. To turn on warnings Sparse does not issue by default, use the corresponding warning option <code>-Wsomething</code>. Sparse issues some warnings by default; to turn off those warnings, pass the negation of the associated warning option, <code>-Wno-something</code>.</p>
 <h2>WARNING OPTIONS</h2>

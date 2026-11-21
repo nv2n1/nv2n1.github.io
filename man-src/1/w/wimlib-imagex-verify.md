@@ -1,5 +1,4 @@
 ---
-
 title: "wimlib-imagex-verify(1)"
 name: "wimlib-imagex-verify"
 section: "1"
@@ -10,7 +9,9 @@ description: "wimlib-imagex-verify – Verify a WIM file"
 
 <h2>NAME</h2>
 <p> wimlib-imagex-verify &#8211; Verify a WIM file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>wimlib-imagex verify</code> <i>WIMFILE</i> [<i>OPTION</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>wimlib-imagex verify</code> checks the validity of the specified WIM archive. This command is also available as simply <code>wimverify</code> if the appropriate hard link or batch file has been installed. </p>
 <p> Specifically, this command performs the following verifications on the WIM archive:</p>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "dtrmm(3)"
 name: "dtrmm"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dtrmm/"
 description: "dtrmm.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dtrmm.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dtrmm</code> (SIDE, UPLO, TRANSA, DIAG, M, N, ALPHA, A, LDA, B, LDB)<br />
  <i></i><code>DTRMM</code></p>

@@ -1,5 +1,4 @@
 ---
-
 title: "keyctl_session_to_parent(3)"
 name: "keyctl_session_to_parent"
 section: "3"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/3-keyctl_session_to_parent/"
 description: "keyctl_session_to_parent – Set the parent process’s session keyring"
 ---
 
+<h2 class="name">NAME</h2>
+<p> keyctl_session_to_parent &#8211; Set the parent process&#8217;s session keyring </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;keyutils.h&gt;
 long keyctl_session_to_parent();
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>keyctl_session_to_parent</code>() changes the session keyring to which the calling process&#8217;s parent subscribes to be the that of the calling process. </p>
 <p> The keyring must have <code>link</code> permission available to the calling process, the parent process must have the same UIDs/GIDs as the calling process, and the LSM must not reject the replacement. Furthermore, this may not be used to affect init or a kernel thread. </p>
 <p> Note that the replacement will not take immediate effect upon the parent process, but will rather be deferred to the next time it returns to userspace from kernel space.</p>

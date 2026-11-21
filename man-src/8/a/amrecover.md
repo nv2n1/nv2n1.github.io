@@ -1,5 +1,4 @@
 ---
-
 title: "amrecover(8)"
 name: "amrecover"
 section: "8"
@@ -7,11 +6,12 @@ letter: "a"
 url: "/docs/linux/man/8-amrecover/"
 description: "amrecover – Amanda index database browser"
 ---
-
 <p>amrecover &#8211; Amanda index database browser </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>amrecover</code> [-s&nbsp;<wbr><i>index-server</i>] [-t&nbsp;<wbr><i>tape-server</i>] [-d&nbsp;<wbr><i>tape-device</i>] [-h&nbsp;<wbr><i>hostname</i>] [<code>-o</code>&nbsp;<wbr><i>configoption</i>...] [-C&nbsp;<wbr><i>config</i>] </dt>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> <code>Amrecover</code> </p>
 <dd> <p> browses the database of Amanda index files to determine which tapes contain files to recover. Furthermore, it is able to recover files. </p>
 <p>In order to restore files in place, you must invoke <code>amrecover</code> from the root of the backed up filesystem, or use <code>lcd</code> to move into that directory, otherwise a directory tree that resembles the backed up filesystem will be created in the current directory. See the examples below for details. </p>

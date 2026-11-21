@@ -1,5 +1,4 @@
 ---
-
 title: "newhelp(1)"
 name: "newhelp"
 section: "1"
@@ -10,7 +9,9 @@ description: "newhelp – generate a performance metrics help database"
 
 <h2>NAME</h2>
 <p> <code>newhelp</code> &#8211; generate a performance metrics help database</p>
+<h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/newhelp</code> [<code>-V</code>] [<code>-n</code> <i>pmnsfile</i>] [<code>-o</code> <i>outputfile</i>] [<code>-v</code> <i>version</i>] [<i>file</i> &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>newhelp</code> generates the Performance Co-Pilot help text files used by Performance Metric Domain Agents (PMDAs). </p>
 <p> Normally <code>newhelp</code> operates on the default Performance Metrics Name Space (PMNS), however if the <code>-n</code> option is specified an alternative namespace is loaded from the file <i>pmnsfile</i>. </p>
 <p> When there is only one input file, the base name of the new database is derived from the name of the input <i>file</i>, otherwise the <code>-o</code> flag must be given to explicitly name the database. If no input files are supplied, <code>newhelp</code> reads from the standard input stream, in which case the <code>-o</code> flag must be given. </p>

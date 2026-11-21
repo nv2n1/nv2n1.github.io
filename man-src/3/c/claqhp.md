@@ -1,5 +1,4 @@
 ---
-
 title: "claqhp(3)"
 name: "claqhp"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-claqhp/"
 description: "claqhp.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> claqhp.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>claqhp</code> (UPLO, N, AP, S, SCOND, AMAX, EQUED)<br />
  <i></i><code>CLAQHP</code> scales a Hermitian matrix stored in packed form.</p>

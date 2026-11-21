@@ -1,5 +1,4 @@
 ---
-
 title: "bti-shrink-urls(1)"
 name: "bti-shrink-urls"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-bti-shrink-urls/"
 description: "bti-shrink-urls – convert URLs to a shorter form using a web service"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bti-shrink-urls &#8211; convert URLs to a shorter form using a web service </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>bti</code> [<code>&#8211;escaped</code>] [<code>&#8211;help</code>] [<code>URL</code>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>bti-shrink-urls converts URLs to a shorter form using a web service. </dd>
 <p> Currently <a rel="nofollow" href="http://2tu.us/">http://2tu.us/</a> (default) and <a href="http://bit.ly">http://bit.ly</a> / <a href="http://j.mp">http://j.mp</a> are supported.</p>
 <h2>OPTIONS</h2>

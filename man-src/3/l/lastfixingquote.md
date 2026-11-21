@@ -1,5 +1,4 @@
 ---
-
 title: "lastfixingquote(3)"
 name: "lastfixingquote"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-lastfixingquote/"
 description: "ql/quotes/lastfixingquote.hpp – quote for the last fixing available for a given index"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/quotes/lastfixingquote.hpp &#8211; quote for the last fixing available for a given index </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/quote.hpp&gt;<br />
  #include &lt;ql/index.hpp&gt;<br />
  #include &lt;ql/patterns/observable.hpp&gt; </p>

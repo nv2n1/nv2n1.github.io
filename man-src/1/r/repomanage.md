@@ -1,5 +1,4 @@
 ---
-
 title: "repomanage(1)"
 name: "repomanage"
 section: "1"
@@ -10,7 +9,9 @@ description: "repomanage – list the newest or oldest RPM packages in a directo
 
 <h2>NAME</h2>
 <p> repomanage &#8211; list the newest or oldest RPM packages in a directory</p>
+<h2>SYNOPSIS</h2>
 <p> <code>repomanage</code> [options] directory</p>
+<h2>DESCRIPTION</h2>
 <p> <code>repomanage</code> is a program to manage a directory of RPM packages. It displays a list of the newest or oldest packages in a directory for easy piping to xargs or similar programs. </p>
 <h2>OPTIONS</h2>
 <dl>

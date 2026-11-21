@@ -1,5 +1,4 @@
 ---
-
 title: "sync(1)"
 name: "sync"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-sync/"
 description: "sync – Synchronize cached writes to persistent storage"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sync &#8211; Synchronize cached writes to persistent storage </p>
+<h2>SYNOPSIS</h2>
 <p> <code>sync</code> [<i>,OPTION/</i>] [<i>,FILE/</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Synchronize cached writes to persistent storage </p>
 <p> If one or more files are specified, sync only them, or their containing file systems.</p>
 <dl>

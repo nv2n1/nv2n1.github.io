@@ -1,5 +1,4 @@
 ---
-
 title: "ckeygen(1)"
 name: "ckeygen"
 section: "1"
@@ -10,7 +9,9 @@ description: "ckeygen – manipulate public/private keys"
 
 <h2>NAME</h2>
 <p> ckeygen &#8211; manipulate public/private keys</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ckeygen [-b </code><i>bits</i>] [-f <i>filename</i>] [-t <i>type</i>] <code>[-C </code><i>comment</i>] [-N <i>new passphrase</i>] [-P <i>old passphrase</i>] <code>[-l] [-p] [-q] [-y]</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>&#8211;help</code> prints out a usage message to standard output.</p>
 <dl>
 <dt><code>-b</code>, <code>&#8211;bits</code> &lt;bits&gt;</dt>

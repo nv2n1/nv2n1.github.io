@@ -1,5 +1,4 @@
 ---
-
 title: "doveadm-exec(1)"
 name: "doveadm-exec"
 section: "1"
@@ -10,7 +9,9 @@ description: "doveadm-exec – easily execute commands from Dovecot’s libexec_
 
 <h2>NAME</h2>
 <p> doveadm-exec &#8211; easily execute commands from Dovecot&#8217;s libexec_dir</p>
+<h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>exec</code> <i>binary</i> [<i>binary arguments</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> This command allows administrators and local users to simply execute commands from within <i>libexec_dir</i>. So for example a logged in system user could start a pre-authenticated imap session, using the command: <code>doveadm exec imap</code>. An administrator would use the command: <code>doveadm exec imap -u</code> <i>username</i>.</p>
 <h2>OPTIONS</h2>
 <p> Global <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) <i>options</i>:</p>

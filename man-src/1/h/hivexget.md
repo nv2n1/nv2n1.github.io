@@ -1,5 +1,4 @@
 ---
-
 title: "hivexget(1)"
 name: "hivexget"
 section: "1"
@@ -7,9 +6,14 @@ letter: "h"
 url: "/docs/linux/man/1-hivexget/"
 ---
 
-hivexget - Get subkey from a Windows Registry binary &quot;hive&quot; file 
+<h2 class="name">NAME</h2>
+ 
 
-<pre>
+ hivexget - Get subkey from a Windows Registry binary &quot;hive&quot; file 
+
+<h2>SYNOPSIS</h2>
+
+ <pre>
  hivexget hivefile '\Path\To\SubKey'
  hivexget hivefile '\Path\To\SubKey' name
 </pre>
@@ -18,7 +22,9 @@ hivexget - Get subkey from a Windows Registry binary &quot;hive&quot; file
 
  This is a low-level tool. For a more convenient way to navigate the Windows Registry in Windows virtual machines, see <i><a HREF="/docs/linux/man/1-virt-win-reg/">virt-win-reg</a></i>(1). For proper regedit formatting, use <i><a HREF="/docs/linux/man/1-hivexregedit/">hivexregedit</a></i>(1).
 
-This program navigates through a Windows Registry binary ``hive'' file and extracts <i>either</i> all the (key, value) data pairs stored in that subkey <i>or</i> just the single named data item. 
+<h2>DESCRIPTION</h2>
+
+ This program navigates through a Windows Registry binary ``hive'' file and extracts <i>either</i> all the (key, value) data pairs stored in that subkey <i>or</i> just the single named data item. 
 
  In the first form: 
 

@@ -1,5 +1,4 @@
 ---
-
 title: "unprotoize(1)"
 name: "unprotoize"
 section: "1"
@@ -10,9 +9,11 @@ description: "protoize, unprotoize – automatically add or remove function prot
 
 <h2>NAME</h2>
 <p> protoize, unprotoize &#8211; automatically add or remove function prototypes</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>protoize</code> [-CfgklNnqv] [-B <i>DIRECTORY</i>] [-c <i>COMPILATION-OPTIONS</i>] [-d <i>DIRECTORY</i>] [-i <i>STRING</i>] [-p <i>PROGRAM</i>] [-x <i>FILE</i>] [<i>FILE</i>&#8230;]</dt>
 <dt> <code>unprotoize</code> [-fkNnqv] [-c <i>COMPILATION-OPTIONS</i>] [-d <i>DIRECTORY</i>] [-i <i>STRING</i>] [-p <i>PROGRAM</i>] [-x <i>FILE</i>] [<i>FILE</i>&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>protoize</code> is an optional part of GCC.</p>
 <dd>You can use it to add prototypes to a program, thus converting the program to ANSI C in one respect. The companion program <code>unprotoize</code> does the reverse: it removes argument types from any prototypes that are found. </dd>
 <p> When you run these programs, you must specify a set of source files as command line arguments. The conversion programs start out by compiling these files to see what functions they define. The information gathered about a file <i>FOO</i> is saved in a file named <i>FOO.X</i>. </p>

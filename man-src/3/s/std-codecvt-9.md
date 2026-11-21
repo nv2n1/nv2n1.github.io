@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-std-codecvt-9/"
 description: "std::wstring_convert<Codecvt,Elem,Wide_alloc,Byte_alloc>::converted – std::wstring_convert<Codecvt,Elem,Wide_alloc,Byte_alloc>::converted"
 ---
 
+<h2 class="name">NAME</h2>
+<p> std::wstring_convert&lt;Codecvt,Elem,Wide_alloc,Byte_alloc&gt;::converted &#8211; std::wstring_convert&lt;Codecvt,Elem,Wide_alloc,Byte_alloc&gt;::converted</p>
 <h2>Synopsis</h2>
 <p>Defined in header &lt;locale&gt;<br />
 std::size_t converted() const; <i>(until C++14)</i><br />

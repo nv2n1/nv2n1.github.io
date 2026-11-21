@@ -1,5 +1,4 @@
 ---
-
 title: "lsp_(3)"
 name: "lsp_"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-lsp_/"
 description: "QuantLib::LeastSquareFunction – Cost function for least-square problems."
 ---
 
+<h2 class="name">NAME</h2>
+<p> QuantLib::LeastSquareFunction &#8211; Cost function for least-square problems. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/optimization/leastsquare.hpp&gt; </p>
 <p> Inherits <code>QuantLib::CostFunction</code>. </p>
 <h3>Public Member Functions</h3>

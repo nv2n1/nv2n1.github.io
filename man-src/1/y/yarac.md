@@ -1,5 +1,4 @@
 ---
-
 title: "yarac(1)"
 name: "yarac"
 section: "1"
@@ -10,9 +9,11 @@ description: "yarac – compile rules to yara"
 
 <h2>NAME</h2>
 <p> <code>yarac </code>&#8211; compile rules to yara</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 yarac[OPTION]...[RULE_FILE]... OUTPUT_FILE
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> To invoke YARA you will need two things: a file with the rules you want to use (either in source code or compiled form) and the target to be scanned. The target can be a file, a folder, or a process. </p>
 <p> Rule files can be passed directly in source code form, or can be previously compiled with the <code>yarac</code> tool. You may prefer to use your rules in compiled form if you are going to invoke YARA multiple times with the same rules. This way you’ll save time, because for YARA is faster to load compiled rules than compiling the same rules over and over again. </p>
 <p> The rules will be applied to the target specified as the last argument to YARA, if it’s a path to a directory all the files contained in it will be scanned.</p>

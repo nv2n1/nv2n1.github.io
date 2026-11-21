@@ -1,5 +1,4 @@
 ---
-
 title: "toe(1)"
 name: "toe"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-toe/"
 description: "toe – table of (terminfo) entries"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>toe</code> &#8211; table of (terminfo) entries </p>
+<h2>SYNOPSIS</h2>
 <p> <code>toe</code> [<code>-v</code>[<i>n</i>]] [<code>-ahsuUV</code>] <i>file&#8230;</i> </p>
+<h2>DESCRIPTION</h2>
 <p> With no options, <code>toe</code> lists all available terminal types by primary name with descriptions. File arguments specify the directories to be scanned; if no such arguments are given, your default terminfo directory is scanned. If you also specify the <code>-h</code> option, a directory header will be issued as each directory is entered. </p>
 <p> There are other options intended for use by terminfo file maintainers:</p>
 <dl>

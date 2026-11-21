@@ -1,5 +1,4 @@
 ---
-
 title: "funsky(1)"
 name: "funsky"
 section: "1"
@@ -10,11 +9,13 @@ description: "funsky – convert between image and sky coordinates"
 
 <h2>NAME</h2>
 <p> <code>funsky &#8211; convert between image and sky coordinates</code></p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 funsky iname[ext] #RA, Dec(deg) or image pix from stdin funsky iname[ext][lname] #RA, Dec(deg) or image pix from list funsky iname[ext][col1][col2] #named cols : units from stdin funsky iname[ext][lname][col1][col2] #named cols : units from list
 </code></pre>
 <h2>OPTIONS</h2>
 <p>&#8211; d #always use integer tlmin conversion(as ds9 does) &#8211; r #convert x, y to RA, Dec(default:convert RA, Dec to x, y) &#8211; o #include offset from the nominal target position(in arcsec) &#8211; v #display input values also(default:display output only) &#8211; T #output display in rdb format(w / header, tab delimiters)</p>
+<h2>DESCRIPTION</h2>
 <p> Funsky converts input sky coordinates (<font SIZE="-1">RA</font>, Dec) to image coordinates (or vice versa) using the <font SIZE="-1">WCS</font> information contained in the specified <font SIZE="-1">FITS</font> file. Several calling sequences are supported in order to make it easy to specify coordinate positions in different ways. </p>
 <p> The first required argument is always the input <font SIZE="-1">FITS</font> file (or extension) containing the <font SIZE="-1">WCS</font> information in an extension header. Note that the data from this file is not used. By default, the program converts input <font SIZE="-1">RA</font> and Dec values to X and Y using this <font SIZE="-1">WCS</font> information. If the <font SIZE="-1">WCS</font> is associated with a <font SIZE="-1">FITS</font> image, then the X,Y values are image values. If the <font SIZE="-1">WCS</font> is associated with a binary table, then the X, Y values are physical values. To convert X,Y to <font SIZE="-1">RA</font> and Dec, use the <code>-r</code> (reverse) switch. </p>
 <p> If no other command arguments are supplied, then the input positions are read from the standard input. Each line is assumed to contain a single coordinate position consisting of an <font SIZE="-1">RA</font> in hours (or X in pixels) followed by a Dec in degrees (or Y in pixels). The usual delimiters are supported (spaces, commas, tabs). For example: </p>

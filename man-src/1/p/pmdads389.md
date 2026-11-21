@@ -1,5 +1,4 @@
 ---
-
 title: "pmdads389(1)"
 name: "pmdads389"
 section: "1"
@@ -10,6 +9,7 @@ description: "pmdads389 – 389 Directory Server PMDA"
 
 <h2>NAME</h2>
 <p> <code>pmdads389</code> &#8211; 389 Directory Server PMDA</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdads389</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which extracts live performance data from a running 389 Directory Server instance. </p>
 <p> See the Red Hat Directory Server Administration Guide for description for each metric. </p>
 <h2>INSTALLATION</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "drmaa2_list(3)"
 name: "drmaa2_list"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-drmaa2_list/"
 description: "– DRMAA2 list routines"
 ---
 
+<h2 class="name">NAME</h2>
+<p>&nbsp;&#8211; DRMAA2 list routines </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include drmaa.h</code> </p>
 <pre><code>
 struct drmaa2_list_s; /*forward*/
@@ -34,6 +36,7 @@ drmaa2_error drmaa2_list_add(drmaa2_list l, const void *value);
 drmaa2_error drmaa2_list_del(drmaa2_list l, long pos);
 long drmaa2_list_size(const drmaa2_list l);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt><code>drmaa2_list_create</code>()</dt>
 <dd> Creates a new list instance for the specified type of items. Returns a pointer to the list or NULL on error. Optional parameter <i>callback</i> allows the application to provide a callback pointer to a collection element cleanup function. <code>DRMAA2_UNSET_CALLBACK</code> may be supplied instead of a valid callback pointer.</dd>

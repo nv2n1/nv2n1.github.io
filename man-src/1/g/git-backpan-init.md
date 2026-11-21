@@ -1,5 +1,4 @@
 ---
-
 title: "git-backpan-init(1)"
 name: "git-backpan-init"
 section: "1"
@@ -7,13 +6,20 @@ letter: "g"
 url: "/docs/linux/man/1-git-backpan-init/"
 ---
 
-git-backpan-init - Initialize a repository for a CPAN module with full history from the backpan. 
+<h2 class="name">NAME</h2>
+ 
 
-<pre><code>
+ git-backpan-init - Initialize a repository for a CPAN module with full history from the backpan. 
+
+<h2>SYNOPSIS</h2>
+
+ <pre><code>
 git backpan - init[--help | --man][--mkdir&lt;directory&gt;][--force] Foo::Bar
 </code></pre>
 
-This command is like <tt>&quot;cpan-init&quot;</tt> except it imports all the historical versions of a module as well, allowing you to run <tt>&quot;git bisect&quot;</tt> or to browse history. 
+<h2>DESCRIPTION</h2>
+
+ This command is like <tt>&quot;cpan-init&quot;</tt> except it imports all the historical versions of a module as well, allowing you to run <tt>&quot;git bisect&quot;</tt> or to browse history. 
 
  The name of the module can be written with double-colons or dashes (i.e., <i>Foo::Bar</i> or <i>Foo-Bar</i>). 
 

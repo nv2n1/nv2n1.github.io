@@ -1,5 +1,4 @@
 ---
-
 title: "babeltrace(1)"
 name: "babeltrace"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-babeltrace/"
 description: "babeltrace — Babeltrace Trace Viewer and Converter"
 ---
 
+<h2 class="name">NAME</h2>
+<p> babeltrace &#8212; Babeltrace Trace Viewer and Converter</p>
+<h2>SYNOPSIS</h2>
 <pre>
 babeltrace [OPTIONS] FILE...
 </pre>
+<h2>DESCRIPTION</h2>
 <p> Babeltrace is a trace viewer and converter reading and writing the Common Trace Format (CTF). Its main use is to pretty-print CTF traces into a human-readable text output ordered by time. </p>
 <p> This program follow the usual GNU command line syntax with long options starting with two dashes. Below is a summary of the available options. </p>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "indexmaker(1)"
 name: "indexmaker"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-indexmaker/"
 description: "indexmaker – Creates index files for mrtg web sites (mrtg-2.17.4)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> indexmaker &#8211; Creates index files for mrtg web sites (mrtg-2.17.4) </p>
+<h2>SYNOPSIS</h2>
 <p> indexmaker [options] mrtg.cfg [other.cfg &#8230;]</p>
 <h2>OPTIONS</h2>
 <pre><code>
@@ -57,6 +59,7 @@ description: "indexmaker – Creates index files for mrtg web sites (mrtg-2.17.4
  --autoprefix        try to set prefix automatically
  --&lt;opt&gt;-file=file   read string argument for option &lt;opt&gt; from file
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>Indexmaker</code> can create web pages which display the status of an array of mrtg interface status pages.</p>
 <dl>
 <dt><code>&#8211;output</code> <i>filename</i></dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "sorgr2(3)"
 name: "sorgr2"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-sorgr2/"
 description: "sorgr2.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sorgr2.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sorgr2</code> (M, N, K, A, LDA, TAU, WORK, INFO)<br />
  <i></i><code>SORGR2</code> generates all or part of the orthogonal matrix Q from an RQ factorization determined by sgerqf (unblocked algorithm).</p>

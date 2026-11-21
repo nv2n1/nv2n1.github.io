@@ -1,5 +1,4 @@
 ---
-
 title: "gmpc(1)"
 name: "gmpc"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-gmpc/"
 description: "gmpc [OPTION]"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gmpc [OPTION]</p>
+<h2>DESCRIPTION</h2>
 <p> GMPC is a fully featured but still very lightweight gtk client for the music player deamon (MPD) </p>
 <h2>OPTIONS</h2>
 <dl>

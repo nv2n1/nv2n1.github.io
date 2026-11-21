@@ -1,5 +1,4 @@
 ---
-
 title: "msd-datetime-mechanism(1)"
 name: "msd-datetime-mechanism"
 section: "1"
@@ -11,9 +10,13 @@ url: "/docs/linux/man/1-msd-datetime-mechanism/"
 
  msd-datetime-mechanism - set system time via D-Bus
 
-msd-datetime-mechanism
+<h2>SYNOPSIS</h2>
 
-The <i>msd-datetime-mechanism</i> is used for setting the system time via D-Bus. <i>msd-datetime-mechanism</i> is a D-Bus wrapper that gets executed via D-Bus with root privileges. The execution of <i>msd-datetime-mechanism</i> gets triggered via the MATE clock applet.
+ msd-datetime-mechanism
+
+<h2>DESCRIPTION</h2>
+
+ The <i>msd-datetime-mechanism</i> is used for setting the system time via D-Bus. <i>msd-datetime-mechanism</i> is a D-Bus wrapper that gets executed via D-Bus with root privileges. The execution of <i>msd-datetime-mechanism</i> gets triggered via the MATE clock applet.
 
 <h2>AUTHOR</h2>
 

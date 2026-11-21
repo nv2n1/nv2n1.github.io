@@ -1,5 +1,4 @@
 ---
-
 title: "y4mtoppm(1)"
 name: "y4mtoppm"
 section: "1"
@@ -10,7 +9,9 @@ description: "y4mtoppm – Convert YUV4MPEG2 stream to PPM images"
 
 <h2>NAME</h2>
 <p> y4mtoppm &#8211; Convert YUV4MPEG2 stream to PPM images </p>
+<h2>SYNOPSIS</h2>
 <p> <code>y4mtoppm</code> [<i>options</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>y4mtoppm</code> converts a YUV4MPEG2 stream into a sequence of raw PPM images. </p>
 <p> Output is to stdout (but feel free to have the shell redirect to a file). </p>
 <p> Input is read from stdin, like all other YUV4MPEG2 filters and tools. YUV4MPEG2 streams contain frames using the Y&#8217;CbCr colorspace (ITU-R BT.601). <code>y4mtoppm</code> will convert each pixel to the usual R&#8217;G&#8217;B&#8217; colorspace used for computer graphics. </p>

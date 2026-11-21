@@ -1,5 +1,4 @@
 ---
-
 title: "vncserver(1)"
 name: "vncserver"
 section: "1"
@@ -10,9 +9,11 @@ description: "vncserver – start or stop a VNC server"
 
 <h2>NAME</h2>
 <p> vncserver &#8211; start or stop a VNC server</p>
+<h2>SYNOPSIS</h2>
 <p> <code>vncserver</code> [:<i>display#</i>] [<code>-name</code> <i>desktop-name</i>] [<code>-geometry</code> <i>width</i>x<i>height</i>] [<code>-depth</code> <i>depth</i>] [<code>-pixelformat</code> <i>format</i>] [<code>-fp</code> <i>font-path</i>] [<code>-fg</code>] [<code>-autokill</code>] [<code>-noxstartup</code>] [<code>-xstartup</code> <i>script</i>] [<i>Xvnc-options&#8230;</i>]<br />
  <code>vncserver -kill :</code><i>display#</i><br />
  <code>vncserver -list</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>vncserver</code> is used to start a VNC (Virtual Network Computing) desktop. <code>vncserver</code> is a Perl script which simplifies the process of starting an Xvnc server. It runs Xvnc with appropriate options and starts a window manager on the VNC desktop. </p>
 <p> <code>vncserver</code> can be run with no options at all. In this case it will choose the first available display number (usually :1), start Xvnc with that display number, and start the default window manager in the Xvnc session. You can also specify the display number, in which case vncserver will attempt to start Xvnc with that display number and exit if the display number is not available. For example: </p>
 <dl>

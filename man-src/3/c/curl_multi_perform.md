@@ -1,5 +1,4 @@
 ---
-
 title: "curl_multi_perform(3)"
 name: "curl_multi_perform"
 section: "3"
@@ -10,8 +9,10 @@ description: "curl_multi_perform – reads/writes available data from each easy 
 
 <h2>NAME</h2>
 <p> curl_multi_perform &#8211; reads/writes available data from each easy handle</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;curl/curl.h&gt; </p>
 <p> CURLMcode curl_multi_perform(CURLM *multi_handle, int *running_handles);</p>
+<h2>DESCRIPTION</h2>
 <p> This function handles transfers on all the added handles that need attention in an non-blocking fashion. </p>
 <p> When an application has found out there&#8217;s data available for the multi_handle or a timeout has elapsed, the application should call this function to read/write whatever there is to read or write right now etc. curl_multi_perform() returns as soon as the reads/writes are done. This function does not require that there actually is any data available for reading or that data can be written, it can be called just in case. It will write the number of handles that still transfer data in the second argument&#8217;s integer-pointer. </p>
 <p> If the amount of <i>running_handles</i> is changed from the previous call (or is less than the amount of easy handles you&#8217;ve added to the multi handle), you know that there is one or more transfers less &quot;running&quot;. You can then call <i><a href="/docs/linux/man/3-curl_multi_info_read/">curl_multi_info_read</a>(3)</i> to get information about each individual completed transfer, and that returned info includes CURLcode and more. If an added handle fails very quickly, it may never be counted as a running_handle. </p>

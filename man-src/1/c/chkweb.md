@@ -1,5 +1,4 @@
 ---
-
 title: "chkweb(1)"
 name: "chkweb"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-chkweb/"
 description: "chkweb – runs the LaTeX parts of a CWEB file through chktex"
 ---
 
+<h2 class="name">NAME</h2>
+<p> chkweb &#8211; runs the LaTeX parts of a CWEB file through chktex </p>
+<h2>SYNOPSIS</h2>
 <p> <code>chkweb</code> <i>[-hiqrW] [-l &lt;rcfile&gt;] [-[wemn] &lt;[1-42]|all&gt;]</i> <i>[-d[0-&#8230;]] [-o &lt;outfile&gt;] [-[btxgI][0|1]]</i> <code>file1 file2 &#8230;</code></p>
+<h2>DESCRIPTION</h2>
 <p> <i>chkweb</i> runs the <i>LaTeX</i> parts of a CWEB file through chktex.</p>
 <h2>OPTIONS</h2>
 <p> Miscellaneous options:</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "perlfaq4(1)"
 name: "perlfaq4"
 section: "1"
@@ -7,9 +6,11 @@ letter: "p"
 url: "/docs/linux/man/1-perlfaq4/"
 description: "perlfaq4 – Data Manipulation"
 ---
-
+<h2 class="name">NAME</h2>
+<p> perlfaq4 - Data Manipulation </p>
 <h2>VERSION</h2>
 <p> version 5.20190126  </p>
+<h2>DESCRIPTION</h2>
 <p> This section of the <font SIZE="-1">FAQ</font> answers questions related to manipulating numbers, dates, strings, arrays, hashes, and miscellaneous data issues.  </p>
 <h2>Data: Numbers</h2>
 <h3>Why am I getting long decimals (eg, 19.9499999999999) instead of the numbers I should be getting (eg, 19.95)?</h3>

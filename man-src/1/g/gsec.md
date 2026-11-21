@@ -1,5 +1,4 @@
 ---
-
 title: "gsec(1)"
 name: "gsec"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-gsec/"
 description: "gsec — deprecated Firebird user management utility"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gsec &#8212; deprecated Firebird user management utility </p>
+<h2>SYNOPSIS</h2>
 <p> <code>gsec</code> [<i>option</i>&#8230;] <i>command</i> [<i>parameter</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>gsec</code> used to be the utility to manage Firebird users. </p>
 <p> Since Firebird 3.0, user management is provided via <font SIZE="-1">SQL.</font> Please see <i>sql.extensions/README.user_management</i> in the documentation directory of your installation.</p>
 <h2>SEE ALSO</h2>

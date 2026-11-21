@@ -1,5 +1,4 @@
 ---
-
 title: "xprop(1)"
 name: "xprop"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-xprop/"
 description: "xprop – property displayer for X"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xprop &#8211; property displayer for X </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xprop</code> [-help] [-grammar] [-id <i>id</i>] [-root] [-name <i>name</i>] [-frame] [-font <i>font</i>] [-display <i>display</i>] [-len <i>n</i>] [-notype] [-fs <i>file</i>] [-remove <i>property-name</i>] [-set <i>property-name</i> <i>value</i>] [-spy] [-version] [-f <i>atom</i> <i>format</i> [<i>dformat</i>]]* [<i>format</i> [<i>dformat</i>] <i>atom</i>]*</p>
 <h2>SUMMARY</h2>
 <p> The <i>xprop</i> utility is for displaying window and font properties in an X server. One window or font is selected using the command line arguments or possibly in the case of a window, by clicking on the desired window. A list of properties is then given, possibly with formatting information.</p>
@@ -61,6 +63,7 @@ description: "xprop – property displayer for X"
 <dt><code>-f </code><i>name</i> <i>format</i> [<i>dformat</i>]</dt>
 <dd> Specifies that the <i>format</i> for <i>name</i> should be <i>format</i> and that the <i>dformat</i> for <i>name</i> should be <i>dformat</i>. If <i>dformat</i> is missing, &quot; = $0+
 &quot; is assumed.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> For each of these properties, its value on the selected window or font is printed using the supplied formatting information if any. If no formatting information is supplied, internal defaults are used. If a property is not defined on the selected window or font, &quot;not defined&quot; is printed as the value for that property. If no property list is given, all the properties possessed by the selected window or font are printed. </p>
 <p> A window may be selected in one of four ways. First, if the desired window is the root window, the -root argument may be used. If the desired window is not the root window, it may be selected in two ways on the command line, either by id number such as might be obtained from <i>xwininfo</i>, or by name if the window possesses a name. The -id argument selects a window by id number in either decimal or hex (must start with 0x) while the -name argument selects a window by name. </p>
 <p> The last way to select a window does not involve the command line at all. If none of -font, -id, -name, and -root are specified, a crosshairs cursor is displayed and the user is allowed to choose any visible window by pressing any pointer button in the desired window. If it is desired to display properties of a font as opposed to a window, the -font argument must be used. </p>

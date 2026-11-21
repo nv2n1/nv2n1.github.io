@@ -1,5 +1,4 @@
 ---
-
 title: "antlr3-ctns(3)"
 name: "antlr3-ctns"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-antlr3-ctns/"
 description: "ANTLR3_TREE_NODE_STREAM_struct –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ANTLR3_TREE_NODE_STREAM_struct &#8211; </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3commontreenodestream.h">antlr3commontreenodestream.h</a>&gt;</p>
 <h3>Data Fields</h3>
 <p> <code>pANTLR3_BASE_TREE</code>(* <code>_LT</code> )(struct <code>ANTLR3_TREE_NODE_STREAM_struct</code> *tns, <code>ANTLR3_INT32</code> k)<br />

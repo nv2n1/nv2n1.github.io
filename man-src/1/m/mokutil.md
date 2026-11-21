@@ -1,5 +1,4 @@
 ---
-
 title: "mokutil(1)"
 name: "mokutil"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-mokutil/"
 description: "mokutil – utility to manipulate machine owner keys"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mokutil &#8211; utility to manipulate machine owner keys</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mokutil</code> [&#8211;list-enrolled | -l]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;([&#8211;mokx | -X])<br />
  <code>mokutil</code> [&#8211;list-new | -N]<br />
@@ -52,6 +54,7 @@ description: "mokutil – utility to manipulate machine owner keys"
  <code>mokutil</code> [&#8211;kek]<br />
  <code>mokutil</code> [&#8211;db]<br />
  <code>mokutil</code> [&#8211;dbx] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>mokutil</code> is a tool to import or delete the machines owner keys (MOK) stored in the database of shim. </p>
 <h2>OPTIONS</h2>
 <dl>

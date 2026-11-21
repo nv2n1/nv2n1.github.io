@@ -1,5 +1,4 @@
 ---
-
 title: "cpanp(1)"
 name: "cpanp"
 section: "1"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/1-cpanp/"
 description: "cpanp – The CPANPLUS launcher"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cpanp &#8211; The CPANPLUS launcher </p>
+<h2>SYNOPSIS</h2>
 <p> <code>cpanp</code> </p>
 <p> <code>cpanp</code> [-]<code>a</code> [&nbsp;<wbr>&#8211;[<code>no</code>-]<i>option</i>&#8230;&nbsp;<wbr>] &nbsp;<wbr><i>author</i>&#8230;&nbsp;<wbr> </p>
 <p> <code>cpanp</code> [-]<code>mfitulrcz</code> [&nbsp;<wbr>&#8211;[<code>no</code>-]<i>option</i>&#8230;&nbsp;<wbr>] &nbsp;<wbr><i>module</i>&#8230;&nbsp;<wbr> </p>
 <p> <code>cpanp</code> [-]<code>d</code> [&nbsp;<wbr>&#8211;[<code>no</code>-]<i>option</i>&#8230;&nbsp;<wbr>] [&nbsp;<wbr>&#8212;<code>fetchdir</code>=&#8230;&nbsp;<wbr>] &nbsp;<wbr><i>module</i>&#8230;&nbsp;<wbr> </p>
 <p> <code>cpanp</code> [-]<code>xb</code> [&nbsp;<wbr>&#8211;[<code>no</code>-]<i>option</i>&#8230;&nbsp;<wbr>] </p>
 <p> <code>cpanp</code> [-]<code>o</code> [&nbsp;<wbr>&#8211;[<code>no</code>-]<i>option</i>&#8230;&nbsp;<wbr>] [&nbsp;<wbr><i>module</i>&#8230;&nbsp;<wbr>]</p>
+<h2>DESCRIPTION</h2>
 <p> This script launches the <font SIZE="-1"><code>CPANPLUS</code></font> utility to perform various operations from the command line. If it&#8217;s invoked without arguments, an interactive shell is executed by default. </p>
 <p> Optionally, it can take a single-letter switch and one or more argument, to perform the associated action on each arguments. A summary of the available commands is listed below; <tt>&quot;cpanp -h&quot;</tt> provides a detailed list. </p>
 <pre><code>

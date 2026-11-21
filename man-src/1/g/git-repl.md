@@ -1,5 +1,4 @@
 ---
-
 title: "git-repl(1)"
 name: "git-repl"
 section: "1"
@@ -10,7 +9,9 @@ description: "git-repl – git read-eval-print-loop"
 
 <h2>NAME</h2>
 <p> <code>git-repl</code> &#8211; git read-eval-print-loop</p>
+<h2>SYNOPSIS</h2>
 <p> <code>git-repl</code></p>
+<h2>DESCRIPTION</h2>
 <p> Git read-eval-print-loop. Let&#8217;s you run <code>git</code> commands without typing &#8216;git&#8217;. </p>
 <p> Commands can be prefixed with an exclamation mark (!) to be interpreted as a regular command. </p>
 <p> Type <code>exit</code> or <code>quit</code> to end the repl session.</p>

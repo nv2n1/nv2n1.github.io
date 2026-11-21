@@ -1,5 +1,4 @@
 ---
-
 title: "chptrd(3)"
 name: "chptrd"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-chptrd/"
 description: "chptrd.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> chptrd.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chptrd</code> (UPLO, N, AP, D, E, TAU, INFO)<br />
  <i></i><code>CHPTRD</code></p>

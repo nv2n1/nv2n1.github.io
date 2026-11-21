@@ -1,5 +1,4 @@
 ---
-
 title: "cycle(1)"
 name: "cycle"
 section: "1"
@@ -10,7 +9,9 @@ description: "cycle – a calendar for women"
 
 <h2>NAME</h2>
 <p> cycle &#8211; a calendar for women</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cycle</code></p>
+<h2>DESCRIPTION</h2>
 <p> Cycle is a calendar program for women. Given a cycle length or statistics for several periods, it can calculate the days until menstruation, the days of &quot;safe&quot; sex, the fertile period, and the days to ovulations, and define the d.o.b. (date of birth) of a child. It allows the user to write notes and helps to supervise the reception of hormonal contraceptive tablets.</p>
 <h2>FEATURES</h2>
 <p> The program is capable of: </p>

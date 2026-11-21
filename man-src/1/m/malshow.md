@@ -1,5 +1,4 @@
 ---
-
 title: "malshow(1)"
 name: "malshow"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-malshow/"
 description: "malshow – show Malaga’s results and/or debugging state"
 ---
 
+<h2 class="name">NAME</h2>
+<p> malshow &#8211; show Malaga&#8217;s results and/or debugging state</p>
+<h2>SYNOPSIS</h2>
 <p> <code>malshow</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Malaga is a development environment for natural-language grammars based on the Left-Associative Grammar formalism. Malaga grammars can be used for automatic morphological and/or syntactic analysis. </p>
 <p> The program <code>malshow</code> is usually called by <code><a href="/docs/linux/man/1-malaga/">malaga</a></code>(1) or <code><a href="/docs/linux/man/1-mallex/">mallex</a></code>(1). It&#8217;s a GUI to display their results and/or debugging states. <code>malshow</code> reads the data to display from standard input. </p>
 <p> See <code>info Malaga</code> for details. </p>

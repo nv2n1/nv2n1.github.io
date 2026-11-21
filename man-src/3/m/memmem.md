@@ -1,5 +1,4 @@
 ---
-
 title: "memmem(3)"
 name: "memmem"
 section: "3"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/3-memmem/"
 description: "memmem – locate a substring"
 ---
 
+<h2 class="name">NAME</h2>
+<p> memmem &#8211; locate a substring </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;string.h&gt;
 void *memmem(const void *haystack, size_t haystacklen,
              const void *needle, size_t needlelen);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>memmem</code>() function finds the start of the first occurrence of the substring <i>needle</i> of length <i>needlelen</i> in the memory area <i>haystack</i> of length <i>haystacklen</i>.</p>
 <h2>RETURN VALUE</h2>
 <p> The <code>memmem</code>() function returns a pointer to the beginning of the substring, or NULL if the substring is not found.</p>

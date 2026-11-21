@@ -1,5 +1,4 @@
 ---
-
 title: "estcmd(1)"
 name: "estcmd"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-estcmd/"
 description: "estcmd – command line interface of the core API"
 ---
 
+<h2 class="name">NAME</h2>
+<p> estcmd &#8211; command line interface of the core API</p>
+<h2>SYNOPSIS</h2>
 <p> <code>estcmd create [-tr] [-apn|-acc] [-xs|-xl|-xh|-xh2|-xh3] [-sv|-si|-sa] [-attr name type] db</code> </p>
 <p> <code>estcmd put [-tr] [-cl] [-ws] [-apn|-acc] [-xs|-xl|-xh||-xh2|-xh3] [-sv|-si|-sa] db [file]</code> </p>
 <p> <code>estcmd out [-cl] [-pc enc] db expr</code> </p>
@@ -35,6 +37,7 @@ description: "estcmd – command line interface of the core API"
 <p> <code>estcmd wicked db dnum</code> </p>
 <p> <code>estcmd regression db</code> </p>
 <p> <code>estcmd version</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>estcmd</code> is an aggregation of sub commands. The name of a sub command is specified by the first argument. Other arguments are parsed according to each sub command. The argument <i>db</i> specifies the path of an index.</p>
 <dl>
 <dt><code>estcmd create [-tr] [-apn|-acc] [-xs|-xl|-xh|-xh2|-xh3] [-sv|-si|-sa] [-attr name type] db</code></dt>

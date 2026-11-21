@@ -1,5 +1,4 @@
 ---
-
 title: "nice(1)"
 name: "nice"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-nice/"
 description: "nice – run a program with modified scheduling priority"
 ---
 
+<h2 class="name">NAME</h2>
+<p> nice &#8211; run a program with modified scheduling priority </p>
+<h2>SYNOPSIS</h2>
 <p> <code>nice</code> [<i>,OPTION/</i>] [<i>,COMMAND /</i>[<i>,ARG/</i>]&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> Run COMMAND with an adjusted niceness, which affects process scheduling. With no COMMAND, print the current niceness. Niceness values range from <code>-20</code> (most favorable to the process) to 19 (least favorable to the process). </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>

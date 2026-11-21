@@ -1,5 +1,4 @@
 ---
-
 title: "bluemoon(1)"
 name: "bluemoon"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-bluemoon/"
 description: "bluemoon – Bluemoon configuration utility"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bluemoon &#8211; Bluemoon configuration utility </p>
+<h2>DESCRIPTION</h2>
 <p> bluemoon &#8211; Bluemoon configuration utility Usage:</p>
 <dl>
 <dt>

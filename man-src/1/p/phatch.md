@@ -1,5 +1,4 @@
 ---
-
 title: "phatch(1)"
 name: "phatch"
 section: "1"
@@ -10,7 +9,9 @@ description: "Phatch – Photo Batch Processor"
 
 <h2>NAME</h2>
 <p> Phatch &#8211; Photo Batch Processor</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Phatch</code> is a simple photo batch processor. It handles all popular image formats and can duplicate (sub)folder hierarchies. It can also batch resize, rotate, rename, &#8230; and more in minutes instead of hours or days if you do it manually. </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt>Phatch [actionlist]</dt>
 <dd>

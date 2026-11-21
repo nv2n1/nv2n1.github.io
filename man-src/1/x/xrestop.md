@@ -1,5 +1,4 @@
 ---
-
 title: "xrestop(1)"
 name: "xrestop"
 section: "1"
@@ -10,8 +9,10 @@ description: "xrestop – monitor server resources used by X11 clients"
 
 <h2>NAME</h2>
 <p> xrestop &#8211; monitor server resources used by X11 clients</p>
+<h2>SYNOPSIS</h2>
 <p> <code>xrestop &#8211;help</code><br />
  <code>xrestop</code> [ <code>&#8211;display</code> display ] [ <code>&#8211;batch</code> ] [ <code>&#8211;delay-time</code> seconds ] [ <code>&#8211;max-samples</code> count ]</p>
+<h2>DESCRIPTION</h2>
 <p> Xrestop uses the X-Resource extension to provide &#8216;top&#8217;-like statistics of each connected X11 client&#8217;s server-side resource usage. It is intended as a developer tool to aid more efficient server resource usage and debug server-side resource leakage.</p>
 <h2>OPTIONS</h2>
 <dl>

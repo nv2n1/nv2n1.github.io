@@ -1,5 +1,4 @@
 ---
-
 title: "g_xrama_d(1)"
 name: "g_xrama_d"
 section: "1"
@@ -11,7 +10,9 @@ description: "xrama – shows animated Ramachandran plots"
 <h2>NAME</h2>
 <p> xrama &#8211; shows animated Ramachandran plots </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>xrama</code> <code>-f</code><i> traj.xtc </i> <code>-s</code><i> topol.tpr </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i></p>
+<h2>DESCRIPTION</h2>
 <p> xrama shows a Ramachandran movie, that is, it shows the Phi/Psi angles as a function of time in an X-Window. </p>
 <p> Static Phi/Psi plots for printing can be made with g_rama. </p>
 <p> Some of the more common X command line options can be used: </p>

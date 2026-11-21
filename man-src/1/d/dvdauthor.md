@@ -1,5 +1,4 @@
 ---
-
 title: "dvdauthor(1)"
 name: "dvdauthor"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-dvdauthor/"
 description: "dvdauthor – assembles multiple mpeg program streams into a suitable DVD filesystem"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dvdauthor &#8211; assembles multiple mpeg program streams into a suitable DVD filesystem </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dvdauthor</code> [ <code>-o </code><i>output-dir</i> ] <code>-x </code><i>xml-control-file</i> </p>
 <p> <code>dvdauthor</code> [ <code>-o </code><i>output-dir</i> ] [ <code>-j</code> | <code>&#8211;jumppad</code> | <code>-g</code> | <code>&#8211;allgprm</code> ] [ <code>-T</code> | <code>&#8211;toc</code> ] [ <i>menu or title options</i> ] </p>
 <h2>DVD BACKGROUND</h2>

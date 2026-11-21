@@ -1,5 +1,4 @@
 ---
-
 title: "ipa-ldap-updater(1)"
 name: "ipa-ldap-updater"
 section: "1"
@@ -10,7 +9,9 @@ description: "ipa-ldap-updater – Update the IPA LDAP configuration"
 
 <h2>NAME</h2>
 <p> ipa-ldap-updater &#8211; Update the IPA LDAP configuration</p>
+<h2>SYNOPSIS</h2>
 <p> ipa-ldap-updater [options] input_file(s)</p>
+<h2>DESCRIPTION</h2>
 <p> ipa-ldap-updater is utility which can be used to update the IPA LDAP server. </p>
 <p> An update file describes an LDAP entry and a set of operations to be performed on that entry. It can be used to add new entries or modify existing entries. </p>
 <p> Blank lines and lines beginning with # are ignored. </p>

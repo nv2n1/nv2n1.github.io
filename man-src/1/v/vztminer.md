@@ -1,5 +1,4 @@
 ---
-
 title: "vztminer(1)"
 name: "vztminer"
 section: "1"
@@ -12,6 +11,7 @@ description: "vztminer – Data mining of VZT files"
 <p> vztminer &#8211; Data mining of VZT files</p>
 <h2>SYNTAX</h2>
 <p> vztminer [<i>option</i>]&#8230; [<i>VZTFILE</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Mines VZT files for specific data values and generates gtkwave save files to stdout for future reload.</p>
 <h2>OPTIONS</h2>
 <dl>

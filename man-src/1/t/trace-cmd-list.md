@@ -1,5 +1,4 @@
 ---
-
 title: "trace-cmd-list(1)"
 name: "trace-cmd-list"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-trace-cmd-list/"
 description: "trace-cmd-list – list available plugins, events or options for Ftrace."
 ---
 
+<h2 class="name">NAME</h2>
+<p> trace-cmd-list &#8211; list available plugins, events or options for Ftrace. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>trace-cmd list</code> [<i>OPTIONS</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <a href="/docs/linux/man/1-trace-cmd/">trace-cmd</a>(1) list displays the available plugins, events or Ftrace options that are configured on the current machine. If no option is given, then it lists all plugins, events and Ftrace options to standard output.</p>
 <h2>OPTIONS</h2>
 <p> <code>-e</code> [<i>regex</i>]</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ps(1)"
 name: "ps"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ps/"
 description: "ps – report a snapshot of the current processes."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ps &#8211; report a snapshot of the current processes. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ps</code> [,<i>options/</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>ps</code> displays information about a selection of the active processes. If you want a repetitive update of the selection and the displayed information, use <code>top</code> instead. </p>
 <p> This version of <code>ps</code> accepts several kinds of options:</p>
 <dl>

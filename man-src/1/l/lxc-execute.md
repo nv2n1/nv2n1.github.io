@@ -1,5 +1,4 @@
 ---
-
 title: "lxc-execute(1)"
 name: "lxc-execute"
 section: "1"
@@ -10,7 +9,9 @@ description: "lxc-execute – run an application inside a container."
 
 <h2>NAME</h2>
 <p> lxc-execute &#8211; run an application inside a container.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lxc-execute</code> {-n <i>name</i>} [-f <i>config_file</i>] [-s KEY=VAL] [&#8211; <i>command</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>lxc-execute</code> runs the specified <i>command</i> inside the container specified by <i>name</i>. </p>
 <p> It will setup the container according to the configuration previously defined with the lxc-create command or with the configuration file parameter. If no configuration is defined, the default isolation is used. </p>
 <p> This command is mainly used when you want to quickly launch an application in an isolated environment. </p>

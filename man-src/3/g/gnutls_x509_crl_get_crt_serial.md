@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_crl_get_crt_serial(3)"
 name: "gnutls_x509_crl_get_crt_serial"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_crl_get_crt_serial – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crl_get_crt_serial &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crl_get_crt_serial(gnutls_x509_crl_t </code><i>crl</i><code>, int </code><i>indx</i><code>, unsigned char * </code><i>serial</i><code>, size_t * </code><i>serial_size</i><code>, time_t * </code><i>t</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,6 +24,7 @@ description: "gnutls_x509_crl_get_crt_serial – API function"
 <dd> initially holds the size of serial</dd>
 <dt>time_t * t</dt>
 <dd> if non null, will hold the time this certificate was revoked</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will retrieve the serial number of the specified, by the index, revoked certificate. </p>
 <p> Note that this function will have performance issues in large sequences of revoked certificates. In that case use <code>gnutls_x509_crl_iter_crt_serial()</code>.</p>
 <h2>RETURNS</h2>

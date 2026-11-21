@@ -1,5 +1,4 @@
 ---
-
 title: "git-http-backend(1)"
 name: "git-http-backend"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-http-backend/"
 description: "git-http-backend – Server side implementation of Git over HTTP"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-http-backend &#8211; Server side implementation of Git over HTTP </p>
+<h2>SYNOPSIS</h2>
 <pre>
 <i>git http-backend</i>
 </pre>
+<h2>DESCRIPTION</h2>
 <p> A simple CGI program to serve the contents of a Git repository to Git clients accessing the repository over http:// and https:// protocols. The program supports clients fetching using both the smart HTTP protocol and the backwards-compatible dumb HTTP protocol, as well as clients pushing using the smart HTTP protocol. It also supports Git&#8217;s more-efficient &quot;v2&quot; protocol if properly configured; see the discussion of <code>GIT_PROTOCOL</code> in the ENVIRONMENT section below. </p>
 <p> It verifies that the directory has the magic file &quot;git-daemon-export-ok&quot;, and it will refuse to export any Git directory that hasn&#8217;t explicitly been marked for export this way (unless the <code>GIT_HTTP_EXPORT_ALL</code> environmental variable is set). </p>
 <p> By default, only the <code>upload-pack</code> service is enabled, which serves <i>git fetch-pack</i> and <i>git ls-remote</i> clients, which are invoked from <i>git fetch</i>, <i>git pull</i>, and <i>git clone</i>. If the client is authenticated, the <code>receive-pack</code> service is enabled, which serves <i>git send-pack</i> clients, which is invoked from <i>git push</i>.</p>

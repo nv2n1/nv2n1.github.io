@@ -7,6 +7,8 @@ url: "/docs/linux/man/1-webquiz/"
 description: "WebQuiz: a LaTeX package for writing online quizzes –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> WebQuiz: a LaTeX package for writing online quizzes &#8211; </p>
 <p> <i>WebQuiz</i> makes it possible to use <i>LaTeX</i> to write interactive online quizzes. The quizzes are first written in <i>LaTeX</i> and then converted into HTML using <i>WebQuiz</i>, which is written in python. The conversion from <i>LaTeX</i> to HTML is done behind the scenes using <i>TeX4ht</i>. The idea is that you should be able to produce nice online quizzes using <i>WebQuiz</i> and basic knowledge of <i>LaTeX</i>. </p>
 <p> <i>WebQuiz</i> is designed to be used from the command-line. For example, if <i>quiz1.tex</i> is a LaTeX file for a quiz then:</p>
 <dl>

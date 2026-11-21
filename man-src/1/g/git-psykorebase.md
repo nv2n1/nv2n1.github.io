@@ -1,5 +1,4 @@
 ---
-
 title: "git-psykorebase(1)"
 name: "git-psykorebase"
 section: "1"
@@ -10,8 +9,10 @@ description: "git-psykorebase – Rebase a branch with a merge commit"
 
 <h2>NAME</h2>
 <p> <code>git-psykorebase</code> &#8211; Rebase a branch with a merge commit</p>
+<h2>SYNOPSIS</h2>
 <p> <code>git-psykorebase</code> &lt;target_branch&gt; [&lt;feature_branch&gt;] [&#8211;no-ff] </p>
 <p> <code>git-psykorebase</code> &#8211;continue</p>
+<h2>DESCRIPTION</h2>
 <p> Rebase the <code>feature_branch</code> on top of the <code>target_branch</code>, the <code>feature_branch</code> defaults to the current one.</p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;no-ff</code> Force a commit message even if there are no conflicts. </p>

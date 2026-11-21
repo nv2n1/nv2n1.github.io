@@ -1,5 +1,4 @@
 ---
-
 title: "jadmaker(1)"
 name: "jadmaker"
 section: "1"
@@ -10,7 +9,9 @@ description: "jadmaker – JAD File Generator"
 
 <h2>NAME</h2>
 <p> jadmaker &#8211; JAD File Generator</p>
+<h2>SYNOPSIS</h2>
 <p> <code>jadmaker</code> [<i>-f|&#8211;force</i>] [<i>-u|&#8211;url URL</i>] &lt;filename.jar&gt;&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Script to generate JAD file from JAR file. </p>
 <p> These programs follow the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below. </p>
 <dl>

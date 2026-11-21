@@ -1,5 +1,4 @@
 ---
-
 title: "mcheck(3)"
 name: "mcheck"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-mcheck/"
 description: "mcheck, mcheck_check_all, mcheck_pedantic, mprobe – heap consistency checking"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mcheck, mcheck_check_all, mcheck_pedantic, mprobe &#8211; heap consistency checking </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;mcheck.h&gt;
 int mcheck(void (*abortfunc)(enum mcheck_status mstatus));
@@ -15,6 +17,7 @@ int mcheck_pedantic(void (*abortfunc)(enum mcheck_status mstatus));
 void mcheck_check_all(void);
 enum mcheck_status mprobe(void *ptr);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>mcheck</code>() function installs a set of debugging hooks for the <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3) family of memory-allocation functions. These hooks cause certain consistency checks to be performed on the state of the heap. The checks can detect application errors such as freeing a block of memory more than once or corrupting the bookkeeping data structures that immediately precede a block of allocated memory. </p>
 <p> To be effective, the <code>mcheck</code>() function must be called before the first call to <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3) or a related function. In cases where this is difficult to ensure, linking the program with <i>-lmcheck</i> inserts an implicit call to <code>mcheck</code>() (with a NULL argument) before the first call to a memory-allocation function. </p>
 <p> The <code>mcheck_pedantic</code>() function is similar to <code>mcheck</code>(), but performs checks on all allocated blocks whenever one of the memory-allocation functions is called. This can be very slow! </p>

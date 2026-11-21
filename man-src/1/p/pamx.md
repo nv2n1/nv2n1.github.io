@@ -1,5 +1,4 @@
 ---
-
 title: "pamx(1)"
 name: "pamx"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-pamx/"
 description: "pamx – display Netpbm image in X Window System window"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pamx &#8211; display Netpbm image in X Window System window</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pamx</code> </p>
 <p> [<code>-fullscreen</code>] [<code>-install</code>] [<code>-private</code>] [<code>-fit</code>] [<code>-pixmap</code>] [<code>-verbose</code>] [<code>-display=</code><i>x-display</i>] [<code>-title=</code><i>text</i>] [<code>-foreground=</code><i>color</i>] [<code>-background=</code><i>color</i>] [<code>-border=</code><i>color</i>] [<code>-geometry=</code><i>x-geometry-string</i>] [<code>-visual=</code><i>name</i>] <i>netpbm_file</i> </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one to designate an option. You may use either white space or an equals sign between an option name and its value. </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamx</code> displays a Netpbm image in an X Window System window. It is like a very simple version of the classic X image viewer <code>xloadimage</code>. </p>
 <p> If you don&#8217;t specify the input file <i>netpbm_file</i>, the input is from Standard Input. The input image can be any Netpbm image format. If the input is a multi-image stream, <code>pamx</code> ignores all but the first image. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "xfwm4-workspace-settings(1)"
 name: "xfwm4-workspace-settings"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-xfwm4-workspace-settings/"
 description: "xfwm4 – Workspace settings for Xfce window manager"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xfwm4 &#8211; Workspace settings for Xfce window manager </p>
+<h2>DESCRIPTION</h2>
 <h3>Usage:</h3>
 <dl>
 <dt>

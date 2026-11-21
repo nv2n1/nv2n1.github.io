@@ -1,5 +1,4 @@
 ---
-
 title: "slarf(3)"
 name: "slarf"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-slarf/"
 description: "slarf.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> slarf.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slarf</code> (SIDE, M, N, V, INCV, TAU, C, LDC, WORK)<br />
  <i></i><code>SLARF</code> applies an elementary reflector to a general rectangular matrix.</p>

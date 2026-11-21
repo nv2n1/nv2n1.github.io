@@ -1,5 +1,4 @@
 ---
-
 title: "dlarrv(3)"
 name: "dlarrv"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlarrv/"
 description: "dlarrv.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlarrv.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlarrv</code> (N, VL, VU, D, L, PIVMIN, ISPLIT, M, DOL, DOU, MINRGP, RTOL1, RTOL2, W, WERR, WGAP, IBLOCK, INDEXW, GERS, Z, LDZ, ISUPPZ, WORK, IWORK, INFO)<br />
  <i></i><code>DLARRV</code> computes the eigenvectors of the tridiagonal matrix T = L D LT given L, D and the eigenvalues of L D LT.</p>

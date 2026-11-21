@@ -1,5 +1,4 @@
 ---
-
 title: "idle(2)"
 name: "idle"
 section: "2"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/2-idle/"
 description: "idle – make process 0 idle"
 ---
 
+<h2 class="name">NAME</h2>
+<p> idle &#8211; make process 0 idle </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int idle(void);</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>idle</code>() is an internal system call used during bootstrap. It marks the process&#8217;s pages as swappable, lowers its priority, and enters the main scheduling loop. <code>idle</code>() never returns. </p>
 <p> Only process 0 may call <code>idle</code>(). Any user process, even a process with superuser permission, will receive <code>EPERM</code>.</p>
 <h2>RETURN VALUE</h2>

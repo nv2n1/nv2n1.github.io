@@ -1,5 +1,4 @@
 ---
-
 title: "ldns-keygen(1)"
 name: "ldns-keygen"
 section: "1"
@@ -10,7 +9,9 @@ description: "ldns-keygen – generate a DNSSEC key pair"
 
 <h2>NAME</h2>
 <p> ldns-keygen &#8211; generate a DNSSEC key pair</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ldns-keygen </code> [ <i>OPTION</i> ] <i>DOMAIN</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>ldns-keygen</code> is used to generate a private/public keypair. When run, it will create 3 files; a .key file with the public DNSKEY, a .private file with the private keydata and a .ds with the DS record of the DNSKEY record. </p>
 <p> <code>ldns-keygen</code> can also be used to create symmetric keys (for TSIG) by selecting the appropriate algorithm: <i>hmac-md5.sig-alg.reg.int</i>, <i>hmac-sha1</i> or <i>hmac-sha256</i>. In that case no DS record will be created and no .ds file. </p>
 <p> <code>ldns-keygen</code> prints the basename for the key files: K&lt;name&gt;+&lt;alg&gt;+&lt;id&gt; </p>

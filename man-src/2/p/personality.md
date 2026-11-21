@@ -1,5 +1,4 @@
 ---
-
 title: "personality(2)"
 name: "personality"
 section: "2"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/2-personality/"
 description: "personality – set the process execution domain"
 ---
 
+<h2 class="name">NAME</h2>
+<p> personality &#8211; set the process execution domain </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/personality.h&gt;</code> </p>
 <p> <code>int personality(unsigned long </code><i>persona</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> Linux supports different execution domains, or personalities, for each process. Among other things, execution domains tell Linux how to map signal numbers into signal actions. The execution domain system allows Linux to provide limited support for binaries compiled under other UNIX-like operating systems. </p>
 <p> If <i>persona</i> is not 0xffffffff, then <code>personality</code>() sets the caller&#8217;s execution domain to the value specified by <i>persona</i>. Specifying <i>persona</i> as 0xffffffff provides a way of retrieving the current persona without changing it. </p>
 <p> A list of the available execution domains can be found in <i>&lt;sys/personality.h&gt;</i>. The execution domain is a 32-bit value in which the top three bytes are set aside for flags that cause the kernel to modify the behavior of certain system calls so as to emulate historical or architectural quirks. The least significant byte is a value defining the personality the kernel should assume. The flag values are as follows:</p>

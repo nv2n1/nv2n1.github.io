@@ -1,5 +1,4 @@
 ---
-
 title: "ieee1284_negotiate(3)"
 name: "ieee1284_negotiate"
 section: "3"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/3-ieee1284_negotiate/"
 description: "ieee1284_negotiate, ieee1284_terminate – IEEE 1284 negotiation"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ieee1284_negotiate, ieee1284_terminate &#8211; IEEE 1284 negotiation </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ieee1284.h&gt;
 </code></pre>
 <dl>
 <dt> <code>int ieee1284_negotiate(struct parport&nbsp;<wbr>*</code><i>port</i><code>, int&nbsp;<wbr></code><i>mode</i><code>);</code></dt>
 <dt> <code>void ieee1284_terminate(struct parport&nbsp;<wbr>*</code><i>port</i><code>);</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>These functions are for negotiating to and terminating from IEEE 1284 data transfer modes. The default mode is called compatibility mode, or in other words normal printer protocol. It is a host-to-peripheral mode only. There are special modes that allow peripheral-to-host transfer as well, which may be negotiated to using <code>ieee1284_negotiate</code>. IEEE 1284 negotiation is a process by which the host requests a transfer mode and the peripheral accepts or rejects it. An IEEE 1284-compliant device will require a successful negotiation to a particular mode before it is used for data transfer (but simpler devices may not if they only speak one transfer mode). </dd>
 <p> To terminate the special mode and go back to compatilibity mode use <code>ieee1284_terminate</code>. </p>
 <p> These functions act on the parallel port associated with <i>port</i>, which must be claimed. </p>

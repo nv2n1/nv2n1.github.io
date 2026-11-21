@@ -1,5 +1,4 @@
 ---
-
 title: "e2pall(1)"
 name: "e2pall"
 section: "1"
@@ -10,7 +9,9 @@ description: "e2pall – convert all EPS files in a LaTeX document to PDF"
 
 <h2>NAME</h2>
 <p> e2pall &#8211; convert all EPS files in a LaTeX document to PDF </p>
+<h2>SYNOPSIS</h2>
 <p> <code>e2pall</code> <i>TEXFILE</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>e2pall</code> searches through <i>TEXFILE</i> for \includegraphics commands to find the base names of image files. When it finds one, <code>e2pall</code> runs <code><a href="/docs/linux/man/1-epstopdf/">epstopdf</a></code>(1) to create a PDF file from the EPS file. </p>
 <p> <code>e2pall</code> will check to be sure that an existing PDF file is up-to-date with the EPS file, and will not run <code><a href="/docs/linux/man/1-epstopdf/">epstopdf</a></code>(1) if the PDF file is newer than the EPS file. </p>
 <h2>BUGS</h2>

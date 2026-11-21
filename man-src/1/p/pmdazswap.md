@@ -1,5 +1,4 @@
 ---
-
 title: "pmdazswap(1)"
 name: "pmdazswap"
 section: "1"
@@ -10,6 +9,7 @@ description: "pmdazswap – zswap (compressed swap) PMDA"
 
 <h2>NAME</h2>
 <p> <code>pmdazswap</code> &#8211; zswap (compressed swap) PMDA</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdazswap</code> is a Performance Metrics Domain Agent (PMDA) which exports metric values about compressed swap operation, as tracked by the <code>zswap</code> Linux kernel module. </p>
 <p> Zswap is a lightweight compressed cache for swap pages. It takes pages that are in the process of being swapped out and attempts to compress them into a dynamically allocated RAM-based memory pool. Zswap trades CPU cycles for potentially reduced swap I/O. This tradeoff can also result in a performance improvement if reads from the compressed cache are faster than reads from a swap device. </p>
 <p> This PMDA exports metrics about pool size, number of pages stored, and various counters for the reasons pages are rejected.</p>

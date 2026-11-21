@@ -1,5 +1,4 @@
 ---
-
 title: "flatpak-build-commit-from(1)"
 name: "flatpak-build-commit-from"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-flatpak-build-commit-from/"
 description: "flatpak-build-commit-from – Create new commits based on existing one (possibly from another repository)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> flatpak-build-commit-from &#8211; Create new commits based on existing one (possibly from another repository) </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak build-commit-from</code> [OPTION&#8230;] DST-REPO DST-REF&#8230;</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>Creates new commits on the DST-REF branch in the DST-REPO, with the contents (and most of the metadata) taken from another branch, either from another repo, or from another branch in the same repository. </dd>
 <p> The collection ID set on DST-REPO (if set) will be used for the newly created commits. </p>
 <p> This command is very useful when you want to maintain a branch with a clean history that has no unsigned or broken commits. For instance, you can import the head from a different repository from an automatic builder when you&#8217;ve verified that it worked. The new commit will have no parents or signatures from the autobuilder, and can be properly signed with the official key. </p>

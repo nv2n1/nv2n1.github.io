@@ -1,5 +1,4 @@
 ---
-
 title: "nfstest_io(1)"
 name: "nfstest_io"
 section: "1"
@@ -10,7 +9,9 @@ description: "nfstest_io – I/O tool"
 
 <h2>NAME</h2>
 <p> nfstest_io &#8211; I/O tool</p>
+<h2>SYNOPSIS</h2>
 <p> nfstest_io -d &lt;datadir&gt; [options]</p>
+<h2>DESCRIPTION</h2>
 <p> This I/O tool is used to create and manipulate files of different types. The arguments allow running for a specified period of time as well as running multiple processes. Each process modifies a single file at a time and the file name space is different for each process so there are no collisions between two different processes modifying the same file. </p>
 <h2>OPTIONS</h2>
 <dl>

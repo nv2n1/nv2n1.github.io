@@ -1,5 +1,4 @@
 ---
-
 title: "git-summary(1)"
 name: "git-summary"
 section: "1"
@@ -10,7 +9,9 @@ description: "git-summary – Show repository summary"
 
 <h2>NAME</h2>
 <p> <code>git-summary</code> &#8211; Show repository summary</p>
+<h2>SYNOPSIS</h2>
 <p> <code>git-summary</code> [&#8211;line] [&lt;commitish&gt;]</p>
+<h2>DESCRIPTION</h2>
 <p> Shows a summary of the repository.</p>
 <h2>OPTIONS</h2>
 <p> &lt;commitish&gt; </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "x2sys_datalist(1)"
 name: "x2sys_datalist"
 section: "1"
@@ -10,8 +9,10 @@ description: "x2sys_datalist – Extract content of track data files"
 
 <h2>NAME</h2>
 <p> x2sys_datalist &#8211; Extract content of track data files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>x2sys_datalist</code> <i>track(s)</i> <code>-T</code><i>TAG</i> [ ] [ ] [ <i>name1</i>,<i>name2</i>,&#8230;) ] [ [<i>list</i>] ] [ [<i>corrtable</i>] ] [ <i>region</i> ] [ ] [ [ [<i>level</i>] ] [ <code>-bo</code><i>&lt;binary&gt;</i> ] [ <code>-do</code><i>&lt;nodata&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>x2sys_datalist</code> reads one or more files and produces a single ASCII [or binary] table. The files can be of any format, which must be described and passed with the option. You may limit the output to a geographic region, and insist that the output from several files be separated by a multiple segment header. Only the named data fields will be output [Default selects all columns].</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

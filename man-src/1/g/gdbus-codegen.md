@@ -1,5 +1,4 @@
 ---
-
 title: "gdbus-codegen(1)"
 name: "gdbus-codegen"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-gdbus-codegen/"
 description: "gdbus-codegen – D-Bus code and documentation generator"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gdbus-codegen &#8211; D-Bus code and documentation generator </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gdbus-codegen</code> [<code>-h</code>,&nbsp;<code>&#8211;help</code>] [<code>&#8211;interface-prefix</code>&nbsp;<i>org.project.Prefix</i>] [<code>&#8211;generate-c-code</code>&nbsp;<i>OUTFILES</i>] [<code>&#8211;c-namespace</code>&nbsp;<i>YourProject</i>] [<code>&#8211;c-generate-object-manager</code>] [<code>&#8211;c-generate-autocleanup</code>&nbsp;none|objects|all] [<code>&#8211;output-directory</code>&nbsp;<i>OUTDIR</i>] [<code>&#8211;generate-docbook</code>&nbsp;<i>OUTFILES</i>] [<code>&#8211;pragma-once</code>] [<code>&#8211;xml-files</code>&nbsp;<i>FILE</i>] [<code>&#8211;header</code>] [<code>&#8211;body</code>] [<code>&#8211;interface-info-header</code>] [<code>&#8211;interface-info-body</code>] [<code>&#8211;output</code>&nbsp;<i>OUTFILE</i>] [<code>&#8211;annotate</code>&nbsp;<i>ELEMENT</i>&nbsp;<i>KEY</i>&nbsp;<i>VALUE</i>]&#8230; [<code>&#8211;glib-min-required</code>&nbsp;<i>VERSION</i>] [<code>&#8211;glib-max-allowed</code>&nbsp;<i>VERSION</i>] FILE [FILE&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>gdbus-codegen</code></p>
 <dd>is used to generate code and/or documentation for one or more D-Bus interfaces. </dd>
 <p> <code>gdbus-codegen</code> reads m[blue]<code>D-Bus Introspection XML</code>m[]<font SIZE="-2">[1]</font> from files passed as additional arguments on the command line and generates output files. It currently supports generating C source code (via <code>&#8211;body</code>) or header (via <code>&#8211;header</code>) and Docbook XML (via <code>&#8211;generate-docbook</code>). Alternatively, more restricted C source code and headers can be generated, which just contain the interface information (as <code>GDBusInterfaceInfo</code> structures) using <code>&#8211;interface-info-body</code> and <code>&#8211;interface-info-header</code>.</p>

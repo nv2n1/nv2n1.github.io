@@ -1,5 +1,4 @@
 ---
-
 title: "inet_addr(3)"
 name: "inet_addr"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-inet_addr/"
 description: "inet_aton, inet_addr, inet_network, inet_ntoa, inet_makeaddr, inet_lnaof, inet_netof – Internet address manipulation routines"
 ---
 
+<h2 class="name">NAME</h2>
+<p> inet_aton, inet_addr, inet_network, inet_ntoa, inet_makeaddr, inet_lnaof, inet_netof &#8211; Internet address manipulation routines </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;arpa/inet.h&gt;
 #include &lt;netinet/in.h&gt;
@@ -28,6 +30,7 @@ in_addr_t inet_netof(struct in_addr in);
     In glibc up to and including 2.19:
         _BSD_SOURCE || _BSD_SOURCE
 </pre>
+<h2>DESCRIPTION</h2>
 <p> <code>inet_aton</code>() converts the Internet host address <i>cp</i> from the IPv4 numbers-and-dots notation into binary form (in network byte order) and stores it in the structure that <i>inp</i> points to. <code>inet_aton</code>() returns nonzero if the address is valid, zero if not. The address supplied in <i>cp</i> can have one of the following forms:</p>
 <dl>
 <dt><i>a.b.c.d</i></dt>

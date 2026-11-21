@@ -1,5 +1,4 @@
 ---
-
 title: "euwatch-get-stats(1)"
 name: "euwatch-get-stats"
 section: "1"
@@ -10,10 +9,12 @@ description: "euwatch-get-stats – Show a metric’s statistics"
 
 <h2>NAME</h2>
 <p> euwatch-get-stats &#8211; Show a metric&#8217;s statistics</p>
+<h2>SYNOPSIS</h2>
 <p> euwatch-get-stats <code>-n</code> NAMESPACE <code>-s</code> STAT1,STAT2,&#8230;</p>
 <dl>
 <dt>[&#8211;dimensions KEY1=VALUE1,KEY2=VALUE2,&#8230;]</dt>
 <dd> [&#8211;start-time YYYY-MM-DDThh:mm:ssZ] [&#8211;end-time YYYY-MM-DDThh:mm:ssZ] [&#8211;period SECONDS] [&#8211;unit UNIT] [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] METRIC</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Show a metric&#8217;s statistics</p>
 <h3>positional arguments:</h3>
 <dl>

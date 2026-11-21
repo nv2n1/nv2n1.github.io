@@ -1,5 +1,4 @@
 ---
-
 title: "dlm_ls_lock(3)"
 name: "dlm_ls_lock"
 section: "3"
@@ -10,6 +9,7 @@ description: "dlm_lock – acquire or convert a DLM lock"
 
 <h2>NAME</h2>
 <p> dlm_lock &#8211; acquire or convert a DLM lock</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;libdlm.h&gt;
 int dlm_lock(uint32_t mode,
@@ -65,6 +65,7 @@ int dlm_ls_lockx(dlm_lshandle_t lockspace,
                  uint64_t *xid,
                  uint64_t *timeout);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> dlm_lock and its variants acquire and convert locks in the DLM. </p>
 <p> dlm_lock() operations are asynchronous. If the call to dlm_lock returns an error then the operation has failed and the AST routine will not be called. If dlm_lock returns 0 it is still possible that the lock operation will fail. The AST routine will be called when the locking is complete or has failed and the status is returned in the lksb. <code>dlm_lock_wait()</code> will wait until the lock operation has completed and returns the final completion status. <code>dlm_ls_lock()</code> is the same as <code>dlm_lock()</code> but takes a lockspace argument. This lockspace must have been previously opened by <code>dlm_lockspace_open() or</code> <code>dlm_lockspace_create().</code> </p>
 <p> For conversion operations the name and namelen are ignored and the lock ID in the LKSB is used to identify the lock to be converted. </p>

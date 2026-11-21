@@ -1,5 +1,4 @@
 ---
-
 title: "cpuid(1)"
 name: "cpuid"
 section: "1"
@@ -10,7 +9,9 @@ description: "cpuid – Dump CPUID information for each CPU"
 
 <h2>NAME</h2>
 <p> cpuid &#8211; Dump CPUID information for each CPU</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cpuid</code> <i>[options&#8230;]</i></p>
+<h2>DESCRIPTION</h2>
 <p> <i>cpuid</i> dumps detailed information about the CPU(s) gathered from the CPUID instruction, and also determines the exact model of CPU(s) from that information. </p>
 <p> It dumps all information available from the CPUID instruction. The exact collection of information available varies between manufacturers and processors. The following information is available consistently on all modern CPUs: </p>
 <pre>

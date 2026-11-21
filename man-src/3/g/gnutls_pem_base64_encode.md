@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pem_base64_encode(3)"
 name: "gnutls_pem_base64_encode"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_pem_base64_encode – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pem_base64_encode &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_pem_base64_encode(const char * </code><i>msg</i><code>, const gnutls_datum_t * </code><i>data</i><code>, char * </code><i>result</i><code>, size_t * </code><i>result_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,6 +22,7 @@ description: "gnutls_pem_base64_encode – API function"
 <dd> the place where base64 data will be copied</dd>
 <dt>size_t * result_size</dt>
 <dd> holds the size of the result</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will convert the given data to printable data, using the base64 encoding. This is the encoding used in PEM messages. </p>
 <p> The output string will be null terminated, although the size will not include the terminating null.</p>
 <h2>RETURNS</h2>

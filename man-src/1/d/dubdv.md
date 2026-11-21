@@ -1,5 +1,4 @@
 ---
-
 title: "dubdv(1)"
 name: "dubdv"
 section: "1"
@@ -10,7 +9,9 @@ description: "dubdv – insert audio into a digital video stream"
 
 <h2>NAME</h2>
 <p> dubdv &#8211; insert audio into a digital video stream</p>
+<h2>SYNOPSIS</h2>
 <p> <code>dubdv</code> [ <code>options</code> ] <i>audio_inputfR [ filename or &#8211; for stdin ]</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>dubdv</code> reads the audio from a WAV file or the OSS DSP device and overwrites the existing audio in a raw DV file or stream.</p>
 <dl>
 <dt><code>&#8211;version</code></dt>

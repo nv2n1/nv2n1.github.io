@@ -1,5 +1,4 @@
 ---
-
 title: "feclearexcept(3)"
 name: "feclearexcept"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-feclearexcept/"
 description: "feclearexcept, fegetexceptflag, feraiseexcept, fesetexceptflag, fetestexcept, fegetenv, fegetround, feholdexcept, fesetround, fesetenv, feupdateenv, feenableexcept, fedisableexcept, fegetexcept – f..."
 ---
 
+<h2 class="name">NAME</h2>
+<p> feclearexcept, fegetexceptflag, feraiseexcept, fesetexceptflag, fetestexcept, fegetenv, fegetround, feholdexcept, fesetround, fesetenv, feupdateenv, feenableexcept, fedisableexcept, fegetexcept &#8211; floating-point rounding and exception handling </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;fenv.h&gt;
 int feclearexcept(int excepts);
@@ -23,6 +25,7 @@ int fesetenv(const fenv_t *envp);
 int feupdateenv(const fenv_t *envp);
 </code></pre>
 <p> Link with <i>-lm</i>.</p>
+<h2>DESCRIPTION</h2>
 <p> These eleven functions were defined in C99, and describe the handling of floating-point rounding and exceptions (overflow, zero-divide, etc.).</p>
 <h3>Exceptions</h3>
 <p> The <i>divide-by-zero</i> exception occurs when an operation on finite numbers produces infinity as exact answer. </p>

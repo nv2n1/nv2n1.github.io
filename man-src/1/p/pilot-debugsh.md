@@ -1,5 +1,4 @@
 ---
-
 title: "pilot-debugsh(1)"
 name: "pilot-debugsh"
 section: "1"
@@ -12,7 +11,9 @@ description: "pilot-debugsh – Simple debugging console for a Palm Handheld dev
 <p> pilot-debugsh &#8211; Simple debugging console for a Palm Handheld device [deprecated].</p>
 <h2>SECTION</h2>
 <p> pilot-link: Tools </p>
+<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr><code>pilot-debugsh</code>&nbsp;<wbr>&nbsp;<wbr><code>/dev/tty&lt;0..n&gt;</code>&nbsp;<wbr> </p>
+<h2>DESCRIPTION</h2>
 <p>&nbsp;<wbr><i>pilot-debugsh</i>&nbsp;<wbr>is a commandline interface to the Palm debug monitor. Use device file&nbsp;<wbr><i>&nbsp;<wbr>/dev/tty&lt;0..n&gt;&nbsp;<wbr></i>&nbsp;<wbr>to communicate with the Palm handheld. If this is not specified,&nbsp;<wbr><i>pilot-debugsh</i>&nbsp;<wbr>will output a simple usage help message. </p>
 <h2>SHELL COMMANDS</h2>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><code>coldboot</code><br />

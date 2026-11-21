@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_psk_set_client_credentials_function(3)"
 name: "gnutls_psk_set_client_credentials_function"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_psk_set_client_credentials_function – API function"
 
 <h2>NAME</h2>
 <p> gnutls_psk_set_client_credentials_function &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_psk_set_client_credentials_function(gnutls_psk_client_credentials_t </code><i>cred</i><code>, gnutls_psk_client_credentials_function * </code><i>func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_psk_set_client_credentials_function – API function"
 <dd> is a <code>gnutls_psk_server_credentials_t</code> structure.</dd>
 <dt>gnutls_psk_client_credentials_function * func</dt>
 <dd> is the callback function</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function can be used to set a callback to retrieve the username and password for client PSK authentication. The callback&#8217;s function form is: int (*callback)(gnutls_session_t, char** username, gnutls_datum_t* key); </p>
 <p> The <i>username</i> and <i>key</i> -&gt;data must be allocated using <code>gnutls_malloc()</code>.<br />
 &nbsp;<wbr><i>username</i>&nbsp;<wbr>should be ASCII strings or UTF-8 strings prepared using the &quot;SASLprep&quot; profile of &quot;stringprep&quot;. </p>

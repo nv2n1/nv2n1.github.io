@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pubkey_set_key_usage(3)"
 name: "gnutls_pubkey_set_key_usage"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_pubkey_set_key_usage – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pubkey_set_key_usage &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/abstract.h&gt;</code> </p>
 <p> <code>int gnutls_pubkey_set_key_usage(gnutls_pubkey_t </code><i>key</i><code>, unsigned int </code><i>usage</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_pubkey_set_key_usage – API function"
 <dd> a certificate of type <code>gnutls_x509_crt_t</code></dd>
 <dt>unsigned int usage</dt>
 <dd> an ORed sequence of the GNUTLS_KEY_* elements.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will set the key usage flags of the public key. This is only useful if the key is to be exported to a certificate or certificate request.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

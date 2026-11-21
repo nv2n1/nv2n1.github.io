@@ -1,5 +1,4 @@
 ---
-
 title: "flpsed(1)"
 name: "flpsed"
 section: "1"
@@ -10,7 +9,9 @@ description: "flpsed – annotate PostScript and PDF files"
 
 <h2>NAME</h2>
 <p> <code>flpsed</code> &#8211; annotate PostScript and PDF files</p>
+<h2>SYNOPSIS</h2>
 <p> [-<code>bdh</code> ] [-<code>t </code><i>tag=value</i> ] [-<code>z </code><i>zoom</i> ] [<i>infile</i> ] [<i>outfile</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> The utility allows to annotate Postscript files. PDF files can be imported using the pdftops and exported using the ps2pdf utility. If the document was saved in Postscript format, added text can be reedited later. is useful for filling in forms or adding short comments. Batch mode can be used to automate form filling. </p>
 <p> The options are as follows:</p>
 <dl>

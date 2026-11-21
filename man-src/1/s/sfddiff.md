@@ -1,5 +1,4 @@
 ---
-
 title: "sfddiff(1)"
 name: "sfddiff"
 section: "1"
@@ -10,7 +9,9 @@ description: "sfddiff – compare two font files"
 
 <h2>NAME</h2>
 <p> <code>sfddiff &#8211; compare two font files</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>sfddiff</code> [<code>&#8211;help</code>] [<code>&#8211;ignorehints</code>] [<code>&#8211;ignorenames</code>] [<code>&#8211;ignoregpos</code>] [<code>&#8211;ignoregsub</code>] [<code>&#8211;ignorebitmaps</code>] [<code>&#8211;exact</code>] [<code>&#8211;warn</code>] [<code>&#8211;merge</code> <i>outfile</i>] [<code>&#8211;usage</code>] [<code>&#8211;version</code>] <i>fontfile1</i> <i>fontfile2 </i></p>
+<h2>DESCRIPTION</h2>
 <p> The program <code>sfddiff</code> compares two font files, which may be in any format <code><a href="/docs/linux/man/1-fontforge/">fontforge</a></code>(1) can read. It will notice the following differences:</p>
 <dl>
 <dt>1)</dt>

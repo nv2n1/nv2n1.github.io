@@ -1,5 +1,4 @@
 ---
-
 title: "db_archive(1)"
 name: "db_archive"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-db_archive/"
 description: "db5.3_archive – Find unused log files for archiving purposes"
 ---
 
+<h2 class="name">NAME</h2>
+<p> db5.3_archive &#8211; Find unused log files for archiving purposes </p>
+<h2>SYNOPSIS</h2>
 <p> <code>db5.3_archive</code> [-adlsVv] [-h home] [-P password]</p>
+<h2>DESCRIPTION</h2>
 <p> The db5.3_archive utility writes the pathnames of log files that are no longer in use (for example, no longer involved in active transactions), to the standard output, one pathname per line. These log files should be written to backup media to provide for recovery in the case of catastrophic failure (which also requires a snapshot of the database files), but they may then be deleted from the system to reclaim disk space.</p>
 <h2>OPTIONS</h2>
 <dl>

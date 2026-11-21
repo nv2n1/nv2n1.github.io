@@ -1,5 +1,4 @@
 ---
-
 title: "docker-search(1)"
 name: "docker-search"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-search/"
 description: "docker-search – Search the Docker Hub for images"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-search &#8211; Search the Docker Hub for images </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker search [OPTIONS] TERM</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Search Docker Hub for images that match the specified TERM. The table of images returned displays the name, description (truncated by default), number of stars awarded, whether the image is official, and whether it is automated. </p>
 <p> <i>Note</i> &#8211; Search queries will only return up to 25 results </p>
 <h2>Filter</h2>

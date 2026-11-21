@@ -1,5 +1,4 @@
 ---
-
 title: "kadm5_add_passwd_quality_verifier(3)"
 name: "kadm5_add_passwd_quality_verifier"
 section: "3"
@@ -8,10 +7,13 @@ url: "/docs/linux/man/3-kadm5_add_passwd_quality_verifier/"
 description: "krb5_pwcheck kadm5_setup_passwd_quality_check kadm5_add_passwd_quality_verifier kadm5_check_password_quality – Heimdal warning and error functions"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>krb5_pwcheck</code> <code>kadm5_setup_passwd_quality_check</code> <code>kadm5_add_passwd_quality_verifier</code> <code>kadm5_check_password_quality</code> &#8211; Heimdal warning and error functions </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkadm5srv, -lkadm5srv)</p>
+<h2>SYNOPSIS</h2>
 <p> In kadm5-protos.h In kadm5-pwcheck.h Ft void Fo kadm5_setup_passwd_quality_check Fa krb5_context context Fa const char *check_library Fa const char *check_function Fc Ft krb5_error_code Fo kadm5_add_passwd_quality_verifier Fa krb5_context context Fa const char *check_library Fc Ft const char * Fo kadm5_check_password_quality Fa krb5_context context Fa krb5_principal principal Fa krb5_data *pwd_data Fc Ft int Fo (*kadm5_passwd_quality_check_func) Fa krb5_context context Fa krb5_principal principal Fa krb5_data *password Fa const char *tuning Fa char *message Fa size_t length Fc</p>
+<h2>DESCRIPTION</h2>
 <p> These functions perform the quality check for the heimdal database library. </p>
 <p> There are two versions of the shared object API; the old version (0) is deprecated, but still supported. The new version (1) supports multiple password quality checking policies in the same shared object. See below for details. </p>
 <p> The password quality checker will run all policies that are configured by the user. If any policy rejects the password, the password will be rejected. </p>

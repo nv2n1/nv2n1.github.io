@@ -1,5 +1,4 @@
 ---
-
 title: "docker-container-stats(1)"
 name: "docker-container-stats"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-container-stats/"
 description: "docker-container-stats – Display a live stream of container(s) resource usage statistics"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-container-stats &#8211; Display a live stream of container(s) resource usage statistics </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker container stats [OPTIONS] [CONTAINER&#8230;]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Display a live stream of one or more containers&#8217; resource usage statistics </p>
 <h2>Format</h2>
 <p> Pretty-print containers statistics using a Go template.<br />

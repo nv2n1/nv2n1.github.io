@@ -1,5 +1,4 @@
 ---
-
 title: "if(1)"
 name: "if"
 section: "1"
@@ -7,7 +6,10 @@ letter: "i"
 url: "/docs/linux/man/1-if/"
 ---
 
-if - conditionally execute a command
+<h2 class="name">NAME</h2>
+ 
+
+ if - conditionally execute a command
 
 <h3>Synopsis</h3>
 

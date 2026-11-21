@@ -1,5 +1,4 @@
 ---
-
 title: "hdf_init(3)"
 name: "hdf_init"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-hdf_init/"
 description: "hdf_init – Initialize an HDF data set"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hdf_init &#8211; Initialize an HDF data set </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;util/neo_hdf.h&gt;
 </code></pre>
@@ -16,6 +18,7 @@ NEOERR* hdf_init (HDF **hdf);
 </pre>
 <h2>ARGUMENTS</h2>
 <p> hdf &#8211; pointer to an HDF pointer </p>
+<h2>DESCRIPTION</h2>
 <p> hdf_init initializes an HDF data set and returns the pointer to the top node in the data set. </p>
 <h2>RETURN VALUE</h2>
 <p> hdf &#8211; allocated hdf node </p>

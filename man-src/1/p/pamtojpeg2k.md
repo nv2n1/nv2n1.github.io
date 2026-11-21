@@ -1,5 +1,4 @@
 ---
-
 title: "pamtojpeg2k(1)"
 name: "pamtojpeg2k"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pamtojpeg2k/"
 description: "pamtojpeg2k – convert PAM/PNM image to a JPEG-2000 code stream"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pamtojpeg2k &#8211; convert PAM/PNM image to a JPEG-2000 code stream</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pamtojpeg2k</code> [<code>-imgareatlx=</code><i>column</i>] [<code>-imgareatly=</code><i>row</i>] [<code>-tilegrdtlx=</code><i>column</i>] [<code>-tilegrdtly=</code><i>row</i>] [<code>-tilewidth=</code><i>columns</i>] [<code>-tileheight=</code><i>rows</i>] [<code>-prcwidth=</code><i>columns</i>] [<code>-prcheight=</code><i>rows</i>] [<code>-cblkwidth=</code><i>columns</i>] [<code>-cblkheight=</code><i>rows</i>] [<code>-mode=</code>{<code>integer</code>|<code>int</code>|<code>real</code>}] [<code>-compression=</code><i>ratio</i>] [<code>-ilyrrates=</code><i>ratestring</i>] [<code>-numrlvls=</code><i>number</i>] [<code>-progression=</code>{<code>lrcp</code>|<code>rlcp</code>|<code>rpcl</code>|<code>pcrl</code>|<code>cprl</code>}] [<code>-numgbits=</code><i>number</i>] [<code>-nomct</code>] [<code>-sop</code>] [<code>-eph</code>] [<code>-lazy</code>] [<code>-termall</code>] [<code>-segsym</code>] [<code>-vcausal</code>] [<code>-pterm</code>] [<code>-resetprob</code>] [<code>-verbose</code>] [<code>-debuglevel=</code><i>number</i>] <i>filename</i> </p>
 <p> Minimum unique abbreviation of option is acceptable. You may use double hyphens instead of single hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamtojpeg2k</code> converts the named PBM, PGM, PPM, or PAM file, or Standard Input if no file is named, to a JPEG-2000 code stream (JPC) file on Standard Output. </p>
 <p> The JPEG-2000 specification specifies two different formats: JP2 and JPEG-2000 code stream (JPC). JP2 represents a visual image quite specifically, whereas JPC is a more or less arbitrary array of codes. <code>pamtojpeg2k</code> can&#8217;t produce a JP2, but the JPC image that <code>pamtojpeg2k</code> produces is very similar to a JP2 if the input is a PBM, PGM, or PPM image or equivalent PAM image. One difference is that the RGB intensity values in a JP2 are SRGB values, while <code>pamtojpeg2k</code> produces ITU-R Recommendation BT.709 values. Those are very similar, but not identical. Another difference is that a JP2 can contain extra information about an image that JPC cannot. </p>

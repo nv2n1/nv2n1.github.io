@@ -1,5 +1,4 @@
 ---
-
 title: "airtsp(1)"
 name: "airtsp"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-airtsp/"
 description: "airtsp –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> airtsp &#8211; </p>
 <pre>
   Binary executable for the C++ Simulated Airline Schedule Manager Library
 </pre>
+<h2>SYNOPSIS</h2>
 <p> <code>airtsp</code> [&#8211;prefix] [-v|&#8211;version] [-h|&#8211;help] [-b|&#8211;builtin] [-i|&#8211;input &lt;path-to-input&gt;] [-l|&#8211;log &lt;path-to-output-log-file&gt;]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>airtsp</i> is a small program showing how to use the AirTSP library. </p>
 <p> <i>airtsp</i> accepts the following options: </p>
 <p> <code>&#8211;prefix</code> </p>

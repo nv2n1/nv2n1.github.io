@@ -1,5 +1,4 @@
 ---
-
 title: "kibitz(1)"
 name: "kibitz"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-kibitz/"
 description: "kibitz – allow two people to interact with one shell"
 ---
 
+<h2 class="name">NAME</h2>
+<p> kibitz &#8211; allow two people to interact with one shell </p>
+<h2>SYNOPSIS</h2>
 <p> <code>kibitz</code> [ <i>kibitz-args</i> ] <i>user</i> [ <i>program program-args&#8230;</i> ]<br />
  <code>kibitz</code> [ <i>kibitz-args</i> ] <i>user [at] host</i> [ <i>program program-args&#8230;</i> ]</p>
 <h2>INTRODUCTION</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "urxvt-ml-selection(1)"
 name: "urxvt-ml-selection"
 section: "1"
@@ -7,9 +6,14 @@ letter: "u"
 url: "/docs/linux/man/1-urxvt-ml-selection/"
 ---
 
-selection - more intelligent selection (enabled by default) 
+<h2 class="name">NAME</h2>
+ 
 
-This extension tries to be more intelligent when the user extends selections (double-click and further clicks). Right now, it tries to select words, urls and complete shell-quoted arguments, which is very convenient, too, if your <i>ls</i> supports <tt>&quot;--quoting-style=shell&quot;</tt>. 
+ selection - more intelligent selection (enabled by default) 
+
+<h2>DESCRIPTION</h2>
+
+ This extension tries to be more intelligent when the user extends selections (double-click and further clicks). Right now, it tries to select words, urls and complete shell-quoted arguments, which is very convenient, too, if your <i>ls</i> supports <tt>&quot;--quoting-style=shell&quot;</tt>. 
 
  A double-click usually selects the word under the cursor, further clicks will enlarge the selection. 
 

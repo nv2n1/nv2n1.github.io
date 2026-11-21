@@ -1,5 +1,4 @@
 ---
-
 title: "ansible(1)"
 name: "ansible"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ansible/"
 description: "ansible – run a task on a target host(s)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ansible &#8211; run a task on a target host(s) </p>
+<h2>SYNOPSIS</h2>
 <p> ansible &lt;host-pattern&gt; [-m module_name] [-a args] [options]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Ansible</code> is an extra-simple tool/framework/API for doing &#8216;remote things&#8217;. This is the adhoc command that allows for a &#8216;single task playbook&#8217; run.</p>
 <h2>ARGUMENTS</h2>
 <p> <code>host-pattern</code></p>

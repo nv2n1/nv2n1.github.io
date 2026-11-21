@@ -1,5 +1,4 @@
 ---
-
 title: "dbcolstatscores(1)"
 name: "dbcolstatscores"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dbcolstatscores/"
 description: "dbcolstatscores – compute z-scores or t-scores for each value in a population"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dbcolstatscores &#8211; compute z-scores or t-scores for each value in a population </p>
+<h2>SYNOPSIS</h2>
 <p> dbcolstatscores [-t] [&#8211;tmean=MEAN] [&#8211;tstddev=STDDEV] column</p>
+<h2>DESCRIPTION</h2>
 <p> Compute statistics (z-score and optionally t-score) over a <font SIZE="-1">COLUMN</font> of numbers. Creates new columns called &#8220;zscore&#8221;, &#8220;tscore&#8221;. T-scores are only computed if requested with the <tt>&quot;-t&quot;</tt> option, or if <tt>&quot;--tmean&quot;</tt> or <tt>&quot;--tstddev&quot;</tt> are explicitly specified (defaults are mean of 50, standard deviation of 10). </p>
 <p> You may recall from your statistics class that a z-score is simply the value normalized by mean and standard deviation, so that 0.0 is the mean and positive or negative values are multiples of the standard deviation. It assumes data follows a normal (Gaussian) distribution. </p>
 <p> T-score scales the z-score to match a mean of 50 and a standard deviation of 10. This program allows generalized t-scores that use any mean and standard deviation. </p>

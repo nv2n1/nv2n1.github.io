@@ -1,5 +1,4 @@
 ---
-
 title: "mpd(1)"
 name: "mpd"
 section: "1"
@@ -10,7 +9,9 @@ description: "MPD – A daemon for playing music"
 
 <h2>NAME</h2>
 <p> MPD &#8211; A daemon for playing music</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mpd</code> [<i>options</i>] [<i>CONF_FILE</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> MPD is a daemon for playing music. Music is played through the configured audio output(s) (which are generally local, but can be remote). The daemon stores info about all available music, and this info can be easily searched and retrieved. Player control, info retrieval, and playlist management can all be managed remotely. </p>
 <p> MPD searches for a config file in <code>$XDG_CONFIG_HOME/mpd/mpd.conf</code> then <code>~/.mpdconf</code> then <code>/etc/mpd.conf</code> or uses CONF_FILE. </p>
 <p> Read more about MPD at &lt;<code><a rel="nofollow" href="http://www.musicpd.org/">http://www.musicpd.org/</a></code>&gt;.</p>

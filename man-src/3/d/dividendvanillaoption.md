@@ -1,5 +1,4 @@
 ---
-
 title: "dividendvanillaoption(3)"
 name: "dividendvanillaoption"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dividendvanillaoption/"
 description: "ql/instruments/dividendvanillaoption.hpp – Vanilla option on a single asset with discrete dividends."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/instruments/dividendvanillaoption.hpp &#8211; Vanilla option on a single asset with discrete dividends. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/oneassetoption.hpp&gt;<br />
  #include &lt;ql/instruments/dividendschedule.hpp&gt;<br />
  #include &lt;ql/instruments/payoffs.hpp&gt; </p>

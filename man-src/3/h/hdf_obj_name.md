@@ -1,5 +1,4 @@
 ---
-
 title: "hdf_obj_name(3)"
 name: "hdf_obj_name"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-hdf_obj_name/"
 description: "hdf_obj_name – Return the name of a node"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hdf_obj_name &#8211; Return the name of a node </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;util/neo_hdf.h&gt;
 </code></pre>
@@ -16,6 +18,7 @@ char *hdf_obj_name(HDF *hdf);
 </code></pre>
 <h2>ARGUMENTS</h2>
 <p> hdf -&gt; the hdf dataset node </p>
+<h2>DESCRIPTION</h2>
 <p> hdf_obj_name is an accessor function for a datset node which returns the name of the node. This is just the local name, and not the full path. </p>
 <h2>RETURN VALUE</h2>
 <p> None </p>

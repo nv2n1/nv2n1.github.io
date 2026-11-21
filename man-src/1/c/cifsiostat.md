@@ -1,5 +1,4 @@
 ---
-
 title: "cifsiostat(1)"
 name: "cifsiostat"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-cifsiostat/"
 description: "cifsiostat – Report CIFS statistics."
 ---
 
+<h2 class="name">NAME</h2>
+<p> cifsiostat &#8211; Report CIFS statistics.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cifsiostat [ -h ] [ -k | -m ] [ -t ] [ -V ] [ &#8211;dec={ 0 | 1 | 2 } ] [ &#8211;human ] [ &#8211;pretty ] [</code> <i>interval </i><code>[ </code><i>count </i><code>] ]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>cifsiostat</code> command displays statistics about read and write operations on CIFS filesystems. </p>
 <p> The <i>interval</i> parameter specifies the amount of time in seconds between each report. The first report contains statistics for the time since system startup (boot). Each subsequent report contains statistics collected during the interval since the previous report. A report consists of a CIFS header row followed by a line of statistics for each CIFS filesystem that is mounted. The <i>count </i>parameter can be specified in conjunction with the <i>interval </i> parameter. If the <i>count </i>parameter is specified, the value of <i>count </i> determines the number of reports generated at <i>interval </i>seconds apart. If the <i>interval </i> parameter is specified without the <i>count </i>parameter, the <code>cifsiostat </code>command generates reports continuously. </p>
 <h2>REPORT</h2>

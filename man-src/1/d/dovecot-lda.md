@@ -1,5 +1,4 @@
 ---
-
 title: "dovecot-lda(1)"
 name: "dovecot-lda"
 section: "1"
@@ -10,7 +9,9 @@ description: "dovecot-lda – Dovecot’s local mail delivery agent"
 
 <h2>NAME</h2>
 <p> dovecot-lda &#8211; Dovecot&#8217;s local mail delivery agent</p>
+<h2>SYNOPSIS</h2>
 <p> <code>dovecot-lda</code> [<code>-ek</code>] [<code>-a</code> <i>address</i>] [<code>-c</code> <i>config_file</i>] [<code>-d</code> <i>username</i>] [<code>-f</code> <i>envelope_sender</i>] [<code>-m</code> <i>mailbox</i>] [<code>-o</code> <i>setting=value</i>] [<code>-p</code> <i>path</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>dovecot-lda</code> is a local mail delivery agent which takes mail from an MTA and delivers it to a user&#8217;s mailbox, while keeping Dovecot index files up to date. </p>
 <p> Main features of the <code>dovecot-lda</code> are:</p>
 <dl>

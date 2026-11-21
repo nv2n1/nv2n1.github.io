@@ -1,5 +1,4 @@
 ---
-
 title: "midi2ly(1)"
 name: "midi2ly"
 section: "1"
@@ -10,7 +9,9 @@ description: "midi2ly – manual page for midi2ly (LilyPond) 2.12.2"
 
 <h2>NAME</h2>
 <p> midi2ly &#8211; manual page for midi2ly (LilyPond) 2.12.2</p>
+<h2>SYNOPSIS</h2>
 <p> <code>midi2ly</code> [<i>OPTION</i>]&#8230; <i>FILE</i></p>
+<h2>DESCRIPTION</h2>
 <p> Convert MIDI to LilyPond input.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "cpg_dispatch(3)"
 name: "cpg_dispatch"
 section: "3"
@@ -10,8 +9,10 @@ description: "cpg_dispatch – Dispatches callbacks from the CPG service"
 
 <h2>NAME</h2>
 <p> cpg_dispatch &#8211; Dispatches callbacks from the CPG service</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cpg.h&gt;</code> </p>
 <p> <code>int cpg_dispatch(cpg_handle_t </code><i>handle</i><code>, cpg_dispatch_t *</code><i>dispatch_types</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>cpg_dispatch</code> function is used to dispatch configuration changes or messages from the closed process groups API. </p>
 <p> Each application may have several connections to the CPG API. Each application uses the <i>handle</i> argument to uniquely identify the connection. </p>
 <p> The <i>dispatch_types</i> argument is used to identify the type of dispatch to execute. The possible types are defined by the structure: </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "dpkg-shlibdeps(1)"
 name: "dpkg-shlibdeps"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dpkg-shlibdeps/"
 description: "dpkg-shlibdeps – generate shared library substvar dependencies"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dpkg-shlibdeps &#8211; generate shared library substvar dependencies </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dpkg-shlibdeps</code> [<i>option</i>&#8230;] [<code>-e</code>] <i>executable</i> [<i>option</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>dpkg-shlibdeps</code> calculates shared library dependencies for executables named in its arguments. The dependencies are added to the substitution variables file <code>debian/substvars</code> as variable names <code>shlibs:</code><i>dependency-field</i> where <i>dependency-field</i> is a dependency field name. Any other variables starting with <code>shlibs:</code> are removed from the file. </p>
 <p> <code>dpkg-shlibdeps</code> has two possible sources of information to generate dependency information. Either <i>symbols</i> files or <i>shlibs</i> files. For each binary that <code>dpkg-shlibdeps</code> analyzes, it finds out the list of libraries that it&#8217;s linked with. Then, for each library, it looks up either the <i>symbols</i> file, or the <i>shlibs</i> file (if the former doesn&#8217;t exist or if debian/shlibs.local contains the relevant dependency). Both files are supposed to be provided by the library package and should thus be available as /var/lib/dpkg/info/<i>package</i>.<i>symbols</i> or /var/lib/dpkg/info/<i>package</i>.<i>shlibs</i>. The package name is identified in two steps: find the library file on the system (looking in the same directories that <code>ld.so</code> would use), then use <code>dpkg -S</code> <i>library-file</i> to lookup the package providing the library.</p>
 <h3>Symbols files</h3>

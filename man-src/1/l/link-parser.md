@@ -1,5 +1,4 @@
 ---
-
 title: "link-parser(1)"
 name: "link-parser"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-link-parser/"
 description: "link-parser – parses natural language sentences"
 ---
 
+<h2 class="name">NAME</h2>
+<p> link-parser &#8211; parses natural language sentences </p>
+<h2>SYNOPSIS</h2>
 <p> <code>link-parser</code> [language] [-pp pp_knowledge_file] [-c constituent_knowledge_file] [-a affix_file] [-ppoff] [-coff] [-aoff] [-batch] [-&lt;special &quot;!&quot; command&gt;]</p>
+<h2>DESCRIPTION</h2>
 <p> In Selator, D. and Temperly, D. &quot;Parsing English with a Link Grammar&quot; (1991), the authors defined a new formal grammatical system called a &quot;link grammar&quot;. A sequence of words is in the language of a link grammar if there is a way to draw &quot;links&quot; between words in such a way that the local requirements of each word are satisfied, the links do not cross, and the words form a consistent connected graph. The authors encoded English grammar into such a system, and wrote <code>link-parser</code> to parse English using this grammar. </p>
 <p> This package can be used for linguistic parsing for information retrieval or extraction from natural language documents. Abiword also uses it as a grammar checker.</p>
 <h2>OPTIONS</h2>

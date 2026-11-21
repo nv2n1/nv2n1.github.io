@@ -1,5 +1,4 @@
 ---
-
 title: "ldb3rename(1)"
 name: "ldb3rename"
 section: "1"
@@ -13,6 +12,10 @@ ldbrename - Edit LDB databases using your favorite editor
 
 <dl>
 <dt> FCldbrenameF[] [-h] [-o options] {olddn} {newdb}</dt></dl>
+
+<h2>DESCRIPTION</h2>
+
+ 
 
 <dd>ldbrename is a utility that allows you to rename trees in an LDB database based by DN. This utility takes two arguments: the original DN name of the top element and the DN to change it to.
 

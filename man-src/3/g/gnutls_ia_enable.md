@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_ia_enable(3)"
 name: "gnutls_ia_enable"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_ia_enable – Indicate willingness for TLS/IA application p
 
 <h2>NAME</h2>
 <p> gnutls_ia_enable &#8211; Indicate willingness for TLS/IA application phases</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/extra.h">gnutls/extra.h</a>&gt;</code> </p>
 <p> <code>void gnutls_ia_enable(gnutls_session_t </code><i>session</i><code>, int </code><i>allow_skip_on_resume</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_ia_enable – Indicate willingness for TLS/IA application p
 <dd> is a <code>gnutls_session_t</code> structure.</dd>
 <dt>int allow_skip_on_resume</dt>
 <dd> non-zero if local party allows to skip the TLS/IA application phases for a resumed session.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Specify whether we must advertise support for the TLS/IA extension during the handshake. </p>
 <p> At the client side, we always advertise TLS/IA if gnutls_ia_enable was called before the handshake; at the server side, we also require that the client has advertised that it wants to run TLS/IA before including the advertisement, as required by the protocol. </p>
 <p> Similarly, at the client side we always advertise that we allow TLS/IA to be skipped for resumed sessions if <i>allow_skip_on_resume</i> is non-zero; at the server side, we also require that the session is indeed resumable and that the client has also advertised that it allows TLS/IA to be skipped for resumed sessions. </p>

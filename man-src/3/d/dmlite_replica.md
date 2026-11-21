@@ -1,5 +1,4 @@
 ---
-
 title: "dmlite_replica(3)"
 name: "dmlite_replica"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dmlite_replica/"
 description: "dmlite_replica –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dmlite_replica &#8211; </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;inode.h&gt;</p>
 <h3>Data Fields</h3>
 <p> int64_t <code>replicaid</code> </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "perl5263delta(1)"
 name: "perl5263delta"
 section: "1"
@@ -7,9 +6,14 @@ letter: "p"
 url: "/docs/linux/man/1-perl5263delta/"
 ---
 
-perl5263delta - what is new for perl v5.26.3 
+<h2 class="name">NAME</h2>
+ 
 
-This document describes differences between the 5.26.2 release and the 5.26.3 release. 
+ perl5263delta - what is new for perl v5.26.3 
+
+<h2>DESCRIPTION</h2>
+
+ This document describes differences between the 5.26.2 release and the 5.26.3 release. 
 
  If you are upgrading from an earlier release such as 5.26.1, first read perl5262delta, which describes differences between 5.26.1 and 5.26.2.
 

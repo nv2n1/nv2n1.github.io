@@ -1,5 +1,4 @@
 ---
-
 title: "protoc(1)"
 name: "protoc"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-protoc/"
 description: "protoc – compile protocol buffer description files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> protoc &#8211; compile protocol buffer description files </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>protoc</code> [<code>&#8211;cpp_out=</code><i>OUT_DIR</i>] [<code>&#8211;java_out=</code><i>OUT_DIR</i>] [<code>&#8211;python_out=</code><i>OUT_DIR</i>] [<code>-I</code><i>PATH</i>&nbsp;|&nbsp;<code>&#8211;proto_path=</code><i>PATH</i>] <i>PROTO_FILE</i></dt>
 <dt> <code>protoc</code> {<code>-h</code> | <code>&#8211;help</code>}</dt>
 <dt> <code>protoc</code> <code>&#8211;version</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>protoc</code></p>
 <dd>is a compiler for protocol buffers definitions files. It can can generate C++, Java and Python source code for the classes defined in <i>PROTO_FILE</i>.</dd>
 <h2>OPTIONS</h2>

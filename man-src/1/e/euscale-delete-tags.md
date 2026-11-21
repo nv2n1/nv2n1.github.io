@@ -1,5 +1,4 @@
 ---
-
 title: "euscale-delete-tags(1)"
 name: "euscale-delete-tags"
 section: "1"
@@ -10,10 +9,12 @@ description: "euscale-delete-tags – Delete one or more resource tags"
 
 <h2>NAME</h2>
 <p> euscale-delete-tags &#8211; Delete one or more resource tags</p>
+<h2>SYNOPSIS</h2>
 <p> euscale-delete-tags <code>&#8211;tag</code> &quot;k=VALUE, id=VALUE, t=VALUE, v=VALUE,</p>
 <dl>
 <dt>p={true,false}&quot; [-U URL] [&#8211;region USER [at] REGION]</dt>
 <dd> [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Delete one or more resource tags</p>
 <h3>optional arguments:</h3>
 <dl>

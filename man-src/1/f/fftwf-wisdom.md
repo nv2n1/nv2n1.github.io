@@ -1,5 +1,4 @@
 ---
-
 title: "fftwf-wisdom(1)"
 name: "fftwf-wisdom"
 section: "1"
@@ -10,7 +9,9 @@ description: "fftwf-wisdom – create wisdom (pre-optimized FFTs)"
 
 <h2>NAME</h2>
 <p> fftwf-wisdom &#8211; create wisdom (pre-optimized FFTs)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>fftwf-wisdom</code> [<i>OPTION</i>]&#8230; [<i>SIZE</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <i>fftwf-wisdom</i> is a utility to generate FFTW <code>wisdom</code> files, which contain saved information about how to optimally compute (Fourier) transforms of various sizes. FFTW is a free library to compute discrete Fourier transforms in one or more dimensions, for arbitrary sizes, and of both real and complex data, among other related operations. More information on FFTW can be found at the FFTW home page: <i><a rel="nofollow" href="http://www.fftw.org">http://www.fftw.org</a></i> </p>
 <p> Programs using FFTW can be written to load wisdom from an arbitrary file, string, or other source. Moreover, it is likely that many FFTW-using programs will load the <code>system wisdom</code> file, which is stored in <i>/etc/fftw/wisdomf</i> by default. <i>fftwf-wisdom</i> can be used to create or add to such wisdom files. In its most typical usage, the wisdom file can be created to pre-plan a canonical set of sizes (see below) via: </p>
 <p> <center> fftwf-wisdom -v -c -o wisdomf<br />

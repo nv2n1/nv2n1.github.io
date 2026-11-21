@@ -1,5 +1,4 @@
 ---
-
 title: "npm-docs(1)"
 name: "npm-docs"
 section: "1"
@@ -8,6 +7,7 @@ url: "/docs/linux/man/1-npm-docs/"
 description: "npm-docs – Docs for a package in a web browser maybe"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>npm-docs</code> &#8211; Docs for a package in a web browser maybe </p>
 <h3>Synopsis</h3>
 <dl>

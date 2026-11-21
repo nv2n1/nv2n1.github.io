@@ -1,5 +1,4 @@
 ---
-
 title: "k3d(1)"
 name: "k3d"
 section: "1"
@@ -10,7 +9,9 @@ description: "k3d – 3D modeling and animation system"
 
 <h2>NAME</h2>
 <p> k3d &#8211; 3D modeling and animation system </p>
+<h2>SYNOPSIS</h2>
 <p> <code>k3d</code> [options] </p>
+<h2>DESCRIPTION</h2>
 <p> K-3D is a free (as in freedom) 3D modeling, animation, and rendering system for GNU/Linux and Win32. K-3D features a robust, object-oriented plugin architecture and is capable of producing motion-picture-quality output when paired with a RenderMan Interface compliant render engine such as Aqsis. </p>
 <p> Please visit <i><a rel="nofollow" href="http://www.k-3d.org">http://www.k-3d.org</a></i> for more information. </p>
 <h2>OPTIONS</h2>

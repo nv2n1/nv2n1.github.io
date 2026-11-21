@@ -1,5 +1,4 @@
 ---
-
 title: "bluetooth-wizard(1)"
 name: "bluetooth-wizard"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-bluetooth-wizard/"
 description: "bluetooth-wizard – GTK wizard for setting up devices with the Linux Bluetooth stack"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bluetooth-wizard &#8211; GTK wizard for setting up devices with the Linux Bluetooth stack </p>
+<h2>SYNOPSIS</h2>
 <p> <code>bluetooth-wizard</code></p>
+<h2>DESCRIPTION</h2>
 <p> <i>bluetooth-wizard</i> will display a wizard for setting up Bluetooth devices. <i>bluetooth-wizard</i> is part of bluez-gnome, see also <a rel="nofollow" href="http://www.bluez.org">http://www.bluez.org</a></p>
 <h2>OPTIONS</h2>
 <p> <i>bluetooth-wizard</i> takes no options</p>

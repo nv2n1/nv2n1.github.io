@@ -1,5 +1,4 @@
 ---
-
 title: "pamtosrf(1)"
 name: "pamtosrf"
 section: "1"
@@ -9,7 +8,11 @@ description: "pamtosrf – convert a sequence of Netpbm images to a SRF image fi
 ---
 
 <p>&lt;html xmlns=&quot;<a rel="nofollow" href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>&quot; xml:lang=&quot;en&quot;&gt; </p>
+<h2 class="name">NAME</h2>
+<p> pamtosrf &#8211; convert a sequence of Netpbm images to a SRF image file </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pamtosrf</code> [<code>-verbose</code>] [<i>netpbmfile</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamtosrf</code> reads a Netpbm image stream as input and produces a an SRF image file as output. I don&#8217;t know exactly what SRF is, but on popular use of it is in Garmin vehicle information files, which tell a GPS receiver how to depict a vehicle on its display. </p>
 <p> An SRF file can contain multiple images; each image in a multi-image Netpbm input stream becomes one image in the SRF. </p>

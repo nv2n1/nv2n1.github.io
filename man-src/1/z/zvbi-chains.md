@@ -1,5 +1,4 @@
 ---
-
 title: "zvbi-chains(1)"
 name: "zvbi-chains"
 section: "1"
@@ -10,7 +9,9 @@ description: "zvbi-chains – VBI proxy wrapper"
 
 <h2>NAME</h2>
 <p> zvbi-chains &#8211; VBI proxy wrapper</p>
+<h2>SYNOPSIS</h2>
 <p> <code>zvbi-chains [ options ]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>zvbi-chains</code> is a small wrapper which executes the VBI application given on the command line while overloading several C library calls (such as <a href="/docs/linux/man/2-open/">open</a>(2) and <a href="/docs/linux/man/2-read/">read</a>(2)) so that the application can be forced to access VBI devices via the VBI proxy instead of device files directly. </p>
 <p> LD_PRELOAD is used to intercept C library calls and call functions in the libzvbi-chain shared library instead. Parameters given on the command line (e.g. device path) are passed to the library by means of environment variables.</p>
 <h2>OPTIONS</h2>

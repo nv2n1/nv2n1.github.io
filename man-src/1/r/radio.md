@@ -1,5 +1,4 @@
 ---
-
 title: "radio(1)"
 name: "radio"
 section: "1"
@@ -10,7 +9,9 @@ description: "radio – console radio application"
 
 <h2>NAME</h2>
 <p> radio &#8211; console radio application</p>
+<h2>SYNOPSIS</h2>
 <p> <code>radio [ options ]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>radio</code> is a interactive, ncurses-bases console radio application.</p>
 <h2>OPTIONS</h2>
 <dl>

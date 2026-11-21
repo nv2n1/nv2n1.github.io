@@ -1,5 +1,4 @@
 ---
-
 title: "krb5_krbhst_next(3)"
 name: "krb5_krbhst_next"
 section: "3"
@@ -8,10 +7,13 @@ url: "/docs/linux/man/3-krb5_krbhst_next/"
 description: "krb5_krbhst_init krb5_krbhst_init_flags krb5_krbhst_next krb5_krbhst_next_as_string krb5_krbhst_reset krb5_krbhst_free krb5_krbhst_format_string krb5_krbhst_get_addrinfo – lookup Kerberos KDC hosts"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>krb5_krbhst_init</code> <code>krb5_krbhst_init_flags</code> <code>krb5_krbhst_next</code> <code>krb5_krbhst_next_as_string</code> <code>krb5_krbhst_reset</code> <code>krb5_krbhst_free</code> <code>krb5_krbhst_format_string</code> <code>krb5_krbhst_get_addrinfo</code> &#8211; lookup Kerberos KDC hosts </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>
+<h2>SYNOPSIS</h2>
 <p> In krb5.h Ft krb5_error_code Fn krb5_krbhst_init krb5_context context const char *realm unsigned int type krb5_krbhst_handle *handle Ft krb5_error_code Fn krb5_krbhst_init_flags krb5_context context const char *realm unsigned int type int flags krb5_krbhst_handle *handle Ft krb5_error_code Fn krb5_krbhst_next krb5_context context krb5_krbhst_handle handle krb5_krbhst_info **host Ft krb5_error_code Fn krb5_krbhst_next_as_string krb5_context context krb5_krbhst_handle handle char *hostname size_t hostlen Ft void Fn krb5_krbhst_reset krb5_context context krb5_krbhst_handle handle Ft void Fn krb5_krbhst_free krb5_context context krb5_krbhst_handle handle Ft krb5_error_code Fn krb5_krbhst_format_string krb5_context context const krb5_krbhst_info *host char *hostname size_t hostlen Ft krb5_error_code Fn krb5_krbhst_get_addrinfo krb5_context context krb5_krbhst_info *host struct addrinfo **ai</p>
+<h2>DESCRIPTION</h2>
 <p> These functions are used to sequence through all Kerberos hosts of a particular realm and service. The service type can be the KDCs, the administrative servers, the password changing servers, or the servers for Kerberos 4 ticket conversion. </p>
 <p> First a handle to a particular service is obtained by calling Fn krb5_krbhst_init (or Fn krb5_krbhst_init_flags ) with the Fa realm of interest and the type of service to lookup. The Fa type can be one of: </p>
 <dl>

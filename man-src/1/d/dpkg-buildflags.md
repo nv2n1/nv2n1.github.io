@@ -1,5 +1,4 @@
 ---
-
 title: "dpkg-buildflags(1)"
 name: "dpkg-buildflags"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dpkg-buildflags/"
 description: "dpkg-buildflags – returns build flags to use during package build"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dpkg-buildflags &#8211; returns build flags to use during package build </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dpkg-buildflags</code> [<i>option</i>&#8230;] [<i>command</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>dpkg-buildflags</code> is a tool to retrieve compilation flags to use during build of Debian packages. </p>
 <p> The default flags are defined by the vendor but they can be extended/overridden in several ways:</p>
 <dl>

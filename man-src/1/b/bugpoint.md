@@ -1,5 +1,4 @@
 ---
-
 title: "bugpoint(1)"
 name: "bugpoint"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-bugpoint/"
 description: "bugpoint – automatic test case reduction tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bugpoint &#8211; automatic test case reduction tool </p>
+<h2>SYNOPSIS</h2>
 <p> <code>bugpoint</code> [<i>options</i>] [<i>input </i><font SIZE="-1"><i>LLVM</i></font><i> ll/bc files</i>] [<i></i><font SIZE="-1"><i>LLVM</i></font><i> passes</i>] <code>&#8211;args</code> <i>program arguments</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>bugpoint</code> narrows down the source of problems in <font SIZE="-1">LLVM</font> tools and passes. It can be used to debug three types of failures: optimizer crashes, miscompilations by optimizers, or bad native code generation (including problems in the static and <font SIZE="-1">JIT</font> compilers). It aims to reduce large test cases to small, useful ones. For more information on the design and inner workings of <code>bugpoint</code>, as well as advice for using bugpoint, see <i>llvm/docs/Bugpoint.html</i> in the <font SIZE="-1">LLVM</font> distribution.</p>
 <h2>OPTIONS</h2>
 <dl>

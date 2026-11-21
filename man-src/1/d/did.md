@@ -1,5 +1,4 @@
 ---
-
 title: "did(1)"
 name: "did"
 section: "1"
@@ -10,7 +9,9 @@ description: "did – What did you do last week, month, year?"
 
 <h2>NAME</h2>
 <p> did &#8211; What did you do last week, month, year?</p>
+<h2>DESCRIPTION</h2>
 <p> Comfortably gather status report data (e.g. list of committed changes) for given week, month, quarter, year or selected date range. By default all available stats for this week are reported.</p>
+<h2>SYNOPSIS</h2>
 <p> Usage is straightforward: </p>
 <pre><code>
 did[this | last][week | month | quarter | year][opts]

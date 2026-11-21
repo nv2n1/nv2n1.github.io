@@ -1,5 +1,4 @@
 ---
-
 title: "xmms2d(1)"
 name: "xmms2d"
 section: "1"
@@ -10,7 +9,9 @@ description: "xmms2d – XMMS2 daemon which handles the playback of music and st
 
 <h2>NAME</h2>
 <p> xmms2d &#8211; XMMS2 daemon which handles the playback of music and storage of music metadata</p>
+<h2>SYNOPSIS</h2>
 <p> <i>xmms2d</i> [ <code>-vqn</code> ] [ <code>-? / &#8211;help</code> ] [ <code>-V / &#8211;version</code> ] [ <code>-p</code> plugin_path / <code>&#8211;plugindir=</code> plugin_path ] [ <code>-o</code> output_plugin / <code>&#8211;output=</code> output_plugin ] [ <code>-c </code> path_to_config_file / <code>&#8211;conf=</code> path_to_config_file ] [ <code>-s </code> fd / <code>&#8211;status-fd=</code> fd ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>XMMS2 </code> is a redesign of the XMMS (<a rel="nofollow" href="http://www.xmms.org)">http://www.xmms.org)</a> music player. It features a client-server model, allowing multiple (even simultaneous!) user interfaces, both textual and graphical. All common audio formats are supported using plugins. On top of this, there is a flexible media library to organise your music. </p>
 <p> <i>xmms2d</i> is the daemon through which <code>XMMS2</code> clients playback and manage music. A client library provided allows third parties to easily write <code>XMMS2</code> clients, especially using the Python and Ruby bindings. </p>
 <p> <i>xmms2d</i> uses a three part method to playback music. Music is accessed from disk or network using a transport plugin, the data is then passed on to a decoder plugin which decodes the audio into a form that can be played back by an output plugin. </p>

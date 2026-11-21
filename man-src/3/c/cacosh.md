@@ -1,5 +1,4 @@
 ---
-
 title: "cacosh(3)"
 name: "cacosh"
 section: "3"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/3-cacosh/"
 description: "cacosh, cacoshf, cacoshl – complex arc hyperbolic cosine"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cacosh, cacoshf, cacoshl &#8211; complex arc hyperbolic cosine </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
 <p> <code>double complex cacosh(double complex </code><i>z</i><code>);</code><br />
  <code>float complex cacoshf(float complex </code><i>z</i><code>);</code><br />
  <code>long double complex cacoshl(long double complex </code><i>z</i><code>);</code> </p>
 <p> Link with <i>-lm</i>.</p>
+<h2>DESCRIPTION</h2>
 <p> These functions calculate the complex arc hyperbolic cosine of <i>z</i>. If <i>y&nbsp;=&nbsp;cacosh(z)</i>, then <i>z&nbsp;=&nbsp;ccosh(y)</i>. The imaginary part of <i>y</i> is chosen in the interval [-pi,pi]. The real part of <i>y</i> is chosen nonnegative. </p>
 <p> One has: </p>
 <pre>

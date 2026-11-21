@@ -1,5 +1,4 @@
 ---
-
 title: "qgis(1)"
 name: "qgis"
 section: "1"
@@ -10,6 +9,7 @@ description: "qgis – QGIS Geographic Information System"
 
 <h2>NAME</h2>
 <p> qgis &#8211; QGIS Geographic Information System</p>
+<h2>SYNOPSIS</h2>
 <p> <code>qgis [&#8211;snapshot</code> <i>filename]</i><br />
  <code> [&#8211;lang</code> <i>language]</i><br />
  <code> [&#8211;project</code> <i>projectfile]</i><br />
@@ -23,6 +23,7 @@ description: "qgis – QGIS Geographic Information System"
  <code> [&#8211;help]</code><br />
  <code> [file]&#8230;</code><br />
  See OPTIONS for a full description.</p>
+<h2>DESCRIPTION</h2>
 <p> QGIS is a cross platform, Free and Open Source Geographic Information System (GIS). Supported platforms include Linux/Unix, Mac OS X and Microsoft Windows. QGIS supports vector, raster, and database formats. QGIS is licensed under the GNU General Public License. </p>
 <p> Some of the major features include: </p>
 <p> *Support for spatially enabled PostGIS tables<br />

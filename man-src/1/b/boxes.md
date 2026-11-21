@@ -1,5 +1,4 @@
 ---
-
 title: "boxes(1)"
 name: "boxes"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-boxes/"
 description: "boxes – text mode box and comment drawing filter"
 ---
 
+<h2 class="name">NAME</h2>
+<p> boxes &#8211; text mode box and comment drawing filter </p>
+<h2>SYNOPSIS</h2>
 <p> <code>boxes</code> [-hlmrv] [-a format] [-d design] [-f file] [-i indent] [-k bool] [-p pad] [-s size] [-t tabopts] [infile [outfile]]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Boxes</i> is a text filter which can draw any kind of box around its input text. Box design choices range from simple boxes to complex ASCII art. A box can also be removed and repaired, even if it has been badly damaged by editing of the text inside. Since boxes may be open on any side, <i>boxes</i> can also be used to create regional comments in any programming language. New box designs of all sorts can easily be added and shared by appending to a free format configuration file.<br />
  <i>boxes</i> was originally intended to be used with the <i><a href="/docs/linux/man/1-vim/">vim</a>(1)</i> text editor, but it can be tied to any text editor which supports filters, as well as called from the command line as a standalone tool.</p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "tcutest(1)"
 name: "tcutest"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-tcutest/"
 description: "tcutest – test cases of the utility API"
 ---
 
+<h2 class="name">NAME</h2>
+<p> tcutest &#8211; test cases of the utility API</p>
+<h2>DESCRIPTION</h2>
 <p> The command `<code>tcutest</code>&#8216; is a utility for facility test and performance test. This command is used in the following format. `<i>rnum</i>&#8216; specifies the number of iterations. `<i>anum</i>&#8216; specifies the initial number of elements of array. `<i>bnum</i>&#8216; specifies the number of buckets. </p>
 <dl>
 <dt>

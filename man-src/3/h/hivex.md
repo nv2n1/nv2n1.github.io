@@ -1,5 +1,4 @@
 ---
-
 title: "hivex(3)"
 name: "hivex"
 section: "3"
@@ -7,9 +6,14 @@ letter: "h"
 url: "/docs/linux/man/3-hivex/"
 ---
 
-hivex - Windows Registry &quot;hive&quot; extraction library 
+<h2 class="name">NAME</h2>
+ 
 
-<pre><code>
+ hivex - Windows Registry &quot;hive&quot; extraction library 
+
+<h2>SYNOPSIS</h2>
+
+ <pre><code>
 #include &lt;hivex.h&gt;
 hive_h *hivex_open(const char *filename, int flags);
 int hivex_close(hive_h *h);
@@ -43,7 +47,9 @@ int hivex_node_set_value(hive_h *h, hive_node_h node, const hive_set_value *val,
 
  Link with <i>-lhivex</i>.
 
-Hivex is a library for extracting the contents of Windows Registry ``hive'' files. It is designed to be secure against buggy or malicious registry files. 
+<h2>DESCRIPTION</h2>
+
+ Hivex is a library for extracting the contents of Windows Registry ``hive'' files. It is designed to be secure against buggy or malicious registry files. 
 
  Unlike other tools in this area, it doesn't use the textual .REG format, because parsing that is as much trouble as parsing the original binary format. Instead it makes the file available through a C <font SIZE="-1">API,</font> and then wraps this <font SIZE="-1">API</font> in higher level scripting and <font SIZE="-1">GUI</font> tools. 
 

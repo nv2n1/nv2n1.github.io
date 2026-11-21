@@ -1,5 +1,4 @@
 ---
-
 title: "dfbg(1)"
 name: "dfbg"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dfbg/"
 description: "dfbg – DirectFB background configuration tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dfbg &#8211; DirectFB background configuration tool</p>
+<h2>SYNOPSIS</h2>
 <p> <code>dfbg</code> [<i>options</i>] &lt;<i>filename</i>&gt;|&lt;color&gt; </p>
+<h2>DESCRIPTION</h2>
 <p> <code>dfbg</code> is a small utility to configure the background of the DirectFB desktop. It loads the specified image and sets it as background image. </p>
 <p> <code>dfbg</code> requires DirectFB with the multi-application core enabled. </p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "gfput(1)"
 name: "gfput"
 section: "1"
@@ -10,7 +9,9 @@ description: "gfput – manual page for gfput (glusterfs-coreutils) 0.2.0"
 
 <h2>NAME</h2>
 <p> gfput &#8211; manual page for gfput (glusterfs-coreutils) 0.2.0</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gfput</code> [<i>OPTION</i>]&#8230; <i>URL</i></p>
+<h2>DESCRIPTION</h2>
 <p> Put data from standard input on a remote Gluster volume.</p>
 <dl>
 <dt><code>-a</code>, <code>&#8211;append</code></dt>

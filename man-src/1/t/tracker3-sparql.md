@@ -1,5 +1,4 @@
 ---
-
 title: "tracker3-sparql(1)"
 name: "tracker3-sparql"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-tracker3-sparql/"
 description: "tracker3-sparql – Use SparQL to query the Tracker databases."
 ---
 
+<h2 class="name">NAME</h2>
+<p> tracker3-sparql &#8211; Use SparQL to query the Tracker databases. </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 tracker3 sparql - q&lt;sparql&gt;[-u] | -f&lt;file&gt;
                                           tracker3 sparql -
                                       t[class][-s&lt;needle&gt;][-p] tracker3 sparql[-c][-p][-x][-n[class]][-i[property]][-s&lt;needle&gt;] tracker3 sparql[--get - longhand&lt;class&gt;][--get - shorthand&lt;class&gt;]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> This command allows probing of the current database schema (also known as ontology) and running low level queries or updates on the data set. In terms of the database ontology, it&#8217;s easy to find out what properties are indexed for speed, or notified on changes, what classes are available and the properties belonging to those classes. There are also visual tools to display an ascii tree layout of the classes and their relationships to each other. </p>
 <p> When the caller runs a query, the query is in RDF and SPARQL. This can be done two ways. Either by providing a <i>file</i> with the query or by providing a string with the <i>sparql</i> query. </p>
 <p> The <i>file</i> argument can be either a local path or a URI. It also does not have to be an absolute path.</p>

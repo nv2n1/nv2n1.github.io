@@ -1,5 +1,4 @@
 ---
-
 title: "krb5_closelog(3)"
 name: "krb5_closelog"
 section: "3"
@@ -8,10 +7,13 @@ url: "/docs/linux/man/3-krb5_closelog/"
 description: "krb5_initlog krb5_openlog krb5_closelog krb5_addlog_dest krb5_addlog_func krb5_log krb5_vlog krb5_log_msg krb5_vlog_msg – Heimdal logging functions"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>krb5_initlog</code> <code>krb5_openlog</code> <code>krb5_closelog</code> <code>krb5_addlog_dest</code> <code>krb5_addlog_func</code> <code>krb5_log</code> <code>krb5_vlog</code> <code>krb5_log_msg</code> <code>krb5_vlog_msg</code> &#8211; Heimdal logging functions </p>
 <h2>LIBRARY</h2>
 <p> Kerberos 5 Library (libkrb5, -lkrb5)</p>
+<h2>SYNOPSIS</h2>
 <p> In krb5.h Ft typedef void Fn *krb5_log_log_func_t const char *time const char *message void *data Ft typedef void Fn *krb5_log_close_func_t void *data Ft krb5_error_code Fn krb5_addlog_dest krb5_context context krb5_log_facility *facility const char *destination Ft krb5_error_code Fn krb5_addlog_func krb5_context context krb5_log_facility *facility int min int max krb5_log_log_func_t log krb5_log_close_func_t close void *data Ft krb5_error_code Fn krb5_closelog krb5_context context krb5_log_facility *facility Ft krb5_error_code Fn krb5_initlog krb5_context context const char *program krb5_log_facility **facility Ft krb5_error_code Fn krb5_log krb5_context context krb5_log_facility *facility int level const char *format &#8230; Ft krb5_error_code Fn krb5_log_msg krb5_context context krb5_log_facility *facility char **reply int level const char *format &#8230; Ft krb5_error_code Fn krb5_openlog krb5_context context const char *program krb5_log_facility **facility Ft krb5_error_code Fn krb5_vlog krb5_context context krb5_log_facility *facility int level const char *format va_list arglist Ft krb5_error_code Fn krb5_vlog_msg krb5_context context krb5_log_facility *facility char **reply int level const char *format va_list arglist</p>
+<h2>DESCRIPTION</h2>
 <p> These functions logs messages to one or more destinations. </p>
 <p> The Fn krb5_openlog function creates a logging Fa facility , that is used to log messages. A facility consists of one or more destinations (which can be files or syslog or some other device). The Fa program parameter should be the generic name of the program that is doing the logging. This name is used to lookup which destinations to use. This information is contained in the <code>logging</code> section of the krb5.conf configuration file. If no entry is found for Fa program , the entry for <code>default</code> is used, or if that is missing too, <code>SYSLOG</code> will be used as destination. </p>
 <p> To close a logging facility, use the Fn krb5_closelog function. </p>

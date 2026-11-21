@@ -1,5 +1,4 @@
 ---
-
 title: "espdiff(1)"
 name: "espdiff"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-espdiff/"
 description: "espdiff – apply the appropriate transformation to a set of patches"
 ---
 
+<h2 class="name">NAME</h2>
+<p> espdiff &#8211; apply the appropriate transformation to a set of patches </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>espdiff</code> [&#8211;deep-brainwave-mode] [&#8211;recurse] [&#8211;compare] [<i>file</i>&#8230;]</dt>
 <dt> <code>espdiff</code> {[&#8211;help] | [&#8211;version]}</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>espdiff</code></p>
 <dd>applies the appropriate transformation to a patch or set of patches, depending on what you intend to accomplish. </dd>
 <p> The input patches must be &#8220;clean&#8221;: in other words they must apply without fuzz or offsets in whichever order they are meant to be applied. The exception is if you intend <code>espdiff</code> to clean them for you (good luck). </p>

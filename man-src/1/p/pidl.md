@@ -1,5 +1,4 @@
 ---
-
 title: "pidl(1)"
 name: "pidl"
 section: "1"
@@ -7,13 +6,20 @@ letter: "p"
 url: "/docs/linux/man/1-pidl/"
 ---
 
-pidl - An IDL compiler written in Perl 
+<h2 class="name">NAME</h2>
+ 
 
-pidl --help 
+ pidl - An IDL compiler written in Perl 
+
+<h2>SYNOPSIS</h2>
+
+ pidl --help 
 
  pidl [--outputdir[=OUTNAME]] [--includedir <font SIZE="-1">DIR...</font>] [--parse-idl-tree] [--dump-idl-tree] [--dump-ndr-tree] [--header[=OUTPUT]] [--python[=OUTPUT]] [--ndr-parser[=OUTPUT]] [--client] [--server] [--warn-compat] [--quiet] [--verbose] [--template] [--ws-parser[=OUTPUT]] [--diff] [--dump-idl] [--tdr-parser[=OUTPUT]] [--samba3-ndr-client[=OUTPUT]] [--samba3-ndr-server[=OUTPUT]] [--typelib=[<font SIZE="-1">OUTPUT</font>]] [&lt;idlfile&gt;.idl]...
 
-pidl is an <font SIZE="-1">IDL</font> compiler written in Perl that aims to be somewhat compatible with the midl compiler. <font SIZE="-1">IDL</font> is short for ``Interface Definition Language''. 
+<h2>DESCRIPTION</h2>
+
+ pidl is an <font SIZE="-1">IDL</font> compiler written in Perl that aims to be somewhat compatible with the midl compiler. <font SIZE="-1">IDL</font> is short for ``Interface Definition Language''. 
 
  pidl can generate stubs for <font SIZE="-1">DCE/RPC</font> server code, <font SIZE="-1">DCE/RPC</font> client code and Wireshark dissectors for <font SIZE="-1">DCE/RPC</font> traffic. 
 

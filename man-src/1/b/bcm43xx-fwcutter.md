@@ -1,5 +1,4 @@
 ---
-
 title: "bcm43xx-fwcutter(1)"
 name: "bcm43xx-fwcutter"
 section: "1"
@@ -10,7 +9,9 @@ description: "bcm43xx-fwcutter – manual page for bcm43xx-fwcutter"
 
 <h2>NAME</h2>
 <p> bcm43xx-fwcutter &#8211; manual page for bcm43xx-fwcutter</p>
+<h2>SYNOPSIS</h2>
 <p> <code>bcm43xx-fwcutter</code> [<i>OPTION</i>] [<i>DRIVER</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Bcm43xx-fwcutter can extract the firmware for your Broadcom 43xx hardware from different closed source drivers. The bcm43xx driver depends on this firmware files and can&#8217;t work without them. </p>
 <p> Currently bcm43xx-fwcutter supports Apple MacOS X, Microsoft Windows 98/ME/2000/XP and Linux drivers, but keep in mind that bcm43xx-fwcutter doesn&#8217;t support all driver versions. </p>
 <p> Example:</p>

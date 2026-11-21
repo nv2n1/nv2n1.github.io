@@ -1,5 +1,4 @@
 ---
-
 title: "ibus-setup(1)"
 name: "ibus-setup"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-ibus-setup/"
 description: "ibus-setup – configuration program for ibus"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>ibus-setup</code> &#8211; configuration program for ibus</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ibus-setup</code> </p>
+<h2>DESCRIPTION</h2>
 <p> IBus is an Intelligent Input Bus. It is a new input framework for Linux OS. It provides full featured and user friendly input method user interface. It also may help developers to develop input method easily. </p>
 <p> <code>ibus-setup</code> is the configuration program for IBus. </p>
 <p> Homepage: <a rel="nofollow" href="https://github.com/ibus/ibus/wiki">https://github.com/ibus/ibus/wiki</a> </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "sgbtrf(3)"
 name: "sgbtrf"
 section: "3"
@@ -7,7 +6,15 @@ letter: "s"
 url: "/docs/linux/man/3-sgbtrf/"
 ---
 
-sgbtrf.f - 
+<h2 class="name">NAME</h2>
+ 
+
+ sgbtrf.f - 
+
+<h2>SYNOPSIS</h2>
+
+ 
+ 
 
 <h3>Functions/Subroutines</h3>
 

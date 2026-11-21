@@ -1,5 +1,4 @@
 ---
-
 title: "guilt-diff(1)"
 name: "guilt-diff"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-guilt-diff/"
 description: "guilt-diff – Outputs various diffs"
 ---
 
+<h2 class="name">NAME</h2>
+<p> guilt-diff &#8211; Outputs various diffs </p>
+<h2>SYNOPSIS</h2>
 <p> <i>guilt-diff</i> [-z] [&lt;path&gt;&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> Outputs top-most applied diff and any additional changes in the working directory to standard output.</p>
 <h2>OPTIONS</h2>
 <p> -z</p>

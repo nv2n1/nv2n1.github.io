@@ -1,5 +1,4 @@
 ---
-
 title: "muffin-message(1)"
 name: "muffin-message"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-muffin-message/"
 description: "MUFFIN-MESSAGE – a command to send a message to Muffin"
 ---
 
+<h2 class="name">NAME</h2>
+<p> MUFFIN-MESSAGE &#8211; a command to send a message to Muffin </p>
+<h2>SYNOPSIS</h2>
 <p> <code>MUFFIN-MESSAGE</code> [restart|reload-theme|enable-keybindings|disable-keybindings]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>muffin-message</code>. This manual page was written for the Debian distribution because the original program does not have a manual page. </p>
 <p> <code>muffin-message</code> send a specified message to <code><a href="/docs/linux/man/1-muffin/">muffin</a></code>(1).</p>
 <h2>OPTIONS</h2>

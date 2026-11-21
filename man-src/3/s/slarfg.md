@@ -1,5 +1,4 @@
 ---
-
 title: "slarfg(3)"
 name: "slarfg"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-slarfg/"
 description: "slarfg.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> slarfg.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slarfg</code> (N, ALPHA, X, INCX, TAU)<br />
  <i></i><code>SLARFG</code> generates an elementary reflector (Householder matrix).</p>

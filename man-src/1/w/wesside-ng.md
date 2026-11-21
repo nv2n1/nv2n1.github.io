@@ -1,5 +1,4 @@
 ---
-
 title: "wesside-ng(1)"
 name: "wesside-ng"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-wesside-ng/"
 description: "wesside-ng – crack a WEP key of an open network without user intervention"
 ---
 
+<h2 class="name">NAME</h2>
+<p> wesside-ng &#8211; crack a WEP key of an open network without user intervention </p>
+<h2>SYNOPSIS</h2>
 <p> <code>wesside-ng</code> &lt;options&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>wesside-ng</code> is an auto-magic tool which incorporates a number of techniques to seamlessly obtain a WEP key in minutes. It first identifies a network, then proceeds to associate with it, obtain PRGA (pseudo random generation algorithm) xor data, determine the network IP scheme, reinject ARP requests and finally determine the WEP key. All this is done without your intervention.</p>
 <h2>OPTIONS</h2>
 <dl>

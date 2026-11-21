@@ -1,5 +1,4 @@
 ---
-
 title: "exit_group(2)"
 name: "exit_group"
 section: "2"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/2-exit_group/"
 description: "exit_group – exit all threads in a process"
 ---
 
+<h2 class="name">NAME</h2>
+<p> exit_group &#8211; exit all threads in a process </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/unistd.h&gt;
 void exit_group(int status);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> This system call is equivalent to <code>_exit</code>(2) except that it terminates not only the calling thread, but all threads in the calling process&#8217;s thread group.</p>
 <h2>RETURN VALUE</h2>
 <p> This system call does not return.</p>

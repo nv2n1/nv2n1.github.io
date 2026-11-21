@@ -1,5 +1,4 @@
 ---
-
 title: "ocamlbuild(1)"
 name: "ocamlbuild"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-ocamlbuild/"
 description: "ocamlbuild – The OCaml project compilation tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ocamlbuild &#8211; The OCaml project compilation tool </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ocamlbuild</code> [ <code>-Is &nbsp;<wbr>dir1,&#8230;</code> ] [ <code>-libs</code><i>&nbsp;<wbr>lib1,&#8230;</i> ] [ <code>-lflags</code><i>&nbsp;<wbr>flag1,&#8230;</i> ] [ <code>-pp</code><i>&nbsp;<wbr>flags</i> ] [ <code>-tags</code><i>&nbsp;<wbr>tag1,&#8230;</i> ] [ <code>-j &nbsp;<wbr>parallel-jobs</code> ] <i>target.native</i> [ <code>&#8212; arg1 arg2 &#8230;</code> ] </p>
 <p> <i>(same options)</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code><a href="/docs/linux/man/1-ocamlbuild/">ocamlbuild</a></code>(1) orchestrates the compilation process of your OCaml project. It is similar in function to <code><a href="/docs/linux/man/1-make/">make</a></code>(1) except that it is tailor-made to automatically compile most OCaml projects with very little user input. </p>
 <p> <code>ocamlbuild</code> should be invoked in the root of a clean project tree (e.g., with no leftover compilation files). Given one or more targets to compile, it scans the required subdirectories to gather information about the various files present, running tools such as <code><a href="/docs/linux/man/1-ocamldep/">ocamldep</a></code>(1) to extract dependency information, and gathering optional files that fine-tune its behaviour. Target names are very significant. </p>
 <h2>TARGET NAMES</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "fotowall(1)"
 name: "fotowall"
 section: "1"
@@ -10,7 +9,9 @@ description: "fotowall – wallpaper generator for high resolution composition."
 
 <h2>NAME</h2>
 <p> fotowall &#8211; wallpaper generator for high resolution composition.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>fotowall</code> [project] [images]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>fotowall</code> binary. <code>fotowall</code> is a wallpaper generator rendering some of your favorite pictures in a nice and smooth high resolution composition.</p>
 <h2>BINARY PARAMETERS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "stbrfs(3)"
 name: "stbrfs"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-stbrfs/"
 description: "stbrfs.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> stbrfs.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>stbrfs</code> (UPLO, TRANS, DIAG, N, KD, NRHS, AB, LDAB, B, LDB, X, LDX, FERR, BERR, WORK, IWORK, INFO)<br />
  <i></i><code>STBRFS</code></p>

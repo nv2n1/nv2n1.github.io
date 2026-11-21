@@ -1,5 +1,4 @@
 ---
-
 title: "mimetype(1)"
 name: "mimetype"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mimetype/"
 description: "mimetype – Determine file type"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mimetype &#8211; Determine file type </p>
+<h2>SYNOPSIS</h2>
 <p> mimetype [options] [-] files</p>
+<h2>DESCRIPTION</h2>
 <p> This script tries to determine the mime type of a file using the Shared MIME-info database. It is intended as a kind of <i><a href="/docs/linux/man/1-file/">file</a>(1)</i> work-alike, but uses mimetypes instead of descriptions. </p>
 <p> If one symlinks the <i>file</i> command to <i>mimetype</i> it will behave a little more compatible, see &#8220;&#8211;file-compat&#8221;. Commandline options to specify alternative magic files are not implemented the same because of the conflicting data formats. Also the wording of the descriptions will differ. </p>
 <p> For naming switches I followed the manpage of <i><a href="/docs/linux/man/1-file/">file</a></i>(1) version 4.02 when possible. They seem to differ completely from the spec in the &#8216;utilities&#8217; chapter of <font SIZE="-1">IEEE</font> Std 1003.1-2001 (<font SIZE="-1">POSIX</font>).</p>

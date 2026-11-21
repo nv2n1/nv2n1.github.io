@@ -1,5 +1,4 @@
 ---
-
 title: "ck_ht_grow_spmc(3)"
 name: "ck_ht_grow_spmc"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_ht_grow_spmc – resize a hash table if necessary"
 <p> <code>ck_ht_grow_spmc</code> &#8211; resize a hash table if necessary</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_ht.h Ft bool Fn ck_ht_grow_spmc ck_ht_t *ht uint64_t capacity</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_ht_grow_spmc function will resize the hash table in order to be able to at least store the number of entries specified by Fa capacity at a load factor of one. The default load hash table load factor is 0.5. If you wish to minimize the likelihood of memory allocations for a hash table meant to store n entries then specify a capacity of 2n. The default behavior of ck_ht is to round Fa capacity to the next available power of two if it is not already a power of two. </p>
 <p> This function is safe to call in the presence of concurrent ck_ht_get_spmc3 operations.</p>
 <h2>RETURN VALUES</h2>

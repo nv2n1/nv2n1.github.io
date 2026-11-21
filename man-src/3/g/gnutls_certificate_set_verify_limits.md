@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_certificate_set_verify_limits(3)"
 name: "gnutls_certificate_set_verify_limits"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_certificate_set_verify_limits – API function"
 
 <h2>NAME</h2>
 <p> gnutls_certificate_set_verify_limits &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_certificate_set_verify_limits(gnutls_certificate_credentials_t </code><i>res</i><code>, unsigned int </code><i>max_bits</i><code>, unsigned int </code><i>max_depth</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_certificate_set_verify_limits – API function"
 <dd> is the number of bits of an acceptable certificate (default 8200)</dd>
 <dt>unsigned int max_depth</dt>
 <dd> is maximum depth of the verification of a certificate chain (default 5)</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will set some upper limits for the default verification function, <code>gnutls_certificate_verify_peers2()</code>, to avoid denial of service attacks. You can set them to zero to disable limits.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />

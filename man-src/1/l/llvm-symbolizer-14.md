@@ -1,5 +1,4 @@
 ---
-
 title: "llvm-symbolizer-14(1)"
 name: "llvm-symbolizer-14"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-llvm-symbolizer-14/"
 description: "llvm-symbolizer – convert addresses into source code locations"
 ---
 
+<h2 class="name">NAME</h2>
+<p> llvm-symbolizer &#8211; convert addresses into source code locations </p>
+<h2>SYNOPSIS</h2>
 <p> <code>llvm-symbolizer</code> [<i>options</i>] [<i>addresses…</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>llvm-symbolizer</code> reads object file names and addresses from the command-line and prints corresponding source code locations to standard output. </p>
 <p> If no address is specified on the command-line, it reads the addresses from standard input. If no object file is specified on the command-line, but addresses are, or if at any time an input value is not recognized, the input is simply echoed to the output. </p>
 <p> A positional argument or standard input value can be preceded by “DATA” or “CODE” to indicate that the address should be symbolized as data or executable code respectively. If neither is specified, “CODE” is assumed. DATA is symbolized as address and symbol size rather than line number. </p>

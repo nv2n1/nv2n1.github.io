@@ -1,5 +1,4 @@
 ---
-
 title: "tv_grab_eu_epgdata(1)"
 name: "tv_grab_eu_epgdata"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-tv_grab_eu_epgdata/"
 description: "tv_grab_eu_epgdata – Grab TV listings for parts of Europe."
 ---
 
+<h2 class="name">NAME</h2>
+<p> tv_grab_eu_epgdata &#8211; Grab TV listings for parts of Europe. </p>
+<h2>SYNOPSIS</h2>
 <p> tv_grab_eu_epgdata &#8211;help tv_grab_eu_epgdata tv_grab_eu_epgdata &#8211;version </p>
 <p> tv_grab_eu_epgdata &#8211;capabilities </p>
 <p> tv_grab_eu_epgdata &#8211;description </p>
@@ -21,6 +23,7 @@ description: "tv_grab_eu_epgdata – Grab TV listings for parts of Europe."
 <p> tv_grab_eu_epgdata &#8211;list-channels [&#8211;config-file <font SIZE="-1">FILE</font>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;output&nbsp;<wbr><font SIZE="-1">FILE</font>]&nbsp;<wbr>[&#8211;quiet]&nbsp;<wbr>[&#8211;debug] </p>
 <p> tv_grab_eu_epgdata &#8211;preferredmethod</p>
+<h2>DESCRIPTION</h2>
 <p> Output <font SIZE="-1">TV</font> and listings in <font SIZE="-1">XMLTV</font> format for many stations available in Europe. </p>
 <p> First you must run <code>tv_grab_eu_epgdata &#8211;configure</code> to choose which stations you want to receive. </p>
 <p> Then running <code>tv_grab_eu_epgdata</code> with no arguments will get a listings for the stations you chose for five days including today. </p>

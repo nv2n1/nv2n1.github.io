@@ -1,5 +1,4 @@
 ---
-
 title: "free_hugepages(2)"
 name: "free_hugepages"
 section: "2"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/2-free_hugepages/"
 description: "alloc_hugepages, free_hugepages – allocate or free huge pages"
 ---
 
+<h2 class="name">NAME</h2>
+<p> alloc_hugepages, free_hugepages &#8211; allocate or free huge pages </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 void *alloc_hugepages(int key, void *addr, size_t len,
                       int prot, int flag);
 int free_hugepages(void *addr);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The system calls <code>alloc_hugepages</code>() and <code>free_hugepages</code>() were introduced in Linux 2.5.36 and removed again in 2.5.54. They existed only on i386 and ia64 (when built with <code>CONFIG_HUGETLB_PAGE</code>). In Linux 2.4.20, the syscall numbers exist, but the calls fail with the error <code>ENOSYS</code>. </p>
 <p> On i386 the memory management hardware knows about ordinary pages (4 KiB) and huge pages (2 or 4 MiB). Similarly ia64 knows about huge pages of several sizes. These system calls serve to map huge pages into the process&#8217;s memory or to free them again. Huge pages are locked into memory, and are not swapped. </p>
 <p> The <i>key</i> argument is an identifier. When zero the pages are private, and not inherited by children. When positive the pages are shared with other applications using the same <i>key</i>, and inherited by child processes. </p>

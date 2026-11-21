@@ -1,5 +1,4 @@
 ---
-
 title: "ib_acme(1)"
 name: "ib_acme"
 section: "1"
@@ -11,13 +10,19 @@ url: "/docs/linux/man/1-ib_acme/"
 
  ib_acme - test and configuration utility for the IB ACM
 
-<pre><code>
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <pre><code>
 ib_acme[-f addr_format][-s src_addr] - d dest_addr[-v][-c][-e][-P][-S svc_addr][-C repetitions]
 </code></pre> <pre><code>
 ib_acme[-A[addr_file]][-O[opt_file]][-D dest_dir][-V]
 </code></pre>
 
-ib_acme provides assistance configuring and testing the ibacm service. The first usage of the service will test that the ibacm is running and operating correctly. The second usage model will automatically create address and configuration files for the ibacm service.
+<h2>DESCRIPTION</h2>
+
+ ib_acme provides assistance configuring and testing the ibacm service. The first usage of the service will test that the ibacm is running and operating correctly. The second usage model will automatically create address and configuration files for the ibacm service.
 
 <h2>OPTIONS</h2>
 

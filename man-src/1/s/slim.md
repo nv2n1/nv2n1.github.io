@@ -1,5 +1,4 @@
 ---
-
 title: "slim(1)"
 name: "slim"
 section: "1"
@@ -10,9 +9,11 @@ description: "slim – Simple LogIn Manager"
 
 <h2>NAME</h2>
 <p> <code>slim </code>&#8211; Simple LogIn Manager</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 slim[options][&lt;arguments&gt;]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> SLiM is a lightweight login manager for X11, allowing the initialization of a graphical session by entring username and password in a login screen.</p>
 <h2>OPTIONS</h2>
 <dl>

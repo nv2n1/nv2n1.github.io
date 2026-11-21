@@ -1,5 +1,4 @@
 ---
-
 title: "duplicity(1)"
 name: "duplicity"
 section: "1"
@@ -7,7 +6,9 @@ letter: "d"
 url: "/docs/linux/man/1-duplicity/"
 description: "duplicity – Encrypted incremental backup to local or remote storage."
 ---
-
+<h2 class="name">NAME</h2>
+<p> duplicity - Encrypted incremental backup to local or remote storage.  </p>
+<h2>SYNOPSIS</h2>
 <p> For detailed descriptions for each command see chapter <code>ACTIONS</code>. </p>
 <p> <code>duplicity [full|incremental]</code> <i>[options]</i> source_directory target_url </p>
 <p> <code>duplicity verify</code> <i>[options] [--compare-data] [--file-to-restore &lt;relpath&gt;] [--time time]</i> source_url target_directory </p>
@@ -19,6 +20,7 @@ description: "duplicity – Encrypted incremental backup to local or remote stor
 <p> <code>duplicity remove-all-inc-of-but-n-full &lt;count&gt;</code> <i>[options] [--force]</i> target_url </p>
 <p> <code>duplicity cleanup</code> <i>[options] [--force]</i> target_url </p>
 <p> <code>duplicity replicate</code> <i>[options] [--time time]</i> source_url target_url </p>
+<h2>DESCRIPTION</h2>
 <p> Duplicity incrementally backs up files and folders into tar-format volumes encrypted with GnuPG and places them to a remote (or local) storage backend. See chapter <code>URL FORMAT</code> for a list of all supported backends and how to address them. Because duplicity uses librsync, incremental backups are space efficient and only record the parts of files that have changed since the last backup. Currently duplicity supports deleted files, full Unix permissions, uid/gid, directories, symbolic links, fifos, etc., but not hard links. </p>
 <p> If you are backing up the root directory /, remember to --exclude /proc, or else duplicity will probably crash on the weird stuff in there. </p>
 <h2>EXAMPLES</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "tex2lyx(1)"
 name: "tex2lyx"
 section: "1"
@@ -7,9 +6,9 @@ letter: "t"
 url: "/docs/linux/man/1-tex2lyx/"
 description: "tex2lyx – translate well-behaved LaTeX into LyX"
 ---
-
 <h2>NAME</h2>
 <p> tex2lyx - translate well-behaved LaTeX into LyX  </p>
+<h2>SYNOPSIS</h2>
 <p> The simplest way to use <code>tex2lyx</code> is via the File-&gt;Import-&gt;LaTeX (plain) menu item in LyX. That runs <code>tex2lyx</code> on the given file and loads the resulting file into LyX. You should try that first, and call it from the command line only if you need to use more complicated options. </p>
 <p> <code>tex2lyx</code> [ <code>-userdir</code> <i>userdir</i> ] [ <code>-systemdir</code> <i>systemdir</i> ] [ <code>-f</code> ] [ <code>-n</code> ] [ <code>-c</code> <i>textclass</i> ] [ <code>-e</code> <i>encoding</i> ] [ <code>-fixedenc</code> <i>encoding</i> ] [&nbsp;<wbr><code>-m</code> <i>module1</i>[,<i>module2</i>...]] [&nbsp;<wbr><code>-s</code>&nbsp;<wbr><i>sfile1</i>[,<i>sfile2</i>...]] [ <code>-skipchildren</code> ] [ <code>-roundtrip</code> ] [ <code>-copyfiles</code> ] <i>inputfile</i> [ <i>outputfile</i> ]  </p>
 <h2>OPTIONS</h2>
@@ -58,6 +57,7 @@ description: "tex2lyx – translate well-behaved LaTeX into LyX"
 <dt><code>-version</code></dt>
 <dd> <p> Print out the version number and build information and quit. </p>
  </dd></dl>
+<h2>DESCRIPTION</h2>
 <h3>Introduction</h3>
 <p> <code>tex2lyx</code> will create a LyX file with the specified name (or <i>dir/foo.lyx</i> if no name was given) from the LaTeX file <i>dir/foo.tex</i>. </p>
 <p> Suffixes .tex, .ltx and .latex are supported. If <i>inputfile</i> does not exist and does not have one of these suffixes, <code>tex2lyx</code> will try to translate <i>inputfile.tex</i>. (This is similar to the behavior of LaTeX.) </p>

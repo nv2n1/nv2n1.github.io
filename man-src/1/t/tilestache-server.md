@@ -1,5 +1,4 @@
 ---
-
 title: "tilestache-server(1)"
 name: "tilestache-server"
 section: "1"
@@ -10,7 +9,9 @@ description: "tilestache-server – seed a single layer in your TileStache confi
 
 <h2>NAME</h2>
 <p> tilestache-server &#8211; seed a single layer in your TileStache configuration</p>
+<h2>SYNOPSIS</h2>
 <p> <code>tilestache-server</code> [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>tilestache-server</code> command. </p>
 <p> <code>tilestache-server</code> serves tiles through Werkzeug, using a tilestache configuration file.</p>
 <h2>OPTIONS</h2>

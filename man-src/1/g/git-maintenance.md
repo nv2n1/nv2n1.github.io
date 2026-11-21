@@ -1,5 +1,4 @@
 ---
-
 title: "git-maintenance(1)"
 name: "git-maintenance"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-maintenance/"
 description: "git-maintenance – Run tasks to optimize Git repository data"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-maintenance &#8211; Run tasks to optimize Git repository data </p>
+<h2>SYNOPSIS</h2>
 <pre>
 <i>git maintenance</i> run [&lt;options&gt;]
 </pre>
+<h2>DESCRIPTION</h2>
 <p> Run tasks to optimize Git repository data, speeding up other Git commands and reducing storage requirements for the repository. </p>
 <p> Git commands that add repository data, such as <code>git add</code> or <code>git fetch</code>, are optimized for a responsive user experience. These commands do not take time to optimize the Git data, since such optimizations scale with the full size of the repository while these user commands each perform a relatively small action. </p>
 <p> The <code>git maintenance</code> command provides flexibility for how to optimize the Git repository.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ck_ht_destroy(3)"
 name: "ck_ht_destroy"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_ht_destroy – immediately destroy a hash table"
 <p> <code>ck_ht_destroy</code> &#8211; immediately destroy a hash table</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_ht.h Ft void Fn ck_ht_destroy ck_ht_t *ht</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_ht_destroy function will request that the underlying allocator, as specified by the ck_ht_init3 function, immediately destroy the object pointed to by the Fa ht argument. </p>
 <p> The user must guarantee that no threads are accessing the object pointed to by Fa ht when Fn ck_ht_destroy is called.</p>
 <h2>RETURN VALUES</h2>

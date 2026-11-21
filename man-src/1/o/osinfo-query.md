@@ -1,5 +1,4 @@
 ---
-
 title: "osinfo-query(1)"
 name: "osinfo-query"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-osinfo-query/"
 description: "osinfo-query – Query information in the database"
 ---
 
+<h2 class="name">NAME</h2>
+<p> osinfo-query &#8211; Query information in the database </p>
+<h2>SYNOPSIS</h2>
 <p> osinfo-query [<font SIZE="-1">OPTIONS&#8230;</font>] <font SIZE="-1">TYPE</font> [<font SIZE="-1">CONDITION-1</font> [<font SIZE="-1">CONDITION-2 &#8230;</font>]]</p>
+<h2>DESCRIPTION</h2>
 <p> The <tt>&quot;osinfo-query&quot;</tt> command allows extraction of information from the database. <font SIZE="-1"><code>TYPE</code></font> can be one of <tt>&quot;os&quot;</tt>, <tt>&quot;platform&quot;</tt>, <tt>&quot;device&quot;</tt>, or <tt>&quot;deployment&quot;</tt>. With no conditions specified, all entities of the given type will be listed. </p>
 <pre><code>
 #List all operating systems

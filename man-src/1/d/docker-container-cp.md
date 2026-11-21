@@ -1,5 +1,4 @@
 ---
-
 title: "docker-container-cp(1)"
 name: "docker-container-cp"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-container-cp/"
 description: "docker-container-cp – Copy files/folders between a container and the local filesystem"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-container-cp &#8211; Copy files/folders between a container and the local filesystem </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker container cp [OPTIONS] CONTAINER:SRC_PATH DEST_PATH|- <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>docker cp [OPTIONS] SRC_PATH|- CONTAINER:DEST_PATH</code></p>
+<h2>DESCRIPTION</h2>
 <p> The docker container cp utility copies the contents of SRC_PATH to the DEST_PATH. You can copy from the container&#8217;s file system to the local machine or the reverse, from the local filesystem to the container. If &#8211; is specified for either the SRC_PATH or DEST_PATH, you can also stream a tar archive from STDIN or to STDOUT. The CONTAINER can be a running or stopped container. The SRC_PATH or DEST_PATH can be a file or directory. </p>
 <p> The docker container cp command assumes container paths are relative to the container&#8217;s / (root) directory. This means supplying the initial forward slash is optional; The command sees compassionate_darwin:/tmp/foo/myfile.txt and compassionate_darwin:tmp/foo/myfile.txt as identical. Local machine paths can be an absolute or relative value. The command interprets a local machine&#8217;s relative paths as relative to the current working directory where docker container cp is run. </p>
 <p> The cp command behaves like the Unix cp -a command in that directories are copied recursively with permissions preserved if possible. Ownership is set to the user and primary group at the destination. For example, files copied to a container are created with UID:GID of the root user. Files copied to the local machine are created with the UID:GID of the user which invoked the docker container cp command. If you specify the -L option, docker container cp follows any symbolic link in the SRC_PATH. docker container cp does <i>not</i> create parent directories for DEST_PATH if they do not exist. </p>

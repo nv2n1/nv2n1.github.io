@@ -1,5 +1,4 @@
 ---
-
 title: "boincmgr(1)"
 name: "boincmgr"
 section: "1"
@@ -10,7 +9,9 @@ description: "boincmgr – The graphical BOINC manager for the client."
 
 <h2>NAME</h2>
 <p> boincmgr &#8211; The graphical BOINC manager for the client.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>boincmgr</code> [<code>&#8211;verbose</code>] [<code>-a</code>] [<code>-e</code> <i>client_dir</i>] [<code>-d</code> <i>data_dir</i>] [<code>-n</code> <i>hostname</i>] [<code>-g</code> <i>port</i>] [<code>-p</code> <i>passwd</i>] [<code>-b</code> <i>BOINC_ARGS</i>] [<code>-i</code>] [<code>-c</code>] [<code>-m</code>] <code>boincmgr</code> [<code>-h</code> | <code>&#8211;help</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> The BOINC manager (<code>boincmgr</code>) is a graphical controlling and monitoring utility for the BOINC client (<code><a href="/docs/linux/man/1-boinc/">boinc</a></code>(1)). It communicates with a running client using port 31416 over TCP/IP. It can only connect to one client at a time.</p>
 <h2>OPTIONS</h2>
 <dl>

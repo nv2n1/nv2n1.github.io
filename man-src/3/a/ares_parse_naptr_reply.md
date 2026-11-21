@@ -1,5 +1,4 @@
 ---
-
 title: "ares_parse_naptr_reply(3)"
 name: "ares_parse_naptr_reply"
 section: "3"
@@ -10,11 +9,13 @@ description: "ares_parse_naptr_reply – Parse a reply to a DNS query of type NA
 
 <h2>NAME</h2>
 <p> ares_parse_naptr_reply &#8211; Parse a reply to a DNS query of type NAPTR</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ares.h&gt;
 int ares_parse_naptr_reply(const unsigned char *abuf, int alen,
                            struct ares_naptr_reply **naptr_out);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>ares_parse_naptr_reply</code> function parses the response to a query of type NAPTR into a linked list of <i>struct ares_naptr_reply </i> The parameters <i>abuf</i> and <i>alen</i> give the contents of the response. The result is stored in allocated memory and a pointer to it stored into the variable pointed to by <i>naptr_out</i>. It is the caller&#8217;s responsibility to free the resulting <i>naptr_out</i> structure when it is no longer needed using the function <code>ares_free_data</code> </p>
 <p> The structure <i>ares_naptr_reply</i> contains the following fields: </p>
 <pre><code>

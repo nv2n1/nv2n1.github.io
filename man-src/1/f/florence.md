@@ -1,5 +1,4 @@
 ---
-
 title: "florence(1)"
 name: "florence"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-florence/"
 description: "florence – extensible and scalable virtual keyboard for GNOME"
 ---
 
+<h2 class="name">NAME</h2>
+<p> florence &#8211; extensible and scalable virtual keyboard for GNOME </p>
+<h2>SYNOPSIS</h2>
 <p> <code>florence</code> [<i>OPTIONS</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Florence is an extensible scalable virtual keyboard for GNOME. You need it if you can&#8217;t use a real hardware keyboard, for example because of injury, handicap, your keyboard is broken or because you use a tablet PC, but you must be able to use a pointing device (as a mouse, a trackball, a touchscreen or opengazer); If you can&#8217;t use a pointing device, there is gok, which can be used with just simple switches. </p>
 <p> Florence stays out of your way when you don&#8217;t need it: it appears on the screen only when you need it. A timer-based auto-click input method is available to help disabled people having difficulties to click. The ramble mode is another efficient input method that can help. </p>
 <p> Florence is primarily intended to be used with the GNOME desktop, although it can be used on any desktop environment by using the <code>&#8211;no-gnome</code> option.</p>

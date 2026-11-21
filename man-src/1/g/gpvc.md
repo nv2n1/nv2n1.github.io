@@ -1,5 +1,4 @@
 ---
-
 title: "gpvc(1)"
 name: "gpvc"
 section: "1"
@@ -10,9 +9,11 @@ description: "gpvc – GNU PIC COD file viewer"
 
 <h2>NAME</h2>
 <p> gpvc &#8211; GNU PIC COD file viewer</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gpvc [options] file</code></p>
 <h2>WARNING</h2>
 <p> The information in this man page is an extract from the full documentation of gputils and is limited to the meaning of the options. For complete and current documentation, refer to &quot;gputils.ps&quot; located in the gputils docs directory.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>gpvc</code> is an COD file viewer for Microchip (TM) PIC (TM) micro-controllers. COD files are and output from gpasm. They contain information used for simulation. <code>gpvc</code> is part of gputils. Check the <code><a href="/docs/linux/man/1-gputils/">gputils</a></code>(1) manpage for details on other GNU PIC utilities.</p>
 <h2>OPTIONS</h2>
 <dl>

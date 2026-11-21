@@ -1,5 +1,4 @@
 ---
-
 title: "libgenders(3)"
 name: "libgenders"
 section: "3"
@@ -10,6 +9,7 @@ description: "libgenders – a library of functions to parse and retrieve gender
 
 <h2>NAME</h2>
 <p> libgenders &#8211; a library of functions to parse and retrieve genders data</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;genders.h&gt;</code> </p>
 <p> <code>genders_t genders_handle_create(void);</code> </p>
 <p> <code>int genders_handle_destroy(genders_t handle);</code> </p>
@@ -46,6 +46,7 @@ description: "libgenders – a library of functions to parse and retrieve gender
 <p> <code>int genders_query(genders_t handle, char *nodes[], int len, const char *query);</code> </p>
 <p> <code>int genders_testquery(genders_t handle, const char *node, const char *query);</code> </p>
 <p> <code>int genders_parse(genders_t handle, const char *filename, FILE *stream);</code> </p>
+<h2>DESCRIPTION</h2>
 <p> The genders library functions are a set of functions used to parse and retrieve data from a genders file. For API details, please see the individual manpages for each of the functions above, or read the comments written in /usr/include/genders.h. </p>
 <h2>GENDERS FILE FORMAT</h2>
 <p> Each line of the genders file has one of the following formats. See the section HOST RANGES below for information on host range formatting. </p>

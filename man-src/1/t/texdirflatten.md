@@ -1,5 +1,4 @@
 ---
-
 title: "texdirflatten(1)"
 name: "texdirflatten"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-texdirflatten/"
 description: "texdirflatten – Collects all components of a (La)TeX file in a single output directory — i.e., flattens its hierarchy."
 ---
 
+<h2 class="name">NAME</h2>
+<p> texdirflatten &#8211; Collects all components of a (La)TeX file in a single output directory &#8212; i.e., flattens its hierarchy. </p>
+<h2>SYNOPSIS</h2>
 <p> texdirflatten [-1|&#8211;onetex] [-f|&#8211;file input.tex] [-o outputdir]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[&#8211;imgexts .ext1,.ext2,&#8230;]&nbsp;[&#8211;debug]&nbsp;[-V|&#8211;version]&nbsp;[-?|&#8211;help]</p>
+<h2>DESCRIPTION</h2>
 <p> This Perl script parses a LaTeX file recursively, scanning all child files, and collects details of any included and other data files, such as graphics and BiBTeX bibliography files. These component files, are then all put into a single directory (thus &#8220;flattening&#8221; the document&#8217;s directory tree). This is useful in distributing manuscripts to collaborators or in submitting to journals.</p>
 <h2>OPTIONS</h2>
 <dl>

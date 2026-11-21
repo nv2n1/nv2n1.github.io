@@ -1,5 +1,4 @@
 ---
-
 title: "dlarre(3)"
 name: "dlarre"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlarre/"
 description: "dlarre.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlarre.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlarre</code> (RANGE, N, VL, VU, IL, IU, D, E, E2, RTOL1, RTOL2, SPLTOL, NSPLIT, ISPLIT, M, W, WERR, WGAP, IBLOCK, INDEXW, GERS, PIVMIN, WORK, IWORK, INFO)<br />
  <i></i><code>DLARRE</code> given the tridiagonal matrix T, sets small off-diagonal elements to zero and for each unreduced block Ti, finds base representations and eigenvalues.</p>

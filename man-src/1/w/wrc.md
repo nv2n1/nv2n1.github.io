@@ -1,5 +1,4 @@
 ---
-
 title: "wrc(1)"
 name: "wrc"
 section: "1"
@@ -10,7 +9,9 @@ description: "wrc – Wine Resource Compiler"
 
 <h2>NAME</h2>
 <p> wrc &#8211; Wine Resource Compiler</p>
+<h2>SYNOPSIS</h2>
 <p> <code>wrc</code> [<i>options</i>]&nbsp;<wbr>[<i>inputfile</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>wrc</code> compiles resources from <i>inputfile</i> into win16 and win32 compatible binary format. </p>
 <p> The source file is preprocessed with a builtin ANSI-C compatible preprocessor before the resources are compiled. See <code>PREPROCESSOR</code> below. </p>
 <p> <code>wrc</code> takes a series of <i>inputfile</i> as argument. The resources are read from standard input if no inputfile is given. If the output file is not specified with <code>-o</code>, then <code>wrc</code> will write the output to <i>inputfile.res</i> with <i>.rc</i> stripped, or to <i>wrc.tab.res</i> if no inputfile was given.</p>

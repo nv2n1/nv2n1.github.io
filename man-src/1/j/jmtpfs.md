@@ -1,5 +1,4 @@
 ---
-
 title: "jmtpfs(1)"
 name: "jmtpfs"
 section: "1"
@@ -10,7 +9,9 @@ description: "jmtpfs – FUSE based MTP filesystem"
 
 <h2>NAME</h2>
 <p> jmtpfs &#8211; FUSE based MTP filesystem </p>
+<h2>SYNOPSIS</h2>
 <p> <code>jmtpfs</code> [OPTIONS] &lt;mountpoint&gt; </p>
+<h2>DESCRIPTION</h2>
 <p> <code>jmtpfs</code> is a FUSE and libmtp based filesystem for accessing MTP (Media Transfer Protocol) devices. It was specifically designed for exchanging files between Linux systems and newer Android devices that support MTP but not USB Mass Storage. </p>
 <p> This manual page documents briefly the <code>jmtpfs</code> commands. </p>
 <h2>OPTIONS</h2>

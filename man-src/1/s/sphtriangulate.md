@@ -1,5 +1,4 @@
 ---
-
 title: "sphtriangulate(1)"
 name: "sphtriangulate"
 section: "1"
@@ -10,8 +9,10 @@ description: "sphtriangulate – Delaunay or Voronoi construction of spherical l
 
 <h2>NAME</h2>
 <p> sphtriangulate &#8211; Delaunay or Voronoi construction of spherical lon,lat data</p>
+<h2>SYNOPSIS</h2>
 <p> <code>sphtriangulate</code> [ <i>table</i> ] [ ] [ ] [ ] [ <i>unit</i> ] [ <i>nfile</i> ] [ <code>d</code>|<code>v</code> ] [ ] [ [<i>level</i>] ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>sphtriangulate</code> reads one or more ASCII [or binary] files (or standard input) containing lon, lat and performs a spherical Delaunay triangulation, i.e., it find how the points should be connected to give the most equilateral triangulation possible on the sphere. Optionally, you may choose <code>-Qv</code> which will do further processing to obtain the Voronoi polygons. Normally, either set of polygons will be written as fillable segment output; use <code>-T</code> to write unique arcs instead. As an option, compute the area of each triangle or polygon. The algorithm used is STRIPACK.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <p> None.</p>

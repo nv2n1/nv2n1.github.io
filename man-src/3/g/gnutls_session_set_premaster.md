@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_session_set_premaster(3)"
 name: "gnutls_session_set_premaster"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_session_set_premaster – API function"
 
 <h2>NAME</h2>
 <p> gnutls_session_set_premaster &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_session_set_premaster(gnutls_session_t </code><i>session</i><code>, unsigned int </code><i>entity</i><code>, gnutls_protocol_t </code><i>version</i><code>, gnutls_kx_algorithm_t </code><i>kx</i><code>, gnutls_cipher_algorithm_t </code><i>cipher</i><code>, gnutls_mac_algorithm_t </code><i>mac</i><code>, gnutls_compression_method_t </code><i>comp</i><code>, const gnutls_datum_t * </code><i>master</i><code>, const gnutls_datum_t * </code><i>session_id</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -32,6 +32,7 @@ description: "gnutls_session_set_premaster – API function"
 <dd> the master key to use</dd>
 <dt>const gnutls_datum_t * session_id</dt>
 <dd> the session identifier</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function sets the premaster secret in a session. This is a function intended for exceptional uses. Do not use this function unless you are implementing a legacy protocol. Use <code>gnutls_session_set_data()</code> instead.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise an error code is returned.</p>

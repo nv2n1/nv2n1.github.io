@@ -1,5 +1,4 @@
 ---
-
 title: "spu_create(2)"
 name: "spu_create"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-spu_create/"
 description: "spu_create – create a new spu context"
 ---
 
+<h2 class="name">NAME</h2>
+<p> spu_create &#8211; create a new spu context </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/spu.h&gt;
 #include &lt;sys/types.h&gt;
@@ -15,6 +17,7 @@ int spu_create(const char *pathname, int flags, mode_t mode,
                int neighbor_fd);
 </code></pre>
 <p> <i>Note</i>: There is no glibc wrapper for this system call; see NOTES.</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>spu_create</code>() system call is used on PowerPC machines that implement the Cell Broadband Engine Architecture in order to access Synergistic Processor Units (SPUs). It creates a new logical context for an SPU in <i>pathname</i> and returns a file descriptor associated with it. <i>pathname</i> must refer to a nonexistent directory in the mount point of the SPU filesystem (<code>spufs</code>). If <code>spu_create</code>() is successful, a directory is created at <i>pathname</i> and it is populated with the files described in <code><a href="/docs/linux/man/7-spufs/">spufs</a></code>(7). </p>
 <p> When a context is created, the returned file descriptor can only be passed to <code><a href="/docs/linux/man/2-spu_run/">spu_run</a></code>(2), used as the <i>dirfd</i> argument to the <code>*at</code> family of system calls (e.g., <code><a href="/docs/linux/man/2-openat/">openat</a></code>(2)), or closed; other operations are not defined. A logical SPU context is destroyed (along with all files created within the context&#8217;s <i>pathname</i> directory) once the last reference to the context has gone; this usually occurs when the file descriptor returned by <code>spu_create</code>() is closed. </p>
 <p> The <i>mode</i> argument (minus any bits set in the process&#8217;s <code><a href="/docs/linux/man/2-umask/">umask</a></code>(2)) specifies the permissions used for creating the new directory in <code>spufs</code>. See <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2) for a full list of the possible <i>mode</i> values. </p>

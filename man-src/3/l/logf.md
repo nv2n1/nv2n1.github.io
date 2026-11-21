@@ -1,5 +1,4 @@
 ---
-
 title: "logf(3)"
 name: "logf"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-logf/"
 description: "log, logf, logl – natural logarithmic function"
 ---
 
+<h2 class="name">NAME</h2>
+<p> log, logf, logl &#8211; natural logarithmic function </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;
 double log(double x);
@@ -22,6 +24,7 @@ long double logl(long double x);
 </dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> These functions return the natural logarithm of <i>x</i>.</p>
 <h2>RETURN VALUE</h2>
 <p> On success, these functions return the natural logarithm of <i>x</i>. </p>

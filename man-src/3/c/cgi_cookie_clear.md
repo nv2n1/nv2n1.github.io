@@ -1,5 +1,4 @@
 ---
-
 title: "cgi_cookie_clear(3)"
 name: "cgi_cookie_clear"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cgi_cookie_clear/"
 description: "cgi_cookie_clear – clear browser cookie"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cgi_cookie_clear &#8211; clear browser cookie </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cgi/cgi.h&gt;
 </code></pre>
@@ -20,6 +22,7 @@ NEOERR *cgi_cookie_clear(CGI *cgi, const char *name, const char *domain,
  name &#8211; the cookie name to clear<br />
  domain &#8211; the domain to clear, NULL for none<br />
  path &#8211; the cookie&#8217;s path </p>
+<h2>DESCRIPTION</h2>
 <p> cgi_cookie_clear will send back a Set-Cookie string that will attempt to stop a browser from continuing to send back a cookie. Note that the cookie has to match in name, domain, and path, and the luck of the Irish has to be with you for this work all the time, but at the least it will make the browser send back a cookie with no value, which the ClearSilver cookie parsing code will ignore. </p>
 <h2>RETURN VALUE</h2>
 <p> None </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "xdg-desktop-icon(1)"
 name: "xdg-desktop-icon"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-xdg-desktop-icon/"
 description: "xdg-desktop-icon – command line tool for (un)installing icons to the desktop"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xdg-desktop-icon &#8211; command line tool for (un)installing icons to the desktop </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xdg-desktop-icon</code> install [<code>&#8211;novendor</code>] <i>FILE</i></dt>
 <dt> <code>xdg-desktop-icon</code> uninstall <i>FILE</i></dt>
 <dt> <code>xdg-desktop-icon</code> {<code>&#8211;help</code> | <code>&#8211;manual</code> | <code>&#8211;version</code>}</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The xdg-desktop-icon program can be used to install an application launcher or other file on the desktop of the current user. </dd>
 <p> An application launcher is represented by a *.desktop file. Desktop files are defined by the freedesktop.org Desktop Entry Specification. The most important aspects of *.desktop files are summarized below.</p>
 <h2>COMMANDS</h2>

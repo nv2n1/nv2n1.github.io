@@ -1,5 +1,4 @@
 ---
-
 title: "pgbench(1)"
 name: "pgbench"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-pgbench/"
 description: "pgbench – run a benchmark test on PostgreSQL"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pgbench &#8211; run a benchmark test on PostgreSQL </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pgbench</code> <code>-i</code> [<i>option</i>&#8230;] [<i>dbname</i>]</dt>
 <dt> <code>pgbench</code> [<i>option</i>&#8230;] [<i>dbname</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>pgbench is a simple program for running benchmark tests on PostgreSQL. It runs the same sequence of SQL commands over and over, possibly in multiple concurrent database sessions, and then calculates the average transaction rate (transactions per second). By default, pgbench tests a scenario that is loosely based on TPC-B, involving five <code>SELECT</code>, <code>UPDATE</code>, and <code>INSERT</code> commands per transaction. However, it is easy to test other cases by writing your own transaction script files. </dd>
 <p> Typical output from pgbench looks like: </p>
 <dl>

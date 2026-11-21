@@ -1,5 +1,4 @@
 ---
-
 title: "gpdasm(1)"
 name: "gpdasm"
 section: "1"
@@ -10,9 +9,11 @@ description: "gpdasm – GNU PIC disassembler"
 
 <h2>NAME</h2>
 <p> gpdasm &#8211; GNU PIC disassembler</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gpdasm [options] file</code></p>
 <h2>WARNING</h2>
 <p> The information in this man page is an extract from the full documentation of gputils and is limited to the meaning of the options. For complete and current documentation, refer to &quot;gputils.ps&quot; located in the gputils docs directory.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>gpdasm</code> is an disassembler for Microchip (TM) PIC (TM) micro-controllers. <code>gpdasm</code> is part of gputils. Check the <code><a href="/docs/linux/man/1-gputils/">gputils</a></code>(1) manpage for details on other GNU PIC utilities.</p>
 <h2>OPTIONS</h2>
 <dl>

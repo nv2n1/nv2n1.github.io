@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_crt_get_authority_info_access(3)"
 name: "gnutls_x509_crt_get_authority_info_access"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_crt_get_authority_info_access – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_get_authority_info_access &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_get_authority_info_access(gnutls_x509_crt_t </code><i>crt</i><code>, unsigned int </code><i>seq</i><code>, int </code><i>what</i><code>, gnutls_datum_t * </code><i>data</i><code>, unsigned int * </code><i>critical</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,6 +24,7 @@ description: "gnutls_x509_crt_get_authority_info_access – API function"
 <dd> output data to be freed with <code>gnutls_free()</code>.</dd>
 <dt>unsigned int * critical</dt>
 <dd> pointer to output integer that is set to non-zero if the extension is marked as critical (may be <code>NULL</code>)</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Note that a simpler API to access the authority info data is provided by <code>gnutls_x509_aia_get()</code> and <code>gnutls_x509_ext_import_aia()</code>. </p>
 <p> This function extracts the Authority Information Access (AIA) extension, see RFC 5280 section 4.2.2.1 for more information. The AIA extension holds a sequence of AccessDescription (AD) data. </p>
 <p> The <i>seq</i> input parameter is used to indicate which member of the sequence the caller is interested in. The first member is 0, the second member 1 and so on. When the <i>seq</i> value is out of bounds, <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code> is returned. </p>

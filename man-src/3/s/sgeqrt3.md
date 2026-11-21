@@ -1,5 +1,4 @@
 ---
-
 title: "sgeqrt3(3)"
 name: "sgeqrt3"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-sgeqrt3/"
 description: "sgeqrt3.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sgeqrt3.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> recursive subroutine <code>sgeqrt3</code> (M, N, A, LDA, T, LDT, INFO)<br />
  <i></i><code>SGEQRT3</code> recursively computes a QR factorization of a general real or complex matrix using the compact WY representation of Q.</p>

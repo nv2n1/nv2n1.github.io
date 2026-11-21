@@ -1,5 +1,4 @@
 ---
-
 title: "dgttrs(3)"
 name: "dgttrs"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dgttrs/"
 description: "dgttrs.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dgttrs.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgttrs</code> (TRANS, N, NRHS, DL, D, DU, DU2, IPIV, B, LDB, INFO)<br />
  <i></i><code>DGTTRS</code></p>

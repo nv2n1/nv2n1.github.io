@@ -1,5 +1,4 @@
 ---
-
 title: "setfsgid32(2)"
 name: "setfsgid32"
 section: "2"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/2-setfsgid32/"
 description: "setfsgid – set group identity used for filesystem checks"
 ---
 
+<h2 class="name">NAME</h2>
+<p> setfsgid &#8211; set group identity used for filesystem checks </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/fsuid.h&gt;</code> </p>
 <p> <code>int setfsgid(uid_t </code><i>fsgid</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> On Linux, a process has both a filesystem group ID and an effective group ID. The (Linux-specific) filesystem group ID is used for permissions checking when accessing filesystem objects, while the effective group ID is used for some other kinds of permissions checks (see <code><a href="/docs/linux/man/7-credentials/">credentials</a></code>(7)). </p>
 <p> Normally, the value of the process&#8217;s filesystem group ID is the same as the value of its effective group ID. This is so, because whenever a process&#8217;s effective group ID is changed, the kernel also changes the filesystem group ID to be the same as the new value of the effective group ID. A process can cause the value of its filesystem group ID to diverge from its effective group ID by using <code>setfsgid</code>() to change its filesystem group ID to the value given in <i>fsgid</i>. </p>
 <p> <code>setfsgid</code>() will succeed only if the caller is the superuser or if <i>fsgid</i> matches either the caller&#8217;s real group ID, effective group ID, saved set-group-ID, or current the filesystem user ID.</p>

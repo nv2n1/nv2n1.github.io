@@ -1,5 +1,4 @@
 ---
-
 title: "urxvt256c-ml-selection-autotransform(1)"
 name: "urxvt256c-ml-selection-autotransform"
 section: "1"
@@ -7,9 +6,14 @@ letter: "u"
 url: "/docs/linux/man/1-urxvt256c-ml-selection-autotransform/"
 ---
 
-selection-autotransform - automatically transform select text 
+<h2 class="name">NAME</h2>
+ 
 
-This selection allows you to do automatic transforms on a selection whenever a selection is made. 
+ selection-autotransform - automatically transform select text 
+
+<h2>DESCRIPTION</h2>
+
+ This selection allows you to do automatic transforms on a selection whenever a selection is made. 
 
  It works by specifying perl snippets (most useful is a single <tt>&quot;s///&quot;</tt> operator) that modify <tt>$_</tt> as resources: 
 

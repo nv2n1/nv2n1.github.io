@@ -1,5 +1,4 @@
 ---
-
 title: "chbmv(3)"
 name: "chbmv"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-chbmv/"
 description: "chbmv.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> chbmv.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chbmv</code> (UPLO, N, K, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br />
  <i></i><code>CHBMV</code></p>

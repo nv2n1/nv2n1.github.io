@@ -1,5 +1,4 @@
 ---
-
 title: "msgfilter(1)"
 name: "msgfilter"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-msgfilter/"
 description: "msgfilter – edit translations of message catalog"
 ---
 
+<h2 class="name">NAME</h2>
+<p> msgfilter &#8211; edit translations of message catalog </p>
+<h2>SYNOPSIS</h2>
 <p> <code>msgfilter</code> [<i>OPTION</i>] <i>FILTER </i>[<i>FILTER-OPTION</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Applies a filter to all translations of a translation catalog. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <h3>Input file location:</h3>

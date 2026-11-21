@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_ocsp_resp_get_version(3)"
 name: "gnutls_ocsp_resp_get_version"
 section: "3"
@@ -11,7 +10,9 @@ url: "/docs/linux/man/3-gnutls_ocsp_resp_get_version/"
 
  gnutls_ocsp_resp_get_version - API function
 
-<b>#include &lt;gnutls/ocsp.h&gt;</b> 
+<h2>SYNOPSIS</h2>
+
+ <b>#include &lt;gnutls/ocsp.h&gt;</b> 
 
  <b>int gnutls_ocsp_resp_get_version(gnutls_ocsp_resp_t </b><i>resp</i><b>);</b>
 
@@ -21,7 +22,9 @@ url: "/docs/linux/man/3-gnutls_ocsp_resp_get_version/"
 <dt>gnutls_ocsp_resp_t resp
 </dt><dd> should contain a <b>gnutls_ocsp_resp_t</b> structure</dd></dl>
 
-This function will return the version of the Basic OCSP Response. Typically this is always 1 indicating version 1.
+<h2>DESCRIPTION</h2>
+
+ This function will return the version of the Basic OCSP Response. Typically this is always 1 indicating version 1.
 
 <h2>RETURNS</h2>
 

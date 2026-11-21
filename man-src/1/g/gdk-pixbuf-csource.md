@@ -1,5 +1,4 @@
 ---
-
 title: "gdk-pixbuf-csource(1)"
 name: "gdk-pixbuf-csource"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-gdk-pixbuf-csource/"
 description: "gdk-pixbuf-csource – C code generation utility for GdkPixbuf images"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gdk-pixbuf-csource &#8211; C code generation utility for GdkPixbuf images </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gdk-pixbuf-csource</code> [OPTION&#8230;] [IMAGE]</dt>
 <dt> <code>gdk-pixbuf-csource</code> [OPTION&#8230;] &#8211;build-list [[NAME]&nbsp;[IMAGE]&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>gdk-pixbuf-csource</code></p>
 <dd>is a small utility that generates C code containing images, useful for compiling images directly into programs. </dd>
 <p> <code>gdk-pixbuf-csource</code> either takes as input one image file name to generate code for, or, using the <code>&#8211;build-list</code> option, a list of (<i>name</i>, <i>image</i>) pairs to generate code for a list of images into named variables.</p>

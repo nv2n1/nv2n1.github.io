@@ -1,5 +1,4 @@
 ---
-
 title: "pamtopam(1)"
 name: "pamtopam"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pamtopam/"
 description: "pamtopam – copy PAM image"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pamtopam &#8211; copy PAM image</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pamtopam</code> </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamtopam</code> simply copies a PAM image from Standard Input to Standard Output. This may seem an unnecessary duplication of <code>cat</code>, but remember that a PAM program can read a PBM, PGM, or PPM image as if it were PAM. So <code>pamtopam</code> can read either a PBM, PGM, PPM, or PAM image and produce a PAM image as output. </p>
 <p> Even that is of limited usefulness because of the fact that almost any program to which you would feed the resulting PAM image could also just take the original image directly. However, sometimes you really want a true PAM image. </p>

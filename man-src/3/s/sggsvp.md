@@ -1,5 +1,4 @@
 ---
-
 title: "sggsvp(3)"
 name: "sggsvp"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-sggsvp/"
 description: "sggsvp.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sggsvp.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sggsvp</code> (JOBU, JOBV, JOBQ, M, P, N, A, LDA, B, LDB, TOLA, TOLB, K, L, U, LDU, V, LDV, Q, LDQ, IWORK, TAU, WORK, INFO)<br />
  <i></i><code>SGGSVP</code></p>

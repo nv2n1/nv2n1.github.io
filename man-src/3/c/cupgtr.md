@@ -1,5 +1,4 @@
 ---
-
 title: "cupgtr(3)"
 name: "cupgtr"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cupgtr/"
 description: "cupgtr.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cupgtr.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cupgtr</code> (UPLO, N, AP, TAU, Q, LDQ, WORK, INFO)<br />
  <i></i><code>CUPGTR</code></p>

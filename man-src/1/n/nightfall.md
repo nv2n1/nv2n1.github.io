@@ -1,5 +1,4 @@
 ---
-
 title: "nightfall(1)"
 name: "nightfall"
 section: "1"
@@ -10,10 +9,12 @@ description: "nightfall – binary star astronomy"
 
 <h2>NAME</h2>
 <p> nightfall &#8211; binary star astronomy</p>
+<h2>SYNOPSIS</h2>
 <p> <code>nightfall </code> -h<br />
  <code>nightfall </code> -U [more options] [<i>mass_ratio</i> <i>inclination </i> <i>primary_size secondary_size </i> <i>primary_temperature </i> <i>secondary_temperature]</i><br />
  <code>nightfall </code> [-G] [-A] [more options] <i>mass_ratio inclination </i> <i>primary_size secondary_size </i> <i>primary_temperature secondary_temperature</i><br />
  <code>nightfall </code> [-G | -U] [-A] [more options] -C <i>file </i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>nightfall</code> is an interactive astronomy program for fun, education and science. It can generate animated views of eclipsing (or non-eclipsing) binary stars, compute light curves and radial velocity curves, and determine best-fit models for observational data. </p>
 <p> In the simplest case, <code>nightfall</code> computes the light curve for a binary star system with some given <i>mass_ratio</i> (mass of secondary star/mass of primary star), <i>inclination</i> (0 = plane-on view, 90 = edge-on view of the orbital plane), stellar sizes <i>primary_size,secondary_size</i> (dimensionless, in the range 0 &#8211; 1.3), and stellar temperatures <i>primary_temperature,secondary_temperature</i> (in Kelvin), and writes the light curve to a file <i>NightfallCurve.dat</i>. </p>
 <p> <code>nightfall</code> is able to show many non-trivial, and sometimes spectacular, physical effecs in binary stars, as it uses a detailed physical model rather than simply assuming the stars to be spherical. </p>

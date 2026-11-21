@@ -1,5 +1,4 @@
 ---
-
 title: "bjam159(1)"
 name: "bjam159"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-bjam159/"
 description: "bjam – Command-line utility to build Boost-related C++ projects with Boost.Build"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bjam &#8211; Command-line utility to build Boost-related C++ projects with Boost.Build </p>
+<h2>SYNOPSIS</h2>
 <p> <code>bjam</code> [-a] [-dx] [-fx] [-jx] [-lx] [-n] [-ox] [-px] [-q] [-sx=y] [-tx] [-v] [&#8211;x] </p>
 <p> <i>bjam</i> accepts the following options: </p>
 <p> <code>-a</code> </p>
@@ -36,6 +38,7 @@ description: "bjam – Command-line utility to build Boost-related C++ projects 
 <p>&nbsp;<wbr>Print the version of jam and exit </p>
 <p> <code>&#8211;x</code> </p>
 <p>&nbsp;<wbr>Option is ignored</p>
+<h2>DESCRIPTION</h2>
 <p> This section provides the information necessary to create your own projects using <i>Boost.Build</i> The information provided here is relatively high-level, and Chapter 6, Reference as well as the on-line help system must be used to obtain low-level documentation (see &#8211;help) </p>
 <p> <i>Boost.Build</i> actually consists of two parts &#8211; <i>Boost.Jam</i>, a build engine with its own interpreted language, and <i>Boost.Build</i> itself, implemented in <i>Boost.Jam&#8217;s</i> language. The chain of events when you type bjam on the command line is as follows:</p>
 <dl>

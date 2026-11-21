@@ -1,5 +1,4 @@
 ---
-
 title: "np(1)"
 name: "np"
 section: "1"
@@ -11,11 +10,19 @@ url: "/docs/linux/man/1-np/"
 
  new_proj - create a new project
 
-19 July 1999 <pre><code>
+<h2>SYNOPSIS</h2>
+
+ 19 July 1999 <pre><code>
 new[options] filename[template]
 </code></pre> 
 
-New_proj is a program to generate the files neccessary to begin a new project. 
+<h2>DESCRIPTION</h2>
+
+ 
+
+ 
+
+ New_proj is a program to generate the files neccessary to begin a new project. 
 
  
 

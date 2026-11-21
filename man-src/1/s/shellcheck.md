@@ -1,5 +1,4 @@
 ---
-
 title: "shellcheck(1)"
 name: "shellcheck"
 section: "1"
@@ -7,11 +6,24 @@ letter: "s"
 url: "/docs/linux/man/1-shellcheck/"
 ---
 
-shellcheck - Shell script analysis tool 
+<h2 class="name">NAME</h2>
+ 
 
-shellcheck [OPTIONS...] FILES...
+ 
 
-ShellCheck is a static analysis and linting tool for sh/bash scripts. It's mainly focused on handling typical beginner and intermediate level syntax errors and pitfalls where the shell just gives a cryptic error message or strange behavior, but it also reports on a few more advanced issues where corner cases can cause delayed failures. 
+ shellcheck - Shell script analysis tool 
+
+<h2>SYNOPSIS</h2>
+
+ 
+
+ shellcheck [OPTIONS...] FILES...
+
+<h2>DESCRIPTION</h2>
+
+ 
+
+ ShellCheck is a static analysis and linting tool for sh/bash scripts. It's mainly focused on handling typical beginner and intermediate level syntax errors and pitfalls where the shell just gives a cryptic error message or strange behavior, but it also reports on a few more advanced issues where corner cases can cause delayed failures. 
 
  ShellCheck gives shell specific advice. Consider this line:
 <dl>

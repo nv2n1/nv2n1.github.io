@@ -1,5 +1,4 @@
 ---
-
 title: "engrampa(1)"
 name: "engrampa"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-engrampa/"
 description: "Engrampa – Archive Manager for MATE"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Engrampa &#8211; Archive Manager for MATE </p>
+<h2>SYNOPSIS</h2>
 <p> <code>engrampa [OPTIONS&#8230;] [FILES&#8230;]</code></p>
+<h2>DESCRIPTION</h2>
 <p> Engrampa is the official archive manager for the MATE Desktop Environment, it is a graphical front-end to archiving utilities such as tar and zip. It is a fork of File Roller.</p>
 <dl>
 <dt>Engrampa supports most common operations such as creating, modifying and extracting files from an archive. You can also view the contents of an archive and open files contained within the archive.</dt>

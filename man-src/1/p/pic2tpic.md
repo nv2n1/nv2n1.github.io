@@ -1,5 +1,4 @@
 ---
-
 title: "pic2tpic(1)"
 name: "pic2tpic"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pic2tpic/"
 description: "pic2tpic – Convert pic files to tpic format"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pic2tpic &#8211; Convert pic files to tpic format</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pic2tpic</code> [ files ] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>Pic2tpic</code> reads the <code>pic</code> files given on the command line (or stdin if none are given) and writes their <code>tpic</code> equivalent to stdout. </p>
 <h2>SEE ALSO</h2>
 <p> tpic(1), <a href="/docs/linux/man/1-fig2dev/">fig2dev</a>(1), <a href="/docs/linux/man/1-transfig/">transfig</a>(1).</p>

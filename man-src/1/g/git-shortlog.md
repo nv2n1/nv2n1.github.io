@@ -1,5 +1,4 @@
 ---
-
 title: "git-shortlog(1)"
 name: "git-shortlog"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-shortlog/"
 description: "git-shortlog – Summarize ‘git log’ output"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-shortlog &#8211; Summarize &#8216;git log&#8217; output </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git shortlog[&lt;options&gt;][&lt;revision range&gt;][[--]&lt;path&gt;...] git log-- pretty = short | git shortlog[&lt;options&gt;]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Summarizes <i>git log</i> output in a format suitable for inclusion in release announcements. Each commit will be grouped by author and title. </p>
 <p> Additionally, &quot;[PATCH]&quot; will be stripped from the commit description. </p>
 <p> If no revisions are passed on the command line and either standard input is not a terminal or there is no current branch, <i>git shortlog</i> will output a summary of the log read from standard input, without reference to the current repository.</p>

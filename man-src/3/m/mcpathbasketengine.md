@@ -1,5 +1,4 @@
 ---
-
 title: "mcpathbasketengine(3)"
 name: "mcpathbasketengine"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-mcpathbasketengine/"
 description: "ql/experimental/mcbasket/mcpathbasketengine.hpp – Path-dependent European basket MC engine."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/experimental/mcbasket/mcpathbasketengine.hpp &#8211; Path-dependent European basket MC engine. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/experimental/mcbasket/pathmultiassetoption.hpp&gt;<br />
  #include &lt;ql/experimental/mcbasket/pathpayoff.hpp&gt;<br />
  #include &lt;ql/pricingengines/mcsimulation.hpp&gt;<br />

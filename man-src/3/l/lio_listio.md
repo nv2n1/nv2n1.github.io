@@ -1,5 +1,4 @@
 ---
-
 title: "lio_listio(3)"
 name: "lio_listio"
 section: "3"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/3-lio_listio/"
 description: "lio_listio – initiate a list of I/O requests"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lio_listio &#8211; initiate a list of I/O requests </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;aio.h&gt;
 int lio_listio(int mode, struct aiocb *const aiocb_list[],
                int nitems, struct sigevent *sevp);
 Link with - lrt.
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>lio_listio</code>() function initiates the list of I/O operations described by the array <i>aiocb_list</i>. </p>
 <p> The <i>mode</i> operation has one of the following values:</p>
 <dl>

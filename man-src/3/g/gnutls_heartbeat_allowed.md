@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_heartbeat_allowed(3)"
 name: "gnutls_heartbeat_allowed"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_heartbeat_allowed – API function"
 
 <h2>NAME</h2>
 <p> gnutls_heartbeat_allowed &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_heartbeat_allowed(gnutls_session_t </code><i>session</i><code>, unsigned int </code><i>type</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_heartbeat_allowed – API function"
 <dd> is a <code>gnutls_session_t</code> structure.</dd>
 <dt>unsigned int type</dt>
 <dd> one of <code>GNUTLS_HB_LOCAL_ALLOWED_TO_SEND</code> and <code>GNUTLS_HB_PEER_ALLOWED_TO_SEND</code></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will check whether heartbeats are allowed to be sent or received in this session.</p>
 <h2>RETURNS</h2>
 <p> Non zero if heartbeats are allowed.</p>

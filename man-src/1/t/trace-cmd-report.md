@@ -1,5 +1,4 @@
 ---
-
 title: "trace-cmd-report(1)"
 name: "trace-cmd-report"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-trace-cmd-report/"
 description: "trace-cmd-report – show in ASCII a trace created by trace-cmd record"
 ---
 
+<h2 class="name">NAME</h2>
+<p> trace-cmd-report &#8211; show in ASCII a trace created by trace-cmd record </p>
+<h2>SYNOPSIS</h2>
 <p> <code>trace-cmd report</code> [<i>OPTIONS</i>] [<i>input-file</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <a href="/docs/linux/man/1-trace-cmd/">trace-cmd</a>(1) report command will output a human readable report of a trace created by trace-cmd record.</p>
 <h2>OPTIONS</h2>
 <p> <code>-i</code> <i>input-file</i></p>

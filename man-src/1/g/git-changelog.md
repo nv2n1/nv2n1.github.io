@@ -1,5 +1,4 @@
 ---
-
 title: "git-changelog(1)"
 name: "git-changelog"
 section: "1"
@@ -10,8 +9,10 @@ description: "git-changelog – Generate a changelog report"
 
 <h2>NAME</h2>
 <p> <code>git-changelog</code> &#8211; Generate a changelog report</p>
+<h2>SYNOPSIS</h2>
 <p> <code>git-changelog</code> [options] [&lt;file&gt;]<br />
  <code>git-changelog</code> {-h | &#8211;help | ?}</p>
+<h2>DESCRIPTION</h2>
 <p> Generates a changelog from <a href="/docs/linux/man/1-git/">git</a>(1) tags (annotated or lightweight) and commit messages. Existing changelog files with filenames that begin with <i>Change</i> or <i>History</i> will be identified automatically with a case insensitive match pattern and existing content will be appended to the new output generated&#8211;this behavior can be disabled by specifying the prune option (-p|&#8211;prune-old). The generated file will be opened in <code>$EDITOR</code> when set. </p>
 <p> If no tags exist, then all commits are output; if tags exist, then only the most-recent commits are output up to the last identified tag. This behavior can be changed by specifing one or both of the range options (-f|&#8211;final-tag and -s|&#8211;start-tag).</p>
 <h2>OPTIONS</h2>

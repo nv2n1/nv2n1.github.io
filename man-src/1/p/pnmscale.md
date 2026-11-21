@@ -1,5 +1,4 @@
 ---
-
 title: "pnmscale(1)"
 name: "pnmscale"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-pnmscale/"
 description: "pnmscale – scale a portable anymap"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pnmscale &#8211; scale a portable anymap </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pnmscale</code> <i>scale_factor</i> [<i>pnmfile</i>]<br />
  <code>pnmscale -reduce</code> <i>reduction_factor</i> [<i>pnmfile</i>]<br />
  <code>pnmscale</code> [{<code>-xsize=</code><i>cols</i> | <code>-width=</code><i>cols</i> | <code>-xscale=</code><i>factor</i>}] [{<code>-ysize=</code><i>rows</i> | <code>-height=</code><i>rows</i> | <code>-yscale=</code><i>factor</i>}] [<i>pnmfile</i>]<br />
@@ -16,6 +18,7 @@ description: "pnmscale – scale a portable anymap"
 <p> Miscellaneous options:<br />
  <code>-verbose -nomix</code> </p>
 <p> Minimum unique abbreviation of option is acceptable. You may use double hypens instead of single hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>
+<h2>DESCRIPTION</h2>
 <p> Reads a PBM, PGM, or PPM image as input, scales it by the specified factor or factors and produces a PGM or PPM image as output. If the input file is in color (PPM), the output will be too, otherwise it will be grayscale (PGM). This is true even if the input is a black and white bitmap (PBM), because the process of scaling can turn a combination of black and white pixels into a gray pixel. </p>
 <p> If you want PBM output, use <code>pgmtopbm</code> to convert <code>pnmscale</code>&#8216;s output to PBM. Also consider <code>pbmreduce</code>. </p>
 <p> You can both enlarge (scale factor &gt; 1) and reduce (scale factor &lt; 1). </p>

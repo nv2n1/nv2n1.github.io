@@ -1,5 +1,4 @@
 ---
-
 title: "abduco(1)"
 name: "abduco"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-abduco/"
 description: "abduco – terminal session manager"
 ---
 
+<h2 class="name">NAME</h2>
+<p> abduco &#8211; terminal session manager </p>
+<h2>SYNOPSIS</h2>
 <p> <code>abduco</code> [<code>-e</code> <i>detachkey</i>] [<code>-r</code>] [<code>-f</code>] -c name command [<i>args</i>&nbsp;<wbr>&#8230;<i></i>]<br />
  <code>abduco</code> [<code>-e</code> <i>detachkey</i>] [<code>-r</code>] [<code>-f</code>] -n name command [<i>args</i>&nbsp;<wbr>&#8230;<i></i>]<br />
  <code>abduco</code> [<code>-e</code> <i>detachkey</i>] [<code>-r</code>] [<code>-f</code>] [<code>-l</code>] -A name command [<i>args</i>&nbsp;<wbr>&#8230;<i></i>]<br />
  <code>abduco</code> [<code>-e</code> <i>detachkey</i>] [<code>-r</code>] [<code>-l</code>] -a name </p>
+<h2>DESCRIPTION</h2>
 <p> <code>abduco</code> provides a way to disconnect a given application from its controlling terminal, thus it provides roughly the same session attach/detach support as <code><a href="/docs/linux/man/1-screen/">screen</a>(1)</code>,<code> <a href="/docs/linux/man/1-tmux/">tmux</a>(1)</code> or<code> dtach(1).</code> </p>
 <p> If the <code>command</code> to execute is not specified, the environment variable <code>$ABDUCO_CMD</code> is examined, if it is not set <code>dvtm(1)</code> is executed. </p>
 <p> All session related information is stored in the following directories (first to succeed is used):</p>

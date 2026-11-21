@@ -1,5 +1,4 @@
 ---
-
 title: "euare-oidcproviderlist(1)"
 name: "euare-oidcproviderlist"
 section: "1"
@@ -10,10 +9,12 @@ description: "euare-oidcproviderlist – List your account’s OpenID Connect pr
 
 <h2>NAME</h2>
 <p> euare-oidcproviderlist &#8211; List your account&#8217;s OpenID Connect providers</p>
+<h2>SYNOPSIS</h2>
 <p> euare-oidcproviderlist [&#8211;as-account ACCOUNT] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> List your account&#8217;s OpenID Connect providers</p>
 <h3>optional arguments:</h3>
 <dl>

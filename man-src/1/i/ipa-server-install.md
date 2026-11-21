@@ -1,5 +1,4 @@
 ---
-
 title: "ipa-server-install(1)"
 name: "ipa-server-install"
 section: "1"
@@ -10,7 +9,9 @@ description: "ipa-server-install – Configure an IPA server"
 
 <h2>NAME</h2>
 <p> ipa-server-install &#8211; Configure an IPA server</p>
+<h2>SYNOPSIS</h2>
 <p> ipa-server-install [<i>OPTION</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Configures the services needed by an IPA server. This includes setting up a Kerberos Key Distribution Center (KDC) and a Kadmin daemon with an LDAP back-end, configuring Apache, configuring NTP and optionally configuring and starting an LDAP-backed DNS server. By default a dogtag-based CA will be configured to issue server certificates. </p>
 <h2>OPTIONS</h2>
 <h3>BASIC OPTIONS</h3>

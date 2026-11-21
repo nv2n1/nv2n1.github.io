@@ -1,5 +1,4 @@
 ---
-
 title: "ipa-csreplica-manage(1)"
 name: "ipa-csreplica-manage"
 section: "1"
@@ -10,7 +9,9 @@ description: "ipa-csreplica-manage – Manage an IPA CS replica"
 
 <h2>NAME</h2>
 <p> ipa-csreplica-manage &#8211; Manage an IPA CS replica</p>
+<h2>SYNOPSIS</h2>
 <p> ipa-csreplica-manage [<i>OPTION</i>]&#8230; [connect|disconnect|del|list|re-initialize|force-sync]</p>
+<h2>DESCRIPTION</h2>
 <p> Manages the CA replication agreements of an IPA server for domain at domain level 0. </p>
 <p> To manage CA replication agreements in a domain at domain level 1, use IPA CLI or Web UI, see `ipa help topology` for additional information. </p>
 <dl>

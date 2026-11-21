@@ -1,5 +1,4 @@
 ---
-
 title: "shtool-platform(1)"
 name: "shtool-platform"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-shtool-platform/"
 description: "shtool platform – GNU shtool Unix platform identification"
 ---
 
+<h2 class="name">NAME</h2>
+<p> shtool platform &#8211; GNU shtool Unix platform identification </p>
+<h2>SYNOPSIS</h2>
 <p> <code>shtool platform</code> [<code>-F</code>|<code>&#8211;format</code> <i>format</i>] [<code>-S</code>|<code>&#8211;sep</code> <i>string</i>] [<code>-C</code>|<code>&#8211;conc</code> <i>string</i>] [<code>-L</code>|<code>&#8211;lower</code>] [<code>-U</code>|<code>&#8211;upper</code>] [<code>-v</code>|<code>&#8211;verbose</code>] [<code>-c</code>|<code>&#8211;concise</code>] [<code>-n</code>|<code>&#8211;newline</code>] [<code>-d</code>|<code>&#8211;debug</code>] [<code>-t</code>|<code>&#8211;type</code> <i>type</i>] [<code>-n</code>|<code>&#8211;newline</code>] [<code>-d</code>|<code>&#8211;debug</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>shtool platform</code> is a flexible Unix platform identification program. It distinguishes a platform according to its <i>hardware architecture</i> and <i>operating system</i>. For both there is a <i>class</i>, <i>product</i> and <i>technology</i> identification. For each of those six identifications, there is a <i>verbose</i>, <i>regular</i> and <i>concise</i> version. </p>
 <p> This leads to eighteen (2x3x3) available identification strings for each platform, from which usually 2 are chosen in a particular situation. This is done by assembling the platform identification string using a <i>format</i> string containing one or more identification constructs of the forms &quot;<tt>&quot;%[xx]&quot;</tt>&#8220; (verbose), &#8221;<tt>&quot;%{xx}&quot;</tt>&#8220; (regular) and &#8221;<tt>&quot;%&lt;xx&gt;&quot;</tt>&quot; (concise).</p>
 <h2>OPTIONS</h2>

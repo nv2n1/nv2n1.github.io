@@ -1,5 +1,4 @@
 ---
-
 title: "cervisia(1)"
 name: "cervisia"
 section: "1"
@@ -10,6 +9,7 @@ description: "Cervisia – Graphical CVS frontend"
 
 <h2>NAME</h2>
 <p> Cervisia &#8211; Graphical CVS frontend</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cervisia</code><br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;display</code>&nbsp;<wbr><i>display</i>&nbsp;<wbr>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;caption</code>&nbsp;<wbr><i>caption</i>&nbsp;<wbr>]<br />
@@ -25,6 +25,7 @@ description: "Cervisia – Graphical CVS frontend"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;log</code>&nbsp;<wbr><i>filename</i>&nbsp;<wbr>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><code>&#8211;annotate</code>&nbsp;<wbr><i>filename</i>&nbsp;<wbr>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&nbsp;<wbr><i>directory</i>&nbsp;<wbr>]</p>
+<h2>DESCRIPTION</h2>
 <p> Cervisia is a graphical user interface for the Concurrent Versions System. It is based on the <font SIZE="-1">KDE</font> libraries and therefore shares their Look&#8217;n&#8217;Feel, configuration and help system.</p>
 <h2>OPTIONS</h2>
 <p> Cervisia accepts the following options:</p>

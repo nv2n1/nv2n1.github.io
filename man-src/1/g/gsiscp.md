@@ -1,5 +1,4 @@
 ---
-
 title: "gsiscp(1)"
 name: "gsiscp"
 section: "1"
@@ -10,7 +9,9 @@ description: "scp – secure copy (remote file copy program)"
 
 <h2>NAME</h2>
 <p> <code>scp</code> &#8211; secure copy (remote file copy program)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>scp</code> -words [-<code>12346BCpqrv</code> ] [-<code>c </code><i>cipher</i> ] [-<code>F </code><i>ssh_config</i> ] [-<code>i </code><i>identity_file</i> ] [-<code>l </code><i>limit</i> ] [-<code>o </code><i>ssh_option</i> ] [-<code>P </code><i>port</i> ] [-<code>S </code><i>program</i> ] [[<i>user </i><code>@</code> ] <i>host1 </i><code>:</code> <i>file1</i> ] <i>&#8230;</i> [[<i>user </i><code>@</code> ] <i>host2 </i><code>:</code> <i>file2</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>scp</code> copies files between hosts on a network. It uses <a href="/docs/linux/man/1-ssh/">ssh</a>(1) for data transfer, and uses the same authentication and provides the same security as <a href="/docs/linux/man/1-ssh/">ssh</a>(1). Unlike <a href="/docs/linux/man/1-rcp/">rcp</a>(1), <code>scp</code> will ask for passwords or passphrases if they are needed for authentication. </p>
 <p> File names may contain a user and host specification to indicate that the file is to be copied to/from that host. Local file names can be made explicit using absolute or relative pathnames to avoid <code>scp</code> treating file names containing `:&#8217; as host specifiers. Copies between two remote hosts are also permitted. </p>
 <p> The options are as follows:</p>

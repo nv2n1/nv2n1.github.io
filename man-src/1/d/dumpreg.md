@@ -1,5 +1,4 @@
 ---
-
 title: "dumpreg(1)"
 name: "dumpreg"
 section: "1"
@@ -10,8 +9,10 @@ description: "dumpreg – dump the state of the card as the svgalib chipset driv
 
 <h2>NAME</h2>
 <p> dumpreg &#8211; dump the state of the card as the svgalib chipset driver sees it.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>dumpreg</code><br />
  <code>dumpreg &lt; /dev/tty</code><i>N</i> </p>
+<h2>DESCRIPTION</h2>
 <p> The chipset drivers of svgalib inquire the mode of the graphic card when the application is started and restore it when the svgalib application quits. <code>dumpreg</code> prints this information to stdout. </p>
 <p> This is useful for debugging or adding modes to a device driver. For example you can use Xfree86 to setup a given mode timing, then run <code>dumpreg</code> and use it&#8217;s stdout to make your chipset driver use exactly this timing. </p>
 <p> However, the recent change of svgalib to hunt an own free virtual console does not allow this, because it will make Xfree86 return to textmode first. You can avoid this by using the second form where <i>N</i> is the number of the virtual console on which Xfree86 runs (usually 7) as root. </p>

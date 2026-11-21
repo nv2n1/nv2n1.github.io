@@ -1,5 +1,4 @@
 ---
-
 title: "name_to_handle_at(2)"
 name: "name_to_handle_at"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-name_to_handle_at/"
 description: "name_to_handle_at, open_by_handle_at – obtain handle for a pathname and open file via a handle"
 ---
 
+<h2 class="name">NAME</h2>
+<p> name_to_handle_at, open_by_handle_at &#8211; obtain handle for a pathname and open file via a handle </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;fcntl.h&gt;
@@ -19,6 +21,7 @@ int name_to_handle_at(int dirfd, const char *pathname,
 int open_by_handle_at(int mount_fd, struct file_handle *handle,
                       int flags);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>name_to_handle_at</code>() and <code>open_by_handle_at</code>() system calls split the functionality of <code><a href="/docs/linux/man/2-openat/">openat</a></code>(2) into two parts: <code>name_to_handle_at</code>() returns an opaque handle that corresponds to a specified file; <code>open_by_handle_at</code>() opens the file corresponding to a handle returned by a previous call to <code>name_to_handle_at</code>() and returns an open file descriptor.</p>
 <h3>name_to_handle_at()</h3>
 <p> The <code>name_to_handle_at</code>() system call returns a file handle and a mount ID corresponding to the file specified by the <i>dirfd</i> and <i>pathname</i> arguments. The file handle is returned via the argument <i>handle</i>, which is a pointer to a structure of the following form: </p>

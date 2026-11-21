@@ -1,5 +1,4 @@
 ---
-
 title: "gyp(1)"
 name: "gyp"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-gyp/"
 description: "gyp – cross-platform makefile generator for Chromium"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gyp &#8211; cross-platform makefile generator for Chromium </p>
+<h2>SYNOPSIS</h2>
 <p> <i>gyp</i> [options] [build_file&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> Uses the specified build files to generate build scripts or project files in the current platform&#8217;s native format. If no build file is specified, all files in the current directory with a .gyp suffix are used.</p>
 <h2>OPTIONS</h2>
 <p> -D&lt;variable&gt;=&lt;value&gt;</p>

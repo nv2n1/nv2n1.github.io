@@ -1,5 +1,4 @@
 ---
-
 title: "getcpu(2)"
 name: "getcpu"
 section: "2"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/2-getcpu/"
 description: "getcpu – determine CPU and NUMA node on which the calling thread is running"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getcpu &#8211; determine CPU and NUMA node on which the calling thread is running </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/getcpu.h&gt;
 int getcpu(unsigned *cpu, unsigned *node, struct getcpu_cache *tcache);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>getcpu</code>() system call identifies the processor and node on which the calling thread or process is currently running and writes them into the integers pointed to by the <i>cpu</i> and <i>node</i> arguments. The processor is a unique small integer identifying a CPU. The node is a unique small identifier identifying a NUMA node. When either <i>cpu</i> or <i>node</i> is NULL nothing is written to the respective pointer. </p>
 <p> The third argument to this system call is nowadays unused, and should be specified as NULL unless portability to Linux 2.6.23 or earlier is required (see NOTES). </p>
 <p> The information placed in <i>cpu</i> is guaranteed to be current only at the time of the call: unless the CPU affinity has been fixed using <code><a href="/docs/linux/man/2-sched_setaffinity/">sched_setaffinity</a></code>(2), the kernel might change the CPU at any time. (Normally this does not happen because the scheduler tries to minimize movements between CPUs to keep caches hot, but it is possible.) The caller must allow for the possibility that the information returned in <i>cpu</i> and <i>node</i> is no longer current by the time the call returns.</p>

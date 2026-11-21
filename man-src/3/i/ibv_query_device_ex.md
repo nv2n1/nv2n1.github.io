@@ -1,5 +1,4 @@
 ---
-
 title: "ibv_query_device_ex(3)"
 name: "ibv_query_device_ex"
 section: "3"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/3-ibv_query_device_ex/"
 description: "ibv_query_device_ex – query an RDMA device’s attributes"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ibv_query_device_ex &#8211; query an RDMA device&#8217;s attributes </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 int ibv_query_device_ex(struct ibv_context *context,
                         struct ibv_device_attr_ex *attr);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>ibv_query_device_ex()</code> returns the attributes of the device with context <i>context</i>. The argument <i>attr</i> is a pointer to an ibv_device_attr_ex struct, as defined in &lt;infiniband/verbs.h&gt;. </p>
 <pre><code>
 struct ibv_device_attr_ex {

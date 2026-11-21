@@ -1,5 +1,4 @@
 ---
-
 title: "nisserver-plugin-defs(1)"
 name: "nisserver-plugin-defs"
 section: "1"
@@ -7,11 +6,18 @@ letter: "n"
 url: "/docs/linux/man/1-nisserver-plugin-defs/"
 ---
 
-nisserver-plugin-defs - print default settings for the NIS server plugin
+<h2 class="name">NAME</h2>
+ 
 
-nisserver-plugin-defs [-d <i>domain</i> ] [-m <i>map</i> ] [-s <i>suffix</i> ] 
+ nisserver-plugin-defs - print default settings for the NIS server plugin
 
-The <i>nisserver-plugin-defs</i> command produces example configuration entries containing the default settings which the NIS server plugin will use for all maps for which it has built-in defaults, or if a particular map name is specified, for one map. 
+<h2>SYNOPSIS</h2>
+
+ nisserver-plugin-defs [-d <i>domain</i> ] [-m <i>map</i> ] [-s <i>suffix</i> ] 
+
+<h2>DESCRIPTION</h2>
+
+ The <i>nisserver-plugin-defs</i> command produces example configuration entries containing the default settings which the NIS server plugin will use for all maps for which it has built-in defaults, or if a particular map name is specified, for one map. 
 
 <h2>ARGUMENTS</h2>
 

@@ -1,5 +1,4 @@
 ---
-
 title: "dcmprscu(1)"
 name: "dcmprscu"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-dcmprscu/"
 description: "dcmprscu – Print spooler for presentation state viewer"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dcmprscu &#8211; Print spooler for presentation state viewer </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 dcmprscu[options][dcmfile - in...]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>dcmprscu</code> utility implements the DICOM Basic Grayscale Print Management Service Class as SCU. It also supports the optional Basic Annotation Box and Presentation LUT SOP Classes. The utility is intended for use within the DICOMscope viewer. </p>
 <p> The <code>dcmprscu</code> utility takes complete print jobs consisting of a Stored Print object and one or more Hardcopy Grayscale objects and spools them to the printer. No attempt is made to check whether the attributes defined in the Stored Print object are supported by the Print SCP. However, the print spooler will not attempt to use the optional Annotation or Presentation LUT services if they are not successfully negotiated with the Print SCP. </p>
 <p> The <code>dcmprscu</code> utility reads the characteristics of the printer to communicate with from the configuration file. Depending on the printer&#8217;s support for Presentation LUT, any Presentation LUT present in the print job will be rendered into the hardcopy images before they are spooled to the printer if necessary. If the printer does not support image transmission with 12 bits/pixel (as per the configuration file), the grayscale hardcopy images are down-sampled to 8 bits/pixel before transmission to the printer. </p>

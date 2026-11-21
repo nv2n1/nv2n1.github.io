@@ -1,5 +1,4 @@
 ---
-
 title: "alpine(1)"
 name: "alpine"
 section: "1"
@@ -13,6 +12,7 @@ description: "alpine – an Alternatively Licensed Program for Internet News and
 <h2>SYNTAX</h2>
 <p> <code>alpine</code> [ <i>options</i> ] [ <i>address</i> , <i>address</i> ] </p>
 <p> <code>alpinef</code> [ <i>options</i> ] [ <i>address</i> , <i>address</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> Alpine is a screen-oriented message-handling tool. In its default configuration, Alpine offers an intentionally limited set of functions geared toward the novice user, but it also has a large list of optional &quot;power-user&quot; and personal-preference features. <i>alpinef </i> is a variant of Alpine that uses function keys rather than mnemonic single-letter commands. Alpine&#8217;s basic feature set includes:</p>
 <dl>
 <dt>

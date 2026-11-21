@@ -1,5 +1,4 @@
 ---
-
 title: "tr(1)"
 name: "tr"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-tr/"
 description: "tr – translate or delete characters"
 ---
 
+<h2 class="name">NAME</h2>
+<p> tr &#8211; translate or delete characters </p>
+<h2>SYNOPSIS</h2>
 <p> <code>tr</code> [<i>,OPTION/</i>]&#8230; <i>,SET1 /</i>[<i>,SET2/</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Translate, squeeze, and/or delete characters from standard input, writing to standard output.</p>
 <dl>
 <dt><code>-c</code>, <code>-C</code>, <code>&#8211;complement</code></dt>

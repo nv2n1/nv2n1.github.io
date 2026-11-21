@@ -1,5 +1,4 @@
 ---
-
 title: "softhsm2-keyconv(1)"
 name: "softhsm2-keyconv"
 section: "1"
@@ -10,7 +9,9 @@ description: "softhsm2-keyconv – converting from BIND to PKCS#8 key file forma
 
 <h2>NAME</h2>
 <p> softhsm2-keyconv &#8211; converting from BIND to PKCS#8 key file format</p>
+<h2>SYNOPSIS</h2>
 <p> <code>softhsm2-keyconv</code> <code>&#8211;in</code> <i>path</i> <code>&#8211;out</code> <i>path</i> [<code>&#8211;pin</code> <i>PIN</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>softhsm2-keyconv</code> can convert BIND .private-key files to the PKCS#8 file format. This is so that you can import the PKCS#8 file into libsofthsm using the command <code>softhsm2-util</code>. If you have another file format, then <code>openssl</code> probably can help you to convert it into the PKCS#8 file format.</p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;help</code>, <code>-h</code> Shows the help screen.</p>

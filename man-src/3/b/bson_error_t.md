@@ -1,5 +1,4 @@
 ---
-
 title: "bson_error_t(3)"
 name: "bson_error_t"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_error_t – BSON Error Encapsulation"
 
 <h2>NAME</h2>
 <p> bson_error_t &#8211; BSON Error Encapsulation</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;bson.h&gt;
 typedef struct
@@ -19,6 +19,7 @@ typedef struct
     char message[504];
 } bson_error_t;
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>bson_error_t</code> structure is used to encapsulate information about an error. Think of it as the information stored in an exception without stack trace information. It includes information about the module and error code of the error along with a human printable message. </p>
 <p> The <code>error.domain</code> field contains the logical domain within a library that created the error. This might be the JSON subsystem or <code>bson_reader_t</code> for example. </p>
 <p> The <code>error.code</code> field contains the domain specific error code. </p>

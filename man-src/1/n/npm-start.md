@@ -1,5 +1,4 @@
 ---
-
 title: "npm-start(1)"
 name: "npm-start"
 section: "1"
@@ -8,6 +7,7 @@ url: "/docs/linux/man/1-npm-start/"
 description: "npm-start – Start a package"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>npm-start</code> &#8211; Start a package </p>
 <h3>Synopsis</h3>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "spax(1)"
 name: "spax"
 section: "1"
@@ -7,9 +6,9 @@ letter: "s"
 url: "/docs/linux/man/1-spax/"
 description: "pax – portable archive interchange"
 ---
-
 <h2>NAME</h2>
 <p> pax - portable archive interchange  </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>spax</code></dt>
 <dd> <p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<i>other options</i>] [-cdnv] [-H|-L] [-f&nbsp;<wbr><i>archive] [-o options</i>]... [-s <i>replstr]... [pattern</i>...] </p>
@@ -23,6 +22,7 @@ description: "pax – portable archive interchange"
 <dt><code>spax</code></dt>
 <dd> <p> -r -w[<i>other options</i>] [-diklntuvX] [-H|-L] [-o&nbsp;<wbr><i>options</i>]... [-p&nbsp;<wbr><i>string</i>]... [-s&nbsp;<wbr><i>replstr</i>]... [<i>file</i>...] <i>directory</i> </p>
  </dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code>pax </code> utility shall read, write, and write lists of the members of archive files and copy directory hierarchies. A variety of archive formats shall be supported; see the <code>-x</code> format option. </p>
 <p> The action to be taken depends on the presence of the <code>-r</code> and <code>-w</code> options. The four combinations of <code>-r</code> and <code>-w</code> are referred to as the four modes of operation: <code>list</code>, <code>read</code>, <code>write</code>, and <code>copy</code> modes, corresponding respectively to the four forms shown in the SYNOPSIS section. </p>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "virt-v2v(1)"
 name: "virt-v2v"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-virt-v2v/"
 description: "virt-v2v – Convert a guest to use KVM"
 ---
 
+<h2 class="name">NAME</h2>
+<p> virt-v2v &#8211; Convert a guest to use KVM </p>
+<h2>SYNOPSIS</h2>
 <pre>
  virt-v2v -ic <a href="vpx://vcenter.example.com/Datacenter/esxi">vpx://vcenter.example.com/Datacenter/esxi</a> vmware_guest
  virt-v2v -ic <a href="vpx://vcenter.example.com/Datacenter/esxi">vpx://vcenter.example.com/Datacenter/esxi</a> vmware_guest \
@@ -16,6 +18,7 @@ description: "virt-v2v – Convert a guest to use KVM"
  virt-v2v -i disk disk.img -o local -os /var/tmp
  virt-v2v -i disk disk.img -o glance
 </pre>
+<h2>DESCRIPTION</h2>
 <p> Virt-v2v converts guests from a foreign hypervisor to run on <font SIZE="-1">KVM. </font> It can read Linux and Windows guests running on VMware, Xen, Hyper-V and some other hypervisors, and convert them to <font SIZE="-1">KVM</font> managed by libvirt, OpenStack, oVirt, Red Hat Enterprise Virtualisation (<font SIZE="-1">RHEV</font>) or several other targets. </p>
 <p> There is also a companion front-end called <i><a href="/docs/linux/man/1-virt-p2v/">virt-p2v</a></i>(1) which comes as an <font SIZE="-1">ISO, CD</font> or <font SIZE="-1">PXE</font> image that can be booted on physical machines to virtualize those machines (physical to virtual, or p2v). </p>
 <p> This manual page documents the rewritten virt-v2v included in libguestfs ≥ 1.28.</p>

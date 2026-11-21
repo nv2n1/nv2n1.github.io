@@ -1,5 +1,4 @@
 ---
-
 title: "eulb-set-lb-listener-ssl-cert(1)"
 name: "eulb-set-lb-listener-ssl-cert"
 section: "1"
@@ -10,10 +9,12 @@ description: "eulb-set-lb-listener-ssl-cert – Change the certificate that term
 
 <h2>NAME</h2>
 <p> eulb-set-lb-listener-ssl-cert &#8211; Change the certificate that terminates a load balancer&#8217;slistener&#8217;s SSL connections</p>
+<h2>SYNOPSIS</h2>
 <p> eulb-set-lb-listener-ssl-cert <code>-l</code> PORT <code>-c</code> ARN [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID]</dt>
 <dd> [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ELB</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Change the certificate that terminates a load balancer&#8217;slistener&#8217;s SSL connections</p>
 <h3>positional arguments:</h3>
 <dl>

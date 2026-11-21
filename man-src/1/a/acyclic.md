@@ -1,5 +1,4 @@
 ---
-
 title: "acyclic(1)"
 name: "acyclic"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-acyclic/"
 description: "acyclic – make directed graph acyclic"
 ---
 
+<h2 class="name">NAME</h2>
+<p> acyclic &#8211; make directed graph acyclic </p>
+<h2>SYNOPSIS</h2>
 <p> <code>acyclic</code> [ <code>-nv?</code> ] [ <code>-o</code> <i>outfile</i> ] [ <i>file</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>acyclic</code> is a filter that takes a directed graph as input and outputs a copy of the graph with sufficient edges reversed to make the graph acyclic. The reversed edge inherits all of the attributes of the original edge. The optional file argument specifies where the input graph is stored; by default, the program reads from <code>stdin</code>.</p>
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>

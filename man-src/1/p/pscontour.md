@@ -1,5 +1,4 @@
 ---
-
 title: "pscontour(1)"
 name: "pscontour"
 section: "1"
@@ -10,8 +9,10 @@ description: "pscontour – Contour table data by direct triangulation [method]"
 
 <h2>NAME</h2>
 <p> pscontour &#8211; Contour table data by direct triangulation [method]</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pscontour</code> [ <i>table</i> ] [+]<i>cpt</i> <i>parameters</i> <i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[/<i>zmin</i>/<i>zmax</i>][<code>r</code>] [ [<code>&#8211;</code>|[+]<i>annot_int</i>][<i>labelinfo</i>] ] [ [<code>p</code>|<code>s</code>]<i>parameters</i> ] [ [<i>template</i>] ] [ <i>indexfile</i> ] [ [<code>d</code>|<code>f</code>|<code>n</code>|<code>l</code>|<code>L</code>|<code>x</code>|<code>X</code>]<i>params</i> ] [ ] [ <code>z</code>|<code>Z</code><i>parameters</i> ] [ ] [ <i>pen</i> ] [ ] [ ] [ ] [ <i>cut</i> ] [ [<i>p</i>|<i>t</i>] ] [ [<code>+|-</code>][<code>+d</code><i>gap</i>[/<i>length</i>]][<code>+l</code>[<i>labels</i>]] ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ [<i>level</i>] ] [ [<code>+</code>]<i>pen</i> ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-c</code><i>copies</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-t</code><i>&lt;transp&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pscontour</code> reads an ASCII [or binary] <i>table</i> and produces a raw contour plot by triangulation. By default, the optimal Delaunay triangulation is performed (using either Shewchuk&#8217;s [1996] or Watson&#8217;s [1982] method as selected during GMT installation; type <code>pscontour &#8211;</code> to see which method is selected), but the user may optionally provide a second file with network information, such as a triangular mesh used for finite element modeling. In addition to contours, the area between contours may be painted according to the CPT file. Alternatively, the x/y/z positions of the contour lines may be saved to one or more output files (or stdout) and no plot is produced.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

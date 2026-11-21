@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_rls_client_rli_operation/"
 description: "RLI Operations –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> RLI Operations &#8211; </p>
 <p> Functions to view and update data managed by a RLI server.</p>
 <h3>Data Structures</h3>
 <p> struct <code>globus_rls_sender_info_t</code><br />

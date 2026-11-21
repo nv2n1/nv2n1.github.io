@@ -1,5 +1,4 @@
 ---
-
 title: "bodhi(1)"
 name: "bodhi"
 section: "1"
@@ -10,7 +9,9 @@ description: "bodhi – manage Fedora updates"
 
 <h2>NAME</h2>
 <p> bodhi &#8211; manage Fedora updates</p>
+<h2>SYNOPSIS</h2>
 <p> <code>bodhi</code> COMMAND SUBCOMMAND [OPTIONS] [ARGS]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>bodhi</code> is the command line interface to bodhi, Fedora&#8217;s update release management system. It can be used to create or modify updates and overrides.</p>
 <h2>OPTIONS</h2>
 <p> Most of the commands will accept these three options: </p>

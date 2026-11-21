@@ -1,5 +1,4 @@
 ---
-
 title: "flow-rpt2rrd(1)"
 name: "flow-rpt2rrd"
 section: "1"
@@ -10,7 +9,9 @@ description: "flow-rpt2rrd – Convert flow-report CSV output to RRDtool format.
 
 <h2>NAME</h2>
 <p> flow-rpt2rrd &#8211; Convert flow-report CSV output to RRDtool format.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>flow-rpt2rrd</code> [ <code>-nv</code> ] [ <code>-d</code><i> debug_level</i> ] [ <code>-k</code><i> keys</i> ] [ <code>-K</code><i> keys_file</i> ] [ <code>-f</code><i> fields</i> ] [ <code>-p</code><i> rrd_path</i> ] [ <code>-P</code><i> rrd_postfix</i> ] [ <code>-r</code><i> rrd_storage</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>flow-rpt2rrd</code> utility processes the CSV output of flow-report into RRDtool format. The aggregates for a key are each stored as a DS in RRD filename {rrd_path,&quot;/&quot;,key,rrd_postfix,&quot;.rrd&quot;}. By default a DS is created for flows, octets, and packets. The key must be specified, for example an ip-port report could use smtp,nntp,ssh,telnet as the keys which would create a separate RRD for each key.</p>
 <h2>OPTIONS</h2>
 <dl>

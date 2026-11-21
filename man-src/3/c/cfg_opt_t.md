@@ -1,5 +1,4 @@
 ---
-
 title: "cfg_opt_t(3)"
 name: "cfg_opt_t"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cfg_opt_t/"
 description: "cfg_opt_t – Data structure holding information about an option."
 ---
 
+<h2 class="name">NAME</h2>
+<p> cfg_opt_t &#8211; Data structure holding information about an option. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;confuse.h&gt; </p>
 <h3>Data Fields</h3>
 <p> char * <code>name</code><br />

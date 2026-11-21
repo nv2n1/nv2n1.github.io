@@ -1,5 +1,4 @@
 ---
-
 title: "futimens(3)"
 name: "futimens"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-futimens/"
 description: "utimensat, futimens – change file timestamps with nanosecond precision"
 ---
 
+<h2 class="name">NAME</h2>
+<p> utimensat, futimens &#8211; change file timestamps with nanosecond precision </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;fcntl.h&gt; /* Definition of AT_* constants */
 #include &lt;sys/stat.h&gt;
@@ -32,6 +34,7 @@ int futimens(int fd, const struct timespec times[2]);
 <dt>Before glibc 2.10:</dt>
 <dd> _GNU_SOURCE</dd></dl>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> <code>utimensat</code>() and <code>futimens</code>() update the timestamps of a file with nanosecond precision. This contrasts with the historical <code><a href="/docs/linux/man/2-utime/">utime</a></code>(2) and <code><a href="/docs/linux/man/2-utimes/">utimes</a></code>(2), which permit only second and microsecond precision, respectively, when setting file timestamps. </p>
 <p> With <code>utimensat</code>() the file is specified via the pathname given in <i>pathname</i>. With <code>futimens</code>() the file whose timestamps are to be updated is specified via an open file descriptor, <i>fd</i>. </p>
 <p> For both calls, the new file timestamps are specified in the array <i>times</i>: <i>times[0]</i> specifies the new &quot;last access time&quot; (<i>atime</i>); <i>times[1]</i> specifies the new &quot;last modification time&quot; (<i>mtime</i>). Each of the elements of <i>times</i> specifies a time as the number of seconds and nanoseconds since the Epoch, 1970-01-01 00:00:00 +0000 (UTC). This information is conveyed in a structure of the following form: </p>

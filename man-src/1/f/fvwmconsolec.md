@@ -1,5 +1,4 @@
 ---
-
 title: "fvwmconsolec(1)"
 name: "fvwmconsolec"
 section: "1"
@@ -7,10 +6,13 @@ letter: "f"
 url: "/docs/linux/man/1-fvwmconsolec/"
 description: "FvwmConsoleC.pl – Command editor for fvwm command input interface"
 ---
-
+<h2 class="name">NAME</h2>
+<p>FvwmConsoleC.pl &#8211; Command editor for fvwm command input interface </p>
+<h2>SYNOPSIS</h2>
 <p> FvwmConsole -e /usr/X11/lib/fvwm/FvwmConsoleC.pl </p>
 <h2>COPYRIGHT</h2>
 <p> Copyright 1996, Toshi Isogai. No guarantees or warranties are provided. Use this program at your own risk. Permission to use this program for any purpose is given, as long as the copyright is kept intact. </p>
+<h2>DESCRIPTION</h2>
 <p> FvwmConsoleC.pl offers editing capabilities while the user is entering the line. By default, the line editing commands are similar to those of emacs. It also offers <code>substitution</code> , which replaces a pattern to a string before it sends the command. </p>
 <h2>FUNCTIONS</h2>
 <p> Functions are bound to a key or key combination to be invoked. The followings are functions available and their default key bindings. </p>

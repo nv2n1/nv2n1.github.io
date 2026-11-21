@@ -1,5 +1,4 @@
 ---
-
 title: "mdb-array(1)"
 name: "mdb-array"
 section: "1"
@@ -10,9 +9,11 @@ description: "mdb-array – Export data in an MDB database table to a C array."
 
 <h2>NAME</h2>
 <p> <code>mdb-array </code>&#8211; Export data in an MDB database table to a C array.</p>
+<h2>SYNOPSIS</h2>
 <pre>
 <code>mdb-array</code> <i>database</i> <i>table</i>
 </pre>
+<h2>DESCRIPTION</h2>
 <p> <code>mdb-array</code> is a utility program distributed with MDB Tools. </p>
 <p> <code>mdb-array</code> prints a C source code file to stdout, containing an array representing the data of the specified <i>table</i>.</p>
 <h2>ENVIRONMENT</h2>

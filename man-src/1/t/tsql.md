@@ -1,5 +1,4 @@
 ---
-
 title: "tsql(1)"
 name: "tsql"
 section: "1"
@@ -10,8 +9,10 @@ description: "tsql – utility to test FreeTDS connections and queries"
 
 <h2>NAME</h2>
 <p> <code>tsql</code> &#8211; utility to test FreeTDS connections and queries</p>
+<h2>SYNOPSIS</h2>
 <p> Br o &#8211;<code>S </code><i>servername</i> [-<code>I </code><i>interface</i> ] | &#8211;<code>H </code><i>hostname</i> [-<code>L</code> ] [-<code>p </code><i>port</i> ] Br c [-<code>D </code><i>dbname</i> ] [-<code>U </code><i>username</i> ] [-<code>P </code><i>password</i> ] [-<code>o </code><i>options</i> ]<br />
  &#8211;<code>C</code></p>
+<h2>DESCRIPTION</h2>
 <p> is a FreeTDS diagnostic tool. It uses the TDS protocol to connect to a Sybase or Microsoft SQL Server, and lets the user issue queries. does not use the FreeTDS client libraries. Instead, it uses only the lowest level library, libtds, to test the protocol implementation. </p>
 <p> can be run in two ways, one which uses the freetds.conf and one which connects directly using the server&#8217;s hostname and port. The &#8211;<code>H</code> and &#8211;<code>p</code> parameters are provided to let the user verify a server is listening on the named host and port. These parameters override any configuration files and environment variables. Pl The &#8211;<code>S</code> parameter can be used to test the local configuration. FreeTDS will use freetds.conf (or equivalent) and environment variables in the normal way to determine the server&#8217;s IP address and port. You can use &#8211;<code>I</code> to specify a filename, overriding FreeTDS&#8217;s configuration file search algorithm.</p>
 <h2>OPTIONS</h2>

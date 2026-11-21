@@ -1,5 +1,4 @@
 ---
-
 title: "mxtar(1)"
 name: "mxtar"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mxtar/"
 description: "mxtar – Wrapper for using GNU tar directly from a floppy disk"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mxtar &#8211; Wrapper for using GNU tar directly from a floppy disk </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mxtar </code> [ <code>&#8211;</code> ] <i>[ tar-options ]</i> <i>file</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>mxtar</code> let you use GNU <code><a href="/docs/linux/man/1-tar/">tar</a></code>(1) on a floppy disk without mounting it using <code><a href="/docs/linux/man/1-mtools/">mtools</a></code>(1). It is not strictly necessary on Debian GNU/Linux, because the GNU <code><a href="/docs/linux/man/1-tar/">tar</a></code>(1) program provides the same capability after copying the file locally with </p>
 <p> <code>mcopy</code> <i>file</i> <i>destination</i> </p>
 <p> but this utility is provided in the mtools package for other platforms and is retained here for completeness. </p>

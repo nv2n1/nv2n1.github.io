@@ -1,5 +1,4 @@
 ---
-
 title: "ocrad(1)"
 name: "ocrad"
 section: "1"
@@ -10,7 +9,9 @@ description: "Ocrad – manual page for Ocrad 0.18"
 
 <h2>NAME</h2>
 <p> Ocrad &#8211; manual page for Ocrad 0.18</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ocrad</code> [<i>options</i>] [<i>files</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> GNU Ocrad &#8211; Optical Character Recognition program. Reads pnm file(s), or standard input, and sends text to standard output.</p>
 <h2>OPTIONS</h2>
 <dl>

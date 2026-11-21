@@ -1,5 +1,4 @@
 ---
-
 title: "ctbrfs(3)"
 name: "ctbrfs"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-ctbrfs/"
 description: "ctbrfs.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ctbrfs.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctbrfs</code> (UPLO, TRANS, DIAG, N, KD, NRHS, AB, LDAB, B, LDB, X, LDX, FERR, BERR, WORK, RWORK, INFO)<br />
  <i></i><code>CTBRFS</code></p>

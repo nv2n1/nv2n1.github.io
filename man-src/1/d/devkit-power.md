@@ -1,5 +1,4 @@
 ---
-
 title: "devkit-power(1)"
 name: "devkit-power"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-devkit-power/"
 description: "devkit-power – DeviceKit-power command line tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> devkit-power &#8211; DeviceKit-power command line tool </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>devkit-power</code> [<code>&#8211;enumerate</code>] [<code>&#8211;monitor</code>] [<code>&#8211;monitor-detail</code>] [<code>&#8211;help</code>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <i>devkit-power</i></p>
 <dd>is a simple command line client for the <code><a href="/docs/linux/man/7-devicekit-power/">DeviceKit-power</a></code>(7) daemon. TODO: not fully documented.</dd>
 <h2>OPTIONS</h2>

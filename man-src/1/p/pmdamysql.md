@@ -1,5 +1,4 @@
 ---
-
 title: "pmdamysql(1)"
 name: "pmdamysql"
 section: "1"
@@ -10,6 +9,7 @@ description: "pmdamysql – MySQL database PMDA"
 
 <h2>NAME</h2>
 <p> <code>pmdamysql</code> &#8211; MySQL database PMDA</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdamysql</code> is a Performance Co-Pilot <font SIZE="-1">PMDA</font> which extracts live performance data from a running MySQL database.</p>
 <h2>INSTALLATION</h2>
 <p> <code>pmdamysql</code> uses a configuration file from (in this order):</p>

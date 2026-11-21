@@ -1,5 +1,4 @@
 ---
-
 title: "sordi(1)"
 name: "sordi"
 section: "1"
@@ -8,7 +7,9 @@ url: "/docs/linux/man/1-sordi/"
 description: "sordi – Load and re-serialise RDF data"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>sordi &#8211; Load and re-serialise RDF data</code></p>
+<h2>SYNOPSIS</h2>
 <p> sordi [OPTION]&#8230; INPUT BASE_URI </p>
 <h2>OPTIONS</h2>
 <dl>

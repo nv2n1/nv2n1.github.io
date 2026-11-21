@@ -1,5 +1,4 @@
 ---
-
 title: "ctpttf(3)"
 name: "ctpttf"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-ctpttf/"
 description: "ctpttf.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ctpttf.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctpttf</code> (TRANSR, UPLO, N, AP, ARF, INFO)<br />
  <i></i><code>CTPTTF</code> copies a triangular matrix from the standard packed format (TP) to the rectangular full packed format (TF).</p>

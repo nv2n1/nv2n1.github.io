@@ -1,5 +1,4 @@
 ---
-
 title: "rpmduplicates(1)"
 name: "rpmduplicates"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-rpmduplicates/"
 description: "rpmduplicates – find program with several version installed"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rpmduplicates &#8211; find program with several version installed </p>
+<h2>DESCRIPTION</h2>
 <p> sometimes, the upgrade of a system will install new packages, and &#8220;forget&#8221; to remove the older version. Rpmorphan do not work with this kind of unused packages. Rpmduplicates is the answer. I recommend to run it after each distribution upgrade (for example from fedora core 7 to 8).</p>
+<h2>SYNOPSIS</h2>
 <p> rpmduplicates.pl [options] </p>
 <p> options: </p>
 <pre>

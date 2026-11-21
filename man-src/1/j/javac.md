@@ -1,5 +1,4 @@
 ---
-
 title: "javac(1)"
 name: "javac"
 section: "1"
@@ -10,6 +9,7 @@ description: "javac – Reads Java class and interface definitions and compiles 
 
 <h2>NAME</h2>
 <p> javac &#8211; Reads Java class and interface definitions and compiles them into bytecode and class files.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 javac[options][sourcefiles][classes][@argfiles]
 </code></pre>
@@ -23,6 +23,7 @@ javac[options][sourcefiles][classes][@argfiles]
 <dd> One or more classes to be processed for annotations (such as <code>MyPackage.MyClass</code>).</dd>
 <dt><i>@argfiles</i></dt>
 <dd> One or more files that list options and source files. The <code>-J</code> options are not allowed in these files. See Command-Line Argument Files.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code>javac</code> command reads class and interface definitions, written in the Java programming language, and compiles them into bytecode class files. The <code>javac</code> command can also process annotations in Java source files and classes. </p>
 <p> There are two ways to pass source code file names to <code>javac</code>.</p>
 <dl>

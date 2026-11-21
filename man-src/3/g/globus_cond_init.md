@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_cond_init/"
 description: "Condition Variables –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Condition Variables &#8211; </p>
 <h3>Data Structures</h3>
 <p> union <code>globus_cond_t</code><br />
  <i>Condition variable. </i><br />

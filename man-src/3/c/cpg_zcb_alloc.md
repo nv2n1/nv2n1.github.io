@@ -1,5 +1,4 @@
 ---
-
 title: "cpg_zcb_alloc(3)"
 name: "cpg_zcb_alloc"
 section: "3"
@@ -10,8 +9,10 @@ description: "cpg_zcb_alloc – Allocates a zero copy buffer"
 
 <h2>NAME</h2>
 <p> cpg_zcb_alloc &#8211; Allocates a zero copy buffer</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cpg.h&gt;</code> </p>
 <p> <code>int cpg_zcb_alloc(cpg_handle_t </code><i>handle</i><code>, size_t </code><i>size</i><code>, void **</code><i>buffer</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>cpg_zcb_alloc</code> function will allocate a zero copy buffer for use with the <code><a href="/docs/linux/man/3-cpg_zcb_mcast_joined/">cpg_zcb_mcast_joined</a>(3)</code> function. This buffer should not be used in another thread while a cpg_zcb_mcast_joined operation is taking place on the buffer. The buffer is allocated via operating system mechanisms to avoid copying in the IPC layer. </p>
 <p> The argument <i>handle</i> describes the handle on which the buffer will be allocated. </p>
 <p> The argument <i>size</i> requests a buffer of size be allocated. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "perl5110delta(1)"
 name: "perl5110delta"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-perl5110delta/"
 description: "perl5110delta – what is new for perl v5.11.0"
 ---
 
+<h2 class="name">NAME</h2>
+<p> perl5110delta &#8211; what is new for perl v5.11.0 </p>
+<h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.10.0 release and the 5.11.0 development release.</p>
 <h2>Incompatible Changes</h2>
 <h3>Unicode interpretation of \w, \d, \s, and the <font SIZE="-1">POSIX</font> character classes redefined.</h3>

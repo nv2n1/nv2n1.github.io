@@ -1,5 +1,4 @@
 ---
-
 title: "tracker-miner-fs(1)"
 name: "tracker-miner-fs"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-tracker-miner-fs/"
 description: "tracker-miner-fs – Used to crawl the file system to mine data."
 ---
 
+<h2 class="name">NAME</h2>
+<p> tracker-miner-fs &#8211; Used to crawl the file system to mine data.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>tracker-miner-fs</code> [<i>OPTION</i>&#8230;] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>tracker-miner-fs</code> is not supposed to be run by the user since it is started by its .desktop file when the user logs in. It can also be started manually of course for debugging purposes. You can not run more than one instance of this at the same time. </p>
 <p> <code>tracker-miner-fs</code> mines information about applications and files only. </p>
 <h2>OPTIONS</h2>

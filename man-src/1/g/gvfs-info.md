@@ -1,5 +1,4 @@
 ---
-
 title: "gvfs-info(1)"
 name: "gvfs-info"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-gvfs-info/"
 description: "gvfs-info"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gvfs-info </p>
+<h2>DESCRIPTION</h2>
 <p> <code>gvfs-info</code> has been deprecated and it is redirected to <code>gio info</code>.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gio/">gio</a></code>(1), m[blue]<code>GIO commandline tool</code>m[]<font SIZE="-2">[1]</font></p>

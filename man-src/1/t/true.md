@@ -1,5 +1,4 @@
 ---
-
 title: "true(1)"
 name: "true"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-true/"
 description: "true – do nothing, successfully"
 ---
 
+<h2 class="name">NAME</h2>
+<p> true &#8211; do nothing, successfully </p>
+<h2>SYNOPSIS</h2>
 <p> <code>true</code> [<i>,ignored command line arguments/</i>]<br />
  <code>true</code> <i>,OPTION/</i></p>
+<h2>DESCRIPTION</h2>
 <p> Exit with a status code indicating success.</p>
 <dl>
 <dt><code>&#8211;help</code></dt>

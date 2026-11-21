@@ -1,5 +1,4 @@
 ---
-
 title: "acroread(1)"
 name: "acroread"
 section: "1"
@@ -10,7 +9,9 @@ description: "acroread – Adobe PDF Viewer for viewing PDF files on X Window Sy
 
 <h2>NAME</h2>
 <p> acroread &#8211; Adobe PDF Viewer for viewing PDF files on X Window System. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>acroread</code> [<i>OPTIONS</i>] [<i>file</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>Adobe Reader</code> is a free PDF reader, designed for standards compliance, performance and portability. It is a tool for opening and using Adobe PDFs that are created in Adobe Acrobat. Although you can&#8217;t create PDFs in Reader, you can use Reader to view, print, and manage PDFs. After opening a PDF in Reader, you have a variety of tools to help you find information quickly. If you receive a PDF form, you can complete it online and submit it electronically. If you receive an invitation to review a PDF, use the commenting and markup tools to annotate it. Use the Reader multimedia tools to play video and music in a PDF. And if a PDF contains sensitive information, you can sign or certify a document with a digital ID. </p>
 <h2>OPTIONS</h2>
 <p> A summary of the options supported by <code>acroread</code> is included below. </p>

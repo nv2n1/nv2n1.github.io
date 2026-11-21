@@ -1,5 +1,4 @@
 ---
-
 title: "rt_sigaction(2)"
 name: "rt_sigaction"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-rt_sigaction/"
 description: "sigaction, rt_sigaction – examine and change a signal action"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sigaction, rt_sigaction &#8211; examine and change a signal action </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;signal.h&gt;
 int sigaction(int signum, const struct sigaction *act,
@@ -16,6 +18,7 @@ int sigaction(int signum, const struct sigaction *act,
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>sigaction</code>(): _POSIX_C_SOURCE </p>
 <p> <i>siginfo_t</i>: _POSIX_C_SOURCE &gt;= 199309L</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>sigaction</code>() system call is used to change the action taken by a process on receipt of a specific signal. (See <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7) for an overview of signals.) </p>
 <p> <i>signum</i> specifies the signal and can be any valid signal except <code>SIGKILL</code> and <code>SIGSTOP</code>. </p>
 <p> If <i>act</i> is non-NULL, the new action for signal <i>signum</i> is installed from <i>act</i>. If <i>oldact</i> is non-NULL, the previous action is saved in <i>oldact</i>. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ck_hs_init(3)"
 name: "ck_hs_init"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_hs_init – initialize a hash set"
 <p> <code>ck_hs_init</code> &#8211; initialize a hash set</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_hs.h Ft typedef unsigned long Fn ck_hs_hash_cb_t const void *key unsigned long seed Ft typedef bool Fn ck_hs_compare_cb_t const void *c1 const void *c2 Ft bool Fn ck_hs_init ck_hs_t *hs unsigned int mode ck_hs_hash_cb_t *hash_function ck_hs_compare_cb_t *compare struct ck_malloc *allocator unsigned long capacity unsigned long seed</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_hs_init function initializes the hash set pointed to by the Fa hs pointer. </p>
 <p> The argument Fa mode specifies the type of key-value pairs to be stored in the hash set as well as the expected concurrent access model. The value of Fa mode consists of a bitfield of one of the following:</p>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "javac-java-1(1)"
 name: "javac-java-1"
 section: "1"
@@ -10,6 +9,7 @@ description: "javac – Java programming language compiler"
 
 <h2>Name</h2>
 <p> javac &#8211; Java programming language compiler </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 javac[options][sourcefiles][classes][@argfiles]
 </code></pre>
@@ -25,6 +25,7 @@ javac[options][sourcefiles][classes][@argfiles]
 <dt>@argfiles</dt>
 <dd> One or more files that lists options and source files. The <i>-J</i> options are not allowed in these files.</dd></dl>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> The <code>javac</code> tool reads class and interface definitions, written in the Java programming language, and compiles them into bytecode class files. It can also process annotations in Java source files and classes. </p>
 <p> There are two ways to pass source code file names to <code>javac</code>: </p>
 <dl>

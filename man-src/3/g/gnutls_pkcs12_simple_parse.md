@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pkcs12_simple_parse(3)"
 name: "gnutls_pkcs12_simple_parse"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_pkcs12_simple_parse – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs12_simple_parse &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs12.h&gt;</code> </p>
 <p> <code>int gnutls_pkcs12_simple_parse(gnutls_pkcs12_t </code><i>p12</i><code>, const char * </code><i>password</i><code>, gnutls_x509_privkey_t * </code><i>key</i><code>, gnutls_x509_crt_t ** </code><i>chain</i><code>, unsigned int * </code><i>chain_len</i><code>, gnutls_x509_crt_t ** </code><i>extra_certs</i><code>, unsigned int * </code><i>extra_certs_len</i><code>, gnutls_x509_crl_t * </code><i>crl</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -32,6 +32,7 @@ description: "gnutls_pkcs12_simple_parse – API function"
 <dd> an optional structure to store the parsed CRL (may be <code>NULL</code>).</dd>
 <dt>unsigned int flags</dt>
 <dd> should be zero or one of GNUTLS_PKCS12_SP_*</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function parses a PKCS12 structure in <i>pkcs12</i> and extracts the private key, the corresponding certificate chain, any additional certificates and a CRL. </p>
 <p> The <i>extra_certs</i> and <i>extra_certs_len</i> parameters are optional and both may be set to <code>NULL</code>. If either is non-<code>NULL</code>, then both must be set. The value for <i>extra_certs</i> is allocated using <code>gnutls_malloc()</code>. </p>
 <p> Encrypted PKCS12 bags and PKCS8 private keys are supported, but only with password based security and the same password for all operations. </p>

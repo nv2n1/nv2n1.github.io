@@ -1,5 +1,4 @@
 ---
-
 title: "dh_compress(1)"
 name: "dh_compress"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dh_compress/"
 description: "dh_compress – compress files and fix symlinks in package build directories"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dh_compress &#8211; compress files and fix symlinks in package build directories </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dh_compress</code> [<i>debhelper options</i>] [<code>-X</code><i>item</i>] [<code>-A</code>] [<i>file</i> &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>dh_compress</code> is a debhelper program that is responsible for compressing the files in package build directories, and makes sure that any symlinks that pointed to the files before they were compressed are updated to point to the new files. </p>
 <p> By default, <code>dh_compress</code> compresses files that Debian policy mandates should be compressed, namely all files in <i>usr/share/info</i>, <i>usr/share/man</i>, files in <i>usr/share/doc</i> that are larger than 4k in size, (except the <i>copyright</i> file, <i>.html</i> and other web files, image files, and files that appear to be already compressed based on their extensions), and all <i>changelog</i> files. Plus <font SIZE="-1">PCF</font> fonts underneath <i>usr/share/fonts/X11/</i></p>
 <h2>FILES</h2>

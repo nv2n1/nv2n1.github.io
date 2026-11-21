@@ -1,5 +1,4 @@
 ---
-
 title: "llvm-strings-14(1)"
 name: "llvm-strings-14"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-llvm-strings-14/"
 description: "llvm-strings – print strings"
 ---
 
+<h2 class="name">NAME</h2>
+<p> llvm-strings &#8211; print strings </p>
+<h2>SYNOPSIS</h2>
 <p> <code>llvm-strings</code> [<i>options</i>] [<i>input…</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>llvm-strings</code> is a tool intended as a drop-in replacement for GNU’s <code>strings</code>, which looks for printable strings in files and writes them to the standard output stream. A printable string is any sequence of four (by default) or more printable ASCII characters. The end of the file, or any other byte, terminates the current sequence. </p>
 <p> <code>llvm-strings</code> looks for strings in each <code>input</code> file specified. Unlike GNU <code>strings</code> it looks in the entire input file, regardless of file format, rather than restricting the search to certain sections of object files. If “<code>&#8211;</code>” is specified as an <code>input</code>, or no <code>input</code> is specified, the program reads from the standard input stream.</p>
 <h2>EXAMPLE</h2>

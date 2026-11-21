@@ -1,5 +1,4 @@
 ---
-
 title: "fonttosfnt(1)"
 name: "fonttosfnt"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-fonttosfnt/"
 description: "fonttosfnt – Wrap a bitmap font in a sfnt (TrueType) wrapper"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fonttosfnt &#8211; Wrap a bitmap font in a sfnt (TrueType) wrapper </p>
+<h2>SYNOPSIS</h2>
 <p> <code>fonttosfnt</code> [ <i>options</i> ] <code>-o</code> <i>file.ttf</i> [ <code>&#8212;</code> ] <i>font</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Wrap a bitmap font or a set of bitmap fonts in a sfnt (TrueType or OpenType) wrapper.</p>
 <h2>OPTIONS</h2>
 <dl>

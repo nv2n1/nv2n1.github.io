@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_privkey_import(3)"
 name: "gnutls_x509_privkey_import"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_privkey_import – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_privkey_import &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_privkey_import(gnutls_x509_privkey_t </code><i>key</i><code>, const gnutls_datum_t * </code><i>data</i><code>, gnutls_x509_crt_fmt_t </code><i>format</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_x509_privkey_import – API function"
 <dd> The DER or PEM encoded certificate.</dd>
 <dt>gnutls_x509_crt_fmt_t format</dt>
 <dd> One of DER or PEM</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will convert the given DER or PEM encoded key to the native <code>gnutls_x509_privkey_t</code> format. The output will be stored in<br />
 &nbsp;<wbr><i>key</i>&nbsp;<wbr>. </p>
 <p> If the key is PEM encoded it should have a header that contains &quot;PRIVATE KEY&quot;. Note that this function falls back to PKCS <code>8</code> decoding without password, if the default format fails to import.</p>

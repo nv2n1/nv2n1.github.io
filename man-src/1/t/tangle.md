@@ -1,5 +1,4 @@
 ---
-
 title: "tangle(1)"
 name: "tangle"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-tangle/"
 description: "tangle – translate WEB to Pascal"
 ---
 
+<h2 class="name">NAME</h2>
+<p> tangle &#8211; translate WEB to Pascal </p>
+<h2>SYNOPSIS</h2>
 <p> <code>tangle</code> [<i>options</i>] <i>webfile</i>[<i></i><code>.web</code>] [<i>changefile</i>[<i></i><code>.ch</code>]]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page is not meant to be exhaustive. The complete documentation for this version of TeX can be found in the info file or manual <i>Web2C: A TeX implementation</i>. </p>
 <p> The <code>tangle</code> program converts a Web source document into a Pascal program that may be compiled in the usual way with the on-line Pascal compiler (e.g., <code>pc</code>(1)). The output file is packed into lines of 72 characters or less, with the only concession to readability being the termination of lines at semicolons when this can be done conveniently. </p>
 <p> The Web language allows you to prepare a single document containing all the information that is needed both to produce a compilable Pascal program and to produce a well-formatted document describing the program in as much detail as the writer may desire. The user of Web must be familiar with both TeX and Pascal. Web also provides a relatively simple, although adequate, macro facility that permits a Pascal program to be written in small easily-understood modules. </p>

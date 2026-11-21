@@ -1,5 +1,4 @@
 ---
-
 title: "mysql_config(1)"
 name: "mysql_config"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mysql_config/"
 description: "mysql_config – get compile options for compiling clients"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mysql_config &#8211; get compile options for compiling clients </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysql_config </code><i>options</i></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>mysql_config</code></p>
 <dd>provides you with useful information for compiling your MariaDB client and connecting it to MariaDB. </dd>
 <p> <code>mysql_config</code> supports the following options. </p>

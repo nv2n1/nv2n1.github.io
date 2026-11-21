@@ -1,5 +1,4 @@
 ---
-
 title: "wtoc(1)"
 name: "wtoc"
 section: "1"
@@ -10,7 +9,9 @@ description: "wtoc – Convert a Wnn text-form dictionary (or dictionaries) into
 
 <h2>NAME</h2>
 <p> wtoc &#8211; Convert a Wnn text-form dictionary (or dictionaries) into Canna text-form dictionaries</p>
+<h2>SYNOPSIS</h2>
 <p> <code>wtoc [-f </code><i>hinshidata</i>] [<i>wnnjisho</i>] [<i>cannajisho</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> wtoc converts a Wnn text-form dictionary file into Canna text-form dictionary file. If all dictionary files are omitted, the Wnn dictionary data is input through the standard input. In this case, the dictionary of the Japanes Input System is output from the standard output. If one dictionary file is specified, it will be regarded as a Wnn dictionary. At this time, Canna dictionary output to the standard output.</p>
 <h2>OPTIONS</h2>
 <dl>

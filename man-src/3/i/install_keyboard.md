@@ -1,5 +1,4 @@
 ---
-
 title: "install_keyboard(3)"
 name: "install_keyboard"
 section: "3"
@@ -10,8 +9,10 @@ description: "install_keyboard – Installs the Allegro keyboard interrupt handl
 
 <h2>NAME</h2>
 <p> install_keyboard &#8211; Installs the Allegro keyboard interrupt handler.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>int install_keyboard();</code></p>
+<h2>DESCRIPTION</h2>
 <p> Installs the Allegro keyboard interrupt handler. You must call this before using any of the keyboard input routines. Once you have set up the Allegro handler, you can no longer use operating system calls or C library functions to access the keyboard. </p>
 <p> Note that on some platforms the keyboard won&#8217;t work unless you have set a graphics mode, even if this function returns a success value before calling set_gfx_mode. This can happen in environments with graphic windowed modes, since Allegro usually reads the keyboard through the graphical window (which appears after the set_gfx_mode call). Example: </p>
 <pre><code>

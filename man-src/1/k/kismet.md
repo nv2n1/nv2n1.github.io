@@ -1,5 +1,4 @@
 ---
-
 title: "kismet(1)"
 name: "kismet"
 section: "1"
@@ -8,10 +7,13 @@ url: "/docs/linux/man/1-kismet/"
 description: "kismet – Wireless sniffing and monitoring"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>kismet</code> &#8211; Wireless sniffing and monitoring </p>
+<h2>SYNOPSIS</h2>
 <p> <i>kismet</i> [server-options] [- ] [client-options] </p>
 <p> <i>kismet_server</i> [-<code>nqs</code> ] [-<code>t </code><i>title</i> ] [-<code>f </code><i>config-file</i> ] [-<code>c </code><i>capture-source</i> ] [-<code>C </code><i>enable-capture-sources</i> ] [-<code>l </code><i>log-types</i> ] [-<code>d </code><i>dump-type</i> ] [-<code>m </code><i>max-packets-per-file</i> ] [-<code>g </code><i>gpshost:port</i> ] [-<code>p </code><i>listen-port</i> ] [-<code>a </code><i>allowed-hosts</i> ] [-<code>N </code><i>server-name</i> ] </p>
 <p> <i>kismet_client</i> [-<code>qr</code> ] [-<code>f </code><i>config-file</i> ] [-<code>s </code><i>serverhost:port</i> ] [-<code>g </code><i>gui-type</i> ] [-<code>c </code><i>display-columns</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Kismet</code> is an 802.11 layer2 wireless network detector, sniffer, and intrusion detection system. Kismet will work with any wireless card which supports raw monitoring (rfmon) mode, and can sniff 802.11b, 802.11a, and 802.11g traffic. </p>
 <p> Kismet identifies networks by passively collecting packets and detecting standard named networks, detecting (and given time, decloaking) hidden networks, and inferring the presence of nonbeaconing networks via data traffic.<br />
  <code>kismet</code> supports logging to the wtapfile packet format (readable by tcpdump and ethereal) and saves detected network informat as plaintext, CSV, and XML. <code>kismet</code> is capable of using any GPS supported by <code>gpsd</code> and logs and plots network data. </p>

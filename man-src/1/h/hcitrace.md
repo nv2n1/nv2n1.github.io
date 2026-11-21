@@ -1,5 +1,4 @@
 ---
-
 title: "hcitrace(1)"
 name: "hcitrace"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-hcitrace/"
 description: "hcitrace – hcitrace daemon"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hcitrace &#8211; hcitrace daemon </p>
+<h2>SYNOPSIS</h2>
 <p> <code>hcitrace</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>hcitrace</code> daemon allow per advanced tracing capabilities with multiple HCI controllers per stream. </p>
 <h2>USAGE</h2>
 <p> hcitrace [OPTION&#8230;] </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "euca-create-volume(1)"
 name: "euca-create-volume"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-create-volume – Create a new volume"
 
 <h2>NAME</h2>
 <p> euca-create-volume &#8211; Create a new volume</p>
+<h2>SYNOPSIS</h2>
 <p> euca-create-volume <code>-z</code> ZONE [-s GiB] [&#8211;snapshot SNAPSHOT] [-t VOLTYPE]</p>
 <dl>
 <dt>[-i IOPS] [&#8211;show-empty-fields] [-U URL]</dt>
 <dd> [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Create a new volume</p>
 <h3>optional arguments:</h3>
 <dl>

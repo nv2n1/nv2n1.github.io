@@ -1,5 +1,4 @@
 ---
-
 title: "metaflac(1)"
 name: "metaflac"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-metaflac/"
 description: "metaflac – program to list, add, remove, or edit metadata in one or more FLAC files."
 ---
 
+<h2 class="name">NAME</h2>
+<p> metaflac &#8211; program to list, add, remove, or edit metadata in one or more FLAC files. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>metaflac</code> [ <i>options</i> ] [ <i>operations</i> ] <i>FLACfile</i><i> &#8230;</i> </p>
+<h2>DESCRIPTION</h2>
 <p> Use <code>metaflac</code> to list, add, remove, or edit metadata in one or more FLAC files. You may perform one major operation, or many shorthand operations at a time.</p>
 <h2>OPTIONS</h2>
 <dl>

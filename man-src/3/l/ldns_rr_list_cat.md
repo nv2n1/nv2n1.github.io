@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_rr_list_cat(3)"
 name: "ldns_rr_list_cat"
 section: "3"
@@ -10,12 +9,14 @@ description: "ldns_rr_list_cat, ldns_rr_list_push_rr, ldns_rr_list_pop_rr"
 
 <h2>NAME</h2>
 <p> ldns_rr_list_cat, ldns_rr_list_push_rr, ldns_rr_list_pop_rr </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> bool ldns_rr_list_cat(ldns_rr_list *left, ldns_rr_list *right); </p>
 <p> bool ldns_rr_list_push_rr(ldns_rr_list *rr_list, const ldns_rr *rr); </p>
 <p> ldns_rr* ldns_rr_list_pop_rr(ldns_rr_list *rr_list); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_rr_list_cat</i>()</dt>
 <dd>concatenates two ldns_rr_lists together. This modifies *left (to extend it and add the pointers from *right). .br <code>left</code>: the leftside .br <code>right</code>: the rightside .br Returns a left with right concatenated to it</dd></dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "bsearch(3)"
 name: "bsearch"
 section: "3"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/3-bsearch/"
 description: "bsearch – binary search of a sorted array"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bsearch &#8211; binary search of a sorted array </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;
 void *bsearch(const void *key, const void *base,
               size_t nmemb, size_t size,
               int (*compar)(const void *, const void *));
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>bsearch</code>() function searches an array of <i>nmemb</i> objects, the initial member of which is pointed to by <i>base</i>, for a member that matches the object pointed to by <i>key</i>. The size of each member of the array is specified by <i>size</i>. </p>
 <p> The contents of the array should be in ascending sorted order according to the comparison function referenced by <i>compar</i>. The <i>compar</i> routine is expected to have two arguments which point to the <i>key</i> object and to an array member, in that order, and should return an integer less than, equal to, or greater than zero if the <i>key</i> object is found, respectively, to be less than, to match, or be greater than the array member.</p>
 <h2>RETURN VALUE</h2>

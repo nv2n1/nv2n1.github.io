@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_heartbeat_get_timeout(3)"
 name: "gnutls_heartbeat_get_timeout"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_heartbeat_get_timeout – API function"
 
 <h2>NAME</h2>
 <p> gnutls_heartbeat_get_timeout &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>unsigned int gnutls_heartbeat_get_timeout(gnutls_session_t </code><i>session</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_session_t session</dt>
 <dd> is a <code>gnutls_session_t</code> structure.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will return the milliseconds remaining for a retransmission of the previously sent ping message. This function is useful when ping is used in non-blocking mode, to estimate when to call <code>gnutls_heartbeat_ping()</code> if no packets have been received.</p>
 <h2>RETURNS</h2>
 <p> the remaining time in milliseconds.</p>

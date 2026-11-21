@@ -1,5 +1,4 @@
 ---
-
 title: "beagle-settings(1)"
 name: "beagle-settings"
 section: "1"
@@ -10,7 +9,9 @@ description: "beagle-settings"
 
 <h2>NAME</h2>
 <p> beagle-settings</p>
+<h2>SYNOPSIS</h2>
 <p> <code>beagle-settings</code></p>
+<h2>DESCRIPTION</h2>
 <p> A graphical interface to control settings of the Beagle search system. For more information, see the man page for <code>beagle-config</code> (the command-line tool to control Beagle settings)</p>
 <h2>AUTHOR</h2>
 <p> Novell, Inc.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "slagts(3)"
 name: "slagts"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-slagts/"
 description: "slagts.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> slagts.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slagts</code> (JOB, N, A, B, C, D, IN, Y, TOL, INFO)<br />
  <i></i><code>SLAGTS</code> solves the system of equations (T-λI)x = y or (T-λI)Tx = y,where T is a general tridiagonal matrix and λ a scalar, using the LU factorization computed by slagtf.</p>

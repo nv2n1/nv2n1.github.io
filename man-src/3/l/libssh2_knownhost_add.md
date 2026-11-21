@@ -1,5 +1,4 @@
 ---
-
 title: "libssh2_knownhost_add(3)"
 name: "libssh2_knownhost_add"
 section: "3"
@@ -10,6 +9,7 @@ description: "libssh2_knownhost_add – add a known host"
 
 <h2>NAME</h2>
 <p> libssh2_knownhost_add &#8211; add a known host</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;libssh2.h&gt;
 int libssh2_knownhost_add(LIBSSH2_KNOWNHOSTS *hosts,
@@ -18,6 +18,7 @@ int libssh2_knownhost_add(LIBSSH2_KNOWNHOSTS *hosts,
                           int typemask,
                           struct libssh2_knownhost **store);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> We discourage use of this function as of libssh2 1.2.5. Instead we strongly urge users to use <i><a href="/docs/linux/man/3-libssh2_knownhost_addc/">libssh2_knownhost_addc</a>(3)</i> instead, which as a more complete API. <i><a href="/docs/linux/man/3-libssh2_knownhost_add/">libssh2_knownhost_add</a>(3)</i> is subject for removal in a future release. </p>
 <p> Adds a known host to the collection of known hosts identified by the &#8216;hosts&#8217; handle. </p>
 <p> <i>host</i> is a pointer the host name in plain text or hashed. If hashed, it must be provided base64 encoded. The host name can be the IP numerical address of the host or the full name. </p>

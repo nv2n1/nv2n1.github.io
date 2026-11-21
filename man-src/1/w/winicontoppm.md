@@ -1,5 +1,4 @@
 ---
-
 title: "winicontoppm(1)"
 name: "winicontoppm"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-winicontoppm/"
 description: "winicontoppm – convert a Windows .ico file into 1 or more portable pixmap files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> winicontoppm &#8211; convert a Windows .ico file into 1 or more portable pixmap files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>winicontoppm</code> [<i>-writeands</i>] [<i>-allicons|-bestqual</i>] [<i>-multippm</i>] [<i>-verbose</i>] [<i>iconfile</i>] [<i>ppmdestfile</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Reads a Microsoft Windows .ico file, converts it to one or more ppms. </p>
 <p> A Windows icon contains 1 or more images, at different resolutions and color depths. Each image has an &#8216;and&#8217; mask, which contains transparancy data. </p>
 <p> By default, the output goes to Standard Output. If you specify <i>ppmdestfile</i>, output goes into one or more files named as follows. If it&#8217;s just one file (i.e. you specify the <code>-multippm </code> option or don&#8217;t specify <code>-allicons</code>), the file specification is <i>ppmdestfile</i><code>.ppm</code><i></i>. If it&#8217;s multiple files, their file specifications are <i>ppmdestfile</i><code>_1.ppm</code><i></i>, <i>ppmdestfile</i><code>_2.ppm</code><i></i>, etc. </p>

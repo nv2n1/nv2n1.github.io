@@ -1,5 +1,4 @@
 ---
-
 title: "globus_xio_data_descriptor_cntl(3)"
 name: "globus_xio_data_descriptor_cntl"
 section: "3"
@@ -8,7 +7,10 @@ url: "/docs/linux/man/3-globus_xio_data_descriptor_cntl/"
 description: "builtins/http/globus_xio_http.h –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> builtins/http/globus_xio_http.h &#8211; </p>
 <p> Globus XIO HTTP Driver Header.</p>
+<h2>SYNOPSIS</h2>
 <p> #include &#8216;globus_xio.h&#8217; </p>
 <h3>Data Structures</h3>
 <p> struct <code>globus_xio_http_header_t</code><br />

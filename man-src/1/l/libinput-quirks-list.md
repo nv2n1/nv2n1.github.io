@@ -1,5 +1,4 @@
 ---
-
 title: "libinput-quirks-list(1)"
 name: "libinput-quirks-list"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-libinput-quirks-list/"
 description: "libinput-quirks – quirk debug helper for libinput"
 ---
 
+<h2 class="name">NAME</h2>
+<p> libinput-quirks &#8211; quirk debug helper for libinput </p>
+<h2>SYNOPSIS</h2>
 <p> <code>libinput quirks list [&#8211;data-dir /path/to/dir] [&#8211;verbose] </code><i>/dev/input/event0</i> </p>
 <p> <code>libinput quirks validate [&#8211;data-dir /path/to/dir] [&#8211;verbose]</code> </p>
 <p> <code>libinput quirks &#8211;help</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>libinput quirks</code> tool interacts with libinput&#8217;s quirks database. </p>
 <p> When invoked as <code>libinput quirks list,</code> the tool lists all quirks applied to the given device. </p>
 <p> When invoked as <code>libinput quirks validate,</code> the tool checks for parsing errors in the quirks files and fails if a parsing error is encountered. </p>

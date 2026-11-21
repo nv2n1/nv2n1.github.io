@@ -1,5 +1,4 @@
 ---
-
 title: "regshell(1)"
 name: "regshell"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-regshell/"
 description: "regshell – Windows registry file browser using readline"
 ---
 
+<h2 class="name">NAME</h2>
+<p> regshell &#8211; Windows registry file browser using readline </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>regshell</code> [&#8211;help] [&#8211;backend=BACKEND] [&#8211;credentials=CREDENTIALS] [location]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>regshell is a utility that lets you browse thru a Windows registry file as if you were using a regular unix shell to browse thru a file system.</dd>
 <h2>OPTIONS</h2>
 <p> &#8211;help</p>

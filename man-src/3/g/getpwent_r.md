@@ -1,5 +1,4 @@
 ---
-
 title: "getpwent_r(3)"
 name: "getpwent_r"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-getpwent_r/"
 description: "getpwent_r, fgetpwent_r – get passwd file entry reentrantly"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getpwent_r, fgetpwent_r &#8211; get passwd file entry reentrantly </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;pwd.h&gt;
 int getpwent_r(struct passwd *pwbuf, char *buf,
@@ -26,6 +28,7 @@ int fgetpwent_r(FILE *stream, struct passwd *pwbuf, char *buf,
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_SVID_SOURCE</p>
+<h2>DESCRIPTION</h2>
 <p> The functions <code>getpwent_r</code>() and <code>fgetpwent_r</code>() are the reentrant versions of <code><a href="/docs/linux/man/3-getpwent/">getpwent</a></code>(3) and <code><a href="/docs/linux/man/3-fgetpwent/">fgetpwent</a></code>(3). The former reads the next passwd entry from the stream initialized by <code><a href="/docs/linux/man/3-setpwent/">setpwent</a></code>(3). The latter reads the next passwd entry from <i>stream</i>. </p>
 <p> The <i>passwd</i> structure is defined in <i>&lt;pwd.h&gt;</i> as follows: </p>
 <p> struct passwd {<br />

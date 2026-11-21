@@ -1,5 +1,4 @@
 ---
-
 title: "get_kernel_syms(2)"
 name: "get_kernel_syms"
 section: "2"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/2-get_kernel_syms/"
 description: "get_kernel_syms – retrieve exported kernel and module symbols"
 ---
 
+<h2 class="name">NAME</h2>
+<p> get_kernel_syms &#8211; retrieve exported kernel and module symbols </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/module.h&gt;
 int get_kernel_syms(struct kernel_sym *table);
 </code></pre>
 <p> <i>Note</i>: No declaration of this system call is provided in glibc headers; see NOTES.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Note</code>: This system call is present only in kernels before Linux 2.6. </p>
 <p> If <i>table</i> is NULL, <code>get_kernel_syms</code>() returns the number of symbols available for query. Otherwise, it fills in a table of structures: </p>
 <p> struct kernel_sym {<br />

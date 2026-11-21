@@ -1,5 +1,4 @@
 ---
-
 title: "gmt_shell_functions(1)"
 name: "gmt_shell_functions"
 section: "1"
@@ -10,6 +9,7 @@ description: "gmt_shell_functions.sh – Practical functions to be used in GMT b
 
 <h2>NAME</h2>
 <p> gmt_shell_functions.sh &#8211; Practical functions to be used in GMT bourne shell scripts</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gmt_init_tmpdir</code><br />
  <code>gmt_remove_tmpdir</code><br />
  <code>gmt_clean_up</code> [<i>prefix</i>]<br />
@@ -24,6 +24,7 @@ description: "gmt_shell_functions.sh – Practical functions to be used in GMT b
  <code>gmt_set_psfile</code> <i>file</i><br />
  <code>gmt_set_framename</code> <i>prefix framenumber</i><br />
  <code>gmt_set_framenext</code> <i>framenumber</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>gmt_shell_functions.sh</code> provides a set of functions to bourne (again) shell scripts in support of <code>GMT</code>. The calling shell script should include the following line, before the functions can be used: </p>
 <p> <code>. gmt_shell_functions.sh</code> </p>
 <p> Once included in a shell script, <code>gmt_shell_functions.sh</code> allows <code>GMT</code> users to do some scripting more easily than otherwise. The functions made available are:</p>

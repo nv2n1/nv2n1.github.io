@@ -1,5 +1,4 @@
 ---
-
 title: "ioctl_list(2)"
 name: "ioctl_list"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-ioctl_list/"
 description: "ioctl_list – list of ioctl calls in Linux/i386 kernel"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ioctl_list &#8211; list of ioctl calls in Linux/i386 kernel </p>
+<h2>DESCRIPTION</h2>
 <p> This is Ioctl List 1.3.27, a list of ioctl calls in Linux/i386 kernel 1.3.27. It contains 421 ioctls from <i>&lt;/usr/include/{asm,linux}/*.h&gt;</i>. For each ioctl, its numerical value, its name, and its argument type are given. </p>
 <p> An argument type of <i>const struct foo&nbsp;*</i> means the argument is input to the kernel. <i>struct foo&nbsp;*</i> means the kernel outputs the argument. If the kernel uses the argument for both input and output, this is marked with <i>//&nbsp;I-O</i>. </p>
 <p> Some ioctls take more arguments or return more values than a single structure. These are marked <i>//&nbsp;MORE</i> and documented further in a separate section. In addition, information about some ioctls can be found in the pages listed under SEE ALSO in <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2). </p>

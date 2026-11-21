@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_openpgp_set_recv_key_function(3)"
 name: "gnutls_openpgp_set_recv_key_function"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_openpgp_set_recv_key_function – API function"
 
 <h2>NAME</h2>
 <p> gnutls_openpgp_set_recv_key_function &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>
 <p> <code>void gnutls_openpgp_set_recv_key_function(gnutls_session_t </code><i>session</i><code>, gnutls_openpgp_recv_key_func </code><i>func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_openpgp_set_recv_key_function – API function"
 <dd> a TLS session</dd>
 <dt>gnutls_openpgp_recv_key_func func</dt>
 <dd> the callback</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This funtion will set a key retrieval function for OpenPGP keys. This callback is only useful in server side, and will be used if the peer sent a key fingerprint instead of a full key. </p>
 <p> The retrieved key must be allocated using <code>gnutls_malloc()</code>.</p>
 <h2>REPORTING BUGS</h2>

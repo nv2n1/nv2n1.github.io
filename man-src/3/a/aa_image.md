@@ -1,5 +1,4 @@
 ---
-
 title: "aa_image(3)"
 name: "aa_image"
 section: "3"
@@ -10,12 +9,14 @@ description: "aa_image – returns pointer to the framebuffer emulated by AA-lib
 
 <h2>NAME</h2>
 <p> aa_image &#8211; returns pointer to the framebuffer emulated by AA-lib.</p>
+<h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>
 <p> char *aa_image(aa_context *a); </code></p>
 <h2>PARAMETERS</h2>
 <dl>
 <dt><code>aa_context *a</code></dt>
 <dd> Specifies the AA-lib context to operate on.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The framebuffer is simple array of characters specifying the brightness value (or palette index depending on the aa_render call). The array is organizated in the aa_imgheight (a) rows of aa_imgwidth(a) characters.</p>
 <h2>RETURNS</h2>
 <p> Pointer to framebuffer emulated by AA-lib.</p>

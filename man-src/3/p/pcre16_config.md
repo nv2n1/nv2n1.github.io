@@ -1,5 +1,4 @@
 ---
-
 title: "pcre16_config(3)"
 name: "pcre16_config"
 section: "3"
@@ -7,12 +6,13 @@ letter: "p"
 url: "/docs/linux/man/3-pcre16_config/"
 description: "PCRE – Perl-compatible regular expressions"
 ---
-
 <p>PCRE &#8211; Perl-compatible regular expressions </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;pcre.h&gt;</code> </p>
 <p> <font SIZE="-1"><code>int pcre_config(int </code><i>what</i>, void *<i>where</i>); </font> </p>
 <p> <code>int pcre16_config(int </code><i>what</i>, void *<i>where</i>); </p>
 <p> <code>int pcre32_config(int </code><i>what</i>, void *<i>where</i>);  </p>
+<h2>DESCRIPTION</h2>
 <p>This function makes it possible for a client program to find out which optional features are available in the version of the PCRE library it is using. The arguments are as follows: </p>
 <p> <br />
 &nbsp;<wbr>&nbsp;<i>what</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;A code specifying what information is required <br />

@@ -1,5 +1,4 @@
 ---
-
 title: "dh_perl_openssl(1)"
 name: "dh_perl_openssl"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dh_perl_openssl/"
 description: "dh_perl_openssl – add dependencies required for OpenSSL modules"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dh_perl_openssl &#8211; add dependencies required for OpenSSL modules </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dh_perl_openssl</code> [<i>debhelper options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> dh_perl_openssl is a debhelper program that is responsible for adding a dependency on perl-openssl-abi-* to the ${perl:Depends} substitution variable. Such a dependency is needed for packages that expose the OpenSSL binary interface to Perl code, such as pointers to <tt>&quot;SSL_CTX&quot;</tt> structs. </p>
 <p> A debhelper addon is also provided. This makes it possible to just use </p>
 <pre>

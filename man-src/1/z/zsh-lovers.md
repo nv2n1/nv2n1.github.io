@@ -1,5 +1,4 @@
 ---
-
 title: "zsh-lovers(1)"
 name: "zsh-lovers"
 section: "1"
@@ -7,7 +6,9 @@ letter: "z"
 url: "/docs/linux/man/1-zsh-lovers/"
 description: "zsh-lovers – tips, tricks and examples for the Z shell"
 ---
-
+<h2 class="name">NAME</h2>
+<p> zsh-lovers - tips, tricks and examples for the Z shell </p>
+<h2>SYNOPSIS</h2>
 <p> Just read it. ;-)  </p>
 <h2>OVERVIEW</h2>
 <p> Whenever we look at the zsh manual we wonder why there are no examples or those simply things in (shell) life. The zsh contains many features, but there was no manpage with some examples (like <a href="/docs/linux/man/5-procmailex/">procmailex</a>(5)). That&#8217;s why we wrote this manpage. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "apt-extracttemplates(1)"
 name: "apt-extracttemplates"
 section: "1"
@@ -8,9 +7,12 @@ url: "/docs/linux/man/1-apt-extracttemplates/"
 description: "apt-extracttemplates – Utility to extract debconf config and templates from Debian packages"
 ---
 
+<h2 class="name">NAME</h2>
 <p> apt-extracttemplates &#8211; Utility to extract <code>debconf</code> config and templates from Debian packages </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>apt-extracttemplates</code> [<code>-t=</code><i>temporary_directory</i>] <i>filename</i>&#8230; {-v | &#8211;version} {-h | &#8211;help}</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>apt-extracttemplates</code></p>
 <dd>will take one or more Debian package files as input and write out (to a temporary directory) all associated config scripts and template files. For each passed in package that contains config scripts and templates, one line of output will be generated in the format: </dd>
 <p> package version template-file config-script </p>

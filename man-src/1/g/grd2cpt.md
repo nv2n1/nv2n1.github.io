@@ -1,5 +1,4 @@
 ---
-
 title: "grd2cpt(1)"
 name: "grd2cpt"
 section: "1"
@@ -10,8 +9,10 @@ description: "grd2cpt – Make linear or histogram-equalized color palette table
 
 <h2>NAME</h2>
 <p> grd2cpt &#8211; Make linear or histogram-equalized color palette table from grid</p>
+<h2>SYNOPSIS</h2>
 <p> <code>grd2cpt</code> <i>grid</i> [ [<code>+</code>]<i>transparency</i> ] [ <i>cpt</i> ] [ [<code>i</code>|<code>o</code>] ] [ <i>nlevels</i> ] [ [<code>R</code>|<code>r</code>|<code>h</code>|<code>c</code> ] [ <i>zlo</i>/<i>zhi</i> ] [ ] [ <i>minlimit/maxlimit</i> ] [ ] [ ] [ [<code>i</code>|<code>o</code>] ] [ <i>region</i> ] [ <i>zstart/zstop/zinc</i> ] [ <code>&#8211;</code>|<code>+</code>|<code>_</code>|<code>=</code> ] [ [<i>level</i>] ] [ ] [ ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>grd2cpt</code> reads one or more grid files and writes a color palette (CPT) file to standard output. The CPT file is based on an existing master CPT file of your choice, and the mapping from data value to colors is through the data&#8217;s cumulative distribution function (CDF), so that the colors are histogram equalized. Thus if the grid(s) and the resulting CPT file are used in <code>grdimage</code> with a linear projection, the colors will be uniformly distributed in area on the plot. Let z be the data values in the grid. Define CDF(Z) = (# of z &lt; Z) / (# of z in grid). (NaNs are ignored). These z-values are then normalized to the master CPT file and colors are sampled at the desired intervals. </p>
 <p> The color palette includes three additional colors beyond the range of z-values. These are the background color (B) assigned to values lower than the lowest <i>z</i>-value, the foreground color (F) assigned to values higher than the highest <i>z</i>-value, and the NaN color (N) painted wherever values are undefined. For color tables beyond the standard GMT offerings, visit cpt-city: <i><a rel="nofollow" href="http://soliton.vm.bytemark.co.uk/pub/cpt-city/">http://soliton.vm.bytemark.co.uk/pub/cpt-city/</a></i>. </p>
 <p> If the master CPT file includes B, F, and N entries, these will be copied into the new master file. If not, the parameters <i>COLOR_BACKGROUND</i>, <i>COLOR_FOREGROUND</i>, and <i>COLOR_NAN</i> from the <code>gmt.conf</code> file or the command line will be used. This default behavior can be overruled using the options <code>-D</code>, <code>-M</code> or <code>-N</code>. </p>

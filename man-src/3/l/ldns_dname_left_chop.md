@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_dname_left_chop(3)"
 name: "ldns_dname_left_chop"
 section: "3"
@@ -10,11 +9,13 @@ description: "ldns_dname_left_chop, ldns_dname_label_count"
 
 <h2>NAME</h2>
 <p> ldns_dname_left_chop, ldns_dname_label_count </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_rdf* ldns_dname_left_chop(const ldns_rdf *d); </p>
 <p> uint8_t ldns_dname_label_count(const ldns_rdf *r); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_dname_left_chop</i>()</dt>
 <dd>chop one label off the left side of a dname. so w<a rel="nofollow" href="http://www.nlnetlabs.nl">www.nlnetlabs.nl</a>, becomes nlnetlabs.nl This new name is a clone and must be freed with ldns_deep_free() .br <code>d</code>: the dname to chop .br Returns the remaining dname</dd></dl>

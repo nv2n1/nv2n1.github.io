@@ -1,5 +1,4 @@
 ---
-
 title: "g_dipoles_d(1)"
 name: "g_dipoles_d"
 section: "1"
@@ -11,7 +10,9 @@ description: "g_dipoles – computes the total dipole plus fluctuations"
 <h2>NAME</h2>
 <p> g_dipoles &#8211; computes the total dipole plus fluctuations </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>g_dipoles</code> <code>-enx</code><i> ener.edr </i> <code>-f</code><i> traj.xtc </i> <code>-s</code><i> topol.tpr </i> <code>-n</code><i> index.ndx </i> <code>-o</code><i> Mtot.xvg </i> <code>-eps</code><i> epsilon.xvg </i> <code>-a</code><i> aver.xvg </i> <code>-d</code><i> dipdist.xvg </i> <code>-c</code><i> dipcorr.xvg </i> <code>-g</code><i> gkr.xvg </i> <code>-adip</code><i> adip.xvg </i> <code>-dip3d</code><i> dip3d.xvg </i> <code>-cos</code><i> cosaver.xvg </i> <code>-cmap</code><i> cmap.xpm </i> <code>-q</code><i> quadrupole.xvg </i> <code>-slab</code><i> slab.xvg </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-mu</code><i> real </i> <code>-mumax</code><i> real </i> <code>-epsilonRF</code><i> real </i> <code>-skip</code><i> int </i> <code>-temp</code><i> real </i> <code>-corr</code><i> enum </i> <code>-[no]pairs</code><i></i> <code>-ncos</code><i> int </i> <code>-axis</code><i> string </i> <code>-sl</code><i> int </i> <code>-gkratom</code><i> int </i> <code>-gkratom2</code><i> int </i> <code>-rcmax</code><i> real </i> <code>-[no]phi</code><i></i> <code>-nlevels</code><i> int </i> <code>-ndegrees</code><i> int </i> <code>-acflen</code><i> int </i> <code>-[no]normalize</code><i></i> <code>-P</code><i> enum </i> <code>-fitfn</code><i> enum </i> <code>-ncskip</code><i> int </i> <code>-beginfit</code><i> real </i> <code>-endfit</code><i> real </i></p>
+<h2>DESCRIPTION</h2>
 <p> g_dipoles computes the total dipole plus fluctuations of a simulation system. From this you can compute e.g. the dielectric constant for low dielectric media. For molecules with a net charge, the net charge is subtracted at center of mass of the molecule. </p>
 <p> The file Mtot.xvg contains the total dipole moment of a frame, the components as well as the norm of the vector. The file aver.xvg contains |Mu|2 and |Mu| 2 during the simulation. The file dipdist.xvg contains the distribution of dipole moments during the simulation The mu_max is used as the highest value in the distribution graph. </p>
 <p> Furthermore the dipole autocorrelation function will be computed when option -corr is used. The output file name is given with the <code> -c</code> option. The correlation functions can be averaged over all molecules (<code> mol</code>), plotted per molecule seperately (<code> molsep</code>) or it can be computed over the total dipole moment of the simulation box (<code> total</code>). </p>

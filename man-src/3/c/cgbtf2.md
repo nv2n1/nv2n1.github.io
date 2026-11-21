@@ -1,5 +1,4 @@
 ---
-
 title: "cgbtf2(3)"
 name: "cgbtf2"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cgbtf2/"
 description: "cgbtf2.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cgbtf2.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgbtf2</code> (M, N, KL, KU, AB, LDAB, IPIV, INFO)<br />
  <i></i><code>CGBTF2</code> computes the LU factorization of a general band matrix using the unblocked version of the algorithm.</p>

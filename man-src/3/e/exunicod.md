@@ -1,5 +1,4 @@
 ---
-
 title: "exunicod(3)"
 name: "exunicod"
 section: "3"
@@ -10,8 +9,10 @@ description: "exunicod – Using Unicode string functions. Allegro game programm
 
 <h2>NAME</h2>
 <p> exunicod &#8211; Using Unicode string functions. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>Example exunicod</code></p>
+<h2>DESCRIPTION</h2>
 <p> This program demonstrates the use of the 16-bit Unicode text encoding format with Allegro. The example displays a message translated to different languages scrolling on the screen using an external font containing the required characters to display those messages. </p>
 <p> Note how the Allegro unicode string functions resemble the functions you can find in the standard C library, only these handle Unicode on all platforms. </p>
 <h2>SEE ALSO</h2>

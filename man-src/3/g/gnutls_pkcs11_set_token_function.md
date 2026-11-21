@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pkcs11_set_token_function(3)"
 name: "gnutls_pkcs11_set_token_function"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_pkcs11_set_token_function – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs11_set_token_function &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs11.h&gt;</code> </p>
 <p> <code>void gnutls_pkcs11_set_token_function(gnutls_pkcs11_token_callback_t </code><i>fn</i><code>, void * </code><i>userdata</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_pkcs11_set_token_function – API function"
 <dd> The token callback</dd>
 <dt>void * userdata</dt>
 <dd> data to be supplied to callback</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will set a callback function to be used when a token needs to be inserted to continue PKCS 11 operations.</p>
 <h2>SINCE</h2>
 <p> 2.12.0</p>

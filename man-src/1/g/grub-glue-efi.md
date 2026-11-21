@@ -1,5 +1,4 @@
 ---
-
 title: "grub-glue-efi(1)"
 name: "grub-glue-efi"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-grub-glue-efi/"
 description: "grub-glue-efi – generate a fat binary for EFI"
 ---
 
+<h2 class="name">NAME</h2>
+<p> grub-glue-efi &#8211; generate a fat binary for EFI </p>
+<h2>SYNOPSIS</h2>
 <p> <code>grub-glue-efi</code> [<i>,OPTION/</i>&#8230;] [<i>,OPTIONS/</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> grub-glue-efi processes ia32 and amd64 EFI images and glues them according to Apple format. </p>
 <p> Glue 32-bit and 64-bit binary into Apple universal one.</p>
 <dl>

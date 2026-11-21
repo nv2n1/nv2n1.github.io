@@ -1,5 +1,4 @@
 ---
-
 title: "perfmonctl(2)"
 name: "perfmonctl"
 section: "2"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/2-perfmonctl/"
 description: "perfmonctl – interface to IA-64 performance monitoring unit"
 ---
 
+<h2 class="name">NAME</h2>
+<p> perfmonctl &#8211; interface to IA-64 performance monitoring unit </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;perfmon.h&gt;
 #include &lt;syscall.h&gt;
 long perfmonctl(int fd, int cmd, void *arg, int narg);
 </code></pre>
 <p> <i>Note</i>: There is no glibc wrapper for this system call; see NOTES.</p>
+<h2>DESCRIPTION</h2>
 <p> The IA-64-specific <code>perfmonctl</code>() system call provides an interface to the PMU (performance monitoring unit). The PMU consists of PMD (performance monitoring data) registers and PMC (performance monitoring control) registers, which gather hardware statistics. </p>
 <p> <code>perfmonctl</code>() applies the operation <i>cmd</i> to the input arguments specified by <i>arg</i>. The number of arguments is defined by <i>narg</i>. The <i>fd</i> argument specifies the perfmon context to operate on. </p>
 <p> Supported values for <i>cmd</i> are:</p>

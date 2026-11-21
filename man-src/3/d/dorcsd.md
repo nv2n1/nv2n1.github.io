@@ -1,5 +1,4 @@
 ---
-
 title: "dorcsd(3)"
 name: "dorcsd"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dorcsd/"
 description: "dorcsd.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dorcsd.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> recursive subroutine <code>dorcsd</code> (JOBU1, JOBU2, JOBV1T, JOBV2T, TRANS, SIGNS, M, P, Q, X11, LDX11, X12, LDX12, X21, LDX21, X22, LDX22, THETA, U1, LDU1, U2, LDU2, V1T, LDV1T, V2T, LDV2T, WORK, LWORK, IWORK, INFO)<br />
  <i></i><code>DORCSD</code></p>

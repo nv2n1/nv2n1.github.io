@@ -1,5 +1,4 @@
 ---
-
 title: "cinnamon(1)"
 name: "cinnamon"
 section: "1"
@@ -10,7 +9,9 @@ description: "cinnamon – desktop"
 
 <h2>NAME</h2>
 <p> cinnamon &#8211; desktop </p>
+<h2>SYNOPSIS</h2>
 <p> <code>cinnamon [options]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Cinnamon is a Linux desktop environment which provides advanced innovative features and a traditional user experience. </p>
 <p> The desktop layout is similar to Gnome 2. The underlying technology is similar from Gnome Shell. The emphasis is put on making users feel at home and providing them with an easy to use and comfortable desktop experience. </p>
 <h2>OPTIONS</h2>

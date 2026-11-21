@@ -1,5 +1,4 @@
 ---
-
 title: "spu_run(2)"
 name: "spu_run"
 section: "2"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/2-spu_run/"
 description: "spu_run – execute an SPU context"
 ---
 
+<h2 class="name">NAME</h2>
+<p> spu_run &#8211; execute an SPU context </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/spu.h&gt;
 int spu_run(int fd, unsigned int *npc, unsigned int *event);
 </code></pre>
 <p> <i>Note</i>: There is no glibc wrapper for this system call; see NOTES.</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>spu_run</code>() system call is used on PowerPC machines that implement the Cell Broadband Engine Architecture in order to access Synergistic Processor Units (SPUs). The <i>fd</i> argument is a file descriptor returned by <code><a href="/docs/linux/man/2-spu_create/">spu_create</a></code>(2) that refers to a specific SPU context. When the context gets scheduled to a physical SPU, it starts execution at the instruction pointer passed in <i>npc</i>. </p>
 <p> Execution of SPU code happens synchronously, meaning that <code>spu_run</code>() blocks while the SPU is still running. If there is a need to execute SPU code in parallel with other code on either the main CPU or other SPUs, a new thread of execution must be created first (e.g., using <code><a href="/docs/linux/man/3-pthread_create/">pthread_create</a></code>(3)). </p>
 <p> When <code>spu_run</code>() returns, the current value of the SPU program counter is written to <i>npc</i>, so successive calls to <code>spu_run</code>() can use the same <i>npc</i> pointer. </p>

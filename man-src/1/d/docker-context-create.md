@@ -1,5 +1,4 @@
 ---
-
 title: "docker-context-create(1)"
 name: "docker-context-create"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-context-create/"
 description: "docker-context-create – Create a context"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-context-create &#8211; Create a context </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker context create [OPTIONS] CONTEXT</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Create a context </p>
 <p> Docker endpoint config: </p>
 <p> NAME DESCRIPTION from Copy named context&#8217;s Docker endpoint configuration host Docker endpoint on which to connect ca Trust certs signed only by this CA cert Path to TLS certificate file key Path to TLS key file skip-tls-verify Skip TLS certificate validation </p>

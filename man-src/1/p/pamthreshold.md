@@ -1,5 +1,4 @@
 ---
-
 title: "pamthreshold(1)"
 name: "pamthreshold"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pamthreshold/"
 description: "pamthreshold – threshold grayscale image to black and white"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pamthreshold &#8211; threshold grayscale image to black and white</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pamthreshold</code> [<code>-simple</code>] [<code>-local=</code><i>width</i><code>x</code><i>height</i>] [<code>-dual=</code><i>width</i><code>x</code><i>height</i>] [<code>-threshold=</code><i>threshold</i>] [<code>-contrast=</code><i>threshold</i>] [<i>inputpamfile</i>] </p>
 <p> Minimum unique abbreviations of options are acceptable. You may use double hyphens instead of a single hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamthreshold</code> thresholds a grayscale image. Thresholding means dividing the image into background and foreground by comparing every pixel to a thresholding value. </p>
 <p> The input should be a PGM image or a PAM image of tuple type GRAYSCALE or GRAYSCALE_ALPHA. However, pamthreshold doesn&#8217;t check; it just thresholds the first channel as if it were grayscale samples and if there is a second channel, processes it as if it is an alpha (transparency) channel. So if you feed it e.g. a PPM image, it will work but produce probably useless results. </p>

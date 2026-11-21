@@ -1,5 +1,4 @@
 ---
-
 title: "tca_correct(1)"
 name: "tca_correct"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-tca_correct/"
 description: "tca_correct – Calculate transverse chromatic aberration"
 ---
 
+<h2 class="name">NAME</h2>
+<p> tca_correct &#8211; Calculate transverse chromatic aberration </p>
+<h2>SYNOPSIS</h2>
 <p> <code>tca_correct</code> [options] <i>inputfile</i> </p>
 <p> &lt;inputfile&gt; is the base name of 4 image files:</p>
 <dl>
@@ -21,6 +23,7 @@ description: "tca_correct – Calculate transverse chromatic aberration"
 <dd> Blue channel of &lt;inputfile&gt;</dd></dl>
 <p> The channel images must be colour images with 3 identical channels. If any of -R, -G, or -B is given, this file name is used instead of the derived name. </p>
 <p> Output: commandline arguments for fulla</p>
+<h2>DESCRIPTION</h2>
 <p> Generates fulla command-line parameters for correction of transverse chromatic aberration (<font SIZE="-1">TCA</font>) from sample photos. Ideal sample photos would have a lot of contrast over the entire image area, little saturated colour and no blown highlights.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "slags2(3)"
 name: "slags2"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-slags2/"
 description: "slags2.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> slags2.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slags2</code> (UPPER, A1, A2, A3, B1, B2, B3, CSU, SNU, CSV, SNV, CSQ, SNQ)<br />
  <i></i><code>SLAGS2</code> computes 2-by-2 orthogonal matrices U, V, and Q, and applies them to matrices A and B such that the rows of the transformed A and B are parallel.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "md5pass(1)"
 name: "md5pass"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-md5pass/"
 description: "md5pass – Create an MD5 password hash"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>md5pass</code> &#8211; Create an MD5 password hash</p>
+<h2>SYNOPSIS</h2>
 <p> <code>md5pass</code> [<i>PASSWORD</i>] [<i>SALT</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>md5pass</code> creates an MD5 password hash. In the absence of a salt value on the command line, a random salt vector will be generated. </p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-syslinux/">syslinux</a></i>(1) </p>

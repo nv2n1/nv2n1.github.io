@@ -1,5 +1,4 @@
 ---
-
 title: "abrt-backtrace(1)"
 name: "abrt-backtrace"
 section: "1"
@@ -10,7 +9,9 @@ description: "abrt-backtrace – a backtrace analyzer for abrt"
 
 <h2>NAME</h2>
 <p> abrt-backtrace &#8211; a backtrace analyzer for abrt</p>
+<h2>SYNOPSIS</h2>
 <p> <code>abrt-backtrace</code> [option]&#8230; [FILE]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>abrt-backtrace</i> is a command line tool that analyzes backtraces produced by GDB and provides their textual representation useful for crash duplication detection. </p>
 <p> By default, abrt-backtrace prints the backtrace tree created by parsing the input file. </p>
 <h2>OPTIONS</h2>

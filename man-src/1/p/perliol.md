@@ -1,5 +1,4 @@
 ---
-
 title: "perliol(1)"
 name: "perliol"
 section: "1"
@@ -7,14 +6,21 @@ letter: "p"
 url: "/docs/linux/man/1-perliol/"
 ---
 
-perliol - C API for Perl's implementation of IO in Layers. 
+<h2 class="name">NAME</h2>
+ 
 
-<pre><code>
+ perliol - C API for Perl's implementation of IO in Layers. 
+
+<h2>SYNOPSIS</h2>
+
+ <pre><code>
 /* Defining a layer ... */
 #include &lt;perliol.h&gt;
 </code></pre>
 
-This document describes the behavior and implementation of the PerlIO abstraction described in perlapio when <tt>&quot;USE_PERLIO&quot;</tt> is defined.
+<h2>DESCRIPTION</h2>
+
+ This document describes the behavior and implementation of the PerlIO abstraction described in perlapio when <tt>&quot;USE_PERLIO&quot;</tt> is defined.
 
 <h3>History and Background</h3>
 

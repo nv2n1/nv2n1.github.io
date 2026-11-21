@@ -1,5 +1,4 @@
 ---
-
 title: "libpnm(3)"
 name: "libpnm"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-libpnm/"
 description: "libpnm – libnetpbm functions to read and write PNM image files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> libpnm &#8211; libnetpbm functions to read and write PNM image files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;netpbm/pnm.h&gt;</code> </p>
 <p> <code>void pnm_init(</code> <code>int *</code><i>argcP</i><code>,</code> <code>char *</code><i>argv</i><code>[]</code> <code>);</code> </p>
 <p> <code>xel ** pnm_allocarray(</code> <code>int </code><i>cols</i><code>,</code> <code>int </code><i>rows</i><code>);</code> </p>
@@ -36,6 +38,7 @@ description: "libpnm – libnetpbm functions to read and write PNM image files"
 <p> <code>#define </code> <code>PNM_GET1(</code><i>x</i><code>)</code> <code>&#8230;</code> </p>
 <p> <code>#define </code> <code>PNM_EQUAL(</code><i>x</i><code>,</code><i>y</i><code>)</code> <code>&#8230;</code> </p>
 <p> <code>#define </code> <code>PNM_FORMAT_TYPE(</code><i>format</i><code>)</code> <code>&#8230;</code> </p>
+<h2>DESCRIPTION</h2>
 <p> These library functions are part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <h3>TYPES AND CONSTANTS</h3>
 <p> Each <code>xel</code> contains three <code>xelval</code>s, each of which should contain only the values between <code>0</code> and <code>PNM_MAXMAXVAL</code>, inclusive. </p>

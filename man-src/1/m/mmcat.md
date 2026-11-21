@@ -1,5 +1,4 @@
 ---
-
 title: "mmcat(1)"
 name: "mmcat"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mmcat/"
 description: "mmcat – Output the contents of a partition to stdout"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mmcat &#8211; Output the contents of a partition to stdout </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mmcat [-t</code> <i>mmtype </i> <code>] [-o</code> <i>offset</i> <code>] [ -i</code> <i>imgtype</i> <code>] [-b dev_sector_size] [-vV] </code> <i>image [images] part_num</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>mmcat</code> outputs the contents of a specific volume to stdout. This allows you to extract the contents of a partition to a separate file. </p>
 <h2>ARGUMENTS</h2>
 <dl>

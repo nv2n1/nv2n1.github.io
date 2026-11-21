@@ -1,5 +1,4 @@
 ---
-
 title: "lwp-request(1)"
 name: "lwp-request"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-lwp-request/"
 description: "lwp-request, GET, POST, HEAD – Simple command line user agent"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lwp-request, GET, POST, HEAD &#8211; Simple command line user agent </p>
+<h2>SYNOPSIS</h2>
 <p> <code>lwp-request</code> [<code>-afPuUsSedvhx</code>] [<code>-m</code> <i>method</i>] [<code>-b</code> <i>base </i><font SIZE="-1"><i>URL</i></font><i></i>] [<code>-t</code> <i>timeout</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-i</code>&nbsp;<wbr><i>if-modified-since</i>]&nbsp;<wbr>[<code>-c</code>&nbsp;<wbr><i>content-type</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[<code>-C</code>&nbsp;<wbr><i>credentials</i>]&nbsp;<wbr>[<code>-p</code>&nbsp;<wbr><i>proxy-url</i>]&nbsp;<wbr>[<code>-o</code>&nbsp;<wbr><i>format</i>]&nbsp;<wbr><i>url</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> This program can be used to send requests to <font SIZE="-1">WWW</font> servers and your local file system. The request content for <font SIZE="-1">POST</font> and <font SIZE="-1">PUT</font> methods is read from stdin. The content of the response is printed on stdout. Error messages are printed on stderr. The program returns a status value indicating the number of URLs that failed. </p>
 <p> The options are:</p>
 <dl>

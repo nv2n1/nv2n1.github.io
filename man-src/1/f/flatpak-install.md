@@ -1,5 +1,4 @@
 ---
-
 title: "flatpak-install(1)"
 name: "flatpak-install"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-flatpak-install/"
 description: "flatpak-install – Install an application or runtime"
 ---
 
+<h2 class="name">NAME</h2>
+<p> flatpak-install &#8211; Install an application or runtime </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak install</code> [OPTION&#8230;] [REMOTE] REF&#8230;</dt>
 <dt> <code>flatpak install</code> [OPTION&#8230;] [&#8211;from|&#8211;bundle] LOCATION</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>Installs an application or runtime. The primary way to install is to specify a REMOTE name as the source and one ore more REFs to specify the application or runtime to install. If REMOTE is omitted, the configured remotes are searched for the first REF and the user is asked to confirm the resulting choice. </dd>
 <p> Each REF argument is a full or partial identifier in the flatpak ref format, which looks like &quot;(app|runtime)/ID/ARCH/BRANCH&quot;. All elements except ID are optional and can be left out, including the slashes, so most of the time you need only specify ID. Any part left out will be matched against what is in the remote, and if there are multiple matches you will be prompted to choose one of them. You will also be prompted with choices if REF doesn&#8217;t match anything in the remote exactly but is similar to one or more refs in the remote (e.g. &quot;devhelp&quot; is similar to &quot;org.gnome.Devhelp&quot;). </p>
 <p> By default this looks for both apps and runtimes with the given REF in the specified REMOTE, but you can limit this by using the <code>&#8211;app</code> or <code>&#8211;runtime</code> option, or by supplying the initial element in the REF. </p>

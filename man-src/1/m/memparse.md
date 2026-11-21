@@ -1,5 +1,4 @@
 ---
-
 title: "memparse(1)"
 name: "memparse"
 section: "1"
@@ -11,7 +10,9 @@ description: "memparse – libmemcached Documentation"
 <h2>NAME</h2>
 <p> memparse &#8211; libmemcached Documentation </p>
 <p> Copies files to a collection of memcached servers</p>
+<h2>SYNOPSIS</h2>
 <p> memparse [options] &quot;option string&quot;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>memparse</code> can be used to validate an option string.</p>
 <h2>OPTIONS</h2>
 <p> For a full list of operations run the tool with the option:</p>

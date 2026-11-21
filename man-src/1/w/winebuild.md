@@ -1,5 +1,4 @@
 ---
-
 title: "winebuild(1)"
 name: "winebuild"
 section: "1"
@@ -10,7 +9,9 @@ description: "winebuild – Wine dll builder"
 
 <h2>NAME</h2>
 <p> winebuild &#8211; Wine dll builder</p>
+<h2>SYNOPSIS</h2>
 <p> <code>winebuild</code> [<i>options</i>]&nbsp;<wbr>[<i>inputfile</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>winebuild</code> generates the assembly files that are necessary to build a Wine dll, which is basically a Win32 dll encapsulated inside a Unix library. </p>
 <p> <code>winebuild</code> has different modes, depending on what kind of file it is asked to generate. The mode is specified by one of the mode options specified below. In addition to the mode option, various other command-line option can be specified, as described in the <code>OPTIONS</code> section.</p>
 <h2>MODE OPTIONS</h2>

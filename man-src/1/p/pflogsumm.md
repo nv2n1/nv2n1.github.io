@@ -1,5 +1,4 @@
 ---
-
 title: "pflogsumm(1)"
 name: "pflogsumm"
 section: "1"
@@ -7,15 +6,22 @@ letter: "p"
 url: "/docs/linux/man/1-pflogsumm/"
 ---
 
-pflogsumm.pl - Produce Postfix MTA logfile summary 
+<h2 class="name">NAME</h2>
+ 
+
+ pflogsumm.pl - Produce Postfix MTA logfile summary 
 
  Copyright (C) 1998-2010 by James S. Seymour, Release 1.1.3. 
 
-<pre><code>
+<h2>SYNOPSIS</h2>
+
+ <pre><code>
 pflogsumm.pl - [eq][-d&lt;today | yesterday&gt;][--detail&lt;cnt&gt;][--bounce_detail&lt;cnt&gt;][--deferral_detail&lt;cnt&gt;][-h&lt;cnt&gt;][-i | --ignore_case][--iso_date_time][--mailq][-m | --uucp_mung][--no_bounce_detail][--no_deferral_detail][--no_no_msg_size][--no_reject_detail][--no_smtpd_warnings][--problems_first][--rej_add_from][--reject_detail&lt;cnt&gt;][--smtp_detail&lt;cnt&gt;][--smtpd_stats][--smtpd_warning_detail&lt;cnt&gt;][--syslog_name = string][-u&lt;cnt&gt;][--verbose_msg_detail][--verp_mung[=&lt;n&gt;]][--zero_fill][file1[filen]] pflogsumm.pl - [help | version] If no file(s) specified, reads from stdin.Output is to stdout.
 </code></pre>
 
-<pre>
+<h2>DESCRIPTION</h2>
+
+ <pre>
     Pflogsumm is a log analyzer/summarizer for the Postfix MTA.  It is
     designed to provide an over-view of Postfix activity, with just enough
     detail to give the administrator a &quot;heads up&quot; for potential trouble

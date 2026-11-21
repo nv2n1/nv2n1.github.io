@@ -1,5 +1,4 @@
 ---
-
 title: "ocamlmklib(1)"
 name: "ocamlmklib"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ocamlmklib/"
 description: "ocamlmklib – generate libraries with mixed C / Caml code."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ocamlmklib &#8211; generate libraries with mixed C / Caml code. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ocalmklib</code> [<i>options</i>]<i> files</i></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>ocamlmklib</code> command facilitates the construction of libraries containing both Caml code and C code, and usable both in static linking and dynamic linking modes.</p>
 <h2>OPTIONS</h2>
 <dl>

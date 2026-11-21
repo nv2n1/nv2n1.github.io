@@ -1,5 +1,4 @@
 ---
-
 title: "fprint_objid(3)"
 name: "fprint_objid"
 section: "3"
@@ -10,6 +9,7 @@ description: "add_mibdir, netsnmp_init_mib, shutdown_mib, netsnmp_read_module, r
 
 <h2>NAME</h2>
 <p> add_mibdir, netsnmp_init_mib, shutdown_mib, netsnmp_read_module, read_mib, read_all_mibs, add_module_replacement, snmp_set_mib_errors, snmp_set_mib_warnings, snmp_set_save_descriptions, read_objid, snmp_parse_oid, get_module_node, print_mib, print_objid, fprint_objid, snprint_objid, print_description, fprint_description, snprint_description &#8211; netsnmp_mib_api functions</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;net-snmp/mib_api.h&gt;</code> </p>
 <h3>Initialisation and Shutdown</h3>
 <p> <code>int add_mibdir(const char *</code><i>dirname</i><code>);</code> </p>
@@ -44,6 +44,7 @@ description: "add_mibdir, netsnmp_init_mib, shutdown_mib, netsnmp_read_module, r
  <code> const oid *</code><i>objid</i><code>, size_t </code><i>objidlen</i><code>, int </code><i>width</i><code>);</code><br />
  <code>int snprint_description(char *</code><i>buf</i><code>, size_t </code><i>len</i><code>,</code><br />
  <code> const oid *</code><i>objid</i><code>, size_t </code><i>objidlen</i><code>, int </code><i>width</i><code>);</code> </p>
+<h2>DESCRIPTION</h2>
 <p> The functions dealing with MIB modules fall into four groups &#8211; those dealing with initialisation and shutdown, with reading in and parsing MIB files, with searching the MIB tree, and output routines.</p>
 <h3>Initialisation and Shutdown</h3>
 <p> <code>add_mibdir</code> is used to add the specified directory to the path of locations which are searched for files containing MIB modules. Note that this does not actually load the MIB modules located in that directory, but is simply an initialisation step to make them available to <code>netsnmp_read_module</code>. This function returns a count of files found in the directory, or a -1 if there is an error. It should be called <i>before</i> invoking <code>netsnmp_init_mib</code>. </p>

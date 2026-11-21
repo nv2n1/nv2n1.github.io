@@ -1,5 +1,4 @@
 ---
-
 title: "mmcli(1)"
 name: "mmcli"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mmcli/"
 description: "mmcli – Control and monitor the ModemManager"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mmcli &#8211; Control and monitor the ModemManager</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mmcli</code> [<i>OPTION</i>&#8230;] </p>
+<h2>DESCRIPTION</h2>
 <p> ModemManager is a DBus-powered Linux daemon which provides a unified high level API for communicating with (mobile broadband) modems. It acts as a standard RIL (Radio Interface Layer) and may be used by different connection managers, like NetworkManager. Thanks to the built-in plugin architecture, ModemManager talks to very different kinds of modems with very different kinds of ports. In addition to the standard AT serial ports, Qualcomm-based QCDM and QMI ports are also supported. </p>
 <h2>HELP OPTIONS</h2>
 <dl>

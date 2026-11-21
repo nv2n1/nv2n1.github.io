@@ -1,5 +1,4 @@
 ---
-
 title: "lsametst(3)"
 name: "lsametst"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-lsametst/"
 description: "lsametst.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lsametst.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> program <code>__lsametst.f__</code><br />
  <i></i><code>LSAMETST</code></p>

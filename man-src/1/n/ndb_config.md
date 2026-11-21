@@ -1,5 +1,4 @@
 ---
-
 title: "ndb_config(1)"
 name: "ndb_config"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-ndb_config/"
 description: "ndb_config – extract MySQL Cluster configuration information"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ndb_config &#8211; extract MySQL Cluster configuration information </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ndb_config </code><i>options</i></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This tool extracts current configuration information for data nodes, SQL nodes, and API nodes from a cluster management node (and possibly its config.ini file). Beginning with MySQL Cluster NDB 6.3.25 and MySQL Cluster NDB 7.0.6, it can also provide an offline dump (in text or XML format) of all configuration parameters which can be used, along with their default, maximum, and minimum values and other information (see the discussion of the <code>&#8211;configinfo</code> and <code>&#8211;xml</code> options later in this section). </dd>
 <p> The following table includes options that are specific to <code>ndb_config</code>. Additional descriptions follow the table. For options common to all MySQL Cluster programs, see Section 17.4.2, lqOptions Common to MySQL Cluster Programsrq. </p>
 <dl>

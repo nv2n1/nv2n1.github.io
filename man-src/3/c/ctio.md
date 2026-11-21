@@ -1,5 +1,4 @@
 ---
-
 title: "ctio(3)"
 name: "ctio"
 section: "3"
@@ -10,6 +9,7 @@ description: "ctio, ruint8, ruint16, ruint32, ruint64, wuint8, wuint16, wuint32,
 
 <h2>NAME</h2>
 <p> ctio, ruint8, ruint16, ruint32, ruint64, wuint8, wuint16, wuint32, wuint64, rsint8, rsint16, rsint32, rsint64, wsint8, wsint16, wsint32, wsint64, rfloat, rdouble, wfloat, wdouble &#8211; integer and float operations</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 var mod_ctype = require('ctype');
 Number mod_ctype.ruint8(Buffer buf, String endian, Number offset);
@@ -49,6 +49,7 @@ Number mod_ctype.ruint8(Buffer buf, String endian, Number offset);
 <pre><code>
 void mod_ctype.wdouble(Number value, String endian, Buffer buf, Number offset);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The argument <i>buf</i> refers to a valid buffer (from calling new Buffer()). The argument <i>endian</i> is either the string &#8216;big&#8217; or &#8216;little&#8217; and controls whether the data in the buffer is interpreted as big or little endian. The argument <i>offset</i> indicates the starting index into the buffer to read or write. All functions ensure that starting at <i>offset</i> does not overflow the end of the buffer. The argument <i>value</i> is a Number that is the valid type for the specific function. All functions that take <i>value</i> as an argument, verify that the passed value is valid. </p>
 <h3><code>ruint8()</code>, <code>ruint16()</code>, <code>ruint32()</code></h3>
 <p> The <code>ruint8()</code>, <code>ruint16()</code>, and <code>ruint32()</code> functions read an 8, 16, and 32-bit unsigned value from <i>buf</i> and return it. The value read is influenced by the values of <i>offset</i> and endian<i>. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "uhd_find_devices(1)"
 name: "uhd_find_devices"
 section: "1"
@@ -10,8 +9,10 @@ description: "uhd_find_devices – USRP Hardware Driver Discovery Utility"
 
 <h2>NAME</h2>
 <p> uhd_find_devices &#8211; USRP Hardware Driver Discovery Utility</p>
+<h2>DESCRIPTION</h2>
 <p> Find UHD-supporting Software Radio Peripherals attached by USB, network or embedded configuration. </p>
 <p> The UHD package is the universal hardware driver for Ettus Research products. The goal is to provide a host driver and API for current and future Ettus Research products. Users will be able to use the UHD driver standalone or with 3rd party applications.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>uhd_find_devices [OPTIONS]</code></p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "minor(3)"
 name: "minor"
 section: "3"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/3-minor/"
 description: "makedev, major, minor – manage a device number"
 ---
 
+<h2 class="name">NAME</h2>
+<p> makedev, major, minor &#8211; manage a device number </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/sysmacros.h&gt;
 dev_t makedev(unsigned int maj, unsigned int min);
 unsigned int major(dev_t dev);
 unsigned int minor(dev_t dev);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> A device ID consists of two parts: a major ID, identifying the class of the device, and a minor ID, identifying a specific instance of a device in that class. A device ID is represented using the type <i>dev_t</i>. </p>
 <p> Given major and minor device IDs, <code>makedev</code>() combines these to produce a device ID, returned as the function result. This device ID can be given to <code><a href="/docs/linux/man/2-mknod/">mknod</a></code>(2), for example. </p>
 <p> The <code>major</code>() and <code>minor</code>() functions perform the converse task: given a device ID, they return, respectively, the major and minor components. These macros can be useful to, for example, decompose the device IDs in the structure returned by <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2).</p>

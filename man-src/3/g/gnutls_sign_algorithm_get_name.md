@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_sign_algorithm_get_name(3)"
 name: "gnutls_sign_algorithm_get_name"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_sign_algorithm_get_name – Returns a string with the name 
 
 <h2>NAME</h2>
 <p> gnutls_sign_algorithm_get_name &#8211; Returns a string with the name of the specified sign algorithm</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/gnutls.h">gnutls/gnutls.h</a>&gt;</code> </p>
 <p> <code>const char * gnutls_sign_algorithm_get_name(gnutls_sign_algorithm_t </code><i>sign</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_sign_algorithm_t sign</dt>
 <dd> is a sign algorithm</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Convert a <code>gnutls_sign_algorithm_t</code> value to a string.</p>
 <h2>RETURNS</h2>
 <p> a string that contains the name of the specified sign algorithm, or <code>NULL</code>.</p>

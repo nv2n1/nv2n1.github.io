@@ -1,5 +1,4 @@
 ---
-
 title: "gnome-terminal(1)"
 name: "gnome-terminal"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-gnome-terminal/"
 description: "gnome-terminal – A terminal emulator for GNOME"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gnome-terminal &#8211; A terminal emulator for GNOME </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gnome-terminal</code> [<i>OPTION</i>&#8230;] [&#8211; <i>PROGRAM</i> [<i>ARG</i>&#8230;]]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>gnome-terminal</code></p>
 <dd>is a terminal emulator application for accessing a UNIX shell environment which can be used to run programs available on your system. It supports several profiles, multiple tabs and implements several keyboard shortcuts.</dd>
 <h2>OPTIONS</h2>

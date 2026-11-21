@@ -1,5 +1,4 @@
 ---
-
 title: "tv_grab_uk_bleb(1)"
 name: "tv_grab_uk_bleb"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-tv_grab_uk_bleb/"
 description: "tv_grab_uk_bleb – Grab TV listings for the United Kingdom, from bleb.org"
 ---
 
+<h2 class="name">NAME</h2>
+<p> tv_grab_uk_bleb &#8211; Grab TV listings for the United Kingdom, from bleb.org </p>
+<h2>SYNOPSIS</h2>
 <p> tv_grab_uk_bleb &#8211;help </p>
 <p> tv_grab_uk_bleb [&#8211;config-file <font SIZE="-1">FILE</font>] &#8211;configure [&#8211;gui <font SIZE="-1">OPTION</font>] </p>
 <p> tv_grab_uk_bleb [&#8211;config-file <font SIZE="-1">FILE</font>] [&#8211;output <font SIZE="-1">FILE</font>] [&#8211;quiet]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;days N]&nbsp;<wbr>[&#8211;offset N]</p>
+<h2>DESCRIPTION</h2>
 <p> Output <font SIZE="-1">TV</font> and radio listings in <font SIZE="-1">XMLTV</font> format for many stations available in Britain. The data comes from the bleb.org web site.</p>
 <h2>USAGE</h2>
 <p> First you must run <code>tv_grab_uk_bleb &#8211;configure</code> to choose which stations you want to receive. Then running <code>tv_grab_uk_bleb</code> with no arguments will get about a week&lt;39&gt;s listings for the stations you chose. </p>

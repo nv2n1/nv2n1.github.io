@@ -1,5 +1,4 @@
 ---
-
 title: "cimprovider(1)"
 name: "cimprovider"
 section: "1"
@@ -10,6 +9,7 @@ description: "cimprovider – disable, enable, remove , group, list or display s
 
 <h2>NAME</h2>
 <p> cimprovider &#8211; disable, enable, remove , group, list or display status of registered CIM providers or CIM provider modules</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cimprovider</code> <code>-d</code> <code>-m</code> module </p>
 <p> <code>cimprovider</code> <code>-e</code> <code>-m</code> module </p>
 <p> <code>cimprovider</code> <code>-r</code> <code>-m</code> module [ <code>-p</code> provider ] </p>
@@ -21,6 +21,7 @@ description: "cimprovider – disable, enable, remove , group, list or display s
 <h3>Remarks</h3>
 <p> The <code>-l</code> option for this command can be executed by any user(s). All other options require superuser permissions. </p>
 <p> This command disables, enables, or removes one CIM provider module or CIM provider at a time.</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>cimprovider </code> command provides a command line interface to disable, enable, unregister, group and list registered CIM providers. If a CIM provider is disabled, the CIM Server rejects any requests to the provider. If a CIM provider is enabled, the CIM Server forwards requests to the provider. And if a CIM provider is unregistered, the CIM Server will no longer have any information about the provider. </p>
 <p> In order to use the <code>cimprovider </code> command, <code>cimserver</code> has to be running and the specified provider module (a grouping of providers in the same shared library) or provider has to be registered with WBEM Services. </p>
 <p> The first form of <code>cimprovider </code> disables the specified provider module. When a specified provider module is in the disabled state, any new requests to the providers that are contained in the specified provider module will be rejected. </p>

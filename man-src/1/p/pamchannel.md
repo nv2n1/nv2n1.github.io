@@ -1,5 +1,4 @@
 ---
-
 title: "pamchannel(1)"
 name: "pamchannel"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pamchannel/"
 description: "pamchannel – extract channels from a PAM image"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pamchannel &#8211; extract channels from a PAM image</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pamchannel</code> [<code>-infile </code><i>infile</i>] [<code>-tupletype </code><i>tupletype</i>] [<i>channum</i> &#8230;] </p>
 <p> Minimum unique abbreviation of option is acceptable. You may use double hyphens instead of single hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamchannel</code> reads a PAM or PNM image as input and produces a PAM image as output, consisting of the indicated channels (planes) of the input. </p>
 <p> Each <i>channum</i> argument is the number of a channel of the input, with the first channel being zero. The channels in the output are in the order of these arguments. </p>

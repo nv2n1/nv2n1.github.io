@@ -1,5 +1,4 @@
 ---
-
 title: "restart_syscall(2)"
 name: "restart_syscall"
 section: "2"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/2-restart_syscall/"
 description: "restart_syscall – restart a system call after interruption by a stop signal"
 ---
 
+<h2 class="name">NAME</h2>
+<p> restart_syscall &#8211; restart a system call after interruption by a stop signal </p>
+<h2>SYNOPSIS</h2>
 <p> <code>long restart_syscall(void);</code> </p>
 <p> <i>Note</i>: There is no glibc wrapper for this system call; see NOTES.</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>restart_syscall</code>() system call is used to restart certain system calls after a process that was stopped by a signal (e.g., <code>SIGSTOP</code> or <code>SIGTSTP</code>) is later resumed after receiving a <code>SIGCONT</code> signal. This system call is designed only for internal use by the kernel. </p>
 <p> <code>restart_syscall</code>() is used for restarting only those system calls that, when restarted, should adjust their time-related parameters&#8212;namely <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2) (since Linux 2.6.24), <code><a href="/docs/linux/man/2-nanosleep/">nanosleep</a></code>(2) (since Linux 2.6), <code><a href="/docs/linux/man/2-clock_nanosleep/">clock_nanosleep</a></code>(2) (since Linux 2.6), and <code><a href="/docs/linux/man/2-futex/">futex</a></code>(2), when employed with the <code>FUTEX_WAIT</code> (since Linux 2.6.22) and <code>FUTEX_WAIT_BITSET</code> (since Linux 2.6.31) operations. <code>restart_syscall</code>() restarts the interrupted system call with a time argument that is suitably adjusted to account for the time that has already elapsed (including the time where the process was stopped by a signal). Without the <code>restart_syscall</code>() mechanism, restarting these system calls would not correctly deduct the already elapsed time when the process continued execution.</p>
 <h2>RETURN VALUE</h2>

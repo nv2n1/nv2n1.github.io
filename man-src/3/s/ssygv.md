@@ -1,5 +1,4 @@
 ---
-
 title: "ssygv(3)"
 name: "ssygv"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-ssygv/"
 description: "ssygv.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ssygv.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssygv</code> (ITYPE, JOBZ, UPLO, N, A, LDA, B, LDB, W, WORK, LWORK, INFO)<br />
  <i></i><code>SSYGST</code></p>

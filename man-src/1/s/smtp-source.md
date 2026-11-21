@@ -1,5 +1,4 @@
 ---
-
 title: "smtp-source(1)"
 name: "smtp-source"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-smtp-source/"
 description: "smtp-source – parallelized SMTP/LMTP test generator"
 ---
 
+<h2 class="name">NAME</h2>
+<p> smtp-source &#8211; parallelized SMTP/LMTP test generator </p>
+<h2>SYNOPSIS</h2>
 <p> <code>smtp-source</code> [<i>options</i>] [<code>inet:</code>]<i>host</i>[:<i>port</i>] </p>
 <p> <code>smtp-source</code> [<i>options</i>] <code>unix:</code><i>pathname</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>smtp-source</code> connects to the named <i>host</i> and TCP <i>port</i> (default: port 25) and sends one or more messages to it, either sequentially or in parallel. The program speaks either SMTP (default) or LMTP. Connections can be made to UNIX-domain and IPv4 or IPv6 servers. IPv4 and IPv6 are the default. </p>
 <p> Note: this is an unsupported test program. No attempt is made to maintain compatibility between successive versions. </p>
 <p> Arguments:</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ncrcat(1)"
 name: "ncrcat"
 section: "1"
@@ -12,6 +11,7 @@ description: "ncrcat – netCDF Record Concatenator"
 <p> ncrcat &#8211; netCDF Record Concatenator</p>
 <h2>SYNTAX</h2>
 <p> ncrcat [-3] [-4] [-6] [-7] [-A] [&#8211;bfr <i>sz</i>]<i>[-C]</i>[-c]<i>[&#8211;cnk_byt</i> <i>sz</i>]<i>[&#8211;cnk_dmn</i> <i>nm,sz</i>] [&#8211;cnk_map <i>map</i>] [&#8211;cnk_plc <i>plc</i>] [&#8211;cnk_scl <i>sz</i>]<i>[-D</i> <i>dbg_lvl</i>] [-d <i>dim</i>,[ <i>min</i>][,[ <i>max</i>]][,[ <i>stride</i>[[,[ <i>subcycle</i>]]]]] [-F] [-G <i>gpe_dsc</i>] [-g <i>grp</i>[,&#8230;]] [-h] [&#8211;hdr_pad <i>sz</i>] [-L <i>dfl_lvl</i>] [-l <i>path</i>] [&#8211;mro] [&#8211;msa] [-n <i>loop]</i> [&#8211;no_tmp_fl] [-O] [-p <i>path</i>] [-R] [-r] [&#8211;ram_all] [&#8211;rec_apn] [-t <i>thr_nbr</i>] [&#8211;unn] [-v <i>var</i>[,&#8230;]] [-X <i>box</i>] [-x] <i>input-files</i> <i>output-file</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>ncrcat</code> concatenates record variables across an arbitrary number of input files. The final record dimension is by default the sum of the lengths of the record dimensions in the input files. </p>
 <p> Input files may vary in size, but each must have a record dimension. The record coordinate, if any, should be monotonic (or else non-fatal warnings may be generated). Hyperslabs of the record dimension which include more than one file are handled correctly. <code>ncra</code> supports the <i>stride</i> argument to the <code>-d</code> hyperslab option for the record dimension only, <i>stride</i> is not supported for non-record dimensions. </p>
 <p> <code>ncrcat</code> applies special rules to ARM convention time fields (e.g., <code>time_offset</code>).</p>

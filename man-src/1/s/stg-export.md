@@ -1,5 +1,4 @@
 ---
-
 title: "stg-export(1)"
 name: "stg-export"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-stg-export/"
 description: "stg-export – Export patches to a directory"
 ---
 
+<h2 class="name">NAME</h2>
+<p> stg-export &#8211; Export patches to a directory </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 stg export[options][--][&lt;patch1&gt;][&lt;patch2&gt;][&lt;patch3&gt;..&lt;patch4&gt;]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Export a range of applied patches to a given directory (defaults to <i>patches-&lt;branch&gt;</i>) in a standard unified GNU diff format. A template file (defaulting to <i>.git/patchexport.tmpl</i> or <i>~/.stgit/templates/patchexport.tmpl</i> or <i>/usr/share/stgit/templates/patchexport.tmpl</i>) can be used for the patch format. The following variables are supported in the template file: </p>
 <dl>
 <dt>

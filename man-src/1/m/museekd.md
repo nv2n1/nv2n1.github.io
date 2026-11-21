@@ -1,5 +1,4 @@
 ---
-
 title: "museekd(1)"
 name: "museekd"
 section: "1"
@@ -10,7 +9,9 @@ description: "Museekd – C++ Daemon/Client for Soulseek"
 
 <h2>NAME</h2>
 <p> <code>Museekd</code> &#8211; C++ Daemon/Client for Soulseek</p>
+<h2>SYNOPSIS</h2>
 <p> <code>museek</code> [-c &lt;<i>filename</i>&gt;] [&#8211;config &lt;<i>filename</i>&gt;] [-V] [&#8211;version] [-h] [&#8211;help]</p>
+<h2>DESCRIPTION</h2>
 <p> Museekd is a headless client (daemon) for the Soulseek P2P network and for Soulfind Servers. It is configured with musetup and can be controlled with variety of interfaces and GUIs, such as Museeq and Mucous. It handles any chatting, transferring files, searching, managing of users or browsing of shares requested by the various interfaces or GUIs. </p>
 <p> Before running, you will need a configure it with <i><a href="/docs/linux/man/1-musetup/">musetup</a></i>(1).</p>
 <h2>OPTIONS</h2>

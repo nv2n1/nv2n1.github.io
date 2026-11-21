@@ -1,5 +1,4 @@
 ---
-
 title: "sgehrd(3)"
 name: "sgehrd"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-sgehrd/"
 description: "sgehrd.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sgehrd.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sgehrd</code> (N, ILO, IHI, A, LDA, TAU, WORK, LWORK, INFO)<br />
  <i></i><code>SGEHRD</code></p>

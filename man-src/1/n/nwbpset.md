@@ -1,5 +1,4 @@
 ---
-
 title: "nwbpset(1)"
 name: "nwbpset"
 section: "1"
@@ -10,7 +9,9 @@ description: "nwbpset – Create a bindery property or set its value"
 
 <h2>NAME</h2>
 <p> nwbpset &#8211; Create a bindery property or set its value</p>
+<h2>SYNOPSIS</h2>
 <p> <code>nwbpset</code> [ <code>-h</code> ] [ <code>-S</code> <i>server</i> ] [ <code>-U</code> <i>user name</i> ] [ <code>-P</code> <i>password</i> | <code>-n</code> ] [ <code>-C</code> ] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>nwbpset</code> Reads a property specification from the standard input and creates and sets the corresponding property. The format is determined by the output of &#8216;nwbpvalues -c&#8217;. nwbpset will hopefully become an important part of the bindery management suite of ncpfs, together with </p>
 <p> As another example, look at the following command line: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>nwbpvalues -t 1 -o supervisor -p user_defaults -c |\&nbsp;<wbr><br />

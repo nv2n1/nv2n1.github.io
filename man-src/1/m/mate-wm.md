@@ -1,5 +1,4 @@
 ---
-
 title: "mate-wm(1)"
 name: "mate-wm"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mate-wm/"
 description: "mate-wm – Start the window manager configured by the user"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mate-wm &#8211; Start the window manager configured by the user </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mate-wm [&#8211;default-wm=WINDOWMANAGER] [&#8211;sm-client-id=ID]</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>mate-wm</code> program starts the window manager configured by the user. If the user has not chosen a window manager it will launch a MATE compliant window manager.</p>
 <h2>USAGE</h2>
 <p> The user can define his preferred window manager with the <code>/</code><i>org</i><code>/</code><i>mate</i><code>/</code><i>desktop</i><code>/</code><i>session</i><code>/</code><i>required-components</i><code>/</code><i>windowmanager</i> dconf key. The value of this key should be the name of the desktop file of the desired window manager, without its <code>.desktop</code> extension. If this key is set to <code>mate-wm</code>, then <code>mate-wm</code> will simply look for an appropriate window manager. The user can also override the selection of a window manager by setting the <code>WINDOW_MANAGER</code> environment variable. </p>

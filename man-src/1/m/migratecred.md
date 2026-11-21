@@ -1,5 +1,4 @@
 ---
-
 title: "migratecred(1)"
 name: "migratecred"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-migratecred/"
 description: "migratecred – Migrate credentials from one instance of Directory Server to another"
 ---
 
+<h2 class="name">NAME</h2>
+<p> migratecred &#8211; Migrate credentials from one instance of Directory Server to another </p>
+<h2>SYNOPSIS</h2>
 <p> <code>migratecred </code> -o OldInstancePath -n NewInstancePath -c OldCredential [<i>-p NewPluginPath</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> migratecred migrates credentials from one Directory Server instance to the other. </p>
 <p> New plugin path defaults to [<code>libdir</code>/dirsrv/plugins] if not given </p>
 <p> <code>migratecred</code> is a program that migrates credentials used for replication and chaining. That is the password used by the server to perform the simple BIND operation for server to server communications.</p>

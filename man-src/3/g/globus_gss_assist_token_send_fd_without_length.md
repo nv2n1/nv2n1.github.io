@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_gss_assist_token_send_fd_without_length/"
 description: "Token Transport –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Token Transport &#8211; </p>
 <p> Send and Receive Security Tokens.</p>
 <h3>Functions</h3>
 <p> int <code>globus_gss_assist_token_get_fd</code> (void *arg, void **bufp, size_t *sizep)<br />

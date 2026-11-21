@@ -1,5 +1,4 @@
 ---
-
 title: "lookup_dcookie(2)"
 name: "lookup_dcookie"
 section: "2"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/2-lookup_dcookie/"
 description: "lookup_dcookie – return a directory entry’s path"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lookup_dcookie &#8211; return a directory entry&#8217;s path </p>
+<h2>SYNOPSIS</h2>
 <p> <code>int lookup_dcookie(u64 </code><i>cookie</i><code>, char *</code><i>buffer</i><code>, size_t </code><i>len</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> Look up the full path of the directory entry specified by the value <i>cookie</i>. The cookie is an opaque identifier uniquely identifying a particular directory entry. The buffer given is filled in with the full path of the directory entry. </p>
 <p> For <code>lookup_dcookie</code>() to return successfully, the kernel must still hold a cookie reference to the directory entry.</p>
 <h2>RETURN VALUE</h2>

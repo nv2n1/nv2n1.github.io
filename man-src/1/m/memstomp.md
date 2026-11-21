@@ -1,5 +1,4 @@
 ---
-
 title: "memstomp(1)"
 name: "memstomp"
 section: "1"
@@ -10,8 +9,10 @@ description: "memstomp – detect function calls with overlapping memory regions
 
 <h2>NAME</h2>
 <p> memstomp &#8211; detect function calls with overlapping memory regions</p>
+<h2>SYNOPSIS</h2>
 <p> <code>memstomp</code> [<code>-dk</code>] <i>application</i> [<i>argument</i>&#8230;] </p>
 <p> <code>memstomp</code> <code>-h</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>memstomp</code> utility identifies function calls that use overlapping memory regions in situations when such an overlap is not allowed by various standards. When a problem is detected, memstomp displays a backtrace to help you debug the problem, and if executed with the <code>&#8211;debug-info</code> command line option, it even uses the available debugging information. Since the backtrace code is not thread safe, memstomp also allows you to use the <code>&#8211;kill</code> option to immediately terminate the analyzed program when an invalid function call is detected. </p>
 <p> This version of memstomp inspects the following function calls: <code>memcpy</code>(), <code>memccpy</code>(), <code>mempcpy</code>(), <code>strcpy</code>(), <code>stpcpy</code>(), <code>strncpy</code>(), <code>stpncpy</code>(), <code>strcat</code>(), <code>strncat</code>(), <code>wmemcpy</code>(), <code>wmempcpy</code>(), <code>wcscpy</code>(), <code>wcsncpy</code>(), <code>wcscat</code>(), and <code>wcsncat</code>().</p>
 <h2>OPTIONS</h2>

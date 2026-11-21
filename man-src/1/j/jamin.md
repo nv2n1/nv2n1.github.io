@@ -1,5 +1,4 @@
 ---
-
 title: "jamin(1)"
 name: "jamin"
 section: "1"
@@ -10,8 +9,10 @@ description: "jamin – JACK Audio Mastering interface"
 
 <h2>NAME</h2>
 <p> jamin &#8211; JACK Audio Mastering interface </p>
+<h2>SYNOPSIS</h2>
 <p> <code>jamin</code> [<i> options </i>] [<i> inport1 inport2</i> [<i> outport1 outport2</i> ]] </p>
 <p> <code>jamin-scene</code> <i>&lt;scene-num&gt;</i> </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>jamin</code> command invokes JAMin, the JACK Audio Mastering interface which is based on the JACK Audio Connection Kit, &lt;<code><a rel="nofollow" href="http://jackit.sourceforge.net">http://jackit.sourceforge.net</a></code>&gt;. </p>
 <p> JAMin is designed for professional stereo audio mastering. It provides of a number of tools: a 1024-band hand-drawn EQ with parametric controls, a 31-band graphic EQ, 3-band compressor, 3-band stereo width control, lookahead limiter, boost, and other features. </p>
 <p> For the latest JAMin information, see &lt;<code><a rel="nofollow" href="http://jamin.sourceforge.net">http://jamin.sourceforge.net</a></code>&gt;. </p>

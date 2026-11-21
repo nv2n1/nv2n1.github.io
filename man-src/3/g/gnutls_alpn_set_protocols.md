@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_alpn_set_protocols(3)"
 name: "gnutls_alpn_set_protocols"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_alpn_set_protocols – API function"
 
 <h2>NAME</h2>
 <p> gnutls_alpn_set_protocols &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_alpn_set_protocols(gnutls_session_t </code><i>session</i><code>, const gnutls_datum_t * </code><i>protocols</i><code>, unsigned </code><i>protocols_size</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,6 +22,7 @@ description: "gnutls_alpn_set_protocols – API function"
 <dd> the number of protocols to add.</dd>
 <dt>unsigned int flags</dt>
 <dd> zero or <code>GNUTLS_ALPN_</code>*</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function is to be used by both clients and servers, to declare the supported ALPN protocols, which are used during negotiation with peer. </p>
 <p> If <code>GNUTLS_ALPN_MAND</code> is specified the connection will be aborted if no matching ALPN protocol is found.</p>
 <h2>RETURNS</h2>

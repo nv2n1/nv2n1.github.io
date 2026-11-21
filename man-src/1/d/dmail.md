@@ -1,5 +1,4 @@
 ---
-
 title: "dmail(1)"
 name: "dmail"
 section: "1"
@@ -10,7 +9,9 @@ description: "dmail – procmail Mail Delivery Module"
 
 <h2>NAME</h2>
 <p> dmail &#8211; procmail Mail Delivery Module</p>
+<h2>SYNOPSIS</h2>
 <p> <code>dmail</code> <i>[-D] [-f from_name] [-s] [-k keyword_list] [user][+folder]</i></p>
+<h2>DESCRIPTION</h2>
 <p> <i>dmail</i> delivers mail to a user&#8217;s INBOX or a designated folder. <i>dmail</i> may be configured as a drop-in replacement for <i>binmail</i>(1), <i>mail.local</i>(1) for use with a mail delivery filter such as <i><a href="/docs/linux/man/1-procmail/">procmail</a></i>(1)<i>.</i> </p>
 <p> Because of security considerations (see below) <i>dmail</i> is not intended to be used for direct delivery by the mailer daemon; <i><a href="/docs/linux/man/1-tmail/">tmail</a></i>(1) is the preferred tool for this purpose. If <i>dmail</i> is used for mailer daemon delivery, the mailer daemon must invoke <i>dmail</i> with the <i>dmail</i> process&#8217; user id set to the recipient&#8217;s user id. </p>
 <p> When <i>dmail</i> exits, it returns exit status values to enable <i><a href="/docs/linux/man/1-procmail/">procmail</a></i>(1) to determine whether a message was delivered successfully or had a temporary (requeue for later delivery) or permanent (return to sender) failure. </p>

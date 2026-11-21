@@ -1,5 +1,4 @@
 ---
-
 title: "g_nmtraj(1)"
 name: "g_nmtraj"
 section: "1"
@@ -11,7 +10,9 @@ description: "g_nmtraj – generate oscillating trajectory of an eigenmode"
 <h2>NAME</h2>
 <p> g_nmtraj &#8211; generate oscillating trajectory of an eigenmode </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>g_nmtraj</code> <code>-s</code><i> topol.tpr </i> <code>-v</code><i> eigenvec.trr </i> <code>-o</code><i> nmtraj.xtc </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-eignr</code><i> string </i> <code>-phases</code><i> string </i> <code>-temp</code><i> real </i> <code>-amplitude</code><i> real </i> <code>-nframes</code><i> int </i></p>
+<h2>DESCRIPTION</h2>
 <p> <code> g_nmtraj</code> generates an virtual trajectory from an eigenvector, corresponding to a harmonic cartesian oscillation around the average structure. The eigenvectors should normally be mass-weighted, but you can use non-weighted eigenvectors to generate orthogonal motions. The output frames are written as a trajectory file covering an entire period, and the first frame is the average structure. If you write the trajectory in (or convert to) PDB format you can view it directly in PyMol and also render a photorealistic movie. Motion amplitudes are calculated from the eigenvalues and a preset temperature, assuming equipartition of the energy over all modes. To make the motion clearly visible in PyMol you might want to amplify it by setting an unrealistic high temperature. However, be aware that both the linear cartesian displacements and mass weighting will lead to serious structure deformation for high amplitudes &#8211; this is is simply a limitation of the cartesian normal mode model. By default the selected eigenvector is set to 7, since the first six normal modes are the translational and rotational degrees of freedom.</p>
 <h2>FILES</h2>
 <p> <code>-s</code><i> topol.tpr</i> <code>Input</code><br />

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_dn_init(3)"
 name: "gnutls_x509_dn_init"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_x509_dn_init – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_dn_init &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_dn_init(gnutls_x509_dn_t * </code><i>dn</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_x509_dn_t * dn</dt>
 <dd> the object to be initialized</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function initializes a <code>gnutls_x509_dn_t</code> structure. </p>
 <p> The object returned must be deallocated using <code>gnutls_x509_dn_deinit()</code>.</p>
 <h2>RETURNS</h2>

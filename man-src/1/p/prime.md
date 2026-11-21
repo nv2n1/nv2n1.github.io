@@ -1,5 +1,4 @@
 ---
-
 title: "prime(1)"
 name: "prime"
 section: "1"
@@ -10,7 +9,9 @@ description: "Prime – a file manager for GNU/Linux console/xterm"
 
 <h2>NAME</h2>
 <p> Prime &#8211; a file manager for GNU/Linux console/xterm</p>
+<h2>SYNOPSIS</h2>
 <p> <code>Prime [log-file-name] [OPTIONS]</code></p>
+<h2>DESCRIPTION</h2>
 <p> About The Prime<br />
  ===============<br />
  Prime is a GNU software, part of the GnuDOS package. Prime is a file manager which works under the GNU/Linux console. It was influenced by other file managers (like the well known XTree Gold which was popular under MS-DOS). It provides a user friendly interface with menus, shortcuts, and key navigation. It is distributed as part of the GnuDOS package which was developed to help users coming from DOS-like environments feel ease when dealing with the GNU system. Prime provides multi-level experience, the level of complexity can be adjusted by the user: you want to use DOS-keys with a few basic GNU ones? you want to go with the full power of the GNU system? All are options that are provided by the six levels of experience of Prime: </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ofm2opl(1)"
 name: "ofm2opl"
 section: "1"
@@ -10,7 +9,9 @@ description: "ofm2opl – convert Omega and TeX font-metric files to property-li
 
 <h2>NAME</h2>
 <p> ofm2opl &#8211; convert Omega and TeX font-metric files to property-list files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ofm2opl</code> [<i>options</i>] <i>ofmname</i>[<i></i><code>.ofm</code>] [<i>oplfile</i>[<i></i><code>.opl</code>]] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>ofm2opl</code> translates a binary Omega Font Metrics file, <i>ofmname</i>, into a human-readable property-list form. The program writes to standard output (by default) or to a file specified as <i>oplfile</i>. </p>
 <p> The program also works with TeX TFM files, producing TeX PL files. </p>
 <h2>OPTIONS</h2>

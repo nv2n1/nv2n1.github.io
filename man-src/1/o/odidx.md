@@ -1,5 +1,4 @@
 ---
-
 title: "odidx(1)"
 name: "odidx"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-odidx/"
 description: "odidx – indexer of document files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> odidx &#8211; indexer of document files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>odidx register</code> [-l <i>file</i>] [-wmax <i>num</i>] [-tsuf <i>sufs</i>] [-hsuf <i>sufs</i>] <i>name</i>[<i>dir</i>]<br />
  <code>odidx relate</code> <i>name</i><br />
  <code>odidx purge</code> <i>name</i></p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>odidx</code> commands. </p>
 <p> The command <code>odidx</code> is a utility for indexing files on the local file system. This command is useful for a full-text search system of a Web site. Supported file format are plain text and HTML. Supported character encoding are US-ASCII and ISO-8859-1. The URI of each document is specified with the path of its file. Attributes named as <i>title</i> and <i>date</i> are given to each documents. When a document is already existing in the database, it is registered if its last modification time is newer, or it is ignored. Modification times are stored in the sub database `_mtime&#8217; in the main database directory. Score information are stored in the sub database `_score&#8217; in the main database directory. This command is used in the above format. <i>name</i> specifies a database name. <i>dir</i> specifies a directory name.</p>
 <h2>OPTIONS</h2>

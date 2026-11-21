@@ -1,5 +1,4 @@
 ---
-
 title: "euca-delete-keypair(1)"
 name: "euca-delete-keypair"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-delete-keypair – Delete a key pair"
 
 <h2>NAME</h2>
 <p> euca-delete-keypair &#8211; Delete a key pair</p>
+<h2>SYNOPSIS</h2>
 <p> euca-delete-keypair [&#8211;show-empty-fields] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] KEYPAIR</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Delete a key pair</p>
 <h3>positional arguments:</h3>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "nwipe(1)"
 name: "nwipe"
 section: "1"
@@ -10,7 +9,9 @@ description: "nwipe – securely erase disks"
 
 <h2>NAME</h2>
 <p> nwipe &#8211; securely erase disks</p>
+<h2>SYNOPSIS</h2>
 <p> <code>nwipe</code> [<i>options</i>] [<i>device1</i>] [<i>device2</i>] &#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> nwipe is a command that will securely erase disks using a variety of recognised methods. It is a fork of the dwipe command used by Darik&#8217;s Boot and Nuke (dban). nwipe is included with partedmagic if want a quick and easy bootable CD version. nwipe was created out of a need to run the DBAN dwipe command outside of DBAN, in order to allow its use with any host distribution, thus giving better hardware support. It is essentially the same as dwipe, with a few changes:</p>
 <dl>
 <dt>&#8211; pthreads is used instead of fork</dt>

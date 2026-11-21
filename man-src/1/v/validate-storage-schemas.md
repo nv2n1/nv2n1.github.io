@@ -1,5 +1,4 @@
 ---
-
 title: "validate-storage-schemas(1)"
 name: "validate-storage-schemas"
 section: "1"
@@ -14,6 +13,7 @@ description: "validate-storage-schemas – validates the storage schemas"
 <pre>
 validate-storage-schemas
 </pre>
+<h2>DESCRIPTION</h2>
 <p> validates the storage schemas from the configuration file /etc/carbon/storage-schemas.conf.</p>
 <h2>AUTHOR</h2>
 <p> <code>validate-storage-schemas</code>, created by Chris Davis. </p>

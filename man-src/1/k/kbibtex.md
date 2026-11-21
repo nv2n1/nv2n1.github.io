@@ -1,5 +1,4 @@
 ---
-
 title: "kbibtex(1)"
 name: "kbibtex"
 section: "1"
@@ -10,7 +9,9 @@ description: "KBibTeX – a BibTeX editor for KDE"
 
 <h2>NAME</h2>
 <p> KBibTeX &#8211; a BibTeX editor for KDE </p>
+<h2>SYNOPSIS</h2>
 <p> <code>kbibtex</code> [<i>Qt-options</i>] [<i>KDE-options</i>] [<i>file</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> KBibTeX is a BibTeX editor for KDE written by Thomas Fischer and released under the GPL version 2 or later. </p>
 <p> KBibTeX can be started as a stand-alone program or embedded as a KPart into virtually every KDE program (e.g. Konqueror). </p>
 <h2>AUTHOR</h2>

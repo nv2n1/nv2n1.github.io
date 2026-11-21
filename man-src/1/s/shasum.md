@@ -1,5 +1,4 @@
 ---
-
 title: "shasum(1)"
 name: "shasum"
 section: "1"
@@ -7,9 +6,14 @@ letter: "s"
 url: "/docs/linux/man/1-shasum/"
 ---
 
-shasum - Print or Check SHA Checksums 
+<h2 class="name">NAME</h2>
+ 
 
-<pre><code>
+ shasum - Print or Check SHA Checksums 
+
+<h2>SYNOPSIS</h2>
+
+ <pre><code>
  Usage: shasum [OPTION]... [FILE]...
  Print or check SHA checksums.
  With no FILE, or when FILE is -, read standard input.
@@ -45,7 +49,9 @@ shasum - Print or Check SHA Checksums
  Report shasum bugs to mshelor [at] cpan.org
 </code></pre>
 
-Running <i>shasum</i> is often the quickest way to compute <font SIZE="-1">SHA</font> message digests. The user simply feeds data to the script through files or standard input, and then collects the results from standard output. 
+<h2>DESCRIPTION</h2>
+
+ Running <i>shasum</i> is often the quickest way to compute <font SIZE="-1">SHA</font> message digests. The user simply feeds data to the script through files or standard input, and then collects the results from standard output. 
 
  The following command shows how to compute digests for typical inputs such as the <font SIZE="-1">NIST</font> test vector ``abc'': 
 

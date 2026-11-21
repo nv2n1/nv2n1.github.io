@@ -1,5 +1,4 @@
 ---
-
 title: "beagle-status(1)"
 name: "beagle-status"
 section: "1"
@@ -10,7 +9,9 @@ description: "beagle-status – repeatedly display Beagle status"
 
 <h2>NAME</h2>
 <p> beagle-status &#8211; repeatedly display Beagle status</p>
+<h2>SYNOPSIS</h2>
 <p> <code>beagle-status</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>beagle-status</code> repeatedly displays status about <code><a href="/docs/linux/man/1-beagled/">beagled</a></code>(1), the Beagle daemon, in a top-like fashion.</p>
 <h2>AUTHOR</h2>
 <p> Novell, Inc.</p>

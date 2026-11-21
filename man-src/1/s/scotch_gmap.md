@@ -1,5 +1,4 @@
 ---
-
 title: "scotch_gmap(1)"
 name: "scotch_gmap"
 section: "1"
@@ -10,9 +9,11 @@ description: "gmap, gpart – compute static mappings and partitions sequentiall
 
 <h2>NAME</h2>
 <p> <code>gmap, gpart </code>&#8211; compute static mappings and partitions sequentially</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 gmap[options][gfile][tfile][mfile][lfile] gpart[options][nparts][gfile][mfile][lfile]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>gmap</code> program computes, in a sequential way, a static mapping of a source graph onto a target graph. </p>
 <p> The <code>gpart</code> program is a shortcut of <code>gmap</code> for computing unweighted partitions of a source graph. </p>
 <p> Source graph file <i>gfile</i> can only be a centralized graph file. For <code>gmap</code>, the target architecture file <i>tfile</i> describes either algorithmically-coded topologies such as meshes and hypercubes, or decomposition-defined architectures created by means of the <code>amk_grf</code>(1) program. The resulting mapping is stored in file <i>mfile</i>. Eventual logging information (such as the one produced by option <code>-v</code>) is sent to file <i>lfile</i>. When file names are not specified, data is read from standard input and written to standard output. Standard streams can also be explicitely represented by a dash &#8216;-&#8216;. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "globus_gsi_proxy_handle_destroy(3)"
 name: "globus_gsi_proxy_handle_destroy"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-globus_gsi_proxy_handle_destroy/"
 description: "globus_gsi_proxy.h – Globus GSI Proxy API."
 ---
 
+<h2 class="name">NAME</h2>
+<p> globus_gsi_proxy.h &#8211; Globus GSI Proxy API.</p>
+<h2>SYNOPSIS</h2>
 <h3>Macros</h3>
 <p> #define <code>GLOBUS_GSI_PROXY_MODULE</code><br />
  <i>Module descriptor. </i></p>

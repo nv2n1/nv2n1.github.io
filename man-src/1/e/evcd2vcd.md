@@ -1,5 +1,4 @@
 ---
-
 title: "evcd2vcd(1)"
 name: "evcd2vcd"
 section: "1"
@@ -12,6 +11,7 @@ description: "evcd2vcd – Converts EVCD files to VCD files"
 <p> evcd2vcd &#8211; Converts EVCD files to VCD files</p>
 <h2>SYNTAX</h2>
 <p> evcd2vcd [<i>option</i>]&#8230; [<i>EVCDFILE</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Converts EVCD files with bidirectional port definitions to VCD files with separate in and out ports.</p>
 <h2>OPTIONS</h2>
 <dl>

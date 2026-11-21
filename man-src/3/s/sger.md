@@ -1,5 +1,4 @@
 ---
-
 title: "sger(3)"
 name: "sger"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-sger/"
 description: "sger.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sger.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sger</code> (M, N, ALPHA, X, INCX, Y, INCY, A, LDA)<br />
  <i></i><code>SGER</code></p>

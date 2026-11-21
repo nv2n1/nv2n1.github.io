@@ -1,5 +1,4 @@
 ---
-
 title: "entertainer(1)"
 name: "entertainer"
 section: "1"
@@ -10,7 +9,9 @@ description: "entertainer – Media Center for the GNOME/Xfce Desktop"
 
 <h2>NAME</h2>
 <p> entertainer &#8211; Media Center for the GNOME/Xfce Desktop</p>
+<h2>SYNOPSIS</h2>
 <p> <code>entertainer</code> [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>entertainer</code> commands. </p>
 <p> <code>entertainer</code> is a Media Center Application for the GNOME/Xfce Desktop.</p>
 <h2>OPTIONS</h2>

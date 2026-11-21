@@ -1,5 +1,4 @@
 ---
-
 title: "rpmrebuild_plugins(1)"
 name: "rpmrebuild_plugins"
 section: "1"
@@ -10,7 +9,9 @@ description: "rpmrebuild_plugins – is an engine to expand rpmrebuild functiona
 
 <h2>NAME</h2>
 <p> rpmrebuild_plugins &#8211; is an engine to expand <code>rpmrebuild</code> functionality.</p>
+<h2>SYNOPSIS</h2>
 <p> rpmrebuild [<i>non-plugins-option</i>] [<i>plugins-option</i>] &lt;<i>packagename</i>&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>rpmrebuild</code> itself try to do it&#8217;s best to reconstruct rpm package as close to original as possible. </p>
 <p> rpmrebuild plugins&#8217;s aim is opposite &#8211; somehow change rebuilded rpm.</p>
 <h2>RPMREBUILD WITHOUT PLUGINS</h2>

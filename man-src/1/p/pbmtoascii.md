@@ -1,5 +1,4 @@
 ---
-
 title: "pbmtoascii(1)"
 name: "pbmtoascii"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pbmtoascii/"
 description: "pbmtoascii – convert a portable bitmap into ASCII graphics"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pbmtoascii &#8211; convert a portable bitmap into ASCII graphics </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pbmtoascii</code> [<code>-1&#215;2</code>|<code>-2&#215;4</code>] [<i>pbmfile</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Reads a portable bitmap as input. Produces a somewhat crude ASCII graphic as output. </p>
 <p> Note that there is no asciitopbm tool &#8211; this transformation is one-way.</p>
 <h2>OPTIONS</h2>

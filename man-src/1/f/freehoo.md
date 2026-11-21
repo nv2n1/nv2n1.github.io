@@ -1,5 +1,4 @@
 ---
-
 title: "freehoo(1)"
 name: "freehoo"
 section: "1"
@@ -10,7 +9,9 @@ description: "freehoo – manual page for freehoo messenger"
 
 <h2>NAME</h2>
 <p> freehoo &#8211; manual page for freehoo messenger</p>
+<h2>SYNOPSIS</h2>
 <p> <code>freehoo</code> [<i>OPTION</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> Freehoo is a free console based messenger for Yahoo IM Service with GNU Bash like tab completion / editing and GNU Emacs like extensibility.</p>
 <dl>
 <dt><code>-s</code>, <code>&#8211;status</code>=<i>STATUS</i></dt>

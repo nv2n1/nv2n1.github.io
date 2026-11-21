@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_ext_export_name_constraints(3)"
 name: "gnutls_x509_ext_export_name_constraints"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_ext_export_name_constraints – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_ext_export_name_constraints &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509-ext.h&gt;</code> </p>
 <p> <code>int gnutls_x509_ext_export_name_constraints(gnutls_x509_name_constraints_t </code><i>nc</i><code>, gnutls_datum_t * </code><i>ext</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_x509_ext_export_name_constraints – API function"
 <dd> The nameconstraints structure</dd>
 <dt>gnutls_datum_t * ext</dt>
 <dd> The DER-encoded extension data; must be freed using <code>gnutls_free()</code>.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will convert the provided name constraints structure to a DER-encoded PKIX NameConstraints (2.5.29.30) extension. The output data in<br />
 &nbsp;<wbr><i>ext</i>&nbsp;<wbr>will be allocated usin&nbsp;<wbr><code>gnutls_malloc()</code>.</p>
 <h2>RETURNS</h2>

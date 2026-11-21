@@ -1,5 +1,4 @@
 ---
-
 title: "t1unmac(1)"
 name: "t1unmac"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-t1unmac/"
 description: "t1unmac – translate a Mac PostScript Type 1 font into PFA or PFB format"
 ---
 
+<h2 class="name">NAME</h2>
+<p> t1unmac &#8211; translate a Mac PostScript Type 1 font into PFA or PFB format </p>
+<h2>SYNOPSIS</h2>
 <p> <code>t1unmac</code> [<code>-a</code>|<code>-b</code>] [<code>-r</code>] [<i>input</i> [<i>output</i>]]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>t1unmac</code> extracts POST resources from a Macintosh PostScript font file and creates a PFA (hexadecimal) or PFB (binary) font file. The file <i>input</i> should be in MacBinary I or II, AppleSingle, AppleDouble, or BinHex format, or it can be a raw resource fork. If the file is a raw resource fork, you need to give the `&#8211;raw&#8217; option; otherwise <code>t1unmac</code> should automatically figure out what kind of file you have. If the file <i>output</i> is not specified output goes to the standard output.</p>
 <h2>OPTIONS</h2>
 <dl>

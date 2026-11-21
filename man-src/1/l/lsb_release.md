@@ -1,5 +1,4 @@
 ---
-
 title: "lsb_release(1)"
 name: "lsb_release"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-lsb_release/"
 description: "lsb_release – print distribution-specific information"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lsb_release &#8211; print distribution-specific information </p>
+<h2>SYNOPSIS</h2>
 <p> <code>lsb_release</code> <i>[options]</i></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>lsb_release</code> command provides certain LSB (Linux Standard Base) and distribution-specific information. </p>
 <p> If no options are given, the <i>-v</i> option is assumed.</p>
 <h2>OPTIONS</h2>

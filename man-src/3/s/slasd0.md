@@ -1,5 +1,4 @@
 ---
-
 title: "slasd0(3)"
 name: "slasd0"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-slasd0/"
 description: "slasd0.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> slasd0.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slasd0</code> (N, SQRE, D, E, U, LDU, VT, LDVT, SMLSIZ, IWORK, WORK, INFO)<br />
  <i></i><code>SLASD0</code> computes the singular values of a real upper bidiagonal n-by-m matrix B with diagonal d and off-diagonal e. Used by sbdsdc.</p>

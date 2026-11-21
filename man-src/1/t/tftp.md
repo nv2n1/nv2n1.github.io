@@ -1,5 +1,4 @@
 ---
-
 title: "tftp(1)"
 name: "tftp"
 section: "1"
@@ -10,7 +9,9 @@ description: "tftp – IPv4 Trivial File Transfer Protocol client"
 
 <h2>NAME</h2>
 <p> <code>tftp</code> &#8211; IPv4 Trivial File Transfer Protocol client</p>
+<h2>SYNOPSIS</h2>
 <p> <code>tftp</code> [ <i>options&#8230;</i> ] [<i>host</i> [<i>port</i>]] [<code>-c</code> <i>command</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>tftp</code> is a client for the Trivial file Transfer Protocol, which can be used to transfer files to and from remote machines, including some very minimalistic, usually embedded, systems. The remote <i>host</i> may be specified on the command line, in which case <code>tftp</code> uses <i>host</i> as the default host for future transfers (see the <code>connect</code> command below.)</p>
 <h2>OPTIONS</h2>
 <dl>

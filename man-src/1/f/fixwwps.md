@@ -1,5 +1,4 @@
 ---
-
 title: "fixwwps(1)"
 name: "fixwwps"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-fixwwps/"
 description: "fixwwps – filter to fix Windows Write documents so PSUtils work"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fixwwps &#8211; filter to fix Windows Write documents so PSUtils work </p>
+<h2>SYNOPSIS</h2>
 <p> <code>fixwwps </code> &lt; <i>WinWrite.ps</i> &gt; <i>Fixed.ps</i></p>
+<h2>DESCRIPTION</h2>
 <p> <i>Fixwwps</i> is a <i>perl </i> filter which &quot;fixes&quot; PostScript from Windows Write so that it works correctly with Angus Duggan&#8217;s <code>psutils</code> package.</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) Angus J. C. Duggan 1991-1995</p>

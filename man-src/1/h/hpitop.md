@@ -1,5 +1,4 @@
 ---
-
 title: "hpitop(1)"
 name: "hpitop"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-hpitop/"
 description: "hpitop – A openhpi sample application that displays highlevel topology for a managed openHPI complex."
 ---
 
+<h2 class="name">NAME</h2>
+<p> hpitop &#8211; A openhpi sample application that displays highlevel topology for a managed openHPI complex. </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 hpitop[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-rscwiafd][-n nn][-X][-h] hpitop[--domain = nn][--host = host[:port]][--cfgfile = file][--rpts][--sensors]
                                                                            [--controls][--watchdogs][--inventories][--annunciators][--fumis][--dimis]
                                                                            [--resource = nn][--debug][--help]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> hpitop walks the Resource Present Table (<font SIZE="-1">RPT</font>) of the managed openHPI complex and displays all the resources and resources&#8217; management instruments. </p>
 <p> If no domain or host is selected, hpitop uses the default domain as specified in the openhpiclient.conf file.</p>
 <h2>OPTIONS</h2>

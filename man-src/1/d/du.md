@@ -1,5 +1,4 @@
 ---
-
 title: "du(1)"
 name: "du"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-du/"
 description: "du – estimate file space usage"
 ---
 
+<h2 class="name">NAME</h2>
+<p> du &#8211; estimate file space usage </p>
+<h2>SYNOPSIS</h2>
 <p> <code>du</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;<br />
  <code>du</code> [<i>,OPTION/</i>]&#8230; <i>,&#8211;files0-from=F/</i></p>
+<h2>DESCRIPTION</h2>
 <p> Summarize disk usage of the set of FILEs, recursively for directories. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>

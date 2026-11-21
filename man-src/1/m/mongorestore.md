@@ -1,5 +1,4 @@
 ---
-
 title: "mongorestore(1)"
 name: "mongorestore"
 section: "1"
@@ -10,6 +9,7 @@ description: "mongorestore – MongoDB Data Restoration Tool"
 
 <h2>NAME</h2>
 <p> mongorestore &#8211; MongoDB Data Restoration Tool</p>
+<h2>SYNOPSIS</h2>
 <p> The <code>mongorestore</code> program writes data from a binary database dump created by <code>mongodump</code> to a MongoDB instance. <code>mongorestore</code> can create a new database or add data to an existing database. </p>
 <p> <code>mongorestore</code> can write data to either <i>mongod</i> or <code>mongos</code> instances, in addition to writing directly to MongoDB data files without an active <code>mongod</code>.</p>
 <h2>BEHAVIOR</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "mid3v2(1)"
 name: "mid3v2"
 section: "1"
@@ -10,7 +9,9 @@ description: "mid3v2 – audio tag editor similar to ‘id3v2’"
 
 <h2>NAME</h2>
 <p> mid3v2 &#8211; audio tag editor similar to &#8216;id3v2&#8217;</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mid3v2</code> [<i>options</i>] <i>filename</i> &#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>mid3v2</code> is a Mutagen-based replacement for id3lib&#8217;s id3v2. It supports ID3v2.4 and more frames; it also does not have the numerous bugs that plague id3v2. </p>
 <p> This program exists mostly for compatibility with programs that want to tag files using id3v2. For a more usable interface, we recommend Ex Falso.</p>
 <h2>OPTIONS</h2>

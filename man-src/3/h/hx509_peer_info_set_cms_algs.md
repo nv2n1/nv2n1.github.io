@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-hx509_peer_info_set_cms_algs/"
 description: "hx509 certificate selecting functions –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hx509 certificate selecting functions &#8211; </p>
 <h3>Functions</h3>
 <p> int <code>hx509_peer_info_add_cms_alg</code> (hx509_context, hx509_peer_info, const AlgorithmIdentifier *) </p>
 <p> int <code>hx509_peer_info_alloc</code> (hx509_context, hx509_peer_info *) </p>

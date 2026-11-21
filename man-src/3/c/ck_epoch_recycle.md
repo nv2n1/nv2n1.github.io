@@ -1,5 +1,4 @@
 ---
-
 title: "ck_epoch_recycle(3)"
 name: "ck_epoch_recycle"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_epoch_recycle – return an epoch record that may be used by ca
 <p> <code>ck_epoch_recycle</code> &#8211; return an epoch record that may be used by caller</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_epoch.h Ft ck_epoch_record_t * Fn ck_epoch_recycle ck_epoch_t *epoch</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_epoch_recycle 3 function attempts to return an unused epoch record object for use by the caller. These epoch records were associated with previous calls to the Fn ck_epoch_unregister 3 function.</p>
 <h2>EXAMPLE</h2>
 <blockquote>

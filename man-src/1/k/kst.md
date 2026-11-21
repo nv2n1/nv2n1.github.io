@@ -1,5 +1,4 @@
 ---
-
 title: "kst(1)"
 name: "kst"
 section: "1"
@@ -10,6 +9,7 @@ description: "kst – A plotting and data viewing program"
 
 <h2>NAME</h2>
 <p> kst &#8211; A plotting and data viewing program</p>
+<h2>SYNOPSIS</h2>
 <p> The options are:</p>
 <dl>
 <dt> <code>kst</code> [Qt-options] [KDE-options] [options] [<i>file</i>&#8230;] </dt>

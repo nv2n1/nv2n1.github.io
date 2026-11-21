@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_gram_client_register_ping/"
 description: "GRAM Job Functions –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> GRAM Job Functions &#8211; </p>
 <h3>Functions</h3>
 <p> int <code>globus_gram_client_register_ping</code> (const char *resource_manager_contact, <code>globus_gram_client_attr_t</code> attr, <code>globus_gram_client_nonblocking_func_t</code> register_callback, void *register_callback_arg)<br />
  <i>Send a ping request to a GRAM service. </i><br />

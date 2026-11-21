@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-antlr3-apiclasses/"
 description: "API Classes –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> API Classes &#8211; </p>
 <p> The API classes are divided into the typdefs (and their underlying structs) that are the containers for each &#8216;object&#8217; within the ANTLR3C runtime, and their implementations (the functions that are installed by default in to these structures when you create them.</p>
 <h3>Modules</h3>
 <p> <code>API Typedefs and Structs</code> </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "stime(2)"
 name: "stime"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-stime/"
 description: "stime – set time"
 ---
 
+<h2 class="name">NAME</h2>
+<p> stime &#8211; set time </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;time.h&gt;</code> </p>
 <p> <code>int stime(const time_t *</code><i>t</i><code>);</code> </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
@@ -16,6 +18,7 @@ description: "stime – set time"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_SVID_SOURCE</p>
+<h2>DESCRIPTION</h2>
 <p> <code>NOTE</code>: This function is deprecated; use <code><a href="/docs/linux/man/2-clock_settime/">clock_settime</a></code>(2) instead. </p>
 <p> <code>stime</code>() sets the system&#8217;s idea of the time and date. The time, pointed to by <i>t</i>, is measured in seconds since the Epoch, 1970-01-01 00:00:00 +0000 (UTC). <code>stime</code>() may be executed only by the superuser.</p>
 <h2>RETURN VALUE</h2>

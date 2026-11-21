@@ -1,5 +1,4 @@
 ---
-
 title: "euca-describe-vpc-attribute(1)"
 name: "euca-describe-vpc-attribute"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-describe-vpc-attribute – Show an attribute of a VPC"
 
 <h2>NAME</h2>
 <p> euca-describe-vpc-attribute &#8211; Show an attribute of a VPC</p>
+<h2>SYNOPSIS</h2>
 <p> euca-describe-vpc-attribute (<code>-d</code> | <code>-s</code>) [&#8211;show-empty-fields] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] VPC</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Show an attribute of a VPC</p>
 <h3>positional arguments:</h3>
 <dl>

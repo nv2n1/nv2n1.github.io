@@ -1,5 +1,4 @@
 ---
-
 title: "fanotify_mark(2)"
 name: "fanotify_mark"
 section: "2"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/2-fanotify_mark/"
 description: "fanotify_mark – add, remove, or modify an fanotify mark on a filesystem object"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fanotify_mark &#8211; add, remove, or modify an fanotify mark on a filesystem object </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/fanotify.h&gt;
 int fanotify_mark(int fanotify_fd, unsigned int flags,
                   uint64_t mask, int dirfd, const char *pathname);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> For an overview of the fanotify API, see <code><a href="/docs/linux/man/7-fanotify/">fanotify</a></code>(7). </p>
 <p> <code>fanotify_mark</code>() adds, removes, or modifies an fanotify mark on a filesystem object. The caller must have read permission on the filesystem object that is to be marked. </p>
 <p> The <i>fanotify_fd</i> argument is a file descriptor returned by <code><a href="/docs/linux/man/2-fanotify_init/">fanotify_init</a></code>(2). </p>

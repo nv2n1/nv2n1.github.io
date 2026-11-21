@@ -1,5 +1,4 @@
 ---
-
 title: "shlock(1)"
 name: "shlock"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-shlock/"
 description: "shlock – Create lock files for use in shell scripts"
 ---
 
+<h2 class="name">NAME</h2>
+<p> shlock &#8211; Create lock files for use in shell scripts </p>
+<h2>SYNOPSIS</h2>
 <p> <code>shlock</code> [<code>-b</code>|<code>-c</code>|<code>-u</code>] <code>-f</code> <i>name</i> <code>-p</code> <i>pid</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>shlock</code> tries to create a lock file named <i>name</i> and write the process <font SIZE="-1">ID</font> <i>pid</i> into it. If the file already exists, <code>shlock</code> will read the process <font SIZE="-1">ID</font> from the file and test to see whether the process is currently running. If the process exists, then the file will not be created. <i>shlock</i> exits with a zero status if it could create the lock file, or non-zero if the file refers to a currently active process. </p>
 <p> A Perl wrapper around <code>shlock</code> can be used via the <tt>&quot;INN::Utils::Shlock&quot;</tt> module.</p>
 <h2>OPTIONS</h2>

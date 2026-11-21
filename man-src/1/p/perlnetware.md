@@ -1,5 +1,4 @@
 ---
-
 title: "perlnetware(1)"
 name: "perlnetware"
 section: "1"
@@ -7,9 +6,14 @@ letter: "p"
 url: "/docs/linux/man/1-perlnetware/"
 ---
 
-perlnetware - Perl for NetWare 
+<h2 class="name">NAME</h2>
+ 
 
-This file gives instructions for building Perl 5.7 and above, and also Perl modules for NetWare. Before you start, you may want to read the <font SIZE="-1">README</font> file found in the top level directory into which the Perl source code distribution was extracted. Make sure you read and understand the terms under which the software is being distributed.
+ perlnetware - Perl for NetWare 
+
+<h2>DESCRIPTION</h2>
+
+ This file gives instructions for building Perl 5.7 and above, and also Perl modules for NetWare. Before you start, you may want to read the <font SIZE="-1">README</font> file found in the top level directory into which the Perl source code distribution was extracted. Make sure you read and understand the terms under which the software is being distributed.
 
 <h2>BUILD</h2>
 

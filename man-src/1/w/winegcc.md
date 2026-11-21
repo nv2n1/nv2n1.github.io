@@ -1,5 +1,4 @@
 ---
-
 title: "winegcc(1)"
 name: "winegcc"
 section: "1"
@@ -10,7 +9,9 @@ description: "winegcc – Wine C and C++ MinGW Compatible Compiler"
 
 <h2>NAME</h2>
 <p> winegcc &#8211; Wine C and C++ MinGW Compatible Compiler</p>
+<h2>SYNOPSIS</h2>
 <p> <code>winegcc</code> [<i>options</i>] <i>infile</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>winegcc </code> is a gcc wrapper which tries to provide a MinGW compatible compiler under Linux. This is most useful to Win32 developers who can simply take their MinGW code from Windows, and recompile it without modifications under Winelib on Linux. wineg++ accepts mostly the same options as winegcc. </p>
 <p> The goal of winegcc is to be able to simply replace gcc/g++/windres with winegcc/wineg++/wrc in a MinGW Makefile, and just recompile the application using Winelib under Wine. While typically there are small adjustments that must be made to the application source code and/or Makefile, it is quite easy to do them in a fashion that is compatible between the MinGW and Wine environments. </p>
 <p> This manual will document only the differences from gcc; please consult the gcc manual for more information on those options. </p>

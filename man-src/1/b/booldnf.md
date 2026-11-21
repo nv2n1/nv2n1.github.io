@@ -1,5 +1,4 @@
 ---
-
 title: "booldnf(1)"
 name: "booldnf"
 section: "1"
@@ -10,7 +9,9 @@ description: "booldnf – converts a boolean expression to the DNF"
 
 <h2>NAME</h2>
 <p> booldnf &#8211; converts a boolean expression to the DNF</p>
+<h2>SYNOPSIS</h2>
 <p> <code>echo &#8216;a&amp;(!b|c&amp;!d)&#8217; | booldnf &gt; result.txt</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>booldnf</code> is a program that reads boolean expressions from its standard input and rewrites them in <code>Disjunctive Normal Form</code> on its standard output. It uses the BoolStuff library. </p>
 <p> The Disjunctive Normal Form is an ORing of ANDed terms. In other words, if the OR is considered an additive operation and the AND a multiplicative operation, then the DNF is a sum of products. </p>
 <p> Each expression must be on its own text line. Variable names must be composed only of ASCII letters and digits. </p>

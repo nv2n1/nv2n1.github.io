@@ -1,5 +1,4 @@
 ---
-
 title: "exo-desktop-item-edit(1)"
 name: "exo-desktop-item-edit"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-exo-desktop-item-edit/"
 description: "exo-desktop-item-edit – Edit freedesktop.org .desktop files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> exo-desktop-item-edit &#8211; Edit freedesktop.org .desktop files </p>
+<h2>DESCRIPTION</h2>
 <h3>Usage:</h3>
 <dl>
 <dt>

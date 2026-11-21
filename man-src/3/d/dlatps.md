@@ -1,5 +1,4 @@
 ---
-
 title: "dlatps(3)"
 name: "dlatps"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlatps/"
 description: "dlatps.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlatps.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlatps</code> (UPLO, TRANS, DIAG, NORMIN, N, AP, X, SCALE, CNORM, INFO)<br />
  <i></i><code>DLATPS</code> solves a triangular system of equations with the matrix held in packed storage.</p>

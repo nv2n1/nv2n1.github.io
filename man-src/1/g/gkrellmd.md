@@ -1,5 +1,4 @@
 ---
-
 title: "gkrellmd(1)"
 name: "gkrellmd"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-gkrellmd/"
 description: "gkrellmd – The GNU Krell Monitors Server"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gkrellmd &#8211; The GNU Krell Monitors Server</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gkrellmd</code> [ <code>&#8211;help</code> ] [ <code>&#8211;verbose</code> ] [ <code>-u</code> | <code>&#8211;update-hz</code> f ] [ <code>-m</code> | <code>&#8211;max-clients</code> N ] [ <code>-A</code> | <code>&#8211;address</code> server_address ] [ <code>-P</code> | <code>&#8211;port</code> server_port ] [ <code>-a</code> | <code>&#8211;allow-host</code> hostname ] [ <code>-d</code> | <code>&#8211;detach</code> ] [ <code>-p</code> | <code>&#8211;plugin</code> name ] [ <code>-pe</code> | <code>&#8211;plugin-enable</code> name ] [ <code>&#8211;plist</code> ] [ <code>&#8211;plog</code> ] | <code>&#8211;logfile</code> path ] | <code>&#8211;syslog</code> ] [ <code>-U</code> | <code>&#8211;user</code> username ] [ <code>-G</code> | <code>&#8211;group</code> groupname ] [ <code>&#8211;pidfile</code> path ] [ <code>&#8211;inet-interval</code> seconds ] [ <code>&#8211;io-timeout</code> seconds ] [ <code>&#8211;reconnect-timeout</code> seconds ] [ <code>&#8211;mailbox</code> mbox_path ] [ <code>&#8211;net-timer</code> net_interface ] [ <code>&#8211;mbmon-port</code> number ] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>gkrellmd</code> Listens for connections from <code>gkrellm</code> clients. When a <code>gkrellm</code> client connects to a <code>gkrellmd</code> server all builtin monitors collect their data from the server. However, the <code>gkrellm</code> process is running on the local machine, so plugins enabled in <code>gkrellm</code> will collect data from the local context unless the plugin is client/server capable and has a <code>gkrellmd</code> plugin counterpart which is installed and enabled on the server. Enabling a <code>gkrellmd</code> plugin installed on a server requires adding a <i>plugin-enable</i> line to a <i>gkrellmd.conf</i> file. </p>
 <p> Any command launching from a gkrellm client will run commands on the local machine. If you want to execute commands on the server, the client side commands can use ssh. </p>
 <p> There is no support for file system mounting on the machine where the <code>gkrellmd</code> server is running. </p>

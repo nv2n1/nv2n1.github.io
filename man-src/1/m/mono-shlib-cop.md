@@ -1,5 +1,4 @@
 ---
-
 title: "mono-shlib-cop(1)"
 name: "mono-shlib-cop"
 section: "1"
@@ -10,11 +9,13 @@ description: "mono-shlib-cop – Shared Library Usage Checker"
 
 <h2>NAME</h2>
 <p> mono-shlib-cop &#8211; Shared Library Usage Checker</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mono-shlib-cop</code> [OPTIONS]* [ASSEMBLY-FILE-NAME]*</p>
 <h2>OPTIONS</h2>
 <dl>
 <dt><i>-p, &#8211;prefixes=PREFIX</i></dt>
 <dd> Mono installation prefixes. This is to find $prefix/etc/mono/config. The default is based upon the location of mscorlib.dll, and is normally correct.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <i>mono-shlib-cop </i> is a tool that inspects a managed assembly looking for erroneous or suspecious usage of shared libraries. </p>
 <p> The tool takes one or more assembly filenames, and inspects each assembly specified. </p>
 <p> The errors checked for include:</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "xrdcp(1)"
 name: "xrdcp"
 section: "1"
@@ -10,6 +9,7 @@ description: "xrdcp – copy files"
 
 <h2>NAME</h2>
 <p> xrdcp &#8211; copy files</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 xrdcp[options] source destination
     options : [--cksum args][--debug lvl]
@@ -21,6 +21,7 @@ xrdcp[options] source destination
                             [--xrate rate][--zip file] legacy options : [-adler][-DSparm string][-DIparm number]
                                                                                 [-md5][-np][-ODcgi][-OScgi][-x]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>xrdcp</code> utility copies one or more files from one location to another. The data source and destination may be a local or remote file or directory. Additionally, the data source may also reside on multiple servers.</p>
 <h2>OPTIONS</h2>
 <p> <code>-C</code> | <code>&#8211;cksum</code> <i>type</i>[<code>:</code><i>value</i>|<i>print</i>|<i>source</i>]</p>

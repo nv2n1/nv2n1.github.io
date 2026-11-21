@@ -1,5 +1,4 @@
 ---
-
 title: "fprcp(1)"
 name: "fprcp"
 section: "1"
@@ -10,7 +9,9 @@ description: "fprcp – Free Pascal windres preprocessor program."
 
 <h2>NAME</h2>
 <p> fprcp &#8211; Free Pascal windres preprocessor program. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>fprcp -i file_name [-n] [-C] [-l PASCAL|C] [-p &lt;include_path&gt;] </code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>fprcp</code> reads a .rc file and preprocesses it, writing the result to standard output as it goes along. It replaces defined constants with their values, so <code>windres</code> can process the resulting file and create a resource. </p>
 <h2>USAGE</h2>
 <p> <code>fprcp</code> needs as a minimum the <code>-i filename</code> option, which is the file to process. </p>

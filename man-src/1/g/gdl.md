@@ -1,5 +1,4 @@
 ---
-
 title: "gdl(1)"
 name: "gdl"
 section: "1"
@@ -10,7 +9,9 @@ description: "gdl – GNU Data Language incremental compiler"
 
 <h2>NAME</h2>
 <p> gdl &#8211; GNU Data Language incremental compiler</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gdl</code> [&#8211;help] [-h] [&#8211;version] [-v] [-V] [[-]-quiet] [-q] [ -arg value ] [ -args &#8230; ] [ -e statement ] [ -pref=/path/to/preferenceFile ] [ batch_file &#8230; ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>gdl</code> is an incremental compiler for the GNU Data Language (GDL). GDL is being developed with the aim of providing an open-source drop-in replacement for ITTVIS Interactive Data Language (IDL). It is also partially compatible with Visual Numerics (VN) PV-WAVE. IDL and PV-WAVE are registered trademarks of ITTVIS and VN, respectively. GDL and its library routines are designed as a tool for numerical data analysis and visualisation. GDL is dynamically typed, vectorized and has object-oriented programming capabilities. The library routines handle numerical calculations, data visualisation, signal/image processing, file input/output (incl. graphical and scientific data formats such as TIFF, PNG, netCDF, HDF etc) and interaction with host OS. </p>
 <p> Information on GDL/IDL/PV-WAVE syntax and library routines can be found in e.g.: </p>
 <p> &#8211; GDL documentation draft at: <a rel="nofollow" href="http://gnudatalanguage.sf.net/gdl.pdf">http://gnudatalanguage.sf.net/gdl.pdf</a> </p>

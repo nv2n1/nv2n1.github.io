@@ -1,5 +1,4 @@
 ---
-
 title: "indent(1)"
 name: "indent"
 section: "1"
@@ -7,12 +6,13 @@ letter: "i"
 url: "/docs/linux/man/1-indent/"
 description: "indent – changes the appearance of a C program by inserting or deleting whitespace."
 ---
-
 <h2>NAME</h2>
 <p> indent - changes the appearance of a C program by inserting or deleting whitespace.  </p>
+<h2>SYNOPSIS</h2>
 <p> <code>indent </code> [options] [input-files] </p>
 <p> <code>indent </code> [options] [single-input-file] [-o output-file] </p>
 <p> <code>indent </code> --version  </p>
+<h2>DESCRIPTION</h2>
 <p> This man page is generated from the file <i>indent.texinfo</i>. This is Edition of &quot;The <code>indent</code> Manual&quot;, for Indent Version , last updated . </p>
 <p> The <code>indent</code> program can be used to make code easier to read. It can also convert from one style of writing C to another. </p>
 <p> <code>indent</code> understands a substantial amount about the syntax of C, but it also attempts to cope with incomplete and misformed syntax. </p>

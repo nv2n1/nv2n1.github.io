@@ -1,5 +1,4 @@
 ---
-
 title: "rdoc(1)"
 name: "rdoc"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-rdoc/"
 description: "rdoc3.0 – Generate documentation from Ruby script files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rdoc3.0 &#8211; Generate documentation from Ruby script files </p>
+<h2>SYNOPSIS</h2>
 <p> rdoc3.0 [options] [names&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> Files are parsed, and the information they contain collected, before any output is produced. This allows cross references between all files to be resolved. If a name is a directory, it is traversed. If no names are specified, all Ruby files in the current directory (and subdirectories) are processed. </p>
 <p> Available output formatters: chm, html, ri, xml </p>
 <p> For information on where the output goes, use: </p>

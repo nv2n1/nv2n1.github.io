@@ -1,5 +1,4 @@
 ---
-
 title: "dotlockfile(1)"
 name: "dotlockfile"
 section: "1"
@@ -10,7 +9,9 @@ description: "dotlockfile – Utility to manage lockfiles"
 
 <h2>NAME</h2>
 <p> dotlockfile &#8211; Utility to manage lockfiles</p>
+<h2>SYNOPSIS</h2>
 <p> <code>/usr/bin/dotlockfile</code> [<code>-p</code>] [<code>-c</code>] [<code>-m</code>] [<code>-l|-u|-t</code>] [<code>-r</code> <i>retries</i>] [<code>lockfile]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>Dotlockfile</code> is a command line utility to safely create, test and remove lockfiles. Lockfiles are created in an NFS-safe way. <code>Dotlockfile</code> can can also be used to lock and unlock mailboxes even if the mailspool directory is only writable by group mail. </p>
 <p> The name <code>dotlockfile</code> comes from the way mailboxes are locked for updates on a lot of UNIX systems. A lockfile is created with the same filename as the mailbox but with the string &quot;<i>.lock</i>&quot; appended. </p>
 <p> The names <code>dotlock</code> and <code>lockfile</code> were already taken &#8211; hence the name <code>dotlockfile</code> <i>:)</i>.</p>

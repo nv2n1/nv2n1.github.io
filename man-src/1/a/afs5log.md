@@ -1,5 +1,4 @@
 ---
-
 title: "afs5log(1)"
 name: "afs5log"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-afs5log/"
 description: "afs5log – AFS token initializer"
 ---
 
+<h2 class="name">NAME</h2>
+<p> afs5log &#8211; AFS token initializer</p>
+<h2>SYNOPSIS</h2>
 <p> afs5log [ [-v] [-5] [-k] [-p <i>path</i>] [cell[=principal] ] ] [&#8230;] </p>
+<h2>DESCRIPTION</h2>
 <p> The <i>afs5log</i> command uses Kerberos to obtain AFS tokens for the named cells. If no cell is named, tokens are obtained for the local cell. If the principal name of the <i>afs</i> service for the cell is known, the cell name may also be given in the form <i>cell</i>=<i>principal_name</i>. Attempts are made to obtain Kerberos IV credentials first, and if that fails, <i>afs5log</i> will create Kerberos 5 (<i>2b-style</i>) tokens. </p>
 <h2>ARGUMENTS</h2>
 <dl>

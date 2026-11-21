@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_privkey_status(3)"
 name: "gnutls_privkey_status"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_privkey_status – API function"
 
 <h2>NAME</h2>
 <p> gnutls_privkey_status &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/abstract.h&gt;</code> </p>
 <p> <code>int gnutls_privkey_status(gnutls_privkey_t </code><i>key</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_privkey_t key</dt>
 <dd> Holds the key</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Checks the status of the private key token. This function is an actual wrapper over <code>gnutls_pkcs11_privkey_status()</code>, and if the private key is a PKCS <code>11</code> token it will check whether it is inserted or not.</p>
 <h2>RETURNS</h2>
 <p> this function will return non-zero if the token holding the private key is still available (inserted), and zero otherwise.</p>

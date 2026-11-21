@@ -1,5 +1,4 @@
 ---
-
 title: "socket_wrapper(1)"
 name: "socket_wrapper"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-socket_wrapper/"
 description: "socket_wrapper – A library passing all socket communications through unix sockets."
 ---
 
+<h2 class="name">NAME</h2>
+<p> socket_wrapper &#8211; A library passing all socket communications through unix sockets. </p>
+<h2>SYNOPSIS</h2>
 <p> LD_PRELOAD=libsocket_wrapper.so SOCKET_WRAPPER_DIR=/tmp/tmp.bQRELqDrhM SOCKET_WRAPPER_DEFAULT_IFACE=10 <code>./myapplication</code></p>
+<h2>DESCRIPTION</h2>
 <p> socket_wrapper aims to help client/server software development teams willing to gain full functional test coverage. It makes possible to run several instances of the full software stack on the same machine and perform locally functional testing of complex network configurations. </p>
 <dl>
 <dt>

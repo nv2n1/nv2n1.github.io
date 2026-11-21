@@ -1,5 +1,4 @@
 ---
-
 title: "csharp(1)"
 name: "csharp"
 section: "1"
@@ -10,8 +9,10 @@ description: "csharp, gsharp – Interactive C# Shell"
 
 <h2>NAME</h2>
 <p> csharp, gsharp &#8211; Interactive C# Shell</p>
+<h2>SYNOPSIS</h2>
 <p> <code>csharp [&#8211;attach PID] [-e EXPRESSION] [file1 [file2]]</code> [options] </p>
 <p> <code>gsharp [file1 [file2]]</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <i>csharp</i> is an interactive C# shell that allows the user to enter and evaluate C# statements and expressions from the command line. The regular <i>mcs</i> command line options can be used in this version of the compiler. </p>
 <p> The <i>gsharp</i> command is a GUI version of the C# interpreter that uses Gtk# and provides an area to attach widgets as well. This version can be attached to other Gtk# applications in a safe way as it injects itself into the main loop of a Gtk# application, avoiding any problems arising from the multi-threaded nature of injecting itself into a target process. </p>
 <p> Files specified in the command line will be loaded and executed as scripts. </p>

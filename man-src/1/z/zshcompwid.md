@@ -1,5 +1,4 @@
 ---
-
 title: "zshcompwid(1)"
 name: "zshcompwid"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-zshcompwid/"
 description: "zshcompwid – zsh completion widgets"
 ---
 
+<h2 class="name">NAME</h2>
+<p> zshcompwid &#8211; zsh completion widgets </p>
+<h2>DESCRIPTION</h2>
 <p> The shell&#8217;s programmable completion mechanism can be manipulated in two ways; here the low-level features supporting the newer, function-based mechanism are defined. A complete set of shell functions based on these features is described in <i><a href="/docs/linux/man/1-zshcompsys/">zshcompsys</a></i>(1), and users with no interest in adding to that system (or, potentially, writing their own &#8212; see dictionary entry for `hubris&#8217;) should skip the current section. The older system based on the <code>compctl</code> builtin command is described in <i><a href="/docs/linux/man/1-zshcompctl/">zshcompctl</a></i>(1). </p>
 <p> Completion widgets are defined by the <code>-C</code> option to the <code>zle</code> builtin command provided by the <code>zsh/zle</code> module (see <i><a href="/docs/linux/man/1-zshzle/">zshzle</a></i>(1)). For example, </p>
 <dl>

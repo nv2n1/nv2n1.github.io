@@ -1,5 +1,4 @@
 ---
-
 title: "scala(1)"
 name: "scala"
 section: "1"
@@ -8,7 +7,9 @@ url: "/docs/linux/man/1-scala/"
 description: "scala – Run code in the Scala 2 language"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>scala</code> &#8211; Run code in the Scala 2 language </p>
+<h2>SYNOPSIS</h2>
 <p> <code>scala</code> [ &lt;<i>option</i>&gt; ]&#8230; [ &lt;<i>torun</i>&gt; &lt;<i>argument</i>&gt;&#8230; ]</p>
 <h2>PARAMETERS</h2>
 <dl>
@@ -30,6 +31,7 @@ description: "scala – Run code in the Scala 2 language"
 <dd> A top-level object or a script file to run.</dd>
 <dt>&lt;<i>argument</i>&gt;</dt>
 <dd> An arguments to pass to &lt;<i>torun</i>&gt;.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code>scala</code> utility runs Scala code using a Java runtime environment. The Scala code to run is specified in one of three ways:</p>
 <dl>
 <dt> 1.</dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "pocompile(1)"
 name: "pocompile"
 section: "1"
@@ -10,7 +9,9 @@ description: "pocompile – Compile XLIFF and Gettext PO localization files into
 
 <h2>NAME</h2>
 <p> pocompile &#8211; Compile XLIFF and Gettext PO localization files into Gettext MO (Machine Object) files.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pocompile </code>[&#8211;version] [-h|&#8211;help] [&#8211;manpage] [&#8211;progress <i>PROGRESS</i>] [&#8211;errorlevel <i>ERRORLEVEL</i>] [-i|&#8211;input] <i>INPUT</i> [-x|&#8211;exclude <i>EXCLUDE</i>] [-o|&#8211;output] <i>OUTPUT</i> [-S|&#8211;timestamp] [&#8211;fuzzy] [&#8211;nofuzzy]</p>
+<h2>DESCRIPTION</h2>
 <p> See: <a rel="nofollow" href="http://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/pocompile.html">http://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/pocompile.html</a> for examples and usage instructions.</p>
 <h2>OPTIONS</h2>
 <dl>

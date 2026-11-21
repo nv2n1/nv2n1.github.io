@@ -1,5 +1,4 @@
 ---
-
 title: "ragrep(1)"
 name: "ragrep"
 section: "1"
@@ -10,8 +9,10 @@ description: "ragrep – grep argus(8) user captured data."
 
 <h2>NAME</h2>
 <p> <code>ragrep</code> &#8211; grep <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> user captured data.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ragrep</code> [<code>options</code>] <code>-e</code> <i>pattern</i> [<code>raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>]<br />
  <code>ragrep</code> [<code>options</code>] <code>-f file</code> [<code>raoptions</code>] [<code>&#8211;</code> <i>filter-expression</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Ragrep</code> reads <code>argus</code> data from an <i>argus-data</i> source, greps the records based on the regexp specified on the command line, and outputs a valid <i>argus-stream</i>. </p>
 <p> Ragrep works only on the fields for user captured data. Argus must be started with the configration option <code>ARGUS_CAPTURE_DATA_LEN</code> set to a value greater than 0, to have these data captured. See <code><a href="/docs/linux/man/5-argus-conf/">argus.conf</a>(5)</code> for detail. </p>
 <p> Ragrep is based on GNU <code><a href="/docs/linux/man/1-grep/">grep</a>(1)</code>, so the <i>regexp</i> syntax is the same as for <code><a href="/docs/linux/man/1-grep/">grep</a>(1)</code>.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "psscale(1)"
 name: "psscale"
 section: "1"
@@ -10,8 +9,10 @@ description: "psscale – Plot a gray or color scale-bar on maps"
 
 <h2>NAME</h2>
 <p> psscale &#8211; Plot a gray or color scale-bar on maps</p>
+<h2>SYNOPSIS</h2>
 <p> <code>psscale</code> <i>refpoint</i> [ [<code>p</code>|<code>s</code>]<i>parameters</i> ] [ <i>cpt</i> ] [ <i>box</i> ] [ <i>zlo</i>/<i>zhi</i> ] [ [<i>max_intens</i>|<i>low_i</i>/<i>high_i</i>] ] [ <i>parameters</i> ] [ <code>z</code>|<code>Z</code><i>parameters</i> ] [ ] [ [<code>i</code>][<i>gap</i>] ] [ ] [ [<code>p</code>|<i>dpi</i> ]] [ ] [ ] [ ] [ <i>region</i> ] [ ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ [<i>level</i>] ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ <i>zfile</i> ] [ <code>-c</code><i>copies</i> ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-t</code><i>&lt;transp&gt;</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>psscale</code> plots gray scales or color scales on maps. Both horizontal and vertical scales are supported. For CPT files with gradational colors (i.e., the lower and upper boundary of an interval have different colors) <code>psscale</code> will interpolate to give a continuous scale. Variations in intensity due to shading/illumination may be displayed by setting the option <code>-I</code>. Colors may be spaced according to a linear scale, all be equal size, or by providing a file with individual tile widths. The font used for the annotations along the scale and optional units is specified by <i>FONT_ANNOT_PRIMARY</i>. If a label is requested, it is plotted with <i>FONT_LABEL</i>.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

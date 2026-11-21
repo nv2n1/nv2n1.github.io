@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_ftp_client_throughput_plugin/"
 description: "Throughput Performance Plugin –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Throughput Performance Plugin &#8211; </p>
 <h3>Macros</h3>
 <p> #define <code>GLOBUS_FTP_CLIENT_THROUGHPUT_PLUGIN_MODULE</code> (&amp;globus_i_ftp_client_throughput_plugin_module) </p>
 <h3>Typedefs</h3>

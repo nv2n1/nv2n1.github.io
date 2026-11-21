@@ -1,5 +1,4 @@
 ---
-
 title: "empty(3)"
 name: "empty"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-empty/"
 description: "QuantLib::Currency – Currency specification"
 ---
 
+<h2 class="name">NAME</h2>
+<p> QuantLib::Currency &#8211; Currency specification </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/currency.hpp&gt; </p>
 <p> Inherited by <code>ARSCurrency</code>, <code>ATSCurrency</code>, <code>AUDCurrency</code>, <code>BDTCurrency</code>, <code>BEFCurrency</code>, <code>BGLCurrency</code>, <code>BRLCurrency</code>, <code>BYRCurrency</code>, <code>CADCurrency</code>, <code>CHFCurrency</code>, <code>CLPCurrency</code>, <code>CNYCurrency</code>, <code>COPCurrency</code>, <code>CYPCurrency</code>, <code>CZKCurrency</code>, <code>DEMCurrency</code>, <code>DKKCurrency</code>, <code>EEKCurrency</code>, <code>ESPCurrency</code>, <code>EURCurrency</code>, <code>FIMCurrency</code>, <code>FRFCurrency</code>, <code>GBPCurrency</code>, <code>GRDCurrency</code>, <code>HKDCurrency</code>, <code>HUFCurrency</code>, <code>IEPCurrency</code>, <code>ILSCurrency</code>, <code>INRCurrency</code>, <code>IQDCurrency</code>, <code>IRRCurrency</code>, <code>ISKCurrency</code>, <code>ITLCurrency</code>, <code>JPYCurrency</code>, <code>KRWCurrency</code>, <code>KWDCurrency</code>, <code>LTLCurrency</code>, <code>LUFCurrency</code>, <code>LVLCurrency</code>, <code>MTLCurrency</code>, <code>MXNCurrency</code>, <code>NLGCurrency</code>, <code>NOKCurrency</code>, <code>NPRCurrency</code>, <code>NZDCurrency</code>, <code>PEHCurrency</code>, <code>PEICurrency</code>, <code>PENCurrency</code>, <code>PKRCurrency</code>, <code>PLNCurrency</code>, <code>PTECurrency</code>, <code>ROLCurrency</code>, <code>RONCurrency</code>, <code>SARCurrency</code>, <code>SEKCurrency</code>, <code>SGDCurrency</code>, <code>SITCurrency</code>, <code>SKKCurrency</code>, <code>THBCurrency</code>, <code>TRLCurrency</code>, <code>TRYCurrency</code>, <code>TTDCurrency</code>, <code>TWDCurrency</code>, <code>USDCurrency</code>, <code>VEBCurrency</code>, and <code>ZARCurrency</code>. </p>
 <h3>Public Member Functions</h3>

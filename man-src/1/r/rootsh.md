@@ -1,5 +1,4 @@
 ---
-
 title: "rootsh(1)"
 name: "rootsh"
 section: "1"
@@ -10,7 +9,9 @@ description: "rootsh – a logging wrapper for shells"
 
 <h2>NAME</h2>
 <p> rootsh &#8211; a logging wrapper for shells</p>
+<h2>SYNOPSIS</h2>
 <p> <code>rootsh</code> [<i>OPTION</i>]&#8230; [<i>&#8212;</i>] [<i>COMMANDS</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Start a shell with logging of input/output. Rootsh must be started via sudo if you want to become root. It does not raise your privileges on it&#8217;s own. You can run rootsh as a standalone application if you only want to log your own user&#8217;s session. If you call rootsh with additional commands, these will be passed to the shell.</p>
 <dl>
 <dt><code>-i</code>, <code>&#8211;initial</code></dt>

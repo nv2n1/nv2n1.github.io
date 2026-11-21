@@ -1,5 +1,4 @@
 ---
-
 title: "reporter-ureport(1)"
 name: "reporter-ureport"
 section: "1"
@@ -7,11 +6,22 @@ letter: "r"
 url: "/docs/linux/man/1-reporter-ureport/"
 ---
 
-reporter-ureport - Reports ABRT problems in format of micro report 
+<h2 class="name">NAME</h2>
+ 
 
-<i>reporter-ureport</i> [-v] [-c CONFFILE] [-u URL] [-k] [-A -a bthash -B -b bug-id -E -e email -l DATA -L FIELD -T TYPE -r RESULT_TYPE] [-d DIR]
+ reporter-ureport - Reports ABRT problems in format of micro report 
 
-The tool reads problem directory DIR, assembles an micro report from the loaded problem data and sends the micro report to uReport server for updating statistics and fast analysis. The results of the analysis are stored in problem data in form of problems elements. <i>reporter-ureport</i> updates <i>reported_to</i>
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <i>reporter-ureport</i> [-v] [-c CONFFILE] [-u URL] [-k] [-A -a bthash -B -b bug-id -E -e email -l DATA -L FIELD -T TYPE -r RESULT_TYPE] [-d DIR]
+
+<h2>DESCRIPTION</h2>
+
+ 
+
+ The tool reads problem directory DIR, assembles an micro report from the loaded problem data and sends the micro report to uReport server for updating statistics and fast analysis. The results of the analysis are stored in problem data in form of problems elements. <i>reporter-ureport</i> updates <i>reported_to</i>
 
 <h3>Configuration file</h3>
 

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_handshake_set_private_extensions(3)"
 name: "gnutls_handshake_set_private_extensions"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_handshake_set_private_extensions – API function"
 
 <h2>NAME</h2>
 <p> gnutls_handshake_set_private_extensions &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_handshake_set_private_extensions(gnutls_session_t </code><i>session</i><code>, int </code><i>allow</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_handshake_set_private_extensions – API function"
 <dd> is a <code>gnutls_session_t</code> structure.</dd>
 <dt>int allow</dt>
 <dd> is an integer (0 or 1)</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will enable or disable the use of private cipher suites (the ones that start with 0xFF). By default or if <i>allow</i> is 0 then these cipher suites will not be advertised nor used. </p>
 <p> Currently GnuTLS does not include such cipher-suites or compression algorithms. </p>
 <p> Enabling the private ciphersuites when talking to other than gnutls servers and clients may cause interoperability problems.</p>

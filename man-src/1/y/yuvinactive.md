@@ -1,5 +1,4 @@
 ---
-
 title: "yuvinactive(1)"
 name: "yuvinactive"
 section: "1"
@@ -10,7 +9,9 @@ description: "yuvinactive – Set a part of the video to a defined state"
 
 <h2>NAME</h2>
 <p> yuvinactive &#8211; Set a part of the video to a defined state </p>
+<h2>SYNOPSIS</h2>
 <p> <code>yuvinactive</code> [<i>options</i>] <i>&lt;/dev/stdin &gt;/dev/stdout</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>yuvinactive</code> operates with a area (rectangle) you define. By default is sets it to really black. But you can tell tell yuvinactive to darken the area, or fill it with a certain color. It can also make the content of the area unreadable, like extreme softening of the area. Or copy the surrounding area into the the specified area. You usually have to use the -i option which sets the area in which yuvinactive will work. If no additional option is given yuvinactive stet the area to black. But you can use the <code>-d -s -a -c options</code> to tell yuvinactive that it shall do something different with that area. You can only use one additional option. yuvinactive was built to remove unwanted things like a logo, from the movie. </p>
 <h2>OPTIONS</h2>
 <p> <code>lav2yuv</code> accepts the following options: </p>

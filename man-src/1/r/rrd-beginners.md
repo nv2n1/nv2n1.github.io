@@ -1,5 +1,4 @@
 ---
-
 title: "rrd-beginners(1)"
 name: "rrd-beginners"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-rrd-beginners/"
 description: "rrd-beginners – RRDtool Beginners’ Guide"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rrd-beginners &#8211; RRDtool Beginners&#8217; Guide </p>
+<h2>SYNOPSIS</h2>
 <p> Helping new RRDtool users to understand the basics of RRDtool</p>
+<h2>DESCRIPTION</h2>
 <p> This manual is an attempt to assist beginners in understanding the concepts of RRDtool. It sheds a light on differences between RRDtool and other databases. With help of an example, it explains the structure of RRDtool database. This is followed by an overview of the &#8220;graph&#8221; feature of RRDtool. At the end, it has sample scripts that illustrate the usage/wrapping of RRDtool within Shell or Perl scripts.</p>
 <h3>What makes RRDtool so special?</h3>
 <p> RRDtool is <font SIZE="-1">GNU</font> licensed software developed by Tobias Oetiker, a system manager at the Swiss Federal Institute of Technology. Though it is a database, there are distinct differences between RRDtool databases and other databases as listed below:</p>

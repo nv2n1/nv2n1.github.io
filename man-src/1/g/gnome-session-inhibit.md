@@ -1,5 +1,4 @@
 ---
-
 title: "gnome-session-inhibit(1)"
 name: "gnome-session-inhibit"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-gnome-session-inhibit/"
 description: "gnome-session-inhibit – inhibit gnome-session functionality"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gnome-session-inhibit &#8211; inhibit gnome-session functionality </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gnome-session-inhibit</code> [OPTION&#8230;] [COMMAND]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>gnome-session-inhibit</code></p>
 <dd>can inhibit certain gnome-session functionality while executing the given COMMAND. To achieve this, it calls the Inhibit() method of the gnome-session D-Bus API and creates an inhibitor. The inhibitor is automatically removed when gnome-session-inhibit exits. </dd>
 <p> A typical use case is to prevent the session from going idle (and thus locking the screen) while a movie player is running.</p>

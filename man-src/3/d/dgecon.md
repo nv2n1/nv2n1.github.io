@@ -1,5 +1,4 @@
 ---
-
 title: "dgecon(3)"
 name: "dgecon"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dgecon/"
 description: "dgecon.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dgecon.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgecon</code> (NORM, N, A, LDA, ANORM, RCOND, WORK, IWORK, INFO)<br />
  <i></i><code>DGECON</code></p>

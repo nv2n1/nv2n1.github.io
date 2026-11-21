@@ -1,5 +1,4 @@
 ---
-
 title: "at(1)"
 name: "at"
 section: "1"
@@ -10,6 +9,7 @@ description: "at, batch, atq, atrm – queue, examine or delete jobs for later e
 
 <h2>NAME</h2>
 <p> at, batch, atq, atrm &#8211; queue, examine or delete jobs for later execution</p>
+<h2>SYNOPSIS</h2>
 <p> <code>at</code> [<code>-V</code>] [<code>-q</code> <i>queue</i>] [<code>-f</code> <i>file</i>] [<code>-mMlv</code>] <i>timespec</i>&#8230;<br />
  <code>at</code> [<code>-V</code>] [<code>-q</code> <i>queue</i>] [<code>-f</code> <i>file</i>] [<code>-mMkv</code>] [<code>-t</code> <i>time</i>]<br />
  <code>at -c</code> <i>job</i> [<i>job&#8230;</i>]<br />
@@ -18,6 +18,7 @@ description: "at, batch, atq, atrm – queue, examine or delete jobs for later e
  <code>atrm</code> [<code>-V</code>] <i>job</i> [<i>job&#8230;</i>]<br />
  <code>batch</code><br />
  <code>at -b</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>at</code> and <code>batch</code> read commands from standard input or a specified file which are to be executed at a later time, using <code>/bin/sh</code>.</p>
 <dl>
 <dt><code>at</code></dt>

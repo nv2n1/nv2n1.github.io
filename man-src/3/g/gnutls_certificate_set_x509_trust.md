@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_certificate_set_x509_trust(3)"
 name: "gnutls_certificate_set_x509_trust"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_certificate_set_x509_trust – API function"
 
 <h2>NAME</h2>
 <p> gnutls_certificate_set_x509_trust &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_certificate_set_x509_trust(gnutls_certificate_credentials_t </code><i>res</i><code>, gnutls_x509_crt_t * </code><i>ca_list</i><code>, int </code><i>ca_list_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_certificate_set_x509_trust – API function"
 <dd> is a list of trusted CAs</dd>
 <dt>int ca_list_size</dt>
 <dd> holds the size of the CA list</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function adds the trusted CAs in order to verify client or server certificates. In case of a client this is not required to be called if the certificates are not verified using <code>gnutls_certificate_verify_peers2()</code>. This function may be called multiple times. </p>
 <p> In case of a server the CAs set here will be sent to the client if a certificate request is sent. This can be disabled using <code>gnutls_certificate_send_x509_rdn_sequence()</code>.</p>
 <h2>RETURNS</h2>

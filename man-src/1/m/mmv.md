@@ -1,5 +1,4 @@
 ---
-
 title: "mmv(1)"
 name: "mmv"
 section: "1"
@@ -10,6 +9,7 @@ description: "mmv – move/copy/append/link multiple files by wildcard patterns"
 
 <h2>NAME</h2>
 <p> mmv &#8211; move/copy/append/link multiple files by wildcard patterns</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mmv</code> [<code>-h</code>] [<code>-d</code>|<code>p</code>] [<code>-g</code>|<code>t</code>] [<code>-v</code>|<code>n</code>] [<code>&#8212;</code>] [<code>from to</code>]</p>
 <h2>EXAMPLES</h2>
 <p> Rename all <i>*.jpeg</i> files in the current directory to <i>*.jpg</i>: </p>
@@ -20,6 +20,7 @@ description: "mmv – move/copy/append/link multiple files by wildcard patterns"
 <p> mmv &#8216;*.html.??&#8217; &#8216;#1.#2#3.html&#8217; </p>
 <p> Rename music files from <i>&lt;track no.&gt; &#8211; &lt;interpreter&gt; &#8211; &lt;song title&gt;.ogg</i> to <i>&lt;interpreter&gt; &#8211; &lt;track no.&gt; &#8211; &lt;song title&gt;.ogg</i> in the current directory: </p>
 <p> mmv &#8216;* &#8211; * &#8211; *.ogg&#8217; &#8216;#2 &#8211; #1 &#8211; #3.ogg&#8217; </p>
+<h2>DESCRIPTION</h2>
 <p> <i>Mmv</i> moves (or copies, appends, or links, as specified) each source file matching a <i>from</i> pattern to the target name specified by the <i>to</i> pattern. This multiple action is performed safely, i.e. without any unexpected deletion of files due to collisions of target names with existing filenames or with other target names. Furthermore, before doing anything, <i>mmv</i> attempts to detect any errors that would result from the entire set of actions specified and gives the user the choice of either proceeding by avoiding the offending parts or aborting. <i>mmv</i> does support large files (LFS) but it does *NOT* support sparse files (i.e. it explodes them). </p>
 <p> <center> The Task Options<br />
  </center> </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "bson_realloc(3)"
 name: "bson_realloc"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_realloc() – This is a portable realloc() wrapper."
 
 <h2>NAME</h2>
 <p> bson_realloc() &#8211; This is a portable realloc() wrapper.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 void *
 bson_realloc(void *mem,
@@ -22,6 +22,7 @@ bson_realloc(void *mem,
 <dl>
 <dt><code>num_bytes</code></dt>
 <dd> A size_t containing the new requested size.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This is a portable <code><a href="/docs/linux/man/3-realloc/">realloc</a>(3)</code> wrapper. </p>
 <p> In general, this function will return an allocation at least <code>sizeof(void*)</code> bytes or bigger. If <code>num_bytes</code> is 0, then the allocation will be freed. </p>
 <p> If there was a failure to allocate <code>num_bytes</code> bytes, the process will be aborted. </p>

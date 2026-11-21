@@ -1,5 +1,4 @@
 ---
-
 title: "lav2yuv(1)"
 name: "lav2yuv"
 section: "1"
@@ -10,7 +9,9 @@ description: "lav2yuv – Convert a MJPEG file to raw yuv"
 
 <h2>NAME</h2>
 <p> lav2yuv &#8211; Convert a MJPEG file to raw yuv </p>
+<h2>SYNOPSIS</h2>
 <p> <code>lav2yuv</code> [<i>options</i>] <i>lavfile1 </i>[<i>lavfile2 </i>&#8230;<i> lavfileN</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>lav2yuv</code> converts an MJPEG video sequence described by a sequence of MJPEG video files and/or edit lists pointing to such files into the simple uncompressed planar 4:2:0 Y&#8217;CbCr format, as used by <code><a href="/docs/linux/man/1-mpeg2enc/">mpeg2enc</a></code>(1) MPEG encoder and image processing filters like <code><a href="/docs/linux/man/1-yuvscaler/">yuvscaler</a></code>(1) or <code>yuv2dfilter</code>(1) or <code><a href="/docs/linux/man/1-yuvdenoise/">yuvdenoise</a></code>(1). </p>
 <p> Output is to stdout so that by piping the output of lav2yuv into a suitable pipeline it is possible to process and then encode or play back video recorded in any of the mjpegtools MJPEG container formats: AVI, quicktime or edit lists describing editted versions of video held in such files. </p>
 <p> Mixing different files with different video formats is currently not possible. </p>

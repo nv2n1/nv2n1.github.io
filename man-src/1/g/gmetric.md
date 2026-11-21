@@ -1,5 +1,4 @@
 ---
-
 title: "gmetric(1)"
 name: "gmetric"
 section: "1"
@@ -10,7 +9,9 @@ description: "gmetric – manual page for Ganglia Custom Metric Utility"
 
 <h2>NAME</h2>
 <p> gmetric &#8211; manual page for Ganglia Custom Metric Utility</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gmetric</code> [<i>OPTIONS</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> The Ganglia Metric Client (gmetric) announces a metric on the list of defined send channels defined in a configuration file</p>
 <dl>
 <dt><code>-h</code>, <code>&#8211;help</code></dt>

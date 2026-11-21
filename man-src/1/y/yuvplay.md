@@ -1,5 +1,4 @@
 ---
-
 title: "yuvplay(1)"
 name: "yuvplay"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-yuvplay/"
 description: "yuvplay – Display YUV4MPEG2 streams (using SDL)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> yuvplay &#8211; Display YUV4MPEG2 streams (using SDL)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>yuvplay</code> [<code>options</code>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>yuvplay</code> produces on-screen playback of a YUV4MPEG2 stream which is provided to stdin, typically through piping from the stdout of <code><a href="/docs/linux/man/1-lavpipe/">lavpipe</a></code>(1), <code><a href="/docs/linux/man/1-lav2yuv/">lav2yuv</a></code>(1), <code><a href="/docs/linux/man/1-mpeg2dec/">mpeg2dec</a></code>(1) or a similar program. It should be noted that for pure playback lavplay should be a superior option. yuvplay is intended primarily as a debugging or diagnostic utility when setting up video processing pipelines. </p>
 <h2>OPTIONS</h2>
 <p> <code>yuvplay</code> accepts the following options:</p>

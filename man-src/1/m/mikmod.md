@@ -1,5 +1,4 @@
 ---
-
 title: "mikmod(1)"
 name: "mikmod"
 section: "1"
@@ -10,7 +9,9 @@ description: "mikmod – play soundtracker etc. modules on a Unix machine."
 
 <h2>NAME</h2>
 <p> mikmod &#8211; play soundtracker etc. modules on a Unix machine. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mikmod [-options</code>]&#8230; [<code>module</code>|<code>playlist</code>]&#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> <i>MikMod</i> is a <i>very</i> portable module player based on libmikmod, written originally by Jean-Paul Mikkers (MikMak). It will play the IT, XM, MOD, MTM, S3M, STM, ULT, FAR, MED, DSM, AMF, IMF and 669 module formats. It works under AIX, FreeBSD, HP-UX, IRIX, Linux, NetBSD, OpenBSD, OSF/1, SunOS, Solaris, OS/2, DOS, and Windows. It is controllable via an easy-to-use curses interface and will extract and play modules from a variety of different archive formats. </p>
 <h2>OPTIONS</h2>
 <p> Options can be given in any order, and are case-sensitive. For the options which have both a short and a long form, the long form can be prefixed by one or two dashes. Note that the settings in your $HOME/.mikmodrc will override the defaults shown in this man page. </p>

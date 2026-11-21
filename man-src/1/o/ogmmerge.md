@@ -1,5 +1,4 @@
 ---
-
 title: "ogmmerge(1)"
 name: "ogmmerge"
 section: "1"
@@ -10,7 +9,9 @@ description: "ogmmerge – Merge multimedia streams into an OGG/OGM file"
 
 <h2>NAME</h2>
 <p> ogmmerge &#8211; Merge multimedia streams into an OGG/OGM file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ogmmerge</code> [<i>global options</i>] -o <i>out</i> [<i>options</i>] &lt;file1&gt; [[<i>options</i>] &lt;file2&gt; &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> This program takes the input from several media files and joins their streams (all of them or just a selection) into an OGM. It was formerly known as &#8216;oggmerge&#8217; and is based on the &#8216;oggmerge&#8217; CVS module from Xiph&#8217;s repository (&lt;<a rel="nofollow" href="http://www.xiph.org/">http://www.xiph.org/</a>&gt;). </p>
 <p> Global options:</p>
 <dl>

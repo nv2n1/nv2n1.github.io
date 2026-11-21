@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_session_get_data(3)"
 name: "gnutls_session_get_data"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_session_get_data – API function"
 
 <h2>NAME</h2>
 <p> gnutls_session_get_data &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_session_get_data(gnutls_session_t </code><i>session</i><code>, void * </code><i>session_data</i><code>, size_t * </code><i>session_data_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_session_get_data – API function"
 <dd> is a pointer to space to hold the session.</dd>
 <dt>size_t * session_data_size</dt>
 <dd> is the session_data&#8217;s size, or it will be set by the function.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Returns all session parameters needed to be stored to support resumption. The client should call this, and store the returned session data. A session may be resumed later by calling <code>gnutls_session_set_data()</code>. This function must be called after a successful (full) handshake. It should not be used in resumed sessions &#8211;see <code>gnutls_session_is_resumed()</code>.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise an error code is returned.</p>

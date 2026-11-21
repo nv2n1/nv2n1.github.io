@@ -1,5 +1,4 @@
 ---
-
 title: "virt-builder(1)"
 name: "virt-builder"
 section: "1"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/1-virt-builder/"
 description: "virt-builder – Build virtual machine images quickly"
 ---
 
+<h2 class="name">NAME</h2>
+<p> virt-builder &#8211; Build virtual machine images quickly </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 virt - builder os - version[-o | --output DISKIMAGE][--size SIZE][--format raw | qcow2][--arch ARCHITECTURE][--attach ISOFILE] [--chmod PERMISSIONS:FILE][--commands - from - file FILENAME] [--copy SOURCE:DEST] [--copy - in LOCALPATH:REMOTEDIR][--delete PATH] [--edit FILE:EXPR][--firstboot SCRIPT][--firstboot - command 'CMD+ARGS'][--firstboot - install PKG, PKG..][--hostname HOSTNAME][--install PKG, PKG..] [--link TARGET:LINK
                         [:LINK..]][--mkdir DIR] [--move SOURCE:DEST] [--password USER:SELECTOR][--root - password SELECTOR][--run SCRIPT][--run - command 'CMD+ARGS'][--scrub FILE][--sm - attach SELECTOR][--sm - register][--sm - remove][--sm - unregister][--ssh - inject USER[:SELECTOR]][--truncate FILE][--truncate - recursive PATH][--timezone TIMEZONE][--touch FILE][--uninstall PKG, PKG..][--update] [--upload FILE:DEST] [--write FILE:CONTENT][--no - logfile][--password - crypto md5 | sha256 | sha512][--selinux - relabel][--sm - credentials SELECTOR] virt -
         builder - l |
     --list[--long][--list - format short | long | json] virt - builder-- notes os - version virt - builder-- print - cache virt - builder-- cache - all - templates virt - builder-- delete - cache virt - builder-- get - kernel DISKIMAGE[--format raw | qcow2][--output OUTPUTDIR]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Virt-builder is a tool for quickly building new virtual machines. You can build a variety of VMs for local or cloud use, usually within a few minutes or less. Virt-builder also has many ways to customize these VMs. Everything is run from the command line and nothing requires root privileges, so automation and scripting is simple. </p>
 <p> Note that virt-builder does not install guests from scratch. It takes cleanly prepared, digitally signed <font SIZE="-1">OS</font> templates and customizes them. This approach is used because it is much faster, but if you need to do fresh installs you may want to look at <i><a href="/docs/linux/man/1-virt-install/">virt-install</a></i>(1) and <i><a href="/docs/linux/man/1-oz-install/">oz-install</a></i>(1). </p>
 <p> The easiest way to get started is by looking at the examples in the next section.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "cpu_capabilities(3)"
 name: "cpu_capabilities"
 section: "3"
@@ -10,8 +9,10 @@ description: "cpu_capabilities – Contains the capability flags of the CPU. All
 
 <h2>NAME</h2>
 <p> cpu_capabilities &#8211; Contains the capability flags of the CPU. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>extern int cpu_capabilities;</code></p>
+<h2>DESCRIPTION</h2>
 <p> Contains CPU flags indicating what features are available on the current CPU. The flags can be any combination of these: </p>
 <pre>
    CPU_ID       - Indicates that the &quot;cpuid&quot; instruction is

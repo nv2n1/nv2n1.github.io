@@ -1,5 +1,4 @@
 ---
-
 title: "get_mconstants(3)"
 name: "get_mconstants"
 section: "3"
@@ -10,9 +9,11 @@ description: "get_mconstants — retrieve a list of constant values from a dirfi
 
 <h2>NAME</h2>
 <p> get_mconstants &#8212; retrieve a list of constant values from a dirfile</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
 <dl>
 <dt> <code>const void *get_mconstants(DIRFILE *</code><i>dirfile</i><code>, gd_type_t</code> <i>return_type</i><code>, const char *</code><i>parent</i><code>);</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>get_mconstants</code>() function queries a <a href="/docs/linux/man/5-dirfile/">dirfile</a>(5) database specified by <i>dirfile</i> and returns a read-only list of values of the all <code>CONST</code> type metafields for the supplied <i>parent</i> field after type conversion to the data type specified by <i>return_type</i>. </dd>
 <p> The <i>dirfile</i> argument must point to a valid DIRFILE object previously created by a call to <code><a href="/docs/linux/man/3-dirfile_open/">dirfile_open</a></code>(3). </p>
 <p> The array returned will be de-allocated by a call to <code><a href="/docs/linux/man/3-dirfile_close/">dirfile_close</a></code>(3) and should not be de-allocated by the caller. The list returned should not be assumed to be in any particular order, although it is guaranteed to be in the same order as the list of <code>CONST</code> fields returned by <code><a href="/docs/linux/man/3-get_mfield_list_by_type/">get_mfield_list_by_type</a></code>(3). The array is unterminated. The number of values in the array can be obtained from a call to <code><a href="/docs/linux/man/3-get_nmfields_by_type/">get_nmfields_by_type</a></code>(3). </p>

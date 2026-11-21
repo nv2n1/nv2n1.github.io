@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_certificate_set_rsa_export_params(3)"
 name: "gnutls_certificate_set_rsa_export_params"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_certificate_set_rsa_export_params – API function"
 
 <h2>NAME</h2>
 <p> gnutls_certificate_set_rsa_export_params &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/compat.h&gt;</code> </p>
 <p> <code>void gnutls_certificate_set_rsa_export_params(gnutls_certificate_credentials_t </code><i>res</i><code>, gnutls_rsa_params_t </code><i>rsa_params</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_certificate_set_rsa_export_params – API function"
 <dd> is a gnutls_certificate_credentials_t structure</dd>
 <dt>gnutls_rsa_params_t rsa_params</dt>
 <dd> is a structure that holds temporary RSA parameters.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will set the temporary RSA parameters for a certificate server to use. These parameters will be used in RSA-EXPORT cipher suites.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />

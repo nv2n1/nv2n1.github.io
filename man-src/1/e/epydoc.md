@@ -1,5 +1,4 @@
 ---
-
 title: "epydoc(1)"
 name: "epydoc"
 section: "1"
@@ -10,8 +9,10 @@ description: "epydoc – generate API documentation from Python docstrings"
 
 <h2>NAME</h2>
 <p> epydoc &#8211; generate API documentation from Python docstrings</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>epydoc</code> [<code>action</code>] [<code>options</code>] <i>names&#8230;</i></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>epydoc</code></p>
 <dd>generates API documentation for Python modules and packages, based on their docstrings. A lightweight markup language called <code>epytext</code> can be used to format docstrings, and to add information about specific fields, such as parameters and instance variables. Epydoc also understands docstrings written in ReStructuredText, Javadoc, and plaintext. Currently, epydoc supports two basic output formats: HTML and LaTeX. </dd>
 <p> The HTML API documentation produced by <code>epydoc</code> consists of a set of HTML files, including: an API documentation page for each class and module; a syntax-highlighted source code page for each module; an identifier index page; a help page; and a frames-based table of contents. When appropriate, <code>epydoc</code> will also generate index pages for bugs, defined terms, and to-do items; a class hierarchy page; and a package hierarchy page. </p>

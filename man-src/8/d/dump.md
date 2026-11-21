@@ -1,5 +1,4 @@
 ---
-
 title: "dump(8)"
 name: "dump"
 section: "8"
@@ -7,10 +6,11 @@ letter: "d"
 url: "/docs/linux/man/8-dump/"
 description: "dump – ext2/3/4 filesystem backup"
 ---
-
 <p> dump - ext2/3/4 filesystem backup  </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dump </code> [<code>-</code><i>level#</i>] [<code>-ackMnqSuv] [-A </code><i>file</i>] [<code>-B </code><i>records</i>] [<code>-b </code><i>blocksize</i>] [<code>-d </code><i>density</i>] [<code>-D </code><i>file</i>] [<code>-e </code><i>inode numbers</i>] [<code>-E </code><i>file</i>] [<code>-f </code><i>file</i>] [<code>-F </code><i>script</i>] [<code>-h </code><i>level</i>] [<code>-I </code><i>nr errors</i>] [<code>-j</code><i>compression level</i>] [<code>-L </code><i>label</i>] [<code>-Q </code><i>file</i>] [<code>-s </code><i>feet</i>] [<code>-T </code><i>date</i>] [<code>-y</code>] [<code>-z</code><i>compression level</i>] <i>files-to-dump</i> </p>
 <p> <code>dump </code> [<code>-W </code>| <code>-w</code>]  </p>
+<h2>DESCRIPTION</h2>
 <p> <code>Dump</code> examines files on an ext2/3/4 filesystem and determines which files need to be backed up. These files are copied to the given disk, tape or other storage medium for safe keeping (see the <code>-f </code> option below for doing remote backups). A dump that is larger than the output medium is broken into multiple volumes. On most media the size is determined by writing until an end-of-media indication is returned. </p>
 <p>On media that cannot reliably return an end-of-media indication (such as some cartridge tape drives), each volume is of a fixed size; the actual size is determined by specifying cartridge media, or via the tape size, density and/or block count options below. By default, the same output file name is used for each volume after prompting the operator to change media. </p>
 <p> <i>files-to-dump</i> is either a mountpoint of a filesystem or a list of files and directories to be backed up as a subset of a filesystem. In the former case, either the path to a mounted filesystem or the device of an unmounted filesystem can be used. In the latter case, certain restrictions are placed on the backup: <code>-u</code> is not allowed, the only dump level that is supported is <code>0 </code> and all the files and directories must reside on the same filesystem.  </p>

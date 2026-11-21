@@ -1,5 +1,4 @@
 ---
-
 title: "git-reset-file(1)"
 name: "git-reset-file"
 section: "1"
@@ -10,7 +9,9 @@ description: "git-reset-file – Reset one file"
 
 <h2>NAME</h2>
 <p> <code>git-reset-file</code> &#8211; Reset one file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>git-reset-file</code> [&lt;filename&gt;] commit-hash</p>
+<h2>DESCRIPTION</h2>
 <p> Reset one file to HEAD or certain commit-hash</p>
 <h2>OPTIONS</h2>
 <p> &lt;filename&gt; </p>

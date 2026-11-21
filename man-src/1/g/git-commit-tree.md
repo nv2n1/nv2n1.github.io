@@ -1,5 +1,4 @@
 ---
-
 title: "git-commit-tree(1)"
 name: "git-commit-tree"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-commit-tree/"
 description: "git-commit-tree – Create a new commit object"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-commit-tree &#8211; Create a new commit object </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git commit - tree&lt;tree&gt;[(-p&lt;parent&gt;)...] git commit - tree[(-p&lt;parent&gt;)...][-S[&lt;keyid&gt;]][(-m&lt;message&gt;)...][(-F&lt;file&gt;)...]&lt;tree&gt;
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> This is usually not what an end user wants to run directly. See <code><a href="/docs/linux/man/1-git-commit/">git-commit</a></code>(1) instead. </p>
 <p> Creates a new commit object based on the provided tree object and emits the new commit object id on stdout. The log message is read from the standard input, unless <code>-m</code> or <code>-F</code> options are given. </p>
 <p> The <code>-m</code> and <code>-F</code> options can be given any number of times, in any order. The commit log message will be composed in the order in which the options are given. </p>

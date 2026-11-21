@@ -1,5 +1,4 @@
 ---
-
 title: "opannotate(1)"
 name: "opannotate"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-opannotate/"
 description: "opannotate – produce source or assembly annotated with profile data"
 ---
 
+<h2 class="name">NAME</h2>
+<p> opannotate &#8211; produce source or assembly annotated with profile data </p>
+<h2>SYNOPSIS</h2>
 <p> <code>opannotate</code> [ <i>options</i> ] [profile specification]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>opannotate</code> outputs annotated source and/or assembly from profile data of an OProfile session. See <a href="/docs/linux/man/1-oprofile/">oprofile</a>(1) for how to write profile specifications. </p>
 <h2>OPTIONS</h2>
 <dl>

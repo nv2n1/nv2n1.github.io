@@ -1,5 +1,4 @@
 ---
-
 title: "myisam_ftdump(1)"
 name: "myisam_ftdump"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-myisam_ftdump/"
 description: "myisam_ftdump – display full-text index information"
 ---
 
+<h2 class="name">NAME</h2>
+<p> myisam_ftdump &#8211; display full-text index information </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>myisam_ftdump [</code><i>options</i><code>] </code><i>tbl_name</i><i>index_num</i></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>myisam_ftdump</code></p>
 <dd>displays information about FULLTEXT indexes in MyISAM tables. It reads the MyISAM index file directly, so it must be run on the server host where the table is located. Before using <code>myisam_ftdump</code>, be sure to issue a FLUSH TABLES statement first if the server is running. </dd>
 <p> <code>myisam_ftdump</code> scans and dumps the entire index, which is not particularly fast. On the other hand, the distribution of words changes infrequently, so it need not be run often. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "graphc(1)"
 name: "graphc"
 section: "1"
@@ -10,7 +9,9 @@ description: "graphc – Graphcap preprocessor for NCAR Graphics"
 
 <h2>NAME</h2>
 <p> graphc &#8211; Graphcap preprocessor for NCAR Graphics</p>
+<h2>SYNOPSIS</h2>
 <p> <code>graphc</code> <i>ascii-graphcap-name</i> <i>binary-graphcap-name</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>graphc</code> converts an ascii-encoded graphcap, <i>ascii-graphcap-name,</i> into a binary-encoded graphcap, <i>binary-graphcap-name.</i> </p>
 <p> Binary encoded graphcaps <i>are</i> system dependent and should not be assumed to be portable across different system architectures.</p>
 <h2>SEE ALSO</h2>

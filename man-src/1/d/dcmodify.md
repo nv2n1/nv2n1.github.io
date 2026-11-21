@@ -1,5 +1,4 @@
 ---
-
 title: "dcmodify(1)"
 name: "dcmodify"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-dcmodify/"
 description: "dcmodify – Modify DICOM files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dcmodify &#8211; Modify DICOM files </p>
+<h2>SYNOPSIS</h2>
 <pre>
 dcmodify [options] dcmfile-in...
 </pre>
+<h2>DESCRIPTION</h2>
 <p> <code>dcmodify</code> is a tool that allows to modify, insert and delete tags and items in DICOM files. Sequences and tags with a value multiplicity &gt; 1 are also supported. Metaheader information and the tag&#8217;s VR can not be modified directly by <code>dcmodify</code> at this time. In addition to tag modifications, <code>dcmodify</code> makes available some input options &#8211; forcing <code>dcmodify</code> to handle its input files as the user specifies &#8211; and output options to control the output format of the resulting files. </p>
 <p> In case multiple modifications have to be performed, <code>dcmodify</code> does the modifications in the same order as they appear on the command line. Please note that <code>dcmodify</code> does not check whether a given value matches its value representation (VR). Usually, an error message is printed but generally the user should take care of the right VR usage. </p>
 <p> If <code>dcmodify</code> doesn&#8217;t know the tag it should insert, then the tag&#8217;s VR is set to UN and the value provided on commandline is interpreted as being a series of hexadecimal numbers (like they are provided for VR=OB). Please insert these tags into the dictionary to avoid this behaviour. Also, specifying the <i>-iun</i> option, it is possible to force <code>dcmodify</code> to leave UN values untouched. Using option <i>-u</i> lets <code>dcmodify</code> saving all VR=UN attributes as OB. </p>

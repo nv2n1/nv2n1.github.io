@@ -1,5 +1,4 @@
 ---
-
 title: "arandr(1)"
 name: "arandr"
 section: "1"
@@ -10,7 +9,9 @@ description: "arandr – visual front end for XRandR 1.2"
 
 <h2>NAME</h2>
 <p> arandr &#8211; visual front end for XRandR 1.2</p>
+<h2>SYNOPSIS</h2>
 <p> <code>arandr</code> [savedfile]</p>
+<h2>DESCRIPTION</h2>
 <p> ARandR is a visual front end for XRandR 1.2 (per display options), which provides full control over positioning, saving and loading to/from shell scripts and easy integration with other applications.</p>
 <dl>
 <dt><code>&#8211;version</code></dt>

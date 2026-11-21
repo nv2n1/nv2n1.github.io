@@ -1,5 +1,4 @@
 ---
-
 title: "git-extras(1)"
 name: "git-extras"
 section: "1"
@@ -10,6 +9,7 @@ description: "git-extras – Awesome GIT utilities"
 
 <h2>NAME</h2>
 <p> <code>git-extras</code> &#8211; Awesome GIT utilities</p>
+<h2>SYNOPSIS</h2>
 <p> <code>git-extras</code> [-v,&#8211;version] [-h,&#8211;help] [update]</p>
 <h2>OPTIONS</h2>
 <p> -v, &#8211;version </p>

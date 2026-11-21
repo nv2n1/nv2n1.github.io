@@ -1,5 +1,4 @@
 ---
-
 title: "certmaster-sync(1)"
 name: "certmaster-sync"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-certmaster-sync/"
 description: "certmaster-sync — synchronize client certificates with Func."
 ---
 
+<h2 class="name">NAME</h2>
+<p> certmaster-sync &#8212; synchronize client certificates with Func. </p>
+<h2>SYNOPSIS</h2>
 <p> certmaster-sync [-f|&#8211;force]</p>
+<h2>DESCRIPTION</h2>
 <p> certmaster-sync synchronizes client certificates amongst certmaster clients via Func. It is assumed that the hosts who have requested certificates are reachable via Func for synchronization operations. </p>
 <p> certmaster-sync by default is called as a post-sign and post-clean trigger. In order to enable synchronization you must set <code>sync_certs</code> to <code>True</code>, see <font SIZE="-1"><code>CONFIGURATION</code></font><font SIZE="-1"><code>VALUES</code></font> below. </p>
 <p> The synchronization occurs by querying remote Func methods in <code>certmastermod</code> on the minion hosts. This will gather information, copy any new certificates, and remove any certificates that have been cleaned.</p>

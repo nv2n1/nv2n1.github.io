@@ -1,5 +1,4 @@
 ---
-
 title: "mtnopt(1)"
 name: "mtnopt"
 section: "1"
@@ -10,8 +9,10 @@ description: "mtnopt – generate shell variables from monotone workspace option
 
 <h2>NAME</h2>
 <p> mtnopt &#8211; generate shell variables from monotone workspace options</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mtnopt</code> [<code>-s</code>|<code>-c</code>|<code>-v</code>] [<code>-d</code> <i>dir</i>] [<code>-k</code> <i>keys</i>]<br />
  <code>mtnopt -h</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>mtnopt</code> prints shell variable assignments for each value in the file of monotone workspace options, <i>_MTN/options</i>, in the current directory. For instance, if <i>_MTN/options</i> contained this text:</p>
 <dl>
 <dt>

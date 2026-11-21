@@ -1,5 +1,4 @@
 ---
-
 title: "git-update-ref(1)"
 name: "git-update-ref"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-update-ref/"
 description: "git-update-ref – Update the object name stored in a ref safely"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-update-ref &#8211; Update the object name stored in a ref safely </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git update - ref[-m&lt;reason&gt;][--no - deref](-d&lt;ref&gt;[&lt;oldvalue&gt;] | [--create - reflog]&lt;ref&gt;&lt;newvalue&gt;[&lt;oldvalue&gt;] | --stdin[-z])
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Given two arguments, stores the &lt;newvalue&gt; in the &lt;ref&gt;, possibly dereferencing the symbolic refs. E.g. <code>git update-ref HEAD &lt;newvalue&gt;</code> updates the current branch head to the new object. </p>
 <p> Given three arguments, stores the &lt;newvalue&gt; in the &lt;ref&gt;, possibly dereferencing the symbolic refs, after verifying that the current value of the &lt;ref&gt; matches &lt;oldvalue&gt;. E.g. <code>git update-ref refs/heads/master &lt;newvalue&gt; &lt;oldvalue&gt;</code> updates the master branch head to &lt;newvalue&gt; only if its current value is &lt;oldvalue&gt;. You can specify 40 &quot;0&quot; or an empty string as &lt;oldvalue&gt; to make sure that the ref you are creating does not exist. </p>
 <p> It also allows a &quot;ref&quot; file to be a symbolic pointer to another ref file by starting with the four-byte header sequence of &quot;ref:&quot;. </p>

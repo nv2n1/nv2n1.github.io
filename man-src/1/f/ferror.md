@@ -1,5 +1,4 @@
 ---
-
 title: "ferror(1)"
 name: "ferror"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-ferror/"
 description: "ferror – print a stack trace when the given message is printed by the traced program"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ferror &#8211; print a stack trace when the given message is printed by the traced program </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ferror</code> [<i>options</i>] {<i>program</i>&nbsp;<wbr><i>arg</i>&nbsp;<wbr>&#8230; | <i>pid</i>&#8230;}</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>ferror</code></p>
 <dd>monitors the processes write system call for the specified MESSAGE, printing a stack trace of the process at the point of the write.</dd>
 <h3>Stack Print Options</h3>

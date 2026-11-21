@@ -1,5 +1,4 @@
 ---
-
 title: "docker-engine-check(1)"
 name: "docker-engine-check"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-engine-check/"
 description: "docker-engine-check – Check for available engine updates"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-engine-check &#8211; Check for available engine updates </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker engine check [OPTIONS]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Check for available engine updates </p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;containerd</code>=&quot;&quot;<br />

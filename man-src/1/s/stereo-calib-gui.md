@@ -1,5 +1,4 @@
 ---
-
 title: "stereo-calib-gui(1)"
 name: "stereo-calib-gui"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-stereo-calib-gui/"
 description: "stereo-calib-gui – GUI program to calibrate stereo pairs with a checker-board"
 ---
 
+<h2 class="name">NAME</h2>
+<p> stereo-calib-gui &#8211; GUI program to calibrate stereo pairs with a checker-board </p>
+<h2>SYNOPSIS</h2>
 <p> stereo-calib-gui</p>
+<h2>DESCRIPTION</h2>
 <p> <code>stereo-calib-gui</code> is a <font SIZE="-1">GUI</font> application which accepts a sequence of images grabbed from the left and right cameras and then detects the corner of the checker-board and computes the required parameters to rectify the images.</p>
 <h2>BUGS</h2>
 <p> Please report bugs at <a rel="nofollow" href="http://sourceforge.net/tracker/?group_id=205280">http://sourceforge.net/tracker/?group_id=205280</a>&amp;atid=993006</p>

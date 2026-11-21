@@ -1,5 +1,4 @@
 ---
-
 title: "slasrt(3)"
 name: "slasrt"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-slasrt/"
 description: "slasrt.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> slasrt.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slasrt</code> (ID, N, D, INFO)<br />
  <i></i><code>SLASRT</code> sorts numbers in increasing or decreasing order.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "gdbus(1)"
 name: "gdbus"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-gdbus/"
 description: "gdbus – Tool for working with D-Bus objects"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gdbus &#8211; Tool for working with D-Bus objects </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gdbus</code> introspect [&#8211;system | &#8211;session | &#8211;address&nbsp;<i>address</i>] &#8211;dest&nbsp;<i>bus_name</i> &#8211;object-path&nbsp;<i>/path/to/object</i> [&#8211;xml] [&#8211;recurse] [&#8211;only-properties]</dt>
 <dt> <code>gdbus</code> monitor [&#8211;system | &#8211;session | &#8211;address&nbsp;<i>address</i>] &#8211;dest&nbsp;<i>bus_name</i> [&#8211;object-path&nbsp;<i>/path/to/object</i>]</dt>
@@ -15,6 +17,7 @@ description: "gdbus – Tool for working with D-Bus objects"
 <dt> <code>gdbus</code> emit [&#8211;system | &#8211;session | &#8211;address&nbsp;<i>address</i>] &#8211;object-path&nbsp;<i>/path/to/object</i> &#8211;signal&nbsp;<i>org.project.InterfaceName.SignalName</i> [&#8211;dest&nbsp;<i>unique_bus_name</i>] ARG1 ARG2&#8230;</dt>
 <dt> <code>gdbus</code> wait [&#8211;system | &#8211;session | &#8211;address&nbsp;<i>address</i>] &#8211;activate&nbsp;<i>bus_name</i> [&#8211;timeout&nbsp;<i>seconds</i>] <i>bus_name</i></dt>
 <dt> <code>gdbus</code> help</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>gdbus</code></p>
 <dd>is a simple tool for working with D-Bus objects.</dd>
 <h2>COMMANDS</h2>

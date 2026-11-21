@@ -1,5 +1,4 @@
 ---
-
 title: "g_eneconv(1)"
 name: "g_eneconv"
 section: "1"
@@ -11,7 +10,9 @@ description: "eneconv – converts energy files"
 <h2>NAME</h2>
 <p> eneconv &#8211; converts energy files </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>eneconv</code> <code>-f</code><i> ener.edr </i> <code>-o</code><i> fixed.edr </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> real </i> <code>-e</code><i> real </i> <code>-dt</code><i> real </i> <code>-offset</code><i> real </i> <code>-[no]settime</code><i></i> <code>-[no]sort</code><i></i> <code>-scalefac</code><i> real </i> <code>-[no]error</code><i></i></p>
+<h2>DESCRIPTION</h2>
 <p> With <i> multiple files</i> specified for the <code> -f</code> option: </p>
 <p> Concatenates several energy files in sorted order. In case of double time frames the one in the later file is used. By specifying <code> -settime</code> you will be asked for the start time of each file. The input files are taken from the command line, such that the command <code> eneconv -o fixed.edr *.edr</code> should do the trick. </p>
 <p> With <i> one file</i> specified for <code> -f</code>: </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "dlaic1(3)"
 name: "dlaic1"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlaic1/"
 description: "dlaic1.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlaic1.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlaic1</code> (JOB, J, X, SEST, W, GAMMA, SESTPR, S, C)<br />
  <i></i><code>DLAIC1</code> applies one step of incremental condition estimation.</p>

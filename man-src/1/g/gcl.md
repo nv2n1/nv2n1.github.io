@@ -1,5 +1,4 @@
 ---
-
 title: "gcl(1)"
 name: "gcl"
 section: "1"
@@ -10,7 +9,9 @@ description: "gcl – GCL Common Lisp interpreter/compiler"
 
 <h2>NAME</h2>
 <p> gcl &#8211; GCL Common Lisp interpreter/compiler</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gcl</code> [ <code>options</code> ] </p>
+<h2>DESCRIPTION</h2>
 <p> The program <i>gcl</i> is an implementation of a subset of the Common Lisp Ansi standard. It is written in C and in Common Lisp, and is highly portable. It includes those features in the original definition of Common Lisp, (Guy Steele version 1.), as well as some features from the proposed new standard. </p>
 <p> The best documentation is available in <i>texinfo/info</i> form, with there being three groups of information. <i>gcl-si</i> for basic common lisp descriptions, and features unique to <i>gcl</i> The <i>gcl-tk</i> info refers to the connection with <i>tk</i> window system, allowing all the power of the <i>tcl/tk</i> interaction system to be used from lisp. The third info file <i>gcl</i> details the Ansi standard for common lisp, to which this subset tries to adhere. It is highly recommended to write programs, which will be in the intersection of gcl and ansi common lisp. Unfortunately the Ansi standard is huge, and will require a substantial effort, and increase in the size of gcl, to include all of it. </p>
 <p> When <i>gcl</i> is invoked from the shell, the variable <i>si::*command-args*</i> is set to the list of command line arguments. Various <i>options</i> are understood:</p>

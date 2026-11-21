@@ -1,5 +1,4 @@
 ---
-
 title: "sharesec(1)"
 name: "sharesec"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-sharesec/"
 description: "sharesec – Set or get share ACLs"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sharesec &#8211; Set or get share ACLs </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt>
 </dt><dd>sharesec {sharename} [-r, &#8211;remove=ACL] [-m, &#8211;modify=ACL] [-a, &#8211;add=ACL] [-R, &#8211;replace=ACLs] [-D, &#8211;delete] [-v, &#8211;view] [&#8211;view-all] [-M, &#8211;machine-sid] [-F, &#8211;force] [-d, &#8211;debuglevel=DEBUGLEVEL] [-s, &#8211;configfile=CONFIGFILE] [-l, &#8211;log-basename=LOGFILEBASE] [&#8211;version] [-?, &#8211;help] [&#8211;usage] [-S, &#8211;setsddl=STRING] [-V, &#8211;viewsddl]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This tool is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> The sharesec program manipulates share permissions on SMB file shares.</p>
 <h2>OPTIONS</h2>

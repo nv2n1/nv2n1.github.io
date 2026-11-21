@@ -1,5 +1,4 @@
 ---
-
 title: "ksshell(1)"
 name: "ksshell"
 section: "1"
@@ -10,7 +9,9 @@ description: "ksshell — an interactive kickstart shell"
 
 <h2>NAME</h2>
 <p> ksshell &#8212; an interactive kickstart shell</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ksflatten</code> [<code>-i</code> | <code>&#8211;input INFILE</code>] [<code>-o</code> | <code>&#8211;output OUTFILE</code>] [<code>-v</code> | <code>&#8211;version VERSION</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>ksshell</code> is an interactive kickstart shell. It optionally takes an input kickstart file as the basis, allows the user to specify additional kickstart commands, and then writes out the finished kickstart file to stdout or the given file name. This program supports all the usual readline niceties including tab completion of kickstart commands and their options, though not the values those options can take. </p>
 <p> In addition to understanding all the kickstart commands, <code>ksshell</code> has some builtin commands of its own to make working with kickstart files in the context of a shell easier:</p>
 <dl>

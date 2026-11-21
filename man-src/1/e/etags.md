@@ -1,5 +1,4 @@
 ---
-
 title: "etags(1)"
 name: "etags"
 section: "1"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/1-etags/"
 description: "ctags – Generate tag files for source code"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ctags &#8211; Generate tag files for source code </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>ctags</code> [<code>options</code>] [<i>file(s)</i>]</dt>
 <dd>
 </dd><dt><code>etags</code> [<code>options</code>] [<i>file(s)</i>]</dt>
 <dd>
 </dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code>ctags</code> and <code>etags</code> programs (hereinafter collectively referred to as <code>ctags</code>, except where distinguished) generate an index (or &quot;tag&quot;) file for a variety of language objects found in <i>file(s)</i>. This tag file allows these items to be quickly and easily located by a text editor or other utility. A &quot;tag&quot; signifies a language object for which an index entry is available (or, alternatively, the index entry created for that object). </p>
 <p> Alternatively, <code>ctags</code> can generate a cross reference file which lists, in human readable form, information about the various source objects found in a set of language files. </p>
 <p> Tag index files are supported by numerous editors, which allow the user to locate the object associated with a name appearing in a source file and jump to the file and line which defines the name. Those known about at the time of this release are: </p>

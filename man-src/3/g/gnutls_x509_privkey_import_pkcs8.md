@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_privkey_import_pkcs8(3)"
 name: "gnutls_x509_privkey_import_pkcs8"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_privkey_import_pkcs8 – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_privkey_import_pkcs8 &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_privkey_import_pkcs8(gnutls_x509_privkey_t </code><i>key</i><code>, const gnutls_datum_t * </code><i>data</i><code>, gnutls_x509_crt_fmt_t </code><i>format</i><code>, const char * </code><i>password</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,6 +24,7 @@ description: "gnutls_x509_privkey_import_pkcs8 – API function"
 <dd> the password to decrypt the key (if it is encrypted).</dd>
 <dt>unsigned int flags</dt>
 <dd> 0 if encrypted or GNUTLS_PKCS_PLAIN if not encrypted.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will convert the given DER or PEM encoded PKCS8 2.0 encrypted key to the native gnutls_x509_privkey_t format. The output will be stored in <i>key</i> . Both RSA and DSA keys can be imported, and flags can only be used to indicate an unencrypted key. </p>
 <p> The <i>password</i> can be either ASCII or UTF-8 in the default PBES2 encryption schemas, or ASCII for the PKCS12 schemas. </p>
 <p> If the Certificate is PEM encoded it should have a header of &quot;ENCRYPTED PRIVATE KEY&quot;, or &quot;PRIVATE KEY&quot;. You only need to specify the flags if the key is DER encoded, since in that case the encryption status cannot be auto-detected. </p>

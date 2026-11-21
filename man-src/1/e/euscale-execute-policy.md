@@ -1,5 +1,4 @@
 ---
-
 title: "euscale-execute-policy(1)"
 name: "euscale-execute-policy"
 section: "1"
@@ -10,10 +9,12 @@ description: "euscale-execute-policy â€“ Manually set an auto-scaling instanceâ€
 
 <h2>NAME</h2>
 <p> euscale-execute-policy &#8211; Manually set an auto-scaling instance&#8217;s health status</p>
+<h2>SYNOPSIS</h2>
 <p> euscale-execute-policy [-g ASGROUP] [-h] [-H] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [&#8211;help] POLICY</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Manually set an auto-scaling instance&#8217;s health status</p>
 <h3>positional arguments:</h3>
 <dl>

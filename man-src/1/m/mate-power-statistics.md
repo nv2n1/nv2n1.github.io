@@ -1,5 +1,4 @@
 ---
-
 title: "mate-power-statistics(1)"
 name: "mate-power-statistics"
 section: "1"
@@ -10,7 +9,9 @@ description: "mate-power-statistics – mate power statistics gui"
 
 <h2>NAME</h2>
 <p> mate-power-statistics &#8211; mate power statistics gui</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mate-power-statistics</code> [ <code>&#8211;verbose</code> ] [ <code>&#8211;help</code> ]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>mate-power-statistics</code> command. </p>
 <p> <code>mate-power-statistics</code> is the gui program for the mate power management infrastructure. </p>
 <p> It allows users to visualize the power consumption of laptop hardware.</p>

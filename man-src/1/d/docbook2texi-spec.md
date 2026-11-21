@@ -1,5 +1,4 @@
 ---
-
 title: "docbook2texi-spec(1)"
 name: "docbook2texi-spec"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-docbook2texi-spec/"
 description: "docbook2texi-spec.pl – convert DocBook Booksto Texinfo documents"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docbook2texi-spec.pl &#8211; convert DocBook Booksto Texinfo documents </p>
+<h2>SYNOPSIS</h2>
 <p> <code>sgmlspl</code> <code>docbook2man-spec.pl</code> </p>
 <p> <code>nsgmls</code> [ <i>sgml document</i> ]<code>| sgmlspl</code> <code>docbook2texi-spec.pl</code> [ <i>basename</i> ] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>docbook2texi</code> is a sgmlspl spec file that produces GNU Texinfo documents from DocBook documents. </p>
 <p> The program reads ESIS produced by nsgmls (or other SGML parsers) from standard input. Currently the document element must be Book, otherwise the results are undefined. </p>
 <p> Its output, the converted Texinfo document, is written to standard output. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ipc(2)"
 name: "ipc"
 section: "2"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/2-ipc/"
 description: "ipc – System V IPC system calls"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ipc &#8211; System V IPC system calls </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 int ipc(unsigned int call, int first, int second, int third,
         void *ptr, long fifth);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>ipc</code>() is a common kernel entry point for the System V IPC calls for messages, semaphores, and shared memory. <i>call</i> determines which IPC function to invoke; the other arguments are passed through to the appropriate call. </p>
 <p> User-space programs should call the appropriate functions by their usual names. Only standard library implementors and kernel hackers need to know about <code>ipc</code>().</p>
 <h2>CONFORMING TO</h2>

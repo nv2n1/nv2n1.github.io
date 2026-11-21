@@ -1,5 +1,4 @@
 ---
-
 title: "lremovexattr(2)"
 name: "lremovexattr"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-lremovexattr/"
 description: "removexattr, lremovexattr, fremovexattr – remove an extended attribute"
 ---
 
+<h2 class="name">NAME</h2>
+<p> removexattr, lremovexattr, fremovexattr &#8211; remove an extended attribute </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/types.h&gt;
 #include &lt;sys/xattr.h&gt;
@@ -15,6 +17,7 @@ int removexattr(const char &amp;nbsp; *path, const char &amp;nbsp; *name);
 int lremovexattr(const char &amp;nbsp; *path, const char &amp;nbsp; *name);
 int fremovexattr(int fd, const char &amp;nbsp; *name);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Extended attributes are <i>name</i>:<i>value</i> pairs associated with inodes (files, directories, symbolic links, etc.). They are extensions to the normal attributes which are associated with all inodes in the system (i.e., the <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2) data). A complete overview of extended attributes concepts can be found in <code><a href="/docs/linux/man/7-xattr/">xattr</a></code>(7). </p>
 <p> <code>removexattr</code>() removes the extended attribute identified by <i>name</i> and associated with the given <i>path</i> in the filesystem. </p>
 <p> <code>lremovexattr</code>() is identical to <code>removexattr</code>(), except in the case of a symbolic link, where the extended attribute is removed from the link itself, not the file that it refers to. </p>

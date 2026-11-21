@@ -1,5 +1,4 @@
 ---
-
 title: "eptex(1)"
 name: "eptex"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-eptex/"
 description: "ptex, uptex, eptex, euptex – Japanese \"Publishing TeX\""
 ---
 
+<h2 class="name">NAME</h2>
+<p> ptex, uptex, eptex, euptex &#8211; Japanese &quot;Publishing TeX&quot; </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ptex</code> [<i>options</i>] [<i></i><code>&amp;</code>format] [<i>file</i>|<i></i><code>\</code>commands]</p>
+<h2>DESCRIPTION</h2>
 <p> pTeX (<code>ptex</code>) is a TeX engine with extensions for Japanese typesetting, including features related to line breaking rules, inter-character spacing and vertical writing. It was first developed by ASCII Corporation, in the aim of providing a Japanese TeX which can be used for commercial publishing. For pTeX, the character set available is limited to JIS X 0208, namely JIS level-1 and level-2. </p>
 <p> upTeX (<code>uptex</code>) is a Unicode-enabled pTeX with extensions for better handling of CJK (Chinese, Japanese and Korean) multilingual documents. It has been developed by Takuji Tanaka since 2007. </p>
 <p> e-pTeX (<code>eptex</code>) is a merge of e-TeX and pTeX. </p>

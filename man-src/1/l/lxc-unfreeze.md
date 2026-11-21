@@ -1,5 +1,4 @@
 ---
-
 title: "lxc-unfreeze(1)"
 name: "lxc-unfreeze"
 section: "1"
@@ -10,7 +9,9 @@ description: "lxc-unfreeze – thaw all the container’s processes"
 
 <h2>NAME</h2>
 <p> lxc-unfreeze &#8211; thaw all the container&#8217;s processes</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lxc-unfreeze</code> {-n <i>name</i>}</p>
+<h2>DESCRIPTION</h2>
 <p> <code>lxc-unfreeze</code> will thaw all the processes previously frozen by the <code>lxc-freeze</code> command.</p>
 <h2>COMMON OPTIONS</h2>
 <p> These options are common to most of lxc commands.</p>

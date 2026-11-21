@@ -1,5 +1,4 @@
 ---
-
 title: "djvmcvt(1)"
 name: "djvmcvt"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-djvmcvt/"
 description: "djvmcvt – Convert multi-page DjVu documents."
 ---
 
+<h2 class="name">NAME</h2>
+<p> djvmcvt &#8211; Convert multi-page DjVu documents.</p>
+<h2>SYNOPSIS</h2>
 <h2>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Creating a bundled document:</h2>
 <p> <code>djvmcvt -b[undled] </code><i>docin.djvu</i><i>docout.djvu</i></p>
 <h2>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>Creating an indirect document:</h2>
 <p> <code>djvmcvt -i[ndirect] </code><i>docin.djvu</i><i>dir</i><i>index.djvu</i> </p>
+<h2>DESCRIPTION</h2>
 <p> This program converts any multi-page DjVu document to either the bundled or indirect multi-page format. The input file <i>docin.djvu</i> must be either the file name of a bundled document or the index file of an indirect document. </p>
 <h2>OPTIONS</h2>
 <dl>

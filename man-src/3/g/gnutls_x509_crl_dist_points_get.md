@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_crl_dist_points_get(3)"
 name: "gnutls_x509_crl_dist_points_get"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_crl_dist_points_get – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crl_dist_points_get &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509-ext.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crl_dist_points_get(gnutls_x509_crl_dist_points_t </code><i>cdp</i><code>, unsigned int </code><i>seq</i><code>, unsigned int * </code><i>type</i><code>, gnutls_datum_t * </code><i>san</i><code>, unsigned int * </code><i>reasons</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,6 +24,7 @@ description: "gnutls_x509_crl_dist_points_get – API function"
 <dd> The distribution point names (to be treated as constant)</dd>
 <dt>unsigned int * reasons</dt>
 <dd> Revocation reasons. An ORed sequence of flags from <code>gnutls_x509_crl_reason_flags_t</code>.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function retrieves the individual CRL distribution points (2.5.29.31), contained in provided structure.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code> if the index is out of bounds, otherwise a negative error value.</p>

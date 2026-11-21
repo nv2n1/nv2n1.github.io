@@ -1,5 +1,4 @@
 ---
-
 title: "inet_ntop(3)"
 name: "inet_ntop"
 section: "3"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/3-inet_ntop/"
 description: "inet_ntop – convert IPv4 and IPv6 addresses from binary to text form"
 ---
 
+<h2 class="name">NAME</h2>
+<p> inet_ntop &#8211; convert IPv4 and IPv6 addresses from binary to text form </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;arpa/inet.h&gt;
 const char *inet_ntop(int af, const void *src,
                       char *dst, socklen_t size);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> This function converts the network address structure <i>src</i> in the <i>af</i> address family into a character string. The resulting string is copied to the buffer pointed to by <i>dst</i>, which must be a non-null pointer. The caller specifies the number of bytes available in this buffer in the argument <i>size</i>. </p>
 <p> <code>inet_ntop</code>() extends the <code>inet_ntoa</code>(3) function to support multiple address families, <code>inet_ntoa</code>(3) is now considered to be deprecated in favor of <code>inet_ntop</code>(). The following address families are currently supported:</p>
 <dl>

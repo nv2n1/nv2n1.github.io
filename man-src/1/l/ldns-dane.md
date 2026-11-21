@@ -1,5 +1,4 @@
 ---
-
 title: "ldns-dane(1)"
 name: "ldns-dane"
 section: "1"
@@ -10,12 +9,14 @@ description: "ldns-dane – verify or create TLS authentication with DANE (RFC66
 
 <h2>NAME</h2>
 <p> ldns-dane &#8211; verify or create TLS authentication with DANE (RFC6698)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ldns-dane</code> <i>[OPTIONS]</i> <i>verify</i> <i>name</i> <i>port</i> </p>
 <p> <code>ldns-dane</code> <i>[OPTIONS]</i> <i>-t</i> <i>tlsafile</i> <i>verify</i> </p>
 <p> <code>ldns-dane</code> <i>[OPTIONS]</i> <i>name</i> <i>port</i> <i>create</i> </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[ <i>Certificate-usage</i> [ <i>Selector</i> [ <i>Matching-type</i> ] ] ] </p>
 <p> <code>ldns-dane</code> <i>-h</i> </p>
 <p> <code>ldns-dane</code> <i>-v</i> </p>
+<h2>DESCRIPTION</h2>
 <p> In the first form: A TLS connection to <i>name</i>:<i>port</i> is established. The TLSA resource record(s) for <i>name</i> are used to authenticate the connection. </p>
 <p> In the second form: The TLSA record(s) are read from <i>tlsafile</i> and used to authenticate the TLS service they reference. </p>
 <p> In the third form: A TLS connection to <i>name</i>:<i>port</i> is established and used to create the TLSA resource record(s) that would authenticate the connection. The parameters for TLSA rr creation are: </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "time-admin(1)"
 name: "time-admin"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-time-admin/"
 description: "time-admin – Time Administration Tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> time-admin &#8211; Time Administration Tool </p>
+<h2>SYNOPSIS</h2>
 <p> <code>time-admin</code> [<i>OPTION&#8230;</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>time-admin</code> is part of the GNOME system tools, a set of tools to easily access and manage system configuration. </p>
 <p> <code>time-admin</code> allows you to set the time, date and timezone of your system, as well as setting any time server to synchronize your local time server.</p>
 <h2>OPTIONS</h2>

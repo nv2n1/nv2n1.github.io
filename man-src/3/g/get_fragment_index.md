@@ -1,5 +1,4 @@
 ---
-
 title: "get_fragment_index(3)"
 name: "get_fragment_index"
 section: "3"
@@ -10,9 +9,11 @@ description: "get_fragment_index — retrieve the fragment containing a dirfile 
 
 <h2>NAME</h2>
 <p> get_fragment_index &#8212; retrieve the fragment containing a dirfile field</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
 <dl>
 <dt> <code>int get_fragment_index(const DIRFILE *</code><i>dirfile</i><code>, const char</code> <code>*</code><i>field_code</i><code>);</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>get_fragment_index</code>() function queries a <a href="/docs/linux/man/5-dirfile/">dirfile</a>(5) database specified by <i>dirfile</i> and returns the index number of the fragment defining the field specified by <i>field_code</i>. If <i>field_code</i> contains a representation suffix, it will be ignored.</dd>
 <h2>RETURN VALUE</h2>
 <p> Upon successful completion, <code>get_fragment_index</code>() returns the requested fragment index. On error, <code>get_fragment_index</code>() returns -1 and sets the dirfile error a non-zero error value. Possible error values are:</p>

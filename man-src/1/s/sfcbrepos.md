@@ -1,5 +1,4 @@
 ---
-
 title: "sfcbrepos(1)"
 name: "sfcbrepos"
 section: "1"
@@ -10,7 +9,9 @@ description: "sfcbrepos – Script to rebuild the Small-Footprint CIM Broker (sf
 
 <h2>NAME</h2>
 <p> sfcbrepos &#8211; Script to rebuild the Small-Footprint CIM Broker (sfcb) class repository</p>
+<h2>SYNOPSIS</h2>
 <p> <code>sfcbrepos</code> [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> sfcbrepos rebuilds the sfcb class repository from the staging files. Rebuilding is done offline and the sfcb CIMOM must be restarted for changes to take effect.</p>
 <h2>OPTIONS</h2>
 <p> Supported command line options are:</p>

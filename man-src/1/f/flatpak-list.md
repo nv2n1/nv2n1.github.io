@@ -1,5 +1,4 @@
 ---
-
 title: "flatpak-list(1)"
 name: "flatpak-list"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-flatpak-list/"
 description: "flatpak-list – List installed applications and/or runtimes"
 ---
 
+<h2 class="name">NAME</h2>
+<p> flatpak-list &#8211; List installed applications and/or runtimes </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak list</code> [OPTION&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>Lists the names of the installed applications and runtimes. </dd>
 <p> By default, both apps and runtimes are shown, but you can change this by using the <code>&#8211;app</code> or <code>&#8211;runtime</code> options. </p>
 <p> By default, both per-user and system-wide installations are shown. Use the <code>&#8211;user</code>, <code>&#8211;installation</code> or <code>&#8211;system</code> options to change this. </p>

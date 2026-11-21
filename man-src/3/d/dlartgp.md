@@ -1,5 +1,4 @@
 ---
-
 title: "dlartgp(3)"
 name: "dlartgp"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlartgp/"
 description: "dlartgp.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlartgp.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlartgp</code> (F, G, CS, SN, R)<br />
  <i></i><code>DLARTGP</code> generates a plane rotation so that the diagonal is nonnegative.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "pstops(1)"
 name: "pstops"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pstops/"
 description: "pstops – shuffle pages in a PostScript file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pstops &#8211; shuffle pages in a PostScript file </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pstops</code> [ <code>-q</code> ] [ <code>-b</code> ] [ <code>-w</code><i>width</i> ] [ <code>-h</code><i>height</i> ] [ <code>-p</code><i>paper</i> ] [ <code>-d</code><i>lwidth</i> ] <i>pagespecs</i> [ <i>infile</i> [ <i>outfile</i> ] ]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Pstops</i> rearranges pages from a PostScript document, creating a new PostScript file. The input PostScript file should follow the Adobe Document Structuring Conventions. <i>Pstops</i> can be used to perform a large number of arbitrary re-arrangements of Documents, including arranging for printing 2-up, 4-up, booklets, reversing, selecting front or back sides of documents, scaling, etc. </p>
 <p> <i>pagespecs</i> follow the syntax:</p>
 <dl>

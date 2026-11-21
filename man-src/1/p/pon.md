@@ -1,5 +1,4 @@
 ---
-
 title: "pon(1)"
 name: "pon"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-pon/"
 description: "pon, poff, plog – starts up, shuts down or lists the log of PPP connections"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pon, poff, plog &#8211; starts up, shuts down or lists the log of PPP connections </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pon</code> [ isp-name [ options ] ]<br />
  <code>poff</code> [ -r ] [ -d ] [ -c ] [ -a ] [ -h ] [ isp-name ]<br />
  <code>plog</code> [ arguments ]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page describes the <code>pon</code>, <code>plog</code> and <code>poff</code> scripts, which allow users to control PPP connections. </p>
 <h3>pon</h3>
 <p> <code>pon</code>, invoked without arguments, runs the <i>/etc/ppp/ppp_on_boot</i> file, if it exists and is executable. Otherwise, a PPP connection will be started using configuration from <i>/etc/ppp/peers/provider</i>. This is the default behaviour unless an <code>isp-name</code> argument is given. </p>

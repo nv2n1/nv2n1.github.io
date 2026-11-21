@@ -1,5 +1,4 @@
 ---
-
 title: "widl(1)"
 name: "widl"
 section: "1"
@@ -10,8 +9,10 @@ description: "widl – Wine Interface Definition Language (IDL) compiler"
 
 <h2>NAME</h2>
 <p> widl &#8211; Wine Interface Definition Language (IDL) compiler</p>
+<h2>SYNOPSIS</h2>
 <p> <code>widl</code> [<i>options</i>] <i>IDL_file</i><br />
  <code>widl</code> [<i>options</i>] <code>&#8211;dlldata-only</code> <i>name1</i> [<i>name2</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> When no options are used the program will generate a header file, and possibly client and server stubs, proxy and dlldata files, a typelib, and a UUID file, depending on the contents of the IDL file. If any of the options <code>-c</code>, <code>-h</code>, <code>-p</code>, <code>-s</code>, <code>-t</code>, <code>-u</code> or <code>&#8211;local-stubs</code> is given, <code>widl</code> will only generate the requested files, and no others. When run with <code>&#8211;dlldata-only</code>, widl will only generate a dlldata file, and it will contain a list of the names passed as arguments. Usually the way this file is updated is that each time <code>widl</code> is run, it reads any existing dlldata file, and if necessary regenerates it with the same list of names, but with the present proxy file included. </p>
 <p> When run without any arguments, <code>widl</code> will print a help message. </p>
 <h2>OPTIONS</h2>

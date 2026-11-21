@@ -1,5 +1,4 @@
 ---
-
 title: "museekcontrol(1)"
 name: "museekcontrol"
 section: "1"
@@ -10,10 +9,12 @@ description: "MuseekControl – Command-Line control Python Script for Museekd"
 
 <h2>NAME</h2>
 <p> <code>MuseekControl</code> &#8211; Command-Line control Python Script for Museekd</p>
+<h2>DESCRIPTION</h2>
 <p> MuseekControl is command-line Python script that connects to <i><a href="/docs/linux/man/1-museekd/">museekd</a></i>(1) and initiates many different commands. Chat Room watching, one-time chat messages, browsing shares, searching, viewing User info and setting tickers are just some of the many commands available. </p>
 <p> Only one museek option will work at a time. If two are set, the last one will be used. </p>
 <p> Setting the interface and password on the command-line is a security risk. Since interface and password settings are saved to the config file when set, you should set them, exit museekcontrol, and rerun museekcontrol without the password options on the commandline..LP </p>
 <p> Before running, you will need a working <i><a href="/docs/linux/man/1-museekd/">museekd</a></i>(1) and need to know your museekd interface and interface password. Configure those with <i><a href="/docs/linux/man/1-musetup/">musetup</a></i>(1).</p>
+<h2>SYNOPSIS</h2>
 <p> <code>museekcontrol</code> [-c |&#8211;config &lt;<i>config-filename</i>&gt;] [&#8211;gs | &#8211;gsearch &lt;<i>query</i>&gt;] [&#8211;rs | &#8211;rsearch &lt;<i>query</i>&gt;] [&#8211;bs | &#8211;bsearch &lt;<i>query</i>&gt;] [-r | &#8211;rooms] [&#8211;roomlist] [&#8211;joined] [&#8211;roominfo &lt;<i>room</i>&gt;] [&#8211;roomsinfo] [&#8211;sroom &lt;<i>room</i>&gt;] [&#8211;srooms] [&#8211;sprivate &lt;<i>user</i>&gt;] [&#8211;sprivates] [&#8211;tickers &lt;<i>room</i>&gt;] [&#8211;alltickers] [-j | &#8211;join &lt;<i>room</i>&gt;] [-l | &#8211;leave &lt;<i>room</i>&gt;] [-m | &#8211;message &lt;<i>message</i>&gt;] [&#8211;chat &lt;<i>room</i>&gt;] [&#8211;pm | &#8211;private &lt;<i>user</i>&gt;] [&#8211;setticker &lt;<i>room</i>&gt;] [&#8211;settempticker &lt;<i>room</i>&gt;] [&#8211;setdefaultticker] [&#8211;buddy | &#8211;unbuddy &lt;<i>user</i>&gt;] [&#8211;ignore | &#8211;unignore &lt;<i>user</i>&gt;] [&#8211;ban | &#8211;unban &lt;<i>user</i>&gt;] [&#8211;trust | &#8211;distrust &lt;<i>user</i>&gt;] [&#8211;comment &lt;<i>string</i>&gt;] [&#8211;info &lt;<i>user</i>&gt;] [&#8211;minfo] [&#8211;ip &lt;<i>user</i>&gt;] [-b | &#8211;browse &lt;<i>user</i>&gt;] [&#8211;mb | &#8211;mbrowse] [-t | &#8211;transfers] [&#8211;mt | &#8211;mtransfers] [&#8211;download <i><a href="slsk://user/path">slsk://user/path</a></i>] [&#8211;upload <i><a href="slsk://user/path">slsk://user/path</a></i>] [&#8211;abortup <i><a href="slsk://user/path">slsk://user/path</a></i>] [&#8211;abortdown <i><a href="slsk://user/path">slsk://user/path</a></i>] [&#8211;removeup <i><a href="slsk://user/path">slsk://user/path</a></i>] [&#8211;removedown <i><a href="slsk://user/path">slsk://user/path</a></i>] [&#8211;retryup <i><a href="slsk://user/path">slsk://user/path</a></i>] [&#8211;retrydown <i><a href="slsk://user/path">slsk://user/path</a></i>] [-i | &#8211;interface &lt;<i>host:port | /socket.path</i>&gt; [-p | &#8211;password &lt;<i>inteface-password</i>&gt;] [-v | &#8211;version] [-h | &#8211;help]</p>
 <h2>OPTIONS</h2>
 <p> Museekcontrol accepts the following options:</p>

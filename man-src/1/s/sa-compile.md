@@ -1,5 +1,4 @@
 ---
-
 title: "sa-compile(1)"
 name: "sa-compile"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-sa-compile/"
 description: "sa-compile – compile SpamAssassin ruleset into native code"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sa-compile &#8211; compile SpamAssassin ruleset into native code </p>
+<h2>SYNOPSIS</h2>
 <p> <code>sa-compile</code> [options] </p>
 <p> Options: </p>
 <pre><code>
@@ -27,6 +29,7 @@ description: "sa-compile – compile SpamAssassin ruleset into native code"
   -V, --version                 Print version
   -h, --help                    Print usage message
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> sa-compile uses <tt>&quot;re2c&quot;</tt> to compile the site-wide parts of the SpamAssassin ruleset. No part of user_prefs or any files included from user_prefs can be built into the compiled set. </p>
 <p> This compiled set is then used by the <tt>&quot;Mail::SpamAssassin::Plugin::Rule2XSBody&quot;</tt> plugin to speed up SpamAssassin&#8217;s operation, where possible, and when that plugin is loaded. </p>
 <p> <tt>&quot;re2c&quot;</tt> can match strings much faster than perl code, by constructing a <font SIZE="-1">DFA</font> to match many simple strings in parallel, and compiling that to native object code. Not all SpamAssassin rules are amenable to this conversion, however. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_rsa_params_import_raw(3)"
 name: "gnutls_rsa_params_import_raw"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_rsa_params_import_raw – API function"
 
 <h2>NAME</h2>
 <p> gnutls_rsa_params_import_raw &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/compat.h&gt;</code> </p>
 <p> <code>int gnutls_rsa_params_import_raw(gnutls_rsa_params_t </code><i>rsa_params</i><code>, const gnutls_datum_t * </code><i>m</i><code>, const gnutls_datum_t * </code><i>e</i><code>, const gnutls_datum_t * </code><i>d</i><code>, const gnutls_datum_t * </code><i>p</i><code>, const gnutls_datum_t * </code><i>q</i><code>, const gnutls_datum_t * </code><i>u</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -28,6 +28,7 @@ description: "gnutls_rsa_params_import_raw – API function"
 <dd> holds the second prime (q)</dd>
 <dt>const gnutls_datum_t * u</dt>
 <dd> holds the coefficient</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will replace the parameters in the given structure. The new parameters should be stored in the appropriate gnutls_datum.</p>
 <h2>RETURNS</h2>
 <p> <code>GNUTLS_E_SUCCESS</code> on success, or an negative error code.</p>

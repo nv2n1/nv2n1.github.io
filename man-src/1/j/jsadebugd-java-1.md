@@ -1,5 +1,4 @@
 ---
-
 title: "jsadebugd-java-1(1)"
 name: "jsadebugd-java-1"
 section: "1"
@@ -10,6 +9,7 @@ description: "jsadebugd – Serviceability Agent Debug Daemon"
 
 <h2>Name</h2>
 <p> jsadebugd &#8211; Serviceability Agent Debug Daemon </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 jsadebugd pid[server - id] jsadebugd executable core[server - id]
 </code></pre>
@@ -25,6 +25,7 @@ jsadebugd pid[server - id] jsadebugd executable core[server - id]
 <dt>server-id</dt>
 <dd> Optional unique id, needed if multiple debug servers are started on the same machine. This ID must be used by remote clients to identify the particular debug server to attach. Within a single machine, this ID must be unique.</dd></dl>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> <code>jsadebugd</code> attaches to a Java process or core file and acts as a debug server. Remote clients such as <a href="/docs/linux/man/1-jstack/">jstack</a>(1), <a href="/docs/linux/man/1-jmap/">jmap</a>(1), and <a href="/docs/linux/man/1-jinfo/">jinfo</a>(1) can attach to the server using Java Remote Method Invocation (RMI). Before starting <i>jsadebugd</i>, <i>rmiregistry</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/technotes/tools/index.html#rmi">http://docs.oracle.com/javase/7/docs/technotes/tools/index.html#rmi</a> must be started with: </p>
 <pre>
 <tt>rmiregistry -J-Xbootclasspath/p:$JAVA_HOME/lib/sajdi.jar</tt>

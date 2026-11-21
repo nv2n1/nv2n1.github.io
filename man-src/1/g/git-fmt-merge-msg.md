@@ -1,5 +1,4 @@
 ---
-
 title: "git-fmt-merge-msg(1)"
 name: "git-fmt-merge-msg"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-fmt-merge-msg/"
 description: "git-fmt-merge-msg – Produce a merge commit message"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-fmt-merge-msg &#8211; Produce a merge commit message </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git fmt - merge - msg[-m&lt;message&gt;][--log[=&lt;n&gt;] | --no - log] git fmt - merge - msg[-m&lt;message&gt;][--log[=&lt;n&gt;] | --no - log] - F&lt;file&gt;
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Takes the list of merged objects on stdin and produces a suitable commit message to be used for the merge commit, usually to be passed as the <i>&lt;merge-message&gt;</i> argument of <i>git merge</i>. </p>
 <p> This command is intended mostly for internal use by scripts automatically invoking <i>git merge</i>.</p>
 <h2>OPTIONS</h2>

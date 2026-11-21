@@ -1,5 +1,4 @@
 ---
-
 title: "zarafa-admin(1)"
 name: "zarafa-admin"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-zarafa-admin/"
 description: "zarafa-admin – Manages Zarafa users and stores."
 ---
 
+<h2 class="name">NAME</h2>
+<p> zarafa-admin &#8211; Manages Zarafa users and stores. </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>zarafa-admin</code> <i>ACTION</i> [<i>OPTION</i>&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This tool can be used to create the public store and to add, update and remove users from Zarafa. The Zarafa server must be running for <code>zarafa-admin</code> to work. </dd>
 <p> If no action is given, a listing of the possible parameters is printed. When invalid actions or not enough options for an action are given, an error message is printed. </p>
 <p> When using LDAP as the users source, create, modify and delete actions are done in the LDAP tree and not using the zarafa-admin tool. Please see the <code>EXTERNAL USERS</code>() section for more information.</p>

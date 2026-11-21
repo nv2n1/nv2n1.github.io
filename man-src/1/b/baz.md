@@ -1,5 +1,4 @@
 ---
-
 title: "baz(1)"
 name: "baz"
 section: "1"
@@ -10,9 +9,11 @@ description: "baz – arch command line client tool"
 
 <h2>NAME</h2>
 <p> baz &#8211; arch command line client tool</p>
+<h2>SYNOPSIS</h2>
 <p> <code>baz</code> <i>command</i> [ <i>command_options</i> ]<br />
  <code>baz</code> <i>command</i> [-h|&#8211;help|-H]<br />
  <code>baz</code> [-h|&#8211;help|-H|-V|&#8211;version]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>baz</code> is an implementation of <code>arch.</code> </p>
 <p> <code>arch</code> is a version control system, which allows you to keep old versions of files and directories (usually source code), keep a log of who, when, and why changes occurred, etc., like SVN, CVS, or RCS. </p>
 <p> <code>arch</code> has a number of advantages compared to competing systems. Among these are:<br />

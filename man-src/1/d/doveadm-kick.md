@@ -1,5 +1,4 @@
 ---
-
 title: "doveadm-kick(1)"
 name: "doveadm-kick"
 section: "1"
@@ -10,9 +9,11 @@ description: "doveadm-kick – Disconnect users by user name and/or IP address"
 
 <h2>NAME</h2>
 <p> doveadm-kick &#8211; Disconnect users by user name and/or IP address</p>
+<h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>kick</code> [ -a <i>anvil_socket_path</i>] [<code>-f</code>] <i>user</i><br />
  <code>doveadm</code> [<code>-Dv</code>] <code>kick</code> [ -a <i>anvil_socket_path</i>] [<code>-f</code>] <i>ip</i>[<code>/</code><i>mask</i>]<br />
  <code>doveadm</code> [<code>-Dv</code>] <code>kick</code> [ -a <i>anvil_socket_path</i>] [<code>-f</code>] <i>user</i> <i>ip</i>[<code>/</code><i>mask</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>doveadm</code>&#8216;s&nbsp;<wbr><code>kick</code> command is used to disconnect users by <i>user</i> name and/or the <i>ip</i> address, from which they are connected. </p>
 <p> In the first form, all users, whose login name matches the <i>user</i> argument, will be disconnected. </p>
 <p> In the second form, all users, connected from the given IP address or network range, will be disconnected. </p>

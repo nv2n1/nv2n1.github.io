@@ -1,5 +1,4 @@
 ---
-
 title: "canonicalize_filename(3)"
 name: "canonicalize_filename"
 section: "3"
@@ -10,8 +9,10 @@ description: "canonicalize_filename – Converts any filename into its canonical
 
 <h2>NAME</h2>
 <p> canonicalize_filename &#8211; Converts any filename into its canonical form. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>char *canonicalize_filename(char *dest, const char *filename, int size);</code></p>
+<h2>DESCRIPTION</h2>
 <p> Converts any filename into its canonical form, i.e. the minimal absolute filename describing the same file and fixing incorrect forward/backward slashes for the current platform, storing at most `size&#8217; bytes into the `dest&#8217; buffer. You can use the same buffer both as input and output because Allegro internally works on a copy of the input before touching `dest&#8217;. Example: </p>
 <pre><code>
 char buf[256];

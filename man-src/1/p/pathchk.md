@@ -1,5 +1,4 @@
 ---
-
 title: "pathchk(1)"
 name: "pathchk"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pathchk/"
 description: "pathchk – check whether file names are valid or portable"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pathchk &#8211; check whether file names are valid or portable </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pathchk</code> [<i>,OPTION/</i>]&#8230; <i>,NAME/</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Diagnose invalid or unportable file names.</p>
 <dl>
 <dt><code>-p</code></dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "euscale-put-scheduled-update-group-action(1)"
 name: "euscale-put-scheduled-update-group-action"
 section: "1"
@@ -10,10 +9,12 @@ description: "euscale-put-scheduled-update-group-action – Schedule a scaling a
 
 <h2>NAME</h2>
 <p> euscale-put-scheduled-update-group-action &#8211; Schedule a scaling action for an auto-scaling group</p>
+<h2>SYNOPSIS</h2>
 <p> euscale-put-scheduled-update-group-action <code>-g</code> ASGROUP</p>
 <dl>
 <dt>[-b YYYY-MM-DDThh:mm:ssZ]</dt>
 <dd> [-e YYYY-MM-DDThh:mm:ssZ] [-r &quot;MIN HOUR DATE MONTH DAY&quot;] [&#8211;desired-capacity COUNT] [&#8211;max-size COUNT] [&#8211;min-size COUNT] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ACTION</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Schedule a scaling action for an auto-scaling group</p>
 <h3>positional arguments:</h3>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "g_do_dssp(1)"
 name: "g_do_dssp"
 section: "1"
@@ -11,7 +10,9 @@ description: "do_dssp – assigns secondary structure and calculates solvent acc
 <h2>NAME</h2>
 <p> do_dssp &#8211; assigns secondary structure and calculates solvent accessible surface area </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>do_dssp</code> <code>-f</code><i> traj.xtc </i> <code>-s</code><i> topol.tpr </i> <code>-n</code><i> index.ndx </i> <code>-ssdump</code><i> ssdump.dat </i> <code>-map</code><i> ss.map </i> <code>-o</code><i> ss.xpm </i> <code>-sc</code><i> scount.xvg </i> <code>-a</code><i> area.xpm </i> <code>-ta</code><i> totarea.xvg </i> <code>-aa</code><i> averarea.xvg </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-tu</code><i> enum </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-sss</code><i> string </i></p>
+<h2>DESCRIPTION</h2>
 <p> do_dssp reads a trajectory file and computes the secondary structure for each time frame calling the dssp program. If you do not have the dssp program, get it. do_dssp assumes that the dssp executable is /usr/local/bin/dssp. If this is not the case, then you should set an environment variable <code> DSSP</code> pointing to the dssp executable, e.g.: </p>
 <p> <code> setenv DSSP /opt/dssp/bin/dssp</code> </p>
 <p> The structure assignment for each residue and time is written to an <code> .xpm</code> matrix file. This file can be visualized with for instance <code> xv</code> and can be converted to postscript with <code> xpm2ps</code>. The number of residues with each secondary structure type and the total secondary structure (<code> -sss</code>) count as a function of time are also written to file (<code> -sc</code>). </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "alsa-delay(1)"
 name: "alsa-delay"
 section: "1"
@@ -10,7 +9,9 @@ description: "alsadelay – a command to (re)initialize sound hardware"
 
 <h2>NAME</h2>
 <p> alsadelay &#8211; a command to (re)initialize sound hardware </p>
+<h2>SYNOPSIS</h2>
 <p> <code>alsa-delay</code> <i>[options]</i> <i>requested_delay_in_ms</i> [<i>output_card</i>[,<i>device</i>]] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>alsa-delay</code> is a command-line utility to setup an audio delay. The snd-aloop ALSA driver is used to send all PCM streams back to the user space and the alsaloop utility is used to send this stream to a real hardware. </p>
 <p> The parameter <i>output_card</i> is ALSA card index (number) or string card identifier. The parameter <i>device</i> is ALSA device number. </p>
 <p> Use <i>aplay -l</i> to list available cards and devices. </p>

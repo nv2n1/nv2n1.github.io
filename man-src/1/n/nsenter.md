@@ -1,5 +1,4 @@
 ---
-
 title: "nsenter(1)"
 name: "nsenter"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-nsenter/"
 description: "nsenter – run program in different namespaces"
 ---
 
+<h2 class="name">NAME</h2>
+<p> nsenter &#8211; run program in different namespaces </p>
+<h2>SYNOPSIS</h2>
 <p> <code>nsenter</code> [options] [<i>program</i> [<i>arguments</i>]]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>nsenter</code> command executes <i>program</i> in the namespace(s) that are specified in the command-line options (described below). If <i>program</i> is not given, then &quot;${SHELL}&quot; is run (default: <i>/bin/sh</i>). </p>
 <p> Enterable namespaces are: </p>
 <p> <code>mount namespace</code></p>

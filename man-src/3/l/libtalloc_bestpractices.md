@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-libtalloc_bestpractices/"
 description: "libtalloc_bestpractices – Chapter 7: Best practises The following sections contain several best practices and good manners that were found by the Samba and SSSD developers over the years."
 ---
 
+<h2 class="name">NAME</h2>
+<p> libtalloc_bestpractices &#8211; Chapter 7: Best practises The following sections contain several best practices and good manners that were found by the Samba and SSSD developers over the years. </p>
 <p> These will help you to write code which is better, easier to debug and with as few (hopefully none) memory leaks as possible. </p>
 <h2>Keep the context hierarchy steady</h2>
 <p> The talloc is a hierarchy memory allocator. The hierarchy nature is what makes the programming more error proof. It makes the memory easier to manage and to free. Therefore, the first thing we should have on our mind is: always project your data structures into the talloc context hierarchy. </p>

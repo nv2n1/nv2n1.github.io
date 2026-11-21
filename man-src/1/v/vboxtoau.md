@@ -1,5 +1,4 @@
 ---
-
 title: "vboxtoau(1)"
 name: "vboxtoau"
 section: "1"
@@ -10,7 +9,9 @@ description: "vboxtoau – isdn voice box (sound converter)"
 
 <h2>NAME</h2>
 <p> vboxtoau &#8211; isdn voice box (sound converter)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>vboxtoau</code> <i>[OPTION] [OPTION] [&#8230;] &lt; INFILE &gt; OUTFILE</i></p>
+<h2>DESCRIPTION</h2>
 <p> With vboxtoau you can convert files with vbox audio header to .au files (sun audio format). vboxtoau is a link to vboxcnvt.</p>
 <h2>OPTIONS</h2>
 <p> Vboxtoau reads from stdin and writes to stdout.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "imake(1)"
 name: "imake"
 section: "1"
@@ -10,7 +9,9 @@ description: "imake – C preprocessor interface to the make utility"
 
 <h2>NAME</h2>
 <p> imake &#8211; C preprocessor interface to the make utility</p>
+<h2>SYNOPSIS</h2>
 <p> <code>imake</code> [ <code>-D</code><i>define</i> ] [ <code>-I</code><i>dir</i> ] [ <code>-U</code><i>define</i> ] [ <code>-T</code><i>template</i> ] [ <code>-f</code> <i>filename</i> ] [ <code>-C</code> <i>filename</i> ] [ <code>-s</code> <i>filename</i> ] [ <code>-e</code> ] [ <code>-v</code> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Imake</i> is used to generate <i>Makefiles</i> from a template, a set of <i>cpp</i> macro functions, and a per-directory input file called an <i>Imakefile</i>. This allows machine dependencies (such as compiler options, alternate command names, and special <i>make</i> rules) to be kept separate from the descriptions of the various items to be built.</p>
 <h2>OPTIONS</h2>
 <p> The following command line options may be passed to <i>imake</i>:</p>

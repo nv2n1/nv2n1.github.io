@@ -1,5 +1,4 @@
 ---
-
 title: "abiword(1)"
 name: "abiword"
 section: "1"
@@ -10,7 +9,9 @@ description: "abiword — flexible cross-platform word processor"
 
 <h2>NAME</h2>
 <p> abiword &#8212; flexible cross-platform word processor</p>
+<h2>SYNOPSIS</h2>
 <p> <code>abiword</code> [<i>OPTIONS</i>] [<i>FILENAME&#8230;</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> AbiWord is a full-featured, efficient word processing application suitable for a wide range of word processing tasks, and extensible with a variety of plugins. It integrates with <code><a href="/docs/linux/man/1-enchant/">enchant</a></code>(1) to provide spell-checking.</p>
 <h2>OPTIONS</h2>
 <dl>

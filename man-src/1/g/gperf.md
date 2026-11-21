@@ -1,5 +1,4 @@
 ---
-
 title: "gperf(1)"
 name: "gperf"
 section: "1"
@@ -10,7 +9,9 @@ description: "gperf – generate a perfect hash function from a key set"
 
 <h2>NAME</h2>
 <p> gperf &#8211; generate a perfect hash function from a key set</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gperf</code> [<i>OPTION</i>]&#8230; [<i>INPUT-FILE</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> GNU &#8216;gperf&#8217; generates perfect hash functions. </p>
 <p> If a long option shows an argument as mandatory, then it is mandatory for the equivalent short option also.</p>
 <h3>Output file location:</h3>

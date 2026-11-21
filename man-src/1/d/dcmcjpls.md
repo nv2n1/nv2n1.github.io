@@ -1,5 +1,4 @@
 ---
-
 title: "dcmcjpls(1)"
 name: "dcmcjpls"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-dcmcjpls/"
 description: "dcmcjpls – Encode DICOM file to JPEG-LS transfer syntax"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dcmcjpls &#8211; Encode DICOM file to JPEG-LS transfer syntax </p>
+<h2>SYNOPSIS</h2>
 <pre>
 dcmcjpls [options] dcmfile-in dcmfile-out
 </pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>dcmcjpls</code> utility reads an uncompressed DICOM image (<i>dcmfile-in</i>), performs a JPEG-LS compression (i. e. conversion to an encapsulated DICOM transfer syntax) and writes the converted image to an output file (<i>dcmfile-out</i>).</p>
 <h2>PARAMETERS</h2>
 <pre>

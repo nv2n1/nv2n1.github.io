@@ -1,5 +1,4 @@
 ---
-
 title: "anxrip(1)"
 name: "anxrip"
 section: "1"
@@ -11,6 +10,7 @@ description: "anxrip — Extract annotations and data tracks from annodexed medi
 <h2>NAME</h2>
 <p> anxrip &#8212; Extract annotations and data tracks from annodexed media<br />
 &nbsp;<wbr></p>
+<h2>SYNOPSIS</h2>
 <p> <code>anxrip</code> [-c | &#8211;cmml ] [&#8211;head ] [-g | &#8211;granulerate ] [-m | &#8211;media ] [-o <code>filename</code> | &#8211;output <code>filename</code> ] [-h | &#8211;help ] filename</p>
 <h2>Description</h2>
 <p> <code>anxrip</code> extracts annotations and data tracks from annodexed media. The default behavior of <code>anxrip</code> is to extract annotations in the form of a valid CMML file.<br />

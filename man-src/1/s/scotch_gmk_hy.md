@@ -1,5 +1,4 @@
 ---
-
 title: "scotch_gmk_hy(1)"
 name: "scotch_gmk_hy"
 section: "1"
@@ -10,9 +9,11 @@ description: "gmk_hy, gmk_m2, gmk_m3, gmk_ub2 – create source graphs"
 
 <h2>NAME</h2>
 <p> <code>gmk_hy, gmk_m2, gmk_m3, gmk_ub2 </code>&#8211; create source graphs</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 gmk_hy[options] dim[ofile] gmk_m2[options][-gcfile] dimX dimY[ofile] gmk_m3[options][-gcfile] dimX dimY dimZ[ofile] gmk_ub2[options] dim
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>gmk_</code>* programs create source graph files for some common, regular topologies. </p>
 <p> <code>gmk_hy</code> creates a hypercube of dimension <i>dim</i>. </p>
 <p> <code>gmk_m2</code> creates a 2D regular grid of dimensions <i>dimX</i> and <i>dimY</i>. </p>

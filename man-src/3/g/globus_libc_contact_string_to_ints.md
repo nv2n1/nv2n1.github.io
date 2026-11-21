@@ -1,5 +1,4 @@
 ---
-
 title: "globus_libc_contact_string_to_ints(3)"
 name: "globus_libc_contact_string_to_ints"
 section: "3"
@@ -8,7 +7,10 @@ url: "/docs/linux/man/3-globus_libc_contact_string_to_ints/"
 description: "globus_libc.h –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> globus_libc.h &#8211; </p>
 <p> Thread-safe libc macros, function prototypes.</p>
+<h2>SYNOPSIS</h2>
 <p> #include &#8216;globus_common_include.h&#8217;<br />
  #include &#8216;globus_thread.h&#8217; </p>
 <h3>Functions</h3>

@@ -1,5 +1,4 @@
 ---
-
 title: "euare-accountdelpolicy(1)"
 name: "euare-accountdelpolicy"
 section: "1"
@@ -10,10 +9,12 @@ description: "euare-accountdelpolicy – [Eucalyptus cloud admin only] Remove a 
 
 <h2>NAME</h2>
 <p> euare-accountdelpolicy &#8211; [Eucalyptus cloud admin only] Remove a policy from an account</p>
+<h2>SYNOPSIS</h2>
 <p> euare-accountdelpolicy <code>-p</code> POLICY [-U URL] [&#8211;region USER [at] REGION]</p>
 <dl>
 <dt>[-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN]</dt>
 <dd> [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ACCOUNT</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> [Eucalyptus cloud admin only] Remove a policy from an account</p>
 <h3>positional arguments:</h3>
 <dl>

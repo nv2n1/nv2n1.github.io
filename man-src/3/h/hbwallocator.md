@@ -1,5 +1,4 @@
 ---
-
 title: "hbwallocator(3)"
 name: "hbwallocator"
 section: "3"
@@ -11,6 +10,7 @@ description: "hbw::allocator<T> – The C++ allocator compatible with the C++ st
 <h2>NAME</h2>
 <p> hbw::allocator&lt;T&gt; &#8211; The C++ allocator compatible with the C++ standard library allocator concepts<br />
  Note: This is EXEPRIMENTAL API. The functionality and the header file itself can be changed (including non-backward compatible changes), or remove.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;hbw_allocator.h&gt;
 Link with - lmemkind
@@ -26,6 +26,7 @@ Link with - lmemkind
                                             void hbw::allocator&lt;T&gt;::construct(hbw::allocator&lt;T&gt;::pointer p, const hbw::allocator&lt;T&gt;::value_type &amp;val)
                                                 void hbw::allocator&lt;T&gt;::destroy(hbw::allocator&lt;T&gt;::pointer p)
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The hbw::allocator&lt;T&gt; is intended to be used with STL containers to allocate high bandwidth memory. Memory management is based on hbwmalloc (memkind library), enabling users to gain performance in multithreaded applications. Refer <a href="/docs/linux/man/3-hbwmalloc/">hbwmalloc</a>(3) and <a href="/docs/linux/man/3-memkind/">memkind</a>(3) man page for more details. </p>
 <p> All public member types and functions corresponds to standard library allocator concepts and definitions. The current implementation supports C++03 standard. </p>
 <p> Template arguments:<br />

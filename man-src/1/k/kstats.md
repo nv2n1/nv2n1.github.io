@@ -1,5 +1,4 @@
 ---
-
 title: "kstats(1)"
 name: "kstats"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-kstats/"
 description: "kstats – show statistical FMS algorithm votes for an ivs dump and a specified WEP key"
 ---
 
+<h2 class="name">NAME</h2>
+<p> kstats &#8211; show statistical FMS algorithm votes for an ivs dump and a specified WEP key </p>
+<h2>SYNOPSIS</h2>
 <p> <code>kstats</code> &lt;ivs file&gt; &lt;104-bit key&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>kstats</code> is a tool designed to show the FMS algorithm votes for an ivs dump (intialization vectors) with a specified WEP key. The ivs dump can be get by using the combinaison of both airodump(1) and <a href="/docs/linux/man/1-ivstools/">ivstools</a>(1).</p>
 <h2>EXAMPLE</h2>
 <p> <code>kstats</code> kstats out.ivs 123456789ABCDEF123456789AB</p>

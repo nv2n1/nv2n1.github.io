@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pkcs12_bag_decrypt(3)"
 name: "gnutls_pkcs12_bag_decrypt"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_pkcs12_bag_decrypt – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs12_bag_decrypt &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs12.h&gt;</code> </p>
 <p> <code>int gnutls_pkcs12_bag_decrypt(gnutls_pkcs12_bag_t </code><i>bag</i><code>, const char * </code><i>pass</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_pkcs12_bag_decrypt – API function"
 <dd> The bag</dd>
 <dt>const char * pass</dt>
 <dd> The password used for encryption, must be ASCII.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will decrypt the given encrypted bag and return 0 on success.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error code is returned.</p>

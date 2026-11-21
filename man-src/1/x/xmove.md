@@ -1,5 +1,4 @@
 ---
-
 title: "xmove(1)"
 name: "xmove"
 section: "1"
@@ -11,9 +10,16 @@ url: "/docs/linux/man/1-xmove/"
 
  xmove - interactive control panel for telescope
 
+<h2>SYNOPSIS</h2>
+
+ 
 &nbsp;<wbr>xmove
 
-No options are proccesed. (except -h,--help for short help).
+<h2>DESCRIPTION</h2>
+
+ 
+
+ No options are proccesed. (except -h,--help for short help).
 
 <h2>ENVIRONMENT</h2>
 

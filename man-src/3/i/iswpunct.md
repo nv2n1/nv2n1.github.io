@@ -1,5 +1,4 @@
 ---
-
 title: "iswpunct(3)"
 name: "iswpunct"
 section: "3"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/3-iswpunct/"
 description: "iswpunct – test for punctuation or symbolic wide character"
 ---
 
+<h2 class="name">NAME</h2>
+<p> iswpunct &#8211; test for punctuation or symbolic wide character </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;wctype.h&gt;
 int iswpunct(wint_t wc);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>iswpunct</code>() function is the wide-character equivalent of the <code>ispunct</code>(3) function. It tests whether <i>wc</i> is a wide character belonging to the wide-character class &quot;punct&quot;. </p>
 <p> The wide-character class &quot;punct&quot; is a subclass of the wide-character class &quot;graph&quot;, and therefore also a subclass of the wide-character class &quot;print&quot;. </p>
 <p> The wide-character class &quot;punct&quot; is disjoint from the wide-character class &quot;alnum&quot; and therefore also disjoint from its subclasses &quot;alpha&quot;, &quot;upper&quot;, &quot;lower&quot;, &quot;digit&quot;, &quot;xdigit&quot;. </p>

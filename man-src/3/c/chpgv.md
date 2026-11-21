@@ -1,5 +1,4 @@
 ---
-
 title: "chpgv(3)"
 name: "chpgv"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-chpgv/"
 description: "chpgv.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> chpgv.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chpgv</code> (ITYPE, JOBZ, UPLO, N, AP, BP, W, Z, LDZ, WORK, RWORK, INFO)<br />
  <i></i><code>CHPGST</code></p>

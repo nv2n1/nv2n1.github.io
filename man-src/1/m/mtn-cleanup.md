@@ -1,5 +1,4 @@
 ---
-
 title: "mtn-cleanup(1)"
 name: "mtn-cleanup"
 section: "1"
@@ -10,7 +9,9 @@ description: "mtn-cleanup – generate shell variables from monotone workspace o
 
 <h2>NAME</h2>
 <p> mtn-cleanup &#8211; generate shell variables from monotone workspace options</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mtn-cleanup</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>mtn-cleanup</code> returns a workspace to its pristine state with the minimum of change; missing files are restored, changed files are reverted and new files are removed.</p>
 <h2>BUGS</h2>
 <p> <code>mtn-cleanup</code> doesn&#8217;t look to see if the database happens to be somewhere in the workspace, and might therefore remove it. Future version may take a look at <i>_MTN/options</i> to check for this possibility.</p>

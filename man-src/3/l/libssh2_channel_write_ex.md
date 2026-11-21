@@ -1,5 +1,4 @@
 ---
-
 title: "libssh2_channel_write_ex(3)"
 name: "libssh2_channel_write_ex"
 section: "3"
@@ -10,12 +9,14 @@ description: "libssh2_channel_write_ex – write data to a channel stream blocki
 
 <h2>NAME</h2>
 <p> libssh2_channel_write_ex &#8211; write data to a channel stream blocking</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;libssh2.h&gt;
 ssize_t libssh2_channel_write_ex(LIBSSH2_CHANNEL *channel,
                                  int stream_id, char *buf,
                                  size_t buflen);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Write data to a channel stream. All channel streams have one standard I/O substream (stream_id == 0), and may have up to 2^32 extended data streams as identified by the selected <i>stream_id</i>. The SSH2 protocol currently defines a stream ID of 1 to be the stderr substream. </p>
 <p> <i>channel</i> &#8211; active channel stream to write to. </p>
 <p> <i>stream_id</i> &#8211; substream ID number (e.g. 0 or SSH_EXTENDED_DATA_STDERR) </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "binomialengine(3)"
 name: "binomialengine"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-binomialengine/"
 description: "ql/pricingengines/vanilla/binomialengine.hpp – Binomial option engine."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/pricingengines/vanilla/binomialengine.hpp &#8211; Binomial option engine. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/methods/lattices/binomialtree.hpp&gt;<br />
  #include &lt;ql/methods/lattices/bsmlattice.hpp&gt;<br />
  #include &lt;ql/math/distributions/normaldistribution.hpp&gt;<br />

@@ -1,5 +1,4 @@
 ---
-
 title: "cjb2(1)"
 name: "cjb2"
 section: "1"
@@ -10,7 +9,9 @@ description: "cjb2 – Simple DjVuBitonal encoder."
 
 <h2>NAME</h2>
 <p> cjb2 &#8211; Simple DjVuBitonal encoder. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>cjb2 [</code><i>options</i><code>] </code><i>inputfile</i><i>outputdjvufile</i> </p>
+<h2>DESCRIPTION</h2>
 <p> This is a simple encoder for bitonal files. Argument <i>inputfile</i> is the name of a <font SIZE="-1">PBM</font> or bitonal <font SIZE="-1">TIFF</font> file containing a single document image. This program produces a DjVuBitonal file named <i>outputdjvufile</i>. </p>
 <p> The default compression process is lossless: decoding the DjVuBitonal file at full resolution will produce an image exactly identical to the input file. Lossy compression is enabled by options <code>-losslevel</code>, <code>-lossy</code>, or <code>-clean</code>. </p>
 <h2>OPTIONS</h2>

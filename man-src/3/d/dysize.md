@@ -1,5 +1,4 @@
 ---
-
 title: "dysize(3)"
 name: "dysize"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dysize/"
 description: "dysize – get number of days for a given year"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dysize &#8211; get number of days for a given year </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;time.h&gt;</code> </p>
 <p> <code>int dysize(int </code><i>year</i><code>);</code> </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
@@ -16,6 +18,7 @@ description: "dysize – get number of days for a given year"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</p>
+<h2>DESCRIPTION</h2>
 <p> The function returns 365 for a normal year and 366 for a leap year. The calculation for leap year is based on: </p>
 <p> (year) %4 == 0 &amp;&amp; ((year) %100 != 0 || (year) %400 == 0) </p>
 <p> The formula is defined in the macro <i>__isleap(year)</i> also found in <i>&lt;time.h&gt;</i>.</p>

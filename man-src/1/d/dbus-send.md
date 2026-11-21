@@ -1,5 +1,4 @@
 ---
-
 title: "dbus-send(1)"
 name: "dbus-send"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-dbus-send/"
 description: "dbus-send – Send a message to a message bus"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dbus-send &#8211; Send a message to a message bus </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>dbus-send</code> [&#8211;system | &#8211;session | &#8211;bus=<i>ADDRESS</i> | &#8211;peer=<i>ADDRESS</i>] [&#8211;dest=<i>NAME</i>] [&#8211;print-reply&nbsp;[<i>=literal</i>]] [&#8211;reply-timeout=<i>MSEC</i>] [&#8211;type=<i>TYPE</i>] <i>OBJECT_PATH</i> <i>INTERFACE.MEMBER</i> [<i>CONTENTS</i>&#8230;]</dt>
 <dd>
 </dd></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>dbus-send</code> command is used to send a message to a D-Bus message bus. See m[blue]<code><a rel="nofollow" href="http://www.freedesktop.org/software/dbus/">http://www.freedesktop.org/software/dbus/</a></code>m[] for more information about the big picture. </dd>
 <p> There are two well-known message buses: the systemwide message bus (installed on many systems as the &quot;messagebus&quot; service) and the per-user-login-session message bus (started each time a user logs in). The <code>&#8211;system</code> and <code>&#8211;session</code> options direct <code>dbus-send</code> to send messages to the system or session buses respectively. If neither is specified, <code>dbus-send</code> sends to the session bus. </p>
 <p> Nearly all uses of <code>dbus-send</code> must provide the <code>&#8211;dest</code> argument which is the name of a connection on the bus to send the message to. If <code>&#8211;dest</code> is omitted, no destination is set. </p>

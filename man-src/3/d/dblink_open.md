@@ -1,5 +1,4 @@
 ---
-
 title: "dblink_open(3)"
 name: "dblink_open"
 section: "3"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/3-dblink_open/"
 description: "dblink_open – opens a cursor in a remote database"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dblink_open &#8211; opens a cursor in a remote database </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 dblink_open(text cursorname, text sql[, bool fail_on_error]) returns text
     dblink_open(text connname, text cursorname, text sql[, bool fail_on_error]) returns text
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>dblink_open()</code> opens a cursor in a remote database. The cursor can subsequently be manipulated with <code>dblink_fetch()</code> and <code>dblink_close()</code>.</p>
 <h2>ARGUMENTS</h2>
 <p> <i>connname</i></p>

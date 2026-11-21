@@ -1,5 +1,4 @@
 ---
-
 title: "nwpurge(1)"
 name: "nwpurge"
 section: "1"
@@ -10,7 +9,9 @@ description: "nwpurge – Permanently delete previously erased files"
 
 <h2>NAME</h2>
 <p> nwpurge &#8211; Permanently delete previously erased files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>nwpurge</code> [ <code>-h</code> ] [ <code>-a</code> ] [ <code>-l</code> ] [ <code>-s</code> ] [ <code>directory</code> ] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>nwpurge</code> purges files from specified NetWare directory. </p>
 <h2>OPTIONS</h2>
 <p> <code>-h</code></p>

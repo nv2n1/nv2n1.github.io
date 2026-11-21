@@ -1,5 +1,4 @@
 ---
-
 title: "pinentry-kwallet(1)"
 name: "pinentry-kwallet"
 section: "1"
@@ -10,7 +9,9 @@ description: "pinentry-kwallet – kwallet-based pass-phrase dialog for use with
 
 <h2>NAME</h2>
 <p> <code>pinentry-kwallet</code> &#8211; kwallet-based pass-phrase dialog for use with GnuPG</p>
+<h2>SYNOPSIS</h2>
 <p> [-<code>q</code> ] [<i>options</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> is a kwallet- and pinentry-based pass-phrase dialog for use with GnuPG. It is intended to be called from the gpg-agent1 daemon and not invoked directly. </p>
 <p> replaces the regular <code>pinentry-program</code> stanza set in ~/.gnupg/gpg-agent.conf and looks up the passphrases requested in the KWallet first, falling back to <code>pinentry</code> only if not found. The user is given the option to store it in the KWallet afterwards. Negative answers to this are also stored in the KWallet to avoid asking each time. </p>
 <p> (like other pinentry variants) talks a simplified subset of the regular Assuan protocol on stdio; all commands, even unknown ones, are passed through to a <code>pinentry</code> co-process during run-time, even if the latter is never used. It accepts the same options as <code>pinentry</code> even unknown ones, because it is designed to plug in. As an exception, &#8211;<code>q</code> makes more quiet (suppress warnings on stderr), and &#8211;<code>V</code> displays the version on stderr (unless &#8211;<code>q )</code> </p>

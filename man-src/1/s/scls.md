@@ -1,5 +1,4 @@
 ---
-
 title: "scls(1)"
 name: "scls"
 section: "1"
@@ -7,7 +6,10 @@ letter: "s"
 url: "/docs/linux/man/1-scls/"
 ---
 
-scls - The scls program is used to list objects in checkpoint files.
+<h2 class="name">NAME</h2>
+ 
+
+ scls - The scls program is used to list objects in checkpoint files.
 
 <h2>Running scls</h2>
 

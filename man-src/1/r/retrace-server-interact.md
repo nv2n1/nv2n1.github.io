@@ -1,5 +1,4 @@
 ---
-
 title: "retrace-server-interact(1)"
 name: "retrace-server-interact"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-retrace-server-interact/"
 description: "retrace-server-interact – use Retrace server’s chroot for interactive debugging."
 ---
 
+<h2 class="name">NAME</h2>
+<p> retrace-server-interact &#8211; use Retrace server&#8217;s chroot for interactive debugging. </p>
+<h2>SYNOPSIS</h2>
 <p> <i>retrace-server-interact</i> [-h] [&#8211;priv] task_id action</p>
+<h2>DESCRIPTION</h2>
 <p> The tool makes Retrace server&#8217;s chroot available for interactive debugging. It enables user to jump into the chroot and execute the correct tool (gdb/crash), automatically loading all relevant files.</p>
 <h2>ACTIONS</h2>
 <p> shell</p>

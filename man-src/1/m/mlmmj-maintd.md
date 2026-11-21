@@ -1,5 +1,4 @@
 ---
-
 title: "mlmmj-maintd(1)"
 name: "mlmmj-maintd"
 section: "1"
@@ -10,11 +9,13 @@ description: "mlmmj-maintd – maintenance for mlmmj maintained lists"
 
 <h2>NAME</h2>
 <p> mlmmj-maintd &#8211; maintenance for mlmmj maintained lists</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mlmmj-maintd</code> [<i>-F</i>] <i>[-d</i> | <i>-L</i>] /path/to/dir</p>
 <dl>
 <dt> <code>-d</code>: Full path to directory with lists</dt>
 <dt> <code>-L</code>: Full path to list directory</dt>
 <dt> <code>-F</code>: Don&#8217;t fork, performing one maintenance run only.</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This is the program doing the maintenance for an mlmmj based mailing list. It will unsubscribe people who have bounced for long enough, send out bounce probes, resend mails that couldn&#8217;t be delivered to relayhost, clean out stale requests for e.g. subscription, resend list mails and clean up leftover files etc. </dd>
 <p> If a directory containing several lists exists, the <code>-d</code> can be used to specify this, making mlmmj-maintd perform a maintenance run in every listdir below the specified one. </p>
 <p> Only either <code>-d</code> or <code>-L</code> can be specified at the same time. </p>

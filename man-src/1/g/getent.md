@@ -1,5 +1,4 @@
 ---
-
 title: "getent(1)"
 name: "getent"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-getent/"
 description: "getent – get entries from Name Service Switch libraries"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getent &#8211; get entries from Name Service Switch libraries </p>
+<h2>SYNOPSIS</h2>
 <p> <code>getent&nbsp;[</code><i>option</i>]&#8230;&nbsp;<i>database</i>&nbsp;<i>key</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>getent</code> command displays entries from databases supported by the Name Service Switch libraries, which are configured in <i>/etc/nsswitch.conf</i>. If one or more <i>key</i> arguments are provided, then only the entries that match the supplied keys will be displayed. Otherwise, if no <i>key</i> is provided, all entries will be displayed (unless the database does not support enumeration). </p>
 <p> The <i>database</i> may be any of those supported by the GNU C Library, listed below:</p>
 <dl>

@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_scheduler_event_generator_api/"
 description: "Scheduler Implementation API –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Scheduler Implementation API &#8211; </p>
 <h3>Enumerations</h3>
 <p> enum <code>globus_scheduler_event_generator_error_t</code> { <code>GLOBUS_SEG_ERROR_TYPE_NULL</code> = 1024, <code>GLOBUS_SEG_ERROR_TYPE_ALREADY_SET</code>, <code>GLOBUS_SEG_ERROR_TYPE_INVALID_MODULE</code>, <code>GLOBUS_SEG_ERROR_TYPE_INVALID_FORMAT</code>, <code>GLOBUS_SEG_ERROR_TYPE_OUT_OF_MEMORY</code>, <code>GLOBUS_SEG_ERROR_TYPE_LOADING_MODULE</code> } </p>
 <h2>Detailed Description</h2>

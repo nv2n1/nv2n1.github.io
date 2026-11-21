@@ -1,5 +1,4 @@
 ---
-
 title: "qselect-ge(1)"
 name: "qselect-ge"
 section: "1"
@@ -12,6 +11,7 @@ description: "qselect – select queues."
 <p> qselect &#8211; select queues.</p>
 <h2>SYNTAX</h2>
 <p> <code>qselect</code> [ <code>-help</code> ] [ <code>-l resource=val,&#8230;</code> ] [ <code>-pe pe_name,&#8230;</code> ] [ <code>-q wc_queue,&#8230;</code> ] [ <code>-s {r|p|s|z|hu|ho|hs|hj|ha|h}[+]</code> ] [ <code>-U user,&#8230;</code> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>qselect</i> prints a list of Grid Engine queue names corresponding to selection criteria specified in the <i>qselect</i> arguments described below. The output of <i>qselect</i> can be fed into other Grid Engine commands to apply actions on the selected queue sets. For example together with the <i>-mqattr</i> option to <i>qselect</i> can be used to modify queue attributes on a set of queues.</p>
 <h2>OPTIONS</h2>
 <dl>

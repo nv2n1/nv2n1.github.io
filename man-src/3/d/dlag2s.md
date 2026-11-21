@@ -1,5 +1,4 @@
 ---
-
 title: "dlag2s(3)"
 name: "dlag2s"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlag2s/"
 description: "dlag2s.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlag2s.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlag2s</code> (M, N, A, LDA, SA, LDSA, INFO)<br />
  <i></i><code>DLAG2S</code> converts a double precision matrix to a single precision matrix.</p>

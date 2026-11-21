@@ -1,5 +1,4 @@
 ---
-
 title: "p7zip(1)"
 name: "p7zip"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-p7zip/"
 description: "p7zip – Wrapper on 7-Zip file archiver with high compression ratio"
 ---
 
+<h2 class="name">NAME</h2>
+<p> p7zip &#8211; Wrapper on 7-Zip file archiver with high compression ratio </p>
+<h2>SYNOPSIS</h2>
 <p> <code>p7zip</code> [<code>-c</code>|<code>&#8211;stdout</code>|<code>&#8211;to-stdout</code>] [<code>-d</code>|<code>&#8211;decompress</code>|<code>&#8211;uncompress</code>] [<code>-f</code>|<code>&#8211;force</code>] [<code>-h</code>|<code>&#8211;help</code>] [<code>-k</code>|<code>&#8211;keep</code>] [<code>&#8212;</code>] [<i>file &#8230;</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> 7-Zip is a file archiver supporting 7z (that implements LZMA compression algorithm featuring very high compression ratio), LZMA2, XZ, ZIP, Zip64, CAB, RAR (if the non-free p7zip-rar package is installed), ARJ, GZIP, BZIP2, TAR, CPIO, RPM, ISO, most filesystem images and DEB formats. Compression ratio in the new 7z format is 30-50% better than ratio in ZIP format. </p>
 <p> <code>p7zip</code> is a gzip-like CLI wrapper script for 7-Zip, and handles only the 7z format (the native format of 7-Zip), internally executing either <code><a href="/docs/linux/man/1-7za/">7za</a></code>(1) or <code><a href="/docs/linux/man/1-7zr/">7zr</a></code>(1) command. </p>
 <p> With no switches passed in the command line, each given <i>file</i> argument is compressed into <i>file.7z</i>, and then removed. </p>

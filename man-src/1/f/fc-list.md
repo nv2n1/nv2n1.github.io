@@ -1,5 +1,4 @@
 ---
-
 title: "fc-list(1)"
 name: "fc-list"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-fc-list/"
 description: "fc-list – list available fonts"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fc-list &#8211; list available fonts </p>
+<h2>SYNOPSIS</h2>
 <p> <code>fc-list</code> [ <code>-vVh</code> ] [ <code>&#8211;verbose</code> ] [ <code> [ -f </code><i>format</i><code> ] [ &#8211;format </code><i>format</i><code> ] </code> ] [ <code> [ -q ] [ &#8211;quiet ] </code> ] [ <code>&#8211;version</code> ] [ <code>&#8211;help</code> ] </p>
 <p>&nbsp;[&nbsp;<i>pattern</i><code>&nbsp;<wbr>&nbsp;[&nbsp;</code><i>element</i><i>&#8230;</i><code>&nbsp;]&nbsp;<wbr>&nbsp;</code>&nbsp;]&nbsp;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>fc-list</code> lists fonts and styles available on the system for applications using fontconfig. If any elements are specified, only those are printed. Otherwise family and style are printed, unless verbose output is requested.</p>
 <h2>OPTIONS</h2>
 <p> This program follows the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>

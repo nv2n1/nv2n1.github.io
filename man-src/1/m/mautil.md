@@ -1,5 +1,4 @@
 ---
-
 title: "mautil(1)"
 name: "mautil"
 section: "1"
@@ -10,7 +9,9 @@ description: "mautil – Mono.Addins Setup Utility"
 
 <h2>NAME</h2>
 <p> mautil &#8211; Mono.Addins Setup Utility</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mautil</code> [<i>options</i>] <i>&lt;command&gt; </i>[<i>arguments</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>mautil</code> tool works with Mono.Addins repositories and packages.</p>
 <h2>OPTIONS</h2>
 <dl>

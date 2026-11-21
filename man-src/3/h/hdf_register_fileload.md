@@ -1,5 +1,4 @@
 ---
-
 title: "hdf_register_fileload(3)"
 name: "hdf_register_fileload"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-hdf_register_fileload/"
 description: "hdf_register_fileload – register a fileload function"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hdf_register_fileload &#8211; register a fileload function </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;util/neo_hdf.h&gt;
 </code></pre>
@@ -18,6 +20,7 @@ void hdf_register_fileload(HDF *hdf, void *ctx, HDFFILELOAD fileload);
 <p> hdf &#8211; pointer to a head HDF node<br />
  ctx &#8211; pointer that is passed to the HDFFILELOAD function when called<br />
  fileload &#8211; a HDFFILELOAD function </p>
+<h2>DESCRIPTION</h2>
 <p> hdf_register_fileload registers a fileload function that overrides the built-in function. The built-in function uses hdf_search_path and ne_file_load (based on stat/open/read) to find and load the file on every hdf_read_file (including #include). You can override this function if you wish to provide other file search functions, or load the hdf file from an in-memory cache, etc. </p>
 <h2>RETURN VALUE</h2>
 <p> None </p>

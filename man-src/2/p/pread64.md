@@ -1,5 +1,4 @@
 ---
-
 title: "pread64(2)"
 name: "pread64"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-pread64/"
 description: "pread, pwrite – read from or write to a file descriptor at a given offset"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pread, pwrite &#8211; read from or write to a file descriptor at a given offset </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>ssize_t pread(int </code><i>fd</i><code>, void *</code><i>buf</i><code>, size_t </code><i>count</i><code>, off_t </code><i>offset</i><code>);</code> </p>
 <p> <code>ssize_t pwrite(int </code><i>fd</i><code>, const void *</code><i>buf</i><code>, size_t </code><i>count</i><code>, off_t </code><i>offset</i><code>);</code> </p>
@@ -17,6 +19,7 @@ description: "pread, pwrite – read from or write to a file descriptor at a giv
 <dt>
 </dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
  || /* Since glibc 2.12: */ _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200809L</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>pread</code>() reads up to <i>count</i> bytes from file descriptor <i>fd</i> at offset <i>offset</i> (from the start of the file) into the buffer starting at <i>buf</i>. The file offset is not changed. </p>
 <p> <code>pwrite</code>() writes up to <i>count</i> bytes from the buffer starting at <i>buf</i> to the file descriptor <i>fd</i> at offset <i>offset</i>. The file offset is not changed. </p>
 <p> The file referenced by <i>fd</i> must be capable of seeking.</p>

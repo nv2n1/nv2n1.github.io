@@ -1,5 +1,4 @@
 ---
-
 title: "star(1)"
 name: "star"
 section: "1"
@@ -7,14 +6,15 @@ letter: "s"
 url: "/docs/linux/man/1-star/"
 description: "star – unique standard tape archiver"
 ---
-
 <h2>NAME</h2>
 <p> star - unique standard tape archiver  </p>
+<h2>SYNOPSIS</h2>
 <p> <code>star&nbsp;<wbr></code> <i>command</i> [<i>options</i>] [<code>-find</code>] <i>file1 ... filen</i> [<i>find_expr</i>] <br />
  <code>ustar</code> <i>command</i> [<i>options</i>] [<code>-find</code>] <i>file1 ... filen</i> [<i>find_expr</i>] <br />
  <code>tar&nbsp;<wbr>&nbsp;<wbr></code> <i>command</i> [<i>options</i>] <code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></code> <i>file1 ... filen</i> <br />
  <code>star&nbsp;<wbr></code> <code>-copy&nbsp;<wbr>&nbsp;<wbr></code> [<i>options</i>] [<code>-find</code>] <i>file1 ...</i> [<i>f_expr</i>] directory <br />
  <code>star&nbsp;<wbr></code> <code>-copy&nbsp;<wbr>&nbsp;<wbr></code> [<i>options</i>] <code>-C</code> <i>from_directory . to_directory</i>  </p>
+<h2>DESCRIPTION</h2>
 <p> <code>Star</code> is a very fast <code><a href="/docs/linux/man/1-tar/">tar</a></code>(1) like tape archiver with improved functionality. </p>
 <p> <code>Star</code> archives and extracts multiple files to and from a single file called a <i>tarfile. </i> A <i>tarfile</i> is usually a magnetic tape, but it can be any file. In all cases, appearance of a directory name refers to the files and (recursively) subdirectories of that directory. </p>
 <p> <code>Star&#8217;s</code> actions are controlled by the mandatory command flags from the list below. The way <code>star </code> acts may be modified by additional options. </p>

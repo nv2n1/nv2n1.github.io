@@ -1,5 +1,4 @@
 ---
-
 title: "perlamiga(1)"
 name: "perlamiga"
 section: "1"
@@ -8,14 +7,18 @@ url: "/docs/linux/man/1-perlamiga/"
 description: "perlamiga – Perl under AmigaOS 4.1"
 ---
 
+<h2 class="name">NAME</h2>
+<p> perlamiga &#8211; Perl under AmigaOS 4.1 </p>
 <h2>NOTE</h2>
 <p> This is a port of Perl 5.22.1, it is a fresh port and not in any way compatible with my previous ports of Perl 5.8 and 5.16.3. This means you will need to reinstall / rebuild any third party modules you have installed. </p>
 <p> newlib.library version 53.28 or greater is required.</p>
+<h2>SYNOPSIS</h2>
 <p> Once perl is installed you can read this document in the following way </p>
 <pre>
         sh -c &quot;perldoc perlamiga&quot;
 </pre>
 <p> or you may read <i>as is</i>: either as <i></i><font SIZE="-1"><i>README</i></font><i>.amiga</i>, or <i>pod/perlamiga.pod</i>.</p>
+<h2>DESCRIPTION</h2>
 <h3>Prerequisites for running Perl 5.22.1 under AmigaOS 4.1</h3>
 <dl>
 <dt><code>AmigaOS 4.1 update 6 with all updates applied as of 9th October 2013</code></dt>

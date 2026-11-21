@@ -6,6 +6,8 @@ letter: "h"
 url: "/docs/linux/man/3-hwloc_bitmap_t/"
 description: "hwlocality_bitmap – The bitmap API"
 ---
+<h2 class="name">NAME</h2>
+<p> hwlocality_bitmap - The bitmap API </p>
 <h3>Macros</h3>
 <p> <br />
  #define <code>hwloc_bitmap_foreach_begin</code>(id, bitmap) <br />

@@ -1,5 +1,4 @@
 ---
-
 title: "hb_standby(1)"
 name: "hb_standby"
 section: "1"
@@ -10,7 +9,9 @@ description: "hb_standby – hb_standby is a simple linux-ha shell script. It is
 
 <h2>NAME</h2>
 <p> hb_standby &#8211; hb_standby is a simple linux-ha shell script. It issues a failover from the node where it is running to the other node, if available.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>hb_standby</code> [all|foreign|local|failback]</p>
+<h2>DESCRIPTION</h2>
 <p> The full path is usually /usr/lib/heartbeat/hb_standby. To get a list of the options to hb_standby issue the command, <code> &quot;/usr/lib/heartbeat/hb_standby &#8211;help&quot; </code>. NOTE: For historical reasons, unlike most scripts where failure to specify an option gives you the list of possible options, failure to provide an option to hb_standby is equivalent to &quot;hb_standby all&quot;. </p>
 <p> The meaning of the options is relative. For this sample haresources file: </p>
 <p> nodea drbddisk::r0 Filesystem::/dev/drbd0::/local/groups::ext3 10.0.0.1 smb </p>

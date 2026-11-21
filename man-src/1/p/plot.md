@@ -1,5 +1,4 @@
 ---
-
 title: "plot(1)"
 name: "plot"
 section: "1"
@@ -10,7 +9,9 @@ description: "plot – translate GNU metafiles to other graphics formats"
 
 <h2>NAME</h2>
 <p> plot &#8211; translate GNU metafiles to other graphics formats</p>
+<h2>SYNOPSIS</h2>
 <p> <code>plot </code> [ <i>options </i> ] [ <i>files </i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>plot</code> translates files in GNU metafile format to other graphics formats, or displays them on an X Window System display. GNU metafile format is a device-independent format for the storage of graphic data. It is the default output format of the programs <code>graph</code>(1), <code>pic2plot</code>(1), <code><a href="/docs/linux/man/1-tek2plot/">tek2plot</a></code>(1), and <code><a href="/docs/linux/man/1-plotfont/">plotfont</a></code>(1), and is further documented in <code>plot</code>(5), since it is an enhanced version of the traditional <code>plot</code>(5) format found on non-GNU systems. It can also be produced by the GNU libplot 2-D graphics export library (see <code>plot</code>(3)). </p>
 <p> The output format is specified with the <code>-T</code> option. The possible output formats and display types are the same as those supported by <code>graph</code>(1), <code><a href="/docs/linux/man/1-plotfont/">plotfont</a></code>(1), <code>pic2plot</code>(1), and <code><a href="/docs/linux/man/1-tek2plot/">tek2plot</a></code>(1). If an output file is produced, it is written to standard output. </p>
 <p> Options and file names may be interspersed on the command line, but the options are processed before the file names are read. If <code>&#8212; </code> is seen, it is interpreted as the end of the options. If no file names are specified, or the file name <code>&#8211; </code> is encountered, the standard input is read.</p>

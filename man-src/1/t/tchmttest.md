@@ -1,5 +1,4 @@
 ---
-
 title: "tchmttest(1)"
 name: "tchmttest"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-tchmttest/"
 description: "tchmttest – test cases of the hash database API"
 ---
 
+<h2 class="name">NAME</h2>
+<p> tchmttest &#8211; test cases of the hash database API</p>
+<h2>DESCRIPTION</h2>
 <p> The command `<code>tchmttest</code>&#8216; is a utility for facility test under multi-thread situation. This command is used in the following format. `<i>path</i>&#8216; specifies the path of a database file. `<i>tnum</i>&#8216; specifies the number of running threads. `<i>rnum</i>&#8216; specifies the number of iterations. `<i>bnum</i>&#8216; specifies the number of buckets. `<i>apow</i>&#8216; specifies the power of the alignment. `<i>fpow</i>&#8216; specifies the power of the free block pool. </p>
 <dl>
 <dt>

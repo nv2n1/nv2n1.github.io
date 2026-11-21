@@ -1,5 +1,4 @@
 ---
-
 title: "pygettext3(1)"
 name: "pygettext3"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pygettext3/"
 description: "pygettext – Python equivalent of"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pygettext &#8211; Python equivalent of </p>
 <p> <a href="/docs/linux/man/1-xgettext/">xgettext</a>(1)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pygettext</code> [<i>OPTIONS</i>] <i>INPUTFILE </i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> pygettext is deprecated. The current version of xgettext supports many languages, including Python. </p>
 <p> pygettext uses Python&#8217;s standard tokenize module to scan Python source code, generating .pot files identical to what GNU xgettext generates for C and C++ code. From there, the standard GNU tools can be used. </p>
 <p> pygettext searches only for _() by default, even though GNU xgettext recognizes the following keywords: gettext, dgettext, dcgettext, and gettext_noop. See the <code>-k</code>/<code>&#8211;keyword</code> flag below for how to augment this. </p>

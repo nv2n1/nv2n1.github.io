@@ -1,5 +1,4 @@
 ---
-
 title: "storagectl(1)"
 name: "storagectl"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-storagectl/"
 description: "storagectl – The storaged command line tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> storagectl &#8211; The storaged command line tool </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>storagectl</code> status</dt>
 <dt> <code>storagectl</code> info {&#8211;object-path&nbsp;<wbr><i>OBJECT</i> | &#8211;block-device&nbsp;<wbr><i>DEVICE</i>}</dt>
@@ -22,6 +24,7 @@ description: "storagectl – The storaged command line tool"
 <dt> <code>storagectl</code> monitor</dt>
 <dt> <code>storagectl</code> dump</dt>
 <dt> <code>storagectl</code> help</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>storagectl</code></p>
 <dd>is a command-line program used to interact with the <code><a href="/docs/linux/man/8-storaged/">storaged</a></code>(8) daemon process.</dd>
 <h2>COMMANDS</h2>

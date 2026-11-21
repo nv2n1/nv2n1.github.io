@@ -1,5 +1,4 @@
 ---
-
 title: "jar(1)"
 name: "jar"
 section: "1"
@@ -10,6 +9,7 @@ description: "jar – Manipulates Java Archive (JAR) files."
 
 <h2>NAME</h2>
 <p> jar &#8211; Manipulates Java Archive (JAR) files.</p>
+<h2>SYNOPSIS</h2>
 <p> Create JAR file </p>
 <pre><code>
 jar c[efmMnv0][entrypoint][jarfile][manifest][-C dir] file...[-Joption...][@arg - file...]
@@ -24,6 +24,7 @@ jar c[efmMnv0][entrypoint][jarfile][manifest][-C dir] file...[-Joption...][@arg 
 <pre><code>
 jar i jarfile[-Joption...][@arg - file...]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>jar</code> command is a general-purpose archiving and compression tool, based on ZIP and the ZLIB compression format. However, the <code>jar</code> command was designed mainly to package Java applets or applications into a single archive. When the components of an applet or application (files, images and sounds) are combined into a single archive, they can be downloaded by a Java agent (such as a browser) in a single HTTP transaction, rather than requiring a new connection for each piece. This dramatically improves download times. The <code>jar</code> command also compresses files, which further improves download time. The <code>jar</code> command also allows individual entries in a file to be signed by the applet author so that their origin can be authenticated. A JAR file can be used as a class path entry, whether or not it is compressed. </p>
 <p> The syntax for the <code>jar</code> command resembles the syntax for the <code>tar</code> command. It has several operation modes, defined by one of the mandatory <i>operation arguments</i>. Other arguments are either <i>options</i> that modify the behavior of the operation, or <i>operands</i> required to perform the operation.</p>
 <h2>OPERATION ARGUMENTS</h2>

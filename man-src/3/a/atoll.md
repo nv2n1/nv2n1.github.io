@@ -1,5 +1,4 @@
 ---
-
 title: "atoll(3)"
 name: "atoll"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-atoll/"
 description: "atoi, atol, atoll – convert a string to an integer"
 ---
 
+<h2 class="name">NAME</h2>
+<p> atoi, atol, atoll &#8211; convert a string to an integer </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;
 int atoi(const char *nptr);
@@ -20,6 +22,7 @@ long long atoll(const char *nptr);
 <dt>
 </dt><dd> _ISOC99_SOURCE ||<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code>atoi</code>() function converts the initial portion of the string pointed to by <i>nptr</i> to <i>int</i>. The behavior is the same as </p>
 <p> strtol(nptr, NULL, 10); </p>
 <p> except that <code>atoi</code>() does not detect errors. </p>

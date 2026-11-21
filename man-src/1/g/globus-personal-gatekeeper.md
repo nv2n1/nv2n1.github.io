@@ -1,5 +1,4 @@
 ---
-
 title: "globus-personal-gatekeeper(1)"
 name: "globus-personal-gatekeeper"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-globus-personal-gatekeeper/"
 description: "globus-personal-gatekeeper – Manage a user’s personal gatekeeper daemon"
 ---
 
+<h2 class="name">NAME</h2>
+<p> globus-personal-gatekeeper &#8211; Manage a user&#8217;s personal gatekeeper daemon </p>
+<h2>SYNOPSIS</h2>
 <p> <code>globus-personal-gatekeeper</code> [-help ] [-usage ] [-version ] [-versions ] [-list ] [-directory <i>CONTACT</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>globus-personal-gatekeeper</code> command is a utility which manages a gatekeeper and job manager service for a single user. Depending on the command-line arguments it will operate in one of several modes. In the first set of arguments indicated in the synopsis, the program provides information about the <code>globus-personal-gatekeeper</code> command or about instances of the <code>globus-personal-gatekeeper</code> that are running currently. The second set of arguments indicated in the synopsis provide control over starting a new <code>globus-personal-gatekeeper</code> instance. The final set of arguments provide control for terminating one or more <code>globus-personal-gatekeeper</code> instances. </p>
 <p> The <i>-start</i> mode will create a new subdirectory of $HOME/.globus and write the configuration files needed to start a and write the configuration files needed to start a <code>globus-gatekeeper</code> daemon which will invoke the <code>globus-job-manager</code> service when new authenticated connections are made to its service port. The <code>globus-personal-gatekeeper</code> then exits, printing the contact string for the new gatekeeper prefixed by GRAM contact: to standard output. In addition to the arguments described above, any arguments described in <code><a href="/docs/linux/man/8-globus-job-manager/">globus-job-manager</a>(8)</code> can be appended to the command-line and will be added to the job manager configuration for the service started by the <code>globus-gatekeeper</code>. </p>
 <p> The new <code>globus-gatekeeper</code> will continue to run in the background until killed by invoking <code>globus-personal-gatekeeper</code> with the <i>-kill</i> or <i>-killall</i> argument. When killed, it will kill the <code>globus-gatekeeper</code> and <code>globus-job-manager</code> processes, remove state files and configuration data, and then exit. Jobs which are running when the personal gatekeeper is killed will continue to run, but their job directory will be destroyed so they may fail in the LRM. </p>

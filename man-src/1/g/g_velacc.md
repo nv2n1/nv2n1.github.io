@@ -1,5 +1,4 @@
 ---
-
 title: "g_velacc(1)"
 name: "g_velacc"
 section: "1"
@@ -11,7 +10,9 @@ description: "g_velacc – calculates velocity autocorrelation functions"
 <h2>NAME</h2>
 <p> g_velacc &#8211; calculates velocity autocorrelation functions </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>g_velacc</code> <code>-f</code><i> traj.trr </i> <code>-s</code><i> topol.tpr </i> <code>-n</code><i> index.ndx </i> <code>-o</code><i> vac.xvg </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-[no]m</code><i></i> <code>-[no]mol</code><i></i> <code>-acflen</code><i> int </i> <code>-[no]normalize</code><i></i> <code>-P</code><i> enum </i> <code>-fitfn</code><i> enum </i> <code>-ncskip</code><i> int </i> <code>-beginfit</code><i> real </i> <code>-endfit</code><i> real </i></p>
+<h2>DESCRIPTION</h2>
 <p> g_velacc computes the velocity autocorrelation function. When the <code> -m</code> option is used, the momentum autocorrelation function is calculated. </p>
 <p> With option <code> -mol</code> the velocity autocorrelation function of molecules is calculated. In this case the index group should consist of molecule numbers instead of atom numbers.</p>
 <h2>FILES</h2>

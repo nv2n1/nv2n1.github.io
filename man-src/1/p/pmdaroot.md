@@ -1,5 +1,4 @@
 ---
-
 title: "pmdaroot(1)"
 name: "pmdaroot"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmdaroot – a privileged PMCD helper performance metrics domain a
 
 <h2>NAME</h2>
 <p> <code>pmdaroot</code> &#8211; a privileged PMCD helper performance metrics domain agent</p>
+<h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/root/pmdaroot</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-s</code> <i>sockname</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdaroot</code> is a special Performance Metrics Domain Agent (PMDA) which cooperates closely with <code><a href="/docs/linux/man/1-pmcd/">pmcd</a></code>(1) and other PMDAs to provide limited privileged services to these unprivileged processes. </p>
 <p> In this role it is used to discover operating system containers running on the local host. It also enables access to performance data from within those containers by other PMDAs running on the bare-metal host, using the <code><a href="/docs/linux/man/3-pmdarootconnect/">pmdaRootConnect</a></code>(3) and the associated namespace interfaces. </p>
 <p> Like all other PMDAs, it also exports performance metrics from the domain it controls. Currently, this is limited to information about the containers on the local system, and currently only Docker containers can be detected.</p>

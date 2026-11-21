@@ -1,5 +1,4 @@
 ---
-
 title: "npm-uninstall(1)"
 name: "npm-uninstall"
 section: "1"
@@ -8,6 +7,7 @@ url: "/docs/linux/man/1-npm-uninstall/"
 description: "npm-uninstall – Remove a package"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>npm-uninstall</code> &#8211; Remove a package </p>
 <h3>Synopsis</h3>
 <dl>

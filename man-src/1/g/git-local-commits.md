@@ -1,5 +1,4 @@
 ---
-
 title: "git-local-commits(1)"
 name: "git-local-commits"
 section: "1"
@@ -10,7 +9,9 @@ description: "git-local-commits – List local commits"
 
 <h2>NAME</h2>
 <p> <code>git-local-commits</code> &#8211; List local commits</p>
+<h2>SYNOPSIS</h2>
 <p> <code>git-local-commits</code> &lt;args&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> Lists commits in the local branch that have not been pushed to origin.</p>
 <h2>OPTIONS</h2>
 <p> &lt;args&gt; </p>

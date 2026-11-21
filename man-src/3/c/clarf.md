@@ -1,5 +1,4 @@
 ---
-
 title: "clarf(3)"
 name: "clarf"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-clarf/"
 description: "clarf.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> clarf.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clarf</code> (SIDE, M, N, V, INCV, TAU, C, LDC, WORK)<br />
  <i></i><code>CLARF</code> applies an elementary reflector to a general rectangular matrix.</p>

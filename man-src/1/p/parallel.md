@@ -1,5 +1,4 @@
 ---
-
 title: "parallel(1)"
 name: "parallel"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-parallel/"
 description: "parallel – run programs in parallel"
 ---
 
+<h2 class="name">NAME</h2>
+<p> parallel &#8211; run programs in parallel </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>parallel</code> [options] [command]<code>&#8212;</code> [argument &#8230;]</dt>
 <dt> <code>parallel</code> [options]<code>&#8212;</code> [command &#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>parallel</code></p>
 <dd>runs the specified command, passing it a single one of the specified arguments. This is repeated for each argument. Jobs may be run in parallel. The default is to run one job per CPU. </dd>
 <p> If no command is specified before the &#8211;, the commands after it are instead run in parallel.</p>

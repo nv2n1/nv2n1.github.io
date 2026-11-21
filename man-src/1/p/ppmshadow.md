@@ -1,5 +1,4 @@
 ---
-
 title: "ppmshadow(1)"
 name: "ppmshadow"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ppmshadow/"
 description: "ppmshadow – add simulated shadows to a portable pixmap image"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ppmshadow &#8211; add simulated shadows to a portable pixmap image </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ppmshadow</code> [<code>-b</code> <i>blur_size</i>] [<code>-k</code>] [<code>-t</code>] [<code>-x</code> <i>xoffset</i>] [<code>-y</code> <i>yoffset</i>] [<code>-u</code>] [<i>pnmfile</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>ppmshadow</code> adds a simulated shadow to an image, giving the appearance that the contents of the image float above the page, casting a diffuse shadow on the background. Shadows can either be black, as cast by opaque objects, or translucent, where the shadow takes on the colour of the object which casts it. You can specify the extent of the shadow and its displacement from the image with command line options. </p>
 <h2>OPTIONS</h2>
 <dl>

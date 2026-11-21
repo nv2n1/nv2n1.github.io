@@ -1,5 +1,4 @@
 ---
-
 title: "dirmngr(1)"
 name: "dirmngr"
 section: "1"
@@ -10,7 +9,9 @@ description: "dirmngr – CRL and OCSP daemon"
 
 <h2>NAME</h2>
 <p> <code>dirmngr</code> &#8211; CRL and OCSP daemon</p>
+<h2>SYNOPSIS</h2>
 <p> <code>dirmngr</code> [<i>options</i>] <i>command</i> [<i>args</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> Dirmngr is a server for managing and downloading certificate revocation lists (CRLs) for X.509 certificates and for downloading the certificates themselves. Dirmngr also handles OCSP requests as an alternative to CRLs. Dirmngr is either invoked internally by gpgsm (from GnuPG 2) or when running as a system daemon through the <code>dirmngr-client</code> tool. </p>
 <h2>COMMANDS</h2>
 <p> Commands are not distinguished from options execpt for the fact that only one command is allowed. </p>

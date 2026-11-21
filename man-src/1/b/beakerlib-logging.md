@@ -1,5 +1,4 @@
 ---
-
 title: "beakerlib-logging(1)"
 name: "beakerlib-logging"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-beakerlib-logging/"
 description: "BeakerLib – logging – phase support, logging functions and metrics"
 ---
 
+<h2 class="name">NAME</h2>
+<p> BeakerLib &#8211; logging &#8211; phase support, logging functions and metrics </p>
+<h2>DESCRIPTION</h2>
 <p> Routines for creating various types of logs inside BeakerLib tests. Implements also phase support with automatic assert evaluation.</p>
 <h2>FUNCTIONS</h2>
 <h3>Logging</h3>

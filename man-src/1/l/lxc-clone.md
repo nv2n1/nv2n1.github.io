@@ -1,5 +1,4 @@
 ---
-
 title: "lxc-clone(1)"
 name: "lxc-clone"
 section: "1"
@@ -10,7 +9,9 @@ description: "lxc-clone – clone a new container from an existing one."
 
 <h2>NAME</h2>
 <p> lxc-clone &#8211; clone a new container from an existing one.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lxc-clone</code> [-s ] [-K ] [-M ] [-H ] [-B <i>backingstore</i>] [-L <i>fssize</i>] [-p <i>lxcpath</i>] [-P <i>newlxcpath</i>] {-o <i>orig</i>} {-n <i>new</i>} [&#8211; hook arguments] <code>lxc-clone</code> [-s ] [-K ] [-M ] [-H ] [-B <i>backingstore</i>] [-L <i>fssize</i>] [-p <i>lxcpath</i>] [-P <i>newlxcpath</i>] {orig} {new} [&#8211; hook arguments]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>lxc-clone</code> Creates a new container as a clone of an existing container. Two types of clones are supported: copy and snapshot. A copy clone copies the root filessytem from the original container to the new. A snapshot filesystem uses the backing store&#8217;s snapshot functionality to create a very small copy-on-write snapshot of the original container. Snapshot clones require the new container backing store to support snapshotting. Currently this includes only aufs, btrfs, lvm, overlayfs and zfs. LVM devices do not support snapshots of snapshots. </p>
 <p> The backing store of the new container will be the same type as the original container, with one exception, overlay containers. aufs and overlayfs snapshots can be created of directory backed containers. This can be requested by using (for overlayfs) the <i>-B overlayfs</i> arguments. </p>
 <p> The names of the original and new container can be given (in that order) after all options, or can be specified with the <i>-o</i> and <i>-n</i> options, respectively.</p>

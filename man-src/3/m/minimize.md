@@ -1,5 +1,4 @@
 ---
-
 title: "minimize(3)"
 name: "minimize"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-minimize/"
 description: "QuantLib::ConjugateGradient – Multi-dimensional Conjugate Gradient class."
 ---
 
+<h2 class="name">NAME</h2>
+<p> QuantLib::ConjugateGradient &#8211; Multi-dimensional Conjugate Gradient class. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/optimization/conjugategradient.hpp&gt; </p>
 <p> Inherits QuantLib::LineSearchBasedMethod. </p>
 <h3>Public Member Functions</h3>

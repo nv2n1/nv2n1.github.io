@@ -1,5 +1,4 @@
 ---
-
 title: "fitcircle(1)"
 name: "fitcircle"
 section: "1"
@@ -10,8 +9,10 @@ description: "fitcircle – find mean position and pole of best-fit great [or sm
 
 <h2>NAME</h2>
 <p> fitcircle &#8211; find mean position and pole of best-fit great [or small] circle to points on a sphere.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>fitcircle</code> [ <i>table</i> ] <i>norm</i> [ <i>flags</i> ] [ [<i>lat</i>] ] [ [<i>level</i>] ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>fitcircle</code> reads lon,lat [or lat,lon] values from the first two columns on standard input [or <i>table</i>]. These are converted to Cartesian three-vectors on the unit sphere. Then two locations are found: the mean of the input positions, and the pole to the great circle which best fits the input positions. The user may choose one or both of two possible solutions to this problem. The first is called <code>-L1</code> and the second is called <code>-L2</code>. When the data are closely grouped along a great circle both solutions are similar. If the data have large dispersion, the pole to the great circle will be less well determined than the mean. Compare both solutions as a qualitative check. </p>
 <p> The <code>-L1</code> solution is so called because it approximates the minimization of the sum of absolute values of cosines of angular distances. This solution finds the mean position as the Fisher average of the data, and the pole position as the Fisher average of the cross-products between the mean and the data. Averaging cross-products gives weight to points in proportion to their distance from the mean, analogous to the &quot;leverage&quot; of distant points in linear regression in the plane. </p>
 <p> The <code>-L2</code> solution is so called because it approximates the minimization of the sum of squares of cosines of angular distances. It creates a 3 by 3 matrix of sums of squares of components of the data vectors. The eigenvectors of this matrix give the mean and pole locations. This method may be more subject to roundoff errors when there are thousands of data. The pole is given by the eigenvector corresponding to the smallest eigenvalue; it is the least-well represented factor in the data and is not easily estimated by either method.</p>

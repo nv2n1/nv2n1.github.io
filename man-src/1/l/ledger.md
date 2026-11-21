@@ -1,5 +1,4 @@
 ---
-
 title: "ledger(1)"
 name: "ledger"
 section: "1"
@@ -10,7 +9,9 @@ description: "ledger – Command-line, double-entry account reporting tool"
 
 <h2>NAME</h2>
 <p> <code>ledger</code> &#8211; Command-line, double-entry account reporting tool</p>
+<h2>SYNOPSIS</h2>
 <p> [<i>command</i> ] [<i>options</i> ] [<i>arguments</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> is a command-line accounting tool based on the power and completeness of double-entry accounting. It is only a reporting tool, which means it never modifies your data files, but it does offer a large selection of reports, and different ways to customize them to your needs.</p>
 <h2>COMMANDS</h2>
 <p> accepts several top-level commands, each of which generates a different kind of basic report. Most of them accept a <i>report-query</i> argument, in order to determine what should be reported. To understand the syntax of a <i>report-query</i> see the section on Sx QUERIES . In its most basic form, simply specifying one or more strings produces a report for all accounts containing those strings. </p>

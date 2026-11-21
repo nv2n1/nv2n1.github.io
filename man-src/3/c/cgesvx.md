@@ -1,5 +1,4 @@
 ---
-
 title: "cgesvx(3)"
 name: "cgesvx"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cgesvx/"
 description: "cgesvx.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cgesvx.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgesvx</code> (FACT, TRANS, N, NRHS, A, LDA, AF, LDAF, IPIV, EQUED, R, C, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, RWORK, INFO)<br />
  <i></i><code> CGESVX computes the solution to system of linear equations A * X = B for GE matrices</code></p>

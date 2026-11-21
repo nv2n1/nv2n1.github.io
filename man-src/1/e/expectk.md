@@ -1,5 +1,4 @@
 ---
-
 title: "expectk(1)"
 name: "expectk"
 section: "1"
@@ -10,6 +9,7 @@ description: "expectk – Expect with Tk support"
 
 <h2>NAME</h2>
 <p> expectk &#8211; Expect with Tk support</p>
+<h2>SYNOPSIS</h2>
 <p> <code>expectk</code> [ <i>args</i> ]</p>
 <h2>INTRODUCTION</h2>
 <p> <code>Expectk</code> is a combination of Expect with Tk. (See their respective man pages for a more comprehensive explanation of either.) <code>Expectk</code> should run any <code>wish</code> or <code>Expect</code> script (with minor changes &#8211; see below). </p>

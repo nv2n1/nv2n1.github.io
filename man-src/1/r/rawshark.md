@@ -1,5 +1,4 @@
 ---
-
 title: "rawshark(1)"
 name: "rawshark"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-rawshark/"
 description: "rawshark – Dump and analyze raw pcap data"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rawshark &#8211; Dump and analyze raw pcap data </p>
+<h2>SYNOPSIS</h2>
 <p> <code>rawshark</code> [&nbsp;<wbr><code>-d</code>&nbsp;<wbr>&lt;encap:dlt&gt;|&lt;proto:protoname&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-F</code>&nbsp;<wbr>&lt;field to display&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-h</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-l</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-n</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-N</code>&nbsp;<wbr>&lt;name resolving flags&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-o</code>&nbsp;<wbr>&lt;preference setting&gt;&nbsp;<wbr>]&nbsp;<wbr>&#8230; [&nbsp;<wbr><code>-p</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-r</code>&nbsp;<wbr>&lt;pipe&gt;|-&nbsp;<wbr>] [&nbsp;<wbr><code>-R</code>&nbsp;<wbr>&lt;read&nbsp;<wbr>(display)&nbsp;<wbr>filter&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-s</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-S</code>&nbsp;<wbr>&lt;field format&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-t</code>&nbsp;<wbr>ad|a|r|d|e&nbsp;<wbr>] [&nbsp;<wbr><code>-v</code>&nbsp;<wbr>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Rawshark</code> reads a stream of packets from a file or pipe, and prints a line describing its output, followed by a set of matching fields for each packet on stdout.</p>
 <h2>INPUT</h2>
 <p> Unlike <code>TShark</code>, <code>Rawshark</code> makes no assumptions about encapsulation or input. The <code>-d</code> and <code>-r</code> flags must be specified in order for it to run. One or more <code>-F</code> flags should be specified in order for the output to be useful. The other flags listed above follow the same conventions as <code>Wireshark</code> and <code>TShark</code>. </p>

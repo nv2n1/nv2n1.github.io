@@ -1,5 +1,4 @@
 ---
-
 title: "dsr2html(1)"
 name: "dsr2html"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-dsr2html/"
 description: "dsr2html – Render DICOM SR file and data set to HTML/XHTML"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dsr2html &#8211; Render DICOM SR file and data set to HTML/XHTML </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 dsr2html[options] dsrfile - in[htmlfile - out]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>dsr2html</code> utility renders the contents of a DICOM Structured Reporting (SR) document (file format or raw data set) to HTML (Hyper Text Markup Language) version 3.2 or 4.01 as well as to XHTML (Extensible Hyper Text Markup Language) version 1.1. </p>
 <p> If <code>dsr2html</code> reads a raw data set (DICOM data without a file format meta-header) it will attempt to guess the transfer syntax by examining the first few bytes of the file. It is not always possible to correctly guess the transfer syntax and it is better to convert a data set to a file format whenever possible (using the <code>dcmconv</code> utility). It is also possible to use the <i>-f</i> and <i>-t[ieb]</i> options to force <code>dsr2html</code> to read a dataset with a particular transfer syntax.</p>
 <h2>PARAMETERS</h2>

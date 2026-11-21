@@ -1,5 +1,4 @@
 ---
-
 title: "salt-syndic(1)"
 name: "salt-syndic"
 section: "1"
@@ -11,9 +10,11 @@ description: "salt-syndic – salt-syndic Documentation"
 <h2>NAME</h2>
 <p> salt-syndic &#8211; salt-syndic Documentation </p>
 <p> The Salt syndic daemon, a special minion that passes through commands from a higher master</p>
+<h2>SYNOPSIS</h2>
 <pre>
 salt-syndic [ options ]
 </pre>
+<h2>DESCRIPTION</h2>
 <p> The Salt syndic daemon, a special minion that passes through commands from a higher master.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnusim8085(1)"
 name: "gnusim8085"
 section: "1"
@@ -10,7 +9,9 @@ description: "gnusim8085 – graphical Intel 8085 simulator, assembler and debug
 
 <h2>NAME</h2>
 <p> gnusim8085 &#8211; graphical Intel 8085 simulator, assembler and debugger</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gnusim8085</code> [<i>OPTION</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt><code>&#8211;load-modules</code>=<i>MODULE1</i>,MODULE2,&#8230;</dt>
 <dd> Dynamic modules to load</dd></dl>

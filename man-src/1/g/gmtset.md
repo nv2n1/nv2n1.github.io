@@ -1,5 +1,4 @@
 ---
-
 title: "gmtset(1)"
 name: "gmtset"
 section: "1"
@@ -10,8 +9,10 @@ description: "gmtset – Change individual GMT default parameters"
 
 <h2>NAME</h2>
 <p> gmtset &#8211; Change individual GMT default parameters</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gmtset</code> [ | [<code>s</code>|<code>u</code>] | <i>defaultsfile</i> ] [ <code>&#8211;</code>[<code>BJRXxYycp</code>]<i>value</i> ] PARAMETER1 [=] <i>value1</i> PARAMETER2 [=] <i>value2</i> PARAMETER3 [=] <i>value3</i> </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>gmtset</code> will adjust individual GMT defaults settings in the current directory&#8217;s <code>gmt.conf</code> file. If no such file exists one will be created. The main purpose of <code>gmtset</code> is temporarily to change certain parameters inside a shell script, e.g., set the dots-per-inch to 72, run the script, and reset to 1200 dpi. Optionally, you can specify one or more temporary changes directly on any GMT command line with the syntax <code>&#8211;</code><code>-PARAMETER</code>=<i>VALUE</i>; such changes are only in effect for that command and do not permanently change the default settings on disk.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

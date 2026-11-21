@@ -1,5 +1,4 @@
 ---
-
 title: "pcre2test(1)"
 name: "pcre2test"
 section: "1"
@@ -7,9 +6,9 @@ letter: "p"
 url: "/docs/linux/man/1-pcre2test/"
 description: "pcre2test – a program for testing Perl-compatible regular expressions."
 ---
-
 <h2>NAME</h2>
 <p> pcre2test - a program for testing Perl-compatible regular expressions.  </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pcre2test [options] [input file [output file]]</code> </p>
 <p> <code>pcre2test</code> is a test program for the PCRE2 regular expression libraries, but it can also be used for experimenting with regular expressions. This document describes the features of the test program; for details of the regular expressions themselves, see the <code>pcre2pattern</code> documentation. For details of the PCRE2 library function calls and their options, see the <code>pcre2api</code> documentation. </p>
 <p> The input for <code>pcre2test</code> is a sequence of regular expression patterns and subject strings to be matched. There are also command lines for setting defaults and controlling some special actions. The output shows the result of each match attempt. Modifiers on external or internal command lines, the patterns, and the subject lines specify PCRE2 function options, control how the subject is processed, and what output is produced. </p>
@@ -102,6 +101,7 @@ description: "pcre2test – a program for testing Perl-compatible regular expres
 <dt><code>-version</code></dt>
 <dd> <p> Output the PCRE2 version number and then exit. </p>
  </dd></dl>
+<h2>DESCRIPTION</h2>
 <p> If <code>pcre2test</code> is given two filename arguments, it reads from the first and writes to the second. If the first name is &quot;-&quot;, input is taken from the standard input. If <code>pcre2test</code> is given only one argument, it reads from that file and writes to stdout. Otherwise, it reads from stdin and writes to stdout. </p>
 <p> When <code>pcre2test</code> is built, a configuration option can specify that it should be linked with the <code>libreadline</code> or <code>libedit</code> library. When this is done, if the input is from a terminal, it is read using the <code>readline()</code> function. This provides line-editing and history facilities. The output from the <code>-help</code> option states whether or not <code>readline()</code> will be used. </p>
 <p> The program handles any number of tests, each of which consists of a set of input lines. Each set starts with a regular expression pattern, followed by any number of subject lines to be matched against that pattern. In between sets of test data, command lines that begin with # may appear. This file format, with some restrictions, can also be processed by the <code>perltest.sh</code> script that is distributed with PCRE2 as a means of checking that the behaviour of PCRE2 and Perl is the same. </p>

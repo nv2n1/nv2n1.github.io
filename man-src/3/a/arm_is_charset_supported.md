@@ -1,5 +1,4 @@
 ---
-
 title: "arm_is_charset_supported(3)"
 name: "arm_is_charset_supported"
 section: "3"
@@ -10,11 +9,13 @@ description: "arm_is_charset_supported – check character encoding"
 
 <h2>NAME</h2>
 <p> arm_is_charset_supported &#8211; check character encoding</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/arm4.h">arm4.h</a>&gt;</code> </p>
 <p> <code>arm_error_t<br />
  arm_is_charset_supported( </p>
 <p>&nbsp;<wbr>const arm_charset_t&nbsp;<wbr></code><i>charset</i><code>, </p>
 <p>&nbsp;<wbr>arm_boolean_t&nbsp;<wbr>*</code><i>supported</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>arm_is_charset_supported()</code> indicates whether an ARM library supports a specified character encoding. </p>
 <p> The default encoding for all strings provided by the application on all operating systems is UTF-8. An application may specify an alternate encoding when executing <code>arm_register_application()</code>, and then use it for all strings it provides on all calls including <code>arm_register_application()</code>, but should never do so without first issuing <code>arm_is_charset_supported()</code> to test whether the value is supported. </p>
 <p> An ARM library on the operating systems listed in Table 1 must support the specified encodings. Applications are encouraged to use one of these encodings to ensure that any ARM implementation will support the application&#8217;s ARM instrumentation. Another alternative is to use one of these encodings along with a preferred encoding. If the ARM library supports the preferred encoding, it is used; otherwise, one of the mandatory encodings is used. </p>

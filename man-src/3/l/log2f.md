@@ -1,5 +1,4 @@
 ---
-
 title: "log2f(3)"
 name: "log2f"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-log2f/"
 description: "log2, log2f, log2l – base-2 logarithmic function"
 ---
 
+<h2 class="name">NAME</h2>
+<p> log2, log2f, log2l &#8211; base-2 logarithmic function </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;
 double log2(double x);
@@ -20,6 +22,7 @@ long double log2l(long double x);
 <dl>
 <dt>
 </dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> These functions return the base 2 logarithm of <i>x</i>.</p>
 <h2>RETURN VALUE</h2>
 <p> On success, these functions return the base 2 logarithm of <i>x</i>. </p>

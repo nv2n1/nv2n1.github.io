@@ -1,5 +1,4 @@
 ---
-
 title: "gst(1)"
 name: "gst"
 section: "1"
@@ -10,6 +9,7 @@ description: "Smalltalk – the GNU Smalltalk virtual machine"
 
 <h2>NAME</h2>
 <p> Smalltalk &#8211; the GNU Smalltalk virtual machine</p>
+<h2>DESCRIPTION</h2>
 <p> GNU Smalltalk usage:</p>
 <dl>
 <dt>

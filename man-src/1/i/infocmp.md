@@ -1,5 +1,4 @@
 ---
-
 title: "infocmp(1)"
 name: "infocmp"
 section: "1"
@@ -8,11 +7,14 @@ url: "/docs/linux/man/1-infocmp/"
 description: "infocmp – compare or print out terminfo descriptions"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>infocmp</code> &#8211; compare or print out <i>terminfo</i> descriptions </p>
+<h2>SYNOPSIS</h2>
 <p> <code>infocmp</code> [<code>-1CDEFGIKLTUVWcdegilnpqrtux</code>] </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-v</code>&nbsp;<i>n</i>]&nbsp;[<code>-s d</code>|&nbsp;<code>i</code>|&nbsp;<code>l</code>|&nbsp;<code>c</code>]&nbsp;[<code>-Q</code>&nbsp;<i>n</i>]&nbsp;[<code>-R&nbsp;</code><code>subset</code>] </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-w</code>&nbsp;<i>width</i>]&nbsp;[<code>-A</code>&nbsp;<i>directory</i>]&nbsp;[<code>-B</code>&nbsp;<i>directory</i>] </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<i>termname</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>infocmp</code> can be used to compare a binary <code>terminfo</code> entry with other terminfo entries, rewrite a <code>terminfo</code> description to take advantage of the <code>use=</code> terminfo field, or print out a <code>terminfo</code> description from the binary file (<code>term</code>) in a variety of formats. In all cases, the boolean fields will be printed first, followed by the numeric fields, followed by the string fields.</p>
 <h3>Default Options</h3>
 <p> If no options are specified and zero or one <i>termnames</i> are specified, the <code>-I</code> option will be assumed. If more than one <i>termname</i> is specified, the <code>-d</code> option will be assumed.</p>

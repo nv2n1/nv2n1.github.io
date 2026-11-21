@@ -1,5 +1,4 @@
 ---
-
 title: "git-lost-found(1)"
 name: "git-lost-found"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-lost-found/"
 description: "git-lost-found – Recover lost refs that luckily have not yet been pruned"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-lost-found &#8211; Recover lost refs that luckily have not yet been pruned </p>
+<h2>SYNOPSIS</h2>
 <pre>
 <i>git lost-found</i>
 </pre>
+<h2>DESCRIPTION</h2>
 <p> <code>NOTE</code>: this command is deprecated. Use <code><a href="/docs/linux/man/1-git-fsck/">git-fsck</a></code>(1) with the option <i>&#8211;lost-found</i> instead. </p>
 <p> Finds dangling commits and tags from the object database, and creates refs to them in the .git/lost-found/ directory. Commits and tags that dereference to commits are stored in .git/lost-found/commit, and other objects are stored in .git/lost-found/other.</p>
 <h2>OUTPUT</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "moggsplit(1)"
 name: "moggsplit"
 section: "1"
@@ -10,7 +9,9 @@ description: "moggsplit – split Ogg logical streams"
 
 <h2>NAME</h2>
 <p> moggsplit &#8211; split Ogg logical streams</p>
+<h2>SYNOPSIS</h2>
 <p> <code>moggsplit</code> <i>filename</i> &#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>moggsplit</code> splits a multiplexed Ogg stream into separate files. For example, it can separate an OGM into separate Ogg DivX and Ogg Vorbis streams, or a chained Ogg Vorbis file into two separate files.</p>
 <h2>OPTIONS</h2>
 <dl>

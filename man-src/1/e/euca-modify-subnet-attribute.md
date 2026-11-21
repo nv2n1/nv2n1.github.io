@@ -1,5 +1,4 @@
 ---
-
 title: "euca-modify-subnet-attribute(1)"
 name: "euca-modify-subnet-attribute"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-modify-subnet-attribute – Modify an attribute of a subnet"
 
 <h2>NAME</h2>
 <p> euca-modify-subnet-attribute &#8211; Modify an attribute of a subnet</p>
+<h2>SYNOPSIS</h2>
 <p> euca-modify-subnet-attribute <code>-m</code> (true|false) [&#8211;show-empty-fields]</p>
 <dl>
 <dt>[-U URL] [&#8211;region USER [at] REGION]</dt>
 <dd> [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] SUBNET</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Modify an attribute of a subnet</p>
 <h3>positional arguments:</h3>
 <dl>

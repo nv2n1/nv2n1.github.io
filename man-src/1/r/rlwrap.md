@@ -1,5 +1,4 @@
 ---
-
 title: "rlwrap(1)"
 name: "rlwrap"
 section: "1"
@@ -10,7 +9,9 @@ description: "rlwrap – readline wrapper"
 
 <h2>NAME</h2>
 <p> rlwrap &#8211; readline wrapper</p>
+<h2>SYNOPSIS</h2>
 <p> <code>rlwrap</code> <i>[rlwrap-options]</i> <i>command &#8230;</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>rlwrap</code> runs the specified <i>command</i>, intercepting user input in order to provide <code>readline</code>&#8216;s line editing, persistent history and completion. </p>
 <p> <code>rlwrap</code> tries to be completely transparent &#8211; you (or your shell) shouldn&#8217;t notice any difference between <code>command</code> and <code>rlwrap command</code> &#8211; except the added readline functionality, of course. This should even hold true when you are re-directing, piping and sending signals from and to <i>command</i>, or when <i>command</i> manipulates its terminal settings. </p>
 <p> There are many options to add (programmable) completion, handle multi-line input, colour and re-write prompts. If you don&#8217;t need them (and you probably don&#8217;t), you can skip the rest of this manpage.</p>

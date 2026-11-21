@@ -1,5 +1,4 @@
 ---
-
 title: "git-find-uncommitted-repos(1)"
 name: "git-find-uncommitted-repos"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-git-find-uncommitted-repos/"
 description: "git-find-uncommitted-repos – Recursively list repositories with uncommitted changes"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-find-uncommitted-repos &#8211; Recursively list repositories with uncommitted changes </p>
+<h2>SYNOPSIS</h2>
 <p> <code>git-find-uncommitted-repos</code> [<i>DIR</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> Recursively list repositories with uncommitted changes.</p>
 <h2>OPTIONS</h2>
 <dl>

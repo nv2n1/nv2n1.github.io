@@ -1,5 +1,4 @@
 ---
-
 title: "ck_pr_fence_memory(3)"
 name: "ck_pr_fence_memory"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_pr_fence_memory – enforce partial ordering of all memory oper
 <p> <code>ck_pr_fence_memory</code> &#8211; enforce partial ordering of all memory operations</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_pr.h Ft void Fn ck_pr_fence_memory Ft void Fn ck_pr_fence_strict_memory</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_pr_fence_memory 3 function enforces the ordering of any memory operations with respect to the invocation of the function. This function always serves as an implicit compiler barrier. Achitectures implementing CK_MD_TSO do not emit a barrier, but compiler barrier semantics remain. Architectures implementing CK_MD_PSO and CK_MD_RMO always emit an instructions which provides the specified ordering guarantees. To force the unconditional emission of a memory fence, use Fn ck_pr_fence_strict_memory .</p>
 <h2>EXAMPLE</h2>
 <blockquote>

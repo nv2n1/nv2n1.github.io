@@ -1,5 +1,4 @@
 ---
-
 title: "clantb(3)"
 name: "clantb"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-clantb/"
 description: "clantb.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> clantb.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>clantb</code> (NORM, UPLO, DIAG, N, K, AB, LDAB, WORK)<br />
  <i></i><code>CLANTB</code> returns the value of the 1-norm, or the Frobenius norm, or the infinity norm, or the element of largest absolute value of a triangular band matrix.</p>

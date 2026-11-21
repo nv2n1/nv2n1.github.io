@@ -1,5 +1,4 @@
 ---
-
 title: "flatpak-uninstall(1)"
 name: "flatpak-uninstall"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-flatpak-uninstall/"
 description: "flatpak-uninstall – Uninstall an application or runtime"
 ---
 
+<h2 class="name">NAME</h2>
+<p> flatpak-uninstall &#8211; Uninstall an application or runtime </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak uninstall</code> [OPTION&#8230;] [REF&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>Uninstalls an application or runtime. REF is a reference to the application or runtime to uninstall. </dd>
 <p> Each REF argument is a full or partial identifier in the flatpak ref format, which looks like &quot;(app|runtime)/ID/ARCH/BRANCH&quot;. All elements except ID are optional and can be left out, including the slashes, so most of the time you need only specify ID. Any part left out will be matched against what is installed, and if there are multiple matches you will be prompted to choose between them. You will also be prompted if REF doesn&#8217;t match any installed ref exactly but is similar (e.g. &quot;gedit&quot; is similar to &quot;org.gnome.gedit&quot;). </p>
 <p> By default this looks for both installed apps and runtimes with the given REF, but you can limit this by using the <code>&#8211;app</code> or <code>&#8211;runtime</code> option, or by supplying the initial element in the REF. </p>

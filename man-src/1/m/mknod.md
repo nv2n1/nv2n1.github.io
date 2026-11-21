@@ -1,5 +1,4 @@
 ---
-
 title: "mknod(1)"
 name: "mknod"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mknod/"
 description: "mknod – make block or character special files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mknod &#8211; make block or character special files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mknod</code> [<i>,OPTION/</i>]&#8230; <i>,NAME TYPE /</i>[<i>,MAJOR MINOR/</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Create the special file NAME of the given TYPE. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>

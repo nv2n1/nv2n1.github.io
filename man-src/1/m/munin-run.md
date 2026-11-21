@@ -1,5 +1,4 @@
 ---
-
 title: "munin-run(1)"
 name: "munin-run"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-munin-run/"
 description: "munin-run – A program to run Munin plugins from the command line"
 ---
 
+<h2 class="name">NAME</h2>
+<p> munin-run &#8211; A program to run Munin plugins from the command line </p>
+<h2>SYNOPSIS</h2>
 <p> munin-run [options] &lt;plugin&gt; [ config | autoconf | snmpconf | suggest ]</p>
+<h2>DESCRIPTION</h2>
 <p> munin-run is a script to run Munin plugins from the command-line. It&#8217;s useful when debugging plugins, as they are run in the same conditions as they are under munin-node.</p>
 <h2>OPTIONS</h2>
 <dl>

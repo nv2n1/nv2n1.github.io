@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_openpgp_crt_get_name(3)"
 name: "gnutls_openpgp_crt_get_name"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_openpgp_crt_get_name – API function"
 
 <h2>NAME</h2>
 <p> gnutls_openpgp_crt_get_name &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>
 <p> <code>int gnutls_openpgp_crt_get_name(gnutls_openpgp_crt_t </code><i>key</i><code>, int </code><i>idx</i><code>, char * </code><i>buf</i><code>, size_t * </code><i>sizeof_buf</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,6 +22,7 @@ description: "gnutls_openpgp_crt_get_name – API function"
 <dd> a pointer to a structure to hold the name, may be <code>NULL</code> to only get the <i>sizeof_buf</i> .</dd>
 <dt>size_t * sizeof_buf</dt>
 <dd> holds the maximum size of <i>buf</i> , on return hold the actual/required size of <i>buf</i> .</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Extracts the userID from the parsed OpenPGP key.</p>
 <h2>RETURNS</h2>
 <p> <code>GNUTLS_E_SUCCESS</code> on success, and if the index of the ID does not exist <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code>, or an error code.</p>

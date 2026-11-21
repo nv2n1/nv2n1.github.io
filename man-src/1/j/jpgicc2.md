@@ -1,5 +1,4 @@
 ---
-
 title: "jpgicc2(1)"
 name: "jpgicc2"
 section: "1"
@@ -10,7 +9,9 @@ description: "jpegicc – little cms ICC profile applier for JPEG."
 
 <h2>NAME</h2>
 <p> jpegicc &#8211; little cms ICC profile applier for JPEG.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>jpegicc</code> [<i>options</i>]<i> input.jpg output.jpg</i></p>
+<h2>DESCRIPTION</h2>
 <p> lcms is a standalone CMM engine, which deals with the color management. It implements a fast transformation between ICC profiles. <code>jpegicc </code> is little cms ICC profile applier for JPEG.</p>
 <h2>OPTIONS</h2>
 <dl>

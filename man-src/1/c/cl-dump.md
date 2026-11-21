@@ -1,5 +1,4 @@
 ---
-
 title: "cl-dump(1)"
 name: "cl-dump"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-cl-dump/"
 description: "cl-dump – Dump and decode Directory Server replication change log"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cl-dump &#8211; Dump and decode Directory Server replication change log </p>
+<h2>SYNOPSIS</h2>
 <p> <code>cl-dump</code> [<i>-h host</i>] [<i>-p port</i>] [<i>-D bind-dn</i>] -w bind-password | -P bind-cert<br />
 &nbsp;<wbr>[<i>-r replica-roots</i>]&nbsp;<wbr>[<i>-o output-file</i>]&nbsp;<wbr>[<i>-c</i>]&nbsp;<wbr>[<i>-v</i>] </p>
 <p> <code>cl-dump</code> -i changelog-ldif-file-with-base64encoding [<i>-o output-file</i>] [<i>-c</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> Dump and decode Directory Server replication change log </p>
 <h2>OPTIONS</h2>
 <p> A summary of options is included below.</p>

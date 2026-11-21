@@ -1,5 +1,4 @@
 ---
-
 title: "bson_strdup(3)"
 name: "bson_strdup"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_strdup() – Copies str into a new string. If str is NULL, th
 
 <h2>NAME</h2>
 <p> bson_strdup() &#8211; Copies str into a new string. If str is NULL, then NULL is returned.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 char *
 bson_strdup(const char *str);
@@ -18,6 +18,7 @@ bson_strdup(const char *str);
 <dl>
 <dt><code>str</code></dt>
 <dd> A string.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Copies <code>str</code> into a new string. If <code>str</code> is NULL, then NULL is returned. </p>
 <h2>RETURNS</h2>
 <p> A newly allocated string that should be freed with bson_free(). </p>

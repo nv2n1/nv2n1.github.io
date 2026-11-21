@@ -1,5 +1,4 @@
 ---
-
 title: "systemd-machine-id-setup(1)"
 name: "systemd-machine-id-setup"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-systemd-machine-id-setup/"
 description: "systemd-machine-id-setup – Initialize the machine ID in /etc/machine-id"
 ---
 
+<h2 class="name">NAME</h2>
+<p> systemd-machine-id-setup &#8211; Initialize the machine ID in /etc/machine-id </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>systemd-machine-id-setup</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>systemd-machine-id-setup</code></p>
 <dd>may be used by system installer tools to initialize the machine ID stored in /etc/machine-id at install time, with a provisioned or randomly generated ID. See <code><a href="/docs/linux/man/5-machine-id/">machine-id</a></code>(5) for more information about this file. </dd>
 <p> If the tool is invoked without the <code>&#8211;commit</code> switch, /etc/machine-id is initialized with a valid, new machined ID if it is missing or empty. The new machine ID will be acquired in the following fashion: </p>

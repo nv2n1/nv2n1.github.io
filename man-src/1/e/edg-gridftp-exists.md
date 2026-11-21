@@ -1,5 +1,4 @@
 ---
-
 title: "edg-gridftp-exists(1)"
 name: "edg-gridftp-exists"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-edg-gridftp-exists/"
 description: "edg-gridftp-exists – Determine if file/directory exists on GridFTP server."
 ---
 
+<h2 class="name">NAME</h2>
+<p> edg-gridftp-exists &#8211; Determine if file/directory exists on GridFTP server. </p>
+<h2>SYNOPSIS</h2>
 <p> edg-gridftp-exists [<code>&#8211;proxy</code>=<i>proxy</i>] [<code>&#8211;timeout</code>=<i>timeout</i>] [<code>&#8211;noauth</code>] <i></i><font SIZE="-1"><i>URL</i></font><i></i> [<i></i><font SIZE="-1"><i>URL</i></font><i></i> &#8230;] </p>
 <p> edg-gridftp-exists <code>&#8211;usage</code> </p>
 <p> edg-gridftp-exists <code>&#8211;help</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>edg-gridftp-exists</code> determines if the file or directory associated with the given <font SIZE="-1">URL</font> exists. This command will return a status of 0 if the file or directory exists. In all other cases, it will return a non-zero value and print an error message to the standard error. </p>
 <p> If more than one <font SIZE="-1">URL</font> is given, then a successful return will only occur if all of the URLs exist. The processing will stop with the first failure.</p>
 <h2>OPTIONS</h2>

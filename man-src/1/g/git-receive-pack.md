@@ -1,5 +1,4 @@
 ---
-
 title: "git-receive-pack(1)"
 name: "git-receive-pack"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-receive-pack/"
 description: "git-receive-pack – Receive what is pushed into the repository"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-receive-pack &#8211; Receive what is pushed into the repository </p>
+<h2>SYNOPSIS</h2>
 <pre>
 <i>git-receive-pack</i> &lt;directory&gt;
 </pre>
+<h2>DESCRIPTION</h2>
 <p> Invoked by <i>git send-pack</i> and updates the repository with the information fed from the remote end. </p>
 <p> This command is usually not invoked directly by the end user. The UI for the protocol is on the <i>git send-pack</i> side, and the program pair is meant to be used to push updates to remote repository. For pull operations, see <code><a href="/docs/linux/man/1-git-fetch-pack/">git-fetch-pack</a></code>(1). </p>
 <p> The command allows for creation and fast-forwarding of sha1 refs (heads/tags) on the remote end (strictly speaking, it is the local end <i>git-receive-pack</i> runs, but to the user who is sitting at the send-pack end, it is updating the remote. Confused?) </p>

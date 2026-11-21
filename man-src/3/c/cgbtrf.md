@@ -1,5 +1,4 @@
 ---
-
 title: "cgbtrf(3)"
 name: "cgbtrf"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cgbtrf/"
 description: "cgbtrf.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cgbtrf.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgbtrf</code> (M, N, KL, KU, AB, LDAB, IPIV, INFO)<br />
  <i></i><code>CGBTRF</code></p>

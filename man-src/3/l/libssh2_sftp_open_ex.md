@@ -1,5 +1,4 @@
 ---
-
 title: "libssh2_sftp_open_ex(3)"
 name: "libssh2_sftp_open_ex"
 section: "3"
@@ -10,6 +9,7 @@ description: "libssh2_sftp_open – open filehandle for file on SFTP."
 
 <h2>NAME</h2>
 <p> libssh2_sftp_open &#8211; open filehandle for file on SFTP.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;libssh2.h&gt;
 #include &lt;libssh2_sftp.h&gt;
@@ -18,6 +18,7 @@ libssh2_sftp_open_ex(LIBSSH2_SFTP *sftp, const char *filename,
                      unsigned int filename_len, unsigned long flags,
                      long mode, int open_type);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <i>sftp</i> &#8211; SFTP instance as returned by <i><a href="/docs/linux/man/3-libssh2_sftp_init/">libssh2_sftp_init</a>(3)</i> </p>
 <p> <i>filename</i> &#8211; Remote file/directory resource to open </p>
 <p> <i>filename_len</i> &#8211; Length of filename </p>

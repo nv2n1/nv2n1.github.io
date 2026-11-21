@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_gram_protocol_frame_request/"
 description: "Message Framing –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Message Framing &#8211; </p>
 <p> Message Framing.</p>
 <h3>Functions</h3>
 <p> int <code>globus_gram_protocol_frame_request</code> (const char *url, const globus_byte_t *msg, globus_size_t msgsize, globus_byte_t **framedmsg, globus_size_t *framedsize)<br />

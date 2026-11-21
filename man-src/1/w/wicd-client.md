@@ -1,5 +1,4 @@
 ---
-
 title: "wicd-client(1)"
 name: "wicd-client"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-wicd-client/"
 description: "wicd-client – frontend to the WICD daemon"
 ---
 
+<h2 class="name">NAME</h2>
+<p> wicd-client &#8211; frontend to the WICD daemon </p>
+<h2>DESCRIPTION</h2>
 <p> wireless (and wired) connection daemon front-end. </p>
 <p> If <code>wicd-curses</code> is installed, and you attempt to run wicd-client without an active X server on the current terminal, wicd-client will attempt to run <code>wicd-curses</code> instead. It will warn you the first time this happens.</p>
 <h2>OPTIONS</h2>

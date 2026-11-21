@@ -1,5 +1,4 @@
 ---
-
 title: "ezstream-file(1)"
 name: "ezstream-file"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-ezstream-file/"
 description: "ezstream-file.sh – script to stream files from the command line"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>ezstream-file.sh</code> &#8211; script to stream files from the command line </p>
+<h2>SYNOPSIS</h2>
 <p> -words [-<code>hnqVv </code>[-<code>T </code><i>cfg_template</i> ] ] [<i>file &#8230;</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> The script uses an <code>ezstream</code> configuration file template to stream a list of files given on the command line, or via standard input. In other words, filenames are written to a temporary playlist, and a template-based configuration is generated to stream them. </p>
 <p> The path to a configuration template must be provided, either by using the &#8211;<code>T</code> command line argument, or the <code>EZSTREAM_TEMPLATE</code> environment variable. </p>
 <p> The configuration template must be a valid playlist configuration, and contain the follwing configuration statement: </p>

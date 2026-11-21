@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_gram_client_version/"
 description: "GRAM Client API –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> GRAM Client API &#8211; </p>
 <h3>Modules</h3>
 <p> <code>Job state callbacks</code> </p>
 <p> <code>GRAM Job Functions</code> </p>

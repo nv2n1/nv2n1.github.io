@@ -1,5 +1,4 @@
 ---
-
 title: "pbmtopgm(1)"
 name: "pbmtopgm"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pbmtopgm/"
 description: "pbmtopgm – convert portable bitmap to portable graymap by averaging areas"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pbmtopgm &#8211; convert portable bitmap to portable graymap by averaging areas</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pbmtopgm </code> <i>width</i> <i>height</i> [<i>pbmfile</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>pbmtopgm</code> reads a portable bitmap as input. It outputs a portable graymap in which each pixel&#8217;s gray level is the average the surrounding black and white input pixels. The surrounding area is a rectangle of <i>width</i> by <i>height</i> pixels. </p>
 <p> In other words, this is a convolution. <code>pbmtopgm </code> is similar to a special case of <code>pnmconvol</code>. </p>
 <p> You may need a <code>ppmsmooth</code> step after <code>pbmtopgm</code>. </p>

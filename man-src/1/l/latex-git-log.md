@@ -1,5 +1,4 @@
 ---
-
 title: "latex-git-log(1)"
 name: "latex-git-log"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-latex-git-log/"
 description: "latex-git-log – Generates the version history of a git project as LaTeX source code."
 ---
 
+<h2 class="name">NAME</h2>
+<p> latex-git-log &#8211; Generates the version history of a git project as LaTeX source code. </p>
+<h2>SYNOPSIS</h2>
 <p> latex-git-log [options] </p>
 <p> Options: </p>
 <pre><code>
@@ -39,6 +41,7 @@ description: "latex-git-log – Generates the version history of a git project a
 <h3>To compile the output</h3>
 <p> The table is using the <code>longtable</code> package and the links to a web resource for each commit use the \href macro from <code>hyperref</code>. So these two packages have to be loaded. </p>
 <p> Furthermore you need to defined the macro <code>\longtableendfoot</code> which will be expanded on the bottom of every page if the table will be continued on the next page. You can defined it to a localized message to inform the reader that this table is not complete and will be continued.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>This program</code> will output the entire version history as table written in LaTeX if it is executed within a git repository. </p>
 <p> It is intended that you redirect the standard output of this script to a file which can then be included from your main TeX document. </p>
 <p> Because the table can be very large you might want to put the thing on a landscape page.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "wmweather(1)"
 name: "wmweather"
 section: "1"
@@ -10,7 +9,9 @@ description: "wmweather – dockable weather monitor"
 
 <h2>NAME</h2>
 <p> wmweather &#8211; dockable weather monitor</p>
+<h2>SYNOPSIS</h2>
 <p> <code>wmweather</code> -s&nbsp;<wbr><i>&lt;4-char ICAO location indicator&gt;&nbsp;<wbr></i>[<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>wmweather</code> monitors local weather conditions: temperature, dew point, pressure, humidity and wind direction and speed. The user needs to specify a 4-character `ICAO location indicator&#8217;. The standardized METAR station designations and current weather reports are designed for use by the aviation community. Since most major cities have at least one airport, there is usually one or more METAR stations in a given city. You&#8211;obviously&#8211;need to be connected to the internet and you also need to have libcurl installed. <code>wmweather</code> will then attempt to download the latest METAR report for the station of your choice from the National Weather Sevice run by NOAA. </p>
 <p> You can toggle back and forth between imperial and metric units, i.e. between degrees Fahrenheit, inches of Mercury, and miles per hour&#8211;and&#8211;degrees Celsius, hectoPascal, and kilometers per hour. A middle click will do this. </p>
 <p> Also, a left click will bring up the fully decoded METAR report in xmessage. And a right click will force an immediate update, i.e. <code>wmweather</code> will attempt to grab weather information.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "hdf_destroy(3)"
 name: "hdf_destroy"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-hdf_destroy/"
 description: "hdf_destroy – deallocate an HDF data set"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hdf_destroy &#8211; deallocate an HDF data set </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;util/neo_hdf.h&gt;
 </code></pre>
@@ -16,6 +18,7 @@ void hdf_destroy(HDF **hdf);
 </code></pre>
 <h2>ARGUMENTS</h2>
 <p> hdf &#8211; pointer to an HDF data set allocated with hdf_init </p>
+<h2>DESCRIPTION</h2>
 <p> hdf_destroy is used to deallocate all memory associated with an hdf data set. Although you can pass an HDF node as an argument to this function, you are likely to cause a segfault if you continue to access the data set. In the future, we may restrict hdf_destroy so it only works on the top level node. </p>
 <h2>RETURN VALUE</h2>
 <p> None </p>

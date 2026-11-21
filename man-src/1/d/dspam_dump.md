@@ -1,5 +1,4 @@
 ---
-
 title: "dspam_dump(1)"
 name: "dspam_dump"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-dspam_dump/"
 description: "dspam_dump – produce a dump of a user’s metadata"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dspam_dump &#8211; produce a dump of a user&#8217;s metadata</p>
+<h2>SYNOPSIS</h2>
 <p> <code>dspam_dump</code> [<code>&#8211;profile</code>=PROFILE] [<code>-d</code><br />
 &nbsp;<wbr>sqlite_drv] <code>username</code> [<code>token</code>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>dspam_dump</code> dumps a user&#8217;s metadata dictionary to stdout. This can be used to view the entire contents of a user&#8217;s dictionary, or used in combination with grep to view a subset of data. The output provides the token&#8217;s stored value (in CRC64 format), the number of spam and nonspam hits, and the token&#8217;s computed probability. </p>
 <h2>OPTIONS</h2>
 <dl>

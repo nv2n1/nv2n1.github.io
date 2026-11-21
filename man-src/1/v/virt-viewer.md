@@ -1,5 +1,4 @@
 ---
-
 title: "virt-viewer(1)"
 name: "virt-viewer"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-virt-viewer/"
 description: "virt-viewer – display the graphical console for a virtual machine"
 ---
 
+<h2 class="name">NAME</h2>
+<p> virt-viewer &#8211; display the graphical console for a virtual machine </p>
+<h2>SYNOPSIS</h2>
 <p> <code>virt-viewer</code> [<font SIZE="-1">OPTIONS</font>] &#8212; DOMAIN-NAME|ID|UUID</p>
+<h2>DESCRIPTION</h2>
 <p> <code>virt-viewer</code> is a minimal tool for displaying the graphical console of a virtual machine. The console is accessed using the <font SIZE="-1">VNC</font> or <font SIZE="-1">SPICE</font> protocol. The guest can be referred to based on its name, <font SIZE="-1">ID,</font> or <font SIZE="-1">UUID.</font> If the guest is not already running, then the viewer can be told to wait until it starts before attempting to connect to the console. The viewer can connect to remote hosts to lookup the console information and then also connect to the remote console using the same network transport.</p>
 <h2>OPTIONS</h2>
 <p> The following options are accepted when running <tt>&quot;virt-viewer&quot;</tt>:</p>

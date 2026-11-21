@@ -1,5 +1,4 @@
 ---
-
 title: "scotch_gord(1)"
 name: "scotch_gord"
 section: "1"
@@ -10,9 +9,11 @@ description: "gord – compute sparse matrix orderings of graphs"
 
 <h2>NAME</h2>
 <p> <code>gord </code>&#8211; compute sparse matrix orderings of graphs</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 gord[options][gfile][ofile][lfile]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>gord</code> program computes, in a sequential way, an ordering of a Scotch source graph representing the pattern of some symmetric sparse matrix. </p>
 <p> Source graph file <i>gfile</i> can only be a centralized graph file. The resulting ordering is stored in file <i>ofile</i>. Eventual logging information (such as the one produced by option <code>-v</code>) is sent to file <i>lfile</i>. When file names are not specified, data is read from standard input and written to standard output. Standard streams can also be explicitely represented by a dash &#8216;-&#8216;. </p>
 <p> When the proper libraries have been included at compile time, <code>gord</code> can directly handle compressed graphs, both as input and output. A stream is treated as compressed whenever its name is postfixed with a compressed file extension, such as in &#8216;brol.grf.bz2&#8217; or &#8216;-.gz&#8217;. The compression formats which can be supported are the bzip2 format (&#8216;.bz2&#8217;), the gzip format (&#8216;.gz&#8217;), and the lzma format (&#8216;.lzma&#8217;, on input only).</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "or(1)"
 name: "or"
 section: "1"
@@ -7,7 +6,10 @@ letter: "o"
 url: "/docs/linux/man/1-or/"
 ---
 
-or - conditionally execute a command
+<h2 class="name">NAME</h2>
+ 
+
+ or - conditionally execute a command
 
 <h3>Synopsis</h3>
 

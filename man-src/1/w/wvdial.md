@@ -1,5 +1,4 @@
 ---
-
 title: "wvdial(1)"
 name: "wvdial"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-wvdial/"
 description: "wvdial – PPP dialer with built-in intelligence."
 ---
 
+<h2 class="name">NAME</h2>
+<p> wvdial &#8211; PPP dialer with built-in intelligence. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>wvdial</code> [ <i>OPTIONS</i> ] [ <i>SECTION</i> ] &#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>wvdial</code> is an intelligent PPP dialer, which means that it dials a modem and starts PPP in order to connect to the Internet. It is something like the <code><a href="/docs/linux/man/8-chat/">chat</a></code>(8) program, except that it uses heuristics to guess how to dial and log into your server rather than forcing you to write a login script. </p>
 <p> When <code>wvdial</code> starts, it first loads its configuration from <i>/etc/wvdial.conf</i> and <i>~/.wvdialrc</i> which contains basic information about the modem port, speed, and init string, along with information about your Internet Service Provider (ISP), such as the phone number, your username, and your password. </p>
 <p> Then it initializes your modem and dials the server and waits for a connection (a CONNECT string from the modem). It understands and responds to typical connection problems (like BUSY and NO DIALTONE). </p>

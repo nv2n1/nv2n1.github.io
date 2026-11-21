@@ -1,5 +1,4 @@
 ---
-
 title: "bson_copy_to_excluding(3)"
 name: "bson_copy_to_excluding"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_copy_to_excluding() – The bson_copy_to_excluding() function
 
 <h2>NAME</h2>
 <p> bson_copy_to_excluding() &#8211; The bson_copy_to_excluding() function shall copy all fields from src to dst except those speified by the variadic, NULL terminated list of keys starting from first_exclude.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 void bson_copy_to_excluding(const bson_t *src,
                             bson_t *dst,
@@ -26,6 +26,7 @@ void bson_copy_to_excluding(const bson_t *src,
 <dl>
 <dt><code>first_exclude</code></dt>
 <dd> The first field name to exclude.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_copy_to_excluding/">bson_copy_to_excluding</a>(3)</code> function shall copy all fields from <code>src</code> to <code>dst</code> except those speified by the variadic, NULL terminated list of keys starting from <code>first_exclude</code> \&amp;. </p>
 <p> <code>NOTE</code></p>
 <dl>

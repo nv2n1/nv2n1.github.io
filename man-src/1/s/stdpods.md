@@ -1,5 +1,4 @@
 ---
-
 title: "stdpods(1)"
 name: "stdpods"
 section: "1"
@@ -7,9 +6,14 @@ letter: "s"
 url: "/docs/linux/man/1-stdpods/"
 ---
 
-stdpods - print out the paths to the modules that came with Perl 
+<h2 class="name">NAME</h2>
+ 
 
-This program shows the paths to module pods that are <i>not</i> in the <i>site_perl</i> directories. This is the documentation that came with the standard system.
+ stdpods - print out the paths to the modules that came with Perl 
+
+<h2>DESCRIPTION</h2>
+
+ This program shows the paths to module pods that are <i>not</i> in the <i>site_perl</i> directories. This is the documentation that came with the standard system.
 
 <h2>EXAMPLES</h2>
 

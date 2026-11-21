@@ -1,5 +1,4 @@
 ---
-
 title: "exsprite(3)"
 name: "exsprite"
 section: "3"
@@ -10,8 +9,10 @@ description: "exsprite – Datafiles access and sprite animation. Allegro game p
 
 <h2>NAME</h2>
 <p> exsprite &#8211; Datafiles access and sprite animation. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>Example exsprite</code></p>
+<h2>DESCRIPTION</h2>
 <p> This example demonstrates how to use datafiles, various sprite drawing routines and flicker-free animation. </p>
 <p> Why is the animate() routine coded in that way? As you probably know, VIDEO RAM is much slower than &quot;normal&quot; RAM, so it&#8217;s advisable to reduce VRAM blits to a minimum. Drawing sprite on the screen (meaning in VRAM) and then clearing a background for it is not very fast. This example uses a different method which is much faster, but require a bit more memory. </p>
 <p> First the buffer is cleared (it&#8217;s a normal BITMAP), then the sprite is drawn on it, and when the drawing is finished this buffer is copied directly to the screen. So the end result is that there is a single VRAM blit instead of blitting/clearing the background and drawing a sprite on it. It&#8217;s a good method even when you have to restore the background. And of course, it completely removes any flickering effect. </p>

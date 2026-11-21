@@ -1,5 +1,4 @@
 ---
-
 title: "munin-sched(1)"
 name: "munin-sched"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-munin-sched/"
 description: "munin-sched – A daemon to gather information in cooperation with the main Munin program"
 ---
 
+<h2 class="name">NAME</h2>
+<p> munin-sched &#8211; A daemon to gather information in cooperation with the main Munin program </p>
+<h2>SYNOPSIS</h2>
 <p> munin-sched [&#8211;options]</p>
+<h2>DESCRIPTION</h2>
 <p> munin-sched is a daemon for reporting statistics on system performance. </p>
 <p> It doesn&#8217;t produce these itself, but instead relies on a number of plugins which are responsible for gathering the data they require, and describing how this should be graphed. In fact, it does little more than fielding requests from the Munin master, running the appropriate plugins, and returning the output they produce.</p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "nytprofcsv(1)"
 name: "nytprofcsv"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-nytprofcsv/"
 description: "nytprofcsv – (DEPRECATED) Devel::NYTProf::Reader CSV format implementation"
 ---
 
+<h2 class="name">NAME</h2>
+<p> nytprofcsv &#8211; (DEPRECATED) Devel::NYTProf::Reader CSV format implementation </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 $ nytprofcsv[-h][-d][-o&lt;output directory&gt;][-f&lt;input file&gt;] perl - d : NYTProf some_perl_app.pl
                                                                           nytprofcsv
@@ -15,6 +17,7 @@ $ nytprofcsv[-h][-d][-o&lt;output directory&gt;][-f&lt;input file&gt;] perl - d 
 </code></pre>
 <h2>NOTE</h2>
 <p> <code>nytprofcsv is deprecated and will be removed in a future release.</code></p>
+<h2>DESCRIPTION</h2>
 <p> <tt>&quot;nytprofcsv&quot;</tt> is a script that implements Devel::NYTProf::Reader to create comma-seperated value formatted reports from Devel::NYTProf databases. </p>
 <p> See the Devel::NYTProf Perl code profiler for more information.</p>
 <h2>COMMAND-LINE OPTIONS</h2>

@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-forwardengines/"
 description: "Forward option engines –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Forward option engines &#8211; </p>
 <h3>Classes</h3>
 <p> class <code>IntegralHestonVarianceOptionEngine</code><br />
  <i>integral Heston-model variance-option engine </i><br />

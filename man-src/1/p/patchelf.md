@@ -1,5 +1,4 @@
 ---
-
 title: "patchelf(1)"
 name: "patchelf"
 section: "1"
@@ -10,7 +9,9 @@ description: "patchelf – Modify ELF files"
 
 <h2>NAME</h2>
 <p> patchelf &#8211; Modify ELF files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>patchelf</code> <i>OPTION</i> <i>FILE</i></p>
+<h2>DESCRIPTION</h2>
 <p> PatchELF is a simple utility for modifying existing ELF executables and libraries. It can change the dynamic loader (&quot;ELF interpreter&quot;) of executables and change the RPATH of executables and libraries. </p>
 <h2>OPTIONS</h2>
 <p> The single option given operates on a given FILE, editing in place. </p>

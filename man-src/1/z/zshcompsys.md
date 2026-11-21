@@ -1,5 +1,4 @@
 ---
-
 title: "zshcompsys(1)"
 name: "zshcompsys"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-zshcompsys/"
 description: "zshcompsys – zsh completion system"
 ---
 
+<h2 class="name">NAME</h2>
+<p> zshcompsys &#8211; zsh completion system </p>
+<h2>DESCRIPTION</h2>
 <p> This describes the shell code for the `new&#8217; completion system, referred to as <code>compsys</code>. It is written in shell functions based on the features described in <i><a href="/docs/linux/man/1-zshcompwid/">zshcompwid</a></i>(1). </p>
 <p> The features are contextual, sensitive to the point at which completion is started. Many completions are already provided. For this reason, a user can perform a great many tasks without knowing any details beyond how to initialize the system, which is described below in INITIALIZATION. </p>
 <p> The context that decides what completion is to be performed may be</p>

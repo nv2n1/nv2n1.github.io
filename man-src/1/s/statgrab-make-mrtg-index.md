@@ -1,5 +1,4 @@
 ---
-
 title: "statgrab-make-mrtg-index(1)"
 name: "statgrab-make-mrtg-index"
 section: "1"
@@ -10,7 +9,9 @@ description: "statgrab-make-mrtg-index – generates MRTG configuration"
 
 <h2>NAME</h2>
 <p> statgrab-make-mrtg-index &#8211; generates MRTG configuration</p>
+<h2>SYNOPSIS</h2>
 <p> <code>statgrab-make-mrtg-index</code> [OPTION]&#8230; [CONFIGFILE]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>statgrab-make-mrtg-index</code> generates an XHTML index page from MRTG configuration files specified on the command line or read from stdin.</p>
 <h2>OPTIONS</h2>
 <p> The following options are supported.</p>

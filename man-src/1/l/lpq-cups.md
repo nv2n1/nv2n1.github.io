@@ -1,5 +1,4 @@
 ---
-
 title: "lpq-cups(1)"
 name: "lpq-cups"
 section: "1"
@@ -10,7 +9,9 @@ description: "lpq – show printer queue status"
 
 <h2>NAME</h2>
 <p> lpq &#8211; show printer queue status</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lpq</code> [ -E ] [ -U <i>username</i> ] [ -h <i>server[:port]</i> ] [ -P <i>destination[/instance]</i> ] [ -a ] [ -l ] [ <i>+interval</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>lpq</i> shows the current print queue status on the named printer. Jobs queued on the default destination will be shown if no printer or class is specified on the command-line. </p>
 <p> The <i>+interval</i> option allows you to continuously report the jobs in the queue until the queue is empty; the list of jobs is shown once every <i>interval</i> seconds.</p>
 <h2>OPTIONS</h2>

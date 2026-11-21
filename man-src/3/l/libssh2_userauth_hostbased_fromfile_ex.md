@@ -1,5 +1,4 @@
 ---
-
 title: "libssh2_userauth_hostbased_fromfile_ex(3)"
 name: "libssh2_userauth_hostbased_fromfile_ex"
 section: "3"
@@ -10,6 +9,14 @@ url: "/docs/linux/man/3-libssh2_userauth_hostbased_fromfile_ex/"
 <h2>NAME</h2>
 
  libssh2_userauth_hostbased_fromfile_ex - TODO
+
+<h2>SYNOPSIS</h2>
+
+ 
+
+<h2>DESCRIPTION</h2>
+
+ 
 
 <h2>RETURN VALUE</h2>
 

@@ -1,5 +1,4 @@
 ---
-
 title: "mcamericanbasketengine(3)"
 name: "mcamericanbasketengine"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-mcamericanbasketengine/"
 description: "ql/pricingengines/basket/mcamericanbasketengine.hpp – Least-square Monte Carlo engines."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/pricingengines/basket/mcamericanbasketengine.hpp &#8211; Least-square Monte Carlo engines. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/qldefines.hpp&gt;<br />
  #include &lt;ql/instruments/basketoption.hpp&gt;<br />
  #include &lt;ql/processes/blackscholesprocess.hpp&gt;<br />

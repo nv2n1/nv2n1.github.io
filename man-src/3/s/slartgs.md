@@ -1,5 +1,4 @@
 ---
-
 title: "slartgs(3)"
 name: "slartgs"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-slartgs/"
 description: "slartgs.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> slartgs.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slartgs</code> (X, Y, SIGMA, CS, SN)<br />
  <i></i><code>SLARTGS</code> generates a plane rotation designed to introduce a bulge in implicit QR iteration for the bidiagonal SVD problem.</p>

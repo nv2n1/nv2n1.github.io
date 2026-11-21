@@ -1,5 +1,4 @@
 ---
-
 title: "cmp(1)"
 name: "cmp"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-cmp/"
 description: "cmp – compare two files byte by byte"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cmp &#8211; compare two files byte by byte </p>
+<h2>SYNOPSIS</h2>
 <p> <code>cmp</code> [<i>OPTION</i>]&#8230; <i>FILE1 </i>[<i>FILE2 </i>[<i>SKIP1 </i>[<i>SKIP2</i>]]]</p>
+<h2>DESCRIPTION</h2>
 <p> Compare two files byte by byte. </p>
 <p> The optional SKIP1 and SKIP2 specify the number of bytes to skip at the beginning of each file (zero by default). </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>

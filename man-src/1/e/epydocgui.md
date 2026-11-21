@@ -1,5 +1,4 @@
 ---
-
 title: "epydocgui(1)"
 name: "epydocgui"
 section: "1"
@@ -10,9 +9,11 @@ description: "epydocgui – graphical interface to epydoc"
 
 <h2>NAME</h2>
 <p> epydocgui &#8211; graphical interface to epydoc</p>
+<h2>SYNOPSIS</h2>
 <p> <code>epydocgui</code> [<i>project.prj</i> | <i>modules</i>&#8230;] </p>
 <p> <code>epydoc -h</code> </p>
 <p> <code>epydoc -V</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>epydocgui</code> is a graphical interface to epydoc, which generates API documentation for Python modules and packages, based on their docstrings. A lightweight markup language called <code>epytext</code> can be used to format docstrings, and to add information about specific fields, such as parameters and instance variables. </p>
 <p> The API documentation produced by <code>epydocgui</code> consists of a set of HTML files. Two subdirectories are created for the public and private documentation. Within each subdirectories, every class and module is documented in its own file. An index file, a trees file, and a help file are also created. If you select the <code>frames</code> option, then a frames-based table of contents is also produced.</p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "imapsync(1)"
 name: "imapsync"
 section: "1"
@@ -7,13 +6,18 @@ letter: "i"
 url: "/docs/linux/man/1-imapsync/"
 ---
 
-imapsync - Email IMAP tool for syncing, copying and migrating email mailboxes. 
+<h2 class="name">NAME</h2>
+ 
+
+ imapsync - Email IMAP tool for syncing, copying and migrating email mailboxes. 
 
  The imapsync command synchronises mailboxes between two imap servers. More than 69 different IMAP server softwares supported with success, few failures. 
 
  $Revision: 1.727 $ 
 
-<pre><code>
+<h2>SYNOPSIS</h2>
+
+ <pre><code>
 To synchronize the source imap account
     "test1" on server "test1.lamiral.info" with password "secret1" to the destination imap account
     "test2" on server "test2.lamiral.info" with password "secret2" do : imapsync-- host1 test1.lamiral.info-- user1 test1-- password1 secret1-- host2 test2.lamiral.info-- user2 test2-- password2 secret2
@@ -289,7 +293,9 @@ To synchronize the source imap account
     --host2 test2.lamiral.info --user2 test2 --password2 secret2
 
 
-Imapsync command is a tool allowing incremental and recursive imap transfers from one mailbox to another. 
+<h2>DESCRIPTION</h2>
+
+ Imapsync command is a tool allowing incremental and recursive imap transfers from one mailbox to another. 
 
  By default all folders are transferred, recursively, all possible flags (\Seen \Answered \Flagged etc.) are synced too. 
 

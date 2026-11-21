@@ -1,5 +1,4 @@
 ---
-
 title: "wvdialconf(1)"
 name: "wvdialconf"
 section: "1"
@@ -8,9 +7,12 @@ url: "/docs/linux/man/1-wvdialconf/"
 description: "wvdialconf – build a configuration file for"
 ---
 
+<h2 class="name">NAME</h2>
 <p> wvdialconf &#8211; build a configuration file for <code></p>
 <p><a href="/docs/linux/man/1-wvdial/">wvdial</a></code>(1)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>wvdialconf</code> <i>/etc/wvdial.conf</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>wvdialconf</code> detects your modem, its maximum baud rate, and a good initialization string and generates or updates the <code><a href="/docs/linux/man/1-wvdial/">wvdial</a></code>(1) configuration file based on this information. </p>
 <p> <code>wvdialconf</code> is completely non-interactive. You still need to edit <i>/etc/wvdial.conf</i> to specify the phone number, login name, and password of your internet account in order for <code><a href="/docs/linux/man/1-wvdial/">wvdial</a></code>(1) to work. </p>
 <p> It is safe to run <code>wvdialconf</code> if a configuration file already exists. In that case, only the <i>Modem</i>, <i>Baud</i>, <i>Init</i>, and <i>Init2</i> options are changed in the <i>[Dialer Defaults]</i> section, and only if autodetection is successful.</p>

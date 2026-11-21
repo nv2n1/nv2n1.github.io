@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-hcrypto_dh/"
 description: "Diffie-Hellman functions –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Diffie-Hellman functions &#8211; </p>
 <h3>Functions</h3>
 <p> const DH_METHOD * <code>DH_ltm_method</code> (void) </p>
 <p> DH * <code>DH_new</code> (void) </p>

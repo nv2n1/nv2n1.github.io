@@ -1,5 +1,4 @@
 ---
-
 title: "qsexec(1)"
 name: "qsexec"
 section: "1"
@@ -7,11 +6,18 @@ letter: "q"
 url: "/docs/linux/man/1-qsexec/"
 ---
 
-qsexec - parses the data received via stdin and executes the defined command on a pattern match.
+<h2 class="name">NAME</h2>
+ 
 
-qsexec -e &lt;pattern&gt; [-t &lt;number&gt;:&lt;sec&gt;] [-c &lt;pattern&gt; [&lt;command string&gt;]] [-p] [-u &lt;user&gt;] &lt;command string&gt;
+ qsexec - parses the data received via stdin and executes the defined command on a pattern match.
 
-qsexec reads log lines from stdin and searches for the defined pattern. It executes the defined command string on pattern match.
+<h2>SYNOPSIS</h2>
+
+ qsexec -e &lt;pattern&gt; [-t &lt;number&gt;:&lt;sec&gt;] [-c &lt;pattern&gt; [&lt;command string&gt;]] [-p] [-u &lt;user&gt;] &lt;command string&gt;
+
+<h2>DESCRIPTION</h2>
+
+ qsexec reads log lines from stdin and searches for the defined pattern. It executes the defined command string on pattern match.
 
 <h2>OPTIONS</h2>
 

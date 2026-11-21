@@ -1,5 +1,4 @@
 ---
-
 title: "dar_cp(1)"
 name: "dar_cp"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-dar_cp/"
 description: "dar_cp – ‘cp’ clone command that is able to copy data located after an I/O error"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dar_cp &#8211; &#8216;cp&#8217; clone command that is able to copy data located after an I/O error </p>
+<h2>SYNOPSIS</h2>
 <p> dar_cp &lt;source file&gt; &lt;destination file&gt; </p>
 <p> dar_cp -h </p>
 <p> dar_cp -V</p>
+<h2>DESCRIPTION</h2>
 <p> <code>dar_cp</code> is similar to the standard &#8216;cp&#8217; command, except it does not stop copying when an I/O error is met. Instead, it skips a bit further and continues to copy the rest of the file, as much as possible, filling the gaps by zeroed bytes. </p>
 <p> <code>dar_cp</code> only accepts full filename (not directory) as argument. The reason of its existence in dar package is that you need it if you use Parchive with dar and have a corruption on a CD-R or any other read-only medium. You need to copy the corrupted slice on a read-write filesystem, for Parchive be able to repair it using slice associated redundancy files. </p>
 <h2>OPTIONS</h2>

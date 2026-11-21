@@ -1,5 +1,4 @@
 ---
-
 title: "send(1)"
 name: "send"
 section: "1"
@@ -10,8 +9,10 @@ description: "send – send a message"
 
 <h2>NAME</h2>
 <p> send &#8211; send a message</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>send</code> [<code>-alias</code> <i>aliasfile</i>] [<code>-draft</code>] [<code>-draftfolder</code> <i>+folder</i>] [<code>-draftmessage</code> <i>msg</i>] [<code>-nodraftfolder</code>] [<code>-filter</code> <i>filterfile</i>] [<code>-nofilter</code>] [<code>-format</code> | <code>-noformat</code>] [<code>-forward</code> | <code>-noforward</code>] [<code>-mime</code> | <code>-nomime</code>] [<code>-msgid</code> | <code>-nomsgid</code>] [<code>-messageid</code> <i>localname</i> | <i>random</i>] [<code>-push</code> | <code>-nopush</code>] [<code>-split</code> <i>seconds</i>] [<code>-verbose</code> | <code>-noverbose</code>] [<code>-watch</code> | <code>-nowatch</code>] [<code>-mts</code> <i>smtp</i> | <i>sendmail/smtp</i> | <i>sendmail/pipe</i>] [<code>-server</code> <i>servername</i>] [<code>-port</code> <i>port-name/number</i>] [<code>-sasl</code>] [<code>-nosasl</code>] [<code>-saslmaxssf</code> <i>ssf</i>] [<code>-saslmech</code> <i>mechanism</i>] [<code>-snoop</code>] [<code>-user</code> <i>username</i>] [<code>-tls</code>] [<code>-initialtls</code>] [<code>-notls</code>] [<code>-width</code> <i>columns</i>] [<code>file</code> &#8230;] [<code>-version</code>] [<code>-help</code>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>Send</code></p>
 <dd>will cause each of the specified files to be delivered to each of the destinations in the &#8220;To:&#8221;, &#8220;cc:&#8221;, &#8220;Bcc:&#8221;, &#8220;Dcc:&#8221;, and &#8220;Fcc:&#8221; fields of the message. If <code>send</code> is re-distributing a message, as invoked from <code>dist</code>, then the corresponding &#8220;Resent-xxx&#8221; fields are examined instead. </dd>
 <p> By default, <code>send</code> uses the program <code>post</code> to do the actual delivery of the messages, although this can be changed by defining the <i>postproc</i> profile component. Most of the features attributed to <code>send</code> are actually performed by <code>post</code>. </p>

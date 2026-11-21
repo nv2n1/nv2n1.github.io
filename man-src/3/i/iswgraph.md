@@ -1,5 +1,4 @@
 ---
-
 title: "iswgraph(3)"
 name: "iswgraph"
 section: "3"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/3-iswgraph/"
 description: "iswgraph – test for graphic wide character"
 ---
 
+<h2 class="name">NAME</h2>
+<p> iswgraph &#8211; test for graphic wide character </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;wctype.h&gt;
 int iswgraph(wint_t wc);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>iswgraph</code>() function is the wide-character equivalent of the <code>isgraph</code>(3) function. It tests whether <i>wc</i> is a wide character belonging to the wide-character class &quot;graph&quot;. </p>
 <p> The wide-character class &quot;graph&quot; is a subclass of the wide-character class &quot;print&quot;. </p>
 <p> Being a subclass of the wide-character class &quot;print&quot;, the wide-character class &quot;graph&quot; is disjoint from the wide-character class &quot;cntrl&quot;. </p>

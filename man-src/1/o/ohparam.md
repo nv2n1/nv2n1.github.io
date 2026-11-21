@@ -1,5 +1,4 @@
 ---
-
 title: "ohparam(1)"
 name: "ohparam"
 section: "1"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/1-ohparam/"
 description: "ohparam – An openhpi sample application that uses the openhpi additional interface to control openhpi configuration parameters"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ohparam &#8211; An openhpi sample application that uses the openhpi additional interface to control openhpi configuration parameters </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 ohparam[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-X] get
     ohparam[-D nn][-N host[:port]][-C&lt;cfgfile&gt;][-X] set&lt;paramname newvalue&gt;
         ohparam[--domain nn][--host = host[:port]][--cfgfile = file][--debug] get
             ohparam[--domain nn][--host = host[:port]][--cfgfile = file][--debug] set&lt;paramname newvalue&gt;
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> ohparam get will display all global configuration parameters of the openhpi daemon for the specified domain. </p>
 <p> ohparam set will change the given global configuration parameters of the openhpi daemon for the specified domain to the new value. </p>
 <p> If no domain or host is selected, ohparam uses the default domain as specified in the openhpiclient.conf file.</p>

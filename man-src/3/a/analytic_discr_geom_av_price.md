@@ -1,5 +1,4 @@
 ---
-
 title: "analytic_discr_geom_av_price(3)"
 name: "analytic_discr_geom_av_price"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-analytic_discr_geom_av_price/"
 description: "ql/pricingengines/asian/analytic_discr_geom_av_price.hpp – Analytic engine for discrete geometric average price Asian."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/pricingengines/asian/analytic_discr_geom_av_price.hpp &#8211; Analytic engine for discrete geometric average price Asian. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/asianoption.hpp&gt;<br />
  #include &lt;ql/processes/blackscholesprocess.hpp&gt; </p>
 <h3>Classes</h3>

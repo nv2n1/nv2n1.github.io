@@ -1,5 +1,4 @@
 ---
-
 title: "shortrpm(1)"
 name: "shortrpm"
 section: "1"
@@ -10,7 +9,9 @@ description: "shortrpm – Short-circuit binary RPM package build"
 
 <h2>NAME</h2>
 <p> <code>shortrpm</code> &#8211; Short-circuit binary RPM package build</p>
+<h2>SYNOPSIS</h2>
 <p> <code>shortrpm</code> [-<code>-bb</code> ] [-<code>&#8211;short-circuit</code> ] [<i>rpmbuild options</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>shortrpm</code> tricks rpmbuild(1) into thinking certain scriptlets in SPEC file are empty, effectively skipping their run and proceeding to build the binary package from files from previous %install scriptlet run in BuildRoot. The trickery only takes place if both <i>-bb</i> and <i>&#8211;short-circuit</i> options are specified. </p>
 <p> See rpmbuild(1) manual for descriptions of all options.</p>
 <h2>BUGS</h2>

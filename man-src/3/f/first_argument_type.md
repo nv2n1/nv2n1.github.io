@@ -1,5 +1,4 @@
 ---
-
 title: "first_argument_type(3)"
 name: "first_argument_type"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-first_argument_type/"
 description: "QuantLib::Interpolation2D – base class for 2-D interpolations."
 ---
 
+<h2 class="name">NAME</h2>
+<p> QuantLib::Interpolation2D &#8211; base class for 2-D interpolations. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/interpolations/interpolation2d.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Extrapolator</code>. </p>
 <p> Inherited by <code>BicubicSpline</code>, <code>BilinearInterpolation</code>, and FlatExtrapolator2D. </p>

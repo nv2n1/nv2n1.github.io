@@ -1,5 +1,4 @@
 ---
-
 title: "stg-repair(1)"
 name: "stg-repair"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-stg-repair/"
 description: "stg-repair – Fix StGit metadata if branch was modified with git commands"
 ---
 
+<h2 class="name">NAME</h2>
+<p> stg-repair &#8211; Fix StGit metadata if branch was modified with git commands </p>
+<h2>SYNOPSIS</h2>
 <pre>
 <i>stg</i> repair
 </pre>
+<h2>DESCRIPTION</h2>
 <p> If you modify an StGit stack (branch) with some git commands &#8212; such as commit, pull, merge, and rebase &#8212; you will leave the StGit metadata in an inconsistent state. In that situation, you have two options: </p>
 <dl>
 <dt>

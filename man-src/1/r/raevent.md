@@ -1,5 +1,4 @@
 ---
-
 title: "raevent(1)"
 name: "raevent"
 section: "1"
@@ -10,7 +9,9 @@ description: "raevent – read argus(8) event data."
 
 <h2>NAME</h2>
 <p> <code>raevent</code> &#8211; read <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> event data.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>raevent [raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Raevent</code> reads <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data from either <i>stdin</i>, an <i>argus-file</i>, or from a remote argus data source, filters the records it encounters based on an optional <i>filter-expression</i> and either prints the contents of the <code><a href="/docs/linux/man/5-argus/">argus</a>(5)</code> records that it encounters to <code>stdout</code> or appends them into an <code><a href="/docs/linux/man/5-argus/">argus</a>(5)</code> datafile. </p>
 <h2>OPTIONS</h2>
 <p> Raevent, like all ra based clients, supports a number of <code>ra options</code> including filtering of input argus records through a terminating filter expression. See <code><a href="/docs/linux/man/1-ra/">ra</a>(1)</code> for a complete description of <code>ra options</code>. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "glite-lb-notify(1)"
 name: "glite-lb-notify"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-glite-lb-notify/"
 description: "glite-lb-notify – Register and receive notification from L&B"
 ---
 
+<h2 class="name">NAME</h2>
+<p> glite-lb-notify &#8211; Register and receive notification from L&amp;B</p>
+<h2>SYNOPSIS</h2>
 <p> <code>glite-lb-notify </code><br />
  <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>new</code> [ { <code>-s</code><i> socket_fd</i> | <code>-a </code><i>fake_addr</i> } <code>-t </code><i>requested_validity</i> <code>-j </code><i>jobid </i>| { <code>-o </code><i>owner </i> | <code>-O </code> } <code>-n </code><i>network_server </i> <code>-v</code><i> virtual_organization</i> <code>-c</code> <code>-J</code> <code>-B</code> <code>-T</code> <code>-E</code> <code>-f</code><i> flags</i> ] </p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>bind </code> [ { <code>-s</code><i> socket_fd</i> | <code>-a </code><i>fake_addr</i> } <code>-t </code><i>requested_validity</i> ] <i>notifid</i></p>
@@ -16,6 +18,7 @@ description: "glite-lb-notify – Register and receive notification from L&B"
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>receive</code> [ { <code>-s</code><i> socket_fd</i> | <code>-a </code><i>fake_addr</i> } <code>-t </code><i>requested_validity</i> ] [ <code>-i </code><i>timeout </i>] [ <code>-r</code>] [ <code>-f</code><i> field1,field2</i>,&#8230; <i>notifid</i></p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>drop</code> <i>notifid</i></p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><code>help</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>glite-lb-notify </code> is a fairly simple wrapper on the L&amp;B notification API. It allows to create a notification (with a restricted richness of specifying conditions), bind to it for receiving notifications, and drop it finally. </p>
 <p> L&amp;B notification is a user-initiated trigger at the server. Whenever a job enters a state matching conditions specified with the notification, the current state of the job is sent to the notification client. On the other hand, the notification client is a network listener which receives server-initiated connections to get the notifications. Unless <code>-s</code> is specified, the notification library creates the listener socket. </p>
 <p> Within the notification validity, clients can disappear and even migrate. However, only a single active client for a notification is allowed. </p>

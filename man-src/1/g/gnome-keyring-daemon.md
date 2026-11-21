@@ -1,5 +1,4 @@
 ---
-
 title: "gnome-keyring-daemon(1)"
 name: "gnome-keyring-daemon"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-gnome-keyring-daemon/"
 description: "gnome-keyring-daemon – The gnome-keyring daemon"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gnome-keyring-daemon &#8211; The gnome-keyring daemon </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gnome-keyring-daemon</code> [OPTION&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>gnome-keyring-daemon</code> is a service that stores your passwords and secrets. It is normally started automatically when a user logs into a desktop session. </dd>
 <p> The <code>gnome-keyring-daemon</code> implements the DBus Secret Service API, and you can use tools like <code>seahorse</code> or <code>secret-tool</code> to interact with it. </p>
 <p> The daemon also implements a GnuPG and SSH agent both of which automatically load the user&#8217;s keys, and prompt for passwords when necessary. </p>

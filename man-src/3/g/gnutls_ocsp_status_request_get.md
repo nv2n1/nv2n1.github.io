@@ -1,13 +1,12 @@
 ---
-
 title: "gnutls_ocsp_status_request_get(3)"
 name: "gnutls_ocsp_status_request_get"
 section: "3"
 letter: "g"
 url: "/docs/linux/man/3-gnutls_ocsp_status_request_get/"
 ---
-
 <p> gnutls_ocsp_status_request_get - API function  </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_ocsp_status_request_get(gnutls_session_t </code><i>session</i><code>, gnutls_datum_t * </code><i>response</i><code>);</code>  </p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +17,7 @@ url: "/docs/linux/man/3-gnutls_ocsp_status_request_get/"
 <dt>gnutls_datum_t * response</dt>
 <dd> <p> a <code>gnutls_datum_t</code> with DER encoded OCSP response </p>
  </dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function returns the OCSP status response received from the TLS server. The <i>response</i> should be treated as constant. If no OCSP response is available then <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code> is returned.  </p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error code is returned.  </p>

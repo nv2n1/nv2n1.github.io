@@ -1,5 +1,4 @@
 ---
-
 title: "cpg_zcb_free(3)"
 name: "cpg_zcb_free"
 section: "3"
@@ -10,8 +9,10 @@ description: "cpg_zcb_free – Frees a zero copy buffer"
 
 <h2>NAME</h2>
 <p> cpg_zcb_free &#8211; Frees a zero copy buffer</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cpg.h&gt;</code> </p>
 <p> <code>int cpg_zcb_fre(cpg_handle_t </code><i>handle</i><code>, void *</code><i>buffer</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>cpg_zcb_free</code> function will free a zero copy buffer. </p>
 <p> The argument <i>handle</i> describes the handle on which the buffer will be allocated. </p>
 <p> The argument <i>buffer</i> is the zero copy buffer to free. </p>

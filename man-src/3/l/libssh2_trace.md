@@ -1,5 +1,4 @@
 ---
-
 title: "libssh2_trace(3)"
 name: "libssh2_trace"
 section: "3"
@@ -10,8 +9,10 @@ description: "libssh2_trace – enable debug info from inside libssh2"
 
 <h2>NAME</h2>
 <p> libssh2_trace &#8211; enable debug info from inside libssh2</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
 <p> void libssh2_trace(LIBSSH2_SESSION *session, int bitmask); </p>
+<h2>DESCRIPTION</h2>
 <p> This is a function present in the library that can be used to get debug info from within libssh2 when it is running. Helpful when trying to trace or debug behaviors. Note that this function has no effect unless libssh2 was built to support tracing! It is usually disabled in release builds. </p>
 <p> <code>bitmask</code> can be set to the logical OR of none, one or more of these:</p>
 <dl>

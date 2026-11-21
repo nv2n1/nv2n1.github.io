@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_transport_set_pull_timeout_function(3)"
 name: "gnutls_transport_set_pull_timeout_function"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_transport_set_pull_timeout_function – API function"
 
 <h2>NAME</h2>
 <p> gnutls_transport_set_pull_timeout_function &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>void gnutls_transport_set_pull_timeout_function(gnutls_session_t </code><i>session</i><code>, gnutls_pull_timeout_func </code><i>func</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_transport_set_pull_timeout_function – API function"
 <dd> is a <code>gnutls_session_t</code> structure.</dd>
 <dt>gnutls_pull_timeout_func func</dt>
 <dd> a callback function</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This is the function where you set a function for gnutls to know whether data are ready to be received. It should wait for data a given time frame in milliseconds. The callback should return 0 on timeout, a positive number if data can be received, and -1 on error. You&#8217;ll need to override this function if <code>select()</code> is not suitable for the provided transport calls. </p>
 <p> As with <code>select()</code>, if the timeout value is zero the callback should return zero if no data are immediately available. </p>
 <p>&nbsp;<wbr><i>gnutls_pull_timeout_func</i>&nbsp;<wbr>is of the form, int (*gnutls_pull_timeout_func)(gnutls_transport_ptr_t, unsigned int ms);</p>

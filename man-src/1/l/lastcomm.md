@@ -1,5 +1,4 @@
 ---
-
 title: "lastcomm(1)"
 name: "lastcomm"
 section: "1"
@@ -10,12 +9,14 @@ description: "lastcomm – print out information about previously executed comma
 
 <h2>NAME</h2>
 <p> lastcomm &#8211; print out information about previously executed commands.</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>lastcomm</code></dt>
 <dd> [ <i>command-name &#8230;</i> ]<br />
  [ <i>user-name &#8230;</i> ]<br />
  [ <i>terminal-name &#8230;</i> ]<br />
  [ OPTION &#8230; ]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>lastcomm</code> prints out information about previously executed commands. If no arguments are specified, <code>lastcomm </code> will print info about all of the commands in <i>acct</i> (the record file). If called with one or more of <i>command-name,</i> <i>user-name, </i> or <i>terminal-name,</i> only records containing those items will be displayed. For example, to find out which users used command `a.out&#8217; and which users were logged into `tty0&#8242;, type: <center> lastcomm a.out tty0<br />
  </center> </p>
 <p> This will print any entry for which `a.out&#8217; or `tty0&#8242; matches in any of the record&#8217;s fields (command, name, or terminal). If you want to find only items that match *all* of the arguments on the command line, you must use the &#8216;-strict-match&#8217; option. For example, to list all of the executions of command <i>a.out</i> by user <i>root</i> on terminal <i>tty0,</i> type: <center> lastcomm &#8211;strict-match &#8211;command a.out &#8211;user root &#8211;tty tty0<br />

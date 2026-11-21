@@ -1,5 +1,4 @@
 ---
-
 title: "slocal(1)"
 name: "slocal"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-slocal/"
 description: "slocal – asynchronously filter and deliver new mail"
 ---
 
+<h2 class="name">NAME</h2>
+<p> slocal &#8211; asynchronously filter and deliver new mail </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>/usr/libexec/nmh/slocal</code> [<code>-addr</code> <i>address</i>] [<code>-info</code> <i>data</i>] [<code>-sender</code> <i>sender</i>] [<code>-user</code> <i>username</i>] [<code>-mailbox</code> <i>mbox</i>] [<code>-file</code> <i>file</i>] [<code>-maildelivery</code> <i>deliveryfile</i>] [<code>-verbose</code> | <code>-noverbose</code>] [<code>-suppressdup</code> | <code>-nosuppressdup</code>] [<code>-debug</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>Slocal</code></p>
 <dd>is a program designed to allow you to have your inbound mail processed according to a complex set of selection criteria. You do not normally invoke <code>slocal</code> yourself, rather <code>slocal</code> is invoked on your behalf by your system&#8217;s Message Transfer Agent (such as <code>sendmail</code>) when the message arrives. </dd>
 <p> The message selection criteria used by <code>slocal is specified</code> in the file &#8220;<i>.maildelivery</i>&#8221; in the user&#8217;s home directory. You can specify an alternate file with the <code>-maildelivery</code> <i>file</i> option. The syntax of this file is specified below. </p>

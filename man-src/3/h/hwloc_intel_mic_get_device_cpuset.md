@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-hwloc_intel_mic_get_device_cpuset/"
 description: "hwlocality_intel_mic – Interoperability with Intel Xeon Phi (MIC)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hwlocality_intel_mic &#8211; Interoperability with Intel Xeon Phi (MIC) </p>
 <h3>Functions</h3>
 <p> static int <code>hwloc_intel_mic_get_device_cpuset</code> (<code>hwloc_topology_t</code> topology, int idx, <code>hwloc_cpuset_t</code> set) </p>
 <p> static <code>hwloc_obj_t</code> <code>hwloc_intel_mic_get_device_osdev_by_index</code> (<code>hwloc_topology_t</code> topology, unsigned idx) </p>

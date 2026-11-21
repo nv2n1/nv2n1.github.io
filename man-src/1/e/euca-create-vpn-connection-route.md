@@ -1,5 +1,4 @@
 ---
-
 title: "euca-create-vpn-connection-route(1)"
 name: "euca-create-vpn-connection-route"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-create-vpn-connection-route – Create a static route that se
 
 <h2>NAME</h2>
 <p> euca-create-vpn-connection-route &#8211; Create a static route that sends traffic from a virtual private gateway to a customer gateway</p>
+<h2>SYNOPSIS</h2>
 <p> euca-create-vpn-connection-route <code>&#8211;vpn-connection</code> VPNCONN <code>&#8211;cidr</code> CIDR</p>
 <dl>
 <dt>[&#8211;show-empty-fields] [-U URL]</dt>
 <dd> [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Create a static route that sends traffic from a virtual private gateway to a customer gateway</p>
 <h3>optional arguments:</h3>
 <dl>

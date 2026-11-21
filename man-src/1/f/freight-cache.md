@@ -1,5 +1,4 @@
 ---
-
 title: "freight-cache(1)"
 name: "freight-cache"
 section: "1"
@@ -10,7 +9,9 @@ description: "freight-cache – (re)builds package repositories"
 
 <h2>NAME</h2>
 <p> <code>freight-cache</code> &#8211; (re)builds package repositories</p>
+<h2>SYNOPSIS</h2>
 <p> <code>freight cache</code> [<code>-k</code>] [<code>-g</code> <i>email</i>] [<code>-p</code> <i>passphrase file</i>] [<code>-c</code> <i>conf</i>] [<code>-v</code>] [<code>-h</code>] [<i>manager</i>/<i>distro</i>][&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>freight-cache</code> converts each <i>manager</i>/<i>distro</i> given into a package repository (only Debian archives are supported currently). The <i>manager</i> indicates the type of repository (again, <code>apt</code> is the only supported value). The <i>distro</i> is an arbitrary string that should match a release of the target operating system (for example, &quot;lenny&quot; or &quot;lucid&quot;). If none are given, <code>freight-cache</code> converts all <i>manager</i>/<i>distro</i> pairs found in <code>$VARLIB</code>. </p>
 <p> Packages are read from the Freight library (<code>$VARLIB</code> in the configuration, see <code><a href="/docs/linux/man/5-freight/">freight</a></code>(5)) and organized into a working repository in the Freight cache (<code>$VARCACHE</code> in the configuration). </p>
 <p> Serving the repositories is left as an exercise for the reader. The Freight cache is the only directory that needs to be exposed, so create a virtual host with <code>$VARCACHE</code> as its document root and everything will be fine. </p>

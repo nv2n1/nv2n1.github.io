@@ -1,5 +1,4 @@
 ---
-
 title: "ck_rhs_get(3)"
 name: "ck_rhs_get"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_rhs_get – load a key from a hash set"
 <p> <code>ck_rhs_get</code> &#8211; load a key from a hash set</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_rhs.h Ft void * Fn ck_rhs_get ck_rhs_t *hs unsigned long hash const void *key</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_rhs_get 3 function will return a pointer to a key in the hash set Fa hs that is of equivalent value to the object pointed to by Fa key . The key specified by Fa key is expected to have the hash value specified by the Fa hash argument (which is to have been previously generated using the CK_RHS_HASH3 macro).</p>
 <h2>RETURN VALUES</h2>
 <p> If the provided key is a member of Fa hs then a pointer to the key as stored in Fa hs is returned. If the key was not found in Fa hs then a value of <code>NULL</code> is returned.</p>

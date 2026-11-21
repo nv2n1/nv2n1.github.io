@@ -1,5 +1,4 @@
 ---
-
 title: "xauth(1)"
 name: "xauth"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-xauth/"
 description: "xauth – X authority file utility"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xauth &#8211; X authority file utility </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xauth</code> [ <code>-f</code> <i>authfile</i> ] [ <code>-vqibn</code> ] [ <i>command arg &#8230;</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> The <i>xauth</i> program is used to edit and display the authorization information used in connecting to the X server. This program is usually used to extract authorization records from one machine and merge them in on another (as is the case when using remote logins or granting access to other users). Commands (described below) may be entered interactively, on the <i>xauth</i> command line, or in scripts. Note that this program does <code>not</code> contact the X server except when the generate command is used. Normally <i>xauth</i> is not used to create the authority file entry in the first place; the program that starts the X server (often <i>xdm</i> or <i>startx</i>) does that.</p>
 <h2>OPTIONS</h2>
 <p> The following options may be used with <i>xauth</i>. They may be given individually (e.g., <i>-q -i</i>) or may combined (e.g., <i>-qi</i>).</p>

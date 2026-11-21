@@ -1,5 +1,4 @@
 ---
-
 title: "cbc_crypt(3)"
 name: "cbc_crypt"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cbc_crypt/"
 description: "des_crypt, ecb_crypt, cbc_crypt, des_setparity, DES_FAILED – fast DES encryption"
 ---
 
+<h2 class="name">NAME</h2>
+<p> des_crypt, ecb_crypt, cbc_crypt, des_setparity, DES_FAILED &#8211; fast DES encryption </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;rpc/des_crypt.h&gt;
 int ecb_crypt(char *key, char *data, unsigned datalen,
@@ -17,6 +19,7 @@ int cbc_crypt(char *key, char *data, unsigned datalen,
 void des_setparity(char *key);
 int DES_FAILED(int status);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>ecb_crypt</code>() and <code>cbc_crypt</code>() implement the NBS DES (Data Encryption Standard). These routines are faster and more general purpose than <code><a href="/docs/linux/man/3-crypt/">crypt</a></code>(3). They also are able to utilize DES hardware if it is available. <code>ecb_crypt</code>() encrypts in ECB (Electronic Code Book) mode, which encrypts blocks of data independently. <code>cbc_crypt</code>() encrypts in CBC (Cipher Block Chaining) mode, which chains together successive blocks. CBC mode protects against insertions, deletions and substitutions of blocks. Also, regularities in the clear text will not appear in the cipher text. </p>
 <p> Here is how to use these routines. The first argument, <i>key</i>, is the 8-byte encryption key with parity. To set the key&#8217;s parity, which for DES is in the low bit of each byte, use <code>des_setparity</code>(). The second argument, <i>data</i>, contains the data to be encrypted or decrypted. The third argument, <i>datalen</i>, is the length in bytes of <i>data</i>, which must be a multiple of 8. The fourth argument, <i>mode</i>, is formed by ORing together some things. For the encryption direction OR in either <code>DES_ENCRYPT</code> or <code>DES_DECRYPT</code>. For software versus hardware encryption, OR in either <code>DES_HW</code> or <code>DES_SW</code>. If <code>DES_HW</code> is specified, and there is no hardware, then the encryption is performed in software and the routine returns <code>DESERR_NOHWDEVICE</code>. For <code>cbc_crypt</code>(), the argument <i>ivec</i> is the 8-byte initialization vector for the chaining. It is updated to the next initialization vector upon return.</p>
 <h2>RETURN VALUE</h2>

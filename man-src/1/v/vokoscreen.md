@@ -1,5 +1,4 @@
 ---
-
 title: "vokoscreen(1)"
 name: "vokoscreen"
 section: "1"
@@ -10,7 +9,9 @@ description: "vokoscreen – simple screencast creator"
 
 <h2>NAME</h2>
 <p> vokoscreen &#8211; simple screencast creator</p>
+<h2>SYNOPSIS</h2>
 <p> Usage: <code>vokoscreen</code></p>
+<h2>DESCRIPTION</h2>
 <p> vokoscreen is an easy to use screencast creator to record educational videos, live recordings of browser, installation, videoconferences, etc. It uses ffgtk functionality and also supports recording of audio (over pulse or alsa).</p>
 <h2>FILES</h2>
 <p> Settings are stored under $XDG_CONFIG_HOME which is generally $HOME. In this documentation ~ is used.</p>

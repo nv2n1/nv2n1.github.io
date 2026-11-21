@@ -1,5 +1,4 @@
 ---
-
 title: "relevation(1)"
 name: "relevation"
 section: "1"
@@ -10,7 +9,9 @@ description: "relevation — command-line searcher for Revelation files"
 
 <h2>NAME</h2>
 <p> relevation &#8212; command-line searcher for <code>Revelation</code> files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>relevation</code> [<code>options</code>] [<i>search string</i> [<i>&#8230;</i>] ]</p>
+<h2>DESCRIPTION</h2>
 <p> Access and print or search passwords in a <code>Revelation</code> password file. </p>
 <p> Only read access is provided, to edit the files <code>Revelation</code> must be used. </p>
 <p> With a search string, only entries that match the search string in any of its fields will be printed. </p>

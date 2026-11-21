@@ -1,5 +1,4 @@
 ---
-
 title: "firewall-offline-cmd(1)"
 name: "firewall-offline-cmd"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-firewall-offline-cmd/"
 description: "firewall-offline-cmd – firewalld offline command line client"
 ---
 
+<h2 class="name">NAME</h2>
+<p> firewall-offline-cmd &#8211; firewalld offline command line client </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>firewall-offline-cmd</code> [OPTIONS&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>firewall-offline-cmd is an offline command line client of the firewalld daemon. It should be used only if the firewalld service is not running. For example to migrate from system-config-firewall/lokkit or in the install environment to configure firewall settings with kickstart. </dd>
 <p> Some lokkit options can not be automatically converted for firewalld, they will result in an error or warning message. This tool tries to convert as much as possible, but there are limitations for example with custom rules, modules and masquerading. </p>
 <p> Check the firewall configuration after using this tool.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_zone_new_frm_fp_l(3)"
 name: "ldns_zone_new_frm_fp_l"
 section: "3"
@@ -10,6 +9,7 @@ description: "ldns_zone_new, ldns_zone_deep_free, ldns_zone_new_frm_fp, ldns_zon
 
 <h2>NAME</h2>
 <p> ldns_zone_new, ldns_zone_deep_free, ldns_zone_new_frm_fp, ldns_zone_new_frm_fp_l </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -17,6 +17,7 @@ description: "ldns_zone_new, ldns_zone_deep_free, ldns_zone_new_frm_fp, ldns_zon
 <p> void ldns_zone_deep_free(ldns_zone *zone); </p>
 <p> ldns_status ldns_zone_new_frm_fp(ldns_zone **z, FILE *fp, ldns_rdf *origin, uint32_t ttl, ldns_rr_class c); </p>
 <p> ldns_status ldns_zone_new_frm_fp_l(ldns_zone **z, FILE *fp, ldns_rdf *origin, uint32_t ttl, ldns_rr_class c, int *line_nr); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_zone_new</i>()</dt>
 <dd>create a new ldns_zone structure .br Returns a pointer to a ldns_zone structure</dd></dl>

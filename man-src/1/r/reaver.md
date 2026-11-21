@@ -1,5 +1,4 @@
 ---
-
 title: "reaver(1)"
 name: "reaver"
 section: "1"
@@ -10,7 +9,9 @@ description: "Reaver – WPS Cracker"
 
 <h2>NAME</h2>
 <p> <code>Reaver</code> &#8211; WPS Cracker</p>
+<h2>SYNOPSIS</h2>
 <p> <code>reaver -i &lt;interface&gt; -b &lt;target bssid&gt; -vv</code></p>
+<h2>DESCRIPTION</h2>
 <p> Reaver implements a brute force attack against WiFi Protected Setup which can crack the WPS pin of an access point in a matter of hours and subsequently recover the WPA/WPA2 passphrase. </p>
 <p> Specifically, Reaver targets the registrar functionality of WPS, which is flawed in that it only takes 11,000 attempts to guess the correct WPS pin in order to become a WPS registrar. Once registred as a registrar with the access point, the access point will give you the WPA passphrase.</p>
 <h2>OPTIONS</h2>

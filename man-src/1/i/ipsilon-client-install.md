@@ -1,5 +1,4 @@
 ---
-
 title: "ipsilon-client-install(1)"
 name: "ipsilon-client-install"
 section: "1"
@@ -10,7 +9,9 @@ description: "ipsilon-client-install – Configure an Ipsilon client"
 
 <h2>NAME</h2>
 <p> ipsilon-client-install &#8211; Configure an Ipsilon client</p>
+<h2>SYNOPSIS</h2>
 <p> ipsilon-client-install [OPTION]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Configures a server to be used as a Service Provider (SP) in federation with an Ipsilon instance as its Identity Provider (IdP). </p>
 <p> By default, Apache is configured using mod_auth_mellon to handle the SAML 2 Federation.</p>
 <h2>OPTIONS</h2>

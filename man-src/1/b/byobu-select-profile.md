@@ -1,5 +1,4 @@
 ---
-
 title: "byobu-select-profile(1)"
 name: "byobu-select-profile"
 section: "1"
@@ -10,6 +9,7 @@ description: "byobu-select-profile – select your Byobu foreground and backgrou
 
 <h2>NAME</h2>
 <p> byobu-select-profile &#8211; select your Byobu foreground and background colors </p>
+<h2>DESCRIPTION</h2>
 <p> <code>byobu-select-profile</code> is an application that lists the available Byobu colors and allows you to select the foreground and background color. </p>
 <h2>SEE ALSO</h2>
 <dl>

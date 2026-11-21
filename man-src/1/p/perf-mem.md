@@ -1,5 +1,4 @@
 ---
-
 title: "perf-mem(1)"
 name: "perf-mem"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-perf-mem/"
 description: "perf-mem – Profile memory accesses"
 ---
 
+<h2 class="name">NAME</h2>
+<p> perf-mem &#8211; Profile memory accesses </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 perf mem[&lt;options&gt;](record[&lt;command&gt;] | report)
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> &quot;perf mem -t &lt;TYPE&gt; record&quot; runs a command and gathers memory operation data from it, into perf.data. Perf record options are accepted and are passed through. </p>
 <p> &quot;perf mem -t &lt;TYPE&gt; report&quot; displays the result. It invokes perf report with the right set of options to display a memory access profile. </p>
 <p> Note that on Intel systems the memory latency reported is the use-latency, not the pure load (or store latency). Use latency includes any pipeline queueing delays in addition to the memory subsystem latency.</p>

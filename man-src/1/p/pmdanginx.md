@@ -1,5 +1,4 @@
 ---
-
 title: "pmdanginx(1)"
 name: "pmdanginx"
 section: "1"
@@ -10,6 +9,7 @@ description: "pmdanginx – nginx performance metrics domain agent (PMDA)"
 
 <h2>NAME</h2>
 <p> <code>pmdanginx</code> &#8211; nginx performance metrics domain agent (PMDA)</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdanginx</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which exports performance metrics from <code><a href="/docs/linux/man/8-nginx/">nginx</a></code>(8) &#8211; an HTTP and reverse proxy server, a mail proxy server, and a generic TCP proxy server.</p>
 <h2>INSTALLATION</h2>
 <p> This <font SIZE="-1">PMDA</font> requires that the <code>nginx</code> stub_status module is active and available at <a rel="nofollow" href="http://localhost/nginx_status">http://localhost/nginx_status</a> </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "podofouncompress(1)"
 name: "podofouncompress"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-podofouncompress/"
 description: "podofouncompress – Uncompress PDF files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> podofouncompress &#8211; Uncompress PDF files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>podofouncompress</code> [inputfile] [outputfile] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>podofouncompress</code> is one of the command line tools from the PoDoFo library that provide several useful operations to work with PDF files. It can remove compression from a PDF file. It is useful for debugging errors in PDF files or analysing their structure. </p>
 <h2>OPTIONS</h2>
 <p> <code>[inputfile]</code></p>

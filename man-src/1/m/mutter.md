@@ -1,5 +1,4 @@
 ---
-
 title: "mutter(1)"
 name: "mutter"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mutter/"
 description: "MUTTER – Clutter based compositing GTK2 Window Manager"
 ---
 
+<h2 class="name">NAME</h2>
+<p> MUTTER &#8211; Clutter based compositing GTK2 Window Manager </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mutter</code> [&#8211;display=<i>DISPLAY</i>] [&#8211;replace] [&#8211;sm-client-id=<i>ID</i>] [&#8211;sm-disable] [&#8211;sm-save-file=<i>FILENAME</i>] [&#8211;version] [&#8211;help] [[&#8211;] command [argument&#8230;]]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly <code>mutter</code>. </p>
 <p> <code>mutter</code> is a minimal X window manager aimed at nontechnical users and is designed to integrate well with the GNOME desktop. <code>mutter</code> lacks some features that may be expected by traditional UNIX or other technical users; these users may want to investigate other available window managers for use with GNOME or standalone.</p>
 <h2>OPTIONS</h2>

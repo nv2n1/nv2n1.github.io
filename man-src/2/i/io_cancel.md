@@ -1,5 +1,4 @@
 ---
-
 title: "io_cancel(2)"
 name: "io_cancel"
 section: "2"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/2-io_cancel/"
 description: "io_cancel – cancel an outstanding asynchronous I/O operation"
 ---
 
+<h2 class="name">NAME</h2>
+<p> io_cancel &#8211; cancel an outstanding asynchronous I/O operation </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/aio_abi.h&gt; /* Defines needed types */
 int io_cancel(aio_context_t ctx_id, struct iocb *iocb,
               struct io_event *result);
 </code></pre>
 <p> <i>Note</i>: There is no glibc wrapper for this system call; see NOTES.</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Note</i>: this page describes the raw Linux system call interface. The wrapper function provided by <i>libaio</i> uses a different type for the <i>ctx_id</i> argument. See NOTES. </p>
 <p> The <code>io_cancel</code>() system call attempts to cancel an asynchronous I/O operation previously submitted with <code><a href="/docs/linux/man/2-io_submit/">io_submit</a></code>(2). The <i>iocb</i> argument describes the operation to be canceled and the <i>ctx_id</i> argument is the AIO context to which the operation was submitted. If the operation is successfully canceled, the event will be copied into the memory pointed to by <i>result</i> without being placed into the completion queue.</p>
 <h2>RETURN VALUE</h2>

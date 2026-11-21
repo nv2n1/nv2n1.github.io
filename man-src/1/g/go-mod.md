@@ -1,5 +1,4 @@
 ---
-
 title: "go-mod(1)"
 name: "go-mod"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-go-mod/"
 description: "go-mod – module maintenance"
 ---
 
+<h2 class="name">NAME</h2>
+<p> go-mod &#8211; module maintenance </p>
+<h2>SYNOPSIS</h2>
 <p> <code>go mod</code> <i>command</i> [<i>arguments</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Go mod provides access to operations on modules. </p>
 <p> Note that support for modules is built into all the go commands, not just &#8216;go mod&#8217;. For example, day-to-day adding, removing, upgrading, and downgrading of dependencies should be done using &#8216;go get&#8217;. See &#8216;go help modules&#8217; for an overview of module functionality.</p>
 <h2>COMMANDS</h2>

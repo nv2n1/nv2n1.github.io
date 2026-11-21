@@ -1,5 +1,4 @@
 ---
-
 title: "arm_stop_application(3)"
 name: "arm_stop_application"
 section: "3"
@@ -10,12 +9,14 @@ description: "arm_stop_application – stop application"
 
 <h2>NAME</h2>
 <p> arm_stop_application &#8211; stop application</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/arm4.h">arm4.h</a>&gt;</code> </p>
 <p> <code>arm_error_t<br />
  arm_stop_application( </p>
 <p>&nbsp;<wbr>const arm_app_start_handle_t&nbsp;<wbr></code><i>app_handle</i><code>,&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>const arm_int32_t&nbsp;<wbr></code><i>flags</i><code>, </p>
 <p>&nbsp;<wbr>const arm_buffer4_t&nbsp;<wbr>*</code><i>buffer4</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>arm_stop_application()</code> indicates that the application instance has finished making ARM calls. It typically means that the instance is ending, such as just prior to the process exiting or a thread that represents an application instance terminating.<br />
 &nbsp;<wbr> For any transactions that are still in-process [<code>arm_start_transaction()</code> executed without a matching <code>arm_stop_transaction()</code>], an implicit <code>arm_discard_transaction()</code> is executed. </p>
 <p> If the <code>arm_start_application()</code> used the system address sub-buffer to indicate that the ARM calls would be about an application instance on a different system, <code>arm_stop_application()</code> indicates that no more calls about that application instance and its transactions will be made. </p>

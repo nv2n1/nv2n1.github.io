@@ -1,5 +1,4 @@
 ---
-
 title: "git-difftool(1)"
 name: "git-difftool"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-difftool/"
 description: "git-difftool – Show changes using common diff tools"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-difftool &#8211; Show changes using common diff tools </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git difftool[&lt;options&gt;][&lt;commit&gt;[&lt;commit&gt;]][--][&lt;path&gt;...]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <i>git difftool</i> is a Git command that allows you to compare and edit files between revisions using common diff tools. <i>git difftool</i> is a frontend to <i>git diff</i> and accepts the same options and arguments. See <code><a href="/docs/linux/man/1-git-diff/">git-diff</a></code>(1).</p>
 <h2>OPTIONS</h2>
 <p> -d, &#8211;dir-diff</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "xfsettingsd(1)"
 name: "xfsettingsd"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-xfsettingsd/"
 description: "xfsettingsd – XSettings daemon for Xfce"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xfsettingsd &#8211; XSettings daemon for Xfce </p>
+<h2>DESCRIPTION</h2>
 <h3>Usage:</h3>
 <dl>
 <dt>

@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_error_errno_set_errno/"
 description: "Error Data Accessors and Modifiers –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Error Data Accessors and Modifiers &#8211; </p>
 <h3>Get Errno</h3>
 <p> int <code>globus_error_errno_get_errno</code> (globus_object_t *error) </p>
 <h3>Set Errno</h3>

@@ -1,5 +1,4 @@
 ---
-
 title: "bsetbg(1)"
 name: "bsetbg"
 section: "1"
@@ -10,7 +9,9 @@ description: "bsetbg – utility to manipulate the appearance of the X11 desktop
 
 <h2>NAME</h2>
 <p> bsetbg &#8211; utility to manipulate the appearance of the X11 desktop&#8217;s root window.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>bsetbg</code> [options] <i>image</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>bsetbg</code> is intended to provide a standard method for the <i>Blackbox</i> window manager to alter the background of the root window (although it will work with any other window manager as well). <code>bsetbg</code> acts as a wrapper both to <i>bsetroot</i> and to a flexible variety of third-party applications that it uses when handling images files. </p>
 <h2>OPTIONS</h2>
 <dl>

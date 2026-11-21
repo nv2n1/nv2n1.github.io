@@ -1,5 +1,4 @@
 ---
-
 title: "lrzcat(1)"
 name: "lrzcat"
 section: "1"
@@ -7,13 +6,20 @@ letter: "l"
 url: "/docs/linux/man/1-lrzcat/"
 ---
 
-lrzcat - Uncompress LRZ files to STDOUT 
+<h2 class="name">NAME</h2>
+ 
 
-<pre><code>
+ lrzcat - Uncompress LRZ files to STDOUT 
+
+<h2>SYNOPSIS</h2>
+
+ <pre><code>
 lrzcat[options] FILE[... FILE]
 </code></pre>
 
-lrzcat is identical to <tt>&quot;lrzip -d -o -&quot;</tt> used to decompress files to <font SIZE="-1">STDOUT.</font>
+<h2>DESCRIPTION</h2>
+
+ lrzcat is identical to <tt>&quot;lrzip -d -o -&quot;</tt> used to decompress files to <font SIZE="-1">STDOUT.</font>
 
 <h2>OPTIONS</h2>
 

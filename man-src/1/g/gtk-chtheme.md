@@ -1,5 +1,4 @@
 ---
-
 title: "gtk-chtheme(1)"
 name: "gtk-chtheme"
 section: "1"
@@ -10,7 +9,9 @@ description: "gtk-chtheme – Gtk+ 2.0 theme preview and selection made slick."
 
 <h2>NAME</h2>
 <p> gtk-chtheme &#8211; Gtk+ 2.0 theme preview and selection made slick.</p>
+<h2>SYNOPSIS</h2>
 <p> gtk-chtheme</p>
+<h2>DESCRIPTION</h2>
 <p> As the name suggests, this little program lets you change your Gtk+ 2.0 theme. The aim is to make theme preview and selection as slick as possible. Themes installed on the system are presented for selection and previewed on the fly. A large variety of widgets provides a comprehensive demonstration.</p>
 <h2>BUGS</h2>
 <p> The <i>.gtkrc-2.0</i> parser is somewhat shaky, but this shouldn&#8217;t affect anyone.</p>

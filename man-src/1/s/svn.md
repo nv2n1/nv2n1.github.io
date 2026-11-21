@@ -1,5 +1,4 @@
 ---
-
 title: "svn(1)"
 name: "svn"
 section: "1"
@@ -10,6 +9,7 @@ description: "svn – Subversion command line client tool"
 
 <h2>NAME</h2>
 <p> svn &#8211; Subversion command line client tool</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>svn</code> <i>command</i> [<i>options</i>] [<i>args</i>]</dt>
 <dd></dd></dl>

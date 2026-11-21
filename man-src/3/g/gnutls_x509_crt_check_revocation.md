@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_crt_check_revocation(3)"
 name: "gnutls_x509_crt_check_revocation"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_crt_check_revocation – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_check_revocation &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_check_revocation(gnutls_x509_crt_t </code><i>cert</i><code>, const gnutls_x509_crl_t * </code><i>crl_list</i><code>, int </code><i>crl_list_length</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_x509_crt_check_revocation – API function"
 <dd> should contain a list of gnutls_x509_crl_t structures</dd>
 <dt>int crl_list_length</dt>
 <dd> the length of the crl_list</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will return check if the given certificate is revoked. It is assumed that the CRLs have been verified before.</p>
 <h2>RETURNS</h2>
 <p> 0 if the certificate is NOT revoked, and 1 if it is. A negative error code is returned on error.</p>

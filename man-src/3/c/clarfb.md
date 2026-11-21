@@ -1,5 +1,4 @@
 ---
-
 title: "clarfb(3)"
 name: "clarfb"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-clarfb/"
 description: "clarfb.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> clarfb.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clarfb</code> (SIDE, TRANS, DIRECT, STOREV, M, N, K, V, LDV, T, LDT, C, LDC, WORK, LDWORK)<br />
  <i></i><code>CLARFB</code> applies a block reflector or its conjugate-transpose to a general rectangular matrix.</p>

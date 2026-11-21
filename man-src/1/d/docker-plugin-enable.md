@@ -1,5 +1,4 @@
 ---
-
 title: "docker-plugin-enable(1)"
 name: "docker-plugin-enable"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-plugin-enable/"
 description: "docker-plugin-enable – Enable a plugin"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-plugin-enable &#8211; Enable a plugin </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker plugin enable [OPTIONS] PLUGIN</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Enable a plugin </p>
 <h2>OPTIONS</h2>
 <p> <code>-h</code>, <code>&#8211;help</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>help for enable</p>

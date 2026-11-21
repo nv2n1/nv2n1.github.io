@@ -1,5 +1,4 @@
 ---
-
 title: "vlock(1)"
 name: "vlock"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-vlock/"
 description: "vlock – Virtual Console lock program"
 ---
 
+<h2 class="name">NAME</h2>
+<p> vlock &#8211; Virtual Console lock program </p>
+<h2>SYNOPSIS</h2>
 <p> <code>vlock [ -hv ]</code> </p>
 <p> <code>vlock [ -acns ] [ -t &lt;timeout&gt; ] [ plugins&#8230; ]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>vlock</code> is a program to lock one or more sessions on the Linux console. This is especially useful for Linux machines which have multiple users with access to the console. One user may lock his or her session(s) while still allowing other users to use the system on other virtual consoles. If desired, the entire console may be locked and virtual console switching disabled. </p>
 <p> By default, only the current VC (virtual console) is locked. With the <code>-a,&#8211;all</code> option all VCs are locked. The locked VCs cannot be unlocked without the invoker&#8217;s password or the root password. The root password will always be able to unlock any or all sessions, unless disabled at compile time. </p>
 <p> Please note that it is entirely possible to completely lock yourself out of the console with the <code>-a,&#8211;all</code> option if you cannot remember your password! Unless you are able to kill vlock by logging in remotely via a serial terminal or network, a hard reset is the only method of &#8220;unlocking&#8221; the display. </p>

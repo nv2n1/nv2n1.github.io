@@ -1,5 +1,4 @@
 ---
-
 title: "chesvx(3)"
 name: "chesvx"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-chesvx/"
 description: "chesvx.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> chesvx.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chesvx</code> (FACT, UPLO, N, NRHS, A, LDA, AF, LDAF, IPIV, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, LWORK, RWORK, INFO)<br />
  <i></i><code> CHESVX computes the solution to system of linear equations A * X = B for HE matrices</code></p>

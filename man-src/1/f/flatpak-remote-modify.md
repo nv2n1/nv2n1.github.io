@@ -1,5 +1,4 @@
 ---
-
 title: "flatpak-remote-modify(1)"
 name: "flatpak-remote-modify"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-flatpak-remote-modify/"
 description: "flatpak-remote-modify – Modify a remote repository"
 ---
 
+<h2 class="name">NAME</h2>
+<p> flatpak-remote-modify &#8211; Modify a remote repository </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak remote-modify</code> [OPTION&#8230;] NAME</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>Modifies options for an existing remote repository in the flatpak repository configuration. NAME is the name for the remote. </dd>
 <p> Unless overridden with the <code>&#8211;system</code>, <code>&#8211;user</code>, or <code>&#8211;installation</code> options, this command uses either the default system-wide installation or the per-user one, depending on which has the specified REMOTE.</p>
 <h2>OPTIONS</h2>

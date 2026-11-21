@@ -1,5 +1,4 @@
 ---
-
 title: "simfqt-config(1)"
 name: "simfqt-config"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-simfqt-config/"
 description: "simfqt-config –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> simfqt-config &#8211; </p>
 <pre>
     Configuration Script for the C++ Simulated Fare Quote System Library
 </pre>
+<h2>SYNOPSIS</h2>
 <p> <code>simfqt-config</code> [&#8211;prefix] [&#8211;version] [&#8211;libs] [&#8211;cflags]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>simfqt-config</i> is a tool that is used by configure to determine the compiler and linker flags that should be used to compile and link programs that use <i>SimFQT</i>. It is also used internally by the .m4 macros, that are included with <i>SimFQT</i>, for GNU autoconf.</p>
 <h2>OPTIONS</h2>
 <p> <i>simfqt-config</i> accepts the following options: </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "nona(1)"
 name: "nona"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-nona/"
 description: "nona – Stitch a panorama image"
 ---
 
+<h2 class="name">NAME</h2>
+<p> nona &#8211; Stitch a panorama image </p>
+<h2>SYNOPSIS</h2>
 <p> <code>nona</code> [options] <code>-o</code> <i>output</i> <i>project_file</i> (image files)</p>
+<h2>DESCRIPTION</h2>
 <p> <code>nona</code> uses the transform function from PanoTools, the stitching itself is quite simple, no seam feathering is done. </p>
 <p> Only the non-antialiasing interpolators of PanoTools are supported. </p>
 <p> The following output formats (<code>n</code> option of PanoTools <code>p</code> script line) are supported:</p>

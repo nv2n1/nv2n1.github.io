@@ -1,5 +1,4 @@
 ---
-
 title: "ldapsearch(1)"
 name: "ldapsearch"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ldapsearch/"
 description: "ldapsearch – LDAP search tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ldapsearch &#8211; LDAP search tool </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ldapsearch</code> [<code>-V</code>[<code>V</code>]] [<code>-d</code><i>&nbsp;<wbr>debuglevel</i>] [<code>-n</code>] [<code>-v</code>] [<code>-c</code>] [<code>-u</code>] [<code>-t</code>[<code>t</code>]] [<code>-T</code><i>&nbsp;<wbr>path</i>] [<code>-F</code><i>&nbsp;<wbr>prefix</i>] [<code>-A</code>] [<code>-L</code>[<code>L</code>[<code>L</code>]]] [<code>-S</code><i>&nbsp;<wbr>attribute</i>] [<code>-b</code><i>&nbsp;<wbr>searchbase</i>] [<code>-s</code>&nbsp;<wbr>{<code>base</code>|<code>one</code>|<code>sub</code>|<code>children</code>}] [<code>-a</code>&nbsp;<wbr>{<code>never</code>|<code>always</code>|<code>search</code>|<code>find</code>}] [<code>-l</code><i>&nbsp;<wbr>timelimit</i>] [<code>-z</code><i>&nbsp;<wbr>sizelimit</i>] [<code>-f</code><i>&nbsp;<wbr>file</i>] [<code>-M</code>[<code>M</code>]] [<code>-x</code>] [<code>-D</code><i>&nbsp;<wbr>binddn</i>] [<code>-W</code>] [<code>-w</code><i>&nbsp;<wbr>passwd</i>] [<code>-y</code><i>&nbsp;<wbr>passwdfile</i>] [<code>-H</code><i>&nbsp;<wbr>ldapuri</i>] [<code>-h</code><i>&nbsp;<wbr>ldaphost</i>] [<code>-p</code><i>&nbsp;<wbr>ldapport</i>] [<code>-P</code>&nbsp;<wbr>{<code>2</code>|<code>3</code>}] [<code>-e</code>&nbsp;<wbr>[<code>!</code>]<i>ext</i>[<code>=</code><i>extparam</i>]] [<code>-E</code>&nbsp;<wbr>[<code>!</code>]<i>ext</i>[<code>=</code><i>extparam</i>]] [<code>-o</code><i>&nbsp;<wbr>opt</i>[=<i>optparam</i>]] [<code>-O</code><i>&nbsp;<wbr>security-properties</i>] [<code>-I</code>] [<code>-Q</code>] [<code>-N</code>] [<code>-U</code><i>&nbsp;<wbr>authcid</i>] [<code>-R</code><i>&nbsp;<wbr>realm</i>] [<code>-X</code><i>&nbsp;<wbr>authzid</i>] [<code>-Y</code><i>&nbsp;<wbr>mech</i>] [<code>-Z</code>[<code>Z</code>]] <i>filter</i> [<i>attrs&#8230;</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>ldapsearch</i> is a shell-accessible interface to the <code><a href="/docs/linux/man/3-ldap_search_ext/">ldap_search_ext</a></code>(3) library call. </p>
 <p> <code>ldapsearch</code> opens a connection to an LDAP server, binds, and performs a search using specified parameters. The <i>filter</i> should conform to the string representation for search filters as defined in RFC 4515. If not provided, the default filter, <code>(objectClass=*)</code>, is used. </p>
 <p> If <code>ldapsearch</code> finds one or more entries, the attributes specified by <i>attrs</i> are returned. If <code>*</code> is listed, all user attributes are returned. If <code>+</code> is listed, all operational attributes are returned. If no <i>attrs</i> are listed, all user attributes are returned. If only 1.1 is listed, no attributes will be returned. </p>

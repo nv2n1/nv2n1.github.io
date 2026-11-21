@@ -1,5 +1,4 @@
 ---
-
 title: "segy2grd(1)"
 name: "segy2grd"
 section: "1"
@@ -10,8 +9,10 @@ description: "segy2grd – Converting SEGY data to a GMT grid"
 
 <h2>NAME</h2>
 <p> segy2grd &#8211; Converting SEGY data to a GMT grid</p>
+<h2>SYNOPSIS</h2>
 <p> <code>segy2grd</code> <i>segyfile</i> <i>grdfile</i> <i>increment</i> <i>region</i> [ [<code>n</code>|<code>z</code>] ] [ <i>xname</i>/<i>yname</i>/<i>zname</i>/<i>scale</i>/<i>offset</i>/<i>title</i>/<i>remark</i> ] [ [<i>nsamp</i>] ] [ [<i>ntraces</i>] ] [ <i>nodata</i> ] [ <i>&lt;mode&gt;&lt;value&gt;</i> ] [ [<i>header</i>] ] [ [<i>level</i>] ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>segy2grd</code> reads an IEEE SEGY file and creates a binary grid file. Either a simple mapping (equivalent to xyz2grd -Z) or a more complicated averaging where a particular grid cell includes values from more than one sample in the SEGY file can be done. <code>segy2grd</code> will report if some of the nodes are not filled in with data. Such unconstrained nodes are set to a value specified by the user [Default is NaN]. Nodes with more than one value will be set to the average value.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <p> <i>segyfile</i> is an IEEE floating point SEGY file. Traces are all assumed to start at 0 time/depth.</p>

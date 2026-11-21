@@ -1,5 +1,4 @@
 ---
-
 title: "qsgrep(1)"
 name: "qsgrep"
 section: "1"
@@ -7,11 +6,18 @@ letter: "q"
 url: "/docs/linux/man/1-qsgrep/"
 ---
 
-qsgrep - prints matching patterns within a file. 
+<h2 class="name">NAME</h2>
+ 
 
-qsgrep -e &lt;pattern&gt; -o &lt;sub string&gt; [&lt;path&gt;]
+ qsgrep - prints matching patterns within a file. 
 
-qsgrep is a simple tool to search patterns within files. It uses regular expressions to find patterns and prints the submatches within a pre-defined format string.
+<h2>SYNOPSIS</h2>
+
+ qsgrep -e &lt;pattern&gt; -o &lt;sub string&gt; [&lt;path&gt;]
+
+<h2>DESCRIPTION</h2>
+
+ qsgrep is a simple tool to search patterns within files. It uses regular expressions to find patterns and prints the submatches within a pre-defined format string.
 
 <h2>OPTIONS</h2>
 

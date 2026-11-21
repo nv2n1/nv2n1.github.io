@@ -1,5 +1,4 @@
 ---
-
 title: "eulb-describe-instance-health(1)"
 name: "eulb-describe-instance-health"
 section: "1"
@@ -10,10 +9,12 @@ description: "eulb-describe-instance-health – Show the state of instances regi
 
 <h2>NAME</h2>
 <p> eulb-describe-instance-health &#8211; Show the state of instances registered with a load balancer</p>
+<h2>SYNOPSIS</h2>
 <p> eulb-describe-instance-health [&#8211;instances INSTANCE1,INSTANCE2,&#8230;]</p>
 <dl>
 <dt>[&#8211;show-long] [&#8211;show-empty-fields]</dt>
 <dd> [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ELB</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Show the state of instances registered with a load balancer</p>
 <h3>positional arguments:</h3>
 <dl>

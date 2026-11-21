@@ -1,5 +1,4 @@
 ---
-
 title: "fbsetroot(1)"
 name: "fbsetroot"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-fbsetroot/"
 description: "fbsetroot – a simple background utility used by the"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fbsetroot &#8211; a simple background utility used by the </p>
 <p><a href="/docs/linux/man/1-fluxbox/">fluxbox</a>(1) window manager, originally written for and by the original <a href="/docs/linux/man/1-blackbox/">blackbox</a>(1) window manager.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>fbsetroot</code> [-display <i>display</i>] -solid <i>color</i> </p>
 <p> <code>fbsetroot</code> [-display <i>display</i>] -mod <i>x</i> <i>y</i> -fg <i>color</i> -bg <i>color</i> </p>
 <p> <code>fbsetroot</code> [-display <i>display</i>] -gradient <i>texture</i> -from <i>color</i> -to <i>color</i> </p>
 <p> <code>fbsetroot</code> -help</p>
+<h2>DESCRIPTION</h2>
 <p> <code><a href="/docs/linux/man/1-fbsetroot/">fbsetroot</a>(1)</code> is a utility that can control the appearance of the root window in three ways: Either give it a solid color, or write a two color modula pattern to it, or render a gradient texture, based on two different colors. </p>
 <p> fbsetroot resembles <code><a href="/docs/linux/man/1-xsetroot/">xsetroot</a>(1)</code> in this functionality but it supports multiple-screen displays, and gradient textures the same way as blackbox or fluxbox does. It doesn&#8217;t handle cursors etc. fbsetroot was originally part of the Blackbox package and was carried over with the code that became Fluxbox. It was called bsetroot back in those days. </p>
 <p> If any errors are encountered, fbsetroot will use either <code><a href="/docs/linux/man/1-gxmessage/">gxmessage</a>(1)</code> or <code><a href="/docs/linux/man/1-xmessage/">xmessage</a>(1)</code> to inform the user of errors.</p>

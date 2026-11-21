@@ -1,5 +1,4 @@
 ---
-
 title: "lttng-ust-cyg-profile(3)"
 name: "lttng-ust-cyg-profile"
 section: "3"
@@ -10,6 +9,7 @@ description: "lttng-ust-cyg-profile — LTTng UST 2.x Function Tracing"
 
 <h2>NAME</h2>
 <p> lttng-ust-cyg-profile &#8212; LTTng UST 2.x Function Tracing</p>
+<h2>SYNOPSIS</h2>
 <p> Compile the application source code with option <code>-finstrument-functions</code> and launch your application either with:</p>
 <dl>
 <dt><code>LD_PRELOAD=liblttng-ust-cyg-profile-fast.so</code> appname</dt>
@@ -22,6 +22,7 @@ description: "lttng-ust-cyg-profile — LTTng UST 2.x Function Tracing"
 <dl>
 <dt><code>lttng enable-event -u -a &#8211;loglevel-only TRACE_DEBUG_FUNCTION</code></dt>
 <dd></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> For compilers that provide code generation option <code>-finstrument-functions</code> (e.g. GCC and LLVM/Clang) LTTng-UST provides shared libraries that allow users to trace the function flow of their applications. </p>
 <p> Function tracing comes in two flavors (each providing different trade-offs):</p>
 <dl>

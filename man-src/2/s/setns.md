@@ -1,5 +1,4 @@
 ---
-
 title: "setns(2)"
 name: "setns"
 section: "2"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/2-setns/"
 description: "setns – reassociate thread with a namespace"
 ---
 
+<h2 class="name">NAME</h2>
+<p> setns &#8211; reassociate thread with a namespace </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;sched.h&gt;
 int setns(int fd, int nstype);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>setns</code>() system call allows the calling thread to move into different namespaces. The <i>fd</i> argument is one of the following:</p>
 <dl>
 <dt>&bull;</dt>

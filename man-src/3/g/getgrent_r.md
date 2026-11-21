@@ -1,5 +1,4 @@
 ---
-
 title: "getgrent_r(3)"
 name: "getgrent_r"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-getgrent_r/"
 description: "getgrent_r, fgetgrent_r – get group file entry reentrantly"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getgrent_r, fgetgrent_r &#8211; get group file entry reentrantly </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;grp.h&gt;
 int getgrent_r(struct group *gbuf, char *buf,
@@ -22,6 +24,7 @@ int fgetgrent_r(FILE *stream, struct group *gbuf, char *buf,
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Glibc 2.19 and earlier:<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;_SVID_SOURCE</p>
+<h2>DESCRIPTION</h2>
 <p> The functions <code>getgrent_r</code>() and <code>fgetgrent_r</code>() are the reentrant versions of <code><a href="/docs/linux/man/3-getgrent/">getgrent</a></code>(3) and <code><a href="/docs/linux/man/3-fgetgrent/">fgetgrent</a></code>(3). The former reads the next group entry from the stream initialized by <code><a href="/docs/linux/man/3-setgrent/">setgrent</a></code>(3). The latter reads the next group entry from <i>stream</i>. </p>
 <p> The <i>group</i> structure is defined in <i>&lt;grp.h&gt;</i> as follows: </p>
 <p> struct group {<br />

@@ -1,5 +1,4 @@
 ---
-
 title: "mailbot(1)"
 name: "mailbot"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-mailbot/"
 description: "mailbot – A MIME-aware autoresponder utility"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mailbot &#8211; A MIME-aware autoresponder utility </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mailbot</code> [options] {<i>program</i>} [arg&#8230;]</dt></dl>
 <dd>In .mailfilter: </dd>
@@ -18,6 +20,7 @@ if (/ ^Subject
             -A 'From: info [at] domain.com' /usr/bin/sendmail -f ''"
 }
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>mailbot</code> reads an E-mail message on standard input and creates an E-mail message replying to the original message&#8217;s sender. A <code>program</code> is specified as an argument to <code>mailbot</code> after all of <code>mailbot</code> options. <code>program</code> is expected to read the created autoreply on its standard input, and mail it. If <code>program</code> is not specified, <code>mailbot</code> runs &#8216;sendmail -f &quot;&quot;&#8217;. </p>
 <p> <code>mailbot</code> has several options for suppressing duplicate autoresponse messages. If <code>mailbot</code> chooses not to send an autoresponse, it quietly terminates without running <code>program</code>. The autoresponse is optionally formatted as a MIME delivery status notification. </p>
 <p> The text of the autoresponse is specified by the <code>-t</code> or the <code>-m</code> argument. Either one is required. Everything else is optional. The only exception is the <code>-T replydraft</code> option, which requires the <code>-l</code> option instead of either <code>-t</code> or <code>-m</code>. The default behavior is to send an autoresponse unless the original message has the &quot;Precedence: junk&quot; or the &quot;Precedence: bulk&quot; header, or the &quot;Precedence: list&quot; header, or the &quot;List-ID:&quot; header, or if its MIME content type is &quot;multipart/report&quot; (this is the MIME content type for delivery status notifications). The <code>-M</code> option formats the the autoresponse itself as a MIME delivery status notification.</p>

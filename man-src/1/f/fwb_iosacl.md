@@ -1,5 +1,4 @@
 ---
-
 title: "fwb_iosacl(1)"
 name: "fwb_iosacl"
 section: "1"
@@ -10,7 +9,9 @@ description: "fwb_ipt – Policy compiler for Cisco IOS ACL"
 
 <h2>NAME</h2>
 <p> fwb_ipt &#8211; Policy compiler for Cisco IOS ACL</p>
+<h2>SYNOPSIS</h2>
 <p> <code>fwb_iosacl</code> <code>[-vV]</code> <code>[-d wdir]</code> <code>[-4]</code> <code>[-6]</code> <code>[-i]</code> <code>-f data_file.xml</code> object_name </p>
+<h2>DESCRIPTION</h2>
 <p> <code>fwb_iosacl</code> is firewall policy compiler component of Firewall Builder (see <a href="/docs/linux/man/1-fwbuilder/">fwbuilder</a>(1)). Compiler reads objects definitions and firewall description from the data file specified with &quot;-f&quot; option and generates resultant Cisco IOS ACL configuration file. The configuration is written to the file with the name the same as the name of the firewall object, plus extension &quot;.fw&quot;. Compiler generates extended access lists for Cisco routers running IOS v12.x using &quot;ip access-list &lt;name&gt;&quot; syntax. Compiler also generates &quot;ip access-group&quot; commands to assign access lists to interfaces. Generated ACL configuration can be uploaded to the router manually or using built-in installer in the <a href="/docs/linux/man/1-fwbuilder/">fwbuilder</a>(1) GUI. </p>
 <p> The data file and the name of the firewall objects must be specified on the command line. Other command line parameters are optional. </p>
 <h2>OPTIONS</h2>

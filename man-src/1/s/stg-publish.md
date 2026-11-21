@@ -1,5 +1,4 @@
 ---
-
 title: "stg-publish(1)"
 name: "stg-publish"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-stg-publish/"
 description: "stg-publish – Push the stack changes to a merge-friendly branch"
 ---
 
+<h2 class="name">NAME</h2>
+<p> stg-publish &#8211; Push the stack changes to a merge-friendly branch </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 stg publish[options][--][branch]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> This command commits a set of changes on a separate (called public) branch based on the modifications of the given or current stack. The history of the public branch is not re-written, making it merge-friendly and feasible for publishing. The heads of the stack and public branch may be different but the corresponding tree objects are always the same. </p>
 <p> If the trees of the stack and public branch are different (otherwise the command has no effect), StGit first checks for a rebase of the stack since the last publishing. If a rebase is detected, StGit creates a commit on the public branch corresponding to a merge between the new stack base and the latest public head. </p>
 <p> If no rebasing was detected, StGit checks for new patches that may have been created on top of the stack since the last publishing. If new patches are found and are not empty, they are checked into the public branch keeping the same commit information (e.g. log message, author, committer, date). </p>

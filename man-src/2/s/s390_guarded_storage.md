@@ -1,5 +1,4 @@
 ---
-
 title: "s390_guarded_storage(2)"
 name: "s390_guarded_storage"
 section: "2"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/2-s390_guarded_storage/"
 description: "s390_guarded_storage – operations with z/Architecture guarded storage facility"
 ---
 
+<h2 class="name">NAME</h2>
+<p> s390_guarded_storage &#8211; operations with z/Architecture guarded storage facility </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;asm/guarded_storage.h&gt;
 int s390_guarded_storage(int command, struct gs_cb *gs_cb);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>s390_guarded_storage</code>() system call enables the use of the Guarded Storage Facility (a z/Architecture-specific feature) for user-space processes. </p>
 <p> The guarded storage facility is a hardware feature that allows marking up to 64 memory regions (as of z14) as guarded; reading a pointer with a newly introduced &quot;Load Guarded&quot; (LGG) or &quot;Load Logical and Shift Guarded&quot; (LLGFSG) instructions will cause a range check on the loaded value and invoke a (previously set up) user-space handler if one of the guarded regions is affected. </p>
 <p> The <i>command</i> argument indicates which function to perform. The following commands are supported:</p>

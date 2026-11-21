@@ -1,5 +1,4 @@
 ---
-
 title: "sss_ssh_knownhostsproxy(1)"
 name: "sss_ssh_knownhostsproxy"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-sss_ssh_knownhostsproxy/"
 description: "sss_ssh_knownhostsproxy – get OpenSSH host keys"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sss_ssh_knownhostsproxy &#8211; get OpenSSH host keys </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>sss_ssh_knownhostsproxy</code> [<i>options</i>] <i>HOST</i> [<i>PROXY_COMMAND</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>sss_ssh_knownhostsproxy</code></p>
 <dd>acquires SSH host public keys for host <i>HOST</i>, stores them in a custom OpenSSH known_hosts file (see the &#8220;SSH_KNOWN_HOSTS FILE FORMAT&#8221; section of <code><a href="/docs/linux/man/8-sshd/">sshd</a></code>(8) for more information) /var/lib/sss/pubconf/known_hosts and establishes the connection to the host. </dd>
 <p> If <i>PROXY_COMMAND</i> is specified, it is used to create the connection to the host instead of opening a socket. </p>

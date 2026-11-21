@@ -1,5 +1,4 @@
 ---
-
 title: "repomdxml2solv(1)"
 name: "repomdxml2solv"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-repomdxml2solv/"
 description: "repomdxml2solv – convert a repomd.xml file into a solv file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> repomdxml2solv &#8211; convert a repomd.xml file into a solv file </p>
+<h2>SYNOPSIS</h2>
 <p> <code>repomdxml2solv</code> [<i>OPTIONS</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The repomd.xml file is the index file of a rpm-md repository, containing references to all data file with checksums. The repomdxml2solv tool reads the repomd.xml file from stdin and writes the parsed data as solv file to standard output. The data is stored as meta attributes in the result. </p>
 <p> <code>-q</code> <i>WHAT</i></p>
 <dl>

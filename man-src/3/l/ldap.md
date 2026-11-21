@@ -1,5 +1,4 @@
 ---
-
 title: "ldap(3)"
 name: "ldap"
 section: "3"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/3-ldap/"
 description: "ldap – OpenLDAP Lightweight Directory Access Protocol API"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ldap &#8211; OpenLDAP Lightweight Directory Access Protocol API </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ldap.h&gt;
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The Lightweight Directory Access Protocol (LDAP) (RFC 4510) provides access to X.500 directory services. These services may be stand-alone or part of a distributed directory service. This client API supports LDAP over TCP (RFC 4511), LDAP over TLS/SSL, and LDAP over IPC (UNIX domain sockets). This API supports SASL (RFC 4513) and Start TLS (RFC 4513) as well as a number of protocol extensions. This API is loosely based upon IETF/LDAPEXT C LDAP API draft specification, a (orphaned) work in progress. </p>
 <p> The OpenLDAP Software package includes a stand-alone server in <code><a href="/docs/linux/man/8-slapd/">slapd</a></code>(8), various LDAP clients, and an LDAP client library used to provide programmatic access to the LDAP protocol. This man page gives an overview of the LDAP library routines. </p>
 <p> Both synchronous and asynchronous APIs are provided. Also included are various routines to parse the results returned from these routines. These routines are found in the -lldap library. </p>

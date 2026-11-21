@@ -1,5 +1,4 @@
 ---
-
 title: "ldap_matchingrule2name(3)"
 name: "ldap_matchingrule2name"
 section: "3"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/3-ldap_matchingrule2name/"
 description: "ldap_str2syntax, ldap_syntax2str, ldap_syntax2name, ldap_syntax_free, ldap_str2matchingrule, ldap_matchingrule2str, ldap_matchingrule2name, ldap_matchingrule_free, ldap_str2attributetype, ldap_attr..."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ldap_str2syntax, ldap_syntax2str, ldap_syntax2name, ldap_syntax_free, ldap_str2matchingrule, ldap_matchingrule2str, ldap_matchingrule2name, ldap_matchingrule_free, ldap_str2attributetype, ldap_attributetype2str, ldap_attributetype2name, ldap_attributetype_free, ldap_str2objectclass, ldap_objectclass2str, ldap_objectclass2name, ldap_objectclass_free, ldap_scherr2str &#8211; Schema definition handling routines </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ldap.h&gt;
 #include &lt;ldap_schema.h&gt;
@@ -60,6 +62,7 @@ ldap_objectclass_free(oc)
 char *ldap_scherr2str(code)
 int code;
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> These routines are used to parse schema definitions in the syntax defined in RFC 4512 into structs and handle these structs. These routines handle four kinds of definitions: syntaxes, matching rules, attribute types and object classes. For each definition kind, four routines are provided. </p>
 <p> <code>ldap_str2xxx()</code> takes a definition in RFC 4512 format in argument <i>s</i> as a NUL-terminated string and returns, if possible, a pointer to a newly allocated struct of the appropriate kind. The caller is responsible for freeing the struct by calling <code>ldap_xxx_free()</code> when not needed any longer. The routine returns NULL if some problem happened. In this case, the integer pointed at by argument <i>code</i> will receive an error code (see below the description of <code>ldap_scherr2str()</code> for an explanation of the values) and a pointer to a NUL-terminated string will be placed where requested by argument <i>errp</i> , indicating where in argument <i>s</i> the error happened, so it must not be freed by the caller. Argument <i>flags</i> is a bit mask of parsing options controlling the relaxation of the syntax recognized. The following values are defined:</p>
 <dl>

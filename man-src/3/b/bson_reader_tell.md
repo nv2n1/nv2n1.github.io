@@ -1,5 +1,4 @@
 ---
-
 title: "bson_reader_tell(3)"
 name: "bson_reader_tell"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_reader_tell() – Tells the current position within the under
 
 <h2>NAME</h2>
 <p> bson_reader_tell() &#8211; Tells the current position within the underlying stream.</p>
+<h2>SYNOPSIS</h2>
 <pre>
 off_t
 bson_reader_tell (bson_reader_t *reader);
@@ -18,6 +18,7 @@ bson_reader_tell (bson_reader_t *reader);
 <dl>
 <dt><code>reader</code></dt>
 <dd> A <code>bson_reader_t</code> \&amp;.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Tells the current position within the underlying stream. </p>
 <h2>RETURNS</h2>
 <p> -1 on failure, otherwise the offset within the underlying stream. </p>

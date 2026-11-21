@@ -1,5 +1,4 @@
 ---
-
 title: "bf_copy(1)"
 name: "bf_copy"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-bf_copy/"
 description: "bf_copy – shell script to copy a bogofilter working directory"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bf_copy &#8211; shell script to copy a bogofilter working directory </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>bf_copy</code> [-c] <i>source_dir</i> <i>destination_dir</i></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>bf_copy</code></p>
 <dd>copies a bogofilter working directory to another directory. Currently it copies the database files (*.db), related files (log.*), and DB_CONFIG (if present).</dd>
 <h2>OPTIONS</h2>

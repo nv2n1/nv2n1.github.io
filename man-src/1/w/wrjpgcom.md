@@ -1,5 +1,4 @@
 ---
-
 title: "wrjpgcom(1)"
 name: "wrjpgcom"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-wrjpgcom/"
 description: "wrjpgcom – insert text comments into a JPEG file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> wrjpgcom &#8211; insert text comments into a JPEG file </p>
+<h2>SYNOPSIS</h2>
 <p> <code>wrjpgcom</code> [ <code>-replace</code> ] [ <code>-comment</code><i> text</i> ] [ <code>-cfile</code><i> name</i> ] [ <i>filename</i> ] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>wrjpgcom</code> reads the named JPEG/JFIF file, or the standard input if no file is named, and generates a new JPEG/JFIF file on standard output. A comment block is added to the file. </p>
 <p> The JPEG standard allows &quot;comment&quot; (COM) blocks to occur within a JPEG file. Although the standard doesn&#8217;t actually define what COM blocks are for, they are widely used to hold user-supplied text strings. This lets you add annotations, titles, index terms, etc to your JPEG files, and later retrieve them as text. COM blocks do not interfere with the image stored in the JPEG file. The maximum size of a COM block is 64K, but you can have as many of them as you like in one JPEG file. </p>
 <p> <code>wrjpgcom</code> adds a COM block, containing text you provide, to a JPEG file. Ordinarily, the COM block is added after any existing COM blocks; but you can delete the old COM blocks if you wish.</p>

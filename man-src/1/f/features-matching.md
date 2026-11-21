@@ -1,5 +1,4 @@
 ---
-
 title: "features-matching(1)"
 name: "features-matching"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-features-matching/"
 description: "features-matching – Demonstration of image feature matching"
 ---
 
+<h2 class="name">NAME</h2>
+<p> features-matching &#8211; Demonstration of image feature matching </p>
+<h2>SYNOPSIS</h2>
 <p> features-matching</p>
+<h2>DESCRIPTION</h2>
 <p> <code>features-matching</code> is a command-line application which takes a pair of images and computes the descriptors selected by the user, next showing the potential matchings between the so computed descriptors.</p>
 <h2>BUGS</h2>
 <p> Please report bugs at <a rel="nofollow" href="http://sourceforge.net/tracker/?group_id=205280">http://sourceforge.net/tracker/?group_id=205280</a>&amp;atid=993006</p>

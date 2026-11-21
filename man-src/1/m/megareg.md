@@ -1,5 +1,4 @@
 ---
-
 title: "megareg(1)"
 name: "megareg"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-megareg/"
 description: "megareg – Register new Mega.co.nz account"
 ---
 
+<h2 class="name">NAME</h2>
+<p> megareg &#8211; Register new Mega.co.nz account </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 megareg[--scripted]-- register --email&lt;email&gt; --name&lt;realname&gt; --password&lt;password&gt;
     megareg[--scripted]-- verify&lt;state&gt;&lt;link&gt;
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Registers new Mega.co.nz account. Registration is split into two steps: </p>
 <dl>
 <dt>

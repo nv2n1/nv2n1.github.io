@@ -1,5 +1,4 @@
 ---
-
 title: "expect_multixterm(1)"
 name: "expect_multixterm"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-expect_multixterm/"
 description: "multixterm – drive multiple xterms separately or together"
 ---
 
+<h2 class="name">NAME</h2>
+<p> multixterm &#8211; drive multiple xterms separately or together </p>
+<h2>SYNOPSIS</h2>
 <p> <code>multixterm</code> [ <i>args</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> Multixterm creates multiple xterms that can be driven together or separately. </p>
 <p> In its simplest form, multixterm is run with no arguments and commands are interactively entered in the first entry field. Press return (or click the &quot;new xterm&quot; button) to create a new xterm running that command. </p>
 <p> Keystrokes in the &quot;stdin window&quot; are redirected to all xterms started by multixterm. xterms may be driven separately simply by focusing on them. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "smbcontrol(1)"
 name: "smbcontrol"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-smbcontrol/"
 description: "smbcontrol – send messages to smbd, nmbd or winbindd processes"
 ---
 
+<h2 class="name">NAME</h2>
+<p> smbcontrol &#8211; send messages to smbd, nmbd or winbindd processes </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt>
 </dt><dd>smbcontrol [-s] [-t|&#8211;timeout]</dd>
 <dt>
 </dt><dd>smbcontrol [destination] [message-type] [parameter]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This tool is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> smbcontrol is a very small program, which sends messages to a <code><a href="/docs/linux/man/8-smbd/">smbd</a></code>(8), a <code><a href="/docs/linux/man/8-nmbd/">nmbd</a></code>(8), or a <code><a href="/docs/linux/man/8-winbindd/">winbindd</a></code>(8) daemon running on the system.</p>
 <h2>OPTIONS</h2>

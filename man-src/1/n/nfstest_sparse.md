@@ -1,5 +1,4 @@
 ---
-
 title: "nfstest_sparse(1)"
 name: "nfstest_sparse"
 section: "1"
@@ -10,7 +9,9 @@ description: "nfstest_sparse – Sparse file tests"
 
 <h2>NAME</h2>
 <p> nfstest_sparse &#8211; Sparse file tests</p>
+<h2>SYNOPSIS</h2>
 <p> nfstest_sparse &#8211;server &lt;server&gt; [options]</p>
+<h2>DESCRIPTION</h2>
 <p> Verify correct functionality of sparse files. These are files which have unallocated or uninitialized data blocks as holes. The new NFSv4.2 operation SEEK is used to search for the next hole or data segment in a file. </p>
 <p> Basic tests verify the SEEK operation returns the correct offset of the next hole or data with respect to the starting offset given to the seek system call. Verify the SEEK operation is sent to the server with the correct stateid as a READ call. All files have a virtual hole at the end of the file so when searching for the next hole, even if the file does not have a hole, it returns the size of the file. </p>
 <p> Some tests include testing at the protocol level by taking a packet trace and inspecting the actual packets sent to the server. </p>

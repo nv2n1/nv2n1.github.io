@@ -1,5 +1,4 @@
 ---
-
 title: "perlfreebsd(1)"
 name: "perlfreebsd"
 section: "1"
@@ -7,9 +6,14 @@ letter: "p"
 url: "/docs/linux/man/1-perlfreebsd/"
 ---
 
-perlfreebsd - Perl version 5 on FreeBSD systems 
+<h2 class="name">NAME</h2>
+ 
 
-This document describes various features of FreeBSD that will affect how Perl version 5 (hereafter just Perl) is compiled and/or runs.
+ perlfreebsd - Perl version 5 on FreeBSD systems 
+
+<h2>DESCRIPTION</h2>
+
+ This document describes various features of FreeBSD that will affect how Perl version 5 (hereafter just Perl) is compiled and/or runs.
 
 <h3>FreeBSD core dumps from readdir_r with ithreads</h3>
 

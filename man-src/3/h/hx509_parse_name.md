@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-hx509_parse_name/"
 description: "hx509 name functions –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hx509 name functions &#8211; </p>
 <h3>Functions</h3>
 <p> int <code>hx509_general_name_unparse</code> (GeneralName *, char **) </p>
 <p> int <code>hx509_name_binary</code> (const hx509_name, heim_octet_string *) </p>

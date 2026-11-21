@@ -1,5 +1,4 @@
 ---
-
 title: "g_sorient(1)"
 name: "g_sorient"
 section: "1"
@@ -11,7 +10,9 @@ description: "g_sorient – analyzes solvent orientation around solutes"
 <h2>NAME</h2>
 <p> g_sorient &#8211; analyzes solvent orientation around solutes </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>g_sorient</code> <code>-f</code><i> traj.xtc </i> <code>-s</code><i> topol.tpr </i> <code>-n</code><i> index.ndx </i> <code>-o</code><i> sori.xvg </i> <code>-no</code><i> snor.xvg </i> <code>-ro</code><i> sord.xvg </i> <code>-co</code><i> scum.xvg </i> <code>-rc</code><i> scount.xvg </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-[no]com</code><i></i> <code>-[no]v23</code><i></i> <code>-rmin</code><i> real </i> <code>-rmax</code><i> real </i> <code>-cbin</code><i> real </i> <code>-rbin</code><i> real </i> <code>-[no]pbc</code><i></i></p>
+<h2>DESCRIPTION</h2>
 <p> g_sorient analyzes solvent orientation around solutes. It calculates two angles between the vector from one or more reference positions to the first atom of each solvent molecule: theta1: the angle with the vector from the first atom of the solvent molecule to the midpoint between atoms 2 and 3. </p>
 <p> theta2: the angle with the normal of the solvent plane, defined by the same three atoms, or when the option <code> -v23</code> is set the angle with the vector between atoms 2 and 3. </p>
 <p> The reference can be a set of atoms or the center of mass of a set of atoms. The group of solvent atoms should consist of 3 atoms per solvent molecule. Only solvent molecules between <code> -rmin</code> and <code> -rmax</code> are considered for <code> -o</code> and <code> -no</code> each frame. </p>

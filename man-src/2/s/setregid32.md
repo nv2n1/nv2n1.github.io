@@ -1,5 +1,4 @@
 ---
-
 title: "setregid32(2)"
 name: "setregid32"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-setregid32/"
 description: "setreuid, setregid – set real and/or effective user or group ID"
 ---
 
+<h2 class="name">NAME</h2>
+<p> setreuid, setregid &#8211; set real and/or effective user or group ID </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code><br />
  <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int setreuid(uid_t </code><i>ruid</i><code>, uid_t </code><i>euid</i><code>);</code><br />
@@ -19,6 +21,7 @@ description: "setreuid, setregid – set real and/or effective user or group ID"
 </dt><dd> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>setreuid</code>() sets real and effective user IDs of the calling process. </p>
 <p> Supplying a value of -1 for either the real or effective user ID forces the system to leave that ID unchanged. </p>
 <p> Unprivileged processes may only set the effective user ID to the real user ID, the effective user ID, or the saved set-user-ID. </p>

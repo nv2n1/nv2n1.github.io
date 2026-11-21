@@ -1,5 +1,4 @@
 ---
-
 title: "fcloseall(3)"
 name: "fcloseall"
 section: "3"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/3-fcloseall/"
 description: "fcloseall – close all open streams"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fcloseall &#8211; close all open streams </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;stdio.h&gt;
 int fcloseall(void);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>fcloseall</code>() function closes all of the calling process&#8217;s open streams. Buffered output for each stream is written before it is closed (as for <code><a href="/docs/linux/man/3-fflush/">fflush</a></code>(3)); buffered input is discarded. </p>
 <p> The standard streams, <i>stdin</i>, <i>stdout</i>, and <i>stderr</i> are also closed.</p>
 <h2>RETURN VALUE</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "perlsub(1)"
 name: "perlsub"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-perlsub/"
 description: "perlsub – Perl subroutines"
 ---
 
+<h2 class="name">NAME</h2>
+<p> perlsub &#8211; Perl subroutines </p>
+<h2>SYNOPSIS</h2>
 <p> To declare subroutines: </p>
 <pre><code>
 sub NAME;
@@ -54,6 +56,7 @@ $subref = sub(SIG) BLOCK;<br />
 #Circumvent prototypes.<br />
     &amp;NAME;<br />
 #Makes current @_ visible to called subroutine.</p>
+<h2>DESCRIPTION</h2>
 <p> Like many languages, Perl provides for user-defined subroutines. These may be located anywhere in the main program, loaded in from other files via the <tt>&quot;do&quot;</tt>, <tt>&quot;require&quot;</tt>, or <tt>&quot;use&quot;</tt> keywords, or generated on the fly using <tt>&quot;eval&quot;</tt> or anonymous subroutines. You can even call a function indirectly using a variable containing its name or a <font SIZE="-1">CODE</font> reference. </p>
 <p> The Perl model for function call and return values is simple: all functions are passed as parameters one single flat list of scalars, and all functions likewise return to their caller one single flat list of scalars. Any arrays or hashes in these call and return lists will collapse, losing their identities&#8212;but you may always use pass-by-reference instead to avoid this. Both call and return lists may contain as many or as few scalar elements as you&#8217;d like. (Often a function without an explicit return statement is called a subroutine, but there&#8217;s really no difference from Perl&#8217;s perspective.) </p>
 <p> Any arguments passed in show up in the array <tt>@_</tt>. (They may also show up in lexical variables introduced by a signature; see &#8220;Signatures&#8221; below.) Therefore, if you called a function with two arguments, those would be stored in <tt>$_[0]</tt> and <tt>$_[1]</tt>. The array <tt>@_</tt> is a local array, but its elements are aliases for the actual scalar parameters. In particular, if an element <tt>$_[0]</tt> is updated, the corresponding argument is updated (or an error occurs if it is not updatable). If an argument is an array or hash element which did not exist when the function was called, that element is created only when (and if) it is modified or a reference to it is taken. (Some earlier versions of Perl created the element whether or not the element was assigned to.) Assigning to the whole array <tt>@_</tt> removes that aliasing, and does not update any arguments. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "system-config-printer-applet(1)"
 name: "system-config-printer-applet"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-system-config-printer-applet/"
 description: "system-config-printer-applet – print job manager"
 ---
 
+<h2 class="name">NAME</h2>
+<p> system-config-printer-applet &#8211; print job manager </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>system-config-printer-applet</code> [&#8211;help] [&#8211;version] [&#8211;debug]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>system-config-printer-applet</code></p>
 <dd>is a print job manager for CUPS. Normally it will display a printer icon in the notification area, greyed out when there are no print jobs for the current user. Clicking on the icon displays a simple print job manager for cancelling or reprinting jobs. </dd>
 <p> To save memory, the applet waits first of all until the user has printed a job before putting the icon in the notification area. To invoke the print job manager before a job has been printed, run the applet with the <code>&#8211;no-tray-icon</code> option: a desktop file is provided for this, so that it should appear in the system menu. </p>

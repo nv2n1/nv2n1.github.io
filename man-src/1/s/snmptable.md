@@ -1,5 +1,4 @@
 ---
-
 title: "snmptable(1)"
 name: "snmptable"
 section: "1"
@@ -10,7 +9,9 @@ description: "snmptable – retrieve an SNMP table and display it in tabular for
 
 <h2>NAME</h2>
 <p> snmptable &#8211; retrieve an SNMP table and display it in tabular form</p>
+<h2>SYNOPSIS</h2>
 <p> <code>snmptable</code> [COMMON OPTIONS] [-Cb] [-CB] [-Ch] [-CH] [-Ci] [-Cf STRING] [-Cw WIDTH] AGENT TABLE-OID</p>
+<h2>DESCRIPTION</h2>
 <p> <code>snmptable</code> is an SNMP application that repeatedly uses the SNMP GETNEXT or GETBULK requests to query for information on a network entity. The parameter <i>TABLE-OID</i> must specify an SNMP table. </p>
 <p> snmptable is an SNMP application that repeatedly uses the SNMP GETNEXT or GETBULK requests to query for information on a network entity. The parameter TABLE-OID must specify an SNMP table. </p>
 <p> AGENT identifies a target SNMP agent, which is instrumented to monitor the gievn objects. At its simplest, the AGENT specification will consist of a hostname or an IPv4 address. In this situation, the command will attempt communication with the agent, using UDP/IPv4 to port 161 of the given target host. See <i><a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1)</i> for a full list of the possible formats for AGENT.</p>

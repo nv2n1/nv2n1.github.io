@@ -1,5 +1,4 @@
 ---
-
 title: "tee(2)"
 name: "tee"
 section: "2"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/2-tee/"
 description: "tee – duplicating pipe content"
 ---
 
+<h2 class="name">NAME</h2>
+<p> tee &#8211; duplicating pipe content </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;fcntl.h&gt;
 ssize_t tee(int fd_in, int fd_out, size_t len, unsigned int flags);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>tee</code>() duplicates up to <i>len</i> bytes of data from the pipe referred to by the file descriptor <i>fd_in</i> to the pipe referred to by the file descriptor <i>fd_out</i>. It does not consume the data that is duplicated from <i>fd_in</i>; therefore, that data can be copied by a subsequent <code><a href="/docs/linux/man/2-splice/">splice</a></code>(2). </p>
 <p> <i>flags</i> is a bit mask that is composed by ORing together zero or more of the following values:</p>
 <dl>

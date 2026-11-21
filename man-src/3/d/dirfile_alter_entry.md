@@ -1,5 +1,4 @@
 ---
-
 title: "dirfile_alter_entry(3)"
 name: "dirfile_alter_entry"
 section: "3"
@@ -10,9 +9,11 @@ description: "dirfile_alter_entry — modify the metadata of a dirfile field"
 
 <h2>NAME</h2>
 <p> dirfile_alter_entry &#8212; modify the metadata of a dirfile field</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
 <dl>
 <dt> <code>int dirfile_alter_entry(DIRFILE *</code><i>dirfile</i><code>, const char *</code><i>field_code</i><code>,</code> <code>const gd_entry_t *</code><i>entry</i><code>, int </code><i>recode</i><code>);</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>dirfile_alter_entry</code>() function modifies the field specified by <i>field_code</i> in the dirfile specified by <i>dirfile</i> to correspond to the new parameters specified by <i>entry</i>. In addition to specifying a regular field, <i>field_code</i> may also refer to a metafield by specifying it using its full (slashed) field code. However, <i>field_code</i> should never contain a represenation suffix. </dd>
 <p> The form of <i>entry</i> is described in detail in the <code><a href="/docs/linux/man/3-get_entry/">get_entry</a></code>(3) man page. The <i>entry</i>-&gt;<i>field</i> and <i>entry</i>-&gt;<i>fragment_index</i> members are ignored by this function and need not be initialised. All other members appropriate to the field type of <i>field_code</i> should be initialised, except as noted below. To change the fragment index of a field, use <code><a href="/docs/linux/man/3-dirfile_move/">dirfile_move</a></code>(3). To change the name of a field, use <code><a href="/docs/linux/man/3-dirfile_rename/">dirfile_rename</a></code>(3). </p>
 <p> If <i>field_code</i> specifies a <code>RAW</code> field and the <i>recode</i> argument is non-zero, the binary file associated with the field will be converted for changes in data type and samples-per-frame. If <i>recode</i> is zero, no binary file conversion will take place. </p>

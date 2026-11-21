@@ -1,5 +1,4 @@
 ---
-
 title: "crypt_checksalt(3)"
 name: "crypt_checksalt"
 section: "3"
@@ -9,10 +8,13 @@ description: "crypt_checksalt – validate a crypt setting string"
 ---
 
 <p>libxcrypt</p>
+<h2 class="name">NAME</h2>
 <p> <code>crypt_checksalt</code> &#8211; validate a crypt setting string </p>
 <h2>LIBRARY</h2>
 <p> Lb libcrypt</p>
+<h2>SYNOPSIS</h2>
 <p> In crypt.h Ft int Fo crypt_checksalt Fa const char *setting Fc</p>
+<h2>DESCRIPTION</h2>
 <p> <code>crypt_checksalt</code> checks the <i>setting</i> string against the system configuration and reports whether the hashing method and parameters it specifies are acceptable. It is intended to be used by programs such as <a href="/docs/linux/man/1-login/">login</a>(1) to determine whether the user&#8217;s passphrase should be re-hashed using the currently preferred hashing method.</p>
 <h2>RETURN VALUES</h2>
 <p> The return value is 0 if there is nothing wrong with this setting. Otherwise, it is one of the following constants:</p>

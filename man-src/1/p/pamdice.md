@@ -1,5 +1,4 @@
 ---
-
 title: "pamdice(1)"
 name: "pamdice"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pamdice/"
 description: "pamdice – slice a Netpbm image into many horizontally and/or vertically"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pamdice &#8211; slice a Netpbm image into many horizontally and/or vertically</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pamslice</code> <code>-outstem=</code><i>filenamestem</i> [<code>-width=</code><i>width</i>] [<code>-height=</code><i>height</i>] [<code>-verbose</code>] [<i>filename</i>] </p>
 <p> You can use the minimum unique abbreviation of the options. You can use two hyphens instead of one. You can separate an option name from its value with white space instead of an equals sign. </p>
+<h2>DESCRIPTION</h2>
 <p> Reads a PAM, PBM, PGM, or PPM image as input. Splits it horizontally and/or vertically into equal size pieces and writes them into separate files as the same kind of image. </p>
 <p> See the <code>-outstem</code> option for information on naming of the output files. </p>
 <p> The <code>-width</code> and <code>-height</code> options determine the size of the output pieces. </p>

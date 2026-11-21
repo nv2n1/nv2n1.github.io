@@ -1,5 +1,4 @@
 ---
-
 title: "byobu-reconnect-sockets(1)"
 name: "byobu-reconnect-sockets"
 section: "1"
@@ -10,6 +9,7 @@ description: "byobu-reconnect-sockets – Sourcable script that updates GPG_AGEN
 
 <h2>NAME</h2>
 <p> byobu-reconnect-sockets &#8211; Sourcable script that updates GPG_AGENT_INFO and DBUS_SESSION_BUS_ADDRESS in the environment </p>
+<h2>DESCRIPTION</h2>
 <p> <code>byobu-reconnect-sockets</code> is a sourcable bit of shell code that will update the GPG_AGENT_INFO and DBUS_SESSION_BUS_ADDRESS environment variables in the current shell, such that you may restablish connection to <code><a href="/docs/linux/man/1-gpg-agent/">gpg-agent</a></code>(1) and <code><a href="/docs/linux/man/1-dbus-daemon/">dbus-daemon</a>(1)</code>. </p>
 <p> This is often useful when reattaching to a detached Byobu session. </p>
 <dl>

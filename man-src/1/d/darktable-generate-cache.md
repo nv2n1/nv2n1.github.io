@@ -1,5 +1,4 @@
 ---
-
 title: "darktable-generate-cache(1)"
 name: "darktable-generate-cache"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-darktable-generate-cache/"
 description: "darktable-generate-cache – update darktable’s thumbnail cache"
 ---
 
+<h2 class="name">NAME</h2>
+<p> darktable-generate-cache &#8211; update darktable&#8217;s thumbnail cache </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 darktable - generate - cache[-h, --help; --version][-m, --max - mip&lt;0 - 7&gt;][--core&lt;darktable options&gt;]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>darktable</code> is a digital photography workflow application for <code>Linux</code>, <code>Mac </code><font SIZE="-1"><code>OS X</code></font> and several other <code>Unices</code>. It&#8217;s described further in <i><a href="/docs/linux/man/1-darktable/">darktable</a></i>(1). </p>
 <p> <code>darktable-generate-cache</code> updates darktable&#8217;s thumbnail cache. You can start this program to generate all missing thumbnails in the background when your computer is idle.</p>
 <h2>OPTIONS</h2>

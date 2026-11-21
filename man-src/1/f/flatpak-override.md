@@ -1,5 +1,4 @@
 ---
-
 title: "flatpak-override(1)"
 name: "flatpak-override"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-flatpak-override/"
 description: "flatpak-override – Override application requirements"
 ---
 
+<h2 class="name">NAME</h2>
+<p> flatpak-override &#8211; Override application requirements </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak override</code> [OPTION&#8230;] [APP]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>Overrides the application specified runtime requirements. This can be used to grant a sandboxed application more or less resources than it requested. </dd>
 <p> By default the application gets access to the resources it requested when it is started. But the user can override it on a particular instance by specifying extra arguments to flatpak run, or every time by using flatpak override. </p>
 <p> If the application id is not specified then the overrides affect all applications, but the per-application overrides can override the global overrides. </p>

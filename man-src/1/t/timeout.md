@@ -1,5 +1,4 @@
 ---
-
 title: "timeout(1)"
 name: "timeout"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-timeout/"
 description: "timeout – run a command with a time limit"
 ---
 
+<h2 class="name">NAME</h2>
+<p> timeout &#8211; run a command with a time limit </p>
+<h2>SYNOPSIS</h2>
 <p> <code>timeout</code> [<i>,OPTION/</i>] <i>,DURATION COMMAND /</i>[<i>,ARG/</i>]&#8230;<br />
  <code>timeout</code> [<i>,OPTION/</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Start COMMAND, and kill it if still running after DURATION. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>

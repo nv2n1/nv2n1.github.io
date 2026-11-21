@@ -1,5 +1,4 @@
 ---
-
 title: "stg(1)"
 name: "stg"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-stg/"
 description: "stg – Manage stacks of patches using the Git content tracker"
 ---
 
+<h2 class="name">NAME</h2>
+<p> stg &#8211; Manage stacks of patches using the Git content tracker </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 stg[--version | --help] stg[--help&lt;command&gt; | &lt;command&gt; --help] stg&lt;command&gt;[COMMAND OPTIONS][ARGS]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> StGit (Stacked Git) is an application that provides a convenient way to maintain a <i>patch stack</i> on top of a Git branch: </p>
 <dl>
 <dt>

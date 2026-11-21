@@ -1,5 +1,4 @@
 ---
-
 title: "innochecksum(1)"
 name: "innochecksum"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-innochecksum/"
 description: "innochecksum – offline InnoDB file checksum utility"
 ---
 
+<h2 class="name">NAME</h2>
+<p> innochecksum &#8211; offline InnoDB file checksum utility </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>innochecksum [</code><i>options</i><code>] </code><i>file_name</i></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>innochecksum</code></p>
 <dd>prints checksums for InnoDB files. This tool reads an InnoDB tablespace file, calculates the checksum for each page, compares the calculated checksum to the stored checksum, and reports mismatches, which indicate damaged pages. It was originally developed to speed up verifying the integrity of tablespace files after power outages but can also be used after file copies. Because checksum mismatches cause InnoDB to deliberately shut down a running server, it may be preferable to use this tool rather than waiting for an in-production server to encounter the damaged pages. </dd>
 <p> <code>innochecksum</code> cannot be used on tablespace files that the server already has open. For such files, you should use CHECK TABLE to check tables within the tablespace. Attempting to run <code>innochecksum</code> on a tablespace that the server already has open will result in an &#8220;Unable to lock file&#8221; error. </p>

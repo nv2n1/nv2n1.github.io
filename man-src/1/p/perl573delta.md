@@ -1,5 +1,4 @@
 ---
-
 title: "perl573delta(1)"
 name: "perl573delta"
 section: "1"
@@ -7,7 +6,9 @@ letter: "p"
 url: "/docs/linux/man/1-perl573delta/"
 description: "perl573delta – what’s new for perl v5.7.3"
 ---
-
+<h2 class="name">NAME</h2>
+<p> perl573delta - what&#8217;s new for perl v5.7.3 </p>
+<h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.7.2 release and the 5.7.3 release. </p>
 <p> (To view the differences between the 5.6.0 release and the 5.7.0 release, see perl570delta. To view the differences between the 5.7.0 release and the 5.7.1 release, see perl571delta. To view the differences between the 5.7.1 release and the 5.7.2 release, see perl572delta.)  </p>
 <h2>Changes</h2>

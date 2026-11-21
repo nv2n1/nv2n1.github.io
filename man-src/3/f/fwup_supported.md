@@ -1,5 +1,4 @@
 ---
-
 title: "fwup_supported(3)"
 name: "fwup_supported"
 section: "3"
@@ -10,6 +9,7 @@ description: "libfwup – library to support management of system firmware updat
 
 <h2>NAME</h2>
 <p> libfwup &#8211; library to support management of system firmware updates</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;fwup.h&gt;
 int fwup_supported(void);
@@ -45,6 +45,7 @@ int fwup_get_ux_capsule_info(uint32_t *screen_x_size,
 uint32_t *screen_y_size);
  - get the dimensions of the screen during boot
 </code></pre>
+<h2>DESCRIPTION</h2>
 <pre><code>
 int fwup_supported(void);
 Tests if the current machine supports firmware updates typedef struct fwup_resource_s fwup_resource;

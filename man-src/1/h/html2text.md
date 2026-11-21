@@ -1,5 +1,4 @@
 ---
-
 title: "html2text(1)"
 name: "html2text"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-html2text/"
 description: "html2text – an advanced HTML-to-text converter"
 ---
 
+<h2 class="name">NAME</h2>
+<p> html2text &#8211; an advanced HTML-to-text converter </p>
+<h2>SYNOPSIS</h2>
 <p> <code>html2text -help</code><br />
  <code>html2text -version</code><br />
  <code>html2text</code> [ <code>-unparse</code> | <code>-check</code> ] [ <code>-debug-scanner</code> ] [ <code>-debug-parser</code> ] [ <code>-rcfile</code> <i>path</i> ] [ <code>-style</code> ( <code>compact</code> | <code>pretty</code> ) ] [ <code>-width</code> <i>width</i> ] [ <code>-o</code> <i>output-file</i> ] [ <code>-nobs</code> ] [ <code>-ascii</code> | <code>-utf8</code> ] [ <code>-nometa</code> ] [ <i>input-file</i> &#8230; ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>html2text</code> reads HTML documents from the <i>input-file</i>s, formats each of them into a stream of plain text characters, and writes the result to standard output (or into <i>output-file</i>, if the <code>-o</code> command line option is used). </p>
 <p> If no <i>input-file</i>s are specified on the command line, <code>html2text</code> reads from standard input. A dash as the <i>input-file</i> is an alternate way to specify standard input. </p>
 <p> <code>html2text</code> understands all HTML 3.2 constructs, but can render only part of them due to the limitations of the text output format. However, the program attempts to provide good substitutes for the elements it cannot render. <code>html2text</code> parses HTML 4 input, too, but not always as successful as other HTML processors. It also accepts syntactically incorrect input, and attempts to interpret it &quot;reasonably&quot;. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "aa_getkey(3)"
 name: "aa_getkey"
 section: "3"
@@ -10,6 +9,7 @@ description: "aa_getkey – return next keypress event from queue."
 
 <h2>NAME</h2>
 <p> aa_getkey &#8211; return next keypress event from queue.</p>
+<h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>
 <p> int aa_getkey<br />
  (<br />
@@ -22,6 +22,7 @@ description: "aa_getkey – return next keypress event from queue."
 <dd> Specifies the AA-lib context to operate on.</dd>
 <dt><code>int wait</code></dt>
 <dd> 1 if you wish to wait for the even when queue is empty.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Return next keypress event from queue.</p>
 <h2>RETURNS</h2>
 <p> Next keypress event from queue (values lower than 256 are used to report ascii values of pressed keys and higher values are used to represent some special keys like arrows) See the AA-lib texinfo documentation for more details.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "srp_daemon(1)"
 name: "srp_daemon"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-srp_daemon/"
 description: "srp_daemon – Discovers SRP targets in an InfiniBand Fabric"
 ---
 
+<h2 class="name">NAME</h2>
+<p> srp_daemon &#8211; Discovers SRP targets in an InfiniBand Fabric</p>
+<h2>SYNOPSIS</h2>
 <p> <code>srp_daemon [-vVcaeon] [-d </code><i>umad-device</i> | -i <i>infiniband-device</i> [-p <i>port-num</i>]] [-t <i>timeout(ms)</i>] [-r <i>retries</i>] [-R <i>Rescan-time</i>] [-f <i>rules-File</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> Discovers and connects to InfiniBand SCSI RDMA Protocol (SRP) targets in an IB fabric. </p>
 <p> Each srp_daemon instance operates on one local port. Upon boot it performs a full rescan of the fabric then waits for an srp_daemon event. An srp_daemon event can be a join of a new machine to the fabric, a change in the capabilities of a machine, an SA change, or an expiration of a predefined timeout. </p>
 <p> When a new machine joins the fabric, srp_daemon checks if it is a target. When there is a change of capabilities, srp_daemon checks if the machine has turned into a target. When there is an SA change or a timeout expiration, srp_daemon performs a full rescan of the fabric. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "euhicp(3)"
 name: "euhicp"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-euhicp/"
 description: "ql/indexes/inflation/euhicp.hpp – EU HICP index."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/indexes/inflation/euhicp.hpp &#8211; EU HICP index. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/indexes/inflationindex.hpp&gt;<br />
  #include &lt;ql/currencies/europe.hpp&gt; </p>
 <h3>Classes</h3>

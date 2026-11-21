@@ -1,5 +1,4 @@
 ---
-
 title: "euscale-disable-metrics-collection(1)"
 name: "euscale-disable-metrics-collection"
 section: "1"
@@ -10,10 +9,12 @@ description: "euscale-disable-metrics-collection – Disable monitoring of an au
 
 <h2>NAME</h2>
 <p> euscale-disable-metrics-collection &#8211; Disable monitoring of an auto-scaling group&#8217;s group metrics</p>
+<h2>SYNOPSIS</h2>
 <p> euscale-disable-metrics-collection [-m METRIC1,METRIC2,&#8230;] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID]</dt>
 <dd> [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ASGROUP</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Disable monitoring of an auto-scaling group&#8217;s group metrics</p>
 <h3>positional arguments:</h3>
 <dl>

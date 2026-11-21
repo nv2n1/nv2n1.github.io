@@ -1,5 +1,4 @@
 ---
-
 title: "ibv_fork_init(3)"
 name: "ibv_fork_init"
 section: "3"
@@ -7,7 +6,14 @@ letter: "i"
 url: "/docs/linux/man/3-ibv_fork_init/"
 ---
 
-ibv_fork_init - initialize libibverbs to support fork() 
+<h2 class="name">NAME</h2>
+ 
+
+ 
+
+ ibv_fork_init - initialize libibverbs to support fork() 
+
+<h2>SYNOPSIS</h2>
 
 <dl>
 <dt>
@@ -16,7 +22,11 @@ ibv_fork_init - initialize libibverbs to support fork()
 int ibv_fork_init(void);
 </code></pre></dd></dl>
 
-ibv_fork_init() initializes libibverbs's data structures to handle fork() function calls correctly and avoid data corruption, whether fork() is called explicitly or implicitly (such as in system()). 
+<h2>DESCRIPTION</h2>
+
+ 
+
+ ibv_fork_init() initializes libibverbs's data structures to handle fork() function calls correctly and avoid data corruption, whether fork() is called explicitly or implicitly (such as in system()). 
 
  It is not necessary to use this function if all parent process threads are always blocked until all child processes end or change address spaces via an exec() operation.
 

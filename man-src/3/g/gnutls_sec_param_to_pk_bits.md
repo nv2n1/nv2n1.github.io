@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_sec_param_to_pk_bits(3)"
 name: "gnutls_sec_param_to_pk_bits"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_sec_param_to_pk_bits – API function"
 
 <h2>NAME</h2>
 <p> gnutls_sec_param_to_pk_bits &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>unsigned int gnutls_sec_param_to_pk_bits(gnutls_pk_algorithm_t </code><i>algo</i><code>, gnutls_sec_param_t </code><i>param</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_sec_param_to_pk_bits – API function"
 <dd> is a public key algorithm</dd>
 <dt>gnutls_sec_param_t param</dt>
 <dd> is a security parameter</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> When generating private and public key pairs a difficult question is which size of &quot;bits&quot; the modulus will be in RSA and the group size in DSA. The easy answer is 1024, which is also wrong. This function will convert a human understandable security parameter to an appropriate size for the specific algorithm.</p>
 <h2>RETURNS</h2>
 <p> The number of bits, or (0).</p>

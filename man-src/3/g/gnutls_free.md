@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_free(3)"
 name: "gnutls_free"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_free – Returns a free() like function"
 
 <h2>NAME</h2>
 <p> gnutls_free &#8211; Returns a free() like function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/gnutls.h">gnutls/gnutls.h</a>&gt;</code> </p>
 <p> <code>void gnutls_free(void * </code><i>ptr</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>void * ptr</dt>
 <dd></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will free data pointed by ptr. </p>
 <p> The deallocation function used is the one set by <code>gnutls_global_set_mem_functions()</code>.</p>
 <h2>REPORTING BUGS</h2>

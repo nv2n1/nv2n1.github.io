@@ -1,5 +1,4 @@
 ---
-
 title: "prune(1)"
 name: "prune"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-prune/"
 description: "prune – Prune directed graphs"
 ---
 
+<h2 class="name">NAME</h2>
+<p> prune &#8211; Prune directed graphs </p>
+<h2>SYNOPSIS</h2>
 <p> <code>prune</code> [ <code>-n</code><i> node</i> ] [ <code>-N</code><i> attrspec</i> ] [ <code>-v</code> ] [ <code>&#8211;</code>(<code>h</code>|<code>?</code>) ] [ <i>files &#8230;</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>prune</code> reads directed graphs in the same format used by <code><a href="/docs/linux/man/1-dot/">dot</a>(1)</code> and removes subgraphs rooted at nodes specified on the command line via options. These nodes themselves will not be removed, but can be given attributes so that they can be easily located by a graph stream editor such as <code><a href="/docs/linux/man/1-gvpr/">gvpr</a>(1).</code> <code>prune</code> correctly handles cycles, loops and multi-edges. </p>
 <p> Both options can appear multiple times on the command line. All subgraphs rooted at the respective nodes given will then be processed. If a node does not exist, <code>prune</code> will skip it and print a warning message to stderr. If multiple attributes are given, they will be applied to all nodes that have been processed. <code>prune</code> writes the result to the stdout.</p>
 <h2>OPTIONS</h2>

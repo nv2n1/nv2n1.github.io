@@ -1,5 +1,4 @@
 ---
-
 title: "makempy(1)"
 name: "makempy"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-makempy/"
 description: "makempy – convert PDF or PostScript text to MetaPost graphics"
 ---
 
+<h2 class="name">NAME</h2>
+<p> makempy &#8211; convert PDF or PostScript text to MetaPost graphics</p>
+<h2>SYNOPSIS</h2>
 <p> <code>makempy</code> <i>filenam</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>makempy</code> takes MetaPost output files (<i>*.mpo</i>) and translates them to <i>*.mpy</i> files. In order to include text as a graphic into a file typeset with (Con)TeX(t), you extract the text from Postscript of PDF files using <code><a href="/docs/linux/man/1-pdftops/">pdftops</a></code>(1) and <code><a href="/docs/linux/man/1-pstoedit/">pstoedit</a></code>(1), creating a Metapost input file. </p>
 <p> This file can then be processed by <code>makempy</code>. The <code>makempy</code> script does its work without user intervention. When it deduces that there are no changes, it does not do anything; otherwise it reports its steps and any errors.</p>
 <h2>OPTIONS</h2>

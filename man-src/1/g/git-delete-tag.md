@@ -1,5 +1,4 @@
 ---
-
 title: "git-delete-tag(1)"
 name: "git-delete-tag"
 section: "1"
@@ -10,7 +9,9 @@ description: "git-delete-tag – Delete tags"
 
 <h2>NAME</h2>
 <p> <code>git-delete-tag</code> &#8211; Delete tags</p>
+<h2>SYNOPSIS</h2>
 <p> <code>git-delete-tag</code> &lt;tagname&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> Deletes local and remote tag named &lt;tagname&gt;.</p>
 <h2>OPTIONS</h2>
 <p> &lt;tagname&gt; </p>

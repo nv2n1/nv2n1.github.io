@@ -1,5 +1,4 @@
 ---
-
 title: "sdl-gnash(1)"
 name: "sdl-gnash"
 section: "1"
@@ -17,7 +16,9 @@ url: "/docs/linux/man/1-sdl-gnash/"
 gnash[option]...[URL]
 </code></pre>
 
-Run the SWF movie player.
+<h2>DESCRIPTION</h2>
+
+ Run the SWF movie player.
 <dl>
 <dt>-h, --help
 </dt><dd> Print usage info.

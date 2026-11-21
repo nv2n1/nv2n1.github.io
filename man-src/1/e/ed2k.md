@@ -1,5 +1,4 @@
 ---
-
 title: "ed2k(1)"
 name: "ed2k"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-ed2k/"
 description: "ed2k – aMule eD2k link parser"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ed2k &#8211; aMule eD2k link parser </p>
+<h2>SYNOPSIS</h2>
 <p> [<code>-c</code> <i>&lt;path&gt;</i>] [<code>-t</code> <i>&lt;num&gt;</i>] _untranslated<code>[</code>-e<code>]</code> _untranslated<code>[</code>-l<code>]</code> <i>&lt;eD2k-link&gt;</i> </p>
 <p> _untranslated<code>[</code>-h<code>]</code> </p>
 <p> _untranslated<code>[</code>-v<code>]</code></p>
+<h2>DESCRIPTION</h2>
 <p> Sends the given <i>&lt;eD2k-link&gt;</i> to aMule, i.e. writes it to the file ~/.aMule/ED2KLinks, which will be checked by aMule every second for links.</p>
 <dl>
 <dt><code>[ -c</code> <i>&lt;path&gt;</i>, <code>&#8211;config-dir</code>=<i>&lt;path&gt;</i> <code>]</code></dt>

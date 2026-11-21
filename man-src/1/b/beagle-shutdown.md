@@ -1,5 +1,4 @@
 ---
-
 title: "beagle-shutdown(1)"
 name: "beagle-shutdown"
 section: "1"
@@ -10,7 +9,9 @@ description: "beagle-shutdown – cleanly shutdown the Beagle daemon"
 
 <h2>NAME</h2>
 <p> beagle-shutdown &#8211; cleanly shutdown the Beagle daemon</p>
+<h2>SYNOPSIS</h2>
 <p> <code>beagle-shutdown</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>beagle-shutdown</code> is used to cleanly shutdown and terminate <code><a href="/docs/linux/man/1-beagled/">beagled</a></code>(1), the Beagle daemon. You should use this utility instead of manually killing the daemon, as this ensures that <code>beagled</code> is in a consistent state before terminating.</p>
 <h2>AUTHOR</h2>
 <p> Novell, Inc.</p>

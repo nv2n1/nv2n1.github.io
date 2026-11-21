@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_sign_callback_set(3)"
 name: "gnutls_sign_callback_set"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_sign_callback_set – API function"
 
 <h2>NAME</h2>
 <p> gnutls_sign_callback_set &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/compat.h&gt;</code> </p>
 <p> <code>void gnutls_sign_callback_set(gnutls_session_t </code><i>session</i><code>, gnutls_sign_func </code><i>sign_func</i><code>, void * </code><i>userdata</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_sign_callback_set – API function"
 <dd> function pointer to application&#8217;s sign callback.</dd>
 <dt>void * userdata</dt>
 <dd> void pointer that will be passed to sign callback.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Set the callback function. The function must have this prototype: </p>
 <p> typedef int (*gnutls_sign_func) (gnutls_session_t session, void *userdata, gnutls_certificate_type_t cert_type, const gnutls_datum_t * cert, const gnutls_datum_t * hash, gnutls_datum_t * signature); </p>
 <p> The <i>userdata</i> parameter is passed to the <i>sign_func</i> verbatim, and can be used to store application-specific data needed in the callback function. See also <code>gnutls_sign_callback_get()</code>.</p>

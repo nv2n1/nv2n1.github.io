@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_gsi_sysconfig_shared/"
 description: "Functions for all platforms –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Functions for all platforms &#8211; </p>
 <h3>Functions</h3>
 <p> globus_result_t <code>globus_gsi_sysconfig_get_unique_proxy_filename</code> (char **unique_filename)<br />
  <i>Get Unique Proxy Filename. </i></p>

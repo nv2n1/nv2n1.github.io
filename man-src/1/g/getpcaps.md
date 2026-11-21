@@ -1,5 +1,4 @@
 ---
-
 title: "getpcaps(1)"
 name: "getpcaps"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-getpcaps/"
 description: "getpcaps – List Process Capabilities"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getpcaps &#8211; List Process Capabilities </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>getpcaps</code> &lt;pid&gt; [&lt;pid&gt; &#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>getpcaps</code></p>
 <dd>is a simple utility to display the capabilities on the queried process(es). The capabilities are displayed in the <a href="/docs/linux/man/3-cap_from_text/">cap_from_text</a>(3) format, portions of which are reproduced in the section &quot;TEXTUAL REPRESENTATION&quot; below.</dd>
 <h2>TEXTUAL REPRESENTATION</h2>

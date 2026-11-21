@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_crl_verify(3)"
 name: "gnutls_x509_crl_verify"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_crl_verify – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crl_verify &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crl_verify(gnutls_x509_crl_t </code><i>crl</i><code>, const gnutls_x509_crt_t * </code><i>trusted_cas</i><code>, int </code><i>tcas_size</i><code>, unsigned int </code><i>flags</i><code>, unsigned int * </code><i>verify</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,6 +24,7 @@ description: "gnutls_x509_crl_verify – API function"
 <dd> Flags that may be used to change the verification algorithm. Use OR of the gnutls_certificate_verify_flags enumerations.</dd>
 <dt>unsigned int * verify</dt>
 <dd> will hold the crl verification output.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will try to verify the given crl and return its verification status. See <code>gnutls_x509_crt_list_verify()</code> for a detailed description of return values. Note that since GnuTLS 3.1.4 this function includes the time checks. </p>
 <p> Note that value in <i>verify</i> is set only when the return value of this function is success (i.e, failure to trust a CRL a certificate does not imply a negative return value).</p>
 <h2>RETURNS</h2>

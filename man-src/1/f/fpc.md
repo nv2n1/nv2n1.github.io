@@ -1,5 +1,4 @@
 ---
-
 title: "fpc(1)"
 name: "fpc"
 section: "1"
@@ -10,7 +9,9 @@ description: "fpc – Free Pascal Compiler (FPC) binary"
 
 <h2>NAME</h2>
 <p> fpc &#8211; Free Pascal Compiler (FPC) binary </p>
+<h2>SYNOPSIS</h2>
 <p> <code>fpc [options] [sourcefile]</code></p>
+<h2>DESCRIPTION</h2>
 <p> This binary is the main binary of the <i>Free Pascal Compiler (FPC)</i> which is a <i>Turbo Pascal</i> and <i>Delphi (7.0) </i> compatible standalone (non GCC frontend) multitarget Pascal compiler. </p>
 <p> The compiler uses <code><a href="/docs/linux/man/1-ld/">LD</a></code>(1) and can use <code><a href="/docs/linux/man/1-as/">AS</a></code>(1) (see parameter -Aas), but also has its own binary object writer. </p>
 <p> The current main targets are <i>Go32V2</i> (Dos DJGPP extender), <i>Freebsd,</i> <i>Linux,</i> <i>MacOS,</i> <i>MacOSX,</i> <i>MorphOS,</i> <i>Netware,</i> <i>OS/2</i> and <i>Win32.</i> The other targets (M68K compilers for Atari and Amiga) are either based on older versions of the compiler or are still in development. </p>

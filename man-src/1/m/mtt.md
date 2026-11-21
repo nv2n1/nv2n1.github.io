@@ -1,5 +1,4 @@
 ---
-
 title: "mtt(1)"
 name: "mtt"
 section: "1"
@@ -10,7 +9,9 @@ description: "mtt – teletext browser for X11 and console."
 
 <h2>NAME</h2>
 <p> mtt &#8211; teletext browser for X11 and console.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mtt [ options ]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>mtt</code> is a browser for teletext pages. If the DISPLAY environment variable is set <code>mtt</code> will come up with the X11 GUI (motif), otherwise it will use the tty it was started from.</p>
 <h2>OPTIONS</h2>
 <p> <code>mtt</code> understands the usual toolkit options (-geometry + friends). Additional options are:</p>

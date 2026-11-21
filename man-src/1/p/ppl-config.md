@@ -1,5 +1,4 @@
 ---
-
 title: "ppl-config(1)"
 name: "ppl-config"
 section: "1"
@@ -10,7 +9,9 @@ description: "ppl-config – obtain information about an installation of the Par
 
 <h2>NAME</h2>
 <p> ppl-config &#8211; obtain information about an installation of the Parma Polyhedra Library</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ppl-config</code> [<i>OPTION</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Displays information, in various formats, about an installation of the Parma Polyhedra Library.</p>
 <h2>OPTIONS</h2>
 <dl>

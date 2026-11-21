@@ -1,5 +1,4 @@
 ---
-
 title: "flow-import(1)"
 name: "flow-import"
 section: "1"
@@ -10,7 +9,9 @@ description: "flow-import – Import flows into flow-tools from other NetFlow pa
 
 <h2>NAME</h2>
 <p> flow-import &#8211; Import flows into flow-tools from other NetFlow packages.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>flow-import</code> [ <code>-h</code> ] [ <code>-b</code><i> big|little</i> ] [ <code>-d</code><i> debug_level</i> ] [ <code>-f</code><i> format</i> ] [ <code>-m</code><i> mask_fields</i> ] [ <code>-V</code><i> pdu_version</i> ] [ <code>-z</code><i> z_level</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>flow-import</code> utility will convert data from cflowd and ASCII CSV files into flow-tools format.</p>
 <h2>OPTIONS</h2>
 <dl>

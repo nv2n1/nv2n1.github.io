@@ -1,5 +1,4 @@
 ---
-
 title: "spbtrf(3)"
 name: "spbtrf"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-spbtrf/"
 description: "spbtrf.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> spbtrf.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>spbtrf</code> (UPLO, N, KD, AB, LDAB, INFO)<br />
  <i></i><code>SPBTRF</code></p>

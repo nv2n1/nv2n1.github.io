@@ -1,5 +1,4 @@
 ---
-
 title: "btattach(1)"
 name: "btattach"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-btattach/"
 description: "btattach – Attach serial devices to BlueZ stack"
 ---
 
+<h2 class="name">NAME</h2>
+<p> btattach &#8211; Attach serial devices to BlueZ stack </p>
+<h2>SYNOPSIS</h2>
 <p> <code>btattach</code> [<code>-B</code> <i>device</i>] [<code>-A</code> <i>device</i>] [<code>-P</code> <i>protocol</i>] [<code>-R</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code><a href="/docs/linux/man/1-btattach/">btattach</a>(1)</code> is used to attach a serial UART to the Bluetooth stack as a transport interface.</p>
 <h2>OPTIONS</h2>
 <dl>

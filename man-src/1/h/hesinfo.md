@@ -1,5 +1,4 @@
 ---
-
 title: "hesinfo(1)"
 name: "hesinfo"
 section: "1"
@@ -10,9 +9,11 @@ description: "hesinfo – find out what is stored in the Hesiod database"
 
 <h2>NAME</h2>
 <p> hesinfo &#8211; find out what is stored in the Hesiod database</p>
+<h2>SYNOPSIS</h2>
 <pre>
 hesinfo <i>[-bl]</i> <i>HesiodName</i> <i>HesiodNameType</i>
 </pre>
+<h2>DESCRIPTION</h2>
 <p> <i>hesinfo</i> takes two arguments, a name to be resolved and a string, known as a HesiodNameType. It then prints the information returned by the Hesiod nameserver. </p>
 <p> The value returned by <code>hesinfo</code> is of the type <i>HesiodNameType.</i> </p>
 <p> <i>hesinfo</i> understands the following options:</p>

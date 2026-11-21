@@ -1,5 +1,4 @@
 ---
-
 title: "mf-nowin(1)"
 name: "mf-nowin"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mf-nowin/"
 description: "mf, inimf, mf-nowin – Metafont, a language for font and logo design"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mf, inimf, mf-nowin &#8211; Metafont, a language for font and logo design </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mf</code> [<i>options</i>] [<i>commands</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Metafont reads the program in the specified files and outputs font rasters (in <i>gf</i> format) and font metrics (in <i>tfm</i> format). The Metafont language is described in <i>The Metafontbook</i>. </p>
 <p> Like TeX, Metafont is normally used with a large body of precompiled macros, and font generation in particular requires the support of several macro files. This version of Metafont looks at its command line to see what name it was called under. Both <code>inimf</code> and <code>virmf</code> are symlinks to the <code>mf</code> executable. When called as <code>inimf</code> (or when the <code>-ini</code> option is given) it can be used to precompile macros into a <i>.base</i> file. When called as <code>virmf</code> it will use the <i>plain</i> base. When called under any other name, Metafont will use that name as the name of the base to use. For example, when called as <code>mf</code> the <i>mf</i> base is used, which is identical to the <i>plain</i> base. Other bases than <i>plain</i> are rarely used. </p>
 <p> The <i>commands</i> given on the command line to the Metafont program are passed to it as the first input line. (But it is often easier to type extended arguments as the first input line, since UNIX shells tend to gobble up or misinterpret Metafont&#8217;s favorite symbols, like semicolons, unless you quote them.) As described in <i>The Metafontbook</i>, that first line should begin with a filename, a \<i>controlsequence</i>, or a <i>&amp;basename</i>. </p>

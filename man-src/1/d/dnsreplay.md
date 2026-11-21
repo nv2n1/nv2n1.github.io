@@ -1,5 +1,4 @@
 ---
-
 title: "dnsreplay(1)"
 name: "dnsreplay"
 section: "1"
@@ -10,7 +9,9 @@ description: "dnsreplay – A PowerDNS nameserver debugging tool"
 
 <h2>NAME</h2>
 <p> dnsreplay &#8211; A PowerDNS nameserver debugging tool</p>
+<h2>SYNOPSIS</h2>
 <p> <code>dnsreplay </code><i>[options]</i> <i>filename</i> <i>ip-address</i> <i>[port]</i></p>
+<h2>DESCRIPTION</h2>
 <p> This program takes recorded questions and answers and replays them to a specified nameserver and reporting afterwards which percentage of answers matched, were worse or better. </p>
 <p> <i>filename</i> is expected to be an PCAP file. The queries are send to the DNS server specified as <i>ip-address</i> and <i>[port]</i>. <i>ip-address</i> is mandatory. If <i>[port]</i> is omitted, 53 will be used. dnsreplay compares the answers and some other metrics with the actual ones with those found in the dumpfile. </p>
 <p> By default it only replay queries with recursion-desired flag set.</p>

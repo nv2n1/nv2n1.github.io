@@ -1,5 +1,4 @@
 ---
-
 title: "ispell-wrapper(1)"
 name: "ispell-wrapper"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-ispell-wrapper/"
 description: "ispell-wrapper – smart wrapper for ispell"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ispell-wrapper &#8211; smart wrapper for ispell </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 ispell - wrapper[--emacs = name][--language = regexp][--dry - run][ispell options] file
          Options(all long only options)
@@ -16,6 +18,7 @@ ispell - wrapper[--emacs = name][--language = regexp][--dry - run][ispell option
                   -- dry
                   - run Only show what would have done
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>ispell-wrapper</code> is a wrapper script for ispell intended to be used in a Debian system in conjunction with the infrastructure introduced by the dictionaries-common package. Option &#8211;dry-run will show the string to be run without doing anything else. </p>
 <p> It automatically sets the <code>-d</code>, <code>-w</code>, and <code>-T</code> options to ispell as a function of the chosen language. Of course, this only works for dictionary packages that comply with the above mentioned Policy. </p>
 <p> Here is how the language is defined (in order of priority):</p>

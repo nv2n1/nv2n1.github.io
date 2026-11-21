@@ -1,5 +1,4 @@
 ---
-
 title: "abrt-server(1)"
 name: "abrt-server"
 section: "1"
@@ -7,11 +6,22 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-server/"
 ---
 
-abrt-server - Unix socket for ABRT. 
+<h2 class="name">NAME</h2>
+ 
 
-<i>abrt-server</i> [-u UID] [-spv[v]...]
+ abrt-server - Unix socket for ABRT. 
 
-<i>abrt-server</i> is executed by abrtd daemon to handle socket connections. Every application in system is able to invoke creation of a new problem directory by following the communication protocol (described below in section <i>PROTOCOL</i>).
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <i>abrt-server</i> [-u UID] [-spv[v]...]
+
+<h2>DESCRIPTION</h2>
+
+ 
+
+ <i>abrt-server</i> is executed by abrtd daemon to handle socket connections. Every application in system is able to invoke creation of a new problem directory by following the communication protocol (described below in section <i>PROTOCOL</i>).
 
 <h2>OPTIONS</h2>
 

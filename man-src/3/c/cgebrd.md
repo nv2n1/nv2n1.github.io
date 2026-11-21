@@ -1,5 +1,4 @@
 ---
-
 title: "cgebrd(3)"
 name: "cgebrd"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cgebrd/"
 description: "cgebrd.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cgebrd.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgebrd</code> (M, N, A, LDA, D, E, TAUQ, TAUP, WORK, LWORK, INFO)<br />
  <i></i><code>CGEBRD</code></p>

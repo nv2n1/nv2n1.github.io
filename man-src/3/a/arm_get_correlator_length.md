@@ -1,5 +1,4 @@
 ---
-
 title: "arm_get_correlator_length(3)"
 name: "arm_get_correlator_length"
 section: "3"
@@ -10,11 +9,13 @@ description: "arm_get_correlator_length – get length of correlator"
 
 <h2>NAME</h2>
 <p> arm_get_correlator_length &#8211; get length of correlator</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/arm4.h">arm4.h</a>&gt;</code> </p>
 <p> <code>arm_error_t<br />
  arm_get_correlator_length( </p>
 <p>&nbsp;<wbr>const arm_correlator_t&nbsp;<wbr>*</code><i>correlator</i><code>,&nbsp;<wbr> </p>
 <p>&nbsp;<wbr>arm_correlator_length_t&nbsp;<wbr>*</code><i>length</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>arm_get_correlator_length()</code> returns the length of a correlator, based on the length field within the correlator header. Note that this length is not necessarily the length of the buffer containing the correlator. </p>
 <p> A correlator header contains a length field. <code>arm_get_correlator_length()</code> is used to return the length. The function handles any required conversion from the network byte order used in the header and the endian (big versus little) of the platform. See <code>arm_generate_correlator()</code> for a description of a correlator. </p>
 <p> <i>correlator</i> is a pointer to a buffer containing a correlator. It serves no purpose to make the call if the pointer is null. </p>

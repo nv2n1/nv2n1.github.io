@@ -1,5 +1,4 @@
 ---
-
 title: "euca-modify-instance-type(1)"
 name: "euca-modify-instance-type"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-modify-instance-type – [Eucalyptus cloud admin only] Modify
 
 <h2>NAME</h2>
 <p> euca-modify-instance-type &#8211; [Eucalyptus cloud admin only] Modify an instance type</p>
+<h2>SYNOPSIS</h2>
 <p> euca-modify-instance-type [-c COUNT] [-d GiB] [-m MiB] [-i COUNT]</p>
 <dl>
 <dt>[&#8211;reset] [&#8211;show-empty-fields] [-U URL]</dt>
 <dd> [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] INSTANCETYPE</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> [Eucalyptus cloud admin only] Modify an instance type</p>
 <h3>positional arguments:</h3>
 <dl>

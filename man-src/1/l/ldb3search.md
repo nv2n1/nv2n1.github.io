@@ -1,5 +1,4 @@
 ---
-
 title: "ldb3search(1)"
 name: "ldb3search"
 section: "1"
@@ -13,6 +12,10 @@ ldbsearch - Search for records in a LDB database
 
 <dl>
 <dt> FCldbsearchF[] [-h] [-s base|one|sub] [-b basedn] [-i] [-H LDB-URL] [expression] [attributes]</dt></dl>
+
+<h2>DESCRIPTION</h2>
+
+ 
 
 <dd>ldbsearch searches a LDB database for records matching the specified expression (see the <a HREF="/docs/linux/man/1-ldapsearch/">ldapsearch</a>(1) manpage for a description of the expression format). For each record, the specified attributes are printed.
 

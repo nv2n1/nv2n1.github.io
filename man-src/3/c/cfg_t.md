@@ -1,5 +1,4 @@
 ---
-
 title: "cfg_t(3)"
 name: "cfg_t"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cfg_t/"
 description: "cfg_t – Data structure holding information about a ‘section’."
 ---
 
+<h2 class="name">NAME</h2>
+<p> cfg_t &#8211; Data structure holding information about a &#8216;section&#8217;. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;confuse.h&gt; </p>
 <h3>Data Fields</h3>
 <p> cfg_flag_t <code>flags</code><br />

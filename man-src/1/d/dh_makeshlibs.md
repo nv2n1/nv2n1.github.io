@@ -1,5 +1,4 @@
 ---
-
 title: "dh_makeshlibs(1)"
 name: "dh_makeshlibs"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dh_makeshlibs/"
 description: "dh_makeshlibs – automatically create shlibs file and call dpkg-gensymbols"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dh_makeshlibs &#8211; automatically create shlibs file and call dpkg-gensymbols </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dh_makeshlibs</code> [<i>debhelper options</i>] [<code>-m</code><i>major</i>] [<code>-V</code><i>[dependencies]</i>] [<code>-n</code>] [<code>-X</code><i>item</i>] [<code>&#8212;</code> <i>params</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>dh_makeshlibs</code> is a debhelper program that automatically scans for shared libraries, and generates a shlibs file for the libraries it finds. </p>
 <p> It will also ensure that ldconfig is invoked during install and removal when it finds shared libraries. Since debhelper 9.20151004, this is done via a dpkg trigger. In older versions of debhelper, <code>dh_makeshlibs</code> would generate a maintainer script for this purpose.</p>
 <h2>FILES</h2>

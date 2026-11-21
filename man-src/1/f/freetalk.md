@@ -1,5 +1,4 @@
 ---
-
 title: "freetalk(1)"
 name: "freetalk"
 section: "1"
@@ -10,7 +9,9 @@ description: "freetalk – A console based Jabber client"
 
 <h2>NAME</h2>
 <p> freetalk &#8211; A console based Jabber client</p>
+<h2>SYNOPSIS</h2>
 <p> <code>freetalk</code> [<i>OPTION</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> Freetalk is a console based jabber client/bot with a readline interface and guile extensions</p>
 <dl>
 <dt><code>-j</code>, <code>&#8211;jid</code>=<i>JABBERID</i></dt>

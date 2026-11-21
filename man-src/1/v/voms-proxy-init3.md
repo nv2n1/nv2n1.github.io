@@ -1,5 +1,4 @@
 ---
-
 title: "voms-proxy-init3(1)"
 name: "voms-proxy-init3"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-voms-proxy-init3/"
 description: "voms-proxy-init – creates a proxy certificate with VOMS extensions"
 ---
 
+<h2 class="name">NAME</h2>
+<p> voms-proxy-init &#8211; creates a proxy certificate with VOMS extensions </p>
+<h2>SYNOPSIS</h2>
 <p> <code>voms-proxy-init</code> [options]</p>
+<h2>DESCRIPTION</h2>
 <p> The voms-proxy-init command generates a proxy with the VOMS information included in an X.509 non critical extension. </p>
 <p> The VOMS attributes are obtained from a known VOMS server. The list of known VOMS servers is configured using a <code>vomses</code> configuration file, whose syntax is documented in the <code>vomses</code> man page. A custom vomses location can be specified using the <code>&#8211;vomses</code> option. </p>
 <p> VOMS attributes are requested only if the <code>-voms</code> option is passed on the command line, specifying for which Virtual Organizations (VOs) attributes are requested. </p>

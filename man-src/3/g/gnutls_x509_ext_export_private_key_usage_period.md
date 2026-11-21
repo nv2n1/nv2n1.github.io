@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_ext_export_private_key_usage_period(3)"
 name: "gnutls_x509_ext_export_private_key_usage_period"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_ext_export_private_key_usage_period – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_ext_export_private_key_usage_period &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509-ext.h&gt;</code> </p>
 <p> <code>int gnutls_x509_ext_export_private_key_usage_period(time_t </code><i>activation</i><code>, time_t </code><i>expiration</i><code>, gnutls_datum_t * </code><i>ext</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_x509_ext_export_private_key_usage_period – API function"
 <dd> The expiration time</dd>
 <dt>gnutls_datum_t * ext</dt>
 <dd> The DER-encoded extension data; must be freed using <code>gnutls_free()</code>.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will convert the periods provided to a private key usage DER encoded extension (2.5.29.16). The <i>ext</i> data will be allocated using <code>gnutls_malloc()</code>.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

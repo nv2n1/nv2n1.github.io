@@ -1,5 +1,4 @@
 ---
-
 title: "monit(1)"
 name: "monit"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-monit/"
 description: "Monit – utility for monitoring services on a Unix system"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Monit &#8211; utility for monitoring services on a Unix system </p>
+<h2>SYNOPSIS</h2>
 <p> <code>monit</code> [options] {arguments}</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Monit</code> is a utility for managing and monitoring processes, programs, files, directories and filesystems on a Unix system. Monit conducts automatic maintenance and repair and can execute meaningful causal actions in error situations. E.g. Monit can start a process if it does not run, restart a process if it does not respond and stop a process if it uses too much resources. You can use Monit to monitor files, directories and filesystems for changes, such as timestamps changes, checksum changes or size changes. </p>
 <p> Monit is controlled via an easy to configure control file based on a free-format, token-oriented syntax. Monit logs to syslog or to its own log file and notifies you about error conditions via customizable alert messages. Monit can perform various <font SIZE="-1">TCP/IP</font> network checks, protocol checks and can utilize <font SIZE="-1">SSL</font> for such checks. Monit provides a http(s) interface and you may use a browser to access the Monit program.</p>
 <h2>WHAT TO MONITOR?</h2>

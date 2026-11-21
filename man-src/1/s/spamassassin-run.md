@@ -1,5 +1,4 @@
 ---
-
 title: "spamassassin-run(1)"
 name: "spamassassin-run"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-spamassassin-run/"
 description: "spamassassin – simple front-end filtering script for SpamAssassin"
 ---
 
+<h2 class="name">NAME</h2>
+<p> spamassassin &#8211; simple front-end filtering script for SpamAssassin </p>
+<h2>SYNOPSIS</h2>
 <p> <code>spamassassin</code> [options] [ &lt; <i>mailmessage</i> | <i>path</i> &#8230; ] </p>
 <p> <code>spamassassin</code> <code>-d</code> [ &lt; <i>mailmessage</i> | <i>path</i> &#8230; ] </p>
 <p> <code>spamassassin</code> <code>-r</code> [ &lt; <i>mailmessage</i> | <i>path</i> &#8230; ] </p>
@@ -48,6 +50,7 @@ description: "spamassassin – simple front-end filtering script for SpamAssassi
  -V, --version                     Print version
  -h, --help                        Print usage message
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> spamassassin is a simple front-end filter for SpamAssassin. </p>
 <p> Using the SpamAssassin rule base, it uses a wide range of heuristic tests on mail headers and body text to identify &#8220;spam&#8221;, also known as unsolicited bulk email. Once identified, the mail is then tagged as spam for later filtering using the user&#8217;s own mail user-agent application. </p>
 <p> The default tagging operations that take place are detailed in &#8220;<font SIZE="-1">TAGGING&#8221;</font> in spamassassin. </p>

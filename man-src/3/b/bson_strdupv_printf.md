@@ -1,5 +1,4 @@
 ---
-
 title: "bson_strdupv_printf(3)"
 name: "bson_strdupv_printf"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_strdupv_printf() – This function is like bson_strdup_printf
 
 <h2>NAME</h2>
 <p> bson_strdupv_printf() &#8211; This function is like bson_strdup_printf() except takes a va_list of parameters.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 char *
 bson_strdupv_printf(const char *format,
@@ -22,6 +22,7 @@ bson_strdupv_printf(const char *format,
 <dl>
 <dt><code>args</code></dt>
 <dd> A va_list.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function is like <code><a href="/docs/linux/man/3-bson_strdup_printf/">bson_strdup_printf</a>(3)</code> except takes a va_list of parameters. </p>
 <h2>RETURNS</h2>
 <p> A newly allocated string that should be freed with bson_free(). </p>

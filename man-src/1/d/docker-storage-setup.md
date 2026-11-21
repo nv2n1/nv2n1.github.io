@@ -1,5 +1,4 @@
 ---
-
 title: "docker-storage-setup(1)"
 name: "docker-storage-setup"
 section: "1"
@@ -10,6 +9,7 @@ description: "docker-storage-setup – Grows the root filesystem and sets up sto
 
 <h2>NAME</h2>
 <p> docker-storage-setup &#8211; Grows the root filesystem and sets up storage for docker.</p>
+<h2>SYNOPSIS</h2>
 <p> docker-storage-setup [OPTIONS]</p>
 <h2>OPTIONS</h2>
 <p> &#8211;help<br />

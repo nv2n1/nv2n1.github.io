@@ -1,5 +1,4 @@
 ---
-
 title: "lessecho(1)"
 name: "lessecho"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-lessecho/"
 description: "lessecho – expand metacharacters"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lessecho &#8211; expand metacharacters </p>
+<h2>SYNOPSIS</h2>
 <p> <code>lessecho</code> <i>[-ox] [-cx] [-pn] [-dn] [-mx] [-nn] [-ex] [-a] file &#8230;</i></p>
+<h2>DESCRIPTION</h2>
 <p> <i>lessecho</i> is a program that simply echos its arguments on standard output. But any metacharacter in the output is preceded by an &quot;escape&quot; character, which by default is a backslash.</p>
 <h2>OPTIONS</h2>
 <p> A summary of options is included below.</p>

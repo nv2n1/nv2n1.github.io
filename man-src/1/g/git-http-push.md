@@ -1,5 +1,4 @@
 ---
-
 title: "git-http-push(1)"
 name: "git-http-push"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-http-push/"
 description: "git-http-push – Push objects over HTTP/DAV to another repository"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-http-push &#8211; Push objects over HTTP/DAV to another repository </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git http - push[--all][--dry - run][--force][--verbose]&lt;url&gt;&lt;ref&gt;[&lt;ref&gt;...]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Sends missing objects to remote repository, and updates the remote branch. </p>
 <p> <code>NOTE</code>: This command is temporarily disabled if your libcurl is older than 7.16, as the combination has been reported not to work and sometimes corrupts repository.</p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "perldoc(1)"
 name: "perldoc"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-perldoc/"
 description: "perldoc – Look up Perl documentation in Pod format."
 ---
 
+<h2 class="name">NAME</h2>
+<p> perldoc &#8211; Look up Perl documentation in Pod format. </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 perldoc[-h][-D][-t][-u][-m][-l][-U][-F]
        [-i][-V][-T][-r]
@@ -30,6 +32,7 @@ perldoc[-h][-D][-t][-u][-m][-l][-U][-F]
     perldoc -a PerlAPI
 </pre>
 <p> See below for more description of the switches.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>perldoc</code> looks up documentation in .pod format that is embedded in the perl installation tree or in a perl script, and displays it using a variety of formatters. This is primarily used for the documentation for the perl library modules. </p>
 <p> Your system may also have man pages installed for those modules, in which case you can probably just use the <code><a href="/docs/linux/man/1-man/">man</a></code>(1) command. </p>
 <p> If you are looking for a table of contents to the Perl library modules documentation, see the perltoc page.</p>

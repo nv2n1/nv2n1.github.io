@@ -1,5 +1,4 @@
 ---
-
 title: "pngnq(1)"
 name: "pngnq"
 section: "1"
@@ -10,7 +9,9 @@ description: "pngnq – quantize png images"
 
 <h2>NAME</h2>
 <p> pngnq &#8211; quantize png images</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pngnq [-vfhV][-s </code> <i>sample_factor</i> <code>][-Q </code> <i>dither</i> <code>][-g</code> <i>gamma</i> <code>][-e </code> <i>extension </i> <code>][-d </code> <i>dir</i> <code>][-n </code> <i>colors</i> <code>][</code> <i>inputfiles</i> <code>]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>pngnq</code> Quantizes a 32-bit RGBA PNG image to an 8 bit RGBA palette PNG using the neuquant algorithm. The output file name is the input file name extended with &quot;-nq8.png&quot; or a specified extension. </p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "euare-servercertupload(1)"
 name: "euare-servercertupload"
 section: "1"
@@ -10,10 +9,12 @@ description: "euare-servercertupload – Upload a server certificate"
 
 <h2>NAME</h2>
 <p> euare-servercertupload &#8211; Upload a server certificate</p>
+<h2>SYNOPSIS</h2>
 <p> euare-servercertupload (<code>-c</code> CERT_CONTENT | <code>&#8211;certificate-file</code> FILE)</p>
 <dl>
 <dt>(<code>&#8211;private-key</code> KEY | <code>&#8211;private-key-file</code> FILE)</dt>
 <dd> [&#8211;certificate-chain CHAIN | <code>&#8211;certificate-chain-file</code> FILE] [-p PATH] [&#8211;as-account ACCOUNT] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] CERT</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Upload a server certificate</p>
 <h3>positional arguments:</h3>
 <dl>

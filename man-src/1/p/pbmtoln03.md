@@ -1,5 +1,4 @@
 ---
-
 title: "pbmtoln03(1)"
 name: "pbmtoln03"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pbmtoln03/"
 description: "pbmtoln03 – convert PBM image to DEC LN03+ Sixel output"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pbmtoln03 &#8211; convert PBM image to DEC LN03+ Sixel output</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pbmtoln03</code> [<code>-rltbf</code>] <i>pbmfile</i> </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pbmtoln03</code> reads a PBM image as input and produces a DEC LN03+ Sixel output file. </p>
 <h2>OPTIONS</h2>

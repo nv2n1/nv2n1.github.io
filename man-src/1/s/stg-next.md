@@ -1,5 +1,4 @@
 ---
-
 title: "stg-next(1)"
 name: "stg-next"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-stg-next/"
 description: "stg-next – Print the name of the next patch"
 ---
 
+<h2 class="name">NAME</h2>
+<p> stg-next &#8211; Print the name of the next patch </p>
+<h2>SYNOPSIS</h2>
 <pre>
 <i>stg</i> next
 </pre>
+<h2>DESCRIPTION</h2>
 <p> Print the name of the next patch.</p>
 <h2>OPTIONS</h2>
 <p> -b BRANCH, &#8211;branch BRANCH</p>

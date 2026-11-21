@@ -1,5 +1,4 @@
 ---
-
 title: "hdf_search_path(3)"
 name: "hdf_search_path"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-hdf_search_path/"
 description: "hdf_search_path – Find a file given a search path in HDF"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hdf_search_path &#8211; Find a file given a search path in HDF </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;util/neo_hdf.h&gt;
 </code></pre>
@@ -18,6 +20,7 @@ NEOERR *hdf_search_path(HDF *hdf, const char *path, char *full);
 <p> hdf -&gt; the hdf dataset to use<br />
  path -&gt; the relative path<br />
  full -&gt; a pointer to a _POSIX_PATH_MAX buffer </p>
+<h2>DESCRIPTION</h2>
 <p> hdf_search_path is a convenience/utility function that searches for relative filenames in a search path. The search path is the list given by the children of hdf.loadpaths. </p>
 <h2>RETURN VALUE</h2>
 <p> full -&gt; the full path of the file </p>

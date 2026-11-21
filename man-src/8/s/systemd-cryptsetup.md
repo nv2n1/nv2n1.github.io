@@ -1,5 +1,4 @@
 ---
-
 title: "systemd-cryptsetup(8)"
 name: "systemd-cryptsetup"
 section: "8"
@@ -7,11 +6,12 @@ letter: "s"
 url: "/docs/linux/man/8-systemd-cryptsetup/"
 description: "systemd-cryptsetup [at] .service, systemd-cryptsetup – Full disk decryption logic"
 ---
-
 <p>systemd-cryptsetup [at] .service, systemd-cryptsetup &#8211; Full disk decryption logic </p>
+<h2>SYNOPSIS</h2>
 <p>systemd-cryptsetup [at] .service </p>
 <p>system-systemd\x2dcryptsetup.slice </p>
 <p>/lib/systemd/systemd-cryptsetup  </p>
+<h2>DESCRIPTION</h2>
 <p>systemd-cryptsetup [at] .service is a service responsible for setting up encrypted block devices. It is instantiated for each device that requires decryption for access. </p>
 <p>systemd-cryptsetup [at] .service instances are part of the system-systemd\x2dcryptsetup.slice slice, which is destroyed only very late in the shutdown procedure. This allows the encrypted devices to remain up until filesystems have been unmounted. </p>
 <p>systemd-cryptsetup [at] .service will ask for hard disk passwords via the m[blue]<code>password agent logic</code>m[]<font SIZE="-2">[1]</font>, in order to query the user for the password using the right mechanism at boot and during runtime. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "sfxload(1)"
 name: "sfxload"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-sfxload/"
 description: "sfxload, asfxload – load a SoundFont file on the Emux WaveTable"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sfxload, asfxload &#8211; load a SoundFont file on the Emux WaveTable</p>
+<h2>SYNOPSIS</h2>
 <p> <code>sfxload</code> [<i>-options</i>]<i> fontfile</i> </p>
 <p> <code>asfxload</code> [<i>-options</i>]<i> fontfile</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>sfxload</code> and <code>asfxload</code> are utility program sto transfer the sound wave and instruments data in a SoundFont file to the AWE32 sound driver, or to the Emux WaveTable of ALSA sbawe and emu10k1 drivers. This program is necessary for playing MIDI samples via sequencer programs supporting AWE driver. There is no big difference between <code>sfxload</code> and <code>asfxload</code> except for that <code>asfxload</code> is for ALSA and <code>sfxload</code> is for OSS, respecitvely. The options to specify devices are different between them (see below). </p>
 <p> Basically, sfxload behaves as two ways. % sfxload fontfile<br />
  % sfxload -b1 fontfile </p>

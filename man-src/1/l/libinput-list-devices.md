@@ -1,5 +1,4 @@
 ---
-
 title: "libinput-list-devices(1)"
 name: "libinput-list-devices"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-libinput-list-devices/"
 description: "libinput-list-devices – list local devices as recognized by libinput and default values of their configuration"
 ---
 
+<h2 class="name">NAME</h2>
+<p> libinput-list-devices &#8211; list local devices as recognized by libinput and default values of their configuration </p>
+<h2>SYNOPSIS</h2>
 <p> <code>libinput list-devices [&#8211;help]</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>libinput list-devices</code> tool creates a libinput context on the default seat &quot;seat0&quot; and lists all devices recognized by libinput. Each device shows available configurations the respective default configuration setting. </p>
 <p> For options that allow more settings than &quot;enabled/disabled&quot;, all available ones are listed. The default setting is prefixed by an asterisk (*). </p>
 <p> This tool usually needs to be run as root to have access to the /dev/input/eventX nodes.</p>

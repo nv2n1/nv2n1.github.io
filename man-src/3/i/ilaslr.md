@@ -1,5 +1,4 @@
 ---
-
 title: "ilaslr(3)"
 name: "ilaslr"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-ilaslr/"
 description: "ilaslr.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ilaslr.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> INTEGER function <code>ilaslr</code> (M, N, A, LDA)<br />
  <i></i><code>ILASLR</code> scans a matrix for its last non-zero row.</p>

@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-libtalloc_debugging/"
 description: "libtalloc_debugging – Chapter 6: Debugging Although talloc makes memory management significantly easier than the C standard library, developers are still only humans and can make mistakes."
 ---
 
+<h2 class="name">NAME</h2>
+<p> libtalloc_debugging &#8211; Chapter 6: Debugging Although talloc makes memory management significantly easier than the C standard library, developers are still only humans and can make mistakes. </p>
 <p> Therefore, it can be handy to know some tools for the inspection of talloc memory usage. </p>
 <h2>Talloc log and abort</h2>
 <p> We have already encountered the abort function in section <code>Dynamic type system</code>. In that case it was used when a type mismatch was detected. However, talloc calls this abort function in several more situations: </p>

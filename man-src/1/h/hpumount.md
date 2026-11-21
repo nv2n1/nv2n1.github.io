@@ -1,5 +1,4 @@
 ---
-
 title: "hpumount(1)"
 name: "hpumount"
 section: "1"
@@ -10,6 +9,7 @@ description: "hpumount — unmount an HFS+ volume"
 
 <h2>NAME</h2>
 <p> hpumount &#8212; unmount an HFS+ volume</p>
+<h2>SYNOPSIS</h2>
 <p> <code>hpumount</code></p>
 <h2>Description</h2>
 <p> <code>hpumount</code> is used to forget about a previously mounted HFS+ volume. However, the command does not change the volume itself, it simply removes the <code>.hfsplusvolume</code> file in the user&#8217;s home directory.<br />

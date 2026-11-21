@@ -1,5 +1,4 @@
 ---
-
 title: "mysql_embedded(1)"
 name: "mysql_embedded"
 section: "1"
@@ -7,10 +6,13 @@ letter: "m"
 url: "/docs/linux/man/1-mysql_embedded/"
 description: "mysql – the MySQL command-line client"
 ---
-
+<h2 class="name">NAME</h2>
+<p> mysql - the MySQL command-line client </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>mysql [</code><i>options</i><code>] </code><i>db_name</i></dt>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> <code>mysql</code> </p>
 <dd> <p> is a simple SQL shell with input line editing capabilities. It supports interactive and noninteractive use. When used interactively, query results are presented in an ASCII-table format. When used noninteractively (for example, as a filter), the result is presented in tab-separated format. The output format can be changed using command options. </p>
 <p> If you have problems due to insufficient memory for large result sets, use the <code>--quick</code> option. This forces <code>mysql</code> to retrieve results from the server a row at a time rather than retrieving the entire result set and buffering it in memory before displaying it. This is done by returning the result set using the mysql_use_result() C API function in the client/server library rather than mysql_store_result(). </p>

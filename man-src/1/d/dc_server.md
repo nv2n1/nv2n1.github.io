@@ -1,5 +1,4 @@
 ---
-
 title: "dc_server(1)"
 name: "dc_server"
 section: "1"
@@ -10,7 +9,9 @@ description: "dc_server – Distributed session cache server"
 
 <h2>NAME</h2>
 <p> dc_server &#8211; Distributed session cache server</p>
+<h2>SYNOPSIS</h2>
 <p> <code>dc_server</code> -listen &lt;address&gt; [options]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>dc_server</code> runs a cache server and starts listening on a configurable network address for connections. Incoming connections are expected to communicate using the <i><a href="/docs/linux/man/8-distcache/">distcache</a></i>(8) protocol, and would typically be instances of <i><a href="/docs/linux/man/1-dc_client/">dc_client</a></i>(1) running on other machines.</p>
 <h2>OPTIONS</h2>
 <dl>

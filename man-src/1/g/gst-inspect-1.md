@@ -1,5 +1,4 @@
 ---
-
 title: "gst-inspect-1(1)"
 name: "gst-inspect-1"
 section: "1"
@@ -10,7 +9,9 @@ description: "gst-inspect – print info about a GStreamer plugin or element"
 
 <h2>NAME</h2>
 <p> gst-inspect &#8211; print info about a GStreamer plugin or element</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gst-inspect [OPTION&#8230;] [PLUGIN|ELEMENT]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <i>gst-inspect</i> is a tool that prints out information on available <i>GStreamer</i> plugins, information about a particular plugin, or information about a particular element. When executed with no PLUGIN or ELEMENT argument, <i>gst-inspect</i> will print a list of all plugins and elements together with a summary. When executed with a PLUGIN or ELEMENT argument, <i>gst-inspect</i> will print information about that plug-in or element.</p>
 <h2>OPTIONS</h2>
 <p> <i>gst-inspect</i> accepts the following arguments and options:</p>

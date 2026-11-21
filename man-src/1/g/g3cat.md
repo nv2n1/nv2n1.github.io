@@ -1,5 +1,4 @@
 ---
-
 title: "g3cat(1)"
 name: "g3cat"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-g3cat/"
 description: "g3cat – concatenate multiple g3 documents"
 ---
 
+<h2 class="name">NAME</h2>
+<p> g3cat &#8211; concatenate multiple g3 documents </p>
+<h2>SYNOPSIS</h2>
 <p> g3cat [-l] [-a] g3-file1 &#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <i>g3cat </i> concatenates g3 files. These can either be &#8216;raw&#8217;, that is, bitmaps packed according to the CCITT T.4 standard for one-dimensional bitmap encoding, or &#8216;digifax&#8217; files, created by GNU&#8217;s GhostScript package with the <code>digifax </code> drivers. Its output is a concatenation of all the input files, in raw G3 format, with two white lines in between. </p>
 <p> If a &#8211; is given as input file, stdin is used. </p>
 <p> If the input data is malformed, a warning is printed to stderr, and the output file will have a blank line at this place. </p>

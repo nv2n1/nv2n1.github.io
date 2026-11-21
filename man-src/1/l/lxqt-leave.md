@@ -1,5 +1,4 @@
 ---
-
 title: "lxqt-leave(1)"
 name: "lxqt-leave"
 section: "1"
@@ -10,7 +9,9 @@ description: "lxqt-leave – Dialog to easily select logout, reboot, shutdown, s
 
 <h2>NAME</h2>
 <p> <code>lxqt-leave</code> &#8211; Dialog to easily select logout, reboot, shutdown, suspend, hibernate, and lock screen</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lxqt-leave</code> [<i>argument</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>lxqt-leave</code> is a graphical Qt tool for easily triggering leave session actions: logout, reboot, shutdown, hibernate, and lock screen. If run with an argument, the dialog is not shown and the action is executed directly.</p>
 <h2>OPTIONS</h2>
 <p> The options which apply to the <code>lxqt-leave</code> command are: </p>

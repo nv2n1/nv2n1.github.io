@@ -1,5 +1,4 @@
 ---
-
 title: "phpreflect(1)"
 name: "phpreflect"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-phpreflect/"
 description: "phpreflect – Reverse-engineer classes, interfaces, functions, constants, namespaces and more"
 ---
 
+<h2 class="name">NAME</h2>
+<p> phpreflect &#8211; Reverse-engineer classes, interfaces, functions, constants, namespaces and more </p>
+<h2>SYNOPSIS</h2>
 <p> <code>phpreflect</code> [<i>options</i>] <i>command</i> [<i>arguments</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <a href="/docs/linux/man/1-phpreflect/">phpreflect</a>(1) command parse any data source, to find out elements, such as classes, interfaces, functions, constants, namespaces.</p>
 <h2>OPTIONS</h2>
 <p> <code>-h, &#8211;help</code></p>

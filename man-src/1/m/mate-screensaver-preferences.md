@@ -1,5 +1,4 @@
 ---
-
 title: "mate-screensaver-preferences(1)"
 name: "mate-screensaver-preferences"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mate-screensaver-preferences/"
 description: "mate-screensaver-preferences – Configure MATE Screensaver"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mate-screensaver-preferences &#8211; Configure MATE Screensaver </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mate-screensaver-preferences [ OPTIONS]</code></p>
+<h2>DESCRIPTION</h2>
 <p> Manages preferences for the MATE Screensaver.</p>
 <h2>OPTIONS</h2>
 <p> This program only accepts the standard GTK options.</p>

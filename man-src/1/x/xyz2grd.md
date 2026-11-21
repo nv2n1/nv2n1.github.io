@@ -1,5 +1,4 @@
 ---
-
 title: "xyz2grd(1)"
 name: "xyz2grd"
 section: "1"
@@ -10,8 +9,10 @@ description: "xyz2grd – Convert data table to a grid file"
 
 <h2>NAME</h2>
 <p> xyz2grd &#8211; Convert data table to a grid file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>xyz2grd</code> [ <i>table</i> ] <i>grdfile</i> <i>increment</i> <i>region</i> [ [<code>f</code>|<code>l</code>|<code>m</code>|<code>n</code>|<code>r</code>|<code>s</code>|<code>u</code>|<code>z</code>] ] [ <i>xname</i>/<i>yname</i>/<i>zname</i>/<i>scale</i>/<i>offset</i>/<i>invalid</i>/<i>title</i>/<i>remark</i> ] [ [<i>zfile</i>] ] [ [<i>level</i>] ] [ [<i>flags</i>] ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-r</code> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>xyz2grd</code> reads one or more z or xyz tables and creates a binary grid file. <code>xyz2grd</code> will report if some of the nodes are not filled in with data. Such unconstrained nodes are set to a value specified by the user [Default is NaN]. Nodes with more than one value will be set to the mean value. As an option (using <code>-Z</code>), a 1-column z-table may be read assuming all nodes are present (z-tables can be in organized in a number of formats, see <code>-Z</code> below.)</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

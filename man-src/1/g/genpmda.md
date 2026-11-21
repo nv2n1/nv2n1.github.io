@@ -1,5 +1,4 @@
 ---
-
 title: "genpmda(1)"
 name: "genpmda"
 section: "1"
@@ -10,7 +9,9 @@ description: "genpmda – Performance Co-Pilot PMDA Generator"
 
 <h2>NAME</h2>
 <p> <code>genpmda</code> &#8211; Performance Co-Pilot PMDA Generator</p>
+<h2>SYNOPSIS</h2>
 <p> <code>genpmda</code> [<code>-d</code>] [<code>-D</code> <i>domain</i>] [<code>-s</code> <i>stdpmid</i>] [<code>-t</code> <i>topdir</i>] [<code>-n</code> <i>pmns</i>] [<code>-o</code> <i>dir</i>] [<code>-v</code>] <code>-i</code> <i>IAM</i> <code>-c</code> <i>config</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>Genpmda</code> is a rapid application development tool for creating new Performance Metrics Domain Agents, see <code><a href="/docs/linux/man/3-pmda/">PMDA</a></code>(3). It provides a very easy and efficient way to extend the Performance Co-pilot (PCP) with new performance metrics without needing to understand the low level details of how PMDAs are constructed. </p>
 <p> <code>Genpmda</code> reads a config file containing an augmented Performance Metrics Name Space, see <code><a href="/docs/linux/man/5-pmns/">pmns</a></code>(5), and automatically generates virtually all of the source code to implement a fully functional PMDA, including the Makefile, name space, support scripts for configuring the new PMDA, and the metrics help text. Fairly simple PMDAs can be automatically generated from the config file without writing any additional code. More complicated PMDAs, e.g. containing multiple instance domains, require only the refresh methods for the instance domains to be written manually. </p>
 <p> An example of the config file format accepted by <code>genpmda</code> is given below.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "nfstest_file(1)"
 name: "nfstest_file"
 section: "1"
@@ -10,7 +9,9 @@ description: "nfstest_file – Find all packets for a specific file"
 
 <h2>NAME</h2>
 <p> nfstest_file &#8211; Find all packets for a specific file</p>
+<h2>SYNOPSIS</h2>
 <p> nfstest_file [options] -p &lt;filepath&gt; &lt;trace1.cap&gt; [&lt;trace2.cap&gt; &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> Display all NFS packets for the specified path. It takes a relative path, where it searches for each of the directory entries given in the path until it gets the file handle for the directory where the file is located. Once the directory file handle is found, a LOOKUP or OPEN/CREATE is searched for the given file name. If the file lookup or creation is found, all file handles and state ids associated with that file are searched and all packets found, including their respective replies are displayed. </p>
 <p> There are three levels of verbosity in which they are specified using a bitmap, where the most significant bit gives a more verbose output. Verbose level 1 is used as a default where each packet is displayed condensed to one line using the last layer of the packet as the main output. </p>
 <p> The packet trace files are processed either serially or in parallel. The packets are displayed using their timestamps so they are always displayed in the correct order even if the files given are out of order. If the packet traces were captured one after the other the packets are displayed serially, first the packets of the first file according to their timestamps, then the second and so forth. If the packet traces were captured at the same time on multiple clients the packets are displayed in parallel, packets are interleaved from all the files when displayed again according to their timestamps. </p>

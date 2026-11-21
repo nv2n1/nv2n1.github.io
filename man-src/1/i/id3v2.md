@@ -1,5 +1,4 @@
 ---
-
 title: "id3v2(1)"
 name: "id3v2"
 section: "1"
@@ -10,6 +9,7 @@ description: "id3v2 – Adds/Modifies/Removes/Views id3v2 tags, converts/lists i
 
 <h2>NAME</h2>
 <p> id3v2 &#8211; Adds/Modifies/Removes/Views id3v2 tags, converts/lists id3v1 tags</p>
+<h2>SYNOPSIS</h2>
 <p> <code>id3v2</code> [ <i>OPTION</i> ] [ <i>FILE</i> ] </p>
 <h2>OPTIONS</h2>
 <dl>

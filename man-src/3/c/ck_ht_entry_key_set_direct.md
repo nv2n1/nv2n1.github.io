@@ -1,5 +1,4 @@
 ---
-
 title: "ck_ht_entry_key_set_direct(3)"
 name: "ck_ht_entry_key_set_direct"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_ht_entry_key_set_direct – initialize key value in hash table 
 <p> <code>ck_ht_entry_key_set_direct</code> &#8211; initialize key value in hash table entry</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_ht.h Ft void Fn ck_ht_entry_key_set_direct ck_ht_entry_t *entry uintptr_t key</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_ht_entry_key_set_direct function will initialize the object pointed to by Fa entry with the key value specified in the Fa key argument. This function is typically used to initialize an entry for ck_ht_get_spmc3 and ck_ht_remove_spmc3 operations. It is expected that the entry will be associated with a hash table initialized with <code>CK_HT_MODE_DIRECT</code> (see ck_ht_init3 for more information).</p>
 <h2>RETURN VALUES</h2>
 <p> Fn ck_ht_entry_key_set_direct has no return value.</p>

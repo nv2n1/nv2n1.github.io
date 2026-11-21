@@ -1,5 +1,4 @@
 ---
-
 title: "sleepenh(1)"
 name: "sleepenh"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-sleepenh/"
 description: "sleepenh – an enhanced sleep program."
 ---
 
+<h2 class="name">NAME</h2>
+<p> sleepenh &#8211; an enhanced sleep program. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>sleepenh</code> [<i>initial-time</i>] sleep-time</p>
+<h2>DESCRIPTION</h2>
 <p> <code>sleepenh</code> is a program that can be used when there is a need to execute some functions periodically in a shell script. It was not designed to be accurate for a single sleep, but to be accurate in a sequence of consecutive sleeps.<br />
  After a successful execution, it returns to stdout the timestamp it finished running, that can be used as <code>initial-time</code> to a successive execution of <code>sleepenh</code>.</p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "smbclient(1)"
 name: "smbclient"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-smbclient/"
 description: "smbclient – ftp-like client to access SMB/CIFS resources on servers"
 ---
 
+<h2 class="name">NAME</h2>
+<p> smbclient &#8211; ftp-like client to access SMB/CIFS resources on servers </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt>
 </dt><dd>smbclient [-b&nbsp;&lt;buffer size&gt;] [-d debuglevel] [-e] [-L&nbsp;&lt;netbios name&gt;] [-U username] [-I destinationIP] [-M&nbsp;&lt;netbios name&gt;] [-m maxprotocol] [-A authfile] [-N] [-C] [-g] [-i scope] [-O&nbsp;&lt;socket options&gt;] [-p port] [-R&nbsp;&lt;name resolve order&gt;] [-s&nbsp;&lt;smb config file&gt;] [-t&nbsp;&lt;per-operation timeout in seconds&gt;] [-k] [-P] [-c&nbsp;&lt;command&gt;]</dd>
 <dt>
 </dt><dd>smbclient {servicename} [password] [-b&nbsp;&lt;buffer size&gt;] [-d debuglevel] [-e] [-D Directory] [-U username] [-W workgroup] [-M&nbsp;&lt;netbios name&gt;] [-m maxprotocol] [-A authfile] [-N] [-C] [-g] [-l log-basename] [-I destinationIP] [-E] [-c&nbsp;&lt;command string&gt;] [-i scope] [-O&nbsp;&lt;socket options&gt;] [-p port] [-R&nbsp;&lt;name resolve order&gt;] [-s&nbsp;&lt;smb config file&gt;] [-t&nbsp;&lt;per-operation timeout in seconds&gt;] [-T&lt;c|x&gt;IXFqgbNan] [-k]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This tool is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> smbclient is a client that can &#8216;talk&#8217; to an SMB/CIFS server. It offers an interface similar to that of the ftp program (see <code><a href="/docs/linux/man/1-ftp/">ftp</a></code>(1)). Operations include things like getting files from the server to the local machine, putting files from the local machine to the server, retrieving directory information from the server and so on.</p>
 <h2>OPTIONS</h2>

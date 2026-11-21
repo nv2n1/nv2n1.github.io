@@ -1,5 +1,4 @@
 ---
-
 title: "pilot-install-datebook(1)"
 name: "pilot-install-datebook"
 section: "1"
@@ -12,7 +11,9 @@ description: "pilot-install-datebook – Installs one or more new datebook entri
 <p> pilot-install-datebook &#8211; Installs one or more new datebook entries onto your Palm handheld.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>
+<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr><i>pilot-install-datebook</i>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;port</code>&nbsp;<wbr>&lt;<code>port</code>&gt;]&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr>[<code>-?</code>|<code>&#8211;help</code>]&nbsp;<wbr>[<code>-q</code>|<code>&#8211;quiet</code>]&nbsp;<wbr>[<code>&#8211;usage</code>]&nbsp;<wbr>[<code>-r</code>|<code>&#8211;read</code>&nbsp;<wbr>&nbsp;<wbr><i>file</i>] </p>
+<h2>DESCRIPTION</h2>
 <p>&nbsp;<wbr><i>pilot-install-datebook</i>&nbsp;<wbr>allows the user to create one or more datebook entries from one or more source files. </p>
 <p> The format of the source file contains one datebook entry per line, containing four tab separated fields. The fields are start date/time, end date/time, alarm settings, and the description of datebook entry. This program doesn&#8217;t yet support repeated entries. The date and time must be in format understood by <i>parsedate.y</i>. At the very least, the following two formats are understood: </p>
 <p> August 11, 1997 0800 GMT+300 </p>

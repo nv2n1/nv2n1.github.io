@@ -1,5 +1,4 @@
 ---
-
 title: "iostat2pcp(1)"
 name: "iostat2pcp"
 section: "1"
@@ -10,7 +9,9 @@ description: "iostat2pcp – import iostat data and create a PCP archive"
 
 <h2>NAME</h2>
 <p> <code>iostat2pcp</code> &#8211; import iostat data and create a PCP archive</p>
+<h2>SYNOPSIS</h2>
 <p> <code>iostat2pcp</code> [<code>-v</code>] [<code>-S</code> <i>start</i>] [<code>-t</code> <i>interval</i>] [<code>-Z</code> <i>timezone</i>] <i>infile</i> <i>outfile</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>iostat2pcp</code> reads a text file created with <code><a href="/docs/linux/man/1-iostat/">iostat</a></code>(1) (<i>infile</i>) and translates this into a Performance Co-Pilot (<font SIZE="-1">PCP</font>) archive with the basename <i>outfile</i>. If <i>infile</i> is &#8211; then <i>iostat2pcp</i> reads from standard input, allowing easy preprocessing of the <i><a href="/docs/linux/man/1-iostat/">iostat</a></i>(1) output with <i><a href="/docs/linux/man/1-sed/">sed</a></i>(1) or similar. </p>
 <p> The resultant <font SIZE="-1">PCP</font> archive may be used with all the <font SIZE="-1">PCP</font> client tools to graph subsets of the data using <code><a href="/docs/linux/man/1-pmchart/">pmchart</a></code>(1), perform data reduction and reporting, filter with the <font SIZE="-1">PCP</font> inference engine <code><a href="/docs/linux/man/1-pmie/">pmie</a></code>(1), etc. </p>
 <p> A series of physical files will be created with the prefix <i>outfile</i>. These are <i>outfile</i><code>.0</code> (the performance data), <i>outfile</i><code>.meta</code> (the metadata that describes the performance data) and <i>outfile</i><code>.index</code> (a temporal index to improve efficiency of replay operations for the archive). If any of these files exists already, then <code>iostat2pcp</code> will <code>not</code> overwrite them and will exit with an error message. </p>

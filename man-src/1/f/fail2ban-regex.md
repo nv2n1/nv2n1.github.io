@@ -1,5 +1,4 @@
 ---
-
 title: "fail2ban-regex(1)"
 name: "fail2ban-regex"
 section: "1"
@@ -10,7 +9,9 @@ description: "fail2ban-regex – test Fail2ban \"failregex\" option"
 
 <h2>NAME</h2>
 <p> fail2ban-regex &#8211; test Fail2ban &quot;failregex&quot; option</p>
+<h2>SYNOPSIS</h2>
 <p> <code>fail2ban-regex</code> [<i>,OPTIONS/</i>] <i>,&lt;LOG&gt; &lt;REGEX&gt; /</i>[<i>,IGNOREREGEX/</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Fail2Ban reads log file that contains password failure report and bans the corresponding IP addresses using firewall rules. </p>
 <p> This tools can test regular expressions for &quot;fail2ban&quot;.</p>
 <h3>LOG:</h3>

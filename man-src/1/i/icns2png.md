@@ -1,5 +1,4 @@
 ---
-
 title: "icns2png(1)"
 name: "icns2png"
 section: "1"
@@ -10,7 +9,9 @@ description: "icns2png – convert Mac OS icns files to png images"
 
 <h2>NAME</h2>
 <p> icns2png &#8211; convert Mac OS icns files to png images</p>
+<h2>SYNOPSIS</h2>
 <p> <code>icns2png</code> [<i>-x|-l</i>] [<i>options</i>] [<i>file </i>&#8230; ]</p>
+<h2>DESCRIPTION</h2>
 <p> icns2png extracts images from mac .icns files, and exports them to png format.</p>
 <h2>OPTIONS</h2>
 <dl>

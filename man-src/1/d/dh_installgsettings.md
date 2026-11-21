@@ -1,5 +1,4 @@
 ---
-
 title: "dh_installgsettings(1)"
 name: "dh_installgsettings"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dh_installgsettings/"
 description: "dh_installgsettings – install GSettings overrides and set dependencies"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dh_installgsettings &#8211; install GSettings overrides and set dependencies </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dh_installgsettings</code> [<i>debhelper options</i>] [<code>&#8211;priority=&lt;number</code>&gt;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>dh_installgsettings</code> is a debhelper program that is responsible for installing GSettings override files and generating appropriate dependencies on the GSettings backend. </p>
 <p> The dependency on the backend will be generated in <code>${misc:Depends}</code>.</p>
 <h2>FILES</h2>

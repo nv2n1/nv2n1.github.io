@@ -1,5 +1,4 @@
 ---
-
 title: "map-partition(1)"
 name: "map-partition"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-map-partition/"
 description: "map-partition – Spectral bisection of observation graphs"
 ---
 
+<h2 class="name">NAME</h2>
+<p> map-partition &#8211; Spectral bisection of observation graphs </p>
+<h2>SYNOPSIS</h2>
 <p> map-partition <i>input_map.simplemap</i> [<i>nCut threshold</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>map-partition</code> takes an input map and generates a set of sub-maps using recursive spectral bisection with a threshold of 1 (default), or the one passed as second argument.</p>
 <h2>BUGS</h2>
 <p> Please report bugs at <a rel="nofollow" href="http://sourceforge.net/tracker/?group_id=205280">http://sourceforge.net/tracker/?group_id=205280</a>&amp;atid=993006</p>

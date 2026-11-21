@@ -1,5 +1,4 @@
 ---
-
 title: "qselect-torque(1)"
 name: "qselect-torque"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-qselect-torque/"
 description: "qselect – select pbs batch jobs"
 ---
 
+<h2 class="name">NAME</h2>
+<p> qselect &#8211; select pbs batch jobs </p>
+<h2>SYNOPSIS</h2>
 <p> qselect [-a [op]date_time] [-A account_string] [-e] [-c [op]interval] [-h hold_list] [-l resource_list] [-N name] [-p [op]priority] [-q destination] [-r rerun] [-s states] [-u user_list]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>qselect</code> command provides a method to list the job identifier of those jobs which meet a list of selection criteria. Jobs are selected from those owned by a single server. </p>
 <p> When qselect successfully completes, it will have written to standard output a list of zero or more jobs which meet the criteria specified by the options. Each option acts as a filter restricting the number of jobs which might be listed. With no options, the qselect command will list all jobs at the server which the user is authorized to list (query status of). The -u option may be used to limit the selection to jobs owned by this user or other specified users.</p>
 <h2>OPTIONS</h2>

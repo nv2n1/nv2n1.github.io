@@ -1,5 +1,4 @@
 ---
-
 title: "soapcpp2(1)"
 name: "soapcpp2"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-soapcpp2/"
 description: "soapcpp2 – the gSOAP Stub and Skeleton Compiler for C and C++"
 ---
 
+<h2 class="name">NAME</h2>
+<p> soapcpp2 &#8211; the gSOAP Stub and Skeleton Compiler for C and C++ </p>
+<h2>SYNOPSIS</h2>
 <p> <code>soapcpp2</code> [<i>OPTIONS</i>] <i>INPUT</i></p>
+<h2>DESCRIPTION</h2>
 <p> Please see /usr/share/doc/gsoap/soapdoc2.html for details. </p>
 <p> Create stubs and client and server code from input <i>INPUT</i> or standard input if <i>INPUT</i> is not specified.</p>
 <h2>OPTIONS</h2>

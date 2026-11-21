@@ -1,5 +1,4 @@
 ---
-
 title: "cgghrd(3)"
 name: "cgghrd"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cgghrd/"
 description: "cgghrd.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cgghrd.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgghrd</code> (COMPQ, COMPZ, N, ILO, IHI, A, LDA, B, LDB, Q, LDQ, Z, LDZ, INFO)<br />
  <i></i><code>CGGHRD</code></p>

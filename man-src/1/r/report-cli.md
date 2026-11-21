@@ -1,5 +1,4 @@
 ---
-
 title: "report-cli(1)"
 name: "report-cli"
 section: "1"
@@ -7,9 +6,16 @@ letter: "r"
 url: "/docs/linux/man/1-report-cli/"
 ---
 
-report-cli - Work with ABRT problem directories from command line. 
+<h2 class="name">NAME</h2>
+ 
 
-<i>report-cli</i> [-vsp] -L[PREFIX] [PROBLEM_DIR] 
+ report-cli - Work with ABRT problem directories from command line. 
+
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <i>report-cli</i> [-vsp] -L[PREFIX] [PROBLEM_DIR] 
 
  <i>report-cli</i> [-vsp] -e EVENT PROBLEM_DIR 
 
@@ -19,7 +25,11 @@ report-cli - Work with ABRT problem directories from command line.
 
  <i>report-cli</i> [-vsp] -r[y|o|d] PROBLEM_DIR
 
-<i>report-cli</i> is a command line tool that manages application crashes and other problems caught by abrtd daemon, or created by other programs using libreport. It enables access to, manipulation of problem data, and reporting.
+<h2>DESCRIPTION</h2>
+
+ 
+
+ <i>report-cli</i> is a command line tool that manages application crashes and other problems caught by abrtd daemon, or created by other programs using libreport. It enables access to, manipulation of problem data, and reporting.
 
 <h2>OPTIONS</h2>
 

@@ -1,5 +1,4 @@
 ---
-
 title: "antlr3commontree(3)"
 name: "antlr3commontree"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-antlr3commontree/"
 description: "include/antlr3commontree.h –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> include/antlr3commontree.h &#8211; </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3defs.h">antlr3defs.h</a>&gt;<br />
  #include &lt;<a href="file:/usr/include/antlr3basetree.h">antlr3basetree.h</a>&gt;<br />
  #include &lt;<a href="file:/usr/include/antlr3commontoken.h">antlr3commontoken.h</a>&gt; </p>

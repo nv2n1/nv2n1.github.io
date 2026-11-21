@@ -1,5 +1,4 @@
 ---
-
 title: "optipng(1)"
 name: "optipng"
 section: "1"
@@ -8,9 +7,12 @@ url: "/docs/linux/man/1-optipng/"
 description: "OptiPNG – Optimize Portable Network Graphics files"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>OptiPNG</code> &#8211; Optimize Portable Network Graphics files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>optipng</code> [<code>-?</code> | <code>-h</code> | <code>-help</code>]<br />
  <code>optipng</code> [<i>options&#8230;</i>] <i>files&#8230;</i> </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>OptiPNG</code> program shall attempt to <i>optimize</i> PNG files, i.e. reduce their size to a minimum, without losing semantic information. In addition, this program shall perform a suite of auxiliary functions like integrity checks, metadata recovery and pixmap-to-PNG conversion. </p>
 <p> The optimization attempts are not guaranteed to succeed. Valid PNG files that cannot be optimized by this program are normally left intact; their size will not grow. The user may request to override this default behavior. </p>
 <h2>FILES</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "tilp(1)"
 name: "tilp"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-tilp/"
 description: "TiLP2 – a communication program for TI calculators (‘Tilp Is a Linking Program’)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> TiLP2 &#8211; a communication program for TI calculators (&#8216;Tilp Is a Linking Program&#8217;)</p>
 <h2>SYNOPSYS</h2>
 <p> <code>tilp</code> [-h / &#8211;help] [-v / &#8211;version] [&#8211;calc=] [&#8211;cable=] [&#8211;port=] [&#8211;timeout=] [&#8211;delay=] [&#8211;silent] [&#8211;no-gui] [filename] </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>TiLP</code> program allows you to backup, restore and archive variables and/or applications for your Texas Instruments calculator on your computer. It has also additional features such as screen dump, remote control, ROM dump, FLASHing. TiLP is a very complete program. Moreover, you have the same program for all calculator models. </p>
 <h2>OPTIONS</h2>
 <p> The command line of tilp can be used for sending files like variables, backup, FLASH apps, OS, TiGroup, etc. You cannot do any other operations. If you want more operations, you have to use the GUI. For sending one or more files, simply pass the filename(s) on the command line. If you want to use TiLP from console, use the &#8211;no-gui switch. </p>

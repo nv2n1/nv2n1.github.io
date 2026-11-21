@@ -1,5 +1,4 @@
 ---
-
 title: "x0vncserver(1)"
 name: "x0vncserver"
 section: "1"
@@ -10,8 +9,10 @@ description: "x0vncserver – TigerVNC Server for X displays"
 
 <h2>NAME</h2>
 <p> x0vncserver &#8211; TigerVNC Server for X displays</p>
+<h2>SYNOPSIS</h2>
 <p> <code>x0vncserver</code> [<i>options</i>]<br />
  <code>x0vncserver -version</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>x0vncserver</code> is a TigerVNC Server which makes any X display remotely accessible via VNC, TigerVNC or compatible viewers. Unlike <code><a href="/docs/linux/man/1-xvnc/">Xvnc</a></code>(1), it does not create a virtual display. Instead, it just shares an existing X server (typically, that one connected to the physical screen). </p>
 <p> XDamage will be used if the existing X server supports it. Otherwise <code>x0vncserver</code> will fall back to polling the screen for changes. </p>
 <h2>OPTIONS</h2>

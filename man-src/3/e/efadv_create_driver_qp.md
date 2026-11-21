@@ -1,5 +1,4 @@
 ---
-
 title: "efadv_create_driver_qp(3)"
 name: "efadv_create_driver_qp"
 section: "3"
@@ -7,7 +6,12 @@ letter: "e"
 url: "/docs/linux/man/3-efadv_create_driver_qp/"
 ---
 
-efadv_create_driver_qp - Create EFA specific Queue Pair # SYNOPSIS
+<h2 class="name">NAME</h2>
+ 
+
+ 
+
+ efadv_create_driver_qp - Create EFA specific Queue Pair # SYNOPSIS
 <dl>
 <dt>
 </dt><dd> <pre><code>
@@ -18,7 +22,11 @@ infiniband / efadv.h &gt;
                                           uint32_t driver_qp_type);
 </code></pre></dd></dl>
 
-efadv_create_driver_qp() Create device-specific Queue Pairs. 
+<h2>DESCRIPTION</h2>
+
+ 
+
+ efadv_create_driver_qp() Create device-specific Queue Pairs. 
 
  Scalable Reliable Datagram (SRD) transport provides reliable out-of-order delivery, transparently utilizing multiple network paths to reduce network tail latency. Its interface is similar to UD, in particular it supports message size up to MTU, with error handling extended to support reliable communication.
 <dl>

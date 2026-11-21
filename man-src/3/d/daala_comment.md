@@ -1,5 +1,4 @@
 ---
-
 title: "daala_comment(3)"
 name: "daala_comment"
 section: "3"
@@ -8,7 +7,10 @@ url: "/docs/linux/man/3-daala_comment/"
 description: "daala_comment –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> daala_comment &#8211; </p>
 <p> The comment information.</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;codec.h&gt;</p>
 <h3>Data Fields</h3>
 <p> char ** <code>user_comments</code><br />

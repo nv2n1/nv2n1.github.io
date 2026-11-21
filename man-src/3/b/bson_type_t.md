@@ -1,5 +1,4 @@
 ---
-
 title: "bson_type_t(3)"
 name: "bson_type_t"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_type_t – BSON Type Enumeration"
 
 <h2>NAME</h2>
 <p> bson_type_t &#8211; BSON Type Enumeration</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;bson.h&gt;
 typedef enum {
@@ -36,6 +36,7 @@ typedef enum {
     BSON_TYPE_MINKEY = 0xFF,
 } bson_type_t;
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>bson_type_t</code> enumeration contains all of the types from the <code>BSON Specification</code> \&amp;. It can be used to determine the type of a field at runtime. </p>
 <h2>EXAMPLE</h2>
 <pre><code>

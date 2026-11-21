@@ -1,5 +1,4 @@
 ---
-
 title: "ikiwiki-makerepo(1)"
 name: "ikiwiki-makerepo"
 section: "1"
@@ -11,11 +10,15 @@ url: "/docs/linux/man/1-ikiwiki-makerepo/"
 
  ikiwiki-makerepo - check an ikiwiki srcdir into revision control 
 
-ikiwiki-makerepo git|svn|monotone|darcs|cvs srcdir repository 
+<h2>SYNOPSIS</h2>
+
+ ikiwiki-makerepo git|svn|monotone|darcs|cvs srcdir repository 
 
  ikiwiki-makerepo bzr|mercurial srcdir 
 
-ikiwiki-makerepo injects a srcdir directory, containing an ikiwiki wiki, into a repository that it creates. The repository can be created using any of a variety of revision control systems. 
+<h2>DESCRIPTION</h2>
+
+ ikiwiki-makerepo injects a srcdir directory, containing an ikiwiki wiki, into a repository that it creates. The repository can be created using any of a variety of revision control systems. 
 
  Note that for mercurial and bzr, the srcdir is converted into a repository. There is no need to have a separate repository with mercurial or bzr. 
 

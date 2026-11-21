@@ -1,5 +1,4 @@
 ---
-
 title: "perl5182delta(1)"
 name: "perl5182delta"
 section: "1"
@@ -7,9 +6,14 @@ letter: "p"
 url: "/docs/linux/man/1-perl5182delta/"
 ---
 
-perl5182delta - what is new for perl v5.18.2 
+<h2 class="name">NAME</h2>
+ 
 
-This document describes differences between the 5.18.1 release and the 5.18.2 release. 
+ perl5182delta - what is new for perl v5.18.2 
+
+<h2>DESCRIPTION</h2>
+
+ This document describes differences between the 5.18.1 release and the 5.18.2 release. 
 
  If you are upgrading from an earlier release such as 5.18.0, first read perl5181delta, which describes differences between 5.18.0 and 5.18.1.
 

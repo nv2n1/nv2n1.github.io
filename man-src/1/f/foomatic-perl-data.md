@@ -1,5 +1,4 @@
 ---
-
 title: "foomatic-perl-data(1)"
 name: "foomatic-perl-data"
 section: "1"
@@ -10,6 +9,7 @@ description: "foomatic-perl-data – generate Perl data structures from XML"
 
 <h2>NAME</h2>
 <p> foomatic-perl-data &#8211; generate Perl data structures from XML</p>
+<h2>SYNOPSIS</h2>
 <p> <code>foomatic-perl-data</code> [ <i>-O</i> ] [ <i>-C</i> ] [ <i>-P</i> ] [ <i>-D</i> ] [ <i>-o option=setting</i> ] [ <i>-o &#8230;</i> ] [ <i>-v</i> ] [ <i>filename</i> ] </p>
 <h3>Options</h3>
 <p> <code>-O</code> Parse overview XML data </p>

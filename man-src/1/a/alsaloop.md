@@ -1,5 +1,4 @@
 ---
-
 title: "alsaloop(1)"
 name: "alsaloop"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-alsaloop/"
 description: "alsaloop – command-line PCM loopback"
 ---
 
+<h2 class="name">NAME</h2>
+<p> alsaloop &#8211; command-line PCM loopback </p>
+<h2>SYNOPSIS</h2>
 <p> <code>alsaloop</code> [<i>-option</i>] [<i>cmd</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>alsaloop</code> allows create a PCM loopback between a PCM capture device and a PCM playback device. </p>
 <p> <code>alsaloop</code> supports multiple soundcards, adaptive clock synchronization, adaptive rate resampling using the samplerate library (if available in the system). Also, mixer controls can be redirected from one card to another (for example Master and PCM). </p>
 <h2>OPTIONS</h2>

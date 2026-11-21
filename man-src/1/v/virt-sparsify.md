@@ -1,5 +1,4 @@
 ---
-
 title: "virt-sparsify(1)"
 name: "virt-sparsify"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-virt-sparsify/"
 description: "virt-sparsify – Make a virtual machine disk sparse"
 ---
 
+<h2 class="name">NAME</h2>
+<p> virt-sparsify &#8211; Make a virtual machine disk sparse </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 virt - sparsify[--options] indisk outdisk virt - sparsify[--options]-- in - place disk
 </code></pre>
 <h2>WARNING</h2>
 <p> Using <tt>&quot;virt-sparsify&quot;</tt> on live virtual machines, or concurrently with other disk editing tools, can be dangerous, potentially causing disk corruption. The virtual machine must be shut down before you use this command, and disk images must not be edited concurrently.</p>
+<h2>DESCRIPTION</h2>
 <p> Virt-sparsify is a tool which can make a virtual machine disk (or any disk image) sparse a.k.a. thin-provisioned. This means that free space within the disk image can be converted back to free space on the host. </p>
 <p> Virt-sparsify can locate and sparsify free space in most filesystems (eg. ext2/3/4, btrfs, <font SIZE="-1">NTFS,</font> etc.), and also in <font SIZE="-1">LVM</font> physical volumes. </p>
 <p> Virt-sparsify can also convert between some disk formats, for example converting a raw disk image to a thin-provisioned qcow2 image. </p>

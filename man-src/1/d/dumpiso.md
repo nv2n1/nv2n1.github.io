@@ -1,5 +1,4 @@
 ---
-
 title: "dumpiso(1)"
 name: "dumpiso"
 section: "1"
@@ -10,7 +9,9 @@ description: "dumpiso – dump IEEE 1394 isochronous channel packets"
 
 <h2>NAME</h2>
 <p> dumpiso &#8211; dump IEEE 1394 isochronous channel packets</p>
+<h2>SYNOPSIS</h2>
 <p> <code>dumpiso</code> [ <i>options</i> ] [ <i>FILE</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> dumpiso listens on a selected range of channels and dumps all received packets into the file <i>FILE</i> or, if not given, to standard output. While dumping, the current number of received packets is written to standard error and updated with every packet. </p>
 <p> It uses a simple file format for the dumps which is described in <code><a href="/docs/linux/man/5-isodump/">isodump</a></code>(5). The dumped packets can be sent out again with <code><a href="/docs/linux/man/1-sendiso/">sendiso</a></code>(1).</p>
 <h2>OPTIONS</h2>

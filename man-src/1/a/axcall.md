@@ -1,5 +1,4 @@
 ---
-
 title: "axcall(1)"
 name: "axcall"
 section: "1"
@@ -10,12 +9,14 @@ description: "axcall – make an AX.25, NET/ROM or Rose connection."
 
 <h2>NAME</h2>
 <p> axcall &#8211; make an AX.25, NET/ROM or Rose connection.</p>
+<h2>SYNOPSIS</h2>
 <p> For AX.25<br />
  <code>axcall [-b l|e] [-d] [-h] [-m s|e] [-p paclen] [-r] [-t] [-v] [-w window] port callsign [[via] digipeaters&#8230;..]</code> </p>
 <p> For NET/ROM<br />
  <code>axcall [-d] [-h] [-p paclen] [-r] [-t] [-v] port callsign</code> </p>
 <p> For Rose<br />
  <code>axcall [-d] [-h] [-r] [-t] [-v] port callsign address [[via] digipeater]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>Axcall</code> is the general purpose AX.25, NET/ROM and Rose connection program. As is normal in AX.25 it runs entirely in line mode. All CR/LF translation is done transparently. The program provides ASCII, YAPP, YAPP-C and 7+ file transfer facilities. Some of the options are only valid in AX.25 mode, the program will quietly ignore them if given in NET/ROM mode or in Rose mode. </p>
 <p> This version of <code>axcall</code> incorporates many changes that include a much improved user interface. The port name is mandatory and is the name of the port which the connection will be made on. The port name may be either an AX.25, a NET/ROM port or a Rose port, <code>axcall</code> will determine which automatically. </p>
 <p> When using NET/ROM the use of digipeaters is meaningless and is not supported. However when using Rose up to one digipeater may be specified, as well as the Rose address of the distant node and the callsign of the remote station. The Rose address must be ten digits long and it must exist in the Rose node tables. For Rose connects to work <code>axparms</code> must have been used to set a callsign/uid mapping for the userid in use.</p>

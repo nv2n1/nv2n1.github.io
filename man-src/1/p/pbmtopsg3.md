@@ -1,5 +1,4 @@
 ---
-
 title: "pbmtopsg3(1)"
 name: "pbmtopsg3"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pbmtopsg3/"
 description: "pbmtopsg3 – convert PBM images to Postscript with G3 fax compression"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pbmtopsg3 &#8211; convert PBM images to Postscript with G3 fax compression</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pbmtopsg3</code> [<code>&#8211;title=</code><i>title</i>] [<code>&#8211;dpi=</code><i>dpi</i>] [<i>filespec</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> Converts the PBM images in the input PBM file to pages in a Postscript file encoded with G3 fax compression. </p>
 <p> If you don&#8217;t specify <i>filespec</i>, the input is from Standard Input. </p>
 <p> Remember that you can create a multi-image PBM file simply by concatenating single-image PBM files, so if each page is in a different file, you might do: </p>

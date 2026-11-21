@@ -1,5 +1,4 @@
 ---
-
 title: "pamedge(1)"
 name: "pamedge"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pamedge/"
 description: "pamedge – edge-detect an image"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pamedge &#8211; edge-detect an image</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pamedge</code> [<i>imagefile</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamedge</code> reads a Netpbm image (PNM or PAM) and produces an image that outlines the edges. </p>
 <p> The output image is of the same type as the input, except that the maxval of the output is at least 255 and if the input is PBM, the output is PGM. </p>

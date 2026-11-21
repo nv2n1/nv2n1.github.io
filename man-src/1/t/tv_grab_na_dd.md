@@ -1,5 +1,4 @@
 ---
-
 title: "tv_grab_na_dd(1)"
 name: "tv_grab_na_dd"
 section: "1"
@@ -8,7 +7,10 @@ url: "/docs/linux/man/1-tv_grab_na_dd/"
 description: "tv_grab_na_dd – Grab TV listings for North America using Schedules Direct"
 ---
 
+<h2 class="name">NAME</h2>
+<p> tv_grab_na_dd &#8211; Grab TV listings for North America using Schedules Direct </p>
 <p><a rel="nofollow" href="http://www.schedulesdirect.org">http://www.schedulesdirect.org</a></p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 tv_grab_na_dd-- help
         tv_grab_na_dd-- version
@@ -24,6 +26,7 @@ tv_grab_na_dd-- help
                                       [--list - channel][--share SHAREDIR][--list - times]
                                       [--download - only][--padd n][--dropbadchar][--agent NAME]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> This script downloads <font SIZE="-1">TV</font> listings using Schedules Direct&#8217;s data service, converts it to <font SIZE="-1">XMLTV</font> format, and outputs the results. </p>
 <p> You must first register with Schedules Direct at: &lt;<a rel="nofollow" href="http://www.schedulesdirect.org">http://www.schedulesdirect.org</a>&gt; </p>
 <p> Schedules Direct is a non-profit organization whose mission is to provide low-cost television program guide data to end-users of Open Source and Freeware applications. </p>

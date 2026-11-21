@@ -1,5 +1,4 @@
 ---
-
 title: "jcf-dump(1)"
 name: "jcf-dump"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-jcf-dump/"
 description: "jcf-dump – print information about Java class files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> jcf-dump &#8211; print information about Java class files </p>
+<h2>SYNOPSIS</h2>
 <p> jcf-dump [<code>-c</code>] [<code>&#8211;javap</code>]<br />
 &nbsp;<wbr>[<code>&#8211;classpath</code>=<i>path</i>]&nbsp;<wbr>[<code>&#8211;CLASSPATH</code>=<i>path</i>]<br />
 &nbsp;<wbr>[<code>-I</code><i>dir</i>&#8230;]&nbsp;<wbr>[<code>-o</code>&nbsp;<wbr><i>file</i>]<br />
 &nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr>[<code>&#8211;help</code>]&nbsp;<wbr>[<code>-v</code>]&nbsp;<wbr>[<code>&#8211;verbose</code>]<br />
 &nbsp;<wbr><i>classname</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> This is a class file examiner, similar to <tt>&quot;javap&quot;</tt>. It will print information about a number of classes, which are specified by class name or file name.</p>
 <h2>OPTIONS</h2>
 <dl>

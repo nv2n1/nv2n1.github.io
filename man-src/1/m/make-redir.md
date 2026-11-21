@@ -1,5 +1,4 @@
 ---
-
 title: "make-redir(1)"
 name: "make-redir"
 section: "1"
@@ -10,10 +9,12 @@ description: "make-redir – run \"make\" but automatically redirect its results
 
 <h2>NAME</h2>
 <p> make-redir &#8211; run &quot;make&quot; but automatically redirect its results to DESTDIR</p>
+<h2>SYNOPSIS</h2>
 <p> <code>make-redir</code> [<i>MAKE_ARGUMENT*</i>]&#8230;[<i>install</i>] </p>
 <dl>
 <dt>
 </dt><dd> * DESTDIR=<i>directory</i> and -k/&#8211;keep-going are especially common.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The make-redir program runs &quot;make&quot; in a way that redirects file installations to descend from the $DESTDIR directory, even if the provided makefile doesn&#8217;t natively support $DESTDIR. In most cases, simply replace &quot;make install&quot; with &quot;make-redir DESTDIR=<i>directory</i> install&quot; (adding options as necessary). </p>
 <p> The make-redir program attempts to solve a common problem for packagers of software and for users who directly install source code: Inadequate DESTDIR support. Software is typically installed on Unix/Linux from a source code package by typing &quot;make install&quot;. Historically, this script would write directly to privileged directories to perform the installation (e.g., /usr/bin), or at least to a directory that merged all installed files (e.g., $HOME/bin). However, packagers of software using most modern packaging systems (such as .rpm and .deb) instead require that files be written to some intermediate directory, even though they will be run from a different filesystem location. Similarly, users who directly install source code often use programs such as GNU stow, encap, or toast. These programs install each package in its own separate directory, but work best if the installed programs are invoked through a different directory (which merges the contents of multiple packages, simplifying the PATH and supporting plug-ins). Thus, for both many packagers of software and for many users who directly install source code, a program should be installed in one directory, yet actually be run from a different directory. This is easy to do if the installation script supports the &quot;DESTDIR convention&quot;; simply run &quot;make DESTDIR=<i>something</i> install&quot;, which would install the files descending from DESTDIR, even though the files are configured to run without the DESTDIR prefix. Unfortunately, many source packages don&#8217;t support the DESTDIR convention. </p>
 <p> The auto-destdir tools &quot;make-redir&quot; and &quot;run-redir&quot; will automatically redirect file reads/writes to follow the DESTDIR convention, without requiring any changes to the build files (e.g., a makefile). Attempts to write to directories that are normally root-privileged (such as /usr/bin) will instead be redirected to descend from a designated destination directory. This destination directory is specified by the environment variable REDIR_DESTDIR or DESTDIR, with REDIR_DESTDIR taking precedence. </p>

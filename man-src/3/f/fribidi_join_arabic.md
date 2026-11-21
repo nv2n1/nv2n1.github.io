@@ -1,5 +1,4 @@
 ---
-
 title: "fribidi_join_arabic(3)"
 name: "fribidi_join_arabic"
 section: "3"
@@ -7,9 +6,14 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_join_arabic/"
 ---
 
-fribidi_join_arabic - do Arabic joining 
+<h2 class="name">NAME</h2>
+ 
 
-<b> #include &lt;fribidi.h&gt; 
+ fribidi_join_arabic - do Arabic joining 
+
+<h2>SYNOPSIS</h2>
+
+ <b> #include &lt;fribidi.h&gt; 
 
  extern void fribidi_join_arabic 
  ( 
@@ -36,7 +40,9 @@ fribidi_join_arabic - do Arabic joining
 </dd><dt><b>FriBidiArabicProp *ar_props</b>
 </dt><dd> Arabic properties to analyze, initialized by joining types, as returned by fribidi_get_joining_types.</dd></dl>
 
-This function does the Arabic joining algorithm. Means, given Arabic joining types of the characters in ar_props (don't worry, FriBidiJoiningType can be casted to FriBidiArabicProp automagically), this function modifies this properties to grasp the effect of neighboring characters. You probably need this information later to do Arabic shaping. 
+<h2>DESCRIPTION</h2>
+
+ This function does the Arabic joining algorithm. Means, given Arabic joining types of the characters in ar_props (don't worry, FriBidiJoiningType can be casted to FriBidiArabicProp automagically), this function modifies this properties to grasp the effect of neighboring characters. You probably need this information later to do Arabic shaping. 
 
  This function implements rules R1 to R7 inclusive (all rules) of the Arabic Cursive Joining algorithm of the Unicode standard as available at <a rel="nofollow" HREF="http://www.unicode.org/versions/Unicode4.0.0/ch08.pdf#G7462.">http://www.unicode.org/versions/Unicode4.0.0/ch08.pdf#G7462.</a> It also interacts correctly with the bidirection algorithm as defined in Section 
  3.5 Shaping of the Unicode Bidirectional Algorithm available at <a rel="nofollow" HREF="http://www.unicode.org/reports/tr9/#Shaping.">http://www.unicode.org/reports/tr9/#Shaping.</a> 

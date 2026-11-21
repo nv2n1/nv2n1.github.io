@@ -1,5 +1,4 @@
 ---
-
 title: "gst-xmllaunch-0(1)"
 name: "gst-xmllaunch-0"
 section: "1"
@@ -10,7 +9,9 @@ description: "gst-xmllaunch – build and run a GStreamer pipeline from an XML s
 
 <h2>NAME</h2>
 <p> gst-xmllaunch &#8211; build and run a GStreamer pipeline from an XML serialization</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gst-xmllaunch</code> <i>[OPTION&#8230;]</i> XML-FILE [ ELEMENT.PROPERTY=VALUE &#8230; ]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>gst-xmllaunch</i> is a tool that is used to build and run a basic <i>GStreamer</i> pipeline, loading it from an XML description. You can produce the XML description using <a href="/docs/linux/man/1-gst-launch-0-10/">gst-launch-0.10</a>(1) with the -o option or by calling gst_xml_write_file() in your own app. </p>
 <p> A simple commandline looks like: </p>
 <p>&nbsp;<wbr>gst-xmllaunch my-pipeline.xml filesrc0.location=music.mp3 </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "drotmg(3)"
 name: "drotmg"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-drotmg/"
 description: "drotmg.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> drotmg.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>drotmg</code> (DD1, DD2, DX1, DY1, DPARAM)<br />
  <i></i><code>DROTMG</code></p>

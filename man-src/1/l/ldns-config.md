@@ -1,5 +1,4 @@
 ---
-
 title: "ldns-config(1)"
 name: "ldns-config"
 section: "1"
@@ -10,7 +9,9 @@ description: "ldns-config – show compiler and linker flags for ldns usage."
 
 <h2>NAME</h2>
 <p> ldns-config &#8211; show compiler and linker flags for ldns usage.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ldns-config</code> [ <i>OPTIONS</i> ] </p>
+<h2>DESCRIPTION</h2>
 <p> When writing programs using ldns, you have to tell the compiler where to look for include files and what libraries from which location to link to. <code>ldns-config</code> can be used to find out what flags to use with the C compiler and the linker. </p>
 <h2>OPTIONS</h2>
 <dl>

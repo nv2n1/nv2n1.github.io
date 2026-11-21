@@ -1,5 +1,4 @@
 ---
-
 title: "xpstosvg(1)"
 name: "xpstosvg"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-xpstosvg/"
 description: "xpstosvg – XPS to SVG converter"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xpstosvg &#8211; XPS to SVG converter </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xpstosvg</code> [<i>OPTION</i>&#8230;] FILE [<i>OUTPUT FILE</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>xpstosvg</code></p>
 <dd>converts XPS documents to SVG format. <code>xpstosvg</code> reads the XPS file, <i>FILE</i>, and writes a SVG file, <i>OUTPUT FILE</i>. If <i>OUTPUT FILE</i> is not specified the output filename will be derived from the <i>OUTPUT FILE</i> filename.</dd>
 <h2>OPTIONS</h2>

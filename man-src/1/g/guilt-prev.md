@@ -1,5 +1,4 @@
 ---
-
 title: "guilt-prev(1)"
 name: "guilt-prev"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-guilt-prev/"
 description: "guilt-prev – Output name of second topmost applied patch"
 ---
 
+<h2 class="name">NAME</h2>
+<p> guilt-prev &#8211; Output name of second topmost applied patch </p>
+<h2>SYNOPSIS</h2>
 <p> <i>guilt-prev</i> [-p|&#8211;path]</p>
+<h2>DESCRIPTION</h2>
 <p> Output name of second topmost applied patch. If linkguilt:guilt-pop[1] is used, this patch will become the topmost patch.</p>
 <h2>OPTIONS</h2>
 <p> -p, &#8211;path</p>

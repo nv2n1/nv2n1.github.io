@@ -1,5 +1,4 @@
 ---
-
 title: "mucous(1)"
 name: "mucous"
 section: "1"
@@ -10,7 +9,9 @@ description: "Mucous – Python / Curses client for museek"
 
 <h2>NAME</h2>
 <p> <code>Mucous</code> &#8211; Python / Curses client for museek</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mucous </code> [-c &lt;<i>filename</i>&gt;] [&#8211;config &lt;<i>filename</i>&gt;] [-l &lt;<i>directory</i>&gt;] [&#8211;log &lt;<i>directory</i>&gt;] [-v] [&#8211;version] [-h] [&#8211;help]</p>
+<h2>DESCRIPTION</h2>
 <p> Mucous provides a interface for the Museek Daemon for chatting, transferring files, managing users and browsing shares on the Soulseek P2P network and Soulfind Servers. </p>
 <p> You will need a configured <i><a href="/docs/linux/man/1-museekd/">museekd</a></i>(1).</p>
 <h2>OPTIONS</h2>

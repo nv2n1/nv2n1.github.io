@@ -1,5 +1,4 @@
 ---
-
 title: "gdaltransform(1)"
 name: "gdaltransform"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-gdaltransform/"
 description: "gdaltransform – gdaltransform transforms coordinates"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gdaltransform &#8211; gdaltransform transforms coordinates </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 gdaltransform[--help - general]
              [-i][-s_srs srs_def][-t_srs srs_def][-to "NAME=VALUE"]
@@ -15,6 +17,7 @@ gdaltransform[--help - general]
              [-gcp pixel line easting northing[elevation]] *
     [srcfile[dstfile]]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The gdaltransform utility reprojects a list of coordinates into any supported projection,including GCP-based transformations. </p>
 <dl>
 <dt><code>-s_srs</code> <i>srs def</i>:</dt>

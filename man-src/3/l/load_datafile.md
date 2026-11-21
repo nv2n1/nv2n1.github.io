@@ -1,5 +1,4 @@
 ---
-
 title: "load_datafile(3)"
 name: "load_datafile"
 section: "3"
@@ -10,8 +9,10 @@ description: "load_datafile – Loads a datafile into memory. Allegro game progr
 
 <h2>NAME</h2>
 <p> load_datafile &#8211; Loads a datafile into memory. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>DATAFILE *load_datafile(const char *filename);</code></p>
+<h2>DESCRIPTION</h2>
 <p> Loads a datafile into memory in one go. If the datafile has been encrypted, you must first call packfile_password() to set the appropriate key. If the datafile contains truecolor graphics, you must set the video mode or call set_color_conversion() before loading it. Example: </p>
 <pre><code>
 /* Load the resources for our game. */

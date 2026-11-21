@@ -1,5 +1,4 @@
 ---
-
 title: "flatpak-build-export(1)"
 name: "flatpak-build-export"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-flatpak-build-export/"
 description: "flatpak-build-export – Create a repository from a build directory"
 ---
 
+<h2 class="name">NAME</h2>
+<p> flatpak-build-export &#8211; Create a repository from a build directory </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak build-export</code> [OPTION&#8230;] LOCATION DIRECTORY [BRANCH]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>Creates or updates a repository with an application build. LOCATION is the location of the repository. DIRECTORY must be a finalized build directory. If BRANCH is not specified, it is assumed to be &quot;master&quot;. </dd>
 <p> If LOCATION exists, it is assumed to be an OSTree repository, otherwise a new OSTree repository is created at this location. The repository can be inspected with the <code>ostree</code> tool. </p>
 <p> The contents of DIRECTORY are committed on the branch with name app/APPNAME/ARCH/BRANCH, where ARCH is the architecture of the runtime that the application is using. A commit filter is used to enforce that only the contents of the files/ and export/ subdirectories and the metadata file are included in the commit, anything else is ignored. </p>

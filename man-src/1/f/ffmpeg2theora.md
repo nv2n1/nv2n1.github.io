@@ -1,5 +1,4 @@
 ---
-
 title: "ffmpeg2theora(1)"
 name: "ffmpeg2theora"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ffmpeg2theora/"
 description: "ffmpeg2theora – command-line converter to create Ogg Theora and Ogg Vorbis files."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ffmpeg2theora &#8211; command-line converter to create Ogg Theora and Ogg Vorbis files. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ffmpeg2theora</code> [<i>options</i>]<i> inputfile</i></p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>ffmpeg2theora</code> command. </p>
 <p> <code>ffmpeg2theora</code> is a program that converts any media file that ffmpeg can decode to Ogg Theora for video and Ogg Vorbis for audio.</p>
 <h2>OPTIONS</h2>

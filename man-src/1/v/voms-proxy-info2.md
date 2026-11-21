@@ -1,5 +1,4 @@
 ---
-
 title: "voms-proxy-info2(1)"
 name: "voms-proxy-info2"
 section: "1"
@@ -10,9 +9,11 @@ description: "voms-proxy-info – prints informations about a proxy with VOMS ex
 
 <h2>NAME</h2>
 <p> voms-proxy-info &#8211; prints informations about a proxy with VOMS extensions</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>voms-proxy-info</code> [options] </dt>
 </dl>
+<h2>DESCRIPTION</h2>
 <dd>The voms-proxy-info command pritns information about a proxy, including information about the VOMS extension. </dd>
 <h2>OPTIONS</h2>
 <p> Options may be specified indifferently with either a &quot;-&quot; or &quot;&#8211;&quot; prefix. The options from -help to -out are present for compatibility with grid-proxy-init, and have the exact same meaning. The meaning of the other ones is the following. </p>

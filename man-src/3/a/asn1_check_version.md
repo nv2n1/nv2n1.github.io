@@ -1,5 +1,4 @@
 ---
-
 title: "asn1_check_version(3)"
 name: "asn1_check_version"
 section: "3"
@@ -10,12 +9,14 @@ description: "asn1_check_version – API function"
 
 <h2>NAME</h2>
 <p> asn1_check_version &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>
 <p> <code>const char * asn1_check_version(const char * </code><i>req_version</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>const char * req_version</dt>
 <dd> Required version number, or <code>NULL</code>.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Check that the version of the library is at minimum the requested one and return the version string; return <code>NULL</code> if the condition is not satisfied. If a <code>NULL</code> is passed to this function, no check is done, but the version string is simply returned. </p>
 <p> See <code>ASN1_VERSION</code> for a suitable <i>req_version</i> string.</p>
 <h2>RETURNS</h2>

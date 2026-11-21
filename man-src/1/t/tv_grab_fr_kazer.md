@@ -1,5 +1,4 @@
 ---
-
 title: "tv_grab_fr_kazer(1)"
 name: "tv_grab_fr_kazer"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-tv_grab_fr_kazer/"
 description: "tv_grab_fr_kazer – Grab TV listings from Kazer in France."
 ---
 
+<h2 class="name">NAME</h2>
+<p> tv_grab_fr_kazer &#8211; Grab TV listings from Kazer in France. </p>
+<h2>SYNOPSIS</h2>
 <p> tv_grab_fr_kazer &#8211;help </p>
 <p> tv_grab_fr_kazer &#8211;configure [&#8211;config-file <font SIZE="-1">FILE</font>] [&#8211;root-url <font SIZE="-1">URL</font>] </p>
 <p> tv_grab_fr_kazer [&#8211;config-file <font SIZE="-1">FILE</font>] [&#8211;root-url <font SIZE="-1">URL</font>]<br />
@@ -15,6 +17,7 @@ description: "tv_grab_fr_kazer – Grab TV listings from Kazer in France."
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;output&nbsp;<wbr><font SIZE="-1">FILE</font>]&nbsp;<wbr>[&#8211;quiet]&nbsp;<wbr>[&#8211;debug] </p>
 <p> tv_grab_fr_kazer &#8211;list-channels [&#8211;config-file <font SIZE="-1">FILE</font>] [&#8211;root-url <font SIZE="-1">URL</font>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[&#8211;output&nbsp;<wbr><font SIZE="-1">FILE</font>]&nbsp;<wbr>[&#8211;quiet]&nbsp;<wbr>[&#8211;debug]</p>
+<h2>DESCRIPTION</h2>
 <p> Output <font SIZE="-1">TV</font> and listings in <font SIZE="-1">XMLTV</font> format for many stations available in France. This program consumes the <font SIZE="-1">EPG</font> service offering from Kazer at &lt;<a rel="nofollow" href="http://www.kazer.org/">http://www.kazer.org/</a>&gt;. See <font SIZE="-1">TODO INSERTLINKHERE</font> for their terms of service. (automatic translation suggests it&#8217;s free for personal use, verfication appreciated) </p>
 <p> First you must register an account at kazer.org and choose which stations you want to receive. </p>
 <p> Then run <code>tv_grab_fr_kazer &#8211;configure</code> to setup the grabber with your userhash and maybe filter the channels. (in case you feed multiple consumers with data from one account, like using different configurations for tv cable and iptv channels) </p>

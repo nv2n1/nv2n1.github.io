@@ -1,5 +1,4 @@
 ---
-
 title: "cvt(1)"
 name: "cvt"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-cvt/"
 description: "cvt – calculate VESA CVT mode lines"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cvt &#8211; calculate VESA CVT mode lines </p>
+<h2>SYNOPSIS</h2>
 <p> <code>cvt</code> [<code>-v</code>|<code>&#8211;verbose</code>] [<code>-r</code>|<code>&#8211;reduced</code>] <i>h-resolution</i> <i>v-resolution</i> [<code>refresh</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Cvt</i> is a utility for calculating VESA Coordinated Video Timing modes. Given the desired horizontal and vertical resolutions, a modeline adhering to the CVT standard is printed. This modeline can be included in Xorg <code><a href="/docs/linux/man/5-xorg-conf/">xorg.conf</a>(5)</code> </p>
 <h2>OPTIONS</h2>
 <dl>

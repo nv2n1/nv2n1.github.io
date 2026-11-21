@@ -1,5 +1,4 @@
 ---
-
 title: "kcbench(1)"
 name: "kcbench"
 section: "1"
@@ -10,9 +9,11 @@ description: "kcbench – Kernel compile benchmark"
 
 <h2>NAME</h2>
 <p> <code>kcbench </code>&#8211; Kernel compile benchmark</p>
+<h2>SYNOPSIS</h2>
 <pre>
 <code>kcbench</code> [<i>options</i>]
 </pre>
+<h2>DESCRIPTION</h2>
 <p> Compiles a Linux kernel to benchmark a system or test its stability</p>
 <h2>OPTIONS</h2>
 <dl>

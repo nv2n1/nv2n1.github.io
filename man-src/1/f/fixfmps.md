@@ -1,5 +1,4 @@
 ---
-
 title: "fixfmps(1)"
 name: "fixfmps"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-fixfmps/"
 description: "fixfmps – filter to fix Framemaker documents so PSUtils work"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fixfmps &#8211; filter to fix Framemaker documents so PSUtils work </p>
+<h2>SYNOPSIS</h2>
 <p> <code>fixfmps </code> &lt; <i>Framemaker.ps</i> &gt; <i>Fixed.ps</i></p>
+<h2>DESCRIPTION</h2>
 <p> <i>Fixfmps</i> is a <i>perl </i> filter which &quot;fixes&quot; PostScript from Framemaker so that it works correctly with Angus Duggan&#8217;s <code>psutils</code> package.</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) Angus J. C. Duggan 1991-1995</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "obspectrophore(1)"
 name: "obspectrophore"
 section: "1"
@@ -10,8 +9,10 @@ description: "obspectrophore – SPECTROPHORE calculator"
 
 <h2>NAME</h2>
 <p> <code>obspectrophore</code> &#8211; SPECTROPHORE calculator</p>
+<h2>SYNOPSIS</h2>
 <p> [<i>options</i> ] &#8211;<code>i </code><i>input_file</i> </p>
 <p> [-<code>u | h</code> ]</p>
+<h2>DESCRIPTION</h2>
 <p> can be used to generate Spectrophores, which are one-dimensional descriptors generated from the property fields surrounding the molecules. This technology allows the accurate description of molecules in terms of their surface properties or fields. Comparison of molecules property fields provides a robust structure-independent method of aligning actives from different chemical classes. When applied to molecules such as ligands and drugs, Spectrophores can be used as powerful molecular descriptors in the fields of chemoinformatics, virtual screening, and QSAR modeling.</p>
 <h2>OPTIONS</h2>
 <dl>

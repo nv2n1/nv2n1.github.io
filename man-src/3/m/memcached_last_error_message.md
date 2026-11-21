@@ -1,5 +1,4 @@
 ---
-
 title: "memcached_last_error_message(3)"
 name: "memcached_last_error_message"
 section: "3"
@@ -10,11 +9,13 @@ description: "memcached_last_error_message – libmemcached Documentation"
 
 <h2>NAME</h2>
 <p> memcached_last_error_message &#8211; libmemcached Documentation</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
 <dt><code>const char *memcached_last_error_message(memcached_st</code><i>&nbsp;<wbr>*</i>)</dt>
 <dd>
 <p> Compile and link with -lmemcached</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <i>memcached_last_error_message()</i> is used to return the last error message that the server responded too. If this error came from a specific server, its hostname and port will be provided in the error message.</p>
 <h2>RETURN</h2>
 <p> memcached_last_error_message returns a const char* which does not need to be de-allocated. If no error has occurred then it will return NULL.</p>

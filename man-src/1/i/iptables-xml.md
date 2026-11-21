@@ -1,5 +1,4 @@
 ---
-
 title: "iptables-xml(1)"
 name: "iptables-xml"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-iptables-xml/"
 description: "iptables-xml — Convert iptables-save format to XML"
 ---
 
+<h2 class="name">NAME</h2>
+<p> iptables-xml &#8212; Convert iptables-save format to XML </p>
+<h2>SYNOPSIS</h2>
 <p> <code>iptables-xml</code> [<code>-c</code>] [<code>-v</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>iptables-xml</code> is used to convert the output of iptables-save into an easily manipulatable XML format to STDOUT. Use I/O-redirection provided by your shell to write to a file.</p>
 <dl>
 <dt><code>-c</code>, <code>&#8211;combine</code></dt>

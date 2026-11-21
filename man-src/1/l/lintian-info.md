@@ -1,5 +1,4 @@
 ---
-
 title: "lintian-info(1)"
 name: "lintian-info"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-lintian-info/"
 description: "lintian-info – give detailed information about Lintian’s error tags"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lintian-info &#8211; give detailed information about Lintian&#8217;s error tags </p>
+<h2>SYNOPSIS</h2>
 <p> <code>lintian-info</code> [<i>log-file</i>&#8230;] </p>
 <p> <code>lintian-info</code> <code>&#8211;tags</code> <i>tag</i> &#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>lintian-info</code> command parses the output of the <code>lintian</code> command and gives verbose information about the listed Lintian error tags, parses a Lintian override file and gives verbose information about the tags included, or (if given the <code>-t</code> or <code>&#8211;tags</code> option) explains a given tag or tags. </p>
 <p> If no log-file is specified on the command line, this command expects its input on stdin. Thus, the output of <code>lintian</code> can either be piped through <code>lintian-info</code> or a log file produced by <code>lintian</code> can be processed with this command. (Note, though, that the <code>lintian</code> command has a command line option <code>-i</code> to display the same results as <code>lintian-info</code>, so you will not normally need to pipe the output of <code>lintian</code> into this command.)</p>
 <h2>OPTIONS</h2>

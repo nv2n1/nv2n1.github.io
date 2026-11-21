@@ -1,5 +1,4 @@
 ---
-
 title: "perl585delta(1)"
 name: "perl585delta"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-perl585delta/"
 description: "perl585delta – what is new for perl v5.8.5"
 ---
 
+<h2 class="name">NAME</h2>
+<p> perl585delta &#8211; what is new for perl v5.8.5 </p>
+<h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.8.4 release and the 5.8.5 release.</p>
 <h2>Incompatible Changes</h2>
 <p> There are no changes incompatible with 5.8.4.</p>

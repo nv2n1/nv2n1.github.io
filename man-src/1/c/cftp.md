@@ -1,5 +1,4 @@
 ---
-
 title: "cftp(1)"
 name: "cftp"
 section: "1"
@@ -10,7 +9,9 @@ description: "cftp – Conch command-line SFTP client"
 
 <h2>NAME</h2>
 <p> <code>cftp</code> &#8211; Conch command-line SFTP client</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cftp</code> [-<code>B </code><i>buffer_size</i> ] [-<code>b </code><i>command_file</i> ] [-<code>R </code><i>num_requests</i> ] [-<code>s </code><i>subsystem</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>cftp</code> is a client for logging into a remote machine and executing commands to send and receive file information. It can wrap a number of file transfer subsystems </p>
 <p> The options are as follows:</p>
 <dl>

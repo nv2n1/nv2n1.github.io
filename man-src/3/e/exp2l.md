@@ -1,5 +1,4 @@
 ---
-
 title: "exp2l(3)"
 name: "exp2l"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-exp2l/"
 description: "exp2, exp2f, exp2l – base-2 exponential function"
 ---
 
+<h2 class="name">NAME</h2>
+<p> exp2, exp2f, exp2l &#8211; base-2 exponential function </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;
 double exp2(double x);
@@ -20,6 +22,7 @@ long double exp2l(long double x);
 <dl>
 <dt>
 </dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> These functions return the value of 2 raised to the power of <i>x</i>.</p>
 <h2>RETURN VALUE</h2>
 <p> On success, these functions return the base-2 exponential value of <i>x</i>. </p>

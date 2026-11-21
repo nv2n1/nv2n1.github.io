@@ -1,5 +1,4 @@
 ---
-
 title: "hostnamectl(1)"
 name: "hostnamectl"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-hostnamectl/"
 description: "hostnamectl – Control the system hostname"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hostnamectl &#8211; Control the system hostname </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>hostnamectl</code> [OPTIONS&#8230;] {COMMAND}</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>hostnamectl</code></p>
 <dd>may be used to query and change the system hostname and related settings. </dd>
 <p> <code><a href="/docs/linux/man/8-systemd-hostnamed-service/">systemd-hostnamed.service</a></code>(8) and this tool distinguish three different hostnames: the high-level &quot;pretty&quot; hostname which might include all kinds of special characters (e.g. &quot;Lennart&#8217;s Laptop&quot;), the &quot;static&quot; hostname which is the user-configured hostname (e.g. &quot;lennarts-laptop&quot;), and the transient hostname which is a fallback value received from network configuration (e.g. &quot;node12345678&quot;). If a static hostname is set to a valid value, then the transient hostname is not used. </p>

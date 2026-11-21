@@ -1,5 +1,4 @@
 ---
-
 title: "tccat(1)"
 name: "tccat"
 section: "1"
@@ -10,11 +9,13 @@ description: "tccat – concatenate multimedia streams from medium and print on 
 
 <h2>NAME</h2>
 <p> tccat &#8211; concatenate multimedia streams from medium and print on the standard output</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>tccat</code></dt>
 <dd> <code>-i</code> <i>name</i> [ <code>-t</code> <i>magic</i> ] [ <code>-T</code> <i>title[,chapter[,angle]]</i> ] [ <code>-L</code> ] [ <code>-S</code> <i>n</i> ] [ <code>-P</code> ] [ <code>-a</code> ] [ <code>-d</code> <i>mode</i> ] [ <code>-v</code> ]</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> <code>tccat</code> is Copyright (C) by Thomas Oestreich.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>tccat</code> is part of and usually called by <code>transcode</code>.<br />
  However, it can also be used independently.<br />
  <code>tccat</code> reads source (from stdin if not explicitely defined) and prints on the standard output. Directory contents is concatenated, if source files have the same format. Multiple AVI-files are also supported.</p>

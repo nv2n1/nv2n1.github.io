@@ -1,5 +1,4 @@
 ---
-
 title: "getutmpx(3)"
 name: "getutmpx"
 section: "3"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/3-getutmpx/"
 description: "getutmp, getutmpx – copy utmp structure to utmpx, and vice versa"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getutmp, getutmpx &#8211; copy utmp structure to utmpx, and vice versa </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;utmpx.h&gt;
 void getutmp(const struct utmpx *ux, struct utmp *u);
 void getutmpx(const struct utmp *u, struct utmpx *ux);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>getutmp</code>() function copies the fields of the <i>utmpx</i> structure pointed to by <i>ux</i> to the corresponding fields of the <i>utmp</i> structure pointed to by <i>u</i>. The <code>getutmpx</code>() function performs the converse operation.</p>
 <h2>RETURN VALUE</h2>
 <p> These functions do not return a value.</p>

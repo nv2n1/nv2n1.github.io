@@ -1,5 +1,4 @@
 ---
-
 title: "npm-prune(1)"
 name: "npm-prune"
 section: "1"
@@ -8,6 +7,7 @@ url: "/docs/linux/man/1-npm-prune/"
 description: "npm-prune – Remove extraneous packages"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>npm-prune</code> &#8211; Remove extraneous packages </p>
 <h3>Synopsis</h3>
 <dl>

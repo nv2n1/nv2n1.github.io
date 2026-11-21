@@ -1,5 +1,4 @@
 ---
-
 title: "orted(1)"
 name: "orted"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-orted/"
 description: "orted – Start an Open RTE User-Level Daemon"
 ---
 
+<h2 class="name">NAME</h2>
+<p> orted &#8211; Start an Open RTE User-Level Daemon </p>
+<h2>SYNOPSIS</h2>
 <p> <code>orted [options]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>orted</code> starts an Open RTE daemon for the Open MPI system.</p>
 <h2>NOTE</h2>
 <p> The <code>orted</code> command is <i>not intended to be manually invoked by end users.</i> It is part of the Open MPI architecture and is invoked automatically as necessary. This man page is mainly intended for those adventerous end users and system administrators who have noticed an &quot;orted&quot; process and wondered what it is. </p>

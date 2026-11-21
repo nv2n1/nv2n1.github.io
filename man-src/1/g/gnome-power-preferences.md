@@ -1,5 +1,4 @@
 ---
-
 title: "gnome-power-preferences(1)"
 name: "gnome-power-preferences"
 section: "1"
@@ -10,7 +9,9 @@ description: "gnome-power-preferences – gnome power preferences gui"
 
 <h2>NAME</h2>
 <p> gnome-power-preferences &#8211; gnome power preferences gui</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gnome-power-preferences</code> [ <code>&#8211;verbose</code> ] [ <code>&#8211;help</code> ]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>gnomDone. r-preferences</code> command. </p>
 <p> <code>gnome-power-preferences</code> is the gui program for the gnome power management infrastructure</p>
 <h2>OPTIONS</h2>

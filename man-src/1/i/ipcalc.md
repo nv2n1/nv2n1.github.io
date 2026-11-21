@@ -1,5 +1,4 @@
 ---
-
 title: "ipcalc(1)"
 name: "ipcalc"
 section: "1"
@@ -10,7 +9,9 @@ description: "ipcalc – perform simple manipulation of IP addresses"
 
 <h2>NAME</h2>
 <p> ipcalc &#8211; perform simple manipulation of IP addresses</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ipcalc</code> [<i>OPTION</i>]&#8230; &lt;<code>IP address</code>&gt;[<i>/prefix</i>] [<i>netmask</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>ipcalc</code> provides a simple way to calculate IP information for a host. The various options specify what information <code>ipcalc</code> should display on standard out. Multiple options may be specified. An IP address to operate on must always be specified. Most operations also require a netmask or a CIDR prefix as well. </p>
 <h2>OPTIONS</h2>
 <dl>

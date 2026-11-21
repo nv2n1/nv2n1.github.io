@@ -1,5 +1,4 @@
 ---
-
 title: "ibv_resize_cq(3)"
 name: "ibv_resize_cq"
 section: "3"
@@ -7,7 +6,14 @@ letter: "i"
 url: "/docs/linux/man/3-ibv_resize_cq/"
 ---
 
-ibv_resize_cq - resize a completion queue (CQ) 
+<h2 class="name">NAME</h2>
+ 
+
+ 
+
+ ibv_resize_cq - resize a completion queue (CQ) 
+
+<h2>SYNOPSIS</h2>
 
 <dl>
 <dt>
@@ -16,7 +22,11 @@ ibv_resize_cq - resize a completion queue (CQ)
 int ibv_resize_cq(struct ibv_cq *cq, int cqe);
 </code></pre></dd></dl>
 
-ibv_resize_cq() resizes the completion queue (CQ) cq to have at least cqe entries. cqe must be at least the number of unpolled entries in the CQ cq. If cqe is a valid value less than the current CQ size, ibv_resize_cq() may not do anything, since this function is only guaranteed to resize the CQ to a size at least as big as the requested size.
+<h2>DESCRIPTION</h2>
+
+ 
+
+ ibv_resize_cq() resizes the completion queue (CQ) cq to have at least cqe entries. cqe must be at least the number of unpolled entries in the CQ cq. If cqe is a valid value less than the current CQ size, ibv_resize_cq() may not do anything, since this function is only guaranteed to resize the CQ to a size at least as big as the requested size.
 
 <h2>RETURN VALUE</h2>
 

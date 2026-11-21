@@ -1,5 +1,4 @@
 ---
-
 title: "udo(1)"
 name: "udo"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-udo/"
 description: "udo – convert files from UDO into different formats"
 ---
 
+<h2 class="name">NAME</h2>
+<p> udo &#8211; convert files from UDO into different formats</p>
+<h2>SYNOPSIS</h2>
 <p> udo [-adDghHilmnpqrstvwWxy] source file<br />
  udo [-adDghHilmnpqrstvwWxy] -o destination file source file </p>
+<h2>DESCRIPTION</h2>
 <p> <code>UDO</code> converts files from the UDO format into Apple-QuickView, ASCII, HTML, Texinfo, Linuxdoc-SGML, Manualpage, Pure-C-Help, Rich Text Format, ST-Guide, LaTeX, Turbo Vision Help or Windows Help. </p>
 <p> Using the first method UDO prints the destination format to the standard output (STDOUT) and error messages to the standard error output (STDERR). Using the second method UDO writes the destination format to the destination file and error messages to a log file with the suffix .ul?. </p>
 <p> You have to pass single options to <code>UDO</code> : -al isn&#8217;t the same as -a -l! </p>

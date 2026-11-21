@@ -1,5 +1,4 @@
 ---
-
 title: "pilot-dedupe(1)"
 name: "pilot-dedupe"
 section: "1"
@@ -12,7 +11,9 @@ description: "pilot-dedupe – Removes duplicate records from any Palm database.
 <p> pilot-dedupe &#8211; Removes duplicate records from any Palm database.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>
+<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr><i>pilot-dedupe</i>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;port</code>&nbsp;<wbr>&lt;<code>port</code>&gt;]&nbsp;<wbr>[<code>-q</code>|<code>&#8211;quiet</code>]&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr>[<code>-?</code>|<code>&#8211;help</code>]&nbsp;<wbr>[<code>&#8211;usage</code>]&nbsp;<wbr><i>database</i>&nbsp;<wbr>&#8230; </p>
+<h2>DESCRIPTION</h2>
 <p>&nbsp;<wbr><i>pilot-dedupe</i>&nbsp;<wbr>is used to remove duplicate records from any Palm database. </p>
 <h2>OPTIONS</h2>
 <h3>Conduit Options</h3>

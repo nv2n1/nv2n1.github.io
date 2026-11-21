@@ -1,5 +1,4 @@
 ---
-
 title: "kwallet-query(1)"
 name: "kwallet-query"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-kwallet-query/"
 description: "kwallet-query – KDE Wallet command-line manipulation tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> kwallet-query &#8211; KDE Wallet command-line manipulation tool </p>
+<h2>SYNOPSIS</h2>
 <p> <code>kwallet-query</code> <i>OPTIONS</i> <i>wallet</i></p>
+<h2>DESCRIPTION</h2>
 <p> kwallet-query comes in handy when shell scripts need to read or update the KDE Wallet. It works by manipulating the entries displayed in the <code>KDE Wallet Manager</code> utility. It&#8217;s only parameter is the <i>wallet</i>name the tool should read or update. The operation mode is specified by the options.</p>
 <h2>OPTIONS</h2>
 <p> <code>-h,&#8211;help</code></p>

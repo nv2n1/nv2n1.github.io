@@ -1,5 +1,4 @@
 ---
-
 title: "ibv_query_rt_values_ex(3)"
 name: "ibv_query_rt_values_ex"
 section: "3"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/3-ibv_query_rt_values_ex/"
 description: "ibv_query_rt_values_ex – query an RDMA device for some real time values"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ibv_query_rt_values_ex &#8211; query an RDMA device for some real time values </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 int ibv_query_rt_values_ex(struct ibv_context *context,
                            struct ibv_values_ex *values);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>ibv_query_rt_values_ex()</code> returns certain real time values of a device <i>context</i>. The argument <i>attr</i> is a pointer to an ibv_device_attr_ex struct, as defined in &lt;infiniband/verbs.h&gt;. </p>
 <pre><code>
 struct ibv_values_ex {

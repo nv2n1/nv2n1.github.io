@@ -1,5 +1,4 @@
 ---
-
 title: "dla_porcond(3)"
 name: "dla_porcond"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dla_porcond/"
 description: "dla_porcond.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dla_porcond.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> DOUBLE PRECISION function <code>dla_porcond</code> (UPLO, N, A, LDA, AF, LDAF, CMODE, C, INFO, WORK, IWORK)<br />
  <i></i><code>DLA_PORCOND</code> estimates the Skeel condition number for a symmetric positive-definite matrix.</p>

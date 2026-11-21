@@ -1,5 +1,4 @@
 ---
-
 title: "euca-copy-image(1)"
 name: "euca-copy-image"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-copy-image – Copy an image from another region"
 
 <h2>NAME</h2>
 <p> euca-copy-image &#8211; Copy an image from another region</p>
+<h2>SYNOPSIS</h2>
 <p> euca-copy-image <code>-r</code> REGION <code>-s</code> IMAGE [-n NAME] [-d DESC] [-c TOKEN]</p>
 <dl>
 <dt>[&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION]</dt>
 <dd> [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Copy an image from another region</p>
 <h2>DESCRIPTION</h2>
 <p> Run this command against the destination region, not the source region.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "y4mdenoise(1)"
 name: "y4mdenoise"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-y4mdenoise/"
 description: "y4mdenoise – Motion-compensating YUV4MPEG-frame denoiser"
 ---
 
+<h2 class="name">NAME</h2>
+<p> y4mdenoise &#8211; Motion-compensating YUV4MPEG-frame denoiser</p>
+<h2>SYNOPSIS</h2>
 <p> <code>y4mdenoise</code> [<code>-v</code> <i>verbosity</i>] [<code>-p</code> <i>parallelism</i>] [<code>-r</code> <i>motion-search_radius</i>] [<code>-R</code> <i>color_motion-search_radius</i>] [<code>-t</code> <i>error_tolerance</i>] [<code>-T</code> <i>color_error_tolerance</i>] [<code>-z</code> <i>zero_motion_error_tolerance</i>] [<code>-Z</code> <i>color_zero_motion_error_tolerance</i>] [<code>-m</code> <i>match-count_throttle</i>] [<code>-M</code> <i>match-size_throttle</i>] [<code>-f</code> <i>reference_frames</i>] [<code>-B</code>] [<code>-I</code> <i>interlacing_type</i>] &lt; /dev/stdin &gt; /dev/stdout </p>
+<h2>DESCRIPTION</h2>
 <p> <code>y4mdenoise</code> can be used to remove noise from images in a YUV4MPEG2 stream. This is useful for cleaning old sources to increase video quality, and to reduce the bitrate needed to encode your video (e.g. for VCD and SVCD creation). </p>
 <h2>HOW IT WORKS</h2>
 <p> It maintains a list of the last several frames, called reference frames. Each reference frame is composed of reference pixels. Every time a pixel in one frame is proven to be a moved instance of a pixel in another frame, the reference-pixel incorporates its value, and produces an average value for all instances of the pixel. The oldest reference frame, therefore, gets a pretty good idea of the real value of every pixel, but of course output is delayed by the number of reference frames. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "fribidi_get_bracket_types(3)"
 name: "fribidi_get_bracket_types"
 section: "3"
@@ -7,9 +6,14 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_get_bracket_types/"
 ---
 
-fribidi_get_bracket_types - get bracketed characters 
+<h2 class="name">NAME</h2>
+ 
 
-<b> #include &lt;fribidi.h&gt; 
+ fribidi_get_bracket_types - get bracketed characters 
+
+<h2>SYNOPSIS</h2>
+
+ <b> #include &lt;fribidi.h&gt; 
 
  extern void fribidi_get_bracket_types 
  ( 
@@ -36,7 +40,9 @@ fribidi_get_bracket_types - get bracketed characters
 </dd><dt><b>FriBidiBracketType *btypes</b>
 </dt><dd> Output bracketed characters.</dd></dl>
 
-This function finds the bracketed characters of an string of characters. See fribidi_get_bracket() for more information about the bracketed characters returned by this function.
+<h2>DESCRIPTION</h2>
+
+ This function finds the bracketed characters of an string of characters. See fribidi_get_bracket() for more information about the bracketed characters returned by this function.
 
 <h2>SEE ALSO</h2>
 

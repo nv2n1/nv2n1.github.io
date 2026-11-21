@@ -1,5 +1,4 @@
 ---
-
 title: "mate-terminal(1)"
 name: "mate-terminal"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-mate-terminal/"
 description: "mate-terminal – manual page for MATE Terminal Emulator"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mate-terminal &#8211; manual page for MATE Terminal Emulator </p>
+<h2>DESCRIPTION</h2>
 <h3>Usage:</h3>
 <dl>
 <dt>

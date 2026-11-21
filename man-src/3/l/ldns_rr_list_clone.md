@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_rr_list_clone(3)"
 name: "ldns_rr_list_clone"
 section: "3"
@@ -10,10 +9,12 @@ description: "ldns_rr_list_clone"
 
 <h2>NAME</h2>
 <p> ldns_rr_list_clone </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_rr_list* ldns_rr_list_clone(const ldns_rr_list *rrlist); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_rr_list_clone</i>()</dt>
 <dd>clones an rrlist. .br <code>rrlist</code>: the rrlist to clone .br Returns the cloned rr list</dd></dl>

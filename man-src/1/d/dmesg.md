@@ -1,5 +1,4 @@
 ---
-
 title: "dmesg(1)"
 name: "dmesg"
 section: "1"
@@ -7,13 +6,16 @@ letter: "d"
 url: "/docs/linux/man/1-dmesg/"
 description: "dmesg – print or control the kernel ring buffer"
 ---
-
+<h2 class="name">NAME</h2>
+<p> dmesg - print or control the kernel ring buffer </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dmesg</code> [options] </p>
 <p> <code>dmesg</code> <code>--clear</code> </p>
 <p> <code>dmesg</code> <code>--read-clear</code> [options] </p>
 <p> <code>dmesg</code> <code>--console-level</code> <i>level</i> </p>
 <p> <code>dmesg</code> <code>--console-on</code> </p>
 <p> <code>dmesg</code> <code>--console-off</code>  </p>
+<h2>DESCRIPTION</h2>
 <p> <code>dmesg</code> is used to examine or control the kernel ring buffer. </p>
 <p> The default action is to display all messages from the kernel ring buffer.  </p>
 <h2>OPTIONS</h2>

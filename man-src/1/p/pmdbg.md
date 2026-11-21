@@ -1,5 +1,4 @@
 ---
-
 title: "pmdbg(1)"
 name: "pmdbg"
 section: "1"
@@ -10,9 +9,11 @@ description: "pmdbg – translate Performance Co-Pilot debug control flags"
 
 <h2>NAME</h2>
 <p> <code>pmdbg</code> &#8211; translate Performance Co-Pilot debug control flags</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pmdbg</code> <i>code</i> &#8230;<br />
  <code>pmdbg</code> <code>-l</code><br />
  <code>pmdbg</code> <code>-D</code> <i>name</i>[,<i>name</i> &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> The components of the Performance Co-Pilot (PCP) use a global vector of bit-fields to control diagnostic and debug output. </p>
 <p> <code>pmdbg</code> with a <code>-l</code> argument prints out the mnemonic and decimal values of all the bit-fields in the debug control vector. </p>
 <p> <code>pmdbg</code> with a <code>-D</code> argument parses the list of <i>names</i>(s) using <code>__pmParseDebug</code>(3) and reports the corresponding decimal value. This is most useful when debugging and wanting to set the internal value of the control vector (<code>pmDebug</code>) via a debugger, e.g. <code><a href="/docs/linux/man/1-gdb/">gdb</a></code>(1). </p>

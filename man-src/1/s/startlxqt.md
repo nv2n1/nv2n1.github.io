@@ -1,5 +1,4 @@
 ---
-
 title: "startlxqt(1)"
 name: "startlxqt"
 section: "1"
@@ -10,7 +9,9 @@ description: "startlxqt – script to initialize and launch LXQt sessions"
 
 <h2>NAME</h2>
 <p> startlxqt &#8211; script to initialize and launch LXQt sessions</p>
+<h2>SYNOPSIS</h2>
 <p> <code>startlxqt</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>startlxqt</code> is a shell script meant to initialize and launch LXQt sessions. It is as such similar to counterparts of other desktop environments like startlxde in LXDE or startkde in KDE. </p>
 <p> It&#8217;s main tasks are exporting environment variables, partly after performing corresponding checks, and launching <code>lxqt-session</code>, the LXQt session manager. </p>
 <p> It is not meant to be run by users. Rather, it is invoked as backend, e. g. by script <code>startx</code> on virtual terminals or display managers like SDDM or LightDM, see section <i>EXAMPLE</i>.</p>

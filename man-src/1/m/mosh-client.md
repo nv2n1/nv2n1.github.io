@@ -1,5 +1,4 @@
 ---
-
 title: "mosh-client(1)"
 name: "mosh-client"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mosh-client/"
 description: "mosh-client – client-side helper for mosh"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mosh-client &#8211; client-side helper for mosh </p>
+<h2>SYNOPSIS</h2>
 <p> MOSH_KEY=KEY <code>mosh-client </code> IP PORT<br />
  <code>mosh-client </code> -c </p>
+<h2>DESCRIPTION</h2>
 <p> <code>mosh-client</code> is a helper program for the <code><a href="/docs/linux/man/1-mosh/">mosh</a></code>(1) remote terminal application. </p>
 <p> <code>mosh</code> itself is a setup script that establishes an SSH connection, runs the server-side helper <code>mosh-server</code>, and collects the server&#8217;s port number and session key. </p>
 <p> <code>mosh</code> then executes <code>mosh-client</code> with the server&#8217;s IP address, port, and session key. <code>mosh-client</code> runs for the lifetime of the connection. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "xvidtune(1)"
 name: "xvidtune"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-xvidtune/"
 description: "xvidtune – video mode tuner for Xorg"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xvidtune &#8211; video mode tuner for Xorg </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xvidtune</code> [ <code>-show</code> | <code>-prev</code> | <code>-next</code> | <code>-unlock</code> ] [ <i>-toolkitoption</i> &#8230; ]</p>
+<h2>DESCRIPTION</h2>
 <p> Xvidtune is a client interface to the X server video mode extension (XFree86-VidModeExtension). </p>
 <p> When given one of the non-toolkit options, xvidtune provides a command line interface to either print or switch the video mode. </p>
 <p> Without any options (or with only toolkit options) it presents the user with various buttons and sliders that can be used to interactively adjust existing video modes. It will also print the settings in a format suitable for inclusion in an xorg.conf file. </p>

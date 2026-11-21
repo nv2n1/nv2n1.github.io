@@ -1,5 +1,4 @@
 ---
-
 title: "gpg-check-pattern(1)"
 name: "gpg-check-pattern"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-gpg-check-pattern/"
 description: "gpg-check-pattern – Check a passphrase on stdin against the patternfile"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gpg-check-pattern &#8211; Check a passphrase on stdin against the patternfile</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gpg-check-pattern</code> [<i>options</i>] <i>patternfile</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>gpg-check-pattern</code> checks a passphrase given on stdin against a specified patternfile. </p>
 <h2>OPTIONS</h2>
 <dl>

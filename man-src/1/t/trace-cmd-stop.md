@@ -1,5 +1,4 @@
 ---
-
 title: "trace-cmd-stop(1)"
 name: "trace-cmd-stop"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-trace-cmd-stop/"
 description: "trace-cmd-stop – stop the Ftrace Linux kernel tracer from writing to the ring buffer."
 ---
 
+<h2 class="name">NAME</h2>
+<p> trace-cmd-stop &#8211; stop the Ftrace Linux kernel tracer from writing to the ring buffer. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>trace-cmd stop</code> [<i>OPTIONS</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <a href="/docs/linux/man/1-trace-cmd/">trace-cmd</a>(1) stop is a complement to <i><a href="/docs/linux/man/1-trace-cmd-start/">trace-cmd-start</a>(1)</i>. This will disable Ftrace from writing to the ring buffer. This does not stop the overhead that the tracing may incur. Only the updating of the ring buffer is disabled, the Ftrace tracing may still be inducing overhead. </p>
 <p> After stopping the trace, the <i><a href="/docs/linux/man/1-trace-cmd-extract/">trace-cmd-extract</a>(1)</i> may strip out the data from the ring buffer and create a trace.dat file. The Ftrace pseudo file system may also be examined. </p>
 <p> To disable the tracing completely to remove the overhead it causes, use <i><a href="/docs/linux/man/1-trace-cmd-reset/">trace-cmd-reset</a>(1)</i>. But after a reset is performed, the data that has been recorded is lost.</p>

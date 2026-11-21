@@ -1,5 +1,4 @@
 ---
-
 title: "lou_checkhyphens(1)"
 name: "lou_checkhyphens"
 section: "1"
@@ -10,7 +9,9 @@ description: "lou_checkhyphens – Check the accuracy of hyphenation in liblouis
 
 <h2>NAME</h2>
 <p> lou_checkhyphens &#8211; Check the accuracy of hyphenation in liblouis Braille translation tables</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lou_checkhyphens</code> [<i>OPTION</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Check the accuracy of hyphenation in Braille translation for both translated and untranslated words.</p>
 <dl>
 <dt><code>-h</code>, <code>&#8211;help</code></dt>

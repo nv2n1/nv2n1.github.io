@@ -1,5 +1,4 @@
 ---
-
 title: "antlr3-ctx(3)"
 name: "antlr3-ctx"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-antlr3-ctx/"
 description: "ANTLR3_LEXER_struct –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ANTLR3_LEXER_struct &#8211; </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3lexer.h">antlr3lexer.h</a>&gt;</p>
 <h3>Data Fields</h3>
 <p> void * <code>ctx</code><br />

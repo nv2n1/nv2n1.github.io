@@ -1,5 +1,4 @@
 ---
-
 title: "fontinst(1)"
 name: "fontinst"
 section: "1"
@@ -10,7 +9,9 @@ description: "fontinst – utility to run TeX as fontinst"
 
 <h2>NAME</h2>
 <p> fontinst &#8211; utility to run TeX as fontinst </p>
+<h2>SYNOPSIS</h2>
 <p> <code>fontinst</code> <i>package</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>fontinst</code> runs <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1) with the <code>&#8211;progname</code> flag set to pretend to be the program fontinst (affecting Karl Berry paths). </p>
 <p> Typing </p>
 <p> <tt>fontinst fontinst.sty</tt> </p>

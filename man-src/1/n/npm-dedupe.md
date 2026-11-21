@@ -1,5 +1,4 @@
 ---
-
 title: "npm-dedupe(1)"
 name: "npm-dedupe"
 section: "1"
@@ -8,6 +7,7 @@ url: "/docs/linux/man/1-npm-dedupe/"
 description: "npm-dedupe – Reduce duplication"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>npm-dedupe</code> &#8211; Reduce duplication </p>
 <h3>Synopsis</h3>
 <dl>

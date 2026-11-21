@@ -1,5 +1,4 @@
 ---
-
 title: "x2sys_solve(1)"
 name: "x2sys_solve"
 section: "1"
@@ -10,8 +9,10 @@ description: "x2sys_solve – Determine least-squares systematic correction from
 
 <h2>NAME</h2>
 <p> x2sys_solve &#8211; Determine least-squares systematic correction from crossovers</p>
+<h2>SYNOPSIS</h2>
 <p> <code>x2sys_solve</code> <i>column</i> <i>TAG</i> <i>mode</i> [ <i>COE_list.d</i> ] [ [<i>level</i>] ] [ <code>[u]</code> ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-x</code>[[-]<i>n</i>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>x2sys_solve</code> will use the supplied crossover information to solve for systematic corrections that can then be applied per track to improve data quality. Several systematic corrections can be solved for using a least-squares approach. Note: Only one data column can be processed at the time.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

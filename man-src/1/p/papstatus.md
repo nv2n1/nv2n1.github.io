@@ -1,5 +1,4 @@
 ---
-
 title: "papstatus(1)"
 name: "papstatus"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-papstatus/"
 description: "pap – client interface to remote printers using Printer Access Protocol"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pap &#8211; client interface to remote printers using Printer Access Protocol </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pap</code> [-A&nbsp;<wbr><i>address</i>] [-c] [-d] [-e] [-E] [-p&nbsp;<wbr><i>nbpname</i>] [-s&nbsp;<wbr><i>statusfile</i>] [-w] [-W] [<i>FILES</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>pap</code></p>
 <dd>is used to connect and send files to an AppleTalk connected printer using the Apple Printer Access Protocol (PAP). When <code>pap</code> starts execution, it tries to open a session with the printer using PAP, and then downloads the <i>files</i> to the printer. </dd>
 <p> If no <i>files</i> are given on the command line, <code>pap</code> begins reading from standard input. </p>

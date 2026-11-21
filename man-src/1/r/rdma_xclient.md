@@ -1,5 +1,4 @@
 ---
-
 title: "rdma_xclient(1)"
 name: "rdma_xclient"
 section: "1"
@@ -11,11 +10,17 @@ url: "/docs/linux/man/1-rdma_xclient/"
 
  rdma_xclient - RDMA CM communication client test program
 
-<pre><code>
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <pre><code>
 rdma_xclient[-s server_address][-p server_port][-c comm_type]
 </code></pre>
 
-Uses synchronous librdmam calls to establish an RDMA connection between two nodes. This example is intended to provide a very simple coding example of how to use RDMA.
+<h2>DESCRIPTION</h2>
+
+ Uses synchronous librdmam calls to establish an RDMA connection between two nodes. This example is intended to provide a very simple coding example of how to use RDMA.
 
 <h2>OPTIONS</h2>
 

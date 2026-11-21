@@ -1,5 +1,4 @@
 ---
-
 title: "insync(1)"
 name: "insync"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-insync/"
 description: "insync – command line interface for the Insync process"
 ---
 
+<h2 class="name">NAME</h2>
+<p> insync &#8211; command line interface for the Insync process </p>
+<h2>SYNOPSIS</h2>
 <p> <code>insync [COMMAND] [ARGUMENT]&#8230;</code></p>
+<h2>DESCRIPTION</h2>
 <p> Command line interface for the Insync process. Insync is an application that syncs all your Google Drive &amp; OneDrive accounts to your local filesystem. It integrates with your file manager so you can use your Google Drive or OneDrive files locally while getting the benefits of the cloud. Sync any local folder, sync multiple accounts and sync across Linux, Windows and Mac. </p>
 <h2>COMMANDS</h2>
 <h3><code>Help command</code></h3>

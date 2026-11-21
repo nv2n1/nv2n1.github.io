@@ -1,5 +1,4 @@
 ---
-
 title: "mremap(2)"
 name: "mremap"
 section: "2"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/2-mremap/"
 description: "mremap – remap a virtual memory address"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mremap &#8211; remap a virtual memory address </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE /* See feature_test_macros(7) */
 #include &lt;sys/mman.h&gt;
 void *mremap(void *old_address, size_t old_size,
              size_t new_size, int flags, ... /* void *new_address */);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>mremap</code>() expands (or shrinks) an existing memory mapping, potentially moving it at the same time (controlled by the <i>flags</i> argument and the available virtual address space). </p>
 <p> <i>old_address</i> is the old address of the virtual memory block that you want to expand (or shrink). Note that <i>old_address</i> has to be page aligned. <i>old_size</i> is the old size of the virtual memory block. <i>new_size</i> is the requested size of the virtual memory block after the resize. An optional fifth argument, <i>new_address</i>, may be provided; see the description of <code>MREMAP_FIXED</code> below. </p>
 <p> If the value of <i>old_size</i> is zero, and <i>old_address</i> refers to a shareable mapping (see <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) <code>MAP_SHARED</code>), then <code>mremap</code>() will create a new mapping of the same pages. <i>new_size</i> will be the size of the new mapping and the location of the new mapping may be specified with <i>new_address</i>; see the description of <code>MREMAP_FIXED</code> below. If a new mapping is requested via this method, then the <code>MREMAP_MAYMOVE</code> flag must also be specified. </p>

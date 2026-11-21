@@ -1,5 +1,4 @@
 ---
-
 title: "atomic-diff(1)"
 name: "atomic-diff"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-atomic-diff/"
 description: "atomic-diff – show the differences between two images|containers RPMs"
 ---
 
+<h2 class="name">NAME</h2>
+<p> atomic-diff &#8211; show the differences between two images|containers RPMs </p>
+<h2>SYNOPSIS</h2>
 <p> <code>atomic diff</code> [<code>-h</code>|<code>&#8211;help</code>] [<code>&#8211;json</code>] [<code>&#8211;names-only</code>] [<code>-n</code>][<code>&#8211;no-files</code>] [<code>-r</code>][<code>&#8211;rpms</code>] [<code>-v</code>][<code>&#8211;verbose</code>] image|container image|container &#8230;] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>atomic diff</code> will compare the files found in two different images or containers and output to stdout or as JSON. By default, the comparison is done on the file level but there are switches for comparing RPMs and metadata as well. </p>
 <h2>OPTIONS</h2>
 <p> <code>-h</code> <code>&#8211;help</code><br />

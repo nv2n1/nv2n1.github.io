@@ -1,5 +1,4 @@
 ---
-
 title: "autogsdoc(1)"
 name: "autogsdoc"
 section: "1"
@@ -10,7 +9,9 @@ description: "autogsdoc – GNUstep API documentation generator and XML->HTML co
 
 <h2>NAME</h2>
 <p> autogsdoc &#8211; GNUstep API documentation generator and XML-&gt;HTML converter </p>
+<h2>SYNOPSIS</h2>
 <p> <code>autogsdoc</code> [<code>-Files</code> <i>filename</i>] [<code>-GenerateHtml</code> <i>YES|no</i>] [<code>-Clean</code> <i>yes|NO</i>] [<code>-CleanTemplates</code> <i>yes|NO</i>] [<code>-IgnoreDependencies</code> <i>yes|NO</i>] [<code>-MakeDependencies</code> <i>yes|NO</i>] [<code>-ShowDependencies</code> <i>yes|NO</i>] [<code>-HeaderDirectory</code> <i>path</i>] [<code>-DocumentationDirectory</code> <i>path</i>] [<code>-Declared</code> <i>location</i>] [<code>-Project</code> <i>title</i>] [<code>-Standards</code> <i>yes|NO</i>] [<code>-DocumentAllInstanceVariables</code> <i>yes|NO</i>] [<code>-DocumentInstanceVariables</code> <i>YES|no</i>] [<code>-InstanceVariablesAtEnd</code> <i>yes|NO</i>] [<code>-ConstantsTemplate</code> <i>filename</i>] [<code>-FunctionsTemplate</code> <i>filename</i>] [<code>-MacrosTemplate</code> <i>filename</i>] [<code>-TypedefsTemplate</code> <i>filename</i>] [<code>-VariablesTemplate</code> <i>filename</i>] [<code>-SystemProjects</code> <i>string</i>] [<code>-LocalProjects</code> <i>string</i>] [<code>-Projects</code> <i>dictString</i>] [<code>-Verbose</code> <i>yes|NO</i>] [<code>-Warn</code> <i>yes|NO</i>] [<code>-WordMap</code> <i>dictString</i>] <i>[</i>files<i>]</i> </p>
+<h2>DESCRIPTION</h2>
 <p> The autogsdoc tool is a command-line utility that helps developers produce reference documentation for GNUstep APIs. It also enables developers to write and maintain other documentation in XML and have it converted to HTML. In detail, autogsdoc will:</p>
 <dl>
 <dt>&#8211;</dt>

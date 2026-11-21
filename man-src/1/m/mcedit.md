@@ -1,5 +1,4 @@
 ---
-
 title: "mcedit(1)"
 name: "mcedit"
 section: "1"
@@ -13,6 +12,7 @@ description: "mcedit – Internal file editor of GNU Midnight Commander."
 <h2>USAGE</h2>
 <p> <code>mcedit</code> [-bcCdfhstVx?] [+lineno] [file1] [file2] &#8230; </p>
 <p> <code>mcedit</code> [-bcCdfhstVx?] file1:lineno[:] file2:lineno[:] &#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> mcedit is a link to <code>mc</code>, the main GNU Midnight Commander executable. Executing GNU Midnight Commander under this name runs the internal editor and opens files specified on the command line. The editor is based on the terminal version of <code>cooledit</code> &#8211; standalone editor for X Window System.</p>
 <h2>OPTIONS</h2>
 <dl>

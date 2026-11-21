@@ -1,5 +1,4 @@
 ---
-
 title: "httping(1)"
 name: "httping"
 section: "1"
@@ -10,8 +9,10 @@ description: "httping – measure the latency and throughput of a webserver"
 
 <h2>NAME</h2>
 <p> httping &#8211; measure the latency and throughput of a webserver</p>
+<h2>SYNOPSIS</h2>
 <p> <code>httping [</code><i>options</i><code>]</code> </p>
 <p> options: <code>[-g url] [-h hostname] [-p portnumber] [-x proxyhost:port] [-c count] [-i interval] [-t timeout] [-s] [-G] [-b] [-L xferlimit] [-X] [-l] [-z] [-f] [-m] [-o rc,&#8230;] [-e string]</code> <code>[-I useragent string] [-R referer string] [-r] [-n warn,crit] [-N mode] [-q] [-V]</code></p>
+<h2>DESCRIPTION</h2>
 <p> The program <code>httping</code> lets you measure the latency of a webserver. Since version 1.0.6 also the throughput can be measured. </p>
 <h2>OPTIONS</h2>
 <dl>

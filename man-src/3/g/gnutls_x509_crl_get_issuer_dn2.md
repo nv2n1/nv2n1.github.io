@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_crl_get_issuer_dn2(3)"
 name: "gnutls_x509_crl_get_issuer_dn2"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_crl_get_issuer_dn2 – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crl_get_issuer_dn2 &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crl_get_issuer_dn2(gnutls_x509_crl_t </code><i>crl</i><code>, gnutls_datum_t * </code><i>dn</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_x509_crl_get_issuer_dn2 – API function"
 <dd> should contain a <code>gnutls_x509_crl_t</code> structure</dd>
 <dt>gnutls_datum_t * dn</dt>
 <dd> a pointer to a structure to hold the name</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will allocate buffer and copy the name of the CRL issuer. The name will be in the form &quot;C=xxxx,O=yyyy,CN=zzzz&quot; as described in RFC4514. The output string will be ASCII or UTF-8 encoded, depending on the certificate data.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

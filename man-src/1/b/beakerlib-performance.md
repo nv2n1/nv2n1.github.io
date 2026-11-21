@@ -1,5 +1,4 @@
 ---
-
 title: "beakerlib-performance(1)"
 name: "beakerlib-performance"
 section: "1"
@@ -7,9 +6,14 @@ letter: "b"
 url: "/docs/linux/man/1-beakerlib-performance/"
 ---
 
-BeakerLib - performance - Performance measuring routines 
+<h2 class="name">NAME</h2>
+ 
 
-This is a library of helpers and shortcut for performance monitoring of applications. It provides various means of measuring time and memory performance of programs.
+ BeakerLib - performance - Performance measuring routines 
+
+<h2>DESCRIPTION</h2>
+
+ This is a library of helpers and shortcut for performance monitoring of applications. It provides various means of measuring time and memory performance of programs.
 
 <h2>FUNCTIONS</h2>
 

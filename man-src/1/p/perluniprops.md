@@ -1,5 +1,4 @@
 ---
-
 title: "perluniprops(1)"
 name: "perluniprops"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-perluniprops/"
 description: "perluniprops – Index of Unicode Version 12.1.0 character properties in Perl"
 ---
 
+<h2 class="name">NAME</h2>
+<p> perluniprops &#8211; Index of Unicode Version 12.1.0 character properties in Perl </p>
+<h2>DESCRIPTION</h2>
 <p> This document provides information about the portion of the Unicode database that deals with character properties, that is the portion that is defined on single code points. (&#8220;Other information in the Unicode data base&#8221; below briefly mentions other data that Unicode provides.) </p>
 <p> Perl can provide access to all non-provisional Unicode character properties, though not all are enabled by default. The omitted ones are the Unihan properties (accessible via the <font SIZE="-1">CPAN</font> module Unicode::Unihan) and certain deprecated or Unicode-internal properties. (An installation may choose to recompile Perl&#8217;s tables to change this. See &#8220;Unicode character properties that are <font SIZE="-1">NOT</font> accepted by Perl&#8221;.) </p>
 <p> For most purposes, access to Unicode properties from the Perl core is through regular expression matches, as described in the next section. For some special purposes, and to access the properties that are not suitable for regular expression matching, all the Unicode character properties that Perl handles are accessible via the standard Unicode::UCD module, as described in the section &#8220;Properties accessible through Unicode::UCD&#8221;. </p>

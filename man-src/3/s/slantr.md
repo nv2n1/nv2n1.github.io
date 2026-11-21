@@ -1,5 +1,4 @@
 ---
-
 title: "slantr(3)"
 name: "slantr"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-slantr/"
 description: "slantr.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> slantr.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>slantr</code> (NORM, UPLO, DIAG, M, N, A, LDA, WORK)<br />
  <i></i><code>SLANTR</code> returns the value of the 1-norm, or the Frobenius norm, or the infinity norm, or the element of largest absolute value of a trapezoidal or triangular matrix.</p>

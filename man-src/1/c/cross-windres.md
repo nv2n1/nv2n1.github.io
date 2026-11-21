@@ -1,5 +1,4 @@
 ---
-
 title: "cross-windres(1)"
 name: "cross-windres"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-cross-windres/"
 description: "windres – manipulate Windows resources."
 ---
 
+<h2 class="name">NAME</h2>
+<p> windres &#8211; manipulate Windows resources. </p>
+<h2>SYNOPSIS</h2>
 <p> windres [options] [input-file] [output-file]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>windres</code> reads resources from an input file and copies them into an output file. Either file may be in one of three formats:</p>
 <dl>
 <dt>&quot;rc&quot;</dt>

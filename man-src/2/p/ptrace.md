@@ -1,5 +1,4 @@
 ---
-
 title: "ptrace(2)"
 name: "ptrace"
 section: "2"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/2-ptrace/"
 description: "ptrace – process trace"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ptrace &#8211; process trace </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/ptrace.h&gt;
 long ptrace(enum __ptrace_request request, pid_t pid,
             void *addr, void *data);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>ptrace</code>() system call provides a means by which one process (the &quot;tracer&quot;) may observe and control the execution of another process (the &quot;tracee&quot;), and examine and change the tracee&#8217;s memory and registers. It is primarily used to implement breakpoint debugging and system call tracing. </p>
 <p> A tracee first needs to be attached to the tracer. Attachment and subsequent commands are per thread: in a multithreaded process, every thread can be individually attached to a (potentially different) tracer, or left not attached and thus not debugged. Therefore, &quot;tracee&quot; always means &quot;(one) thread&quot;, never &quot;a (possibly multithreaded) process&quot;. Ptrace commands are always sent to a specific tracee using a call of the form </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;ptrace(PTRACE_foo, pid, &#8230;) </p>

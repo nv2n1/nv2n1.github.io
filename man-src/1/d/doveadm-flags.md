@@ -1,5 +1,4 @@
 ---
-
 title: "doveadm-flags(1)"
 name: "doveadm-flags"
 section: "1"
@@ -10,9 +9,11 @@ description: "doveadm-flags – add, remove or replace messages’ flags"
 
 <h2>NAME</h2>
 <p> doveadm-flags &#8211; add, remove or replace messages&#8217; flags</p>
+<h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>flags</code> [<code>-S</code> <i>socket_path</i>] <i>command flags search_query</i><br />
  <code>doveadm</code> [<code>-Dv</code>] <code>flags</code> [<code>-S</code> <i>socket_path</i>] <i>command flags search_query</i> <code>-A</code><br />
  <code>doveadm</code> [<code>-Dv</code>] <code>flags</code> [<code>-S</code> <i>socket_path</i>] <i>command flags search_query</i> <code>-u </code><i>user</i></p>
+<h2>DESCRIPTION</h2>
 <p> This command is used to manipulate flags of messages.</p>
 <h2>OPTIONS</h2>
 <p> Global <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) <i>options</i>:</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_crt_set_subject_alt_name(3)"
 name: "gnutls_x509_crt_set_subject_alt_name"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_crt_set_subject_alt_name – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_set_subject_alt_name &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_set_subject_alt_name(gnutls_x509_crt_t </code><i>crt</i><code>, gnutls_x509_subject_alt_name_t </code><i>type</i><code>, const void * </code><i>data</i><code>, unsigned int </code><i>data_size</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,6 +24,7 @@ description: "gnutls_x509_crt_set_subject_alt_name – API function"
 <dd> The size of data to be set</dd>
 <dt>unsigned int flags</dt>
 <dd> GNUTLS_FSAN_SET to clear previous data or GNUTLS_FSAN_APPEND to append.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will set the subject alternative name certificate extension. It can set the following types:</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

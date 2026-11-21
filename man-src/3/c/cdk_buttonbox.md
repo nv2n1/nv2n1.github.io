@@ -1,5 +1,4 @@
 ---
-
 title: "cdk_buttonbox(3)"
 name: "cdk_buttonbox"
 section: "3"
@@ -10,6 +9,7 @@ description: "cdk_buttonbox – Creates a managed curses buttonbox widget."
 
 <h2>NAME</h2>
 <p> cdk_buttonbox &#8211; Creates a managed curses buttonbox widget.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>
 <p> #include &lt;cdk.h&gt; </p>
 <pre><code>
@@ -108,6 +108,7 @@ void setCDKButtonboxVerticalChar(
     chtype character);
 </code></pre>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> The Cdk buttonbox widget creates a buttonbox box with a message and a varied number of buttons to choose from. The following functions create or manipulate the Cdk buttonbox box widget.</p>
 <h2>AVAILABLE FUNCTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "backintime(1)"
 name: "backintime"
 section: "1"
@@ -11,7 +10,9 @@ description: "backintime – a simple backup tool for Linux."
 <h2>NAME</h2>
 <p> backintime &#8211; a simple backup tool for Linux. </p>
 <p> This is command line tool. The graphical tools are: backintime-gnome and backintime-kde4.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>backintime</code> [ &#8211;backup | &#8211;backup-job | &#8211;snapshots-path | &#8211;snapshots-list | &#8211;snapshots-list-path | &#8211;last-snapshot | &#8211;last-snapshot-path | &#8211;help | &#8211;version | &#8211;license ]</p>
+<h2>DESCRIPTION</h2>
 <p> Back In Time is a simple backup tool for Linux. The backup is done by taking snapshots of a specified set of folders. </p>
 <p> All you have to do is configure: where to save snapshots, what folders to backup. You can also specify a backup schedule: disabled, every 5 minutes, every 10 minutes, every hour, every day, every week, every month. To configure it use one of the graphical interfaces available (backintime-gnome or backintime-kde4). </p>
 <p> It acts as a &#8216;user mode&#8217; backup tool. This means that you can backup/restore only folders you have write access to (actually you can backup read-only folders, but you can&#8217;t restore them). </p>

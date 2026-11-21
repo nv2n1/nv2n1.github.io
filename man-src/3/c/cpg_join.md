@@ -1,5 +1,4 @@
 ---
-
 title: "cpg_join(3)"
 name: "cpg_join"
 section: "3"
@@ -10,8 +9,10 @@ description: "cpg_join – Joins one or more groups in the CPG library"
 
 <h2>NAME</h2>
 <p> cpg_join &#8211; Joins one or more groups in the CPG library</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cpg.h&gt;</code> </p>
 <p> <code>int cpg_join(cpg_handle_t </code><i>handle</i><code>, struct cpg_name *</code><i>group</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>cpg_join</code> function is used to join one group. When a group is joined, the <code><a href="/docs/linux/man/3-cpg_mcast_joined/">cpg_mcast_joined</a>(3)</code> is called internally to multicast to the groups joined in the argument <i>handle.</i> The process will also get notifications of other processes joining and leaving the group. Messages that are sent to any of the groups joined to the parameter <i>handle</i> will be delivered by <code><a href="/docs/linux/man/3-cpg_dispatch/">cpg_dispatch</a>(3).</code> </p>
 <p> This function may be only be called once for each handle. When a group has been joined the process will start to receive callbacks relating to messages sent from members of the group or notifications of processes joining or leaving the group. </p>
 <p> Note that more than one process on each node can join a CPG group and each will receive its own copy of any messages sent using <i>cpg_mcast_joined()</i> and its own confchg callback. </p>

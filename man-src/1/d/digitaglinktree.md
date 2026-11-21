@@ -1,5 +1,4 @@
 ---
-
 title: "digitaglinktree(1)"
 name: "digitaglinktree"
 section: "1"
@@ -10,11 +9,13 @@ description: "digitaglinktree – Export tag structure of photos in digikam to t
 
 <h2>NAME</h2>
 <p> digitaglinktree &#8211; Export tag structure of photos in digikam to the filesystem.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>digitaglinktree </code> </p>
 <p> <code>-l</code><i> taglinkdir</i> | <code>-A</code><i> archivedir</i> </p>
 <p> <code>-d</code><i> database</i> </p>
 <p> <code>[-r</code><i> rootdir]</i> </p>
 <p> <code>[-H|-f|-a|-v|-C]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>digitaglinktree </code> will create a linktree for all photos in a digikam database that have tags set on them. Tags (like eg. &quot;family&quot;, &quot;events&quot;, &#8230;) are used in digikam to create virtual folders containing images that all have one or more tags assigned. Please note: Photos that have no tags at all assigned are silently ignored by this script. The program will not modify or even touch your original photos managed by digikam.<br />
 &nbsp;<wbr> </p>
 <p> The script can be used in two ways: If you call it using Option -l <i>taglinkdir</i> the script will create the user specified directory <i>taglinkdir</i> and inside this directory it will create sub directories for digikam tags set on the photos. Inside these subdirectories it will finally place symbolic or hard links (see -H) to photos having the tags in question. As a result you will see the tags of your photos as folders and in these folders you will find links to your original photos. </p>

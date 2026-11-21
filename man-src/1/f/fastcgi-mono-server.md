@@ -1,5 +1,4 @@
 ---
-
 title: "fastcgi-mono-server(1)"
 name: "fastcgi-mono-server"
 section: "1"
@@ -10,11 +9,13 @@ description: "XSP – Mono ASP.NET Web Server (xsp and xsp2)"
 
 <h2>NAME</h2>
 <p> XSP &#8211; Mono ASP.NET Web Server (xsp and xsp2)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>xsp</code> [options] </p>
 <p> or </p>
 <p> <code>mod-mono-server</code> [options] </p>
 <p> or </p>
 <p> <code>fastcgi-mono-server</code> [options]</p>
+<h2>DESCRIPTION</h2>
 <p> XSP, mod-mono-server and fastcgi-mono-server are hosts for ASP.NET-based applications. </p>
 <p> If run as `xsp&#8217;, the process provides a minimalistic web server which hosts the ASP.NET runtime and can be used to test and debug web applications that use the System.Web facilities in Mono. This server is most convenient for testing and running small sites, does not offer everything a production web server offers. </p>
 <p> `mod-mono-server&#8217; and &#8216;fastcgi-mono-server&#8217; are both ASP.NET runtimes hosts that can communicate with another web server (at the time of this writing, Apache 1.3-2.2 were supported through mod_mono and several other web servers through FastCGI). This mechanism is better used for high-traffic servers or production systems, since it can integrate with the main HTTP server and leverage all of the optimizations and extensions of an existing server, while providing the ASP.NET runtime. You can choose the communication channel used between mod_mono and mod-mono-server. If you provide a &#8211;filename option, a unix socket is used, otherwise you can give &#8211;port to use a TCP socket.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "apropos(1)"
 name: "apropos"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-apropos/"
 description: "apropos – search the manual page names and descriptions"
 ---
 
+<h2 class="name">NAME</h2>
+<p> apropos &#8211; search the manual page names and descriptions </p>
+<h2>SYNOPSIS</h2>
 <p> <code>apropos</code> [<code>-dalv?V</code>] [<code>-e</code>|<code>-w</code>|<code>-r</code>] [<code>-s</code> <i>list</i>] [<code>-m</code> <i>system</i>[,&#8230;]] [<code>-M</code> <i>path</i>] [<code>-L</code> <i>locale</i>] [<code>-C</code> <i>file</i>] <i>keyword</i> &#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Each manual page has a short description available within it. <code>apropos</code> searches the descriptions for instances of <i>keyword</i>. </p>
 <p> <i>keyword</i> is usually a regular expression, as if (<code>-r</code>) was used, or may contain wildcards (<code>-w</code>), or match the exact keyword (<code>-e</code>). Using these options, it may be necessary to quote the <i>keyword</i> or escape (\) the special characters to stop the shell from interpreting them. </p>
 <p> The standard matching rules allow matches to be made against the page name and word boundaries in the description. </p>

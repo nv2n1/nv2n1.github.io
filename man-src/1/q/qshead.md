@@ -1,5 +1,4 @@
 ---
-
 title: "qshead(1)"
 name: "qshead"
 section: "1"
@@ -7,11 +6,18 @@ letter: "q"
 url: "/docs/linux/man/1-qshead/"
 ---
 
-qshead - an utility reading from stdin and printing all lines to stdout until reaching the defined pattern. 
+<h2 class="name">NAME</h2>
+ 
 
-qshead -p &lt;pattern&gt;
+ qshead - an utility reading from stdin and printing all lines to stdout until reaching the defined pattern. 
 
-qshead reads lines from stdin and prints them to stdout unitl a line contains the specified pattern (literal string).
+<h2>SYNOPSIS</h2>
+
+ qshead -p &lt;pattern&gt;
+
+<h2>DESCRIPTION</h2>
+
+ qshead reads lines from stdin and prints them to stdout unitl a line contains the specified pattern (literal string).
 
 <h2>OPTIONS</h2>
 

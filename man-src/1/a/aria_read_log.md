@@ -1,5 +1,4 @@
 ---
-
 title: "aria_read_log(1)"
 name: "aria_read_log"
 section: "1"
@@ -10,7 +9,9 @@ description: "aria_read_log – display Aria log file contents"
 
 <h2>NAME</h2>
 <p> aria_read_log &#8211; display Aria log file contents</p>
+<h2>SYNOPSIS</h2>
 <p> <code>aria_read_log</code> <i>OPTIONS</i></p>
+<h2>DESCRIPTION</h2>
 <p> Display and apply log records from a Aria transaction log found in the current directory (for now) </p>
 <p> Note: Aria is compiled without <code>-DIDENTICAL_PAGES_AFTER_RECOVERY</code> which means that the table files are not byte-to-byte identical to files created during normal execution. This should be ok, except for test scripts that tries to compare files before and after recovery. </p>
 <p> You need to use one of <code>-d</code> or <code>-a</code></p>

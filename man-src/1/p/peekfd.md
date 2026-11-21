@@ -1,5 +1,4 @@
 ---
-
 title: "peekfd(1)"
 name: "peekfd"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-peekfd/"
 description: "peekfd – peek at file descriptors of running processes"
 ---
 
+<h2 class="name">NAME</h2>
+<p> peekfd &#8211; peek at file descriptors of running processes </p>
+<h2>SYNOPSIS</h2>
 <p> <code>peekfd </code> [<code>-8</code>,<code>&#8211;eight-bit-clean</code>] [<code>-n</code>,<code>&#8211;no-headers</code>] [<code>-f</code>,<code>&#8211;follow</code>] [<code>-d</code>,<code>&#8211;duplicates-removed</code>] [<code>-V</code>,<code>&#8211;version</code>] [<code>-h</code>,<code>&#8211;help</code>] <i>pid</i> [<i>fd</i>] [<i>fd</i>] &#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>peekfd</code> attaches to a running process and intercepts all reads and writes to file descriptors. You can specify the desired file descriptor numbers or dump all of them.</p>
 <h2>OPTIONS</h2>
 <dl>

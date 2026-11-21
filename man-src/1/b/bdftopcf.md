@@ -1,5 +1,4 @@
 ---
-
 title: "bdftopcf(1)"
 name: "bdftopcf"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-bdftopcf/"
 description: "bdftopcf – convert X font from Bitmap Distribution Format to Portable Compiled Format"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bdftopcf &#8211; convert X font from Bitmap Distribution Format to Portable Compiled Format </p>
+<h2>SYNOPSIS</h2>
 <p> <code>bdftopcf</code> [ <code>-p</code><i>n</i> ] [ <code>-u</code><i>n</i> ] [ <code>-m</code> ] [ <code>-l</code> ] [ <code>-M</code> ] [ <code>-L</code> ] [ <code>-t</code> ] [ <code>-i</code> ] [ <code>-o</code> <i>outputfile</i> ] fontfile.bdf</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Bdftopcf</i> is a font compiler for the X server and font server. Fonts in Portable Compiled Format can be read by any architecture, although the file is structured to allow one particular architecture to read them directly without reformatting. This allows fast reading on the appropriate machine, but the files are still portable (but read more slowly) on other machines.</p>
 <h2>OPTIONS</h2>
 <dl>

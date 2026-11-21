@@ -1,5 +1,4 @@
 ---
-
 title: "cdo(3)"
 name: "cdo"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cdo/"
 description: "ql/experimental/credit/cdo.hpp – collateralized debt obligation"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/experimental/credit/cdo.hpp &#8211; collateralized debt obligation </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instrument.hpp&gt;<br />
  #include &lt;ql/termstructures/yieldtermstructure.hpp&gt;<br />
  #include &lt;ql/termstructures/defaulttermstructure.hpp&gt;<br />

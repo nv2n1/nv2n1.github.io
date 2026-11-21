@@ -1,5 +1,4 @@
 ---
-
 title: "unmunge(1)"
 name: "unmunge"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-unmunge/"
 description: "unmunge – MUNGE credential decoder"
 ---
 
+<h2 class="name">NAME</h2>
+<p> unmunge &#8211; MUNGE credential decoder</p>
+<h2>SYNOPSIS</h2>
 <p> <code>unmunge</code> [<i>OPTION</i>]&#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>unmunge</code> program validates a MUNGE credential (e.g., one created by the <code>munge</code> program). </p>
 <p> By default, the credential is read from stdin and the metadata and payload are written to stdout. When the metadata and payload are written to the same stream, they are separated by a blank line. </p>
 <h2>OPTIONS</h2>

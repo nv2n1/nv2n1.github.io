@@ -1,5 +1,4 @@
 ---
-
 title: "git-status(1)"
 name: "git-status"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-status/"
 description: "git-status – Show the working tree status"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-status &#8211; Show the working tree status </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git status[&lt;options&gt;...][--][&lt;pathspec&gt;...]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Displays paths that have differences between the index file and the current HEAD commit, paths that have differences between the working tree and the index file, and paths in the working tree that are not tracked by Git (and are not ignored by <code><a href="/docs/linux/man/5-gitignore/">gitignore</a></code>(5)). The first are what you <i>would</i> commit by running <code>git commit</code>; the second and third are what you <i>could</i> commit by running <i>git add</i> before running <code>git commit</code>.</p>
 <h2>OPTIONS</h2>
 <p> -s, &#8211;short</p>

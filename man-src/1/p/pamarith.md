@@ -1,5 +1,4 @@
 ---
-
 title: "pamarith(1)"
 name: "pamarith"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pamarith/"
 description: "pamarith – perform arithmetic on two Netpbm images"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pamarith &#8211; perform arithmetic on two Netpbm images</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pamarith</code> <code>-add</code> | <code>-subtract</code> | <code>-multiply</code> | <code>-divide</code> | <code>-difference</code> | <code>-minimum</code> | <code>-maximum</code> | <code>-mean</code> | <code>-compare</code> | <code>-and</code> | <code>-or</code> | <code>-nand</code> | <code>-nor</code> | <code>-xor</code> | <code>-shiftleft</code> | <code>-shiftright</code> <i>pamfile1</i> <i>pamfile2</i> </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one. You may separate an option name and its value with white space instead of an equals sign. </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamarith</code> reads two PBM, PGM, PPM, or PAM images as input. It performs the specified binary arithmetic operation on their sample values and produces an output of a format which is the more general of the two input formats. The two input images must be of the same width and height. The arithmetic is performed on each pair of identically located tuples to generate the identically located tuple of the output. </p>
 <p> For the purpose of the calculation, it assumes any PBM, PGM, or PPM input image is the equivalent PAM image of tuple type <code>BLACKANDWHITE</code>, <code>GRAYSCALE</code>, or <code>RGB</code>, respectively, and if it produces a PBM, PGM, or PPM output, produces the equivalent of the PAM image which is the result of the calculation. </p>

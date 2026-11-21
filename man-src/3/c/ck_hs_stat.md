@@ -1,5 +1,4 @@
 ---
-
 title: "ck_hs_stat(3)"
 name: "ck_hs_stat"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_hs_stat – get hash set status"
 <p> <code>ck_hs_stat</code> &#8211; get hash set status</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_hs.h Ft void Fn ck_hs_stat ck_hs_t *hs struct ck_hs_stat *st</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_hs_stat 3 function will store various hash set statistics in the object pointed to by Fa st . The ck_hs_stat structure is defined as follows: </p>
 <blockquote>
 <pre><code>

@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_rdf_free(3)"
 name: "ldns_rdf_free"
 section: "3"
@@ -10,6 +9,7 @@ description: "ldns_rdf_new, ldns_rdf_clone, ldns_rdf_new_frm_data, ldns_rdf_new_
 
 <h2>NAME</h2>
 <p> ldns_rdf_new, ldns_rdf_clone, ldns_rdf_new_frm_data, ldns_rdf_new_frm_str, ldns_rdf_new_frm_fp, ldns_rdf_free, ldns_rdf_deep_free, ldns_rdf_print </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -21,6 +21,7 @@ description: "ldns_rdf_new, ldns_rdf_clone, ldns_rdf_new_frm_data, ldns_rdf_new_
 <p> void ldns_rdf_free(ldns_rdf *rd); </p>
 <p> void ldns_rdf_deep_free(ldns_rdf *rd); </p>
 <p> void ldns_rdf_print(FILE *output, const ldns_rdf *rdf); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_rdf_new</i>()</dt>
 <dd>allocates a new rdf structure and fills it. This function DOES NOT copy the contents from the buffer, unlinke ldns_rdf_new_frm_data() .br <code>type</code>: type of the rdf .br <code>size</code>: size of the buffer .br <code>data</code>: pointer to the buffer to be copied .br Returns the new rdf structure or NULL on failure</dd></dl>

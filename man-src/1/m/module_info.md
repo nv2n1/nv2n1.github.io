@@ -1,5 +1,4 @@
 ---
-
 title: "module_info(1)"
 name: "module_info"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-module_info/"
 description: "module_info – find information about modules"
 ---
 
+<h2 class="name">NAME</h2>
+<p> module_info &#8211; find information about modules </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 module_info[B&lt;-a&gt;][B&lt;-s&gt;][B&lt;-p&gt;][B&lt;-m&gt;] MODULE | FILE...
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> List information about the arguments (either module names in the form <tt>&quot;Module::Name&quot;</tt> or paths in the form <tt>&quot;Foo/Bar.pm&quot;</tt> or <tt>&quot;foo/bar.pl&quot;</tt>). </p>
 <p> By default only shows module name, version, directory, absolute path and a flag indicating if it is a core module. Additional information can be requested through command line switches.</p>
 <dl>

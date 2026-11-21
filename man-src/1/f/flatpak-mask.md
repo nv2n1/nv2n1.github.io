@@ -1,5 +1,4 @@
 ---
-
 title: "flatpak-mask(1)"
 name: "flatpak-mask"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-flatpak-mask/"
 description: "flatpak-mask – Mask out updates and automatic installation"
 ---
 
+<h2 class="name">NAME</h2>
+<p> flatpak-mask &#8211; Mask out updates and automatic installation </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak mask</code> [OPTION&#8230;] PATTERN&#8230;</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>Flatpak maintains a list of patterns that define which refs are masked. A masked ref will never be updated or automatically installed (for example a masked extension marked auto-download will not be downloaded). You can still manually install such refs, but once they are installed the version will be pinned. </dd>
 <p> The patterns are just a partial ref, with the * character matching anything within that part of the ref. Here are some example patterns: </p>
 <dl>

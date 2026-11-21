@@ -1,5 +1,4 @@
 ---
-
 title: "pgmabel(1)"
 name: "pgmabel"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pgmabel/"
 description: "pgmabel – create cross section using Abel Integration for Deconvolution"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pgmabel &#8211; create cross section using Abel Integration for Deconvolution</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pgmabel</code> [<code>-help</code>] [<code>-axis</code> <i>axis</i>] [<code>-factor</code> <i>factor</i>] [<code>-pixsize</code> <i>pixsize</i>] [<code>-left</code> | <code>-right</code>] [<code>-verbose</code>] [<i>filespec</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pgmabel</code> reads as input a PGM image, which it assumes to be an image of a rotational symmetric transparent object. The image must have a vertical symmetry axis. <code>pgmabel</code> produces as output an image of a cross-section of the image. </p>
 <p> <code>pgmabel</code> does the calculation by performing the Abel Integration for Deconvolution of an axial-symmetrical image by solving the system of linear equations. </p>

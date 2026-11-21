@@ -1,5 +1,4 @@
 ---
-
 title: "stbmv(3)"
 name: "stbmv"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-stbmv/"
 description: "stbmv.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> stbmv.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>stbmv</code> (UPLO, TRANS, DIAG, N, K, A, LDA, X, INCX)<br />
  <i></i><code>STBMV</code></p>

@@ -1,5 +1,4 @@
 ---
-
 title: "pmdamounts(1)"
 name: "pmdamounts"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmdamounts – filesystem mounts performance metrics domain agent 
 
 <h2>NAME</h2>
 <p> <code>pmdamounts</code> &#8211; filesystem mounts performance metrics domain agent (PMDA)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/mounts/pmdamounts</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdamounts</code> is a simple Performance Metrics Domain Agent (PMDA) which monitors availability of a given set of filesystem mounts. </p>
 <p> The <code>mounts</code> PMDA exports metrics that reflect whether the configured filesystems are mounted (&quot;up&quot;) or not. The list of mount points to monitor is specified via the <i>$PCP_PMDAS_DIR/mounts/mounts.conf</i> file which simply contains one line for each mount point. </p>
 <p> Note that the platform kernel PMDA exports a more extensive set of filesystem metrics for every mounted filesystem &#8211; this PMDA is primarily intended for availability monitoring using the <i>mounts.up</i> metric. </p>

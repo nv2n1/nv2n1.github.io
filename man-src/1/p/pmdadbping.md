@@ -1,5 +1,4 @@
 ---
-
 title: "pmdadbping(1)"
 name: "pmdadbping"
 section: "1"
@@ -10,6 +9,7 @@ description: "pmdadbping – database response time and availability PMDA"
 
 <h2>NAME</h2>
 <p> <code>pmdadbping</code> &#8211; database response time and availability PMDA</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdadbping</code> is a database response time measurement <font SIZE="-1">PMDA</font>. </p>
 <p> <code>pmdadbping</code> runs <code><a href="/docs/linux/man/1-dbprobe/">dbprobe</a></code>(1), and exports the performance measurements it makes available as <font SIZE="-1">PCP</font> metrics. </p>
 <p> <code><a href="/docs/linux/man/1-dbprobe/">dbprobe</a></code>(1) should be configured to use the type of <font SIZE="-1">DBI</font> appropriate for the local database, which includes: <font SIZE="-1">RDBMS</font> flavour, user/password, delay between &quot;ping&quot; requests, and the <font SIZE="-1">SQL</font> statement to use.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "fold(1)"
 name: "fold"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-fold/"
 description: "fold – wrap each input line to fit in specified width"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fold &#8211; wrap each input line to fit in specified width </p>
+<h2>SYNOPSIS</h2>
 <p> <code>fold</code> [<i>,OPTION/</i>]&#8230; [<i>,FILE/</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Wrap input lines in each FILE, writing to standard output. </p>
 <p> With no FILE, or when FILE is -, read standard input. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>

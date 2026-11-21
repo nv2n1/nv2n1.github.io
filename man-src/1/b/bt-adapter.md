@@ -1,5 +1,4 @@
 ---
-
 title: "bt-adapter(1)"
 name: "bt-adapter"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-bt-adapter/"
 description: "bt-adapter – a bluetooth adapter manager"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bt-adapter &#8211; a bluetooth adapter manager </p>
+<h2>SYNOPSIS</h2>
 <p> bt-adapter [<font SIZE="-1">OPTION&#8230;</font>] </p>
 <p> Help Options:<br />
 &nbsp;<wbr>&nbsp;<wbr>-h, &#8211;help </p>
@@ -17,6 +19,7 @@ description: "bt-adapter – a bluetooth adapter manager"
 &nbsp;<wbr>&nbsp;<wbr>-i, &#8211;info<br />
 &nbsp;<wbr>&nbsp;<wbr>-d, &#8211;discover<br />
 &nbsp;<wbr>&nbsp;<wbr>&#8211;set&nbsp;<wbr>&lt;property&gt;&nbsp;<wbr>&lt;value&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> This utility is used to manage Bluetooth adapters. You can list all available adapters, show information about adapter, change adapter properties or discover remote devices.</p>
 <h2>OPTIONS</h2>
 <p> <code>-h, &#8211;help</code><br />

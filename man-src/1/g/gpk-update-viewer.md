@@ -1,5 +1,4 @@
 ---
-
 title: "gpk-update-viewer(1)"
 name: "gpk-update-viewer"
 section: "1"
@@ -10,7 +9,9 @@ description: "gpk-update-viewer – GNOME PackageKit Update Viewer"
 
 <h2>NAME</h2>
 <p> gpk-update-viewer &#8211; GNOME PackageKit Update Viewer</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gpk-update-viewer</code> [ <code>&#8211;verbose</code> ]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>gpk-update-viewer</code> command. </p>
 <p> <code>gpk-update-viewer</code> allows you to view and select updates to install. the system.</p>
 <h2>SEE ALSO</h2>

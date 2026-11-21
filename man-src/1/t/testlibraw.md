@@ -1,5 +1,4 @@
 ---
-
 title: "testlibraw(1)"
 name: "testlibraw"
 section: "1"
@@ -10,7 +9,9 @@ description: "testlibraw – run basic functionality tests on libraw1394"
 
 <h2>NAME</h2>
 <p> testlibraw &#8211; run basic functionality tests on libraw1394</p>
+<h2>SYNOPSIS</h2>
 <p> <code>testlibraw</code></p>
+<h2>DESCRIPTION</h2>
 <p> testlibraw attaches to the Linux IEEE 1394 subsystem through libraw1394 and tries to read data from all connected nodes. It therefore acts as a check that:</p>
 <dl>
 <dt>*</dt>

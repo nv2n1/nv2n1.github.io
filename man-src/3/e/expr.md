@@ -1,5 +1,4 @@
 ---
-
 title: "expr(3)"
 name: "expr"
 section: "3"
@@ -10,6 +9,10 @@ url: "/docs/linux/man/3-expr/"
 <h2>NAME</h2>
 
  expr - c-like expression library
+
+<h2>SYNOPSIS</h2>
+
+ 
 
 <dl>
 <dt>
@@ -38,6 +41,10 @@ Extype_t exzero(int);
 </code></pre></dd></dl>
  
 
-exopen() is the first function called. exclose() is the last function called. exccopen() is the called if code generation will be used. exccclose() releases the state information allocated in exccopen(). exstatement() saves statement start information. exrewind() restores statement start information saved by exstatement(). 
+<h2>DESCRIPTION</h2>
+
+ 
+
+ exopen() is the first function called. exclose() is the last function called. exccopen() is the called if code generation will be used. exccclose() releases the state information allocated in exccopen(). exstatement() saves statement start information. exrewind() restores statement start information saved by exstatement(). 
 
 <h2>SEE ALSO</h2>

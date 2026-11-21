@@ -1,5 +1,4 @@
 ---
-
 title: "git-send-email(1)"
 name: "git-send-email"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-send-email/"
 description: "git-send-email – Send a collection of patches as emails"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-send-email &#8211; Send a collection of patches as emails </p>
+<h2>SYNOPSIS</h2>
 <pre>
 <i>git send-email</i> [options] &lt;file|directory|rev-list options&gt;...
 </pre>
+<h2>DESCRIPTION</h2>
 <p> Takes the patches given on the command line and emails them out. Patches can be specified as files, directories (which will send all files in the directory), or directly as a revision list. In the last case, any format accepted by <code><a href="/docs/linux/man/1-git-format-patch/">git-format-patch</a></code>(1) can be passed to git send-email. </p>
 <p> The header of the email is configurable by command line options. If not specified on the command line, the user will be prompted with a ReadLine enabled interface to provide the necessary information. </p>
 <p> There are two formats accepted for patch files: </p>

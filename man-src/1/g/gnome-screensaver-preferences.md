@@ -1,5 +1,4 @@
 ---
-
 title: "gnome-screensaver-preferences(1)"
 name: "gnome-screensaver-preferences"
 section: "1"
@@ -10,7 +9,9 @@ description: "gnome-screensaver-preferences – configure GNOME Screensaver"
 
 <h2>NAME</h2>
 <p> gnome-screensaver-preferences &#8211; configure GNOME Screensaver</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gnome-screensaver-preferences</code> [<i>OPTIONS&#8230;</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Manages preferences for the GNOME screen saver.</p>
 <h2>OPTIONS</h2>
 <p> This program only accepts the standard GTK options.</p>

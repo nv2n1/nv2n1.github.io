@@ -1,5 +1,4 @@
 ---
-
 title: "dsyequb(3)"
 name: "dsyequb"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dsyequb/"
 description: "dsyequb.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dsyequb.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dsyequb</code> (UPLO, N, A, LDA, S, SCOND, AMAX, WORK, INFO)<br />
  <i></i><code>DSYEQUB</code></p>

@@ -1,5 +1,4 @@
 ---
-
 title: "echoping_whois(1)"
 name: "echoping_whois"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-echoping_whois/"
 description: "echoping_whois – echoping plugin which connects to a whois server"
 ---
 
+<h2 class="name">NAME</h2>
+<p> echoping_whois &#8211; echoping plugin which connects to a whois server </p>
+<h2>SYNOPSIS</h2>
 <p> <code>echoping</code> [echoping options] -m whois <code>hostname</code> [-d] request</p>
+<h2>DESCRIPTION</h2>
 <p> whois is an echoping plugin to connect to whois/nicname servers (see RFC 3912).</p>
 <h2>ARGUMENTS</h2>
 <dl>

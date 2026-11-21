@@ -1,5 +1,4 @@
 ---
-
 title: "sync(2)"
 name: "sync"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-sync/"
 description: "sync, syncfs – commit filesystem caches to disk"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sync, syncfs &#8211; commit filesystem caches to disk </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>void sync(void);</code> </p>
 <p> <code>int syncfs(int </code><i>fd</i><code>);</code> </p>
@@ -22,6 +24,7 @@ description: "sync, syncfs – commit filesystem caches to disk"
 <dl>
 <dt>
 </dt><dd> _GNU_SOURCE</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>sync</code>() causes all pending modifications to filesystem metadata and cached file data to be written to the underlying filesystems. </p>
 <p> <code>syncfs</code>() is like <code>sync</code>(), but synchronizes just the filesystem containing file referred to by the open file descriptor <i>fd</i>.</p>
 <h2>RETURN VALUE</h2>

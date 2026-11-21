@@ -1,5 +1,4 @@
 ---
-
 title: "dvicopy(1)"
 name: "dvicopy"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dvicopy/"
 description: "dvicopy, odvicopy – produce modified copy of DVI file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dvicopy, odvicopy &#8211; produce modified copy of DVI file </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dvicopy</code> [<i>options</i>] [<i>infile</i>[<i></i><code>.dvi</code>] [<i>outfile</i>[<i></i><code>.dvi</code>]]]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page is not meant to be exhaustive. The complete documentation for this version of TeX can be found in the info file or manual <i>Web2C: A TeX implementation</i>. </p>
 <p> <code>dvicopy</code> reads a DVI file, expands any references to virtual fonts to base fonts, and writes the resulting DVI file. Thus you can use virtual fonts even if your DVI processor does not support them, by passing the documents through <code>dvicopy</code> first.</p>
 <h2>OPTIONS</h2>

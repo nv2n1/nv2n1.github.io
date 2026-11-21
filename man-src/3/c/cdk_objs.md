@@ -1,5 +1,4 @@
 ---
-
 title: "cdk_objs(3)"
 name: "cdk_objs"
 section: "3"
@@ -10,6 +9,7 @@ description: "cdk_objs – Cdk object-support functions"
 
 <h2>NAME</h2>
 <p> cdk_objs &#8211; Cdk object-support functions</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>
 <pre><code>
 void cleanCdkTitle(
@@ -43,6 +43,7 @@ bool validCDKObject(
     CDKOBJS *obj);
 </code></pre>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> Cdk is written in ANSI C, which has &quot;no&quot; object support. Most of the object support in Cdk is done using macros and a small number of types which hold object information:</p>
 <dl>
 <dl>

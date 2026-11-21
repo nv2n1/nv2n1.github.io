@@ -1,5 +1,4 @@
 ---
-
 title: "getxattr(2)"
 name: "getxattr"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-getxattr/"
 description: "getxattr, lgetxattr, fgetxattr – retrieve an extended attribute value"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getxattr, lgetxattr, fgetxattr &#8211; retrieve an extended attribute value </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/types.h&gt;
 #include &lt;sys/xattr.h&gt;
@@ -21,6 +23,7 @@ ssize_t fgetxattr(int fd, const char &amp;nbsp; *name,
                                             void &amp;nbsp;
                   *value, size_t size);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Extended attributes are <i>name</i>:<i>value</i> pairs associated with inodes (files, directories, symbolic links, etc.). They are extensions to the normal attributes which are associated with all inodes in the system (i.e., the <code><a href="/docs/linux/man/2-stat/">stat</a></code>(2) data). A complete overview of extended attributes concepts can be found in <code><a href="/docs/linux/man/7-xattr/">xattr</a></code>(7). </p>
 <p> <code>getxattr</code>() retrieves the value of the extended attribute identified by <i>name</i> and associated with the given <i>path</i> in the filesystem. The attribute value is placed in the buffer pointed to by <i>value</i>; <i>size</i> specifies the size of that buffer. The return value of the call is the number of bytes placed in <i>value</i>. </p>
 <p> <code>lgetxattr</code>() is identical to <code>getxattr</code>(), except in the case of a symbolic link, where the link itself is interrogated, not the file that it refers to. </p>

@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_gsi_callback_constants/"
 description: "GSI Callback Constants –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> GSI Callback Constants &#8211; </p>
 <h3>Enumerations</h3>
 <p> enum <code>globus_gsi_callback_error_t</code> { <code>GLOBUS_GSI_CALLBACK_ERROR_SUCCESS</code> = 0, <code>GLOBUS_GSI_CALLBACK_ERROR_VERIFY_CRED</code> = 1, <code>GLOBUS_GSI_CALLBACK_ERROR_CERT_NOT_YET_VALID</code> = 2, <code>GLOBUS_GSI_CALLBACK_ERROR_CANT_GET_LOCAL_CA_CERT</code> = 3, <code>GLOBUS_GSI_CALLBACK_ERROR_CERT_HAS_EXPIRED</code> = 4, <code>GLOBUS_GSI_CALLBACK_ERROR_INVALID_PROXY</code> = 5, <code>GLOBUS_GSI_CALLBACK_ERROR_LIMITED_PROXY</code> = 6, <code>GLOBUS_GSI_CALLBACK_ERROR_INVALID_CRL</code> = 7, <code>GLOBUS_GSI_CALLBACK_ERROR_REVOKED_CERT</code> = 8, <code>GLOBUS_GSI_CALLBACK_ERROR_MIXING_DIFFERENT_PROXY_TYPES</code> = 9, <code>GLOBUS_GSI_CALLBACK_ERROR_WITH_SIGNING_POLICY</code> = 10, <code>GLOBUS_GSI_CALLBACK_ERROR_OLD_GAA</code> = 11, <code>GLOBUS_GSI_CALLBACK_ERROR_CALLBACK_DATA</code> = 12, <code>GLOBUS_GSI_CALLBACK_ERROR_ERRNO</code> = 13, <code>GLOBUS_GSI_CALLBACK_ERROR_CERT_CHAIN</code> = 14, <code>GLOBUS_GSI_CALLBACK_ERROR_WITH_CALLBACK_DATA_INDEX</code> = 15, <code>GLOBUS_GSI_CALLBACK_ERROR_PROXY_PATH_LENGTH_EXCEEDED</code> = 16, <code>GLOBUS_GSI_CALLBACK_ERROR_LAST</code> = 18 } </p>
 <h2>Detailed Description</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "disktype(1)"
 name: "disktype"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-disktype/"
 description: "disktype – disk format detector"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>disktype</code> &#8211; disk format detector </p>
+<h2>SYNOPSIS</h2>
 <p> <i>file&#8230;</i></p>
+<h2>DESCRIPTION</h2>
 <p> The purpose of is to detect the content format of a disk or disk image. It knows about common file systems, partition tables, and boot codes.</p>
 <h2>USAGE</h2>
 <p> can be run with any number of regular files or device special files as arguments. They will be analyzed in the order given, and the results printed to standard output. There are no switches in this version. Note that running disktype on device files like your hard disk will likely require root rights. </p>

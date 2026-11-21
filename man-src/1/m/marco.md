@@ -1,5 +1,4 @@
 ---
-
 title: "marco(1)"
 name: "marco"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-marco/"
 description: "Marco – The MATE Window Manager"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Marco &#8211; The MATE Window Manager </p>
+<h2>SYNOPSIS</h2>
 <p> <code>marco [OPTIONS]</code></p>
+<h2>DESCRIPTION</h2>
 <p> Marco is a minimal X window manager that uses GTK+ for drawing window frames. It is aimed at non-technical users and is designed to integrate well with the MATE desktop. Marco is a plain window manager for the adult in you; Many window managers are like Marshmallow Froot Loops, Marco is like Cheerios. It lacks some features that may be expected by traditional UNIX or other technical users; these users may want to investigate other available window managers for use with MATE or as a standalone window manager. </p>
 <p> Marco supports several somewhat advanced but common features such as Window Shading/Roll-Up, Window/Edge Snapping, Vertical and Horizontal Maximize, Always-On-Top, Sloppy/Mouse Focus and Raising, and many more&#8230; Well, not a lot, but some more. </p>
 <p> This manual page documents the <code>marco</code> command. </p>

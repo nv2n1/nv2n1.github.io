@@ -1,5 +1,4 @@
 ---
-
 title: "hexdump(1)"
 name: "hexdump"
 section: "1"
@@ -7,9 +6,11 @@ letter: "h"
 url: "/docs/linux/man/1-hexdump/"
 description: "hexdump – display file contents in hexadecimal, decimal, octal, or ascii"
 ---
-
+<h2 class="name">NAME</h2>
+<p> hexdump - display file contents in hexadecimal, decimal, octal, or ascii </p>
 <p> <code>hexdump</code> <i>options file</i> ... </p>
 <p> <code>hd</code> <i>options file</i> ... </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>hexdump</code> utility is a filter which displays the specified files, or standard input if no files are specified, in a user-specified format.  </p>
 <h2>OPTIONS</h2>
 <p> Below, the <i>length</i> and <i>offset</i> arguments may be followed by the multiplicative suffixes KiB (=1024), MiB (=1024*1024), and so on for GiB, TiB, PiB, EiB, ZiB and YiB (the &quot;iB&quot; is optional, e.g., &quot;K&quot; has the same meaning as &quot;KiB&quot;), or the suffixes KB (=1000), MB (=1000*1000), and so on for GB, TB, PB, EB, ZB and YB. </p>

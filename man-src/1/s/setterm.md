@@ -1,5 +1,4 @@
 ---
-
 title: "setterm(1)"
 name: "setterm"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-setterm/"
 description: "setterm – set terminal attributes"
 ---
 
+<h2 class="name">NAME</h2>
+<p> setterm &#8211; set terminal attributes </p>
+<h2>SYNOPSIS</h2>
 <p> <code>setterm</code> [options]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>setterm</code> writes to standard output a character string that will invoke the specified terminal capabilities. Where possible <i>terminfo</i> is consulted to find the string to use. Some options however (marked &quot;virtual consoles only&quot; below) do not correspond to a <code><a href="/docs/linux/man/5-terminfo/">terminfo</a></code>(5) capability. In this case, if the terminal type is &quot;con&quot; or &quot;linux&quot; the string that invokes the specified capabilities on the PC Minix virtual console driver is output. Options that are not implemented by the terminal are ignored.</p>
 <h2>OPTIONS</h2>
 <p> For boolean options (<code>on</code> or <code>off</code>), the default is <code>on</code>. </p>

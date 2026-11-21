@@ -1,5 +1,4 @@
 ---
-
 title: "aviindex(1)"
 name: "aviindex"
 section: "1"
@@ -10,9 +9,11 @@ description: "aviindex – Write and read text files describing the index of an 
 
 <h2>NAME</h2>
 <p> aviindex &#8211; Write and read text files describing the index of an AVI file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>aviindex</code> [ <code>-o</code> <i>ofile</i> <code>-i</code> <i>ifile</i> <code>-f</code> <code>-n</code> <code>-x</code> <code>-v</code> <code>-h</code> ]</p>
 <h2>COPYRIGHT</h2>
 <p> <code>aviindex</code> is Copyright (C) 2003,2004 by Tilmann Bitterberg</p>
+<h2>DESCRIPTION</h2>
 <p> <code>aviindex</code> writes a text file describing the index of an AVI file. It analyses the content or index if available of the AVI file and prints this information in a human readable form. </p>
 <p> An AVI file can have an optional chunk called &quot;idx1&quot; which contains information about keyframes (syncpoints) and locations of video frames resp. audio chunks. Though larger AVI files (&gt;2-4GB), so-called OpenDML AVI or also AVI 2 files, have a more complicated indexing system, which consists of a superindex referring to (possibly) several &quot;standard&quot; indexes, the &quot;indexing principle&quot; is the same. Movie players use such indexes to seek in files. </p>
 <p> <code>aviindex</code> reads the AVI file <i>ifile</i> and writes the index into <i>ofile</i>. This can either happen in &quot;dumb&quot; mode where <code>aviindex</code> looks for an existing index (and trusts this index!) in the file and dumps this index into a human readable form. The &quot;dumb&quot; mode is used, when <i>-n</i> is NOT specified or when the filesize of the input file is smaller than 2 GB. </p>

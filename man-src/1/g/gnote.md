@@ -1,5 +1,4 @@
 ---
-
 title: "gnote(1)"
 name: "gnote"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-gnote/"
 description: "gnote – A simple note-taking application for Gnome"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gnote &#8211; A simple note-taking application for Gnome</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gnote</code> <i>[OPTION] &#8230;</i> </p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>gnote</code> command. </p>
 <p> <code>Gnote</code> is a desktop note-taking application for Linux and Unix. Simple and easy to use, but with potential to help you organize the ideas and information you deal with every day. </p>
 <p> Gnote&#8217;s usefulness lies in the ability to relate notes and ideas together, using a WikiWiki-like linking system. </p>

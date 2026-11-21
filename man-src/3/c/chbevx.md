@@ -1,5 +1,4 @@
 ---
-
 title: "chbevx(3)"
 name: "chbevx"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-chbevx/"
 description: "chbevx.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> chbevx.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chbevx</code> (JOBZ, RANGE, UPLO, N, KD, AB, LDAB, Q, LDQ, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, RWORK, IWORK, IFAIL, INFO)<br />
  <i></i><code> CHBEVX computes the eigenvalues and, optionally, the left and/or right eigenvectors for OTHER matrices</code></p>

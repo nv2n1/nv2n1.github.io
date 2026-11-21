@@ -1,5 +1,4 @@
 ---
-
 title: "pcre2_config(3)"
 name: "pcre2_config"
 section: "3"
@@ -7,10 +6,11 @@ letter: "p"
 url: "/docs/linux/man/3-pcre2_config/"
 description: "PCRE2 – Perl-compatible regular expressions (revised API)"
 ---
-
 <p>PCRE2 &#8211; Perl-compatible regular expressions (revised API) </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;pcre2.h&gt;</code> </p>
 <p> <font SIZE="-1"><code>int pcre2_config(uint32_t </code><i>what</i>, void *<i>where</i>); </font>  </p>
+<h2>DESCRIPTION</h2>
 <p>This function makes it possible for a client program to find out which optional features are available in the version of the PCRE2 library it is using. The arguments are as follows: </p>
 <p> <br />
 &nbsp;<wbr>&nbsp;<i>what</i>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;A code specifying what information is required <br />

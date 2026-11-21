@@ -1,5 +1,4 @@
 ---
-
 title: "scrot(1)"
 name: "scrot"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-scrot/"
 description: "scrot – capture a screenshot using imlib2"
 ---
 
+<h2 class="name">NAME</h2>
+<p> scrot &#8211; capture a screenshot using imlib2 </p>
+<h2>SYNOPSIS</h2>
 <p> scrot [options] [file]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>scrot</code> is a screen capture utility using the <code>imlib2</code> library to aquire and save images. <code>scrot</code> has a few options, detailed below. Specify [file] as the filename to save the screenshot to. If [file] is not specified, a date-stamped file will be dropped in the current directory.</p>
 <h2>OPTIONS</h2>
 <dl>

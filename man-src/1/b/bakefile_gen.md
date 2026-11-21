@@ -1,5 +1,4 @@
 ---
-
 title: "bakefile_gen(1)"
 name: "bakefile_gen"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-bakefile_gen/"
 description: "bakefile_gen – batch bakefile generation"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bakefile_gen &#8211; batch bakefile generation </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>bakefile_gen</code> [<code>-d</code><i>DESCFILE</i>&#8230;] [<code>-F</code><i>FORMATS</i>&#8230;] [<code>-D</code><i>VAR</i>=<i>VALUE</i>&#8230;] [<code>-I</code><i>PATH</i>&#8230;] [<code>-c</code>] [<code>&#8211;list-files</code>] [<code>-j</code>] [<code>-p</code>] [<code>&#8211;dry-run</code>] [<code>-k</code>] [<code>-n</code>] [<code>-v</code>] [<code>-V</code>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>Calls <code>bakefile</code> with flags listed in description file (Bakefiles.bkgen or file specified using the &#8211;desc option).</dd>
 <h2>COMMAND LINE OPTIONS</h2>
 <p> <code>&#8211;desc</code>=<i>DESCFILE</i></p>

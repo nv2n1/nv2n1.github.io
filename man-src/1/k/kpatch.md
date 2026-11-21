@@ -1,5 +1,4 @@
 ---
-
 title: "kpatch(1)"
 name: "kpatch"
 section: "1"
@@ -11,9 +10,13 @@ url: "/docs/linux/man/1-kpatch/"
 
  kpatch - hot patch module management
 
-kpatch &lt;command&gt; [&lt;args&gt;]
+<h2>SYNOPSIS</h2>
 
-kpatch is a user script that manages installing, loading, and displaying information about kernel patch modules installed on the system.
+ kpatch &lt;command&gt; [&lt;args&gt;]
+
+<h2>DESCRIPTION</h2>
+
+ kpatch is a user script that manages installing, loading, and displaying information about kernel patch modules installed on the system.
 
 <h2>COMMANDS</h2>
 

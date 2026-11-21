@@ -1,5 +1,4 @@
 ---
-
 title: "tarantoolctl(1)"
 name: "tarantoolctl"
 section: "1"
@@ -7,16 +6,23 @@ letter: "t"
 url: "/docs/linux/man/1-tarantoolctl/"
 ---
 
-tarantoolctl - an utility to control tarantool instances 
+<h2 class="name">NAME</h2>
+ 
 
-<pre>
+ tarantoolctl - an utility to control tarantool instances 
+
+<h2>SYNOPSIS</h2>
+
+ <pre>
     vim /etc/tarantool/instances.enabled/my_instance.lua
     tarantoolctl start my_instance
     tarantoolctl stop  my_instance
     tarantoolctl logrotate my_instance
 </pre>
 
-The script is read <tt>&quot;/etc/sysconfig/tarantool&quot;</tt> or <tt>&quot;/etc/default/tarantool&quot;</tt>. The file contains common default instances options: 
+<h2>DESCRIPTION</h2>
+
+ The script is read <tt>&quot;/etc/sysconfig/tarantool&quot;</tt> or <tt>&quot;/etc/default/tarantool&quot;</tt>. The file contains common default instances options: 
 
  <pre><code>
     $ cat /etc/default/tarantool

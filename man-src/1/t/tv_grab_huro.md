@@ -1,5 +1,4 @@
 ---
-
 title: "tv_grab_huro(1)"
 name: "tv_grab_huro"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-tv_grab_huro/"
 description: "tv_grab_huro – Grab TV listings for Hungary or Romania."
 ---
 
+<h2 class="name">NAME</h2>
+<p> tv_grab_huro &#8211; Grab TV listings for Hungary or Romania. </p>
+<h2>SYNOPSIS</h2>
 <p> tv_grab_huro &#8211;help </p>
 <p> tv_grab_huro [&#8211;config-file <font SIZE="-1">FILE</font>] &#8211;configure [&#8211;gui <font SIZE="-1">GUITYPE</font>] </p>
 <p> tv_grab_huro [&#8211;config-file <font SIZE="-1">FILE</font>] [&#8211;output <font SIZE="-1">FILE</font>] [&#8211;days N] [&#8211;offset N] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[&#8211;slow] [&#8211;get-full-description] [&#8211;max-desc-length <font SIZE="-1">LENGTH</font>]<br />
@@ -16,6 +18,7 @@ description: "tv_grab_huro – Grab TV listings for Hungary or Romania."
 <p> tv_grab_huro &#8211;list-channels &#8211;loc [hu | ro] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt>[&#8211;icons | (&#8211;local-icons <font SIZE="-1">DIRECTORY</font> [&#8211;no-fetch-icons])]</p>
 <p> tv_grab_huro &#8211;capabilities </p>
 <p> tv_grab_huro &#8211;version</p>
+<h2>DESCRIPTION</h2>
 <p> Output <font SIZE="-1">TV</font> listings for several channels available in Hungary or Romania. The grabber relies on parsing <font SIZE="-1">HTML</font> so it might stop working at any time. </p>
 <p> First run <code>tv_grab_huro &#8211;configure</code> to choose, which channels you want to download. Then running <code>tv_grab_huro</code> with no arguments will output listings in <font SIZE="-1">XML</font> format to standard output. </p>
 <p> <code>&#8211;configure</code> Prompt for which channels, and write the configuration file. </p>

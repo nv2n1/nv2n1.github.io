@@ -1,5 +1,4 @@
 ---
-
 title: "a(3)"
 name: "a"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-a/"
 description: "QuantLib::AbcdAtmVolCurve – Abcd-interpolated at-the-money (no-smile) volatility curve."
 ---
 
+<h2 class="name">NAME</h2>
+<p> QuantLib::AbcdAtmVolCurve &#8211; Abcd-interpolated at-the-money (no-smile) volatility curve. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/experimental/volatility/abcdatmvolcurve.hpp&gt; </p>
 <p> Inherits <code>QuantLib::BlackAtmVolCurve</code>, and <code>QuantLib::LazyObject</code>. </p>
 <h3>Public Member Functions</h3>

@@ -1,5 +1,4 @@
 ---
-
 title: "libtasn1_perror(3)"
 name: "libtasn1_perror"
 section: "3"
@@ -10,12 +9,14 @@ description: "libtasn1_perror – prints a string to stderr with a description o
 
 <h2>NAME</h2>
 <p> libtasn1_perror &#8211; prints a string to stderr with a description of an error</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/libtasn1.h">libtasn1.h</a>&gt;</code> </p>
 <p> <code>void libtasn1_perror(asn1_retCode </code><i>error</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>asn1_retCode error</dt>
 <dd> is an error returned by a libtasn1 function.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function is like <code>perror()</code>. The only difference is that it accepts an error returned by a libtasn1 function.</p>
 <h2>DEPRECATED</h2>
 <p> Use <code>asn1_perror()</code> instead.</p>

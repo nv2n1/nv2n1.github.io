@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_buffer_remaining(3)"
 name: "ldns_buffer_remaining"
 section: "3"
@@ -10,6 +9,7 @@ description: "ldns_buffer_remaining_at, ldns_buffer_remaining, ldns_buffer_avail
 
 <h2>NAME</h2>
 <p> ldns_buffer_remaining_at, ldns_buffer_remaining, ldns_buffer_available_at, ldns_buffer_available, ldns_buffer_status, ldns_buffer_status_ok </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -19,6 +19,7 @@ description: "ldns_buffer_remaining_at, ldns_buffer_remaining, ldns_buffer_avail
 <p> int ldns_buffer_available(ldns_buffer *buffer, size_t count); </p>
 <p> ldns_status ldns_buffer_status(ldns_buffer *buffer); </p>
 <p> bool ldns_buffer_status_ok(ldns_buffer *buffer); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_buffer_remaining_at</i>()</dt>
 <dd>returns the number of bytes remaining between the indicated position and the limit. .br <code>buffer</code>: the buffer .br <code>at</code>: indicated position .br Returns number of bytes</dd></dl>

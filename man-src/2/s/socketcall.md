@@ -1,5 +1,4 @@
 ---
-
 title: "socketcall(2)"
 name: "socketcall"
 section: "2"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/2-socketcall/"
 description: "socketcall – socket system calls"
 ---
 
+<h2 class="name">NAME</h2>
+<p> socketcall &#8211; socket system calls </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;linux/net.h&gt;</code> </p>
 <p> <code>int socketcall(int </code><i>call</i><code>, unsigned long *</code><i>args</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>socketcall</code>() is a common kernel entry point for the socket system calls. <i>call</i> determines which socket function to invoke. <i>args</i> points to a block containing the actual arguments, which are passed through to the appropriate call. </p>
 <p> User programs should call the appropriate functions by their usual names. Only standard library implementors and kernel hackers need to know about <code>socketcall</code>(). </p>
 <table>

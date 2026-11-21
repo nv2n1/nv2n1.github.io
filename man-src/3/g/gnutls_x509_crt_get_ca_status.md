@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_crt_get_ca_status(3)"
 name: "gnutls_x509_crt_get_ca_status"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_crt_get_ca_status – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_get_ca_status &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_get_ca_status(gnutls_x509_crt_t </code><i>cert</i><code>, unsigned int * </code><i>critical</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_x509_crt_get_ca_status – API function"
 <dd> should contain a <code>gnutls_x509_crt_t</code> structure</dd>
 <dt>unsigned int * critical</dt>
 <dd> will be non-zero if the extension is marked as critical</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will return certificates CA status, by reading the basicConstraints X.509 extension (2.5.29.19). If the certificate is a CA a positive value will be returned, or (0) if the certificate does not have CA flag set. </p>
 <p> Use <code>gnutls_x509_crt_get_basic_constraints()</code> if you want to read the pathLenConstraint field too.</p>
 <h2>RETURNS</h2>

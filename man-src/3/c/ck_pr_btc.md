@@ -1,5 +1,4 @@
 ---
-
 title: "ck_pr_btc(3)"
 name: "ck_pr_btc"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_pr_btc_ptr ck_pr_btc_uint ck_pr_btc_int ck_pr_btc_64 ck_pr_btc_
 <p> <code>ck_pr_btc_ptr</code> <code>ck_pr_btc_uint</code> <code>ck_pr_btc_int</code> <code>ck_pr_btc_64</code> <code>ck_pr_btc_32</code> <code>ck_pr_btc_16</code> &#8211; atomic bit test-and-complement operations</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_pr.h Ft bool Fn ck_pr_btc_ptr void *target unsigned int bit_index Ft bool Fn ck_pr_btc_uint uint *target unsigned int bit_index Ft bool Fn ck_pr_btc_int int *target unsigned int bit_index Ft bool Fn ck_pr_btc_64 uint64_t *target unsigned int bit_index Ft bool Fn ck_pr_btc_32 uint32_t *target unsigned int bit_index Ft bool Fn ck_pr_btc_16 uint16_t *target unsigned int bit_index</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_pr_btc 3 family of functions atomically fetch the value of the bit in Fa target at index Fa bit_index and set that bit to its complement.</p>
 <h2>RETURN VALUES</h2>
 <p> These family of functions return the original value of the bit at offset Fa bit_index that is in the value pointed to by Fa target .</p>

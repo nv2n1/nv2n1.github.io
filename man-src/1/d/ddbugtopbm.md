@@ -1,5 +1,4 @@
 ---
-
 title: "ddbugtopbm(1)"
 name: "ddbugtopbm"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-ddbugtopbm/"
 description: "ddbugtopbm – convert Diddle or DiddleBug sketches to PBM files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ddbugtopbm &#8211; convert Diddle or DiddleBug sketches to PBM files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ddbugtopbm</code> </p>
 <h2>EXAMPLES</h2>
 <pre>
@@ -15,6 +17,7 @@ description: "ddbugtopbm – convert Diddle or DiddleBug sketches to PBM files"
 <code>ddbugtopbm &lt;/path/to/palm/backup/dir/DiddleDB.pdb</code>
 <code>ddbugtopbm &lt;/path/to/palm/backup/dir/DiddleIDB.pdb</code>
 </pre>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>ddbugtopbm</code> converts all sketches present in a database used by the PalmOS programs <code>Diddle</code> or <code>DiddleBug</code> into appropriately-named PBM files. The backup copy of DiddleBug&#8217;s database you should use as this program&#8217;s input is usually called <code>DiddleBugDB.pdb</code>. Or if you use the original Diddle, it has two separate DBs &#8211; <code>DiddleDB.pdb</code>, containing unnamed `scratch&#8217; sketches, and <code>DiddleIDB.pdb</code>, containing the saved (and named) sketches which are listed by its `index&#8217; option. You can feed this program any of these three on standard input. </p>
 <h2>USING THE PROGRAM</h2>

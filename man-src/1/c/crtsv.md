@@ -1,5 +1,4 @@
 ---
-
 title: "crtsv(1)"
 name: "crtsv"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-crtsv/"
 description: "crtsv – mutual converter between TSV and QDBM Curia database"
 ---
 
+<h2 class="name">NAME</h2>
+<p> crtsv &#8211; mutual converter between TSV and QDBM Curia database </p>
+<h2>SYNOPSIS</h2>
 <p> <code>crtsv import</code> [-bnum <i>num</i>] [-dnum <i>num</i>] [-bin] <i>name</i><br />
  <code>crtsv export</code> [-bin] <i>name</i></p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>crtsv</code> commands. </p>
 <p> The command <code>crtsv</code> features mutual conversion between a database of Curia and a TSV text. This command is useful when data exchange with another version of QDBM or another DBM, or when data exchange between systems which have different byte orders. This command is used in the above format. <i>name</i> specifies a database name. The subcommand <code>export</code> reads TSV data from the standard input. If a key overlaps, the latter is adopted. <code>-bnum</code> specifies the number of the elements of the bucket array. <code>-dnum</code> specifies the number of division of the database. The subcommand <code>import</code> writes TSV data to the standard output.</p>
 <h2>OPTIONS</h2>

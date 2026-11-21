@@ -1,5 +1,4 @@
 ---
-
 title: "fail2ban(1)"
 name: "fail2ban"
 section: "1"
@@ -10,6 +9,7 @@ description: "fail2ban – a set of server and client programs to limit brute fo
 
 <h2>NAME</h2>
 <p> fail2ban &#8211; a set of server and client programs to limit brute force authentication attempts.</p>
+<h2>DESCRIPTION</h2>
 <p> Fail2Ban consists of a client, server and configuration files to limit brute force authentication attempts. </p>
 <p> The server program <code>fail2ban-server</code> is responsible for monitoring log files and issuing ban/unban commands. It gets configured through a simple protocol by <code>fail2ban-client</code>, which can also read configuration files and issue corresponding configuration commands to the server. </p>
 <p> For details on the configuration of fail2ban see the <a href="/docs/linux/man/5-jail-conf/">jail.conf</a>(5) manual page. A jail (as specified in jail.conf) couples filters and actions definitions for any given list of files to get monitored. </p>

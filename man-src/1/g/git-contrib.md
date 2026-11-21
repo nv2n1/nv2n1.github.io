@@ -1,5 +1,4 @@
 ---
-
 title: "git-contrib(1)"
 name: "git-contrib"
 section: "1"
@@ -10,7 +9,9 @@ description: "git-contrib – Show user’s contributions"
 
 <h2>NAME</h2>
 <p> <code>git-contrib</code> &#8211; Show user&#8217;s contributions</p>
+<h2>SYNOPSIS</h2>
 <p> <code>git-contrib</code> [&lt;username&gt;|&lt;email&gt;]</p>
+<h2>DESCRIPTION</h2>
 <p> Output a user&#8217;s contributions to a project, based on the author name or email. Returns multiple entries if there are more than one match.</p>
 <h2>OPTIONS</h2>
 <p> &lt;username&gt; </p>

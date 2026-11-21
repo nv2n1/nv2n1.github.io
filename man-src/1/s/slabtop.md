@@ -1,5 +1,4 @@
 ---
-
 title: "slabtop(1)"
 name: "slabtop"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-slabtop/"
 description: "slabtop – display kernel slab cache information in real time"
 ---
 
+<h2 class="name">NAME</h2>
+<p> slabtop &#8211; display kernel slab cache information in real time </p>
+<h2>SYNOPSIS</h2>
 <p> <code>slabtop</code> [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>slabtop</code> displays detailed kernel slab cache information in real time. It displays a listing of the top caches sorted by one of the listed sort criteria. It also displays a statistics header filled with slab layer information.</p>
 <h2>OPTIONS</h2>
 <p> Normal invocation of <code>slabtop</code> does not require any options. The behavior, however, can be fine-tuned by specifying one or more of the following flags:</p>

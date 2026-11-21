@@ -1,5 +1,4 @@
 ---
-
 title: "lyxclient(1)"
 name: "lyxclient"
 section: "1"
@@ -10,7 +9,9 @@ description: "lyxclient – send commands to a running LyX editor"
 
 <h2>NAME</h2>
 <p> lyxclient &#8211; send commands to a running LyX editor</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lyxclient</code> [ <i>options</i> ] </p>
+<h2>DESCRIPTION</h2>
 <p> When LyX starts, it creates a unique, per-process local socket in the temporary directory through which commands can be sent. That is, it can act like a server, accepting connections from clients. <code>lyxclient</code> can be used as such client. <code>lyxclient</code> will take care of all connection and communication protocol details, leaving you (or your app) free to concentrate on what you want to send to LyX.</p>
 <h2>SERVER IDENTIFICATION OPTIONS</h2>
 <p> <code>lyxclient</code> must first identify to which server (i.e. a running LyX) commands are to be sent. The following options are used to specify the server.</p>

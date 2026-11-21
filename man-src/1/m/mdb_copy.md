@@ -1,5 +1,4 @@
 ---
-
 title: "mdb_copy(1)"
 name: "mdb_copy"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mdb_copy/"
 description: "mdb_copy – LMDB environment copy tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mdb_copy &#8211; LMDB environment copy tool </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mdb_copy</code> [<code>-V</code>] [<code>-c</code>] [<code>-n</code>] <code>srcpath</code> [<code>dstpath</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>mdb_copy</code> utility copies an LMDB environment. The environment can be copied regardless of whether it is currently in use. No lockfile is created, since it gets recreated at need. </p>
 <p> If <i>dstpath</i> is specified it must be the path of an empty directory for storing the backup. Otherwise, the backup will be written to stdout. </p>
 <h2>OPTIONS</h2>

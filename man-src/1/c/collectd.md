@@ -1,5 +1,4 @@
 ---
-
 title: "collectd(1)"
 name: "collectd"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-collectd/"
 description: "collectd – System statistics collection daemon"
 ---
 
+<h2 class="name">NAME</h2>
+<p> collectd &#8211; System statistics collection daemon </p>
+<h2>SYNOPSIS</h2>
 <p> collectd <i>[options]</i></p>
+<h2>DESCRIPTION</h2>
 <p> collectd is a daemon that receives system statistics and makes them available in a number of ways. The main daemon itself doesn&#8217;t have any real functionality apart from loading, querying and submitting to plugins. For a description of available plugins please see &#8220;<font SIZE="-1">PLUGINS&#8221;</font> below.</p>
 <h2>OPTIONS</h2>
 <p> Most of collectd&#8217;s configuration is done using using a configfile. See <i><a href="/docs/linux/man/5-collectd-conf/">collectd.conf</a></i>(5) for an in-depth description of all options.</p>

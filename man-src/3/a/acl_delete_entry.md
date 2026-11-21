@@ -1,5 +1,4 @@
 ---
-
 title: "acl_delete_entry(3)"
 name: "acl_delete_entry"
 section: "3"
@@ -8,10 +7,13 @@ url: "/docs/linux/man/3-acl_delete_entry/"
 description: "acl_delete_entry – delete an ACL entry"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>acl_delete_entry</code> &#8211; delete an ACL entry </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>
+<h2>SYNOPSIS</h2>
 <p> In sys/types.h In sys/acl.h Ft int Fn acl_delete_entry acl_t acl acl_entry_t entry_d</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn acl_delete_entry function removes the ACL entry indicated by the <i>entry_d</i> descriptor from the ACL pointed to by <i>acl</i> Any existing ACL entry descriptors that refer to entries in <i>acl</i> other than that referred to by <i>entry_d</i> continue to refer to the same entries. The argument <i>entry_d</i> and any other ACL entry descriptors that refer to the same ACL entry are undefined after this function completes. Any existing ACL pointers that refer to the ACL referred to by <i>acl</i> continue to refer to the ACL.</p>
 <h2>RETURN VALUE</h2>
 <p> Rv -std acl_delete_entry</p>

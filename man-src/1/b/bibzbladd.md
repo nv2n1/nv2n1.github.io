@@ -1,5 +1,4 @@
 ---
-
 title: "bibzbladd(1)"
 name: "bibzbladd"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-bibzbladd/"
 description: "bibzbladd.pl – add Zbl numbers to papers in a given bib file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bibzbladd.pl &#8211; add Zbl numbers to papers in a given bib file </p>
+<h2>SYNOPSIS</h2>
 <p> bibzbladd [-d] [<code>-f</code>] [<code>-e</code> 1|0] [<code>-o</code> <i>output</i>] <i>bib_file</i></p>
 <h2>OPTIONS</h2>
 <dl>
@@ -19,6 +21,7 @@ description: "bibzbladd.pl – add Zbl numbers to papers in a given bib file"
 <dd> Force searching for Zbl numbers even if the entry already has one.</dd>
 <dt><code>-o</code> <i>output</i></dt>
 <dd> Output file. If this option is not used, the name for the output file is formed by adding <tt>&quot;_zbl&quot;</tt> to the input file</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The script reads a BibTeX file. It checks whether the entries have Zbls. If not, tries to contact internet to get the numbers. The result is a BibTeX file with the fields <tt>&quot;zblnumber=...&quot;</tt> added. </p>
 <p> The name of the output file is either set by the <code>-o</code> option or is derived by adding the suffix <tt>&quot;_zbl&quot;</tt> to the output file.</p>
 <h2>AUTHOR</h2>

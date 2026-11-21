@@ -1,5 +1,4 @@
 ---
-
 title: "keyctl_join_session_keyring(3)"
 name: "keyctl_join_session_keyring"
 section: "3"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/3-keyctl_join_session_keyring/"
 description: "keyctl_join_session_keyring – Join a different session keyring"
 ---
 
+<h2 class="name">NAME</h2>
+<p> keyctl_join_session_keyring &#8211; Join a different session keyring </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;keyutils.h&gt;
 key_serial_t keyctl_join_session_keyring(const char *name);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>keyctl_join_session_keyring</code>() changes the session keyring to which a process is subscribed. </p>
 <p> If <i>name</i> is <code>NULL</code> then a new anonymous keyring will be created, and the process will be subscribed to that. </p>
 <p> If <i>name</i> points to a string, then if a keyring of that name is available, the process will attempt to subscribe to that keyring, giving an error if that is not permitted; otherwise a new keyring of that name is created and attached as the session keyring. </p>

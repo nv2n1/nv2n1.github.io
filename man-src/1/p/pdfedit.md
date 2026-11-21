@@ -1,5 +1,4 @@
 ---
-
 title: "pdfedit(1)"
 name: "pdfedit"
 section: "1"
@@ -10,6 +9,7 @@ description: "pdfedit – Editor for PDF files"
 
 <h2>NAME</h2>
 <p> pdfedit &#8211; Editor for PDF files</p>
+<h2>SYNOPSIS</h2>
 <p> pdfedit [file(s)] [&#8211;help] [&#8211;version] [-d (n)] [-console] [-script (filename)] [-run (filename)] [-eval (code)] [-s (filename)] [&#8211;]</p>
 <h2>OPTIONS</h2>
 <dl>
@@ -39,6 +39,7 @@ description: "pdfedit – Editor for PDF files"
 <dd> This is just shortcut for <code>-console -script (filename)</code></dd>
 <dt><i>&#8212;</i></dt>
 <dd> Stop processing options. Any further parameters after this one are treated as filenames. This can be useful if you want to open file, that have name beginning with a dash.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p>&nbsp;<wbr>You can specify any number of filenames as parameters on commandline. One window will be opened for each file specified. If no file is specified on commandline, editor will be loaded initially empty.&nbsp;<wbr><br />
 &nbsp;<wbr>Name of files can be mixed with options&nbsp;<wbr>(parameter that begin with a dash). Invalid option on commandline will cause editor to abort with error message. Names of options are case sensitive.&nbsp;<wbr><br />
 &nbsp;<wbr>Options which require a parameter can be specified in&nbsp;<wbr>&quot;short form&quot;, like <code>-d1</code> or &quot;long form&quot;, like <code>-d 1</code> , both of these mean option <code>-d</code> with parameter <code>1</code><br />

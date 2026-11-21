@@ -1,5 +1,4 @@
 ---
-
 title: "erfcl(3)"
 name: "erfcl"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-erfcl/"
 description: "erfc, erfcf, erfcl – complementary error function"
 ---
 
+<h2 class="name">NAME</h2>
+<p> erfc, erfcf, erfcl &#8211; complementary error function </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;
 double erfc(double x);
@@ -28,6 +30,7 @@ long double erfcl(long double x);
 </dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> These functions return the complementary error function of <i>x</i>, that is, 1.0 &#8211; erf(x).</p>
 <h2>RETURN VALUE</h2>
 <p> On success, these functions return the complementary error function of <i>x</i>, a value in the range [0,2]. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "xsd(1)"
 name: "xsd"
 section: "1"
@@ -10,10 +9,12 @@ description: "xsd – Mono’s utility for generating schema or class files"
 
 <h2>NAME</h2>
 <p> xsd &#8211; Mono&#8217;s utility for generating schema or class files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>xsd</code> &lt;schema.xsd&gt; /classes [options] </p>
 <p> <code>xsd</code> &lt;schema.xsd&gt; /dataset [options] </p>
 <p> <code>xsd</code> &lt;assembly&gt;.dll|&lt;assembly&gt;.exe [options] </p>
 <p> <code>xsd</code> &lt;instance.xml&gt; [&lt;instance.xml&gt; &#8230;] [options] </p>
+<h2>DESCRIPTION</h2>
 <p> <i>xsd</i> is a tool for intended to complement the XML serialization support of Mono. It can do the following tasks:</p>
 <dl>
 <dt>Generate serializable classes</dt>

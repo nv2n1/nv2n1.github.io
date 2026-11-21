@@ -1,5 +1,4 @@
 ---
-
 title: "keystone(1)"
 name: "keystone"
 section: "1"
@@ -10,9 +9,11 @@ description: "keystone – Client for OpenStack Identity API"
 
 <h2>NAME</h2>
 <p> keystone &#8211; Client for OpenStack Identity API</p>
+<h2>SYNOPSIS</h2>
 <p> <code>keystone</code> [options] &lt;command&gt; [command-options] </p>
 <p> <code>keystone help</code> </p>
 <p> <code>keystone help</code> &lt;command&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>WARNING:</code> The <code>keystone</code> command line utility is pending deprecation. The <i>OpenStackClient unified command line utility</i> should be used instead. The <code>keystone</code> command line utility only supports V2 of the Identity API whereas the OSC program supports both V2 and V3. </p>
 <p> The <code>keystone</code> command line utility interacts with services providing OpenStack Identity API (e.g. Keystone). </p>
 <p> To communicate with the API, you will need to be authenticated &#8211; and the <code>keystone</code> provides multiple options for this. </p>

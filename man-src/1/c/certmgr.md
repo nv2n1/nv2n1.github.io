@@ -1,5 +1,4 @@
 ---
-
 title: "certmgr(1)"
 name: "certmgr"
 section: "1"
@@ -10,7 +9,9 @@ description: "certmgr – Mono Certificate Manager (CLI version)"
 
 <h2>NAME</h2>
 <p> certmgr &#8211; Mono Certificate Manager (CLI version)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>certmgr [action] [object type] [options] store [filename]</code> or <code>certmgr -ssl [options] url</code></p>
+<h2>DESCRIPTION</h2>
 <p> This tool allow to list, add, remove or extract certificates, certificate revocation lists (CRL) or certificate trust lists (CTL) to/from a certificate store. Certificate stores are used to build and validate certificate chains for Authenticode(r) code signing validation and SSL server certificates.</p>
 <h2>STORES</h2>
 <p> The <i>store</i> represents the certificate store to use. It can be one of the following:</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "funimagerowput(3)"
 name: "funimagerowput"
 section: "3"
@@ -10,11 +9,13 @@ description: "FunImageRowPut – put row(s) of an image"
 
 <h2>NAME</h2>
 <p> <code>FunImageRowPut &#8211; put row(s) of an image</code></p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;funtools.h&gt;
 </code></pre>
 <p>void *FunImageRowPut(Fun fun, void *buf, int rstart, int rstop,<br />
                      int dim1, int dim2, int bitpix, char *plist)</p>
+<h2>DESCRIPTION</h2>
 <p> The FunImageRowPut() routine writes one or more image rows to the specified <font SIZE="-1">FITS</font> image file. The first argument is the Funtools handle returned by <i>FunOpen()</i>. The second <code>buf</code> argument is a pointer to the row data buffer, while the third and fourth arguments specify the starting and ending rows to write. Valid rows values range from 1 to dim2, i.e., row is one-valued. </p>
 <p> The <code>dim1</code>and <code>dim2</code> arguments that follow specify the dimensions, where dim1 corresponds to naxis1 and dim2 corresponds to naxis2. The <code>bitpix</code> argument data type of the image and can have the following FITS-standard values:</p>
 <dl>

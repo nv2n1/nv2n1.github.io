@@ -1,5 +1,4 @@
 ---
-
 title: "shmget(2)"
 name: "shmget"
 section: "2"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/2-shmget/"
 description: "shmget – allocates a System V shared memory segment"
 ---
 
+<h2 class="name">NAME</h2>
+<p> shmget &#8211; allocates a System V shared memory segment </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/ipc.h&gt;</code><br />
  <code>#include &lt;sys/shm.h&gt;</code> </p>
 <p> <code>int shmget(key_t </code><i>key</i><code>, size_t </code><i>size</i><code>, int </code><i>shmflg</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>shmget</code>() returns the identifier of the System V shared memory segment associated with the value of the argument <i>key</i>. It may be used either to obtain the identifier of a previously created shared memory segment (when <i>shmflg</i> is zero and <i>key</i> does not have the value <code>IPC_PRIVATE</code>), or to create a new set. </p>
 <p> A new shared memory segment, with size equal to the value of <i>size</i> rounded up to a multiple of <code>PAGE_SIZE</code>, is created if <i>key</i> has the value <code>IPC_PRIVATE</code> or <i>key</i> isn&#8217;t <code>IPC_PRIVATE</code>, no shared memory segment corresponding to <i>key</i> exists, and <code>IPC_CREAT</code> is specified in <i>shmflg</i>. </p>
 <p> If <i>shmflg</i> specifies both <code>IPC_CREAT</code> and <code>IPC_EXCL</code> and a shared memory segment already exists for <i>key</i>, then <code>shmget</code>() fails with <i>errno</i> set to <code>EEXIST</code>. (This is analogous to the effect of the combination <code>O_CREAT | O_EXCL</code> for <code><a href="/docs/linux/man/2-open/">open</a></code>(2).) </p>

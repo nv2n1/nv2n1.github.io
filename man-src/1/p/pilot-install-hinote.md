@@ -1,5 +1,4 @@
 ---
-
 title: "pilot-install-hinote(1)"
 name: "pilot-install-hinote"
 section: "1"
@@ -12,7 +11,9 @@ description: "pilot-install-hinote – Install local files into your Hi-Note dat
 <p> pilot-install-hinote &#8211; Install local files into your Hi-Note database on your Palm handheld.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>
+<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr><i>pilot-install-hinote</i>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;port</code>&nbsp;<wbr>&lt;<code>port</code>&gt;]&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr>[<code>-q</code>|<code>&#8211;quiet</code>]&nbsp;<wbr>[<code>-?</code>|<code>&#8211;help</code>]&nbsp;<wbr>[<code>&#8211;usage</code>]&nbsp;<wbr>[<code>-c</code>&nbsp;<wbr>&nbsp;<wbr><code>&#8211;category</code>&nbsp;<wbr>&nbsp;<wbr><code>category</code>]&nbsp;<wbr>[<i>filename</i>&nbsp;<wbr>&#8230;] </p>
+<h2>DESCRIPTION</h2>
 <p>&nbsp;<wbr><i>pilot-install-hinote</i>&nbsp;<wbr>allows the user to write one or more files as a new&nbsp;<wbr><i>Hi-Note</i>&nbsp;<wbr>or into the Hi-Notes Palm application itself, on the Palm handheld. </p>
 <p> Please see <i><a rel="nofollow" href="http://www.cyclos.com/">http://www.cyclos.com/</a></i> for more information on Hi-Note. </p>
 <h2>OPTIONS</h2>

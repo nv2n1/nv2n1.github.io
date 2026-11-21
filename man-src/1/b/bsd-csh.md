@@ -1,5 +1,4 @@
 ---
-
 title: "bsd-csh(1)"
 name: "bsd-csh"
 section: "1"
@@ -8,9 +7,12 @@ url: "/docs/linux/man/1-bsd-csh/"
 description: "csh – a shell (command interpreter) with C-like syntax"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>csh</code> &#8211; a shell (command interpreter) with C-like syntax </p>
+<h2>SYNOPSIS</h2>
 <p> <code>csh</code> [-<code>bcefimnstVvXx </code>[<i>argument &#8230;</i> ] ]<br />
 <code>csh</code> [-<code>l</code> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>csh</code> is a command language interpreter incorporating a history mechanism (see Sx History substitutions ) , job control facilities (see Sx Jobs ) , interactive file name and user name completion (see Sx File name completion ) , and a C-like syntax. It is used both as an interactive login shell and a shell script command processor.</p>
 <h3>Argument list processing</h3>
 <p> If the first argument (argument 0) to the shell is a dash (`-&#8216; ) then this is a login shell. A login shell also can be specified by invoking the shell with the &#8211;<code>l</code> flag as the only argument. </p>

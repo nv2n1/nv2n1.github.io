@@ -1,5 +1,4 @@
 ---
-
 title: "ghostscript(1)"
 name: "ghostscript"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ghostscript/"
 description: "gs – Ghostscript (PostScript and PDF language interpreter and previewer)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gs &#8211; Ghostscript (PostScript and PDF language interpreter and previewer) </p>
+<h2>SYNOPSIS</h2>
 <p> <code>gs</code> [ <i>options</i> ] [ <i>files</i> ] &#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>gs</code> command invokes <code>Ghostscript</code>, an interpreter of Adobe Systems&#8217; <code>PostScript</code>(tm) and <code>Portable Document Format</code> (PDF) languages. <code>gs</code> reads &quot;files&quot; in sequence and executes them as Ghostscript programs. After doing this, it reads further input from the standard input stream (normally the keyboard), interpreting each line separately and output to an output device (may be a file or an X11 window preview, see below). The interpreter exits gracefully when it encounters the &quot;quit&quot; command (either in a file or from the keyboard), at end-of-file, or at an interrupt signal (such as Control-C at the keyboard). </p>
 <p> The interpreter recognizes many option switches, some of which are described below. Please see the usage documentation for complete information. Switches may appear anywhere in the command line and apply to all files thereafter. Invoking Ghostscript with the <code>-h</code> or <code>-?</code> switch produces a message which shows several useful switches, all the devices known to that executable, and the search path for fonts; on Unix it also shows the location of detailed documentation. </p>
 <p> Ghostscript may be built to use many different output devices. To see which devices your executable includes, run &quot;<code>gs -h</code>&quot;. </p>

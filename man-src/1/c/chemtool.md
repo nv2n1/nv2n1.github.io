@@ -1,5 +1,4 @@
 ---
-
 title: "chemtool(1)"
 name: "chemtool"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-chemtool/"
 description: "chemtool – chemical structures editor"
 ---
 
+<h2 class="name">NAME</h2>
+<p> chemtool &#8211; chemical structures editor</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>chemtool</code> [<i>filename</i>] </dt>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> <code>chemtool</code></p>
 <dd>is a program for drawing organic molecules and exporting them as a X bitmap, PNG, PicTeX, Xfig, SVG, SXD, MDL or EPS file. It runs under the X Window System using the GTK widget set. </dd>
 <p> The program offers essentially unlimited undo/redo, two text fonts plus symbols, seven colors, drawing at several zoom scales, and square and hexagonal backdrop grids for easier alignment. </p>

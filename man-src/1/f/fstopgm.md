@@ -1,5 +1,4 @@
 ---
-
 title: "fstopgm(1)"
 name: "fstopgm"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-fstopgm/"
 description: "fstopgm – convert a Usenix FaceSaver(tm) file into a portable graymap"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fstopgm &#8211; convert a Usenix FaceSaver(tm) file into a portable graymap </p>
+<h2>SYNOPSIS</h2>
 <p> <code>fstopgm</code> [<i>fsfile</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Reads a Usenix FaceSaver(tm) file as input. Produces a portable graymap as output. </p>
 <p> FaceSaver(tm) files sometimes have rectangular pixels. While <i>fstopgm</i> won&#8217;t re-scale them into square pixels for you, it will give you the precise <i>pnmscale</i> command that will do the job. Because of this, reading a FaceSaver(tm) image is a two-step process. First you do: </p>
 <pre>

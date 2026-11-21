@@ -1,5 +1,4 @@
 ---
-
 title: "epsffit(1)"
 name: "epsffit"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-epsffit/"
 description: "epsffit – fit encapsulated PostScript file (EPSF) into constrained size"
 ---
 
+<h2 class="name">NAME</h2>
+<p> epsffit &#8211; fit encapsulated PostScript file (EPSF) into constrained size </p>
+<h2>SYNOPSIS</h2>
 <p> <code>epsffit</code> [ <code>-c</code> ] [ <code>-r</code> ] [ <code>-a</code> ] [ <code>-m</code> ] [ <code>-s</code> ] <i>llx lly urx ury</i> [ <code>infile</code> [ <code>outfile</code> ] ]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Epsffit</i> fits an EPSF file (encapsulated PostScript) to a given bounding box. The coordinates of the box are given by <code>(llx,lly)</code> for the lower left, and <code>(urx,ury)</code> for the upper right, in PostScript units (points). </p>
 <p> If no input or output files are specified, <i>epsffit</i> read from the standard input and writes to the standard output.</p>
 <h2>OPTIONS</h2>

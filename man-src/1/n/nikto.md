@@ -1,5 +1,4 @@
 ---
-
 title: "nikto(1)"
 name: "nikto"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-nikto/"
 description: "nikto – Scan web server for known vulnerabilities"
 ---
 
+<h2 class="name">NAME</h2>
+<p> nikto &#8211; Scan web server for known vulnerabilities </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>/usr/local/bin/nikto</code> [options&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>Examine a web server to find potential problems and security vulnerabilities, including: </dd>
 <dl>
 <dt>

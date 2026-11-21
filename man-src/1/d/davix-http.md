@@ -1,5 +1,4 @@
 ---
-
 title: "davix-http(1)"
 name: "davix-http"
 section: "1"
@@ -10,8 +9,10 @@ description: "davix-http – HTTP query tool based on libdavix"
 
 <h2>NAME</h2>
 <p> davix-http &#8211; HTTP query tool based on libdavix</p>
+<h2>SYNOPSIS</h2>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> davix-http [options]&#8230; url</p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>davix-http</code> is a tool using libdavix for HTTP query executions<br />
  It can be used to interact with a RESTful webservices. </p>
 <p> See <a href="/docs/linux/man/3-libdavix/">libdavix</a>(3) for details. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "libcap(3)"
 name: "libcap"
 section: "3"
@@ -10,6 +9,7 @@ description: "cap_clear, cap_clear_flag, cap_compare, cap_copy_ext, cap_copy_int
 
 <h2>NAME</h2>
 <p> cap_clear, cap_clear_flag, cap_compare, cap_copy_ext, cap_copy_int, cap_free, cap_from_name, cap_from_text, cap_get_fd, cap_get_file, cap_get_flag, cap_get_pid, cap_get_proc, cap_set_fd, cap_set_file, cap_set_flag, cap_set_proc, cap_size, cap_to_name, cap_to_text, cap_get_pid, cap_dup &#8211; capability data object manipulation</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/capability.h&gt;
 int cap_clear(cap_t cap_p);
@@ -39,6 +39,7 @@ cap_t cap_get_pid(pid_t pid);
 cap_t cap_dup(cap_t cap_p);
 Link with - lcap.
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> These functions work on a capability state held in working storage. A <i>cap_t</i> holds information about the capabilities in each of the three sets, Permitted, Inheritable, and Effective. Each capability in a set may be clear (disabled, 0) or set (enabled, 1). </p>
 <p> These functions work with the following data types:</p>
 <dl>

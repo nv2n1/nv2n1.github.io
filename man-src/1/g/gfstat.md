@@ -1,5 +1,4 @@
 ---
-
 title: "gfstat(1)"
 name: "gfstat"
 section: "1"
@@ -10,7 +9,9 @@ description: "gfstat – manual page for gfstat (glusterfs-coreutils) 0.2.0"
 
 <h2>NAME</h2>
 <p> gfstat &#8211; manual page for gfstat (glusterfs-coreutils) 0.2.0</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gfstat</code> [<i>OPTION</i>]&#8230; <i>URL</i></p>
+<h2>DESCRIPTION</h2>
 <p> Display file status from a remote Gluster volume.</p>
 <dl>
 <dt><code>-L</code>, <code>&#8211;dereference</code></dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "exercise(3)"
 name: "exercise"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-exercise/"
 description: "ql/exercise.hpp – Option exercise classes and payoff function."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/exercise.hpp &#8211; Option exercise classes and payoff function. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/time/date.hpp&gt;<br />
  #include &lt;vector&gt; </p>
 <h3>Classes</h3>

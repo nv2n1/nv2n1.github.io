@@ -1,5 +1,4 @@
 ---
-
 title: "callgrind_annotate(1)"
 name: "callgrind_annotate"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-callgrind_annotate/"
 description: "callgrind_annotate – post-processing tool for the Callgrind"
 ---
 
+<h2 class="name">NAME</h2>
+<p> callgrind_annotate &#8211; post-processing tool for the Callgrind </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>callgrind_annotate</code> [<i>options</i>] [<i>callgrind-out-file</i>&nbsp;[<i>source-files</i>&#8230;]]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>callgrind_annotate</code></p>
 <dd>takes an output file produced by the Valgrind tool Callgrind and prints the information in an easy-to-read form.</dd>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "getcovariance(3)"
 name: "getcovariance"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-getcovariance/"
 description: "ql/math/matrixutilities/getcovariance.hpp – Covariance matrix calculation."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/math/matrixutilities/getcovariance.hpp &#8211; Covariance matrix calculation. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/matrix.hpp&gt;<br />
  #include &lt;ql/utilities/dataformatters.hpp&gt;<br />
  #include &lt;ql/math/matrixutilities/pseudosqrt.hpp&gt; </p>

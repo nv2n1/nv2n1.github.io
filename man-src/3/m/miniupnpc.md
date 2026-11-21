@@ -1,5 +1,4 @@
 ---
-
 title: "miniupnpc(3)"
 name: "miniupnpc"
 section: "3"
@@ -11,7 +10,11 @@ url: "/docs/linux/man/3-miniupnpc/"
 
  miniupnpc - UPnP client library
 
-The miniupnpc library implement the UPnP protocol defined to dialog with Internet Gateway Devices. It also has the ability to use data gathered by minissdpd(1) about UPnP devices up on the network in order to skip the long UPnP device discovery process. 
+<h2>SYNOPSIS</h2>
+
+<h2>DESCRIPTION</h2>
+
+ The miniupnpc library implement the UPnP protocol defined to dialog with Internet Gateway Devices. It also has the ability to use data gathered by minissdpd(1) about UPnP devices up on the network in order to skip the long UPnP device discovery process. 
 
  At first, upnpDiscover(3) has to be used to discover UPnP IGD present on the network. Then UPNP_GetValidIGD(3) to select the right one. Alternatively, UPNP_GetIGDFromUrl(3) could be used to bypass discovery process if the root description url of the device to use is known. Then all the UPNP_* functions can be used, such as UPNP_GetConnectionTypeInfo(3), UPNP_AddPortMapping(3), etc...
 

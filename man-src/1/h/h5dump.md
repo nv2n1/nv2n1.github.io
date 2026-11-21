@@ -1,5 +1,4 @@
 ---
-
 title: "h5dump(1)"
 name: "h5dump"
 section: "1"
@@ -10,7 +9,9 @@ description: "h5dump – Displays HDF5 file contents."
 
 <h2>NAME</h2>
 <p> h5dump &#8211; Displays HDF5 file contents.</p>
+<h2>SYNOPSIS</h2>
 <p> h5dump [OPTIONS] file</p>
+<h2>DESCRIPTION</h2>
 <p> h5dump enables the user to examine the contents of an HDF5 file and dump those contents, in human readable form, to an ASCII file. </p>
 <p> h5dump dumps HDF5 file content to standard output. It can display the contents of the entire HDF5 file or selected objects, which can be groups, datasets, a subset of a dataset, links, attributes, or datatypes. </p>
 <p> The &#8211;header option displays object header information only. </p>

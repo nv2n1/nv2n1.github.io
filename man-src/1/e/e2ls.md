@@ -1,5 +1,4 @@
 ---
-
 title: "e2ls(1)"
 name: "e2ls"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-e2ls/"
 description: "e2ls – list files and directories on an ext2 filesystem"
 ---
 
+<h2 class="name">NAME</h2>
+<p> e2ls &#8211; list files and directories on an ext2 filesystem </p>
+<h2>SYNOPSIS</h2>
 <p> <code>e2ls</code> [<i>options</i>]<i> file_specification</i></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>e2ls</code> command is used to list files and directories on an ext2 filesystem. </p>
 <p> Note: Files deleted via e2rm sometimes will show up even without the -D option. It is being investigated.</p>
 <h2>OPTIONS</h2>

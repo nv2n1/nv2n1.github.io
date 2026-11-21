@@ -1,5 +1,4 @@
 ---
-
 title: "cdrwtool(1)"
 name: "cdrwtool"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-cdrwtool/"
 description: "cdrwtool – perform various actions on a CD-R, CD-RW, and DVD-R"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cdrwtool &#8211; perform various actions on a CD-R, CD-RW, and DVD-R</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cdrwtool -d </code><i>device</i><code> -i | -g</code> </p>
 <p> <code>cdrwtool -d </code><i>device</i><code> -s [ </code><i>write-parameters</i><code> ]</code> </p>
 <p> <code>cdrwtool -d </code><i>device</i><code> -q [ </code><i>write-parameters</i><code> ]</code> </p>
@@ -18,6 +20,7 @@ description: "cdrwtool – perform various actions on a CD-R, CD-RW, and DVD-R"
 <p> <code>cdwrtool -d </code><i>device</i><code> -f </code><i>filename</i><code> [ </code><i>write-parameters</i><code> ]</code> </p>
 <p> <code>cdwrtool -d </code><i>device</i><code> -r </code><i>track</i><code> [ </code><i>write-parameters</i><code> ]</code> </p>
 <p> <code>cdrwtool -h</code> </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>cdwrtool</code> command can perform certain actions on a CD-R, CD-RW, or DVD-R device. Mainly these are blanking the media, formating it for use with the packet-cd device, and applying an UDF filesystem. </p>
 <p> The most common usage is probably the `quick setup&#8217; option:</p>
 <dl>

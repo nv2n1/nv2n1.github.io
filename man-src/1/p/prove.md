@@ -1,5 +1,4 @@
 ---
-
 title: "prove(1)"
 name: "prove"
 section: "1"
@@ -7,7 +6,10 @@ letter: "p"
 url: "/docs/linux/man/1-prove/"
 ---
 
-prove - Run tests through a TAP harness. 
+<h2 class="name">NAME</h2>
+ 
+
+ prove - Run tests through a TAP harness. 
 
 <h2>USAGE</h2>
 

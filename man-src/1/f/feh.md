@@ -1,14 +1,14 @@
 ---
-
 title: "feh(1)"
 name: "feh"
 section: "1"
 letter: "f"
 url: "/docs/linux/man/1-feh/"
 ---
-
 <p> feh - image viewer and cataloguer  </p>
+<h2>SYNOPSIS</h2>
 <p> feh [options] file(s)  </p>
+<h2>DESCRIPTION</h2>
 <p> <code>feh</code> is an image viewer using the <code>imlib2</code> library to open and manipulate images. <code>feh</code> has a large number of operational modes. The default mode is an image slideshow, showing one image at a time from those specified on the commandline. Keys and mouse control may be used to move through them. Other modes can be specified on the commandline, and are described below. </p>
 <p> <code>feh</code> can also recurse through a directory structure to form a filelist for processing, and will convert directory names on the commandline into a list of their contents automatically. </p>
 <p> <code>Filelists</code> can be sorted in a number of ways. The default is the order the files were specified on the commandline, or the order they were read from the disk. You can specify sorting modes such as <code>randomize</code> or you can sort by filename, image name, width, height, pixels, etc. Filelists can also be saved to or loaded from files.  </p>

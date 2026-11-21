@@ -1,5 +1,4 @@
 ---
-
 title: "idn2(1)"
 name: "idn2"
 section: "1"
@@ -10,7 +9,9 @@ description: "idn2 – Libidn2 Internationalized Domain Names conversion tool"
 
 <h2>NAME</h2>
 <p> <code>idn2</code> &#8211; Libidn2 Internationalized Domain Names conversion tool</p>
+<h2>SYNOPSIS</h2>
 <p> <code>idn2</code> [OPTION]&#8230; [STRINGS]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> idn2 tool converts DNS domains from UTF-8 to ASCII compatibile encoding (ACE) form, as used in the DNS protocol. The encoding format is the Internationalized Domain Name (IDNA2008/TR46) format. </p>
 <p> All input strings are expected to be encoded in the locale charset. </p>
 <p> To process a string that starts with <code>&#8211;</code>, for example <code>-foo</code>, use <code>&#8212;</code> to signal the end of parameters, as in <code>idn2 &#8211;quiet &#8212; -foo</code>. </p>

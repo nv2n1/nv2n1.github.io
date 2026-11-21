@@ -1,5 +1,4 @@
 ---
-
 title: "membarrier(2)"
 name: "membarrier"
 section: "2"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/2-membarrier/"
 description: "membarrier – issue memory barriers on a set of threads"
 ---
 
+<h2 class="name">NAME</h2>
+<p> membarrier &#8211; issue memory barriers on a set of threads </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/membarrier.h&gt;
 int membarrier(int cmd, unsigned int flags, int cpu_id);
 </code></pre>
 <p> <i>Note</i>: There is no glibc wrapper for this system call; see NOTES.</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>membarrier</code>() system call helps reducing the overhead of the memory barrier instructions required to order memory accesses on multi-core systems. However, this system call is heavier than a memory barrier, so using it effectively is <i>not</i> as simple as replacing memory barriers with this system call, but requires understanding of the details below. </p>
 <p> Use of memory barriers needs to be done taking into account that a memory barrier always needs to be either matched with its memory barrier counterparts, or that the architecture&#8217;s memory model doesn&#8217;t require the matching barriers. </p>
 <p> There are cases where one side of the matching barriers (which we will refer to as &quot;fast side&quot;) is executed much more often than the other (which we will refer to as &quot;slow side&quot;). This is a prime target for the use of <code>membarrier</code>(). The key idea is to replace, for these matching barriers, the fast-side memory barriers by simple compiler barriers, for example: </p>

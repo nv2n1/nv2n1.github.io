@@ -1,5 +1,4 @@
 ---
-
 title: "acl_from_mode(3)"
 name: "acl_from_mode"
 section: "3"
@@ -8,10 +7,13 @@ url: "/docs/linux/man/3-acl_from_mode/"
 description: "acl_from_mode – create an ACL from file permission bits"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>acl_from_mode</code> &#8211; create an ACL from file permission bits </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>
+<h2>SYNOPSIS</h2>
 <p> In sys/types.h In acl/libacl.h Ft acl_t Fn acl_from_mode mode_t mode</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn acl_from_mode function creates a minimal ACL that contains the three entries with tag types ACL_USER_OBJ, ACL_GROUP_OBJ, and ACL_OTHER, with permissions corresponding to the owner, group, and other permission bits of its argument <i>mode</i></p>
 <h2>RETURN VALUE</h2>
 <p> On success, this function returns a pointer to the working storage. On error, a value of <code>(acl_t)NULL</code> is returned, and <i>errno</i> is set appropriately.</p>

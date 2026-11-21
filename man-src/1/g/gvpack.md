@@ -1,5 +1,4 @@
 ---
-
 title: "gvpack(1)"
 name: "gvpack"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-gvpack/"
 description: "gvpack – merge and pack disjoint graphs"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gvpack &#8211; merge and pack disjoint graphs </p>
+<h2>SYNOPSIS</h2>
 <p> <code>gvpack</code> [ <code>-nguv?</code> ] [ <code>-m</code><i>margin</i> ] [ <code>-array</code><i>opts</i> ] [ <code>-o</code><i>outfile</i> ] [ <code>-s</code><i>graph_name</i> ] [ <code>-G</code><i>name</i><code>=</code>value ] [ <i>files</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>gvpack</code> reads in a stream of graphs, combines the graphs into a single layout, and produces a single graph serving as the union of the input graphs. The input graphs must be in dot format, and must have all necessary layout information. Acceptable input is produced by applying a Graphviz layout program, such as <code>dot</code> or <code>neato</code>, with no <code>-T</code> flag. </p>
 <p> By default, the packing is done at the cluster level. Thus, parts of one graph will not intrude into any top-level clusters or overlap any nodes or edges of another. </p>
 <p> The output of <code>gvpack</code> can be used to produce concrete output by applying <code>neato -s -n2</code> with the desired <code>-T</code> flag.</p>

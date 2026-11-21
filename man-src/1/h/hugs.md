@@ -1,5 +1,4 @@
 ---
-
 title: "hugs(1)"
 name: "hugs"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-hugs/"
 description: "hugs, runhugs, ffihugs – Hugs 98, functional programming system"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hugs, runhugs, ffihugs &#8211; Hugs 98, functional programming system </p>
+<h2>SYNOPSIS</h2>
 <p> <code>hugs</code> [ <i>options</i> ] [ <i>modules</i> ]<br />
  <code>runhugs</code> [ <i>options</i> ] <i>module</i> [ <i>args</i> ]<br />
  <code>ffihugs</code> [ <i>options</i> ] <i>module</i> [ <i>compiler_argument</i> ] &#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Hugs is an interpreter for Haskell, a standard non-strict functional programming language. Hugs implements almost all of the Haskell 98 standard, except for mutually recursive modules. The name <code>Hugs</code> is a mnemonic for the <code>Haskell User&#8217;s Gofer System</code>. </p>
 <p> The interpreter is started using the <i>hugs</i> command. After processing options, it loads the standard module <code>Prelude</code> and any other modules listed on the command line. </p>
 <p> Each Haskell module is stored in a separate file. When loading a module <i>name</i>, <i>Hugs</i> replaces each `<code>.</code>&#8216; in <i>name</i> with a `<code>/</code>&#8216; and looks in each of the directories on its search path (see <code>-P</code> under <code>OPTIONS</code>) for the files <i>name</i><code>.hs</code> and <i>name</i><code>.lhs</code>. (The recognized suffixes may be changed using the <code>-S</code> option, described under <code>OPTIONS</code>.) It also tries <i>name</i> as a literal filename. Files ending in &quot;<code>.lhs</code>&quot; are treated as literate scripts.</p>

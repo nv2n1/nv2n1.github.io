@@ -1,5 +1,4 @@
 ---
-
 title: "ffmpeg(1)"
 name: "ffmpeg"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ffmpeg/"
 description: "ffmpeg – ffmpeg video converter"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ffmpeg &#8211; ffmpeg video converter </p>
+<h2>SYNOPSIS</h2>
 <p> ffmpeg [<i>global_options</i>] {[<i>input_file_options</i>] -i <i>input_url</i>} &#8230; {[<i>output_file_options</i>] <i>output_url</i>} &#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>ffmpeg</code> is a very fast video and audio converter that can also grab from a live audio/video source. It can also convert between arbitrary sample rates and resize video on the fly with a high quality polyphase filter. </p>
 <p> <code>ffmpeg</code> reads from an arbitrary number of input &#8220;files&#8221; (which can be regular files, pipes, network streams, grabbing devices, etc.), specified by the <tt>&quot;-i&quot;</tt> option, and writes to an arbitrary number of output &#8220;files&#8221;, which are specified by a plain output url. Anything found on the command line which cannot be interpreted as an option is considered to be an output url. </p>
 <p> Each input or output url can, in principle, contain any number of streams of different types (video/audio/subtitle/attachment/data). The allowed number and/or types of streams may be limited by the container format. Selecting which streams from which inputs will go into which output is either done automatically or with the <tt>&quot;-map&quot;</tt> option (see the Stream selection chapter). </p>

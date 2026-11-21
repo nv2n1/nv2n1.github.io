@@ -1,5 +1,4 @@
 ---
-
 title: "ssyconv(3)"
 name: "ssyconv"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-ssyconv/"
 description: "ssyconv.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ssyconv.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ssyconv</code> (UPLO, WAY, N, A, LDA, IPIV, WORK, INFO)<br />
  <i></i><code>SSYCONV</code></p>

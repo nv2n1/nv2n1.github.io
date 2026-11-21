@@ -1,5 +1,4 @@
 ---
-
 title: "griffith(1)"
 name: "griffith"
 section: "1"
@@ -10,7 +9,9 @@ description: "griffith – film collection manager"
 
 <h2>NAME</h2>
 <p> griffith &#8211; film collection manager</p>
+<h2>SYNOPSIS</h2>
 <p> <code>griffith</code></p>
+<h2>DESCRIPTION</h2>
 <p> Griffith is a film collection manager. Adding items to the movie collection is as quick and easy as typing the film title and selecting a supported source. Griffith will then try to fetch all the related information from the Web.</p>
 <h2>OPTIONS</h2>
 <dl>

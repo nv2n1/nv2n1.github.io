@@ -1,5 +1,4 @@
 ---
-
 title: "pand(1)"
 name: "pand"
 section: "1"
@@ -10,6 +9,7 @@ description: "pand – BlueZ Bluetooth PAN daemon"
 
 <h2>NAME</h2>
 <p> pand &#8211; BlueZ Bluetooth PAN daemon</p>
+<h2>DESCRIPTION</h2>
 <p> The pand PAN daemon allows your computer to connect to ethernet networks using Bluetooth.</p>
 <h2>SYNPOSIS</h2>
 <p> pand &lt;options&gt;</p>

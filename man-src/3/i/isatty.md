@@ -1,5 +1,4 @@
 ---
-
 title: "isatty(3)"
 name: "isatty"
 section: "3"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/3-isatty/"
 description: "isatty – test whether a file descriptor refers to a terminal"
 ---
 
+<h2 class="name">NAME</h2>
+<p> isatty &#8211; test whether a file descriptor refers to a terminal </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;unistd.h&gt;
 int isatty(int fd);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>isatty</code>() function tests whether <i>fd</i> is an open file descriptor referring to a terminal.</p>
 <h2>RETURN VALUE</h2>
 <p> <code>isatty</code>() returns 1 if <i>fd</i> is an open file descriptor referring to a terminal; otherwise 0 is returned, and <i>errno</i> is set to indicate the error.</p>

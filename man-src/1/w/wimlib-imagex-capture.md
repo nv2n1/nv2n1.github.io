@@ -1,5 +1,4 @@
 ---
-
 title: "wimlib-imagex-capture(1)"
 name: "wimlib-imagex-capture"
 section: "1"
@@ -10,8 +9,10 @@ description: "wimlib-imagex-capture, wimlib-imagex-append – Create or append a
 
 <h2>NAME</h2>
 <p> wimlib-imagex-capture, wimlib-imagex-append &#8211; Create or append a WIM image</p>
+<h2>SYNOPSIS</h2>
 <p> <code>wimlib-imagex capture</code> <i>SOURCE</i> <i>WIMFILE</i> [<i>IMAGE_NAME</i> [<i>IMAGE_DESCRIPTION</i>]] [<i>OPTION</i>&#8230;]<br />
  <code>wimlib-imagex append</code> <i>SOURCE</i> <i>WIMFILE</i> [<i>IMAGE_NAME</i> [<i>IMAGE_DESCRIPTION</i>]] [<i>OPTION</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>wimlib-imagex capture</code> and <code>wimlib-imagex append</code> commands create a Windows Imaging (WIM) image from a directory tree. The <code>wimlib-imagex capture</code> command creates a new WIM file containing the captured image, while the <code>wimlib-imagex append</code> command appends the captured image to an existing WIM file. These commands are also available as simply <code>wimcapture</code> and <code>wimappend</code> if the appropriate hard links or batch files are installed. </p>
 <p> Background information: A WIM image is an independent directory tree in a WIM file. A WIM file may contain any number of separate images. WIM files are single-instancing with regards to file data, so a file is stored only one time in the entire WIM, regardless of how many images the file appears in. </p>
 <p> <i>SOURCE</i> specifies the location of the files to create the new WIM image from. If <i>SOURCE</i> is a directory, the WIM image is captured from that directory (see <code>DIRECTORY CAPTURE (UNIX)</code> or <code>DIRECTORY CAPTURE (WINDOWS)</code>). Alternatively, if the <code>&#8211;source-list</code> option is specified, <i>SOURCE</i> is interpreted as a file that itself provides a list of files and directories to include in the new WIM image. Still alternatively, only on UNIX-like systems, if <i>SOURCE</i> is a regular file or block device, it is interpreted as an NTFS volume from which a WIM image is to be captured using libntfs-3g (see <code>NTFS VOLUME CAPTURE (UNIX)</code>). </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "shmctl(2)"
 name: "shmctl"
 section: "2"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/2-shmctl/"
 description: "shmctl – System V shared memory control"
 ---
 
+<h2 class="name">NAME</h2>
+<p> shmctl &#8211; System V shared memory control </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/ipc.h&gt;</code><br />
  <code>#include &lt;sys/shm.h&gt;</code> </p>
 <p> <code>int shmctl(int </code><i>shmid</i><code>, int </code><i>cmd</i><code>, struct shmid_ds *</code><i>buf</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>shmctl</code>() performs the control operation specified by <i>cmd</i> on the System V shared memory segment whose identifier is given in <i>shmid</i>. </p>
 <p> The <i>buf</i> argument is a pointer to a <i>shmid_ds</i> structure, defined in <i>&lt;sys/shm.h&gt;</i> as follows: </p>
 <p> struct shmid_ds {<br />

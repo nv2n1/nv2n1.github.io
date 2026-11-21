@@ -1,5 +1,4 @@
 ---
-
 title: "gdaldem(1)"
 name: "gdaldem"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-gdaldem/"
 description: "gdaldem – gdaldem Tools to analyze and visualize DEMs. (since GDAL 1.7.0)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gdaldem &#8211; gdaldem Tools to analyze and visualize DEMs. (since GDAL 1.7.0) </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 - To generate a shaded relief map from any GDAL - supported elevation raster:
                                                                           gdaldem hillshade input_dem output_hillshade
@@ -42,6 +44,7 @@ map from any GDAL - supported elevation raster : gdaldem TPI input_dem output_TP
     y and z units are identical.If x(east - west) and y(north - south) units are identical, but z(elevation)
 units are different, the scale(-s) option can be used to set the ratio of vertical units to horizontal.For LatLong projections near the equator, where units of latitude and units of longitude are similar, elevation(z) units can be converted to be compatible by using scale = 370400(if elevation is in feet) or scale = 111120(if elevation is in meters).For locations not near the equator, it would be best to reproject your grid using gdalwarp before using gdaldem..fi
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> This utility has 7 different modes :</p>
 <dl>
 <dt><code>hillshade</code></dt>

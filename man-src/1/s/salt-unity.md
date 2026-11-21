@@ -1,5 +1,4 @@
 ---
-
 title: "salt-unity(1)"
 name: "salt-unity"
 section: "1"
@@ -13,11 +12,19 @@ url: "/docs/linux/man/1-salt-unity/"
 
  A unified invocation wrapper around other Salt CLI scripts.
 
-<pre>
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <pre>
 salt-unity salt '*' test.ping
 </pre>
 
-This script takes an argument which is one of the other Salt CLI scripts and invokes that script.
+<h2>DESCRIPTION</h2>
+
+ 
+
+ This script takes an argument which is one of the other Salt CLI scripts and invokes that script.
 
 <h2>OPTIONS</h2>
 

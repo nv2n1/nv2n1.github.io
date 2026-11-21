@@ -1,5 +1,4 @@
 ---
-
 title: "cairo-dock(1)"
 name: "cairo-dock"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-cairo-dock/"
 description: "cairo-dock – A dock to launch your programs easily."
 ---
 
+<h2 class="name">NAME</h2>
+<p> cairo-dock &#8211; A dock to launch your programs easily.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cairo-dock</code> [options] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>Cairo-Dock</code> is a pretty, light and convenient interface to your desktop, able to replace advantageously your system panel! </p>
 <p> It features <code>multi-docks, taskbar, launchers</code> and a lot of useful <code>applets.</code><br />
  <code>Applets</code> can be detached from the dock to act as desktop <code>widgets.</code><br />

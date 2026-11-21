@@ -1,5 +1,4 @@
 ---
-
 title: "bibtex8(1)"
 name: "bibtex8"
 section: "1"
@@ -7,8 +6,11 @@ letter: "b"
 url: "/docs/linux/man/1-bibtex8/"
 description: "bibtex8 – 8-bit Big BibTeX"
 ---
-
+<h2 class="name">NAME</h2>
+<p> bibtex8 - 8-bit Big BibTeX </p>
+<h2>SYNOPSIS</h2>
 <p> <code>bibtex8</code> [<i>options</i>] <i>aux-file</i>  </p>
+<h2>DESCRIPTION</h2>
 <p> <code>BibTeX8</code> is an 8-bit implementation of BibTeX written in C. It has been enhanced by adding the following features: </p>
 <p> - &quot;big&quot; (32-bit) and customisable capacity </p>
 <p> - flexible support for non-English languages using 8-bit character sets </p>

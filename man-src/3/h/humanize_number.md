@@ -1,5 +1,4 @@
 ---
-
 title: "humanize_number(3)"
 name: "humanize_number"
 section: "3"
@@ -7,15 +6,22 @@ letter: "h"
 url: "/docs/linux/man/3-humanize_number/"
 ---
 
-<b>dehumanize_number</b> <b>humanize_number</b> - format a number into a human readable form and viceversa 
+<h2 class="name">NAME</h2>
+ 
+
+ <b>dehumanize_number</b> <b>humanize_number</b> - format a number into a human readable form and viceversa 
 
 <h2>LIBRARY</h2>
 
  Lb libbsd
 
-In bsd/stdlib.h Ft int Fn dehumanize_number const char *str int64_t *result Ft int Fn humanize_number char *buf size_t len int64_t number const char *suffix int scale int flags
+<h2>SYNOPSIS</h2>
 
-The Fn humanize_number function formats the signed 64 bit quantity given in Fa number into Fa buffer . A space and then Fa suffix is appended to the end. Fa buffer must be at least Fa len bytes long. 
+ In bsd/stdlib.h Ft int Fn dehumanize_number const char *str int64_t *result Ft int Fn humanize_number char *buf size_t len int64_t number const char *suffix int scale int flags
+
+<h2>DESCRIPTION</h2>
+
+ The Fn humanize_number function formats the signed 64 bit quantity given in Fa number into Fa buffer . A space and then Fa suffix is appended to the end. Fa buffer must be at least Fa len bytes long. 
 
  If the formatted number (including Fa suffix ) would be too long to fit into Fa buffer , then divide Fa number by 1024 until it will. In this case, prefix Fa suffix with the appropriate SI designator. 
 

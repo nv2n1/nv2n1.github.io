@@ -1,5 +1,4 @@
 ---
-
 title: "mcview(1)"
 name: "mcview"
 section: "1"
@@ -12,6 +11,7 @@ description: "mcview – Internal file viewer of GNU Midnight Commander."
 <p> mcview &#8211; Internal file viewer of GNU Midnight Commander.</p>
 <h2>USAGE</h2>
 <p> <code>mcview</code> [-bcCdfhstVx?] file</p>
+<h2>DESCRIPTION</h2>
 <p> mcview is a link to <code>mc</code>, the main GNU Midnight Commander executable. Executing GNU Midnight Commander under this name requests staring the internal viewer and opening the <i>file</i> specified on the command line.</p>
 <h2>OPTIONS</h2>
 <dl>

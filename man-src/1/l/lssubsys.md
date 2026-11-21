@@ -1,5 +1,4 @@
 ---
-
 title: "lssubsys(1)"
 name: "lssubsys"
 section: "1"
@@ -10,9 +9,11 @@ description: "lssubsys – list hierarchies containing given subsystem"
 
 <h2>NAME</h2>
 <p> lssubsys &#8211; list hierarchies containing given subsystem </p>
+<h2>SYNOPSIS</h2>
 <p> <code>lssubsys</code> [<code>-m|&#8211;mount-points</code>] [<code>-M|&#8211;all-mount-points</code>] [<i>controller</i>] [&#8230;]<br />
  <code>lssubsys</code> [<code>-m|&#8211;mount-points</code>] [<code>-M|&#8211;all-mount-points</code>] [<code>-i|&#8211;hierarchies</code>] [<code>-a|&#8211;all</code>]<br />
  <code>lssubsys</code> [<code>-h|&#8211;help</code>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>lssubsys</code> list the hierarchies containing the given subsystem(s). If no subsystem is defined, it displays all mounted hierarchies. </p>
 <dl>
 <dt><code>controller</code></dt>

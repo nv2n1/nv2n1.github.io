@@ -1,5 +1,4 @@
 ---
-
 title: "kcutiltest(1)"
 name: "kcutiltest"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-kcutiltest/"
 description: "kcutiltest – command line interface to test the utility functions"
 ---
 
+<h2 class="name">NAME</h2>
+<p> kcutiltest &#8211; command line interface to test the utility functions</p>
+<h2>DESCRIPTION</h2>
 <p> The command `<code>kcutiltest</code>&#8216; is a utility for facility test and performance test of the utility functions. This command is used in the following format. `<i>rnum</i>&#8216; specifies the number of iterations. `<i>path</i>&#8216; specifies the path of a file. </p>
 <dl>
 <dt>

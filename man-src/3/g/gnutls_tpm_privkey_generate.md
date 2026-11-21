@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_tpm_privkey_generate(3)"
 name: "gnutls_tpm_privkey_generate"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_tpm_privkey_generate – API function"
 
 <h2>NAME</h2>
 <p> gnutls_tpm_privkey_generate &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/tpm.h&gt;</code> </p>
 <p> <code>int gnutls_tpm_privkey_generate(gnutls_pk_algorithm_t </code><i>pk</i><code>, unsigned int </code><i>bits</i><code>, const char * </code><i>srk_password</i><code>, const char * </code><i>key_password</i><code>, gnutls_tpmkey_fmt_t </code><i>format</i><code>, gnutls_x509_crt_fmt_t </code><i>pub_format</i><code>, gnutls_datum_t * </code><i>privkey</i><code>, gnutls_datum_t * </code><i>pubkey</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -32,6 +32,7 @@ description: "gnutls_tpm_privkey_generate – API function"
 <dd> the corresponding public key (may be null)</dd>
 <dt>unsigned int flags</dt>
 <dd> should be a list of GNUTLS_TPM_* flags</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will generate a private key in the TPM chip. The private key will be generated within the chip and will be exported in a wrapped with TPM&#8217;s master key form. Furthermore the wrapped key can be protected with the provided <i>password</i> . </p>
 <p> Note that bits in TPM is quantized value. If the input value is not one of the allowed values, then it will be quantized to one of 512, 1024, 2048, 4096, 8192 and 16384. </p>
 <p> Allowed flags are:</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "tux(2)"
 name: "tux"
 section: "2"
@@ -10,10 +9,12 @@ description: "tux – interact with the TUX kernel subsystem"
 
 <h2>NAME</h2>
 <p> tux &#8211; interact with the TUX kernel subsystem</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/tuxmodule.h&gt;
 int tux(unsigned int action, user_req_t *req);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>tux()</code> system call calls the kernel to perform an <i>action</i> on behalf of the currently executing user-space TUX module. </p>
 <p> <i>action</i> can be one of:<br />
 enum tux_actions {<br />

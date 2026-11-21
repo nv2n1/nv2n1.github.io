@@ -1,5 +1,4 @@
 ---
-
 title: "pod2usage(1)"
 name: "pod2usage"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-pod2usage/"
 description: "pod2usage – print usage messages from embedded pod docs in files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pod2usage &#8211; print usage messages from embedded pod docs in files </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>pod2usage</code></dt>
 <dd> [<code>-help</code>] [<code>-man</code>] [<code>-exit</code> <i>exitval</i>] [<code>-output</code> <i>outfile</i>] [<code>-verbose</code> <i>level</i>] [<code>-pathlist</code> <i>dirlist</i>] [<code>-formatter</code> <i>module</i>] [<code>-utf8</code>] <i>file</i></dd></dl>
@@ -36,6 +38,7 @@ description: "pod2usage – print usage messages from embedded pod docs in files
 <dd> This option assumes that the formatter (see above) understands the option &#8220;utf8&#8221;. It turns on generation of utf8 output.</dd>
 <dt><i>file</i></dt>
 <dd> The pathname of a file containing pod documentation to be output in usage message format. If omitted, standard input is read &#8211; but the output is then formatted with Pod::Text only &#8211; unless a specific formatter has been specified with <code>-formatter</code>.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>pod2usage</code> will read the given input file looking for pod documentation and will print the corresponding usage message. If no input file is specified then standard input is read. </p>
 <p> <code>pod2usage</code> invokes the <code>pod2usage()</code> function in the <code>Pod::Usage</code> module. Please see &#8220;<code>pod2usage()</code>&#8221; in Pod::Usage.</p>
 <h2>SEE ALSO</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "pdfoutline(1)"
 name: "pdfoutline"
 section: "1"
@@ -10,7 +9,9 @@ description: "pdfoutline – add outlines (aka bookmarks) to PDF files"
 
 <h2>NAME</h2>
 <p> pdfoutline &#8211; add outlines (aka bookmarks) to PDF files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pdfoutline</code> <i>input.pdf outlines.txt output.pdf</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>pdfoutline</code> reads input file given as first argument, adds outlines from text file given as second argument, and saves result to file with name given as third argument. </p>
 <p> File with outlines information should consist of lines in the following format: </p>
 <dl>

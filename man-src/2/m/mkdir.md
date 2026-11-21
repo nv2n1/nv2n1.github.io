@@ -1,5 +1,4 @@
 ---
-
 title: "mkdir(2)"
 name: "mkdir"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-mkdir/"
 description: "mkdir, mkdirat – create a directory"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mkdir, mkdirat &#8211; create a directory </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/stat.h&gt;
 #include &lt;sys/types.h&gt;
@@ -25,6 +27,7 @@ int mkdirat(int dirfd, const char *pathname, mode_t mode);
 <dt>Before glibc 2.10:</dt>
 <dd> _ATFILE_SOURCE</dd></dl>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> <code>mkdir</code>() attempts to create a directory named <i>pathname</i>. </p>
 <p> The argument <i>mode</i> specifies the mode for the new directory (see <code><a href="/docs/linux/man/7-inode/">inode</a></code>(7)). It is modified by the process&#8217;s <i>umask</i> in the usual way: in the absence of a default ACL, the mode of the created directory is (<i>mode</i> &amp; ~<i>umask</i> &amp; 0777). Whether other <i>mode</i> bits are honored for the created directory depends on the operating system. For Linux, see NOTES below. </p>
 <p> The newly created directory will be owned by the effective user ID of the process. If the directory containing the file has the set-group-ID bit set, or if the filesystem is mounted with BSD group semantics (<i>mount -o bsdgroups</i> or, synonymously <i>mount -o grpid</i>), the new directory will inherit the group ownership from its parent; otherwise it will be owned by the effective group ID of the process. </p>

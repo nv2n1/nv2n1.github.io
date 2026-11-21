@@ -1,5 +1,4 @@
 ---
-
 title: "udisksctl(1)"
 name: "udisksctl"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-udisksctl/"
 description: "udisksctl – The udisks command line tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> udisksctl &#8211; The udisks command line tool </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>udisksctl</code> status</dt>
 <dt> <code>udisksctl</code> info {&#8211;object-path&nbsp;<i>OBJECT</i> | &#8211;block-device&nbsp;<i>DEVICE</i> | &#8211;drive&nbsp;<i>DRIVE</i>}</dt>
@@ -22,6 +24,7 @@ description: "udisksctl – The udisks command line tool"
 <dt> <code>udisksctl</code> monitor</dt>
 <dt> <code>udisksctl</code> dump</dt>
 <dt> <code>udisksctl</code> help</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>udisksctl</code></p>
 <dd>is a command-line program used to interact with the <code><a href="/docs/linux/man/8-udisksd/">udisksd</a></code>(8) daemon process.</dd>
 <h2>COMMANDS</h2>

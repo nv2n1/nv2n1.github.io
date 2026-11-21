@@ -1,5 +1,4 @@
 ---
-
 title: "lout(1)"
 name: "lout"
 section: "1"
@@ -10,7 +9,9 @@ description: "lout – prepare Lout document for printing"
 
 <h2>NAME</h2>
 <p> lout &#8211; prepare Lout document for printing</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lout</code> [ <i>options</i> ] <i>file</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Invoke the Basser Lout interpreter on the concatenation of the named files, producing a PostScript file on standard output suitable for printing on PostScript printers using <i><a href="/docs/linux/man/1-lpr/">lpr</a></i>(1). If no files are named, stdin is used instead. The special file name `<code>&#8211;</code>&#8216; may be used to denote standard input. White space between flags and their associated option values is optional. </p>
 <p> An optional <code>.lt</code> suffix may be used for Lout source and include files. When invoking files ending in this suffix the suffix may be omitted.</p>
 <h2>OPTIONS</h2>

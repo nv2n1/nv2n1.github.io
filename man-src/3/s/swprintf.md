@@ -1,5 +1,4 @@
 ---
-
 title: "swprintf(3)"
 name: "swprintf"
 section: "3"
@@ -7,8 +6,8 @@ letter: "s"
 url: "/docs/linux/man/3-swprintf/"
 description: "wprintf, fwprintf, swprintf, vwprintf, vfwprintf, vswprintf – formatted wide-character output conversion"
 ---
-
 <p>wprintf, fwprintf, swprintf, vwprintf, vfwprintf, vswprintf &#8211; formatted wide-character output conversion </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
  #include &lt;stdio.h&gt; 
  #include &lt;wchar.h&gt; 
@@ -27,6 +26,7 @@ description: "wprintf, fwprintf, swprintf, vwprintf, vfwprintf, vswprintf – fo
 <dd> <p> _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500 || _ISOC99_SOURCE || <br />
  _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L </p>
  </dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code>wprintf</code>() family of functions is the wide-character equivalent of the <code><a href="/docs/linux/man/3-printf/">printf</a></code>(3) family of functions. It performs formatted output of wide characters. </p>
 <p>The <code>wprintf</code>() and <code>vwprintf</code>() functions perform wide-character output to <i>stdout</i>. <i>stdout</i> must not be byte oriented; see <code><a href="/docs/linux/man/3-fwide/">fwide</a></code>(3) for more information. </p>
 <p>The <code>fwprintf</code>() and <code>vfwprintf</code>() functions perform wide-character output to <i>stream</i>. <i>stream</i> must not be byte oriented; see <code><a href="/docs/linux/man/3-fwide/">fwide</a></code>(3) for more information. </p>

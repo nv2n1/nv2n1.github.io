@@ -1,5 +1,4 @@
 ---
-
 title: "guestmount(1)"
 name: "guestmount"
 section: "1"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/1-guestmount/"
 description: "guestmount – Mount a guest filesystem on the host using FUSE and libguestfs"
 ---
 
+<h2 class="name">NAME</h2>
+<p> guestmount &#8211; Mount a guest filesystem on the host using FUSE and libguestfs </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 guestmount[--options] - a disk.img - m device[--ro] mountpoint guestmount[--options] - a disk.img - i[--ro] mountpoint guestmount[--options] - d Guest - i[--ro] mountpoint
 </code></pre>
 <h2>WARNING</h2>
 <p> Using <tt>&quot;guestmount&quot;</tt> in write mode on live virtual machines, or concurrently with other disk editing tools, can be dangerous, potentially causing disk corruption. The virtual machine must be shut down before you use this command, and disk images must not be edited concurrently. </p>
 <p> Use the <i>&#8211;ro</i> (read-only) option to use <tt>&quot;guestmount&quot;</tt> safely if the disk image or virtual machine might be live. You may see strange or inconsistent results if running concurrently with other changes, but with this option you won&#8217;t risk disk corruption.</p>
+<h2>DESCRIPTION</h2>
 <p> The guestmount program can be used to mount virtual machine filesystems and other disk images on the host. It uses libguestfs for access to the guest filesystem, and <font SIZE="-1">FUSE </font>(the &#8220;filesystem in userspace&#8221;) to make it appear as a mountable device. </p>
 <p> Along with other options, you have to give at least one device (<i>-a</i> option) or libvirt domain (<i>-d</i> option), and at least one mountpoint (<i>-m</i> option) or use the <i>-i</i> inspection option or the <i>&#8211;live</i> option. How this works is better explained in the <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1) manual page, or by looking at the examples below. </p>
 <p> <font SIZE="-1">FUSE</font> lets you mount filesystems as non-root. The mountpoint must be owned by you, and the filesystem will not be visible to any other users unless you make certain global configuration changes to <i>/etc/fuse.conf</i>. To unmount the filesystem, use the <i><a href="/docs/linux/man/1-guestunmount/">guestunmount</a></i>(1) command.</p>

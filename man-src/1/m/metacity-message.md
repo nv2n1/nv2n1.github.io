@@ -1,5 +1,4 @@
 ---
-
 title: "metacity-message(1)"
 name: "metacity-message"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-metacity-message/"
 description: "METACITY-MESSAGE – a command to send a message to Metacity"
 ---
 
+<h2 class="name">NAME</h2>
+<p> METACITY-MESSAGE &#8211; a command to send a message to Metacity </p>
+<h2>SYNOPSIS</h2>
 <p> <code>METACITY-MESSAGE</code> [restart|reload-theme|enable-keybindings|disable-keybindings|enable-mouse-button-modifiers|disable-mouse-button-modifiers|toggle-verbose]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>metacity-message</code>. This manual page was written for the Debian distribution because the original program does not have a manual page. </p>
 <p> <code>metacity-message</code> send a specified message to <code><a href="/docs/linux/man/1-metacity/">metacity</a></code>(1).</p>
 <h2>OPTIONS</h2>

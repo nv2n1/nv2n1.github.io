@@ -1,5 +1,4 @@
 ---
-
 title: "fts-rest-delete-submit(1)"
 name: "fts-rest-delete-submit"
 section: "1"
@@ -12,6 +11,7 @@ description: "fts-rest-delete-submit"
 <p> fts-rest-delete-submit</p>
 <h2>SYNOPIS</h2>
 <p> Usage: fts-rest-delete-submit [options] SURL1 [SURL2] [SURL3] [&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> This command can be used to submit a deletion job to FTS3. It supports simple and bulk submissions.</p>
 <h2>OPTIONS</h2>
 <dl>

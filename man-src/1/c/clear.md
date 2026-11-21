@@ -1,5 +1,4 @@
 ---
-
 title: "clear(1)"
 name: "clear"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-clear/"
 description: "clear – clear the terminal screen"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>clear</code> &#8211; clear the terminal screen </p>
+<h2>SYNOPSIS</h2>
 <p> <code>clear</code> [<code>-T</code><i>type</i>] [<code>-V</code>] [<code>-x</code>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>clear</code> clears your screen if this is possible, including its scrollback buffer (if the extended &#8220;E3&#8221; capability is defined). <code>clear</code> looks in the environment for the terminal type given by the environment variable <code>TERM</code>, and then in the <code>terminfo</code> database to determine how to clear the screen. </p>
 <p> <code>clear</code> writes to the standard output. You can redirect the standard output to a file (which prevents <code>clear</code> from actually clearing the screen), and later <code>cat</code> the file to the screen, clearing it at that point.</p>
 <h2>OPTIONS</h2>

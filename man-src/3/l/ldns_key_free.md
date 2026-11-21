@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_key_free(3)"
 name: "ldns_key_free"
 section: "3"
@@ -10,12 +9,14 @@ description: "ldns_key_free, ldns_key_deep_free, ldns_key_list_free"
 
 <h2>NAME</h2>
 <p> ldns_key_free, ldns_key_deep_free, ldns_key_list_free </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> void ldns_key_free(ldns_key *key); </p>
 <p> void ldns_key_deep_free(ldns_key *key); </p>
 <p> void ldns_key_list_free(ldns_key_list *key_list); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_key_free</i>()</dt>
 <dd>frees a key structure, but not its internal data structures </dd>

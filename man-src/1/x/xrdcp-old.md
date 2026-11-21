@@ -1,5 +1,4 @@
 ---
-
 title: "xrdcp-old(1)"
 name: "xrdcp-old"
 section: "1"
@@ -10,6 +9,7 @@ description: "xrdcp-old – copy files"
 
 <h2>NAME</h2>
 <p> xrdcp-old &#8211; copy files</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 xrdcp - old[options] source destination
             options : [--cksum args][--debug lvl][--coerce][--force]
@@ -19,6 +19,7 @@ xrdcp - old[options] source destination
                                     [--version][--xrate rate] legacy options : [-adler][-DSparm string][-DIparm number]
                                                                                        [-md5][-np][-ODcgi][-OScgi][-x]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>This tool is DEPRECATED. It is what used to be xrdcp prior to xrootd 4.0.0 release. Please use xrdcp instead.</code> </p>
 <p> The <code>xrdcp-old</code> utility copies one or more files from one location to another. The data source and destination may be a local or remote file or directory. Additionally, the data source may also reside on multiple servers.</p>
 <h2>OPTIONS</h2>

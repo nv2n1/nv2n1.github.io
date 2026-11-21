@@ -1,5 +1,4 @@
 ---
-
 title: "libssh2_channel_read_ex(3)"
 name: "libssh2_channel_read_ex"
 section: "3"
@@ -10,10 +9,12 @@ description: "libssh2_channel_read_ex – read data from a channel stream"
 
 <h2>NAME</h2>
 <p> libssh2_channel_read_ex &#8211; read data from a channel stream</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
 <p> ssize_t libssh2_channel_read_ex(LIBSSH2_CHANNEL *channel, int stream_id, char *buf, size_t buflen); </p>
 <p> ssize_t libssh2_channel_read(LIBSSH2_CHANNEL *channel, char *buf, size_t buflen); </p>
 <p> ssize_t libssh2_channel_read_stderr(LIBSSH2_CHANNEL *channel, char *buf, size_t buflen); </p>
+<h2>DESCRIPTION</h2>
 <p> Attempt to read data from an active channel stream. All channel streams have one standard I/O substream (stream_id == 0), and may have up to 2^32 extended data streams as identified by the selected <i>stream_id</i>. The SSH2 protocol currently defines a stream ID of 1 to be the stderr substream. </p>
 <p> <i>channel</i> &#8211; active channel stream to read from. </p>
 <p> <i>stream_id</i> &#8211; substream ID number (e.g. 0 or SSH_EXTENDED_DATA_STDERR) </p>

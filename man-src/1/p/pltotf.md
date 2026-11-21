@@ -1,5 +1,4 @@
 ---
-
 title: "pltotf(1)"
 name: "pltotf"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pltotf/"
 description: "pltotf – convert property list files to TeX font metric (tfm) format"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pltotf &#8211; convert property list files to TeX font metric (tfm) format </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pltotf</code> [<code>-verbose</code>] <i>pl_file_name</i>[<i></i><code>.pl</code>] [<i>tfm_file_name</i>[<i></i><code>.tfm</code>]]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page is not meant to be exhaustive. The complete documentation for this version of TeX can be found in the info file or manual <i>Web2C: A TeX implementation</i>. </p>
 <p> The <code>pltotf</code> program translates a (human-oriented) property list file to a (program-oriented) TeX font metric file. Thus, after editing the property list file, a TFM file can be generated for use with, for example, <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1). </p>
 <p> The <i>pl_file_name</i> is extended with <code>.pl</code> if it lacks a suffix. No path searching is done. </p>

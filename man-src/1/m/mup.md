@@ -1,5 +1,4 @@
 ---
-
 title: "mup(1)"
 name: "mup"
 section: "1"
@@ -10,7 +9,9 @@ description: "mup – music publisher"
 
 <h2>NAME</h2>
 <p> mup &#8211; music publisher</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mup</code> [<code>-c</code><i>N</i>] [-C] [<code>-d</code><i>N</i>] [<code>-D</code> <i>MACRO[=macro_def</i>]] [<code>-e</code> <i>errfile</i>] [-E] [<code>-f</code> <i>outfile</i>] [<code>-F</code>] [<code>-l</code>] [<code>-m</code> <i>midifile</i>] [<code>-M</code>] [<code>-o</code> <i>pagelist</i>] [<code>-p</code><i>N</i>] [<code>-v</code>] [<code>-x</code> <i>N</i>[,<i>M</i>] [<i>file&#8230;</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Mup is a program for producing printed music. There is an optional companion program called Mupmate that provides a more graphical user interface on top of Mup, but this manual page describes the command line interface. The Mup User&#8217;s Guide should be consulted for details of the format of the input file. Options include:</p>
 <dl>
 <dt><code>-c</code> <i>N</i></dt>

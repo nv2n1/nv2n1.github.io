@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_error_is_fatal(3)"
 name: "gnutls_error_is_fatal"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_error_is_fatal – API function"
 
 <h2>NAME</h2>
 <p> gnutls_error_is_fatal &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_error_is_fatal(int </code><i>error</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>int error</dt>
 <dd> is a GnuTLS error code, a negative error code</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> If a GnuTLS function returns a negative error code you may feed that value to this function to see if the error condition is fatal to a TLS session (i.e., must be terminated). </p>
 <p> Note that you may also want to check the error code manually, since some non-fatal errors to the protocol (such as a warning alert or a rehandshake request) may be fatal for your program. </p>
 <p> This function is only useful if you are dealing with errors from functions that relate to a TLS session (e.g., record layer or handshake layer handling functions).</p>

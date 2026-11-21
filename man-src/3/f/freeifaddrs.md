@@ -1,5 +1,4 @@
 ---
-
 title: "freeifaddrs(3)"
 name: "freeifaddrs"
 section: "3"
@@ -7,16 +6,23 @@ letter: "f"
 url: "/docs/linux/man/3-freeifaddrs/"
 ---
 
-getifaddrs, freeifaddrs - get interface addresses 
+<h2 class="name">NAME</h2>
+ 
 
-<pre><code>
+ getifaddrs, freeifaddrs - get interface addresses 
+
+<h2>SYNOPSIS</h2>
+
+ <pre><code>
 #include &lt;ifaddrs.h&gt;
 #include &lt;sys/types.h&gt;
 int getifaddrs(struct ifaddrs **ifap);
 void freeifaddrs(struct ifaddrs *ifa);
 </code></pre>
 
-The <b>getifaddrs</b>() function creates a linked list of structures describing the network interfaces of the local system, and stores the address of the first item of the list in <i>*ifap</i>. The list consists of <i>ifaddrs</i> structures, defined as follows: 
+<h2>DESCRIPTION</h2>
+
+ The <b>getifaddrs</b>() function creates a linked list of structures describing the network interfaces of the local system, and stores the address of the first item of the list in <i>*ifap</i>. The list consists of <i>ifaddrs</i> structures, defined as follows: 
 
  struct ifaddrs { 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;struct ifaddrs&nbsp;<wbr>&nbsp;*ifa_next;&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Next item in list&nbsp;*/ 

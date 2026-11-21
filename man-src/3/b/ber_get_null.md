@@ -1,5 +1,4 @@
 ---
-
 title: "ber_get_null(3)"
 name: "ber_get_null"
 section: "3"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/3-ber_get_null/"
 description: "ber_get_next, ber_skip_tag, ber_peek_tag, ber_scanf, ber_get_int, ber_get_enum, ber_get_stringb, ber_get_stringa, ber_get_stringal, ber_get_stringbv, ber_get_null, ber_get_boolean, ber_get_bitstrin..."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ber_get_next, ber_skip_tag, ber_peek_tag, ber_scanf, ber_get_int, ber_get_enum, ber_get_stringb, ber_get_stringa, ber_get_stringal, ber_get_stringbv, ber_get_null, ber_get_boolean, ber_get_bitstring, ber_first_element, ber_next_element &#8211; OpenLDAP LBER simplified Basic Encoding Rules library routines for decoding </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LBER (liblber, -llber)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;lber.h&gt;</code> </p>
 <p> <code>ber_tag_t ber_get_next(Sockbuf *</code><i>sb</i><code>, ber_len_t *</code><i>len</i><code>, BerElement *</code><i>ber</i><code>);</code> </p>
 <p> <code>ber_tag_t ber_skip_tag(BerElement *</code><i>ber</i><code>, ber_len_t *</code><i>len</i><code>);</code> </p>
@@ -26,6 +28,7 @@ description: "ber_get_next, ber_skip_tag, ber_peek_tag, ber_scanf, ber_get_int, 
 <p> <code>ber_tag_t ber_get_bitstringa(BerElement *</code><i>ber</i><code>, char **</code><i>buf</i><code>, ber_len_t *</code><i>blen</i><code>);</code> </p>
 <p> <code>ber_tag_t ber_first_element(BerElement *</code><i>ber</i><code>, ber_len_t *</code><i>len</i><code>, char **</code><i>cookie</i><code>);</code> </p>
 <p> <code>ber_tag_t ber_next_element(BerElement *</code><i>ber</i><code>, ber_len_t *</code><i>len</i><code>, const char *</code><i>cookie</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> These routines provide a subroutine interface to a simplified implementation of the Basic Encoding Rules of ASN.1. The version of BER these routines support is the one defined for the LDAP protocol. The encoding rules are the same as BER, except that only definite form lengths are used, and bitstrings and octet strings are always encoded in primitive form. This man page describes the decoding routines in the lber library. See <code><a href="/docs/linux/man/3-lber-encode/">lber-encode</a></code>(3) for details on the corresponding encoding routines. Consult <code><a href="/docs/linux/man/3-lber-types/">lber-types</a></code>(3) for information about types, allocators, and deallocators. </p>
 <p> Normally, the only routines that need to be called by an application are <code>ber_get_next</code>() to get the next BER element and <code>ber_scanf</code>() to do the actual decoding. In some cases, <code>ber_peek_tag</code>() may also need to be called in normal usage. The other routines are provided for those applications that need more control than <code>ber_scanf</code>() provides. In general, these routines return the tag of the element decoded, or LBER_ERROR if an error occurred. </p>
 <p> The <code>ber_get_next</code>() routine is used to read the next BER element from the given Sockbuf, <i>sb</i>. It strips off and returns the leading tag, strips off and returns the length of the entire element in <i>len</i>, and sets up <i>ber</i> for subsequent calls to <code>ber_scanf</code>() et al to decode the element. See <code><a href="/docs/linux/man/3-lber-sockbuf/">lber-sockbuf</a></code>(3) for details of the Sockbuf implementation of the <i>sb</i> parameter. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "paps(1)"
 name: "paps"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-paps/"
 description: "paps – UTF-8 to PostScript converter using Pango"
 ---
 
+<h2 class="name">NAME</h2>
+<p> paps &#8211; UTF-8 to PostScript converter using Pango </p>
+<h2>SYNOPSIS</h2>
 <p> <code>paps</code> [<i>options</i>]<i> files</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>paps</code> reads a UTF-8 encoded file and generates a PostScript language rendering of the file. The rendering is done by creating outline curves through the pango ft2 backend.</p>
 <h2>OPTIONS</h2>
 <p> These programs follow the usual GNU command line syntax, with long options starting with two dashes (`-&#8216;). A summary of options is included below.</p>

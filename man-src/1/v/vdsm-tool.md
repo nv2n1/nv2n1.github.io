@@ -1,5 +1,4 @@
 ---
-
 title: "vdsm-tool(1)"
 name: "vdsm-tool"
 section: "1"
@@ -10,7 +9,9 @@ description: "vdsm-tool – Virtual Desktops and Servers Manager Tool"
 
 <h2>NAME</h2>
 <p> vdsm-tool &#8211; Virtual Desktops and Servers Manager Tool</p>
+<h2>SYNOPSIS</h2>
 <p> vdsm-tool [options] &lt;action&gt; [arguments]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>vdsm-tool</code> is a command line tool for configuring VDSM.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-brlapi_tty/"
 description: "Entering & leaving tty mode –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Entering &amp; leaving tty mode &#8211; </p>
 <p> How to take control of ttys for direct braille display / read.</p>
 <h3>Macros</h3>
 <p> #define <code>BRLAPI_TTY_DEFAULT</code> -1 </p>

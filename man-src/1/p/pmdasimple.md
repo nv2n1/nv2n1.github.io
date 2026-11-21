@@ -1,5 +1,4 @@
 ---
-
 title: "pmdasimple(1)"
 name: "pmdasimple"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmdasimple – simple performance metrics domain agent (PMDA)"
 
 <h2>NAME</h2>
 <p> <code>pmdasimple</code> &#8211; simple performance metrics domain agent (PMDA)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/simple/pmdasimple</code> [<code>-d</code> <i>domain</i>] [<code>-i</code> <i>port</i>] [<code>-l</code> <i>logfile</i>] [<code>-p</code>] [<code>-u</code> <i>socket</i>] [<code>-U</code> <i>username</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdasimple</code> is a simple Performance Metrics Domain Agent (PMDA) which exports a small number of synthetic performance metrics. </p>
 <p> The simple PMDA is shipped as source code and is designed to be an aid for PMDA developers. In terms of code size and features, it is more complex than the trivial PMDA, about the same as the txmon PMDA and less complex than the sample PMDA. The source for the simple PMDA is a good template from which production, customized PMDAs can be developed. </p>
 <p> A brief description of the <code>pmdasimple</code> command line options follows:</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "texhash(1)"
 name: "texhash"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-texhash/"
 description: "mktexlsr – create ls-R databases"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mktexlsr &#8211; create ls-R databases </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mktexlsr</code> [<i>directories</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page is not meant to be exhaustive. The complete documentation for this version of TeX can be found in the info file or manual <i>Kpathsea: A library for path searching</i>. </p>
 <p> <code>mktexlsr</code> is used to generate the ls-R databases used by the kpathsea library. It will create them for the specified directories, or for a default list if no directories are specified.</p>
 <h2>OPTIONS</h2>

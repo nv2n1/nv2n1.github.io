@@ -1,5 +1,4 @@
 ---
-
 title: "fcrondyn(1)"
 name: "fcrondyn"
 section: "1"
@@ -7,9 +6,16 @@ letter: "f"
 url: "/docs/linux/man/1-fcrondyn/"
 ---
 
-fcrondyn - dialog dyn-amically with a running fcron daemon 
+<h2 class="name">NAME</h2>
+ 
 
-<b>fcrondyn</b> [ <b>-c </b><i>file</i> ] [ <b>-i</b> ] 
+ fcrondyn - dialog dyn-amically with a running fcron daemon 
+
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <b>fcrondyn</b> [ <b>-c </b><i>file</i> ] [ <b>-i</b> ] 
 
  
 
@@ -19,7 +25,11 @@ fcrondyn - dialog dyn-amically with a running fcron daemon
 
  <b>fcrondyn</b> [ <b>-h</b> ] 
 
-<b>Fcrondyn</b> is a user tool intended to interact with a running fcron daemon. It can, for instance, list user's jobs loaded by fcron, run one of them, renice a running job, send a signal to a running job, etc.
+<h2>DESCRIPTION</h2>
+
+ 
+
+ <b>Fcrondyn</b> is a user tool intended to interact with a running fcron daemon. It can, for instance, list user's jobs loaded by fcron, run one of them, renice a running job, send a signal to a running job, etc.
 
 <h2>OPTIONS</h2>
 

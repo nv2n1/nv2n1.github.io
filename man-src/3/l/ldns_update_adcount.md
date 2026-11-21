@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_update_adcount(3)"
 name: "ldns_update_adcount"
 section: "3"
@@ -10,6 +9,7 @@ description: "ldns_update_zocount, ldns_update_prcount, ldns_update_upcount, ldn
 
 <h2>NAME</h2>
 <p> ldns_update_zocount, ldns_update_prcount, ldns_update_upcount, ldns_update_adcount </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -17,6 +17,7 @@ description: "ldns_update_zocount, ldns_update_prcount, ldns_update_upcount, ldn
 <p> uint16_t ldns_update_prcount(const ldns_pkt *p); </p>
 <p> uint16_t ldns_update_upcount(const ldns_pkt *p); </p>
 <p>&nbsp;<wbr>ldns_update_adcount(); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_update_zocount</i>()</dt>
 <dd>Get the zo count .br <code>p</code>: the packet .br Returns the zo count</dd></dl>

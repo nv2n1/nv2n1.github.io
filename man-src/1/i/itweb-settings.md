@@ -1,5 +1,4 @@
 ---
-
 title: "itweb-settings(1)"
 name: "itweb-settings"
 section: "1"
@@ -8,9 +7,12 @@ url: "/docs/linux/man/1-itweb-settings/"
 description: "itweb-settings – view and modify settings for javaws and the browser plugin"
 ---
 
+<h2 class="name">NAME</h2>
 <p> itweb-settings &#8211; view and modify settings for <code>javaws </code> and the <code>browser plugin</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>itweb-settings </code><br />
  <code>itweb-settings </code> command arguments</p>
+<h2>DESCRIPTION</h2>
 <p> <code>itweb-settings </code> is a command line and a GUI program to modify and edit settings used by the IcedTea-Web implementation of <code>javaws </code> and the <code>browser plugin</code> </p>
 <p> If executed without any arguments, it starts up a GUI. Otherwise, it tries to do what is specified in the argument. </p>
 <p> The command-line allows quickly searching, making a copy of and modifying specific settings without having to hunt through a UI.</p>

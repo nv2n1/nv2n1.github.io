@@ -1,5 +1,4 @@
 ---
-
 title: "clipbrowse(1)"
 name: "clipbrowse"
 section: "1"
@@ -7,7 +6,10 @@ letter: "c"
 url: "/docs/linux/man/1-clipbrowse/"
 ---
 
-clipbrowse - Load a URL from the clipboard into your browser. 
+<h2 class="name">NAME</h2>
+ 
+
+ clipbrowse - Load a URL from the clipboard into your browser. 
 
 <h2>USAGE</h2>
 

@@ -1,5 +1,4 @@
 ---
-
 title: "scl2trd(1)"
 name: "scl2trd"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-scl2trd/"
 description: "scl2trd – Convert .scl disk images to .trd."
 ---
 
+<h2 class="name">NAME</h2>
+<p> scl2trd &#8211; Convert .scl disk images to .trd. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>scl2trd</code> <i>sclfile trdfile</i></p>
+<h2>DESCRIPTION</h2>
 <p> scl2trd converts a .scl disk file to a 80 track, double sided (640 KB) .trd disk file.</p>
 <h2>OPTIONS</h2>
 <dl>

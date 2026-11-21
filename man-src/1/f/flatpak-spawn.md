@@ -1,5 +1,4 @@
 ---
-
 title: "flatpak-spawn(1)"
 name: "flatpak-spawn"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-flatpak-spawn/"
 description: "flatpak-spawn – Run commands in a sandbox"
 ---
 
+<h2 class="name">NAME</h2>
+<p> flatpak-spawn &#8211; Run commands in a sandbox </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak-spawn</code> [OPTION&#8230;] COMMAND [ARGUMENT&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>Unlike other flatpak commands, <code>flatpak-spawn</code> is available to applications inside the sandbox. It runs COMMAND outside the sandbox, either in another sandbox, or on the host. </dd>
 <p> <code>flatpak-spawn</code> uses the Flatpak portal to create a copy the sandbox it was called from, optionally using tighter permissions and the latest version of the app and runtime.</p>
 <h2>OPTIONS</h2>

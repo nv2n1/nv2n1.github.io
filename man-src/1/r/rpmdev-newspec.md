@@ -1,5 +1,4 @@
 ---
-
 title: "rpmdev-newspec(1)"
 name: "rpmdev-newspec"
 section: "1"
@@ -10,7 +9,9 @@ description: "rpmdev-newspec – manual page for rpmdev-newspec version 2.2"
 
 <h2>NAME</h2>
 <p> rpmdev-newspec &#8211; manual page for rpmdev-newspec version 2.2</p>
+<h2>SYNOPSIS</h2>
 <p> <code>rpmdev-newspec</code> [<i>option</i>]&#8230; [<i>appname</i>[<i>.spec</i>]]</p>
+<h2>DESCRIPTION</h2>
 <p> rpmdev-newspec generates new rpm .spec files from templates.</p>
 <h2>OPTIONS</h2>
 <dl>

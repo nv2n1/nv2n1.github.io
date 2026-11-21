@@ -1,5 +1,4 @@
 ---
-
 title: "clahrd(3)"
 name: "clahrd"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-clahrd/"
 description: "clahrd.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> clahrd.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clahrd</code> (N, K, NB, A, LDA, TAU, T, LDT, Y, LDY)<br />
  <i></i><code>CLAHRD</code> reduces the first nb columns of a general rectangular matrix A so that elements below the k-th subdiagonal are zero, and returns auxiliary matrices which are needed to apply the transformation to the unreduced part of A.</p>

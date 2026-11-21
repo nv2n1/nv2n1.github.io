@@ -1,5 +1,4 @@
 ---
-
 title: "fontmatrix(1)"
 name: "fontmatrix"
 section: "1"
@@ -10,7 +9,9 @@ description: "fontmatrix – a powerful open source font manager"
 
 <h2>NAME</h2>
 <p> fontmatrix &#8211; a powerful open source font manager </p>
+<h2>SYNOPSIS</h2>
 <p> fontmatrix [-h|&#8211;help]</p>
+<h2>DESCRIPTION</h2>
 <p> Fontmatrix is an open source font manager originally developed on Linux, but now runs on OSX as well. </p>
 <p> This man page only provides summaries of some aspects of the program&#8217;s use. It&#8217;s main purpose is to make sure you can find the full documentation quickly and easily.</p>
 <h2>OPTIONS</h2>

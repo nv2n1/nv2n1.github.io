@@ -1,5 +1,4 @@
 ---
-
 title: "pamtotiff(1)"
 name: "pamtotiff"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-pamtotiff/"
 description: "pamtotiff – convert a Netpbm image to a TIFF file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pamtotiff &#8211; convert a Netpbm image to a TIFF file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pamtotiff</code> </p>
 <p> [<code>-none</code> | <code>-packbits</code> | <code>-lzw</code> | <code>-g3</code> | <code>-g4</code> | <code>-flate</code> | <code>-adobeflate</code>] </p>
 <p> [<code>-2d</code>] </p>
@@ -25,6 +27,7 @@ description: "pamtotiff – convert a Netpbm image to a TIFF file"
 <p> [<code>-tag=</code><i>taglist</i>] </p>
 <p> [<i>pamfile</i>] </p>
 <p> You can use the minimum unique abbreviation of the options. You can use two hyphens instead of one. You can separate an option name from its value with white space instead of an equals sign. </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamtotiff</code> reads a PNM or PAM image as input and produces a TIFF file as output. </p>
 <p> Actually, it handles multi-image Netpbm streams, producing multi-image TIFF streams (i.e. a TIFF stream with multiple &#8216;directories&#8217;). But before Netpbm 10.27 (March 2005), it ignored all but the first Netpbm image in the input stream. </p>

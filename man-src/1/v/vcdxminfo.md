@@ -1,5 +1,4 @@
 ---
-
 title: "vcdxminfo(1)"
 name: "vcdxminfo"
 section: "1"
@@ -10,7 +9,9 @@ description: "vcdxminfo – manual page for vcdxminfo 0.7.24"
 
 <h2>NAME</h2>
 <p> vcdxminfo &#8211; manual page for vcdxminfo 0.7.24</p>
+<h2>SYNOPSIS</h2>
 <p> <code>vcdxminfo</code> [<i>OPTION</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt><code>-i</code>, <code>&#8211;generic-info</code></dt>
 <dd> show generic information</dd>

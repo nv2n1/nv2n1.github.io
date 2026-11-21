@@ -1,5 +1,4 @@
 ---
-
 title: "end_(3)"
 name: "end_"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-end_/"
 description: "QuantLib::ExtendedLeisenReimer – Leisen & Reimer tree: multiplicative approach."
 ---
 
+<h2 class="name">NAME</h2>
+<p> QuantLib::ExtendedLeisenReimer &#8211; Leisen &amp; Reimer tree: multiplicative approach. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/experimental/lattices/extendedbinomialtree.hpp&gt; </p>
 <p> Inherits <code>ExtendedBinomialTree&lt; ExtendedLeisenReimer &gt;</code>. </p>
 <h3>Public Member Functions</h3>

@@ -1,5 +1,4 @@
 ---
-
 title: "g_lie(1)"
 name: "g_lie"
 section: "1"
@@ -11,7 +10,9 @@ description: "g_lie – free energy estimate from linear combinations"
 <h2>NAME</h2>
 <p> g_lie &#8211; free energy estimate from linear combinations </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>g_lie</code> <code>-f</code><i> ener.edr </i> <code>-o</code><i> lie.xvg </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-Elj</code><i> real </i> <code>-Eqq</code><i> real </i> <code>-Clj</code><i> real </i> <code>-Cqq</code><i> real </i> <code>-ligand</code><i> string </i></p>
+<h2>DESCRIPTION</h2>
 <p> g_lie computes a free energy estimate based on an energy analysis from. One needs an energy file with the following components: Coul (A-B) LJ-SR (A-B) etc.</p>
 <h2>FILES</h2>
 <p> <code>-f</code><i> ener.edr</i> <code>Input</code><br />

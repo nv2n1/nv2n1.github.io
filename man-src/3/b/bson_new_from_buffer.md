@@ -1,5 +1,4 @@
 ---
-
 title: "bson_new_from_buffer(3)"
 name: "bson_new_from_buffer"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_new_from_buffer() – TODO:"
 
 <h2>NAME</h2>
 <p> bson_new_from_buffer() &#8211; TODO:</p>
+<h2>SYNOPSIS</h2>
 <pre>
 bson_t *
 bson_new_from_buffer (uint8_t         **buf,
@@ -30,6 +30,7 @@ bson_new_from_buffer (uint8_t         **buf,
 <dl>
 <dt><code>realloc_func_ctx</code></dt>
 <dd> A (null).</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> TODO: </p>
 <h2>RETURNS</h2>
 <p> TODO: </p>

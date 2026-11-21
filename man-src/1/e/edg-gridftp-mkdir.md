@@ -1,5 +1,4 @@
 ---
-
 title: "edg-gridftp-mkdir(1)"
 name: "edg-gridftp-mkdir"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-edg-gridftp-mkdir/"
 description: "edg-gridftp-mkdir – Create a directory on a GridFTP server."
 ---
 
+<h2 class="name">NAME</h2>
+<p> edg-gridftp-mkdir &#8211; Create a directory on a GridFTP server. </p>
+<h2>SYNOPSIS</h2>
 <p> edg-gridftp-mkdir [<code>&#8211;proxy</code>=<i>proxy</i>] [<code>&#8211;timeout</code>=<i>timeout</i>] [<code>&#8211;parents</code>] <i></i><font SIZE="-1"><i>URL</i></font><i></i> [<i></i><font SIZE="-1"><i>URL</i></font><i></i> &#8230;] </p>
 <p> edg-gridftp-mkdir <code>&#8211;usage</code> </p>
 <p> edg-gridftp-mkdir <code>&#8211;help</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>edg-gridftp-mkdir</code> creates a directory on a GridFTP server. This command will return a status of 0 if the directory was created successfully. In all other cases, it will return a non-zero value and print an error message to the standard error. </p>
 <p> If the <code>&#8211;parents</code> option is given any parent directories of the given <font SIZE="-1">URL</font> will also be created. </p>
 <p> If more than one <font SIZE="-1">URL</font> is given, then the URLs are processed sequentially. The processing will stop with the first failure. </p>

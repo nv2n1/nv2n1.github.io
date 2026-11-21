@@ -1,5 +1,4 @@
 ---
-
 title: "aio_suspend(3)"
 name: "aio_suspend"
 section: "3"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/3-aio_suspend/"
 description: "aio_suspend – wait for asynchronous I/O operation or timeout"
 ---
 
+<h2 class="name">NAME</h2>
+<p> aio_suspend &#8211; wait for asynchronous I/O operation or timeout </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;aio.h&gt;
 int aio_suspend(const struct aiocb *const aiocb_list[],
                 int nitems, const struct timespec *timeout);
 Link with - lrt.
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>aio_suspend</code>() function suspends the calling thread until one of the following occurs:</p>
 <dl>
 <dt>*</dt>

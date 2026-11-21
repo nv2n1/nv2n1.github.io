@@ -1,5 +1,4 @@
 ---
-
 title: "rpmargs(1)"
 name: "rpmargs"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-rpmargs/"
 description: "rpmargs – process RPM packages"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rpmargs &#8211; process RPM packages </p>
+<h2>SYNOPSIS</h2>
 <p> <code>rpmargs</code> [<code>-h</code>] <code>-c</code> <i>command</i> [<code>-a</code>] [<code>-p</code>] [<i></i><font SIZE="-1"><i>FILE</i></font><i></i>&#8230;] [<i></i><font SIZE="-1"><i>DIR</i></font><i></i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>rpmargs</code> executes a <i>command</i> against each <font SIZE="-1">RPM</font> package given on the command line. Extra word splitting is performed on the <i>command</i>. Each <i></i><font SIZE="-1"><i>FILE</i></font><i></i> is treated as <font SIZE="-1">RPM</font> package. Each <i></i><font SIZE="-1"><i>DIR</i></font><i></i> is processed with <tt>&quot;*.rpm&quot;</tt> pattern, and <font SIZE="-1">RPM</font> file basename is prepended to the <i>command</i> output.</p>
 <h2>OPTIONS</h2>
 <dl>

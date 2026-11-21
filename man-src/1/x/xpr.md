@@ -1,5 +1,4 @@
 ---
-
 title: "xpr(1)"
 name: "xpr"
 section: "1"
@@ -10,7 +9,9 @@ description: "xpr – print an X window dump"
 
 <h2>NAME</h2>
 <p> xpr &#8211; print an X window dump</p>
+<h2>SYNOPSIS</h2>
 <p> <code>xpr</code> [ <code>-device</code> <i>devtype</i> ] [ <code>-scale</code> <i>scale</i> ] [ <code>-height</code> <i>inches</i> ] [ <code>-width</code> <i>inches</i> ] [ <code>-left</code> <i>inches</i> ] [ <code>-top</code> <i>inches</i> ] [ <code>-header</code> <i>string</i> ] [ <code>-trailer</code> <i>string</i> ] [ <code>-landscape</code> ] [ <code>-portrait</code> ] [ <code>-plane</code> <i>number</i> ] [ <code>-gray</code> ] [ <code>-rv</code> ] [ <code>-compact</code> ] [ <code>-output</code> <i>filename</i> ] [ <code>-append</code> <i>filename</i> ] [ <code>-noff</code> ] [ <code>-split</code> <i>n</i> ] [ <code>-psfig</code> ] [ <code>-density</code> <i>dpi</i> ] [ <code>-cutoff</code> <i>level</i> ] [ <code>-noposition</code> ] [ <code>-gamma</code> <i>correction</i> ] [ <code>-render</code> <i>algorithm</i> ] [ <code>-slide</code> ] [ <i>filename</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>xpr</i> takes as input a window dump file produced by <i><a href="/docs/linux/man/1-xwd/">xwd</a>(1)</i> and formats it for output on PostScript printers, the Digital LN03 or LA100, the IBM PP3812 page printer, the HP LaserJet (or other PCL printers), or the HP PaintJet. If no file argument is given, the standard input is used. By default, <i>xpr</i> prints the largest possible representation of the window on the output page. Options allow the user to add headers and trailers, specify margins, adjust the scale and orientation, and append multiple window dumps to a single output file. Output is to standard output unless <code>-output</code> is specified. </p>
 <p> <code>Command Options</code> </p>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "mongoose(1)"
 name: "mongoose"
 section: "1"
@@ -10,9 +9,11 @@ description: "mongoose – lightweight web server"
 
 <h2>NAME</h2>
 <p> <code>mongoose</code> &#8211; lightweight web server</p>
+<h2>SYNOPSIS</h2>
 <p> [<i>config_file</i> ]<br />
  [<i>OPTIONS</i> ]<br />
  &#8211;<code>A </code><i>htpasswd_file domain_name user_name password</i></p>
+<h2>DESCRIPTION</h2>
 <p> is small, fast and easy to use web server with CGI, SSL, MD5 authorization, and basic SSI support. </p>
 <p> does not detach from terminal, and uses current working directory as the web root, unless &#8211;<code>r</code> option is specified. It is possible to specify multiple ports to listen on. For example, to make mongoose listen on HTTP port 80 and HTTPS port 443, one should start it as: &#8211;<code>s </code><i>cert.pem &#8211;</i><code>p </code><i>80,443s</i> </p>
 <p> Unlike other web servers, does not expect CGI scripts to be put in a special directory. CGI scripts can be anywhere. CGI (and SSI) files are recognized by the file extension. </p>

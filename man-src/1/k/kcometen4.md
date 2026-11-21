@@ -1,5 +1,4 @@
 ---
-
 title: "kcometen4(1)"
 name: "kcometen4"
 section: "1"
@@ -10,7 +9,9 @@ description: "kcometen4.kss – An OpenGL screensaver with exploding comets."
 
 <h2>NAME</h2>
 <p> kcometen4.kss &#8211; An OpenGL screensaver with exploding comets.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>kcometen4.kss</code> [<i>Qt options</i>] [<i>KDE options</i>] [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> KCometen4 is an OpenGL screensaver. A variety of multi-colored comets bounce inside a room until they explode. Occasionally lightning will also strike and blow them up. Meanwhile, a free-floating camera watches the action and sometimes enters a slow motion &quot;bullet time&quot; mode. It is suprisingly hypnotic.</p>
 <h2>OPTIONS</h2>
 <h3>Options:</h3>

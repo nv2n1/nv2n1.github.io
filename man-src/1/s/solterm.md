@@ -1,5 +1,4 @@
 ---
-
 title: "solterm(1)"
 name: "solterm"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-solterm/"
 description: "solterm – An IPMI Serial over LAN program"
 ---
 
+<h2 class="name">NAME</h2>
+<p> solterm &#8211; An IPMI Serial over LAN program</p>
+<h2>SYNOPSIS</h2>
 <p> <code>solterm</code> </p>
 <p> <code>&lt;connection parms&gt;</code> [<code>-e</code> <i>escape_char</i>] [<code>-notencrypted</code>] [<code>-notauthenticated</code>] [<code>-bitrate</code> <i>(9600|19200|38400|57600|115200)</i>] [<code>-alerts</code> <i>(succeed|defer|fail)</i>] [<code>-holdoff</code>] [<code>-ack-retries</code> <i>n</i>] [<code>-ack-timeout</code> <i>microseconds]</i> [<code>-v</code>] [<code>-q</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>solterm</code> program allows a user to make a remote serial connection over IPMI. The requires that the remote system support IPMI 2.0 Serial Over LAN. </p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "gfal-ls(1)"
 name: "gfal-ls"
 section: "1"
@@ -10,7 +9,9 @@ description: "gfal-ls – list directory contents or file information"
 
 <h2>NAME</h2>
 <p> gfal-ls &#8211; list directory contents or file information</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gfal-ls [-h] [-V] [-v] [-D DEFINITION] [-C CLIENT-INFO] [-t TIMEOUT] [-a] [-l] [-d] [-H] file</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>gfal-ls</code> List information about the file. Depending on the implementation, some information from the long listing, such as group and user ids, might not be available and will be displayed as 0. When listing several files or directories, if one returns an error, the execution is canceled. </p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "cdk_fselect(3)"
 name: "cdk_fselect"
 section: "3"
@@ -10,6 +9,7 @@ description: "cdk_fselect – curses file selector widget."
 
 <h2>NAME</h2>
 <p> cdk_fselect &#8211; curses file selector widget.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>
 <p> #include &lt;cdk.h&gt; </p>
 <pre><code>
@@ -152,6 +152,7 @@ void setCDKFselectVerticalChar(
     chtype character);
 </code></pre>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> The Cdk file selector widget creates a widget which allows a user to interact with the Unix file system. This widget allows the user to traverse the file system and even delete files. (See <i>NOTES</i> below for more information)</p>
 <h2>AVAILABLE FUNCTIONS</h2>
 <dl>

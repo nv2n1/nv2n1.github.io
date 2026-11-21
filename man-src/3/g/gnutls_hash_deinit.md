@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_hash_deinit(3)"
 name: "gnutls_hash_deinit"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_hash_deinit – API function"
 
 <h2>NAME</h2>
 <p> gnutls_hash_deinit &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/crypto.h&gt;</code> </p>
 <p> <code>void gnutls_hash_deinit(gnutls_hash_hd_t </code><i>handle</i><code>, void * </code><i>digest</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_hash_deinit – API function"
 <dd> is a <code>gnutls_hash_hd_t</code> structure.</dd>
 <dt>void * digest</dt>
 <dd> is the output value of the hash</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will deinitialize all resources occupied by the given hash context.</p>
 <h2>SINCE</h2>
 <p> 2.10.0</p>

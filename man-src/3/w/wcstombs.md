@@ -1,5 +1,4 @@
 ---
-
 title: "wcstombs(3)"
 name: "wcstombs"
 section: "3"
@@ -7,12 +6,13 @@ letter: "w"
 url: "/docs/linux/man/3-wcstombs/"
 description: "wcstombs – convert a wide-character string to a multibyte string"
 ---
-
 <p>wcstombs &#8211; convert a wide-character string to a multibyte string </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
  #include &lt;stdlib.h&gt; 
  size_t wcstombs(char *  dest  , const wchar_t *  src  , size_t  n  ); 
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> If <i>dest</i> is not NULL, the <code>wcstombs</code>() function converts the wide-character string <i>src</i> to a multibyte string starting at <i>dest</i>. At most <i>n</i> bytes are written to <i>dest</i>. The sequence of characters placed in <i>dest</i> begins in the initial shift state. The conversion can stop for three reasons: </p>
 <dl>
 <dt>1.</dt>

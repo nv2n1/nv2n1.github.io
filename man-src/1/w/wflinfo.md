@@ -1,5 +1,4 @@
 ---
-
 title: "wflinfo(1)"
 name: "wflinfo"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-wflinfo/"
 description: "wflinfo – a utility for printing OpenGL or OpenGL ES driver information"
 ---
 
+<h2 class="name">NAME</h2>
+<p> wflinfo &#8211; a utility for printing OpenGL or OpenGL ES driver information </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>wflinfo</code> <code>&#8211;platform=</code><i>platform</i> <code>&#8211;api=</code><i>api</i> [<i>OPTIONS</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>wflinfo is utility which creates an OpenGL or OpenGL ES context using the waffle library and prints information about the context.</dd>
 <h2>REQUIRED PARAMETERS</h2>
 <p> <code>-p</code> <i>platform</i><br />

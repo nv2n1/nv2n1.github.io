@@ -1,5 +1,4 @@
 ---
-
 title: "hal-is-caller-locked-out(1)"
 name: "hal-is-caller-locked-out"
 section: "1"
@@ -10,7 +9,9 @@ description: "hal-is-caller-locked-out – determine if a caller is locked out"
 
 <h2>NAME</h2>
 <p> hal-is-caller-locked-out &#8211; determine if a caller is locked out</p>
+<h2>SYNOPSIS</h2>
 <p> <code>hal-is-caller-locked-out</code> [options] </p>
+<h2>DESCRIPTION</h2>
 <p> <i>hal-is-caller-locked-out</i> determines if a specific caller is locked out of a specific D-Bus interface on a specific device. For more information about both the big picture and specific <code>HAL</code> properties, refer to the <i>HAL spec</i> which can be found in <i>/usr/share/doc/hal-0.5.13/spec/hal-spec.html</i> depending on the distribution. </p>
 <h2>OPTIONS</h2>
 <p> The following options are supported:</p>

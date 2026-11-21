@@ -1,5 +1,4 @@
 ---
-
 title: "mysqldbexport(1)"
 name: "mysqldbexport"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mysqldbexport/"
 description: "mysqldbexport – Export Object Definitions or Data from a Database"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mysqldbexport &#8211; Export Object Definitions or Data from a Database </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqldbexport [</code><i>options</i><code>] </code><i>db_name</i><code> &#8230;</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This utility exports metadata (object definitions) or data or both from one or more databases. By default, the export includes only definitions. </dd>
 <p> <code>mysqldbexport</code> differs from <code>mysqldump</code> in that it can produce output in a variety of formats to make your data extraction/transport much easier. It permits you to export your data in the format most suitable to an external tool, another MySQL server, or other use without the need to reformat the data. </p>
 <p> To exclude specific objects by name, use the <code>&#8211;exclude</code> option with a name in <i>db</i>.*obj* format, or you can supply a search pattern. For example, <code>&#8211;exclude=db1.trig1</code> excludes the single trigger and <code>&#8211;exclude=trig_</code> excludes all objects from all databases having a name that begins with trig and has a following character. </p>

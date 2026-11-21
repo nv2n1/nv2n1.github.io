@@ -1,5 +1,4 @@
 ---
-
 title: "appletviewer-java-1(1)"
 name: "appletviewer-java-1"
 section: "1"
@@ -11,7 +10,9 @@ description: "appletviewer – The Java Applet Viewer."
 <h2>Name</h2>
 <p> appletviewer &#8211; The Java Applet Viewer. </p>
 <p> The <code>appletviewer</code> command allows you to run applets outside of a web browser. </p>
+<h2>SYNOPSIS</h2>
 <p> <tt>appletviewer</tt> <i>[</i> <i>options</i> <i>] </i><i>urls</i> &#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>appletviewer</code> command connects to the documents or resources designated by <i>urls</i> and displays each applet referenced by the documents in its own window. Note: if the documents referred to by <i>urls</i> do not reference any applets with the <i>OBJECT</i>, <i>EMBED</i>, or <i>APPLET</i> tag, then <code>appletviewer</code> does nothing. For details on the HTML tags that <code>appletviewer</code> supports, see <i>AppletViewer Tags</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/technotes/tools/appletviewertags.html.">http://docs.oracle.com/javase/7/docs/technotes/tools/appletviewertags.html.</a> </p>
 <p> <code>Note:</code> The <code>appletviewer</code> is intended for development purposes only. See About Sample / Test Applications and Code for more information. </p>
 <p> <code>Note:</code> The <code>appletviewer</code> requires encoded URLs according to the escaping mechanism defined in RFC2396. Only encoded URLs are supported. However, file names must be unencoded, as specified in RFC2396. </p>

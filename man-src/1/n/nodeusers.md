@@ -1,5 +1,4 @@
 ---
-
 title: "nodeusers(1)"
 name: "nodeusers"
 section: "1"
@@ -10,7 +9,9 @@ description: "nodeusers – LinuxNode user information lookup program"
 
 <h2>NAME</h2>
 <p> nodeusers &#8211; LinuxNode user information lookup program</p>
+<h2>SYNOPSIS</h2>
 <p> <code>nodeusers [-a] [-i] [-l]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>Nodeusers </code> displays information about current LinuxNode users.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "fts-transfer-status(1)"
 name: "fts-transfer-status"
 section: "1"
@@ -11,9 +10,13 @@ url: "/docs/linux/man/1-fts-transfer-status/"
 
  fts-transfer-status
 
-fts-transfer-status [options] JOBID [JOBID...]
+<h2>SYNOPSIS</h2>
 
-fts-transfer-status is a tool for checking transfer-job status. The has to provide the transfer-job ID.
+ fts-transfer-status [options] JOBID [JOBID...]
+
+<h2>DESCRIPTION</h2>
+
+ fts-transfer-status is a tool for checking transfer-job status. The has to provide the transfer-job ID.
 
 <h2>OPTIONS</h2>
 

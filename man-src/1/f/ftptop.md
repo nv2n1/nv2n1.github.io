@@ -1,5 +1,4 @@
 ---
-
 title: "ftptop(1)"
 name: "ftptop"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ftptop/"
 description: "ftptop – display running status on proftpd server connections"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ftptop &#8211; display running status on proftpd server connections </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ftptop</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>ftptop</code> command displays the current status of FTP sessions in a continuously updating <i>top</i> like format.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "mdb-tables(1)"
 name: "mdb-tables"
 section: "1"
@@ -10,9 +9,11 @@ description: "mdb-tables – Get listing of tables in an MDB database"
 
 <h2>NAME</h2>
 <p> <code>mdb-tables </code>&#8211; Get listing of tables in an MDB database</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 mdb - tables[-S][-1 | -d delimiter] database
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>mdb-tables</code> is a utility program distributed with MDB Tools. </p>
 <p> It produces a list of tables contained within an MDB <i>database</i> in a format suitable for use in shell scripts.</p>
 <h2>OPTIONS</h2>

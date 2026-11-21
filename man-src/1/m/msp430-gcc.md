@@ -1,5 +1,4 @@
 ---
-
 title: "msp430-gcc(1)"
 name: "msp430-gcc"
 section: "1"
@@ -7,8 +6,9 @@ letter: "m"
 url: "/docs/linux/man/1-msp430-gcc/"
 description: "gcc – GNU project C and C++ compiler"
 ---
-
+<h2 class="name">NAME</h2>
 <p> gcc - <font SIZE="-1">GNU</font> project C and C<font SIZE="-2">++</font> compiler </p>
+<h2>SYNOPSIS</h2>
 <p> gcc [<code>-c</code>|<code>-S</code>|<code>-E</code>] [<code>-std=</code><i>standard</i>] <br />
 &nbsp;<wbr>[<code>-g</code>]&nbsp;<wbr>[<code>-pg</code>]&nbsp;<wbr>[<code>-O</code><i>level</i>] <br />
 &nbsp;<wbr>[<code>-W</code><i>warn</i>...]&nbsp;<wbr>[<code>-pedantic</code>] <br />
@@ -17,6 +17,7 @@ description: "gcc – GNU project C and C++ compiler"
 &nbsp;<wbr>[<code>-f</code><i>option</i>...]&nbsp;<wbr>[<code>-m</code><i>machine-option</i>...] <br />
 &nbsp;<wbr>[<code>-o</code>&nbsp;<wbr><i>outfile</i>]&nbsp;<wbr><i>infile</i>... </p>
 <p> Only the most useful options are listed here; see below for the remainder. <code>g++</code> accepts mostly the same options as <code>gcc</code>.  </p>
+<h2>DESCRIPTION</h2>
 <p> When you invoke <font SIZE="-1">GCC</font>, it normally does preprocessing, compilation, assembly and linking. The ``overall options&#8217;&#8216; allow you to stop this process at an intermediate stage. For example, the <code>-c</code> option says not to run the linker. Then the output consists of object files output by the assembler. </p>
 <p> Other options are passed on to one stage of processing. Some options control the preprocessor and others the compiler itself. Yet other options control the assembler and linker; most of these are not documented here, since you rarely need to use any of them. </p>
 <p> Most of the command line options that you can use with <font SIZE="-1">GCC</font> are useful for C programs; when an option is only useful with another language (usually C<font SIZE="-2">++</font>), the explanation says so explicitly. If the description for a particular option does not mention a source language, you can use that option with all supported languages. </p>

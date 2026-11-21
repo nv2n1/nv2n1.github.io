@@ -1,5 +1,4 @@
 ---
-
 title: "ckbcomp(1)"
 name: "ckbcomp"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ckbcomp/"
 description: "ckbcomp – compile a XKB keyboard description to a keymap suitable for loadkeys or kbdcontrol"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ckbcomp &#8211; compile a XKB keyboard description to a keymap suitable for loadkeys or kbdcontrol</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ckbcomp</code> [<i>OPTION</i>&#8230;]&nbsp;[<i>XKBLAYOUT</i>&nbsp;[<i>XKBVARIANT</i>&nbsp;[<i>XKBOPTIONS</i>]&#8230;]] </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>ckbcomp</code> keymap compiler converts a description of an XKB keyboard layout into a console keymap that can be read directly by <code><a href="/docs/linux/man/1-loadkeys/">loadkeys</a></code>(1) or <code>kbdcontrol</code>(1). </p>
 <p> On its standard output <code>ckbcomp</code> dumps the generated keyboard definition. The most important difference between the arguments of <code><a href="/docs/linux/man/1-setxkbmap/">setxkbmap</a></code>(1) and the arguments of <code>ckbcomp</code> is the additional parameter <i>-charmap</i> when non-Unicode keyboard map is wanted. Without <i>-charmap</i> <code>ckbcomp</code> will generate Unicode keyboard. </p>
 <h2>OPTIONS</h2>

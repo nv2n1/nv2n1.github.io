@@ -1,5 +1,4 @@
 ---
-
 title: "git-scp(1)"
 name: "git-scp"
 section: "1"
@@ -10,11 +9,13 @@ description: "git-scp – Copy files to SSH compatible git-remote"
 
 <h2>NAME</h2>
 <p> <code>git-scp</code> &#8211; Copy files to SSH compatible <code>git-remote</code></p>
+<h2>SYNOPSIS</h2>
 <pre>
 `git scp` -h|help|?
 `git scp` &lt;remote&gt; [&lt;commits&gt;...|&lt;path&gt;...]
 `git rscp` &lt;remote&gt; &lt;path&gt;
 </pre>
+<h2>DESCRIPTION</h2>
 <p> A convenient way to copy files from the current working tree to the working directory of a remote repository. If a <code>&lt;commits&gt;&#8230;</code> is provided, only files that has changed within the commit range will be copied. </p>
 <p> Internally this script uses <code>rsync</code> and not <code>scp</code> as the name suggests. </p>
 <p> <code>git-rscp</code> &#8211; The reverse of <code>git-scp</code>. Copies specific files from the working directory of a remote repository to the current working directory.</p>

@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-std-codecvt-7/"
 description: "std::wcstombs – std::wcstombs"
 ---
 
+<h2 class="name">NAME</h2>
+<p> std::wcstombs &#8211; std::wcstombs</p>
 <h2>Synopsis</h2>
 <p>Defined in header &lt;cstdlib&gt;<br />
 std::size_t wcstombs( char* dst, const wchar_t* src, std::size_t len); </p>

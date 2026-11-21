@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_error_match_openssl_error/"
 description: "Error Object Helper Functions –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Error Object Helper Functions &#8211; </p>
 <h3>Functions</h3>
 <p> globus_bool_t <code>globus_error_match_openssl_error</code> (globus_object_t *error, unsigned long library, unsigned long function, unsigned long reason) </p>
 <p> globus_object_t * <code>globus_error_wrap_openssl_error</code> (globus_module_descriptor_t *base_source, int error_type, const char *source_file, const char *source_func, int source_line, const char *format,&#8230;) </p>

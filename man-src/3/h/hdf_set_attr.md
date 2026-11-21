@@ -1,5 +1,4 @@
 ---
-
 title: "hdf_set_attr(3)"
 name: "hdf_set_attr"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-hdf_set_attr/"
 description: "hdf_set_attr – Description: Input: Output: Returns:"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hdf_set_attr &#8211; Description: Input: Output: Returns: </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;util/neo_hdf.h&gt;
 </code></pre>

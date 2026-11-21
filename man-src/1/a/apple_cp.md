@@ -1,5 +1,4 @@
 ---
-
 title: "apple_cp(1)"
 name: "apple_cp"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-apple_cp/"
 description: "apple_cp – Do an apple copy, copying file metadata and the resource fork as well"
 ---
 
+<h2 class="name">NAME</h2>
+<p> apple_cp &#8211; Do an apple copy, copying file metadata and the resource fork as well </p>
+<h2>SYNOPSIS</h2>
 <p> <code>/usr/bin/apple_cp</code> <i>SOURCE DEST</i> <code>/usr/bin/apple_cp</code> <i>SOURCE</i>&#8230; <i>DIRECTORY</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>apple_cp</code> is a perl script to copy SOURCE to DEST or multiple SOURCE(s) to DIRECTORY. It also copies the file specific metadata (including resource forks) to the .AppleDouble directory for DEST or DIRECTORY. If the .AppleDouble directory doesn&#8217;t exist for DEST or DIRECTORY it will create it.</p>
 <h2>EXAMPLES</h2>
 <p> <code>/usr/bin/apple_cp</code> test.text /target/directory/ </p>

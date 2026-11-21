@@ -1,5 +1,4 @@
 ---
-
 title: "euca-delete-disk-image(1)"
 name: "euca-delete-disk-image"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-delete-disk-image – Delete a disk image used for an import 
 
 <h2>NAME</h2>
 <p> euca-delete-disk-image &#8211; Delete a disk image used for an import task</p>
+<h2>SYNOPSIS</h2>
 <p> euca-delete-disk-image (<code>-t</code> TASK | <code>-u</code> MANIFEST_URL)</p>
 <dl>
 <dt>[&#8211;ignore-active-task] [&#8211;show-empty-fields]</dt>
 <dd> [&#8211;s3-url URL] [-o KEY_ID] [-w KEY] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Delete a disk image used for an import task</p>
 <h3>optional arguments:</h3>
 <dl>

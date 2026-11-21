@@ -1,5 +1,4 @@
 ---
-
 title: "gfal-xattr(1)"
 name: "gfal-xattr"
 section: "1"
@@ -10,7 +9,9 @@ description: "gfal-xattr – show or set attributes of a file"
 
 <h2>NAME</h2>
 <p> gfal-xattr &#8211; show or set attributes of a file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gfal-xattr</code> [ <i>OPTION</i> ]&#8230; <i>FILE</i> [ <i>ATTRIBUTE</i> [= <i>VALUE</i> ]] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>gfal-xattr</code> Display attributes of a file or set them to a new value. This command comes in three forms, making it possible, for a specified file, to list all attribute and corresponding values, display the value of a particular attribute or assign a new value to a particular attribute &#8211; see examples.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "pnmtojbig(1)"
 name: "pnmtojbig"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pnmtojbig/"
 description: "pnmtojbig – PNM to JBIG file converter"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pnmtojbig &#8211; PNM to JBIG file converter</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pnmtojbig</code> </p>
 <p> [<i>options</i>] [<i>input-file</i> [<i>output-file</i>]] </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pnmtojbig</code> reads a PBM or PGM image, compresses it, and outputs the image as a JBIG bi-level image entity (BIE) file. </p>
 <p> JBIG is a highly effective lossless compression algorithm for bi-level images (one bit per pixel), which is particularly suitable for scanned document pages. </p>

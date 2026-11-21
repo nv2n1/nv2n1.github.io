@@ -1,5 +1,4 @@
 ---
-
 title: "scaladoc(1)"
 name: "scaladoc"
 section: "1"
@@ -8,7 +7,9 @@ url: "/docs/linux/man/1-scaladoc/"
 description: "scaladoc – Documentation generator for the Scala 2 language"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>scaladoc</code> &#8211; Documentation generator for the Scala 2 language </p>
+<h2>SYNOPSIS</h2>
 <p> <code>scaladoc</code> [ &lt;<i>options</i>&gt; ] &lt;<i>source files</i>&gt;</p>
 <h2>PARAMETERS</h2>
 <dl>
@@ -16,6 +17,7 @@ description: "scaladoc – Documentation generator for the Scala 2 language"
 <dd> Command line options. See <code>OPTIONS</code> below.</dd>
 <dt>&lt;<i>source files</i>&gt;</dt>
 <dd> One or more source files to be compiled (such as MyClass.scala).</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code>scaladoc</code> tool reads class and object definitions, written in the Scala 2 programming language, and generates their API as HTML files. </p>
 <p> By default, the generator puts each HTML file in the same directory as its source file. You can specify a separate destination directory with <code>-d</code> (see <code>OPTIONS</code>, below). </p>
 <p> The recognised format of comments in source is described in the online documentation</p>

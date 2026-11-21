@@ -1,5 +1,4 @@
 ---
-
 title: "mono-symbolicate(1)"
 name: "mono-symbolicate"
 section: "1"
@@ -10,7 +9,9 @@ description: "mono-symbolicate – Mono Symbolicate Tool"
 
 <h2>NAME</h2>
 <p> mono-symbolicate &#8211; Mono Symbolicate Tool</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mono-symbolicate exefile stacktracesfile [directories&#8230;]</code></p>
+<h2>DESCRIPTION</h2>
 <p> mono-symbolicate is a tool that converts a stack trace with &lt;filename unknown&gt;:0 into one with file names and line numbers. </p>
 <p> The output of calling this tool will be the provided <i>stacktracesfile</i> where &lt;filename unknown&gt;:0 parts are replaced by a file name and a line number. </p>
 <p> For the tool to work it needs to load referenced assemblies, it will first look in the same folder as <i>exefile</i> then from one of the provided <i>directories.</i> </p>

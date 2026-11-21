@@ -1,5 +1,4 @@
 ---
-
 title: "bannergrab(1)"
 name: "bannergrab"
 section: "1"
@@ -10,7 +9,9 @@ description: "bannergrab – a network service banner grabbing tool"
 
 <h2>NAME</h2>
 <p> bannergrab &#8211; a network service banner grabbing tool</p>
+<h2>SYNOPSIS</h2>
 <p> <code>bannergrab</code> [<i>options</i>]<i> host port</i></p>
+<h2>DESCRIPTION</h2>
 <p> bannergrab performs connection, trigger and basic service information collection. There are basic banner grabbing modes, the first mode (the default one) sends triggers to the services and performs basic information collection. The second mode (&#8211;no-triggers), only connects to the service and returns the connection banner.<br />
  By default, if bannergrab has a trigger for the port number that is specified, the trigger for that port is used. If no trigger is listed for a port, the default one is used. No attempt is made to determine the type of service operating on a port.</p>
 <h2>OPTIONS</h2>

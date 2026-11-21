@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_dnssec_data_chain_free(3)"
 name: "ldns_dnssec_data_chain_free"
 section: "3"
@@ -10,6 +9,7 @@ description: "ldns_dnssec_data_chain_new, ldns_dnssec_data_chain_free, ldns_dnss
 
 <h2>NAME</h2>
 <p> ldns_dnssec_data_chain_new, ldns_dnssec_data_chain_free, ldns_dnssec_data_chain_deep_free, ldns_dnssec_build_data_chain, ldns_dnssec_data_chain_print </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -18,6 +18,7 @@ description: "ldns_dnssec_data_chain_new, ldns_dnssec_data_chain_free, ldns_dnss
 <p> void ldns_dnssec_data_chain_deep_free(ldns_dnssec_data_chain *chain); </p>
 <p> ldns_dnssec_data_chain* ldns_dnssec_build_data_chain(ldns_resolver *res, const uint16_t qflags, const ldns_rr_list *data_set, const ldns_pkt *pkt, ldns_rr *orig_rr); </p>
 <p> void ldns_dnssec_data_chain_print(FILE *out, const ldns_dnssec_data_chain *chain); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_dnssec_data_chain_new</i>()</dt>
 <dd>Creates a new dnssec_chain structure .br Returns ldns_dnssec_data_chain *</dd></dl>

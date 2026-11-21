@@ -1,5 +1,4 @@
 ---
-
 title: "sylpheed(1)"
 name: "sylpheed"
 section: "1"
@@ -10,7 +9,9 @@ description: "sylpheed – a GTK+ based, lightweight, and fast email client"
 
 <h2>NAME</h2>
 <p> <code>sylpheed</code> &#8211; a GTK+ based, lightweight, and fast email client </p>
+<h2>SYNOPSIS</h2>
 <p> <code>sylpheed [options]&#8230;</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <i>sylpheed</i> is an X based fast email client. </p>
 <h2>OPTIONS</h2>
 <dl>

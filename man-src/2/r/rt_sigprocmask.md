@@ -1,5 +1,4 @@
 ---
-
 title: "rt_sigprocmask(2)"
 name: "rt_sigprocmask"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-rt_sigprocmask/"
 description: "sigprocmask, rt_sigprocmask – examine and change blocked signals"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sigprocmask, rt_sigprocmask &#8211; examine and change blocked signals </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;signal.h&gt;</code> </p>
 <pre><code>
 /* Prototype for the glibc wrapper function */
@@ -21,6 +23,7 @@ int sigprocmask(int how, const old_kernel_sigset_t *set,
 </code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>sigprocmask</code>(): _POSIX_C_SOURCE</p>
+<h2>DESCRIPTION</h2>
 <p> <code>sigprocmask</code>() is used to fetch and/or change the signal mask of the calling thread. The signal mask is the set of signals whose delivery is currently blocked for the caller (see also <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7) for more details). </p>
 <p> The behavior of the call is dependent on the value of <i>how</i>, as follows.</p>
 <dl>

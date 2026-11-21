@@ -1,5 +1,4 @@
 ---
-
 title: "libsolv-bindings(3)"
 name: "libsolv-bindings"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-libsolv-bindings/"
 description: "libsolv-bindings – access libsolv from perl/python/ruby"
 ---
 
+<h2 class="name">NAME</h2>
+<p> libsolv-bindings &#8211; access libsolv from perl/python/ruby </p>
+<h2>DESCRIPTION</h2>
 <p> Libsolv&#8217;s language bindings offer an abstract, object orientated interface to the library. The supported languages are currently perl, python, and ruby. All example code (except in the specifics sections, of course) lists first the &#8220;C-ish&#8221; interface, then the syntax for perl, python, and ruby (in that order).</p>
 <h2>PERL SPECIFICS</h2>
 <p> Libsolv&#8217;s perl bindings can be loaded with the following statement: </p>

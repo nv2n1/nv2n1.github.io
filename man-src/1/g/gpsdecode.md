@@ -1,5 +1,4 @@
 ---
-
 title: "gpsdecode(1)"
 name: "gpsdecode"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-gpsdecode/"
 description: "gpsdecode – decode GPS, RTCM or AIS streams into a readable format"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gpsdecode &#8211; decode GPS, RTCM or AIS streams into a readable format </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gpsdecode</code> [-c] [-d] [-e] [-j] [-s] [-t&nbsp;<wbr><i>typelist</i>] [-u] [-v] [-D&nbsp;<wbr><i>debuglevel</i>] [-V]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This tool is a batch-mode decoder for NMEA and various binary packet formats associated with GPS, AIS, and differential-correction services. It produces a JSON dump on standard output from binary on standard input. The JSON is the same format documented in <code><a href="/docs/linux/man/8-gpsd/">gpsd</a></code>(8); this tool uses the same decoding logic as gpsd, but with a simpler interface intended for batch processing of data files. </dd>
 <p> All sensor-input formats known to the GPSD project can be decoded by this tool. These include: NMEA, AIVDM (the NMEA-derived sentence format used by AIS, the marine Automatic Identification System), RTCM2, and all supported GPS binary formats (notably including SiRF). See <code><a href="/docs/linux/man/8-gpsd/">gpsd</a></code>(8) for applicable standards and known limitations of the decoding logic. </p>
 <p> You can use this tool with <code><a href="/docs/linux/man/1-nc/">nc</a></code>(1) to examine AIS feeds from AIS pooling services, RTCM feeds from RTCM receivers or NTRIP broadcasters.</p>

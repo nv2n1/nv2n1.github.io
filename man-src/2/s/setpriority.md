@@ -1,5 +1,4 @@
 ---
-
 title: "setpriority(2)"
 name: "setpriority"
 section: "2"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/2-setpriority/"
 description: "getpriority, setpriority – get/set program scheduling priority"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getpriority, setpriority &#8211; get/set program scheduling priority </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/time.h&gt;</code><br />
  <code>#include &lt;sys/resource.h&gt;</code> </p>
 <p> <code>int getpriority(int </code><i>which</i><code>, id_t </code><i>who</i><code>);</code><br />
  <code>int setpriority(int </code><i>which</i><code>, id_t </code><i>who</i><code>, int </code><i>prio</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> The scheduling priority of the process, process group, or user, as indicated by <i>which</i> and <i>who</i> is obtained with the <code>getpriority</code>() call and set with the <code>setpriority</code>() call. The process attribute dealt with by these system calls is the same attribute (also known as the &quot;nice&quot; value) that is dealt with by <code><a href="/docs/linux/man/2-nice/">nice</a></code>(2). </p>
 <p> The value <i>which</i> is one of <code>PRIO_PROCESS</code>, <code>PRIO_PGRP</code>, or <code>PRIO_USER</code>, and <i>who</i> is interpreted relative to <i>which</i> (a process identifier for <code>PRIO_PROCESS</code>, process group identifier for <code>PRIO_PGRP</code>, and a user ID for <code>PRIO_USER</code>). A zero value for <i>who</i> denotes (respectively) the calling process, the process group of the calling process, or the real user ID of the calling process. </p>
 <p> The <i>prio</i> argument is a value in the range -20 to 19 (but see NOTES below). with -20 being the highest priority and 19 being the lowest priority. Attempts to set a priority outside this range are silently clamped to the range. The default priority is 0; lower values give a process a higher scheduling priority. </p>

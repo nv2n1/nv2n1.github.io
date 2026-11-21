@@ -1,5 +1,4 @@
 ---
-
 title: "btmon(1)"
 name: "btmon"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-btmon/"
 description: "btmon – Bluetooth monitor"
 ---
 
+<h2 class="name">NAME</h2>
+<p> btmon &#8211; Bluetooth monitor </p>
+<h2>DESCRIPTION</h2>
 <p> btmon &#8211; Bluetooth monitor Usage:</p>
 <dl>
 <dt>

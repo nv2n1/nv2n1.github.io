@@ -1,5 +1,4 @@
 ---
-
 title: "gacutil(1)"
 name: "gacutil"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-gacutil/"
 description: "gacutil – Global Assembly Cache management utility."
 ---
 
+<h2 class="name">NAME</h2>
+<p> gacutil &#8211; Global Assembly Cache management utility. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>gacutil [-user] [command] [options] </code></p>
+<h2>DESCRIPTION</h2>
 <p> <i>gacutil</i> is a tool used by developers to install versioned assemblies into the system Global Assembly Cache (GAC) to become part of the assemblies that are available for all applications at runtime. </p>
 <p> Notice that they are not directly available to the compiler. The convention is that assemblies must also be placed in a separate directory to be accessed by the compiler. This is done with the -package directive to gacutil. </p>
 <p> The tool allows for installation, removal, and listing of the contents of the assembly cache. </p>

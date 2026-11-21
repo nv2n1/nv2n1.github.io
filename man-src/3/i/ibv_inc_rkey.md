@@ -1,5 +1,4 @@
 ---
-
 title: "ibv_inc_rkey(3)"
 name: "ibv_inc_rkey"
 section: "3"
@@ -7,7 +6,14 @@ letter: "i"
 url: "/docs/linux/man/3-ibv_inc_rkey/"
 ---
 
-ibv_inc_rkey - creates a new rkey from the given one 
+<h2 class="name">NAME</h2>
+ 
+
+ 
+
+ ibv_inc_rkey - creates a new rkey from the given one 
+
+<h2>SYNOPSIS</h2>
 
 <dl>
 <dt>
@@ -16,7 +22,11 @@ ibv_inc_rkey - creates a new rkey from the given one
 uint32_t ibv_inc_rkey(uint32_t rkey);
 </code></pre></dd></dl>
 
-ibv_inc_rkey() Increases the 8 LSB of rkey and returns the new value.
+<h2>DESCRIPTION</h2>
+
+ 
+
+ ibv_inc_rkey() Increases the 8 LSB of rkey and returns the new value.
 
 <h2>RETURN VALUE</h2>
 

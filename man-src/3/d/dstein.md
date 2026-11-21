@@ -1,5 +1,4 @@
 ---
-
 title: "dstein(3)"
 name: "dstein"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dstein/"
 description: "dstein.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dstein.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dstein</code> (N, D, E, M, W, IBLOCK, ISPLIT, Z, LDZ, WORK, IWORK, IFAIL, INFO)<br />
  <i></i><code>DSTEIN</code></p>

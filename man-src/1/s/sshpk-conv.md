@@ -1,5 +1,4 @@
 ---
-
 title: "sshpk-conv(1)"
 name: "sshpk-conv"
 section: "1"
@@ -8,9 +7,12 @@ url: "/docs/linux/man/1-sshpk-conv/"
 description: "sshpk-conv – convert between key formats"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sshpk-conv &#8211; convert between key formats </p>
 <h2>SYNOPSYS</h2>
 <p> <code>sshpk-conv</code> -t FORMAT [FILENAME] [OPTIONS&#8230;] </p>
 <p> <code>sshpk-conv</code> -i [FILENAME] [OPTIONS&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> Reads in a public or private key and converts it between different formats, particularly formats used in the SSH protocol and the well-known PEM PKCS#1/7 formats. </p>
 <p> In the second form, with the <code>-i</code> option given, identifies a key and prints to stderr information about its nature, size and fingerprint.</p>
 <h2>EXAMPLES</h2>

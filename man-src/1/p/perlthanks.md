@@ -1,5 +1,4 @@
 ---
-
 title: "perlthanks(1)"
 name: "perlthanks"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-perlthanks/"
 description: "perlbug – how to submit bug reports on Perl"
 ---
 
+<h2 class="name">NAME</h2>
+<p> perlbug &#8211; how to submit bug reports on Perl </p>
+<h2>SYNOPSIS</h2>
 <p> <code>perlbug</code> </p>
 <p> <code>perlbug</code> [ <code>-v</code> ] [ <code>-a</code> <i>address</i> ] [ <code>-s</code> <i>subject</i> ] [ <code>-b</code> <i>body</i> | <code>-f</code> <i>inputfile</i> ] [ <code>-F</code> <i>outputfile</i> ] [ <code>-r</code> <i>returnaddress</i> ] [ <code>-e</code> <i>editor</i> ] [ <code>-c</code> <i>adminaddress</i> | <code>-C</code> ] [ <code>-S</code> ] [ <code>-t</code> ] [ <code>-d</code> ] [ <code>-h</code> ] [ <code>-T</code> ] </p>
 <p> <code>perlbug</code> [ <code>-v</code> ] [ <code>-r</code> <i>returnaddress</i> ]<br />
 &nbsp;[ <code>-ok</code> | <code>-okay</code> | <code>-nok</code> | <code>-nokay</code> ] </p>
 <p> <code>perlthanks</code></p>
+<h2>DESCRIPTION</h2>
 <p> This program is designed to help you generate bug reports (and thank-you notes) about perl5 and the modules which ship with it. </p>
 <p> In most cases, you can just run it interactively from a command line without any special arguments and follow the prompts. </p>
 <p> If you have found a bug with a non-standard port (one that was not part of the <i>standard distribution</i>), a binary distribution, or a non-core module (such as Tk, <font SIZE="-1">DBI,</font> etc), then please see the documentation that came with that distribution to determine the correct place to report bugs. </p>

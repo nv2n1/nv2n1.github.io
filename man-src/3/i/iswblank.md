@@ -1,5 +1,4 @@
 ---
-
 title: "iswblank(3)"
 name: "iswblank"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-iswblank/"
 description: "iswblank – test for whitespace wide character"
 ---
 
+<h2 class="name">NAME</h2>
+<p> iswblank &#8211; test for whitespace wide character </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;wctype.h&gt;
 int iswblank(wint_t wc);
@@ -17,6 +19,7 @@ int iswblank(wint_t wc);
 <dl>
 <dt>
 </dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code>iswblank</code>() function is the wide-character equivalent of the <code>isblank</code>(3) function. It tests whether <i>wc</i> is a wide character belonging to the wide-character class &quot;blank&quot;. </p>
 <p> The wide-character class &quot;blank&quot; is a subclass of the wide-character class &quot;space&quot;. </p>
 <p> Being a subclass of the wide-character class &quot;space&quot;, the wide-character class &quot;blank&quot; is disjoint from the wide-character class &quot;graph&quot; and therefore also disjoint from its subclasses &quot;alnum&quot;, &quot;alpha&quot;, &quot;upper&quot;, &quot;lower&quot;, &quot;digit&quot;, &quot;xdigit&quot;, &quot;punct&quot;. </p>

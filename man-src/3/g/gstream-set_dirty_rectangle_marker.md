@@ -1,5 +1,4 @@
 ---
-
 title: "gstream-set_dirty_rectangle_marker(3)"
 name: "gstream-set_dirty_rectangle_marker"
 section: "3"
@@ -10,8 +9,10 @@ description: "set_dirty_rectangle_marker"
 
 <h2>NAME</h2>
 <p> set_dirty_rectangle_marker</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gstream.h">gstream.h</a>&gt;</code> </p>
 <p> <code>void set_dirty_rectangle_marker(void (*drm)(int, int, int, int))</code></p>
+<h2>DESCRIPTION</h2>
 <p> Sets a function which the gstream will use to mark the areas that it draws inside as &quot;dirty&quot;; this can, for instance, be very useful in conjuction with a dirty rectangle system in a game where you are using the gstream to output various information during the main loop. The gstream will then automatically be able to inform the system about the parts of the bitmap it has changed so that you don&#8217;t have to take up that responsibility. </p>
 <p> The provided function will be given the parameters: x and y coordinates, and width and height of the rectangle, in that order. So if you&#8217;re using DRS, you could call this function like this (since that function takes these four parameters x, y, width, height directly): </p>
 <pre>

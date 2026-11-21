@@ -1,5 +1,4 @@
 ---
-
 title: "git-rebase-theirs(1)"
 name: "git-rebase-theirs"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-git-rebase-theirs/"
 description: "git-rebase-theirs – Resolve rebase conflicts and failed cherry-picks by favoring ‘theirs’ version"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-rebase-theirs &#8211; Resolve rebase conflicts and failed cherry-picks by favoring &#8216;theirs&#8217; version </p>
+<h2>SYNOPSIS</h2>
 <p> <code>git-rebase-theirs</code> [<i>options</i>] [<i>&#8212;</i>] <i>FILE</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Resolve git rebase conflicts in FILE(s) by favoring &#8216;theirs&#8217; version. </p>
 <p> When using git rebase, conflicts are usually wanted to be resolved by favoring the &lt;working branch&gt; version (the branch being rebased, &#8216;theirs&#8217; side in a rebase), instead of the &lt;upstream&gt; version (the base branch, &#8216;ours&#8217; side) </p>
 <p> But git rebase &#8211;strategy -X theirs is only available from git 1.7.3 For older versions, git-rebase-theirs is the solution. And Despite the name, it&#8217;s also useful for fixing failed cherry-picks. </p>

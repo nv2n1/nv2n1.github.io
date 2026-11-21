@@ -1,5 +1,4 @@
 ---
-
 title: "fedora-create-review(1)"
 name: "fedora-create-review"
 section: "1"
@@ -10,7 +9,9 @@ description: "fedora-create-review – Automatically create RPM review request f
 
 <h2>NAME</h2>
 <p> fedora-create-review &#8211; Automatically create RPM review request for Fedora. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>fedora-create-review</code> &lt;specfile&gt; &lt;srpmfile&gt; </p>
+<h2>DESCRIPTION</h2>
 <p> This tool create review request for rpm packages for Fedora. It starts a scratch build on koji, upload your file onto fedorapeople, create the review request and add a comment that the scratch-build on koji was successful. </p>
 <h2>USAGE</h2>
 <p> This program creates RPM review request for Fedora.</p>

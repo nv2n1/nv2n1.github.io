@@ -1,5 +1,4 @@
 ---
-
 title: "xm(1)"
 name: "xm"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-xm/"
 description: "xm – Xen management user interface"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xm &#8211; Xen management user interface </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xm</code> <i>subcommand</i> [<i>args</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>xm</code> program is the main interface for managing Xen guest domains. The program can be used to create, pause, and shutdown domains. It can also be used to list current domains, enable or pin VCPUs, and attach or detach virtual block devices. </p>
 <p> The basic structure of every <code>xm</code> command is almost always: </p>
 <dl>

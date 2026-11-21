@@ -1,5 +1,4 @@
 ---
-
 title: "mlx5dv_create_flow_action_modify_header(3)"
 name: "mlx5dv_create_flow_action_modify_header"
 section: "3"
@@ -7,7 +6,14 @@ letter: "m"
 url: "/docs/linux/man/3-mlx5dv_create_flow_action_modify_header/"
 ---
 
-mlx5dv_create_flow_action_modify_header - Flow action modify header for mlx5 provider 
+<h2 class="name">NAME</h2>
+ 
+
+ 
+
+ mlx5dv_create_flow_action_modify_header - Flow action modify header for mlx5 provider 
+
+<h2>SYNOPSIS</h2>
 
 <dl>
 <dt>
@@ -20,7 +26,11 @@ mlx5dv_create_flow_action_modify_header(struct ibv_context *ctx,
                                         enum mlx5dv_flow_table_type ft_type)
 </code></pre></dd></dl>
 
-Create a modify header flow steering action, it allows mutating a packet header.
+<h2>DESCRIPTION</h2>
+
+ 
+
+ Create a modify header flow steering action, it allows mutating a packet header.
 
 <h2>ARGUMENTS</h2>
 

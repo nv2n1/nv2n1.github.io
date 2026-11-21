@@ -1,5 +1,4 @@
 ---
-
 title: "perlpacktut(1)"
 name: "perlpacktut"
 section: "1"
@@ -7,9 +6,14 @@ letter: "p"
 url: "/docs/linux/man/1-perlpacktut/"
 ---
 
-perlpacktut - tutorial on &quot;pack&quot; and &quot;unpack&quot; 
+<h2 class="name">NAME</h2>
+ 
 
-<tt>&quot;pack&quot;</tt> and <tt>&quot;unpack&quot;</tt> are two functions for transforming data according to a user-defined template, between the guarded way Perl stores values and some well-defined representation as might be required in the environment of a Perl program. Unfortunately, they're also two of the most misunderstood and most often overlooked functions that Perl provides. This tutorial will demystify them for you.
+ perlpacktut - tutorial on &quot;pack&quot; and &quot;unpack&quot; 
+
+<h2>DESCRIPTION</h2>
+
+ <tt>&quot;pack&quot;</tt> and <tt>&quot;unpack&quot;</tt> are two functions for transforming data according to a user-defined template, between the guarded way Perl stores values and some well-defined representation as might be required in the environment of a Perl program. Unfortunately, they're also two of the most misunderstood and most often overlooked functions that Perl provides. This tutorial will demystify them for you.
 
 <h2>The Basic Principle</h2>
 

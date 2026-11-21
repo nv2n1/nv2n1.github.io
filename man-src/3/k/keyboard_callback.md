@@ -1,5 +1,4 @@
 ---
-
 title: "keyboard_callback(3)"
 name: "keyboard_callback"
 section: "3"
@@ -10,8 +9,10 @@ description: "keyboard_callback – User specified keyboard callback handler. Al
 
 <h2>NAME</h2>
 <p> keyboard_callback &#8211; User specified keyboard callback handler. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>extern int (*keyboard_callback)(int key);</code></p>
+<h2>DESCRIPTION</h2>
 <p> If set, this function is called by the keyboard handler in response to every keypress. It is passed a copy of the value that is about to be added into the input buffer, and can either return this value unchanged, return zero to cause the key to be ignored, or return a modified value to change what readkey() will later return. This routine executes in an interrupt context, so it must be in locked memory. Example: </p>
 <pre><code>
    int enigma_scrambler(int key)

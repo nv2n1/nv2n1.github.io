@@ -1,5 +1,4 @@
 ---
-
 title: "heimdal-ftp(1)"
 name: "heimdal-ftp"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-heimdal-ftp/"
 description: "ftp – ARPANET file transfer program"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>ftp</code> &#8211; <code>ARPANET</code> file transfer program </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ftp</code> [-<code>K</code> ] [-<code>d</code> ] [-<code>g</code> ] [-<code>i</code> ] [-<code>l</code> ] [-<code>n</code> ] [-<code>p</code> ] [-<code>t</code> ] [-<code>v</code> ] [-<code>x</code> ] [-<code>-no-gss-bindings</code> ] [-<code>-no-gss-delegate</code> ] [<i>host</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>ftp</code> is the user interface to the <code>ARPANET</code> standard File Transfer Protocol. The program allows a user to transfer files to and from a remote network site. </p>
 <p> Modifications have been made so that it almost follows the FTP Security Extensions, RFC 2228. </p>
 <p> Options may be specified at the command line, or to the command interpreter.</p>

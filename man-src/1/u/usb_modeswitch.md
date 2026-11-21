@@ -1,5 +1,4 @@
 ---
-
 title: "usb_modeswitch(1)"
 name: "usb_modeswitch"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-usb_modeswitch/"
 description: "usb_modeswitch – control the mode of ‘multi-state’ USB devices"
 ---
 
+<h2 class="name">NAME</h2>
+<p> usb_modeswitch &#8211; control the mode of &#8216;multi-state&#8217; USB devices </p>
+<h2>SYNOPSIS</h2>
 <p> <code>usb_modeswitch</code> [<code>-heWQDIvpVPmM23rwKdHSOBGTNALnsRiuagft</code>] [<code>-c </code><i>filename</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Several new USB devices have their proprietary Windows drivers onboard, most of them WWAN and WLAN dongles. When plugged in for the first time, they act like a flash storage and start installing the Windows driver from there. If the driver is installed, it makes the storage device disappear and a new device, mainly composite (e.g. with modem ports), shows up. </p>
 <p> On Linux, in most cases the drivers are available as kernel modules, such as &quot;usbserial&quot; or &quot;option&quot;. However, the device initially binds to &quot;usb-storage&quot; by default. <code>usb_modeswitch</code> can then send a provided bulk message (most likely a mass storage command) to the device; this message has to be determined by analyzing the actions of the Windows driver. </p>
 <p> In some cases, USB control commands are used for switching. These cases are handled by custom functions, and no bulk message needs to be provided. </p>

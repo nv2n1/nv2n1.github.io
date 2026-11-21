@@ -1,5 +1,4 @@
 ---
-
 title: "merge(1)"
 name: "merge"
 section: "1"
@@ -10,7 +9,9 @@ description: "merge – three-way file merge"
 
 <h2>NAME</h2>
 <p> merge &#8211; three-way file merge</p>
+<h2>SYNOPSIS</h2>
 <p> <code>merge</code> [ <i>options</i> ] <i>file1 file2 file3</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>merge</code> incorporates all changes that lead from <i>file2</i> to <i>file3</i> into <i>file1</i>. The result ordinarily goes into <i>file1</i>. <code>merge</code> is useful for combining separate changes to an original. Suppose <i>file2</i> is the original, and both <i>file1</i> and <i>file3</i> are modifications of <i>file2</i>. Then <code>merge</code> combines both changes. </p>
 <p> A conflict occurs if both <i>file1</i> and <i>file3</i> have changes in a common segment of lines. If a conflict is found, <code>merge</code> normally outputs a warning and brackets the conflict with <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code> lines. A typical conflict will look like this: </p>
 <dl>

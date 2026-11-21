@@ -1,5 +1,4 @@
 ---
-
 title: "globus-rls-cli(1)"
 name: "globus-rls-cli"
 section: "1"
@@ -10,7 +9,9 @@ description: "globus-rls-cli – Globus Replica Location Service Command Line In
 
 <h2>NAME</h2>
 <p> globus-rls-cli &#8211; Globus Replica Location Service Command Line Interface</p>
+<h2>SYNOPSIS</h2>
 <p> <code>globus-rls-cli</code> <i>command</i> [ <i>-c</i> ] [ <i>-d</i> ] [ <i>-h</i> ] [ <i>-i inputfile</i> ] [ <i>-l reslimit</i> ] [ <i>-s</i> ] [ <i>-t timeout</i> ] [ <i>-u</i> ] [ command ] <i>rls-server</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>globus-rls-cli</code> provides a command line interface to some of the functions supported by the Globus Replica Location service. It also supports an interactive interface (if <i>command</i> is not specified). In interactive move double quotes may be used to encode an argument that contains white space.</p>
 <h2>OPTIONS</h2>
 <p> <code>globus-rls-cli</code> uses <a href="/docs/linux/man/3-getopt/">getopt</a>(3) to do command line parsing. Some versions will continue scanning for options (works that begin with a hyphen) for the entire command, line, which makes it impossible to specify negative integer or floating point value for an attribute. The workaround for this problem is to tell getopt() that there are no more options, by including 2 hyphens, eg to specify the value &quot;-2&quot; enter &quot;&#8211; -2&quot;.</p>

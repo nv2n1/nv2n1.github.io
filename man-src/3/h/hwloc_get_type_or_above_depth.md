@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-hwloc_get_type_or_above_depth/"
 description: "hwlocality_levels – Object levels, depths and types"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hwlocality_levels &#8211; Object levels, depths and types </p>
 <h3>Enumerations</h3>
 <p> enum <code>hwloc_get_type_depth_e</code> { <code>HWLOC_TYPE_DEPTH_UNKNOWN</code>, <code>HWLOC_TYPE_DEPTH_MULTIPLE</code>, <code>HWLOC_TYPE_DEPTH_BRIDGE</code>, <code>HWLOC_TYPE_DEPTH_PCI_DEVICE</code>, <code>HWLOC_TYPE_DEPTH_OS_DEVICE</code> } </p>
 <h3>Functions</h3>

@@ -1,5 +1,4 @@
 ---
-
 title: "ppumove(1)"
 name: "ppumove"
 section: "1"
@@ -10,6 +9,7 @@ description: "ppdep – The FPC Pascal unit mover."
 
 <h2>NAME</h2>
 <p> ppdep &#8211; The FPC Pascal unit mover. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ppumove</code> [-sqbhw] [-o File] [-d path] [-e extension] files&#8230; </p>
 <h2>Description</h2>
 <p> <code>ppumove</code> collects one or several Free Pascal unit files and archives them in a static or shared library. </p>

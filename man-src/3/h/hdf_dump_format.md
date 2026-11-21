@@ -1,5 +1,4 @@
 ---
-
 title: "hdf_dump_format(3)"
 name: "hdf_dump_format"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-hdf_dump_format/"
 description: "hdf_dump_format – dump an HDF dataset to FILE *fp Description: Input: Output: Returns:"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hdf_dump_format &#8211; dump an HDF dataset to FILE *fp Description: Input: Output: Returns: </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;util/neo_hdf.h&gt;
 </code></pre>

@@ -1,5 +1,4 @@
 ---
-
 title: "vacuumdb(1)"
 name: "vacuumdb"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-vacuumdb/"
 description: "vacuumdb – garbage-collect and analyze a PostgreSQL database"
 ---
 
+<h2 class="name">NAME</h2>
+<p> vacuumdb &#8211; garbage-collect and analyze a PostgreSQL database </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>vacuumdb</code> [<i>connection-option</i>&#8230;] [<i>option</i>&#8230;] [<code>&#8211;table</code>&nbsp;<wbr>|&nbsp;<wbr><code>-t</code>&nbsp;<wbr><i>table</i>&nbsp;<wbr>[(&nbsp;<wbr><i>column</i>&nbsp;<wbr>[,&#8230;]&nbsp;<wbr>)]] [<i>dbname</i>]</dt>
 <dt> <code>vacuumdb</code> [<i>connection-option</i>&#8230;] [<i>option</i>&#8230;] <code>&#8211;all</code> | <code>-a</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>vacuumdb is a utility for cleaning a PostgreSQL database. vacuumdb will also generate internal statistics used by the PostgreSQL query optimizer. </dd>
 <p> vacuumdb is a wrapper around the SQL command <code><a href="/docs/linux/man/7-vacuum/">VACUUM</a></code>(7). There is no effective difference between vacuuming and analyzing databases via this utility and via other methods for accessing the server.</p>
 <h2>OPTIONS</h2>

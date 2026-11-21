@@ -1,5 +1,4 @@
 ---
-
 title: "easside-ng(1)"
 name: "easside-ng"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-easside-ng/"
 description: "easside-ng – an auto-magic tool which allows you to communicate via an WEP-encrypted AP without knowing the key"
 ---
 
+<h2 class="name">NAME</h2>
+<p> easside-ng &#8211; an auto-magic tool which allows you to communicate via an WEP-encrypted AP without knowing the key </p>
+<h2>SYNOPSIS</h2>
 <p> <code>easside-ng</code> &lt;options&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>easside-ng</code> is an auto-magic tool which allows you to communicate via an WEP-encrypted access point (AP) without knowing the WEP key. It first identifies a network, then proceeds to associate with it, obtain PRGA (pseudo random generation algorithm) xor data, determine the network IP scheme and then setup a TAP interface so that you can communicate with the AP without requiring the WEP key. All this is done without your intervention.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "doveadm-stop(1)"
 name: "doveadm-stop"
 section: "1"
@@ -10,7 +9,9 @@ description: "doveadm – Dovecot’s administration utility"
 
 <h2>NAME</h2>
 <p> doveadm &#8211; Dovecot&#8217;s administration utility</p>
+<h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] [<code>-f</code> <i>formatter</i>] <i>command</i> [<i>command_options</i>] [<i>command_arguments</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>doveadm</code> is the Dovecot administration tool. It can be used to manage various parts of Dovecot, as well as access users&#8217; mailboxes.<br />
  Execute <code>doveadm help</code>, for a command usage listing.</p>
 <h2>OPTIONS</h2>

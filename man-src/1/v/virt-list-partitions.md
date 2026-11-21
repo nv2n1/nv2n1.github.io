@@ -1,5 +1,4 @@
 ---
-
 title: "virt-list-partitions(1)"
 name: "virt-list-partitions"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-virt-list-partitions/"
 description: "virt-list-partitions – List partitions in a virtual machine or disk image"
 ---
 
+<h2 class="name">NAME</h2>
+<p> virt-list-partitions &#8211; List partitions in a virtual machine or disk image </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 virt - list - partitions[--options] domname virt - list - partitions[--options] disk.img[disk.img...]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <tt>&quot;virt-list-partitions&quot;</tt> is a command line tool to list the partitions that are contained in a virtual machine or disk image. It is mainly useful as a first step to using <i><a href="/docs/linux/man/1-virt-resize/">virt-resize</a></i>(1). </p>
 <p> <tt>&quot;virt-list-partitions&quot;</tt> is just a simple wrapper around <i>libguestfs</i>(3) functionality. For more complex cases you should look at the <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1) tool.</p>
 <h2>OPTIONS</h2>

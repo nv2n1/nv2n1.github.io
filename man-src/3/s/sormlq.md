@@ -1,5 +1,4 @@
 ---
-
 title: "sormlq(3)"
 name: "sormlq"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-sormlq/"
 description: "sormlq.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sormlq.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sormlq</code> (SIDE, TRANS, M, N, K, A, LDA, TAU, C, LDC, WORK, LWORK, INFO)<br />
  <i></i><code>SORMLQ</code></p>

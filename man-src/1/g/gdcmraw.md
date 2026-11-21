@@ -1,5 +1,4 @@
 ---
-
 title: "gdcmraw(1)"
 name: "gdcmraw"
 section: "1"
@@ -7,9 +6,13 @@ letter: "g"
 url: "/docs/linux/man/1-gdcmraw/"
 description: "gdcmraw – .TH \"gdcmraw\" 1 \"Fri Oct 29 2010\" \"Version 2.0.16\" \"GDCM\""
 ---
-
+<h2 class="name">NAME</h2>
+<p> gdcmraw - .TH &quot;gdcmraw&quot; 1 &quot;Fri Oct 29 2010&quot; &quot;Version 2.0.16&quot; &quot;GDCM&quot; </p>
+<h2 class="name">NAME</h2>
+<p> gdcmraw - .SH &quot;SYNOPSIS&quot; </p>
 <pre><code>gdcmraw [options] file-in file-out
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>gdcmraw</code> tool is mostly used for development purpose. It is used to extract a specific binary field from a DICOM DataSet.  </p>
 <h2>PARAMETERS</h2>
 <pre><code>file-in DICOM input filename

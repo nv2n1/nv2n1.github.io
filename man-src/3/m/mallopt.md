@@ -1,5 +1,4 @@
 ---
-
 title: "mallopt(3)"
 name: "mallopt"
 section: "3"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/3-mallopt/"
 description: "mallopt – set memory allocation parameters"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mallopt &#8211; set memory allocation parameters </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;malloc.h&gt;</code> </p>
 <p> <code>int mallopt(int </code><i>param</i><code>, int </code><i>value</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>mallopt</code>() function adjusts parameters that control the behavior of the memory-allocation functions (see <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3)). The <i>param</i> argument specifies the parameter to be modified, and <i>value</i> specifies the new value for that parameter. </p>
 <p> The following values can be specified for <i>param</i>:</p>
 <dl>

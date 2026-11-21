@@ -1,5 +1,4 @@
 ---
-
 title: "omniidl(1)"
 name: "omniidl"
 section: "1"
@@ -10,7 +9,9 @@ description: "omniidl – omniORB idl compiler"
 
 <h2>NAME</h2>
 <p> omniidl &#8211; omniORB idl compiler</p>
+<h2>SYNOPSIS</h2>
 <p> <code>omniidl</code> [options] -b&lt;back-end&gt; [back-end options] file</p>
+<h2>DESCRIPTION</h2>
 <p> omniidl is the omniORB IDL compiler front end. If a back-end is not specified, it checks the input IDL file for validity, and produces no output. Usually, a language mapping back-end is specified, so stubs and skeletons in the target language are produced. </p>
 <p> The input files are processed by the C preprocessor before they are parsed by the compiler. </p>
 <h2>COMMON OPTIONS</h2>

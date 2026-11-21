@@ -1,5 +1,4 @@
 ---
-
 title: "sendfiles(1)"
 name: "sendfiles"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-sendfiles/"
 description: "sendfiles – send multiple files via a MIME message"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sendfiles &#8211; send multiple files via a MIME message </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>sendfiles</code> [<code>-compress</code> <i>bzip2</i> | <i>compress</i> | <i>gzip</i> | <i>lzma</i> | <i>none</i>]</dt>
 <dd> [<code>-from</code> <i>sender</i>] [<i>-delay n</i> | <i>-n</i>] [<code>-version</code>] [<code>-help</code>]</dd>
 <dd> <code>-to</code> <i>recipient</i> <code>-subject</code> <i>subject</i> | <i>recipient</i> <i>subject</i></dd>
 <dd> <i>file/directory1</i> [<i>file/directory2</i> &#8230;]</dd></dl>
+<h2>DESCRIPTION</h2>
 <dd>The shell script <code>sendfiles</code> is used to send a collection of files and directories via electronic mail. </dd>
 <p> <code>sendfiles</code> will archive the files and directories you name with the <code>tar</code> command, and then mail the compressed archive to the &#8220;recipient&#8221; with the given &#8220;subject&#8221;. The archive will be automatically split up into as many messages as necessary in order to get past most mailers. </p>
 <p> The <code>-to</code> switch specifies the recipient. The <code>-subject</code> switch specifies the subject. Alternatively, these two required values can be provided without their corresponding switch names. </p>

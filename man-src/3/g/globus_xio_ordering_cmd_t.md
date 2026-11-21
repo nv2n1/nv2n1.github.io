@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_xio_ordering_cmd_t/"
 description: "Attributes and Cntls –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Attributes and Cntls &#8211; </p>
 <h3>Enumerations</h3>
 <p> enum <code>globus_xio_ordering_cmd_t</code> { <code>GLOBUS_XIO_ORDERING_SET_OFFSET</code>, <code>GLOBUS_XIO_ORDERING_SET_MAX_READ_COUNT</code>, <code>GLOBUS_XIO_ORDERING_GET_MAX_READ_COUNT</code>, <code>GLOBUS_XIO_ORDERING_SET_BUFFERING</code>, <code>GLOBUS_XIO_ORDERING_GET_BUFFERING</code>, <code>GLOBUS_XIO_ORDERING_SET_BUF_SIZE</code>, <code>GLOBUS_XIO_ORDERING_GET_BUF_SIZE</code>, <code>GLOBUS_XIO_ORDERING_SET_MAX_BUF_COUNT</code>, <code>GLOBUS_XIO_ORDERING_GET_MAX_BUF_COUNT</code> } </p>
 <h3>Functions</h3>

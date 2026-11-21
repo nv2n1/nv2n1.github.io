@@ -1,5 +1,4 @@
 ---
-
 title: "lambda(1)"
 name: "lambda"
 section: "1"
@@ -7,8 +6,11 @@ letter: "l"
 url: "/docs/linux/man/1-lambda/"
 description: "omega, iniomega, viromega – extended unicode TeX"
 ---
-
+<h2 class="name">NAME</h2>
+<p> omega, iniomega, viromega - extended unicode TeX </p>
+<h2>SYNOPSIS</h2>
 <p> <code>omega</code> [<i>options</i>] [<code>&amp;</code> <i>format</i> ] [ <i>file</i> | <code>\</code> <i>commands</i> ]  </p>
+<h2>DESCRIPTION</h2>
 <p> Run the Omega typesetter on <i>file</i>, usually creating <i>file.dvi</i>. If the file argument has no extension, &quot;.tex&quot; will be appended to it. Instead of a filename, a set of Omega commands can be given, the first of which must start with a backslash. With a <code>&amp;</code><i>format</i> argument Omega uses a different set of precompiled commands, contained in <i>format.fmt</i>; it is usually better to use the <code>-fmt</code> <i>format</i> option instead. </p>
 <p> Omega is a version of the TeX program modified for multilingual typesetting. It uses unicode, and has additional primitives for (among other things) bidirectional typesetting. </p>
 <p> The <code>iniomega</code> and <code>viromega</code> commands are Omega&#8217;s analogues to the <code>initex</code> and <code>virtex</code> commands. In this installation, they are symlinks to the <code>omega</code> executable. </p>

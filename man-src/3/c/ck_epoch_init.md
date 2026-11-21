@@ -1,5 +1,4 @@
 ---
-
 title: "ck_epoch_init(3)"
 name: "ck_epoch_init"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_epoch_init – initialize epoch reclamation object"
 <p> <code>ck_epoch_init</code> &#8211; initialize epoch reclamation object</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_epoch.h Ft void Fn ck_epoch_init ck_epoch_t *epoch</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_epoch_init function initializes the epoch object pointed to by the Fa epoch pointer.</p>
 <h2>RETURN VALUES</h2>
 <p> This function has no return value.</p>

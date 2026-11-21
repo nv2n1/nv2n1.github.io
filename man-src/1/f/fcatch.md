@@ -1,5 +1,4 @@
 ---
-
 title: "fcatch(1)"
 name: "fcatch"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-fcatch/"
 description: "fcatch – print a stack back-trace of a program as it crashes"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fcatch &#8211; print a stack back-trace of a program as it crashes </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>fcatch</code> [<i>options</i>] {<i>program</i>&nbsp;<wbr><i>arg</i>&nbsp;<wbr>&#8230; }</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>fcatch</code></p>
 <dd>generate stack backtraces from a running application as it crashes, or upon receiving a variety of signals.</dd>
 <h3>Stack Print Options</h3>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pkcs11_obj_get_type(3)"
 name: "gnutls_pkcs11_obj_get_type"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_pkcs11_obj_get_type – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs11_obj_get_type &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs11.h&gt;</code> </p>
 <p> <code>gnutls_pkcs11_obj_type_t gnutls_pkcs11_obj_get_type(gnutls_pkcs11_obj_t </code><i>obj</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_pkcs11_obj_t obj</dt>
 <dd> Holds the PKCS 11 object</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will return the type of the object being stored in the structure.</p>
 <h2>RETURNS</h2>
 <p> The type of the object</p>

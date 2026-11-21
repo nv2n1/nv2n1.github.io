@@ -1,5 +1,4 @@
 ---
-
 title: "idevicedebugserverproxy(1)"
 name: "idevicedebugserverproxy"
 section: "1"
@@ -10,7 +9,9 @@ description: "idevicedebugserverproxy – Remote debugging proxy."
 
 <h2>NAME</h2>
 <p> idevicedebugserverproxy &#8211; Remote debugging proxy.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>idevicedebugserverproxy</code> [OPTIONS] PORT </p>
+<h2>DESCRIPTION</h2>
 <p> Proxy a debugserver connection from a device for remote debugging. After starting up, clients can connect to PORT and communicate with the remote debugserver using the LLVM remote serial debugging protocol. Thus connecting using LLDB or a LLVM based gdb to this port would allow remote debugging. The developer disk image needs to be mounted for this service to be available. </p>
 <h2>OPTIONS</h2>
 <dl>

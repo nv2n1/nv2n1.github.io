@@ -1,5 +1,4 @@
 ---
-
 title: "fdupes(1)"
 name: "fdupes"
 section: "1"
@@ -7,11 +6,18 @@ letter: "f"
 url: "/docs/linux/man/1-fdupes/"
 ---
 
-fdupes - finds duplicate files in a given set of directories 
+<h2 class="name">NAME</h2>
+ 
 
-<b>fdupes</b> [ <i>options</i> ] <i>DIRECTORY</i> ... 
+ fdupes - finds duplicate files in a given set of directories 
 
-Searches the given path for duplicate files. Such files are found by comparing file sizes and MD5 signatures, followed by a byte-by-byte comparison. 
+<h2>SYNOPSIS</h2>
+
+ <b>fdupes</b> [ <i>options</i> ] <i>DIRECTORY</i> ... 
+
+<h2>DESCRIPTION</h2>
+
+ Searches the given path for duplicate files. Such files are found by comparing file sizes and MD5 signatures, followed by a byte-by-byte comparison. 
 
 <h2>OPTIONS</h2>
 

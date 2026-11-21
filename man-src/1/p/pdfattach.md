@@ -1,5 +1,4 @@
 ---
-
 title: "pdfattach(1)"
 name: "pdfattach"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pdfattach/"
 description: "pdfattach – Portable Document Format (PDF) document embedded file creator (version 3.03)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pdfattach &#8211; Portable Document Format (PDF) document embedded file creator (version 3.03) </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pdfattach</code> [options] <i>input-PDF-file file-to-attach output-PDF-file</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>Pdfattach</code> adds a new embedded file (attachment) to an existing Portable Document Format (PDF) file.</p>
 <h2>OPTIONS</h2>
 <dl>

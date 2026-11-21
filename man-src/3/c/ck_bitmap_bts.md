@@ -1,5 +1,4 @@
 ---
-
 title: "ck_bitmap_bts(3)"
 name: "ck_bitmap_bts"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_bitmap_bts – set the bit at the specified index and fetch its
 <p> <code>ck_bitmap_bts</code> &#8211; set the bit at the specified index and fetch its original value</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_bitmap.h Ft bool Fn ck_bitmap_bts ck_bitmap_t *bitmap unsigned int n</p>
+<h2>DESCRIPTION</h2>
 <p> Fn ck_bitmap_bts sets the bit at the offset specified by the argument Fa n to <code>1</code> and fetches its original value.</p>
 <h2>RETURN VALUES</h2>
 <p> This function returns the original value of the bit at offset Fa n in Fa bitmap .</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "man2html(1)"
 name: "man2html"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-man2html/"
 description: "man2html – format a manual page in html"
 ---
 
+<h2 class="name">NAME</h2>
+<p> man2html &#8211; format a manual page in html </p>
+<h2>SYNOPSIS</h2>
 <p> man2html [options] [file]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>man2html</code> converts a manual page as found in <i>file</i> (or stdin, in case no file argument, or the argument &quot;-&quot;, is given) from man-style nroff into html, and prints the result on stdout. It does support tbl but does not know about eqn. The exit status is 0. If something goes wrong, an error page is printed on stdout. </p>
 <p> This can be used as a stand-alone utility, but is mainly intended as an auxiliary, to enable users to browse their man pages using a html browser like <code><a href="/docs/linux/man/1-lynx/">lynx</a></code>(1), <code>xmosaic</code>(1) or <code>netscape</code>(1). </p>
 <p> The main part of <code>man2html</code> is the troff-to-html engine written by Richard Verhoeven (rcb5 [at] win.tue.nl). It adds hyperlinks for the following constructs: </p>

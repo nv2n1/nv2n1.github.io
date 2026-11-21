@@ -1,5 +1,4 @@
 ---
-
 title: "paperkey(1)"
 name: "paperkey"
 section: "1"
@@ -10,12 +9,14 @@ description: "paperkey – extract secret information out of OpenPGP secret keys
 
 <h2>NAME</h2>
 <p> paperkey &#8211; extract secret information out of OpenPGP secret keys</p>
+<h2>SYNOPSIS</h2>
 <p> <code>paperkey</code> [<code>&#8211;secret-key=</code><i>FILE</i>] [<code>&#8211;output=</code><i>FILE</i>] [<code>&#8211;output-type=</code><code>base16</code>|<code>raw</code>] [<code>&#8211;output-width=</code><i>WIDTH</i>] </p>
 <p> <code>paperkey</code> <code>&#8211;pubring=</code><i>FILE</i> [<code>&#8211;secrets=</code><i>FILE</i>] [<code>&#8211;input-type=</code><code>auto</code>|<code>base16</code>|<code>raw</code>] [<code>&#8211;output=</code><i>FILE</i>] [<code>&#8211;ignore-crc-error</code>] [<code>&#8211;comment=</code><i>STRING</i>] [<code>&#8211;file-format</code>] </p>
 <p> <code>paperkey</code> <code>&#8211;version</code></p>
 <h2>MOTIVATION</h2>
 <p> As with all data, secret keys should be backed up. In fact, secret keys should be backed up even better than other data, because they are impossible to recreate should they ever be lost. All files encrypted to lost keys are forever (or at least for a long time) undecipherable. In addition to keeping backups of secret key information on digital media such as USB-sticks or CDs it is reasonable to keep an if-all-else-fails copy on plain old paper, for use should your digital media ever become unreadable for whatever reason. Stored properly, paper is able to keep information for several decades or longer. </p>
 <p> With GnuPG, PGP, or other OpenPGP implementations the secret key usually contains a lot more than just the secret numbers that are important. They also hold all the public values of key pairs, user ids, expiration times and more. In order to minimize the information that has to be entered manually or with the help of OCR, QR code or similar software, <code>paperkey</code> extracts just the secret information out of OpenPGP secret keys. For recovering a secret key it is assumed that the public key is still available, for instance from public Internet keyservers.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>paperkey</code> has two modes of operation: </p>
 <p> The first mode creates &quot;paperkeys&quot; by extracting just the secret information from a secret key, formatting the data in a way suitable for printing or in a raw mode for further processing. </p>
 <p> The other mode rebuilds secret keys from such a paperkey and a copy of the public key, also verifying the checksums embedded in the paperkey. This mode is selected when the <code>&#8211;pubring</code> option is used, which is required in that case. If a passphrase was set on the original secret key, the same passphrase is set on the rebuilt key. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "kdig(1)"
 name: "kdig"
 section: "1"
@@ -11,10 +10,12 @@ url: "/docs/linux/man/1-kdig/"
 <dl>
 <dt><code>kdig</code></dt>
 <dd> &#8211; Advanced DNS lookup utility (libknot equivalent of ISC dig)</dd></dl>
+<h2>SYNOPSIS</h2>
 <p> <code>kdig</code> [<i>common-settings</i>] [<i>query</i> [<i>settings</i>]]&#8230;</p>
 <dl>
 <dt><code>kdig -h</code></dt>
 <dd></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This utility sends one or more DNS <i>queries</i> to a nameserver. Each query can have individual <i>settings</i>, or it can be specified globally via <i>common-settings</i>, which must precede <i>query</i> specification.</p>
 <dl>
 <dt><i>query</i></dt>

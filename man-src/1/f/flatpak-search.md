@@ -1,5 +1,4 @@
 ---
-
 title: "flatpak-search(1)"
 name: "flatpak-search"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-flatpak-search/"
 description: "flatpak-search – Search for applications and runtimes"
 ---
 
+<h2 class="name">NAME</h2>
+<p> flatpak-search &#8211; Search for applications and runtimes </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak search</code> TEXT</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>Searches for applications and runtimes matching TEXT. Note that this uses appstream data that can be updated with the <code>flatpak update</code> command. The appstream data is updated automatically only if it&#8217;s at least a day old.</dd>
 <h2>OPTIONS</h2>
 <p> The following options are understood: </p>

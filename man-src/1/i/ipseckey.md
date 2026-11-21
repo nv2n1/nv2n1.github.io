@@ -1,5 +1,4 @@
 ---
-
 title: "ipseckey(1)"
 name: "ipseckey"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-ipseckey/"
 description: "ipseckey – Generate IPSECKEY records on libreswan IPsec servers"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ipseckey &#8211; Generate IPSECKEY records on libreswan IPsec servers </p>
 <h2>SYNTAX</h2>
 <p> ipseckey</p>
+<h2>DESCRIPTION</h2>
 <p> ipseckey generates RFC-4025 IPSECKEY DNS records based on the public key of the IPsec server. Supported IPsec software is libreswan and some versions of openswan (depending on its implementation of showhostkey). The record is displayed will have the label of the hostname. This can be manually changed. </p>
 <p> (TODO: allow specifying &#8211;hostname and allow &#8211;reverse for creating in-addr.arpa. entries)</p>
 <h2>OPTIONS</h2>

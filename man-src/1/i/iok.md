@@ -1,5 +1,4 @@
 ---
-
 title: "iok(1)"
 name: "iok"
 section: "1"
@@ -10,7 +9,9 @@ description: "iok– Indic Onscreen Keyboard"
 
 <h2>NAME</h2>
 <p> <code>iok</code>&#8211; Indic Onscreen Keyboard</p>
+<h2>SYNOPSIS</h2>
 <p> <code>iok</code> [<code>-a</code>] [<code>-h</code>] [<code>-d</code> <i>1</i>] [<code>-n</code> <i>LANGCODE</i>]</p>
+<h2>DESCRIPTION</h2>
 <p>&nbsp;<wbr>Indic Onscreen Keyboard currently shows Inscript and Inscript2 keymaps for 22 official Indian languages. The languages are Assamese, Bengali, Bodo, Dogri, Gujarati, Hindi, Kannada, Kokani, Maithili, Malayalam, Manipuri, Marathi, Nepali, Oriya, Punjabi, Sanskrit, Santali, Sindhi, Tamil, Telugu.<br />
 &nbsp;<wbr>The iok application runs in default and advanced mode. In default mode, iok starts by loading Inscript2 keymap of the current locale. If keymap is not installed or available then iok shows keymap list in the default mode. User can then select any keymap from keymap list if he want to write using it.<br />
 &nbsp;<wbr>&nbsp;<wbr>In the advanced mode, iok allows to open non-supported keymaps. If keymap can be parsed by iok then it will be showed in iok UI otherwise it will show error message that iok can&#8217;t load this keymap. Advanced mode also allows to create custom keymap by either swapping or re-assigning character mappings in the existing loaded keymap in iok.<br />

@@ -1,5 +1,4 @@
 ---
-
 title: "pw-mididump(1)"
 name: "pw-mididump"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-pw-mididump/"
 description: "pw-mididump – The PipeWire MIDI dump"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pw-mididump &#8211; The PipeWire MIDI dump </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 pw - mididump[options][FILE]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Dump MIDI messages to stdout. </p>
 <p> When a MIDI file is given, the events inside the file are printed. </p>
 <p> When no file is given, <code>pw-mididump</code> creates a PipeWire MIDI input stream and will print all MIDI events received on the port to stdout.</p>

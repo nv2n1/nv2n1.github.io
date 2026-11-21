@@ -1,5 +1,4 @@
 ---
-
 title: "hdf_obj_next(3)"
 name: "hdf_obj_next"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-hdf_obj_next/"
 description: "hdf_obj_next – Return the next node of a dataset level"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hdf_obj_next &#8211; Return the next node of a dataset level </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;util/neo_hdf.h&gt;
 </code></pre>
@@ -16,6 +18,7 @@ HDF* hdf_obj_next (HDF *hdf);
 </pre>
 <h2>ARGUMENTS</h2>
 <p> hdf -&gt; the hdf dataset node </p>
+<h2>DESCRIPTION</h2>
 <p> hdf_obj_next is an accessor function for the HDF struct </p>
 <h2>RETURN VALUE</h2>
 <p> None </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ifm(1)"
 name: "ifm"
 section: "1"
@@ -10,7 +9,9 @@ description: "IFM – Interactive Fiction Mapper"
 
 <h2>NAME</h2>
 <p> IFM &#8211; Interactive Fiction Mapper</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ifm</code> [<i>options</i>] [<i>file</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> IFM is a program for keeping track of your progress through an Interactive Fiction game. You can record each room you visit and its relation to other rooms, the initial locations of useful items you find, and the tasks you need to perform in order to solve the game. </p>
 <p> The IFM mapping commands are designed so that you can easily add to the map as you explore the game. You type in the rooms you visit and the directions you move in to reach other rooms, and IFM calculates the position of each room relative to the others. A map can consist of several independent sections, allowing you to divide up the map however you like. </p>
 <p> The IFM task commands, if used, allow you to specify the order in which game-solving tasks must be done. The IFM program can then calculate and print different styles of walkthrough for the game. </p>

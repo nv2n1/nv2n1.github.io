@@ -1,5 +1,4 @@
 ---
-
 title: "bson_json_reader_t(3)"
 name: "bson_json_reader_t"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_json_reader_t – Bulk JSON to BSON conversion"
 
 <h2>NAME</h2>
 <p> bson_json_reader_t &#8211; Bulk JSON to BSON conversion</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;bson.h&gt;
 typedef struct _bson_json_reader_t bson_json_reader_t;
@@ -19,6 +19,7 @@ typedef enum {
     BSON_JSON_ERROR_READ_CB_FAILURE,
 } bson_json_error_code_t;
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>bson_json_reader_t</code> structure is used for reading a sequence of JSON documents and transforming them to <code>bson_t</code> documents. </p>
 <p> This can often be useful if you want to perform bulk operations that are defined in a file containing JSON documents. </p>
 <p> <code>NOTE</code></p>

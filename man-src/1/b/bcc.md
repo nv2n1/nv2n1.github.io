@@ -1,5 +1,4 @@
 ---
-
 title: "bcc(1)"
 name: "bcc"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-bcc/"
 description: "bcc – Bruce’s C compiler"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bcc &#8211; Bruce&#8217;s C compiler </p>
+<h2>SYNOPSIS</h2>
 <p> <code>bcc</code> [<code>-03EGNOPSVcegvwxW</code>] [<code>-Aas_option</code>] [<code>-Bexecutable_prefix</code>] [<code>-Ddefine</code>] [<code>-Uundef</code>] [<code>-Mc_mode</code>] [<code>-o outfile</code>] [<code>-ansi</code>] [<code>-Ccc1_option</code>] [<code>-Pcpp_option</code>] [<code>-Iinclude_dir</code>] [<code>-Lld_option</code>] [<code>-Ttmpdir</code>] [<code>-Qc386_option</code>] [<code>-ttext_segno</code>] [<code>ld_options</code>] [<code>infiles</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Bcc</code> is a simple C compiler that produces 8086 assembler, in addition compiler compile time options allow 80386 or 6809 versions. The compiler understands traditional K&amp;R C with just the restriction that bit fields are mapped to one of the other integer types. </p>
 <p> The default operation is to produce an 8086 executable called <code>a.out</code> from the source file. </p>
 <h2>OPTIONS</h2>

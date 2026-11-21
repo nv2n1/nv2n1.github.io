@@ -1,5 +1,4 @@
 ---
-
 title: "mdmflexiserver(1)"
 name: "mdmflexiserver"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mdmflexiserver/"
 description: "mdmflexiserver – start a MDM session using the MDM flexible server mechanism"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mdmflexiserver &#8211; start a MDM session using the MDM flexible server mechanism </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mdmflexiserver</code> <font SIZE="-1">GNOME</font> options mdmflexiserver options</p>
+<h2>DESCRIPTION</h2>
 <p> The <i>flexi server</i> mechanism allows to run <font SIZE="-1">MDM</font> sessions on demand.</p>
 <h2>OPTIONS</h2>
 <p> In addition to the common Gtk and <font SIZE="-1">GNOME</font> options, <code>mdmflexiserver</code> accepts the following options:</p>

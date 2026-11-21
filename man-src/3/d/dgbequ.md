@@ -1,5 +1,4 @@
 ---
-
 title: "dgbequ(3)"
 name: "dgbequ"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dgbequ/"
 description: "dgbequ.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dgbequ.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgbequ</code> (M, N, KL, KU, AB, LDAB, R, C, ROWCND, COLCND, AMAX, INFO)<br />
  <i></i><code>DGBEQU</code></p>

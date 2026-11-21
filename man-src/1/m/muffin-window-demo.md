@@ -1,5 +1,4 @@
 ---
-
 title: "muffin-window-demo(1)"
 name: "muffin-window-demo"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-muffin-window-demo/"
 description: "muffin-window-demo – demo of window features"
 ---
 
+<h2 class="name">NAME</h2>
+<p> muffin-window-demo &#8211; demo of window features </p>
+<h2>SYNOPSIS</h2>
 <p> <code>muffin-window-demo</code></p>
+<h2>DESCRIPTION</h2>
 <p> This program demonstrates various kinds of windows that window managers and window manager themes should handle. </p>
 <p> Be sure to tear off the menu and toolbar, those are also a special kind of window.</p>
 <h2>AUTHOR</h2>

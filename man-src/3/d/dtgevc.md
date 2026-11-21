@@ -1,5 +1,4 @@
 ---
-
 title: "dtgevc(3)"
 name: "dtgevc"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dtgevc/"
 description: "dtgevc.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dtgevc.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dtgevc</code> (SIDE, HOWMNY, SELECT, N, S, LDS, P, LDP, VL, LDVL, VR, LDVR, MM, M, WORK, INFO)<br />
  <i></i><code>DTGEVC</code></p>

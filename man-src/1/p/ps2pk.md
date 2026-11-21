@@ -1,5 +1,4 @@
 ---
-
 title: "ps2pk(1)"
 name: "ps2pk"
 section: "1"
@@ -7,11 +6,18 @@ letter: "p"
 url: "/docs/linux/man/1-ps2pk/"
 ---
 
-ps2pk - creates a TeX pkfont from a type1 PostScript font 
+<h2 class="name">NAME</h2>
+ 
 
-ps2pk [ -v ] [ -e<i>enc</i> ] [ -X<i>xres</i> ] [ -E<i>expansion</i> ] [ -S<i>slant</i> ] [ -P<i>pointsize</i> ] [ -R<i>baseres</i> ] [ -r<i>aspectratio</i> ] [ -Y<i>yres</i> ] [ -a<i>AFMfile</i> ] [ -m<i>modename</i> ] type1 [pkfont]
+ ps2pk - creates a TeX pkfont from a type1 PostScript font 
 
-This program renders a given type1 PostScript font at a given pointsize (default 10.0 points) and resolution (default 300dpi) into a TeX pkfont. 
+<h2>SYNOPSIS</h2>
+
+ ps2pk [ -v ] [ -e<i>enc</i> ] [ -X<i>xres</i> ] [ -E<i>expansion</i> ] [ -S<i>slant</i> ] [ -P<i>pointsize</i> ] [ -R<i>baseres</i> ] [ -r<i>aspectratio</i> ] [ -Y<i>yres</i> ] [ -a<i>AFMfile</i> ] [ -m<i>modename</i> ] type1 [pkfont]
+
+<h2>DESCRIPTION</h2>
+
+ This program renders a given type1 PostScript font at a given pointsize (default 10.0 points) and resolution (default 300dpi) into a TeX pkfont. 
 
  To generate the pkfont ps2pk needs a valid type1 font file (for example Utopia-Regular, Utopia-Regula.pfb or Utopia-Regula.pfa) and its corresponding AFM-file (Utopia-Regular.afm) with the font metrics. The program accepts both the binary type1 format (Utopia-Regula.pfb) and its ASCII equivalent (Utopia-Regular or Utopia-Regula.pfa). To locate the files, ps2pk uses the kpathsea library (see the info page on kpathsea). Additionally, pfb and pfa files are searched for in the directory specified in the environment variable T1INPUTS, and afm files are searched in AFMFONTS, if they are set (the -v flag will report which filenames are looked for). 
 

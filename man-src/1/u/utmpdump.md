@@ -1,5 +1,4 @@
 ---
-
 title: "utmpdump(1)"
 name: "utmpdump"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-utmpdump/"
 description: "utmpdump – dump UTMP and WTMP files in raw format"
 ---
 
+<h2 class="name">NAME</h2>
+<p> utmpdump &#8211; dump UTMP and WTMP files in raw format </p>
+<h2>SYNOPSIS</h2>
 <p> <code>utmpdump</code> [options] <i>filename</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>utmpdump</code> is a simple program to dump UTMP and WTMP files in raw format, so they can be examined. <code>utmpdump</code> reads from stdin unless a <i>filename</i> is passed.</p>
 <h2>OPTIONS</h2>
 <p> <code>-f</code>, <code>&#8211;follow</code></p>

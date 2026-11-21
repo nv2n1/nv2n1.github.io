@@ -1,5 +1,4 @@
 ---
-
 title: "shtool-path(1)"
 name: "shtool-path"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-shtool-path/"
 description: "shtool path – GNU shtool command dealing with shell path variables"
 ---
 
+<h2 class="name">NAME</h2>
+<p> shtool path &#8211; GNU shtool command dealing with shell path variables </p>
+<h2>SYNOPSIS</h2>
 <p> <code>shtool path</code> [<code>-s</code>|<code>&#8211;suppress</code>] [<code>-r</code>|<code>&#8211;reverse</code>] [<code>-d</code>|<code>&#8211;dirname</code>] [<code>-b</code>|<code>&#8211;basename</code>] [<code>-m</code>|<code>&#8211;magic</code>] [<code>-p</code>|<code>&#8211;path</code> <i>path</i>] <i>str</i> [<i>str</i> &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> This command deals with shell <tt>$PATH</tt> variables. It can find a program through one or more filenames given by one or more <i>str</i> arguments. It prints the absolute filesystem path to the program displayed on <tt>&quot;stdout&quot;</tt> plus an exit code of 0 if it was really found.</p>
 <h2>OPTIONS</h2>
 <p> The following command line options are available.</p>

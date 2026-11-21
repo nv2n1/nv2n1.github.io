@@ -1,5 +1,4 @@
 ---
-
 title: "pkey_mprotect(2)"
 name: "pkey_mprotect"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-pkey_mprotect/"
 description: "mprotect, pkey_mprotect – set protection on a region of memory"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mprotect, pkey_mprotect &#8211; set protection on a region of memory </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/mman.h&gt;
 int mprotect(void *addr, size_t len, int prot);
@@ -15,6 +17,7 @@ int mprotect(void *addr, size_t len, int prot);
 #include &lt;sys/mman.h&gt;
 int pkey_mprotect(void *addr, size_t len, int prot, int pkey);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>mprotect</code>() changes the access protections for the calling process&#8217;s memory pages containing any part of the address range in the interval [<i>addr</i>,&nbsp;<i>addr</i>+<i>len</i>-1]. <i>addr</i> must be aligned to a page boundary. </p>
 <p> If the calling process tries to access memory in a manner that violates the protections, then the kernel generates a <code>SIGSEGV</code> signal for the process. </p>
 <p> <i>prot</i> is a combination of the following access flags: <code>PROT_NONE</code> or a bitwise-or of the other values in the following list:</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "sormtr(3)"
 name: "sormtr"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-sormtr/"
 description: "sormtr.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sormtr.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sormtr</code> (SIDE, UPLO, TRANS, M, N, A, LDA, TAU, C, LDC, WORK, LWORK, INFO)<br />
  <i></i><code>SORMTR</code></p>

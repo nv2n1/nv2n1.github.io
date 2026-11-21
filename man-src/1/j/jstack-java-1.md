@@ -1,5 +1,4 @@
 ---
-
 title: "jstack-java-1(1)"
 name: "jstack-java-1"
 section: "1"
@@ -7,10 +6,10 @@ letter: "j"
 url: "/docs/linux/man/1-jstack-java-1/"
 description: "jstack – Stack Trace"
 ---
-
 <h2>Name</h2>
 <p> jstack - Stack Trace <br />
  </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
  jstack  [ option ] pid
  jstack  [ option ] executable core
@@ -44,6 +43,7 @@ description: "jstack – Stack Trace"
 <dd> <p> optional unique id, if multiple debug servers are running on the same remote host. </p>
  </dd></dl>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> <code>jstack</code> prints Java stack traces of Java threads for a given Java process or core file or a remote debug server. For each Java frame, the full class name, method name, &#8216;bci&#8217; (byte code index) and line number, if available, are printed. With the -m option, jstack prints both Java and native frames of all threads along with the &#8216;pc&#8217; (program counter). For each native frame, the closest native symbol to &#8216;pc&#8217;, if available, is printed. C++ mangled names are not demangled. To demangle C++ names, the output of this command may be piped to <code>c++filt</code>. If the given process is running on a 64-bit VM, you may need to specify the <i>-J-d64</i> option, e.g.: <br />
  </p>
 <pre><code>

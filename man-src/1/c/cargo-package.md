@@ -1,5 +1,4 @@
 ---
-
 title: "cargo-package(1)"
 name: "cargo-package"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-cargo-package/"
 description: "cargo-package – Create a distributable tarball"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cargo-package &#8211; Create a distributable tarball </p>
+<h2>SYNOPSIS</h2>
 <p> cargo package [OPTIONS]</p>
+<h2>DESCRIPTION</h2>
 <p> Assemble the local package into a distributable tarball.</p>
 <h2>OPTIONS</h2>
 <dl>

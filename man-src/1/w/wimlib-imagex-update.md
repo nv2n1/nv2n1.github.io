@@ -1,5 +1,4 @@
 ---
-
 title: "wimlib-imagex-update(1)"
 name: "wimlib-imagex-update"
 section: "1"
@@ -10,7 +9,9 @@ description: "wimlib-imagex-update – Update a WIM image"
 
 <h2>NAME</h2>
 <p> wimlib-imagex-update &#8211; Update a WIM image</p>
+<h2>SYNOPSIS</h2>
 <p> <code>wimlib-imagex update</code> <i>WIMFILE</i> [<i>IMAGE</i>] [<i>OPTION</i>&#8230;] [&lt; <i>CMDFILE</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>wimlib-imagex update</code> modifies the specified <i>IMAGE</i> in the Windows Imaging (WIM) file <i>WIMFILE</i> by adding, deleting, or renaming files or directories in it. This command is also available as simply <code>wimupdate</code> if the appropriate hard link or batch file has been installed. </p>
 <p> <i>IMAGE</i> specifies the image in <i>WIMFILE</i> to update. It may be a 1-based index of an image in the WIM or the name of an image in the WIM. Use the <code>wimlib-imagex info</code> (1) command to list the images a WIM file contains. <i>IMAGE</i> may be omitted if <i>WIMFILE</i> contains only one image. </p>
 <p> The modifications to perform on the WIM image are specified as a sequence of commands, one per line, read in a text file from standard input. It is recommended that standard input be redirected from a file (<i>CMDFILE</i>), as shown above, rather than typing in commands interactively. Alternatively, to specify a command directly on the command line, see the <code>&#8211;command</code> option.</p>

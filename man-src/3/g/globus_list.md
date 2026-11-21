@@ -1,5 +1,4 @@
 ---
-
 title: "globus_list(3)"
 name: "globus_list"
 section: "3"
@@ -8,7 +7,10 @@ url: "/docs/linux/man/3-globus_list/"
 description: "globus_list –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> globus_list &#8211; </p>
 <p> List data type.</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;globus_list.h&gt;</p>
 <h2>Detailed Description</h2>
 <p> List data type. </p>

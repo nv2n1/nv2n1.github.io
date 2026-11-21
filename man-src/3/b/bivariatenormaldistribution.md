@@ -1,5 +1,4 @@
 ---
-
 title: "bivariatenormaldistribution(3)"
 name: "bivariatenormaldistribution"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-bivariatenormaldistribution/"
 description: "ql/math/distributions/bivariatenormaldistribution.hpp – bivariate cumulative normal distribution"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/math/distributions/bivariatenormaldistribution.hpp &#8211; bivariate cumulative normal distribution </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/distributions/normaldistribution.hpp&gt; </p>
 <h3>Classes</h3>
 <p> class <code>BivariateCumulativeNormalDistributionDr78</code><br />

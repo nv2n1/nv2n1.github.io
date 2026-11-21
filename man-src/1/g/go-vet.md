@@ -1,5 +1,4 @@
 ---
-
 title: "go-vet(1)"
 name: "go-vet"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-go-vet/"
 description: "go-vet – report likely mistakes in packages"
 ---
 
+<h2 class="name">NAME</h2>
+<p> go-vet &#8211; report likely mistakes in packages </p>
+<h2>SYNOPSIS</h2>
 <p> <code>go vet</code> [<code>-n</code>] [<code>-x</code>] [<code>-vettool</code> <i>prog</i>] [<i>build flags</i>] [<i>vet flags</i>] [<i>packages</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Vet runs the Go vet command on the packages named by the import paths. </p>
 <p> For more about vet and its flags, see &#8216;go doc cmd/vet&#8217;.<br />
  For more about specifying packages, see <code><a href="/docs/linux/man/7-go-packages/">go-packages</a></code>(7).<br />

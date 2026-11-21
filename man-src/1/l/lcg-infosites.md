@@ -1,5 +1,4 @@
 ---
-
 title: "lcg-infosites(1)"
 name: "lcg-infosites"
 section: "1"
@@ -10,7 +9,9 @@ description: "lcg-infosites – list grid service information matching given cri
 
 <h2>NAME</h2>
 <p> lcg-infosites &#8211; list grid service information matching given criteria</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lcg-infosites</code> [<i>options</i>] <i>selection(s)</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>lcg-infosites</code> provides a user-friendly way to query the EGI/WLCG information system for services that match given criteria. The supported options and selections are detailed below.</p>
 <h2>OPTIONS</h2>
 <dl>

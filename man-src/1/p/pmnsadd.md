@@ -1,5 +1,4 @@
 ---
-
 title: "pmnsadd(1)"
 name: "pmnsadd"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmnsadd – add new names to the Performance Co-Pilot PMNS"
 
 <h2>NAME</h2>
 <p> <code>pmnsadd</code> &#8211; add new names to the Performance Co-Pilot PMNS</p>
+<h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/pmnsadd</code> [<code>-n</code> <i>namespace</i>] <i>file</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code><a href="/docs/linux/man/1-pmnsmerge/">pmnsmerge</a></code>(1) performs the same function as <code>pmnsadd</code> and is faster, more robust and more flexible. It is therefore recommended that <code><a href="/docs/linux/man/1-pmnsmerge/">pmnsmerge</a></code>(1) be used instead. </p>
 <p> <code>pmnsadd</code> adds subtree(s) of new names into a Performance Metrics Name Space (PMNS), as used by the components of the Performance Co-Pilot (PCP). </p>
 <p> Normally <code>pmnsadd</code> operates on the default Performance Metrics Name Space (PMNS), however if the <code>-n</code> option is specified an alternative namespace is used from the file <i>namespace</i>. </p>

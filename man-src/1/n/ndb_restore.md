@@ -1,5 +1,4 @@
 ---
-
 title: "ndb_restore(1)"
 name: "ndb_restore"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-ndb_restore/"
 description: "ndb_restore – restore a MySQL Cluster backup"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ndb_restore &#8211; restore a MySQL Cluster backup </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ndb_restore </code><i>options</i></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The cluster restoration program is implemented as a separate command-line utility <code>ndb_restore</code>, which can normally be found in the MySQL bin directory. This program reads the files created as a result of the backup and inserts the stored information into the database. </dd>
 <p> <code>ndb_restore</code> must be executed once for each of the backup files that were created by the START BACKUP command used to create the backup (see Section 17.5.3.2, lqUsing The MySQL Cluster Management Client to Create a Backuprq). This is equal to the number of data nodes in the cluster at the time that the backup was created. </p>
 <dl>

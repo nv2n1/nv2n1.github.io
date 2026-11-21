@@ -1,5 +1,4 @@
 ---
-
 title: "phar(1)"
 name: "phar"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-phar/"
 description: "phar, phar.phar – PHAR (PHP archive) command line tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> phar, phar.phar &#8211; PHAR (PHP archive) command line tool </p>
+<h2>SYNOPSIS</h2>
 <p> <code>phar</code> &lt;command&gt; [options] &#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>PHAR</code> file format provides a way to put entire PHP applications into a single file called a &quot;phar&quot; (PHP Archive) for easy distribution and installation. </p>
 <p> With the <code>phar</code> command you can create, update or extract PHP archives. </p>
 <p> Commands: add compress delete extract help help-list info list meta-del meta-get meta-set pack sign stub-get stub-set tree version </p>

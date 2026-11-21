@@ -1,5 +1,4 @@
 ---
-
 title: "presage_demo(1)"
 name: "presage_demo"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-presage_demo/"
 description: "presage_demo – presage demo program (ncurses)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> presage_demo &#8211; presage demo program (ncurses) </p>
+<h2>SYNOPSIS</h2>
 <p> <code>presage_demo</code> [<i>,OPTION/</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Begin typing. presage will attempt to predict the desired word. After each keystroke, presage will return a number of predictions. If the desired word appears in the prediction list, select it by pressing the corresponding function key.</p>
 <dl>
 <dt><code>-c</code>, <code>&#8211;config</code> CONFIG</dt>

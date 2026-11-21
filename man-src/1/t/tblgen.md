@@ -1,5 +1,4 @@
 ---
-
 title: "tblgen(1)"
 name: "tblgen"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-tblgen/"
 description: "tblgen – Target Description To C++ Code Generator"
 ---
 
+<h2 class="name">NAME</h2>
+<p> tblgen &#8211; Target Description To C++ Code Generator </p>
+<h2>SYNOPSIS</h2>
 <p> <code>tblgen</code> [<i>options</i>] [<i>filename</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>tblgen</code> translates from target description (.td) files into C<font SIZE="-2">++</font> code that can be included in the definition of an <font SIZE="-1">LLVM</font> target library. Most users of <font SIZE="-1">LLVM</font> will not need to use this program. It is only for assisting with writing an <font SIZE="-1">LLVM</font> target backend. </p>
 <p> The input and output of <code>tblgen</code> is beyond the scope of this short introduction. Please see the <i>CodeGeneration</i> page in the <font SIZE="-1">LLVM</font> documentation. </p>
 <p> The <i>filename</i> argument specifies the name of a Target Description (.td) file to read as input.</p>

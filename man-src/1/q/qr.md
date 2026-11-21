@@ -1,5 +1,4 @@
 ---
-
 title: "qr(1)"
 name: "qr"
 section: "1"
@@ -10,7 +9,9 @@ description: "qr – script to create QR codes at the command line"
 
 <h2>NAME</h2>
 <p> qr &#8211; script to create QR codes at the command line</p>
+<h2>SYNOPSIS</h2>
 <p> qr [&#8211;help] [&#8211;factory=FACTORY] [&#8211;optimize=OPTIMIZE] [data]</p>
+<h2>DESCRIPTION</h2>
 <p> This script uses the python qrcode module. It can take data from stdin or from the commandline and generate a QR code. Normally it will output the QR code as ascii art to the terminal. If the output is piped to a file, it will output the image (default type of PNG).</p>
 <h2>OPTIONS</h2>
 <p> <code>&nbsp;<wbr>-h, &#8211;help</code></p>

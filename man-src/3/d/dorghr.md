@@ -1,5 +1,4 @@
 ---
-
 title: "dorghr(3)"
 name: "dorghr"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dorghr/"
 description: "dorghr.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dorghr.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dorghr</code> (N, ILO, IHI, A, LDA, TAU, WORK, LWORK, INFO)<br />
  <i></i><code>DORGHR</code></p>

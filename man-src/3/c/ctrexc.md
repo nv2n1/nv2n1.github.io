@@ -1,5 +1,4 @@
 ---
-
 title: "ctrexc(3)"
 name: "ctrexc"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-ctrexc/"
 description: "ctrexc.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ctrexc.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctrexc</code> (COMPQ, N, T, LDT, Q, LDQ, IFST, ILST, INFO)<br />
  <i></i><code>CTREXC</code></p>

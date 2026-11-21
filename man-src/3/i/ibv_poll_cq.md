@@ -1,5 +1,4 @@
 ---
-
 title: "ibv_poll_cq(3)"
 name: "ibv_poll_cq"
 section: "3"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/3-ibv_poll_cq/"
 description: "ibv_poll_cq – poll a completion queue (CQ)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ibv_poll_cq &#8211; poll a completion queue (CQ) </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 int ibv_poll_cq(struct ibv_cq *cq, int num_entries,
                 struct ibv_wc *wc);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>ibv_poll_cq()</code> polls the CQ <i>cq</i> for work completions and returns the first <i>num_entries</i> (or all available completions if the CQ contains fewer than this number) in the array <i>wc</i>. The argument <i>wc</i> is a pointer to an array of ibv_wc structs, as defined in &lt;infiniband/verbs.h&gt;. </p>
 <pre><code>
 struct ibv_wc {

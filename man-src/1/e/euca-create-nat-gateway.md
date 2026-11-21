@@ -1,5 +1,4 @@
 ---
-
 title: "euca-create-nat-gateway(1)"
 name: "euca-create-nat-gateway"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-create-nat-gateway – Create a new VPC NAT gateway"
 
 <h2>NAME</h2>
 <p> euca-create-nat-gateway &#8211; Create a new VPC NAT gateway</p>
+<h2>SYNOPSIS</h2>
 <p> euca-create-nat-gateway <code>-s</code> SUBNET <code>-a</code> ALLOC [&#8211;client-token TOKEN]</p>
 <dl>
 <dt>[&#8211;show-empty-fields] [-U URL]</dt>
 <dd> [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Create a new VPC NAT gateway</p>
 <h3>optional arguments:</h3>
 <dl>

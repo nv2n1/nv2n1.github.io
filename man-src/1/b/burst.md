@@ -1,5 +1,4 @@
 ---
-
 title: "burst(1)"
 name: "burst"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-burst/"
 description: "burst – explode digests into messages"
 ---
 
+<h2 class="name">NAME</h2>
+<p> burst &#8211; explode digests into messages </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>burst</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-inplace</code> | <code>-noinplace</code>] [<code>-mime</code> | <code>-nomime</code>] [<code>-automime</code>] [<code>-quiet</code> | <code>-noquiet</code>] [<code>-verbose</code> | <code>-noverbose</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>Burst</code></p>
 <dd>considers the specified messages in the named folder to be Internet digests, and explodes them in that folder. </dd>
 <p> If <code>-inplace</code> is given, each digest is replaced by the &#8220;table of contents&#8221; for the digest (the original digest is removed). <code>Burst</code> then renumbers all of the messages following the digest in the folder to make room for each of the messages contained within the digest. These messages are placed immediately after the digest. </p>

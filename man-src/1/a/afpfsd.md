@@ -1,5 +1,4 @@
 ---
-
 title: "afpfsd(1)"
 name: "afpfsd"
 section: "1"
@@ -10,7 +9,9 @@ description: "afpfsd – Daemon to manage AFP sessions for the afpfs-ng FUSE cli
 
 <h2>NAME</h2>
 <p> afpfsd &#8211; Daemon to manage AFP sessions for the afpfs-ng FUSE client.</p>
+<h2>SYNOPSIS</h2>
 <p> <i>afpfsd</i> [<code>-l|logmethod=method</code> [f|&#8211;foreground [d|&#8211;debug </p>
+<h2>DESCRIPTION</h2>
 <p> afpfsd is a daemon that manages AFP sessions. Functions (like mounting, getting status, etc) can be performed using the <a href="/docs/linux/man/1-afp_client/">afp_client</a>(1) tool. This client communicates with the daemon over a named pipe. </p>
 <p> afpfsd will not start if another instance is already running. There needs to be one copy of afpfsd running per user. </p>
 <h2>OPTIONS</h2>

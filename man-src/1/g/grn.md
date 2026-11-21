@@ -1,5 +1,4 @@
 ---
-
 title: "grn(1)"
 name: "grn"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-grn/"
 description: "grn – groff preprocessor for gremlin files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> grn &#8211; groff preprocessor for gremlin files </p>
+<h2>SYNOPSIS</h2>
 <p> [ <code>-Cv</code> ] [ <code>-T </code><i>dev</i> ] [ <code>-M </code><i>dir</i> ] [ <code>-F </code><i>dir</i> ] [<i>file</i> &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>grn</i> is a preprocessor for including <i>gremlin</i> pictures in <i>groff</i> input. <i>grn</i> writes to standard output, processing only input lines between two that start with <code>.GS</code> and <code>.GE</code>. Those lines must contain <i>grn</i> commands (see below). These commands request a <i>gremlin</i> file, and the picture in that file is converted and placed in the <i>troff</i> input stream. The <code>.GS</code> request may be followed by a C, L, or R to center, left, or right justify the whole <i>gremlin</i> picture (default justification is center). If no <i>file</i> is mentioned, the standard input is read. At the end of the picture, the position on the page is the bottom of the <i>gremlin</i> picture. If the <i>grn</i> entry is ended with <code>.GF</code> instead of <code>.GE</code>, the position is left at the top of the picture. </p>
 <p> Please note that currently only the -me macro package has support for <code>.GS</code>, <code>.GE</code>, and <code>.GF</code>.</p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "docker-inspect(1)"
 name: "docker-inspect"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-inspect/"
 description: "docker-inspect – Return low-level information on Docker objects"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-inspect &#8211; Return low-level information on Docker objects </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker inspect [OPTIONS] NAME|ID [NAME|ID&#8230;]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> This displays the low-level information on Docker object(s) (e.g. container, image, volume,network, node, service, or task) identified by name or ID. By default, this will render all results in a JSON array. If the container and image have the same name, this will return container JSON for unspecified type. If a format is specified, the given template will be executed for each result. </p>
 <h2>EXAMPLES</h2>
 <p> Get information about an image when image name conflicts with the container name, e.g. both image and container are named rhel7: </p>

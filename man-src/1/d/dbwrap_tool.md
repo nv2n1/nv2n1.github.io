@@ -1,5 +1,4 @@
 ---
-
 title: "dbwrap_tool(1)"
 name: "dbwrap_tool"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-dbwrap_tool/"
 description: "dbwrap_tool – low level TDB/CTDB manipulation tool using the dbwrap interface"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dbwrap_tool &#8211; low level TDB/CTDB manipulation tool using the dbwrap interface </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt>
 </dt><dd>dbwrap_tool [&#8211;persistent] [&#8211;non-persistent] [-d&nbsp;&lt;debug level&gt;] [-s&nbsp;&lt;config file&gt;] [-l&nbsp;&lt;log file base&gt;] [-V] [&#8211;option=&lt;name&gt;=&lt;value&gt;] {&lt;database&gt;} {&lt;operation&gt;} [&lt;key&gt;&nbsp;[&lt;type&gt;&nbsp;[&lt;value&gt;]]]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This tool is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> The dbwrap_tool program is used to read and manipulate TDB/CTDB databases using the dbwrap interface. </p>
 <p> The following database operations are available:</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "xgfconfig(1)"
 name: "xgfconfig"
 section: "1"
@@ -10,7 +9,9 @@ description: "xgfconfig – configuration program for Xgridfit"
 
 <h2>NAME</h2>
 <p> <code>xgfconfig</code> &#8211; configuration program for Xgridfit</p>
+<h2>SYNOPSIS</h2>
 <p> <code>xgfconfig [options]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>Xgfconfig</code> is a script that selects an XSLT processor and a RELAX NG validator for Xgridfit to invoke. If the program is run as root, the settings are global. If run as an ordinary user, settings are saved in ~/.xgridfit. Current settings are backed up in a file with extension .bak.</p>
 <h2>OPTIONS</h2>
 <dl>

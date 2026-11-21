@@ -1,5 +1,4 @@
 ---
-
 title: "eulb-modify-lb-attributes(1)"
 name: "eulb-modify-lb-attributes"
 section: "1"
@@ -10,10 +9,12 @@ description: "eulb-modify-lb-attributes – Modify a load balancer’s attribute
 
 <h2>NAME</h2>
 <p> eulb-modify-lb-attributes &#8211; Modify a load balancer&#8217;s attributes</p>
+<h2>SYNOPSIS</h2>
 <p> eulb-modify-lb-attributes [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID]</p>
 <dl>
 <dt>[-S KEY] [&#8211;security-token TOKEN] [&#8211;debug]</dt>
 <dd> [&#8211;debugger] [&#8211;version] [-h] ELB ATTR=VALUE [ATTR=VALUE &#8230;]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Modify a load balancer&#8217;s attributes</p>
 <h3>positional arguments:</h3>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "perl5223delta(1)"
 name: "perl5223delta"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-perl5223delta/"
 description: "perl5223delta – what is new for perl v5.22.3"
 ---
 
+<h2 class="name">NAME</h2>
+<p> perl5223delta &#8211; what is new for perl v5.22.3 </p>
+<h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.22.2 release and the 5.22.3 release. </p>
 <p> If you are upgrading from an earlier release such as 5.22.1, first read perl5222delta, which describes differences between 5.22.1 and 5.22.2.</p>
 <h2>Security</h2>

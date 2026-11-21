@@ -1,5 +1,4 @@
 ---
-
 title: "supybot-wizard(1)"
 name: "supybot-wizard"
 section: "1"
@@ -10,7 +9,9 @@ description: "supybot-wizard – A wizard for creating Supybot configuration fil
 
 <h2>NAME</h2>
 <p> supybot-wizard &#8211; A wizard for creating Supybot configuration files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>supybot-wizard</code> [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>supybot-wizard</code> is an in-depth wizard that provides a nice user interface for creating configuration files for <i><a href="/docs/linux/man/1-supybot/">supybot</a></i>(1).</p>
 <h2>OPTIONS</h2>
 <dl>

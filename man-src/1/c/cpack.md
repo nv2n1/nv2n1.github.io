@@ -1,5 +1,4 @@
 ---
-
 title: "cpack(1)"
 name: "cpack"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-cpack/"
 description: "cpack – CPack Command-Line Reference"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cpack &#8211; CPack Command-Line Reference </p>
+<h2>SYNOPSIS</h2>
 <pre>
 cpack [&lt;options&gt;]
 </pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>cpack</code> executable is the CMake packaging program. It generates installers and source packages in a variety of formats. </p>
 <p> For each installer or package format, <code>cpack</code> has a specific backend, called &quot;generator&quot;. A generator is responsible for generating the required inputs and invoking the specific package creation tools. These installer or package generators are not to be confused with the makefile generators of the <code>cmake</code> command. </p>
 <p> All supported generators are specified in the <code>cpack-generators</code> manual. The command <code>cpack &#8211;help</code> prints a list of generators supported for the target platform. Which of them are to be used can be selected through the <code>CPACK_GENERATOR</code> variable or through the command-line option <code>-G</code>. </p>

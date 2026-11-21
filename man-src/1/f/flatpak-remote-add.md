@@ -1,5 +1,4 @@
 ---
-
 title: "flatpak-remote-add(1)"
 name: "flatpak-remote-add"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-flatpak-remote-add/"
 description: "flatpak-remote-add – Add a remote repository"
 ---
 
+<h2 class="name">NAME</h2>
+<p> flatpak-remote-add &#8211; Add a remote repository </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak remote-add</code> [OPTION&#8230;] NAME LOCATION</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>Adds a remote repository to the flatpak repository configuration. NAME is the name for the new remote, and LOCATION is a url or pathname. The LOCATION is either a flatpak repository, or a .flatpakrepo file which describes a repository. In the former case you may also have to specify extra options, such as the gpg key for the repo. </dd>
 <p> Unless overridden with the <code>&#8211;user</code> or <code>&#8211;installation</code> options, this command changes the default system-wide installation.</p>
 <h2>OPTIONS</h2>

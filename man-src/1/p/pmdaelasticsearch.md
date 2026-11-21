@@ -1,5 +1,4 @@
 ---
-
 title: "pmdaelasticsearch(1)"
 name: "pmdaelasticsearch"
 section: "1"
@@ -10,6 +9,7 @@ description: "pmdaelasticsearch – elasticsearch performance metrics domain age
 
 <h2>NAME</h2>
 <p> <code>pmdaelasticsearch</code> &#8211; elasticsearch performance metrics domain agent (PMDA)</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdaelasticsearch</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which exports performance metrics from elasticsearch.</p>
 <h2>INSTALLATION</h2>
 <p> This <font SIZE="-1">PMDA</font> requires that elasticsearch is running on the local host and is accepting queries on <font SIZE="-1">TCP</font> port 9200. </p>

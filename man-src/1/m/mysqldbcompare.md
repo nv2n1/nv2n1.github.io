@@ -1,5 +1,4 @@
 ---
-
 title: "mysqldbcompare(1)"
 name: "mysqldbcompare"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mysqldbcompare/"
 description: "mysqldbcompare – Compare Two Databases and Identify Differences"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mysqldbcompare &#8211; Compare Two Databases and Identify Differences </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqldbcompare [</code><i>options</i><code>] </code><i>db1</i><code> [</code><i>:db2</i><code>] &#8230;</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This utility compares the objects and data from two databases to find differences. It identifies objects having different definitions in the two databases and presents them in a diff-style format of choice. Differences in the data are shown using a similar diff-style format. Changed or missing rows are shown in a standard format of GRID, CSV, TAB, or VERTICAL. </dd>
 <p> Use the notation db1:db2 to name two databases to compare, or, alternatively just db1 to compare two databases with the same name. The latter case is a convenience notation for comparing same-named databases on different servers. </p>
 <p> The comparison may be run against two databases of different names on a single server by specifying only the <code>&#8211;server1</code> option. The user can also connect to another server by specifying the <code>&#8211;server2</code> option. In this case, db1 is taken from server1 and db2 from server2. </p>

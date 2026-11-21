@@ -1,5 +1,4 @@
 ---
-
 title: "libhavege(3)"
 name: "libhavege"
 section: "3"
@@ -10,6 +9,7 @@ description: "libhavege, havege_create, havege_run, havege_rng, havege_destroy, 
 
 <h2>NAME</h2>
 <p> libhavege, havege_create, havege_run, havege_rng, havege_destroy, havege_status, havege_status_dump, havege_version &#8211; haveged RNG</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt></dt></dl>
 <pre><code>
@@ -27,6 +27,7 @@ havege_status_dump(handle, H_SD_TOPIC_BUILD, status_buf, sizeof(status_buf));
 havege_destroy(handle);
 </code></pre>
 <p>&nbsp;<wbr></p>
+<h2>DESCRIPTION</h2>
 <p> The libhavege library provides the haveged random number generator and it&#8217;s associated tuning and testing facilities in a development sub-package. All haveged conditional build features are preserved and all haveged options not directly related to it&#8217;s daemon or file system interfaces are available. This means that the same haveged tuning and testing components are present in the library with the equivalent controls provided by the haveged command line. </p>
 <h2>API METHODS</h2>
 <p> The libhavege library uses the opaque handle technique to manage it&#8217;s required resources. Errors are returned in the &quot;error&quot; member of the handle. The havege_destroy() method should be called to dispose of any resources claimed by havege_create(). </p>

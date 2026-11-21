@@ -1,5 +1,4 @@
 ---
-
 title: "gij(1)"
 name: "gij"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-gij/"
 description: "gij – GNU interpreter for Java bytecode"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gij &#8211; GNU interpreter for Java bytecode </p>
+<h2>SYNOPSIS</h2>
 <p> gij [<font SIZE="-1"><code>OPTION</code></font>] &#8230; <i></i><font SIZE="-1"><i>JARFILE</i></font><i></i> [<i></i><font SIZE="-1"><i>ARGS</i></font><i></i>&#8230;] </p>
 <p> gij [<code>-jar</code>] [<font SIZE="-1"><code>OPTION</code></font>] &#8230; <i></i><font SIZE="-1"><i>CLASS</i></font><i></i> [<i></i><font SIZE="-1"><i>ARGS</i></font><i></i>&#8230;]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>-cp</code>&nbsp;<wbr><i>path</i>]&nbsp;<wbr>[<code>-classpath</code>&nbsp;<wbr><i>path</i>]<br />
@@ -15,6 +17,7 @@ description: "gij – GNU interpreter for Java bytecode"
 &nbsp;<wbr>&nbsp;<wbr>[<code>-ms=</code><i>number</i>]&nbsp;<wbr>[<code>-mx=</code><i>number</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>-X</code><i>argument</i>]&nbsp;<wbr>[<code>-verbose</code>]&nbsp;<wbr>[<code>-verbose:class</code>]<br />
 &nbsp;<wbr>&nbsp;<wbr>[<code>&#8211;showversion</code>]&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr>[<code>&#8211;help</code>][<code>-?</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> <tt>&quot;gij&quot;</tt> is a Java bytecode interpreter included with <tt>&quot;libgcj&quot;</tt>. <tt>&quot;gij&quot;</tt> is not available on every platform; porting it requires a small amount of assembly programming which has not been done for all the targets supported by <code>gcj</code>. </p>
 <p> The primary argument to <tt>&quot;gij&quot;</tt> is the name of a class or, with <tt>&quot;-jar&quot;</tt>, a jar file. Options before this argument are interpreted by <tt>&quot;gij&quot;</tt>; remaining options are passed to the interpreted program. </p>
 <p> If a class name is specified and this class does not have a <tt>&quot;main&quot;</tt> method with the appropriate signature (a <tt>&quot;static void&quot;</tt> method with a <tt>&quot;String[]&quot;</tt> as its sole argument), then <tt>&quot;gij&quot;</tt> will print an error and exit. </p>

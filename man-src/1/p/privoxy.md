@@ -1,5 +1,4 @@
 ---
-
 title: "privoxy(1)"
 name: "privoxy"
 section: "1"
@@ -10,6 +9,7 @@ description: "privoxy – Privacy Enhancing Proxy"
 
 <h2>NAME</h2>
 <p> privoxy &#8211; Privacy Enhancing Proxy</p>
+<h2>SYNOPSIS</h2>
 <p> <code>privoxy</code> [<code>&#8211;chroot</code> ] [<code>&#8211;config-test</code> ] [<code>&#8211;help</code> ] [<code>&#8211;no-daemon</code> ] [<code>&#8211;pidfile </code><i>pidfile</i> ] [<code>&#8211;pre-chroot-nslookup </code><i>hostname</i> ] [<code>&#8211;user </code><i>user[.group]</i> ] [<code>&#8211;version</code> ] [<i>configfile</i> ] </p>
 <h2>OPTIONS</h2>
 <p> <code>Privoxy</code> may be invoked with the following command line options:</p>
@@ -33,6 +33,7 @@ description: "privoxy – Privacy Enhancing Proxy"
 <dt><code>&#8211;version</code></dt>
 <dd> Print version info and exit.</dd></dl>
 <p> If the <i>configfile</i> is not specified on the command line, <code>Privoxy</code> will look for a file named <i>config</i> in the current directory. If no <i>configfile</i> is found, <code>Privoxy</code> will fail to start.</p>
+<h2>DESCRIPTION</h2>
 <p> Privoxy is a non-caching web proxy with advanced filtering capabilities for enhancing privacy, modifying web page data and HTTP headers, controlling access, and removing ads and other obnoxious Internet junk. Privoxy has a flexible configuration and can be customized to suit individual needs and tastes. It has application for both stand-alone systems and multi-user networks. </p>
 <p> Privoxy is Free Software and licensed under the GNU GPLv2. </p>
 <p> Privoxy is an associated project of Software in the Public Interest (SPI). </p>

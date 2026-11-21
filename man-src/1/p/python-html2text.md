@@ -1,5 +1,4 @@
 ---
-
 title: "python-html2text(1)"
 name: "python-html2text"
 section: "1"
@@ -10,6 +9,7 @@ description: "python-html2text – manual page for python-html2text 2016.9.19"
 
 <h2>NAME</h2>
 <p> python-html2text &#8211; manual page for python-html2text 2016.9.19</p>
+<h2>SYNOPSIS</h2>
 <p> <code>python-html2text</code> [<i>(filename|url) </i>[<i>encoding</i>]]</p>
 <h2>OPTIONS</h2>
 <dl>

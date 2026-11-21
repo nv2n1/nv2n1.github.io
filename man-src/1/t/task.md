@@ -1,5 +1,4 @@
 ---
-
 title: "task(1)"
 name: "task"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-task/"
 description: "task – A command line todo manager."
 ---
 
+<h2 class="name">NAME</h2>
+<p> task &#8211; A command line todo manager.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>task &lt;filter&gt; &lt;command&gt; [ &lt;mods&gt; | &lt;args&gt; ]</code><br />
  <code>task &#8211;version</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Taskwarrior is a command line todo list manager. It maintains a list of tasks that you want to do, allowing you to add/remove, and otherwise manipulate them. Taskwarrior has a rich set of subcommands that allow you to do various things with it. </p>
 <p> At the core, Taskwarrior is a list processing program. You add text and additional related parameters and redisplay the information in a nice way. It turns into a todo list program when you add due dates and recurrence. It turns into an organized todo list program when you add priorities, tags (one word descriptors), project groups, etc. </p>
 <h2>FILTER</h2>

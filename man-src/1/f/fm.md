@@ -1,5 +1,4 @@
 ---
-
 title: "fm(1)"
 name: "fm"
 section: "1"
@@ -10,8 +9,10 @@ description: "fm – control frequency, volume, mute/unmute of FM radio card"
 
 <h2>NAME</h2>
 <p> fm &#8211; control frequency, volume, mute/unmute of FM radio card</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>fm</code> [ <code>-h</code> ] [ <code>-o</code> ] [ <code>-q</code> ] [ <code>-d</code> <i>device</i> ] [ <code>-t</code> <i>tuner</i> ] [ <code>-T</code> <code>none</code> | <code>forever</code> | <i>time</i> ] <code>on</code> | <code>off</code> | <code>+</code> | <code>&#8211;</code> | <code>freq</code> [ <i>volume</i> ]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>fm</code></p>
 <dd>is a program to control the frequency, volume, and mute/unmute state of an FM radio card, using the video4linux interface introduced in 2.1.x series Linux kernels.</dd>
 <h3>OPTIONS</h3>

@@ -1,5 +1,4 @@
 ---
-
 title: "g-ir-scanner(1)"
 name: "g-ir-scanner"
 section: "1"
@@ -10,7 +9,9 @@ description: "g-ir-scanner – extracting C metadata from sources and headers"
 
 <h2>NAME</h2>
 <p> g-ir-scanner &#8211; extracting C metadata from sources and headers</p>
+<h2>SYNOPSIS</h2>
 <p> <code>g-ir-scanner</code> [OPTION&#8230;] FILES&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> g-ir-scanner is a tool which generates GIR XML files by parsing headers and introspecting GObject based libraries. It is usually invoked during the normal build step for a project and the information is saved to disk and later installed, so that language bindings and other applications can use it. Header files and source files are passed in as arguments on the command line. The suffix determines whether a file be treated as a source file (.c) or a header file (.h). Currently only C based libraries are supported by the scanner.</p>
 <h2>OPTIONS</h2>
 <dl>

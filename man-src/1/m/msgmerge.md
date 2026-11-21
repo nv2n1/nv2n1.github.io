@@ -1,5 +1,4 @@
 ---
-
 title: "msgmerge(1)"
 name: "msgmerge"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-msgmerge/"
 description: "msgmerge – merge message catalog and template"
 ---
 
+<h2 class="name">NAME</h2>
+<p> msgmerge &#8211; merge message catalog and template </p>
+<h2>SYNOPSIS</h2>
 <p> <code>msgmerge</code> [<i>OPTION</i>] <i>def.po ref.pot</i></p>
+<h2>DESCRIPTION</h2>
 <p> Merges two Uniforum style .po files together. The def.po file is an existing PO file with translations which will be taken over to the newly created file as long as they still match; comments will be preserved, but extracted comments and file positions will be discarded. The ref.pot file is the last created PO file with up-to-date source references but old translations, or a PO Template file (generally created by xgettext); any translations or comments in the file will be discarded, however dot comments and file positions will be preserved. Where an exact match cannot be found, fuzzy matching is used to produce better results. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <h3>Input file location:</h3>

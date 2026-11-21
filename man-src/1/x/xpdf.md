@@ -1,5 +1,4 @@
 ---
-
 title: "xpdf(1)"
 name: "xpdf"
 section: "1"
@@ -10,7 +9,9 @@ description: "xpdf – Portable Document Format (PDF) file viewer for X (version
 
 <h2>NAME</h2>
 <p> xpdf &#8211; Portable Document Format (PDF) file viewer for X (version 3.04)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>xpdf</code> [options] [<i>PDF-file</i> [<i>page</i> | +<i>dest</i>]]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Xpdf</code> is a viewer for Portable Document Format (PDF) files. (These are also sometimes also called &#8216;Acrobat&#8217; files, from the name of Adobe&#8217;s PDF software.) Xpdf runs under the X Window System on UNIX, VMS, and OS/2. </p>
 <p> To run xpdf, simply type: </p>
 <dl>

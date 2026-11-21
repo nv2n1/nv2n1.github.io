@@ -1,5 +1,4 @@
 ---
-
 title: "chage(1)"
 name: "chage"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-chage/"
 description: "chage – change user password expiry information"
 ---
 
+<h2 class="name">NAME</h2>
+<p> chage &#8211; change user password expiry information </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>chage</code> [<i>options</i>] <i>LOGIN</i></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>chage</code> command changes the number of days between password changes and the date of the last password change. This information is used by the system to determine when a user must change their password.</dd>
 <h2>OPTIONS</h2>
 <p> The options which apply to the <code>chage</code> command are: </p>

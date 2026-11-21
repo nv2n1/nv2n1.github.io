@@ -1,5 +1,4 @@
 ---
-
 title: "dvilj(1)"
 name: "dvilj"
 section: "1"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/1-dvilj/"
 description: "dvilj4, dvilj4l, dvilj2p, dvilj – convert a TeX DVI file to PCL, for HP LaserJet printers"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dvilj4, dvilj4l, dvilj2p, dvilj &#8211; convert a TeX DVI file to PCL, for HP LaserJet printers </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 dvilj[--Dnumber][-ccopies][-dmode][-D][-E][-eoutputfile]
      [-ffrompage][-g][-hheaderfile][-l][-Mflag][-mmag][-ppages]
      [-q][-r][-ttopage][-spagesize][-v][-Vmode][-w][-xxoff(mm)]
      [-yyoff(mm)][-Xxoff(dots)][-Yyoff(dots)][-z][filename]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>dvilj</code> and siblings convert TeX-output <tt>&quot;.dvi&quot;</tt> files into <font SIZE="-1">PCL </font>(the Hewlett-Packard Printer Control Language) commands suitable for printing on a <font SIZE="-1">HP</font> LaserJet+, <font SIZE="-1">HP</font> LaserJet <font SIZE="-1">IIP </font>(using <code>dvilj2p</code>), <font SIZE="-1">HP</font> LaserJet 4 (using <code>dvilj4</code>), and fully compatible printers. </p>
 <p> <code>dvilj4</code> also provides support for the builtin Intellifont and TrueType fonts; <font SIZE="-1">TFM</font> and <font SIZE="-1">VF</font> files are provided in the distribution. Virtual fonts are not supported directly by <code>dvilj</code>, so you must run <i><a href="/docs/linux/man/1-dvicopy/">dvicopy</a></i>(1) first, or otherwise expand the virtual fonts </p>
 <p> All programs are generated from one source file <i>dvi2xx.c</i>. They are usually called via a shell script or as a line printer filter. One such script, <i><a href="/docs/linux/man/1-dvihp/">dvihp</a></i>(1), is included in the distribution. It provides command-line options similar to those of <i><a href="/docs/linux/man/1-dvips/">dvips</a></i>(1).</p>

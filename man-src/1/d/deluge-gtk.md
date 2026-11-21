@@ -1,5 +1,4 @@
 ---
-
 title: "deluge-gtk(1)"
 name: "deluge-gtk"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-deluge-gtk/"
 description: "deluge-gtk – a bittorrent client gtk interface"
 ---
 
+<h2 class="name">NAME</h2>
+<p> deluge-gtk &#8211; a bittorrent client gtk interface</p>
+<h2>SYNOPSIS</h2>
 <p> <code>deluge-gtk [options]</code> [<i>torrent-file</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> Deluge utilizes a client/server model, with &#8216;deluged&#8217; being the daemon process and &#8216;deluge-gtk&#8217; being used to launch a GTK+ user-interface. </p>
 <p> By default, Deluge will run in &#8216;Classic&#8217; mode where the daemon functionality will be hidden. You can turn this off in the Preferences dialog. </p>
 <h2>OPTIONS</h2>

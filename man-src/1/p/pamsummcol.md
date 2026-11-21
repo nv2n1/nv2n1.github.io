@@ -1,5 +1,4 @@
 ---
-
 title: "pamsummcol(1)"
 name: "pamsummcol"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pamsummcol/"
 description: "pamsummcol – summarize (sum, average, etc) a Netpbm image by column"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pamsummcol &#8211; summarize (sum, average, etc) a Netpbm image by column</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pamsummcol</code> { <code>-sum</code> | <code>-mean</code> | <code>-min</code> | <code>-max</code> } [<i>imagefile</i>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one. You may separate an option name and its value with white space instead of an equals sign. </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamsummcol</code> reads a Netpbm image (PNM or PAM) and performs a summary function over all the rows in each column (sum, mean, etc.). It produces an image of the same kind that the same width and depth as the input, and one row high. Its sample values are the result of the summary. </p>
 <p> <code>pamsummcol</code> performs the summary operation on each plane independently. </p>

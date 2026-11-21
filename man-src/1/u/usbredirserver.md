@@ -1,5 +1,4 @@
 ---
-
 title: "usbredirserver(1)"
 name: "usbredirserver"
 section: "1"
@@ -10,7 +9,9 @@ description: "usbredirserver – exporting an USB device for use from another (v
 
 <h2>NAME</h2>
 <p> usbredirserver &#8211; exporting an USB device for use from another (virtual) machine</p>
+<h2>SYNOPSIS</h2>
 <p> <code>usbredirserver</code> [<i>-p|&#8211;port &lt;port&gt;</i>] [<i>-v|&#8211;verbose &lt;0-5&gt;</i>] <i>&lt;usbbus-usbaddr|vendorid:prodid&gt;</i></p>
+<h2>DESCRIPTION</h2>
 <p> usbredirserver is a small standalone server for exporting an USB device for use from another (virtual) machine through the usbredir protocol. </p>
 <p> You can specify the USB device to export either by USB id in the form of <i>&lt;vendorid&gt;:&lt;prodid&gt;</i>, or by USB bus number and device address in the form of <i>&lt;usbbus&gt;-&lt;usbaddr&gt;</i>. </p>
 <p> Notice that an instance of usbredirserver can only be used to export a single USB device. If you want to export multiple devices you can start multiple instances listening on different TCP ports.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "git-clean(1)"
 name: "git-clean"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-clean/"
 description: "git-clean – Remove untracked files from the working tree"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-clean &#8211; Remove untracked files from the working tree </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git clean[-d][-f][-i][-n][-q][-e&lt;pattern&gt;][-x | -X][--]&lt;path&gt;...
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Cleans the working tree by recursively removing files that are not under version control, starting from the current directory. </p>
 <p> Normally, only files unknown to Git are removed, but if the <code>-x</code> option is specified, ignored files are also removed. This can, for example, be useful to remove all build products. </p>
 <p> If any optional <code>&lt;path&gt;&#8230;</code> arguments are given, only those paths are affected.</p>

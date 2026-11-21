@@ -1,5 +1,4 @@
 ---
-
 title: "py3clean(1)"
 name: "py3clean"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-py3clean/"
 description: "py3clean – removes .pyc and .pyo files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> py3clean &#8211; removes .pyc and .pyo files </p>
+<h2>SYNOPSIS</h2>
 <p> py3clean [-V VERSION] [-p PACKAGE] [DIR_OR_FILE]</p>
 <h2>OPTIONS</h2>
 <dl>

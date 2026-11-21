@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_dtls_cookie_verify(3)"
 name: "gnutls_dtls_cookie_verify"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_dtls_cookie_verify – API function"
 
 <h2>NAME</h2>
 <p> gnutls_dtls_cookie_verify &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/dtls.h&gt;</code> </p>
 <p> <code>int gnutls_dtls_cookie_verify(gnutls_datum_t * </code><i>key</i><code>, void * </code><i>client_data</i><code>, size_t </code><i>client_data_size</i><code>, void * </code><i>_msg</i><code>, size_t </code><i>msg_size</i><code>, gnutls_dtls_prestate_st * </code><i>prestate</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -26,6 +26,7 @@ description: "gnutls_dtls_cookie_verify – API function"
 <dd> The size of the message.</dd>
 <dt>gnutls_dtls_prestate_st * prestate</dt>
 <dd> The cookie of this client.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will verify the received message for a valid cookie. If a valid cookie is returned then it should be associated with the session using <code>gnutls_dtls_prestate_set()</code>; </p>
 <p> This function must be called after <code>gnutls_dtls_cookie_send()</code>.</p>
 <h2>RETURNS</h2>

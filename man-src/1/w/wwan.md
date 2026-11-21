@@ -1,5 +1,4 @@
 ---
-
 title: "wwan(1)"
 name: "wwan"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-wwan/"
 description: "wwan – enable/disable internal wireless wan (umts) device"
 ---
 
+<h2 class="name">NAME</h2>
+<p> wwan &#8211; enable/disable internal wireless wan (umts) device</p>
+<h2>SYNOPSIS</h2>
 <p> <code>wwan </code>[<i>command</i>] </p>
 <h2>COMMANDS</h2>
 <dl>

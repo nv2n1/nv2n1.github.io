@@ -1,5 +1,4 @@
 ---
-
 title: "incrontab(1)"
 name: "incrontab"
 section: "1"
@@ -10,8 +9,10 @@ description: "incrontab – table manipulator for inotify cron (incron)"
 
 <h2>NAME</h2>
 <p> incrontab &#8211; table manipulator for inotify cron (incron)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>incrontab</code> [<code>-u</code> <i>user</i>] [<code>-f</code> <i>config</i>] <i>file</i> </p>
 <p> <code>incrontab</code> [<code>-u</code> <i>user</i>] [<code>-f</code> <i>config</i>] [<code>-l</code> | <code>-r</code> | <code>-e</code> | <code>-t</code> | <code>-d</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> incrontab is a table manipulator for the inotify cron (incron) system. It creates, removes, modifies and lists user tables (<i><a href="/docs/linux/man/5-incrontab/">incrontab</a></i>(5)). </p>
 <p> Each user (including system users even they haven&#8217;t home directories) has an incron table which can&#8217;t be manipulated directly (only root can effectively change these tables and is NOT recommended to do so). </p>
 <p> All informational messages of this program are printed to the standard error output (stderr). </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "exit(3)"
 name: "exit"
 section: "3"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/3-exit/"
 description: "exit – cause normal process termination"
 ---
 
+<h2 class="name">NAME</h2>
+<p> exit &#8211; cause normal process termination </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;
 void exit(int status);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>exit</code>() function causes normal process termination and the least significant byte of <i>status</i> (i.e., <i>status &amp; 0xFF</i>) is returned to the parent (see <code><a href="/docs/linux/man/2-wait/">wait</a></code>(2)). </p>
 <p> All functions registered with <code><a href="/docs/linux/man/3-atexit/">atexit</a></code>(3) and <code>on_exit</code>(3) are called, in the reverse order of their registration. (It is possible for one of these functions to use <code><a href="/docs/linux/man/3-atexit/">atexit</a></code>(3) or <code>on_exit</code>(3) to register an additional function to be executed during exit processing; the new registration is added to the front of the list of functions that remain to be called.) If one of these functions does not return (e.g., it calls <code>_exit</code>(2), or kills itself with a signal), then none of the remaining functions is called, and further exit processing (in particular, flushing of <code><a href="/docs/linux/man/3-stdio/">stdio</a></code>(3) streams) is abandoned. If a function has been registered multiple times using <code><a href="/docs/linux/man/3-atexit/">atexit</a></code>(3) or <code>on_exit</code>(3), then it is called as many times as it was registered. </p>
 <p> All open <code><a href="/docs/linux/man/3-stdio/">stdio</a></code>(3) streams are flushed and closed. Files created by <code><a href="/docs/linux/man/3-tmpfile/">tmpfile</a></code>(3) are removed. </p>

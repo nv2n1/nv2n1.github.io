@@ -1,5 +1,4 @@
 ---
-
 title: "docker-container-run(1)"
 name: "docker-container-run"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-container-run/"
 description: "docker-container-run – Run a command in a new container"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-container-run &#8211; Run a command in a new container </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker container run [OPTIONS] IMAGE [COMMAND] [ARG&#8230;]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Alias for docker run. </p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;add-host</code>= <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Add a custom host-to-IP mapping (host:ip)</p>

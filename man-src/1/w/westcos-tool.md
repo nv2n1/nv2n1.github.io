@@ -1,5 +1,4 @@
 ---
-
 title: "westcos-tool(1)"
 name: "westcos-tool"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-westcos-tool/"
 description: "westcos-tool – utility for manipulating data structure on westcos smart card and similar security tokens"
 ---
 
+<h2 class="name">NAME</h2>
+<p> westcos-tool &#8211; utility for manipulating data structure on westcos smart card and similar security tokens </p>
+<h2>SYNOPSIS</h2>
 <p> <code>westcos-tool</code> [OPTIONS]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>westcos-tool</code> utility is used to manipulate the westcos data structures on 2 Ko smart cards. Users can create PINs, keys and certificates stored on the token. User PIN authentication is performed for those operations that require it.</p>
 <h2>OPTIONS</h2>
 <p> <code>-G</code></p>

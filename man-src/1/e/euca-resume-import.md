@@ -1,5 +1,4 @@
 ---
-
 title: "euca-resume-import(1)"
 name: "euca-resume-import"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-resume-import – Perform the upload step of an import task"
 
 <h2>NAME</h2>
 <p> euca-resume-import &#8211; Perform the upload step of an import task</p>
+<h2>SYNOPSIS</h2>
 <p> euca-resume-import <code>-t</code> TASK [-x DAYS] [&#8211;show-empty-fields]</p>
 <dl>
 <dt>[&#8211;s3-url URL] [-o KEY_ID] [-w KEY]</dt>
 <dd> [&#8211;progress | <code>&#8211;no-progress]</code> [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] FILE</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Perform the upload step of an import task</p>
 <h3>positional arguments:</h3>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "fribidi_set_mirroring(3)"
 name: "fribidi_set_mirroring"
 section: "3"
@@ -7,9 +6,14 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_set_mirroring/"
 ---
 
-fribidi_set_mirroring - set mirroring on or off 
+<h2 class="name">NAME</h2>
+ 
 
-<b> #include &lt;fribidi.h&gt; 
+ fribidi_set_mirroring - set mirroring on or off 
+
+<h2>SYNOPSIS</h2>
+
+ <b> #include &lt;fribidi.h&gt; 
 
  extern fribidi_boolean fribidi_set_mirroring(fribidi_boolean state); </b>
 
@@ -19,7 +23,9 @@ fribidi_set_mirroring - set mirroring on or off
 <dt><b>fribidi_boolean state</b>
 </dt><dd> New state to set.</dd></dl>
 
-This function is used to turn character mirroring on or off. Character mirroring is the act of replacing a mirrorable glyph (character), eg. Left parenthesis, with the matching glyph, eg. Right parenthesis, in a right-to-left resolved context. If your rendering engine does mirroring itself, you may want to turn it off here. 
+<h2>DESCRIPTION</h2>
+
+ This function is used to turn character mirroring on or off. Character mirroring is the act of replacing a mirrorable glyph (character), eg. Left parenthesis, with the matching glyph, eg. Right parenthesis, in a right-to-left resolved context. If your rendering engine does mirroring itself, you may want to turn it off here. 
 
  This flag is on by default. This function is deprecated and only used with other deprecated functions.
 

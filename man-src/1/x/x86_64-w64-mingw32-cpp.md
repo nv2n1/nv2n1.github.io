@@ -1,5 +1,4 @@
 ---
-
 title: "x86_64-w64-mingw32-cpp(1)"
 name: "x86_64-w64-mingw32-cpp"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-x86_64-w64-mingw32-cpp/"
 description: "cpp – The C Preprocessor"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cpp &#8211; The C Preprocessor </p>
+<h2>SYNOPSIS</h2>
 <p> cpp [<code>-D</code><i>macro</i>[=<i>defn</i>]&#8230;] [<code>-U</code><i>macro</i>]<br />
 &nbsp;<wbr>[<code>-I</code><i>dir</i>&#8230;]&nbsp;<wbr>[<code>-iquote</code><i>dir</i>&#8230;]<br />
 &nbsp;<wbr>[<code>-W</code><i>warn</i>&#8230;]<br />
@@ -18,6 +20,7 @@ description: "cpp – The C Preprocessor"
 &nbsp;<wbr>[<code>-x</code>&nbsp;<wbr><i>language</i>]&nbsp;<wbr>[<code>-std=</code><i>standard</i>]<br />
 &nbsp;<wbr><i>infile</i>&nbsp;<wbr><i>outfile</i> </p>
 <p> Only the most useful options are listed here; see below for the remainder.</p>
+<h2>DESCRIPTION</h2>
 <p> The C preprocessor, often known as <i>cpp</i>, is a <i>macro processor</i> that is used automatically by the C compiler to transform your program before compilation. It is called a macro processor because it allows you to define <i>macros</i>, which are brief abbreviations for longer constructs. </p>
 <p> The C preprocessor is intended to be used only with C, C<font SIZE="-2">++</font>, and Objective-C source code. In the past, it has been abused as a general text processor. It will choke on input which does not obey C&#8217;s lexical rules. For example, apostrophes will be interpreted as the beginning of character constants, and cause errors. Also, you cannot rely on it preserving characteristics of the input which are not significant to C-family languages. If a Makefile is preprocessed, all the hard tabs will be removed, and the Makefile will not work. </p>
 <p> Having said that, you can often get away with using cpp on things which are not C. Other Algol-ish programming languages are often safe (Pascal, Ada, etc.) So is assembly, with caution. <code>-traditional-cpp</code> mode preserves more white space, and is otherwise more permissive. Many of the problems can be avoided by writing C or C<font SIZE="-2">++</font> style comments instead of native language comments, and keeping macros simple. </p>

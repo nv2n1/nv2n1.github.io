@@ -1,5 +1,4 @@
 ---
-
 title: "radzap(1)"
 name: "radzap"
 section: "1"
@@ -10,7 +9,9 @@ description: "radzap – remove rogue entries from the active sessions database"
 
 <h2>NAME</h2>
 <p> radzap &#8211; remove rogue entries from the active sessions database</p>
+<h2>SYNOPSIS</h2>
 <p> <code>radzap</code> [<code>-d</code> <i>raddb_directory</i>] [<code>-h</code>] [<code>-N</code> <i>nas_ip_address</i>] [<code>-P</code> <i>nas_port</i>] [<code>-u</code> <i>user</i>] [<code>-U</code> <i>user</i>] [<code>-x</code>] <i>server[:port] secret</i></p>
+<h2>DESCRIPTION</h2>
 <p> The FreeRadius server can be configured to maintain an active session database in a file called <i>radutmp</i>. Commands like <code><a href="/docs/linux/man/1-radwho/">radwho</a></code>(1) use this database. Sometimes that database can get out of sync, and then it might contain rogue entries. <code>radzap</code> can clean up this database. </p>
 <p> As of FreeRADIUS 1.1.0, <code>radzap</code> is a simple shell-script wrapper around <code><a href="/docs/linux/man/1-radwho/">radwho</a></code>(1) and <code><a href="/docs/linux/man/1-radclient/">radclient</a></code>(1). </p>
 <p> The sessions are &quot;zapped&quot; by sending an Accounting-Request packet which contains the information necessary for the server to delete the session record. <code>radzap</code> sends a packet to the server, rather than writing to <i>radutmp</i> directly, because session records may also be maintained in SQL.</p>

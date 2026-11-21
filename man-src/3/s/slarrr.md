@@ -1,5 +1,4 @@
 ---
-
 title: "slarrr(3)"
 name: "slarrr"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-slarrr/"
 description: "slarrr.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> slarrr.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slarrr</code> (N, D, E, INFO)<br />
  <i></i><code>SLARRR</code> performs tests to decide whether the symmetric tridiagonal matrix T warrants expensive computations which guarantee high relative accuracy in the eigenvalues.</p>

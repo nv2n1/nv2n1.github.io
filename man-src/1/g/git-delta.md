@@ -1,5 +1,4 @@
 ---
-
 title: "git-delta(1)"
 name: "git-delta"
 section: "1"
@@ -10,7 +9,9 @@ description: "git-delta – Lists changed files"
 
 <h2>NAME</h2>
 <p> <code>git-delta</code> &#8211; Lists changed files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>git-delta</code> [&lt;branch&gt;] [&lt;filter&gt;]</p>
+<h2>DESCRIPTION</h2>
 <p> Lists all files that differ from a branch. By default, lists files that have been added, copied, or modified as compared to the <code>master</code> branch.</p>
 <h2>EXAMPLES</h2>
 <p> Lists all modified and renamed files vs. <code>master</code>:</p>

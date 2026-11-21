@@ -1,5 +1,4 @@
 ---
-
 title: "g_rms_d(1)"
 name: "g_rms_d"
 section: "1"
@@ -11,7 +10,9 @@ description: "g_rms – calculates rmsd’s with a reference structure and rmsd 
 <h2>NAME</h2>
 <p> g_rms &#8211; calculates rmsd&#8217;s with a reference structure and rmsd matrices </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>g_rms</code> <code>-s</code><i> topol.tpr </i> <code>-f</code><i> traj.xtc </i> <code>-f2</code><i> traj.xtc </i> <code>-n</code><i> index.ndx </i> <code>-o</code><i> rmsd.xvg </i> <code>-mir</code><i> rmsdmir.xvg </i> <code>-a</code><i> avgrp.xvg </i> <code>-dist</code><i> rmsd-dist.xvg </i> <code>-m</code><i> rmsd.xpm </i> <code>-bin</code><i> rmsd.dat </i> <code>-bm</code><i> bond.xpm </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-tu</code><i> enum </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-what</code><i> enum </i> <code>-[no]pbc</code><i></i> <code>-fit</code><i> enum </i> <code>-prev</code><i> int </i> <code>-[no]split</code><i></i> <code>-skip</code><i> int </i> <code>-skip2</code><i> int </i> <code>-max</code><i> real </i> <code>-min</code><i> real </i> <code>-bmax</code><i> real </i> <code>-bmin</code><i> real </i> <code>-[no]mw</code><i></i> <code>-nlevels</code><i> int </i> <code>-ng</code><i> int </i></p>
+<h2>DESCRIPTION</h2>
 <p> g_rms compares two structures by computing the root mean square deviation (RMSD), the size-independent &#8216;rho&#8217; similarity parameter (rho) or the scaled rho (rhosc), see Maiorov &amp; Crippen, PROTEINS <code> 22</code>, 273 (1995). This is selected by <code> -what</code>. </p>
 <p> Each structure from a trajectory (<code> -f</code>) is compared to a reference structure. The reference structure is taken from the structure file (<code> -s</code>). </p>
 <p> With option <code> -mir</code> also a comparison with the mirror image of the reference structure is calculated. This is useful as a reference for &#8216;significant&#8217; values, see Maiorov &amp; Crippen, PROTEINS <code> 22</code>, 273 (1995). </p>

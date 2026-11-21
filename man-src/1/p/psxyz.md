@@ -1,5 +1,4 @@
 ---
-
 title: "psxyz(1)"
 name: "psxyz"
 section: "1"
@@ -10,8 +9,10 @@ description: "psxyz – Plot lines, polygons, and symbols in 3-D"
 
 <h2>NAME</h2>
 <p> psxyz &#8211; Plot lines, polygons, and symbols in 3-D</p>
+<h2>SYNOPSIS</h2>
 <p> <code>psxyz</code> [ <i>table</i> ] <i>parameters</i> <code>z</code>|<code>Z</code><i>parameters</i> <i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[/<i>zmin</i>/<i>zmax</i>][<code>r</code>] [ [<code>p</code>|<code>s</code>]<i>parameters</i> ] [ <i>dx</i>/<i>dy</i>[/<i>dz</i>] ] [ <i>fill</i> ] [ <i>intens</i> ] [ ] [ [<code>+b</code>|<code>d</code>|<code>D</code>][<code>+xl</code>|<code>r</code>|<i>x0</i>][<code>+yl</code>|<code>r</code>|<i>y0</i>][<code>+p</code><i>pen</i>] ] [ ] [ ] [ ] [ ] [ [<i>symbol</i>][<i>size</i>[<code>unit</code>]][/<i>size_y</i>] ] [ ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ [<i>level</i>] ] [ [<code>&#8211;</code>|<code>+</code>][<i>pen</i>] ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ <code>-a</code><i>&lt;flags&gt;</i> ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-c</code><i>copies</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-t</code><i>&lt;transp&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>psxyz</code> reads (x,y,z) triplets from <i>files</i> [or standard input] and generates PostScript code that will plot lines, polygons, or symbols at those locations in 3-D. If a symbol is selected and no symbol size given, then <code>psxyz</code> will interpret the fourth column of the input data as symbol size. Symbols whose <i>size</i> is &lt;= 0 are skipped. If no symbols are specified then the symbol code (see <code>-S</code> below) must be present as last column in the input. If <code>-S</code> is not used, a line connecting the data points will be drawn instead. To explicitly close polygons, use <code>-L</code>. Select a fill with <code>-G</code>. If <code>-G</code> is set, <code>-W</code> will control whether the polygon outline is drawn or not. If a symbol is selected, <code>-G</code> and <code>-W</code> determines the fill and outline/no outline, respectively. The PostScript code is written to standard output.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

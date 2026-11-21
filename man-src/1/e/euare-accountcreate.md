@@ -1,5 +1,4 @@
 ---
-
 title: "euare-accountcreate(1)"
 name: "euare-accountcreate"
 section: "1"
@@ -10,10 +9,12 @@ description: "euare-accountcreate – [Eucalyptus cloud admin only] Create a new
 
 <h2>NAME</h2>
 <p> euare-accountcreate &#8211; [Eucalyptus cloud admin only] Create a new account</p>
+<h2>SYNOPSIS</h2>
 <p> euare-accountcreate [-k] [-w] [-d DOMAIN] [-l] [&#8211;show-empty-fields]</p>
 <dl>
 <dt>[-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID]</dt>
 <dd> [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] [ACCOUNT]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> [Eucalyptus cloud admin only] Create a new account</p>
 <h3>positional arguments:</h3>
 <dl>

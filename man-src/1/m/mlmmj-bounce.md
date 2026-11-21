@@ -1,5 +1,4 @@
 ---
-
 title: "mlmmj-bounce(1)"
 name: "mlmmj-bounce"
 section: "1"
@@ -10,6 +9,7 @@ description: "mlmmj-bounce – bounce handling utility for mlmmj"
 
 <h2>NAME</h2>
 <p> mlmmj-bounce &#8211; bounce handling utility for mlmmj</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mlmmj-bounce</code> <i>-L /path/to/list </i>[<i>-a john=doe.org | -d</i>]<i> </i>[<i>-n num | -p</i>]</p>
 <dl>
 <dt> <code>-a</code>: Address string that bounces</dt>
@@ -19,6 +19,7 @@ description: "mlmmj-bounce – bounce handling utility for mlmmj"
 <dt> <code>-n</code>: Message number in the archive that bounced</dt>
 <dt> <code>-p</code>: Send out a probe</dt>
 <dt> <code>-V</code>: Print version</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>mlmmj-bounce is used to handle mails that are bouncing. When a mail arrives to the system, mlmmj-bounce will register in &lt;listdir&gt;/bounce/&lt;addrstring&gt; info about which number that bounced at what time. An example of such a line could be: </dd>
 <p> 109:1094409801 # Sun Sep 5 20:43:21 2004 </p>
 <p> The above shows that message number 109 bounced 1094409801 seconds after epoch which is in human date stamps is Sunday September 5th 20:43:21 2004. </p>

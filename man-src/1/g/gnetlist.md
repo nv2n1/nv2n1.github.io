@@ -1,5 +1,4 @@
 ---
-
 title: "gnetlist(1)"
 name: "gnetlist"
 section: "1"
@@ -10,7 +9,9 @@ description: "gnetlist – gEDA/gaf Netlist extraction/generation"
 
 <h2>NAME</h2>
 <p> gnetlist &#8211; gEDA/gaf Netlist extraction/generation</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gnetlist</code> [-e] [-i] [-I] [-q] [-s] [-v] [-l schem_file] [-m schem_file ] [-n] [ -O option ] [-h | &#8211;help] [-g guile_procedure] [-c scheme_string ] [-o output_filename] schematic1 [&#8230; schematicN]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>gnetlist</i> is the netlist extraction/generation program which is part gEDA (GPL Electronic Design Automation) toolset. This program takes a schematic for its input and outputs a netlist. </p>
 <p> gnetlist depends heavily on guile (a scheme based scripting language). It uses guile to define the output format. Basically gnetlist reads a schematic, creates an internal representation of the various connections, and then a guile script extracts the connections into some netlist format. </p>
 <p> gnetlist is very much so a work in progress. Currently it supports the following backends: </p>

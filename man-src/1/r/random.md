@@ -1,5 +1,4 @@
 ---
-
 title: "random(1)"
 name: "random"
 section: "1"
@@ -7,7 +6,10 @@ letter: "r"
 url: "/docs/linux/man/1-random/"
 ---
 
-random - generate random number
+<h2 class="name">NAME</h2>
+ 
+
+ random - generate random number
 
 <h3>Synopsis</h3>
 

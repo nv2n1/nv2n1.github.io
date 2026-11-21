@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_gass_cache_open/"
 description: "Globus GASS Cache –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Globus GASS Cache &#8211; </p>
 <h3>Macros</h3>
 <p> #define <code>GLOBUS_GASS_CACHE_MODULE</code> (&amp;globus_i_gass_cache_module)<br />
  <i>module_descriptor </i></p>

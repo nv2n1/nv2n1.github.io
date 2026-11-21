@@ -1,5 +1,4 @@
 ---
-
 title: "ck_hs_next(3)"
 name: "ck_hs_next"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_hs_next – iterate to next entry in hash set"
 <p> <code>ck_hs_next</code> &#8211; iterate to next entry in hash set</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_hs.h Ft bool Fn ck_hs_next ck_hs_t *hs ck_hs_iterator_t *iterator void **entry</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_hs_next 3 function will increment the iterator object pointed to by Fa iterator to point to the next non-empty hash set entry. If Fn ck_hs_next 3 returns true then the pointer pointed to by Fa entry is initialized to the current hash set key pointed to by the Fa iterator object. </p>
 <p> It is expected that Fa iterator has been initialized using the ck_hs_iterator_init3 function or statically initialized using CK_HS_ITERATOR_INITIALIZER.</p>
 <h2>RETURN VALUES</h2>

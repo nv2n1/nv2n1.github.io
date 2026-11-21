@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_gss_assist_gridmap/"
 description: "Gridmap Authorization –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Gridmap Authorization &#8211; </p>
 <p> Gridmap Authorization and Local User Mapping.</p>
 <h3>Macros</h3>
 <p> #define <code>GlobusGssAssistFreeDNArray</code>(dn_a)<br />

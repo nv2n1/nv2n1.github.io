@@ -1,5 +1,4 @@
 ---
-
 title: "gamma4scanimage(1)"
 name: "gamma4scanimage"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-gamma4scanimage/"
 description: "gamma4scanimage – create a gamma table for scanimage"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gamma4scanimage &#8211; create a gamma table for scanimage </p>
+<h2>SYNOPSIS</h2>
 <p> <code>gamma4scanimage</code> <i>gamma</i> [<i>shadow</i> [<i>highlight</i> [<i>maxin</i> [<i>maxout</i>]]]] </p>
+<h2>DESCRIPTION</h2>
 <p> The tool <code>gamma4scanimage</code> creates a gamma table in the format expected by scanimage. You can define a <code>gamma,</code> a <code>shadow</code> and a <code>highlight</code> value. You also can specify the size (<code>maxin</code>) and maximum output value (<code>maxout</code>) of the gamma table. </p>
 <p> <code>gamma</code> is a floating point value, neutral value being 1.0. If the value is larger than 1.0 then the image is brighter. </p>
 <p> <code>shadow</code> defines the minimum input value that is necessary to create an output value larger than zero. shadow has to be in the range [0..<code>maxin</code>]. Its default value is 0. </p>

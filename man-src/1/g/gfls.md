@@ -1,5 +1,4 @@
 ---
-
 title: "gfls(1)"
 name: "gfls"
 section: "1"
@@ -10,7 +9,9 @@ description: "gfls – manual page for gfls (glusterfs-coreutils) 0.2.0"
 
 <h2>NAME</h2>
 <p> gfls &#8211; manual page for gfls (glusterfs-coreutils) 0.2.0</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gfls</code> [<i>OPTION</i>]&#8230; <i>URL</i></p>
+<h2>DESCRIPTION</h2>
 <p> list directory contents</p>
 <dl>
 <dt><code>-a</code>, <code>&#8211;all</code></dt>

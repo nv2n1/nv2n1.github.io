@@ -1,5 +1,4 @@
 ---
-
 title: "pmdalmsensors(1)"
 name: "pmdalmsensors"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmdalmsensors – Linux hardware monitoring performance metrics do
 
 <h2>NAME</h2>
 <p> <code>pmdalmsensors</code> &#8211; Linux hardware monitoring performance metrics domain agent (PMDA)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/lmsensors/pmdalmsensors</code> [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdalmsensors</code> is a Performance Metrics Domain Agent (PMDA) which extracts performance metrics describing the state of hardware using the lm-sensors on compatible motherboards. </p>
 <p> The <code>lmsensors</code> PMDA exports metrics that measure fan speeds, core temperatures and voltage levels. </p>
 <p> A brief description of the <code>pmdalmsensors</code> command line options follows:</p>

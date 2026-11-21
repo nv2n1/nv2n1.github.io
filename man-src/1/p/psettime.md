@@ -1,5 +1,4 @@
 ---
-
 title: "psettime(1)"
 name: "psettime"
 section: "1"
@@ -10,7 +9,9 @@ description: "psettime – synchronize the time on a PDA with the local computer
 
 <h2>NAME</h2>
 <p> psettime &#8211; synchronize the time on a PDA with the local computer </p>
+<h2>SYNOPSIS</h2>
 <p> <code>psettime</code> [-d <i>LEVEL</i>] [-p <i>DEVNAME</i>] [-h] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>psettime</code> sets the time on a device connected through SynCE to the time on the local computer. </p>
 <p> This tool must be run as the same user as the dccmd daemon. </p>
 <h2>OPTIONS</h2>

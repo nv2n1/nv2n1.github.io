@@ -1,5 +1,4 @@
 ---
-
 title: "systemd-path(1)"
 name: "systemd-path"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-systemd-path/"
 description: "systemd-path – List and query system and user paths"
 ---
 
+<h2 class="name">NAME</h2>
+<p> systemd-path &#8211; List and query system and user paths </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>systemd-path</code> [OPTIONS&#8230;] [NAME&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>systemd-path</code></p>
 <dd>may be used to query system and user paths. The tool makes many of the paths described in <code><a href="/docs/linux/man/7-file-hierarchy/">file-hierarchy</a></code>(7) available for querying. </dd>
 <p> When invoked without arguments, a list of known paths and their current values is shown. When at least one argument is passed, the path with this name is queried and its value shown. The variables whose name begins with &quot;search-&quot; do not refer to individual paths, but instead to a list of colon-separated search paths, in their order of precedence.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "whisper-update(1)"
 name: "whisper-update"
 section: "1"
@@ -14,6 +13,7 @@ description: "whisper-update – update a whisper database"
 <pre><code>
 whisper - update[options] path timestamp : value [timestamp:value] *
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> This command adds an entry to a whisper fixed-size database. </p>
 <p> The options are described below.</p>
 <h2>OPTIONS</h2>

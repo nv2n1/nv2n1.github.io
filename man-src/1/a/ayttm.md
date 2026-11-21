@@ -1,5 +1,4 @@
 ---
-
 title: "ayttm(1)"
 name: "ayttm"
 section: "1"
@@ -10,7 +9,9 @@ description: "Ayttm – Universal Instant Messaging client"
 
 <h2>NAME</h2>
 <p> Ayttm &#8211; Universal Instant Messaging client</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ayttm</code> [<i>options</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Ayttm is an instant messaging (aka chat) client that provides all-in-one chat functionality for several major instant messaging services from one simple program. Ayttm &quot;Contacts&quot; allow you to refer to several accounts of the same person from a single contact name, making it one of the cleanest and simplest clients to use.</p>
 <h2>OPTIONS</h2>
 <dl>

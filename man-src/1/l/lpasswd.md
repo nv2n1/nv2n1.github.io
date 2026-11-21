@@ -1,5 +1,4 @@
 ---
-
 title: "lpasswd(1)"
 name: "lpasswd"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-lpasswd/"
 description: "lpasswd – Change group or user password"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lpasswd &#8211; Change group or user password</p>
+<h2>SYNOPSIS</h2>
 <p> lpasswd [<i>OPTION</i>]&#8230; [<i>name</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> Changes password of user or group <i>name</i>. </p>
 <p> If the <i>name</i> argument is not provided, username of the invoking user is used; the <i>name</i> argument is ignored if <code>lpasswd</code> is run set-uid to a different user. </p>
 <p> Entering an empty password (by pressing Enter) aborts the password setting operation. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "hercules(1)"
 name: "hercules"
 section: "1"
@@ -10,7 +9,9 @@ description: "Hercules – IBM System/370, ESA/390, and z/Architecture Emulator"
 
 <h2>NAME</h2>
 <p> <code>Hercules</code> &#8211; IBM System/370, ESA/390, and z/Architecture Emulator</p>
+<h2>SYNOPSIS</h2>
 <p> <code>hercules</code> [<code>-f</code> <i>config-filename</i>] [<code>-d</code>] [<code>-b</code> <i>logo-filename</i>] [<code>-p</code> <i>dyn-load-dir</i>] [[<code>-l</code> <i>dynmod-to-load</i>]&#8230;] [&gt; <i>logfile</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Hercules</code> is a software implementation of the System/370, ESA/390 and z/Architecture mainframe architectures. </p>
 <p> It means that your PC can emulate an IBM mainframe processor. The mainframe can range from a System/360 to a z10 &#8211; running in &quot;S/370&quot; mode, &quot;ESA/390&quot; mode, or &quot;z/Architecture&quot; mode. </p>
 <p> <code>Hercules</code> executes S/370, ESA/390, and z/Architecture instructions and channel programs. It emulates mainframe I/O devices by using PC devices. For example, 3390 DASD devices are emulated by large files on your hard disk, and local 3270 screens are emulated by tn3270 sessions. (Note: Not all 370 and 390 features have been implemented in <code>Hercules</code>. Also, certain non-standard models, 360/20s, and the 360/67 virtual memory mode are not emulated.) </p>

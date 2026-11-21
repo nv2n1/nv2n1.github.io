@@ -1,5 +1,4 @@
 ---
-
 title: "dllogin(1)"
 name: "dllogin"
 section: "1"
@@ -10,7 +9,9 @@ description: "clogin – Cisco login script"
 
 <h2>NAME</h2>
 <p> clogin &#8211; Cisco login script</p>
+<h2>SYNOPSIS</h2>
 <p> <code>clogin</code> [<code>-autoenable</code>] [<code>-noenable</code>] [<code>-dSV</code>] [<code>-c&nbsp;<wbr></code> command] [<code>-E&nbsp;<wbr></code> var=x] [<code>-e&nbsp;<wbr></code> enable-password] [<code>-f&nbsp;<wbr></code> cloginrc-file] [<code>-p&nbsp;<wbr></code> user-password] [<code>-s&nbsp;<wbr></code> script-file] [<code>-t&nbsp;<wbr></code> timeout] [<code>-u&nbsp;<wbr></code> username] [<code>-v&nbsp;<wbr></code> vty-password] [<code>-w&nbsp;<wbr></code> enable-username] [<code>-x&nbsp;<wbr></code> command-file] [<code>-y&nbsp;<wbr></code> ssh_cypher_type] router [router&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>clogin</code> is an <code><a href="/docs/linux/man/1-expect/">expect</a></code>(1) script to automate the process of logging into a Cisco router, Catalyst switch, Extreme switch, Juniper ERX/E-series, Procket Networks, or Redback router. There are complementary scripts for Alteon, Avocent (Cyclades), Bay Networks (nortel), ADC-kentrox EZ-T3 mux, Foundry, HP Procurve switches and Cisco AGMs, Hitachi routers, Juniper Networks, MRV optical switch, Mikrotik routers, Netscreen firewalls, Netscaler, Riverstone, Netopia, Cisco WLCs and Xirrus arrays, named <code>alogin,</code> <code>avologin,</code> <code>blogin,</code> <code>elogin,</code> <code>flogin,</code> <code>fnlogin,</code> <code>hlogin,</code> <code>htlogin,</code> <code>jlogin,</code> <code>mrvlogin,</code> <code>mtlogin,</code> <code>nlogin,</code> <code>nslogin,</code> <code>rivlogin,</code> <code>tlogin,</code> <code>wlogin,</code> and <code>xilogin,</code> respectively. Lastly, <code>plogin</code> is a poly-login script using the <code><a href="/docs/linux/man/5-router-db/">router.db</a></code>(5) files of rancid groups and the <code><a href="/docs/linux/man/5-rancid-types-base/">rancid.types.base</a></code>(5) and <code><a href="/docs/linux/man/5-rancid-types-conf/">rancid.types.conf</a></code>(5) files to determine which login script to execute for the device type of the given device. </p>
 <p> <code>clogin</code> reads the <i>.cloginrc</i> file for its configuration, then connects and logs into each of the routers specified on the command line in the order listed. Command-line options exist to override some of the directives found in the <i>.cloginrc</i> configuration file. </p>
 <p> The command-line options are as follows:</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "lnst-slave(1)"
 name: "lnst-slave"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-lnst-slave/"
 description: "lnst-slave – Linux Network Stack Test slave daemon"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lnst-slave &#8211; Linux Network Stack Test slave daemon </p>
+<h2>SYNOPSIS</h2>
 <p> <code>lnst-slave</code> [<code>-d</code>] [<code>-e</code>] [<code>-h</code>] [<code>-i </code><i>pidfile</i>] [<code>-p </code><i>port_number</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Linux Network Stack Test is a tool that supports development and execution of automated and portable network tests. For detailed description of the architecture of LNST please refer to project website (link listed on <code>INTERNET RESOURCES</code> bellow). </p>
 <p> <code>lnst-slave</code> is a daemon script that runs in the background and waits for incomming commands from a controller.</p>
 <h2>OPTIONS</h2>

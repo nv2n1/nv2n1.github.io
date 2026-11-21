@@ -1,5 +1,4 @@
 ---
-
 title: "acpitool(1)"
 name: "acpitool"
 section: "1"
@@ -10,7 +9,9 @@ description: "acpitool – a Linux ACPI client, allowing you to query or set ACP
 
 <h2>NAME</h2>
 <p> acpitool &#8211; a Linux ACPI client, allowing you to query or set ACPI values</p>
+<h2>SYNOPSIS</h2>
 <p> <code>acpitool [ -aAbBcefFhjlmnosStTvVwWz ]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>acpitool </code> is a Linux ACPI client. It simply reads <i>/proc/acpi </i> or <i>/sys/class </i> entries and presents the output in a meaningfull, human-readable format. </p>
 <p> It provides a.o. information on battery status, AC adapter presence, thermal reading, etc. This command is most useful on laptops with an ACPI compliant BIOS and a Linux kernel, preferably from the 2.6 series, with ACPI enabled. </p>
 <p> <code>Acpitool </code> also allows the machine to be put into standby, if your laptop supports it. </p>

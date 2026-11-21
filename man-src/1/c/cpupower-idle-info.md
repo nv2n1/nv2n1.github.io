@@ -1,5 +1,4 @@
 ---
-
 title: "cpupower-idle-info(1)"
 name: "cpupower-idle-info"
 section: "1"
@@ -12,6 +11,7 @@ description: "cpupower idle-info – Utility to retrieve cpu idle kernel informa
 <p> cpupower idle-info &#8211; Utility to retrieve cpu idle kernel information</p>
 <h2>SYNTAX</h2>
 <p> cpupower [ -c cpulist ] idle-info [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> A tool which prints out per cpu idle information helpful to developers and interested users.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "cos(3)"
 name: "cos"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cos/"
 description: "cos, cosf, cosl – cosine function"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cos, cosf, cosl &#8211; cosine function </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;
 double cos(double x);
@@ -22,6 +24,7 @@ long double cosl(long double x);
 </dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> These functions return the cosine of <i>x</i>, where <i>x</i> is given in radians.</p>
 <h2>RETURN VALUE</h2>
 <p> On success, these functions return the cosine of <i>x</i>. </p>

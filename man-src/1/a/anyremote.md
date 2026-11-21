@@ -1,5 +1,4 @@
 ---
-
 title: "anyremote(1)"
 name: "anyremote"
 section: "1"
@@ -7,17 +6,30 @@ letter: "a"
 url: "/docs/linux/man/1-anyremote/"
 ---
 
-anyremote - control PC with Bluetooth cell phone 
+<h2 class="name">NAME</h2>
  
 
-anyremote [-f file] [-s connect string] [-log] [-a] 
+ 
+
+ anyremote - control PC with Bluetooth cell phone 
+ 
+
+<h2>SYNOPSIS</h2>
+
+ 
+
+ anyremote [-f file] [-s connect string] [-log] [-a] 
 
  
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>[-fe port]&nbsp;<wbr>[-http]&nbsp;<wbr>[-u username]&nbsp;<wbr>[-name SDP service name]&nbsp;<wbr>[-password] 
 
  anyremote -h|-v 
 
-The overall goal of this project is to provide remote control service on Linux through Bluetooth, InfraRed, Wi-Fi or just TCP/IP connection. 
+<h2>DESCRIPTION</h2>
+
+ 
+
+ The overall goal of this project is to provide remote control service on Linux through Bluetooth, InfraRed, Wi-Fi or just TCP/IP connection. 
 
  anyRemote supports wide range of modern cell phones like Nokia, SonyEricsson, Motorola and others. 
 

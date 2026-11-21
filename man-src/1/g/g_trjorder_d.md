@@ -1,5 +1,4 @@
 ---
-
 title: "g_trjorder_d(1)"
 name: "g_trjorder_d"
 section: "1"
@@ -11,7 +10,9 @@ description: "trjorder – orders molecules according to their distance to a gro
 <h2>NAME</h2>
 <p> trjorder &#8211; orders molecules according to their distance to a group </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>trjorder</code> <code>-f</code><i> traj.xtc </i> <code>-s</code><i> topol.tpr </i> <code>-n</code><i> index.ndx </i> <code>-o</code><i> ordered.xtc </i> <code>-nshell</code><i> nshell.xvg </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-[no]xvgr</code><i></i> <code>-na</code><i> int </i> <code>-da</code><i> int </i> <code>-[no]com</code><i></i> <code>-r</code><i> real </i></p>
+<h2>DESCRIPTION</h2>
 <p> trjorder orders molecules according to the smallest distance to atoms in a reference group. It will ask for a group of reference atoms and a group of molecules. For each frame of the trajectory the selected molecules will be reordered according to the shortest distance between atom number <code> -da</code> in the molecule and all the atoms in the reference group. All atoms in the trajectory are written to the output trajectory. </p>
 <p> trjorder can be useful for e.g. analyzing the n waters closest to a protein. In that case the reference group would be the protein and the group of molecules would consist of all the water atoms. When an index group of the first n waters is made, the ordered trajectory can be used with any Gromacs program to analyze the n closest waters. </p>
 <p> If the output file is a pdb file, the distance to the reference target will be stored in the B-factor field in order to color with e.g. rasmol. </p>

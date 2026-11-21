@@ -1,5 +1,4 @@
 ---
-
 title: "status(1)"
 name: "status"
 section: "1"
@@ -7,7 +6,10 @@ letter: "s"
 url: "/docs/linux/man/1-status/"
 ---
 
-status - query fish runtime information
+<h2 class="name">NAME</h2>
+ 
+
+ status - query fish runtime information
 
 <h3>Synopsis</h3>
 

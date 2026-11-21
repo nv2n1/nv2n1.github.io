@@ -1,5 +1,4 @@
 ---
-
 title: "ppmtolss16(1)"
 name: "ppmtolss16"
 section: "1"
@@ -10,7 +9,9 @@ description: "ppmtolss16 — Convert a PPM to an LSS16 image"
 
 <h2>NAME</h2>
 <p> ppmtolss16 &#8212; Convert a PPM to an LSS16 image</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ppmtolss16</code> [ <code><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> </code><i>#rrggbb</i>=<i>i</i> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> &#8230;] [&lt; input.ppm] [&gt; output.rle]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>ppmtolss16</code> command. </p>
 <p> The <code>ppmtolss16</code> program converts a &quot;raw&quot; PPM file with max 16 colors to a simple RLE-based format: </p>
 <p> <code>simple RLE-based format</code> </p>

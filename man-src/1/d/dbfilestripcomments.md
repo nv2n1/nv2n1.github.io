@@ -1,5 +1,4 @@
 ---
-
 title: "dbfilestripcomments(1)"
 name: "dbfilestripcomments"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dbfilestripcomments/"
 description: "dbfilestripcomments – remove comments from a fsdb file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dbfilestripcomments &#8211; remove comments from a fsdb file </p>
+<h2>SYNOPSIS</h2>
 <p> dbfilestripcomments [-h]</p>
+<h2>DESCRIPTION</h2>
 <p> Remove any comments in a file, including the header. This makes the file unreadable by other Fsdb utilities, but perhaps more readable by humans. </p>
 <p> With the -h option, leave the header.</p>
 <h2>OPTIONS</h2>

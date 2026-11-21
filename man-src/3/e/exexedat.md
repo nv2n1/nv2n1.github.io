@@ -1,5 +1,4 @@
 ---
-
 title: "exexedat(3)"
 name: "exexedat"
 section: "3"
@@ -10,8 +9,10 @@ description: "exexedat – Appending datafiles onto your executable. Allegro gam
 
 <h2>NAME</h2>
 <p> exexedat &#8211; Appending datafiles onto your executable. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>Example exexedat</code></p>
+<h2>DESCRIPTION</h2>
 <p> This program demonstrates how to access the contents of an Allegro datafile (created by the grabber utility) linked to the executable by the exedat tool. It is basically the exdata example with minor modifications. </p>
 <p> You may ask: how do you compile, append and exec your program? </p>
 <p> Answer: like this&#8230; </p>

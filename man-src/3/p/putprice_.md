@@ -1,5 +1,4 @@
 ---
-
 title: "putprice_(3)"
 name: "putprice_"
 section: "3"
@@ -7,8 +6,8 @@ letter: "p"
 url: "/docs/linux/man/3-putprice_/"
 description: "QuantLib::EurodollarFuturesImpliedStdDevQuote – quote for the Eurodollar-future implied standard deviation"
 ---
-
 <p>QuantLib::EurodollarFuturesImpliedStdDevQuote &#8211; quote for the Eurodollar-future implied standard deviation </p>
+<h2>SYNOPSIS</h2>
 <p> <br />
  </p>
 <p>#include &lt;ql/quotes/eurodollarfuturesquote.hpp&gt; </p>

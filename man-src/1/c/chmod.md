@@ -1,5 +1,4 @@
 ---
-
 title: "chmod(1)"
 name: "chmod"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-chmod/"
 description: "chmod – change file mode bits"
 ---
 
+<h2 class="name">NAME</h2>
+<p> chmod &#8211; change file mode bits </p>
+<h2>SYNOPSIS</h2>
 <p> <code>chmod</code> [<i>,OPTION/</i>]&#8230; <i>,MODE/</i>[<i>,,MODE/</i>]&#8230; <i>,FILE/</i>&#8230;<br />
  <code>chmod</code> [<i>,OPTION/</i>]&#8230; <i>,OCTAL-MODE FILE/</i>&#8230;<br />
  <code>chmod</code> [<i>,OPTION/</i>]&#8230; <i>,&#8211;reference=RFILE FILE/</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents the GNU version of <code>chmod</code>. <code>chmod</code> changes the file mode bits of each given file according to <i>mode</i>, which can be either a symbolic representation of changes to make, or an octal number representing the bit pattern for the new mode bits. </p>
 <p> The format of a symbolic mode is [<code>ugoa</code>&#8230;][[<code>-+=</code>][<i>perms</i>&#8230;]&#8230;], where <i>perms</i> is either zero or more letters from the set <code>rwxXst</code>, or a single letter from the set <code>ugo</code>. Multiple symbolic modes can be given, separated by commas. </p>
 <p> A combination of the letters <code>ugoa</code> controls which users&#8217; access to the file will be changed: the user who owns it (<code>u</code>), other users in the file&#8217;s group (<code>g</code>), other users not in the file&#8217;s group (<code>o</code>), or all users (<code>a</code>). If none of these are given, the effect is as if (<code>a</code>) were given, but bits that are set in the umask are not affected. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "lstopo-no-graphics(1)"
 name: "lstopo-no-graphics"
 section: "1"
@@ -10,6 +9,7 @@ description: "lstopo, lstopo-no-graphics, hwloc-ls – Show the topology of the 
 
 <h2>NAME</h2>
 <p> lstopo, lstopo-no-graphics, hwloc-ls &#8211; Show the topology of the system</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lstopo</code> [ <i>options </i>]&#8230; [ <i>filename </i>] </p>
 <p> <code>lstopo-no-graphics</code> [ <i>options </i>]&#8230; [ <i>filename </i>] </p>
 <p> <code>hwloc-ls</code> [ <i>options </i>]&#8230; [ <i>filename </i>] </p>
@@ -94,6 +94,7 @@ description: "lstopo, lstopo-no-graphics, hwloc-ls – Show the topology of the 
 <dd> Append the line of text to the bottom of the legend in graphical mode. If the line is too long, it will be truncated in the output. If adding multiple lines, each line should be given separately by passing this option multiple times.</dd>
 <dt>&#8211;version</code></dt>
 <dd> Report version and exit.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> lstopo and lstopo-no-graphics are capable of displaying a topological map of the system in a variety of different output formats. The only difference between lstopo and lstopo-no-graphics is that graphical outputs are only supported by lstopo, to reduce dependencies on external libraries. hwloc-ls is identical to lstopo-no-graphics. </p>
 <p> The filename specified directly implies the output format that will be used; see the OUTPUT FORMATS section, below. Output formats that support color will indicate specific characteristics about individual CPUs by their color; see the COLORS section, below.</p>
 <h2>OUTPUT FORMATS</h2>

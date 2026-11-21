@@ -1,5 +1,4 @@
 ---
-
 title: "price_(3)"
 name: "price_"
 section: "3"
@@ -7,8 +6,8 @@ letter: "p"
 url: "/docs/linux/man/3-price_/"
 description: "QuantLib::ImpliedStdDevQuote – quote for the implied standard deviation of an underlying"
 ---
-
 <p>QuantLib::ImpliedStdDevQuote &#8211; quote for the implied standard deviation of an underlying </p>
+<h2>SYNOPSIS</h2>
 <p> <br />
  </p>
 <p>#include &lt;ql/quotes/impliedstddevquote.hpp&gt; </p>

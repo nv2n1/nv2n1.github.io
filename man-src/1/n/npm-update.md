@@ -1,5 +1,4 @@
 ---
-
 title: "npm-update(1)"
 name: "npm-update"
 section: "1"
@@ -8,6 +7,7 @@ url: "/docs/linux/man/1-npm-update/"
 description: "npm-update – Update a package"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>npm-update</code> &#8211; Update a package </p>
 <h3>Synopsis</h3>
 <dl>

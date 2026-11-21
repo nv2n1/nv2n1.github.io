@@ -1,5 +1,4 @@
 ---
-
 title: "gpaste(1)"
 name: "gpaste"
 section: "1"
@@ -10,7 +9,9 @@ description: "GPaste – A lightweight clipboard manager for the Gnome desktop"
 
 <h2>NAME</h2>
 <p> GPaste &#8211; A lightweight clipboard manager for the Gnome desktop </p>
+<h2>SYNOPSIS</h2>
 <p> <code>[command |] gpaste [options&#8230;]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> GPaste is a modular clipboard management system with a fully DBus-based daemon, a <font SIZE="-1">CLI</font> client and a gtk+ tray icon. </p>
 <h2>COMMANDS</h2>
 <dl>

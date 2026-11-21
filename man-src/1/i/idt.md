@@ -1,5 +1,4 @@
 ---
-
 title: "idt(1)"
 name: "idt"
 section: "1"
@@ -10,7 +9,9 @@ description: "idt – X window interactive image display tool"
 
 <h2>NAME</h2>
 <p> idt &#8211; X window interactive image display tool</p>
+<h2>SYNOPSIS</h2>
 <p> <code>idt </code> [ <code>-toolkitoption</code><i> &#8230;</i> ] [ <code>-background</code><i> color</i> ] [ <code>-f</code><i> font</i> ] [ <code>-foreground</code><i> color</i> ] [ <code>-history</code> ] [ <code>-lmin</code><i> min</i> ] [ <code>-lmax</code><i> max</i> ] [ <code>-lscale</code><i> scale</i> ] [ <code>-oldidt</code> ] [ <code>-pal</code><i> pal_fname</i> ] [ <code>-reverse</code> ] [ <code>-soft</code> ] [ <code>-Version</code> ] [ <code>metafile</code> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>idt</code> provides a graphical user interface to the NCAR View interactive metafile translator <code>ictrans</code>. <code>idt </code> supports a subset of the <code>ictrans</code> command interface. </p>
 <p> <code>idt </code> provides two types of command panels for interacting with imagery. The first type is the control panel, which you see when you initially invoke <code>idt</code>. The control panel displays messages from the translators, provides a metafile selection utility and is responsible for instantiating the second type of command panel, the display panel. The display panel provides mechanisms for controlling translators. Each display panel manages a single metafile translator. There can be multiple display panels in existence at the same time but only one control panel.</p>
 <h2>OPTIONS</h2>

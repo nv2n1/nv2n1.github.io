@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-elektra-kdbhighlevel/"
 description: "KDB :: High Level methods –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> KDB :: High Level methods &#8211; </p>
 <p> High level methods to access the Key database.</p>
 <h3>Functions</h3>
 <p> int <code>kdbGetKey</code> (KDB *handle, Key *dest) </p>

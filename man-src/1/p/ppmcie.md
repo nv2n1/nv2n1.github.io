@@ -1,5 +1,4 @@
 ---
-
 title: "ppmcie(1)"
 name: "ppmcie"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-ppmcie/"
 description: "ppmcie – draw a CIE color chart as a PPM image"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ppmcie &#8211; draw a CIE color chart as a PPM image</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ppmcie</code> [<code>-rec709</code>|<code>-cie</code>|<code>-ebu</code>|<code>-hdtv</code>|<code>-ntsc</code>|<code>-smpte</code>] [<code>-xy</code>|<code>-upvp</code>] [<code>-red</code> <i>rx</i> <i>ry</i>] [<code>-green</code> <i>gx</i> <i>gy</i>] [<code>-blue</code> <i>bx</i> <i>by</i>] [<code>-white</code> <i>wx</i> <i>wy</i>] [<code>-size</code> <i>edge</i>] [<code>-xsize</code>|<code>-width</code> <i>width</i>] [<code>-ysize</code>|<code>-height</code> <i>height</i>] [<code>-noblack</code>] [<code>-nowpoint</code>] [<code>-nolabel</code>] [<code>-noaxes</code>] [<code>-full</code>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. </p>
+<h2>DESCRIPTION</h2>
 <p> <code>ppmcie</code> creates a PPM file containing a plot of the CIE &#8220;tongue&#8221; color chart &#8212; to the extent possible in a PPM image. Alternatively, creates a pseudo-PPM image of the color tongue using RGB values from a color system of your choice. </p>
 <p> The CIE color tongue is an image of all the hues that can be described by CIE X-Y chromaticity coordinates. They are arranged on a two dimensional coordinate plane with the X chromaticity on the horizontal axis and the Y chromaticity on the vertical scale. (You can choose alternatively to use CIE u&#8217;-v&#8217; chromaticity coordinates, but the general idea of the color tongue is the same). </p>
 <p> Note that the PPM format specifies that the RGB values in the file are from CIE Rec. 709 color system, gamma-corrected. And positive. See <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5) for details. If you use one of the color system options on <code>ppmcie</code>, what you get is not a true PPM image, but is very similar. If you display such <code>ppmcie</code> output using a device that expects PPM input (which includes just about any computer graphics display program), it will display the wrong colors. </p>

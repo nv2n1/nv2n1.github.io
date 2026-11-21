@@ -1,5 +1,4 @@
 ---
-
 title: "dlagtf(3)"
 name: "dlagtf"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlagtf/"
 description: "dlagtf.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlagtf.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlagtf</code> (N, A, LAMBDA, B, C, TOL, D, IN, INFO)<br />
  <i></i><code>DLAGTF</code> computes an LU factorization of a matrix T-λI, where T is a general tridiagonal matrix, and λ a scalar, using partial pivoting with row interchanges.</p>

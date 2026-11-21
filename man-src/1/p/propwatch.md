@@ -1,5 +1,4 @@
 ---
-
 title: "propwatch(1)"
 name: "propwatch"
 section: "1"
@@ -10,7 +9,9 @@ description: "propwatch – a tool to monitor X11 properties"
 
 <h2>NAME</h2>
 <p> propwatch &#8211; a tool to monitor X11 properties</p>
+<h2>SYNOPSIS</h2>
 <p> <code>propwatch [ options ] property-name &#8230;</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>propwatch</code> is a tool to monitor window properties of root and application windows. Nice for debugging property-based IPC of X11 programs.</p>
 <h2>OPTIONS</h2>
 <p> <code>propwatch</code> uses the Athena Widgets and accepts the usual toolkit options like -display and -geometry. </p>

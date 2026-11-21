@@ -1,5 +1,4 @@
 ---
-
 title: "mktexmf(1)"
 name: "mktexmf"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mktexmf/"
 description: "mktexmf – create a Metafont source file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mktexmf &#8211; create a Metafont source file </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mktexmf</code> <i>font</i></p>
+<h2>DESCRIPTION</h2>
 <p> This manual page is not meant to be exhaustive. The complete documentation for this version of TeX can be found in the info file or manual <i>Kpathsea: A library for path searching</i>. </p>
 <p> <code>mktexmf</code> is used to generate the Metafont source file for <i>font</i>, if possible. For example, <i>ecrm1200</i> or <i>cmr11</i>. </p>
 <p> The name of the generated file is printed on standard output. </p>

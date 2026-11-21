@@ -1,5 +1,4 @@
 ---
-
 title: "ufraw(1)"
 name: "ufraw"
 section: "1"
@@ -7,7 +6,12 @@ letter: "u"
 url: "/docs/linux/man/1-ufraw/"
 ---
 
-UFRaw - Convert camera RAW images to standard image files. 
+<h2 class="name">NAME</h2>
+ 
+
+ UFRaw - Convert camera RAW images to standard image files. 
+
+<h2>SYNOPSIS</h2>
 
 <dl>
 <dt>ufraw [<font SIZE="-1">OPTIONS</font>] &lt;rawfile(s)&gt;
@@ -15,7 +19,9 @@ UFRaw - Convert camera RAW images to standard image files.
 </dd><dt>ufraw-batch [<font SIZE="-1">OPTIONS</font>] &lt;rawfile(s)&gt;
 </dt><dd></dd></dl>
 
-The Unidentified Flying Raw (UFRaw) is a utility to read and manipulate raw images from digital cameras. It reads raw images using Dave Coffin's raw conversion utility - DCRaw. UFRaw supports basic color management using Little <font SIZE="-1">CMS,</font> allowing the user to apply color profiles. For Nikon users UFRaw has the advantage that it can read the camera's tone curves. Even if you don't own a Nikon, you can still apply a Nikon curve to your images. 
+<h2>DESCRIPTION</h2>
+
+ The Unidentified Flying Raw (UFRaw) is a utility to read and manipulate raw images from digital cameras. It reads raw images using Dave Coffin's raw conversion utility - DCRaw. UFRaw supports basic color management using Little <font SIZE="-1">CMS,</font> allowing the user to apply color profiles. For Nikon users UFRaw has the advantage that it can read the camera's tone curves. Even if you don't own a Nikon, you can still apply a Nikon curve to your images. 
 
  By default 'ufraw' displays a preview window for each raw image allowing the user to tweak the image parameters before saving. If no raw images are given at the command line, UFRaw will display a file chooser dialog. To process the images with no questions asked (and no preview) use the command 'ufraw-batch'. 
 

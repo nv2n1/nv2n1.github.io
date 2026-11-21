@@ -1,5 +1,4 @@
 ---
-
 title: "docker-image-ls(1)"
 name: "docker-image-ls"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-image-ls/"
 description: "docker-image-ls – List images"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-image-ls &#8211; List images </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker image ls [OPTIONS] [REPOSITORY[:TAG]]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> This command lists the images stored in the local Docker repository. </p>
 <p> By default, intermediate images, used during builds, are not listed. Some of the output, e.g., image ID, is truncated, for space reasons. However the truncated image ID, and often the first few characters, are enough to be used in other Docker commands that use the image ID. The output includes repository, tag, image ID, date created and the virtual size. </p>
 <p> The title REPOSITORY for the first title may seem confusing. It is essentially the image name. However, because you can tag a specific image, and multiple tags (image instances) can be associated with a single name, the name is really a repository for all tagged images of the same name. For example consider an image called fedora. It may be tagged with 18, 19, or 20, etc. to manage different versions. </p>

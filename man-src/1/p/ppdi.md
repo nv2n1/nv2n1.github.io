@@ -1,5 +1,4 @@
 ---
-
 title: "ppdi(1)"
 name: "ppdi"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ppdi/"
 description: "ppdi – import ppd files (deprecated)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ppdi &#8211; import ppd files (deprecated) </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ppdi</code> [ <code>-I</code> <i>include-directory</i> ] [ <code>-o</code> <i>source-file</i> ] <i>ppd-file</i> [ &#8230; <i>ppd-file</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>ppdi</code> imports one or more PPD files into a PPD compiler source file. Multiple languages of the same PPD file are merged into a single printer definition to facilitate accurate changes for all localizations. <code>This program is deprecated and will be removed in a future release of CUPS.</code></p>
 <h2>OPTIONS</h2>
 <p> <code>ppdi</code> supports the following options:</p>

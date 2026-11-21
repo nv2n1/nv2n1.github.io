@@ -1,5 +1,4 @@
 ---
-
 title: "mate-maximus(1)"
 name: "mate-maximus"
 section: "1"
@@ -10,7 +9,9 @@ description: "mate-maximus – force all windows to be full-screen"
 
 <h2>NAME</h2>
 <p> mate-maximus &#8211; force all windows to be full-screen</p>
+<h2>SYNOPSIS</h2>
 <p> mate-maximus</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly maximus. </p>
 <p> <code>mate-maximus</code> is an X program for the MATE Desktop Environment that forces all windows to be full-screen. This tool is shipped with the MATE netbook utilities.</p>
 <h2>OPTIONS</h2>

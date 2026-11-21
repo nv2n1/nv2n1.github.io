@@ -1,5 +1,4 @@
 ---
-
 title: "wbox(1)"
 name: "wbox"
 section: "1"
@@ -10,8 +9,10 @@ description: "wbox – HTTP testing tool and configuration-less HTTP server"
 
 <h2>NAME</h2>
 <p> wbox &#8211; HTTP testing tool and configuration-less HTTP server</p>
+<h2>SYNOPSIS</h2>
 <p> <code>wbox</code> &lt;url&gt; [ options ]<br />
  <code>wbox</code> servermode webroot &lt;path&gt; [serverport &lt;portnumber&gt; (def 8081)] </p>
+<h2>DESCRIPTION</h2>
 <p> <i>wbox</i> aims to help you having fun while testing HTTP related stuff. You can use it to perform many tasks, including the following: </p>
 <p> &#8211; Benchmarking how much time it takes to generate content for your web application. </p>
 <p> &#8211; Web server and web application stressing. </p>

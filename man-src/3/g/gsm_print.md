@@ -1,5 +1,4 @@
 ---
-
 title: "gsm_print(3)"
 name: "gsm_print"
 section: "3"
@@ -11,14 +10,18 @@ url: "/docs/linux/man/3-gsm_print/"
 
  gsm_print --- GSM 06.10 supplementary function for debugging
 
-#include &quot;gsm.h&quot; #include &lt;stdio.h&gt; 
+<h2>SYNOPSIS</h2>
+
+ #include &quot;gsm.h&quot; #include &lt;stdio.h&gt; 
 
  int gsm_print(f, g, frame); 
  FILE * f; 
  gsm g; 
  gsm_frame frame;
 
-Gsm is an implementation of the final draft GSM 06.10 standard for full-rate speech transcoding, a lossy speech compression algorithm. The compressed form involves 76 variables with different numbers of significant bits packed into 33 bytes. 
+<h2>DESCRIPTION</h2>
+
+ Gsm is an implementation of the final draft GSM 06.10 standard for full-rate speech transcoding, a lossy speech compression algorithm. The compressed form involves 76 variables with different numbers of significant bits packed into 33 bytes. 
 
  If you are interested in investigating the details of this coding scheme, gsm_print() can be used to dump the contents of individual gsm_frames to a file pointer provided by the application. 
 

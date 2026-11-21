@@ -1,5 +1,4 @@
 ---
-
 title: "x_init(1)"
 name: "x_init"
 section: "1"
@@ -10,7 +9,9 @@ description: "x_init – Initialization of Cross-Over Data Bases."
 
 <h2>NAME</h2>
 <p> <code>x_init</code> &#8211; Initialization of Cross-Over Data Bases.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>x_init</code> <code>-I</code></p>
+<h2>DESCRIPTION</h2>
 <p> The purpose of <code>x_init</code> is to create two key files that will be holding all the cross-over information for all the cruises tested. These files are called <i>xx_base.b</i> and <i>xx_legs.b</i>, and they will contain data for each cross-over and totals for each leg, respectively. <code>x_init</code> will create these two files in the current directory, and write out the fileheader with a 1 as the next record number in the case of xx_base.b. NB! Any previous files with the same names in the current directory will be erased, so use with caution.</p>
 <dl>
 <dt><code>-I</code></dt>

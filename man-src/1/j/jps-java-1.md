@@ -1,5 +1,4 @@
 ---
-
 title: "jps-java-1(1)"
 name: "jps-java-1"
 section: "1"
@@ -10,6 +9,7 @@ description: "jps – Java Virtual Machine Process Status Tool"
 
 <h2>Name</h2>
 <p> jps &#8211; Java Virtual Machine Process Status Tool </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 jps[options][hostid]
 </code></pre>
@@ -21,6 +21,7 @@ jps[options][hostid]
 <dt>hostid</dt>
 <dd> The host identifier of the host for which the process report should be generated. The <i>hostid</i> may include optional components that indicate the communications protocol, port number, and other implementation specific data.</dd></dl>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> The <code>jps</code> tool lists the instrumented HotSpot Java Virtual Machines (JVMs) on the target system. The tool is limited to reporting information on JVMs for which it has the access permissions. </p>
 <p> If <code>jps</code> is run without specifying a <i>hostid</i>, it will look for instrumented JVMs on the local host. If started with a <i>hostid</i>, it will look for JVMs on the indicated host, using the specified protocol and port. A <code>jstatd</code> process is assumed to be running on the target host. </p>
 <p> The <code>jps</code> command will report the local VM identifier, or <i>lvmid</i>, for each instrumented JVM found on the target system. The <code>lvmid</code> is typically, but not necessarily, the operating system&#8217;s process identifier for the JVM process. With no options, <code>jps</code> will list each Java application&#8217;s <i>lvmid</i> followed by the short form of the application&#8217;s class name or jar file name. The short form of the class name or JAR file name omits the class&#8217;s package information or the JAR files path information. </p>

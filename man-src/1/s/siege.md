@@ -1,5 +1,4 @@
 ---
-
 title: "siege(1)"
 name: "siege"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-siege/"
 description: "siege is a HTTP/FTP load tester and benchmarking utility."
 ---
 
+<h2 class="name">NAME</h2>
+<p> siege is a HTTP/FTP load tester and benchmarking utility. </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 siege[options] siege[options]&lt;URL&gt;
         siege[options] - g&lt;URL&gt; siege[options] - f urls.txt
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <tt>siege</tt> is a multi-threaded <font SIZE="-1">HTTP/FTP</font> load tester and benchmarking utility. It supports most of the features detailed in RFCs 2616 (<font SIZE="-1">HTTP</font>) and 959 (<font SIZE="-1">FTP</font>). Properties can be set at both from the command line and in a configuration file. When the same propertie is set in both locations, the command line takes precedent. </p>
 <p> The default configuration file is <tt>$HOME</tt>/.siege/siege.conf If you don&#8217;t have a <tt>$HOME</tt>/.siege directory and a siege.conf and cookies.txt file, siege will generate a new config directory when it runs. You can generate your configu directory with the following command: siege.config</p>
 <h2>OPTIONS</h2>

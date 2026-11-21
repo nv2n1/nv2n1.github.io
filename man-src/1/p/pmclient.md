@@ -1,5 +1,4 @@
 ---
-
 title: "pmclient(1)"
 name: "pmclient"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmclient, pmclient_fg – a simple performance metrics client"
 
 <h2>NAME</h2>
 <p> <code>pmclient</code>, <code>pmclient_fg</code> &#8211; a simple performance metrics client</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pmclient</code> [<code>-a</code> <i>archive</i>] [<code>-h</code> <i>host</i>] [<code>-n</code> <i>pmnsfile</i>] [<code>-P</code>] [<code>-S</code> <i>numsec</i>] [<code>-s</code> <i>samples</i>] [<code>-t</code> <i>interval</i>] [<code>-Z</code> <i>timezone</i>] [<code>-z</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmclient</code> and <code>pmclient_fg</code> are simple clients that use the Performance Metrics Application Programming Interface (PMAPI) to report some high-level system performance metrics. </p>
 <p> The real value of these tools is as sample clients using the <code><a href="/docs/linux/man/3-pmapi/">PMAPI</a></code>(3), interfaces and to this end the source code is included with the Performance Co-Pilot (PCP) package (see <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1)), and is typically installed in <i>/usr/share/pcp/demos/pmclient</i>. </p>
 <p> The <code>pmclient_fg</code> program differs to <code>pmclient</code> in that it uses the fetchgroup API extension to the PMAPI, see <code>pmFetchGroup</code>(3). </p>

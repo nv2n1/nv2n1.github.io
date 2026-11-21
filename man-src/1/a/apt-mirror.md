@@ -1,5 +1,4 @@
 ---
-
 title: "apt-mirror(1)"
 name: "apt-mirror"
 section: "1"
@@ -7,11 +6,18 @@ letter: "a"
 url: "/docs/linux/man/1-apt-mirror/"
 ---
 
-apt-mirror - apt sources mirroring tool 
+<h2 class="name">NAME</h2>
+ 
 
-apt-mirror [configfile]
+ apt-mirror - apt sources mirroring tool 
 
-A small and efficient tool that lets you mirror a part of or the whole Debian GNU/Linux distribution or any other apt sources. 
+<h2>SYNOPSIS</h2>
+
+ apt-mirror [configfile]
+
+<h2>DESCRIPTION</h2>
+
+ A small and efficient tool that lets you mirror a part of or the whole Debian GNU/Linux distribution or any other apt sources. 
 
  Main features: 
 &nbsp;<wbr>*&nbsp;<wbr>It uses a config similar to apts&nbsp;<wbr><i>sources.list</i> 

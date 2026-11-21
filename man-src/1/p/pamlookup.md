@@ -1,5 +1,4 @@
 ---
-
 title: "pamlookup(1)"
 name: "pamlookup"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pamlookup/"
 description: "pamlookup – map an image to a new image by using it as indices into a table"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pamlookup &#8211; map an image to a new image by using it as indices into a table</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pamlookup</code> <code>-lookupfile=</code><i>lookupfile</i> <code>-missingcolor=</code><i>color</i> [<code>-fit</code>] <i>indexfile</i> </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one. You may separate an option name and its value with white space instead of an equals sign. </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamlookup</code> takes a two dimensional array of indices and a lookup table as input. For each position in the index array, it looks up the index in the lookup table and places the result of the lookup in the output image. The output thus has the same width and height as the index image, and tuple types determined by the lookup table. </p>
 <p> An index is either a whole number or an ordered pair of whole numbers. If the index image has a depth of one, each index in it is a whole number: the value of the one sample. If the index image has a depth greater than one, each index in it is an ordered pair of the first and second samples in the relevant tuple. </p>

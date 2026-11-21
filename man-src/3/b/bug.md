@@ -1,5 +1,4 @@
 ---
-
 title: "bug(3)"
 name: "bug"
 section: "3"
@@ -8,6 +7,7 @@ url: "/docs/linux/man/3-bug/"
 description: "bug – Known Bugs"
 ---
 
+<h2 class="name">NAME</h2>
 <p> bug &#8211; Known Bugs<br />
 &nbsp;<wbr></p>
 <dl>

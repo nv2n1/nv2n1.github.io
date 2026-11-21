@@ -1,5 +1,4 @@
 ---
-
 title: "ctdb(1)"
 name: "ctdb"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-ctdb/"
 description: "ctdb – CTDB management utility"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ctdb &#8211; CTDB management utility </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ctdb</code> [<i>OPTION</i>&#8230;] {<i>COMMAND</i>} [<i>COMMAND-ARGS</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>ctdb is a utility to view and manage a CTDB cluster. </dd>
 <p> The following terms are used when referring to nodes in a cluster: </p>
 <p> PNN</p>

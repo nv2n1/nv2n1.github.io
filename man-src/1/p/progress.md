@@ -1,5 +1,4 @@
 ---
-
 title: "progress(1)"
 name: "progress"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-progress/"
 description: "progress – Coreutils Progress Viewer"
 ---
 
+<h2 class="name">NAME</h2>
+<p> progress &#8211; Coreutils Progress Viewer </p>
+<h2>SYNOPSIS</h2>
 <p> <code>progress</code> [ <code>-qdwmM</code> ] [ <code>-W</code> <i>secs</i> ] [ <code>-c</code> <i>command</i> ] [ <code>-p</code> <i>pid</i> ]<br />
  <code>progress -v</code> | <code>&#8211;version</code><br />
  <code>progress -h</code> | <code>&#8211;help</code> </p>
+<h2>DESCRIPTION</h2>
 <p> This manual page briefly documents the <code>progress</code> command. </p>
 <p> This tool can be described as a Tiny, Dirty, Linux-Only C command that looks for coreutils basic commands (cp, mv, dd, tar, gzip/gunzip, cat, etc.) currently running on your system and displays the percentage of copied data. </p>
 <p> It can now also estimate throughput (using flag <code>-w</code> ). </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "bson_set_error(3)"
 name: "bson_set_error"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_set_error() – This is a helper function to set the paramete
 
 <h2>NAME</h2>
 <p> bson_set_error() &#8211; This is a helper function to set the parameters of a bson_error_t. It handles the case where error is NULL by doing nothing.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 void bson_set_error(bson_error_t *error,
                     uint32_t domain,
@@ -30,6 +30,7 @@ void bson_set_error(bson_error_t *error,
 <dl>
 <dt><code>format</code></dt>
 <dd> A <code><a href="/docs/linux/man/3-printf/">printf</a>(3)</code> style format string.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This is a helper function to set the parameters of a <code>bson_error_t</code> \&amp;. It handles the case where <code>error</code> is NULL by doing nothing. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>

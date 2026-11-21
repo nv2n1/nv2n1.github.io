@@ -1,5 +1,4 @@
 ---
-
 title: "nodeunit(1)"
 name: "nodeunit"
 section: "1"
@@ -10,9 +9,11 @@ description: "nodeunit — simple node.js unit testing tool"
 
 <h2>NAME</h2>
 <p> <code>nodeunit</code> &#8212; simple node.js unit testing tool</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 nodeunit[options]&lt;file - or -directory&gt;[ &lt; file - or -directory &gt; ...]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Nodeunit is a simple unit testing tool based on the node.js assert module.</p>
 <dl>
 <dt>&bull;</dt>

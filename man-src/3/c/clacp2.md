@@ -1,5 +1,4 @@
 ---
-
 title: "clacp2(3)"
 name: "clacp2"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-clacp2/"
 description: "clacp2.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> clacp2.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clacp2</code> (UPLO, M, N, A, LDA, B, LDB)<br />
  <i></i><code>CLACP2</code> copies all or part of a real two-dimensional array to a complex array.</p>

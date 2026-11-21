@@ -1,5 +1,4 @@
 ---
-
 title: "git-merge-file(1)"
 name: "git-merge-file"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-git-merge-file/"
 description: "git-merge-file – Run a three-way file merge"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-merge-file &#8211; Run a three-way file merge </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git merge - file[-L&lt;current - name&gt;[-L&lt;base - name&gt;[-L&lt;other - name&gt;]]]
                 [--ours | --theirs | --union][-p | --stdout][-q | --quiet][--marker - size = &lt;n&gt;]
                 [--[no - ] diff3]&lt;current - file&gt;&lt;base - file&gt;&lt;other - file&gt;
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <i>git merge-file</i> incorporates all changes that lead from the <code>&lt;base-file&gt;</code> to <code>&lt;other-file&gt;</code> into <code>&lt;current-file&gt;</code>. The result ordinarily goes into <code>&lt;current-file&gt;</code>. <i>git merge-file</i> is useful for combining separate changes to an original. Suppose <code>&lt;base-file&gt;</code> is the original, and both <code>&lt;current-file&gt;</code> and <code>&lt;other-file&gt;</code> are modifications of <code>&lt;base-file&gt;</code>, then <i>git merge-file</i> combines both changes. </p>
 <p> A conflict occurs if both <code>&lt;current-file&gt;</code> and <code>&lt;other-file&gt;</code> have changes in a common segment of lines. If a conflict is found, <i>git merge-file</i> normally outputs a warning and brackets the conflict with lines containing &lt;&lt;&lt;&lt;&lt;&lt;&lt; and &gt;&gt;&gt;&gt;&gt;&gt;&gt; markers. A typical conflict will look like this: </p>
 <dl>

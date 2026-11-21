@@ -1,5 +1,4 @@
 ---
-
 title: "dh_auto_clean(1)"
 name: "dh_auto_clean"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dh_auto_clean/"
 description: "dh_auto_clean – automatically cleans up after a build"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dh_auto_clean &#8211; automatically cleans up after a build </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dh_auto_clean</code> [<i>build system options</i>] [<i>debhelper options</i>] [<code>&#8212;</code> <i>params</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>dh_auto_clean</code> is a debhelper program that tries to automatically clean up after a package build. It does so by running the appropriate command for the build system it detects the package uses. For example, if there&#8217;s a <i>Makefile</i> and it contains a <code>distclean</code>, <code>realclean</code>, or <code>clean</code> target, then this is done by running <code>make</code> (or <font SIZE="-1"><code>MAKE</code></font>, if the environment variable is set). If there is a <i>setup.py</i> or <i>Build.PL</i>, it is run to clean the package. </p>
 <p> This is intended to work for about 90% of packages. If it doesn&#8217;t work, or tries to use the wrong clean target, you&#8217;re encouraged to skip using <code>dh_auto_clean</code> at all, and just run <code>make clean</code> manually.</p>
 <h2>OPTIONS</h2>

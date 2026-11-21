@@ -1,5 +1,4 @@
 ---
-
 title: "munmap(2)"
 name: "munmap"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-munmap/"
 description: "mmap, munmap – map or unmap files or devices into memory"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mmap, munmap &#8211; map or unmap files or devices into memory </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/mman.h&gt;
 void *mmap(void *addr, size_t length, int prot, int flags,
@@ -15,6 +17,7 @@ void *mmap(void *addr, size_t length, int prot, int flags,
 int munmap(void *addr, size_t length);
 </code></pre>
 <p> See NOTES for information on feature test macro requirements.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>mmap</code>() creates a new mapping in the virtual address space of the calling process. The starting address for the new mapping is specified in <i>addr</i>. The <i>length</i> argument specifies the length of the mapping (which must be greater than 0). </p>
 <p> If <i>addr</i> is NULL, then the kernel chooses the (page-aligned) address at which to create the mapping; this is the most portable method of creating a new mapping. If <i>addr</i> is not NULL, then the kernel takes it as a hint about where to place the mapping; on Linux, the kernel will pick a nearby page boundary (but always above or equal to the value specified by <i>/proc/sys/vm/mmap_min_addr</i>) and attempt to create the mapping there. If another mapping already exists there, the kernel picks a new address that may or may not depend on the hint. The address of the new mapping is returned as the result of the call. </p>
 <p> The contents of a file mapping (as opposed to an anonymous mapping; see <code>MAP_ANONYMOUS</code> below), are initialized using <i>length</i> bytes starting at offset <i>offset</i> in the file (or other object) referred to by the file descriptor <i>fd</i>. <i>offset</i> must be a multiple of the page size as returned by <i>sysconf(_SC_PAGE_SIZE)</i>. </p>

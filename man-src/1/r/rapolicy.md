@@ -1,5 +1,4 @@
 ---
-
 title: "rapolicy(1)"
 name: "rapolicy"
 section: "1"
@@ -10,7 +9,9 @@ description: "rapolicy – compare a argus(8) data file/stream against a Cisco A
 
 <h2>NAME</h2>
 <p> <code>rapolicy</code> &#8211; compare a <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data file/stream against a Cisco Access Control List.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>rapolicy</code> <code>-r</code> <i>argus-file [</i><code>raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Rapolicy</code> reads <code>argus</code> data from an <i>argus-file</i> list, and tests the argus data stream against a Cisco access control list configuration file <code>Rapolicy</code> can do many things as defined by its configuration file. The configuration file in not optional and the example below is well commented. The ACL file is specified in the configuration file.</p>
 <h2>OPTIONS</h2>
 <p> <code>Rapolicy</code>, like all <code>ra</code> based clients, supports a large number of options. Options that have specific meaning to <code>rapolicy</code> are: </p>

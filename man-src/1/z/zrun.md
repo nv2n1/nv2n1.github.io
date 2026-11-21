@@ -1,5 +1,4 @@
 ---
-
 title: "zrun(1)"
 name: "zrun"
 section: "1"
@@ -7,11 +6,18 @@ letter: "z"
 url: "/docs/linux/man/1-zrun/"
 ---
 
-zrun - automatically uncompress arguments to command 
+<h2 class="name">NAME</h2>
+ 
 
-zrun command file.gz [...]
+ zrun - automatically uncompress arguments to command 
 
-Prefixing a shell command with ``zrun'' causes any compressed files that are arguments of the command to be transparently uncompressed to temp files (not pipes) and the uncompressed files fed to the command. 
+<h2>SYNOPSIS</h2>
+
+ zrun command file.gz [...]
+
+<h2>DESCRIPTION</h2>
+
+ Prefixing a shell command with ``zrun'' causes any compressed files that are arguments of the command to be transparently uncompressed to temp files (not pipes) and the uncompressed files fed to the command. 
 
  This is a quick way to run a command that does not itself support compressed files, without manually uncompressing the files. 
 

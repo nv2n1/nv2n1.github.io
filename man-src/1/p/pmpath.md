@@ -1,5 +1,4 @@
 ---
-
 title: "pmpath(1)"
 name: "pmpath"
 section: "1"
@@ -7,11 +6,18 @@ letter: "p"
 url: "/docs/linux/man/1-pmpath/"
 ---
 
-pmpath - show full path to a perl module 
+<h2 class="name">NAME</h2>
+ 
 
-pmpath module ...
+ pmpath - show full path to a perl module 
 
-For each module name given as an argument, produces its full path on the standard output, one per line.
+<h2>SYNOPSIS</h2>
+
+ pmpath module ...
+
+<h2>DESCRIPTION</h2>
+
+ For each module name given as an argument, produces its full path on the standard output, one per line.
 
 <h2>EXAMPLES</h2>
 

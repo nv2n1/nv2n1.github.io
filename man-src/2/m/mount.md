@@ -1,5 +1,4 @@
 ---
-
 title: "mount(2)"
 name: "mount"
 section: "2"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/2-mount/"
 description: "mount – mount filesystem"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mount &#8211; mount filesystem </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/mount.h&gt;
 int mount(const char *source, const char *target,
           const char *filesystemtype, unsigned long mountflags,
           const void *data);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>mount</code>() attaches the filesystem specified by <i>source</i> (which is often a pathname referring to a device, but can also be the pathname of a directory or file, or a dummy string) to the location (a directory or file) specified by the pathname in <i>target</i>. </p>
 <p> Appropriate privilege (Linux: the <code>CAP_SYS_ADMIN</code> capability) is required to mount filesystems. </p>
 <p> Values for the <i>filesystemtype</i> argument supported by the kernel are listed in <i>/proc/filesystems</i> (e.g., &quot;btrfs&quot;, &quot;ext4&quot;, &quot;jfs&quot;, &quot;xfs&quot;, &quot;vfat&quot;, &quot;fuse&quot;, &quot;tmpfs&quot;, &quot;cgroup&quot;, &quot;proc&quot;, &quot;mqueue&quot;, &quot;nfs&quot;, &quot;cifs&quot;, &quot;iso9660&quot;). Further types may become available when the appropriate modules are loaded. </p>

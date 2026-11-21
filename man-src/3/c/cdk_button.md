@@ -1,5 +1,4 @@
 ---
-
 title: "cdk_button(3)"
 name: "cdk_button"
 section: "3"
@@ -10,6 +9,7 @@ description: "cdk_button – create and manage a curses button widget."
 
 <h2>NAME</h2>
 <p> cdk_button &#8211; create and manage a curses button widget.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>
 <p> #include &lt;cdk.h&gt; </p>
 <p> typedef void (*tButtonCallback)(struct SButton *button); </p>
@@ -89,6 +89,7 @@ void waitCDKButton(
     char key);
 </code></pre>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> The Cdk button widget displays a message string and executes a callback when the user presses enter or space. As such, it is only useful on a screen that is being managed by some external screen traversal engine such as <code>traverseCDKScreen()</code>. The button will be highlighted when the widget has the focus. The following functions create or manipulate the Cdk button widget.</p>
 <h2>AVAILABLE FUNCTIONS</h2>
 <dl>

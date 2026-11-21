@@ -1,5 +1,4 @@
 ---
-
 title: "dmp(1)"
 name: "dmp"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dmp/"
 description: "dmp – translate Troff output to low-level MetaPost input"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dmp &#8211; translate Troff output to low-level MetaPost input </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dmp</code> [<i>option</i>] <i>ditrofffile</i> [<i>mpxfile</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page is not meant to be exhaustive. The complete documentation for this version of TeX can be found in the info file or manual <i>Web2C: A TeX implementation</i>. </p>
 <p> The <code>dmp</code> program generates MetaPost source code from the <i>ditrofffile</i>. The generated code is written in <i>mpxfile</i> if it is specified, and to standard output otherwise. </p>
 <p> <code>dmp</code> is typically called from scripts like <code>makempx</code>, not from the command line.</p>

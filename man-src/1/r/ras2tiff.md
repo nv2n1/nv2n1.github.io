@@ -1,5 +1,4 @@
 ---
-
 title: "ras2tiff(1)"
 name: "ras2tiff"
 section: "1"
@@ -10,7 +9,9 @@ description: "ras2tiff – create a TIFF file from a Sun rasterfile"
 
 <h2>NAME</h2>
 <p> ras2tiff &#8211; create a <font SIZE="-1">TIFF</font> file from a Sun rasterfile</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ras2tiff</code> [ <i>options</i> ] <i>input.ras</i> <i>output.tif</i></p>
+<h2>DESCRIPTION</h2>
 <p> <i>ras2tiff</i> converts a file in the Sun rasterfile format to <font SIZE="-1">TIFF.</font> By default, the <font SIZE="-1">TIFF</font> image is created with data samples packed (<i>PlanarConfiguration</i>=1), compressed with the Lempel-Ziv &amp; Welch algorithm (<i>Compression</i>=5), and with each strip no more than 8 kilobytes. These characteristics can overridden, or explicitly specified with the options described below. </p>
 <p> Any colormap information in the rasterfile is carried over to the <font SIZE="-1">TIFF</font> file by including a <i>Colormap</i> tag in the output file. If the rasterfile has a colormap, the <i>PhotometricInterpretation</i> tag is set to 3 (palette); otherwise it is set to 2 (RGB) if the depth is 24 or 1 (min-is-black) if the depth is not 24.</p>
 <h2>OPTIONS</h2>

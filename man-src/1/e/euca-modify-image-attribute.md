@@ -1,5 +1,4 @@
 ---
-
 title: "euca-modify-image-attribute(1)"
 name: "euca-modify-image-attribute"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-modify-image-attribute – Modify an attribute of an image"
 
 <h2>NAME</h2>
 <p> euca-modify-image-attribute &#8211; Modify an attribute of an image</p>
+<h2>SYNOPSIS</h2>
 <p> euca-modify-image-attribute (<code>&#8211;description</code> DESC | <code>-p</code> CODE | <code>-l</code>)</p>
 <dl>
 <dt>[-a ENTITY] [-r ENTITY]</dt>
 <dd> [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] IMAGE</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Modify an attribute of an image</p>
 <h3>positional arguments:</h3>
 <dl>

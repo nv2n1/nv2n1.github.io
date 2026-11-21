@@ -1,5 +1,4 @@
 ---
-
 title: "create_makefiles(1)"
 name: "create_makefiles"
 section: "1"
@@ -10,9 +9,11 @@ description: "create_makefiles – Recreates all Makefiles beneath a directory"
 
 <h2>NAME</h2>
 <p> create_makefiles &#8211; Recreates all Makefiles beneath a directory</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>create_makefiles</code> [<i>dir</i>] </dt>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> <code>create_makefiles</code> recreates all <i>Makefile</i>s in <i>dir</i> and its (recursed) subdirectories from the corresponding <i>Makefile.am</i> templates. </p>
 <dd>This script must be run from the toplevel directory (the one containing configure). This script saves time compared to re-running configure completely. </dd>
 <p> If the source directory is different from the build directory (see the environment variables below), it will be assumed that each <i>Makefile.am</i> and <i>Makefile.in</i> belongs beneath the source directory and that each <i>Makefile</i> belongs beneath the build directory. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "xdelta3(1)"
 name: "xdelta3"
 section: "1"
@@ -10,7 +9,9 @@ description: "xdelta3 – VCDIFF (RFC 3284) binary diff tool"
 
 <h2>NAME</h2>
 <p> xdelta3 &#8211; VCDIFF (RFC 3284) binary diff tool</p>
+<h2>SYNOPSIS</h2>
 <p> <code>xdelta3 </code> [<i>command</i>] [<i>options</i>] [<i>input</i> [<i>output</i>]]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>xdelta3</code> is a binary diff tool that uses the VCDIFF (RFC 3284) format and compression.</p>
 <h2>COMMANDS</h2>
 <dl>

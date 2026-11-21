@@ -1,5 +1,4 @@
 ---
-
 title: "tilestache-render(1)"
 name: "tilestache-render"
 section: "1"
@@ -10,7 +9,9 @@ description: "tilestache-render – render tiles from tilestache"
 
 <h2>NAME</h2>
 <p> tilestache-render &#8211; render tiles from tilestache</p>
+<h2>SYNOPSIS</h2>
 <p> <code>tilestache-render</code> [<i>options</i>]<i> coordinates</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>tilestache-render</code> command. </p>
 <p> <code>tilestache-render</code> is used to render tiles from <code>TileStache</code>.<br />
  Each coordinate in the argument list should look like &quot;12/656/1582.png&quot;, similar to URL paths in web server usage. Coordinates are processed in order, each one rendered to an image file in a temporary location and output to stdout.</p>

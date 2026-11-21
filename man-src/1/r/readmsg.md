@@ -1,5 +1,4 @@
 ---
-
 title: "readmsg(1)"
 name: "readmsg"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-readmsg/"
 description: "readmsg.mailutils – print messages."
 ---
 
+<h2 class="name">NAME</h2>
+<p> readmsg.mailutils &#8211; print messages. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>readmsg.mailutils</code> [<i>,OPTION/</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> GNU readmsg <code>&#8212;</code> print messages.</p>
 <dl>
 <dt><code>-a</code>, <code>&#8211;[no-]show-all-match</code></dt>

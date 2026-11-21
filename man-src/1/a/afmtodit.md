@@ -1,5 +1,4 @@
 ---
-
 title: "afmtodit(1)"
 name: "afmtodit"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-afmtodit/"
 description: "afmtodit – create font files for use with groff -Tps and -Tpdf"
 ---
 
+<h2 class="name">NAME</h2>
+<p> afmtodit &#8211; create font files for use with groff -Tps and -Tpdf </p>
+<h2>SYNOPSIS</h2>
 <p> [ <code>-ckmnsx</code> ] [ <code>-a </code><i>n</i> ] [ <code>-d </code><i>desc-file</i> ] [ <code>-e </code><i>enc-file</i> ] [ <code>-f </code><i>internal-name</i> ] [ <code>-i </code><i>n</i> ] [ <code>-o </code><i>output-file</i> ] <i>afm-file</i> <i>map-file</i> <i>font</i> <code>-v</code></p>
+<h2>DESCRIPTION</h2>
 <p> <i>afmtodit</i> creates a font file for use with <i>groff</i>, <i>grops</i>, and <i>gropdf</i>. <i>afmtodit</i> is written in Perl; you must have Perl version 5.004 or newer installed in order to run <i>afmtodit</i>. </p>
 <p> <i>afm-file</i> is the AFM (Adobe Font Metric) file for the font. </p>
 <p> <i>map-file</i> is a file that says which <i>groff</i> character names map onto each PostScript character name; this file should contain a sequence of lines of the form</p>

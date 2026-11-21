@@ -1,5 +1,4 @@
 ---
-
 title: "rst2xetex(1)"
 name: "rst2xetex"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-rst2xetex/"
 description: "rst2xetex – convert reST documents to XeLaTeX"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rst2xetex &#8211; convert reST documents to XeLaTeX </p>
+<h2>SYNOPSIS</h2>
 <p> rst2xetex [options] [&lt;source&gt; [&lt;destination&gt;]]</p>
+<h2>DESCRIPTION</h2>
 <p> Generates LaTeX documents from standalone reStructuredText sources for compilation with the Unicode-aware TeX variants XeLaTeX or LuaLaTeX. Reads from &lt;source&gt; (default is stdin) and writes to &lt;destination&gt; (default is stdout). See &lt;<i><a rel="nofollow" href="http://docutils.sourceforge.net/docs/user/latex.html">http://docutils.sourceforge.net/docs/user/latex.html</a></i>&gt; for the full reference.</p>
 <h2>OPTIONS</h2>
 <h3>General Docutils Options</h3>

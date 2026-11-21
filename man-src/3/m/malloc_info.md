@@ -1,5 +1,4 @@
 ---
-
 title: "malloc_info(3)"
 name: "malloc_info"
 section: "3"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/3-malloc_info/"
 description: "malloc_info – export malloc state to a stream"
 ---
 
+<h2 class="name">NAME</h2>
+<p> malloc_info &#8211; export malloc state to a stream </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;malloc.h&gt;
 int malloc_info(int options, FILE *stream);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>malloc_info</code>() function exports an XML string that describes the current state of the memory-allocation implementation in the caller. The string is printed on the file stream <i>stream</i>. The exported string includes information about all arenas (see <code><a href="/docs/linux/man/3-malloc/">malloc</a></code>(3)). </p>
 <p> As currently implemented, <i>options</i> must be zero.</p>
 <h2>RETURN VALUE</h2>

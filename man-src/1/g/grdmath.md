@@ -1,5 +1,4 @@
 ---
-
 title: "grdmath(1)"
 name: "grdmath"
 section: "1"
@@ -10,8 +9,10 @@ description: "grdmath – Reverse Polish Notation (RPN) calculator for grids (el
 
 <h2>NAME</h2>
 <p> grdmath &#8211; Reverse Polish Notation (RPN) calculator for grids (element by element)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>grdmath</code> [ <i>min_area</i>[/<i>min_level</i>/<i>max_level</i>][<code>+ag</code>|<code>i</code>|<code>s</code> |<code>S</code>][<code>+r</code>|<code>l</code>][<code>p</code><i>percent</i>] ] [ <i>resolution</i>[<code>+</code>] ] [ <i>increment</i> ] [ ] [ ] [ <i>region</i> ] [ [<i>level</i>] ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-n</code><i>&lt;flags&gt;</i> ] [ <code>-r</code> ] [ <code>-x</code>[[-]<i>n</i>] ] <i>operand</i> [ <i>operand</i> ] <code>OPERATOR</code> [ <i>operand</i> ] <code>OPERATOR</code> &#8230; <code>=</code> <i>outgrdfile</i> </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>grdmath</code> will perform operations like add, subtract, multiply, and divide on one or more grid files or constants using Reverse Polish Notation (RPN) syntax (e.g., Hewlett-Packard calculator-style). Arbitrarily complicated expressions may therefore be evaluated; the final result is written to an output grid file. Grid operations are element-by-element, not matrix manipulations. Some operators only require one operand (see below). If no grid files are used in the expression then options <code>-R</code>, <code>-I</code> must be set (and optionally <code>-r</code>). The expression <code>=</code> <i>outgrdfile</i> can occur as many times as the depth of the stack allows in order to save intermediate results. Complicated or frequently occurring expressions may be coded as a macro for future use or stored and recalled via named memory locations.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

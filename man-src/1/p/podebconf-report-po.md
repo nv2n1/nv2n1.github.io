@@ -1,5 +1,4 @@
 ---
-
 title: "podebconf-report-po(1)"
 name: "podebconf-report-po"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-podebconf-report-po/"
 description: "podebconf-report-po – send outdated debconf PO files to the last translators"
 ---
 
+<h2 class="name">NAME</h2>
+<p> podebconf-report-po &#8211; send outdated debconf PO files to the last translators </p>
+<h2>SYNOPSIS</h2>
 <p> <code>podebconf-report-po</code> [options]</p>
+<h2>DESCRIPTION</h2>
 <p> This program reads a directory with po files to determine which files contain fuzzy or missing translations, launches an editor to allow modifications of mail body and headers, asks confirmation to send mails, and sends them to the last translator requesting updates. The mail will contain the <font SIZE="-1">PO</font> file which has to be updated. <code>podebconf-report-po</code> can be called either in the top-level directory, or in <i>debian</i> or <i>debian/po</i> subdirectories (or, for non debconf translations, from the <code>po</code> directory itself or its parent directory). </p>
 <p> <code>podebconf-report-po</code> can also be used to send a call for translations to a mailing list. In that case, the <font SIZE="-1">POT</font> file will be attached. </p>
 <p> Different templates exist for translation update requests, request to send updated <font SIZE="-1">PO</font> files to a bug report (<code>&#8211;submit</code>) or for calls for translations (<code>&#8211;call</code>). The template can also be provided by the user. See the <font SIZE="-1"><code>TEMPLATES</code></font> section for more information on the templates.</p>

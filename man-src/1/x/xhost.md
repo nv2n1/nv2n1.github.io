@@ -1,5 +1,4 @@
 ---
-
 title: "xhost(1)"
 name: "xhost"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-xhost/"
 description: "xhost – server access control program for X"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xhost &#8211; server access control program for X </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xhost</code> [[+-]name &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> The <i>xhost</i> program is used to add and delete host names or user names to the list allowed to make connections to the X server. In the case of hosts, this provides a rudimentary form of privacy control and security. It is only sufficient for a workstation (single user) environment, although it does limit the worst abuses. Environments which require more sophisticated measures should implement the user-based mechanism or use the hooks in the protocol for passing other authentication data to the server.</p>
 <h2>OPTIONS</h2>
 <p> <i>Xhost</i> accepts the following command line options described below. For security, the options that affect access control may only be run from the &quot;controlling host&quot;. For workstations, this is the same machine as the server. For X terminals, it is the login host.</p>

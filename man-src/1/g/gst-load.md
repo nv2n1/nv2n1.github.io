@@ -1,5 +1,4 @@
 ---
-
 title: "gst-load(1)"
 name: "gst-load"
 section: "1"
@@ -10,6 +9,7 @@ description: "gst-load – test and load packages into a GNU Smalltalk image"
 
 <h2>NAME</h2>
 <p> gst-load &#8211; test and load packages into a GNU Smalltalk image</p>
+<h2>DESCRIPTION</h2>
 <h3>Usage:</h3>
 <dl>
 <dt>

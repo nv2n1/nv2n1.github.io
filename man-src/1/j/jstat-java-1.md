@@ -1,5 +1,4 @@
 ---
-
 title: "jstat-java-1(1)"
 name: "jstat-java-1"
 section: "1"
@@ -10,6 +9,7 @@ description: "jstat – Java Virtual Machine Statistics Monitoring Tool"
 
 <h2>Name</h2>
 <p> jstat &#8211; Java Virtual Machine Statistics Monitoring Tool </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 jstat[generalOption | outputOptions vmid[interval[s | ms][count]]]
 </code></pre>
@@ -29,6 +29,7 @@ jstat[generalOption | outputOptions vmid[interval[s | ms][count]]]
 <dt>count</dt>
 <dd> Number of samples to display. Default value is infinity; that is, <code>jstat</code> displays statistics until the target JVM terminates or the <code>jstat</code> command is terminated. Must be a positive integer.</dd></dl>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> The <code>jstat</code> tool displays performance statistics for an instrumented HotSpot Java virtual machine (JVM). The target JVM is identified by its virtual machine identifier, or <i>vmid</i> option described below. </p>
 <p> <code>NOTE</code>: This utility is unsupported and may not be available in future versions of the JDK. It is not currently available on Windows 98 and Windows ME. platforms. </p>
 <h3>VIRTUAL MACHINE IDENTIFIER</h3>

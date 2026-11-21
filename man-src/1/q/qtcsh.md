@@ -1,5 +1,4 @@
 ---
-
 title: "qtcsh(1)"
 name: "qtcsh"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-qtcsh/"
 description: "qtcsh – tcsh with transparent remote execution by use of qrsh"
 ---
 
+<h2 class="name">NAME</h2>
+<p> qtcsh &#8211; tcsh with transparent remote execution by use of qrsh </p>
 <h2>SYNTAX</h2>
 <p> <code>qtcsh</code> [ <code>tcsh options</code> | <code>-ABLR</code> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Qtcsh</i> is an extension to the popular derivative <i>tcsh</i>. It allows the transparent remote execution of commands entered in <i>qtcsh</i> controlled via xxQS_NAMExx. <i>Qtcsh</i> can be used as interactive command interpreter as well as for the processing of <i>tcsh</i> shell scripts. </p>
 <p> When invoked, <i>qtcsh</i> identifies which commands are to be run remotely and which are not. For this purpose the files &lt;xxqs_name_sxx_root&gt;/&lt;cell&gt;/common/qtask and ~/.qtask are processed. Each line in these files defines a command that is intended to be run remotely (see for a definition of the file format). The .qtask file in the user&#8217;s home directory contains the user&#8217;s remote task specification, while the file in the common directory is maintained by the administrator and defines a cluster-wide default behavior. The contents of the administrator supplied file are completely overridden in case there is an appropriate entry in the users file. This is prevented in case an exclamation mark is prefixed to the command name in the administrators qtask file. </p>
 <p> <i>Qtcsh</i> always attempts to start the designated tasks remotely via Exceptions are</p>

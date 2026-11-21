@@ -1,5 +1,4 @@
 ---
-
 title: "docker-config-ls(1)"
 name: "docker-config-ls"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-config-ls/"
 description: "docker-config-ls – List configs"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-config-ls &#8211; List configs </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker config ls [OPTIONS]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> List configs </p>
 <h2>OPTIONS</h2>
 <p> <code>-f</code>, <code>&#8211;filter</code>= <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Filter output based on conditions provided</p>

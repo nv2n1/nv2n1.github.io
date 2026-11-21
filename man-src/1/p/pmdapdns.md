@@ -1,5 +1,4 @@
 ---
-
 title: "pmdapdns(1)"
 name: "pmdapdns"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-pmdapdns/"
 description: "pmdapdns – PowerDNS performance metrics domain agent (PMDA)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pmdapdns &#8211; PowerDNS performance metrics domain agent (PMDA) </p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdapdns</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which exports metric values from the PowerDNS authoritative daemon as well as the recursive resolver.</p>
 <h2>INSTALLATION</h2>
 <p> If you want access to the names and values for the PowerDNS performance metrics, do the following as root: </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pkcs11_get_pin_function(3)"
 name: "gnutls_pkcs11_get_pin_function"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_pkcs11_get_pin_function – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs11_get_pin_function &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs11.h&gt;</code> </p>
 <p> <code>gnutls_pin_callback_t gnutls_pkcs11_get_pin_function(void ** </code><i>userdata</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>void ** userdata</dt>
 <dd> data to be supplied to callback</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will return the callback function set using <code>gnutls_pkcs11_set_pin_function()</code>.</p>
 <h2>RETURNS</h2>
 <p> The function set or NULL otherwise.</p>

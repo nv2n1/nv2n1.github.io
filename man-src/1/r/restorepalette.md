@@ -1,5 +1,4 @@
 ---
-
 title: "restorepalette(1)"
 name: "restorepalette"
 section: "1"
@@ -10,7 +9,9 @@ description: "restorepalette – set the color palette for textmode."
 
 <h2>NAME</h2>
 <p> restorepalette &#8211; set the color palette for textmode.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>restorepalette [</code><i>filename</i><code>]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>restorepalette</code> without arguments sets the standard VGA palette. This can be useful if it is somehow messed up. </p>
 <p> With a <i>filename</i> argument a custom palette can be loaded (feature added by Charles Blake &lt;chuckb [at] alice.wonderland.caltech.edu&gt;). </p>
 <p> This allow a user to set up a file that looks like this one (These color map definitions are the same as the default VGA ones. Alter to suite personal tastes). The first column contains the number of the color to set, then follow three integers in range 0 &#8211; 63 (lowest to highest intensity) for red, green, blue. </p>

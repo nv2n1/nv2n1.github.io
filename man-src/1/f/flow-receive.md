@@ -1,5 +1,4 @@
 ---
-
 title: "flow-receive(1)"
 name: "flow-receive"
 section: "1"
@@ -10,7 +9,9 @@ description: "flow-receive – Receive flow data with the NetFlow protocol."
 
 <h2>NAME</h2>
 <p> flow-receive &#8211; Receive flow data with the NetFlow protocol.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>flow-receive</code> [ <code>-h</code> ] [ <code>-b</code><i> big|little</i> ] [ <code>-C</code><i> comment</i> ] [ <code>-d</code><i> debug_level</i> ] [ <code>-o</code><i> output_file</i> ] [ <code>-S</code><i> stat_interval</i> ] [ <code>-V</code><i> pdu_version</i> ] [ <code>-z</code><i> z_level</i> ] <i>localip/remoteip/port</i></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>flow-receive</code> utility is used to receive flows in NetFlow format. When the <i>remoteip</i> is configured only flows from that exporter will be processed, this is the most secure and recommended configuration. When the <i>localip</i> is configured <code>flow-receive</code> will only process flows sent to the <i> localip</i> IP address. If <i>remoteip</i> is 0 (not configured) flows from any source IP address are accepted. Multiple non aggregated PDU versions may be accepted at once to support Cisco&#8217;s Catalyst 6500 NetFlow implementation which exports from both the supervisor and MSFC with the same IP address and same port but different export versions. In this case the exports will be stored in the format specified by the -V flag or whichever export type is received first.</p>
 <h2>OPTIONS</h2>
 <dl>

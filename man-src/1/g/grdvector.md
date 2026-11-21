@@ -1,5 +1,4 @@
 ---
-
 title: "grdvector(1)"
 name: "grdvector"
 section: "1"
@@ -10,8 +9,10 @@ description: "grdvector – Plot vector field from two component grids"
 
 <h2>NAME</h2>
 <p> grdvector &#8211; Plot vector field from two component grids</p>
+<h2>SYNOPSIS</h2>
 <p> <code>grdvector</code> <i>compx.nc</i> <i>compy.nc</i> <code>-J</code><i>parameters</i> [ ] [ [<code>p</code>|<code>s</code>]<i>parameters</i> ] [ <i>cpt</i> ] [ <i>fill</i> ] [ [<code>x</code>]<i>dx</i>[/<i>dy</i>] ] [ ] [ ] [ ] [ ] [ <i>parameters</i> ] [ <i>region</i> ] [ [<code>i</code>|<code>l</code>]<i>scale</i> ] [ ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ <i>pen</i> ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ ] [ <code>-c</code><i>copies</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-t</code><i>&lt;transp&gt;</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>grdvector</code> reads two 2-D grid files which represents the <i>x</i>&#8211; and <i>y</i>-components of a vector field and produces a vector field plot by drawing vectors with orientation and length according to the information in the files. Alternatively, polar coordinate <i>r</i>, <i>theta</i> grids may be given instead.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

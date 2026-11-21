@@ -1,5 +1,4 @@
 ---
-
 title: "zone2ldap(1)"
 name: "zone2ldap"
 section: "1"
@@ -11,9 +10,13 @@ url: "/docs/linux/man/1-zone2ldap/"
 
  zone2ldap /- Load BIND 9 Zone files into LDAP Directory
 
-zone2ldap [-D Bind DN] [-w Bind Password] [-b Base DN] [-z Zone] [-f Zone File ] [-h Ldap Host] [-cd] [-v]
+<h2>SYNOPSIS</h2>
 
-zone2ldap will parse a complete BIND 9 format DNS zone file, and load the contents into an LDAP directory, for use with the LDAP sdb back-end. 
+ zone2ldap [-D Bind DN] [-w Bind Password] [-b Base DN] [-z Zone] [-f Zone File ] [-h Ldap Host] [-cd] [-v]
+
+<h2>DESCRIPTION</h2>
+
+ zone2ldap will parse a complete BIND 9 format DNS zone file, and load the contents into an LDAP directory, for use with the LDAP sdb back-end. 
 
  If the zone already exists, zone2ldap will exit succesfully. If the zone does not exists, or partially exists, zone2ldap will attempt to add all/missing zone data. 
 

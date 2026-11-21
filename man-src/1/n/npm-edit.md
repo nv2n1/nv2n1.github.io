@@ -1,5 +1,4 @@
 ---
-
 title: "npm-edit(1)"
 name: "npm-edit"
 section: "1"
@@ -8,6 +7,7 @@ url: "/docs/linux/man/1-npm-edit/"
 description: "npm-edit – Edit an installed package"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>npm-edit</code> &#8211; Edit an installed package </p>
 <h3>Synopsis</h3>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "urxvt256c-ml-remote-clipboard(1)"
 name: "urxvt256c-ml-remote-clipboard"
 section: "1"
@@ -7,9 +6,14 @@ letter: "u"
 url: "/docs/linux/man/1-urxvt256c-ml-remote-clipboard/"
 ---
 
-remote-clipboard - manage a shared and possibly remote clipboard 
+<h2 class="name">NAME</h2>
+ 
 
-Somewhat of a misnomer, this extension adds two menu entries to the selection popup that allows one to run external commands to store the selection somewhere and fetch it again. 
+ remote-clipboard - manage a shared and possibly remote clipboard 
+
+<h2>DESCRIPTION</h2>
+
+ Somewhat of a misnomer, this extension adds two menu entries to the selection popup that allows one to run external commands to store the selection somewhere and fetch it again. 
 
  We use it to implement a ``distributed selection mechanism'', which just means that one command uploads the file to a remote server, and another reads it. 
 

@@ -1,5 +1,4 @@
 ---
-
 title: "iv_task(3)"
 name: "iv_task"
 section: "3"
@@ -10,6 +9,7 @@ description: "iv_task_register, iv_task_unregister, iv_task_registered – deal 
 
 <h2>NAME</h2>
 <p> iv_task_register, iv_task_unregister, iv_task_registered &#8211; deal with ivykis tasks</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;iv.h&gt;</code> </p>
 <pre><code>
 struct iv_task {
@@ -21,6 +21,7 @@ struct iv_task {
  <code>void iv_task_register(struct iv_task *</code><i>task</i><code>);</code><br />
  <code>void iv_task_unregister(struct iv_task *</code><i>task</i><code>);</code><br />
  <code>int iv_task_registered(struct iv_task *</code><i>task</i><code>);</code> </p>
+<h2>DESCRIPTION</h2>
 <p> The functions <code>iv_task_register</code> and <code>iv_task_unregister</code> register, respectively unregister, a task with the current thread&#8217;s ivykis event loop. <code>iv_task_registered</code> on a task returns true if that task is currently registered with ivykis. </p>
 <p> A task is like a timer, but with an immediate timeout. When a task is registered, unless it is unregistered again first, the callback function specified by <code>-&gt;handler</code> is guaranteed to be called once, in the thread that the task was registered in, some time after control returns to the ivykis main loop but before ivykis will sleep for more events, with <code>-&gt;cookie</code> as its first and sole argument. When this happens, the task is transparently unregistered. </p>
 <p> Tasks are mainly used for scheduling code for execution where it is not appropriate to directly run that code in the calling context (for example, because the current context might be run as a callback function where the caller expects certain conditions to remain invariant after the callback completes). </p>

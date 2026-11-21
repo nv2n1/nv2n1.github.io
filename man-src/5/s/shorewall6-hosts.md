@@ -1,5 +1,4 @@
 ---
-
 title: "shorewall6-hosts(5)"
 name: "shorewall6-hosts"
 section: "5"
@@ -7,10 +6,15 @@ letter: "s"
 url: "/docs/linux/man/5-shorewall6-hosts/"
 ---
 
+
  </p>
+<h2 class="name">NAME</h2>
+<p> hosts &#8211; shorewall6 file </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>/etc/shorewall6/hosts</code></dt>
 </dl>
+<h2>DESCRIPTION</h2>
 <dd> <p> This file is used to define zones in terms of subnets and/or individual IP addresses. Most simple setups don&#8217;t need to (should not) place anything in this file. </p>
 <p> The order of entries in this file is not significant in determining zone composition. Rather, the order that the zones are declared in m[blue]<code>shorewall6-zones</code>m[]<font SIZE="-2">[1]</font>(5) determines the order in which the records in this file are interpreted. </p>
  </dd>

@@ -1,5 +1,4 @@
 ---
-
 title: "pilot-file(1)"
 name: "pilot-file"
 section: "1"
@@ -12,7 +11,9 @@ description: "pilot-file – Dump application and header information from your l
 <p> pilot-file &#8211; Dump application and header information from your local PRC/PDB files.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Tools </p>
+<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr><i>pilot-file</i>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;port</code>&nbsp;<wbr>&lt;<code>port</code>&gt;]&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr>[<code>-q</code>|<code>&#8211;quiet</code>]&nbsp;<wbr>[<code>-?</code>|<code>&#8211;help</code>]&nbsp;<wbr>[<code>&#8211;usage</code>]&nbsp;<wbr>[<code>-H</code>|<code>&#8211;header</code>]&nbsp;<wbr>[<code>-a</code>|<code>&#8211;appinfo</code>]&nbsp;<wbr>[<code>-s</code>|<code>&#8211;sortinfo</code>]&nbsp;<wbr>[<code>-l</code>|<code>&#8211;list</code>]&nbsp;<wbr>[<code>-r</code>|<code>&#8211;record</code>&nbsp;<wbr>&nbsp;<wbr><code>STRING</code>]&nbsp;<wbr>[<code>-f</code>|<code>&#8211;to-file</code>]&nbsp;<wbr>[<code>-d</code>|<code>&#8211;dump</code>]&nbsp;<wbr><i>filename</i>&nbsp;<wbr>&#8230; </p>
+<h2>DESCRIPTION</h2>
 <p>&nbsp;<wbr><i>pilot-file</i>&nbsp;<wbr>is used to Dump application and header information from your local PRC/PDB files. </p>
 <p>&nbsp;<wbr><i>pilot-file</i>&nbsp;<wbr>does not connect to your Palm. </p>
 <h2>OPTIONS</h2>

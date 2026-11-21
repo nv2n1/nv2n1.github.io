@@ -1,5 +1,4 @@
 ---
-
 title: "history(3)"
 name: "history"
 section: "3"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/3-history/"
 description: "history – GNU History Library"
 ---
 
+<h2 class="name">NAME</h2>
+<p> history &#8211; GNU History Library </p>
 <h2>COPYRIGHT</h2>
 <p> The GNU History Library is Copyright (C) 1989-2011 by the Free Software Foundation, Inc.</p>
+<h2>DESCRIPTION</h2>
 <p> Many programs read input from the user a line at a time. The GNU History library is able to keep track of those lines, associate arbitrary data with each line, and utilize information from previous lines in composing new ones. </p>
 <h2>HISTORY EXPANSION</h2>
 <p> The history library supports a history expansion feature that is identical to the history expansion in <code>bash.</code> This section describes what syntax features are available. </p>

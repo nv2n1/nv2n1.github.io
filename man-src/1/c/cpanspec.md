@@ -1,5 +1,4 @@
 ---
-
 title: "cpanspec(1)"
 name: "cpanspec"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-cpanspec/"
 description: "cpanspec – Generate a spec file for a CPAN module"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cpanspec &#8211; Generate a spec file for a CPAN module </p>
+<h2>SYNOPSIS</h2>
 <p> cpanspec [options] [file [&#8230;]] </p>
 <pre><code>
  Options:
@@ -34,6 +36,7 @@ description: "cpanspec – Generate a spec file for a CPAN module"
    --add-buildrequires  Add BuildRequires for this item
    --version            Print the version number and exit
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>cpanspec</code> will generate a spec file to build a rpm from a CPAN-style Perl module distribution.</p>
 <h2>OPTIONS</h2>
 <dl>

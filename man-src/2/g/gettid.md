@@ -1,5 +1,4 @@
 ---
-
 title: "gettid(2)"
 name: "gettid"
 section: "2"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/2-gettid/"
 description: "gettid – get thread identification"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gettid &#8211; get thread identification </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE
 #include &lt;sys/types.h&gt;
 #include &lt;unistd.h&gt;
 pid_t gettid(void);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>gettid</code>() returns the caller&#8217;s thread ID (TID). In a single-threaded process, the thread ID is equal to the process ID (PID, as returned by <code><a href="/docs/linux/man/2-getpid/">getpid</a></code>(2)). In a multithreaded process, all threads have the same PID, but each one has a unique TID. For further details, see the discussion of <code>CLONE_THREAD</code> in <code><a href="/docs/linux/man/2-clone/">clone</a></code>(2).</p>
 <h2>RETURN VALUE</h2>
 <p> On success, returns the thread ID of the calling thread.</p>

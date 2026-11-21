@@ -1,5 +1,4 @@
 ---
-
 title: "unar(1)"
 name: "unar"
 section: "1"
@@ -10,7 +9,9 @@ description: "unar – extract archive file contents"
 
 <h2>NAME</h2>
 <p> unar &#8211; extract archive file contents</p>
+<h2>SYNOPSIS</h2>
 <p> <code>unar</code> [<i>OPTION</i>]&#8230; <i>ARCHIVE</i> [<i>FILE</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Extract <i>FILE</i>s or the contents of <i>ARCHIVE</i>.</p>
 <h2>OPTIONS</h2>
 <dl>

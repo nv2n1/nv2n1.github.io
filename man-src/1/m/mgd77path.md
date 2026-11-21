@@ -1,5 +1,4 @@
 ---
-
 title: "mgd77path(1)"
 name: "mgd77path"
 section: "1"
@@ -10,8 +9,10 @@ description: "mgd77path – Return paths to MGD77 cruises and directories"
 
 <h2>NAME</h2>
 <p> mgd77path &#8211; Return paths to MGD77 cruises and directories</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mgd77path</code> <i>NGDC-ids</i> [ [<code>&#8211;</code>] ] [ ] [ <i>ignore</i> ] [ [<i>level</i>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>mgd77path</code> returns the full pathname to one or more MGD77 files. The pathname returned for a given cruise may change with time due to reshuffling of disks/subdirectories.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

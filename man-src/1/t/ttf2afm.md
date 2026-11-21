@@ -1,5 +1,4 @@
 ---
-
 title: "ttf2afm(1)"
 name: "ttf2afm"
 section: "1"
@@ -10,7 +9,9 @@ description: "ttf2afm – utility to generate AFM files for TrueType fonts"
 
 <h2>NAME</h2>
 <p> ttf2afm &#8211; utility to generate AFM files for TrueType fonts </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ttf2afm</code> [<i>OPTIONS</i>] <i>FONTFILE</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>ttf2afm</code> is used to generate Adobe Font Metrics (AFM) files for TrueType (TTF) fonts to allow them to be used with TeX. </p>
 <p> <code>ttf2afm</code> takes the name of a TrueType font file as a required argument. It may also take one or more options from the list below (<code>-i</code> and <code>-u</code> are mutually exclusive). </p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "goaccess(1)"
 name: "goaccess"
 section: "1"
@@ -10,7 +9,9 @@ description: "goaccess – fast web log analyzer and interactive viewer."
 
 <h2>NAME</h2>
 <p> goaccess &#8211; fast web log analyzer and interactive viewer.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>goaccess [-f input-file][-c][-r][-d][-m][-q][-o][-h][&#8230;]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>goaccess</code> GoAccess is an open source real-time web log analyzer and interactive viewer that runs in a <i>terminal</i> in *nix systems or through your <i>browser.</i> </p>
 <p> It provides fast and valuable HTTP statistics for system administrators that require a visual server report on the fly. </p>
 <p> GoAccess parses the specified web log file and outputs the data to the X terminal. Features include: </p>

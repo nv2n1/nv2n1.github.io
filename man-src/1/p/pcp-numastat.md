@@ -1,5 +1,4 @@
 ---
-
 title: "pcp-numastat(1)"
 name: "pcp-numastat"
 section: "1"
@@ -10,7 +9,9 @@ description: "pcp-numastat – report on NUMA memory allocation"
 
 <h2>NAME</h2>
 <p> <code>pcp-numastat</code> &#8211; report on NUMA memory allocation</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pcp</code> [<i>pcp options</i>] <code>numastat</code> [<code>-V</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pcp-numastat</code> displays NUMA allocation statistics from the kernel memory allocator. Each process has NUMA policies that specify on which node pages are allocated. The performance counters in the kernel track on which nodes memory is allocated and these values are sampled and reported by <code>pcp-numastat</code>. </p>
 <p> Counters are maintained individually for each NUMA node. Details of the semantics of each reported metric can be retrieved using the following command: </p>
 <pre>

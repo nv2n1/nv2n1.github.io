@@ -1,5 +1,4 @@
 ---
-
 title: "euca-create-vpn-connection(1)"
 name: "euca-create-vpn-connection"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-create-vpn-connection – Create a VPN connection between a v
 
 <h2>NAME</h2>
 <p> euca-create-vpn-connection &#8211; Create a VPN connection between a virtual private gateway and a customer gateway</p>
+<h2>SYNOPSIS</h2>
 <p> euca-create-vpn-connection <code>-t</code> ipsec.1 <code>&#8211;customer-gateway</code> CGATEWAY</p>
 <dl>
 <dt><code>&#8211;vpn-gateway</code> VGATEWAY</dt>
 <dd> [&#8211;static-routes-only] [&#8211;format FORMAT] [&#8211;stylesheet STYLESHEET] [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Create a VPN connection between a virtual private gateway and a customer gateway</p>
 <h2>DESCRIPTION</h2>
 <p> You can optionally format the connection information for specific devices using the <code>&#8211;format</code> or <code>&#8211;stylesheet</code> options. If the <code>&#8211;stylesheet</code> option is an HTTP or HTTPS URL it will be downloaded as needed.</p>

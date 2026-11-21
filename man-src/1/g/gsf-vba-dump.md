@@ -1,5 +1,4 @@
 ---
-
 title: "gsf-vba-dump(1)"
 name: "gsf-vba-dump"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-gsf-vba-dump/"
 description: "gsf-vba-dump – extract Visual Basic for Applications macros"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gsf-vba-dump &#8211; extract Visual Basic for Applications macros</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gsf-vba-dump</code> [<i>FILE</i>]&#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> This manual page briefly documents the <code>gsf-vba-dump</code> command. </p>
 <p> Various Microsoft binary data formats, including Excel (.xls), Word (.doc) and PowerPoint (.ppt) can embed macro code streams. These macro streams are in P-code (intermediate language) compiled from Visual Basic for Applications (VBA). </p>
 <p> The <code>gsf-vba-dump</code> utility extracts these macro streams. </p>

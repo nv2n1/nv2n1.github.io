@@ -1,5 +1,4 @@
 ---
-
 title: "dsrdump(1)"
 name: "dsrdump"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-dsrdump/"
 description: "dsrdump – Dump DICOM SR file and data set"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dsrdump &#8211; Dump DICOM SR file and data set </p>
+<h2>SYNOPSIS</h2>
 <pre>
 dsrdump [options] dsrfile-in...
 </pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>dsrdump</code> utility dumps the contents of a DICOM Structured Reporting (SR) document (file format or raw data set) to stdout in textual form. The output of the document content follows the format proposed in David Clunie&#8217;s book &#8216;DICOM Structured Reporting&#8217; (PixelMed Publishing, 2000). </p>
 <p> If <code>dsrdump</code> reads a raw data set (DICOM data without a file format meta-header) it will attempt to guess the transfer syntax by examining the first few bytes of the file. It is not always possible to correctly guess the transfer syntax and it is better to convert a data set to a file format whenever possible (using the <code>dcmconv</code> utility). It is also possible to use the <i>-f</i> and <i>-t[ieb]</i> options to force <code>dsrdump</code> to read a dataset with a particular transfer syntax.</p>
 <h2>PARAMETERS</h2>

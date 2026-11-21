@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_rsa_params_deinit(3)"
 name: "gnutls_rsa_params_deinit"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_rsa_params_deinit – API function"
 
 <h2>NAME</h2>
 <p> gnutls_rsa_params_deinit &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/compat.h&gt;</code> </p>
 <p> <code>void gnutls_rsa_params_deinit(gnutls_rsa_params_t </code><i>rsa_params</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_rsa_params_t rsa_params</dt>
 <dd> Is a structure that holds the parameters</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will deinitialize the RSA parameters structure.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />

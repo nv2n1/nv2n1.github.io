@@ -1,5 +1,4 @@
 ---
-
 title: "boinccmd(1)"
 name: "boinccmd"
 section: "1"
@@ -10,8 +9,10 @@ description: "boinccmd – The command line interface to the BOINC client."
 
 <h2>NAME</h2>
 <p> boinccmd &#8211; The command line interface to the BOINC client.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>boinccmd</code> [<code>&#8211;host</code> <i>hostname</i>[:<i>port</i>]] [<code>&#8211;passwd</code> <i>passwd</i>] {<i>command</i>} <code>boinccmd</code> [<code>-hV</code>] </p>
 <p> Notice that the order of the options is important. The <code>&#8211;host</code> and <code>&#8211;passwd</code> options must precede any command.</p>
+<h2>DESCRIPTION</h2>
 <p> The BOINC command tool (<code>boinccmd</code>) provides a command line interface to control a running BOINC client (<code><a href="/docs/linux/man/1-boinc/">boinc</a></code>(1)). It communicates with a running client using port 31416 over TCP/IP. It can only connect to one client at a time.</p>
 <h2>OPTIONS</h2>
 <dl>

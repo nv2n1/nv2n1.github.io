@@ -1,5 +1,4 @@
 ---
-
 title: "supybot(1)"
 name: "supybot"
 section: "1"
@@ -10,7 +9,9 @@ description: "supybot – A robust and user friendly Python IRC bot"
 
 <h2>NAME</h2>
 <p> supybot &#8211; A robust and user friendly Python IRC bot</p>
+<h2>SYNOPSIS</h2>
 <p> <code>supybot</code> [<i>options</i>]<i> configFile</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>Supybot</code> is a robust, user-friendly, and programmer-friendly Python IRC bot. It aims to be an adequate replacement for most existing IRC bots. It includes a very flexible and powerful ACL system for controlling access to commands, as well as more than 50 builtin plugins providing around 400 actual commands.</p>
 <h2>OPTIONS</h2>
 <dl>

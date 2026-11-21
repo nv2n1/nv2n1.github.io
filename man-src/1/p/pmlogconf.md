@@ -1,5 +1,4 @@
 ---
-
 title: "pmlogconf(1)"
 name: "pmlogconf"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmlogconf – create/edit a pmlogger configuration file"
 
 <h2>NAME</h2>
 <p> <code>pmlogconf</code> &#8211; create/edit a pmlogger configuration file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pmlogconf</code> [<code>-cqrv</code>] [<code>-d</code><i> groupsdir</i>] [<code>-h</code><i> hostname</i>] <i>configfile</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmlogconf</code> may be used to create and modify a generic configuration file for the PCP archive logger, <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1). </p>
 <p> If <i>configfile</i> does not exist, <code>pmlogconf</code> will create a generic configuration file with a default set of enabled metrics and logging intervals. </p>
 <p> Once created, <i>configfile</i> may be used with the <code>-c</code> option to <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1) to select performance metrics and specify logging intervals for a PCP archive. </p>

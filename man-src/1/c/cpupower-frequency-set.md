@@ -1,5 +1,4 @@
 ---
-
 title: "cpupower-frequency-set(1)"
 name: "cpupower-frequency-set"
 section: "1"
@@ -12,6 +11,7 @@ description: "cpupower frequency-set – A small tool which allows to modify cpu
 <p> cpupower frequency-set &#8211; A small tool which allows to modify cpufreq settings.</p>
 <h2>SYNTAX</h2>
 <p> cpupower [ -c cpu ] frequency-set [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> cpupower frequency-set allows you to modify cpufreq settings without having to type e.g. &quot;/sys/devices/system/cpu/cpu0/cpufreq/scaling_set_speed&quot; all the time.</p>
 <h2>OPTIONS</h2>
 <dl>

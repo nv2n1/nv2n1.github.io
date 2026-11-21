@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_gsi_authz_callout_error/"
 description: "GSI Authorization Callout Error API –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> GSI Authorization Callout Error API &#8211; </p>
 <p> Authorization Callout Error Objects.</p>
 <h3>Macros</h3>
 <p> #define <code>GLOBUS_GSI_AUTHZ_CALLOUT_ERROR_MODULE</code> (&amp;globus_gsi_authz_callout_error_module)<br />

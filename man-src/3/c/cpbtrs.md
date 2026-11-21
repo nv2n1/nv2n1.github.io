@@ -1,5 +1,4 @@
 ---
-
 title: "cpbtrs(3)"
 name: "cpbtrs"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cpbtrs/"
 description: "cpbtrs.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cpbtrs.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cpbtrs</code> (UPLO, N, KD, NRHS, AB, LDAB, B, LDB, INFO)<br />
  <i></i><code>CPBTRS</code></p>

@@ -1,5 +1,4 @@
 ---
-
 title: "udev(7)"
 name: "udev"
 section: "7"
@@ -7,8 +6,8 @@ letter: "u"
 url: "/docs/linux/man/7-udev/"
 description: "udev – Dynamic device management"
 ---
-
 <p>udev &#8211; Dynamic device management </p>
+<h2>DESCRIPTION</h2>
 <p>udev supplies the system software with device events, manages permissions of device nodes and may create additional symlinks in the /dev/ directory, or renames network interfaces. The kernel usually just assigns unpredictable device names based on the order of discovery. Meaningful symlinks or network device names provide a way to reliably identify devices based on their properties or current configuration. </p>
 <p>The udev daemon, <code>systemd-udevd.service</code>(8), receives device uevents directly from the kernel whenever a device is added or removed from the system, or it changes its state. When udev receives a device event, it matches its configured set of rules against various device attributes to identify the device. Rules that match may provide additional device information to be stored in the udev database or to be used to create meaningful symlink names. </p>
 <p>All device information udev processes is stored in the udev database and sent out to possible event subscribers. Access to all stored data and the event sources is provided by the library libudev.  </p>

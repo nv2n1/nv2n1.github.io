@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_get_errorstr_by_id(3)"
 name: "ldns_get_errorstr_by_id"
 section: "3"
@@ -10,10 +9,12 @@ description: "ldns_get_errorstr_by_id"
 
 <h2>NAME</h2>
 <p> ldns_get_errorstr_by_id </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p>&nbsp;<wbr>ldns_get_errorstr_by_id(); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_get_errorstr_by_id</i>()</dt></dl>
 <h2>AUTHOR</h2>

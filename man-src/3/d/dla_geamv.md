@@ -1,5 +1,4 @@
 ---
-
 title: "dla_geamv(3)"
 name: "dla_geamv"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dla_geamv/"
 description: "dla_geamv.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dla_geamv.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dla_geamv</code> (TRANS, M, N, ALPHA, A, LDA, X, INCX, BETA, Y, INCY)<br />
  <i></i><code>DLA_GEAMV</code> computes a matrix-vector product using a general matrix to calculate error bounds.</p>

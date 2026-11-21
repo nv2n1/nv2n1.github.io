@@ -1,5 +1,4 @@
 ---
-
 title: "g_grompp_d(1)"
 name: "g_grompp_d"
 section: "1"
@@ -11,7 +10,9 @@ description: "grompp – makes a run input file"
 <h2>NAME</h2>
 <p> grompp &#8211; makes a run input file </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>grompp</code> <code>-f</code><i> grompp.mdp </i> <code>-po</code><i> mdout.mdp </i> <code>-c</code><i> conf.gro </i> <code>-r</code><i> conf.gro </i> <code>-rb</code><i> conf.gro </i> <code>-n</code><i> index.ndx </i> <code>-p</code><i> topol.top </i> <code>-pp</code><i> processed.top </i> <code>-o</code><i> topol.tpr </i> <code>-t</code><i> traj.trr </i> <code>-e</code><i> ener.edr </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-[no]v</code><i></i> <code>-time</code><i> real </i> <code>-[no]rmvsbds</code><i></i> <code>-maxwarn</code><i> int </i> <code>-[no]zero</code><i></i> <code>-[no]renum</code><i></i></p>
+<h2>DESCRIPTION</h2>
 <p> The gromacs preprocessor reads a molecular topology file, checks the validity of the file, expands the topology from a molecular description to an atomic description. The topology file contains information about molecule types and the number of molecules, the preprocessor copies each molecule as needed. There is no limitation on the number of molecule types. Bonds and bond-angles can be converted into constraints, separately for hydrogens and heavy atoms. Then a coordinate file is read and velocities can be generated from a Maxwellian distribution if requested. grompp also reads parameters for the mdrun (eg. number of MD steps, time step, cut-off), and others such as NEMD parameters, which are corrected so that the net acceleration is zero. Eventually a binary file is produced that can serve as the sole input file for the MD program. </p>
 <p> grompp uses the atom names from the topology file. The atom names in the coordinate file (option <code> -c</code>) are only read to generate warnings when they do not match the atom names in the topology. Note that the atom names are irrelevant for the simulation as only the atom types are used for generating interaction parameters. </p>
 <p> grompp calls a preprocessor to resolve includes, macros etcetera. By default we use the cpp in your path. To specify a different macro-preprocessor (e.g. m4) or alternative location you can put a line in your parameter file specifying the path to that program. Specifying <code> -pp</code> will get the pre-processed topology file written out. </p>

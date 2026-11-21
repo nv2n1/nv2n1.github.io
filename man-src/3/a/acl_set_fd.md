@@ -1,5 +1,4 @@
 ---
-
 title: "acl_set_fd(3)"
 name: "acl_set_fd"
 section: "3"
@@ -8,10 +7,13 @@ url: "/docs/linux/man/3-acl_set_fd/"
 description: "acl_set_fd – set an ACL by file descriptor"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>acl_set_fd</code> &#8211; set an ACL by file descriptor </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>
+<h2>SYNOPSIS</h2>
 <p> In sys/types.h In sys/acl.h Ft int Fn acl_set_fd int fd acl_t acl</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn acl_set_fd function associates an access ACL with the file referred to by <i>fd</i> </p>
 <p> The effective user ID of the process must match the owner of the file or the process must have the CAP_FOWNER capability for the request to succeed.</p>
 <h2>RETURN VALUE</h2>

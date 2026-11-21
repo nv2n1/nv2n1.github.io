@@ -1,5 +1,4 @@
 ---
-
 title: "ares_parse_ns_reply(3)"
 name: "ares_parse_ns_reply"
 section: "3"
@@ -10,11 +9,13 @@ description: "ares_parse_ns_reply – Parse a reply to a DNS query of type NS in
 
 <h2>NAME</h2>
 <p> ares_parse_ns_reply &#8211; Parse a reply to a DNS query of type NS into a hostent</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ares.h&gt;
 int ares_parse_ns_reply(const unsigned char *abuf, int alen,
                         struct hostent **host);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>ares_parse_ns_reply</code> function parses the response to a query of type NS into a <code>struct hostent</code>. The parameters <i>abuf</i> and <i>alen</i> give the contents of the response. The result is stored in allocated memory and a pointer to it stored into the variable pointed to by <i>host</i>. The nameservers are stored into the <code>aliases</code> field of the <i>host</i> structure. It is the caller&#8217;s responsibility to free the resulting host structure using <code><a href="/docs/linux/man/3-ares_free_hostent/">ares_free_hostent</a></code>(3) when it is no longer needed.</p>
 <h2>RETURN VALUES</h2>
 <p> <code>ares_parse_ns_reply</code> can return any of the following values:</p>

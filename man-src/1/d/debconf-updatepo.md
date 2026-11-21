@@ -1,5 +1,4 @@
 ---
-
 title: "debconf-updatepo(1)"
 name: "debconf-updatepo"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-debconf-updatepo/"
 description: "debconf-updatepo – update PO files about debconf templates"
 ---
 
+<h2 class="name">NAME</h2>
+<p> debconf-updatepo &#8211; update PO files about debconf templates </p>
+<h2>SYNOPSIS</h2>
 <p> <code>debconf-updatepo</code> [<code>-v</code>] [<code>-h</code>] [<code>&#8211;podir=</code><font SIZE="-1">DIR</font>] [<code>&#8211;skip-pot</code>] [<code>&#8211;skip-merge</code>] [<code>&#8211;msgid-bugs-address=</code><font SIZE="-1">EMAIL</font>]</p>
+<h2>DESCRIPTION</h2>
 <p> This program reads <i>po/POTFILES.in</i> to determine which master files need to be processed, then extracts new gettext strings into <i>po/templates.pot</i> and updates all <i>po/*.po</i> files. This script can be called either in the top-level directory, or in the <i>debian</i> or <i>debian/po</i> subdirectories. It is run by developer and/or translator to update <font SIZE="-1">PO</font> files when the English text is modified in <i>templates</i> files.</p>
 <h2>OPTIONS</h2>
 <dl>

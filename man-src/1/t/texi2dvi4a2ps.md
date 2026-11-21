@@ -1,5 +1,4 @@
 ---
-
 title: "texi2dvi4a2ps(1)"
 name: "texi2dvi4a2ps"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-texi2dvi4a2ps/"
 description: "texi2dvi4a2ps – Compile Texinfo and LaTeX files to DVI or PDF"
 ---
 
+<h2 class="name">NAME</h2>
+<p> texi2dvi4a2ps &#8211; Compile Texinfo and LaTeX files to DVI or PDF </p>
+<h2>SYNOPSIS</h2>
 <p> <code>texi2dvi4a2ps</code> [<i>OPTION</i>]&#8230; <i>FILE</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Run each Texinfo or LaTeX FILE through TeX in turn until all cross-references are resolved, building all indices. The directory containing each FILE is searched for included files. The suffix of FILE is used to determine its language (LaTeX or Texinfo). </p>
 <p> Makeinfo is used to perform Texinfo macro expansion before running TeX when needed.</p>
 <h3>Operation modes:</h3>

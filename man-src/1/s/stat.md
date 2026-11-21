@@ -1,5 +1,4 @@
 ---
-
 title: "stat(1)"
 name: "stat"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-stat/"
 description: "stat – display file or file system status"
 ---
 
+<h2 class="name">NAME</h2>
+<p> stat &#8211; display file or file system status </p>
+<h2>SYNOPSIS</h2>
 <p> <code>stat</code> [<i>,OPTION/</i>]&#8230; <i>,FILE/</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Display file or file system status. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <dl>

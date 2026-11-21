@@ -1,5 +1,4 @@
 ---
-
 title: "vfstest(1)"
 name: "vfstest"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-vfstest/"
 description: "vfstest – tool for testing samba VFS modules"
 ---
 
+<h2 class="name">NAME</h2>
+<p> vfstest &#8211; tool for testing samba VFS modules </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt>
 </dt><dd>vfstest [-d debuglevel] [-c command] [-l logdir] [-h]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This tool is part of the <code><a href="/docs/linux/man/7-samba/">samba</a></code>(7) suite. </p>
 <p> vfstest is a small command line utility that has the ability to test dso samba VFS modules. It gives the user the ability to call the various VFS functions manually and supports cascaded VFS modules.</p>
 <h2>OPTIONS</h2>

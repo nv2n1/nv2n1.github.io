@@ -1,5 +1,4 @@
 ---
-
 title: "xkill(1)"
 name: "xkill"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-xkill/"
 description: "xkill – kill a client by its X resource"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xkill &#8211; kill a client by its X resource </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xkill</code> [-display <i>displayname</i>] [-id <i>resource</i>] [-button number] [-frame] [-all] [-version]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Xkill</i> is a utility for forcing the X server to close connections to clients. This program is very dangerous, but is useful for aborting programs that have displayed undesired windows on a user&#8217;s screen. If no resource identifier is given with <i>-id</i>, <i>xkill</i> will display a special cursor as a prompt for the user to select a window to be killed. If a pointer button is pressed over a non-root window, the server will close its connection to the client that created the window.</p>
 <h2>OPTIONS</h2>
 <dl>

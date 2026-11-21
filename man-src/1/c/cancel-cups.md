@@ -1,5 +1,4 @@
 ---
-
 title: "cancel-cups(1)"
 name: "cancel-cups"
 section: "1"
@@ -10,7 +9,9 @@ description: "cancel – cancel jobs"
 
 <h2>NAME</h2>
 <p> cancel &#8211; cancel jobs</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cancel</code> [ -E ] [ -U <i>username</i> ] [ -a ] [ -h <i>hostname[:port]</i> ] [ -u <i>username</i> ] [ <i>id</i> ] [ <i>destination</i> ] [ <i>destination-id</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>cancel</i> cancels existing print jobs. The <i>-a</i> option will remove all jobs from the specified destination.</p>
 <h2>OPTIONS</h2>
 <p> The following options are recognized by <i>cancel</i>:</p>

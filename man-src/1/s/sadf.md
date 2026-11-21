@@ -1,5 +1,4 @@
 ---
-
 title: "sadf(1)"
 name: "sadf"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-sadf/"
 description: "sadf – Display data collected by sar in multiple formats."
 ---
 
+<h2 class="name">NAME</h2>
+<p> sadf &#8211; Display data collected by sar in multiple formats.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>sadf [ -C ] [ -c | -d | -g | -j | -l | -p | -r | -x ] [ -H ] [ -h ] [ -T | -t | -U ] [ -V ] [ -O</code> <i>opts </i><code>[,&#8230;] ] [ -P { </code><i>cpu_list </i><code>| ALL } ] [ -s [</code> <i>hh</i><code>:</code><i>mm</i><code>[:</code><i>ss</i><code>] ] ] [ -e [</code><i>hh</i><code>:</code><i>mm</i><code>[:</code><i>ss</i><code>] ] ]</code> <code>[ &#8211;dev=</code><i>dev_list </i><code>] [ &#8211;fs=</code><i>fs_list </i><code>] [ &#8211;iface=</code><i>iface_list</i><code>] [ &#8212;</code> <i>sar_options </i><code>] [ </code><i>interval </i><code>[ </code><i>count </i><code>] ] [ </code><i>datafile </i><code>| </code><i>-[0-9]+ </i><code>]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>sadf</code> command is used for displaying the contents of data files created by the <code><a href="/docs/linux/man/1-sar/">sar</a></code>(1) command. But unlike <code>sar</code>, <code>sadf</code> can write its data in many different formats (CSV, XML, etc.) The default format is one that can easily be handled by pattern processing commands like <code>awk </code>(see option <code>-p</code>). The <code>sadf</code> command can also be used to draw graphs for the various activities collected by <code>sar</code> and display them as SVG (Scalable Vector Graphics) graphics in your web browser (see option <code>-g</code>). </p>
 <p> The <code>sadf</code> command extracts and writes to standard output records saved in the <i>datafile</i> file. This file must have been created by a version of <code>sar </code>which is compatible with that of <code>sadf</code>. If <i>datafile</i> is omitted, <code>sadf</code> uses the standard system activity daily data file. It is also possible to enter <code>-1</code>, <code>-2 </code>etc. as an argument to <code>sadf</code> to display data of that days ago. For example, <code>-1</code> will point at the standard system activity file of yesterday. </p>
 <p> The standard system activity daily data file is named <i>saDD </i>or <i>saYYYYMMDD</i>, where <i>YYYY </i>stands for the current year, <i>MM </i>for the current month and <i>DD</i> for the current day. <code>sadf</code> will look for the most recent of <i>saDD </i>and <i>saYYYYMMDD</i>, and use it. By default it is located in the <i>/var/log/sysstat</i> directory. Yet it is possible to specify an alternate location for it: If <i>datafile</i> is a directory (instead of a plain file) then it will be considered as the directory where the standard system activity daily data file is located. </p>

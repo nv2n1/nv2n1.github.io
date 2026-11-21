@@ -1,5 +1,4 @@
 ---
-
 title: "git-check-attr(1)"
 name: "git-check-attr"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-check-attr/"
 description: "git-check-attr – Display gitattributes information"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-check-attr &#8211; Display gitattributes information </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git check - attr[-a | --all | &lt;attr&gt;...][--]&lt;pathname&gt;... git check - attr-- stdin[-z][-a | --all | &lt;attr&gt;...]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> For every pathname, this command will list if each attribute is <i>unspecified</i>, <i>set</i>, or <i>unset</i> as a gitattribute on that pathname.</p>
 <h2>OPTIONS</h2>
 <p> -a, &#8211;all</p>

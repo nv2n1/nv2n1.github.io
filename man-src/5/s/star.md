@@ -1,5 +1,4 @@
 ---
-
 title: "star(5)"
 name: "star"
 section: "5"
@@ -7,8 +6,8 @@ letter: "s"
 url: "/docs/linux/man/5-star/"
 description: "star – tape archive file format"
 ---
-
 <p> star - tape archive file format  </p>
+<h2>DESCRIPTION</h2>
 <p> <code>Tar</code> Archives are layered archives. The basic structure is defined by the POSIX.1-1988 archive format and documented in the <code>BASIC TAR HEADER DESCRIPTION</code> section below. The higher level structure is defined by the POSIX.1-2001 extended headers and documented in the <code>EXTENDED TAR (PAX) HEADER STRUCTURE</code> section below. POSIX.1-2001 extended headers are pseudo files that contain an unlimited number of extended header keywords and associated values. The header keywords are documented in the <code>EXTENDED TAR (PAX) HEADER KEYWORDS</code> section below.  </p>
 <h2>BASIC TAR HEADER DESCRIPTION</h2>
 <p>Physically, a POSIX.1-1988 <code>tar</code> archive consists of a series of fixed sized blocks of TBLOCK (512) characters. It contains a series of file entries terminated by a logical end-of-archive marker, which consists of two blocks of 512 bytes of binary zeroes. Each file entry is represented by a header block that describes the file followed by one or more blocks with the content of the file. The length of each file is rounded up to a multiple of 512 bytes. </p>

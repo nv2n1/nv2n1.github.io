@@ -1,5 +1,4 @@
 ---
-
 title: "tf(1)"
 name: "tf"
 section: "1"
@@ -10,8 +9,10 @@ description: "tf – TinyFugue, a MUD client"
 
 <h2>NAME</h2>
 <p> tf &#8211; TinyFugue, a MUD client</p>
+<h2>SYNOPSIS</h2>
 <p> <code>tf [-f</code><i>file</i><code>] [-lnq] [</code><i>world</i><code>]</code><br />
  <code>tf [-f</code><i>file</i><code>] </code><i>host</i><i>port</i></p>
+<h2>DESCRIPTION</h2>
 <p> <i>TinyFugue</i> (also known as &quot;Fugue&quot; or &quot;TF&quot;) is a line-based client designed for connecting to MUD servers (note: LP, DIKU, and other servers which use prompts require &quot;/lp on&quot;; see /help prompts). </p>
 <p> Most of the <i>TF</i> documentation is in the help file, which may be read online with the &quot;/help&quot; command. This manual page may be obsolete in certain areas; however, the helpfile will always be up to date. </p>
 <p> <i>TinyFugue</i> is larger than most MUD clients, but has many more features and is much more flexible. The goal is to provide the most functionality in a client that still maintains the user-friendliness of <i>Tinytalk</i>. Clients with extension languages such as <i>Tcltt</i> or <i>VaporTalk</i> can do a little more in certain areas, but are considerably harder to use and learn. <i>TF</i> provides most of these abilities in such a manner that learning to use any one function is relatively easy. </p>

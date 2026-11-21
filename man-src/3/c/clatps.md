@@ -1,5 +1,4 @@
 ---
-
 title: "clatps(3)"
 name: "clatps"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-clatps/"
 description: "clatps.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> clatps.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clatps</code> (UPLO, TRANS, DIAG, NORMIN, N, AP, X, SCALE, CNORM, INFO)<br />
  <i></i><code>CLATPS</code> solves a triangular system of equations with the matrix held in packed storage.</p>

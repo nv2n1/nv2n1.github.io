@@ -1,5 +1,4 @@
 ---
-
 title: "xfce4-notifyd-config(1)"
 name: "xfce4-notifyd-config"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-xfce4-notifyd-config/"
 description: "xfce4-notifyd-config – configuration GUI for xfce4-notifyd"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xfce4-notifyd-config &#8211; configuration GUI for xfce4-notifyd </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>xfce4-notifyd-config</code> [<code>-?</code>] [<code>-V</code>] [<code>-s</code> <i>SOCKET_ID</i>] [<code>&#8211;display</code>=<i>DISPLAY</i>]</dt>
 <dd></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>xfce4-notifyd-config</code> will launch the configuration GUI for xfce4-notifyd.</p>
 <h2>OPTIONS</h2>
 <dl>

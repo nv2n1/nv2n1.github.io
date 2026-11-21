@@ -1,5 +1,4 @@
 ---
-
 title: "beakerlib-infrastructure(1)"
 name: "beakerlib-infrastructure"
 section: "1"
@@ -7,9 +6,14 @@ letter: "b"
 url: "/docs/linux/man/1-beakerlib-infrastructure/"
 ---
 
-BeakerLib - infrastructure - mounting, backup and service helpers 
+<h2 class="name">NAME</h2>
+ 
 
-BeakerLib functions providing checking and mounting <font SIZE="-1">NFS</font> shares, backing up and restoring files and controlling running services.
+ BeakerLib - infrastructure - mounting, backup and service helpers 
+
+<h2>DESCRIPTION</h2>
+
+ BeakerLib functions providing checking and mounting <font SIZE="-1">NFS</font> shares, backing up and restoring files and controlling running services.
 
 <h2>FUNCTIONS</h2>
 

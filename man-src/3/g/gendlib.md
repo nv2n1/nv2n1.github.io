@@ -1,5 +1,4 @@
 ---
-
 title: "gendlib(3)"
 name: "gendlib"
 section: "3"
@@ -10,7 +9,9 @@ description: "gendlib – perl library for querying genders file"
 
 <h2>NAME</h2>
 <p> gendlib &#8211; perl library for querying genders file</p>
+<h2>SYNOPSIS</h2>
 <p> require &#8220;/usr/lib/genders/gendlib.pl&#8221;;</p>
+<h2>DESCRIPTION</h2>
 <p> This package contains common functions for manipulating the genders file. Previously this code existed only in the nodeattr command, but applications that must repeatedly call nodeattr would spend a great deal of time reading and parsing the genders file. These functions create an in-memory cache of genders on the first call; subsequent calls need only reference the in-memory copy and are thus speeded up. </p>
 <p> <code>Initialization:</code> </p>
 <p> Genders::init([$path_genders])</p>

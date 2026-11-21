@@ -1,5 +1,4 @@
 ---
-
 title: "dirfile_uninclude(3)"
 name: "dirfile_uninclude"
 section: "3"
@@ -10,9 +9,11 @@ description: "dirfile_uninclude — remove a format file fragment from a dirfile
 
 <h2>NAME</h2>
 <p> dirfile_uninclude &#8212; remove a format file fragment from a dirfile</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
 <dl>
 <dt> <code>int *dirfile_uninclude(DIRFILE *</code><i>dirfile</i><code>, int </code><i>fragment_index</i><code>,</code> <code>int </code><i>del</i><code>);</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>dirfile_uninclude</code>() removes the format file fragment indexed by <i>fragment_index</i> from the specified dirfile, as well as any fragments the specified fragment INCLUDEs. Fields defined in the removed fragments will be removed from the dirfile. </dd>
 <p> Before removing the specified fragment, all pending writes are flushed to <code>RAW</code> fields defined the the removed fragments. If <i>del</i> is zero, metadata changes will also be written to the removed fragments. If <i>del</i> is non-zero, the format file fragments will be deleted from disk, if possible. Regardless of the value of <i>del</i>, binary data files associated with <code>RAW</code> fields defined in the removed fragments will not be deleted. To delete these binary files, use <code><a href="/docs/linux/man/3-dirfile_delete/">dirfile_delete</a></code>(3) before calling this function. </p>
 <p> The primary format file (the fragment indexed by zero) cannot be removed from the dirfile.</p>

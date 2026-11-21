@@ -1,5 +1,4 @@
 ---
-
 title: "blueproximity(1)"
 name: "blueproximity"
 section: "1"
@@ -10,7 +9,9 @@ description: "blueproximity – locks/unlocks your desktop tracking a bluetooth 
 
 <h2>NAME</h2>
 <p> blueproximity &#8211; locks/unlocks your desktop tracking a bluetooth device</p>
+<h2>SYNOPSIS</h2>
 <p> <code>blueproximity</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>blueproximity</code> helps you adding a little more security to your desktop. It does so by detecting one of your bluetooth devices, most likely your mobile phone, and keeping track of its distance. If you move away from your computer and the distance is above a certain level (no measurementin meters is possible) for a given time, it automatically locks your desktop (or starts any other shell command you want). Once away, if you return nearer than a given level for a set time your computer unlocks magically without any interaction (or starts any other shell command you want). </p>
 <p> Have a look at the package documentation in your distribution&#8217;s doc directory, likely /usr/share/doc/blueproximity, to read the complete html manual or visit the website <a rel="nofollow" href="http://blueproximity.sourceforge.net">http://blueproximity.sourceforge.net</a> .</p>
 <h2>OPTIONS</h2>

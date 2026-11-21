@@ -1,5 +1,4 @@
 ---
-
 title: "bson_iter_type(3)"
 name: "bson_iter_type"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_iter_type() – The bson_iter_type() function shall return th
 
 <h2>NAME</h2>
 <p> bson_iter_type() &#8211; The bson_iter_type() function shall return the type of the observed element in a bson document.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 typedef enum {
     BSON_TYPE_EOD = 0x00,
@@ -41,6 +41,7 @@ bson_iter_type(const bson_iter_t *iter);
 <dl>
 <dt><code>iter</code></dt>
 <dd> A <code>bson_iter_t</code> \&amp;.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_iter_type/">bson_iter_type</a>(3)</code> function shall return the type of the observed element in a bson document. </p>
 <h2>RETURNS</h2>
 <p> A <code>bson_type_t</code> \&amp;. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "nprint(1)"
 name: "nprint"
 section: "1"
@@ -10,7 +9,9 @@ description: "nprint – NetWare print client"
 
 <h2>NAME</h2>
 <p> nprint &#8211; NetWare print client</p>
+<h2>SYNOPSIS</h2>
 <p> <code>nprint</code> [ <code>-S</code> <i>server</i> ] [ <code>-h</code> ] [ <code>-U</code> <i>username</i> | <code>-n</code> ] [ <code>-C</code> ] [ <code>-q</code> <i>queuename</i> ] [ <code>-d</code> <i>job-description</i> ] [ <code>-p</code> <i>pathname-in-banner</i> ] [ <code>-B</code> <i>username-in-banner</i> ] [ <code>-s</code> ] [ <code>-f</code> <i>filename-in-banner</i> ] [ <code>-l</code> <i>lines</i> ] [ <code>-r</code> <i>rows</i> ] [ <code>-c</code> <i>copies</i> ] [ <code>-t</code> <i>tab size</i> ] [ <code>-T</code> ] [ <code>-N</code> ] [ <code>-F</code> <i>form-number</i> ] <i>filename</i> </p>
+<h2>DESCRIPTION</h2>
 <p> With <code>nprint</code>, you can print files on print queues of a NetWare file server. </p>
 <p> There are a lot of options, so you should probably wrap some default configurations into some shell scripts. </p>
 <p> <code>nprint</code> looks up the file <i>$HOME/.nwclient</i> to find a file server, a user name and possibly a password. See <a href="/docs/linux/man/5-nwclient/">nwclient</a>(5) for more information. Please note that the access permissions of <code>.nwclient</code> MUST be 600, for security reasons. </p>

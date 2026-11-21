@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_openpgp_crt_get_auth_subkey(3)"
 name: "gnutls_openpgp_crt_get_auth_subkey"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_openpgp_crt_get_auth_subkey – API function"
 
 <h2>NAME</h2>
 <p> gnutls_openpgp_crt_get_auth_subkey &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>
 <p> <code>int gnutls_openpgp_crt_get_auth_subkey(gnutls_openpgp_crt_t </code><i>crt</i><code>, gnutls_openpgp_keyid_t </code><i>keyid</i><code>, unsigned int </code><i>flag</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_openpgp_crt_get_auth_subkey – API function"
 <dd> the struct to save the keyid.</dd>
 <dt>unsigned int flag</dt>
 <dd> Non-zero indicates that a valid subkey is always returned.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Returns the 64-bit keyID of the first valid OpenPGP subkey marked for authentication. If flag is non-zero and no authentication subkey exists, then a valid subkey will be returned even if it is not marked for authentication.</p>
 <h2>RETURNS</h2>
 <p> <code>GNUTLS_E_SUCCESS</code> on success, or an error code.</p>

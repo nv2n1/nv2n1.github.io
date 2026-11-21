@@ -1,5 +1,4 @@
 ---
-
 title: "fmemcmpi(3)"
 name: "fmemcmpi"
 section: "3"
@@ -11,7 +10,9 @@ url: "/docs/linux/man/3-fmemcmpi/"
 
  fmemcmpi - fuzzy comparison of two memory areas
 
-#include &lt;fstrcmp.h&gt; 
+<h2>SYNOPSIS</h2>
+
+ #include &lt;fstrcmp.h&gt; 
 
  #define FSTRCMPI_IDENTICAL 
  #define FSTRCMPI_THRESHOLD 
@@ -19,7 +20,9 @@ url: "/docs/linux/man/3-fmemcmpi/"
 
  int fmemcmpi(const void *data1, size_t size1, const void *data2, size_t size2);
 
-The fmemcmpi() function compares the two memory areas, the size1 bytes pointed to by data1 and the size2 bytes pointed to by data2.
+<h2>DESCRIPTION</h2>
+
+ The fmemcmpi() function compares the two memory areas, the size1 bytes pointed to by data1 and the size2 bytes pointed to by data2.
 
 <h2>RETURN VALUE</h2>
 

@@ -1,5 +1,4 @@
 ---
-
 title: "xfce4-session-settings(1)"
 name: "xfce4-session-settings"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-xfce4-session-settings/"
 description: "xfce4-session-settings – Session settings for Xfce"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xfce4-session-settings &#8211; Session settings for Xfce </p>
+<h2>DESCRIPTION</h2>
 <h3>Usage:</h3>
 <dl>
 <dt>

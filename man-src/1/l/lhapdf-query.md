@@ -1,5 +1,4 @@
 ---
-
 title: "lhapdf-query(1)"
 name: "lhapdf-query"
 section: "1"
@@ -10,7 +9,9 @@ description: "lhapdf-query – Query PDF values from LHAPDF"
 
 <h2>NAME</h2>
 <p> lhapdf-query &#8211; Query PDF values from LHAPDF</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lhapdf-query</code> [cmd] [setname|num] [memnum] x Q [flavourID]</p>
+<h2>DESCRIPTION</h2>
 <p> Retrieve PDF values from LHAPDF, given a set name, member number and values for x and Q. This will return a list of xf(x,Q2) values for each parton; specifying a parton name on the command line will return the single appropriate xf(x,Q2) value for that flavour.</p>
 <h2>OPTIONS</h2>
 <dl>

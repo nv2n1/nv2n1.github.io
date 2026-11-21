@@ -1,5 +1,4 @@
 ---
-
 title: "icu-config(1)"
 name: "icu-config"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-icu-config/"
 description: "icu-config – output ICU build options"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>icu-config</code> &#8211; output ICU build options </p>
+<h2>SYNOPSIS</h2>
 <p> <code>icu-config</code> [ <code>&#8211;bindir</code> ] [ <code>&#8211;cc</code> ] [ <code>&#8211;cflags</code> ] [ <code>&#8211;cppflags</code> ] [ <code>&#8211;cppflags-searchpath</code> ] [ <code>&#8211;cxx</code> ] [ <code>&#8211;cxxflags</code> ] [ <code>&#8211;detect-prefix</code> ] [ <code>&#8211;exec-prefix</code> ] [ <code>&#8211;exists</code> ] [ <code>&#8211;help</code>, <code>-?</code>, <code>&#8211;usage</code> ] [ <code>&#8211;icudata</code> ] [ <code>&#8211;icudata-install-dir</code> ] [ <code>&#8211;icudata-mode</code> ] [ <code>&#8211;icudatadir</code> ] [ <code>&#8211;invoke</code> ] [ <code>&#8211;invoke=</code><i>prog</i> ] [ <code>&#8211;ldflags</code> ] [ <code>&#8211;ldflags-layout</code> ] [ <code>&#8211;ldflags-libsonly</code> ] [ <code>&#8211;ldflags-searchpath</code> ] [ <code>&#8211;ldflags-system</code> ] [ <code>&#8211;ldflags-icuio</code> ] [ <code>&#8211;mandir</code> ] [ <code>&#8211;prefix</code> ] [ <code>&#8211;prefix=</code><i>prefix</i> ] [ <code>&#8211;sbindir</code> ] [ <code>&#8211;shared-datadir</code> ] [ <code>&#8211;sysconfdir</code> ] [ <code>&#8211;unicode-version</code> ] [ <code>&#8211;version</code> ] [ <code>&#8211;incfile</code> ] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>icu-config</code> simplifies the task of building and linking against ICU as compared to manually configuring user makefiles or equivalent. Because <code>icu-config</code> is an executable script, it also solves the problem of locating the ICU libraries and headers, by allowing the system PATH to locate it.</p>
 <h2>EXAMPLES</h2>
 <p> <code>icu-config</code> can be used without a makefile. The command line below is sufficient for building a single-file c++ program against ICU. (For example, <code>icu/source/samples/props/props.cpp</code>) </p>

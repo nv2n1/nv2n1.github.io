@@ -1,5 +1,4 @@
 ---
-
 title: "links2(1)"
 name: "links2"
 section: "1"
@@ -10,7 +9,9 @@ description: "links – lynx-like alternative character mode WWW browser"
 
 <h2>NAME</h2>
 <p> links &#8211; lynx-like alternative character mode WWW browser</p>
+<h2>SYNOPSIS</h2>
 <p> <code>links</code> <i>[options] URL</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>links</code> is a text mode WWW browser with ncurses interface, supporting colors, correct table rendering, background downloading, menu driven configuration interface and slim code. </p>
 <p> Frames are supported. You can have different file formats associated with external viewers. mailto: and telnet: are supported via external clients. </p>
 <p> <i>links</i> can handle local (file://) or remote (http:// or <a href="ftp://)">ftp://)</a> URLs. </p>

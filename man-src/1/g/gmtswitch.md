@@ -1,5 +1,4 @@
 ---
-
 title: "gmtswitch(1)"
 name: "gmtswitch"
 section: "1"
@@ -10,6 +9,7 @@ description: "gmtswitch – Switching between different GMT versions"
 
 <h2>NAME</h2>
 <p> gmtswitch &#8211; Switching between different GMT versions</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gmtswitch</code> [ D | <i>version</i> ]</p>
 <h2>INTRODUCTION</h2>
 <p> <code>gmtswitch</code> helps you modify your environment to allow for the switching back and forth between several installed GMT versions, in particular GMT 5 and versions from the GMT 4 series. It works by maintaining a list of directories to GMT installations in a file in your home directory, then manipulates a symbolic link to point to the GMT directory whose executables we wish to use [The Windows version works a bit differently; see WINDOWS below].</p>

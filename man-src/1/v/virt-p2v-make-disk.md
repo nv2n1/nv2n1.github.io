@@ -1,5 +1,4 @@
 ---
-
 title: "virt-p2v-make-disk(1)"
 name: "virt-p2v-make-disk"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-virt-p2v-make-disk/"
 description: "virt-p2v-make-disk – Build the virt-p2v disk using virt-builder"
 ---
 
+<h2 class="name">NAME</h2>
+<p> virt-p2v-make-disk &#8211; Build the virt-p2v disk using virt-builder </p>
+<h2>SYNOPSIS</h2>
 <pre>
  virt-p2v-make-disk -o /dev/sdX [os-version]
 </pre>
+<h2>DESCRIPTION</h2>
 <p> <i><a href="/docs/linux/man/1-virt-p2v/">virt-p2v</a></i>(1) converts a physical machine to run virtualized on <font SIZE="-1">KVM,</font> managed by libvirt, OpenStack, oVirt, Red Hat Enterprise Virtualisation (<font SIZE="-1">RHEV</font>), or one of the other targets supported by <i><a href="/docs/linux/man/1-virt-v2v/">virt-v2v</a></i>(1). </p>
 <p> virt-p2v-make-disk is a script which creates a bootable disk image or <font SIZE="-1">USB</font> key containing virt-p2v. It uses <i><a href="/docs/linux/man/1-virt-builder/">virt-builder</a></i>(1) to do this, and is just a small shell script around virt-builder. </p>
 <p> The required <i>-o</i> parameter specifies where the output should go, for example to a <font SIZE="-1">USB</font> key (eg. <tt>&quot;-o /dev/sdX&quot;</tt>) or to a file. If you pass a device name, then <code>the existing contents of the device will be erased</code>.</p>

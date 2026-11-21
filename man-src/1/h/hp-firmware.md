@@ -1,5 +1,4 @@
 ---
-
 title: "hp-firmware(1)"
 name: "hp-firmware"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-hp-firmware/"
 description: "hp-firmware – Firmware Download Utility"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hp-firmware &#8211; Firmware Download Utility </p>
+<h2>DESCRIPTION</h2>
 <p> Download firmware to a device that requires downloaded firmware to function. (Note: Most printers do not require the use of this utility).</p>
+<h2>SYNOPSIS</h2>
 <p> <code>hp-firmware [DEVICE_URI|PRINTER_NAME] [MODE] [OPTIONS]</code></p>
 <h2>PRINTER|DEVICE-URI</h2>
 <dl>

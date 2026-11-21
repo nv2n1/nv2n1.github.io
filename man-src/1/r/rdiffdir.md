@@ -1,5 +1,4 @@
 ---
-
 title: "rdiffdir(1)"
 name: "rdiffdir"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-rdiffdir/"
 description: "rdiffdir – compute and apply signatures and diffs to directories"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rdiffdir &#8211; compute and apply signatures and diffs to directories </p>
+<h2>SYNOPSIS</h2>
 <p> <code>rdiffdir</code> <code>[</code><i>options</i><code>]</code> <code>sig[nature]</code> <i>basis_dir signature_file</i> </p>
 <p> <code>rdiffdir</code> <code>[</code><i>options</i><code>]</code> <code>delta</code> <i>full_sigtar</i> <code>{</code><i>incr_sigtar</i><code>}</code> <i>new_dir delta_file</i> </p>
 <p> <code>rdiffdir</code> <code>[</code><i>options</i><code>]</code> <code>patch</code> <i>basis_dir delta_file</i> </p>
 <p> <code>rdiffdir</code> <code>[</code><i>options</i><code>]</code> <code>tar</code> <i>basis_dir tar_file</i> </p>
 <p> If <i>signature_file</i> or <i>delta_file</i> are &quot;-&quot;, the data will be read from stdin or written to stdout as appropriate. </p>
+<h2>DESCRIPTION</h2>
 <p> <code>rdiffdir</code> is supposed to be like rdiff, but can operate on directories. See <code><a href="/docs/linux/man/1-rdiff/">rdiff</a></code>(1) for more information. The syntax is similar. </p>
 <p> Regarding the <code>delta</code> command, the <i>full_sigtar</i> operand is a <i>signature_file</i> written by an earlier <code>signature</code> or <code>tar</code> command (the latter using the <code>&#8211;write-sig-to</code> option). The optional <i>incr_sigtar</i> operands are signature files written by earlier <code>delta</code> commands using the <i>&#8211;write-sig-to</i> option. This way the Nth invocation of the <code>delta</code> command can parse (and extend) the signature chain that has been founded by the first <code>signature</code> or <code>tar</code> command with a full signature, and then extended by the subsequent N-1 <code>delta</code> invocations with incremental signatures. It is the responsibility of the user to specify the sigtar operands in logical increment order. </p>
 <h2>OPTIONS</h2>

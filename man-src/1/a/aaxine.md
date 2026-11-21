@@ -1,5 +1,4 @@
 ---
-
 title: "aaxine(1)"
 name: "aaxine"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-aaxine/"
 description: "aaxine – an ASCII art video player"
 ---
 
+<h2 class="name">NAME</h2>
+<p> aaxine &#8211; an ASCII art video player</p>
+<h2>SYNOPSIS</h2>
 <p> <code>aaxine </code> [<i>aalib-options</i>] [<i>-A</i>&lt;audio-driver&gt;] [<i>-a</i>&lt;audio-channel&gt;] [<i>-R</i>&lt;rec-by&gt;] [<i>MRL</i>&#8230;] </p>
+<h2>DESCRIPTION</h2>
 <p> This manual page explains the <code>aaxine</code> program. Aaxine, is an aalib based frontend for libxine, a versatile video/multimedia player. </p>
 <p> <code>aaxine</code> is for those who don&#8217;t have a high end video card, but just want to watch DVDs on their good old vt100 ;-) </p>
 <p> Like xine, <code>aaxine</code> plays MPEG system (audio and video) streams, mpeg elementary streams (e.g. .mp3 or .mpv files), avi files (using win32 codecs or ffmpeg), (S)VCDs, DVDs and many more. In short, anything that&#8217;s supported by xine-lib. </p>

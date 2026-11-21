@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_crt_verify(3)"
 name: "gnutls_x509_crt_verify"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_crt_verify – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_verify &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_verify(gnutls_x509_crt_t </code><i>cert</i><code>, const gnutls_x509_crt_t * </code><i>CA_list</i><code>, int </code><i>CA_list_length</i><code>, unsigned int </code><i>flags</i><code>, unsigned int * </code><i>verify</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,6 +24,7 @@ description: "gnutls_x509_crt_verify – API function"
 <dd> Flags that may be used to change the verification algorithm. Use OR of the gnutls_certificate_verify_flags enumerations.</dd>
 <dt>unsigned int * verify</dt>
 <dd> will hold the certificate verification output.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will try to verify the given certificate and return its status. Note that a verification error does not imply a negative return status. In that case the <i>verify</i> status is set.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

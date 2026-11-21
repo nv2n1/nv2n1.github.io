@@ -1,5 +1,4 @@
 ---
-
 title: "jq(1)"
 name: "jq"
 section: "1"
@@ -8,7 +7,9 @@ url: "/docs/linux/man/1-jq/"
 description: "jq – Command-line JSON processor"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>jq</code> &#8211; Command-line JSON processor </p>
+<h2>SYNOPSIS</h2>
 <p> <code>jq</code> [<i>options</i>&#8230;] <i>filter</i> [<i>files</i>&#8230;] </p>
 <p> <code>jq</code> can transform JSON in various ways, by selecting, iterating, reducing and otherwise mangling JSON documents. For instance, running the command <code>jq &#8216;map(.price) | add&#8217;</code> will take an array of JSON objects as input and return the sum of their &quot;price&quot; fields. </p>
 <p> <code>jq</code> can accept text input as well, but by default, <code>jq</code> reads a stream of JSON entities (including numbers and other literals) from <code>stdin</code>. Whitespace is only needed to separate entities such as 1 and 2, and true and false. One or more <i>files</i> may be specified, in which case <code>jq</code> will read input from those instead. </p>

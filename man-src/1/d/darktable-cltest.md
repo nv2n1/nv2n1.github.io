@@ -1,5 +1,4 @@
 ---
-
 title: "darktable-cltest(1)"
 name: "darktable-cltest"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-darktable-cltest/"
 description: "darktable-cltest – check if there is a usable OpenCL environment for darktable to use"
 ---
 
+<h2 class="name">NAME</h2>
+<p> darktable-cltest &#8211; check if there is a usable OpenCL environment for darktable to use </p>
+<h2>SYNOPSIS</h2>
 <pre>
     darktable-cltest
 </pre>
+<h2>DESCRIPTION</h2>
 <p> <code>darktable</code> is a digital photography workflow application for <code>Linux</code>, <code>Mac </code><font SIZE="-1"><code>OS X</code></font> and several other <code>Unices</code>. It&#8217;s described further in <i><a href="/docs/linux/man/1-darktable/">darktable</a></i>(1). </p>
 <p> <code>darktable-cltest</code> checks if there is a usable OpenCL environment on your system that darktable can use. It emits some debug output that is equivalent to calling <code>darktable -d opencl</code> and then terminates.</p>
 <h2>SEE ALSO</h2>

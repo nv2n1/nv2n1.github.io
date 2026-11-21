@@ -1,5 +1,4 @@
 ---
-
 title: "fbsvcmgr(1)"
 name: "fbsvcmgr"
 section: "1"
@@ -8,12 +7,15 @@ url: "/docs/linux/man/1-fbsvcmgr/"
 description: "fbsvcmgr – access services API of Firebird"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fbsvcmgr &#8211; access services API of Firebird </p>
 <h2>SYNOPSYS</h2>
 <dl>
 <dt>fbsvcmgr service_mgr <i>parameter&#8230;</i></dt>
 <dd>
 </dd><dt>fbsvcmgr host:service_mgr <i>parameter&#8230;</i></dt>
 <dd></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Firebird (like interbase 6 and before) never had a way to access services <font SIZE="-1">API</font> from command line. With the exception of <code>-service</code> switch of <code><a href="/docs/linux/man/1-gbak/">gbak</a></code>(1) and total use of services <font SIZE="-1">API</font> in <code><a href="/docs/linux/man/1-gsec/">gsec</a></code>(1) since version 2.0, to use services one had to use third party <font SIZE="-1">GUI</font> or write himself a program using C or other programming language. Use of <font SIZE="-1">GUI</font> is almost always not a problem, when you work with local machine or machine in your <font SIZE="-1">LAN.</font> But in case, when you connect to remote unix server using any text-only connection, use of services is almost impossible. And this is really a problem sometimes. </p>
 <p> The <code>fbsvcmgr</code> utility solves this problem. With it you may use any service, implemented by firebird. To use this utility you should be familiar with firebird services <font SIZE="-1">API</font> &#8211; <code>fbsvcmgr</code> does <font SIZE="-1">NOT</font> emulate traditional utilities&#8217; switches, it is just frontend to the services <font SIZE="-1">API.</font> </p>
 <p> The first required parameter of command line is services manager you want to connect to. For local connection use simply <i>service_mgr</i>, to attach to remote machine something like <i>hostname:service_mgr</i> is required. When required, additional service parameter blocks (<font SIZE="-1">SPB</font>), including any values, follow. Any of them may (or may not) be prefixed with single <code>&#8211;</code> (minus) sign for clarity. For long command lines, typical for fbsvcmgr, use of &#8216;-&#8216; makes command line better human-readable and has no other effects. </p>

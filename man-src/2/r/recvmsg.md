@@ -1,5 +1,4 @@
 ---
-
 title: "recvmsg(2)"
 name: "recvmsg"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-recvmsg/"
 description: "recv, recvfrom, recvmsg – receive a message from a socket"
 ---
 
+<h2 class="name">NAME</h2>
+<p> recv, recvfrom, recvmsg &#8211; receive a message from a socket </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/socket.h&gt;
 #include &lt;sys/types.h&gt;
@@ -16,6 +18,7 @@ ssize_t recvfrom(int sockfd, void *buf, size_t len, int flags,
                  struct sockaddr *src_addr, socklen_t *addrlen);
 ssize_t recvmsg(int sockfd, struct msghdr *msg, int flags);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>recv</code>(), <code>recvfrom</code>(), and <code>recvmsg</code>() calls are used to receive messages from a socket. They may be used to receive data on both connectionless and connection-oriented sockets. This page first describes common features of all three system calls, and then describes the differences between the calls. </p>
 <p> The only difference between <code>recv</code>() and <code><a href="/docs/linux/man/2-read/">read</a></code>(2) is the presence of <i>flags</i>. With a zero <i>flags</i> argument, <code>recv</code>() is generally equivalent to <code><a href="/docs/linux/man/2-read/">read</a></code>(2) (but see NOTES). Also, the following call </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;recv(sockfd, buf, len, flags); </p>

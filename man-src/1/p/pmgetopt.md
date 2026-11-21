@@ -1,5 +1,4 @@
 ---
-
 title: "pmgetopt(1)"
 name: "pmgetopt"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmgetopt – Performance Co-Pilot shell script option parser"
 
 <h2>NAME</h2>
 <p> <code>pmgetopt</code> &#8211; Performance Co-Pilot shell script option parser</p>
+<h2>SYNOPSIS</h2>
 <p> <code>$PCP_BINADM_DIR/pmgetopt</code> [<code>-c</code>|<code>&#8211;config</code> <i>file</i>] [<code>-p</code>|<code>&#8211;progname</code> <i>name</i>] [<code>-u</code>|<code>&#8211;usage</code>] [<code>&#8212;</code>] [<i>parameters</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmgetopt</code> is used to perform command line option parsing for shell scripts used in the Performance Co-Pilot (PCP toolkit). It is also used to generate usage messages for those scripts. </p>
 <p> The parameters given to <code>pmgetopt</code> take two forms: initially, options specific to <code>pmgetopt</code> itself are passed in, and terminated using the &#8212; mechanism. Thereafter, all of the parameters passed into the shell script should be passed (usually this is simply the &quot;$@&quot; variable). </p>
 <p> The options specific to <code>pmgetopt</code> are as follows:</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_srtp_get_keys(3)"
 name: "gnutls_srtp_get_keys"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_srtp_get_keys – API function"
 
 <h2>NAME</h2>
 <p> gnutls_srtp_get_keys &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_srtp_get_keys(gnutls_session_t </code><i>session</i><code>, void * </code><i>key_material</i><code>, unsigned int </code><i>key_material_size</i><code>, gnutls_datum_t * </code><i>client_key</i><code>, gnutls_datum_t * </code><i>client_salt</i><code>, gnutls_datum_t * </code><i>server_key</i><code>, gnutls_datum_t * </code><i>server_salt</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -28,6 +28,7 @@ description: "gnutls_srtp_get_keys – API function"
 <dd> The master server write key, pointing inside the key material</dd>
 <dt>gnutls_datum_t * server_salt</dt>
 <dd> The master server write salt, pointing inside the key material</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This is a helper function to generate the keying material for SRTP. It requires the space of the key material to be pre-allocated (should be at least 2x the maximum key size and salt size). The <i>client_key</i> , <i>client_salt</i> , <i>server_key</i> and <i>server_salt</i> are convenience datums that point inside the key material. They may be <code>NULL</code>.</p>
 <h2>RETURNS</h2>
 <p> On success the size of the key material is returned, otherwise, <code>GNUTLS_E_SHORT_MEMORY_BUFFER</code> if the buffer given is not sufficient, or a negative error code. </p>

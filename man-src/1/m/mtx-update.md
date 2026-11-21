@@ -1,5 +1,4 @@
 ---
-
 title: "mtx-update(1)"
 name: "mtx-update"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mtx-update/"
 description: "mtx-update – ConTeXt Minimals Updater"
 ---
 
+<h2 class="name">NAME</h2>
+<p>&nbsp;mtx-update &#8211; ConTeXt Minimals Updater </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mtxrun &#8211;script update [</code> <i>OPTIONS &#8230;</i> <code>] [</code> <i>FILENAMES</i> <code>]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>ConTeXt Minimals Updater</code></p>
 <h2>OPTIONS</h2>
 <dl>

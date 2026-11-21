@@ -1,5 +1,4 @@
 ---
-
 title: "mdoc-assemble(1)"
 name: "mdoc-assemble"
 section: "1"
@@ -10,7 +9,9 @@ description: "mdoc assemble – Compile documentation for use in monodoc(1)"
 
 <h2>NAME</h2>
 <p> mdoc assemble &#8211; Compile documentation for use in <code>monodoc</code>(1)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mdoc assemble</code> [OPTIONS]+ PATHS+</p>
+<h2>DESCRIPTION</h2>
 <p> <code>mdoc assemble</code> creates <i>.tree</i> and <i>.zip</i> files from <i>PATHS</i> for use in the <code>monodoc</code>(1) documentation browser. </p>
 <p> The input files must have a supported <i>format</i>, specified with the <i>&#8211;format</i> option. </p>
 <p> The <i>.tree</i> and <i>.zip</i> files are copied into <code>monodoc</code>&#8216;s <i>sources</i> directory, alongside a <i>.source</i> file which is used by <code>monodoc</code>(1) to specify where the documentation should be displayed. </p>

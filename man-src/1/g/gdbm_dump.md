@@ -1,5 +1,4 @@
 ---
-
 title: "gdbm_dump(1)"
 name: "gdbm_dump"
 section: "1"
@@ -10,8 +9,10 @@ description: "gdbm_dump – dump a GDBM database to a file"
 
 <h2>NAME</h2>
 <p> gdbm_dump &#8211; dump a GDBM database to a file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gdbm_dump</code> [<code>-H </code><i>FMT</i>] [<code>&#8211;format</code>=<i>FMT</i>] <i>DB_FILE</i> [<i>FILE</i>] </p>
 <p> <code>gdbm_dump</code> [<code>-Vh</code>] [<code>&#8211;help</code>] [<code>&#8211;usage</code>] [<code>&#8211;version</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>gdbm_dump</code> utility creates a dump of the specified <code><a href="/docs/linux/man/3-gdbm/">gdbm</a></code>(3) database file. The name for the output dump file is supplied by the second argument (<i>FILE</i>). If not specified, the output goes to the standard error. </p>
 <p> The created dump can be given as argument to the <code><a href="/docs/linux/man/1-gdbm_load/">gdbm_load</a></code>(1) utility in order to re-create an exact copy of the <i>DB_FILE</i>.</p>
 <h2>OPTIONS</h2>

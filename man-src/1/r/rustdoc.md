@@ -1,5 +1,4 @@
 ---
-
 title: "rustdoc(1)"
 name: "rustdoc"
 section: "1"
@@ -10,7 +9,9 @@ description: "rustdoc – generate documentation from Rust source code"
 
 <h2>NAME</h2>
 <p> rustdoc &#8211; generate documentation from Rust source code</p>
+<h2>SYNOPSIS</h2>
 <p> <code>rustdoc</code> [<i>OPTIONS</i>] <i>INPUT</i> </p>
+<h2>DESCRIPTION</h2>
 <p> This tool generates API reference documentation by extracting comments from source code written in the Rust language, available at &lt;<code><a rel="nofollow" href="https://www.rust-lang.org">https://www.rust-lang.org</a></code>&gt;. It accepts several input formats and provides several output formats for the generated documentation. </p>
 <h2>OPTIONS</h2>
 <dl>

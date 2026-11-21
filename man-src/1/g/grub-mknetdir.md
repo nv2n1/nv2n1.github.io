@@ -1,5 +1,4 @@
 ---
-
 title: "grub-mknetdir(1)"
 name: "grub-mknetdir"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-grub-mknetdir/"
 description: "grub-mknetdir – prepare a GRUB netboot directory."
 ---
 
+<h2 class="name">NAME</h2>
+<p> grub-mknetdir &#8211; prepare a GRUB netboot directory. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>grub-mknetdir</code> [<i>,OPTION/</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> Prepares GRUB network boot images at net_directory/subdir assuming net_directory being TFTP root.</p>
 <dl>
 <dt><code>&#8211;compress</code>=<i>,no/</i>|xz|gz|lzo</dt>

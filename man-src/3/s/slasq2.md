@@ -1,5 +1,4 @@
 ---
-
 title: "slasq2(3)"
 name: "slasq2"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-slasq2/"
 description: "slasq2.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> slasq2.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slasq2</code> (N, Z, INFO)<br />
  <i></i><code>SLASQ2</code> computes all the eigenvalues of the symmetric positive definite tridiagonal matrix associated with the qd Array Z to high relative accuracy. Used by sbdsqr and sstegr.</p>

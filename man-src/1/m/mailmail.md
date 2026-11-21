@@ -1,5 +1,4 @@
 ---
-
 title: "mailmail(1)"
 name: "mailmail"
 section: "1"
@@ -10,7 +9,9 @@ description: "mailmail – Twisted sendmail compatibility script"
 
 <h2>NAME</h2>
 <p> mailmail &#8211; Twisted sendmail compatibility script</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mailmail [recipient addresses]</code></p>
+<h2>DESCRIPTION</h2>
 <p> mailmail reads RFC822 message text from standard input and delivers them, using SMTP, to a Mail Transfer Agent listening at 127.0.0.1:25. It accepts (but does not necessarily implement) many of the standard <a href="/docs/linux/man/1-sendmail/">sendmail</a>(1) options, but it is preferable to list only the recipient addresses on the command line, and include a <code>From</code> header within the message text indicating the sender.</p>
 <h2>AUTHOR</h2>
 <p> Written by Jp Calderone</p>

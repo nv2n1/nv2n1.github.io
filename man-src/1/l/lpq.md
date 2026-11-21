@@ -1,5 +1,4 @@
 ---
-
 title: "lpq(1)"
 name: "lpq"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-lpq/"
 description: "lpq – show printer queue status"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lpq &#8211; show printer queue status </p>
+<h2>SYNOPSIS</h2>
 <p> <code>lpq</code> [ <code>-E</code> ] [ <code>-U</code> <i>username</i> ] [ <code>-h </code><i>server</i>[<code>:</code><i>port</i>] ] [ <code>-P </code><i>destination</i>[<code>/</code><i>instance</i>] ] [ <code>-a</code> ] [ <code>-l</code> ] [ <code>+</code><i>interval</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>lpq</code> shows the current print queue status on the named printer. Jobs queued on the default destination will be shown if no printer or class is specified on the command-line. </p>
 <p> The <i>+interval</i> option allows you to continuously report the jobs in the queue until the queue is empty; the list of jobs is shown once every <i>interval</i> seconds.</p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "ldns-gen-zone(1)"
 name: "ldns-gen-zone"
 section: "1"
@@ -10,7 +9,9 @@ description: "ldns-gen-zone – read a zonefile and print it while adding DS rec
 
 <h2>NAME</h2>
 <p> ldns-gen-zone &#8211; read a zonefile and print it while adding DS records and extra RR&#8217;s</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ldns-gen-zone </code> <i>ZONEFILE</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>ldns-gen-zone</code> reads a DNS zone file and prints it. </p>
 <p> It is build for speed, not for a nice formatting. The output has one resource record per line and no pretty-printing makeup. </p>
 <p> DNSSEC data (NSEC, NSEC3, RRSIG or DNSKEY) is not stripped. You may want to use <code>ldns-read-zone</code> for that. Existing DS records are also not stripped. </p>

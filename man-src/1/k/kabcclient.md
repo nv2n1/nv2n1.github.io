@@ -1,5 +1,4 @@
 ---
-
 title: "kabcclient(1)"
 name: "kabcclient"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-kabcclient/"
 description: "kabcclient – commandline client for the KDE addressbook"
 ---
 
+<h2 class="name">NAME</h2>
+<p> kabcclient &#8211; commandline client for the KDE addressbook </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>kabcclient</code> [[-A] | [-R] | [-M] | [-S] | [-L]] [&#8211;match-case] [&#8211;nosave] [-ic&nbsp;<wbr><i>codec</i>] [-if&nbsp;<wbr><i>format</i>] [-if-opts&nbsp;<wbr><i>format-options</i>] [-oc&nbsp;<wbr><i>codec</i>] [-of&nbsp;<wbr><i>format</i>] [-of-opts&nbsp;<wbr><i>format-options</i>] [input-data]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>kabcclient</code></p>
 <dd>allows commandline access to the KDE addressbook, for example in shell scripts. It supports input from stdin or through additional commandline arguments. Output is always written to stdout.</dd>
 <h2>OPTIONS</h2>

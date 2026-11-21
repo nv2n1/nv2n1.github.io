@@ -1,5 +1,4 @@
 ---
-
 title: "mctraits(3)"
 name: "mctraits"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-mctraits/"
 description: "ql/methods/montecarlo/mctraits.hpp – Monte Carlo policies."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/methods/montecarlo/mctraits.hpp &#8211; Monte Carlo policies. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/methods/montecarlo/pathgenerator.hpp&gt;<br />
  #include &lt;ql/methods/montecarlo/multipathgenerator.hpp&gt;<br />
  #include &lt;ql/methods/montecarlo/pathpricer.hpp&gt;<br />

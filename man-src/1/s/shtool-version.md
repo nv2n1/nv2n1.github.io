@@ -1,5 +1,4 @@
 ---
-
 title: "shtool-version(1)"
 name: "shtool-version"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-shtool-version/"
 description: "shtool version – GNU shtool maintain version information file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> shtool version &#8211; GNU shtool maintain version information file </p>
+<h2>SYNOPSIS</h2>
 <p> <code>shtool version</code> [<code>-l</code>|<code>&#8211;language</code> <i>lang</i>] [<code>-n</code>|<code>&#8211;name</code> <i>name</i>] [<code>-p</code>|<code>&#8211;prefix</code> <i>prefix</i>] [<code>-s</code>|<code>&#8211;set</code> <i>version</i>] [<code>-e</code>|<code>&#8211;edit</code>] [<code>-i</code>|<code>&#8211;increase</code> <i>knob</i>] [<code>-d</code>|<code>&#8211;display</code> <i>type</i>] <i>file</i></p>
+<h2>DESCRIPTION</h2>
 <p> This command displays and maintains version information in <i>file</i>. </p>
 <p> The version is always described with a triple &lt;<i>version</i>,<i>revision</i>,<i>level</i>&gt; and is represented by a string which always matches the regular expression &quot;<tt>&quot;[0-9]+\.[0-9]+[sabp.][0-9]+&quot;</tt>&quot;. </p>
 <p> The hexadecimal format for a version <tt>&quot;v.rtl&quot;</tt> is <tt>&quot;VVRRTLL&quot;</tt> where <tt>&quot;VV&quot;</tt> and <tt>&quot;RR&quot;</tt> directly correspond to <tt>&quot;v&quot;</tt> and <tt>&quot;r&quot;</tt>, <tt>&quot;T&quot;</tt> encodes the level type as <tt>9</tt>, <tt>2</tt>, <tt>1</tt>, <tt>0</tt> (representing <tt>&quot;s&quot;</tt>, <tt>&quot;p&quot;</tt>/<tt>&quot;.&quot;</tt>, <tt>&quot;b&quot;</tt>, <tt>&quot;a&quot;</tt> in this order) and <tt>&quot;LL&quot;</tt> is either directly corresponding to <tt>&quot;l&quot;</tt> or set to <tt>99</tt> if level type is <tt>&quot;s&quot;</tt>.</p>

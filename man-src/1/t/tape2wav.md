@@ -1,5 +1,4 @@
 ---
-
 title: "tape2wav(1)"
 name: "tape2wav"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-tape2wav/"
 description: "tape2wav – Sinclair ZX Spectrum tape to wav audio file converter"
 ---
 
+<h2 class="name">NAME</h2>
+<p> tape2wav &#8211; Sinclair ZX Spectrum tape to wav audio file converter </p>
+<h2>SYNOPSIS</h2>
 <p> <code>tape2wav</code> [ -r <i>sample rate</i> ] <i>infile outfile</i></p>
+<h2>DESCRIPTION</h2>
 <p> tape2wav converts audio files to ZX Spectrum tape images.</p>
 <h2>OPTIONS</h2>
 <dl>

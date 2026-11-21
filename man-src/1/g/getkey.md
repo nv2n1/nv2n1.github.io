@@ -1,5 +1,4 @@
 ---
-
 title: "getkey(1)"
 name: "getkey"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-getkey/"
 description: "getkey – wait until a key is pressed"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getkey &#8211; wait until a key is pressed</p>
+<h2>SYNOPSIS</h2>
 <p> <code>getkey</code> [<i>OPTION</i>]&#8230; [<i>KEYS</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>getkey</code> waits until one of <i>KEYS</i> is pressed. If <i>KEYS</i> are not specified, any key is accepted. <i>KEYS</i> are matched case-insensitive. </p>
 <h2>EXIT STATUS</h2>
 <p> <code>getkey</code> exits with status 0 if one of the expected keys is pressed. If invalid arguments are specified, <code>getkey</code> exits with status 255. If <code>getkey</code> is interrupted or the wait times out, <code>getkey</code> exits with other non-zero status. </p>

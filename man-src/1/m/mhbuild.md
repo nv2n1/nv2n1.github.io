@@ -1,5 +1,4 @@
 ---
-
 title: "mhbuild(1)"
 name: "mhbuild"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mhbuild/"
 description: "mhbuild – translate MIME composition draft"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mhbuild &#8211; translate MIME composition draft </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mhbuild</code> <i>file</i> [<code>-auto</code> | <code>-noauto</code>] [<code>-list</code> | <code>-nolist</code>] [<code>-realsize</code> | <code>-norealsize</code>] [<code>-headers</code> | <code>-noheaders</code>] [<code>-directives</code> | <code>-nodirectives</code>] [<code>-rfc934mode</code> | <code>-norfc934mode</code>] [<code>-contentid</code> | <code>-nocontentid</code>] [<code>-verbose</code> | <code>-noverbose</code>] [<code>-disposition</code> | <code>-nodisposition</code>] [<code>-check</code> | <code>-nocheck</code>] [<code>-headerencoding</code> <i>encoding-algorithm</i> | <code>-autoheaderencoding</code>] [<code>-maxunencoded</code> <i>line-length</i>] [<code>-dist</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>mhbuild</code> command will translate a MIME composition draft into a valid MIME message. </dd>
 <p> <code>mhbuild</code> creates multi-media messages as specified in RFC 2045 to RFC 2049. This includes the encoding of message headers as specified by RFC 2047, and the encoding of MIME parameters as specified in RFC 2231. </p>
 <p> If you specify the name of the composition file as &#8220;-&#8221;, then <code>mhbuild</code> will accept the composition draft on the standard input. If the translation of this input is successful, <code>mhbuild</code> will output the new MIME message to the standard output. This argument must be the last argument on the command line. </p>

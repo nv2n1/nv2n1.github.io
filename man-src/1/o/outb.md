@@ -1,5 +1,4 @@
 ---
-
 title: "outb(1)"
 name: "outb"
 section: "1"
@@ -7,9 +6,14 @@ letter: "o"
 url: "/docs/linux/man/1-outb/"
 ---
 
-inb, outb, inw, outw, inl, outl - access I/O ports 
+<h2 class="name">NAME</h2>
+ 
 
-<pre>
+ inb, outb, inw, outw, inl, outl - access I/O ports 
+
+<h2>SYNOPSIS</h2>
+
+ <pre>
  inb ADDRESS
  inw ADDRESS
  inl ADDRESS
@@ -25,7 +29,9 @@ inb, outb, inw, outw, inl, outl - access I/O ports
  outw 0x440 0xffff
 </pre>
 
-These commands enable command line and script access directly to I/O ports on <font SIZE="-1">PC</font> hardware. 
+<h2>DESCRIPTION</h2>
+
+ These commands enable command line and script access directly to I/O ports on <font SIZE="-1">PC</font> hardware. 
 
  The <tt>&quot;inb&quot;</tt>, <tt>&quot;inw&quot;</tt> and <tt>&quot;inl&quot;</tt> commands perform an input (read) operation on the given I/O port, and print the result. 
 

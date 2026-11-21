@@ -1,5 +1,4 @@
 ---
-
 title: "librasqal(3)"
 name: "librasqal"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-librasqal/"
 description: "librasqal – Rasqal RDF query library"
 ---
 
+<h2 class="name">NAME</h2>
+<p> librasqal &#8211; Rasqal RDF query library </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;rasqal.h&gt;
 &amp;nbsp;
@@ -43,6 +45,7 @@ raptor_free_uri(base_uri);
 rasqal_free_world(world);
 cc prog.c - o prog `pkg - config rasqal-- cflags` `pkg - config rasqal-- libs`
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <i>Rasqal</i> library provides a high-level interface to RDF query parsing, query construction, query execution over an RDF graph and query results manipulation and formatting. The library provides APIs to each of the steps in the process and provides support for handling multiple query language syntaxes. At present Rasqal supports most of the W3C SPARQL 1.0 Query language, some of SPARQL 1.1 draft and fully supports RDQL. </p>
 <p> Rasqal uses the <a href="/docs/linux/man/3-libraptor/">libraptor</a>(3) library for providing URI handling, WWW content retrieval and other support functions.</p>
 <h2>API REFERENCE</h2>

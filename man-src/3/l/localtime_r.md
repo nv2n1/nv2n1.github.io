@@ -1,5 +1,4 @@
 ---
-
 title: "localtime_r(3)"
 name: "localtime_r"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-localtime_r/"
 description: "asctime, ctime, gmtime, localtime, mktime, asctime_r, ctime_r, gmtime_r, localtime_r – transform date and time to broken-down time or ASCII"
 ---
 
+<h2 class="name">NAME</h2>
+<p> asctime, ctime, gmtime, localtime, mktime, asctime_r, ctime_r, gmtime_r, localtime_r &#8211; transform date and time to broken-down time or ASCII </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;time.h&gt;
 char *asctime(const struct tm *tm);
@@ -26,6 +28,7 @@ time_t mktime(struct tm *tm);
 <dt>
 </dt><dd> _POSIX_C_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code>ctime</code>(), <code>gmtime</code>(), and <code>localtime</code>() functions all take an argument of data type <i>time_t</i>, which represents calendar time. When interpreted as an absolute time value, it represents the number of seconds elapsed since the Epoch, 1970-01-01 00:00:00 +0000 (UTC). </p>
 <p> The <code>asctime</code>() and <code>mktime</code>() functions both take an argument representing broken-down time, which is a representation separated into year, month, day, and so on. </p>
 <p> Broken-down time is stored in the structure <i>tm</i>, which is defined in <i>&lt;time.h&gt;</i> as follows: </p>

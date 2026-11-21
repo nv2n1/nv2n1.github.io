@@ -1,5 +1,4 @@
 ---
-
 title: "atomic-top(1)"
 name: "atomic-top"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-atomic-top/"
 description: "atomic-top – Run a top-like list of active container processes"
 ---
 
+<h2 class="name">NAME</h2>
+<p> atomic-top &#8211; Run a top-like list of active container processes </p>
+<h2>SYNOPSIS</h2>
 <p> <code>atomic top</code> [<code>-h</code>|<code>&#8211;help</code>] [<code>-d</code>][<code>-o, &#8211;optional=[time, stime, ppid, uid, gid, user, group]</code>][<code>-n</code>] [Containers to monitor] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>Atomic top</code> displays an interactive, top-like view of the processes running in active containers. </p>
 <p> While in the interactive view, you can sort the columns of information by pressing a single character that correlates to the column header. Any column that you can sort on will have a set of parentheses that surround a single character. For example, if you want to sort by the &#8216;(P)ID&#8217; column, simply press the &#8216;p&#8217; key. </p>
 <p> Like top, you can exit the interactive view and return to the command line, use the &#8216;q&#8217; character key. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "mtx-chars(1)"
 name: "mtx-chars"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mtx-chars/"
 description: "mtx-chars – MkII Character Table Generators"
 ---
 
+<h2 class="name">NAME</h2>
+<p>&nbsp;mtx-chars &#8211; MkII Character Table Generators </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mtxrun &#8211;script chars [</code> <i>OPTIONS &#8230;</i> <code>] [</code> <i>FILENAMES</i> <code>]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>MkII Character Table Generators</code></p>
 <h2>OPTIONS</h2>
 <dl>

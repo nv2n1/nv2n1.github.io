@@ -1,5 +1,4 @@
 ---
-
 title: "drmaa_attr_values_s(3)"
 name: "drmaa_attr_values_s"
 section: "3"
@@ -7,7 +6,19 @@ letter: "d"
 url: "/docs/linux/man/3-drmaa_attr_values_s/"
 ---
 
-drmaa_attr_values_s - 
+<h2 class="name">NAME</h2>
+ 
+
+ drmaa_attr_values_s - 
+
+<h2>SYNOPSIS</h2>
+
+ 
+ 
+
+ 
+
+ 
 
 <h2>Author</h2>
 

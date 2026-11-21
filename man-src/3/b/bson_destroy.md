@@ -1,5 +1,4 @@
 ---
-
 title: "bson_destroy(3)"
 name: "bson_destroy"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_destroy() – The bson_destroy() function shall free an alloc
 
 <h2>NAME</h2>
 <p> bson_destroy() &#8211; The bson_destroy() function shall free an allocated bson_t structure.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 void bson_destroy(bson_t *bson);
 </code></pre>
@@ -17,6 +17,7 @@ void bson_destroy(bson_t *bson);
 <dl>
 <dt><code>bson</code></dt>
 <dd> A <code>bson_t</code> \&amp;.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code><a href="/docs/linux/man/3-bson_destroy/">bson_destroy</a>(3)</code> function shall free an allocated <code>bson_t</code> structure. </p>
 <p> This function should always be called when you are done with a <code>bson_t</code> unless otherwise specified. </p>
 <h2>COLOPHON</h2>

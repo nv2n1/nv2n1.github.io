@@ -1,5 +1,4 @@
 ---
-
 title: "euca-bundle-and-upload-image(1)"
 name: "euca-bundle-and-upload-image"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-bundle-and-upload-image – Prepare and upload an image for u
 
 <h2>NAME</h2>
 <p> euca-bundle-and-upload-image &#8211; Prepare and upload an image for use in the cloud</p>
+<h2>SYNOPSIS</h2>
 <p> euca-bundle-and-upload-image [&#8211;preserve-bundle]</p>
 <dl>
 <dt>[&#8211;max-pending-parts MAX_PENDING_PARTS] <code>-i</code></dt>
 <dd> FILE [-p PREFIX] [-d DIR] <code>-r</code> {i386,x86_64,armhf,ppc,ppc64,ppc64le} [-k FILE] [-c FILE] [&#8211;ec2cert FILE] [-u ACCOUNT] [&#8211;kernel IMAGE] [&#8211;ramdisk IMAGE] [&#8211;bootstrap-url BOOTSTRAP_URL] [-B VIRTUAL1=DEVICE1,VIRTUAL2=DEVICE2,&#8230;] [&#8211;productcodes CODE1,CODE2,&#8230;] [&#8211;image-size IMAGE_SIZE] <code>-b</code> BUCKET[/PREFIX] [&#8211;acl {public-read,aws-exec-read,ec2-bundle-read}] [&#8211;upload-policy POLICY | <code>&#8211;upload-policy-file</code> FILE] [&#8211;upload-policy-signature SIGNATURE] [&#8211;location LOCATION] [&#8211;retry] [&#8211;progress | <code>&#8211;no-progress]</code> [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Prepare and upload an image for use in the cloud</p>
 <h3>optional arguments:</h3>
 <dl>

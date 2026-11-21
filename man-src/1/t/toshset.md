@@ -1,5 +1,4 @@
 ---
-
 title: "toshset(1)"
 name: "toshset"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-toshset/"
 description: "toshset – manipulate bios and hardware settings of Toshiba laptops"
 ---
 
+<h2 class="name">NAME</h2>
+<p> toshset &#8211; manipulate bios and hardware settings of Toshiba laptops </p>
+<h2>SYNOPSIS</h2>
 <p> <code>toshset</code> [<i>TOGGLEOPTIONS</i> | <i>QUERYOPTIONS</i> | <i>FEATUREOPTIONS</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Toshset ia a command-line tool to allow access to much of the Toshiba hardware interface developed by Jonathan Buzzard. It can do things like set the hard drive spin-down time, turn off the display and set the fan speed. </p>
 <p> Credit for the difficult task of reverse-engineering the Toshiba hardware interface goes to Jonathan Buzzard. A link for Jonathan&#8217;s tools is <a rel="nofollow" href="http://www.buzzard.org.uk/toshiba/">http://www.buzzard.org.uk/toshiba/</a> </p>
 <p> All options are listed by running toshset with no arguments. </p>

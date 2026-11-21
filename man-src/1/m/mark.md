@@ -1,5 +1,4 @@
 ---
-
 title: "mark(1)"
 name: "mark"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mark/"
 description: "mark – manipulate message sequences"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mark &#8211; manipulate message sequences </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mark</code> [<i>+folder</i>] [<i>msgs</i>] [<code>-sequence</code> <i>name</i> &#8230;] [<code>-add</code> | <code>-delete</code>] [<code>-list</code>] [<code>-public</code> | <code>-nopublic</code>] [<code>-zero</code> | <code>-nozero</code>] [<code>-version</code>] [<code>-help</code>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>mark</code> command manipulates message sequences by adding or deleting message numbers from folder-specific message sequences, or by listing those sequences and messages. </dd>
 <p> A message sequence is a keyword, just like one of the &#8220;reserved&#8221; message names, such as &#8220;first&#8221; or &#8220;next&#8221;. Unlike the &#8220;reserved&#8221; message names, which have a fixed semantics on a per-folder basis, the semantics of a message sequence may be defined, modified, and removed by the user. Message sequences are folder-specific, e.g., the sequence name &#8220;seen&#8221; in the context of folder &#8220;<i>+inbox</i>&#8221; need not have any relation whatsoever to the sequence of the same name in a folder of a different name. </p>
 <p> Three action switches direct the operation of <code>mark</code>. These switches are mutually exclusive: the last occurrence of any of them overrides any previous occurrence of the other two. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "puuencode(1)"
 name: "puuencode"
 section: "1"
@@ -7,15 +6,22 @@ letter: "p"
 url: "/docs/linux/man/1-puuencode/"
 ---
 
-<pre>
+<h2 class="name">NAME</h2>
+ 
+
+ <pre>
  puuencode - perl replacement for uuencode
 </pre> 
 
-<pre>
+<h2>SYNOPSIS</h2>
+
+ <pre>
  puuencode inputfile as_outputfile
 </pre>
 
-Puuencode reads the inputfile and writes a printable version of it to <font SIZE="-1">STDOUT</font> in uuencoded style. Nothing fancy, just a simple uuencode replacement.
+<h2>DESCRIPTION</h2>
+
+ Puuencode reads the inputfile and writes a printable version of it to <font SIZE="-1">STDOUT</font> in uuencoded style. Nothing fancy, just a simple uuencode replacement.
 
 <h2>BUGS</h2>
 

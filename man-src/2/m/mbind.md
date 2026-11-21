@@ -1,5 +1,4 @@
 ---
-
 title: "mbind(2)"
 name: "mbind"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-mbind/"
 description: "mbind – set memory policy for a memory range"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mbind &#8211; set memory policy for a memory range </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;numaif.h&gt;
 long mbind(void *addr, unsigned long len, int mode,
@@ -15,6 +17,7 @@ long mbind(void *addr, unsigned long len, int mode,
            unsigned flags);
 Link with - lnuma.
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>mbind</code>() sets the NUMA memory policy, which consists of a policy mode and zero or more nodes, for the memory range starting with <i>addr</i> and continuing for <i>len</i> bytes. The memory policy defines from which node memory is allocated. </p>
 <p> If the memory range specified by the <i>addr</i> and <i>len</i> arguments includes an &quot;anonymous&quot; region of memory&#8212;that is a region of memory created using the <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) system call with the <code>MAP_ANONYMOUS</code>&#8212;or a memory-mapped file, mapped using the <code><a href="/docs/linux/man/2-mmap/">mmap</a></code>(2) system call with the <code>MAP_PRIVATE</code> flag, pages will be allocated only according to the specified policy when the application writes (stores) to the page. For anonymous regions, an initial read access will use a shared page in the kernel containing all zeros. For a file mapped with <code>MAP_PRIVATE</code>, an initial read access will allocate pages according to the memory policy of the thread that causes the page to be allocated. This may not be the thread that called <code>mbind</code>(). </p>
 <p> The specified policy will be ignored for any <code>MAP_SHARED</code> mappings in the specified memory range. Rather the pages will be allocated according to the memory policy of the thread that caused the page to be allocated. Again, this may not be the thread that called <code>mbind</code>(). </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "dlarft(3)"
 name: "dlarft"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlarft/"
 description: "dlarft.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlarft.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlarft</code> (DIRECT, STOREV, N, K, V, LDV, TAU, T, LDT)<br />
  <i></i><code>DLARFT</code> forms the triangular factor T of a block reflector H = I &#8211; vtvH</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "devilspie(1)"
 name: "devilspie"
 section: "1"
@@ -10,7 +9,9 @@ description: "devilspie – perform actions on windows as they are created"
 
 <h2>NAME</h2>
 <p> devilspie &#8211; perform actions on windows as they are created </p>
+<h2>SYNOPSIS</h2>
 <p> <code>devilspie</code> <i>[OPTION</i>]&#8230; <i>configuration-files&#8230;</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>devilspie</code> is a program which can detect windows as they are created, and perform actions on them if they match as set of criteria. </p>
 <p> The configuration files are a set of s-expressions. </p>
 <p> Command-lines options:</p>

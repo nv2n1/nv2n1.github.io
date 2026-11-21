@@ -1,5 +1,4 @@
 ---
-
 title: "curvecpmakekey(1)"
 name: "curvecpmakekey"
 section: "1"
@@ -10,7 +9,9 @@ description: "CurveCP — Message-handling programs"
 
 <h2>NAME</h2>
 <p> CurveCP &#8212; Message-handling programs</p>
+<h2>SYNOPSIS</h2>
 <p> <code>curvecpmakekey</code> [<code>keydir</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>CurveCP</code> commands. </p>
 <p> A traditional UNIX-style server such as ftpd handles just one network connection, reading input from stdin and writing output to stdout. A &quot;superserver&quot; such as inetd or tcpserver listens for network connections and starts a separate server process for each connection. </p>
 <p> <code>curvecpmakekey</code> creates keys needed for <code>curvecpclient</code> can use programs other than <code>curvecpserver</code>.</p>

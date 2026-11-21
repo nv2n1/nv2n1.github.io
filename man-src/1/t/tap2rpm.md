@@ -1,5 +1,4 @@
 ---
-
 title: "tap2rpm(1)"
 name: "tap2rpm"
 section: "1"
@@ -10,7 +9,9 @@ description: "tap2rpm – create RPM packages which wrap .tap files"
 
 <h2>NAME</h2>
 <p> tap2rpm &#8211; create RPM packages which wrap .tap files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>tap2rpm</code> [options]</p>
+<h2>DESCRIPTION</h2>
 <p> Create a set of RPM/SRPM packages in the current directory</p>
 <dl>
 <dt><code>-t</code>, <code>&#8211;tapfile</code> <i>&lt;tapfile&gt;</i></dt>

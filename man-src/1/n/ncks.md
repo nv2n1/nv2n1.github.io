@@ -1,5 +1,4 @@
 ---
-
 title: "ncks(1)"
 name: "ncks"
 section: "1"
@@ -12,6 +11,7 @@ description: "ncks – netCDF Kitchen Sink"
 <p> ncks &#8211; netCDF Kitchen Sink</p>
 <h2>SYNTAX</h2>
 <p> ncks [-3] [-4] [-5] [-6] [-7] [-A] [-a] [-b <i>bnr_fl]</i> [&#8211;bfr <i>sz</i>]<i>[-C]</i>[-c] [&#8211;cdl] [&#8211;cnk_byt <i>sz</i>]<i>[&#8211;cnk_dmn</i> <i>nm,sz</i>] [&#8211;cnk_map <i>map</i>] [&#8211;cnk_plc <i>plc</i>] [&#8211;cnk_scl <i>sz</i>] [-D dbg_lvl] [-d <i>dim</i>,[ <i>min</i>][,[ <i>max</i>]][,[ <i>stride</i>]]] [-F] [&#8211;fix_rec_dmn <i>dim</i>] [-G <i>gpe_dsc</i>] [-g <i>grp</i>[,&#8230;]] [-H] [-h] [&#8211;hdn] [&#8211;hdr_pad <i>sz</i>] [-L <i>dfl_lvl</i>] [-l <i>path</i>] [-M] [-m] [&#8211;md5] [&#8211;mk_rec_dmn <i>dim</i>]<i>[&#8211;msa]</i>[&#8211;no_blank]<i>[&#8211;no_tmp_fl]</i>[-O]<i>[-o</i> <i>output-file</i>] [-P] [-p <i>path</i>] [-Q] [-q] [-R] [-r] [&#8211;rad] [&#8211;ram_all] [-s <i>format</i>] [-u] [&#8211;unn] [-v <i>var</i>[,&#8230;]] [-X <i>box</i>] [-x] [&#8211;xml] <i>input-file</i> [ <i>output-file</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>ncks</code> combines every feature we could think of, except the kitchen sink, into one versatile utility to manipulate netCDF files. <code>ncks</code> extracts a subset of the data from <i>input-file</i> and either prints it as ASCII text to stdout, or writes (or pastes) it to <i>output-file</i>, or both. </p>
 <p> <code>ncks</code> will print netCDF data in ASCII format to <code>stdout</code>, like <code>ncdump</code>, but with these differences: <code>ncks</code> prints data in a tabular format intended to be easy to search for the data you want, one datum per screen line, with all dimension subscripts and coordinate values (if any) preceding the datum. Option <code>-s</code> allows the user the format the data using C-style format strings. </p>
 <p> Options <code>-a</code>, <code>-F</code>, <code>-H</code>, <code>-M</code>, <code>-m</code>, <code>-q</code>, <code>-s</code>, and <code>-u</code> control the formatted appearance of the data. </p>

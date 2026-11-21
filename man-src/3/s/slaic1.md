@@ -1,5 +1,4 @@
 ---
-
 title: "slaic1(3)"
 name: "slaic1"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-slaic1/"
 description: "slaic1.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> slaic1.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slaic1</code> (JOB, J, X, SEST, W, GAMMA, SESTPR, S, C)<br />
  <i></i><code>SLAIC1</code> applies one step of incremental condition estimation.</p>

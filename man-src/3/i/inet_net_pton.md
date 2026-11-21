@@ -1,5 +1,4 @@
 ---
-
 title: "inet_net_pton(3)"
 name: "inet_net_pton"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-inet_net_pton/"
 description: "inet_net_pton, inet_net_ntop – Internet network number conversion"
 ---
 
+<h2 class="name">NAME</h2>
+<p> inet_net_pton, inet_net_ntop &#8211; Internet network number conversion </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;arpa/inet.h&gt;
 int inet_net_pton(int af, const char *pres,
@@ -25,6 +27,7 @@ char *inet_net_ntop(int af, const void *netp, int bits,
 <dt>Before glibc 2.20:</dt>
 <dd> _BSD_SOURCE || _SVID_SOURCE</dd></dl>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> These functions convert network numbers between presentation (i.e., printable) format and network (i.e., binary) format. </p>
 <p> For both functions, <i>af</i> specifies the address family for the conversion; the only supported value is <code>AF_INET</code>.</p>
 <h3>inet_net_pton()</h3>

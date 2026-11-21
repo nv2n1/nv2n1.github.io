@@ -1,5 +1,4 @@
 ---
-
 title: "ibv_devinfo(1)"
 name: "ibv_devinfo"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ibv_devinfo/"
 description: "ibv_devinfo – query RDMA devices"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ibv_devinfo &#8211; query RDMA devices</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ibv_devinfo</code> [-d device] [-i port] [-l] [-v] </p>
+<h2>DESCRIPTION</h2>
 <p> Print information about RDMA devices available for use from userspace. </p>
 <h2>OPTIONS</h2>
 <dl>

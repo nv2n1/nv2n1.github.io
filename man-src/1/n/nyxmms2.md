@@ -1,5 +1,4 @@
 ---
-
 title: "nyxmms2(1)"
 name: "nyxmms2"
 section: "1"
@@ -10,7 +9,9 @@ description: "nycli – New Korving CLI"
 
 <h2>NAME</h2>
 <p> nycli &#8211; New Korving CLI</p>
+<h2>SYNOPSIS</h2>
 <p> <code>nyxmms2</code> [command] [arguments]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>nycli</code> is the new official CLI XMMS2 client, replacing <code><a href="/docs/linux/man/1-xmms2/">xmms2</a></code>(1).</p>
 <h2>INVOCATION</h2>
 <h3>INLINE MODE</h3>

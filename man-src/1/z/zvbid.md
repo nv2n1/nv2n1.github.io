@@ -1,5 +1,4 @@
 ---
-
 title: "zvbid(1)"
 name: "zvbid"
 section: "1"
@@ -10,7 +9,9 @@ description: "zvbid – VBI proxy daemon"
 
 <h2>NAME</h2>
 <p> zvbid &#8211; VBI proxy daemon</p>
+<h2>SYNOPSIS</h2>
 <p> <code>zvbid [ options ]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>zvbid</code> is a proxy for VBI devices, i.e. it forwards one or more VBI data streams to one or more connected clients and manages channel change requests.</p>
 <h2>OPTIONS</h2>
 <dl>

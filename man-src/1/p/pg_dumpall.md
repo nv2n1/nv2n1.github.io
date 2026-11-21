@@ -1,5 +1,4 @@
 ---
-
 title: "pg_dumpall(1)"
 name: "pg_dumpall"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pg_dumpall/"
 description: "pg_dumpall – extract a PostgreSQL database cluster into a script file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pg_dumpall &#8211; extract a PostgreSQL database cluster into a script file </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pg_dumpall</code> [<i>connection-option</i>&#8230;] [<i>option</i>&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>pg_dumpall is a utility for writing out (&#8220;dumping&#8221;) all PostgreSQL databases of a cluster into one script file. The script file contains SQL commands that can be used as input to <code><a href="/docs/linux/man/1-psql/">psql</a></code>(1) to restore the databases. It does this by calling <code><a href="/docs/linux/man/1-pg_dump/">pg_dump</a></code>(1) for each database in a cluster. pg_dumpall also dumps global objects that are common to all databases. (pg_dump does not save these objects.) This currently includes information about database users and groups, tablespaces, and properties such as access permissions that apply to databases as a whole. </dd>
 <p> Since pg_dumpall reads tables from all databases you will most likely have to connect as a database superuser in order to produce a complete dump. Also you will need superuser privileges to execute the saved script in order to be allowed to add users and groups, and to create databases. </p>
 <p> The SQL script will be written to the standard output. Use the [-f|file] option or shell operators to redirect it into a file. </p>

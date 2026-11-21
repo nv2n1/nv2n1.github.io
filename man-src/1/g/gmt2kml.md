@@ -1,5 +1,4 @@
 ---
-
 title: "gmt2kml(1)"
 name: "gmt2kml"
 section: "1"
@@ -10,8 +9,10 @@ description: "gmt2kml – Convert GMT data tables to KML files for Google Earth"
 
 <h2>NAME</h2>
 <p> gmt2kml &#8211; Convert GMT data tables to KML files for Google Earth</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gmt2kml</code> [ <i>table</i> ] [ <code>a</code>|<code>g</code>|<code>s</code>[<i>alt</i>|<code>x</code><i>scale</i>] ] [ <i>cpt</i> ] [ <i>descriptfile</i> ] [ [<i>altitude</i>] ] [ <code>e</code>|<code>s</code>|<code>t</code>|<code>l</code>|<code>p</code> ] [ <code>f|n</code><code>&#8211;</code>|<i>fill</i> ] [ <i>icon</i> ] [ <code>-K</code>] [ <i>col1:name1</i>,<i>col2:name2</i>,&#8230; ] [ [+|*name_template*|<i>name</i>] ] [ <code>-O</code>] [ <code>a</code>|<i>w/e/s/n</i> ] [ <code>c</code>|<code>n</code><i>scale</i>] ] [ <i>title</i>[/<i>foldername</i>] ] [ [<i>level</i>] ] [ [<code>&#8211;</code>|<code>+</code>]<i>pen</i> ] [ <i>args</i> ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] [ &gt; <i>output.kml</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>gmt2kml</code> reads one or more GMT table file and converts them to a single output file using Google Earth&#8217;s KML format. Data may represent points, lines, or polygons, and you may specify additional attributes such as title, altitude mode, colors, pen widths, transparency, regions, and data descriptions. You may also extend the feature down to ground level (assuming it is above it) and use custom icons for point symbols. </p>
 <p> The input files should contain the following columns: </p>
 <p> <i>lon</i> <i>lat</i> [ <i>alt</i> ] [ <i>timestart</i> [ <i>timestop</i> ] ] </p>

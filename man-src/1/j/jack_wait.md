@@ -1,5 +1,4 @@
 ---
-
 title: "jack_wait(1)"
 name: "jack_wait"
 section: "1"
@@ -10,7 +9,9 @@ description: "jack_wait – JACK toolkit client to check and wait for existence/
 
 <h2>NAME</h2>
 <p> jack_wait &#8211; JACK toolkit client to check and wait for existence/exit of jackd.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>jack_wait</code> [ <i>-s</i> | <i>&#8211;server</i> servername ] [ <i>-t</i> | <i>&#8211;timeout</i> timeout_seconds [ <i>-cqwhv</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>jack_wait</code> When invoked with <i>-c</i> it only checks for the existence of a jack server. When invoked with <i>-w</i> the program will wait for a jackd to be available. The <i>-q</i> makes it wait for the jackd to exit. </p>
 <h2>OPTIONS</h2>
 <dl>

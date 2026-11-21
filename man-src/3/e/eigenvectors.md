@@ -1,5 +1,4 @@
 ---
-
 title: "eigenvectors(3)"
 name: "eigenvectors"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-eigenvectors/"
 description: "QuantLib::SymmetricSchurDecomposition – symmetric threshold Jacobi algorithm."
 ---
 
+<h2 class="name">NAME</h2>
+<p> QuantLib::SymmetricSchurDecomposition &#8211; symmetric threshold Jacobi algorithm. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/matrixutilities/symmetricschurdecomposition.hpp&gt; </p>
 <h3>Public Member Functions</h3>
 <p> <code>SymmetricSchurDecomposition</code> (const <code>Matrix</code> &amp;s) </p>

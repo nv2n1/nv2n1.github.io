@@ -1,5 +1,4 @@
 ---
-
 title: "manconv(1)"
 name: "manconv"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-manconv/"
 description: "manconv – convert manual page from one encoding to another"
 ---
 
+<h2 class="name">NAME</h2>
+<p> manconv &#8211; convert manual page from one encoding to another </p>
+<h2>SYNOPSIS</h2>
 <p> <code>manconv</code> <code>-f</code> [<i>from-code</i>[:<i>from-code</i>&#8230;]] <code>-t</code> <i>to-code</i> [<code>-dqhV</code>] [<i>filename</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>manconv</code> converts a manual page from one encoding to another, like <code>iconv</code>. Unlike <code>iconv</code>, it can try multiple possible input encodings in sequence. This is useful for manual pages installed in directories without an explicit encoding declaration, since they may be in UTF-8 or in a legacy character set. </p>
 <p> If an encoding declaration is found on the first line of the manual page, that declaration overrides any input encodings specified on <code>manconv</code>&#8216;s command line. Encoding declarations have the following form: </p>
 <dl>

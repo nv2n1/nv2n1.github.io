@@ -1,5 +1,4 @@
 ---
-
 title: "dorg2l(3)"
 name: "dorg2l"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dorg2l/"
 description: "dorg2l.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dorg2l.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dorg2l</code> (M, N, K, A, LDA, TAU, WORK, INFO)<br />
  <i></i><code>DORG2L</code> generates all or part of the orthogonal matrix Q from a QL factorization determined by sgeqlf (unblocked algorithm).</p>

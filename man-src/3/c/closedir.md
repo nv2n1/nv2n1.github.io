@@ -1,5 +1,4 @@
 ---
-
 title: "closedir(3)"
 name: "closedir"
 section: "3"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/3-closedir/"
 description: "closedir – close a directory"
 ---
 
+<h2 class="name">NAME</h2>
+<p> closedir &#8211; close a directory </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;dirent.h&gt;
 #include &lt;sys/types.h&gt;
 int closedir(DIR *dirp);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>closedir</code>() function closes the directory stream associated with <i>dirp</i>. A successful call to <code>closedir</code>() also closes the underlying file descriptor associated with <i>dirp</i>. The directory stream descriptor <i>dirp</i> is not available after this call.</p>
 <h2>RETURN VALUE</h2>
 <p> The <code>closedir</code>() function returns 0 on success. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>

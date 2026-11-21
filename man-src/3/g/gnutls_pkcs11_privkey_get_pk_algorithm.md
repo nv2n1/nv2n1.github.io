@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pkcs11_privkey_get_pk_algorithm(3)"
 name: "gnutls_pkcs11_privkey_get_pk_algorithm"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_pkcs11_privkey_get_pk_algorithm – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs11_privkey_get_pk_algorithm &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs11.h&gt;</code> </p>
 <p> <code>int gnutls_pkcs11_privkey_get_pk_algorithm(gnutls_pkcs11_privkey_t </code><i>key</i><code>, unsigned int * </code><i>bits</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_pkcs11_privkey_get_pk_algorithm – API function"
 <dd> should contain a <code>gnutls_pkcs11_privkey_t</code> structure</dd>
 <dt>unsigned int * bits</dt>
 <dd> if bits is non null it will hold the size of the parameters&#8217; in bits</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will return the public key algorithm of a private key.</p>
 <h2>RETURNS</h2>
 <p> a member of the <code>gnutls_pk_algorithm_t</code> enumeration on success, or a negative error code on error.</p>

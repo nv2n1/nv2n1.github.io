@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_xio_gridftp_error_type_t/"
 description: "Globus XIO GRIDFTP Client Driver –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Globus XIO GRIDFTP Client Driver &#8211; </p>
 <h3>Typedefs</h3>
 <p> typedef enum<br />
  <code>globus_l_xio_gridftp_mode_e</code> <code>globus_l_xio_gridftp_mode_t</code>&quot; </p>

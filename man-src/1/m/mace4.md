@@ -1,5 +1,4 @@
 ---
-
 title: "mace4(1)"
 name: "mace4"
 section: "1"
@@ -10,7 +9,9 @@ description: "mace4 – searches for finite countermodels of first-order stateme
 
 <h2>NAME</h2>
 <p> mace4 &#8211; searches for finite countermodels of first-order statements</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mace4</code> [<i>options</i>] &lt; <i>input-file</i> &gt; <i>output-file</i></p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>mace4</code> command. </p>
 <p> The program <code>mace4</code> searches for finite structures satisfying first-order and equational statements, the same kind of statement that <code><a href="/docs/linux/man/1-prover9/">prover9</a></code>(1) accepts. If the statement is the denial of some conjecture, any structures found by <code>mace4</code> are counterexamples to the conjecture. <code>mace4</code> can be a valuable complement to <code><a href="/docs/linux/man/1-prover9/">prover9</a></code>(1), looking for counterexamples before (or at the same time as) using <code><a href="/docs/linux/man/1-prover9/">prover9</a></code>(1) to search for a proof. It can also be used to help debug input clauses and formulas for <code><a href="/docs/linux/man/1-prover9/">prover9</a></code>(1).</p>
 <h2>OPTIONS</h2>

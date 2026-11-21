@@ -1,5 +1,4 @@
 ---
-
 title: "pilot-install-netsync(1)"
 name: "pilot-install-netsync"
 section: "1"
@@ -12,7 +11,9 @@ description: "pilot-install-netsync – reads or sets the Network Preferences in
 <p> pilot-install-netsync &#8211; reads or sets the Network Preferences information on a Palm Device.</p>
 <h2>SECTION</h2>
 <p> pilot-link: Userland conduits </p>
+<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr><i>pilot-install-netsync</i>&nbsp;<wbr>[<code>-p</code>|<code>&#8211;port</code>&nbsp;<wbr>&lt;<code>port</code>&gt;]&nbsp;<wbr>[<code>&#8211;version</code>]&nbsp;<wbr>[<code>-?</code>|<code>&#8211;help</code>]&nbsp;<wbr>[<code>&#8211;usage</code>]&nbsp;<wbr>[<code>-q</code>|<code>&#8211;quiet</code>]&nbsp;<wbr>[<code>-e</code>|<code>&#8211;enable</code>]&nbsp;<wbr>[<code>-d</code>|<code>&#8211;disable</code>]&nbsp;<wbr>[<code>-n</code>|<code>&#8211;name</code>&nbsp;<wbr>&nbsp;<wbr><code>name</code>]&nbsp;<wbr>[<code>-a</code>|<code>&#8211;address</code>&nbsp;<wbr>&nbsp;<wbr><code>address</code>]&nbsp;<wbr>[<code>-m</code>|<code>&#8211;mask</code>&nbsp;<wbr>&nbsp;<wbr><code>netmask</code>] </p>
+<h2>DESCRIPTION</h2>
 <p>&nbsp;<wbr><i>pilot-install-netsync</i>&nbsp;<wbr>allows the user to read or change the Network Preferences stored on the Palm. </p>
 <h2>OPTIONS</h2>
 <h3>pilot-install-netsync options</h3>

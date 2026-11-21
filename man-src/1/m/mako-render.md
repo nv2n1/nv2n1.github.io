@@ -1,5 +1,4 @@
 ---
-
 title: "mako-render(1)"
 name: "mako-render"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mako-render/"
 description: "mako-render – renders Mako templates"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mako-render &#8211; renders Mako templates </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mako-render</code> [FILE] </p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>mako-render</code> command. </p>
 <p> <code>mako-render</code> is a standalone utility that can render Mako templates. Mako is a fast Python-powered template engine. If FILE is a single &quot;-&quot;, standard input will be used as a template source.</p>
 <h2>OPTIONS</h2>

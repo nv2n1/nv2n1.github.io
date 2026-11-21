@@ -1,5 +1,4 @@
 ---
-
 title: "session-installer(1)"
 name: "session-installer"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-session-installer/"
 description: "session-installer – allows applications to easily install and remove software"
 ---
 
+<h2 class="name">NAME</h2>
+<p> session-installer &#8211; allows applications to easily install and remove software </p>
+<h2>SYNOPSIS</h2>
 <p> <code>session-installer</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>Session-installer</code> allows applications to easily install additional software (e.g. extensions or GSreamer codecs), uninstall files and perform simple package status queries by calling a distribution neutral D-Bus interface. </p>
 <p> The whole process of confirmation, error reporting and progress notification is handled by sessioninstaller. Currently it comes only with a GTK based user interface. </p>
 <p> The D-Bus interface is developed under the PackageKit umbrella and is available on the session bus. The reference implementation can be found in gnome-packagekit. It was also adpoted by KPackageKit. </p>

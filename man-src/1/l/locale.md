@@ -1,5 +1,4 @@
 ---
-
 title: "locale(1)"
 name: "locale"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-locale/"
 description: "locale – get locale-specific information"
 ---
 
+<h2 class="name">NAME</h2>
+<p> locale &#8211; get locale-specific information </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 locale[option] locale[option] - a locale[option] - m locale[option] name...
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>locale</code> command displays information about the current locale, or all locales, on standard output. </p>
 <p> When invoked without arguments, <code>locale</code> displays the current locale settings for each locale category (see <code><a href="/docs/linux/man/5-locale/">locale</a></code>(5)), based on the settings of the environment variables that control the locale (see <code><a href="/docs/linux/man/7-locale/">locale</a></code>(7)). Values for variables set in the environment are printed without double quotes, implied values are printed with double quotes. </p>
 <p> If either the <code>-a</code> or the <code>-m</code> option (or one of their long-format equivalents) is specified, the behavior is as follows:</p>

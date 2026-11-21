@@ -1,5 +1,4 @@
 ---
-
 title: "systemd-notify(1)"
 name: "systemd-notify"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-systemd-notify/"
 description: "systemd-notify – Notify service manager about start-up completion and other daemon status changes"
 ---
 
+<h2 class="name">NAME</h2>
+<p> systemd-notify &#8211; Notify service manager about start-up completion and other daemon status changes </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>systemd-notify </code><code>[OPTIONS&#8230;]</code><code>[VARIABLE=VALUE&#8230;]</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>systemd-notify</code></p>
 <dd>may be called by daemon scripts to notify the init system about status changes. It can be used to send arbitrary information, encoded in an environment-block-like list of strings. Most importantly, it can be used for start-up completion notification. </dd>
 <p> This is mostly just a wrapper around <code>sd_notify()</code> and makes this functionality available to shell scripts. For details see <code><a href="/docs/linux/man/3-sd_notify/">sd_notify</a></code>(3). </p>

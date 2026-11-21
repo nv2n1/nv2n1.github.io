@@ -1,5 +1,4 @@
 ---
-
 title: "get_parent_fragment(3)"
 name: "get_parent_fragment"
 section: "3"
@@ -10,9 +9,11 @@ description: "get_parent_fragment — retrieve the parent fragment of a fragment
 
 <h2>NAME</h2>
 <p> get_parent_fragment &#8212; retrieve the parent fragment of a fragment in a dirfile</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
 <dl>
 <dt> <code>int get_parent_fragment(const DIRFILE *</code><i>dirfile</i><code>, int </code><i>fragment_index</i><code>);</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>get_parent_fragment</code>() function queries a <a href="/docs/linux/man/5-dirfile/">dirfile</a>(5) database specified by <i>dirfile</i> and returns the index of the fragment which contains the <code>INCLUDE</code> directive for the fragment indexed by <i>fragment_index</i>. </dd>
 <p> Since the primary format file fragment is not included in any other fragment, passing zero for <i>fragment_index</i> will result in an error. </p>
 <h2>RETURN VALUE</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "elisa(1)"
 name: "elisa"
 section: "1"
@@ -10,8 +9,10 @@ description: "elisa – media center solution"
 
 <h2>NAME</h2>
 <p> elisa &#8211; media center solution</p>
+<h2>SYNOPSIS</h2>
 <p> <code>elisa</code> [<i>option&#8230;</i>]<i> </i>[<i>config_file</i>]<br />
  <code>elisa</code> [<i>option&#8230;</i>]<i> </i>-i<i> </i>import_file.py</p>
+<h2>DESCRIPTION</h2>
 <p> <code>elisa</code> is a open source media center solution. Elisa runs on the top of the GStreamer multimedia framework and uses the pigment lib for graphical user interaction. It is meant to be the all-in-one multimedia solution for your managing and playing your videos, audios and watch slide shows of your photos. It also automatically detects samba-shares, UPnP-devices and DAAP shares sharing media and makes them accessible from inside elisa. You can use it with your mouse, lirc-input device or simply with the keyboard.</p>
 <h2>OPTIONS</h2>
 <dl>

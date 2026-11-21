@@ -1,5 +1,4 @@
 ---
-
 title: "drawing_mode(3)"
 name: "drawing_mode"
 section: "3"
@@ -10,8 +9,10 @@ description: "drawing_mode – Sets the graphics drawing mode. Allegro game prog
 
 <h2>NAME</h2>
 <p> drawing_mode &#8211; Sets the graphics drawing mode. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>void drawing_mode(int mode, BITMAP *pattern, int x_anchor, int y_anchor);</code></p>
+<h2>DESCRIPTION</h2>
 <p> Sets the graphics drawing mode. This only affects the geometric routines like putpixel, lines, rectangles, circles, polygons, floodfill, etc, not the text output, blitting, or sprite drawing functions. The mode should be one of the following constants: </p>
 <pre>
    DRAW_MODE_SOLID               - the default, solid color

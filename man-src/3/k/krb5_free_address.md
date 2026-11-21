@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-krb5_free_address/"
 description: "Heimdal Kerberos 5 address functions –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Heimdal Kerberos 5 address functions &#8211; </p>
 <h3>Functions</h3>
 <p> KRB5_LIB_FUNCTION<br />
  krb5_error_code KRB5_LIB_CALL <code>krb5_sockaddr2address</code> (krb5_context context, const struct sockaddr *sa, krb5_address *addr)&quot; </p>

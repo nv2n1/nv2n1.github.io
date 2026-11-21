@@ -1,5 +1,4 @@
 ---
-
 title: "transcode_export(1)"
 name: "transcode_export"
 section: "1"
@@ -10,6 +9,7 @@ description: "transcode – export modules collection"
 
 <h2>NAME</h2>
 <p> transcode &#8211; export modules collection</p>
+<h2>SYNOPSIS</h2>
 <p> <code>transcode -y module[,module[,module]] [other options]</code></p>
 <h2>COPYRIGHT</h2>
 <p> <code>transcode</code> is Copyright (C) 2001-2003 by Thomas Oestreich, 2003-2004 Tilmann Bitterberg, 2004-2010 Transcode Team</p>

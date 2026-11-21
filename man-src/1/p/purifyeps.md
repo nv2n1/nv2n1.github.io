@@ -1,5 +1,4 @@
 ---
-
 title: "purifyeps(1)"
 name: "purifyeps"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-purifyeps/"
 description: "purifyeps – make an Encapsulated PostScript file work with both dvips and pdflatex"
 ---
 
+<h2 class="name">NAME</h2>
+<p> purifyeps &#8211; make an Encapsulated PostScript file work with both dvips and pdflatex </p>
+<h2>SYNOPSIS</h2>
 <p> purifyeps <code>&#8211;help</code> </p>
 <p> purifyeps <code>&#8211;version</code> </p>
 <p> purifyeps [<code>&#8211;fontmap</code>=<i>.fmp file</i>] [<i>.eps input file</i> [<i>.eps output file</i>]] </p>
 <p> purifyeps <code>&#8211;make-man</code>[=<i>filename</i>] [<code>&#8211;section</code>=<i>section</i>] </p>
 <p> purifyeps <code>&#8211;make-ps-man</code>[=<i>filename</i>] [<code>&#8211;section</code>=<i>section</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> While <code>pdflatex</code> has a number of nice features, its primary shortcoming relative to standard <code>latex</code>+<code>dvips</code> is that it is unable to read ordinary Encapsulated PostScript (<font SIZE="-1">EPS</font>) files, the most common graphics format in the LaTeX world. <code>pdflatex</code> can read only the following types of graphics files:</p>
 <dl>
 <dt><font SIZE="-1">PDF</font></dt>

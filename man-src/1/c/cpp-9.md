@@ -1,5 +1,4 @@
 ---
-
 title: "cpp-9(1)"
 name: "cpp-9"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-cpp-9/"
 description: "cpp – The C Preprocessor"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cpp &#8211; The C Preprocessor </p>
+<h2>SYNOPSIS</h2>
 <p> cpp [<code>-D</code><i>macro</i>[=<i>defn</i>]&#8230;] [<code>-U</code><i>macro</i>]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-I</code><i>dir</i>&#8230;]&nbsp;[<code>-iquote</code><i>dir</i>&#8230;]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-M</code>|<code>-MM</code>]&nbsp;[<code>-MG</code>]&nbsp;[<code>-MF</code>&nbsp;<i>filename</i>]<br />
@@ -15,6 +17,7 @@ description: "cpp – The C Preprocessor"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-MT</code>&nbsp;<i>target</i>&#8230;]<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>infile</i>&nbsp;[[<code>-o</code>]&nbsp;<i>outfile</i>] </p>
 <p> Only the most useful options are given above; see below for a more complete list of preprocessor-specific options. In addition, <code>cpp</code> accepts most <code>gcc</code> driver options, which are not listed here. Refer to the <font SIZE="-1">GCC</font> documentation for details.</p>
+<h2>DESCRIPTION</h2>
 <p> The C preprocessor, often known as <i>cpp</i>, is a <i>macro processor</i> that is used automatically by the C compiler to transform your program before compilation. It is called a macro processor because it allows you to define <i>macros</i>, which are brief abbreviations for longer constructs. </p>
 <p> The C preprocessor is intended to be used only with C, C<font SIZE="-2">++</font>, and Objective-C source code. In the past, it has been abused as a general text processor. It will choke on input which does not obey C&#8217;s lexical rules. For example, apostrophes will be interpreted as the beginning of character constants, and cause errors. Also, you cannot rely on it preserving characteristics of the input which are not significant to C-family languages. If a Makefile is preprocessed, all the hard tabs will be removed, and the Makefile will not work. </p>
 <p> Having said that, you can often get away with using cpp on things which are not C. Other Algol-ish programming languages are often safe (Ada, etc.) So is assembly, with caution. <code>-traditional-cpp</code> mode preserves more white space, and is otherwise more permissive. Many of the problems can be avoided by writing C or C<font SIZE="-2">++</font> style comments instead of native language comments, and keeping macros simple. </p>

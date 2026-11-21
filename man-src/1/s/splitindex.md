@@ -1,5 +1,4 @@
 ---
-
 title: "splitindex(1)"
 name: "splitindex"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-splitindex/"
 description: "splitindex – manual page for splitindex 0.2a"
 ---
 
+<h2 class="name">NAME</h2>
+<p> splitindex &#8211; manual page for splitindex 0.2a </p>
+<h2>SYNOPSIS</h2>
 <p> <code>splitindex.pl</code> [<i>OPTION</i>] &#8230; <i>INTERMEDIATE-INDEX-FILE </i>[<i>MAKEINDEX-OPTION</i>] &#8230; </p>
 <p> <code>splitindex</code> [<i>OPTION</i>] &#8230; <i>INTERMEDIATE-INDEX-FILE </i>[<i>MAKEINDEX-OPTION</i>] &#8230; </p>
 <p> <code>java splitindex</code> [<i>OPTION</i>] &#8230; <i>INTERMEDIATE-INDEX-FILE </i>[<i>MAKEINDEX-OPTION</i>] &#8230; </p>
 <p> <code>tex splitindex</code></p>
+<h2>DESCRIPTION</h2>
 <p> splitindex 0.2a Copyright (c) 2002 Markus Kohm &lt;kohm [at] gmx.de&gt; </p>
 <p> Split a single intermediate index file into multiple raw index files. </p>
 <p> Example: splitindex.pl foo.idx.</p>

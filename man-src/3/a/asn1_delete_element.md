@@ -1,5 +1,4 @@
 ---
-
 title: "asn1_delete_element(3)"
 name: "asn1_delete_element"
 section: "3"
@@ -10,6 +9,7 @@ description: "asn1_delete_element – API function"
 
 <h2>NAME</h2>
 <p> asn1_delete_element &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>
 <p> <code>int asn1_delete_element(asn1_node </code><i>structure</i><code>, const char * </code><i>element_name</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "asn1_delete_element – API function"
 <dd> pointer to the structure that contains the element you want to delete.</dd>
 <dt>const char * element_name</dt>
 <dd> element&#8217;s name you want to delete.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Deletes the element named * <i>element_name</i> inside * <i>structure</i> .</p>
 <h2>RETURNS</h2>
 <p> <code>ASN1_SUCCESS</code> if successful, <code>ASN1_ELEMENT_NOT_FOUND</code> if the <i>element_name</i> was not found.</p>

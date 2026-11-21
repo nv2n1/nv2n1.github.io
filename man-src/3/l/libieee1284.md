@@ -1,5 +1,4 @@
 ---
-
 title: "libieee1284(3)"
 name: "libieee1284"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-libieee1284/"
 description: "libieee1284 – IEEE1284 communications library"
 ---
 
+<h2 class="name">NAME</h2>
+<p> libieee1284 &#8211; IEEE1284 communications library </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ieee1284.h&gt;
 cc files... - lieee1284

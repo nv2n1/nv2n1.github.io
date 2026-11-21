@@ -1,5 +1,4 @@
 ---
-
 title: "dlinfo(3)"
 name: "dlinfo"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlinfo/"
 description: "dlinfo – obtain information about a dynamically loaded object"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlinfo &#8211; obtain information about a dynamically loaded object </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #define _GNU_SOURCE
 #include &lt;dlfcn.h&gt;
@@ -15,6 +17,7 @@ description: "dlinfo – obtain information about a dynamically loaded object"
 int dlinfo(void *handle, int request, void *info);
 Link with - ldl.
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>dlinfo</code>() function obtains information about the dynamically loaded object referred to by <i>handle</i> (typically obtained by an earlier call to <code><a href="/docs/linux/man/3-dlopen/">dlopen</a></code>(3) or <code><a href="/docs/linux/man/3-dlmopen/">dlmopen</a></code>(3)). The <i>request</i> argument specifies which information is to be returned. The <i>info</i> argument is a pointer to a buffer used to store information returned by the call; the type of this argument depends on <i>request</i>. </p>
 <p> The following values are supported for <i>request</i> (with the corresponding type for <i>info</i> shown in parentheses):</p>
 <dl>

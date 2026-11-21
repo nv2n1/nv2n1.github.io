@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_gass_copy_set_partial_offsets/"
 description: "GASS Copy –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> GASS Copy &#8211; </p>
 <p> Protocol-Independent File Transfer.</p>
 <h3>Data Structures</h3>
 <p> struct <code>globus_gass_copy_attr_s</code><br />

@@ -1,5 +1,4 @@
 ---
-
 title: "gnome-control-center(1)"
 name: "gnome-control-center"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-gnome-control-center/"
 description: "gnome-control-center – Configure GNOME settings"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gnome-control-center &#8211; Configure GNOME settings </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gnome-control-center </code><code>[OPTION&#8230;]</code><code>[PANEL]</code><code>[ARG&#8230;]</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>gnome-control-center</code></p>
 <dd>is a graphical user interface to configure various aspects of GNOME. </dd>
 <p> When run without arguments, the shell displays the overview, which shows all available configuration panels. The overview allows to open individual panels by clicking on them. It also has a search entry to find panels by searching keywords. </p>

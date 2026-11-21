@@ -1,5 +1,4 @@
 ---
-
 title: "ksh93(1)"
 name: "ksh93"
 section: "1"
@@ -7,8 +6,11 @@ letter: "k"
 url: "/docs/linux/man/1-ksh93/"
 description: "ksh, rksh, pfksh – KornShell, a standard/restricted command and programming language"
 ---
-
+<h2 class="name">NAME</h2>
+<p> ksh, rksh, pfksh - KornShell, a standard/restricted command and programming language </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ksh</code> [ <code>&plusmn;abcefhiknoprstuvxBCDP</code> ] [ <code>-R</code> file ] [ <code>&plusmn;o</code> option ] ... [ <code>-</code> ] [ arg ... ]  </p>
+<h2>DESCRIPTION</h2>
 <p> <i>Ksh</i> is a command and programming language that executes commands read from a terminal or a file. <i>Rksh</i> is a restricted version of the command interpreter <i>ksh</i>; it is used to set up login names and execution environments whose capabilities are more controlled than those of the standard shell. <i>Rpfksh</i> is a profile shell version of the command interpreter <i>ksh</i>; it is used to to execute commands with the attributes specified by the user&#8217;s profiles (see <i>pfexec</i>(1)). See <i>Invocation</i> below for the meaning of arguments to the shell.  </p>
 <h3>Definitions.</h3>
 <p> A <i>metacharacter</i> is one of the following characters: </p>

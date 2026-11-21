@@ -1,5 +1,4 @@
 ---
-
 title: "redis-check-rdb(1)"
 name: "redis-check-rdb"
 section: "1"
@@ -10,7 +9,9 @@ description: "redis-check-aof – Redis RDB file checker"
 
 <h2>NAME</h2>
 <p> redis-check-aof &#8211; Redis RDB file checker </p>
+<h2>SYNOPSIS</h2>
 <p> <code>redis-check-aof</code> <i>file.rdb</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>Redis</code> is an open source (BSD licensed), in-memory data structure store, used as database, cache and message broker, found at <code><a rel="nofollow" href="http://redis.io/">http://redis.io/</a></code> </p>
 <p> The <code>redis-check-rdb</code> command to check redis-server RDB files. </p>
 <h2>BUGS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "euca-unbundle-stream(1)"
 name: "euca-unbundle-stream"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-unbundle-stream – Recreate an image solely from its combine
 
 <h2>NAME</h2>
 <p> euca-unbundle-stream &#8211; Recreate an image solely from its combined bundled parts without using a manifest</p>
+<h2>SYNOPSIS</h2>
 <p> euca-unbundle-stream [-i FILE] [-o FILE] <code>&#8211;enc-key</code> HEX <code>&#8211;enc-iv</code> HEX</p>
 <dl>
 <dt>[&#8211;image-size BYTES] [&#8211;sha1-digest HEX]</dt>
 <dd> [&#8211;progress | <code>&#8211;no-progress]</code> [&#8211;region USER [at] REGION] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Recreate an image solely from its combined bundled parts without using a manifest</p>
 <h2>DESCRIPTION</h2>
 <p> Usually one would want to use euca-unbundle instead.</p>

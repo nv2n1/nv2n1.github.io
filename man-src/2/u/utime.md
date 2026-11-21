@@ -1,5 +1,4 @@
 ---
-
 title: "utime(2)"
 name: "utime"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-utime/"
 description: "utime, utimes – change file last access and modification times"
 ---
 
+<h2 class="name">NAME</h2>
+<p> utime, utimes &#8211; change file last access and modification times </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/types.h&gt;
 #include &lt;utime.h&gt;
@@ -15,6 +17,7 @@ int utime(const char *filename, const struct utimbuf *times);
 #include &lt;sys/time.h&gt;
 int utimes(const char *filename, const struct timeval times[2]);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>Note:</code> modern applications may prefer to use the interfaces described in <code><a href="/docs/linux/man/2-utimensat/">utimensat</a></code>(2). </p>
 <p> The <code>utime</code>() system call changes the access and modification times of the inode specified by <i>filename</i> to the <i>actime</i> and <i>modtime</i> fields of <i>times</i> respectively. </p>
 <p> If <i>times</i> is NULL, then the access and modification times of the file are set to the current time. </p>

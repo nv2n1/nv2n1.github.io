@@ -1,5 +1,4 @@
 ---
-
 title: "tnef(1)"
 name: "tnef"
 section: "1"
@@ -12,8 +11,10 @@ description: "tnef - decode Microsoft's Transport Neutral Encapsulation Format S
 <pre>
 tnef - decode Microsoft's Transport Neutral Encapsulation Format
 </pre>
+<h2>SYNOPSIS</h2>
 <p> <code>tnef</code> [options] [FILE] </p>
 <p> <code>tnef</code> {<code>&#8211;help</code> | <code>&#8211;version</code>}</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents the <code>tnef</code> filter. <code>tnef</code> decodes e-mail attachments encoded in Microsoft&#8217;s Transport Neutral Encapsulation Format (hereafter, TNEF), which &quot;wraps&quot; Microsoft e-mail attachments. </p>
 <p> Unfortunately, these &quot;wrapped&quot; attachments are inaccessible to any e-mail client that does not understand TNEF. Fortunately, the <code>tnef</code> filter can be used by any MIME-aware client to unpack these attachments.</p>
 <h2>OPTIONS</h2>

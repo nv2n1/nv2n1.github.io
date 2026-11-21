@@ -1,5 +1,4 @@
 ---
-
 title: "scrub(1)"
 name: "scrub"
 section: "1"
@@ -7,10 +6,13 @@ letter: "s"
 url: "/docs/linux/man/1-scrub/"
 description: "scrub – write patterns on disk/file"
 ---
-
+<h2 class="name">NAME</h2>
+<p> scrub - write patterns on disk/file </p>
+<h2>SYNOPSIS</h2>
 <p> <code>scrub</code> <i>[OPTIONS] special-file [special-file ...]</i> <br />
  <code>scrub</code> <i>[OPTIONS] file [file ...]</i> <br />
  <code>scrub</code> <i>-X [OPTIONS] directory</i>  </p>
+<h2>DESCRIPTION</h2>
 <p> <code>Scrub</code> iteratively writes patterns on files or disk devices to make retrieving the data more difficult. <code>Scrub </code> operates in one of three modes: </p>
 <p> 1) The special file corresponding to an entire disk is scrubbed and all data on it is destroyed. This mode is selected if <i>file</i> is a character or block special file. This is the most effective method. </p>
 <p> 2) A regular file is scrubbed and only the data in the file (and optionally its name in the directory entry) is destroyed. The file size is rounded up to fill out the last file system block. This mode is selected if <i>file</i> is a regular file. See CAVEATS below. </p>

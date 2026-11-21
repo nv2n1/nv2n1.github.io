@@ -1,5 +1,4 @@
 ---
-
 title: "dbmerge(1)"
 name: "dbmerge"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-dbmerge/"
 description: "dbmerge – merge all inputs in sorted order based on the the specified columns"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dbmerge &#8211; merge all inputs in sorted order based on the the specified columns </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 dbmerge-- input A.fsdb-- input B.fsdb[-T TemporaryDirectory][-nNrR] column[column...]
 </code></pre>
@@ -15,6 +17,7 @@ dbmerge-- input A.fsdb-- input B.fsdb[-T TemporaryDirectory][-nNrR] column[colum
 &nbsp;<wbr>cat A.fsdb | dbmerge &#8211;input &#8211; &#8211;input B.fsdb&nbsp;<wbr>[-T TemporaryDirectory]&nbsp;<wbr>[-nNrR]&nbsp;<wbr>column&nbsp;<wbr>[column&#8230;] </p>
 <p> or<br />
 &nbsp;<wbr>dbmerge&nbsp;<wbr>[-T TemporaryDirectory]&nbsp;<wbr>[-nNrR]&nbsp;<wbr>column&nbsp;<wbr>[column&#8230;]&nbsp;<wbr>&#8211;inputs A.fsdb&nbsp;<wbr>[B.fsdb &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> Merge all provided, pre-sorted input files, producing one sorted result. Inputs can both be specified with <tt>&quot;--input&quot;</tt>, or one can come from standard input and the other from <tt>&quot;--input&quot;</tt>. With <tt>&quot;--xargs&quot;</tt>, each line of standard input is a filename for input. </p>
 <p> Inputs must have identical schemas (columns, column order, and field separators). </p>
 <p> Unlike <i>dbmerge2</i>, <i>dbmerge</i> supports an arbitrary number of input files. </p>

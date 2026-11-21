@@ -1,5 +1,4 @@
 ---
-
 title: "winedump(1)"
 name: "winedump"
 section: "1"
@@ -10,7 +9,9 @@ description: "winedump – A Wine DLL tool"
 
 <h2>NAME</h2>
 <p> winedump &#8211; A Wine DLL tool</p>
+<h2>SYNOPSIS</h2>
 <p> <code>winedump </code>[<code>-h </code>| <code>sym </code><i>sym</i> | <code>spec </code><i>dll</i> | <code>dump </code><i>file</i> ] [<i>mode_options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>winedump</code> is a Wine tool which aims to help: </p>
 <pre><code>
 A: Reimplementing a Win32 DLL for use within Wine, or

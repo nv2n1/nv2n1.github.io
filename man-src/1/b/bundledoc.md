@@ -1,5 +1,4 @@
 ---
-
 title: "bundledoc(1)"
 name: "bundledoc"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-bundledoc/"
 description: "bundledoc – bundle all the files needed by a LaTeX document"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bundledoc &#8211; bundle all the files needed by a LaTeX document </p>
+<h2>SYNOPSIS</h2>
 <p> bundledoc [<code>&#8211;version</code>] [<code>&#8211;help</code>] [<code>&#8212;</code>[<code>no</code>]<code>verbose</code>] [<code>&#8211;texfile</code>=<i>file.tex</i>] [<code>&#8211;directory</code>=<i>directory</i>] [<code>&#8212;</code>[<code>no</code>]<code>localonly</code>] [<code>&#8211;exclude</code>=<i>string</i>] [<code>&#8211;include</code>=<i>filespec</i>] [<code>&#8211;manifest</code>=<i>file</i>] [<code>&#8212;</code><code>listdeps</code>=[yes|no|only|rel]&#8230;] [<code>&#8212;</code>[<code>no</code>]<code>keepdirs</code>] [<code>&#8211;config</code>=<i>file.cfg</i>] <i>file.dep</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>bundledoc</code> is a post-processor for the <code>snapshot</code> package that bundles together all the classes, packages, and files needed to build a given LaTeX document. It reads the <i>.dep</i> file that <code>snapshot</code> produces, finds each of the files mentioned therein, and packages them into a single archive file (e.g., a <i>.tar.gz</i> file), suitable for moving across systems, transmitting to a colleague, etc. </p>
 <p> As the simplest example possible, consider a LaTeX file called, say, <i>hello.tex</i>: </p>
 <pre><code>

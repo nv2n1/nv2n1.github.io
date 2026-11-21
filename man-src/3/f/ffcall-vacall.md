@@ -1,5 +1,4 @@
 ---
-
 title: "ffcall-vacall(3)"
 name: "ffcall-vacall"
 section: "3"
@@ -10,6 +9,7 @@ description: "vacall – C functions called with variable arguments"
 
 <h2>NAME</h2>
 <p> vacall &#8211; C functions called with variable arguments</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;vacall.h&gt;</code> </p>
 <p> <code>extern void* vacall_function;</code> </p>
 <pre><code>
@@ -23,6 +23,7 @@ void function(alist)
 </code></pre>
 <p> <code>vacall_function = </code><i>&amp;function</i><code>;</code> </p>
 <p> <i>val</i><code> = ((</code><i>return_type</i><code> (*) ()) vacall) (</code><i>arg1</i><code>,</code><i>arg2</i><code>,</code><i>&#8230;</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> This set of macros permit a C function <i>function</i> to be called with variable arguments and to return variable return values. This is much like the <code>varargs</code>(3) facility, but also allows the return value to be specified at run time. </p>
 <p> Function calling conventions differ considerably on different machines, and <i>vacall</i> attempts to provide some degree of isolation from such architecture dependencies. </p>
 <p> The function that can be called with any number and type of arguments and which will return any type of return value is <code>vacall</code>. It will do some magic and call the function stored in the variable <code>vacall_function</code>. If you want to make more than one use of <i>vacall</i>, use the <i><a href="/docs/linux/man/3-trampoline/">trampoline</a></i>(3) facility to store <i>&amp;function</i> into <code>vacall_function</code> just before calling <code>vacall</code>. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "g_editconf_d(1)"
 name: "g_editconf_d"
 section: "1"
@@ -11,7 +10,9 @@ description: "editconf – edits the box and writes subgroups"
 <h2>NAME</h2>
 <p> editconf &#8211; edits the box and writes subgroups </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>editconf</code> <code>-f</code><i> conf.gro </i> <code>-n</code><i> index.ndx </i> <code>-o</code><i> out.gro </i> <code>-mead</code><i> mead.pqr </i> <code>-bf</code><i> bfact.dat </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-[no]w</code><i></i> <code>-[no]ndef</code><i></i> <code>-bt</code><i> enum </i> <code>-box</code><i> vector </i> <code>-angles</code><i> vector </i> <code>-d</code><i> real </i> <code>-[no]c</code><i></i> <code>-center</code><i> vector </i> <code>-translate</code><i> vector </i> <code>-rotate</code><i> vector </i> <code>-[no]princ</code><i></i> <code>-scale</code><i> vector </i> <code>-density</code><i> real </i> <code>-[no]vol</code><i></i> <code>-[no]pbc</code><i></i> <code>-[no]grasp</code><i></i> <code>-rvdw</code><i> real </i> <code>-sig56</code><i> real </i> <code>-[no]vdwread</code><i></i> <code>-[no]atom</code><i></i> <code>-[no]legend</code><i></i> <code>-label</code><i> string </i></p>
+<h2>DESCRIPTION</h2>
 <p> editconf converts generic structure format to <code> .gro</code>, <code> .g96</code> or <code> .pdb</code>. </p>
 <p> The box can be modified with options <code> -box</code>, <code> -d</code> and <code> -angles</code>. Both <code> -box</code> and <code> -d</code> will center the system in the box. </p>
 <p> Option <code> -bt</code> determines the box type: <code> triclinic</code> is a triclinic box, <code> cubic</code> is a rectangular box with all sides equal <code> dodecahedron</code> represents a rhombic dodecahedron and <code> octahedron</code> is a truncated octahedron. The last two are special cases of a triclinic box. The length of the three box vectors of the truncated octahedron is the shortest distance between two opposite hexagons. The volume of a dodecahedron is 0.71 and that of a truncated octahedron is 0.77 of that of a cubic box with the same periodic image distance. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "htcopy(1)"
 name: "htcopy"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-htcopy/"
 description: "htcopy – HTTP client with LCGDM extensions"
 ---
 
+<h2 class="name">NAME</h2>
+<p> htcopy &#8211; HTTP client with LCGDM extensions</p>
+<h2>SYNOPSIS</h2>
 <p> <code>htcopy</code> [options] <i>[source] [destination]</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>htcopy</code> is a HTTP client that implements some extensions of the protocol used by the HTTP/DAV front-end of LCGDM. The command is designed to work without user interaction. </p>
 <p> It allows to copy from local to remote, from remote to local, and it can also trigger third party copies. </p>
 <p> It supports multiple streams for uploads and downloads, improving the performance of the transfer. </p>

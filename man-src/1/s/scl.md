@@ -1,5 +1,4 @@
 ---
-
 title: "scl(1)"
 name: "scl"
 section: "1"
@@ -10,11 +9,13 @@ description: "scl – Setup and run software from Software Collection environmen
 
 <h2>NAME</h2>
 <p> scl &#8211; Setup and run software from Software Collection environment</p>
+<h2>SYNOPSIS</h2>
 <p> <code>scl</code> <i>&lt;action&gt;</i> <i>&lt;collection1&gt;</i> [<i>&lt;collection2&gt; &#8230;</i>] <i>&lt;command&gt;</i> </p>
 <p> <code>scl</code> <i>&lt;action&gt;</i> <i>&lt;collection1&gt;</i> [<i>&lt;collection2&gt; &#8230;</i>] &#8212; <i>&lt;command&gt;</i> </p>
 <p> <code>scl</code> {<code>-l|&#8211;list</code>} [<i>&lt;collection1&gt; &lt;collection2&gt; &#8230;</i>] </p>
 <p> <code>scl register</code> <i>&lt;path&gt;</i></p>
 <p> <code>scl deregister</code> <i>&lt;collection&gt;</i> [<code>&#8211;force</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents <code>scl</code>, a program which is an utility for running software packaged as a Software Collection. </p>
 <p> <code>scl</code> utility allows to execute an application which is not located in the filesystem root hierarchy but is present in an alternative location. This application can still use and benefit from software installed in the root filesystem. In order to let an application be visible to the system one has to use <code>scl</code> utility as an interface. </p>
 <p> <i>&lt;action&gt;</i> is a script name to execute in a bash environment before the application itself takes in executed. Currently only <code>enable</code> scriptlet is mandatory which is needed to update search paths, etc. </p>

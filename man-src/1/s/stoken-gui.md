@@ -1,5 +1,4 @@
 ---
-
 title: "stoken-gui(1)"
 name: "stoken-gui"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-stoken-gui/"
 description: "stoken-gui – GTK+ software token"
 ---
 
+<h2 class="name">NAME</h2>
+<p> stoken-gui &#8211; GTK+ software token </p>
+<h2>SYNOPSIS</h2>
 <p> <code>stoken-gui</code> [<i>opts</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>stoken-gui</code> is a software token compatible with RSA SecurID 128-bit (AES) tokens. The graphical user interface provides limited support for password entry and viewing the current token. Initial token importation and other configuration items are handled through the command-line interface, <code><a href="/docs/linux/man/1-stoken/">stoken</a>(1)</code>. </p>
 <p> After using <code>stoken import</code> to populate <i>~/.stokenrc</i>, <code>stoken-gui</code> may be invoked to display the tokencode and counter. The tokencode changes once a minute; <code>stoken-gui</code> may be left running forever and will copy the current tokencode to the clipboard on demand. </p>
 <p> If a password and/or PIN is required, <code>stoken-gui</code> will pop up a dialog box requesting the appropriate information.</p>

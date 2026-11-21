@@ -1,5 +1,4 @@
 ---
-
 title: "wmgui(1)"
 name: "wmgui"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-wmgui/"
 description: "wmgui – GTK gui to the wiimote"
 ---
 
+<h2 class="name">NAME</h2>
+<p> wmgui &#8211; GTK gui to the wiimote </p>
+<h2>SYNOPSIS</h2>
 <p> <code>wmgui</code> [<i>options</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>wmgui</code> command. </p>
 <p> <code>wmgui</code> is a program that provides a simple GTK gui to the wiimote.</p>
 <h2>OPTIONS</h2>

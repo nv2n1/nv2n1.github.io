@@ -1,5 +1,4 @@
 ---
-
 title: "libpng(3)"
 name: "libpng"
 section: "3"
@@ -10,6 +9,7 @@ description: "libpng – Portable Network Graphics (PNG) Reference Library 1.5.1
 
 <h2>NAME</h2>
 <p> libpng &#8211; Portable Network Graphics (PNG) Reference Library 1.5.13</p>
+<h2>SYNOPSIS</h2>
 <p> <i></i><code> </p>
 <p> #include &lt;png.h&gt;</code> </p>
 <p> <i></i><code> </p>
@@ -491,6 +491,7 @@ description: "libpng – Portable Network Graphics (PNG) Reference Library 1.5.1
 <p> void png_write_sig (png_structp </code><i>png_ptr</i><code>);</code> </p>
 <p> <i></i><code> </p>
 <p> </code></p>
+<h2>DESCRIPTION</h2>
 <p> The <i>libpng</i> library supports encoding, decoding, and various manipulations of the Portable Network Graphics (PNG) format image files. It uses the <i><a href="/docs/linux/man/3-zlib/">zlib</a>(3)</i> compression library. Following is a copy of the libpng-manual.txt file that accompanies libpng.</p>
 <h2>LIBPNG.TXT</h2>
 <p> Libpng-manual.txt &#8211; A description on how to use and modify libpng </p>

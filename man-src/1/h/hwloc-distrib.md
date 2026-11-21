@@ -1,5 +1,4 @@
 ---
-
 title: "hwloc-distrib(1)"
 name: "hwloc-distrib"
 section: "1"
@@ -10,6 +9,7 @@ description: "hwloc-distrib – Build a number of cpu masks distributed on the s
 
 <h2>NAME</h2>
 <p> hwloc-distrib &#8211; Build a number of cpu masks distributed on the system</p>
+<h2>SYNOPSIS</h2>
 <p> <code>hwloc-distrib</code> [<i>options</i>] <i>&lt;integer&gt;</i></p>
 <h2>OPTIONS</h2>
 <dl>
@@ -43,6 +43,7 @@ description: "hwloc-distrib – Build a number of cpu masks distributed on the s
 <dd> Do not consider administration limitations.</dd>
 <dt><code>&#8211;version</code></dt>
 <dd> Report version and exit.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> hwloc-distrib generates a series of CPU masks corresponding to a distribution of a given number of elements over the topology of the machine. The distribution is done recursively from the top of the hierarchy (or from the level specified by option <code>&#8211;from</code>) down to the bottom of the hierarchy (or down to the level specified by option <code>&#8211;to</code>, or until only one element remains), splitting the number of elements at each encountered hierarchy level not ignored by options <code>&#8211;ignore</code>. </p>
 <p> This can e.g. be used to distribute a set of processes hierarchically according to the topology of a machine. These masks can be used with <a href="/docs/linux/man/1-hwloc-bind/">hwloc-bind</a>(1). </p>
 <p> <code>NOTE:</code> It is highly recommended that you read the <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7) overview page before reading this man page. Most of the concepts described in <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7) directly apply to the hwloc-bind utility.</p>

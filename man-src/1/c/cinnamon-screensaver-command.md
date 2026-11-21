@@ -1,5 +1,4 @@
 ---
-
 title: "cinnamon-screensaver-command(1)"
 name: "cinnamon-screensaver-command"
 section: "1"
@@ -10,7 +9,9 @@ description: "cinnamon-screensaver-command – controls Cinnamon screensaver"
 
 <h2>NAME</h2>
 <p> cinnamon-screensaver-command &#8211; controls Cinnamon screensaver</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cinnamon-screensaver-command</code> [<i>OPTION&#8230;</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> cinnamon-screensaver-command is a tool for controlling an already running instance of cinnamon-screensaver.</p>
 <h2>OPTIONS</h2>
 <dl>

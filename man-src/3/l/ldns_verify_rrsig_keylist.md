@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_verify_rrsig_keylist(3)"
 name: "ldns_verify_rrsig_keylist"
 section: "3"
@@ -10,6 +9,7 @@ description: "ldns_verify, ldns_verify_rrsig, ldns_verify_rrsig_keylist, ldns_ve
 
 <h2>NAME</h2>
 <p> ldns_verify, ldns_verify_rrsig, ldns_verify_rrsig_keylist, ldns_verify_rrsig_keylist_notime, ldns_verify_notime </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -18,6 +18,7 @@ description: "ldns_verify, ldns_verify_rrsig, ldns_verify_rrsig_keylist, ldns_ve
 <p> ldns_status ldns_verify_rrsig_keylist(ldns_rr_list *rrset, ldns_rr *rrsig, const ldns_rr_list *keys, ldns_rr_list *good_keys); </p>
 <p> ldns_status ldns_verify_rrsig_keylist_notime(ldns_rr_list *rrset, ldns_rr *rrsig, const ldns_rr_list *keys, ldns_rr_list *good_keys); </p>
 <p> ldns_status ldns_verify_notime(ldns_rr_list *rrset, ldns_rr_list *rrsig, const ldns_rr_list *keys, ldns_rr_list *good_keys); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_verify</i>()</dt>
 <dd>Verifies a list of signatures for one rrset. </dd>

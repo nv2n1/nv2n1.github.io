@@ -1,5 +1,4 @@
 ---
-
 title: "dgehd2(3)"
 name: "dgehd2"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dgehd2/"
 description: "dgehd2.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dgehd2.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgehd2</code> (N, ILO, IHI, A, LDA, TAU, WORK, INFO)<br />
  <i></i><code>DGEHD2</code> reduces a general square matrix to upper Hessenberg form using an unblocked algorithm.</p>

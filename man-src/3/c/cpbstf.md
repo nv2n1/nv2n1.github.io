@@ -1,5 +1,4 @@
 ---
-
 title: "cpbstf(3)"
 name: "cpbstf"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cpbstf/"
 description: "cpbstf.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cpbstf.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cpbstf</code> (UPLO, N, KD, AB, LDAB, INFO)<br />
  <i></i><code>CPBSTF</code></p>

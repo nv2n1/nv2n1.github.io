@@ -1,5 +1,4 @@
 ---
-
 title: "oggz-scan(1)"
 name: "oggz-scan"
 section: "1"
@@ -11,6 +10,7 @@ description: "oggz-scan — Scan an Ogg file and output characteristic landmarks
 <h2>NAME</h2>
 <p> oggz-scan &#8212; Scan an Ogg file and output characteristic landmarks<br />
 &nbsp;<wbr></p>
+<h2>SYNOPSIS</h2>
 <p> <code>oggz-scan</code> [-k | &#8211;keyframe ] [-o <code>filename</code> | &#8211;output <code>filename</code> ] [-f <code>format</code> | &#8211;format <code>format</code> ] filename </p>
 <p> <code>oggz-scan</code> [-h | &#8211;help ] [-v | &#8211;version ]</p>
 <h2>Description</h2>

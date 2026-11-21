@@ -1,5 +1,4 @@
 ---
-
 title: "inews(1)"
 name: "inews"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-inews/"
 description: "inews – Post a Usenet article to the local news server"
 ---
 
+<h2 class="name">NAME</h2>
+<p> inews &#8211; Post a Usenet article to the local news server </p>
+<h2>SYNOPSIS</h2>
 <p> <code>inews</code> [<code>-ADhNORSVW</code>] [<code>-acdeFfnortwx</code> <i>value</i>] [<code>-p</code> <i>port</i>] [<i>file</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>inews</code> reads a Usenet news article, perhaps with headers, from <i>file</i> or standard input if no file is given. It adds some headers and performs some consistency checks. If the article does not meet those checks, the article is rejected. If it passes the checks, <code>inews</code> sends the article to the local news server as specified in <i>inn.conf</i>. </p>
 <p> By default, if a file named <i>.signature</i> exists in the home directory of the posting user, it is appended to the post, preceded by a line that contains only <tt>&quot;-- &quot;</tt>. Signatures are not allowed to be more than four lines long. </p>
 <p> Cancel messages can only be posted with <code>inews</code> if the sender of the cancel message matches the sender of the original message being cancelled. The same check is also applied to Supersedes. Sender in this case means the contents of the Sender header if present, otherwise the From header. </p>

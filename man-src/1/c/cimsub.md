@@ -1,5 +1,4 @@
 ---
-
 title: "cimsub(1)"
 name: "cimsub"
 section: "1"
@@ -10,6 +9,7 @@ description: "cimsub – list, enable, disable,remove or create CIM indication s
 
 <h2>NAME</h2>
 <p> cimsub &#8211; list, enable, disable,remove or create CIM indication subscriptions</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cimsub</code> <code>-l</code> <code>s</code>|<code>f</code>|fB-v][<code>-n</code> namespace][<code>-F</code> [fnamespace:]filtername][<code>-H</code> [hnamespace:][hclassname.]handlername] </p>
 <p> <code>cimsub</code> <code>-e</code> [<code>-n</code> namespace] <code>-F</code> [fnamespace:]filtername <code>-H</code> [hnamespace:][hclassname.]handlername </p>
 <p> <code>cimsub</code> <code>-d</code> [<code>-n</code> namespace] <code>-F</code> [fnamespace:]filtername <code>-H</code> [hnamespace:][hclassname.]handlername </p>
@@ -21,6 +21,7 @@ description: "cimsub – list, enable, disable,remove or create CIM indication s
 <p> <code>cimsub</code> <code>-c</code> <code>s</code> [<code>-n</code> namespace] <code>-F</code> [fnamespace:]filtername <code>-H</code> [hnamespace:][hclassname.]handlername </p>
 <p> <code>cimsub</code> <code>&#8211;help</code> </p>
 <p> <code>cimsub</code> <code>&#8211;version</code> </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>cimsub </code> command provides a command line interface to manage CIM indication subscriptions on the local CIM Server. </p>
 <p> The first form of <code>cimsub </code> lists all or selected indication subscriptions, filters, or handlers, and displays the requested information about the instance(s). </p>
 <p> The second form of <code>cimsub </code> enables the specified subscription, i.e. the subscription instance is modified to set the value of the SubscriptionState property to Enabled. When a subscription is enabled, the CIM Server attempts to process the subscription if at least one provider is available to serve the subscription. </p>

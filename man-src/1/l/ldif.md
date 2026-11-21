@@ -1,5 +1,4 @@
 ---
-
 title: "ldif(1)"
 name: "ldif"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ldif/"
 description: "ldif – manipulates an LDIF stream by adding a column with the defined attribute type"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ldif &#8211; manipulates an LDIF stream by adding a column with the defined attribute type </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ldif</code> [<i>-b</i>] attrtype</p>
+<h2>DESCRIPTION</h2>
 <p> Manipulates an LDIF stream by adding a column with the defined attribute type </p>
 <h2>OPTIONS</h2>
 <p> A summary of options is included below:</p>

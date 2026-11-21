@@ -1,5 +1,4 @@
 ---
-
 title: "dpptrf(3)"
 name: "dpptrf"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dpptrf/"
 description: "dpptrf.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dpptrf.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dpptrf</code> (UPLO, N, AP, INFO)<br />
  <i></i><code>DPPTRF</code></p>

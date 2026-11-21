@@ -1,5 +1,4 @@
 ---
-
 title: "ibv_post_srq_ops(3)"
 name: "ibv_post_srq_ops"
 section: "3"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/3-ibv_post_srq_ops/"
 description: "ibv_post_srq_ops – perform on a special shared receive queue (SRQ) configuration manipulations"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ibv_post_srq_ops &#8211; perform on a special shared receive queue (SRQ) configuration manipulations </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 int ibv_post_srq_ops(struct ibv_srq *srq, struct ibv_ops_wr *wr,
                      struct ibv_ops_wr **bad_wr);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>ibv_post_srq_ops()</code> performs series of offload configuration manipulations on special types of SRQ <i>srq</i>. Currenlty it is used to configure tag matching SRQ. Series of configuration operations defined by linked lists of struct ibv_ops_wr elements starting from <i>wr.</i> </p>
 <pre><code>
 struct ibv_ops_wr {

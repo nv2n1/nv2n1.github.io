@@ -1,5 +1,4 @@
 ---
-
 title: "ldapurl(1)"
 name: "ldapurl"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ldapurl/"
 description: "ldapurl – LDAP URL formatting tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ldapurl &#8211; LDAP URL formatting tool </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ldapurl</code> [<code>-a</code>&nbsp;<wbr>attrs] [<code>-b</code><i>&nbsp;<wbr>searchbase</i>] [<code>-e</code>&nbsp;<wbr>[<code>!</code>]<i>ext</i>[<code>=</code><i>extparam</i>]] [<code>-E</code>&nbsp;<wbr>[<code>!</code>]<i>ext</i>[<code>=</code><i>extparam</i>]] [<code>-f</code><i>&nbsp;<wbr>filter</i>] [<code>-H</code><i>&nbsp;<wbr>ldapuri</i>] [<code>-h</code><i>&nbsp;<wbr>ldaphost</i>] [<code>-p</code><i>&nbsp;<wbr>ldapport</i>] [<code>-s</code>&nbsp;<wbr>{<code>base</code>|<code>one</code>|<code>sub</code>|<code>children</code>}] [<code>-S</code><i>&nbsp;<wbr>scheme</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>ldapurl</i> is a command that allows to either compose or decompose LDAP URIs. </p>
 <p> When invoked with the <code>-H</code> option, <code>ldapurl</code> extracts the components of the <i>ldapuri</i> option argument, unescaping hex-escaped chars as required. It basically acts as a frontend to the <code><a href="/docs/linux/man/3-ldap_url_parse/">ldap_url_parse</a></code>(3) call. Otherwise, it builds an LDAP URI based on the components passed with the appropriate options, performing the inverse operation. Option <code>-H</code> is incompatible with options <code>-a</code>, <code>-b</code>, <code>-E</code>, <code>-f</code>, <code>-H</code>, <code>-h</code>, <code>-p</code>, <code>-S</code>, and <code>-s</code>.</p>
 <h2>OPTIONS</h2>

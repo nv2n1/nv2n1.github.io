@@ -1,5 +1,4 @@
 ---
-
 title: "dc1394_multiview(1)"
 name: "dc1394_multiview"
 section: "1"
@@ -10,7 +9,9 @@ description: "dc1394_multiview – display format0 camera video"
 
 <h2>NAME</h2>
 <p> dc1394_multiview &#8211; display format0 camera video</p>
+<h2>SYNOPSIS</h2>
 <p> <code>dc1394_multiview [</code><i>&#8211;fps=[1,3,15,30]</i>] [<i>&#8211;res=[0,1,2]</i>] [<i>&#8211;device=/dev/video1394/x</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> View format0-only camera video from one or more cameras.</p>
 <h2>OPTIONS</h2>
 <dl>

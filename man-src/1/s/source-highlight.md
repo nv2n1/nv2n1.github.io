@@ -1,5 +1,4 @@
 ---
-
 title: "source-highlight(1)"
 name: "source-highlight"
 section: "1"
@@ -10,7 +9,9 @@ description: "Source-highlight – convert source code to syntax highlighted doc
 
 <h2>NAME</h2>
 <p> Source-highlight &#8211; convert source code to syntax highlighted document</p>
+<h2>SYNOPSIS</h2>
 <p> <code>source-highlight</code> [<i>OPTIONS</i>]&#8230; <i>&lt; input_file &gt; output_file</i></p>
+<h2>DESCRIPTION</h2>
 <p> GNU source-highlight 3.1.6 </p>
 <p> Highlight the syntax of a source file (e.g. Java) into a specific format (e.g. HTML)</p>
 <dl>

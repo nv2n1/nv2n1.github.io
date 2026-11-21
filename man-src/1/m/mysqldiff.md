@@ -1,5 +1,4 @@
 ---
-
 title: "mysqldiff(1)"
 name: "mysqldiff"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mysqldiff/"
 description: "mysqldiff – Identify Differences Among Database Objects"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mysqldiff &#8211; Identify Differences Among Database Objects </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqldiff [</code><i>options</i><code>] {</code><i>db1</i><code>[</code><i>:db1</i><code>] | {</code><i>db1.obj1</i><code>[</code><i>:db2.obj2</i><code>]} &#8230;</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This utility reads the definitions of objects and compares them using a diff-like method to determine whether they are the same. The utility displays the differences for objects that are not the same. </dd>
 <p> Use the notation db1:db2 to name two databases to compare, or, alternatively just db1 to compare two databases with the same name. The latter case is a convenience notation for comparing same-named databases on different servers. </p>
 <p> The comparison may be run against two databases of different names on a single server by specifying only the <code>&#8211;server1</code> option. The user can also connect to another server by specifying the <code>&#8211;server2</code> option. In this case, db1 is taken from server1 and db2 from server2. </p>

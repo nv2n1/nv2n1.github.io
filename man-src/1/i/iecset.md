@@ -1,5 +1,4 @@
 ---
-
 title: "iecset(1)"
 name: "iecset"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-iecset/"
 description: "iecset – Set or dump IEC958 status bits"
 ---
 
+<h2 class="name">NAME</h2>
+<p> iecset &#8211; Set or dump IEC958 status bits</p>
+<h2>SYNOPSIS</h2>
 <p> <code>iecset</code> [<i>options</i>] [<i>cmd</i> <i>arg</i>&#8230;] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>iecset</code> is a small utility to set or dump the IEC958 (or so-called &quot;S/PDIF&quot;) status bits of the specified sound card via ALSA control API. </p>
 <p> When <code>iecset</code> is started without arguments except for options, it will show the current IEC958 status in a human-readable form. When the commands are given in the arguments, they are parsed and the IEC958 status bits are updated. The resultant status is shown as well. </p>
 <p> The commands consist of the command directive and the argument. As the boolean argument, <i>yes</i>, <i>no</i>, <i>true</i>, <i>false</i>, or a digit number is allowed. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "sched_rr_get_interval(2)"
 name: "sched_rr_get_interval"
 section: "2"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/2-sched_rr_get_interval/"
 description: "sched_rr_get_interval – get the SCHED_RR interval for the named process"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sched_rr_get_interval &#8211; get the SCHED_RR interval for the named process </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sched.h&gt;</code> </p>
 <p> <code>int sched_rr_get_interval(pid_t </code><i>pid</i><code>, struct timespec *</code><i>tp</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>sched_rr_get_interval</code>() writes into the <i>timespec</i> structure pointed to by <i>tp</i> the round-robin time quantum for the process identified by <i>pid</i>. The specified process should be running under the <code>SCHED_RR</code> scheduling policy. </p>
 <p> The <i>timespec</i> structure has the following form: </p>
 <p> struct timespec {<br />

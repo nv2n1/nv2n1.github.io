@@ -1,5 +1,4 @@
 ---
-
 title: "wcmgr(1)"
 name: "wcmgr"
 section: "1"
@@ -10,7 +9,9 @@ description: "wcmgr – Webalizer (DNS) Cache file Manager"
 
 <h2>NAME</h2>
 <p> wcmgr &#8211; Webalizer (DNS) Cache file Manager</p>
+<h2>SYNOPSIS</h2>
 <p> <code>wcmgr</code> [<i> option &#8230; </i>] <i>cache-file</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <i>wcmgr</i> is a utility program which allows manipulation of the DNS cache files used and produced by The <i>Webalizer</i>. Each record in the cache file contains an IP address (either IPv4 or IPv6), a timestamp of when the entry was added to the cache, a flag to indicate if the record contains a resolved name or not, and either the same IP address or a resolved host name. All records are accessed by their IP address.</p>
 <h2>RUNNING WCMGR</h2>
 <p> <i>wcmgr</i> was designed to be run from the Unix shell command line. This facilitates its use in shell scripts and other automated processes. A valid DNS cache file <code>must</code> be specified. Command line options are optional, and if none are given, the default action is to list the contents of the specified cache file.</p>

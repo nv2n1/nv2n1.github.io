@@ -1,5 +1,4 @@
 ---
-
 title: "stg-fold(1)"
 name: "stg-fold"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-stg-fold/"
 description: "stg-fold – Integrate a GNU diff patch into the current patch"
 ---
 
+<h2 class="name">NAME</h2>
+<p> stg-fold &#8211; Integrate a GNU diff patch into the current patch </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 stg fold[options][--][&lt;file&gt;]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Apply the given GNU diff file (or the standard input) onto the top of the current patch. With the <i>&#8211;threeway</i> option, the patch is applied onto the bottom of the current patch and a three-way merge is performed with the current top. With the &#8211;base option, the patch is applied onto the specified base and a three-way merged is performed with the current top.</p>
 <h2>OPTIONS</h2>
 <p> -t, &#8211;threeway</p>

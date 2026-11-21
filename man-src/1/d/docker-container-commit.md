@@ -1,5 +1,4 @@
 ---
-
 title: "docker-container-commit(1)"
 name: "docker-container-commit"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-container-commit/"
 description: "docker-container-commit – Create a new image from a container’s changes"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-container-commit &#8211; Create a new image from a container&#8217;s changes </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker container commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Create a new image from an existing container specified by name or container ID. The new image will contain the contents of the container filesystem, <i>excluding</i> any data volumes. Refer to <code><a href="/docs/linux/man/1-docker-tag/">docker-tag</a>(1)</code> for more information about valid image and tag names. </p>
 <p> While the docker commit command is a convenient way of extending an existing image, you should prefer the use of a Dockerfile and docker build for generating images that you intend to share with other people. </p>
 <h2>EXAMPLES</h2>

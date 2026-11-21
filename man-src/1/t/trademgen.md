@@ -1,5 +1,4 @@
 ---
-
 title: "trademgen(1)"
 name: "trademgen"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-trademgen/"
 description: "trademgen –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> trademgen &#8211; </p>
 <pre>
   Interactive command-line utility for the C++ Simulated Travel Demand Generation Library
 </pre>
+<h2>SYNOPSIS</h2>
 <p> <code>trademgen</code> [&#8211;prefix] [-v|&#8211;version] [-h|&#8211;help] [-b|&#8211;builtin] [-i|&#8211;input &lt;path-to-input&gt;] [-l|&#8211;log &lt;path-to-output-log-file&gt;]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>trademgen</i> is a small interactive program showing how to use the TraDemGen library. </p>
 <p> <i>trademgen</i> accepts the following options: </p>
 <p> <code>&#8211;prefix</code> </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "mrpt-performance(1)"
 name: "mrpt-performance"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mrpt-performance/"
 description: "mrpt-performance – Complete performance test for MRPT"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mrpt-performance &#8211; Complete performance test for MRPT </p>
+<h2>SYNOPSIS</h2>
 <p> mrpt-performance</p>
+<h2>DESCRIPTION</h2>
 <p> <code>mrpt-performance</code> is a command-line tool for performing a complete test of performance (in execution time) of many different modules of <font SIZE="-1">MRPT</font>. The results are dumped as an <font SIZE="-1">HTML</font> document.</p>
 <h2>BUGS</h2>
 <p> Please report bugs at <a rel="nofollow" href="http://sourceforge.net/tracker/?group_id=205280">http://sourceforge.net/tracker/?group_id=205280</a>&amp;atid=993006</p>

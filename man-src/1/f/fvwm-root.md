@@ -1,5 +1,4 @@
 ---
-
 title: "fvwm-root(1)"
 name: "fvwm-root"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-fvwm-root/"
 description: "fvwm-root – Sets the root window of the current X display to image"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fvwm-root &#8211; Sets the root window of the current X display to image</p>
+<h2>SYNOPSIS</h2>
 <p> <code>fvwm-root</code> [<code>&#8211;retain-pixmap</code>|<code>-r</code>] [<code>&#8211;no-retain-pixmap</code>] [<code>&#8211;dummy</code>|<code>-d</code>] [<code>&#8211;no-dummy</code>] [<code>&#8211;dither</code>] [<code>&#8211;no-dither</code>] [<code>&#8211;color-limit</code> [<i>ncolors</i>] ] [<code>&#8211;no-color-limit</code>] [<code>&#8211;help</code>|<code>-h</code>|<code>-?</code>] [<code>&#8211;version</code>|<code>-V</code>] <i>image_file</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <i>fvwm-root</i> reads the image file specified in the command line and displays it in the root window. The supported image formats are <i>XBM</i>, <i>XPM</i>, <i>PNG</i> and <i>SVG</i> if appropriated libraries are compiled in. </p>
 <p> SVG rendering options (as described in the <code> ICONS AND IMAGES </code> section of the main fvwm documentation) can be utilized. </p>
 <h2>OPTIONS</h2>

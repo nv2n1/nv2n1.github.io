@@ -1,5 +1,4 @@
 ---
-
 title: "ibv_create_cq_ex(3)"
 name: "ibv_create_cq_ex"
 section: "3"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/3-ibv_create_cq_ex/"
 description: "ibv_create_cq_ex – create a completion queue (CQ)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ibv_create_cq_ex &#8211; create a completion queue (CQ) </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 struct ibv_cq_ex *ibv_create_cq_ex(struct ibv_context *context,
                                    struct ibv_cq_init_attr_ex *cq_attr);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>ibv_create_cq_ex()</code> creates a completion queue (CQ) for RDMA device context <i>context</i>. The argument <i>cq_attr</i> is a pointer to struct ibv_cq_init_attr_ex as defined in &lt;infiniband/verbs.h&gt;. </p>
 <p>struct ibv_cq_init_attr_ex {<br />
     int cqe;                          /* Minimum number of entries required for CQ */<br />

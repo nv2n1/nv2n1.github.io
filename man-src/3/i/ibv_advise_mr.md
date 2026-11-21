@@ -1,5 +1,4 @@
 ---
-
 title: "ibv_advise_mr(3)"
 name: "ibv_advise_mr"
 section: "3"
@@ -7,7 +6,14 @@ letter: "i"
 url: "/docs/linux/man/3-ibv_advise_mr/"
 ---
 
-ibv_advise_mr - Gives advice or directions to the kernel about an address range belongs to a memory region (MR). 
+<h2 class="name">NAME</h2>
+ 
+
+ 
+
+ ibv_advise_mr - Gives advice or directions to the kernel about an address range belongs to a memory region (MR). 
+
+<h2>SYNOPSIS</h2>
 
 <dl>
 <dt>
@@ -20,7 +26,11 @@ int ibv_advise_mr(struct ibv_pd *pd,
                   uint32_t num_sge)
 </code></pre></dd></dl>
 
-ibv_advise_mr() Give advice or directions to the kernel about an address range belonging to a memory region (MR). Applications that are aware of future access patterns can use this verb in order to leverage this knowledge to improve system or application performance. 
+<h2>DESCRIPTION</h2>
+
+ 
+
+ ibv_advise_mr() Give advice or directions to the kernel about an address range belonging to a memory region (MR). Applications that are aware of future access patterns can use this verb in order to leverage this knowledge to improve system or application performance. 
 
  Conventional advice values
 <dl>

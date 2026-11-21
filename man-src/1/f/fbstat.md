@@ -1,5 +1,4 @@
 ---
-
 title: "fbstat(1)"
 name: "fbstat"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-fbstat/"
 description: "fbstat – analyze firebird database"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fbstat &#8211; analyze firebird database </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 fbstat[command][option...] [server:] database
         fbstat -
@@ -17,6 +19,7 @@ fbstat[command][option...] [server:] database
                                 fbstat -
                             data server : db
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> (<i>Note</i>: Due to file-level conflict, the Debian package has changed the name of <code>gstat</code> to fbstat.) </p>
 <p> <code>fbstat</code> Analyzes Firebird databases and produces different kinds of reports. These are useful when analyzing where all this huge disk space has gone or when estimating evaluating index efficiency.</p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "heif-info(1)"
 name: "heif-info"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-heif-info/"
 description: "heif-info – show information on HEIC/HEIF file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> heif-info &#8211; show information on HEIC/HEIF file </p>
+<h2>SYNOPSIS</h2>
 <p> <code>heif-info</code> [<code>-d</code>|<code>&#8211;dump-boxes</code>] [<code>-h</code>|<code>&#8211;help</code>] <i>filename</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>heif-info</code> Show information on HEIC/HEIF file.</p>
 <h2>OPTIONS</h2>
 <dl>

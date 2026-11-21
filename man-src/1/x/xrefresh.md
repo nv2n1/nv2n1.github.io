@@ -1,5 +1,4 @@
 ---
-
 title: "xrefresh(1)"
 name: "xrefresh"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-xrefresh/"
 description: "xrefresh – refresh all or part of an X screen"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xrefresh &#8211; refresh all or part of an X screen </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xrefresh</code> [-option &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Xrefresh</i> is a simple X program that causes all or part of your screen to be repainted. This is useful when system messages have messed up your screen. <i>Xrefresh</i> maps a window on top of the desired area of the screen and then immediately unmaps it, causing refresh events to be sent to all applications. By default, a window with no background is used, causing all applications to repaint &#8220;smoothly.&#8221; However, the various options can be used to indicate that a solid background (of any color) or the root window background should be used instead.</p>
 <h2>ARGUMENTS</h2>
 <dl>

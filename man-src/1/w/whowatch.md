@@ -1,5 +1,4 @@
 ---
-
 title: "whowatch(1)"
 name: "whowatch"
 section: "1"
@@ -10,6 +9,7 @@ description: "whowatch – console, interactive, process and users monitoring to
 
 <h2>NAME</h2>
 <p> whowatch &#8211; console, interactive, process and users monitoring tool.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Whowatch</code> is an console, interactive users and process monitoring tool. It displays information about the users currently logged on to the machine, in real-time. Besides standard information (login name, tty, host, user&#8217;s process), the type of the connection (ie. telnet or ssh) is shown. Display of users command line can be switch to tty idle time. Certain user can be selected and his processes tree may be viewed as well as tree of all system processes. Tree may be displayed with additional column that shows owner of each process. In the process tree mode SIGINT and SIGKILL signals can be sent to the selected process. Killing processes is just as simple and fun as deleting lines on the screen. </p>
 <p> <code>Whowatch</code> has no command line options or configuration file. All actions are performed in real time by pressing following keys: </p>
 <p> Users list mode: </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "krazy2(1)"
 name: "krazy2"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-krazy2/"
 description: "krazy2 – Sanity checks KDE source code."
 ---
 
+<h2 class="name">NAME</h2>
+<p> krazy2 &#8211; Sanity checks KDE source code. </p>
+<h2>SYNOPSIS</h2>
 <p> krazy2 [<font SIZE="-1">OPTIONS</font>] [<font SIZE="-1">FILES</font>]</p>
+<h2>DESCRIPTION</h2>
 <p> krazy2 scans <font SIZE="-1">KDE</font> source code looking for issues that should be fixed for reasons of policy, good coding practice, optimization, or any other good reason. In typical use, krazy2 simply counts up the issues and provides the line numbers where those issues occurred in each file processed. With the verbose option, the offending content will be printed as well. </p>
 <p> krazy2 uses &#8220;checker programs&#8221; which are small plugin programs to do the real work of the scanning. It is easy to write your own plugins (see <font SIZE="-1"><code>PLUGINS</code></font>) and tell krazy2 how to use them (see <font SIZE="-1"><code>ENVIRONMENT</code></font>). </p>
 <p> A list of <font SIZE="-1">FILES</font> to process is either specified on the command line or read from standard input if the first file name is &#8220;-&#8221;, in which case 1 file per line is expected. Blank lines and lines starting with a &#8216;#&#8217; are ignored when reading the file list from standard input.</p>

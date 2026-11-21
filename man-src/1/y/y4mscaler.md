@@ -1,5 +1,4 @@
 ---
-
 title: "y4mscaler(1)"
 name: "y4mscaler"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-y4mscaler/"
 description: "y4mscaler – Scale/crop/translate a YUV4MPEG2 stream"
 ---
 
+<h2 class="name">NAME</h2>
+<p> y4mscaler &#8211; Scale/crop/translate a YUV4MPEG2 stream</p>
+<h2>SYNOPSIS</h2>
 <p> <code>y4mscaler</code> [<i>options</i>] <i>&lt; Y4Mstream &gt; Y4Mstream</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>y4mscaler</code> is a general-purpose video scaler which operates on YUV4MPEG2 streams, as produced and consumed by the MJPEGtools such as <code>lav2yuv</code> and <code><a href="/docs/linux/man/1-mpeg2enc/">mpeg2enc</a></code>(1). </p>
 <p> <code>y4mscaler</code> is meant to be used in a pipeline. Thus, input is from stdin, and output is to stdout. </p>
 <p> The essential function of <code>y4mscaler</code> is to scale a specified &quot;active&quot; region of the input stream (the source) into a specified active region of the output stream (the target). Pixels outside of the active region of the source are ignored; pixels outside of the active region of the target are filled with a background color. The source may additionally have a matte applied to it; pixels outside the source matte are set to a separately specified background color. </p>

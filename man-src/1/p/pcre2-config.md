@@ -1,5 +1,4 @@
 ---
-
 title: "pcre2-config(1)"
 name: "pcre2-config"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-pcre2-config/"
 description: "pcre2-config – program to return PCRE2 configuration"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pcre2-config &#8211; program to return PCRE2 configuration </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 pcre2 - config[--prefix][--exec - prefix][--version]
               [--libs8][--libs16][--libs32][--libs - posix]
               [--cflags][--cflags - posix]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>pcre2-config</code> returns the configuration of the installed PCRE2 libraries and the options required to compile a program to use them. Some of the options apply only to the 8-bit, or 16-bit, or 32-bit libraries, respectively, and are not available for libraries that have not been built. If an unavailable option is encountered, the &quot;usage&quot; information is output.</p>
 <h2>OPTIONS</h2>
 <dl>

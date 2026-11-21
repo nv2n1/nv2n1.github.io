@@ -1,5 +1,4 @@
 ---
-
 title: "paymentdates(3)"
 name: "paymentdates"
 section: "3"
@@ -7,8 +6,8 @@ letter: "p"
 url: "/docs/linux/man/3-paymentdates/"
 description: "QuantLib::YearOnYearInflationSwap – Year-on-year inflation-indexed swap."
 ---
-
 <p>QuantLib::YearOnYearInflationSwap &#8211; Year-on-year inflation-indexed swap. </p>
+<h2>SYNOPSIS</h2>
 <p> <br />
  </p>
 <p>#include &lt;ql/instruments/yearonyearinflationswap.hpp&gt; </p>

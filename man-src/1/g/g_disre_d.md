@@ -1,5 +1,4 @@
 ---
-
 title: "g_disre_d(1)"
 name: "g_disre_d"
 section: "1"
@@ -11,7 +10,9 @@ description: "g_disre – analyzes distance restraints"
 <h2>NAME</h2>
 <p> g_disre &#8211; analyzes distance restraints </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>g_disre</code> <code>-s</code><i> topol.tpr </i> <code>-f</code><i> traj.xtc </i> <code>-ds</code><i> drsum.xvg </i> <code>-da</code><i> draver.xvg </i> <code>-dn</code><i> drnum.xvg </i> <code>-dm</code><i> drmax.xvg </i> <code>-dr</code><i> restr.xvg </i> <code>-l</code><i> disres.log </i> <code>-n</code><i> viol.ndx </i> <code>-q</code><i> viol.pdb </i> <code>-c</code><i> clust.ndx </i> <code>-x</code><i> matrix.xpm </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-ntop</code><i> int </i> <code>-maxdr</code><i> real </i> <code>-nlevels</code><i> int </i> <code>-[no]third</code><i></i></p>
+<h2>DESCRIPTION</h2>
 <p> g_disre computes violations of distance restraints. If necessary all protons can be added to a protein molecule using the protonate program. </p>
 <p> The program always computes the instantaneous violations rather than time-averaged, because this analysis is done from a trajectory file afterwards it does not make sense to use time averaging. However, the time averaged values per restraint are given in the log file. </p>
 <p> An index file may be used to select specific restraints for printing. </p>

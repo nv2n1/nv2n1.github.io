@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pkcs11_token_get_mechanism(3)"
 name: "gnutls_pkcs11_token_get_mechanism"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_pkcs11_token_get_mechanism – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs11_token_get_mechanism &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs11.h&gt;</code> </p>
 <p> <code>int gnutls_pkcs11_token_get_mechanism(const char * </code><i>url</i><code>, unsigned int </code><i>idx</i><code>, unsigned long * </code><i>mechanism</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_pkcs11_token_get_mechanism – API function"
 <dd> The index of the mechanism</dd>
 <dt>unsigned long * mechanism</dt>
 <dd> The PKCS <code>11</code> mechanism ID</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will return the names of the supported mechanisms by the token. It should be called with an increasing index until it return GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE.</p>
 <h2>RETURNS</h2>
 <p> <code>GNUTLS_E_SUCCESS</code> (0) on success or a negative error code on error.</p>

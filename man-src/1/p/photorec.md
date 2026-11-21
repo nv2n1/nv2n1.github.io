@@ -1,5 +1,4 @@
 ---
-
 title: "photorec(1)"
 name: "photorec"
 section: "1"
@@ -10,8 +9,10 @@ description: "photorec – Recover lost files from harddisk, digital camera and 
 
 <h2>NAME</h2>
 <p> photorec &#8211; Recover lost files from harddisk, digital camera and cdrom</p>
+<h2>SYNOPSIS</h2>
 <p> <code>photorec [/log] [/debug] [/d recup_dir] [device|image.dd|image.e01]</code> </p>
 <p> <code>photorec /version</code></p>
+<h2>DESCRIPTION</h2>
 <p><code>PhotoRec</code>&nbsp;<wbr>is file data recovery software designed to recover lost files including video, documents and archives from Hard Disks and CDRom and lost pictures&nbsp;<wbr>(Photo Recovery)&nbsp;<wbr>from digital camera memory. PhotoRec ignores the filesystem and goes after the underlying data, so it&#8217;ll work even if your media&#8217;s filesystem is severely damaged or formatted. PhotoRec is safe to use, it will never attempt to write to the drive or memory support you are about to recover lost data from.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "guilt-init(1)"
 name: "guilt-init"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-guilt-init/"
 description: "guilt-init – Initialize guilt for use in a git repository"
 ---
 
+<h2 class="name">NAME</h2>
+<p> guilt-init &#8211; Initialize guilt for use in a git repository </p>
+<h2>SYNOPSIS</h2>
 <p> <i>guilt-init</i></p>
+<h2>DESCRIPTION</h2>
 <p> Initialize a git repository for use with guilt</p>
 <h2>EXAMPLES</h2>
 <p> First, get a repository to work on. Herecqs one that wecqll use as an example: </p>

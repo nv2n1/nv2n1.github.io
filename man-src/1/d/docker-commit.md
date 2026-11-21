@@ -1,5 +1,4 @@
 ---
-
 title: "docker-commit(1)"
 name: "docker-commit"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-docker-commit/"
 description: "docker-commit – Create a new image from a container’s changes"
 ---
 
+<h2 class="name">NAME</h2>
+<p> docker-commit &#8211; Create a new image from a container&#8217;s changes </p>
+<h2>SYNOPSIS</h2>
 <p> <code>docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Alias for docker container commit. </p>
 <h2>OPTIONS</h2>
 <p> <code>-a</code>, <code>&#8211;author</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Author (e.g., &quot;John Hannibal Smith hannibal [at] a-team.com<br />

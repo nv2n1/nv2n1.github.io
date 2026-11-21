@@ -1,5 +1,4 @@
 ---
-
 title: "po2txt(1)"
 name: "po2txt"
 section: "1"
@@ -10,7 +9,9 @@ description: "po2txt – Convert Gettext PO localization files to plain text (.t
 
 <h2>NAME</h2>
 <p> po2txt &#8211; Convert Gettext PO localization files to plain text (.txt) files.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>po2txt </code>[&#8211;version] [-h|&#8211;help] [&#8211;manpage] [&#8211;progress <i>PROGRESS</i>] [&#8211;errorlevel <i>ERRORLEVEL</i>] [-i|&#8211;input] <i>INPUT</i> [-x|&#8211;exclude <i>EXCLUDE</i>] [-o|&#8211;output] <i>OUTPUT</i> [-t|&#8211;template <i>TEMPLATE</i>] [-S|&#8211;timestamp] [&#8211;encoding] [-w|&#8211;wrap <i>WRAP</i>] [&#8211;threshold <i>PERCENT</i>] [&#8211;fuzzy] [&#8211;nofuzzy]</p>
+<h2>DESCRIPTION</h2>
 <p> See: <a rel="nofollow" href="http://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/txt2po.html">http://docs.translatehouse.org/projects/translate-toolkit/en/latest/commands/txt2po.html</a> for examples and usage instructions.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "gentest(1)"
 name: "gentest"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-gentest/"
 description: "gentest – Run random generic SMB operations against two SMB servers and show the differences in behavior"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gentest &#8211; Run random generic SMB operations against two SMB servers and show the differences in behavior </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gentest</code> {//server1/share1} {//server2/share2} {-U user%pass} {-U user%pass} [-s seed] [-o numops] [-a] [-A] [-i FILE] [-O] [-S FILE] [-L] [-F] [-C] [-X]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>gentest is a utility for detecting differences in behaviour between SMB servers. It will run a random set of generic operations against <i>//server1/share1</i> and then the same random set against <i>//server2/share2</i> and display the differences in the responses it gets. </dd>
 <p> This utility is used by the Samba team to find differences in behaviour between Samba and Windows servers.</p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "genpng(1)"
 name: "genpng"
 section: "1"
@@ -10,6 +9,7 @@ description: "genpng – Generate an overview image from a source file"
 
 <h2>NAME</h2>
 <p> genpng &#8211; Generate an overview image from a source file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>genpng</code> [<code>-h</code>|<code>&#8211;help</code>] [<code>-v</code>|<code>&#8211;version</code>]</p>
 <dl>
 <dt>
@@ -17,6 +17,7 @@ description: "genpng – Generate an overview image from a source file"
  [<code>-t</code>|<code>&#8211;tab-size</code> <i>tabsize</i>] [<code>-w</code>|<code>&#8211;width</code> <i>width</i>]<br />
  [<code>-o</code>|<code>&#8211;output-filename</code> <i>output-filename</i>]<br />
  <i>source-file</i></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>genpng</code> creates an overview image for a given source code file of either plain text or .gcov file format. </p>
 <p> Note that the <i>GD.pm</i> Perl module has to be installed for this script to work (it may be obtained from <i><a rel="nofollow" href="http://www.cpan.org">http://www.cpan.org</a></i>). </p>
 <p> Note also that <code>genpng</code> is called from within <code>genhtml</code> so that there is usually no need to call it directly. </p>

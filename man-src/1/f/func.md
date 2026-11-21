@@ -1,5 +1,4 @@
 ---
-
 title: "func(1)"
 name: "func"
 section: "1"
@@ -11,7 +10,9 @@ url: "/docs/linux/man/1-func/"
 
  Func -- Fedora Unified Network Controller.
 
-func ``*'' list_minions 
+<h2>SYNOPSIS</h2>
+
+ func ``*'' list_minions 
 
  func target.example.org call module method [args ...] 
 
@@ -19,7 +20,9 @@ func ``*'' list_minions
 
  func ``webserver1;mailserver2'' call module method [args ...]
 
-``func'' allows remote control of machines running funcd (called ``minions'') that are set to obey this machine (called the ``overlord''). This includes performing various remote operations and gathering data. 
+<h2>DESCRIPTION</h2>
+
+ ``func'' allows remote control of machines running funcd (called ``minions'') that are set to obey this machine (called the ``overlord''). This includes performing various remote operations and gathering data. 
 
  ``func'' can address multiple machines at the same time by specifying their names with globs, which follow shell glob syntax. 
 

@@ -1,5 +1,4 @@
 ---
-
 title: "asn1_get_tag_der(3)"
 name: "asn1_get_tag_der"
 section: "3"
@@ -10,6 +9,7 @@ description: "asn1_get_tag_der – API function"
 
 <h2>NAME</h2>
 <p> asn1_get_tag_der &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>
 <p> <code>int asn1_get_tag_der(const unsigned char * </code><i>der</i><code>, int </code><i>der_len</i><code>, unsigned char * </code><i>cls</i><code>, int * </code><i>len</i><code>, unsigned long * </code><i>tag</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,6 +24,7 @@ description: "asn1_get_tag_der – API function"
 <dd> Output variable containing the length of the DER TAG data.</dd>
 <dt>unsigned long * tag</dt>
 <dd> Output variable containing the decoded tag.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Decode the class and TAG from DER code.</p>
 <h2>RETURNS</h2>
 <p> Returns <code>ASN1_SUCCESS</code> on success, or an error.</p>

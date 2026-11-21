@@ -1,5 +1,4 @@
 ---
-
 title: "pkcs11_setup(1)"
 name: "pkcs11_setup"
 section: "1"
@@ -12,6 +11,7 @@ description: "pkcs11_setup – SmartCard PKCS#11 setup"
 <p> pkcs11_setup &#8211; SmartCard PKCS#11 setup</p>
 <h2>SYNTAX</h2>
 <p> pkcs11_setup [<code>list_modules</code>] [<code>debug</code>] [<code>use_module</code>[<i>=&lt;module_name&gt;</i>]] [<code>ins_action</code>[<i>=&lt;executable,executable,&#8230;&gt;</i>]] [<code>rm_action</code>[<i>=&lt;executable,executable,&#8230;&gt;</i>]]</p>
+<h2>DESCRIPTION</h2>
 <p> pkcs11_setup display all the certificates.</p>
 <h2>OPTIONS</h2>
 <dl>

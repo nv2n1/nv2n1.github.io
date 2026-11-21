@@ -1,5 +1,4 @@
 ---
-
 title: "tiffcrop(1)"
 name: "tiffcrop"
 section: "1"
@@ -10,7 +9,9 @@ description: "tiffcrop – select, copy, crop, convert, extract, and/or process 
 
 <h2>NAME</h2>
 <p> tiffcrop &#8211; select, copy, crop, convert, extract, and/or process one or more <font SIZE="-1">TIFF</font> files.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>tiffcrop</code> [ <i>options</i> ] <i>src1.tif &#8230; srcN.tif dst.tif</i></p>
+<h2>DESCRIPTION</h2>
 <p> <i>Tiffcrop</i> processes one or more files created according to the Tag Image File Format, Revision 6.0, specification into one or more <font SIZE="-1">TIFF</font> file(s). <i>Tiffcrop</i> is most often used to extract portions of an image for processing with bar code recognizer or OCR software when that software cannot restrict the region of interest to a specific portion of the image or to improve efficiency when the regions of interest must be rotated. It can also be used to subdivide all or part of a processed image into smaller sections and export individual images or sections of images as separate files or separate images within one or more files derived from the original input image or images. </p>
 <p> The available functions can be grouped broadly into three classes:</p>
 <dl>

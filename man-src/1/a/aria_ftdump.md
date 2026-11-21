@@ -1,5 +1,4 @@
 ---
-
 title: "aria_ftdump(1)"
 name: "aria_ftdump"
 section: "1"
@@ -10,6 +9,7 @@ description: "aria_ftdump – display full-text index information"
 
 <h2>NAME</h2>
 <p> aria_ftdump &#8211; display full-text index information</p>
+<h2>DESCRIPTION</h2>
 <p> Use: aria_ft_dump &lt;table_name&gt; &lt;index_num&gt;</p>
 <dl>
 <dt><code>-?</code>, <code>-h</code>, <code>&#8211;help</code></dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_rr2str(3)"
 name: "ldns_rr2str"
 section: "3"
@@ -10,6 +9,7 @@ description: "ldns_rr2str, ldns_pkt2str, ldns_rdf2str, ldns_rr_list2str, ldns_ke
 
 <h2>NAME</h2>
 <p> ldns_rr2str, ldns_pkt2str, ldns_rdf2str, ldns_rr_list2str, ldns_key2str </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -18,6 +18,7 @@ description: "ldns_rr2str, ldns_pkt2str, ldns_rdf2str, ldns_rr_list2str, ldns_ke
 <p> char* ldns_rdf2str(const ldns_rdf *rdf); </p>
 <p> char* ldns_rr_list2str(const ldns_rr_list *rr_list); </p>
 <p> char* ldns_key2str(const ldns_key *k); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_rr2str</i>()</dt>
 <dd>Converts the data in the resource record to presentation format and returns that as a char *. Remember to free it. </dd>

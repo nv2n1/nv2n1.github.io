@@ -1,5 +1,4 @@
 ---
-
 title: "socketpair(2)"
 name: "socketpair"
 section: "2"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/2-socketpair/"
 description: "socketpair – create a pair of connected sockets"
 ---
 
+<h2 class="name">NAME</h2>
+<p> socketpair &#8211; create a pair of connected sockets </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code> /* See NOTES */<br />
  <code>#include &lt;sys/socket.h&gt;</code> </p>
 <p> <code>int socketpair(int </code><i>domain</i><code>, int </code><i>type</i><code>, int </code><i>protocol</i><code>, int </code><i>sv</i><code>[2]);</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>socketpair</code>() call creates an unnamed pair of connected sockets in the specified <i>domain</i>, of the specified <i>type</i>, and using the optionally specified <i>protocol</i>. For further details of these arguments, see <code><a href="/docs/linux/man/2-socket/">socket</a></code>(2). </p>
 <p> The file descriptors used in referencing the new sockets are returned in <i>sv[0]</i> and <i>sv[1]</i>. The two sockets are indistinguishable.</p>
 <h2>RETURN VALUE</h2>

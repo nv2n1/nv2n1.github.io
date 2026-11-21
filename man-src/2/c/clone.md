@@ -1,5 +1,4 @@
 ---
-
 title: "clone(2)"
 name: "clone"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-clone/"
 description: "clone, __clone2, clone3 – create a child process"
 ---
 
+<h2 class="name">NAME</h2>
+<p> clone, __clone2, clone3 &#8211; create a child process </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 /* Prototype for the glibc wrapper function */
 #define _GNU_SOURCE
@@ -18,6 +20,7 @@ int clone(int (*fn)(void *), void *stack, int flags, void *arg, ...
 long clone3(struct clone_args *cl_args, size_t size);
 </code></pre>
 <p> <i>Note</i>: There is not yet a glibc wrapper for <code>clone3</code>(); see NOTES.</p>
+<h2>DESCRIPTION</h2>
 <p> These system calls create a new (&quot;child&quot;) process, in a manner similar to <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2). </p>
 <p> By contrast with <code><a href="/docs/linux/man/2-fork/">fork</a></code>(2), these system calls provide more precise control over what pieces of execution context are shared between the calling process and the child process. For example, using these system calls, the caller can control whether or not the two processes share the virtual address space, the table of file descriptors, and the table of signal handlers. These system calls also allow the new child process to be placed in separate <code><a href="/docs/linux/man/7-namespaces/">namespaces</a></code>(7). </p>
 <p> Note that in this manual page, &quot;calling process&quot; normally corresponds to &quot;parent process&quot;. But see the descriptions of <code>CLONE_PARENT</code> and <code>CLONE_THREAD</code> below. </p>

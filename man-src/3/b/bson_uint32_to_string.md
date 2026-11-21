@@ -1,5 +1,4 @@
 ---
-
 title: "bson_uint32_to_string(3)"
 name: "bson_uint32_to_string"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_uint32_to_string() – Converts value to a string."
 
 <h2>NAME</h2>
 <p> bson_uint32_to_string() &#8211; Converts value to a string.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 size_t
 bson_uint32_to_string(uint32_t value,
@@ -30,6 +30,7 @@ bson_uint32_to_string(uint32_t value,
 <dl>
 <dt><code>size</code></dt>
 <dd> A size_t containing the size of <code>str</code> \&amp;.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Converts <code>value</code> to a string. </p>
 <p> If <code>value</code> is from 0 to 999, it will use a constant string in the data section of the library. </p>
 <p> If not, a string will be formatted using <code>str</code> and <code><a href="/docs/linux/man/3-snprintf/">snprintf</a>(3)</code> \&amp;. </p>

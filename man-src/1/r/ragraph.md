@@ -1,5 +1,4 @@
 ---
-
 title: "ragraph(1)"
 name: "ragraph"
 section: "1"
@@ -10,7 +9,9 @@ description: "ragraph – graph argus(8) data."
 
 <h2>NAME</h2>
 <p> <code>ragraph</code> &#8211; graph <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ragraph metric [object]</code> [<code>-M</code> <i>mode</i>] [<code>options</code>] [<code>raoptions</code>] [<code>&#8212;</code> <i>filter-expression</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Ragraph</code> reads <code><a href="/docs/linux/man/8-argus/">argus</a>(8)</code> data from an <i>argus-file</i>, and graphs fields of interest from matching argus flow activity records. You must specify the metric(s), the flow object/identifier(s) and the time granularity required for the graph. Standard raoptions are available to filter input and specify the time range of interest, and graphing options are provided to specify x and y axis labels, titles, upper and lower range limits, and plot sizes. Support for logorithmic scaling, object stacking, and split graphing are provided to provide some flexibility in the graphs you can produce. </p>
 <p> <code>Ragraph</code> supports graphing most metrics that are available in argus data, including, bytes, packet counts, average duration, loss, jitter, load, and rate. These metrics can be graphed in association with flow identifiers, such as source or destination address, network address, source identifier, protocol, port numbers, services, vlan id, mpls tag, ttl, and tos values. Currently, there are limits to the number of metrics and objects that can be graphed at one time, so assume that <code>ragraph</code> is a simple graphing tool. </p>
 <p> By default <code>ragraph</code> writes its output to ragraph.png, in the current directory. Use the &#8216;-w&#8217; raoption to specify an alternate output filename. </p>

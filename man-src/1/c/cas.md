@@ -1,5 +1,4 @@
 ---
-
 title: "cas(1)"
 name: "cas"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-cas/"
 description: "cas – c aMule statistics"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cas &#8211; c aMule statistics </p>
+<h2>SYNOPSIS</h2>
 <p> _untranslated<code>[</code>-o<code>]</code> _untranslated<code>[</code>-p<code>]</code> [<code>-c</code> <i>&lt;path&gt;</i>] </p>
 <p> _untranslated<code>[</code>-h<code>]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>cas</code> is a program for displaying the contents of your aMule online signature file to console (in a human readable form). For this to work, you must enable the &quot;Online Signature&quot; option in aMule&#8217;s preferences.</p>
 <dl>
 <dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "qtconfig-qt4(1)"
 name: "qtconfig-qt4"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-qtconfig-qt4/"
 description: "qtconfig – Configuration tool for Qt"
 ---
 
+<h2 class="name">NAME</h2>
+<p> qtconfig &#8211; Configuration tool for Qt </p>
+<h2>DESCRIPTION</h2>
 <p> QConfig allows for GUI based configuration of Qt and other Qt based sources. </p>
 <h2>ENVIRONMENT VARIABLES</h2>
 <dl>

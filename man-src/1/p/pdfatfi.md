@@ -1,5 +1,4 @@
 ---
-
 title: "pdfatfi(1)"
 name: "pdfatfi"
 section: "1"
@@ -7,11 +6,18 @@ letter: "p"
 url: "/docs/linux/man/1-pdfatfi/"
 ---
 
-pdfatfi - Help program for the LaTeX package attachfile2. 
+<h2 class="name">NAME</h2>
+ 
 
-pdfatfi &lt;command&gt; [&lt;options&gt;] &lt;file[.atfi]&gt;]
+ pdfatfi - Help program for the LaTeX package attachfile2. 
 
-Helper program for the LaTeX package attachfile2. 
+<h2>SYNOPSIS</h2>
+
+ pdfatfi &lt;command&gt; [&lt;options&gt;] &lt;file[.atfi]&gt;]
+
+<h2>DESCRIPTION</h2>
+
+ Helper program for the LaTeX package attachfile2. 
 
  This package also tries to get and add meta information data, such as file size, file date, checksum, .... 
 

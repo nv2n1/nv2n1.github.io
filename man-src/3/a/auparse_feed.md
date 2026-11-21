@@ -1,5 +1,4 @@
 ---
-
 title: "auparse_feed(3)"
 name: "auparse_feed"
 section: "3"
@@ -10,6 +9,7 @@ description: "auparse_feed – feed data into parser"
 
 <h2>NAME</h2>
 <p> auparse_feed &#8211; feed data into parser</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;auparse.h&gt;</code> </p>
 <pre><code>
 int auparse_feed(auparse_state_t *au, const char *data, size_t data_len);
@@ -22,6 +22,7 @@ int auparse_feed(auparse_state_t *au, const char *data, size_t data_len);
 <dt><i>data_len</i></dt>
 <dd> number of bytes in <i>data</i> </dd>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> <i>auparse_feed</i> supplies new data for the parser to consume. <i>auparse_init()</i> must have been called with a source type of AUSOURCE_FEED and a NULL pointer. </p>
 <p> The parser consumes as much data as it can invoking a user supplied callback specified with <i>auparse_add_callback</i> with a cb_event_type of <i>AUPARSE_CB_EVENT_READY</i> each time the parser recognizes a complete event in the data stream. Data not fully parsed will persist and be prepended to the next feed data. After all data has been feed to the parser <i>auparse_flush_feed</i> should be called to signal the end of input data and flush any pending parse data through the parsing system. </p>
 <h2>EXAMPLE</h2>

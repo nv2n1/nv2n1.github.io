@@ -1,5 +1,4 @@
 ---
-
 title: "npm-ping(1)"
 name: "npm-ping"
 section: "1"
@@ -8,6 +7,7 @@ url: "/docs/linux/man/1-npm-ping/"
 description: "npm-ping – Ping npm registry"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>npm-ping</code> &#8211; Ping npm registry </p>
 <h3>Synopsis</h3>
 <dl>

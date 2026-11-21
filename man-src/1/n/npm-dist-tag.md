@@ -1,5 +1,4 @@
 ---
-
 title: "npm-dist-tag(1)"
 name: "npm-dist-tag"
 section: "1"
@@ -8,6 +7,7 @@ url: "/docs/linux/man/1-npm-dist-tag/"
 description: "npm-dist-tag – Modify package distribution tags"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>npm-dist-tag</code> &#8211; Modify package distribution tags </p>
 <h3>Synopsis</h3>
 <dl>

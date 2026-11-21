@@ -1,5 +1,4 @@
 ---
-
 title: "ck_pr_fence_release(3)"
 name: "ck_pr_fence_release"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_pr_fence_release – enforce release semantics"
 <p> <code>ck_pr_fence_release</code> &#8211; enforce release semantics</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_pr.h Ft void Fn ck_pr_fence_release void</p>
+<h2>DESCRIPTION</h2>
 <p> This function enforces the partial ordering of any loads prior to invocation with respect to any following stores and any stores prior to invocation with respect to any following stores.</p>
 <h2>RETURN VALUES</h2>
 <p> This function has no return value.</p>

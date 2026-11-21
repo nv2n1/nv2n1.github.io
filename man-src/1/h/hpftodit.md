@@ -1,5 +1,4 @@
 ---
-
 title: "hpftodit(1)"
 name: "hpftodit"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-hpftodit/"
 description: "hpftodit – create font description files for use with groff -Tlj4"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hpftodit &#8211; create font description files for use with groff -Tlj4 </p>
+<h2>SYNOPSIS</h2>
 <p> [ <code>-aqs</code> ] [ <code>-i </code><i>n</i> ] <i>tfm-file</i> <i>map-file</i> <i>output-font</i> <code>-d</code> <i>tfm-file</i> [<i>map-file</i>] <code>&#8211;help</code> <code>-v</code> <code>&#8211;version</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>hpftodit</code> creates a font file for use with a Hewlett-Packard LaserJet~4-series (or newer) printer with <code>groff -Tlj4</code>, using data from an HP tagged font metric (TFM) file. <i>tfm-file</i> is the name of the TFM file for the font; Intellifont and TrueType TFM files are supported, but symbol set TFM files are not. <i>map-file</i> is a file giving the <i>groff</i> names for characters in the font; this file should consist of a sequence of lines of the form:</p>
 <dl>
 <dt>

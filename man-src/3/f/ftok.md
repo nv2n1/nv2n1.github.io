@@ -1,5 +1,4 @@
 ---
-
 title: "ftok(3)"
 name: "ftok"
 section: "3"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/3-ftok/"
 description: "ftok – convert a pathname and a project identifier to a System V IPC key"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ftok &#8211; convert a pathname and a project identifier to a System V IPC key </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/ipc.h&gt;
 #include &lt;sys/types.h&gt;
 </code></pre>
 <p> <code>key_t ftok(const char *</code><i>pathname</i><code>, int </code><i>proj_id</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>ftok</code>() function uses the identity of the file named by the given <i>pathname</i> (which must refer to an existing, accessible file) and the least significant 8 bits of <i>proj_id</i> (which must be nonzero) to generate a <i>key_t</i> type System V IPC key, suitable for use with <code><a href="/docs/linux/man/2-msgget/">msgget</a></code>(2), <code><a href="/docs/linux/man/2-semget/">semget</a></code>(2), or <code><a href="/docs/linux/man/2-shmget/">shmget</a></code>(2). </p>
 <p> The resulting value is the same for all pathnames that name the same file, when the same value of <i>proj_id</i> is used. The value returned should be different when the (simultaneously existing) files or the project IDs differ.</p>
 <h2>RETURN VALUE</h2>

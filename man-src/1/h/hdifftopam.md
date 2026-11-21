@@ -1,5 +1,4 @@
 ---
-
 title: "hdifftopam(1)"
 name: "hdifftopam"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-hdifftopam/"
 description: "hdifftopam – convert horizontal difference image to original PAM image"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hdifftopam &#8211; convert horizontal difference image to original PAM image</p>
+<h2>SYNOPSIS</h2>
 <p> <code>hdifftopam</code>[<i>pamfile</i>] [<code>-pnm</code>] [<code>-verbose</code>] </p>
 <p> Minimum unique abbreviation of option is acceptable. You may use double hyphens instead of single hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>hdifftopam</code> undoes what <code>pamtohdiff</code> does. </p>
 <h2>OPTIONS</h2>

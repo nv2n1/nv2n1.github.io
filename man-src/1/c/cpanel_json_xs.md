@@ -1,5 +1,4 @@
 ---
-
 title: "cpanel_json_xs(1)"
 name: "cpanel_json_xs"
 section: "1"
@@ -7,13 +6,20 @@ letter: "c"
 url: "/docs/linux/man/1-cpanel_json_xs/"
 ---
 
-cpanel_json_xs - Cpanel::JSON::XS commandline utility 
+<h2 class="name">NAME</h2>
+ 
 
-<pre><code>
+ cpanel_json_xs - Cpanel::JSON::XS commandline utility 
+
+<h2>SYNOPSIS</h2>
+
+ <pre><code>
 cpanel_json_xs[-v][-f inputformat][-t outputformat]
 </code></pre>
 
-<i>cpanel_json_xs</i> converts between some input and output formats (one of them is <font SIZE="-1">JSON</font>). 
+<h2>DESCRIPTION</h2>
+
+ <i>cpanel_json_xs</i> converts between some input and output formats (one of them is <font SIZE="-1">JSON</font>). 
 
  The default input format is <tt>&quot;json&quot;</tt> and the default output format is <tt>&quot;json-pretty&quot;</tt>.
 

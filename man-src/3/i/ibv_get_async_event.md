@@ -1,5 +1,4 @@
 ---
-
 title: "ibv_get_async_event(3)"
 name: "ibv_get_async_event"
 section: "3"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/3-ibv_get_async_event/"
 description: "ibv_get_async_event, ibv_ack_async_event – get or acknowledge asynchronous events"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ibv_get_async_event, ibv_ack_async_event &#8211; get or acknowledge asynchronous events </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;infiniband/verbs.h&gt;
 int ibv_get_async_event(struct ibv_context *context,
                         struct ibv_async_event *event);
 void ibv_ack_async_event(struct ibv_async_event *event);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>ibv_get_async_event()</code> waits for the next async event of the RDMA device context <i>context</i> and returns it through the pointer <i>event</i>, which is an ibv_async_event struct, as defined in &lt;infiniband/verbs.h&gt;. </p>
 <p>struct ibv_async_event {<br />
     union {<br />

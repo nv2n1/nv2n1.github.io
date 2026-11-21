@@ -1,5 +1,4 @@
 ---
-
 title: "qstail(1)"
 name: "qstail"
 section: "1"
@@ -7,11 +6,18 @@ letter: "q"
 url: "/docs/linux/man/1-qstail/"
 ---
 
-qstail - an utility printing the end of a log file starting at the specified pattern. 
+<h2 class="name">NAME</h2>
+ 
 
-qstail -i &lt;path&gt; -p &lt;pattern&gt;
+ qstail - an utility printing the end of a log file starting at the specified pattern. 
 
-qstail shows the end of a log file beginning with the line containing the specified pattern. This may be used to show all lines which has been written after a certain event (e.g., server restart) or time stamp.
+<h2>SYNOPSIS</h2>
+
+ qstail -i &lt;path&gt; -p &lt;pattern&gt;
+
+<h2>DESCRIPTION</h2>
+
+ qstail shows the end of a log file beginning with the line containing the specified pattern. This may be used to show all lines which has been written after a certain event (e.g., server restart) or time stamp.
 
 <h2>OPTIONS</h2>
 

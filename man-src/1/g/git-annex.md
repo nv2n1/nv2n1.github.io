@@ -1,5 +1,4 @@
 ---
-
 title: "git-annex(1)"
 name: "git-annex"
 section: "1"
@@ -7,10 +6,11 @@ letter: "g"
 url: "/docs/linux/man/1-git-annex/"
 description: "git-annex – manage files with git, without checking their contents in"
 ---
-
 <h2>NAME</h2>
 <p> git-annex - manage files with git, without checking their contents in </p>
+<h2>SYNOPSIS</h2>
 <p> git annex command [params ...] </p>
+<h2>DESCRIPTION</h2>
 <p> git-annex allows managing files with git, without checking the file contents into git. While that may seem paradoxical, it is useful when dealing with files larger than git can currently easily handle, whether due to limitations in memory, checksumming time, or disk space. </p>
 <p> Even without file content tracking, being able to manage files with git, move files around and delete files with versioned directory trees, and use branches and distributed clones, are all very handy reasons to use git. And annexed files can co-exist in the same git repository with regularly versioned files, which is convenient for maintaining documents, Makefiles, etc that are associated with annexed files but that benefit from full revision control. </p>
 <p> When a file is annexed, its content is moved into a key-value store, and a symlink is made that points to the content. These symlinks are checked into git and versioned like regular files. You can move them around, delete them, and so on. Pushing to another git repository will make git-annex there aware of the annexed file, and it can be used to retrieve its content from the key-value store. </p>

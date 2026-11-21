@@ -1,5 +1,4 @@
 ---
-
 title: "mysqldump(1)"
 name: "mysqldump"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mysqldump/"
 description: "mysqldump – a database backup program"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mysqldump &#8211; a database backup program </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqldump [</code><i>options</i><code>] [</code><i>db_name</i><code> [</code><i>tbl_name</i><code> &#8230;]]</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>mysqldump</code> client utility performs logical backups, producing a set of SQL statements that can be executed to reproduce the original database object definitions and table data. It dumps one or more MySQL databases for backup or transfer to another SQL server. The <code>mysqldump</code> command can also generate output in CSV, other delimited text, or XML format. </dd>
 <dl>
 <dt>

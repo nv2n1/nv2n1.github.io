@@ -1,5 +1,4 @@
 ---
-
 title: "go-tool(1)"
 name: "go-tool"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-go-tool/"
 description: "go-tool – tool for managing Go source code"
 ---
 
+<h2 class="name">NAME</h2>
+<p> go-tool &#8211; tool for managing Go source code </p>
+<h2>SYNOPSIS</h2>
 <p> <code>go tool</code> [-n] <i>command</i> [ <i>args&#8230;</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> Tool runs the go tool command identified by the arguments. With no arguments it prints the list of known tools.</p>
 <h2>OPTIONS</h2>
 <dl>

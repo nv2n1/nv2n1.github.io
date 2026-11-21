@@ -1,5 +1,4 @@
 ---
-
 title: "supermin(1)"
 name: "supermin"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-supermin/"
 description: "supermin – Tool for creating and building supermin appliances"
 ---
 
+<h2 class="name">NAME</h2>
+<p> supermin &#8211; Tool for creating and building supermin appliances </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 supermin-- prepare - o OUTPUTDIR PACKAGE[PACKAGE...] supermin-- build - o OUTPUTDIR - f chroot | ext2 INPUT[INPUT...]
 </code></pre>
@@ -33,6 +35,7 @@ supermin-- prepare - o OUTPUTDIR PACKAGE[PACKAGE...] supermin-- build - o OUTPUT
  Welcome to supermin
  bash-4.3#
 </pre>
+<h2>DESCRIPTION</h2>
 <p> Supermin is a tool for building supermin appliances. These are tiny appliances (similar to virtual machines), usually around 100KB in size, which get fully instantiated on-the-fly in a fraction of a second when you need to boot one of them. </p>
 <p> This program used to be called febootstrap. This manual page documents supermin 5.x which is a complete rewrite and quite different from febootstrap 2.x. If you are looking for the febootstrap 2.x tools, then this is not the right place.</p>
 <h3><font SIZE="-1">BASIC OPERATION</font></h3>

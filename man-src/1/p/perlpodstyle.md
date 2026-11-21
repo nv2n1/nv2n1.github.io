@@ -1,5 +1,4 @@
 ---
-
 title: "perlpodstyle(1)"
 name: "perlpodstyle"
 section: "1"
@@ -7,9 +6,14 @@ letter: "p"
 url: "/docs/linux/man/1-perlpodstyle/"
 ---
 
-perlpodstyle - Perl POD style guide 
+<h2 class="name">NAME</h2>
+ 
 
-These are general guidelines for how to write <font SIZE="-1">POD</font> documentation for Perl scripts and modules, based on general guidelines for writing good <font SIZE="-1">UNIX</font> man pages. All of these guidelines are, of course, optional, but following them will make your documentation more consistent with other documentation on the system. 
+ perlpodstyle - Perl POD style guide 
+
+<h2>DESCRIPTION</h2>
+
+ These are general guidelines for how to write <font SIZE="-1">POD</font> documentation for Perl scripts and modules, based on general guidelines for writing good <font SIZE="-1">UNIX</font> man pages. All of these guidelines are, of course, optional, but following them will make your documentation more consistent with other documentation on the system. 
 
  The name of the program being documented is conventionally written in bold (using B&lt;&gt;) wherever it occurs, as are all program options. Arguments should be written in italics (I&lt;&gt;). Function names are traditionally written in italics; if you write a function as <b>function()</b>, Pod::Man will take care of this for you. Literal code or commands should be in C&lt;&gt;. References to other man pages should be in the form <tt>&quot;manpage(section)&quot;</tt> or <tt>&quot;L&lt;manpage(section)&gt;&quot;</tt>, and Pod::Man will automatically format those appropriately. The second form, with L&lt;&gt;, is used to request that a <font SIZE="-1">POD</font> formatter make a link to the man page if possible. As an exception, one normally omits the section when referring to module documentation since it's not clear what section module documentation will be in; use <tt>&quot;L&lt;Module::Name&gt;&quot;</tt> for module references instead. 
 

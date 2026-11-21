@@ -1,5 +1,4 @@
 ---
-
 title: "infobrowser(1)"
 name: "infobrowser"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-infobrowser/"
 description: "info – read Info documents"
 ---
 
+<h2 class="name">NAME</h2>
+<p> info &#8211; read Info documents </p>
+<h2>SYNOPSIS</h2>
 <p> <code>info</code> [<i>,OPTION/</i>]&#8230; [<i>,MENU-ITEM/</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> Read documentation in Info format.</p>
 <h3>Frequently-used options:</h3>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "ipa-addservice(1)"
 name: "ipa-addservice"
 section: "1"
@@ -10,7 +9,9 @@ description: "ipa-addservice – Add a service principal"
 
 <h2>NAME</h2>
 <p> ipa-addservice &#8211; Add a service principal </p>
+<h2>SYNOPSIS</h2>
 <p> ipa-addservice [<i>OPTION</i>]&#8230; <i>principal</i></p>
+<h2>DESCRIPTION</h2>
 <p> Adds a service principal <i>principal</i>. </p>
 <p> The principal takes the form of: </p>
 <p> service/fully-qualified-hostname </p>

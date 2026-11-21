@@ -1,5 +1,4 @@
 ---
-
 title: "byobu-disable-prompt(1)"
 name: "byobu-disable-prompt"
 section: "1"
@@ -10,6 +9,7 @@ description: "byobu-prompt, byobu-enable-prompt, byobu-disable-prompt – add an
 
 <h2>NAME</h2>
 <p> byobu-prompt, byobu-enable-prompt, byobu-disable-prompt &#8211; add and remove a nice color prompt to your shell configuration </p>
+<h2>SYNOPSIS</h2>
 <p> <code>byobu-prompt</code></p>
 <dl>
 <dt><code>byobu-enable-prompt</code></dt>
@@ -17,6 +17,7 @@ description: "byobu-prompt, byobu-enable-prompt, byobu-disable-prompt – add an
 </dd><dt><code>byobu-disable-prompt</code></dt>
 <dd>
 </dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Byobu provides a special PS1 prompt command, compatible with Bash shells. It will display the previous command&#8217;s exit code, if it&#8217;s not zero. It will use 3 separate colors for the local username, hostname, and the current working directory. </p>
 <p> <code>byobu-enable-prompt</code> will add one line to your <i>~/.bashrc</i>. </p>
 <p> You can safely remove the line from your <i>~/.bashrc</i>, which ends in <code>#byobu-prompt</code>. </p>

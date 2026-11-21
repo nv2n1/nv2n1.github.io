@@ -1,5 +1,4 @@
 ---
-
 title: "memkind_arena(3)"
 name: "memkind_arena"
 section: "3"
@@ -11,6 +10,7 @@ description: "memkind_arena.h – jemalloc arena allocation memkind operations. 
 <h2>NAME</h2>
 <p> memkind_arena.h &#8211; jemalloc arena allocation memkind operations.<br />
  Note: This is EXEPRIMENTAL API. The functionality and the header file itself can be changed (including non-backward compatible changes), or remove.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;memkind/internal/memkind_arena.h&gt;
 Link with - lmemkind int memkind_arena_create(struct memkind *kind, const struct memkind_ops *ops, const char *name);
@@ -23,6 +23,7 @@ void *memkind_arena_realloc(struct memkind *kind, void *ptr, size_t size);
 int memkind_thread_get_arena(struct memkind *kind, unsigned int *arena, size_t size);
 int memkind_bijective_get_arena(struct memkind *kind, unsigned int *arena, size_t size);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> This header file is a collection of functions can be used to populate the memkind operations structure for memory kinds that use jemalloc. </p>
 <p> <code>memkind_arena_create</code>() is an implementation of the memkind &quot;create&quot; operation for memory kinds that use jemalloc. This calls <code>memkind_default_create</code>() (see <code>memkind_default.h</code>(3)) followed by <code>memkind_arena_create_map</code>() described below. </p>
 <p> <code>memkind_arena_create_map</code>() creates the <i>arena_map</i> array for the memkind structure pointed to by <i>kind</i> which can be indexed by the <code>ops.get_arena</code>() function from the kind&#8217;s operations. If get_arena points <code>memkind_thread_get_arena</code>() then there will be four arenas created for each processor, and if get_arena points to <code>memkind_bijective_get_arena</code>() then just one arena is created. </p>

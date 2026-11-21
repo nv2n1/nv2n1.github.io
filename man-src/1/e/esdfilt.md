@@ -1,5 +1,4 @@
 ---
-
 title: "esdfilt(1)"
 name: "esdfilt"
 section: "1"
@@ -7,9 +6,14 @@ letter: "e"
 url: "/docs/linux/man/1-esdfilt/"
 ---
 
-esdfilt - The Enlightened Sound Daemon 
+<h2 class="name">NAME</h2>
+ 
 
-EsounD filter. Sample esd filter program that implements halving and doubling, Optionally writing the new data to a seperate file.
+ esdfilt - The Enlightened Sound Daemon 
+
+<h2>DESCRIPTION</h2>
+
+ EsounD filter. Sample esd filter program that implements halving and doubling, Optionally writing the new data to a seperate file.
 
 <h2>USAGE</h2>
 

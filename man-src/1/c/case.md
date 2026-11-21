@@ -1,5 +1,4 @@
 ---
-
 title: "case(1)"
 name: "case"
 section: "1"
@@ -7,7 +6,10 @@ letter: "c"
 url: "/docs/linux/man/1-case/"
 ---
 
-case - conditionally execute a block of commands
+<h2 class="name">NAME</h2>
+ 
+
+ case - conditionally execute a block of commands
 
 <h3>Synopsis</h3>
 

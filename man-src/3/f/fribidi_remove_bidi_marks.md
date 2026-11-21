@@ -1,5 +1,4 @@
 ---
-
 title: "fribidi_remove_bidi_marks(3)"
 name: "fribidi_remove_bidi_marks"
 section: "3"
@@ -7,9 +6,14 @@ letter: "f"
 url: "/docs/linux/man/3-fribidi_remove_bidi_marks/"
 ---
 
-fribidi_remove_bidi_marks - remove bidi marks out of an string 
+<h2 class="name">NAME</h2>
+ 
 
-<b> #include &lt;fribidi.h&gt; 
+ fribidi_remove_bidi_marks - remove bidi marks out of an string 
+
+<h2>SYNOPSIS</h2>
+
+ <b> #include &lt;fribidi.h&gt; 
 
  extern FriBidiStrIndex fribidi_remove_bidi_marks 
  ( 
@@ -39,7 +43,9 @@ fribidi_remove_bidi_marks - remove bidi marks out of an string
 </dd><dt><b>FriBidiLevel *embedding_levels</b>
 </dt><dd> List of embedding levels.</dd></dl>
 
-This function removes the bidi and boundary-neutral marks out of an string and the accompanying lists. It implements rule X9 of the Unicode Bidirectional Algorithm available at <a rel="nofollow" HREF="http://www.unicode.org/reports/tr9/#X9,">http://www.unicode.org/reports/tr9/#X9,</a> with the exception that it removes U+200E LEFT-TO-RIGHT MARK and U+200F RIGHT-TO-LEFT MARK too. 
+<h2>DESCRIPTION</h2>
+
+ This function removes the bidi and boundary-neutral marks out of an string and the accompanying lists. It implements rule X9 of the Unicode Bidirectional Algorithm available at <a rel="nofollow" HREF="http://www.unicode.org/reports/tr9/#X9,">http://www.unicode.org/reports/tr9/#X9,</a> with the exception that it removes U+200E LEFT-TO-RIGHT MARK and U+200F RIGHT-TO-LEFT MARK too. 
 
  If any of the input lists are NULL, the list is skipped. If str is the visual string, then positions_to_this is positions_L_to_V and position_from_this_list is positions_V_to_L; if str is the logical string, the other way. Moreover, the position maps should be filled with valid entries. 
 

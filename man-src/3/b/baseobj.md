@@ -1,5 +1,4 @@
 ---
-
 title: "baseobj(3)"
 name: "baseobj"
 section: "3"
@@ -10,6 +9,7 @@ description: "baseobj – Base object"
 
 <h2>NAME</h2>
 <p> baseobj &#8211; Base object</p>
+<h2>DESCRIPTION</h2>
 <p> Base class so objects will inherit the methods providing the string representation of the object and methods to change the verbosity of such string representation. It also includes a simple debug printing and logging mechanism including methods to change the debug verbosity level and methods to add debug levels.</p>
 <h2>CLASSES</h2>
 <h3>class BaseObj(__builtin__.object)</h3>

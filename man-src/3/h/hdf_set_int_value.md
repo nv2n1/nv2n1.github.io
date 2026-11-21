@@ -1,5 +1,4 @@
 ---
-
 title: "hdf_set_int_value(3)"
 name: "hdf_set_int_value"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-hdf_set_int_value/"
 description: "hdf_set_int_value – Set the value of a named node to a number"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hdf_set_int_value &#8211; Set the value of a named node to a number </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;util/neo_hdf.h&gt;
 </code></pre>
@@ -18,6 +20,7 @@ NEOERR *hdf_set_int_value(HDF *hdf, const char *name, int value);
 <p> hdf -&gt; the pointer to the hdf dataset<br />
  name -&gt; the named node to walk to<br />
  value -&gt; the value to set the node to </p>
+<h2>DESCRIPTION</h2>
 <p> hdf_set_int_value is a helper function that maps an integer to a string, and then calls hdf_set_value with that string </p>
 <h2>RETURN VALUE</h2>
 <p> None </p>

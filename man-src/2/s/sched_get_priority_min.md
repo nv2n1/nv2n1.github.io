@@ -1,5 +1,4 @@
 ---
-
 title: "sched_get_priority_min(2)"
 name: "sched_get_priority_min"
 section: "2"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/2-sched_get_priority_min/"
 description: "sched_get_priority_max, sched_get_priority_min – get static priority range"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sched_get_priority_max, sched_get_priority_min &#8211; get static priority range </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sched.h&gt;</code> </p>
 <p> <code>int sched_get_priority_max(int </code><i>policy</i><code>);</code> </p>
 <p> <code>int sched_get_priority_min(int </code><i>policy</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>sched_get_priority_max</code>() returns the maximum priority value that can be used with the scheduling algorithm identified by <i>policy</i>. <code>sched_get_priority_min</code>() returns the minimum priority value that can be used with the scheduling algorithm identified by <i>policy</i>. Supported <i>policy</i> values are <code>SCHED_FIFO</code>, <code>SCHED_RR</code>, <code>SCHED_OTHER</code>, <code>SCHED_BATCH</code>, <code>SCHED_IDLE</code>, and <code>SCHED_DEADLINE</code>. Further details about these policies can be found in <code><a href="/docs/linux/man/7-sched/">sched</a></code>(7). </p>
 <p> Processes with numerically higher priority values are scheduled before processes with numerically lower priority values. Thus, the value returned by <code>sched_get_priority_max</code>() will be greater than the value returned by <code>sched_get_priority_min</code>(). </p>
 <p> Linux allows the static priority range 1 to 99 for the <code>SCHED_FIFO</code> and <code>SCHED_RR</code> policies, and the priority 0 for the remaining policies. Scheduling priority ranges for the various policies are not alterable. </p>

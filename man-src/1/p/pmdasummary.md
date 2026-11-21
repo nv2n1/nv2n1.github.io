@@ -1,5 +1,4 @@
 ---
-
 title: "pmdasummary(1)"
 name: "pmdasummary"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmdasummary – summary performance metrics domain agent (PMDA)"
 
 <h2>NAME</h2>
 <p> <code>pmdasummary</code> &#8211; summary performance metrics domain agent (PMDA)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/summary/pmdasummary</code> [<code>-d</code> <i>domain</i>] [<code>-h</code> <i>helpfile</i>] [<code>-l</code> <i>logfile</i>] [<code>-U</code> <i>username</i>] <i>pmie-command-line</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdasummary</code> is a Performance Metrics Domain Agent (PMDA) which derives performance metrics values from values made available by other PMDAs. <code>pmdasummary</code> consists of two processes:</p>
 <dl>
 <dt><code>pmie process</code></dt>

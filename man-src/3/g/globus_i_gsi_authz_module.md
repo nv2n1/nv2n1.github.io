@@ -1,5 +1,4 @@
 ---
-
 title: "globus_i_gsi_authz_module(3)"
 name: "globus_i_gsi_authz_module"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-globus_i_gsi_authz_module/"
 description: "globus_gsi_authz.h – GSI Authorization API."
 ---
 
+<h2 class="name">NAME</h2>
+<p> globus_gsi_authz.h &#8211; GSI Authorization API.</p>
+<h2>SYNOPSIS</h2>
 <p> #include &#8216;globus_common.h&#8217;<br />
  #include &#8216;gssapi.h&#8217; </p>
 <h3>Functions</h3>

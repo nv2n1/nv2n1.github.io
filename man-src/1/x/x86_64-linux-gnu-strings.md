@@ -1,5 +1,4 @@
 ---
-
 title: "x86_64-linux-gnu-strings(1)"
 name: "x86_64-linux-gnu-strings"
 section: "1"
@@ -7,7 +6,9 @@ letter: "x"
 url: "/docs/linux/man/1-x86_64-linux-gnu-strings/"
 description: "strings – print the sequences of printable characters in files"
 ---
-
+<h2 class="name">NAME</h2>
+<p> strings - print the sequences of printable characters in files </p>
+<h2>SYNOPSIS</h2>
 <p> strings [<code>-afovV</code>] [<code>-</code><i>min-len</i>] <br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-n</code>&nbsp;<i>min-len</i>]&nbsp;[<code>--bytes=</code><i>min-len</i>] <br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-t</code>&nbsp;<i>radix</i>]&nbsp;[<code>--radix=</code><i>radix</i>] <br />
@@ -18,6 +19,7 @@ description: "strings – print the sequences of printable characters in files"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-w</code>]&nbsp;[<code>--include-all-whitespace</code>] <br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-s</code>]&nbsp;[<code>--output-separator</code>&nbsp;<i>sep_string</i>] <br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>--help</code>]&nbsp;[<code>--version</code>]&nbsp;<i>file</i>...  </p>
+<h2>DESCRIPTION</h2>
 <p> For each <i>file</i> given, <font SIZE="-1">GNU</font> <code>strings</code> prints the printable character sequences that are at least 4 characters long (or the number given with the options below) and are followed by an unprintable character. </p>
 <p> Depending upon how the strings program was configured it will default to either displaying all the printable sequences that it can find in each file, or only those sequences that are in loadable, initialized data sections. If the file type is unrecognizable, or if strings is reading from stdin then it will always display all of the printable sequences that it can find. </p>
 <p> For backwards compatibility any file that occurs after a command-line option of just <code>-</code> will also be scanned in full, regardless of the presence of any <code>-d</code> option. </p>

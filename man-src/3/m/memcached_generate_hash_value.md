@@ -1,5 +1,4 @@
 ---
-
 title: "memcached_generate_hash_value(3)"
 name: "memcached_generate_hash_value"
 section: "3"
@@ -11,6 +10,7 @@ description: "memcached_generate_hash_value – Generating hash values directly"
 <h2>NAME</h2>
 <p> memcached_generate_hash_value &#8211; Generating hash values directly </p>
 <p> Hash a key value</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
 <dt><code>memcached_hash_t</code></dt>
@@ -42,6 +42,7 @@ description: "memcached_generate_hash_value – Generating hash values directly"
 </dd><dt><code>MEMCACHED_HASH_MURMUR3</code></dt>
 <dd>
 <p> Compile and link with -lmemcachedutil -lmemcached</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <i>memcached_generate_hash_value()</i> allows you to hash a key using one of the hash functions defined in the library. This method is provided for the convenience of higher-level language bindings and is not necessary for normal memcache operations. </p>
 <p> The allowed hash algorithm constants are listed in the manpage for <code>memcached_behavior_set()</code>. </p>
 <p> <i>memcached_generate_hash()</i> takes a <code>memcached_st</code> struture and produces the hash value that would have been generated based on the defaults of <code>memcached_st</code>. </p>

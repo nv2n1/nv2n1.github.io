@@ -1,5 +1,4 @@
 ---
-
 title: "lxshortcut(1)"
 name: "lxshortcut"
 section: "1"
@@ -10,7 +9,9 @@ description: "lxshortcut – desktop entry file editor"
 
 <h2>NAME</h2>
 <p> lxshortcut &#8211; desktop entry file editor</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lxshortcut</code> [ -i <i>input-file</i> ] [ -o <i>output-file</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> lxshortcut is a simple application that uses LibFM file properties dialog window to change properties of a desktop entry &#8211; icon, display name, path and arguments of execution, etc.</p>
 <h2>OPTIONS</h2>
 <p> At least one option should be specified and if <i>output-file</i> isn&#8217;t specified then <i>input-file</i> will be used to make a result &#8211; either full path or path in XDG specified user data directory for menu entries.</p>

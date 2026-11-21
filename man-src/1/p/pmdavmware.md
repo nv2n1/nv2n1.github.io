@@ -1,5 +1,4 @@
 ---
-
 title: "pmdavmware(1)"
 name: "pmdavmware"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-pmdavmware/"
 description: "pmdavmware – VMware performance metrics domain agent (PMDA)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pmdavmware &#8211; VMware performance metrics domain agent (PMDA) </p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdavmware</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which exports metric values from a (possibly remote) VMware virtualisation host. </p>
 <p> This implementation uses the VMare Perl <font SIZE="-1">API </font>(refer to the online docs at <a rel="nofollow" href="http://www.vmware.com/support/developer/viperltoolkit">http://www.vmware.com/support/developer/viperltoolkit</a>). VIPerl is a prerequisite for this <font SIZE="-1">PMDA,</font> it needs to be installed and configured before attempting to use this agent. It is highly recommended that you test your VIPerl installation using the demo programs that are shipped with VIPerl, before attempting to use this <font SIZE="-1">PMDA.</font></p>
 <h2>INSTALLATION</h2>

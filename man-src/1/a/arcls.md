@@ -1,5 +1,4 @@
 ---
-
 title: "arcls(1)"
 name: "arcls"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-arcls/"
 description: "arcls – list files or directories"
 ---
 
+<h2 class="name">NAME</h2>
+<p> arcls &#8211; list files or directories</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>arcls</code> command is used for listing files in grid storage elements and file index catalogues. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>arcls [options] url</code> </p>
 <h2>OPTIONS</h2>
 <dl>

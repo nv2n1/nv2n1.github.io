@@ -1,5 +1,4 @@
 ---
-
 title: "repstopdf(1)"
 name: "repstopdf"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-repstopdf/"
 description: "epstopdf, repstopdf – convert an EPS file to PDF"
 ---
 
+<h2 class="name">NAME</h2>
+<p> epstopdf, repstopdf &#8211; convert an EPS file to PDF </p>
+<h2>SYNOPSIS</h2>
 <p> <code>epstopdf</code> [<i>options</i>] [<i>epsfile</i> [<i>pdffile</i>.pdf]]</p>
+<h2>DESCRIPTION</h2>
 <p> By default, <code>epstopdf</code> converts the input PostScript file to PDF, using Ghostscript. </p>
 <p> <code>Epstopdf</code> transforms the Encapsulated PostScript file <i>epsfile</i> (or standard input) so that it is guaranteed to start at the 0,0 coordinate, and it sets a page size exactly corresponding to the BoundingBox. Thus, the result needs no cropping, and the PDF MediaBox is correct. </p>
 <p> By default, the output name is the input name with any extension replaced by <code>.pdf</code>. An output name ending with .pdf can also be given as a second argument on the command line, or the <code>&#8211;outfile</code> (<code>-o</code>) option can be used with any name. </p>

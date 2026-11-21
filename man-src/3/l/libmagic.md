@@ -1,5 +1,4 @@
 ---
-
 title: "libmagic(3)"
 name: "libmagic"
 section: "3"
@@ -12,7 +11,9 @@ description: "magic_open magic_close magic_error magic_descriptor magic_buffer m
 <p> <code>magic_open</code> <code>magic_close</code> <code>magic_error</code> <code>magic_descriptor</code> <code>magic_buffer</code> <code>magic_setflags</code> <code>magic_check</code> <code>magic_compile</code> <code>magic_load</code> &#8211; Magic number recognition library</p>
 <h2>LIBRARY</h2>
 <p> Lb libmagic</p>
+<h2>SYNOPSIS</h2>
 <p> In magic.h Ft magic_t Fn magic_open int flags Ft void Fn magic_close magic_t cookie Ft const char * Fn magic_error magic_t cookie Ft int Fn magic_errno magic_t cookie Ft const char * Fn magic_descriptor magic_t cookie int fd Ft const char * Fn magic_file magic_t cookie const char *filename Ft const char * Fn magic_buffer magic_t cookie const void *buffer size_t length Ft int Fn magic_setflags magic_t cookie int flags Ft int Fn magic_check magic_t cookie const char *filename Ft int Fn magic_compile magic_t cookie const char *filename Ft int Fn magic_list magic_t cookie const char *filename Ft int Fn magic_load magic_t cookie const char *filename</p>
+<h2>DESCRIPTION</h2>
 <p> These functions operate on the magic database file which is described in <a href="/docs/linux/man/5-magic/">magic</a>(5). </p>
 <p> The function Fn magic_open creates a magic cookie pointer and returns it. It returns <code>NULL</code> if there was an error allocating the magic cookie. The <i>flags</i> argument specifies how the other magic functions should behave:</p>
 <dl>

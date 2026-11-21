@@ -1,5 +1,4 @@
 ---
-
 title: "faked-tcp(1)"
 name: "faked-tcp"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-faked-tcp/"
 description: "faked – daemon that remembers fake ownership/permissions of files manipulated by fakeroot processes."
 ---
 
+<h2 class="name">NAME</h2>
+<p> faked &#8211; daemon that remembers fake ownership/permissions of files manipulated by fakeroot processes. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>faked</code> <code>[&#8211;debug] [&#8211;foreground] [&#8211;cleanup] [&#8211;key</code> <i>msg-key</i><code>]</code> <code>[&#8211;load] [&#8211;save-file</code> <i>save-file</i><code>]</code> <code>[&#8211;port</code> <i>TCP-port</i><code>]</code></p>
+<h2>DESCRIPTION</h2>
 <p> If a fakeroot process wants to change the ownership of a file, then <code>faked</code> is the process that remembers that new owner. If later the same fakeroot process does a stat() for that filename, then the libfakeroot wrapped stat() call will first ask faked for the fake ownership etc of that file, and then report it. </p>
 <h2>OPTIONS</h2>
 <dl>

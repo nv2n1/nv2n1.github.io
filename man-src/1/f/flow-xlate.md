@@ -1,5 +1,4 @@
 ---
-
 title: "flow-xlate(1)"
 name: "flow-xlate"
 section: "1"
@@ -10,7 +9,9 @@ description: "flow-xlate – Apply translations to selected fields of a flow."
 
 <h2>NAME</h2>
 <p> flow-xlate &#8211; Apply translations to selected fields of a flow.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>flow-xlate</code> [ <code>-hkn</code> ] [ <code>-b</code><i> big</i><code>|</code><i>little</i> ] [ <code>-C</code><i> comment</i> ] [ <code>-d</code><i> debug_level</i> ] [ <code>-v</code><i> variable binding</i> ] [ <code>-V</code><i> flow_version</i> ] [ <code>-x</code><i> xlate_fname</i> ] [ <code>-X</code><i> xlate_definition</i> ] [ <code>-z</code><i> z_level</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>flow-xlate</code> utility is used to apply translations to flows. Translations are defined in a configuration file and are composed of actions and a definition to invoke action(s). The definitions are in the form of terms, each term can have a filter and multiple actions. </p>
 <p> Words in the configuration file of the form @VAR or @{VAR:default} will be expanded at run-time by setting variable names with the -v option. </p>
 <p> Translation actions begin with the xlate-action keyword followed by a symbolic name. Each action has a type defined below. </p>

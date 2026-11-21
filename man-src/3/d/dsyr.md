@@ -1,5 +1,4 @@
 ---
-
 title: "dsyr(3)"
 name: "dsyr"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dsyr/"
 description: "dsyr.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dsyr.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dsyr</code> (UPLO, N, ALPHA, X, INCX, A, LDA)<br />
  <i></i><code>DSYR</code></p>

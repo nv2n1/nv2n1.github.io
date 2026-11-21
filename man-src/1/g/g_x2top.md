@@ -1,5 +1,4 @@
 ---
-
 title: "g_x2top(1)"
 name: "g_x2top"
 section: "1"
@@ -11,7 +10,9 @@ description: "x2top – generates a primitive topology from coordinates"
 <h2>NAME</h2>
 <p> x2top &#8211; generates a primitive topology from coordinates </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>x2top</code> <code>-f</code><i> conf.gro </i> <code>-o</code><i> out.top </i> <code>-r</code><i> out.rtp </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-ff</code><i> string </i> <code>-[no]v</code><i></i> <code>-nexcl</code><i> int </i> <code>-[no]H14</code><i></i> <code>-[no]alldih</code><i></i> <code>-[no]remdih</code><i></i> <code>-[no]pairs</code><i></i> <code>-name</code><i> string </i> <code>-[no]pbc</code><i></i> <code>-[no]pdbq</code><i></i> <code>-[no]param</code><i></i> <code>-[no]round</code><i></i> <code>-kb</code><i> real </i> <code>-kt</code><i> real </i> <code>-kp</code><i> real </i></p>
+<h2>DESCRIPTION</h2>
 <p> x2top generates a primitive topology from a coordinate file. The program assumes all hydrogens are present when defining the hybridization from the atom name and the number of bonds. The program can also make an rtp entry, which you can then add to the rtp database. </p>
 <p> When <code> -param</code> is set, equilibrium distances and angles and force constants will be printed in the topology for all interactions. The equilibrium distances and angles are taken from the input coordinates, the force constant are set with command line options.The force fields supported currently are: </p>
 <p> G43a1 GROMOS96 43a1 Forcefield (official distribution) </p>

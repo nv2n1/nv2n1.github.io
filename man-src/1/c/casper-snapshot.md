@@ -1,5 +1,4 @@
 ---
-
 title: "casper-snapshot(1)"
 name: "casper-snapshot"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-casper-snapshot/"
 description: "casper-snapshot – a simple script to ease persistence usage."
 ---
 
+<h2 class="name">NAME</h2>
+<p> casper-snapshot &#8211; a simple script to ease persistence usage.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>casper-snapshot</code> [<code>-c</code>|<code>&#8211;cow</code> <i>DIRECTORY</i>] [<code>-d</code>|<code>&#8211;device</code> <i>DEVICE</i>] [<code>-e</code>|<code>&#8211;exclude-list</code> <i>FILE</i>] [<code>-o</code>|<code>&#8211;output</code> <i>FILE</i>] [<code>-t</code>|<code>&#8211;type</code> <i>TYPE</i>] </p>
 <p> <code>casper-snapshot</code> -r<code>|</code>&#8211;resync-string <i>STRING</i><br />
  <code>casper-snapshot</code> -h<code>|</code>&#8211;help<br />
  <code>casper-snapshot</code> -u<code>|</code>&#8211;usage<br />
  <code>casper-snapshot</code> -v<code>|</code>&#8211;version </p>
+<h2>DESCRIPTION</h2>
 <p> Casper-snapshot is a script which can be used to build the right types of persistent image files supported by casper. It is also used on exit by the casper init script to resync the boot-found snapshots devices. </p>
 <h2>OPTIONS</h2>
 <dl>

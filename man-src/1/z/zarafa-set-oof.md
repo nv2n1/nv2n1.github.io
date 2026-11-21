@@ -1,5 +1,4 @@
 ---
-
 title: "zarafa-set-oof(1)"
 name: "zarafa-set-oof"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-zarafa-set-oof/"
 description: "zarafa-set-oof – Control a user’s out of office settings."
 ---
 
+<h2 class="name">NAME</h2>
+<p> zarafa-set-oof &#8211; Control a user&#8217;s out of office settings. </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>zarafa-set-oof</code> <i>USERNAME</i> <i>MODE</i> [<i>SUBJECT</i>] [<i>MESSAGE FILE</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This tool can be used to change a user&#8217;s out of office settings. The Zarafa server must be running for <code>zarafa-set-oof</code> to work. </dd>
 <p> You must choose a state, enabled, disabled or don&#8217;t change, when using this script.</p>
 <h2>ACTIONS</h2>

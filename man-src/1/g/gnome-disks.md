@@ -1,5 +1,4 @@
 ---
-
 title: "gnome-disks(1)"
 name: "gnome-disks"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-gnome-disks/"
 description: "gnome-disks – the GNOME Disks application"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gnome-disks &#8211; the GNOME Disks application </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gnome-disks</code> [OPTIONS]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>gnome-disks</code></p>
 <dd>is the command to launch the GNOME Disks application. Disks provides a way to inspect, format, partition and configure disks and block devices. </dd>
 <p> The Disks application is <i>single-instance</i>. What this means is that if the application is not already running when the <code>gnome-disks</code> command is invoked, it will get launched and the command invocation will block until the application exits. Otherwise the existing application instance will be used and the <code>gnome-disks</code> command will exit immediately.</p>

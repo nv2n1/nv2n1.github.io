@@ -1,5 +1,4 @@
 ---
-
 title: "dh_installexamples(1)"
 name: "dh_installexamples"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dh_installexamples/"
 description: "dh_installexamples – install example files into package build directories"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dh_installexamples &#8211; install example files into package build directories </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dh_installexamples</code> [<i>debhelper options</i>] [<code>-A</code>] [<code>-X</code><i>item</i>] [<i>file</i> &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>dh_installexamples</code> is a debhelper program that is responsible for installing examples into <i>usr/share/doc/package/examples</i> in package build directories. </p>
 <p> From debhelper compatibility level 11 on, <code>dh_install</code> will fall back to looking in <i>debian/tmp</i> for files, if it does not find them in the current directory (or wherever you&#8217;ve told it to look using <code>&#8211;sourcedir</code>).</p>
 <h2>FILES</h2>

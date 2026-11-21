@@ -1,5 +1,4 @@
 ---
-
 title: "certutil(1)"
 name: "certutil"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-certutil/"
 description: "certutil – Manage keys and certificate in both NSS databases and other NSS tokens"
 ---
 
+<h2 class="name">NAME</h2>
+<p> certutil &#8211; Manage keys and certificate in both NSS databases and other NSS tokens </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>certutil</code> [<i>options</i>] [[<i>arguments</i>]]</dt></dl>
 <h2>STATUS</h2>
 <dd>This documentation is still work in progress. Please contribute to the initial review in m[blue]<code>Mozilla NSS bug 836477</code>m[]<font SIZE="-2">[1]</font></dd>
+<h2>DESCRIPTION</h2>
 <p> The Certificate Database Tool, <code>certutil</code>, is a command-line utility that can create and modify certificate and key databases. It can specifically list, generate, modify, or delete certificates, create or change the password, generate new public and private key pairs, display the contents of the key database, or delete key pairs within the key database. </p>
 <p> Certificate issuance, part of the key and certificate management process, requires that keys and certificates be created in the key database. This document discusses certificate and key database management. For information on the security module database management, see the <code>modutil</code> manpage.</p>
 <h2>COMMAND OPTIONS AND ARGUMENTS</h2>

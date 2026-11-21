@@ -1,5 +1,4 @@
 ---
-
 title: "claws-mail(1)"
 name: "claws-mail"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-claws-mail/"
 description: "Claws Mail – a GTK+ based fast email and news client"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Claws Mail &#8211; a GTK+ based fast email and news client</p>
+<h2>SYNOPSIS</h2>
 <p> <code>claws-mail</code> [<i>options</i>] </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt>Claws Mail is an email client (and news reader) based on GTK+, running on the X Window System, and aiming for:</dt>
 <dd>

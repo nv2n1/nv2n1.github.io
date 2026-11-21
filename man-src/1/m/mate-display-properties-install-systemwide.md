@@ -1,5 +1,4 @@
 ---
-
 title: "mate-display-properties-install-systemwide(1)"
 name: "mate-display-properties-install-systemwide"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mate-display-properties-install-systemwide/"
 description: "mate-display-properties-install-systemwide – customize MATE display behavor"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mate-display-properties-install-systemwide &#8211; customize MATE display behavor </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mate-display-properties-install-systemwide</code> <i>&lt;SOURCE_FILE&gt; &lt;DEST_NAME&gt;</i></p>
+<h2>DESCRIPTION</h2>
 <p> This executable is part of the package &#8216;mate-control-center&#8217;: The MATE Control Center. </p>
 <p> This command line tool installs a RANDR profile for multi-monitor setups into a systemwide location. The resulting profile will get used when the RANDR plug-in gets run in <code>mate-settings-daemon</code>.</p>
 <dl>

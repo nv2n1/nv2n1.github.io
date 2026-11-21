@@ -1,5 +1,4 @@
 ---
-
 title: "grid-proxy-init(1)"
 name: "grid-proxy-init"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-grid-proxy-init/"
 description: "grid-proxy-init – Generate a new proxy certificate"
 ---
 
+<h2 class="name">NAME</h2>
+<p> grid-proxy-init &#8211; Generate a new proxy certificate </p>
+<h2>SYNOPSIS</h2>
 <p> <code>grid-proxy-init</code> -help | -usage | -version </p>
 <p> <code>grid-proxy-init</code> [OPTIONS]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>grid-proxy-init</code> program generates X.509 proxy certificates derived from the currently available certificate files. By default, this command generates a &lt;ulink url=&quot;<a rel="nofollow" href="http://www.ietf.org/rfc/rfc3820.txt">http://www.ietf.org/rfc/rfc3820.txt</a>&quot;&gt;RFC 3820&lt;/ulink&gt; Proxy Certificate with a 1024 bit key, valid for 12 hours, in a file named /tmp/x509up_u&#8217;UID&#8217;. Command-line options and environment variables can modify the format, strength, lifetime, and location of the generated proxy certificate. </p>
 <p> X.509 proxy certificates are short-lived certificates, signed usually by a user&#8217;s identity certificate or another proxy certificate. The key associated with a proxy certificate is unencrypted, so applications can authenticate using a proxy identity without providing a pass phrase. </p>
 <p> Proxy certificates provide a convenient alternative to constantly entering passwords, but are also less secure than the user&#8217;s normal security credential. Therefore, they should always be user-readable only (this is enforced by the GSI libraries), and should be deleted after they are no longer needed. </p>

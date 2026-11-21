@@ -1,5 +1,4 @@
 ---
-
 title: "perf-stat(1)"
 name: "perf-stat"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-perf-stat/"
 description: "perf-stat – Run a command and gather performance counter statistics"
 ---
 
+<h2 class="name">NAME</h2>
+<p> perf-stat &#8211; Run a command and gather performance counter statistics </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 perf stat[-e&lt;EVENT&gt; | --event = EVENT][-a]&lt;command&gt;
         perf stat[-e&lt;EVENT&gt; | --event = EVENT][-a]-- - &lt;command&gt;[&lt;options&gt;]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> This command runs a command and gathers performance counter statistics from it.</p>
 <h2>OPTIONS</h2>
 <p> &lt;command&gt;&#8230;</p>

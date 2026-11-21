@@ -1,5 +1,4 @@
 ---
-
 title: "mgd77convert(1)"
 name: "mgd77convert"
 section: "1"
@@ -10,8 +9,10 @@ description: "mgd77convert – Convert MGD77 data to other file formats"
 
 <h2>NAME</h2>
 <p> mgd77convert &#8211; Convert MGD77 data to other file formats</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mgd77convert</code> <i>NGDC-ids</i> <code>a</code>|<code>c</code>|<code>m</code> |<code>t</code> [<code>+</code>]<code>a</code>|<code>c</code>|<code>m</code>|<code>t</code> [ ] [ ] [ [<code>w</code>][<code>e</code>][<code>+</code>] ] [ [<i>level</i>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>mgd77convert</code> reads versions of MGD77 files and writes the same data in (probably) another format to a new file in the current directory. Both pre- and post-Y2K MGD77 formats can be processed.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

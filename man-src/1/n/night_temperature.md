@@ -1,5 +1,4 @@
 ---
-
 title: "night_temperature(1)"
 name: "night_temperature"
 section: "1"
@@ -10,7 +9,9 @@ description: "night_temperature – a camera temperature"
 
 <h2>NAME</h2>
 <p> night_temperature &#8211; a camera temperature</p>
+<h2>SYNOPSIS</h2>
 <p>&nbsp;<wbr>night_temperature&nbsp;<wbr>[get|set]&nbsp;<wbr>[-t temperature]&nbsp;<wbr>[-off]&nbsp;<wbr>[-host address]</p>
+<h2>DESCRIPTION</h2>
 <p> The options are as follows: </p>
 <p> options </p>
 <p> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> get:</p>

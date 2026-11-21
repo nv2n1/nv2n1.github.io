@@ -1,5 +1,4 @@
 ---
-
 title: "context_role_set(3)"
 name: "context_role_set"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-context_role_set/"
 description: "context_new, context_str, context_free, context_type_get, context_type_set, context_range_get, context_range_set,context_role_get, context_role_set, context_user_get, context_user_set – Routines to..."
 ---
 
+<h2 class="name">NAME</h2>
+<p> context_new, context_str, context_free, context_type_get, context_type_set, context_range_get, context_range_set,context_role_get, context_role_set, context_user_get, context_user_set &#8211; Routines to manipulate SELinux security contexts </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/context.h&gt;</code> </p>
 <p> <code>context_t context_new(const char *</code><i>context_str</i><code>);</code> </p>
 <p> <code>const char * context_str(context_t </code><i>con</i><code>);</code> </p>
@@ -20,6 +22,7 @@ description: "context_new, context_str, context_free, context_type_get, context_
 <p> <code>int context_range_set(context_t </code><i>con</i><code>, const char *</code><i>range</i><code>);</code> </p>
 <p> <code>int context_role_set(context_t </code><i>con</i><code>, const char *</code><i>role</i><code>);</code> </p>
 <p> <code>int context_user_set(context_t </code><i>con</i><code>, const char *</code><i>user</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> These functions allow an application to manipulate the fields of a security context string without requiring it to know the format of the string. </p>
 <p> <code>context_new</code>() returns a new context initialized to a context string. </p>
 <p> <code>context_str</code>() returns a pointer to the string value of the <code>context_t</code>, valid until the next call to <code>context_str</code>() or <code>context_free</code>() for the same <code>context_t*</code>. </p>

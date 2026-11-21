@@ -1,5 +1,4 @@
 ---
-
 title: "msgcomm(1)"
 name: "msgcomm"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-msgcomm/"
 description: "msgcomm – match two message catalogs"
 ---
 
+<h2 class="name">NAME</h2>
+<p> msgcomm &#8211; match two message catalogs </p>
+<h2>SYNOPSIS</h2>
 <p> <code>msgcomm</code> [<i>OPTION</i>] [<i>INPUTFILE</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Find messages which are common to two or more of the specified PO files. By using the <code>&#8211;more-than</code> option, greater commonality may be requested before messages are printed. Conversely, the <code>&#8211;less-than</code> option may be used to specify less commonality before messages are printed (i.e. <code>&#8211;less-than</code>=<i>2</i> will only print the unique messages). Translations, comments and extracted comments will be preserved, but only from the first PO file to define them. File positions from all PO files will be cumulated. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>
 <h3>Input file location:</h3>

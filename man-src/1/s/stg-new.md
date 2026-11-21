@@ -1,5 +1,4 @@
 ---
-
 title: "stg-new(1)"
 name: "stg-new"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-stg-new/"
 description: "stg-new – Create a new, empty patch"
 ---
 
+<h2 class="name">NAME</h2>
+<p> stg-new &#8211; Create a new, empty patch </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 stg new[options][--][&lt;name&gt;]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Create a new, empty patch on the current stack. The new patch is created on top of the currently applied patches, and is made the new top of the stack. Uncommitted changes in the work tree are not included in the patch &#8212; that is handled by <code><a href="/docs/linux/man/1-stg-refresh/">stg-refresh</a></code>(1). </p>
 <p> The given name must be unique in the stack, and may only contain alphanumeric characters, dashes and underscores. If no name is given, one is generated from the first line of the patch&#8217;s commit message. </p>
 <p> An editor will be launched to edit the commit message to be used for the patch, unless the <i>&#8211;message</i> flag already specified one. The <i>patchdescr.tmpl</i> template file (if available) is used to pre-fill the editor.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "makeself(1)"
 name: "makeself"
 section: "1"
@@ -12,6 +11,7 @@ description: "makeself – An utility to generate self-extractable archives."
 <p> makeself &#8211; An utility to generate self-extractable archives.</p>
 <h2>SYNTAX</h2>
 <p> <code>makeself [</code><i>options</i>] archive_dir file_name label <code>[</code><i>startup_script</i>] [<i>args</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> This program is a free (GPL) utility designed to create self-extractable archives from a directory. </p>
 <h2>OPTIONS</h2>
 <p> The following options are supported. </p>

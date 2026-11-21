@@ -1,5 +1,4 @@
 ---
-
 title: "curl_multi_cleanup(3)"
 name: "curl_multi_cleanup"
 section: "3"
@@ -10,8 +9,10 @@ description: "curl_multi_cleanup – close down a multi session"
 
 <h2>NAME</h2>
 <p> curl_multi_cleanup &#8211; close down a multi session</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;curl/curl.h&gt;</code> </p>
 <p> <code>CURLMcode curl_multi_cleanup( CURLM *multi_handle );</code></p>
+<h2>DESCRIPTION</h2>
 <p> Cleans up and removes a whole multi stack. It does not free or touch any individual easy handles in any way &#8211; they still need to be closed individually, using the usual <i><a href="/docs/linux/man/3-curl_easy_cleanup/">curl_easy_cleanup</a>(3)</i> way. The order of cleaning up should be: </p>
 <p> 1 &#8211; <i><a href="/docs/linux/man/3-curl_multi_remove_handle/">curl_multi_remove_handle</a>(3)</i> before any easy handles are cleaned up </p>
 <p> 2 &#8211; <i><a href="/docs/linux/man/3-curl_easy_cleanup/">curl_easy_cleanup</a>(3)</i> can now be called independently since the easy handle is no longer connected to the multi handle </p>

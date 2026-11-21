@@ -1,5 +1,4 @@
 ---
-
 title: "pmstore(1)"
 name: "pmstore"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmstore – modify performance metric values"
 
 <h2>NAME</h2>
 <p> <code>pmstore</code> &#8211; modify performance metric values</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pmstore</code> [<code>-Lf</code>] [<code>-h</code> <i>host</i>] [<code>-i</code> <i>instances</i>] [<code>-K</code> <i>spec</i>] [<code>-n</code> <i>pmnsfile</i>] <i>metricname</i> <i>value</i></p>
+<h2>DESCRIPTION</h2>
 <p> Under certain circumstances, it is useful to be able to modify the values of performance metrics, for example to re-initialize counters or to assign new values to metrics that act as control variables. </p>
 <p> <code>pmstore</code> changes the current values for the nominated instances of a single performance metric, as identified by <i>metricname</i> and the list of instance identifiers following the <code>-i</code> argument. <i>instances</i> must be a single argument, with elements of the list separated by commas and/or white space. By default all instances of <i>metricname</i> will be updated. </p>
 <p> Normally <code>pmstore</code> operates on the default Performance Metrics Name Space (PMNS), however if the <code>-n</code> option is specified an alternative namespace is loaded from the file <i>pmnsfile.</i> </p>

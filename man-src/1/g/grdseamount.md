@@ -1,5 +1,4 @@
 ---
-
 title: "grdseamount(1)"
 name: "grdseamount"
 section: "1"
@@ -10,8 +9,10 @@ description: "grdseamount – Compute synthetic seamount (Gaussian or cone, circ
 
 <h2>NAME</h2>
 <p> grdseamount &#8211; Compute synthetic seamount (Gaussian or cone, circular or elliptical) bathymetry</p>
+<h2>SYNOPSIS</h2>
 <p> <code>grdseamount</code> [ <i>intable</i> ] <i>increment</i> <i>region</i> [ [<i>out</i>/<i>in</i>] ] [ <code>c</code>|<code>d</code>|<code>g</code>|<code>p</code> ] [ [<i>unit</i>] ] [ ] [ [<i>flattening</i>] ] [ <i>grdfile</i> ] [ [<i>cut</i>] ] [ <i>list</i> ] [ <i>norm</i> ] [ <i>bmode</i>/<i>qmode</i> ] [ <i>scale</i> ] [ <i>t0</i>[<code>u</code>][/<i>t1</i>[<code>u</code>]/<i>dt</i>[<code>u</code>]|<i>n</i>][<code>+l</code>] ] [ <i>level</i> ] [ [<i>level</i>] ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-fg</code> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-r</code> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>grdseamount</code> will compute the combined shape of multiple synthetic seamounts given their individual shape parameters. We read a list with seamount locations and sizes and can evaluate either Gaussian, parabolic, conical, or disc shapes, which may be circular or elliptical, and optionally truncated. Various scaling options are available to modify the result, including an option to add in a background depth (more complicated backgrounds may be added via <code>grdmath</code>). The input must contain <i>lon</i>, <i>lat</i>, <i>radius</i>, <i>height</i> for each seamount. For elliptical features (<code>-E</code>) we expect <i>lon</i>, <i>lat</i>, <i>azimuth</i>, <i>semi-major</i>, <i>semi-minor</i>, <i>height</i> instead. If flattening is specified (<code>-F</code>) with no value appended then a final column with flattening is expected (cannot be used for plateaus). For temporal evolution of topography the <code>-T</code> option may be used, in which case the data file must have two final columns with the start and stop time of seamount construction. In this case you may choose to write out a cumulative shape or just the increments produced by each time step (see <code>-Q</code>).</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

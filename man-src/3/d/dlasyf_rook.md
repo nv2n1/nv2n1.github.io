@@ -1,5 +1,4 @@
 ---
-
 title: "dlasyf_rook(3)"
 name: "dlasyf_rook"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlasyf_rook/"
 description: "dlasyf_rook.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlasyf_rook.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlasyf_rook</code> (UPLO, N, NB, KB, A, LDA, IPIV, W, LDW, INFO)<br />
  <i></i><code>DLASYF_ROOK</code> *&gt; DLASYF_ROOK computes a partial factorization of a real symmetric matrix using the bounded Bunch-Kaufman (&#8216;rook&#8217;) diagonal pivoting method.</p>

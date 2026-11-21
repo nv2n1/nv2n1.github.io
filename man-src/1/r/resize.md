@@ -1,5 +1,4 @@
 ---
-
 title: "resize(1)"
 name: "resize"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-resize/"
 description: "resize – set environment and terminal settings to current xterm window size"
 ---
 
+<h2 class="name">NAME</h2>
+<p> resize &#8211; set environment and terminal settings to current xterm window size </p>
+<h2>SYNOPSIS</h2>
 <p> <code>resize</code> [ <code>-v</code> | <code>-u</code> | <code>-c</code> ] [ <code>-s</code> [ <i>row col</i> ] ]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Resize</i> prints a shell command for setting the appropriate environment variables to indicate the current size of <i>xterm</i> window from which the command is run. </p>
 <p> <i>Resize</i> determines the command through several steps:<br />
 &nbsp;.IP&nbsp;&bull;&nbsp;4 first, it finds the name of the user&#8217;s shell program. It uses the <code>SHELL</code> variable if set, otherwise it uses the user&#8217;s data from /etc/passwd.<br />

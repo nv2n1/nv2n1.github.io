@@ -1,5 +1,4 @@
 ---
-
 title: "aseqnet(1)"
 name: "aseqnet"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-aseqnet/"
 description: "aseqnet – ALSA sequencer connectors over network"
 ---
 
+<h2 class="name">NAME</h2>
+<p> aseqnet &#8211; ALSA sequencer connectors over network</p>
+<h2>SYNOPSIS</h2>
 <p> <code>aseqnet</code> [remotehost] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>aseqnet</code> is an ALSA sequencer client which sends and receives event packets over network. Suppose two hosts connected by network, <i>hostA</i> as a server and <i>hostB</i> as a client. The ALSA sequencer system must be running on both hosts. For creating the server port, run the following on hostA:</p>
 <dl>
 <dt>

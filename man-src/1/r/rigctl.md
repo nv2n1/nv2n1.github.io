@@ -1,5 +1,4 @@
 ---
-
 title: "rigctl(1)"
 name: "rigctl"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-rigctl/"
 description: "rigctl – control radio transceivers and receivers"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rigctl &#8211; control radio transceivers and receivers </p>
+<h2>SYNOPSIS</h2>
 <p> <code>rigctl</code> [<i>OPTION</i>]&#8230; [<i>COMMAND</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Control radio transceivers and receivers. <code>rigctl</code> accepts <code>commands</code> from the command line as well as in interactive mode if none are provided on the command line. </p>
 <p> Keep in mind that <code>Hamlib</code> is BETA level software. While a lot of backend libraries lack complete rig support, the basic functions are usually well supported. The API may change without publicized notice, while an advancement of the minor version (e.g. 1.1.x to 1.2.x) indicates such a change. </p>
 <p> Please report bugs and provide feedback at the e-mail address given in the REPORTING BUGS section. Patches and code enhancements are also welcome.</p>

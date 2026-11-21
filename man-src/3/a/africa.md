@@ -1,5 +1,4 @@
 ---
-
 title: "africa(3)"
 name: "africa"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-africa/"
 description: "ql/currencies/africa.hpp – African currencies."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/currencies/africa.hpp &#8211; African currencies. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/currency.hpp&gt; </p>
 <h3>Classes</h3>
 <p> class <code>ZARCurrency</code><br />

@@ -1,5 +1,4 @@
 ---
-
 title: "edg-gridftp-ls(1)"
 name: "edg-gridftp-ls"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-edg-gridftp-ls/"
 description: "edg-gridftp-ls – List a file or contents of directory."
 ---
 
+<h2 class="name">NAME</h2>
+<p> edg-gridftp-ls &#8211; List a file or contents of directory. </p>
+<h2>SYNOPSIS</h2>
 <p> edg-gridftp-ls [<code>&#8211;proxy</code>=<i>proxy</i>] [<code>&#8211;timeout</code>=<i>timeout</i>] [<code>&#8211;verbose</code>] [<code>&#8211;noauth</code>] <i></i><font SIZE="-1"><i>URL</i></font><i></i> </p>
 <p> edg-gridftp-ls <code>&#8211;usage</code> </p>
 <p> edg-gridftp-ls <code>&#8211;help</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>edg-gridftp-ls</code> will list (to the standard output) a file or the contents of a directory for the given <font SIZE="-1">URL. </font> It will return a zero status on success. In all other cases, it will return a non-zero value and print an error message to the standard error.</p>
 <h2>OPTIONS</h2>
 <dl>

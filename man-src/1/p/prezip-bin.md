@@ -1,5 +1,4 @@
 ---
-
 title: "prezip-bin(1)"
 name: "prezip-bin"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-prezip-bin/"
 description: "prezip-bin – prefix zip delta word list compressor/decompressor"
 ---
 
+<h2 class="name">NAME</h2>
+<p> prezip-bin &#8211; prefix zip delta word list compressor/decompressor </p>
+<h2>SYNOPSIS</h2>
 <p> <code>prezip-bin</code> [ <code>-V</code> | <code>-d</code> | <code>-z</code> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>prezip-bin</code> compresses/decompresses sorted word lists from standard input to standard output. </p>
 <p> <i>Prezip-bin</i> is similar to <i><a href="/docs/linux/man/1-word-list-compress/">word-list-compress</a>(1)</i> but it allows a larger character set of {0x00&#8230;0x09, 0x0B, 0x0C, 0x0E&#8230;0xFF} and multi-words larger than 255 characters in length. It can also decompress <i><a href="/docs/linux/man/1-word-list-compress/">word-list-compress</a>(1)</i> compatible files.</p>
 <h2>COMMANDS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "duplocale(3)"
 name: "duplocale"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-duplocale/"
 description: "duplocale – duplicate a locale object"
 ---
 
+<h2 class="name">NAME</h2>
+<p> duplocale &#8211; duplicate a locale object </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;locale.h&gt;
 locale_t duplocale(locale_t locobj);
@@ -21,6 +23,7 @@ locale_t duplocale(locale_t locobj);
 <dt>Before glibc 2.10:</dt>
 <dd> _GNU_SOURCE</dd></dl>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> The <code>duplocale</code>() function creates a duplicate of the locale object referred to by <i>locobj</i>. </p>
 <p> If <i>locobj</i> is <code>LC_GLOBAL_LOCALE</code>, <code>duplocale</code>() creates a locale object containing a copy of the global locale determined by <code><a href="/docs/linux/man/3-setlocale/">setlocale</a></code>(3).</p>
 <h2>RETURN VALUE</h2>

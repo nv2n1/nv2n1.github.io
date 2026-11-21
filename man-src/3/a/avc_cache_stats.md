@@ -1,5 +1,4 @@
 ---
-
 title: "avc_cache_stats(3)"
 name: "avc_cache_stats"
 section: "3"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/3-avc_cache_stats/"
 description: "avc_cache_stats, avc_av_stats, avc_sid_stats – obtain userspace SELinux AVC statistics"
 ---
 
+<h2 class="name">NAME</h2>
+<p> avc_cache_stats, avc_av_stats, avc_sid_stats &#8211; obtain userspace SELinux AVC statistics </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;selinux/selinux.h&gt;</code><br />
  <code>#include &lt;selinux/avc.h&gt;</code> </p>
 <p> <code>void avc_av_stats(void);</code> </p>
 <p> <code>void avc_sid_stats(void);</code> </p>
 <p> <code>void avc_cache_stats(struct avc_cache_stats *</code><i>stats</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> The userspace AVC maintains two internal hash tables, one to store security ID&#8217;s and one to cache access decisions. </p>
 <p> <code>avc_av_stats</code>() and <code>avc_sid_stats</code>() produce log messages indicating the status of the access decision and SID tables, respectively. The messages contain the number of entries in the table, number of hash buckets and number of buckets used, and maximum number of entries in a single bucket. </p>
 <p> <code>avc_cache_stats</code>() populates a structure whose fields reflect cache activity: </p>

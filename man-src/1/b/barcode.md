@@ -1,5 +1,4 @@
 ---
-
 title: "barcode(1)"
 name: "barcode"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-barcode/"
 description: "barcode – a stand alone program to run the barcode library"
 ---
 
+<h2 class="name">NAME</h2>
+<p> barcode &#8211; a stand alone program to run the barcode library </p>
+<h2>SYNOPSIS</h2>
 <p> <code>barcode</code> [-b &#8211; | string] [-e encoding] [-o &#8211; | outfile] [ <i>other-flags</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> The information below is extracted from the texinfo file, which is the preferred source of information. </p>
 <p> The <code>barcode</code> program is a front-end to access some features of the library from the command line. It is able to read user supplied strings from the command line or a data file (standard input by default) and encode all of them. </p>
 <h2>OPTIONS</h2>

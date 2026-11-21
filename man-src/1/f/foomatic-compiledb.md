@@ -1,5 +1,4 @@
 ---
-
 title: "foomatic-compiledb(1)"
 name: "foomatic-compiledb"
 section: "1"
@@ -10,7 +9,9 @@ description: "foomatic-compiledb – Compile the Foomatic printer/driver databas
 
 <h2>NAME</h2>
 <p> foomatic-compiledb &#8211; Compile the Foomatic printer/driver database</p>
+<h2>SYNOPSIS</h2>
 <p> <code>foomatic-compiledb</code><i>&nbsp;<wbr></i><code>[&nbsp;<wbr>-t</code><i>&nbsp;<wbr>type</i><code>&nbsp;<wbr>]</code><i>&nbsp;<wbr></i><code>[&nbsp;<wbr>-f</code><i>&nbsp;<wbr></i><code>]&nbsp;<wbr>[&nbsp;<wbr>-j</code><i>&nbsp;<wbr>n</i><code>&nbsp;<wbr>]</code><i>&nbsp;<wbr></i><code>[&nbsp;<wbr>&nbsp;<wbr></code><i>driver</i><code>&nbsp;<wbr>&#8230;&nbsp;<wbr>&nbsp;<wbr>]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>foomatic-compiledb</code> generates all PPD files or Foomatic combo XML files for all possible printer/driver combos, or only for a selected range of drivers. It generally should not be necessary except for people who want to generate a set of Foomatic data files for distribution. For configuring single printers <code><a href="/docs/linux/man/1-foomatic-ppdfile/">foomatic-ppdfile</a>(1)</code> and especially <code><a href="/docs/linux/man/1-foomatic-configure/">foomatic-configure</a>(1)</code> will automagically compute just what they need. </p>
 <h3>Options</h3>
 <dl>

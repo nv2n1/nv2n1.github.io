@@ -1,5 +1,4 @@
 ---
-
 title: "eog(1)"
 name: "eog"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-eog/"
 description: "eog – a GNOME image viewer"
 ---
 
+<h2 class="name">NAME</h2>
+<p> eog &#8211; a GNOME image viewer </p>
+<h2>SYNOPSIS</h2>
 <p> <code>eog</code> [<i>options</i>]<i> files</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> An image viewer for GNOME which uses gdk_pixbuf</p>
 <h2>USAGE</h2>
 <p> Usage: eog [OPTION&#8230;] </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "lwres_gabnresponse_render(3)"
 name: "lwres_gabnresponse_render"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-lwres_gabnresponse_render/"
 description: "lwres_gabnrequest_render, lwres_gabnresponse_render, lwres_gabnrequest_parse, lwres_gabnresponse_parse, lwres_gabnresponse_free, lwres_gabnrequest_free – lightweight resolver getaddrbyname message ..."
 ---
 
+<h2 class="name">NAME</h2>
+<p> lwres_gabnrequest_render, lwres_gabnresponse_render, lwres_gabnrequest_parse, lwres_gabnresponse_parse, lwres_gabnresponse_free, lwres_gabnrequest_free &#8211; lightweight resolver getaddrbyname message handling </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;lwres/lwres.h&gt;
 </code></pre>
@@ -18,6 +20,7 @@ description: "lwres_gabnrequest_render, lwres_gabnresponse_render, lwres_gabnreq
 <dt> <code>lwres_result_t lwres_gabnresponse_parse(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>, lwres_buffer_t&nbsp;<wbr>*</code><i>b</i><code>, lwres_lwpacket_t&nbsp;<wbr>*</code><i>pkt</i><code>, lwres_gabnresponse_t&nbsp;<wbr>**</code><i>structp</i><code>);</code></dt>
 <dt> <code>void lwres_gabnresponse_free(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>, lwres_gabnresponse_t&nbsp;<wbr>**</code><i>structp</i><code>);</code></dt>
 <dt> <code>void lwres_gabnrequest_free(lwres_context_t&nbsp;<wbr>*</code><i>ctx</i><code>, lwres_gabnrequest_t&nbsp;<wbr>**</code><i>structp</i><code>);</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>These are low-level routines for creating and parsing lightweight resolver name-to-address lookup request and response messages. </dd>
 <p> There are four main functions for the getaddrbyname opcode. One render function converts a getaddrbyname request structure &#8212; <code>lwres_gabnrequest_t</code> &#8212; to the lighweight resolver&#8217;s canonical format. It is complemented by a parse function that converts a packet in this canonical format to a getaddrbyname request structure. Another render function converts the getaddrbyname response structure &#8212; <code>lwres_gabnresponse_t</code> &#8212; to the canonical format. This is complemented by a parse function which converts a packet in canonical format to a getaddrbyname response structure. </p>
 <p> These structures are defined in <i>&lt;lwres/lwres.h&gt;</i>. They are shown below. </p>

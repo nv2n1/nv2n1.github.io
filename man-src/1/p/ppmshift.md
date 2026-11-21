@@ -1,5 +1,4 @@
 ---
-
 title: "ppmshift(1)"
 name: "ppmshift"
 section: "1"
@@ -7,11 +6,18 @@ letter: "p"
 url: "/docs/linux/man/1-ppmshift/"
 ---
 
-ppmshift - shift lines of a portable pixmap left or right by a random amount 
+<h2 class="name">NAME</h2>
+ 
 
-ppmshift <i>shift</i> [<i>ppmfile</i>]
+ ppmshift - shift lines of a portable pixmap left or right by a random amount 
 
-Reads a portable pixmap as input. Shifts every row of image data to the left or right by a certain amount. The 'shift' parameter determines by how many pixels a row is to be shifted at most. 
+<h2>SYNOPSIS</h2>
+
+ ppmshift <i>shift</i> [<i>ppmfile</i>]
+
+<h2>DESCRIPTION</h2>
+
+ Reads a portable pixmap as input. Shifts every row of image data to the left or right by a certain amount. The 'shift' parameter determines by how many pixels a row is to be shifted at most. 
 
  Another one of those effects I intended to use for MPEG tests. Unfortunately, this program will not help me here - it creates too random patterns to be used for animations. Still, it might give interesting results on still images.
 

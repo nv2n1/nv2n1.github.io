@@ -1,5 +1,4 @@
 ---
-
 title: "ps2pdf12(1)"
 name: "ps2pdf12"
 section: "1"
@@ -8,14 +7,17 @@ url: "/docs/linux/man/1-ps2pdf12/"
 description: "ps2pdf – Convert PostScript to PDF using ghostscript ps2pdf12 – Convert PostScript to PDF 1.2 (Acrobat 3-and-later compatible) using ghostscript ps2pdf13 – Convert PostScript to PDF 1.3 (Acrobat 4-..."
 ---
 
+<h2 class="name">NAME</h2>
 <p> ps2pdf &#8211; Convert PostScript to PDF using ghostscript<br />
  ps2pdf12 &#8211; Convert PostScript to PDF 1.2 (Acrobat 3-and-later compatible) using ghostscript<br />
  ps2pdf13 &#8211; Convert PostScript to PDF 1.3 (Acrobat 4-and-later compatible) using ghostscript<br />
  ps2pdf14 &#8211; Convert PostScript to PDF 1.4 (Acrobat 5-and-later compatible) using ghostscript </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ps2pdf</code> [options&#8230;] {input.[e]ps|-} [output.pdf|-]<br />
  <code>ps2pdf12</code> [options&#8230;] {input.[e]ps|-} [output.pdf|-]<br />
  <code>ps2pdf13</code> [options&#8230;] {input.[e]ps|-} [output.pdf|-]<br />
  <code>ps2pdf14</code> [options&#8230;] {input.[e]ps|-} [output.pdf|-]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>ps2pdf</code> scripts are work-alikes for nearly all the functionality (but not the user interface) of Adobe&#8217;s Acrobat(TM) Distiller(TM) product: they convert PostScript files to Portable Document Format (PDF) files. </p>
 <p> If the output filename is not specified, the output is placed in a file of the same name with a &#8216;.pdf&#8217; extension in the current working directory. Either the input filename or the output filename can be &#8216;-&#8216; to request reading from stdin or writing to stdout, respectively, when used as a filter. </p>
 <p> The three scripts differ as follows:</p>

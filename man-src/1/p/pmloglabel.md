@@ -1,5 +1,4 @@
 ---
-
 title: "pmloglabel(1)"
 name: "pmloglabel"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmloglabel – check and repair a performance metrics archive labe
 
 <h2>NAME</h2>
 <p> <code>pmloglabel</code> &#8211; check and repair a performance metrics archive label</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pmloglabel</code> [<code>-Llsv</code>] [<code>-h</code> <i>hostname</i>] [<code>-p</code> <i>pid</i>] [<code>-V</code> <i>version</i>] [<code>-Z</code> <i>timezone</i>] <i>archive</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmloglabel</code> verifies, reports on, and can modify all details of the labels in each of the files of a Performance Co-Pilot (PCP) archive log. The archive log has the base name <i>archive</i> and must have been previously created using <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1). </p>
 <p> Each of the files in a PCP archive (metadata, temporal index, and one or more data volumes) must contain a valid label at the start, else the PCP tools will refuse to open the archive at all. </p>
 <p> Thus, the primary function of <code>pmloglabel</code> is to be able to repair any inconsistent or corrupt label fields, such that the entire archive is not lost. It will not check the remainder of the archive, but it will give you a fighting chance to recover otherwise lost data. Together, <code>pmloglabel</code> and <code>pmlogextract</code> are able to produce a valid PCP archive from many forms of corruption. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "xkbbell(1)"
 name: "xkbbell"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-xkbbell/"
 description: "xkbbell – XKB extension user utility"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xkbbell &#8211; XKB extension user utility </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xkbbell</code> [-display &lt;dpy&gt;] [-synch] [-dev &lt;id&gt;] [-force] [-nobeep] [-bf &lt;id&gt;] [-kf &lt;id&gt;] [-v &lt;volume&gt;] [-w &lt;id&gt;] [-help|-version]</p>
+<h2>DESCRIPTION</h2>
 <p> user utility</p>
 <h2>OPTIONS</h2>
 <dl>

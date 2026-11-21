@@ -1,5 +1,4 @@
 ---
-
 title: "euriborswap(3)"
 name: "euriborswap"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-euriborswap/"
 description: "ql/indexes/swap/euriborswap.hpp – Euribor Swap indexes."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/indexes/swap/euriborswap.hpp &#8211; Euribor Swap indexes. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/indexes/swapindex.hpp&gt;<br />
  #include &lt;ql/termstructures/yieldtermstructure.hpp&gt; </p>
 <h3>Classes</h3>

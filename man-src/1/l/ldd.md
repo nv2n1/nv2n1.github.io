@@ -1,5 +1,4 @@
 ---
-
 title: "ldd(1)"
 name: "ldd"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ldd/"
 description: "ldd – print shared object dependencies"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ldd &#8211; print shared object dependencies </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ldd</code> [<i>option</i>]&#8230; <i>file</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>ldd</code> prints the shared objects (shared libraries) required by each program or shared object specified on the command line. An example of its use and output (using <code><a href="/docs/linux/man/1-sed/">sed</a></code>(1) to trim leading white space for readability in this page) is the following: </p>
 <p> $ <code>ldd /bin/ls | sed &#8216;s/^ */ /&#8217;</code><br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;linux-vdso.so.1&nbsp;(0x00007ffcc3563000)<br />

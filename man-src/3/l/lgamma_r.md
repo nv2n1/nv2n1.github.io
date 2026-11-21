@@ -1,5 +1,4 @@
 ---
-
 title: "lgamma_r(3)"
 name: "lgamma_r"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-lgamma_r/"
 description: "lgamma, lgammaf, lgammal, lgamma_r, lgammaf_r, lgammal_r, signgam – log gamma function"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lgamma, lgammaf, lgammal, lgamma_r, lgammaf_r, lgammal_r, signgam &#8211; log gamma function </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;math.h&gt;
 double lgamma(double x);
@@ -43,6 +45,7 @@ extern int signgam;
 </dt><dd> _XOPEN_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> For the definition of the Gamma function, see <code><a href="/docs/linux/man/3-tgamma/">tgamma</a></code>(3). </p>
 <p> The <code>lgamma</code>(), <code>lgammaf</code>(), and <code>lgammal</code>() functions return the natural logarithm of the absolute value of the Gamma function. The sign of the Gamma function is returned in the external integer <i>signgam</i> declared in <i>&lt;math.h&gt;</i>. It is 1 when the Gamma function is positive or zero, -1 when it is negative. </p>
 <p> Since using a constant location <i>signgam</i> is not thread-safe, the functions <code>lgamma_r</code>(), <code>lgammaf_r</code>(), and <code>lgammal_r</code>() have been introduced; they return the sign via the argument <i>signp</i>.</p>

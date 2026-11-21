@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_privkey_import_rsa_raw2(3)"
 name: "gnutls_x509_privkey_import_rsa_raw2"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_privkey_import_rsa_raw2 – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_privkey_import_rsa_raw2 &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_privkey_import_rsa_raw2(gnutls_x509_privkey_t </code><i>key</i><code>, const gnutls_datum_t * </code><i>m</i><code>, const gnutls_datum_t * </code><i>e</i><code>, const gnutls_datum_t * </code><i>d</i><code>, const gnutls_datum_t * </code><i>p</i><code>, const gnutls_datum_t * </code><i>q</i><code>, const gnutls_datum_t * </code><i>u</i><code>, const gnutls_datum_t * </code><i>e1</i><code>, const gnutls_datum_t * </code><i>e2</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -32,6 +32,7 @@ description: "gnutls_x509_privkey_import_rsa_raw2 – API function"
 <dd> holds e1 = d mod (p-1) (optional)</dd>
 <dt>const gnutls_datum_t * e2</dt>
 <dd> holds e2 = d mod (q-1) (optional)</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will convert the given RSA raw parameters to the native <code>gnutls_x509_privkey_t</code> format. The output will be stored in<br />
 &nbsp;<wbr><i>key</i>&nbsp;<wbr>.</p>
 <h2>RETURNS</h2>

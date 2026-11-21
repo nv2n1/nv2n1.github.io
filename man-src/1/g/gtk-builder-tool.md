@@ -1,5 +1,4 @@
 ---
-
 title: "gtk-builder-tool(1)"
 name: "gtk-builder-tool"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-gtk-builder-tool/"
 description: "gtk-builder-tool – GtkBuilder file utility"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gtk-builder-tool &#8211; GtkBuilder file utility </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gtk-builder-tool</code> [<i>COMMAND</i>] [<i>OPTION</i>&#8230;] <i>FILE</i></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>gtk-builder-tool</code></p>
 <dd>can perform various operations on GtkBuilder .ui files. </dd>
 <p> You should always test the modified .ui files produced by gtk-builder-tool before using them in production.</p>

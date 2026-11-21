@@ -1,5 +1,4 @@
 ---
-
 title: "faketime(1)"
 name: "faketime"
 section: "1"
@@ -10,7 +9,9 @@ description: "faketime – manipulate the system time for a given command"
 
 <h2>NAME</h2>
 <p> faketime &#8211; manipulate the system time for a given command</p>
+<h2>SYNOPSIS</h2>
 <p> <code>faketime</code> <i>[options] timestamp program [arguments&#8230;]</i></p>
+<h2>DESCRIPTION</h2>
 <p> The given command will be tricked into believing that the current system time is the one specified in the timestamp. The wall clock will continue to run from this date and time unless specified otherwise (see advanced options). Actually, faketime is a simple wrapper for libfaketime, which uses the LD_PRELOAD mechanism to load a small library which intercepts system calls to functions such as <i><a href="/docs/linux/man/2-time/">time</a>(2)</i> and <i><a href="/docs/linux/man/2-fstat/">fstat</a>(2)</i>. This wrapper exposes only a subset of libfaketime&#8217;s functionality; please refer to the README file that came with faketime for more details and advanced options, or have a look at <a rel="nofollow" href="http://github.com/wolfcw/libfaketime">http://github.com/wolfcw/libfaketime</a></p>
 <h2>OPTIONS</h2>
 <dl>

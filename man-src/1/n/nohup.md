@@ -1,5 +1,4 @@
 ---
-
 title: "nohup(1)"
 name: "nohup"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-nohup/"
 description: "nohup – run a command immune to hangups, with output to a non-tty"
 ---
 
+<h2 class="name">NAME</h2>
+<p> nohup &#8211; run a command immune to hangups, with output to a non-tty </p>
+<h2>SYNOPSIS</h2>
 <p> <code>nohup</code> <i>,COMMAND /</i>[<i>,ARG/</i>]&#8230;<br />
  <code>nohup</code> <i>,OPTION/</i></p>
+<h2>DESCRIPTION</h2>
 <p> Run COMMAND, ignoring hangup signals.</p>
 <dl>
 <dt><code>&#8211;help</code></dt>

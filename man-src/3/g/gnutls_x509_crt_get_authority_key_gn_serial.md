@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_crt_get_authority_key_gn_serial(3)"
 name: "gnutls_x509_crt_get_authority_key_gn_serial"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_crt_get_authority_key_gn_serial – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_get_authority_key_gn_serial &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_get_authority_key_gn_serial(gnutls_x509_crt_t </code><i>cert</i><code>, unsigned int </code><i>seq</i><code>, void * </code><i>alt</i><code>, size_t * </code><i>alt_size</i><code>, unsigned int * </code><i>alt_type</i><code>, void * </code><i>serial</i><code>, size_t * </code><i>serial_size</i><code>, unsigned int * </code><i>critical</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -30,6 +30,7 @@ description: "gnutls_x509_crt_get_authority_key_gn_serial – API function"
 <dd> Holds the size of the serial field (may be null)</dd>
 <dt>unsigned int * critical</dt>
 <dd> will be non-zero if the extension is marked as critical (may be null)</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will return the X.509 authority key identifier when stored as a general name (authorityCertIssuer) and serial number. </p>
 <p> Because more than one general names might be stored<br />
 &nbsp;<wbr><i>seq</i>&nbsp;<wbr>can be used as a counter to request them all until&nbsp;<wbr> <code>GNUTLS_E_REQUESTED_DATA_NOT_AVAILABLE</code> is returned.</p>

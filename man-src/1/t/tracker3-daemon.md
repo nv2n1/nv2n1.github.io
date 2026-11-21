@@ -1,5 +1,4 @@
 ---
-
 title: "tracker3-daemon(1)"
 name: "tracker3-daemon"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-tracker3-daemon/"
 description: "tracker3-daemon – Start, stop, restart and list daemons responsible for indexing content"
 ---
 
+<h2 class="name">NAME</h2>
+<p> tracker3-daemon &#8211; Start, stop, restart and list daemons responsible for indexing content </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 tracker3 daemon [options...]
 tracker3 daemon -s | -t [daemons] | -k [daemons] | -l
@@ -15,6 +17,7 @@ tracker3 daemon -f | -w [ontology]
 tracker3 daemon --miner &lt;miner&gt; --pause[-for-process] &lt;reason&gt;
 tracker3 daemon --miner &lt;miner&gt; --resume &lt;cookie&gt;
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Tracker indexes content with daemon processes that run in the background. The <code>tracker3 daemon</code> command allows for control of these components. This ranges from starting, stopping and killing processes to pausing and resuming them. </p>
 <p> In addition to all this, there are ways to follow or watch what is happening in real time from a top level and right down where the SPARQL commits are happening too. </p>
 <p> If no arguments are provided this command will show the current status of all Tracker data miners. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "git-verify-commit(1)"
 name: "git-verify-commit"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-verify-commit/"
 description: "git-verify-commit – Check the GPG signature of commits"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-verify-commit &#8211; Check the GPG signature of commits </p>
+<h2>SYNOPSIS</h2>
 <pre>
 <i>git verify-commit</i> &lt;commit&gt;...
 </pre>
+<h2>DESCRIPTION</h2>
 <p> Validates the GPG signature created by <i>git commit -S</i>.</p>
 <h2>OPTIONS</h2>
 <p> &#8211;raw</p>

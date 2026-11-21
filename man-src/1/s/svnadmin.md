@@ -1,5 +1,4 @@
 ---
-
 title: "svnadmin(1)"
 name: "svnadmin"
 section: "1"
@@ -10,6 +9,7 @@ description: "svnadmin – Subversion repository administration tool"
 
 <h2>NAME</h2>
 <p> svnadmin &#8211; Subversion repository administration tool</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>svnadmin</code> <i>command</i> <i>/path/to/repos</i> [<i>options</i>] [<i>args</i>]</dt>
 <dd></dd></dl>

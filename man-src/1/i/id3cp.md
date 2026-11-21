@@ -1,5 +1,4 @@
 ---
-
 title: "id3cp(1)"
 name: "id3cp"
 section: "1"
@@ -10,7 +9,9 @@ description: "id3cp – Copies tags from one file to another."
 
 <h2>NAME</h2>
 <p> id3cp &#8211; Copies tags from one file to another.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>id3cp</code> [ <i>OPTION</i> ]<code>&#8230;</code> [ <i>SOURCE</i> ] [ <i>DEST</i> ] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>Id3cp</code> copies tags from SOURCE to DEST.</p>
 <h2>OPTIONS</h2>
 <dl>

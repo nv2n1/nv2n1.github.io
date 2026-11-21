@@ -1,5 +1,4 @@
 ---
-
 title: "systemd-bootchart(1)"
 name: "systemd-bootchart"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-systemd-bootchart/"
 description: "systemd-bootchart – Boot performance graphing tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> systemd-bootchart &#8211; Boot performance graphing tool </p>
+<h2>DESCRIPTION</h2>
 <p> <code>systemd-bootchart</code> is a tool, usually run at system startup, that collects the CPU load, disk load, memory usage, as well as per-process information from a running system. Collected results are output as an SVG graph. Normally, systemd-bootchart is invoked by the kernel by passing <code>init=</code><code>/usr/lib/systemd/systemd-bootchart</code> on the kernel command line. systemd-bootchart will then fork the real init off to resume normal system startup, while monitoring and logging startup information in the background. </p>
 <p> After collecting a certain amount of data (usually 15-30 seconds, default 20 s) the logging stops and a graph is generated from the logged information. This graph contains vital clues as to which resources are being used, in which order, and where possible problems exist in the startup sequence of the system. It is essentially a more detailed version of the <code>systemd-analyze plot</code> function. </p>
 <p> Of course, bootchart can also be used at any moment in time to collect and graph some data for an amount of time. It is recommended to use the <code>&#8211;rel</code> switch in this case. </p>

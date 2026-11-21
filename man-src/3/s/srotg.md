@@ -1,5 +1,4 @@
 ---
-
 title: "srotg(3)"
 name: "srotg"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-srotg/"
 description: "srotg.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> srotg.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>srotg</code> (SA, SB, C, S)<br />
  <i></i><code>SROTG</code></p>

@@ -1,5 +1,4 @@
 ---
-
 title: "statgrab(1)"
 name: "statgrab"
 section: "1"
@@ -10,7 +9,9 @@ description: "statgrab – sysctl-style interface to system statistics"
 
 <h2>NAME</h2>
 <p> statgrab &#8211; sysctl-style interface to system statistics</p>
+<h2>SYNOPSIS</h2>
 <p> <code>statgrab</code> [OPTION]&#8230; [STAT]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>statgrab</code> provides a sysctl-style interface to all the system statistics available through libstatgrab. This is useful for applications that don&#8217;t want to make library calls, but still want to access the statistics. </p>
 <p> An example of such an application is mrtg, for which scripts are provided to generate configuration files.</p>
 <h2>OPTIONS</h2>

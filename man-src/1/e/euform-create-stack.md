@@ -1,5 +1,4 @@
 ---
-
 title: "euform-create-stack(1)"
 name: "euform-create-stack"
 section: "1"
@@ -10,10 +9,12 @@ description: "euform-create-stack – Create a new stack"
 
 <h2>NAME</h2>
 <p> euform-create-stack &#8211; Create a new stack</p>
+<h2>SYNOPSIS</h2>
 <p> euform-create-stack (<code>&#8211;template-file</code> FILE | <code>&#8211;template-url</code> URL) [-d]</p>
 <dl>
 <dt>[-n ARN[,&#8230;]] [&#8211;capabilities CAP[,&#8230;]]</dt>
 <dd> [-p KEY=VALUE] [-t MINUTES] [&#8211;tag KEY[=VALUE]] [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] STACK</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Create a new stack</p>
 <h3>positional arguments:</h3>
 <dl>

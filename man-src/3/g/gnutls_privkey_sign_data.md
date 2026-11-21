@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_privkey_sign_data(3)"
 name: "gnutls_privkey_sign_data"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_privkey_sign_data – API function"
 
 <h2>NAME</h2>
 <p> gnutls_privkey_sign_data &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/abstract.h&gt;</code> </p>
 <p> <code>int gnutls_privkey_sign_data(gnutls_privkey_t </code><i>signer</i><code>, gnutls_digest_algorithm_t </code><i>hash</i><code>, unsigned int </code><i>flags</i><code>, const gnutls_datum_t * </code><i>data</i><code>, gnutls_datum_t * </code><i>signature</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,6 +24,7 @@ description: "gnutls_privkey_sign_data – API function"
 <dd> holds the data to be signed</dd>
 <dt>gnutls_datum_t * signature</dt>
 <dd> will contain the signature allocate with <code>gnutls_malloc()</code></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will sign the given data using a signature algorithm supported by the private key. Signature algorithms are always used together with a hash functions. Different hash functions may be used for the RSA algorithm, but only the SHA family for the DSA keys. </p>
 <p> You may use <code>gnutls_pubkey_get_preferred_hash_algorithm()</code> to determine the hash algorithm.</p>
 <h2>RETURNS</h2>

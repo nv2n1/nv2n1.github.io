@@ -1,5 +1,4 @@
 ---
-
 title: "clufter-ccs2pcs(1)"
 name: "clufter-ccs2pcs"
 section: "1"
@@ -10,8 +9,10 @@ description: "clufter – ccs2pcs"
 
 <h2>NAME</h2>
 <p> clufter &#8211; ccs2pcs</p>
+<h2>SYNOPSIS</h2>
 <p> <code>clufter</code> [<i>&lt;global option&gt; </i>&#8230;] <i>ccs2pcs </i>[<i>&lt;cmd option </i>&#8230;<i>&gt;</i>]<br />
  <code>clufter</code> [<i>&lt;global option&gt; </i>&#8230;] <i>ccs2pcs-needle </i>[<i>&lt;cmd option </i>&#8230;<i>&gt;</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> (CMAN,rgmanager)-&gt;(Corosync v2,Pacemaker) cluster cfg. </p>
 <p> More specifically, the output is suitable for Pacemaker integrated with Corosync ver. 2 (Needle) as present, e.g., in RHEL 7, and consists of Pacemaker (~cib.xml) and Corosync (~corosync.conf) configurations.</p>
 <h2>OPTIONS</h2>

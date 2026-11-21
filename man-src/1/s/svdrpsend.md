@@ -1,5 +1,4 @@
 ---
-
 title: "svdrpsend(1)"
 name: "svdrpsend"
 section: "1"
@@ -10,7 +9,9 @@ description: "svdrpsend – sends commands to VDR"
 
 <h2>NAME</h2>
 <p> svdrpsend &#8211; sends commands to VDR</p>
+<h2>SYNOPSIS</h2>
 <p> svdrpsend [<i>options</i>] <i>command</i></p>
+<h2>DESCRIPTION</h2>
 <p> This program sends commands to VDR (the Video Disk Recorder) and displays the result. A list of available commands can be shown by sending the HELP command.</p>
 <h2>OPTIONS</h2>
 <dl>

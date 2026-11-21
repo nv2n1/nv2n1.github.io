@@ -1,5 +1,4 @@
 ---
-
 title: "epstool(1)"
 name: "epstool"
 section: "1"
@@ -10,7 +9,9 @@ description: "epstool – Edit preview images and fix bounding boxes in EPS file
 
 <h2>NAME</h2>
 <p> epstool &#8211; Edit preview images and fix bounding boxes in EPS files. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>epstool</code> <i>command</i> [ <i>options</i> ] <i>inputfile outputfile</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>epstool</code> is a utility to create or extract preview images in EPS files. It can also calculate optimal bounding boxes. </p>
 <h3>EPS (Encapsulated PostScript Format)</h3>
 <p> EPS is a specialised form of a PostScript file that complies with the Document Structuring Conventions (DSC) and is intended to be embedded inside another PostScript file. An EPS file must contain a special first line that identifies it as an EPS file (e.g. <code>%!PS-Adobe-3.0 EPSF-3.0</code>) and it must contain a <code>%%BoundingBox:</code> line. The EPS file only draws within the rectangle defined by the bounding box. The PostScript code must avoid using PostScript operators that would interfere with the embedding. These include operators with global effects such as changing the page size and changing the half tone screen. </p>

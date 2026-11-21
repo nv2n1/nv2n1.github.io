@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_certificate_get_ours(3)"
 name: "gnutls_certificate_get_ours"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_certificate_get_ours – API function"
 
 <h2>NAME</h2>
 <p> gnutls_certificate_get_ours &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>const gnutls_datum_t * gnutls_certificate_get_ours(gnutls_session_t </code><i>session</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_session_t session</dt>
 <dd> is a gnutls session</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Gets the certificate as sent to the peer in the last handshake. The certificate is in raw (DER) format. No certificate list is being returned. Only the first certificate.</p>
 <h2>RETURNS</h2>
 <p> a pointer to a <code>gnutls_datum_t</code> containing our certificate, or <code>NULL</code> in case of an error or if no certificate was used.</p>

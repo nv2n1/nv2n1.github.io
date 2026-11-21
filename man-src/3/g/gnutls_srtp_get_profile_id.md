@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_srtp_get_profile_id(3)"
 name: "gnutls_srtp_get_profile_id"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_srtp_get_profile_id – API function"
 
 <h2>NAME</h2>
 <p> gnutls_srtp_get_profile_id &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_srtp_get_profile_id(const char * </code><i>name</i><code>, gnutls_srtp_profile_t * </code><i>profile</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_srtp_get_profile_id – API function"
 <dd> The name of the profile to look up</dd>
 <dt>gnutls_srtp_profile_t * profile</dt>
 <dd> Will hold the profile id</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function allows you to look up a profile based on a string.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error code is returned. </p>

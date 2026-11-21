@@ -1,5 +1,4 @@
 ---
-
 title: "ldap_abandon_ext(3)"
 name: "ldap_abandon_ext"
 section: "3"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/3-ldap_abandon_ext/"
 description: "ldap_abandon_ext – Abandon an LDAP operation in progress"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ldap_abandon_ext &#8211; Abandon an LDAP operation in progress </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ldap.h&gt;
 int ldap_abandon_ext(
@@ -18,6 +20,7 @@ int ldap_abandon_ext(
     LDAPControl **sctrls,
     LDAPControl **cctrls);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>ldap_abandon_ext()</code> routine is used to send a LDAP Abandon request for an operation in progress. The <i>msgid</i> passed should be the message id of an outstanding LDAP operation, such as returned by <code><a href="/docs/linux/man/3-ldap_search_ext/">ldap_search_ext</a></code>(3). </p>
 <p> <code>ldap_abandon_ext</code>() checks to see if the result of the operation has already come in. If it has, it deletes it from the queue of pending messages. If not, it sends an LDAP abandon request to the LDAP server. </p>
 <p> The caller can expect that the result of an abandoned operation will not be returned from a future call to <code><a href="/docs/linux/man/3-ldap_result/">ldap_result</a></code>(3). </p>

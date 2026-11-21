@@ -1,5 +1,4 @@
 ---
-
 title: "iceccd(1)"
 name: "iceccd"
 section: "1"
@@ -10,9 +9,11 @@ description: "iceccd – Icecream daemon"
 
 <h2>NAME</h2>
 <p> iceccd &#8211; Icecream daemon</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>iceccd</code> [<code>-n&nbsp;<wbr></code><i>netname</i>] [<code>-m&nbsp;<wbr></code><i>max_processes</i>] [<code>&#8211;no-remote</code>] [<code>-w</code>] [<code>-d</code> | <code>&#8211;daemonize</code>] [<code>-l&nbsp;<wbr></code><i>logfile</i>] [<code>-s&nbsp;<wbr></code><i>schedulerhost</i>] [-v&nbsp;<wbr>[v&nbsp;<wbr>[v]]] [<code>-r</code> | <code>&#8211;run-as-user</code>] [<code>-b&nbsp;<wbr></code><i>env-basedir</i>] [<code>-u</code> | <code>&#8211;nobody-uid</code><i> nobodyuid</i>] [<code>&#8211;cache-limit&nbsp;<wbr></code><i>MB</i>] [<code>-N&nbsp;<wbr></code><i>hostname</i>] </dt>
 </dl>
+<h2>DESCRIPTION</h2>
 <dd>The Icecream daemon has to run on all nodes being part of the Icecream compile cluster. It receives compile jobs and executes them in a chroot environment. The compile clients send their compile environment the first time they send a job to a particular daemon, so that the environment of the daemon doesn&#8217;t have to match the one of the client. </dd>
 <p> The daemon also has to run on clients sending compile jobs to the Icecream network. If a node should be able to send compile jobs, but never receive any, start the daemon with the option -m 0. </p>
 <p> All Icecream daemons need to have contact to the Icecream scheduler which controls the distribution of data between compile nodes. Normally the daemon will automatically find the right scheduler. If this is not the case you can explicitly specify the name of the Icecream network and the host running the scheduler. </p>

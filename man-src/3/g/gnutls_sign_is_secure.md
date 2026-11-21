@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_sign_is_secure(3)"
 name: "gnutls_sign_is_secure"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_sign_is_secure – API function"
 
 <h2>NAME</h2>
 <p> gnutls_sign_is_secure &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_sign_is_secure(gnutls_sign_algorithm_t </code><i>algorithm</i><code>);</code></p>
 <h2>ARGUMENTS</h2>

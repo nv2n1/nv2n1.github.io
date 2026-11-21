@@ -1,5 +1,4 @@
 ---
-
 title: "fix_filename_slashes(3)"
 name: "fix_filename_slashes"
 section: "3"
@@ -10,8 +9,10 @@ description: "fix_filename_slashes – Converts all the directory separators to 
 
 <h2>NAME</h2>
 <p> fix_filename_slashes &#8211; Converts all the directory separators to a standard character. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>char *fix_filename_slashes(char *path);</code></p>
+<h2>DESCRIPTION</h2>
 <p> Converts all the directory separators in the filename stored in `path&#8217; to a standard character. On DOS and Windows platforms, this is a backslash. On most other platforms this is a slash. Example: </p>
 <pre><code>
 char buf[200] = "c:/dos\backup/weirdo\test";

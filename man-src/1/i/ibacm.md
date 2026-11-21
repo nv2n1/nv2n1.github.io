@@ -1,5 +1,4 @@
 ---
-
 title: "ibacm(1)"
 name: "ibacm"
 section: "1"
@@ -11,11 +10,17 @@ url: "/docs/linux/man/1-ibacm/"
 
  ibacm - address and route resolution services for InfiniBand.
 
-<pre><code>
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <pre><code>
 ibacm[-D][-P][-A addr_file][-O option_file]
 </code></pre>
 
-The IB ACM implements and provides a framework for name, address, and route (path) resolution services over InfiniBand. It is intended to address connection setup scalability issues running MPI applications on large clusters. The IB ACM provides information needed to establish a connection, but does not implement the CM protocol. 
+<h2>DESCRIPTION</h2>
+
+ The IB ACM implements and provides a framework for name, address, and route (path) resolution services over InfiniBand. It is intended to address connection setup scalability issues running MPI applications on large clusters. The IB ACM provides information needed to establish a connection, but does not implement the CM protocol. 
 
  A primary user of the ibacm service is the librdmacm library. This enables applications to make use of the ibacm service without code changes or needing to be aware that the service is in use. librdmacm versions 1.0.12 - 1.0.15 can invoke IB ACM services when built using the --with-ib_acm option. Version 1.0.16 and newer of librdmacm will automatically use the IB ACM if it is installed. The IB ACM services tie in under the rdma_resolve_addr, rdma_resolve_route, and rdma_getaddrinfo routines. For maximum benefit, the rdma_getaddrinfo routine should be used, however existing applications should still see significant connection scaling benefits using the calls available in librdmacm 1.0.11 and previous releases. 
 

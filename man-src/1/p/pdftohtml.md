@@ -1,5 +1,4 @@
 ---
-
 title: "pdftohtml(1)"
 name: "pdftohtml"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pdftohtml/"
 description: "pdftohtml – program to convert PDF files into HTML, XML and PNG images"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pdftohtml &#8211; program to convert PDF files into HTML, XML and PNG images </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pdftohtml</code> <i>[options] &lt;PDF-file&gt; [&lt;HTML-file&gt; &lt;XML-file&gt;]</i></p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>pdftohtml</code> command. This manual page was written for the Debian GNU/Linux distribution because the original program does not have a manual page. </p>
 <p> <code>pdftohtml</code> is a program that converts PDF documents into HTML. It generates its output in the current working directory. If <i>PDF-file</i> is &#8216;-&#8216;, it reads the PDF file from stdin.</p>
 <h2>OPTIONS</h2>

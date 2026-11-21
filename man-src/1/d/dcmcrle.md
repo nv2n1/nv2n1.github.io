@@ -1,5 +1,4 @@
 ---
-
 title: "dcmcrle(1)"
 name: "dcmcrle"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-dcmcrle/"
 description: "dcmcrle – Encode DICOM file to RLE transfer syntax"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dcmcrle &#8211; Encode DICOM file to RLE transfer syntax </p>
+<h2>SYNOPSIS</h2>
 <pre>
 dcmcrle [options] dcmfile-in dcmfile-out
 </pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>dcmcrle</code> utility reads an uncompressed DICOM image (<i>dcmfile-in</i>), performs RLE compression (i.e. conversion to an encapsulated DICOM transfer syntax) and writes the converted image to an output file (<i>dcmfile-out</i>).</p>
 <h2>PARAMETERS</h2>
 <pre>

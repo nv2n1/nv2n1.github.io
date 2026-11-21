@@ -1,5 +1,4 @@
 ---
-
 title: "intro(2)"
 name: "intro"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-intro/"
 description: "intro – introduction to system calls"
 ---
 
+<h2 class="name">NAME</h2>
+<p> intro &#8211; introduction to system calls </p>
+<h2>DESCRIPTION</h2>
 <p> Section 2 of the manual describes the Linux system calls. A system call is an entry point into the Linux kernel. Usually, system calls are not invoked directly: instead, most system calls have corresponding C library wrapper functions which perform the steps required (e.g., trapping to kernel mode) in order to invoke the system call. Thus, making a system call looks the same as invoking a normal library function. </p>
 <p> In many cases, the C library wrapper function does nothing more than:</p>
 <dl>

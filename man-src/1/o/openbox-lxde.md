@@ -1,5 +1,4 @@
 ---
-
 title: "openbox-lxde(1)"
 name: "openbox-lxde"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-openbox-lxde/"
 description: "openbox-lxde – wrapper to run openbox for LXDE"
 ---
 
+<h2 class="name">NAME</h2>
+<p> openbox-lxde &#8211; wrapper to run openbox for LXDE </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>openbox-lxde</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This manual page documents briefly the <code>openbox-lxde</code> command. </dd>
 <p> <code>openbox-lxde</code> is a wrapper script which runs openbox with LXDE specific config file.</p>
 <h2>AUTHOR</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "abrt-install-ccpp-hook(1)"
 name: "abrt-install-ccpp-hook"
 section: "1"
@@ -7,11 +6,22 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-install-ccpp-hook/"
 ---
 
-abrt-install-ccpp-hook - Install coredump handler. 
+<h2 class="name">NAME</h2>
+ 
 
-<i>abrt-install-ccpp-hook</i> install | uninstall | is-installed
+ abrt-install-ccpp-hook - Install coredump handler. 
 
-<i>abrt-install-ccpp-hook</i> registers ABRT coredump handler (which saves segfault data) into kernel.
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <i>abrt-install-ccpp-hook</i> install | uninstall | is-installed
+
+<h2>DESCRIPTION</h2>
+
+ 
+
+ <i>abrt-install-ccpp-hook</i> registers ABRT coredump handler (which saves segfault data) into kernel.
 
 <h2>OPTIONS</h2>
 

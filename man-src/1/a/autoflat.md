@@ -1,5 +1,4 @@
 ---
-
 title: "autoflat(1)"
 name: "autoflat"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-autoflat/"
 description: "autoflat – CCD flat-frame composition"
 ---
 
+<h2 class="name">NAME</h2>
+<p> autoflat &#8211; CCD flat-frame composition</p>
+<h2>SYNOPSIS</h2>
 <p> <code>autoflat </code><i>[options] source_file &#8230;</i> </p>
+<h2>DESCRIPTION</h2>
 <p> The Autoflat program compose a set of flat-fields and performs one flat-field called master-flat. The source frames are normalized to brigtness defined level (10000 by default). Then, it computes the robust median algorithm to the corresponding pixels to get the resulting value. Applying this function, you can achieve high quality correction frame to reduce the noise. The separate correction frame has to be used for each filter, if the color fliters were used. Avoid eventual camera rotation on its mount. </p>
 <p> All source frames must be in FITS format and of same dimensions. Frames of the same color filter and exposition duration should be used. The output file is in FITS format too. </p>
 <h2>OPTIONS</h2>

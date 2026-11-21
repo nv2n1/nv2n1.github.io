@@ -1,5 +1,4 @@
 ---
-
 title: "quvi(1)"
 name: "quvi"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-quvi/"
 description: "quvi – query video tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> quvi &#8211; query video tool </p>
+<h2>SYNOPSIS</h2>
 <p> quvi [options] [url&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> quvi is a command line tool for parsing video download links. It supports Youtube and other similar video websites.</p>
 <h2>OPTIONS</h2>
 <dl>

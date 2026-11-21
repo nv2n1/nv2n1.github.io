@@ -1,5 +1,4 @@
 ---
-
 title: "scotch_gtst(1)"
 name: "scotch_gtst"
 section: "1"
@@ -10,9 +9,11 @@ description: "gtst – test the consistency of source graphs"
 
 <h2>NAME</h2>
 <p> <code>gtst </code>&#8211; test the consistency of source graphs</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 gtst[options][gfile][lfile]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>gtst</code> program checks, in a sequential way, the consistency of a Scotch source graph and, in case of success, outputs some statistics regarding edge weights, vertex weights, and vertex degrees. </p>
 <p> It produces the very same results as the <code>dgtst</code>(1) program of the PT-Scotch parallel distribution, but unlike this latter it cannot handle distributed graphs. </p>
 <p> Source graph file <i>gfile</i> can only be a centralized graph file. The resulting statistics are stored in file <i>lfile</i>. When file names are not specified, data is read from standard input and written to standard output. Standard streams can also be explicitly represented by a dash &#8216;-&#8216;. </p>

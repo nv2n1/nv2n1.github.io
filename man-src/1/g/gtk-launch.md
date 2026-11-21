@@ -1,5 +1,4 @@
 ---
-
 title: "gtk-launch(1)"
 name: "gtk-launch"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-gtk-launch/"
 description: "gtk-launch – Launch an application"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gtk-launch &#8211; Launch an application </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gtk-launch</code> [OPTION&#8230;] APPLICATION [URI&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>gtk-launch</code></p>
 <dd>launches an application using the given name. The application is started with proper startup notification on a default display, unless specified otherwise. </dd>
 <p> <code>gtk-launch</code> takes at least one argument, the name of the application to launch. The name should match application desktop file name, as residing in /usr/share/application, with or without the &#8216;.desktop&#8217; suffix. </p>

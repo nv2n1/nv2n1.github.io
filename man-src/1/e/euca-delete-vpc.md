@@ -1,5 +1,4 @@
 ---
-
 title: "euca-delete-vpc(1)"
 name: "euca-delete-vpc"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-delete-vpc – Delete a VPC"
 
 <h2>NAME</h2>
 <p> euca-delete-vpc &#8211; Delete a VPC</p>
+<h2>SYNOPSIS</h2>
 <p> euca-delete-vpc [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION]</p>
 <dl>
 <dt>[-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug]</dt>
 <dd> [&#8211;debugger] [&#8211;version] [-h] VPC</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Delete a VPC</p>
 <h3>positional arguments:</h3>
 <dl>

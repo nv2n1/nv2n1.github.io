@@ -1,5 +1,4 @@
 ---
-
 title: "euare-accountlistpolicies(1)"
 name: "euare-accountlistpolicies"
 section: "1"
@@ -10,10 +9,12 @@ description: "euare-accountlistpolicies – [Eucalyptus only] List one or all po
 
 <h2>NAME</h2>
 <p> euare-accountlistpolicies &#8211; [Eucalyptus only] List one or all policies policies attached to an account</p>
+<h2>SYNOPSIS</h2>
 <p> euare-accountlistpolicies [-p POLICY] [-v] [&#8211;pretty-print] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ACCOUNT</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> [Eucalyptus only] List one or all policies policies attached to an account</p>
 <h3>positional arguments:</h3>
 <dl>

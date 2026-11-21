@@ -1,5 +1,4 @@
 ---
-
 title: "sgebal(3)"
 name: "sgebal"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-sgebal/"
 description: "sgebal.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sgebal.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sgebal</code> (JOB, N, A, LDA, ILO, IHI, SCALE, INFO)<br />
  <i></i><code>SGEBAL</code></p>

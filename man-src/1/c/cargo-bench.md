@@ -1,5 +1,4 @@
 ---
-
 title: "cargo-bench(1)"
 name: "cargo-bench"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-cargo-bench/"
 description: "cargo-bench – Execute benchmarks of a package"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cargo-bench &#8211; Execute benchmarks of a package </p>
+<h2>SYNOPSIS</h2>
 <p> cargo bench [OPTIONS] [&#8211;] [&lt;ARGS&gt;&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> Execute all benchmarks of a local package. </p>
 <p> All of the trailing arguments are passed to the benchmark binaries generated for filtering benchmarks and generally providing options configuring how they run. </p>
 <p> If the &#8211;package argument is given, then SPEC is a package id specification which indicates which package should be built. If it is not given, then the current package is built. For more information on SPEC and its format, see the &quot;cargo help pkgid&quot; command. </p>

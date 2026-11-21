@@ -1,5 +1,4 @@
 ---
-
 title: "git-cat-file(1)"
 name: "git-cat-file"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-cat-file/"
 description: "git-cat-file – Provide content or type and size information for repository objects"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-cat-file &#8211; Provide content or type and size information for repository objects </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git cat - file(-t[--allow - unknown - type] | -s[--allow - unknown - type] | -e | -p | &lt;type&gt; | --textconv | --filters)[--path = &lt;path&gt;]&lt;object&gt; git cat - file(--batch[=&lt;format&gt;] | --batch - check[=&lt;format&gt;])[--textconv | --filters][--follow - symlinks]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> In its first form, the command provides the content or the type of an object in the repository. The type is required unless <code>-t</code> or <code>-p</code> is used to find the object type, or <code>-s</code> is used to find the object size, or <code>&#8211;textconv</code> or <code>&#8211;filters</code> is used (which imply type &quot;blob&quot;). </p>
 <p> In the second form, a list of objects (separated by linefeeds) is provided on stdin, and the SHA-1, type, and size of each object is printed on stdout. The output format can be overridden using the optional <code>&lt;format&gt;</code> argument. If either <code>&#8211;textconv</code> or <code>&#8211;filters</code> was specified, the input is expected to list the object names followed by the path name, separated by a single whitespace, so that the appropriate drivers can be determined.</p>
 <h2>OPTIONS</h2>

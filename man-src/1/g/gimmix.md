@@ -1,5 +1,4 @@
 ---
-
 title: "gimmix(1)"
 name: "gimmix"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-gimmix/"
 description: "Gimmix – a graphical music player daemon (MPD) client"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Gimmix &#8211; a graphical music player daemon (MPD) client </p>
+<h2>SYNOPSIS</h2>
 <p> <code>gimmix</code></p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>gimmix</code> command. </p>
 <p> <code>gimmix</code> is a graphical music player daemon (MPD) client written in C using GTK+2. It&#8217;s very simple and easy to use, yet offers many features to make your audio experience a pleasant one. </p>
 <h2>CONFIGURATION</h2>

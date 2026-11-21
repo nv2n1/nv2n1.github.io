@@ -1,5 +1,4 @@
 ---
-
 title: "opensc-tool(1)"
 name: "opensc-tool"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-opensc-tool/"
 description: "opensc-tool – generic smart card utility"
 ---
 
+<h2 class="name">NAME</h2>
+<p> opensc-tool &#8211; generic smart card utility </p>
+<h2>SYNOPSIS</h2>
 <p> <code>opensc-tool</code> [OPTIONS]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>opensc-tool</code> utility can be used from the command line to perform miscellaneous smart card operations such as getting the card ATR or sending arbitrary APDU commands to a card.</p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;atr, -a</code></p>

@@ -7,6 +7,8 @@ url: "/docs/linux/man/1-geoqo/"
 description: "geoqo – Geocaching DataBase"
 ---
 
+<h2 class="name">NAME</h2>
+<p> geoqo &#8211; Geocaching DataBase </p>
 <h2>ABOUT GeoQO</h2>
 <p> The geoqo program is designed to be: </p>
 <pre>

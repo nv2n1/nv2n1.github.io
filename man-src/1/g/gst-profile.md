@@ -1,5 +1,4 @@
 ---
-
 title: "gst-profile(1)"
 name: "gst-profile"
 section: "1"
@@ -10,6 +9,7 @@ description: "gst-doc – GNU Smalltalk profiler"
 
 <h2>NAME</h2>
 <p> gst-doc &#8211; GNU Smalltalk profiler</p>
+<h2>DESCRIPTION</h2>
 <h3>Usage:</h3>
 <dl>
 <dt>

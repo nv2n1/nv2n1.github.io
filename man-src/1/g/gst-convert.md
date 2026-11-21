@@ -1,5 +1,4 @@
 ---
-
 title: "gst-convert(1)"
 name: "gst-convert"
 section: "1"
@@ -10,6 +9,7 @@ description: "gst-convert – Smalltalk syntax converter and beautifier"
 
 <h2>NAME</h2>
 <p> gst-convert &#8211; Smalltalk syntax converter and beautifier</p>
+<h2>DESCRIPTION</h2>
 <h3>Usage:</h3>
 <dl>
 <dt>

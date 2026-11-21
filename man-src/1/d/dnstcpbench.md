@@ -1,5 +1,4 @@
 ---
-
 title: "dnstcpbench(1)"
 name: "dnstcpbench"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dnstcpbench/"
 description: "dnstcpbench – tool to perform TCP benchmarking of nameservers"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dnstcpbench &#8211; tool to perform TCP benchmarking of nameservers </p>
+<h2>SYNOPSIS</h2>
 <p> <i>dnstcpbench</i> [&#8211;help] [&#8211;file=filename] [&#8211;verbose] [&#8211;udp-first, -u] [&#8211;workers] [&#8211;timeout-msec] remote-ip-address [remote-port]</p>
+<h2>DESCRIPTION</h2>
 <p> dnstcpbench reads DNS queries (by default from standard input) and sends them out in parallel to a remote nameserver. By default TCP/IP is used, but optionally, UDP is tried first, which allows for the benchmarking of TCP/IP fallback. </p>
 <p> The input format is one query per line: qname single-space qtype. An example: <a rel="nofollow" href="http://www.powerdns.com">www.powerdns.com</a> ANY powerdns.com MX </p>
 <p> When benchmarking extended runs, it may be necessary to enable TIME_WAIT recycling, as TCP/IP port tuples may otherwise run out. On Linux this is performed by running: </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "chpgvx(3)"
 name: "chpgvx"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-chpgvx/"
 description: "chpgvx.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> chpgvx.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>chpgvx</code> (ITYPE, JOBZ, RANGE, UPLO, N, AP, BP, VL, VU, IL, IU, ABSTOL, M, W, Z, LDZ, WORK, RWORK, IWORK, IFAIL, INFO)<br />
  <i></i><code>CHPGST</code></p>

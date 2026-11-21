@@ -1,5 +1,4 @@
 ---
-
 title: "fanotify_init(2)"
 name: "fanotify_init"
 section: "2"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/2-fanotify_init/"
 description: "fanotify_init – create and initialize fanotify group"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fanotify_init &#8211; create and initialize fanotify group </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;fcntl.h&gt;</code><br />
  <code>#include &lt;sys/fanotify.h&gt;</code> </p>
 <p> <code>int fanotify_init(unsigned int </code><i>flags</i><code>, unsigned int </code><i>event_f_flags</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> For an overview of the fanotify API, see <code><a href="/docs/linux/man/7-fanotify/">fanotify</a></code>(7). </p>
 <p> <code>fanotify_init</code>() initializes a new fanotify group and returns a file descriptor for the event queue associated with the group. </p>
 <p> The file descriptor is used in calls to <code><a href="/docs/linux/man/2-fanotify_mark/">fanotify_mark</a></code>(2) to specify the files, directories, mounts or filesystems for which fanotify events shall be created. These events are received by reading from the file descriptor. Some events are only informative, indicating that a file has been accessed. Other events can be used to determine whether another application is permitted to access a file or directory. Permission to access filesystem objects is granted by writing to the file descriptor. </p>

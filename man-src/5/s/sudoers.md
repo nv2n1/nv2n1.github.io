@@ -1,5 +1,4 @@
 ---
-
 title: "sudoers(5)"
 name: "sudoers"
 section: "5"
@@ -7,9 +6,10 @@ letter: "s"
 url: "/docs/linux/man/5-sudoers/"
 description: "sudoers – default sudo security policy plugin"
 ---
-
 <p> Sudo 1.9.9  </p>
+<h2 class="name">NAME</h2>
 <p> <code>sudoers</code> - default sudo security policy plugin </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>sudoers</code> policy plugin determines a user&#8217;s <code>sudo</code> privileges. It is the default <code>sudo</code> policy plugin. The policy is driven by the /etc/sudoers file or, optionally, in LDAP. The policy format is described in detail in the Sx SUDOERS FILE FORMAT section. For information on storing <code>sudoers</code> policy information in LDAP, please see sudoers.ldap5.  </p>
 <h3>Configuring sudo.conf for sudoers</h3>
 <p> <code>sudo</code> consults the sudo.conf5 file to determine which plugins to load. If no sudo.conf5 file is present, or if it contains no <code>Plugin</code> lines, <code>sudoers</code> will be used for auditing, policy decisions and I/O logging. To explicitly configure sudo.conf5 to use the <code>sudoers</code> plugin, the following configuration can be used. </p>

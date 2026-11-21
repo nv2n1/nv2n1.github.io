@@ -1,5 +1,4 @@
 ---
-
 title: "opalcc(1)"
 name: "opalcc"
 section: "1"
@@ -8,6 +7,8 @@ url: "/docs/linux/man/1-opalcc/"
 description: "opalcc — Open PAL C wrapper compiler"
 ---
 
+<h2 class="name">NAME</h2>
+<p> opalcc &#8212; Open PAL C wrapper compiler </p>
 <h2>SYNTAX</h2>
 <p> opalcc [-showme|-showme:compile|-showme:link] &#8230;</p>
 <h2>OPTIONS</h2>
@@ -31,6 +32,7 @@ description: "opalcc — Open PAL C wrapper compiler"
 <dt>&#8211;showme:help</dt>
 <dd> Output a brief usage help message.</dd></dl>
 <p> See the man page for your underlying C compiler for other options that can be passed through opalcc.</p>
+<h2>DESCRIPTION</h2>
 <p> Conceptually, the role of these commands is quite simple: transparently add relevant compiler and linker flags to the user&#8217;s command line that are necessary to compile / link Open PAL programs, and then invoke the underlying compiler to actually perform the command. </p>
 <p> As such, these commands are frequently referred to as &quot;wrapper&quot; compilers because they do not actually compile or link applications themselves; they only add in command line flags and invoke the back-end compiler.</p>
 <h3>Background</h3>

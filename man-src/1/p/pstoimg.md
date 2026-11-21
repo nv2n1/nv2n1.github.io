@@ -1,5 +1,4 @@
 ---
-
 title: "pstoimg(1)"
 name: "pstoimg"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-pstoimg/"
 description: "pstoimg – Convert a PostScript file to a bitmap image using Ghostscript and the Netpbm utilities"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pstoimg &#8211; Convert a PostScript file to a bitmap image using Ghostscript and the Netpbm utilities </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pstoimg</code> <code>-help</code> | <code>-version</code> </p>
 <p> <code>pstoimg</code> [&nbsp;<code>-antialias</code>&nbsp;] [&nbsp;<code>-aaliastext</code>&nbsp;] [&nbsp;<code>-center</code>&nbsp;<i>num</i>&nbsp;] [&nbsp;<code>-color</code>&nbsp;<i>num</i>&nbsp;] [&nbsp;<code>-crop</code>&nbsp;<i>code</i>&nbsp;] [&nbsp;<code>-debug</code>&nbsp;] [&nbsp;<code>-density</code>&nbsp;<i>num</i>] [&nbsp;<code>-depth</code>&nbsp;<i>num</i>&nbsp;] [&nbsp;<code>-discard</code>&nbsp;] [&nbsp;<code>-flip</code>&nbsp;<i>code</i>&nbsp;] [&nbsp;<code>-geometry</code>&nbsp;<i>X</i>x<i>Y</i>&nbsp;] [&nbsp;<code>-interlaced</code>&nbsp;] [&nbsp;<code>-margins</code>&nbsp;<i>X</i>,<i>Y</i>&nbsp;] [&nbsp;<code>-multipage</code>&nbsp;] [&nbsp;<code>-out</code>&nbsp;<i>file</i>&nbsp;] [&nbsp;<code>-quiet</code>&nbsp;] [&nbsp;<code>-rightjustify</code>&nbsp;<i>num</i>&nbsp;] [&nbsp;<code>-scale</code>&nbsp;<i>num</i>&nbsp;] [&nbsp;<code>-tmp</code>&nbsp;<i>path</i>&nbsp;] [&nbsp;<code>-topjustify</code>&nbsp;[<code>x</code>]<i>num</i>&nbsp;] [&nbsp;<code>-transparent</code>&nbsp;] [&nbsp;<code>-type</code>&nbsp;<i>type</i>&nbsp;] [&nbsp;<code>-shoreup</code>&nbsp;<i>num</i>[<code>d</code>]&nbsp;] [&nbsp;<code>-white</code>&nbsp;] <i>file</i> [&nbsp;<i>file2</i>&nbsp;&#8230;&nbsp;]</p>
 <h2>OPTIONS</h2>
@@ -65,6 +67,7 @@ description: "pstoimg – Convert a PostScript file to a bitmap image using Ghos
 <p> If omitted, the first type in this list is taken.</p>
 <dt><code>-white</code></dt>
 <dd> Remove TeX&#8217;s page color information from the PostScript file before converting so that a white background is used.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>pstoimg</code> iterates over the given input files and runs them through Ghostscript. The resulting pnm (portable anymap files) are processed with different Netpbm tools (cropping, color mapping, aligning, &#8230;) and finally converted into (currently) either <font SIZE="-1">GIF</font> or <font SIZE="-1">PNG</font> format. The bitmaps can now be included e.g. in <font SIZE="-1">WWW</font> pages. </p>
 <p> The PostScript file is converted as is. If a valid bounding box is found (<font SIZE="-1">EPS</font> format), then only this area is converted. The image is <i>not</i> cropped by default.</p>
 <h2>RETURN VALUE</h2>

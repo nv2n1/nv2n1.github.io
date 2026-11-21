@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pcert_import_openpgp_raw(3)"
 name: "gnutls_pcert_import_openpgp_raw"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_pcert_import_openpgp_raw – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pcert_import_openpgp_raw &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/abstract.h&gt;</code> </p>
 <p> <code>int gnutls_pcert_import_openpgp_raw(gnutls_pcert_st * </code><i>pcert</i><code>, const gnutls_datum_t * </code><i>cert</i><code>, gnutls_openpgp_crt_fmt_t </code><i>format</i><code>, gnutls_openpgp_keyid_t </code><i>keyid</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,6 +24,7 @@ description: "gnutls_pcert_import_openpgp_raw – API function"
 <dd> The key ID to use (NULL for the master key)</dd>
 <dt>unsigned int flags</dt>
 <dd> zero for now</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This convenience function will import the given certificate to a <code>gnutls_pcert_st</code> structure. The structure must be deinitialized afterwards using <code>gnutls_pcert_deinit()</code>;</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

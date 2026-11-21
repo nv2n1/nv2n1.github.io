@@ -1,5 +1,4 @@
 ---
-
 title: "attachment(3)"
 name: "attachment"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-attachment/"
 description: "QuantLib::CDO – collateralized debt obligation"
 ---
 
+<h2 class="name">NAME</h2>
+<p> QuantLib::CDO &#8211; collateralized debt obligation </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/experimental/credit/cdo.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Instrument</code>. </p>
 <h3>Public Member Functions</h3>

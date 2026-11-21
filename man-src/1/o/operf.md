@@ -1,5 +1,4 @@
 ---
-
 title: "operf(1)"
 name: "operf"
 section: "1"
@@ -10,7 +9,9 @@ description: "operf – Performance profiler tool for Linux"
 
 <h2>NAME</h2>
 <p> operf &#8211; Performance profiler tool for Linux </p>
+<h2>SYNOPSIS</h2>
 <p> <code>operf</code> [ <i>options</i> ] [ &#8211;system-wide | &#8211;pid &lt;pid&gt; | [ command [ args ] ] ] </p>
+<h2>DESCRIPTION</h2>
 <p> Operf is an OProfile tool that can be used in place of opcontrol for profiling. Operf uses the Linux Performance Events Subsystem, and hence, does not require the use of the opcontrol daemon &#8212; in fact, operf and opcontrol usage are mutually exclusive. </p>
 <p> By default, operf uses &lt;current_dir&gt;/oprofile_data as the session-dir and stores profiling data there. You can change this by way of the <i>&#8211;session-dir</i> option. </p>
 <p> The usual post-profiling analysis tools such as <code><a href="/docs/linux/man/1-opreport/">opreport</a>(1)</code> and <code><a href="/docs/linux/man/1-opannotate/">opannotate</a>(1)</code> can be used to generate profile reports. The post-processing analysis tools will search for samples in <i>&lt;current_dir&gt;/oprofile_data</i> first. If that directory does not exist, the post-processing tools use the standard session-dir of /var/lib/oprofile. </p>

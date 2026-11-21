@@ -1,5 +1,4 @@
 ---
-
 title: "nfstest_delegation(1)"
 name: "nfstest_delegation"
 section: "1"
@@ -10,7 +9,9 @@ description: "nfstest_delegation – Delegation tests"
 
 <h2>NAME</h2>
 <p> nfstest_delegation &#8211; Delegation tests</p>
+<h2>SYNOPSIS</h2>
 <p> nfstest_delegation &#8211;server &lt;server&gt; [&#8211;client &lt;client&gt;] [options]</p>
+<h2>DESCRIPTION</h2>
 <p> Basic delegation tests verify that a correct delegation is granted when opening a file for reading or writing. Also, another OPEN should not be sent for the same file when the client is holding a delegation. Verify that the stateid of all I/O operations should be the delegation stateid. Reads from a different process on the same file should not cause the client to send additional READ packets when the client is holding a read delegation. Furthermore, a LOCK packet should not be sent to the server when the client is holding a delegation. </p>
 <p> Recall delegation tests verify the delegation is recalled when a conflicting operation is sent to the server from a different client. Conflicting operations are reading, writing and changing the permissions on the same file. Note, that reading a file from a different client can only recall a read delegation. Also, verify that a delegation is not recalled when a different client is granted a read delegation. After a delegation is recalled, the client should send an OPEN with CLAIM_DELEGATE_CUR before returning the delegation and the stateid should be the same as the original OPEN stateid. Also, a delegation should not be granted when re-opening the file right before returning the delegation. Verify client flushes all written data before returning the WRITE delegation. The LOCK should be sent as well right before returning a delegation which has been recalled. A delegation should not be granted on the second client who cause the delegation recall on the first client. </p>
 <h2>OPTIONS</h2>

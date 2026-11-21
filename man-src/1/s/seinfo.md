@@ -1,5 +1,4 @@
 ---
-
 title: "seinfo(1)"
 name: "seinfo"
 section: "1"
@@ -10,7 +9,9 @@ description: "seinfo – SELinux policy query tool"
 
 <h2>NAME</h2>
 <p> seinfo &#8211; SELinux policy query tool</p>
+<h2>SYNOPSIS</h2>
 <p> <code>seinfo</code> [OPTIONS] [EXPRESSION] [POLICY &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>seinfo</code> allows the user to query the components of a SELinux policy.</p>
 <h2>POLICY</h2>
 <p> <code>seinfo</code> supports loading a SELinux policy in one of four formats.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "grdfft(1)"
 name: "grdfft"
 section: "1"
@@ -10,8 +9,10 @@ description: "grdfft – Do mathematical operations on grids in the wavenumber (
 
 <h2>NAME</h2>
 <p> grdfft &#8211; Do mathematical operations on grids in the wavenumber (or frequency) domain</p>
+<h2>SYNOPSIS</h2>
 <p> <code>grdfft</code> <i>ingrid</i> [ <i>ingrid2</i> ] <i>outfile</i> [ <i>azimuth</i> ] [ <i>zlevel</i> ] [ [<i>scale</i>|<code>g</code>] ] [ [<code>r</code>|<code>x</code>|<code>y</code>][<code>w</code>[<code>k</code>]] ] [ [<code>r</code>|<code>x</code>|<code>y</code>]<i>params</i> ] [ [<i>scale</i>|<code>g</code>] ] [ [<code>f</code>|<code>q</code>|<code>s</code>|<i>nx/ny</i>][<code>+a</code>|<code>d</code>|<code>h</code>|<code>l</code>][<code>+e</code>|<code>n</code>|<code>m</code>][<code>+t</code><i>width</i>][<code>+w</code>[<i>suffix</i>]][<code>+z</code>[<code>p</code>]] ] [ <i>scale</i> ] [ [<i>level</i>] ] [ <code>-fg</code> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>grdfft</code> will take the 2-D forward Fast Fourier Transform and perform one or more mathematical operations in the frequency domain before transforming back to the space domain. An option is provided to scale the data before writing the new values to an output file. The horizontal dimensions of the grid are assumed to be in meters. Geographical grids may be used by specifying the <code>-fg</code> option that scales degrees to meters. If you have grids with dimensions in km, you could change this to meters using <code>grdedit</code> or scale the output with <code>grdmath</code>.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

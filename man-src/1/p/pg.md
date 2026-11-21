@@ -1,5 +1,4 @@
 ---
-
 title: "pg(1)"
 name: "pg"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pg/"
 description: "pg – browse pagewise through text files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pg &#8211; browse pagewise through text files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pg</code> [<code>&#8211;</code><i>number</i>] [<code>-p</code> <i>string</i>] [<code>-cefnrs</code>] [<code>+</code><i>line</i>] [<code>+/</code><i>pattern</i>/] [<i>file</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pg</code> displays a text file on a <font SIZE="-1">CRT</font> one screenful at once. After each page, a prompt is displayed. The user may then either press the newline key to view the next page or one of the keys described below. </p>
 <p> If no filename is given on the command line, <code>pg</code> reads from standard input. If standard output is not a terminal, <code>pg</code> acts like <i><a href="/docs/linux/man/1-cat/">cat</a></i>(1) but precedes each file with its name if there is more than one. </p>
 <p> If input comes from a pipe, <code>pg</code> stores the data in a buffer file while reading to make navigation possible.</p>

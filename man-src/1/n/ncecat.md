@@ -1,5 +1,4 @@
 ---
-
 title: "ncecat(1)"
 name: "ncecat"
 section: "1"
@@ -12,6 +11,7 @@ description: "ncecat – netCDF Ensemble Concatenator"
 <p> ncecat &#8211; netCDF Ensemble Concatenator</p>
 <h2>SYNTAX</h2>
 <p> ncecat [-3] [-4] [-6] [-7] [-A] [&#8211;bfr <i>sz</i>]<i>[-C]</i>[-c]<i>[&#8211;cnk_byt</i> <i>sz</i>]<i>[&#8211;cnk_dmn</i> <i>nm,sz</i>] [&#8211;cnk_map <i>map</i>] [&#8211;cnk_plc <i>plc</i>] [&#8211;cnk_scl <i>sz</i>]<i>[-D</i> <i>dbg_lvl</i>] [-d <i>dim</i>,[ <i>min</i>][,[ <i>max</i>]]] [-F] [-G <i>gpe_dsc</i>] [-g <i>grp</i>[,&#8230;]] [&#8211;gag] [-h] [&#8211;hdr_pad <i>sz</i>] [-L <i>dfl_lvl</i>] [-l <i>path</i>] [-M] [&#8211;mrd] [&#8211;msa] [-n <i>loop</i>] [&#8211;no_tmp_fl] [-O] [-p <i>path</i>] [-R] [-r] [&#8211;ram_all] [-t <i>thr_nbr</i>] [-u <i>ulm_nm</i>] [&#8211;unn] [-v <i>var</i>[,&#8230;]] [-X <i>box</i>] [-x] <i>input-files</i> <i>output-file</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>ncecat</code> concatenates an arbitrary number of input files into a single output file. Input files are glued together by creating a record dimension in the output file. Input files must be the same size. Each input file is stored consecutively as a single record in the output file. Each variable (except coordinate variables) in each input file becomes one record in the same variable in the output file. Coordinate variables are not concatenated, they are instead simply copied from the first input file to the output-file. Thus, the size of the output file is the sum of the sizes of the input files. </p>
 <p> Consider five realizations, <code>85a.nc</code>, <code>85b.nc</code>,<code>&#8230;</code> <code>85e.nc</code> of 1985 predictions from the same climate model. Then <code>ncecat 85?.nc 85_ens.nc</code> glues the individual realizations together into the single file, <code>85_ens.nc</code>. If an input variable was dimensioned [ <code>lat</code>, <code>lon</code>], it will have dimensions [ <code>record</code>, <code>lat</code>, <code>lon</code>] in the output file. A restriction of <code>ncecat</code> is that the hyperslabs of the processed variables must be the same from file to file. Normally this means all the input files are the same size, and contain data on different realizations of the same variables.</p>
 <h2>EXAMPLES</h2>

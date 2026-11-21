@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pkcs11_obj_export(3)"
 name: "gnutls_pkcs11_obj_export"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_pkcs11_obj_export – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs11_obj_export &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs11.h&gt;</code> </p>
 <p> <code>int gnutls_pkcs11_obj_export(gnutls_pkcs11_obj_t </code><i>obj</i><code>, void * </code><i>output_data</i><code>, size_t * </code><i>output_data_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_pkcs11_obj_export – API function"
 <dd> will contain the object data</dd>
 <dt>size_t * output_data_size</dt>
 <dd> holds the size of output_data (and will be replaced by the actual size of parameters)</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will export the PKCS11 object data. It is normal for data to be inaccesible and in that case <code>GNUTLS_E_INVALID_REQUEST</code> will be returned. </p>
 <p> If the buffer provided is not long enough to hold the output, then *output_data_size is updated and GNUTLS_E_SHORT_MEMORY_BUFFER will be returned.</p>
 <h2>RETURNS</h2>

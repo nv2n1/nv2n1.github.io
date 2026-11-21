@@ -1,5 +1,4 @@
 ---
-
 title: "ppmtowinicon(1)"
 name: "ppmtowinicon"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ppmtowinicon/"
 description: "ppmtowinicon – convert 1 or more portable pixmaps into a Windows .ico file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ppmtowinicon &#8211; convert 1 or more portable pixmaps into a Windows .ico file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ppmtowinicon</code> [<i>-andpgms</i>] [<i>-output output.ico</i>] [<i>ppmfiles</i>&#8230;<i>]</i> </p>
+<h2>DESCRIPTION</h2>
 <p> Reads one or more portable pixmaps as input. Produces a Microsoft Windows .ico file as output. </p>
 <p> A Windows icon contains 1 or more images, at different resolutions and color depths. </p>
 <p> Microsoft recommends including at least the following formats in each icon (size and bits-per-pixel): </p>

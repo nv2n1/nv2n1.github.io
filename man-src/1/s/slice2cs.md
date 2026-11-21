@@ -1,5 +1,4 @@
 ---
-
 title: "slice2cs(1)"
 name: "slice2cs"
 section: "1"
@@ -10,7 +9,9 @@ description: "slice2cs – translate Slice to Ice for C#"
 
 <h2>NAME</h2>
 <p> slice2cs &#8211; translate Slice to Ice for C#</p>
+<h2>SYNOPSIS</h2>
 <p> <code>slice2cs [OPTIONS]&#8230; FILES&#8230;</code></p>
+<h2>DESCRIPTION</h2>
 <p> Slice to C# compiler. </p>
 <p> Full documentation of this tool is available online at <i><a rel="nofollow" href="http://www.zeroc.com/doc/Ice-3.3.0/manual/Csharp.15.15.html">http://www.zeroc.com/doc/Ice-3.3.0/manual/Csharp.15.15.html</a></i></p>
 <h2>COPYRIGHT</h2>

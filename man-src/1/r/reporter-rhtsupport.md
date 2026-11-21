@@ -1,5 +1,4 @@
 ---
-
 title: "reporter-rhtsupport(1)"
 name: "reporter-rhtsupport"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-reporter-rhtsupport/"
 description: "reporter-rhtsupport – Reports problem to RHTSupport."
 ---
 
+<h2 class="name">NAME</h2>
+<p> reporter-rhtsupport &#8211; Reports problem to RHTSupport. </p>
+<h2>SYNOPSIS</h2>
 <p> <i>reporter-rhtsupport</i> [-v] [-c CONFFILE] [-F FMTFILE] [-u -C UR_CONFFILE] -d DIR </p>
 <p> Or: </p>
 <p> <i>reporter-rhtsupport</i> [-v] [-c CONFFILE] [-d DIR] -t[ID] FILE&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> The tool reads problem directory DIR. Then it logs in to RHTSupport and creates a new case. </p>
 <p> The tool can be configured to submit an uReport to RHTSupport together with creating a new case. </p>
 <p> The URL to new case is printed to stdout and recorded in <i>reported_to</i> element in DIR. </p>

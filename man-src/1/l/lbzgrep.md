@@ -1,5 +1,4 @@
 ---
-
 title: "lbzgrep(1)"
 name: "lbzgrep"
 section: "1"
@@ -10,7 +9,9 @@ description: "lbzgrep – search possibly compressed files for a regular express
 
 <h2>NAME</h2>
 <p> lbzgrep &#8211; search possibly compressed files for a regular expression</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lbzgrep</code> [ grep_options ] <code>[&nbsp;<wbr>-e&nbsp;<wbr>]</code><i> pattern</i> <i>filename</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Zgrep</i> invokes <i>grep</i> on compressed or lbzip2ped files. All options specified are passed directly to <i>grep</i>. If no file is specified, then the standard input is decompressed if necessary and fed to grep. Otherwise the given files are uncompressed if necessary and fed to <i>grep</i>. </p>
 <p> If the GREP environment variable is set, <i>lbzgrep</i> uses it as the <i>grep</i> program to be invoked.</p>
 <h2>EXIT STATUS</h2>

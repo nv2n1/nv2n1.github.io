@@ -1,5 +1,4 @@
 ---
-
 title: "fixsub(3)"
 name: "fixsub"
 section: "3"
@@ -10,8 +9,10 @@ description: "fixsub – Safe function to subtract fixed point numbers clamping 
 
 <h2>NAME</h2>
 <p> fixsub &#8211; Safe function to subtract fixed point numbers clamping underflow. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>fixed fixsub(fixed x, fixed y);</code></p>
+<h2>DESCRIPTION</h2>
 <p> Although fixed point numbers can be subtracted with the normal &#8216;-&#8216; integer operator, that doesn&#8217;t provide any protection against overflow. If overflow is a problem, you should use this function instead. It is slower than using integer operators, but if an overflow occurs it will set `errno&#8217; and clamp the result, rather than just letting it wrap. Example: </p>
 <pre><code>
 fixed result;

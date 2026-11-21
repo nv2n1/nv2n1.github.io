@@ -1,5 +1,4 @@
 ---
-
 title: "qrls-torque(1)"
 name: "qrls-torque"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-qrls-torque/"
 description: "qrls – release hold on pbs batch jobs"
 ---
 
+<h2 class="name">NAME</h2>
+<p> qrls &#8211; release hold on pbs batch jobs </p>
+<h2>SYNOPSIS</h2>
 <p> qrls [-h hold_list] [-t array_range] job_identifier &#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>qrls</code> command removes or releases holds which exist on batch jobs. </p>
 <p> A job may have one or more types of holds which make the job ineligible for execution. The types of holds are <font SIZE="-1"></font><font SIZE="-2"><code> and </code></font><font SIZE="-3"><code> The different types of holds may require that the user issuing the qrls command have special privilege. Typically, the owner of the job will be able to remove a </code></font><font SIZE="-4"><code> hold, but not an </code></font><font SIZE="-5"><code> or </code></font><font SIZE="-6"><code> hold. An Attempt to release a hold for which the user does not have the correct privilege is an error and no holds will be released for that job. </p>
 <p> If no </code><i> option is specified, the </i></font><font SIZE="-7"><code> hold will be released. </p>

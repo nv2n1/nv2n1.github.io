@@ -1,5 +1,4 @@
 ---
-
 title: "asr_run(3)"
 name: "asr_run"
 section: "3"
@@ -10,6 +9,7 @@ description: "asr_run, asr_run_sync, asr_abort, res_send_async, res_query_async,
 
 <h2>NAME</h2>
 <p> <code>asr_run</code>, <code>asr_run_sync</code>, <code>asr_abort</code>, <code>res_send_async</code>, <code>res_query_async</code>, <code>res_search_async</code>, <code>getrrsetbyname_async</code>, <code>gethostbyname_async</code>, <code>gethostbyname2_async</code>, <code>gethostbyaddr_async</code>, <code>getnetbyname_async</code>, <code>getnetbyaddr_async</code>, <code>getaddrinfo_async</code>, <code>getnameinfo_async</code> &#8211; asynchronous resolver functions</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/types.h&gt;</code> <code>#include &lt;sys/socket.h&gt;</code> <code>#include &lt;netdb.h&gt;</code> <code>#include &lt;asr.h&gt;</code><br />
  <i>int</i><br />
  <code>asr_run</code>(<i>struct asr_query&nbsp;<wbr>*aq</i>, <i>struct asr_result&nbsp;<wbr>*ar</i>);<br />
@@ -39,6 +39,7 @@ description: "asr_run, asr_run_sync, asr_abort, res_send_async, res_query_async,
  <code>getaddrinfo_async</code>(<i>const char&nbsp;<wbr>*hostname</i>, <i>const char&nbsp;<wbr>*servname</i>, <i>const struct addrinfo&nbsp;<wbr>*hints</i>, <i>void&nbsp;<wbr>*asr</i>);<br />
  <i>struct asr_query *</i><br />
  <code>getnameinfo_async</code>(<i>const struct sockaddr&nbsp;<wbr>*sa</i>, <i>socklen_t salen</i>, <i>char&nbsp;<wbr>*host</i>, <i>size_t hostlen</i>, <i>char&nbsp;<wbr>*serv</i>, <i>size_t servlen</i>, <i>int flags</i>, <i>void&nbsp;<wbr>*asr</i>);</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>asr</code> functions provide a simple interface for asynchronous address resolution and nameserver querying. They should be used in place of the classical resolver functions of libc when blocking is not desirable. </p>
 <p> The principle of operation is as follows: All async requests are made against an <code>asr</code> context which basically defines a list of sources to query and a strategy to do so. The user creates a query through one of the dedicated functions, and gets a handle representing the internal query. A query is a state-machine that can be run to try to fulfill a particular request. This is done by calling in a generic API that performs the state transitions until it needs to give the control back to the user, either because a result is available, or because the next transition implies a blocking call (a file descriptor needs to be read from or written to). The user is responsible for dealing with the situation: either get the result, or wait until the fd conditions are met, and then call back into the resolving machinery when it is ready to proceed. </p>
 <p> The <code>asr_run</code>() function drives the resolving process. It runs the asynchronous query represented by the handle until a result is available, or until it cannot continue without blocking. The results are returned to the user through the parameter, which must be a valid pointer to user allocated memory. is defined as:</p>

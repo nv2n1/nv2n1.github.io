@@ -1,5 +1,4 @@
 ---
-
 title: "flamerobin(1)"
 name: "flamerobin"
 section: "1"
@@ -9,8 +8,11 @@ description: "flamerobin – management and data manipulation tool for the Fireb
 ---
 
 <p>FlameRobin 0.7</p>
+<h2 class="name">NAME</h2>
 <p> <code>flamerobin</code> &#8211; management and data manipulation tool for the Firebird DBMS </p>
+<h2>SYNOPSIS</h2>
 <p> <code>flamerobin</code> [ &#8211;<code>h </code><i>directory </i> &#8211;<code>-home = </code><i>directory </i>] [ &#8211;<code>uh </code><i>directory </i> &#8211;<code>-user-home = </code><i>directory </i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>flamerobin</code> is a graphical frontend to the Firebird DBMS. It is small and simple, yet offers all the basic features needed to create and manipulate databases, execute queries and perform administrative tasks. </p>
 <p> This manual page only documents the run-time options and environment of <code>.</code> Information about using the GUI may be obtained by selecting the Help &#8211; Manual menu item once the application is running. </p>
 <p> <code>flamerobin</code> uses two directory hierarchies for its normal operation. The <i>data directory</i> contains the templates for property pages, the default configuration and the on-line documentation grouped into three sub-directories as follows:</p>

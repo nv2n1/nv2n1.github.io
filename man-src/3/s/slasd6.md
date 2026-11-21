@@ -1,5 +1,4 @@
 ---
-
 title: "slasd6(3)"
 name: "slasd6"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-slasd6/"
 description: "slasd6.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> slasd6.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>slasd6</code> (ICOMPQ, NL, NR, SQRE, D, VF, VL, ALPHA, BETA, IDXQ, PERM, GIVPTR, GIVCOL, LDGCOL, GIVNUM, LDGNUM, POLES, DIFL, DIFR, Z, K, C, S, WORK, IWORK, INFO)<br />
  <i></i><code>SLASD6</code> computes the SVD of an updated upper bidiagonal matrix obtained by merging two smaller ones by appending a row. Used by sbdsdc.</p>

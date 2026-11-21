@@ -1,5 +1,4 @@
 ---
-
 title: "chflibor(3)"
 name: "chflibor"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-chflibor/"
 description: "ql/indexes/ibor/chflibor.hpp – CHF LIBOR rate"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/indexes/ibor/chflibor.hpp &#8211; CHF LIBOR rate </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/indexes/ibor/libor.hpp&gt;<br />
  #include &lt;ql/time/calendars/switzerland.hpp&gt;<br />
  #include &lt;ql/time/daycounters/actual360.hpp&gt;<br />

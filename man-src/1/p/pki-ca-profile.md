@@ -1,5 +1,4 @@
 ---
-
 title: "pki-ca-profile(1)"
 name: "pki-ca-profile"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-pki-ca-profile/"
 description: "pki-profile – Command-Line Interface for managing Certificate System CA profiles."
 ---
 
+<h2 class="name">NAME</h2>
+<p> pki-profile &#8211; Command-Line Interface for managing Certificate System CA profiles.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 pki[CLI options] ca - profile pki[CLI options] ca - profile - find[command options] pki[CLI options] ca - profile - show&lt;profile ID&gt;[command options] pki[CLI options] ca - profile - add&lt;input file path&gt;[command options] pki[CLI options] ca - profile - mod&lt;input file path&gt;[command options] pki[CLI options] ca - profile - del&lt;profile ID&gt;[command options] pki[CLI options] ca - profile - enable&lt;profile ID&gt;[command options] pki[CLI options] ca - profile - disable&lt;profile ID&gt;[command options]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>pki ca-profile</code> commands provide command-line interfaces to manage profiles on the CA. </p>
 <p> <code>pki</code> [CLI options] <code>ca-profile-find</code> [command options]</p>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "repomapper(1)"
 name: "repomapper"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-repomapper/"
 description: "repomapper – update and manipulate contributor maps"
 ---
 
+<h2 class="name">NAME</h2>
+<p> repomapper &#8211; update and manipulate contributor maps </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>repomapper</code> [-i] [-p&nbsp;<wbr><i>passwordfile</i>] [-u&nbsp;<wbr><i>updatefile</i>] [-h&nbsp;<wbr><i>host</i>] <i>contribmap</i></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>Older, centralized version-control systems such as CVS and SVN centralize a repository on one host and identify users by their account names on that host. Distributed version-control systems such as git and Mercurial identify users by a netwide-unique ID consisting of a name-among-humans followed by an email address. </dd>
 <p> When moving a repository from a centralized to a distributed system, therefore, one of the prerequisites is a contributor map that associates each account name on the old system to a DVCS-style ID on the new one. This tool automates parts of that process. </p>
 <p> The main argument file must be a contributor map such as is read by the <code>authors read</code> subcommand of <code><a href="/docs/linux/man/1-reposurgeon/">reposurgeon</a></code>(1). It may be a fresh or stub map, produced by <code>authors write</code> before any human-name or email information has been added to the repository. Or it may have name-among-humans and email information filled in for some entries. </p>

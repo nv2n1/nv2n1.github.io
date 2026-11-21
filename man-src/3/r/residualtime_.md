@@ -1,5 +1,4 @@
 ---
-
 title: "residualtime_(3)"
 name: "residualtime_"
 section: "3"
@@ -7,8 +6,8 @@ letter: "r"
 url: "/docs/linux/man/3-residualtime_/"
 description: "QuantLib::SingleAssetOption – Black-Scholes-Merton option."
 ---
-
 <p>QuantLib::SingleAssetOption &#8211; Black-Scholes-Merton option. </p>
+<h2>SYNOPSIS</h2>
 <p> <br />
  </p>
 <p>#include &lt;ql/legacy/pricers/singleassetoption.hpp&gt; </p>

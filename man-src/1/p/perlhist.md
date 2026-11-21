@@ -1,5 +1,4 @@
 ---
-
 title: "perlhist(1)"
 name: "perlhist"
 section: "1"
@@ -7,9 +6,14 @@ letter: "p"
 url: "/docs/linux/man/1-perlhist/"
 ---
 
-perlhist - the Perl history records 
+<h2 class="name">NAME</h2>
+ 
 
-This document aims to record the Perl source code releases.
+ perlhist - the Perl history records 
+
+<h2>DESCRIPTION</h2>
+
+ This document aims to record the Perl source code releases.
 
 <h2>INTRODUCTION</h2>
 

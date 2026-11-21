@@ -1,5 +1,4 @@
 ---
-
 title: "pkcsconf(1)"
 name: "pkcsconf"
 section: "1"
@@ -10,7 +9,9 @@ description: "pkcsconf – configuration utility for the pkcsslotd daemon"
 
 <h2>NAME</h2>
 <p> pkcsconf &#8211; configuration utility for the pkcsslotd daemon </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pkcsconf</code> [<code>-itsmlIupPh</code>] [<code>-c</code> <i>slotnumber</i> <code>-U</code> <i>userPIN</i> <code>-S</code> <i>SOPin</i> <code>-n</code> <i>newpin</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>pkcsconf</code> utility displays and configures the state of the pkcsslotd daemon and the tokens managed by the daemon. </p>
 <h2>COMMAND SUMMARY</h2>
 <dl>

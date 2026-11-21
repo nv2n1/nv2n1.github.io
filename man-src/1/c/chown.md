@@ -1,5 +1,4 @@
 ---
-
 title: "chown(1)"
 name: "chown"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-chown/"
 description: "chown – change file owner and group"
 ---
 
+<h2 class="name">NAME</h2>
+<p> chown &#8211; change file owner and group </p>
+<h2>SYNOPSIS</h2>
 <p> <code>chown</code> [<i>,OPTION/</i>]&#8230; [<i>,OWNER/</i>][<i>,:/</i>[<i>,GROUP/</i>]] <i>,FILE/</i>&#8230;<br />
  <code>chown</code> [<i>,OPTION/</i>]&#8230; <i>,&#8211;reference=RFILE FILE/</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents the GNU version of <code>chown</code>. <code>chown</code> changes the user and/or group ownership of each given file. If only an owner (a user name or numeric user ID) is given, that user is made the owner of each given file, and the files&#8217; group is not changed. If the owner is followed by a colon and a group name (or numeric group ID), with no spaces between them, the group ownership of the files is changed as well. If a colon but no group name follows the user name, that user is made the owner of the files and the group of the files is changed to that user&#8217;s login group. If the colon and group are given, but the owner is omitted, only the group of the files is changed; in this case, <code>chown</code> performs the same function as <code>chgrp</code>. If only a colon is given, or if the entire operand is empty, neither the owner nor the group is changed.</p>
 <h2>OPTIONS</h2>
 <p> Change the owner and/or group of each FILE to OWNER and/or GROUP. With <code>&#8211;reference</code>, change the owner and group of each FILE to those of RFILE.</p>

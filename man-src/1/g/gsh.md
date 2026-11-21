@@ -1,5 +1,4 @@
 ---
-
 title: "gsh(1)"
 name: "gsh"
 section: "1"
@@ -10,7 +9,9 @@ description: "gsh – Group Shell"
 
 <h2>NAME</h2>
 <p> gsh &#8211; Group Shell</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gsh</code> [OPTIONS]&#8230; HOSTS&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <i>gsh</i> spawns many remote shells at once and allows to manage them in a single interface.</p>
 <h2>PROMPTS</h2>
 <p> The <i>gsh</i> prompt shows either &#8216;ready (X)&gt; &#8216; or &#8216;waiting (X/Y)&gt; &#8216;. The &#8216;ready&#8217; prompt means that all enabled remote shells are ready to receive commands and there are X such remote shells. Failing that, the &#8216;waiting&#8217; prompt is shown, meaning that X remote shells are not yet ready to receive commands. Either way, all the readline editing features like navigation in the history, searching in the history, and completion are available. </p>

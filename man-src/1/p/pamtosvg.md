@@ -1,5 +1,4 @@
 ---
-
 title: "pamtosvg(1)"
 name: "pamtosvg"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-pamtosvg/"
 description: "pamtosvg – convert a Netpbm image to a SVG (Scalable Vector Graphics) image"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pamtosvg &#8211; convert a Netpbm image to a SVG (Scalable Vector Graphics) image</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pamtosvg</code> </p>
 <p> [<code>-background-color=</code><i>colorname</i>] [<code>-centerline</code>] [<code>-corner-threshold=</code><i>angle</i>] [<code>-corner-always-threshold=</code><i>angle</i>] [<code>-corner-surround=</code><i>integer</i>] [<code>-tangent-surround=</code><i>integer</i>] [<code>-error-threshold=</code><i>float</i>] [<code>-filter-iterations=</code><i>count</i>] [<code>-line-reversion-threshold=</code><i>float</i>] [<code>-line-threshold=</code><i>float</i>] [<code>-width-weight-factor=</code><i>float</i>] [<code>-preserve-width</code>] [<code>-remove-adjacent-corners</code>] [<code>-log</code>] [<code>-report-progress</code>] [<i>pnmfile</i>] </p>
 <p> Minimum unique abbreviation of option is acceptable. You may use double hyphens instead of single hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamtosvg</code> reads a PNM image as input and produce an SVG (Scalable Vector Graphics) image as output. Thus, it traces curves in the input image and creates a set of splines that represent the image. </p>
 <p> SVG is a vector image format, which means it describes curves that compose an image. By contrast, PNM is a raster format, which means it describes dots that compose an image. The main practical difference between the two types is that you can scale vector images better. A vector image also takes a lot less data to describe an image if the image is composed of simple curves. </p>

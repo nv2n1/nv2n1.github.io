@@ -1,5 +1,4 @@
 ---
-
 title: "pcp-verify(1)"
 name: "pcp-verify"
 section: "1"
@@ -10,7 +9,9 @@ description: "pcp-verify – verify aspects of a PCP installation"
 
 <h2>NAME</h2>
 <p> <code>pcp-verify</code> &#8211; verify aspects of a PCP installation</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pcp</code> [<i>pcp options</i>] <code>verify</code> [<code>-c</code>/<code>&#8211;containers</code>] [<code>-s</code>/<code>&#8211;secure</code>] [<code>-v</code>/<code>&#8211;verbose</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pcp-verify</code> inspects various aspects of a PCP collector installation and reports on whether it is configured correctly for certain modes of operation. </p>
 <p> By default, <code>pcp-verify</code> checks that PMCD is running and no agents are in a failed state. These checks can be extended and refined using the command line.</p>
 <h2>OPTIONS</h2>

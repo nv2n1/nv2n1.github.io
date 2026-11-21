@@ -1,5 +1,4 @@
 ---
-
 title: "isomaster(1)"
 name: "isomaster"
 section: "1"
@@ -17,7 +16,11 @@ url: "/docs/linux/man/1-isomaster/"
 
  isomaster [<i>image.iso</i>]
 
-ISO Master is an open-source, easy to use, graphical CD image editor for Linux and BSD. Basically you can use this program to extract files from an ISO, add files to an ISO, and create bootable ISOs - all in a graphical user interface. 
+<h2>DESCRIPTION</h2>
+
+ 
+
+ ISO Master is an open-source, easy to use, graphical CD image editor for Linux and BSD. Basically you can use this program to extract files from an ISO, add files to an ISO, and create bootable ISOs - all in a graphical user interface. 
 
  ISO Master can open ISO, NRG, and some MDF files but can only save as ISO.
 

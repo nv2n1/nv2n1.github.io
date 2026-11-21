@@ -1,5 +1,4 @@
 ---
-
 title: "libcurl(3)"
 name: "libcurl"
 section: "3"
@@ -10,6 +9,7 @@ description: "libcurl – client-side URL transfers"
 
 <h2>NAME</h2>
 <p> libcurl &#8211; client-side URL transfers</p>
+<h2>DESCRIPTION</h2>
 <p> This is a short overview on how to use libcurl in your C programs. There are specific man pages for each function mentioned in here. There are also the <i><a href="/docs/linux/man/3-libcurl-easy/">libcurl-easy</a>(3)</i> man page, the <i><a href="/docs/linux/man/3-libcurl-multi/">libcurl-multi</a>(3)</i> man page, the <i><a href="/docs/linux/man/3-libcurl-share/">libcurl-share</a>(3)</i> man page and the <i><a href="/docs/linux/man/3-libcurl-tutorial/">libcurl-tutorial</a>(3)</i> man page for in-depth understanding on how to program with libcurl. </p>
 <p> There are more than thirty custom bindings available that bring libcurl access to your favourite language. Look elsewhere for documentation on those. </p>
 <p> libcurl has a global constant environment that you must set up and maintain while using libcurl. This essentially means you call <i><a href="/docs/linux/man/3-curl_global_init/">curl_global_init</a>(3)</i> at the start of your program and <i><a href="/docs/linux/man/3-curl_global_cleanup/">curl_global_cleanup</a>(3)</i> at the end. See GLOBAL CONSTANTS below for details. </p>

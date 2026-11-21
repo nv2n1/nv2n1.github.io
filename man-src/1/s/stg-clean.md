@@ -1,5 +1,4 @@
 ---
-
 title: "stg-clean(1)"
 name: "stg-clean"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-stg-clean/"
 description: "stg-clean – Delete the empty patches in the series"
 ---
 
+<h2 class="name">NAME</h2>
+<p> stg-clean &#8211; Delete the empty patches in the series </p>
+<h2>SYNOPSIS</h2>
 <pre>
 <i>stg</i> clean
 </pre>
+<h2>DESCRIPTION</h2>
 <p> Delete the empty patches in the whole series or only those applied or unapplied. A patch is considered empty if the two commit objects representing its boundaries refer to the same tree object.</p>
 <h2>OPTIONS</h2>
 <p> -a, &#8211;applied</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "dcmconv(1)"
 name: "dcmconv"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-dcmconv/"
 description: "dcmconv – Convert DICOM file encoding"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dcmconv &#8211; Convert DICOM file encoding </p>
+<h2>SYNOPSIS</h2>
 <pre>
 dcmconv [options] dcmfile-in dcmfile-out
 </pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>dcmconv</code> utility reads a DICOM file (<i>dcmfile-in</i>), performs an encoding conversion and writes the converted data to an output file (<i>dcmfile-out</i>).</p>
 <h2>PARAMETERS</h2>
 <pre>

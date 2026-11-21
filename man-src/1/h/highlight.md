@@ -1,5 +1,4 @@
 ---
-
 title: "highlight(1)"
 name: "highlight"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-highlight/"
 description: "Highlight – a universal sourcecode to formatted text converter"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Highlight &#8211; a universal sourcecode to formatted text converter</p>
+<h2>SYNOPSIS</h2>
 <p> <code>highlight</code> [OPTIONS]&#8230; [FILES]&#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> <code>Highlight</code> converts sourcecode to HTML, XHTML, RTF, ODT, LaTeX, TeX, BBCode, SVG, XTERM or ANSI escape sequences. There are several colour themes available. <code>Highlight</code> recognizes keywords, numbers, strings, comments, symbols and preprocessor directives. It supports about 160 programming languages, which are defined in Lua scripts. </p>
 <p> It&#8217;s easily possible to enhance highlight&#8217;s database of programming languages and colour themes. See the README file for details.</p>
 <h2>General options</h2>

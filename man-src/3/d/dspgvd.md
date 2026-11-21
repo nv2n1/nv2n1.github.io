@@ -1,5 +1,4 @@
 ---
-
 title: "dspgvd(3)"
 name: "dspgvd"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dspgvd/"
 description: "dspgvd.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dspgvd.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dspgvd</code> (ITYPE, JOBZ, UPLO, N, AP, BP, W, Z, LDZ, WORK, LWORK, IWORK, LIWORK, INFO)<br />
  <i></i><code>DSPGST</code></p>

@@ -1,5 +1,4 @@
 ---
-
 title: "memcached(3)"
 name: "memcached"
 section: "3"
@@ -10,6 +9,7 @@ description: "memcached – libmemcached Documentation"
 
 <h2>NAME</h2>
 <p> memcached &#8211; libmemcached Documentation</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached-1.0/memcached.h&gt;</p>
 <dl>
 <dt><code>LIBMEMCACHED</code></dt>
@@ -19,6 +19,7 @@ description: "memcached – libmemcached Documentation"
 </dd><dt><code>memcached_return_t libmemcached_check_configuration(const char</code><i>&nbsp;<wbr>*option_string</i>, size_t<i>&nbsp;<wbr>length</i>, char<i>&nbsp;<wbr>*error_buffer</i>, size_t<i>&nbsp;<wbr>error_buffer_size</i>)</dt>
 <dd>
 <p> Compile and link with -lmemcached</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Libmemcached implements a custom language for configuring and modifying servers. By passing in an option string you can generate a <code>memcached_st</code> object that you can use in your application directly.</p>
 <dl>
 <dt><code>&#8211;SERVER=&lt;servername&gt;:&lt;optional_port&gt;/?&lt;optional_weight&gt;</code></dt>

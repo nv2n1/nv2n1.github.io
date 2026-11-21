@@ -1,5 +1,4 @@
 ---
-
 title: "doveadm-log(1)"
 name: "doveadm-log"
 section: "1"
@@ -10,10 +9,12 @@ description: "doveadm-log – Locate, test or reopen Dovecot’s log files"
 
 <h2>NAME</h2>
 <p> doveadm-log &#8211; Locate, test or reopen Dovecot&#8217;s log files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>doveadm</code> [<code>-Dv</code>] <code>log errors</code> [<code>-s</code> <i>min_timestamp</i>]<br />
  <code>doveadm</code> [<code>-Dv</code>] <code>log find</code> [<i>directory</i>]<br />
  <code>doveadm</code> [<code>-Dv</code>] <code>log reopen</code><br />
  <code>doveadm</code> [<code>-Dv</code>] <code>log test</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>doveadm log</code> <i>commands</i> are used to locate and reopen the log files of <code><a href="/docs/linux/man/1-dovecot/">dovecot</a></code>(1). It&#8217;s also possible to test the configured targets of the <i>*log_path</i> settings.</p>
 <h2>OPTIONS</h2>
 <p> Global <code><a href="/docs/linux/man/1-doveadm/">doveadm</a></code>(1) <i>options</i>:</p>

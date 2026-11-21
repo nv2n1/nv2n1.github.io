@@ -1,5 +1,4 @@
 ---
-
 title: "memcached_strerror(3)"
 name: "memcached_strerror"
 section: "3"
@@ -10,11 +9,13 @@ description: "memcached_strerror – libmemcached Documentation"
 
 <h2>NAME</h2>
 <p> memcached_strerror &#8211; libmemcached Documentation</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
 <dt><code>const char * memcached_strerror(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, memcached_return_t<i>&nbsp;<wbr>rc</i>)</dt>
 <dd>
 <p> Compile and link with -lmemcached</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <i>memcached_strerror()</i> takes a <code>memcached_return_t</code> value and returns a string describing the error. </p>
 <p> This string must not be modified by the application. </p>
 <p> <code>memcached_return_t</code> values are returned from nearly all <a href="/docs/linux/man/3-libmemcached/">libmemcached</a>(3) functions. </p>

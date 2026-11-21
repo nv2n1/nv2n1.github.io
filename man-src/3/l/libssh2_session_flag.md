@@ -1,5 +1,4 @@
 ---
-
 title: "libssh2_session_flag(3)"
 name: "libssh2_session_flag"
 section: "3"
@@ -11,9 +10,13 @@ url: "/docs/linux/man/3-libssh2_session_flag/"
 
  libssh2_session_flag - TODO
 
-int libssh2_session_flag(LIBSSH2_SESSION *session, int flag, int value);
+<h2>SYNOPSIS</h2>
 
-Set options for the created session. <i>flag</i> is the option to set, while <i>value</i> is typically set to 1 or 0 to enable or disable the option.
+ int libssh2_session_flag(LIBSSH2_SESSION *session, int flag, int value);
+
+<h2>DESCRIPTION</h2>
+
+ Set options for the created session. <i>flag</i> is the option to set, while <i>value</i> is typically set to 1 or 0 to enable or disable the option.
 
 <h2>FLAGS</h2>
 

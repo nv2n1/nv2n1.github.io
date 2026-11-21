@@ -1,5 +1,4 @@
 ---
-
 title: "cgiwrap_write(3)"
 name: "cgiwrap_write"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cgiwrap_write/"
 description: "cgiwrap_write – wrapper for the fwrite(stdout)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cgiwrap_write &#8211; wrapper for the fwrite(stdout) </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cgi/cgiwrap.h&gt;
 </code></pre>
@@ -17,6 +19,7 @@ NEOERR *cgiwrap_write(const char *buf, int buf_len);
 <h2>ARGUMENTS</h2>
 <p> buf &#8211; a character buffer<br />
  buf_len &#8211; the length of the buffer in buf </p>
+<h2>DESCRIPTION</h2>
 <p> cgiwrap_write is the block data output function for cgiwrap that replaces fwrite(stdout) in regular CGIs </p>
 <h2>RETURN VALUE</h2>
 <p> None </p>

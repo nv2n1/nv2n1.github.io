@@ -1,5 +1,4 @@
 ---
-
 title: "virt-list-filesystems(1)"
 name: "virt-list-filesystems"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-virt-list-filesystems/"
 description: "virt-list-filesystems – List filesystems in a virtual machine or disk image"
 ---
 
+<h2 class="name">NAME</h2>
+<p> virt-list-filesystems &#8211; List filesystems in a virtual machine or disk image </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 virt - list - filesystems[--options] domname virt - list - filesystems[--options] disk.img[disk.img...]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <tt>&quot;virt-list-filesystems&quot;</tt> is a command line tool to list the filesystems that are contained in a virtual machine or disk image. </p>
 <p> <tt>&quot;virt-list-filesystems&quot;</tt> is just a simple wrapper around <i>libguestfs</i>(3) functionality. For more complex cases you should look at the <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1) tool.</p>
 <h2>OPTIONS</h2>

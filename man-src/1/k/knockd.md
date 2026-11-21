@@ -1,5 +1,4 @@
 ---
-
 title: "knockd(1)"
 name: "knockd"
 section: "1"
@@ -10,7 +9,9 @@ description: "knockd – port-knock server"
 
 <h2>NAME</h2>
 <p> knockd &#8211; port-knock server</p>
+<h2>SYNOPSIS</h2>
 <p> <code>knockd [options]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>knockd</code> is a <i>port-knock</i> server. It listens to all traffic on an ethernet (or PPP) interface, looking for special &quot;knock&quot; sequences of port-hits. A client makes these port-hits by sending a TCP (or UDP) packet to a port on the server. This port need not be open &#8212; since knockd listens at the link-layer level, it sees all traffic even if it&#8217;s destined for a closed port. When the server detects a specific sequence of port-hits, it runs a command defined in its configuration file. This can be used to open up holes in a firewall for quick access.</p>
 <h2>COMMANDLINE OPTIONS</h2>
 <dl>

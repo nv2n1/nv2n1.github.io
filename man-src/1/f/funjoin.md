@@ -1,5 +1,4 @@
 ---
-
 title: "funjoin(1)"
 name: "funjoin"
 section: "1"
@@ -10,6 +9,7 @@ description: "funjoin – join two or more FITS binary tables on specified colum
 
 <h2>NAME</h2>
 <p> <code>funjoin &#8211; join two or more FITS binary tables on specified columns</code></p>
+<h2>SYNOPSIS</h2>
 <p> funjoin [switches] &lt;ifile1&gt; &lt;ifile2&gt; &#8230; &lt;ifilen&gt; &lt;ofile&gt;</p>
 <h2>OPTIONS</h2>
 <pre><code>
@@ -25,6 +25,7 @@ description: "funjoin – join two or more FITS binary tables on specified colum
   -S col               # add col as status column
   -t tol               # tolerance for joining numeric cols [2 files only]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>funjoin</code> joins rows from two or more (up to 32) <font SIZE="-1">FITS</font> Binary Table files, based on the values of specified join columns in each file. <font SIZE="-1">NB:</font> the join columns must have an index file associated with it. These files are generated using the <code>funindex</code> program. </p>
 <p> The first argument to the program specifies the first input <font SIZE="-1">FITS</font> table or raw event file. If &#8220;stdin&#8221; is specified, data are read from the standard input. Subsequent arguments specify additional event files and tables to join. The last argument is the output <font SIZE="-1">FITS</font> file. </p>
 <p> <font SIZE="-1">NB:</font> Do <code>not</code> use Funtools Bracket Notation to specify <font SIZE="-1">FITS</font> extensions and row filters when running funjoin or you will get wrong results. Rows are accessed and joined using the index files directly, and this bypasses all filtering. </p>

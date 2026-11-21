@@ -1,5 +1,4 @@
 ---
-
 title: "fulla(1)"
 name: "fulla"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-fulla/"
 description: "fulla – Correct lens distortion, vignetting and chromatic aberration"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fulla &#8211; Correct lens distortion, vignetting and chromatic aberration </p>
+<h2>SYNOPSIS</h2>
 <p> <code>fulla</code> [options] <i>inputfile(s)</i></p>
+<h2>DESCRIPTION</h2>
 <p> Apply radial or flat-field vignetting correction as well as geometrical radial distortion and transversal chromatic aberration correction. </p>
 <p> fulla can be used to batch correct a large number of files. Radial distortion coefficients can be read from a PTLens database (only database version 4.2 is supported). </p>
 <p> Vignetting correction is done the same way as described in the nona script file documentation. Vignetting correction can be done based on a flat-field or a radial scaling. </p>

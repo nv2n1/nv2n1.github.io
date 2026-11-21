@@ -1,5 +1,4 @@
 ---
-
 title: "link(2)"
 name: "link"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-link/"
 description: "link, linkat – make a new name for a file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> link, linkat &#8211; make a new name for a file </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;unistd.h&gt;
 int link(const char *oldpath, const char *newpath);
@@ -25,6 +27,7 @@ int linkat(int olddirfd, const char *oldpath,
 <dt>Before glibc 2.10:</dt>
 <dd> _ATFILE_SOURCE</dd></dl>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> <code>link</code>() creates a new link (also known as a hard link) to an existing file. </p>
 <p> If <i>newpath</i> exists, it will <i>not</i> be overwritten. </p>
 <p> This new name may be used exactly as the old one for any operation; both names refer to the same file (and so have the same permissions and ownership) and it is impossible to tell which name was the &quot;original&quot;.</p>

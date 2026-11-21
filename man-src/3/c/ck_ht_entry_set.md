@@ -1,5 +1,4 @@
 ---
-
 title: "ck_ht_entry_set(3)"
 name: "ck_ht_entry_set"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_ht_entry_set – initialize a key-value pair"
 <p> <code>ck_ht_entry_set</code> &#8211; initialize a key-value pair</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_ht.h Ft void Fn ck_ht_entry_set ck_ht_entry_t *entry ck_ht_hash_t h const void *key uint16_t key_length const void *value</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_ht_entry_set function will initialize the object pointed to by Fa entry with a key pointed to by the Fa key argument and a value pointed to by the Fa value argument. The length of the key is specified by Fa key_length. The maximum value of Fa key_length is defined by the CK_HT_KEY_LENGTH macro. This function is typically used to initialize an entry for ck_ht_set_spmc3 and ck_ht_put_spmc3 operations. It is expected that the entry will be associated with a hash table initialized with <code>CK_HT_MODE_BYTESTRING</code> (see ck_ht_init3 for more information).</p>
 <h2>RETURN VALUES</h2>
 <p> Fn ck_ht_entry_set has no return value.</p>

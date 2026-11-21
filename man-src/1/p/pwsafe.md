@@ -1,5 +1,4 @@
 ---
-
 title: "pwsafe(1)"
 name: "pwsafe"
 section: "1"
@@ -10,7 +9,9 @@ description: "pwsafe – commandline password database utility compatible with C
 
 <h2>NAME</h2>
 <p> pwsafe &#8211; commandline password database utility compatible with Counterpane&#8217;s Passwordsafe</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pwsafe</code> [options] command [arg]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pwsafe</code> manipulates Counterpane Passwordsafe username/password databases. </p>
 <p> It is compatible with Counterpane Passwordsafe 1.9.x and 2.0 databases.</p>
 <h2>COMMANDS</h2>

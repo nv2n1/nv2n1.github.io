@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_rdf_address_reverse(3)"
 name: "ldns_rdf_address_reverse"
 section: "3"
@@ -10,10 +9,12 @@ description: "ldns_rdf_address_reverse"
 
 <h2>NAME</h2>
 <p> ldns_rdf_address_reverse </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
 <p> ldns_rdf* ldns_rdf_address_reverse(ldns_rdf *rd); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_rdf_address_reverse</i>()</dt>
 <dd>reverses an rdf, only actually useful for AAAA and A records. The returned rdf has the type LDNS_RDF_TYPE_DNAME! .br <code>*rd</code>: rdf to be reversed .br Returns the reversed rdf (a newly created rdf)</dd></dl>

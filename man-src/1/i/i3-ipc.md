@@ -1,5 +1,4 @@
 ---
-
 title: "i3-ipc(1)"
 name: "i3-ipc"
 section: "1"
@@ -10,7 +9,9 @@ description: "i3-ipc — inter-process communication with i3"
 
 <h2>NAME</h2>
 <p> <code>i3-ipc</code> &#8212; inter-process communication with i3</p>
+<h2>SYNOPSIS</h2>
 <p> <code>i3-ipc</code> [<code>-s</code>] [<code>-t type</code>] [<code>-p</code>] [<code>-j</code>] [<code>-q</code>] [<code>message</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>i3-ipc</code> can be used to communicate with i3, the improved tiling window manager, through the provided ipc socket. Useful for scripting the window manager. Currently implemented message types of i3 are the following:</p>
 <dl>
 <dt><code>0 (COMMAND)</code></dt>

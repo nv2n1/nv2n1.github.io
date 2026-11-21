@@ -1,5 +1,4 @@
 ---
-
 title: "pssegyz(1)"
 name: "pssegyz"
 section: "1"
@@ -10,8 +9,10 @@ description: "pssegyz – Create imagemasked postscript from SEGY file"
 
 <h2>NAME</h2>
 <p> pssegyz &#8211; Create imagemasked postscript from SEGY file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pssegyz</code> <i>SEGYfile</i> <i>parameters</i> <code>z</code>|<code>Z</code><i>parameters</i> <i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[/<i>zmin</i>/<i>zmax</i>][<code>r</code>] <i>deviation</i> [<i>color</i>] <code>-W</code> [ <i>clip</i> ] [ ] [ ] [ <i>nsamp</i> ] [ <i>ntrace</i> ] [ ] [ ] [ ] [ <i>&lt;mode&gt;&lt;value&gt;</i> ] [ <i>header_x</i>/<i>header_y</i> ] [ [<i>just</i>/<i>dx</i>/<i>dy</i>/][<code>c</code>|<i>label</i>] ] [ [<i>level</i>] ] [ <i>x_offset</i> ] [ <i>y_offset</i> ] [ ] [ <code>-p</code><i>&lt;flags&gt;</i> ] [ <code>-t</code><i>&lt;transp&gt;</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pssegyz</code> reads a native (IEEE) format SEGY file and produces a PostScript image of the seismic data. The <i>imagemask</i> operator is used so that the seismic data are plotted as a 1-bit deep bitmap in a single (user-specified) color or gray shade, with a transparent background. The bitmap resolution is taken from the current GMT defaults. The seismic traces may be plotted at their true locations using information in the trace headers (in which case order of the traces in the file is not significant). Standard GMT geometry routines are used so that in principle any map projection may be used, however it is likely that the geographic projections will lead to unexpected results. Beware that a couple of the options for <code>pssegy</code> are not available in <code>pssegyz</code>. </p>
 <p> Note that the order of operations before the seismic data are plotted is deviation*[clip]([bias]+[normalize](sample value)). Deviation determines how far <i>in the plot coordinates</i> a [normalized][biased][clipped] sample value of 1 plots from the trace location. </p>
 <p> The SEGY file should be a disk image of the tape format (i.e., 3200 byte text header, which is ignored, 400 byte binary reel header, and 240 byte header for each trace) with samples as native real*4 (IEEE real on all the platforms to which I have access).</p>

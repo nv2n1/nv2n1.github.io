@@ -1,5 +1,4 @@
 ---
-
 title: "virt-alignment-scan(1)"
 name: "virt-alignment-scan"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-virt-alignment-scan/"
 description: "virt-alignment-scan – Check alignment of virtual machine partitions"
 ---
 
+<h2 class="name">NAME</h2>
+<p> virt-alignment-scan &#8211; Check alignment of virtual machine partitions </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 virt - alignment - scan[--options] - d domname virt - alignment - scan[--options] - a disk.img[-a disk.img...] virt - alignment - scan[--options]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> When older operating systems install themselves, the partitioning tools place partitions at a sector misaligned with the underlying storage (commonly the first partition starts on sector <tt>63</tt>). Misaligned partitions can result in an operating system issuing more I/O than should be necessary. </p>
 <p> The virt-alignment-scan tool checks the alignment of partitions in virtual machines and disk images and warns you if there are alignment problems. </p>
 <p> Currently there is no virt tool for fixing alignment problems. You can only reinstall the guest operating system. The following NetApp document summarises the problem and possible solutions: <a rel="nofollow" href="http://media.netapp.com/documents/tr-3747.pdf">http://media.netapp.com/documents/tr-3747.pdf</a></p>

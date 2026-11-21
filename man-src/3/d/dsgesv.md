@@ -1,5 +1,4 @@
 ---
-
 title: "dsgesv(3)"
 name: "dsgesv"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dsgesv/"
 description: "dsgesv.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dsgesv.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dsgesv</code> (N, NRHS, A, LDA, IPIV, B, LDB, X, LDX, WORK, SWORK, ITER, INFO)<br />
  <i></i><code> DSGESV computes the solution to system of linear equations A * X = B for GE matrices</code> (mixed precision with iterative refinement)</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "mwm(1)"
 name: "mwm"
 section: "1"
@@ -10,7 +9,9 @@ description: "mwm — The Motif Window Manager"
 
 <h2>NAME</h2>
 <p> <code>mwm</code> &#8212; The Motif Window Manager</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mwm</code> [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>mwm</code> window manager provides functions that facilitate control (by the user and the programmer) of elements of window state such as placement, size, icon/normal display, and input-focus ownership. </p>
 <p> The stand-alone window manager is not an integral part of CDE and does not support communication with other components in the CDE environment, such as the Style Manager and the Session Manager.</p>
 <h3>Options</h3>

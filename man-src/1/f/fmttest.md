@@ -1,5 +1,4 @@
 ---
-
 title: "fmttest(1)"
 name: "fmttest"
 section: "1"
@@ -9,8 +8,10 @@ url: "/docs/linux/man/1-fmttest/"
 
 <h2>FMTTEST</h2>
 <p> fmttest &#8211; test tool for the <i><a href="/docs/linux/man/5-mh-format/">mh-format</a></i>(5) language</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>fmttest</code> [<code>-form</code> <i>formatfile</i>] [<code>-format</code> <i>formatstring</i>] [<code>-address</code> | <code>-raw</code> | <code>-date</code> | <code>-message</code>] [<code>-file</code> | <code>-nofile</code>] [<code>&#8211;component</code> <i>component-text</i>] [<code>-dupaddrs</code> | <code>-nodupaddrs</code>] [<code>-ccme</code> | <code>-noccme</code>] [<code>-outsize</code> <i>size-in-characters</i>] [<code>-bufsize</code> <i>size-in-bytes</i>] [<code>-width</code> <i>column-width</i>] [<code>-msgnum</code> <i>number</i>] [<code>-msgcur</code> <i>flag</i>] [<code>-msgsize</code> <i>size</i>] [<code>-unseen</code> <i>flag</i>] [<code>-dump</code> | <code>-nodump</code>] [<code>-trace</code> | <code>-notrace</code>] [<i>+folder</i>] [<i>msgs</i> | <i>strings</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>Fmttest</code></p>
 <dd>is used to test programs written for the <code>nmh</code> format language as specified by <i><a href="/docs/linux/man/5-mh-format/">mh-format</a></i>(5). It is also intended to replace the <code>ap</code>, <code>dp</code>, and <code>fmtdump</code> programs. </dd>
 <h3>FORMAT PROGRAM SELECTION</h3>

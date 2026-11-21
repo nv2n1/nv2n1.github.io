@@ -1,5 +1,4 @@
 ---
-
 title: "xcscope(1)"
 name: "xcscope"
 section: "1"
@@ -10,6 +9,7 @@ description: "xcscope.el – xemacs cscope lisp support package"
 
 <h2>NAME</h2>
 <p> xcscope.el &#8211; xemacs cscope lisp support package</p>
+<h2>DESCRIPTION</h2>
 <p> xcscope is a lisp package for use in integrating cscope functionality into xemacs</p>
 <h2>INSTALLATION</h2>
 <p>&nbsp;<wbr>Installation steps: </p>

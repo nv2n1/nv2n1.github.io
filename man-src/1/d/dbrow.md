@@ -1,5 +1,4 @@
 ---
-
 title: "dbrow(1)"
 name: "dbrow"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dbrow/"
 description: "dbrow – select rows from an Fsdb file based on arbitrary conditions"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dbrow &#8211; select rows from an Fsdb file based on arbitrary conditions </p>
+<h2>SYNOPSIS</h2>
 <p> dbrow [-vw] <font SIZE="-1">CONDITION</font> [<font SIZE="-1">CONDITION&#8230;</font>]</p>
+<h2>DESCRIPTION</h2>
 <p> Select rows for which all <font SIZE="-1">CONDITIONS</font> are true. Conditions are specified as Perl code, in which column names are be embedded, preceded by underscores.</p>
 <h2>OPTIONS</h2>
 <dl>

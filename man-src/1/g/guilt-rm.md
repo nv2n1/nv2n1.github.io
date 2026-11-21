@@ -1,5 +1,4 @@
 ---
-
 title: "guilt-rm(1)"
 name: "guilt-rm"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-guilt-rm/"
 description: "guilt-rm – Remove a file from the git tree and guilt"
 ---
 
+<h2 class="name">NAME</h2>
+<p> guilt-rm &#8211; Remove a file from the git tree and guilt </p>
+<h2>SYNOPSIS</h2>
 <p> <i>guilt-rm</i> &lt;file&gt;&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Removes the files specified from git using git-rm</p>
 <h2>OPTIONS</h2>
 <p> &lt;files&gt;</p>

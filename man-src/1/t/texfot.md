@@ -1,5 +1,4 @@
 ---
-
 title: "texfot(1)"
 name: "texfot"
 section: "1"
@@ -7,11 +6,18 @@ letter: "t"
 url: "/docs/linux/man/1-texfot/"
 ---
 
-texfot - run TeX, filtering online transcript for interesting messages 
+<h2 class="name">NAME</h2>
+ 
 
-texfot [<i>option</i>]... <i>texcmd</i> [<i>texarg</i>...]
+ texfot - run TeX, filtering online transcript for interesting messages 
 
-<tt>&quot;texfot&quot;</tt> invokes <i>texcmd</i> with the given <i>texarg</i> arguments, filtering the online output for ``interesting'' messages. Its exit value is that of <i>texcmd</i>. Examples: 
+<h2>SYNOPSIS</h2>
+
+ texfot [<i>option</i>]... <i>texcmd</i> [<i>texarg</i>...]
+
+<h2>DESCRIPTION</h2>
+
+ <tt>&quot;texfot&quot;</tt> invokes <i>texcmd</i> with the given <i>texarg</i> arguments, filtering the online output for ``interesting'' messages. Its exit value is that of <i>texcmd</i>. Examples: 
 
  <pre>
   # Sample basic invocation:

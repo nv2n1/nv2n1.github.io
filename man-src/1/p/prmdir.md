@@ -1,5 +1,4 @@
 ---
-
 title: "prmdir(1)"
 name: "prmdir"
 section: "1"
@@ -10,7 +9,9 @@ description: "prmdir – remove an empty directory"
 
 <h2>NAME</h2>
 <p> prmdir &#8211; remove an empty directory </p>
+<h2>SYNOPSIS</h2>
 <p> <code>prmdir</code> [-h] [-d <i>LEVEL</i>] [-p <i>DEVNAME</i>] <i>DIRECTORY</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>prm</code> removes an empty directory on a device connected through SynCE. </p>
 <p> Forward slashes (&#8216;/&#8217;) on the command line are converted to backward slashes (&#8216;\&#8217;). </p>
 <h2>OPTIONS</h2>

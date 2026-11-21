@@ -1,5 +1,4 @@
 ---
-
 title: "set_show_service(1)"
 name: "set_show_service"
 section: "1"
@@ -10,7 +9,9 @@ description: "set_show_service – enable or disable a service for the current u
 
 <h2>NAME</h2>
 <p> set_show_service &#8211; enable or disable a service for the current user</p>
+<h2>SYNOPSIS</h2>
 <p> <code>set_show_service [&#8211;enable &lt;service&gt;] [&#8211;disable &lt;service&gt;]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>set_show_service</code> enables or disables the display of a specified service item.</p>
 <h2>OPTIONS</h2>
 <dl>

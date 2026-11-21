@@ -1,5 +1,4 @@
 ---
-
 title: "pmempool-convert(1)"
 name: "pmempool-convert"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmempool-convert – Convert pool files from old layout versions t
 
 <h2>NAME</h2>
 <p> pmempool-convert &#8211; Convert pool files from old layout versions to the newest one.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pmempool convert</code> &lt;file&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>pmempool</code> invoked with the <code>convert</code> command performs a conversion of the specified pool to the newest layout supported by this tool. Currently only <code>libpmemobj(3)</code> pools are supported. It is advised to have a backup of the pool before conversion. The conversion process is not fail-safe &#8211; power interruption may damage the pool.</p>
 <h2>EXAMPLES</h2>
 <dl>

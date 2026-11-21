@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_rr_dnskey_protocol(3)"
 name: "ldns_rr_dnskey_protocol"
 section: "3"
@@ -10,6 +9,7 @@ description: "ldns_rr_dnskey_flags, ldns_rr_dnskey_set_flags, ldns_rr_dnskey_pro
 
 <h2>NAME</h2>
 <p> ldns_rr_dnskey_flags, ldns_rr_dnskey_set_flags, ldns_rr_dnskey_protocol, ldns_rr_dnskey_set_protocol, ldns_rr_dnskey_algorithm, ldns_rr_dnskey_set_algorithm, ldns_rr_dnskey_key, ldns_rr_dnskey_set_key </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -21,6 +21,7 @@ description: "ldns_rr_dnskey_flags, ldns_rr_dnskey_set_flags, ldns_rr_dnskey_pro
 <p> bool ldns_rr_dnskey_set_algorithm(ldns_rr *r, ldns_rdf *f); </p>
 <p> ldns_rdf* ldns_rr_dnskey_key(const ldns_rr *r); </p>
 <p> bool ldns_rr_dnskey_set_key(ldns_rr *r, ldns_rdf *f); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_rr_dnskey_flags</i>()</dt>
 <dd>returns the flags of a LDNS_RR_TYPE_DNSKEY rr .br <code>r</code>: the resource record .br Returns a ldns_rdf* with the flags or NULL on failure</dd></dl>

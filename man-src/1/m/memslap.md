@@ -1,5 +1,4 @@
 ---
-
 title: "memslap(1)"
 name: "memslap"
 section: "1"
@@ -10,7 +9,9 @@ description: "memslap – libmemcached Documentation"
 
 <h2>NAME</h2>
 <p> memslap &#8211; libmemcached Documentation</p>
+<h2>SYNOPSIS</h2>
 <p> memslap [options]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>memslap</code> is a load generation and benchmark tool for <a href="/docs/linux/man/1-memcached/">memcached</a>(1) servers. It generates configurable workload such as threads, concurrencies, connections, run time, overwrite, miss rate, key size, value size, get/set proportion, expected throughput, and so on.</p>
 <h2>OPTIONS</h2>
 <p> You can specify servers via the option:</p>

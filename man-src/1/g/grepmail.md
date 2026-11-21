@@ -1,5 +1,4 @@
 ---
-
 title: "grepmail(1)"
 name: "grepmail"
 section: "1"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/1-grepmail/"
 description: "grepmail – search mailboxes for mail matching a regular expression"
 ---
 
+<h2 class="name">NAME</h2>
+<p> grepmail &#8211; search mailboxes for mail matching a regular expression </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 grepmail[--help | --version][-abBDFhHilLmrRuvVw][-C&lt;cache - file&gt;]
         [-j&lt;status&gt;][-s&lt;sizespec&gt;][-d&lt;date - specification&gt;]
         [-X&lt;signature - pattern&gt;][-Y&lt;header - pattern&gt;]
         [[-e]&lt;pattern&gt; | -E&lt;expr&gt; | -f&lt;pattern - file&gt;]&lt;files...&gt;
 </code></pre>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt>
 </dt><dd> <i>grepmail</i> looks for mail messages containing a pattern, and prints the resulting messages on standard out. </dd>

@@ -1,5 +1,4 @@
 ---
-
 title: "owncloud(1)"
 name: "owncloud"
 section: "1"
@@ -10,7 +9,9 @@ description: "owncloud – File synchronisation desktop utility."
 
 <h2>NAME</h2>
 <p> owncloud &#8211; File synchronisation desktop utility.</p>
+<h2>SYNOPSIS</h2>
 <p> <i>owncloud</i> [<i>OPTIONS</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> The ownCloud Client is a file synchronization desktop utility. It synchronizes files on your local computer, tablet, or handheld device with an ownCloud Server. If you make a change to the files on one device, the change is propagated to all other synchronized devices using the desktop synchronization clients. </p>
 <p> Normally, you start the client by clicking on the desktop icon or by starting it from the client application menu. After starting, an ownCloud icon appears in the computer system tray or on your tablet or handheld device.</p>
 <h2>OPTIONS</h2>

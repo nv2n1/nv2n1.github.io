@@ -1,5 +1,4 @@
 ---
-
 title: "fswebcam(1)"
 name: "fswebcam"
 section: "1"
@@ -10,7 +9,9 @@ description: "fswebcam – Small and simple webcam for *nix."
 
 <h2>NAME</h2>
 <p> fswebcam &#8211; Small and simple webcam for *nix.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>fswebcam</code> [<i>&lt;options&gt;</i>] <i>&lt;filename&gt;</i> [[<i>&lt;options&gt;</i>] <i>&lt;filename&gt;</i> &#8230; ]</p>
+<h2>DESCRIPTION</h2>
 <p> fswebcam is a small and simple webcam app for *nix. It can capture images from a number of different sources and perform simple manipulation on the captured image. The image can be saved as one or more PNG or JPEG files. </p>
 <p> The PNG or JPEG image can be sent to stdio using the filename &quot;-&quot;. The output filename is formatted by <code>strftime</code>. </p>
 <h2>CONFIGURATION</h2>

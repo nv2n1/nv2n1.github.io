@@ -1,5 +1,4 @@
 ---
-
 title: "sqlrw(1)"
 name: "sqlrw"
 section: "1"
@@ -7,9 +6,14 @@ letter: "s"
 url: "/docs/linux/man/1-sqlrw/"
 ---
 
-sqlrw -- Reserved SQL words by standard and vendors. 
+<h2 class="name">NAME</h2>
+ 
 
-sqlrw [options] word 
+ sqlrw -- Reserved SQL words by standard and vendors. 
+
+<h2>SYNOPSIS</h2>
+
+ sqlrw [options] word 
 
  Options: 
 

@@ -1,5 +1,4 @@
 ---
-
 title: "pyjwt3(1)"
 name: "pyjwt3"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pyjwt3/"
 description: "pyjwt3 – Python implementation of JSON Web Token"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pyjwt3 &#8211; Python implementation of JSON Web Token </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pyjwt3</code> [<i>,options/</i>] &lt;command&gt; [<i>,options/</i>] <i>,input/</i></p>
+<h2>DESCRIPTION</h2>
 <p> Encodes or decodes JSON Web Tokens based on input</p>
 <h2>OPTIONS</h2>
 <dl>

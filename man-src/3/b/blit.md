@@ -1,5 +1,4 @@
 ---
-
 title: "blit(3)"
 name: "blit"
 section: "3"
@@ -10,8 +9,10 @@ description: "blit – Copies a rectangular area from one bitmap to another. All
 
 <h2>NAME</h2>
 <p> blit &#8211; Copies a rectangular area from one bitmap to another. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>void blit(BITMAP *source, BITMAP *dest, int source_x, int source_y,</code> <code>int dest_x, int dest_y, int width, int height);</code></p>
+<h2>DESCRIPTION</h2>
 <p> Copies a rectangular area of the source bitmap to the destination bitmap. The source_x and source_y parameters are the top left corner of the area to copy from the source bitmap, and dest_x and dest_y are the corresponding position in the destination bitmap. This routine respects the destination clipping rectangle, and it will also clip if you try to blit from areas outside the source bitmap. Example: </p>
 <pre><code>
 BITMAP *bmp;

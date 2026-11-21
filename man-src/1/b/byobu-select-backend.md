@@ -1,5 +1,4 @@
 ---
-
 title: "byobu-select-backend(1)"
 name: "byobu-select-backend"
 section: "1"
@@ -10,7 +9,9 @@ description: "byobu-select-backend – select your default Byobu backend window 
 
 <h2>NAME</h2>
 <p> byobu-select-backend &#8211; select your default Byobu backend window manager </p>
+<h2>SYNOPSIS</h2>
 <p> <code>byobu-select-backend</code> [screen|tmux] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>byobu-select-backend</code> is an application that lists the available Byobu backends and allows you to select your default. </p>
 <p> You can select one of either <code><a href="/docs/linux/man/1-screen/">screen</a></code>(1) or <code><a href="/docs/linux/man/1-tmux/">tmux</a></code>(1) on the command line, or giving no command line parameters, the utility will run interactively. </p>
 <p> This utility will only affect which backend is used by default when simply running, <code><a href="/docs/linux/man/1-byobu/">byobu</a></code>(1). Note that at any time, you can force the backend of a particular session by running the helpers, <code><a href="/docs/linux/man/1-byobu-screen/">byobu-screen</a></code>(1) or <code><a href="/docs/linux/man/1-byobu-tmux/">byobu-tmux</a></code>(1). </p>

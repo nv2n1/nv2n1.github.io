@@ -1,5 +1,4 @@
 ---
-
 title: "dcmqridx(1)"
 name: "dcmqridx"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-dcmqridx/"
 description: "dcmqridx – Register a DICOM image file in an image database index file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dcmqridx &#8211; Register a DICOM image file in an image database index file </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 dcmqridx[options] index - out[dcmfile - in...]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>dcmqridx</code> ulility registers DICOM image files in the database index file used by the <code>dcmqrscp</code> and <code>dcmqrti</code> applications. No image files are copied. <code>dcmqridx</code> can also list the contents of the database index file.</p>
 <h2>PARAMETERS</h2>
 <pre>

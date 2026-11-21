@@ -1,5 +1,4 @@
 ---
-
 title: "cgget(1)"
 name: "cgget"
 section: "1"
@@ -10,8 +9,10 @@ description: "cgget – print parameter(s) of given group(s)"
 
 <h2>NAME</h2>
 <p> cgget &#8211; print parameter(s) of given group(s) </p>
+<h2>SYNOPSIS</h2>
 <p> <code>cgget</code> [<code>-n</code>] [<code>-v</code>] [<code>-r</code> &lt;<i>name</i>&gt;] [<code>-g</code> &lt;<i>controller</i>&gt;] [<code>-a</code>] &lt;<code>path</code>&gt; &#8230;<br />
  <code>cgget</code> [<code>-n</code>] [<code>-v</code>] [<code>-r</code> &lt;<i>name</i>&gt;] <code>-g</code> &lt;<i>controller</i>&gt;:&lt;<code>path</code>&gt; &#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> Prints the parameter(s) of input cgroup(s). If neither controller nor variable are specified, the values of all possible variables are displayed. </p>
 <dl>
 <dt><code>&lt;path&gt;</code></dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "llvm-extract(1)"
 name: "llvm-extract"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-llvm-extract/"
 description: "llvm-extract – extract a function from an LLVM module"
 ---
 
+<h2 class="name">NAME</h2>
+<p> llvm-extract &#8211; extract a function from an LLVM module </p>
+<h2>SYNOPSIS</h2>
 <p> <code>llvm-extract</code> [<i>options</i>] <code>&#8211;func</code> <i>function-name</i> [<i>filename</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>llvm-extract</code> command takes the name of a function and extracts it from the specified <font SIZE="-1">LLVM</font> bitcode file. It is primarily used as a debugging tool to reduce test cases from larger programs that are triggering a bug. </p>
 <p> In addition to extracting the bitcode of the specified function, <code>llvm-extract</code> will also remove unreachable global variables, prototypes, and unused types. </p>
 <p> The <code>llvm-extract</code> command reads its input from standard input if filename is omitted or if filename is -. The output is always written to standard output, unless the <code>-o</code> option is specified (see below).</p>

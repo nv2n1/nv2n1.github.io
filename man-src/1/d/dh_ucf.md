@@ -1,5 +1,4 @@
 ---
-
 title: "dh_ucf(1)"
 name: "dh_ucf"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dh_ucf/"
 description: "dh_ucf – register configuration files with ucf"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dh_ucf &#8211; register configuration files with ucf </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dh_ucf</code> [<i>debhelper options</i>] [<code>-A</code>] [<code>-n</code>] [<i>file</i> &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>dh_ucf</code> is a debhelper program that is responsible for generating the <i>postinst</i> and <i>postrm</i> commands that register files with <i><a href="/docs/linux/man/1-ucf/">ucf</a></i>(1) and <i><a href="/docs/linux/man/1-ucfr/">ucfr</a></i>(1).</p>
 <h2>FILES</h2>
 <dl>

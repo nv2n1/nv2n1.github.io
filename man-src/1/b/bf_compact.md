@@ -1,5 +1,4 @@
 ---
-
 title: "bf_compact(1)"
 name: "bf_compact"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-bf_compact/"
 description: "bf_compact – shell script to compact a bogofilter directory"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bf_compact &#8211; shell script to compact a bogofilter directory </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>bf_compact</code> <i>bogofilter_directory</i> [<i>wordlist_name</i>&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>bf_compact</code></p>
 <dd>creates a more compact bogofilter working directory with a dump/load cycle and renames the previous <i>bogofilter_directory</i> to <i>bogofilter_directory</i>.old. </dd>
 <p> Note: <code>bf_compact</code> cannot be used to process the current working directory, &quot;.&quot;, because that cannot be renamed. </p>

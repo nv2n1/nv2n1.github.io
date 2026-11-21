@@ -1,5 +1,4 @@
 ---
-
 title: "antlr3-emit(3)"
 name: "antlr3-emit"
 section: "3"
@@ -8,7 +7,10 @@ url: "/docs/linux/man/3-antlr3-emit/"
 description: "src/antlr3lexer.c –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> src/antlr3lexer.c &#8211; </p>
 <p> Base implementation of an antlr 3 lexer.</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/antlr3lexer.h">antlr3lexer.h</a>&gt; </p>
 <h3>Functions</h3>
 <p> ANTLR3_API <code>pANTLR3_LEXER</code> <code>antlr3LexerNew</code> (<code>ANTLR3_UINT32</code> sizeHint, <code>pANTLR3_RECOGNIZER_SHARED_STATE</code> state) </p>

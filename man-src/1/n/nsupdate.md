@@ -1,5 +1,4 @@
 ---
-
 title: "nsupdate(1)"
 name: "nsupdate"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-nsupdate/"
 description: "nsupdate – dynamic DNS update utility"
 ---
 
+<h2 class="name">NAME</h2>
+<p> nsupdate &#8211; dynamic DNS update utility </p>
+<h2>SYNOPSIS</h2>
 <p> <code>nsupdate</code> [<code>-d</code>] [<code>-D</code>] [<code>-i</code>] [<code>-L</code> level] [ [<code>-g</code>] | [<code>-o</code>] | [<code>-l</code>] | [<code>-y</code> [hmac:]keyname:secret] | [<code>-k</code> keyfile] ] [<code>-t</code> timeout] [<code>-u</code> udptimeout] [<code>-r</code> udpretries] [<code>-v</code>] [<code>-T</code>] [<code>-P</code>] [<code>-V</code>] [ [<code>-4</code>] | [<code>-6</code>] ] [filename]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>nsupdate</code> is used to submit Dynamic DNS Update requests, as defined in <i>RFC 2136</i>, to a name server. This allows resource records to be added or removed from a zone without manually editing the zone file. A single update request can contain requests to add or remove more than one resource record. </p>
 <p> Zones that are under dynamic control via <code>nsupdate</code> or a DHCP server should not be edited by hand. Manual edits could conflict with dynamic updates and cause data to be lost. </p>
 <p> The resource records that are dynamically added or removed with <code>nsupdate</code> must be in the same zone. Requests are sent to the zone&#8217;s primary server, which is identified by the MNAME field of the zone&#8217;s SOA record. </p>

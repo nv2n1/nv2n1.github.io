@@ -1,5 +1,4 @@
 ---
-
 title: "bson_oid_equal(3)"
 name: "bson_oid_equal"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_oid_equal() – Checks if two bson_oid_t contain the same byt
 
 <h2>NAME</h2>
 <p> bson_oid_equal() &#8211; Checks if two bson_oid_t contain the same bytes.</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 bool bson_oid_equal(const bson_oid_t *oid1,
                     const bson_oid_t *oid2);
@@ -21,6 +21,7 @@ bool bson_oid_equal(const bson_oid_t *oid1,
 <dl>
 <dt><code>oid2</code></dt>
 <dd> A <code>bson_oid_t</code> \&amp;.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Checks if two bson_oid_t contain the same bytes. </p>
 <h2>RETURNS</h2>
 <p> true if they are equal, otherwise false. </p>

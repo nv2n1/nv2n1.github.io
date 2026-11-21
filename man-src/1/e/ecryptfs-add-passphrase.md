@@ -1,5 +1,4 @@
 ---
-
 title: "ecryptfs-add-passphrase(1)"
 name: "ecryptfs-add-passphrase"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-ecryptfs-add-passphrase/"
 description: "ecryptfs-add-passphrase – add an eCryptfs mount passphrase to the kernel keyring."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ecryptfs-add-passphrase &#8211; add an eCryptfs mount passphrase to the kernel keyring.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ecryptfs-add-passphrase</code> [&#8211;fnek] </p>
 <p> printf &quot;%s&quot; &quot;passphrase&quot; | <code>ecryptfs-add-passphrase</code> [&#8211;fnek] &#8211; </p>
+<h2>DESCRIPTION</h2>
 <p> <code>ecryptfs-add-passphrase</code> is a utility to manually add a passphrase to the kernel keyring. </p>
 <p> If the &#8211;fnek option is specified, the filename encryption key associated with the input passphrase will also be added to the keyring. </p>
 <h2>SEE ALSO</h2>

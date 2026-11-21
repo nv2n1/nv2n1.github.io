@@ -1,5 +1,4 @@
 ---
-
 title: "mate-session(1)"
 name: "mate-session"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mate-session/"
 description: "mate-session – Start the MATE Desktop Environment."
 ---
 
+<h2 class="name">NAME</h2>
+<p> mate-session &#8211; Start the MATE Desktop Environment. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mate-session [OPTIONS]</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>mate-session</code> program starts up the MATE desktop environment. This command is typically executed by your Login/Display Manager (like GDM, LXDM, XDM, SLiM, or from your X startup scripts like .xinitrc). It will load either your saved session, or it will provide a default session for the user as defined by the system administrator (or the default MATE installation on your system). </p>
 <p> The default session is defined in the dconf keys under <code>/</code><i>org</i><code>/</code><i>mate</i><code>/</code><i>desktop</i><code>/</code><i>session</i><code>/</code><br />
  When saving a session, <code>mate-session</code> saves the currently running applications in the <code>~/.config/mate-session/saved-session</code> directory of the users /home. </p>

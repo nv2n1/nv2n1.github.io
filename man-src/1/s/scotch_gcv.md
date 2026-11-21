@@ -1,5 +1,4 @@
 ---
-
 title: "scotch_gcv(1)"
 name: "scotch_gcv"
 section: "1"
@@ -10,9 +9,11 @@ description: "gcv – graph file converter"
 
 <h2>NAME</h2>
 <p> <code>gcv </code>&#8211; graph file converter</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 gcv[options][igfile][ogfile][oxfile]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>gcv</code> program converts Scotch graph files from and to other external file formats. </p>
 <p> File <i>igfile</i> is converted into graph file <i>ogfile</i>, with optional geometry data being put in geometry file <i>oxfile</i>, if it is available. </p>
 <p> When file names are not specified, data is read from standard input and written to standard output. Standard streams can also be explicitly represented by a dash &#8216;-&#8216;. </p>

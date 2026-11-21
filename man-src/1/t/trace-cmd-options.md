@@ -1,5 +1,4 @@
 ---
-
 title: "trace-cmd-options(1)"
 name: "trace-cmd-options"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-trace-cmd-options/"
 description: "trace-cmd-options – list available options from trace-cmd plugins"
 ---
 
+<h2 class="name">NAME</h2>
+<p> trace-cmd-options &#8211; list available options from trace-cmd plugins </p>
+<h2>SYNOPSIS</h2>
 <p> <code>trace-cmd options</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <a href="/docs/linux/man/1-trace-cmd/">trace-cmd</a>(1) options command will examine all the trace-cmd plugins that are used by <code>trace-cmd <a href="/docs/linux/man/1-report/">report</a>(1)</code> and list them.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-trace-cmd/">trace-cmd</a>(1), <a href="/docs/linux/man/1-trace-cmd-record/">trace-cmd-record</a>(1), <a href="/docs/linux/man/1-trace-cmd-start/">trace-cmd-start</a>(1), <a href="/docs/linux/man/1-trace-cmd-stop/">trace-cmd-stop</a>(1), <a href="/docs/linux/man/1-trace-cmd-extract/">trace-cmd-extract</a>(1), <a href="/docs/linux/man/1-trace-cmd-reset/">trace-cmd-reset</a>(1), <a href="/docs/linux/man/1-trace-cmd-split/">trace-cmd-split</a>(1), <a href="/docs/linux/man/1-trace-cmd-list/">trace-cmd-list</a>(1), <a href="/docs/linux/man/1-trace-cmd-listen/">trace-cmd-listen</a>(1)</p>

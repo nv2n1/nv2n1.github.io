@@ -1,5 +1,4 @@
 ---
-
 title: "flatpak-repo(1)"
 name: "flatpak-repo"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-flatpak-repo/"
 description: "flatpak-repo – Show information about a local repository"
 ---
 
+<h2 class="name">NAME</h2>
+<p> flatpak-repo &#8211; Show information about a local repository </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak repo</code> [OPTION&#8230;] LOCATION</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>Show information about a local repository. </dd>
 <p> If you need to modify a local repository, see the <code>flatpak build-update-repo</code> command, or use the <code>ostree</code> tool.</p>
 <h2>OPTIONS</h2>

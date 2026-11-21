@@ -1,5 +1,4 @@
 ---
-
 title: "otp2ocp(1)"
 name: "otp2ocp"
 section: "1"
@@ -10,7 +9,9 @@ description: "otp2ocp – convert Omega Translation Process files to Omega Compi
 
 <h2>NAME</h2>
 <p> otp2ocp &#8211; convert Omega Translation Process files to Omega Compiled Process files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>otp2ocp</code> <i>OTPFILE</i>[<i></i><code>.otp</code>] [<i>OCPFILE</i>[<i></i><code>.ocp</code>]]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>otp2ocp</code> is used to create or recreate Omega Compiled Process files (binary) from Omega Translation Process (text) files. </p>
 <p> Omega Translation Processes are rules used to translate one character set to another and to choose between characters with one or more context-sensitive variants. OTPs could also be used to change the case or hyphenation of text. </p>
 <h2>SEE ALSO</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "curl_global_init(3)"
 name: "curl_global_init"
 section: "3"
@@ -10,8 +9,10 @@ description: "curl_global_init – Global libcurl initialisation"
 
 <h2>NAME</h2>
 <p> curl_global_init &#8211; Global libcurl initialisation</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;curl/curl.h&gt;</code> </p>
 <p> <code>CURLcode curl_global_init(long </code><i>flags</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> This function sets up the program environment that libcurl needs. Think of it as an extension of the library loader. </p>
 <p> This function must be called at least once within a program (a program is all the code that shares a memory space) before the program calls any other function in libcurl. The environment it sets up is constant for the life of the program and is the same for every program, so multiple calls have the same effect as one call. </p>
 <p> The flags option is a bit pattern that tells libcurl exactly what features to init, as described below. Set the desired bits by ORing the values together. In normal operation, you must specify CURL_GLOBAL_ALL. Don&#8217;t use any other value unless you are familiar with it and mean to control internal operations of libcurl. </p>

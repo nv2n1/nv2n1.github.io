@@ -1,5 +1,4 @@
 ---
-
 title: "bibutils(1)"
 name: "bibutils"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-bibutils/"
 description: "bibutils – bibliography conversion utilities"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bibutils &#8211; bibliography conversion utilities </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <i>format</i><code>2xml</code> [<i>OPTIONS</i>] [<i>file.format</i>]</dt>
 <dt> <code>xml2</code><i>format</i> [<i>OPTIONS</i>] [<i>file.xml</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The bibutils program set inter-converts between various bibliography formats using m[blue]<code>Library of Congress</code>m[]<font SIZE="-2">[1]</font>&#8216;s m[blue]<code>Metadata Object Description Schema (MODS)</code>m[]<font SIZE="-2">[2]</font>version 3.1. For example, one can convert RIS-format files to Bibtex by doing two transformations: RIS-&gt;MODS-&gt;Bibtex.</dd>
 <h2>CONVERTING TO MODS</h2>
 <h3>Overview</h3>

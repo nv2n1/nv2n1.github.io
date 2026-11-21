@@ -1,5 +1,4 @@
 ---
-
 title: "cbootimage(1)"
 name: "cbootimage"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-cbootimage/"
 description: "cbootimage – tegra BCT compiler"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cbootimage &#8211; tegra BCT compiler </p>
+<h2>SYNOPSIS</h2>
 <p> <code>cbootimage</code> [ <i>options</i> ] configfile [ <i>inputimage</i> ] <i>outputimage</i></p>
+<h2>DESCRIPTION</h2>
 <p> This program is used to create images suitable to place into the boot flash of a device using a Tegra SoC. There are two primary modes of operation of cbootimage: </p>
 <dl>
 <dt>step]</dt>

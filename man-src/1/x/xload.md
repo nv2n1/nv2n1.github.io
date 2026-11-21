@@ -1,5 +1,4 @@
 ---
-
 title: "xload(1)"
 name: "xload"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-xload/"
 description: "xload – system load average display for X"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xload &#8211; system load average display for X </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xload</code><tt>&nbsp;<wbr>&nbsp;</tt>[-<i>toolkitoption</i> &#8230;] [-scale <i>integer</i>] [-update <i>seconds</i>] [-hl <i>color</i>] [-highlight <i>color</i>] [-remote <i>host</i>]</p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[-jumpscroll&nbsp;<i>pixels</i>]&nbsp;[-label&nbsp;<i>string</i>]&nbsp;[-nolabel]&nbsp;[-lights]</p>
+<h2>DESCRIPTION</h2>
 <p> The <i>xload</i> program displays a periodically updating histogram of the system load average.</p>
 <h2>OPTIONS</h2>
 <p> <i>Xload</i> accepts all of the standard X Toolkit command line options (see <i><a href="/docs/linux/man/7-x/">X</a>(7)</i>). The order of the options is unimportant. <i>xload also accepts the following additional options: </p>

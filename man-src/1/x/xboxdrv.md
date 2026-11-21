@@ -1,5 +1,4 @@
 ---
-
 title: "xboxdrv(1)"
 name: "xboxdrv"
 section: "1"
@@ -10,7 +9,9 @@ description: "xboxdrv – A Xbox/Xbox360 gamepad driver that works in userspace"
 
 <h2>NAME</h2>
 <p> xboxdrv &#8211; A Xbox/Xbox360 gamepad driver that works in userspace</p>
+<h2>SYNOPSIS</h2>
 <p> <code>xboxdrv</code> [OPTION]&#8230; [&#8211;] [COMMAND] [ARGUMENTS]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>xboxdrv</code> is a driver for Xbox and Xbox360 gamepads. It works by reading the raw data from the controller with the userspace library libusb and then passes the interpreted data to the kernel via uinput. This allows <code>xboxdrv</code> to provide regular joystick and event devices, which makes it compatible with all Linux software. </p>
 <p> Aside from the pure driver, <code>xboxdrv</code> also includes a rich set of configuration options that allow you to tweak the abilities of the virtual input devices that xboxdrv will create. This includes basic button and axis remapping, as well as more complicated things like mouse and keyboard emulation, auto-fire and throttle control emulation. </p>
 <p> It is also possible for <code>xboxdrv</code> to read input data directly from an event device, this allows the use of the configurability of <code>xboxdrv</code> on regular PC joysticks, keyboards and mice and thus lets <code>xboxdrv</code> serve a similar purpose as <code>joy2key</code>. See the option <code>&#8211;evdev</code> below for more information. </p>

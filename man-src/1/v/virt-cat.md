@@ -1,5 +1,4 @@
 ---
-
 title: "virt-cat(1)"
 name: "virt-cat"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-virt-cat/"
 description: "virt-cat – Display files in a virtual machine"
 ---
 
+<h2 class="name">NAME</h2>
+<p> virt-cat &#8211; Display files in a virtual machine </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 virt - cat[--options] - d domname file[file...] virt - cat[--options] - a disk.img[-a disk.img...] file[file...]
 </code></pre>
@@ -16,6 +18,7 @@ virt - cat[--options] - d domname file[file...] virt - cat[--options] - a disk.i
  virt-cat domname file
  virt-cat disk.img file
 </pre>
+<h2>DESCRIPTION</h2>
 <p> <tt>&quot;virt-cat&quot;</tt> is a command line tool to display the contents of <tt>&quot;file&quot;</tt> where <tt>&quot;file&quot;</tt> exists in the named virtual machine (or disk image). </p>
 <p> Multiple filenames can be given, in which case they are concatenated together. Each filename must be a full path, starting at the root directory (starting with &#8216;/&#8217;). </p>
 <p> <tt>&quot;virt-cat&quot;</tt> can be used to quickly view a file. To edit a file, use <tt>&quot;virt-edit&quot;</tt>. For more complex cases you should look at the <i><a href="/docs/linux/man/1-guestfish/">guestfish</a></i>(1) tool (see &#8220;<font SIZE="-1">USING GUESTFISH&#8221;</font> below).</p>

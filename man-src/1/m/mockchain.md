@@ -1,5 +1,4 @@
 ---
-
 title: "mockchain(1)"
 name: "mockchain"
 section: "1"
@@ -10,7 +9,9 @@ description: "mockchain – chain package builder."
 
 <h2>NAME</h2>
 <p> mockchain &#8211; chain package builder.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mockchain</code> -r chroot_config [options] [package&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>mockchain</code> builds a series of srpms in mock one at a time. After each successful build of a package it adds the resulting packages to a local repo which are available to the next package to satisfy buildreqs.</p>
 <h2>USAGE NOTES</h2>
 <p> This does not try to sort the packages by build order b/c that is too much effort and not obviously doable with the buildreq information we have. </p>

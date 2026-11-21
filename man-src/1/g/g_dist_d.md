@@ -1,5 +1,4 @@
 ---
-
 title: "g_dist_d(1)"
 name: "g_dist_d"
 section: "1"
@@ -11,7 +10,9 @@ description: "g_dist – calculates the distances between the centers of mass of
 <h2>NAME</h2>
 <p> g_dist &#8211; calculates the distances between the centers of mass of two groups </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>g_dist</code> <code>-f</code><i> traj.xtc </i> <code>-s</code><i> topol.tpr </i> <code>-n</code><i> index.ndx </i> <code>-o</code><i> dist.xvg </i> <code>-lt</code><i> lifetime.xvg </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-[no]xvgr</code><i></i> <code>-dist</code><i> real </i></p>
+<h2>DESCRIPTION</h2>
 <p> g_dist can calculate the distance between the centers of mass of two groups of atoms as a function of time. The total distance and its x, y and z components are plotted. </p>
 <p> Or when <code> -dist</code> is set, print all the atoms in group 2 that are closer than a certain distance to the center of mass of group 1. </p>
 <p> With options <code> -lt</code> and <code> -dist</code> the number of contacts of all atoms in group 2 that are closer than a certain distance to the center of mass of group 1 are plotted as a function of the time that the contact was continously present. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "kflickr(1)"
 name: "kflickr"
 section: "1"
@@ -10,7 +9,9 @@ description: "kflickr – stand-alone flickr.com photo uploader for KDE"
 
 <h2>NAME</h2>
 <p> kflickr &#8211; stand-alone flickr.com photo uploader for KDE</p>
+<h2>SYNOPSIS</h2>
 <p> <code>kflickr [&#8211;help] [&#8211;help-qt] [&#8211;help-kde] [&#8211;help-all] [&#8211;author] [&#8211;license] [-v] [</code> <i>URL(s)</i> <code>]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>kflickr</code> Provides a GUI which may be used to modify photo attributes before sending loaded photo files to the users flickr.com photo stream. Allows editing of the most common attributes as well as sending photos directory to a specified photo stream associated with the users account.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pubkey_get_preferred_hash_algorithm(3)"
 name: "gnutls_pubkey_get_preferred_hash_algorithm"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_pubkey_get_preferred_hash_algorithm – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pubkey_get_preferred_hash_algorithm &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/abstract.h&gt;</code> </p>
 <p> <code>int gnutls_pubkey_get_preferred_hash_algorithm(gnutls_pubkey_t </code><i>key</i><code>, gnutls_digest_algorithm_t * </code><i>hash</i><code>, unsigned int * </code><i>mand</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_pubkey_get_preferred_hash_algorithm – API function"
 <dd> The result of the call with the hash algorithm used for signature</dd>
 <dt>unsigned int * mand</dt>
 <dd> If non zero it means that the algorithm MUST use this hash. May be NULL.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will read the certifcate and return the appropriate digest algorithm to use for signing with this certificate. Some certificates (i.e. DSA might not be able to sign without the preferred algorithm). </p>
 <p> To get the signature algorithm instead of just the hash use <code>gnutls_pk_to_sign()</code> with the algorithm of the certificate/key and the provided <i>hash</i> .</p>
 <h2>RETURNS</h2>

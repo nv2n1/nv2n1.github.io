@@ -1,5 +1,4 @@
 ---
-
 title: "icpfind(1)"
 name: "icpfind"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-icpfind/"
 description: "icpfind – Use heuristic control-point detection strategies"
 ---
 
+<h2 class="name">NAME</h2>
+<p> icpfind &#8211; Use heuristic control-point detection strategies </p>
+<h2>SYNOPSIS</h2>
 <p> <code>icpfind</code> [options] -o <i>output.pto</i> <i>input.pto</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>icpfind</code> is a command-line tool to use the various different control point detectors and heuristic control point detector strategies defined in the Hugin Parameters for Control Point Detectors dialog. It does not introduce new functionality, it allows running the different control points detectors from the command-line and not only in the <font SIZE="-1">GUI. </font></p>
 <h2>OPTIONS</h2>
 <dl>

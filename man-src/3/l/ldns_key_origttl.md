@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_key_origttl(3)"
 name: "ldns_key_origttl"
 section: "3"
@@ -10,6 +9,7 @@ description: "ldns_key_origttl, ldns_key_inception, ldns_key_expiration, ldns_ke
 
 <h2>NAME</h2>
 <p> ldns_key_origttl, ldns_key_inception, ldns_key_expiration, ldns_key_keytag, ldns_key_pubkey_owner, ldns_key_flags </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -19,6 +19,7 @@ description: "ldns_key_origttl, ldns_key_inception, ldns_key_expiration, ldns_ke
 <p> uint16_t ldns_key_keytag(const ldns_key *k); </p>
 <p> ldns_rdf* ldns_key_pubkey_owner(const ldns_key *k); </p>
 <p> uint16_t ldns_key_flags(const ldns_key *k); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_key_origttl</i>()</dt>
 <dd>return the original ttl of the key .br <code>k</code>: the key .br Returns the original ttl</dd></dl>

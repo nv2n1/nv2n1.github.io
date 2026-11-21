@@ -1,5 +1,4 @@
 ---
-
 title: "dblink_close(3)"
 name: "dblink_close"
 section: "3"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/3-dblink_close/"
 description: "dblink_close – closes a cursor in a remote database"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dblink_close &#8211; closes a cursor in a remote database </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 dblink_close(text cursorname[, bool fail_on_error]) returns text
     dblink_close(text connname, text cursorname[, bool fail_on_error]) returns text
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>dblink_close</code> closes a cursor previously opened with <code>dblink_open</code>.</p>
 <h2>ARGUMENTS</h2>
 <p> <i>connname</i></p>

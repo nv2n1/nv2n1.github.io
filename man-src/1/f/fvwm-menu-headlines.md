@@ -1,5 +1,4 @@
 ---
-
 title: "fvwm-menu-headlines(1)"
 name: "fvwm-menu-headlines"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-fvwm-menu-headlines/"
 description: "fvwm-menu-headlines – builds headlines menu definition for fvwm"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fvwm-menu-headlines &#8211; builds headlines menu definition for fvwm </p>
+<h2>SYNOPSIS</h2>
 <p> <code>fvwm-menu-headlines</code> [ <code>&#8211;help</code>|<code>-h</code>|<code>-?</code> ] [ <code>&#8211;version</code>|<code>-V</code> ] [ <code>&#8211;info</code> [site] ] [ <code>&#8211;site</code>|<code>-s</code> site ] [ <code>&#8211;name</code>|<code>-n</code> name ] [ <code>&#8211;title</code>|<code>-t</code> title ] [ <code>&#8211;item</code> item ] [ <code>&#8211;exec</code>|<code>-e</code> exec-command ] [ <code>&#8211;command</code>|<code>-e</code> fvwm-command ] [ <code>&#8211;icon-title</code> icon ] [ <code>&#8211;icon-item</code> icon ] [ <code>&#8211;icon-home</code> icon ] [ <code>&#8211;icon-error</code> icon ] [ <code>&#8211;wm-icons</code> ] [ <code>&#8211;frontpage</code> [where] ] [ <code>&#8211;proxy</code>|<code>-p</code> host:port ] [ <code>&#8211;file</code> [file] ] [ <code>&#8211;fake</code> [file] ] [ <code>&#8211;timeout</code> seconds ]</p>
+<h2>DESCRIPTION</h2>
 <p> This configurable perl script builds an fvwm menu definition for headlines of popular news web sites: FreshMeat, Slashdot, LinuxToday, DaemonNews, GNOME-News, KDE-News, RootPrompt, LinuxFr, ThinkGeek, <font SIZE="-1">CNN</font>, <font SIZE="-1">BBC</font> and more. </p>
 <p> It is possible to specify a customized menu item format, change a command (usually launching a browser) and add menu icons (there is a support for the wm-icons package).</p>
 <h2>OPTIONS</h2>

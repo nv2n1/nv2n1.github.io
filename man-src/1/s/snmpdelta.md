@@ -1,5 +1,4 @@
 ---
-
 title: "snmpdelta(1)"
 name: "snmpdelta"
 section: "1"
@@ -10,7 +9,9 @@ description: "snmpdelta – Monitor delta differences in SNMP Counter values"
 
 <h2>NAME</h2>
 <p> snmpdelta &#8211; Monitor delta differences in SNMP Counter values</p>
+<h2>SYNOPSIS</h2>
 <p> <code>snmpdelta</code> [ COMMON OPTIONS ] [-Cf] [ -Ct ] [ -Cs ] [ -CS ] [ -Cm ] [ -CF configfile ] [ -Cl ] [ -Cp period ] [ -CP Peaks ] [ -Ck ] [ -CT ] AGENT OID [ OID &#8230; ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>snmpdelta</code> will monitor the specified integer valued OIDs, and report changes over time. </p>
 <p> AGENT identifies a target SNMP agent, which is instrumented to monitor the given objects. At its simplest, the AGENT specification will consist of a hostname or an IPv4 address. In this situation, the command will attempt communication with the agent, using UDP/IPv4 to port 161 of the given target host. See <a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1) for a full list of the possible formats for AGENT. </p>
 <p> OID is an object identifier which uniquely identifies the object type within a MIB. Multiple OIDs can be specified on a single snmpdelta command. </p>

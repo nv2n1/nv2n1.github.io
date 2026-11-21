@@ -1,5 +1,4 @@
 ---
-
 title: "dla_porfsx_extended(3)"
 name: "dla_porfsx_extended"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dla_porfsx_extended/"
 description: "dla_porfsx_extended.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dla_porfsx_extended.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dla_porfsx_extended</code> (PREC_TYPE, UPLO, N, NRHS, A, LDA, AF, LDAF, COLEQU, C, B, LDB, Y, LDY, BERR_OUT, N_NORMS, ERR_BNDS_NORM, ERR_BNDS_COMP, RES, AYB, DY, Y_TAIL, RCOND, ITHRESH, RTHRESH, DZ_UB, IGNORE_CWISE, INFO)<br />
  <i></i><code>DLA_PORFSX_EXTENDED</code> improves the computed solution to a system of linear equations for symmetric or Hermitian positive-definite matrices by performing extra-precise iterative refinement and provides error bounds and backward error estimates for the solution.</p>

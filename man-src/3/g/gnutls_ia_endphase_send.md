@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_ia_endphase_send(3)"
 name: "gnutls_ia_endphase_send"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_ia_endphase_send – API function"
 
 <h2>NAME</h2>
 <p> gnutls_ia_endphase_send &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gnutls/extra.h">gnutls/extra.h</a>&gt;</code> </p>
 <p> <code>int gnutls_ia_endphase_send(gnutls_session_t </code><i>session</i><code>, int </code><i>final_p</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_ia_endphase_send – API function"
 <dd> is a <code>gnutls_session_t</code> structure.</dd>
 <dt>int final_p</dt>
 <dd> Set iff this should signal the final phase.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Send a TLS/IA end phase message. </p>
 <p> In the client, this should only be used to acknowledge an end phase message sent by the server. </p>
 <p> In the server, this can be called instead of <code>gnutls_ia_send()</code> if the server wishes to end an application phase.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ipa-client-install(1)"
 name: "ipa-client-install"
 section: "1"
@@ -10,7 +9,9 @@ description: "ipa-client-install – Configure an IPA client"
 
 <h2>NAME</h2>
 <p> ipa-client-install &#8211; Configure an IPA client</p>
+<h2>SYNOPSIS</h2>
 <p> ipa-client-install [<i>OPTION</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Configures a client machine to use IPA for authentication and identity services. </p>
 <p> By default this configures SSSD to connect to an IPA server for authentication and authorization. Optionally one can instead configure PAM and NSS (Name Switching Service) to work with an IPA server over Kerberos and LDAP. </p>
 <p> An authorized user is required to join a client machine to IPA. This can take the form of a kerberos principal or a one-time password associated with the machine. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "cgi_neo_error(3)"
 name: "cgi_neo_error"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cgi_neo_error/"
 description: "cgi_neo_error – display a NEOERR call backtrace"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cgi_neo_error &#8211; display a NEOERR call backtrace </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cgi/cgi.h&gt;
 </code></pre>
@@ -17,6 +19,7 @@ void cgi_neo_error(CGI *cgi, NEOERR *err);
 <h2>ARGUMENTS</h2>
 <p> cgi &#8211; a pointer to a CGI struct<br />
  err &#8211; a NEOERR (see util/neo_err.h for details) </p>
+<h2>DESCRIPTION</h2>
 <p> cgi_neo_error will output a 500 error containing the NEOERR call backtrace. This function is likely to be removed from future versions in favor of some sort of user error mechanism. </p>
 <h2>RETURN VALUE</h2>
 <p> None </p>

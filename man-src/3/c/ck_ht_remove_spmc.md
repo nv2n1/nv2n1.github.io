@@ -1,5 +1,4 @@
 ---
-
 title: "ck_ht_remove_spmc(3)"
 name: "ck_ht_remove_spmc"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_ht_remove_spmc – resize a hash table if necessary"
 <p> <code>ck_ht_remove_spmc</code> &#8211; resize a hash table if necessary</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_ht.h Ft bool Fn ck_ht_remove_spmc ck_ht_t *ht ck_ht_hash_t h ck_ht_entry_t *entry</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_ht_remove_spmc function will remove the key-value pair associated with the key specified by the Fa entry argument. </p>
 <p> If Fa ht was created with CK_HT_MODE_BYTESTRING then Fa entry must have been initialized with the ck_ht_entry_set_key3 or ck_ht_entry_set3 functions. If Fa ht was created with CK_HT_MODE_DIRECT then Fa entry must have been initialized with the ck_ht_entry_key_set_direct3 or ck_ht_entry_set_direct3 functions. </p>
 <p> It is expected that Fa h was initialized with ck_ht_hash3 if Fa ht was created with CK_HT_MODE_BYTESTRING. If Fa ht was initialized with CK_HT_MODE_DIRECT then it is expected that Fa h was initialized with the ck_ht_hash_direct3 function.</p>

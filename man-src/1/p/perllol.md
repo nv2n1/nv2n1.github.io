@@ -1,5 +1,4 @@
 ---
-
 title: "perllol(1)"
 name: "perllol"
 section: "1"
@@ -7,7 +6,12 @@ letter: "p"
 url: "/docs/linux/man/1-perllol/"
 ---
 
-perllol - Manipulating Arrays of Arrays in Perl 
+<h2 class="name">NAME</h2>
+ 
+
+ perllol - Manipulating Arrays of Arrays in Perl 
+
+<h2>DESCRIPTION</h2>
 
 <h3>Declaration and Access of Arrays of Arrays</h3>
 

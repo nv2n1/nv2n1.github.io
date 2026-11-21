@@ -1,5 +1,4 @@
 ---
-
 title: "kbruch(1)"
 name: "kbruch"
 section: "1"
@@ -10,9 +9,11 @@ description: "kbruch – Learn calculating with fractions"
 
 <h2>NAME</h2>
 <p> kbruch &#8211; Learn calculating with fractions</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>kbruch</code> [KDE Generic Options] [Qt Generic Options] </dt>
 </dl>
+<h2>DESCRIPTION</h2>
 <dd>KBruch is a small program to practice calculating with fractions. Different exercises are provided for this purpose. The program checks user&#8217;s input and gives feedback. </dd>
 <h2>SEE ALSO</h2>
 <p> More detailed user documentation is available from <i>help:/kbruch</i> (either enter this URL into Konqueror, or run <code>khelpcenter</code> <i>help:/kbruch</i>). </p>

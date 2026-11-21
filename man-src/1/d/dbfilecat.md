@@ -1,5 +1,4 @@
 ---
-
 title: "dbfilecat(1)"
 name: "dbfilecat"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-dbfilecat/"
 description: "dbfilecat – concatenate two files with identical schema"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dbfilecat &#8211; concatenate two files with identical schema </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 dbfilecat-- input A.fsdb[--input B.fsdb...]
 </code></pre>
@@ -15,6 +17,7 @@ dbfilecat-- input A.fsdb[--input B.fsdb...]
 <pre>
     echo A.fsdb | dbfilecat --xargs
 </pre>
+<h2>DESCRIPTION</h2>
 <p> Concatenate all provided input files, producing one result. We remove extra header lines. </p>
 <p> Inputs can both be specified with <tt>&quot;--input&quot;</tt>, or one can come from standard input and the other from <tt>&quot;--input&quot;</tt>. With <tt>&quot;--xargs&quot;</tt>, each line of standard input is a filename for input. </p>
 <p> Inputs must have identical schemas (columns, column order, and field separators). </p>

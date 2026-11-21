@@ -1,5 +1,4 @@
 ---
-
 title: "hhvm(1)"
 name: "hhvm"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-hhvm/"
 description: "hhvm – Execute PHP and Hack files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hhvm &#8211; Execute PHP and Hack files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>hhvm</code> [<i>OPTIONS</i>] [<i>-f</i>] file [<i>[</i>&#8212;<i>]</i>args<i>&#8230;</i>]<br />
  <code>hhvm</code> &#8211;php [<i>PHP-OPTIONS</i>] [<i>-f</i>] file [<i>[</i>&#8212;<i>]</i>args<i>&#8230;</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code><a href="/docs/linux/man/1-hhvm/">hhvm</a></code>(1) (aka the HipHop Virtual Machine) is an open-source virtual machine designed for executing programs written in Hack and PHP. HHVM uses a just-in-time compilation approach to run programs. HHVM should be used standalone for command line (CLI) scripts or together with a FastCGI-based web server like nginx or apache to serve websites. </p>
 <p> This is the command line interface to HHVM. </p>
 <p> The simplest way to parse and execute a program is providing a single parameter of a filename. Specifying <code>-f</code> before the filename does this in a more explicit fashion, and allows other <i>OPTIONS</i> to follow. </p>

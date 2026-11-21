@@ -1,5 +1,4 @@
 ---
-
 title: "zstdcat(1)"
 name: "zstdcat"
 section: "1"
@@ -8,11 +7,14 @@ url: "/docs/linux/man/1-zstdcat/"
 description: "zstd – zstd, zstdmt, unzstd, zstdcat – Compress or decompress .zst files"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>zstd</code> &#8211; zstd, zstdmt, unzstd, zstdcat &#8211; Compress or decompress .zst files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>zstd</code> [<i>OPTIONS</i>] [-|<i>INPUT-FILE</i>] [-o <i>OUTPUT-FILE</i>] </p>
 <p> <code>zstdmt</code> is equivalent to <code>zstd -T0</code> </p>
 <p> <code>unzstd</code> is equivalent to <code>zstd -d</code> </p>
 <p> <code>zstdcat</code> is equivalent to <code>zstd -dcf</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>zstd</code> is a fast lossless compression algorithm and data compression tool, with command line syntax similar to <code>gzip (1)</code> and <code>xz (1)</code>. It is based on the <code>LZ77</code> family, with further FSE &amp; huff0 entropy stages. <code>zstd</code> offers highly configurable compression speed, with fast modes at &gt; 200 MB/s per core, and strong modes nearing lzma compression ratios. It also features a very fast decoder, with speeds &gt; 500 MB/s per core. </p>
 <p> <code>zstd</code> command line syntax is generally similar to gzip, but features the following differences :</p>
 <dl>

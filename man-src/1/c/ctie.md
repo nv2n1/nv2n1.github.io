@@ -1,5 +1,4 @@
 ---
-
 title: "ctie(1)"
 name: "ctie"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ctie/"
 description: "ctie – merge or apply CWEB change files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ctie &#8211; merge or apply CWEB change files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ctie</code> <code>-c</code>|<code>-m</code> <i>outputfile masterfile</i> <i>changefile</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>ctie</code> program is used to process multiple change files used with the CWEB system for literate programming. The CWEB programs allow one to apply patches to a source file (the <i>masterfile</i>) by means of a single change file. <code>ctie</code> can be used to either merge up to 32 change files into a single one or to apply the changes to the <i>masterfile</i> in order to create a new master file. Output of either the new change file or the patched master file goes into <i>outputfile</i>. Any include files (indicated using the CWEB <code>@i</code> command) are fully expanded during <code>ctie</code> processing, which means that the change files are able to modify the contents of any included files.</p>
 <h2>OPTIONS</h2>
 <dl>

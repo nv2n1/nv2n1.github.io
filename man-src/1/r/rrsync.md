@@ -1,5 +1,4 @@
 ---
-
 title: "rrsync(1)"
 name: "rrsync"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-rrsync/"
 description: "rrsync – a script to setup restricted rsync users via ssh logins"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rrsync &#8211; a script to setup restricted rsync users via ssh logins</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 rrsync[-ro | -rw][-munge][-no - del][-no - lock] DIR
 </code></pre>
 <p> The single non-option argument specifies the restricted <i>DIR</i> to use. It can be relative to the user&#8217;s home directory or an absolute path. </p>
 <p> The online version of this manpage (that includes cross-linking of topics) is available at <a rel="nofollow" href="https://download.samba.org/pub/rsync/rrsync.1.">https://download.samba.org/pub/rsync/rrsync.1.</a> </p>
+<h2>DESCRIPTION</h2>
 <p> A user&#8217;s ssh login can be restricted to only allow the running of an rsync transfer in one of two easy ways: </p>
 <dl>
 <dt>o</dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "lxc-autostart(1)"
 name: "lxc-autostart"
 section: "1"
@@ -10,7 +9,9 @@ description: "lxc-autostart – start/stop/kill auto-started containers"
 
 <h2>NAME</h2>
 <p> lxc-autostart &#8211; start/stop/kill auto-started containers</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lxc-autostart</code> [-k] [-L] [-r] [-s] [-a] [-g <i>groups</i>] [-t <i>timeout</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>lxc-autostart</code> processes containers with lxc.start.auto set. It lets the user start, shutdown, kill, restart containers in the right order, waiting the right time. Supports filtering by lxc.group or just run against all defined containers. It can also be used by external tools in list mode where no action will be performed and the list of affected containers (and if relevant, delays) will be shown. </p>
 <p> The [-r], [-s] and [-k] options specify the action to perform. If none is specified, then the containers will be started. [-a] and [-g] are used to specify which containers will be affected. By default only containers without a lxc.group set will be affected. [-t TIMEOUT] specifies the maximum amount of time to wait for the container to complete the shutdown or reboot.</p>
 <h2>OPTIONS</h2>

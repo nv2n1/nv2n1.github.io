@@ -1,5 +1,4 @@
 ---
-
 title: "states(1)"
 name: "states"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-states/"
 description: "states – awk alike text processing tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> states &#8211; awk alike text processing tool</p>
+<h2>SYNOPSIS</h2>
 <p> <code>states</code> [<code>-hvV</code>] [<code>-D </code><i>var</i><code>=</code><i>val</i>] [<code>-f </code><i>file</i>] [<code>-o </code><i>outputfile</i>] [<code>-p </code><i>path</i>] [<code>-s </code><i>startstate</i>] [<code>-W </code><i>level</i>] [<i>filename</i> &#8230;] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>States</code> is an awk-alike text processing tool with some state machine extensions. It is designed for program source code highlighting and to similar tasks where state information helps input processing. </p>
 <p> At a single point of time, <code>States</code> is in one state, each quite similar to awk&#8217;s work environment, they have regular expressions which are matched from the input and actions which are executed when a match is found. From the action blocks, <code>states</code> can perform state transitions; it can move to another state from which the processing is continued. State transitions are recorded so <code>states</code> can return to the calling state once the current state has finished. </p>
 <p> The biggest difference between <code>states</code> and awk, besides state machine extensions, is that <code>states</code> is not line-oriented. It matches regular expression tokens from the input and once a match is processed, it continues processing from the current position, not from the beginning of the next input line. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "psconvert(1)"
 name: "psconvert"
 section: "1"
@@ -10,8 +9,10 @@ description: "psconvert – Convert [E]PS file(s) to other formats using GhostSc
 
 <h2>NAME</h2>
 <p> psconvert &#8211; Convert [E]PS file(s) to other formats using GhostScript</p>
+<h2>SYNOPSIS</h2>
 <p> <code>psconvert</code> <i>psfile(s)</i> [ [<code>u</code>][<i>margins</i>][<code>&#8211;</code>][<code>+g</code><i>paint</i>][<code>+p</code>[<i>pen</i>]][<code>+r</code>][<code>+s</code>[<code>m</code>]|<code>S</code><i>width</i>[<code>u</code>]/<i>height</i>[<code>u</code>]] ] [ <i>gs_option</i> ] [ <code>-D</code><i>outdir</i> ] [ <code>-E</code><i>resolution</i> ] [ <code>-F</code><i>&lt;out_name&gt;</i> ] [ <i>ghost_path</i> ] [ ] [ <i>listfile</i> ] [ ] [ [<code>g</code>|<code>t</code>][1|2|4] ] [ <code>-S</code> ] [ <code>b</code>|<code>e</code>|<code>E</code>|<code>f</code>|<code>F</code>|<code>j</code>|<code>g</code>|<code>G</code>|<code>m</code>|<code>s</code> |<code>t</code> ] [ [<i>level</i>] ] [ [<code>+g</code>][<code>+k</code>][<code>+t</code><i>docname</i>][<code>+n</code><i>layername</i>][<code>+o</code><i>foldername</i>][<code>+a</code><i>altmode</i>[<i>alt</i>]][<code>+l</code><i>minLOD/maxLOD</i>][<code>+f</code><i>minfade/maxfade</i>][<code>+u</code><i>URL</i>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>psconvert</code> converts one or more PostScript files to other formats (BMP, EPS, JPEG, PDF, PNG, PPM, SVG, TIFF) using GhostScript. Input file names are read from the command line or from a file that lists them. The size of the resulting images is determined by the BoundingBox (or HiResBoundingBox, if present). As an option, a tight (HiRes)BoundingBox may be computed first. As another option, it can compute ESRI type world files used to reference, for instance, tif files and make them be recognized as geotiff. Note: If the PostScript file calls on any of the Adobe PDF transparency extensions <i>and</i> PDF is not the selected output format, then the file will first be converted to a temporary PDF file (for the transparency to take effect) before converting the PDF to the desired output format.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

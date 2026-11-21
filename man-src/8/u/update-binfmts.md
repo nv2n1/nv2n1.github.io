@@ -1,5 +1,4 @@
 ---
-
 title: "update-binfmts(8)"
 name: "update-binfmts"
 section: "8"
@@ -7,8 +6,8 @@ letter: "u"
 url: "/docs/linux/man/8-update-binfmts/"
 description: "update-binfmts – maintain registry of executable binary formats"
 ---
-
 <p> <code>update-binfmts</code> - maintain registry of executable binary formats </p>
+<h2>SYNOPSIS</h2>
 <p> <code>update\-binfmts</code> [<i>options</i> ] -<code>-install</code> <i>name path spec</i> <br />
  <br />
 <code>update\-binfmts</code> [<i>options</i> ] -<code>-remove</code> <i>name path</i> <br />
@@ -24,6 +23,7 @@ description: "update-binfmts – maintain registry of executable binary formats"
 <code>update\-binfmts</code> [<i>options</i> ] -<code>-disable</code> [<i>name</i> ] <br />
  <br />
 <code>update\-binfmts</code> [<i>options</i> ] -<code>-find</code> [<i>path</i> ]  </p>
+<h2>DESCRIPTION</h2>
 <p> Versions 2.1.43 and later of the Linux kernel have contained the binfmt_misc module. This enables a system administrator to register interpreters for various binary formats based on a magic number or their file extension, and cause the appropriate interpreter to be invoked whenever a matching file is executed. Think of it as a more flexible version of the #! executable interpreter mechanism, or as something which can behave a little like &quot;associations&quot; in certain other operating systems (though in GNU/Linux the tendency is to keep this sort of thing somewhere else, like your file manager). <code>update\-binfmts</code> manages a persistent database of these interpreters. </p>
 <p>When each package providing a registered interpreter is installed, changed, or removed, <code>update\-binfmts</code> is called to update information about that interpreter. <code>update\-binfmts</code> is usually called from the postinst or prerm scripts in Debian packages.  </p>
 <h2>OPTIONS</h2>

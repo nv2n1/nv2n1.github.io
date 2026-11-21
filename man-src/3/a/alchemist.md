@@ -1,5 +1,4 @@
 ---
-
 title: "alchemist(3)"
 name: "alchemist"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-alchemist/"
 description: "alchemist.h –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> alchemist.h &#8211; </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;<a href="file:/usr/include/sys/types.h">sys/types.h</a>&gt; </p>
 <h3>Classes</h3>
 <p> struct <code>adm_bb_cap_t</code> </p>

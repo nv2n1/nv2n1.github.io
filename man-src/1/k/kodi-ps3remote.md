@@ -1,5 +1,4 @@
 ---
-
 title: "kodi-ps3remote(1)"
 name: "kodi-ps3remote"
 section: "1"
@@ -10,6 +9,7 @@ description: "kodi-ps3remote – PS3 Blu-Ray Remote Control Client for Kodi"
 
 <h2>NAME</h2>
 <p> kodi-ps3remote &#8211; PS3 Blu-Ray Remote Control Client for Kodi</p>
+<h2>DESCRIPTION</h2>
 <p> This script is the Kodi remote control client that will allow Kodi to be controlled by a PS3 Blu-Ray Remote.</p>
 <h2>USAGE</h2>
 <p> Usage for kodi-ps3remote</p>

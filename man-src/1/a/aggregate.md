@@ -1,5 +1,4 @@
 ---
-
 title: "aggregate(1)"
 name: "aggregate"
 section: "1"
@@ -10,7 +9,9 @@ description: "aggregate – optimise a list of route prefixes to help make nice 
 
 <h2>NAME</h2>
 <p> <code>aggregate</code> &#8211; optimise a list of route prefixes to help make nice short filters </p>
+<h2>SYNOPSIS</h2>
 <p> <code>aggregate</code> [-m max-length] [-o max-opt-length] [-p default-length] [-q] [-t] [-v] </p>
+<h2>DESCRIPTION</h2>
 <p> Takes a list of prefixes in conventional format on stdin, and performs two optimisations to attempt to reduce the length of the prefix list. </p>
 <p> The first optimisation is to remove any supplied prefixes which are superfluous because they are already included in another supplied prefix. For example, 203.97.2.0/24 would be removed if 203.97.0.0/17 was also supplied. </p>
 <p> The second optimisation identifies adjacent prefixes that can be combined under a single, shorter-length prefix. For example, 203.97.2.0/24 and 203.97.3.0/24 can be combined into the single prefix 203.97.2.0/23. </p>

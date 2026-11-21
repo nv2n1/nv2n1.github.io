@@ -1,5 +1,4 @@
 ---
-
 title: "cmew(1)"
 name: "cmew"
 section: "1"
@@ -10,7 +9,9 @@ description: "cmew – create Mew’s database file"
 
 <h2>NAME</h2>
 <p> cmew &#8211; create Mew&#8217;s database file</p>
+<h2>SYNOPSIS</h2>
 <p> cmew [<i>-f</i>] [<i>db_file</i> [<i>maildir</i> [<i>ignore_regex</i> [<i>target_folder</i>]]]]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>cmew</code> utility creates a Message-ID database file with SQLite 3 for Mew. </p>
 <p> <i>db_file</i> is a database file name. (default: &quot;~/Mail/id.db&quot;) </p>
 <p> <i>maildir</i> is a mail directory name. (default: &quot;~/Mail&quot;) </p>

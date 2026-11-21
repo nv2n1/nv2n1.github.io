@@ -1,5 +1,4 @@
 ---
-
 title: "pnmstitch(1)"
 name: "pnmstitch"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pnmstitch/"
 description: "pnmstitch – stitch together two panoramic (side-by-side) photographs"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pnmstitch &#8211; stitch together two panoramic (side-by-side) photographs</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pnmstitch</code> [ [<i>left_filespec</i>] <i>right_filespec</i> | <i>left_filespec</i> <i>right_filespec</i> <i>output_filespec</i> ] [<code>-width=</code><i>width</i>] [<code>-height=</code><i>height</i>] [<code>-xrightpos=</code><i>column</i>] [<code>-yrightpos=</code><i>row</i>] [<code>-stitcher=</code>{<code>RotateSliver</code>, <code>BiLinearSliver</code>,<code>LinearSliver</code>}] [<code>-filter=</code>{<code>LineAtATime</code>,<code>HorizontalCrop</code>}] [<code>-output=</code><i>output_filespec</i>] [<code>-verbose</code>] </p>
 <p> All options can be abbreviated to their shortest unique prefix. You may use two hyphens instead of one. You may separate an option name and its value with white space instead of an equals sign. </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pnmstitch</code> stitches together two panoramic photographs. This means if you have photographs of the left and right side of something that is too big for a single camera frame, <code>pnmstitch</code> can join them into one wide picture. </p>
 <p> <code>pnmstitch</code> works only on side-by-side images, not top and bottom (though you could certainly use <code>pamflip</code> in combination with <code>pnmstitch</code> to achieve this). It stitches together two images, but you can use it repeatedly to stitch together as many as you need to. </p>

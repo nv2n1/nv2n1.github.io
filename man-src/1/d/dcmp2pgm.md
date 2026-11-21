@@ -1,5 +1,4 @@
 ---
-
 title: "dcmp2pgm(1)"
 name: "dcmp2pgm"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-dcmp2pgm/"
 description: "dcmp2pgm – Read DICOM image and presentation state and render bitmap"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dcmp2pgm &#8211; Read DICOM image and presentation state and render bitmap </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 dcmp2pgm[options] dcmimage - in[bitmap - out]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>dcmp2pgm</code> utility renders a monochrome DICOM image under the control of a grayscale softcopy presentation state object into a monochrome bitmap with 8 bits/pixel. The bitmap is stored either as &#8216;Portable Gray Map&#8217; (PGM) or as a DICOM secondary capture image object. If no presentation state is read from file, a default presentation state is created. The utility allows to read a configuration file of the Softcopy Presentation State Viewer upon startup. In this case, the settings from the configuration file affecting the rendering of the presentation state are used, e.g. a correction of the gray scale range according to Barten&#8217;s model (DICOM part 14) can be performed if the characteristic curve of the display system is available and defined in the configuration file.</p>
 <h2>PARAMETERS</h2>
 <pre>

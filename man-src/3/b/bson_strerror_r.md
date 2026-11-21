@@ -1,5 +1,4 @@
 ---
-
 title: "bson_strerror_r(3)"
 name: "bson_strerror_r"
 section: "3"
@@ -10,6 +9,7 @@ description: "bson_strerror_r() – This is a portability wrapper around strerro
 
 <h2>NAME</h2>
 <p> bson_strerror_r() &#8211; This is a portability wrapper around strerror().</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 char *
 bson_strerror_r(int err_code,
@@ -26,6 +26,7 @@ bson_strerror_r(int err_code,
 <dl>
 <dt><code>buflen</code></dt>
 <dd> The size of <code>buf</code> \&amp;.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This is a portability wrapper around <code><a href="/docs/linux/man/3-strerror/">strerror</a>(3)</code> \&amp;. </p>
 <h2>RETURNS</h2>
 <p> The passed in <code>buf</code> parameter or an internal string. </p>

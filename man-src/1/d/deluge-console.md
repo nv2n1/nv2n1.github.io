@@ -1,5 +1,4 @@
 ---
-
 title: "deluge-console(1)"
 name: "deluge-console"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-deluge-console/"
 description: "deluge-console – a bittorrent client curses interface"
 ---
 
+<h2 class="name">NAME</h2>
+<p> deluge-console &#8211; a bittorrent client curses interface</p>
+<h2>SYNOPSIS</h2>
 <p> <code>deluge-console [options]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Deluge utilizes a client/server model, with &#8216;deluged&#8217; being the daemon process and &#8216;deluge-console&#8217; being used to launch a console user-interface. </p>
 <p> You can pass console commands directly from the command line and run multiple commands by separating them with a semi-colon (;).</p>
 <h3>Console Commands:</h3>

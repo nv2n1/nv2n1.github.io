@@ -1,5 +1,4 @@
 ---
-
 title: "sigqueue(2)"
 name: "sigqueue"
 section: "2"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/2-sigqueue/"
 description: "sigqueue – queue a signal and data to a process"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sigqueue &#8211; queue a signal and data to a process </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;signal.h&gt;</code> </p>
 <p> <code>int sigqueue(pid_t </code><i>pid</i><code>, int </code><i>sig</i><code>, const union sigval </code><i>value</i><code>);</code> </p>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>sigqueue</code>(): _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;199309L</p>
+<h2>DESCRIPTION</h2>
 <p> <code>sigqueue</code>() sends the signal specified in <i>sig</i> to the process whose PID is given in <i>pid</i>. The permissions required to send a signal are the same as for <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2). As with <code><a href="/docs/linux/man/2-kill/">kill</a></code>(2), the null signal (0) can be used to check if a process with a given PID exists. </p>
 <p> The <i>value</i> argument is used to specify an accompanying item of data (either an integer or a pointer value) to be sent with the signal, and has the following type: </p>
 <p> union sigval {<br />

@@ -1,5 +1,4 @@
 ---
-
 title: "git-check-ref-format(1)"
 name: "git-check-ref-format"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-check-ref-format/"
 description: "git-check-ref-format – Ensures that a reference name is well formed"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-check-ref-format &#8211; Ensures that a reference name is well formed </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git check - ref - format[--normalize][--[no - ] allow - onelevel][--refspec - pattern]&lt;refname&gt; git check - ref - format-- branch&lt;branchname - shorthand&gt;
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Checks if a given <i>refname</i> is acceptable, and exits with a non-zero status if it is not. </p>
 <p> A reference is used in Git to specify branches and tags. A branch head is stored in the <code>refs/heads</code> hierarchy, while a tag is stored in the <code>refs/tags</code> hierarchy of the ref namespace (typically in <code>$GIT_DIR/refs/heads</code> and <code>$GIT_DIR/refs/tags</code> directories or, as entries in file <code>$GIT_DIR/packed-refs</code> if refs are packed by <code>git gc</code>). </p>
 <p> Git imposes the following rules on how references are named: </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "pmdashping(1)"
 name: "pmdashping"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmdashping – \"shell-ping\" performance metrics domain agent"
 
 <h2>NAME</h2>
 <p> <code>pmdashping</code> &#8211; &quot;shell-ping&quot; performance metrics domain agent</p>
+<h2>SYNOPSIS</h2>
 <p> <code>$PCP_PMDAS_DIR/shping/pmdashping</code> [<code>-C</code>] [<code>-d</code> <i>domain</i>] [<code>-l</code> <i>logfile</i>] [<code>-I</code> <i>interval</i>] [<code>-t</code> <i>timeout</i>] [<code>-U</code> <i>username</i>] <i>configfile</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdashping</code> is a Performance Metrics Domain Agent (PMDA) which exports quality of service and response time measurements for arbitrary commands as might be run from a shell such as <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1). </p>
 <p> These measurements are intended to be used to quantify service quality and service availability for those services that are either mission critical or act as early indicators of adverse system performance. </p>
 <p> The sample configuration monitors simple shell commands (<code>exit</code> and <code><a href="/docs/linux/man/1-date/">date</a></code>(1)), a short computationally intensive task using <code><a href="/docs/linux/man/1-sum/">sum</a></code>(1), a short C compilation, DNS lookup via <code><a href="/docs/linux/man/1-nslookup/">nslookup</a></code>(1), YP lookup via <code><a href="/docs/linux/man/1-ypcat/">ypcat</a></code>(1), bind/portmapper service using <code>rpcbind</code>(1), SMTP by connecting to telnet port 25 and sending an &#8220;expn root&#8221; request, and NNTP by connecting to telnet port 119 and running a &#8220;listgroup&#8221; command. </p>

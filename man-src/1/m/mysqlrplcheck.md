@@ -1,5 +1,4 @@
 ---
-
 title: "mysqlrplcheck(1)"
 name: "mysqlrplcheck"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mysqlrplcheck/"
 description: "mysqlrplcheck – Check Replication Prerequisitiess"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mysqlrplcheck &#8211; Check Replication Prerequisitiess </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mysqlrplcheck [</code><i>options</i><code>]</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This utility checks the prerequisites for replication between a master and a slave. These checks (called tests) are designed to ensure a healthy replication setup. The utility performs the following tests: </dd>
 <dl>
 <dt>

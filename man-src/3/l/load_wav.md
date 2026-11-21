@@ -1,5 +1,4 @@
 ---
-
 title: "load_wav(3)"
 name: "load_wav"
 section: "3"
@@ -10,8 +9,10 @@ description: "load_wav – Loads a sample from a RIFF WAV file. Allegro game pro
 
 <h2>NAME</h2>
 <p> load_wav &#8211; Loads a sample from a RIFF WAV file. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>SAMPLE *load_wav(const char *filename);</code></p>
+<h2>DESCRIPTION</h2>
 <p> Loads a sample from a RIFF WAV file. Example: </p>
 <pre><code>
 SAMPLE *sample = load_wav("scream.wav");

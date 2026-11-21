@@ -1,5 +1,4 @@
 ---
-
 title: "dm_date(1)"
 name: "dm_date"
 section: "1"
@@ -7,15 +6,22 @@ letter: "d"
 url: "/docs/linux/man/1-dm_date/"
 ---
 
-dm_date - print out the system date and time 
+<h2 class="name">NAME</h2>
+ 
 
-This performs the same operation as the unix 'date' command, but using the Date::Manip module. 
+ dm_date - print out the system date and time 
+
+<h2>SYNOPSIS</h2>
+
+ This performs the same operation as the unix 'date' command, but using the Date::Manip module. 
 
  <pre><code>
 dm_date[OPTION]...[+FORMAT]
 </code></pre>
 
-This displays information about the current system time, or some other time. Options are:
+<h2>DESCRIPTION</h2>
+
+ This displays information about the current system time, or some other time. Options are:
 <dl>
 <dt>-h, --help
 </dt><dd> Print online help.

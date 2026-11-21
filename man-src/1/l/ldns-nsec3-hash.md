@@ -1,5 +1,4 @@
 ---
-
 title: "ldns-nsec3-hash(1)"
 name: "ldns-nsec3-hash"
 section: "1"
@@ -10,7 +9,9 @@ description: "ldns-nsec3-hash – print out the NSEC3 hash for a domain name"
 
 <h2>NAME</h2>
 <p> ldns-nsec3-hash &#8211; print out the NSEC3 hash for a domain name</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ldns-nsec3-hash</code> <i>&lt;domain_name&gt;</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>ldns-nsec3-hash</code> is used to print out the NSEC3 hash for the given domain name. </p>
 <h2>OPTIONS</h2>
 <dl>

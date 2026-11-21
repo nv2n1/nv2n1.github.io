@@ -1,5 +1,4 @@
 ---
-
 title: "ccrypt(1)"
 name: "ccrypt"
 section: "1"
@@ -10,9 +9,11 @@ description: "ccrypt – encrypt and decrypt files and streams"
 
 <h2>NAME</h2>
 <p> ccrypt &#8211; encrypt and decrypt files and streams</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 ccrypt[mode][options][file...] ccencrypt[options][file...] ccdecrypt[options][file...] ccat[options] file...
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>ccrypt</code> is a utility for encrypting and decrypting files and streams. It was designed to replace the standard unix <code>crypt</code> utility, which is notorious for using a very weak encryption algorithm. <code>ccrypt</code> is based on the Rijndael block cipher, a version of which was also chosen by the U.S. government as the Advanced Encryption Standard (AES, see <a rel="nofollow" href="http://www.nist.gov/aes">http://www.nist.gov/aes</a>). This cipher is believed to provide very strong cryptographic security. </p>
 <p> Unlike unix <code>crypt</code>, the algorithm provided by <code>ccrypt</code> is not symmetric, i.e., one must specify whether to encrypt or decrypt. The most common way to invoke <code>ccrypt</code> is via the commands <code>ccencrypt</code> and <code>ccdecrypt</code>. </p>
 <p> Encryption and decryption depends on a keyword (or key phrase) supplied by the user. By default, the user is prompted to enter a keyword from the terminal. Keywords can consist of any number of characters, and all characters are significant (although <code>ccrypt</code> internally hashes the key to 256 bits). Longer keywords provide better security than short ones, since they are less likely to be discovered by exhaustive search.</p>

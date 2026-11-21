@@ -1,5 +1,4 @@
 ---
-
 title: "euca-delete-tags(1)"
 name: "euca-delete-tags"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-delete-tags – Delete tags from one or more resources"
 
 <h2>NAME</h2>
 <p> euca-delete-tags &#8211; Delete tags from one or more resources</p>
+<h2>SYNOPSIS</h2>
 <p> euca-delete-tags <code>&#8211;tag</code> KEY[=[VALUE]] [&#8211;show-empty-fields] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] RESOURCE [RESOURCE &#8230;]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Delete tags from one or more resources</p>
 <h3>positional arguments:</h3>
 <dl>

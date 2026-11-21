@@ -1,5 +1,4 @@
 ---
-
 title: "podspell(1)"
 name: "podspell"
 section: "1"
@@ -7,13 +6,18 @@ letter: "p"
 url: "/docs/linux/man/1-podspell/"
 ---
 
-podspell - pod spell checking command line interface 
+<h2 class="name">NAME</h2>
+ 
+
+ podspell - pod spell checking command line interface 
 
 <h2>VERSION</h2>
 
  version 1.04
 
-<pre>
+<h2>SYNOPSIS</h2>
+
+ <pre>
         % podspell Thing.pm | ispell
 </pre>
 

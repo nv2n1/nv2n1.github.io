@@ -1,5 +1,4 @@
 ---
-
 title: "mmpfb(1)"
 name: "mmpfb"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mmpfb/"
 description: "mmpfb – creates single-master fonts from multiple master fonts"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mmpfb &#8211; creates single-master fonts from multiple master fonts </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mmpfb</code> [OPTIONS&#8230;] <i>font</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>Mmpfb</code> creates a normal, single-master PostScript font from a multiple master font by interpolation. You pass it a PFB or PFA font and options specifying the design point you want; it writes the resulting PFB or PFA font to the standard output. </p>
 <p> The fonts <code>mmpfb</code> creates are interpolated at a low level to remove multiple master instructions from individual characters. Therefore, they can be used by programs that don&#8217;t normally understand multiple master fonts, like <code><a href="/docs/linux/man/1-ps2pk/">ps2pk</a></code>(1). </p>
 <p> <code>Mmpfb</code> supports fonts with intermediate masters, like Adobe Jenson and Kepler. It can also create AMCP (Adobe Multiple Master Conversion Program) files for use by see <code>&#8211;amcp-info</code> below. </p>

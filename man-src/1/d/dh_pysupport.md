@@ -1,5 +1,4 @@
 ---
-
 title: "dh_pysupport(1)"
 name: "dh_pysupport"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dh_pysupport/"
 description: "dh_pysupport – use the python-support framework to handle Python modules"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dh_pysupport &#8211; use the python-support framework to handle Python modules </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dh_pysupport</code> [<i>debhelper options</i>] [-V <i>X.Y</i>] [-X <i>item</i> [&#8230;]] [-n] [<i>module dirs &#8230;</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> dh_pysupport is a debhelper program that will scan your package, detect public modules in <i>/usr/lib/pythonX.Y/site-packages</i>, and move them to the shared Python modules location. It will generate appropriate postinst/prerm scripts to byte-compile modules installed there for all available python versions. </p>
 <p> It will also look for private Python modules and will byte-compile them with the current Python version. You may have to list the directories containing private Python modules. </p>
 <p> If a file named <i>debian/pyversions</i> exists, it is used to determine the python versions with which the package can work. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "emerald-theme-manager(1)"
 name: "emerald-theme-manager"
 section: "1"
@@ -10,7 +9,9 @@ description: "emerald-theme-manager – The Emerald Theme Manager"
 
 <h2>NAME</h2>
 <p> emerald-theme-manager &#8211; The Emerald Theme Manager</p>
+<h2>SYNOPSIS</h2>
 <p> <code>emerald-theme-manager </code></p>
+<h2>DESCRIPTION</h2>
 <p> <i>emerald-theme-manager</i> is the theme manager of emerald. .</p>
 <dl>
 <dt>$HOME/.emerald/settings.ini</dt>

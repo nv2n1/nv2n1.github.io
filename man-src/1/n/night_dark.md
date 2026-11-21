@@ -1,5 +1,4 @@
 ---
-
 title: "night_dark(1)"
 name: "night_dark"
 section: "1"
@@ -11,9 +10,16 @@ url: "/docs/linux/man/1-night_dark/"
 
  night_dark - subtract dark from image
 
+<h2>SYNOPSIS</h2>
+
+ 
 &nbsp;<wbr>night_dark&nbsp;<wbr>[result image dark]
 
-The options are as follows: 
+<h2>DESCRIPTION</h2>
+
+ 
+
+ The options are as follows: 
 
  This routine is internal part of the nightview package and 
 

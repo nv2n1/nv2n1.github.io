@@ -1,5 +1,4 @@
 ---
-
 title: "tcsh(1)"
 name: "tcsh"
 section: "1"
@@ -10,8 +9,10 @@ description: "tcsh – C shell with file name completion and command line editin
 
 <h2>NAME</h2>
 <p> tcsh &#8211; C shell with file name completion and command line editing</p>
+<h2>SYNOPSIS</h2>
 <p> <code>tcsh </code>[<code>-bcdefFimnqstvVxX</code>] [<code>-Dname</code>[<code>=value</code>]] [arg &#8230;]<br />
  <code>tcsh -l</code></p>
+<h2>DESCRIPTION</h2>
 <p> <i>tcsh</i> is an enhanced but completely compatible version of the Berkeley UNIX C shell, <i><a href="/docs/linux/man/1-csh/">csh</a></i>(1). It is a command language interpreter usable both as an interactive login shell and a shell script command processor. It includes a command-line editor (see <code>The command-line editor</code>), programmable word completion (see <code>Completion and listing</code>), spelling correction (see <code>Spelling correction</code>), a history mechanism (see <code>History substitution</code>), job control (see <code>Jobs</code>) and a C-like syntax. The <code>NEW FEATURES</code> section describes major enhancements of <i>tcsh</i> over <i><a href="/docs/linux/man/1-csh/">csh</a></i>(1). Throughout this manual, features of <i>tcsh</i> not found in most <i><a href="/docs/linux/man/1-csh/">csh</a></i>(1) implementations (specifically, the 4.4BSD <i>csh</i>) are labeled with `(+)&#8217;, and features which are present in <i><a href="/docs/linux/man/1-csh/">csh</a></i>(1) but not usually documented are labeled with `(u)&#8217;.</p>
 <h3>Argument list processing</h3>
 <p> If the first argument (argument 0) to the shell is `-&#8216; then it is a login shell. A login shell can be also specified by invoking the shell with the <code>-l</code> flag as the only argument. </p>

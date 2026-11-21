@@ -1,5 +1,4 @@
 ---
-
 title: "stg-import(1)"
 name: "stg-import"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-stg-import/"
 description: "stg-import – Import a GNU diff file as a new patch"
 ---
 
+<h2 class="name">NAME</h2>
+<p> stg-import &#8211; Import a GNU diff file as a new patch </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 stg import[options][--][&lt;file&gt; | &lt;url&gt;]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Create a new patch and apply the given GNU diff file (or the standard input). By default, the file name is used as the patch name but this can be overridden with the <i>&#8211;name</i> option. The patch can either be a normal file with the description at the top or it can have standard mail format, the Subject, From and Date headers being used for generating the patch information. The command can also read series and mbox files. </p>
 <p> If a patch does not apply cleanly, the failed diff is written to the .stgit-failed.patch file and an empty StGIT patch is added to the stack. </p>
 <p> The patch description has to be separated from the data with a <i>&#8212;</i> line.</p>

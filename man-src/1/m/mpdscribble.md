@@ -1,5 +1,4 @@
 ---
-
 title: "mpdscribble(1)"
 name: "mpdscribble"
 section: "1"
@@ -10,7 +9,9 @@ description: "mpdscribble – A Music Player Daemon (MPD) client which submits i
 
 <h2>NAME</h2>
 <p> mpdscribble &#8211; A Music Player Daemon (MPD) client which submits information about tracks being played to a scrobbler (e.g. last.fm).</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mpdscribble [options] </code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>mpdscribble</code> is a client for MPD, the Music Player Daemon. mpdscribble connects to an MPD running on the local network and works in parallel with other MPD clients on the network. </p>
 <p> By default it will get the hostname and port for mpd from the MPD_HOST and MPD_PORT environment variables. mpdscribble will use localhost:6600 if those are not set. The hostname and port can also be specified in the configuration file or on the command line. </p>
 <p> $ mpdscribble &#8211;host myhost &#8211;port=12345 </p>

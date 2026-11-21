@@ -1,5 +1,4 @@
 ---
-
 title: "websockify(1)"
 name: "websockify"
 section: "1"
@@ -7,8 +6,18 @@ letter: "w"
 url: "/docs/linux/man/1-websockify/"
 ---
 
-websockify - WebSockets to TCP socket bridge
+<h2 class="name">NAME</h2>
+ 
 
+ 
+
+ websockify - WebSockets to TCP socket bridge
+
+<h2>SYNOPSIS</h2>
+
+ 
+
+ 
 &nbsp;<wbr>websockify&nbsp;<wbr>[options]&nbsp;<wbr>[source_addr:]source_port target_addr:target_port 
 &nbsp;<wbr>websockify&nbsp;<wbr>[options]&nbsp;<wbr>[source_addr:]source_port -- WRAP_COMMAND_LINE 
 
@@ -30,7 +39,11 @@ websockify - WebSockets to TCP socket bridge
 &nbsp;<wbr>--wrap-mode=MODE&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>action to take when the wrapped program exits or 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>daemonizes: exit&nbsp;<wbr>(default), ignore, respawn 
 
-At the most basic level, websockify just translates WebSockets traffic to normal TCP socket traffic. Websockify accepts the WebSockets handshake, parses it, and then begins forwarding traffic between the client and the target in both directions. 
+<h2>DESCRIPTION</h2>
+
+ 
+
+ At the most basic level, websockify just translates WebSockets traffic to normal TCP socket traffic. Websockify accepts the WebSockets handshake, parses it, and then begins forwarding traffic between the client and the target in both directions. 
 
  websockify was formerly named wsproxy and was part of the noVNC project. 
 

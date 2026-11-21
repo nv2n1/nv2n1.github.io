@@ -1,5 +1,4 @@
 ---
-
 title: "rcsintro(1)"
 name: "rcsintro"
 section: "1"
@@ -10,6 +9,7 @@ description: "rcsintro – introduction to RCS commands"
 
 <h2>NAME</h2>
 <p> rcsintro &#8211; introduction to RCS commands</p>
+<h2>DESCRIPTION</h2>
 <p> The Revision Control System (<font SIZE="-1">RCS</font>) manages multiple revisions of files. <font SIZE="-1">RCS</font> automates the storing, retrieval, logging, identification, and merging of revisions. <font SIZE="-1">RCS</font> is useful for text that is revised frequently, for example programs, documentation, graphics, papers, and form letters. </p>
 <p> The basic user interface is extremely simple. The novice only needs to learn two commands: <code><a href="/docs/linux/man/1-ci/">ci</a></code>(1) and <code><a href="/docs/linux/man/1-co/">co</a></code>(1). <code>ci</code>, short for &#8220;check in&#8221;, deposits the contents of a file into an archival file called an <font SIZE="-1">RCS</font> file. An <font SIZE="-1">RCS</font> file contains all revisions of a particular file. <code>co</code>, short for &#8220;check out&#8221;, retrieves revisions from an <font SIZE="-1">RCS</font> file.</p>
 <h3>Functions of <font SIZE="-1">RCS</font></h3>

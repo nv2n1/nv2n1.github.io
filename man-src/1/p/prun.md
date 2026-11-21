@@ -1,5 +1,4 @@
 ---
-
 title: "prun(1)"
 name: "prun"
 section: "1"
@@ -10,7 +9,9 @@ description: "prun – run program"
 
 <h2>NAME</h2>
 <p> prun &#8211; run program </p>
+<h2>SYNOPSIS</h2>
 <p> <code>prun</code> [-d <i>LEVEL</i>] [-p <i>DEVNAME</i>] [-h] <i>PROGRAM</i> [&#8211;] [<i>PARAMETERS</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>prun</code> starts a program on a device connected through SynCE. </p>
 <h2>OPTIONS</h2>
 <dl>

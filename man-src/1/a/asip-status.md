@@ -1,5 +1,4 @@
 ---
-
 title: "asip-status(1)"
 name: "asip-status"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-asip-status/"
 description: "asip-status.pl – Queries AFP servers for their capabilities"
 ---
 
+<h2 class="name">NAME</h2>
+<p> asip-status.pl &#8211; Queries AFP servers for their capabilities </p>
+<h2>SYNOPSIS</h2>
 <p> <code>/usr/bin/asip-status.pl</code> ADDRESS<i>:PORT</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>asip-status.pl</code> is a perl script that sends a FPGetSrvrInfo request to an AFP server at ADDRESS:PORT and displays the results, namely &quot;Machine type&quot;, the server&#8217;s name, supported AFP versions, UAMs and AFP flags, the &quot;server signature&quot; and the network addresses, the server provides AFP services on. </p>
 <p> When you don&#8217;t supply :PORT, then the default AFP port, 548, will be used.</p>
 <h2>EXAMPLES</h2>

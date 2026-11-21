@@ -1,5 +1,4 @@
 ---
-
 title: "generatorrunner(1)"
 name: "generatorrunner"
 section: "1"
@@ -10,7 +9,9 @@ description: "generatorrunner – plugin-based binding source code generator"
 
 <h2>NAME</h2>
 <p> generatorrunner &#8211; plugin-based binding source code generator</p>
+<h2>SYNOPSIS</h2>
 <p> <code>generatorrunner &#8211;generator-set=&lt;plugin name&gt; [options] header-file typesystem-file</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>generatorrunner</code> is a utility that uses the information taken from APIExtractor related to the provided C++ headers and typesystem files and execute generators using this information. Generators are plugins and you need to specify one using the &#8211;generator-set parameter. At the moment there are two generators available: </p>
 <p> <code>qtdoc</code> &#8211; Generates Sphinx-based documentation for C++ libraries documented using <code>qdoc3</code> documentation syntax, using the XML files created by the documentation tool <code>(qdoc3).</code> Can be called supplying <code>&#8211;generator-set=qtdoc</code> to <code>generatorrunner</code> or by calling the convenience executable <code>docgenerator.</code> </p>
 <p> Other plugins can be used with <code>generatorrunner,</code> provided that they follow the generator front-end specifications, and can be written to generate code or documentation for any target languague you desire. For more information about the generator front-end architecture and current limitations, refer to <a rel="nofollow" href="http://www.pyside.org/home-binding.">http://www.pyside.org/home-binding.</a> </p>

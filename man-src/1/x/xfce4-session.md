@@ -1,5 +1,4 @@
 ---
-
 title: "xfce4-session(1)"
 name: "xfce4-session"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-xfce4-session/"
 description: "xfce4-session – Starts up the Xfce Desktop Environment"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xfce4-session &#8211; Starts up the Xfce Desktop Environment </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xfce4-session</code> </p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>xfce4-session</code> command. </p>
 <p> The <code>xfce4-session</code> program starts up the Xfce Desktop Environment and is typically executed by your login manager (e.g. xdm, gdm, kdm, wdm or from your X startup scripts). It will load your last session or a default session that includes the standard Xfce programs if no saved session is available. </p>
 <p> <code>xfce4-session</code> is an standard X11R6 session manager that can manage any X11R6 SM compliant program, including GNOME and KDE programs. </p>

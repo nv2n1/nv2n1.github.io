@@ -1,5 +1,4 @@
 ---
-
 title: "aa_setfont(3)"
 name: "aa_setfont"
 section: "3"
@@ -11,7 +10,9 @@ url: "/docs/linux/man/3-aa_setfont/"
 
  aa_setfont - set font specification to be used by rendering functions.
 
-<b> #include &lt;aalib.h&gt; 
+<h2>SYNOPSIS</h2>
+
+ <b> #include &lt;aalib.h&gt; 
 
  void aa_setfont 
  ( 
@@ -29,7 +30,9 @@ url: "/docs/linux/man/3-aa_setfont/"
 </dd><dt><b>const struct aa_font *font</b>
 </dt><dd> Font specification structure.</dd></dl>
 
-Set font specification to be used by rendering functions.
+<h2>DESCRIPTION</h2>
+
+ Set font specification to be used by rendering functions.
 
 <h2>SEE ALSO</h2>
 

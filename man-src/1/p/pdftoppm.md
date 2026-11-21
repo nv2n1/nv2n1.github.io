@@ -1,5 +1,4 @@
 ---
-
 title: "pdftoppm(1)"
 name: "pdftoppm"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pdftoppm/"
 description: "pdftoppm – Portable Document Format (PDF) to Portable Pixmap (PPM) converter (version 3.03)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pdftoppm &#8211; Portable Document Format (PDF) to Portable Pixmap (PPM) converter (version 3.03) </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pdftoppm</code> [options] <i>PDF-file PPM-root</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>Pdftoppm</code> converts Portable Document Format (PDF) files to color image files in Portable Pixmap (PPM) format, grayscale image files in Portable Graymap (PGM) format, or monochrome image files in Portable Bitmap (PBM) format. </p>
 <p> Pdftoppm reads the PDF file, <i>PDF-file</i>, and writes one PPM file for each page, <i>PPM-root</i>&#8211;<i>number</i>.ppm, where <i>number</i> is the page number. If <i>PDF-file</i> is &#8216;-&#8216;, it reads the PDF file from stdin.</p>
 <h2>OPTIONS</h2>

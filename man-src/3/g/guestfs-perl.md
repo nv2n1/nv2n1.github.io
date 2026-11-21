@@ -1,5 +1,4 @@
 ---
-
 title: "guestfs-perl(3)"
 name: "guestfs-perl"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-guestfs-perl/"
 description: "guestfs-perl – How to use libguestfs from Perl"
 ---
 
+<h2 class="name">NAME</h2>
+<p> guestfs-perl &#8211; How to use libguestfs from Perl </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 use Sys::Guestfs;
 my $g = Sys::Guestfs-&gt;new ();
@@ -18,6 +20,7 @@ $g-&gt;touch('/hello');
 $g-&gt;shutdown();
 $g-&gt;close();
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents how to call libguestfs from the Perl programming language. This page just documents the differences from the C <font SIZE="-1">API</font> and gives some examples. If you are not familiar with using libguestfs, you also need to read <i>guestfs</i>(3). To read the full Perl <font SIZE="-1">API,</font> see <i>Sys::Guestfs</i>(3).</p>
 <h3><font SIZE="-1">ERRORS</font></h3>
 <p> Errors from libguestfs functions turn into calls to <tt>&quot;croak&quot;</tt> (see <i>Carp</i>(3)).</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ghex(1)"
 name: "ghex"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ghex/"
 description: "ghex – A GNOME Hex Editor"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ghex &#8211; A GNOME Hex Editor </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ghex</code> [<i>options</i>]<i> files</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>ghex</code> command. This manual page was written for the Debian GNU/Linux distribution because the original program does not have a manual page. Instead, it has documentation in the GNOME help system. </p>
 <p> <code>ghex</code> allows the user to load data from any file, view and edit it in either hex or ascii. A must for anyone playing games that use non-ascii format for saving.</p>
 <h2>OPTIONS</h2>

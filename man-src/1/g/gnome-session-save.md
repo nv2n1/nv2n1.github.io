@@ -1,5 +1,4 @@
 ---
-
 title: "gnome-session-save(1)"
 name: "gnome-session-save"
 section: "1"
@@ -10,7 +9,9 @@ description: "gnome-session-save – Saves or ends the current GNOME session"
 
 <h2>NAME</h2>
 <p> gnome-session-save &#8211; Saves or ends the current GNOME session</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gnome-session-save [&#8211;logout] [&#8211;force-logout] [&#8211;logout-dialog] [&#8211;shutdown-dialog] [&#8211;gui] [&#8211;kill [&#8211;silent]]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <i>gnome-session-save</i> can be used from a GNOME session to save a snapshot of the currently running applications. This session will be later restored at your next GNOME session. </p>
 <p> The <code>&#8211;gui</code> option will report errors in dialog boxes instead of printing to stderr. </p>
 <p> If called with the <code>&#8211;logout</code> option, the current GNOME session will be ended, unless logging out has been inhibited by an application. The <code>&#8211;force-logout</code> option can be used to end the session regardless of the inhibition state. </p>

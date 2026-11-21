@@ -1,5 +1,4 @@
 ---
-
 title: "cpupower(1)"
 name: "cpupower"
 section: "1"
@@ -10,9 +9,11 @@ description: "cpupower – Shows and sets processor power related values"
 
 <h2>NAME</h2>
 <p> cpupower &#8211; Shows and sets processor power related values</p>
+<h2>SYNOPSIS</h2>
 <p> <code> cpupower [ -c cpulist ] &lt;command&gt; [ARGS]</code> </p>
 <p> <code>cpupower -v|&#8211;version</code> </p>
 <p> <code>cpupower -h|&#8211;help</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>cpupower </code> is a collection of tools to examine and tune power saving related features of your processor. </p>
 <p> The manpages of the commands (cpupower-&lt;command&gt;(1)) provide detailed descriptions of supported features. Run <code>cpupower help</code> to get an overview of supported commands. </p>
 <h2>Options</h2>

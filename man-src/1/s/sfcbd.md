@@ -1,5 +1,4 @@
 ---
-
 title: "sfcbd(1)"
 name: "sfcbd"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-sfcbd/"
 description: "sfcbd – Small-Footprint CIM Broker (sfcb)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sfcbd &#8211; Small-Footprint CIM Broker (sfcb) </p>
+<h2>SYNOPSIS</h2>
 <p> <code>sfcbd</code> [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> sfcb is a lightweight CIM daemon (aka CIMOM) that responds to CIM client requests for system management data and/or performs system management tasks. sfcb supports most of the standard CIM XML over http/https protocol. It is highly modular, allowing functionality to be easily added, removed or customized for different management applications. sfcb is specifically targetted for small embedded system that do not have the available CPU, memory or disk resources to support a full-blown enterprise-level CIMOM. That said, sfcb runs very well on a regular Linux/Unix system and supports most of the functions required by CIM clients to manage such the system. Supported CIM operations include:</p>
 <dl>
 <dt>

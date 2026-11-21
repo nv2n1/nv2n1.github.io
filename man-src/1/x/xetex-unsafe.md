@@ -1,5 +1,4 @@
 ---
-
 title: "xetex-unsafe(1)"
 name: "xetex-unsafe"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-xetex-unsafe/"
 description: "xetex-unsafe, xelatex-unsafe – run xe(la)latex unsafely"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xetex-unsafe, xelatex-unsafe &#8211; run xe(la)latex unsafely </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xetex-unsafe</code> [<i>xetex-options</i>] <code>xelatex-unsafe</code> [<i>xetex-options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>xetex-unsafe</code> (<code>xelatex-unsafe</code>) runs XeTeX (XeLaTeX) unsafely; specifically, using the <code>dvipdfmx-unsafe.cfg</code> configuration file. </p>
 <p> As of TeX Live 2022, doing this is necessary only when running XeTeX on documents using PSTricks features which require transparency. We strongly recommend using Lua(La)TeX with PSTricks instead of XeTeX in this case. </p>
 <p> At all costs, avoid using this, or any, unsafe invocation with documents off the net or that are otherwise untrusted in any way.</p>

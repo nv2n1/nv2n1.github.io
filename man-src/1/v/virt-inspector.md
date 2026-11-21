@@ -1,5 +1,4 @@
 ---
-
 title: "virt-inspector(1)"
 name: "virt-inspector"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-virt-inspector/"
 description: "virt-inspector – Display operating system version and other information about a virtual machine"
 ---
 
+<h2 class="name">NAME</h2>
+<p> virt-inspector &#8211; Display operating system version and other information about a virtual machine </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 virt - inspector[--options] - d domname virt - inspector[--options] - a disk.img[-a disk.img...]
 </code></pre>
@@ -16,6 +18,7 @@ virt - inspector[--options] - d domname virt - inspector[--options] - a disk.img
  virt-inspector domname
  virt-inspector disk.img [disk.img ...]
 </pre>
+<h2>DESCRIPTION</h2>
 <p> <code>virt-inspector</code> examines a virtual machine or disk image and tries to determine the version of the operating system and other information about the virtual machine. </p>
 <p> Virt-inspector produces <font SIZE="-1">XML</font> output for feeding into other programs. </p>
 <p> In the normal usage, use <tt>&quot;virt-inspector -d domname&quot;</tt> where <tt>&quot;domname&quot;</tt> is the libvirt domain (see: <tt>&quot;virsh list --all&quot;</tt>). </p>

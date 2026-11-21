@@ -1,5 +1,4 @@
 ---
-
 title: "www-browser(1)"
 name: "www-browser"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-www-browser/"
 description: "lynx – a general purpose distributed information browser for the World Wide Web"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lynx &#8211; a general purpose distributed information browser for the World Wide Web </p>
+<h2>SYNOPSIS</h2>
 <p> <code>lynx </code><i>[options] [optional paths or URLs]</i> </p>
 <p> <code>lynx </code><i>[options] [path or URL]</i> <code>-get_data</code><br />
  <i>data</i><br />
@@ -16,6 +18,7 @@ description: "lynx – a general purpose distributed information browser for the
  <i>data</i><br />
  <code>&#8212;</code> </p>
 <p> Use &#8220;lynx -help&#8221; to display a complete list of current options.</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Lynx</i> is a fully-featured World Wide Web (WWW) client for users running cursor-addressable, character-cell display devices (e.g., vt100 terminals, vt100 emulators running on Windows 95/NT/XP/7/8 or any POSIX platform, or any other &#8220;curses-oriented&#8221; display). It will display hypertext markup language (HTML) documents containing links to files residing on the local system, as well as files residing on remote systems running Gopher, HTTP, FTP, WAIS, and NNTP servers. Current versions of <i>Lynx</i> run on Unix, VMS, Windows 95/NT/XP/7/8, DOS DJGPP and OS/2. </p>
 <p> <i>Lynx</i> can be used to access information on the World Wide Web, or to build information systems intended primarily for local access. For example, <i>Lynx</i> has been used to build several Campus Wide Information Systems (CWIS). In addition, <i>Lynx</i> can be used to build systems isolated within a single LAN.</p>
 <h2>OPTIONS</h2>

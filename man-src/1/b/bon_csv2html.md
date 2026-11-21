@@ -1,5 +1,4 @@
 ---
-
 title: "bon_csv2html(1)"
 name: "bon_csv2html"
 section: "1"
@@ -11,6 +10,7 @@ description: "bon_csv2html program to convert CSV format Bonnie++ data to a HTML
 <h2>NAME</h2>
 <p> <code>bon_csv2html</code> program to convert CSV format Bonnie++ data to a HTML form using tables suitable for display on a web page. NB Lynx can&#8217;t display this properly, and due to the size it probably requires 1024&#215;768 monitor to display properly. </p>
 <p> <code>bon_csv2txt</code> program to convert CSV format Bonnie++ data to plain-text format suitable for pasting into an email or reading on a Braille display. </p>
+<h2>DESCRIPTION</h2>
 <p> They take CSV format (comma-delimited spreadsheet files AKA Comma Seperated Values in MS land) data on standard input and produce HTML or plain text on standard output respectively. </p>
 <h2>FORMAT</h2>
 <p> This is a list of the fields used in the CSV files format version 2. Format version 1 was the type used in Bonnie++ &lt; 1.90. Before each field I list the field number as well as the name given in the heading</p>

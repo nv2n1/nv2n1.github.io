@@ -1,5 +1,4 @@
 ---
-
 title: "texfind(1)"
 name: "texfind"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-texfind/"
 description: "texfind – graphical tool to search for text in TeX input files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> texfind &#8211; graphical tool to search for text in TeX input files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>texfind</code> [ <i>OPTION</i> &#8230; ] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>texfind</code> is a graphical, interactive tool that helps you searching through TeX input files, including subdirectories, and allows you to do search/replace tasks using <code><a href="/docs/linux/man/1-perl/">perl</a></code>(1) regular expressions. It opens two windows: One displays the directory hierarchy and allows you to select different search directories. The second window is used to enter the query and display the results. </p>
 <h2>SEARCHING</h2>
 <p> Enter a search string in the input box at the top, choose the file extension (<i>tex</i> by default) and hit ENTER to start the search. The results will be displayed in the rest of the window. </p>

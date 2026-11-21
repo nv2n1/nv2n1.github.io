@@ -1,5 +1,4 @@
 ---
-
 title: "bsd-write(1)"
 name: "bsd-write"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-bsd-write/"
 description: "write – send a message to another user"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>write</code> &#8211; send a message to another user </p>
+<h2>SYNOPSIS</h2>
 <p> <i>user</i> [<i>tty</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> The utility allows you to communicate with other users, by copying lines from your terminal to theirs. </p>
 <p> When you run the command, the user you are writing to gets a message of the form: </p>
 <blockquote><p><tt>Message from yourname [at] yourhost on yourtty at hh:mm ...</tt></p></blockquote>

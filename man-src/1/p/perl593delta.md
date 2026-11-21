@@ -1,5 +1,4 @@
 ---
-
 title: "perl593delta(1)"
 name: "perl593delta"
 section: "1"
@@ -7,7 +6,9 @@ letter: "p"
 url: "/docs/linux/man/1-perl593delta/"
 description: "perl593delta – what is new for perl v5.9.3"
 ---
-
+<h2 class="name">NAME</h2>
+<p> perl593delta - what is new for perl v5.9.3 </p>
+<h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.9.2 and the 5.9.3 development releases. See perl590delta, perl591delta and perl592delta for the differences between 5.8.0 and 5.9.2.  </p>
 <h2>Incompatible Changes</h2>
 <h3>Parsing of -f _</h3>

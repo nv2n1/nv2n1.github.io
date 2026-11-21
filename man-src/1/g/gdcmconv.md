@@ -1,5 +1,4 @@
 ---
-
 title: "gdcmconv(1)"
 name: "gdcmconv"
 section: "1"
@@ -8,9 +7,14 @@ url: "/docs/linux/man/1-gdcmconv/"
 description: "gdcmconv – .TH \"gdcmconv\" 1 \"Fri Oct 29 2010\" \"Version 2.0.16\" \"GDCM\""
 ---
 
+<h2 class="name">NAME</h2>
+<p> gdcmconv &#8211; .TH &quot;gdcmconv&quot; 1 &quot;Fri Oct 29 2010&quot; &quot;Version 2.0.16&quot; &quot;GDCM&quot; </p>
+<h2 class="name">NAME</h2>
+<p> gdcmconv &#8211; .SH &quot;SYNOPSIS&quot; </p>
 <pre>
 gdcmconv [options] file-in file-out
 </pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>gdcmconv</code> command line program takes as input a DICOM file (file-in) and process it to generate an output DICOM file (file-out). The command line option dictate the type of operation(s) gdcmconv will use to generate the output file.</p>
 <h2>PARAMETERS</h2>
 <pre>

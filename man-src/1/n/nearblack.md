@@ -1,5 +1,4 @@
 ---
-
 title: "nearblack(1)"
 name: "nearblack"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-nearblack/"
 description: "nearblack – nearblack convert nearly black/white borders to black"
 ---
 
+<h2 class="name">NAME</h2>
+<p> nearblack &#8211; nearblack convert nearly black/white borders to black </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 nearblack[-of format][-white | [ -color c1, c2, c3... cn ] * ][-near dist][-nb non_black_pixels]
          [-setalpha][-setmask][-o outfile][-q][-co "NAME=VALUE"] *
     infile
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> This utility will scan an image and try to set all pixels that are nearly or exactly black, white or one or more custom colors around the collar to black or white. This is often used to &#8216;fix up&#8217; lossy compressed airphotos so that color pixels can be treated as transparent when mosaicking. </p>
 <dl>
 <dt><code>-o</code> <i>outfile</i>:</dt>

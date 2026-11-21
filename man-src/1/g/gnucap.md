@@ -1,5 +1,4 @@
 ---
-
 title: "gnucap(1)"
 name: "gnucap"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-gnucap/"
 description: "gnucap – GNU Circuit Analysis Package"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gnucap &#8211; GNU Circuit Analysis Package </p>
+<h2>SYNOPSIS</h2>
 <p> <code>gnucap</code> [<code>-b</code> filename] [<code>-i</code> filename] </p>
+<h2>DESCRIPTION</h2>
 <p> <i>GNUCAP </i> is a general purpose circuit simulator. It performs nonlinear dc and transient analyses, fourier analysis, and ac analysis linearized at an operating point. It is fully interactive and command driven. It can also be run in batch mode or as a server. The output is produced as it simulates. Spice compatible models for the MOSFET (level 1,2,3) and diode are included in this release. </p>
 <p> Since it is fully interactive, it is possible to make changes and re-simulate quickly. The interactive design makes it well suited to the typical iterative design process used it optimizing a circuit design. It is also well suited to undergraduate teaching where Spice in batch mode can be quite intimidating. This version, while still officially in beta test, should be stable enough for basic undergraduate teaching and courses in MOS design, but not for bipolar design. </p>
 <p> In batch mode it is mostly Spice compatible, so it is often possible to use the same file for both GNUCAP and Spice. </p>

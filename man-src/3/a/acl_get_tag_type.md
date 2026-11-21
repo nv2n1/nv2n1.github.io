@@ -1,5 +1,4 @@
 ---
-
 title: "acl_get_tag_type(3)"
 name: "acl_get_tag_type"
 section: "3"
@@ -8,10 +7,13 @@ url: "/docs/linux/man/3-acl_get_tag_type/"
 description: "acl_get_tag_type – get the tag type of an ACL entry"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>acl_get_tag_type</code> &#8211; get the tag type of an ACL entry </p>
 <h2>LIBRARY</h2>
 <p> Linux Access Control Lists library (libacl, -lacl).</p>
+<h2>SYNOPSIS</h2>
 <p> In sys/types.h In sys/acl.h Ft int Fn acl_get_tag_type acl_entry_t entry_d acl_tag_t *tag_type_p</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn acl_get_tag_type function assigns to the value pointed to by <i>tag_type_p</i> the tag type for the ACL entry indicated by the argument <i>entry_d</i> </p>
 <p> The argument <i>entry_d</i> and any other ACL entry descriptors that refer to entries in the same ACL continue to refer to those entries. The order of all existing entries in the ACL remain unchanged.</p>
 <h2>RETURN VALUE</h2>

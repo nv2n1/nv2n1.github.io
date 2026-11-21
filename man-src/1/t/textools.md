@@ -1,5 +1,4 @@
 ---
-
 title: "textools(1)"
 name: "textools"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-textools/"
 description: "textools – generate TeX map files, afm files, fix texmf trees"
 ---
 
+<h2 class="name">NAME</h2>
+<p> textools &#8211; generate TeX map files, afm files, fix texmf trees</p>
+<h2>SYNOPSIS</h2>
 <p> <code>textools</code> [ <i>OPTIONS</i> &#8230; ] [ <i>pattern</i> or <i>name</i> or <i>fromroot toroot</i> ] [ <i>MODIFIER OPTIONS</i> &#8230; ] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>textools</code> processes map files, converts Mac files to DOS format, generates map files, fixes texmf trees, and performs a utility-belt worth of other tasks also useful in installing and maintaining the zillion auxilliary files that <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1) and its friends require. </p>
 <h2>OPTIONS</h2>
 <p> The modifier options are listed after the options that they modify.</p>

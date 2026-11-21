@@ -1,5 +1,4 @@
 ---
-
 title: "libnetpbm_ug(3)"
 name: "libnetpbm_ug"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-libnetpbm_ug/"
 description: "libnetpbm_ug – netpbm sample code"
 ---
 
+<h2 class="name">NAME</h2>
+<p> libnetpbm_ug &#8211; netpbm sample code</p>
+<h2>DESCRIPTION</h2>
 <p> The Libnetpbm programming library is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <h2>Example</h2>
 <p> Here is an example of a C program that uses <code>libnetpbm</code> to read a Netpbm image input and produce a Netpbm image output. </p>

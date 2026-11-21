@@ -1,5 +1,4 @@
 ---
-
 title: "tiff2pdf(1)"
 name: "tiff2pdf"
 section: "1"
@@ -10,7 +9,9 @@ description: "tiff2pdf – convert a TIFF image to a PDF document"
 
 <h2>NAME</h2>
 <p> tiff2pdf &#8211; convert a TIFF image to a PDF document</p>
+<h2>SYNOPSIS</h2>
 <p> <code>tiff2pdf</code> [ <i>options </i> ] <i>input.tiff</i></p>
+<h2>DESCRIPTION</h2>
 <p> <i>tiff2pdf</i> opens a TIFF image and writes a PDF document to standard output. </p>
 <p> The program converts one TIFF file to one PDF file, including multiple page TIFF files, tiled TIFF files, black and white. grayscale, and color TIFF files that contain data of TIFF photometric interpretations of bilevel, grayscale, RGB, YCbCr, CMYK separation, and ICC L*a*b* as supported by <i>libtiff </i> and PDF. </p>
 <p> If you have multiple TIFF files to convert into one PDF file then use <i>tiffcp </i> or other program to concatenate the files into a multiple page TIFF file. If the input TIFF file is of huge dimensions (greater than 10000 pixels height or width) convert the input image to a tiled TIFF if it is not already. </p>

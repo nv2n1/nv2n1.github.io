@@ -1,5 +1,4 @@
 ---
-
 title: "caja-connect-server(1)"
 name: "caja-connect-server"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-caja-connect-server/"
 description: "Caja-connect-server – Connect to Server dialog for Caja"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Caja-connect-server &#8211; Connect to Server dialog for Caja </p>
+<h2>SYNOPSIS</h2>
 <p> <code>caja-connect-server [OPTIONS]</code></p>
+<h2>DESCRIPTION</h2>
 <p> Caja Connect Server is the connection manager for Caja/MATE. It is provided as a part of the Caja package for the MATE Desktop Environment. </p>
 <p> Simply running &quot;<code>caja-connection-server</code>&quot; will open a simple dialog allowing you to select the server type, and specify the server address, port, and login credentials for the server you want to connect to. This is the same dialog accessible via the Caja &quot;File&quot; menu, and the MATE Desktop &quot;Places&quot; menu. </p>
 <p> You can use the Caja file manager to access remote servers such as SSH, FTP, and WebDav (HTTP/HTTPS) Servers. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "basketoption(3)"
 name: "basketoption"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-basketoption/"
 description: "ql/instruments/basketoption.hpp – Basket option on a number of assets."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/instruments/basketoption.hpp &#8211; Basket option on a number of assets. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/payoffs.hpp&gt;<br />
  #include &lt;ql/instruments/multiassetoption.hpp&gt;<br />
  #include &lt;ql/math/array.hpp&gt; </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "twm(1)"
 name: "twm"
 section: "1"
@@ -12,6 +11,7 @@ description: "twm – Tab Window Manager for the X Window System"
 <p> twm &#8211; Tab Window Manager for the X Window System</p>
 <h2>SYNTAX</h2>
 <p> <code>twm </code>[ <code>-display</code> <i>dpy</i> ] [ <code>-s</code> ] [ <code>-f</code> <i>initfile</i> ] [ <code>-v</code> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Twm</i> is a window manager for the X Window System. It provides titlebars, shaped windows, several forms of icon management, user-defined macro functions, click-to-type and pointer-driven keyboard focus, and user-specified key and pointer button bindings. </p>
 <p> This program is usually started by the user&#8217;s session manager or startup script. When used from <i><a href="/docs/linux/man/1-xdm/">xdm</a>(1)</i> or <i><a href="/docs/linux/man/1-xinit/">xinit</a>(1)</i> without a session manager, <i>twm</i> is frequently executed in the foreground as the last client. When run this way, exiting <i>twm</i> causes the session to be terminated (i.e., logged out). </p>
 <p> By default, application windows are surrounded by a &#8220;frame&#8221; with a titlebar at the top and a special border around the window. The titlebar contains the window&#8217;s name, a rectangle that is lit when the window is receiving keyboard input, and function boxes known as &#8220;titlebuttons&#8221; at the left and right edges of the titlebar. </p>

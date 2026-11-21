@@ -1,5 +1,4 @@
 ---
-
 title: "prelude-admin(1)"
 name: "prelude-admin"
 section: "1"
@@ -10,6 +9,7 @@ description: "prelude-admin – Manage agents accounts"
 
 <h2>NAME</h2>
 <p> prelude-admin &#8211; Manage agents accounts </p>
+<h2>SYNOPSIS</h2>
 <p> <code>prelude-admin </code> &lt;subcommand&gt; [options] [args] </p>
 <p> <code>prelude-admin add &lt;profile name&gt; [&#8211;uid UID] [&#8211;gid GID]</code> </p>
 <p> <code>prelude-admin chown &lt;profile name&gt; [&#8211;uid UID] [&#8211;gid GID]</code> </p>
@@ -18,6 +18,7 @@ description: "prelude-admin – Manage agents accounts"
 <p> <code>prelude-admin register &lt;profile name&gt; &lt;wanted permission&gt; &lt;registration-server address&gt; [&#8211;uid UID] [&#8211;gid GID] [&#8211;passwd=PASSWD&gt;] [&#8211;passwd-file=&lt;FILE&gt;]</code> </p>
 <p> <code>prelude-admin registration-server &lt;profile name&gt; [&#8211;uid UID] [&#8211;gid GID] [&#8211;prompt] [&#8211;passwd=PASSWD&gt;] [&#8211;passwd-file=&lt;FILE&gt;] [&#8211;keepalive] [&#8211;no-confirm] [&#8211;listen]</code> </p>
 <p> <code>prelude-admin revoke &lt;profile&gt; &lt;analyzerID&gt; [&#8211;uid UID] [&#8211;gid GID]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> In order for an agent to communicate with a manager, it must be registered. Registration involves several steps:<br />
 &nbsp;<wbr>&#8211; Allocating an unique identity for the agent<br />
 &nbsp;<wbr>&#8211; Creating directory to be used by the agent&nbsp;<wbr>(example: failover purpose)<br />

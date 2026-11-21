@@ -1,5 +1,4 @@
 ---
-
 title: "bbox(1)"
 name: "bbox"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-bbox/"
 description: "bbox – prints out the bounding box of a rawppm or rawpbm image"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bbox &#8211; prints out the bounding box of a rawppm or rawpbm image </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>bbox</code> [<code>-l</code>] [<code>-r</code>] [<code>-h</code>] [<code>-V</code>] [<i>rawpbmfile</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>bbox</code></p>
 <dd>reads a rawppm or rawpbm file and prints out the bounding box of the image (as postscript comment and in postscript points, i.e. 1/72dpi) as well as the high resolution bounding box. Input is read from standard input if no filename is specified. Example output: </dd>
 <dl>

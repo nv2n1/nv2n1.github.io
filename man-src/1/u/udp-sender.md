@@ -1,5 +1,4 @@
 ---
-
 title: "udp-sender(1)"
 name: "udp-sender"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-udp-sender/"
 description: "udp-sender – broadcast file on a LAN"
 ---
 
+<h2 class="name">NAME</h2>
+<p> udp-sender &#8211; broadcast file on a LAN </p>
+<h2>SYNOPSIS</h2>
 <p> udp-sender [&#8211;file <i>file</i>] [&#8211;full-duplex] [&#8211;half-duplex] [&#8211;pipe <i>pipe</i>] [&#8211;portbase <i>portbase</i>] [&#8211;blocksize <i>size</i>] [&#8211;interface <i>net-interface</i>] [&#8211;mcast-data-address <i>data-mcast-address</i>] [&#8211;mcast-rdv-address <i>mcast-rdv-address</i>] [&#8211;max-bitrate <i>bitrate</i>] [&#8211;pointopoint] [&#8211;async] [&#8211;log <i>file</i>] [&#8211;min-slice-size <i>min</i>] [&#8211;max-slice-size <i>max</i>] [&#8211;slice-size] [&#8211;ttl <i>time-to-live</i>] [&#8211;fec <i>stripes</i>x<i>redundancy</i>/<i>stripesize</i>] [&#8211;print-seed] [&#8211;rexmit-hello-interval <i>interval</i>] [&#8211;autostart <i>autostart</i>] [&#8211;broadcast] [&#8211;min-receivers receivers] [&#8211;min-wait <i>sec</i>] [&#8211;max-wait <i>sec</i>] [&#8211;nokbd] [&#8211;retries-until-drop <i>n</i>] [&#8211;bw-period <i>n</i>] [&#8211;rate-governor <i>module.so:key1=value1,key2=value2</i>] [&#8211;stat-period <i>n</i>] [&#8211;print-uncompressed-position <i>flag</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <tt>&quot;Udp-sender&quot;</tt> is used to broadcast a file (for instance a disk image) to multiple <tt>&quot;udp-receivers&quot;</tt> on the local <font SIZE="-1">LAN.</font> In order to do this, it uses Ethernet multicast or broadcast, so that all receivers profit from the same physical datastream. Thus, sending to 10 destinations does not take more time than it would take to send just 2.</p>
 <h2>OPTIONS</h2>
 <h3>Basic options</h3>

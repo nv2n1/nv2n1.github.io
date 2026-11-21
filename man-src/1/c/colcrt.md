@@ -1,5 +1,4 @@
 ---
-
 title: "colcrt(1)"
 name: "colcrt"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-colcrt/"
 description: "colcrt – filter nroff output for CRT previewing"
 ---
 
+<h2 class="name">NAME</h2>
+<p> colcrt &#8211; filter nroff output for CRT previewing </p>
+<h2>SYNOPSIS</h2>
 <p> <code>colcrt</code> [options] [<i>file</i> &#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>colcrt</code> provides virtual half-line and reverse line feed sequences for terminals without such capability, and on which overstriking is destructive. Half-line characters and underlining (changed to dashing `-&#8216;) are placed on new lines in between the normal output lines.</p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;</code>, <code>&#8211;no-underlining</code></p>

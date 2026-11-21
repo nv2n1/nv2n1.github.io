@@ -1,5 +1,4 @@
 ---
-
 title: "rcopy(1)"
 name: "rcopy"
 section: "1"
@@ -11,11 +10,17 @@ url: "/docs/linux/man/1-rcopy/"
 
  rcopy - simple file copy over RDMA.
 
-<pre><code>
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <pre><code>
 rcopy source server[:destination][-p port] rcopy[-p port]
 </code></pre>
 
-Uses sockets over RDMA interface to copy a source file to the specified destination.
+<h2>DESCRIPTION</h2>
+
+ Uses sockets over RDMA interface to copy a source file to the specified destination.
 
 <h2>OPTIONS</h2>
 

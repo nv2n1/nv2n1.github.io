@@ -1,5 +1,4 @@
 ---
-
 title: "aggregate-ios(1)"
 name: "aggregate-ios"
 section: "1"
@@ -10,7 +9,9 @@ description: "aggregate-ios – optimise a concatenated set of cisco/IOS prefix 
 
 <h2>NAME</h2>
 <p> <code>aggregate-ios</code> &#8211; optimise a concatenated set of cisco/IOS prefix filters to help make them nice and short. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>aggregate-ios &lt;source_config &gt;optimised_config</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Takes cisco IOS configuration on stdin, and optimises any prefix filters found using <code><a href="/docs/linux/man/1-aggregate/">aggregate</a>(1).</code> Optimised filters are produced on stdout. </p>
 <h2>OPTIONS</h2>
 <p> None. </p>

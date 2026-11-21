@@ -1,5 +1,4 @@
 ---
-
 title: "git-send-bugzilla(1)"
 name: "git-send-bugzilla"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-send-bugzilla/"
 description: "git-send-bugzilla – Attach patches to a bugzilla bug"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-send-bugzilla &#8211; Attach patches to a bugzilla bug </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git - send - bugzilla[OPTIONS](--dry - run | &lt;bugid&gt;)&lt;since&gt;[..&lt;until&gt;]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Attach each commit between &lt;since&gt; and &lt;until&gt; to the bug &lt;bugid&gt; on GNOMEcqs bugzilla. If ..&lt;until&gt; is not specified, the head of the current working tree is implied. </p>
 <p> If -n (or bugzilla.numbered in the repository configuration) is specified, instead of &quot;[PATCH] Subject&quot;, the first line is formatted as &quot;[n/m] Subject&quot;.</p>
 <h2>OPTIONS</h2>

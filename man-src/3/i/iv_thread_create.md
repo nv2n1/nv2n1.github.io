@@ -1,5 +1,4 @@
 ---
-
 title: "iv_thread_create(3)"
 name: "iv_thread_create"
 section: "3"
@@ -10,9 +9,11 @@ description: "iv_thread_create, iv_thread_set_debug_state – ivykis thread conv
 
 <h2>NAME</h2>
 <p> iv_thread_create, iv_thread_set_debug_state &#8211; ivykis thread convenience functions</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;iv_thread.h&gt;</code> </p>
 <p> <code>int iv_thread_create(char *</code><i>name</i><code>, void (*</code><i>start_routine</i><code>)(void *), void *</code><i>arg</i><code>);</code><br />
  <code>void iv_thread_set_debug_state(int </code><i>state</i><code>);</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>iv_thread_create</code> is a wrapper around <code><a href="/docs/linux/man/3-pthread_create/">pthread_create</a></code>(3) which will maintain an ivykis main loop reference in the calling thread (which must be an <code>ivykis</code>(3) thread, i.e. have had <code>iv_init</code>(3) called in it) for as long as the created thread is alive. </p>
 <p> Maintaining a reference on the calling thread&#8217;s ivykis event loop makes sure that the calling thread will not return from its ivykis main loop before the created thread exits, as that could cause cleanup still happening in the created thread to be interrupted when the calling thread subsequently calls <code><a href="/docs/linux/man/3-exit/">exit</a></code>(3). </p>
 <p> The created thread need not be an ivykis thread. </p>

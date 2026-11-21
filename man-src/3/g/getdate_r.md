@@ -1,5 +1,4 @@
 ---
-
 title: "getdate_r(3)"
 name: "getdate_r"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-getdate_r/"
 description: "getdate, getdate_r – convert a date-plus-time string to broken-down time"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getdate, getdate_r &#8211; convert a date-plus-time string to broken-down time </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;time.h&gt;</code> </p>
 <p> <code>struct tm *getdate(const char *</code><i>string</i><code>);</code> </p>
 <p> <code>extern int getdate_err;</code> </p>
@@ -22,6 +24,7 @@ description: "getdate, getdate_r – convert a date-plus-time string to broken-d
 <dl>
 <dt>
 </dt><dd> _GNU_SOURCE</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The function <code>getdate</code>() converts a string representation of a date and time, contained in the buffer pointed to by <i>string</i>, into a broken-down time. The broken-down time is stored in a <i>tm</i> structure, and a pointer to this structure is returned as the function result. This <i>tm</i> structure is allocated in static storage, and consequently it will be overwritten by further calls to <code>getdate</code>(). </p>
 <p> In contrast to <code><a href="/docs/linux/man/3-strptime/">strptime</a></code>(3), (which has a <i>format</i> argument), <code>getdate</code>() uses the formats found in the file whose full pathname is given in the environment variable <code>DATEMSK</code>. The first line in the file that matches the given input string is used for the conversion. </p>
 <p> The matching is done case insensitively. Superfluous whitespace, either in the pattern or in the string to be converted, is ignored. </p>

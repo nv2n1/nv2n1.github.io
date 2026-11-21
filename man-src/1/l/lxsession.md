@@ -1,5 +1,4 @@
 ---
-
 title: "lxsession(1)"
 name: "lxsession"
 section: "1"
@@ -10,7 +9,9 @@ description: "lxsession — a lightweight X session manager"
 
 <h2>NAME</h2>
 <p> lxsession &#8212; a lightweight X session manager</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lxsession</code></p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>lxsession</code> command. </p>
 <p> <code>lxsession</code> is a program that provides a X11 session manager. It is the default X11 session manager of LXDE.<br />
 &nbsp;<wbr> </p>

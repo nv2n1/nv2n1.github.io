@@ -1,5 +1,4 @@
 ---
-
 title: "seren(1)"
 name: "seren"
 section: "1"
@@ -10,7 +9,9 @@ description: "Seren – A simple VoIP program to create conferences from the ter
 
 <h2>NAME</h2>
 <p> Seren &#8211; A simple VoIP program to create conferences from the terminal</p>
+<h2>SYNOPSIS</h2>
 <p> <code>seren</code> [option&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> Seren is a simple VoIP program based on the Opus codec that allows you to create a voice conference from the terminal, with up to 10 participants, without having to register accounts, exchange emails, or add people to contact lists. All you need to join an existing conference is the host name or IP address of one of the participants. Seren creates a dynamic peer-to-peer network of equivalent nodes which exchange text and audio data using a udp connection, and offers the user the ability to change the quality/bitrate on the fly, encrypt the traffic and record the calls. </p>
 <p> This manual page documents briefly the <code>seren</code> command. Please refer to the README file to get more information on how to use Seren.</p>
 <h2>OPTIONS</h2>

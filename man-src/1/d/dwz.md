@@ -1,5 +1,4 @@
 ---
-
 title: "dwz(1)"
 name: "dwz"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dwz/"
 description: "dwz – DWARF optimization and duplicate removal tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dwz &#8211; DWARF optimization and duplicate removal tool </p>
+<h2>SYNOPSIS</h2>
 <p> dwz [OPTION&#8230;]&nbsp;[FILES]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>dwz</code> is a program that attempts to optimize DWARF debugging information contained in ELF shared libraries and ELF executables for size, by replacing DWARF information representation with equivalent smaller representation where possible and by reducing the amount of duplication using techniques from DWARF standard appendix E &#8211; creating <i>DW_TAG_partial_unit</i> compilation units (CUs) for duplicated information and using <i>DW_TAG_imported_unit</i> to import it into each CU that needs it. </p>
 <p> The tool handles DWARF 32-bit format debugging sections of versions 2, 3 and 4 and GNU extensions on top of those, though using DWARF 4 or worst case DWARF 3 is strongly recommended. </p>
 <p> The tool has two main modes of operation, without the <i>-m</i> option it attempts to optimize DWARF debugging information in each given object (executable or shared library) individually, with the <i>-m</i> option it afterwards attempts to optimize even more by moving DWARF debugging information entries (DIEs), strings and macro descriptions duplicated in more than one object into a newly created ELF ET_REL object whose filename is given as <i>-m</i> option argument. The debug sections in the executables and shared libraries specified on the command line are then modified again, referring to the entities in the newly created object.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "lxc-unshare(1)"
 name: "lxc-unshare"
 section: "1"
@@ -10,7 +9,9 @@ description: "lxc-unshare – Run a task in a new set of namespaces."
 
 <h2>NAME</h2>
 <p> lxc-unshare &#8211; Run a task in a new set of namespaces.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lxc-unshare</code> {-s <i>namespaces</i>} [-u <i>user</i>] [-H <i>hostname</i>] [-i <i>ifname</i>] [-d] [-M] {command}</p>
+<h2>DESCRIPTION</h2>
 <p> <code>lxc-unshare</code> can be used to run a task in a cloned set of namespaces. This command is mainly provided for testing purposes. Despite its name, it always uses clone rather than unshare to create the new task with fresh namespaces. Apart from testing kernel regressions this should make no difference.</p>
 <h2>OPTIONS</h2>
 <dl>

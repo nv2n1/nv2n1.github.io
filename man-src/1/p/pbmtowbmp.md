@@ -1,5 +1,4 @@
 ---
-
 title: "pbmtowbmp(1)"
 name: "pbmtowbmp"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pbmtowbmp/"
 description: "pbmtowbmp – convert a portable bitmap to a wireless bitmap (wbmp) file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pbmtowbmp &#8211; convert a portable bitmap to a wireless bitmap (wbmp) file </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pbmtowbmp</code> [<i>pbmfile</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Reads a portable bitmap as input. Produces a wbmp file as output.</p>
 <h2>LIMITATIONS</h2>
 <p> Currently only WBMP type 0 is generated. This is the only type specified in the WAP 1.1 specifications.</p>

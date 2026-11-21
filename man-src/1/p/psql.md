@@ -1,5 +1,4 @@
 ---
-
 title: "psql(1)"
 name: "psql"
 section: "1"
@@ -7,10 +6,13 @@ letter: "p"
 url: "/docs/linux/man/1-psql/"
 description: "psql – PostgreSQL interactive terminal"
 ---
-
+<h2 class="name">NAME</h2>
+<p> psql - PostgreSQL interactive terminal </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>psql</code> [<i>option</i>...] [<i>dbname</i>&nbsp;<wbr>[<i>username</i>]] </dt>
 </dl>
+<h2>DESCRIPTION</h2>
 <dd> <p> psql is a terminal-based front-end to PostgreSQL. It enables you to type in queries interactively, issue them to PostgreSQL, and see the query results. Alternatively, input can be from a file. In addition, it provides a number of meta-commands and various shell-like features to facilitate writing scripts and automating a wide variety of tasks.  </p>
 <h2>OPTIONS</h2>
 <p> <code>-a</code>, <code>--echo-all</code> </p>

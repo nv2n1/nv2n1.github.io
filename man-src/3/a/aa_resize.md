@@ -1,5 +1,4 @@
 ---
-
 title: "aa_resize(3)"
 name: "aa_resize"
 section: "3"
@@ -10,12 +9,14 @@ description: "aa_resize – resize functions"
 
 <h2>NAME</h2>
 <p> aa_resize &#8211; resize functions</p>
+<h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>
 <p> int aa_resize(aa_context *c); </code></p>
 <h2>PARAMETERS</h2>
 <dl>
 <dt><code>aa_context *c</code></dt>
 <dd> Specifies the AA-lib context to operate on.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Do resize action. This function ought to be called when application takes into account the AA_RESIZE event. The context is reinitialized and set to new sizes.</p>
 <h2>RETURNS</h2>
 <p> 0 when no resizing is done and 1 when resizing was succesfull.</p>

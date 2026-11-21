@@ -1,5 +1,4 @@
 ---
-
 title: "ldap_compare(3)"
 name: "ldap_compare"
 section: "3"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/3-ldap_compare/"
 description: "ldap_compare, ldap_compare_s, ldap_compare_ext, ldap_compare_ext_s – Perform an LDAP compare operation."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ldap_compare, ldap_compare_s, ldap_compare_ext, ldap_compare_ext_s &#8211; Perform an LDAP compare operation. </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ldap.h&gt;
 int ldap_compare_ext(
@@ -28,6 +30,7 @@ int ldap_compare_ext_s(
     LDAPControl **serverctrls,
     LDAPControl **clientctrls);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>ldap_compare_ext_s()</code> routine is used to perform an LDAP compare operation synchronously. It takes <i>dn</i>, the DN of the entry upon which to perform the compare, and <i>attr</i> and <i>value</i>, the attribute description and value to compare to those found in the entry. It returns a code, which will be LDAP_COMPARE_TRUE if the entry contains the attribute value and LDAP_COMPARE_FALSE if it does not. Otherwise, an error code is returned that indicates the nature of the problem. See <code><a href="/docs/linux/man/3-ldap/">ldap</a></code>(3) for details. </p>
 <p> The <code>ldap_compare_ext()</code> routine is used to perform an LDAP compare operation asynchronously. It takes the same parameters as <code>ldap_compare_ext_s()</code>, but provides the message id of the request it initiated in the integer pointed to <i>msgidp</i>. The result of the compare can be obtained by a subsequent call to <code><a href="/docs/linux/man/3-ldap_result/">ldap_result</a></code>(3). </p>
 <p> Both routines allow server and client controls to be specified to extend the compare request.</p>

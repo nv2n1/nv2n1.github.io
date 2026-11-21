@@ -1,5 +1,4 @@
 ---
-
 title: "vbnc(1)"
 name: "vbnc"
 section: "1"
@@ -10,7 +9,9 @@ description: "vbnc – Mono Visual Basic Compiler."
 
 <h2>NAME</h2>
 <p> vbnc &#8211; Mono Visual Basic Compiler.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>vbnc</code> [option] [source-files]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>(vbnc) </i> is a CIL compiler for the VisualBasic.NET language. </p>
 <p> Applications developed on Windows with vbc can execute on Mono and applications compiled with &#8216;vbnc&#8217; can be executed on .NET runtime. </p>
 <p> The Mono Visual Basic compiler accepts the same options as the Microsoft VB.NET compiler. Those options can start with a slash or a dash (/checked is the same as -checked). </p>

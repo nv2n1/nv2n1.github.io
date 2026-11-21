@@ -1,5 +1,4 @@
 ---
-
 title: "cashflows_(3)"
 name: "cashflows_"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cashflows_/"
 description: "QuantLib::Bond – Base bond class."
 ---
 
+<h2 class="name">NAME</h2>
+<p> QuantLib::Bond &#8211; Base bond class. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/bond.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Instrument</code>. </p>
 <p> Inherited by <code>AmortizingCmsRateBond</code>, <code>AmortizingFixedRateBond</code>, <code>AmortizingFloatingRateBond</code>, <code>CallableBond</code>, <code>CmsRateBond</code>, <code>ConvertibleBond</code>, <code>FixedRateBond</code>, <code>FloatingRateBond</code>, and <code>ZeroCouponBond</code>. </p>

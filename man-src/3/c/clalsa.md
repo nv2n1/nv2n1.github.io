@@ -1,5 +1,4 @@
 ---
-
 title: "clalsa(3)"
 name: "clalsa"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-clalsa/"
 description: "clalsa.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> clalsa.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clalsa</code> (ICOMPQ, SMLSIZ, N, NRHS, B, LDB, BX, LDBX, U, LDU, VT, K, DIFL, DIFR, Z, POLES, GIVPTR, GIVCOL, LDGCOL, PERM, GIVNUM, C, S, RWORK, IWORK, INFO)<br />
  <i></i><code>CLALSA</code> computes the SVD of the coefficient matrix in compact form. Used by sgelsd.</p>

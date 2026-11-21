@@ -1,5 +1,4 @@
 ---
-
 title: "editcap(1)"
 name: "editcap"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-editcap/"
 description: "editcap – Edit and/or translate the format of capture files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> editcap &#8211; Edit and/or translate the format of capture files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>editcap</code> [&nbsp;<wbr><code>-A</code>&nbsp;<wbr>&lt;start time&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-B</code>&nbsp;<wbr>&lt;stop time&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-c</code>&nbsp;<wbr>&lt;packets per file&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-C</code>&nbsp;<wbr>&lt;choplen&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-E</code>&nbsp;<wbr>&lt;error probability&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-F</code>&nbsp;<wbr>&lt;file format&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-h</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-i</code>&nbsp;<wbr>&lt;seconds per file&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-r</code>&nbsp;<wbr>] [&nbsp;<wbr><code>-s</code>&nbsp;<wbr>&lt;snaplen&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-S</code>&nbsp;<wbr>&lt;strict time adjustment&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-t</code>&nbsp;<wbr>&lt;time adjustment&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-T</code>&nbsp;<wbr>&lt;encapsulation type&gt;&nbsp;<wbr>] [&nbsp;<wbr><code>-v</code>&nbsp;<wbr>] <i>infile</i> <i>outfile</i> [&nbsp;<wbr><i>packet#</i>[-<i>packet#</i>]&nbsp;<wbr>&#8230;&nbsp;<wbr>] </p>
 <p> <code>editcap</code> &nbsp;<wbr><code>-d</code>&nbsp;<wbr> | &nbsp;<wbr><code>-D</code>&nbsp;<wbr>&lt;dup window&gt;&nbsp;<wbr> | &nbsp;<wbr><code>-w</code>&nbsp;<wbr>&lt;dup time window&gt;&nbsp;<wbr> [&nbsp;<wbr><code>-v</code>&nbsp;<wbr>] <i>infile</i> <i>outfile</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>Editcap</code> is a program that reads some or all of the captured packets from the <i>infile</i>, optionally converts them in various ways and writes the resulting packets to the capture <i>outfile</i> (or outfiles). </p>
 <p> By default, it reads all packets from the <i>infile</i> and writes them to the <i>outfile</i> in pcap file format. </p>
 <p> An optional list of packet numbers can be specified on the command tail; individual packet numbers separated by whitespace and/or ranges of packet numbers can be specified as <i>start</i>&#8211;<i>end</i>, referring to all packets from <i>start</i> to <i>end</i>. By default the selected packets with those numbers will <i>not</i> be written to the capture file. If the <code>-r</code> flag is specified, the whole packet selection is reversed; in that case <i>only</i> the selected packets will be written to the capture file. </p>

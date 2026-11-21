@@ -1,5 +1,4 @@
 ---
-
 title: "clarcm(3)"
 name: "clarcm"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-clarcm/"
 description: "clarcm.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> clarcm.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clarcm</code> (M, N, A, LDA, B, LDB, C, LDC, RWORK)<br />
  <i></i><code>CLARCM</code> copies all or part of a real two-dimensional array to a complex array.</p>

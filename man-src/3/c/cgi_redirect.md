@@ -1,5 +1,4 @@
 ---
-
 title: "cgi_redirect(3)"
 name: "cgi_redirect"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cgi_redirect/"
 description: "cgi_redirect – send an HTTP 302 redirect response"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cgi_redirect &#8211; send an HTTP 302 redirect response </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cgi/cgi.h&gt;
 </code></pre>
@@ -18,6 +20,7 @@ void cgi_redirect(CGI *cgi, const char *fmt, ...)
 <h2>ARGUMENTS</h2>
 <p> cgi &#8211; cgi struct<br />
  fmt &#8211; printf style format with args </p>
+<h2>DESCRIPTION</h2>
 <p> cgi_redirect will redirect the user to another page on your site. This version takes only the path portion of the URL. As with all printf style commands, you should not call this with arbitrary input that may contain % characters, if you are forwarding something directly, use a format like cgi_redirect (cgi, &quot;%s&quot;, buf) </p>
 <h2>RETURN VALUE</h2>
 <p> None </p>

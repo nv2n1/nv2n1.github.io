@@ -1,5 +1,4 @@
 ---
-
 title: "pbs_statserver(3)"
 name: "pbs_statserver"
 section: "3"
@@ -7,8 +6,8 @@ letter: "p"
 url: "/docs/linux/man/3-pbs_statserver/"
 description: "pbs_statserver – obtain status of a pbs batch server"
 ---
-
 <p>pbs_statserver &#8211; obtain status of a pbs batch server </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;pbs_error.h&gt; <br />
  #include &lt;pbs_ifl.h&gt; </p>
 <pre><code>
@@ -16,6 +15,7 @@ description: "pbs_statserver – obtain status of a pbs batch server"
 char/ *extend)
 void pbs_statfree(struct batch_status *psj)
  </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Issue a batch request to obtain the status of a batch server. </p>
 <p>A <i>Status Server</i> batch request is generated and sent to the server over the connection specified by <i> which is the return value of </i><code>pbs_connect</code>(). </p>
 <p>The parameter, <i> is a pointer to an attrl </i> structure which is defined in pbs_ifl.h as: </p>

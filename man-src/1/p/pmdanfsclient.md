@@ -1,5 +1,4 @@
 ---
-
 title: "pmdanfsclient(1)"
 name: "pmdanfsclient"
 section: "1"
@@ -10,6 +9,7 @@ description: "pmdanfsclient – NFS client statistics performance metrics domain
 
 <h2>NAME</h2>
 <p> <code>pmdanfsclient</code> &#8211; NFS client statistics performance metrics domain agent (PMDA)</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdanfsclient</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which exports metric values from the <i>/proc/self/mountstats</i> interface to provide information on NFS mounts.</p>
 <h2>INSTALLATION</h2>
 <p> Install the nfsclient PMDA by using the Install script as root: </p>

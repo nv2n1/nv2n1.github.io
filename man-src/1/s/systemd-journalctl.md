@@ -1,5 +1,4 @@
 ---
-
 title: "systemd-journalctl(1)"
 name: "systemd-journalctl"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-systemd-journalctl/"
 description: "journalctl, systemd-journalctl – Query the systemd journal"
 ---
 
+<h2 class="name">NAME</h2>
+<p> journalctl, systemd-journalctl &#8211; Query the systemd journal </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>journalctl </code><code>[OPTIONS&#8230;]</code><code>[MATCH]</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>journalctl</code></p>
 <dd>may be used to query the contents of the <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1) journal as written by <code><a href="/docs/linux/man/8-systemd-journald-service/">systemd-journald.service</a></code>(8). </dd>
 <p> If called without parameter will show the full contents of the journal, starting with the oldest entry collected. </p>

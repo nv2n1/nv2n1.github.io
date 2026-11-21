@@ -1,5 +1,4 @@
 ---
-
 title: "ustr-import(1)"
 name: "ustr-import"
 section: "1"
@@ -10,6 +9,7 @@ description: "ustr-import – ustr string library import tool"
 
 <h2>NAME</h2>
 <p> ustr-import &#8211; ustr string library import tool</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>ustr-import</code> [&#8211;32|&#8211;64] [-d][d] [-c] [-b x] [-e 1|0] [-s 1|0] section </dt>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "git-gh-pages(1)"
 name: "git-gh-pages"
 section: "1"
@@ -10,7 +9,9 @@ description: "git-gh-pages – Create the GitHub Pages branch"
 
 <h2>NAME</h2>
 <p> <code>git-gh-pages</code> &#8211; Create the GitHub Pages branch</p>
+<h2>SYNOPSIS</h2>
 <p> <code>git-gh-pages</code></p>
+<h2>DESCRIPTION</h2>
 <p> Create the GitHub Pages branch (gh-pages) with an initial dummy index.html file.</p>
 <h2>EXAMPLES</h2>
 <pre><code>

@@ -1,5 +1,4 @@
 ---
-
 title: "dbench(1)"
 name: "dbench"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-dbench/"
 description: "dbench – Measure disk throughput for simulated netbench run"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dbench &#8211; Measure disk throughput for simulated netbench run </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dbench</code> [<i>options</i>]<i>numclients</i><br />
  <code>tbench</code> [<i>options</i>]<i>numclients</i>server <code>tbench_srv</code> [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>dbench</code> and <code>tbench</code> benchmarks. This manual page was written for the Debian GNU/Linux distribution because the original program does not have a manual page. However, it has fairly easy to read source code. </p>
 <p> Netbench is a terrible benchmark, but it&#8217;s an &quot;industry standard&quot; and it&#8217;s what is used in the press to rate windows fileservers like Samba and WindowsNT.<br />
  Given the requirements of running netbench (60 and 150 Windows PCs all on switched fast ethernet and a really grunty server, and a to open up netbench to the masses.<br />

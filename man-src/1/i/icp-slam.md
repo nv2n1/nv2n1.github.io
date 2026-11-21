@@ -1,5 +1,4 @@
 ---
-
 title: "icp-slam(1)"
 name: "icp-slam"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-icp-slam/"
 description: "icp-slam – SLAM method using scan matching"
 ---
 
+<h2 class="name">NAME</h2>
+<p> icp-slam &#8211; SLAM method using scan matching </p>
+<h2>SYNOPSIS</h2>
 <p> icp-slam <i>config_file.ini</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>icp-slam</code> is a command-line application which processes a rawlog and create a map using scan matching with 2D laser scans.</p>
 <h2>BUGS</h2>
 <p> Please report bugs at <a rel="nofollow" href="http://sourceforge.net/tracker/?group_id=205280">http://sourceforge.net/tracker/?group_id=205280</a>&amp;atid=993006</p>

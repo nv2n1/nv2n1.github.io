@@ -1,5 +1,4 @@
 ---
-
 title: "dcmcjpeg(1)"
 name: "dcmcjpeg"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-dcmcjpeg/"
 description: "dcmcjpeg – Encode DICOM file to JPEG transfer syntax"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dcmcjpeg &#8211; Encode DICOM file to JPEG transfer syntax </p>
+<h2>SYNOPSIS</h2>
 <pre>
 dcmcjpeg [options] dcmfile-in dcmfile-out
 </pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>dcmcjpeg</code> utility reads an uncompressed DICOM image (<i>dcmfile-in</i>), performs a JPEG compression (i. e. conversion to an encapsulated DICOM transfer syntax) and writes the converted image to an output file (<i>dcmfile-out</i>).</p>
 <h2>PARAMETERS</h2>
 <pre>

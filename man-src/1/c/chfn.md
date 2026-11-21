@@ -1,5 +1,4 @@
 ---
-
 title: "chfn(1)"
 name: "chfn"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-chfn/"
 description: "chfn – change real user name and information"
 ---
 
+<h2 class="name">NAME</h2>
+<p> chfn &#8211; change real user name and information </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>chfn</code> [<i>options</i>] [<i>LOGIN</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>chfn</code> command changes user fullname, office room number, office phone number, and home phone number information for a user&#8217;s account. This information is typically printed by <code><a href="/docs/linux/man/1-finger/">finger</a></code>(1) and similar programs. A normal user may only change the fields for her own account, subject to the restrictions in /etc/login.defs. (The default configuration is to prevent users from changing their fullname.) The superuser may change any field for any account. Additionally, only the superuser may use the <code>-o</code> option to change the undefined portions of the GECOS field. </dd>
 <p> These fields must not contain any colons. Except for the <i>other</i> field, they should not contain any comma or equal sign. It is also recommended to avoid non-US-ASCII characters, but this is only enforced for the phone numbers. The <i>other</i> field is used to store accounting information used by other applications.</p>
 <h2>OPTIONS</h2>

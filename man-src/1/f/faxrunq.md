@@ -1,5 +1,4 @@
 ---
-
 title: "faxrunq(1)"
 name: "faxrunq"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-faxrunq/"
 description: "faxrunq – send fax jobs queued by"
 ---
 
+<h2 class="name">NAME</h2>
+<p> faxrunq &#8211; send fax jobs queued by </p>
 <p><a href="/docs/linux/man/1-faxspool/">faxspool</a>(1)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>faxrunq</code></p>
+<h2>DESCRIPTION</h2>
 <p> Run the fax queue set up by <a href="/docs/linux/man/1-faxspool/">faxspool</a>(1), try to send all faxes, record result, remove job and send notify mails. </p>
 <p> <i>faxrunq </i> looks for all the jobs queued by <a href="/docs/linux/man/1-faxspool/">faxspool</a>(1) to /var/spool/fax/outgoing/*. For each job in the queue, faxrunq tries to send it, using <a href="/docs/linux/man/8-sendfax/">sendfax</a>(8). </p>
 <p> If the send succeeds, the job is removed from the queue, and a &quot;success&quot; mail is sent to the originator of the spooled job. </p>

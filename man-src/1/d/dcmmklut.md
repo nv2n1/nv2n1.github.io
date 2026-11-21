@@ -1,5 +1,4 @@
 ---
-
 title: "dcmmklut(1)"
 name: "dcmmklut"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-dcmmklut/"
 description: "dcmmklut – Create DICOM look-up tables"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dcmmklut &#8211; Create DICOM look-up tables </p>
+<h2>SYNOPSIS</h2>
 <pre>
 dcmmklut [options] dcmimg-out
 </pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>dcmmklut</code> utility allows to create a variety of DICOM Modality, Presentation and VOI look-up tables (LUT) and is intended for the creation of test images. The utility is able to read an existing DICOM image file, create a look up table according to the command line options, and write the new object back to file. It is also possible to create a new object containing the specified LUT without reading an existing DICOM image file. This is e.g. useful to simply store different look-up tables in a DICOM-like structure. As a default the output file is encoded with the same transfer syntax used for the input file, but the transfer syntax can also be specified as a command line option. </p>
 <p> The LUT data can be derived from the shape of a gamma curve (default for the gamma factor is 1) or imported from a file (currently the MAP format from Ulead&#8217;s PhotoImpact and a simple text format are supported). The input and output width of the LUT can also be specified in the range allowed by the DICOM standard. The interpolation of the input range is done by a polynomial curve fitting algorithm. </p>
 <p> In addition to the DICOM output file the LUT data can also be exported to a tabbed text file which allows the easy visualization of the curves with a common spread sheet application (e.g. Microsoft Excel).</p>

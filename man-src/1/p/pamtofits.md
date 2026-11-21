@@ -1,5 +1,4 @@
 ---
-
 title: "pamtofits(1)"
 name: "pamtofits"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pamtofits/"
 description: "pamtofits – convert a Netpbm image into FITS format"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pamtofits &#8211; convert a Netpbm image into FITS format</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pamtofits</code> [<code>-max</code> <i>f</i>] [<code>-min</code> <i>f</i>] [<i>pamfile</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamtofits</code> reads a PNM or PAM image as input and produces a FITS (Flexible Image Transport System) file as output. The resolution of the output file is either 8 bits/pixel, or 16 bits/pixel, depending on the value of maxval in the input file. If the input file is a PBM or PGM image, the output file consists of a single plane image (NAXIS = 2). If instead the input file is a PPM image, the output file will consist of a three-plane image (NAXIS = 3, NAXIS3 = 3). </p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "varnish-cli(7)"
 name: "varnish-cli"
 section: "7"
@@ -7,8 +6,8 @@ letter: "v"
 url: "/docs/linux/man/7-varnish-cli/"
 description: "Varnish CLI – Varnish Command Line Interface"
 ---
-
 <p> Varnish CLI - Varnish Command Line Interface  </p>
+<h2>DESCRIPTION</h2>
 <p>Varnish as a command line interface (CLI) which can control and change most of the operational parameters and the configuration of Varnish, without interrupting the running service. </p>
 <p>The CLI can be used for the following tasks: </p>
 <dl>

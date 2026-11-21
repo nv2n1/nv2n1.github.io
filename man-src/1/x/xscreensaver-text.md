@@ -1,5 +1,4 @@
 ---
-
 title: "xscreensaver-text(1)"
 name: "xscreensaver-text"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-xscreensaver-text/"
 description: "xscreensaver-text – prints some text to stdout, for use by screen savers."
 ---
 
+<h2 class="name">NAME</h2>
+<p> xscreensaver-text &#8211; prints some text to stdout, for use by screen savers. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xscreensaver-text</code> [&#8211;verbose] [&#8211;columns <i>N</i>] [&#8211;text <i>STRING</i>] [&#8211;file <i>PATH</i>] [&#8211;program <i>CMD</i>] [&#8211;url <i>URL</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <i>xscreensaver-text</i> script prints out some text for use by various screensavers, according to the options set in the ~/.xscreensaver file. This may dump the contents of a file, run a program, or load a URL.</p>
 <h2>OPTIONS</h2>
 <p> <i>xscreensaver-text</i> accepts the following options:</p>

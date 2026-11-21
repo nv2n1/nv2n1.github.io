@@ -1,5 +1,4 @@
 ---
-
 title: "parrate(3)"
 name: "parrate"
 section: "3"
@@ -7,8 +6,8 @@ letter: "p"
 url: "/docs/linux/man/3-parrate/"
 description: "QuantLib::YieldTermStructure – Interest-rate term structure."
 ---
-
 <p>QuantLib::YieldTermStructure &#8211; Interest-rate term structure. </p>
+<h2>SYNOPSIS</h2>
 <p> <br />
  </p>
 <p>#include &lt;ql/termstructures/yieldtermstructure.hpp&gt; </p>

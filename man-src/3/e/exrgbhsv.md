@@ -1,5 +1,4 @@
 ---
-
 title: "exrgbhsv(3)"
 name: "exrgbhsv"
 section: "3"
@@ -10,8 +9,10 @@ description: "exrgbhsv – RGB <-> HSV color space conversions. Allegro game pro
 
 <h2>NAME</h2>
 <p> exrgbhsv &#8211; RGB &lt;-&gt; HSV color space conversions. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>Example exrgbhsv</code></p>
+<h2>DESCRIPTION</h2>
 <p> This program shows how to convert colors between the different color-space representations. The central area of the screen will display the current color. On the top left corner of the screen, three sliders allow you to modify the red, green and blue value of the color. On the bottom right corner of the screen, three sliders allow you to modify the hue, saturation and value of the color. The color bars beneath the sliders show what the resulting color will look like when the slider is dragged to that position. </p>
 <p> Additionally this example also shows how to &quot;inherit&quot; the behaviour of a GUI object and extend it, here used to create the sliders. </p>
 <h2>SEE ALSO</h2>

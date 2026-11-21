@@ -1,5 +1,4 @@
 ---
-
 title: "irsim(1)"
 name: "irsim"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-irsim/"
 description: "irsim – An event-driven logic-level simulator for MOS circuits"
 ---
 
+<h2 class="name">NAME</h2>
+<p> irsim &#8211; An event-driven logic-level simulator for MOS circuits </p>
+<h2>SYNOPSIS</h2>
 <p> <code>irsim </code><i>[-s] prm_file sim_file &#8230; [+hist_file] [-cmd_file &#8230;] </i></p>
+<h2>DESCRIPTION</h2>
 <p> IRSIM is an event-driven logic-level simulator for MOS (both N and P) transistor circuits. Two simulation models are available:</p>
 <dl>
 <dt><code>switch</code></dt>

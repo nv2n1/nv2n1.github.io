@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_supplemental_get_name(3)"
 name: "gnutls_supplemental_get_name"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_supplemental_get_name – API function"
 
 <h2>NAME</h2>
 <p> gnutls_supplemental_get_name &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>const char * gnutls_supplemental_get_name(gnutls_supplemental_data_format_type_t </code><i>type</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_supplemental_data_format_type_t type</dt>
 <dd> is a supplemental data format type</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Convert a <code>gnutls_supplemental_data_format_type_t</code> value to a string.</p>
 <h2>RETURNS</h2>
 <p> a string that contains the name of the specified supplemental data format type, or <code>NULL</code> for unknown types.</p>

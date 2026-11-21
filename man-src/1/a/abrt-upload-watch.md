@@ -1,5 +1,4 @@
 ---
-
 title: "abrt-upload-watch(1)"
 name: "abrt-upload-watch"
 section: "1"
@@ -7,9 +6,16 @@ letter: "a"
 url: "/docs/linux/man/1-abrt-upload-watch/"
 ---
 
-abrt-upload-watch - Watch upload directory and unpacks incoming archives into DumpLocation 
+<h2 class="name">NAME</h2>
+ 
 
-<i>abrt-upload-watch</i> [-vs] [-w NUM_WORKERS] [-c CACHE_SIZE_MIB] [UPLOAD_DIRECTORY]
+ abrt-upload-watch - Watch upload directory and unpacks incoming archives into DumpLocation 
+
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <i>abrt-upload-watch</i> [-vs] [-w NUM_WORKERS] [-c CACHE_SIZE_MIB] [UPLOAD_DIRECTORY]
 
 <h2>OPTIONS</h2>
 

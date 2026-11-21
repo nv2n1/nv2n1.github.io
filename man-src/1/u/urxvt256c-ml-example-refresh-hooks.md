@@ -1,5 +1,4 @@
 ---
-
 title: "urxvt256c-ml-example-refresh-hooks(1)"
 name: "urxvt256c-ml-example-refresh-hooks"
 section: "1"
@@ -7,6 +6,11 @@ letter: "u"
 url: "/docs/linux/man/1-urxvt256c-ml-example-refresh-hooks/"
 ---
 
-example-refresh-hooks - example of how to use refresh hooks 
+<h2 class="name">NAME</h2>
+ 
 
-Displays a very simple digital clock in the upper right corner of the window. Illustrates overwriting the refresh callbacks to create your own overlays or changes.
+ example-refresh-hooks - example of how to use refresh hooks 
+
+<h2>DESCRIPTION</h2>
+
+ Displays a very simple digital clock in the upper right corner of the window. Illustrates overwriting the refresh callbacks to create your own overlays or changes.

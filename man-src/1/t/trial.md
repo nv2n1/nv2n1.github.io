@@ -1,5 +1,4 @@
 ---
-
 title: "trial(1)"
 name: "trial"
 section: "1"
@@ -10,8 +9,10 @@ description: "trial – run unit tests"
 
 <h2>NAME</h2>
 <p> trial &#8211; run unit tests</p>
+<h2>SYNOPSIS</h2>
 <p> <code>trial</code> [ <i>options</i> ] [ <i>file</i> | <i>package</i> | <i>module</i> | <i>TestCase</i> | <i>testmethod</i> ] &#8230; </p>
 <p> <code>trial &#8211;help</code> | <code>-h</code></p>
+<h2>DESCRIPTION</h2>
 <p> trial loads and executes a suite of unit tests, obtained from modules, packages and files listed on the command line. </p>
 <p> trial will take either filenames or fully qualified Python names as arguments. Thus `trial myproject/foo.py&#8217;, `trial myproject.foo&#8217; and `trial myproject.foo.SomeTestCase.test_method&#8217; are all valid ways to invoke trial. Multiple such arguments are also accepted, and their order will determine the order in which the corresponding tests are run. </p>
 <p> After running the given test suite, the default test reporter prints a summary of the test run. This consists of the word &quot;PASSED&quot; (if all tests ran as expected) or &quot;FAILED&quot; (if any test behaved unexpectedly) followed by a count of the different kinds of test results encountered. The possible kinds of test results includes:</p>

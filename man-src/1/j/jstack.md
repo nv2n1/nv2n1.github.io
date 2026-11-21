@@ -1,5 +1,4 @@
 ---
-
 title: "jstack(1)"
 name: "jstack"
 section: "1"
@@ -7,9 +6,9 @@ letter: "j"
 url: "/docs/linux/man/1-jstack/"
 description: "jstack – Prints Java thread stack traces for a Java process, core file, or remote debug server. This command is experimental and unsupported."
 ---
-
 <h2>NAME</h2>
 <p> jstack - Prints Java thread stack traces for a Java process, core file, or remote debug server. This command is experimental and unsupported.  </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
  jstack  [ options  ] pid 
 </code></pre>
@@ -38,6 +37,7 @@ description: "jstack – Prints Java thread stack traces for a Java process, cor
 <dt><i>server-id</i></dt>
 <dd> <p> An optional unique ID to use when multiple debug servers are running on the same remote host. </p>
  </dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <code>jstack</code> command prints Java stack traces of Java threads for a specified Java process, core file, or remote debug server. For each Java frame, the full class name, method name, byte code index (BCI), and line number, when available, are printed. With the <code>-m</code> option, the <code>jstack</code> command prints both Java and native frames of all threads with the program counter (PC). For each native frame, the closest native symbol to PC, when available, is printed. C++ mangled names are not demangled. To demangle C++ names, the output of this command can be piped to <code>c++filt</code>. When the specified process is running on a 64-bit Java Virtual Machine, you might need to specify the <code>-J-d64</code> option, for example: <code>jstack -J-d64 -m pid</code>. </p>
 <p> <i>Note:</i> This utility is unsupported and might not be available in future release of the JDK. In Windows Systems where the dbgeng.dll file is not present, Debugging Tools For Windows must be installed so these tools work. The <code>PATH</code> environment variable needs to contain the location of the jvm.dll that is used by the target process, or the location from which the crash dump file was produced. For example: </p>
 <pre><code>

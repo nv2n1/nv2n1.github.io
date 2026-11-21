@@ -1,5 +1,4 @@
 ---
-
 title: "urxvt-ml-eval(1)"
 name: "urxvt-ml-eval"
 section: "1"
@@ -8,6 +7,8 @@ url: "/docs/linux/man/1-urxvt-ml-eval/"
 description: "eval – evaluate arbitrary perl code using actions"
 ---
 
+<h2 class="name">NAME</h2>
+<p> eval &#8211; evaluate arbitrary perl code using actions </p>
 <h2>EXAMPLES</h2>
 <pre>
   URxvt.keysym.M-c: eval:selection_to_clipboard
@@ -18,6 +19,7 @@ description: "eval – evaluate arbitrary perl code using actions"
   URxvt.keysym.M-Home: eval:scroll_to_top
   URxvt.keysym.M-End:  eval:scroll_to_bottom
 </pre>
+<h2>DESCRIPTION</h2>
 <p> Add support for evaluating arbitrary perl code using actions in keysym resources. If a keysym <i>action</i> takes the form <tt>&quot;eval:STRING&quot;</tt>, the specified <font SIZE="-1"><code>STRING</code></font> is evaluated as a Perl expression. While the full urxvt <font SIZE="-1">API</font> is available, the following methods are also provided for users&#8217; convenience, as they implement basic actions:</p>
 <dl>
 <dt>scroll_up $count</dt>

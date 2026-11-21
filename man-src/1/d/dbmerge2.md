@@ -1,5 +1,4 @@
 ---
-
 title: "dbmerge2(1)"
 name: "dbmerge2"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-dbmerge2/"
 description: "dbmerge2 – merge exactly two inputs in sorted order based on the the specified columns"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dbmerge2 &#8211; merge exactly two inputs in sorted order based on the the specified columns </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 dbmerge2-- input A.fsdb-- input B.fsdb[-T TemporaryDirectory][-nNrR] column[column...]
 </code></pre>
 <p> or<br />
 &nbsp;<wbr>cat A.fsdb | dbmerge2 &#8211;input B.fsdb&nbsp;<wbr>[-T TemporaryDirectory]&nbsp;<wbr>[-nNrR]&nbsp;<wbr>column&nbsp;<wbr>[column&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> Merge exactly two sorted input files, producing one sorted result. Inputs can both be specified with <tt>&quot;--input&quot;</tt>, or one can come from standard input and the other from <tt>&quot;--input&quot;</tt>. </p>
 <p> Inputs must have identical schemas (columns, column order, and field separators). </p>
 <p> Dbmerge2 consumes a fixed amount of memory regardless of input size. </p>

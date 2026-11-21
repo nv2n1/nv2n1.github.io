@@ -1,5 +1,4 @@
 ---
-
 title: "blender(1)"
 name: "blender"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-blender/"
 description: "blender – a 3D modelling and rendering package"
 ---
 
+<h2 class="name">NAME</h2>
+<p> blender &#8211; a 3D modelling and rendering package </p>
+<h2>SYNOPSIS</h2>
 <p> <code>blender [args &#8230;] [file] [args &#8230;]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>blender</code> is a 3D modelling and rendering package. It is the in-house software of a high quality animation studio, Blender has proven to be an extremely fast and versatile design instrument. The software has a personal touch, offering a unique approach to the world of Three Dimensions. </p>
 <p> Use Blender to create TV commercials, to make technical visualizations, business graphics, to do some morphing, or design user interfaces. You can easy build and manage complex environments. The renderer is versatile and extremely fast. All basic animation principles (curves &amp; keys) are well implemented. </p>
 <p> <a rel="nofollow" href="http://www.blender.org">http://www.blender.org</a></p>

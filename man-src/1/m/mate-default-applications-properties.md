@@ -1,5 +1,4 @@
 ---
-
 title: "mate-default-applications-properties(1)"
 name: "mate-default-applications-properties"
 section: "1"
@@ -10,7 +9,9 @@ description: "mate-default-applications-properties — is a control center apple
 
 <h2>NAME</h2>
 <p> mate-default-applications-properties &#8212; is a control center applet. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mate-default-applications-properties</code> [<i>OPTIONS</i>]&#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> MATE Default Applications Properties is a control center applet to edit default applications. </p>
 <p> It allows one to set default file manager, email client, web browser, etc. </p>
 <h2>OPTIONS</h2>

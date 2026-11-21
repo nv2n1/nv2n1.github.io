@@ -1,5 +1,4 @@
 ---
-
 title: "libipmidetect(3)"
 name: "libipmidetect"
 section: "3"
@@ -10,6 +9,7 @@ description: "libipmidetect – a library of functions to determine if a node is
 
 <h2>NAME</h2>
 <p> libipmidetect &#8211; a library of functions to determine if a node is detected or undetected</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;ipmidetect.h&gt;</code> </p>
 <p> <code>ipmidetect_t ipmidetect_handle_create(void);</code> </p>
 <p> <code>int ipmidetect_handle_destroy(ipmidetect_t handle);</code> </p>
@@ -22,6 +22,7 @@ description: "libipmidetect – a library of functions to determine if a node is
 <p> <code>int ipmidetect_get_undetected_nodes_string(ipmidetect_t handle, char *buf, int buflen);</code> </p>
 <p> <code>int ipmidetect_is_node_detected(ipmidetect_t handle, const char *node);</code> </p>
 <p> <code>int ipmidetect_is_node_undetected(ipmidetect_t handle, const char *node);</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>Libipmidetect</code> implements a high level API for determing which nodes in a cluster do or do-not support IPMI. This library is primarily useful for detecting whe nodes are removed from a cluster for servicing, so that IPMI applications can avoid unnecessary timeouts. The library interacts with the <code><a href="/docs/linux/man/8-ipmidetectd/">ipmidetectd</a>(8)</code> daemon.</p>
 <h2>FILES</h2>
 <p> /usr/include/ipmidetect.h</p>

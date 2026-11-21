@@ -1,5 +1,4 @@
 ---
-
 title: "gmpc-remote(1)"
 name: "gmpc-remote"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-gmpc-remote/"
 description: "gmpc-remote [OPTION]"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gmpc-remote [OPTION]</p>
+<h2>DESCRIPTION</h2>
 <p> If gmpc is compiled with IPC support gmpc-remote can send commands to the running instance of gmpc. </p>
 <h2>OPTIONS</h2>
 <dl>

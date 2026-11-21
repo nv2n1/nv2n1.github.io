@@ -1,5 +1,4 @@
 ---
-
 title: "fbi(1)"
 name: "fbi"
 section: "1"
@@ -9,7 +8,11 @@ description: "fbi – Linux framebuffer imageviewer # #"
 ---
 
 <p>#</p>
+<h2 class="name">NAME</h2>
+<p> fbi &#8211; Linux framebuffer imageviewer # # </p>
+<h2>SYNOPSIS</h2>
 <p> <code>fbi</code> [<i>options</i>] <i>file &#8230;</i> # #</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Fbi</code> displays the specified file(s) on the linux console using the framebuffer device. <i>PhotoCD</i>, <i>jpeg</i>, <i>ppm</i>, <i>gif</i>, <i>tiff</i>, <i>xwd</i>, <i>bmp</i>, <i>png</i> and <i>webp</i> formats are supported natively. For other <code>fbi</code> tries to use <code><a href="/docs/linux/man/1-imagemagick/">ImageMagick</a></code>(1)&#8217;s <code><a href="/docs/linux/man/1-convert/">convert</a></code>(1). # #</p>
 <h2>OPTIONS</h2>
 <dl>

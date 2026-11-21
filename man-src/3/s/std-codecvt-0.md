@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-std-codecvt-0/"
 description: "std::codecvt<InternT,ExternT,State>::in,std::codecvt<InternT,ExternT,State>::do_in – std::codecvt<InternT,ExternT,State>::in,std::codecvt<InternT,ExternT,State>::do_in"
 ---
 
+<h2 class="name">NAME</h2>
+<p> std::codecvt&lt;InternT,ExternT,State&gt;::in,std::codecvt&lt;InternT,ExternT,State&gt;::do_in &#8211; std::codecvt&lt;InternT,ExternT,State&gt;::in,std::codecvt&lt;InternT,ExternT,State&gt;::do_in</p>
 <h2>Synopsis</h2>
 <p>Defined in header &lt;locale&gt;<br />
 public:<br />

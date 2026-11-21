@@ -1,5 +1,4 @@
 ---
-
 title: "librecad(1)"
 name: "librecad"
 section: "1"
@@ -11,7 +10,9 @@ url: "/docs/linux/man/1-librecad/"
 
  LIBRECAD - A professional CAD System.
 
-LibreCAD is a professional CAD System. With LibreCAD you can easily construct and change drawings with ISO-texts and many other features and save them as DXF-files. These DXF-files are the interface to many CAD-systems such as AutoCAD(R) and many others. 
+<h2>DESCRIPTION</h2>
+
+ LibreCAD is a professional CAD System. With LibreCAD you can easily construct and change drawings with ISO-texts and many other features and save them as DXF-files. These DXF-files are the interface to many CAD-systems such as AutoCAD(R) and many others. 
 
  LibreCAD has no special invocation parameters. 
 

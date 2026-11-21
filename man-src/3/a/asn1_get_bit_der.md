@@ -1,5 +1,4 @@
 ---
-
 title: "asn1_get_bit_der(3)"
 name: "asn1_get_bit_der"
 section: "3"
@@ -10,6 +9,7 @@ description: "asn1_get_bit_der – API function"
 
 <h2>NAME</h2>
 <p> asn1_get_bit_der &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>
 <p> <code>int asn1_get_bit_der(const unsigned char * </code><i>der</i><code>, int </code><i>der_len</i><code>, int * </code><i>ret_len</i><code>, unsigned char * </code><i>str</i><code>, int </code><i>str_size</i><code>, int * </code><i>bit_len</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -26,6 +26,7 @@ description: "asn1_get_bit_der – API function"
 <dd> Length of pre-allocated output buffer.</dd>
 <dt>int * bit_len</dt>
 <dd> Output variable containing the size of the BIT SEQUENCE.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Extract a BIT SEQUENCE from DER data.</p>
 <h2>RETURNS</h2>
 <p> <code>ASN1_SUCCESS</code> on success, or an error.</p>

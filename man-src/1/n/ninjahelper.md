@@ -1,5 +1,4 @@
 ---
-
 title: "ninjahelper(1)"
 name: "ninjahelper"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ninjahelper/"
 description: "NINJAHELPER – A menu driven curses-based interface to walk you through backupninja configuration."
 ---
 
+<h2 class="name">NAME</h2>
+<p> NINJAHELPER &#8211; A menu driven curses-based interface to walk you through backupninja configuration. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ninjahelper</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>Ninjahelper</code> is an helper script to walk you through configuration of the backup tasks for backupninja. It is a curses based &quot;wizard&quot; with an intuitive menu-driven interface. </p>
 <h2>ADDING NEW HELPERS</h2>
 <p> To add an additional &#8216;wizard&#8217; to ninjahelper, follow these steps:</p>

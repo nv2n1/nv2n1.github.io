@@ -1,5 +1,4 @@
 ---
-
 title: "pmdagpsd(1)"
 name: "pmdagpsd"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-pmdagpsd/"
 description: "pmdagpsd – gpsd performance metrics domain agent (PMDA)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pmdagpsd &#8211; gpsd performance metrics domain agent (PMDA) </p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmdagpsd</code> is a Performance Metrics Domain Agent (<font SIZE="-1">PMDA</font>) which exports values from the gpsd daemon.</p>
 <h2>INSTALLATION</h2>
 <p> If you want access to the names and values for gpsd, do the following as root: </p>

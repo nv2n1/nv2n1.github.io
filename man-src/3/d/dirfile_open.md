@@ -1,5 +1,4 @@
 ---
-
 title: "dirfile_open(3)"
 name: "dirfile_open"
 section: "3"
@@ -10,10 +9,12 @@ description: "dirfile_cbopen, dirfile_open — open or create a dirfile"
 
 <h2>NAME</h2>
 <p> dirfile_cbopen, dirfile_open &#8212; open or create a dirfile</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
 <dl>
 <dt> <code>DIRFILE* dirfile_cbopen(const char *</code><i>dirfilename</i><code>, unsigned long</code> <i>flags</i><code>, gd_parser_callback_t </code><i>sehandler</i><code>, void *</code><i>extra</i><code>);</code></dt>
 <dt> <code>DIRFILE* dirfile_open(const char *</code><i>dirfilename</i><code>, unsigned long </code><i>flags</i><code>);</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>dirfile_cbopen</code>() function opens or creates the dirfile specified by <i>dirfilename</i>, returning a DIRFILE object associated with it. Opening a dirfile will cause the library to read and parse the dirfile&#8217;s format file (see <code><a href="/docs/linux/man/5-dirfile-format/">dirfile-format</a></code>(5)). </dd>
 <p> If not NULL, <i>sehandler</i> should be a pointer to a function which will be called whenever a syntax error is encountered during parsing the format file. Specify NULL for this parameter if no callback function is to be used. The caller may use this function to correct the error or modify the error handling of the format file parser. See <code>The Callback Function</code> section below for details on this function. The <i>extra</i> argument allows the caller to pass data to the callback function. The pointer will be passed to the callback function verbatim. </p>
 <p> The <code>dirfile_open</code>() function is equivalent to <code>dirfile_cbopen</code>(), with <i>sehandler</i> and <i>extra</i> set to NULL. </p>

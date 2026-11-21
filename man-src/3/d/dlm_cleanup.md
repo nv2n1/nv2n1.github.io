@@ -1,5 +1,4 @@
 ---
-
 title: "dlm_cleanup(3)"
 name: "dlm_cleanup"
 section: "3"
@@ -10,6 +9,7 @@ description: "libdlm – dlm_get_fd, dlm_dispatch, dlm_pthread_init, dlm_ls_pthr
 
 <h2>NAME</h2>
 <p> libdlm &#8211; dlm_get_fd, dlm_dispatch, dlm_pthread_init, dlm_ls_pthread_init, dlm_cleanup</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;libdlm.h&gt;
 int dlm_pthread_init();
@@ -19,6 +19,7 @@ int dlm_get_fd(void);
 int dlm_dispatch(int fd);
 link with - ldlm
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> libdlm provides the programmatic userspace interface to the Distributed Lock manager. It provides all the calls you need to manipulate locks &amp; lockspaces<br />
  libdlm can be used in pthread or non-pthread applications. For pthread applications simply call the following function before doing any lock operations. If you&#8217;re using pthreads, remember to define _REENTRANT at the top of the program or using -D_REENTRANT on the compile line.<br />
  pthreads is the normal way of using the DLM. This way you simply initialize the DLM&#8217;s thread and all the AST routines will be delivered in that thread. You just call the dlm_lock() etc routines in the main line of your program.<br />

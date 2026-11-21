@@ -1,5 +1,4 @@
 ---
-
 title: "xapian-replicate-server(1)"
 name: "xapian-replicate-server"
 section: "1"
@@ -10,7 +9,9 @@ description: "xapian-replicate-server – Service database replication requests 
 
 <h2>NAME</h2>
 <p> xapian-replicate-server &#8211; Service database replication requests from clients</p>
+<h2>SYNOPSIS</h2>
 <p> <code>xapian-replicate-server</code> [<i>OPTIONS</i>] <i>DATABASE_PARENT_DIRECTORY</i></p>
+<h2>DESCRIPTION</h2>
 <p> xapian-replicate-server &#8211; Service database replication requests from clients</p>
 <h2>OPTIONS</h2>
 <dl>

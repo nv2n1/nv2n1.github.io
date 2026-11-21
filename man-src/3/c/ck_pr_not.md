@@ -1,5 +1,4 @@
 ---
-
 title: "ck_pr_not(3)"
 name: "ck_pr_not"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_pr_not_ptr ck_pr_not_double ck_pr_not_char ck_pr_not_uint ck_pr
 <p> <code>ck_pr_not_ptr</code> <code>ck_pr_not_double</code> <code>ck_pr_not_char</code> <code>ck_pr_not_uint</code> <code>ck_pr_not_int</code> <code>ck_pr_not_64</code> <code>ck_pr_not_32</code> <code>ck_pr_not_16</code> <code>ck_pr_not_8</code> &#8211; atomic complement operations</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_pr.h Ft void Fn ck_pr_not_ptr void *target Ft void Fn ck_pr_not_double double *target Ft void Fn ck_pr_not_char char *target Ft void Fn ck_pr_not_uint unsigned int *target Ft void Fn ck_pr_not_int int *target Ft void Fn ck_pr_not_64 uint64_t *target Ft void Fn ck_pr_not_32 uint32_t *target Ft void Fn ck_pr_not_16 uint16_t *target Ft void Fn ck_pr_not_8 uint8_t *target</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_pr_not 3 family of functions atomically complement the value pointed to by Fa target .</p>
 <h2>RETURN VALUES</h2>
 <p> These functions have no return value.</p>

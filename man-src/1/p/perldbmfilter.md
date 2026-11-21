@@ -1,5 +1,4 @@
 ---
-
 title: "perldbmfilter(1)"
 name: "perldbmfilter"
 section: "1"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/1-perldbmfilter/"
 description: "perldbmfilter – Perl DBM Filters"
 ---
 
+<h2 class="name">NAME</h2>
+<p> perldbmfilter &#8211; Perl DBM Filters </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 $db = tie % hash, 'DBM', ... $old_filter = $db-&gt;filter_store_key(sub{...});
 $old_filter = $db-&gt;filter_store_value(sub{...});
 $old_filter = $db-&gt;filter_fetch_key(sub{...});
 $old_filter = $db-&gt;filter_fetch_value(sub{...});
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The four <tt>&quot;filter_*&quot;</tt> methods shown above are available in all the <font SIZE="-1">DBM</font> modules that ship with Perl, namely DB_File, GDBM_File, NDBM_File, ODBM_File and SDBM_File. </p>
 <p> Each of the methods works identically, and is used to install (or uninstall) a single <font SIZE="-1">DBM</font> Filter. The only difference between them is the place that the filter is installed. </p>
 <p> To summarise:</p>

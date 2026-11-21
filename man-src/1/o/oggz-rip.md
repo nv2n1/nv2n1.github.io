@@ -1,5 +1,4 @@
 ---
-
 title: "oggz-rip(1)"
 name: "oggz-rip"
 section: "1"
@@ -11,6 +10,7 @@ description: "oggz-rip — Extract one or more logical bitstreams from an Ogg fi
 <h2>NAME</h2>
 <p> oggz-rip &#8212; Extract one or more logical bitstreams from an Ogg file.<br />
 &nbsp;<wbr></p>
+<h2>SYNOPSIS</h2>
 <p> <code>oggz-rip</code> [-o <code>filename</code> | &#8211;output <code>filename</code> ] filename </p>
 <p> <code>oggz-rip</code> [-h | &#8211;help ] [-v | &#8211;version ]</p>
 <h2>Description</h2>

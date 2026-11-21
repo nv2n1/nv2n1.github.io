@@ -1,5 +1,4 @@
 ---
-
 title: "esdcompat(1)"
 name: "esdcompat"
 section: "1"
@@ -10,9 +9,11 @@ description: "esdcompat – PulseAudio ESD wrapper script"
 
 <h2>NAME</h2>
 <p> esdcompat &#8211; PulseAudio ESD wrapper script</p>
+<h2>SYNOPSIS</h2>
 <p> <code>esdcompat [</code><i>options</i><code>] </p>
 <p> esdcompat &#8211;help </p>
 <p> esdcompat &#8211;version </code></p>
+<h2>DESCRIPTION</h2>
 <p> <i>esdcompat</i> is a compatibility script that takes the same arguments as the ESD sound daemon <code><a href="/docs/linux/man/1-esd/">esd</a>(1)</code>, but uses them to start a the PulseAudio sound server with the appropriate parameters. It is required to make PulseAudio a drop-in replacement for esd, i.e. it can be used to make <code><a href="/docs/linux/man/1-gnome-session/">gnome-session</a>(1)</code> start up PulseAudio instead of esd. </p>
 <p> It is recommended to make <i>esd</i> a symbolic link to this script.</p>
 <h2>OPTIONS</h2>

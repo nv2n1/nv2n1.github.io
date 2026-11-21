@@ -1,5 +1,4 @@
 ---
-
 title: "moe(1)"
 name: "moe"
 section: "1"
@@ -10,7 +9,9 @@ description: "Moe – manual page for Moe 1.3"
 
 <h2>NAME</h2>
 <p> Moe &#8211; manual page for Moe 1.3</p>
+<h2>SYNOPSIS</h2>
 <p> <code>moe</code> [<i>global-options</i>] [[<i>+line</i>] <i>filename </i>[<i>file-options</i>]]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> GNU Moe &#8211; A powerful and user-friendly text editor.</p>
 <dl>
 <dt>

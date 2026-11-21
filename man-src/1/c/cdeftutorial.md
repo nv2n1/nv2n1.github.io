@@ -1,5 +1,4 @@
 ---
-
 title: "cdeftutorial(1)"
 name: "cdeftutorial"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-cdeftutorial/"
 description: "cdeftutorial – Alex van den Bogaerdt’s CDEF tutorial"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cdeftutorial &#8211; Alex van den Bogaerdt&#8217;s CDEF tutorial </p>
+<h2>DESCRIPTION</h2>
 <p> Intention of this document: to provide some examples of the commonly used parts of RRDtool&#8217;s <font SIZE="-1">CDEF</font> language. </p>
 <p> If you think some important feature is not explained properly, and if adding it to this document would benefit most users, please do ask me to add it. I will then try to provide an answer in the next release of this tutorial. No feedback equals no changes! Additions to this document are also welcome. &#8212; Alex van den Bogaerdt &lt;alex [at] vandenbogaerdt.nl&gt;</p>
 <h3>Why this tutorial?</h3>

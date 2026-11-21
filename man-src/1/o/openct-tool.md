@@ -1,5 +1,4 @@
 ---
-
 title: "openct-tool(1)"
 name: "openct-tool"
 section: "1"
@@ -10,6 +9,7 @@ description: "openct-tool – OpenCT smart card utility"
 
 <h2>NAME</h2>
 <p> openct-tool &#8211; OpenCT smart card utility</p>
+<h2>SYNOPSIS</h2>
 <p> openct-tool [options] command &#8230;</p>
 <h2>OPTIONS</h2>
 <dl>

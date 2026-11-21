@@ -1,5 +1,4 @@
 ---
-
 title: "dnsdist(1)"
 name: "dnsdist"
 section: "1"
@@ -10,7 +9,9 @@ description: "dnsdist – tool to balance DNS queries over downstream servers"
 
 <h2>NAME</h2>
 <p> dnsdist &#8211; tool to balance DNS queries over downstream servers</p>
+<h2>SYNOPSIS</h2>
 <p> dnsdist [OPTION]&#8230; ADDRESS&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> dnsdist receives DNS queries and relays them to one or more downstream servers. It subsequently sends back responses to the original requestor. </p>
 <p> dnsdist operates over TCP and UDP, and strives to deliver very high performance over both. </p>
 <p> Currently, queries are sent to the downstream server with the least outstanding queries. This effectively implies load balancing, making sure that slower servers get less queries. </p>

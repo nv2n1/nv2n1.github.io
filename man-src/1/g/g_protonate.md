@@ -1,5 +1,4 @@
 ---
-
 title: "g_protonate(1)"
 name: "g_protonate"
 section: "1"
@@ -11,7 +10,9 @@ description: "protonate – protonates structures"
 <h2>NAME</h2>
 <p> protonate &#8211; protonates structures </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>protonate</code> <code>-s</code><i> topol.tpr </i> <code>-f</code><i> traj.xtc </i> <code>-n</code><i> index.ndx </i> <code>-o</code><i> protonated.xtc </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i></p>
+<h2>DESCRIPTION</h2>
 <p> <code> protonate</code> reads (a) conformation(s) and adds all missing hydrogens as defined in <code> ffgmx2.hdb</code>. If only <code> -s</code> is specified, this conformation will be protonated, if also <code> -f</code> is specified, the conformation(s) will be read from this file which can be either a single conformation or a trajectory. </p>
 <p> If a pdb file is supplied, residue names might not correspond to to the GROMACS naming conventions, in which case these residues will probably not be properly protonated. </p>
 <p> If an index file is specified, please note that the atom numbers should correspond to the <code> protonated</code> state.</p>

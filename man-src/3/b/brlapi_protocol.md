@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-brlapi_protocol/"
 description: "BrlAPI’s protocol –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> BrlAPI&#8217;s protocol &#8211; </p>
 <p> Instructions and constants for <i>BrlAPI</i> &#8216;s protocol.</p>
 <h3>Data Structures</h3>
 <p> struct <code>brlapi_header_t</code> </p>

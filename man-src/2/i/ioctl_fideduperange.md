@@ -1,5 +1,4 @@
 ---
-
 title: "ioctl_fideduperange(2)"
 name: "ioctl_fideduperange"
 section: "2"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/2-ioctl_fideduperange/"
 description: "ioctl_fideduperange – share some the data of one file with another file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ioctl_fideduperange &#8211; share some the data of one file with another file </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;sys/ioctl.h&gt;</code><br />
  <code>#include &lt;linux/fs.h&gt;</code> </p>
 <p> <code>int ioctl(int </code><i>src_fd</i><code>, FIDEDUPERANGE, struct file_dedupe_range *</code><i>arg</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> If a filesystem supports files sharing physical storage between multiple files, this <code><a href="/docs/linux/man/2-ioctl/">ioctl</a></code>(2) operation can be used to make some of the data in the <code>src_fd</code> file appear in the <code>dest_fd</code> file by sharing the underlying storage if the file data is identical (&quot;deduplication&quot;). Both files must reside within the same filesystem. This reduces storage consumption by allowing the filesystem to store one shared copy of the data. If a file write should occur to a shared region, the filesystem must ensure that the changes remain private to the file being written. This behavior is commonly referred to as &quot;copy on write&quot;. </p>
 <p> This ioctl performs the &quot;compare and share if identical&quot; operation on up to <i>src_length</i> bytes from file descriptor <i>src_fd</i> at offset <i>src_offset</i>. This information is conveyed in a structure of the following form: </p>
 <p> struct file_dedupe_range {<br />

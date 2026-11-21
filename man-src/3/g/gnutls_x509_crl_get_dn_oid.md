@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_crl_get_dn_oid(3)"
 name: "gnutls_x509_crl_get_dn_oid"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_crl_get_dn_oid – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crl_get_dn_oid &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crl_get_dn_oid(gnutls_x509_crl_t </code><i>crl</i><code>, int </code><i>indx</i><code>, void * </code><i>oid</i><code>, size_t * </code><i>sizeof_oid</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,6 +22,7 @@ description: "gnutls_x509_crl_get_dn_oid – API function"
 <dd> a pointer to a structure to hold the name (may be null)</dd>
 <dt>size_t * sizeof_oid</dt>
 <dd> initially holds the size of &#8216;oid&#8217;</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will extract the requested OID of the name of the CRL issuer, specified by the given index. </p>
 <p> If oid is null then only the size will be filled.</p>
 <h2>RETURNS</h2>

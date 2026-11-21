@@ -1,5 +1,4 @@
 ---
-
 title: "gvnccapture(1)"
 name: "gvnccapture"
 section: "1"
@@ -7,11 +6,18 @@ letter: "g"
 url: "/docs/linux/man/1-gvnccapture/"
 ---
 
-gvnccapture - VNC screenshot capture 
+<h2 class="name">NAME</h2>
+ 
 
-gvnccapture [<font SIZE="-1">OPTION</font>]... [<font SIZE="-1">HOST</font>][:DISPLAY] <font SIZE="-1">FILENAME</font>
+ gvnccapture - VNC screenshot capture 
 
-Capture a screenshot of the <font SIZE="-1">VNC</font> desktop at <font SIZE="-1">HOST:DISPLAY</font> saving to the image file <font SIZE="-1">FILENAME.</font> If <font SIZE="-1">HOST</font> is omitted it defaults to ``localhost'', if :DISPLAY is omitted, it defaults to ``:1''. <font SIZE="-1">FILENAME</font> must end in a known image format extension (eg ``.png'', ``.jpeg''). Supported options are
+<h2>SYNOPSIS</h2>
+
+ gvnccapture [<font SIZE="-1">OPTION</font>]... [<font SIZE="-1">HOST</font>][:DISPLAY] <font SIZE="-1">FILENAME</font>
+
+<h2>DESCRIPTION</h2>
+
+ Capture a screenshot of the <font SIZE="-1">VNC</font> desktop at <font SIZE="-1">HOST:DISPLAY</font> saving to the image file <font SIZE="-1">FILENAME.</font> If <font SIZE="-1">HOST</font> is omitted it defaults to ``localhost'', if :DISPLAY is omitted, it defaults to ``:1''. <font SIZE="-1">FILENAME</font> must end in a known image format extension (eg ``.png'', ``.jpeg''). Supported options are
 <dl>
 <dt>--help, -?
 </dt><dd> Display command line help information

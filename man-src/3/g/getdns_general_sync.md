@@ -1,5 +1,4 @@
 ---
-
 title: "getdns_general_sync(3)"
 name: "getdns_general_sync"
 section: "3"
@@ -12,6 +11,7 @@ description: "getdns_general, getdns_general_sync — do a getdns DNS lookup"
 <p> <code>getdns_general, </code> <code>getdns_general_sync</code> &#8212; do a getdns DNS lookup </p>
 <h2>LIBRARY</h2>
 <p> DNS Resolver library (libgetdns, -lgetdns) </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;getdns.h&gt; </p>
 <p> getdns_return_t<br />
  <code>getdns_general</code> (getdns_context *context,</p>
@@ -31,6 +31,7 @@ description: "getdns_general, getdns_general_sync — do a getdns DNS lookup"
  uint16_t request_type<br />
  getdns_dict *extensions,<br />
  getdns_dict **response)</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <a href="/docs/linux/man/3-getdns_general/">getdns_general</a>(3) and getdns_general_sync functions provide public entry points into the getdns API library to retrieve any valid responses to a query from the DNS (note that other namespaces in the context are not used). Most typical use cases for applications are probably satisifed via calls to <a href="/docs/linux/man/3-getdns_address/">getdns_address</a>(3) which would replace <a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a>(3). </p>
 <dl>
 <dt> <i>context</i></dt>

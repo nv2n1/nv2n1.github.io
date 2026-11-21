@@ -1,5 +1,4 @@
 ---
-
 title: "ncview(1)"
 name: "ncview"
 section: "1"
@@ -10,7 +9,9 @@ description: "ncview – graphically display netCDF files under X windows"
 
 <h2>NAME</h2>
 <p> ncview &#8211; graphically display netCDF files under X windows</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ncview</code> [-beep] [-copying] [-frames] [-warranty] [-private] [-ncolors XX] [-extrainfo] [-mtitle &quot;title&quot;] [-minmax fast | med | slow | all] datafiles &#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> <i>Ncview</i> displays 2-D slices of a netCDF data file, using the X Window System graphical user interface (Release 4 or higher). You can examine different floating point variables in the file, and animate the floating point data along the &#8220;record dimension&#8221; (usually time) to see how it evolves. You can also display 1-D (line plot) views of the data simply by clicking the mouse on the point of interest. </p>
 <p> When you first invoke <i>ncview,</i> a command panel comes up which has a number of buttons for manipulating the current view into the data file, and presenting various information about the current view. From the top, going down, the information fields are: the &#8216;title&#8217; of the data file; the &#8216;long_name&#8217; of the currently selected variable; the frame number (i.e., place along the scan axis) currently displayed; the minimum and maximum values of the variable; and the value of the data point under the cursor (only active when the pointer is over the color contour image). </p>
 <p> Next comes a row of buttons similar to a tape recorder, used for changing the view into the netCDF file along the scan dimension. In Version 1.XX of <i>ncview,</i> the scan dimension is constrained to be the &#8220;record dimension&#8221; (in netCDF parlance). From the left, the buttons are: the quit button; a button to take you directly to the first frame, marked &quot;-&gt;1&quot;; rewind, which loops the images going backwards; step backwards; pause; step forwards; and fast forward, which loops the images going forwards. </p>

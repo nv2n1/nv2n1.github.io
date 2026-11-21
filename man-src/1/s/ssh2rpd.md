@@ -1,5 +1,4 @@
 ---
-
 title: "ssh2rpd(1)"
 name: "ssh2rpd"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ssh2rpd/"
 description: "ssh2rpd – ROOT utility to help in authentication"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ssh2rpd &#8211; ROOT utility to help in authentication </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ssh2rpd</code> <i>arg1 arg2</i></p>
+<h2>DESCRIPTION</h2>
 <p> Do know what to write here.</p>
 <h2>OPTIONS</h2>
 <dl>

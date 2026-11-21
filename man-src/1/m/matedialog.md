@@ -1,5 +1,4 @@
 ---
-
 title: "matedialog(1)"
 name: "matedialog"
 section: "1"
@@ -10,7 +9,9 @@ description: "matedialog – display GTK+ dialogs"
 
 <h2>NAME</h2>
 <p> matedialog &#8211; display GTK+ dialogs</p>
+<h2>SYNOPSIS</h2>
 <p> <code>matedialog</code> [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>matedialog</code> is a program that will display GTK+ dialogs, and return (either in the return code, or on standard output) the users input. This allows you to present information, and ask for information from the user, from all manner of shell scripts. </p>
 <p> For example, <code>matedialog &#8211;question</code> will return either 0 or 1, depending on whether the user pressed <i>OK</i> or <i>Cancel</i>. <code>matedialog &#8211;entry</code> will output on standard output what the user typed into the text entry field. </p>
 <p> Comprehensive documentation is available in the MATE Help Browser, under <i>MATE/Utilities</i>.</p>

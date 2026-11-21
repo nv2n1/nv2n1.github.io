@@ -1,5 +1,4 @@
 ---
-
 title: "mupdf(1)"
 name: "mupdf"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mupdf/"
 description: "mupdf – MuPDF is a lightweight PDF viewer written in portable C"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mupdf &#8211; MuPDF is a lightweight PDF viewer written in portable C</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mupdf</code> [<i>options</i>]<i> PDFfile</i> </p>
+<h2>DESCRIPTION</h2>
 <p> This manual page briefly describes the <code>mupdf</code> command. </p>
 <h2>OPTIONS</h2>
 <p> A description of each of the supported options is included below. </p>

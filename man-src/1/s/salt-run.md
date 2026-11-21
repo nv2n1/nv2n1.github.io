@@ -1,5 +1,4 @@
 ---
-
 title: "salt-run(1)"
 name: "salt-run"
 section: "1"
@@ -11,9 +10,11 @@ description: "salt-run – salt-run Documentation"
 <h2>NAME</h2>
 <p> salt-run &#8211; salt-run Documentation </p>
 <p> Execute a Salt runner</p>
+<h2>SYNOPSIS</h2>
 <pre>
 salt-run RUNNER
 </pre>
+<h2>DESCRIPTION</h2>
 <p> salt-run is the frontend command for executing <code>Salt Runners</code>. Salt runners are simple modules used to execute convenience functions on the master</p>
 <h2>OPTIONS</h2>
 <dl>

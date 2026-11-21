@@ -1,5 +1,4 @@
 ---
-
 title: "nwdir(1)"
 name: "nwdir"
 section: "1"
@@ -10,7 +9,9 @@ description: "nwdir – Lists files in directory"
 
 <h2>NAME</h2>
 <p> nwdir &#8211; Lists files in directory</p>
+<h2>SYNOPSIS</h2>
 <p> <code>nwdir</code> [<code>-h</code>] [<code>-v</code>] [<code>-l</code>] [<code>-t</code>] [<code>-d</code>] [<code>-e</code>] [<code>-f</code>] [<code>directory</code>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>nwdir</code> lists files, directories and their attributes from the specified NetWare directory. </p>
 <h2>OPTIONS</h2>
 <p> <code>-h</code></p>

@@ -1,5 +1,4 @@
 ---
-
 title: "tv_grab_ch_search(1)"
 name: "tv_grab_ch_search"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-tv_grab_ch_search/"
 description: "tv_grab_ch_search – Grab TV listings for Switzerland (from tv.search.ch webpage)."
 ---
 
+<h2 class="name">NAME</h2>
+<p> tv_grab_ch_search &#8211; Grab TV listings for Switzerland (from tv.search.ch webpage). </p>
+<h2>SYNOPSIS</h2>
 <p> tv_grab_ch_search &#8211;help </p>
 <p> tv_grab_ch_search [&#8211;config-file <font SIZE="-1">FILE</font>] &#8211;configure [&#8211;gui <font SIZE="-1">OPTION</font>] </p>
 <p> tv_grab_ch_search [&#8211;config-file <font SIZE="-1">FILE</font>] [&#8211;output <font SIZE="-1">FILE</font>] [&#8211;quiet]<br />
@@ -15,6 +17,7 @@ description: "tv_grab_ch_search – Grab TV listings for Switzerland (from tv.se
 <p> tv_grab_ch_search &#8211;list-channels </p>
 <p> tv_grab_ch_search &#8211;capabilities </p>
 <p> tv_grab_ch_search &#8211;version</p>
+<h2>DESCRIPTION</h2>
 <p> Output <font SIZE="-1">TV</font> listings for several channels available in Switzerland and (partly) central Europe. The data comes from tv.search.ch. The grabber relies on parsing <font SIZE="-1">HTML</font> so it might stop working at any time. </p>
 <p> First run <code>tv_grab_ch_search &#8211;configure</code> to choose, which channels you want to download. Then running <code>tv_grab_ch_search</code> with no arguments will output listings in <font SIZE="-1">XML</font> format to standard output. </p>
 <p> <code>&#8211;configure</code> Ask for each available channel whether to download and write the configuration file. </p>

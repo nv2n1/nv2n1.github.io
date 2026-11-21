@@ -1,5 +1,4 @@
 ---
-
 title: "xml-xread(1)"
 name: "xml-xread"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-xml-xread/"
 description: "xml-xread – A simple command-line XML parsing application"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xml-xread &#8211; A simple command-line XML parsing application</p>
+<h2>SYNOPSIS</h2>
 <p> <code>xml-xread</code> [options] document.xml </p>
+<h2>DESCRIPTION</h2>
 <p> <code>xml-xread</code> is a simple command-line XML Parser. It&#8217;s just a little wrapper around the JAXP XMLReader with support for catalogs. </p>
 <p> The process ends with error-level 1, if there were errors. </p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "ivykis(3)"
 name: "ivykis"
 section: "3"
@@ -10,6 +9,7 @@ description: "ivykis – library for asynchronous I/O readiness notification"
 
 <h2>NAME</h2>
 <p> ivykis &#8211; library for asynchronous I/O readiness notification</p>
+<h2>DESCRIPTION</h2>
 <p> ivykis is a library for asynchronous I/O readiness notification. It is a thin, portable wrapper around OS-provided mechanisms such as <code><a href="/docs/linux/man/2-epoll_create/">epoll_create</a></code>(2), <code>kqueue</code>(2), <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2), <code>poll</code>(7d) (/dev/poll) and <code>port_create</code>(3C). </p>
 <p> ivykis was mainly designed for building high-performance network applications, but can be used in any event-driven application that uses <code><a href="/docs/linux/man/2-poll/">poll</a></code>(2)able file descriptors as its event sources. </p>
 <p> While some programming models dictate using blocking I/O and starting a thread per event source, programs written to the ivykis API are generally single-threaded (or use only a small number of threads), and never block on I/O. All input and output is done in a nonblocking fashion, with I/O readiness notifications delivered via callback functions. </p>

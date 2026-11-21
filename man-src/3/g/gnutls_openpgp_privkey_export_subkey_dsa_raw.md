@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_openpgp_privkey_export_subkey_dsa_raw(3)"
 name: "gnutls_openpgp_privkey_export_subkey_dsa_raw"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_openpgp_privkey_export_subkey_dsa_raw – API function"
 
 <h2>NAME</h2>
 <p> gnutls_openpgp_privkey_export_subkey_dsa_raw &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/openpgp.h&gt;</code> </p>
 <p> <code>int gnutls_openpgp_privkey_export_subkey_dsa_raw(gnutls_openpgp_privkey_t </code><i>pkey</i><code>, unsigned int </code><i>idx</i><code>, gnutls_datum_t * </code><i>p</i><code>, gnutls_datum_t * </code><i>q</i><code>, gnutls_datum_t * </code><i>g</i><code>, gnutls_datum_t * </code><i>y</i><code>, gnutls_datum_t * </code><i>x</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -28,6 +28,7 @@ description: "gnutls_openpgp_privkey_export_subkey_dsa_raw – API function"
 <dd> will hold the y</dd>
 <dt>gnutls_datum_t * x</dt>
 <dd> will hold the x</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will export the DSA private key&#8217;s parameters found in the given certificate. The new parameters will be allocated using <code>gnutls_malloc()</code> and will be stored in the appropriate datum.</p>
 <h2>RETURNS</h2>
 <p> <code>GNUTLS_E_SUCCESS</code> on success, otherwise a negative error code.</p>

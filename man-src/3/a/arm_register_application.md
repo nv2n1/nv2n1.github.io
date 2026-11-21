@@ -1,5 +1,4 @@
 ---
-
 title: "arm_register_application(3)"
 name: "arm_register_application"
 section: "3"
@@ -10,6 +9,7 @@ description: "arm_register_application – describe application"
 
 <h2>NAME</h2>
 <p> arm_register_application &#8211; describe application</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/arm4.h">arm4.h</a>&gt;</code> </p>
 <p> <code>arm_error_t<br />
  arm_register_application( </p>
@@ -18,6 +18,7 @@ description: "arm_register_application – describe application"
 <p>&nbsp;<wbr>const arm_int32_t&nbsp;<wbr></code><i>flags</i><code>, </p>
 <p>&nbsp;<wbr>const arm_buffer4_t&nbsp;<wbr>*</code><i>buffer4</i><code>, </p>
 <p>&nbsp;<wbr>arm_id_t&nbsp;<wbr>*</code><i>output_app_id</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>arm_register_application()</code> describes metadata about an application. </p>
 <p> The application uses <code>arm_register_application()</code> to inform the ARM library of metadata about the application. This metadata does not change from one application instance to another. It contains part of the function of the ARM 2.0 call <code>arm_init()</code>; <code>arm_start_application()</code> contains the other part. </p>
 <p> ARM generates an ID that is passed in <code>arm_register_transaction()</code> and <code>arm_start_application()</code>. </p>

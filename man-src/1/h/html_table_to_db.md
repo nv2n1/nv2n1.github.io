@@ -1,5 +1,4 @@
 ---
-
 title: "html_table_to_db(1)"
 name: "html_table_to_db"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-html_table_to_db/"
 description: "html_table_to_db – convert HTML tables into fsdb"
 ---
 
+<h2 class="name">NAME</h2>
+<p> html_table_to_db &#8211; convert HTML tables into fsdb </p>
+<h2>SYNOPSIS</h2>
 <pre>
     html_table_to_db &lt;source.html &gt;dest.fsdb
 </pre>
+<h2>DESCRIPTION</h2>
 <p> Converts a <font SIZE="-1">HTML</font> table to Fsdb format. </p>
 <p> The input is an <font SIZE="-1">HTML</font> table (<i>not</i> fsdb). Column names are taken from <tt>&quot;TH&quot;</tt> elements, or defined as <tt>&quot;column0&quot;</tt> through <tt>&quot;columnN&quot;</tt> if no such elements appear. </p>
 <p> The output is two-space-separated fsdb. (Someday more general field separators should be supported.) Fsdb fields are normalized version of the html file: multiple spaces are compressed to one. </p>

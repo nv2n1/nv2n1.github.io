@@ -1,5 +1,4 @@
 ---
-
 title: "ebrowse(1)"
 name: "ebrowse"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ebrowse/"
 description: "ebrowse – create a class hierarchy database"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ebrowse &#8211; create a class hierarchy database </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ebrowse</code> [<i>options</i>] [<i>FILES</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>ebrowse</code> command. Full documentation is available in the GNU Info format. </p>
 <p> <code>ebrowse</code> is used to create the database used by the class browser in Emacs. </p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "asn1_dup_node(3)"
 name: "asn1_dup_node"
 section: "3"
@@ -10,6 +9,7 @@ description: "asn1_dup_node – API function"
 
 <h2>NAME</h2>
 <p> asn1_dup_node &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>
 <p> <code>asn1_node asn1_dup_node(asn1_node </code><i>src</i><code>, const char * </code><i>src_name</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "asn1_dup_node – API function"
 <dd> Source asn1 node.</dd>
 <dt>const char * src_name</dt>
 <dd> Field name in source node.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Create a deep copy of a asn1_node variable. This function will return an exact copy of the provided structure.</p>
 <h2>RETURNS</h2>
 <p> Return <code>NULL</code> on failure.</p>

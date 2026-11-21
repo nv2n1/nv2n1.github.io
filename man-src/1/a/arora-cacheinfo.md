@@ -1,5 +1,4 @@
 ---
-
 title: "arora-cacheinfo(1)"
 name: "arora-cacheinfo"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-arora-cacheinfo/"
 description: "arora-cacheinfo – a tool for extracting files and metadata out of Arora cache files."
 ---
 
+<h2 class="name">NAME</h2>
+<p> arora-cacheinfo &#8211; a tool for extracting files and metadata out of Arora cache files.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>arora-cacheinfo [-o cachefile] [file | url]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>Arora-cacheinfo</code> is a tool for extracting files and displaying metadata out of an Arora cache files that are stored on the disk. Every cache file contains both the cached file (sometimes compressed) and metadata associated with it such as expiration date. Cache files names always include the md5sum of the url and passing a url to arora-cacheinfo.1 will automatically determine the correct matching cache file name. </p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "ocamlc(1)"
 name: "ocamlc"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-ocamlc/"
 description: "ocamlc – The OCaml bytecode compiler"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ocamlc &#8211; The OCaml bytecode compiler</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ocamlc</code> [ <i>options</i> ] <i>filename &#8230;</i> </p>
 <p> <code>ocamlc.opt</code> [ <i>options</i> ] <i>filename &#8230;</i> </p>
+<h2>DESCRIPTION</h2>
 <p> The OCaml bytecode compiler <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1) compiles OCaml source files to bytecode object files and links these object files to produce standalone bytecode executable files. These executable files are then run by the bytecode interpreter <code><a href="/docs/linux/man/1-ocamlrun/">ocamlrun</a></code>(1). </p>
 <p> The <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1) command has a command-line interface similar to the one of most C compilers. It accepts several types of arguments and processes them sequentially: </p>
 <p> Arguments ending in .mli are taken to be source files for compilation unit interfaces. Interfaces specify the names exported by compilation units: they declare value names with their types, define public data types, declare abstract data types, and so on. From the file <i>x</i>.mli, the <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1) compiler produces a compiled interface in the file <i>x</i>.cmi. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "perlintro(1)"
 name: "perlintro"
 section: "1"
@@ -7,9 +6,14 @@ letter: "p"
 url: "/docs/linux/man/1-perlintro/"
 ---
 
-perlintro -- a brief introduction and overview of Perl 
+<h2 class="name">NAME</h2>
+ 
 
-This document is intended to give you a quick overview of the Perl programming language, along with pointers to further documentation. It is intended as a ``bootstrap'' guide for those who are new to the language, and provides just enough information for you to be able to read other peoples' Perl and understand roughly what it's doing, or write your own simple scripts. 
+ perlintro -- a brief introduction and overview of Perl 
+
+<h2>DESCRIPTION</h2>
+
+ This document is intended to give you a quick overview of the Perl programming language, along with pointers to further documentation. It is intended as a ``bootstrap'' guide for those who are new to the language, and provides just enough information for you to be able to read other peoples' Perl and understand roughly what it's doing, or write your own simple scripts. 
 
  This introductory document does not aim to be complete. It does not even aim to be entirely accurate. In some cases perfection has been sacrificed in the goal of getting the general idea across. You are <i>strongly</i> advised to follow this introduction with more information from the full Perl manual, the table of contents to which can be found in perltoc. 
 

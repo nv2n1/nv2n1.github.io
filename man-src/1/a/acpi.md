@@ -1,5 +1,4 @@
 ---
-
 title: "acpi(1)"
 name: "acpi"
 section: "1"
@@ -10,7 +9,9 @@ description: "acpi – Shows battery status and other ACPI information"
 
 <h2>NAME</h2>
 <p> acpi &#8211; Shows battery status and other ACPI information</p>
+<h2>SYNOPSIS</h2>
 <p> <code>acpi</code> [<code>options</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>acpi</code> Shows information from the /proc or the /sys filesystem, such as battery status or thermal information.</p>
 <h2>OPTIONS</h2>
 <dl>

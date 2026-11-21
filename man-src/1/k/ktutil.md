@@ -1,5 +1,4 @@
 ---
-
 title: "ktutil(1)"
 name: "ktutil"
 section: "1"
@@ -10,7 +9,9 @@ description: "ktutil – Kerberos keytab file maintenance utility"
 
 <h2>NAME</h2>
 <p> ktutil &#8211; Kerberos keytab file maintenance utility</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ktutil</code></p>
+<h2>DESCRIPTION</h2>
 <p> The ktutil command invokes a command interface from which an administrator can read, write, or edit entries in a keytab or Kerberos V4 srvtab file.</p>
 <h2>COMMANDS</h2>
 <h3>list</h3>

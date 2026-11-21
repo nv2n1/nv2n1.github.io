@@ -1,5 +1,4 @@
 ---
-
 title: "hivexregedit(1)"
 name: "hivexregedit"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-hivexregedit/"
 description: "hivexregedit – Merge and export Registry changes from regedit-format files."
 ---
 
+<h2 class="name">NAME</h2>
+<p> hivexregedit &#8211; Merge and export Registry changes from regedit-format files. </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 hivexregedit-- merge[--prefix prefix][--encoding enc] hivefile[regfile] hivexregedit-- export[--prefix prefix] hivefile key &gt; regfile
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Please note hivexregedit is a low-level tool for manipulating hive files directly. To merge or export registry changes to Windows virtual machines it&#8217;s better to use <i><a href="/docs/linux/man/1-virt-win-reg/">virt-win-reg</a></i>(1). </p>
 <p> Given a local binary (&#8220;hive&#8221;) file, there are two modes. <tt>&quot;--merge&quot;</tt> imports (merges) changes from a regedit-format file into the hive. It is similar to using the <tt>&quot;/s&quot;</tt> switch in Windows regedit.exe. </p>
 <p> <tt>&quot;--export&quot;</tt> exports a Registry key (recursively) into the regedit format.</p>

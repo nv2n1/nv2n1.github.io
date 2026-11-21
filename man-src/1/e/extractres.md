@@ -1,5 +1,4 @@
 ---
-
 title: "extractres(1)"
 name: "extractres"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-extractres/"
 description: "extractres – filter to extract resources from a PostScript document"
 ---
 
+<h2 class="name">NAME</h2>
+<p> extractres &#8211; filter to extract resources from a PostScript document </p>
+<h2>SYNOPSIS</h2>
 <p> <code>extractres </code> [ <code>-m</code> ] &lt; <i>document.ps</i> &gt; <i>output.ps</i></p>
+<h2>DESCRIPTION</h2>
 <p> <i>Extractres</i> extracts resources (fonts, procsets, patterns, files, etc) appearing in a PostScript document, and puts appropriate <i>%%IncludeResource</i> comments in the document prologue. The extracted resources are written to files with the same name as the resource, and an appropriate extension. The pipeline </p>
 <p> <center> extractres file.ps | includeres &gt;out.ps<br />
  </center> </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "razor-check(1)"
 name: "razor-check"
 section: "1"
@@ -7,13 +6,20 @@ letter: "r"
 url: "/docs/linux/man/1-razor-check/"
 ---
 
-&quot;razor-check&quot; - Razor Filtering Agent 
+<h2 class="name">NAME</h2>
+ 
 
-<pre><code>
+ &quot;razor-check&quot; - Razor Filtering Agent 
+
+<h2>SYNOPSIS</h2>
+
+ <pre><code>
 razor - check[options][mail1[mail2..]] $ cat mbox | razor - check $ razor - check./ mbox $ razor - check - d mbox mail .1 mail .2 mail .3
 </code></pre>
 
-<tt>&quot;razor-check&quot;</tt> checks a mail against the distributed Razor Catalogue by communicating with a Razor Catalogue Server. It should be invoked before the mail is delivered or processed by a human. <tt>&quot;razor-check&quot;</tt> terminates with exit value <tt>0</tt> if the signature for the mail is catalogued on the server (spam) or <tt>1</tt> if the mail is not catalogued by the server (not a spam). <tt>&quot;razor-check&quot;</tt> should be invoked against every incoming mail by mail processors (like procmail) or MTAs (like sendmail). An alternate method would be to call <tt>&quot;razor-check&quot;</tt> from cron, at regular intervals, to identify and mark spam in queued mailboxes. 
+<h2>DESCRIPTION</h2>
+
+ <tt>&quot;razor-check&quot;</tt> checks a mail against the distributed Razor Catalogue by communicating with a Razor Catalogue Server. It should be invoked before the mail is delivered or processed by a human. <tt>&quot;razor-check&quot;</tt> terminates with exit value <tt>0</tt> if the signature for the mail is catalogued on the server (spam) or <tt>1</tt> if the mail is not catalogued by the server (not a spam). <tt>&quot;razor-check&quot;</tt> should be invoked against every incoming mail by mail processors (like procmail) or MTAs (like sendmail). An alternate method would be to call <tt>&quot;razor-check&quot;</tt> from cron, at regular intervals, to identify and mark spam in queued mailboxes. 
 
  If <tt>&quot;razor-check&quot;</tt> is passed more than one mail, it will check each against the database, printing out the serial number of every mail considered to be spam. <tt>&quot;razor-check&quot;</tt> supports mbox-formatted files with 1 or more mails in them as well as files containing a single <font SIZE="-1">RFC 822 </font>(non-mbox) mail. More than one file may be present on the command line, can be either a non-mbox or mbox in any order. However, more than one non-mbox mail cannot be read from stdin.
 

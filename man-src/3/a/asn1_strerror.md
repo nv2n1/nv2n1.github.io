@@ -1,5 +1,4 @@
 ---
-
 title: "asn1_strerror(3)"
 name: "asn1_strerror"
 section: "3"
@@ -10,12 +9,14 @@ description: "asn1_strerror – API function"
 
 <h2>NAME</h2>
 <p> asn1_strerror &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>
 <p> <code>const char * asn1_strerror(int </code><i>error</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>int error</dt>
 <dd> is an error returned by a libtasn1 function.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Returns a string with a description of an error. This function is similar to strerror. The only difference is that it accepts an error (number) returned by a libtasn1 function.</p>
 <h2>RETURNS</h2>
 <p> Pointer to static zero-terminated string describing error code.</p>

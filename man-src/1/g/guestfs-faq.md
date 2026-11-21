@@ -7,6 +7,8 @@ url: "/docs/linux/man/1-guestfs-faq/"
 description: "guestfs-faq – libguestfs Frequently Asked Questions (FAQ)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> guestfs-faq &#8211; libguestfs Frequently Asked Questions (FAQ) </p>
 <h2>ABOUT LIBGUESTFS</h2>
 <h3>What is libguestfs?</h3>
 <p> libguestfs is a way to create, access and modify disk images. You can look inside disk images, modify the files they contain, create them from scratch, resize them, and much more. It’s especially useful from scripts and programs and from the command line. </p>

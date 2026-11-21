@@ -1,5 +1,4 @@
 ---
-
 title: "mdoc(1)"
 name: "mdoc"
 section: "1"
@@ -10,6 +9,7 @@ description: "mdoc – Mono documentation management tool"
 
 <h2>NAME</h2>
 <p> mdoc &#8211; Mono documentation management tool</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mdoc</code> <i>command</i> [<i>options</i>] [<i>args</i>]</p>
 <h2>OVERVIEW</h2>
 <p> <i>mdoc</i> is an assembly-based documentation management system. </p>

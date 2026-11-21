@@ -1,5 +1,4 @@
 ---
-
 title: "gshhg(1)"
 name: "gshhg"
 section: "1"
@@ -10,8 +9,10 @@ description: "gshhg – Extract data tables from binary GSHHG or WDBII data file
 
 <h2>NAME</h2>
 <p> gshhg &#8211; Extract data tables from binary GSHHG or WDBII data files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gshhg</code> <i>binaryfile.b</i> [ <i>min</i> ] [ ] [ <i>id</i> ] [ ] [ <i>level</i> ] [ <code>e</code>|<code>i</code> ] [ <code>-bo</code><i>&lt;binary&gt;</i> ] [ <code>-do</code><i>&lt;nodata&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] &gt; <i>asciifile.txt</i> </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>gshhg</code> reads the binary coastline (GSHHG) or political boundary or river (WDBII) files and extracts an ASCII listing. It automatically handles byte-swabbing between different architectures. Optionally, only segment header info can be displayed. The header info has the format <i>ID npoints hierarchical-level source area f_area west east south north container ancestor</i>, where hierarchical levels for coastline polygons go from 1 (shoreline) to 4 (lake inside island inside lake inside land). Source is either W (World Vector Shoreline) or C (CIA World Data Bank II); lower case is used if a lake is a river-lake. The <i>west east south north</i> is the enclosing rectangle, <i>area</i> is the polygon area in km^2 while <i>f_area</i> is the actual area of the ancestor polygon, <i>container</i> is the ID of the polygon that contains this polygon (-1 if none), and <i>ancestor</i> is the ID of the polygon in the full resolution set that was reduced to yield this polygon (-1 if full resolution since there is no ancestor). For line data the header is simply <i>ID npoints hierarchical-level source west east south north</i>. For more information about the file formats, see TECHNICAL INFORMATION below.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

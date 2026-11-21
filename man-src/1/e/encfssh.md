@@ -7,6 +7,8 @@ url: "/docs/linux/man/1-encfssh/"
 description: "encfssh – mount encrypted virtual filesystem and start shell"
 ---
 
+<h2 class="name">NAME</h2>
+<p> encfssh &#8211; mount encrypted virtual filesystem and start shell </p>
 <p> Write in progress&#8230; </p>
 <h2>DISCLAIMER</h2>
 <p> This library is distributed in the hope that it will be useful, but <font SIZE="-1">WITHOUT ANY WARRANTY</font>; without even the implied warranty of <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE.</font> Please refer to the &#8220;<font SIZE="-1">COPYING&#8221;</font> file distributed with <code>EncFS</code> for complete details.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "enemies-of-carlotta(1)"
 name: "enemies-of-carlotta"
 section: "1"
@@ -10,7 +9,9 @@ description: "enemies-of-carlotta – a simple mailing list manager"
 
 <h2>NAME</h2>
 <p> enemies-of-carlotta &#8211; a simple mailing list manager</p>
+<h2>SYNOPSIS</h2>
 <p> <code>enemies-of-carlotta </code> <i></i>[<i>options</i>] [<i>addresses</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>enemies-of-carlotta</code> is a simple mailing list manager. If you don&#8217;t know what a mailing list manager is, you should learn what they are before trying to use one. A manual page is unfortunately too short to explain it. </p>
 <p> Enemies of Carlotta keeps all data about the lists in the <i>~/.enemies-of-carlotta</i> directory. It will be created automatically when you create your first list. You need to arrange manually for the mails to be processed by the list manager. The details differ from mail system to another. For QMail and Postfix, see below. </p>
 <p> Each list has one or more owners, who also moderate subscriptions or moderate some or all postings. On completely unmoderated lists the list owners are responsible for answering questions about the list. On completely moderated lists, they have to approve each message before it is sent to the list. On lists with <i>posting=auto</i>, messages from subscribers are sent automatically to the list, and the moderators have to approve the rest.</p>

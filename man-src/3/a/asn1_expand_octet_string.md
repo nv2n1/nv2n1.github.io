@@ -1,5 +1,4 @@
 ---
-
 title: "asn1_expand_octet_string(3)"
 name: "asn1_expand_octet_string"
 section: "3"
@@ -10,6 +9,7 @@ description: "asn1_expand_octet_string – API function"
 
 <h2>NAME</h2>
 <p> asn1_expand_octet_string &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>
 <p> <code>int asn1_expand_octet_string(asn1_node </code><i>definitions</i><code>, asn1_node * </code><i>element</i><code>, const char * </code><i>octetName</i><code>, const char * </code><i>objectName</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,6 +22,7 @@ description: "asn1_expand_octet_string – API function"
 <dd> name of the OCTECT STRING field to expand.</dd>
 <dt>const char * objectName</dt>
 <dd> name of the OBJECT IDENTIFIER field to use to define the type for expansion.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Expands an &quot;OCTET STRING&quot; element of a structure created from a DER decoding process (the <code>asn1_der_decoding()</code> function). The type used for expansion is the first one following the definition of the actual value of the OBJECT IDENTIFIER indicated by OBJECTNAME.</p>
 <h2>RETURNS</h2>
 <p> <code>ASN1_SUCCESS</code> if substitution OK, <code>ASN1_ELEMENT_NOT_FOUND</code> if <i>objectName</i> or <i>octetName</i> are not correct, <code>ASN1_VALUE_NOT_VALID</code> if it wasn&#8217;t possible to find the type to use for expansion, or other errors depending on DER decoding.</p>

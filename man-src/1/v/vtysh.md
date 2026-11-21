@@ -1,5 +1,4 @@
 ---
-
 title: "vtysh(1)"
 name: "vtysh"
 section: "1"
@@ -10,8 +9,10 @@ description: "vtysh – a integrated shell for Quagga routing software"
 
 <h2>NAME</h2>
 <p> vtysh &#8211; a integrated shell for Quagga routing software</p>
+<h2>SYNOPSIS</h2>
 <p> <code>vtysh</code> [ <code>-b</code> ]<br />
  <code>vtysh</code> [ <code>-E</code> ] [ <code>-d</code> <i>daemon</i> ] ] [ <code>-c</code> <i>command</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>vtysh</code> is a integrated shell for <code>Quagga</code> routing engine.</p>
 <h2>OPTIONS</h2>
 <p> Options available for the <code>vtysh</code> command:</p>

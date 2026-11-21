@@ -1,5 +1,4 @@
 ---
-
 title: "ck_hs_fas(3)"
 name: "ck_hs_fas"
 section: "3"
@@ -12,7 +11,9 @@ description: "ck_hs_fas – fetch and store key in hash set"
 <p> <code>ck_hs_fas</code> &#8211; fetch and store key in hash set</p>
 <h2>LIBRARY</h2>
 <p> Concurrency Kit (libck, -lck)</p>
+<h2>SYNOPSIS</h2>
 <p> In ck_hs.h Ft bool Fn ck_hs_fas ck_hs_t *hs unsigned long hash const void *key void **previous</p>
+<h2>DESCRIPTION</h2>
 <p> The Fn ck_hs_fas 3 function will fetch and store the key specified by the Fa key argument in the hash set pointed to by the Fa hs argument. The key specified by Fa key is expected to have the hash value specified by the Fa hash argument (which was previously generated using the CK_HS_HASH3 macro). </p>
 <p> If the call to Fn ck_hs_fas 3 was successful then the key specified by Fa key was successfully stored in the hash set pointed to by Fa hs . The key must already exist in the hash set, and is replaced by Fa key and the previous value is stored into the void pointer pointed to by the Fa previous argument. If the key does not exist in the hash set then the function will return false and the hash set is unchanged. This function is guaranteed to be stable with respect to memory usage.</p>
 <h2>RETURN VALUES</h2>

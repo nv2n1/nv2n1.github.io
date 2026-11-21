@@ -1,5 +1,4 @@
 ---
-
 title: "myproxy-init(1)"
 name: "myproxy-init"
 section: "1"
@@ -10,7 +9,9 @@ description: "myproxy-init – store a credential for later retrieval"
 
 <h2>NAME</h2>
 <p> myproxy-init &#8211; store a credential for later retrieval</p>
+<h2>SYNOPSIS</h2>
 <p> <code>myproxy-init </code> [ <i>options</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>myproxy-init</code> command uploads a credential to a <code><a href="/docs/linux/man/8-myproxy-server/">myproxy-server</a></code>(8) for later retrieval. In the default mode, the command first prompts for the user&#8217;s Grid pass phrase (if needed), which is used to create a proxy credential. The command then prompts for a MyProxy pass phrase, which will be required to later retrieve the credential. The MyProxy pass phrase must be entered a second time for confirmation. A credential with a lifetime of one week (by default) is then delegated to the <code><a href="/docs/linux/man/8-myproxy-server/">myproxy-server</a></code>(8) and stored with the given MyProxy pass phrase. Proxy credentials with default lifetime of 12 hours can then be retrieved by <code><a href="/docs/linux/man/1-myproxy-logon/">myproxy-logon</a></code>(1) using the MyProxy passphrase. The default behavior can be overridden by options specified below. </p>
 <p> The <code>myproxy-init</code> command can also upload a credential to a <code><a href="/docs/linux/man/8-myproxy-server/">myproxy-server</a></code>(8) to support credential renewal. Renewal allows a trusted service (for example, a batch job scheduler) to obtain a new credential for a user before the existing credential it has for that user expires. The <code>-R</code> argument to <code>myproxy-init</code> configures the credential for renewal by the specified service. Renewal requires two authentications. The renewing service must authenticate with its own credentials, matching the distinquished name specified by the <code>-R</code> argument, and must also authenticate with an existing credential that matches the distinguished name of the stored credential, to retrieve a new credential. </p>
 <p> A credential may be used either for retrieval or renewal but not both. If both are desired, upload a different credential for each use, with a different name using the <code>-k</code> option. </p>

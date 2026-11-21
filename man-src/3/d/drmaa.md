@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-drmaa/"
 description: "DRMAA interface. –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> DRMAA interface. &#8211; </p>
 <h3>Modules</h3>
 <p> <code>Vector iteration functions.</code><br />
  <i>The drmaa_get_next_X</i>() functions SHALL store up to <i>value_len</i> bytes of the next attribute name / attribute value / job identifier from the <i>values</i> opaque string vector in the <i>value</i> buffer.<br />

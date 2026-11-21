@@ -1,5 +1,4 @@
 ---
-
 title: "xpstopng(1)"
 name: "xpstopng"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-xpstopng/"
 description: "xpstopng – XPS to PNG converter"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xpstopng &#8211; XPS to PNG converter </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xpstopng</code> [<i>OPTION</i>&#8230;] FILE [<i>OUTPUT FILE</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>xpstopng</code></p>
 <dd>converts XPS documents to PNG format. <code>xpstopng</code> reads the XPS file, <i>FILE</i>, and writes a PNG file per page with the page number and file type appended to <i>OUTPUT FILE</i>. If <i>OUTPUT FILE</i> is not specified &quot;page&quot; will be used.</dd>
 <h2>OPTIONS</h2>

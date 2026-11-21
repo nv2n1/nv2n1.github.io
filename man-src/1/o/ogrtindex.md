@@ -1,5 +1,4 @@
 ---
-
 title: "ogrtindex(1)"
 name: "ogrtindex"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-ogrtindex/"
 description: "ogrtindex – ogrtindex creates a tileindex"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ogrtindex &#8211; ogrtindex creates a tileindex </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 ogrtindex[-lnum n]...[-lname name]...[-f output_format]
                                      [-write_absolute_path][-skip_different_projection] output_dataset src_dataset...
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The ogrtindex program can be used to create a tileindex &#8211; a file containing a list of the identities of a bunch of other files along with there spatial extents. This is primarily intended to be used with MapServer for tiled access to layers using the OGR connection type. </p>
 <dl>
 <dt><code>-lnum</code> <i>n</i>:</dt>

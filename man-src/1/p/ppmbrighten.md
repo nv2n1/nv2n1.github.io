@@ -1,5 +1,4 @@
 ---
-
 title: "ppmbrighten(1)"
 name: "ppmbrighten"
 section: "1"
@@ -7,11 +6,18 @@ letter: "p"
 url: "/docs/linux/man/1-ppmbrighten/"
 ---
 
-ppmbrighten - change an images Saturation and Value from an HSV map 
+<h2 class="name">NAME</h2>
+ 
 
-ppmbrighten [-n] [-s &lt;+- saturation&gt;] [-v &lt;+- value&gt;] &lt;ppmfile&gt;
+ ppmbrighten - change an images Saturation and Value from an HSV map 
 
-Reads a portable pixmap as input. Converts the image from RGB space to HSV space and changes the Value by &lt;+- value&gt; as a percentage. Likewise with the Saturation. Doubling the Value would involve 
+<h2>SYNOPSIS</h2>
+
+ ppmbrighten [-n] [-s &lt;+- saturation&gt;] [-v &lt;+- value&gt;] &lt;ppmfile&gt;
+
+<h2>DESCRIPTION</h2>
+
+ Reads a portable pixmap as input. Converts the image from RGB space to HSV space and changes the Value by &lt;+- value&gt; as a percentage. Likewise with the Saturation. Doubling the Value would involve 
 
  ppmbrighten -v 100 
 

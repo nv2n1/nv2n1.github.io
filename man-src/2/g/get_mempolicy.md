@@ -1,5 +1,4 @@
 ---
-
 title: "get_mempolicy(2)"
 name: "get_mempolicy"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-get_mempolicy/"
 description: "get_mempolicy – retrieve NUMA memory policy for a thread"
 ---
 
+<h2 class="name">NAME</h2>
+<p> get_mempolicy &#8211; retrieve NUMA memory policy for a thread </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;numaif.h&gt;</code> </p>
 <pre><code>
 long get_mempolicy(int *mode, unsigned long *nodemask,
@@ -15,6 +17,7 @@ long get_mempolicy(int *mode, unsigned long *nodemask,
                    unsigned long flags);
 Link with - lnuma.
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>get_mempolicy</code>() retrieves the NUMA policy of the calling thread or of a memory address, depending on the setting of <i>flags</i>. </p>
 <p> A NUMA machine has different memory controllers with different distances to specific CPUs. The memory policy defines from which node memory is allocated for the thread. </p>
 <p> If <i>flags</i> is specified as 0, then information about the calling thread&#8217;s default policy (as set by <code><a href="/docs/linux/man/2-set_mempolicy/">set_mempolicy</a></code>(2)) is returned, in the buffers pointed to by <i>mode</i> and <i>nodemask</i>. The value returned in these arguments may be used to restore the thread&#8217;s policy to its state at the time of the call to <code>get_mempolicy</code>() using <code><a href="/docs/linux/man/2-set_mempolicy/">set_mempolicy</a></code>(2). When <i>flags</i> is 0, <i>addr</i> must be specified as NULL. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "gccxml(1)"
 name: "gccxml"
 section: "1"
@@ -11,7 +10,9 @@ url: "/docs/linux/man/1-gccxml/"
 <dl>
 <dt><code>gccxml</code></dt>
 <dd> &#8211; Create an XML representation of C++ declarations.</dd></dl>
+<h2>SYNOPSIS</h2>
 <p> gccxml [options] &lt;input-file&gt; -fxml=&lt;output-file&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> GCC-XML parses a C++ source file as it is seen by the compiler when it is built. An easy-to-parse XML representation of the class, function, and namespace declarations is dumped to a specified file. Full C preprocessing transforms the file into a C++ translation unit as seen by the compiler. This means that GCC-XML should make use of the same standard library and other header files as the compiler. GCC-XML can be configured to simulate any of several popular compilers.</p>
 <h2>OPTIONS</h2>
 <p> The following options are available for running GCC-XML:</p>

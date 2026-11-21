@@ -1,5 +1,4 @@
 ---
-
 title: "libssh2_session_supported_algs(3)"
 name: "libssh2_session_supported_algs"
 section: "3"
@@ -10,12 +9,14 @@ description: "libssh2_session_supported_algs – get list of supported algorithm
 
 <h2>NAME</h2>
 <p> libssh2_session_supported_algs &#8211; get list of supported algorithms</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;libssh2.h&gt;
 int libssh2_session_supported_algs(LIBSSH2_SESSION *session,
                                    int method_type,
                                    const char ***algs);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <i>session</i> &#8211; An instance of initialized LIBSSH2_SESSION (the function will use its pointer to the memory allocation function). <i>method_type</i> &#8211; Method type. See .BR <i><a href="/docs/linux/man/3-libssh2_session_method_pref/">libssh2_session_method_pref</a>(3)</i>. <i>algs</i> &#8211; Address of a pointer that will point to an array af returned algorithms </p>
 <p> Get a list of supported algorithms for the given <i>method_type</i>. The method_type parameter is equivalent to method_type in <i><a href="/docs/linux/man/3-libssh2_session_method_pref/">libssh2_session_method_pref</a>(3)</i>. If successful, the function will allocate the appropriate amount of memory. When not needed anymore, it must be deallocated by calling <i><a href="/docs/linux/man/3-libssh2_free/">libssh2_free</a>(3)</i>. When this function is unsuccessful, this must not be done. </p>
 <p> In order to get a list of all supported compression algorithms, libssh2_session_flag(session, LIBSSH2_FLAG_COMPRESS, 1) must be called before calling this function, otherwise only &quot;none&quot; will be returned. </p>

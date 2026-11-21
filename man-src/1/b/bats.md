@@ -1,5 +1,4 @@
 ---
-
 title: "bats(1)"
 name: "bats"
 section: "1"
@@ -10,8 +9,10 @@ description: "bats – Bash Automated Testing System"
 
 <h2>NAME</h2>
 <p> <code>bats</code> &#8211; Bash Automated Testing System</p>
+<h2>SYNOPSIS</h2>
 <p> bats [-c] [-p | -t] <i>test</i> [<i>test</i> &#8230;] </p>
 <p> <i>test</i> is the path to a Bats test file, or the path to a directory containing Bats test files.</p>
+<h2>DESCRIPTION</h2>
 <p> Bats is a TAP-compliant testing framework for Bash. It provides a simple way to verify that the UNIX programs you write behave as expected. </p>
 <p> A Bats test file is a Bash script with special syntax for defining test cases. Under the hood, each test case is just a function with a description. </p>
 <p> Test cases consist of standard shell commands. Bats makes use of Bash&#8217;s <code>errexit</code> (<code>set -e</code>) option when running test cases. If every command in the test case exits with a <code>0</code> status code (success), the test passes. In this way, each line is an assertion of truth. </p>

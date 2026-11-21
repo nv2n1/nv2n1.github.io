@@ -1,5 +1,4 @@
 ---
-
 title: "dh_installifupdown(1)"
 name: "dh_installifupdown"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dh_installifupdown/"
 description: "dh_installifupdown – install if-up and if-down hooks"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dh_installifupdown &#8211; install if-up and if-down hooks </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dh_installifupdown</code> [<i>debhelper options</i>] [<code>&#8211;name=</code><i>name</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>dh_installifupdown</code> is a debhelper program that is responsible for installing <i>if-up</i>, <i>if-down</i>, <i>if-pre-up</i>, and <i>if-post-down</i> hook scripts into package build directories.</p>
 <h2>FILES</h2>
 <dl>

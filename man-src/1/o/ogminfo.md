@@ -1,5 +1,4 @@
 ---
-
 title: "ogminfo(1)"
 name: "ogminfo"
 section: "1"
@@ -10,7 +9,9 @@ description: "ogminfo – Print information about streams in OGG/OGM files"
 
 <h2>NAME</h2>
 <p> ogminfo &#8211; Print information about streams in OGG/OGM files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ogminfo</code> [<i>options</i>] <i>inname</i></p>
+<h2>DESCRIPTION</h2>
 <p> This program lists all streams contained in an OGM including information about the codecs used.</p>
 <dl>
 <dt>inname</dt>

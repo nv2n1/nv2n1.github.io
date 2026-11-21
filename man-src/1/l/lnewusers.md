@@ -1,5 +1,4 @@
 ---
-
 title: "lnewusers(1)"
 name: "lnewusers"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-lnewusers/"
 description: "lnewusers – Create new user accounts"
 ---
 
+<h2 class="name">NAME</h2>
+<p> lnewusers &#8211; Create new user accounts</p>
+<h2>SYNOPSIS</h2>
 <p> lnewusers [<i>OPTION</i>]&#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> Creates new user accounts using data read from standard input. </p>
 <p> The input data consists of lines, each line has 7 colon-separated fields: </p>
 <dl>

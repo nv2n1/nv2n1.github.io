@@ -1,5 +1,4 @@
 ---
-
 title: "maildirmake(1)"
 name: "maildirmake"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-maildirmake/"
 description: "maildirmake – create maildirs and maildir folders"
 ---
 
+<h2 class="name">NAME</h2>
+<p> maildirmake &#8211; create maildirs and maildir folders </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>maildirmake</code> [options&#8230;] {<i>maildir</i>}</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>maildirmake</code> command creates maildirs, and maildir folders. This documentation describes the <code>maildirmake</code> command from the Courier mail server, which creates an extended form of maildirs that implements additional extensions beyond the basic maildir properties that were first implemented in the Qmail mail server.</dd>
 <h2>OPTIONS</h2>
 <p> -S</p>

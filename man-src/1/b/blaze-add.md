@@ -1,5 +1,4 @@
 ---
-
 title: "blaze-add(1)"
 name: "blaze-add"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-blaze-add/"
 description: "blaze-add – add a blog post or a page to the BlazeBlogger repository"
 ---
 
+<h2 class="name">NAME</h2>
+<p> blaze-add &#8211; add a blog post or a page to the BlazeBlogger repository </p>
+<h2>SYNOPSIS</h2>
 <p> <code>blaze-add</code> [<code>-pqCPV</code>] [<code>-b</code> <i>directory</i>] [<code>-a</code> <i>author</i>] [<code>-d</code> <i>date</i>] [<code>-t</code> <i>title</i>] [<code>-T</code> <i>tags</i>] [<code>-u</code> <i>url</i>] [<i>file</i>&#8230;] </p>
 <p> <code>blaze-add</code> <code>-h</code> | <code>-v</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>blaze-add</code> adds new blog posts or pages to the BlazeBlogger repository. If supplied, it tries to read data from the existing <i>file</i>s, otherwise an external editor is opened to let you create a new content. </p>
 <p> Note that inside your posts and pages, you can use several special placeholders to be replaced by appropriate data later, when the static content is being generated; the case is not significant, and supported placeholders are as follows:</p>
 <dl>

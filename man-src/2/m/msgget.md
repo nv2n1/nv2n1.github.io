@@ -1,5 +1,4 @@
 ---
-
 title: "msgget(2)"
 name: "msgget"
 section: "2"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/2-msgget/"
 description: "msgget – get a System V message queue identifier"
 ---
 
+<h2 class="name">NAME</h2>
+<p> msgget &#8211; get a System V message queue identifier </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/ipc.h&gt;
 #include &lt;sys/msg.h&gt;
 #include &lt;sys/types.h&gt;
 int msgget(key_t key, int msgflg);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>msgget</code>() system call returns the System V message queue identifier associated with the value of the <i>key</i> argument. It may be used either to obtain the identifier of a previously created message queue (when <i>msgflg</i> is zero and <i>key</i> does not have the value <code>IPC_PRIVATE</code>), or to create a new set. </p>
 <p> A new message queue is created if <i>key</i> has the value <code>IPC_PRIVATE</code> or <i>key</i> isn&#8217;t <code>IPC_PRIVATE</code>, no message queue with the given key <i>key</i> exists, and <code>IPC_CREAT</code> is specified in <i>msgflg</i>. </p>
 <p> If <i>msgflg</i> specifies both <code>IPC_CREAT</code> and <code>IPC_EXCL</code> and a message queue already exists for <i>key</i>, then <code>msgget</code>() fails with <i>errno</i> set to <code>EEXIST</code>. (This is analogous to the effect of the combination <code>O_CREAT | O_EXCL</code> for <code><a href="/docs/linux/man/2-open/">open</a></code>(2).) </p>

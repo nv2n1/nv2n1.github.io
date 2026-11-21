@@ -1,5 +1,4 @@
 ---
-
 title: "alink(1)"
 name: "alink"
 section: "1"
@@ -8,9 +7,11 @@ url: "/docs/linux/man/1-alink/"
 description: "alink – link (reloacatable) object files created by AS"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>alink &#8211; link (reloacatable) object files created by AS</code></p>
 <h2>SYNTAX</h2>
 <p> <code>alink</code> &lt;source file(s)&gt; &lt;target file&gt; [options] </p>
+<h2>DESCRIPTION</h2>
 <p> alink will one day be a the linker companion tool to asl. It is work in progress, and it won&#8217;t be of much use for most users in its current state. Contact the author (see below) if you want to experiment with it. </p>
 <h2>COMMAND-LINE PARAMETERS</h2>
 <dl>

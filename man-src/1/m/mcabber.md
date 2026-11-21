@@ -1,5 +1,4 @@
 ---
-
 title: "mcabber(1)"
 name: "mcabber"
 section: "1"
@@ -7,11 +6,18 @@ letter: "m"
 url: "/docs/linux/man/1-mcabber/"
 ---
 
-mcabber - a simple Jabber console client 
+<h2 class="name">NAME</h2>
+ 
 
-<i>mcabber</i> [ -h | -V | -f configfile ] 
+ mcabber - a simple Jabber console client 
 
-<a HREF="/docs/linux/man/1-mcabber/">mcabber</a>(1) is a small Jabber console client. For now it needs a configuration file to start, so please copy the sample mcabberrc file and adapt your connection settings. 
+<h2>SYNOPSIS</h2>
+
+ <i>mcabber</i> [ -h | -V | -f configfile ] 
+
+<h2>DESCRIPTION</h2>
+
+ <a HREF="/docs/linux/man/1-mcabber/">mcabber</a>(1) is a small Jabber console client. For now it needs a configuration file to start, so please copy the sample mcabberrc file and adapt your connection settings. 
 
  You also need to have an existing Jabber account to use this software, as it cannot (un)register accounts yet. 
 

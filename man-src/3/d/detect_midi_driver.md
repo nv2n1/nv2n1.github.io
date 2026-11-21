@@ -1,5 +1,4 @@
 ---
-
 title: "detect_midi_driver(3)"
 name: "detect_midi_driver"
 section: "3"
@@ -10,8 +9,10 @@ description: "detect_midi_driver – Detects whether the specified MIDI sound de
 
 <h2>NAME</h2>
 <p> detect_midi_driver &#8211; Detects whether the specified MIDI sound device is available. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>int detect_midi_driver(int driver_id);</code></p>
+<h2>DESCRIPTION</h2>
 <p> Detects whether the specified MIDI sound device is available. This function must be called _before_ install_sound().</p>
 <h2>RETURN VALUE</h2>
 <p> Returns the maximum number of voices that the driver can provide, or zero if the hardware is not present. </p>

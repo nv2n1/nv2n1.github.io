@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_certificate_set_x509_key_mem2(3)"
 name: "gnutls_certificate_set_x509_key_mem2"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_certificate_set_x509_key_mem2 – API function"
 
 <h2>NAME</h2>
 <p> gnutls_certificate_set_x509_key_mem2 &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_certificate_set_x509_key_mem2(gnutls_certificate_credentials_t </code><i>res</i><code>, const gnutls_datum_t * </code><i>cert</i><code>, const gnutls_datum_t * </code><i>key</i><code>, gnutls_x509_crt_fmt_t </code><i>type</i><code>, const char * </code><i>pass</i><code>, unsigned int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -26,6 +26,7 @@ description: "gnutls_certificate_set_x509_key_mem2 – API function"
 <dd> is the key&#8217;s password</dd>
 <dt>unsigned int flags</dt>
 <dd> an ORed sequence of gnutls_pkcs_encrypt_flags_t</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function sets a certificate/private key pair in the gnutls_certificate_credentials_t structure. This function may be called more than once, in case multiple keys/certificates exist for the server. </p>
 <p> Note that the keyUsage (2.5.29.15) PKIX extension in X.509 certificates is supported. This means that certificates intended for signing cannot be used for ciphersuites that require encryption. </p>
 <p> If the certificate and the private key are given in PEM encoding then the strings that hold their values must be null terminated. </p>

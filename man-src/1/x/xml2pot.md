@@ -1,5 +1,4 @@
 ---
-
 title: "xml2pot(1)"
 name: "xml2pot"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-xml2pot/"
 description: "xml2pot – Creates a PO template file from a DocBook XML file."
 ---
 
+<h2 class="name">NAME</h2>
+<p> xml2pot &#8211; Creates a PO template file from a DocBook XML file. </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xml2pot</code> [<i>original-XML</i>]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>xml2pot</code></p>
 <dd>is a command-line tool that produces a gettext message template file from the DocBook XML file original-XML. The template file is sent to standard output. </dd>
 <p> The resulting template file can be used to create gettext message files (PO-files) for a variety of languages. These can then be used in conjunction with <code><a href="/docs/linux/man/1-po2xml/">po2xml</a></code>(1) to translate the original XML file into these other languages. </p>

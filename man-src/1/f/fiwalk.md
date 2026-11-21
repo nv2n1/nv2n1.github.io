@@ -1,5 +1,4 @@
 ---
-
 title: "fiwalk(1)"
 name: "fiwalk"
 section: "1"
@@ -8,10 +7,13 @@ url: "/docs/linux/man/1-fiwalk/"
 description: "fiwalk – print the filesystem statistics and exit"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>fiwalk </code>&#8211; print the filesystem statistics and exit </p>
+<h2>SYNOPSIS</h2>
 <pre>
  <code>fiwalk</code> [<i>options</i>] <i>iso-name</i>
 </pre>
+<h2>DESCRIPTION</h2>
 <p> <code>fiwalk</code> is a program that processes a disk image using the SleuthKit library and outputs its results in Digital Forensics XML, the Attribute Relationship File Format (ARFF) format used by the Weka Datamining Toolkit, or an easy-to-read textual format. </p>
 <p> This application uses SleuthKit to generate a report of all of the files and orphaned inodes found in a disk image. It can optionally compute the MD5 of any objects, save those objects into a directory, or both.</p>
 <h2>OPTIONS</h2>

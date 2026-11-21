@@ -1,5 +1,4 @@
 ---
-
 title: "fputs_unlocked(3)"
 name: "fputs_unlocked"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-fputs_unlocked/"
 description: "getc_unlocked, getchar_unlocked, putc_unlocked, putchar_unlocked – nonlocking stdio functions"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getc_unlocked, getchar_unlocked, putc_unlocked, putchar_unlocked &#8211; nonlocking stdio functions </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdio.h&gt;
 int getc_unlocked(FILE *stream);
@@ -53,6 +55,7 @@ int fputws_unlocked(const wchar_t *ws, FILE *stream);
 <dl>
 <dt>
 </dt><dd> _GNU_SOURCE</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Each of these functions has the same behavior as its counterpart without the &quot;_unlocked&quot; suffix, except that they do not use locking (they do not set locks themselves, and do not test for the presence of locks set by others) and hence are thread-unsafe. See <code><a href="/docs/linux/man/3-flockfile/">flockfile</a></code>(3).</p>
 <h2>ATTRIBUTES</h2>
 <p> For an explanation of the terms used in this section, see <code><a href="/docs/linux/man/7-attributes/">attributes</a></code>(7). </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "grdredpol(1)"
 name: "grdredpol"
 section: "1"
@@ -10,8 +9,10 @@ description: "grdredpol – Compute the Continuous Reduction To the Pole, AKA di
 
 <h2>NAME</h2>
 <p> grdredpol &#8211; Compute the Continuous Reduction To the Pole, AKA differential RTP.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>grdredpol</code> <i>anom_grd</i> <i>rtp_grd</i> [<i>dec/dip</i>] [ <i>dec_grd/dipgrd</i>] [ <i>&lt;m/n&gt;</i>] [ <i>m|r</i>] [ ] [ <i>win_width</i>] [ [<i>level</i>] ] [ <i>year</i> ] [ <i>filtergrd</i> ] [ [<i>level</i>] ] [ <code>-n</code><i>&lt;flags&gt;</i> ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>grdredpol</code> will take a <i>.nc</i> file with a magnetic anomaly and compute the reduction to the pole (RTP) anomaly. This anomaly is the one that would have been produce if the bodies were magnetized vertically and the anomalies were observed at the geomagnetic pole. Standard RTP procedure assumes the direction of magnetization to be uniform throughout the causative body, and the geomagnetic field to be uniform in direction throughout the study region. Although these assumptions are reasonable for small areas, they do not hold for large areas. </p>
 <p> In the method used here computations are carried out in both the frequency and the space domains. The idea is that a large area may be decomposed in small size windows where both the ambient field and the magnetization vector change by a very small amount. Inside each of those windows, or bins, a set of filter coefficients are calculate and reconstruct for each individual point the component filter using a first order Taylor series expansion.</p>
 <h2>REQUIRED ARGUMENTS</h2>

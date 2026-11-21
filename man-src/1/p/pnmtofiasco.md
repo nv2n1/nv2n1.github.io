@@ -1,5 +1,4 @@
 ---
-
 title: "pnmtofiasco(1)"
 name: "pnmtofiasco"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pnmtofiasco/"
 description: "pnmtofiasco – Convert a portable anymap to FIASCO compressed file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pnmtofiasco &#8211; Convert a portable anymap to FIASCO compressed file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pnmtofiasco</code> [<i>option</i>]&#8230; [<i>filename</i>]&#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> <code>pnmtofiasco </code> compresses the named pbm, pgm, or ppm image files, or Standard Input if no file is named, and produces a FIASCO file on Standard Output. </p>
 <h2>OPTIONS</h2>
 <p> All option names may be abbreviated; for example, &#8211;optimize may be written &#8211;optim or &#8211;opt. For most options a one letter short option is provided. Mandatory or optional arguments to long options are mandatory or optional for short options, too. Both short and long options are case sensitive. </p>

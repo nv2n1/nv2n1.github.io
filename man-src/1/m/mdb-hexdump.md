@@ -1,5 +1,4 @@
 ---
-
 title: "mdb-hexdump(1)"
 name: "mdb-hexdump"
 section: "1"
@@ -10,9 +9,11 @@ description: "mdb-hexdump – Hexdump utility from MDB Tools"
 
 <h2>NAME</h2>
 <p> <code>mdb-hexdump </code>&#8211; Hexdump utility from MDB Tools</p>
+<h2>SYNOPSIS</h2>
 <pre>
 <code>mdb-hexdump</code> <i>file</i> [<i>pagenumber</i>]
 </pre>
+<h2>DESCRIPTION</h2>
 <p> <code>mdb-hexdump</code> is a utility program distributed with MDB Tools. </p>
 <p> <code>mdb-hexdump</code> makes a hex dump of a binary <i>file</i> (such as an mdb <i>file</i>).</p>
 <h2>ENVIRONMENT</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "hashkit_value(3)"
 name: "hashkit_value"
 section: "3"
@@ -11,11 +10,13 @@ description: "hashkit_value – libhashkit Documentation"
 <h2>NAME</h2>
 <p> hashkit_value &#8211; libhashkit Documentation </p>
 <p> Generate a value for the given key</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;libhashkit/hashkit.h&gt;</p>
 <dl>
 <dt><code>uint32_t hashkit_value(hashkit_st</code><i>&nbsp;<wbr>*hash</i>, const char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>)</dt>
 <dd>
 <p> Compile and link with -lhashkit</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The <i>hashkit_value()</i> function generates a 32-bit hash value from the given key and key_length. The hash argument is an initialized hashkit object, and distribution type and hash function is used from this object while generating the value.</p>
 <h2>RETURN VALUE</h2>
 <p> A 32-bit hash value.</p>

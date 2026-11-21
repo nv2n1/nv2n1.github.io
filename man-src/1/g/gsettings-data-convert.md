@@ -1,5 +1,4 @@
 ---
-
 title: "gsettings-data-convert(1)"
 name: "gsettings-data-convert"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-gsettings-data-convert/"
 description: "gsettings-data-convert – GConf to GSettings data migration"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gsettings-data-convert &#8211; GConf to GSettings data migration </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gsettings-data-convert</code> [option&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>gsettings-data-convert</code></p>
 <dd>reads values out of the users GConf database and stores them in GSettings. </dd>
 <p> The information about the mapping from GConf keys to GSettings keys is taken from files in /usr/share/GConf/gsettings. Each file in that directory is read as a key file, with sections for each GSettings schema that is being converted. The entries in each section map GSettings keys to paths in the GConf database. Currently, <code>gsettings-data-convert</code> supports all basic GConf types as well as lists of strings and lists of integers. </p>

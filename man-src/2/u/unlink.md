@@ -1,5 +1,4 @@
 ---
-
 title: "unlink(2)"
 name: "unlink"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-unlink/"
 description: "unlink, unlinkat – delete a name and possibly the file it refers to"
 ---
 
+<h2 class="name">NAME</h2>
+<p> unlink, unlinkat &#8211; delete a name and possibly the file it refers to </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;unistd.h&gt;
 int unlink(const char *pathname);
@@ -24,6 +26,7 @@ int unlinkat(int dirfd, const char *pathname, int flags);
 <dt>Before glibc 2.10:</dt>
 <dd> _ATFILE_SOURCE</dd></dl>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> <code>unlink</code>() deletes a name from the filesystem. If that name was the last link to a file and no processes have the file open, the file is deleted and the space it was using is made available for reuse. </p>
 <p> If the name was the last link to a file but any processes still have the file open, the file will remain in existence until the last file descriptor referring to it is closed. </p>
 <p> If the name referred to a symbolic link, the link is removed. </p>

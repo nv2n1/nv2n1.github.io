@@ -1,5 +1,4 @@
 ---
-
 title: "dlansb(3)"
 name: "dlansb"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlansb/"
 description: "dlansb.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlansb.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> DOUBLE PRECISION function <code>dlansb</code> (NORM, UPLO, N, K, AB, LDAB, WORK)<br />
  <i></i><code>DLANSB</code> returns the value of the 1-norm, or the Frobenius norm, or the infinity norm, or the element of largest absolute value of a symmetric band matrix.</p>

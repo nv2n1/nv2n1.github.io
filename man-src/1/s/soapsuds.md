@@ -1,5 +1,4 @@
 ---
-
 title: "soapsuds(1)"
 name: "soapsuds"
 section: "1"
@@ -10,7 +9,9 @@ description: "soapsuds – Mono’s Remoting Proxy Generator"
 
 <h2>NAME</h2>
 <p> soapsuds &#8211; Mono&#8217;s Remoting Proxy Generator</p>
+<h2>SYNOPSIS</h2>
 <p> <code>soapsuds</code> [options] [inputs] [outputs]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>soapsuds</i> is a tool for generating WSDL documents and client proxies for remoting services. A WSDL document describes the methods that a service provides together with XML schemas of all referenced data structures. A client proxy is a class which offers the same methods as the service it represents, but provides no implementation, it just forwards calls to the remote service. </p>
 <p> Generated client proxies are not strictly necessary, since the runtime can automatically generate proxies from the original service types. However, it implies the need of distributing the service class to all clients. In some scenarios a better approach is to use soapsuds to generate a proxy class which has the same interface as the service, but without any implementation. </p>
 <p> <i>soapsuds </i> can generate a WSDL document from a set of types specified with the option <i>-types</i> or can extract the types from an assembly specified with <i>-inputassemblyfile.</i> In this last case, soapsuds will include schemas for all serializable classes in the WSDL document. </p>

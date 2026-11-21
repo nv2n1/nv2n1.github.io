@@ -1,5 +1,4 @@
 ---
-
 title: "libssh2_version(3)"
 name: "libssh2_version"
 section: "3"
@@ -11,11 +10,15 @@ url: "/docs/linux/man/3-libssh2_version/"
 
  libssh2_version - return the libssh2 version number
 
-#include &lt;libssh2.h&gt; 
+<h2>SYNOPSIS</h2>
+
+ #include &lt;libssh2.h&gt; 
 
  const char * libssh2_version(int required_version);
 
-If <i>required_version</i> is lower than or equal to the version number of the libssh2 in use, the version number of libssh2 is returned as a pointer to a zero terminated string. 
+<h2>DESCRIPTION</h2>
+
+ If <i>required_version</i> is lower than or equal to the version number of the libssh2 in use, the version number of libssh2 is returned as a pointer to a zero terminated string. 
 
  The <i>required_version</i> should be the version number as constructed by the LIBSSH2_VERSION_NUM define in the libssh2.h public header file, which is a 24 bit number in the 0xMMmmpp format. MM for major, mm for minor and pp for patch number.
 

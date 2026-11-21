@@ -1,5 +1,4 @@
 ---
-
 title: "end(3)"
 name: "end"
 section: "3"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/3-end/"
 description: "etext, edata, end – end of program segments"
 ---
 
+<h2 class="name">NAME</h2>
+<p> etext, edata, end &#8211; end of program segments </p>
+<h2>SYNOPSIS</h2>
 <pre>
 <code>extern</code><i> etext</i><code>;</code>
 <code>extern</code><i> edata</i><code>;</code>
 <code>extern</code><i> end</i><code>;</code>
 </pre>
+<h2>DESCRIPTION</h2>
 <p> The addresses of these symbols indicate the end of various program segments:</p>
 <dl>
 <dt><i>etext</i></dt>

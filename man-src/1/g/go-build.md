@@ -1,5 +1,4 @@
 ---
-
 title: "go-build(1)"
 name: "go-build"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-go-build/"
 description: "go-build – compile the packages named by the import paths"
 ---
 
+<h2 class="name">NAME</h2>
+<p> go-build &#8211; compile the packages named by the import paths </p>
+<h2>SYNOPSIS</h2>
 <p> <code>go build</code> [<code>-o</code> <i>output</i>] [<i>build flags</i>] [<i>packages</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Build compiles the packages named by the import paths, along with their dependencies, but it does not install the results. </p>
 <p> If the arguments to build are a list of .go files from a single directory, build treats them as a list of source files specifying a single package. </p>
 <p> When compiling packages, build ignores files that end in &#8216;_test.go&#8217;. </p>

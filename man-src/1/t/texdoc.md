@@ -1,5 +1,4 @@
 ---
-
 title: "texdoc(1)"
 name: "texdoc"
 section: "1"
@@ -8,9 +7,12 @@ url: "/docs/linux/man/1-texdoc/"
 description: "texdoc – find & view documentation in TeX Live"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>texdoc</code> &#8211; find &amp; view documentation in TeX Live </p>
+<h2>SYNOPSIS</h2>
 <p> <code>texdoc</code> [OPTION]&#8230; NAME&#8230;<br />
  <code>texdoc</code> [OPTION]&#8230; ACTION</p>
+<h2>DESCRIPTION</h2>
 <p> Try to find appropriate TeX documentation for the specified NAME(s). Alternatively, perform the given ACTION and exit.</p>
 <h2>OPTIONS</h2>
 <dl>

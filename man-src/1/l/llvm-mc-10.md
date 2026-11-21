@@ -1,5 +1,4 @@
 ---
-
 title: "llvm-mc-10(1)"
 name: "llvm-mc-10"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-llvm-mc-10/"
 description: "llvm-mc – manual page for llvm-mc 10"
 ---
 
+<h2 class="name">NAME</h2>
+<p> llvm-mc &#8211; manual page for llvm-mc 10 </p>
+<h2>DESCRIPTION</h2>
 <p> OVERVIEW: llvm machine code playground </p>
 <p> USAGE: llvm-mc [options] &lt;input file&gt; </p>
 <p> OPTIONS: </p>

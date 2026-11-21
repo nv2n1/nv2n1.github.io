@@ -1,5 +1,4 @@
 ---
-
 title: "gettext(1)"
 name: "gettext"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-gettext/"
 description: "gettext – translate message"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gettext &#8211; translate message </p>
+<h2>SYNOPSIS</h2>
 <p> <code>gettext</code> [<i>,OPTION/</i>] [[<i>,TEXTDOMAIN/</i>] <i>,MSGID/</i>]<br />
  <code>gettext</code> [<i>,OPTION/</i>] <i>,-s /</i>[<i>,MSGID/</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>gettext</code> program translates a natural language message into the user&#8217;s language, by looking up the translation in a message catalog. </p>
 <p> Display native language translation of a textual message.</p>
 <dl>

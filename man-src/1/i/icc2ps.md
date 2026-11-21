@@ -1,5 +1,4 @@
 ---
-
 title: "icc2ps(1)"
 name: "icc2ps"
 section: "1"
@@ -10,7 +9,9 @@ description: "icc2ps – little cms PostScript converter."
 
 <h2>NAME</h2>
 <p> icc2ps &#8211; little cms PostScript converter.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>icc2ps</code> [<i>options</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> lcms is a standalone CMM engine, which deals with the color management. It implements a fast transformation between ICC profiles. <code>icc2ps </code> is little cms PostScript converter.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "ldap_bind_s(3)"
 name: "ldap_bind_s"
 section: "3"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/3-ldap_bind_s/"
 description: "ldap_bind, ldap_bind_s, ldap_simple_bind, ldap_simple_bind_s, ldap_sasl_bind, ldap_sasl_bind_s, ldap_sasl_interactive_bind_s, ldap_parse_sasl_bind_result, ldap_unbind, ldap_unbind_s, ldap_unbind_ex..."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ldap_bind, ldap_bind_s, ldap_simple_bind, ldap_simple_bind_s, ldap_sasl_bind, ldap_sasl_bind_s, ldap_sasl_interactive_bind_s, ldap_parse_sasl_bind_result, ldap_unbind, ldap_unbind_s, ldap_unbind_ext, ldap_unbind_ext_s, ldap_set_rebind_proc &#8211; LDAP bind routines </p>
 <h2>LIBRARY</h2>
 <p> OpenLDAP LDAP (libldap, -lldap)</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;ldap.h&gt;
 int ldap_bind(LDAP *ld, const char *who, const char *cred,
@@ -47,6 +49,7 @@ int ldap_unbind_ext_s(LDAP *ld, LDAPControl *sctrls[],
 int ldap_set_rebind_proc(LDAP *ld, LDAP_REBIND_PROC *ldap_proc, void *params);
 int(LDAP_REBIND_PROC)(LDAP *ld, LDAP_CONST char *url, ber_tag_t request, ber_int_t msgid, void *params);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> These routines provide various interfaces to the LDAP bind operation. After an association with an LDAP server is made using <code><a href="/docs/linux/man/3-ldap_init/">ldap_init</a></code>(3), an LDAP bind operation should be performed before other operations are attempted over the connection. An LDAP bind is required when using Version 2 of the LDAP protocol; it is optional for Version 3 but is usually needed due to security considerations. </p>
 <p> There are three types of bind calls, ones providing simple authentication, ones providing SASL authentication, and general routines capable of doing either simple or SASL authentication. </p>
 <p> <code>SASL</code> (Simple Authentication and Security Layer) can negotiate one of many different kinds of authentication. Both synchronous and asynchronous versions of each variant of the bind call are provided. All routines take <i>ld</i> as their first parameter, as returned from <code><a href="/docs/linux/man/3-ldap_init/">ldap_init</a></code>(3).</p>

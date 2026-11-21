@@ -1,5 +1,4 @@
 ---
-
 title: "install_int_ex(3)"
 name: "install_int_ex"
 section: "3"
@@ -10,8 +9,10 @@ description: "install_int_ex – Adds or modifies a timer. Allegro game programm
 
 <h2>NAME</h2>
 <p> install_int_ex &#8211; Adds or modifies a timer. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>int install_int_ex(void (*proc)(), int speed);</code></p>
+<h2>DESCRIPTION</h2>
 <p> Adds a function to the list of user timer handlers or, if it is already installed, retroactively adjusts its speed (i.e makes as though the speed change occurred precisely at the last tick). The speed is given in hardware clock ticks, of which there are 1193181 a second. You can convert from other time formats to hardware clock ticks with the macros: </p>
 <pre>
    SECS_TO_TIMER(secs)  - give the number of seconds between

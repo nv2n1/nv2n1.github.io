@@ -1,5 +1,4 @@
 ---
-
 title: "varnishd(1)"
 name: "varnishd"
 section: "1"
@@ -10,9 +9,11 @@ description: "varnishd – HTTP accelerator daemon"
 
 <h2>NAME</h2>
 <p> varnishd &#8211; HTTP accelerator daemon</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>varnishd [-a address[:port]] [-b host[:port]] [-C] [-d] [-f config]</code></dt>
 <dd> [-F] [-g group] [-h type[,options]] [-i identity] [-l shl[,free[,fill]]] [-M address:port] [-n name] [-P file] [-p param=value] [-r param[,param&#8230;] [-s [name=]kind[,options]] [-S secret-file] [-T address[:port]] [-t ttl] [-u user] [-V]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The varnishd daemon accepts HTTP requests from clients, passes them on to a backend server and caches the returned documents to better satisfy future requests for the same document.</p>
 <h2>OPTIONS</h2>
 <dl>

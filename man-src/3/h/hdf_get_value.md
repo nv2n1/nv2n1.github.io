@@ -1,5 +1,4 @@
 ---
-
 title: "hdf_get_value(3)"
 name: "hdf_get_value"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-hdf_get_value/"
 description: "hdf_get_value – Return the value of a node in the data set"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hdf_get_value &#8211; Return the value of a node in the data set </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;util/neo_hdf.h&gt;
 </code></pre>
@@ -19,6 +21,7 @@ char *hdf_get_value(HDF *hdf, const char *name, const char *defval);
  name -&gt; the name to walk the data set to<br />
  defval -&gt; the default value to return if the node doesn&#8217;t<br />
  exist </p>
+<h2>DESCRIPTION</h2>
 <p> hdf_get_value walks the data set pointed to by hdf via name and returns the string value located there, or defval if the node doesn&#8217;t exist </p>
 <h2>RETURN VALUE</h2>
 <p> None </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "euscale-delete-auto-scaling-group(1)"
 name: "euscale-delete-auto-scaling-group"
 section: "1"
@@ -10,10 +9,12 @@ description: "euscale-delete-auto-scaling-group – Delete an auto-scaling group
 
 <h2>NAME</h2>
 <p> euscale-delete-auto-scaling-group &#8211; Delete an auto-scaling group</p>
+<h2>SYNOPSIS</h2>
 <p> euscale-delete-auto-scaling-group [-d] [-U URL] [&#8211;region USER [at] REGION]</p>
 <dl>
 <dt>[-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ASGROUP</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Delete an auto-scaling group</p>
 <h3>positional arguments:</h3>
 <dl>

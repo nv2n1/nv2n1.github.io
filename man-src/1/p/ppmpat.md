@@ -1,5 +1,4 @@
 ---
-
 title: "ppmpat(1)"
 name: "ppmpat"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ppmpat/"
 description: "ppmpat – make a pretty pixmap"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ppmpat &#8211; make a pretty pixmap </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ppmpat</code> <code>-gingham2</code>|<code>-g2</code>|<code>-gingham3</code>| <code>-g3</code>|<code>-madras</code>|<code>-tartan</code>| <code>-poles</code>|<code>-squig</code>|<code>-camo</code>| <code>-anticamo</code> <i>width height</i></p>
+<h2>DESCRIPTION</h2>
 <p> Produces a portable pixmap of the specified width and height, with a pattern in it. </p>
 <p> This program is mainly to demonstrate use of the ppmdraw routines, a simple but powerful drawing library. See the ppmdraw.h include file for more info on using these routines. Still, some of the patterns can be rather pretty. If you have a color workstation, something like <code>ppmpat -squig 300 300 | ppmquant 128</code> should generate a nice background.</p>
 <h2>OPTIONS</h2>

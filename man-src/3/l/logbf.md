@@ -1,5 +1,4 @@
 ---
-
 title: "logbf(3)"
 name: "logbf"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-logbf/"
 description: "logb, logbf, logbl – get exponent of a floating-point value"
 ---
 
+<h2 class="name">NAME</h2>
+<p> logb, logbf, logbl &#8211; get exponent of a floating-point value </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;math.h&gt;</code> </p>
 <p> <code>double logb(double </code><i>x</i><code>);</code><br />
  <code>float logbf(float </code><i>x</i><code>);</code><br />
@@ -27,6 +29,7 @@ description: "logb, logbf, logbl – get exponent of a floating-point value"
 </dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Since glibc 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_BSD_SOURCE ||&nbsp;_SVID_SOURCE</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> These functions extract the exponent from the internal floating-point representation of <i>x</i> and return it as a floating-point value. The integer constant <code>FLT_RADIX</code>, defined in <i>&lt;float.h&gt;</i>, indicates the radix used for the system&#8217;s floating-point representation. If <code>FLT_RADIX</code> is 2, <code>logb(</code><i>x</i><code>)</code> is equal to <code>floor(log2(</code><i>x</i><code>))</code>, except that it is probably faster. </p>
 <p> If <i>x</i> is subnormal, <code>logb</code>() returns the exponent <i>x</i> would have if it were normalized.</p>
 <h2>RETURN VALUE</h2>

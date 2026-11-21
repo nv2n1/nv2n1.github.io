@@ -1,5 +1,4 @@
 ---
-
 title: "lxt2vcd(1)"
 name: "lxt2vcd"
 section: "1"
@@ -12,6 +11,7 @@ description: "lxt2vcd – Converts LXT2 files to VCD"
 <p> lxt2vcd &#8211; Converts LXT2 files to VCD</p>
 <h2>SYNTAX</h2>
 <p> lxt2vcd [<i>option</i>]&#8230; [<i>LXT2FILE</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Converts LXT2 files to VCD files on stdout. If an output filename is not specified, the VCD is emitted to stdout. Note that &quot;regular&quot; LXT2 files will convert to VCD files with monotonically increasing time values. LXT2 files which are dumped with the &quot;partial&quot; option (to speed up access in wave viewers) will dump with monotonically increasing time values per 2k block of nets. This may be fixed in later versions of <i>lxt2vcd</i>. </p>
 <h2>OPTIONS</h2>
 <dl>

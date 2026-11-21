@@ -1,5 +1,4 @@
 ---
-
 title: "ftpasswd(1)"
 name: "ftpasswd"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ftpasswd/"
 description: "ftpasswd – Perl script for managing AuthUserFiles and AuthGroupFiles"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ftpasswd &#8211; Perl script for managing AuthUserFiles and AuthGroupFiles </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ftpasswd</code> [ <code>options</code> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>ftpasswd</code> is a Perl script designed to create and manage <i>AuthUserFile</i>s and <i>AuthGroupFile</i>s of the correct format for <code>proftpd.</code> </p>
 <p> Full documentation for <i>ftpasswd</i> can be found at: <code><a rel="nofollow" href="http://www.proftpd.org/docs/utils/ftpasswd.html">http://www.proftpd.org/docs/utils/ftpasswd.html</a></code> </p>
 <h2>AUTHORS</h2>

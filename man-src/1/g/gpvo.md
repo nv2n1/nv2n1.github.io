@@ -1,5 +1,4 @@
 ---
-
 title: "gpvo(1)"
 name: "gpvo"
 section: "1"
@@ -10,9 +9,11 @@ description: "gpvo – GNU PIC object file viewer"
 
 <h2>NAME</h2>
 <p> gpvo &#8211; GNU PIC object file viewer</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gpvo [options] file</code></p>
 <h2>WARNING</h2>
 <p> The information in this man page is an extract from the full documentation of gputils and is limited to the meaning of the options. For complete and current documentation, refer to &quot;gputils.ps&quot; located in the gputils docs directory.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>gpvo</code> is an COFF object file viewer for Microchip (TM) PIC (TM) micro-controllers. COFF files are relocatable objects output from gpasm. <code>gpvo</code> is part of gputils. Check the <code><a href="/docs/linux/man/1-gputils/">gputils</a></code>(1) manpage for details on other GNU PIC utilities.</p>
 <h2>OPTIONS</h2>
 <dl>

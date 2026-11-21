@@ -1,5 +1,4 @@
 ---
-
 title: "git-worktree(1)"
 name: "git-worktree"
 section: "1"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/1-git-worktree/"
 description: "git-worktree – Manage multiple working trees"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-worktree &#8211; Manage multiple working trees </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 git worktree add[-f][--detach][--checkout][--lock[--reason&lt;string&gt;]][-b&lt;new - branch&gt;]&lt;path&gt;[&lt;commit - ish&gt;] git worktree list[--porcelain] git worktree lock[--reason&lt;string&gt;]&lt;worktree&gt;
     git worktree move&lt;worktree&gt;&lt;new - path&gt;
         git worktree prune[-n][-v][--expire&lt;expire&gt;] git worktree remove[-f]&lt;worktree&gt;
             git worktree repair[&lt;path&gt;...] git worktree unlock&lt;worktree&gt;
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Manage multiple working trees attached to the same repository. </p>
 <p> A git repository can support multiple working trees, allowing you to check out more than one branch at a time. With <code>git worktree add</code> a new working tree is associated with the repository. This new working tree is called a &quot;linked working tree&quot; as opposed to the &quot;main working tree&quot; prepared by <code><a href="/docs/linux/man/1-git-init/">git-init</a></code>(1) or <code><a href="/docs/linux/man/1-git-clone/">git-clone</a></code>(1). A repository has one main working tree (if it&#8217;s not a bare repository) and zero or more linked working trees. When you are done with a linked working tree, remove it with <code>git worktree remove</code>. </p>
 <p> In its simplest form, <code>git worktree add &lt;path&gt;</code> automatically creates a new branch whose name is the final component of <code>&lt;path&gt;</code>, which is convenient if you plan to work on a new topic. For instance, <code>git worktree add ../hotfix</code> creates new branch <code>hotfix</code> and checks it out at path <code>../hotfix</code>. To instead work on an existing branch in a new working tree, use <code>git worktree add &lt;path&gt; &lt;branch&gt;</code>. On the other hand, if you just plan to make some experimental changes or do testing without disturbing existing development, it is often convenient to create a <i>throwaway</i> working tree not associated with any branch. For instance, <code>git worktree add -d &lt;path&gt;</code> creates a new working tree with a detached <code>HEAD</code> at the same commit as the current branch. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "inetutils-traceroute(1)"
 name: "inetutils-traceroute"
 section: "1"
@@ -9,8 +8,11 @@ description: "traceroute – trace the route to a host"
 ---
 
 <p>GNU Network Utilities</p>
+<h2 class="name">NAME</h2>
 <p> <code>traceroute</code> &#8211; trace the route to a host </p>
+<h2>SYNOPSIS</h2>
 <p> <code>traceroute</code> [<i>option &#8230;</i> ] <i>host</i></p>
+<h2>DESCRIPTION</h2>
 <p> Print the route packets trace to network <i>host</i></p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "runcon(1)"
 name: "runcon"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-runcon/"
 description: "runcon – run command with specified security context"
 ---
 
+<h2 class="name">NAME</h2>
+<p> runcon &#8211; run command with specified security context </p>
+<h2>SYNOPSIS</h2>
 <p> <code>runcon</code> <i>,CONTEXT COMMAND /</i>[<i>,args/</i>]<br />
  <code>runcon</code> [ <i>,-c /</i>] [<i>,-u USER/</i>] [<i>,-r ROLE/</i>] [<i>,-t TYPE/</i>] [<i>,-l RANGE/</i>] <i>,COMMAND /</i>[<i>,args/</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Run COMMAND with completely-specified CONTEXT, or with current or transitioned security context modified by one or more of LEVEL, ROLE, TYPE, and USER. </p>
 <p> If none of <i>-c</i>, <i>-t</i>, <i>-u</i>, <i>-r</i>, or <i>-l</i>, is specified, the first argument is used as the complete context. Any additional arguments after <i>COMMAND</i> are interpreted as arguments to the command. </p>
 <p> Note that only carefully-chosen contexts are likely to successfully run. </p>

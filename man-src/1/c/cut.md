@@ -1,5 +1,4 @@
 ---
-
 title: "cut(1)"
 name: "cut"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-cut/"
 description: "cut – remove sections from each line of files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cut &#8211; remove sections from each line of files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>cut</code> <i>,OPTION/</i>&#8230; [<i>,FILE/</i>]&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Print selected parts of lines from each FILE to standard output. </p>
 <p> With no FILE, or when FILE is -, read standard input. </p>
 <p> Mandatory arguments to long options are mandatory for short options too.</p>

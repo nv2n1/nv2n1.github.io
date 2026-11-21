@@ -1,5 +1,4 @@
 ---
-
 title: "gstream-set_input_error_handler(3)"
 name: "gstream-set_input_error_handler"
 section: "3"
@@ -10,8 +9,10 @@ description: "set_input_error_handler"
 
 <h2>NAME</h2>
 <p> set_input_error_handler</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/gstream.h">gstream.h</a>&gt;</code> </p>
 <p> <code>void set_input_error_handler(int error);</code></p>
+<h2>DESCRIPTION</h2>
 <p> Sets an error handler that will be called of the inputter encounter any unusual, erratic behaviour, e.g. the user trying to move the cursor off the string or pressing invalid keys. The handler is passed a constant which currently can be one of the following: </p>
 <p> IE_UNRECOGNIZED_KEY </p>
 <p> The inputted key couldn&#8217;t be used for anything, i.e. it wasn&#8217;t one of the recognized control keys (for example KEY_LEFT, but not KEY_PGDN) and the input approver didn&#8217;t accept it as a valid char either. </p>

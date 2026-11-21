@@ -1,5 +1,4 @@
 ---
-
 title: "pidwait(1)"
 name: "pidwait"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-pidwait/"
 description: "pgrep, pkill, pidwait – look up, signal, or wait for processes based on name and other attributes"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pgrep, pkill, pidwait &#8211; look up, signal, or wait for processes based on name and other attributes </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pgrep</code> [options] pattern<br />
  <code>pkill</code> [options] pattern<br />
  <code>pidwait</code> [options] pattern</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pgrep</code> looks through the currently running processes and lists the process IDs which match the selection criteria to stdout. All the criteria have to match. For example,</p>
 <dl>
 <dt>

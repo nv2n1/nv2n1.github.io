@@ -1,5 +1,4 @@
 ---
-
 title: "audit_add_rule_data(3)"
 name: "audit_add_rule_data"
 section: "3"
@@ -10,8 +9,10 @@ description: "audit_add_rule_data – Add new audit rule"
 
 <h2>NAME</h2>
 <p> audit_add_rule_data &#8211; Add new audit rule</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libaudit.h&gt;</code> </p>
 <p> int audit_add_rule_data (int fd, struct audit_rule_data *rule, int flags, int action); </p>
+<h2>DESCRIPTION</h2>
 <p> audit_add_rule adds an audit rule previously constructed with audit_rule_fieldpair_data(3) to one of several kernel event filters. The filter is specified by the flags argument. Possible values for flags are: </p>
 <dl>
 <dt>&bull;</dt>

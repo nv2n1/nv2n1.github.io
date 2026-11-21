@@ -1,5 +1,4 @@
 ---
-
 title: "zsyncmake(1)"
 name: "zsyncmake"
 section: "1"
@@ -8,10 +7,13 @@ url: "/docs/linux/man/1-zsyncmake/"
 description: "zsyncmake – Build control file for"
 ---
 
+<h2 class="name">NAME</h2>
+<p> zsyncmake &#8211; Build control file for </p>
 <p> <a href="/docs/linux/man/1-zsync/">zsync</a>(1)</p>
 <h2>SYNTAX</h2>
 <p> zsyncmake [ { -z | -Z } ] [ -e ] [ -C ] [ -u <i>url</i> ] [ -U <i>url</i> ] [ -b <i>blocksize</i> ] [ -o <i>outfile</i> ] [ -f <i>targetfilename</i> ] [ -v ] <i>filename</i> </p>
 <p> zsync -V</p>
+<h2>DESCRIPTION</h2>
 <p> Constructs a metafile for the zsync client program to use to perform partial file downloads. <i>filename</i> is the file that users wish to downloads; zsyncmake constructs the appropriate metafile and writes <i>filename</i>.zsync in the current directory. </p>
 <p> zsync will need at least one URL from which to download the file content. If the .zsync will be in the same directory as the file to download, you can accept the default &#8211; zsync includes a relative URL in the control file. If not, use the <code>-u</code> option to specify the URL. You should also specify a URL for the uncompressed content with -U if available, as zsync can make use of this for more efficient downloads sometimes. (You can edit the .zsync file and add these afterwards &#8211; it has a simple key: value format in the header &#8211; but I suggest you only do this once you are familiar with the tool.) </p>
 <p> Note that zsyncmake itself does not (currently) verify the URLs or download any data, you must provide the file data locally and check the URLs yourself.</p>

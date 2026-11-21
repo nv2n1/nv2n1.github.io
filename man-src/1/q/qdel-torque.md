@@ -1,5 +1,4 @@
 ---
-
 title: "qdel-torque(1)"
 name: "qdel-torque"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-qdel-torque/"
 description: "qdel – delete pbs batch job"
 ---
 
+<h2 class="name">NAME</h2>
+<p> qdel &#8211; delete pbs batch job </p>
+<h2>SYNOPSIS</h2>
 <p> qdel [-a] [-c] [-m message] [-p] [-t array_range] [-W delay] job_identifier&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>qdel </code> command deletes jobs in the order in which their job identifiers are presented to the command. A job is deleted by sending a <i>Delete Job</i> batch request to the batch server that owns the job. A job that has been deleted is no longer subject to management by batch services. </p>
 <p> A batch job may be deleted by its owner, the batch operator, or the batch administrator. </p>
 <p> A batch job being deleted by a server will be sent a <code>SIGTERM</code> signal following by a <code>SIGKILL </code> signal. The time delay between the two signals is an attribute of the execution queue from which the job was run (settable by the administrator). This delay may be overridden by the <i> option. </p>

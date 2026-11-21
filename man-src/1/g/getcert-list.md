@@ -1,5 +1,4 @@
 ---
-
 title: "getcert-list(1)"
 name: "getcert-list"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-getcert-list/"
 description: "getcert"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getcert</p>
+<h2>SYNOPSIS</h2>
 <p> getcert list [options] </p>
+<h2>DESCRIPTION</h2>
 <p> Queries <i>certmonger</i> for a list of certificates which it is monitoring or attempting to obtain. </p>
 <h2>ENROLLMENT OPTIONS</h2>
 <dl>

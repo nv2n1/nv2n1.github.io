@@ -1,5 +1,4 @@
 ---
-
 title: "gtk3-demo(1)"
 name: "gtk3-demo"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-gtk3-demo/"
 description: "gtk3-demo – Demonstrate GTK+ widgets"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gtk3-demo &#8211; Demonstrate GTK+ widgets </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gtk3-demo</code> [&#8211;help] [&#8211;list] [&#8211;run&nbsp;<wbr><i>EXAMPLE</i>] [&#8211;autoquit]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>gtk3-demo</code></p>
 <dd>is a collection of examples. Its purpose is to demonstrate many GTK+ widgets in a form that is useful to application developers. </dd>
 <p> The application shows the source code for each example, as well as other used resources, such as ui files and icons.</p>

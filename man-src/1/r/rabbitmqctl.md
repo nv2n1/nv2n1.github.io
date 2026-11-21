@@ -1,5 +1,4 @@
 ---
-
 title: "rabbitmqctl(1)"
 name: "rabbitmqctl"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-rabbitmqctl/"
 description: "rabbitmqctl – command line tool for managing a RabbitMQ broker"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rabbitmqctl &#8211; command line tool for managing a RabbitMQ broker </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>rabbitmqctl</code> [-n&nbsp;<wbr><i>node</i>] [-t&nbsp;<wbr><i>timeout</i>] [-q] {<i>command</i>} [<i>command options</i>&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>RabbitMQ is an implementation of AMQP, the emerging standard for high performance enterprise messaging. The RabbitMQ server is a robust and scalable implementation of an AMQP broker. </dd>
 <p> <code>rabbitmqctl</code> is a command line tool for managing a RabbitMQ broker. It performs all actions by connecting to one of the broker&#8217;s nodes. </p>
 <p> Diagnostic information is displayed if the broker was not running, could not be reached, or rejected the connection due to mismatching Erlang cookies.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "hlint(1)"
 name: "hlint"
 section: "1"
@@ -10,7 +9,9 @@ description: "HLint – haskell source code suggestions"
 
 <h2>NAME</h2>
 <p> HLint &#8211; haskell source code suggestions</p>
+<h2>SYNOPSIS</h2>
 <p> <code>hlint</code> [<i>files/directories</i>] [<i>options</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> <i>HLint</i> is a tool for suggesting possible improvements to Haskell code. These suggestions include ideas such as using alternative functions, simplifying code and spotting redundancies. </p>
 <h2>OPTIONS</h2>
 <dl>

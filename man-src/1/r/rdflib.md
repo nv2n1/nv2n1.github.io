@@ -1,5 +1,4 @@
 ---
-
 title: "rdflib(1)"
 name: "rdflib"
 section: "1"
@@ -10,7 +9,9 @@ description: "rdflib – manage a library file for use with ldrdf(1)"
 
 <h2>NAME</h2>
 <p> rdflib &#8211; manage a library file for use with <a href="/docs/linux/man/1-ldrdf/">ldrdf</a>(1)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>rdflib</code> <i>command</i> <i>arguments</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>rdflib</code> manages a library file which can be used by <code><a href="/docs/linux/man/1-ldrdf/">ldrdf</a></code>(1). It is supplied with a shell script <code>makelib</code> which should probably be used to create libraries.</p>
 <h2>COMMANDS</h2>
 <dl>

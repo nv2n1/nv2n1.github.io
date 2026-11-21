@@ -1,5 +1,4 @@
 ---
-
 title: "eulb-apply-security-groups-to-lb(1)"
 name: "eulb-apply-security-groups-to-lb"
 section: "1"
@@ -10,10 +9,12 @@ description: "eulb-apply-security-groups-to-lb – [VPC only] Associate one or m
 
 <h2>NAME</h2>
 <p> eulb-apply-security-groups-to-lb &#8211; [VPC only] Associate one or more security groups with a load balancer. All previous associations with security groups will be replaced.</p>
+<h2>SYNOPSIS</h2>
 <p> eulb-apply-security-groups-to-lb <code>-g</code> GROUP1,GROUP2,&#8230;</p>
 <dl>
 <dt>[&#8211;show-empty-fields] [-U URL]</dt>
 <dd> [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] ELB</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> [VPC only] Associate one or more security groups with a load balancer. All previous associations with security groups will be replaced.</p>
 <h3>positional arguments:</h3>
 <dl>

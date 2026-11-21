@@ -1,5 +1,4 @@
 ---
-
 title: "libstatgrab(3)"
 name: "libstatgrab"
 section: "3"
@@ -10,6 +9,7 @@ description: "statgrab, libstatgrab – get system statistics"
 
 <h2>NAME</h2>
 <p> statgrab, libstatgrab &#8211; get system statistics</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;statgrab.h&gt;
 </code></pre>
@@ -80,6 +80,7 @@ description: "statgrab, libstatgrab – get system statistics"
 <p> sg_user_stats *<code>sg_get_user_stats</code> (size_t *<i>entries</i>); </p>
 <p> sg_user_stats *<code>sg_get_user_stats_r</code> (size_t *<i>entries</i>); </p>
 <p> sg_error <code>sg_free_user_stats</code> (sg_user_stats *<i>data</i>);</p>
+<h2>DESCRIPTION</h2>
 <p> The statgrab library provides a cross-platform interface to get several system statistics. System statistics aren&#8217;t standardised, so the statgrab library tries to choose the most important values over all supported operating systems. This implies that some values might not be available on every OS while some specific values are missing when there are no counterparts on any other OS. </p>
 <p> The libstatgrab is organised in components, each for interrelated statistics. </p>
 <table BORDER>

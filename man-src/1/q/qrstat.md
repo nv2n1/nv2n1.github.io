@@ -1,5 +1,4 @@
 ---
-
 title: "qrstat(1)"
 name: "qrstat"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-qrstat/"
 description: "qrstat – show the status of xxQS_NAMExx Advance Reservations (AR)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> qrstat &#8211; show the status of xxQS_NAMExx Advance Reservations (AR) </p>
 <h2>SYNTAX</h2>
 <p> <code>qrstat</code> [<code>-ar</code> <i>ar_id</i>,&#8230;] [<code>-help</code>] [<code>-u</code> <i>user</i>,&#8230;] [<code>-explain</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>qrstat</i> shows the current status of the available xxQS_NAMExx ARs. The selection option <code>-ar</code> allows you to get information about specific AR. </p>
 <p> The administrator and the user may define files which can contain any of the options described below. A cluster-wide sge_qrstat file may be placed under $xxQS_NAME_Sxx_ROOT/$xxQS_NAME_Sxx_CELL/common/sge_qrstat The user private file is searched at the location $HOME/.sge_qrstat. The home directory request file has the highest precedence over the cluster global file. Command line can be used to override the flags contained in the files.</p>
 <h2>OPTIONS</h2>

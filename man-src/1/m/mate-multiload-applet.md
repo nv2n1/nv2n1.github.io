@@ -1,5 +1,4 @@
 ---
-
 title: "mate-multiload-applet(1)"
 name: "mate-multiload-applet"
 section: "1"
@@ -10,7 +9,9 @@ description: "mate-multiload-applet – Multiload (cpu, load average, memory, ne
 
 <h2>NAME</h2>
 <p> mate-multiload-applet &#8211; Multiload (cpu, load average, memory, net, swap) applet for the MATE panel.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mate-multiload-applet</code> [ <code>&#8211;activate-goad-server</code><i>[=GOAD_ID]</i> ] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>mate-multiload-applet</code> Contains 5 applets. </p>
 <p> CPU Load Applet. To add this applet to a Panel, right-click on the Panel and choose Applets-&gt;Monitors-&gt;CPULoad </p>
 <p> Load Average Applet. To add this applet to a Panel, right-click on the Panel and choose Applets-&gt;Monitors-&gt;Load Average </p>

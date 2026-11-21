@@ -1,5 +1,4 @@
 ---
-
 title: "g_wheel(1)"
 name: "g_wheel"
 section: "1"
@@ -11,7 +10,9 @@ description: "wheel – plots helical wheels"
 <h2>NAME</h2>
 <p> wheel &#8211; plots helical wheels </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>wheel</code> <code>-f</code><i> nnnice.dat </i> <code>-o</code><i> plot.eps </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-r0</code><i> int </i> <code>-rot0</code><i> real </i> <code>-T</code><i> string </i> <code>-[no]nn</code><i></i></p>
+<h2>DESCRIPTION</h2>
 <p> wheel plots a helical wheel representation of your sequence.The input sequence is in the .dat file where the first line contains the number of residues and each consecutive line contains a residuename.</p>
 <h2>FILES</h2>
 <p> <code>-f</code><i> nnnice.dat</i> <code>Input</code><br />

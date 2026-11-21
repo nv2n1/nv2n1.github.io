@@ -1,5 +1,4 @@
 ---
-
 title: "cgi_display(3)"
 name: "cgi_display"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cgi_display/"
 description: "cgi_display – render and display the CGI output to the user"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cgi_display &#8211; render and display the CGI output to the user </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;cgi/cgi.h&gt;
 </code></pre>
@@ -17,6 +19,7 @@ NEOERR *cgi_display(CGI *cgi, const char *cs_file);
 <h2>ARGUMENTS</h2>
 <p> cgi &#8211; a pointer a CGI struct allocated with cgi_init<br />
  cs_file &#8211; a ClearSilver template file </p>
+<h2>DESCRIPTION</h2>
 <p> cgi_display will render the CS template pointed to by cs_file using the CGI&#8217;s HDF data set, and send the output to the user. Note that the output is actually rendered into memory first. </p>
 <h2>RETURN VALUE</h2>
 <p> None </p>

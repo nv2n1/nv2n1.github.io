@@ -1,5 +1,4 @@
 ---
-
 title: "nping(1)"
 name: "nping"
 section: "1"
@@ -7,10 +6,13 @@ letter: "n"
 url: "/docs/linux/man/1-nping/"
 description: "nping – Network packet generation tool / ping utility"
 ---
-
+<h2 class="name">NAME</h2>
+<p> nping - Network packet generation tool / ping utility </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>nping</code> [<i>Options</i>] {<i>targets</i>} </dt>
 </dl>
+<h2>DESCRIPTION</h2>
 <dd> <p> Nping is an open-source tool for network packet generation, response analysis and response time measurement. Nping allows users to generate network packets of a wide range of protocols, letting them tune virtually any field of the protocol headers. While Nping can be used as a simple ping utility to detect active hosts, it can also be used as a raw packet generator for network stack stress tests, ARP poisoning, Denial of Service attacks, route tracing, and other purposes. </p>
 <p> Additionally, Nping offers a special mode of operation called the &quot;Echo Mode&quot;, that lets users see how the generated probes change in transit, revealing the differences between the transmitted packets and the packets received at the other end. See section &quot;Echo Mode&quot; for details. </p>
 <p> The output from Nping is a list of the packets that are being sent and received. The level of detail depends on the options used. </p>

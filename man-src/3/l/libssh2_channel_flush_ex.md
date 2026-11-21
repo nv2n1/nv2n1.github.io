@@ -1,5 +1,4 @@
 ---
-
 title: "libssh2_channel_flush_ex(3)"
 name: "libssh2_channel_flush_ex"
 section: "3"
@@ -10,10 +9,12 @@ description: "libssh2_channel_flush_ex – flush a channel"
 
 <h2>NAME</h2>
 <p> libssh2_channel_flush_ex &#8211; flush a channel</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;libssh2.h&gt; </p>
 <p> int libssh2_channel_flush_ex(LIBSSH2_CHANNEL *channel, int streamid); </p>
 <p> int libssh2_channel_flush(LIBSSH2_CHANNEL *channel); </p>
 <p> int libssh2_channel_flush_stderr(LIBSSH2_CHANNEL *channel); </p>
+<h2>DESCRIPTION</h2>
 <p> <i>channel</i> &#8211; Active channel stream to flush. </p>
 <p> <i>streamid</i> &#8211; Specific substream number to flush. Groups of substreams may be flushed by passing on of the following Constants.<br />
  <code>LIBSSH2_CHANNEL_FLUSH_EXTENDED_DATA</code>: Flush all extended data substreams<br />

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_strerror(3)"
 name: "gnutls_strerror"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_strerror – API function"
 
 <h2>NAME</h2>
 <p> gnutls_strerror &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>const char * gnutls_strerror(int </code><i>error</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>int error</dt>
 <dd> is a GnuTLS error code, a negative error code</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function is similar to strerror. The difference is that it accepts an error number returned by a gnutls function; In case of an unknown error a descriptive string is sent instead of <code>NULL</code>. </p>
 <p> Error codes are always a negative error code.</p>
 <h2>RETURNS</h2>

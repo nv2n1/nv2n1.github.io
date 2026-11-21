@@ -1,5 +1,4 @@
 ---
-
 title: "gpg2(1)"
 name: "gpg2"
 section: "1"
@@ -10,7 +9,9 @@ description: "gpg2 – OpenPGP encryption and signing tool"
 
 <h2>NAME</h2>
 <p> <code>gpg2</code> &#8211; OpenPGP encryption and signing tool</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gpg2</code> [<code>&#8211;homedir</code> <i>dir</i>] [<code>&#8211;options</code> <i>file</i>] [<i>options</i>] <i>command</i> [<i>args</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>gpg2</code> is the OpenPGP part of the GNU Privacy Guard (GnuPG). It is a tool to provide digital encryption and signing services using the OpenPGP standard. <code>gpg2</code> features complete key management and all bells and whistles you can expect from a decent OpenPGP implementation. </p>
 <p> In contrast to the standalone version <code>gpg</code>, which is more suited for server and embedded platforms, this version is commonly installed under the name <code>gpg2</code> and more targeted to the desktop as it requires several other modules to be installed. The standalone version will be kept maintained and it is possible to install both versions on the same system. If you need to use different configuration files, you should make use of something like &#8216;<i>gpg.conf-2</i>&#8216; instead of just &#8216;<i>gpg.conf</i>&#8216;. </p>
 <h2>RETURN VALUE</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnudos(1)"
 name: "gnudos"
 section: "1"
@@ -11,7 +10,9 @@ url: "/docs/linux/man/1-gnudos/"
 
  GnuDOS - The GnuDOS library for GNU/Linux Version 1.9
 
-GnuDOS is a group of utilities that were designed to introduce new users to the GNU system. The library contains an editor, a file manager, and other tools which have a look-and-feel familiar to users of MS-DOS like systems. The aim is to provide users accustomed to such systems a gentle way to learn how to use the GNU operating system.
+<h2>DESCRIPTION</h2>
+
+ GnuDOS is a group of utilities that were designed to introduce new users to the GNU system. The library contains an editor, a file manager, and other tools which have a look-and-feel familiar to users of MS-DOS like systems. The aim is to provide users accustomed to such systems a gentle way to learn how to use the GNU operating system.
 
 <h2>FILES</h2>
 

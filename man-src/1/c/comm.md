@@ -1,5 +1,4 @@
 ---
-
 title: "comm(1)"
 name: "comm"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-comm/"
 description: "comm – compare two sorted files line by line"
 ---
 
+<h2 class="name">NAME</h2>
+<p> comm &#8211; compare two sorted files line by line </p>
+<h2>SYNOPSIS</h2>
 <p> <code>comm</code> [<i>,OPTION/</i>]&#8230; <i>,FILE1 FILE2/</i></p>
+<h2>DESCRIPTION</h2>
 <p> Compare sorted files FILE1 and FILE2 line by line. </p>
 <p> When FILE1 or FILE2 (not both) is -, read standard input. </p>
 <p> With no options, produce three-column output. Column one contains lines unique to FILE1, column two contains lines unique to FILE2, and column three contains lines common to both files.</p>

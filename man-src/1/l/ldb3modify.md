@@ -1,5 +1,4 @@
 ---
-
 title: "ldb3modify(1)"
 name: "ldb3modify"
 section: "1"
@@ -13,6 +12,10 @@ ldbmodify - Modify records in a LDB database
 
 <dl>
 <dt> FCldbmodifyF[] [-H LDB-URL] [ldif-file]</dt></dl>
+
+<h2>DESCRIPTION</h2>
+
+ 
 
 <dd>ldbmodify changes, adds and deletes records in a LDB database. The changes that should be made to the LDB database are read from the specified LDIF-file. If - is specified as the filename, input is read from stdin. 
 

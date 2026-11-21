@@ -1,5 +1,4 @@
 ---
-
 title: "xmlto(1)"
 name: "xmlto"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-xmlto/"
 description: "xmlto – apply an XSL stylesheet to an XML document"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xmlto &#8211; apply an XSL stylesheet to an XML document </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xmlto</code> [<code>-o</code>&nbsp;<wbr><i>output_dir</i>] [<code>-x</code>&nbsp;<wbr><i>custom_xsl</i>] [<code>-m</code>&nbsp;<wbr><i>xsl_fragment</i>] [<code>-v</code>] [<code>-p</code>&nbsp;<wbr><i>postprocessor_opts</i>] [<code>&#8211;extensions</code>] [<code>&#8211;searchpath</code>&nbsp;<wbr><i>path</i>] [<code>&#8211;skip-validation</code>] [<code>&#8211;stringparam</code>&nbsp;<wbr><i>paramname</i>=<i>paramvalue</i>] [<code>&#8211;noclean</code>] [<code>&#8211;noautosize</code>] [<code>&#8211;noextensions</code>] [<code>&#8211;with-fop</code>] [<code>&#8211;with-dblatex</code>] {<i>format</i>} {<i>file</i>}</dt>
 <dt> <code>xmlto</code> {[&#8211;help] | [&#8211;version]}</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The purpose of <code>xmlto</code> is to convert an XML <i>file</i> to the desired <i>format</i> using whatever means necessary. This may involve two steps: </dd>
 <dl>
 <dt>

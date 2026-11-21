@@ -1,5 +1,4 @@
 ---
-
 title: "gmtlist(1)"
 name: "gmtlist"
 section: "1"
@@ -10,7 +9,9 @@ description: "gmtlist – A data-extractor for <legid>.gmt files"
 
 <h2>NAME</h2>
 <p> gmtlist &#8211; A data-extractor for &lt;legid&gt;.gmt files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gmtlist</code> <i>leg-ids</i> [ <code>-C</code><i>correctionfile</i> ] [ <code>-Da</code><i>startdate</i> ] [ <code>-Db</code><i>stopdate</i> ] [ <code>-F</code><i>flags</i> ] [ <code>-G</code> ] [ <code>-H</code>[<code>i</code>][<i>nrec</i>] ] [ <code>-R</code><i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[<code>r</code>] ] [ <code>-Sa</code><i>startdist</i> ] [ <code>-Sb</code><i>stopdist</i> ] [ <code>-V</code> ] [ <code>-W</code><i>weight</i> ] [ <code>-bo</code>[<code>s</code>|<code>S</code>|<code>d</code>|<code>D</code>[<i>ncol</i>]|<code>c</code>[<i>var1</i><code>/</code><i>&#8230;</i>]] ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>gmtlist</code> reads &lt;legid&gt;.gmt files and produces an ASCII [or binary] table. The &lt;legid&gt;.gmt files contain time(<code>s</code>), latitude(<code>y</code>), longitude(<code>x</code>), gravity(<code>g/G</code>), magnetics(<code>m/M</code>), and bathymetry(<code>t/T</code>), and the user may extract any combination of these 6 parameters + distance(<code>d</code>), heading (<code>h</code>), velocity (<code>v</code>), and weight (<code>w</code>, see <code>-W</code>). A sub-section can be specified by passing time- or distance-intervals along track or by selecting a region.</p>
 <dl>
 <dt><i>leg-ids</i></dt>

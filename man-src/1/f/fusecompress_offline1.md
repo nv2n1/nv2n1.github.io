@@ -1,5 +1,4 @@
 ---
-
 title: "fusecompress_offline1(1)"
 name: "fusecompress_offline1"
 section: "1"
@@ -10,7 +9,9 @@ description: "fusecompress_offline – decompress or compress data without need 
 
 <h2>NAME</h2>
 <p> fusecompress_offline &#8211; decompress or compress data without need to mount the compressed virtual filesystem</p>
+<h2>SYNOPSIS</h2>
 <p> <code>fusecompress_offline</code> [-h] [-v] [-c TYPE] [-b SIZE] targetDir</p>
+<h2>DESCRIPTION</h2>
 <p> fusecompress_offline decompress or compress data without need to mount the compressed virtual filesystem. It works like the tar or zip programs. </p>
 <p> If -c is set the data will be compressed by required compression method. Files already compressed by a different compression method are recompressed to required compression method. Files already compressed by the required compression method are left untouched. </p>
 <p> targetDir may be a single file or a directory. In the latter case the directory will be processed recursively and all found files are processed.</p>

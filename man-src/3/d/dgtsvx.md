@@ -1,5 +1,4 @@
 ---
-
 title: "dgtsvx(3)"
 name: "dgtsvx"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dgtsvx/"
 description: "dgtsvx.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dgtsvx.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dgtsvx</code> (FACT, TRANS, N, NRHS, DL, D, DU, DLF, DF, DUF, DU2, IPIV, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, IWORK, INFO)<br />
  <i></i><code> DGTSVX computes the solution to system of linear equations A * X = B for GT matrices </code></p>

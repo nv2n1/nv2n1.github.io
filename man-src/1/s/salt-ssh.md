@@ -1,5 +1,4 @@
 ---
-
 title: "salt-ssh(1)"
 name: "salt-ssh"
 section: "1"
@@ -10,9 +9,11 @@ description: "salt-ssh – salt-ssh Documentation"
 
 <h2>NAME</h2>
 <p> salt-ssh &#8211; salt-ssh Documentation</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 salt - ssh '*'[options] sys.doc salt - ssh - E '.*'[options] sys.doc cmd
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> Salt SSH allows for salt routines to be executed using only SSH for transport</p>
 <h2>OPTIONS</h2>
 <dl>

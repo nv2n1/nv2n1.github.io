@@ -1,5 +1,4 @@
 ---
-
 title: "xrdfs(1)"
 name: "xrdfs"
 section: "1"
@@ -10,9 +9,11 @@ description: "xrdfs – xrootd file and directory meta-data utility"
 
 <h2>NAME</h2>
 <p> xrdfs &#8211; xrootd file and directory meta-data utility</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 xrdfs[--no - cwd] host[:port][command[args]] command : help, chmod, ls, locate, mkdir, mv, stat, statvfs, query, rm, rmdir, truncate, prepare, cat, tail, spaceinfo
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>xrdfs</code> utility executes meta-data oriented operations (e.g., ls, mv, rm, etc.) on one or more xrootd servers. Command help is available by invoking <code>xrdfs</code> with no command line options or parameters and then typing &quot;help&quot; in response to the input prompt. </p>
 <h2>OPTIONS</h2>
 <p> <code>&#8211;no-cwd</code></p>

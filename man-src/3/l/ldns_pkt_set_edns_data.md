@@ -1,5 +1,4 @@
 ---
-
 title: "ldns_pkt_set_edns_data(3)"
 name: "ldns_pkt_set_edns_data"
 section: "3"
@@ -10,6 +9,7 @@ description: "ldns_pkt_edns, ldns_pkt_edns_udp_size, ldns_pkt_edns_extended_rcod
 
 <h2>NAME</h2>
 <p> ldns_pkt_edns, ldns_pkt_edns_udp_size, ldns_pkt_edns_extended_rcode, ldns_pkt_edns_version, ldns_pkt_edns_z, ldns_pkt_edns_data, ldns_pkt_set_edns_udp_size, ldns_pkt_set_edns_extended_rcode, ldns_pkt_set_edns_version, ldns_pkt_set_edns_z, ldns_pkt_set_edns_data </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;stdint.h&gt;<br />
  #include &lt;stdbool.h&gt; </p>
 <p> #include &lt;ldns/ldns.h&gt; </p>
@@ -24,6 +24,7 @@ description: "ldns_pkt_edns, ldns_pkt_edns_udp_size, ldns_pkt_edns_extended_rcod
 <p> void ldns_pkt_set_edns_version(ldns_pkt *packet, uint8_t v); </p>
 <p> void ldns_pkt_set_edns_z(ldns_pkt *packet, uint16_t z); </p>
 <p> void ldns_pkt_set_edns_data(ldns_pkt *packet, ldns_rdf *data); </p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt> <i>ldns_pkt_edns</i>()</dt>
 <dd>returns true if this packet needs and EDNS rr to be sent. At the moment the only reason is an expected packet size larger than 512 bytes, but for instance dnssec would be a good reason too. </dd>

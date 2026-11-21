@@ -1,5 +1,4 @@
 ---
-
 title: "hazardrates(3)"
 name: "hazardrates"
 section: "3"
@@ -7,8 +6,8 @@ letter: "h"
 url: "/docs/linux/man/3-hazardrates/"
 description: "QuantLib::InterpolatedHazardRateCurve – interpolated hazard-rate curve"
 ---
-
 <p>QuantLib::InterpolatedHazardRateCurve &#8211; interpolated hazard-rate curve </p>
+<h2>SYNOPSIS</h2>
 <p> <br />
  </p>
 <p>#include &lt;ql/termstructures/credit/interpolatedhazardratecurve.hpp&gt; </p>

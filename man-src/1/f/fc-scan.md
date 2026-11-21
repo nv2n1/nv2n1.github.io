@@ -1,5 +1,4 @@
 ---
-
 title: "fc-scan(1)"
 name: "fc-scan"
 section: "1"
@@ -7,14 +6,25 @@ letter: "f"
 url: "/docs/linux/man/1-fc-scan/"
 ---
 
-fc-scan - scan font files or directories 
+<h2 class="name">NAME</h2>
+ 
 
-<b>fc-scan</b> [ <b>-Vh</b> ] 
+ fc-scan - scan font files or directories 
+
+<h2>SYNOPSIS</h2>
+
+ 
+
+ <b>fc-scan</b> [ <b>-Vh</b> ] 
 
  
 &nbsp;[&nbsp;<b>&nbsp;[&nbsp;-f&nbsp;</b><i>format</i><b>&nbsp;]&nbsp;<wbr>&nbsp;[&nbsp;--format&nbsp;</b><i>format</i><b>&nbsp;]&nbsp;</b>&nbsp;]&nbsp;<wbr>&nbsp;[&nbsp;<b>--version</b>&nbsp;]&nbsp;<wbr>&nbsp;[&nbsp;<b>--help</b>&nbsp;]&nbsp;<wbr>&nbsp;<i>file</i><i>...</i>
 
-<b>fc-scan</b> scans <i>file</i>(s) recursively and prints out font pattern for each face found.
+<h2>DESCRIPTION</h2>
+
+ 
+
+ <b>fc-scan</b> scans <i>file</i>(s) recursively and prints out font pattern for each face found.
 
 <h2>OPTIONS</h2>
 

@@ -1,5 +1,4 @@
 ---
-
 title: "clatrs(3)"
 name: "clatrs"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-clatrs/"
 description: "clatrs.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> clatrs.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clatrs</code> (UPLO, TRANS, DIAG, NORMIN, N, A, LDA, X, SCALE, CNORM, INFO)<br />
  <i></i><code>CLATRS</code> solves a triangular system of equations with the scale factor set to prevent overflow.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "aptitude-run-state-bundle(1)"
 name: "aptitude-run-state-bundle"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-aptitude-run-state-bundle/"
 description: "aptitude-run-state-bundle – unpack an aptitude state bundle and invoke aptitude on it"
 ---
 
+<h2 class="name">NAME</h2>
+<p> aptitude-run-state-bundle &#8211; unpack an aptitude state bundle and invoke aptitude on it </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>aptitude-run-state-bundle</code> [&lt;<i>options</i>&gt;&#8230;] &lt;<i>input-file</i>&gt; [&lt;<i>program</i>&gt;&nbsp;<wbr>[&lt;<i>arguments</i>&gt;&#8230;]]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>aptitude-run-state-bundle</code></p>
 <dd>unpacks the given aptitude state bundle created by <code><a href="/docs/linux/man/1-aptitude-create-state-bundle/">aptitude-create-state-bundle</a></code>(1) to a temporary directory, invokes &lt;<i>program</i>&gt; on it with the supplied &lt;<i>arguments</i>&gt;, and removes the temporary directory afterwards. If &lt;<i>program</i>&gt; is not supplied, it defaults to <code>aptitude</code>(8).</dd>
 <h2>OPTIONS</h2>

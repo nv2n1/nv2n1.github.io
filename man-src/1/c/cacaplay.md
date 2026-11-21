@@ -1,5 +1,4 @@
 ---
-
 title: "cacaplay(1)"
 name: "cacaplay"
 section: "1"
@@ -10,7 +9,9 @@ description: "cacaplay – play libcaca files"
 
 <h2>NAME</h2>
 <p> cacaplay &#8211; play libcaca files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cacaplay [FILE]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>cacaplay</code> plays libcaca animation files. These files can be created by any libcaca program by setting the <code>CACA_DRIVER</code> environment variable to <code>raw</code> and storing the program&#8217;s standard output. </p>
 <p> If no file argument is provided or &#8216;-&#8216; is used, <code>cacaplay</code> will read its data from the standard input.</p>
 <h2>EXAMPLES</h2>

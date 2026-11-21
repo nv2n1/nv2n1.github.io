@@ -1,5 +1,4 @@
 ---
-
 title: "xdg-mime(1)"
 name: "xdg-mime"
 section: "1"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/1-xdg-mime/"
 description: "xdg-mime – command line tool for querying information about file type handling and adding descriptions for new file types"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xdg-mime &#8211; command line tool for querying information about file type handling and adding descriptions for new file types </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xdg-mime</code> query {filetype | default} &#8230;</dt>
 <dt> <code>xdg-mime</code> default <i>application</i> <i>mimetype(s)</i></dt>
 <dt> <code>xdg-mime</code> install [<code>&#8211;mode&nbsp;</code><i>mode</i>] [<code>&#8211;novendor</code>] <i>mimetypes-file</i></dt>
 <dt> <code>xdg-mime</code> uninstall [<code>&#8211;mode&nbsp;</code><i>mode</i>] <i>mimetypes-file</i></dt>
 <dt> <code>xdg-mime</code> {<code>&#8211;help</code> | <code>&#8211;manual</code> | <code>&#8211;version</code>}</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The xdg-mime program can be used to query information about file types and to add descriptions for new file types.</dd>
 <h2>COMMANDS</h2>
 <p> query</p>

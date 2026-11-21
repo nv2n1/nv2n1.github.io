@@ -1,5 +1,4 @@
 ---
-
 title: "dsyr2k(3)"
 name: "dsyr2k"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dsyr2k/"
 description: "dsyr2k.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dsyr2k.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dsyr2k</code> (UPLO, TRANS, N, K, ALPHA, A, LDA, B, LDB, BETA, C, LDC)<br />
  <i></i><code>DSYR2K</code></p>

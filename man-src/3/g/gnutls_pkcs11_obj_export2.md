@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pkcs11_obj_export2(3)"
 name: "gnutls_pkcs11_obj_export2"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_pkcs11_obj_export2 – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pkcs11_obj_export2 &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/pkcs11.h&gt;</code> </p>
 <p> <code>int gnutls_pkcs11_obj_export2(gnutls_pkcs11_obj_t </code><i>obj</i><code>, gnutls_datum_t * </code><i>out</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_pkcs11_obj_export2 – API function"
 <dd> Holds the object</dd>
 <dt>gnutls_datum_t * out</dt>
 <dd> will contain the object data</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will export the PKCS11 object data. It is normal for data to be inaccesible and in that case <code>GNUTLS_E_INVALID_REQUEST</code> will be returned. </p>
 <p> The output buffer is allocated using <code>gnutls_malloc()</code>.</p>
 <h2>RETURNS</h2>

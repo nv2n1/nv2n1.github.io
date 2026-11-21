@@ -1,5 +1,4 @@
 ---
-
 title: "fvwm-menu-directory(1)"
 name: "fvwm-menu-directory"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-fvwm-menu-directory/"
 description: "fvwm-menu-directory – builds a directory browsing menu for fvwm"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fvwm-menu-directory &#8211; builds a directory browsing menu for fvwm </p>
+<h2>SYNOPSIS</h2>
 <p> <code>fvwm-menu-directory</code> [ <code>&#8211;help</code>|<code>-h</code>|<code>-?</code> ] [ <code>&#8211;version</code>|<code>-V</code> ] [ <code>&#8211;name</code>|<code>-na</code> <font SIZE="-1">NAME</font> ] [ <code>&#8211;title</code>|<code>-t</code> <font SIZE="-1">NAME</font> ] [ <code>&#8211;item</code>|<code>-it</code> <font SIZE="-1">NAME</font> ] [ <code>&#8211;icon-title</code>|<code>-icon-t</code> <font SIZE="-1">XPM</font> ] [ <code>&#8211;icon-dir</code>|<code>-icon-d</code> <font SIZE="-1">XPM</font> ] [ <code>&#8211;icon-file</code>|<code>-icon-f</code> <font SIZE="-1">XPM</font> ] [ <code>&#8211;icon-app</code>|<code>-icon-a</code> <font SIZE="-1">XPM</font> ] [ <code>&#8211;wm-icons</code> ] [ <code>&#8211;dir</code>|<code>-d</code> <font SIZE="-1">NAME</font> ] [ <code>&#8211;order</code>|<code>-o</code> <font SIZE="-1">NUM</font> ] [ <code>&#8211;[no]all</code>|<code>-a</code> ] [ <code>&#8211;[no]links</code>|<code>-l</code> ] [ <code>&#8211;xterm</code>|<code>-x</code> <font SIZE="-1">CMD</font> ] [ <code>&#8211;exec-title</code>|<code>-exec-t</code> <font SIZE="-1">CMD</font> ] [ <code>&#8211;exec-file</code>|<code>-exec-f</code> <font SIZE="-1">CMD</font> ] [ <code>&#8211;exec-app</code>|<code>-exec-a</code> [<font SIZE="-1">CMD</font>] ] [ <code>&#8211;command-title</code>|<code>-command-t</code> <font SIZE="-1">CMD</font> ] [ <code>&#8211;command-file</code>|<code>-command-f</code> <font SIZE="-1">CMD</font> ] [ <code>&#8211;command-app</code>|<code>-command-a</code> <font SIZE="-1">CMD</font> ] [ <code>&#8211;[no]reuse</code>|<code>-r</code> ] [ <code>&#8211;[no]check-subdirs</code>|<code>-ch</code> ] [ <code>&#8211;special-dirs</code>|<code>-s</code> [<font SIZE="-1">VALUE</font>] ] [ <code>&#8211;[no]memory-for-speed</code>|<code>-mem</code> ] [ <code>&#8211;menu-style</code>|<code>-men</code> <font SIZE="-1">NAME</font> ] [ <code>&#8211;func-name</code>|<code>-f</code> <font SIZE="-1">NAME</font> ]</p>
+<h2>DESCRIPTION</h2>
 <p> A perl script which provides an output to read in with PipeRead to build an fvwm menu containing a directory listing. Almost everything can be configured.</p>
 <h2>HINTS</h2>
 <p> The title item with its own attached action is usually added to the menu. This may be used to define an action for the directory for which the menu is built, such as starting a terminal in this directory (the default). However, this may annoy some users. To disable the title action use <code>&#8211;command-title</code> &quot;&quot;, to remove the title completely use <code>&#8211;title</code> &quot;&quot;.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "aa_autoinitmouse(3)"
 name: "aa_autoinitmouse"
 section: "3"
@@ -10,6 +9,7 @@ description: "aa_autoinitmouse – easy to use AA-lib mouse initialization funct
 
 <h2>NAME</h2>
 <p> aa_autoinitmouse &#8211; easy to use AA-lib mouse initialization function.</p>
+<h2>SYNOPSIS</h2>
 <p> <code> #include &lt;aalib.h&gt; </p>
 <p> int aa_autoinitmouse<br />
  (<br />
@@ -22,6 +22,7 @@ description: "aa_autoinitmouse – easy to use AA-lib mouse initialization funct
 <dd> Specifies the AA-lib context to operate on.</dd>
 <dt><code>int mode</code></dt>
 <dd> Mask of extra features you request. No such features are available in the current AA-lib version.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Attempts to find available mouse driver supporting the specified mode. First attempts to initialize the recommended drivers and then in order drivers available in the aa_kbddrivers array (all regular output drivers compiled into AA-lib).</p>
 <h2>RETURNS</h2>
 <p> 1 when succesfull or 0 on failure.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "imclient(3)"
 name: "imclient"
 section: "3"
@@ -9,6 +8,9 @@ description: "imclient library – authenticating callback interface to IMAP/IMS
 ---
 
 <p>&nbsp;<wbr>*</p>
+<h2 class="name">NAME</h2>
+<p> imclient library &#8211; authenticating callback interface to IMAP/IMSP servers </p>
+<h2>SYNOPSIS</h2>
 <p> <code> #include &lt;cyrus/imclient.h&gt; </p>
 <p> </code> </p>
 <p> void imclient_close (struct imclient *</code><i>imclient</i><code>);</code> </p>
@@ -22,6 +24,7 @@ description: "imclient library – authenticating callback interface to IMAP/IMS
 <p> <code>int imclient_authenticate (struct imclient *</code><i>imclient</i><code>, struct sasl_client **</code><i>availmech</i><code>, const char *</code><i>service</i><code>, const char *</code><i>user</i><code>, int </code><i>protallowed</i><code>);</code> </p>
 <p> <code>int imclient_havetls ();</code> </p>
 <p> <code>int imclient_starttls (struct imclient *</code><i>imclient</i><code>, char *</code><i>cert_file</i><code>, char *</code><i>key_file</i><code>, char *</code><i>CAfile</i><code>, char *</code><i>CApath</i><code>);</code> </p>
+<h2>DESCRIPTION</h2>
 <p> The imclient library functions are distributed with Cyrus IMAP and IMSP. These functions are used for building IMAP/IMSP client software. These functions handle Kerberos authentication and can set callbacks based on the keyword in untagged replies or based on the command tag at the end of command replies. </p>
 <p> Users must link with the -lcyrus switch, and must supply a function called <i>fatal</i> to be called in case of any error within <i>libcyrus.a.</i> </p>
 <p> All of the <code>imclient</code> functions begin with the prefix <i>imclient</i> and takes an argument of type <code>struct imclient *</code> as the first argument which is initialized by <code>imclient_connect</code> and freed by <code>imclient_close.</code> </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "krb5-config(1)"
 name: "krb5-config"
 section: "1"
@@ -10,7 +9,9 @@ description: "krb5-config – tool for linking against MIT Kerberos libraries"
 
 <h2>NAME</h2>
 <p> krb5-config &#8211; tool for linking against MIT Kerberos libraries</p>
+<h2>SYNOPSIS</h2>
 <p> <code>krb5-config</code> [<code>&#8211;</code><code>-help</code> | <code>&#8211;</code><code>-all</code> | <code>&#8211;</code><code>-version</code> | <code>&#8211;</code><code>-vendor</code> | <code>&#8211;</code><code>-prefix</code> | <code>&#8211;</code><code>-exec-prefix</code> | <code>&#8211;</code><code>-defccname</code> | <code>&#8211;</code><code>-defktname</code> | <code>&#8211;</code><code>-defcktname</code> | <code>&#8211;</code><code>-cflags</code> | <code>&#8211;</code><code>-libs</code> [<i>libraries</i>]]</p>
+<h2>DESCRIPTION</h2>
 <p> krb5-config tells the application programmer what flags to use to compile and link programs against the installed Kerberos libraries.</p>
 <h2>OPTIONS</h2>
 <dl>

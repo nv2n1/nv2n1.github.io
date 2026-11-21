@@ -1,5 +1,4 @@
 ---
-
 title: "pq2-redistribute(1)"
 name: "pq2-redistribute"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-pq2-redistribute/"
 description: "pq2-redistribute – Execute the file movements as determined by pq2-ana-dist"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pq2-redistribute &#8211; Execute the file movements as determined by pq2-ana-dist </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pq2-redistribute</code> [-b backend] -f filemv</p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents briefly the <code>pq2-redistribute</code> program. </p>
 <p> <code>pq2-redistribute</code> is a script executing the file movements as determined by <i><a href="/docs/linux/man/1-pq2-ana-dist/">pq2-ana-dist</a></i>(1) using the specified backend. Currently only the XROOTD backend is supported (tag &#8216;xrd&#8217;; default). </p>
 <p> More details about the input file can be found in the man page <i><a href="/docs/linux/man/1-pq2-ana-dist/">pq2-ana-dist</a></i>(1).</p>

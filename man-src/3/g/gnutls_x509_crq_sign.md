@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_crq_sign(3)"
 name: "gnutls_x509_crq_sign"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_crq_sign – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crq_sign &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/compat.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crq_sign(gnutls_x509_crq_t </code><i>crq</i><code>, gnutls_x509_privkey_t </code><i>key</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_x509_crq_sign – API function"
 <dd> should contain a <code>gnutls_x509_crq_t</code> structure</dd>
 <dt>gnutls_x509_privkey_t key</dt>
 <dd> holds a private key</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function is the same a <code>gnutls_x509_crq_sign2()</code> with no flags, and SHA1 as the hash algorithm.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

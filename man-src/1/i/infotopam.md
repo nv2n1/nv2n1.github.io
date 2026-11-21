@@ -1,5 +1,4 @@
 ---
-
 title: "infotopam(1)"
 name: "infotopam"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-infotopam/"
 description: "infotopam – convert Amiga .info icons to PAM"
 ---
 
+<h2 class="name">NAME</h2>
+<p> infotopam &#8211; convert Amiga .info icons to PAM</p>
+<h2>SYNOPSIS</h2>
 <p> <code>infotopam</code> [<code>-forcecolor</code>] [<code>-numcolors</code> <i>numcolors</i>] [<code>-selected</code>] [<i>index color</i> &#8230;] [<i>filename</i>] </p>
 <p> Minimum unique abbreviation of option is acceptable. You may use double hyphens instead of single hyphen to denote options. You may use white space in place of the equals sign to separate an option name from its value. </p>
 <h2>EXAMPLES</h2>
@@ -31,6 +33,7 @@ description: "infotopam – convert Amiga .info icons to PAM"
 <pre>
      infotopam squish.info | pamtopnm | pamscale -yscale 1.7 &gt; normal.pnm
 </pre>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>infotopam</code> converts an Amiga .info (icon) file to a PAM image. <code>infotopam</code> reads a .info file from <i>filename</i>, or from Standard Input if you do not specify a file name, and writes the converted PAM image to Standard Output. </p>
 <p> <code>infotopam</code> currently handles 1 and 2 bit-plane icons. If the .info icon only has 1 bit-plane, <code>infotopam</code> generates a bitmap (black&amp;white) PAM image; otherwise it generates a color PAM image. You can force <code>infotopam</code> to convert 1 bit-plane images to color PAM images by using the <i>-forcecolor</i> option. </p>

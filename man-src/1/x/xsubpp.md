@@ -1,5 +1,4 @@
 ---
-
 title: "xsubpp(1)"
 name: "xsubpp"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-xsubpp/"
 description: "xsubpp – compiler to convert Perl XS code into C code"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xsubpp &#8211; compiler to convert Perl XS code into C code </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xsubpp</code> [<code>-v</code>] [<code>-except</code>] [<code>-s pattern</code>] [<code>-prototypes</code>] [<code>-noversioncheck</code>] [<code>-nolinenumbers</code>] [<code>-nooptimize</code>] [<code>-typemap typemap</code>] [<code>-output filename</code>]&#8230; file.xs</p>
+<h2>DESCRIPTION</h2>
 <p> This compiler is typically run by the makefiles created by ExtUtils::MakeMaker or by Module::Build or other Perl module build tools. </p>
 <p> <i>xsubpp</i> will compile <font SIZE="-1">XS</font> code into C code by embedding the constructs necessary to let C functions manipulate Perl values and creates the glue necessary to let Perl access those functions. The compiler uses typemaps to determine how to map C function parameters and variables to Perl values. </p>
 <p> The compiler will search for typemap files called <i>typemap</i>. It will use the following search path to find default typemaps, with the rightmost typemap taking precedence. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "fdeuropeanengine(3)"
 name: "fdeuropeanengine"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-fdeuropeanengine/"
 description: "ql/pricingengines/vanilla/fdeuropeanengine.hpp – Finite-difference European engine."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/pricingengines/vanilla/fdeuropeanengine.hpp &#8211; Finite-difference European engine. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/instruments/oneassetoption.hpp&gt;<br />
  #include &lt;ql/pricingengines/vanilla/fdvanillaengine.hpp&gt;<br />
  #include &lt;ql/math/sampledcurve.hpp&gt; </p>

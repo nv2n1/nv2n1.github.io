@@ -1,5 +1,4 @@
 ---
-
 title: "dsytri(3)"
 name: "dsytri"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dsytri/"
 description: "dsytri.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dsytri.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dsytri</code> (UPLO, N, A, LDA, IPIV, WORK, INFO)<br />
  <i></i><code>DSYTRI</code></p>

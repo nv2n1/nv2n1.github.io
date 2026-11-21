@@ -1,5 +1,4 @@
 ---
-
 title: "djvups(1)"
 name: "djvups"
 section: "1"
@@ -10,7 +9,9 @@ description: "djvups – Convert DjVu documents to PostScript."
 
 <h2>NAME</h2>
 <p> djvups &#8211; Convert DjVu documents to PostScript. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>djvups [</code><i>options</i><code>] [</code><i>djvufile</i><code>] [</code><i>outputfile</i><code>]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> This program decodes DjVu file <i>djvufile</i>, and generates a PostScript file named <i>outputfile</i>. The DjVu data is read from the standard input when argument <i>djvufile</i> is not specified or when it is equal to a single dash. Similarly, the output data is written to the standard output when argument <i>outputfile</i> is not specified or equal to a single dash. </p>
 <p> PostScript printers have various capabilities. Investigate options <code>-level</code> and <code>-gray</code> for obtaining the best results. </p>
 <h2>OPTIONS</h2>

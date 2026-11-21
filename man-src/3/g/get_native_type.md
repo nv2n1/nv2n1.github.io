@@ -1,5 +1,4 @@
 ---
-
 title: "get_native_type(3)"
 name: "get_native_type"
 section: "3"
@@ -10,9 +9,11 @@ description: "get_native_type — returns the native data type of a field in a d
 
 <h2>NAME</h2>
 <p> get_native_type &#8212; returns the native data type of a field in a dirfile</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
 <dl>
 <dt> <code>gd_type_t get_native_type(DIRFILE *</code><i>dirfile</i><code>, const char *</code><i>field_code</i><code>);</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>get_native_type</code>() function queries a <a href="/docs/linux/man/5-dirfile/">dirfile</a>(5) database specified by <i>dirfile</i> and returns the native data type of the field <i>field_code</i>, which may contain a representation suffix. </dd>
 <p> The <i>dirfile</i> argument must point to a valid DIRFILE object previously created by a call to <code><a href="/docs/linux/man/3-dirfile_open/">dirfile_open</a></code>(3). </p>
 <p> The native data type of a field of a given entry type is calculated as:</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "byobu-launcher-install(1)"
 name: "byobu-launcher-install"
 section: "1"
@@ -10,7 +9,9 @@ description: "byobu-launcher-install – Byobu Launcher installation utility"
 
 <h2>NAME</h2>
 <p> byobu-launcher-install &#8211; Byobu Launcher installation utility </p>
+<h2>SYNOPSIS</h2>
 <p> byobu-launcher-install [-n|&#8211;no-logout] </p>
+<h2>DESCRIPTION</h2>
 <p> <code><a href="/docs/linux/man/1-byobu-launcher-install/">byobu-launcher-install</a></code>(1) is a simple utilty that will add a line to your <i>$HOME/.profile</i> file which launches <code><a href="/docs/linux/man/1-byobu/">byobu</a></code>(1) any time you login through <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1) or on a <code><a href="/docs/linux/man/4-console/">console</a></code>(4). </p>
 <p> By default, when users detach from the <code><a href="/docs/linux/man/1-byobu/">byobu</a></code>(1) session they will also logout. Users can change this behavior by adding the [-n|&#8211;no-logout] option when they run <code><a href="/docs/linux/man/1-byobu-launcher-install/">byobu-launcher-install</a></code>(1). </p>
 <p> You can disable this behavior entirely at any time with the <code><a href="/docs/linux/man/1-byobu-launcher-uninstall/">byobu-launcher-uninstall</a>(1) utility. </p>

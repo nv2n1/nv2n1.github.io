@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_cipher_get_tag_size(3)"
 name: "gnutls_cipher_get_tag_size"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_cipher_get_tag_size – API function"
 
 <h2>NAME</h2>
 <p> gnutls_cipher_get_tag_size &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/crypto.h&gt;</code> </p>
 <p> <code>int gnutls_cipher_get_tag_size(gnutls_cipher_algorithm_t </code><i>algorithm</i><code>);</code></p>
 <h2>ARGUMENTS</h2>

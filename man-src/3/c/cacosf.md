@@ -1,5 +1,4 @@
 ---
-
 title: "cacosf(3)"
 name: "cacosf"
 section: "3"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/3-cacosf/"
 description: "cacos, cacosf, cacosl – complex arc cosine"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cacos, cacosf, cacosl &#8211; complex arc cosine </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
 <p> <code>double complex cacos(double complex </code><i>z</i><code>);</code><br />
  <code>float complex cacosf(float complex </code><i>z</i><code>);</code><br />
  <code>long double complex cacosl(long double complex </code><i>z</i><code>);</code> </p>
 <p> Link with <i>-lm</i>.</p>
+<h2>DESCRIPTION</h2>
 <p> These functions calculate the complex arc cosine of <i>z</i>. If <i>y&nbsp;=&nbsp;cacos(z)</i>, then <i>z&nbsp;=&nbsp;ccos(y)</i>. The real part of <i>y</i> is chosen in the interval [0,pi]. </p>
 <p> One has: </p>
 <pre>

@@ -1,5 +1,4 @@
 ---
-
 title: "isic(1)"
 name: "isic"
 section: "1"
@@ -10,6 +9,7 @@ description: "ISIC – IP Stack Integrity Checker"
 
 <h2>NAME</h2>
 <p> ISIC &#8211; IP Stack Integrity Checker</p>
+<h2>SYNOPSIS</h2>
 <p> <code>esic -i</code> <i>&lt;interface&gt;</i> <code>[&#8230;]</code><br />
  <code>isic -s </code> <i>&lt;source ip&gt; </i> <code>-d </code> <i>&lt;destination ip&gt; </i> <code>[&#8230;]</code><br />
  <code>tcpsic -s </code> <i>&lt;source ip&gt;[,port]</i> <code>-d </code> <i>&lt;destination ip&gt;[,port]</i> <code>[&#8230;]</code><br />
@@ -20,6 +20,7 @@ description: "ISIC – IP Stack Integrity Checker"
  <code>tcpsic6 -s </code> <i>&lt;source ip&gt;[,port]</i> <code>-d </code> <i>&lt;destination ip&gt;[,port]</i> <code>[&#8230;]</code><br />
  <code>udpsic6 -s </code> <i>&lt;source ip&gt;[,port]</i> <code>-d </code> <i>&lt;destination ip&gt;[,port]</i> <code>[&#8230;]</code><br />
  <code>imcpsic6 -s </code> <i>&lt;source ip&gt;</i> <code>-d </code> <i>&lt;destination ip&gt;</i> <code>[&#8230;]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>ISIC</code> is a suite of utilities to exercise the stability of an IP Stack and its component stacks (TCP, UDP, ICMP et. al.) It generates piles of pseudo random packets of the target protocol. The packets are given tendancies to conform to. For example 50% of the packets generated can have IP Options, and 25% of the packets can be IP fragments&#8230; But the percentages are arbitrary and most of the packet fields have a configurable tendancy. </p>
 <p> The packets are then sent against the target machine to either penetrate its firewall rules or find bugs in the IP stack. ISIC also contains an utility (esic) that generates raw Ethernet frames to examine hardware implementations, and the &quot;multisic&quot; tool to check multicast code integrity. </p>
 <p> Starting from version <i>0.07</i>, ISIC includes utilities (*sic6) to test IPv6 protocol stack. These would of course need IPv6 enabled in the system as a prerequisite.</p>

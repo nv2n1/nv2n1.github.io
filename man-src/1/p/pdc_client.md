@@ -1,5 +1,4 @@
 ---
-
 title: "pdc_client(1)"
 name: "pdc_client"
 section: "1"
@@ -10,7 +9,9 @@ description: "pdc_client – work with a PDC instance"
 
 <h2>NAME</h2>
 <p> pdc_client &#8211; work with a PDC instance</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pdc_client</code> <code>-s</code> <i>SERVER</i> [<i>OPTIONS</i>&#8230;]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pdc_client</code> provides access a given PDC instance for reading and writing data. If you have a Kerberos ticket, it will automatically obtain an access token.</p>
 <h2>OPTIONS</h2>
 <dl>

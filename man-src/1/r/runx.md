@@ -1,5 +1,4 @@
 ---
-
 title: "runx(1)"
 name: "runx"
 section: "1"
@@ -10,7 +9,9 @@ description: "runx – try to overcome problems of Xfree96 restoring textmode us
 
 <h2>NAME</h2>
 <p> runx &#8211; try to overcome problems of Xfree96 restoring textmode using svgalib.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>runx</code> </p>
+<h2>DESCRIPTION</h2>
 <p> If XFree86 corrupts your textmode font, try putting <code><a href="/docs/linux/man/1-restorefont/">restorefont</a></code>(1) in your path and use the shell script <code>runx</code> to run X. <code>runx</code> saves the VGA font data in <i>/tmp/fontdata</i>, and restores it when you exit X. </p>
 <p> The <code>runx</code> script actually is: </p>
 <dl>

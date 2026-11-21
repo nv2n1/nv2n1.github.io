@@ -1,5 +1,4 @@
 ---
-
 title: "ipa-client-automount(1)"
 name: "ipa-client-automount"
 section: "1"
@@ -10,7 +9,9 @@ description: "ipa-client-automount – Configure automount and NFS for IPA"
 
 <h2>NAME</h2>
 <p> ipa-client-automount &#8211; Configure automount and NFS for IPA</p>
+<h2>SYNOPSIS</h2>
 <p> ipa-client-automount [<i>OPTION</i>]&#8230; &lt;location&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> Configures automount for IPA. </p>
 <p> The automount configuration consists of three files: </p>
 <dl>

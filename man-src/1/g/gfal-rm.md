@@ -1,5 +1,4 @@
 ---
-
 title: "gfal-rm(1)"
 name: "gfal-rm"
 section: "1"
@@ -10,7 +9,9 @@ description: "gfal-rm – Remove files or directories"
 
 <h2>NAME</h2>
 <p> gfal-rm &#8211; Remove files or directories</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gfal-rm</code> [ <code>-h</code> ] [ <code>-V</code> ] [ <code>-v</code> ] [ <code>-D</code> <i>DEFINITION</i> ] [ <code>-C</code> <i>CLIENT-INFO</i> ] [ <code>-t</code> <i>TIMEOUT</i> ] [ <code>-r</code> ] <i>FILE</i>&#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> <code>gfal-rm</code> Removes each specified file or directory. By default, it does not remove directories. To delete a directory, &#8211;recursive needs to be given, in which case all given directories are removed too along with all their contents. </p>
 <h2>OPTIONS</h2>
 <dl>

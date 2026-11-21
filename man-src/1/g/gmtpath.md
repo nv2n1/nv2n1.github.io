@@ -1,5 +1,4 @@
 ---
-
 title: "gmtpath(1)"
 name: "gmtpath"
 section: "1"
@@ -10,7 +9,9 @@ description: "gmtpath – Get full pathname for gmt files"
 
 <h2>NAME</h2>
 <p> gmtpath &#8211; Get full pathname for gmt files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gmtpath</code> <i>leg-ids</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>gmtpath</code> returns the full pathname to one or more gmt-files. The pathname returned for a given cruise may change with time due to reshuffling of disks/subdirectories.</p>
 <dl>
 <dt><i>leg-ids</i></dt>

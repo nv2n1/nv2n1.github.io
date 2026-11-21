@@ -1,5 +1,4 @@
 ---
-
 title: "hidd(1)"
 name: "hidd"
 section: "1"
@@ -10,6 +9,7 @@ description: "hidd – Bluetooth HID daemon"
 
 <h2>NAME</h2>
 <p> hidd &#8211; Bluetooth HID daemon</p>
+<h2>DESCRIPTION</h2>
 <p> hidd &#8211; Bluetooth HID daemon</p>
 <h3>Usage:</h3>
 <dl>

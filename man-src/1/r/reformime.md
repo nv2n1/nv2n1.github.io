@@ -1,5 +1,4 @@
 ---
-
 title: "reformime(1)"
 name: "reformime"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-reformime/"
 description: "reformime – MIME E-mail reformatting tool"
 ---
 
+<h2 class="name">NAME</h2>
+<p> reformime &#8211; MIME E-mail reformatting tool </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>reformime</code> [<i>options</i>&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>reformime</code></p>
 <dd>is a utility for reformatting MIME messages. </dd>
 <p> Generally, <code>reformime</code> expects to see an m[blue]<code>RFC 2045</code>m[]<font SIZE="-2">[1]</font> compliant message on standard input, except in few cases such as the <code>-m</code> option. </p>

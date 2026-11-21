@@ -1,5 +1,4 @@
 ---
-
 title: "mflua(1)"
 name: "mflua"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-mflua/"
 description: "mflua, mflua-nowin, mfluajit, mfluajit-nowin – implementation of META-FONT with Lua embedded for better extraction of information from METAFONT."
 ---
 
+<h2 class="name">NAME</h2>
+<p> mflua, mflua-nowin, mfluajit, mfluajit-nowin &#8211; implementation of META-FONT with Lua embedded for better extraction of information from METAFONT. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mflua</code> [<i>,OPTION/</i>]&#8230; [<i>,MFNAME/</i>[<i>,.mf/</i>]] [<i>,COMMANDS/</i>]<br />
  <code>mflua</code> [<i>,OPTION/</i>]&#8230; <i>,FIRST-LINE/</i><br />
  <code>mflua</code> [<i>,OPTION/</i>]&#8230; <i>,&amp;BASE ARGS/</i></p>
+<h2>DESCRIPTION</h2>
 <dl>
 <dt>
 </dt><dd> Run MFLua on MFNAME, usually creating MFNAME.tfm and MFNAME.NNNNgf, where NNNN is the resolution of the specified mode (2602 by default). Any following COMMANDS are processed as Metafont input, after MFNAME is read. If the first line of MFNAME is %&amp;BASE, and BASE is an existing .base file, use it. Else use `NAME.base&#8217;, where NAME is the program invocation name, most commonly `mf&#8217;.</dd>

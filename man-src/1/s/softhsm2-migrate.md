@@ -1,5 +1,4 @@
 ---
-
 title: "softhsm2-migrate(1)"
 name: "softhsm2-migrate"
 section: "1"
@@ -10,7 +9,9 @@ description: "softhsm2-migrate – SoftHSM v1 migration tool"
 
 <h2>NAME</h2>
 <p> softhsm2-migrate &#8211; SoftHSM v1 migration tool</p>
+<h2>SYNOPSIS</h2>
 <p> <code>softhsm2-migrate &#8211;db</code> <i>path</i> <code>&#8211;slot</code> <i>number</i> [<code>&#8211;pin</code> <i>PIN</i> <code>&#8211;no-public-key]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>softhsm2-migrate</code> is a tool that can migrate SoftHSM v1 databases to PKCS#11. The default HSM is SoftHSM v2, but can be used with other PKCS#11 libraries by using the option <code>&#8211;module</code> </p>
 <h2>OPTIONS</h2>
 <dl>

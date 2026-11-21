@@ -1,5 +1,4 @@
 ---
-
 title: "guestunmount(1)"
 name: "guestunmount"
 section: "1"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/1-guestunmount/"
 description: "guestunmount – Unmount a guestmounted filesystem"
 ---
 
+<h2 class="name">NAME</h2>
+<p> guestunmount &#8211; Unmount a guestmounted filesystem </p>
+<h2>SYNOPSIS</h2>
 <pre>
  guestunmount mountpoint
  guestunmount --fd=&lt;FD&gt; mountpoint
 </pre>
+<h2>DESCRIPTION</h2>
 <p> guestunmount is a utility to clean up mounted filesystems automatically. <i><a href="/docs/linux/man/1-guestmount/">guestmount</a></i>(1) mounts filesystems using libguestfs. This program unmounts the filesystem when a program or script has finished with it. </p>
 <p> guestunmount is a wrapper around the <font SIZE="-1">FUSE </font><i><a href="/docs/linux/man/1-fusermount/">fusermount</a></i>(1) program, which must exist on the current <tt>&quot;PATH&quot;</tt>. </p>
 <p> There are two ways to use guestunmount. When called as: </p>

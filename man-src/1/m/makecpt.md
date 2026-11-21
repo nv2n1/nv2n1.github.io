@@ -1,5 +1,4 @@
 ---
-
 title: "makecpt(1)"
 name: "makecpt"
 section: "1"
@@ -10,8 +9,10 @@ description: "makecpt – Make GMT color palette tables"
 
 <h2>NAME</h2>
 <p> makecpt &#8211; Make GMT color palette tables</p>
+<h2>SYNOPSIS</h2>
 <p> <code>makecpt</code> [ [<code>+</code>]<i>transparency</i> ] [ <i>cpt</i> ] [ [<code>i</code>|<code>o</code>] ] [ [<i>nlevels</i>] ] [ [<code>R</code>|<code>r</code>|<code>h</code>|<code>c</code> ] [ <i>zlo</i>/<i>zhi</i> ] [ ] [ ] [ ] [ [<code>i</code>|<code>o</code>] ] [ <i>z_min</i>/<i>z_max</i>[/<i>z_inc</i>[+]] | <code>-T</code><i>ztable</i> ] [ [<i>level</i>] ] [ ] [ ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>makecpt</code> is a utility that will help you make color palette tables (CPT files). You define an equidistant set of contour intervals or pass your own z-table, and create a new CPT file based on an existing master CPT file. The resulting CPT file can be reversed relative to the master cpt, and can be made continuous or discrete. For color tables beyond the standard GMT offerings, visit cpt-city: <i><a rel="nofollow" href="http://soliton.vm.bytemark.co.uk/pub/cpt-city/">http://soliton.vm.bytemark.co.uk/pub/cpt-city/</a></i>. </p>
 <p> The CPT file includes three additional colors beyond the range of z-values. These are the background color (B) assigned to values lower than the lowest <i>z</i>-value, the foreground color (F) assigned to values higher than the highest <i>z</i>-value, and the NaN color (N) painted wherever values are undefined. </p>
 <p> If the master CPT file includes B, F, and N entries, these will be copied into the new master file. If not, the parameters <i>COLOR_BACKGROUND</i>, <i>COLOR_FOREGROUND</i>, and <i>COLOR_NAN</i> from the <code>gmt.conf</code> file or the command line will be used. This default behavior can be overruled using the options <code>-D</code>, <code>-M</code> or <code>-N</code>. </p>

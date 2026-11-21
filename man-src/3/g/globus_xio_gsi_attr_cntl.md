@@ -1,5 +1,4 @@
 ---
-
 title: "globus_xio_gsi_attr_cntl(3)"
 name: "globus_xio_gsi_attr_cntl"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-globus_xio_gsi_attr_cntl/"
 description: "globus_xio_gsi.h – XIO GSI Driver."
 ---
 
+<h2 class="name">NAME</h2>
+<p> globus_xio_gsi.h &#8211; XIO GSI Driver.</p>
+<h2>SYNOPSIS</h2>
 <p> #include &#8216;gssapi.h&#8217;<br />
  #include &#8216;globus_common.h&#8217; </p>
 <h3>Macros</h3>

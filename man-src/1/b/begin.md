@@ -1,5 +1,4 @@
 ---
-
 title: "begin(1)"
 name: "begin"
 section: "1"
@@ -7,7 +6,10 @@ letter: "b"
 url: "/docs/linux/man/1-begin/"
 ---
 
-begin - start a new block of code
+<h2 class="name">NAME</h2>
+ 
+
+ begin - start a new block of code
 
 <h3>Synopsis</h3>
 

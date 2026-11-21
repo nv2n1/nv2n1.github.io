@@ -1,5 +1,4 @@
 ---
-
 title: "flatpak-history(1)"
 name: "flatpak-history"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-flatpak-history/"
 description: "flatpak-history – Show history"
 ---
 
+<h2 class="name">NAME</h2>
+<p> flatpak-history &#8211; Show history </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>flatpak history</code> [OPTION&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>Shows changes to the flatpak installations on the system. This includes installs, updates and removals of applications and runtimes. </dd>
 <p> By default, both per-user and system-wide installations are shown. Use the <code>&#8211;user</code>, <code>&#8211;installation</code> or <code>&#8211;system</code> options to change this. </p>
 <p> The information for the history command is taken from the systemd journal, and can also be accessed using e.g. the journalctl command.</p>

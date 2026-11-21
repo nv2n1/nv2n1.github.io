@@ -1,5 +1,4 @@
 ---
-
 title: "rmcvsdir(1)"
 name: "rmcvsdir"
 section: "1"
@@ -10,7 +9,9 @@ description: "rmcvsdir – The Free Pascal CVS tree cleaner program."
 
 <h2>NAME</h2>
 <p> rmcvsdir &#8211; The Free Pascal CVS tree cleaner program. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>rmcvsdir [options]</code> </p>
+<h2>DESCRIPTION</h2>
 <p> Removes the CVS directories from a directory tree. </p>
 <p> <code>rmcvsdir</code> TO BE FILLED. </p>
 <h2>USAGE</h2>

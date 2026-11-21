@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-krb5_init_creds_init/"
 description: "Heimdal Kerberos 5 credential handing functions –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Heimdal Kerberos 5 credential handing functions &#8211; </p>
 <h3>Functions</h3>
 <p> KRB5_LIB_FUNCTION<br />
  krb5_error_code KRB5_LIB_CALL <code>krb5_fwd_tgt_creds</code> (krb5_context context, krb5_auth_context auth_context, const char *hostname, krb5_principal client, krb5_principal server, krb5_ccache ccache, int forwardable, krb5_data *out_data)&quot; </p>

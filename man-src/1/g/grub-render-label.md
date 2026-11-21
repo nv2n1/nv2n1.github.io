@@ -1,5 +1,4 @@
 ---
-
 title: "grub-render-label(1)"
 name: "grub-render-label"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-grub-render-label/"
 description: "grub-render-label – generate a .disk_label for Apple Macs."
 ---
 
+<h2 class="name">NAME</h2>
+<p> grub-render-label &#8211; generate a .disk_label for Apple Macs. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>grub-render-label</code> [<i>,OPTION/</i>&#8230;] [<i>,OPTIONS/</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Render Apple .disk_label.</p>
 <dl>
 <dt><code>-b</code>, <code>&#8211;bgcolor</code>=<i>,COLOR/</i></dt>

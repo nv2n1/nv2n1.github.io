@@ -1,5 +1,4 @@
 ---
-
 title: "mp4client(1)"
 name: "mp4client"
 section: "1"
@@ -10,7 +9,9 @@ description: "MP4Client – GPAC MPEG-4 command-line Player"
 
 <h2>NAME</h2>
 <p> MP4Client &#8211; GPAC MPEG-4 command-line Player</p>
+<h2>SYNOPSIS</h2>
 <p> <code>MP4Client</code> [options]<i>&nbsp;<wbr>[file]</i> </p>
+<h2>DESCRIPTION</h2>
 <p> MP4Client is GPAC command-line player. It supports all GPAC playback features (2D and 3D support, local playback, RTP streaming, HTTP faststart, many audio and video codecs &#8230;). MP4Client also supports visual extraction to BMP, RAW or AVI (no compression, no audio).</p>
 <h2>STARTUP OPTIONS</h2>
 <dl>

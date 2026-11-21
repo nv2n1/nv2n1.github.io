@@ -1,5 +1,4 @@
 ---
-
 title: "pmie(1)"
 name: "pmie"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmie – inference engine for performance metrics"
 
 <h2>NAME</h2>
 <p> <code>pmie</code> &#8211; inference engine for performance metrics</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pmie</code> [<code>-bCdefHqVvWxz</code>] [<code>-A</code> <i>align</i>] [<code>-a</code> <i>archive</i>] [<code>-c</code> <i>filename</i>] [<code>-h</code> <i>host</i>] [<code>-l</code> <i>logfile</i>] [<code>-j</code> <i>stompfile</i>] [<code>-n</code> <i>pmnsfile</i>] [<code>-O</code> <i>offset</i>] [<code>-S</code> <i>starttime</i>] [<code>-T</code> <i>endtime</i>] [<code>-t</code> <i>interval</i>] [<code>-U</code> <i>username</i>] [<code>-Z</code> <i>timezone</i>] [<i>filename &#8230;</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmie</code> accepts a collection of arithmetic, logical, and rule expressions to be evaluated at specified frequencies. The base data for the expressions consists of performance metrics values delivered in real-time from any host running the Performance Metrics Collection Daemon (PMCD), or using historical data from Performance Co-Pilot (PCP) archive logs. </p>
 <p> As well as computing arithmetic and logical values, <code>pmie</code> can execute actions (popup alarms, write system log messages, and launch programs) in response to specified conditions. Such actions are extremely useful in detecting, monitoring and correcting performance related problems. </p>
 <p> The expressions to be evaluated are read from configuration files specified by one or more <i>filename</i> arguments. In the absence of any <i>filename</i>, expressions are read from standard input. </p>

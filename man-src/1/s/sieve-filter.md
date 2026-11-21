@@ -1,5 +1,4 @@
 ---
-
 title: "sieve-filter(1)"
 name: "sieve-filter"
 section: "1"
@@ -11,7 +10,9 @@ description: "sieve-filter – Pigeonhole’s Sieve mailbox filter tool"
 <h2>NAME</h2>
 <p> sieve-filter &#8211; Pigeonhole&#8217;s Sieve mailbox filter tool </p>
 <p> <code>WARNING: </code>This tool is still experimental. Read this manual carefully, and backup any important mail before using this tool. Also note that some of the features documented here are not actually implemented yet; this is clearly indicated where applicable.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>sieve-filter</code> [<i>options</i>] <i>script-file</i> <i>source-mailbox</i> [<i>discard-action</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>sieve-filter</code> command is part of the Pigeonhole Project (<code><a href="/docs/linux/man/7-pigeonhole/">pigeonhole</a></code>(7)), which adds Sieve (RFC 5228) support to the Dovecot secure IMAP and POP3 server (<code><a href="/docs/linux/man/1-dovecot/">dovecot</a></code>(1)). </p>
 <p> The Sieve language was originally meant for filtering messages upon delivery. However, there are occasions when it is desirable to filter messages that are already stored in a mailbox, for instance when a bug in a Sieve script caused many messages to be delivered incorrectly. Using the sieve-filter tool it is possible to apply a Sieve script on all messages in a particular <i>source-mailbox</i>, making it possible to delete messages, to store them in a different mailbox, to change their content, and to change the assigned IMAP flags and keywords. Attempts to send messages to the outside world are ignored by default for obvious reasons, but, using the proper command line options, it is possible to capture and handle outgoing mail as well. </p>
 <p> If no options are specified, the sieve-filter command runs in a simulation mode in which it only prints what would be performed, without actually doing anything. Use the <code>-e</code> option to activate true script execution. Also, the <i>source-mailbox</i> is opened read-only by default, meaning that it normally always remains unchanged. Use the <code>-W</code> option to allow changes in the <i>source-mailbox</i>. </p>

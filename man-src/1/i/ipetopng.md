@@ -1,5 +1,4 @@
 ---
-
 title: "ipetopng(1)"
 name: "ipetopng"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ipetopng/"
 description: "ipetopng – Save an Ipe document as a bitmap"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ipetopng &#8211; Save an Ipe document as a bitmap </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ipetopng</code> <i>page</i> <i>resolution</i> <i>input-file</i> <i>output-file</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>ipetopng</code> converts a single page of an Ipe document as a PNG image. You have to specify the <i>page</i> and the <i>resolution</i> in pixels per inch. </p>
 <h2>ENVIRONMENT VARIABLES</h2>
 <p> <code>ipetopng</code> respects the following environment variables: </p>

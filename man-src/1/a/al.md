@@ -1,5 +1,4 @@
 ---
-
 title: "al(1)"
 name: "al"
 section: "1"
@@ -10,7 +9,9 @@ description: "al, al2 – Mono Assembly Linker"
 
 <h2>NAME</h2>
 <p> al, al2 &#8211; Mono Assembly Linker</p>
+<h2>SYNOPSIS</h2>
 <p> <code>al [option] [source-files]</code></p>
+<h2>DESCRIPTION</h2>
 <p> AL is the Mono assembly linkder. </p>
 <p> This linker is used to put together assemblies from a collection of modules (.netmodule files), assembly manifest files and resources. </p>
 <p> Do not confuse this with the <code>monolinker,</code> which is a tool to reduce the size of assemblies based on the code used. </p>

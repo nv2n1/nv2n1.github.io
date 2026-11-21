@@ -1,5 +1,4 @@
 ---
-
 title: "db(3)"
 name: "db"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-db/"
 description: "dbopen – database access methods"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dbopen &#8211; database access methods </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;db.h&gt;
 #include &lt;fcntl.h&gt;
@@ -16,6 +18,7 @@ description: "dbopen – database access methods"
 DB *dbopen(const char *file, int flags, int mode, DBTYPE type,
            const void *openinfo);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <i>Note well</i>: This page documents interfaces provided in glibc up until version 2.1. Since version 2.2, glibc no longer provides these interfaces. Probably, you are looking for the APIs provided by the <i>libdb</i> library instead. </p>
 <p> <code>dbopen</code>() is the library interface to database files. The supported file formats are btree, hashed and UNIX file oriented. The btree format is a representation of a sorted, balanced tree structure. The hashed format is an extensible, dynamic hashing scheme. The flat-file format is a byte stream file with fixed or variable length records. The formats and file-format-specific information are described in detail in their respective manual pages <code><a href="/docs/linux/man/3-btree/">btree</a></code>(3), <code><a href="/docs/linux/man/3-hash/">hash</a></code>(3), and <code><a href="/docs/linux/man/3-recno/">recno</a></code>(3). </p>
 <p> <code>dbopen</code>() opens <i>file</i> for reading and/or writing. Files never intended to be preserved on disk may be created by setting the <i>file</i> argument to NULL. </p>

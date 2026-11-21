@@ -1,5 +1,4 @@
 ---
-
 title: "ioping(1)"
 name: "ioping"
 section: "1"
@@ -13,6 +12,7 @@ description: "ioping – simple disk I/O latency monitoring tool"
 <h2>SYNOPSYS</h2>
 <p> [ <code>-ABCDLRWGYykq</code> ] [ <code>-c </code><i>count</i> ] [ <code>-i </code><i>interval</i> ] [ <code>-l </code><i>speed</i> ] [ <code>-t </code><i>time</i> ] [ <code>-T </code><i>time</i> ] [ <code>-s </code><i>size</i> ] [ <code>-S </code><i>wsize</i> ] [ <code>-o </code><i>offset</i> ] [ <code>-w </code><i>deadline</i> ] [ <code>-p </code><i>period</i> ] [ <code>-P </code><i>period</i> ] <i>directory</i>|<i>file</i>|<i>device</i><br />
  <code>-h</code> | <code>-v</code> </p>
+<h2>DESCRIPTION</h2>
 <p> This tool generates various I/O patterns and lets you monitor I/O speed and latency in real time.</p>
 <h2>OPTIONS</h2>
 <dl>

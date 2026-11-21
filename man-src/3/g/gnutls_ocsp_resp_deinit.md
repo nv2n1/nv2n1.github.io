@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_ocsp_resp_deinit(3)"
 name: "gnutls_ocsp_resp_deinit"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_ocsp_resp_deinit – API function"
 
 <h2>NAME</h2>
 <p> gnutls_ocsp_resp_deinit &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/ocsp.h&gt;</code> </p>
 <p> <code>void gnutls_ocsp_resp_deinit(gnutls_ocsp_resp_t </code><i>resp</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_ocsp_resp_t resp</dt>
 <dd> The structure to be deinitialized</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will deinitialize a OCSP response structure.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;bugs [at] gnutls.org&gt;.<br />

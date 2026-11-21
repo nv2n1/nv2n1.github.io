@@ -1,5 +1,4 @@
 ---
-
 title: "hesiod_free_postoffice(3)"
 name: "hesiod_free_postoffice"
 section: "3"
@@ -11,7 +10,9 @@ url: "/docs/linux/man/3-hesiod_free_postoffice/"
 
  hesiod_getmailhost, hesiod_free_postoffice - Hesiod functions for retrieving user to postoffice mappings
 
-<pre><code>
+<h2>SYNOPSIS</h2>
+
+ <pre><code>
 #include &lt;hesiod.h&gt;
 struct hesiod_postoffice *hesiod_getmailhost(void *context,
                                              const char *user) void hesiod_free_postoffice(void *context,
@@ -20,7 +21,9 @@ struct hesiod_postoffice *hesiod_getmailhost(void *context,
     - lhesiod
 </code></pre>
 
-This family of functions allows you to retrieve user to postoffice mappings using Hesiod. To perform lookups, you need an initialized Hesiod context; see <a HREF="/docs/linux/man/3-hesiod/">hesiod</a>(3) for details. Information is returned in a <i>hesiod_postoffice</i> structure, which has the following fields:
+<h2>DESCRIPTION</h2>
+
+ This family of functions allows you to retrieve user to postoffice mappings using Hesiod. To perform lookups, you need an initialized Hesiod context; see <a HREF="/docs/linux/man/3-hesiod/">hesiod</a>(3) for details. Information is returned in a <i>hesiod_postoffice</i> structure, which has the following fields:
 <dl>
 <dt>hesiod_po_type
 </dt><dd> The type of postoffice box, typically ``POP''.

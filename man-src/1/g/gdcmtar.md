@@ -1,5 +1,4 @@
 ---
-
 title: "gdcmtar(1)"
 name: "gdcmtar"
 section: "1"
@@ -8,9 +7,14 @@ url: "/docs/linux/man/1-gdcmtar/"
 description: "gdcmtar – .TH \"gdcmtar\" 1 \"Fri Oct 29 2010\" \"Version 2.0.16\" \"GDCM\""
 ---
 
+<h2 class="name">NAME</h2>
+<p> gdcmtar &#8211; .TH &quot;gdcmtar&quot; 1 &quot;Fri Oct 29 2010&quot; &quot;Version 2.0.16&quot; &quot;GDCM&quot; </p>
+<h2 class="name">NAME</h2>
+<p> gdcmtar &#8211; .SH &quot;SYNOPSIS&quot; </p>
 <pre>
 gdcmtar [options] file-in file-out
 </pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>gdcmtar</code> is a command line tool used to tar/untar multi-frames images (including SIEMENS MOSAIC file)</p>
 <h2>PARAMETERS</h2>
 <pre>

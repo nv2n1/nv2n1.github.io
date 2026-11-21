@@ -1,5 +1,4 @@
 ---
-
 title: "boltctl(1)"
 name: "boltctl"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-boltctl/"
 description: "boltctl – control the thunderbolt device manager"
 ---
 
+<h2 class="name">NAME</h2>
+<p> boltctl &#8211; control the thunderbolt device manager </p>
+<h2>SYNOPSIS</h2>
 <pre>
 <code>boltctl</code> <i>authorize</i> <i>DEVICE</i>
 <code>boltctl</code> <i>config</i>
@@ -19,6 +21,7 @@ description: "boltctl – control the thunderbolt device manager"
 <code>boltctl</code> <i>monitor</i>
 <code>boltctl</code> <i>power</i>
 </pre>
+<h2>DESCRIPTION</h2>
 <p> <i>boltctl</i> is the command line interface to interact with <i>boltd</i>, the system daemon that manages Thunderbolt 3(TM) devices. It can be used to query the state of devices as well as manage them. </p>
 <p> Devices can be globally identified via their unique identifier (uuid). All commands that take a <i>DEVICE</i> identifier expect this unique id. </p>
 <p> If no command is given, it is equivalent to <i>boltctl list</i>.</p>

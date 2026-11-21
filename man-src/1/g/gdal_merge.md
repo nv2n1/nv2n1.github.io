@@ -1,5 +1,4 @@
 ---
-
 title: "gdal_merge(1)"
 name: "gdal_merge"
 section: "1"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/1-gdal_merge/"
 description: "gdal_merge – gdal_merge.py mosaics a set of images"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gdal_merge &#8211; gdal_merge.py mosaics a set of images </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 gdal_merge.py[-o out_filename][-of out_format][-co NAME = VALUE] *
     [-ps pixelsize_x pixelsize_y][-tap][-separate][-v][-pct]
                                  [-ul_lr ulx uly lrx lry][-n nodata_value][-init "value [value...]"]
                                  [-ot datatype][-createonly] input_files
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> This utility will automatically mosaic a set of images. All the images must be in the same coordinate system and have a matching number of bands, but they may be overlapping, and at different resolutions. In areas of overlap, the last image will be copied over earlier ones. </p>
 <dl>
 <dt><code>-o</code> <i>out_filename</i>:</dt>

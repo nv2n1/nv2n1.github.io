@@ -1,5 +1,4 @@
 ---
-
 title: "ecryptfs-setup-private(1)"
 name: "ecryptfs-setup-private"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-ecryptfs-setup-private/"
 description: "ecryptfs-setup-private – setup an eCryptfs private directory."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ecryptfs-setup-private &#8211; setup an eCryptfs private directory.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ecryptfs-setup-private [-f|&#8211;force] [-w|&#8211;wrapping] [-b|&#8211;bootstrap] [-n|&#8211;no-fnek] [&#8211;nopwcheck] [-u|&#8211;username USER] [-l|&#8211;loginpass LOGINPASS] [-m|&#8211;mountpass MOUNTPASS]</code> </p>
 <h2>OPTIONS</h2>
 <p> Options available for the <code>ecryptfs-setup-private</code> command:</p>
@@ -35,6 +37,7 @@ description: "ecryptfs-setup-private – setup an eCryptfs private directory."
 <dt><code>&#8211;noautoumount</code></dt>
 <dd> Setup this user such that the encrypted private directory is not automatically unmounted at logout </dd>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> <code>ecryptfs-setup-private</code> is a program that sets up a private cryptographic mountpoint for a non-root user. </p>
 <p> Be sure to properly escape your parameters according to your shell&#8217;s special character nuances, and also surround the parameters by double quotes, if necessary. Any of the parameters may be: </p>
 <p>&nbsp;<wbr>&nbsp;1)&nbsp;exported as environment variables<br />

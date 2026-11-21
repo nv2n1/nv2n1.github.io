@@ -1,5 +1,4 @@
 ---
-
 title: "libsolv-history(3)"
 name: "libsolv-history"
 section: "3"
@@ -7,7 +6,10 @@ letter: "l"
 url: "/docs/linux/man/3-libsolv-history/"
 ---
 
-libsolv-history - how the libsolv library came into existence 
+<h2 class="name">NAME</h2>
+ 
+
+ libsolv-history - how the libsolv library came into existence 
 
 <h2>HISTORY</h2>
 

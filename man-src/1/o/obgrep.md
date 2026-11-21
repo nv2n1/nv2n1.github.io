@@ -1,5 +1,4 @@
 ---
-
 title: "obgrep(1)"
 name: "obgrep"
 section: "1"
@@ -10,7 +9,9 @@ description: "obgrep – an advanced molecular search program using SMARTS"
 
 <h2>NAME</h2>
 <p> <code>obgrep</code> &#8211; an advanced molecular search program using SMARTS</p>
+<h2>SYNOPSIS</h2>
 <p> [<i>OPTIONS</i> ] <i>&#8216;SMARTS-pattern&#8217; </i> <i>filename</i></p>
+<h2>DESCRIPTION</h2>
 <p> The obgrep tool can be used to search for molecules inside multi-molecule database files (e.g., SMILES, SDF, etc.) or across multiple files.</p>
 <h2>OPTIONS</h2>
 <p> If only a filename is given, obgrep will attempt to guess the file type from the filename extension.</p>

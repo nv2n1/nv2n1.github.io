@@ -1,5 +1,4 @@
 ---
-
 title: "editres(1)"
 name: "editres"
 section: "1"
@@ -8,10 +7,13 @@ url: "/docs/linux/man/1-editres/"
 description: "editres – a dynamic resource editor for X Toolkit applications"
 ---
 
+<h2 class="name">NAME</h2>
+<p> editres &#8211; a dynamic resource editor for X Toolkit applications </p>
 <h2>SYNTAX</h2>
 <p> <code>editres</code> [ <i>-toolkitoption</i> &#8230; ]</p>
 <h2>OPTIONS</h2>
 <p> <i>Editres</i> accepts all of the standard X Toolkit command line options (see <i><a href="/docs/linux/man/7-x/">X</a>(7)</i>). The order of the command line options is not important.</p>
+<h2>DESCRIPTION</h2>
 <p> Editres is a tool that allows users and application developers to view the full widget hierarchy of any X Toolkit application that speaks the Editres protocol. In addition, editres will help the user construct resource specifications, allow the user to apply the resource to the application and view the results dynamically. Once the user is happy with a resource specification editres will append the resource string to the user&#8217;s X Resources file.</p>
 <h2>USING EDITRES</h2>
 <p> <i>Editres</i> provides a window consisting of the following four areas:</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "clearenv(3)"
 name: "clearenv"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-clearenv/"
 description: "clearenv – clear the environment"
 ---
 
+<h2 class="name">NAME</h2>
+<p> clearenv &#8211; clear the environment </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;
 int clearenv(void);
@@ -16,6 +18,7 @@ int clearenv(void);
 <p> <code>clearenv</code>():<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;/*&nbsp;Glibc since 2.19:&nbsp;*/&nbsp;_DEFAULT_SOURCE<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;||&nbsp;/*&nbsp;Glibc versions&nbsp;&lt;=&nbsp;2.19:&nbsp;*/&nbsp;_SVID_SOURCE ||&nbsp;_BSD_SOURCE</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>clearenv</code>() function clears the environment of all name-value pairs and sets the value of the external variable <i>environ</i> to NULL. After this call, new variables can be added to the environment using <code><a href="/docs/linux/man/3-putenv/">putenv</a></code>(3) and <code><a href="/docs/linux/man/3-setenv/">setenv</a></code>(3).</p>
 <h2>RETURN VALUE</h2>
 <p> The <code>clearenv</code>() function returns zero on success, and a nonzero value on failure.</p>

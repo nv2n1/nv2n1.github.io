@@ -1,5 +1,4 @@
 ---
-
 title: "lxc-info(1)"
 name: "lxc-info"
 section: "1"
@@ -10,7 +9,9 @@ description: "lxc-info – query information about a container"
 
 <h2>NAME</h2>
 <p> lxc-info &#8211; query information about a container</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lxc-info</code> {-n <i>name</i>} [-c <i>KEY</i>] [-s] [-p] [-i] [-S] [-H]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>lxc-info</code> queries and shows information about a container.</p>
 <h2>OPTIONS</h2>
 <dl>

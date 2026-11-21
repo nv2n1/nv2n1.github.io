@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_set_default_export_priority(3)"
 name: "gnutls_set_default_export_priority"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_set_default_export_priority – API function"
 
 <h2>NAME</h2>
 <p> gnutls_set_default_export_priority &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/compat.h&gt;</code> </p>
 <p> <code>int gnutls_set_default_export_priority(gnutls_session_t </code><i>session</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_session_t session</dt>
 <dd> is a <code>gnutls_session_t</code> structure.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Sets some default priority on the ciphers, key exchange methods, macs and compression methods. This function also includes weak algorithms. </p>
 <p> This is the same as calling: </p>
 <p> gnutls_priority_set_direct (session, &quot;EXPORT&quot;, NULL); </p>

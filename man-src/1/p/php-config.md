@@ -1,5 +1,4 @@
 ---
-
 title: "php-config(1)"
 name: "php-config"
 section: "1"
@@ -10,7 +9,9 @@ description: "php-config – get information about PHP configuration and compile
 
 <h2>NAME</h2>
 <p> php-config &#8211; get information about PHP configuration and compile options</p>
+<h2>SYNOPSIS</h2>
 <p> <code>php-config</code> [options] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>php-config</code> is a simple shell script for obtaining information about installed PHP configuration.</p>
 <h2>OPTIONS</h2>
 <dl>

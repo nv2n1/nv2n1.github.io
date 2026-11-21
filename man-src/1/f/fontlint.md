@@ -1,5 +1,4 @@
 ---
-
 title: "fontlint(1)"
 name: "fontlint"
 section: "1"
@@ -10,7 +9,9 @@ description: "fontlint – check a font"
 
 <h2>NAME</h2>
 <p> <code>fontlint &#8211; check a font</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>fontlint</code> <i>fontfile &#8230;</i></p>
+<h2>DESCRIPTION</h2>
 <p> The program <code>fontlint</code> loads a font (or more than one), which may be in any format <i><a href="/docs/linux/man/1-fontforge/">fontforge</a></i>(1) can read, and checks the font for certain common errors </p>
 <p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> * Intersecting contours </p>
 <p> &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr> * Incorrectly oriented contours </p>

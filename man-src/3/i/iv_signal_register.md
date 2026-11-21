@@ -1,5 +1,4 @@
 ---
-
 title: "iv_signal_register(3)"
 name: "iv_signal_register"
 section: "3"
@@ -10,6 +9,7 @@ description: "IV_SIGNAL_INIT, iv_signal_register, iv_signal_unregister – ivyki
 
 <h2>NAME</h2>
 <p> IV_SIGNAL_INIT, iv_signal_register, iv_signal_unregister &#8211; ivykis signal handling</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;iv_signal.h&gt;</code> </p>
 <pre><code>
 struct iv_signal {
@@ -22,6 +22,7 @@ struct iv_signal {
 <p> <code>void IV_SIGNAL_INIT(struct iv_signal *</code><i>this</i><code>);</code><br />
  <code>int iv_signal_register(struct iv_signal *</code><i>this</i><code>);</code><br />
  <code>void iv_signal_unregister(struct iv_signal *</code><i>this</i><code>);</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>iv_signal</code> provides a way for <code>ivykis</code>(3) applications to handle POSIX signals, by integrating them with the ivykis event loop. </p>
 <p> An ivykis application desiring signal notification registers a <code>struct iv_signal</code> object by calling <code>iv_signal_register,</code> after having initialised it with <code>IV_SIGNAL_INIT</code> and subsequently having filled in the <code>-&gt;signum,</code> <code>-&gt;cookie</code> and <code>-&gt;handler</code> members. </p>
 <p> Once the signal indicated by <code>-&gt;signum</code> is delivered to any thread in the current process, the callback specified by <code>-&gt;handler</code> is scheduled to be called in the thread that the <code>struct iv_signal</code> object was registered in, with <code>-&gt;cookie</code> as its sole argument. </p>

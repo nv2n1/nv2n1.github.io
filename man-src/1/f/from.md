@@ -1,5 +1,4 @@
 ---
-
 title: "from(1)"
 name: "from"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-from/"
 description: "from – print names of those who have sent mail"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>from</code> &#8211; print names of those who have sent mail </p>
+<h2>SYNOPSIS</h2>
 <p> [-<code>c</code> ] [-<code>f </code><i>file</i> ] [-<code>s </code><i>sender</i> ] [<i>user</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> The utility prints out the mail header lines from the invoker&#8217;s mailbox. </p>
 <p> The following options are available:</p>
 <dl>

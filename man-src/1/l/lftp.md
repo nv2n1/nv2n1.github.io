@@ -1,5 +1,4 @@
 ---
-
 title: "lftp(1)"
 name: "lftp"
 section: "1"
@@ -7,7 +6,8 @@ letter: "l"
 url: "/docs/linux/man/1-lftp/"
 description: "lftp – Sophisticated file transfer program"
 ---
-
+<h2 class="name">NAME</h2>
+<p> lftp - Sophisticated file transfer program </p>
 <h2>SYNTAX</h2>
 <p> <code>lftp</code> [<code>-d</code>] [<code>-e </code><i>cmd</i>] [<code>-p </code><i>port</i>] [<code>-u </code><i>user</i>[<code>,</code><i>pass</i>]] [<i>site</i>] <br />
  <code>lftp -f </code><i>script_file</i> <br />
@@ -16,6 +16,7 @@ description: "lftp – Sophisticated file transfer program"
  <code>lftp --help</code> </p>
 <h2>VERSION</h2>
 <p> This man page documents lftp version 4.8.1. </p>
+<h2>DESCRIPTION</h2>
 <p> <code>lftp</code> is a file transfer program that allows sophisticated FTP, HTTP and other connections to other hosts. If <i>site</i> is specified then lftp will connect to that site otherwise a connection has to be established with the open command. </p>
 <p> <code>lftp</code> can handle several file access methods - FTP, FTPS, HTTP, HTTPS, HFTP, FISH, SFTP and file (HTTPS and FTPS are only available when lftp is compiled with GNU TLS or OpenSSL library). You can specify the method to use in `open URL&#8217; command, e.g. `open <a rel="nofollow" href="http://www.us.kernel.org/pub/linux'.">http://www.us.kernel.org/pub/linux&#8217;.</a> HFTP is ftp-over-http-proxy protocol. It can be used automatically instead of FTP if ftp:proxy is set to `<a rel="nofollow" href="http://proxy[:port]'.">http://proxy[:port]&#8216;.</a> Fish is a protocol working over an ssh connection to a unix account. SFtp is a protocol implemented in SSH2 as SFTP subsystem. </p>
 <p> Besides FTP-like protocols, lftp has support for BitTorrent protocol as `torrent&#8217; command. Seeding is also supported. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "animate-im6(1)"
 name: "animate-im6"
 section: "1"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/1-animate-im6/"
 description: "animate – animates an image or image sequence on any X server."
 ---
 
+<h2 class="name">NAME</h2>
+<p> animate &#8211; animates an image or image sequence on any X server. </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>animate-im6.q16</code> [<i>options</i>] <i>input-file</i></dt>
 <dd></dd></dl>
 <h2>OVERVIEW</h2>
 <p> The <code>animate-im6.q16</code> program is a member of the ImageMagick-ims6.q16(1) suite of tools. Use it to animate an image or image sequence on any X server. </p>
 <p> For more information about the animate command, point your browser to file:///usr/share/doc/imagemagick-6-common/html/www/animate.html (on debian system you may install the imagemagick-6 package) or <a rel="nofollow" href="http://imagemagick.org/script/animate.php.">http://imagemagick.org/script/animate.php.</a></p>
+<h2>DESCRIPTION</h2>
 <p> Image Settings:<br />
 &nbsp;<wbr>&nbsp;-alpha option&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;on, activate, off, deactivate, set, opaque, copy<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;transparent, extract, background, or shape<br />

@@ -1,5 +1,4 @@
 ---
-
 title: "gtk-config(1)"
 name: "gtk-config"
 section: "1"
@@ -10,7 +9,9 @@ description: "gtk-config – script to get information about the installed versi
 
 <h2>NAME</h2>
 <p> gtk-config &#8211; script to get information about the installed version of GTK+</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gtk-config</code> [&#8211;prefix<i>[=DIR]</i>] [&#8211;exec-prefix<i>[=DIR]</i>] [&#8211;version] [&#8211;libs] [&#8211;cflags]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>gtk-config</i> is a tool that is used to configure to determine the compiler and linker flags that should be used to compile and link programs that use <i>GTK+</i>. It is also used internally to the .m4 macros for GNU autoconf that are included with <i>GTK+</i>.</p>
 <h2>OPTIONS</h2>
 <p> <i>gtk-config</i> accepts the following options:</p>

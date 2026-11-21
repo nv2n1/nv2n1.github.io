@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_crt_set_pin_function(3)"
 name: "gnutls_x509_crt_set_pin_function"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_crt_set_pin_function – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_set_pin_function &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>void gnutls_x509_crt_set_pin_function(gnutls_x509_crt_t </code><i>crt</i><code>, gnutls_pin_callback_t </code><i>fn</i><code>, void * </code><i>userdata</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_x509_crt_set_pin_function – API function"
 <dd> the callback</dd>
 <dt>void * userdata</dt>
 <dd> data associated with the callback</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will set a callback function to be used when it is required to access a protected object. This function overrides the global function set using <code>gnutls_pkcs11_set_pin_function()</code>. </p>
 <p> Note that this callback is currently used only during the import of a PKCS <code>11</code> certificate with <code>gnutls_x509_crt_import_pkcs11_url()</code>.</p>
 <h2>SINCE</h2>

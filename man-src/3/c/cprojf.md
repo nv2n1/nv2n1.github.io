@@ -1,5 +1,4 @@
 ---
-
 title: "cprojf(3)"
 name: "cprojf"
 section: "3"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/3-cprojf/"
 description: "cproj, cprojf, cprojl – project into Riemann Sphere"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cproj, cprojf, cprojl &#8211; project into Riemann Sphere </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
 <p> <code>double complex cproj(double complex </code><i>z</i><code>);</code><br />
  <code>float complex cprojf(float complex </code><i>z</i><code>);</code><br />
  <code>long double complex cprojl(long double complex </code><i>z</i><code>);</code> </p>
 <p> Link with <i>-lm</i>.</p>
+<h2>DESCRIPTION</h2>
 <p> These functions project a point in the plane onto the surface of a Riemann Sphere, the one-point compactification of the complex plane. Each finite point <i>z</i> projects to <i>z</i> itself. Every complex infinite value is projected to a single infinite value, namely to positive infinity on the real axis.</p>
 <h2>VERSIONS</h2>
 <p> These functions first appeared in glibc in version 2.1.</p>

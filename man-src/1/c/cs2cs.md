@@ -1,5 +1,4 @@
 ---
-
 title: "cs2cs(1)"
 name: "cs2cs"
 section: "1"
@@ -10,8 +9,10 @@ description: "cs2cs – cartographic coordinate system filter"
 
 <h2>NAME</h2>
 <p> cs2cs &#8211; cartographic coordinate system filter</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cs2cs</code> [ <code>-eEfIlrstvwW</code> [ <i>args</i> ] ] [ <code>+opts[=arg]</code> ] </p>
 <p>[&nbsp;<wbr><code>+to</code>&nbsp;<wbr>[<code>+opts</code>[<code>=arg</code>]]&nbsp;<wbr>] file[s]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Cs2cs</i> performs transformation between the source and destination cartographic coordinate system on a set of input points. The coordinate system transformation can include translation between projected and geographic coordinates as well as the application of datum shifts. </p>
 <p> The following control parameters can appear in any order:</p>
 <dl>

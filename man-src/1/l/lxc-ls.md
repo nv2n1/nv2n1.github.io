@@ -1,5 +1,4 @@
 ---
-
 title: "lxc-ls(1)"
 name: "lxc-ls"
 section: "1"
@@ -10,7 +9,9 @@ description: "lxc-ls – list the containers existing on the system"
 
 <h2>NAME</h2>
 <p> lxc-ls &#8211; list the containers existing on the system</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lxc-ls</code> [-1] [-P <i>lxcpath</i>] [&#8211;active] [&#8211;frozen] [&#8211;running] [&#8211;stopped] [-f] [-F <i>format</i>] [&#8211;nesting] [filter] [&#8211;version]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>lxc-ls</code> list the containers existing on the system.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "git-show-index(1)"
 name: "git-show-index"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-git-show-index/"
 description: "git-show-index – Show packed archive index"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-show-index &#8211; Show packed archive index </p>
+<h2>SYNOPSIS</h2>
 <pre>
 <i>git show-index</i> [--object-format=&lt;hash-algorithm&gt;]
 </pre>
+<h2>DESCRIPTION</h2>
 <p> Read the <code>.idx</code> file for a Git packfile (created with <code><a href="/docs/linux/man/1-git-pack-objects/">git-pack-objects</a></code>(1) or <code><a href="/docs/linux/man/1-git-index-pack/">git-index-pack</a></code>(1)) from the standard input, and dump its contents. The output consists of one object per line, with each line containing two or three space-separated columns: </p>
 <dl>
 <dt>

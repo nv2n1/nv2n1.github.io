@@ -1,5 +1,4 @@
 ---
-
 title: "func-build-map(1)"
 name: "func-build-map"
 section: "1"
@@ -11,9 +10,13 @@ url: "/docs/linux/man/1-func-build-map/"
 
  func-build-map -- Builds/augments delegation map of all available func minions
 
-func-build-map [-a|--append] [-o|--onlyalive] [-v|--verbose]
+<h2>SYNOPSIS</h2>
 
-Func's delegation feature allows an overlord to execute commands through proxies (minions which also run as overlords) to reduce <font SIZE="-1">XMLRPC</font> overhead and the amount of time required to execute commands over large Func networks. 
+ func-build-map [-a|--append] [-o|--onlyalive] [-v|--verbose]
+
+<h2>DESCRIPTION</h2>
+
+ Func's delegation feature allows an overlord to execute commands through proxies (minions which also run as overlords) to reduce <font SIZE="-1">XMLRPC</font> overhead and the amount of time required to execute commands over large Func networks. 
 
  To accomplish this task, Func needs to know where each proxy and minion sits in the Func network, and for the sake of expediency, this data is stored within a map file on the overlord. 
 

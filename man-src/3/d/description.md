@@ -1,5 +1,4 @@
 ---
-
 title: "description(3)"
 name: "description"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-description/"
 description: "QuantLib::PathPayoff – Abstract base class for path-dependent option payoffs."
 ---
 
+<h2 class="name">NAME</h2>
+<p> QuantLib::PathPayoff &#8211; Abstract base class for path-dependent option payoffs. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/experimental/mcbasket/pathpayoff.hpp&gt; </p>
 <p> Inherits std::unary_function&lt;Matrix,Array&gt;. </p>
 <h3>Public Member Functions</h3>

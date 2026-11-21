@@ -1,5 +1,4 @@
 ---
-
 title: "draw_lit_rle_sprite(3)"
 name: "draw_lit_rle_sprite"
 section: "3"
@@ -10,8 +9,10 @@ description: "draw_lit_rle_sprite – Draws a tinted RLE sprite. Allegro game pr
 
 <h2>NAME</h2>
 <p> draw_lit_rle_sprite &#8211; Draws a tinted RLE sprite. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>void draw_lit_rle_sprite(BITMAP *bmp, const RLE_SPRITE *sprite,</code> <code>int x, y, color);</code></p>
+<h2>DESCRIPTION</h2>
 <p> Tinted version of draw_rle_sprite(). See the description of draw_lit_sprite(). This must only be used after you have set up the color mapping table (for 256-color modes) or blender functions (for truecolor modes). Example: </p>
 <pre><code>
 /* Some one time initialisation code. */

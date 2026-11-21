@@ -1,5 +1,4 @@
 ---
-
 title: "package-cleanup(1)"
 name: "package-cleanup"
 section: "1"
@@ -10,7 +9,9 @@ description: "package-cleanup – clean up locally installed, duplicate, or orph
 
 <h2>NAME</h2>
 <p> package-cleanup &#8211; clean up locally installed, duplicate, or orphaned packages</p>
+<h2>SYNOPSIS</h2>
 <p> <code>package-cleanup</code> [options] &lt;item &#8230;&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> <code>package-cleanup</code> is a program for cleaning up the locally-installed RPMs. </p>
 <h2>GENERAL OPTIONS</h2>
 <dl>

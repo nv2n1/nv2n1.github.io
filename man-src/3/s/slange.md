@@ -1,5 +1,4 @@
 ---
-
 title: "slange(3)"
 name: "slange"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-slange/"
 description: "slange.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> slange.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>slange</code> (NORM, M, N, A, LDA, WORK)<br />
  <i></i><code>SLANGE</code> returns the value of the 1-norm, Frobenius norm, infinity-norm, or the largest absolute value of any element of a general rectangular matrix.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "io_getevents(2)"
 name: "io_getevents"
 section: "2"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/2-io_getevents/"
 description: "io_getevents – read asynchronous I/O events from the completion queue"
 ---
 
+<h2 class="name">NAME</h2>
+<p> io_getevents &#8211; read asynchronous I/O events from the completion queue </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;linux/aio_abi.h&gt; /* Defines needed types */
 #include &lt;linux/time.h&gt;    /* Defines 'struct timespec' */
@@ -15,6 +17,7 @@ int io_getevents(aio_context_t ctx_id, long min_nr, long nr,
                  struct io_event *events, struct timespec *timeout);
 </code></pre>
 <p> <i>Note</i>: There is no glibc wrapper for this system call; see NOTES.</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Note</i>: this page describes the raw Linux system call interface. The wrapper function provided by <i>libaio</i> uses a different type for the <i>ctx_id</i> argument. See NOTES. </p>
 <p> The <code>io_getevents</code>() system call attempts to read at least <i>min_nr</i> events and up to <i>nr</i> events from the completion queue of the AIO context specified by <i>ctx_id</i>. </p>
 <p> The <i>timeout</i> argument specifies the amount of time to wait for events, and is specified as a relative timeout in a structure of the following form: </p>

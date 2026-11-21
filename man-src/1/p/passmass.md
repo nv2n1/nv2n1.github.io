@@ -1,5 +1,4 @@
 ---
-
 title: "passmass(1)"
 name: "passmass"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-passmass/"
 description: "passmass – change password on multiple machines"
 ---
 
+<h2 class="name">NAME</h2>
+<p> passmass &#8211; change password on multiple machines </p>
+<h2>SYNOPSIS</h2>
 <p> <code>passmass</code> [ <i>host1 host2 host3 &#8230;</i> ]</p>
 <h2>INTRODUCTION</h2>
 <p> <code>Passmass</code> changes a password on multiple machines. If you have accounts on several machines that do not share password databases, Passmass can help you keep them all in sync. This, in turn, will make it easier to change them more frequently. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "meld(1)"
 name: "meld"
 section: "1"
@@ -8,12 +7,15 @@ url: "/docs/linux/man/1-meld/"
 description: "meld – Visual diff and merge tool for the GNOME Desktop"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>meld</code> &#8211; Visual diff and merge tool for the GNOME Desktop </p>
+<h2>SYNOPSIS</h2>
 <p> <code>meld</code> [options]<br />
  <code>meld</code> [options] FILE1<br />
  <code>meld</code> [options] DIR1<br />
  <code>meld</code> [options] FILE1 FILE2 [FILE3]<br />
  <code>meld</code> [options] DIR1 DIR2 [DIR3]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Meld</code> is a graphical diff viewer and merge application for the GNOME desktop. It supports 2 and 3-file diffs, recursive directory diffs, diffing of directories under version control (Bazaar, CVS, Darcs, Fossil, Git, Mercurial, Monotone), as well as the ability to manually and automatically merge file differences.</p>
 <h2>OPTIONS</h2>
 <dl>

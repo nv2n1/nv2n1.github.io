@@ -1,5 +1,4 @@
 ---
-
 title: "catanh(3)"
 name: "catanh"
 section: "3"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/3-catanh/"
 description: "catanh, catanhf, catanhl – complex arc tangents hyperbolic"
 ---
 
+<h2 class="name">NAME</h2>
+<p> catanh, catanhf, catanhl &#8211; complex arc tangents hyperbolic </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;complex.h&gt;</code> </p>
 <p> <code>double complex catanh(double complex </code><i>z</i><code>);</code><br />
  <code>float complex catanhf(float complex </code><i>z</i><code>);</code><br />
  <code>long double complex catanhl(long double complex </code><i>z</i><code>);</code> </p>
 <p> Link with <i>-lm</i>.</p>
+<h2>DESCRIPTION</h2>
 <p> These functions calculate the complex arc hyperbolic tangent of <i>z</i>. If <i>y&nbsp;=&nbsp;catanh(z)</i>, then <i>z&nbsp;=&nbsp;ctanh(y)</i>. The imaginary part of <i>y</i> is chosen in the interval [-pi/2,pi/2]. </p>
 <p> One has: </p>
 <pre>

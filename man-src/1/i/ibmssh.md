@@ -1,5 +1,4 @@
 ---
-
 title: "ibmssh(1)"
 name: "ibmssh"
 section: "1"
@@ -10,6 +9,7 @@ description: "ibmssh IB MANAGEMENT SIMULATOR – Extentended TCL shell"
 
 <h2>NAME</h2>
 <p> <code>ibmssh</code> IB MANAGEMENT SIMULATOR &#8211; Extentended TCL shell</p>
+<h2>DESCRIPTION</h2>
 <p> <code>ibmssh</code> is a <font SIZE="-1">TCL</font> shell extended with interface for the <font SIZE="-1">IB</font> Management Simulator facilities. Normally you will not run this shell directly &#8211; but instead it will be invoked by the <code>IBMgtSim</code> utility. However, in order to write simulation flows that interacts closely with the simulated model, a simulation flow should be provided. This flow is loaded by IBMgtSim and excersize the <font SIZE="-1">API</font> provided by this shell. </p>
 <p> The following sub sections provide detailed definition for those objects and <font SIZE="-1">API</font>.</p>
 <h2>IBMgtSim Constants</h2>

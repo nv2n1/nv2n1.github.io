@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_pubkey_get_key_usage(3)"
 name: "gnutls_pubkey_get_key_usage"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_pubkey_get_key_usage – API function"
 
 <h2>NAME</h2>
 <p> gnutls_pubkey_get_key_usage &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/abstract.h&gt;</code> </p>
 <p> <code>int gnutls_pubkey_get_key_usage(gnutls_pubkey_t </code><i>key</i><code>, unsigned int * </code><i>usage</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_pubkey_get_key_usage – API function"
 <dd> should contain a <code>gnutls_pubkey_t</code> structure</dd>
 <dt>unsigned int * usage</dt>
 <dd> If set will return the number of bits of the parameters (may be NULL)</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will return the key usage of the public key.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error value.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "x-terminal-emulator(1)"
 name: "x-terminal-emulator"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-x-terminal-emulator/"
 description: "Terminator – Multiple GNOME terminals in one window"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Terminator &#8211; Multiple GNOME terminals in one window </p>
+<h2>SYNOPSIS</h2>
 <p> <code>terminator</code> [<i>options</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> This manual page documents <code>Terminator</code>, a terminal emulator application. </p>
 <p> <code>Terminator</code> is a program that allows users to set up flexible arrangements of GNOME terminals. It is aimed at those who normally arrange lots of terminals near each other, but don&#8217;t want to use a frame based window manager.</p>
 <h2>OPTIONS</h2>

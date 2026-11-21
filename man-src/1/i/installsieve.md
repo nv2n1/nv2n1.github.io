@@ -1,5 +1,4 @@
 ---
-
 title: "installsieve(1)"
 name: "installsieve"
 section: "1"
@@ -9,7 +8,11 @@ description: "installsieve – user utility for managing sieve scripts"
 ---
 
 <p>&nbsp;<wbr>*</p>
+<h2 class="name">NAME</h2>
+<p> installsieve &#8211; user utility for managing sieve scripts </p>
+<h2>SYNOPSIS</h2>
 <p> <code>installsieve</code></p>
+<h2>DESCRIPTION</h2>
 <p> <i>installsieve</i> is a utility that allows users to manage their sieve scripts kept on the server. </p>
 <h2>OPTIONS</h2>
 <p> <i>-v &lt;name&gt;</i> View script with the given name. The script if retrieved sucessfully is output to standard output. </p>

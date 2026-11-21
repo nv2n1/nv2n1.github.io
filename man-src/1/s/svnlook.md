@@ -1,5 +1,4 @@
 ---
-
 title: "svnlook(1)"
 name: "svnlook"
 section: "1"
@@ -10,6 +9,7 @@ description: "svnlook – Subversion repository examination tool"
 
 <h2>NAME</h2>
 <p> svnlook &#8211; Subversion repository examination tool</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>svnlook</code> <i>command</i> <i>/path/to/repos</i> [<i>options</i>] [<i>args</i>]</dt>
 <dd></dd></dl>

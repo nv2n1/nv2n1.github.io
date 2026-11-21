@@ -1,5 +1,4 @@
 ---
-
 title: "flock(1)"
 name: "flock"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-flock/"
 description: "flock – manage locks from shell scripts"
 ---
 
+<h2 class="name">NAME</h2>
+<p> flock &#8211; manage locks from shell scripts </p>
+<h2>SYNOPSIS</h2>
 <p> <code>flock</code> [options] <i>file</i>|<i>directory</i> <i>command</i> [<i>arguments</i>] </p>
 <p> <code>flock</code> [options] <i>file</i>|<i>directory</i> <code>-c</code> <i>command</i> </p>
 <p> <code>flock</code> [options] <i>number</i></p>
+<h2>DESCRIPTION</h2>
 <p> This utility manages <code><a href="/docs/linux/man/2-flock/">flock</a></code>(2) locks from within shell scripts or from the command line. </p>
 <p> The first and second of the above forms wrap the lock around the execution of a <i>command</i>, in a manner similar to <code><a href="/docs/linux/man/1-su/">su</a></code>(1) or <code><a href="/docs/linux/man/1-newgrp/">newgrp</a></code>(1). They lock a specified <i>file</i> or <i>directory</i>, which is created (assuming appropriate permissions) if it does not already exist. By default, if the lock cannot be immediately acquired, <code>flock</code> waits until the lock is available. </p>
 <p> The third form uses an open file by its file descriptor <i>number</i>. See the examples below for how that can be used.</p>

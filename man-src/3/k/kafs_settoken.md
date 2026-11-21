@@ -1,5 +1,4 @@
 ---
-
 title: "kafs_settoken(3)"
 name: "kafs_settoken"
 section: "3"
@@ -12,7 +11,9 @@ description: "k_hasafs k_hasafs_recheck k_pioctl k_unlog k_setpag k_afs_cell_of_
 <p> <code>k_hasafs</code> <code>k_hasafs_recheck</code> <code>k_pioctl</code> <code>k_unlog</code> <code>k_setpag</code> <code>k_afs_cell_of_file</code> <code>kafs_set_verbose</code> <code>kafs_settoken_rxkad</code> <code>kafs_settoken</code> <code>krb_afslog</code> <code>krb_afslog_uid</code> <code>kafs_settoken5</code> <code>krb5_afslog</code> <code>krb5_afslog_uid</code> &#8211; AFS library</p>
 <h2>LIBRARY</h2>
 <p> AFS cache manager access library (libkafs, -lkafs)</p>
+<h2>SYNOPSIS</h2>
 <p> In kafs.h Ft int Fn k_afs_cell_of_file const char *path char *cell int len Ft int Fn k_hasafs void Ft int Fn k_hasafs_recheck void Ft int Fn k_pioctl char *a_path int o_opcode struct ViceIoctl *a_paramsP int a_followSymlinks Ft int Fn k_setpag void Ft int Fn k_unlog void Ft void Fn kafs_set_verbose void (*func)(void *, const char *, int) void * Ft int Fn kafs_settoken_rxkad const char *cell struct ClearToken *token void *ticket size_t ticket_len Ft int Fn kafs_settoken const char *cell uid_t uid CREDENTIALS *c Fn krb_afslog char *cell char *realm Ft int Fn krb_afslog_uid char *cell char *realm uid_t uid Ft krb5_error_code Fn krb5_afslog_uid krb5_context context krb5_ccache id const char *cell krb5_const_realm realm uid_t uid Ft int Fn kafs_settoken5 const char *cell uid_t uid krb5_creds *c Ft krb5_error_code Fn krb5_afslog krb5_context context krb5_ccache id const char *cell krb5_const_realm realm</p>
+<h2>DESCRIPTION</h2>
 <p> Fn k_hasafs initializes some library internal structures, and tests for the presence of AFS in the kernel, none of the other functions should be called before Fn k_hasafs is called, or if it fails. </p>
 <p> Fn k_hasafs_recheck forces a recheck if a AFS client has started since last time Fn k_hasafs or Fn k_hasafs_recheck was called. </p>
 <p> Fn kafs_set_verbose set a log function that will be called each time the kafs library does something important so that the application using libkafs can output verbose logging. Calling the function Fa kafs_set_verbose with the function argument set to <code>NULL</code> will stop libkafs from calling the logging function (if set). </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "cpttrs(3)"
 name: "cpttrs"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cpttrs/"
 description: "cpttrs.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cpttrs.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cpttrs</code> (UPLO, N, NRHS, D, E, B, LDB, INFO)<br />
  <i></i><code>CPTTRS</code></p>

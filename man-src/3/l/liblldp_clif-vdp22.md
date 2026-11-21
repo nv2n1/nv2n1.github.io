@@ -1,5 +1,4 @@
 ---
-
 title: "liblldp_clif-vdp22(3)"
 name: "liblldp_clif-vdp22"
 section: "3"
@@ -10,10 +9,12 @@ description: "clif_vsi,clif_vsievt,clif_vsiwait – Manipulate VDP IEEE 802.1 Ra
 
 <h2>NAME</h2>
 <p> clif_vsi,clif_vsievt,clif_vsiwait &#8211; Manipulate VDP IEEE 802.1 Ratified Standard Assocications</p>
+<h2>SYNOPSIS</h2>
 <p> #include &quot;include/clif.h&quot; </p>
 <p> <code>int clif_vsi(struct clif *connp, char *ifname, unsigned int tlvid, char *cmd, char *reply, size_t *reply_len);</code> </p>
 <p> <code>int clif_vsievt(struct clif *connp, char *reply, size_t *reply_len, int wait);</code> </p>
 <p> <code>int clif_vsiwait(struct clif *connp, char *ifname, unsigned int tlvid, char *cmd, char *reply, size_t *reply_len, int wait);</code> </p>
+<h2>DESCRIPTION</h2>
 <p> The Virtual station interface Discovery Protocol is a protocol to manage the association and deassociation of virtual machine network interfaces (VSIs) between the station and an adjacent switch. VDP is typically used with the local switch in VEPA mode and the adjacent switch port in reflective relay (also called haripin) mode. This allows all traffic to be sent to the switch for processing. Reflective relay mode is negotiated via EVB TLVs (see lldptool-evb). </p>
 <p> This man pages describes the IEEE 802.1 Qbg ratified standard dated from July 5th, 2012. This differs from the draft 0.2 which is implemented as well, see <code><a href="/docs/linux/man/8-lldptool-vdp/">lldptool-vdp</a></code>(8). For clarification in this man page the version complying to the ratified standard is called VDP22 and the version complying to the draft 0.2 is called VDP.</p>
 <h3>VSI Parameter</h3>

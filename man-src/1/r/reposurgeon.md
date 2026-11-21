@@ -1,5 +1,4 @@
 ---
-
 title: "reposurgeon(1)"
 name: "reposurgeon"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-reposurgeon/"
 description: "reposurgeon – surgical operations on repositories"
 ---
 
+<h2 class="name">NAME</h2>
+<p> reposurgeon &#8211; surgical operations on repositories </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>reposurgeon</code> [<i>command</i>&#8230;]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The purpose of <code>reposurgeon</code> is to enable risky operations that VCSes (version-control systems) don&#8217;t want to let you do, such as (a) editing past comments and metadata, (b) excising commits, (c) coalescing and splitting commits, (d) removing files and subtrees from repo history, (e) merging or grafting two or more repos, and (f) cutting a repo in two by cutting a parent-child link, preserving the branch structure of both child repos. </dd>
 <p> A major use of reposurgeon is to assist a human operator to perform higher-quality conversions among version control systems than can be achieved with fully automated converters. </p>
 <p> The original motivation for <code>reposurgeon</code> was to clean up artifacts created by repository conversions. It was foreseen that the tool would also have applications when code needs to be removed from repositories for legal or policy reasons. </p>

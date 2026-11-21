@@ -1,5 +1,4 @@
 ---
-
 title: "gmtsimplify(1)"
 name: "gmtsimplify"
 section: "1"
@@ -10,8 +9,10 @@ description: "gmtsimplify – Line reduction using the Douglas-Peucker algorithm
 
 <h2>NAME</h2>
 <p> gmtsimplify &#8211; Line reduction using the Douglas-Peucker algorithm</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gmtsimplify</code> [ <i>table</i> ] <i>tolerance</i>[<i>unit</i>] [ [<i>level</i>] ] [ <code>-b</code><i>&lt;binary&gt;</i> ] [ <code>-d</code><i>&lt;nodata&gt;</i> ] [ <code>-f</code><i>&lt;flags&gt;</i> ] [ <code>-g</code><i>&lt;gaps&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>gmtsimplify</code> reads one or more data files and apply the Douglas-Peucker line simplification algorithm. The method recursively subdivides a polygon until a run of points can be replaced by a straight line segment, with no point in that run deviating from the straight line by more than the tolerance. Have a look at this site to get a visual insight on how the algorithm works (<i><a rel="nofollow" href="http://geometryalgorithms.com/Archive/algorithm_0205/algorithm_0205.htm">http://geometryalgorithms.com/Archive/algorithm_0205/algorithm_0205.htm</a></i>)</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

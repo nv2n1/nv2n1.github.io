@@ -1,5 +1,4 @@
 ---
-
 title: "euca-get-password-data(1)"
 name: "euca-get-password-data"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-get-password-data – Retrieve the encrypted administrator pa
 
 <h2>NAME</h2>
 <p> euca-get-password-data &#8211; Retrieve the encrypted administrator password for an instance running Windows. The encrypted password may be decrypted using the private key of the key pair given when launching the instance.</p>
+<h2>SYNOPSIS</h2>
 <p> euca-get-password-data [&#8211;show-empty-fields] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY]</dt>
 <dd> [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] INSTANCE</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Retrieve the encrypted administrator password for an instance running Windows. The encrypted password may be decrypted using the private key of the key pair given when launching the instance.</p>
 <h3>positional arguments:</h3>
 <dl>

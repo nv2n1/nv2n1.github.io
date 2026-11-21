@@ -1,5 +1,4 @@
 ---
-
 title: "rnews(1)"
 name: "rnews"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-rnews/"
 description: "rnews – Inject individual articles and UUCP batches into INN"
 ---
 
+<h2 class="name">NAME</h2>
+<p> rnews &#8211; Inject individual articles and UUCP batches into INN </p>
+<h2>SYNOPSIS</h2>
 <p> <code>rnews</code> [<code>-NUv</code>] [<code>-h</code> <i>host</i>] [<code>-P</code> <i>port</i>] [<code>-rS</code> <i>server</i>] [<i>file</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>rnews</code> injects either individual articles or UUCP-style article batches into an <font SIZE="-1">INN</font> server. It submits articles via <font SIZE="-1">IHAVE</font> and is suitable for injecting articles received from other sources; local postings should generally use <i><a href="/docs/linux/man/1-inews/">inews</a></i>(1) instead. It is also used to process spooled messages created by, for example, <code>nnrpd</code> while <code>innd</code> is not available. </p>
 <p> The message is read from <i>file</i> if given, or standard input if no file is given. Articles are sent to the server given in the <code>-r</code> or <code>-S</code> command line options if given, otherwise to the server set via <i>nnrpdposthost</i> in <i>inn.conf</i>, otherwise to the local server. </p>
 <p> When sent over <font SIZE="-1">UUCP</font>, Usenet articles are typically collected in a single batch to reduce the <font SIZE="-1">UUCP</font> overhead. Batches can also be compressed to reduce communication time. If the input to <code>rnews</code> does not begin with the characters <tt>&quot;#!&quot;</tt>, it is taken to be a single news article; otherwise, the first line of the input is interpreted as a batch command. </p>

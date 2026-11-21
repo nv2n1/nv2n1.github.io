@@ -1,5 +1,4 @@
 ---
-
 title: "mkofm(1)"
 name: "mkofm"
 section: "1"
@@ -10,7 +9,9 @@ description: "mkofm – front end to mktextfm(1)"
 
 <h2>NAME</h2>
 <p> mkofm &#8211; front end to <code><a href="/docs/linux/man/1-mktextfm/">mktextfm</a></code>(1)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mkofm</code> <i>ARGS</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>mkofm</code> takes all <i>ARGS</i> and passes them to <code><a href="/docs/linux/man/1-mktextfm/">mktextfm</a></code>(1). For more information about appropriate arguments, see <code><a href="/docs/linux/man/1-mktextfm/">mktextfm</a></code>(1). </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mktextfm/">mktextfm</a></code>(1) </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "qmon(1)"
 name: "qmon"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-qmon/"
 description: "qmon – X-Windows OSF/Motif graphical user interface for xxQS_NAMExx"
 ---
 
+<h2 class="name">NAME</h2>
+<p> qmon &#8211; X-Windows OSF/Motif graphical user interface for xxQS_NAMExx </p>
 <h2>SYNTAX</h2>
 <p> <code>qmon</code> [options]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Qmon</i> allows administrators and users to manipulate the xxQS_NAMExx system from an X-Window environment. <i>Qmon</i> provides various dialogues linked together in multiple ways. For each task the user wishes to accomplish via <i>qmon</i> a corresponding dialogue is provided. There are multiple ways to address the proper dialogue for a certain task: </p>
 <dl>
 <dt>&bull;</dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_key_generate(3)"
 name: "gnutls_key_generate"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_key_generate – API function"
 
 <h2>NAME</h2>
 <p> gnutls_key_generate &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_key_generate(gnutls_datum_t * </code><i>key</i><code>, unsigned int </code><i>key_size</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_key_generate – API function"
 <dd> is a pointer to a <code>gnutls_datum_t</code> which will contain a newly created key.</dd>
 <dt>unsigned int key_size</dt>
 <dd> The number of bytes of the key.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Generates a random key of <i>key_size</i> bytes.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, or an error code.</p>

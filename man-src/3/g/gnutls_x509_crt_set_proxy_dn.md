@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_crt_set_proxy_dn(3)"
 name: "gnutls_x509_crt_set_proxy_dn"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_crt_set_proxy_dn – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_set_proxy_dn &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_set_proxy_dn(gnutls_x509_crt_t </code><i>crt</i><code>, gnutls_x509_crt_t </code><i>eecrt</i><code>, unsigned int </code><i>raw_flag</i><code>, const void * </code><i>name</i><code>, unsigned int </code><i>sizeof_name</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,6 +24,7 @@ description: "gnutls_x509_crt_set_proxy_dn – API function"
 <dd> a pointer to the CN name, may be NULL (but MUST then be added later)</dd>
 <dt>unsigned int sizeof_name</dt>
 <dd> holds the size of <i>name</i></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will set the subject in <i>crt</i> to the end entity&#8217;s<br />
 &nbsp;<wbr><i>eecrt</i>&nbsp;<wbr>subject name, and add a single Common Name component&nbsp;<wbr>&nbsp;<wbr><i>name</i>&nbsp;<wbr>of size&nbsp;<wbr>&nbsp;<wbr><i>sizeof_name</i>&nbsp;<wbr>.&nbsp;<wbr>&nbsp;<wbr>This corresponds to the required proxy certificate naming style. Note that if <i>name</i> is <code>NULL</code>, you MUST set it later by using <code>gnutls_x509_crt_set_dn_by_oid()</code> or similar.</p>
 <h2>RETURNS</h2>

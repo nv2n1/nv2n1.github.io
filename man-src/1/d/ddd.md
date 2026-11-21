@@ -1,5 +1,4 @@
 ---
-
 title: "ddd(1)"
 name: "ddd"
 section: "1"
@@ -10,6 +9,7 @@ description: "ddd – The Data Display Debugger"
 
 <h2>NAME</h2>
 <p> ddd &#8211; The Data Display Debugger</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt><code>ddd</code></dt>
 <dd> [<code>&#8211;help</code>] [<code>&#8211;gdb</code>] [<code>&#8211;dbx</code>] [<code>&#8211;ladebug</code>] [<code>&#8211;wdb</code>] [<code>&#8211;xdb</code>] [<code>&#8211;jdb</code>] [<code>&#8211;pydb</code>] [<code>&#8211;perl</code>] [<code>&#8211;debugger</code> <i>name</i>] [<code>&#8212;</code>[<code>r</code>]<code>host</code> [[<i>username</i><code>@</code>]<i>hostname</i>]] [<code>&#8211;trace</code>] [<code>&#8211;version</code>] [<code>&#8211;configuration</code>] [<i>options&#8230;</i>] [<i>prog</i>[<i>core</i>|<i>procID</i>]]</dd>
@@ -17,6 +17,7 @@ description: "ddd – The Data Display Debugger"
 <dd>
 </dd><dt><code>ddd</code></dt>
 <dd> <i>program</i></dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <font SIZE="-1">DDD</font> is a graphical front-end for <font SIZE="-1">GDB</font> and other command-line debuggers. Using DDD, you can see what is going on &#8220;inside&#8221; another program while it executes&#8212;or what another program was doing at the moment it crashed. </p>
 <p> <font SIZE="-1">DDD</font> can do four main kinds of things (plus other things in support of these) to help you catch bugs in the act:</p>
 <dl>

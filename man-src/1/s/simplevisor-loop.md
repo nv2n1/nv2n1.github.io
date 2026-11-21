@@ -1,5 +1,4 @@
 ---
-
 title: "simplevisor-loop(1)"
 name: "simplevisor-loop"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-simplevisor-loop/"
 description: "simplevisor-loop – execute the given command in a loop"
 ---
 
+<h2 class="name">NAME</h2>
+<p> simplevisor-loop &#8211; execute the given command in a loop </p>
+<h2>SYNOPSIS</h2>
 <p> <code>simplevisor-loop</code> [<i></i><font SIZE="-1"><i>OPTIONS</i></font><i></i>] <font SIZE="-1">COMMAND&#8230;</font></p>
+<h2>DESCRIPTION</h2>
 <p> By default, this program executes the given command in a loop, forever, until the command fails (i.e. return a non zero exit status). </p>
 <p> It can optionally sleep between consecutive executions of the command (see the <code>&#8211;sleep</code> option) and stop after a given number of executions (see the <code>&#8211;count</code> option).</p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_dh_params_import_raw(3)"
 name: "gnutls_dh_params_import_raw"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_dh_params_import_raw – API function"
 
 <h2>NAME</h2>
 <p> gnutls_dh_params_import_raw &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_dh_params_import_raw(gnutls_dh_params_t </code><i>dh_params</i><code>, const gnutls_datum_t * </code><i>prime</i><code>, const gnutls_datum_t * </code><i>generator</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "gnutls_dh_params_import_raw – API function"
 <dd> holds the new prime</dd>
 <dt>const gnutls_datum_t * generator</dt>
 <dd> holds the new generator</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will replace the pair of prime and generator for use in the Diffie-Hellman key exchange. The new parameters should be stored in the appropriate gnutls_datum.</p>
 <h2>RETURNS</h2>
 <p> On success, <code>GNUTLS_E_SUCCESS</code> (0) is returned, otherwise a negative error code is returned.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "kinit(1)"
 name: "kinit"
 section: "1"
@@ -10,7 +9,9 @@ description: "kinit – obtain and cache Kerberos ticket-granting ticket"
 
 <h2>NAME</h2>
 <p> kinit &#8211; obtain and cache Kerberos ticket-granting ticket</p>
+<h2>SYNOPSIS</h2>
 <p> <code>kinit</code> [<code>-V</code>] [<code>-l</code> <i>lifetime</i>] [<code>-s</code> <i>start_time</i>] [<code>-r</code> <i>renewable_life</i>] [<code>-p</code> | &#8211;<code>P</code>] [<code>-f</code> | &#8211;<code>F</code>] [<code>-a</code>] [<code>-A</code>] [<code>-C</code>] [<code>-E</code>] [<code>-v</code>] [<code>-R</code>] [<code>-k</code> [-<code>t</code> <i>keytab_file</i>]] [<code>-c</code> <i>cache_name</i>] [<code>-n</code>] [<code>-S</code> <i>service_name</i>] [<code>-I</code> <i>input_ccache</i>] [<code>-T</code> <i>armor_ccache</i>] [<code>-X</code> <i>attribute</i>[=<i>value</i>]] [<i>principal</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> kinit obtains and caches an initial ticket-granting ticket for <i>principal</i>. If <i>principal</i> is absent, kinit chooses an appropriate principal name based on existing credential cache contents or the local username of the user invoking kinit. Some options modify the choice of principal name.</p>
 <h2>OPTIONS</h2>
 <dl>

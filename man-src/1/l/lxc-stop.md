@@ -1,5 +1,4 @@
 ---
-
 title: "lxc-stop(1)"
 name: "lxc-stop"
 section: "1"
@@ -10,7 +9,9 @@ description: "lxc-stop – stop the application running inside a container"
 
 <h2>NAME</h2>
 <p> lxc-stop &#8211; stop the application running inside a container</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lxc-stop</code> {-n <i>name</i>} [-W] [-r] [-t <i>timeout</i>] [-k] [&#8211;nokill] [&#8211;nolock]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>lxc-stop</code> reboots, cleanly shuts down, or kills all the processes inside the container. By default, it will request a clean shutdown of the container by sending <code>lxc.haltsignal</code> (defaults to SIGPWR) to the container&#8217;s init process, waiting up to 60 seconds for the container to exit, and then returning. If the container fails to cleanly exit in 60 seconds, it will be sent the <code>lxc.stopsignal</code> (defaults to SIGKILL) to force it to shut down. </p>
 <p> The [-W], [-r], [-k] and [&#8211;nokill] options specify the action to perform. [-W] indicates that after performing the specified action, <code>lxc-stop</code> should immediately exit, while [-t TIMEOUT] specifies the maximum amount of time to wait for the container to complete the shutdown or reboot.</p>
 <h2>OPTIONS</h2>

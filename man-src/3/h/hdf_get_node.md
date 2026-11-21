@@ -1,5 +1,4 @@
 ---
-
 title: "hdf_get_node(3)"
 name: "hdf_get_node"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-hdf_get_node/"
 description: "hdf_get_node – Similar to hdf_get_obj except all the nodes are created if the don’t exist."
 ---
 
+<h2 class="name">NAME</h2>
+<p> hdf_get_node &#8211; Similar to hdf_get_obj except all the nodes are created if the don&#8217;t exist. </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;util/neo_hdf.h&gt;
 </code></pre>
@@ -17,6 +19,7 @@ NEOERR *hdf_get_node(HDF *hdf, const char *name, HDF **ret);
 <h2>ARGUMENTS</h2>
 <p> hdf -&gt; the dataset node to start from<br />
  name -&gt; the name to walk to </p>
+<h2>DESCRIPTION</h2>
 <p> hdf_get_node is similar to hdf_get_obj, except instead of stopping if it can&#8217;t find a node in the tree, it will create all of the nodes necessary to hand you back the node you ask for. Nodes are created with no value. </p>
 <h2>RETURN VALUE</h2>
 <p> ret -&gt; the dataset node you asked for </p>

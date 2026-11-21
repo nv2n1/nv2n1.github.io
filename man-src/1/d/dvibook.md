@@ -1,5 +1,4 @@
 ---
-
 title: "dvibook(1)"
 name: "dvibook"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dvibook/"
 description: "dvibook – rearrange pages in DVI file into signatures"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dvibook &#8211; rearrange pages in DVI file into signatures </p>
+<h2>SYNOPSIS</h2>
 <p> <code>dvibook</code> [ <code>-q</code> ] [ <code>-s</code><i>&lt;num&gt;</i> ] [ <code>-r</code> ] [ <code>-i</code> <i>infile</i> ] [ <code>-o</code> <i>outfile</i> ] [ <i>infile</i> [ <i>outfile</i> ] ]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>Dvibook</i> rearranges pages from a DVI file produced by TeX into &#8220;signatures&#8221; for printing books or booklets, creating a new DVI file usable by any of the TeX conversion programs. </p>
 <p> The <i>-s</i> option selects the size of signature which will be used. The signature size is the number of sides which will be folded and bound together; the number given should be a multiple of four. The default is to use one signature for the whole file. Extra blank sides will be added if the file does not contain a multiple of four pages. </p>
 <p> By default, dvibook rearranges the pages into left-hand side binding signatures; the <i>-r</i> option switches to right-hand side binding signatures. This might be useful for pTeX vertical writing (tate-kumi) documents. </p>

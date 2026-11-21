@@ -1,5 +1,4 @@
 ---
-
 title: "ndctl-enable-region(1)"
 name: "ndctl-enable-region"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-ndctl-enable-region/"
 description: "ndctl-enable-region – enable the given region(s) and all descendant namespaces"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ndctl-enable-region &#8211; enable the given region(s) and all descendant namespaces </p>
+<h2>SYNOPSIS</h2>
 <pre>
 <i>ndctl enable-region</i> &lt;region&gt; [&lt;options&gt;]
 </pre>
+<h2>DESCRIPTION</h2>
 <p> A generic REGION device is registered for each PMEM range or BLK-aperture set. LIBNVDIMM provides a built-in driver for these REGION devices. This driver is responsible for reconciling the aliased DPA mappings across all regions, parsing the LABEL, if present, and then emitting NAMESPACE devices with the resolved/exclusive DPA-boundaries for the nd_pmem or nd_blk device driver to consume.</p>
 <h2>OPTIONS</h2>
 <p> &lt;region&gt;</p>

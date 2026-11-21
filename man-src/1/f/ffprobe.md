@@ -1,5 +1,4 @@
 ---
-
 title: "ffprobe(1)"
 name: "ffprobe"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ffprobe/"
 description: "ffprobe – ffprobe media prober"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ffprobe &#8211; ffprobe media prober </p>
+<h2>SYNOPSIS</h2>
 <p> ffprobe [<i>options</i>] [<i>input_url</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> ffprobe gathers information from multimedia streams and prints it in human- and machine-readable fashion. </p>
 <p> For example it can be used to check the format of the container used by a multimedia stream and the format and type of each media stream contained in it. </p>
 <p> If a url is specified in input, ffprobe will try to open and probe the url content. If the url cannot be opened or recognized as a multimedia file, a positive exit code is returned. </p>

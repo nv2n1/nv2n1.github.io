@@ -1,5 +1,4 @@
 ---
-
 title: "dblink_get_result(3)"
 name: "dblink_get_result"
 section: "3"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/3-dblink_get_result/"
 description: "dblink_get_result – gets an async query result"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dblink_get_result &#8211; gets an async query result </p>
+<h2>SYNOPSIS</h2>
 <pre>
 dblink_get_result(text connname [, bool fail_on_error]) returns setof record
 </pre>
+<h2>DESCRIPTION</h2>
 <p> <code>dblink_get_result</code> collects the results of an asynchronous query previously sent with <code>dblink_send_query</code>. If the query is not already completed, <code>dblink_get_result</code> will wait until it is.</p>
 <h2>ARGUMENTS</h2>
 <p> <i>connname</i></p>

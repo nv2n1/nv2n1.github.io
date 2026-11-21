@@ -1,5 +1,4 @@
 ---
-
 title: "alltray(1)"
 name: "alltray"
 section: "1"
@@ -10,8 +9,10 @@ description: "AllTray – Dock any program into the system tray."
 
 <h2>NAME</h2>
 <p> AllTray &#8211; Dock any program into the system tray.</p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>alltray</code> [program] [options]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>With <code>AllTray</code> you can dock any application with no native tray icon (like Evolution, Thunderbird, Terminals) into the system tray. A high-light feature is that a click on the &quot;close&quot; button will minimize back to system tray. It works well with Gnome, KDE, XFCE 4*, Fluxbox* and WindowMaker*. Xmms is supported in particular. </dd>
 <p> Click-Mode: Only run alltray and click on the window you would like to dock. (Abort with &lt;c&gt;)</p>
 <h2>OPTIONS</h2>

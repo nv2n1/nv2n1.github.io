@@ -1,5 +1,4 @@
 ---
-
 title: "xml2dsr(1)"
 name: "xml2dsr"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-xml2dsr/"
 description: "xml2dsr – Convert DICOM SR file and data set to XML"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xml2dsr &#8211; Convert DICOM SR file and data set to XML </p>
+<h2>SYNOPSIS</h2>
 <pre>
 xml2dsr [options] xmlfile-in dsrfile-out
 </pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>xml2dsr</code> utility converts the contents of an XML (Extensible Markup Language) document to DICOM Structured Reporting (SR) format (file format or raw data set). The XML Schema <i>dsr2xml.xsd</i> does not yet follow any standard format. However, the <code>xml2dsr</code> application might be enhanced in this aspect in the future (e. g. by supporting HL7/CDA &#8211; Clinical Document Architecture). </p>
 <p> An appropriate XML file can be created using the <code>dsr2xml</code> tool (option <i>+Xn</i> recommended to add XML namespace declaration to the root element).</p>
 <h2>PARAMETERS</h2>

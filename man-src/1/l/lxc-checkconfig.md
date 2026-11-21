@@ -1,5 +1,4 @@
 ---
-
 title: "lxc-checkconfig(1)"
 name: "lxc-checkconfig"
 section: "1"
@@ -10,7 +9,9 @@ description: "lxc-checkconfig – check the current kernel for lxc support"
 
 <h2>NAME</h2>
 <p> lxc-checkconfig &#8211; check the current kernel for lxc support</p>
+<h2>SYNOPSIS</h2>
 <p> <code>lxc-checkconfig</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>lxc-checkconfig</code> check the current kernel for lxc support</p>
 <h2>EXAMPLES</h2>
 <dl>

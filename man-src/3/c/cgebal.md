@@ -1,5 +1,4 @@
 ---
-
 title: "cgebal(3)"
 name: "cgebal"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cgebal/"
 description: "cgebal.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cgebal.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cgebal</code> (JOB, N, A, LDA, ILO, IHI, SCALE, INFO)<br />
  <i></i><code>CGEBAL</code></p>

@@ -1,5 +1,4 @@
 ---
-
 title: "devnag(1)"
 name: "devnag"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-devnag/"
 description: "devnag – Devanagari for TeX preprocessor"
 ---
 
+<h2 class="name">NAME</h2>
+<p> devnag &#8211; Devanagari for TeX preprocessor </p>
+<h2>SYNOPSIS</h2>
 <p> <code>devnag in[.dn] [out[.tex]]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>devnag</code> is a preprocessor that reads transliterated Devanagari input delimited by \dn and converts it into a form with which TeX is familiar. </p>
 <p> The preprocessor handles the details of character placement such as the alignment of vowel diacritics and consonant ligatures. The rest of the layout, however, must be managed by the user. </p>
 <p> For specification of the format please see the documentation accompanying the package.</p>

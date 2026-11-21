@@ -1,5 +1,4 @@
 ---
-
 title: "getdata(3)"
 name: "getdata"
 section: "3"
@@ -10,9 +9,11 @@ description: "getdata — retrieve data from a dirfile database"
 
 <h2>NAME</h2>
 <p> getdata &#8212; retrieve data from a dirfile database</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/getdata.h">getdata.h</a>&gt;</code></p>
 <dl>
 <dt> <code>size_t getdata(DIRFILE *</code><i>dirfile</i><code>, const char *</code><i>field_code</i><code>, off_t</code> <i>first_frame</i><code>, off_t </code><i>first_sample</i><code>, size_t </code><i>num_frames</i><code>, size_t</code> <i>num_samples</i><code>, gd_type_t </code><i>return_type</i><code>, void *</code><i>data_out</i><code>);</code></dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The <code>getdata</code>() function queries a <a href="/docs/linux/man/5-dirfile/">dirfile</a>(5) database specified by <i>dirfile</i> for the field <i>field_code</i>. It fetches <i>num_frames</i> frames plus <i>num_samples</i> samples from this field, starting <i>first_sample</i> samples past frame <i>first_frame</i>. The data is converted to the data type specified by <i>return_type</i>, and stored in the user-supplied buffer <i>data_out</i>. </dd>
 <p> The <i>field_code</i> may contain one of the representation suffixes listed in <a href="/docs/linux/man/5-dirfile-format/">dirfile-format</a>(5). If it does, getdata will compute the appropriate complex norm before returning the data. </p>
 <p> The <i>dirfile</i> argument must point to a valid DIRFILE object previously created by a call to <code><a href="/docs/linux/man/3-dirfile_open/">dirfile_open</a></code>(3). The argument <i>data_out</i> must point to a valid memory location of sufficient size to hold all data requested. </p>

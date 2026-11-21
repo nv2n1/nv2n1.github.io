@@ -1,5 +1,4 @@
 ---
-
 title: "idna_to_unicode_44i(3)"
 name: "idna_to_unicode_44i"
 section: "3"
@@ -10,6 +9,7 @@ description: "idna_to_unicode_44i – API function"
 
 <h2>NAME</h2>
 <p> idna_to_unicode_44i &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;idna.h&gt;</code> </p>
 <p> <code>int idna_to_unicode_44i(const uint32_t * </code><i>in</i><code>, size_t </code><i>inlen</i><code>, uint32_t * </code><i>out</i><code>, size_t * </code><i>outlen</i><code>, int </code><i>flags</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -24,6 +24,7 @@ description: "idna_to_unicode_44i – API function"
 <dd> on input, maximum size of output array with unicode code points, on exit, actual size of output array with unicode code points.</dd>
 <dt>int flags</dt>
 <dd> an <code>Idna_flags</code> value, e.g., <code>IDNA_ALLOW_UNASSIGNED</code> or <code>IDNA_USE_STD3_ASCII_RULES</code>.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> The ToUnicode operation takes a sequence of Unicode code points that make up one domain label and returns a sequence of Unicode code points. If the input sequence is a label in ACE form, then the result is an equivalent internationalized label that is not in ACE form, otherwise the original sequence is returned unaltered. </p>
 <p> ToUnicode never fails. If any step fails, then the original input sequence is returned immediately in that step. </p>
 <p> The Punycode decoder can never output more code points than it inputs, but Nameprep can, and therefore ToUnicode can. Note that the number of octets needed to represent a sequence of code points depends on the particular character encoding used. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "asn1_print_structure(3)"
 name: "asn1_print_structure"
 section: "3"
@@ -10,6 +9,7 @@ description: "asn1_print_structure – API function"
 
 <h2>NAME</h2>
 <p> asn1_print_structure &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>
 <p> <code>void asn1_print_structure(FILE * </code><i>out</i><code>, asn1_node </code><i>structure</i><code>, const char * </code><i>name</i><code>, int </code><i>mode</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -22,6 +22,7 @@ description: "asn1_print_structure – API function"
 <dd> an element of the structure</dd>
 <dt>int mode</dt>
 <dd> specify how much of the structure to print, can be <code>ASN1_PRINT_NAME</code>, <code>ASN1_PRINT_NAME_TYPE</code>, <code>ASN1_PRINT_NAME_TYPE_VALUE</code>, or <code>ASN1_PRINT_ALL</code>.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Prints on the <i>out</i> file descriptor the structure&#8217;s tree starting from the <i>name</i> element inside the structure <i>structure</i> .</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2006-2015 Free Software Foundation, Inc..<br />

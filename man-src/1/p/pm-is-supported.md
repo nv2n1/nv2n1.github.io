@@ -1,5 +1,4 @@
 ---
-
 title: "pm-is-supported(1)"
 name: "pm-is-supported"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-pm-is-supported/"
 description: "pm-is-supported – Test whether suspend or hibernate is supported."
 ---
 
+<h2 class="name">NAME</h2>
+<p> pm-is-supported &#8211; Test whether suspend or hibernate is supported. </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>pm-is-supported</code> [{<code>&#8211;suspend</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;hibernate</code>&nbsp;<wbr>|&nbsp;<wbr><code>&#8211;suspend-hybrid</code>}]</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This manual page documents briefly the <code>pm-is-supported</code> command. </dd>
 <p> The intended purpose of <code>pm-is-supported</code> is to find out which power management modes are supported by the system. <a href="/docs/linux/man/8-hald/">hald</a>(8) will call it to do just that. (Note that UPower does not use this.)</p>
 <h2>OPTIONS</h2>

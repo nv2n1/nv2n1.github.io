@@ -1,5 +1,4 @@
 ---
-
 title: "ldns-zsplit(1)"
 name: "ldns-zsplit"
 section: "1"
@@ -10,7 +9,9 @@ description: "ldns-zsplit – split up a zone file"
 
 <h2>NAME</h2>
 <p> ldns-zsplit &#8211; split up a zone file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ldns-zsplit</code> [ <i>OPTIONS</i> ] <i>zonefile</i> </p>
+<h2>DESCRIPTION</h2>
 <h2>OPTIONS</h2>
 <dl>
 <dt><code>-n NUMBER</code></dt>

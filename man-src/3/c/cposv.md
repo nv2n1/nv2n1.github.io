@@ -1,5 +1,4 @@
 ---
-
 title: "cposv(3)"
 name: "cposv"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-cposv/"
 description: "cposv.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cposv.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>cposv</code> (UPLO, N, NRHS, A, LDA, B, LDB, INFO)<br />
  <i></i><code> CPOSV computes the solution to system of linear equations A * X = B for PO matrices</code></p>

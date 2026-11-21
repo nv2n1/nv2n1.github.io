@@ -1,5 +1,4 @@
 ---
-
 title: "execveat(2)"
 name: "execveat"
 section: "2"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/2-execveat/"
 description: "execveat – execute program relative to a directory file descriptor"
 ---
 
+<h2 class="name">NAME</h2>
+<p> execveat &#8211; execute program relative to a directory file descriptor </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int execveat(int </code><i>dirfd</i><code>, const char *</code><i>pathname</i><code>,</code><br />
  <code> char *const </code><i>argv</i><code>[], char *const </code><i>envp</i><code>[],</code><br />
  <code> int </code><i>flags</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>execveat</code>() system call executes the program referred to by the combination of <i>dirfd</i> and <i>pathname</i>. It operates in exactly the same way as <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2), except for the differences described in this manual page. </p>
 <p> If the pathname given in <i>pathname</i> is relative, then it is interpreted relative to the directory referred to by the file descriptor <i>dirfd</i> (rather than relative to the current working directory of the calling process, as is done by <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2) for a relative pathname). </p>
 <p> If <i>pathname</i> is relative and <i>dirfd</i> is the special value <code>AT_FDCWD</code>, then <i>pathname</i> is interpreted relative to the current working directory of the calling process (like <code><a href="/docs/linux/man/2-execve/">execve</a></code>(2)). </p>

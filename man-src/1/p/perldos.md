@@ -1,5 +1,4 @@
 ---
-
 title: "perldos(1)"
 name: "perldos"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-perldos/"
 description: "perldos – Perl under DOS, W31, W95."
 ---
 
+<h2 class="name">NAME</h2>
+<p> perldos &#8211; Perl under DOS, W31, W95. </p>
+<h2>SYNOPSIS</h2>
 <p> These are instructions for building Perl under <font SIZE="-1">DOS</font> (or w??), using <font SIZE="-1">DJGPP</font> v2.03 or later. Under w95 long filenames are supported.</p>
+<h2>DESCRIPTION</h2>
 <p> Before you start, you should glance through the <font SIZE="-1">README</font> file found in the top-level directory where the Perl distribution was extracted. Make sure you read and understand the terms under which this software is being distributed. </p>
 <p> This port currently supports MakeMaker (the set of modules that is used to build extensions to perl). Therefore, you should be able to build and install most extensions found in the <font SIZE="-1">CPAN</font> sites. </p>
 <p> Detailed instructions on how to build and install perl extension modules, including XS-type modules, is included. See &#8216;<font SIZE="-1">BUILDING AND INSTALLING MODULES</font>&#8216;.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "darktable-viewer(1)"
 name: "darktable-viewer"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-darktable-viewer/"
 description: "darktable-viewer – a stand-alone slideshow viewer that displays the images of your current collection fullscreen"
 ---
 
+<h2 class="name">NAME</h2>
+<p> darktable-viewer &#8211; a stand-alone slideshow viewer that displays the images of your current collection fullscreen </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 darktable - viewer[-h, --help; --version][--random][--repeat][--core&lt;darktable options&gt;]
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>darktable</code> is a digital photography workflow application for <code>Linux</code>, <code>Mac </code><font SIZE="-1"><code>OS X</code></font> and several other <code>Unices</code>. It&#8217;s described further in <i><a href="/docs/linux/man/1-darktable/">darktable</a></i>(1). </p>
 <p> <code>darktable-viewer</code> is a stand-alone slideshow viewer that displays the images of your current collection fullscreen. Press <code>Esc</code> to stop.</p>
 <h2>OPTIONS</h2>

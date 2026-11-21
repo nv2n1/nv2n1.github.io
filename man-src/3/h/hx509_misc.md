@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-hx509_misc/"
 description: "hx509 misc functions –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hx509 misc functions &#8211; </p>
 <h3>Functions</h3>
 <p> void <code>hx509_free_octet_string_list</code> (hx509_octet_string_list *list) </p>
 <p> void <code>hx509_xfree</code> (void *ptr) </p>

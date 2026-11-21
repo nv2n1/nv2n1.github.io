@@ -1,5 +1,4 @@
 ---
-
 title: "globus_gass_transfer_proto_descriptor_t(3)"
 name: "globus_gass_transfer_proto_descriptor_t"
 section: "3"
@@ -8,7 +7,10 @@ url: "/docs/linux/man/3-globus_gass_transfer_proto_descriptor_t/"
 description: "globus_gass_transfer_proto_descriptor_t –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> globus_gass_transfer_proto_descriptor_t &#8211; </p>
 <p> Protocol module descriptor structure.</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;globus_gass_transfer_proto.h&gt;</p>
 <h3>Data Fields</h3>
 <p> char * <code>url_scheme</code> </p>

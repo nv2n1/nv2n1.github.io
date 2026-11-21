@@ -1,5 +1,4 @@
 ---
-
 title: "mate-session-properties(1)"
 name: "mate-session-properties"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mate-session-properties/"
 description: "mate-session-properties – Configure applications to start on login."
 ---
 
+<h2 class="name">NAME</h2>
+<p> mate-session-properties &#8211; Configure applications to start on login. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mate-session-properties</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>mate-session-properties</code> program enables the users to configure what applications should be started on login, in addition to the default startup applications configured on the system. </p>
 <p> It also proposes an interface to save a snapshot of the currently running applications so that they can automatically be restored to their current state on your next MATE session.</p>
 <h2>OPTIONS</h2>

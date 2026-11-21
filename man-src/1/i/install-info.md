@@ -1,5 +1,4 @@
 ---
-
 title: "install-info(1)"
 name: "install-info"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-install-info/"
 description: "install-info – update info/dir entries"
 ---
 
+<h2 class="name">NAME</h2>
+<p> install-info &#8211; update info/dir entries </p>
+<h2>SYNOPSIS</h2>
 <p> <code>install-info</code> [<i>,OPTION/</i>]&#8230; [<i>,INFO-FILE /</i>[<i>,DIR-FILE/</i>]]</p>
+<h2>DESCRIPTION</h2>
 <p> Add or remove entries in INFO-FILE from the Info directory DIR-FILE. INFO-FILE and DIR-FILE are required unless the <code>&#8211;info-file</code> or <code>&#8211;dir-file</code> (or <code>&#8211;info-dir</code>) options are given, respectively.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "ekiga(1)"
 name: "ekiga"
 section: "1"
@@ -10,7 +9,9 @@ description: "Ekiga – SIP and H.323 Voice over IP and Videoconferencing for UN
 
 <h2>NAME</h2>
 <p> Ekiga &#8211; SIP and H.323 Voice over IP and Videoconferencing for UN*X</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ekiga [-d level] [-c URL]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>Ekiga</code> is a SIP and H.323 VoIP, IP Telephony and Video Conferencing application which complies to the SIP and H.323 protocols. It can connect to a variety of other SIP and H323 applications including specific hardware. Ekiga can work with or without a webcam, and is able to create pure audio communications or traditional audio+video communications. Ekiga was formerly known as GnomeMeeting. Ekiga has been designed for the GNOME desktop and therefore uses <code>gconfd-2</code>(1) for storing its userdata. It offers to configure almost every option from within the GUI. Command-line options include <code>-d</code> to turn on debugging during calls. <code>-c </code> to call another URL.</p>
 <h2>OPTIONS</h2>
 <dl>

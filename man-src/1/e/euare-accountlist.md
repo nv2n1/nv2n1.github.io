@@ -1,5 +1,4 @@
 ---
-
 title: "euare-accountlist(1)"
 name: "euare-accountlist"
 section: "1"
@@ -10,10 +9,12 @@ description: "euare-accountlist – [Eucalyptus cloud admin only] List all of th
 
 <h2>NAME</h2>
 <p> euare-accountlist &#8211; [Eucalyptus cloud admin only] List all of the cloud&#8217;s accounts</p>
+<h2>SYNOPSIS</h2>
 <p> euare-accountlist [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION]</p>
 <dl>
 <dt>[-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN]</dt>
 <dd> [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h]</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> [Eucalyptus cloud admin only] List all of the cloud&#8217;s accounts</p>
 <h3>optional arguments:</h3>
 <dl>

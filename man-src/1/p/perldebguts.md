@@ -1,5 +1,4 @@
 ---
-
 title: "perldebguts(1)"
 name: "perldebguts"
 section: "1"
@@ -7,7 +6,9 @@ letter: "p"
 url: "/docs/linux/man/1-perldebguts/"
 description: "perldebguts – Guts of Perl debugging"
 ---
-
+<h2 class="name">NAME</h2>
+<p> perldebguts - Guts of Perl debugging </p>
+<h2>DESCRIPTION</h2>
 <p> This is not perldebug, which tells you how to use the debugger. This manpage describes low-level details concerning the debugger&#8217;s internals, which range from difficult to impossible to understand for anyone who isn&#8217;t incredibly intimate with Perl&#8217;s guts. Caveat lector.  </p>
 <h2>Debugger Internals</h2>
 <p> Perl has special debugging hooks at compile-time and run-time used to create debugging environments. These hooks are not to be confused with the <i>perl -Dxxx</i> command described in perlrun, which is usable only if a special Perl is built per the instructions in the <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> podpage in the Perl source tree. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "back(3)"
 name: "back"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-back/"
 description: "QuantLib::Array – 1-D array used in linear algebra."
 ---
 
+<h2 class="name">NAME</h2>
+<p> QuantLib::Array &#8211; 1-D array used in linear algebra. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/array.hpp&gt; </p>
 <h3>Public Types</h3>
 <p> typedef Real <code>value_type</code> </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_x509_crt_list_verify(3)"
 name: "gnutls_x509_crt_list_verify"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_x509_crt_list_verify – API function"
 
 <h2>NAME</h2>
 <p> gnutls_x509_crt_list_verify &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/x509.h&gt;</code> </p>
 <p> <code>int gnutls_x509_crt_list_verify(const gnutls_x509_crt_t * </code><i>cert_list</i><code>, int </code><i>cert_list_length</i><code>, const gnutls_x509_crt_t * </code><i>CA_list</i><code>, int </code><i>CA_list_length</i><code>, const gnutls_x509_crl_t * </code><i>CRL_list</i><code>, int </code><i>CRL_list_length</i><code>, unsigned int </code><i>flags</i><code>, unsigned int * </code><i>verify</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -30,6 +30,7 @@ description: "gnutls_x509_crt_list_verify – API function"
 <dd> Flags that may be used to change the verification algorithm. Use OR of the gnutls_certificate_verify_flags enumerations.</dd>
 <dt>unsigned int * verify</dt>
 <dd> will hold the certificate verification output.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will try to verify the given certificate list and return its status. If no flags are specified (0), this function will use the basicConstraints (2.5.29.19) PKIX extension. This means that only a certificate authority is allowed to sign a certificate. </p>
 <p> You must also check the peer&#8217;s name in order to check if the verified certificate belongs to the actual peer. </p>
 <p> The certificate verification output will be put in <i>verify</i> and will be one or more of the gnutls_certificate_status_t enumerated elements bitwise or&#8217;d. For a more detailed verification status use <code>gnutls_x509_crt_verify()</code> per list element.</p>

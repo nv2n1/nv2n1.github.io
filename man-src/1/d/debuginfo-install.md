@@ -1,5 +1,4 @@
 ---
-
 title: "debuginfo-install(1)"
 name: "debuginfo-install"
 section: "1"
@@ -10,7 +9,9 @@ description: "debuginfo-install – install debuginfo packages and their depende
 
 <h2>NAME</h2>
 <p> debuginfo-install &#8211; install debuginfo packages and their dependencies</p>
+<h2>SYNOPSIS</h2>
 <p> <code>debuginfo-install</code> package</p>
+<h2>DESCRIPTION</h2>
 <p> <code>debuginfo-install</code> is a program which installs the RPMs needed to debug the specified package. The package argument can be a wildcard, but will only match installed packages. <code>debuginfo-install</code> will then enable any debuginfo repositories, and install the relevant debuginfo rpm. </p>
 <h2>EXAMPLES</h2>
 <dl>

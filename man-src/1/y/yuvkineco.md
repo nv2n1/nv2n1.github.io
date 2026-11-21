@@ -1,5 +1,4 @@
 ---
-
 title: "yuvkineco(1)"
 name: "yuvkineco"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-yuvkineco/"
 description: "yuvkineco – revert 2-3 pulldown movie"
 ---
 
+<h2 class="name">NAME</h2>
+<p> yuvkineco &#8211; revert 2-3 pulldown movie</p>
+<h2>SYNOPSIS</h2>
 <p> <code>yuvkineco</code> [<i>options</i>] [<code>-C</code> <i>PATH</i>]<br />
  <code>yuvkineco</code> [<i>options</i>] <code>-O</code>|<code>N</code> <i>PATH</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>yuvkineco</code> reverts to original non-interlaced frames, from NTSC video which was film sourced and 2-3 pulled down. Input fps code must be 4(29.97fps), output fps code can be selected from 1(23.97fps) to 4(29.97fps). If 2, 3 or 4 selected, duplicated frames remain but they are reverted to non-interlaced. If input was non-interlaced only remove duplicate frames. Interlaced frame detection may fail in conditions like:<br />
 &nbsp;<wbr>Pull down cycle changed&nbsp;<wbr>(video editing).<br />
 &nbsp;<wbr>Low quality pull down.<br />

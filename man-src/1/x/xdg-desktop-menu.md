@@ -1,5 +1,4 @@
 ---
-
 title: "xdg-desktop-menu(1)"
 name: "xdg-desktop-menu"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-xdg-desktop-menu/"
 description: "xdg-desktop-menu – command line tool for (un)installing desktop menu items"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xdg-desktop-menu &#8211; command line tool for (un)installing desktop menu items </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xdg-desktop-menu</code> install [<code>&#8211;noupdate</code>] [<code>&#8211;novendor</code>] [<code>&#8211;mode&nbsp;</code><i>mode</i>] <i>directory-file(s)</i> <i>desktop-file(s)</i></dt>
 <dt> <code>xdg-desktop-menu</code> uninstall [<code>&#8211;noupdate</code>] [<code>&#8211;mode&nbsp;</code><i>mode</i>] <i>directory-file(s)</i> <i>desktop-file(s)</i></dt>
 <dt> <code>xdg-desktop-menu</code> forceupdate [<code>&#8211;mode&nbsp;</code><i>mode</i>]</dt>
 <dt> <code>xdg-desktop-menu</code> {<code>&#8211;help</code> | <code>&#8211;manual</code> | <code>&#8211;version</code>}</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The xdg-desktop-menu program can be used to install new menu entries to the desktop&#8217;s application menu. </dd>
 <p> The application menu works according to the XDG Desktop Menu Specification at m[blue]<code><a rel="nofollow" href="http://www.freedesktop.org/wiki/Specifications/menu-spec">http://www.freedesktop.org/wiki/Specifications/menu-spec</a></code>m[]</p>
 <h2>COMMANDS</h2>

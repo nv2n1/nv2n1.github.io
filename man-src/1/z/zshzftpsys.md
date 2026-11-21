@@ -1,5 +1,4 @@
 ---
-
 title: "zshzftpsys(1)"
 name: "zshzftpsys"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-zshzftpsys/"
 description: "zshzftpsys – zftp function front-end"
 ---
 
+<h2 class="name">NAME</h2>
+<p> zshzftpsys &#8211; zftp function front-end </p>
+<h2>DESCRIPTION</h2>
 <p> This describes the set of shell functions supplied with the source distribution as an interface to the <code>zftp</code> builtin command, allowing you to perform FTP operations from the shell command line or within functions or scripts. The interface is similar to a traditional FTP client (e.g. the <code>ftp</code> command itself, see <i><a href="/docs/linux/man/1-ftp/">ftp</a></i>(1)), but as it is entirely done within the shell all the familiar completion, editing and globbing features, and so on, are present, and macros are particularly simple to write as they are just ordinary shell functions. </p>
 <p> The prerequisite is that the <code>zftp</code> command, as described in <i><a href="/docs/linux/man/1-zshmodules/">zshmodules</a></i>(1) , must be available in the version of <code>zsh</code> installed at your site. If the shell is configured to load new commands at run time, it probably is: typing `<code>zmodload zsh/zftp</code>&#8216; will make sure (if that runs silently, it has worked). If this is not the case, it is possible <code>zftp</code> was linked into the shell anyway: to test this, type `<code>which zftp</code>&#8216; and if <code>zftp</code> is available you will get the message `<code>zftp: shell built-in command</code>&#8216;. </p>
 <p> Commands given directly with <code>zftp</code> builtin may be interspersed between the functions in this suite; in a few cases, using <code>zftp</code> directly may cause some of the status information stored in shell parameters to become invalid. Note in particular the description of the variables <code>$ZFTP_TMOUT</code>, <code>$ZFTP_PREFS</code> and <code>$ZFTP_VERBOSE</code> for <code>zftp</code>. </p>

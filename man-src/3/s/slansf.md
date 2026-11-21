@@ -1,5 +1,4 @@
 ---
-
 title: "slansf(3)"
 name: "slansf"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-slansf/"
 description: "slansf.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> slansf.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> REAL function <code>slansf</code> (NORM, TRANSR, UPLO, N, A, WORK)<br />
  <i></i><code>SLANSF</code></p>

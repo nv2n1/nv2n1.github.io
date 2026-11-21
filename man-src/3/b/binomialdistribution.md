@@ -1,5 +1,4 @@
 ---
-
 title: "binomialdistribution(3)"
 name: "binomialdistribution"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-binomialdistribution/"
 description: "ql/math/distributions/binomialdistribution.hpp – Binomial distribution."
 ---
 
+<h2 class="name">NAME</h2>
+<p> ql/math/distributions/binomialdistribution.hpp &#8211; Binomial distribution. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/math/factorial.hpp&gt;<br />
  #include &lt;ql/math/beta.hpp&gt; </p>
 <h3>Classes</h3>

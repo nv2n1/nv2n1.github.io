@@ -1,5 +1,4 @@
 ---
-
 title: "fasd(1)"
 name: "fasd"
 section: "1"
@@ -13,7 +12,11 @@ url: "/docs/linux/man/1-fasd/"
 
  fasd - quick access to files and directories
 
-fasd [options] [query ...] 
+<h2>SYNOPSIS</h2>
+
+ 
+
+ fasd [options] [query ...] 
 
  [f|a|s|d|z] [options] [query ...] 
 
@@ -135,7 +138,11 @@ show a brief help message - [0 - 9] &amp; nbsp;
 select the nth entry
 </code></pre></dd></dl>
 
-Fasd keeps track of files and directories you access in your shell and gives you quick access to them. You can use fasd to reference files or directories by just a few key identifying characters. You can use fasd to boost your command line productivity by defining your own aliases to launch programs on files or directories. Fasd, by default, provides some basic aliases, including a shell function &quot;z&quot; that resembles the functionality of &quot;z&quot; and &quot;autojump.&quot; 
+<h2>DESCRIPTION</h2>
+
+ 
+
+ Fasd keeps track of files and directories you access in your shell and gives you quick access to them. You can use fasd to reference files or directories by just a few key identifying characters. You can use fasd to boost your command line productivity by defining your own aliases to launch programs on files or directories. Fasd, by default, provides some basic aliases, including a shell function &quot;z&quot; that resembles the functionality of &quot;z&quot; and &quot;autojump.&quot; 
 
  The name &quot;fasd&quot; comes from the default suggested aliases f(files), a(files/directories), s(show/search/select), d(directories). 
 

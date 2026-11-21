@@ -1,5 +1,4 @@
 ---
-
 title: "g-ir-compiler(1)"
 name: "g-ir-compiler"
 section: "1"
@@ -10,7 +9,9 @@ description: "g-ir-compiler – typelib compiler."
 
 <h2>NAME</h2>
 <p> g-ir-compiler &#8211; typelib compiler.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>g-ir-compiler</code> [OPTION&#8230;] GIRFILE</p>
+<h2>DESCRIPTION</h2>
 <p> g-ir-compiler converts one or more GIR files into one or more typelib. The output will be written to standard output unless the &#8211;output is specified.</p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "grdreformat(1)"
 name: "grdreformat"
 section: "1"
@@ -10,7 +9,9 @@ description: "grdreformat – Converting between different grid file formats."
 
 <h2>NAME</h2>
 <p> grdreformat &#8211; Converting between different grid file formats.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>grdreformat</code> <i>ingrdfile</i>[<i>=id</i>[<i>/scale/offset</i>[<i>/NaNvalue</i>]]] <i>outgrdfile</i>[<i>=id</i>[<i>/scale/offset</i>[<i>/NaNvalue</i>]]] [ <code>-N</code> ] [ <code>-R</code><i>west</i>/<i>east</i>/<i>south</i>/<i>north</i>[<code>r</code>] ] [ <code>-f</code>[<code>i</code>|<code>o</code>]<i>colinfo</i> ] [ <code>-V</code> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>grdreformat</code> reads a grid file in one format and writes it out using another format. As an option the user may select a subset of the data to be written and to specify scaling, translation, and NaN-value.</p>
 <dl>
 <dt><i>ingrdfile</i></dt>

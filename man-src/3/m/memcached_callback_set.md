@@ -1,5 +1,4 @@
 ---
-
 title: "memcached_callback_set(3)"
 name: "memcached_callback_set"
 section: "3"
@@ -11,6 +10,7 @@ description: "memcached_callback_set – libmemcached Documentation"
 <h2>NAME</h2>
 <p> memcached_callback_set &#8211; libmemcached Documentation </p>
 <p> Get and set a callback</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
 <dt><code>memcached_callback_t</code></dt>
@@ -20,6 +20,7 @@ description: "memcached_callback_set – libmemcached Documentation"
 </dd><dt><code>void * memcached_callback_get(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, <i>memcached_callback_t</i><i>&nbsp;<wbr>flag</i>, memcached_return_t<i>&nbsp;<wbr>*error</i>)</dt>
 <dd>
 <p> Compile and link with -lmemcached</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <a href="/docs/linux/man/3-libmemcached/">libmemcached</a>(3) can have callbacks set key execution points. These either provide function calls at points in the code, or return pointers to structures for particular usages. </p>
 <p> <i>memcached_callback_get()</i> takes a callback flag and returns the structure or function set by <i>memcached_callback_set()</i>. </p>
 <p> <i>memcached_callback_set()</i> changes the function/structure assigned by a callback flag. No connections are reset. </p>

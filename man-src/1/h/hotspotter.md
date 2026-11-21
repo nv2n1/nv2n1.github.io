@@ -1,5 +1,4 @@
 ---
-
 title: "hotspotter(1)"
 name: "hotspotter"
 section: "1"
@@ -10,8 +9,10 @@ description: "hotspotter – Create CVA image from seamount locations"
 
 <h2>NAME</h2>
 <p> hotspotter &#8211; Create CVA image from seamount locations</p>
+<h2>SYNOPSIS</h2>
 <p> <code>hotspotter</code> [<i>tables</i>] <i>rotfile</i> <i>CVAgrid</i> <i>increment</i> <i>region</i> [ <i>upper_age</i> ] [ ] [ ] [ [<i>level</i>] ] [ <code>-bi</code><i>&lt;binary&gt;</i> ] [ <code>-di</code><i>&lt;nodata&gt;</i> ] [ <code>-h</code><i>&lt;headers&gt;</i> ] [ <code>-i</code><i>&lt;flags&gt;</i> ] [ <code>-o</code><i>&lt;flags&gt;</i> ] [ <code>-:</code>[<code>i</code>|<code>o</code>] ] </p>
 <p> <code>Note:</code> No space is allowed between the option flag and the associated arguments.</p>
+<h2>DESCRIPTION</h2>
 <p> <code>hotspotter</code> reads (longitude, latitude, amplitude, radius, age) records from <i>tables</i> [or standard input] and calculates flowlines using the specified stage or total reconstruction rotations. These flowlines are convolved with the shape of the seamount (using a Gaussian shape given amplitude and radius = 6 sigma) and added up to give a Cumulative Volcano Amplitude grid (CVA). See option <code>-:</code> on how to read (latitude,longitude,&#8230;) files.</p>
 <h2>REQUIRED ARGUMENTS</h2>
 <dl>

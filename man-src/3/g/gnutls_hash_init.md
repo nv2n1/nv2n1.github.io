@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_hash_init(3)"
 name: "gnutls_hash_init"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_hash_init – API function"
 
 <h2>NAME</h2>
 <p> gnutls_hash_init &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/crypto.h&gt;</code> </p>
 <p> <code>int gnutls_hash_init(gnutls_hash_hd_t * </code><i>dig</i><code>, gnutls_digest_algorithm_t </code><i>algorithm</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_hash_init – API function"
 <dd> is a <code>gnutls_hash_hd_t</code> structure.</dd>
 <dt>gnutls_digest_algorithm_t algorithm</dt>
 <dd> the hash algorithm to use</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will initialize an context that can be used to produce a Message Digest of data. This will effectively use the current crypto backend in use by gnutls or the cryptographic accelerator in use.</p>
 <h2>RETURNS</h2>
 <p> Zero or a negative error code on error.</p>

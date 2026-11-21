@@ -1,5 +1,4 @@
 ---
-
 title: "npm-build(1)"
 name: "npm-build"
 section: "1"
@@ -8,6 +7,7 @@ url: "/docs/linux/man/1-npm-build/"
 description: "npm-build – Build a package"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>npm-build</code> &#8211; Build a package </p>
 <h3>Synopsis</h3>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "card_eventmgr(1)"
 name: "card_eventmgr"
 section: "1"
@@ -12,6 +11,7 @@ description: "card_eventmgr – PCSC-Lite Event Manager"
 <p> card_eventmgr &#8211; PCSC-Lite Event Manager</p>
 <h2>SYNTAX</h2>
 <p> <code>card_eventmgr</code> [<code>debug</code>] [[<code>no</code>]<code>daemon</code>] [<code>timeout=</code><i>&lt;msecs&gt;</i>] [<code>config_file=</code><i>&lt;filename&gt;</i>] [<code>kill</code>] [<code>pidfile=</code><i>&lt;pidfile&gt;</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>card_eventmgr</code> is a smart card monitoring tool that listen to the status of the card reader and dispatch actions on several events. <code>card_eventmgr</code> can be used for several actions: like screen lock on card removal. </p>
 <p> Three events are supported: card insertion, card removal and timeout on removed card. Actions are specified in a configuration file.</p>
 <h2>OPTIONS</h2>

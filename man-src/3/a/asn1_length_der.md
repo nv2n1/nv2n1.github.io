@@ -1,5 +1,4 @@
 ---
-
 title: "asn1_length_der(3)"
 name: "asn1_length_der"
 section: "3"
@@ -10,6 +9,7 @@ description: "asn1_length_der – API function"
 
 <h2>NAME</h2>
 <p> asn1_length_der &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>
 <p> <code>void asn1_length_der(unsigned long int </code><i>len</i><code>, unsigned char * </code><i>der</i><code>, int * </code><i>der_len</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "asn1_length_der – API function"
 <dd> buffer to hold the returned encoding (may be <code>NULL</code>).</dd>
 <dt>int * der_len</dt>
 <dd> number of meaningful bytes of ANS (der[0]..der[der_len-1]).</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Creates the DER encoding of the provided length value. The <i>der</i> buffer must have enough room for the output. The maximum length this function will encode is <code>ASN1_MAX_LENGTH_SIZE</code>. </p>
 <p> To know the size of the DER encoding use a <code>NULL</code> value for <i>der</i> .</p>
 <h2>COPYRIGHT</h2>

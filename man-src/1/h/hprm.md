@@ -1,5 +1,4 @@
 ---
-
 title: "hprm(1)"
 name: "hprm"
 section: "1"
@@ -10,6 +9,7 @@ description: "hprm — remove a file or directory on an HFS+ volume"
 
 <h2>NAME</h2>
 <p> hprm &#8212; remove a file or directory on an HFS+ volume</p>
+<h2>SYNOPSIS</h2>
 <p> <code>hprm</code> [<code>-R</code>] [<code>-f</code>] <i>hfs-path</i></p>
 <h2>Description</h2>
 <p> <code>hprm</code> removes the file or directory specified by <code>hfs-path</code>. Since write access to HFS+ volumes is still experimental, the program prints a warning message and prompts the user before writing anything to the file system.<br />

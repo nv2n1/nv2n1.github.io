@@ -1,5 +1,4 @@
 ---
-
 title: "setitimer(2)"
 name: "setitimer"
 section: "2"
@@ -8,12 +7,16 @@ url: "/docs/linux/man/2-setitimer/"
 description: "getitimer, setitimer – get or set value of an interval timer"
 ---
 
+<h2 class="name">NAME</h2>
+<p> getitimer, setitimer &#8211; get or set value of an interval timer </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/time.h&gt;
 int getitimer(int which, struct itimerval *curr_value);
 int setitimer(int which, const struct itimerval *new_value,
               struct itimerval *old_value);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> These system calls provide access to interval timers, that is, timers that initially expire at some point in the future, and (optionally) at regular intervals after that. When a timer expires, a signal is generated for the calling process, and the timer is reset to the specified interval (if the interval is nonzero). </p>
 <p> Three types of timers&#8212;specified via the <i>which</i> argument&#8212;are provided, each of which counts against a different clock and generates a different signal on timer expiration:</p>
 <dl>

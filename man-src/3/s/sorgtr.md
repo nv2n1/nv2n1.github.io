@@ -1,5 +1,4 @@
 ---
-
 title: "sorgtr(3)"
 name: "sorgtr"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-sorgtr/"
 description: "sorgtr.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sorgtr.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>sorgtr</code> (UPLO, N, A, LDA, TAU, WORK, LWORK, INFO)<br />
  <i></i><code>SORGTR</code></p>

@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_gram_protocol_job_state_t/"
 description: "GRAM Job States –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> GRAM Job States &#8211; </p>
 <p> GRAM Job States.</p>
 <h3>Enumerations</h3>
 <p> enum <code>globus_gram_protocol_job_state_t</code> { <code>GLOBUS_GRAM_PROTOCOL_JOB_STATE_PENDING</code> =1, <code>GLOBUS_GRAM_PROTOCOL_JOB_STATE_ACTIVE</code> =2, <code>GLOBUS_GRAM_PROTOCOL_JOB_STATE_FAILED</code> =4, <code>GLOBUS_GRAM_PROTOCOL_JOB_STATE_DONE</code> =8, <code>GLOBUS_GRAM_PROTOCOL_JOB_STATE_SUSPENDED</code> =16, <code>GLOBUS_GRAM_PROTOCOL_JOB_STATE_UNSUBMITTED</code> =32, <code>GLOBUS_GRAM_PROTOCOL_JOB_STATE_STAGE_IN</code> =64, <code>GLOBUS_GRAM_PROTOCOL_JOB_STATE_STAGE_OUT</code> =128, <code>GLOBUS_GRAM_PROTOCOL_JOB_STATE_ALL</code> =0xFFFFF } </p>

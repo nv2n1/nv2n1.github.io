@@ -1,5 +1,4 @@
 ---
-
 title: "pmlogger(1)"
 name: "pmlogger"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmlogger – create archive log for performance metrics"
 
 <h2>NAME</h2>
 <p> <code>pmlogger</code> &#8211; create archive log for performance metrics</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pmlogger</code> [<code>-c</code> <i>configfile</i>] [<code>-h</code> <i>host</i>] [<code>-K</code> <i>spec</i>] [<code>-l</code> <i>logfile</i>] [<code>-L</code>] [<code>-m</code> <i>note</i>] [<code>-n</code> <i>pmnsfile</i>] [<code>-o</code>] [<code>-p</code> <i>pid</i>] [<code>-P</code>] [<code>-r</code>] [<code>-s</code> <i>endsize</i>] [<code>-t</code> <i>interval</i>] [<code>-T</code> <i>endtime</i>] [<code>-u</code>] [<code>-U</code> <i>username</i>] [<code>-v</code> <i>volsize</i>] [<code>-V</code> <i>version</i>] [<code>-x</code> <i>fd</i>] [<code>-y</code>] <i>archive</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>pmlogger</code> creates the archive logs of performance metric values that may be &#8220;played back&#8221; by other Performance Co-Pilot (see <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1)) tools. These logs form the basis of the VCR paradigm and retrospective performance analysis services common to the PCP toolkit. </p>
 <p> The mandatory argument <i>archive</i> is the base name for the physical files that constitute an archive log. </p>
 <p> The <code>-V</code> option specifies the version for the archive that is generated. By default a version 2 archive is generated, and the only value currently supported for <i>version</i> is 2. </p>

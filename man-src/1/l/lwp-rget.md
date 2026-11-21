@@ -1,5 +1,4 @@
 ---
-
 title: "lwp-rget(1)"
 name: "lwp-rget"
 section: "1"
@@ -7,13 +6,20 @@ letter: "l"
 url: "/docs/linux/man/1-lwp-rget/"
 ---
 
-lwp-rget - Retrieve web documents recursively 
+<h2 class="name">NAME</h2>
+ 
 
-<pre><code>
+ lwp-rget - Retrieve web documents recursively 
+
+<h2>SYNOPSIS</h2>
+
+ <pre><code>
 lwp - rget[--verbose] [--auth = USER:PASS][--depth = N][--hier][--iis][--keepext = mime / type[, mime / type]][--limit = N][--nospace][--prefix = URL][--referer = URL][--sleep = N][--tolower]&lt;URL&gt; lwp - rget-- version
 </code></pre>
 
-This program will retrieve a document and store it in a local file. It will follow any links found in the document and store these documents as well, patching links so that they refer to these local copies. This process continues until there are no more unvisited links or the process is stopped by the one or more of the limits which can be controlled by the command line arguments. 
+<h2>DESCRIPTION</h2>
+
+ This program will retrieve a document and store it in a local file. It will follow any links found in the document and store these documents as well, patching links so that they refer to these local copies. This process continues until there are no more unvisited links or the process is stopped by the one or more of the limits which can be controlled by the command line arguments. 
 
  This program is useful if you want to make a local copy of a collection of documents or want to do web reading off-line. 
 

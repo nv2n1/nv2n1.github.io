@@ -1,5 +1,4 @@
 ---
-
 title: "stubmaker(1)"
 name: "stubmaker"
 section: "1"
@@ -7,7 +6,10 @@ letter: "s"
 url: "/docs/linux/man/1-stubmaker/"
 ---
 
-stubmaker.pl - Generates client stubs from a WSDL file. 
+<h2 class="name">NAME</h2>
+ 
+
+ stubmaker.pl - Generates client stubs from a WSDL file. 
 
 <h2>OPTIONS</h2>
 

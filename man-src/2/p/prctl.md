@@ -1,5 +1,4 @@
 ---
-
 title: "prctl(2)"
 name: "prctl"
 section: "2"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/2-prctl/"
 description: "prctl – operations on a process or thread"
 ---
 
+<h2 class="name">NAME</h2>
+<p> prctl &#8211; operations on a process or thread </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;sys/prctl.h&gt;
 int prctl(int option, unsigned long arg2, unsigned long arg3,
           unsigned long arg4, unsigned long arg5);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>prctl</code>() manipulates various aspects of the behavior of the calling thread or process. </p>
 <p> Note that careless use of some <code>prctl</code>() operations can confuse the user-space run-time environment, so these operations should be used with care. </p>
 <p> <code>prctl</code>() is called with a first argument describing what to do (with values defined in <i>&lt;linux/prctl.h&gt;</i>), and further arguments with a significance depending on the first one. The first argument can be:</p>

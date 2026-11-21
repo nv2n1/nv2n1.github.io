@@ -1,5 +1,4 @@
 ---
-
 title: "fusecompress(1)"
 name: "fusecompress"
 section: "1"
@@ -10,7 +9,9 @@ description: "fusecompress – mounts an compressed virtual filesystem"
 
 <h2>NAME</h2>
 <p> fusecompress &#8211; mounts an compressed virtual filesystem</p>
+<h2>SYNOPSIS</h2>
 <p> <code>fusecompress [OPTION]&#8230; rootDir mountPoint</code></p>
+<h2>DESCRIPTION</h2>
 <p> FuseCompress creates a virtual compressed filesystem which stores compressed data in the rootDir directory and makes the uncompressed data visible at the mountPoint directory. </p>
 <p> Compression type (or uncompressed state) of files in the rootDir is not changed during work. Use fusecompress_offline if you want to decompress file(s) or change compression type of the file(s). </p>
 <p> <code>Examples:</code> </p>

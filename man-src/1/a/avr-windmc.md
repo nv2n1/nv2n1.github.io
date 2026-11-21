@@ -1,5 +1,4 @@
 ---
-
 title: "avr-windmc(1)"
 name: "avr-windmc"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-avr-windmc/"
 description: "windmc – generates Windows message resources."
 ---
 
+<h2 class="name">NAME</h2>
+<p> windmc &#8211; generates Windows message resources. </p>
+<h2>SYNOPSIS</h2>
 <p> windmc [options] input-file</p>
+<h2>DESCRIPTION</h2>
 <p> <code>windmc</code> reads message definitions from an input file (.mc) and translate them into a set of output files. The output files may be of four kinds:</p>
 <dl>
 <dt>&quot;h&quot;</dt>

@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_dh_params_generate2(3)"
 name: "gnutls_dh_params_generate2"
 section: "3"
@@ -10,6 +9,7 @@ description: "gnutls_dh_params_generate2 – API function"
 
 <h2>NAME</h2>
 <p> gnutls_dh_params_generate2 &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>int gnutls_dh_params_generate2(gnutls_dh_params_t </code><i>dparams</i><code>, unsigned int </code><i>bits</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -18,6 +18,7 @@ description: "gnutls_dh_params_generate2 – API function"
 <dd> Is the structure that the DH parameters will be stored</dd>
 <dt>unsigned int bits</dt>
 <dd> is the prime&#8217;s number of bits</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function will generate a new pair of prime and generator for use in the Diffie-Hellman key exchange. The new parameters will be allocated using <code>gnutls_malloc()</code> and will be stored in the appropriate datum. This function is normally slow. </p>
 <p> Do not set the number of bits directly, use <code>gnutls_sec_param_to_pk_bits()</code> to get bits for <code>GNUTLS_PK_DSA</code>. Also note that the DH parameters are only useful to servers. Since clients use the parameters sent by the server, it&#8217;s of no use to call this in client side.</p>
 <h2>RETURNS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "librrd(3)"
 name: "librrd"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-librrd/"
 description: "librrd – RRD library functions"
 ---
 
+<h2 class="name">NAME</h2>
+<p> librrd &#8211; RRD library functions </p>
+<h2>DESCRIPTION</h2>
 <p> <code>librrd</code> contains most of the functionality in <code>RRDTool</code>. The command line utilities and language bindings are often just wrappers around the code contained in <code>librrd</code>. </p>
 <p> This manual page documents the <code>librrd</code> <font SIZE="-1">API</font>. </p>
 <p> <font SIZE="-1"><code>NOTE:</code></font> This document is a work in progress, and should be considered incomplete as long as this warning persists. For more information about the <code>librrd</code> functions, always consult the source code.</p>

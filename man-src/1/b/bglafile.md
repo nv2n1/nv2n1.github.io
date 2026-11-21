@@ -1,5 +1,4 @@
 ---
-
 title: "bglafile(1)"
 name: "bglafile"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-bglafile/"
 description: "Bglafile – a Module Access File Generator"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Bglafile &#8211; a Module Access File Generator</p>
+<h2>SYNOPSIS</h2>
 <p> <code>bglafile</code> [ options ] <i>file &#8230;</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>Bglafile</code> is a Module Access File generator. It produces file that suits Bigloo option <i>-afile</i>. A Module Access File is a scheme list. Each elements of that list is a list of at least two elements: a module name, the file that implements that module. For BEE (the Bigloo Integrated Development Environment) to be able to retrieve files from module names, it is mandatory that the first parentheses of the global list is left alone on one line. </p>
 <h2>OPTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "helcor(1)"
 name: "helcor"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-helcor/"
 description: "helcor – Heliocentric correction of CCD output data file(s)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> helcor &#8211; Heliocentric correction of CCD output data file(s)</p>
+<h2>SYNOPSIS</h2>
 <p> <code>helcor </code><i>[options] source_file &#8230;</i> &#8211; batch mode<br />
  <code>helcor </code><i>[options]</i> &#8211; terminal mode </p>
+<h2>DESCRIPTION</h2>
 <p> The helcor program converts geocentric julian date (jdgeo) to heliocentric date (jdhel) or back. It works either in batch mode, where the table stored in file is converted and saved to another file, or in terminal mode, where the user enters simple commands and queries by keyboard. </p>
 <p> When running the batch mode, the program reads the source file line by line, and expects the JD value in the first column, which must be divided at least one of common used dividers (semicolon, comma, space, tab char, &#8230;). The JD value can be in full (2453xxx.x) or short (53xxx.x) form. Decimal places must be separated by point, not comma. The lines, which doesn&#8217;t consist of valid julian date, are copied into output without any change. In other cases the heliocentric correction is computed, its value is added to or subtracted from read julian date and the old JD value is replaced by the new one in the same form (full or short form, number of decimal places). The rest of the line is unchanged. </p>
 <p> In terminal mode, the opening informations is displayed and the program prompts the user to enter a query of a command (<i>JDgeo&gt;</i> or <i>JDhel&gt;</i>). The user enters the julian date and the program computes the value of heliocentric correction and prints out to console three values: the geocentric and the heliocentric julian date and value of h.c. in days. Other commands are descibed below. Entering the empty line exits the program. </p>

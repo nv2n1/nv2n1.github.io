@@ -1,5 +1,4 @@
 ---
-
 title: "uil(1)"
 name: "uil"
 section: "1"
@@ -10,7 +9,9 @@ description: "uil — The user interface language compiler"
 
 <h2>NAME</h2>
 <p> <code>uil</code> &#8212; The user interface language compiler</p>
+<h2>SYNOPSIS</h2>
 <p> <code>uil</code> [<i>options</i> ] [<i>file</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>uil</code> command invokes the UIL compiler. The User Interface Language (UIL) is a specification language for describing the initial state of a user interface for a Motif application. The specification describes the objects (menus, dialog boxes, labels, push buttons, and so on) used in the interface and specifies the routines to be called when the interface changes state as a result of user interaction.</p>
 <dl>
 <dt><i>file</i></dt>

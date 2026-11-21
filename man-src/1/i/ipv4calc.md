@@ -1,5 +1,4 @@
 ---
-
 title: "ipv4calc(1)"
 name: "ipv4calc"
 section: "1"
@@ -8,13 +7,16 @@ url: "/docs/linux/man/1-ipv4calc/"
 description: "ipv4calc - Calculates IPv4 elements from an address. SYNOPSIS ipv4calc[--network | --broadcast | --netmask | --address | --cidr] addr DESCRIPTION If an option is specified ipv4calc calculates the r..."
 ---
 
+<h2 class="name">NAME</h2>
 <pre>
   ipv4calc - Calculates IPv4 elements from an address.
 </pre>
+<h2>SYNOPSIS</h2>
 <pre><code>
 ipv4calc[--network | --broadcast | --netmask |
          --address | --cidr] addr
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> If an option is specified <code>ipv4calc</code> calculates the requested element from the address and prints it on stdout. </p>
 <p> If multiple options are specified, only the first one is printed. </p>
 <p> If no options are specified, the program prints the host part of the address, the network and the broadcast address as deduced from the given address. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "fcrontab(1)"
 name: "fcrontab"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-fcrontab/"
 description: "fcrontab – manipulate per-user fcrontab files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fcrontab &#8211; manipulate per-user fcrontab files </p>
+<h2>SYNOPSIS</h2>
 <p> <code>fcrontab</code> [ <code>-c </code><i>file</i> ] [ <code>-n</code> ] <i>file</i> [ <i>user</i> | <code>-u </code><i>user</i> ] </p>
 <p> <code>fcrontab</code> [ <code>-c </code><i>file</i> ] [ <code>-n</code> ] { <code>-l</code> | <code>-r</code> | <code>-e</code> | <code>-z</code> } [ <i>user</i> | <code>-u </code><i>user</i> ] </p>
 <p> <code>fcrontab</code> [ <code>-h</code> ] </p>
+<h2>DESCRIPTION</h2>
 <p> <code>Fcrontab</code> is the program intended to install, edit, list and remove the tables used by <code><a href="/docs/linux/man/8-fcron/">fcron</a></code>(8) daemon. As <code>fcron</code> internally uses a non-human readable format (this is needed because <code>fcron</code> saves more informations than the user gives, for example the time and date of next execution), the user cannot edit directly his <code>fcrontab</code> (the one used by <code>fcron</code>). </p>
 <p> When a user installs a <code>fcrontab</code>, the source file is saved in the spool directory (<i>/usr/local/var/spool/fcron</i>) to allow future editions, and a formatted file is generated for the <code>fcron</code> daemon, which is signaled once about ten seconds before the next minute for all changes made previously. The daemon is not informed of the changes immediately but at most once a minute to keep ill disposed users from blocking the daemon by installing <code>fcrontab</code>s over and over (ie. denial of service attack). We will call &quot;<code>fcrontab</code>&quot; the source file of the <code>fcrontab</code> in the following. </p>
 <p> A user can install a <code>fcrontab</code> if he is listed in the <i>/usr/local/etc/fcron.allow</i> and not (unless by the keyword all) listed in <i>/usr/local/etc/fcron.deny</i> (see section &quot;files&quot; below). If neither <i>fcron.allow</i> nor <i>fcron.deny</i> exist, all users are allowed. None of these files have to exist, but if they do, the deny file takes precedence. </p>

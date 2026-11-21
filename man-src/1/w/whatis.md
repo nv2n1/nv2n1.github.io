@@ -1,5 +1,4 @@
 ---
-
 title: "whatis(1)"
 name: "whatis"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-whatis/"
 description: "whatis – display one-line manual page descriptions"
 ---
 
+<h2 class="name">NAME</h2>
+<p> whatis &#8211; display one-line manual page descriptions </p>
+<h2>SYNOPSIS</h2>
 <p> <code>whatis</code> [<code>-dlv?V</code>] [<code>-r</code>|<code>-w</code>] [<code>-s</code> <i>list</i>] [<code>-m</code> <i>system</i>[,&#8230;]] [<code>-M</code> <i>path</i>] [<code>-L</code> <i>locale</i>] [<code>-C</code> <i>file</i>] <i>name</i> &#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Each manual page has a short description available within it. <code>whatis</code> searches the manual page names and displays the manual page descriptions of any <i>name</i> matched. </p>
 <p> <i>name</i> may contain wildcards (<code>-w</code>) or be a regular expression (<code>-r</code>). Using these options, it may be necessary to quote the <i>name</i> or escape (\) the special characters to stop the shell from interpreting them. </p>
 <p> <code>index</code> databases are used during the search, and are updated by the <code>mandb</code> program. Depending on your installation, this may be run by a periodic cron job, or may need to be run manually after new manual pages have been installed. To produce an old style text <code>whatis</code> database from the relative <code>index</code> database, issue the command: </p>

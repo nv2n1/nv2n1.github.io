@@ -1,5 +1,4 @@
 ---
-
 title: "ipa-winsync-migrate(1)"
 name: "ipa-winsync-migrate"
 section: "1"
@@ -10,7 +9,9 @@ description: "ipa-winsync-migrate – Seamless migration of AD users created by 
 
 <h2>NAME</h2>
 <p> ipa-winsync-migrate &#8211; Seamless migration of AD users created by winsync to native AD users.</p>
+<h2>SYNOPSIS</h2>
 <p> ipa-winsync-migrate</p>
+<h2>DESCRIPTION</h2>
 <p> Migrates AD users created by winsync agreement to ID overrides in the Default Trust View, thus preserving the actual POSIX attributes already established. </p>
 <p> Prior to the actual migration, the winsync replication agreement will be removed to protect the removal of the user accounts on the Active Directory side. </p>
 <p> During the migration, group, assigned roles, HBAC rules and SELinux memberships of the synced users will be preserved. Any local copies (created by winsync) of the migrated users will be removed. </p>

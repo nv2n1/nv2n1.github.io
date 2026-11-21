@@ -1,5 +1,4 @@
 ---
-
 title: "iv_inotify(3)"
 name: "iv_inotify"
 section: "3"
@@ -10,6 +9,7 @@ description: "IV_INOTIFY_INIT, iv_inotify_register, iv_inotify_unregister, IV_IN
 
 <h2>NAME</h2>
 <p> IV_INOTIFY_INIT, iv_inotify_register, iv_inotify_unregister, IV_INOTIFY_WATCH_INIT, iv_inotify_watch_register, iv_inotify_watch_unregister &#8211; ivykis <code><a href="/docs/linux/man/7-inotify/">inotify</a></code>(7) wrapper</p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;iv_inotify.h&gt;
 struct iv_inotify {
@@ -30,6 +30,7 @@ struct iv_inotify_watch {
 <p> <code>void IV_INOTIFY_WATCH_INIT(struct iv_inotify_watch *</code><i>watch</i><code>);</code><br />
  <code>int iv_inotify_watch_register(struct iv_inotify_watch *</code><i>watch</i><code>);</code><br />
  <code>int iv_inotify_watch_unregister(struct iv_inotify_watch *</code><i>watch</i><code>);</code> </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>iv_inotify_register</code> function registers an <code>iv_inotify</code> instance with the <code>iv_inotify</code>(3) module. The <code>inotify</code> parameter is a pointer to the <code>iv_inotify</code> structure to be registered. </p>
 <p> The <code>iv_inotify_unregister</code> function unregisters an <code>iv_inotify</code> instance from the <code>iv_inotify</code>(3) module. The <code>inotify</code> parameter is a pointer to the <code>iv_inotify</code> structure to be unregistered. </p>
 <p> The <code>iv_inotify_watch_register</code> function adds a watch to the registered <code>iv_inotify</code> instance specified by the <code>-&gt;inotify</code> member. </p>

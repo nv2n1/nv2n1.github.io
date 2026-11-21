@@ -1,5 +1,4 @@
 ---
-
 title: "key(3)"
 name: "key"
 section: "3"
@@ -10,8 +9,10 @@ description: "key – Array of flags indicating key state. Allegro game programm
 
 <h2>NAME</h2>
 <p> key &#8211; Array of flags indicating key state. Allegro game programming library.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;<a href="file:/usr/include/allegro.h">allegro.h</a>&gt;</code> </p>
 <p> <code>extern volatile char key[KEY_MAX];</code></p>
+<h2>DESCRIPTION</h2>
 <p> Array of flags indicating the state of each key, ordered by scancode. Wherever possible these values will be updated asynchronously, but if keyboard_needs_poll() returns TRUE, you must manually call poll_keyboard() to update them with the current input state. The scancodes are defined in allegro/keyboard.h as a series of KEY_* constants (and are also listed below). For example, you could write: </p>
 <pre><code>
 if (key[KEY_SPACE])

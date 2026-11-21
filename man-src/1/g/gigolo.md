@@ -1,5 +1,4 @@
 ---
-
 title: "gigolo(1)"
 name: "gigolo"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-gigolo/"
 description: "Gigolo — a simple frontend to easily connect to remote filesystems with GIO/GVfs"
 ---
 
+<h2 class="name">NAME</h2>
+<p> Gigolo &#8212; a simple frontend to easily connect to remote filesystems with GIO/GVfs </p>
+<h2>SYNOPSIS</h2>
 <p> <code>gigolo</code> [<code>option</code>]</p>
+<h2>DESCRIPTION</h2>
 <p> Gigolo is a frontend to easily manage connections to local and remote filesystems using GIO/GVfs. It allows you to quickly mount a remote filesystem and manage bookmarks to such. </p>
 <p> Homepage: <a rel="nofollow" href="http://www.uvena.de/gigolo/">http://www.uvena.de/gigolo/</a></p>
 <h2>OPTIONS</h2>

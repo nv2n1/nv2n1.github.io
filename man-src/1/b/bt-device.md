@@ -1,5 +1,4 @@
 ---
-
 title: "bt-device(1)"
 name: "bt-device"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-bt-device/"
 description: "bt-device – a bluetooth device manager"
 ---
 
+<h2 class="name">NAME</h2>
+<p> bt-device &#8211; a bluetooth device manager </p>
+<h2>SYNOPSIS</h2>
 <p> bt-device [<font SIZE="-1">OPTION&#8230;</font>] </p>
 <p> Help Options:<br />
 &nbsp;<wbr>&nbsp;<wbr>-h, &#8211;help </p>
@@ -21,6 +23,7 @@ description: "bt-device – a bluetooth device manager"
 &nbsp;<wbr>&nbsp;<wbr>-s, &#8211;services&nbsp;<wbr>&lt;name|mac&gt;&nbsp;<wbr>[&lt;pattern&gt;]<br />
 &nbsp;<wbr>&nbsp;<wbr>&#8211;set&nbsp;<wbr>&lt;name|mac&gt;&nbsp;<wbr>&lt;property&gt;&nbsp;<wbr>&lt;value&gt;<br />
 &nbsp;<wbr>&nbsp;<wbr>-v, &#8211;verbose</p>
+<h2>DESCRIPTION</h2>
 <p> This utility is used to manage Bluetooth devices. You can list added devices, connect to a new device, disconnect device, remove added device, show info about device, discover remote device services or change device properties.</p>
 <h2>OPTIONS</h2>
 <p> <code>-h, &#8211;help</code><br />

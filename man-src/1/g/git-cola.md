@@ -1,5 +1,4 @@
 ---
-
 title: "git-cola(1)"
 name: "git-cola"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-git-cola/"
 description: "git-cola – A highly caffeinated Git GUI"
 ---
 
+<h2 class="name">NAME</h2>
+<p> git-cola &#8211; A highly caffeinated Git GUI </p>
+<h2>SYNOPSIS</h2>
 <p> <i>git cola</i> [options]</p>
+<h2>DESCRIPTION</h2>
 <p> <i>git-cola</i> is a powerful Git GUI written in Python. It has many unique features that make Gitcqs advanced features simple and accessible. </p>
 <p> See below for a full list of options and usage information.</p>
 <h2>OPTIONS</h2>

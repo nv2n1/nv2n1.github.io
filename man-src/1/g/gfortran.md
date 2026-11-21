@@ -1,5 +1,4 @@
 ---
-
 title: "gfortran(1)"
 name: "gfortran"
 section: "1"
@@ -7,7 +6,9 @@ letter: "g"
 url: "/docs/linux/man/1-gfortran/"
 description: "gfortran – GNU Fortran compiler"
 ---
-
+<h2 class="name">NAME</h2>
+<p> gfortran - GNU Fortran compiler </p>
+<h2>SYNOPSIS</h2>
 <p> gfortran [<code>-c</code>|<code>-S</code>|<code>-E</code>] <br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-g</code>]&nbsp;[<code>-pg</code>]&nbsp;[<code>-O</code><i>level</i>] <br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-W</code><i>warn</i>...]&nbsp;[<code>-pedantic</code>] <br />
@@ -17,6 +18,7 @@ description: "gfortran – GNU Fortran compiler"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-m</code><i>machine-option</i>...] <br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;[<code>-o</code>&nbsp;<i>outfile</i>]&nbsp;<i>infile</i>... </p>
 <p> Only the most useful options are listed here; see below for the remainder.  </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>gfortran</code> command supports all the options supported by the <code>gcc</code> command. Only options specific to <font SIZE="-1">GNU</font> Fortran are documented here. </p>
 <p> All <font SIZE="-1">GCC</font> and <font SIZE="-1">GNU</font> Fortran options are accepted both by <code>gfortran</code> and by <code>gcc</code> (as well as any other drivers built at the same time, such as <code>g++</code>), since adding <font SIZE="-1">GNU</font> Fortran to the <font SIZE="-1">GCC</font> distribution enables acceptance of <font SIZE="-1">GNU</font> Fortran options by all of the relevant drivers. </p>
 <p> In some cases, options have positive and negative forms; the negative form of <code>-ffoo</code> would be <code>-fno-foo</code>. This manual documents only one of these two forms, whichever one is not the default.  </p>

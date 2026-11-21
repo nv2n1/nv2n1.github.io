@@ -1,5 +1,4 @@
 ---
-
 title: "npm-ci(1)"
 name: "npm-ci"
 section: "1"
@@ -8,6 +7,7 @@ url: "/docs/linux/man/1-npm-ci/"
 description: "npm-ci – Install a project with a clean slate"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>npm-ci</code> &#8211; Install a project with a clean slate </p>
 <h3>Synopsis</h3>
 <dl>

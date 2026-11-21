@@ -1,5 +1,4 @@
 ---
-
 title: "g_bond(1)"
 name: "g_bond"
 section: "1"
@@ -11,7 +10,9 @@ description: "g_bond – calculates distances between atoms"
 <h2>NAME</h2>
 <p> g_bond &#8211; calculates distances between atoms </p>
 <p> <code>VERSION 4.0.1</code></p>
+<h2>SYNOPSIS</h2>
 <p> <code>g_bond</code> <code>-f</code><i> traj.xtc </i> <code>-n</code><i> index.ndx </i> <code>-s</code><i> topol.tpr </i> <code>-o</code><i> bonds.xvg </i> <code>-l</code><i> bonds.log </i> <code>-d</code><i> distance.xvg </i> <code>-[no]h</code><i></i> <code>-nice</code><i> int </i> <code>-b</code><i> time </i> <code>-e</code><i> time </i> <code>-dt</code><i> time </i> <code>-[no]w</code><i></i> <code>-[no]xvgr</code><i></i> <code>-blen</code><i> real </i> <code>-tol</code><i> real </i> <code>-[no]aver</code><i></i> <code>-[no]averdist</code><i></i></p>
+<h2>DESCRIPTION</h2>
 <p> g_bond makes a distribution of bond lengths. If all is well a gaussian distribution should be made when using a harmonic potential. bonds are read from a single group in the index file in order i1-j1 i2-j2 thru in-jn. </p>
 <p> <code> -tol</code> gives the half-width of the distribution as a fraction of the bondlength (<code> -blen</code>). That means, for a bond of 0.2 a tol of 0.1 gives a distribution from 0.18 to 0.22. </p>
 <p> Option <code> -d</code> plots all the distances as a function of time. This requires a structure file for the atom and residue names in the output. If however the option <code> -averdist</code> is given (as well or separately) the average bond length is plotted instead.</p>

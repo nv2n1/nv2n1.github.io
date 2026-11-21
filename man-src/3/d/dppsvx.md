@@ -1,5 +1,4 @@
 ---
-
 title: "dppsvx(3)"
 name: "dppsvx"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dppsvx/"
 description: "dppsvx.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dppsvx.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dppsvx</code> (FACT, UPLO, N, NRHS, AP, AFP, EQUED, S, B, LDB, X, LDX, RCOND, FERR, BERR, WORK, IWORK, INFO)<br />
  <i></i><code> DPPSVX computes the solution to system of linear equations A * X = B for OTHER matrices</code></p>

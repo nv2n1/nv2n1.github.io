@@ -1,5 +1,4 @@
 ---
-
 title: "pkcsicsf(1)"
 name: "pkcsicsf"
 section: "1"
@@ -10,7 +9,9 @@ description: "pkcsicsf – configuration utility for the ICSF token"
 
 <h2>NAME</h2>
 <p> pkcsicsf &#8211; configuration utility for the ICSF token </p>
+<h2>SYNOPSIS</h2>
 <p> <code>pkcsicsf</code> [<code>-h</code>] [<code>-l|-a</code> <i>token name</i>] [<code>-b</code> <i>BINDDN</i>] [<code>-c</code> <i>client-cert-file</i>] [<code>-C</code> <i>CA-cert-file</i>] [<code>-k</code> <i>privatekey</i>] [<code>-m</code> <i>mechanism</i>] [<code>-u</code> <i>URI</i>] </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>pkcsicsf</code> utility lists available ICSF tokens and allows user to add one specific ICSF token to opencryptoki. </p>
 <p> The ICSF token must be added first to opencryptoki. This creates an entry in the opencryptoki.conf file for the ICSF token. It also creates<br />
 &nbsp;<wbr>a&nbsp;<wbr><i>token_name.conf</i>&nbsp;<wbr>configuration file in the same directory as the opencryptoki.conf file, containing ICSF specific information. This information is read by the ICSF token. </p>

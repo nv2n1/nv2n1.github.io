@@ -1,5 +1,4 @@
 ---
-
 title: "gpgtar(1)"
 name: "gpgtar"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-gpgtar/"
 description: "gpgtar – Encrypt or sign files into an archive"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>gpgtar</code> &#8211; Encrypt or sign files into an archive </p>
+<h2>SYNOPSIS</h2>
 <p> <code>gpgtar</code> [<i>options</i>] <i>filename1</i> <i>[ filename2, &#8230; ]</i> <i>directory1</i> <i>[ directory2, &#8230; ]</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>gpgtar</code> encrypts or signs files into an archive. It is an gpg-ized tar using the same format as used by PGP&#8217;s PGP Zip. </p>
 <h2>OPTIONS</h2>
 <p> <code>gpgtar</code> understands these options: </p>

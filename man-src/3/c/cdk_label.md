@@ -1,5 +1,4 @@
 ---
-
 title: "cdk_label(3)"
 name: "cdk_label"
 section: "3"
@@ -10,6 +9,7 @@ description: "cdk_label – Creates a managed curses label widget."
 
 <h2>NAME</h2>
 <p> cdk_label &#8211; Creates a managed curses label widget.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>cc</code> [ <i>flag</i> &#8230; ] <i>file</i> &#8230; <code>-lcdk</code> [ <i>library</i> &#8230; ] </p>
 <p> #include &lt;cdk.h&gt; </p>
 <pre><code>
@@ -87,6 +87,7 @@ char waitCDKLabel(
     char key);
 </code></pre>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> The Cdk label widget creates a pop-up label window. The following functions create or manipulate the Cdk label widget.</p>
 <h2>AVAILABLE FUNCTIONS</h2>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "ftpcount(1)"
 name: "ftpcount"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ftpcount/"
 description: "ftpcount – show current number of connections for each proftpd server configuration"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ftpcount &#8211; show current number of connections for each proftpd server configuration </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ftpcount</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>ftpcount</code> command shows the current number of connections per server and virtualhost/anonymous configuration defined in the proftpd.conf file. Connections spawned by inetd are counted separately from those created by a master proftpd <i>standalone</i> server.</p>
 <h2>OPTIONS</h2>
 <dl>

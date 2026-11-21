@@ -1,5 +1,4 @@
 ---
-
 title: "gpsflash(1)"
 name: "gpsflash"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-gpsflash/"
 description: "gpsflash – 2-stage firmware loader for GPS chipsets"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gpsflash &#8211; 2-stage firmware loader for GPS chipsets </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>gpsflash</code> [-n] [-l&nbsp;<wbr><i>loader-file</i>] -f&nbsp;<wbr><i>firmware-file</i> {<i>tty</i>}</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This program is a firmware loader for GPSes connected to your host computer via serial or USB port. Presently it supports only SiRF GPSes. Other GPSes may be supported in the future if the vendors cooperate. </dd>
 <p> For operation, this program requires a flashloader binary (found by default in a file named <i>dlgsp2.bin</i>) and a firmware image. This program first ships a command that tells the GPS a flashloader image will follow, then gives the GPS time to reboot into the flashloader. The flashloader then accepts S-records from the serial or USB port until it sees a termination record, at which point it writes the new firmware into the GPS&#8217;s non-volatile memory and reboots the chip into the new firmware. </p>
 <p> There is one required argument, specifying the serial device to which the GPS is connected. </p>

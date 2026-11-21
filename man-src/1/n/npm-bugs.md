@@ -1,5 +1,4 @@
 ---
-
 title: "npm-bugs(1)"
 name: "npm-bugs"
 section: "1"
@@ -8,6 +7,7 @@ url: "/docs/linux/man/1-npm-bugs/"
 description: "npm-bugs – Bugs for a package in a web browser maybe"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>npm-bugs</code> &#8211; Bugs for a package in a web browser maybe </p>
 <h3>Synopsis</h3>
 <dl>

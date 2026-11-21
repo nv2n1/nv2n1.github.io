@@ -1,5 +1,4 @@
 ---
-
 title: "calibre-debug(1)"
 name: "calibre-debug"
 section: "1"
@@ -8,9 +7,11 @@ url: "/docs/linux/man/1-calibre-debug/"
 description: "calibre-debug – run an embedded python interpreter for debug purposes"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code> calibre-debug </code>&#8211; run an embedded python interpreter for debug purposes </p>
 <h2>USAGE</h2>
 <p> calibre-debug [options]</p>
+<h2>DESCRIPTION</h2>
 <p> Run an embedded python interpreter. </p>
 <p> Whenever you pass arguments to calibre-debug that have spaces in them, enclose the arguments in quotation marks.</p>
 <h2>MAIN OPTIONS</h2>

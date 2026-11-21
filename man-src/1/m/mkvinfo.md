@@ -1,5 +1,4 @@
 ---
-
 title: "mkvinfo(1)"
 name: "mkvinfo"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-mkvinfo/"
 description: "mkvinfo – Print information about elements in Matroska(TM) files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> mkvinfo &#8211; Print information about elements in Matroska(TM) files </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>mkvinfo</code> [options] {source-filename}</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>This program lists all elements contained in a Matroska(TM). The output can be limited to a list of tracks in the file including information about the codecs used. </dd>
 <p> <code>-g</code>, <code>&#8211;gui</code></p>
 <dl>

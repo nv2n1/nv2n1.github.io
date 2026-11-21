@@ -1,5 +1,4 @@
 ---
-
 title: "pricer(3)"
 name: "pricer"
 section: "3"
@@ -7,8 +6,8 @@ letter: "p"
 url: "/docs/linux/man/3-pricer/"
 description: "QuantLib::FloatingRateCoupon – base floating-rate coupon class"
 ---
-
 <p>QuantLib::FloatingRateCoupon &#8211; base floating-rate coupon class </p>
+<h2>SYNOPSIS</h2>
 <p> <br />
  </p>
 <p>#include &lt;ql/cashflows/floatingratecoupon.hpp&gt; </p>

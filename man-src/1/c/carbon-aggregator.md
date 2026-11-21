@@ -1,5 +1,4 @@
 ---
-
 title: "carbon-aggregator(1)"
 name: "carbon-aggregator"
 section: "1"
@@ -14,6 +13,7 @@ description: "carbon-aggregator – buffer metrics over time before reporting to
 <pre>
 carbon-aggregator [options] start
 </pre>
+<h2>DESCRIPTION</h2>
 <p> carbon-aggregator can be run in front of carbon-cache to buffer metrics over time before reporting them into whisper. </p>
 <p> The options are described below.</p>
 <h2>OPTIONS</h2>

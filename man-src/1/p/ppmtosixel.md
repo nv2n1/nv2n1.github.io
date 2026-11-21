@@ -1,5 +1,4 @@
 ---
-
 title: "ppmtosixel(1)"
 name: "ppmtosixel"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ppmtosixel/"
 description: "ppmtosixel – convert a portable pixmap into DEC sixel format"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ppmtosixel &#8211; convert a portable pixmap into DEC sixel format </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ppmtosixel</code> [<code>-raw</code>] [<code>-margin</code>] [<i>ppmfile</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Reads a portable pixmap as input. Produces sixel commands (SIX) as output. The output is formatted for color printing, e.g. for a DEC LJ250 color inkjet printer. </p>
 <p> If RGB values from the PPM file do not have maxval=100, the RGB values are rescaled. A printer control header and a color assignment table begin the SIX file. Image data is written in a compressed format by default. A printer control footer ends the image file.</p>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "fdopen(3)"
 name: "fdopen"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-fdopen/"
 description: "fopen, fdopen, freopen – stream open functions"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fopen, fdopen, freopen &#8211; stream open functions </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdio.h&gt;
 FILE *fopen(const char *pathname, const char *mode);
@@ -16,6 +18,7 @@ FILE *freopen(const char *pathname, const char *mode, FILE *stream);
 </code></pre>
 <p> Feature Test Macro Requirements for glibc (see <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7)): </p>
 <p> <code>fdopen</code>(): _POSIX_C_SOURCE</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>fopen</code>() function opens the file whose name is the string pointed to by <i>pathname</i> and associates a stream with it. </p>
 <p> The argument <i>mode</i> points to a string beginning with one of the following sequences (possibly followed by additional characters, as described below):</p>
 <dl>

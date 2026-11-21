@@ -1,5 +1,4 @@
 ---
-
 title: "memalign(3)"
 name: "memalign"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-memalign/"
 description: "posix_memalign, aligned_alloc, memalign, valloc, pvalloc – allocate aligned memory"
 ---
 
+<h2 class="name">NAME</h2>
+<p> posix_memalign, aligned_alloc, memalign, valloc, pvalloc &#8211; allocate aligned memory </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;stdlib.h&gt;
 int posix_memalign(void **memptr, size_t alignment, size_t size);
@@ -33,6 +35,7 @@ void *pvalloc(size_t size);
 <dd> _BSD_SOURCE || _XOPEN_SOURCE&nbsp;&gt;=&nbsp;500<br />
  (The (nonstandard) header file <i>&lt;malloc.h&gt;</i> also exposes the declaration of <code>valloc</code>(); no feature test macros are required.)</dd></dl>
 </dl>
+<h2>DESCRIPTION</h2>
 <p> The function <code>posix_memalign</code>() allocates <i>size</i> bytes and places the address of the allocated memory in <i>*memptr</i>. The address of the allocated memory will be a multiple of <i>alignment</i>, which must be a power of two and a multiple of <i>sizeof(void&nbsp;*)</i>. This address can later be successfully passed to <code><a href="/docs/linux/man/3-free/">free</a></code>(3). If <i>size</i> is 0, then the value placed in <i>*memptr</i> is either NULL or a unique pointer value. </p>
 <p> The obsolete function <code>memalign</code>() allocates <i>size</i> bytes and returns a pointer to the allocated memory. The memory address will be a multiple of <i>alignment</i>, which must be a power of two. </p>
 <p> The function <code>aligned_alloc</code>() is the same as <code>memalign</code>(), except for the added restriction that <i>size</i> should be a multiple of <i>alignment</i>. </p>

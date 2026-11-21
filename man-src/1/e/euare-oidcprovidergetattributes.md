@@ -1,5 +1,4 @@
 ---
-
 title: "euare-oidcprovidergetattributes(1)"
 name: "euare-oidcprovidergetattributes"
 section: "1"
@@ -10,10 +9,12 @@ description: "euare-oidcprovidergetattributes – Describe an OpenID Connect pro
 
 <h2>NAME</h2>
 <p> euare-oidcprovidergetattributes &#8211; Describe an OpenID Connect provider</p>
+<h2>SYNOPSIS</h2>
 <p> euare-oidcprovidergetattributes [&#8211;as-account ACCOUNT] [-U URL]</p>
 <dl>
 <dt>[&#8211;region USER [at] REGION] [-I KEY_ID]</dt>
 <dd> [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] OIDC</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Describe an OpenID Connect provider</p>
 <h3>positional arguments:</h3>
 <dl>

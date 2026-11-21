@@ -1,5 +1,4 @@
 ---
-
 title: "git-delete-branch(1)"
 name: "git-delete-branch"
 section: "1"
@@ -10,7 +9,9 @@ description: "git-delete-branch – Delete branches"
 
 <h2>NAME</h2>
 <p> <code>git-delete-branch</code> &#8211; Delete branches</p>
+<h2>SYNOPSIS</h2>
 <p> <code>git-delete-branch</code> &lt;branchname&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> Deletes local and remote branch named &lt;branchname&gt;. Note that local deletion fails if the branch is checked out.</p>
 <h2>OPTIONS</h2>
 <p> &lt;branchname&gt; </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "gsm(3)"
 name: "gsm"
 section: "3"
@@ -11,7 +10,11 @@ url: "/docs/linux/man/3-gsm/"
 
  gsm_create, gsm_destroy, gsm_encode, gsm_decode --- GSM 06.10 lossy sound compression
 
-#include &quot;gsm.h&quot; 
+<h2>SYNOPSIS</h2>
+
+ 
+
+ #include &quot;gsm.h&quot; 
 
  gsm gsm_create(); 
 
@@ -28,7 +31,9 @@ url: "/docs/linux/man/3-gsm/"
  void gsm_destroy(handle) 
  gsm handle; 
 
-Gsm is an implementation of the final draft GSM 06.10 standard for full-rate speech transcoding. 
+<h2>DESCRIPTION</h2>
+
+ Gsm is an implementation of the final draft GSM 06.10 standard for full-rate speech transcoding. 
 
  gsm_create() initializes a gsm pass and returns a 'gsm' object which can be used as a handle in subsequent calls to gsm_decode(), gsm_encode() or gsm_destroy(). 
 

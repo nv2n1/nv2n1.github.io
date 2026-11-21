@@ -1,5 +1,4 @@
 ---
-
 title: "ctfttr(3)"
 name: "ctfttr"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-ctfttr/"
 description: "ctfttr.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ctfttr.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>ctfttr</code> (TRANSR, UPLO, N, ARF, A, LDA, INFO)<br />
  <i></i><code>CTFTTR</code> copies a triangular matrix from the rectangular full packed format (TF) to the standard full format (TR).</p>

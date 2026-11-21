@@ -1,5 +1,4 @@
 ---
-
 title: "fusioninventory-agent(1)"
 name: "fusioninventory-agent"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-fusioninventory-agent/"
 description: "fusioninventory-agent – FusionInventory agent For Linux/UNIX, Windows and MacOSX"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fusioninventory-agent &#8211; FusionInventory agent For Linux/UNIX, Windows and MacOSX </p>
+<h2>SYNOPSIS</h2>
 <p> <code>fusioninventory-agent</code> [options] [&#8211;server server|&#8211;local path] </p>
 <pre><code>
   Target definition options:
@@ -75,6 +77,7 @@ description: "fusioninventory-agent – FusionInventory agent For Linux/UNIX, Wi
                                      !!! Use it at your own risk as you may
                                      experiment perl crash under win32 !!!
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <i>fusioninventory-agent</i> agent is a generic multi-platform agent. It can perform a large array of management tasks, such as local inventory, software deployment or network discovery. It can be used either standalone, or in combination with a compatible server (<font SIZE="-1">OCS, GLPI, OTRS</font>) acting as a centralized control point.</p>
 <h2>OPTIONS</h2>
 <p> Most of the options are available in a <i>short</i> form and a <i>long</i> form. For example, the two lines below are all equivalent: </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "quilt(1)"
 name: "quilt"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-quilt/"
 description: "quilt – tool to manage series of patches"
 ---
 
+<h2 class="name">NAME</h2>
+<p> quilt &#8211; tool to manage series of patches</p>
+<h2>SYNOPSIS</h2>
 <p> <code>quilt</code> [-h] command [options] </p>
+<h2>DESCRIPTION</h2>
 <p> Quilt is a tool to manage large sets of patches by keeping track of the changes each patch makes. Patches can be applied, un-applied, refreshed, etc. The key philosophical concept is that your primary output is patches. </p>
 <p> With quilt, all work occurs within a single directory tree. Commands can be invoked from anywhere within the source tree. They are of the form <code>quilt cmd</code> similar to CVS, svn or git commands. They can be abbreviated as long as the specified part of the command is unique. All commands print some help text with <code>quilt cmd -h.</code> </p>
 <p> Quilt manages a stack of patches. Patches are applied incrementally on top of the base tree plus all preceding patches. They can be pushed on top of the stack (<code>quilt push</code>), and popped off the stack (<code>quilt pop</code>). Commands are available for querying the contents of the series file (<code>quilt series</code>, see below), the contents of the stack (<code>quilt applied</code>,<code> quilt previous</code>,<code> quilt top</code>), and the patches that are not applied at a particular moment (<code>quilt next</code>,<code> quilt unapplied</code>). By default, most commands apply to the topmost patch on the stack. </p>

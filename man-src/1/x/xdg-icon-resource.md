@@ -1,5 +1,4 @@
 ---
-
 title: "xdg-icon-resource(1)"
 name: "xdg-icon-resource"
 section: "1"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/1-xdg-icon-resource/"
 description: "xdg-icon-resource – command line tool for (un)installing icon resources"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xdg-icon-resource &#8211; command line tool for (un)installing icon resources </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>xdg-icon-resource</code> install [<code>&#8211;noupdate</code>] [<code>&#8211;novendor</code>] [<code>&#8211;theme&nbsp;</code><i>theme</i>] [<code>&#8211;context&nbsp;</code><i>context</i>] [<code>&#8211;mode&nbsp;</code><i>mode</i>] <code>&#8211;size&nbsp;</code><i>size</i> <i>icon-file</i> [<i>icon-name</i>]</dt>
 <dt> <code>xdg-icon-resource</code> uninstall [<code>&#8211;noupdate</code>] [<code>&#8211;theme&nbsp;</code><i>theme</i>] [<code>&#8211;context&nbsp;</code><i>context</i>] [<code>&#8211;mode&nbsp;</code><i>mode</i>] <code>&#8211;size&nbsp;</code><i>size</i> <i>icon-name</i></dt>
 <dt> <code>xdg-icon-resource</code> forceupdate [<code>&#8211;theme&nbsp;</code><i>theme</i>] [<code>&#8211;mode&nbsp;</code><i>mode</i>]</dt>
 <dt> <code>xdg-icon-resource</code> {<code>&#8211;help</code> | <code>&#8211;manual</code> | <code>&#8211;version</code>}</dt></dl>
+<h2>DESCRIPTION</h2>
 <dd>The xdg-icon-resource program can be used to install icon resources into the desktop icon system in order to illustrate menu entries, to depict desktop icons or to graphically represent file types. </dd>
 <p> The desktop icon system identifies icons by name. Depending on the required size, the choice of icon theme and the context in which the icon is used, the desktop icon system locates an appropriate icon resource to depict an icon. Icon resources can be XPM files or PNG files. </p>
 <p> The desktop icon system works according to the XDG Icon Theme Specification at m[blue]<code><a rel="nofollow" href="http://www.freedesktop.org/wiki/Specifications/icon-theme-spec">http://www.freedesktop.org/wiki/Specifications/icon-theme-spec</a></code>m[]</p>

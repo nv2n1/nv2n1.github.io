@@ -1,5 +1,4 @@
 ---
-
 title: "vinagre(1)"
 name: "vinagre"
 section: "1"
@@ -12,6 +11,7 @@ description: "vinagre – a remote desktop viewer for the GNOME Desktop"
 <p> vinagre &#8211; a remote desktop viewer for the GNOME Desktop</p>
 <h2>SYNOPSYS</h2>
 <p> <code>vinagre</code> [<code>OPTIONS</code>] [<i>server</i>][::<i>port</i>|:display]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>vinagre</code> is a remote desktop viewer for the GNOME desktop. It can support many protocols using a plugin system. Current plugins exist for VNC and SSH. Vinagre has many features, among others:. </p>
 <p> &#8211; Support for multiple connections simultaneously </p>
 <p> &#8211; Bookmarks and history support </p>

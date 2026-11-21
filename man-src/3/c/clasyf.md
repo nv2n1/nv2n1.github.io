@@ -1,5 +1,4 @@
 ---
-
 title: "clasyf(3)"
 name: "clasyf"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-clasyf/"
 description: "clasyf.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> clasyf.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clasyf</code> (UPLO, N, NB, KB, A, LDA, IPIV, W, LDW, INFO)<br />
  <i></i><code>CLASYF</code> computes a partial factorization of a complex symmetric matrix using the Bunch-Kaufman diagonal pivoting method.</p>

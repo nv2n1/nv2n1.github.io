@@ -1,5 +1,4 @@
 ---
-
 title: "zeitgeist-datahub(1)"
 name: "zeitgeist-datahub"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-zeitgeist-datahub/"
 description: "zeitgeist-datahub – passive loggers for Zeitgeist"
 ---
 
+<h2 class="name">NAME</h2>
+<p> zeitgeist-datahub &#8211; passive loggers for Zeitgeist</p>
+<h2>SYNOPSIS</h2>
 <p> <code>zeitgeist-datahub</code> <i>[OPTION]</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>zeitgeist-datahub</code> is a daemon which centralizes all passive data sources into a single process, and interfaces between said data sources (also known as <i>loggers</i>) and <code>zeitgeist-daemon</code> (with which it communicates via D-Bus). </p>
 <p> <code>Passive</code> data sources are those which run in the background and look for activities independently to the programs they monitor, whereas Zeitgeist can also work with <code>active</code> data sources which are those in-build into other applications (either natively or through extensions). </p>
 <h2>OPTIONS</h2>

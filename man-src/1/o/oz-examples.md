@@ -1,5 +1,4 @@
 ---
-
 title: "oz-examples(1)"
 name: "oz-examples"
 section: "1"
@@ -7,9 +6,14 @@ letter: "o"
 url: "/docs/linux/man/1-oz-examples/"
 ---
 
-oz-examples - example TDL files for Oz.
+<h2 class="name">NAME</h2>
+ 
 
-The <i><a HREF="/docs/linux/man/1-oz-install/">oz-install</a>(1)</i> , <i><a HREF="/docs/linux/man/1-oz-customize/">oz-customize</a>(1)</i> , and <i><a HREF="/docs/linux/man/1-oz-generate-icicle/">oz-generate-icicle</a>(1)</i> man pages explain the command-line usage of the Oz commands. One of the required input parameters to all of the above commands is a TDL (Template Description Language) file, which describes the OS the user wants to install, where to get the media from, and any additional packages or actions the user wants to take on the operating system. This man page describes a number of TDL examples and what happens when they are used. Since the TDL is XML, standard XPath notation is used to describe various elements of the XML. 
+ oz-examples - example TDL files for Oz.
+
+<h2>DESCRIPTION</h2>
+
+ The <i><a HREF="/docs/linux/man/1-oz-install/">oz-install</a>(1)</i> , <i><a HREF="/docs/linux/man/1-oz-customize/">oz-customize</a>(1)</i> , and <i><a HREF="/docs/linux/man/1-oz-generate-icicle/">oz-generate-icicle</a>(1)</i> man pages explain the command-line usage of the Oz commands. One of the required input parameters to all of the above commands is a TDL (Template Description Language) file, which describes the OS the user wants to install, where to get the media from, and any additional packages or actions the user wants to take on the operating system. This man page describes a number of TDL examples and what happens when they are used. Since the TDL is XML, standard XPath notation is used to describe various elements of the XML. 
 
 <h2>EXAMPLE 1 - Minimal guest</h2>
 

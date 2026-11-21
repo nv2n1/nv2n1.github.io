@@ -1,5 +1,4 @@
 ---
-
 title: "achfile(1)"
 name: "achfile"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-achfile/"
 description: "achfile – change type and/or creator of Apple Macintosh files (netatalk format)"
 ---
 
+<h2 class="name">NAME</h2>
+<p> achfile &#8211; change type and/or creator of Apple Macintosh files (netatalk format) </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>achfile</code> [-t&nbsp;<wbr><i>type</i>] [-c&nbsp;<wbr><i>creator</i>] <i>file</i>&#8230;</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>achfile</code></p>
 <dd>changes the Macintosh type and/or creator of the <i>file</i> arguments which have a corresponding .AppleDouble file.</dd>
 <h2>OPTIONS</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "high(3)"
 name: "high"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-high/"
 description: "QuantLib::IntervalPrice – interval price"
 ---
 
+<h2 class="name">NAME</h2>
+<p> QuantLib::IntervalPrice &#8211; interval price </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/prices.hpp&gt; </p>
 <h3>Public Types</h3>
 <p> enum <code>Type</code> { <code>Open</code>, <code>Close</code>, <code>High</code>, <code>Low</code> } </p>

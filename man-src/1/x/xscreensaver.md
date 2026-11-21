@@ -1,5 +1,4 @@
 ---
-
 title: "xscreensaver(1)"
 name: "xscreensaver"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-xscreensaver/"
 description: "xscreensaver – extensible screen saver and screen locking framework"
 ---
 
+<h2 class="name">NAME</h2>
+<p> xscreensaver &#8211; extensible screen saver and screen locking framework </p>
+<h2>SYNOPSIS</h2>
 <p> <code>xscreensaver</code> [-display <i>host:display.screen</i>] [-verbose] [-no-splash] [-no-capture-stderr] [-log <i>filename</i>]</p>
+<h2>DESCRIPTION</h2>
 <p> The <i>xscreensaver</i> program waits until the keyboard and mouse have been idle for a period, and then runs a graphics demo chosen at random. It turns off as soon as there is any mouse or keyboard activity. </p>
 <p> This program can lock your terminal in order to prevent others from using it, though its default mode of operation is merely to display pretty pictures on your screen when it is not in use. </p>
 <p> It also provides configuration and control of your monitor&#8217;s power-saving features.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "qmicli(1)"
 name: "qmicli"
 section: "1"
@@ -10,6 +9,7 @@ description: "qmicli – Control QMI devices"
 
 <h2>NAME</h2>
 <p> qmicli &#8211; Control QMI devices</p>
+<h2>DESCRIPTION</h2>
 <h3>Usage:</h3>
 <dl>
 <dt>

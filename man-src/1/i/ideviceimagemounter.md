@@ -1,5 +1,4 @@
 ---
-
 title: "ideviceimagemounter(1)"
 name: "ideviceimagemounter"
 section: "1"
@@ -10,7 +9,9 @@ description: "ideviceimagemounter – Mount disk images on the device."
 
 <h2>NAME</h2>
 <p> ideviceimagemounter &#8211; Mount disk images on the device.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ideviceimagemounter</code> [OPTIONS] IMAGE_FILE IMAGE_SIGNATURE_FILE </p>
+<h2>DESCRIPTION</h2>
 <p> Mounts the specified disk image on the device. </p>
 <h2>OPTIONS</h2>
 <dl>

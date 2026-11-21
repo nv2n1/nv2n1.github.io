@@ -1,5 +1,4 @@
 ---
-
 title: "dvipos(1)"
 name: "dvipos"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-dvipos/"
 description: "dvipos – compute positions in a DVI file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dvipos &#8211; compute positions in a DVI file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>dvipos</code> [ <i>OPTION</i>&#8230; ] <i>infile[.dvi]</i> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>dvipos</code> parses a DVI file looking for <i>pos:</i> specials. It currently recognizes <i>pos:pxy</i>, <i>pos:pxywhd</i>, <i>pos:pxyplus</i>, <i>pos:begbox</i>, <i>pos:endbox</i>, <i>pos:beglines</i>, and <i>pos:endlines</i>. It then outputs the information from those specials along with information that only a DVI postprocessor could determine, such as the current <i>x</i> and <i>y</i> location. The output looks like: </p>
 <pre><code>
 \pospxywhd{text : 54} {54} {10663sp} {8535sp} {21326sp} {34081sp}

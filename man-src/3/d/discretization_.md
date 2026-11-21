@@ -1,5 +1,4 @@
 ---
-
 title: "discretization_(3)"
 name: "discretization_"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-discretization_/"
 description: "QuantLib::StochasticProcess – multi-dimensional stochastic process class."
 ---
 
+<h2 class="name">NAME</h2>
+<p> QuantLib::StochasticProcess &#8211; multi-dimensional stochastic process class. </p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;ql/stochasticprocess.hpp&gt; </p>
 <p> Inherits <code>QuantLib::Observer</code>, and <code>QuantLib::Observable</code>. </p>
 <p> Inherited by <code>ForwardMeasureProcess</code>, <code>G2Process</code>, <code>GJRGARCHProcess</code>, <code>HestonProcess</code>, JointStochasticProcess, <code>LiborForwardModelProcess</code>, <code>StochasticProcess1D</code>, and <code>StochasticProcessArray</code>. </p>

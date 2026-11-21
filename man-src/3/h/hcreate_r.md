@@ -1,5 +1,4 @@
 ---
-
 title: "hcreate_r(3)"
 name: "hcreate_r"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-hcreate_r/"
 description: "hcreate, hdestroy, hsearch, hcreate_r, hdestroy_r, hsearch_r – hash table management"
 ---
 
+<h2 class="name">NAME</h2>
+<p> hcreate, hdestroy, hsearch, hcreate_r, hdestroy_r, hsearch_r &#8211; hash table management </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;search.h&gt;
 int hcreate(size_t nel);
@@ -20,6 +22,7 @@ int hsearch_r(ENTRY item, ACTION action, ENTRY **retval,
               struct hsearch_data *htab);
 void hdestroy_r(struct hsearch_data *htab);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The three functions <code>hcreate</code>(), <code>hsearch</code>(), and <code>hdestroy</code>() allow the caller to create and manage a hash search table containing entries consisting of a key (a string) and associated data. Using these functions, only one hash table can be used at a time. </p>
 <p> The three functions <code>hcreate_r</code>(), <code>hsearch_r</code>(), <code>hdestroy_r</code>() are reentrant versions that allow a program to use more than one hash search table at the same time. The last argument, <i>htab</i>, points to a structure that describes the table on which the function is to operate. The programmer should treat this structure as opaque (i.e., do not attempt to directly access or modify the fields in this structure). </p>
 <p> First a hash table must be created using <code>hcreate</code>(). The argument <i>nel</i> specifies the maximum number of entries in the table. (This maximum cannot be changed later, so choose it wisely.) The implementation may adjust this value upward to improve the performance of the resulting hash table. </p>

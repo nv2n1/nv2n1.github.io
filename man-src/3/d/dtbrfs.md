@@ -1,5 +1,4 @@
 ---
-
 title: "dtbrfs(3)"
 name: "dtbrfs"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dtbrfs/"
 description: "dtbrfs.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dtbrfs.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dtbrfs</code> (UPLO, TRANS, DIAG, N, KD, NRHS, AB, LDAB, B, LDB, X, LDX, FERR, BERR, WORK, IWORK, INFO)<br />
  <i></i><code>DTBRFS</code></p>

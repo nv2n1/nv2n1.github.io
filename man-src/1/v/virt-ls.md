@@ -1,5 +1,4 @@
 ---
-
 title: "virt-ls(1)"
 name: "virt-ls"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-virt-ls/"
 description: "virt-ls – List files in a virtual machine"
 ---
 
+<h2 class="name">NAME</h2>
+<p> virt-ls &#8211; List files in a virtual machine </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 virt - ls[--options] - d domname directory[directory...] virt - ls[--options] - a disk.img[-a disk.img...] directory[directory...]
 </code></pre>
@@ -15,6 +17,7 @@ virt - ls[--options] - d domname directory[directory...] virt - ls[--options] - 
 <pre><code>
 virt - ls[--options] domname directory virt - ls[--options] disk.img[disk.img...] directory
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <tt>&quot;virt-ls&quot;</tt> lists filenames, file sizes, checksums, extended attributes and more from a virtual machine or disk image. </p>
 <p> Multiple directory names can be given, in which case the output from each is concatenated. </p>
 <p> To list directories from a libvirt guest use the <i>-d</i> option to specify the name of the guest. For a disk image, use the <i>-a</i> option. </p>

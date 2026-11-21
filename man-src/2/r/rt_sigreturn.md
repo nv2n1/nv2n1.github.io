@@ -1,5 +1,4 @@
 ---
-
 title: "rt_sigreturn(2)"
 name: "rt_sigreturn"
 section: "2"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/2-rt_sigreturn/"
 description: "sigreturn, rt_sigreturn – return from signal handler and cleanup stack frame"
 ---
 
+<h2 class="name">NAME</h2>
+<p> sigreturn, rt_sigreturn &#8211; return from signal handler and cleanup stack frame </p>
+<h2>SYNOPSIS</h2>
 <p> <code>int sigreturn(&#8230;);</code></p>
+<h2>DESCRIPTION</h2>
 <p> If the Linux kernel determines that an unblocked signal is pending for a process, then, at the next transition back to user mode in that process (e.g., upon return from a system call or when the process is rescheduled onto the CPU), it creates a new frame on the user-space stack where it saves various pieces of process context (processor status word, registers, signal mask, and signal stack settings). </p>
 <p> The kernel also arranges that, during the transition back to user mode, the signal handler is called, and that, upon return from the handler, control passes to a piece of user-space code commonly called the &quot;signal trampoline&quot;. The signal trampoline code in turn calls <code>sigreturn</code>(). </p>
 <p> This <code>sigreturn</code>() call undoes everything that was done&#8212;changing the process&#8217;s signal mask, switching signal stacks (see <code><a href="/docs/linux/man/2-sigaltstack/">sigaltstack</a></code>(2))&#8212;in order to invoke the signal handler. Using the information that was earlier saved on the user-space stack <code>sigreturn</code>() restores the process&#8217;s signal mask, switches stacks, and restores the process&#8217;s context (processor flags and registers, including the stack pointer and instruction pointer), so that the process resumes execution at the point where it was interrupted by the signal.</p>

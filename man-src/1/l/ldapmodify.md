@@ -1,5 +1,4 @@
 ---
-
 title: "ldapmodify(1)"
 name: "ldapmodify"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-ldapmodify/"
 description: "ldapmodify, ldapadd – LDAP modify entry and LDAP add entry tools"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ldapmodify, ldapadd &#8211; LDAP modify entry and LDAP add entry tools </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ldapmodify</code> [<code>-V</code>[<code>V</code>]] [<code>-d</code><i>&nbsp;<wbr>debuglevel</i>] [<code>-n</code>] [<code>-v</code>] [<code>-a</code>] [<code>-c</code>] [<code>-f</code><i>&nbsp;<wbr>file</i>] [<code>-S</code><i>&nbsp;<wbr>file</i>] [<code>-M</code>[<code>M</code>]] [<code>-x</code>] [<code>-D</code><i>&nbsp;<wbr>binddn</i>] [<code>-W</code>] [<code>-w</code><i>&nbsp;<wbr>passwd</i>] [<code>-y</code><i>&nbsp;<wbr>passwdfile</i>] [<code>-H</code><i>&nbsp;<wbr>ldapuri</i>] [<code>-h</code><i>&nbsp;<wbr>ldaphost</i>] [<code>-p</code><i>&nbsp;<wbr>ldapport</i>] [<code>-P</code>&nbsp;<wbr>{<code>2</code>|<code>3</code>}] [<code>-e</code>&nbsp;<wbr>[<code>!</code>]<i>ext</i>[<code>=</code><i>extparam</i>]] [<code>-E</code>&nbsp;<wbr>[<code>!</code>]<i>ext</i>[<code>=</code><i>extparam</i>]] [<code>-o</code><i>&nbsp;<wbr>opt</i>[=<i>optparam</i>]] [<code>-O</code><i>&nbsp;<wbr>security-properties</i>] [<code>-I</code>] [<code>-Q</code>] [<code>-N</code>] [<code>-U</code><i>&nbsp;<wbr>authcid</i>] [<code>-R</code><i>&nbsp;<wbr>realm</i>] [<code>-X</code><i>&nbsp;<wbr>authzid</i>] [<code>-Y</code><i>&nbsp;<wbr>mech</i>] [<code>-Z</code>[<code>Z</code>]] </p>
 <p> <code>ldapadd</code> [<code>-V</code>[<code>V</code>]] [<code>-d</code><i>&nbsp;<wbr>debuglevel</i>] [<code>-n</code>] [<code>-v</code>] [<code>-c</code>] [<code>-f</code><i>&nbsp;<wbr>file</i>] [<code>-S</code><i>&nbsp;<wbr>file</i>] [<code>-M</code>[<code>M</code>]] [<code>-x</code>] [<code>-D</code><i>&nbsp;<wbr>binddn</i>] [<code>-W</code>] [<code>-w</code><i>&nbsp;<wbr>passwd</i>] [<code>-y</code><i>&nbsp;<wbr>passwdfile</i>] [<code>-H</code><i>&nbsp;<wbr>ldapuri</i>] [<code>-h</code><i>&nbsp;<wbr>ldaphost</i>] [<code>-p</code><i>&nbsp;<wbr>ldapport</i>] [<code>-P</code>&nbsp;<wbr>{<code>2</code>|<code>3</code>}] [<code>-e</code>&nbsp;<wbr>[<code>!</code>]<i>ext</i>[<code>=</code><i>extparam</i>]] [<code>-E</code>&nbsp;<wbr>[<code>!</code>]<i>ext</i>[<code>=</code><i>extparam</i>]] [<code>-o</code><i>&nbsp;<wbr>opt</i>[=<i>optparam</i>]] [<code>-O</code><i>&nbsp;<wbr>security-properties</i>] [<code>-I</code>] [<code>-Q</code>] [<code>-N</code>] [<code>-U</code><i>&nbsp;<wbr>authcid</i>] [<code>-R</code><i>&nbsp;<wbr>realm</i>] [<code>-X</code><i>&nbsp;<wbr>authzid</i>] [<code>-Y</code><i>&nbsp;<wbr>mech</i>] [<code>-Z</code>[<code>Z</code>]]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>ldapmodify</code> is a shell-accessible interface to the <code><a href="/docs/linux/man/3-ldap_add_ext/">ldap_add_ext</a></code>(3), <code><a href="/docs/linux/man/3-ldap_modify_ext/">ldap_modify_ext</a></code>(3), <code><a href="/docs/linux/man/3-ldap_delete_ext/">ldap_delete_ext</a></code>(3) and <code><a href="/docs/linux/man/3-ldap_rename/">ldap_rename</a></code>(3). library calls. <code>ldapadd</code> is implemented as a hard link to the ldapmodify tool. When invoked as <code>ldapadd</code> the <code>-a</code> (add new entry) flag is turned on automatically. </p>
 <p> <code>ldapmodify</code> opens a connection to an LDAP server, binds, and modifies or adds entries. The entry information is read from standard input or from <i>file</i> through the use of the <code>-f</code> option.</p>
 <h2>OPTIONS</h2>

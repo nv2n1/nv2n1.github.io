@@ -1,5 +1,4 @@
 ---
-
 title: "memccpy(3)"
 name: "memccpy"
 section: "3"
@@ -8,10 +7,14 @@ url: "/docs/linux/man/3-memccpy/"
 description: "memccpy – copy memory area"
 ---
 
+<h2 class="name">NAME</h2>
+<p> memccpy &#8211; copy memory area </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;string.h&gt;
 void *memccpy(void *dest, const void *src, int c, size_t n);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> The <code>memccpy</code>() function copies no more than <i>n</i> bytes from memory area <i>src</i> to memory area <i>dest</i>, stopping when the character <i>c</i> is found. </p>
 <p> If the memory areas overlap, the results are undefined.</p>
 <h2>RETURN VALUE</h2>

@@ -1,5 +1,4 @@
 ---
-
 title: "clasyf_rook(3)"
 name: "clasyf_rook"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-clasyf_rook/"
 description: "clasyf_rook.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> clasyf_rook.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>clasyf_rook</code> (UPLO, N, NB, KB, A, LDA, IPIV, W, LDW, INFO)<br />
  <i></i><code>CLASYF_ROOK</code> computes a partial factorization of a complex symmetric matrix using the bounded Bunch-Kaufman (&#8216;rook&#8217;) diagonal pivoting method.</p>

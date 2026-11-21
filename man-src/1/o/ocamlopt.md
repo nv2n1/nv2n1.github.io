@@ -1,5 +1,4 @@
 ---
-
 title: "ocamlopt(1)"
 name: "ocamlopt"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-ocamlopt/"
 description: "ocamlopt – The OCaml native-code compiler"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ocamlopt &#8211; The OCaml native-code compiler</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ocamlopt</code> [ <i>options</i> ] <i>filename</i>&nbsp;<wbr>&#8230; </p>
 <p> <code>ocamlopt.opt</code> (same options) </p>
+<h2>DESCRIPTION</h2>
 <p> The OCaml high-performance native-code compiler <code><a href="/docs/linux/man/1-ocamlopt/">ocamlopt</a></code>(1) compiles OCaml source files to native code object files and link these object files to produce standalone executables. </p>
 <p> The <code><a href="/docs/linux/man/1-ocamlopt/">ocamlopt</a></code>(1) command has a command-line interface very close to that of <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1). It accepts the same types of arguments and processes them sequentially: </p>
 <p> Arguments ending in .mli are taken to be source files for compilation unit interfaces. Interfaces specify the names exported by compilation units: they declare value names with their types, define public data types, declare abstract data types, and so on. From the file <i>x</i>.mli, the <code><a href="/docs/linux/man/1-ocamlopt/">ocamlopt</a></code>(1) compiler produces a compiled interface in the file <i>x</i>.cmi. The interface produced is identical to that produced by the bytecode compiler <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1). </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "ibus-daemon(1)"
 name: "ibus-daemon"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-ibus-daemon/"
 description: "ibus-daemon – daemon program for ibus"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>ibus-daemon</code> &#8211; daemon program for ibus</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ibus-daemon</code> [<i>OPTION</i>]&#8230; </p>
+<h2>DESCRIPTION</h2>
 <p> IBus is an Intelligent Input Bus. It is a new input framework for Linux OS. It provides full featured and user friendly input method user interface. It also may help developers to develop input method easily. </p>
 <p> <code>ibus-daemon</code> is a daemon program for ibus and it is also a start up program for users to activate ibus daemon, engines and panel. </p>
 <h3>Help Options:</h3>

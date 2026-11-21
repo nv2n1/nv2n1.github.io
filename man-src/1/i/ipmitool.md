@@ -1,5 +1,4 @@
 ---
-
 title: "ipmitool(1)"
 name: "ipmitool"
 section: "1"
@@ -10,6 +9,7 @@ description: "ipmitool – utility for controlling IPMI-enabled devices"
 
 <h2>NAME</h2>
 <p> ipmitool &#8211; utility for controlling IPMI-enabled devices</p>
+<h2>SYNOPSIS</h2>
 <p> ipmitool [ &lt;options&gt; ] &lt;command&gt; [ &lt;sub-commands and sub-options&gt; ] </p>
 <p> &lt;options&gt; := [ &lt;general-options&gt; | &lt;conditional-opts&gt; ]<br />
  Any recognized option is accepted. Conditional options may be ignored or it&#8217;s usage postponed until shell or exec processes relevant command. </p>
@@ -35,6 +35,7 @@ description: "ipmitool – utility for controlling IPMI-enabled devices"
  &lt;options-sdr&gt; := [ -S &lt;sdr_cache_file&gt; ]<br />
  &lt;options-sel&gt; := [ -O &lt;sel_oem&gt; ]<br />
  &lt;options-sol&gt; := [ -e &lt;sol_escape_char&gt; ] </p>
+<h2>DESCRIPTION</h2>
 <p> This program lets you manage Intelligent Platform Management Interface (IPMI) functions of either the local system, via a kernel device driver, or a remote system, using IPMI v1.5 and IPMI v2.0. These functions include printing FRU information, LAN configuration, sensor readings, and remote chassis power control. </p>
 <p> IPMI management of a local system interface requires a compatible IPMI kernel driver to be installed and configured. On Linux this driver is called <i>OpenIPMI</i> and it is included in standard distributions. On Solaris this driver is called <i>BMC</i> and is included in Solaris 10. Management of a remote station requires the IPMI-over-LAN interface to be enabled and configured. Depending on the particular requirements of each system it may be possible to enable the LAN interface using ipmitool over the system interface.</p>
 <h2>OPTIONS</h2>

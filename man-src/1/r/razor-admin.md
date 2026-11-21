@@ -1,5 +1,4 @@
 ---
-
 title: "razor-admin(1)"
 name: "razor-admin"
 section: "1"
@@ -7,13 +6,20 @@ letter: "r"
 url: "/docs/linux/man/1-razor-admin/"
 ---
 
-&quot;razor-admin&quot; - Razor Registering Agent 
+<h2 class="name">NAME</h2>
+ 
 
-<pre><code>
+ &quot;razor-admin&quot; - Razor Registering Agent 
+
+<h2>SYNOPSIS</h2>
+
+ <pre><code>
 razor - admin[options][-register | -create | -discover]
 </code></pre>
 
-<tt>&quot;razor-admin&quot;</tt> is the Razor Agent that performs administrative functions, most notably registering (-register)
+<h2>DESCRIPTION</h2>
+
+ <tt>&quot;razor-admin&quot;</tt> is the Razor Agent that performs administrative functions, most notably registering (-register)
 
 <h2>USAGE</h2>
 

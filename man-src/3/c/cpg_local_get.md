@@ -1,5 +1,4 @@
 ---
-
 title: "cpg_local_get(3)"
 name: "cpg_local_get"
 section: "3"
@@ -10,8 +9,10 @@ description: "cpg_local_get – Returns the local node id"
 
 <h2>NAME</h2>
 <p> cpg_local_get &#8211; Returns the local node id</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cpg.h&gt;</code> </p>
 <p> <code>int cpg_local_get(cpg_handle_t </code><i>handle</i><code>, unsigned int *</code><i>local_nodeid</i><code>);</code></p>
+<h2>DESCRIPTION</h2>
 <p> The <code>cpg_local_get</code> function is used to determine the local node&#8217;s identifier. The argument <i>handle</i> is used to reference the cpg instantiation. The argument <i>local_nodeid</i> will return the 32 bit node id. </p>
 <h2>ERRORS</h2>
 <p> The errors are undocumented.</p>

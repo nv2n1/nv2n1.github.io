@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-libtalloc_tutorial/"
 description: "libtalloc_tutorial – The Tutorial"
 ---
 
+<h2 class="name">NAME</h2>
+<p> libtalloc_tutorial &#8211; The Tutorial</p>
 <h2>Introduction</h2>
 <p> Talloc is a hierarchical, reference counted memory pool system with destructors. It is built atop the C standard library and it defines a set of utility functions that altogether simplifies allocation and deallocation of data, especially for complex structures that contain many dynamically allocated elements such as strings and arrays. </p>
 <p> The main goals of this library are: removing the needs for creating a cleanup function for every complex structure, providing a logical organization of allocated memory blocks and reducing the likelihood of creating memory leaks in long-running applications. All of this is achieved by allocating memory in a hierarchical structure of talloc contexts such that deallocating one context recursively frees all of its descendants as well.</p>

@@ -1,5 +1,4 @@
 ---
-
 title: "memcached_replace_by_key(3)"
 name: "memcached_replace_by_key"
 section: "3"
@@ -10,6 +9,7 @@ description: "memcached_replace_by_key – Storing and Replacing Data"
 
 <h2>NAME</h2>
 <p> memcached_replace_by_key &#8211; Storing and Replacing Data</p>
+<h2>SYNOPSIS</h2>
 <p> #include &lt;libmemcached/memcached.h&gt;</p>
 <dl>
 <dt><code>memcached_return_t memcached_set(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>, const char<i>&nbsp;<wbr>*value</i>, size_t<i>&nbsp;<wbr>value_length</i>, time_t<i>&nbsp;<wbr>expiration</i>, uint32_t<i>&nbsp;<wbr>flags</i>)</dt>
@@ -25,6 +25,7 @@ description: "memcached_replace_by_key – Storing and Replacing Data"
 </dd><dt><code>memcached_return_t memcached_replace_by_key(memcached_st</code><i>&nbsp;<wbr>*ptr</i>, const char<i>&nbsp;<wbr>*group_key</i>, size_t<i>&nbsp;<wbr>group_key_length</i>, const char<i>&nbsp;<wbr>*key</i>, size_t<i>&nbsp;<wbr>key_length</i>, const char<i>&nbsp;<wbr>*value</i>, size_t<i>&nbsp;<wbr>value_length</i>, time_t<i>&nbsp;<wbr>expiration</i>, uint32_t<i>&nbsp;<wbr>flags</i>)</dt>
 <dd>
 <p> Compile and link with -lmemcached</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> <i>memcached_set()</i>, <i>memcached_add()</i>, and <i>memcached_replace()</i> are all used to store information on the server. All methods take a key, and its length to store the object. Keys are currently limited to 250 characters when using either a version of <a href="/docs/linux/man/1-memcached/">memcached</a>(1) which is 1.4 or below, or when using the text protocol. You must supply both a value and a length. Optionally you store the object. Keys are currently limited to 250 characters by the <a href="/docs/linux/man/1-memcached/">memcached</a>(1) server. You must supply both a value and a length. Optionally you may test an expiration time for the object and a 16 byte value (it is meant to be used as a bitmap). &quot;flags&quot; is a 4byte space that is stored alongside of the main value. Many sub libraries make use of this field, so in most cases users should avoid making use of it. </p>
 <p> <i>memcached_set()</i> will write an object to the server. If an object already exists it will overwrite what is in the server. If the object does not exist it will be written. If you are using the non-blocking mode this function will always return true unless a network error occurs. </p>
 <p> <i>memcached_replace()</i> replaces an object on the server. If the object is not found on the server an error occurs. </p>

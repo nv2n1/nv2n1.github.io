@@ -1,5 +1,4 @@
 ---
-
 title: "oz-install(1)"
 name: "oz-install"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-oz-install/"
 description: "oz-install – tool to automatically install operating systems into files"
 ---
 
+<h2 class="name">NAME</h2>
+<p> oz-install &#8211; tool to automatically install operating systems into files</p>
+<h2>SYNOPSIS</h2>
 <p> <code>oz-install [OPTIONS] &lt;tdl-file&gt;</code> </p>
+<h2>DESCRIPTION</h2>
 <p> This is a tool to automatically install operating system into files that represent disk images. The input is an XML file representing the operating system and packages to be installed. By default (and by design), the first stage of the install only installs a JEOS (Just Enough Operating System); customization, including the installation of additional packages can also be done, but requires additional flags. </p>
 <p> Note that oz-install does the actual installation using a combination of KVM and libvirt, so both of these must be available (and working) for oz-install to have a chance to succeed. </p>
 <h2>OPTIONS</h2>

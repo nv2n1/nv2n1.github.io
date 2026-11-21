@@ -1,5 +1,4 @@
 ---
-
 title: "pmempool-check(1)"
 name: "pmempool-check"
 section: "1"
@@ -10,7 +9,9 @@ description: "pmempool-check – Check and repair Persistent Memory Pool"
 
 <h2>NAME</h2>
 <p> pmempool-check &#8211; Check and repair Persistent Memory Pool</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pmempool check</code> [&lt;options&gt;] &lt;file&gt;</p>
+<h2>DESCRIPTION</h2>
 <p> The <code>pmempool</code> invoked with <code>check</code> command checks consistency of a given pool file. If the pool file is consistent <code>pmempool</code> exits with 0 value. If the pool file is not consistent non-zero error code is returned. </p>
 <p> In case of any errors, the proper message is printed. The verbosity level may be increased using <code>-v</code> option. The output messages may be also suppressed using <code>-q</code> option. </p>
 <p> It is possible to try to fix encountered problems using <code>-r</code> option. In order to be sure this will not corrupt your data you can either create backup of the pool file using <code>-b</code> option or just print what would be fixed without modifying original pool using <code>-N</code> option. </p>

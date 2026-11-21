@@ -1,5 +1,4 @@
 ---
-
 title: "avrdude(1)"
 name: "avrdude"
 section: "1"
@@ -8,8 +7,11 @@ url: "/docs/linux/man/1-avrdude/"
 description: "avrdude – driver program for “simple” Atmel AVR MCU programmer"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>avrdude</code> &#8211; driver program for &#8220;simple&#8221; Atmel AVR MCU programmer </p>
+<h2>SYNOPSIS</h2>
 <p> &#8211;<code>p </code><i>partno</i> [-<code>b </code><i>baudrate</i> ] [-<code>B </code><i>bitclock</i> ] [-<code>c </code><i>programmer-id</i> ] [-<code>C </code><i>config-file</i> ] [-<code>D</code> ] [-<code>e</code> ] [-<code>E </code><i>exitspec </i>[, <i>exitspec</i> ] ] [-<code>F</code> ] [-<code>i </code><i>delay</i> ] [-<code>n</code> ] [-<code>O</code> ] [-<code>P </code><i>port</i> ] [-<code>q</code> ] [-<code>s</code> ] [-<code>t</code> ] [-<code>u</code> ] [-<code>U </code><i>memtype:op:filename:filefmt</i> ] [-<code>v</code> ] [-<code>x </code><i>extended_param</i> ] [-<code>V</code> ] [-<code>y</code> ] [-<code>Y</code> ]</p>
+<h2>DESCRIPTION</h2>
 <p> <code>Avrdude</code> is a program for downloading code and data to Atmel AVR microcontrollers. <code>Avrdude</code> supports Atmel&#8217;s STK500 programmer, Atmel&#8217;s AVRISP and AVRISP mkII devices, Atmel&#8217;s STK600, Atmel&#8217;s JTAG ICE (both mkI and mkII, the latter also in ISP mode), programmers complying to AppNote AVR910 and AVR109 (including the Butterfly), as well as a simple hard-wired programmer connected directly to a ppi(4) or parport(4) parallel port, or to a standard serial port. In the simplest case, the hardware consists just of a cable connecting the respective AVR signal lines to the parallel port. </p>
 <p> The MCU is programmed in <i>serial programming mode</i> so, for the ppi(4) based programmer, the MCU signals `/RESET&#8217; , `SCK&#8217; , `MISO&#8217; and `MOSI&#8217; need to be connected to the parallel port. Optionally, some otherwise unused output pins of the parallel port can be used to supply power for the MCU part, so it is also possible to construct a passive stand-alone programming device. Some status LEDs indicating the current operating state of the programmer can be connected, and a signal is available to control a buffer/driver IC 74LS367 (or 74HCT367). The latter can be useful to decouple the parallel port from the MCU when in-system programming is used. </p>
 <p> A number of equally simple bit-bang programming adapters that connect to a serial port are supported as well, among them the popular Ponyprog serial adapter, and the DASA and DASA3 adapters that used to be supported by uisp(1). Note that these adapters are meant to be attached to a physical serial port. Connecting to a serial port emulated on top of USB is likely to not work at all, or to work abysmally slow. </p>

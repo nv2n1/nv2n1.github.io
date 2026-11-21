@@ -1,5 +1,4 @@
 ---
-
 title: "aria_pack(1)"
 name: "aria_pack"
 section: "1"
@@ -10,7 +9,9 @@ description: "aria_pack – generate compressed, read-only Aria tables"
 
 <h2>NAME</h2>
 <p> aria_pack &#8211; generate compressed, read-only Aria tables</p>
+<h2>SYNOPSIS</h2>
 <p> <code>aria_pack</code> [<i>OPTIONS</i>] <i>filename</i>&#8230;</p>
+<h2>DESCRIPTION</h2>
 <p> Pack a Aria-table to take much less space. Keys are not updated, you must run <code>aria_chk -rq</code> on the index (.MAI) file afterwards to update the keys. You should give the .MAI file as the filename argument. To unpack a packed table, run <code>aria_chk -u</code> on the table</p>
 <dl>
 <dt><code>-b</code>, <code>&#8211;backup</code></dt>

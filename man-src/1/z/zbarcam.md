@@ -1,5 +1,4 @@
 ---
-
 title: "zbarcam(1)"
 name: "zbarcam"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-zbarcam/"
 description: "zbarcam – scan and decode bar codes from a video device"
 ---
 
+<h2 class="name">NAME</h2>
+<p> zbarcam &#8211; scan and decode bar codes from a video device </p>
+<h2>SYNOPSIS</h2>
 <dl>
 <dt> <code>zbarcam</code> [<code>-qv</code>] [<code>&#8211;quiet</code>] [<code>&#8211;nodisplay</code>] [<code>&#8211;xml</code>] [<code>&#8211;verbose</code><code>[=</code><i>n</i>]] [<code>&#8211;prescale=</code><i>W</i><code>x</code><i>H</i>] [<code>-S</code><code>[</code><i>symbology</i>.]<i>config</i><code>[=</code><i>value</i>]] [<code>&#8211;set&nbsp;<wbr></code><code>[</code><i>symbology</i>.]<i>config</i><code>[=</code><i>value</i>]] [<i>device</i>]</dt>
 <dt> <code>zbarcam</code> {<code>-h</code> | <code>&#8211;help</code> | <code>&#8211;version</code>}</dt></dl>
+<h2>DESCRIPTION</h2>
 <p> <code>zbarcam</code></p>
 <dd>scans a video4linux video source (eg, a webcam) for bar codes and prints any decoded data to the standard output. The video stream is also displayed to the screen. </dd>
 <p> <i>device</i> is the path to the video4linux (version 1 or 2) character device special file (major number 81 and minor number 0 thru 63). It defaults to /dev/video0 </p>

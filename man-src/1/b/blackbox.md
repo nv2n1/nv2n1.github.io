@@ -1,5 +1,4 @@
 ---
-
 title: "blackbox(1)"
 name: "blackbox"
 section: "1"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/1-blackbox/"
 description: "blackbox – a window manager for X11"
 ---
 
+<h2 class="name">NAME</h2>
+<p> blackbox &#8211; a window manager for X11 </p>
+<h2>SYNOPSIS</h2>
 <p> <code>blackbox</code> -help | -version<br />
  <code>blackbox </code> [ -rc<i> rcfile </i>] [ -display<i> display </i>]</p>
+<h2>DESCRIPTION</h2>
 <p> Blackbox is a window manager for the Open Group&#8217;s X Window System, Version 11 Release 6 and above. Its design is meant to be visually minimalist and fast. </p>
 <p> Blackbox is similar to the NeXT interface and Windowmaker. Applications are launched using a menu which is accessed by right clicking on the root window. Workspaces, a system of virtual desktops are controlled via a menu which is accessed by middle clicking on the root window and by using the toolbar. Individual windows can be controlled by buttons on the title bar and more options are available by right clicking on the title bar. </p>
 <p> Blackbox is able to generate beautiful window decorations on the fly at high speed. Themes, called styles in Blackbox terminology, are very flexible but the use of pixmaps has been purposefully avoided to eliminate dependencies and excess memory usage. </p>

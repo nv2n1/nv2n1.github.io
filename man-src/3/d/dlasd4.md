@@ -1,5 +1,4 @@
 ---
-
 title: "dlasd4(3)"
 name: "dlasd4"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-dlasd4/"
 description: "dlasd4.f –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> dlasd4.f &#8211; </p>
+<h2>SYNOPSIS</h2>
 <h3>Functions/Subroutines</h3>
 <p> subroutine <code>dlasd4</code> (N, I, D, Z, DELTA, RHO, SIGMA, WORK, INFO)<br />
  <i></i><code>DLASD4</code> computes the square root of the i-th updated eigenvalue of a positive symmetric rank-one modification to a positive diagonal matrix. Used by dbdsdc.</p>

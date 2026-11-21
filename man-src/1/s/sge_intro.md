@@ -1,5 +1,4 @@
 ---
-
 title: "sge_intro(1)"
 name: "sge_intro"
 section: "1"
@@ -7,9 +6,14 @@ letter: "s"
 url: "/docs/linux/man/1-sge_intro/"
 ---
 
-sge_intro - xxQS_NAMExx, a facility for executing jobs on remote machines 
+<h2 class="name">NAME</h2>
+ 
 
-xxQS_NAMExx is a facility for executing Unix-like batch jobs (shell scripts or binaries) on a pool of cooperating CPUs. Jobs are queued and executed remotely according to defined policies. The CPUs may be in desktop systems, with jobs run on them at times when they would otherwise be idle or only lightly loaded. The work load may be distributed according to the (generalized) load situation of each machine and the resource requirements of the jobs. 
+ sge_intro - xxQS_NAMExx, a facility for executing jobs on remote machines 
+
+<h2>DESCRIPTION</h2>
+
+ xxQS_NAMExx is a facility for executing Unix-like batch jobs (shell scripts or binaries) on a pool of cooperating CPUs. Jobs are queued and executed remotely according to defined policies. The CPUs may be in desktop systems, with jobs run on them at times when they would otherwise be idle or only lightly loaded. The work load may be distributed according to the (generalized) load situation of each machine and the resource requirements of the jobs. 
 
  User level checkpointing programs are supported and a transparent checkpointing mechanism is provided (see Checkpointing jobs migrate from system to system without user intervention on load demand. In addition to simple batch jobs, interactive jobs and parallel jobs can also be submitted to xxQS_NAMExx. 
 

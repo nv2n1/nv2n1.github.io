@@ -1,5 +1,4 @@
 ---
-
 title: "unitdiff(1)"
 name: "unitdiff"
 section: "1"
@@ -10,6 +9,7 @@ description: "unitdiff – Describe differences in the interface of a FPC unit."
 
 <h2>NAME</h2>
 <p> unitdiff &#8211; Describe differences in the interface of a FPC unit. </p>
+<h2>SYNOPSIS</h2>
 <p> <code>unitdiff</code> [&#8211;disable-arguments] [&#8211;disable-private] [&#8211;disable-protected] [&#8211;help] [&#8211;lang=language] [&#8211;list] [&#8211;output=filename] [&#8211;sparse] file1 file2 </p>
 <h2>Description</h2>
 <p> <code>unitdiff</code> scans one or two Free Pascal unit source files and either lists all available identifiers, or describes the differences in identifiers between the two units. </p>

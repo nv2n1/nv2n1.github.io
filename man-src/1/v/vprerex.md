@@ -1,5 +1,4 @@
 ---
-
 title: "vprerex(1)"
 name: "vprerex"
 section: "1"
@@ -8,11 +7,14 @@ url: "/docs/linux/man/1-vprerex/"
 description: "vprerex – graphical front-end and viewer for the"
 ---
 
+<h2 class="name">NAME</h2>
 <p> <code>vprerex</code> &#8211; graphical front-end and viewer for the <code></p>
 <p> <a href="/docs/linux/man/1-prerex/">prerex</a></code>(1) prerequisite-chart editor</p>
+<h2>SYNOPSIS</h2>
 <p> <code>vprerex</code> <i>basefile</i>[<i>.tex</i>] [ <i>chartfile</i>[<i>.tex</i>] ] </p>
 <p> <code>vprerex</code> <i>file.pdf</i> </p>
 <p> <code>vprerex</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>vprerex </code> (visual prerex) is a GUI front-end and viewer for the <code><a href="/docs/linux/man/1-prerex/">prerex</a></code>(1) interactive editor of prerequisite-chart descriptions in the <code><a href="/docs/linux/man/5-prerex/">prerex</a></code>(5) format. The viewer may be used just as a minimalistic viewer of arbitrary PDF files but supports editing of charts generated using <code>prerex.sty</code>(7) by allowing coordinates of course boxes, arrows, and background points to be conveyed back to the <code><a href="/docs/linux/man/1-prerex/">prerex</a></code>(1) command-line using the clipboard.</p>
 <h2>USAGE</h2>
 <p> If <code>vprerex</code> is invoked on a PDF file, it simply displays that file. </p>

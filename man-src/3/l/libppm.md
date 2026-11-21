@@ -1,5 +1,4 @@
 ---
-
 title: "libppm(3)"
 name: "libppm"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-libppm/"
 description: "libppm – functions for PPM programs"
 ---
 
+<h2 class="name">NAME</h2>
+<p> libppm &#8211; functions for PPM programs</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;netpbm/ppm.h&gt;</code> </p>
 <p> <code>void ppm_init(</code><code>int *</code> <i>argcP</i><code>,</code><br />
 &nbsp;<wbr>&nbsp;<wbr><code>char&nbsp;<wbr>*</code>&nbsp;<wbr><i>argv</i><code>[]</code><code>);</code> </p>
@@ -94,6 +96,7 @@ description: "libppm – functions for PPM programs"
 &nbsp;<wbr>&nbsp;<wbr><code>colorhash_table&nbsp;<wbr>*</code>&nbsp;<wbr><i>chtP</i>,&nbsp;<wbr><br />
 &nbsp;<wbr>&nbsp;<wbr><code>const char&nbsp;<wbr>***</code>&nbsp;<wbr><i>colornamesP</i><br />
 &nbsp;<wbr>&nbsp;<wbr><code>)</code> </p>
+<h2>DESCRIPTION</h2>
 <p> These library functions are part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <h3>TYPES AND CONSTANTS</h3>
 <p> Each <code>pixel</code> contains three <code>pixval</code>s, each of which should contain only the values between <code>0</code> and <code>PPM_MAXMAXVAL</code>. </p>

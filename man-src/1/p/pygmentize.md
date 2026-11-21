@@ -1,5 +1,4 @@
 ---
-
 title: "pygmentize(1)"
 name: "pygmentize"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-pygmentize/"
 description: "pygmentize – highlights the input file"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pygmentize &#8211; highlights the input file</p>
+<h2>SYNOPSIS</h2>
 <p> <code>pygmentize</code> [-l&nbsp;<i>&lt;lexer&gt;</i>&nbsp;| -g]&nbsp;[-F&nbsp;<i>&lt;filter&gt;</i>[:<i>&lt;options&gt;</i>]]&nbsp;[-f&nbsp;<i>&lt;formatter&gt;</i>] [-O&nbsp;<i>&lt;options&gt;</i>]&nbsp;[-P&nbsp;<i>&lt;option=value&gt;</i>]&nbsp;[-o&nbsp;<i>&lt;outfile&gt;</i>]&nbsp;[<i>&lt;infile&gt;</i>]<br />
  <code>pygmentize</code> -S&nbsp;<i>&lt;style&gt;</i>&nbsp;-f&nbsp;<i>&lt;formatter&gt;</i>&nbsp;[-a&nbsp;<i>&lt;arg&gt;</i>]&nbsp;[-O&nbsp;<i>&lt;options&gt;</i>]&nbsp;[-P&nbsp;<i>&lt;option=value&gt;</i>]<br />
  <code>pygmentize</code> -L&nbsp;[<i>&lt;which&gt;</i>&nbsp;&#8230;]<br />
@@ -15,6 +17,7 @@ description: "pygmentize – highlights the input file"
  <code>pygmentize</code> -C<br />
  <code>pygmentize</code> -H&nbsp;<i>&lt;type&gt;</i>&nbsp;<i>&lt;name&gt;</i><br />
  <code>pygmentize</code> -h | -V </p>
+<h2>DESCRIPTION</h2>
 <p> Pygments is a generic syntax highlighter for general use in all kinds of software such as forum systems, wikis or other applications that need to prettify source code. </p>
 <p> Its highlights are:<br />
 &nbsp;<wbr>&nbsp;*&nbsp;a wide range of common languages and markup formats is supported<br />

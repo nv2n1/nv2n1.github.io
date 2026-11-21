@@ -1,5 +1,4 @@
 ---
-
 title: "funhist(1)"
 name: "funhist"
 section: "1"
@@ -10,6 +9,7 @@ description: "funhist – create a 1D histogram of a column (from a FITS binary 
 
 <h2>NAME</h2>
 <p> <code>funhist &#8211; create a 1D histogram of a column (from a FITS binary table or raw event file) or an image</code></p>
+<h2>SYNOPSIS</h2>
 <p> funhist [-n|-w|-T] &lt;iname&gt; [column] [[lo:hi:]bins]</p>
 <h2>OPTIONS</h2>
 <pre>
@@ -17,6 +17,7 @@ description: "funhist – create a 1D histogram of a column (from a FITS binary 
   -w    # specify bin width instead of number of bins in arg3
   -T    # output in rdb/starbase format (tab separators)
 </pre>
+<h2>DESCRIPTION</h2>
 <p> <code>funhist</code> creates a one-dimensional histogram from the specified columns of a <font SIZE="-1">FITS</font> Extension binary table of a <font SIZE="-1">FITS</font> file (or from a non-FITS raw event file), or from a <font SIZE="-1">FITS</font> image or array, and writes that histogram as an <font SIZE="-1">ASCII</font> table. Alternatively, the program can perform a 1D projection of one of the image axes. </p>
 <p> The first argument to the program is required, and specifies the Funtools file: <font SIZE="-1">FITS</font> table or image, raw event file, or array. If &#8220;stdin&#8221; is specified, data are read from the standard input. Use Funtools Bracket Notation to specify <font SIZE="-1">FITS</font> extensions, and filters. </p>
 <p> For a table, the second argument also is required. It specifies the column to use in generating the histogram. If the data file is of type image (or array), the column is optional: if &#8220;x&#8221; (or &#8220;X&#8221;), &#8220;y&#8221; (or &#8220;Y&#8221;) is specified, then a projection is performed over the x (dim1) or y (dim2) axes, respectively. (That is, this projection will give the same results as a histogram performed on a table containing the equivalent x,y event rows.) If no column name is specified or &#8220;xy&#8221; (or &#8220;<font SIZE="-1">XY</font>&#8221;) is specified for the image, then a histogram is performed on the values contained in the image pixels. </p>

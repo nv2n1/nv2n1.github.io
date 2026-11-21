@@ -1,5 +1,4 @@
 ---
-
 title: "keyctl_search(3)"
 name: "keyctl_search"
 section: "3"
@@ -8,11 +7,15 @@ url: "/docs/linux/man/3-keyctl_search/"
 description: "keyctl_search – Search a keyring for a key"
 ---
 
+<h2 class="name">NAME</h2>
+<p> keyctl_search &#8211; Search a keyring for a key </p>
+<h2>SYNOPSIS</h2>
 <pre><code>
 #include &lt;keyutils.h&gt;
 long keyctl_search(key_serial_t keyring, const char *type,
                    const char *description, key_serial_t destination);
 </code></pre>
+<h2>DESCRIPTION</h2>
 <p> <code>keyctl_search</code>() recursively searches the <i>keyring</i> for a key of the specified <i>type</i> and <i>description</i>. </p>
 <p> If found, the key will be attached to the <i>destination</i> keyring (if given), and its serial number will be returned. </p>
 <p> The source keyring must grant <code>search</code> permission to the caller, and for a key to be found, it must also grant <code>search</code> permission to the caller. Child keyrings will be only be recursively searched if they grant <code>search</code> permission to the caller as well. </p>

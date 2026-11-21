@@ -1,5 +1,4 @@
 ---
-
 title: "scriptreplay(1)"
 name: "scriptreplay"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-scriptreplay/"
 description: "scriptreplay – play back typescripts, using timing information"
 ---
 
+<h2 class="name">NAME</h2>
+<p> scriptreplay &#8211; play back typescripts, using timing information </p>
+<h2>SYNOPSIS</h2>
 <p> <code>scriptreplay</code> [options] [<code>-t</code>] <i>timingfile</i> [<i>typescript</i> [<i>divisor</i>]]</p>
+<h2>DESCRIPTION</h2>
 <p> This program replays a typescript, using timing information to ensure that output happens in the same rhythm as it originally appeared when the script was recorded. </p>
 <p> The replay simply displays the information again; the programs that were run when the typescript was being recorded are <code>not run again</code>. Since the same information is simply being displayed, <code>scriptreplay</code> is only guaranteed to work properly if run on the same type of terminal the typescript was recorded on. Otherwise, any escape characters in the typescript may be interpreted differently by the terminal to which <code>scriptreplay</code> is sending its output. </p>
 <p> The timing information is what <code><a href="/docs/linux/man/1-script/">script</a></code>(1) outputs to file specified by <code>&#8211;log-timing</code>. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "use-devel-checklib(1)"
 name: "use-devel-checklib"
 section: "1"
@@ -7,11 +6,18 @@ letter: "u"
 url: "/docs/linux/man/1-use-devel-checklib/"
 ---
 
-use-devel-checklib - a script to package Devel::CheckLib with your code. 
+<h2 class="name">NAME</h2>
+ 
 
-This script, when run in the directory in which your shiny new module lives, will bundle Devel::CheckLib in the <tt>&quot;inc&quot;</tt> directory, and update your Makefile.PL (or Build.PL) appropriately. If neither exists, it will create a Makefile.PL.
+ use-devel-checklib - a script to package Devel::CheckLib with your code. 
 
-<pre>
+<h2>DESCRIPTION</h2>
+
+ This script, when run in the directory in which your shiny new module lives, will bundle Devel::CheckLib in the <tt>&quot;inc&quot;</tt> directory, and update your Makefile.PL (or Build.PL) appropriately. If neither exists, it will create a Makefile.PL.
+
+<h2>SYNOPSIS</h2>
+
+ <pre>
     use-devel-checklib list of libraries
 </pre>
 

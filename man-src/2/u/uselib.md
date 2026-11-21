@@ -1,5 +1,4 @@
 ---
-
 title: "uselib(2)"
 name: "uselib"
 section: "2"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/2-uselib/"
 description: "uselib – load shared library"
 ---
 
+<h2 class="name">NAME</h2>
+<p> uselib &#8211; load shared library </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;unistd.h&gt;</code> </p>
 <p> <code>int uselib(const char *</code><i>library</i><code>);</code> </p>
 <p> <i>Note</i>: No declaration of this system call is provided in glibc headers; see NOTES.</p>
+<h2>DESCRIPTION</h2>
 <p> The system call <code>uselib</code>() serves to load a shared library to be used by the calling process. It is given a pathname. The address where to load is found in the library itself. The library can have any recognized binary format.</p>
 <h2>RETURN VALUE</h2>
 <p> On success, zero is returned. On error, -1 is returned, and <i>errno</i> is set appropriately.</p>

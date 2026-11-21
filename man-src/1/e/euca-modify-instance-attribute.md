@@ -1,5 +1,4 @@
 ---
-
 title: "euca-modify-instance-attribute(1)"
 name: "euca-modify-instance-attribute"
 section: "1"
@@ -10,10 +9,12 @@ description: "euca-modify-instance-attribute – Modify an attribute of an insta
 
 <h2>NAME</h2>
 <p> euca-modify-instance-attribute &#8211; Modify an attribute of an instance</p>
+<h2>SYNOPSIS</h2>
 <p> euca-modify-instance-attribute (<code>-b</code> DEVICE=::(true|false) |</p>
 <dl>
 <dt><code>&#8211;disable-api-termination</code> {true,false} |</dt>
 <dd> <code>&#8211;ebs-optimized</code> {true,false} | <code>-g</code> GROUP | <code>&#8211;instance-initiated-shutdown-behavior</code> {stop,terminate} | <code>-t</code> INSTANCETYPE | <code>&#8211;kernel</code> IMAGE | <code>&#8211;ramdisk</code> IMAGE | <code>&#8211;source-dest-check</code> {true,false} | <code>&#8211;sriov</code> simple | <code>&#8211;user-data</code> DATA | <code>&#8211;user-data-file</code> FILE) [&#8211;show-empty-fields] [-U URL] [&#8211;region USER [at] REGION] [-I KEY_ID] [-S KEY] [&#8211;security-token TOKEN] [&#8211;debug] [&#8211;debugger] [&#8211;version] [-h] INSTANCE</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Modify an attribute of an instance</p>
 <h3>positional arguments:</h3>
 <dl>

@@ -1,5 +1,4 @@
 ---
-
 title: "ipa-cacert-manage(1)"
 name: "ipa-cacert-manage"
 section: "1"
@@ -10,7 +9,9 @@ description: "ipa-cacert-manage – Manage CA certificates in IPA"
 
 <h2>NAME</h2>
 <p> ipa-cacert-manage &#8211; Manage CA certificates in IPA</p>
+<h2>SYNOPSIS</h2>
 <p> <code>ipa-cacert-manage</code> [<i>OPTIONS</i>&#8230;] renew <code>ipa-cacert-manage</code> [<i>OPTIONS</i>&#8230;] install <i>CERTFILE</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>ipa-cacert-manage</code> can be used to manage CA certificates in IPA.</p>
 <h2>COMMANDS</h2>
 <dl>

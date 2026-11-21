@@ -1,5 +1,4 @@
 ---
-
 title: "ffind(1)"
 name: "ffind"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-ffind/"
 description: "ffind – Finds the name of the file or directory using a given inode"
 ---
 
+<h2 class="name">NAME</h2>
+<p> ffind &#8211; Finds the name of the file or directory using a given inode </p>
+<h2>SYNOPSIS</h2>
 <p> <code>ffind [-aduvV] [-f fstype] [-i imgtype] [-o imgoffset] [-b dev_sector_size] </code> <i>image [images] inode</i></p>
+<h2>DESCRIPTION</h2>
 <p> <code>ffind</code> finds the names of files or directories that are allocated to <i>inode</i> on disk image <i>image.</i> By default it only will only return the first name it finds. With some file systems, this will find deleted file names. </p>
 <h2>ARGUMENTS</h2>
 <dl>

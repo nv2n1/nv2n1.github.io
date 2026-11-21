@@ -1,5 +1,4 @@
 ---
-
 title: "cmap_inc(3)"
 name: "cmap_inc"
 section: "3"
@@ -8,8 +7,12 @@ url: "/docs/linux/man/3-cmap_inc/"
 description: "cmap_inc – Increase already stored value in CMAP"
 ---
 
+<h2 class="name">NAME</h2>
+<p> cmap_inc &#8211; Increase already stored value in CMAP</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;corosync/cmap.h&gt;</code> </p>
 <p> <code>cs_error_t cmap_inc (cmap_handle_t </code><i>handle</i><code>, const char *</code><i>key_name</i><code>);</code> </p>
+<h2>DESCRIPTION</h2>
 <p> The <code>cmap_inc</code> function is used to increase integer value of already stored key inside cmap. The <i>handle</i> argument is connection to CMAP database obtained by calling <code><a href="/docs/linux/man/3-cmap_initialize/">cmap_initialize</a>(3)</code> function. <i>key_name</i> is name of key to increase value of. </p>
 <p> Function is defined only on values where increase makes sense and is well defined, so it can be one of: </p>
 <p> <code>CMAP_VALUETYPE_INT8</code> &#8211; 8-bit signed integer </p>

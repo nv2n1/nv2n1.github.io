@@ -1,5 +1,4 @@
 ---
-
 title: "mussh(1)"
 name: "mussh"
 section: "1"
@@ -10,7 +9,9 @@ description: "mussh – MUltihost SSH"
 
 <h2>NAME</h2>
 <p> mussh &#8211; MUltihost SSH</p>
+<h2>SYNOPSIS</h2>
 <p> <code>mussh [</code> <i>OPTIONS</i> <code>] &lt;-h </code> <i>host&#8230;</i> <code>| -H </code> <i>hostfile</i> <code>&gt; [-c</code> <i>cmd</i> <code>] [-C </code> <i>scriptfile</i> <code>]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>mussh</code> is a shell script that allows you to execute a command or script over <code><a href="/docs/linux/man/1-ssh/">ssh</a></code>(1) on multiple hosts with one command. When possible mussh will use <code><a href="/docs/linux/man/1-ssh-agent/">ssh-agent</a></code>(1) and RSA/DSA keys to minimize the need to enter your password more than once.</p>
 <h2>OPTIONS</h2>
 <dl>

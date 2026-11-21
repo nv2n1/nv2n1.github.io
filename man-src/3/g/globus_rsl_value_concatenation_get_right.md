@@ -7,6 +7,8 @@ url: "/docs/linux/man/3-globus_rsl_value_concatenation_get_right/"
 description: "RSL Accessor Functions –"
 ---
 
+<h2 class="name">NAME</h2>
+<p> RSL Accessor Functions &#8211; </p>
 <h3>Functions</h3>
 <p> int <code>globus_rsl_boolean_get_operator</code> (globus_rsl_t *ast_node)<br />
  <i>Get the RSL operator used in a boolean RSL composition. </i><br />

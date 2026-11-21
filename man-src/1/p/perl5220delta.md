@@ -1,5 +1,4 @@
 ---
-
 title: "perl5220delta(1)"
 name: "perl5220delta"
 section: "1"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/1-perl5220delta/"
 description: "perl5220delta – what is new for perl v5.22.0"
 ---
 
+<h2 class="name">NAME</h2>
+<p> perl5220delta &#8211; what is new for perl v5.22.0 </p>
+<h2>DESCRIPTION</h2>
 <p> This document describes differences between the 5.20.0 release and the 5.22.0 release. </p>
 <p> If you are upgrading from an earlier release such as 5.18.0, first read perl5200delta, which describes differences between 5.18.0 and 5.20.0.</p>
 <h2>Core Enhancements</h2>

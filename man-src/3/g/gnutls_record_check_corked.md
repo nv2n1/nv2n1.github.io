@@ -1,5 +1,4 @@
 ---
-
 title: "gnutls_record_check_corked(3)"
 name: "gnutls_record_check_corked"
 section: "3"
@@ -10,12 +9,14 @@ description: "gnutls_record_check_corked – API function"
 
 <h2>NAME</h2>
 <p> gnutls_record_check_corked &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;gnutls/gnutls.h&gt;</code> </p>
 <p> <code>size_t gnutls_record_check_corked(gnutls_session_t </code><i>session</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
 <dl>
 <dt>gnutls_session_t session</dt>
 <dd> is a <code>gnutls_session_t</code> structure.</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> This function checks if there pending corked data in the gnutls buffers &#8211;see <code>gnutls_record_cork()</code>.</p>
 <h2>RETURNS</h2>
 <p> Returns the size of the corked data or zero.</p>

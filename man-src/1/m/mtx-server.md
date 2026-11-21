@@ -1,5 +1,4 @@
 ---
-
 title: "mtx-server(1)"
 name: "mtx-server"
 section: "1"
@@ -8,7 +7,11 @@ url: "/docs/linux/man/1-mtx-server/"
 description: "mtx-server – Simple Webserver For Helpers"
 ---
 
+<h2 class="name">NAME</h2>
+<p>&nbsp;mtx-server &#8211; Simple Webserver For Helpers </p>
+<h2>SYNOPSIS</h2>
 <p> <code>mtxrun &#8211;script server [</code> <i>OPTIONS &#8230;</i> <code>] [</code> <i>FILENAMES</i> <code>]</code></p>
+<h2>DESCRIPTION</h2>
 <p> <code>Simple Webserver For Helpers</code></p>
 <h2>OPTIONS</h2>
 <dl>

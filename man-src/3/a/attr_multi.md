@@ -1,5 +1,4 @@
 ---
-
 title: "attr_multi(3)"
 name: "attr_multi"
 section: "3"
@@ -18,6 +17,7 @@ int attr_multi(const char *path, attr_multiop_t *oplist,
 int attr_multif(int fd, attr_multiop_t *oplist,
                 int count, int flags);
 [</code></pre>
+<h2>DESCRIPTION</h2>
 <p> ] The <code>attr_multi</code> and <code>attr_multif</code> functions provide a way to operate on multiple attributes of a filesystem object at once. </p>
 <p> <i>Path</i> points to a path name for a filesystem object, and <i>fd</i> refers to the file descriptor associated with a file. The <i>oplist</i> is an array of <tt>attr_multiop_t</tt> structures. Each element in that array describes a single attribute operation and provides all the information required to carry out that operation and to check for success or failure of that operation. <i>Count</i> tells how many elements are in the <i>oplist</i> array. </p>
 <p> [c p a] The contents of an <tt>attr_multiop_t</tt> structure include the following members: </p>

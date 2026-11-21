@@ -1,5 +1,4 @@
 ---
-
 title: "irsimsend(1)"
 name: "irsimsend"
 section: "1"
@@ -10,7 +9,9 @@ description: "irsimsend- send simulated IR data."
 
 <h2>NAME</h2>
 <p> irsimsend- send simulated IR data.</p>
+<h2>SYNOPSIS</h2>
 <p> <code>irsimsend [-v|-h|-c &lt;count&gt;|-U plugindir] irsimsend &lt;configfile&gt;</code> </p>
+<h2>DESCRIPTION</h2>
 <p> irsimsend is a simple test tool which given a configuration file will send all keys defined in that file or the keys listed in another file. The program uses the file driver to log all sent data (pulses/spaces durations) into a file &#8216;simsend.out&#8217;. The symbols sent are printed on stdout. </p>
 <h2>OPTIONS</h2>
 <dl>

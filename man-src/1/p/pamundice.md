@@ -1,5 +1,4 @@
 ---
-
 title: "pamundice(1)"
 name: "pamundice"
 section: "1"
@@ -8,6 +7,8 @@ url: "/docs/linux/man/1-pamundice/"
 description: "pamundice – combine grid of images (tiles) into one"
 ---
 
+<h2 class="name">NAME</h2>
+<p> pamundice &#8211; combine grid of images (tiles) into one</p>
 <h2>EXAMPLE</h2>
 <pre>
 <tt>
@@ -16,6 +17,7 @@ description: "pamundice – combine grid of images (tiles) into one"
     $ pamundice myimage.ppm myimage_part_%2a -across=13 -hoverlap=9
 </tt>
 </pre>
+<h2>SYNOPSIS</h2>
 <p> <code>pamundice</code> </p>
 <p> [<code>-across=</code><i>n</i>] </p>
 <p> [<code>-down=</code><i>n</i>] </p>
@@ -24,6 +26,7 @@ description: "pamundice – combine grid of images (tiles) into one"
 <p> [<code>-verbose</code>] </p>
 <p> <i>input_filename_pattern</i> </p>
 <p> You can use the minimum unique abbreviation of the options. You can use two hyphens instead of one. You can separate an option name from its value with white space instead of an equals sign. </p>
+<h2>DESCRIPTION</h2>
 <p> This program is part of <code><a href="/docs/linux/man/1-netpbm/">Netpbm</a></code>(1) </p>
 <p> <code>pamundice</code> reads a bunch of Netpbm images as input and combines them as a grid of tiles into a single output image of the same kind on Standard Output. </p>
 <p> You can optionally make the pieces overlap. </p>

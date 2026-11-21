@@ -1,5 +1,4 @@
 ---
-
 title: "kwalletcli(1)"
 name: "kwalletcli"
 section: "1"
@@ -10,8 +9,10 @@ description: "kwalletcli – command line interface to the KDE Wallet"
 
 <h2>NAME</h2>
 <p> <code>kwalletcli</code> &#8211; command line interface to the KDE Wallet</p>
+<h2>SYNOPSIS</h2>
 <p> [-<code>q</code> ] &#8211;<code>hV</code><br />
  [-<code>q</code> ] &#8211;<code>f </code><i>folder</i> &#8211;<code>e </code><i>entry</i> [-<code>P | p </code><i>password</i> ]</p>
+<h2>DESCRIPTION</h2>
 <p> The utility is a command line interface to KWallet. It will only work if KDE is running (DCOP) and reachable (via X11). can be used to get password entries from the Wallet, or to write them there. </p>
 <p> The options are as follows:</p>
 <dl>

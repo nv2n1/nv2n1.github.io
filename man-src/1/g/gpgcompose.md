@@ -1,5 +1,4 @@
 ---
-
 title: "gpgcompose(1)"
 name: "gpgcompose"
 section: "1"
@@ -8,9 +7,13 @@ url: "/docs/linux/man/1-gpgcompose/"
 description: "gpgcompose – Generate a stream of OpenPGP packets"
 ---
 
+<h2 class="name">NAME</h2>
+<p> gpgcompose &#8211; Generate a stream of OpenPGP packets</p>
+<h2>SYNOPSIS</h2>
 <p> <code>gpgcompose</code> [[<i>OPTION</i> [<i>ARGS</i>]] &#8230; ] </p>
 <p> <code>gpgcompose &#8211;help</code> </p>
 <p> <code>gpgcompose</code> <i>OPTION</i> <code>&#8211;help</code> </p>
+<h2>DESCRIPTION</h2>
 <p> <code>gpgcompose</code> generates a stream of OpenPGP packets, including some which can include other nested packets within a layer of encryption. The syntax on the command line isn&#8217;t stable enough to document currently, but additional hints and examples can be found from the command line using <code>&#8211;help</code>. </p>
 <h2>EXTERNAL DEPENDENCIES</h2>
 <p> <code>gpgcompose</code> is not capable of performing secret key operations on its own. Creation of any OpenPGP object that requires secret key operations (e.g., <code>&#8211;signature</code>) will need to speak to an already-running <code>gpg-agent</code>. </p>

@@ -1,5 +1,4 @@
 ---
-
 title: "asn1_number_of_elements(3)"
 name: "asn1_number_of_elements"
 section: "3"
@@ -10,6 +9,7 @@ description: "asn1_number_of_elements – API function"
 
 <h2>NAME</h2>
 <p> asn1_number_of_elements &#8211; API function</p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;libtasn1.h&gt;</code> </p>
 <p> <code>int asn1_number_of_elements(asn1_node </code><i>element</i><code>, const char * </code><i>name</i><code>, int * </code><i>num</i><code>);</code></p>
 <h2>ARGUMENTS</h2>
@@ -20,6 +20,7 @@ description: "asn1_number_of_elements – API function"
 <dd> the name of a sub-structure of ROOT.</dd>
 <dt>int * num</dt>
 <dd> pointer to an integer where the result will be stored</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> Counts the number of elements of a sub-structure called NAME with names equal to &quot;?1&quot;,&quot;?2&quot;, &#8230;</p>
 <h2>RETURNS</h2>
 <p> <code>ASN1_SUCCESS</code> if successful, <code>ASN1_ELEMENT_NOT_FOUND</code> if<br />

@@ -1,5 +1,4 @@
 ---
-
 title: "fmaxl(3)"
 name: "fmaxl"
 section: "3"
@@ -8,6 +7,9 @@ url: "/docs/linux/man/3-fmaxl/"
 description: "fmax, fmaxf, fmaxl – determine maximum of two floating-point numbers"
 ---
 
+<h2 class="name">NAME</h2>
+<p> fmax, fmaxf, fmaxl &#8211; determine maximum of two floating-point numbers </p>
+<h2>SYNOPSIS</h2>
 <p> <code>#include &lt;math.h&gt;</code> </p>
 <p> <code>double fmax(double </code><i>x</i><code>, double </code><i>y</i><code>);</code> <code>float fmaxf(float </code><i>x</i><code>, float </code><i>y</i><code>);</code> <code>long double fmaxl(long double </code><i>x</i><code>, long double </code><i>y</i><code>);</code> </p>
 <p> Link with <i>-lm</i>. </p>
@@ -16,6 +18,7 @@ description: "fmax, fmaxf, fmaxl – determine maximum of two floating-point num
 <dl>
 <dt>
 </dt><dd> _ISOC99_SOURCE || _POSIX_C_SOURCE&nbsp;&gt;=&nbsp;200112L</dd></dl>
+<h2>DESCRIPTION</h2>
 <p> These functions return the larger value of <i>x</i> and <i>y</i>.</p>
 <h2>RETURN VALUE</h2>
 <p> These functions return the maximum of <i>x</i> and <i>y</i>. </p>
