@@ -1,9 +1,10 @@
 ---
-title: "Migrating from WordPress to GitHub Pages: A Practical Guide"
+title: "How to Migrate WordPress to GitHub Pages with Hugo"
 date: 2026-11-21
-slug: wordpress-to-github-pages
-url: /wordpress-to-github-pages/
-canonical: /wordpress-to-github-pages/
+slug: migrate-wordpress-to-github-pages
+url: /migrate-wordpress-to-github-pages/
+canonical: /migrate-wordpress-to-github-pages/
+description: "Step-by-step guide to migrating WordPress to Hugo on GitHub Pages: export the database, convert posts to Markdown, preserve URLs, and build in 8 seconds."
 categories:
   - meta
 tags:
@@ -236,9 +237,5 @@ Human role: strategic decisions (URL structure, taxonomy design), final review, 
 - **Free hosting, zero server maintenance, static security**
 
 The site is live at [systutorials.com](https://www.systutorials.com) — this very post you're reading is served from the Hugo + GitHub Pages stack.
-
----
-
-*This post documents the migration that landed in PR [#62](https://github.com/nv2n1/nv2n1.github.io/pull/62). The blog post itself was added in PR [#66](https://github.com/nv2n1/nv2n1.github.io/pull/66).*
 
 To leave comments or report issues, please create a PR or report an issue at [https://github.com/nv2n1/nv2n1.github.io](https://github.com/nv2n1/nv2n1.github.io).
