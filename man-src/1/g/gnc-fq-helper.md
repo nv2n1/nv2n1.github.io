@@ -68,8 +68,4 @@ url: "/docs/linux/man/1-gnc-fq-helper/"
 
  Exit status 
 
- 0 - success non-zero - failure 
-
-<h2>Index</h2>
-
-
+ 0 - success non-zero - failure

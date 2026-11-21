@@ -44,8 +44,4 @@ const char *ibv_get_device_name(struct ibv_device *device);
 
  
 
- Dotan Barak &lt;dotanba [at] gmail.com&gt; 
-
-<h2>Index</h2>
-
-
+ Dotan Barak &lt;dotanba [at] gmail.com&gt;

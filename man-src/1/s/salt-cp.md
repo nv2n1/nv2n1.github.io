@@ -59,5 +59,3 @@ salt - cp '*'[options] SOURCE DEST salt - cp - E '.*'[options] SOURCE DEST salt 
 <p> Thomas S. Hatch &lt;thatch45 [at] gmail.com&gt; and many others, please see the Authors file</p>
 <h2>COPYRIGHT</h2>
 <p> 2016 SaltStack, Inc. </p>
-<h2>Index</h2>
-</p>

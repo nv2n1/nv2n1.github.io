@@ -316,8 +316,4 @@ pflogsumm.pl - [eq][-d&lt;today | yesterday&gt;][--detail&lt;cnt&gt;][--bounce_d
     USA.
     An on-line copy of the GNU General Public License can be found
     <a rel="nofollow" HREF="http://www.fsf.org/copyleft/gpl.html.">http://www.fsf.org/copyleft/gpl.html.</a>
-</pre> 
-
-<h2>Index</h2>
-
-
+</pre>

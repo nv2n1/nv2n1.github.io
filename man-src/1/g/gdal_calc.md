@@ -76,8 +76,4 @@ gdal_calc.py -A input.tif --outfile=result.tif --calc=&quot;A*(A&gt;0)&quot; --N
 
  
 
- Chris Yesson &lt;chris dot='' yesson='' at='' ioz='' dot='' ac='' dot='' uk&gt;=''&gt; Etienne Tourigny &lt;etourigny dot='' dev='' at='' gmail='' dot='' com&gt;=''&gt; 
-
-<h2>Index</h2>
-
-
+ Chris Yesson &lt;chris dot='' yesson='' at='' ioz='' dot='' ac='' dot='' uk&gt;=''&gt; Etienne Tourigny &lt;etourigny dot='' dev='' at='' gmail='' dot='' com&gt;=''&gt;

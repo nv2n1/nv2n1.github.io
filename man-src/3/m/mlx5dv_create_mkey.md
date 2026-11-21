@@ -78,8 +78,4 @@ int mlx5dv_destroy_mkey(struct mlx5dv_mkey *mkey);
 
  #AUTHOR 
 
- Yishai Hadas &lt;yishaih [at] mellanox.com&gt; 
-
-<h2>Index</h2>
-
-
+ Yishai Hadas &lt;yishaih [at] mellanox.com&gt;

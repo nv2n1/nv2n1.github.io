@@ -683,8 +683,4 @@ HTML(5) files
 
  <b>Tidy</b> was written by <b>Dave Raggett</b> &lt;dsr [at] w3.org&gt;, and subsequently maintained by a team at <a rel="nofollow" HREF="http://tidy.sourceforge.net/,">http://tidy.sourceforge.net/,</a> and now maintained by <b>HTACG</b> (<a rel="nofollow" HREF="http://www.htacg.org">http://www.htacg.org</a>). 
 
- The sources for <b>HTML Tidy</b> are available at <a rel="nofollow" HREF="https://github.com/htacg/tidy-html5/">https://github.com/htacg/tidy-html5/</a> under the MIT Licence. 
-
-<h2>Index</h2>
-
-
+ The sources for <b>HTML Tidy</b> are available at <a rel="nofollow" HREF="https://github.com/htacg/tidy-html5/">https://github.com/htacg/tidy-html5/</a> under the MIT Licence.

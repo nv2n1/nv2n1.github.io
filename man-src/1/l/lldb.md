@@ -55,5 +55,3 @@ description: "Darwin"
 <p> To report bugs, please visit <a rel="nofollow" href="http://llvm.org/bugs/">http://llvm.org/bugs/</a></p>
 <h2>AUTHOR</h2>
 <p> Maintained by the LLDB Team, <a rel="nofollow" href="http://lldb.llvm.org/">http://lldb.llvm.org/</a> </p>
-<h2>Index</h2>
-</p>

@@ -1195,5 +1195,3 @@ rm data/**/{6..13}
 <p> The Borg Collective (see AUTHORS file)</p>
 <h2>COPYRIGHT</h2>
 <p> 2010-2014 Jonas Borgström, 2015-2016 The Borg Collective (see AUTHORS file) </p>
-<h2>Index</h2>
-</p>

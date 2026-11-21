@@ -20,8 +20,4 @@ url: "/docs/linux/man/1-isnum/"
 
 <h2>Author</h2>
 
- Jessica Mink, SAO (jmink [at] cfa.harvard.edu) 
-
-<h2>Index</h2>
-
-
+ Jessica Mink, SAO (jmink [at] cfa.harvard.edu)

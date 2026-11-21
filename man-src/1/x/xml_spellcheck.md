@@ -82,8 +82,4 @@ url: "/docs/linux/man/1-xml_spellcheck/"
 
  Michel Rodriguez &lt;mirod [at] xmltwig.com&gt; 
 
- xml_spellcheck is available at <a rel="nofollow" HREF="http://www.xmltwig.com/xmltwig/">http://www.xmltwig.com/xmltwig/</a> 
-
-<h2>Index</h2>
-
-
+ xml_spellcheck is available at <a rel="nofollow" HREF="http://www.xmltwig.com/xmltwig/">http://www.xmltwig.com/xmltwig/</a>

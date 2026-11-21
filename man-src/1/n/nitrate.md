@@ -51,8 +51,4 @@ url = <a rel="nofollow" HREF="https://nitrate.server/xmlrpc/">https://nitrate.se
 
  
 
- Petr Šplíchal &lt;<i>psplicha [at] redhat.com</i>&gt; 
-
-<h2>Index</h2>
-
-
+ Petr Šplíchal &lt;<i>psplicha [at] redhat.com</i>&gt;

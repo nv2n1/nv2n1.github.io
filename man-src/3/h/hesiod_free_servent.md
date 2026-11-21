@@ -36,8 +36,4 @@ struct servent *hesiod_getservbyname(void *context,
 
 <h2>SEE ALSO</h2>
 
- <a HREF="/docs/linux/man/3-hesiod/">hesiod</a>(3) 
-
-<h2>Index</h2>
-
-
+ <a HREF="/docs/linux/man/3-hesiod/">hesiod</a>(3)

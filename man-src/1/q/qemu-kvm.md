@@ -1457,8 +1457,4 @@ gluster[+transport]: //[server[:port]]/volname/image[?socket=...]
 
 <h2>AUTHOR</h2>
 
- Fabrice Bellard 
-
-<h2>Index</h2>
-
-
+ Fabrice Bellard

@@ -289,8 +289,4 @@ svn - bisect skip[&lt;rev&gt;[&lt;rev&gt;...]]
 
  This software is copyright (c) 2008 Mark Glines. 
 
- It is distributed under the terms of the Artistic License 2.0. For details, see the ``<font SIZE="-1">LICENSE''</font> file packaged alongside this tool. 
-
-<h2>Index</h2>
-
-
+ It is distributed under the terms of the Artistic License 2.0. For details, see the ``<font SIZE="-1">LICENSE''</font> file packaged alongside this tool.

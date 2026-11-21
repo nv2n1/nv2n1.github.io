@@ -186,8 +186,4 @@ input, 56000, 8, DIV, LE, input, 8, *, 56000, IF
 
 <h2>AUTHOR</h2>
 
- Steve Rader &lt;rader [at] wiscnet.net&gt; 
-
-<h2>Index</h2>
-
-
+ Steve Rader &lt;rader [at] wiscnet.net&gt;

@@ -869,5 +869,3 @@ zshaddhistory()
 </dt><dd>
 <p> Typically this will be used to set the value to 0 so that the prompt appears flush with the right hand side of the screen. This is not the default as many terminals do not handle this correctly, in particular when the prompt appears at the extreme bottom right of the screen. Recent virtual terminals are more likely to handle this case correctly. Some experimentation is necessary.</dd></dl>
 </dl>
-<h2>Index</h2>
-</p>

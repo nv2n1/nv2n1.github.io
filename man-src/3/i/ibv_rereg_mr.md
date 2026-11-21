@@ -81,8 +81,4 @@ int ibv_rereg_mr(struct ibv_mr *mr,
 
  
 
- Matan Barak &lt;matanb [at] mellanox.com&gt;, Yishai Hadas &lt;yishaih [at] mellanox.com&gt; 
-
-<h2>Index</h2>
-
-
+ Matan Barak &lt;matanb [at] mellanox.com&gt;, Yishai Hadas &lt;yishaih [at] mellanox.com&gt;

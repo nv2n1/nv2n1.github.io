@@ -45,8 +45,4 @@ url: "/docs/linux/man/1-perlriscos/"
 
 <h2>AUTHOR</h2>
 
- Alex Waugh &lt;alex [at] alexwaugh.com&gt; 
-
-<h2>Index</h2>
-
-
+ Alex Waugh &lt;alex [at] alexwaugh.com&gt;

@@ -133,8 +133,4 @@ nvme - admin - passthru&lt;device&gt;[--opcode = &lt;opcode&gt; | -o&lt;opcode&g
 
  
 
- Part of the nvme-user suite 
-
-<h2>Index</h2>
-
-
+ Part of the nvme-user suite

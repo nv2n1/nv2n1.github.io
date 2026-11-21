@@ -4516,5 +4516,3 @@ input.ppm -gaussian 0x2 output.ppm </p>
 &nbsp;<wbr>LIBS&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>=&nbsp;<wbr>&#8230; </p>
 <h2>OPTIONS</h2>
 <p> The version command does not currently support any options. </p>
-<h2>Index</h2>
-</p>

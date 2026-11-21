@@ -77,5 +77,3 @@ description: "yara – find files matching patterns and rules written in a speci
 <p> Apply rules on <i>/foo/bar/rules</i> to <i>bazfile</i> while passing the content of <i>cuckoo_json_report</i> to the cuckoo module.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Victor M. Alvarez &lt;plusvic [at] gmail.com&gt;;&lt;vmalvarez [at] virustotal.com&gt; </p>
-<h2>Index</h2>
-</p>

@@ -84,8 +84,4 @@ struct mlx5dv_flow_action_attr {
 
  
 
- Mark Bloch &lt;marb [at] mellanox.com&gt; 
-
-<h2>Index</h2>
-
-
+ Mark Bloch &lt;marb [at] mellanox.com&gt;

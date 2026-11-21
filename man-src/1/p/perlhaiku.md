@@ -53,8 +53,4 @@ url: "/docs/linux/man/1-perlhaiku/"
 
  The initial Haiku port was done by Ingo Weinhold &lt;ingo_weinhold [at] gmx.de&gt;. 
 
- Last update: 2008-10-29 
-
-<h2>Index</h2>
-
-
+ Last update: 2008-10-29

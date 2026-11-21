@@ -28,8 +28,4 @@ url: "/docs/linux/man/1-inline2test/"
 
  <tt>&quot;inline2test&quot;</tt> is the Test::Inline 2 test compiler. 
 
- It's job is to scan through an arbitrary tree of Perl source code files, locate inline test sections, extract them, convert them to test scripts, and write them to an output path. 
-
-<h2>Index</h2>
-
-
+ It's job is to scan through an arbitrary tree of Perl source code files, locate inline test sections, extract them, convert them to test scripts, and write them to an output path.

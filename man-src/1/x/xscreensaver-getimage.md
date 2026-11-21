@@ -36,5 +36,3 @@ description: "xscreensaver-getimage – put some randomly-selected image on the 
 <p> Copyright &#169; 2001-2011 by Jamie Zawinski. Permission to use, copy, modify, distribute, and sell this software and its documentation for any purpose is hereby granted without fee, provided that the above copyright notice appear in all copies and that both that copyright notice and this permission notice appear in supporting documentation. No representations are made about the suitability of this software for any purpose. It is provided &quot;as is&quot; without express or implied warranty.</p>
 <h2>AUTHOR</h2>
 <p> Jamie Zawinski &lt;jwz [at] jwz.org&gt;, 14-Apr-01 </p>
-<h2>Index</h2>
-</p>

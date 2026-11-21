@@ -58,14 +58,4 @@ url: "/docs/linux/man/1-ikiwiki-transition/"
 
 <h2>AUTHOR</h2>
 
- Josh Triplett &lt;josh [at] freedesktop.org&gt;, Joey Hess &lt;joey [at] ikiwiki.info&gt; 
-
- 
-
- 
-
- 
-
-<h2>Index</h2>
-
-
+ Josh Triplett &lt;josh [at] freedesktop.org&gt;, Joey Hess &lt;joey [at] ikiwiki.info&gt;

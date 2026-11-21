@@ -65,8 +65,4 @@ url: "/docs/linux/man/1-helptext/"
 
  <i>Last changed: $Date: 2007-05-30 10:26:52 +0200 (Wed, 30 May 2007) $</i> 
 
- Help Index 
-
-<h2>Index</h2>
-
-
+ Help Index

@@ -100,5 +100,3 @@ description: "xsm – X Session Manager"
 <h2>AUTHORS</h2>
 <p> Ralph Mor, X Consortium<br />
  Jordan Brown, Quarterdeck Office Systems </p>
-<h2>Index</h2>
-</p>

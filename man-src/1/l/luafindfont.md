@@ -142,10 +142,4 @@ Check for file /usr/local/texlive/texmf-var/luatex-cache/generic/names/luaotfloa
 
 <h2>LICENSE</h2>
 
- Permission is granted to copy, distribute and/or modify this software under the terms of the LaTeX Project Public License, version 1.3. 
-
- 
-
-<h2>Index</h2>
-
-
+ Permission is granted to copy, distribute and/or modify this software under the terms of the LaTeX Project Public License, version 1.3.

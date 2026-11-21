@@ -35,8 +35,4 @@ url: "/docs/linux/man/1-papi_version/"
 
  
 
- There are no known bugs in this utility. If you find a bug, it should be reported to the PAPI Mailing List at ptools-perfapi [at] ptools.org. 
-
-<h2>Index</h2>
-
-
+ There are no known bugs in this utility. If you find a bug, it should be reported to the PAPI Mailing List at ptools-perfapi [at] ptools.org.

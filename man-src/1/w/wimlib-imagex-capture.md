@@ -337,5 +337,3 @@ $ wimapply bkup-2013-08-20.dwm --ref=bkup-base.wim 1 \
 <p> wimlib-imagex capture /dev/sda2 &#8211; &quot;Windows 7&quot; | someprog</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-wimlib-imagex/">wimlib-imagex</a></code>(1), <code><a href="/docs/linux/man/1-wimlib-imagex-apply/">wimlib-imagex-apply</a></code>(1) </p>
-<h2>Index</h2>
-</p>

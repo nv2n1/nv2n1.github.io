@@ -510,8 +510,4 @@ _FASD_SINK=&quot;$HOME/.fasd.log&quot;
 
 <h2>AUTHORS</h2>
 
- Wei Dai &lt;x@wei23.net&gt;. 
-
-<h2>Index</h2>
-
-
+ Wei Dai &lt;x@wei23.net&gt;.

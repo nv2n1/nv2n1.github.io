@@ -64,8 +64,4 @@ url: "/docs/linux/man/1-apt-mirror/"
 
 <h2>AUTHOR</h2>
 
- Dmitry N. Hramtsov &lt;hdn [at] nsu.ru&gt; 
-
-<h2>Index</h2>
-
-
+ Dmitry N. Hramtsov &lt;hdn [at] nsu.ru&gt;

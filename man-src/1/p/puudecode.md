@@ -33,8 +33,4 @@ url: "/docs/linux/man/1-puudecode/"
 
 <h2>AUTHOR</h2>
 
- Andreas Koenig &lt;andreas.koenig [at] anima.de&gt; 
-
-<h2>Index</h2>
-
-
+ Andreas Koenig &lt;andreas.koenig [at] anima.de&gt;

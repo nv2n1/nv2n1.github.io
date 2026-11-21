@@ -901,8 +901,4 @@ utf8::encode($utf8_bom);
 
 <h2>AUTHOR</h2>
 
- Sean M. Burke 
-
-<h2>Index</h2>
-
-
+ Sean M. Burke

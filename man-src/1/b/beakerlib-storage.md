@@ -13,8 +13,4 @@ url: "/docs/linux/man/1-beakerlib-storage/"
 
 <h2>DESCRIPTION</h2>
 
- There are currently no public functions in this module 
-
-<h2>Index</h2>
-
-
+ There are currently no public functions in this module

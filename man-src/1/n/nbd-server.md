@@ -70,5 +70,3 @@ description: "nbd-server – serve a file as a block device to other computers r
 <p> The Linux kernel module is now maintained by Paul Clements (Paul.Clements [at] steeleye.com), while the userland tools are maintained by Wouter Verhelst (&lt;wouter [at] debian.org&gt;) </p>
 <p> On The Hurd there is a regular translator available to perform the client side of the protocol, and the use of <code>nbd-client</code> is not required. Please see the relevant documentation for more information. </p>
 <p> This manual page was written by Wouter Verhelst (&lt;wouter [at] debian.org&gt;) for the Debian GNU/Linux system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, version 2, as published by the Free Software Foundation. </p>
-<h2>Index</h2>
-</p>

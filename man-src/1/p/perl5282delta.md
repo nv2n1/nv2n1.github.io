@@ -124,8 +124,4 @@ url: "/docs/linux/man/1-perl5282delta/"
 
  The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. 
 
- The <i>Artistic</i> and <i>Copying</i> files for copyright information. 
-
-<h2>Index</h2>
-
-
+ The <i>Artistic</i> and <i>Copying</i> files for copyright information.

@@ -98,5 +98,3 @@ description: "ldns_dnssec_zone, ldns_dnssec_name, ldns_dnssec_rrs, ldns_dnssec_r
 <p> <i>ldns_dnssec_zone_new</i>, <i>ldns_dnssec_name_new</i>, <i>ldns_dnssec_rrs_new</i>, <i>ldns_dnssec_rrsets_new</i>. And <code>perldoc Net::DNS</code>, <code>RFC1034</code>, <code>RFC1035</code>, <code>RFC4033</code>, <code>RFC4034</code> and <code>RFC4035</code>.</p>
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
-<h2>Index</h2>
-</p>

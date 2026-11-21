@@ -524,7 +524,3 @@ $HOME/.mcabber/histo/       Default directory for storing chat history files, if
  
 
 </dl>
-
-<h2>Index</h2>
-
-

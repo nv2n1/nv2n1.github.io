@@ -91,8 +91,4 @@ case '*' cd $argv[(count $argv)] return end
 
  
 
- will run the mkdir command, and if it is successful, change the current working directory to the one just created. 
-
-<h2>Index</h2>
-
-
+ will run the mkdir command, and if it is successful, change the current working directory to the one just created.

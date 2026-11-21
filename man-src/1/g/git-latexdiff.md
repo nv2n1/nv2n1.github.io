@@ -105,8 +105,3 @@ instead of red+trike/blue+underline diff:
 Use a specific latexdiff configuration file:
     git latexdiff --config /path/to/file HEAD^
 </code></pre></dd></dl>
- 
-
-<h2>Index</h2>
-
-

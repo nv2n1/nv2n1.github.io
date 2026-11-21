@@ -61,5 +61,3 @@ void foo_bar(int i);
 <p> See the file <i>Changes</i>.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-perl/">perl</a></code>(1), <code><a href="/docs/linux/man/1-perlxs/">perlxs</a></code>(1), <code><a href="/docs/linux/man/1-perlxstut/">perlxstut</a></code>(1), ExtUtils::ParseXS </p>
-<h2>Index</h2>
-</p>

@@ -50,5 +50,3 @@ description: "ldns_rr2str, ldns_pkt2str, ldns_rdf2str, ldns_rr_list2str, ldns_ke
 <p> <i>ldns_rr_print</i>, <i>ldns_rdf_print</i>, <i>ldns_pkt_print</i>, <i>ldns_rr_list_print</i>, <i>ldns_resolver_print</i>, <i>ldns_zone_print</i>. And <code>perldoc Net::DNS</code>, <code>RFC1034</code>, <code>RFC1035</code>, <code>RFC4033</code>, <code>RFC4034</code> and <code>RFC4035</code>.</p>
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
-<h2>Index</h2>
-</p>

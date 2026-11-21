@@ -13,8 +13,4 @@ url: "/docs/linux/man/1-urxvt-ml-block-graphics-to-ascii/"
 
 <h2>DESCRIPTION</h2>
 
- A not very useful example of filtering all text output to the terminal by replacing all line-drawing characters (U+2500 .. U+259F) by a similar-looking ascii character. 
-
-<h2>Index</h2>
-
-
+ A not very useful example of filtering all text output to the terminal by replacing all line-drawing characters (U+2500 .. U+259F) by a similar-looking ascii character.

@@ -825,5 +825,3 @@ Windows, Mac OS, iOS or Android.</p>
 <p> <code><a href="/docs/linux/man/1-certmgr/">certmgr</a></code>(1), <code>cert-sync</code>(1), <code><a href="/docs/linux/man/1-csharp/">csharp</a></code>(1), <code><a href="/docs/linux/man/1-gacutil/">gacutil</a></code>(1), <code><a href="/docs/linux/man/1-mcs/">mcs</a></code>(1), <code><a href="/docs/linux/man/1-monodis/">monodis</a></code>(1), <code><a href="/docs/linux/man/5-mono-config/">mono-config</a></code>(5), <code>mono-profilers</code>(1), <code><a href="/docs/linux/man/1-mprof-report/">mprof-report</a></code>(1), <code><a href="/docs/linux/man/1-pdb2mdb/">pdb2mdb</a></code>(1), <code><a href="/docs/linux/man/1-xsp/">xsp</a></code>(1), <code>mod_mono</code>(8) </p>
 <p> For more information on AOT: <a rel="nofollow" href="http://www.mono-project.com/docs/advanced/aot/">http://www.mono-project.com/docs/advanced/aot/</a> </p>
 <p> For ASP.NET-related documentation, see the <a href="/docs/linux/man/1-xsp/">xsp</a>(1) manual page </p>
-<h2>Index</h2>
-</dl>

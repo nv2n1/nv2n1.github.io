@@ -41,8 +41,4 @@ url: "/docs/linux/man/1-make-first-existing-target/"
 
 <h2>SEE ALSO</h2>
 
- <i><a HREF="/docs/linux/man/1-make/">make</a></i>(1) 
-
-<h2>Index</h2>
-
-
+ <i><a HREF="/docs/linux/man/1-make/">make</a></i>(1)

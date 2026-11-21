@@ -24,8 +24,4 @@ url: "/docs/linux/man/1-nytprofmerge/"
 
  <tt>&quot;nytprofmerge&quot;</tt> is likely to produce garbage if the input profiles aren't all profiles of <i>exactly</i> the same software. 
 
- <tt>&quot;nytprofmerge&quot;</tt> is new and somewhat experimental. If it produces unexpected results please produce a <i>small</i> test case that demonstrates the problem and let us know at &lt;<a rel="nofollow" HREF="http://groups.google.com/group/develnytprof-dev">http://groups.google.com/group/develnytprof-dev</a>&gt; - thanks! 
-
-<h2>Index</h2>
-
-
+ <tt>&quot;nytprofmerge&quot;</tt> is new and somewhat experimental. If it produces unexpected results please produce a <i>small</i> test case that demonstrates the problem and let us know at &lt;<a rel="nofollow" HREF="http://groups.google.com/group/develnytprof-dev">http://groups.google.com/group/develnytprof-dev</a>&gt; - thanks!

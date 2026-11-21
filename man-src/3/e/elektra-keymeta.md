@@ -397,5 +397,3 @@ if (keyGetType(k1) == KEY_TYPE_COLOR)
 <p> -1 on NULL pointer</dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Elektra Projekt from the source code. </p>
-<h2>Index</h2>
-</p>

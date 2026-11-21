@@ -154,5 +154,3 @@ description: "TTF2PT1 – A True Type to PostScript Type 1 Font Converter"
 <p> Modification by Mark Heath. </p>
 <p> Further modification by Sergey Babkin. </p>
 <p> The Type1 assembler by I. Lee Hetherington with modifications by Kai-Uwe Herbing. </p>
-<h2>Index</h2>
-</p>

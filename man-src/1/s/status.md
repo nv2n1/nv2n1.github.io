@@ -42,12 +42,3 @@ url: "/docs/linux/man/1-status/"
 </dt><dd> -t or --print-stack-trace prints a stack trace of all function calls on the call stack
 </dd><dt>*
 </dt><dd> -h or --help display a help message and exit</dd></dl>
- 
-
- 
-
- 
-
-<h2>Index</h2>
-
-

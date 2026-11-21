@@ -75,5 +75,3 @@ description: "Buffer Set Utilities –"
 <p> <code>gss_add_buffer_set_member</code></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gssapi_gsi from the source code. </p>
-<h2>Index</h2>
-</p>

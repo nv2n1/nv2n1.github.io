@@ -49,8 +49,4 @@ url: "/docs/linux/man/1-qbittorrent/"
 
 <h2>AUTHORS</h2>
 
- Christophe Dumez &lt;chris [at] qbittorrent.org&gt;. 
-
-<h2>Index</h2>
-
-
+ Christophe Dumez &lt;chris [at] qbittorrent.org&gt;.

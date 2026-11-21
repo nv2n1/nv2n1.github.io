@@ -48,9 +48,3 @@ Extype_t exzero(int);
  exopen() is the first function called. exclose() is the last function called. exccopen() is the called if code generation will be used. exccclose() releases the state information allocated in exccopen(). exstatement() saves statement start information. exrewind() restores statement start information saved by exstatement(). 
 
 <h2>SEE ALSO</h2>
-
- 
-
-<h2>Index</h2>
-
-

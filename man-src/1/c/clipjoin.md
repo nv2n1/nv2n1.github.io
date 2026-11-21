@@ -53,8 +53,4 @@ url: "/docs/linux/man/1-clipjoin/"
 
  This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself. 
 
- See &lt;<a rel="nofollow" HREF="http://www.perl.com/perl/misc/Artistic.html">http://www.perl.com/perl/misc/Artistic.html</a>&gt; 
-
-<h2>Index</h2>
-
-
+ See &lt;<a rel="nofollow" HREF="http://www.perl.com/perl/misc/Artistic.html">http://www.perl.com/perl/misc/Artistic.html</a>&gt;

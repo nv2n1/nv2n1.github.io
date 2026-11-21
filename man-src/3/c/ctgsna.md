@@ -245,5 +245,3 @@ corresponds to an eigenvalue w = a / b(= v * *HAu / v * *HBu) of the<br />
 <p> Definition at line 310 of file ctgsna.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>
-</p>

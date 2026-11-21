@@ -19,8 +19,4 @@ url: "/docs/linux/man/1-perlrepository/"
 
  See perlgit for detailed information about Perl's Git repository. 
 
- (The above documents supersede the information that was formerly here in perlrepository.) 
-
-<h2>Index</h2>
-
-
+ (The above documents supersede the information that was formerly here in perlrepository.)

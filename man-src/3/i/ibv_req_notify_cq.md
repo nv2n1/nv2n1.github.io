@@ -52,8 +52,4 @@ int ibv_req_notify_cq(struct ibv_cq *cq, int solicited_only);
 
  
 
- Dotan Barak &lt;dotanba [at] gmail.com&gt; 
-
-<h2>Index</h2>
-
-
+ Dotan Barak &lt;dotanba [at] gmail.com&gt;

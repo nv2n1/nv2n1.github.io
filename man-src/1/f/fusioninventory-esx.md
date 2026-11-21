@@ -60,8 +60,4 @@ url: "/docs/linux/man/1-fusioninventory-esx/"
 
 <h2>SECURITY</h2>
 
- The <font SIZE="-1">SSL</font> hostname check of the server is disabled. 
-
-<h2>Index</h2>
-
-
+ The <font SIZE="-1">SSL</font> hostname check of the server is disabled.

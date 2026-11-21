@@ -34,5 +34,3 @@ description: "cpupower-set – Set processor power related kernel or hardware co
 --perf - bias parts written by Len Brown&lt;len.brown[at] intel.com&gt;
              Thomas Renninger&lt;trenn[at] suse.de&gt;
 </code></pre>
-<h2>Index</h2>
-</p>

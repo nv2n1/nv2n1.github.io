@@ -18,10 +18,4 @@ url: "/docs/linux/man/3-libcurl-easy/"
 
  When all is setup, you tell libcurl to perform the transfer using <i><a HREF="/docs/linux/man/3-curl_easy_perform/">curl_easy_perform</a>(3)</i>. It will then do the entire operation and won't return until it is done (successfully or not). 
 
- After the transfer has been made, you can set new options and make another transfer, or if you're done, cleanup the session by calling <i><a HREF="/docs/linux/man/3-curl_easy_cleanup/">curl_easy_cleanup</a>(3)</i>. If you want persistent connections, you don't cleanup immediately, but instead run ahead and perform other transfers using the same easy handle. 
-
- 
-
-<h2>Index</h2>
-
-
+ After the transfer has been made, you can set new options and make another transfer, or if you're done, cleanup the session by calling <i><a HREF="/docs/linux/man/3-curl_easy_cleanup/">curl_easy_cleanup</a>(3)</i>. If you want persistent connections, you don't cleanup immediately, but instead run ahead and perform other transfers using the same easy handle.

@@ -40,5 +40,3 @@ description: "ldns_rr2wire, ldns_pkt2wire, ldns_rdf2wire"
 <p> <i>ldns_wire2rr</i>, <i>ldns_wire2pkt</i>, <i>ldns_wire2rdf</i>. And <code>perldoc Net::DNS</code>, <code>RFC1034</code>, <code>RFC1035</code>, <code>RFC4033</code>, <code>RFC4034</code> and <code>RFC4035</code>.</p>
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
-<h2>Index</h2>
-</p>

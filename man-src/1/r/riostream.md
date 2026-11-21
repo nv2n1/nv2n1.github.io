@@ -61,8 +61,4 @@ riostream[-s server_address][-b bind_address][-B buffer_size]
 
 <h2>SEE ALSO</h2>
 
- <a HREF="/docs/linux/man/7-rdma_cm/">rdma_cm</a>(7) <a HREF="/docs/linux/man/1-rstream/">rstream</a>(1) 
-
-<h2>Index</h2>
-
-
+ <a HREF="/docs/linux/man/7-rdma_cm/">rdma_cm</a>(7) <a HREF="/docs/linux/man/1-rstream/">rstream</a>(1)

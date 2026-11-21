@@ -28,8 +28,4 @@ url: "/docs/linux/man/1-fluid/"
 
 <h2>AUTHORS</h2>
 
- Bill Spitzak and others. 
-
-<h2>Index</h2>
-
-
+ Bill Spitzak and others.

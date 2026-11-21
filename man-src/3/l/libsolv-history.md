@@ -88,8 +88,4 @@ url: "/docs/linux/man/3-libsolv-history/"
 
  
 
- Michael Schroeder &lt;mls [at] suse.de&gt; 
-
-<h2>Index</h2>
-
-
+ Michael Schroeder &lt;mls [at] suse.de&gt;

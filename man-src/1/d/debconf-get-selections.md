@@ -23,8 +23,4 @@ url: "/docs/linux/man/1-debconf-get-selections/"
 
 <h2>AUTHOR</h2>
 
- Petter Reinholdtsen &lt;pere [at] hungry.com&gt; 
-
-<h2>Index</h2>
-
-
+ Petter Reinholdtsen &lt;pere [at] hungry.com&gt;

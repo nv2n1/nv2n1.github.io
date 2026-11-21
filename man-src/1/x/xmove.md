@@ -39,8 +39,4 @@ url: "/docs/linux/man/1-xmove/"
 
 <h2>AUTHOR</h2>
 
- This manual page was written by F. Hroch &lt;hroch [at] physics.muni.cz&gt;, for the Debian GNU/Linux system (but may be used by others). 
-
-<h2>Index</h2>
-
-
+ This manual page was written by F. Hroch &lt;hroch [at] physics.muni.cz&gt;, for the Debian GNU/Linux system (but may be used by others).

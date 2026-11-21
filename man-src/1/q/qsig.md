@@ -44,5 +44,3 @@ description: "qsig – signal pbs batch job"
 <p> If the qsig command fails to process any operand, the command exits with a value greater than zero.</p>
 <h2>SEE ALSO</h2>
 <p> qsub(1B), pbs_sigjob(3B), pbs_resources_*(7B) where * is system type, and the PBS ERS. </p>
-<h2>Index</h2>
-</p>

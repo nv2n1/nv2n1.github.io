@@ -51,8 +51,4 @@ enum ibv_rate mbps_to_ibv_rate(int mbps);
 
  
 
- Dotan Barak &lt;dotanb [at] dev.mellanox.co.il&gt; 
-
-<h2>Index</h2>
-
-
+ Dotan Barak &lt;dotanb [at] dev.mellanox.co.il&gt;

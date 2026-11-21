@@ -43,8 +43,4 @@ url: "/docs/linux/man/1-mimeexplode/"
 
 <h2>AUTHOR</h2>
 
- Eryq <tt>&quot;eryq [at] zeegee.com&quot;</tt>, in a big hurry... 
-
-<h2>Index</h2>
-
-
+ Eryq <tt>&quot;eryq [at] zeegee.com&quot;</tt>, in a big hurry...

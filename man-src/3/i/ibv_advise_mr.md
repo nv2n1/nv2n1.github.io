@@ -88,8 +88,4 @@ int ibv_advise_mr(struct ibv_pd *pd,
 
  
 
- Aviad Yehezkel &lt;aviadye [at] mellanox.com&gt; 
-
-<h2>Index</h2>
-
-
+ Aviad Yehezkel &lt;aviadye [at] mellanox.com&gt;

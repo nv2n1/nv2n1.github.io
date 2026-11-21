@@ -146,5 +146,3 @@ make_method-- name = system.identification-- helptext = 'System ID string' --sig
 <p> The <code>XML-RPC</code> standard is Copyright (c) 1998-2001, UserLand Software, Inc. See &lt;<a rel="nofollow" href="http://www.xmlrpc.com">http://www.xmlrpc.com</a>&gt; for more information about the <code>XML-RPC</code> specification.</p>
 <h2>AUTHOR</h2>
 <p> Randy J. Ray &lt;rjray [at] blackperl.com&gt; </p>
-<h2>Index</h2>
-</p>

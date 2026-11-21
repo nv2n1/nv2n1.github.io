@@ -19,8 +19,4 @@ url: "/docs/linux/man/1-urxvt256c-ml-searchable-scrollback/"
 
  The regex defaults to ``(?i)'', resulting in a case-insensitive search. To get a case-sensitive search you can delete this prefix using <tt>&quot;BackSpace&quot;</tt> or simply use an uppercase character which removes the ``(?i)'' prefix. 
 
- See perlre for more info about perl regular expression syntax. 
-
-<h2>Index</h2>
-
-
+ See perlre for more info about perl regular expression syntax.

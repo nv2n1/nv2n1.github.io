@@ -40,5 +40,3 @@ description: "git-clone-subset – Clones a subset of a git repository"
 <p> <code><a rel="nofollow" href="https://github.com/MestreLion/git-tools">https://github.com/MestreLion/git-tools</a></code></p>
 <h2>AUTHOR</h2>
 <p> Rodrigo Silva (MestreLion) linux [at] rodrigosilva.com </p>
-<h2>Index</h2>
-</p>

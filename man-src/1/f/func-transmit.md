@@ -40,8 +40,4 @@ url: "/docs/linux/man/1-func-transmit/"
 
 <h2>AUTHOR</h2>
 
- Various. See <a rel="nofollow" HREF="https://fedorahosted.org/func/">https://fedorahosted.org/func/</a> 
-
-<h2>Index</h2>
-
-
+ Various. See <a rel="nofollow" HREF="https://fedorahosted.org/func/">https://fedorahosted.org/func/</a>

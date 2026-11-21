@@ -36,8 +36,4 @@ url: "/docs/linux/man/1-helpztags/"
 <h2>SEE ALSO</h2>
 
  Read <tt> :help helptags
- </tt> in <i>vim</i> for detailed information about helptags. 
-
-<h2>Index</h2>
-
-
+ </tt> in <i>vim</i> for detailed information about helptags.

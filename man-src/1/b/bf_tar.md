@@ -39,5 +39,3 @@ description: "bf_tar – shell script to write a tar file of a bogofilter direct
 <p> This script expects a SUSv2 compliant shell. Solaris systems should have the SUNWxcu4 package installed (when bogofilter is configured) so that /usr/xpg4/bin/sh can be used.</p>
 <h2>AUTHORS</h2>
 <p> Matthias Andree </p>
-<h2>Index</h2>
-</p>

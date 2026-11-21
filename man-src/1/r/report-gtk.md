@@ -143,8 +143,3 @@ url: "/docs/linux/man/1-report-gtk/"
 <dl>
 <dt>
 </dt><dd> &bull; ABRT team</dd></dl>
- 
-
-<h2>Index</h2>
-
-

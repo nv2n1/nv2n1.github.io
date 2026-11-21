@@ -74,8 +74,4 @@ struct mlx5dv_alloc_dm_attr {
 
  
 
- Ariel Levkovich &lt;lariel [at] mellanox.com&gt; 
-
-<h2>Index</h2>
-
-
+ Ariel Levkovich &lt;lariel [at] mellanox.com&gt;

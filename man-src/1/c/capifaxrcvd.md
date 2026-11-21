@@ -42,8 +42,4 @@ url: "/docs/linux/man/1-capifaxrcvd/"
 
 <h2>AUTHOR</h2>
 
- manpage written from C source by Paul Slootman &lt;paul [at] debian.org&gt;. 
-
-<h2>Index</h2>
-
-
+ manpage written from C source by Paul Slootman &lt;paul [at] debian.org&gt;.

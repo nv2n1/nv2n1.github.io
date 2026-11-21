@@ -67,8 +67,4 @@ url: "/docs/linux/man/1-plex/"
 
 <h2>SEE ALSO</h2>
 
- <b><a HREF="/docs/linux/man/1-ppc386/">ppc386</a></b>(1) <b><a HREF="/docs/linux/man/1-pyacc/">pyacc</a></b>(1) 
-
-<h2>Index</h2>
-
-
+ <b><a HREF="/docs/linux/man/1-ppc386/">ppc386</a></b>(1) <b><a HREF="/docs/linux/man/1-pyacc/">pyacc</a></b>(1)

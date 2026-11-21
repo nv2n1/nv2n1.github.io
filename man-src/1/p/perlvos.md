@@ -76,8 +76,4 @@ url: "/docs/linux/man/1-perlvos/"
 
 <h2>LAST UPDATE</h2>
 
- February 28, 2013 
-
-<h2>Index</h2>
-
-
+ February 28, 2013

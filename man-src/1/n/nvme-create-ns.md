@@ -74,8 +74,4 @@ nvme create - ns&lt;device&gt;[--nsze = &lt;nsze&gt; | -s&lt;nsze&gt;]
 
  
 
- Part of the nvme-user suite 
-
-<h2>Index</h2>
-
-
+ Part of the nvme-user suite

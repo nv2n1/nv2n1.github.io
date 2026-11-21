@@ -30,5 +30,3 @@ description: "screendump – dump the contents of a virtual console to stdout"
 <p> (filling in the ellipses) and give the device files appropriate permissions, or run <code>screendump</code> as root. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-setterm/">setterm</a></code>(1) </p>
-<h2>Index</h2>
-</p>

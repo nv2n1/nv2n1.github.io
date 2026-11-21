@@ -82,8 +82,4 @@ gnash[option]...[URL]
 </dt><dd> Save a spontaneous screenshot. If no screenshots were requested from the command line, a default filename is used. Otherwise, the same filename pattern is used for requested and spontaneous screenshots.</dd></dl>
  
 
- Flash is a registered trademark of Adobe Corporation. 
-
-<h2>Index</h2>
-
-
+ Flash is a registered trademark of Adobe Corporation.

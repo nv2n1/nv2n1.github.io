@@ -35,8 +35,4 @@ url: "/docs/linux/man/1-abrt-handle-upload/"
 
  
 
- <a HREF="/docs/linux/man/5-abrt-conf/">abrt.conf</a>(5) 
-
-<h2>Index</h2>
-
-
+ <a HREF="/docs/linux/man/5-abrt-conf/">abrt.conf</a>(5)

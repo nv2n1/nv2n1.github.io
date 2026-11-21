@@ -94,5 +94,3 @@ struct {
 <h2>ACKNOWLEDGEMENTS</h2>
 <p> Some initial ideas were stolen from the C interface to the Zelk extensions to Oliver Laumann&#8217;s Elk scheme interpreter by J.P.Lewis, NEC C&amp;C Research, &lt;zilla [at] ccrl.nj.nec.com&gt; (for Sun4 &amp; SGI), and Roy Featherstone&#8217;s &lt;roy [at] robots.oxford.ac.uk&gt; personal C interface library for Sun[34] &amp; SGI. I also looked at the machine-dependent parts of the GCC and GDB distributions, and put the gcc asm() extensions to good use. Thanks guys! </p>
 <p> This work was partly supported by EC-ESPRIT Basic Research Action SECOND. </p>
-<h2>Index</h2>
-</p>

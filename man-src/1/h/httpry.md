@@ -61,5 +61,3 @@ description: "httpry – HTTP logging and information retrieval tool"
 <p> These filters will capture all web traffic both directions on two common ports, capture only requests made to port 80, and capture requests to port 80 by a particular host, respectively. See &#8216;man tcpdump&#8217; for further information on the syntax and available primitives.</dl>
 <h2>AUTHOR</h2>
 <p> <i>httpry</i> was written by Jason Bittel &lt;jason.bittel [at] gmail.com&gt;. See included COPYING file for specific licensing information </p>
-<h2>Index</h2>
-</p>

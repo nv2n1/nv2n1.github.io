@@ -88,8 +88,4 @@ url: "/docs/linux/man/1-shorten/"
 
 <h2>SEE ALSO</h2>
 
- perl 
-
-<h2>Index</h2>
-
-
+ perl

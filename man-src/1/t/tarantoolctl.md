@@ -89,8 +89,4 @@ url: "/docs/linux/man/1-tarantoolctl/"
 
 <h2>COPYRIGHT</h2>
 
- Copyright (C) 2010-2013 Tarantool <font SIZE="-1">AUTHORS:</font> please see <font SIZE="-1">AUTHORS</font> file. 
-
-<h2>Index</h2>
-
-
+ Copyright (C) 2010-2013 Tarantool <font SIZE="-1">AUTHORS:</font> please see <font SIZE="-1">AUTHORS</font> file.

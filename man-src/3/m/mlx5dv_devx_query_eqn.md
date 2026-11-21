@@ -55,8 +55,4 @@ int mlx5dv_devx_query_eqn(struct ibv_context *context, uint32_t vector,
 
  #AUTHOR 
 
- Yishai Hadas &lt;yishaih [at] mellanox.com&gt; 
-
-<h2>Index</h2>
-
-
+ Yishai Hadas &lt;yishaih [at] mellanox.com&gt;

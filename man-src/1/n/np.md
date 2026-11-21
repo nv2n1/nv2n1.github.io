@@ -78,7 +78,3 @@ new[options] filename[template]
 </dt><dd> Flyn Computing: <i><a rel="nofollow" HREF="http://www.flyn.org">http://www.flyn.org</a></i> 
 &nbsp;<wbr> 
 </dd></dl>
-
-<h2>Index</h2>
-
-

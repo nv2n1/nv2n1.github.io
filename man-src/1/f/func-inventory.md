@@ -62,8 +62,4 @@ url: "/docs/linux/man/1-func-inventory/"
 
 <h2>AUTHOR</h2>
 
- Michael DeHaan &lt;mdehaan [at] redhat.com&gt; 
-
-<h2>Index</h2>
-
-
+ Michael DeHaan &lt;mdehaan [at] redhat.com&gt;

@@ -60,5 +60,3 @@ description: "rrdtune – Modify some basic properties of a Round Robin Database
 <p> If the <font SIZE="-1">FAILURES</font> <font SIZE="-1"><code>RRA</code></font> is implicitly created, the default window-length is 9 and the default failure-threshold is 7. This command now defines a failure as 3 or more violations in a temporal window of 5 time points.</p>
 <h2>AUTHOR</h2>
 <p> Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>
-<h2>Index</h2>
-</p>

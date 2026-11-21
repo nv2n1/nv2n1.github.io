@@ -41,8 +41,4 @@ url: "/docs/linux/man/1-chronic/"
 
  Original concept and ``chronic'' name by Chuck Houpt. Code for verbose and stderr trigger by Tomas 'Harvie' Mudrunka 2016. 
 
- Licensed under the <font SIZE="-1">GNU GPL</font> version 2 or higher. 
-
-<h2>Index</h2>
-
-
+ Licensed under the <font SIZE="-1">GNU GPL</font> version 2 or higher.

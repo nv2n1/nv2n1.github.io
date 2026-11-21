@@ -536,5 +536,3 @@ description: "dpkg – package manager for Debian"
 <p> <code>aptitude</code>(8), <code><a href="/docs/linux/man/8-apt/">apt</a></code>(8), <code><a href="/docs/linux/man/1-dselect/">dselect</a></code>(1), <code><a href="/docs/linux/man/1-dpkg-deb/">dpkg-deb</a></code>(1), <code><a href="/docs/linux/man/1-dpkg-query/">dpkg-query</a></code>(1), <code><a href="/docs/linux/man/5-deb/">deb</a></code>(5), <code><a href="/docs/linux/man/5-deb-control/">deb-control</a></code>(5), <code><a href="/docs/linux/man/5-dpkg-cfg/">dpkg.cfg</a></code>(5), and <code><a href="/docs/linux/man/8-dpkg-reconfigure/">dpkg-reconfigure</a></code>(8).</p>
 <h2>AUTHORS</h2>
 <p> See <i>/usr/share/doc/dpkg/THANKS</i> for the list of people who have contributed to <code>dpkg</code>. </p>
-<h2>Index</h2>
-</p>

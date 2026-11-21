@@ -36,5 +36,3 @@ description: "iok– Indic Onscreen Keyboard"
 <p> To start iok using Kokani keymap, run &quot;iok -n kok-deva&quot;</dl>
 <h2>AUTHOR</h2>
 <p> Suji A &lt;suji87.msc [at] gmail.com&gt; , Parag &lt;pnemade [at] fedoraproject.org&gt; </p>
-<h2>Index</h2>
-</p>

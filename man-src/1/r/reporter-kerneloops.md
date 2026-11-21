@@ -102,8 +102,3 @@ EVENT=post-create analyzer=Kerneloops  reporter-kerneloops
 <dl>
 <dt>
 </dt><dd> &bull; ABRT team</dd></dl>
- 
-
-<h2>Index</h2>
-
-

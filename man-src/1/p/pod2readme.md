@@ -41,8 +41,4 @@ url: "/docs/linux/man/1-pod2readme/"
 
 <h2>LICENSE</h2>
 
- Copyright (c) 2005 Robert Rothenberg. All rights reserved. This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself. 
-
-<h2>Index</h2>
-
-
+ Copyright (c) 2005 Robert Rothenberg. All rights reserved. This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.

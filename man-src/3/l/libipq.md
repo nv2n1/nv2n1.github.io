@@ -143,5 +143,3 @@ int main(int argc, char **argv)
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-iptables/">iptables</a></code>(8), <code>ipq_create_handle</code>(3), <code>ipq_destroy_handle</code>(3), <code>ipq_errstr</code>(3), <code>ipq_get_msgerr</code>(3), <code>ipq_get_packet</code>(3), <code>ipq_message_type</code>(3), <code>ipq_perror</code>(3), <code>ipq_read</code>(3), <code>ipq_set_mode</code>(3), <code>ipq_set_verdict</code>(3). </p>
 <p> The Netfilter home page at <a rel="nofollow" href="http://netfilter.samba.org/">http://netfilter.samba.org/</a> which has links to The Networking Concepts HOWTO, The Linux 2.4 Packet Filtering HOWTO, The Linux 2.4 NAT HOWTO, The Netfilter Hacking HOWTO, The Netfilter FAQ and many other useful resources. </p>
-<h2>Index</h2>
-</dd></dl>

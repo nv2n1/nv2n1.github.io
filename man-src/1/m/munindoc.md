@@ -31,8 +31,4 @@ url: "/docs/linux/man/1-munindoc/"
 
 <h2>LICENSE</h2>
 
- GPLv2 
-
-<h2>Index</h2>
-
-
+ GPLv2

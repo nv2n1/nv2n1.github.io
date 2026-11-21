@@ -87,5 +87,3 @@ SLAS2 computes the singular values of the 2 - by - 2 matrix[F G][0 H].On return,
 <p> Definition at line 108 of file slas2.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>
-</p>

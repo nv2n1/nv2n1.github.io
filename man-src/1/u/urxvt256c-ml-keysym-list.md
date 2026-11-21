@@ -19,8 +19,4 @@ url: "/docs/linux/man/1-urxvt256c-ml-keysym-list/"
 
 <h2>DESCRIPTION</h2>
 
- The ``list'' keysym expansion was formerly part of the rxvt-unicode core, and has been moved into this extension for backwards compatibility. You shouldn't use this extension except for compatibility with old configurations. 
-
-<h2>Index</h2>
-
-
+ The ``list'' keysym expansion was formerly part of the rxvt-unicode core, and has been moved into this extension for backwards compatibility. You shouldn't use this extension except for compatibility with old configurations.

@@ -140,8 +140,4 @@ builder
 
 <h2>SEE ALSO</h2>
 
- Plack::Runner Plack::Loader 
-
-<h2>Index</h2>
-
-
+ Plack::Runner Plack::Loader

@@ -991,5 +991,3 @@ $ git diff -R                          <code>(2)</code>
 <p> <a href="/docs/linux/man/1-diff/">diff</a>(1), <code><a href="/docs/linux/man/1-git-difftool/">git-difftool</a></code>(1), <code><a href="/docs/linux/man/1-git-log/">git-log</a></code>(1), <code><a href="/docs/linux/man/7-gitdiffcore/">gitdiffcore</a></code>(7), <code><a href="/docs/linux/man/1-git-format-patch/">git-format-patch</a></code>(1), <code><a href="/docs/linux/man/1-git-apply/">git-apply</a></code>(1), <code><a href="/docs/linux/man/1-git-show/">git-show</a></code>(1)</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>
-</p>

@@ -22,8 +22,4 @@ url: "/docs/linux/man/1-msd-locate-pointer/"
 
 <h2>AUTHOR</h2>
 
- This manual page has been written by Mike Gabriel &lt;mike.gabriel [at] das-netzwerkteam.de&gt;. It has been originally written for the Debian project (but may be used by others) 
-
-<h2>Index</h2>
-
-
+ This manual page has been written by Mike Gabriel &lt;mike.gabriel [at] das-netzwerkteam.de&gt;. It has been originally written for the Debian project (but may be used by others)

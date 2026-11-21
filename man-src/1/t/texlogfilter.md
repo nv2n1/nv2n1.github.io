@@ -66,5 +66,3 @@ url: "/docs/linux/man/1-texlogfilter/"
 <dt>&bull;</dt>
 <dd> <i>texlogfilter.html</i>: created with pod2html. </dd>
 </dl>
-<h2>Index</h2>
-</dl>

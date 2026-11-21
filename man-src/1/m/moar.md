@@ -47,8 +47,4 @@ moar-- version
 
  Copyright (C) 2012-2014 by the MoarVM contributors. See the <i></i><font SIZE="-1"><i>CREDITS</i></font><i></i> file for a list of contributors. 
 
- License: Artistic License 2.0. See the file <i>Artistic2.txt</i> for more information. 
-
-<h2>Index</h2>
-
-
+ License: Artistic License 2.0. See the file <i>Artistic2.txt</i> for more information.

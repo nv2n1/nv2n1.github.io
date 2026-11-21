@@ -37,8 +37,4 @@ url: "/docs/linux/man/1-mtpaint/"
 
  Mark Tyler 
 
- The development of mtPaint has been helped by various people from the free software community. See ``Credits'' in the <font SIZE="-1">README</font> or the mtPaint help system for details. 
-
-<h2>Index</h2>
-
-
+ The development of mtPaint has been helped by various people from the free software community. See ``Credits'' in the <font SIZE="-1">README</font> or the mtPaint help system for details.

@@ -312,5 +312,3 @@ description: "ggz.h –"
 <p> Under gcc, we use the __attribute__ macro to check variadic arguments, for instance to printf-style functions. Other compilers may be able to do something similar, but this is generally unnecessary since it&#8217;s only realy purpose is to give warning messages when the developer compiles the code.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LibGGZ from the source code. </p>
-<h2>Index</h2>
-</p>

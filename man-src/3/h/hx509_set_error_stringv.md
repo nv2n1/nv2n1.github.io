@@ -80,5 +80,3 @@ description: "hx509 error functions –"
  <i>ap</i> arguments to error message format</dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Heimdalx509library from the source code. </p>
-<h2>Index</h2>
-</p>

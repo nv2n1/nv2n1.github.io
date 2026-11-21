@@ -36,8 +36,4 @@ end
 </pre> 
 
  
-&nbsp;<wbr>will print foo.txt exists if the file foo.txt exists and is a regular file, otherwise it will print foo.txt does not exist.&nbsp;<wbr> 
-
-<h2>Index</h2>
-
-
+&nbsp;<wbr>will print foo.txt exists if the file foo.txt exists and is a regular file, otherwise it will print foo.txt does not exist.&nbsp;<wbr>

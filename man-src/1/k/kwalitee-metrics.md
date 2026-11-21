@@ -41,8 +41,4 @@ url: "/docs/linux/man/1-kwalitee-metrics/"
 
  This software is copyright (c) 2005 by chromatic. 
 
- This is free software; you can redistribute it and/or modify it under the same terms as the Perl 5 programming language system itself. 
-
-<h2>Index</h2>
-
-
+ This is free software; you can redistribute it and/or modify it under the same terms as the Perl 5 programming language system itself.

@@ -47,8 +47,4 @@ chmoddic [{(-cs | - cannaserver} canna-server] {+ | -}{r|w|rw|wr}
 
 <h2>SEE ALSO</h2>
 
- <tt><a HREF="/docs/linux/man/1-lsdic/">lsdic</a></tt>(1), <tt><a HREF="/docs/linux/man/1-mkdic/">mkdic</a></tt>(1) 
-
-<h2>Index</h2>
-
-
+ <tt><a HREF="/docs/linux/man/1-lsdic/">lsdic</a></tt>(1), <tt><a HREF="/docs/linux/man/1-mkdic/">mkdic</a></tt>(1)

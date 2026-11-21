@@ -169,5 +169,3 @@ description: "cher2k.f –"
 <p> Definition at line 198 of file cher2k.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>
-</p>

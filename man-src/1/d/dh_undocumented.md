@@ -27,8 +27,4 @@ url: "/docs/linux/man/1-dh_undocumented/"
 
 <h2>AUTHOR</h2>
 
- Joey Hess &lt;joeyh [at] debian.org&gt; 
-
-<h2>Index</h2>
-
-
+ Joey Hess &lt;joeyh [at] debian.org&gt;

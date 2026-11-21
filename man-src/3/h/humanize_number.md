@@ -98,8 +98,4 @@ url: "/docs/linux/man/3-humanize_number/"
 
  Fn humanize_number first appeared in Nx 2.0 . 
 
- Fn dehumanize_number first appeared in Nx 5.0 . 
-
-<h2>Index</h2>
-
-
+ Fn dehumanize_number first appeared in Nx 5.0 .

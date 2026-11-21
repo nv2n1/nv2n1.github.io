@@ -43,8 +43,4 @@ i3-input -p 'mark ' -l 1 -P 'Mark: '
 
  
 
- Michael Stapelberg and contributors 
-
-<h2>Index</h2>
-
-
+ Michael Stapelberg and contributors

@@ -22,8 +22,4 @@ url: "/docs/linux/man/1-iceca/"
  
 
  Full documentation for iceca is available online at: 
- &quot;<a rel="nofollow" HREF="http://doc.zeroc.com/display/Ice/Setting+up+a+Certificate+Authority">http://doc.zeroc.com/display/Ice/Setting+up+a+Certificate+Authority</a>&quot;. 
-
-<h2>Index</h2>
-
-
+ &quot;<a rel="nofollow" HREF="http://doc.zeroc.com/display/Ice/Setting+up+a+Certificate+Authority">http://doc.zeroc.com/display/Ice/Setting+up+a+Certificate+Authority</a>&quot;.

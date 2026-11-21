@@ -43,8 +43,4 @@ url: "/docs/linux/man/1-git-cpan-format-patch/"
 
  Git::CPAN::Patch 
 
- git-format-patch 
-
-<h2>Index</h2>
-
-
+ git-format-patch

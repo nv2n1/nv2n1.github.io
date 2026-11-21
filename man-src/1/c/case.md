@@ -43,8 +43,4 @@ $animal case cat
 
  
 
- If the above code was run with $animal set to whale, the output would be mammal. 
-
-<h2>Index</h2>
-
-
+ If the above code was run with $animal set to whale, the output would be mammal.

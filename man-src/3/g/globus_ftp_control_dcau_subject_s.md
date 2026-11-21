@@ -32,8 +32,4 @@ url: "/docs/linux/man/3-globus_ftp_control_dcau_subject_s/"
 
  
 
- Generated automatically by Doxygen for globus_ftp_control from the source code. 
-
-<h2>Index</h2>
-
-
+ Generated automatically by Doxygen for globus_ftp_control from the source code.

@@ -85,5 +85,3 @@ INFO is INTEGER = 0 : successful exit &lt; 0 : if the i - th argument is a scala
 <p> Definition at line 113 of file dlasq2.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>
-</p>

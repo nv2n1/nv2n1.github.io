@@ -35,8 +35,4 @@ bson_get_version(void);
 
 <h2>COLOPHON</h2>
 
- This page is part of libbson. Please report any bugs at <a rel="nofollow" HREF="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> 
-
-<h2>Index</h2>
-
-
+ This page is part of libbson. Please report any bugs at <a rel="nofollow" HREF="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a>

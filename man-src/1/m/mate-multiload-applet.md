@@ -30,5 +30,3 @@ description: "mate-multiload-applet – Multiload (cpu, load average, memory, ne
 <p> <code>multiload_swapload_applet </code>start the swap applet.</dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Christian Marillat &lt;marillat [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>
-</p>

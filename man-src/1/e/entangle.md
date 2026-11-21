@@ -48,8 +48,4 @@ url: "/docs/linux/man/1-entangle/"
 
 <h2>SEE ALSO</h2>
 
- <tt><a HREF="/docs/linux/man/1-gphoto2/">gphoto2</a>(1)</tt>, <tt><a HREF="/docs/linux/man/3-libgphoto2/">libgphoto2</a>(3)</tt> 
-
-<h2>Index</h2>
-
-
+ <tt><a HREF="/docs/linux/man/1-gphoto2/">gphoto2</a>(1)</tt>, <tt><a HREF="/docs/linux/man/3-libgphoto2/">libgphoto2</a>(3)</tt>

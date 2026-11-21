@@ -41,8 +41,4 @@ url: "/docs/linux/man/1-florence_applet/"
 
  
 
- François Agrech &lt;f.agrech [at] gmail.com&gt; 
-
-<h2>Index</h2>
-
-
+ François Agrech &lt;f.agrech [at] gmail.com&gt;

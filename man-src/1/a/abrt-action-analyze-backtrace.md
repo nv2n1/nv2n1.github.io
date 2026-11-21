@@ -66,8 +66,4 @@ EVENT=analyze analyzer=CCpp
 
  
 
- abrt-action-generate-backtrace 
-
-<h2>Index</h2>
-
-
+ abrt-action-generate-backtrace

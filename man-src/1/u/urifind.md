@@ -137,8 +137,4 @@ $ urifind - S mailto file1 mailto : webmaster[at] boston.com $ urifind - S mailt
 
 <h2>SEE ALSO</h2>
 
- URI::Find 
-
-<h2>Index</h2>
-
-
+ URI::Find

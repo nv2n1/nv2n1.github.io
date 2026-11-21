@@ -152,8 +152,4 @@ corelist - v
 
  Currently maintained by the perl 5 porters &lt;perl5-porters [at] perl.org&gt;. 
 
- This program is distributed under the same terms as perl itself. See <a rel="nofollow" HREF="http://perl.org/">http://perl.org/</a> or <a rel="nofollow" HREF="http://cpan.org/">http://cpan.org/</a> for more info on that. 
-
-<h2>Index</h2>
-
-
+ This program is distributed under the same terms as perl itself. See <a rel="nofollow" HREF="http://perl.org/">http://perl.org/</a> or <a rel="nofollow" HREF="http://cpan.org/">http://cpan.org/</a> for more info on that.

@@ -67,8 +67,4 @@ ldbdel - Command-line program for deleting LDB records
 
  ldbdel was written by Andrew Tridgell. 
 
- This manpage was written by Jelmer Vernooij. 
-
-<h2>Index</h2>
-
-
+ This manpage was written by Jelmer Vernooij.

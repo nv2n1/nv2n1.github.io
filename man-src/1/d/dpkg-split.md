@@ -86,5 +86,3 @@ description: "dpkg-split – Debian package archive split/join tool"
 <p> There is no easy way to test whether a file that may be a binary package part is one.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-deb/">deb</a></code>(5), <code><a href="/docs/linux/man/5-deb-control/">deb-control</a></code>(5), <code><a href="/docs/linux/man/1-dpkg-deb/">dpkg-deb</a></code>(1), <code><a href="/docs/linux/man/1-dpkg/">dpkg</a></code>(1). </p>
-<h2>Index</h2>
-</p>

@@ -88,8 +88,4 @@ url: "/docs/linux/man/1-xml_pp/"
 
 <h2>AUTHOR</h2>
 
- Michel Rodriguez &lt;mirod [at] xmltwig.com&gt; 
-
-<h2>Index</h2>
-
-
+ Michel Rodriguez &lt;mirod [at] xmltwig.com&gt;

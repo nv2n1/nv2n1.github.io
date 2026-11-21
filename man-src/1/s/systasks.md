@@ -1143,8 +1143,4 @@ url: "/docs/linux/man/1-systasks/"
 
  Copyright (c) 1991-2002 Pragmatic C Software. All Rights Reserved. 
  This document contains confidential and proprietary information 
- belonging to Pragmatic C Software Corp. 
-
-<h2>Index</h2>
-
-
+ belonging to Pragmatic C Software Corp.

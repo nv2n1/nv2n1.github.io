@@ -34,8 +34,4 @@ make; and make install; or make clean
 </pre> 
 
  
-&nbsp;<wbr> 
-
-<h2>Index</h2>
-
-
+&nbsp;<wbr>

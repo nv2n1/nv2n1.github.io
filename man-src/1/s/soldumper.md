@@ -31,7 +31,3 @@ soldumper (options)... (file)...
 </dd><dt>-v
 </dt><dd> Verbose output. 
 </dd></dl>
-
-<h2>Index</h2>
-
-

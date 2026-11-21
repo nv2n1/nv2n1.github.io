@@ -126,8 +126,4 @@ url: "/docs/linux/man/1-perlpodstyle/"
 
  For additional information that may be more accurate for your specific system, see either <b><a HREF="/docs/linux/man/5-man/">man</a></b>(5) or <b><a HREF="/docs/linux/man/7-man/">man</a></b>(7) depending on your system manual section numbering conventions. 
 
- This documentation is maintained as part of the podlators distribution. The current version is always available from its web site at &lt;<a rel="nofollow" HREF="https://www.eyrie.org/~eagle/software/podlators/">https://www.eyrie.org/~eagle/software/podlators/</a>&gt;. 
-
-<h2>Index</h2>
-
-
+ This documentation is maintained as part of the podlators distribution. The current version is always available from its web site at &lt;<a rel="nofollow" HREF="https://www.eyrie.org/~eagle/software/podlators/">https://www.eyrie.org/~eagle/software/podlators/</a>&gt;.

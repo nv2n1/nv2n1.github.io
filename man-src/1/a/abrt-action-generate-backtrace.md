@@ -72,8 +72,3 @@ EVENT=analyze analyzer=CCpp
 <dl>
 <dt>
 </dt><dd> &bull; ABRT team</dd></dl>
- 
-
-<h2>Index</h2>
-
-

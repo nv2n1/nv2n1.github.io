@@ -203,5 +203,3 @@ xrdcp - old[options] source destination
 <h2>SUPPORT LEVEL</h2>
 <p> The <code>xrdcp</code> command is supported by the xrootd collaboration. Contact information can be found at <center> <a rel="nofollow" href="http://xrootd.org/contact.html">http://xrootd.org/contact.html</a><br />
  </center> </p>
-<h2>Index</h2>
-</p>

@@ -299,6 +299,3 @@ pdl &gt; push @PERLDL::AUTO, 'print scalar(gmtime),"
 <p> This code can of course be put *in* &#8216;local.perldlrc&#8217;, but be careful :-) [Hint: add <tt>&quot;unless ($started++)&quot;</tt> to above to ensure it only gets done once!] </p>
 <p> Another example application is as a hook for Autoloaders (e.g. PDL::AutoLoader) to add code too which allows them to automatically re-scan their files for changes. This is extremely convenient at the interactive command line. Since this hook is only in the shell it imposes no inefficiency on <font SIZE="-1">PDL</font> scripts. </p>
 <p> Finally note this is a very powerful facility &#8211; which means it should be used with caution! </p>
-<h2>Index</h2>
-</dl>
-</p>

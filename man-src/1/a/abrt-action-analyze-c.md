@@ -57,8 +57,3 @@ EVENT=post-create analyzer=CCpp   abrt-action-analyze-c
 <dl>
 <dt>
 </dt><dd> &bull; ABRT team</dd></dl>
- 
-
-<h2>Index</h2>
-
-

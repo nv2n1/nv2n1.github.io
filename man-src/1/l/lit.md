@@ -123,5 +123,3 @@ description: "lit – LLVM Integrated Tester"
 <p> <i><a href="/docs/linux/man/1-valgrind/">valgrind</a></i>(1)</p>
 <h2>AUTHOR</h2>
 <p> Written by Daniel Dunbar and maintained by the <font SIZE="-1">LLVM</font> Team (&lt;<a rel="nofollow" href="http://llvm.org">http://llvm.org</a>&gt;). </p>
-<h2>Index</h2>
-</p>

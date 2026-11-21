@@ -47,5 +47,3 @@ description: "wimlib-imagex-verify – Verify a WIM file"
 <p> wimverify boot.swm &#8211;ref=&quot;boot*.swm&quot;</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-wimlib-imagex/">wimlib-imagex</a></code>(1) <code><a href="/docs/linux/man/1-wimlib-imagex-optimize/">wimlib-imagex-optimize</a></code>(1) </p>
-<h2>Index</h2>
-</p>

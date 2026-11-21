@@ -24,8 +24,4 @@ url: "/docs/linux/man/1-gnc-fq-dump/"
 
 <h2>DESCRIPTION</h2>
 
- This program obtains information from Finance::Quote about any specified stock, and then dumps it to the screen in annotated form. This will allow someone to see what is returned, and whether it provides all the information needed by Gnucash. 
-
-<h2>Index</h2>
-
-
+ This program obtains information from Finance::Quote about any specified stock, and then dumps it to the screen in annotated form. This will allow someone to see what is returned, and whether it provides all the information needed by Gnucash.

@@ -28,5 +28,3 @@ description: "wimlib-imagex-split – Split a WIM into multiple parts"
 <p> It is possible for the size of the parts to exceed the <i>PART_SIZE</i> given. This is impossible to avoid because the WIM file format provides no way to divide a single file resource in the WIM among multiple split WIM parts. So if you, for example, have a file inside the WIM that is 100 MiB, then an uncompressed split WIM will have at least one part that is 100 MiB in size to contain that file. However, if the WIM resources are compressed then less space would be needed.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-wimlib-imagex/">wimlib-imagex</a></code>(1) </p>
-<h2>Index</h2>
-</p>

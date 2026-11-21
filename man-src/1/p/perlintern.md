@@ -1667,8 +1667,4 @@ Size_t variant_under_utf8_count(const U8 *const s,
 
 <h2>SEE ALSO</h2>
 
- perlguts, perlapi 
-
-<h2>Index</h2>
-
-
+ perlguts, perlapi

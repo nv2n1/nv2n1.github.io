@@ -56,7 +56,3 @@ rlPerfTime_AvgFromRuns command[count][warmup]
 <dt>&bull;
 </dt><dd> Petr Muller &lt;pmuller [at] redhat.com&gt; 
 </dd></dl>
-
-<h2>Index</h2>
-
-

@@ -66,10 +66,4 @@ url: "/docs/linux/man/1-zone2ldap/"
 
 <h2>AUTHOR</h2>
 
- Jeff McNeil &lt;jeff [at] snapcase.g-rock.net&gt; 
-
- 
-
-<h2>Index</h2>
-
-
+ Jeff McNeil &lt;jeff [at] snapcase.g-rock.net&gt;

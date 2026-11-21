@@ -44,8 +44,4 @@ int ibv_get_srq_num(struct ibv_srq *srq, uint32_t *srq_num);
 
  
 
- Yishai Hadas &lt;yishaih [at] mellanox.com&gt; 
-
-<h2>Index</h2>
-
-
+ Yishai Hadas &lt;yishaih [at] mellanox.com&gt;

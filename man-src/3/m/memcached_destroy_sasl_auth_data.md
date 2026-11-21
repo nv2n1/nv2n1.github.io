@@ -38,5 +38,3 @@ description: "memcached_destroy_sasl_auth_data – libmemcached Documentation"
 <p> Brian Aker</p>
 <h2>COPYRIGHT</h2>
 <p> 2011-2013, Brian Aker DataDifferential, <a rel="nofollow" href="http://datadifferential.com/">http://datadifferential.com/</a> </p>
-<h2>Index</h2>
-</p>

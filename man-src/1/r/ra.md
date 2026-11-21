@@ -853,5 +853,3 @@ Carter Bullard (carter [at] qosient.com).
 <p> Postel, Jon, <i>Transmission Control Protocol</i>, <font SIZE="-1">RFC</font> 793, Network Information Center, SRI International, Menlo Park, Calif., May 1981. </p>
 <p> Postel, Jon, <i>User Datagram Protocol</i>, <font SIZE="-1">RFC</font> 768, Network Information Center, SRI International, Menlo Park, Calif., May 1980. </p>
 <p> McCanne, Steven, and Van Jacobson, <i>The BSD Packet Filter: A New Architecture for User-level Capture</i>, Lawrwnce Berkeley Laboratory, One Cyclotron Road, Berkeley, Calif., 94720, December 1992. </p>
-<h2>Index</h2>
-</dl>

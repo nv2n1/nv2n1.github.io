@@ -28,8 +28,4 @@ url: "/docs/linux/man/3-cb_s/"
 
  
 
- Generated automatically by Doxygen for Heimdalhdblibrary from the source code. 
-
-<h2>Index</h2>
-
-
+ Generated automatically by Doxygen for Heimdalhdblibrary from the source code.

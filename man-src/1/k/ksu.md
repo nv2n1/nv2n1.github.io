@@ -126,5 +126,3 @@ KSU_OPTS = -DGET_TGT_VIA_PASSWD -DPRINC_LOOK_AHEAD -DCMD_PATH='&quot;/bin /usr/u
 <p> MIT</p>
 <h2>COPYRIGHT</h2>
 <p> 1985-2017, MIT </p>
-<h2>Index</h2>
-</p>

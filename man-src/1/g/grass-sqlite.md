@@ -44,8 +44,4 @@ url: "/docs/linux/man/1-grass-sqlite/"
  <i>SQLite web site, SQLite manual, db.connect, db.execute, SQL support in GRASS GIS, sqlite - Management Tools </i> 
 
  <i>Last changed: $Date: 2007-07-18 16:10:27 +0200 (Wed, 18 Jul 2007) $</i> 
- Help Index 
-
-<h2>Index</h2>
-
-
+ Help Index

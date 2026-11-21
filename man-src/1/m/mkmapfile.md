@@ -32,8 +32,4 @@ url: "/docs/linux/man/1-mkmapfile/"
 
 <h2>AUTHOR</h2>
 
- Martin Schwartz &lt;<i>martin [at] nacho.de</i>&gt;. 
-
-<h2>Index</h2>
-
-
+ Martin Schwartz &lt;<i>martin [at] nacho.de</i>&gt;.

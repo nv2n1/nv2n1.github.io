@@ -44,8 +44,4 @@ url: "/docs/linux/man/1-nvme-flush/"
 
  
 
- Part of the nvme-user suite 
-
-<h2>Index</h2>
-
-
+ Part of the nvme-user suite

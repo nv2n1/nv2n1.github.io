@@ -57,8 +57,4 @@ int ibv_detach_mcast(struct ibv_qp *qp, const union ibv_gid *gid, uint16_t lid);
 
  
 
- Dotan Barak &lt;dotanba [at] gmail.com&gt; 
-
-<h2>Index</h2>
-
-
+ Dotan Barak &lt;dotanba [at] gmail.com&gt;

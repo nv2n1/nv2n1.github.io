@@ -77,5 +77,3 @@ description: "dpkg-statoverride – override ownership and mode of files"
 <p> <code>Note:</code> <code>dpkg-statoverride</code> preserves the old copy of this file, with extension &#8220;-old&#8221;, before replacing it with the new one.</dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dpkg/">dpkg</a></code>(1). </p>
-<h2>Index</h2>
-</p>

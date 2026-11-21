@@ -87,8 +87,4 @@ Target[proxy - hit] : cacheHttpHits &amp;cacheProtoClientHttpRequests : public[a
 
 <h2>AUTHOR</h2>
 
- Andreas Papst &lt;andreas.papst [at] univie.ac.at&gt; Dirk-Lu.der Kreie &lt;deelkar [at] gmx.de&gt; Chris Chiappa &lt;chris+debian [at] chiappa.net&gt; 
-
-<h2>Index</h2>
-
-
+ Andreas Papst &lt;andreas.papst [at] univie.ac.at&gt; Dirk-Lu.der Kreie &lt;deelkar [at] gmx.de&gt; Chris Chiappa &lt;chris+debian [at] chiappa.net&gt;

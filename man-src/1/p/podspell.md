@@ -43,8 +43,4 @@ url: "/docs/linux/man/1-podspell/"
 
  <pre>
   The Artistic License 2.0 (GPL Compatible)
-</pre> 
-
-<h2>Index</h2>
-
-
+</pre>

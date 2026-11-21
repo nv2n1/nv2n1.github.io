@@ -66,8 +66,4 @@ $ pwhich[-a][-v] programname[programname...]
 
 <h2>SEE ALSO</h2>
 
- perl, File::Which, <i><a HREF="/docs/linux/man/1-which/">which</a></i>(1) 
-
-<h2>Index</h2>
-
-
+ perl, File::Which, <i><a HREF="/docs/linux/man/1-which/">which</a></i>(1)

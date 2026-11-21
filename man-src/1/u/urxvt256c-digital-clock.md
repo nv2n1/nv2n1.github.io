@@ -13,8 +13,4 @@ url: "/docs/linux/man/1-urxvt256c-digital-clock/"
 
 <h2>DESCRIPTION</h2>
 
- Displays a digital clock using the built-in overlay. 
-
-<h2>Index</h2>
-
-
+ Displays a digital clock using the built-in overlay.

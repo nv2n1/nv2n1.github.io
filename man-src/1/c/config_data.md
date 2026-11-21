@@ -62,8 +62,4 @@ config_data-- module Foo::Bar-- feature bazzable
 
 <h2>SEE ALSO</h2>
 
- <i>Module::Build</i>(3), <i><a HREF="/docs/linux/man/1-perl/">perl</a></i>(1). 
-
-<h2>Index</h2>
-
-
+ <i>Module::Build</i>(3), <i><a HREF="/docs/linux/man/1-perl/">perl</a></i>(1).

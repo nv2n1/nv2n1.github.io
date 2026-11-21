@@ -121,8 +121,4 @@ module - starter-- module = Foo::Bar-- author = "Your Name" --email = yourname[a
 
 <h2>SEE ALSO</h2>
 
- perlmod, perlmodlib, perlmodinstall, h2xs, strict, Carp, Exporter, perlpod, Test::Simple, Test::More ExtUtils::MakeMaker, Module::Build, Module::Starter &lt;<a rel="nofollow" HREF="http://www.cpan.org/">http://www.cpan.org/</a>&gt;, Ken Williams' tutorial on building your own module at &lt;<a rel="nofollow" HREF="http://mathforum.org/~ken/perl_modules.html">http://mathforum.org/~ken/perl_modules.html</a>&gt; 
-
-<h2>Index</h2>
-
-
+ perlmod, perlmodlib, perlmodinstall, h2xs, strict, Carp, Exporter, perlpod, Test::Simple, Test::More ExtUtils::MakeMaker, Module::Build, Module::Starter &lt;<a rel="nofollow" HREF="http://www.cpan.org/">http://www.cpan.org/</a>&gt;, Ken Williams' tutorial on building your own module at &lt;<a rel="nofollow" HREF="http://mathforum.org/~ken/perl_modules.html">http://mathforum.org/~ken/perl_modules.html</a>&gt;

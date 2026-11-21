@@ -107,5 +107,3 @@ description: "zarafa-archiver – Manages zarafa archives and performs the archi
 <p> Written by Zarafa.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-zarafa-server/">zarafa-server</a></code>(1)<code><a href="/docs/linux/man/5-zarafa-archiver-cfg/">zarafa-archiver.cfg</a></code>(5) </p>
-<h2>Index</h2>
-</p>

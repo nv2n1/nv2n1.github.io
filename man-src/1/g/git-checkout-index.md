@@ -132,5 +132,3 @@ $ git checkout-index --prefix=.merged- Makefile
 <p> This will check out the currently cached copy of <code>Makefile</code> into the file <code>.merged-Makefile</code>.</dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>
-</p>

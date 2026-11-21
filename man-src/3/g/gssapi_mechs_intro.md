@@ -22,12 +22,3 @@ url: "/docs/linux/man/3-gssapi_mechs_intro/"
 </dt><dd> SPNEGO - GSS_SPNEGO_MECHANISM
 </dd><dt>&bull;
 </dt><dd> NTLM - GSS_NTLM_MECHANISM</dd></dl>
- 
-
- 
-
- 
-
-<h2>Index</h2>
-
-

@@ -51,5 +51,3 @@ description: "scl – Setup and run software from Software Collection environmen
 <h2>AUTHOR</h2>
 <dd>
 <p> <code>scl</code> was written by Jindrich Novy &lt;jnovy [at] redhat.com&gt; and Jan Zeleny &lt;jzeleny [at] redhat.com&gt; </p>
-<h2>Index</h2>
-</dd>

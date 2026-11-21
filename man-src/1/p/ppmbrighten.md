@@ -37,8 +37,4 @@ url: "/docs/linux/man/1-ppmbrighten/"
 
 <h2>NOTES</h2>
 
- This program does not change the number of colors. 
-
-<h2>Index</h2>
-
-
+ This program does not change the number of colors.

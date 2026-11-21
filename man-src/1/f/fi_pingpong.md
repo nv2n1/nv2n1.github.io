@@ -224,8 +224,4 @@ client$&nbsp;fi_pingpong&nbsp;&lt;server address&gt;
 
 <h2>AUTHORS</h2>
 
- OpenFabrics. 
-
-<h2>Index</h2>
-
-
+ OpenFabrics.

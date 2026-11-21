@@ -32,8 +32,4 @@ url: "/docs/linux/man/1-fishd/"
 
  /tmp/fishd.socket.USERNAME the socket which fishd uses to communicate with all clients. 
 
- /tmp/fishd.log.USERNAME the fishd log file 
-
-<h2>Index</h2>
-
-
+ /tmp/fishd.log.USERNAME the fishd log file

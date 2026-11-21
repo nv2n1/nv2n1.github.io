@@ -128,5 +128,3 @@ description: "infotopam – convert Amiga .info icons to PAM"
 <p> There is no <code>pamtoinfo</code> command, since the .info files contain a lot more than just icon data, and mapping the colors would be difficult. </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 2000, 2004 by Richard Griswold. </p>
-<h2>Index</h2>
-</p>

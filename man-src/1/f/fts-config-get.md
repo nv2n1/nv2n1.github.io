@@ -36,8 +36,4 @@ url: "/docs/linux/man/1-fts-config-get/"
 
 <h2>SEE ALSO</h2>
 
- <a rel="nofollow" HREF="http://fts3-service.web.cern.ch/">http://fts3-service.web.cern.ch/</a> 
-
-<h2>Index</h2>
-
-
+ <a rel="nofollow" HREF="http://fts3-service.web.cern.ch/">http://fts3-service.web.cern.ch/</a>

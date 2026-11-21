@@ -113,8 +113,4 @@ Target Backend Description == == == == == == = == == == == == =
 
  Written by the Rakudo contributors, see the <font SIZE="-1">CREDITS</font> file. 
 
- This manual page was written by Reini Urban, Moritz Lenz and the Rakudo contributors. 
-
-<h2>Index</h2>
-
-
+ This manual page was written by Reini Urban, Moritz Lenz and the Rakudo contributors.

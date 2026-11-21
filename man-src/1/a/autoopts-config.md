@@ -101,5 +101,3 @@ description: "autoopts-config – script to get information about installed vers
  Bruce Korb &lt;bkorb [at] gnu.org&gt; and<br />
  Luca Filipozzi &lt;lfilipoz [at] debian.org&gt; created this manpage. </p>
 <p> AutoOpts is released under either the GNU General Public License with the Library exception (LGPL), or else the advertising clause free BSD license. Which license used is at the discretion of the licensee. </p>
-<h2>Index</h2>
-</p>

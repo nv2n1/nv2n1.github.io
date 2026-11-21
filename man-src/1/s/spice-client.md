@@ -99,8 +99,4 @@ url: "/docs/linux/man/1-spice-client/"
 
 <h2>SEE ALSO</h2>
 
- <tt>&quot;<a HREF="/docs/linux/man/1-virt-viewer/">virt-viewer</a>(1)&quot;</tt>, the project website <tt>&quot;<a rel="nofollow" HREF="http://spice-space.org">http://spice-space.org</a>&quot;</tt> 
-
-<h2>Index</h2>
-
-
+ <tt>&quot;<a HREF="/docs/linux/man/1-virt-viewer/">virt-viewer</a>(1)&quot;</tt>, the project website <tt>&quot;<a rel="nofollow" HREF="http://spice-space.org">http://spice-space.org</a>&quot;</tt>

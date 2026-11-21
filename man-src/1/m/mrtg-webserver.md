@@ -63,8 +63,4 @@ url: "/docs/linux/man/1-mrtg-webserver/"
 
 <h2>AUTHOR</h2>
 
- Unknown 
-
-<h2>Index</h2>
-
-
+ Unknown

@@ -68,5 +68,3 @@ description: "wimlib-imagex-optimize – Optimize a WIM archive"
 <p> wimoptimize install.wim &#8211;compress=LZX:100</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-wimlib-imagex/">wimlib-imagex</a></code>(1) <code><a href="/docs/linux/man/1-wimlib-imagex-export/">wimlib-imagex-export</a></code>(1) <code><a href="/docs/linux/man/1-wimlib-imagex-verify/">wimlib-imagex-verify</a></code>(1) </p>
-<h2>Index</h2>
-</p>

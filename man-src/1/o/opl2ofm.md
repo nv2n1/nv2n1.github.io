@@ -38,5 +38,3 @@ description: "opl2ofm – convert Omega and TeX property-list files to font-metr
 <p> Extensions to handle extended font metric files (&#8220;OFM&#8221;) were added by John Plaice in December 1995 and January 1996, resulting in the new program <code>OPL2OFM</code>.</dl>
 <p> The primary authors of Omega are John Plaice &lt;plaice [at] cse.unsw.edu.au&gt; and Yannis Haralambous &lt;yannis [at] fluxus-virus.com&gt;. </p>
 <p> This manual page was written by C.M. Connelly &lt;cmc [at] debian.org&gt;, for the Debian GNU/Linux system. It may be used by other distributions without contacting the author. Any mistakes or omissions in the manual page are my fault; inquiries about or corrections to this manual page should be directed to me (and not to the primary author). </p>
-<h2>Index</h2>
-</p>

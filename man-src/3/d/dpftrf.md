@@ -159,5 +159,3 @@ k = N / 2. RFP A is(0
 <p> Definition at line 199 of file dpftrf.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>
-</p>

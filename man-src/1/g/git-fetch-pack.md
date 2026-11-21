@@ -95,5 +95,3 @@ git fetch - pack[--all][--quiet | -q][--keep | -k][--thin][--include - tag]
 <p> <code><a href="/docs/linux/man/1-git-fetch/">git-fetch</a></code>(1)</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>
-</p>

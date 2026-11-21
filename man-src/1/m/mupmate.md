@@ -47,8 +47,4 @@ url: "/docs/linux/man/1-mupmate/"
 
  Mupmate is currently only supported on Microsoft Windows, Apple Mac OS-X, and Linux or similar. 
 
- Mupmate does not directly provide a print facility. Almost any PostScript viewer already provides this ability, so you can simply select &quot;Display&quot; from the Run menu and use the viewer's print capabilities. Alternately you can use the &quot;Write PostScript File&quot; from the Run menu and then print the resulting file. 
-
-<h2>Index</h2>
-
-
+ Mupmate does not directly provide a print facility. Almost any PostScript viewer already provides this ability, so you can simply select &quot;Display&quot; from the Run menu and use the viewer's print capabilities. Alternately you can use the &quot;Write PostScript File&quot; from the Run menu and then print the resulting file.

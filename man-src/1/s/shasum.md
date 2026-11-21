@@ -79,8 +79,4 @@ url: "/docs/linux/man/1-shasum/"
 
 <h2>SEE ALSO</h2>
 
- <i>shasum</i> is implemented using the Perl module Digest::SHA. 
-
-<h2>Index</h2>
-
-
+ <i>shasum</i> is implemented using the Perl module Digest::SHA.

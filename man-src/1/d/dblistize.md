@@ -11,8 +11,4 @@ url: "/docs/linux/man/1-dblistize/"
 
  dblistize - DEPRICATED, now use dbfilealter 
 
- <hr> 
-
-<h2>Index</h2>
-
-
+ <hr>

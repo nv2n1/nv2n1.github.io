@@ -93,8 +93,4 @@ nvme get - log&lt;device&gt;[--log - id = &lt;log - id&gt; | -i&lt;log - id&gt;]
 
  
 
- Part of the nvme-user suite 
-
-<h2>Index</h2>
-
-
+ Part of the nvme-user suite

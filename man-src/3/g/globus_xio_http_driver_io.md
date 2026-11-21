@@ -15,8 +15,4 @@ url: "/docs/linux/man/3-globus_xio_http_driver_io/"
 
  
 
- Generated automatically by Doxygen for globus_xio from the source code. 
-
-<h2>Index</h2>
-
-
+ Generated automatically by Doxygen for globus_xio from the source code.

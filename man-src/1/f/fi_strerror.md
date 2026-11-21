@@ -37,8 +37,4 @@ fi_strerror FI_ERROR_CODE
 
 <h2>AUTHORS</h2>
 
- OpenFabrics. 
-
-<h2>Index</h2>
-
-
+ OpenFabrics.

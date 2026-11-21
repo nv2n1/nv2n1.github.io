@@ -259,8 +259,4 @@ url: "/docs/linux/man/1-tic/"
 <h2>AUTHOR</h2>
 
  Eric S. Raymond &lt;esr [at] snark.thyrsus.com&gt; and 
- Thomas E. Dickey &lt;dickey [at] invisible-island.net&gt; 
-
-<h2>Index</h2>
-
-
+ Thomas E. Dickey &lt;dickey [at] invisible-island.net&gt;

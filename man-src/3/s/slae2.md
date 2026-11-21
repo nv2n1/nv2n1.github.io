@@ -82,5 +82,3 @@ SLAE2 computes the eigenvalues of a 2 - by - 2 symmetric matrix[A B][B C].On ret
 <p> Definition at line 103 of file slae2.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>
-</p>

@@ -106,8 +106,4 @@ url: "/docs/linux/man/1-perluts/"
    Hal Morris
    UTS Global LLC
    email: hom00 [at] utsglobal.com
-</pre> 
-
-<h2>Index</h2>
-
-
+</pre>

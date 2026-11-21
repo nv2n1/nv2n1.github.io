@@ -73,10 +73,4 @@ url: "/docs/linux/man/1-fdupes/"
 
 <h2>AUTHOR</h2>
 
- Adrian Lopez &lt;adrian2 [at] caribe.net&gt; 
-
- 
-
-<h2>Index</h2>
-
-
+ Adrian Lopez &lt;adrian2 [at] caribe.net&gt;

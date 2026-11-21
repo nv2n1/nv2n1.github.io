@@ -192,5 +192,3 @@ if that is less than overflow, CTRSV
 <p> Definition at line 239 of file clatrs.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>
-</p>

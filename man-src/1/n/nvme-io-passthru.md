@@ -120,8 +120,4 @@ nvme - io - passthru&lt;device&gt;[--opcode = &lt;opcode&gt; | -o&lt;opcode&gt;]
 
  
 
- Part of the nvme-user suite 
-
-<h2>Index</h2>
-
-
+ Part of the nvme-user suite

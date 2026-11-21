@@ -21,8 +21,4 @@ url: "/docs/linux/man/3-dd_driver/"
 
  A data descriptor coming back up the stack Once an io operation reachs the transport driver (the bottom of the stack) it takes on a slightly different role. On the way in it is describing what is requested to be done with the data, on the way out it is describing what has actually been done. Once the transport driver performs the operation it should adjust the data descriptor to reflect what has actually happened (few drivers will need to worry about this). Each driver on the way up can adjust the data descriptor and its driver specific data decriptor. When xio reachs the the top of the stack it calls a user callback. When that callback returns all memory associated with the data descriptor is cleaned up. The interface function globus_xio_driver_data_descriptor_free() is used for this. 
 
- <hr> 
-
-<h2>Index</h2>
-
-
+ <hr>

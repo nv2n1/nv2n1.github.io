@@ -88,8 +88,4 @@ url: "/docs/linux/man/1-xml_split/"
 
 <h2>LICENSE</h2>
 
- This tool is free software; you can redistribute it and/or modify it under the same terms as Perl itself. 
-
-<h2>Index</h2>
-
-
+ This tool is free software; you can redistribute it and/or modify it under the same terms as Perl itself.

@@ -226,5 +226,3 @@ to generalized Hessenberg form.On exit, if COMPZ = 'I', the unitary matrix of ri
 <p> Definition at line 283 of file chgeqz.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>
-</p>

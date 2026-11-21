@@ -168,8 +168,4 @@ pod2html-- help-- htmldir = &lt;name&gt; --htmlroot = &lt;URL&gt; --infile = &lt
 
 <h2>COPYRIGHT</h2>
 
- This program is distributed under the Artistic License. 
-
-<h2>Index</h2>
-
-
+ This program is distributed under the Artistic License.

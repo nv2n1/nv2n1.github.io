@@ -37,5 +37,3 @@ description: "edg-gridftp-rm – Remove a file on a GridFTP server."
 <p> Copyright (c) 2002 by Charles A. Loomis, Jr. and Le Centre National de la Recherche Scientifique (<font SIZE="-1">CNRS</font>). All rights reserved. </p>
 <p> The software was distributed with and is covered by the European DataGrid License. A copy of this license can be found in the included <font SIZE="-1">LICENSE</font> file. This license can also be obtained from <a rel="nofollow" href="http://www.eu-datagrid.org/license.">http://www.eu-datagrid.org/license.</a> </p>
 <p> The underlying GridFTP library is part of the Globus Toolkit (<font SIZE="-1">TM</font>) and is covered by the Globus Toolkit Public License. See <a rel="nofollow" href="http://www.globus.org">http://www.globus.org</a> for more information. </p>
-<h2>Index</h2>
-</p>

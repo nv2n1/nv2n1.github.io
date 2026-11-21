@@ -88,7 +88,3 @@ else
 </dd><dt>&bull;
 </dt><dd> &lt;<a rel="nofollow" HREF="http://juerd.nl/site.plp/perlcheat">http://juerd.nl/site.plp/perlcheat</a>&gt; - home of the Perl Cheat Sheet 
 </dd></dl>
-
-<h2>Index</h2>
-
-

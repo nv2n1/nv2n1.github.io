@@ -61,8 +61,4 @@ url: "/docs/linux/man/1-perlmachten/"
 
 <h2>DATE</h2>
 
- Version 1.1.0 2004-02-13 
-
-<h2>Index</h2>
-
-
+ Version 1.1.0 2004-02-13

@@ -25,8 +25,4 @@ url: "/docs/linux/man/1-tkjpeg/"
 
 <h2>AUTHOR</h2>
 
- Nick Ing-Simmons &lt;nick [at] ing-simmons.net&gt; 
-
-<h2>Index</h2>
-
-
+ Nick Ing-Simmons &lt;nick [at] ing-simmons.net&gt;

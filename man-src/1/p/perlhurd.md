@@ -38,8 +38,4 @@ Failed Test Status Wstat Total Fail Failed List of failed-- -- -- -- -- -- -- --
 
  Mark Kettenis &lt;kettenis [at] gnu.org&gt; 
 
- Last Updated: Fri, 29 Oct 1999 22:50:30 +0200 
-
-<h2>Index</h2>
-
-
+ Last Updated: Fri, 29 Oct 1999 22:50:30 +0200

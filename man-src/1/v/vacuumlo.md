@@ -64,5 +64,3 @@ description: "vacuumlo – remove orphaned large objects from a PostgreSQL datab
 <p> vacuumlo works by the following method: First, vacuumlo builds a temporary table which contains all of the OIDs of the large objects in the selected database. It then scans through all columns in the database that are of type oid or lo, and removes matching entries from the temporary table. (Note: Only types with these names are considered; in particular, domains over them are not considered.) The remaining entries in the temporary table identify orphaned LOs. These are removed.</p>
 <h2>AUTHOR</h2>
 <p> Peter Mount &lt;peter [at] retep.org.uk&gt; </p>
-<h2>Index</h2>
-</p>

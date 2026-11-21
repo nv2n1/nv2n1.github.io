@@ -60,5 +60,3 @@ imgsize[-r | -a | -f fmt] file[file...]
 <p> Image::Size</p>
 <h2>AUTHOR</h2>
 <p> Randy J. Ray <tt>&quot;&lt;rjray [at] blackperl.com&gt;&quot;</tt>. </p>
-<h2>Index</h2>
-</p>

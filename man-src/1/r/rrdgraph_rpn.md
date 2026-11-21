@@ -154,5 +154,3 @@ will be the average between(t1 - shift1 - window) and (t1 - shift1) and between(
 <h2>AUTHOR</h2>
 <p> Program by Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>
 <p> This manual page by Alex van den Bogaerdt &lt;alex [at] vandenbogaerdt.nl&gt; with corrections and/or additions by several people </p>
-<h2>Index</h2>
-</p>

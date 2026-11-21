@@ -195,5 +195,3 @@ description: "qselect – select pbs batch jobs"
 <p> If the qselect command fails to process any option, the command exits with a value greater than zero.</p>
 <h2>SEE ALSO</h2>
 <p> qsub(1B), qstat(1B), pbs_selectjob(3B), pbs_selstat(3B), pbs_statjob(3B) </p>
-<h2>Index</h2>
-</p>

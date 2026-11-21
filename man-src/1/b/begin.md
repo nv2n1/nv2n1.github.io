@@ -62,8 +62,4 @@ end &gt; out.html
 </pre> 
 
  
-&nbsp;<wbr> 
-
-<h2>Index</h2>
-
-
+&nbsp;<wbr>

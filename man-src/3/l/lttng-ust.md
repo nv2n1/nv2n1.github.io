@@ -456,10 +456,4 @@ LD_PRELOAD=liblttng-ust-fork.so appname).
 
  
 
- liblttng-ust was originally written by Mathieu Desnoyers, with additional contributions from various other people. It is currently maintained by Mathieu Desnoyers &lt;mathieu.desnoyers [at] efficios.com&gt;. 
-
- 
-
-<h2>Index</h2>
-
-
+ liblttng-ust was originally written by Mathieu Desnoyers, with additional contributions from various other people. It is currently maintained by Mathieu Desnoyers &lt;mathieu.desnoyers [at] efficios.com&gt;.

@@ -80,8 +80,4 @@ sub show_key
 }
 </code></pre> 
 
- Code to run after the <font SIZE="-1">GUI</font> setup, add to code ref <tt>$after_load_function</tt>. 
-
-<h2>Index</h2>
-
-
+ Code to run after the <font SIZE="-1">GUI</font> setup, add to code ref <tt>$after_load_function</tt>.

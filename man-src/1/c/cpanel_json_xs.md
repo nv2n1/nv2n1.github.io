@@ -142,8 +142,4 @@ cpanel_json_xs[-v][-f inputformat][-t outputformat]
 
 <h2>AUTHOR</h2>
 
- Copyright (C) 2008 Marc Lehmann &lt;json [at] schmorp.de&gt; 
-
-<h2>Index</h2>
-
-
+ Copyright (C) 2008 Marc Lehmann &lt;json [at] schmorp.de&gt;

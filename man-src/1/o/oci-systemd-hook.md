@@ -38,8 +38,4 @@ url: "/docs/linux/man/1-oci-systemd-hook/"
 
  
 
- Mrunal Patel &lt;mrunalp [at] gmail.com&gt; Dan Walsh &lt;dwalsh [at] redhat.com&gt; 
-
-<h2>Index</h2>
-
-
+ Mrunal Patel &lt;mrunalp [at] gmail.com&gt; Dan Walsh &lt;dwalsh [at] redhat.com&gt;

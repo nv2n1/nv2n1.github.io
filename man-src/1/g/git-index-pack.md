@@ -84,5 +84,3 @@ git index - pack[-v][-o&lt;index - file&gt;][--[no - ] rev - index]&lt;pack - fi
 <p> Once the index has been created, the hash that goes into the name of the pack/idx file is printed to stdout. If &#8211;stdin was also used then this is prefixed by either &quot;pack	&quot;, or &quot;keep	&quot; if a new .keep file was successfully created. This is useful to remove a .keep file used as a lock to prevent the race with <i>git repack</i> mentioned above.</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>
-</p>

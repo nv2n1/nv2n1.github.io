@@ -200,5 +200,3 @@ freeaddrinfo(3).
 <p> <code><a href="/docs/linux/man/3-getaddrinfo/">getaddrinfo</a></code>(3), <code><a href="/docs/linux/man/3-gethostbyname/">gethostbyname</a></code>(3), <code><a href="/docs/linux/man/3-getnameinfo/">getnameinfo</a></code>(3), <code><a href="/docs/linux/man/3-getnetbyname/">getnetbyname</a></code>(3), <code>getrrsetbyname</code>(3), <code><a href="/docs/linux/man/3-res_send/">res_send</a></code>(3), <code><a href="/docs/linux/man/5-resolv-conf/">resolv.conf</a></code>(5)</p>
 <h2>CAVEATS</h2>
 <p> This DNS resolver implementation doesn&#8217;t support the EDNS0 protocol extension yet. </p>
-<h2>Index</h2>
-</dd></dl>

@@ -235,5 +235,3 @@ description: "nfcapd – netflow capture daemon"
 <p> <a href="/docs/linux/man/1-nfdump/">nfdump</a>(1), <a href="/docs/linux/man/1-nfprofile/">nfprofile</a>(1), <a href="/docs/linux/man/1-nfreplay/">nfreplay</a>(1)</p>
 <h2>BUGS</h2>
 <p> No software without bugs! Please report any bugs back to me. </p>
-<h2>Index</h2>
-</p>

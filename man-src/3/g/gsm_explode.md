@@ -40,8 +40,4 @@ url: "/docs/linux/man/3-gsm_explode/"
 
 <h2>SEE ALSO</h2>
 
- <a HREF="/docs/linux/man/3-gsm/">gsm</a>(3) 
-
-<h2>Index</h2>
-
-
+ <a HREF="/docs/linux/man/3-gsm/">gsm</a>(3)

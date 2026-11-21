@@ -11,8 +11,4 @@ url: "/docs/linux/man/1-dbrecolize/"
 
  dbrecolize - DEPRICATED, now use dbfilealter 
 
- <hr> 
-
-<h2>Index</h2>
-
-
+ <hr>

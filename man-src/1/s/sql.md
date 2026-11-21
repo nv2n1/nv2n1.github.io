@@ -112,8 +112,4 @@ url: "/docs/linux/man/1-sql/"
  SQL Guide and Reference (Red Hat) 
 
  <i>Last changed: $Date: 2007-01-28 15:33:29 +0100 (Sun, 28 Jan 2007) $</i> 
- Help Index 
-
-<h2>Index</h2>
-
-
+ Help Index

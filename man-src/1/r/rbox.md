@@ -128,10 +128,4 @@ c/o The Geometry Center
 400 Lind Hall
 207 Church Street S.E.
 Minneapolis, MN 55455
-</pre> 
-
- 
-
-<h2>Index</h2>
-
-
+</pre>

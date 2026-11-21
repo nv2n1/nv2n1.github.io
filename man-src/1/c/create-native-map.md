@@ -231,5 +231,3 @@ int Foo_ToErrno(int from, int *to)
 <p> Visit <a rel="nofollow" href="http://lists.ximian.com/mailman/listinfo/mono-devel-list">http://lists.ximian.com/mailman/listinfo/mono-devel-list</a> for details.</p>
 <h2>WEB SITE</h2>
 <p> Visit <a rel="nofollow" href="http://www.mono-project.com">http://www.mono-project.com</a> for details </p>
-<h2>Index</h2>
-</p>

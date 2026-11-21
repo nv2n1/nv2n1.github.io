@@ -50,7 +50,3 @@ url: "/docs/linux/man/1-tarantool/"
 </dd><dt>-V, --version
 </dt><dd> Prints program version and exits. 
 </dd></dl>
-
-<h2>Index</h2>
-
-

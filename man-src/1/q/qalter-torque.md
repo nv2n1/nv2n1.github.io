@@ -247,5 +247,3 @@ description: "qalter – alter pbs batch job"
 <p> If the qalter command fails to process any operand, the command exits with a value greater than zero.</p>
 <h2>SEE ALSO</h2>
 <p> qsub(1B), qstat(1B), pbs_alterjob(3B), pbs_statjob(3B), pbs_selectjob(3B), pbs_resources_*(7B), where * is system type, and the PBS ERS. </p>
-<h2>Index</h2>
-</p>

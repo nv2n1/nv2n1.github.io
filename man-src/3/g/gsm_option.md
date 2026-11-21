@@ -97,8 +97,4 @@ url: "/docs/linux/man/3-gsm_option/"
 
 <h2>SEE ALSO</h2>
 
- <a HREF="/docs/linux/man/1-toast/">toast</a>(1), <a HREF="/docs/linux/man/3-gsm/">gsm</a>(3), <a HREF="/docs/linux/man/3-gsm_explode/">gsm_explode</a>(3), <a HREF="/docs/linux/man/3-gsm_print/">gsm_print</a>(3) 
-
-<h2>Index</h2>
-
-
+ <a HREF="/docs/linux/man/1-toast/">toast</a>(1), <a HREF="/docs/linux/man/3-gsm/">gsm</a>(3), <a HREF="/docs/linux/man/3-gsm_explode/">gsm_explode</a>(3), <a HREF="/docs/linux/man/3-gsm_print/">gsm_print</a>(3)

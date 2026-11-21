@@ -48,8 +48,4 @@ indexdump[options] file[tag]
 
 <h2>SEE ALSO</h2>
 
- <i><a HREF="/docs/linux/man/1-perl/">perl</a></i>(1); <i>XBase::Index</i>(3) 
-
-<h2>Index</h2>
-
-
+ <i><a HREF="/docs/linux/man/1-perl/">perl</a></i>(1); <i>XBase::Index</i>(3)

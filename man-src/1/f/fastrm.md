@@ -61,5 +61,3 @@ description: "fastrm – Quickly remove a list of files"
 <p> <tt>$Id:</tt> fastrm.pod 9768 2014-12-07 21:22:57Z iulius $</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/8-expirerm/">expirerm</a></i>(8). </p>
-<h2>Index</h2>
-</p>

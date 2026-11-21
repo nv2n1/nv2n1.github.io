@@ -121,8 +121,4 @@ native integer-- &gt; native floating point(*)
 
 <h2>SEE ALSO</h2>
 
- overload, perlop 
-
-<h2>Index</h2>
-
-
+ overload, perlop

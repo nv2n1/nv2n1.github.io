@@ -211,8 +211,4 @@ $ megamkdir /Contacts/some [at] email.com
 
  Megatools was written by Ondrej Jirman &lt;megous [at] megous.com&gt;, 2013. 
 
- Official website is <a rel="nofollow" HREF="http://megatools.megous.com.">http://megatools.megous.com.</a> 
-
-<h2>Index</h2>
-
-
+ Official website is <a rel="nofollow" HREF="http://megatools.megous.com.">http://megatools.megous.com.</a>

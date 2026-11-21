@@ -222,8 +222,4 @@ url: "/docs/linux/man/1-perlpolicy/"
 
 <h2>CREDITS</h2>
 
- ``Social Contract about Contributed Modules'' originally by Russ Allbery &lt;rra [at] stanford.edu&gt; and the perl5-porters. 
-
-<h2>Index</h2>
-
-
+ ``Social Contract about Contributed Modules'' originally by Russ Allbery &lt;rra [at] stanford.edu&gt; and the perl5-porters.

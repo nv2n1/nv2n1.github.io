@@ -285,5 +285,3 @@ description: "htop – interactive process viewer"
 <p> <code><a href="/docs/linux/man/5-proc/">proc</a></code>(5), <code><a href="/docs/linux/man/1-top/">top</a></code>(1), <code><a href="/docs/linux/man/1-free/">free</a></code>(1), <code><a href="/docs/linux/man/1-ps/">ps</a></code>(1), <code><a href="/docs/linux/man/1-uptime/">uptime</a></code>(1) and <code><a href="/docs/linux/man/5-limits-conf/">limits.conf</a></code>(5).</p>
 <h2>AUTHORS</h2>
 <p> <code>htop</code> was originally developed by Hisham Muhammad. Nowadays it is maintained by the community at &lt;htop [at] groups.io&gt;. </p>
-<h2>Index</h2>
-</p>

@@ -77,11 +77,4 @@ url: "/docs/linux/man/1-opagetvf/"
 
  
  # opagetvf -d Default 
- Default:0:0xffff:0:unlimited:unlimited:0x0 
-
- 
- 
-
-<h2>Index</h2>
-
-
+ Default:0:0xffff:0:unlimited:unlimited:0x0

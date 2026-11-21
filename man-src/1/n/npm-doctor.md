@@ -69,5 +69,3 @@ npm doctor
 <dd> npm help ping </dd>
 </dl>
 </dl>
-<h2>Index</h2>
-</dl>

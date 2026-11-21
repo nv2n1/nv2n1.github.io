@@ -21,5 +21,3 @@ description: "mateweather – Weather Applet for the MATE panel."
 <p> GOAD_ID is usually the applet name [<code>mateweather</code>]</dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Christian Marillat &lt;marillat [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>
-</p>

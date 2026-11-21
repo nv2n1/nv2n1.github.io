@@ -86,8 +86,4 @@ url: "/docs/linux/man/1-podviewer/"
 
 <h2>COPYRIGHT</h2>
 
- (c) 2003-2005 Gavin Brown (gavin.brown [at] uk.com). All rights reserved. This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself. 
-
-<h2>Index</h2>
-
-
+ (c) 2003-2005 Gavin Brown (gavin.brown [at] uk.com). All rights reserved. This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.

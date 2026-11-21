@@ -56,5 +56,3 @@ description: "elfedit – Update the ELF header of ELF files."
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 1991-2015 Free Software Foundation, Inc. </p>
 <p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> Free Documentation License, Version 1.3 or any later version published by the Free Software Foundation; with no Invariant Sections, with no Front-Cover Texts, and with no Back-Cover Texts. A copy of the license is included in the section entitled &#8220;<font SIZE="-1">GNU</font> Free Documentation License&#8221;. </p>
-<h2>Index</h2>
-</p>

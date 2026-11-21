@@ -90,8 +90,4 @@ nvme security - recv[&lt;device&gt;][--size = &lt;size&gt; | -x&lt;size&gt;]
 
  
 
- Part of the nvme-user suite 
-
-<h2>Index</h2>
-
-
+ Part of the nvme-user suite

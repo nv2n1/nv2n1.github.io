@@ -54,8 +54,4 @@ void close_server()
 
 <h2>SEE ALSO</h2>
 
- <a HREF="/docs/linux/man/3-libinn/">libinn</a>(3). 
-
-<h2>Index</h2>
-
-
+ <a HREF="/docs/linux/man/3-libinn/">libinn</a>(3).

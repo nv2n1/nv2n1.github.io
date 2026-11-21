@@ -1041,5 +1041,3 @@ IO engine that does regular linux native fallocate call to simulate data transfe
 <h2>SEE ALSO</h2>
 <p> For further documentation see <code>HOWTO</code> and <code>README</code>.<br />
  Sample jobfiles are available in the <code>examples</code> directory. </p>
-<h2>Index</h2>
-</p>

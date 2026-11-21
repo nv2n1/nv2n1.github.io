@@ -63,5 +63,3 @@ description: "PNG driver – driver to create PNG and PPM images (drivers)"
 <p> <i>Last changed: $Date: 2007-09-01 19:40:57 +0200 (Sat, 01 Sep 2007) $</i> </p>
 <p> Full index </p>
 <p> � 2003-2008 GRASS Development Team </p>
-<h2>Index</h2>
-</p>

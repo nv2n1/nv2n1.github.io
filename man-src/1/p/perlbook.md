@@ -238,8 +238,4 @@ by Steve Lidie and Nancy Walsh
 
 <h3>Get your book listed</h3>
 
- If your Perl book isn't listed and you think it should be, let us know. &lt;mailto:perl5-porters [at] perl.org&gt; 
-
-<h2>Index</h2>
-
-
+ If your Perl book isn't listed and you think it should be, let us know. &lt;mailto:perl5-porters [at] perl.org&gt;

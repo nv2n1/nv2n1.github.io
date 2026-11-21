@@ -97,5 +97,3 @@ description: "dpkg-divert – override a package’s version of a file"
 </pre>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dpkg/">dpkg</a></code>(1). </p>
-<h2>Index</h2>
-</p>

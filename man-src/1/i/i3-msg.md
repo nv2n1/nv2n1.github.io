@@ -43,8 +43,4 @@ i3-msg &quot;bp&quot; # Use 1-px border for current client
 
  
 
- Michael Stapelberg and contributors 
-
-<h2>Index</h2>
-
-
+ Michael Stapelberg and contributors

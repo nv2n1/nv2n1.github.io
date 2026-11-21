@@ -24,8 +24,4 @@ url: "/docs/linux/man/1-nytprofcg/"
 
  The output Callgrind file can be loaded into the <tt>&quot;kcachegrind&quot;</tt> <font SIZE="-1">GUI</font> for interactive exploration. 
 
- For more information see &lt;<a rel="nofollow" HREF="http://kcachegrind.github.io/html/Home.html">http://kcachegrind.github.io/html/Home.html</a>&gt; 
-
-<h2>Index</h2>
-
-
+ For more information see &lt;<a rel="nofollow" HREF="http://kcachegrind.github.io/html/Home.html">http://kcachegrind.github.io/html/Home.html</a>&gt;

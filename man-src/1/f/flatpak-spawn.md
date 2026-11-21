@@ -79,5 +79,3 @@ description: "flatpak-spawn – Run commands in a sandbox"
 <p> <code>$ flatpak-spawn ls /var/run</code></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1) </p>
-<h2>Index</h2>
-</p>

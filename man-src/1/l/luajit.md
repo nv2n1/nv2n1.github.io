@@ -61,5 +61,3 @@ description: "luajit – Just-In-Time Compiler for the Lua Language"
 <p> More details in the provided HTML docs or at: <i><a rel="nofollow" href="http://luajit.org">http://luajit.org</a></i><br />
  More about the Lua language can be found at: <i><a rel="nofollow" href="http://lua.org/docs.html">http://lua.org/docs.html</a></i> </p>
 <p> <a href="/docs/linux/man/1-lua/">lua</a>(1) </p>
-<h2>Index</h2>
-</p>

@@ -242,5 +242,3 @@ Working directory inside the container </p>
 <p> Specifying the &#8211;isolation flag without a value is the same as setting &#8211;isolation=&quot;default&quot;. </p>
 <h2>HISTORY</h2>
 <p> August 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; September 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; November 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; </p>
-<h2>Index</h2>
-</p>

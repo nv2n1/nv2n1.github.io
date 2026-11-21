@@ -13,8 +13,4 @@ url: "/docs/linux/man/1-urxvt-ml-example-refresh-hooks/"
 
 <h2>DESCRIPTION</h2>
 
- Displays a very simple digital clock in the upper right corner of the window. Illustrates overwriting the refresh callbacks to create your own overlays or changes. 
-
-<h2>Index</h2>
-
-
+ Displays a very simple digital clock in the upper right corner of the window. Illustrates overwriting the refresh callbacks to create your own overlays or changes.

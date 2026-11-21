@@ -75,8 +75,4 @@ private_sv = MRO_GET_PRIVATE_DATA(meta, &amp;my_mro_alg);
 
 <h2>AUTHORS</h2>
 
- The implementation of the C3 <font SIZE="-1">MRO</font> and switchable MROs within the perl core was written by Brandon L Black. Nicholas Clark created the pluggable interface, refactored Brandon's implementation to work with it, and wrote this document. 
-
-<h2>Index</h2>
-
-
+ The implementation of the C3 <font SIZE="-1">MRO</font> and switchable MROs within the perl core was written by Brandon L Black. Nicholas Clark created the pluggable interface, refactored Brandon's implementation to work with it, and wrote this document.

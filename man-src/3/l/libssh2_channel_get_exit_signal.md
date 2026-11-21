@@ -34,8 +34,4 @@ url: "/docs/linux/man/3-libssh2_channel_get_exit_signal/"
 
 <h2>RETURN VALUE</h2>
 
- Numeric error code corresponding to the the Error Code constants. 
-
-<h2>Index</h2>
-
-
+ Numeric error code corresponding to the the Error Code constants.

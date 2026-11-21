@@ -53,5 +53,3 @@ description: "po2debconf – merge master templates file and PO files"
 <pre>
   Denis Barbier &lt;barbier [at] linuxfr.org&gt;
 </pre>
-<h2>Index</h2>
-</p>

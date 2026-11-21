@@ -15,8 +15,4 @@ url: "/docs/linux/man/3-globus_thread_pool/"
 
  
 
- Generated automatically by Doxygen for globus_common from the source code. 
-
-<h2>Index</h2>
-
-
+ Generated automatically by Doxygen for globus_common from the source code.

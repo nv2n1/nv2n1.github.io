@@ -373,8 +373,4 @@ ERR_BNDS_NORM is REAL array, dimension(NRHS, N_ERR_BNDS) For each right - hand s
 
  
 
- Generated automatically by Doxygen for LAPACK from the source code. 
-
-<h2>Index</h2>
-
-
+ Generated automatically by Doxygen for LAPACK from the source code.

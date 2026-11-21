@@ -27,5 +27,3 @@ bson_oid_init (bson_oid_t     *oid,
 <p> Generates a new <code>bson_oid_t</code> using either <code>context</code> or the default <code>bson_context_t</code> \&amp;. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>
-</p>

@@ -42,8 +42,4 @@ url: "/docs/linux/man/1-fedpkg-copr/"
 
  
 
- Michal Novotny &lt;clime [at] redhat.com&gt; 
-
-<h2>Index</h2>
-
-
+ Michal Novotny &lt;clime [at] redhat.com&gt;

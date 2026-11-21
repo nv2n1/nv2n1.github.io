@@ -98,8 +98,4 @@ ibacm[-D][-P][-A addr_file][-O option_file]
 
 <h2>SEE ALSO</h2>
 
- <a HREF="/docs/linux/man/7-ibacm/">ibacm</a>(7), <a HREF="/docs/linux/man/1-ib_acme/">ib_acme</a>(1), <a HREF="/docs/linux/man/7-rdma_cm/">rdma_cm</a>(7) 
-
-<h2>Index</h2>
-
-
+ <a HREF="/docs/linux/man/7-ibacm/">ibacm</a>(7), <a HREF="/docs/linux/man/1-ib_acme/">ib_acme</a>(1), <a HREF="/docs/linux/man/7-rdma_cm/">rdma_cm</a>(7)

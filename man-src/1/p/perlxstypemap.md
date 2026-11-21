@@ -267,5 +267,3 @@ XS_pack_foo_tPtrPtr(SV *out, foo_t *in, UV count_foo_tPtrPtr);
 <dt>T_OUT</dt>
 <dd> Same as T_INOUT, but the filehandle that is returned from C to Perl is set to use the open mode <tt>&quot;+&gt;&quot;</tt>. </dd>
 </dl>
-<h2>Index</h2>
-</dl>

@@ -1676,5 +1676,3 @@ and
 <p> Information about the latest version and the status of the project can be obtained by visiting <code>ftnchek</code>&#8216;s home page, <a rel="nofollow" href="http://www.dsm.fordham.edu/~ftnchek">http://www.dsm.fordham.edu/~ftnchek</a> . For further information and to report bugs, you may contact Dr. Robert Moniot, whose contact information can be found by a Web search for his name and Fordham University. (E-mail address is not provided here because it attracts unsolicited commercial e-mail, but it is easily constructed by combining his last name with the name of the university and the edu domain.)</p>
 <h2>SEE ALSO</h2>
 <p> <code>dcl2inc</code>(1L), <code>dtoq</code>(1L), <code>dtos</code>(1L), <code><a href="/docs/linux/man/1-f77/">f77</a></code>(1), <code>fd2s</code>(1L), <code>fs2d</code>(1L), <code>ftnpp</code>(1L), <code>pfort</code>(1L), <code>qtod</code>(1L), <code>sf3</code>(1L), <code>stod</code>(1L). <code>xsf3</code>(1L), <code>xvcg</code>(1L). </p>
-<h2>Index</h2>
-</p>

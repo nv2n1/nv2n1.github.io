@@ -20,8 +20,4 @@ url: "/docs/linux/man/1-csvcat/"
 
 <h2>AUTHOR</h2>
 
- William Moreno Reyes - This manpage waw written for the Fedora Project but can be used in others projects under a CC-By license. 
-
-<h2>Index</h2>
-
-
+ William Moreno Reyes - This manpage waw written for the Fedora Project but can be used in others projects under a CC-By license.

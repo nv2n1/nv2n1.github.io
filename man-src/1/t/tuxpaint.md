@@ -531,5 +531,3 @@ description: "tuxpaint — \"Tux Paint\", a drawing program for young children."
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tuxpaint-import/">tuxpaint-import</a></code>(1), <code>tuxpaint-config</code>(1), <code><a href="/docs/linux/man/1-tp-magic-config/">tp-magic-config</a></code>(1), <code>xpaint</code>(1), <code>gpaint</code>(1), <code><a href="/docs/linux/man/1-gimp/">gimp</a></code>(1), <code>kolourpaint</code>(1), <code>krita</code>(1), <code>gcompris</code>(1) </p>
 <p> And documentation within /usr/[local/]share/doc/tuxpaint/. </p>
-<h2>Index</h2>
-</p>

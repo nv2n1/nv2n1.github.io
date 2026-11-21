@@ -51,8 +51,4 @@ enum ibv_rate mult_to_ibv_rate(int mult);
 
  
 
- Dotan Barak &lt;dotanba [at] gmail.com&gt; 
-
-<h2>Index</h2>
-
-
+ Dotan Barak &lt;dotanba [at] gmail.com&gt;

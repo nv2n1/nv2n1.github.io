@@ -160,5 +160,3 @@ default   -        file    ?       mailbox
 <h2>BUGS</h2>
 <p> Only two return codes are meaningful, others should be. </p>
 <p> <code>Slocal</code> was originally designed to be backwards-compatible with the <code>maildelivery</code> functionality provided by <code>MMDF-II</code>. </p>
-<h2>Index</h2>
-</p>

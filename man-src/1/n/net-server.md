@@ -66,8 +66,4 @@ net - server[base type][net server arguments] net - server PreFork ipv '*' net -
   GNU General Public License
     or the
   Perl Artistic License
-</pre> 
-
-<h2>Index</h2>
-
-
+</pre>

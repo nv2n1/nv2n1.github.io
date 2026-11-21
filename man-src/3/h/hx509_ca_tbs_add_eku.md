@@ -610,8 +610,4 @@ url: "/docs/linux/man/3-hx509_ca_tbs_add_eku/"
 
  
 
- Generated automatically by Doxygen for Heimdalx509library from the source code. 
-
-<h2>Index</h2>
-
-
+ Generated automatically by Doxygen for Heimdalx509library from the source code.

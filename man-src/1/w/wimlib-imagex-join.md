@@ -33,5 +33,3 @@ description: "wimlib-imagex-join – Join split WIMs into a standalone one-part 
 <p> <code>wimlib-imagex export</code> <i>SWM_PART_1</i> &#8211;ref=&quot;<i>SWM_GLOB</i>&quot; all <i>OUT_WIMFILE</i></dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-wimlib-imagex/">wimlib-imagex</a></code>(1) <code><a href="/docs/linux/man/1-wimlib-imagex-export/">wimlib-imagex-export</a></code>(1) </p>
-<h2>Index</h2>
-</p>

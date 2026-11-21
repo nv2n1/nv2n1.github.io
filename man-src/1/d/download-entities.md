@@ -68,8 +68,4 @@ url: "/docs/linux/man/1-download-entities/"
 
  Copyright 2010 Jan Oldrich Kruza &lt;sixtease [at] cpan.org&gt;. All rights reserved. 
 
- This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself. 
-
-<h2>Index</h2>
-
-
+ This library is free software; you can redistribute it and/or modify it under the same terms as Perl itself.

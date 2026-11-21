@@ -43,9 +43,4 @@ rcopy source server[:destination][-p port] rcopy[-p port]
 
 <h2>SEE ALSO</h2>
 
- <a HREF="/docs/linux/man/7-rdma_cm/">rdma_cm</a>(7) 
-
-<h2>Index</h2>
-
-
-</dd>
+ <a HREF="/docs/linux/man/7-rdma_cm/">rdma_cm</a>(7)

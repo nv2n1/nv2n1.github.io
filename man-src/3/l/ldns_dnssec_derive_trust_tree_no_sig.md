@@ -87,5 +87,3 @@ description: "ldns_dnssec_trust_tree_new, ldns_dnssec_trust_tree_free, ldns_dnss
 <p> <i>ldns_dnssec_data_chain</i>, <i>ldns_dnssec_trust_tree</i>. And <code>perldoc Net::DNS</code>, <code>RFC1034</code>, <code>RFC1035</code>, <code>RFC4033</code>, <code>RFC4034</code> and <code>RFC4035</code>.</p>
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
-<h2>Index</h2>
-</p>

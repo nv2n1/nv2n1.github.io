@@ -192,5 +192,3 @@ if that is less than overflow, DTRSV
 <p> Definition at line 238 of file dlatrs.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>
-</p>

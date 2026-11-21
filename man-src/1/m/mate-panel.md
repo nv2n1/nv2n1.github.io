@@ -40,5 +40,3 @@ description: "mate-panel – The Panel for the MATE Desktop Environment"
 <h3>Mate Panel documentation can be found under Help by right-clicking on <code>mate-panel</code>.</h3>
 <p> Further information may also be available at: <a rel="nofollow" href="http://wiki.mate-desktop.org/docs">http://wiki.mate-desktop.org/docs</a> </p>
 <p> <code><a href="/docs/linux/man/1-mate-panel-test-applets/">mate-panel-test-applets</a></code>(1) </p>
-<h2>Index</h2>
-</dl>

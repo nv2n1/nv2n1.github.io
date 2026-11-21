@@ -100,8 +100,4 @@ struct mlx5dv_flow_match_parameters {
 
  
 
- Mark Bloch &lt;markb [at] mellanox.com&gt; 
-
-<h2>Index</h2>
-
-
+ Mark Bloch &lt;markb [at] mellanox.com&gt;

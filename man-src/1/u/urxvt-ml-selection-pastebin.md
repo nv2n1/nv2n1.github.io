@@ -37,8 +37,4 @@ url: "/docs/linux/man/1-urxvt-ml-selection-pastebin/"
    URxvt.selection-pastebin.url: <a rel="nofollow" HREF="http://www.ta-sa.org/files/txt/%">http://www.ta-sa.org/files/txt/%</a>
 </pre> 
 
- <i>Note to xrdb users:</i> xrdb uses the C preprocessor, which might interpret the double <tt>&quot;/&quot;</tt> characters as comment start. Use <tt>&quot;\057\057&quot;</tt> instead, which works regardless of whether xrdb is used to parse the resource file or not. 
-
-<h2>Index</h2>
-
-
+ <i>Note to xrdb users:</i> xrdb uses the C preprocessor, which might interpret the double <tt>&quot;/&quot;</tt> characters as comment start. Use <tt>&quot;\057\057&quot;</tt> instead, which works regardless of whether xrdb is used to parse the resource file or not.

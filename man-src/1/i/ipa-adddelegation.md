@@ -38,5 +38,3 @@ description: "ipa-adddelegation – Add a delegation"
 <p> 1 if an error occurred </p>
 <p> 2 if no not exactly one matching source group was found (0 or more than one) </p>
 <p> 3 if no not exactly one matching target group was found (0 or more than one </p>
-<h2>Index</h2>
-</p>

@@ -73,8 +73,4 @@ struct mlx4dv_ctx_allocators {
 
  #AUTHOR 
 
- Majd Dibbiny &lt;majd [at] mellanox.com&gt; 
-
-<h2>Index</h2>
-
-
+ Majd Dibbiny &lt;majd [at] mellanox.com&gt;

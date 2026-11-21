@@ -23,8 +23,4 @@ url: "/docs/linux/man/1-psub/"
 
 <h3>Example</h3>
 
- diff (sort a.txt|psub) (sort b.txt|psub) shows the difference between the sorted versions of files a.txt and b.txt. 
-
-<h2>Index</h2>
-
-
+ diff (sort a.txt|psub) (sort b.txt|psub) shows the difference between the sorted versions of files a.txt and b.txt.

@@ -25,8 +25,4 @@ url: "/docs/linux/man/1-perlmacos/"
 
 <h2>AUTHOR</h2>
 
- Perl was ported to Mac <font SIZE="-1">OS</font> by Matthias Neeracher &lt;neeracher [at] mac.com&gt;. Chris Nandor &lt;pudge [at] pobox.com&gt; continued development and maintenance for the duration of the port's life. 
-
-<h2>Index</h2>
-
-
+ Perl was ported to Mac <font SIZE="-1">OS</font> by Matthias Neeracher &lt;neeracher [at] mac.com&gt;. Chris Nandor &lt;pudge [at] pobox.com&gt; continued development and maintenance for the duration of the port's life.

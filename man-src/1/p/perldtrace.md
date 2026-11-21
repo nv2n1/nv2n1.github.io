@@ -148,8 +148,4 @@ warnings::unimport 4589 Exporter::Heavy::_rebuild_cache 5039 Exporter::import 14
 
 <h2>AUTHORS</h2>
 
- Shawn M Moore <tt>&quot;sartak [at] gmail.com&quot;</tt> 
-
-<h2>Index</h2>
-
-
+ Shawn M Moore <tt>&quot;sartak [at] gmail.com&quot;</tt>

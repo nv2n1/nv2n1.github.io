@@ -156,8 +156,4 @@ IPIV is INTEGER array, dimension(min(M, N))
 
  
 
- Generated automatically by Doxygen for LAPACK from the source code. 
-
-<h2>Index</h2>
-
-
+ Generated automatically by Doxygen for LAPACK from the source code.

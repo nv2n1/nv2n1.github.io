@@ -152,5 +152,3 @@ environment myenv
 <p> There must be one token on the line: the keyword by itself.</dl>
 <h2>AUTHORS</h2>
 <p> An Thorsten Glaser Aq tg [at] debian.org wrote this manual page for the Debian project (but may be used by others) after the original HTML format documentation Copyright &#169; 1996,2008 Oracle. All rights reserved. </p>
-<h2>Index</h2>
-</p>

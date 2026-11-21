@@ -364,8 +364,4 @@ Options : --help Display help message-- config = s Use a nonstandard config file
 
 <h2>AUTHOR</h2>
 
- Jeff Fearn <tt>&quot;&lt;jfearn [at] redhat.com&gt;&quot;</tt> 
-
-<h2>Index</h2>
-
-
+ Jeff Fearn <tt>&quot;&lt;jfearn [at] redhat.com&gt;&quot;</tt>

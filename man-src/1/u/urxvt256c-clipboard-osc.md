@@ -19,8 +19,4 @@ url: "/docs/linux/man/1-urxvt256c-clipboard-osc/"
 
 <h2>DESCRIPTION</h2>
 
- This extension implements the clipboard;copy Perl <font SIZE="-1">OSC.</font> 
-
-<h2>Index</h2>
-
-
+ This extension implements the clipboard;copy Perl <font SIZE="-1">OSC.</font>

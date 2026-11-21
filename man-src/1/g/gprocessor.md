@@ -35,7 +35,3 @@ gprocessor (options)... (file)...
 </dd><dt>-r [times]
 </dt><dd> Allow the given number of complete runs. If 0, keep looping indefinitely. Default is 1 (end as soon as the last frame is reached). 
 </dd></dl>
-
-<h2>Index</h2>
-
-

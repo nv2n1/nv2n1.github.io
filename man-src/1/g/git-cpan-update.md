@@ -41,8 +41,4 @@ url: "/docs/linux/man/1-git-cpan-update/"
 
 <h2>SEE ALSO</h2>
 
- Git::CPAN::Patch, git-cpan-import 
-
-<h2>Index</h2>
-
-
+ Git::CPAN::Patch, git-cpan-import

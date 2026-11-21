@@ -159,5 +159,3 @@ description: "ncftpspooler – Global batch FTP job processor daemon"
 <p> Mike Gleason, NcFTP Software (<a rel="nofollow" href="http://www.ncftp.com">http://www.ncftp.com</a>).</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-ncftpbatch/">ncftpbatch</a>(1),</i> <i><a href="/docs/linux/man/1-ncftp/">ncftp</a></i>(1), <i><a href="/docs/linux/man/1-ncftpput/">ncftpput</a></i>(1), <i><a href="/docs/linux/man/1-ncftpget/">ncftpget</a></i>(1), <i><a href="/docs/linux/man/1-uucp/">uucp</a></i>(1). </p>
-<h2>Index</h2>
-</p>

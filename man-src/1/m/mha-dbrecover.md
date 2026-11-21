@@ -29,5 +29,3 @@ description: "mha-dbrecover – rebuild a MHonArc archive database"
 <h2>AUTHOR</h2>
 <p> Earl Hood, mhonarc [at] mhonarc.org </p>
 <p> MHonArc comes with <font SIZE="-1">ABSOLUTELY</font> <font SIZE="-1">NO</font> <font SIZE="-1">WARRANTY</font> and MHonArc may be copied only under the terms of the <font SIZE="-1">GNU</font> General Public License, which may be found in the MHonArc distribution. </p>
-<h2>Index</h2>
-</p>

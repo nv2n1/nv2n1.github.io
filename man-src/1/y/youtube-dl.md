@@ -1755,8 +1755,4 @@ $ youtube - dl - v&lt;your command line&gt;[debug] System config : [][debug] Use
 
  youtube-dl is released into the public domain by the copyright holders. 
 
- This README file was originally written by Daniel Bolton (<a rel="nofollow" HREF="https://github.com/dbbolton)">https://github.com/dbbolton)</a> and is likewise released into the public domain. 
-
-<h2>Index</h2>
-
-
+ This README file was originally written by Daniel Bolton (<a rel="nofollow" HREF="https://github.com/dbbolton)">https://github.com/dbbolton)</a> and is likewise released into the public domain.

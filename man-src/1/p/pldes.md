@@ -63,8 +63,4 @@ pl2link input - file[destination - file] pl - input[input - file] - output[desti
 
  <b>pl2link</b> was written by Fred Kiefer &lt;FredKiefer [at] gmx.de&gt;. 
 
- <b>pl</b> was written by Gregory Casamento &lt;greg_casamento [at] yahoo.com&gt;. 
-
-<h2>Index</h2>
-
-
+ <b>pl</b> was written by Gregory Casamento &lt;greg_casamento [at] yahoo.com&gt;.

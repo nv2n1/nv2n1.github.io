@@ -34,8 +34,4 @@ url: "/docs/linux/man/1-tiffdump/"
 
  <b><a HREF="/docs/linux/man/1-tiffinfo/">tiffinfo</a></b>(1), <b>libtiff</b>(3TIFF) 
 
- Libtiff library home page: <b><a rel="nofollow" HREF="http://www.remotesensing.org/libtiff/">http://www.remotesensing.org/libtiff/</a></b> 
-
-<h2>Index</h2>
-
-
+ Libtiff library home page: <b><a rel="nofollow" HREF="http://www.remotesensing.org/libtiff/">http://www.remotesensing.org/libtiff/</a></b>

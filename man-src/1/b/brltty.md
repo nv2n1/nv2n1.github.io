@@ -351,5 +351,3 @@ description: "brltty – refreshable braille display driver for Linux/Unix"
 <p> If the single word <code>auto</code> is specified then autodetection is performed using only those drivers which are known to be reliable for this purpose.</dl>
 <h2>SEE ALSO</h2>
 <p> For full documentation, see <code>brltty</code>&#8216;s on-line manual at [<code><a rel="nofollow" href="http://brltty.app/documentation.html">http://brltty.app/documentation.html</a></code>]. </p>
-<h2>Index</h2>
-</p>

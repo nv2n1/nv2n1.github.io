@@ -139,8 +139,4 @@ ILO = 1 and IHI = 0, if N = 0.
 
  
 
- Generated automatically by Doxygen for LAPACK from the source code. 
-
-<h2>Index</h2>
-
-
+ Generated automatically by Doxygen for LAPACK from the source code.

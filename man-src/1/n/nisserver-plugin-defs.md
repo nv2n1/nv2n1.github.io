@@ -36,8 +36,4 @@ url: "/docs/linux/man/1-nisserver-plugin-defs/"
 
 <h2>AUTHOR</h2>
 
- Nalin Dahyabhai &lt;nalin [at] redhat.com&gt; 
-
-<h2>Index</h2>
-
-
+ Nalin Dahyabhai &lt;nalin [at] redhat.com&gt;

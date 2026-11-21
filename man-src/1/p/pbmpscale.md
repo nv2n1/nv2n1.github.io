@@ -31,8 +31,4 @@ url: "/docs/linux/man/1-pbmpscale/"
 
 <h2>NOTES</h2>
 
- pbmpscale works best for enlargements of 2. Enlargements greater than 2 should be done by as many enlargements of 2 as possible, followed by an enlargement by the remaining factor. 
-
-<h2>Index</h2>
-
-
+ pbmpscale works best for enlargements of 2. Enlargements greater than 2 should be done by as many enlargements of 2 as possible, followed by an enlargement by the remaining factor.

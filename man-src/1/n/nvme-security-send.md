@@ -81,8 +81,4 @@ nvme security - send[&lt;device&gt;][--file = &lt;file&gt; | -f&lt;file&gt;]
 
  
 
- Part of the nvme-user suite 
-
-<h2>Index</h2>
-
-
+ Part of the nvme-user suite

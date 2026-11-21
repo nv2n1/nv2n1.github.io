@@ -44,8 +44,4 @@ url: "/docs/linux/man/3-fltk/"
 
 <h2>AUTHORS</h2>
 
- Bill Spitzak and others. 
-
-<h2>Index</h2>
-
-
+ Bill Spitzak and others.

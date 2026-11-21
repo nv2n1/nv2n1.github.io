@@ -73,8 +73,4 @@ maketext[OPTION][--domain = TEXTDOMAIN] MSGKEY[PARAM...] maketext[OPTION] - s MS
 
 <h2>COPYRIGHT</h2>
 
- Copyright (c) 2003-2007 imacat. All rights reserved. This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself. 
-
-<h2>Index</h2>
-
-
+ Copyright (c) 2003-2007 imacat. All rights reserved. This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.

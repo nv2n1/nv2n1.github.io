@@ -131,8 +131,4 @@ BEGIN
 
  The optree is shared between threads. This means there is a possibility that the optree will outlive the particular thread (and therefore the interpreter instance) that created it, so true Perl scalars cannot be stored in the optree. Instead a compact form is used, which can only store values that are integers (signed and unsigned), strings or <tt>&quot;undef&quot;</tt> - references and floating point values are stringified. If you need to store multiple values or complex structures, you should serialise them, for example with <tt>&quot;pack&quot;</tt>. The deletion of a hash key from <tt>&quot;%^H&quot;</tt> is recorded, and as ever can be distinguished from the existence of a key with value <tt>&quot;undef&quot;</tt> with <tt>&quot;exists&quot;</tt>. 
 
- <b>Don't</b> attempt to store references to data structures as integers which are retrieved via <tt>&quot;caller&quot;</tt> and converted back, as this will not be threadsafe. Accesses would be to the structure without locking (which is not safe for Perl's scalars), and either the structure has to leak, or it has to be freed when its creating thread terminates, which may be before the optree referencing it is deleted, if other threads outlive it. 
-
-<h2>Index</h2>
-
-
+ <b>Don't</b> attempt to store references to data structures as integers which are retrieved via <tt>&quot;caller&quot;</tt> and converted back, as this will not be threadsafe. Accesses would be to the structure without locking (which is not safe for Perl's scalars), and either the structure has to leak, or it has to be freed when its creating thread terminates, which may be before the optree referencing it is deleted, if other threads outlive it.

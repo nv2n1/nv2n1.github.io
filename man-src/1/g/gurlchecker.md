@@ -30,5 +30,3 @@ description: "gurlchecker – A graphical web link checker that works on a whole
 <p> With this option gurlchecker will systematically remove arguments on URLs. It is usefull to avoid nasty infinite loops when arguments are randomly generated, for example.</dl>
 <h2>AUTHORS</h2>
 <p> This manual page was written by Daniel Pecos Martinez &lt;&lt;dani [at] netpecos.org&gt;&gt; and Emmanuel Saracco &lt;&lt;esaracco [at] users.labs.libre-entreprise.org&gt;&gt; for the Debian system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.1 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts and no Back-Cover Texts. </p>
-<h2>Index</h2>
-</p>

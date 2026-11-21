@@ -55,8 +55,4 @@ $ xslate[options...] target - a-- cache Cache level - t-- type Output content ty
 
 <h2>SEE ALSO</h2>
 
- Text::Xslate 
-
-<h2>Index</h2>
-
-
+ Text::Xslate

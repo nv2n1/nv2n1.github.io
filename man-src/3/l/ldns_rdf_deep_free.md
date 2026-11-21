@@ -58,5 +58,3 @@ description: "ldns_rdf_new, ldns_rdf_clone, ldns_rdf_new_frm_data, ldns_rdf_new_
 <p> <i>ldns_rdf</i>. And <code>perldoc Net::DNS</code>, <code>RFC1034</code>, <code>RFC1035</code>, <code>RFC4033</code>, <code>RFC4034</code> and <code>RFC4035</code>.</p>
 <h2>REMARKS</h2>
 <p> This manpage was automaticly generated from the ldns source code by use of Doxygen and some perl. </p>
-<h2>Index</h2>
-</p>

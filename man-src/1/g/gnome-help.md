@@ -36,8 +36,4 @@ url: "/docs/linux/man/1-gnome-help/"
  Yelp was written by Mikael Hallendal and Alexander Larsson . 
 &nbsp; 
 
- This manual page was written by Jerry Haltom &lt;wasabi [at] larvalstage.net&gt; for the Debian system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.1 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts and no Back-Cover Texts. 
-
-<h2>Index</h2>
-
-
+ This manual page was written by Jerry Haltom &lt;wasabi [at] larvalstage.net&gt; for the Debian system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.1 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts and no Back-Cover Texts.

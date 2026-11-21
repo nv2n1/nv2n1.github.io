@@ -220,9 +220,4 @@ $ gkermit - s hello.c &lt; --Send the hello.c file
 
 <h2>AUTHOR</h2>
 
- Frank da Cruz, the Kermit Project, Columbia University, New York City, December 1999. 
- 
-
-<h2>Index</h2>
-
-
+ Frank da Cruz, the Kermit Project, Columbia University, New York City, December 1999.

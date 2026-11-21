@@ -129,8 +129,4 @@ Failed Test Stat Wstat Total Fail Failed List of Failed-- -- -- -- -- -- -- -- -
 
  Jarkko Hietaniemi &lt;jhi [at] iki.fi&gt; 
 
- Please report any errors, updates, or suggestions to <i>perlbug [at] perl.org</i>. 
-
-<h2>Index</h2>
-
-
+ Please report any errors, updates, or suggestions to <i>perlbug [at] perl.org</i>.

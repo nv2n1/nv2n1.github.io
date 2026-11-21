@@ -193,5 +193,3 @@ description: "weplab – Wireless WEP encryption security analyzer"
 <p> weplab was created by Jose Ignacio Sanchez &#8211; Topo[LB]. </p>
 <p> However other people have made contributions to the project. In the AUTHORS file within the distribution package, you will find them. </p>
 <p> Any new contribution in form of documentation translation, new feature development, bug fixing, and so on, will be welcome </p>
-<h2>Index</h2>
-</p>

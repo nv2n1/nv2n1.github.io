@@ -60,8 +60,4 @@ mlx5dv_create_flow_action_modify_header(struct ibv_context *ctx,
 
  
 
- ibv_create_flow(3), ibv_create_flow_action(3) 
-
-<h2>Index</h2>
-
-
+ ibv_create_flow(3), ibv_create_flow_action(3)

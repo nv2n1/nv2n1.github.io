@@ -31,8 +31,4 @@ url: "/docs/linux/man/1-tv_count/"
 
  Copyright Geoff Westcott, February 2013. 
 
- This code is distributed under the <font SIZE="-1">GNU</font> General Public License v2 (GPLv2) . 
-
-<h2>Index</h2>
-
-
+ This code is distributed under the <font SIZE="-1">GNU</font> General Public License v2 (GPLv2) .

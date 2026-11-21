@@ -146,5 +146,3 @@ Windows\System32n-US\*.*
 </pre>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-wimlib-imagex/">wimlib-imagex</a></code>(1) <code><a href="/docs/linux/man/1-wimlib-imagex-apply/">wimlib-imagex-apply</a></code>(1) <code><a href="/docs/linux/man/1-wimlib-imagex-dir/">wimlib-imagex-dir</a></code>(1) <code><a href="/docs/linux/man/1-wimlib-imagex-info/">wimlib-imagex-info</a></code>(1) <code><a href="/docs/linux/man/1-wimlib-imagex-mount/">wimlib-imagex-mount</a></code>(1) </p>
-<h2>Index</h2>
-</dl>

@@ -46,8 +46,4 @@ debconf - getlang lang master[translation] debconf - getlang-- stats master tran
 
 <h2>AUTHOR</h2>
 
- Joey Hess &lt;joeyh [at] debian.org&gt; 
-
-<h2>Index</h2>
-
-
+ Joey Hess &lt;joeyh [at] debian.org&gt;

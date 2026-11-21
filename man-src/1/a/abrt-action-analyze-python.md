@@ -57,8 +57,3 @@ EVENT=post-create analyzer=Python   abrt-action-analyze-python
 <dl>
 <dt>
 </dt><dd> &bull; ABRT team</dd></dl>
- 
-
-<h2>Index</h2>
-
-

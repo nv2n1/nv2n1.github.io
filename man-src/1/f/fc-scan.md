@@ -59,8 +59,4 @@ url: "/docs/linux/man/1-fc-scan/"
 
  
 
- This manual page was updated by Behdad Esfahbod &lt;behdad [at] behdad.org&gt;. 
-
-<h2>Index</h2>
-
-
+ This manual page was updated by Behdad Esfahbod &lt;behdad [at] behdad.org&gt;.

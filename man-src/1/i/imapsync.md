@@ -501,8 +501,4 @@ FOR / F "tokens=1,2,3,4 delims=; eol=#" % % G IN(file.txt) DO imapsync ^
 
  Feedback (good or bad) will often be welcome. 
 
- <tt>$Id:</tt> imapsync,v 1.727 2016/08/19 10:30:36 gilles Exp gilles $ 
-
-<h2>Index</h2>
-
-
+ <tt>$Id:</tt> imapsync,v 1.727 2016/08/19 10:30:36 gilles Exp gilles $

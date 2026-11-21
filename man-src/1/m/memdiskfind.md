@@ -18,8 +18,4 @@ url: "/docs/linux/man/1-memdiskfind/"
 
  
 
- The <b>memdiskfind</b> utility searches memory for a <b>memdisk</b> instance, and, if found, outputs the parameters needed to use the hram driver in Linux to map it. 
-
-<h2>Index</h2>
-
-
+ The <b>memdiskfind</b> utility searches memory for a <b>memdisk</b> instance, and, if found, outputs the parameters needed to use the hram driver in Linux to map it.

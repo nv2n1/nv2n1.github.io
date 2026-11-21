@@ -25,8 +25,4 @@ url: "/docs/linux/man/3-globus_xio_data_descriptors/"
 
  
 
- Generated automatically by Doxygen for globus_xio from the source code. 
-
-<h2>Index</h2>
-
-
+ Generated automatically by Doxygen for globus_xio from the source code.

@@ -220,5 +220,3 @@ description: "gda-sql – an SQL console based on Libgda"
 <p> Vivien Malerba (for Libgda&#8217;s authors, please consult the AUTORS file within the Libgda&#8217;s sources) </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-psql/">psql</a></code>(1), <code><a href="/docs/linux/man/1-mysql/">mysql</a></code>(1), <code><a href="/docs/linux/man/1-sqlite3/">sqlite3</a></code>(1) </p>
-<h2>Index</h2>
-</p>

@@ -43,8 +43,4 @@ if (!libssh2_version(LIBSSH2_VERSION_NUM)) {
 
 <h2>AVAILABILITY</h2>
 
- This function was added in libssh2 1.1, in previous versions there way no way to extract this info in run-time. 
-
-<h2>Index</h2>
-
-
+ This function was added in libssh2 1.1, in previous versions there way no way to extract this info in run-time.

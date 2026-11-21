@@ -51,6 +51,3 @@ std::streambuf* rdbuf( std::streambuf* bytebuf ); <b>(2)</b> </p>
 <h2>See also</h2>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;constructs a new wbuffer_convert<br />
 constructor <i>(public member function)</i> </p>
-<h2>Index</h2>
-
-

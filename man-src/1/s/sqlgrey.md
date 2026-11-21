@@ -98,5 +98,3 @@ description: "sqlgrey – Postfix Greylisting Policy Server"
 <p> You should have received a copy of the <font SIZE="-1">GNU</font> General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, <font SIZE="-1">MA 02111-1307 USA</font></p>
 <h2>AUTHOR</h2>
 <p> Lionel Bouton&nbsp;<wbr>&lt;lionel-dev [at] bouton.name&gt; </p>
-<h2>Index</h2>
-</p>

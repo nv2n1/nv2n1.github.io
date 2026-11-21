@@ -102,7 +102,3 @@ rlWaitFor[n...][-s SIGNAL][-t time]
 <dt>&bull;
 </dt><dd> Hubert Kario &lt;hkario [at] redhat.com&gt; 
 </dd></dl>
-
-<h2>Index</h2>
-
-

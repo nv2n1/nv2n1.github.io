@@ -108,8 +108,4 @@ nova delete myserver
 
 <h2>COPYRIGHT</h2>
 
- OpenStack Contributors 
-
-<h2>Index</h2>
-
-
+ OpenStack Contributors

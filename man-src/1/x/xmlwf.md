@@ -100,5 +100,3 @@ The W3 XML specification:   <a rel="nofollow" href="http://www.w3.org/TR/REC-xml
 </pre>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Scott Bronson &lt;bronson [at] rinspin.com&gt; for the Debian GNU/Linux system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.1. </p>
-<h2>Index</h2>
-</p>

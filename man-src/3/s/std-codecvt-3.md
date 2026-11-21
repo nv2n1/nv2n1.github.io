@@ -120,16 +120,4 @@ wcrtomb <i>(function)</i>
  
 do_in converts a string from externT to internT, such as when reading from file 
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<i>(virtual protected member function of std::codecvt&lt;InternT,ExternT,State&gt;)</i> 
-<b>[virtual]</b> 
-
- 
-
- 
-
- 
-
- 
-
-<h2>Index</h2>
-
-
+<b>[virtual]</b>

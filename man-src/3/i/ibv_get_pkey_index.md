@@ -46,8 +46,4 @@ int ibv_get_pkey_index(struct ibv_context *context,
 
  
 
- Bart Van Assche &lt;bvanassche [at] acm.org&gt; 
-
-<h2>Index</h2>
-
-
+ Bart Van Assche &lt;bvanassche [at] acm.org&gt;

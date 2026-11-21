@@ -64,8 +64,4 @@ ib_acme[-A[addr_file]][-O[opt_file]][-D dest_dir][-V]
 
 <h2>SEE ALSO</h2>
 
- <a HREF="/docs/linux/man/7-ibacm/">ibacm</a>(7), <a HREF="/docs/linux/man/1-ibacm/">ibacm</a>(1) 
-
-<h2>Index</h2>
-
-
+ <a HREF="/docs/linux/man/7-ibacm/">ibacm</a>(7), <a HREF="/docs/linux/man/1-ibacm/">ibacm</a>(1)

@@ -189,5 +189,3 @@ description: "grass63 – The GRASS startup program"
  Markus Neteler </p>
 <p> <i>Last changed: $Date: 2006-11-02 07:48:36 +0100 (Thu, 02 Nov 2006) $</i> </p>
 <p> Help Index </p>
-<h2>Index</h2>
-</p>

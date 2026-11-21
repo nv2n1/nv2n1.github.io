@@ -61,8 +61,4 @@ url: "/docs/linux/man/1-pod2markdown/"
 
  This software is copyright (c) 2004 by Marcel Gruenauer. 
 
- This is free software; you can redistribute it and/or modify it under the same terms as the Perl 5 programming language system itself. 
-
-<h2>Index</h2>
-
-
+ This is free software; you can redistribute it and/or modify it under the same terms as the Perl 5 programming language system itself.

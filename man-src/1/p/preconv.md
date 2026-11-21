@@ -76,5 +76,3 @@ description: "preconv – convert encoding of input files to something GNU troff
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-groff/">groff</a></code>(1)<br />
  the <code>GNU Emacs</code> and <code>XEmacs</code> info pages </p>
-<h2>Index</h2>
-</p>

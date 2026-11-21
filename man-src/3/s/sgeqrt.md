@@ -116,5 +116,3 @@ description: "sgeqrt.f –"
 <p> Definition at line 142 of file sgeqrt.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>
-</p>

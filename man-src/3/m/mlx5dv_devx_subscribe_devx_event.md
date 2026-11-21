@@ -67,8 +67,4 @@ int mlx5dv_devx_subscribe_devx_event(struct mlx5dv_devx_event_channel *dv_event_
 
  #AUTHOR 
 
- Yishai Hadas &lt;yishaih [at] mellanox.com&gt; 
-
-<h2>Index</h2>
-
-
+ Yishai Hadas &lt;yishaih [at] mellanox.com&gt;

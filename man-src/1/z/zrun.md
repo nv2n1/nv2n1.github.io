@@ -31,8 +31,4 @@ url: "/docs/linux/man/1-zrun/"
 
 <h2>AUTHOR</h2>
 
- Copyright 2006 by Chung-chieh Shan &lt;ccshan [at] post.harvard.edu&gt; 
-
-<h2>Index</h2>
-
-
+ Copyright 2006 by Chung-chieh Shan &lt;ccshan [at] post.harvard.edu&gt;

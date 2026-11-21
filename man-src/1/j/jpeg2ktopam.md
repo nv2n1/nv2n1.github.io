@@ -43,5 +43,3 @@ description: "jpeg2ktopam – convert JPEG-2000 code stream to PAM/PNM"
 <h2>History</h2>
 <p> <code>jpeg2ktopam</code> was added to Netpbm in Release 10.12 (November 2002). </p>
 <p> Before Netpbm 10.49 (December 2009), <code>jpeg2ktopam</code> could not convert a JP2 file &#8212; only JPC. </p>
-<h2>Index</h2>
-</p>

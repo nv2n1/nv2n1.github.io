@@ -70,10 +70,4 @@ url: "/docs/linux/man/1-dvidvi/"
  Scare your system administrator! Actually, things are so blurry with this option, you may want to send enemies letters printed like this. *Long* letters. 
  -m 4:0(5.5in,4.25),3(0,4.25) 
  -m 4:1(0in,4.25),2(5.5,4.25) 
- Print a four-page card on one sheet. Print the first, rotate the paper 180 degrees and feed it again. (PostScript people can do funny tricks with PostScript so this isn't necessary.) 
-
- 
-
-<h2>Index</h2>
-
-
+ Print a four-page card on one sheet. Print the first, rotate the paper 180 degrees and feed it again. (PostScript people can do funny tricks with PostScript so this isn't necessary.)

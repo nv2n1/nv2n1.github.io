@@ -153,5 +153,3 @@ Latitude: -84.999991
 <p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> <code>hamlib</code>(3), <code><a href="/docs/linux/man/8-rpc-rotd/">rpc.rotd</a></code>(8) <code><a href="/docs/linux/man/8-rotctld/">rotctld</a></code>(8) </p>
-<h2>Index</h2>
-</p>

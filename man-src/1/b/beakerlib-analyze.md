@@ -45,7 +45,3 @@ url: "/docs/linux/man/1-beakerlib-analyze/"
 </dd><dt>&bull;
 </dt><dd> Petr Splichal &lt;psplicha [at] redhat.com&gt; 
 </dd></dl>
-
-<h2>Index</h2>
-
-

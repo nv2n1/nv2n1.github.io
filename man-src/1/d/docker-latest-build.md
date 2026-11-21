@@ -264,5 +264,3 @@ docker build -f dev/Dockerfile <a rel="nofollow" href="https://10.10.10.1/docker
 <p> Specifying the &#8211;isolation flag without a value is the same as setting &#8211;isolation=&quot;default&quot;. </p>
 <h2>HISTORY</h2>
 <p> March 2014, Originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and internal work. June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; June 2015, updated by Sally O&#8217;Malley &lt;somalley [at] redhat.com&gt; </p>
-<h2>Index</h2>
-</p>

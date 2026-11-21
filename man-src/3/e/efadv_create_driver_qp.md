@@ -54,8 +54,4 @@ infiniband / efadv.h &gt;
 
  
 
- Gal Pressman &lt;galpress [at] amazon.com&gt; 
-
-<h2>Index</h2>
-
-
+ Gal Pressman &lt;galpress [at] amazon.com&gt;

@@ -67,5 +67,3 @@ description: "gss_accept_sec_context gss_acquire_cred gss_add_cred gss_add_oid_s
 <p> Fn gss_krb5_compat_des3_mic turns on or off the compatibility with older version of Heimdal using des3 get and verify mic, this is way to programmatically set the [gssapi]broken_des3_mic and [gssapi]correct_des3_mic flags (see COMPATIBILITY section in <a href="/docs/linux/man/3-gssapi/">gssapi</a>(3)). If the CPP symbol <code>GSS_C_KRB5_COMPAT_DES3_MIC</code> is present, Fn gss_krb5_compat_des3_mic exists. Fn gss_krb5_compat_des3_mic will be removed in a later version of the GSS-API library.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-gssapi/">gssapi</a>(3), <a href="/docs/linux/man/3-krb5/">krb5</a>(3), krb5_ccache3, <a href="/docs/linux/man/8-kerberos/">kerberos</a>(8) </p>
-<h2>Index</h2>
-</p>

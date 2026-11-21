@@ -398,8 +398,4 @@ C&lt;open(X, "E&lt;gt&gt;E&lt;gt&gt;thing.dat") || die $ !&gt;
 
 <h2>AUTHOR</h2>
 
- Larry Wall, Sean M. Burke 
-
-<h2>Index</h2>
-
-
+ Larry Wall, Sean M. Burke
