@@ -6,6 +6,12 @@
 <title>{{ if .Title }}{{ .Title }} · {{ end }}Linux Manual Pages</title>
 {{ with .Description }}<meta name="description" content="{{ . }}">
 {{ end }}<link rel="canonical" href="{{ .Permalink }}">
+<meta property="og:site_name" content="SysTutorials">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ if .Title }}{{ .Title }} · {{ end }}Linux Manual Pages">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}Online Linux manual pages: user commands, system calls, library functions, file formats, and administration commands.{{ end }}">
+<meta property="og:image" content="{{ "/logo.png" | absURL }}">
 <link rel="stylesheet" href="/docs/linux/man/man.css?v=8">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5988258742963952"
      crossorigin="anonymous"></script>
@@ -25,5 +31,15 @@ gtag('config', 'G-ZEXV9L9E6P');
 </header>
 {{ block "main" . }}{{ end }}
 </main>
+  <!-- Clean up gsc.tab parameter from URL if present (Google CSE fallback) -->
+  <script>
+  (function () {
+    var url = window.location.href;
+    var cleaned = url.replace(/[?&]gsc\.tab=\d+/, '').replace(/#gsc\.tab=\d+/, '');
+    if (cleaned !== url) {
+      window.history.replaceState({}, document.title, cleaned);
+    }
+  })();
+  </script>
 </body>
 </html>

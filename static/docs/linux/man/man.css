@@ -26,7 +26,23 @@ header.site .site-name, header.site nav a { white-space: nowrap; }
 header.site .site-name { font-weight: 700; font-size: 1.2rem; color: inherit; text-decoration: none; }
 header.site nav a { margin-left: 1.2rem; }
 
-h1 { font-size: clamp(1.5rem, 4vw, 2.1rem); line-height: 1.3; margin-bottom: 1rem; }
+/* man page header block, like blog post header */
+.man-header {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1.2rem;
+  margin-bottom: 2rem;
+}
+.man-header h1 {
+  font-size: clamp(1.5rem, 4vw, 2.1rem);
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+
+/* hide the redundant NAME heading (first h2.name in content) */
+article > h2.name:first-of-type {
+  display: none;
+}
+
 h2 { font-size: 1.45rem; line-height: 1.3; margin: 1.8em 0 0.6em; }
 p { margin-bottom: 1rem; }
 .crumbs { font-size: 0.9rem; color: #888; margin-bottom: 1rem; }
