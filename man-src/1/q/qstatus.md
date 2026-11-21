@@ -75,4 +75,3 @@ description: "qstatus – xxQS_NAMExx qstatus script"
 <p> of xxQS_NAMExx.</p>
 <h2>BUGS</h2>
 <p> Does not support the PBS or Torque resource manager. The Awk script used probably isn&#8217;t portable and may require GNU Awk version 3 or higher. </p>
-<h2>Index</h2>

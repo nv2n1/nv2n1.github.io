@@ -18,4 +18,3 @@ description: "mate-maximus – force all windows to be full-screen"
 <p> <code>mate-maximus</code> takes no command line arguments.</p>
 <h2>AUTHOR</h2>
 <p> This man page has been written by Mike Gabriel &lt;mike.gabriel [at] das-netzwerkteam.de&gt; for the Debian system and the MATE Desktop project (and it may be used by others, as well). </p>
-<h2>Index</h2>

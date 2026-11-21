@@ -47,4 +47,3 @@ description: "expand_number – format a number from human readable form"
 <p> humanize_number3</p>
 <h2>HISTORY</h2>
 <p> The Fn expand_number function first appeared in Fx 6.3 . </p>
-<h2>Index</h2>

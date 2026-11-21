@@ -47,4 +47,3 @@ description: "tv_grab_fr_kazer – Grab TV listings from Kazer in France."
 <p> Data provided via web service from kazer.org. Check their terms of usage!</p>
 <h2>BUGS</h2>
 <p> None known. </p>
-<h2>Index</h2>

@@ -79,4 +79,3 @@ comment - Testing keyword extraction
 <p> <code>extract</code> was originally written by Christian Grothoff &lt;christian [at] grothoff.org&gt; and Vidyut Samanta &lt;vids [at] cs.ucla.edu&gt;. Use &lt;libextractor [at] gnu.org&gt; to contact the current maintainer(s). </p>
 <h2>AVAILABILITY</h2>
 <p> You can obtain the original author&#8217;s latest version from <a rel="nofollow" href="http://gnunet.org/libextractor/">http://gnunet.org/libextractor/</a> </p>
-<h2>Index</h2>

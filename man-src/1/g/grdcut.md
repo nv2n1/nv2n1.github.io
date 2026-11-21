@@ -68,4 +68,3 @@ gmt grdcut bathy.nc -Gsubset_bathy.nc -S45/30/500k -V
 <p> <code>gmt</code>, <code>grdclip</code>, <code>grdpaste</code>, <code>grdinfo</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

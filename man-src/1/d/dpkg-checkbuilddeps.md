@@ -45,4 +45,3 @@ description: "dpkg-checkbuilddeps – check build dependencies and conflicts"
 <dt><font SIZE="-1"><code>DPKG_NLS</code></font></dt>
 <dd> If set, it will be used to decide whether to activate Native Language Support, also known as internationalization (or i18n) support (since dpkg 1.19.0). The accepted values are: <code>0</code> and <code>1</code> (default). </dd>
 </dl>
-<h2>Index</h2>

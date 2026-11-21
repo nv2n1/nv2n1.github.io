@@ -58,4 +58,3 @@ description: "mkdic – Tool for creating a user dictionary"
 <p> user1.t is a dictionary file name generated automatically by the system.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-catdic/">catdic</a>(1), cannaserver(1M), <a href="/docs/linux/man/1-lsdic/">lsdic</a>(1) </p>
-<h2>Index</h2>

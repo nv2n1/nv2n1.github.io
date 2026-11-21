@@ -100,4 +100,3 @@ gmt dimfilter depths.d -Q4 &gt; output.z
 <p> <code>gmt</code>, <code>grdfilter</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

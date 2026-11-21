@@ -47,4 +47,3 @@ Red+Yellow Diamonds
 </pre>
 <h2>AUTHOR</h2>
 <p> John Bradley &#8211; bradley [at] dccs.upenn.edu </p>
-<h2>Index</h2>

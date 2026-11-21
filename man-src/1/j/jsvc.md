@@ -98,4 +98,3 @@ description: "jsvc – application to launch java daemon"
 </dt><dd> set Virtual Machine specific option</dd></dl>
 <h2>AUTHOR</h2>
 <p> JSVC is part of the Apache Commons Daemon project. Authors are Jean-Frederic Clere, Remy Maucherat, Yoav Shapira, Bill Barker, Mladen Turk. JSVC is released under the Apache License Version 2.0. </p>
-<h2>Index</h2>

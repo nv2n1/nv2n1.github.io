@@ -64,4 +64,3 @@ description: "transset – Set transparency on a window"
 <p> Probably. Please report any you find to <a rel="nofollow" href="https://bugs.freedesktop.org/enter_bug.cgi?product=xorg.">https://bugs.freedesktop.org/enter_bug.cgi?product=xorg.</a></p>
 <h2>AUTHORS</h2>
 <p> Matthew Hawn </p>
-<h2>Index</h2>

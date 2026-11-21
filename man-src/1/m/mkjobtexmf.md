@@ -260,4 +260,3 @@ mkjobtexmf-- jobname foo-- texname '\defbc{...}\input{foo}'
 </dl>
 </dl>
 <p> </tt></p>
-<h2>Index</h2>

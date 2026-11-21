@@ -37,4 +37,3 @@ description: "ocamlcp, ocamloptp – The OCaml profiling compilers"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1), <code><a href="/docs/linux/man/1-ocamlopt/">ocamlopt</a></code>(1), <code><a href="/docs/linux/man/1-ocamlprof/">ocamlprof</a></code>(1).<br />
  <i>The OCaml user&#8217;s manual</i>, chapter &quot;Profiling&quot;. </p>
-<h2>Index</h2>

@@ -666,4 +666,3 @@ yy5:
  </dd></dl>
 <h2>VERSION INFORMATION</h2>
 <p> This manpage describes <code>re2c</code>, version 0.14.3, package date 20 May 2015. </p>
-<h2>Index</h2>

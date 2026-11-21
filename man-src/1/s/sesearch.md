@@ -90,4 +90,3 @@ description: "sesearch – SELinux policy query tool"
 <p> Please report bugs via an email to setools-bugs [at] tresys.com.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-seinfo/">seinfo</a>(1), <a href="/docs/linux/man/1-apol/">apol</a>(1) </p>
-<h2>Index</h2>

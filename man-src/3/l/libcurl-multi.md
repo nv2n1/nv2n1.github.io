@@ -46,4 +46,3 @@ description: "libcurl-multi – how to use the multi interface"
  - file:// transfers
  - TELNET transfers
 </pre>
-<h2>Index</h2>

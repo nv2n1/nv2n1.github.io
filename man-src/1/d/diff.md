@@ -180,4 +180,3 @@ description: "diff – compare files line by line"
 <dt>
 </dt><dd> <code>info diff</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

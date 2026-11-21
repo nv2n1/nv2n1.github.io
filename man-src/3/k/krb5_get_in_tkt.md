@@ -38,4 +38,3 @@ description: "krb5_get_in_tkt krb5_get_in_cred krb5_get_in_tkt_with_password krb
 <p> Fn krb5_free_kdc_rep frees the content of Fa rep .</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-krb5/">krb5</a>(3), krb5_verify_user3, krb5.conf5, <a href="/docs/linux/man/8-kerberos/">kerberos</a>(8) </p>
-<h2>Index</h2>

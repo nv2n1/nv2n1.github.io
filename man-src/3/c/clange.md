@@ -96,4 +96,3 @@ description: "clange.f –"
 <p> Definition at line 116 of file clange.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

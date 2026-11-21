@@ -142,4 +142,3 @@ sed '1,/---- .*/d / ^$ /, $d ' | awk ' tot &gt; 0 {
 <p> to process only the events in the good-time intervals.</p>
 <h2>SEE ALSO</h2>
 <p> See funtools(n) for a list of Funtools help pages </p>
-<h2>Index</h2>

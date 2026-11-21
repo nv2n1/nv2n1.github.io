@@ -33,4 +33,3 @@ description: "verifytree – verify that a local yum repository is consistent"
 <pre>
 See the Authors file included with this program.
 </pre>
-<h2>Index</h2>

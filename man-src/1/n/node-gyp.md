@@ -35,4 +35,3 @@ node-gyp &lt;command&gt; [args]
 </dl>
 <h2>SEE ALSO</h2>
 <p> README.md </p>
-<h2>Index</h2>

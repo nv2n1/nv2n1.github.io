@@ -206,4 +206,3 @@ int viewInfo(
 <dd> Display the list of strings in <i>info</i> in a CDKVIEWER window. The number of strings is given by <i>size</i>. The <i>title</i>, <i>buttons</i> and <i>buttonCount</i> are applied to the CDKVIEWER window.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> cdk_dialog (3), cdk_display (3), cdk_position (3), cdk_misc (3). </p>
-<h2>Index</h2>

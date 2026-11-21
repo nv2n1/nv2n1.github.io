@@ -185,4 +185,3 @@ description: "madplay – decode and play MPEG audio stream(s)"
 <p> Robert Leslie &lt;rob [at] mars.org&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-lame/">lame</a></code>(1), <code>normalize</code>(1), <code><a href="/docs/linux/man/1-sox/">sox</a></code>(1), <code><a href="/docs/linux/man/1-wget/">wget</a></code>(1) </p>
-<h2>Index</h2>

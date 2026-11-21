@@ -143,4 +143,3 @@ description: "Source-highlight – convert source code to syntax highlighted doc
 <dt>
 </dt><dd> <code>info Source-highlight</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

@@ -37,4 +37,3 @@ description: "photo.rectify"
 <p> Mike Baba, DBA Systems, Inc.<br />
  Updated rectification and elevation map to FP 1/2002 Markus Neteler </p>
 <p> <i>Last changed: $Date: 2006-12-15 11:10:21 +0100 (Fri, 15 Dec 2006) $</i> </p>
-<h2>Index</h2>

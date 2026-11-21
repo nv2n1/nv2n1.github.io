@@ -36,4 +36,3 @@ description: "pwhois – Perl written whois client"
 <p> Current Maintainer: Walery Studennikov <code>despair [at] cpan.org</code></p>
 <h2>SEE ALSO</h2>
 <p> Net::Whois::Raw. </p>
-<h2>Index</h2>

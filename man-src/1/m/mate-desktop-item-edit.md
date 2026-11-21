@@ -39,4 +39,3 @@ description: "mate-desktop-item-edit – A small tool to edit .desktop files."
 <p> This manual page was originally written by Christian Marillat &lt;marillat [at] debian.org&gt; for the Debian GNU/Linux system. (2006)</p>
 <h2>SEE ALSO</h2>
 <h3>Further information may also be available at: <a rel="nofollow" href="http://wiki.mate-desktop.org/docs">http://wiki.mate-desktop.org/docs</a></h3>
-<h2>Index</h2>

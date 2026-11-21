@@ -96,4 +96,3 @@ description: "mkimage – Generate image for U-Boot"
 <p> <a rel="nofollow" href="http://www.denx.de/wiki/U-Boot/WebHome">http://www.denx.de/wiki/U-Boot/WebHome</a> </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Nobuhiro Iwamatsu &lt;iwamatsu [at] nigauri.org&gt; and Wolfgang Denk &lt;wd [at] denx.de&gt;. It was updated for image signing by Simon Glass &lt;sjg [at] chromium.org&gt;. </p>
-<h2>Index</h2>

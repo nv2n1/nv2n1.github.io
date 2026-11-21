@@ -85,4 +85,3 @@ description: "rdoc3.0 – Generate documentation from Ruby script files"
 <dt>
 </dt><dd> <code>&#8211;webcvs, -W url</code> specify a URL for linking to a web frontend to CVS. If the URL contains a contain a &#8216;%s&#8217;, the filename will be appended to it. </dd>
 </dl>
-<h2>Index</h2>

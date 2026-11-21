@@ -57,4 +57,3 @@ npm docs[&lt;pkgname&gt;[&lt;pkgname&gt;...]] npm docs.npm home[&lt;pkgname&gt;[
 <dd> npm help package.json </dd>
 </dl>
 </dl>
-<h2>Index</h2>

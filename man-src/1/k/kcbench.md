@@ -116,4 +116,3 @@ description: "kcbench – Kernel compile benchmark"
 <p> None know, but there are likely some</p>
 <h2>AUTHOR</h2>
 <p> Thorsten Leemhuis &lt;fedora [AT] leemhuis [DOT] info&gt; </p>
-<h2>Index</h2>

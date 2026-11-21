@@ -19,4 +19,3 @@ description: "ogr_utilities – OGR Utility Programs The following utilities are
 <dt>&bull;</dt>
 <dd> <code>ogrlineref</code> &#8211; Create linear reference and provide some calculations using it</dd></dl>
 <hr>
-<h2>Index</h2>

@@ -78,4 +78,3 @@ description: "jack-keyboard – A virtual keyboard for JACK MIDI"
 <p> Key grabbing is unreliable. </p>
 <p> Many PC keyboards have problems with polyphony. For example, with the one I&#8217;m using right now, it&#8217;s impossible to press &quot;c&quot;, &quot;v&quot; and &quot;b&quot; at the same time. It&#8217;s a hardware problem, not the software one. </p>
 <p> The spin widgets used to set channel/bank/program number don&#8217;t take focus, so the value cannot be entered into them in the usual way. It&#8217;s because <code>jack-keyboard</code> already uses numeric keys for different purposes. You can still directly enter channel/bank/program in a way described above. </p>
-<h2>Index</h2>

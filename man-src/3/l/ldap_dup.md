@@ -34,4 +34,3 @@ int ldap_destroy(
 <p> <code><a href="/docs/linux/man/3-ldap_open/">ldap_open</a></code>(3), <code><a href="/docs/linux/man/3-ldap_init/">ldap_init</a></code>(3), <code><a href="/docs/linux/man/3-ldap_initialize/">ldap_initialize</a></code>(3), <code><a href="/docs/linux/man/3-ldap_init_fd/">ldap_init_fd</a></code>(3), <code><a href="/docs/linux/man/3-errno/">errno</a></code>(3)</p>
 <h2>ACKNOWLEDGEMENTS</h2>
 <p> This work is based on the previously proposed <code>LDAP C API Concurrency Extensions</code> draft <code>(</code>draft-zeilenga-ldap-c-api-concurrency-00.txt<code>)</code> effort. <code>OpenLDAP Software</code> is developed and maintained by The OpenLDAP Project &lt;<a rel="nofollow" href="http://www.openldap.org/">http://www.openldap.org/</a>&gt;. <code>OpenLDAP Software</code> is derived from University of Michigan LDAP 3.3 Release. </p>
-<h2>Index</h2>

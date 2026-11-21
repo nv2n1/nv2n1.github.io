@@ -183,4 +183,3 @@ startrules
 <h2>AUTHOR</h2>
 <p> Markku Rossi &lt;mtr [at] iki.fi&gt; &lt;<a rel="nofollow" href="http://www.iki.fi/~mtr/">http://www.iki.fi/~mtr/</a>&gt; </p>
 <p> GNU Enscript WWW home page: &lt;<a rel="nofollow" href="http://www.iki.fi/~mtr/genscript/">http://www.iki.fi/~mtr/genscript/</a>&gt; </p>
-<h2>Index</h2>

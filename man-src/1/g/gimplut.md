@@ -44,4 +44,3 @@ description: "gimplut – convert GIMP gradient (ggr) files to binary lookup tab
 <p> J.J. Green</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gimp/">GIMP</a></code>(1), <code>medcon</code>(1). </p>
-<h2>Index</h2>

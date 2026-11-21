@@ -75,4 +75,3 @@ description: "update-inetd – create, remove, enable or disable entry /etc/inet
 <p> <i>/etc/inetd.conf</i> <i>/var/run/inetd.pid</i></p>
 <h2>SEE ALSO</h2>
 <p> <code>inetd</code>(8), <code>DebianNet</code>(3pm) </p>
-<h2>Index</h2>

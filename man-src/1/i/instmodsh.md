@@ -18,4 +18,3 @@ description: "instmodsh – A shell to examine installed modules"
 <p> *On Debian system, <code>core</code> and <code>vendor</code> modules are managed by <tt>&quot;dpkg&quot;</tt>.</p>
 <h2>SEE ALSO</h2>
 <p> ExtUtils::Installed </p>
-<h2>Index</h2>

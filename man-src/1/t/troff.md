@@ -273,4 +273,3 @@ description: "troff – the troff processor of the groff text formatting system"
 <dt><code><a href="/docs/linux/man/7-roff/">roff</a></code>(7)</dt>
 <dd> An overview over <i>groff</i> and other <i>roff</i> systems, including pointers to further related documentation.</dd></dl>
 <p> <i>Groff: The GNU Implementation of troff</i>, by Trent A. Fisher and Werner Lemberg, is the primary <i>groff</i> manual. You can browse it interactively with &#8220;info groff&#8221;. </p>
-<h2>Index</h2>

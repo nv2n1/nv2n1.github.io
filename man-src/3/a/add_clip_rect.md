@@ -16,4 +16,3 @@ description: "add_clip_rect – Intersects a bitmap’s clipping rectangle with 
 <p> Sets the clipping rectangle of the specified bitmap as the intersection of its current clipping rectangle and the rectangle described by the four coordinates. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-set_clip_rect/">set_clip_rect</a></code>(3), <code><a href="/docs/linux/man/3-get_clip_rect/">get_clip_rect</a></code>(3), <code><a href="/docs/linux/man/3-set_clip_state/">set_clip_state</a></code>(3), <code><a href="/docs/linux/man/3-get_clip_state/">get_clip_state</a></code>(3) </p>
-<h2>Index</h2>

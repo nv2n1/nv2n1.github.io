@@ -32,4 +32,3 @@ description: "arm_get_arrival_time – store current time"
 <p> None.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-arm_start_transaction/">arm_start_transaction</a></code>(3) </p>
-<h2>Index</h2>

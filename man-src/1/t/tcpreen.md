@@ -83,4 +83,3 @@ description: "tcpreen – TCP stream monitoring tool"
 <p> Remi Denis-Courmont &lt;rdenis at simphalempin.com&gt; </p>
 <p> $Id: tcpreen.1 178 2006-03-18 18:10:23Z remi $ </p>
 <p> <a rel="nofollow" href="http://www.simphalempin.com/dev/tcpreen/">http://www.simphalempin.com/dev/tcpreen/</a> </p>
-<h2>Index</h2>

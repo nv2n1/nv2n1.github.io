@@ -79,4 +79,3 @@ description: "sucrack is a multithreaded Linux/UNIX tool for brute-force crackin
 <dt><code><a href="/docs/linux/man/1-su/">su</a>(1)</code></dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

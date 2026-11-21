@@ -73,4 +73,3 @@ $(gpgconf-- list - dirs libexecdir) / gpg - wks - client-- check foo[at] example
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gpg-wks-server/">gpg-wks-server</a></code>(1) </p>
-<h2>Index</h2>

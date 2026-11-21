@@ -159,4 +159,3 @@ description: "glilypond – integrate lilypond parts into groff"
 <dt><code><a href="/docs/linux/man/1-ps2eps/">ps2eps</a></code>(1)</dt>
 <dd> transforms a <i>PS</i> file into an <i>EPS</i> format. </dd>
 </dl>
-<h2>Index</h2>

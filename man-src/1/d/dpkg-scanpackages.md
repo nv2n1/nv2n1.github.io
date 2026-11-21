@@ -46,4 +46,3 @@ description: "dpkg-scanpackages – create Packages index files"
 <p> <code>dpkg-scanpackages</code> outputs the usual self-explanatory errors. It also warns about packages that are in the wrong subdirectory, are duplicated, have a Filename field in their control file, are missing from the override file, or have maintainer substitutions which do not take effect.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dpkg/">dpkg</a></code>(1), <code><a href="/docs/linux/man/1-dselect/">dselect</a></code>(1), <code><a href="/docs/linux/man/5-deb-override/">deb-override</a></code>(5), <code><a href="/docs/linux/man/5-deb-extra-override/">deb-extra-override</a></code>(5), <code><a href="/docs/linux/man/1-dpkg-scansources/">dpkg-scansources</a></code>(1). </p>
-<h2>Index</h2>

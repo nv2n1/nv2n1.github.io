@@ -47,4 +47,3 @@ description: "xkbvleds – XKB extension user utility"
 <dt><code>-version</code></dt>
 <dd> print program version and exit </dd>
 </dl>
-<h2>Index</h2>

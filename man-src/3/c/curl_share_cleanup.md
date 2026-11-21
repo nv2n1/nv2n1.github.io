@@ -18,4 +18,3 @@ description: "curl_share_cleanup – Clean up a shared object"
 <p> CURLSHE_OK (zero) means that the option was set properly, non-zero means an error occurred as <i>&lt;curl/curl.h&gt;</i> defines. See the <i>libcurl-errors.3</i> man page for the full list with descriptions. If an error occurs, then the share object will not be deleted.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-curl_share_init/">curl_share_init</a></code>(3), <code><a href="/docs/linux/man/3-curl_share_setopt/">curl_share_setopt</a></code>(3) </p>
-<h2>Index</h2>

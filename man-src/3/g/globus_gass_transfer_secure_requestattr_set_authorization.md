@@ -172,4 +172,3 @@ description: "Request Attributes –"
  <i>GLOBUS_GASS_TRANSFER_ERROR_NULL_POINTER</i> The <i>attr</i> was GLOBUS_NULL.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gass_transfer from the source code. </p>
-<h2>Index</h2>

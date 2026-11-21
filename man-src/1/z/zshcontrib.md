@@ -2676,4 +2676,3 @@ zargs -- **/*(.) -- ls -ld --</code>
 <dt>
 </dt><dd> <code>rprompt</code> The <code>nslookup</code> function looks up this style in the context `<code>:nslookup</code>&#8216; to set the prompt and the right-side prompt, respectively. The usual expansions for the <code>PS1</code> and <code>RPS1</code> parameters may be used (see EXPANSION OF PROMPT SEQUENCES in <i><a href="/docs/linux/man/1-zshmisc/">zshmisc</a></i>(1)). </dd>
 </dl>
-<h2>Index</h2>

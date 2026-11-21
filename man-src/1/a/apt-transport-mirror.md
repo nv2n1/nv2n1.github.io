@@ -83,4 +83,3 @@ file:/srv/local/debian/mirror/  priority:1 type:index
 <dt>
 </dt><dd> <a rel="nofollow" href="http://bugs.debian.org/src:apt">http://bugs.debian.org/src:apt</a></dd></dl>
 </dl>
-<h2>Index</h2>

@@ -72,4 +72,3 @@ description: "xcfview – display GIMP xcf files"
 <p> <code>xcfview</code> was written by Henning Makholm &lt;henning [at] makholm.net&gt;. Parts of the script originate from the <code><a href="/docs/linux/man/1-run-mailcap/">run-mailcap</a></code>(1) script by Brian White &lt;bcwhite [at] pobox.com&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-xcf2pnm/">xcf2pnm</a></code>(1), <code><a href="/docs/linux/man/1-xcf2png/">xcf2png</a></code>(1) </p>
-<h2>Index</h2>

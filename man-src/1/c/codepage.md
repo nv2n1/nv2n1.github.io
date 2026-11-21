@@ -32,4 +32,3 @@ description: "codepage – extract a codepage from an MSDOS codepage file"
 <dt>
 </dt><dd> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>codepage ega.cpi 850
 </dd></dl>
-<h2>Index</h2>

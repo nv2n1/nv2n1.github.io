@@ -227,4 +227,3 @@ main()
 <h2>AUTHORS</h2>
 <p> Version 2.4 Copyright (C) 1998-1999 Nikos Mavroyanopoulos (nmav [at] hellug.gr). </p>
 <p> Thanks to all the people who reported problems and suggested various improvements for mcrypt; who are too numerous to cite here. </p>
-<h2>Index</h2>

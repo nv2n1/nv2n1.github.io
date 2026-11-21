@@ -47,4 +47,3 @@ description: "byzanz-record – record your desktop session to an animated GIF"
 <h2>AUTHOR</h2>
 <p> byzanz was written by Benjamin Otte &lt;otte [at] gnome.org&gt;. </p>
 <p> This manual page was written by Josh Triplett &lt;josh [at] freedesktop.org&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

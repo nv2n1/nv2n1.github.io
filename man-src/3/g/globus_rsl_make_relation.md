@@ -90,4 +90,3 @@ description: "RSL Constructors –"
 </dt><dd> The <code>globus_rsl_value_make_variable()</code> function returns a new RSL value node that contains a shallow reference to the value sequence pointed to by the <i>sequence</i> parameter. If an error occurs, <code>globus_rsl_value_make_variable()</code> returns NULL.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_rsl from the source code. </p>
-<h2>Index</h2>

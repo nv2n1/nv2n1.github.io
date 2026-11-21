@@ -20,4 +20,3 @@ description: "atomic-mount – Mount Images/Containers to Filesystem"
 <p> [<code>&#8211;storage=[ostree|docker]</code>] Optionally specify the storage of the image. Will prompt user to specify if the same image name exists in both ostree and docker, and the user did not specify. </p>
 <h2>HISTORY</h2>
 <p> June 2015, Originally compiled by William Temple (wtemple at redhat dot com) </p>
-<h2>Index</h2>

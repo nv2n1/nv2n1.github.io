@@ -24,4 +24,3 @@ description: "extend_dmalloc – Analyze return-addresses from dmalloc logfiles.
 <dl>
 <dt>
 </dt><dd> Author.</dd></dl>
-<h2>Index</h2>

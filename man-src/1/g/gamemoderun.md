@@ -40,4 +40,3 @@ description: "gamemoderun – invoke gamemode into any program"
 <p> GameMode source can be found at <i><a rel="nofollow" href="https://github.com/FeralInteractive/gamemode.git">https://github.com/FeralInteractive/gamemode.git</a></i> </p>
 <h2>AUTHOR</h2>
 <p> Feral Interactive (linux-contact [at] feralinteractive.com) </p>
-<h2>Index</h2>

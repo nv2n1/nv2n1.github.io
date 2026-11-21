@@ -50,4 +50,3 @@ description: "mpost, pmpost, upmpost – MetaPost, a system for creating graphic
 <p> The primary author of the current MetaPost was Taco Hoekwater, with assistance from Hans Hagen and many others. It is currently maintained by Luigi Scarso.</p>
 <h2>BUGS</h2>
 <p> The MetaPost home page is <a rel="nofollow" href="https://tug.org/metapost.">https://tug.org/metapost.</a> </p>
-<h2>Index</h2>

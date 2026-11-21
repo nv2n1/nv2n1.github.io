@@ -22,4 +22,3 @@ description: "docker-swarm-join – Join a swarm as a node and/or manager"
 <p> <code>&#8211;token</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Token for entry into the swarm</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-swarm/">docker-swarm</a>(1)</code> </p>
-<h2>Index</h2>

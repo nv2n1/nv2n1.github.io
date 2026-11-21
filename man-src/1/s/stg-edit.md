@@ -105,4 +105,3 @@ Diff text
 </dt><dd> Set the git tree of the patch to TREE-ISH.</dd></dl>
 <h2>STGIT</h2>
 <p> Part of the StGit suite &#8211; see <code><a href="/docs/linux/man/1-stg/">stg</a></code>(1) </p>
-<h2>Index</h2>

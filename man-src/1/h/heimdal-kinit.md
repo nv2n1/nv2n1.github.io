@@ -69,4 +69,3 @@ description: "kinit – acquire initial tickets"
 <dd> Specifies the Kerberos 4 ticket file to store version 4 tickets in.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-kdestroy/">kdestroy</a>(1), <a href="/docs/linux/man/1-klist/">klist</a>(1), krb5_appdefault3, krb5.conf5 </p>
-<h2>Index</h2>

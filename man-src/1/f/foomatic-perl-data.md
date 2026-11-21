@@ -25,4 +25,3 @@ description: "foomatic-perl-data – generate Perl data structures from XML"
 <p> Manfred Wassmann &lt;<i>manolo [at] NCC-1701.B.Shuttle.de</i>&gt; for the foomatic project using output from the associated binary. </p>
 <h2>BUGS</h2>
 <p> This manpage needs editing. </p>
-<h2>Index</h2>

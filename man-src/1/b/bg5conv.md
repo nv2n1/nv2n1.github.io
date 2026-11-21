@@ -20,4 +20,3 @@ description: "bg5conv – convert a TeX document in Big 5 encoding into `preproc
  the <code>CJK</code> documentation files.</p>
 <h2>AUTHOR</h2>
 <p> Werner Lemberg </p>
-<h2>Index</h2>

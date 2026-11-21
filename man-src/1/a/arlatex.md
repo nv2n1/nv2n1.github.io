@@ -77,4 +77,3 @@ description: "arlatex – archive a number of ancillary LaTeX files into a maste
 <p> <code><a href="/docs/linux/man/1-bundledoc/">bundledoc</a></code>(1), <code><a href="/docs/linux/man/1-latex/">latex</a></code>(1), <code><a href="/docs/linux/man/1-shar/">shar</a></code>(1), <code><a href="/docs/linux/man/1-tar/">tar</a></code>(1), <code><a href="/docs/linux/man/1-zip/">zip</a></code>(1)  </p>
 <h2>AUTHOR</h2>
 <p> Scott Pakin, <i>scott+bdoc [at] pakin.org</i> </p>
-<h2>Index</h2>

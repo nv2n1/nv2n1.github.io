@@ -210,4 +210,3 @@ $ fedora-review --rpm-spec -n my-package-1.2-1.fc16.src.rpm
 <dt><a rel="nofollow" href="http://fedoraproject.org/wiki/Packaging:Guidelines">http://fedoraproject.org/wiki/Packaging:Guidelines</a></dt>
 <dd> Rules for Fedora packages. </dd>
 </dl>
-<h2>Index</h2>

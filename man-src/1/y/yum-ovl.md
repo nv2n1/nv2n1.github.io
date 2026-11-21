@@ -28,4 +28,3 @@ description: "yum-ovl – Performs an initial copy-up of yum(8) package database
 <p> 2015, Red Hat, Licensed under GPLv2+</p>
 <h2>SEE ALSO</h2>
 <p> yum(1) <a href="/docs/linux/man/8-yum/">yum</a>(8) <a href="/docs/linux/man/8-rpmdb/">rpmdb</a>(8) </p>
-<h2>Index</h2>

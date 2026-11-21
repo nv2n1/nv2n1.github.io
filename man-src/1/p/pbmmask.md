@@ -43,4 +43,3 @@ description: "pbmmask – create a mask bitmap from a regular bitmap"
 <p> <code><a href="/docs/linux/man/1-ppmcolormask/">ppmcolormask</a></code>(1), <code><a href="/docs/linux/man/1-pnmpaste/">pnmpaste</a></code>(1), <code><a href="/docs/linux/man/1-pnminvert/">pnminvert</a></code>(1), <code><a href="/docs/linux/man/5-pbm/">pbm</a></code>(5), <code><a href="/docs/linux/man/1-pnmarith/">pnmarith</a></code>(1), <code><a href="/docs/linux/man/1-pnmsmooth/">pnmsmooth</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1988 by Jef Poskanzer. </p>
-<h2>Index</h2>

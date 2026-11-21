@@ -59,4 +59,3 @@ description: "apt-sortpkgs – Utility to sort package index files"
 <dt>
 </dt><dd> <a rel="nofollow" href="http://bugs.debian.org/src:apt">http://bugs.debian.org/src:apt</a></dd></dl>
 </dl>
-<h2>Index</h2>

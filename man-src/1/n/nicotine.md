@@ -40,4 +40,3 @@ description: "nicotine is a graphical client for the SoulSeek peer-to-peer netwo
  Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-nicotine-import-winconfig/">nicotine-import-winconfig</a>(1)</code> </p>
-<h2>Index</h2>

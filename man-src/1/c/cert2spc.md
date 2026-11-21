@@ -31,4 +31,3 @@ description: "cert2spc – Transform multiple X.509 certificates to a Software P
 <p> Visit <a rel="nofollow" href="http://www.mono-project.com">http://www.mono-project.com</a> for details</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-makecert/">makecert</a>(1),</code><a href="/docs/linux/man/1-signcode/">signcode</a>(1) </p>
-<h2>Index</h2>

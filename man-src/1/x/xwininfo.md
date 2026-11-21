@@ -104,4 +104,3 @@ description: "xwininfo – window information utility for X"
 <p> The <code>-geometry</code> string displayed must make assumptions about the window&#8217;s border width and the behavior of the application and the window manager. As a result, the location given is not always correct.</p>
 <h2>AUTHOR</h2>
 <p> Mark Lillibridge, MIT Project Athena </p>
-<h2>Index</h2>

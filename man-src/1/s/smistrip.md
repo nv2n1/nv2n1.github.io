@@ -40,4 +40,3 @@ description: "smistrip – extract MIB or PIB modules from text files, like RFCs
 <p> (C) 1999-2004 F. Strauss, TU Braunschweig, Germany &lt;strauss [at] ibr.cs.tu-bs.de&gt;<br />
  (C) 2002 M. Bunkus, TU Braunschweig, Germany &lt;bunkus [at] ibr.cs.tu-bs.de&gt;<br />
  and contributions by many other people. </p>
-<h2>Index</h2>

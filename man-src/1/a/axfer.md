@@ -52,4 +52,3 @@ description: "axfer – command-line sound recorder and player for sound devices
 <p> <code><a href="/docs/linux/man/1-axfer-transfer/">axfer-transfer</a>(1),</code> <code><a href="/docs/linux/man/1-axfer-list/">axfer-list</a>(1),</code> <code><a href="/docs/linux/man/1-alsamixer/">alsamixer</a>(1),</code> <code><a href="/docs/linux/man/1-amixer/">amixer</a>(1)</code> </p>
 <h2>AUTHOR</h2>
 <p> Takashi Sakamoto &lt;o-takashi [at] sakamocchi.jp&gt; </p>
-<h2>Index</h2>

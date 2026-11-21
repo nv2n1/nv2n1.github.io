@@ -191,4 +191,3 @@ description: "avarice – Provides an interface from avr-gdb to Atmel’s JTAGIC
 <p> Avarice (up to version 1.5) was originally written by Scott Finneran with help from Peter Jansen. They did the work of figuring out the jtagice communication protocol before Atmel released the spec (appnote AVR060). </p>
 <p> David Gay made major improvements bringing avarice up to 2.0. </p>
 <p> Joerg Wunsch reworked the code to abstract the JTAG ICE communication from the remainder, and then extended the code to support the JTAG ICE mkII protocol (see Atmel appnote AVR067). </p>
-<h2>Index</h2>

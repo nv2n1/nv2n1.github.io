@@ -41,4 +41,3 @@ debconf[options] command[args]
 <p> <code><a href="/docs/linux/man/7-debconf-devel/">debconf-devel</a></code>(7), <code><a href="/docs/linux/man/7-debconf/">debconf</a></code>(7)</p>
 <h2>AUTHOR</h2>
 <p> Joey Hess &lt;joeyh [at] debian.org&gt; </p>
-<h2>Index</h2>

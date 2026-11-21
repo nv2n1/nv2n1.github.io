@@ -93,4 +93,3 @@ gmt psclip -C -O &gt;&gt; complex_plot.ps
 <p> <code>gmt</code>, <code>grdmask</code>, <code>psbasemap</code>, <code>psmask</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

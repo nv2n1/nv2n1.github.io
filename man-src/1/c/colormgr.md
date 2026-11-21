@@ -137,4 +137,3 @@ description: "colormgr – Color Manager Testing Tool"
 </dt><dd> Sets one or more sensor options</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Richard Hughes &lt;richard [at] hughsie.com&gt;. </p>
-<h2>Index</h2>

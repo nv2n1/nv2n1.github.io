@@ -64,4 +64,3 @@ gdal2tiles.py[-p profile][-r resampling][-s srs][-z zoom]
 <p> NOTE: gdal2tiles.py is a Python script that needs to be run against &#8216;new generation&#8217; Python GDAL binding.</p>
 <h2>AUTHORS</h2>
 <p> Klokan Petr Pridal klokan [at] klokan.cz as a Google SoC 2007 Project. </p>
-<h2>Index</h2>

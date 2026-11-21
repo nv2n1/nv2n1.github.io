@@ -662,4 +662,3 @@ Rx = (a b) #NOT x = (a '' b)
 <p> &#8220;rc &#8212; A Shell for Plan 9 and UNIX Systems&#8221;, Unix Research System, Tenth Edition, Volume 2. (Saunders College Publishing) </p>
 <p> R<a rel="nofollow" href="http://static.tobold.org/rc/rc-duff.htmlR,">http://static.tobold.org/rc/rc-duff.htmlR,</a> R<a rel="nofollow" href="http://static.tobold.org/rc/rc-duff.html">http://static.tobold.org/rc/rc-duff.html</a> an updated version of the above paper. </p>
 <p> <i><a href="/docs/linux/man/1-history/">history</a></i>(1) </p>
-<h2>Index</h2>

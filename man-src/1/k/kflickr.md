@@ -42,4 +42,3 @@ description: "kflickr – stand-alone flickr.com photo uploader for KDE"
 <h2>AUTHOR</h2>
 <p> M. Asselstine &lt;asselsm at gmail dot com&gt;</p>
 <h2>SEE ALSO</h2>
-<h2>Index</h2>

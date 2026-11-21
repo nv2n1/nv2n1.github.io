@@ -234,4 +234,3 @@ description: "mock – build SRPMs in a chroot"
 <p> and a cast of&#8230;tens</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-mockchain/">mockchain</a>(1), <a href="/docs/linux/man/8-rpmbuild/">rpmbuild</a>(8), <a href="/docs/linux/man/8-yum/">yum</a>(8), <a rel="nofollow" href="https://fedoraproject.org/wiki/Mock">https://fedoraproject.org/wiki/Mock</a> </p>
-<h2>Index</h2>

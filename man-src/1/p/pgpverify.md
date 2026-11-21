@@ -66,4 +66,3 @@ description: "pgpverify – Cryptographically verify Usenet control messages"
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-gpgv/">gpgv</a></i>(1), <i>pgp</i>(1). </p>
 <p> &lt;<a href="ftp://ftp.isc.org/pub/pgpcontrol/">ftp://ftp.isc.org/pub/pgpcontrol/</a>&gt; is where the most recent versions of <code>signcontrol</code> and <code>pgpverify</code> live, along with <font SIZE="-1">PGP</font> public keys used for hierarchy administration. </p>
-<h2>Index</h2>

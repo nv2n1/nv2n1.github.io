@@ -57,4 +57,3 @@ description: "tblgen – Target Description To C++ Code Generator"
 <p> If <code>tblgen</code> succeeds, it will exit with 0. Otherwise, if an error occurs, it will exit with a non-zero value.</p>
 <h2>AUTHORS</h2>
 <p> Maintained by The <font SIZE="-1">LLVM</font> Team (&lt;<a rel="nofollow" href="http://llvm.org">http://llvm.org</a>&gt;). </p>
-<h2>Index</h2>

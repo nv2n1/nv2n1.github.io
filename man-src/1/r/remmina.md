@@ -99,4 +99,3 @@ apassword" | remmina-- update - profile / PATH / TO / FOO.remmina-- set - option
 <p> Antenore Gatta &lt;antenore at simbiosi dot org&gt; and Giovanni Panozzo &lt;giovanni at panozzo dot it&gt; Lp See the THANKS file for a more detailed list. Lp Remmina was initially written by Vic Lee &lt;llyzs [at] 163.com&gt; Lp This manual page was written by Antenore Gatta &lt;antenore at simbiosi dot org&gt;. Lp</p>
 <h2>COPYRIGHT</h2>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2, or (at your option) any later version. </p>
-<h2>Index</h2>

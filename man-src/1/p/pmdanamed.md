@@ -37,4 +37,3 @@ description: "pmdanamed – BIND (named) PMDA"
 <dd> default log file for error messages from <code>pmdanamed</code></dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-pmcd/">pmcd</a></i>(1), <i><a href="/docs/linux/man/5-named-conf/">named.conf</a></i>(5), <i><a href="/docs/linux/man/8-named/">named</a></i>(8). </p>
-<h2>Index</h2>

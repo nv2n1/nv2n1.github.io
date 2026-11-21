@@ -18,4 +18,3 @@ description: "pgmbentley – Bentleyize a portable graymap"
 <p> <a href="/docs/linux/man/1-pgmoil/">pgmoil</a>(1), <a href="/docs/linux/man/1-ppmrelief/">ppmrelief</a>(1), <a href="/docs/linux/man/5-pgm/">pgm</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1990 by Wilson Bent (whb [at] hoh-2.att.com) </p>
-<h2>Index</h2>

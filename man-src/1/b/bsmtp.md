@@ -71,4 +71,3 @@ description: "bsmtp – Bacula’s SMTP client (mail submission program)"
 <p> This manual page was written by Jose Luis Tallon &lt;jltallon [at] adv-solutions.net&gt;, revised and edited by Lucas B. Cohen &lt;lbc [at] members.fsf.org&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-bacula-dir/">bacula-dir</a></code>(8) </p>
-<h2>Index</h2>

@@ -109,4 +109,3 @@ tiff2pdf -p letter -j -q 75 -t &quot;Document&quot; -f -o output.pdf input.tiff
 <h2>SEE ALSO</h2>
 <p> <code>libtiff</code>(3), <code><a href="/docs/linux/man/1-tiffcp/">tiffcp</a></code>(1), <code><a href="/docs/linux/man/1-tiff2ps/">tiff2ps</a></code>(1) </p>
 <p> Libtiff library home page: <code><a rel="nofollow" href="http://www.remotesensing.org/libtiff/">http://www.remotesensing.org/libtiff/</a></code> </p>
-<h2>Index</h2>

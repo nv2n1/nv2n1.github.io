@@ -37,4 +37,3 @@ description: "gamt – Intel AMT serial-over-lan (sol) client."
 <p> <a href="/docs/linux/man/1-amtterm/">amtterm</a>(1), <a href="/docs/linux/man/1-amttool/">amttool</a>(1), <a href="/docs/linux/man/7-amt-howto/">amt-howto</a>(7)</p>
 <h2>AUTHOR</h2>
 <p> (c) 2007 Gerd Hoffmann &lt;kraxel [at] redhat.com&gt; </p>
-<h2>Index</h2>

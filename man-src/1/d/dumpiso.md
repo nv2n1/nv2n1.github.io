@@ -28,4 +28,3 @@ description: "dumpiso – dump IEEE 1394 isochronous channel packets"
 <p> <code><a href="/docs/linux/man/1-sendiso/">sendiso</a></code>(1), <code><a href="/docs/linux/man/5-isodump/">isodump</a></code>(5)</p>
 <h2>AUTHOR</h2>
 <p> Andreas Bombe &lt;aeb [at] debian.org&gt; </p>
-<h2>Index</h2>

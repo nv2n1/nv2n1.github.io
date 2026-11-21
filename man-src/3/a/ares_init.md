@@ -91,4 +91,3 @@ int ares_init(ares_channel *channelptr) int ares_init_options(ares_channel *chan
 <p> Greg Hudson, MIT Information Systems<br />
  Copyright 1998 by the Massachusetts Institute of Technology.<br />
  Copyright (C) 2004-2010 by Daniel Stenberg. </p>
-<h2>Index</h2>

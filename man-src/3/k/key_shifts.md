@@ -43,4 +43,3 @@ if (key[KEY_W]) {
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> <code>install_keyboard</code>(3), <code><a href="/docs/linux/man/3-poll_keyboard/">poll_keyboard</a></code>(3), <code><a href="/docs/linux/man/3-key/">key</a></code>(3), <code><a href="/docs/linux/man/3-excamera/">excamera</a></code>(3), <code><a href="/docs/linux/man/3-exkeys/">exkeys</a></code>(3) </p>
-<h2>Index</h2>

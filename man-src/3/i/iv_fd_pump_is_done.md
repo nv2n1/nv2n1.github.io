@@ -39,4 +39,3 @@ struct iv_fd_pump {
 <p> Internally, <code>iv_fd_pump_pump</code> will use <code><a href="/docs/linux/man/2-splice/">splice</a></code>(2) if it is available, otherwise it will fall back to <code><a href="/docs/linux/man/2-read/">read</a></code>(2) and <code><a href="/docs/linux/man/2-write/">write</a></code>(2). </p>
 <h2>SEE ALSO</h2>
 <p> <code>ivykis</code>(3), <code><a href="/docs/linux/man/2-splice/">splice</a></code>(2) </p>
-<h2>Index</h2>

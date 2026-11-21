@@ -151,4 +151,3 @@ description: "euca-describe-instances – Show information about instances"
 <dt>tag:KEY</dt>
 <dd> specific tag key/value combination virtualization-type vpc-id [VPC only] ID of the VPC the instance is in </dd>
 </dl>
-<h2>Index</h2>

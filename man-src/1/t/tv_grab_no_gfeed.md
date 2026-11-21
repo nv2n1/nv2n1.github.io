@@ -43,4 +43,3 @@ description: "tv_grab_no_gfeed – Grab TV listings for Norway."
 <h2>AUTHOR</h2>
 <p> Mattias Holmlund, mattias -at- holmlund -dot- se. This documentation and parts of the code copied from tv_grab_uk by Ed Avis, ed -at- membled -dot- com.</p>
 <h2>BUGS</h2>
-<h2>Index</h2>

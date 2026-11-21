@@ -72,4 +72,3 @@ description: "Phatch – Photo Batch Processor"
 </dd></dl>
 <h2>AUTHOR</h2>
 <p> Stani (spe.stani.be (at) gmail.com) </p>
-<h2>Index</h2>

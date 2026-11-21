@@ -177,4 +177,3 @@ int main(int argc, char *argv[])
 <p> <code><a href="/docs/linux/man/8-mosquitto/">mosquitto</a></code>(8)<code><a href="/docs/linux/man/7-mqtt/">mqtt</a></code>(7)</p>
 <h2>AUTHOR</h2>
 <p> Roger Light &lt;roger [at] atchoo.org&gt; </p>
-<h2>Index</h2>

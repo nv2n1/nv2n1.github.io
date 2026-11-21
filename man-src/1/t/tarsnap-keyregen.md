@@ -16,4 +16,3 @@ description: "tarsnap-keyregen – generate a key file for use with tarsnap-recr
 <p> The &#8211;<code>-keyfile</code> &#8211;<code>-user</code> &#8211;<code>-machine</code> and &#8211;<code>-oldkey</code> parameters are all required. </p>
 <p> If the &#8211;<code>-passphrased</code> option is specified, the user will be prompted to enter a passphrase (twice) to be used to encrypt the key file. </p>
 <p> If the &#8211;<code>-passphrase-mem </code><i>maxmem</i> option is specified, a maximum of <i>maxmem</i> bytes of RAM will be used in the scrypt key derivation function to encrypt the key file; it may be necessary to set this option if a key file is being generated on a system with far more RAM than the system on which the key file will be used. </p>
-<h2>Index</h2>

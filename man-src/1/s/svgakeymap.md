@@ -27,4 +27,3 @@ description: "svgakeymap – generates keymaps for svgalib"
 <h2>SEE ALSO</h2>
 <p> <code>libvga.config</code>(5) </p>
 <p> <i>README.keymap</i> from the svgalib distribution </p>
-<h2>Index</h2>

@@ -38,4 +38,3 @@ description: "gv-update-userconfig – update ~/.gv config file"
 <h2>COPYRIGHT</h2>
 <p> This manpage is Copyright &#169; 2008 Bernhard R. Link and can be used, copied, distributed and/or modified without restrictions.<br />
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
-<h2>Index</h2>

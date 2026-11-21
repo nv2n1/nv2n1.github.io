@@ -169,4 +169,3 @@ description: "globusrun – Execute and manage jobs via GRAM"
 <p> <code><a href="/docs/linux/man/1-globus-job-submit/">globus-job-submit</a></code>(1), <code><a href="/docs/linux/man/1-globus-job-run/">globus-job-run</a></code>(1), <code><a href="/docs/linux/man/1-globus-job-clean/">globus-job-clean</a></code>(1), <code><a href="/docs/linux/man/1-globus-job-get-output/">globus-job-get-output</a></code>(1), <code><a href="/docs/linux/man/1-globus-job-cancel/">globus-job-cancel</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> Copyright &#169; 1999-2014 University of Chicago </p>
-<h2>Index</h2>

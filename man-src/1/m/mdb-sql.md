@@ -103,4 +103,3 @@ mdb - sql[-HFp][-d delimiter][-i file][-o file][database]
 <p> The <code>mdb-sql</code> utility was written by Brian Bruns.</p>
 <h2>BUGS</h2>
 <p> The supported SQL syntax is a very limited subset and deficient in several ways. </p>
-<h2>Index</h2>

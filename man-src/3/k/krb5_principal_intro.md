@@ -18,4 +18,3 @@ lha[at] SU.SE
 </code></pre>
 <p> See the library functions here: <code>Heimdal Kerberos 5 principal functions</code> </p>
 <hr>
-<h2>Index</h2>

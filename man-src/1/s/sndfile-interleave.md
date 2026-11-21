@@ -18,4 +18,3 @@ description: "sndfile-interleave – convert multiple single channel files into 
 <p> Run &quot;sndfile-interleave &#8211;help&quot; or &quot;sndfile-deinterleave &#8211;help&quot; for more information </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Erik de Castro Lopo &lt;erikd [at] mega-nerd.com&gt;. </p>
-<h2>Index</h2>

@@ -33,4 +33,3 @@ ssize_t libssh2_channel_write_ex(LIBSSH2_CHANNEL *channel,
 <p> <i>LIBSSH2_ERROR_CHANNEL_EOF_SENT</i> &#8211; The channel has been requested to be closed.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_channel_open_ex/">libssh2_channel_open_ex</a>(3)</code> <code><a href="/docs/linux/man/3-libssh2_channel_read_ex/">libssh2_channel_read_ex</a>(3)</code> </p>
-<h2>Index</h2>

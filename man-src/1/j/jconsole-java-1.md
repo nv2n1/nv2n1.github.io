@@ -63,4 +63,3 @@ jconsole[options][connection...]
 <dd> <i>Monitoring and Management for Java Platform</i> @ <a rel="nofollow" href="http://docs.oracle.com/javase/7/docs/technotes/guides/management/index.html">http://docs.oracle.com/javase/7/docs/technotes/guides/management/index.html</a></dd></dl>
 </dl>
 <p>&nbsp;<wbr> </p>
-<h2>Index</h2>

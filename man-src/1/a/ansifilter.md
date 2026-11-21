@@ -84,4 +84,3 @@ description: "Ansifilter – ANSI escape code processor and converter"
 <p> Andre Simon &lt;andre.simon1 [at] gmx.de&gt;</p>
 <h2>SEE ALSO</h2>
 <p> README file and webpage at <a rel="nofollow" href="http://www.andre-simon.de/">http://www.andre-simon.de/</a> and <a href="http://wiki.andre-simon.de.">http://wiki.andre-simon.de.</a> </p>
-<h2>Index</h2>

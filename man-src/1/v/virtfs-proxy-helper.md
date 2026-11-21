@@ -37,4 +37,3 @@ description: "virtfs-proxy-helper – QEMU 9p virtfs proxy filesystem helper"
 <dd> Run as a normal program. By default program will run in daemon mode</dd></dl>
 <h2>AUTHOR</h2>
 <p> M. Mohan Kumar </p>
-<h2>Index</h2>

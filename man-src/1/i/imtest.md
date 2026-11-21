@@ -62,4 +62,3 @@ description: "imtest – interactive IMAP test program"
 <dd> Timing test.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>imapd(8)</code> </p>
-<h2>Index</h2>

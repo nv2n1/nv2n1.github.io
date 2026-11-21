@@ -38,4 +38,3 @@ description: "leaf – Lightweight Editor of Ascii(and more) Files"
 <p> <code>Sam Varshavchik</code></p>
 <dl>
 </dl>
-<h2>Index</h2>

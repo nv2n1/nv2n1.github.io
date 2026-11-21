@@ -15,4 +15,3 @@ description: "Opening/Closing – An XIO handle with the file driver can be crea
 <p> When the XIO handle is closed, the file driver will destroy its internal resources and close the fd (unless this fd was set on an attr or converted from one of the stdio handles).</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_xio from the source code. </p>
-<h2>Index</h2>

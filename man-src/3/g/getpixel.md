@@ -20,4 +20,3 @@ description: "getpixel – Reads a pixel from a bitmap. Allegro game programming
 <p> To extract the individual color components, use the getr() / getg() / getb() / geta() family of functions. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-putpixel/">putpixel</a></code>(3), <code>_getpixel</code>(3), <code>is_inside_bitmap</code>(3), <code><a href="/docs/linux/man/3-getr/">getr</a></code>(3), <code><a href="/docs/linux/man/3-getg/">getg</a></code>(3), <code><a href="/docs/linux/man/3-getb/">getb</a></code>(3), <code><a href="/docs/linux/man/3-geta/">geta</a></code>(3), <code><a href="/docs/linux/man/3-ex12bit/">ex12bit</a></code>(3), <code><a href="/docs/linux/man/3-exalpha/">exalpha</a></code>(3), <code><a href="/docs/linux/man/3-exflame/">exflame</a></code>(3), <code><a href="/docs/linux/man/3-exlights/">exlights</a></code>(3) </p>
-<h2>Index</h2>

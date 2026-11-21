@@ -70,4 +70,3 @@ description: "beanstalkd – simple, fast work queue"
 <p> <i><a rel="nofollow" href="http://kr.github.com/beanstalkd/">http://kr.github.com/beanstalkd/</a></i></p>
 <h2>AUTHOR</h2>
 <p> <code>Beanstalkd</code> is written and maintained by Keith Rarick with the help of many others. </p>
-<h2>Index</h2>

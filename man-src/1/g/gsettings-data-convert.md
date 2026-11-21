@@ -52,4 +52,3 @@ rgba_order = /desktop/gnome/font_rendering/rgba_order
 </dt><dd> Show verbose messages</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gsettings-schema-convert/">gsettings-schema-convert</a></code>(1) is a related command that helps with the conversion of schemas from GConf to GSettings. </p>
-<h2>Index</h2>

@@ -58,4 +58,3 @@ description: "tkconch – connect to SSH servers graphically"
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-ssh/">ssh</a>(1) </p>
-<h2>Index</h2>

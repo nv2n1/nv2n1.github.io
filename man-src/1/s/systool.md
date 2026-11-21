@@ -45,4 +45,3 @@ description: "systool – view system device information by bus, class, and topo
 <h2>AUTHOR</h2>
 <p> <code>systool</code> was written by Ananth Mavinakayanahalli &lt;ananth [at] in.ibm.com&gt; and Daniel Stekloff &lt;dsteklof [at] us.ibm.com&gt;. </p>
 <p> This man page was contributed by Martin Pitt &lt;mpitt [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

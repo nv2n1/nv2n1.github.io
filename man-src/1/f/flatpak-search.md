@@ -82,4 +82,3 @@ description: "flatpak-search – Search for applications and runtimes"
 <p> Note that field names can be abbreviated to a unique prefix.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1) </p>
-<h2>Index</h2>

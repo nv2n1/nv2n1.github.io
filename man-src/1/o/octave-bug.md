@@ -29,4 +29,3 @@ description: "octave-bug – report a bug in GNU Octave"
 John W. Eaton
 &lt;jwe [at] octave.org&gt;
 </pre>
-<h2>Index</h2>

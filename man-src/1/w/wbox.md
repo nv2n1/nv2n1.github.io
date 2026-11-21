@@ -66,4 +66,3 @@ description: "wbox – HTTP testing tool and configuration-less HTTP server"
 <h2>AUTHOR</h2>
 <p> wbox was written by Salvatore &#8216;antirez&#8217; Sanfilippo &lt;antirez [at] gmail.com&gt;. </p>
 <p> This manual page was written by Alberto Furia &lt;straluna [at] email.it&gt;, for the Debian project (and may be used by others). </p>
-<h2>Index</h2>

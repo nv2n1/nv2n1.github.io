@@ -217,4 +217,3 @@ description: "bltk – tool kit is used to measure battery life and performance 
 Konstantin Karasyov&lt;konstantin.a.karasyov[at] intel.com&gt;
     Vladimir Lebedev&lt;vladimir.p.lebedev[at] intel.com&gt;
 </code></pre>
-<h2>Index</h2>

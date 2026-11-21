@@ -59,4 +59,3 @@ description: "systemd-cgls – Recursively show control group contents"
 <p> On success, 0 is returned, a non-zero failure code otherwise.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/1-systemctl/">systemctl</a></code>(1), <code><a href="/docs/linux/man/1-systemd-cgtop/">systemd-cgtop</a></code>(1), <code><a href="/docs/linux/man/1-systemd-nspawn/">systemd-nspawn</a></code>(1), <code><a href="/docs/linux/man/1-ps/">ps</a></code>(1) </p>
-<h2>Index</h2>

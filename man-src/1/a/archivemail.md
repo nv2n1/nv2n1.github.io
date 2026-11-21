@@ -168,4 +168,3 @@ bash$ <code>archivemail -o $HOME/Mail/Archive <a href="imaps://user:'">imaps://u
 <p> The <code>archivemail</code> home page is currently hosted at sourceforge &lt;URL:<a rel="nofollow" href="http://archivemail.sourceforge.net">http://archivemail.sourceforge.net</a>&gt;</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Paul Rodger &lt;paul at paulrodger dot com&gt;. Updated and supplemented by Nikolaus Schulz &lt;microschulz [at] web.de&gt; </p>
-<h2>Index</h2>

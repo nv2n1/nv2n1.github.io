@@ -52,4 +52,3 @@ description: "file2brl – Translate an xml or a text file into an embosser-read
 <dt>
 </dt><dd> <code>info liblouisutdml</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

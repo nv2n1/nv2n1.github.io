@@ -116,4 +116,3 @@ description: "zmap – The Fast Internet Scanner"
 <p> Filter expressions are of the form <code>&lt;fieldname&gt; &lt;operation&gt; &lt;value&gt;</code>. The type of <code>&lt;value&gt;</code> must be either a string or unsigned integer literal, and match the type of <code>&lt;fieldname&gt;</code>. The valid operations for integer comparisons are = !=, <i>,</i>, <i>=,</i>=. The operations for string comparisons are =, !=. The <code>&#8211;list-output-fields</code> flag will print what fields and types are available for the selected probe module, and then exit. </p>
 <p> Compound filter expressions may be constructed by combining filter expressions using parenthesis to specify order of operations, the &amp;&amp; (logical AND) and || (logical OR) operators. </p>
 <p> For example, a filter for only successful, non-duplicate responses would be written as: <code>&#8211;output-filter=&quot;success = 1 &amp;&amp; repeat = 0&quot;</code> </p>
-<h2>Index</h2>

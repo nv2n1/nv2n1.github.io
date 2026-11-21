@@ -54,4 +54,3 @@ description: "policyeditor – view and modify security policy settings for java
 <p> <code><a href="/docs/linux/man/1-icedtea-web/">icedtea-web</a></code>(1) <code>javaws</code>(1) <code><a href="/docs/linux/man/1-icedtea-web-plugin/">icedtea-web-plugin</a></code>(1) <code><a href="/docs/linux/man/1-itweb-settings/">itweb-settings</a></code>(1) <code><a href="/docs/linux/man/1-policyeditor/">policyeditor</a></code>(1) <code>policytool</code>(1) <code><a href="/docs/linux/man/1-java/">java</a></code>(1) </p>
 <p> <a rel="nofollow" href="http://icedtea.classpath.org/wiki/IcedTea-Web">http://icedtea.classpath.org/wiki/IcedTea-Web</a><br />
  <a rel="nofollow" href="http://icedtea.classpath.org/hg/icedtea-web">http://icedtea.classpath.org/hg/icedtea-web</a> </p>
-<h2>Index</h2>

@@ -238,4 +238,3 @@ description: "qperf – Measure RDMA and IP performance"
 <p> Written by Johann George.</p>
 <h2>BUGS</h2>
 <p> None of the RDMA tests are available if qperf is compiled without the RDMA libraries. None of the XRC tests are available if qperf is compiled without the XRC extensions. The -f option is not yet implemented in many of the tests. </p>
-<h2>Index</h2>

@@ -26,4 +26,3 @@ description: "cmap_track_delete – Remove tracking of values in CMAP"
 <p> <code>CS_ERR_NOT_SUPPORTED</code> The requested protocol/functuality not supported </p>
 <p> <code>CS_ERR_MESSAGE_ERROR</code> Incorrect auth message received </p>
 <p> <code>CS_ERR_NO_MEMORY</code> Not enough memory to completed the requested task </p>
-<h2>Index</h2>

@@ -912,4 +912,3 @@ cimcli en CIM_ManagedElement -count 100 </p>
 <p> <code>70</code> <code>cimcli</code> internal error that cannot be attributed to external issues such as commmand line input or server response. This usually indicates a bug in <code>cimcli</code>. </p>
 <h2>AUTHOR</h2>
 <p> Karl Schopmeyer k.schopmeyer [at] opengroup.org </p>
-<h2>Index</h2>

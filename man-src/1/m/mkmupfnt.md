@@ -49,4 +49,3 @@ description: "mkmupfnt – create fontfile for overriding Mup fonts"
 <p> Only the ASCII characters 32-126 can be overridden. The non-ASCII characters can not be overridden. </p>
 <p> Mup only allows width values up to 1/2 inch for a 12-point character. This program does not enforce that limitation. </p>
 <p> This program has been tested with various Ghostscript fonts, but may not work on just any arbitrary PostScript font. </p>
-<h2>Index</h2>

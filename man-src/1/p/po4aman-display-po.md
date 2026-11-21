@@ -36,4 +36,3 @@ description: "po4aman-display-po – display a translated man page according to 
 <p> <code><a href="/docs/linux/man/1-po4apod-display-po/">po4apod-display-po</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> Thomas Huriaux </p>
-<h2>Index</h2>

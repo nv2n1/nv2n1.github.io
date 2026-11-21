@@ -26,4 +26,3 @@ description: "on_ac_power – test whether computer is running on AC power"
 <p> This program currently provides only information known to the kernel; it doesn&#8217;t (yet?) query userspace daemons such as nut which may provide further information.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Steve Dodd &lt;steved [at] loth.demon.co.uk&gt;, was updated by Thomas Hood then by Adam Borowski. </p>
-<h2>Index</h2>

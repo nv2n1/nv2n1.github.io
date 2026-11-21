@@ -242,4 +242,3 @@ int main(int argc, char **argv)
 <p> In general, it is necessary to evaluate the suitaility of a script to run under <tt>&quot;sudo&quot;</tt> specifically with that kind of execution environment in mind. It is neither necessary nor sufficient for the same script to be suitable to run in a traditional set-id arrangement, though many of the issues overlap.</p>
 <h2>SEE ALSO</h2>
 <p> perlrun for its description of cleaning up environment variables. </p>
-<h2>Index</h2>

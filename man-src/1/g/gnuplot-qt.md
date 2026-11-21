@@ -76,4 +76,3 @@ description: "gnuplot – an interactive plotting program"
 <p> Please report bugs using the project bug tracker on SourceForge.</p>
 <h2>SEE ALSO</h2>
 <p> See the printed manual or the on-line help for details on specific commands. Project web site at <a rel="nofollow" href="http://gnuplot.info">http://gnuplot.info</a> </p>
-<h2>Index</h2>

@@ -30,4 +30,3 @@ description: "krb5_checksum krb5_checksum_disable krb5_checksum_is_collision_pro
 <p> <code>krb5_checksum_disable</code> globally disables the checksum type.</p>
 <h2>SEE ALSO</h2>
 <p> krb5_crypto_init3, krb5_c_encrypt3, krb5_encrypt3 </p>
-<h2>Index</h2>

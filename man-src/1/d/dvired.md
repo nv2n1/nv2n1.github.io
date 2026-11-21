@@ -30,4 +30,3 @@ description: "dvired – print dvi-files"
 <p> <i>dvired</i> is fixed on A4 paper size. If you want to use it with other paper, you have to change the settings within the source.</p>
 <h2>AUTHOR</h2>
 <p> Thomas Esser &lt;te [at] dbs.uni-hannover.de&gt; </p>
-<h2>Index</h2>

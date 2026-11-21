@@ -107,4 +107,3 @@ description: "abiword — flexible cross-platform word processor"
 <p> <code><a href="/docs/linux/man/1-enchant/">enchant</a></code>(1)</p>
 <h2>HISTORY</h2>
 <p> AbiWord was started in 1998 by AbiSource Inc., a company founded by SourceGear corporation. The initial plan was to build a free office suite named AbiSuite, encompassing word processing, spreadsheet and presentation applications. As they didn’t have a usable product when their venture capital was up, the code already developed (namely AbiWord) was made open source. AbiWord development was subsequently taken over by volunteers and is driven by the community to date. </p>
-<h2>Index</h2>

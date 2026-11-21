@@ -119,4 +119,3 @@ description: "kst – A plotting and data viewing program"
 </dl>
 <h2>AUTHORS</h2>
 <p> Duncan Hanson, Rick Chern, Philip Rodrigues, Barth Netterfield, Yiwen Mao. </p>
-<h2>Index</h2>

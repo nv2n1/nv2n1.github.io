@@ -34,4 +34,3 @@ description: "griv – Gtk RIVchat"
  <a rel="nofollow" href="http://sourceforge.net/projects/griv/">http://sourceforge.net/projects/griv/</a> </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Simon Wesp &lt;cassmodiah [at] fedoraproject.org&gt; for Fedora Linux. </p>
-<h2>Index</h2>

@@ -33,4 +33,3 @@ description: "airscan-discover – Discover sane-airscan compatible scanners"
 <p> <a href="/docs/linux/man/7-sane/">sane</a>(7), <a href="/docs/linux/man/5-sane-airscan/">sane-airscan</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> Alexander Pevzner &lt;pzz [at] apevzner.com&gt; </p>
-<h2>Index</h2>

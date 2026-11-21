@@ -17,4 +17,3 @@ description: "tracker3-import – Import data into a Tracker database."
 <p> The data must be in Turtle format. You can use a tool such as <a href="/docs/linux/man/1-rapper/">rapper</a>(1) to convert the data from other formats to Turtle.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tracker3-export/">tracker3-export</a></code>(1), <code><a href="/docs/linux/man/1-tracker3-sparql/">tracker3-sparql</a></code>(1). </p>
-<h2>Index</h2>

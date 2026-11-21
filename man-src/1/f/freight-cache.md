@@ -49,4 +49,3 @@ description: "freight-cache – (re)builds package repositories"
 <h2>SEE ALSO</h2>
 <p> Part of <code><a href="/docs/linux/man/1-freight/">freight</a></code>(1). </p>
 <p> <code><a href="/docs/linux/man/1-freight-add/">freight-add</a></code>(1) adds packages to the intermediate &quot;Freight library&quot; that is used by <code>freight-cache</code> to build the actual repositories. </p>
-<h2>Index</h2>

@@ -45,4 +45,3 @@ ef&#8217;s that are not defined by one \label).</dd>
 <dt>
 </dt><dd> <code>info rubber</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

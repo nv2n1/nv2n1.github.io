@@ -61,4 +61,3 @@ Copyright &#169;  1999-2008 Ales Hvezda
 This document can be freely redistributed according to the terms of the 
 GNU General Public License version 2.0
 </pre>
-<h2>Index</h2>

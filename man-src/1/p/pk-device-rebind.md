@@ -52,4 +52,3 @@ description: "pk-device-rebind – Device software reloader"
 <p> This manual page was written by Richard Hughes richard [at] hughsie.com.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2009 Richard Hughes </p>
-<h2>Index</h2>

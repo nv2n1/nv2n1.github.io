@@ -176,4 +176,3 @@ description: "podebconf-report-po – send outdated debconf PO files to the last
 <pre>
   Fabio Tranchitella &lt;kobold [at] kobold.it&gt;
 </pre>
-<h2>Index</h2>

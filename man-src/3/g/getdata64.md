@@ -18,4 +18,3 @@ description: "getdata64 — retrieve data from a dirfile database with largefile
 <dd>This version of <code><a href="/docs/linux/man/3-getdata/">getdata</a></code>(3) uses a 64-bit offset type, even if <i>off_t</i> is a 32-bit type. It is only available if one defines <i>_LARGEFILE64_SOURCE</i>. If <i>off_t</i> is a 64-bit type (i.e. if <i>_FILE_OFFSET_BITS</i> is defined to be 64), this function will be called <code>getdata</code>(). Otherwise, <code>getdata</code>() will be a version of this function which uses a 32-bit <i>off_t</i>.</dd>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-getdata/">getdata</a></code>(3), <code><a href="/docs/linux/man/7-feature_test_macros/">feature_test_macros</a></code>(7) </p>
-<h2>Index</h2>

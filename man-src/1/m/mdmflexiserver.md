@@ -28,4 +28,3 @@ description: "mdmflexiserver – start a MDM session using the MDM flexible serv
 <p> <i><a href="/docs/linux/man/8-mdm/">mdm</a></i>(8)</p>
 <h2>AUTHORS</h2>
 <p> <code>mdmflexiserver</code> is part of the <font SIZE="-1"><code>MDM</code></font> software package. This manpage was written by Yann Dirson &lt;dirson [at] debian.org&gt; for the Debian system, but may be used by others. </p>
-<h2>Index</h2>

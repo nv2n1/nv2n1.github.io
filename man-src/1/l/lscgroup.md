@@ -34,4 +34,3 @@ description: "lscgroup – list all cgroups"
 </dl>
 <h2>SEE ALSO</h2>
 <p> lssubsys (1), cgcreate (1), cgdelete (1), cgconfig.conf (5) </p>
-<h2>Index</h2>

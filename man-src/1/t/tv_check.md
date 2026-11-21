@@ -28,4 +28,3 @@ description: "tv_check – Check TV guide listings"
 <p> <i>xmltv</i>(5).</p>
 <h2>AUTHOR</h2>
 <p> Robert Eden; manpage by Kenneth J. Pronovici. </p>
-<h2>Index</h2>

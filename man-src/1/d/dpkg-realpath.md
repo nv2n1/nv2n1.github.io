@@ -34,4 +34,3 @@ description: "dpkg-realpath – print the resolved pathname with DPKG_ROOT suppo
 <dd> Sets the color mode. The currently accepted values are: <code>auto</code> (default), <code>always</code> and <code>never</code>.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-realpath/">realpath</a></code>(1), <code><a href="/docs/linux/man/1-readlink/">readlink</a></code>(1). </p>
-<h2>Index</h2>

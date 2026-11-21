@@ -50,4 +50,3 @@ description: "statist – calculate Huffman distribution for freeze(1)"
 <h2>BUGS</h2>
 <p> Sometimes use of the results with uncertainty = 1 (on a file) gives compression rate worse than default but use of the results with uncertainty = 13 (on other file) works quite good. </p>
 <p> Found bugs descriptions, incompatibilities, etc. please send to leo [at] s514.ipmce.su. </p>
-<h2>Index</h2>

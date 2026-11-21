@@ -37,4 +37,3 @@ description: "chroot – run command or interactive shell with special root dire
 <dt>
 </dt><dd> <code>info coreutils &#8216;chroot invocation&#8217;</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

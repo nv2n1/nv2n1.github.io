@@ -23,4 +23,3 @@ description: "evince-previewer – show a printing preview of PostScript and PDF
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-evince/">evince</a></code>(1), <code><a href="/docs/linux/man/7-gnome-options/">gnome-options</a></code>(7), <code><a href="/docs/linux/man/7-gtk-options/">gtk-options</a></code>(7). </p>
 <p> <a rel="nofollow" href="https://wiki.gnome.org/Apps/Evince">https://wiki.gnome.org/Apps/Evince</a> </p>
-<h2>Index</h2>

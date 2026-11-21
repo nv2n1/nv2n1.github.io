@@ -73,4 +73,3 @@ $ xmlpretty-- NoWhiteSpace-- NoComments-- AddHiddenNewline-- AddHiddenAttrTab-- 
 <p> &#8220;Derksen, Eduard (Enno), <font SIZE="-1">CSCIO&#8221;</font> &lt;enno [at] att.com&gt; helped me with the Escape hash and gave quite a lot of usefull comments.</p>
 <h2>SEE ALSO</h2>
 <p> perl and XML::Parser::PerlSAX </p>
-<h2>Index</h2>

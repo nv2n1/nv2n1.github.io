@@ -19,4 +19,3 @@ description: "daala_packet –"
 <p> int64_t <code>packetno</code> </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for daala from the source code. </p>
-<h2>Index</h2>

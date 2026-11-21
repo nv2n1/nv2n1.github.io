@@ -232,4 +232,3 @@ description: "htags – generate hypertext from source code."
 <p> Tama Communications Corporation.</p>
 <h2>HISTORY</h2>
 <p> The <code>htags</code> command appeared in FreeBSD 2.2.2. </p>
-<h2>Index</h2>

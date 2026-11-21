@@ -27,4 +27,3 @@ description: "nroff – use groff to format documents for TTY devices"
 <p> Character definitions in the file <i>/usr/share/groff/1.22.4/tmac/tty-char.tmac</i> are loaded to replace unrepresentable glyphs.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-groff/">groff</a></i>(1), <i><a href="/docs/linux/man/1-troff/">troff</a></i>(1), <i><a href="/docs/linux/man/1-grotty/">grotty</a></i>(1), <i><a href="/docs/linux/man/1-locale/">locale</a></i>(1), <i><a href="/docs/linux/man/7-roff/">roff</a></i>(7) </p>
-<h2>Index</h2>

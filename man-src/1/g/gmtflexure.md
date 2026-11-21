@@ -72,4 +72,3 @@ gmt flexure -Qttopo.txt -E10k -D2700/3300/1035 &gt; flex.txt
 <p> <code>gmt</code>, <code>gravfft</code> <code>grdflexure</code><code>grdmath</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

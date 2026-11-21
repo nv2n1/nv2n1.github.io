@@ -148,4 +148,3 @@ description: "ZSNES – Super Nintendo console emulator"
 <h2>COPYRIGHT NOTICE</h2>
 <p> Copyright &#169; 1997-2007 ZSNES Team </p>
 <p> Permission is granted to copy and distribute this manual under the terms of the GNU Free Documentation License. </p>
-<h2>Index</h2>

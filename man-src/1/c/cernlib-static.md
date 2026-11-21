@@ -83,4 +83,3 @@ description: "cernlib-static – get libraries needed to link with CERN Program 
 <dl>
 <dt>
 </dt><dd> what `which cernlib-static`</dd></dl>
-<h2>Index</h2>

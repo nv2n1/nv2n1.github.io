@@ -30,4 +30,3 @@ description: "getzones – list AppleTalk zone names"
 </dt><dd> Contact the AppleTalk router at <i>address.</i> <i>address</i> is parsed by <code><a href="/docs/linux/man/3-atalk_aton/">atalk_aton</a></code>(3).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-atalk_aton/">atalk_aton</a></code>(3), <code><a href="/docs/linux/man/8-atalkd/">atalkd</a></code>(8). </p>
-<h2>Index</h2>

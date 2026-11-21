@@ -47,4 +47,3 @@ description: "gsf – archiving utility using the G Structured File library"
 <p> <code><a href="/docs/linux/man/1-gnumeric/">gnumeric</a></code>(1) </p>
 <p> The Gnumeric homepage &lt;URL: <a rel="nofollow" href="http://www.gnome.org/projects/gnumeric/">http://www.gnome.org/projects/gnumeric/</a> &gt; </p>
 <p> The GNOME project page &lt;URL: <a rel="nofollow" href="http://www.gnome.org/">http://www.gnome.org/</a> &gt; </p>
-<h2>Index</h2>

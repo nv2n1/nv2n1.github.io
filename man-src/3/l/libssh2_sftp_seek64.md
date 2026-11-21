@@ -25,4 +25,3 @@ void libssh2_sftp_seek64(LIBSSH2_SFTP_HANDLE *handle,
 <p> Added in 1.0</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_sftp_open_ex/">libssh2_sftp_open_ex</a>(3)</code> </p>
-<h2>Index</h2>

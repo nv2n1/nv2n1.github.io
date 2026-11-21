@@ -62,4 +62,3 @@ description: "resgen, resgen2 – Mono/CLI Resource Generator"
 <p> Visit: <a rel="nofollow" href="http://www.mono-project.com">http://www.mono-project.com</a> for details  </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mcs/">mcs</a>(1),</code><a href="/docs/linux/man/1-mono/">mono</a>(1),<code><a href="/docs/linux/man/5-mono-config/">mono-config</a>(5).</code> </p>
-<h2>Index</h2>

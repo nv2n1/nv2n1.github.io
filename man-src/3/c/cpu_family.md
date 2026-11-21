@@ -29,4 +29,3 @@ description: "cpu_family – Contains the CPU type. Allegro game programming lib
 <p> You can read this variable after you have called check_cpu() (which is automatically called by allegro_init()). </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-check_cpu/">check_cpu</a></code>(3), <code><a href="/docs/linux/man/3-cpu_vendor/">cpu_vendor</a></code>(3), <code><a href="/docs/linux/man/3-cpu_model/">cpu_model</a></code>(3), <code><a href="/docs/linux/man/3-cpu_capabilities/">cpu_capabilities</a></code>(3), <code>allegro_init</code>(3) </p>
-<h2>Index</h2>

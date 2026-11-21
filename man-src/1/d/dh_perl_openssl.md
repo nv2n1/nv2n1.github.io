@@ -29,4 +29,3 @@ description: "dh_perl_openssl – add dependencies required for OpenSSL modules"
 <p> Copyright 2010, Ansgar Burchardt &lt;ansgar [at] debian.org&gt; </p>
 <p> Copyright 2016, Niko Tyni &lt;ntyni [at] debian.org&gt; </p>
 <p> This program is free software, you can redistribute it and/or modify it under the same terms as Perl itself. </p>
-<h2>Index</h2>

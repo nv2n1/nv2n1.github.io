@@ -47,4 +47,3 @@ description: "sgsc – Find HST GSC stars in a square on the sky"
 <p> <a href="/docs/linux/man/1-scat/">scat</a>(1), rgsc(1), suac(1), susac(1), <a href="/docs/linux/man/1-imgsc/">imgsc</a>(1)</p>
 <h2>Author</h2>
 <p> Jessica Mink, SAO (jmink [at] cfa.harvard.edu) </p>
-<h2>Index</h2>

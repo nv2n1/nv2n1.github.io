@@ -32,4 +32,3 @@ description: "gatttool – tool for Bluetooth Low Energy device"
 &nbsp;<wbr>&nbsp;<code>&#8211;I</code>,&nbsp;<code>&#8212;interactive</code>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Use interactive mode </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Nobuhiro Iwamatsu &lt;iwamatsu [at] debian.org&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

@@ -39,4 +39,3 @@ description: "sfcbtrace – toggle the tracemask for SFCB trace output"
 responseTiming:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>262144&nbsp;<wbr>&nbsp;<wbr>0x40000<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>dbpdaemon:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>524288&nbsp;<wbr>&nbsp;<wbr>0x80000<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>slp:&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>1048576 0x100000 </p>
-<h2>Index</h2>

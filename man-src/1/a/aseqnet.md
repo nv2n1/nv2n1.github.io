@@ -50,4 +50,3 @@ description: "aseqnet – ALSA sequencer connectors over network"
 <p> <a href="/docs/linux/man/1-aconnect/">aconnect</a>(1), pmidi(1) </p>
 <h2>AUTHOR</h2>
 <p> Takashi Iwai &lt;tiwai [at] suse.de&gt;. </p>
-<h2>Index</h2>

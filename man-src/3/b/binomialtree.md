@@ -36,4 +36,3 @@ description: "ql/methods/lattices/binomialtree.hpp – Binomial tree class."
 <p> Binomial tree class. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

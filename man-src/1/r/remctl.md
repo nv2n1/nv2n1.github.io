@@ -55,4 +55,3 @@ description: "remctl – Remote execution tool"
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-kinit/">kinit</a></i>(1), <i><a href="/docs/linux/man/8-remctld/">remctld</a></i>(8) </p>
 <p> The current version of this program is available from its web page at &lt;<a rel="nofollow" href="http://www.eyrie.org/~eagle/software/remctl/">http://www.eyrie.org/~eagle/software/remctl/</a>&gt;. </p>
-<h2>Index</h2>

@@ -25,4 +25,3 @@ void bson_iter_timeval(const bson_iter_t *iter,
 <p> The <code><a href="/docs/linux/man/3-bson_iter_timeval/">bson_iter_timeval</a>(3)</code> function shall return the number of seconds and microseconds since the UNIX epoch, as contained in the BSON_TYPE_DATE_TIME element into <code>tv</code> \&amp;. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

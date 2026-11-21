@@ -36,4 +36,3 @@ description: "guilt-import – Import specified patch file"
 <dt>
 </dt><dd> mailto:jeffpc [at] josefsipek.net</dd></dl>
 </dl>
-<h2>Index</h2>

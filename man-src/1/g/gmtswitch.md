@@ -69,4 +69,3 @@ description: "gmtswitch – Switching between different GMT versions"
 <p> Run without arguments to get a &quot;Usage&quot; (for permanent mode)</p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

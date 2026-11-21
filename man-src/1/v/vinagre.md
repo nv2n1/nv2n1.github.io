@@ -78,4 +78,3 @@ example% <code>vinagre -f ::5900
 <dt>This manual page was written by Emilio Pozuelo Monfort &lt;pochu [at] ubuntu.com&gt; and Halton Huo &lt;halton.huo [at] sun.com&gt;.</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

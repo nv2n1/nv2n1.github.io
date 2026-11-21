@@ -65,4 +65,3 @@ description: "javah – C Header and Stub File Generator"
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-javac/">javac</a>(1), <a href="/docs/linux/man/1-java/">java</a>(1), <a href="/docs/linux/man/1-jdb/">jdb</a>(1), <a href="/docs/linux/man/1-javap/">javap</a>(1), <a href="/docs/linux/man/1-javadoc/">javadoc</a>(1) </p>
 <p>&nbsp;<wbr> </p>
-<h2>Index</h2>

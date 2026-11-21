@@ -19,4 +19,3 @@ description: "tv_to_potatoe – Convert XMLTV listings to potatoe format."
 <p> <i>xmltv</i>(5).</p>
 <h2>AUTHOR</h2>
 <p> Stefan Siegl, ssiegl [at] gmx.de </p>
-<h2>Index</h2>

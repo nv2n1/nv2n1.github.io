@@ -30,4 +30,3 @@ description: "ppmqvga – 8 plane quantization"
 <p> Original by Lyle Rains (lrains [at] netcom.com) as ppmq256 and ppmq256fs combined, documented, and enhanced by Bill Davidsen (davidsen [at] crd.ge.com)</p>
 <h2>Copyright</h2>
 <p> Copyright 1991,1992 by Bill Davidsen, all rights reserved. The program and documentation may be freely distributed by anyone in source or binary format. Please clearly note any changes. </p>
-<h2>Index</h2>

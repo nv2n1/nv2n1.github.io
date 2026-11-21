@@ -30,4 +30,3 @@ Guochun Shi&lt;gshi[at] ncsa.uiuc.edu&gt;
         Alan Robertson&lt;alanr[at] unix.sh&gt;
             Lars Marowsky - Bree&lt;lmb[at] suse.de&gt;
 </code></pre>
-<h2>Index</h2>

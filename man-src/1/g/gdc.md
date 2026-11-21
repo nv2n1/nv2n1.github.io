@@ -188,4 +188,3 @@ description: "gdc – Client utility for GoodData on-demand Business Intelligenc
 <p> This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself.</p>
 <h2>AUTHOR</h2>
 <p> Lubomir Rintel <tt>&quot;lkundrak [at] v3.sk&quot;</tt> </p>
-<h2>Index</h2>

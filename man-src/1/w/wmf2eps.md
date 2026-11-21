@@ -75,4 +75,3 @@ description: "wmf2eps – Convert metafile image to postscript"
 <h2>AUTHOR</h2>
 <p> <code>wmf2eps</code> is originally written by Martin Vermeer and currently maintained by Caolán McNamara </p>
 <p> This manual page was written by Yangfl for the Debian Project (and may be used by others). </p>
-<h2>Index</h2>

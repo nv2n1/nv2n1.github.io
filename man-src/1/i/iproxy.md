@@ -20,4 +20,3 @@ description: "iproxy – proxy that enables tcp service access to iPhone/iPod"
 <p> Nikias Bassen &lt;nikias [at] gmx.li&gt; </p>
 <p> Paul Sladen &lt;libiphone [at] paul.sladen.org&gt; </p>
 <p> Man page written to conform with Debian by Julien Lavergne. </p>
-<h2>Index</h2>

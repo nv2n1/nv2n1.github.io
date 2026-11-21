@@ -21,4 +21,3 @@ description: "curl_multi_cleanup – close down a multi session"
 <p> CURLMcode type, general libcurl multi interface error code.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-curl_multi_init/">curl_multi_init</a></code>(3),<code><a href="/docs/linux/man/3-curl_easy_cleanup/">curl_easy_cleanup</a></code>(3),<code><a href="/docs/linux/man/3-curl_easy_init/">curl_easy_init</a></code>(3) </p>
-<h2>Index</h2>

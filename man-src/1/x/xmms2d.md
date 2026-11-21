@@ -69,4 +69,3 @@ description: "xmms2d – XMMS2 daemon which handles the playback of music and st
 <p> The <code>XMMS2</code> Project was started by Tobias Rundström and Anders Gustafsson. It is developed with their lead by a small group of contributers from all over the world.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Alexander Botero-Lowry &lt;alex [at] foxybanana.com&gt; </p>
-<h2>Index</h2>

@@ -40,4 +40,3 @@ description: "crypt_preferred_method – get the prefix of the preferred hash me
 </table>
 <h2>SEE ALSO</h2>
 <p> crypt_gensalt3 </p>
-<h2>Index</h2>

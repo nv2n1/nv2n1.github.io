@@ -81,4 +81,3 @@ description: "hwloc-distrib – Build a number of cpu masks distributed on the s
 <p> hwloc-distrib will return nonzero if any kind of error occurs, such as (but not limited to) failure to parse the command line.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7), <a href="/docs/linux/man/1-hwloc-gather-topology/">hwloc-gather-topology</a>(1) </p>
-<h2>Index</h2>

@@ -53,4 +53,3 @@ amq.gen-BW/wvociA8g6LFpb1PlqOA==
 <p> <code><a href="/docs/linux/man/7-librabbitmq-tools/">librabbitmq-tools</a></code>(7) describes connection-related options common to all the RabbitMQ C Client tools.</p>
 <h2>AUTHOR</h2>
 <p> <code>The RabbitMQ Team &lt;</code><code>m[blue]&lt;info [at] rabbitmq.com&gt;</code>m[]<code>&gt;</code> </p>
-<h2>Index</h2>

@@ -23,4 +23,3 @@ description: "flopen – reliably open and lock a file"
 <p> errno(2), <a href="/docs/linux/man/2-flock/">flock</a>(2), <a href="/docs/linux/man/2-open/">open</a>(2)</p>
 <h2>AUTHORS</h2>
 <p> An -nosplit The function and this manual page were written by An Dag-Erling Sm&oslash;rgrav Aq des [at] FreeBSD.org . </p>
-<h2>Index</h2>

@@ -19,4 +19,3 @@ description: "libssh2_poll – poll for activity on a socket, channel or listene
 <p> Number of fds with interesting events.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_poll_channel_read/">libssh2_poll_channel_read</a>(3)</code> </p>
-<h2>Index</h2>

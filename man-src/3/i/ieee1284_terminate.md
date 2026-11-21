@@ -81,4 +81,3 @@ description: "ieee1284_negotiate, ieee1284_terminate – IEEE 1284 negotiation"
 </dt><dd> Author.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2001-2003 Tim Waugh </p>
-<h2>Index</h2>

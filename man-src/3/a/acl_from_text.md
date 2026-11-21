@@ -31,4 +31,3 @@ description: "acl_from_text – create an ACL from text"
 <p> acl_free3, acl_get_entry3, Xw acl_to_text 3 , <a href="/docs/linux/man/5-acl/">acl</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> Derived from the FreeBSD manual pages written by An Robert N M Watson Aq rwatson [at] FreeBSD.org , and adapted for Linux by An Andreas Gruenbacher Aq a.gruenbacher [at] bestbits.at . </p>
-<h2>Index</h2>

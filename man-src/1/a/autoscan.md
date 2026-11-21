@@ -44,4 +44,3 @@ description: "autoscan – Generate a preliminary configure.ac"
 <dt>
 </dt><dd> <code>info autoscan</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

@@ -74,4 +74,3 @@ description: "ptksh – Perl/Tk script to provide a graphical user interface for
 <h2>AUTHORS</h2>
 <p> Mike Beller &lt;beller [at] penvision.com&gt;, Achim Bohnet &lt;ach [at] mpe.mpg.de&gt; </p>
 <p> Copyright (c) 1996 &#8211; 1998 Achim Bohnet and Mike Beller. All rights reserved. This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself. </p>
-<h2>Index</h2>

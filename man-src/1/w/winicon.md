@@ -43,4 +43,3 @@ description: "Microsoft Windows icon files"
 <h3>MIME Type and File Name Extension</h3>
 <p> The MIME type of Windows icon files is registered by IANA as <code>image/vnd.microsoft.icon</code>, but the unofficial name <code>image/x-icon</code> is still widely used. </p>
 <p> The file name extension (used by Microsoft operating systems as file type identifier) is <code>.ico</code>. </p>
-<h2>Index</h2>

@@ -22,4 +22,3 @@ description: "append_filename – Concatenates a filename to a path. Allegro gam
 <p> Returns a copy of the `dest&#8217; parameter. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-replace_filename/">replace_filename</a></code>(3) </p>
-<h2>Index</h2>

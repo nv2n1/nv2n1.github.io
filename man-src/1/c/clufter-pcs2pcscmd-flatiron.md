@@ -87,4 +87,3 @@ description: "clufter – pcs2pcscmd-flatiron"
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/8-pcs/">pcs</a></i>(8), <i><a href="/docs/linux/man/1-clufter/">clufter</a></i>(1), </p>
 <p> <i><a href="/docs/linux/man/1-clufter-pcs2pcscmd/">clufter-pcs2pcscmd</a></i>(1), <i><a href="/docs/linux/man/1-clufter-pcs2pcscmd-needle/">clufter-pcs2pcscmd-needle</a></i>(1), and perhaps more </p>
-<h2>Index</h2>

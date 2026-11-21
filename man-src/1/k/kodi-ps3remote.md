@@ -20,4 +20,3 @@ description: "kodi-ps3remote – PS3 Blu-Ray Remote Control Client for Kodi"
 <dt><code>&#8211;port</code> PORT</dt>
 <dd> (default: 9777) </dd>
 </dl>
-<h2>Index</h2>

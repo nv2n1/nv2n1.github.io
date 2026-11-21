@@ -44,4 +44,3 @@ url: "/docs/linux/man/1-fc-query/"
 <p> The fontconfig user&#8217;s guide, in HTML format: <i>/usr/share/doc/fontconfig/fontconfig-user.html</i>.  </p>
 <h2>AUTHOR</h2>
 <p> This manual page was updated by Behdad Esfahbod &lt;behdad [at] behdad.org&gt;. </p>
-<h2>Index</h2>

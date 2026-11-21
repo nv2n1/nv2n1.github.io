@@ -61,4 +61,3 @@ description: "kcforesttest – command line interface to test the directory tree
 <p> This command returns 0 on success, another on failure. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-kcforestmgr/">kcforestmgr</a></code>(1) </p>
-<h2>Index</h2>

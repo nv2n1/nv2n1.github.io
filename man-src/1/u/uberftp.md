@@ -394,4 +394,3 @@ description: "uberftp – GridFTP-enabled client"
  Active vs. Passive FTP: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://slacksite.com/other/ftp.html">http://slacksite.com/other/ftp.html</a> </p>
 <p> <code>Note: The links above are not under NCSA&#8217;s control so they may become obsolete.</code> </p>
-<h2>Index</h2>

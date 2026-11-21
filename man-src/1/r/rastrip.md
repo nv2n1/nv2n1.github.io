@@ -70,4 +70,3 @@ description: "rastrip – strip argus(8) data file."
 Carter Bullard (carter [at] qosient.com).
 </pre>
 <h2>BUGS</h2>
-<h2>Index</h2>

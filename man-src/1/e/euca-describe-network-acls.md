@@ -71,4 +71,3 @@ description: "euca-describe-network-acls – Describe one or more network ACLs"
 <dt>entry.rule-number</dt>
 <dd> rule number of a network ACL entry network-acl-id tag-key key of a tag assigned to the network ACL tag-value value of a tag assigned to the network ACL tag:KEY specific tag key/value combination vpc-id the VPC&#8217;s ID </dd>
 </dl>
-<h2>Index</h2>

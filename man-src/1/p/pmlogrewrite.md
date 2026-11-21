@@ -278,4 +278,3 @@ metric 60.8. * {pmid-&gt;123. *.*} metric 60.9. * {pmid-&gt;123. *.*} metric 60.
 <p> All error conditions detected by <code>pmlogrewrite</code> are reported on <i>stderr</i> with textual (if sometimes terse) explanation. </p>
 <p> Should the input archive log be corrupted (this can happen if the <code>pmlogger</code> instance writing the log suddenly dies), then <code>pmlogrewrite</code> will detect and report the position of the corruption in the file, and any subsequent information from that archive log will not be processed. </p>
 <p> If any error is detected, <code>pmlogrewrite</code> will exit with a non-zero status. </p>
-<h2>Index</h2>

@@ -27,4 +27,3 @@ description: "mate-thumbnail-font – configure MATE network proxy"
 <h2>SEE ALSO</h2>
 <p> Latest version of the MATE Desktop User Guide for your platform. </p>
 <p> <code><a href="/docs/linux/man/1-mate-control-center/">mate-control-center</a></code>(1), <code><a href="/docs/linux/man/1-mate-font-viewer/">mate-font-viewer</a></code>(1) </p>
-<h2>Index</h2>

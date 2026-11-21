@@ -150,4 +150,3 @@ description: "gcov-tool – offline gcda profile processing tool"
      software.  Copies published by the Free Software Foundation raise
      funds for GNU development.
 </pre>
-<h2>Index</h2>

@@ -106,4 +106,3 @@ rejected.
 <dd> Bison&#8217;s &quot;<code>-y</code>&quot; option does not affect bison&#8217;s lack of support for features of AT&amp;T yacc which were deemed obsolescent.</dd></dl>
 <h2>DIAGNOSTICS</h2>
 <p> If there are rules that are never reduced, the number of such rules is reported on standard error. If there are any LALR(1) conflicts, the number of conflicts is reported on standard error. </p>
-<h2>Index</h2>

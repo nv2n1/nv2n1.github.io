@@ -21,4 +21,3 @@ description: "debconf-escape – helper when working with debconf’s escape cap
 <p> <code><a href="/docs/linux/man/7-debconf-devel/">debconf-devel</a></code>(7) (available in the debconf-doc package)</p>
 <h2>AUTHOR</h2>
 <p> Colin Watson &lt;cjwatson [at] debian.org&gt; </p>
-<h2>Index</h2>

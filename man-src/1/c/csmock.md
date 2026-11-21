@@ -74,4 +74,3 @@ description: "csmock – run static analysis of the given SRPM using mock"
 <p> <code>scan.log</code> &#8211; scan log file (useful for debugging scan failures) </p>
 <p> <code>debug</code> &#8211; a directory containing additional data (intended for csmock debugging) </p>
 <p> Note that external plug-ins of csmock may create additional files (not covered by this man page) in the directory with results. </p>
-<h2>Index</h2>

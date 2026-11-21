@@ -122,4 +122,3 @@ $ git config --global web.browser firefox
 <p> as they are probably more user specific than repository specific. See <code><a href="/docs/linux/man/1-git-config/">git-config</a></code>(1) for more information about this.</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

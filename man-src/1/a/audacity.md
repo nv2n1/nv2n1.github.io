@@ -76,4 +76,3 @@ description: "audacity – Graphical cross-platform audio editor"
 <h2>AUTHORS</h2>
 <p> Project leaders include Dominic Mazzoni, Matt Brubeck, James Crook, Vaughan Johnson, Leland Lucius, and Markus Meyer, but dozens of others have contributed, and Audacity would not be possible without wxWindows, libsndfile, and many of the other libraries it is built upon. For the most recent list of contributors and current email addresses, see our website: </p>
 <p> <a rel="nofollow" href="http://audacity.sourceforge.net/about/credits/">http://audacity.sourceforge.net/about/credits/</a> </p>
-<h2>Index</h2>

@@ -53,4 +53,3 @@ description: "shotwell – Digital photo manager"
 <p> Report bugs: <a rel="nofollow" href="https://bugzilla.gnome.org/enter_bug.cgi?product=Shotwell">https://bugzilla.gnome.org/enter_bug.cgi?product=Shotwell</a> </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Jim Nelson jim [at] yorba.org and Allison Barlow allison [at] yorba.org. </p>
-<h2>Index</h2>

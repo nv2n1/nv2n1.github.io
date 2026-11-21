@@ -58,4 +58,3 @@ gdal_proximity.py srcfile dstfile[-srcband n][-dstband n]
 <dd> Specify a value to be applied to all pixels that are within the -maxdist of target pixels (including the target pixels) instead of a distance value.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Frank Warmerdam warmerdam [at] pobox.com </p>
-<h2>Index</h2>

@@ -16,4 +16,3 @@ description: "destroy_font – Frees the memory being used by a font structure. 
 <p> Frees the memory being used by a font structure. Don&#8217;t use this on the default global Allegro font or any text routines using it could crash. You should use this only on fonts you have loaded manually after you are done with them, to prevent memory leaks in your program. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-load_datafile_object/">load_datafile_object</a></code>(3), <code><a href="/docs/linux/man/3-load_font/">load_font</a></code>(3), <code><a href="/docs/linux/man/3-exfont/">exfont</a></code>(3) </p>
-<h2>Index</h2>

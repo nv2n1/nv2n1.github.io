@@ -19,4 +19,3 @@ description: "docker-swarm-unlock-key – Manage the unlock key"
 <p> <code>&#8211;rotate</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Rotate unlock key</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-swarm/">docker-swarm</a>(1)</code> </p>
-<h2>Index</h2>

@@ -94,4 +94,3 @@ description: "yum list data plugin"
 <pre>
 James Antill &lt;james.antill [at] redhat.com&gt;.
 </pre>
-<h2>Index</h2>

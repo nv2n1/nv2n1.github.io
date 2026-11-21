@@ -83,4 +83,3 @@ description: "progress – Coreutils Progress Viewer"
 <p> <a rel="nofollow" href="http://github.com/Xfennec/progress">http://github.com/Xfennec/progress</a> </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Thomas Zimmermann &lt;bugs [at] vdm-design.de&gt;, for the openSUSE project (and may be used by others). </p>
-<h2>Index</h2>

@@ -74,4 +74,3 @@ description: "oggz-validate — Validate the Ogg framing of one or more files"
 &nbsp;<wbr></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-oggz-sort/">oggz-sort</a></code><code>(1)</code>, <code><a href="/docs/linux/man/1-oggz-dump/">oggz-dump</a></code><code>(1)</code>, <code><a href="/docs/linux/man/1-oggz-info/">oggz-info</a></code><code>(1)</code> </p>
-<h2>Index</h2>

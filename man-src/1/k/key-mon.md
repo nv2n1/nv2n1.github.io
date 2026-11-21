@@ -116,4 +116,3 @@ description: "Keymon – Keyboard and mouse monitor window for GTK."
 <dl>
 <dt>
 </dt><dd> <code><a rel="nofollow" href="http://code.google.com/p/key-mon/issues/list">http://code.google.com/p/key-mon/issues/list</a></code></dd></dl>
-<h2>Index</h2>

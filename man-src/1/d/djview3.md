@@ -266,4 +266,3 @@ description: "djview3 – Standalone DjVu viewer"
 <p> This program was written by Andrei Erofeev &lt;andrew_erofeev [at] yahoo.com&gt; and was then improved by Bill Riemers &lt;docbill [at] sourceforge.net&gt; and L&#8217;eon Bottou &lt;leonb [at] users.sourceforge.net&gt;. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-djvu/">djvu</a></code>(1), <code><a href="/docs/linux/man/1-ddjvu/">ddjvu</a></code>(1), <code><a href="/docs/linux/man/1-nsdejavu/">nsdejavu</a></code>(1) </p>
-<h2>Index</h2>

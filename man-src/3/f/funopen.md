@@ -60,4 +60,3 @@ csh &gt; funtable "test.ev[EVENTS,circle(512,512,10)]" foo.ev
 <p> Upon success <i>FunOpen()</i> returns a Fun handle that is used in subsequent Funtools calls. On error, <font SIZE="-1">NULL</font> is returned.</p>
 <h2>SEE ALSO</h2>
 <p> See funtools(n) for a list of Funtools help pages </p>
-<h2>Index</h2>

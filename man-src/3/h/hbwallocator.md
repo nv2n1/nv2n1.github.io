@@ -49,4 +49,3 @@ Link with - lmemkind
 <p> Copyright (C) 2015 &#8211; 2016 Intel Corporation. All rights reserved.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-hbwmalloc/">hbwmalloc</a>(3),</code> <code><a href="/docs/linux/man/3-numa/">numa</a></code>(3), <code><a href="/docs/linux/man/8-numactl/">numactl</a></code>(8), <code><a href="/docs/linux/man/3-memkind/">memkind</a></code>(3) </p>
-<h2>Index</h2>

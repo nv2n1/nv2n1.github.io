@@ -38,4 +38,3 @@ description: "gnome-color-chooser – GTK+/GNOME desktop appearance customizatio
 <h2>AUTHOR</h2>
 <p> This manual page was written by<br />
  Werner Pantke &lt;gnome-color-chooser [at] punk-ass-bitch.org&gt; . </p>
-<h2>Index</h2>

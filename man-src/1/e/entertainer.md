@@ -22,4 +22,3 @@ description: "entertainer – Media Center for the GNOME/Xfce Desktop"
 <h2>AUTHORS</h2>
 <p> <code>entertainer</code> was originally written by Lauri Taimila &lt;lauri [at] taimila.com&gt; and is now maintained by the Entertainer Developers &lt;entertainer-dev [at] lists.ironlionsoftware.com&gt;. </p>
 <p> This manual page was written by Marco Rodrigues &lt;gothicx [at] sapo.pt&gt; and Matt Layman &lt;laymansterms.dev [at] gmail.com&gt;. </p>
-<h2>Index</h2>

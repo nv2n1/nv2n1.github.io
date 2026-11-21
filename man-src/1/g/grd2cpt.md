@@ -83,4 +83,3 @@ gmt grd2cpt mydata.nc -Crelief -L0/10000 -S0/200/20 &gt; mydata.cpt
 <p> <code>gmt</code>, <code>gmt.conf</code>, <code>grdhisteq</code>, <code>grdinfo</code>, <code>makecpt</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

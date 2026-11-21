@@ -41,4 +41,3 @@ description: "ocamldebug – the OCaml source-level replay debugger."
  <i>The OCaml user&#8217;s manual</i>, chapter &quot;The debugger&quot;.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Sven LUTHER &lt;luther [at] debian.org&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

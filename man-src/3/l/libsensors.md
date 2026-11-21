@@ -109,4 +109,3 @@ void (*sensors_fatal_error)(const char *proc, const char *err);
 <p> <a href="/docs/linux/man/5-sensors-conf/">sensors.conf</a>(5) </p>
 <h2>AUTHOR</h2>
 <p> Frodo Looijaard, Jean Delvare and others <a rel="nofollow" href="http://www.lm-sensors.org/">http://www.lm-sensors.org/</a> </p>
-<h2>Index</h2>

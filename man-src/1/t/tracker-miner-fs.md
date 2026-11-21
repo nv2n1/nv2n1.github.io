@@ -38,4 +38,3 @@ description: "tracker-miner-fs – Used to crawl the file system to mine data."
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tracker-store/">tracker-store</a></code>(1), <code><a href="/docs/linux/man/1-tracker-info/">tracker-info</a></code>(1). </p>
-<h2>Index</h2>

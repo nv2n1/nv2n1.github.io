@@ -185,4 +185,3 @@ COPY [ BINARY ] tablename  [ WITH OIDS ]
     [ [USING] DELIMITERS ' delimiter ' ]
     [ WITH NULL AS ' null string ' ]
 </code></pre>
-<h2>Index</h2>

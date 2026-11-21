@@ -20,4 +20,3 @@ description: "arora-placesimport – a tool for importing browser history from F
 <p> This manual page was written by Benjamin C. Meyer &lt;ben [at] meyerhome.net&gt; </p>
 <p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation. </p>
 <p> On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL. </p>
-<h2>Index</h2>

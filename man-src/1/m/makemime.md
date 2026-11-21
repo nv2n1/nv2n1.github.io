@@ -248,4 +248,3 @@ makemime -j                                                 \
 <dt>
 </dt><dd> [set $man.base.url.for.relative.links]/courier.html</dd></dl>
 </dl>
-<h2>Index</h2>

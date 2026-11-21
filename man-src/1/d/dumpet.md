@@ -27,4 +27,3 @@ description: "dumpet – dump information about bootable CDs and other similar f
 <dd> Dump the El Torito structure to standard output as an XML document.</dd></dl>
 <h2>AUTHORS</h2>
 <p> An Peter Jones Aq pjones [at] redhat.com </p>
-<h2>Index</h2>

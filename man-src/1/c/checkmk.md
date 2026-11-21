@@ -263,4 +263,3 @@ int main(void)
 <h2>AUTHOR</h2>
 <p> <code>checkmk</code> and this manual were written by Micah J Cowan. </p>
 <p> Copyright (C) 2006, 2010 Micah J Cowan. </p>
-<h2>Index</h2>

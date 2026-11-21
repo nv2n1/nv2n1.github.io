@@ -17,4 +17,3 @@ description: "fade_out_range – Gradually fades a part of the palette to black.
 <p> Note that this function will block your game while the fade is in effect, and it won&#8217;t work right visually if you are not in an 8 bit color depth resolution. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-fade_out/">fade_out</a></code>(3) </p>
-<h2>Index</h2>

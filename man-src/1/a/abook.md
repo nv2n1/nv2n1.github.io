@@ -62,4 +62,3 @@ description: "abook – text-based address book program"
 <h2>AUTHOR</h2>
 <p> This manual page was written by Alan Ford &lt;alan [at] whirlnet.co.uk&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
 <p> <code>abook</code> was written by Jaakko Heinonen &lt;jheinonen [at] users.sourceforge.net&gt; </p>
-<h2>Index</h2>

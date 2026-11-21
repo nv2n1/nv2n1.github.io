@@ -43,4 +43,3 @@ LOCK_FUNCTION(my_timer_handler);
 <p> Returns zero on success, or a negative number if there is no room to add a new user timer. </p>
 <h2>SEE ALSO</h2>
 <p> <code>install_timer</code>(3), <code>remove_int</code>(3), <code>install_int</code>(3), <code>install_param_int_ex</code>(3), <code><a href="/docs/linux/man/3-excamera/">excamera</a></code>(3), <code><a href="/docs/linux/man/3-exsprite/">exsprite</a></code>(3), <code><a href="/docs/linux/man/3-extimer/">extimer</a></code>(3), <code><a href="/docs/linux/man/3-exunicod/">exunicod</a></code>(3), <code><a href="/docs/linux/man/3-exupdate/">exupdate</a></code>(3) </p>
-<h2>Index</h2>

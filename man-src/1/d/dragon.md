@@ -66,4 +66,3 @@ description: "dragon – a video player that has a usability focus"
 <dl>
 <dt>
 </dt><dd> Dragon Player man page.</dd></dl>
-<h2>Index</h2>

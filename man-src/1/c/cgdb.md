@@ -32,4 +32,3 @@ description: "CGDB – manual page for CGDB 0.6.8"
 <dt>
 </dt><dd> <code>info CGDB</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

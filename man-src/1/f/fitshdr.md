@@ -18,4 +18,3 @@ description: "fitshdr – List headers from a FITS file"
 <dt><code>-q</code> N</dt>
 <dd> Quit after reading the Nth header, where N is an integer (optional space between <code>-q</code> and N). </dd>
 </dl>
-<h2>Index</h2>

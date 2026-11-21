@@ -20,4 +20,3 @@ description: "curl_multi_remove_handle – remove an easy handle from a multi se
 <p> CURLMcode type, general libcurl multi interface error code.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-curl_multi_cleanup/">curl_multi_cleanup</a></code>(3),<code><a href="/docs/linux/man/3-curl_multi_init/">curl_multi_init</a></code>(3) </p>
-<h2>Index</h2>

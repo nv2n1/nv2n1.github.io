@@ -24,4 +24,3 @@ mkdir - p - m 700 ~ /.arch - params / signing / echo 'tla-gpg-check gpg_command=
 <h2>AUTHOR</h2>
 <p> tla-gpg-check was written by Tom Lord. </p>
 <p> This manual page was written by Sylvain Beucler &lt;beuc [at] beuc.net&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

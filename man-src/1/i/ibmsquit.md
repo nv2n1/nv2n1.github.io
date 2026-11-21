@@ -21,4 +21,3 @@ description: "ibmsquit – Quit the management simulator"
 <dd> The <font SIZE="-1">TCP/IP</font> port number the simulator is listening on</dd></dl>
 <h2>AUTHOR</h2>
 <p> Eitan Zahavi, Mellanox Technologies <font SIZE="-1">LTD</font>, eitan [at] mellanox.co.il </p>
-<h2>Index</h2>

@@ -27,4 +27,3 @@ description: "clamsubmit – File submission utility for ClamAV"
 <dd> Submit a file that reports as a false positive (ClamAV flags the file as virus). FILE can be &#8211; to specify stdin. Mutually exclusive with -n.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Shawn Webb &lt;swebb [at] sourcefire.com&gt; </p>
-<h2>Index</h2>

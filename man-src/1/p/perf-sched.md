@@ -77,4 +77,3 @@ a dot signals an idle CPU.
 </dt><dd> Display verbose dump of the sched data.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-perf-record/">perf-record</a></code>(1) </p>
-<h2>Index</h2>

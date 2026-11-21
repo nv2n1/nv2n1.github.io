@@ -116,4 +116,3 @@ cur = &amp;nbsp;
 <p> If <i>+folder</i> and/or <i>msg</i> are given, they will become the current folder and/or message.</p>
 <h2>BUGS</h2>
 <p> There is no way to restore the default behavior (to ask the user whether to create a non-existant folder) after <code>-create</code> or <code>-nocreate</code> is given. </p>
-<h2>Index</h2>

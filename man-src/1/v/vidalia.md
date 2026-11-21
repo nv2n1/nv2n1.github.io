@@ -38,4 +38,3 @@ description: "vidalia – Controller GUI for tor"
 <p> Matt Edman &lt;edmanm [at] vidalia-project.net&gt;<br />
  Justin Hipple &lt;hipplej [at] vidalia-project.net&gt; </p>
 <p> This manpage was written by Alexander Wirt &lt;formorer [at] debian.org&gt; for the Debian Distribution (but may be used by others). </p>
-<h2>Index</h2>

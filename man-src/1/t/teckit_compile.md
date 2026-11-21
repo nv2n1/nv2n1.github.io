@@ -28,4 +28,3 @@ description: "teckit_compile – manual page for command line error at –versio
 <dd> generate uncompressed table format</dd></dl>
 <h2>Further Information</h2>
 <p> For further information see the document TECkit_Tools.pdf. A description of the mapping description language used by the compiler, with examples, is found in TECkit_Language.pdf. On a Debian system, these can be found in /usr/share/doc/teckit. </p>
-<h2>Index</h2>

@@ -130,4 +130,3 @@ Change: 2009-04-28 16:05:00.000000000 +0200
 <p> <code><a href="/docs/linux/man/1-gdcmconv/">gdcmconv</a></code>(1), <code><a href="/docs/linux/man/1-gdcmraw/">gdcmraw</a></code>(1), <code><a href="/docs/linux/man/1-pdfinfo/">pdfinfo</a></code>(1)  </p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2006-2010 Mathieu Malaterre </p>
-<h2>Index</h2>

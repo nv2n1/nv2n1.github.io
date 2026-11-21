@@ -67,4 +67,3 @@ or: zim &#8211;help </p>
 </dt><dd> <code>zim &#8211;manual</code></dd></dl>
 <p> should give you access to the complete manual. </p>
 <p> The website for <code>zim</code> can be found at <i><a rel="nofollow" href="http://www.zim-wiki.org">http://www.zim-wiki.org</a></i> </p>
-<h2>Index</h2>

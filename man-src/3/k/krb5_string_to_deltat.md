@@ -22,4 +22,3 @@ description: "krb5_timeofday krb5_set_real_time krb5_us_timeofday krb5_format_ti
 <p> <code>krb5_string_to_deltat</code> parses delta time Fa string into Fa deltat .</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/2-gettimeofday/">gettimeofday</a>(2), <a href="/docs/linux/man/3-krb5/">krb5</a>(3) </p>
-<h2>Index</h2>

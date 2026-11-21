@@ -61,4 +61,3 @@ systemctl enable cjdns-wait-online
 <dt>&bull;</dt>
 <dd> <code>-s</code>, <code>&#8211;wait-for-startup</code>: Wait for full startup instead of just tun dev. This is not implemented.</dd>
 </dl>
-<h2>Index</h2>

@@ -21,4 +21,3 @@ description: "shortrpm – Short-circuit binary RPM package build"
 <h2>AUTHORS</h2>
 <p> <code>shortrpm</code> was written by Lubomir Rintel &lt;lkundrak [at] v3.sk&gt;. </p>
 <p> Latest version can be obtained from &lt;<a rel="nofollow" href="http://v3.sk/~lkundrak/shortrpm">http://v3.sk/~lkundrak/shortrpm</a>&gt;. </p>
-<h2>Index</h2>

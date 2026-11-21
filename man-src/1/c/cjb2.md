@@ -43,4 +43,3 @@ description: "cjb2 – Simple DjVuBitonal encoder."
 <p> This program was initially written by L&eacute;on Bottou &lt;leonb [at] users.sourceforge.net&gt; and was improved by Bill Riemers &lt;docbill [at] sourceforge.net&gt; and many others. The pattern matching algorithm for lossy compression was contributed by Ilya Mezhirov &lt;ilya [at] mezhirov.mccme.ru&gt;. TIFF input routines are inspired by the ones contributed by R. Keith Dennis &lt;dennis [at] rkd.math.cornell.edu&gt; and Paul Young. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-djvu/">djvu</a></code>(1), <code><a href="/docs/linux/man/5-pbm/">pbm</a></code>(5). </p>
-<h2>Index</h2>

@@ -55,4 +55,3 @@ t = $(tempfile) || exit
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-tempnam/">tempnam</a></code>(3), <code><a href="/docs/linux/man/1-mktemp/">mktemp</a></code>(1) </p>
-<h2>Index</h2>

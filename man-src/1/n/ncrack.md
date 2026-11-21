@@ -480,4 +480,3 @@ Ncrack finished.
 <p> Fyodor fyodor [at] insecure.org (m[blue]<code><a rel="nofollow" href="http://insecure.org">http://insecure.org</a></code>m[])</p>
 <h2>NCRACK COPYRIGHT AND LICENSING</h2>
 <p> While it isn&#8217;t distributed with Nmap, Ncrack is part of the Nmap project and falls under the same license and (non) warranty provisions, as described at m[blue]<code><a rel="nofollow" href="http://nmap.org/book/man-legal.html">http://nmap.org/book/man-legal.html</a></code>m[]. </p>
-<h2>Index</h2>

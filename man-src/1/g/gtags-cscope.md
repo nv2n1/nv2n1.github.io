@@ -59,4 +59,3 @@ $ gtags - cscope &gt;&gt; help 0 &lt; arg &gt; : Find this C symbol 1 &lt; arg &
 <p> Tama Communications Corporation.</p>
 <h2>HISTORY</h2>
 <p> The <code>gtags-cscope</code> command appeared in 2006. </p>
-<h2>Index</h2>

@@ -224,4 +224,3 @@ Usage - Limit test client
     Use of CNOs (-Q) is not yet supported.
     Further limit tests could be added.
 </pre>
-<h2>Index</h2>

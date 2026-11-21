@@ -22,4 +22,3 @@ description: "torify – wrapper for torsocks and tor"
 <p> <code><a href="/docs/linux/man/1-tor/">tor</a></code>(1), <code><a href="/docs/linux/man/1-tor-resolve/">tor-resolve</a></code>(1), <code><a href="/docs/linux/man/1-torsocks/">torsocks</a></code>(1)</p>
 <h2>AUTHORS</h2>
 <p> Peter Palfrader and Jacob Appelbaum wrote this manual. </p>
-<h2>Index</h2>

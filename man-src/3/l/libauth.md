@@ -39,4 +39,3 @@ void free_res_info(struct res_info *);
 <p> <tt>$Id:</tt> libauth.pod 8200 2008-11-30 13:31:30Z iulius $</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/8-nnrpd/">nnrpd</a></i>(8), <i><a href="/docs/linux/man/5-readers-conf/">readers.conf</a></i>(5), <i>doc/external-auth</i> </p>
-<h2>Index</h2>

@@ -70,4 +70,3 @@ description: "ospent – Concatenates entities in an SGML/XML document"
 <dt>
 </dt><dd> Author.</dd></dl>
 <h2>COPYRIGHT</h2>
-<h2>Index</h2>

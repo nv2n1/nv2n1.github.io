@@ -135,4 +135,3 @@ description: "xrdb – X server resource database utility"
 <p> The default for no arguments should be to query, not to overwrite, so that it is consistent with other programs.</p>
 <h2>AUTHORS</h2>
 <p> Bob Scheifler, Phil Karlton, rewritten from the original by Jim Gettys </p>
-<h2>Index</h2>

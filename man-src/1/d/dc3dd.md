@@ -23,4 +23,3 @@ description: "dc3dd – convert and copy a file"
 <dt>
 </dt><dd> <code>info dc3dd</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

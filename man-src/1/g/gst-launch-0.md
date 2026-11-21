@@ -234,4 +234,3 @@ description: "gst-launch – build and run a GStreamer pipeline"
 <p> <code>gst-feedback</code>(1), <code>gst-inspect</code>(1), <code>gst-typefind</code>(1)</p>
 <h2>AUTHOR</h2>
 <p> The GStreamer team at <a rel="nofollow" href="http://gstreamer.freedesktop.org/">http://gstreamer.freedesktop.org/</a> </p>
-<h2>Index</h2>

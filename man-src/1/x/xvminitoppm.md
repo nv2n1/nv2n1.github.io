@@ -17,4 +17,3 @@ description: "xvminitoppm – convert a XV \"thumbnail\" picture to PPM"
 <p> <a href="/docs/linux/man/5-ppm/">ppm</a>(5), <a href="/docs/linux/man/1-xv/">xv</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1993 by Ingo Wilken </p>
-<h2>Index</h2>

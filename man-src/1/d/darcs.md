@@ -484,4 +484,3 @@ description: "darcs – an advanced revision control system"
 <p> A user manual is included with Darcs, in PDF and HTML form. It can also be found at <a rel="nofollow" href="http://darcs.net/manual/.">http://darcs.net/manual/.</a></p>
 <h2>LICENSE</h2>
 <p> Darcs is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2, or (at your option) any later version. </p>
-<h2>Index</h2>

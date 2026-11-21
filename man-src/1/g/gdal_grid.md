@@ -208,4 +208,3 @@ gdal_grid -zfield &quot;Elevation&quot; -a invdist:power=2.0:smoothing=1.0 -txe 
 </pre>
 <h2>AUTHORS</h2>
 <p> Andrey Kiselev dron [at] ak4719.spb.edu </p>
-<h2>Index</h2>

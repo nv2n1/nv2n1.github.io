@@ -22,4 +22,3 @@ description: "ql/processes/hullwhiteprocess.hpp – Hull-White stochastic proces
 <p> Hull-White stochastic processes. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

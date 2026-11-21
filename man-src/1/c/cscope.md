@@ -285,4 +285,3 @@ int finishState, void&nbsp;<wbr>(*FinalAction)(char&nbsp;<wbr>*))<br />
 &nbsp;<wbr>{<br />
 &#8230;<br />
 &nbsp;<wbr>} </p>
-<h2>Index</h2>

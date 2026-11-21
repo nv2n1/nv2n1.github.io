@@ -43,4 +43,3 @@ description: "waei – Japanese-English dictionary"
 <h2>AUTHOR</h2>
 <p> gwaei was written by Zachary Dovel &lt;pizzach [at] gmail.com&gt;. </p>
 <p> This manual page was written by Asumu Takikawa &lt;asumu [at] simplyrobot.org&gt;, for the Debian project (and may be used by others). </p>
-<h2>Index</h2>

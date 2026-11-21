@@ -16,4 +16,3 @@ description: "ellipsefill – Draws a filled ellipse. Allegro game programming l
 <p> Draws a filled ellipse with the specified centre and radius. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-circlefill/">circlefill</a></code>(3), <code><a href="/docs/linux/man/3-ellipse/">ellipse</a></code>(3), <code><a href="/docs/linux/man/3-do_ellipse/">do_ellipse</a></code>(3), <code><a href="/docs/linux/man/3-drawing_mode/">drawing_mode</a></code>(3), <code><a href="/docs/linux/man/3-makecol/">makecol</a></code>(3), <code><a href="/docs/linux/man/3-ex12bit/">ex12bit</a></code>(3) </p>
-<h2>Index</h2>

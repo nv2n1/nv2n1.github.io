@@ -70,4 +70,3 @@ description: "kibitz – allow two people to interact with one shell"
 <h2>AUTHOR</h2>
 <p> Don Libes, National Institute of Standards and Technology </p>
 <p> <code>kibitz</code> is in the public domain. NIST and I would appreciate credit if this program or parts of it are used. </p>
-<h2>Index</h2>

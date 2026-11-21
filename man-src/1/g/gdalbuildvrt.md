@@ -98,4 +98,3 @@ gdalbuildvrt -hidenodata -vrtnodata &quot;0 0 255&quot; doq_index.vrt doq/*.tif
 </pre>
 <h2>AUTHOR</h2>
 <p> Even Rouault even.rouault [at] mines-paris.org </p>
-<h2>Index</h2>

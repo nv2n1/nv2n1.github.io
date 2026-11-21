@@ -25,4 +25,3 @@ description: "fwupdtpmevlog – Debugging utility for the TPM event log"
 <dt><code>-p</code>, <code>&#8211;pcr</code></dt>
 <dd> Only show single PCR value</dd></dl>
 <p> This tool will read and parse the TPM event log from the system firwmare. </p>
-<h2>Index</h2>

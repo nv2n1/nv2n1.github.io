@@ -17,4 +17,3 @@ description: "d_edit_proc – Dialog procedure implementing an editable text obj
 <p> Note: dp must point to a buffer at least (d1 + 1) * 4 bytes long because, depending on the encoding format in use, a single character can occupy up to 4 bytes and room must be reserved for the terminating null character. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-excustom/">excustom</a></code>(3), <code><a href="/docs/linux/man/3-exgui/">exgui</a></code>(3) </p>
-<h2>Index</h2>

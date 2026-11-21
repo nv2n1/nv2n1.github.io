@@ -25,4 +25,3 @@ description: "deja-dup-preferences – manual page for deja-dup-preferences 34.3
 <dd> X display to use</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-deja-dup/">deja-dup</a></code>(1) </p>
-<h2>Index</h2>

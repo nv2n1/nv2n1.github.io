@@ -38,4 +38,3 @@ description: "fixcvsdiff – fix problematic diff files"
 <dl>
 <dt>
 </dt><dd> Author of the original perl script and man page</dd></dl>
-<h2>Index</h2>

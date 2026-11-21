@@ -55,4 +55,3 @@ description: "ttf2afm – utility to generate AFM files for TrueType fonts"
 <h2>AUTHOR</h2>
 <p> <code>ttf2afm</code> is part of pdfTeX and was written by Han The Thanh. </p>
 <p> This manual page was originally written by C.M. Connelly, for the Debian GNU/Linux system, and updated by Karl Berry and others. </p>
-<h2>Index</h2>

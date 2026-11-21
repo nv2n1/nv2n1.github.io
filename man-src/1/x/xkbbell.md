@@ -47,4 +47,3 @@ description: "xkbbell – XKB extension user utility"
 <dt><code>-version</code></dt>
 <dd> print program version and exit</dd></dl>
 <p> If neither device nor feedback are specified, xkbbell uses the default values for the core keyboard device. </p>
-<h2>Index</h2>

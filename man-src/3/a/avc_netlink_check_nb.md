@@ -30,4 +30,3 @@ description: "avc_netlink_open, avc_netlink_close, avc_netlink_acquire_fd, avc_n
 <p> <code>avc_netlink_acquire_fd</code>() returns a non-negative file descriptor number on success. Other functions with a return value return zero on success. On error, -1 is returned and <i>errno</i> is set appropriately.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-avc_open/">avc_open</a></code>(3), <code><a href="/docs/linux/man/3-selinux_set_callback/">selinux_set_callback</a></code>(3), <code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8) </p>
-<h2>Index</h2>

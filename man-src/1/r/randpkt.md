@@ -67,4 +67,3 @@ description: "randpkt – Random Packet Generator"
 </pre>
 <h2>SEE ALSO</h2>
 <p> <i>pcap</i>(3), <i><a href="/docs/linux/man/1-editcap/">editcap</a></i>(1) </p>
-<h2>Index</h2>

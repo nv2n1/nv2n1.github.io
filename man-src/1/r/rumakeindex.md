@@ -33,4 +33,3 @@ description: "rumakeindex – process a LaTeX index using Russian Cyrillic chara
 <h2>AUTHOR</h2>
 <p> Werner Lemberg &lt;wl [at] gnu.org&gt;, Vladimir Volovich &lt;TeX [at] vvv.vsu.ru&gt;. </p>
 <p> This manual page was written by C.M. Connelly &lt;c@eskimo.com&gt;, for the Debian GNU/Linux system. It may be used by other distributions without contacting the author. Any mistakes or omissions in the manual page are my fault; inquiries about or corrections to this manual page should be directed to me (and not to the primary author). </p>
-<h2>Index</h2>

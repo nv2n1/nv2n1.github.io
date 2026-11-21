@@ -27,4 +27,3 @@ description: "mlmmj-list – list people / subscribers associated with a list"
 <dt>
 </dt><dd>Mads Martin J&oslash;rgensen &lt;mmj [at] mmj.dk&gt; </dd>
 </dl>
-<h2>Index</h2>

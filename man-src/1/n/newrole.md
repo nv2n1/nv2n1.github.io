@@ -56,4 +56,3 @@ Anthony Colatrella
                 Michael Thompson&lt;mcthomps[at] us.ibm.com&gt;
                     Dan Walsh&lt;dwalsh[at] redhat.com&gt;
 </code></pre>
-<h2>Index</h2>

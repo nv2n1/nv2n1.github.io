@@ -101,4 +101,3 @@ description: "gramps – Genealogical Research and Analysis Management Programmi
 <h2>DOCUMENTATION</h2>
 <p> The user documentation is available through standard GNOME Help browser in the form of Gramps Manual. The manual is also available in XML format as <code>gramps-manual.xml</code> under <i>doc/gramps-manual/$LANG</i> in the official source distribution. </p>
 <p> The developer documentation can be found on the <i><a rel="nofollow" href="http://developers.gramps-project.org">http://developers.gramps-project.org</a></i> site. </p>
-<h2>Index</h2>

@@ -397,4 +397,3 @@ ormalcolor&nbsp;<wbr>&nbsp;command as a delimiter within the&nbsp;eginpicture&#
 <p> The mathsPIC package manual and examples</p>
 <h2>BUGS</h2>
 <p> Please report bugs to Dick Nickalls (dick [AT] nickalls [dot] org) or to Apostolos Syropoulos </p>
-<h2>Index</h2>

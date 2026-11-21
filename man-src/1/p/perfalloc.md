@@ -33,4 +33,3 @@ description: "perfalloc – notify pmdaperfevent(1) to disable hardware counter 
 <p> The perfalloc process does not check the status of the request and therefore is not able to provide a positive confirmation that the request succeeded and the hardware counters are disabled.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pmdaperfevent/">pmdaperfevent</a></code>(1), <code>perfevent.conf</code>(3) and <code><a href="/docs/linux/man/8-sysctl/">sysctl</a></code>(8). </p>
-<h2>Index</h2>

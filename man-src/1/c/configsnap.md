@@ -30,4 +30,3 @@ description: "configsnap – manual page for configsnap 0.11"
 <dt><code>-p</code> PHASE, <code>&#8211;phase</code>=<i>PHASE</i></dt>
 <dd> phase this is being used for. Can be any string. Phases containing post or rollback will perform diffs </dd>
 </dl>
-<h2>Index</h2>

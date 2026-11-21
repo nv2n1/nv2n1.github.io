@@ -46,4 +46,3 @@ description: "feynmf – Process LaTeX files using FeynMF"
 <h2>BUGS</h2>
 <p> The preparation of <tt>&quot;.tfm&quot;</tt> files is not foolproof yet, because we can parse <code>TeX</code> files only superficially. </p>
 <p> This script has only been tested for recent <code>teTeX</code> distributions of <font SIZE="-1">UNIX</font> <code>TeX</code>, though it will probably work with other versions of <font SIZE="-1">UNIX</font> <code>TeX</code>. The author will be grateful for portability suggestions, even concerning <code>Borg</code> operating systems, for the benefit of those users that are forced to live with <font SIZE="-1">DOS</font> or Windows. </p>
-<h2>Index</h2>

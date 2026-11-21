@@ -26,4 +26,3 @@ pixel2 = makecol16_dither(255, 192, 64, 1, 0);
 <p> Returns the RGB value dithered for the specified coordinate. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-makecol/">makecol</a></code>(3), <code><a href="/docs/linux/man/3-makecol8/">makecol8</a></code>(3), <code><a href="/docs/linux/man/3-set_color_conversion/">set_color_conversion</a></code>(3) </p>
-<h2>Index</h2>

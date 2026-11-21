@@ -71,4 +71,3 @@ description: "clufter – ccs2pcs"
 <h2>SEE ALSO</h2>
 <p> <i>/usr/share/doc/clufter-0.59.5/rgmanager-pacemaker</i>, <i>cluster.conf</i>(5), <i>ccs</i>(7), <i><a href="/docs/linux/man/1-clufter/">clufter</a></i>(1), </p>
 <p> <i><a href="/docs/linux/man/1-clufter-ccs2pcs-flatiron/">clufter-ccs2pcs-flatiron</a></i>(1), <i><a href="/docs/linux/man/1-clufter-ccs2pcs-needle/">clufter-ccs2pcs-needle</a></i>(1), and perhaps more </p>
-<h2>Index</h2>

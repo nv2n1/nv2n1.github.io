@@ -27,4 +27,3 @@ description: "swappo – swap msgid and msgstr fields in a PO file"
 <dl>
 <dt>
 </dt><dd> Author.</dd></dl>
-<h2>Index</h2>

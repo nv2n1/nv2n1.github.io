@@ -86,4 +86,3 @@ description: "lcmaps – The Local Credential MAPping Service"
 <p> <code>lcmaps.db</code>(5), <code>lcas_lcmaps_gt4_interface</code>(8), <code>lcas_lcmaps_gt_interface</code>(8), <code>lcmaps_dummy_bad.mod</code>(8), <code>lcmaps_dummy_good.mod</code>(8), <code>lcmaps_ldap_enf.mod</code>(8), <code>lcmaps_localaccount.mod</code>(8), <code>lcmaps-plugins-c-pep</code>(8), <code>lcmaps_plugins_scas_client</code>(8), <code>lcmaps_poolaccount.mod</code>(8), <code>lcmaps_posix_enf.mod</code>(8), <code>lcmaps_tracking_groupid.mod</code>(8), <code>lcmaps_verify_proxy.mod</code>(8), <code>scas</code>(8), <code>scas.conf</code>(5), <code>glexec</code>(1), <code>glexec.conf</code>(5), <code>ees</code>(1), <code>ees.conf</code>(5) </p>
 <h2>AUTHORS</h2>
 <p> LCMAPS and the LCMAPS plug-ins were written by the Grid Middleware Security Team &lt;grid-mw-security [at] nikhef.nl&gt;. </p>
-<h2>Index</h2>

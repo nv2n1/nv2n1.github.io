@@ -19,4 +19,3 @@ description: "pooltype – display a WEB pool file"
 <p> <code><a href="/docs/linux/man/1-tangle/">tangle</a></code>(1).</p>
 <h2>AUTHORS</h2>
 <p> Donald E. Knuth wrote the program and originally ported it to Unix. It was published as part of the <i>TeXware</i> technical report, available from the TeX Users Group. </p>
-<h2>Index</h2>

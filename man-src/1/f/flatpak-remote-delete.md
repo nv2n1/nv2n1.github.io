@@ -49,4 +49,3 @@ description: "flatpak-remote-delete – Delete a remote repository"
 <p> <code>$ flatpak &#8211;user remote-delete dried-raisins</code></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-remote-add/">flatpak-remote-add</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-remote-modify/">flatpak-remote-modify</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-remotes/">flatpak-remotes</a></code>(1) </p>
-<h2>Index</h2>

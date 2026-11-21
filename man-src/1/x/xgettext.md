@@ -157,4 +157,3 @@ description: "xgettext – extract gettext strings from source"
 <dt>
 </dt><dd> <code>info xgettext</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

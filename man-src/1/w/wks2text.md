@@ -20,4 +20,3 @@ description: "wks2text – convert Works spreadsheet into plain text"
 <dt><code>-v</code>:</dt>
 <dd> Output wks2text version </dd>
 </dl>
-<h2>Index</h2>

@@ -50,4 +50,3 @@ description: "fapg – Fast Audio Playlist Generator"
 <p> if command starts with <i>intern</i> the build-in description (Author,Title,Link) is generated. Please note that in all given directories ( and in &#8230;basedir/xml ) files called podcast.jpg are referenced. Many header fields are set to defaults using environment variables like LOGNAME or LANG. </p>
 <h2>AUTHOR</h2>
 <p> Antoine Jacquet &lt;royale [at] zerezo.com&gt;, <a rel="nofollow" href="http://royale.zerezo.com/fapg/.">http://royale.zerezo.com/fapg/.</a> Manpage by Thomas Kappler &lt;thomas.kappler [at] stud.uni-karlsruhe.de&gt;. </p>
-<h2>Index</h2>

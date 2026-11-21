@@ -260,4 +260,3 @@ dvilj[--Dnumber][-ccopies][-dmode][-D][-E][-eoutputfile]
 <p> Joachim Schrod &lt;jschrod [at] acm.org&gt; supplied security fixes and updated this man page.</p>
 <h2>LICENSE</h2>
 <p> dvi2xx is public domain software. dviljk changes are covered by the <font SIZE="-1">GNU</font> General Public License. </p>
-<h2>Index</h2>

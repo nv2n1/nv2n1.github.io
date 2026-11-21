@@ -58,4 +58,3 @@ description: "po2oo – Convert Gettext PO localization files to an OpenOffice.o
 <dt>&#8211;multifile</dt>
 <dd> how to split po/pot files (single, toplevel or onefile) </dd>
 </dl>
-<h2>Index</h2>

@@ -111,4 +111,3 @@ description: "vorbisgain – calculate the replay gain for Ogg Vorbis files"
 <dt><a rel="nofollow" href="http://www.hydrogenaudio.org/">http://www.hydrogenaudio.org/</a></dt>
 <dd> Discussion forum for audio compression and related issues, including Ogg Vorbis and VorbisGain. </dd>
 </dl>
-<h2>Index</h2>

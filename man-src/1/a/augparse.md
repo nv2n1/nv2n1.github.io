@@ -47,4 +47,3 @@ description: "augparse – execute an Augeas module"
 <h2>SEE ALSO</h2>
 <p> <code>Augeas</code> project homepage &lt;<a rel="nofollow" href="http://www.augeas.net/">http://www.augeas.net/</a>&gt; </p>
 <p> augtool </p>
-<h2>Index</h2>

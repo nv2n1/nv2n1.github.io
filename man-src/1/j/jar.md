@@ -323,4 +323,3 @@ jar i jarfile[-Joption...][@arg - file...]
 <dt>&bull;</dt>
 <dd> The JAR section of The Java Tutorials at <a rel="nofollow" href="http://docs.oracle.com/javase/tutorial/deployment/jar/index.html">http://docs.oracle.com/javase/tutorial/deployment/jar/index.html</a> </dd>
 </dl>
-<h2>Index</h2>

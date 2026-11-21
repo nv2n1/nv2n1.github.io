@@ -66,4 +66,3 @@ description: "ftff – fault tolerant file find utility"
 <p> Guido Socher (guido [at] linuxfocus.org)</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-whichman/">whichman</a></code>(1), <code><a href="/docs/linux/man/1-find/">find</a></code>(1) </p>
-<h2>Index</h2>

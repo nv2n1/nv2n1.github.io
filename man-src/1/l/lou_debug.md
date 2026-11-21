@@ -31,4 +31,3 @@ description: "lou_debug – A debugger for liblouis Braille translation tables"
 <dt>
 </dt><dd> <code>info liblouis</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

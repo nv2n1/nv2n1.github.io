@@ -61,4 +61,3 @@ session         required        /usr/lib/pam_wrapper/pam_matrix.so passdb=/path/
 <p> LD_PRELOAD=./libpam_wrapper.so PAM_WRAPPER=1 PAM_WRAPPER_SERVICE_DIR=pam_services/ ./my_pam_app</p>
 <h2>PAM_MATRIX</h2>
 <p> We offer a module to make testing of PAM applications easier. You find more information in the <a href="/docs/linux/man/8-pam_matrix/">pam_matrix</a>(8) manpage. </p>
-<h2>Index</h2>

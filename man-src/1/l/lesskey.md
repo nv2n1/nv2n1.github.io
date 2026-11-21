@@ -854,4 +854,3 @@ description: "lesskey – specify key bindings for less"
 <h2>AUTHOR</h2>
 <p> Mark Nudelman<br />
  Report bugs at <a rel="nofollow" href="https://github.com/gwsw/less/issues.">https://github.com/gwsw/less/issues.</a> </p>
-<h2>Index</h2>

@@ -42,4 +42,3 @@ description: "gresource – GResource tool"
 <dl>
 <dt>
 </dt><dd> Prints help and exits.</dd></dl>
-<h2>Index</h2>

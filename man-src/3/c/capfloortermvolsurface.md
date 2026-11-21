@@ -22,4 +22,3 @@ description: "ql/termstructures/volatility/capfloor/capfloortermvolsurface.hpp â
 <p> Cap/floor smile volatility surface. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

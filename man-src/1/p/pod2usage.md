@@ -47,4 +47,3 @@ description: "pod2usage – print usage messages from embedded pod docs in files
 <p> Please report bugs using &lt;<a rel="nofollow" href="http://rt.cpan.org">http://rt.cpan.org</a>&gt;. </p>
 <p> Brad Appleton &lt;bradapp [at] enteract.com&gt; </p>
 <p> Based on code for <code><a href="/docs/linux/man/1-pod2text/">pod2text</a>(1)</code> written by Tom Christiansen &lt;tchrist [at] mox.perl.com&gt; </p>
-<h2>Index</h2>

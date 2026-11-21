@@ -53,4 +53,3 @@ description: "nwbols – List NetWare Bindery Objects"
 </dt><dd> By default, the object&#8217;s name, its ID and its type are listed by <code>nwbols.</code> In the verbose mode, activated by <code>-v,</code> the object flags, its security byte and the properties flag is also listed.</dd></dl>
 <h2>AUTHORS</h2>
 <p> nwbols was written by Volker Lendecke. See the Changes file of ncpfs for other contributors. </p>
-<h2>Index</h2>

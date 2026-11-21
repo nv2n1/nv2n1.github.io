@@ -27,4 +27,3 @@ globus_module_deactivate(GLOBUS_OPENSSL_MODULE)
 <p> Module descriptor</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_openssl_module from the source code. </p>
-<h2>Index</h2>

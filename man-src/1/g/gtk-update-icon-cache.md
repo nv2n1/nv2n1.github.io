@@ -46,4 +46,3 @@ description: "gtk-update-icon-cache – Icon theme caching utility"
 <dl>
 <dt>
 </dt><dd> Validate existing icon cache.</dd></dl>
-<h2>Index</h2>

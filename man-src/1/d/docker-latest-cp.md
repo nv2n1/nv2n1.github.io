@@ -143,4 +143,3 @@ $ docker cp -L /tmp/somefile.ln myappcontainer:/tmp/
 <p> This command copies content of the local /tmp/somefile into the file /tmp/somefile.ln in the container. Without -L option, the /tmp/somefile.ln preserves its symbolic link but not its content. </p>
 <h2>HISTORY</h2>
 <p> April 2014, Originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and internal work. June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; May 2015, updated by Josh Hawn &lt;josh.hawn [at] docker.com&gt; </p>
-<h2>Index</h2>

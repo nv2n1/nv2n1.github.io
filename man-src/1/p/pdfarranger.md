@@ -27,4 +27,3 @@ description: "PDF Arranger – Application for PDF Merging, Rearranging, Splitti
 <p> Copyright &#169; 2008-2017 Konstantinos Poulios, 2018-2019 Jerome Robert </p>
 <h2>LICENSE</h2>
 <p> GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;. </p>
-<h2>Index</h2>

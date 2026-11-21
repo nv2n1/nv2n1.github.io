@@ -90,4 +90,3 @@ $(HOME)/.gpm-root   The user configuration file.
 <code> <a href="//www.systutorials.com/docs/linux/man/8-gpm/">gpm</a>(8) </code>
 </pre>
 <p> The info file about `gpm&#8217;, which gives more complete information and explains how to write a gpm client. </p>
-<h2>Index</h2>

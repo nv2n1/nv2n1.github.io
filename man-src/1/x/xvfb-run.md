@@ -75,4 +75,3 @@ description: "xvfb-run – run specified X client or command in a virtual X serv
 <p> <code>xvfb-run</code> was written by Branden Robinson and Jeff Licquia with sponsorship from Progeny Linux Systems.</p>
 <h2>SEE ALSO</h2>
 <p> <code>Xvfb</code>(1x), <code>xauth</code>(1x) </p>
-<h2>Index</h2>

@@ -38,4 +38,3 @@ description: "cockpit – Cockpit"
 <dt>
 </dt><dd> <a rel="nofollow" href="http://cockpit-project.org/guide/latest/">http://cockpit-project.org/guide/latest/</a></dd></dl>
 </dl>
-<h2>Index</h2>

@@ -193,4 +193,3 @@ description: "pamstereogram – create a single-image stereogram from a PAM dept
 <dd>
 <p> AUTHOR </p>
 </dd></dl>
-<h2>Index</h2>

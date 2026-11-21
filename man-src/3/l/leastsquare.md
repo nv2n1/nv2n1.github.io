@@ -24,4 +24,3 @@ description: "ql/math/optimization/leastsquare.hpp – Least square cost functio
 <p> Least square cost function. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

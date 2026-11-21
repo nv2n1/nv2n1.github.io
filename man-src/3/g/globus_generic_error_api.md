@@ -18,4 +18,3 @@ description: "Globus Generic Error API –"
 <p> Any program that uses Globus Generic Error functions must include &#8216;globus_common.h&#8217;.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
-<h2>Index</h2>

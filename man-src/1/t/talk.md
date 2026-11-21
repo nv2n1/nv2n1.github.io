@@ -46,4 +46,3 @@ Message from TalkDaemon[at] his_machine... talk : connection requested by your_n
 <p> Old versions of <code>talk</code> may have trouble running on machines with more than one IP address, such as machines with dynamic SLIP or PPP connections. This problem is fixed as of netkit-ntalk 0.11, but may affect people you are trying to communicate with.</p>
 <h2>HISTORY</h2>
 <p> The <code>talk</code> command appeared in BSD 4.2 </p>
-<h2>Index</h2>

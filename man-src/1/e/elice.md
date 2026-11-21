@@ -42,4 +42,3 @@ description: "elice – compiler for programs written in PureBasic"
 <p> Under the battle cry of &quot;It&#8217;s BASIC, how hard can it be?&quot; the author of <code>elice</code> started to write a free compiler. Most of the work was done in September 2006 and it resulted in a playable game, but the compiler was not maintained and was not able to compile newer versions of Lost Labyrinth. </p>
 <p> The first public version of <code>elice</code> was released in the summer of 2008, when it had been upgraded to support PureBasic version 4 and was ready for inclusion in the build system of Lost Labyrinth. </p>
 <p> Much thanks goes to Markus D[:o]bele for having faith in early versions of <code>elice</code> and relying on it to build the Linux version of Lost Labyrinth. </p>
-<h2>Index</h2>

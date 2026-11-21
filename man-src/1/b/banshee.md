@@ -126,4 +126,3 @@ description: "Banshee – Media Management and Playback application Muinshee –
 <dt><code>&#8211;version</code></dt>
 <dd> Show version information</dd></dl>
 <p> Copyright 2005-2009 Novell, Inc. and Contributors. </p>
-<h2>Index</h2>

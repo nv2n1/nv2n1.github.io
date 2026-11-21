@@ -264,4 +264,3 @@ description: "Jed – programmers editor"
 <dt>
 </dt><dd> Jed&#8217;s Author</dd></dl>
 <p> &#8212; This document was <i>translated</i> to nroff by &quot;Boris D. Beletsky&quot; &lt;borik [at] isracom.co.il&gt; </p>
-<h2>Index</h2>

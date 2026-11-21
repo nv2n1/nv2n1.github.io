@@ -109,4 +109,3 @@ Set metadata for a network </p>
 &nbsp;<wbr>&nbsp;<wbr>Subnet in CIDR format that represents a network segment </p>
 <h2>HISTORY</h2>
 <p> OCT 2015, created by Mary Anthony &lt;mary [at] docker.com&gt; </p>
-<h2>Index</h2>

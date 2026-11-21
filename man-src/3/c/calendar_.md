@@ -58,4 +58,3 @@ description: "QuantLib::CommodityIndex – base class for commodity indexes"
 <p> Implements <code>Observer</code>. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

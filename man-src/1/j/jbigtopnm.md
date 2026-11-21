@@ -38,4 +38,3 @@ description: "jbigtopnm – JBIG to PNM image file converter"
 <p> <code>pnm</code>(1) , <code><a href="/docs/linux/man/1-pnmtojbig/">pnmtojbig</a></code>(1) </p>
 <h2>LICENSE</h2>
 <p> If you use <code>jbigtopnm</code>, you are using various patents, particularly on its arithmetic encoding method, and in all probability you do not have a license from the patent owners to do so. </p>
-<h2>Index</h2>

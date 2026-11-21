@@ -48,4 +48,3 @@ description: "mode2, xmode2 – shows the pulse/space length of infrared signals
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-mode2/">mode2</a>(1), <a href="/docs/linux/man/1-xmode2/">xmode2</a>(1) </p>
 <p> The documentation for <code>lirc</code> is maintained as html pages. They are located under html/ in the documentation directory. </p>
-<h2>Index</h2>

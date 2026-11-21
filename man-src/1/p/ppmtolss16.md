@@ -55,4 +55,3 @@ description: "ppmtolss16 — Convert a PPM to an LSS16 image"
 <p> <code><a href="/docs/linux/man/1-ppmtolss16/">ppmtolss16</a></code>(1) </p>
 <h2>AUTHOR</h2>
 <p> This manual page was compiled by dann frazier &lt;dannf [at] debian.org&gt; for the <code>Debian GNU/Linux</code> system (but may be used by others). Most of the content was written by H. Peter Anvin. </p>
-<h2>Index</h2>

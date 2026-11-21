@@ -669,4 +669,3 @@ description: "nfdump – netflow display and analyze program"
 <p> <a href="/docs/linux/man/1-nfcapd/">nfcapd</a>(1), <a href="/docs/linux/man/1-nfanon/">nfanon</a>(1), <a href="/docs/linux/man/1-nfprofile/">nfprofile</a>(1), <a href="/docs/linux/man/1-nfreplay/">nfreplay</a>(1)</p>
 <h2>BUGS</h2>
 <p> There is still the famous last bug. Please report them &#8211; all the last bugs &#8211; back to me. </p>
-<h2>Index</h2>

@@ -56,4 +56,3 @@ description: "zarafa-spooler – Start the Zarafa spooler."
 <p> Written by Zarafa.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-zarafa-spooler-cfg/">zarafa-spooler.cfg</a></code>(5)<code><a href="/docs/linux/man/1-zarafa-server/">zarafa-server</a></code>(1) </p>
-<h2>Index</h2>

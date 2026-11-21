@@ -25,4 +25,3 @@ description: "ql/termstructures/inflationtermstructure.hpp – Base classes for 
 <p> Base classes for inflation term structures. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

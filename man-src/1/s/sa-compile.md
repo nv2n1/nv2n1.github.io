@@ -81,4 +81,3 @@ description: "sa-compile – compile SpamAssassin ruleset into native code"
 <p> The Apache SpamAssassin(tm) Project &lt;<a rel="nofollow" href="http://spamassassin.apache.org/">http://spamassassin.apache.org/</a>&gt;</p>
 <h2>COPYRIGHT</h2>
 <p> SpamAssassin is distributed under the Apache License, Version 2.0, as described in the file <tt>&quot;LICENSE&quot;</tt> included with the distribution. </p>
-<h2>Index</h2>

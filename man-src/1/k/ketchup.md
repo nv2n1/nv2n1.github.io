@@ -58,4 +58,3 @@ description: "ketchup – Utility to update the kernel source"
 <h2>AUTHOR</h2>
 <p> ketchup was written by Matt Mackall &lt;mpm [at] selenic.com&gt;. </p>
 <p> This manual page was written by Baruch Even &lt;baruch [at] debian.org&gt;, for the Debian project (but may be used by others). Description text taken from a former packaging attempt of Jack Wasey &lt;debian [at] jackwasey.com&gt;. </p>
-<h2>Index</h2>

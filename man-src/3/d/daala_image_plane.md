@@ -39,4 +39,3 @@ description: "daala_image_plane –"
 <p> 8 for &#8216;normal&#8217; video precision; data is unsigned bytes centered on 128. Greater-than-8 indicates high-depth video; data is unnormalized host-endian order unsigned signed 16-bit shorts (two octets). For example, 10 bit video would declare a bit depth of 10, use the lower 10 bits of each 16 bit short, and center on 512. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for daala from the source code. </p>
-<h2>Index</h2>

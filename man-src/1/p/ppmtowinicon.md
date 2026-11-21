@@ -31,4 +31,3 @@ description: "ppmtowinicon – convert 1 or more portable pixmaps into a Windows
 <p> <code><a href="/docs/linux/man/1-winicontoppm/">winicontoppm</a></code>(1), <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5) </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 2000 by Lee Benfield. </p>
-<h2>Index</h2>

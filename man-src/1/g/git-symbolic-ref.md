@@ -40,4 +40,3 @@ git symbolic - ref[-m&lt;reason&gt;]&lt;name&gt;&lt;ref&gt; git symbolic - ref[-
 <p> <i>git symbolic-ref</i> will exit with status 0 if the contents of the symbolic ref were printed correctly, with status 1 if the requested name is not a symbolic ref, or 128 if another error occurs.</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

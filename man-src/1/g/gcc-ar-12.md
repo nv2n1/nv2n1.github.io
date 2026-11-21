@@ -17,4 +17,3 @@ description: "gcc-ar – a wrapper around ar adding the –plugin option"
 <p> See <a href="/docs/linux/man/1-ar/">ar</a>(1) for a list of options that ar understands. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ar/">ar</a>(1)</code> </p>
-<h2>Index</h2>

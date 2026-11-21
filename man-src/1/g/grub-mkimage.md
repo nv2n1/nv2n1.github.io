@@ -60,4 +60,3 @@ description: "grub-mkimage – make a bootable image of GRUB"
 <dt>
 </dt><dd> <code>info grub-mkimage</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

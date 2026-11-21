@@ -35,4 +35,3 @@ description: "ldap2zone – Creates zone file from LDAP dnszone information"
 <p> <a href="/docs/linux/man/8-named/">named</a>(8) <a href="/docs/linux/man/3-ldap/">ldap</a>(3) <a rel="nofollow" href="http://www.venaas.no/dns/ldap2zone/">http://www.venaas.no/dns/ldap2zone/</a></p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2004, 2005 Stig Venaas </p>
-<h2>Index</h2>

@@ -18,4 +18,3 @@ description: "remmina-file-wrapper"
 <p> <a href="/docs/linux/man/1-remmina/">remmina</a>(1)</p>
 <h2>AUTHORS</h2>
 <p> An Antenore Gatta Aq Mt antenore [at] simbiosi.org </p>
-<h2>Index</h2>

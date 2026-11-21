@@ -18,4 +18,3 @@ description: "sirtopnm – convert a Solitaire file into a portable anymap"
 <p> <a href="/docs/linux/man/1-pnmtosir/">pnmtosir</a>(1), <a href="/docs/linux/man/5-pnm/">pnm</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1991 by Marvin Landis. </p>
-<h2>Index</h2>

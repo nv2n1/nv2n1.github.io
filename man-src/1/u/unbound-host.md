@@ -51,4 +51,3 @@ description: "unbound-host – unbound DNS lookup utility"
 <p> The unbound-host program exits with status code 1 on error, 0 on no error. The data may not be available on exit code 0, exit code 1 means the lookup encountered a fatal error.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/5-unbound-conf/">unbound.conf</a></i>(5), <i><a href="/docs/linux/man/8-unbound/">unbound</a></i>(8). </p>
-<h2>Index</h2>

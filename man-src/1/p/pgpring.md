@@ -30,4 +30,3 @@ description: "pgpring – Mutt key ring dumper"
 </dl>
 <h2>AUTHORS</h2>
 <p> Thomas Roessler &lt;roessler [at] does-not-exist.org&gt; </p>
-<h2>Index</h2>

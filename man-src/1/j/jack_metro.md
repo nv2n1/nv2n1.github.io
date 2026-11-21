@@ -35,4 +35,3 @@ description: "jack_metro – JACK toolkit metronome"
  Define the number of beats per minute.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Anthony Van Groningen </p>
-<h2>Index</h2>

@@ -2351,4 +2351,3 @@ DLG_TRACE((&quot;this is dialog version %s
 <p> <code>dialog</code> (1).</p>
 <h2>AUTHOR</h2>
 <p> Thomas E. Dickey </p>
-<h2>Index</h2>

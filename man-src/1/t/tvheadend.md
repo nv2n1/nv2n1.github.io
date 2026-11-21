@@ -85,4 +85,3 @@ description: "tvheadend – Advanced TV streaming server/relay"
 <p> You may also visit #hts at irc.freenode.net</p>
 <h2>SEE ALSO</h2>
 <p> <code><a rel="nofollow" href="https://tvheadend.org">https://tvheadend.org</a></code> </p>
-<h2>Index</h2>

@@ -30,4 +30,3 @@ description: "autokey-run – command-line execution utility for AutoKey"
 <h2>AUTHOR</h2>
 <p> Chris Dekter. </p>
 <p> This manual page was written by Chris Dekter &lt;cdekter [at] gmail.com&gt;. </p>
-<h2>Index</h2>

@@ -20,4 +20,3 @@ description: "catior – Utility for viewing components of a stringified IOR"
 </dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-genior/">genior</a>(1) </p>
-<h2>Index</h2>

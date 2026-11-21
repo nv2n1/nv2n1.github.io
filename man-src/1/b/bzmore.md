@@ -71,4 +71,3 @@ description: "bzmore, bzless – file perusal filter for crt viewing of bzip2 co
 <p> /etc/termcap<tt>&nbsp;<wbr>&nbsp;</tt><tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Terminal data base</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-more/">more</a>(1), <a href="/docs/linux/man/1-less/">less</a>(1), <a href="/docs/linux/man/1-bzip2/">bzip2</a>(1), <a href="/docs/linux/man/1-bzdiff/">bzdiff</a>(1), <a href="/docs/linux/man/1-bzgrep/">bzgrep</a>(1) </p>
-<h2>Index</h2>

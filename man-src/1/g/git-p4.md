@@ -455,4 +455,3 @@ git config --add git-p4.branchList main:branchB
 <dl>
 <dt>
 </dt><dd> &bull; Each commit imported by <i>git p4</i> has a line at the end of the log message indicating the p4 depot location and change number. This line is used by later <i>git p4 sync</i> operations to know which p4 changes are new.</dd></dl>
-<h2>Index</h2>

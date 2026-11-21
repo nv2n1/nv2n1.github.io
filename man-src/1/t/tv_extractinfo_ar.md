@@ -26,4 +26,3 @@ description: "tv_extractinfo_ar – read Spanish (Argentinean) language listings
 <p> On the two listings sources currently supported by the <font SIZE="-1">XMLTV</font> package, this program does a reasonably good job. But it has not been tested with every source of anglophone <font SIZE="-1">TV</font> listings. </p>
 <p> This Spanish Version is heavily customized for the <font SIZE="-1">XML</font> results from tv_grab_ar (developed by Christian A. Rodriguez and postriorily updated by Mariano S. Cosentino). </p>
 <p> This file should probably be called tv_extractinfo_es, but I have not tested it with any other spanish grabbers, so I don&#8217;t want to be presumptious. </p>
-<h2>Index</h2>

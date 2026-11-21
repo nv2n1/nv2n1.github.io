@@ -75,4 +75,3 @@ description: "solterm – An IPMI Serial over LAN program"
 <p> None </p>
 <h2>AUTHOR</h2>
 <p> Darius Davis &lt;dariusd [at] users.sourceforge.net&gt; </p>
-<h2>Index</h2>

@@ -90,4 +90,3 @@ $ npm hook rm id-deadbeef
 <dd> &quot;Introducing Hooks&quot; blog post <i><a rel="nofollow" href="https://blog.npmjs.org/post/145260155635/introducing-hooks-get-notifications-of-npm">https://blog.npmjs.org/post/145260155635/introducing-hooks-get-notifications-of-npm</a></i> </dd>
 </dl>
 </dl>
-<h2>Index</h2>

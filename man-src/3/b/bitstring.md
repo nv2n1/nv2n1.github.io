@@ -51,4 +51,3 @@ description: "bit_alloc bit_clear bit_decl bit_ffs bit_nclear bit_nset bit_set b
 <p> <a href="/docs/linux/man/3-malloc/">malloc</a>(3)</p>
 <h2>HISTORY</h2>
 <p> The <code>bitstring</code> functions first appeared in BSD 4.4 </p>
-<h2>Index</h2>

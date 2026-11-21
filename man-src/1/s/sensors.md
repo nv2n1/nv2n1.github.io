@@ -47,4 +47,3 @@ description: "sensors – print sensors information"
 <p> <a href="/docs/linux/man/5-sensors-conf/">sensors.conf</a>(5), <a href="/docs/linux/man/8-sensors-detect/">sensors-detect</a>(8). </p>
 <h2>AUTHOR</h2>
 <p> Frodo Looijaard and the lm_sensors group <a rel="nofollow" href="https://hwmon.wiki.kernel.org/lm_sensors">https://hwmon.wiki.kernel.org/lm_sensors</a> </p>
-<h2>Index</h2>

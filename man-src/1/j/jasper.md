@@ -15,4 +15,3 @@ description: "jasper – File format converter specialized in JPEG-2000 encoding
 <p> The <code>jasper</code> command converts to and from JPEG-2000 files. Please use the &#8211;help command line switch and the JasPer Software Reference Manual for more information. </p>
 <h2>AUTHOR</h2>
 <p> Michael D. Adams &lt;mdadams [at] ieee.org&gt; This manpage was initially written by Roland Stigge &lt;stigge [at] antcom.de&gt; for the Debian Project. </p>
-<h2>Index</h2>

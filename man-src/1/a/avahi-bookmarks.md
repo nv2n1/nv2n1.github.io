@@ -33,4 +33,3 @@ description: "avahi-bookmarks – Web service showing mDNS/DNS-SD announced HTTP
 <p> <code><a href="/docs/linux/man/1-avahi-browse/">avahi-browse</a>(1)</code>, <code><a href="/docs/linux/man/8-avahi-daemon/">avahi-daemon</a>(8)</code></p>
 <h2>COMMENTS</h2>
 <p> This man page was written using <code>xml2man(1)</code> by Oliver Kurth. </p>
-<h2>Index</h2>

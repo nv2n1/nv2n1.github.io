@@ -67,4 +67,3 @@ description: "sloccount – count source lines of code (SLOC)"
 <p> See the SLOCCount website at <a rel="nofollow" href="http://www.dwheeler.com/sloccount.">http://www.dwheeler.com/sloccount.</a> Note that more detailed documentation is available both on the website and with the SLOCCount package. </p>
 <h2>AUTHOR</h2>
 <p> David A. Wheeler (dwheeler [at] dwheeler.com). </p>
-<h2>Index</h2>

@@ -69,4 +69,3 @@ description: "callgrind_annotate – post-processing tool for the Callgrind"
 <h2>AUTHOR</h2>
 <p> Josef Weidendorfer &lt;Josef.Weidendorfer [at] gmx.de&gt;. </p>
 <p> This manual page was written by Philipp Frauenfelder &lt;pfrauenf [at] debian.org&gt;. </p>
-<h2>Index</h2>

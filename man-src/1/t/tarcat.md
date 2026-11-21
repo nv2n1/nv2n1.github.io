@@ -18,4 +18,3 @@ description: "tarcat – concatenates the pieces of a GNU tar multi-volume archi
 <h2>AUTHORS</h2>
 <p> The <code>tarcat </code> script was written by Bruno Haible &lt;bruno [at] clisp.org&gt; and Sergey Poznyakoff &lt;gray [at] gnu.org.ua&gt;. </p>
 <p> This document was written by Bdale Garbee &lt;bdale [at] gag.com&gt; for Debian. </p>
-<h2>Index</h2>

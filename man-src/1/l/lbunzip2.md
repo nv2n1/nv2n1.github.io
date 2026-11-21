@@ -130,4 +130,3 @@ description: "lbzip2 – parallel bzip2 utility"
 <dt><code><a href="/docs/linux/man/1-p7zip/">p7zip</a></code>(1)</dt>
 <dd> <a rel="nofollow" href="http://p7zip.sourceforge.net/">http://p7zip.sourceforge.net/</a> </dd>
 </dl>
-<h2>Index</h2>

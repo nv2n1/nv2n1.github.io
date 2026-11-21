@@ -25,4 +25,3 @@ description: "fc-conflist – Show the ruleset files information on the system"
 <p> <code>fc-conflist</code> returns error code 0 for successful parsing, or 1 if any errors occured or if at least one font face could not be opened.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was updated by Akira TAGOH &lt;akira [at] tagoh.org&gt;. </p>
-<h2>Index</h2>

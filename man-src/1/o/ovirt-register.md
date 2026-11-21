@@ -47,4 +47,3 @@ description: "ovirt-register – oVirt registration tool for hosts"
 <p> Report bugs to &lt;<a rel="nofollow" href="http://bugzilla.redhat.com">http://bugzilla.redhat.com</a>&gt;</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright 2015 Red Hat, Inc. License GPLv2: GNU GPL Version 2 &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt;. </p>
-<h2>Index</h2>

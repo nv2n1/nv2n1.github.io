@@ -28,4 +28,3 @@ description: "pamstack – stack planes of multiple PAM images into one PAM imag
 <p> <code><a href="/docs/linux/man/5-pam/">pam</a></code>(5) </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) by Bryan Henderson, San Jose CA 2000.08.05 </p>
-<h2>Index</h2>

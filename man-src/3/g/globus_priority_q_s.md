@@ -17,4 +17,3 @@ description: "globus_priority_q_s –"
 <p> A pointer to a structure of this type is passed to all functions in the <code>Priority Queue </code> module. It is not intended to be inspected or modified outside of this API. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_common from the source code. </p>
-<h2>Index</h2>

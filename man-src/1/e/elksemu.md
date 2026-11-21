@@ -23,4 +23,3 @@ description: "elksemu – Embedded Linux Kernel Subset emulator"
 <h2>BUGS</h2>
 <p> Elksemu is incomplete. </p>
 <p> The program may still have security bugs! </p>
-<h2>Index</h2>

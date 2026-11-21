@@ -83,4 +83,3 @@ description: "runtest – DejaGnu test driver"
 <dt>
 </dt><dd> <code>info dejagnu</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

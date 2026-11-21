@@ -27,4 +27,3 @@ description: "pwmake – simple tool for generating random relatively easily pro
 <pre>
 Tomas Mraz &lt;tmraz [at] redhat.com&gt;
 </pre>
-<h2>Index</h2>

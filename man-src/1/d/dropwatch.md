@@ -31,4 +31,3 @@ description: "dropwatch – kernel dropped packet monitoring utility"
 <dt><code>set alertlimit &lt;value&gt;</code></dt>
 <dd> Sets a triggerpoint to stop monitoring for dropped packets after &lt;value&gt; alerts have been received </dd>
 </dl>
-<h2>Index</h2>

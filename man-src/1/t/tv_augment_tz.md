@@ -21,4 +21,3 @@ description: "tv_augment_tz – Convert floating time to explicit time."
 <p> Karl Dietz, &lt;dekarl [at] spaetfruehstuecken.org&gt;</p>
 <h2>BUGS</h2>
 <p> Guessing the right time when local time is abigous doesn&#8217;t work properly. </p>
-<h2>Index</h2>

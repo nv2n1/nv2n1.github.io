@@ -36,4 +36,3 @@ NEOERR *filter_create_fd(const char *cmd, int *fdin, int *fdout, int *fderr,
  pid -&gt; the pid of the sub process </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-filter_wait/">filter_wait</a></code>(3), <a href="/docs/linux/man/3-filter_create_fp/">filter_create_fp</a><code>(3), filter_create_fd</code> </p>
-<h2>Index</h2>

@@ -103,4 +103,3 @@ description: "xbiff – mailbox flag for X"
 <h2>AUTHOR</h2>
 <p> Jim Fulton, MIT X Consortium<br />
  Additional hacks by Ralph Swick, DEC/MIT Project Athena </p>
-<h2>Index</h2>

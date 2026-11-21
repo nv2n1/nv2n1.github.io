@@ -57,4 +57,3 @@ description: "gvpack – merge and pack disjoint graphs"
 <p> Emden R. Gansner &lt;erg [at] research.att.com&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-gvpr/">gvpr</a>(1), <a href="/docs/linux/man/1-dot/">dot</a>(1), <a href="/docs/linux/man/1-neato/">neato</a>(1), <a href="/docs/linux/man/1-twopi/">twopi</a>(1), <a href="/docs/linux/man/1-ccomps/">ccomps</a>(1), libpack(3) </p>
-<h2>Index</h2>

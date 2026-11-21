@@ -42,4 +42,3 @@ description: "bjdwp – Command line USB Blackberry Java Debug Wire Protocol"
 <p> <code>bjdwp</code> was initially written for the Barry project by Nicolas VIVIEN. This manual page was written by Chris Frey.</p>
 <h2>SEE ALSO</h2>
 <p> <a rel="nofollow" href="http://www.netdirect.ca/software/packages/barry">http://www.netdirect.ca/software/packages/barry</a> </p>
-<h2>Index</h2>

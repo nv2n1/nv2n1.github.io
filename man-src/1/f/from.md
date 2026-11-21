@@ -34,4 +34,3 @@ description: "from – print names of those who have sent mail"
 <p> biff(1), <a href="/docs/linux/man/1-mail/">mail</a>(1)</p>
 <h2>HISTORY</h2>
 <p> The command appeared in BSD 3.0 </p>
-<h2>Index</h2>

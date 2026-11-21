@@ -25,4 +25,3 @@ description: "libssh2_channel_receive_window_adjust2 – adjust the channel wind
 <p> Added in libssh2 1.1 since the previous API has deficiencies.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_channel_window_read_ex/">libssh2_channel_window_read_ex</a>(3)</code> </p>
-<h2>Index</h2>

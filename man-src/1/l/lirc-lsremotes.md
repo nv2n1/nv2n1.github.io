@@ -48,4 +48,3 @@ no_raw
 </dl>
 <h2>SEE ALSO</h2>
 <p> <a rel="nofollow" href="http://sourceforge.net/projects/lirc-remotes">http://sourceforge.net/projects/lirc-remotes</a> </p>
-<h2>Index</h2>

@@ -67,4 +67,3 @@ description: "tracker-miner-fs-3 – Used to crawl the file system to mine data.
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tracker3-info/">tracker3-info</a></code>(1). </p>
-<h2>Index</h2>

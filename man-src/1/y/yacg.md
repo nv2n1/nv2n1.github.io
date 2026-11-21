@@ -74,4 +74,3 @@ description: "yacg – Yet Another Configuration Generator"
 <h2>AUTHOR</h2>
 <p> Lionel Cons &lt;<a rel="nofollow" href="http://cern.ch/lionel.cons">http://cern.ch/lionel.cons</a>&gt; </p>
 <p> Copyright (C) <font SIZE="-1">CERN 2013-2016</font> </p>
-<h2>Index</h2>

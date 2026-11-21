@@ -42,4 +42,3 @@ description: "htcopy – HTTP client with LCGDM extensions"
 <dt>&#8211;insecure</dt>
 <dd> Do no check the peer certificate. </dd>
 </dl>
-<h2>Index</h2>

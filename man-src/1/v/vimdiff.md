@@ -26,4 +26,3 @@ description: "vimdiff – edit between two and eight versions of a file with Vim
 <p> <a href="/docs/linux/man/1-vim/">vim</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> Most of <code>Vim</code> was made by Bram Moolenaar, with a lot of help from others. See &quot;:help credits&quot; in <code>Vim.</code> </p>
-<h2>Index</h2>

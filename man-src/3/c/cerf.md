@@ -28,4 +28,3 @@ description: "cerf, cerff, cerfl, cerfc, cerfcf, cerfcl – complex error functi
 <p> <code><a href="/docs/linux/man/3-erf/">erf</a></code>(3), <code><a href="/docs/linux/man/7-complex/">complex</a></code>(7)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 3.53 of the Linux <i>man-pages</i> project. A description of the project, and information about reporting bugs, can be found at <a rel="nofollow" href="http://www.kernel.org/doc/man-pages/.">http://www.kernel.org/doc/man-pages/.</a> </p>
-<h2>Index</h2>

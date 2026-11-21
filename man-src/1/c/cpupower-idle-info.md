@@ -47,4 +47,3 @@ Thomas Renninger &lt;trenn [at] suse.de&gt;
 </pre>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-cpupower/">cpupower</a>(1), <a href="/docs/linux/man/1-cpupower-monitor/">cpupower-monitor</a>(1), <a href="/docs/linux/man/1-cpupower-info/">cpupower-info</a>(1), <a href="/docs/linux/man/1-cpupower-set/">cpupower-set</a>(1), <a href="/docs/linux/man/1-cpupower-idle-set/">cpupower-idle-set</a>(1) </p>
-<h2>Index</h2>

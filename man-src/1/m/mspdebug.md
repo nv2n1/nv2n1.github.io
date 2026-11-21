@@ -206,4 +206,3 @@ description: "MSPDebug – debugging tool for MSP430 MCUs"
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2009, 2010 Daniel Beer &lt;daniel [at] tortek.co.nz&gt; </p>
 <p> MSPDebug is free software, distributed under the terms of the GNU General Public license (version 2 or later). See the file COPYING included with the source code for more details. </p>
-<h2>Index</h2>

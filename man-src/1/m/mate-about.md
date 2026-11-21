@@ -21,4 +21,3 @@ description: "mate-about – Learn more about MATE"
 <dd> Output the MATE version instead of running a graphical interface.</dd></dl>
 <h2>BUGS</h2>
 <p> If you find bugs in the <i>mate-about</i> program, please report these on <a rel="nofollow" href="http://bugzilla.gnome.org.">http://bugzilla.gnome.org.</a> </p>
-<h2>Index</h2>

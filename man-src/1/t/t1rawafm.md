@@ -27,4 +27,3 @@ description: "t1rawafm – produce raw AFM metrics from a PostScript Type 1 font
 <p> <i>Adobe Type 1 Font Format</i>, <i>Adobe Font Metrics File Format Specification v4.1</i></p>
 <h2>AUTHOR</h2>
 <p> Eddie Kohler (ekohler [at] gmail.com) </p>
-<h2>Index</h2>

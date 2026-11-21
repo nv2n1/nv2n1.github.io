@@ -22,4 +22,3 @@ description: "curl_easy_escape – URL encodes the given string"
 <p> A pointer to a zero terminated string or NULL if it failed.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-curl_easy_unescape/">curl_easy_unescape</a></code>(3), <code><a href="/docs/linux/man/3-curl_free/">curl_free</a></code>(3), <code>RFC</code>2396 </p>
-<h2>Index</h2>

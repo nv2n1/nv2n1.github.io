@@ -366,4 +366,3 @@ $ <code>pg_dump -t '&quot;MixedCaseName&quot;' mydb &gt; mytab.sql</code>
 </dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pg_dumpall/">pg_dumpall</a></code>(1), <code><a href="/docs/linux/man/1-pg_restore/">pg_restore</a></code>(1), <code><a href="/docs/linux/man/1-psql/">psql</a></code>(1) </p>
-<h2>Index</h2>

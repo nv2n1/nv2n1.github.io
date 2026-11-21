@@ -21,4 +21,3 @@ description: "xzcmp, xzdiff, lzcmp, lzdiff – compare compressed files"
 <p> <code><a href="/docs/linux/man/1-cmp/">cmp</a></code>(1), <code><a href="/docs/linux/man/1-diff/">diff</a></code>(1), <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1), <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1), <code><a href="/docs/linux/man/1-bzip2/">bzip2</a></code>(1), <code><a href="/docs/linux/man/1-lzop/">lzop</a></code>(1), <code><a href="/docs/linux/man/1-zdiff/">zdiff</a></code>(1)</p>
 <h2>BUGS</h2>
 <p> Messages from the <code><a href="/docs/linux/man/1-cmp/">cmp</a></code>(1) or <code><a href="/docs/linux/man/1-diff/">diff</a></code>(1) programs refer to temporary filenames instead of those specified. </p>
-<h2>Index</h2>

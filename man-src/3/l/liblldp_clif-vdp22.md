@@ -130,4 +130,3 @@ clif_close(tool_conn);
  IEEE 802.1Qbg (<a rel="nofollow" href="http://www.ieee802.org/1/pages/802.1bg.html)">http://www.ieee802.org/1/pages/802.1bg.html)</a></p>
 <h2>AUTHOR</h2>
 <p> Thomas Richter </p>
-<h2>Index</h2>

@@ -41,4 +41,3 @@ description: "FreeHDL-CONFIG – The FreeHDL configuration script."
 <p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>AUTHORS</h2>
 <p> Written by Stefan Jahn &lt;stefan [at] lkcc.org&gt;. </p>
-<h2>Index</h2>

@@ -44,4 +44,3 @@ description: "ezstream-file.sh – script to stream files from the command line"
 <p> <a href="/docs/linux/man/1-ezstream/">ezstream</a>(1)</p>
 <h2>AUTHORS</h2>
 <p> An -nosplit The script and this manual were written by An Moritz Grimm Aq mdgrimm [at] gmx.net . </p>
-<h2>Index</h2>

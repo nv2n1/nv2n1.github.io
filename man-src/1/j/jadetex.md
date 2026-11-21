@@ -19,4 +19,3 @@ description: "jadetex – processing tex files produced by the TeX backend of Ja
 <h2>AUTHORS</h2>
 <p> The author of jadeTeX is Sebastian Rahtz. </p>
 <p> This manual page was derived from the LaTeX manual page. It is provided for the Debian distribution by Marcus Brinkmann. Please send improvements, suggestion and other comments to brinkmd [at] debian.org. </p>
-<h2>Index</h2>

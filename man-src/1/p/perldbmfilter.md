@@ -92,4 +92,3 @@ $old_filter = $db-&gt;filter_fetch_value(sub{...});
 <p> DB_File, GDBM_File, NDBM_File, ODBM_File and SDBM_File.  </p>
 <h2>AUTHOR</h2>
 <p> Paul Marquess </p>
-<h2>Index</h2>

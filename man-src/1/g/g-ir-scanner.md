@@ -73,4 +73,3 @@ description: "g-ir-scanner – extracting C metadata from sources and headers"
 <p> <a rel="nofollow" href="http://live.gnome.org/GObjectIntrospection">http://live.gnome.org/GObjectIntrospection</a></p>
 <h2>AUTHORS</h2>
 <p> Johan Dahlin </p>
-<h2>Index</h2>

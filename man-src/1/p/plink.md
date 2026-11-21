@@ -100,4 +100,3 @@ plink &amp;nbsp;
 <p> <code><a rel="nofollow" href="http://www.chiark.greenend.org.uk/~sgtatham/putty/">http://www.chiark.greenend.org.uk/~sgtatham/putty/</a></code></p>
 <h2>BUGS</h2>
 <p> This man page isn&#8217;t terribly complete. See the above web link for better documentation. </p>
-<h2>Index</h2>

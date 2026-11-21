@@ -193,4 +193,3 @@ description: "makekdewidgets – Builds Qt(TM) widget plugins from an ini style 
 <dt>
 </dt><dd> <a rel="nofollow" href="http://bugs.kde.org">http://bugs.kde.org</a></dd></dl>
 </dl>
-<h2>Index</h2>

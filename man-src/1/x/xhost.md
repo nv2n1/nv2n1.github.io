@@ -59,4 +59,3 @@ si        Server Interpreted
 <h2>AUTHORS</h2>
 <p> Bob Scheifler, MIT Laboratory for Computer Science,<br />
  Jim Gettys, MIT Project Athena (DEC). </p>
-<h2>Index</h2>

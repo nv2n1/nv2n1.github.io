@@ -151,4 +151,3 @@ description: "pamtotiff – convert a Netpbm image to a TIFF file"
 <p> <code><a href="/docs/linux/man/1-tifftopnm/">tifftopnm</a></code>(1) , <code><a href="/docs/linux/man/1-pnmtotiffcmyk/">pnmtotiffcmyk</a></code>(1) , <code><a href="/docs/linux/man/1-pamdepth/">pamdepth</a></code>(1) , <code><a href="/docs/linux/man/1-pamtopnm/">pamtopnm</a></code>(1) , <code>pam</code>(1) </p>
 <h2>AUTHOR</h2>
 <p> Derived by Jef Poskanzer from ras2tiff.c, which is Copyright (c) 1990 by Sun Microsystems, Inc. Author: Patrick J. Naughton (<i>naughton [at] wind.sun.com</i>). </p>
-<h2>Index</h2>

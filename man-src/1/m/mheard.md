@@ -52,4 +52,3 @@ description: "mheard – display AX.25 calls recently heard."
 <p> <code><a href="/docs/linux/man/4-ax25/">ax25</a></code>(4), <code><a href="/docs/linux/man/8-mheardd/">mheardd</a></code>(8).</p>
 <h2>AUTHOR</h2>
 <p> Jonathan Naylor G4KLX &lt;g4klx [at] g4klx.demon.co.uk&gt; </p>
-<h2>Index</h2>

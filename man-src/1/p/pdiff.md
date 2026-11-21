@@ -46,4 +46,3 @@ description: "pdiff – produce a pretty comparison between files"
 <dt>
 </dt><dd> <code>info pdiff</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

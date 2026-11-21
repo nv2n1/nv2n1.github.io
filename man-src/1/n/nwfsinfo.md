@@ -42,4 +42,3 @@ description: "nwfsinfo – Print some information about the file server"
 <p> Description strings contain garbage on some Netware versions. </p>
 <h2>AUTHOR</h2>
 <p> This utility was originally written by Volker Lendecke. </p>
-<h2>Index</h2>

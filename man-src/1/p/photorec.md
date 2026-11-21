@@ -24,4 +24,3 @@ description: "photorec – Recover lost files from harddisk, digital camera and 
 <p> <code><a href="/docs/linux/man/1-testdisk/">testdisk</a>(1),</code> <code>fdisk</code>(1). <code>.SH</code>AUTHOR PhotoRec 6.11, Data Recovery Utility, April 2009<br />
  Christophe GRENIER &lt;grenier [at] cgsecurity.org&gt;<br />
  <a rel="nofollow" href="http://www.cgsecurity.org">http://www.cgsecurity.org</a> </p>
-<h2>Index</h2>

@@ -26,4 +26,3 @@ ASSERT(!errno); /* This will fail. */
 <p> Returns the value of the floating point value converted to fixed point clamping overflows (and setting `errno&#8217;). </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-fixtof/">fixtof</a></code>(3), <code>itofix</code>(3), <code><a href="/docs/linux/man/3-fixtoi/">fixtoi</a></code>(3), <code><a href="/docs/linux/man/3-exfixed/">exfixed</a></code>(3), <code><a href="/docs/linux/man/3-exspline/">exspline</a></code>(3), <code><a href="/docs/linux/man/3-exupdate/">exupdate</a></code>(3) </p>
-<h2>Index</h2>

@@ -35,4 +35,3 @@ description: "ipsec_sameaddr, ipsec_addrcmp, ipsec_samesubnet, ipsec_addrinsubne
 <p> inet(3), ipsec_initaddr(3)</p>
 <h2>HISTORY</h2>
 <p> Written for the FreeS/WAN project by Henry Spencer. </p>
-<h2>Index</h2>

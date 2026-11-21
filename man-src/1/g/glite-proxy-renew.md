@@ -53,4 +53,3 @@ description: "glite-proxy-renew – simple client for the proxy renewal daemon."
 <p> <code><a href="/docs/linux/man/8-glite-proxy-renewd/">glite-proxy-renewd</a></code>(8) </p>
 <h2>AUTHOR</h2>
 <p> EU EGEE, EU EMI </p>
-<h2>Index</h2>

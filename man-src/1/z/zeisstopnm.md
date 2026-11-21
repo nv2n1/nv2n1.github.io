@@ -23,4 +23,3 @@ description: "zeisstopnm – convert a Zeiss confocal file into a portable anyma
 <p> <a href="/docs/linux/man/5-pnm/">pnm</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1993 by Oliver Trepte </p>
-<h2>Index</h2>

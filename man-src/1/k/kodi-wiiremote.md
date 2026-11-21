@@ -30,4 +30,3 @@ description: "kodi-wiiremote – Wiimote Remote Control Client for Kodi"
 <dt><code>&#8211;joystick-map</code> JOYMAP</dt>
 <dd> | The string ID for the joymap (Default: WiiRemote) </dd>
 </dl>
-<h2>Index</h2>

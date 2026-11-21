@@ -20,4 +20,3 @@ description: "curl_easy_init – Start a libcurl easy session"
 <p> If this function returns NULL, something went wrong and you cannot use the other curl functions.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-curl_easy_cleanup/">curl_easy_cleanup</a></code>(3), <code><a href="/docs/linux/man/3-curl_global_init/">curl_global_init</a></code>(3), <code><a href="/docs/linux/man/3-curl_easy_reset/">curl_easy_reset</a></code>(3) </p>
-<h2>Index</h2>

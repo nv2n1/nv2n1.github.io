@@ -110,4 +110,3 @@ description: "uncrustify – C, C++, C#, D, Java and Pawn source code beautifier
 <h2>LICENSE</h2>
 <p> GNU GPL version 2 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt; </p>
 <p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
-<h2>Index</h2>

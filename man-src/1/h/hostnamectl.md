@@ -88,4 +88,3 @@ description: "hostnamectl – Control the system hostname"
 <dt>
 </dt><dd> <a rel="nofollow" href="http://standards.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html">http://standards.freedesktop.org/icon-naming-spec/icon-naming-spec-latest.html</a></dd></dl>
 </dl>
-<h2>Index</h2>

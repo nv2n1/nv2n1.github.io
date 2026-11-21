@@ -42,4 +42,3 @@ description: "zipgrep – search files in a ZIP archive for lines matching a pat
 <p> The Info-ZIP home page is currently at <a rel="nofollow" href="http://www.info-zip.org/pub/infozip/">http://www.info-zip.org/pub/infozip/</a> or <a href="ftp://ftp.info-zip.org/pub/infozip/">ftp://ftp.info-zip.org/pub/infozip/</a> .</p>
 <h2>AUTHORS</h2>
 <p> <i>zipgrep</i> was written by Jean-loup Gailly. </p>
-<h2>Index</h2>

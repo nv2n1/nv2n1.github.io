@@ -16,4 +16,3 @@ description: "curl_free – reclaim memory that has been obtained through a libc
 <p> curl_free reclaims memory that has been obtained through a libcurl call. Use curl_free() instead of free() to avoid anomalies that can result from differences in memory management between your application and libcurl.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/3-curl_unescape/">curl_unescape</a>(3)</i> </p>
-<h2>Index</h2>

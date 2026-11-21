@@ -444,4 +444,3 @@ curl_slist_free_all(headers);  /* free the header list */
 <dt>[4]</dt>
 <dd> This behavior was different in versions before 7.17.0, where strings had to remain valid past the end of the <i><a href="/docs/linux/man/3-curl_easy_setopt/">curl_easy_setopt</a>(3)</i> call. </dd>
 </dl>
-<h2>Index</h2>

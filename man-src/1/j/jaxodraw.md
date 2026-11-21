@@ -66,4 +66,3 @@ description: "JaxoDraw – A Program for the Interactive Generation of Feynman D
 <p> <code>JaxoDraw</code> is published under the terms of the Gnu General Public License. Other Copyrights may be found in various files, see the file <i>LICENSE</i> in the source distribution for detailed information.</p>
 <h2>SEE ALSO</h2>
 <p> latex (1), tex (1), java (1), javac (1) </p>
-<h2>Index</h2>

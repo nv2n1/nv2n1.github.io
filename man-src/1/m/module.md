@@ -194,4 +194,3 @@ Global RC file as specified by ${MODULERCFILE} or ${MODULESHOME} / etc / rc User
 <p> 3.2.10</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/4-modulefile/">modulefile</a></code>(4) </p>
-<h2>Index</h2>

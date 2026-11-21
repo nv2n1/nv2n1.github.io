@@ -55,4 +55,3 @@ description: "pnmtops – convert portable anymap to PostScript"
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1989, 1991 by Jef Poskanzer.<br />
  Modified November 1993 by Wolfgang Stuerzlinger, wrzl [at] gup.uni-linz.ac.at </p>
-<h2>Index</h2>

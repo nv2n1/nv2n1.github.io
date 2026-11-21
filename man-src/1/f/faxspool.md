@@ -86,4 +86,3 @@ description: "faxspool – queue and convert files for faxing with"
 <p> <a href="/docs/linux/man/1-g3cat/">g3cat</a>(1), <a href="/docs/linux/man/1-pbm2g3/">pbm2g3</a>(1), <a href="/docs/linux/man/8-sendfax/">sendfax</a>(8), <a href="/docs/linux/man/1-faxrunq/">faxrunq</a>(1), <a href="/docs/linux/man/8-faxrunqd/">faxrunqd</a>(8), <a href="/docs/linux/man/1-faxq/">faxq</a>(1), <a href="/docs/linux/man/5-faxqueue/">faxqueue</a>(5), <a href="/docs/linux/man/1-coverpg/">coverpg</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> <i>faxspool</i> is Copyright (C) 1993-2002 by Gert Doering, &lt;gert [at] greenie.muc.de&gt;. Access control and alias handling suggested by Caz Yokoyama, &lt;caz [at] shoki.osk.psq.mei.co.jp&gt;. </p>
-<h2>Index</h2>

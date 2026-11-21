@@ -243,4 +243,3 @@ description: "nvidia-xconfig – manipulate X configuration files for the NVIDIA
 <p> <code><a href="/docs/linux/man/1-nvidia-settings/">nvidia-settings</a></code>(1), <i>/usr/share/doc/NVIDIA_GLX-1.0/README.txt</i></p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2005-2010 NVIDIA Corporation. </p>
-<h2>Index</h2>

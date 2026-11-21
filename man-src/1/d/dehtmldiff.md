@@ -33,4 +33,3 @@ description: "dehtmldiff – get usable diff from an HTML page"
 <dl>
 <dt>
 </dt><dd> Package maintainer</dd></dl>
-<h2>Index</h2>

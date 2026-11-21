@@ -143,4 +143,3 @@ digraph G
  S. C. North and K. P. Vo, &quot;Dictionary and Graph Libraries&#8221; 1993 Winter USENIX Conference Proceedings, pp. 1-11. </p>
 <h2>AUTHOR</h2>
 <p> Stephen North (north [at] ulysses.att.com), AT&amp;T Bell Laboratories. </p>
-<h2>Index</h2>

@@ -32,4 +32,3 @@ fish[OPTIONS][-c command][FILE[ARGUMENTS...]]
 <dt>&bull;</dt>
 <dd> -v or &#8211;version display version and exit</dd></dl>
 <p> The fish exit status is generally the exit status of the last foreground command. If fish is exiting because of a parse error, the exit status is 127. </p>
-<h2>Index</h2>

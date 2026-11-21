@@ -19,4 +19,3 @@ description: "ql/processes/batesprocess.hpp – Bates stochastic process, Heston
 <p> Bates stochastic process, Heston process plus compound Poisson process plus log-normal jump diffusion size. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

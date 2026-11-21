@@ -34,4 +34,3 @@ description: "guilt-fold – Fold a specified patch into the topmost applied pat
 <dt>
 </dt><dd> mailto:jeffpc [at] josefsipek.net</dd></dl>
 </dl>
-<h2>Index</h2>

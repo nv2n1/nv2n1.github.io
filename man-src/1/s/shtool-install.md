@@ -50,4 +50,3 @@ description: "shtool install – GNU shtool"
 <p> The <font SIZE="-1"><code>GNU</code></font><code> shtool</code> <code>install</code> command was originally written by Ralf S. Engelschall &lt;rse [at] engelschall.com&gt; in 1997 for <font SIZE="-1"><code>GNU</code></font><code> shtool</code>. It was prompted by portability issues in the installation procedures of <font SIZE="-1"><code>OSSP</code></font> libraries.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-shtool/">shtool</a></i>(1), <i><a href="/docs/linux/man/1-umask/">umask</a></i>(1), <i><a href="/docs/linux/man/1-chmod/">chmod</a></i>(1), <i><a href="/docs/linux/man/1-chown/">chown</a></i>(1), <i><a href="/docs/linux/man/1-chgrp/">chgrp</a></i>(1), <i><a href="/docs/linux/man/1-strip/">strip</a></i>(1), <i><a href="/docs/linux/man/1-sed/">sed</a></i>(1). </p>
-<h2>Index</h2>

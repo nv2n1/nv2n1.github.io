@@ -147,4 +147,3 @@ description: "passwd – change user password"
 </dt><dd> invalid argument to option</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-chpasswd/">chpasswd</a></code>(8), <code><a href="/docs/linux/man/5-passwd/">passwd</a></code>(5), <code><a href="/docs/linux/man/5-shadow/">shadow</a></code>(5), <code><a href="/docs/linux/man/8-usermod/">usermod</a></code>(8). </p>
-<h2>Index</h2>

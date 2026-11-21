@@ -49,4 +49,3 @@ Verifying - Enter PEM pass phrase: XXXXXXXX
 </dt><dd> Path to the default private key file.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Copyright &#169; 1999-2014 University of Chicago </p>
-<h2>Index</h2>

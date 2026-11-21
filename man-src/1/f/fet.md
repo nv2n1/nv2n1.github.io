@@ -19,4 +19,3 @@ description: "FET – free timetabling"
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2002-2009 Liviu Lalescu.<br />
  This is Free Software; this software is licensed under the GPL version 2 or later, as published by the Free Software Foundation. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
-<h2>Index</h2>

@@ -62,4 +62,3 @@ description: "mdb-ver – Return the format of a given MDB database."
 <h2>BUGS</h2>
 <p> <code>mdb-ver</code> does minimal checking on the validity of a file. It is possbile for it to misidentify a non-MDB file. </p>
 <p> <code>mdb-ver</code> does not recognize Access 2.0 (Jet 2). </p>
-<h2>Index</h2>

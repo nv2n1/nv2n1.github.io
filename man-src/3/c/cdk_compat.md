@@ -57,4 +57,3 @@ int splitString(
 <p> Finally, unless this is a purely academic exercise, you will want to remove references to the deprecated functions and macros.</p>
 <h2>SEE ALSO</h2>
 <p> cdk_objs (3), cdk_util (3) </p>
-<h2>Index</h2>

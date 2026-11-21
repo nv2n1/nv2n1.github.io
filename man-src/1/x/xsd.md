@@ -52,4 +52,3 @@ description: "xsd – Mono’s utility for generating schema or class files"
 <p> xsd is released under the terms of the GNU GPL. </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-disco/">disco</a>(1), <a href="/docs/linux/man/1-soapsuds/">soapsuds</a>(1), <a href="/docs/linux/man/1-mono/">mono</a>(1), <a href="/docs/linux/man/1-mcs/">mcs</a>(1), <a href="/docs/linux/man/1-wsdl/">wsdl</a>(1) </p>
-<h2>Index</h2>

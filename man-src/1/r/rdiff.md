@@ -25,4 +25,3 @@ rdiff[options] signature old - file signature - file rdiff[options] delta signat
 <p> Martin Pool &lt;mbp [at] sourcefrog.net&gt; </p>
 <p> The original rsync algorithm was discovered by Andrew Tridgell. </p>
 <p> rdiff development has been supported by Linuxcare, Inc and VA Linux Systems. </p>
-<h2>Index</h2>

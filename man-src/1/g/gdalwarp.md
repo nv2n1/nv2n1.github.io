@@ -133,4 +133,3 @@ gdalwarp HDF4_SDS:ASTER_L1B:&quot;pg-PR1B0000-2002031402_100_001&quot;:2 pg-PR1B
 </pre>
 <h2>AUTHORS</h2>
 <p> Frank Warmerdam warmerdam [at] pobox.com, Silke Reimer silke [at] intevation.de </p>
-<h2>Index</h2>

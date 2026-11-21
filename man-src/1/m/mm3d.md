@@ -50,4 +50,3 @@ description: "mm3d – Misfit Model 3D"
 <h2>AUTHOR</h2>
 <p> mm3d was written by Kevin Worcester. </p>
 <p> This manual page was written by G[:u]rkan Seng[:u]n &lt;gurkan [at] linuks.mine.nu&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

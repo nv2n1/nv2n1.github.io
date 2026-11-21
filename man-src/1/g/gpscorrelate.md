@@ -105,4 +105,3 @@ description: "gpscorrelate – correlates digital images with GPS data filling E
 </dt><dd> Author.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2006, 2008 Stefano Zacchiroli zack [at] debian.org, Till Maas </p>
-<h2>Index</h2>

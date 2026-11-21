@@ -284,4 +284,3 @@ apples %d oranges %d
 <p> Paul Sheer (psheer [at] obsidian.co.za) is the original author of the Midnight Commander&#8217;s internal editor.</p>
 <h2>BUGS</h2>
 <p> Bugs should be reported to mc-devel [at] gnome.org </p>
-<h2>Index</h2>

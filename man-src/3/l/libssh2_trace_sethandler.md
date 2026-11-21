@@ -25,4 +25,3 @@ int libssh2_trace_sethandler(LIBSSH2_SESSION *session,
 <p> <code>context</code> can be used to pass arbitrary user defined data back into the callback when invoked.</p>
 <h2>AVAILABILITY</h2>
 <p> Added in libssh2 version 1.2.3 </p>
-<h2>Index</h2>

@@ -352,4 +352,3 @@ description: "Heimdal Kerberos 5 principal functions –"
 </dt><dd> An krb5 error code, see <code>krb5_get_error_message()</code>.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for HeimdalKerberos5library from the source code. </p>
-<h2>Index</h2>

@@ -20,4 +20,3 @@ description: "igraph – a library for creating and manipulating graphs"
 <h2>AUTHORS</h2>
 <p> Gabor Csardi &lt;csardi.gabor [at] gmail.com&gt;,<br />
  Tamas Nepusz &lt;ntamas [at] gmail.com&gt; </p>
-<h2>Index</h2>

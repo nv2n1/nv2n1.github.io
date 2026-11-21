@@ -123,4 +123,3 @@ description: "efix – convert between fax, text, bit-map and gray-scale formats
 <h2>BUGS</h2>
 <p> Only reads two types of TIFF compression formats. </p>
 <p> Does not write multi-page TIFF files (a feature). </p>
-<h2>Index</h2>

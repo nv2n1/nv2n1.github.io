@@ -38,4 +38,3 @@ description: "ipq_read — read queue messages from ip_queue and read into suppl
 <p> Joost Remijn implemented the timeout feature, which appeared in the 1.2.4 release of iptables.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-iptables/">iptables</a></code>(8), <code><a href="/docs/linux/man/3-libipq/">libipq</a></code>(3), <code><a href="/docs/linux/man/2-select/">select</a></code>(2). </p>
-<h2>Index</h2>

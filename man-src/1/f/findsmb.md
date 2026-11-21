@@ -54,4 +54,3 @@ IP ADDR         NETBIOS NAME   WORKGROUP/OS/VERSION
 <p> <code><a href="/docs/linux/man/8-nmbd/">nmbd</a></code>(8), <code><a href="/docs/linux/man/1-smbclient/">smbclient</a></code>(1), and <code><a href="/docs/linux/man/1-nmblookup/">nmblookup</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> The original Samba software and related utilities were created by Andrew Tridgell. Samba is now developed by the Samba Team as an Open Source project similar to the way the Linux kernel is developed. </p>
-<h2>Index</h2>

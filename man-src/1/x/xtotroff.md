@@ -32,4 +32,3 @@ description: "xtotroff – convert X font metrics into GNU troff font metrics"
 <p> The only supported font encodings are &#8220;iso8859-1&#8221; and &#8220;adobe-fontspecific&#8221;.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-groff/">groff</a></i>(1), <i><a href="/docs/linux/man/1-gxditview/">gxditview</a></i>(1), <i><a href="/docs/linux/man/1-troff/">troff</a></i>(1) </p>
-<h2>Index</h2>

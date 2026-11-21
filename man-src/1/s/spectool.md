@@ -59,4 +59,3 @@ description: "spectool – manual page for spectool v1.0.10rpmdev1"
 <dt>
 </dt><dd> optional <a href="/docs/linux/man/1-curl/">curl</a>(1) configuration </dd>
 </dl>
-<h2>Index</h2>

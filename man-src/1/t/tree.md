@@ -227,4 +227,3 @@ description: "tree – list contents of directories in a tree-like format."
 <p> As of version 2.0.0, in Linux, tree will attempt to automatically output a compact JSON tree on file descriptor 3 (what I call stddata,) if present and the environment variable STDDATA_FD is defined or set to a positive non-zero file descriptor value to use to output on. It is hoped that some day a better Linux/Unix shell may take advantage of this feature, though BSON would probably be a better format for this. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dircolors/">dircolors</a></code>(1), <code><a href="/docs/linux/man/1-ls/">ls</a></code>(1), <code><a href="/docs/linux/man/1-find/">find</a></code>(1), <code><a href="/docs/linux/man/1-du/">du</a></code>(1), <code><a href="/docs/linux/man/3-strftime/">strftime</a></code>(3) <code><a href="/docs/linux/man/5-gitignore/">gitignore</a></code>(5) </p>
-<h2>Index</h2>

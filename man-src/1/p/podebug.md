@@ -40,4 +40,3 @@ description: "podebug – Insert debug messages into XLIFF and Gettext PO locali
 <dt>&#8211;ignore</dt>
 <dd> apply tagging ignore rules for the given application: gtk, kde, mozilla, openoffice </dd>
 </dl>
-<h2>Index</h2>

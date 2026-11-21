@@ -16,4 +16,3 @@ description: "neqn – format equations for ASCII output"
 <p> Note that <i>eqn</i> does not support low-resolution, typewriter-like devices (although it may work adequately for very simple input).</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-eqn/">eqn</a></i>(1) </p>
-<h2>Index</h2>

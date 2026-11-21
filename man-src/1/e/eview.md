@@ -31,4 +31,3 @@ description: "evim – easy Vim, edit a file with Vim and setup for modeless edi
 <p> <a href="/docs/linux/man/1-vim/">vim</a>(1)</p>
 <h2>AUTHOR</h2>
 <p> Most of <code>Vim</code> was made by Bram Moolenaar, with a lot of help from others. See the Help/Credits menu. </p>
-<h2>Index</h2>

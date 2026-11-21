@@ -40,4 +40,3 @@ description: "euca-describe-tags – List tags associated with your account’s 
 <dd> show this help message and exit</dd></dl>
 <h3>allowed filter names:</h3>
 <p> key resource-id resource-type value </p>
-<h2>Index</h2>

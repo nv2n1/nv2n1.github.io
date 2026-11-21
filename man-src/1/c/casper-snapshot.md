@@ -44,4 +44,3 @@ description: "casper-snapshot – a simple script to ease persistence usage."
 <dt>This manual page was written by Marco Amadori &lt;marco.amadori [at] gmail.com&gt;,</dt>
 <dd> for the Debian project (but may be used by others). </dd>
 </dl>
-<h2>Index</h2>

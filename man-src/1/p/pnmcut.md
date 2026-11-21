@@ -44,4 +44,3 @@ description: "pnmcut – cut a rectangle out of a portable anymap"
 <p> <code><a href="/docs/linux/man/1-pnmcrop/">pnmcrop</a></code>(1), <code><a href="/docs/linux/man/1-pnmpad/">pnmpad</a></code>(1), <code><a href="/docs/linux/man/1-pnmcat/">pnmcat</a></code>(1), <code><a href="/docs/linux/man/1-pgmslice/">pgmslice</a></code>(1), <code><a href="/docs/linux/man/5-pnm/">pnm</a></code>(5)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1989 by Jef Poskanzer. </p>
-<h2>Index</h2>

@@ -79,4 +79,3 @@ Flist-Order: personal petproject mh* * admin *junk
 <dd></dd></dl>
 <h2>CONTEXT</h2>
 <p> If <i>+folder</i> is given, it will become the current folder. If multiple folders are given, the last one specified will become the current folder. </p>
-<h2>Index</h2>

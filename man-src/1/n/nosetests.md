@@ -213,4 +213,3 @@ nosetests --plugins
 <p> Nose developers</p>
 <h2>COPYRIGHT</h2>
 <p> 2009, Jason Pellerin </p>
-<h2>Index</h2>

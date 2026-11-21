@@ -37,4 +37,3 @@ description: "globus-spec-creator – Generate an RPM spec file from a GPT sourc
 <p> See <a rel="nofollow" href="http://fedoraproject.org/wiki/PackagingDrafts/Globus">http://fedoraproject.org/wiki/PackagingDrafts/Globus</a> for additional information and examples.</p>
 <h2>AUTHOR</h2>
 <p> Mattias Ellert &lt;mattias.ellert [at] fysast.uu.se&gt; </p>
-<h2>Index</h2>

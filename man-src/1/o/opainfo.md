@@ -111,4 +111,3 @@ description: "opainfo"
  Xmit Data: 22581581 MB Pkts: 5100825193<br />
  Recv Data: 18725619 MB Pkts: 4024569756<br />
  Link Quality: 5 (Excellent) </p>
-<h2>Index</h2>

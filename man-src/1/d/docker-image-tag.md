@@ -72,4 +72,3 @@ docker image tag 0e5574283393 myregistryhost:5000/fedora/httpd:version1.0
 <p> <code>-h</code>, <code>&#8211;help</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>help for tag</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-image/">docker-image</a>(1)</code> </p>
-<h2>Index</h2>

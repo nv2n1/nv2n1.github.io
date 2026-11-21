@@ -27,4 +27,3 @@ description: "rdjpgcom – display text comments from a JPEG file"
 <p> <code><a href="/docs/linux/man/1-cjpeg/">cjpeg</a></code>(1), <code><a href="/docs/linux/man/1-djpeg/">djpeg</a></code>(1), <code><a href="/docs/linux/man/1-jpegtran/">jpegtran</a></code>(1), <code><a href="/docs/linux/man/1-wrjpgcom/">wrjpgcom</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> Independent JPEG Group </p>
-<h2>Index</h2>

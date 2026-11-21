@@ -36,4 +36,3 @@ description: "pto_mask – Apply a mask"
 <dd> Shows this help</dd></dl>
 <h2>AUTHORS</h2>
 <p> Thomas Modes </p>
-<h2>Index</h2>

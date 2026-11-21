@@ -25,4 +25,3 @@ description: "xdpyinfo – display information utility for X"
 <h2>AUTHOR</h2>
 <p> Jim Fulton, MIT X Consortium<br />
  Support for the XFree86-VidModeExtension, XFree86-DGA, XFree86-Misc, and XKB extensions added by Joe Moss </p>
-<h2>Index</h2>

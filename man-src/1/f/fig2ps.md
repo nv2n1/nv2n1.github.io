@@ -129,4 +129,3 @@ description: "fig2ps, fig2eps,fig2pdf – Convert xfig files in ps|pdf, processi
 <h2>BUG REPORT AND FEATURE REQUESTS</h2>
 <p> Please use the tracker from the Sourceforge project page: </p>
 <p> <i><a rel="nofollow" href="https://sourceforge.net/tracker/?group_id=125824">https://sourceforge.net/tracker/?group_id=125824</a></i> </p>
-<h2>Index</h2>

@@ -37,4 +37,3 @@ native2ascii[options][inputfile[outputfile]]
 </dl>
 <p> <br />
 &nbsp;<wbr> </p>
-<h2>Index</h2>

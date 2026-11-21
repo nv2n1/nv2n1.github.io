@@ -20,4 +20,3 @@ description: "gnome-logs – log viewer for the systemd journal"
 <h2>AUTHOR</h2>
 <p> <code>gnome-logs</code> was written by David King &lt;davidk [at] gnome.org&gt; </p>
 <p> This manual page was written by David King &lt;davidk [at] gnome.org&gt;. </p>
-<h2>Index</h2>

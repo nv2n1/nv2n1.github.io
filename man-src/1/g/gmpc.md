@@ -41,4 +41,3 @@ description: "gmpc [OPTION]"
 <p> MPD Website: <a rel="nofollow" href="http://www.musicpd.org">http://www.musicpd.org</a> </p>
 <h2>AUTHOR</h2>
 <p> GMPC was written by Qball Cow &lt;qball [at] sarine.nl&gt;</p>
-<h2>Index</h2>

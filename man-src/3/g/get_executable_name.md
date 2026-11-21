@@ -20,4 +20,3 @@ char name[200];
 allegro_message("Running `%s'
 ", name);
 </code></pre>
-<h2>Index</h2>

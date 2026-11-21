@@ -21,4 +21,3 @@ description: "proxy – Display the proxy server that should be used to reach a 
 <p> This manual page was written by Laurent Bigonville for the Debian GNU/Linux system (but may be used by others).</p>
 <h2>SEE ALSO</h2>
 <p> libproxy </p>
-<h2>Index</h2>

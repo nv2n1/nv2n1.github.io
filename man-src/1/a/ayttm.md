@@ -60,4 +60,3 @@ description: "Ayttm – Universal Instant Messaging client"
 <h2>ACKNOWLEDGEMENTS</h2>
 <p> <code>Ayttm</code> is an heir of <code>EveryBuddy</code> (<i><a rel="nofollow" href="http://www.everybuddy.com">http://www.everybuddy.com</a></i>). We would like to thank the EveryBuddy development team for their contribution. </p>
 <p> Special thanks to Mark Spencer, initial creator of GAIM, for all of the tremendous support he has given. </p>
-<h2>Index</h2>

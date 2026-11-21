@@ -24,4 +24,3 @@ allegro_message("Running `%s'
 <p> Returns a pointer to the portion of `path&#8217; where the filename starts, or the beginning of `path&#8217; if no valid filename is found (eg. you are processing a path with backslashes under Unix). </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-get_extension/">get_extension</a></code>(3), <code><a href="/docs/linux/man/3-put_backslash/">put_backslash</a></code>(3), <code><a href="/docs/linux/man/3-replace_filename/">replace_filename</a></code>(3), <code><a href="/docs/linux/man/3-exmidi/">exmidi</a></code>(3) </p>
-<h2>Index</h2>

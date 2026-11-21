@@ -267,4 +267,3 @@ cdispo-&lt;PARAM&gt;  string    Value of &lt;PARAM&gt; from
 </pre>
 <h2>CONTEXT</h2>
 <p> If a folder is given, it will become the current folder. The last message selected will become the current message. </p>
-<h2>Index</h2>

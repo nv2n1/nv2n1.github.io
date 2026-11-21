@@ -41,4 +41,3 @@ description: "freight-add – add a package to Freight"
 <h2>SEE ALSO</h2>
 <p> Part of <code><a href="/docs/linux/man/1-freight/">freight</a></code>(1). </p>
 <p> <code><a href="/docs/linux/man/1-freight-cache/">freight-cache</a></code>(1) builds package repositories from the intermediate &quot;Freight library&quot; managed by <code>freight-add</code>. </p>
-<h2>Index</h2>

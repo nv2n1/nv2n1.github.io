@@ -21,4 +21,3 @@ description: "ldb_message_element –"
 <p> results are given back as arrays of <code>ldb_message_element</code> </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LDB from the source code. </p>
-<h2>Index</h2>

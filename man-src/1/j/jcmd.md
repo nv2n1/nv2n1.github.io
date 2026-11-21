@@ -86,4 +86,3 @@ description: "jcmd – Sends diagnostic command requests to a running Java Virtu
 <dl>
 <dt>
 </dt><dd> &bull; <a href="/docs/linux/man/1-jps/">jps</a>(1)</dd></dl>
-<h2>Index</h2>

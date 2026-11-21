@@ -486,4 +486,3 @@ description: "caveats – Caveats"
 <dt><code>Class Zibor</code></dt>
 <dd> This is the rate fixed in Zurich by BBA. Use CHFLibor if you&#8217;re interested in the London fixing by BBA.</dd></dl>
 <hr>
-<h2>Index</h2>

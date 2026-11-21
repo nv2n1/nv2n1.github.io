@@ -25,4 +25,3 @@ description: "krb5_change_password krb5_set_password krb5_set_password_using_cca
 <p> Fn krb5_passwd_result_to_string returns an human readable string describing the error code in Fa result_code from the Fn krb5_set_password functions.</p>
 <h2>SEE ALSO</h2>
 <p> krb5_ccache3, krb5_init_context3 </p>
-<h2>Index</h2>

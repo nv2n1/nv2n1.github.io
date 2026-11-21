@@ -1822,4 +1822,3 @@ bar=(-a '' -b xyz)</code>
 </dd></dl>
 </dl>
 </dl>
-<h2>Index</h2>

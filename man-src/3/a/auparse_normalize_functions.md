@@ -40,4 +40,3 @@ int auparse_normalize_key(auparse_state_t *au);
 <p> <a href="/docs/linux/man/3-auparse_normalize/">auparse_normalize</a>(3), <a href="/docs/linux/man/3-auparse_get_field_str/">auparse_get_field_str</a>(3), <a href="/docs/linux/man/3-auparse_interpret_field/">auparse_interpret_field</a>(3). </p>
 <h2>AUTHOR</h2>
 <p> Steve Grubb </p>
-<h2>Index</h2>

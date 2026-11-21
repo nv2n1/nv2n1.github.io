@@ -81,4 +81,3 @@ description: "gajim – a Jabber/XMPP client"
 </blockquote>
 <h2>SEE ALSO</h2>
 <p> gajim-remote1 gajim-history-manager1 </p>
-<h2>Index</h2>

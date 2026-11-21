@@ -18,4 +18,3 @@ description: "matho-sumsq – Find the minimum sum of the squares for integers"
 <p> <code><a href="/docs/linux/man/1-mathomatic/">mathomatic</a></code>(1), <code><a href="/docs/linux/man/1-matho-pascal/">matho-pascal</a></code>(1), <code><a href="/docs/linux/man/1-matho-primes/">matho-primes</a></code>(1) </p>
 <h2>AUTHOR</h2>
 <p> George Gesslein II (gesslein [at] linux.com) </p>
-<h2>Index</h2>

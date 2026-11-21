@@ -142,4 +142,3 @@ description: "kdocker - dock any application in the system tray SYNOPSIS kdocker
 </pre>
 <h2>REPORTING BUGS</h2>
 <p> Bugs and wishes to the KDocker Home Page &lt;<a rel="nofollow" href="https://github.com/user-none/KDocker">https://github.com/user-none/KDocker</a>&gt; </p>
-<h2>Index</h2>

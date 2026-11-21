@@ -46,4 +46,3 @@ description: "gksu – GTK+ frontend for su and sudo"
 <dd>Force gksu to use <a href="/docs/linux/man/1-sudo/">sudo</a>(1) as its backend for running the programs.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-su/">su</a></code>(1), <code><a href="/docs/linux/man/1-sudo/">sudo</a></code>(1) </p>
-<h2>Index</h2>

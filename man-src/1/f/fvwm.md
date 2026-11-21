@@ -5688,4 +5688,3 @@ AddToFunc InitFunction + I Exec exec xterm - fg $[fg.cs0] - bg $[bg.cs0]
 <h2>BUGS</h2>
 <p> Bug reports can be sent to the fvwm-workers mailing list at &lt;fvwm-workers [at] fvwm.org&gt; </p>
 <p> The official fvwm homepage is <i><a rel="nofollow" href="http://fvwm.org/">http://fvwm.org/</a></i>. </p>
-<h2>Index</h2>

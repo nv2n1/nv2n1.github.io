@@ -56,4 +56,3 @@ description: "gtags-parser – print cross reference list for gtags."
 <p> Tama Communications Corporation.</p>
 <h2>HISTORY</h2>
 <p> The <code>gtags-parser</code>(gctags) command appeared in FreeBSD 2.2.2. </p>
-<h2>Index</h2>

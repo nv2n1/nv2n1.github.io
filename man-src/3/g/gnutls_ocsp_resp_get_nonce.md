@@ -37,4 +37,3 @@ description: "gnutls_ocsp_resp_get_nonce – API function"
 <dl>
 <dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
 <dd> </code></dd></dl>
-<h2>Index</h2>

@@ -47,4 +47,3 @@ description: "fc-cache – build font information cache files"
 <p> The fontconfig user&#8217;s guide, in HTML format: <i>/usr/share/doc/fontconfig/fontconfig-user.html</i>.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Keith Packard &lt;keithp [at] keithp.com&gt; and Josselin Mouette &lt;joss [at] debian.org&gt;. </p>
-<h2>Index</h2>

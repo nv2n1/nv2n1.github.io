@@ -103,4 +103,3 @@ export PATH=&quot;`csclng --print-path-to-wrap`:$PATH&quot;
 <p> Written by Kamil Dudka.</p>
 <h2>COPYING</h2>
 <p> Copyright (C) 2013-2014 Red Hat, Inc. Free use of this software is granted under the terms of the GNU General Public License (GPL). See the COPYING file for details. </p>
-<h2>Index</h2>

@@ -110,4 +110,3 @@ https : // fts3-devel.cern.ch:8446&amp;nbsp;-f bulk.list
 </dd></dl>
 <h2>AUTHORS</h2>
 <p> fts-devel [at] cern.ch. </p>
-<h2>Index</h2>

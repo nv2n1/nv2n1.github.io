@@ -43,4 +43,3 @@ gmk_hy[options] dim[ofile] gmk_m2[options][-gcfile] dimX dimY[ofile] gmk_m3[opti
 <p> Scotch user&#8217;s manual.</p>
 <h2>AUTHOR</h2>
 <p> Francois Pellegrini &lt;francois.pellegrini [at] labri.fr&gt; </p>
-<h2>Index</h2>

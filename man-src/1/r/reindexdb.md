@@ -110,4 +110,3 @@ $ <code>reindexdb --table foo --index bar abcd</code>
 </dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/7-reindex/">REINDEX</a></code>(7) </p>
-<h2>Index</h2>

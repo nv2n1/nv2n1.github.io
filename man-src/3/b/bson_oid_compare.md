@@ -27,4 +27,3 @@ int bson_oid_compare(const bson_oid_t *oid1,
 <p> less than 0, 0, or greater than 0 based on the comparison. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

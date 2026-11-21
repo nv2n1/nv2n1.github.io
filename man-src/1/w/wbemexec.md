@@ -67,4 +67,3 @@ description: "wbemexec – submit a CIM operation request to a CIM Server"
 <p> cimserver(1), cimconfig(1).</p>
 <h2>STANDARDS CONFORMANCE</h2>
 <p> <code>wbemexec</code>: CIM Operations over HTTP 1.0, Representation of CIM in XML 2.0 </p>
-<h2>Index</h2>

@@ -180,4 +180,3 @@ ippfind-- txt - pdl application / postscript-- exec ipptool - f onepage - letter
 <p> <code><a href="/docs/linux/man/1-ipptool/">ipptool</a></code>(1)</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2021-2022 by OpenPrinting. </p>
-<h2>Index</h2>

@@ -37,4 +37,3 @@ description: "oparesolvehfiport"
 <p> oparesolvehfiport 0 1<br />
  Output:<br />
  #8217#160; hfi_0:1 </p>
-<h2>Index</h2>

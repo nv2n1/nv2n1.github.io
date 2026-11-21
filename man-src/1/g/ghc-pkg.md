@@ -92,4 +92,3 @@ description: "ghc-pkg – GHC Haskell Cabal package manager"
 <p> <code><a href="/docs/linux/man/1-ghc/">ghc</a></code>(1), <code><a href="/docs/linux/man/1-runghc/">runghc</a></code>(1), <code><a href="/docs/linux/man/1-hugs/">hugs</a></code>(1).</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Kari Pahula &lt;kaol [at] debian.org&gt;, for the Debian project (and may be used by others). </p>
-<h2>Index</h2>

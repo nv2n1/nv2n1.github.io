@@ -19,4 +19,3 @@ description: "icecast – an MP3/Ogg Vorbis broadcast streaming media server"
 <p> The example configuration files, provided with the package documentation are the only reliable source of information on this software. It is still under very active development; documentation will be written when it is possible to do so.</p>
 <h2>AUTHOR</h2>
 <p> icecast was created by the icecast team &lt;team [at] icecast.org&gt;. This manual page was written by Keegan Quinn &lt;ice [at] thebasement.org&gt;. </p>
-<h2>Index</h2>

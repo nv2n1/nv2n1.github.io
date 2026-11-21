@@ -22,4 +22,3 @@ description: "xmlparse – error-check and validate XML documents"
 </dl>
 <h2>AUTHORS</h2>
 <p> <code>xmlparse</code> was written by Richard Frith-Macdonald &lt;rfm [at] gnu.org&gt; </p>
-<h2>Index</h2>

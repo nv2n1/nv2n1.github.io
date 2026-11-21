@@ -34,4 +34,3 @@ gdalmove.py[-s_srs&lt;srs_defn&gt;] - t_srs&lt;srs_defn&gt;[-et&lt;max_pixel_err
 <dd> The file to be operated on. To update this must be a file format that supports in place updates of the geotransform and SRS.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Frank Warmerdam warmerdam [at] pobox.com </p>
-<h2>Index</h2>

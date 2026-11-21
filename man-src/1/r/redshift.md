@@ -123,4 +123,3 @@ esac
 <p> Please report bugs to &lt;<a rel="nofollow" href="https://github.com/jonls/redshift/issues">https://github.com/jonls/redshift/issues</a>&gt;</p>
 <h2>KNOWN ISSUES</h2>
 <p> <code>redshift</code> will not affect the color of your cursor when your graphics driver is configured to use hardware cursors. Some graphics drivers have an option to disable hardware cursors. </p>
-<h2>Index</h2>

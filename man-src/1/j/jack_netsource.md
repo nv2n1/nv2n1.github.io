@@ -88,4 +88,3 @@ description: "jack_netsource – Netjack Master client for one slave"
 <dt>
 </dt><dd> <code>jackd -d net </code> </dd>
 </dl>
-<h2>Index</h2>

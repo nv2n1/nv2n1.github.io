@@ -29,4 +29,3 @@ description: "postgresql-setup – manual page for postgresql-setup 9.2.18"
 <dt>PGSETUP_DEBUG</dt>
 <dd> Set to &#8216;1&#8217; if you want to see debugging output. </dd>
 </dl>
-<h2>Index</h2>

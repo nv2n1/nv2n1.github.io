@@ -23,4 +23,3 @@ int ares_fds(ares_channel channel, fd_set *read_fds,
 <h2>AUTHOR</h2>
 <p> Greg Hudson, MIT Information Systems<br />
  Copyright 1998 by the Massachusetts Institute of Technology. </p>
-<h2>Index</h2>

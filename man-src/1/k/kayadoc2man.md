@@ -23,4 +23,3 @@ description: "kayadoc2man – Automatic man pages for Kaya modules"
 <p> <code>kayadoc2man</code> is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License (version 2 or any later version) as published by the Free Software Foundation. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-man/">man</a>(1)</code> <code><a href="/docs/linux/man/1-kayac/">kayac</a>(1)</code> </p>
-<h2>Index</h2>

@@ -50,4 +50,3 @@ description: "gendict – Compiles word list into ICU string trie dictionary"
 <p> Copyright (C) 2012 International Business Machines Corporation and others</p>
 <h2>SEE ALSO</h2>
 <p> <code><a rel="nofollow" href="http://www.icu-project.org/userguide/boundaryAnalysis.html">http://www.icu-project.org/userguide/boundaryAnalysis.html</a></code> </p>
-<h2>Index</h2>

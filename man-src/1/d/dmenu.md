@@ -110,4 +110,3 @@ description: "dmenu – dynamic menu"
 <dd> Down</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i>dwm</i>(1), <i><a href="/docs/linux/man/1-stest/">stest</a></i>(1) </p>
-<h2>Index</h2>

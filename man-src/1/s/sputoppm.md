@@ -17,4 +17,3 @@ description: "sputoppm – convert an Atari uncompressed Spectrum file into a po
 <p> <a href="/docs/linux/man/1-spctoppm/">spctoppm</a>(1), <a href="/docs/linux/man/5-ppm/">ppm</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1991 by Steve Belczyk (seb3 [at] gte.com) and Jef Poskanzer. </p>
-<h2>Index</h2>

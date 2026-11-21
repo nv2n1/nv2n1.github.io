@@ -79,4 +79,3 @@ gmt connect my_lines.txt -T150e -DMap_segment_%04d.dat
 <p> <code>gmt</code>, <code>gmt.conf</code>, <code>gmtsimplify</code>, <code>gmtspatial</code>, <code>mapproject</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

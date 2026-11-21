@@ -31,4 +31,3 @@ description: "psorder – PostScript pageorder filter"
 </dt><dd> Force <code>psorder</code> to re-order the pages, even if the document claims that its page order is not to be trifled with. This option should only be used experimentally, as it may cause documents to print incorrectly.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-psf/">psf</a></code>(8), <code><a href="/docs/linux/man/1-lpr/">lpr</a></code>(1). </p>
-<h2>Index</h2>

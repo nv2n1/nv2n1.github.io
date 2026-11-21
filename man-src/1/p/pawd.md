@@ -23,4 +23,3 @@ description: "pawd – print automounter working directory"
 <h2>AUTHORS</h2>
 <p> Erez Zadok &lt;ezk [at] cs.sunysb.edu&gt;, Computer Science Department, Stony Brook University, Stony Brook, New York, USA. </p>
 <p> Other authors and contributors to am-utils are listed in the <code>AUTHORS</code> file distributed with am-utils. </p>
-<h2>Index</h2>

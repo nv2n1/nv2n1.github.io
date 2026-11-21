@@ -103,4 +103,3 @@ description: "Totem – GNOME desktop movie player based on GStreamer"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-totem-video-thumbnailer/">totem-video-thumbnailer</a></code>(1), </p>
 <p> The online documentation available through the program&#8217;s <i>Help</i> menu. </p>
-<h2>Index</h2>

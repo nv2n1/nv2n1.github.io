@@ -44,4 +44,3 @@ description: "pbsdsh – distribute task to nodes under pbs"
 <p> If the pbsdsh command fails to process any operand, or fails to contact the MOM daemon on the localhost the command exits with a value greater than zero.</p>
 <h2>SEE ALSO</h2>
 <p> qsub(1B), tm_spawn(3B) </p>
-<h2>Index</h2>

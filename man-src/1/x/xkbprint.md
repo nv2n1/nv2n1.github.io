@@ -72,4 +72,3 @@ description: "xkbprint – print an XKB keyboard description"
  See <code><a href="/docs/linux/man/7-x/">X</a></code>(7) for a full statement of rights and permissions.</p>
 <h2>AUTHOR</h2>
 <p> Erik Fortune, Silicon Graphics </p>
-<h2>Index</h2>

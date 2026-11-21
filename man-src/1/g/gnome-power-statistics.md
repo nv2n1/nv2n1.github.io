@@ -26,4 +26,3 @@ description: "gnome-power-statistics – gnome power statistics gui"
 <p> The programs are also documented on <a rel="nofollow" href="http://gnome.org/projects/gnome-power-manager/">http://gnome.org/projects/gnome-power-manager/</a> .</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Simon Zheng &lt;simon.zheng [at] sun.com&gt;. </p>
-<h2>Index</h2>

@@ -21,4 +21,3 @@ description: "sbsiglist – Create EFI_SIGNATURE_LIST signature databases"
 <dt><code>&#8211;output</code> &lt;file&gt;</dt>
 <dd> write signed data to &lt;file&gt; (default &lt;sig-file&gt;.siglist) </dd>
 </dl>
-<h2>Index</h2>

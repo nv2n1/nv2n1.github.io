@@ -116,4 +116,3 @@ description: "virt-clone – clone existing virtual machine images"
 <p> Copyright (C) Fujitsu Limited, Copyright (C) Red Hat, Inc, and various contributors. This is free software. You may redistribute copies of it under the terms of the <font SIZE="-1">GNU</font> General Public License <tt>&quot;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>&quot;</tt>. There is <font SIZE="-1">NO WARRANTY,</font> to the extent permitted by law.</p>
 <h2>SEE ALSO</h2>
 <p> <tt>&quot;<a href="/docs/linux/man/1-virt-sysprep/">virt-sysprep</a>(1)&quot;</tt>, <tt><a href="/docs/linux/man/1-virsh/">virsh</a>(1)</tt>, <tt>&quot;<a href="/docs/linux/man/1-virt-install/">virt-install</a>(1)&quot;</tt>, <tt>&quot;<a href="/docs/linux/man/1-virt-manager/">virt-manager</a>(1)&quot;</tt>, the project website <tt>&quot;<a rel="nofollow" href="http://virt-manager.org">http://virt-manager.org</a>&quot;</tt> </p>
-<h2>Index</h2>

@@ -33,4 +33,3 @@ description: "set_max_input_length"
 <p> Also note that this function only affects the next input, not the inputs after that. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-gstream-set_input_string/">gstream-set_input_string</a></code>(3) </p>
-<h2>Index</h2>

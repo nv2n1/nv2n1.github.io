@@ -19,4 +19,3 @@ description: "sipdialer – initiate phone call (click-to-call)"
 <p> See <a rel="nofollow" href="http://www.resiprocate.org">http://www.resiprocate.org</a></p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2007 Daniel Pocock &#8211; licenced under BSD terms </p>
-<h2>Index</h2>

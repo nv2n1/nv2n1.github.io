@@ -169,4 +169,3 @@ description: "ocamldoc – The OCaml documentation generator"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ocaml/">ocaml</a></code>(1), <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1), <code><a href="/docs/linux/man/1-ocamlopt/">ocamlopt</a></code>(1).<br />
  <i>The OCaml user&#8217;s manual,</i> chapter &quot;The documentation generator&quot;. </p>
-<h2>Index</h2>

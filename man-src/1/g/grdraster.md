@@ -66,4 +66,3 @@ gmt grdraster &quot;2 min Geoware&quot; -R20/25/-10/5 -bo &gt; triplets.b
 <p> <code>gmtdefaults</code>, <code>gmt</code>, <code>grdsample</code>, <code>grdfilter</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

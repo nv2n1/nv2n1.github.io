@@ -62,4 +62,3 @@ description: "reptyr – Reparent a running program to a new terminal"
 <h2>HOMEPAGE</h2>
 <h2>SEE ALSO</h2>
 <p> <code>neercs</code>(1), <code><a href="/docs/linux/man/1-screen/">screen</a></code>(1) </p>
-<h2>Index</h2>

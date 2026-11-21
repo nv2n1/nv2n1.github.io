@@ -225,4 +225,3 @@ strict graph H
 <p> Strings and uninterpreted records could be treatly more uniformly. </p>
 <h2>AUTHOR</h2>
 <p> Stephen North, north [at] research.att.com, AT&amp;T Research. </p>
-<h2>Index</h2>

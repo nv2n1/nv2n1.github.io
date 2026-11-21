@@ -111,4 +111,3 @@ description: "luit – Locale and ISO 2022 support for Unicode terminals"
 </pre>
 <h2>AUTHOR</h2>
 <p> The version of <code>Luit</code> included in this X.Org Foundation release was originally written by Juliusz Chroboczek &lt;jch [at] freedesktop.org&gt; for the XFree86 Project and includes additional contributions from Thomas E. Dickey required for newer releases of <a href="/docs/linux/man/1-xterm/">xterm</a>(1). </p>
-<h2>Index</h2>

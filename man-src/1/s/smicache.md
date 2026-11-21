@@ -40,4 +40,3 @@ description: "smicache – caching method for use with libsmi"
 <p> <code><a href="/docs/linux/man/1-smilint/">smilint</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> (C) 2001-2004 Frank Strauss, TU Braunschweig, Germany &lt;strauss [at] ibr.cs.tu-bs.de&gt; </p>
-<h2>Index</h2>

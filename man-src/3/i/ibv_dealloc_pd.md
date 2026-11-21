@@ -30,4 +30,3 @@ int ibv_dealloc_pd(struct ibv_pd *pd);
 <dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

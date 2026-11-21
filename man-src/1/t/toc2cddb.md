@@ -27,4 +27,3 @@ description: "toc2cddb – translates a TOC file of"
 <h2>AUTHOR</h2>
 <p> <code>toc2cddb</code> was written by Giuseppe &quot;Cowo&quot; Corbelli &lt;cowo [at] lugbs.linux.it&gt; and is part of <i><a href="/docs/linux/man/1-cdrdao/">cdrdao</a>(1)</i> written by Andreas Mueller &lt;andreas [at] daneb.de&gt;. </p>
 <p> This manual page was written by Francois Wendling &lt;frwendling [at] free.fr&gt; and revised by Daniel Baumann &lt;daniel [at] debian.org&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

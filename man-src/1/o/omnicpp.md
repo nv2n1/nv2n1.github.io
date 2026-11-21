@@ -29,4 +29,3 @@ description: "omnicpp – OmniORB cpp preprocessor for IDL compiler"
 <h2>AUTHOR</h2>
 <p> omnicpp was written by Duncan Grisby &lt;duncan [at] grisby.org&gt; </p>
 <p> This manual page was written by Floris Bruynooghe &lt;floris.bruynooghe [at] gmail.com&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

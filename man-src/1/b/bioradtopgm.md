@@ -21,4 +21,3 @@ description: "bioradtopgm – convert a Biorad confocal file into a portable gra
 <p> <a href="/docs/linux/man/5-pgm/">pgm</a>(5), <a href="/docs/linux/man/1-pnmflip/">pnmflip</a>(1)</p>
 <h2>AUTHORS</h2>
 <p> Copyright (C) 1993 by Oliver Trepte </p>
-<h2>Index</h2>

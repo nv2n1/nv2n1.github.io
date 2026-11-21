@@ -371,4 +371,3 @@ description: "GQview – GTK based multiformat image viewer"
 <h2>AUTHOR</h2>
 <p> <code>John Ellis</code> &lt;johne [at] verizon.net&gt;<br />
  Manpage originally prepared by <code>Nick Rusnov</code> &lt;nick [at] grawk.net&gt; </p>
-<h2>Index</h2>

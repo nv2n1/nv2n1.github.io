@@ -66,4 +66,3 @@ description: "prg2lout – convert computer program text into Lout"
 <p> Jeffrey H. Kingston, <i>&#8220;A User&#8217;s Guide to the Lout Document Formatting System&#8221;</i>, Chapter 11.</p>
 <h2>AUTHOR</h2>
 <p> Jeffrey H. Kingston </p>
-<h2>Index</h2>

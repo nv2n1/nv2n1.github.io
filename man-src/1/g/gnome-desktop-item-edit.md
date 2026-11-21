@@ -23,4 +23,3 @@ description: "gnome-desktop-item-edit — tool to edit .desktop file"
 <p> <a href="/docs/linux/man/7-gnome-options/">gnome-options</a>(7)</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Christian Marillat marillat [at] debian.org for the <code>Debian GNU/Linux</code> system (but may be used by others). </p>
-<h2>Index</h2>

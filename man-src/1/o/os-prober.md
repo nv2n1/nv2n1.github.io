@@ -19,4 +19,3 @@ description: "os-prober — Discover bootable partitions on the local system."
 <p> Note that for Linux systems that are discovered, a call to <code>linux-boot-prober</code><i> may be required in order to fully discover the necessary information to boot the system. </i></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-linux-boot-prober/">linux-boot-prober</a></code>(1) </p>
-<h2>Index</h2>

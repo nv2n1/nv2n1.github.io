@@ -74,4 +74,3 @@ description: "nad2nad – North American Datum conversion filter"
  <i>Cartographic Projection Procedures for the UNIX Environment&#8212;A User&#8217;s Manual,</i> (Evenden, 1990, Open-file report 90-284).</p>
 <h2>HOME PAGE</h2>
 <p> <a rel="nofollow" href="http://www.remotesensing.org/proj">http://www.remotesensing.org/proj</a> </p>
-<h2>Index</h2>

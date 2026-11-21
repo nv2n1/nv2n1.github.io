@@ -115,4 +115,3 @@ description: "zarafa-server – Start the Zarafa storage server."
 <p> Written by Zarafa.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-zarafa-server-cfg/">zarafa-server.cfg</a></code>(5)<code><a href="/docs/linux/man/1-zarafa-admin/">zarafa-admin</a></code>(1) </p>
-<h2>Index</h2>

@@ -34,4 +34,3 @@ description: "lhapdf-config – script to get version number and compiler flags 
 <dd> : returns LHAPDF release version number</dd></dl>
 <h2>AUTHOR</h2>
 <dd>This manual page was written by Lifeng Sun &lt;lifongsun [at] gmail.com&gt; for the Debian system (but may be used by others). </dd>
-<h2>Index</h2>

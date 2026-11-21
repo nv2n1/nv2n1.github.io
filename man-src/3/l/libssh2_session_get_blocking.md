@@ -17,4 +17,3 @@ description: "libssh2_session_get_blocking – TODO"
 <p> See description.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_session_set_blocking/">libssh2_session_set_blocking</a>(3)</code> </p>
-<h2>Index</h2>

@@ -17,4 +17,3 @@ description: "docker-node – Manage Swarm nodes"
 <p> <code>-h</code>, <code>&#8211;help</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>help for node</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker/">docker</a>(1)</code>, <code><a href="/docs/linux/man/1-docker-node-demote/">docker-node-demote</a>(1)</code>, <code><a href="/docs/linux/man/1-docker-node-inspect/">docker-node-inspect</a>(1)</code>, <code><a href="/docs/linux/man/1-docker-node-ls/">docker-node-ls</a>(1)</code>, <code><a href="/docs/linux/man/1-docker-node-promote/">docker-node-promote</a>(1)</code>, <code><a href="/docs/linux/man/1-docker-node-ps/">docker-node-ps</a>(1)</code>, <code><a href="/docs/linux/man/1-docker-node-rm/">docker-node-rm</a>(1)</code>, <code><a href="/docs/linux/man/1-docker-node-update/">docker-node-update</a>(1)</code> </p>
-<h2>Index</h2>

@@ -28,4 +28,3 @@ description: "tracker-writeback – Used to write metadata set in Tracker back t
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tracker-store/">tracker-store</a></code>(1), <code><a href="/docs/linux/man/1-tracker-miner-fs/">tracker-miner-fs</a></code>(1). <code><a href="/docs/linux/man/1-tracker-extract/">tracker-extract</a></code>(1). </p>
-<h2>Index</h2>

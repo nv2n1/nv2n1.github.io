@@ -22,4 +22,3 @@ description: "ql/termstructures/inflation/inflationhelpers.hpp – Bootstrap hel
 <p> Bootstrap helpers for inflation term structures. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

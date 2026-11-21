@@ -28,4 +28,3 @@ description: "opahfirev"
  Bus:#8217#160; PCIe,8000MHz,x16<br />
  GUID:#8217#160; 0011:7501:0157:501a<br />
  ###################### </p>
-<h2>Index</h2>

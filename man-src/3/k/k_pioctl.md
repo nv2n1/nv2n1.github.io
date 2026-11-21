@@ -68,4 +68,3 @@ if (k_hasafs()) {
 <p> libkafs will search for ThisCell and TheseCells in the following locations: /usr/vice/etc /etc/openafs /var/db/openafs/etc /usr/arla/etc /etc/arla and /etc/afs</p>
 <h2>BUGS</h2>
 <p> <code>AFS_SYSCALL</code> has no effect under AIX. </p>
-<h2>Index</h2>

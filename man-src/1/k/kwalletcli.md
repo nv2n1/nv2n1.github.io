@@ -64,4 +64,3 @@ description: "kwalletcli – command line interface to the KDE Wallet"
 <h2>BUGS</h2>
 <p> If <code>DISPLAY</code> is not set, not valid, or <code>kdeinit</code> or <code>kdeinit4</code> cannot start for other reasons, may not recover gracefully. In KDE 4 versions, this may even result in a Segmentation fault. The author does not know of a way to catch this early; patches are welcome. </p>
 <p> There is no way (yet) to set a wallet other than the default wallet. While this is a possible enhancement to the CLI, there is no feasible way to expose this functionality to the various front-ends, such as pinentry-kwallet1, anyway, so the priority of fixing this is low. </p>
-<h2>Index</h2>

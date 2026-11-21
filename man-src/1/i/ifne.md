@@ -27,4 +27,3 @@ description: "ifne – Run command if the standard input is not empty"
 <h2>AUTHOR</h2>
 <dd>Copyright 2008 by Javier Merino &lt;cibervicho [at] gmail.com&gt; </dd>
 <p> Licensed under the GNU GPL </p>
-<h2>Index</h2>

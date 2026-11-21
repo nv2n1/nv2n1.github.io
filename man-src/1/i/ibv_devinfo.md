@@ -30,4 +30,3 @@ description: "ibv_devinfo – query RDMA devices"
 <dt>Roland Dreier</dt>
 <dd> &lt;<i>rolandd [at] cisco.com</i>&gt; </dd>
 </dl>
-<h2>Index</h2>

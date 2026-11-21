@@ -108,4 +108,3 @@ test.gresource: test.gresource.xml $(shell $(GLIB_COMPILE_RESOURCES) --generate-
 <dl>
 <dt>
 </dt><dd> The full path to the <code>json-glib-format</code> executable. This is used to preprocess resources with the json-stripblanks preprocessing option. If this environment variable is not set, <code>json-glib-format</code> is searched for in the <code>PATH</code>.</dd></dl>
-<h2>Index</h2>

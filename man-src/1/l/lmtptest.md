@@ -49,4 +49,3 @@ description: "lmtptest – interactive LMTP test program"
 <dd> Verbose. Print out more information than usual.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-lmtpd/">lmtpd</a>(8)</code> </p>
-<h2>Index</h2>

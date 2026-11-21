@@ -98,4 +98,3 @@ sphere
 <p> <code>ppmtoarbtxt</code> was added to Netpbm in Release 10.14 (March 2003). It existed under the name <code>ppmtotxt</code> since 1995. </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1995 by Peter Kirchgessner </p>
-<h2>Index</h2>

@@ -113,4 +113,3 @@ argv.toList foreach Console.println
 <p> This is open-source software, available to you under a BSD-like license. See accomponying &quot;copyright&quot; or &quot;LICENSE&quot; file for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-fsc/">fsc</a></code>(1), <code><a href="/docs/linux/man/1-scalac/">scalac</a></code>(1), <code><a href="/docs/linux/man/1-scaladoc/">scaladoc</a></code>(1), <code><a href="/docs/linux/man/1-scalap/">scalap</a></code>(1) </p>
-<h2>Index</h2>

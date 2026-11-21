@@ -88,4 +88,3 @@ description: "lcg-infosites – list grid service information matching given cri
  Versions &gt;= 3.0.0 by Maarten Litmaath</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs via GGUS (<a rel="nofollow" href="http://ggus.org">http://ggus.org</a>). </p>
-<h2>Index</h2>

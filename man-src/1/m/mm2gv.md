@@ -55,4 +55,3 @@ description: "mm2gv – Matrix Market-DOT converters"
  Emden R. Gansner &lt;erg [at] graphviz.com&gt;</p>
 <h2>ADDITIONAL INFO</h2>
 <p> See <a rel="nofollow" href="http://math.nist.gov/MatrixMarket/">http://math.nist.gov/MatrixMarket/</a> for description of the format and <a rel="nofollow" href="http://www.cise.ufl.edu/research/sparse/matrices/">http://www.cise.ufl.edu/research/sparse/matrices/</a> for a large collection of sparse matrices in this format. </p>
-<h2>Index</h2>

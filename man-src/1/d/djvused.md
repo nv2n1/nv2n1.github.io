@@ -282,4 +282,3 @@ description: "djvused – Multi-purpose DjVu document editor."
 <p> This program was initially written by L&eacute;on Bottou &lt;leonb [at] users.sourceforge.net&gt; and was improved by Yann Le Cun &lt;profshadoko [at] users.sourceforge.net&gt;, Florin Nicsa, Bill Riemers &lt;docbill [at] sourceforge.net&gt; and many others. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-djvu/">djvu</a></code>(1), <code><a href="/docs/linux/man/1-djvutxt/">djvutxt</a></code>(1), <code><a href="/docs/linux/man/1-djvmcvt/">djvmcvt</a></code>(1), <code><a href="/docs/linux/man/1-djvudump/">djvudump</a></code>(1), <code><a href="/docs/linux/man/1-bzz/">bzz</a></code>(1), Emacs djvused front end <code>djvu.el</code> on <font SIZE="-1">GNU Elpa</font> repository. </p>
-<h2>Index</h2>

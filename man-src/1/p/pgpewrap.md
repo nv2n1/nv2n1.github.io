@@ -18,4 +18,3 @@ description: "pgpewrap – Mutt command line munging tool"
 <p> will execute: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>pgpe file -r a -r b -r c </p>
 <p> This script is needed with PGP 5 and with GPG, since their command line interfaces can&#8217;t be properly served by mutt&#8217;s format mechanism. </p>
-<h2>Index</h2>

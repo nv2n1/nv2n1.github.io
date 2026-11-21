@@ -27,4 +27,3 @@ description: "pamfixtrunc – repair a Netpbm image whose file is truncated"
 <p> <code>pnm</code>(1) , <code>pam</code>(1) , <code><a href="/docs/linux/man/1-pamcut/">pamcut</a></code>(1) , <code><a href="/docs/linux/man/1-pamfile/">pamfile</a></code>(1) , </p>
 <h2>HISTORY</h2>
 <p> <code>pamfixtrunc</code> was new in Netpbm 10.38 (March 2007). </p>
-<h2>Index</h2>

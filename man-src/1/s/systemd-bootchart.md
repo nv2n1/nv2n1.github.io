@@ -108,4 +108,3 @@ description: "systemd-bootchart – Boot performance graphing tool"
 <dl>
 <dt>
 </dt><dd> Auke Kok &lt;auke-jan.h.kok [at] intel.com&gt;</dd></dl>
-<h2>Index</h2>

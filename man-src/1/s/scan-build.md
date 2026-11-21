@@ -176,4 +176,3 @@ description: "scan-build – Clang static analyzer"
 <p> The above example causes analysis reports to be deposited into a subdirectory of /tmp/myhtmldir and to run <code>make</code> with the &#8211;<code>j4</code> option. A different subdirectory is created each time analyzes a project. The analyzer should support most parallel builds, but not distributed builds.</p>
 <h2>AUTHORS</h2>
 <p> was written by An Ted Kremenek . Documentation contributed by An James K. Lowden Aq jklowden [at] schemamania.org . </p>
-<h2>Index</h2>

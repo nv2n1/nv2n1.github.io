@@ -32,4 +32,3 @@ description: "openstack-db – Set up a local database for use with an OpenStack
 <dt> <code>&#8211;yes</code> | <code>-y</code></dt>
 <dd>In cases where the script would normally ask for confirmation before doing something, such as installing the database server, just assume yes. This is useful if you want to run the script non-interactively. </dd>
 </dl>
-<h2>Index</h2>

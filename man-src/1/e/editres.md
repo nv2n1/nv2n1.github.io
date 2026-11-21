@@ -328,4 +328,3 @@ description: "editres – a dynamic resource editor for X Toolkit applications"
 <p> This is a prototype, there are lots of nifty features I would love to add, but I hope this will give you some ideas about what a resource editor can do.  </p>
 <h2>AUTHOR</h2>
 <p> Chris D. Peterson, formerly MIT X Consortium </p>
-<h2>Index</h2>

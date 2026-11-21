@@ -41,4 +41,3 @@ description: "h5diff – Compares two HDF5 files and reports the differences."
 &nbsp;<wbr>h5diff file1 file2</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-h5dump/">h5dump</a></i>(1), <i><a href="/docs/linux/man/1-h5ls/">h5ls</a></i>(1), <i><a href="/docs/linux/man/1-h5repart/">h5repart</a></i>(1), <i><a href="/docs/linux/man/1-h5import/">h5import</a></i>(1), <i><a href="/docs/linux/man/1-gif2h5/">gif2h5</a></i>(1), <i><a href="/docs/linux/man/1-h52gif/">h52gif</a></i>(1), <i>h5perf</i>(1) </p>
-<h2>Index</h2>

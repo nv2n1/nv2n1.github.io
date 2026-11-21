@@ -61,4 +61,3 @@ description: "pamditherbw – dither grayscale image to black and white"
 <p> <code>-atkinson</code> was new in Netpbm 10.38 (March 2007). </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1989 by Jef Poskanzer. </p>
-<h2>Index</h2>

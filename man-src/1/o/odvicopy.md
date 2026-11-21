@@ -28,4 +28,3 @@ description: "dvicopy, odvicopy – produce modified copy of DVI file"
 <p> <code><a href="/docs/linux/man/1-dviselect/">dviselect</a></code>(1), <code><a href="/docs/linux/man/1-dvitype/">dvitype</a></code>(1).</p>
 <h2>AUTHORS</h2>
 <p> Peter Breitenlohner wrote the program. Klaus Guntermann originally ported it to Unix. </p>
-<h2>Index</h2>

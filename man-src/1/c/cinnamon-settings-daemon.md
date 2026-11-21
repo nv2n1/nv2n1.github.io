@@ -42,4 +42,3 @@ description: "cinnamon-settings-daemon – Cinnamon settings daemon"
 </dt><dd> Autostart file for cinnamon-settings-daemon, where its autostart phase is set.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-cinnamon/">cinnamon</a></code>(1), <code><a href="/docs/linux/man/1-cinnamon-settings/">cinnamon-settings</a></code>(1), <code><a href="/docs/linux/man/1-cinnamon-session/">cinnamon-session</a></code>(1) </p>
-<h2>Index</h2>

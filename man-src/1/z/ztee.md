@@ -32,4 +32,3 @@ description: "ztee – output buffer and splitter"
 <dt><code>-v, &#8211;version</code></dt>
 <dd> Display version </dd>
 </dl>
-<h2>Index</h2>

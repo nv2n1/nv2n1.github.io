@@ -34,4 +34,3 @@ description: "pgmmake – create a PGM image of a specified gray level and dimen
 <h2>HISTORY</h2>
 <p> This program was new in Netpbm 10.32 (February 2006). </p>
 <p> With older Netpbm, use <code>ppmmake</code> and <code>ppmtopgm</code>. </p>
-<h2>Index</h2>

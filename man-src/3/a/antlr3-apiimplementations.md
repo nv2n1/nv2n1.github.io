@@ -56,4 +56,3 @@ description: "API Implementation functions –"
 <p> A source file that provides the default implementations of functions will usually also supply the public (exported from the .DLL or code library) &#8216;constructor&#8217; functions that create and initialize the typedef structure that they implement. For instance, in the <code>antlr3baserecognizer.c</code> file, you will find the function <code>antlr3BaseRecognizerNew()</code></p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for ANTLR3C from the source code. </p>
-<h2>Index</h2>

@@ -60,4 +60,3 @@ description: "prosodyctl – Manage a Prosody XMPP server"
 <p> More information may be found online at: <i><a rel="nofollow" href="http://prosody.im/">http://prosody.im/</a></i> </p>
 <h2>AUTHORS</h2>
 <p> Dwayne Bent &lt;dbb.1 [at] liqd.org&gt; </p>
-<h2>Index</h2>

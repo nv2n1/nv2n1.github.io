@@ -23,4 +23,3 @@ description: "flam3-animate flam3-render flam3-genome flam3-convert – render a
 <p> <code>WWW.FLAM3.COM,</code> <code>electricsheep</code>(1), </p>
 <h2>AUTHOR</h2>
 <p> spot aka Scott Draves, Erik Reckase </p>
-<h2>Index</h2>

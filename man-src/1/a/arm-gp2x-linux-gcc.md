@@ -4777,4 +4777,3 @@ void __cyg_profile_func_exit(void *this_fn,
      software.  Copies published by the Free Software Foundation raise
      funds for GNU development.
 </pre>
-<h2>Index</h2>

@@ -24,4 +24,3 @@ description: "rwho – who is logged in on local machines"
 <p> The <code>rwho</code> command appeared in BSD 4.3</p>
 <h2>BUGS</h2>
 <p> This is unwieldy when the number of machines on the local net is large. </p>
-<h2>Index</h2>

@@ -32,4 +32,3 @@ description: "linux-version – operate on Linux kernel version strings"
 <dd> List kernel versions installed in the customary location. If the <code>&#8211;paths</code> option, show the corresponding path for each version.</dd></dl>
 <h2>AUTHOR</h2>
 <p> <code>linux-version</code> and this manual page were written by Ben Hutchings as part of the Debian <code>linux-base</code> package. </p>
-<h2>Index</h2>

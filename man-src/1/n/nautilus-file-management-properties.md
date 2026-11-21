@@ -28,4 +28,3 @@ description: "nautilus-file-management-properties – File Management Preference
 <p> File Management Preferences documentation can be found from the &quot;Help&quot; menu, or by pressing the F1 key. Nautilus also has a website at <a rel="nofollow" href="http://www.gnome.org/projects/nautilus/">http://www.gnome.org/projects/nautilus/</a></p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Julian Andres Klode &lt;jak [at] jak-linux.org&gt; for the Debian GNU/Linux system (but may be used by others), based on a manpage by Fernando Ribeiro &lt;fernando [at] staff.nerdgroup.org&gt;. </p>
-<h2>Index</h2>

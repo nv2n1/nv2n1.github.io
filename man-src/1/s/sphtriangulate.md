@@ -75,4 +75,3 @@ gmt sphtriangulate globalnodes.d -Qd -A &gt; global_tri.d
 <p> Renka, R, J., 1997, Algorithm 772: STRIPACK: Delaunay Triangulation and Voronoi Diagram on the Surface of a Sphere, <i>AMC Trans. Math. Software</i>, <code>23</code>(3), 416-434.</p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

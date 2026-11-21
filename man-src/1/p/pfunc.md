@@ -43,4 +43,3 @@ description: "pfunc – grep for perl functions"
 <p> Michael G Schwern &lt;schwern [at] pobox.com&gt;</p>
 <h2>SEE ALSO</h2>
 <p> Module::Info </p>
-<h2>Index</h2>

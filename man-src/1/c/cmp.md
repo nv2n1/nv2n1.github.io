@@ -50,4 +50,3 @@ description: "cmp – compare two files byte by byte"
 <dt>
 </dt><dd> <code>info cmp</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

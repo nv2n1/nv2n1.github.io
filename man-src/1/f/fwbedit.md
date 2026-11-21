@@ -123,4 +123,3 @@ fwbedit add -f x.fwb&nbsp;<wbr>&nbsp;<wbr>-g&nbsp;<wbr>/User/Objects/Groups/grou
 <p> <code><a rel="nofollow" href="http://sourceforge.net/tracker/?group_id=5314">http://sourceforge.net/tracker/?group_id=5314</a>&amp;atid=105314</code> </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-fwbuilder/">fwbuilder</a>(1),</code> </p>
-<h2>Index</h2>

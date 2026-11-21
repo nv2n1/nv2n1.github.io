@@ -116,4 +116,3 @@ tiffcp -c none -,=% -b CCD,X.tif CCD,X%1%.tif result.tif
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pal2rgb/">pal2rgb</a></code>(1), <code><a href="/docs/linux/man/1-tiffinfo/">tiffinfo</a></code>(1), <code><a href="/docs/linux/man/1-tiffcmp/">tiffcmp</a></code>(1), <code><a href="/docs/linux/man/1-tiffmedian/">tiffmedian</a></code>(1), <code><a href="/docs/linux/man/1-tiffsplit/">tiffsplit</a></code>(1), <code>libtiff</code>(3TIFF) </p>
 <p> Libtiff library home page: <code><a rel="nofollow" href="http://www.remotesensing.org/libtiff/">http://www.remotesensing.org/libtiff/</a></code> </p>
-<h2>Index</h2>

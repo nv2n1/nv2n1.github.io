@@ -109,4 +109,3 @@ description: "pamrecolor – alter colors without affecting luminance"
 <dd>
 <p> <code><a href="/docs/linux/man/1-pnmremap/">pnmremap</a></code>(1) </p>
 </dd></dl>
-<h2>Index</h2>

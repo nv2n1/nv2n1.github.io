@@ -43,4 +43,3 @@ description: "bibtexu – UTF-8 Big BibTeX"
 <p> More detailed description of <code>BibTeXu</code> is available at $TEXMFDIST/doc/bibtexu/README.</p>
 <h2>AUTHORS</h2>
 <p> <code>BibTeXu </code> was written by Yannis Haralambous and his students. This manpage was written for TeX Live. </p>
-<h2>Index</h2>

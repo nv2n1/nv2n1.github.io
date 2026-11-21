@@ -129,4 +129,3 @@ description: "cu – Call up another system"
 <p> This program does not work very well.</p>
 <h2>AUTHOR</h2>
 <p> Ian Lance Taylor &lt;ian [at] airs.com&gt; </p>
-<h2>Index</h2>

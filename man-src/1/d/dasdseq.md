@@ -72,4 +72,3 @@ description: "dasdseq – Hercules DSORG=PS retrieval command"
 </dd></dl>
 <h2>HISTORY</h2>
 <p> 2003-03-10 originally written by James M. Morrison </p>
-<h2>Index</h2>

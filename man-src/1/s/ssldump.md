@@ -235,4 +235,3 @@ description: "ssldump – dump SSL traffic on a network"
 <p> <code>tcpdump</code>(1) </p>
 <h2>AUTHOR</h2>
 <p> ssldump was written by Eric Rescorla &lt;ekr [at] rtfm.com&gt;. </p>
-<h2>Index</h2>

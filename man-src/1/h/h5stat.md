@@ -41,4 +41,3 @@ description: "h5stat: – Reports statistics regarding an HDF5 file and the obje
 <dt>
 </dt><dd> <code>info h5stat:</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

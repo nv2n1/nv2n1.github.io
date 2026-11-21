@@ -353,4 +353,3 @@ description: "bugzilla – command-line interface to Bugzilla over XML-RPC"
 <a rel="nofollow" href="http://www.bugzilla.org/docs/tip/en/html/api/Bugzilla/WebService/Bug.html">http://www.bugzilla.org/docs/tip/en/html/api/Bugzilla/WebService/Bug.html</a>
 <a rel="nofollow" href="https://bugzilla.redhat.com/docs/en/html/api/Bugzilla/WebService/Bug.html">https://bugzilla.redhat.com/docs/en/html/api/Bugzilla/WebService/Bug.html</a>
 </pre>
-<h2>Index</h2>

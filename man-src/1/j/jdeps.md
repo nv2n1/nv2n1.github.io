@@ -447,4 +447,3 @@ description: "jdeps – Java class dependency analyzer."
 <dt>&bull;</dt>
 <dd> <a href="/docs/linux/man/1-javap/">javap</a>(1) </dd>
 </dl>
-<h2>Index</h2>

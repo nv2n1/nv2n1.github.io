@@ -70,4 +70,3 @@ description: "pygettext – Python equivalent of"
 <h2>AUTHOR</h2>
 <p> pygettext is written by Barry Warsaw &lt;barry [at] zope.com&gt;. </p>
 <p> Joonas Paalasmaa &lt;joonas.paalasmaa [at] iki.fi&gt; put this manual page together based on &quot;pygettext &#8211;help&quot;. </p>
-<h2>Index</h2>

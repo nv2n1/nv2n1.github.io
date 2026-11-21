@@ -138,4 +138,3 @@ description: "maildirmake – create maildirs and maildir folders"
 <dt>
 </dt><dd> [set $man.base.url.for.relative.links]/maildropfilter.html</dd></dl>
 </dl>
-<h2>Index</h2>

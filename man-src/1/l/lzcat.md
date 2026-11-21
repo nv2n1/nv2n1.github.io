@@ -1252,4 +1252,3 @@ xz --delta=dist=3 --lzma2=pb=0 foo.tiff
 <p> XZ Utils: &lt;<a rel="nofollow" href="https://tukaani.org/xz/">https://tukaani.org/xz/</a>&gt;<br />
  XZ Embedded: &lt;<a rel="nofollow" href="https://tukaani.org/xz/embedded.html">https://tukaani.org/xz/embedded.html</a>&gt;<br />
  LZMA SDK: &lt;<a rel="nofollow" href="http://7-zip.org/sdk.html">http://7-zip.org/sdk.html</a>&gt; </p>
-<h2>Index</h2>

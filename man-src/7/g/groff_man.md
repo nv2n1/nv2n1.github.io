@@ -678,4 +678,3 @@ description: "groff_man – GNU roff macro package for formatting man pages"
 <p> <i><a href="/docs/linux/man/1-man/">man</a></i>(1) describes the man page formatter on your system. </p>
 <p> <i><a href="/docs/linux/man/7-groff_mdoc/">groff_mdoc</a></i>(7) describes the <i>groff</i> version of the BSD-originated alternative macro package for man pages. </p>
 <p> <i><a href="/docs/linux/man/7-groff/">groff</a></i>(7), <i><a href="/docs/linux/man/7-groff_char/">groff_char</a></i>(7), <i><a href="/docs/linux/man/7-man/">man</a></i>(7) </p>
-<h2>Index</h2>

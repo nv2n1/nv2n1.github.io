@@ -161,4 +161,3 @@ openjade[-vCegG2s][-b encoding][-f error_file]
 <p> <code><a href="/docs/linux/man/1-onsgmls/">onsgmls</a>(1)</code> </p>
 <h2>AUTHORS</h2>
 <p> James Clark, Ian Castle &lt;ian.castle [at] looksystems.co.uk&gt;. </p>
-<h2>Index</h2>

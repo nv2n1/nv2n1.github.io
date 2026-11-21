@@ -20,4 +20,3 @@ description: "docker-secret-create – Create a secret from a file or STDIN as c
 <p> <code>&#8211;template-driver</code>=&quot;&quot; <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Template driver</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-secret/">docker-secret</a>(1)</code> </p>
-<h2>Index</h2>

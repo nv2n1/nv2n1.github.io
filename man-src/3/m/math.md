@@ -32,4 +32,3 @@ description: "Math tools – Math facilities of the library include:"
 <p> As we can see, this optimization method requires the knowledge of the gradient of the cost function. See <code>QuantLib::ConjugateGradient</code> .</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

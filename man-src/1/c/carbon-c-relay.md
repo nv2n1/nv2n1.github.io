@@ -333,4 +333,3 @@ description: "carbon-c-relay — graphite relay, aggregator and rewriter https:/
 <p> Compared to carbon-relay-ng, this project does provide carbon&#8217;s consistent-hash routing. graphite-relay, which does this, however doesn&#8217;t do metric-based matches to direct the traffic, which this project does as well. To date, carbon-c-relay can do aggregations, failover targets and more.</p>
 <h2>ACKNOWLEDGEMENTS</h2>
 <p> This program was originally developed for Booking.com. With approval from Booking.com, the code was generalised and published as Open Source on GitHub, for which the author would like to express his gratitude. Author no longer works for Booking.com. </p>
-<h2>Index</h2>

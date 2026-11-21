@@ -27,4 +27,3 @@ description: "ipsec_subnetof, ipsec_hostof, ipsec_broadcastof – given Internet
 <p> Written for the FreeS/WAN project by Henry Spencer.</p>
 <h2>BUGS</h2>
 <p> Calling functions for this is more costly than doing it yourself. </p>
-<h2>Index</h2>

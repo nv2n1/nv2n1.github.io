@@ -32,4 +32,3 @@ description: "pamvalidate – validate Netpbm image format"
 <p> <code><a href="/docs/linux/man/1-pamfix/">pamfix</a></code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>pamvalidate</code> was new in Netpbm 10.66 (March 2014). </p>
-<h2>Index</h2>

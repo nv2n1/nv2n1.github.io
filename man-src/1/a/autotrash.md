@@ -67,4 +67,3 @@ description: "autotrash — program to automatically purge old files from the Fr
 &nbsp;<wbr> </p>
 <p> On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.<br />
 &nbsp;<wbr> </p>
-<h2>Index</h2>

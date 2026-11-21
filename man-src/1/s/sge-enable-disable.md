@@ -22,4 +22,3 @@ description: "sge-disable-submits, sge-enable-submits – Prevent/allow xxQS_NAM
 <h2>SEE ALSO</h2>
 <h2>AUTHOR</h2>
 <p> Dave Love &lt;d.love [at] liverpool.ac.uk&gt; </p>
-<h2>Index</h2>

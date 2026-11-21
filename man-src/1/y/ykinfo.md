@@ -55,4 +55,3 @@ $
 <h2>SEE ALSO</h2>
 <p> The ykpersonalize home page &lt;URL: <a rel="nofollow" href="https://developers.yubico.com/yubikey-personalization/">https://developers.yubico.com/yubikey-personalization/</a> &gt; </p>
 <p> YubiKeys can be obtained from Yubico &lt;URL: <a rel="nofollow" href="http://www.yubico.com/">http://www.yubico.com/</a> &gt;. </p>
-<h2>Index</h2>

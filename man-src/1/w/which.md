@@ -26,4 +26,3 @@ description: "which – locate a command"
 <dt><code>2</code></dt>
 <dd> if an invalid option is specified </dd>
 </dl>
-<h2>Index</h2>

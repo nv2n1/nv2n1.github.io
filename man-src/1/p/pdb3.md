@@ -15,4 +15,3 @@ description: "pdb3.10 – the Python debugger"
 <p> See the chapter &quot;The Python Debugger&quot; in the Python Library Reference for more information on the use of pdb. When the debugger is started, help is available via the help command.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-python3-10/">python3.10</a>(1). Chapter &quot;The Python Debugger&quot; of the Python Library Reference. Available in the python3.10-doc package at /usr/share/doc/python3.10/html/library/pdb.html. </p>
-<h2>Index</h2>

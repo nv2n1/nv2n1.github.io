@@ -31,4 +31,3 @@ description: "link – call the link function to create a link to a file"
 <p> <a href="/docs/linux/man/2-link/">link</a>(2) </p>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/link">https://www.gnu.org/software/coreutils/link</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) link invocation&#8217; </p>
-<h2>Index</h2>

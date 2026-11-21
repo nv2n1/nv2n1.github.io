@@ -30,4 +30,3 @@ npm whoami [--registry &lt;registry&gt;]
 <dd> npm help adduser </dd>
 </dl>
 </dl>
-<h2>Index</h2>

@@ -47,4 +47,3 @@ x&nbsp;<wbr>=&nbsp;<wbr>new string(); </dd>
 <p> Copyright 2011 Alexander Chebaturkin. Released under MIT license.</p>
 <h2>WEB SITE</h2>
 <p> Visit <a rel="nofollow" href="http://www.mono-project.com">http://www.mono-project.com</a> for details </p>
-<h2>Index</h2>

@@ -37,4 +37,3 @@ description: "gfcli – manual page for gfcli (glusterfs-coreutils) 0.2.0"
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2015 Facebook, Inc. License GPLv3: GNU GPL version 3 &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl-3.0.en.html">http://www.gnu.org/licenses/gpl-3.0.en.html</a>&gt;.<br />
  This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law. </p>
-<h2>Index</h2>

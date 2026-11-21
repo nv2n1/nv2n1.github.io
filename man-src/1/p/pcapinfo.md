@@ -32,4 +32,3 @@ Host information-- -- -- -- -- -- -- --Hostname : fangorn.maddingue.net
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2005, 2006, 2007, 2008, 2009 Sebastien Aperghis-Tramoni. All rights reserved. </p>
 <p> This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself. </p>
-<h2>Index</h2>

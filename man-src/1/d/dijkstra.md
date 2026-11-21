@@ -19,4 +19,3 @@ description: "dijkstra – single-source distance filter for Graphviz"
 <p> In a typical application, <i>dist</i> and <i>maxdist</i> can drive a downstream calculation of color or some other attribute.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-gvpr/">gvpr</a>(1), <a href="/docs/linux/man/1-gvcolor/">gvcolor</a>(1), libgraph(3) </p>
-<h2>Index</h2>

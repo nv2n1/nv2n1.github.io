@@ -32,4 +32,3 @@ stg sink[-t&lt;target patch&gt;][-n][--][&lt;patches&gt;]
 </dt><dd> Keep the local changes.</dd></dl>
 <h2>STGIT</h2>
 <p> Part of the StGit suite &#8211; see <code><a href="/docs/linux/man/1-stg/">stg</a></code>(1) </p>
-<h2>Index</h2>

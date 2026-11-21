@@ -38,4 +38,3 @@ description: "pnmtorle – convert a Netpbm image file into an RLE image file."
 <p> Wes Barris<br />
  Army High Performance Computing Research Center (AHPCRC)<br />
  Minnesota Supercomputer Center, Inc. </p>
-<h2>Index</h2>

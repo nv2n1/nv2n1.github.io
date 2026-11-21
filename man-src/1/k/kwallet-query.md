@@ -70,4 +70,3 @@ description: "kwallet-query – KDE Wallet command-line manipulation tool"
 <dl>
 <dt>
 </dt><dd> Original author</dd></dl>
-<h2>Index</h2>

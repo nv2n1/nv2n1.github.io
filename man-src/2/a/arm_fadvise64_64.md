@@ -78,4 +78,3 @@ int posix_fadvise(int fd, off_t offset, off_t len, int advice);
 <p> <code><a href="/docs/linux/man/1-fincore/">fincore</a></code>(1), <code><a href="/docs/linux/man/2-mincore/">mincore</a></code>(2), <code><a href="/docs/linux/man/2-readahead/">readahead</a></code>(2), <code><a href="/docs/linux/man/2-sync_file_range/">sync_file_range</a></code>(2), <code><a href="/docs/linux/man/3-posix_fallocate/">posix_fallocate</a></code>(3), <code><a href="/docs/linux/man/3-posix_madvise/">posix_madvise</a></code>(3)</p>
 <h2>COLOPHON</h2>
 <p> This page is part of release 5.10 of the Linux <i>man-pages</i> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a rel="nofollow" href="https://www.kernel.org/doc/man-pages/.">https://www.kernel.org/doc/man-pages/.</a> </p>
-<h2>Index</h2>

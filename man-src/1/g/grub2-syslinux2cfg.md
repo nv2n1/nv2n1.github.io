@@ -51,4 +51,3 @@ description: "grub-syslinux2cfg — Transform a syslinux config file into a GRUB
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code>info grub</code> </p>
-<h2>Index</h2>

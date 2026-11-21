@@ -38,4 +38,3 @@ description: "grub-glue-efi – generate a fat binary for EFI"
 <dt>
 </dt><dd> <code>info grub-glue-efi</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

@@ -45,4 +45,3 @@ description: "euare-usergetpolicy – Display a user’s policy"
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd> show this help message and exit </dd>
 </dl>
-<h2>Index</h2>

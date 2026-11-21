@@ -85,4 +85,3 @@ description: "lsyncd – a daemon to continuously synchronize directory trees"
 <p> Axel Kittenberger, &lt;axkibe [at] gmail.com&gt; 2010-2012</p>
 <h2>COPYING</h2>
 <p> Copyright (C) 2010-2012 Axel Kittenberger. Free use of this software is granted under the terms of the GNU General Public License (GPL) version 2, or any later version. Free redistrubition of this Documentation (/doc directory) is granted under the terms of the Creative Commons 3.0 Attribution License (CC-3.0-BY). </p>
-<h2>Index</h2>

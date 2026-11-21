@@ -35,4 +35,3 @@ description: "dh_installgsettings – install GSettings overrides and set depend
 <p> This program is a part of debhelper.</p>
 <h2>AUTHOR</h2>
 <p> Laurent Bigonville &lt;bigon [at] debian.org&gt;, Josselin Mouette &lt;joss [at] debian.org&gt; </p>
-<h2>Index</h2>

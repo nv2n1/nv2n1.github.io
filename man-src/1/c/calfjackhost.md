@@ -57,4 +57,3 @@ description: "calfjackhost – JACK wrapper for Calf plugins"
 <p> (takes signal from system:capture_1 and _2, puts it through reverb, and then sends to system:playback_1 and _2) </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-calf/">calf</a>(7) </p>
-<h2>Index</h2>

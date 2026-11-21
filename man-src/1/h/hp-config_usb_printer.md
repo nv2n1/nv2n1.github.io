@@ -49,4 +49,3 @@ description: "hp-config_usb_printer – HP device config using USB"
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2001-18 HP Development Company, L.P. </p>
 <p> This software comes with ABSOLUTELY NO WARRANTY. This is free software, and you are welcome to distribute it under certain conditions. See COPYING file for more details. </p>
-<h2>Index</h2>

@@ -307,4 +307,3 @@ description: "Finch – A Pimpin’ Penguin console frontend to libpurple. Insta
 <h2>AUTHORS</h2>
 <p> Sadrul Habib Chowdhury &lt;<i>sadrul [at] users.sourceforge.net</i>&gt; </p>
 <p> This manpage was written by Sadrul Habib Chowdhury &lt;<i>sadrul [at] users.sourceforge.net</i>&gt; and Dennis Ristuccia &lt;<i>dennis [at] dennisr.net</i>&gt;. </p>
-<h2>Index</h2>

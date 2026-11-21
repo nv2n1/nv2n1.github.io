@@ -20,4 +20,3 @@ description: "libssh2_sftp_stat – convenience macro for libssh2_sftp_fstat_ex(
 <p> See <i><a href="/docs/linux/man/3-libssh2_sftp_fstat_ex/">libssh2_sftp_fstat_ex</a>(3)</i></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_sftp_fstat_ex/">libssh2_sftp_fstat_ex</a>(3)</code> </p>
-<h2>Index</h2>

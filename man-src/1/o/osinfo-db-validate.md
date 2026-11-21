@@ -49,4 +49,3 @@ description: "osinfo-db-validate – Validate libosinfo XML data files"
 <p> Copyright (C) 2012-2016 Red Hat, Inc.</p>
 <h2>LICENSE</h2>
 <p> <tt>&quot;osinfo-db-validate&quot;</tt> is distributed under the terms of the <font SIZE="-1">GNU LGPL</font> v2+ license. This is free software; see the source for copying conditions. There is <font SIZE="-1">NO</font> warranty; not even for <font SIZE="-1">MERCHANTABILITY</font> or <font SIZE="-1">FITNESS FOR A PARTICULAR PURPOSE</font> </p>
-<h2>Index</h2>

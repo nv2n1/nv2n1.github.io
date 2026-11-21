@@ -218,4 +218,3 @@ Recall write delegation by changing the permissions to the file with file lock
 <p> No known bugs.</p>
 <h2>AUTHOR</h2>
 <p> Jorge Mora (mora [at] netapp.com) </p>
-<h2>Index</h2>

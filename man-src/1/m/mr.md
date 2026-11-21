@@ -249,4 +249,3 @@ description: "mr – a tool to manage all your version control repos"
 <p> Copyright 2007-2011 Joey Hess &lt;joey [at] kitenet.net&gt; </p>
 <p> Licensed under the <font SIZE="-1">GNU GPL</font> version 2 or higher. </p>
 <p> <a rel="nofollow" href="http://myrepos.branchable.com/">http://myrepos.branchable.com/</a> </p>
-<h2>Index</h2>

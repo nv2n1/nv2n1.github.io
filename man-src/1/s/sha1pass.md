@@ -20,4 +20,3 @@ description: "sha1pass – Create a SHA1 password hash"
 <h2>AUTHOR</h2>
 <p> sha1pass was written by H. Peter Anvin &lt;<i>hpa [at] zytor.com</i>&gt;. </p>
 <p> This manual page was written by Daniel Baumann &lt;<i>mail [at] daniel-baumann.ch</i>&gt;. </p>
-<h2>Index</h2>

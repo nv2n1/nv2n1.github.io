@@ -507,4 +507,3 @@ anim.gif  anim.gif.000  anim.gif.001  anim.gif.002  anim.gif.003
  Adaptive tree method for GIF writing. </p>
 <p> <a rel="nofollow" href="http://www.lcdf.org/gifsicle/">http://www.lcdf.org/gifsicle/</a><br />
  The <code>gifsicle</code> home page. </p>
-<h2>Index</h2>

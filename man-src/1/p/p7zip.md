@@ -35,4 +35,3 @@ description: "p7zip – Wrapper on 7-Zip file archiver with high compression rat
 <p> <code><a href="/docs/linux/man/1-7z/">7z</a></code>(1), <code><a href="/docs/linux/man/1-7za/">7za</a></code>(1), <code><a href="/docs/linux/man/1-7zr/">7zr</a></code>(1), <code><a href="/docs/linux/man/1-bzip2/">bzip2</a></code>(1), <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1), <code><a href="/docs/linux/man/1-zip/">zip</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> Written for Debian by Mohammed Adnene Trojette. Updated by Robert Luberda. </p>
-<h2>Index</h2>

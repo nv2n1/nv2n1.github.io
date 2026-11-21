@@ -74,4 +74,3 @@ description: "mpmetis – Partitions a mesh into a specified number of parts."
 <dt> <code>-help</code></dt>
 <dd>Prints this message. </dd>
 </dl>
-<h2>Index</h2>

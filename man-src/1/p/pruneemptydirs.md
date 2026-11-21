@@ -31,4 +31,3 @@ description: "pruneemptydirs – Detects stale source directories in a CVS tree"
 <dl>
 <dt>
 </dt><dd> Author.</dd></dl>
-<h2>Index</h2>

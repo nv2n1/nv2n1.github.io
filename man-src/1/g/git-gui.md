@@ -93,4 +93,3 @@ git clone <a rel="nofollow" href="http://repo.or.cz/r/git-gui.git">http://repo.o
 <p> or browsed online at m[blue]<code><a rel="nofollow" href="http://repo.or.cz/w/git-gui.git/">http://repo.or.cz/w/git-gui.git/</a></code>m[].</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

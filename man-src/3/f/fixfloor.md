@@ -23,4 +23,3 @@ result = fixfloor(itofix(100) / 6);
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-fixtoi/">fixtoi</a></code>(3), <code><a href="/docs/linux/man/3-fixceil/">fixceil</a></code>(3) </p>
-<h2>Index</h2>

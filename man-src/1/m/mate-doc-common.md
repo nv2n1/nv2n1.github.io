@@ -29,4 +29,3 @@ description: "mate-doc-common – include the standard user documentation build 
 <p> <code><a href="/docs/linux/man/1-mate-autogen/">mate-autogen</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> Perberos &lt;perberos [at] gmail.com&gt; </p>
-<h2>Index</h2>

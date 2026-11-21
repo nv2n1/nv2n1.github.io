@@ -471,4 +471,3 @@ description: "gnokii – tool suite for mobile phones"
 <p> This program is distributed under the GNU Public License Version 2, or (at your option) any later version. </p>
 <h2>SEE ALSO</h2>
 <p> gnokiid, xgnokii, mgnokiidev, ppm2nokia, sendsms, todologo </p>
-<h2>Index</h2>

@@ -119,4 +119,3 @@ $ svn propset useNativeDist 1 debian
 <h2>AUTHOR</h2>
 <p> <code>po4a-build</code> was written by Neil Williams &lt;codehelp [at] debian.org&gt;. </p>
 <p> This manual page was written by Neil Williams &lt;codehelp [at] debian.org&gt; </p>
-<h2>Index</h2>

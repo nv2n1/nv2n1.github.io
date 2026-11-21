@@ -34,4 +34,3 @@ description: "chicken-uninstall – uninstall extension library"
 <p> The CHICKEN Team </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-chicken-install/">chicken-install</a>(1)</code> <code><a href="/docs/linux/man/1-chicken-status/">chicken-status</a>(1)</code> <code><a href="/docs/linux/man/1-chicken/">chicken</a>(1)</code> <code><a href="/docs/linux/man/1-chicken-bug/">chicken-bug</a>(1)</code> </p>
-<h2>Index</h2>

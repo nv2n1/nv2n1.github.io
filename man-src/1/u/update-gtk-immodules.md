@@ -20,4 +20,3 @@ description: "update-gtk-immodules – Update GTK+ immodule cache"
 <p> $libdir/gtk-2.0/2.10.0/immodules.cache &#8211; the file created by update-gtk-immodules. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gtk-query-immodules-2-0/">gtk-query-immodules-2.0</a></code>(1) </p>
-<h2>Index</h2>

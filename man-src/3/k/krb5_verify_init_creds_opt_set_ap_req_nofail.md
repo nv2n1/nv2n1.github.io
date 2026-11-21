@@ -21,4 +21,3 @@ description: "krb5_verify_init_creds_opt_init krb5_verify_init_creds_opt_set_ap_
 <p> Fn krb5_verify_init_creds_opt_set_ap_req_nofail controls controls the behavior if Fa ap_req_server doesn&#8217;t exists in the local keytab or in the KDC&#8217;s database, if it&#8217;s true, the error will be ignored. Note that this use is possible insecure.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-krb5/">krb5</a>(3), krb5_get_init_creds3, krb5_verify_user3, krb5.conf5 </p>
-<h2>Index</h2>

@@ -26,4 +26,3 @@ description: "llvm-prof – print execution profile of LLVM program"
 <p> <code>llvm-prof</code> returns 1 if it cannot load the bitcode file or the profile information. Otherwise, it exits with zero.</p>
 <h2>AUTHOR</h2>
 <p> <code>llvm-prof</code> is maintained by the <font SIZE="-1">LLVM</font> Team (&lt;<a rel="nofollow" href="http://llvm.org">http://llvm.org</a>&gt;). </p>
-<h2>Index</h2>

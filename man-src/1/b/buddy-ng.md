@@ -43,4 +43,3 @@ description: "buddy-ng – a tool to work with easside-ng"
  <code><a href="/docs/linux/man/1-makeivs-ng/">makeivs-ng</a>(1)</code><br />
  <code><a href="/docs/linux/man/1-packetforge-ng/">packetforge-ng</a>(1)</code><br />
  <code><a href="/docs/linux/man/1-wpaclean/">wpaclean</a>(1)</code> </p>
-<h2>Index</h2>

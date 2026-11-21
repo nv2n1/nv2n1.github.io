@@ -74,4 +74,3 @@ description: "odbcinst – An unixODBC tool for manipulating configuration files
 <p> The authors of unixODBC are Peter Harvey &lt;<i>pharvey [at] codebydesign.com</i>&gt; and Nick Gorham &lt;<i>nick [at] easysoft.com</i>&gt;. For the full list of contributors see the AUTHORS file. </p>
 <h2>COPYRIGHT</h2>
 <p> unixODBC is licensed under the GNU Lesser General Public License. For details about the license, see the COPYING file. </p>
-<h2>Index</h2>

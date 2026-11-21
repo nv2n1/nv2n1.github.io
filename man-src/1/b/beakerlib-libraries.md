@@ -35,4 +35,3 @@ description: "BeakerLib – libraries – mechanism for loading shared test code
 <dt>&bull;</dt>
 <dd> Dalibor Pospisil &lt;dapospis [at] redhat.com&gt; </dd>
 </dl>
-<h2>Index</h2>

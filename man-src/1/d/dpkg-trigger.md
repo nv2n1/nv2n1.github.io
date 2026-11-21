@@ -56,4 +56,3 @@ description: "dpkg-trigger – a package trigger utility"
 <dd> Sets the color mode (since dpkg 1.18.5). The currently accepted values are: <code>auto</code> (default), <code>always</code> and <code>never</code>.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dpkg/">dpkg</a></code>(1), <code><a href="/docs/linux/man/5-deb-triggers/">deb-triggers</a></code>(5), <code>/usr/share/doc/dpkg/triggers.txt.gz</code>. </p>
-<h2>Index</h2>

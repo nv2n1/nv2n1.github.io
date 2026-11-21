@@ -91,4 +91,3 @@ description: "bccmd – Utility for the CSR BCCMD interface"
 <p> bdaddr country devclass keymin keymax features commands version remver hciextn mapsco baudrate hostintf anafreq anaftrim usbvid usbpid dfupid bootmode</p>
 <h2>AUTHORS</h2>
 <p> Written by Marcel Holtmann &lt;marcel [at] holtmann.org&gt;, man page by Adam Laurie &lt;adam [at] algroup.co.uk&gt; </p>
-<h2>Index</h2>

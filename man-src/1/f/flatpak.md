@@ -272,4 +272,3 @@ description: "flatpak – Build, install and run applications and runtimes"
 </dt><dd> The location of flatpak site configuration. If this is not set, /etc/flatpak is used (unless overridden at build time by &#8211;sysconfdir).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>ostree</code>(1), <code>ostree.repo</code>(5), <code><a href="/docs/linux/man/5-flatpak-remote/">flatpak-remote</a></code>(5), <code><a href="/docs/linux/man/5-flatpak-installation/">flatpak-installation</a></code>(5), m[blue]<code><a rel="nofollow" href="https://www.flatpak.org">https://www.flatpak.org</a></code>m[] </p>
-<h2>Index</h2>

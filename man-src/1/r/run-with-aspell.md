@@ -23,4 +23,3 @@ description: "run-with-aspell – script to help use GNU Aspell as an ispell rep
 <p> Aspell is fully documented in its Texinfo manual. See the `<code>aspell</code>&#8216; entry in <code>info</code> for more complete documentation.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Sudhakar Chandrasekharan &lt;thaths [at] netscape.com&gt; and Brian Nelson &lt;pyro [at] debian.org&gt;. </p>
-<h2>Index</h2>

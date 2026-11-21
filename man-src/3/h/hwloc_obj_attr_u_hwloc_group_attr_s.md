@@ -20,4 +20,3 @@ description: "hwloc_obj_attr_u::hwloc_group_attr_s –"
 <p> Depth of group object. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Hardware Locality (hwloc) from the source code. </p>
-<h2>Index</h2>

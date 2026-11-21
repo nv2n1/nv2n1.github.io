@@ -35,4 +35,3 @@ description: "tv_grab_combiner – Grab listings by combining data from several 
 <h2>AUTHOR</h2>
 <p> Mattias Holmlund, mattias -at- holmlund -dot- se.</p>
 <h2>BUGS</h2>
-<h2>Index</h2>

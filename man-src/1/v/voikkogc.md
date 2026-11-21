@@ -36,4 +36,3 @@ description: "voikkogc – test program for Voikko grammar checker"
 <p> <code>voikkospell</code> for common options of different Voikko test tools.</p>
 <h2>AUTHOR</h2>
 <p> voikkogc and this manual page were written by Harri Pitk&auml;nen (hatapitk [at] iki.fi). </p>
-<h2>Index</h2>

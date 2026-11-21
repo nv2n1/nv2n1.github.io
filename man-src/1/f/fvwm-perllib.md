@@ -45,4 +45,3 @@ description: "fvwm-perllib – shows the documentation of the Fvwm Perl library"
 <h2>BUGS</h2>
 <p> No known bugs. </p>
 <p> Report bugs to fvwm-bug [at] fvwm.org. </p>
-<h2>Index</h2>

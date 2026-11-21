@@ -20,4 +20,3 @@ description: "is_selinux_enabled – check whether SELinux is enabled"
 <p> <code>is_selinux_mls_enabled</code>() returns 1 if SELinux is capable of running in MLS mode or 0 if it is not. To determine the policy in use on the system, use <code><a href="/docs/linux/man/3-selinux_getpolicytype/">selinux_getpolicytype</a></code>(3).</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8) </p>
-<h2>Index</h2>

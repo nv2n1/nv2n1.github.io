@@ -549,4 +549,3 @@ $ STATUS = $(mmcli - m 0 --output - keyvalue)
 <p> OTA (<a rel="nofollow" href="http://en.wikipedia.org/wiki/Over-the-air_programming">http://en.wikipedia.org/wiki/Over-the-air_programming</a>). </p>
 <p> GPS (<a rel="nofollow" href="http://en.wikipedia.org/wiki/Global_Positioning_System)">http://en.wikipedia.org/wiki/Global_Positioning_System)</a> </p>
 <p> NMEA (<a rel="nofollow" href="http://en.wikipedia.org/wiki/NMEA_0183)">http://en.wikipedia.org/wiki/NMEA_0183)</a> </p>
-<h2>Index</h2>

@@ -256,4 +256,3 @@ description: "h5dump – Displays HDF5 file contents."
 <dl>
 <dt>
 </dt><dd> * HDF5 XML information at <a rel="nofollow" href="http://hdf.ncsa.uiuc.edu/HDF5/XML/">http://hdf.ncsa.uiuc.edu/HDF5/XML/</a></dd></dl>
-<h2>Index</h2>

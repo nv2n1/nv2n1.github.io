@@ -34,4 +34,3 @@ struct iv_tls_user {
 <p> Use of <code>iv_tls</code> for managing thread-local state is preferred over direct use of the <code>pthread_key_create</code> and <code>pthread_setspecific</code> APIs, as <code>iv_tls</code> provides a thread init hook as well as a destructor hook, and properly sequences <code>-&gt;init_thread</code> and <code>-&gt;deinit_thread</code> calls with core ivykis initialization and cleanup.</p>
 <h2>SEE ALSO</h2>
 <p> <code>iv_init</code>(3) </p>
-<h2>Index</h2>

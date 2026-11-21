@@ -131,4 +131,3 @@ description: "ocamlbuild – The OCaml project compilation tool"
 <h2>SEE ALSO</h2>
 <p> The <code>ocamlbuild</code> manual, <code><a href="/docs/linux/man/1-ocaml/">ocaml</a></code>(1), <code><a href="/docs/linux/man/1-make/">make</a></code>(1).<br />
  <i>The OCaml user&#8217;s manual, chapter Batch compilation.</i> </p>
-<h2>Index</h2>

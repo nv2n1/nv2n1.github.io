@@ -33,4 +33,3 @@ description: "cgdelete – remove control group(s)"
 </dl>
 <h2>SEE ALSO</h2>
 <p> cgcreate (1), lscgroup (1), cgclear (1) </p>
-<h2>Index</h2>

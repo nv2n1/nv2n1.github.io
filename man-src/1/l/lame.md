@@ -472,4 +472,3 @@ mpglib by Michael Hipp
 Manual page by William Schelter, Nils Faerber, Alexander Leidinger,
 and Rog&eacute;rio Brito.
 </pre>
-<h2>Index</h2>

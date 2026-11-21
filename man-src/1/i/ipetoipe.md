@@ -54,4 +54,3 @@ description: "ipetoipe – Convert between Ipe file formats"
 <p> Please report bugs using Ipe bugzilla at <i><a rel="nofollow" href="http://tclab.kaist.ac.kr/ipe/bugzilla.html">http://tclab.kaist.ac.kr/ipe/bugzilla.html</a></i> </p>
 <h2>SEE ALSO</h2>
 <p> More information about Ipe can be found in <i>The Ipe Manual</i>, which can be found in <i>/usr/share/doc/ipe/manual.html</i> or in pdf format in <i>/usr/share/doc/ipe/manual.pdf</i>. </p>
-<h2>Index</h2>

@@ -49,4 +49,3 @@ description: "envy24control – GUI control tool for Envy24 (ice1712) based soun
 <p> <code> <a href="/docs/linux/man/1-alsamixer/">alsamixer</a>(1), <a href="/docs/linux/man/1-amixer/">amixer</a>(1), gamix(1) </code> </p>
 <h2>AUTHOR</h2>
 <p> <code>envy24control</code> is by Jaroslav Kysela &lt;perex [at] perex.cz&gt; This document is by James Tappin &lt;james [at] xena.uklinux.net&gt;. Updated by Dirk Kalis &lt;dirk.kalis [at] t-online.de&gt;. Options<i>-w and -t</i> added Alan Horstmann &lt;gineera [at] aspect135.co.uk&gt; </p>
-<h2>Index</h2>

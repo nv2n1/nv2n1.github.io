@@ -44,4 +44,3 @@ description: "oo2xliff – Convert an OpenOffice.org (SDF) localization file to 
 <dt>&#8211;multifile</dt>
 <dd> how to split po/pot files (single, toplevel or onefile) </dd>
 </dl>
-<h2>Index</h2>

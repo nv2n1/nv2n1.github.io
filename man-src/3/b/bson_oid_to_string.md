@@ -25,4 +25,3 @@ void bson_oid_to_string(const bson_oid_t *oid,
 <p> Converts <code>oid</code> into a hex encoded string. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

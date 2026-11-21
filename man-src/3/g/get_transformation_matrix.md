@@ -16,4 +16,3 @@ description: "get_transformation_matrix – Constructs X, Y, Z rotation matrices
 <p> Constructs a transformation matrix which will rotate points around all three axes by the specified amounts (given in binary, 256 degrees to a circle format), scale the result by the specified amount (pass 1 for no change of scale), and then translate to the requested x, y, z position. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-apply_matrix/">apply_matrix</a></code>(3), <code><a href="/docs/linux/man/3-get_rotation_matrix/">get_rotation_matrix</a></code>(3), <code><a href="/docs/linux/man/3-get_scaling_matrix/">get_scaling_matrix</a></code>(3), <code><a href="/docs/linux/man/3-get_translation_matrix/">get_translation_matrix</a></code>(3), <code><a href="/docs/linux/man/3-ex3d/">ex3d</a></code>(3), <code><a href="/docs/linux/man/3-exstars/">exstars</a></code>(3) </p>
-<h2>Index</h2>

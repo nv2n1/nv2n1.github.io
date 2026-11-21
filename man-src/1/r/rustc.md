@@ -198,4 +198,3 @@ description: "rustc – The Rust compiler"
 <p> See <a rel="nofollow" href="https://github.com/rust-lang/rust/graphs/contributors">https://github.com/rust-lang/rust/graphs/contributors</a> or use `git log &#8211;all &#8211;format=&#8217;%cN &lt;%cE&gt;&#8217; | sort -u` in the rust source distribution. </p>
 <h2>COPYRIGHT</h2>
 <p> This work is dual-licensed under Apache 2.0 and MIT terms. See <i>COPYRIGHT</i> file in the rust source distribution. </p>
-<h2>Index</h2>

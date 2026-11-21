@@ -37,4 +37,3 @@ description: "openpgp2ssh – translate OpenPGP keys to SSH keys"
 <p> <code>openpgp2ssh < mykey.gpg </code> currently cannot handle passphrase-protected secret keys on input.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-pem2openpgp/">pem2openpgp</a>(1), <a href="/docs/linux/man/1-monkeysphere/">monkeysphere</a>(1), <a href="/docs/linux/man/7-monkeysphere/">monkeysphere</a>(7), <a href="/docs/linux/man/1-ssh/">ssh</a>(1), monkeysphere-authentication8, monkeysphere-host8 </p>
-<h2>Index</h2>

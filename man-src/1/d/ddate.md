@@ -74,4 +74,3 @@ description: "ddate – convert Gregorian dates to Discordian dates"
  Malaclypse the Younger, <i>Principia Discordia, Or How I Found Goddess And What I Did To Her When I Found Her</i> </p>
 <h2>AVAILABILITY</h2>
 <p> The ddate command is part of the util-linux package and is available from <a href="ftp://ftp.kernel.org/pub/linux/utils/util-linux/.">ftp://ftp.kernel.org/pub/linux/utils/util-linux/.</a> </p>
-<h2>Index</h2>

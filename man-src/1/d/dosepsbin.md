@@ -102,4 +102,3 @@ description: "dosepsbin — Extract PS/WMF/TIFF sections from DOS EPS binary fil
 <dl>
 </dl>
 </dl>
-<h2>Index</h2>

@@ -96,4 +96,3 @@ description: "man2html – format a manual page in html"
 <p> Richard Verhoeven was the original author of <code>man2html</code>. Michael Hamilton and Andries Brouwer subsequently improved on it. Federico Lucifredi &lt;flucifredi [at] acm.org&gt; is the current maintainer. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-lynx/">lynx</a></code>(1), <code><a href="/docs/linux/man/1-man/">man</a></code>(1), <code><a href="/docs/linux/man/1-hman/">hman</a></code>(1) </p>
-<h2>Index</h2>

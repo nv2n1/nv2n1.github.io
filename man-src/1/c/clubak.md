@@ -77,4 +77,3 @@ node[1, 3] : 7 node2 : 9
 <p> Stephane Thiell &lt;sthiell [at] stanford.edu&gt;</p>
 <h2>COPYRIGHT</h2>
 <p> GNU Lesser General Public License version 2.1 or later (LGPLv2.1+) </p>
-<h2>Index</h2>

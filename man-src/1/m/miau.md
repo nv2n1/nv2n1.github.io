@@ -159,4 +159,3 @@ description: "miau.info – miau.info"
 <p> This option might not be compiled in. </p>
 <p> `<code>dccbindhost = &#8220;host&#8221;</code>&#8216; If miau has separate IPs for IRC-network and clients, you should enter <font SIZE="-1">IP</font> for clients here. </p>
 <p> This option might not be compiled in. </p>
-<h2>Index</h2>

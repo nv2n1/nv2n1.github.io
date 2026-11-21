@@ -32,4 +32,3 @@ void strarr_free(strarr arr);
 <p> <i>dev</i> is the device name.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libnutclient/">libnutclient</a></code>(3) </p>
-<h2>Index</h2>

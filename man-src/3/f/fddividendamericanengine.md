@@ -22,4 +22,3 @@ description: "ql/pricingengines/vanilla/fddividendamericanengine.hpp – america
 <p> american engine with discrete deterministic dividends </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

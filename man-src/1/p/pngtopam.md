@@ -85,4 +85,3 @@ description: "pngtopam – convert a PNG image into a Netpbm image"
 <p> Nearly all of the code has changed since it was copied from the <code>pnmtopng</code> package, most of it just to improve maintainability. </p>
 <h2>AUTHORS</h2>
 <p> Copyright (C) 1995-1997 by Alexander Lehmann and Willem van Schaik. </p>
-<h2>Index</h2>

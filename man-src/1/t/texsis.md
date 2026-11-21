@@ -74,4 +74,3 @@ description: "TeXsis – TeX macros for Physicists"
 <h2>VERSION</h2>
 <p> Revision Number: 2.18/beta3 <br />
  Release Date: 16 May 2000 </p>
-<h2>Index</h2>

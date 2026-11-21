@@ -21,4 +21,3 @@ description: "cloud-run-instances – wrapper for euca-run-instances that suppor
 <h2>AUTHOR</h2>
 <p> This manpage and the utility was written by Dustin Kirkland &lt;kirkland [at] canonical.com&gt; for Ubuntu systems (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 3 published by the Free Software Foundation. </p>
 <p> On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL. </p>
-<h2>Index</h2>

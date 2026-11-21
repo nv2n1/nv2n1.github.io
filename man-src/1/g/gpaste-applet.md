@@ -28,4 +28,3 @@ description: "GPaste-Applet – An applet for the GPaste clipboard manager"
 <dt><code>Quit</code></dt>
 <dd> Exit the applet </dd>
 </dl>
-<h2>Index</h2>

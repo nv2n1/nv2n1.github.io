@@ -62,4 +62,3 @@ description: "djvutoxml, djvuxmlparser – DjVuLibre XML Tools."
 <p> The DjVu XML tools and DTD were written by Bill C. Riemers &lt;docbill [at] sourceforge.net&gt; and Fred Crary. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-djvu/">djvu</a></code>(1), <code><a href="/docs/linux/man/1-djvused/">djvused</a></code>(1), and <code><a href="/docs/linux/man/7-utf8/">utf8</a></code>(7). </p>
-<h2>Index</h2>

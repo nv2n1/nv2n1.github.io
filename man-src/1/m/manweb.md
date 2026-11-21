@@ -171,4 +171,3 @@ browser=netscape
 </pre>
 <p>&nbsp;<wbr> </p>
 </dl>
-<h2>Index</h2>

@@ -127,4 +127,3 @@ description: "rpmrebuild_plugins – is an engine to expand rpmrebuild functiona
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/8-rpm/">rpm</a>(8), <a href="/docs/linux/man/8-rpmbuild/">rpmbuild</a>(8), <a href="/docs/linux/man/1-rpmrebuild/">rpmrebuild</a>(1), demofiles.plug(1), demo.plug(1), nodoc.plug(1), uniq.plug(1), file2pacDep.plug(1), set_tag.plug(1), unset_tag.plug(1)<br />
 &nbsp;<wbr>&#8216;man -k rrp&#8217;&nbsp;<wbr>for plugins specific manpages </p>
-<h2>Index</h2>

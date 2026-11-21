@@ -21,4 +21,3 @@ description: "init_selinuxmnt – initialize the global variable selinux_mnt"
 <p> This manual page has been written by Guido Trentalancia &lt;guido [at] trentalancia.com&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8), </p>
-<h2>Index</h2>

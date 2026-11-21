@@ -29,4 +29,3 @@ description: "dviselect – extract pages from DVI files"
 <p> Section or subsection selection will sometimes fail, for the DVI file lists only the \count values that were active when the page ended. Clever macro packages can alleviate this by making use of other ``free&#8217;&#8216; \count registers. Chapters normally begin on new pages, and do not suffer from this particular problem. </p>
 <p> The heuristic that decides which arguments are page selectors and which are file names is often wrong. Using shell redirection or the -i and -o options is safest. </p>
 <p> <i>Dviselect</i> does not adjust the parameters in the postamble; however, since these values are normally used only to size certain structures in the output conversion programs, and the parameters never need to be adjusted upward, this has not proven to be a problem. </p>
-<h2>Index</h2>

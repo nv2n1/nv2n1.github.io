@@ -75,4 +75,3 @@ XISDNLoad  xisdnload
 <h2>AUTHORS</h2>
 <p> Besides the basic xload stuff, the ISDN parts are added by<br />
  Frank Strauss &lt;strauss [at] escape.de&gt; (escape e.V., Braunschweig, Germany). In January 1998 Michael Deindl &lt;olmur [at] dwarf.bb.bawue.de&gt; contributed the `yellow&#8217; patch to make xisdnload recognize the phase of trying to connect and show this by a different background color. Markus Pilzecker &lt;mp [at] timesink.pilzecker.de&gt; detected a bug in the color assignment code resulting in seg faults which has been fixed in January 1998. </p>
-<h2>Index</h2>

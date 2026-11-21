@@ -58,4 +58,3 @@ description: "dvcont – send control commands to DV cameras"
 <dd> Tell the program to show you a help screen.</dd></dl>
 <h2>AUTHORS</h2>
 <p> <code>dvcont</code> was written by Jason Howard &lt;jason [at] spectsoft.com&gt; and Dan Dennedy &lt;dan [at] dennedy.org&gt;. This man page was written with the help of <code>help2man</code> by Daniel Kobras &lt;kobras [at] debian.org&gt; for the Debian GNU/Linux distribution (but may be used by others). Updated by Dan Dennedy &lt;dan [at] dennedy.org&gt;. </p>
-<h2>Index</h2>

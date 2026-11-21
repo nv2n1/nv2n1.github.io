@@ -141,4 +141,3 @@ description: "ncdu – NCurses Disk Usage"
 <p> Written by Yoran Heling &lt;projects [at] yorhel.nl&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-du/">du</a></i>(1) </p>
-<h2>Index</h2>

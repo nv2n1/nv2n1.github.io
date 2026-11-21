@@ -36,4 +36,3 @@ description: "mpaste – command-line client for https://paste.mate-desktop.org"
 <p> If you find bugs in the <i>mpaste</i> program, please report these on <a rel="nofollow" href="https://github.com/mate-desktop/mate-desktop/issues.">https://github.com/mate-desktop/mate-desktop/issues.</a> </p>
 <h2>AUTHOR</h2>
 <p> This manual page has been written for the Debian project by Mike Gabriel &lt;mike.gabriel [at] das-netzwerkteam.de&gt; and maybe used by others. </p>
-<h2>Index</h2>

@@ -87,4 +87,3 @@ description: "mboxgrep – displays email messages matching a pattern"
 <p> <a rel="nofollow" href="http://www.mboxgrep.org/">http://www.mboxgrep.org/</a></p>
 <h2>AUTHOR</h2>
 <p> Daniel Spiljar &lt;dspiljar [at] world.std.com&gt; </p>
-<h2>Index</h2>

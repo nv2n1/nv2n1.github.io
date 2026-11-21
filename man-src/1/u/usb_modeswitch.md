@@ -115,4 +115,3 @@ description: "usb_modeswitch – control the mode of ‘multi-state’ USB devic
 <h2>AUTHOR</h2>
 <p> This manual page was originally written by Didier Raboud (didier [at] raboud.com) for the <code>Debian</code> system. Additions made by Josua Dietze. Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation. </p>
 <p> The complete text of the current GNU General Public License can be found in <a rel="nofollow" href="http://www.gnu.org/licenses/gpl.txt">http://www.gnu.org/licenses/gpl.txt</a> </p>
-<h2>Index</h2>

@@ -32,4 +32,3 @@ ptargrep[options]&lt;pattern&gt;&lt;tar file&gt;... Options : --basename | -b ig
 <h2>COPYRIGHT</h2>
 <p> Copyright 2010 Grant McLean &lt;grantm [at] cpan.org&gt; </p>
 <p> This program is free software; you can redistribute it and/or modify it under the same terms as Perl itself. </p>
-<h2>Index</h2>

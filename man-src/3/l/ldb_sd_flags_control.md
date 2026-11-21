@@ -14,4 +14,3 @@ description: "ldb_sd_flags_control –"
 <p> unsigned <code>secinfo_flags</code> </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LDB from the source code. </p>
-<h2>Index</h2>

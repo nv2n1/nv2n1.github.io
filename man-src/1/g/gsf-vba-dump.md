@@ -27,4 +27,3 @@ description: "gsf-vba-dump – extract Visual Basic for Applications macros"
 <p> The Gnumeric homepage &lt;URL: <a rel="nofollow" href="http://www.gnome.org/projects/gnumeric/">http://www.gnome.org/projects/gnumeric/</a> &gt;. </p>
 <p> The GNOME project page &lt;URL: <a rel="nofollow" href="http://www.gnome.org/">http://www.gnome.org/</a> &gt;. </p>
 <p> Wikipedia, Visual Basic for Applications &lt;URL: <a rel="nofollow" href="http://en.wikipedia.org/wiki/Visual_Basic_for_Applications">http://en.wikipedia.org/wiki/Visual_Basic_for_Applications</a> &gt;. </p>
-<h2>Index</h2>

@@ -23,4 +23,3 @@ description: "kmousetool – Accessibility tool to help click the mouse"
 <p> KMouseTool was written by Gunnar Schmi Dt &lt;gunnar [at] schmi-dt.de&gt;, Olaf Schmidt &lt;ojschmidt [at] kde.org&gt; and Jeff Roush &lt;jeff [at] mousetool.com&gt;. </p>
 <h2>AUTHOR</h2>
 <p> Lauri Watts. </p>
-<h2>Index</h2>

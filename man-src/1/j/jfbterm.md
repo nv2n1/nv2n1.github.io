@@ -49,4 +49,3 @@ or
 <p> <code>jfbterm.conf</code>(5).</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Fumitoshi UKAI &lt;ukai [at] debian.or.jp&gt;. </p>
-<h2>Index</h2>

@@ -122,4 +122,3 @@ description: "fakechroot – gives a fake chroot environment"
 <p> Copyright (c) 2007 Mark Eichin &lt;eichin [at] metacarta.com&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-fakeroot/">fakeroot</a></i>(1), <i><a href="/docs/linux/man/1-dpkg-buildpackage/">dpkg-buildpackage</a></i>(1), <i>debuild</i>(1), <i><a href="/docs/linux/man/8-debootstrap/">debootstrap</a></i>(8), <a rel="nofollow" href="http://fakechroot.alioth.debian.org/">http://fakechroot.alioth.debian.org/</a> </p>
-<h2>Index</h2>

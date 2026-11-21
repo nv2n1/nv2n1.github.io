@@ -177,4 +177,3 @@ function   msg     integer  Argument to `-issue'
 <h2>BUGS</h2>
 <p> If <i>whatnowproc</i> is <code>whatnow</code>, then <code>forw</code> uses a built-in <code>whatnow</code>, it does not actually run the <code>whatnow</code> program. Hence, if you define your own <i>whatnowproc</i>, don&#8217;t call it <code>whatnow</code> since <code>forw</code> won&#8217;t run it. </p>
 <p> When <code>forw</code> is told to annotate the messages it forwards, it doesn&#8217;t actually annotate them until the draft is successfully sent. If from the <i>whatnowproc</i>, you <code>push</code> instead of <code>send</code>, it&#8217;s possible to confuse <code>forw</code> by re-ordering the file (e.g. by using &#8220;<code>folder</code> <code>-pack</code>&#8221;) before the message is successfully sent. <code>Dist</code> and <code>repl</code> don&#8217;t have this problem. </p>
-<h2>Index</h2>

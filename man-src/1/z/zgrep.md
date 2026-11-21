@@ -22,4 +22,3 @@ description: "zgrep – search possibly compressed files for a regular expressio
 <p> Charles Levert (charles [at] comm.polymtl.ca)</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-grep/">grep</a>(1), <a href="/docs/linux/man/1-gzexe/">gzexe</a>(1), <a href="/docs/linux/man/1-gzip/">gzip</a>(1), <a href="/docs/linux/man/1-zdiff/">zdiff</a>(1), <a href="/docs/linux/man/1-zforce/">zforce</a>(1), <a href="/docs/linux/man/1-zmore/">zmore</a>(1), <a href="/docs/linux/man/1-znew/">znew</a>(1) </p>
-<h2>Index</h2>

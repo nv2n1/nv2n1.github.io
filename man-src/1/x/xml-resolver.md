@@ -45,4 +45,3 @@ description: "xml-resolver – A simple command-line resolver"
 <dt>
 </dt><dd> Set the debug level</dd></dl>
 <p> And keyword is one of: doctype, document, entity, notation, public, system, or uri. </p>
-<h2>Index</h2>

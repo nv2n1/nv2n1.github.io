@@ -54,4 +54,3 @@ description: "pgmmedian – apply a median filter to a PGM file"
 <p> <code>pgmmedian</code> was added to Netpbm in Version 10.29 (August 2005). It had been distributed by Mike Burns via his own web site before that (and continued to be so). </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1996 by Mike Burns &lt;<i>burns [at] cac.psu.edu</i>&gt; </p>
-<h2>Index</h2>

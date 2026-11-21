@@ -24,4 +24,3 @@ description: "ppmtoapplevol – convert a PPM into an Apple volume label image"
 <p> <code>ppm</code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>ppmtoapplevol</code> was new in Neptbm 10.54 (March 2011). </p>
-<h2>Index</h2>

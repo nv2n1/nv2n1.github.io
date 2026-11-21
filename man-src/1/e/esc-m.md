@@ -15,4 +15,3 @@ description: "esc-m – ease viewing output of driver data"
 <p> <code>esc-m</code> is meant to make the understanding of the printer driver easier. It reads from stdin and prints some info to stdout. </p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-min12xxw/">min12xxw</a></i>(1) </p>
-<h2>Index</h2>

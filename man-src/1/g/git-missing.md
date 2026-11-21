@@ -47,4 +47,3 @@ $ git missing foo bar
 <p> &lt;<i><a rel="nofollow" href="http://github.com/tj/git-extras/issues">http://github.com/tj/git-extras/issues</a></i>&gt;</p>
 <h2>SEE ALSO</h2>
 <p> &lt;<i><a rel="nofollow" href="http://github.com/tj/git-extras">http://github.com/tj/git-extras</a></i>&gt; </p>
-<h2>Index</h2>

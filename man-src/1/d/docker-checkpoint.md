@@ -17,4 +17,3 @@ description: "docker-checkpoint – Manage checkpoints"
 <p> <code>-h</code>, <code>&#8211;help</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>help for checkpoint</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker/">docker</a>(1)</code>, <code><a href="/docs/linux/man/1-docker-checkpoint-create/">docker-checkpoint-create</a>(1)</code>, <code><a href="/docs/linux/man/1-docker-checkpoint-ls/">docker-checkpoint-ls</a>(1)</code>, <code><a href="/docs/linux/man/1-docker-checkpoint-rm/">docker-checkpoint-rm</a>(1)</code> </p>
-<h2>Index</h2>

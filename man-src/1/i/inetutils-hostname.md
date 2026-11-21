@@ -36,4 +36,3 @@ description: "hostname – show or set the system host name"
 <dd> Give a short usage message.</dd>
 <dt><code>-V , -version</code></dt>
 <dd> Print program version.</dd></dl>
-<h2>Index</h2>

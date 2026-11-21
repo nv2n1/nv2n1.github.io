@@ -35,4 +35,3 @@ description: "exfalso – audio tag editor"
 <i><a rel="nofollow" href="http://code.google.com/p/quodlibet/wiki/Guide">http://code.google.com/p/quodlibet/wiki/Guide</a></i>,
 <i><a rel="nofollow" href="http://code.google.com/p/quodlibet/wiki/FAQ">http://code.google.com/p/quodlibet/wiki/FAQ</a></i>
 </pre>
-<h2>Index</h2>

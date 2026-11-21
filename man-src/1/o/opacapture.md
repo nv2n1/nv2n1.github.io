@@ -58,4 +58,3 @@ description: "opacapture"
 <h2>Examples</h2>
 <p> opacapture mycapture.tgz<br />
  opacapture -d 3 030127capture.tgz </p>
-<h2>Index</h2>

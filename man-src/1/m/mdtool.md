@@ -122,4 +122,3 @@ description: "mdtool – MonoDevelop Application Runner"
 <p> Visit <a rel="nofollow" href="http://lists.ximian.com/mailman/listinfo/monodevelop-list">http://lists.ximian.com/mailman/listinfo/monodevelop-list</a> for details.</p>
 <h2>WEB SITE</h2>
 <p> Visit <a rel="nofollow" href="http://www.monodevelop.com">http://www.monodevelop.com</a> for details </p>
-<h2>Index</h2>

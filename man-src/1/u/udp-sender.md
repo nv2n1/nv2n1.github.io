@@ -176,4 +176,3 @@ description: "udp-sender – broadcast file on a LAN"
 <p> udp-receiver</p>
 <h2>AUTHOR</h2>
 <p> Alain Knaff </p>
-<h2>Index</h2>

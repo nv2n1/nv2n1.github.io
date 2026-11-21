@@ -30,4 +30,3 @@ dblink_cancel_query(text connname) returns text
 SELECT dblink_cancel_query('dtest1');
 </pre>
 </dd></dl>
-<h2>Index</h2>

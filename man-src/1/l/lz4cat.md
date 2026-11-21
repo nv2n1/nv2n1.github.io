@@ -142,4 +142,3 @@ lz4 file2 &gt;&gt; foo.lz4
 <p> Report bugs at: <a rel="nofollow" href="https://github.com/lz4/lz4/issues">https://github.com/lz4/lz4/issues</a></p>
 <h2>AUTHOR</h2>
 <p> Yann Collet </p>
-<h2>Index</h2>

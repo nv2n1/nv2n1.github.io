@@ -19,4 +19,3 @@ description: "mate-calc-cmd – A console calculator for the MATE Desktop Enviro
 <h2>SEE ALSO</h2>
 <h3>Further information may also be available at: <a rel="nofollow" href="http://wiki.mate-desktop.org/docs">http://wiki.mate-desktop.org/docs</a></h3>
 <p> <code><a href="/docs/linux/man/1-mate-calc/">mate-calc</a></code>(1) </p>
-<h2>Index</h2>

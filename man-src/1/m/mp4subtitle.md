@@ -68,4 +68,3 @@ description: "mp4subtitle – manual page for mp4subtitle – MP4v2 2.0.0"
 <dt>3</dt>
 <dd> everything </dd>
 </dl>
-<h2>Index</h2>

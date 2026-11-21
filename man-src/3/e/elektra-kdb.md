@@ -317,4 +317,3 @@ for (i = 0; i &lt; 10; i++) // limit to 10 tries
 </dt><dd> 0 on success, -1 if an error ocurred.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for Elektra Projekt from the source code. </p>
-<h2>Index</h2>

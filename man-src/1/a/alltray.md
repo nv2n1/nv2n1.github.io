@@ -49,4 +49,3 @@ description: "AllTray – Dock any program into the system tray."
 <h2>AUTHOR</h2>
 <p> This manual page was written by Carlos C Soto &lt;csoto [at] sia-solutions.com&gt; for the GNU/Linux system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 any later version published by the Free Software Foundation. </p>
 <p> AllTray (C) 2005, Jochen Baier &lt;email [at] jochen-baier.de&gt; </p>
-<h2>Index</h2>

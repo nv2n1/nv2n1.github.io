@@ -42,4 +42,3 @@ description: "octave-cli – A high-level interactive language for numerical com
 <p> John W. Eaton &lt;jwe [at] octave.org&gt;</p>
 <h2>SEE ALSO</h2>
 <p> octave (1) </p>
-<h2>Index</h2>

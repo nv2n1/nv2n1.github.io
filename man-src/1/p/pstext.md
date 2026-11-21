@@ -124,4 +124,3 @@ these are to be avoided.EOF
 <p> <code>gmt</code>, <code>gmt.conf</code>, <code>gmtcolors</code>, <code>psconvert</code>, <code>psbasemap</code>, <code>pslegend</code>, <code>psxy</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

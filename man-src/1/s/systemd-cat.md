@@ -70,4 +70,3 @@ description: "systemd-cat – Connect a pipeline or program’s output with the 
 <p> Even though the two examples have very similar effects the first is preferable since only one process is running at a time, and both stdout and stderr are captured while in the second example, only stdout is captured.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code><a href="/docs/linux/man/1-systemctl/">systemctl</a></code>(1), <code><a href="/docs/linux/man/1-logger/">logger</a></code>(1) </p>
-<h2>Index</h2>

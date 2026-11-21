@@ -109,4 +109,3 @@ subject string   Any text specified with `-subject text'
 <p> None</p>
 <h2>BUGS</h2>
 <p> If <i>whatnowproc</i> is <code>whatnow</code>, then <code>comp</code> uses a built-in <code>whatnow</code>, it does not actually run the <code>whatnow</code> program. Hence, if you define your own <i>whatnowproc</i>, don&#8217;t call it <code>whatnow</code> since <code>comp</code> won&#8217;t run it. </p>
-<h2>Index</h2>

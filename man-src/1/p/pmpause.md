@@ -19,4 +19,3 @@ description: "pmpause, pmsleep – portable subsecond-capable sleep"
 <p> The exit status is 0 for success, or 1 for a malformed command line. If the underlying <code><a href="/docs/linux/man/2-nanosleep/">nanosleep</a></code>(2) system call fails, an errno is returned.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-sleep/">sleep</a></code>(1), <code><a href="/docs/linux/man/2-pause/">pause</a></code>(2) and <code><a href="/docs/linux/man/2-nanosleep/">nanosleep</a></code>(2). </p>
-<h2>Index</h2>

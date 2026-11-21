@@ -28,4 +28,3 @@ description: "sbsign – UEFI secure boot signing tool"
 <dt><code>&#8211;output</code> &lt;file&gt;</dt>
 <dd> write signed data to &lt;file&gt; (default &lt;efi-boot-image&gt;.signed, or &lt;efi-boot-image&gt;.pk7 for detached signatures) </dd>
 </dl>
-<h2>Index</h2>

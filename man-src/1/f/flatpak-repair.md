@@ -70,4 +70,3 @@ description: "flatpak-repair – Repair a flatpak installation"
 <p> <code>$ flatpak repair &#8211;user</code></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1), <code>ostree-fsck</code>(1) </p>
-<h2>Index</h2>

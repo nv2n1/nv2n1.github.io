@@ -53,4 +53,3 @@ description: "nwboprops – List properies of a NetWare Bindery Object"
 </dt><dd> By default, only the property name is listed. In verbose mode, activated by <code>-v,</code> the property flag, the property security byte and the value flag are also listed.</dd></dl>
 <h2>AUTHORS</h2>
 <p> nwboprops was written by Volker Lendecke with the corresponding Caldera utility in mind. See the Changes file of ncpfs for other contributors. </p>
-<h2>Index</h2>

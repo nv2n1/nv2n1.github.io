@@ -173,4 +173,3 @@ $ abicompat-- weak - mode test - app libtest - 1.so functions defined in library
 <p> Dodji Seketeli</p>
 <h2>COPYRIGHT</h2>
 <p> 2014-2016, Red Hat, Inc. </p>
-<h2>Index</h2>

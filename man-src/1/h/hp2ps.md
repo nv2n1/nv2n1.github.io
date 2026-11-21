@@ -76,4 +76,3 @@ END_SAMPLE 2.82
 <p> P<font SIZE="-2">OST</font>S<font SIZE="-2">CRIPT</font> is a registered trademark of Adobe Systems Incorporated.</p>
 <h2>AUTHOR</h2>
 <p> David Wakeling of the University of York. </p>
-<h2>Index</h2>

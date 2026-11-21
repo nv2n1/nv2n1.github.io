@@ -75,4 +75,3 @@ hspell_check_word(context, word, preflenp); </p>
 <p> The latest version of this software can be found in <code><a rel="nofollow" href="http://hspell.ivrix.org.il/">http://hspell.ivrix.org.il/</a></code></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-hspell/">hspell</a></code>(1) </p>
-<h2>Index</h2>

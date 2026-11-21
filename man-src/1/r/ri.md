@@ -139,4 +139,3 @@ ri --list-doc-dirs
 <li> Other bugs and feature requests can be reported via the Ruby Issue Tracking System (Lk <a rel="nofollow" href="https://bugs.ruby-lang.org/">https://bugs.ruby-lang.org/</a> ) Do not report security vulnerabilities via this system because it publishes the vulnerabilities immediately. </ul>
 <h2>AUTHORS</h2>
 <p> Written by An Dave Thomas Aq dave [at] pragmaticprogrammer.com . </p>
-<h2>Index</h2>

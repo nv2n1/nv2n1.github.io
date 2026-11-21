@@ -122,4 +122,3 @@ description: "meson – a high productivity build system"
 <h2>SEE ALSO</h2>
 <p> <a rel="nofollow" href="http://mesonbuild.com/">http://mesonbuild.com/</a> </p>
 <p> <a rel="nofollow" href="https://wrapdb.mesonbuild.com/">https://wrapdb.mesonbuild.com/</a> </p>
-<h2>Index</h2>

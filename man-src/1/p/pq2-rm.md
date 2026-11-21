@@ -46,4 +46,3 @@ description: "pq2-rm – Remove one or more datasets from a dataset meta-reposit
 <p> You should have received a copy of the GNU Lesser General Public License along with this library; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA</p>
 <h2>AUTHOR</h2>
 <p> This manual page was originally written by Gerardo Ganis &lt;gerardo.ganis [at] cern.ch&gt;, for ROOT version 5. </p>
-<h2>Index</h2>

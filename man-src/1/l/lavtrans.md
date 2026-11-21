@@ -43,4 +43,3 @@ description: "lavtrans – Convert MJPEG videos to other MJPEG video formats"
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mjpegtools/">mjpegtools</a></code>(1), <code><a href="/docs/linux/man/1-lavplay/">lavplay</a></code>(1) </p>
-<h2>Index</h2>

@@ -26,4 +26,3 @@ ASSERT(!errno); /* This will fail. */
 <p> Returns the clamped result of adding `x&#8217; to `y&#8217;, setting `errno&#8217; to ERANGE if there was an overflow. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-fixsub/">fixsub</a></code>(3), <code><a href="/docs/linux/man/3-fixmul/">fixmul</a></code>(3), <code><a href="/docs/linux/man/3-fixdiv/">fixdiv</a></code>(3) </p>
-<h2>Index</h2>

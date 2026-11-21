@@ -237,4 +237,3 @@ $ GIT_COMMITTER_DATE=&quot;2006-10-02 10:31&quot; git tag -s v1.0.1
 <p> <code><a href="/docs/linux/man/1-git-check-ref-format/">git-check-ref-format</a></code>(1). <code><a href="/docs/linux/man/1-git-config/">git-config</a></code>(1).</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

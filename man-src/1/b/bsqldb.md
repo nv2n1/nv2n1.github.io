@@ -57,4 +57,3 @@ description: "bsqldb – batch SQL script processor using DB-Library"
 <p> The utility was written by An James K. Lowden Aq jklowden [at] freetds.org .</p>
 <h2>BUGS</h2>
 <p> Microsoft servers as of SQL Server 7.0 SP 3 do not return output parameters unless the RPC functions are used. This means cannot return output parameters for stored procedures with these servers. </p>
-<h2>Index</h2>

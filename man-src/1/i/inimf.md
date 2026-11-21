@@ -180,4 +180,3 @@ description: "mf, inimf, mf-nowin – Metafont, a language for font and logo des
 <p> <code><a href="/docs/linux/man/1-gftopk/">gftopk</a></code>(1), <code><a href="/docs/linux/man/1-gftodvi/">gftodvi</a></code>(1), <code><a href="/docs/linux/man/1-gftype/">gftype</a></code>(1), <code><a href="/docs/linux/man/1-mft/">mft</a></code>(1), <code><a href="/docs/linux/man/1-mpost/">mpost</a></code>(1), <code><a href="/docs/linux/man/1-pltotf/">pltotf</a></code>(1), <code><a href="/docs/linux/man/1-tftopl/">tftopl</a></code>(1).</p>
 <h2>AUTHORS</h2>
 <p> Metafont was designed by Donald E. Knuth, who implemented it using his Web system for Pascal programs. It was originally ported to Unix by Paul Richards at the University of Illinois at Urbana-Champaign. This page was mostly written by Pierre MacKay. </p>
-<h2>Index</h2>

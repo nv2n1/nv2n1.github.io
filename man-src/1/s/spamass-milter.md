@@ -91,4 +91,3 @@ description: "spamass-milter – sendmail milter for passing emails through Spam
 <p> <a href="/docs/linux/man/1-spamassassin/">spamassassin</a>(1), <a href="/docs/linux/man/1-spamd/">spamd</a>(1)</p>
 <h2>AUTHORS</h2>
 <p> An Georg C. F. Greve Aq greve [at] gnu.org An Dan Nelson Aq dnelson [at] allantgroup.com An Todd Kover Aq kovert [at] omniscient.com </p>
-<h2>Index</h2>

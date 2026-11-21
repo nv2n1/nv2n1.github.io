@@ -22,4 +22,3 @@ description: "curl_getenv – return value for environment name"
 <p> Under unix operating systems, there isn&#8217;t any point in returning an allocated memory, although other systems won&#8217;t work properly if this isn&#8217;t done. The unix implementation thus has to suffer slightly from the drawbacks of other systems.</p>
 <h2>SEE ALSO</h2>
 <p> <code>getenv</code>(3C), </p>
-<h2>Index</h2>

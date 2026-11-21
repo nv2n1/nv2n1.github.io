@@ -20,4 +20,3 @@ description: "libssh2_session_hostkey – get the remote key"
 <p> A pointer, or NULL if something went wrong.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_knownhost_check/">libssh2_knownhost_check</a>(3)</code> <code><a href="/docs/linux/man/3-libssh2_knownhost_add/">libssh2_knownhost_add</a>(3)</code> </p>
-<h2>Index</h2>

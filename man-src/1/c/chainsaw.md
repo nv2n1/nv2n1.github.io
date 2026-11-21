@@ -14,4 +14,3 @@ description: "chainsaw – GUI based log viewer"
 <h2>DESCRIPTION</h2>
 <p> Chainsaw is a GUI based log viewer, a companion application to Log4j written by members of the Log4j development community. </p>
 <p> Chainsaw includes help with with a Quick Reference and a Tutorial to get you started, all viewable from within the GUI. </p>
-<h2>Index</h2>

@@ -50,4 +50,3 @@ gmt grdpaste file_a.nc file_b.nc -Goutfile.nc -V -fg
 <p> <code>gmt</code>, <code>grdblend</code>, <code>grdclip</code>, <code>grdcut</code>, <code>grdinfo</code>, <code>grdsample</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

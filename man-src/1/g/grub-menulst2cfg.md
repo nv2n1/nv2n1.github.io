@@ -19,4 +19,3 @@ description: "grub-menulst2cfg – transform legacy menu.lst into grub.cfg"
 <dt>
 </dt><dd> <code>info grub-menulst2cfg</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

@@ -136,4 +136,3 @@ add Lock = Caps_Lock
 <p> There should be a way to have the <i>remove</i> expression accept keycodes as well as keysyms for those times when you really mess up your mappings.</p>
 <h2>AUTHOR</h2>
 <p> Jim Fulton, MIT X Consortium, rewritten from an earlier version by David Rosenthal of Sun Microsystems. </p>
-<h2>Index</h2>

@@ -60,4 +60,3 @@ description: "canberra-gtk-play – play a sound event"
 <h2>AUTHORS</h2>
 <p> <code>canberra-gtk-play</code> is Copyright 2008 Lennart Poettering. </p>
 <p> This manual page was written by Francois Wendling &lt;frwendling [at] free.fr&gt; for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

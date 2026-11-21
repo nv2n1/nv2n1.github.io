@@ -21,4 +21,3 @@ void bson_free(void *mem);
 <p> This function shall free the memory supplied by <code>mem</code> \&amp;. This should be used by functions that require you free the result with <code><a href="/docs/linux/man/3-bson_free/">bson_free</a>(3)</code> \&amp;. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

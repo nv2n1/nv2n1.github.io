@@ -44,4 +44,3 @@ description: "xzdec, lzmadec – Small .xz and .lzma decompressors"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-xz/">xz</a></code>(1) </p>
 <p> XZ Embedded: &lt;<a rel="nofollow" href="http://tukaani.org/xz/embedded.html">http://tukaani.org/xz/embedded.html</a>&gt; </p>
-<h2>Index</h2>

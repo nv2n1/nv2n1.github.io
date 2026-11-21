@@ -29,4 +29,3 @@ description: "makepattern – make GMT color pattern from b/w pattern or icon"
 <p> <code>makepattern</code> bits.ras <code>-Cf</code>green <code>-Cb</code>blue &gt; colorbits.ras</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-gmt/">GMT</a></i>(1), <i><a href="/docs/linux/man/1-psimage/">psimage</a></i>(1) </p>
-<h2>Index</h2>

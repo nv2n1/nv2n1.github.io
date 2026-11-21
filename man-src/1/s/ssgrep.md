@@ -80,4 +80,3 @@ description: "ssgrep – search spreadsheets for strings"
 <p> <code><a href="/docs/linux/man/1-beagled/">beagled</a></code>(1), <code><a href="/docs/linux/man/1-gnumeric/">gnumeric</a></code>(1), <code><a href="/docs/linux/man/1-ssconvert/">ssconvert</a></code>(1), <code><a href="/docs/linux/man/1-ssdiff/">ssdiff</a></code>(1) <code><a href="/docs/linux/man/1-ssindex/">ssindex</a></code>(1) </p>
 <p> The Gnumeric Homepage &lt;URL: <a rel="nofollow" href="http://www.gnome.org/projects/gnumeric/">http://www.gnome.org/projects/gnumeric/</a> &gt;. </p>
 <p> The GNOME project page &lt;URL: <a rel="nofollow" href="http://www.gnome.org/">http://www.gnome.org/</a> &gt;. </p>
-<h2>Index</h2>

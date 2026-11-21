@@ -39,4 +39,3 @@ description: "lchage – Display or change user password policy"
 <p> The exit status is 0 on success, nonzero on error. </p>
 <h2>NOTES</h2>
 <p> Note that &#8220;account expiration&#8221; (set by <code>&#8211;expire</code>) is distinct from &#8220;password expiration&#8221; (set by <code>&#8211;maxdays</code>). Account expiration happens on a fixed date regardless of password changes. Password expiration is relative to the date of last password change. </p>
-<h2>Index</h2>

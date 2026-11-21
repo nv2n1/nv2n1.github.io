@@ -27,4 +27,3 @@ description: "krb5-auth-dialog – Kerberos 5 credential checking"
 <h2>AUTHORS</h2>
 <p> Christopher Aillon &lt;caillon [at] redhat.com&gt;<br />
  Jonathan Blandford &lt;jrb [at] redhat.com&gt; </p>
-<h2>Index</h2>

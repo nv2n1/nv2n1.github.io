@@ -32,4 +32,3 @@ bson_init_static (bson_t        *b,
 <p> <code><a href="/docs/linux/man/3-bson_init_static/">bson_init_static</a>(3)</code> will return <code>true</code> if the <code>bson_t</code> was successfully initialized. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

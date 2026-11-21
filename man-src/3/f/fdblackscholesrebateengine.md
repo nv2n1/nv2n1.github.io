@@ -19,4 +19,3 @@ description: "ql/experimental/finitedifferences/fdblackscholesrebateengine.hpp â
 <p> Finite-Differences Black Scholes barrier option rebate helper engine. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

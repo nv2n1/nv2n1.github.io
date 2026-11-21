@@ -38,4 +38,3 @@ description: "typefortune – manual page for typefortune (part of gtypist)"
 <dt>
 </dt><dd> <code>info gtypist</code></dd></dl>
 <p> (section &quot;Using typefortune&quot;) should give you access to the complete manual. </p>
-<h2>Index</h2>

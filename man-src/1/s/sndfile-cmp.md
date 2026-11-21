@@ -16,4 +16,3 @@ description: "sndfile-cmp – compares two audio files"
 <p> sndfile-cmp does its work using libsndfile (<a rel="nofollow" href="http://www.mega-nerd.com/libsndfile/">http://www.mega-nerd.com/libsndfile/</a>).</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Erik de Castro Lopo &lt;erikd [at] mega-nerd.com&gt;. </p>
-<h2>Index</h2>

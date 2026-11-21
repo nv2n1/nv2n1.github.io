@@ -26,4 +26,3 @@ user.cld are created from a text-form dictionary user.ctd.
 </dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-dicar/">dicar</a>(1), <a href="/docs/linux/man/1-dpbindic/">dpbindic</a>(1) </p>
-<h2>Index</h2>

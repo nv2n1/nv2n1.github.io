@@ -70,4 +70,3 @@ description: "djvuserve – Generate indirect DjVu documents on the fly."
 <p> This program was written by Leon Bottou &lt;leonb [at] users.sourceforge.com&gt;. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-djvu/">djvu</a></code>(1), <code><a href="/docs/linux/man/1-djvmcvt/">djvmcvt</a></code>(1), <code><a href="/docs/linux/man/1-nsdejavu/">nsdejavu</a></code>(1) </p>
-<h2>Index</h2>

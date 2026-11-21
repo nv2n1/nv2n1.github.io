@@ -38,4 +38,3 @@ description: "totem-video-thumbnailer – video thumbnailer for the GNOME deskto
 <dt><code>totem</code>, <code>nautilus</code></dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

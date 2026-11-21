@@ -53,4 +53,3 @@ description: "dh_strip – strip executables, shared libraries, and some static 
 <p> This program is a part of debhelper.</p>
 <h2>AUTHOR</h2>
 <p> Joey Hess &lt;joeyh [at] debian.org&gt; </p>
-<h2>Index</h2>

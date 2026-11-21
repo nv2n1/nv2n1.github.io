@@ -40,4 +40,3 @@ description: "QuantLib::LiborForwardModel – Libor forward model"
 </dt><dd> the correctness is tested using Monte-Carlo Simulation to reproduce swaption npvs, model calibration and exact cap pricing</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

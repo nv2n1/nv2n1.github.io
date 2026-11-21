@@ -94,4 +94,3 @@ description: "latexdiff-vc – wrapper script that calls latexdiff for different
 <h2>AUTHOR</h2>
 <p> Version 1.2.1 Copyright (C) 2005-2017 Frederik Tilmann </p>
 <p> This program is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GNU</font> General Public License Version 3 Contributors: S Utcke, H Bruyninckx; some ideas have been inspired by git-latexdiff bash script. C. Junghans: Mercurial Support. </p>
-<h2>Index</h2>

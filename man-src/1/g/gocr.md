@@ -101,4 +101,3 @@ description: "gocr – command line text recognition tool"
 <dt><code>djpeg -pnm -gray text.jpg | gocr &#8211;</code></dt>
 <dd> convert a jpeg file to pnm format and input via pipe </dd>
 </dl>
-<h2>Index</h2>

@@ -23,4 +23,3 @@ description: "PDF-Shuffler – Application for PDF Merging, Rearranging, and Spl
 <p> Common python and gtk diagnostics.</p>
 <h2>AUTHOR</h2>
 <p> Konstantinos Poulios &lt;logari81 [at] gmail.com&gt; </p>
-<h2>Index</h2>

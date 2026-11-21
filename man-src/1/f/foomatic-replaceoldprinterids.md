@@ -16,4 +16,3 @@ description: "foomatic-replaceoldprinterids – Replace references to old printe
 <h2>DESCRIPTION</h2>
 <dd>Replaces references to old numerical or otherwise obsolete printer IDs in arbitrary file. By default it uses the db/oldprinterids file of the current Foomatic database as translation table, but you can use arbitrary translation tables. </dd>
 <p> It is very unlikely you need to use this. </p>
-<h2>Index</h2>

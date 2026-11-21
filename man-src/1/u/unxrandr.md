@@ -20,4 +20,3 @@ description: "unxrandr – inverse tool of xrandr"
 <p> <code>man 1 arandr</code></p>
 <h2>AUTHOR</h2>
 <p> chrysn &lt;chrysn [at] fsfe.org&gt; </p>
-<h2>Index</h2>

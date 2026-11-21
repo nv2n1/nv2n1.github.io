@@ -24,4 +24,3 @@ description: "libpng – Portable Network Graphics (PNG) Reference Library 1.5.1
 <p> <code><a href="/docs/linux/man/5-png/">png</a>(5),</code> <a href="/docs/linux/man/3-libpng/">libpng</a>(3),<code> <a href="/docs/linux/man/3-zlib/">zlib</a>(3),</code> deflate(5),and<code> zlib(5)</code></p>
 <h2>AUTHOR</h2>
 <p> Glenn Randers-Pehrson </p>
-<h2>Index</h2>

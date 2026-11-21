@@ -41,4 +41,3 @@ description: "nicotine-import-winconfig is a script to convert SoulSeek Windows 
  Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, Version 2 or any later version published by the Free Software Foundation.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-nicotine/">nicotine</a>(1)</code> </p>
-<h2>Index</h2>

@@ -94,4 +94,3 @@ keystone role-list
 <p> OpenStack Contributors</p>
 <h2>COPYRIGHT</h2>
 <p> OpenStack Contributors </p>
-<h2>Index</h2>

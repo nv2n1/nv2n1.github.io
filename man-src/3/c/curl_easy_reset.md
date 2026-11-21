@@ -21,4 +21,3 @@ description: "curl_easy_reset – reset all options of a libcurl session handle"
 <p> Nothing</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-curl_easy_init/">curl_easy_init</a></code>(3),<code><a href="/docs/linux/man/3-curl_easy_cleanup/">curl_easy_cleanup</a></code>(3),<code><a href="/docs/linux/man/3-curl_easy_setopt/">curl_easy_setopt</a></code>(3) </p>
-<h2>Index</h2>

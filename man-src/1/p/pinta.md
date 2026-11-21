@@ -27,4 +27,3 @@ description: "Pinta – simple image editor"
 <p> Pinta is developed by the Pinta project contributors, led by Jonathan Pobst &lt;monkey [at] jpobst.com&gt;. For a complete list of contributors, refer to the <code>About</code> option in the <code>Help</code> menu.</p>
 <h2>BUGS</h2>
 <p> Pinta uses the Launchpad project to track bugs. Please submit bugs to <code><a rel="nofollow" href="https://bugs.edge.launchpad.net/pinta">https://bugs.edge.launchpad.net/pinta</a></code>. </p>
-<h2>Index</h2>

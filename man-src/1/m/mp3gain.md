@@ -100,4 +100,3 @@ description: "mp3gain — lossless mp3 normalizer"
 &nbsp;<wbr></p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Stefan Fritsch sf [at] sfritsch.de for the <code>Debian</code> system (but may be used by others). Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Lesser General Public License, Version 2.1 or any later version published by the Free Software Foundation. </p>
-<h2>Index</h2>

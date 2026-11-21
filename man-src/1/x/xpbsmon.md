@@ -353,4 +353,3 @@ description: "xpbsmon – GUI for displaying, monitoring the nodes/execution hos
 <p> The above message can be safely ignored.</p>
 <h2>SEE ALSO</h2>
 <p> pbs_sched_tcl(8B) and pbs_mom(8B). </p>
-<h2>Index</h2>

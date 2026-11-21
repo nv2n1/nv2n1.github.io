@@ -211,4 +211,3 @@ Signature verified, digest sha256:20bf21ed457b390829cdbeec8795a7bea1626991fda603
 </dd></dl>
 <h2>AUTHORS</h2>
 <p> Antonio Murdaca &lt;runcom [at] redhat.com&gt;, Miloslav Trmac &lt;mitr [at] redhat.com&gt;, Jhon Honce &lt;jhonce [at] redhat.com&gt; </p>
-<h2>Index</h2>

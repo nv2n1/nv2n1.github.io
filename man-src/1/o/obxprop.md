@@ -29,4 +29,3 @@ description: "openbox — A minimalistic, highly configurable, next generation w
 <h2>SEE ALSO</h2>
 <p> openbox (1), <a href="/docs/linux/man/1-openbox-session/">openbox-session</a>(1), <a href="/docs/linux/man/1-openbox-gnome-session/">openbox-gnome-session</a>(1), <a href="/docs/linux/man/1-openbox-kde-session/">openbox-kde-session</a>(1). </p>
 <p> Please report bugs to: <code><a rel="nofollow" href="http://bugzilla.icculus.org/">http://bugzilla.icculus.org/</a> </code> </p>
-<h2>Index</h2>

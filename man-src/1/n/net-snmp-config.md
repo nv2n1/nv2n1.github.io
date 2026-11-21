@@ -61,4 +61,3 @@ description: "net-snmp-config – returns information about installed net-snmp l
 <dt><code>&#8211;prefix</code></dt>
 <dd> Display the installation prefix </dd>
 </dl>
-<h2>Index</h2>

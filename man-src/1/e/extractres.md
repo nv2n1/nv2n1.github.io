@@ -25,4 +25,3 @@ description: "extractres – filter to extract resources from a PostScript docum
 <p> <code>PostScript</code> is a trademark of Adobe Systems Incorporated.</p>
 <h2>BUGS</h2>
 <p> <i>extractres</i> does not alter the <i>%%DocumentSuppliedResources</i> comments. </p>
-<h2>Index</h2>

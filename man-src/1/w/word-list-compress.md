@@ -49,4 +49,3 @@ description: "word-list-compress – word list compressor/decompressor for GNU A
 <p> For help, see the Aspell homepage at &lt;<a rel="nofollow" href="http://aspell.net">http://aspell.net</a>&gt; and send bug reports/comments to the Aspell user list at the above address.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Aaron Lehmann &lt;aaronl [at] vitelus.com&gt;, Brian Nelson &lt;pyro [at] debian.org&gt; and Jose Da Silva &lt;digital [at] joescat.com&gt;. </p>
-<h2>Index</h2>

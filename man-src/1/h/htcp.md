@@ -83,4 +83,3 @@ description: "htcp, htmv, htrm, htls, htll, htmkdir, htfind, htping – file tra
 <p> htcp is part of GridSite: <a rel="nofollow" href="http://www.gridsite.org/">http://www.gridsite.org/</a></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-scp/">scp</a>(1),</code> <code><a href="/docs/linux/man/1-curl/">curl</a>(1),</code> <code><a href="/docs/linux/man/1-wget/">wget</a>(1),</code> <code>verify(1),</code> <code><a href="/docs/linux/man/3-libcurl-errors/">libcurl-errors</a>(3)</code> </p>
-<h2>Index</h2>

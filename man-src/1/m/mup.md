@@ -77,4 +77,3 @@ description: "mup – music publisher"
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-gs/">gs</a>(1), <a href="/docs/linux/man/1-mkmupfnt/">mkmupfnt</a>(1), <a href="/docs/linux/man/1-mupdisp/">mupdisp</a>(1), <a href="/docs/linux/man/1-mupmate/">mupmate</a>(1), <a href="/docs/linux/man/1-mupprnt/">mupprnt</a>(1).<br />
  Mup &#8212; Music Publisher User&#8217;s Guide </p>
-<h2>Index</h2>

@@ -89,4 +89,3 @@ npm config edit
 <dd> npm help npm </dd>
 </dl>
 </dl>
-<h2>Index</h2>

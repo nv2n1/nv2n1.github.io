@@ -48,4 +48,3 @@ description: "mousetweaks – Accessibility enhancements for pointing devices"
 <p> This manual page was written by Francesco Fumanti.</p>
 <h2>LICENSE</h2>
 <p> Licenced under the GNU General Public License v3 or later. </p>
-<h2>Index</h2>

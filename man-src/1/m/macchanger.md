@@ -40,4 +40,3 @@ description: "macchanger – MAC Changer"
 <p> ifconfig (8)</p>
 <h2>AUTHOR</h2>
 <p> Alvaro Lopez Ortega &lt;alvaro [at] alobbs.com&gt;. </p>
-<h2>Index</h2>

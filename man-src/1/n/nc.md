@@ -189,4 +189,3 @@ Protocol mismatch.
  Modified for Debian port by Aron Xu Aq aron [at] debian.org .</p>
 <h2>CAVEATS</h2>
 <p> UDP port scans using the &#8211;<code>uz</code> combination of flags will always report success irrespective of the target machine&#8217;s state. However, in conjunction with a traffic sniffer either on the target machine or an intermediary device, the &#8211;<code>uz</code> combination could be useful for communications diagnostics. Note that the amount of UDP traffic generated may be limited either due to hardware resources and/or configuration settings. </p>
-<h2>Index</h2>

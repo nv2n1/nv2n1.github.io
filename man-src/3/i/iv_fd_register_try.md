@@ -46,4 +46,3 @@ struct iv_fd {
 <p> See <code>iv_examples</code>(3) for programming examples.</p>
 <h2>SEE ALSO</h2>
 <p> <code>ivykis</code>(3), <code>iv_examples</code>(3) </p>
-<h2>Index</h2>

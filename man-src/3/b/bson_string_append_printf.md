@@ -26,4 +26,3 @@ void bson_string_append_printf(bson_string_t *string,
 <p> Like bson_string_append() but formats a printf style string and then appends that to <code>string</code> \&amp;. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

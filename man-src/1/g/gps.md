@@ -95,4 +95,3 @@ GPSD_UNITS one of : imperial = miles / feet
 <h2>AUTHORS</h2>
 <p> Remco Treffcorn, Derrick Brashear, Russ Nelson &amp; Eric S. Raymond, Jeff Francis (cgps). Amaury Jacquot &lt;sxpert [at] sxpert.org&gt; &amp; Petter Reinholdtsen &lt;pere [at] hungry.com&gt; (gpxlogger). Chris Kuethe &lt;chris.kuethe [at] gmail.com&gt; (gpxlogger), Chen Wei &lt;weichen302 [at] aol.com&gt; (gegps &amp; xgpsspeed), Robin Wittler &lt;real [at] the-real.org&gt; (xgpsspeed). </p>
 <p> This manual page by Eric S. Raymond &lt;esr [at] thyrsus.com&gt; </p>
-<h2>Index</h2>

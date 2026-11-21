@@ -37,4 +37,3 @@ Swap Space          1420296       195192      1225104   13%
 </pre>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/5-snmpd-conf/">snmpd.conf</a>(5), <a href="/docs/linux/man/5-snmp-conf/">snmp.conf</a>(5) </p>
-<h2>Index</h2>

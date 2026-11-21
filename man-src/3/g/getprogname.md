@@ -22,4 +22,3 @@ description: "getprogname setprogname – get or set the program name"
 <p> <a href="/docs/linux/man/3-err/">err</a>(3), <a href="/docs/linux/man/3-setproctitle/">setproctitle</a>(3)</p>
 <h2>HISTORY</h2>
 <p> These functions first appeared in Nx 1.6 , and made their way into Fx 4.4 . </p>
-<h2>Index</h2>

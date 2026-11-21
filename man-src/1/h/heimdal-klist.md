@@ -75,4 +75,3 @@ description: "klist – list Kerberos credentials"
 </dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-kdestroy/">kdestroy</a>(1), <a href="/docs/linux/man/1-kinit/">kinit</a>(1) </p>
-<h2>Index</h2>

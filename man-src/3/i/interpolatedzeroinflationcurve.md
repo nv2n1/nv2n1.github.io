@@ -23,4 +23,3 @@ description: "ql/termstructures/inflation/interpolatedzeroinflationcurve.hpp –
 <p> Inflation term structure based on the interpolation of zero rates. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

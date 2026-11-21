@@ -20,4 +20,3 @@ description: "go-tool – tool for managing Go source code"
 <p> For more about each tool command, see &#8216;go tool command -h&#8217;.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Michael Stapelberg &lt;stapelberg [at] debian.org&gt; and is maintained by the Debian Go Compiler Team &lt;team+go-compiler [at] tracker.debian.org&gt; based on the output of &#8216;go help tool&#8217; for the Debian project (and may be used by others). </p>
-<h2>Index</h2>

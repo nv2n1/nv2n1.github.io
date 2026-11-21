@@ -152,4 +152,3 @@ description: "epydocgui – graphical interface to epydoc"
 <dt><code>The epytext markup language manual</code></dt>
 <dd> &lt;<a rel="nofollow" href="http://epydoc.sourceforge.net/epytext.html">http://epydoc.sourceforge.net/epytext.html</a>&gt; </dd>
 </dl>
-<h2>Index</h2>

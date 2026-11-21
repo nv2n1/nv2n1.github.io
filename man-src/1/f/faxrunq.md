@@ -59,4 +59,3 @@ description: "faxrunq – send fax jobs queued by"
 <p> <a href="/docs/linux/man/1-faxspool/">faxspool</a>(1), <a href="/docs/linux/man/8-sendfax/">sendfax</a>(8), <a href="/docs/linux/man/1-faxq/">faxq</a>(1), <a href="/docs/linux/man/5-faxqueue/">faxqueue</a>(5), <a href="/docs/linux/man/8-faxrunqd/">faxrunqd</a>(8)</p>
 <h2>AUTHOR</h2>
 <p> <i>faxrunq</i> is Copyright (C) 1993-2002 by Gert Doering, &lt;gert [at] greenie.muc.de&gt;. </p>
-<h2>Index</h2>

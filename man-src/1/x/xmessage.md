@@ -79,4 +79,3 @@ Xmessage (xmessage)
 <h2>AUTHORS</h2>
 <p> Chris Peterson, MIT Project Athena<br />
  Stephen Gildea, X Consortium </p>
-<h2>Index</h2>

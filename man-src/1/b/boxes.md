@@ -99,4 +99,3 @@ description: "boxes – text mode box and comment drawing filter"
 <dd> system-wide configuration file</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <i>tal(1)</i> , <i><a href="/docs/linux/man/1-vim/">vim</a>(1)</i> </p>
-<h2>Index</h2>

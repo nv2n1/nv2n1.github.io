@@ -50,4 +50,3 @@ description: "PS driver – driver to create PostScript files (drivers)"
 <p> <i>Last changed: $Date: 2007-08-23 15:39:39 +0200 (Thu, 23 Aug 2007) $</i> </p>
 <p> Full index </p>
 <p> � 2003-2008 GRASS Development Team </p>
-<h2>Index</h2>

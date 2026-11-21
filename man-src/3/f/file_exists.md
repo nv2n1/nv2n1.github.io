@@ -24,4 +24,3 @@ if (file_exists("franken.dat", 0, NULL))
 <p> Returns non-zero if the file exists, or zero if it doesn&#8217;t or the specified attributes mask it out. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-exists/">exists</a></code>(3), <code>file_size_ex</code>(3), <code>file_time</code>(3) </p>
-<h2>Index</h2>

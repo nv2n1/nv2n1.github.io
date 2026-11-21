@@ -60,4 +60,3 @@ description: "pbm2ppa – convert portable bitmap (PBM) to HP’s Printing Perfo
 <p> This program was written by Tim Norman. It originally supported black and white output on the 820 series. This program is almost obsolete; its successor pnm2ppa will support color printing.</p>
 <h2>BUGS</h2>
 <p> This is a stable driver, but does not support color printing. </p>
-<h2>Index</h2>

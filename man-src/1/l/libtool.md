@@ -219,4 +219,3 @@ description: "libtool – manual page for libtool 2.4.2"
 <dt>
 </dt><dd> <code>info libtool</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

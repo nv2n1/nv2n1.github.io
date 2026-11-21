@@ -70,4 +70,3 @@ description: "crypt_gensalt , crypt_gensalt_rn , crypt_gensalt_ra – encode set
 </table>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-crypt/">crypt</a>(3), <a href="/docs/linux/man/3-getpass/">getpass</a>(3), <a href="/docs/linux/man/3-getpwent/">getpwent</a>(3), <a href="/docs/linux/man/3-shadow/">shadow</a>(3), <a href="/docs/linux/man/1-login/">login</a>(1), <a href="/docs/linux/man/1-passwd/">passwd</a>(1), <a href="/docs/linux/man/5-crypt/">crypt</a>(5), <a href="/docs/linux/man/5-passwd/">passwd</a>(5), <a href="/docs/linux/man/5-shadow/">shadow</a>(5), <a href="/docs/linux/man/8-pam/">pam</a>(8) </p>
-<h2>Index</h2>

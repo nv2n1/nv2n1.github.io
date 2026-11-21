@@ -75,4 +75,3 @@ description: "apper – An application and package manager using PackageKit"
 <dt>
 </dt><dd> <a rel="nofollow" href="http://kde-apps.org/content/show.php/Apper?content=84745">http://kde-apps.org/content/show.php/Apper?content=84745</a></dd></dl>
 </dl>
-<h2>Index</h2>

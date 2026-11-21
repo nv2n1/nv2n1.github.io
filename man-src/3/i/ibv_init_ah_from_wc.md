@@ -35,4 +35,3 @@ struct ibv_ah *ibv_create_ah_from_wc(struct ibv_pd *pd,
 <dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

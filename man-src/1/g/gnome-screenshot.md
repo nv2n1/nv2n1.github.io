@@ -43,4 +43,3 @@ description: "gnome-screenshot – capture the screen, a window, or an user-defi
 <h2>AUTHOR</h2>
 <p> This manual page was written by Christian Marillat &lt;marillat [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others). </p>
 <p> Updated by Theppitak Karoonboonyanan &lt;thep [at] linux.thai.net&gt;, Tom Feiner &lt;feiner.tom [at] gmail.com&gt;, Cosimo Cecchi &lt;cosimoc [at] gnome.org&gt; and others. </p>
-<h2>Index</h2>

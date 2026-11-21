@@ -15,4 +15,3 @@ description: "grub-mkrelpath — Generate a relative GRUB path given an OS path.
 <p> <code>grub-mkrelpath</code> takes an OS filesystem path for <i>FILE</i> and returns a relative path suitable for use in a GRUB configuration file. </p>
 <h2>SEE ALSO</h2>
 <p> <code>info grub</code> </p>
-<h2>Index</h2>

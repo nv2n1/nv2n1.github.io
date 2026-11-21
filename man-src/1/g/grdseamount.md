@@ -88,4 +88,3 @@ gmt grdseamount -Rk-1024/1022/-1122/924 -I2000 -Gsmt_%3.1f_%s.nc t.txt -T3M/1.9M
 <p> <code>gmt.conf</code>, <code>gmt</code>, <code>grdmath</code>, <code>gravfft</code>, <code>gmtflexure</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

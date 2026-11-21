@@ -17,4 +17,3 @@ description: "fd0ssh — pipe for password-over-stdin support to ssh"
 <h2>See also</h2>
 <p> <code>hxtools</code>(7) </p>
 <p> Idea by John S. Skogtvedt, <a rel="nofollow" href="http://www.debian-administration.org/articles/587">http://www.debian-administration.org/articles/587</a> </p>
-<h2>Index</h2>

@@ -84,4 +84,3 @@ description: "dptts2.f –"
 <p> Definition at line 103 of file dptts2.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

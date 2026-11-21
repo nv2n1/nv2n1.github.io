@@ -55,4 +55,3 @@ description: "cvscheck – Offline status report for files in a checked-out CVS 
 <h2>AUTHORS</h2>
 <p> cvscheck was written by Dirk Müller&lt;mueller [at] kde.org&gt; and Sirtaj.Singh.Kang; &lt;taj [at] kde.org&gt; </p>
 <p> This manual page was prepared by Ben Burton&lt;bab [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

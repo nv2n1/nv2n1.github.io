@@ -21,4 +21,3 @@ description: "ql/pricingengines/vanilla/analyticbsmhullwhiteengine.hpp – analy
 <p> analytic Black-Scholes engines including stochastic interest rates </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

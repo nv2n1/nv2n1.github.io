@@ -205,4 +205,3 @@ mailtool -recurse -tofolder INBOX.converted_mail \
 <p> <code>Sam Varshavchik</code></p>
 <dl>
 </dl>
-<h2>Index</h2>

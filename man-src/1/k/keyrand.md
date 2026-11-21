@@ -29,4 +29,3 @@ description: "keyrand – utility for collecting random data"
 <p> /dev/random</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-genkey/">genkey</a>(1) </p>
-<h2>Index</h2>

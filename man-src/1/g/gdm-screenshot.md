@@ -32,4 +32,3 @@ description: "gdm-screenshot – take a picture of the screen"
 <p> <code><a href="/docs/linux/man/8-gdm3/">gdm3</a></code>(8).</p>
 <h2>AUTHORS</h2>
 <p> <code>gdm-screenshot</code> is part of the <font SIZE="-1"><code>GDM</code></font> software package, which is part of the <font SIZE="-1">GNOME</font> project. This manpage was written by Nathan Handler &lt;nhandler [at] ubuntu.com&gt; for the Debian system, but may be used by others. </p>
-<h2>Index</h2>

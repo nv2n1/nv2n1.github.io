@@ -36,4 +36,3 @@ description: "zone2sqlite – Load BIND 9 zone file into SQLite database"
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2004, 2005, 2007-2009 Internet Systems Consortium, Inc. (&quot;ISC&quot;)<br />
  Copyright &#169; 2000, 2001 Internet Software Consortium. </p>
-<h2>Index</h2>

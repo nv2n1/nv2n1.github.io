@@ -44,4 +44,3 @@ description: "QuantLib::Interpolation2D – base class for 2-D interpolations."
 <p> Classes derived from this class will provide interpolated values from two sequences of length $ N $ and $ M $, representing the discretized values of the $ x $ and $ y $ variables, and a $ N imes M $ matrix representing the tabulated function values. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

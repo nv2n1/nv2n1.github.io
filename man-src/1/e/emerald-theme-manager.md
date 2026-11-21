@@ -20,4 +20,3 @@ description: "emerald-theme-manager – The Emerald Theme Manager"
 <p> &#8211; Quinn Storm (livinglatexkali [at] gmail.com)</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-emerald/">emerald</a></code>(1) </p>
-<h2>Index</h2>

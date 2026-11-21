@@ -39,4 +39,3 @@ description: "shtool mdate – GNU shtool pretty-print last modification time"
 <p> The <font SIZE="-1"><code>GNU</code></font><code> shtool</code> <code>mdate</code> command was originally written by Ulrich Drepper in 1995 and revised by Ralf S. Engelschall &lt;rse [at] engelschall.com&gt; in 1998 for inclusion into <font SIZE="-1"><code>GNU</code></font><code> shtool</code>.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-shtool/">shtool</a></i>(1), <i><a href="/docs/linux/man/1-date/">date</a></i>(1), <i><a href="/docs/linux/man/1-ls/">ls</a></i>(1). </p>
-<h2>Index</h2>

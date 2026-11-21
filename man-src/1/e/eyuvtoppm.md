@@ -16,4 +16,3 @@ description: "eyuvtoppm – convert a Berkeley YUV file to a portable pixmap fil
 <p> With no filename argument takes input from Standard Input. Otherwise, <i>eyuvfile </i> is the file specification of the input file.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ppmtoeyuv/">ppmtoeyuv</a></code>(1), <code><a href="/docs/linux/man/1-yuvtoppm/">yuvtoppm</a></code>(1), <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5) </p>
-<h2>Index</h2>

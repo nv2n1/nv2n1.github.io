@@ -20,4 +20,3 @@ description: "clc-clbuild – invoke lisp with clbuild active"
 <h2>SEE ALSO</h2>
 <h2>AUTHOR</h2>
 <p> Peter Van Eynde (pvaneynd [at] debian.org) </p>
-<h2>Index</h2>

@@ -249,4 +249,3 @@ phpreflect reflection : function[--alias][--format = "..."] argument source
 <p> Copyright (C) 2011-2015 Laurent Laville.</p>
 <h2>LICENSE</h2>
 <p> Free use of this software is granted under the terms of the BSD 3-clause license. </p>
-<h2>Index</h2>

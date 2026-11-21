@@ -56,4 +56,3 @@ description: "ripright – CD ripper"
 <p> <a href="/docs/linux/man/1-riparrange/">riparrange</a>(1) </p>
 <p> <a rel="nofollow" href="http://www.mcternan.co.uk/ripright/">http://www.mcternan.co.uk/ripright/</a><br />
  <a rel="nofollow" href="http://www.musicbrainz.org/">http://www.musicbrainz.org/</a> </p>
-<h2>Index</h2>

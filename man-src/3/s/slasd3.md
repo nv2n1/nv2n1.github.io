@@ -185,4 +185,3 @@ and the third is dense.The first column of U and the row of
 <p> Definition at line 224 of file slasd3.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

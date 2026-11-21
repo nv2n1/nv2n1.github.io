@@ -67,4 +67,3 @@ description: "Cervisia – Graphical CVS frontend"
 <p> Cervisia was originally developed by Bernd Gehrmann and is now maintained by Christian Loose &lt;christian.loose [at] kdemail.net&gt;.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs at <a rel="nofollow" href="http://bugs.kde.org.">http://bugs.kde.org.</a> </p>
-<h2>Index</h2>

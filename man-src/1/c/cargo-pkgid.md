@@ -66,4 +66,3 @@ $&nbsp;<wbr>cargo pkgid crates.io/foo
 <p> <a href="/docs/linux/man/1-cargo/">cargo</a>(1), <a href="/docs/linux/man/1-cargo-generate-lockfile/">cargo-generate-lockfile</a>(1), <a href="/docs/linux/man/1-cargo-search/">cargo-search</a>(1), <a href="/docs/linux/man/1-cargo-metadata/">cargo-metadata</a>(1)</p>
 <h2>COPYRIGHT</h2>
 <p> This work is dual-licensed under Apache 2.0 and MIT terms. See COPYRIGHT file in the cargo source distribution. </p>
-<h2>Index</h2>

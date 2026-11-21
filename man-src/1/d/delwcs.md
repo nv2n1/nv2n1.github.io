@@ -22,4 +22,3 @@ description: "delwcs – Delete WCS in FITS and IRAF image files"
 </dl>
 <h2>Author</h2>
 <p> Jessica Mink, SAO (jmink [at] cfa.harvard.edu) </p>
-<h2>Index</h2>

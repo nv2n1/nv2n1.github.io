@@ -21,4 +21,3 @@ description: "arpaname – translate IP addresses to the corresponding ARPA name
 <p> Internet Systems Consortium</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2009 Internet Systems Consortium, Inc. (&quot;ISC&quot;) </p>
-<h2>Index</h2>

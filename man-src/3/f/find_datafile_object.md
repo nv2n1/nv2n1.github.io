@@ -27,4 +27,3 @@ if (!level)
 <p> Returns a pointer to a single DATAFILE element whose `dat&#8217; member points to the object, or NULL if the object could not be found. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-load_datafile/">load_datafile</a></code>(3), <code><a href="/docs/linux/man/3-load_datafile_object/">load_datafile_object</a></code>(3) </p>
-<h2>Index</h2>

@@ -59,4 +59,3 @@ gs2.set_input_error_handler(tmp_ieh);
 <p> The default input error handler is &#8216;ieh_never_complain&#8217;. </p>
 <h2>SEE ALSO</h2>
 <p> <code>gstream-get_input_error_handler</code>(3), <code><a href="/docs/linux/man/3-gstream-set_input_approver/">gstream-set_input_approver</a></code>(3), <code><a href="/docs/linux/man/3-gstream-set_max_input_length/">gstream-set_max_input_length</a></code>(3), <code>gstream-ieh_never_complain</code>(3) </p>
-<h2>Index</h2>

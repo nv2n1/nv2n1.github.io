@@ -36,4 +36,3 @@ struct mlx4dv_context {
 <dt>Maor Gottlieb &lt;maorg [at] mellanox.com&gt;</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

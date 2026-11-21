@@ -35,4 +35,3 @@ url: "/docs/linux/man/1-ptrash/"
 <p> ptrash does not facilitate moving of symbolic links to/from ~/.trash.</p>
 <h2>AUTHOR</h2>
 <p> Prasad J Pandit &lt;<i>pj.pandit AT yahoo.co.in</i>&gt; </p>
-<h2>Index</h2>

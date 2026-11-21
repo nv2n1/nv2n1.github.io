@@ -195,4 +195,3 @@ description: "ffmpeg2theora – command-line converter to create Ogg Theora and 
 <h2>AUTHOR</h2>
 <p> ffmpeg2theora was written by jan gerber &lt;j@v2v.cc&gt;. </p>
 <p> This manual page was written by Hubert Chan &lt;hubert [at] uhoreg.ca&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

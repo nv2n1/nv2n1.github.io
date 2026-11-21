@@ -21,4 +21,3 @@ description: "pnmtofits – convert a portable anymap into FITS format"
 <p> <a href="/docs/linux/man/1-fitstopnm/">fitstopnm</a>(1), <a href="/docs/linux/man/5-pgm/">pgm</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1989 by Wilson H. Bent (whb [at] hoh-2.att.com), with modifications by Alberto Accomazzi (alberto [at] cfa.harvard.edu). </p>
-<h2>Index</h2>

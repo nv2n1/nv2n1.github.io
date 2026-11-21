@@ -43,4 +43,3 @@ description: "slimlock – Unholy Screen Locker"
 <dd> 1 to enable the bell on authentication failure; 0 to disable. <code>Default: </code><i>1</i></dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-slim/">slim</a></code>(1) </p>
-<h2>Index</h2>

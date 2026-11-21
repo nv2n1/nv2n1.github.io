@@ -20,4 +20,3 @@ description: "softhsm2-dump-file – SoftHSM object file dump"
 <dt><code>&#8211;help</code>, <code>-h</code></dt>
 <dd> Show the help information. </dd>
 </dl>
-<h2>Index</h2>

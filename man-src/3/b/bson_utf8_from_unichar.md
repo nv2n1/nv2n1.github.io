@@ -29,4 +29,3 @@ void bson_utf8_from_unichar(bson_unichar_t unichar,
 <p> Converts a single unicode character to a multi-byte UTF-8 sequence. The result is stored in <code>utf8</code> and the number of bytes used in <code>len</code> \&amp;. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

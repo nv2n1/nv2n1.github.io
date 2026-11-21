@@ -39,4 +39,3 @@ description: "rename – renames multiple files"
 <p> If you give an invalid Perl expression you&#8217;ll get a syntax error.</p>
 <h2>BUGS</h2>
 <p> The original <tt>&quot;rename&quot;</tt> did not check for the existence of target filenames, so had to be used with care. I hope I&#8217;ve fixed that (Robin Barker). </p>
-<h2>Index</h2>

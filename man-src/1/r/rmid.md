@@ -191,4 +191,3 @@ description: "rmid – Starts the activation system daemon that enables objects 
 <dt>&bull;</dt>
 <dd> Setting the Class Path </dd>
 </dl>
-<h2>Index</h2>

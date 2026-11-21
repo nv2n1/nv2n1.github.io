@@ -49,4 +49,3 @@ description: "tracker-store – database indexer and query daemon"
 <p> <code><a rel="nofollow" href="http://www.w3.org/TR/rdf-sparql-query/">http://www.w3.org/TR/rdf-sparql-query/</a></code> </p>
 <p> <code><a href="/docs/linux/man/1-dbus-daemon/">dbus-daemon</a></code>(1), </p>
 <p> <code><a rel="nofollow" href="http://www.freedesktop.org/wiki/Software/dbus">http://www.freedesktop.org/wiki/Software/dbus</a></code> </p>
-<h2>Index</h2>

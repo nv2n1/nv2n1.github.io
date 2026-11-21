@@ -2785,4 +2785,3 @@ any source or altered source distribution. </p>
 <p> Also, the PNG logo (in PNG format, of course) is supplied in the files &quot;pngbar.png&quot; and &quot;pngbar.jpg (88&#215;31) and &quot;pngnow.png&quot; (98&#215;31). </p>
 <p> Libpng is OSI Certified Open Source Software. OSI Certified Open Source is a certification mark of the Open Source Initiative. </p>
 <p> Glenn Randers-Pehrson glennrp at users.sourceforge.net September 27, 2012 </p>
-<h2>Index</h2>

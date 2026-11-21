@@ -20,4 +20,3 @@ description: "tabbed – tabbed interface to urxvt"
    URxvt.tabbed.tab-bg:    &lt;colour-index, default 1&gt;
 </pre>
 <p> See <i></i><font SIZE="-1"><i>COLOR AND GRAPHICS</i></font><i></i> in the @@RXVT_NAME@@(1) manpage for valid indices. </p>
-<h2>Index</h2>

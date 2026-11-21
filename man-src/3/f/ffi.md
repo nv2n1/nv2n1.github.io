@@ -17,4 +17,3 @@ description: "FFI – Foreign Function Interface"
 <p> The foreign function interface provides a mechanism by which a function can generate a call to another function at runtime without requiring knowledge of the called function&#8217;s interface at compile time.</p>
 <h2>SEE ALSO</h2>
 <p> ffi_prep_cif3, ffi_prep_cif_var3, ffi_call3 </p>
-<h2>Index</h2>

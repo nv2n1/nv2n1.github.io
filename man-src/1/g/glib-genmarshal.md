@@ -345,4 +345,3 @@ g_closure_set_marshal(cc_baz, g_cclosure_user_marshal_FLOAT__BOOLEAN_UCHAR);
 <dt>
 </dt><dd> <a rel="nofollow" href="https://mesonbuild.com/Gnome-module.html#gnomegenmarshal">https://mesonbuild.com/Gnome-module.html#gnomegenmarshal</a></dd></dl>
 </dl>
-<h2>Index</h2>

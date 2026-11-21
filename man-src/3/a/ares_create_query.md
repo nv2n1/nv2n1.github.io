@@ -30,4 +30,3 @@ int ares_create_query(const char *name, int dnsclass,                         in
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-ares_expand_name/">ares_expand_name</a></code>(3), <code><a href="/docs/linux/man/3-ares_free_string/">ares_free_string</a></code>(3)</p>
 <h2>AUTHOR</h2>
-<h2>Index</h2>

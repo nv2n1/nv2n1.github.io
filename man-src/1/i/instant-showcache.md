@@ -26,4 +26,3 @@ description: "instant-showcache – prints modules found in Instant cache"
 <p> instant-showcache is licensed under the GNU GPL Version 3 or any later version. </p>
 <h2>AUTHOR</h2>
 <p> instant-showcache is written by Martin Alnes &lt;martinal [at] simula.no&gt;. This manual page was written by Johannes Ring &lt;johannr [at] simula.no&gt;. </p>
-<h2>Index</h2>

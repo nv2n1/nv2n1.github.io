@@ -119,4 +119,3 @@ description: "cjdroute — Cjdns packet switch"
 &nbsp;<wbr>&nbsp;<wbr>systemctl restart cjdns</dd>
 </dl>
 <p> For more information about other functions and non-standard setups, see README.md </p>
-<h2>Index</h2>

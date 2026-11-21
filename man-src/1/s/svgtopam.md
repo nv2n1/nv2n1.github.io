@@ -29,4 +29,3 @@ description: "svgtopam – convert an SVG (Scalable Vector Graphics) image to Ne
 <h2>HISTORY</h2>
 <p> <code>svgtopam</code> was added to Netpbm in Version 10.34 (May 2006). </p>
 <p> Bryan Henderson created <code>svgtopam</code> to test <code>pamtosvg</code>. </p>
-<h2>Index</h2>

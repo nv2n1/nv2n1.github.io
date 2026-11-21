@@ -477,4 +477,3 @@ mairix f:wibble [at] foobar.zzz
 <p> <a href="/docs/linux/man/5-mairixrc/">mairixrc</a>(5)</p>
 <h2>BUGS</h2>
 <p> We need a plugin scheme to allow more types of attachment to be scanned and indexed. </p>
-<h2>Index</h2>

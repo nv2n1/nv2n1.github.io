@@ -56,4 +56,3 @@ NOTICE : sql error
                                   dblink_exec-- -- -- -- -- -- -ERROR(1 row)
 </code></pre>
 </dd></dl>
-<h2>Index</h2>

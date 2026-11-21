@@ -200,4 +200,3 @@ description: "Highlight – a universal sourcecode to formatted text converter"
 <p> Andre Simon &lt;as [at] andre-simon.de&gt;</p>
 <h2>SEE ALSO</h2>
 <p> README file and highlight webpage at <a rel="nofollow" href="http://www.andre-simon.de/.">http://www.andre-simon.de/.</a> </p>
-<h2>Index</h2>

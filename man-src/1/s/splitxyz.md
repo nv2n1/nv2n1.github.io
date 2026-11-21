@@ -82,4 +82,3 @@ gmt splitxyz survey.bin -Nsurvey_%03d.txt -V -gd100k -D100 -: -fg -bi3d
 <p> <code>gmt</code>, <code>filter1d</code>, <code>mgd77list</code>, <code>pswiggle</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

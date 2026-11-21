@@ -52,4 +52,3 @@ description: "anno – annotate messages"
 <dd></dd></dl>
 <h2>CONTEXT</h2>
 <p> If a folder is given, it will become the current folder. The first message annotated will become the current message. </p>
-<h2>Index</h2>

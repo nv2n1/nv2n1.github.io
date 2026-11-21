@@ -88,4 +88,3 @@ description: "emelFM2 – a GTK+2 file manager"
  updated emelFM <a rel="nofollow" href="http://www.havens.de/elm/emelfm.html">http://www.havens.de/elm/emelfm.html</a><br />
  old emelFM <a rel="nofollow" href="http://www.pitt.edu/~macst92/emelFM/">http://www.pitt.edu/~macst92/emelFM/</a> or </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="http://emelFM.sourceforge.net/">http://emelFM.sourceforge.net/</a> </p>
-<h2>Index</h2>

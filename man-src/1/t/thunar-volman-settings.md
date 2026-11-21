@@ -62,4 +62,3 @@ url: "/docs/linux/man/1-thunar-volman-settings/"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;The Thunar development team. All rights reserved.  </p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>thunar-volman-settings</code> is maintained in /usr/share/doc/thunar/html/C/using-removable-media.html </p>
-<h2>Index</h2>

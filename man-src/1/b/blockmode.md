@@ -81,4 +81,3 @@ gmt blockmode data.txt -R0/100/0/100 -I5 -r -C -D
 <p> <code>blockmean</code>, <code>blockmedian</code>, <code>gmt</code>, <code>gmt.conf</code>, <code>greenspline</code>, <code>nearneighbor</code>, <code>sphtriangulate</code>, <code>surface</code>, <code>triangulate</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

@@ -20,4 +20,3 @@ description: "auparse_get_field_type – get current field’s data type"
 <p> <code><a href="/docs/linux/man/3-auparse_get_field_name/">auparse_get_field_name</a></code>(3). </p>
 <h2>AUTHOR</h2>
 <p> Steve Grubb </p>
-<h2>Index</h2>

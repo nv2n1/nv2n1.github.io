@@ -38,4 +38,3 @@ long keyctl_invalidate(key_serial_t key);
  <code><a href="/docs/linux/man/2-request_key/">request_key</a></code>(2),<br />
  <code><a href="/docs/linux/man/3-keyctl/">keyctl</a></code>(3),<br />
  <code><a href="/docs/linux/man/8-request-key/">request-key</a></code>(8) </p>
-<h2>Index</h2>

@@ -19,4 +19,3 @@ description: "isogmt – Run GMT command or script in isolation mode"
 <p> <code>gmt</code>, <code>gmt.conf</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

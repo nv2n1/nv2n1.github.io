@@ -17,4 +17,3 @@ description: "mate-notification-properties – Set up the options for desktop no
 <h2>AUTHOR</h2>
 <p> <code>mate-notification-properties was</code> written by Jonh Wendell &lt;wendell [at] bani.com.br&gt; and Perberos &lt;perberos [at] gmail.com&gt;. </p>
 <p> This manual page was written by Francois Wendling &lt;frwendling [at] free.fr&gt; for the notification-properties in Debian project (but may be used by others) and adapted for MATE by Stefano Karapetsas &lt;stefano [at] karapetsas.com&gt;. </p>
-<h2>Index</h2>

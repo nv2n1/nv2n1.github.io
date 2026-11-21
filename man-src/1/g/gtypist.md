@@ -80,4 +80,3 @@ description: "gtypist – manual page for gtypist 2.8.1"
 <dt>
 </dt><dd> <code>info gtypist</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

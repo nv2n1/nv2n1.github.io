@@ -93,4 +93,3 @@ description: "opensc-explorer – generic interactive utility for accessing smar
 </dt><dd> exit the program</dd></dl>
 <h2>SEE ALSO</h2>
 <p> opensc(7), <a href="/docs/linux/man/1-opensc-tool/">opensc-tool</a>(1) </p>
-<h2>Index</h2>

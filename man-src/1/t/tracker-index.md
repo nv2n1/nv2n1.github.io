@@ -35,4 +35,3 @@ tracker index-- reindex - mime - type&lt;mime1&gt;[[-m[mime2]]...] tracker index
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code>tracker</code>(1). <code>Turtle.</code> </p>
-<h2>Index</h2>

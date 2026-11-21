@@ -45,4 +45,3 @@ description: "QuantLib::MultiCubicSpline – N-dimensional cubic spline interpol
 </dt><dd> cannot interpolate at the grid points on the boundary surface of the N-dimensional region</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

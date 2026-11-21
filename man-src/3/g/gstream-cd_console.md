@@ -17,4 +17,3 @@ description: "cd_console"
 <p> The preferred dimensions (you have to set them manually) are: (gbuf::DYNAMIC_CURSOR_SIZE, gbuf::DYNAMIC_CURSOR_SIZE, gbuf::DYNAMIC_CURSOR_SIZE, gbuf::DYNAMIC_CURSOR_SIZE) but the second argument can be set manually to control where the _ will be placed &#8211; low values and the cursor will fly above the letters, high values and the cursor will float at the bottom. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-gstream-set_cursor_drawer/">gstream-set_cursor_drawer</a></code>(3), <code><a href="/docs/linux/man/3-gstream-cd_winconsole/">gstream-cd_winconsole</a></code>(3) </p>
-<h2>Index</h2>

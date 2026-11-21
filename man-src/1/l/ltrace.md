@@ -103,4 +103,3 @@ description: "ltrace – A library call tracer"
  Petr Machata &lt;pmachata [at] redhat.com&gt; </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-ltrace-conf/">ltrace.conf</a>(5),</code> <code><a href="/docs/linux/man/1-strace/">strace</a>(1)</code>, <code><a href="/docs/linux/man/2-ptrace/">ptrace</a>(2)</code> </p>
-<h2>Index</h2>

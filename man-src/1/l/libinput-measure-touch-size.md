@@ -27,4 +27,3 @@ description: "libinput-measure-touch-size – measure touch size and orientation
 <p> If the touch-thresholds or the palm-threshold are not provided, this tool uses the thresholds provided by the device quirks (if any) or the built-in defaults.</p>
 <h2>LIBINPUT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-libinput/">libinput</a>(1)</code> suite </p>
-<h2>Index</h2>

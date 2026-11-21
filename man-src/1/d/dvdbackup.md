@@ -89,4 +89,3 @@ description: "dvdbackup – Tool to backup DVDs"
 <dd> on failure</dd></dl>
 <h2>AUTHORS</h2>
 <p> dvdbackup was written by Olaf Beck &lt;olaf_sc [at] yahoo.com&gt;, but is now maintained by Benjamin Drung &lt;benjamin.drung [at] gmail.com&gt; and Stephen Gran &lt;sgran [at] debian.org&gt;. This manual page was written by Stephen Gran &lt;sgran [at] debian.org&gt;. </p>
-<h2>Index</h2>

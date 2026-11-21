@@ -67,4 +67,3 @@ gdaltransform -i -rpc 06OCT20025052-P2AS-005553965230_01_P001.TIF
 </pre>
 <h2>AUTHORS</h2>
 <p> Frank Warmerdam warmerdam [at] pobox.com, Jan Hartmann j.l.h.hartmann [at] uva.nl </p>
-<h2>Index</h2>

@@ -51,4 +51,3 @@ containerd[GLOBAL OPTIONS] command[COMMAND OPTIONS][ARGUMENTS...]
 <p> <code>&#8211;topic</code>=&quot;&quot;: topic of the event </p>
 <h2>oci-hook</h2>
 <p> provides a base for OCI runtime hooks to allow arguments to be injected. </p>
-<h2>Index</h2>

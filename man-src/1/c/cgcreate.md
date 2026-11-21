@@ -41,4 +41,3 @@ description: "cgcreate – create new cgroup(s)"
 </dl>
 <h2>SEE ALSO</h2>
 <p> cgrules.conf (5) cgexec (1) cgclassify (1) </p>
-<h2>Index</h2>

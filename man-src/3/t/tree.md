@@ -102,4 +102,3 @@ for (var = SPLAY_MIN(NAME, head); var != NULL; var = nxt) {
 <p> <a href="/docs/linux/man/3-queue/">queue</a>(3)</p>
 <h2>AUTHORS</h2>
 <p> The author of the tree macros is An Niels Provos . </p>
-<h2>Index</h2>

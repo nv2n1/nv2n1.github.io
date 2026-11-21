@@ -21,4 +21,3 @@ description: "hex2hcd – Broadcom Bluetooth firmware converter"
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd> Show help options </dd>
 </dl>
-<h2>Index</h2>

@@ -103,4 +103,3 @@ description: "kcdirmgr – command line interface to manage the directory hash d
 <p> This command returns 0 on success, another on failure. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-kcdirtest/">kcdirtest</a></code>(1) </p>
-<h2>Index</h2>

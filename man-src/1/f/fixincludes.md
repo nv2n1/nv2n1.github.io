@@ -46,4 +46,3 @@ description: "fixincludes – Reduce the number of #includes in KDE source files
 <dl>
 <dt>
 </dt><dd> Author.</dd></dl>
-<h2>Index</h2>

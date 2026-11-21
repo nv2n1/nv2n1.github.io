@@ -153,4 +153,3 @@ description: "qpidd – the Qpid AMQP Message Broker Daemon"
 <p> The Apache Qpid Project, dev [at] qpid.apache.org</p>
 <h2>REPORTING BUGS</h2>
 <p> Please report bugs to users [at] qpid.apache.org </p>
-<h2>Index</h2>

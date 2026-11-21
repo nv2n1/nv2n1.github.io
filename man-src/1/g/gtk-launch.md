@@ -27,4 +27,3 @@ description: "gtk-launch – Launch an application"
 <dl>
 <dt>
 </dt><dd> Prints the program version and exits.</dd></dl>
-<h2>Index</h2>

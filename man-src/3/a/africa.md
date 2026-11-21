@@ -19,4 +19,3 @@ description: "ql/currencies/africa.hpp – African currencies."
 <p> Data from <a rel="nofollow" href="http://fx.sauder.ubc.ca/currency_table.html">http://fx.sauder.ubc.ca/currency_table.html</a> and <a href="http://www.thefinancials.com/vortex/CurrencyFormats.html">http://www.thefinancials.com/vortex/CurrencyFormats.html</a></p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

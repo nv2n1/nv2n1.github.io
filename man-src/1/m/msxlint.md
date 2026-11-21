@@ -23,4 +23,3 @@ otes, \Notes, etc.) can have line breaks, but other commands must fit on one lin
 <p> musixdoc.pdf </p>
 <h2>AUTHOR</h2>
 <p> This program and manual page were written by Bob Tennent &lt;rdt [at] cs.queensu.ca&gt;. </p>
-<h2>Index</h2>

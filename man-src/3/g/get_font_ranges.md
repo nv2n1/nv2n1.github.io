@@ -32,4 +32,3 @@ for (n = 0; n &lt; range; n++)
 <p> Returns the number of continuous character ranges in a font, or -1 if that information is not available. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-get_font_range_begin/">get_font_range_begin</a></code>(3), <code><a href="/docs/linux/man/3-get_font_range_end/">get_font_range_end</a></code>(3), <code><a href="/docs/linux/man/3-transpose_font/">transpose_font</a></code>(3) </p>
-<h2>Index</h2>

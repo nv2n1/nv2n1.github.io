@@ -307,4 +307,3 @@ description: "dpkg-buildflags – returns build flags to use during package buil
  build-arch:
         $(CC) -o hello hello.c $(CPPFLAGS) $(CFLAGS) $(LDFLAGS)
 </pre>
-<h2>Index</h2>

@@ -69,4 +69,3 @@ description: "xwd – dump an image of an X window"
 <h2>AUTHORS</h2>
 <p> Tony Della Fera, Digital Equipment Corp., MIT Project Athena<br />
  William F. Wyatt, Smithsonian Astrophysical Observatory </p>
-<h2>Index</h2>

@@ -109,4 +109,3 @@ description: "gtags – create tag files for global."
 <p> Tama Communications Corporation.</p>
 <h2>HISTORY</h2>
 <p> The <code>gtags</code> command appeared in FreeBSD 2.2.2. </p>
-<h2>Index</h2>

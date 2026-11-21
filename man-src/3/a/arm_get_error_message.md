@@ -39,4 +39,3 @@ description: "arm_get_error_message – get error message"
 <p> None.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-arm_is_charset_supported/">arm_is_charset_supported</a></code>(3) </p>
-<h2>Index</h2>

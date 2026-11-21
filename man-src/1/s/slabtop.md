@@ -119,4 +119,3 @@ description: "slabtop – display kernel slab cache information in real time"
 <p> <code>slabtop</code> was inspired by Martin Bligh&#8217;s perl script, <code>vmtop</code>.</p>
 <h2>REPORTING BUGS</h2>
 <p> Please send bug reports to </p>
-<h2>Index</h2>

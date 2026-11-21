@@ -131,4 +131,3 @@ description: "dh_python2 – calculates Python dependencies, adds maintainer scr
 <dd> Wiki page about converting package to dh_python2: <i><a rel="nofollow" href="http://wiki.debian.org/Python/TransitionToDHPython2">http://wiki.debian.org/Python/TransitionToDHPython2</a></i></dd></dl>
 <h2>AUTHOR</h2>
 <p> Piotr Ożarowski, 2012-2013 </p>
-<h2>Index</h2>

@@ -23,4 +23,3 @@ description: "smiucv – helper utility that provides an IUCV interface to the z
 <p> smiucv written by Leland Lucius. Manpage written by Rafael Fonseca.</p>
 <h2>LICENSE</h2>
 <p> Released under the Artistic License 2.0. Full license text can be found at <a rel="nofollow" href="http://opensource.org/licenses/artistic-license-2.0">http://opensource.org/licenses/artistic-license-2.0</a> </p>
-<h2>Index</h2>

@@ -291,4 +291,3 @@ Xman xman       <i>(This widget is never used)</i>
  See <i><a href="/docs/linux/man/7-x/">X</a>(7)</i> for a full statement of rights and permissions.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Chris Peterson, MIT X Consortium from the V10 version written by Barry Shein formerly of Boston University. Bug fixes and Linux support by Carlos A M dos Santos, for The XFree86 Project. </p>
-<h2>Index</h2>

@@ -23,4 +23,3 @@ waveOut on Microsoft Win32
 <p> sndfile-play uses libsndfile (<a rel="nofollow" href="http://www.mega-nerd.com/libsndfile/)">http://www.mega-nerd.com/libsndfile/)</a> to read the file.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was originally written by Joshua Haberman &lt;joshua [at] debian.org&gt;, for the Debian GNU/Linux system (but may be used by others). Further additions have been made by Erik de Castro Lopo &lt;erikd [at] mega-nerd.com&gt;. </p>
-<h2>Index</h2>

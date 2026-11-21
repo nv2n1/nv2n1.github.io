@@ -40,4 +40,3 @@ description: "QuantLib::Interpolation – base class for 1-D interpolations."
 <p> Classes derived from this class will provide interpolated values from two sequences of equal length, representing discretized values of a variable and a function of the former, respectively. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

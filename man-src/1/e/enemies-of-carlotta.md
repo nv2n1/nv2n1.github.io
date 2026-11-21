@@ -242,4 +242,3 @@ enemies - of - carlotta-- name = moviefans[at] example.com-- list
 <dd> Configuration file for the mailing list. You may need to edit this file by hand if you wish to change moderation status or list owners.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> You may want to visit the <i>Enemies of Carlotta</i> home page at <i><a rel="nofollow" href="http://www.iki.fi/liw/eoc/">http://www.iki.fi/liw/eoc/</a></i>. </p>
-<h2>Index</h2>

@@ -106,4 +106,3 @@ description: "ippeveprinter – an ipp everywhere printer application for cups"
 <p> <code>ippevepcl</code>(7), <code>ippeveps</code>(7), PWG Internet Printing Protocol Workgroup (<a rel="nofollow" href="http://www.pwg.org/ipp)">http://www.pwg.org/ipp)</a></p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2021-2022 by OpenPrinting. </p>
-<h2>Index</h2>

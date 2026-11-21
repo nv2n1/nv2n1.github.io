@@ -30,4 +30,3 @@ description: "mouse-test – a tool for determining mouse type and device it’s
 <pre>
 <a href="//www.systutorials.com/docs/linux/man/8-gpm/">gpm</a>(8)
 </pre>
-<h2>Index</h2>

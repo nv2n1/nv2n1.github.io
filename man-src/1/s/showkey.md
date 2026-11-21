@@ -33,4 +33,3 @@ description: "showkey – examine the codes sent by the keyboard"
 <p> In 2.6 kernels raw mode, or scancode mode, is not very raw at all. Scan codes are first translated to key codes, and when scancodes are desired, the key codes are translated back. Various transformations are involved, and there is no guarantee at all that the final result corresponds to what the keyboard hardware did send. So, if you want to know the scan codes sent by various keys it is better to boot a 2.4 kernel. Since 2.6.9 there also is the boot option atkbd.softraw=0 that tells the 2.6 kernel to return the actual scan codes.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-loadkeys/">loadkeys</a></code>(1), <code><a href="/docs/linux/man/1-dumpkeys/">dumpkeys</a></code>(1), <code><a href="/docs/linux/man/5-keymaps/">keymaps</a></code>(5), <code><a href="/docs/linux/man/8-setkeycodes/">setkeycodes</a></code>(8) </p>
-<h2>Index</h2>

@@ -15,4 +15,3 @@ description: "pdfetex – PDF output from e-TeX"
 <p> pdfeTeX is another name for pdfTeX; they behave identically. See <a href="/docs/linux/man/1-pdftex/">pdftex</a>(1) for all information.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pdftex/">pdftex</a></code>(1), <a rel="nofollow" href="http://pdftex.org,">http://pdftex.org,</a> <a rel="nofollow" href="http://tug.org/web2c.">http://tug.org/web2c.</a> </p>
-<h2>Index</h2>

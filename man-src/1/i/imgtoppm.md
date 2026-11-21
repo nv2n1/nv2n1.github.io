@@ -18,4 +18,3 @@ description: "imgtoppm – convert an Img-whatnot file into a portable pixmap"
 <h2>AUTHOR</h2>
 <p> Based on a simple conversion program posted to comp.graphics by Ed Falk. </p>
 <p> Copyright (C) 1989 by Jef Poskanzer. </p>
-<h2>Index</h2>

@@ -98,4 +98,3 @@ description: "sg_write_same – send SCSI WRITE SAME command"
  This software is distributed under a FreeBSD license. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  </p>
 <h2>SEE ALSO</h2>
 <p> <code>sg_format,sg_get_lba_status,sg_readcap,sg_vpd,sg_unmap(sg3_utils)</code> </p>
-<h2>Index</h2>

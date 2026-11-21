@@ -73,4 +73,3 @@ gmt fitcircle data.txt -L2 -Fn &gt; pole.txt
 <p> <code>gmt</code>, <code>gmtvector</code>, <code>project</code>, <code>mapproject</code>, <code>sample1d</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

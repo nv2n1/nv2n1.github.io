@@ -87,4 +87,3 @@ description: "Parcellite – Lightweight GTK+ Clipboard Manager"
 &nbsp;<wbr>Please report any bugs to the bug tracker via this web page:<br />
 &nbsp;<wbr><a rel="nofollow" href="http://sourceforge.net/projects/parcellite/support">http://sourceforge.net/projects/parcellite/support</a><br />
 &nbsp;<wbr>Click on&nbsp;<wbr>&#8216;Bugs&#8217;&nbsp;<wbr>under&nbsp;<wbr>&#8216;Project Trackers&#8217;&nbsp;<wbr>to file a bug if you are registered with Source Forge. If not, email rickyrockrat (rickyrockrat at users.sourceforge.net), or click the &#8216;project administers&#8217; in the link above. </p>
-<h2>Index</h2>

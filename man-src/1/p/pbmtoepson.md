@@ -18,4 +18,3 @@ description: "pbmtoepson – convert a portable bitmap into Epson printer graphi
 <p> <a href="/docs/linux/man/5-pbm/">pbm</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1991 by John Tiller (tiller [at] galois.msfc.nasa.gov) and Jef Poskanzer. </p>
-<h2>Index</h2>

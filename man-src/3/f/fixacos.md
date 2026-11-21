@@ -22,4 +22,3 @@ description: "fixacos – Fixed point inverse cosine lookup table. Allegro game 
 <h2>RETURN VALUE</h2>
 <p> Returns the inverse sine of a fixed point value, measured as fixed point binary format angle, or zero if the input was out of range. All return values of this function will be in the range `0&#8242; to `128&#8242;. </p>
 <h2>SEE ALSO</h2>
-<h2>Index</h2>

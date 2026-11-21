@@ -20,4 +20,3 @@ description: "QuantLib::ContinuousFloatingLookbackOption::arguments – Argument
 <p> Arguments for continuous floating lookback option calculation </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

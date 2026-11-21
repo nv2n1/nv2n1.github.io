@@ -42,4 +42,3 @@ description: "rdiffdir – compute and apply signatures and diffs to directories
 <p> A special thanks goes to rsync.net, a Cloud Storage provider with explicit support for duplicity, for several monetary donations and for providing a special &quot;duplicity friends&quot; rate for their offsite backup service. Email info [at] rsync.net for details. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-duplicity/">duplicity</a></code>(1), <code><a href="/docs/linux/man/1-python/">python</a></code>(1), <code><a href="/docs/linux/man/1-rdiff/">rdiff</a></code>(1), <code><a href="/docs/linux/man/1-rdiff-backup/">rdiff-backup</a></code>(1). </p>
-<h2>Index</h2>

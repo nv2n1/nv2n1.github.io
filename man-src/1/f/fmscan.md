@@ -43,4 +43,3 @@ description: "fmscan – scan FM band for radio stations"
 <dd> <code><a rel="nofollow" href="http://benpfaff.org/fmtools">http://benpfaff.org/fmtools</a></code></dd></dl>
 <h2>AUTHORS</h2>
 <p> Russell Kroll &lt;rkroll [at] exploits.org&gt;, now maintained by Ben Pfaff &lt;blp [at] cs.stanford.edu.&gt;. This manpage written by Ben Pfaff. </p>
-<h2>Index</h2>

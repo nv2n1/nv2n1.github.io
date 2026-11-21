@@ -211,4 +211,3 @@ description: "arm_is_charset_supported – check character encoding"
 <p> None.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-arm_get_error_message/">arm_get_error_message</a></code>(3), <code><a href="/docs/linux/man/3-arm_register_application/">arm_register_application</a></code>(3) </p>
-<h2>Index</h2>

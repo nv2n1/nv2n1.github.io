@@ -72,4 +72,3 @@ description: "znc – An advanced IRC bouncer"
 <dt><i>~/.znc/moddata/</i><code>MODULENAME</code><i>/</i></dt>
 <dd> This is where global modules may save their settings. </dd>
 </dl>
-<h2>Index</h2>

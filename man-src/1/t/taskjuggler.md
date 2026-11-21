@@ -67,4 +67,3 @@ description: "_______taskjuggler ____ – translates project descriptions into H
 </dt><dd> Author.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2006 Fathi Boudra </p>
-<h2>Index</h2>

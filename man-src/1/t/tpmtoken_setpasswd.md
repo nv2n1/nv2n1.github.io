@@ -32,4 +32,3 @@ description: "tpmtoken_setpasswd – change the password(s) associated with the 
 <p> <code><a href="/docs/linux/man/1-tpmtoken_init/">tpmtoken_init</a></code>(1), <code><a href="/docs/linux/man/1-tpmtoken_import/">tpmtoken_import</a></code>(1), <code><a href="/docs/linux/man/1-tpmtoken_objects/">tpmtoken_objects</a></code>(1), <code><a href="/docs/linux/man/1-tpmtoken_protect/">tpmtoken_protect</a></code>(1) </p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to &lt;trousers-users [at] lists.sourceforge.net&gt; </p>
-<h2>Index</h2>

@@ -70,4 +70,3 @@ file-in   DICOM input filename
 <p> <code><a href="/docs/linux/man/1-gdcmdump/">gdcmdump</a></code>(1), <code>gdcm2vtkraw</code>(1)</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (c) 2006-2010 Mathieu Malaterre </p>
-<h2>Index</h2>

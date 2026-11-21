@@ -64,4 +64,3 @@ description: "grub-fstest – debug tool for GRUB filesystem drivers"
 <dt>
 </dt><dd> <code>info grub-fstest</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

@@ -648,4 +648,3 @@ description: "atop – Advanced System & Process Monitor"
 <h2>AUTHOR</h2>
 <p> Gerlof Langeveld (gerlof.langeveld [at] atoptool.nl)<br />
  JC van Winkel </p>
-<h2>Index</h2>

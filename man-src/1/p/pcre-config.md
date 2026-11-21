@@ -35,4 +35,3 @@ description: "pcre-config – program to return PCRE configuration"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-pcre/">pcre</a>(3) </p>
 <p> </code></p>
-<h2>Index</h2>

@@ -115,4 +115,3 @@ description: "setfacl – set file access control lists"
 <p> Please send your bug reports, suggested features and comments to the above address.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-getfacl/">getfacl</a></code>(1), <code><a href="/docs/linux/man/1-chmod/">chmod</a></code>(1), <code><a href="/docs/linux/man/1-umask/">umask</a></code>(1), <code><a href="/docs/linux/man/5-acl/">acl</a></code>(5) </p>
-<h2>Index</h2>

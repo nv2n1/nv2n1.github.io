@@ -69,4 +69,3 @@ description: "skill, snice – send a signal or report process status"
 <p> Albert Cahalan wrote skill and snice in 1999 as a replacement for a non-free version.</p>
 <h2>REPORTING BUGS</h2>
 <p> Please send bug reports to </p>
-<h2>Index</h2>

@@ -23,4 +23,3 @@ description: "pbmreduce – read a portable bitmap and reduce it N times"
 <p> <a href="/docs/linux/man/1-pnmenlarge/">pnmenlarge</a>(1), <a href="/docs/linux/man/1-pnmscale/">pnmscale</a>(1), <a href="/docs/linux/man/1-pgmtopbm/">pgmtopbm</a>(1), <a href="/docs/linux/man/5-pbm/">pbm</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1988 by Jef Poskanzer. </p>
-<h2>Index</h2>

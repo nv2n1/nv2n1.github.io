@@ -21,4 +21,3 @@ description: "apple_cp – Do an apple copy, copying file metadata and the resou
 <p> Report bugs to the Netatalk-devel list &lt;netatalk-devel [at] lists.sourceforge.net&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-apple_mv/">apple_mv</a></code>(1), <code><a href="/docs/linux/man/1-apple_rm/">apple_rm</a></code>(1). </p>
-<h2>Index</h2>

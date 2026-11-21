@@ -15,4 +15,3 @@ description: "ppmtomap – extract all colors from a portable pixmap"
 <p> One trivial difference between <code>ppmtomap</code> and <code>pnmcolormap all</code> is that if the input is PBM or PGM, <code>ppmtomap</code> would produce PPM output, whereas <code>pnmcolormap all</code> produces the same kind of output as the input. This should not be very noticeable, though, as PBM and PGM images are usually usable anywhere a PPM image is. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pnmcolormap/">pnmcolormap</a></code>(1) </p>
-<h2>Index</h2>

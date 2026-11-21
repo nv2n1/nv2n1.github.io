@@ -62,4 +62,3 @@ description: "systemd-tty-ask-password-agent – List or process pending systemd
 <dt>
 </dt><dd> <a rel="nofollow" href="https://systemd.io/PASSWORD_AGENTS/">https://systemd.io/PASSWORD_AGENTS/</a></dd></dl>
 </dl>
-<h2>Index</h2>

@@ -35,4 +35,3 @@ description: "fftw-wisdom-to-conf – generate FFTW wisdom (pre-planned transfor
  Copyright (c) 2003, 2007-11 Massachusetts Institute of Technology</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-fftw-wisdom/">fftw-wisdom</a>(1) </p>
-<h2>Index</h2>

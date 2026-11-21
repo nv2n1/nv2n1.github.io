@@ -243,4 +243,3 @@ description: "xfce4-terminal – A Terminal emulator for X"
 <dt>
 </dt><dd> <a rel="nofollow" href="http://freedesktop.org/">http://freedesktop.org/</a></dd></dl>
 </dl>
-<h2>Index</h2>

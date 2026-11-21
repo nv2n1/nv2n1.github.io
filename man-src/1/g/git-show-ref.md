@@ -120,4 +120,3 @@ git show - ref-- quiet-- verify-- "refs/heads/$headname" ||
 <p> <code><a href="/docs/linux/man/1-git-for-each-ref/">git-for-each-ref</a></code>(1), <code><a href="/docs/linux/man/1-git-ls-remote/">git-ls-remote</a></code>(1), <code><a href="/docs/linux/man/1-git-update-ref/">git-update-ref</a></code>(1), <code><a href="/docs/linux/man/5-gitrepository-layout/">gitrepository-layout</a></code>(5)</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

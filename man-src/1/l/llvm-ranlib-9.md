@@ -20,4 +20,3 @@ description: "llvm-ranlib – manual page for llvm-ranlib 9"
 <dt> <code>-help</code> &#8211; Display available options</dt>
 <dt> <code>-version</code> &#8211; Display the version of this program </dt>
 </dl>
-<h2>Index</h2>

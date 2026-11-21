@@ -26,4 +26,3 @@ description: "ipython – Tools for Interactive Computing in Python."
 <p> IPython uses various configuration files stored in profiles within IPYTHONDIR. To generate the default configuration files and start configuring IPython, do &#8216;ipython profile create&#8217;, and edit &#8216;*_config.py&#8217; files located in IPYTHONDIR/profile_default. </p>
 <h2>AUTHORS</h2>
 <p> IPython is written by the IPython Development Team &lt;<a rel="nofollow" href="https://github.com/ipython/ipython">https://github.com/ipython/ipython</a>&gt;. </p>
-<h2>Index</h2>

@@ -30,4 +30,3 @@ description: "wcshead – Print WCS part of FITS or IRAF image header"
 </dl>
 <h2>Author</h2>
 <p> Jessica Mink, SAO (jmink [at] cfa.harvard.edu) </p>
-<h2>Index</h2>

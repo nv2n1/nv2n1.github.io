@@ -28,4 +28,3 @@ description: "svdrpsend – sends commands to VDR"
 <p> On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-vdr/">vdr</a>(1), <a href="/docs/linux/man/5-vdr/">vdr</a>(5) </p>
-<h2>Index</h2>

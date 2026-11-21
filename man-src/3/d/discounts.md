@@ -39,4 +39,3 @@ description: "QuantLib::InterpolatedDiscountCurve – Term structure based on in
 <p> Term structure based on interpolation of discount factors. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

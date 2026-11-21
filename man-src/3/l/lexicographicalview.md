@@ -19,4 +19,3 @@ description: "ql/math/lexicographicalview.hpp – Lexicographical 2-D view of a 
 <p> Lexicographical 2-D view of a contiguous set of data. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

@@ -24,4 +24,3 @@ description: "xapian-progsrv – Piped server for use with Xapian’s remote bac
 <dt><code>&#8211;version</code></dt>
 <dd> output version information and exit </dd>
 </dl>
-<h2>Index</h2>

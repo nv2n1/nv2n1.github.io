@@ -123,4 +123,3 @@ struct ibv_pci_atomic_caps {
 <dt>Majd Dibbiny &lt;majd [at] mellanox.com&gt;</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

@@ -40,4 +40,3 @@ description: "xfce4-appfinder – Xfce 4 Appfinder"
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2004-2011 The Xfce development team.<br />
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
-<h2>Index</h2>

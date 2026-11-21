@@ -56,4 +56,3 @@ int efi_guid_to_symbol(efi_guid_t *guid, char **symbol);
 <pre>
 Peter Jones &lt;pjones [at] redhat.com&gt;
 </pre>
-<h2>Index</h2>

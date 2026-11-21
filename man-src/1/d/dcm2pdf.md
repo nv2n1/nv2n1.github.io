@@ -70,4 +70,3 @@ input file format : +f-- read - file
 <p> <code><a href="/docs/linux/man/1-pdf2dcm/">pdf2dcm</a></code>(1)</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2007-2010 by OFFIS e.V., Escherweg 2, 26121 Oldenburg, Germany. </p>
-<h2>Index</h2>

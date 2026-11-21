@@ -25,4 +25,3 @@ wrrd2whisper rrd_path
 <h2>AUTHOR</h2>
 <p> <code>whisper</code> is a fixed size database, created by Chris Davis. </p>
 <p> This manual page was written by Elliot Murphy &lt;elliot [at] ubuntu.com&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

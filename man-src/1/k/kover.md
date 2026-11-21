@@ -48,4 +48,3 @@ description: "kover – CD Cover printer"
 <h2>AUTHOR</h2>
 <p> This manual page was created newly by Rene Engelhard &lt;mail [at] rene-engelhard.de&gt; for the Debian GNU/Linux Distribution, because the original package does not have one. </p>
 <p> The software is written by Adrian Reber &lt;adrian [at] lisas.de&gt;. The original kover was written by Denis Oliver Kropp &lt;dok [at] fischlustig.de&gt;. </p>
-<h2>Index</h2>

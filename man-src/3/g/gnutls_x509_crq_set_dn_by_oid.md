@@ -40,4 +40,3 @@ description: "gnutls_x509_crq_set_dn_by_oid – API function"
 <dl>
 <dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
 <dd> </code></dd></dl>
-<h2>Index</h2>

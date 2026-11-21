@@ -146,4 +146,3 @@ vol:50:50
 <p> Information such as the version of aumix, the architecture and operating system, and the model of sound hardware is sometimes needed to diagnose problems, so it is best if you include such details in any bug reports.</p>
 <h2>SEE ALSO</h2>
 <p> gpm(1), moused(8), sb(4), <a href="/docs/linux/man/1-xaumix/">xaumix</a>(1) </p>
-<h2>Index</h2>

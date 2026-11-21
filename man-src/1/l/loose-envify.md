@@ -56,4 +56,3 @@ if ("development" == = "development") {
 <p> Andres Suarez <code>&lt;zertosh [at] gmail.com&gt;</code></p>
 <h2>COPYRIGHT</h2>
 <p> This manual page was written by Paolo Greppi <code>&lt;paolo.greppi [at] libpf.com&gt;</code> for the Debian project (and may be used by others), also based on material from the envify README (<a rel="nofollow" href="https://github.com/hughsk/envify)">https://github.com/hughsk/envify)</a> by Hugh Kennedy <code>&lt;hughskennedy [at] gmail.com&gt;</code> and the envify contributors. </p>
-<h2>Index</h2>

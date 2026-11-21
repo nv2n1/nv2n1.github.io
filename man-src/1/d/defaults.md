@@ -78,4 +78,3 @@ description: "defaults – read or modify GNUstep user defaults"
 </dl>
 <h2>AUTHORS</h2>
 <p> <code>defaults</code> was written by Richard Frith-Macdonald &lt;rfm [at] gnu.org&gt; </p>
-<h2>Index</h2>

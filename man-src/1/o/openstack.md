@@ -164,4 +164,3 @@ openstack image create-- disk - format = qcow2-- container - format = bare-- pub
 <p> OpenStack contributors</p>
 <h2>COPYRIGHT</h2>
 <p> 2012-2013 OpenStack Foundation </p>
-<h2>Index</h2>

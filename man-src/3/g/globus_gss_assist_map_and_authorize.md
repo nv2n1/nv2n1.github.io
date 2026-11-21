@@ -170,4 +170,3 @@ description: "Gridmap Authorization –"
  <i>1</i> Error</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gss_assist from the source code. </p>
-<h2>Index</h2>

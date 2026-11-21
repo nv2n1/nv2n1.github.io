@@ -161,4 +161,3 @@ description: "login – begin session on the system"
 </dt><dd> Shadow password suite configuration.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mail/">mail</a></code>(1), <code><a href="/docs/linux/man/1-passwd/">passwd</a></code>(1), <code><a href="/docs/linux/man/1-sh/">sh</a></code>(1), <code><a href="/docs/linux/man/1-su/">su</a></code>(1), <code><a href="/docs/linux/man/5-login-defs/">login.defs</a></code>(5), <code><a href="/docs/linux/man/5-nologin/">nologin</a></code>(5), <code><a href="/docs/linux/man/5-passwd/">passwd</a></code>(5), <code><a href="/docs/linux/man/5-securetty/">securetty</a></code>(5), <code><a href="/docs/linux/man/8-getty/">getty</a></code>(8). </p>
-<h2>Index</h2>

@@ -48,4 +48,3 @@ description: "snap2tzx – Convert ZX Spectrum snapshot to .tzx tape images"
 <p> Philip Kendall (philip-fuse [at] shadowmagic.org.uk). </p>
 <p> Tomaz Kac wrote <i>z802tzx</i> (<i><a href="ftp://ftp.worldofspectrum.org/pub/sinclair/tools/unix/z802tzx-1.2.tar.gz">ftp://ftp.worldofspectrum.org/pub/sinclair/tools/unix/z802tzx-1.2.tar.gz</a></i>), on which <i>snap2tzx</i> is very heavily based. </p>
 <p> Martijn van der Heide wrote the turbo-loading code, originally for <i>Taper </i>(<i><a rel="nofollow" href="http://www.worldofspectrum.org/taper.html">http://www.worldofspectrum.org/taper.html</a></i>). </p>
-<h2>Index</h2>

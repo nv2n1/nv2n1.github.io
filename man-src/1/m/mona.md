@@ -63,4 +63,3 @@ description: "mona – a decision procedure for the logics WS1S and WS2S"
 <p> Please send bug reports to &lt;mona [at] brics.dk&gt;</p>
 <h2>AUTHORS</h2>
 <p> Anders Moeller &lt;amoeller [at] brics.dk&gt;, Nils Klarlund, Jacob Elgaard, Theis Rauhe, and Morten Biehl. </p>
-<h2>Index</h2>

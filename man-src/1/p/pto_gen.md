@@ -34,4 +34,3 @@ description: "pto_gen – Generate a Hugin project file from a list of images."
 <dd> shows help</dd></dl>
 <h2>AUTHORS</h2>
 <p> Thomas Modes </p>
-<h2>Index</h2>

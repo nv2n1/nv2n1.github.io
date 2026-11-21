@@ -39,4 +39,3 @@ description: "lessecho – expand metacharacters"
 <h2>AUTHOR</h2>
 <p> This manual page was written by Thomas Schoepf &lt;schoepf [at] debian.org&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
 <p> Report bugs at <a rel="nofollow" href="https://github.com/gwsw/less/issues.">https://github.com/gwsw/less/issues.</a> </p>
-<h2>Index</h2>

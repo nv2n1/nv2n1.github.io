@@ -16,4 +16,3 @@ description: "get_config_float – Retrieves a float from the configuration file
 <p> Reads a floating point variable from the current config file. See the comments about get_config_string(). </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-set_config_file/">set_config_file</a></code>(3), <code><a href="/docs/linux/man/3-set_config_float/">set_config_float</a></code>(3), <code><a href="/docs/linux/man/3-get_config_string/">get_config_string</a></code>(3), <code><a href="/docs/linux/man/3-get_config_argv/">get_config_argv</a></code>(3), <code><a href="/docs/linux/man/3-get_config_hex/">get_config_hex</a></code>(3), <code><a href="/docs/linux/man/3-get_config_int/">get_config_int</a></code>(3), <code><a href="/docs/linux/man/3-get_config_id/">get_config_id</a></code>(3) </p>
-<h2>Index</h2>

@@ -56,4 +56,3 @@ description: "pkgdata – package data for use by ICU"
 <p> 70.1</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2000-2009 IBM, Inc. and others. </p>
-<h2>Index</h2>

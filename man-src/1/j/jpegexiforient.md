@@ -53,4 +53,3 @@ Value | 0th Row | 0th Column-- -- --+-- -- -- -- -- -- -+-- -- -- -- -- -1 | top
 <p>&nbsp;Guido Vollbeding&nbsp;&lt;guido [at] jpegclub.org&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-jpegtran/">jpegtran</a>(1),</code> <code><a href="/docs/linux/man/1-exifautotran/">exifautotran</a>(1)</code> </p>
-<h2>Index</h2>

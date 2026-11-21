@@ -394,4 +394,3 @@ help bugs
 <p> Landon Noll maintains the <code>calc</code> web site is located at: </p>
 <p> <a rel="nofollow" href="http://www.isthe.com">www.isthe.com</a>/chongo/tech/comp/calc/ </p>
 <p> Share and Enjoy! :-) </p>
-<h2>Index</h2>

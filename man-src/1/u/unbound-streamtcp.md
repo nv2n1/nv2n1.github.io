@@ -41,4 +41,3 @@ description: "unbound-streamtcp – unbound DNS lookup utility"
 <p> The unbound-streamtcp program exits with status code 1 on error, 0 on no error.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Tomas Hozza &lt;thozza [at] redhat.com&gt;. </p>
-<h2>Index</h2>

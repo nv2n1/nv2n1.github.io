@@ -262,4 +262,3 @@ $ git help hub
 <p> <i><a rel="nofollow" href="https://github.com/github/hub/contributors">https://github.com/github/hub/contributors</a></i></p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-git/">git</a>(1), <a href="/docs/linux/man/1-git-clone/">git-clone</a>(1), <a href="/docs/linux/man/1-git-remote/">git-remote</a>(1), <a href="/docs/linux/man/1-git-init/">git-init</a>(1), <i><a rel="nofollow" href="http://github.com">http://github.com</a></i>, <i><a href="https://github.com/github/hub">https://github.com/github/hub</a></i> </p>
-<h2>Index</h2>

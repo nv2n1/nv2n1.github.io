@@ -16,4 +16,3 @@ description: "get_clip_state – Tells if clipping is on for a bitmap. Allegro g
 <p> Returns non-zero if clipping is turned on for the specified bitmap and zero otherwise. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-set_clip_rect/">set_clip_rect</a></code>(3), <code><a href="/docs/linux/man/3-get_clip_rect/">get_clip_rect</a></code>(3), <code><a href="/docs/linux/man/3-add_clip_rect/">add_clip_rect</a></code>(3), <code><a href="/docs/linux/man/3-set_clip_state/">set_clip_state</a></code>(3) </p>
-<h2>Index</h2>

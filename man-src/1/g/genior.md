@@ -20,4 +20,3 @@ description: "genior – Utility for creating a stringified IOR"
 </dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-catior/">catior</a>(1) </p>
-<h2>Index</h2>

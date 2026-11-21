@@ -21,4 +21,3 @@ description: "pnmmargin – add a border to a portable anymap"
 <p> It&#8217;s a script. Scripts are not portable to non-Unix environments.</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1991 by Jef Poskanzer. </p>
-<h2>Index</h2>

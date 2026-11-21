@@ -115,4 +115,3 @@ vacall_function = &amp;execl;
 <p> Bruno Haible &lt;bruno [at] clisp.org&gt; </p>
 <h2>ACKNOWLEDGEMENTS</h2>
 <p> Many ideas and a lot of code were cribbed from the gcc source. </p>
-<h2>Index</h2>

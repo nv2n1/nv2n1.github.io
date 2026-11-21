@@ -51,4 +51,3 @@ description: "setupcon – sets up the font and the keyboard on the console"
  <i>/etc/console-setup/</i> </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-keyboard/">keyboard</a></code>(5), <code><a href="/docs/linux/man/5-console-setup/">console-setup</a></code>(5) </p>
-<h2>Index</h2>

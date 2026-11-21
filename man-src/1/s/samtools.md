@@ -886,4 +886,3 @@ samtools view -C -T ref.fa aln.bam &gt; aln.cram
  Samtools latest source: &lt;<a rel="nofollow" href="https://github.com/samtools/samtools">https://github.com/samtools/samtools</a>&gt;<br />
  HTSlib latest source: &lt;<a rel="nofollow" href="https://github.com/samtools/htslib">https://github.com/samtools/htslib</a>&gt;<br />
  Bcftools website: &lt;<a rel="nofollow" href="http://samtools.github.io/bcftools">http://samtools.github.io/bcftools</a>&gt; </p>
-<h2>Index</h2>

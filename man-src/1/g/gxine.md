@@ -81,4 +81,3 @@ description: "gxine – a GTK/GNOME frontend to the xine video player"
 <p> This manual page was written by Darren Salt &lt;linux [at] youmustbejoking.demon.co.uk&gt;. It is based on an older version written by Philipp Matthias Hahn &lt;pmhahn [at] titan.lahn.de&gt; for Debian. </p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2001-2006 The xine project </p>
-<h2>Index</h2>

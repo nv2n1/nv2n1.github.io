@@ -426,4 +426,3 @@ PageProps = {
 <p> Impressive and its documentation has been written mainly by Martin J. Fiedler &lt;martin.fiedler [at] gmx.net&gt;, with small portions of the code written by external contributors. See the source code file for details.</p>
 <h2>REPORTING BUGS</h2>
 <p> Report bugs to to &lt;martin.fiedler [at] gmx.net&gt;. </p>
-<h2>Index</h2>

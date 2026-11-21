@@ -185,4 +185,3 @@ $ txt2regex-- make hour
 <h2>COPYRIGHT</h2>
 <p> Copyright © 2000, 2001, 2002, 2003, 2004 Aurelio Marinho Jargas </p>
 <p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
-<h2>Index</h2>

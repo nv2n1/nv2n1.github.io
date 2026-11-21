@@ -23,4 +23,3 @@ description: "compface, uncompface – compress and expand 48x48x1 face image fi
 <p> Nominating standard input as input more than once does not work.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-compface/">Compface</a>(3) </p>
-<h2>Index</h2>

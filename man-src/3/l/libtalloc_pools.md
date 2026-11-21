@@ -56,4 +56,3 @@ talloc_free(mem_ctx);
 </code></pre>
 <p> It may often be better to copy the memory we want instead of stealing it to avoid this problem. If we do not need to retain the context name (to keep the type information), we can use <code>talloc_memdup()</code> to do this. </p>
 <p> Copying the memory out of the pool may, however, discard all the performance boost given by the pool, depending on the size of the copied memory. Therefore, the code should be well profiled before taking this path. In general, the golden rule is: if we need to steal from the pool context, we should not use a pool context. </p>
-<h2>Index</h2>

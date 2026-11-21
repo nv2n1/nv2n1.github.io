@@ -48,4 +48,3 @@ description: "texdirflatten – Collects all components of a (La)TeX file in a s
 <h2>COPYRIGHT AND LICENSE</h2>
 <p> Copyleft 2003-2017, Cengiz Gunay </p>
 <p> This library is free software; you may redistribute it and/or modify it under the same terms as Perl itself. </p>
-<h2>Index</h2>

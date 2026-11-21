@@ -91,4 +91,3 @@ $ <code>droplang pltcl dbname</code>
 </dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-createlang/">createlang</a></code>(1), DROP EXTENSION (<code><a href="/docs/linux/man/7-drop_extension/">DROP_EXTENSION</a></code>(7)), DROP LANGUAGE (<code><a href="/docs/linux/man/7-drop_language/">DROP_LANGUAGE</a></code>(7)) </p>
-<h2>Index</h2>

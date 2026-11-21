@@ -65,4 +65,3 @@ description: "euca-describe-bundle-tasks – Describe current instance-bundling 
 <dt>update-time</dt>
 <dd> most recent task update time </dd>
 </dl>
-<h2>Index</h2>

@@ -63,4 +63,3 @@ $ docker rm -v hello
 <p> In this example, the volume for /foo will remain in tact, but the volume for /bar will be removed. The same behavior holds for volumes inherited with &#8211;volumes-from. </p>
 <h2>HISTORY</h2>
 <p> April 2014, Originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and internal work. June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; July 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; August 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; </p>
-<h2>Index</h2>

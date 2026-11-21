@@ -25,4 +25,3 @@ description: "dzen2-textwidth – calculate the width in pixels of text for a gi
 <dd> Set the string.</dd></dl>
 <p> textwidth was written by Robert Manea. </p>
 <p> This manual page was written by bertagaz &lt;bertagaz [at] ptitcanardnoir.org&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

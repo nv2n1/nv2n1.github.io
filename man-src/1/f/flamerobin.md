@@ -61,4 +61,3 @@ description: "flamerobin – management and data manipulation tool for the Fireb
 <p> <code>flamerobin</code> only writes files under the <i>user home directory</i> If <code>flamerobin</code> is configured so that this directory and the files contained therein are shared among several users or concurrent instances of <code>,</code> no precaution is taken to avoid overwriting settings created by other users or other application instances.</p>
 <h2>NOTES</h2>
 <p> The specification of the <i>data directory</i> and the <i>user home directory</i> (regardless of whether they occur in the environment or on the command line) may be the literal string &#8220;$app&#8221; which translates to a common data folder determined at compilation time, or &#8220;$user&#8221; which translates to the user local data directory. These options currently have effect only on Windows platform. </p>
-<h2>Index</h2>

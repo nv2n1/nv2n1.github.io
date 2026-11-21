@@ -19,4 +19,3 @@ description: "docker-config-inspect – Display detailed information on one or m
 <p> <code>&#8211;pretty</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Print the information in a human friendly format</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-config/">docker-config</a>(1)</code> </p>
-<h2>Index</h2>

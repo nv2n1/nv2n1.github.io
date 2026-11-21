@@ -16,4 +16,3 @@ description: "garmin_dump – convert .gmn files into xml data"
 <p> <code><a href="/docs/linux/man/1-garmin_get_info/">garmin_get_info</a></code>(1), <code><a href="/docs/linux/man/1-garmin_save_runs/">garmin_save_runs</a></code>(1), <code><a href="/docs/linux/man/1-garmin_gmap/">garmin_gmap</a></code>(1). </p>
 <h2>AUTHOR</h2>
 <p> garmin_dump was written by Dave Bailey. </p>
-<h2>Index</h2>

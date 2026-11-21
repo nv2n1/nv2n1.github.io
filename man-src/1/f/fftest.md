@@ -22,4 +22,3 @@ description: "fftest – tests force-feedback devices."
 <h2>AUTHOR</h2>
 <p> <code>fftest</code> was written by Johann Deneux. </p>
 <p> This manual page was written by Stephen Kitt &lt;steve [at] sk2.org&gt;, for the Debian GNU/Linux system (but may be used by others). It was last modified for <code>fftest</code> dated October 19, 2004. </p>
-<h2>Index</h2>

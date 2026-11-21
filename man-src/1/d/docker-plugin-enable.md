@@ -18,4 +18,3 @@ description: "docker-plugin-enable – Enable a plugin"
 <p> <code>&#8211;timeout</code>=30 <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>HTTP client timeout (in seconds)</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-plugin/">docker-plugin</a>(1)</code> </p>
-<h2>Index</h2>

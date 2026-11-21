@@ -56,4 +56,3 @@ description: "dbrowenumerate – enumerate rows, starting from zero"
 <h2>SEE ALSO</h2>
 <p> Fsdb, dbrowaccumulate.</p>
 <h2>CLASS FUNCTIONS</h2>
-<h2>Index</h2>

@@ -75,4 +75,3 @@ description: "bakefile_gen – batch bakefile generation"
 <dl>
 <dt>
 </dt><dd> Display usage information for <code>bakefile_gen</code></dd></dl>
-<h2>Index</h2>

@@ -36,4 +36,3 @@ description: "pkmon – PackageKit console client"
 </dt><dd> Author.</dd></dl>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2007 Richard Hughes </p>
-<h2>Index</h2>

@@ -165,4 +165,3 @@ sub process_my_slashdot()
 <p> I try to keep all supported site info up to date, but sites often go down, change their backend formats, change their httpd responses, just stop to post news and so on; the script in the latest cvs may be more up to date. </p>
 <p> The headline times may be off by one hour or more, since the time is displayed for your local time zone, and the time zone of the original time in the site backend output is often guessed (sometimes incorrectly); similarly it is guessed whether to apply the daylight saving correction. </p>
 <p> Report bugs to fvwm-bug [at] fvwm.org. </p>
-<h2>Index</h2>

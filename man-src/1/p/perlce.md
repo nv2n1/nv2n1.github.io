@@ -245,4 +245,3 @@ description: "perlce – Perl for WinCE"
 <dt>Daniel Dragan</dt>
 <dd> <p> updated the build process during the 5.19 development track. </p>
  </dd></dl>
-<h2>Index</h2>

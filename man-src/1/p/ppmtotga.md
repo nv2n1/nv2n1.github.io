@@ -30,4 +30,3 @@ description: "ppmtotga – convert portable pixmap into a TrueVision Targa file"
 <p> <a href="/docs/linux/man/1-tgatoppm/">tgatoppm</a>(1), <a href="/docs/linux/man/5-ppm/">ppm</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1989, 1991 by Mark Shand and Jef Poskanzer. </p>
-<h2>Index</h2>

@@ -42,4 +42,3 @@ description: "readnsstate – interpret the contents of cn=replica’s nsState v
 <p> Copyright &#169; 2016 Red Hat, Inc.<br />
  This manual page was written by William Brown &lt;wibrown [at] redhat.com&gt;, for the 389 Directory Server Project.<br />
  This is free software. You may redistribute copies of it under the terms of the Directory Server license found in the LICENSE file of this software distribution. </p>
-<h2>Index</h2>

@@ -18,4 +18,3 @@ description: "Reading/Writing –"
 <p> You may either use GLOBUS_XIO_FILE_SEEK or GLOBUS_XIO_SEEK to position the file pointer before each read or write or you can specify the desired offset on a data descriptor with the xio cmd, GLOBUS_XIO_DD_SET_OFFSET. simultaneous reading and writing is only predictable if the data descriptor method is used. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus xio from the source code. </p>
-<h2>Index</h2>

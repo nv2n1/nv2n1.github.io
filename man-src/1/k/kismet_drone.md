@@ -27,4 +27,3 @@ kismet_drone[-svh][-f config - file][-c capture - source]
 <p> <code><a href="/docs/linux/man/1-kismet/">kismet</a></code>(1), <code>kismet_drone.conf</code>(5)</p>
 <h2>AUTHOR</h2>
 <p> Mike Kershaw </p>
-<h2>Index</h2>

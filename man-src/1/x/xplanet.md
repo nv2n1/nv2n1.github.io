@@ -258,4 +258,3 @@ level      output
 <dt><code>-xscreensaver</code></dt>
 <dd> Same as -vroot. </dd>
 </dl>
-<h2>Index</h2>

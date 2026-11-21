@@ -219,4 +219,3 @@ description: "btt – analyse block i/o traces produces by blktrace"
 <h2>SEE ALSO</h2>
 <p> The btt Users Guide, which can be found in /usr/share/doc/blktrace/btt.pdf<br />
  bno_plot (1), blktrace (8), blkparse (1), verify_blkparse (1), blkrawverify (1), btt (1) </p>
-<h2>Index</h2>

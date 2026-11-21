@@ -196,4 +196,3 @@ description: "scp – OpenSSH secure file copy"
 <p> An Timo Rinne Aq Mt tri [at] iki.fi An Tatu Ylonen Aq Mt ylo [at] cs.hut.fi</p>
 <h2>CAVEATS</h2>
 <p> The original SCP protocol (used by default) requires execution of the remote user&#8217;s shell to perform <a href="/docs/linux/man/3-glob/">glob</a>(3) pattern matching. This requires careful quoting of any characters that have special meaning to the remote shell, such as quote characters. </p>
-<h2>Index</h2>

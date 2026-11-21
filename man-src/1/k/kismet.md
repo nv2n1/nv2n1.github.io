@@ -85,4 +85,3 @@ description: "kismet – Wireless sniffing and monitoring"
 <p> <code>gpsmap</code> reads GPS and Network XML datafiles and plots networks on downloaded maps or user-supplied images (such as satellite photos).</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-kismet_drone/">kismet_drone</a>(1), gpsmap(1), kismet.conf(5), kismet_ui.conf(5), kismet_drone.conf(5) </p>
-<h2>Index</h2>

@@ -57,4 +57,3 @@ description: "idevicebackup2 – Create or restore backups for devices running i
 <p> Nikias Bassen </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-idevicebackup/">idevicebackup</a>(1) </p>
-<h2>Index</h2>

@@ -23,4 +23,3 @@ description: "podofocolor – modify colors in a PDF file."
 <h2>AUTHOR</h2>
 <p> PoDoFo is written by Dominik Seichter &lt;domseichter [at] web.de&gt; and others. </p>
 <p> This manual page was written by Dominik Seichter &lt;domseichter [at] web.de&gt; for the PoDoFo Project (but may be used by others). </p>
-<h2>Index</h2>

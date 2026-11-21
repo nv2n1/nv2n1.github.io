@@ -36,4 +36,3 @@ description: "freight-clear-cache – clears existing package repositories"
 <h2>SEE ALSO</h2>
 <p> Part of <code><a href="/docs/linux/man/1-freight/">freight</a></code>(1). </p>
 <p> <code><a href="/docs/linux/man/1-freight-cache/">freight-cache</a></code>(1) can be used to build the repository again. </p>
-<h2>Index</h2>

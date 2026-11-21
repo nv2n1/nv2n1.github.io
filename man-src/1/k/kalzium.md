@@ -24,4 +24,3 @@ description: "kalzium – A KDE based chemistry teaching tool"
 <p> This manual page was prepared by Ben Burton </p>
 <h2>AUTHOR</h2>
 <p> Ben Burton. </p>
-<h2>Index</h2>

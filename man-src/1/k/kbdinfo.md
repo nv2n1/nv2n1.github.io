@@ -22,4 +22,3 @@ description: "kbdinfo – obtain information about the status of a console"
 <h2>AUTHOR</h2>
 <p> kbdinfo is Copyright &#169; 2011 Alexey Gladkov &lt;gladkov.alexey [at] gmail.com&gt;. </p>
 <p> This manual page was written by Michael Schutte &lt;michi [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

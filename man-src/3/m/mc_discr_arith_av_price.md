@@ -20,4 +20,3 @@ description: "ql/pricingengines/asian/mc_discr_arith_av_price.hpp – Monte Carl
 <p> Monte Carlo engine for discrete arithmetic average price Asian. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

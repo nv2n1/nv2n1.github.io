@@ -24,4 +24,3 @@ description: "simpleftp – Rudimentary FTP client"
 <p> <tt>$Id:</tt> simple<a href="ftp://ftp.pod">ftp.pod</a> 8357 2009-02-27 17:56:00Z iulius $</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/8-actsync/">actsync</a></i>(8). </p>
-<h2>Index</h2>

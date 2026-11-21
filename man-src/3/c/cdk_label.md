@@ -156,4 +156,3 @@ char waitCDKLabel(
 <dd> waits for a user to press a key. The <code>label</code> parameter is the pointer to a label widget, and <code>key</code> is the key to wait for. If no specific key is desired, use <i>(char)0</i>.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-cdk/">cdk</a></code>(3), <code><a href="/docs/linux/man/3-cdk_binding/">cdk_binding</a></code>(3), <code><a href="/docs/linux/man/3-cdk_display/">cdk_display</a></code>(3), <code><a href="/docs/linux/man/3-cdk_position/">cdk_position</a></code>(3), <code><a href="/docs/linux/man/3-cdk_screen/">cdk_screen</a></code>(3) </p>
-<h2>Index</h2>

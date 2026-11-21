@@ -61,4 +61,3 @@ description: "euca-describe-snapshots – Show information about snapshots"
 <dt>progress</dt>
 <dd> snapshot progress, in percentage snapshot-id start-time snapshot initiation time status tag-key key of a tag assigned to the snapshot tag-value value of a tag assigned to the snapshot tag:KEY specific tag key/value combination volume-id source volume ID volume-size </dd>
 </dl>
-<h2>Index</h2>

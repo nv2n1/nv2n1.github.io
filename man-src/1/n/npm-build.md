@@ -46,4 +46,3 @@ npm build [&lt;package-folder&gt;]
 <dd> npm help package.json </dd>
 </dl>
 </dl>
-<h2>Index</h2>

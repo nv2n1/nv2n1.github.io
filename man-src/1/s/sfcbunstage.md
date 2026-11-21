@@ -49,4 +49,3 @@ description: "sfcbstage – Script to remove provider MOF and registration files
 </dt><dd> <a rel="nofollow" href="http://sblim.sourceforge.net/">http://sblim.sourceforge.net/</a></dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-sfcbd/">sfcbd</a></code>(1), <code><a href="/docs/linux/man/1-sfcbstage/">sfcbstage</a></code>(1), <code><a href="/docs/linux/man/1-sfcbrepos/">sfcbrepos</a></code>(1) </p>
-<h2>Index</h2>

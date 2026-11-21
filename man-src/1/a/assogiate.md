@@ -28,4 +28,3 @@ description: "assoGiate – modify the detection and display of file types"
 <p> Kevin Daughtridge &lt;kevin [at] kdau.com&gt;</p>
 <h2>SEE ALSO</h2>
 <p> assoGiate website &lt;<a rel="nofollow" href="http://www.kdau.com/projects/assogiate/">http://www.kdau.com/projects/assogiate/</a>&gt;. </p>
-<h2>Index</h2>

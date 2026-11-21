@@ -57,4 +57,3 @@ description: "derdump_ – Dumps C-sequence strings from a DER encoded certifica
 <dt>
 </dt><dd> <a rel="nofollow" href="http://www.mozilla.org/projects/security/pki/nss/">http://www.mozilla.org/projects/security/pki/nss/</a></dd></dl>
 </dl>
-<h2>Index</h2>

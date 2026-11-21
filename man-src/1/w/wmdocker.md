@@ -33,4 +33,3 @@ description: "wmdocker – System tray for KDE3/GNOME2 docklet applications"
 <dd> The background color to use for the tray. Defaults to whatever color the window manager specifies.</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Ari Pollak &lt;ari [at] debian.org&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

@@ -39,4 +39,3 @@ description: "docker-engine-activate – Activate Enterprise Edition"
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;Specify engine version&nbsp;(default is to use currently running version) </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-engine/">docker-engine</a>(1)</code> </p>
-<h2>Index</h2>

@@ -19,4 +19,3 @@ description: "curl_share_init – Create a shared object"
 <p> If this function returns NULL, something went wrong (out of memory, etc.) and therefore the share object was not created.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-curl_share_cleanup/">curl_share_cleanup</a></code>(3), <code><a href="/docs/linux/man/3-curl_share_setopt/">curl_share_setopt</a></code>(3) </p>
-<h2>Index</h2>

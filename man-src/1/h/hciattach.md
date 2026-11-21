@@ -298,4 +298,3 @@ Supported ID
 <p> Maxim Krasnyansky &lt;maxk [at] qualcomm.com&gt;, Nils Faerber &lt;nils [at] kernelconcepts.de&gt;</p>
 <h2>COPYRIGHT</h2>
 <p> Free use of this software is granted under ther terms of the GNU Lesser General Public Licenses (LGPL). </p>
-<h2>Index</h2>

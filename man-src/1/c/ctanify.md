@@ -109,4 +109,3 @@ description: "ctanify – Prepare a package for upload to CTAN"
 <dt>
 </dt><dd> &lt;<a rel="nofollow" href="http://www.latex-project.org/lppl.txt">http://www.latex-project.org/lppl.txt</a>&gt;</dd></dl>
 <p> and version 1.3c or later is part of all distributions of LaTeX version 2008/05/04 or later. </p>
-<h2>Index</h2>

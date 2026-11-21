@@ -320,4 +320,3 @@ ppm_name_from_bk_color(bk_color bkColor);
 <p> <code>pbm</code>(1) , <code>pgm</code>(1) , <code>libpbm</code>(1) </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1989, 1991 by Tony Hansen and Jef Poskanzer. </p>
-<h2>Index</h2>

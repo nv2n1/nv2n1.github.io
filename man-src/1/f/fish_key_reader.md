@@ -33,4 +33,3 @@ fish_key_reader[-c][-d LEVEL]
 <dd> type exit, or</dd>
 <dt>&bull;</dt>
 <dd> type quit</dd></dl>
-<h2>Index</h2>

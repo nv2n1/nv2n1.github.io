@@ -23,4 +23,3 @@ if (mem_chunk != NULL) {
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-get_audio_stream_buffer/">get_audio_stream_buffer</a></code>(3), <code><a href="/docs/linux/man/3-exstream/">exstream</a></code>(3) </p>
-<h2>Index</h2>

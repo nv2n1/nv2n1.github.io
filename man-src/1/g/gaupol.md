@@ -40,4 +40,3 @@ description: "gaupol – editor for text-based subtitle files"
 <dd> If set to a non-empty string, gaupol will perform additional checks during run-time that may help in finding and locating bugs.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Written by Osmo Salomaa &lt;otsaloma [at] iki.fi&gt;. </p>
-<h2>Index</h2>

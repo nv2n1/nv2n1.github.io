@@ -21,4 +21,3 @@ description: "ql/models/shortrate/onefactormodels/coxingersollross.hpp – Cox-I
 <p> Cox-Ingersoll-Ross model. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

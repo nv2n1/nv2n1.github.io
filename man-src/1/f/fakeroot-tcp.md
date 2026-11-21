@@ -124,4 +124,3 @@ ls -al foo
 <p> mostly by J.H.M. Dassen &lt;jdassen [at] debian.org&gt; Rather a lot mods/additions by joost and Clint.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-faked/">faked</a></code>(1) <code><a href="/docs/linux/man/1-dpkg-buildpackage/">dpkg-buildpackage</a></code>(1), <code>debuild</code>(1) <code>/usr/share/doc/fakeroot/DEBUG</code> </p>
-<h2>Index</h2>

@@ -156,4 +156,3 @@ allow localhost : mandatory, advisory;
 <p> There may be at most one primary <code>pmlogger</code> instance per monitored host; attempting to bend this rule produces the error:<br />
  pmlogger: there is already a primary pmlogger running </p>
 <p> Various other messages relating to the creation and/or deletion of files in <i>$PCP_TMP_DIR/pmlogger</i> suggest a permission problem on this directory, or some feral files have appeared therein. </p>
-<h2>Index</h2>

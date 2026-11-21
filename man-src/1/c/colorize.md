@@ -37,4 +37,3 @@ description: "colorize – A robust log colorizer"
 <dd> Show version of program.</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Gergely Nagy &lt;8@free.bsd.hu&gt;, for the Debian GNU/Linux system (but may be used by others). Modified by Istvan Karaszi &lt;colorize [at] spam.raszi.hu&gt;. </p>
-<h2>Index</h2>

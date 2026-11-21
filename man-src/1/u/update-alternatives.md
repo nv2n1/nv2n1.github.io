@@ -184,4 +184,3 @@ description: "update-alternatives – maintain symbolic links determining defaul
 </pre>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ln/">ln</a></code>(1), <font SIZE="-1">FHS</font> (the Filesystem Hierarchy Standard). </p>
-<h2>Index</h2>

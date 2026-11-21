@@ -25,4 +25,3 @@ description: "nwrights – Show effective rights for file or directory"
 </dt><dd> You can specify the file or directory you want information about. The default is the current working directory.</dd></dl>
 <h2>AUTHORS</h2>
 <p> nwrights was written by Volker Lendecke with the corresponding NetWare utility in mind. See the Changes file of ncpfs for other contributors. </p>
-<h2>Index</h2>

@@ -26,4 +26,3 @@ description: "cfg_defvalue_t – Data structure holding the default value given 
 <p> Data structure holding the default value given by the initialization macros. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for confuse from the source code. </p>
-<h2>Index</h2>

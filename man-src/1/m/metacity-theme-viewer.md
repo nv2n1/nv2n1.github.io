@@ -31,4 +31,3 @@ description: "metacity-theme-viewer – view metacity themes"
 <p> This manual page was written by Jose M. Moya &lt;josem [at] die.upm.es&gt;, for the Debian GNU/Linux system (but may be used by others).</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-metacity/">metacity</a></code>(1), <code><a href="/docs/linux/man/1-metacity-window-demo/">metacity-window-demo</a></code>(1). </p>
-<h2>Index</h2>

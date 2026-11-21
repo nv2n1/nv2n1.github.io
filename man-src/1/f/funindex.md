@@ -40,4 +40,3 @@ NB : these options are not compatible with Funtools processing.Please
 <p> This will generate an index named foo_y.idx, which will be used by funtools for filters involving the Y column.</p>
 <h2>SEE ALSO</h2>
 <p> See funtools(n) for a list of Funtools help pages </p>
-<h2>Index</h2>

@@ -53,4 +53,3 @@ Document title
 <h2>AUTHOR</h2>
 <p> <code>pdfoutline</code> author is Eugeniy Meshcheryakov &lt;eugen [at] debian.org&gt;<br />
  <code>pdfoutline</code> is part of <code>fntsample</code> and can be downoaded from &lt;<a rel="nofollow" href="http://fntsample.sourceforge.net/">http://fntsample.sourceforge.net/</a>&gt;. </p>
-<h2>Index</h2>

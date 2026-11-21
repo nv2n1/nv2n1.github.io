@@ -39,4 +39,3 @@ void ares_free_data(void *dataptr)
 <p> Yang Tse </p>
 <p> Copyright 1998 by the Massachusetts Institute of Technology.<br />
  Copyright (C) 2004-2010 by Daniel Stenberg. </p>
-<h2>Index</h2>

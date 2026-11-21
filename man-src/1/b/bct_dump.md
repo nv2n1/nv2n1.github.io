@@ -53,4 +53,3 @@ ChipUid = 0x00000000000000000000000000000000;
 <p> If any error occurs a non zero exit status is returned. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tegrarcm/">tegrarcm</a>(1),</code><a href="/docs/linux/man/1-cbootimage/">cbootimage</a>(1) </p>
-<h2>Index</h2>

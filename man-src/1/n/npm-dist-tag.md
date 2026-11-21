@@ -76,4 +76,3 @@ npm install --tag &lt;tag&gt;
 <dd> npm help npmrc </dd>
 </dl>
 </dl>
-<h2>Index</h2>

@@ -56,4 +56,3 @@ description: "dbus-monitor – debug probe to print message bus messages"
 <p> dbus-monitor was written by Philip Blundell. The profiling output mode was added by Olli Salli.</p>
 <h2>BUGS</h2>
 <p> Please send bug reports to the D-Bus mailing list or bug tracker, see m[blue]<code><a rel="nofollow" href="http://www.freedesktop.org/software/dbus/">http://www.freedesktop.org/software/dbus/</a></code>m[] </p>
-<h2>Index</h2>

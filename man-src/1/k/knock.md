@@ -36,4 +36,3 @@ knock -u myserver.example.com 8284 4721 18592 42912
 <pre>
 Judd Vinet &lt;jvinet [at] zeroflux.org&gt;
 </pre>
-<h2>Index</h2>

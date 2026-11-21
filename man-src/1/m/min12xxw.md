@@ -115,4 +115,3 @@ description: "min12xxw – Convert pbmraw streams to Minolta PagePro 12xxW langu
 <p> Bugs and problems reports are generally welcome because I just don&#8217;t have the time to test everything out. I needed a filter and here it is. If it does not work &#8211; complain ;-) </p>
 <h2>AUTHOR</h2>
 <p> <code>Min12xxw</code> was written by Manuel Tobias Schiller (mala [at] hinterbergen.de). </p>
-<h2>Index</h2>

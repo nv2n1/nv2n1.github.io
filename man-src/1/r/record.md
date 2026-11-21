@@ -48,4 +48,3 @@ description: "record – records *.wav files"
 <p> If level triggered recording is active, record will start and stop recording depending on the signal strength. Recording will be started if the signal strength is above the trigger level (1000/32768 =&gt; around 3%). Recording will be stopped if the signal is below the trigger level for some time (1.5 seconds by default, the -p switch changes this).</p>
 <h2>AUTHOR</h2>
 <p> Gerd Knorr &lt;kraxel [at] bytesex.org&gt; </p>
-<h2>Index</h2>

@@ -35,4 +35,3 @@ description: "findproxyfile – returns full path to GSI Proxy file"
 <h2>AUTHOR</h2>
 <p> Andrew McNab &lt;Andrew.McNab [at] man.ac.uk&gt; </p>
 <p> findproxyfile is part of GridSite: <a rel="nofollow" href="http://www.gridsite.org/">http://www.gridsite.org/</a> </p>
-<h2>Index</h2>

@@ -46,4 +46,3 @@ C:
 <p> <code><a href="/docs/linux/man/8-gpsd/">gpsd</a></code>(8), <code><a href="/docs/linux/man/1-gps/">gps</a></code>(1), <code><a href="/docs/linux/man/3-libgps/">libgps</a></code>(3).</p>
 <h2>AUTHOR</h2>
 <p> Eric S. Raymond &lt;esr [at] thyrsus.com&gt; based partly on earlier work by Remco Treffkorn, Derrick Brashear, and Russ Nelson. </p>
-<h2>Index</h2>

@@ -46,4 +46,3 @@ rgb2pct.py[-n colors | -pct palette_file][-of format] source_file dest_file
 </pre>
 <h2>AUTHOR</h2>
 <p> Frank Warmerdam warmerdam [at] pobox.com </p>
-<h2>Index</h2>

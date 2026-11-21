@@ -56,4 +56,3 @@ description: "agentxtrap – send an AgentX NotifyPDU to an AgentX master agent"
 <p> agentxtrap netSnmp.0.3 ifindex.1 i 1 </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1), <a href="/docs/linux/man/1-snmpset/">snmpset</a>(1), <a href="/docs/linux/man/5-variables/">variables</a>(5), RFC 2741 </p>
-<h2>Index</h2>

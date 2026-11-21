@@ -21,4 +21,3 @@ description: "ql/experimental/callablebonds/blackcallablebondengine.hpp – Blac
 <p> Black-formula callable bond engines. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

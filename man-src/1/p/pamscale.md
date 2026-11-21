@@ -171,4 +171,3 @@ description: "pamscale – scale a Netpbm image"
 <p> The intensity proportional stuff came out of suggestions by <i>Adam M Costello</i> in January 2004. </p>
 <p> The resampling algorithms are mostly taken from code contributed by <i>Michael Reinelt</i> in December 2003. </p>
 <p> The version of <code>pnmscale</code> from which <code>pamscale</code> was derived, itself evolved out of the original Pbmplus version of <code>pnmscale</code> by Jef Poskanzer (1989, 1991). But none of that original code remains. </p>
-<h2>Index</h2>

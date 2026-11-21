@@ -21,4 +21,3 @@ description: "xmltex, pdfxmltex – xml non-validating parser in TeX"
  <code><a href="/docs/linux/man/1-latex/">latex</a></code>(1), <code><a href="/docs/linux/man/1-tex/">tex</a></code>(1)  </p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Fabien Ni&ntilde;oles &lt;fabien [at] debian.org&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

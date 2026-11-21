@@ -25,4 +25,3 @@ description: "pamtoavs – convert a Netpbm image to an AVS X image"
 <p> Copyright&nbsp;<wbr>&#169; 2010 Scott Pakin, <i>scott+pbm [at] pakin.org.</i> </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-avstopam/">avstopam</a></code>(1) , gnuplot , <code>pam</code>(1) </p>
-<h2>Index</h2>

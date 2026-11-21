@@ -43,4 +43,3 @@ description: "imgsc – Find HST GSC stars in FITS or IRAF image files"
 <p> imcat(),imuac(),imusac(),scat()</p>
 <h2>Author</h2>
 <p> Jessica Mink, SAO (jmink [at] cfa.harvard.edu) </p>
-<h2>Index</h2>

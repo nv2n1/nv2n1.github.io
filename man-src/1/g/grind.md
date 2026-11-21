@@ -102,4 +102,3 @@ description: "grind – process WordNet lexicographer files"
 <dd> Pointer errors were found that could not be automatically corrected.</dd></dl>
 <h2>BUGS</h2>
 <p> Please report bugs to <code>wordnet [at] princeton.edu</code>. </p>
-<h2>Index</h2>

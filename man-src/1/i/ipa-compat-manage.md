@@ -27,4 +27,3 @@ description: "ipa-compat-manage – Enables or disables the schema compatibility
 <p> 0 if the command was successful </p>
 <p> 1 if an error occurred </p>
 <p> 2 if the plugin is already in the required status (enabled or disabled) </p>
-<h2>Index</h2>

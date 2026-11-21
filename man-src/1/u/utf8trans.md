@@ -45,4 +45,3 @@ description: "utf8trans – Transliterate UTF-8 characters according to a table"
 <dd> There is no way to include a newline or null in the substitution string.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Steve Cheng &lt;stevecheng [at] users.sourceforge.net&gt;. </p>
-<h2>Index</h2>

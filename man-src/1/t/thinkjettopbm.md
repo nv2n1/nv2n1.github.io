@@ -20,4 +20,3 @@ description: "thinkjettopbm – convert HP ThinkJet printer commands file to PBM
 <p> <code><a href="/docs/linux/man/5-pbm/">pbm</a></code>(5), <code><a href="/docs/linux/man/1-pjtoppm/">pjtoppm</a></code>(1) </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 2001 by W. Eric Norum </p>
-<h2>Index</h2>

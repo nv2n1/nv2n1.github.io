@@ -177,4 +177,3 @@ $ apxs &#8211; g &#8211; n foo Creating[DIR] foo Creating[FILE] foo / Makefile C
       $ _
 </code></pre>
 <p>&nbsp;<wbr> </p>
-<h2>Index</h2>

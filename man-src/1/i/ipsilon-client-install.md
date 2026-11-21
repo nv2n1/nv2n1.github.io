@@ -71,4 +71,3 @@ description: "ipsilon-client-install – Configure an Ipsilon client"
 <p> 1 if an error occurred</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/7-ipsilon/">ipsilon</a>(7)</code> </p>
-<h2>Index</h2>

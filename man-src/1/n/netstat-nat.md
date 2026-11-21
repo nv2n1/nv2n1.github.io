@@ -52,4 +52,3 @@ description: "netstat-nat – Show the natted connections on a linux iptable fir
 <h2>AUTHOR</h2>
 <p> netstat-nat has been written by D.Wijsman danny [at] tweegy.nl<br />
  The manual page has been written by marceln [at] xs4all.nl </p>
-<h2>Index</h2>

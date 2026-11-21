@@ -127,4 +127,3 @@ description: "inputattach – attach a serial line to an input-layer device"
 <h2>AUTHORS</h2>
 <p> <code>inputattach</code> was written by Vojtech Pavlik and Arndt Schoenewald, and improved by many others; see the linuxconsole tools documentation for details. </p>
 <p> This manual page was written by Stephen Kitt &lt;steve [at] sk2.org&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

@@ -220,4 +220,3 @@ description: "yapet – text based password manager"
 <p> The latest version of <code>yapet</code> can be found under m[blue]<code><a rel="nofollow" href="http://www.guengel.ch/myapps/yapet/">http://www.guengel.ch/myapps/yapet/</a></code>m[].</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2008, 2009, 2010, 2011, 2013, 2014 Rafael Ostertag &lt;rafi [at] guengel.ch&gt; </p>
-<h2>Index</h2>

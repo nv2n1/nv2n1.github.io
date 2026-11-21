@@ -48,4 +48,3 @@ description: "ppmchange – change all pixels of one color to another in a porta
 <p> <code><a href="/docs/linux/man/1-pgmtoppm/">pgmtoppm</a></code>(1), <code><a href="/docs/linux/man/1-ppmcolormask/">ppmcolormask</a></code>(1), <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5) </p>
 <h2>AUTHOR</h2>
 <p> Wilson H. Bent. Jr. (whb [at] usc.edu) with modifications by Alberto Accomazzi (alberto [at] cfa.harvard.edu) </p>
-<h2>Index</h2>

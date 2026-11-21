@@ -20,4 +20,3 @@ description: "auparse_get_type_name – get record’s type translation"
 <p> <code><a href="/docs/linux/man/3-auparse_get_type/">auparse_get_type</a>(3),</code><a href="/docs/linux/man/3-auparse_next_record/">auparse_next_record</a>(3). </p>
 <h2>AUTHOR</h2>
 <p> Steve Grubb </p>
-<h2>Index</h2>

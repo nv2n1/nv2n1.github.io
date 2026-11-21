@@ -55,4 +55,3 @@ description: "pmsnap – generate performance summary snapshot images"
 <dd> example <code>crontab</code> entry</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>cron</code>(1), <code><a href="/docs/linux/man/1-crontab/">crontab</a></code>(1), <code><a href="/docs/linux/man/1-egrep/">egrep</a></code>(1), <code><a href="/docs/linux/man/1-pmchart/">pmchart</a></code>(1), <code><a href="/docs/linux/man/1-pmafm/">pmafm</a></code>(1), <code><a href="/docs/linux/man/1-pmlc/">pmlc</a></code>(1), <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1), <code>pmlogger_daily</code>(1), <code>X</code>(1), and <code><a href="/docs/linux/man/1-xvfb/">Xvfb</a></code>(1). </p>
-<h2>Index</h2>

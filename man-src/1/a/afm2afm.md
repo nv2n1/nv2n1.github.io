@@ -54,4 +54,3 @@ description: "afm2afm – reencode an afm file"
 <dt><i>2019-05-20</i></dt>
 <dd> Added the <i>-version</i> option. </dd>
 </dl>
-<h2>Index</h2>

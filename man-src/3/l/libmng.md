@@ -467,4 +467,3 @@ myretcode&nbsp;<wbr>=&nbsp;<wbr>mng_display_resume&nbsp;<wbr>(myhandle);<br />
 <h2>Remarks</h2>
 <p> Parts of this software have been adapted from the libpng library. Although this library supports all features from the PNG specification (as MNG descends from it) it does not require the libpng library. It does require the zlib library and optionally the IJG JPEG library, and/or the &quot;little-cms&quot; library by Marti Maria Saguer (depending on the inclusion of support for JNG and Full-Color-Management respectively. </p>
 <p> This library&#8217;s function is primarily to read and display MNG animations. It is not meant as a full-featured image-editing component! It does however offer creation and editing functionality at the chunk level. (future modifications may include some more support for creation and or editing) </p>
-<h2>Index</h2>

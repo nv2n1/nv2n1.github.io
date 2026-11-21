@@ -23,4 +23,3 @@ description: "zonetab2pot.py – Converts a timezone list to a PO file template.
 <p> This manual page was prepared by Ben Burton&lt;bab [at] debian.org&gt; </p>
 <h2>AUTHOR</h2>
 <p> Ben Burton. </p>
-<h2>Index</h2>

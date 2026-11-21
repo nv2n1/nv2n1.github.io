@@ -90,4 +90,3 @@ struct crypt_data {
 <p> <code>crypt_rn</code> and <code>crypt_ra</code> originate with the Openwall project.</p>
 <h2>SEE ALSO</h2>
 <p> crypt_gensalt3, <a href="/docs/linux/man/3-getpass/">getpass</a>(3), <a href="/docs/linux/man/3-getpwent/">getpwent</a>(3), <a href="/docs/linux/man/3-shadow/">shadow</a>(3), <a href="/docs/linux/man/1-login/">login</a>(1), <a href="/docs/linux/man/1-passwd/">passwd</a>(1), <a href="/docs/linux/man/5-crypt/">crypt</a>(5), <a href="/docs/linux/man/5-passwd/">passwd</a>(5), <a href="/docs/linux/man/5-shadow/">shadow</a>(5), <a href="/docs/linux/man/8-pam/">pam</a>(8) </p>
-<h2>Index</h2>

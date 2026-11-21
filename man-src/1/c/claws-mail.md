@@ -321,4 +321,3 @@ description: "Claws Mail – a GTK+ based fast email and news client"
 <dt>Claws Mail plugins</dt>
 <dd> &lt;<a rel="nofollow" href="http://www.claws-mail.org/plugins.php">http://www.claws-mail.org/plugins.php</a>&gt; </dd>
 </dl>
-<h2>Index</h2>

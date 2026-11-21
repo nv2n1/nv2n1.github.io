@@ -80,4 +80,3 @@ description: "vlna – adds tilde after each non-syllabic preposition"
  </dd></dl>
 <h2>AUTHORS</h2>
 <p> Petr Olsak &lt;olsak [at] math.feld.cvut.cz&gt;. Man page (Czech original) and Makefile is created by Rulolf Cejka </p>
-<h2>Index</h2>

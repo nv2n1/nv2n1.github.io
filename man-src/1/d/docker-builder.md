@@ -17,4 +17,3 @@ description: "docker-builder – Manage builds"
 <p> <code>-h</code>, <code>&#8211;help</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>help for builder</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker/">docker</a>(1)</code>, <code><a href="/docs/linux/man/1-docker-builder-build/">docker-builder-build</a>(1)</code>, <code><a href="/docs/linux/man/1-docker-builder-prune/">docker-builder-prune</a>(1)</code> </p>
-<h2>Index</h2>

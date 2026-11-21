@@ -55,4 +55,3 @@ description: "comm – compare two sorted files line by line"
 <p> <a href="/docs/linux/man/1-join/">join</a>(1), <a href="/docs/linux/man/1-uniq/">uniq</a>(1) </p>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/comm">https://www.gnu.org/software/coreutils/comm</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) comm invocation&#8217; </p>
-<h2>Index</h2>

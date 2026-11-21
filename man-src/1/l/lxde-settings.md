@@ -22,4 +22,3 @@ description: "lxde-settings — lightweight XSettings daemon for LXDE"
 &nbsp;<wbr> </p>
 <p> The source code of this manual page should be in <code>.sgml</code> format. It is better not to modify the <code>.1</code> file directly.<br />
 &nbsp;<wbr> </p>
-<h2>Index</h2>

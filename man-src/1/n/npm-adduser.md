@@ -75,4 +75,3 @@ npm adduser[--registry = url][--scope = @orgname][--always - auth][--auth - type
 <dd> npm help whoami </dd>
 </dl>
 </dl>
-<h2>Index</h2>

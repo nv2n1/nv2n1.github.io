@@ -48,4 +48,3 @@ description: "snmpget – communicates with a network entity using SNMP GET requ
 <p> With the <code>-Cf</code> flag specified the application will not try to fix the PDU for you.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1), <a href="/docs/linux/man/1-snmpwalk/">snmpwalk</a>(1), <a href="/docs/linux/man/5-variables/">variables</a>(5). </p>
-<h2>Index</h2>

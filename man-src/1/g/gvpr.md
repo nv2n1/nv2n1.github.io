@@ -646,4 +646,3 @@ N
 <p> Emden R. Gansner &lt;erg [at] research.att.com&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-awk/">awk</a>(1), <a href="/docs/linux/man/1-gc/">gc</a>(1), <a href="/docs/linux/man/1-dot/">dot</a>(1), <a href="/docs/linux/man/1-nop/">nop</a>(1), <a href="/docs/linux/man/3-expr/">expr</a>(3), <a href="/docs/linux/man/3-cgraph/">cgraph</a>(3) </p>
-<h2>Index</h2>

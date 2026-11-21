@@ -23,4 +23,3 @@ description: "pamendian – reverse endianness of a Netpbm image"
 <p> If you create a Netpbm image from a generic stream of samples, using <code>rawtopgm</code> or <code>rawtoppm</code>, use options on those programs to declare the endianness of your input, thus creating correct endianness in your PGM or PPM output. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pamdepth/">pamdepth</a></code>(1) , <code><a href="/docs/linux/man/1-rawtopgm/">rawtopgm</a></code>(1) , <code><a href="/docs/linux/man/1-rawtoppm/">rawtoppm</a></code>(1) , <code>pnm</code>(1) </p>
-<h2>Index</h2>

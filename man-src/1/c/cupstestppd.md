@@ -78,4 +78,3 @@ find.- name \*.ppd \!-exec cupstestppd - q '{}' \;
 <p> <code><a href="/docs/linux/man/8-lpadmin/">lpadmin</a></code>(8), CUPS Online Help (<a rel="nofollow" href="http://localhost:631/help">http://localhost:631/help</a>), Adobe PostScript Printer Description File Format Specification, Version 4.3.</p>
 <h2>COPYRIGHT</h2>
 <p> Copyright &#169; 2021-2022 by OpenPrinting. </p>
-<h2>Index</h2>

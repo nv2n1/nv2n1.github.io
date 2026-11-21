@@ -39,4 +39,3 @@ description: "mkdiskimage – Create a blank MS-DOS formatted hard disk image"
 <h2>AUTHOR</h2>
 <p> mkdiskimage was written by H. Peter Anvin &lt;<i>hpa [at] zytor.com</i>&gt;. </p>
 <p> This manual page was written by Mats Erik Andersson &lt;<i>debian [at] gisladisker.se</i>&gt;. </p>
-<h2>Index</h2>

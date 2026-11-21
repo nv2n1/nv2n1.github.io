@@ -24,4 +24,3 @@ description: "uxterm – X terminal emulator for Unicode (UTF-8) environments"
 <p> Thomas Dickey</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-locale/">locale</a>(1),</code> <code><a href="/docs/linux/man/7-locale/">locale</a>(7),</code> <code><a href="/docs/linux/man/1-koi8rxterm/">koi8rxterm</a>(1),</code> <code><a href="/docs/linux/man/1-xterm/">xterm</a>(1)</code> </p>
-<h2>Index</h2>

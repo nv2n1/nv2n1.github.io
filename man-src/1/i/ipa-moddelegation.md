@@ -29,4 +29,3 @@ description: "ipa-moddelegation – Modify an existing delegation"
 <p> 0 if the delegation was updated successfully </p>
 <p> 1 if an error occurred </p>
 <p> 2 if no matching delegation was found </p>
-<h2>Index</h2>

@@ -53,4 +53,3 @@ description: "emacsclient – tells a running Emacs to visit a file"
 <p> This manual page was written by Stephane Bortzmeyer &lt;bortzmeyer [at] debian.org&gt;, for the Debian GNU/Linux system (but may be used by others).</p>
 <h2>COPYING</h2>
 <p> This manual page is in the public domain. </p>
-<h2>Index</h2>

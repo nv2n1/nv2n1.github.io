@@ -59,4 +59,3 @@ description: "radeontop – tool to show GPU utilization"
 </dt><dd> Quit.</dd></dl>
 <h2>RESOURCES</h2>
 <p> See <a rel="nofollow" href="http://github.com/clbr/radeontop">http://github.com/clbr/radeontop</a> </p>
-<h2>Index</h2>

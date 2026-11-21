@@ -40,4 +40,3 @@ description: "xmag – magnify parts of the screen"
 <dd> This option indicates the magnification to be used. 5 is the default.</dd></dl>
 <h2>AUTHORS</h2>
 <p> Dave Sternlicht and Davor Matic, MIT X Consortium. </p>
-<h2>Index</h2>

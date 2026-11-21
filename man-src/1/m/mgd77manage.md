@@ -125,4 +125,3 @@ gmt mgd77manage =allmgd77.lis -Acm -Iigrf/&quot;IGRF reference \
 <p> IGRF, see <i><a rel="nofollow" href="http://www.ngdc.noaa.gov/IAGA/vmod/igrf.html">http://www.ngdc.noaa.gov/IAGA/vmod/igrf.html</a></i></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

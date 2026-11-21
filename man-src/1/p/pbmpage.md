@@ -36,4 +36,3 @@ description: "pbmpage – create a one page test pattern for printing"
 <h2>AUTHOR</h2>
 <p> Tim Norman. Copyright (C) 1998. Licensed under GNU Public License </p>
 <p> Manual page by Bryan Henderson, May 2000. </p>
-<h2>Index</h2>

@@ -27,4 +27,3 @@ description: "rdf2bin, rdf2com – convert an RDOFF object file to flat binary"
 <p> This manual page was written by Matej Vela &lt;vela [at] debian.org&gt;.</p>
 <h2>BUGS</h2>
 <p> This utility currently only supports the classic segments <i>.text</i>, <i>.data</i> and <i>.bss</i>. </p>
-<h2>Index</h2>

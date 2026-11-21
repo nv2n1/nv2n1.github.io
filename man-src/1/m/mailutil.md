@@ -83,4 +83,3 @@ description: "mailutil – mail utility program"
 <p> You must surround a <i>#driver.format/mailbox</i> argument with quotation marks if you run <code>mailutil</code> from a shell in which &quot;#&quot; is the comment character.</p>
 <h2>AUTHOR</h2>
 <p> Mark Crispin, MRC [at] Washington.EDU </p>
-<h2>Index</h2>

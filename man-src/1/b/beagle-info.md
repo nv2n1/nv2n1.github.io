@@ -47,4 +47,3 @@ description: "beagle-info"
 <p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-beagled/">beagled</a></code>(1), <code><a href="/docs/linux/man/8-beagle-index-info/">beagle-index-info</a></code>(8), <code><a href="/docs/linux/man/1-beagle-ping/">beagle-ping</a></code>(1), <code><a href="/docs/linux/man/1-beagle-status/">beagle-status</a></code>(1), <code><a rel="nofollow" href="http://beagle-project.org">http://beagle-project.org</a></code> </p>
-<h2>Index</h2>

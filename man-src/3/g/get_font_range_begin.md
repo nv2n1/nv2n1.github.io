@@ -24,4 +24,3 @@ description: "get_font_range_begin – Returns the start of a character range in
 <p> Returns the first character in the font range, or -1 if that information is not available. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-get_font_ranges/">get_font_ranges</a></code>(3), <code><a href="/docs/linux/man/3-get_font_range_end/">get_font_range_end</a></code>(3), <code><a href="/docs/linux/man/3-transpose_font/">transpose_font</a></code>(3) </p>
-<h2>Index</h2>

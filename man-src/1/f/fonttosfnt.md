@@ -35,4 +35,3 @@ description: "fonttosfnt – Wrap a bitmap font in a sfnt (TrueType) wrapper"
 <p> <a href="/docs/linux/man/7-x/">X</a>(7), <a href="/docs/linux/man/1-xserver/">Xserver</a>(1), Xft(3x). <i>Fonts in X11.</i></p>
 <h2>AUTHOR</h2>
 <p> The version of <code>Fonttosfnt</code> included in this X.Org Foundation release was originally written by Juliusz Chroboczek &lt;jch [at] freedesktop.org&gt; for the XFree86 project. </p>
-<h2>Index</h2>

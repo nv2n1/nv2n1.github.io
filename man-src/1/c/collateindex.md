@@ -58,4 +58,3 @@ description: "collateindex.pl – generate DocBook index files"
 <h2>AUTHOR</h2>
 <p> Norm Walsh &lt;ndw [at] nwalsh.com&gt; </p>
 <p> Minor updates by Adam Di Carlo &lt;adam [at] onshore.com&gt; and Peter Eisentraut &lt;peter_e [at] gmx.net&gt; </p>
-<h2>Index</h2>

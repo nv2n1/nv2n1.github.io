@@ -188,4 +188,3 @@ bundledoc-- config = texlive - unix.cfg-- verbose-- localonly-- exclude =.fd-- e
 <p> <code><a href="/docs/linux/man/1-arlatex/">arlatex</a></code>(1), <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1), <code><a href="/docs/linux/man/1-kpsewhich/">kpsewhich</a></code>(1), <code><a href="/docs/linux/man/1-latex/">latex</a></code>(1), <code><a href="/docs/linux/man/1-perl/">perl</a></code>(1), <code><a href="/docs/linux/man/1-zip/">zip</a></code>(1), the <code>snapshot</code> documentation</p>
 <h2>AUTHOR</h2>
 <p> Scott Pakin, <i>scott+bdoc [at] pakin.org</i> </p>
-<h2>Index</h2>

@@ -26,4 +26,3 @@ description: "sponge – soak up standard input and write to a file"
 </dt><dd> Replace the file with a new file that contains the file&#8217;s original content, with the standard input appended to it. This is done atomically when possible.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Colin Watson and Tollef Fog Heen </p>
-<h2>Index</h2>

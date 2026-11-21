@@ -37,4 +37,3 @@ description: "ruptime – show host status of local machines"
 <p> rup(1), <a href="/docs/linux/man/1-rwho/">rwho</a>(1), <a href="/docs/linux/man/1-uptime/">uptime</a>(1), <a href="/docs/linux/man/8-rwhod/">rwhod</a>(8)</p>
 <h2>HISTORY</h2>
 <p> <code>Ruptime</code> appeared in BSD 4.2 </p>
-<h2>Index</h2>

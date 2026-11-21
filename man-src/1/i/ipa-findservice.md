@@ -28,4 +28,3 @@ description: "ipa-findservice – Find a service principal"
 <p> 0 if one or more entries were found </p>
 <p> 1 if an error occurred </p>
 <p> 2 if no matching entries were found </p>
-<h2>Index</h2>

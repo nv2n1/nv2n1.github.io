@@ -76,4 +76,3 @@ require DBD::mysql;
 <p> The DBI::ProxyServer module is free software; you can redistribute it and/or modify it under the same terms as Perl itself. In particular permission is granted to Tim Bunce for distributing this as a part of the <font SIZE="-1">DBI.</font></p>
 <h2>SEE ALSO</h2>
 <p> DBI::ProxyServer, DBD::Proxy, <font SIZE="-1">DBI</font> </p>
-<h2>Index</h2>

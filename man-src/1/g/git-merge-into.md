@@ -45,4 +45,3 @@ A-- - B-- - C src(current) / D-- - E-- - F-- - G-- - H dest
 <p> &lt;<i><a rel="nofollow" href="https://github.com/tj/git-extras/issues">https://github.com/tj/git-extras/issues</a></i>&gt;</p>
 <h2>SEE ALSO</h2>
 <p> &lt;<i><a rel="nofollow" href="https://github.com/tj/git-extras">https://github.com/tj/git-extras</a></i>&gt; </p>
-<h2>Index</h2>

@@ -1134,4 +1134,3 @@ EndSection
 <p> Copyright &#169; 2010-2011 Ingo Ruhnke &lt;grumbel [at] gmail.com&gt; License GPLv3+: GNU GPL version 3 or later &lt;<a rel="nofollow" href="http://gnu.org/licenses/gpl.html">http://gnu.org/licenses/gpl.html</a>&gt; . This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by law.</p>
 <h2>SEE ALSO</h2>
 <p> <code>xboxdrvctl</code>(1), <code><a href="/docs/linux/man/1-evtest/">evtest</a></code>(1), <code><a href="/docs/linux/man/1-jstest/">jstest</a></code>(1), <code>jstest-gtk</code>(1), <code><a href="/docs/linux/man/1-xev/">xev</a></code>(1), <code><a href="/docs/linux/man/1-fftest/">fftest</a></code>(1), <code>lsusb</code>(1) </p>
-<h2>Index</h2>

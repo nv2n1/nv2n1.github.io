@@ -31,4 +31,3 @@ description: "tiffmedian – apply the median cut algorithm to data in a TIFF fi
 <p> <code><a href="/docs/linux/man/1-pal2rgb/">pal2rgb</a></code>(1), <code><a href="/docs/linux/man/1-tiffinfo/">tiffinfo</a></code>(1), <code><a href="/docs/linux/man/1-tiffcp/">tiffcp</a></code>(1), <code><a href="/docs/linux/man/1-tiffcmp/">tiffcmp</a></code>(1), <code>libtiff</code>(3TIFF) </p>
 <p> <code>Color Image Quantization for Frame Buffer Display,</code> Paul Heckbert, SIGGRAPH proceedings, 1982, pp. 297-307. </p>
 <p> Libtiff library home page: <code><a rel="nofollow" href="http://www.remotesensing.org/libtiff/">http://www.remotesensing.org/libtiff/</a></code> </p>
-<h2>Index</h2>

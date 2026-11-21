@@ -81,4 +81,3 @@ uux 'sys1!uucp ~user1/file1 (sys2!~user2/file2)'
 <p> Too many jobids are output by <code>&#8211;jobid,</code> and there is no good way to cancel a local execution requiring remote files.</p>
 <h2>AUTHOR</h2>
 <p> Ian Lance Taylor (ian [at] airs.com) </p>
-<h2>Index</h2>

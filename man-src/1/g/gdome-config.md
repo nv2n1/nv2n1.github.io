@@ -30,4 +30,3 @@ description: "gdome-config – script to get information about the installed ver
 <dd> Print a short help text and exit.</dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was added by Enrico Zini &lt;zinie [at] cs.unibo.it&gt; for the Debian GNU/Linux system (but may be used by others). The page was made editing the manpage written by Fredrik Hallenberg &lt;hallon [at] lysator.liu.se&gt; for the libxml2 Debian GNU/Linux package. </p>
-<h2>Index</h2>

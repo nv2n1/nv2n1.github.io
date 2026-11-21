@@ -798,4 +798,3 @@ long pony = *(long *)p; /* BAD */</p>
 <p> which will expand the macros using cpp. Don&#8217;t be scared by the results.  </p>
 <h2>AUTHOR</h2>
 <p> This document was originally written by Nathan Torkington, and is maintained by the perl5-porters mailing list. </p>
-<h2>Index</h2>

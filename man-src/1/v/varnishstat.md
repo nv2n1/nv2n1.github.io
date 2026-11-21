@@ -130,4 +130,3 @@ description: "varnishstat – Varnish Cache statistics"
 <dt>&bull;</dt>
 <dd> Copyright (c) 2006-2014 Varnish Software AS </dd>
 </dl>
-<h2>Index</h2>

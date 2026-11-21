@@ -19,4 +19,3 @@ description: "yuvtoppm – convert Abekas YUV bytes into a portable pixmap"
 <p> Marc Boucher &lt;marc [at] PostImage.COM&gt;, based on Example Conversion Program, A60/A64 Digital Video Interface Manual, page 69. </p>
 <p> Copyright (C) 1991 by DHD PostImage Inc. </p>
 <p> Copyright (C) 1987 by Abekas Video Systems Inc. </p>
-<h2>Index</h2>

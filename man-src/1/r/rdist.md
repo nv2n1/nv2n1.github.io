@@ -302,4 +302,3 @@ $TMPDIR/rdist* - temporary file for update lists
 <p> Variable expansion only works for name lists; there should be a general macro facility. </p>
 <p> <i>Rdist</i> aborts on files which have a negative mtime (before Jan 1, 1970). </p>
 <p> If a hardlinked file is listed more than once in the same target, then <i>rdist </i> will report missing links. Only one instance of a link should be listed in each target. </p>
-<h2>Index</h2>

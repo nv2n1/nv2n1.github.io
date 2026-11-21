@@ -47,4 +47,3 @@ description: "cgclassify – move running task(s) to given cgroups"
 </dl>
 <h2>SEE ALSO</h2>
 <p> cgrules.conf (5), cgexec (1) </p>
-<h2>Index</h2>

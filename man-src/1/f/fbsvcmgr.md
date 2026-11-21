@@ -109,4 +109,3 @@ present in ibase.h becomes-- -- -- -- -- -- -- -- -- -- -- -- - -- -- -- -- -- -
 <h2>AUTHOR</h2>
 <p> Alex Peshkov, &#8220;peshkoff at mail.ru&#8221; </p>
 <p> This manual page was written by Damyan Ivanov dmn [at] debian.org for the Debian project. Permission is granted to use this document, with or without modifications, provided that this notice is retained. If we meet some day, and you think this stuff is worth it, you can buy me a beer in return. </p>
-<h2>Index</h2>

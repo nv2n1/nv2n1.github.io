@@ -37,4 +37,3 @@ description: "grub-mount – export GRUB filesystem with FUSE"
 <dt>
 </dt><dd> <code>info grub-mount</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

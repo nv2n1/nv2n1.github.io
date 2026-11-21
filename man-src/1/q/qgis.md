@@ -72,4 +72,3 @@ description: "qgis – QGIS Geographic Information System"
 <p> See the QGIS home page (<a rel="nofollow" href="http://qgis.org)">http://qgis.org)</a> for a list of known issues with the latest release.</p>
 <h2>AUTHOR</h2>
 <p> Gary Sherman &lt;sherman at mrcc.com&gt; </p>
-<h2>Index</h2>

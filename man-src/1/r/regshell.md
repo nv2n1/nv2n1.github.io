@@ -125,4 +125,3 @@ HKEY_CURRENT_USER\AppEvents&gt; <code>exit</code>
 <dt>
 </dt><dd> <a rel="nofollow" href="http://www.samba.org/samba/team/">http://www.samba.org/samba/team/</a></dd></dl>
 </dl>
-<h2>Index</h2>

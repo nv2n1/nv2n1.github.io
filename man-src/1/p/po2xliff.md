@@ -36,4 +36,3 @@ description: "po2xliff – Convert Gettext PO localization files to XLIFF locali
 <dt>-S/&#8211;timestamp</dt>
 <dd> skip conversion if the output file has newer timestamp </dd>
 </dl>
-<h2>Index</h2>

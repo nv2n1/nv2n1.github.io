@@ -40,4 +40,3 @@ description: "texlinks – maintain symbolic links from format to engine"
 <h2>AUTHOR</h2>
 <p> <code>texlinks</code> was written by Thomas Esser &lt;te [at] dbs.uni-hannover.de&gt; in 1999. <code>texlinks</code> has been released into the public domain. </p>
 <p> This manual page was written by C.M. Connelly &lt;c@eskimo.com&gt;, for the Debian GNU/Linux system. It may be used by other distributions without contacting the author. Any mistakes or omissions in the manual page are my fault; inquiries about or corrections to this manual page should be directed to me (and not to the primary author). </p>
-<h2>Index</h2>

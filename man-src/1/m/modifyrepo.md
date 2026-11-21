@@ -31,4 +31,3 @@ Luke Macken&lt;lmacken[at] redhat.com&gt;
 </code></pre>
 <h2>BUGS</h2>
 <p> Any bugs which are found should be emailed to the mailing list: rpm-metadata [at] lists.baseurl.org </p>
-<h2>Index</h2>

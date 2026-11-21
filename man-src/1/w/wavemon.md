@@ -69,4 +69,3 @@ description: "wavemon – a wireless network monitor"
 <p> This is free software with ABSOLUTELY NO WARRANTY. See file COPYING for details.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-wavemonrc/">wavemonrc</a></code>(5), <code><a href="/docs/linux/man/7-wireless/">wireless</a></code>(7), <code><a href="/docs/linux/man/5-ethers/">ethers</a></code>(5), <code><a href="/docs/linux/man/1-locale/">locale</a></code>(1), <code><a href="/docs/linux/man/7-capabilities/">capabilities</a></code>(7) </p>
-<h2>Index</h2>

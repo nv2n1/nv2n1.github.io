@@ -51,4 +51,3 @@ description: "UnRTF – converts document in RTF format to other formats"
 <h2>WEBSITE</h2>
 <h2>NOTES</h2>
 <p> Report bugs in the program to <a rel="nofollow" href="http://savannah.gnu.org/projects/unrtf/">http://savannah.gnu.org/projects/unrtf/</a> </p>
-<h2>Index</h2>

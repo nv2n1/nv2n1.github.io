@@ -21,4 +21,3 @@ description: "xapian-check – Check the consistency of a database or table"
 <dt>
 </dt><dd> xapian-check /var/lib/xapian/data/default/postlist fbv </dd>
 </dl>
-<h2>Index</h2>

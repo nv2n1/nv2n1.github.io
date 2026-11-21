@@ -62,4 +62,3 @@ description: "samunlock – unlock users in the SAM user database"
 <h2>AUTHOR</h2>
 <p> This program was written by Adrian Gibanel Lopez. </p>
 <p> This manual page was written by Adrian Gibanel Lopez &lt;adrian15sgd [at] gmail.com&gt;, for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

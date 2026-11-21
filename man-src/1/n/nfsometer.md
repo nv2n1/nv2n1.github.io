@@ -163,4 +163,3 @@ description: "nfsometer – NFS performance measurement tool"
 <p> No known bugs.</p>
 <h2>AUTHOR</h2>
 <p> Weston Andros Adamson (dros [at] netapp.com) </p>
-<h2>Index</h2>

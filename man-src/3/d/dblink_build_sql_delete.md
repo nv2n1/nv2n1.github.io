@@ -48,4 +48,3 @@ SELECT dblink_build_sql_delete('"MyFoo"', '1 2', 2, '{"1", "b"}');
 dblink_build_sql_delete-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -DELETE FROM "MyFoo" WHERE f1 = '1' AND f2 = 'b'(1 row)
 </code></pre>
 </dd></dl>
-<h2>Index</h2>

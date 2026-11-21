@@ -151,4 +151,3 @@ node1$ docker network create-- config - only-- subnet 192.168.100.0 / 24 --gatew
 <p> <code>&#8211;subnet</code>=[] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Subnet in CIDR format that represents a network segment</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-network/">docker-network</a>(1)</code> </p>
-<h2>Index</h2>

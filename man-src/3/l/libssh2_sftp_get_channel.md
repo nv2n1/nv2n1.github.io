@@ -24,4 +24,3 @@ description: "libssh2_sftp_get_channel – return the channel of sftp"
 <p> Added in 1.4.0</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_sftp_init/">libssh2_sftp_init</a>(3)</code> </p>
-<h2>Index</h2>

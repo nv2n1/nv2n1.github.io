@@ -90,4 +90,3 @@ description: "msgconv – character set conversion for message catalog"
 <dt>
 </dt><dd> <code>info msgconv</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

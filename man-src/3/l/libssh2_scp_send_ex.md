@@ -37,4 +37,3 @@ libssh2_scp_send_ex(LIBSSH2_SESSION *session, const char *path, int mode,
 &nbsp;<wbr><i><a href="/docs/linux/man/3-libssh2_scp_send64/">libssh2_scp_send64</a>(3)</i>&nbsp;<wbr>has been introduced to replace this function.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_channel_open_ex/">libssh2_channel_open_ex</a>(3)</code> </p>
-<h2>Index</h2>

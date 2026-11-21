@@ -24,4 +24,3 @@ description: "pic2tpic – Convert pic files to tpic format"
 <p> Micah Beck<br />
  Cornell University </p>
 <p> Man page by George Ferguson, ferguson [at] cs.rochester.edu. </p>
-<h2>Index</h2>

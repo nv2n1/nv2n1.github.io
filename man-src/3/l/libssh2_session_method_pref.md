@@ -25,4 +25,3 @@ description: "libssh2_session_method_pref – set preferred key exchange method"
 <p> <i>LIBSSH2_ERROR_METHOD_NOT_SUPPORTED</i> &#8211; The requested method is not supported. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_session_init_ex/">libssh2_session_init_ex</a>(3)</code> <code>libssh2_session_handshake(3)</code> </p>
-<h2>Index</h2>

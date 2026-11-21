@@ -35,4 +35,3 @@ description: "kazehakase – Gecko based web browser using GTK"
 <p> On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL. </p>
 <h2>AUTHOR</h2>
 <p> Hidetaka Iwai. </p>
-<h2>Index</h2>

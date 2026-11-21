@@ -28,4 +28,3 @@ description: "oddjob_request – send requests to oddjobd from the command line"
 <dd> Default to the method and interface names used for D-Bus introspection (<i>Introspect</i> and <i>org.freedesktop.DBus.Introspectable</i>, respectively).</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-oddjob-conf/">oddjob.conf</a></code>(5) <code><a href="/docs/linux/man/5-oddjobd-conf/">oddjobd.conf</a></code>(5) <code><a href="/docs/linux/man/8-oddjobd/">oddjobd</a></code>(8) </p>
-<h2>Index</h2>

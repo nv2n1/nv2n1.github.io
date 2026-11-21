@@ -273,4 +273,3 @@ description: "fswebcam – Small and simple webcam for *nix."
 <p> <code> <a href="/docs/linux/man/1-ncftpput/">ncftpput</a>(1), <a href="/docs/linux/man/3-strftime/">strftime</a>(3) </code> </p>
 <h2>AUTHOR</h2>
 <p> Written by Philip Heron &lt;phil [at] sanslogic.co.uk&gt;. </p>
-<h2>Index</h2>

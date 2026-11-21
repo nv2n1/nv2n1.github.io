@@ -287,4 +287,3 @@ description: "rrdcached – Data caching daemon for rrdtool"
 <p> Both <code>rrdcached</code> and this manual page have been written by Florian.</p>
 <h2>CONTRIBUTORS</h2>
 <p> kevin brintnall &lt;kbrint [at] rufus.net&gt; </p>
-<h2>Index</h2>

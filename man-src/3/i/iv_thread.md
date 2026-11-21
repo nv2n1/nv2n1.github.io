@@ -21,4 +21,3 @@ description: "iv_thread_create, iv_thread_set_debug_state – ivykis thread conv
 <p> For inter-thread signaling, <code>iv_thread</code> uses <code>iv_event</code>(3). </p>
 <h2>SEE ALSO</h2>
 <p> <code>ivykis</code>(3), <code>iv_event</code>(3), <code><a href="/docs/linux/man/3-exit/">exit</a></code>(3), <code><a href="/docs/linux/man/3-pthread_cancel/">pthread_cancel</a></code>(3), <code><a href="/docs/linux/man/3-pthread_create/">pthread_create</a></code>(3), <code><a href="/docs/linux/man/3-pthread_exit/">pthread_exit</a></code>(3) </p>
-<h2>Index</h2>

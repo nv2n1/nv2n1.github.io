@@ -23,4 +23,3 @@ description: "plugreport – a program to read all MPR/PCR registers from all de
 <p> On Debian systems, the complete text of the GNU General Public License can be found in /usr/share/common-licenses/GPL. </p>
 <h2>AUTHOR</h2>
 <p> Marcio Teixeira. </p>
-<h2>Index</h2>

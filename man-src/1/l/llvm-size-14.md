@@ -49,4 +49,3 @@ description: "llvm-size – manual page for llvm-size 14"
 <dd>
 </dd><dd>When format is darwin, use long format to include addresses and offsets</dd></dl>
 <p> Pass @FILE as argument to read options from FILE. </p>
-<h2>Index</h2>

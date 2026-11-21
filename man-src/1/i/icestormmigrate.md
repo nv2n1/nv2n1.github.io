@@ -16,4 +16,3 @@ description: "icestormmigrate – Utility for migration of IceStorm database."
  &quot;<a rel="nofollow" href="http://doc.zeroc.com/display/Ice/Upgrading+your+Application+from+Ice+3.2+or+Earlier+Releases">http://doc.zeroc.com/display/Ice/Upgrading+your+Application+from+Ice+3.2+or+Earlier+Releases</a>&quot;. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-icestormadmin/">icestormadmin</a></code>(1) </p>
-<h2>Index</h2>

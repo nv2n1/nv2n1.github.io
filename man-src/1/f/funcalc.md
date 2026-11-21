@@ -240,4 +240,3 @@ cur-&gt;avg : E = (cur-&gt;x + cur-&gt;y) / 2.0;
 <p> Finally, note that <code>funcalc</code> currently works on expressions involving <font SIZE="-1">FITS</font> binary tables and raw event files. We will consider adding support for image expressions at a later point, if there is demand for such support from the community.</p>
 <h2>SEE ALSO</h2>
 <p> See funtools(n) for a list of Funtools help pages </p>
-<h2>Index</h2>

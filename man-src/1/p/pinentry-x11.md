@@ -40,4 +40,3 @@ description: "pinentry-gnome3 – PIN or pass-phrase entry dialog for GnuPG"
 <p> should give you access to the complete manual.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Daniel Kahn Gillmor for the Debian project, adapted from other pinentry manual pages written by Peter Eisentraut. </p>
-<h2>Index</h2>

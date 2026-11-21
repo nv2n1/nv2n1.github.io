@@ -39,4 +39,3 @@ description: "mate-screenshot – capture the screen, a window, or an user-defin
 <h2>AUTHOR</h2>
 <p> This manual page was written by Christian Marillat &lt;marillat [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others). </p>
 <p> Updated by Theppitak Karoonboonyanan &lt;thep [at] linux.thai.net&gt;, Tom Feiner &lt;feiner.tom [at] gmail.com&gt; and Cosimo Cecchi &lt;cosimoc [at] gnome.org&gt; </p>
-<h2>Index</h2>

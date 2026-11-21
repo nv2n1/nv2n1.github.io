@@ -43,4 +43,3 @@ description: "nemo – the Cinnamon File Manager"
 <dd></dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was originally written for Nautilus by Takuo KITAME &lt;kitame [at] debian.org&gt; and Dafydd Harries &lt;daf [at] muse.19inch.net&gt; for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

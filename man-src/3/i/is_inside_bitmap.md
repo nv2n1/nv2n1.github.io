@@ -16,4 +16,3 @@ description: "is_inside_bitmap – Tells if a point is inside a bitmap. Allegro 
 <p> Returns non-zero if point (x, y) lies inside the bitmap. If `clip&#8217; is non-zero, the function compares the coordinates with the clipping rectangle, that is it returns non-zero if the point lies inside the clipping rectangle or if clipping is disabled for the bitmap. If `clip&#8217; is zero, the function compares the coordinates with the actual dimensions of the bitmap. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-set_clip_rect/">set_clip_rect</a></code>(3), <code><a href="/docs/linux/man/3-set_clip_state/">set_clip_state</a></code>(3), <code><a href="/docs/linux/man/3-getpixel/">getpixel</a></code>(3) </p>
-<h2>Index</h2>

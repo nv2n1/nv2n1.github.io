@@ -31,4 +31,3 @@ description: "mate-invest-chart — tool to set CPU frequency"
 <h2>AUTHOR</h2>
 <p> <code>mate-invest-chart</code>, as part of mate-applets (derived from gnome-applets), has been written by Raphael Slinckx and other GNOME/MATE contributors. </p>
 <p> This <code>mate-invest-chart</code> manual page has been written by Mike Gabriel &lt;mike.gabriel [at] das-netzwerkteam.de&gt; for the <code>Debian</code> system (but may be used by others. </p>
-<h2>Index</h2>

@@ -15,4 +15,3 @@ description: "ldif_read_file_state –"
 <p> size_t <code>line_no</code> </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LDB from the source code. </p>
-<h2>Index</h2>

@@ -41,4 +41,3 @@ description: "foomatic-ppdfile – Generate a PPD file for a given printer/drive
 <p> None so far. </p>
 <p> Please post bug reports on </p>
 <p> <a rel="nofollow" href="http://lists.freestandards.org/mailman/listinfo/printing-foomatic">http://lists.freestandards.org/mailman/listinfo/printing-foomatic</a> </p>
-<h2>Index</h2>

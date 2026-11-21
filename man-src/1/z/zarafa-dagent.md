@@ -176,4 +176,3 @@ description: "zarafa-dagent – Deliver mails to Zarafa."
 <p> Written by Zarafa.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-zarafa-server/">zarafa-server</a></code>(1)<code><a href="/docs/linux/man/5-zarafa-dagent-cfg/">zarafa-dagent.cfg</a></code>(5) </p>
-<h2>Index</h2>

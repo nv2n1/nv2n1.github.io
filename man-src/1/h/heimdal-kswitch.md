@@ -31,4 +31,3 @@ description: "kswitch – switch between default credential caches"
 </dd><dd>print version</dd>
 <dt> &#8211;<code>-help</code></dt>
 <dd></dd></dl>
-<h2>Index</h2>

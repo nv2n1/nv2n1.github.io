@@ -100,4 +100,3 @@ description: "echoping – tests a remote host with TCP or UDP"
 </dl>
 <h2>AUTHOR</h2>
 <p> Stephane Bortzmeyer &lt;bortz [at] users.sourceforge.net&gt; </p>
-<h2>Index</h2>

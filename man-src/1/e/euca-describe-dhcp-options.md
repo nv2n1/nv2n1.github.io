@@ -57,4 +57,3 @@ description: "euca-describe-dhcp-options – Show information about VPC DHCP opt
 <dt>value</dt>
 <dd> value for one of the options </dd>
 </dl>
-<h2>Index</h2>

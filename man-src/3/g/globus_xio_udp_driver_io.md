@@ -22,4 +22,3 @@ description: "Reading/Writing – globus_xio_register_read() semantics:"
 <p> The udp write semantics are always synchronous. No blocking or internal callback will occur when using <code>globus_xio_write()</code>. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_xio from the source code. </p>
-<h2>Index</h2>

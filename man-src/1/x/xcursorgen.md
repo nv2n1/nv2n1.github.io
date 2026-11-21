@@ -27,4 +27,3 @@ description: "xcursorgen – create an X cursor file from a collection of PNG im
 <dd> Find cursor images in the directory specified by <i>dir</i>. If not specified, the current directory is used.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-xcursor/">Xcursor</a>(3) </p>
-<h2>Index</h2>

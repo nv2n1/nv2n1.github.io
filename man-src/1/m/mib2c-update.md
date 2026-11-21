@@ -18,4 +18,3 @@ description: "mib2c-update – script to merge custom code into updated mib2c co
 <p> Additional mib2c options can be specified in UPDATE_MIB2C_OPTS. </p>
 <h2>BUGS</h2>
 <p> mib2c-update has only been tested on individual tables. Specifying a scalar or and entire MIB might not work. </p>
-<h2>Index</h2>

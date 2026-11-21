@@ -123,4 +123,3 @@ XClock  xclock
 <p> Tony Della Fera (MIT-Athena, DEC)<br />
  Dave Mankins (MIT-Athena, BBN)<br />
  Ed Moy (UC Berkeley) </p>
-<h2>Index</h2>

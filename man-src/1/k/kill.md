@@ -46,4 +46,3 @@ description: "kill – send a signal to a process"
 <p> Albert Cahalan wrote kill in 1999 to replace a bsdutils one that was not standards compliant. The util-linux one might also work correctly.</p>
 <h2>REPORTING BUGS</h2>
 <p> Please send bug reports to </p>
-<h2>Index</h2>

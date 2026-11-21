@@ -47,4 +47,3 @@ description: "retrace-server-interact – use Retrace server’s chroot for inte
 <dt>
 </dt><dd> mailto:_mtoman [at] redhat.com_</dd></dl>
 </dl>
-<h2>Index</h2>

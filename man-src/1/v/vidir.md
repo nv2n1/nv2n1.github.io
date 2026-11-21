@@ -38,4 +38,3 @@ description: "vidir – edit directories and filenames"
 <h2>AUTHOR</h2>
 <p> Copyright 2006 by Joey Hess &lt;id [at] joeyh.name&gt; </p>
 <p> Licensed under the <font SIZE="-1">GNU GPL.</font> </p>
-<h2>Index</h2>

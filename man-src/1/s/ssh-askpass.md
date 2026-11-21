@@ -24,4 +24,3 @@ description: "gnome-ssh-askpass – prompts a user for a passphrase using GNOME"
 <p> Regardless of whether either of these environment variables is set, <code>gnome-ssh-askpass</code> will grab the keyboard using <i>gdk_keyboard_grab</i>().</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Colin Watson &lt;cjwatson [at] debian.org&gt; for the Debian system (but may be used by others). It was based on that for <code>x11-ssh-askpass</code> by Philip Hands. </p>
-<h2>Index</h2>

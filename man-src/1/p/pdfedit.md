@@ -54,4 +54,3 @@ description: "pdfedit – Editor for PDF files"
 &nbsp;<wbr> <code>fr</code> <code>&#8211; French</code><br />
 &nbsp;<wbr> <code>zh_TW</code> <code>&#8211; Chinese (traditional)</code><br />
 &nbsp;<wbr> </p>
-<h2>Index</h2>

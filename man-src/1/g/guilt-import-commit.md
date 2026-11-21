@@ -40,4 +40,3 @@ description: "guilt-import-commit – Import one or more commits as patches"
 <dt>
 </dt><dd> mailto:jeffpc [at] josefsipek.net</dd></dl>
 </dl>
-<h2>Index</h2>

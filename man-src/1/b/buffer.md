@@ -57,4 +57,3 @@ description: "buffer – very fast reblocking program"
 <p> Copyright (C) 1990, 1991 by Lee McLoughlin.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-dd/">dd</a>(1), <a href="/docs/linux/man/1-tar/">tar</a>(1), <a href="/docs/linux/man/1-rsh/">rsh</a>(1) </p>
-<h2>Index</h2>

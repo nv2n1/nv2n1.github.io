@@ -44,4 +44,3 @@ description: "ibv_srq_pingpong – simple InfiniBand shared receive queue test"
 </dl>
 <h2>BUGS</h2>
 <p> The network synchronization between client and server instances is weak, and does not prevent incompatible options from being used on the two instances. The method used for retrieving work completions is not strictly correct, and race conditions may cause failures on some systems. </p>
-<h2>Index</h2>

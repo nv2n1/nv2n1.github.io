@@ -88,4 +88,3 @@ c5db5456ae3b0873fc659c19fafdde22313cc441        refs/tags/v0.99.2
 <p> <code><a href="/docs/linux/man/1-git-check-ref-format/">git-check-ref-format</a></code>(1).</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

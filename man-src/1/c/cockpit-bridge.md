@@ -47,4 +47,3 @@ description: "cockpit-bridge – Cockpit Host Bridge"
 <dt>
 </dt><dd> <a rel="nofollow" href="https://github.com/cockpit-project/cockpit/">https://github.com/cockpit-project/cockpit/</a></dd></dl>
 </dl>
-<h2>Index</h2>

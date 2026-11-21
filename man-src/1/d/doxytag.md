@@ -22,4 +22,3 @@ description: "doxytag – generates a tag file and/or a search index for a set o
 <p> If no HTML files are given all files in the current dir that have a .html extension are parsed.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-doxygen/">doxygen</a>(1), <a href="/docs/linux/man/1-doxywizard/">doxywizard</a>(1). </p>
-<h2>Index</h2>

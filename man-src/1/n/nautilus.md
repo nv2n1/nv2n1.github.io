@@ -35,4 +35,3 @@ description: "nautilus – a file manager for GNOME"
 <p> For further information, visit the website <a rel="nofollow" href="https://wiki.gnome.org/Apps/Nautilus">https://wiki.gnome.org/Apps/Nautilus</a> </p>
 <h2>BUGS</h2>
 <p> Bug reports can be found and filed at <a rel="nofollow" href="https://gitlab.gnome.org/GNOME/nautilus/issues">https://gitlab.gnome.org/GNOME/nautilus/issues</a> </p>
-<h2>Index</h2>

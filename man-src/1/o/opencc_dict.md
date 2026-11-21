@@ -22,4 +22,3 @@ description: "opencc_dict – open chinese convert dictionary tool"
 <p> Open Chinese Convert (OpenCC) Dictionary Tool</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-opencc/">opencc</a></code>(1) </p>
-<h2>Index</h2>

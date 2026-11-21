@@ -23,4 +23,3 @@ description: "ql/termstructures/bootstraphelper.hpp – base helper class used f
 <p> base helper class used for bootstrapping </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

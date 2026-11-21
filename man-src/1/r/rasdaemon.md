@@ -32,4 +32,3 @@ description: "rasdaemon – RAS daemon to log the RAS events."
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-ras-mc-ctl/">ras-mc-ctl</a></code>(8) </p>
-<h2>Index</h2>

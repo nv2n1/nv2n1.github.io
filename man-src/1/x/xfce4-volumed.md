@@ -31,4 +31,3 @@ description: "xfce4-volumed – Pulseaudio volume keys daemon for the Xfce deskt
 <dt><code>&#8211;display</code>=<i>DISPLAY</i></dt>
 <dd> X display to use</dd></dl>
 <p> Please report bugs to &lt;<a rel="nofollow" href="http://bugs.launchpad.net/xfce4-volumed-pulse">http://bugs.launchpad.net/xfce4-volumed-pulse</a>&gt;. </p>
-<h2>Index</h2>

@@ -43,4 +43,3 @@ description: "bashbug – report a bug in bash"
 <p> <code><a href="/docs/linux/man/1-bash/">bash</a></code>(1), <code>reportbug</code>(1), <code>update-alternatives</code>(8) for preferred editor.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Christer Andersson &lt;klamm [at] comhem.se&gt; for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

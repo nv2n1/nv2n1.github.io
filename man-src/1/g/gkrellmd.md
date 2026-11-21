@@ -115,4 +115,3 @@ description: "gkrellmd – The GNU Krell Monitors Server"
 </dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Bill Wilson &lt;billw [at] gkrellm.net&gt;. <a rel="nofollow" href="http://www.gkrellm.net/">http://www.gkrellm.net/</a> </p>
-<h2>Index</h2>

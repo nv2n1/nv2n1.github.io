@@ -22,4 +22,3 @@ description: "traptoemail – snmptrapd handler script to convert snmp traps int
 <dt><code>ADDRESSES</code></dt>
 <dd> recipient addresses </dd>
 </dl>
-<h2>Index</h2>

@@ -80,4 +80,3 @@ description: "mftrace – convert METAFONT format fonts into Type1 outline fonts
 <p> <code><a href="/docs/linux/man/1-mf/">mf</a></code>(1), <code><a href="/docs/linux/man/1-autotrace/">autotrace</a></code>(1), <code><a href="/docs/linux/man/1-potrace/">potrace</a></code>(1), <code><a href="/docs/linux/man/1-fontforge/">fontforge</a></code>(1).</p>
 <h2>AUTHOR</h2>
 <p> <code>mftrace</code> was written by Han-Wen Nienhuys &lt;hanwen [at] xs4all.nl&gt;. This manual page was originally written by Julian Gilbey &lt;jdg [at] debian.org&gt; and has been revised by Werner Lemberg &lt;wl [at] gnu.org&gt;. </p>
-<h2>Index</h2>

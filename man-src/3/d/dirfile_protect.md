@@ -41,4 +41,3 @@ description: "dirfile_protect — modify the protection level of a dirfile fragm
 <p> This is the only GetData function which ignores the (existing) protection level of a format file fragment.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-dirfile_open/">dirfile_open</a></code>(3), <code><a href="/docs/linux/man/3-getdata/">getdata</a></code>(3), <code><a href="/docs/linux/man/3-get_error/">get_error</a></code>(3), <code><a href="/docs/linux/man/3-get_error_string/">get_error_string</a></code>(3), <code><a href="/docs/linux/man/3-get_protection/">get_protection</a></code>(3), <code><a href="/docs/linux/man/5-dirfile/">dirfile</a></code>(5), <code><a href="/docs/linux/man/5-dirfile-format/">dirfile-format</a></code>(5) </p>
-<h2>Index</h2>

@@ -142,4 +142,3 @@ page_specification : = single_page | page_range
 <h2>AUTHOR</h2>
 <p> Primarily Mark A. Wicks; dvipdfmx extensions primarily by Jin-Hwan Cho, Shunsaku Hirata, and Matthias Franz. For the version in TeX Live, please send bugs and other reports to the maintainers at dvipdfmx (at) tug.org (<a rel="nofollow" href="https://lists.tug.org/dvipdfmx">https://lists.tug.org/dvipdfmx</a>). </p>
 <p> This man page edited for TeX Live by Bob Tennent and others. This man page is public domain. </p>
-<h2>Index</h2>

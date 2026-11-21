@@ -1000,4 +1000,3 @@ Alphabetic:<br />
 <p> &lt;<a rel="nofollow" href="http://www.unicode.org/reports/tr44/">http://www.unicode.org/reports/tr44/</a>&gt; </p>
 <p> perlrecharclass </p>
 <p> perlunicode </p>
-<h2>Index</h2>

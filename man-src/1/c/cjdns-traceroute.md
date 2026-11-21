@@ -33,4 +33,3 @@ description: "cjdns-traceroute — trace cjdns packet routing"
 <p> Cjdns-traceroute throws an ugly exception if you forget to pass an IP or have the wrong admin password.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-cjdroute/">cjdroute</a>(1) </p>
-<h2>Index</h2>

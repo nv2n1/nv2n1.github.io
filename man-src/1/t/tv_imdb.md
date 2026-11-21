@@ -63,4 +63,3 @@ description: "tv_imdb – Augment XMLTV listings files with imdb.com data."
 <p> <i>xmltv</i>(5)</p>
 <h2>AUTHOR</h2>
 <p> Jerry Veldhuis, jerry [at] matilda.com </p>
-<h2>Index</h2>

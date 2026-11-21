@@ -30,4 +30,3 @@ description: "pamtopnm – convert PAM image to PBM, PGM, or PPM"
 <p> <code><a href="/docs/linux/man/1-pbmtopgm/">pbmtopgm</a></code>(1) , <code><a href="/docs/linux/man/1-pamditherbw/">pamditherbw</a></code>(1) , <code><a href="/docs/linux/man/1-pgmtoppm/">pgmtoppm</a></code>(1) , <code><a href="/docs/linux/man/1-ppmtopgm/">ppmtopgm</a></code>(1) , <code>pam</code>(1) , <code>pnm</code>(1) , <code>pbm</code>(1) , <code>pgm</code>(1) , <code>ppm</code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>pamtopnm</code> was new, along with the PAM format, in Netpbm 9.7 (August 2000). </p>
-<h2>Index</h2>

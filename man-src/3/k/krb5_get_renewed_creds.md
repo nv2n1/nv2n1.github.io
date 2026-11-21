@@ -51,4 +51,3 @@ int getcred(krb5_context context, krb5_ccache id, krb5_creds **creds)
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/3-krb5/">krb5</a>(3), krb5_get_forwarded_creds3, krb5.conf5 </p>
-<h2>Index</h2>

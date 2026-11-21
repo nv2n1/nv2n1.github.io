@@ -216,4 +216,3 @@ description: "gs – Ghostscript (PostScript and PDF language interpreter and pr
 <p> This document was last revised for Ghostscript version 9.55.0.</p>
 <h2>AUTHOR</h2>
 <p> Artifex Software, Inc. are the primary maintainers of Ghostscript. Russell J. Lang, gsview at ghostgum.com.au, is the author of most of the MS Windows code in Ghostscript. </p>
-<h2>Index</h2>

@@ -29,4 +29,3 @@ description: "convcard – converts a vCard version 2.1 in a vCard version 3.0 a
 <h2>AUTHORS</h2>
 <p> This manual page was written for the Debian GNU/Linux project by Matthias Jahn &lt;jahn.matthias [at] freenet.de&gt;. But it may be used by other distributions. </p>
 <p> convcard was written by Armin Bauer and the OpenSync project </p>
-<h2>Index</h2>

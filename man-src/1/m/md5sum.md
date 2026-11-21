@@ -56,4 +56,3 @@ description: "md5sum – compute and check MD5 message digest"
 <h2>SEE ALSO</h2>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/md5sum">https://www.gnu.org/software/coreutils/md5sum</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) md5sum invocation&#8217; </p>
-<h2>Index</h2>

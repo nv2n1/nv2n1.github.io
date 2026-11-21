@@ -19,4 +19,3 @@ description: "pcp-uptime – tell how long the system has been running"
 <p> <code>pcp-uptime</code> is inspired by the <code><a href="/docs/linux/man/1-uptime/">uptime</a></code>(1) command and aims to be command line and output compatible with it.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pcp/">pcp</a></code>(1), <code><a href="/docs/linux/man/1-uptime/">uptime</a></code>(1), <code><a href="/docs/linux/man/1-pcpintro/">PCPIntro</a></code>(1) and <code><a href="/docs/linux/man/7-environ/">environ</a></code>(7). </p>
-<h2>Index</h2>

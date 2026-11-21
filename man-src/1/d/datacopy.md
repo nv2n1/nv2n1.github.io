@@ -46,4 +46,3 @@ description: "datacopy – move table data between two servers"
 <p> first appeared in FreeTDS 0.64.</p>
 <h2>AUTHORS</h2>
 <p>&nbsp;<wbr>The&nbsp;<wbr> utility was written by An Bill Thompson Aq thompbil [at] exchange.uk.ml.com . </p>
-<h2>Index</h2>

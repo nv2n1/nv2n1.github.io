@@ -29,4 +29,3 @@ description: "fail2ban-testcases – run Fail2Ban unit-tests"
 <dd> Either to make the tracebacks full, not compressed (as by default)</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-fail2ban-client/">fail2ban-client</a>(1) <a href="/docs/linux/man/1-fail2ban-server/">fail2ban-server</a>(1) <a href="/docs/linux/man/1-fail2ban-regex/">fail2ban-regex</a>(1) </p>
-<h2>Index</h2>

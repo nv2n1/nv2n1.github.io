@@ -29,4 +29,3 @@ description: "djvutxt – Extract the hidden text from DjVu documents."
 <p> This program was initially written by Andrei Erofeev &lt;andrew_erofeev [at] yahoo.com&gt; and was then improved Bill Riemers &lt;docbill [at] sourceforge.net&gt; and many others. It was then rewritten to use the ddjvuapi by Leon Bottou &lt;leonb [at] sourceforge.net&gt;. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-djvu/">djvu</a></code>(1), <code><a href="/docs/linux/man/1-djvused/">djvused</a></code>(1) </p>
-<h2>Index</h2>

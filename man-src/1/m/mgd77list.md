@@ -261,4 +261,3 @@ gmt mgd77list `cat cruises.lis` -Flon,lat,mag,faa -Af2,4 -Am2 &gt; data.d
 <p> IGRF, see <i><a rel="nofollow" href="http://www.ngdc.noaa.gov/IAGA/vmod/igrf/">http://www.ngdc.noaa.gov/IAGA/vmod/igrf/</a></i></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

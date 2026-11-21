@@ -1597,4 +1597,3 @@ description: "mwm — The Motif Window Manager"
 <p> <code>$HOME/.mwmrc</code></p>
 <h3>RELATED INFORMATION</h3>
 <p> <code><a href="/docs/linux/man/3-vendorshell/">VendorShell</a></code>(3), <code><a href="/docs/linux/man/3-virtualbindings/">VirtualBindings</a></code>(3), <code>X</code>(1), <code><a href="/docs/linux/man/3-xminstallimage/">XmInstallImage</a></code>(3), <code><a href="/docs/linux/man/1-xrdb/">xrdb</a></code>(1). </p>
-<h2>Index</h2>

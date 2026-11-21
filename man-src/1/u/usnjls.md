@@ -41,4 +41,3 @@ description: "usnjls – List the contents of a NTFS Update Sequence Number jour
 <h2>AUTHOR</h2>
 <p> Brian Carrier &lt;carrier at sleuthkit dot org&gt; </p>
 <p> Send documentation updates to &lt;doc-updates at sleuthkit dot org&gt; </p>
-<h2>Index</h2>

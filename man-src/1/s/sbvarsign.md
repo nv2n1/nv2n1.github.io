@@ -32,4 +32,3 @@ description: "sbvarsign – UEFI authenticated variable signing tool"
 <dt><code>&#8211;output</code> &lt;file&gt;</dt>
 <dd> write signed data to &lt;file&gt; (default &lt;var-data-file&gt;.signed) </dd>
 </dl>
-<h2>Index</h2>

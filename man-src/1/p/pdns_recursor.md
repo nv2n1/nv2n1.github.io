@@ -177,4 +177,3 @@ description: "pdns_recursor – high-performance, simple and secure recursing na
 <p> <a href="/docs/linux/man/1-rec_control/">rec_control</a>(1)</p>
 <h2>AUTHORS</h2>
 <p> PowerDNS.COM BV. </p>
-<h2>Index</h2>

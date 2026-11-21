@@ -27,4 +27,3 @@ description: "docker-context-update – Update a context"
 <p> <code>&#8211;kubernetes</code>=[] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>set the kubernetes endpoint</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-context/">docker-context</a>(1)</code> </p>
-<h2>Index</h2>

@@ -16,4 +16,3 @@ description: "tracker-needle – GNOME user interface similar to tracker-search"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tracker-search/">tracker-search</a></code>(1), <code><a href="/docs/linux/man/1-tracker-sparql/">tracker-sparql</a></code>(1), <code><a href="/docs/linux/man/1-tracker-store/">tracker-store</a></code>(1), </p>
 <p> <code><a rel="nofollow" href="http://live.gnome.org/Tracker/SupportedFormats">http://live.gnome.org/Tracker/SupportedFormats</a></code> </p>
-<h2>Index</h2>

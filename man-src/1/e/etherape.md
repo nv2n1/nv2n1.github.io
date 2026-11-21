@@ -47,4 +47,3 @@ description: "etherape – graphical network traffic browser"
 <p> The etherape webpage is at <a rel="nofollow" href="http://etherape.sourceforge.net/">http://etherape.sourceforge.net/</a> </p>
 <h2>AUTHOR</h2>
 <p> Juan Toledo &lt;toledo [at] users.sourceforge.net&gt; </p>
-<h2>Index</h2>

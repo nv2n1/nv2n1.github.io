@@ -88,4 +88,3 @@ description: "dpa – DNS Packet Analyzer. Analyze DNS packets in ip trace files
 <p> Report bugs to &lt;jelte [at] nlnetlabs.nl&gt;. </p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2005 NLnet Labs. This is free software. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
-<h2>Index</h2>

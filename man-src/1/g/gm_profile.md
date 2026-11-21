@@ -36,4 +36,3 @@ url: "/docs/linux/man/1-gm_profile/"
  Hamish Bowman, University of Otago, Dunedin, New Zealand </p>
 <p> <i>Last changed: $Date: 2007-11-18 21:17:33 +0100 (Sun, 18 Nov 2007) $</i> </p>
 <p> Full index </p>
-<h2>Index</h2>

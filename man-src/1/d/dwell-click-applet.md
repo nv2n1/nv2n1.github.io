@@ -21,4 +21,3 @@ description: "dwell-click-applet – Useful to select click type when using dwel
 <p> Licenced under the GNU General Public License v3 or later.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mousetweaks/">mousetweaks</a></code>(1), <code><a href="/docs/linux/man/1-pointer-capture-applet/">pointer-capture-applet</a></code>(1), Assistive Technology Service Provider Interface (AT-SPI) </p>
-<h2>Index</h2>

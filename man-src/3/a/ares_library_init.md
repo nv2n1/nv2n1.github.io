@@ -43,4 +43,3 @@ int ares_library_init(int flags)
 <p> Yang Tse </p>
 <p> Copyright 1998 by the Massachusetts Institute of Technology.<br />
  Copyright (C) 2004-2009 by Daniel Stenberg. </p>
-<h2>Index</h2>

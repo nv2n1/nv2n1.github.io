@@ -30,4 +30,3 @@ description: "tsort – perform topological sort"
 <h2>SEE ALSO</h2>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/tsort">https://www.gnu.org/software/coreutils/tsort</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) tsort invocation&#8217; </p>
-<h2>Index</h2>

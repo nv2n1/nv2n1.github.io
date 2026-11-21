@@ -61,4 +61,3 @@ darktable - cli IMG_1234.{RAW, ...}[&lt;xmp file&gt;]&lt;output file&gt;[options
 <h2>COPYRIGHT AND LICENSE</h2>
 <p> <code>Copyright (C)</code> 2009-2015 by Authors. </p>
 <p> <code>darktable</code> is free software; you can redistribute it and/or modify it under the terms of the <font SIZE="-1">GPL</font> v3 or (at your option) any later version. </p>
-<h2>Index</h2>

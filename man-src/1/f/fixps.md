@@ -52,4 +52,3 @@ description: "fixps – sanitize PostScript files"
 <dt>
 </dt><dd> <code>info fixps</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

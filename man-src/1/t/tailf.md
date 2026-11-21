@@ -31,4 +31,3 @@ description: "tailf – follow the growth of a log file"
 <p> <code><a href="/docs/linux/man/1-tail/">tail</a></code>(1), <code><a href="/docs/linux/man/1-less/">less</a></code>(1)</p>
 <h2>AVAILABILITY</h2>
 <p> The tailf command is part of the util-linux package and is available from <a href="ftp://ftp.kernel.org/pub/linux/utils/util-linux/.">ftp://ftp.kernel.org/pub/linux/utils/util-linux/.</a> </p>
-<h2>Index</h2>

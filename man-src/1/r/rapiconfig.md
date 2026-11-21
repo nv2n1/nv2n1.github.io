@@ -40,4 +40,3 @@ description: "rapiconfig – upload an XML config file to a SynCE connected devi
 <p> David Eriksson &lt;twogood [at] users.sourceforge.net&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> synce(1) </p>
-<h2>Index</h2>

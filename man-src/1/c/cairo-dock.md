@@ -107,4 +107,3 @@ description: "cairo-dock – A dock to launch your programs easily."
 <p>&nbsp;<wbr>&nbsp;<wbr><a rel="nofollow" href="https://bugs.launchpad.net/cairo-dock">https://bugs.launchpad.net/cairo-dock</a> </p>
 <h2>WEBSITE</h2>
 <p> &lt; <code><a rel="nofollow" href="http://glx-dock.org">http://glx-dock.org</a></code> &gt; </p>
-<h2>Index</h2>

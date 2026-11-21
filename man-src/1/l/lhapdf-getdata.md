@@ -51,4 +51,3 @@ description: "lhapdf-getdata – Get PDF sets from the LHAPDF repository"
 <dd> lhapdf-getdata <code>&#8211;all</code></dd></dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Lifeng Sun &lt;lifongsun [at] gmail.com&gt; for the Debian system (but may be used by others). </p>
-<h2>Index</h2>

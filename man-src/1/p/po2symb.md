@@ -38,4 +38,3 @@ description: "po2symb – Convert Gettext PO localization files to Symbian trans
 <dt>&#8211;duplicates</dt>
 <dd> what to do with duplicate strings (identical source text): merge, msgctxt (default: &#8216;msgctxt&#8217;) </dd>
 </dl>
-<h2>Index</h2>

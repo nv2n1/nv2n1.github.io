@@ -70,4 +70,3 @@ description: "josm – Java OpenStreetMap Editor"
 <p> Stefan Breunig David Earl Gabriel Ebner Dave Hansen Paul Hartmann Karl Guggisberg Matthias Julius Alexei Kasatkin Jiri Klement Ulf Lamping Simon Legner Raphael Mack Upliner Mikhalych Vincent Privat Frederik Ramm Dirk Stöcker </p>
 <p> Many minor contributions and patches by others; see SVN history at <a rel="nofollow" href="http://josm.openstreetmap.de/svn/">http://josm.openstreetmap.de/svn/</a> for details. Use &quot;josm-dev AT openstreetmap.org&quot; to contact still active authors. The logo has been designed by Ilya Palikov. </p>
 <p> This manual page was initially written by Andreas Putzo &lt;andreas [at] putzo.net&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

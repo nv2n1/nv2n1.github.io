@@ -34,4 +34,3 @@ description: "Monte Carlo framework –"
 <p> This framework (corresponding to the ql/MonteCarlo directory) contains basic building blocks for Monte Carlo simulations.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

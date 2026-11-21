@@ -12,4 +12,3 @@ description: "Reading/Writing – Ordering driver does not allow multiple globus
 <p> <code>globus_xio_register_write()</code> does not enforce any restriction. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_xio from the source code. </p>
-<h2>Index</h2>

@@ -102,4 +102,3 @@ C2 is DOUBLE PRECISION array, dimension(LDC, N) if SIDE = 'L'(LDC, N - 1) if SID
 <p> Definition at line 152 of file dlatzm.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

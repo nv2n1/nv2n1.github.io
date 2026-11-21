@@ -47,4 +47,3 @@ $ docker images
 <p> <code><a href="/docs/linux/man/1-docker-save/">docker-save</a>(1)</code> to save one or more images to a tar archive (streamed to STDOUT by default). </p>
 <h2>HISTORY</h2>
 <p> April 2014, Originally compiled by William Henry (whenry at redhat dot com) based on docker.com source material and internal work. June 2014, updated by Sven Dowideit &lt;SvenDowideit [at] home.org.au&gt; July 2015 update by Mary Anthony &lt;mary [at] docker.com&gt; June 2016 update by Vincent Demeester &lt;vincent [at] sbr.pm&gt; </p>
-<h2>Index</h2>

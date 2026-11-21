@@ -109,4 +109,3 @@ description: "gperf – generate a perfect hash function from a key set"
 <dt>
 </dt><dd> <code>info gperf</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

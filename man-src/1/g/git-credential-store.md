@@ -66,4 +66,3 @@ $ git config credential.helper store
 <p> When Git needs authentication for a particular URL context, credential-store will consider that context a pattern to match against each entry in the credentials file. If the protocol, hostname, and username (if we already have one) match, then the password is returned to Git. See the discussion of configuration in <code><a href="/docs/linux/man/7-gitcredentials/">gitcredentials</a></code>(7) for more information.</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

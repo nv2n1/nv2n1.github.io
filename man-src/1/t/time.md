@@ -131,4 +131,3 @@ description: "time – run programs and summarize system resource usage"
 <p> <code>time</code> was written by David MacKenzie. This man page was added by Dirk Eddelbuettel &lt;edd [at] debian.org&gt;, the Debian GNU/Linux maintainer, for use by the Debian GNU/Linux distribution but may of course be used by others. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tcsh/">tcsh</a></code>(1), <code><a href="/docs/linux/man/3-printf/">printf</a></code>(3) </p>
-<h2>Index</h2>

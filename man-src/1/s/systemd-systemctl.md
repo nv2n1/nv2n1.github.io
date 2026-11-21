@@ -355,4 +355,3 @@ description: "systemctl, systemd-systemctl – Control the systemd system and se
 <dl>
 <dt>
 </dt><dd> Developer</dd></dl>
-<h2>Index</h2>

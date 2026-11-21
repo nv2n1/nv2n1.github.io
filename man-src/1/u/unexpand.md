@@ -40,4 +40,3 @@ description: "unexpand – convert spaces to tabs"
 <p> <a href="/docs/linux/man/1-expand/">expand</a>(1) </p>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/unexpand">https://www.gnu.org/software/coreutils/unexpand</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) unexpand invocation&#8217; </p>
-<h2>Index</h2>

@@ -253,4 +253,3 @@ description: "xcscope.el – xemacs cscope lisp support package"
 <dd> color) is `cscope-line-face&#8217;. </dd>
 <p> 3. The support for cscope databases different from that specified by `cscope-database-file&#8217; is quirky. If the file does not exist, it will not be auto-created (unlike files names by `cscope-database-file&#8217;). You can manually force the file to be created by using <a href="/docs/linux/man/1-touch/">touch</a>(1) to create a zero-length file; the database will be created the next time a search is done. </p>
 </dl>
-<h2>Index</h2>

@@ -41,4 +41,3 @@ description: "euca-disassociate-route-table – Disassociate a VPC subnet from a
 <dt><code>-h</code>, <code>&#8211;help</code></dt>
 <dd> show this help message and exit </dd>
 </dl>
-<h2>Index</h2>

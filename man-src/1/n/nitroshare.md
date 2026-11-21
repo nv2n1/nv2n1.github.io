@@ -13,4 +13,3 @@ description: "nitroshare – launches the NitroShare application"
 <p> <code>nitroshare</code> [options]</p>
 <h2>DESCRIPTION</h2>
 <p> <code>NitroShare</code> is a cross-platform application for sharing files over a local network. Each device on the network with NitroShare installed can instantly transfer files and directories to other devices. </p>
-<h2>Index</h2>

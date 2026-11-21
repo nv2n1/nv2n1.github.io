@@ -97,4 +97,3 @@ if
 not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111 - 1307 USA
 </code></pre>
 <p> <i></i>$Id:<i> bashdb-man.pod,v 1.10 2009/06/22 22:41:10 rockyb Exp $</i> </p>
-<h2>Index</h2>

@@ -52,4 +52,3 @@ IEEE Floating-Point
 </dd></dl>
 <p> For more information please consult the GSL Reference Manual, which is available as an info file. You can read it online using the shell command <code>info gsl-ref </code> (if the library is installed). </p>
 <p> Please report any bugs to <code>bug-gsl [at] gnu.org.</code> </p>
-<h2>Index</h2>

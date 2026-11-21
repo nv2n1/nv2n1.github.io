@@ -83,4 +83,3 @@ description: "trafshow – full screen show network traffic"
 <h2>BUGS</h2>
 <p> Depending of traffic volume, <code>TrafShow</code> can take a lot of CPU cycles and memory.<br />
  It is impossible to use packet matching <code>expressions</code> in the NetFlow mode. </p>
-<h2>Index</h2>

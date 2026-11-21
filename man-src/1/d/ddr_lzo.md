@@ -75,4 +75,3 @@ description: "ddr_lzo – Data de/compression plugin for dd_rescue"
 <p> ddr_lzo plugin was first introduced with dd_rescue 1.43 (May 2014). </p>
 <p> Some additional information can be found on<br />
  <a rel="nofollow" href="http://garloff.de/kurt/linux/ddrescue/">http://garloff.de/kurt/linux/ddrescue/</a> </p>
-<h2>Index</h2>

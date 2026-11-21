@@ -38,4 +38,3 @@ description: "pocompile – Compile XLIFF and Gettext PO localization files into
 <dt>&#8211;nofuzzy</dt>
 <dd> don&#8217;t use translations marked fuzzy (default) </dd>
 </dl>
-<h2>Index</h2>

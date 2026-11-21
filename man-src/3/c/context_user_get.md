@@ -36,4 +36,3 @@ description: "context_new, context_str, context_free, context_type_get, context_
 <p> On failure <i>errno</i> is set appropriately.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8) </p>
-<h2>Index</h2>

@@ -42,4 +42,3 @@ description: "me-tv – a digital television (DVB) viewer for GNOME"
 <p> Michael Lamothe (2007-2010) &lt;michael.lamothe [at] gmail.com&gt;. </p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2010 Michael Lamothe &lt;michael.lamothe [at] gmail.com&gt;. </p>
-<h2>Index</h2>

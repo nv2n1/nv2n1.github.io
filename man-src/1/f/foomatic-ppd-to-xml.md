@@ -49,4 +49,3 @@ description: "foomatic-ppd-to-xml – Generate Foomatic printer XML from a PPD"
 <p> None so far. </p>
 <p> Please post bug reports on </p>
 <p> <a rel="nofollow" href="http://lists.freestandards.org/mailman/listinfo/printing-foomatic">http://lists.freestandards.org/mailman/listinfo/printing-foomatic</a> </p>
-<h2>Index</h2>

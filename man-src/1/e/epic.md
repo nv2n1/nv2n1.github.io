@@ -135,4 +135,3 @@ description: "epic – Internet Relay Chat client for UNIX like systems"
 <h2>AUTHORS</h2>
 <p> Program written by Michael Sandrof (ms5n+ [at] andrew.cmu.edu). The copyright holder is Matthew Green (mrg [at] mame.mu.oz.au). This software is maintained by Jeremy Nelson (jnelson [at] acronet.net) on behalf of the EPIC project (list [at] epicsol.org). </p>
 <p> At one time or another, this man page has been edited by Darren Reed, R.P.C. Rodgers, the lynX, Matthew Green, and Jeremy Nelson. </p>
-<h2>Index</h2>

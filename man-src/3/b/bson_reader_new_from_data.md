@@ -28,4 +28,3 @@ bson_reader_new_from_data (const uint8_t *data,
 <p> A newly allocated <code>bson_reader_t</code> \&amp;. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

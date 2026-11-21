@@ -31,4 +31,3 @@ description: "unlink – call the unlink function to remove the specified file"
 <p> <a href="/docs/linux/man/2-unlink/">unlink</a>(2) </p>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/unlink">https://www.gnu.org/software/coreutils/unlink</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) unlink invocation&#8217; </p>
-<h2>Index</h2>

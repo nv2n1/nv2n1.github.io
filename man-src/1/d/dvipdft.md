@@ -27,4 +27,3 @@ description: "dvipdft – create thumbnail images for use with dvipdfm"
 <h2>AUTHOR</h2>
 <p> <code>dvipdft</code> was written by Mark A. Wicks and Thomas Esser. </p>
 <p> This manual page was written by Frank K&uuml;ster &lt;frank [at] kuesterei.ch&gt;, for the Debian GNU/Linux system. It may be used by others without contacting the author. Any mistakes or omissions in the manual page are my fault; inquiries about or corrections to this manual page should be directed to me (and not to the primary author). </p>
-<h2>Index</h2>

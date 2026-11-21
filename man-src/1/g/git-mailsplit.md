@@ -58,4 +58,3 @@ git mailsplit[-b][-f&lt;nn&gt;][-d&lt;prec&gt;][--keep - cr][--mboxrd] - o&lt;di
 </dt><dd> Input is of the &quot;mboxrd&quot; format and &quot;^&gt;+From &quot; line escaping is reversed.</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

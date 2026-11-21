@@ -36,4 +36,3 @@ description: "grab_vcsa – Linux console vcsa grabber"
 </dl>
 <h2>AUTHOR</h2>
 <p> Daniel Mantione &lt;daniel.mantione [at] freepascal.org&gt; </p>
-<h2>Index</h2>

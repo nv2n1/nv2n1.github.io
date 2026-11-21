@@ -113,4 +113,3 @@ description: "dccp – Copy a file from or to a dCache server."
 </dt><dd> [user] $ dccp /acs/user_space/data_arch.tar &#8211; | tar xf &#8211;</dd></dl>
 <h2>See also</h2>
 <p> cp </p>
-<h2>Index</h2>

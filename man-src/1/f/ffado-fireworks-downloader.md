@@ -48,4 +48,3 @@ description: "ffado-fireworks-downloader – firmware download application for E
 </dl>
 <h2>NOTES</h2>
 <p> Manipulating firmware can cause your device to stop working. The FFADO project accepts no responsibility if this occurs as a result of using this tool. </p>
-<h2>Index</h2>

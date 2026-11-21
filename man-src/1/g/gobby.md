@@ -23,4 +23,3 @@ description: "gobby – a collaborative text editor"
 <dd> Files passed on the command line will be opened within Gobby. If there is already a Gobby instance running they will be opened therein, otherwise a new hosted session will be created automatically.</dd></dl>
 <h2>AUTHOR</h2>
 <p> <code>gobby</code> was written by the 0x539 dev group &lt;crew [at] 0x539.de&gt;. </p>
-<h2>Index</h2>

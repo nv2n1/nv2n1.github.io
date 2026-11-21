@@ -34,4 +34,3 @@ bson_json_reader_read (bson_json_reader_t *reader,
 <p> 1 if successful and data was read. 0 if successful and no data was read. -1 if there was an error. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

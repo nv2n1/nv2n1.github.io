@@ -38,4 +38,3 @@ description: "xkill – kill a client by its X resource"
 <h2>AUTHOR</h2>
 <p> Jim Fulton, MIT X Consortium<br />
  Dana Chee, Bellcore </p>
-<h2>Index</h2>

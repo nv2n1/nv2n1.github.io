@@ -45,4 +45,3 @@ description: "proofgeneral – manual page for proofgeneral ()"
 <dt>
 </dt><dd> <code>info proofgeneral</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

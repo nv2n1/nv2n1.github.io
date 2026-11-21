@@ -47,4 +47,3 @@ $
 <p> Flat text files must be sorted in the &quot;C&quot; locale. In some systems the default locale may result in case-insensitive sorting by the sort command.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-sort/">sort</a>(1) </p>
-<h2>Index</h2>

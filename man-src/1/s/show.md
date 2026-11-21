@@ -64,4 +64,3 @@ description: "show – show (display) messages"
 <dl>
 <dt>
 </dt><dd> show 2&gt;&amp;1 | imprint &amp;</dd></dl>
-<h2>Index</h2>

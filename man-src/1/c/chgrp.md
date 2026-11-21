@@ -63,4 +63,3 @@ description: "chgrp – change group ownership"
 <p> <a href="/docs/linux/man/1-chown/">chown</a>(1), <a href="/docs/linux/man/2-chown/">chown</a>(2) </p>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/chgrp">https://www.gnu.org/software/coreutils/chgrp</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) chgrp invocation&#8217; </p>
-<h2>Index</h2>

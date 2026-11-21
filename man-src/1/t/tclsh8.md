@@ -55,4 +55,3 @@ exec tclsh &quot;$0&quot; ${1+&quot;$@&quot;}</code>
 <p> auto_path(3tcl), encoding(3tcl), env(3tcl), fconfigure(3tcl)</p>
 <h2>KEYWORDS</h2>
 <p> application, argument, interpreter, prompt, script file, shell </p>
-<h2>Index</h2>

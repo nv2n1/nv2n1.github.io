@@ -229,4 +229,3 @@ description: "Heimdal Kerberos 5 deprecated functions –"
 </dt><dd> Return an error code or 0.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for HeimdalKerberos5library from the source code. </p>
-<h2>Index</h2>

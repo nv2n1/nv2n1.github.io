@@ -42,4 +42,3 @@ Always issue this text.&lt; ? xmlif if condition = 'html' ? &gt;
 <dl>
 <dt>
 </dt><dd> Author of xmlif program</dd></dl>
-<h2>Index</h2>

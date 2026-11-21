@@ -170,4 +170,3 @@ if (status == 0)
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libdlm/">libdlm</a></code>(3), <code><a href="/docs/linux/man/3-dlm_unlock/">dlm_unlock</a></code>(3), <code><a href="/docs/linux/man/3-dlm_open_lockspace/">dlm_open_lockspace</a></code>(3), <code><a href="/docs/linux/man/3-dlm_create_lockspace/">dlm_create_lockspace</a></code>(3), <code><a href="/docs/linux/man/3-dlm_close_lockspace/">dlm_close_lockspace</a></code>(3), <code><a href="/docs/linux/man/3-dlm_release_lockspace/">dlm_release_lockspace</a></code>(3) </p>
-<h2>Index</h2>

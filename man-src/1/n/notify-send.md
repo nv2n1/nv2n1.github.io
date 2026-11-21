@@ -55,4 +55,3 @@ description: "notify-send – a program to send desktop notifications"
 <dl>
 <dt>
 </dt><dd> Original author</dd></dl>
-<h2>Index</h2>

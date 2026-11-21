@@ -17,4 +17,3 @@ description: "midi_loop_start, midi_loop_end – Loop start and end points, set 
 <p> The loop start and end points, set by the play_looped_midi() function. These may safely be altered while the music is playing, but you should be sure they are always set to sensible values (start &lt; end). If you are changing them both at the same time, make sure to alter them in the right order in case a MIDI interrupt happens to occur in between your two writes! Setting these values to -1 represents the start and end of the file respectively. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-play_looped_midi/">play_looped_midi</a></code>(3) </p>
-<h2>Index</h2>

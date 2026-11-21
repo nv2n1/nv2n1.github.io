@@ -232,4 +232,3 @@ DORCSD computes the CS decomposition of an M - by - M partitioned orthogonal mat
 <p> Definition at line 297 of file dorcsd.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

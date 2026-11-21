@@ -489,4 +489,3 @@ Xedit  xedit
 <h2>AUTHORS</h2>
 <p> Chris D. Peterson, MIT X Consortium<br />
  Paulo Cesar Pereira de Andrade, The XFree86 Project </p>
-<h2>Index</h2>

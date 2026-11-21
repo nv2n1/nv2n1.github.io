@@ -35,4 +35,3 @@ description: "gnutls_openpgp_crt_get_subkey_revoked_status – API function"
 <dl>
 <dt><a rel="nofollow" href="http://www.gnutls.org/manual/">http://www.gnutls.org/manual/</a></dt>
 <dd> </code></dd></dl>
-<h2>Index</h2>

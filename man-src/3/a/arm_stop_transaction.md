@@ -49,4 +49,3 @@ description: "arm_stop_transaction – stop transaction"
 <p> None.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-arm_bind_thread/">arm_bind_thread</a></code>(3), <code><a href="/docs/linux/man/3-arm_block_transaction/">arm_block_transaction</a></code>(3), <code><a href="/docs/linux/man/3-arm_start_transaction/">arm_start_transaction</a></code>(3), <code><a href="/docs/linux/man/3-arm_unbind_thread/">arm_unbind_thread</a></code>(3), <code><a href="/docs/linux/man/3-arm_unblock_transaction/">arm_unblock_transaction</a></code>(3) </p>
-<h2>Index</h2>

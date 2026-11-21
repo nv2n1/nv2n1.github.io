@@ -25,4 +25,3 @@ description: "telnet-probe – lightweight telnet-like port probe"
 <p> If <code>telnet-probe</code> succeeds, then 0 will be returned. If the attempt to establish a connection fails or is terminated, then a non-zero exit status is returned.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pcpintro/">PCPintro</a></code>(1), <code><a href="/docs/linux/man/1-pmdashping/">pmdashping</a></code>(1), <code><a href="/docs/linux/man/1-pmie/">pmie</a></code>(1), <code><a href="/docs/linux/man/1-telnet/">telnet</a></code>(1), <code><a href="/docs/linux/man/2-connect/">connect</a></code>(2), <code><a href="/docs/linux/man/2-read/">read</a></code>(2) and <code><a href="/docs/linux/man/2-write/">write</a></code>(2). </p>
-<h2>Index</h2>

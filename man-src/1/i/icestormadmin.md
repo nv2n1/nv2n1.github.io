@@ -30,4 +30,3 @@ description: "icestormadmin – The IceStorm administration tool."
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-icestormmigrate/">icestormmigrate</a></code>(1) </p>
-<h2>Index</h2>

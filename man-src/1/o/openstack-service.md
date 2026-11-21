@@ -17,4 +17,3 @@ description: "openstack-service – Control enabled openstack services"
 &nbsp;<wbr>Any specified&nbsp;<wbr>[service]s filter the list of enabled openstack services.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-openstack-status/">openstack-status</a>(1) </p>
-<h2>Index</h2>

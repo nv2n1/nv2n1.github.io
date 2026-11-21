@@ -230,4 +230,3 @@ git stream tcp nowait nobody / usr / bin / git git daemon-- inetd-- verbose-- ex
 <p> <i>git daemon</i> will set REMOTE_ADDR to the IP address of the client that connected to it, if the IP address is available. REMOTE_ADDR will be available in the environment of hooks called when services are performed.</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

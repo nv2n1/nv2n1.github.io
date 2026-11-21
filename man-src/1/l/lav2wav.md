@@ -43,4 +43,3 @@ description: "lav2wav – Extract the audio out of MJPEG container files to stdo
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mjpegtools/">mjpegtools</a></code>(1), <code><a href="/docs/linux/man/1-mp2enc/">mp2enc</a></code>(1), <code><a href="/docs/linux/man/1-sox/">sox</a>(1)</code> </p>
-<h2>Index</h2>

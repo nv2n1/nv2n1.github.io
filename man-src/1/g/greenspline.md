@@ -148,4 +148,3 @@ greenspline -V -Rg -Sq0.85 -D3 -I1 -GWB2008.nc mag_obs_1990.d
 <p> <code>gmt</code>, <code>gmtmath</code>, <code>nearneighbor</code>, <code>psxy</code>, <code>sphtriangulate</code>, <code>surface</code>, <code>triangulate</code>, <code>xyz2grd</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

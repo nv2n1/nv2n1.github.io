@@ -39,4 +39,3 @@ description: "estmaster – master process of node servers"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-estconfig/">estconfig</a></code>(1), <code><a href="/docs/linux/man/1-estcmd/">estcmd</a></code>(1), <code><a href="/docs/linux/man/1-estcall/">estcall</a></code>(1), <code><a href="/docs/linux/man/1-estwaver/">estwaver</a></code>(1), <code>estraier</code>(3), <code>estnode</code>(3) </p>
 <p> Please see <code><a rel="nofollow" href="http://hyperestraier.sourceforge.net/nguide-en.html">http://hyperestraier.sourceforge.net/nguide-en.html</a></code> for detail. </p>
-<h2>Index</h2>

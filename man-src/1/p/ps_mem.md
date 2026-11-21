@@ -31,4 +31,3 @@ description: "ps_mem – Memory profiling tool"
 <dd> Measure and show process memory every N seconds</dd></dl>
 <h2>AUTHOR</h2>
 <p> Pádraig Brady &lt;P@draigBrady.com&gt; </p>
-<h2>Index</h2>

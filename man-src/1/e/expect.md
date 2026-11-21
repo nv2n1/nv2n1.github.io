@@ -728,4 +728,3 @@ bar&quot;. </p>
 <p> Thanks to John Ousterhout for Tcl, and Scott Paisley for inspiration. Thanks to Rob Savoye for Expect&#8217;s autoconfiguration code. </p>
 <p> The HISTORY file documents much of the evolution of <code>expect</code>. It makes interesting reading and might give you further insight to this software. Thanks to the people mentioned in it who sent me bug fixes and gave other assistance. </p>
 <p> Design and implementation of <code>Expect</code> was paid for in part by the U.S. government and is therefore in the public domain. However the author and NIST would like credit if this program and documentation or portions of them are used. </p>
-<h2>Index</h2>

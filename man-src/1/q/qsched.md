@@ -51,4 +51,3 @@ description: "qsched, process-scheduler-log – show scheduling information on r
 <h2>AUTHOR</h2>
 <p> Mark Dixon &lt;m.c.dixon [at] leeds.ac.uk&gt;<br />
  Man page by Dave Love &lt;d.love [at] liverpool.ac.uk&gt; </p>
-<h2>Index</h2>

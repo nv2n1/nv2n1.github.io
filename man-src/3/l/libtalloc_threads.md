@@ -159,4 +159,3 @@ static bool test_pthread_talloc_passing(void)
 }
 </code></pre>
 <p>&nbsp;<wbr> </p>
-<h2>Index</h2>

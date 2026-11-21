@@ -43,4 +43,3 @@ description: "cfg_opt_t – Data structure holding information about an option."
 <p> <code>ftpconf.c</code>, <code>reread.c</code>, and <code>simple.c</code>. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for confuse from the source code. </p>
-<h2>Index</h2>

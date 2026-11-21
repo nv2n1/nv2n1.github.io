@@ -22,4 +22,3 @@ description: "opentool – Command line tool for starting tools"
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2007 Free Software Foundation, Inc. </p>
 <p> Copying and distribution of this file, with or without modification, are permitted in any medium without royalty provided the copyright notice and this notice are preserved. </p>
-<h2>Index</h2>

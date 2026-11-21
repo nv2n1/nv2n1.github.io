@@ -44,4 +44,3 @@ description: "qevent – subscribe and respond to xxQS_NAMExx events"
 </code></pre>
 <h2>BUGS</h2>
 <p> Needs tidying up and extending. </p>
-<h2>Index</h2>

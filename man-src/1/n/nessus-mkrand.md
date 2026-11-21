@@ -25,4 +25,3 @@ description: "nessus-mkrand – Creates a file with random bytes"
  <a rel="nofollow" href="http://cvs.nessus.org/">http://cvs.nessus.org/</a> (Developers site)</dd></dl>
 <h2>AUTHOR</h2>
 <p> <code>nessus-mkrand</code> was written by Michel Arboi &lt;arboi [at] algoriel.fr&gt;. </p>
-<h2>Index</h2>

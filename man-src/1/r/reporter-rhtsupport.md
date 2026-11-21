@@ -91,4 +91,3 @@ EVENT=report_RHTSupport analyzer=Python
 </dt><dd> Configuration file.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/5-abrt_event-conf/">abrt_event.conf</a>(5), <a href="/docs/linux/man/5-rhtsupport-conf/">rhtsupport.conf</a>(5), <a href="/docs/linux/man/5-rhtsupport_event-conf/">rhtsupport_event.conf</a>(5) </p>
-<h2>Index</h2>

@@ -20,4 +20,3 @@ description: "xdmxconfig – a graphical configuration tool for Xdmx configurati
 <p> Currently, entries with the <code>wall</code> keyword are not editable, but will be preserved in the new output file. The tool will quit when requested by the user, even if a configuration file has not been written out (i.e., without warning). The menu interaction should be improved (menu entries that don&#8217;t currently work should be greyed-out, for example). The Help button does not work.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-xdmx/">Xdmx</a>(1), <a href="/docs/linux/man/1-vdltodmx/">vdltodmx</a>(1) </p>
-<h2>Index</h2>

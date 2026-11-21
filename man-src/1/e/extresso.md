@@ -45,4 +45,3 @@ description: "extresso – wrapper for wrestool and icotool"
 <p> Copyright &#169; 2001 Colin Watson </p>
 <p> Copyright &#169; 2001 Oskar Liljeblad </p>
 <p> This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
-<h2>Index</h2>

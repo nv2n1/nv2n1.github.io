@@ -37,4 +37,3 @@ description: "jack_wait – JACK toolkit client to check and wait for existence/
 <dd>
  Output version information and exit </dd>
 </dl>
-<h2>Index</h2>

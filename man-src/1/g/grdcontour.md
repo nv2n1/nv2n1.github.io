@@ -161,4 +161,3 @@ gmt grdcontour topo.nc -C100 -S4 -Dcontours_%c.txt
 <p> <code>gmt</code>, <code>gmt.conf</code>, <code>gmtcolors</code>, <code>psbasemap</code>, <code>grdimage</code>, <code>grdview</code>, <code>pscontour</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

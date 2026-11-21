@@ -27,4 +27,3 @@ description: "pgmdeshadow – Deshadow a PGM image"
 <p> <code><a href="/docs/linux/man/1-ppmshadow/">ppmshadow</a></code>(1) , <code>pgm</code>(1) </p>
 <h2>HISTORY</h2>
 <p> <code>pgmdeshadow</code> was added to Netpbm in Version 10.35 (August 2006). </p>
-<h2>Index</h2>

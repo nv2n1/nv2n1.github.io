@@ -31,4 +31,3 @@ description: "mailstat – shows mail-arrival statistics"
 <p> Customise to your heart&#8217;s content, this program is only provided as a guideline.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Santiago Vila &lt;sanvila [at] debian.org&gt; for the Debian GNU/Linux distribution (but may be used by others). </p>
-<h2>Index</h2>

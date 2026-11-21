@@ -45,4 +45,3 @@ description: "tor-resolve – resolve a hostname to an IP address via tor"
 <dl>
 <dt>
 </dt><dd> Author.</dd></dl>
-<h2>Index</h2>

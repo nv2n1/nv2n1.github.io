@@ -80,4 +80,3 @@ description: "Implementing Request Attributes –"
 </dt><dd> Returns the <i>obj</i> pointer if the object inherited from the <i>GLOBUS_GASS_OBJECT_TYPE_SOCKET_REQUESTATTR</i> type and the attribute could be initialized; GLOBUS_NULL otherwise.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gass_transfer from the source code. </p>
-<h2>Index</h2>

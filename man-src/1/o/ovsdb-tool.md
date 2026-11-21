@@ -138,4 +138,3 @@ description: "ovsdb-tool – Open vSwitch database management utility"
 <p> The default <i>db</i> is <code>/etc/openvswitch/conf.db</code>. The default <i>schema</i> is <code>/usr/share/openvswitch/vswitch.ovsschema</code>. The <code>help</code> command also displays these defaults.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ovsdb-server/">ovsdb-server</a></code>(1), <code><a href="/docs/linux/man/1-ovsdb-client/">ovsdb-client</a></code>(1), and the OVSDB specification. </p>
-<h2>Index</h2>

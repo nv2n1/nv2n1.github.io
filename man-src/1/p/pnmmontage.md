@@ -31,4 +31,3 @@ description: "pnmmontage – create a montage of portable anymaps"
 <p> <code><a href="/docs/linux/man/1-pnmcat/">pnmcat</a></code>(1), <code><a href="/docs/linux/man/1-pnmindex/">pnmindex</a></code>(1), <code><a href="/docs/linux/man/5-pnm/">pnm</a></code>(5), <code><a href="/docs/linux/man/5-pam/">pam</a></code>(5), <code><a href="/docs/linux/man/5-pbm/">pbm</a></code>(5), <code><a href="/docs/linux/man/5-pgm/">pgm</a></code>(5), <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5) </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 2000 by Ben Olmstead. </p>
-<h2>Index</h2>

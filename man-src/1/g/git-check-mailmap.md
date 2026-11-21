@@ -28,4 +28,3 @@ description: "git-check-mailmap – Show canonical names and email addresses of 
 <p> See <code><a href="/docs/linux/man/5-gitmailmap/">gitmailmap</a></code>(5).</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

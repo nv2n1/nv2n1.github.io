@@ -31,4 +31,3 @@ description: "xml-rpc-api2cpp – Make a C++ wrapper class for an XML-RPC API"
 <p> This program is part of xmlrpc-c.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Eric Kidd &lt;eric.kidd [at] pobox.com&gt;. It may be distributed under the same terms as the rest of xmlrpc-c. </p>
-<h2>Index</h2>

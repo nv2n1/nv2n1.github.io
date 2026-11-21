@@ -42,4 +42,3 @@ description: "advdef – AdvanceCOMP Deflate Compression Utility"
 <p> This file is Copyright (C) 2003, 2004 Andrea Mazzoleni</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-advpng/">advpng</a>(1), <a href="/docs/linux/man/1-advmng/">advmng</a>(1), <a href="/docs/linux/man/1-advzip/">advzip</a>(1), <a href="/docs/linux/man/1-gzip/">gzip</a>(1), <a href="/docs/linux/man/1-bzip2/">bzip2</a>(1) </p>
-<h2>Index</h2>

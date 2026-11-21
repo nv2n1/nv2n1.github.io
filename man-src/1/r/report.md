@@ -29,4 +29,3 @@ description: "report – uploads FILEs to specified ticket on TARGET."
 <dl>
 <dt>
 </dt><dd> &bull; ABRT team</dd></dl>
-<h2>Index</h2>

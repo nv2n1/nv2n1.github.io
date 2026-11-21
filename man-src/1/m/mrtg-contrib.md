@@ -34,4 +34,3 @@ diff-- recursive-- unified-- ignore - space - change old - dir / new - dir / &gt
 <p> Send your patches, translations and contributions to Tobias Oetiker &lt;tobi [at] oetiker.ch&gt;</p>
 <h2>AUTHOR</h2>
 <p> Tobias Oetiker &lt;tobi [at] oetiker.ch&gt; </p>
-<h2>Index</h2>

@@ -48,4 +48,3 @@ description: "migrate-pubring-from-classic-gpg – Migrate a public keyring from
 <p> <code><a href="/docs/linux/man/1-gpg/">gpg</a></code>(1) </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 2016 Daniel Kahn Gillmor for the Debian project. Please report bugs via the Debian BTS. </p>
-<h2>Index</h2>

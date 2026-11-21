@@ -18,4 +18,3 @@ description: "volname – return volume name"
 <p> <code>Volname</code> was written by Jeff Tranter (tranter [at] pobox.com) and is released under the conditions of the GNU General Public License. See the file COPYING and notes in the source code for details. </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-eject/">eject</a>(1) </p>
-<h2>Index</h2>

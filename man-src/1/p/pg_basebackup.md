@@ -166,4 +166,3 @@ $ <code>pg_basebackup -D - -Ft | bzip2 &gt; backup.tar.bz2</code>
 <p> (This command will fail if there are multiple tablespaces in the database.)</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pg_dump/">pg_dump</a></code>(1) </p>
-<h2>Index</h2>

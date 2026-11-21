@@ -419,4 +419,3 @@ description: "qsub – submit pbs job"
 <p> If the qsub command fails, the command exits with a value greater than zero.</p>
 <h2>SEE ALSO</h2>
 <p> qalter(1B), qdel(1B), qhold(1B), qmove(1B), qmsg(1B), qrerun(1B), qrls(1B), qselect(1B), qsig(1B), qstat(1B), pbs_connect(3B), pbs_job_attributes(7B), pbs_queue_attributes(7B), pbs_resources_irix5(7B), pbs_resources_sp2(7B), pbs_resources_sunos4(7B), pbs_resources_unicos8(7B), pbs_server_attributes(7B), and pbs_server(8B) </p>
-<h2>Index</h2>

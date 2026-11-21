@@ -63,4 +63,3 @@ description: "mate-search-tool – the MATE Search Tool"
 <p> This manual page was originally written by Jochen Voss &lt;voss [at] mathematik.uni-kl.de&gt;. Version 2 was written by Dennis M. Cranston (&lt;dennis_cranston [at] yahoo.com&gt;). </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-find/">find</a></code>(1), <code><a href="/docs/linux/man/1-locate/">locate</a></code>(1), <code><a href="/docs/linux/man/1-grep/">grep</a></code>(1) </p>
-<h2>Index</h2>

@@ -93,4 +93,3 @@ description: "vnstatd – daemon based database updating for vnStat"
 <p> Teemu Toivola &lt;tst at iki dot fi&gt; </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-vnstat/">vnstat</a></code>(1), <code><a href="/docs/linux/man/1-vnstati/">vnstati</a></code>(1), <code><a href="/docs/linux/man/5-vnstat-conf/">vnstat.conf</a></code>(5), <code><a href="/docs/linux/man/7-signal/">signal</a></code>(7) </p>
-<h2>Index</h2>

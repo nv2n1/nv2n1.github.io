@@ -128,4 +128,3 @@ ibv_ack_async_event(&amp;async_event);
 <dt>Dotan Barak &lt;dotanba [at] gmail.com&gt;</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

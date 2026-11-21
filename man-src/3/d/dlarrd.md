@@ -276,4 +276,3 @@ INDEXW is INTEGER array, dimension(N)
 <p> Definition at line 319 of file dlarrd.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

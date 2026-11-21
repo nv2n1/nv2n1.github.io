@@ -112,4 +112,3 @@ description: "mdoc – Mono documentation management tool"
 <dd></dd></dl>
 <h2>WEB SITE</h2>
 <p> Visit <a rel="nofollow" href="http://www.mono-project.com/docs/tools+libraries/tools/mdoc/">http://www.mono-project.com/docs/tools+libraries/tools/mdoc/</a> for details </p>
-<h2>Index</h2>

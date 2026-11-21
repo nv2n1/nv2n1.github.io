@@ -49,4 +49,3 @@ description: "texdiff – Compares two (La)TeX documents to create a merged vers
 <h2>COPYRIGHT AND LICENSE</h2>
 <p> Copyleft 2006-2009, Mark Doll and Cengiz Gunay </p>
 <p> This library is free software; you may redistribute it and/or modify it under the same terms as Perl itself. </p>
-<h2>Index</h2>

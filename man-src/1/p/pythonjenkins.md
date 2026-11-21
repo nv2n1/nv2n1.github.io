@@ -540,4 +540,3 @@ tox -e cover
 <p> Ken Conley, James Page, Tully Foote, Matthew Gertner</p>
 <h2>COPYRIGHT</h2>
 <p> 2010, Willow Garage </p>
-<h2>Index</h2>

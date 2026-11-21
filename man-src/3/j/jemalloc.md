@@ -748,4 +748,3 @@ malloc_conf = &quot;lg_chunk:24&quot;;
 <dt>
 </dt><dd> <a rel="nofollow" href="http://code.google.com/p/gperftools/">http://code.google.com/p/gperftools/</a></dd></dl>
 </dl>
-<h2>Index</h2>

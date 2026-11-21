@@ -64,4 +64,3 @@ description: "aconnect – ALSA sequencer connection manager"
 <p> <a href="/docs/linux/man/1-aseqnet/">aseqnet</a>(1), aseqview(1) </p>
 <h2>AUTHOR</h2>
 <p> Takashi Iwai &lt;tiwai [at] suse.de&gt; </p>
-<h2>Index</h2>

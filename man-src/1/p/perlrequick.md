@@ -369,4 +369,3 @@ $x = "/usr/bin";
 <p> This document may be distributed under the same terms as Perl itself.</p>
 <h3>Acknowledgments</h3>
 <p> The author would like to thank Mark-Jason Dominus, Tom Christiansen, Ilya Zakharevich, Brad Hughes, and Mike Giroux for all their helpful comments. </p>
-<h2>Index</h2>

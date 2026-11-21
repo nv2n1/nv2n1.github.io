@@ -24,4 +24,3 @@ description: "winefile – Wine File Manager"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-wine/">wine</a></code>(1),<br />
  <code>Wine documentation and support</code> </p>
-<h2>Index</h2>

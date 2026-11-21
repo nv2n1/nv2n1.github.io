@@ -26,4 +26,3 @@ description: "lxqt-panel – Desktop panel for LXQt: The Lightweight Qt Desktop 
 <p> <code>lxqt-session.1</code> LXQt <i>overview</i> and complete session environment </p>
 <p> <code>lxqt-config-session.1</code> LXQt default and autostart applications settings, plus environment settings </p>
 <p> <code>lxqt-config.1</code> LXQt settings Configuration Center interface </p>
-<h2>Index</h2>

@@ -22,4 +22,3 @@ const char *curl_multi_strerror(CURLMcode errornum);
 <p> A pointer to a zero terminated string.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libcurl-errors/">libcurl-errors</a></code>(3), <code><a href="/docs/linux/man/3-curl_easy_strerror/">curl_easy_strerror</a></code>(3), <code><a href="/docs/linux/man/3-curl_share_strerror/">curl_share_strerror</a></code>(3) </p>
-<h2>Index</h2>

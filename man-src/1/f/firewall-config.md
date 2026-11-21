@@ -41,4 +41,3 @@ description: "firewall-config – firewalld GUI configuration tool"
 <dl>
 <dt>
 </dt><dd> Developer</dd></dl>
-<h2>Index</h2>

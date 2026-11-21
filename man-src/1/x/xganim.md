@@ -32,4 +32,3 @@ description: "xganim"
 <p> <i>Last changed: $Date: 2007-12-17 14:53:55 +0100 (Mon, 17 Dec 2007) $</i> </p>
 <p> Full index </p>
 <p> � 2003-2008 GRASS Development Team </p>
-<h2>Index</h2>

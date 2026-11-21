@@ -52,4 +52,3 @@ SHA-1 type size size-in-packfile offset-in-packfile depth base-SHA-1
 <p> for objects that are deltified.</p>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

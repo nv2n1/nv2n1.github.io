@@ -91,4 +91,3 @@ description: "tkiptun-ng – inject a few frames into a WPA TKIP network with Qo
  <code><a href="/docs/linux/man/1-makeivs-ng/">makeivs-ng</a>(1)</code><br />
  <code><a href="/docs/linux/man/1-packetforge-ng/">packetforge-ng</a>(1)</code><br />
  <code><a href="/docs/linux/man/1-wesside-ng/">wesside-ng</a>(1)</code> </p>
-<h2>Index</h2>

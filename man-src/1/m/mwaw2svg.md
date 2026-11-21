@@ -28,4 +28,3 @@ description: "mwaw2svg – convert Mac drawing into SVG"
 <dt>
 </dt><dd> the content of the first drawing/slide is sent to stdout if neither <code>-b</code> nor <code>-o</code> options are given. </dd>
 </dl>
-<h2>Index</h2>

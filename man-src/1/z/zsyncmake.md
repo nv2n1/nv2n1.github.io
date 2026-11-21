@@ -54,4 +54,3 @@ description: "zsyncmake – Build control file for"
 <p> Colin Phipps &lt;cph [at] moria.org.uk&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-zsync/">zsync</a>(1) </p>
-<h2>Index</h2>

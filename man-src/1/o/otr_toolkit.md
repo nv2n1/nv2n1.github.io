@@ -66,4 +66,3 @@ description: "otr_parse, otr_sesskeys, otr_mackey, otr_readforge, otr_modify, ot
 <p> <code>Off-the-Record Messaging</code>, at <a rel="nofollow" href="https://www.cypherpunks.ca/otr/">https://www.cypherpunks.ca/otr/</a></p>
 <h2>AUTHOR</h2>
 <p> otr_toolkit was written by the OTR Dev Team &lt;otr [at] cypherpunks.ca&gt;. </p>
-<h2>Index</h2>

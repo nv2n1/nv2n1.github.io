@@ -41,4 +41,3 @@ description: "Quickbook – WikiWiki style documentation tool geared towards C++
 <dt> <code>-I</code> [ <code>&#8211;include-path</code> ] arg include path</dt></dl>
 <h2>SEE ALSO</h2>
 <dd>The full documentation for <code>Quickbook</code> is maintained in HTML; see /usr/share/doc/libboostX.Y-doc/HTML/doc/html/quickbook.html </dd>
-<h2>Index</h2>

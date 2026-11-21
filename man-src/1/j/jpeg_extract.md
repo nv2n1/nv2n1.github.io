@@ -18,4 +18,3 @@ description: "jpeg_extract – jpeg extractor"
 <h2>AUTHOR</h2>
 <p> The Sleuth Kit was written by Brian Carrier &lt;carrier [at] sleuthkit.org&gt;. </p>
 <p> This manual page was written by Joao Eriberto Mota Filho &lt;eriberto [at] debian.org&gt; for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

@@ -23,4 +23,3 @@ description: "dfu-tool – write firmware to DFU devices"
 <p> No known bugs.</p>
 <h2>AUTHOR</h2>
 <p> Richard Hughes (richard [at] hughsie.com) </p>
-<h2>Index</h2>

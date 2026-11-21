@@ -36,4 +36,3 @@ description: "xcmsdb – Device Color Characterization utility for X Color Manag
 <dd> to figure out which display and screen to use.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Chuck Adams, Tektronix Inc. Al Tabayoyon, SynChromatics Inc. (added multi-visual support) </p>
-<h2>Index</h2>

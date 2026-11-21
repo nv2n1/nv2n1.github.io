@@ -61,4 +61,3 @@ cc : Warning : const - c.inc, line 2007 : In this statement, floating - point ov
 <p> Try &#8216;which ld&#8217; and &#8216;which ld&#8217; (or try &#8216;ar &#8211;version&#8217; and &#8216;ld &#8211;version&#8217;, which work only for the <font SIZE="-1">GNU</font> tools, and will announce themselves to be such), and adjust your <font SIZE="-1">PATH</font> so that you are consistently using either the native tools or the <font SIZE="-1">GNU</font> tools. After fixing your <font SIZE="-1">PATH,</font> you should do &#8216;make distclean&#8217; and start all the way from running the Configure since you may have quite a confused situation.</p>
 <h2>AUTHOR</h2>
 <p> Jarkko Hietaniemi &lt;jhi [at] iki.fi&gt; </p>
-<h2>Index</h2>

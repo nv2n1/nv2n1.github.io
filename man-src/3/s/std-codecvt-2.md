@@ -122,4 +122,3 @@ noconv no conversion required, input and output types are the same </p>
 <h2>See also</h2>
 <p>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;converts between character encodings, including UTF-8, UTF-16, UTF-32<br />
 codecvt <i>(class template)</i> </p>
-<h2>Index</h2>

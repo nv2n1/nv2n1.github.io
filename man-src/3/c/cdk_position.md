@@ -146,4 +146,3 @@ description: "cdk_position – curses widget positioning key-bindings"
 <p> The numbers 0-9 are chosen to correspond to the numeric keypad on your terminal. Cdk does not handle the application mode keypad control sequences, since those are not defined via terminfo. To use the numeric keypad you should ensure that it is in normal (or NumLock) mode.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-cdk/">cdk</a></code>(3), <code><a href="/docs/linux/man/3-cdk_binding/">cdk_binding</a></code>(3), <code><a href="/docs/linux/man/3-cdk_display/">cdk_display</a></code>(3), <code><a href="/docs/linux/man/3-cdk_screen/">cdk_screen</a></code>(3) </p>
-<h2>Index</h2>

@@ -144,4 +144,3 @@ description: "KMyMoney – the personal finances manager for KDE"
 <dt>
 </dt><dd> <code>khelpcenter help:/kmymoney2</code></dd></dl>
 <p> should give you access to the complete manual. Alternatively the manual can be browsed in <code>konqueror</code> giving it the URL <code>help:/kmymoney2</code> </p>
-<h2>Index</h2>

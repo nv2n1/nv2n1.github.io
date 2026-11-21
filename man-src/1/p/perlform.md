@@ -230,4 +230,3 @@ Check me out
 <p> If a program&#8217;s environment specifies an <font SIZE="-1">LC_NUMERIC</font> locale and <tt>&quot;use locale&quot;</tt> is in effect when the format is declared, the locale is used to specify the decimal point character in formatted output. Formatted output cannot be controlled by <tt>&quot;use locale&quot;</tt> at the time when <code>write()</code> is called. See perllocale for further discussion of locale handling. </p>
 <p> Within strings that are to be displayed in a fixed-length text field, each control character is substituted by a space. (But remember the special meaning of <tt>&quot;
 &quot;</tt> when using fill mode.) This is done to avoid misalignment when control characters &#8220;disappear&#8221; on some output media. </p>
-<h2>Index</h2>

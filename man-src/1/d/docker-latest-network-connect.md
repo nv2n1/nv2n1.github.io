@@ -56,4 +56,3 @@ $ docker network connect --ip 172.20.128.2 multi-host-network container2
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
 <h2>HISTORY</h2>
 <p> OCT 2015, created by Mary Anthony &lt;mary [at] docker.com&gt; </p>
-<h2>Index</h2>

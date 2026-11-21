@@ -24,4 +24,3 @@ if (!music)
 <p> Returns a pointer to a MIDI structure, or NULL on error. Remember to free this MIDI file later to avoid memory leaks. </p>
 <h2>SEE ALSO</h2>
 <p> <code>destroy_midi</code>(3), <code><a href="/docs/linux/man/3-play_midi/">play_midi</a></code>(3), <code><a href="/docs/linux/man/3-get_midi_length/">get_midi_length</a></code>(3), <code><a href="/docs/linux/man/3-exmidi/">exmidi</a></code>(3) </p>
-<h2>Index</h2>

@@ -1244,4 +1244,3 @@ my $a = &#8220;ab\x{100}cde&quot;; my $b = &quot;fghij&quot;; my $c = &quot;\x{1
 <p> The <i></i><font SIZE="-1"><i>INSTALL</i></font><i></i> file for how to build Perl. </p>
 <p> The <i></i><font SIZE="-1"><i>README</i></font><i></i> file for general stuff. </p>
 <p> The <i>Artistic</i> and <i>Copying</i> files for copyright information. </p>
-<h2>Index</h2>

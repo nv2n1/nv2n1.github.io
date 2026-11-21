@@ -56,4 +56,3 @@ if (error != NULL) {
 /* something went wrong */
 </code></pre>
 </dd></dl>
-<h2>Index</h2>

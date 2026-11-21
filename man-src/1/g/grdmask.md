@@ -88,4 +88,3 @@ gmt grdmask plates.gmt -R-40/40/-40/40 -I2m -Np100 -Gplate_IDs.nc -V
 <p> <code>gmt</code>, <code>grdlandmask</code>, <code>grdmath</code>, <code>grdclip</code>, <code>psmask</code>, <code>psclip</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

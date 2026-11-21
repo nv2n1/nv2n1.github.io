@@ -36,4 +36,3 @@ description: "mmg – a GUI for"
 <dt>
 </dt><dd> <a rel="nofollow" href="http://www.bunkus.org/videotools/mkvtoolnix/">http://www.bunkus.org/videotools/mkvtoolnix/</a></dd></dl>
 </dl>
-<h2>Index</h2>

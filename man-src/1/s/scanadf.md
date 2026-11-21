@@ -62,4 +62,3 @@ description: "scanadf – acquire multiple images from a scanner equipped with a
  <code>sane-hp</code> &#8211; Hewlett Packard scanners. A patch to the sane-hp backend is necessary. The &#8211;scantype=ADF option must be specified (earlier versions of the backend used the &#8211;scan-from-adf option, instead).<br />
  <code>sane-umax</code> &#8211; UMAX scanners. Support exists in build 12 and later. The &#8211;source=&quot;Automatic Document Feeder&quot; option must be specified.
 </dd></dl>
-<h2>Index</h2>

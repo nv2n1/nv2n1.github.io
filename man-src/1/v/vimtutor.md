@@ -28,4 +28,3 @@ description: "vimtutor – the Vim tutor"
  It was modified for <code>Vim</code> by Bram Moolenaar. For the names of the translators see the tutor files.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-vim/">vim</a>(1) </p>
-<h2>Index</h2>

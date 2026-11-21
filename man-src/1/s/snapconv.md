@@ -31,4 +31,3 @@ description: "snapconv – Sinclair ZX Spectrum snapshot converter"
  <i><a rel="nofollow" href="http://www.worldofspectrum.org/faq/index.html">http://www.worldofspectrum.org/faq/index.html</a></i>.</p>
 <h2>AUTHOR</h2>
 <p> Philip Kendall (philip-fuse [at] shadowmagic.org.uk). </p>
-<h2>Index</h2>

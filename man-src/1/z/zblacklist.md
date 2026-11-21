@@ -29,4 +29,3 @@ description: "zblacklist – zmap IP blacklist tool"
 <dt><code>&#8211;ignore-blacklist-errors</code></dt>
 <dd> Ignore invalid entries in the blacklist. Default is false. </dd>
 </dl>
-<h2>Index</h2>

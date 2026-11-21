@@ -46,4 +46,3 @@ description: "ppmtopj – convert a portable pixmap to an HP PaintJet file"
 <p> Most of the options have not been tested because of the price of the paper.</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1991 by Christos Zoulas. </p>
-<h2>Index</h2>

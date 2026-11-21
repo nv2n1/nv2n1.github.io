@@ -19,4 +19,3 @@ description: "Plank – Stupidly simple."
 <p> For more information, please visit <a rel="nofollow" href="http://launchpad.net/plank/">http://launchpad.net/plank/</a></p>
 <h2>AUTHORS</h2>
 <p> Robert Dyer &lt;psybers [at] gmail.com&gt;, Daniel Foré &lt;daniel.p.fore [at] gmail.com&gt;, Rico Tzschichholz &lt;ricotz [at] t-online.de&gt; </p>
-<h2>Index</h2>

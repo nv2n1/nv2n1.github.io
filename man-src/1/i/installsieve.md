@@ -24,4 +24,3 @@ description: "installsieve – user utility for managing sieve scripts"
 <p> <i>-m &lt;mechanism&gt;</i> Force installsieve to use &lt;mechanism&gt; for authentication. If not specified the strongest authentication mechanism is chosen. </p>
 <p> <i>-g &lt;name&gt;</i> Get the sieve script with &lt;name&gt; and save it to disk with a &quot;.script&quot; extension. If a file with that name already exists it is overwritten. </p>
 <p> <i>-u &lt;user&gt;</i> Userid/Authname to use for authentication; by default, the current user. </p>
-<h2>Index</h2>

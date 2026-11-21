@@ -92,4 +92,3 @@ description: "makejvf – Make Japanese VF file from Japanese TeX TFM file"
 <dt>Many thanks to Atsuhito KOHDA &lt;kohda [at] debian.org&gt;, for providing another manpage in Debian GNU/Linux system.</dt>
 <dd>
 </dd></dl>
-<h2>Index</h2>

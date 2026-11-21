@@ -20,4 +20,3 @@ url: "/docs/linux/man/1-ppm3d/"
 <p> <a href="/docs/linux/man/5-ppm/">ppm</a>(5)  </p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1993 by David K. Drum. </p>
-<h2>Index</h2>

@@ -35,4 +35,3 @@ description: "dh_pysupport – use the python-support framework to handle Python
 <p> This program is a part of python-support but is made to work with debhelper.</p>
 <h2>AUTHORS</h2>
 <p> Josselin Mouette &lt;joss [at] debian.org&gt;, Raphael Hertzog &lt;hertzog [at] debian.org&gt; </p>
-<h2>Index</h2>

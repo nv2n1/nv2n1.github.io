@@ -24,4 +24,3 @@ description: "matchpathcon_checkmatches, matchpathcon_filespec_add, matchpathcon
 <p> Returns zero on success or -1 otherwise.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-selinux/">selinux</a></code>(8), <code><a href="/docs/linux/man/3-matchpathcon/">matchpathcon</a></code>(3), <code><a href="/docs/linux/man/3-matchpathcon_index/">matchpathcon_index</a></code>(3), <code><a href="/docs/linux/man/3-freecon/">freecon</a></code>(3), <code><a href="/docs/linux/man/3-setfilecon/">setfilecon</a></code>(3), <code><a href="/docs/linux/man/3-setfscreatecon/">setfscreatecon</a></code>(3) </p>
-<h2>Index</h2>

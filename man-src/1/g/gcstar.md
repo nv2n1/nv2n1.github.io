@@ -72,4 +72,3 @@ description: "GCstar – Personal collection manager"
 <dt>Tian &lt;tian [at] c-sait.net&gt;</dt>
 <dd> <a rel="nofollow" href="http://www.gcstar.org/">http://www.gcstar.org/</a> </dd>
 </dl>
-<h2>Index</h2>

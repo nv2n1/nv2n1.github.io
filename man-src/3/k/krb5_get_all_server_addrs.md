@@ -20,4 +20,3 @@ description: "krb5_get_all_client_addrs krb5_get_all_server_addrs – return loc
 <p> The returned addresses should be freed by calling Fn krb5_free_addresses .</p>
 <h2>SEE ALSO</h2>
 <p> krb5_free_addresses3 </p>
-<h2>Index</h2>

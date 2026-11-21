@@ -318,4 +318,3 @@ print &quot;true
 <h2>AUTHORS</h2>
 <p> Ruby is designed and implemented by An Yukihiro Matsumoto Aq matz [at] netlab.jp . </p>
 <p> See Aq Lk <a rel="nofollow" href="https://bugs.ruby-lang.org/projects/ruby/wiki/Contributors">https://bugs.ruby-lang.org/projects/ruby/wiki/Contributors</a> for contributors to Ruby. </p>
-<h2>Index</h2>

@@ -87,4 +87,3 @@ description: "tcexport – Simple frontend to transcode’s encoding subsystem"
  &lt;fromani [at] gmail.com&gt; with contributions from the Transcode Team and many others. See AUTHORS for details. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tccat/">tccat</a></code>(1), <code><a href="/docs/linux/man/1-tcdecode/">tcdecode</a></code>(1), <code><a href="/docs/linux/man/1-tcdemux/">tcdemux</a></code>(1), <code><a href="/docs/linux/man/1-tcextract/">tcextract</a></code>(1), <code><a href="/docs/linux/man/1-tcprobe/">tcprobe</a></code>(1), <code><a href="/docs/linux/man/1-transcode/">transcode</a></code>(1) <code><a href="/docs/linux/man/1-tcmodinfo/">tcmodinfo</a></code>(1) </p>
-<h2>Index</h2>

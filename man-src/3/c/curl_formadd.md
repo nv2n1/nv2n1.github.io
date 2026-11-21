@@ -125,4 +125,3 @@ htmlbuffer[8] = '</code>\0';
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-curl_easy_setopt/">curl_easy_setopt</a></code>(3), <code><a href="/docs/linux/man/3-curl_formfree/">curl_formfree</a></code>(3) </p>
-<h2>Index</h2>

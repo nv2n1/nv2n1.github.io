@@ -103,4 +103,3 @@ description: "flatpak-update – Update an application or runtime"
 <p> <code>$ flatpak &#8211;user update org.gnome.gedit</code></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-install/">flatpak-install</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-list/">flatpak-list</a></code>(1), <code>ostree-find-remotes</code>(1) </p>
-<h2>Index</h2>

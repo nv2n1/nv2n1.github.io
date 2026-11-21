@@ -62,4 +62,3 @@ Sat, 11 Sep 2004 21:32:11 +0200
 <h2>REWRITE</h2>
 <p> The former version of this function was built with yacc and was not only very large, it was also never quite understood and it wasn&#8217;t possible to build with non-GNU tools since only GNU Bison could make it thread-safe! </p>
 <p> The rewrite was done for 7.12.2. The new one is much smaller and uses simpler code. </p>
-<h2>Index</h2>

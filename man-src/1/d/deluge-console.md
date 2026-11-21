@@ -42,4 +42,3 @@ description: "deluge-console – a bittorrent client curses interface"
 <p> <code><a href="/docs/linux/man/1-deluge/">deluge</a>(1),</code> <code><a href="/docs/linux/man/1-deluged/">deluged</a>(1),</code> <code><a href="/docs/linux/man/1-deluge-web/">deluge-web</a>(1)</code> </p>
 <h2>AUTHORS</h2>
 <p> <code>Deluge Team: <a rel="nofollow" href="http://www.deluge-torrent.org">http://www.deluge-torrent.org</a></code> </p>
-<h2>Index</h2>

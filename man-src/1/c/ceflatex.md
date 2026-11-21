@@ -45,4 +45,3 @@ description: "bg5latex – Use LaTeX directly on a Big5 encoded .tex file bg5pdf
 <h2>AUTHOR</h2>
 <p> The programs mentioned under <code>NAME</code> were written by Werner Lemberg &lt;wl [at] gnu.org&gt;. </p>
 <p> This manual page was written by Danai SAE-HAN &lt;danai.sae-han [at] edpnet.be&gt; for the Debian project. It is licensed under the GNU General Public License version 2 or higher, of which you can find a copy online at <a rel="nofollow" href="http://www.gnu.org/licenses/gpl.txt">http://www.gnu.org/licenses/gpl.txt</a> or on Debian systems under /usr/share/common-licenses/GPL-2 (part of the &quot;base-files&quot; package). </p>
-<h2>Index</h2>

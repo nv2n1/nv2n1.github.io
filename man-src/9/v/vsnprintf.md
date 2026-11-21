@@ -34,4 +34,3 @@ description: "vsnprintf – Format a string and place it in a buffer"
 <h2>COPYRIGHT</h2>
 <p> <br />
  </p>
-<h2>Index</h2>

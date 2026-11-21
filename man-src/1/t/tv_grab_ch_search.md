@@ -37,4 +37,3 @@ description: "tv_grab_ch_search – Grab TV listings for Switzerland (from tv.se
 <p> Daniel Bittel &lt;betlit [at] gmx.net&gt;. Inspired by tv_grab_ch by Stefan Siegl.</p>
 <h2>BUGS</h2>
 <p> If you happen to find a bug, you&#8217;re requested to send a mail to me at <code>betlit [at] gmx.net</code> or to one of the <font SIZE="-1">XMLTV</font> mailing lists, see webpages at <a rel="nofollow" href="http://sourceforge.net/projects/xmltv/.">http://sourceforge.net/projects/xmltv/.</a> </p>
-<h2>Index</h2>

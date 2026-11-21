@@ -32,4 +32,3 @@ description: "guilt-prev – Output name of second topmost applied patch"
 <dt>
 </dt><dd> mailto:jeffpc [at] josefsipek.net</dd></dl>
 </dl>
-<h2>Index</h2>

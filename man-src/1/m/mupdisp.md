@@ -64,4 +64,3 @@ mupdisp.geometry:     400x760+100-34
 <h2>CAVEATS AND BUGS</h2>
 <p> You must have mup in your PATH. You must have ghostscript (gs or gs386.exe) in your PATH and it must be built to include the &quot;bit&quot; device. </p>
 <p> Resizing the window does not resize the full page view. </p>
-<h2>Index</h2>

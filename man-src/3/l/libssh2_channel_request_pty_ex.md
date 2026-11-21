@@ -32,4 +32,3 @@ description: "libssh2_channel_request_pty_ex – short function description"
 <p> <i>LIBSSH2_ERROR_CHANNEL_REQUEST_DENIED</i> &#8211;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_channel_open_ex/">libssh2_channel_open_ex</a>(3)</code> </p>
-<h2>Index</h2>

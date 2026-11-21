@@ -107,4 +107,3 @@ compton-trans -c -- -5
 <p> Christopher Jeffrey (<a rel="nofollow" href="https://github.com/chjj">https://github.com/chjj</a>).</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-compton/">compton</a></code>(1), <code><a href="/docs/linux/man/1-xprop/">xprop</a></code>(1), <code><a href="/docs/linux/man/1-xwininfo/">xwininfo</a></code>(1) </p>
-<h2>Index</h2>

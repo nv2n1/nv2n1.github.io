@@ -90,4 +90,3 @@ description: "help2man – generate a simple manual page"
 <dt>
 </dt><dd> <code>info help2man</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

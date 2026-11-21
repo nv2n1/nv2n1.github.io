@@ -110,4 +110,3 @@ description: "orbd – Enables clients to locate and call persistent objects on 
 <dt>&bull;</dt>
 <dd> Naming Service at <a rel="nofollow" href="http://docs.oracle.com/javase/8/docs/technotes/guides/idl/jidlNaming.html">http://docs.oracle.com/javase/8/docs/technotes/guides/idl/jidlNaming.html</a> </dd>
 </dl>
-<h2>Index</h2>

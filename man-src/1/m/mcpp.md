@@ -183,4 +183,3 @@ description: "mcpp – Matsui CPP, an alternative C preprocessor"
 <p> MCPP V.2.7 (2008/03) for GCC</p>
 <h2>SEE ALSO</h2>
 <p> The full documentation for <code>mcpp</code> are maintained as html files. Please see mcpp-manual.html. </p>
-<h2>Index</h2>

@@ -40,4 +40,3 @@ description: "rmf – remove an nmh folder"
 <p> <code>Rmf</code> will set the current folder to the parent folder if a subfolder is removed; or if the current folder is removed, it will make &#8220;inbox&#8221; current. Otherwise, it doesn&#8217;t change the current folder or message.</p>
 <h2>BUGS</h2>
 <p> Although intuitively one would suspect that <code>rmf</code> works recursively, it does not. Hence if you have a sub-folder within a folder, in order to <code>rmf</code> the parent, you must first <code>rmf</code> each of the children. </p>
-<h2>Index</h2>

@@ -41,4 +41,3 @@ description: "ipsec_initsubnet, ipsec_addrtosubnet, ipsec_subnettypeof, ipsec_ma
 <p> Fatal errors in <i>initsubnet</i> are: unknown address family; unknown <i>clash</i> value; impossible mask bit count; non-zero host-number bits and <i>clash</i> is <code>&#8216;x&#8217;</code>. Fatal errors in <i>addrtosubnet</i> are: unknown address family. Fatal errors in <i>masktocount</i> are: unknown address family; mask bits not contiguous.</p>
 <h2>HISTORY</h2>
 <p> Written for the FreeS/WAN project by Henry Spencer. </p>
-<h2>Index</h2>

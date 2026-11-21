@@ -31,4 +31,3 @@ description: "docker-network-disconnect – disconnect a container from a networ
 &nbsp;<wbr>&nbsp;<wbr>Print usage statement </p>
 <h2>HISTORY</h2>
 <p> OCT 2015, created by Mary Anthony &lt;mary [at] docker.com&gt; </p>
-<h2>Index</h2>

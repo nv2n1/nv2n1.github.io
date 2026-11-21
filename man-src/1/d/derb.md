@@ -51,4 +51,4 @@ description: "derb – disassemble a resource bundle"
  Yves Arrouye  <h2>VERSION</h2>
  1.0  <h2>COPYRIGHT</h2>
  Copyright (C) 2002 IBM, Inc. and others.  <h2>SEE ALSO</h2>
- <code><a href="/docs/linux/man/1-genrb/">genrb</a></code>(1) <h2>Index</h2>
+ <code><a href="/docs/linux/man/1-genrb/">genrb</a></code>(1) 

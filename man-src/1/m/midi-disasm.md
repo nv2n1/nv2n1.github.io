@@ -24,4 +24,3 @@ description: "midi-disasm – disassemble midi files"
 <h2>AUTHORS</h2>
 <p> The code for <i>midi-disasm</i> is an elaboration of the program <i>mftext</i> by Tim Thompson, &#8230;twitch!glimmer!tjt, who also wrote the first version of the library functions in midifile.c, which were elaborated for midi file output by M. Czeiszperger.<br />
  The rest is by Greg Lee, lee [at] Hawaii.edu. </p>
-<h2>Index</h2>

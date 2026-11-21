@@ -26,4 +26,3 @@ description: "krb5_crypto_getblocksize krb5_crypto_getconfoundersize krb5_crypto
 <p> Fn krb5_get_wrapped_length returns the size of an encrypted packet by Fa crypto of length Fa data_len .</p>
 <h2>SEE ALSO</h2>
 <p> krb5_create_checksum3, krb5_crypto_init3 </p>
-<h2>Index</h2>

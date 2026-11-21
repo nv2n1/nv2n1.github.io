@@ -64,4 +64,3 @@ description: "setarch – change reported architecture in new program environmen
 <p> <code><a href="/docs/linux/man/2-personality/">personality</a></code>(2), <code><a href="/docs/linux/man/2-select/">select</a></code>(2)</p>
 <h2>AVAILABILITY</h2>
 <p> The setarch command is part of the util-linux package and is available from Linux Kernel Archive </p>
-<h2>Index</h2>

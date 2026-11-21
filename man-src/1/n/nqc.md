@@ -107,4 +107,3 @@ description: "nqc – A simple C-like language for Lego’s RCX programmable bri
 <h2>AUTHOR</h2>
 <p> The Not Quite C programming language and the nqc program were written and are maintained by Dave Baum. Various contributions have been made by other people &#8212; a full list of these can be found on Dave&#8217;s web site. </p>
 <p> This man page was written by Matthew Miller (mattdm [at] mattdm.org), with extremely large amounts of borrowing from other NQC documentation. </p>
-<h2>Index</h2>

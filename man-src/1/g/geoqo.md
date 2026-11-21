@@ -2110,4 +2110,3 @@ num GCID     Name
 <h2>AUTHOR</h2>
 <p> Wes Hardaker &lt;hardaker <font SIZE="-1">ATAT</font> users.sourceforge.net&gt; </p>
 <p> <font SIZE="-1">AKA</font> &#8220;Yamar&#8221; on Geocaching.com, <font SIZE="-1">IRC</font>, and other places </p>
-<h2>Index</h2>

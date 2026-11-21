@@ -19,4 +19,3 @@ description: "create_scene – Allocates memory for a 3d scene. Allegro game pro
 <p> Returns zero on success, or a negative number if allocations fail. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-scene_polygon3d/">scene_polygon3d</a></code>(3), <code><a href="/docs/linux/man/3-render_scene/">render_scene</a></code>(3), <code><a href="/docs/linux/man/3-clear_scene/">clear_scene</a></code>(3), <code><a href="/docs/linux/man/3-destroy_scene/">destroy_scene</a></code>(3), <code><a href="/docs/linux/man/3-scene_gap/">scene_gap</a></code>(3), <code><a href="/docs/linux/man/3-create_zbuffer/">create_zbuffer</a></code>(3), <code><a href="/docs/linux/man/3-exscn3d/">exscn3d</a></code>(3) </p>
-<h2>Index</h2>

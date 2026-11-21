@@ -59,4 +59,3 @@ gdal_retile.py[-v][-co NAME = VALUE] * [-of out_format][-ps pixelWidth pixelHeig
 <p> NOTE: gdal_retile.py is a Python script, and will only work if GDAL was built with Python support.</p>
 <h2>AUTHORS</h2>
 <p> Christian Mueller christian.mueller [at] nvoe.at </p>
-<h2>Index</h2>

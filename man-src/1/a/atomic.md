@@ -60,4 +60,3 @@ description: "atomic – Atomic Management Tool"
  <code> &lt;<a rel="nofollow" href="https://docs.docker.com/machine/reference/env/">https://docs.docker.com/machine/reference/env/</a>&gt;</code> </p>
 <h2>HISTORY</h2>
 <p> January 2015, Originally compiled by Daniel Walsh (dwalsh at redhat dot com) November, 2015 Addition of scan and diff by Brent Baude (bbaude at dot com) </p>
-<h2>Index</h2>

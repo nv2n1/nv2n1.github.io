@@ -67,4 +67,3 @@ typedef struct JOYSTICK_AXIS_INFO {
 <p> Note for people who spell funny: in case you don&#8217;t like having to type &quot;analogue&quot;, there are some #define aliases in allegro/joystick.h that will allow you to write &quot;analog&quot; instead. </p>
 <h2>SEE ALSO</h2>
 <p> <code>install_joystick</code>(3), <code><a href="/docs/linux/man/3-poll_joystick/">poll_joystick</a></code>(3), <code>num_joysticks</code>(3), <code><a href="/docs/linux/man/3-calibrate_joystick/">calibrate_joystick</a></code>(3), <code><a href="/docs/linux/man/3-calibrate_joystick_name/">calibrate_joystick_name</a></code>(3), <code><a href="/docs/linux/man/3-exjoy/">exjoy</a></code>(3) </p>
-<h2>Index</h2>

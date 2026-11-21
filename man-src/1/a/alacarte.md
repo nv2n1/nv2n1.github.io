@@ -37,4 +37,3 @@ description: "alacarte – Edit freedesktop.org menus"
 <dl>
 <dt>
 </dt><dd> <code>alacarte</code> is editing the menus defined by the file <code>$XDG_MENU_PREFIX</code>applications.menu. GNOME uses the menu file gnome-applications.menu.</dd></dl>
-<h2>Index</h2>

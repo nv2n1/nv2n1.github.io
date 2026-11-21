@@ -55,4 +55,3 @@ description: "mdb-header – Write header file from an MDB database"
 <p> The <code>mdb-header</code> utility was written by Brian Bruns.</p>
 <h2>BUGS</h2>
 <p> Only a few types are currently supported. </p>
-<h2>Index</h2>

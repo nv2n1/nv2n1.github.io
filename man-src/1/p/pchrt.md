@@ -40,4 +40,3 @@ description: "pchrt (python-schedutils) – manipulate the real-time attributes 
  as part of python-schedutils </p>
 <p> This manual page was written by John Kacur &lt;jkacur [at] redhat.com&gt; </p>
 <p> Report bugs and send patches to &lt;tuna-devel [at] lists.fedorahosted.org&gt; </p>
-<h2>Index</h2>

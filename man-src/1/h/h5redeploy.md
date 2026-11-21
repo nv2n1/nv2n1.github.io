@@ -29,4 +29,3 @@ description: "h5redeploy – Updates HDF5 compiler tools after an HDF5 software 
 <dt><code>-show</code></dt>
 <dd> Shows all of the shell commands to be executed without actually executing them. </dd>
 </dl>
-<h2>Index</h2>

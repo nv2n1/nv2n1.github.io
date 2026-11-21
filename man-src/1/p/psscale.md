@@ -98,4 +98,3 @@ gmt psscale -DjCT+w4i/1c+o0/2c+h -O -Ccolors.cpt -Baf -R -J &gt;&gt; map.ps
 <p> <code>gmt</code>, <code>makecpt</code> <code>gmtlogo</code>, <code>grd2cpt</code> <code>psimage</code>, <code>pslegend</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

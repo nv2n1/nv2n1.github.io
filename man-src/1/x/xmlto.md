@@ -171,4 +171,3 @@ description: "xmlto – apply an XSL stylesheet to an XML document"
 <dt>
 </dt><dd> Maintainer since 0.0.19</dd></dl>
 <h2>COPYRIGHT</h2>
-<h2>Index</h2>

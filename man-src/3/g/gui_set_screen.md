@@ -25,4 +25,3 @@ gui_set_screen(page[0]);
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> <code>gui_get_screen</code>(3) </p>
-<h2>Index</h2>

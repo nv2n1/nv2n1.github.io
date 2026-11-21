@@ -21,4 +21,3 @@ description: "ldb_message –"
 <p> It can contain an arbitrary number of elements. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LDB from the source code. </p>
-<h2>Index</h2>

@@ -40,4 +40,3 @@ description: "grepjar – search files in a jar file for a pattern"
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 2002, 2007, 2008 Matthias Klose </p>
 <p> Permission is granted to copy, distribute and/or modify this document under the terms of the <font SIZE="-1">GNU</font> General Public License as published by the Free Software Foundation; either version 2, or (at your option) any later version. A copy of the license is included in the man page <i>gfdl</i>(7). </p>
-<h2>Index</h2>

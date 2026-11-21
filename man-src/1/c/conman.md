@@ -98,4 +98,3 @@ description: "conman – ConMan client"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-conman-conf/">conman.conf</a></code>(5), <code><a href="/docs/linux/man/8-conmand/">conmand</a></code>(8). </p>
 <p> <code><a rel="nofollow" href="http://conman.googlecode.com/">http://conman.googlecode.com/</a></code> </p>
-<h2>Index</h2>

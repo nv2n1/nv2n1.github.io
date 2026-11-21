@@ -91,4 +91,3 @@ description: "antiword – show the text and images of MS Word documents"
 <p> Linux is a registered trademark of Linus Torvalds.<br />
  Adobe, PDF and PostScript are trademarks of Adobe Systems Incorporated.<br />
  Microsoft is a registered trademark and Windows is a trademark of Microsoft Corporation. </p>
-<h2>Index</h2>

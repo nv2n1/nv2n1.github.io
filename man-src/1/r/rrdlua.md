@@ -153,4 +153,3 @@ description: "RRDLua – Lua binding for RRDTool"
 </code></pre>
 <h2>AUTHOR</h2>
 <p> Fidelis Assis &lt;fidelis [at] pobox.com&gt; </p>
-<h2>Index</h2>

@@ -34,4 +34,3 @@ char *dcgettext(const char *domainname, const char *msgid,
 <p> When an empty string is used for <i>msgid</i>, the functions may return a nonempty string.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-ngettext/">ngettext</a></code>(3), <code><a href="/docs/linux/man/3-dngettext/">dngettext</a></code>(3), <code><a href="/docs/linux/man/3-dcngettext/">dcngettext</a></code>(3), <code><a href="/docs/linux/man/3-setlocale/">setlocale</a></code>(3), <code><a href="/docs/linux/man/3-textdomain/">textdomain</a></code>(3), <code><a href="/docs/linux/man/3-bindtextdomain/">bindtextdomain</a></code>(3), <code><a href="/docs/linux/man/3-bind_textdomain_codeset/">bind_textdomain_codeset</a></code>(3), <code><a href="/docs/linux/man/1-msgfmt/">msgfmt</a></code>(1) </p>
-<h2>Index</h2>

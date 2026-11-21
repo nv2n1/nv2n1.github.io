@@ -18,4 +18,3 @@ description: "leaftoppm – convert Interleaf image format to a portable anymap"
 <p> <code><a href="/docs/linux/man/5-ppm/">ppm</a></code>(5) </p>
 <h2>AUTHOR</h2>
 <p> The program is copyright (C) 1994 by Bill O&#8217;Donnell. </p>
-<h2>Index</h2>

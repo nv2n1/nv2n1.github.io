@@ -217,4 +217,3 @@ agent = JBond / 1.0 #--agent
 <dd> &lt;<a rel="nofollow" href="http://cclive.googlecode.com/">http://cclive.googlecode.com/</a>&gt;</dd></dl>
 <h2>AUTHOR</h2>
 <p> Toni Gundogdu &lt;legatvs [at] gmail.com&gt;. </p>
-<h2>Index</h2>

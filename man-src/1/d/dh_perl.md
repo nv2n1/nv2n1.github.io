@@ -32,4 +32,3 @@ description: "dh_perl – calculates Perl dependencies and cleans up after MakeM
 <p> This program is a part of debhelper.</p>
 <h2>AUTHOR</h2>
 <p> Brendan O&#8217;Dea &lt;bod [at] debian.org&gt; </p>
-<h2>Index</h2>

@@ -68,4 +68,3 @@ description: "djvudigital – creates DjVu files from PS or PDF files."
 <p> Program <code>djvudigital</code> can only process input files that GhostScript can process properly. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-djvu/">djvu</a></code>(1), <code><a href="/docs/linux/man/1-csepdjvu/">csepdjvu</a></code>(1), <code><a href="/docs/linux/man/1-c44/">c44</a></code>(1), <code><a href="/docs/linux/man/1-gs/">gs</a></code>(1), <code><a href="/docs/linux/man/1-gzip/">gzip</a></code>(1) </p>
-<h2>Index</h2>

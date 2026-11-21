@@ -135,4 +135,3 @@ description: "getdefs – AutoGen Definition Extraction Tool"
 <p> Please send bug reports to: autogen-users [at] lists.sourceforge.net</p>
 <h2>NOTES</h2>
 <p> This manual page was <i>AutoGen</i>-erated from the <code>getdefs</code> option definitions. </p>
-<h2>Index</h2>

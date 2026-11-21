@@ -49,4 +49,3 @@ odf2mht example.odt &gt;example.mht
 <dl>
 <dt>
 </dt><dd> Original author</dd></dl>
-<h2>Index</h2>

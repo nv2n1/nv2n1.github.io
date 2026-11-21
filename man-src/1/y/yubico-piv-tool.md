@@ -94,4 +94,3 @@ description: "yubico-piv-tool – Yubico PIV tool"
 <p> Read out the certificate from a slot and then run a signature test: </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>yubico-piv-tool -a read-cert -s 9a<br />
 &nbsp;<wbr>&nbsp;<wbr>yubico-piv-tool -a verify-pin -P 123456 -a test-signature -s 9a </p>
-<h2>Index</h2>

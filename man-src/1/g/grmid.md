@@ -44,4 +44,3 @@ description: "grmid – – RMI activation system daemon"
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-java/">java</a></i>(1), &#8230;</p>
 <h2>AUTHOR</h2>
-<h2>Index</h2>

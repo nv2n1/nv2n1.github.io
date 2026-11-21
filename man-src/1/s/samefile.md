@@ -104,4 +104,3 @@ $ find /usr -type f | samefile -g 10000 &gt;usr.dups
 <p> There are no known bugs. The source has been <code>lint</code>(1)ed and all possible care has been taken while coding. If you find a bug (or miss a feature) please contact the author.</p>
 <h2>HOME</h2>
 <p> The official <code>samefile</code> home page <a rel="nofollow" href="http://www.schweikhardt.net">www.schweikhardt.net</a>/samefile/ is maintained by the author Jens Schweikhardt &#8211; schweikh at schweikhardt dot net </p>
-<h2>Index</h2>

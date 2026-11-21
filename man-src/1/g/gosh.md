@@ -63,4 +63,3 @@ description: "gosh – a Scheme script interpreter"
  <a rel="nofollow" href="http://practical-scheme.net/gauche/">http://practical-scheme.net/gauche/</a> </p>
 <p> For the information about Scheme language, see<br />
  <a rel="nofollow" href="http://www.schemers.org/">http://www.schemers.org/</a> </p>
-<h2>Index</h2>

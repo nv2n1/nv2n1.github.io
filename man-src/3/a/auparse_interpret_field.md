@@ -21,4 +21,3 @@ description: "auparse_interpret_field – get current field’s value interprete
 <p> <code><a href="/docs/linux/man/3-auparse_get_field_int/">auparse_get_field_int</a></code>(3),<code><a href="/docs/linux/man/3-auparse_get_field_str/">auparse_get_field_str</a></code>(3),<code><a href="/docs/linux/man/3-auparse_set_escape_mode/">auparse_set_escape_mode</a></code>(3). </p>
 <h2>AUTHOR</h2>
 <p> Steve Grubb </p>
-<h2>Index</h2>

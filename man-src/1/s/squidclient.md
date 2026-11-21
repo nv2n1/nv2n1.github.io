@@ -103,4 +103,3 @@ Use kinit username[at] DOMAIN first to get initial TGS.- N
 <p> Report ideas for new improvements to the <i>Squid Developers mailing list</i> &lt;squid-dev [at] squid-cache.org&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-squid/">squid</a></code>(8), <code><a href="/docs/linux/man/8-cachemgr-cgi/">cachemgr.cgi</a></code>(8) </p>
-<h2>Index</h2>

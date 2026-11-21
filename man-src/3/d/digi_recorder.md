@@ -16,4 +16,3 @@ description: "digi_recorder – Hook notifying you when a new sample buffer beco
 <p> If set, this function is called by the input driver whenever a new sample buffer becomes available, at which point you can use read_sound_input() to copy the data into a more permanent location. It runs in an interrupt context, so it must execute very quickly, the code and all memory that it touches must be locked, and you cannot call any operating system routines or access disk files. This currently works only under DOS. </p>
 <h2>SEE ALSO</h2>
 <p> <code>install_sound_input</code>(3), <code><a href="/docs/linux/man/3-start_sound_input/">start_sound_input</a></code>(3) </p>
-<h2>Index</h2>

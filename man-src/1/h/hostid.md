@@ -30,4 +30,3 @@ description: "hostid – print the numeric identifier for the current host"
 <p> <a href="/docs/linux/man/3-gethostid/">gethostid</a>(3) </p>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/hostid">https://www.gnu.org/software/coreutils/hostid</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) hostid invocation&#8217; </p>
-<h2>Index</h2>

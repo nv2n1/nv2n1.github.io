@@ -46,4 +46,3 @@ description: "ipa-adduser – Add a user"
 <p> If no options are passed then all questions are asked.</p>
 <h2>EXIT STATUS</h2>
 <p> The exit status is 0 on success, nonzero on error. </p>
-<h2>Index</h2>

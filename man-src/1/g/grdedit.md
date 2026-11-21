@@ -90,4 +90,3 @@ gmt grdedit oblique.nc -El -Goblique_rot.nc
 <p> <code>gmt</code>, <code>grd2xyz</code>, <code>grdinfo</code> <code>xyz2grd</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

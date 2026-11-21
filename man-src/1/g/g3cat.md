@@ -45,4 +45,3 @@ description: "g3cat – concatenate multiple g3 documents"
 <p> <a href="/docs/linux/man/1-g32pbm/">g32pbm</a>(1), <a href="/docs/linux/man/8-sendfax/">sendfax</a>(8), <a href="/docs/linux/man/1-faxspool/">faxspool</a>(1) </p>
 <h2>AUTHORS</h2>
 <p> <i>g3cat</i> is Copyright (C) 1993 by Gert Doering, &lt;gert [at] greenie.muc.de&gt; </p>
-<h2>Index</h2>

@@ -182,4 +182,3 @@ d = B-&gt;period * WEIGHT-A - A-&gt;period * WEIGHT-B
 </dt><dd> &bull; WEIGHT-B being the weight of the baseline data file</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-perf-record/">perf-record</a></code>(1), <code><a href="/docs/linux/man/1-perf-report/">perf-report</a></code>(1) </p>
-<h2>Index</h2>

@@ -96,4 +96,3 @@ Martin Sivak&lt;msivak[at] redhat.com&gt;
 <pre>
 <a rel="nofollow" href="http://fedorahosted.org/firstaidkit">http://fedorahosted.org/firstaidkit</a>
 </pre>
-<h2>Index</h2>

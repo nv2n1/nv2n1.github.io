@@ -1942,4 +1942,3 @@ description: "tla – arch command line client tool"
 <dd> Directory where the commands for signing and checking signatures are stored.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a rel="nofollow" href="http://gnuarch.org/,">http://gnuarch.org/,</a></code> <code><a rel="nofollow" href="http://wiki.gnuarch.org/">http://wiki.gnuarch.org/</a></code></p>
-<h2>Index</h2>

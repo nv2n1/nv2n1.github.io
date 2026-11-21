@@ -29,4 +29,3 @@ description: "cleanup_digikamdb – Cleanup the digiKam databases to reduce thei
 <p> The <i>VACUUM</i> command cleans the main database by copying its contents to a temporary database file and reloading the original database file from the copy. This eliminates free pages, aligns table data to be contiguous, and otherwise cleans up the database file structure.</p>
 <h2>AUTHOR</h2>
 <p> <code>cleanup_digikamdb</code> was written by Andi Clemens &lt;andi dot clemens at gmail dot com&gt; </p>
-<h2>Index</h2>

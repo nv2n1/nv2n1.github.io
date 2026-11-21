@@ -33,4 +33,3 @@ description: "raw2hdf – Create an .hdf hard disk image from a raw data file"
  <i><a rel="nofollow" href="http://www.worldofspectrum.org/faq/index.html">http://www.worldofspectrum.org/faq/index.html</a></i>.</p>
 <h2>AUTHOR</h2>
 <p> Matthew Westcott (matthew [at] west.co.tt). </p>
-<h2>Index</h2>

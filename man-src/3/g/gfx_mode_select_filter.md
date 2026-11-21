@@ -17,4 +17,3 @@ description: "gfx_mode_select_filter – Even more extended version of the graph
 <p> This version of the function reads the initial values from the parameters when it activates so you can specify the default values. In fact, you should be sure not to pass in uninitialised values. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-gfx_mode_select/">gfx_mode_select</a></code>(3), <code><a href="/docs/linux/man/3-gfx_mode_select_ex/">gfx_mode_select_ex</a></code>(3), <code><a href="/docs/linux/man/3-set_color_depth/">set_color_depth</a></code>(3), <code><a href="/docs/linux/man/3-set_gfx_mode/">set_gfx_mode</a></code>(3), <code><a href="/docs/linux/man/3-gui_fg_color/">gui_fg_color</a></code>(3) </p>
-<h2>Index</h2>

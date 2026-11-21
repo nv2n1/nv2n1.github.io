@@ -31,4 +31,3 @@ description: "grenum – An advanced refdes renumber utility"
 <p> Levente.Kovacs [at] interware.hu </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-gschem/">gschem</a>(1)</code> </p>
-<h2>Index</h2>

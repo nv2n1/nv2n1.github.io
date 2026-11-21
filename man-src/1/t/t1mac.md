@@ -31,4 +31,3 @@ description: "t1mac – translate a PFA or PFB PostScript Type 1 font into Macin
 <h2>SEE ALSO</h2>
 <h2>AUTHORS</h2>
 <p> Eddie Kohler (ekohler [at] gmail.com) </p>
-<h2>Index</h2>

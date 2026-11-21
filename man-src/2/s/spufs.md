@@ -126,4 +126,3 @@ description: "spufs – the SPU file system"
 <p> Arnd Bergmann &lt;arndb [at] de.ibm.com&gt;, Mark Nutter &lt;mnutter [at] us.ibm.com&gt;, Ulrich Weigand &lt;Ulrich.Weigand [at] de.ibm.com&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/7-capabilities/">capabilities</a></code>(7), <code><a href="/docs/linux/man/2-close/">close</a></code>(2), <code><a href="/docs/linux/man/2-spu_create/">spu_create</a></code>(2), <code><a href="/docs/linux/man/2-spu_run/">spu_run</a></code>(2), <code><a href="/docs/linux/man/7-spufs/">spufs</a></code>(7) </p>
-<h2>Index</h2>

@@ -36,4 +36,3 @@ description: "xapian-tcpsrv – TCP daemon for use with Xapian’s remote backen
 <dt><code>&#8211;version</code></dt>
 <dd> output version information and exit </dd>
 </dl>
-<h2>Index</h2>

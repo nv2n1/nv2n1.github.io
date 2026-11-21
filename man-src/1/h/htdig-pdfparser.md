@@ -27,4 +27,3 @@ description: "htdig-pdfparser – parse a PDF document (wrapper script for htdig
 <p> Please refer to the HTML pages (in the htdig-doc package) <code>/usr/share/doc/htdig-doc/html/index.html</code> and the manual pages <i><a href="/docs/linux/man/1-htdig/">htdig</a>(1)</i> for a detailed description of ht://Dig and its commands.</p>
 <h2>AUTHOR</h2>
 <p> Stijn de Bekker &lt;stijn [at] debian.org&gt; </p>
-<h2>Index</h2>

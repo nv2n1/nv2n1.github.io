@@ -35,4 +35,3 @@ description: "recountdiff – recompute patch counts and offsets"
 <dl>
 <dt>
 </dt><dd> Package maintainer</dd></dl>
-<h2>Index</h2>

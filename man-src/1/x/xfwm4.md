@@ -42,4 +42,3 @@ description: "xfwm4 – Window manager for Xfce"
 </dt><dd> Build configuration and supported features: &#8211; Startup notification support: Yes &#8211; XSync support: Yes &#8211; Render support: Yes &#8211; Xrandr support: Yes &#8211; Embedded compositor: Yes &#8211; KDE systray proxy (deprecated): No</dd></dl>
 <h2>SEE ALSO</h2>
 <p> Upstream documentation at <a rel="nofollow" href="http://docs.xfce.org/xfce/xfwm4/start">http://docs.xfce.org/xfce/xfwm4/start</a> </p>
-<h2>Index</h2>

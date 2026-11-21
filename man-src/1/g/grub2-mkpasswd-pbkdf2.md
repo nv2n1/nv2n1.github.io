@@ -28,4 +28,3 @@ description: "grub-mkpasswd-pbkdf2 — Generate a PBKDF2 password hash."
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code>info grub</code> </p>
-<h2>Index</h2>

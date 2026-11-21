@@ -21,4 +21,3 @@ description: "tv_to_latex – Convert XMLTV listings to LaTeX source."
 <p> Ed Avis, ed [at] membled.com</p>
 <h2>BUGS</h2>
 <p> The LaTeX source generated is not perfect, it sometimes produces spurious blank lines in the output. </p>
-<h2>Index</h2>

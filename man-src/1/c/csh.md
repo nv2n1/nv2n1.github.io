@@ -662,4 +662,3 @@ d       directory
 <p> Commands within loops, prompted for by `?&#8217; , are not placed on the <code>history</code> list. Control structure should be parsed instead of being recognized as built-in commands. This would allow control commands to be placed anywhere, to be combined with `|&#8217; , and to be used with `&amp;&#8217; and `;&#8217; metasyntax. </p>
 <p> It should be possible to use the `:&#8217; modifiers on the output of command substitutions. </p>
 <p> The way the <i>filec</i> facility is implemented is ugly and expensive. </p>
-<h2>Index</h2>

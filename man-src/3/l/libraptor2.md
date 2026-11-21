@@ -47,4 +47,3 @@ cc prog.c -o prog `pkg-config raptor2 --cflags` `pkg-config raptor2 --libs`
 <p> <code><a href="/docs/linux/man/1-rapper/">rapper</a>(1)</code></p>
 <h2>AUTHOR</h2>
 <p> Dave Beckett &#8211; <a rel="nofollow" href="http://www.dajobe.org/">http://www.dajobe.org/</a> </p>
-<h2>Index</h2>

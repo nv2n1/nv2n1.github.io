@@ -182,4 +182,3 @@ description: "aspell – interactive spell checker"
 <p> Support for Aspell can be found on the Aspell mailing lists. Instructions for joining the various mailing lists (and an archive of them) can be found off the Aspell home page at &lt;<a rel="nofollow" href="http://aspell.net">http://aspell.net</a>&gt;. Bug reports should be submitted via GitHub Issues rather than being posted to the mailing lists.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Brian Nelson &lt;pyro [at] debian.org&gt; based on the Aspell User&#8217;s Manual, Copyright &#169; 2002 Kevin Atkinson. Updated Nov 2006 by Jose Da Silva &lt;digital [at] joescat.com&gt;, and Dec 2006 by Kevin Atkinson &lt;kevina [at] gnu.org&gt;. </p>
-<h2>Index</h2>

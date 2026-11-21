@@ -285,4 +285,3 @@ $ tig --word-diff=plain
 <dt>
 </dt><dd> mailto:jonas.fonseca [at] gmail.com</dd></dl>
 </dl>
-<h2>Index</h2>

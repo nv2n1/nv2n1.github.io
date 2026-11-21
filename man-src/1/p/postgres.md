@@ -271,4 +271,3 @@ $ <code>postgres --work-mem=1234</code>
 <p> Either form overrides whatever setting might exist for <i>work_mem</i> in postgresql.conf. Notice that underscores in parameter names can be written as either underscore or dash on the command line. Except for short-term experiments, it&#8217;s probably better practice to edit the setting in postgresql.conf than to rely on a command-line switch to set a parameter.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-initdb/">initdb</a></code>(1), <code><a href="/docs/linux/man/1-pg_ctl/">pg_ctl</a></code>(1) </p>
-<h2>Index</h2>

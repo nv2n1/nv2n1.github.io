@@ -344,4 +344,3 @@ gmt grdmath -Rd -I10 X Y MUL = lixo.tiff=gd:GTiff
 <p> <code>gmt.conf</code>, <code>gmt</code>, <code>grdmath</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

@@ -44,4 +44,3 @@ description: "dirfile_move — move a dirfile field between format file fragment
 <p> A binary file translation occurs out-of-place. As a result, sufficient space must be present on the filesystem for both the binary file before translation and the binary file after translation.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-dirfile_metaflush/">dirfile_metaflush</a></code>(3), <code><a href="/docs/linux/man/3-dirfile_open/">dirfile_open</a></code>(3), <code><a href="/docs/linux/man/3-get_error/">get_error</a></code>(3), <code><a href="/docs/linux/man/3-get_error_string/">get_error_string</a></code>(3), <code><a href="/docs/linux/man/5-dirfile/">dirfile</a></code>(5), <code><a href="/docs/linux/man/5-dirfile-format/">dirfile-format</a></code>(5) </p>
-<h2>Index</h2>

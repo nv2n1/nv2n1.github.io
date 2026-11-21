@@ -22,4 +22,3 @@ description: "ql/instruments/basketoption.hpp – Basket option on a number of a
 <p> Basket option on a number of assets. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

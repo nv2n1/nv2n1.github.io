@@ -319,4 +319,3 @@ description: "recordMyDesktop – record desktop sessions to an Ogg-Theora-Vorbi
  <code><a href="/docs/linux/man/1-vlc/">vlc</a>(1)</code><br />
  <code><a href="/docs/linux/man/1-ffmpeg2theora/">ffmpeg2theora</a>(1)</code><br />
  <code><a href="/docs/linux/man/1-jack_lsp/">jack_lsp</a>(1)</code> </p>
-<h2>Index</h2>

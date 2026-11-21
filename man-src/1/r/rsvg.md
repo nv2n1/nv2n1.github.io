@@ -37,4 +37,3 @@ description: "rsvg – Turn SVG files into raster images."
 <p> <a rel="nofollow" href="http://librsvg.sourceforge.net/">http://librsvg.sourceforge.net/</a> <a rel="nofollow" href="http://www.w3.org/TR/SVG11/">http://www.w3.org/TR/SVG11/</a> <a rel="nofollow" href="http://www.gnome.org/">http://www.gnome.org/</a></p>
 <h2>AUTHORS</h2>
 <p> Dom Lachowicz (cinamod [at] hotmail.com), Caleb Moore (c.moore [at] student.unsw.edu.au), and a host of others. </p>
-<h2>Index</h2>

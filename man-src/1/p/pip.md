@@ -145,4 +145,3 @@ description: "pip – A tool for installing and managing Python packages"
 <p> Permission is granted to copy, distribute and/or modify this document under the terms of the GNU General Public License, version 3 or any later version published by the Free Software Foundation.</p>
 <h2>AUTHOR</h2>
 <p> Barry Warsaw &lt;barry [at] debian.org&gt; </p>
-<h2>Index</h2>

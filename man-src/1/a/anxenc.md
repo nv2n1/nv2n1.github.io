@@ -48,4 +48,3 @@ description: "anxenc — Encapsulate annotations and data into annodexed media"
 &nbsp;<wbr></p>
 <h2>SEE ALSO</h2>
 <p> More information is available at <i>Annodex.net (link to URL <a rel="nofollow" href="http://www.annodex.net/)">http://www.annodex.net/)</a> </i> <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr></tt> </p>
-<h2>Index</h2>

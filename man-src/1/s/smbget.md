@@ -135,4 +135,3 @@ smbget -Rr <a href="smb://rhonwyn/">smb://rhonwyn/</a>
 <h2>AUTHOR</h2>
 <p> The original Samba software and related utilities were created by Andrew Tridgell. Samba is now developed by the Samba Team as an Open Source project similar to the way the Linux kernel is developed. </p>
 <p> The smbget manpage was written by Jelmer Vernooij. </p>
-<h2>Index</h2>

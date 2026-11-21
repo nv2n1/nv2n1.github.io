@@ -33,4 +33,4 @@ description: "htsfile – identify high-throughput sequencing data files"
 <dt><code>-v</code>, <code>--verbose</code> </dt>
 <dd>  Display additional warnings and diagnostic messages. Using <code>--verbose</code> repeatedly further raises the verbosity.  </dd></dl>
  <h2>SEE ALSO</h2>
- <i><a href="/docs/linux/man/1-bcftools/">bcftools</a></i>(1), <i><a href="/docs/linux/man/1-file/">file</a></i>(1), <i><a href="/docs/linux/man/1-samtools/">samtools</a></i>(1) <h2>Index</h2>
+ <i><a href="/docs/linux/man/1-bcftools/">bcftools</a></i>(1), <i><a href="/docs/linux/man/1-file/">file</a></i>(1), <i><a href="/docs/linux/man/1-samtools/">samtools</a></i>(1) 

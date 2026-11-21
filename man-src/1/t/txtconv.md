@@ -42,4 +42,3 @@ description: "txtconv – A tool to apply TECkit mappings to convert the encodin
 </dt><dd> bytes utf8 utf16be utf16le utf16 utf32be utf32le utf32</dd></dl>
 <h2>Further Information</h2>
 <p> For further information see the document TECkit_Tools.pdf. On a Debian system, this can be found in /usr/share/doc/teckit. </p>
-<h2>Index</h2>

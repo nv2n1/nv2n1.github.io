@@ -70,4 +70,3 @@ printf '[<code>3</code>J'
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-tput/">tput</a></code>(1), <code><a href="/docs/linux/man/5-terminfo/">terminfo</a></code>(5) </p>
 <p> This describes <code>ncurses</code> version 6.3 (patch 20211021). </p>
-<h2>Index</h2>

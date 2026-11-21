@@ -28,4 +28,3 @@ description: "thrift – program to do something"
 <h2>AUTHOR</h2>
 <p> thrift was written by &lt;upstream author&gt;. </p>
 <p> This manual page was written by Krzysztof Krzyżaniak (eloy) &lt;eloy [at] debian.org&gt;, for the Debian project (and may be used by others). </p>
-<h2>Index</h2>

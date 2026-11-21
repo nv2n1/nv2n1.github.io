@@ -34,4 +34,3 @@ description: "consoletype – print type of the console connected to standard in
 <dd> otherwise. </dd>
 </dl>
 <p> </i></p>
-<h2>Index</h2>

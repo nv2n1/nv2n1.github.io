@@ -28,4 +28,3 @@ description: "e2tail – a basic version of the tail command for an ext2 filesys
 <h2>AUTHOR</h2>
 <p> The <code>e2tools</code> were written by Keith Sheffield &lt;sheff [at] pobox.com&gt;. </p>
 <p> This manual page was written by Lucas Wall &lt;lwall [at] debian.org&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

@@ -35,4 +35,3 @@ description: "data2inc – Free Pascal binary to pascal include file converter."
 <dt>
 </dt><dd> <code><a href="/docs/linux/man/1-ppc386/">ppc386</a></code>(1) <code><a href="/docs/linux/man/1-bin2obj/">bin2obj</a></code>(1) </dd>
 </dl>
-<h2>Index</h2>

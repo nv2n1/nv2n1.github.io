@@ -22,4 +22,3 @@ description: "pmlogmv – move (rename) Performance Co-Pilot archive files"
 <p> <code>ln</code>(2) and <code><a href="/docs/linux/man/1-pmlogger/">pmlogger</a></code>(1).</p>
 <h2>DIAGNOSTICS</h2>
 <p> All error and warning messages are intended to be easily understood and errors produce a non-zero exit status. </p>
-<h2>Index</h2>

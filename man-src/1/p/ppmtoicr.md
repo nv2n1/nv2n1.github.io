@@ -47,4 +47,3 @@ description: "ppmtoicr – convert a portable pixmap into NCSA ICR format"
 <p> <i>NCSA Telnet for the Macintosh</i>, University of Illinois at Urbana-Champaign (1989)</p>
 <h2>AUTHOR</h2>
 <p> Copyright (C) 1990 by Kanthan Pillay (svpillay [at] Princeton.EDU), Princeton University Computing and Information Technology. </p>
-<h2>Index</h2>

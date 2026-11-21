@@ -42,4 +42,3 @@ description: "alink – link (reloacatable) object files created by AS"
 <p> In its current (incomplete) state, this program is a bug by itself ;-) </p>
 <h2>AUTHOR(S)</h2>
 <p> Alfred Arnold (alfred [at] ccac.rwth-aachen.de) </p>
-<h2>Index</h2>

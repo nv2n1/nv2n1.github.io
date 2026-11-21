@@ -112,4 +112,3 @@ description: "Writing on the braille display –"
  </dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for BrlAPI from the source code. </p>
-<h2>Index</h2>

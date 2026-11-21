@@ -1049,4 +1049,3 @@ description: "dex"
 <p> Timo Hirvonen &lt;tihirvon [at] gmail.com&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-dex-syntax/">dex-syntax</a>(7) </p>
-<h2>Index</h2>

@@ -66,4 +66,3 @@ description: "mxmldoc – mini-xml documentation generator"
 <p> <a href="/docs/linux/man/3-mxml/">mxml</a>(3), Mini-XML Programmers Manual, <a rel="nofollow" href="http://www.minixml.org/">http://www.minixml.org/</a></p>
 <h2>COPYRIGHT</h2>
 <p> Copyright 2003-2009 by Michael Sweet. </p>
-<h2>Index</h2>

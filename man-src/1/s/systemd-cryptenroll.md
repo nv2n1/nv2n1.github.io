@@ -196,4 +196,3 @@ systemd-cryptenroll /dev/sda1 --wipe-slot=empty --tpm2-device=auto
 <p> On success, 0 is returned, a non-zero failure code otherwise.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-systemd/">systemd</a></code>(1), <code>systemd-cryptsetup [at] .service</code>(8), <code><a href="/docs/linux/man/5-crypttab/">crypttab</a></code>(5), <code><a href="/docs/linux/man/8-cryptsetup/">cryptsetup</a></code>(8) </p>
-<h2>Index</h2>

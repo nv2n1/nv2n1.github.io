@@ -26,4 +26,3 @@ description: "pagesize – Print supported system page sizes"
 <p> <i><a href="/docs/linux/man/1-oprofile/">oprofile</a>(1),</i> <i><a href="/docs/linux/man/2-getpagesize/">getpagesize</a>(2),</i> <i>getpagesizes(3),</i> <i>gethugepagesizes(3),</i> <i>hugectl(7),</i> <i>hugeadm(7),</i> <i><a href="/docs/linux/man/7-libhugetlbfs/">libhugetlbfs</a>(7)</i> </p>
 <h2>AUTHORS</h2>
 <p> libhugetlbfs was written by various people on the libhugetlbfs-devel mailing list. </p>
-<h2>Index</h2>

@@ -228,4 +228,3 @@ description: "lv – a Powerful Multilingual File Viewer / Grep"
 <p> You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA</p>
 <h2>BUG REPORT</h2>
 <p> Please send bug reports to: nrt [at] ff.iij4u.or.jp </p>
-<h2>Index</h2>

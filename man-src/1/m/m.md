@@ -105,4 +105,3 @@ description: "m.proj – Convert coordinates from one projection to another (cs2
 <p> <i>Last changed: $Date: 2006-08-31 10:47:06 +0200 (Thu, 31 Aug 2006) $</i> </p>
 <p> Full index </p>
 <p> � 2003-2008 GRASS Development Team </p>
-<h2>Index</h2>

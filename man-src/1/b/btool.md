@@ -86,4 +86,3 @@ description: "btool – Barry Project’s program to interface with BlackBerry h
 <h2>SEE ALSO</h2>
 <p> <a rel="nofollow" href="http://www.netdirect.ca/software/packages/barry">http://www.netdirect.ca/software/packages/barry</a><br />
  Especially the caveats, and the call for developers and others to help with the project. </p>
-<h2>Index</h2>

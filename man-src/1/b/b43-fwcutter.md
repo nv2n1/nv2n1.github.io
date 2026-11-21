@@ -35,4 +35,3 @@ description: "b43-fwcutter – Utility for extracting Broadcom 43xx firmware"
 <dd> Print help information</dd></dl>
 <h2>AUTHORS</h2>
 <p> b43 development team, <a rel="nofollow" href="http://wireless.kernel.org/en/users/Drivers/b43">http://wireless.kernel.org/en/users/Drivers/b43</a> </p>
-<h2>Index</h2>

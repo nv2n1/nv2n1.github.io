@@ -219,4 +219,3 @@ jjs[options][script - files][--arguments]
 </pre>
 <h2>SEE ALSO</h2>
 <p> <code>jrunscript</code> </p>
-<h2>Index</h2>

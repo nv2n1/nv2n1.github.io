@@ -27,4 +27,3 @@ description: "split2po – Creates a po file from two DocBook XML files"
 <dl>
 <dt>
 </dt><dd> Author.</dd></dl>
-<h2>Index</h2>

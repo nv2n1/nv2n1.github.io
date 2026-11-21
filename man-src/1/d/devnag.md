@@ -24,4 +24,3 @@ description: "devnag – Devanagari for TeX preprocessor"
 <h2>AUTHORS</h2>
 <p> <code>devnag</code> was written by Frans J. Velthuis and is currently maintained by Zdenek Wagner as part of TeX Live &lt;tex-live [at] tug.org&gt;. </p>
 <p> This manpage was written by Norbert Preining for Debian/GNU Linux and may be used, modified and/or distributed freely by anyone. </p>
-<h2>Index</h2>

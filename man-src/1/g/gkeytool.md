@@ -371,4 +371,3 @@ description: "gkeytool – Manage private keys and public certificates"
 <h2>BUGS</h2>
 <h2>SEE ALSO</h2>
 <h2>AUTHOR</h2>
-<h2>Index</h2>

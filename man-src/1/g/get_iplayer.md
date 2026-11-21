@@ -483,4 +483,3 @@ description: "get_iplayer – Stream Recording tool and PVR for BBC iPlayer, BBC
 &nbsp;<wbr>&nbsp;<wbr>This program comes with ABSOLUTELY NO WARRANTY;&nbsp;<wbr>for details use &#8211;warranty.<br />
 &nbsp;<wbr>&nbsp;<wbr>This is free software, and you are welcome to redistribute it under certain<br />
 &nbsp;<wbr>&nbsp;<wbr>conditions;&nbsp;<wbr>use &#8211;conditions for details. </p>
-<h2>Index</h2>

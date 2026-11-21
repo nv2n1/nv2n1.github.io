@@ -49,4 +49,3 @@ description: "tv_grab_il – Grab TV listings for Israel."
 <p> lightpriest. This documentation and parts of the code based on various other tv_grabbers from the XMLTV-project.</p>
 <h2>SEE ALSO</h2>
 <p> <i>xmltv</i>(5). </p>
-<h2>Index</h2>

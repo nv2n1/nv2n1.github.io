@@ -32,4 +32,3 @@ description: "irsimsend- send simulated IR data."
 </dl>
 <h2>SEE ALSO</h2>
 <p> The documentation for <code>lirc</code> is maintained as html pages. They are located under html/ in the documentation directory. </p>
-<h2>Index</h2>

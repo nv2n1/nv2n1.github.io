@@ -92,4 +92,3 @@ description: "oshmem_info – Display information about the Open MPI installatio
 <h2>AUTHORS</h2>
 <p> The Open MPI/SHMEM maintainers &#8212; see <i><a rel="nofollow" href="http://www.openmpi.org/">http://www.openmpi.org/</a></i> or the file <i>AUTHORS</i>. </p>
 <p> This manual page was originally contributed by Dirk Eddelbuettel &lt;edd [at] debian.org&gt;, one of the Debian GNU/Linux maintainers for Open MPI, and may be used by others. </p>
-<h2>Index</h2>

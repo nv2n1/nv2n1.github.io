@@ -85,4 +85,3 @@ description: "gozilla – force mozilla to display specified source file."
 <p> Tama Communications Corporation.</p>
 <h2>HISTORY</h2>
 <p> The <code>gozilla</code> command appeared in FreeBSD 2.2.2 but did not installed by default. </p>
-<h2>Index</h2>

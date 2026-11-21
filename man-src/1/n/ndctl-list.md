@@ -133,4 +133,3 @@ ndctl list --namespaces --bus=all --region=all
 </dt><dd> Include idle (not enabled) devices in the listing</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-ndctl-create-namespace/">ndctl-create-namespace</a></code>(1) </p>
-<h2>Index</h2>

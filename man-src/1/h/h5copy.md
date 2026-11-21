@@ -66,4 +66,3 @@ description: "h5copy: – Copies HDF5 objects from a file to a new file"
 <dt>
 </dt><dd> <code>info h5copy:</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

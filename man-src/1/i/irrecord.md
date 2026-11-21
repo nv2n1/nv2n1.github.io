@@ -64,4 +64,3 @@ description: "irrecord – application for recording IR-codes for usage with LIR
 <h2>SEE ALSO</h2>
 <p> The documentation for <code>lirc</code> is maintained as html pages. They are located under html/ in the documentation directory. </p>
 <p> Further information on this topic is available in section &quot;Adding new remote controls&quot; in html/help.html </p>
-<h2>Index</h2>

@@ -62,4 +62,3 @@ description: "flatpak-create-usb – Copy apps and/or runtimes onto removable me
 <p> <code>$ flatpak create-usb /run/media/mwleeds/1a9b4cb2-a7ef-4d9b-91a5-6eaf8fdd2bf6/ com.endlessm.wiki_art.en</code></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-install/">flatpak-install</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-list/">flatpak-list</a></code>(1), <code>ostree-create-usb</code>(1) </p>
-<h2>Index</h2>

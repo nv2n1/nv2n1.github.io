@@ -39,4 +39,3 @@ int ldap_parse_result(LDAP *ld, LDAPMessage *result,
 <p> <code><a href="/docs/linux/man/3-ldap/">ldap</a></code>(3), <code><a href="/docs/linux/man/3-ldap_result/">ldap_result</a></code>(3), <code><a href="/docs/linux/man/3-ldap_search/">ldap_search</a></code>(3), <code><a href="/docs/linux/man/3-ldap_memfree/">ldap_memfree</a></code>(3), <code><a href="/docs/linux/man/3-ldap_memvfree/">ldap_memvfree</a></code>(3), <code><a href="/docs/linux/man/3-ldap_get_values/">ldap_get_values</a></code>(3), <code><a href="/docs/linux/man/3-ldap_controls_free/">ldap_controls_free</a></code>(3), <code><a href="/docs/linux/man/3-lber-types/">lber-types</a></code>(3)</p>
 <h2>ACKNOWLEDGEMENTS</h2>
 <p> <code>OpenLDAP Software</code> is developed and maintained by The OpenLDAP Project &lt;<a rel="nofollow" href="http://www.openldap.org/">http://www.openldap.org/</a>&gt;. <code>OpenLDAP Software</code> is derived from University of Michigan LDAP 3.3 Release. </p>
-<h2>Index</h2>

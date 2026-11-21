@@ -39,4 +39,3 @@ MACHINE                          CLASS     SERVICE
 <p> <a href="/docs/linux/man/1-docker-run/">docker-run</a>(1), <a href="/docs/linux/man/1-machinectl/">machinectl</a>(1), <a href="/docs/linux/man/8-systemd-machined/">systemd-machined</a>(8) </p>
 <h2>HISTORY</h2>
 <p> November 2015, updated by Sally O&#8217;Malley &lt;somalley [at] redhat.com&gt; </p>
-<h2>Index</h2>

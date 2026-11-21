@@ -28,4 +28,3 @@ description: "mono-api-info – Expose IL structure of CLR assemblies as XML."
 <p> Visit <a rel="nofollow" href="http://www.mono-project.com">http://www.mono-project.com</a> for details</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-mono/">mono</a>(1)</code> </p>
-<h2>Index</h2>

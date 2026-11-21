@@ -161,4 +161,3 @@ gmt pscontour topo.txt -C100 -Dcontours_%.0f.txt
 <p> <i><a rel="nofollow" href="http://www.cs.cmu.edu/~quake/triangle.html">http://www.cs.cmu.edu/~quake/triangle.html</a></i></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

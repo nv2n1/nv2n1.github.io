@@ -40,4 +40,3 @@ driverless[-h | --help | --version][-d | -v | --debug][list][_ipps._tcp][_ipp._t
 <p> <code><a href="/docs/linux/man/8-cups-browsed/">cups-browsed</a></code>(8), <code><a href="/docs/linux/man/1-ippfind/">ippfind</a></code>(1), <code><a href="/docs/linux/man/8-ippusbxd/">ippusbxd</a></code>(8) </p>
 <h2>AUTHOR</h2>
 <p> The authors of <code>driverless</code> are listed in /usr/share/doc/<code>cups-filters</code>/AUTHORS. </p>
-<h2>Index</h2>

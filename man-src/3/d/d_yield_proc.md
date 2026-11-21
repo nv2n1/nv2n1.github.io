@@ -16,4 +16,3 @@ description: "d_yield_proc – Invisible dialog procedure that yields CPU time s
 <p> An invisible helper object that yields time slices for the scheduler (if the system supports it) when the GUI has nothing to do but waiting for user actions. You should put one instance of this object in each dialog array because it may be needed on systems with an unusual scheduling algorithm (for instance QNX) in order to make the GUI fully responsive. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-rest/">rest</a></code>(3), <code><a href="/docs/linux/man/3-exgui/">exgui</a></code>(3) </p>
-<h2>Index</h2>

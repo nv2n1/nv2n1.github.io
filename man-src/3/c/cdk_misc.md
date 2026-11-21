@@ -157,4 +157,3 @@ void sortList(
 <dd> performs a quick sort of the given list. This is a wrapper for qsort, used to sort the <i>list</i> of strings. The number of strings in <i>list</i> is given by <i>length</i>. The list is sorted alphabetically in increasing order.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-cdk/">cdk</a></code>(3), <code><a href="/docs/linux/man/3-cdk_screen/">cdk_screen</a></code>(3), <code><a href="/docs/linux/man/3-cdk_display/">cdk_display</a></code>(3), <code><a href="/docs/linux/man/3-cdk_binding/">cdk_binding</a></code>(3), <code><a href="/docs/linux/man/3-cdk_util/">cdk_util</a></code>(3) </p>
-<h2>Index</h2>

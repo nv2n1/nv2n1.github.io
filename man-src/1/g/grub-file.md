@@ -85,4 +85,3 @@ description: "grub-file – check file type"
 <dt>
 </dt><dd> <code>info grub-file</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

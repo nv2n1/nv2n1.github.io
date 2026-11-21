@@ -20,4 +20,3 @@ description: "libssh2_channel_send_eof – send EOF to remote server"
 <p> <i>LIBSSH2_ERROR_SOCKET_SEND</i> &#8211; Unable to send data on socket. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libssh2_channel_wait_eof/">libssh2_channel_wait_eof</a>(3)</code> <code><a href="/docs/linux/man/3-libssh2_channel_eof/">libssh2_channel_eof</a>(3)</code> </p>
-<h2>Index</h2>

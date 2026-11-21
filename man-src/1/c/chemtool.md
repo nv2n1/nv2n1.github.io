@@ -173,4 +173,3 @@ description: "chemtool – chemical structures editor"
 <p> <code><a href="/docs/linux/man/1-babel/">babel</a></code>(1), <code><a href="/docs/linux/man/1-cht/">cht</a></code>(1), <code><a href="/docs/linux/man/1-fig2dev/">fig2dev</a></code>(1), <code><a href="/docs/linux/man/1-fig2sxd/">fig2sxd</a></code>(1), <code><a href="/docs/linux/man/1-transfig/">transfig</a></code>(1), <code><a href="/docs/linux/man/1-xfig/">xfig</a></code>(1) </p>
 <p> Homepage:<br />
  <i><a rel="nofollow" href="http://ruby.chemie.uni-freiburg.de/~martin/chemtool/chemtool.html">http://ruby.chemie.uni-freiburg.de/~martin/chemtool/chemtool.html</a></i> </p>
-<h2>Index</h2>

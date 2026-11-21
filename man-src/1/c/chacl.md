@@ -70,4 +70,3 @@ description: "chacl – change the access control list of a file or directory"
 <p> ACLs are filesystem extended attributes and hence are not typically archived or restored using the conventional archiving utilities. See <i><a href="/docs/linux/man/5-attr/">attr</a></i>(5) for more information about extended attributes and see <i><a href="/docs/linux/man/8-xfsdump/">xfsdump</a></i>(8) for a method of backing them up under XFS.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-getfacl/">getfacl</a></code>(1), <code><a href="/docs/linux/man/1-setfacl/">setfacl</a></code>(1), <code><a href="/docs/linux/man/1-chmod/">chmod</a></code>(1), <code><a href="/docs/linux/man/1-umask/">umask</a></code>(1), <code><a href="/docs/linux/man/3-acl_from_text/">acl_from_text</a></code>(3), <code><a href="/docs/linux/man/5-acl/">acl</a></code>(5), <code><a href="/docs/linux/man/8-xfsdump/">xfsdump</a></code>(8) </p>
-<h2>Index</h2>

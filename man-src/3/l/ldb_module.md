@@ -18,4 +18,3 @@ description: "ldb_module –"
 <p> struct <code>ldb_module_ops</code> * <code>ops</code> </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LDB from the source code. </p>
-<h2>Index</h2>

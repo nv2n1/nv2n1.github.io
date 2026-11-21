@@ -63,4 +63,3 @@ description: "flow-receive – Receive flow data with the NetFlow protocol."
 <p> Mark Fullmer &lt;maf [at] splintered.net&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-flow-tools/">flow-tools</a></code>(1) </p>
-<h2>Index</h2>

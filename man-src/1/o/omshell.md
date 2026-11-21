@@ -198,4 +198,3 @@ obj: &lt;null&gt;
 <p> <a href="/docs/linux/man/3-dhcpctl/">dhcpctl</a>(3), omapi(3), <a href="/docs/linux/man/8-dhcpd/">dhcpd</a>(8), <a href="/docs/linux/man/8-dhclient/">dhclient</a>(8), <a href="/docs/linux/man/5-dhcpd-conf/">dhcpd.conf</a>(5), <a href="/docs/linux/man/5-dhclient-conf/">dhclient.conf</a>(5).</p>
 <h2>AUTHOR</h2>
 <p> <code>omshell</code> was written by Ted Lemon of Nominum, Inc. Information about Nominum can be found at <code><a rel="nofollow" href="http://www.nominum.com.">http://www.nominum.com.</a></code> This preliminary documentation was written by Wendy Verschoor of Nominum, Inc., while she was testing omshell. </p>
-<h2>Index</h2>

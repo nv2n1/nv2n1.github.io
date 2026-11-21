@@ -32,4 +32,3 @@ description: "pamdice – slice a Netpbm image into many horizontally and/or ver
 <p> <code><a href="/docs/linux/man/1-pamcut/">pamcut</a></code>(1), <code><a href="/docs/linux/man/1-pnmcat/">pnmcat</a></code>(1), <code><a href="/docs/linux/man/1-pgmslice/">pgmslice</a></code>(1), <code><a href="/docs/linux/man/5-pnm/">pnm</a></code>(5) </p>
 <h2>AUTHOR</h2>
 <p> put by Bryan Henderson in the public domain in 2001 </p>
-<h2>Index</h2>

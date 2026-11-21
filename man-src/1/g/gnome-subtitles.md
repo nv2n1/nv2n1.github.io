@@ -23,4 +23,3 @@ description: "gnome-subtitles – video subtitling for the GNOME desktop"
 <p> If you find a bug, please report it at <a rel="nofollow" href="http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-subtitles.">http://bugzilla.gnome.org/enter_bug.cgi?product=gnome-subtitles.</a> </p>
 <h2>AUTHOR</h2>
 <p> <code>Gnome Subtitles </code> was written by Pedro Castro &lt;dev [at] pedrocastro.org&gt;. This manpage was written by Pedro Castro and Tiago Bortoletto Vaz &lt;tiago [at] debian-ba.org&gt;. </p>
-<h2>Index</h2>

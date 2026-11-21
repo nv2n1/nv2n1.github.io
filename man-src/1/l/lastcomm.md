@@ -74,4 +74,3 @@ description: "lastcomm – print out information about previously executed comma
 <p> The GNU accounting utilities were written by Noel Cragg &lt;noel [at] gnu.ai.mit.edu&gt;. The man page was adapted from the accounting texinfo page by Susan Kleinmann &lt;sgk [at] sgk.tiac.net&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-last/">last</a></code>(1), <code><a href="/docs/linux/man/5-acct/">acct</a></code>(5) </p>
-<h2>Index</h2>

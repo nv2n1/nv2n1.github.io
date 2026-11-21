@@ -516,4 +516,3 @@ keyctl pkey_verify $k 0 foo.hash foo.sig enc=pkcs1 hash=sha256
 <p> &quot;Permission denied&quot; &#8211; permission was denied by a UID/GID/mask combination.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-keyctl/">keyctl</a></code>(1), <code><a href="/docs/linux/man/2-keyctl/">keyctl</a></code>(2), <code><a href="/docs/linux/man/2-request_key/">request_key</a></code>(2), <code><a href="/docs/linux/man/3-keyctl/">keyctl</a></code>(3), <code><a href="/docs/linux/man/5-request-key-conf/">request-key.conf</a></code>(5), <code><a href="/docs/linux/man/7-keyrings/">keyrings</a></code>(7), <code><a href="/docs/linux/man/8-request-key/">request-key</a></code>(8) </p>
-<h2>Index</h2>

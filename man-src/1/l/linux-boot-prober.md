@@ -19,4 +19,3 @@ description: "linux-boot-prober — Determine boot characteristics of a specifie
 <p> Some partitions will not be displayed by <code>linux-boot-prober</code><i>. If a partition is mounted on /</i>, <i>/target</i>, or <i>/target/boot</i>, it will be skipped.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-os-prober/">os-prober</a></code>(1) </p>
-<h2>Index</h2>

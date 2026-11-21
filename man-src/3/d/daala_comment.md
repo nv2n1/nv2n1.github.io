@@ -37,4 +37,3 @@ description: "daala_comment –"
 <p> The null-terminated vendor string. This identifies the software used to encode the stream. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for daala from the source code. </p>
-<h2>Index</h2>

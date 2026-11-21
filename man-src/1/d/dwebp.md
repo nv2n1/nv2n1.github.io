@@ -64,4 +64,3 @@ description: "dwebp – decompress a WebP file to an image file"
  PGM: <a rel="nofollow" href="http://netpbm.sourceforge.net/doc/pgm.html">http://netpbm.sourceforge.net/doc/pgm.html</a><br />
  PPM: <a rel="nofollow" href="http://netpbm.sourceforge.net/doc/ppm.html">http://netpbm.sourceforge.net/doc/ppm.html</a><br />
  PNG: <a rel="nofollow" href="http://www.libpng.org/pub/png/png-sitemap.html#info">http://www.libpng.org/pub/png/png-sitemap.html#info</a> </p>
-<h2>Index</h2>

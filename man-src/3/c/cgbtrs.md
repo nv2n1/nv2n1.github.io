@@ -114,4 +114,3 @@ IPIV is INTEGER array, dimension(N)
 <p> Definition at line 138 of file cgbtrs.f.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for LAPACK from the source code. </p>
-<h2>Index</h2>

@@ -62,4 +62,3 @@ description: "airdriver-ng – automatically install/uninstall and patch drivers
  <code><a href="/docs/linux/man/1-packetforge-ng/">packetforge-ng</a>(1)</code><br />
  <code><a href="/docs/linux/man/1-tkiptun-ng/">tkiptun-ng</a>(1)</code><br />
  <code><a href="/docs/linux/man/1-wesside-ng/">wesside-ng</a>(1)</code> </p>
-<h2>Index</h2>

@@ -45,4 +45,3 @@ description: "glabels – Label and business card creation program for GNOME"
 <p> The gLabels homepage at &lt;<a rel="nofollow" href="http://glabels.sourceforge.net/">http://glabels.sourceforge.net/</a>&gt;.</p>
 <h2>AUTHOR</h2>
 <p> Jim Evins &lt;evins [at] snaught.com&gt; </p>
-<h2>Index</h2>

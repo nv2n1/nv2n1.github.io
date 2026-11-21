@@ -49,4 +49,3 @@ Peter D Phan(pdphan[at] users.sourceforge.net)
     Ulrich Kleber(ulikleber[at] users.sourceforge.net)
         Anton Pak(avpak[at] users.sourceforge.net)
 </code></pre>
-<h2>Index</h2>

@@ -58,4 +58,3 @@ git tar - tree[--remote = &lt;repo&gt;]&lt;tree - ish&gt;[&lt;base&gt;]
 </dt><dd> Put everything in the current head&#8217;s Documentation/ directory into <i>git-1.4.0-docs.tar</i>, with the prefix <i>git-docs/</i>.</dd></dl>
 <h2>GIT</h2>
 <p> Part of the <code><a href="/docs/linux/man/1-git/">git</a></code>(1) suite </p>
-<h2>Index</h2>

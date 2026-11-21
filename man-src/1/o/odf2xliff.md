@@ -37,4 +37,3 @@ description: "odf2xliff – Convert OpenDocument (ODF) files to XLIFF localizati
 <dd> Choose whether itools (&#8211;engine=itools) or the translate toolkit (&#8211;engine=toolkit)<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>should be used as the engine to convert an ODF file to an XLIFF file. </dd>
 </dl>
-<h2>Index</h2>

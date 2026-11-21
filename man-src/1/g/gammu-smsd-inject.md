@@ -62,4 +62,3 @@ description: "gammu-smsd-inject – Inject messages into queue of SMS daemon for
 &nbsp;<wbr>debuglevel&nbsp;<wbr>=&nbsp;<wbr>255<br />
 &nbsp;<wbr>logfile&nbsp;<wbr>=&nbsp;<wbr>smsd.log </p>
 <p> and include this verbose log within bug report. </p>
-<h2>Index</h2>

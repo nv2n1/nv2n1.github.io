@@ -34,4 +34,3 @@ description: "xrestop – monitor server resources used by X11 clients"
 <p> The X-Resource extension is very new and may not be 100% accurate.</p>
 <h2>AUTHOR</h2>
 <p> <code>xrestop</code> was written by Matthew Allum &lt;mallum [at] handhelds.org&gt;. </p>
-<h2>Index</h2>

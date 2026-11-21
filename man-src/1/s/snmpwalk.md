@@ -48,4 +48,3 @@ description: "snmpwalk – retrieve a subtree of management values using SNMP GE
 <p> will retrieve the scalar values, but omit the sysORTable.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-snmpcmd/">snmpcmd</a>(1), <a href="/docs/linux/man/1-snmpbulkwalk/">snmpbulkwalk</a>(1), <a href="/docs/linux/man/5-variables/">variables</a>(5). </p>
-<h2>Index</h2>

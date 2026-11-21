@@ -88,4 +88,3 @@ $ gdallocationinfo -xml -wgs84 utm.vrt -117.5 33.75
 </pre>
 <h2>AUTHORS</h2>
 <p> Frank Warmerdam warmerdam [at] pobox.com </p>
-<h2>Index</h2>

@@ -87,4 +87,3 @@ description: "condor_fetchlog Retrieve a daemon’s log file that is located on 
 <p> Center for High Throughput Computing, University of Wisconsin-Madison</p>
 <h2>Copyright</h2>
 <p> Copyright (C) 1990-2015 Center for High Throughput Computing, Computer Sciences Department, University of Wisconsin-Madison, Madison, WI. All Rights Reserved. Licensed under the Apache License, Version 2.0. </p>
-<h2>Index</h2>

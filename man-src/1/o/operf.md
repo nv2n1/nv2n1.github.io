@@ -63,4 +63,3 @@ description: "operf – Performance profiler tool for Linux"
 <p> This man page is current for oprofile-0.9.9. </p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-opreport/">opreport</a>(1), <a href="/docs/linux/man/1-opannotate/">opannotate</a>(1). </p>
-<h2>Index</h2>

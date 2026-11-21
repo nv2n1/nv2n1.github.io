@@ -878,4 +878,3 @@ Copyright 2006 by the Cdrkit maintainers
 <p> If you want to take part in the development of <code>genisoimage</code>, you may join the <code>cdrkit</code> developer mailing list by following the instructions on <i><a rel="nofollow" href="http://alioth.debian.org/mail/?group_id=31006">http://alioth.debian.org/mail/?group_id=31006</a></i>. The email address of the list is <i>debburn-devel [at] lists.alioth.debian.org</i>. This is also the address for user support questions. Note that <code>cdrkit</code> and <code>cdrtools</code> are not affiliated. </p>
 <h2>ACKNOWLEDGEMENTS</h2>
 <p> UNIX is a registered trademark of The Open Group in the US and other countries. </p>
-<h2>Index</h2>

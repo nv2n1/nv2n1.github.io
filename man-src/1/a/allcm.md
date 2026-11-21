@@ -19,4 +19,3 @@ description: "allcm – force the most important Computer-Modern-fonts to be cal
 <p> <a href="/docs/linux/man/1-allec/">allec</a>(1), <a href="/docs/linux/man/1-allneeded/">allneeded</a>(1), <a href="/docs/linux/man/1-dvips/">dvips</a>(1), <a href="/docs/linux/man/1-dvired/">dvired</a>(1). </p>
 <h2>AUTHOR</h2>
 <p> Thomas Esser &lt;te [at] dbs.uni-hannover.de&gt; </p>
-<h2>Index</h2>

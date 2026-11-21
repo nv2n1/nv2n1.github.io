@@ -38,4 +38,3 @@ description: "seahorse – Passwords and Keys"
 </dt><dd> X display to use</dd></dl>
 <h2>BUGS</h2>
 <p> If you find a bug, please report it at <a rel="nofollow" href="https://gitlab.gnome.org/GNOME/seahorse/issues/new.">https://gitlab.gnome.org/GNOME/seahorse/issues/new.</a> </p>
-<h2>Index</h2>

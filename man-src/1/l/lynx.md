@@ -664,4 +664,3 @@ wais_proxy
  Shrewsbury, Massachusetts 01545 </p>
 <p> Thomas E. Dickey<br />
  &lt;dickey [at] invisible-island.net&gt; </p>
-<h2>Index</h2>

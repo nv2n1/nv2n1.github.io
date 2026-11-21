@@ -23,4 +23,3 @@ const char *ares_inet_pton(int af, const char *src, void *dst);
 <p> made properly publicly available in c-ares for real in version 1.10.0</p>
 <h2>AUTHOR</h2>
 <p> Daniel Stenberg </p>
-<h2>Index</h2>

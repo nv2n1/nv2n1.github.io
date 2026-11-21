@@ -43,4 +43,3 @@ description: "latex2png – manual page for latex2png 1.1"
 <dd> #search the cwd for image files</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code>latex2png</code> is a part of <code>latex2rtf</code> and has a special mode to assist in finding the baseline of a latex equation. Documentation for <code>latex2rtf </code> may be found in <code>latex2rtf.info,</code> the PDF file <code>latex2rtf.pdf</code> or the HTML file <code>latex2rtf.html</code> which are made from the TeXInfo source file <code>latex2rtf.texi.</code> </p>
-<h2>Index</h2>

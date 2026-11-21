@@ -132,4 +132,3 @@ description: "isync – synchronize IMAP4 and Maildir mailboxes"
 <p> Up to date information on <code>isync</code> can be found at <a rel="nofollow" href="http://isync.sf.net/">http://isync.sf.net/</a></p>
 <h2>AUTHORS</h2>
 <p> Originally written by Michael R. Elkins, currently maintained by Oswald Buddenhagen. </p>
-<h2>Index</h2>

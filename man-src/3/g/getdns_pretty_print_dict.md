@@ -27,4 +27,3 @@ description: "getdns_pretty_print_dict — return a string representation of a g
 <p> TBD </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-getdns_dict/">getdns_dict</a></code>(3) <code><a href="/docs/linux/man/3-libgetdns/">libgetdns</a></code>(3) </p>
-<h2>Index</h2>

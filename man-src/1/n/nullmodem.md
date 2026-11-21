@@ -38,4 +38,3 @@ description: "nullmodem – a Utility to loopback Pseudo-Terminals"
 <p> Juergen Rinas &lt;jrinas [at] gmx.de&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-kissnetd/">kissnetd</a></code>(8), <code><a href="/docs/linux/man/3-openpty/">openpty</a></code>(3) </p>
-<h2>Index</h2>

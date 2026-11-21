@@ -130,4 +130,3 @@ perldoc[-h][-D][-t][-u][-m][-l][-U][-F]
 <h2>AUTHOR</h2>
 <p> Current maintainer: Mark Allen <tt>&quot;&lt;mallen [at] cpan.org&gt;&quot;</tt> </p>
 <p> Past contributors are: brian d foy <tt>&quot;&lt;bdfoy [at] cpan.org&gt;&quot;</tt> Adriano R. Ferreira <tt>&quot;&lt;ferreira [at] cpan.org&gt;&quot;</tt>, Sean M. Burke <tt>&quot;&lt;sburke [at] cpan.org&gt;&quot;</tt>, Kenneth Albanowski <tt>&quot;&lt;kjahds [at] kjahds.com&gt;&quot;</tt>, Andy Dougherty <tt>&quot;&lt;doughera [at] lafcol.lafayette.edu&gt;&quot;</tt>, and many others. </p>
-<h2>Index</h2>

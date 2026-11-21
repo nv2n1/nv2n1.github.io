@@ -26,4 +26,3 @@ description: "devio – program to read and write from block devices"
 <h2>AUTHOR</h2>
 <p> devio was written by John Bowler &lt;jbowler [at] acm.org&gt;. </p>
 <p> This manual page was written by Rod Whitby &lt;rod [at] whitby.id.au&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

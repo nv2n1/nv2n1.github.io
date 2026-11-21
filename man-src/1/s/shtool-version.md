@@ -44,4 +44,3 @@ description: "shtool version – GNU shtool maintain version information file"
 <p> The <font SIZE="-1"><code>GNU</code></font><code> shtool</code> <code>version</code> command was originally written by Ralf S. Engelschall &lt;rse [at] engelschall.com&gt; in 1994 for <font SIZE="-1"><code>OSSP</code></font><code> eperl</code>. It was later rewritten from scratch for inclusion into <font SIZE="-1"><code>GNU</code></font><code> shtool</code>.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-shtool/">shtool</a></i>(1). </p>
-<h2>Index</h2>

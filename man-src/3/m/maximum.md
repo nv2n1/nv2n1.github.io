@@ -35,4 +35,3 @@ description: "QuantLib::LossDist – Probability formulas and algorithms."
 <p> Probability of at least n defaults </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

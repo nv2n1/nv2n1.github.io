@@ -468,4 +468,3 @@ $DB::alias{'quit'} = 's/^quit(\s*)/exit/';
 <p> If you alter your <tt>@_</tt> arguments in a subroutine (such as with <tt>&quot;shift&quot;</tt> or <tt>&quot;pop&quot;</tt>), the stack backtrace will not show the original values. </p>
 <p> The debugger does not currently work in conjunction with the <code>-W</code> command-line switch, because it itself is not free of warnings. </p>
 <p> If you&#8217;re in a slow syscall (like <tt>&quot;wait&quot;</tt>ing, <tt>&quot;accept&quot;</tt>ing, or <tt>&quot;read&quot;</tt>ing from your keyboard or a socket) and haven&#8217;t set up your own <tt>$SIG{INT}</tt> handler, then you won&#8217;t be able to CTRL-C your way back to the debugger, because the debugger&#8217;s own <tt>$SIG{INT}</tt> handler doesn&#8217;t understand that it needs to raise an exception to <code><a href="/docs/linux/man/3-longjmp/">longjmp</a></code>(3) out of slow syscalls. </p>
-<h2>Index</h2>

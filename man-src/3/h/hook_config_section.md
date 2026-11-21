@@ -39,4 +39,3 @@ END_OF_MAIN()
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> <code>config_is_hooked</code>(3) </p>
-<h2>Index</h2>

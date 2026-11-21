@@ -134,4 +134,3 @@ description: "llvm-bcanalyzer – LLVM bitcode analyzer"
 <p> llvm-dis, &lt;<a rel="nofollow" href="http://llvm.org/docs/BitCodeFormat.html">http://llvm.org/docs/BitCodeFormat.html</a>&gt;</p>
 <h2>AUTHORS</h2>
 <p> Maintained by the <font SIZE="-1">LLVM</font> Team (&lt;<a rel="nofollow" href="http://llvm.org">http://llvm.org</a>&gt;). </p>
-<h2>Index</h2>

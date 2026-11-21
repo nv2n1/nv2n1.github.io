@@ -68,4 +68,3 @@ $ strace-log-merge sleepy | fold -w 72 -s
 <p> Problems with <code>strace-log-merge</code> should be reported to the <code>strace</code> mailing list at &lt;strace-devel [at] lists.strace.io&gt;.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-strace/">strace</a></code>(1) </p>
-<h2>Index</h2>

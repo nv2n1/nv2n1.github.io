@@ -75,4 +75,3 @@ description: "dillo – web browser"
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-wget/">wget</a></code>(1) </p>
 <p> Dillo website: <code><a rel="nofollow" href="http://www.dillo.org">http://www.dillo.org</a></code> </p>
-<h2>Index</h2>

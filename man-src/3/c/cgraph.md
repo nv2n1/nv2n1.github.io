@@ -281,4 +281,3 @@ strict graph H
 <p> The library is not thread safe.</p>
 <h2>AUTHOR</h2>
 <p> Stephen North, north [at] research.att.com, AT&amp;T Research. </p>
-<h2>Index</h2>

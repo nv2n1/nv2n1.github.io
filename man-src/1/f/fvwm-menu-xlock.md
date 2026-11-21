@@ -61,4 +61,3 @@ PipeRead 'fvwm-menu-xlock --name MenuSSaver --title "Screensaver" \
 <h2>BUGS</h2>
 <p> Depends on the output of xlock. Will produce an empty menu if the structure of the output is changed. </p>
 <p> Report bugs to fvwm-bug [at] fvwm.org. </p>
-<h2>Index</h2>

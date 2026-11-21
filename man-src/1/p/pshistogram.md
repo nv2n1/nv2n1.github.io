@@ -128,4 +128,3 @@ gmt pshistogram errors.xy -W1 -R-10/10/0/0 -Jxc/0.01c \
 <p> <code>gmt</code>, <code>gmtcolors</code>, <code>psbasemap</code>, <code>psrose</code>, <code>psxy</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

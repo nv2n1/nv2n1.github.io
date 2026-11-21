@@ -111,4 +111,3 @@ description: "whois – client for the whois directory service"
 <p> This program closely tracks the user interface of the whois client developed at RIPE by Ambrose Magee and others on the base of the original BSD client.</p>
 <h2>AUTHOR</h2>
 <p> <code>Whois</code> and this man page were written by Marco d&#8217;Itri &lt;<i>md [at] linux.it</i>&gt; and are licensed under the terms of the GNU General Public License, version 2 or higher. </p>
-<h2>Index</h2>

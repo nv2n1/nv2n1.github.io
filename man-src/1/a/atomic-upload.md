@@ -45,4 +45,3 @@ signing will be disabled. </p>
 <p> July 2015, Edited by Jenny Ramseyer (jramseye at redhat dot com) </p>
 <p> September 2015, Edited by Daniel Walsh (dwalsh at redhat dot com) </p>
 <p> September 2016, Updated by Brent Baude (bbaude at redhat dot com) </p>
-<h2>Index</h2>

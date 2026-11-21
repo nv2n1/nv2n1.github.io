@@ -29,4 +29,3 @@ description: "bibzbladd.pl – add Zbl numbers to papers in a given bib file"
 <h2>COPYRIGHT AND LICENSE</h2>
 <p> Copyright (C) 2014-2021 Boris Veytsman </p>
 <p> This is free software. You may redistribute copies of it under the terms of the <font SIZE="-1">GNU</font> General Public License &lt;<a rel="nofollow" href="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</a>&gt;. There is <font SIZE="-1">NO WARRANTY,</font> to the extent permitted by law. </p>
-<h2>Index</h2>

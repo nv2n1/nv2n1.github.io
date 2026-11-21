@@ -34,4 +34,3 @@ description: "xfce4-session-settings – Session settings for Xfce"
 <p> Copyright &#169; 2004-2008<br />
 &nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;The Xfce development team. All rights reserved. </p>
 <p> Please report bugs to &lt;<a rel="nofollow" href="http://bugs.xfce.org/">http://bugs.xfce.org/</a>&gt;. </p>
-<h2>Index</h2>

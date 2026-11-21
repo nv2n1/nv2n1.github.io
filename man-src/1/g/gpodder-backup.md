@@ -53,4 +53,3 @@ description: "gpodder-backup – Backup and restore utility for gPodder user dat
 <dd> Remove all gPodder data, so you can start from a clean state</dd></dl>
 <h2>AUTHOR</h2>
 <p> gpodder-backup was written by Thomas Perl (thp [at] gpodder.org) </p>
-<h2>Index</h2>

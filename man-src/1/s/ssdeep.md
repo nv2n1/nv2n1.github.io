@@ -58,4 +58,3 @@ description: "ssdeep – Computes context triggered piecewise hashes (fuzzy hash
 <h2>SEE ALSO</h2>
 <p> This program is based on SpamSum by Dr. Andrews Tridgell.<br />
  <a rel="nofollow" href="http://www.samba.org/ftp/unpacked/junkcode/spamsum/">http://www.samba.org/ftp/unpacked/junkcode/spamsum/</a> </p>
-<h2>Index</h2>

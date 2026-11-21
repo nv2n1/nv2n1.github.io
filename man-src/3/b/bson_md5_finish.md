@@ -25,4 +25,3 @@ void bson_md5_finish(bson_md5_t *pms,
 <p> Completes the MD5 algorithm and stores the digest in <code>digest</code> \&amp;. </p>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

@@ -27,4 +27,3 @@ description: "icepatch2client – The IcePatch2 client."
 </dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-icepatch2calc/">icepatch2calc</a></code>(1), <code><a href="/docs/linux/man/1-icepatch2server/">icepatch2server</a></code>(1) </p>
-<h2>Index</h2>

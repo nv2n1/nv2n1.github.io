@@ -117,4 +117,3 @@ gmt grdimage -JI15c -Rd -Dr
 <p> <code>gmt</code>, <code>gmt.conf</code>, <code>grd2rgb</code>, <code>grdcontour</code>, <code>grdview</code>, <code>grdgradient</code>, <code>grdhisteq</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

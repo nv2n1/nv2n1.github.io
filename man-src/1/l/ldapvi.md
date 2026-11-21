@@ -147,4 +147,3 @@ description: "ldapvi – LDAP client"
 <p> <a rel="nofollow" href="http://www.lichteblau.com/ldapvi/manual.xml">http://www.lichteblau.com/ldapvi/manual.xml</a> </p>
 <h2>AUTHOR</h2>
 <p> David Lichteblau &lt;david [at] lichteblau.com&gt; </p>
-<h2>Index</h2>

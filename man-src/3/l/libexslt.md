@@ -191,4 +191,3 @@ description: "libexslt – extension library for XSLT"
 <p> Manual page by Heiko W. Rupp (hwr [at] pilhuhn.de)</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-libxml/">libxml</a></code>(3), <code><a href="/docs/linux/man/3-libxslt/">libxslt</a></code>(3), <code><a href="/docs/linux/man/1-xmllint/">xmllint</a></code>(1) <code><a href="/docs/linux/man/1-xsltproc/">xsltproc</a></code>(1), </p>
-<h2>Index</h2>

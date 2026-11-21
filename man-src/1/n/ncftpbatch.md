@@ -32,4 +32,3 @@ description: "ncftpbatch – Individual batch FTP job processor"
 <p> Mike Gleason, NcFTP Software (<a rel="nofollow" href="http://www.ncftp.com">http://www.ncftp.com</a>).</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/1-ncftp/">ncftp</a></i>(1), <i><a href="/docs/linux/man/1-ncftpput/">ncftpput</a></i>(1), <i><a href="/docs/linux/man/1-ncftpget/">ncftpget</a></i>(1). </p>
-<h2>Index</h2>

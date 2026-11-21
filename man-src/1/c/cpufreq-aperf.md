@@ -36,4 +36,3 @@ Thomas Renninger &lt;trenn [at] suse.de&gt;
 </pre>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-cpufreq-set/">cpufreq-set</a>(1), <a href="/docs/linux/man/1-cpufreq-info/">cpufreq-info</a>(1) </p>
-<h2>Index</h2>

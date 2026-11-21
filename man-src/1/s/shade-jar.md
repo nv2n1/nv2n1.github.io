@@ -21,4 +21,3 @@ description: "shade-jar – rename Java namespace in JAR file"
 <p> Written by Mikolaj Izdebski.</p>
 <h2>REPORTING BUGS</h2>
 <p> Bugs should be reported through Red Hat Bugzilla at m[blue]<code><a rel="nofollow" href="http://bugzilla.redhat.com/">http://bugzilla.redhat.com/</a></code>m[]. </p>
-<h2>Index</h2>

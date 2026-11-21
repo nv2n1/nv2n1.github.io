@@ -91,4 +91,3 @@ $ <code>pg_receivexlog -h mydbserver -D /usr/local/pgsql/archive</code>
 </dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-pg_basebackup/">pg_basebackup</a></code>(1) </p>
-<h2>Index</h2>

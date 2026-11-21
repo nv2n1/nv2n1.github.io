@@ -96,4 +96,3 @@ description: "kate – Advanced text editor for KDE"
 <dt>
 </dt><dd> <a rel="nofollow" href="http://kate-editor.org/">http://kate-editor.org/</a></dd></dl>
 </dl>
-<h2>Index</h2>

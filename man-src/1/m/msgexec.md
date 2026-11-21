@@ -51,4 +51,3 @@ description: "msgexec – process translations of message catalog"
 <dt>
 </dt><dd> <code>info msgexec</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

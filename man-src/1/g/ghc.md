@@ -892,4 +892,3 @@ description: "GHC – the Glasgow Haskell Compiler"
  All rights reserved. </p>
 <h2>AUTHOR</h2>
 <p> This manual page was generated from the XML documentation of GHC with blood, sweat, tears and a breaks-if-you-look-at-it-the-wrong-way XSL stylesheet originally written by Michael Weber &lt;michaelw [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others). </p>
-<h2>Index</h2>

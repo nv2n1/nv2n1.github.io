@@ -74,4 +74,3 @@ description: "aide – Advanced Intrusion Detection Environment"
 <p> There are probably bugs in this release. Please report them at <a rel="nofollow" href="http://sourceforge.net/projects/aide">http://sourceforge.net/projects/aide</a> . Bug fixes are more than welcome. Unified diffs are preferred.</p>
 <h2>DISCLAIMER</h2>
 <p> All trademarks are the property of their respective owners. No animals were harmed while making this webpage or this piece of software. Although some pizza delivery guy&#8217;s feelings were hurt. </p>
-<h2>Index</h2>

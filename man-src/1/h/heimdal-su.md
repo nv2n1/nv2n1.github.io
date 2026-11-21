@@ -30,4 +30,3 @@ description: "su – substitute user identity"
 <dd> &#8211;<code>-instance= </code><i>instance</i> root instance to use.</dd>
 <dt><code>-c </code><i>command</i></dt>
 <dd> &#8211;<code>-command= </code><i>command</i> command to execute.</dd></dl>
-<h2>Index</h2>

@@ -281,4 +281,3 @@ foo.baz.bar  =&gt; buzz.fizz.bar</code>
 <dd> No import generated for global identifiers. If you invoke on an unexported local impl, you do get an exception, but it seems to be due to a <i>NullPointerException</i> in the <i>ServerDelegate</i> DSI code.</dd></dl>
 </dl>
 <p>&nbsp;<wbr> </p>
-<h2>Index</h2>

@@ -37,4 +37,3 @@ description: "grub-mklayout – generate a GRUB keyboard layout file"
 <dt>
 </dt><dd> <code>info grub-mklayout</code></dd></dl>
 <p> should give you access to the complete manual. </p>
-<h2>Index</h2>

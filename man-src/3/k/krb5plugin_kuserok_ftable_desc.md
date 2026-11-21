@@ -45,4 +45,3 @@ description: "krb5plugin_kuserok_ftable_desc –"
 <dd> result, a krb5_boolean pointer where the plugin will output its result</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for HeimdalKerberos5library from the source code. </p>
-<h2>Index</h2>

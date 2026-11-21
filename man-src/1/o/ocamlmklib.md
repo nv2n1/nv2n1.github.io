@@ -65,4 +65,3 @@ description: "ocamlmklib – generate libraries with mixed C / Caml code."
 <p> <code><a href="/docs/linux/man/1-ocamlc/">ocamlc</a></code>(1), <code><a href="/docs/linux/man/1-ocamlopt/">ocamlopt</a></code>(1).</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Samuel Mimram &lt;samuel.mimram [at] ens-lyon.org&gt;, for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

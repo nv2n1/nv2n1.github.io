@@ -55,4 +55,3 @@ Link with - lcap.
 <p> These functions are as per the withdrawn POSIX.1e draft specification. The following functions are Linux extensions: <code>cap_clear_flag</code>(), <code>cap_compare</code>(), <code>cap_from_name</code>(), <code>cap_to_name</code>(), and <code>cap_compare</code>().</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-cap_clear/">cap_clear</a></code>(3), <code><a href="/docs/linux/man/3-cap_copy_ext/">cap_copy_ext</a></code>(3), <code><a href="/docs/linux/man/3-cap_from_text/">cap_from_text</a></code>(3), <code><a href="/docs/linux/man/3-cap_get_file/">cap_get_file</a></code>(3), <code><a href="/docs/linux/man/3-cap_get_proc/">cap_get_proc</a></code>(3), <code><a href="/docs/linux/man/3-cap_init/">cap_init</a></code>(3), <code><a href="/docs/linux/man/7-capabilities/">capabilities</a></code>(7), <code><a href="/docs/linux/man/2-getpid/">getpid</a></code>(2) <code><a href="/docs/linux/man/1-capsh/">capsh</a></code>(1) </p>
-<h2>Index</h2>

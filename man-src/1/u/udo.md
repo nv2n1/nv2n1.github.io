@@ -147,4 +147,3 @@ description: "udo – convert files from UDO into different formats"
 <h2>AUTHOR</h2>
 <p> Copyright (c) 1995, 1996, 1997 by<br />
  Dirk Hagedorn (Dirk Hagedorn @ MK2, DirkHage [at] aol.com) </p>
-<h2>Index</h2>

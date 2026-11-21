@@ -96,4 +96,3 @@ description: "xset – user preference utility for X"
  David Krikorian, MIT Project Athena (X11 version)<br />
  XFree86-Misc support added by David Dawes and Joe Moss<br />
  Manpage updates added by Mike A. Harris &lt;mharris [at] redhat.com&gt; </p>
-<h2>Index</h2>

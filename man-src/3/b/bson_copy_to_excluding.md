@@ -34,4 +34,3 @@ void bson_copy_to_excluding(const bson_t *src,
 </dt><dd> This is generally not needed except in very special situations.</dd></dl>
 <h2>COLOPHON</h2>
 <p> This page is part of libbson. Please report any bugs at <a rel="nofollow" href="https://jira.mongodb.org/browse/CDRIVER.">https://jira.mongodb.org/browse/CDRIVER.</a> </p>
-<h2>Index</h2>

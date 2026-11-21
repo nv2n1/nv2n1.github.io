@@ -193,4 +193,3 @@ description: "davix-mkdir – Directory creation tool based on libdavix."
 <p> <code><a rel="nofollow" href="http://dmc.web.cern.ch/projects/davix/home">http://dmc.web.cern.ch/projects/davix/home</a></code> </p>
 <h2>AUTHORS</h2>
 <p> Adrien Devresse &lt;adrien.devresse [at] cern.ch&gt;, IT-SDC-ID, CERN </p>
-<h2>Index</h2>

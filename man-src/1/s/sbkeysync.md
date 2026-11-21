@@ -30,4 +30,3 @@ description: "sbkeysync – UEFI secure boot key synchronization tool"
 <dt>
 </dt><dd> keystore dirs </dd>
 </dl>
-<h2>Index</h2>

@@ -38,4 +38,3 @@ description: "base64 – base64 encode/decode data and print to standard output"
 <h2>SEE ALSO</h2>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/base64">https://www.gnu.org/software/coreutils/base64</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) base64 invocation&#8217; </p>
-<h2>Index</h2>

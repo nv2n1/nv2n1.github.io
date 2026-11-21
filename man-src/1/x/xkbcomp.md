@@ -66,4 +66,3 @@ description: "xkbcomp – compile XKB keyboard description"
  See <i><a href="/docs/linux/man/7-x/">X</a>(7)</i> for a full statement of rights and permissions.</p>
 <h2>AUTHOR</h2>
 <p> Erik Fortune, Silicon Graphics </p>
-<h2>Index</h2>

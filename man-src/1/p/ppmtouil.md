@@ -23,4 +23,3 @@ description: "ppmtouil – convert a portable pixmap into a Motif UIL icon file"
 <p> <a href="/docs/linux/man/5-ppm/">ppm</a>(5)</p>
 <h2>AUTHOR</h2>
 <p> Converted by Jef Poskanzer from ppmtoxpm.c, which is Copyright (C) 1990 by Mark W. Snitily </p>
-<h2>Index</h2>

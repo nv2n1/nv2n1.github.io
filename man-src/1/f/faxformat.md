@@ -36,4 +36,3 @@ url: "/docs/linux/man/1-faxformat/"
 <p> The TIFF format is flexible enough to allow lots of different coding methods, within it. There are TIFF subformats for MH, MR, and MMR, among others. These are particularly useful when you receive a fax as a TIFF file. </p>
 <p> <code>tifftopnm</code> recognizes and can convert from any of these. </p>
 <p> <code>pamtotiff</code> can convert to any of these; you use command options to choose which. </p>
-<h2>Index</h2>

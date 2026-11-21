@@ -19,4 +19,3 @@ description: "doxyindexer – creates a search index from raw search data"
 <dd> The directory where to write the doxysearch.db to. If omitted the current directory is used.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-doxygen/">doxygen</a>(1), <a href="/docs/linux/man/1-doxysearch/">doxysearch</a>(1), <a href="/docs/linux/man/1-doxywizard/">doxywizard</a>(1). </p>
-<h2>Index</h2>

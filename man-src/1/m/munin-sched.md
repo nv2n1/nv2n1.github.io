@@ -47,4 +47,3 @@ description: "munin-sched – A daemon to gather information in cooperation with
 <p> For information on configuration options, please refer to the man page for <i>munin-node.conf</i>. </p>
 <p> Many plugins can report whether or not they can reasonably be used on the node. <tt>&quot;munin-node-configure&quot;</tt> can use this information to help manage installed plugins. </p>
 <p> The network protocol is documented at &lt;<a rel="nofollow" href="http://munin-monitoring.org/wiki/network-protocol">http://munin-monitoring.org/wiki/network-protocol</a>&gt; </p>
-<h2>Index</h2>

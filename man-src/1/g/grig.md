@@ -85,4 +85,3 @@ description: "grig – graphical user interface for the Ham Radio Control Librar
  This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-rigctl/">rigctl</a></code>(1) </p>
-<h2>Index</h2>

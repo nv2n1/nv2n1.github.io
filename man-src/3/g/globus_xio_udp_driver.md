@@ -20,4 +20,3 @@ description: "Globus XIO UDP Driver –"
 <p> The IPV4/6 UDP socket driver.</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_xio from the source code. </p>
-<h2>Index</h2>

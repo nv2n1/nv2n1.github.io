@@ -20,4 +20,3 @@ int function(void *dp3, int d2);
 <p> The d_slider_proc object will return the value of the callback function. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-exgui/">exgui</a></code>(3), <code><a href="/docs/linux/man/3-exrgbhsv/">exrgbhsv</a></code>(3) </p>
-<h2>Index</h2>

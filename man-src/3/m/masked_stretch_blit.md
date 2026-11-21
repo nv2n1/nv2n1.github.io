@@ -24,4 +24,3 @@ BITMAP *hud_overlay;
 </code></pre>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-blit/">blit</a></code>(3), <code><a href="/docs/linux/man/3-masked_blit/">masked_blit</a></code>(3), <code><a href="/docs/linux/man/3-stretch_blit/">stretch_blit</a></code>(3), <code><a href="/docs/linux/man/3-stretch_sprite/">stretch_sprite</a></code>(3) </p>
-<h2>Index</h2>

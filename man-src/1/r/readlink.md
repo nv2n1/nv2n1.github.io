@@ -47,4 +47,3 @@ description: "readlink – print resolved symbolic links or canonical file names
 <p> <a href="/docs/linux/man/2-readlink/">readlink</a>(2), <a href="/docs/linux/man/1-realpath/">realpath</a>(1), <a href="/docs/linux/man/3-realpath/">realpath</a>(3) </p>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/readlink">https://www.gnu.org/software/coreutils/readlink</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) readlink invocation&#8217; </p>
-<h2>Index</h2>

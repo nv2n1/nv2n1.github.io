@@ -36,4 +36,3 @@ description: "wimlib-imagex-info – Display information about a WIM file, or ch
 <dd> Set an arbitrary per-image property in the XML document of the WIM file. <i>NAME</i> is an element path such as &quot;WINDOWS/VERSION/MAJOR&quot;, and <i>VALUE</i> is the string to place in the element, such as &quot;10&quot;. See the documentation for this option to <code>wimlib-imagex capture</code> (1) for more details. This option may be specified multiple times.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-wimlib-imagex/">wimlib-imagex</a></code>(1) <code><a href="/docs/linux/man/1-wimlib-imagex-dir/">wimlib-imagex-dir</a></code>(1) </p>
-<h2>Index</h2>

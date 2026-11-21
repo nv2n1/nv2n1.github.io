@@ -21,4 +21,3 @@ description: "tv_split – Split XMLTV listings into separate files by date and 
 <p> <i>Date::Manip</i>(3).</p>
 <h2>AUTHOR</h2>
 <p> Ed Avis, ed [at] membled.com. </p>
-<h2>Index</h2>

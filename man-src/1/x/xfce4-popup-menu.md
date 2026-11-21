@@ -19,4 +19,3 @@ description: "xfce4-popup-menu – shows the Xfce Menu"
 <h2>AUTHOR</h2>
 <p> <code>xfce4-popup-menu</code> was written by Olivier Fourdan &lt;fourdan [at] xfce.org&gt;. </p>
 <p> This manual page was written by Francois Wendling &lt;frwendling [at] free.fr&gt; for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

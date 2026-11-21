@@ -68,4 +68,3 @@ description: "html2text – an advanced HTML-to-text converter"
 <p> This man page was modified for Debian by Eugene V. Lyubimkin &lt;jackyf.devel [at] gmail.com&gt;</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/5-html2textrc/">html2textrc</a></code>(5), <code><a href="/docs/linux/man/1-less/">less</a></code>(1), <code><a href="/docs/linux/man/1-more/">more</a></code>(1) </p>
-<h2>Index</h2>

@@ -71,4 +71,3 @@ description: "flatpak-config – Manage configuration"
 <p> <code>$ flatpak config &#8211;set languages &quot;sv;en;fi&quot;</code></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-flatpak/">flatpak</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-remote-modify/">flatpak-remote-modify</a></code>(1), <code><a href="/docs/linux/man/1-flatpak-override/">flatpak-override</a></code>(1) </p>
-<h2>Index</h2>

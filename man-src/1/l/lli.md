@@ -118,4 +118,3 @@ description: "lli – directly execute programs from LLVM bitcode"
 <p> llc</p>
 <h2>AUTHOR</h2>
 <p> Maintained by the <font SIZE="-1">LLVM</font> Team (&lt;<a rel="nofollow" href="http://llvm.org">http://llvm.org</a>&gt;). </p>
-<h2>Index</h2>

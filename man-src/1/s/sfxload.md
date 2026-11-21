@@ -96,4 +96,3 @@ description: "sfxload, asfxload – load a SoundFont file on the Emux WaveTable"
 <p> <code>drvmidi</code>(1) </p>
 <h2>COPYRIGHT</h2>
 <p> Copyright (C) 1996-2003 Takashi Iwai. The AWE32 driver and utilties are free software; you can redistribute them and/or modify them under the terms of the <i>GNU General Public License</i> as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. </p>
-<h2>Index</h2>

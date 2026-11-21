@@ -91,4 +91,3 @@ description: "Heimdal Kerberos 5 authentication functions –"
  <i>principal</i> return principal, free with <code>krb5_free_principal()</code>.</dd></dl>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for HeimdalKerberos5library from the source code. </p>
-<h2>Index</h2>

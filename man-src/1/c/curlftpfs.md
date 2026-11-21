@@ -201,4 +201,3 @@ description: "curlftpfs – mount a ftp host as a local directory"
 <p> <a rel="nofollow" href="http://curlftpfs.sourceforge.net">http://curlftpfs.sourceforge.net</a></p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/8-mount/">mount</a></code>(8) </p>
-<h2>Index</h2>

@@ -176,4 +176,3 @@ my $count = 0;
 </code></pre>
 <h2>AUTHOR</h2>
 <p> Ketan Patel &lt;k2pattu [at] yahoo.com&gt; </p>
-<h2>Index</h2>

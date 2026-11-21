@@ -14,4 +14,3 @@ description: "cinnamon-settings – Configuration panel for cinnamon"
 <p> <code>cinnamon-settings</code> runs the graphical user interface allowing to configure cinnamon</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-cinnamon-menu-editor/">cinnamon-menu-editor</a></code>(1) </p>
-<h2>Index</h2>

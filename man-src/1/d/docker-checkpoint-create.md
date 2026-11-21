@@ -19,4 +19,3 @@ description: "docker-checkpoint-create – Create a checkpoint from a running co
 <p> <code>&#8211;leave-running</code>[=false] <tt>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;<wbr>&nbsp;</tt>Leave the container running after checkpoint</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-docker-checkpoint/">docker-checkpoint</a>(1)</code> </p>
-<h2>Index</h2>

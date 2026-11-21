@@ -46,4 +46,3 @@ description: "gnome-phone-manager – Manage your mobile phone"
 <h2>AUTHOR</h2>
 <p> <code>gnome-phone-manager</code> was written by Bastien Nocera &lt;&lt;hadess [at] hadess.net&gt;&gt; and Edd Dumbill &lt;edd [at] usefullinc.com&gt; </p>
 <p> This manual page was written by Francesco Namuri &lt;francesco [at] namuri.it&gt; for the Debian project (but may be used by others). </p>
-<h2>Index</h2>

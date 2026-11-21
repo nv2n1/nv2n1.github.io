@@ -29,4 +29,3 @@ description: "Activation –"
 <p> Module descriptor</p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for globus_gsi_sysconfig from the source code. </p>
-<h2>Index</h2>

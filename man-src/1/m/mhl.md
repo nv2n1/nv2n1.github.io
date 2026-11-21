@@ -171,4 +171,3 @@ body:nocomponent,overflowtext=,overflowoffset=0,noleftadjust
 <p> There should be some way to pass `bell&#8217; and `clear&#8217; information to the front-end. </p>
 <p> The &#8220;nonewline&#8221; option interacts badly with &#8220;compress&#8221; and &#8220;split&#8221;. </p>
 <p> The &#8220;format&#8221; option really should work on something other than the body component. </p>
-<h2>Index</h2>

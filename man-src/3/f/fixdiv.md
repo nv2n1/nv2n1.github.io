@@ -28,4 +28,3 @@ ASSERT(!errno); /* This will fail. */
 <p> Returns the result of dividing `x&#8217; by `y&#8217;. If `y&#8217; is zero, returns the maximum possible fixed point value and sets `errno&#8217; to ERANGE. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-fixadd/">fixadd</a></code>(3), <code><a href="/docs/linux/man/3-fixsub/">fixsub</a></code>(3), <code><a href="/docs/linux/man/3-fixmul/">fixmul</a></code>(3), <code><a href="/docs/linux/man/3-exfixed/">exfixed</a></code>(3) </p>
-<h2>Index</h2>

@@ -56,4 +56,3 @@ description: "uniq – report or omit repeated lines"
 <p> <a href="/docs/linux/man/1-comm/">comm</a>(1), <a href="/docs/linux/man/1-join/">join</a>(1), <a href="/docs/linux/man/1-sort/">sort</a>(1) </p>
 <p> Full documentation &lt;<a rel="nofollow" href="https://www.gnu.org/software/coreutils/uniq">https://www.gnu.org/software/coreutils/uniq</a>&gt;<br />
  or available locally via: info &#8216;(coreutils) uniq invocation&#8217; </p>
-<h2>Index</h2>

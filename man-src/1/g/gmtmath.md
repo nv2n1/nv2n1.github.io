@@ -2139,4 +2139,3 @@ echo 1 2 3 4 | gmt math -C3 STDIN 1 ADD =
 <p> <code>gmt</code>, <code>grdmath</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

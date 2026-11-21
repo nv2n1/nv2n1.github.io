@@ -141,4 +141,3 @@ description: "TeX4ht – a system for authoring hypertext with TeX and friends"
 <h2>AUTHOR</h2>
 <p> This manual page was originally written by Andrew Gray &lt;ajpg [at] debian.org&gt; (and then modified by Kapil Paranjape), for the Debian GNU/Linux system (but it may be used by others). </p>
 <p> The <code>tex4ht</code> programs and macro files were written by Eitan Gurari &lt;gurari [at] cis.ohio-state.edu&gt;. The author maintains a home page at <i><a rel="nofollow" href="http://www.cse.ohio-state.edu/~gurari/TeX4ht/">http://www.cse.ohio-state.edu/~gurari/TeX4ht/</a></i> </p>
-<h2>Index</h2>

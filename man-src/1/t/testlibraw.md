@@ -32,4 +32,3 @@ description: "testlibraw – run basic functionality tests on libraw1394"
 <p> <a rel="nofollow" href="http://linux1394.sourceforge.net/">http://linux1394.sourceforge.net/</a></p>
 <h2>AUTHOR</h2>
 <p> Andreas Bombe &lt;aeb [at] debian.org&gt; </p>
-<h2>Index</h2>

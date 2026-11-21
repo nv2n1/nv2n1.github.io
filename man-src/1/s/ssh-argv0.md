@@ -23,4 +23,3 @@ description: "ssh-argv0 – replaces the old ssh command-name as hostname handli
 <p> OpenSSH is a derivative of the original and free ssh 1.2.12 release by Tatu Ylonen. Aaron Campbell, Bob Beck, Markus Friedl, Niels Provos, Theo de Raadt and Dug Song removed many bugs, re-added newer features and created OpenSSH. Markus Friedl contributed the support for SSH protocol versions 1.5 and 2.0. Natalie Amery wrote this ssh-argv0 script and the associated documentation.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-ssh/">ssh</a>(1) </p>
-<h2>Index</h2>

@@ -32,4 +32,3 @@ description: "WMXMMS – a dockable XMMS control applet."
 <dd> Print version number and exit.</dd></dl>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-xmms/">xmms</a></code>(1), <code>wmaker</code>(1), <code>gnomexmms</code>(1) </p>
-<h2>Index</h2>

@@ -54,4 +54,3 @@ sysreport run email
 <p> File a bug report at <a rel="nofollow" href="https://github.com/onesimus-systems/sysreporter.">https://github.com/onesimus-systems/sysreporter.</a> </p>
 <h2>AUTHOR</h2>
 <p> Lee Keitel (lee [at] onesimussystems.com) </p>
-<h2>Index</h2>

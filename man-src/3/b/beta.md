@@ -20,4 +20,3 @@ description: "ql/math/beta.hpp – Beta and beta incomplete functions."
 <p> Beta and beta incomplete functions. </p>
 <h2>Author</h2>
 <p> Generated automatically by Doxygen for QuantLib from the source code. </p>
-<h2>Index</h2>

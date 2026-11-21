@@ -28,4 +28,3 @@ echo commands | debconf - communicate[options][package]
 <p> <code><a href="/docs/linux/man/1-debconf-loadtemplate/">debconf-loadtemplate</a></code>(1)</p>
 <h2>AUTHOR</h2>
 <p> Joey Hess &lt;joeyh [at] debian.org&gt; </p>
-<h2>Index</h2>

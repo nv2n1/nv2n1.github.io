@@ -56,4 +56,3 @@ description: "curl-config – Get information about a libcurl installation"
 <p>&nbsp;<wbr>&nbsp;$&nbsp;`curl-config &#8211;cc &#8211;cflags`&nbsp;-o example example.c&nbsp;`curl-config &#8211;libs`</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-curl/">curl</a></code>(1) </p>
-<h2>Index</h2>

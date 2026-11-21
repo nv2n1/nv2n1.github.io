@@ -29,4 +29,3 @@ description: "latex, pdflatex, xelatex, lualatex, dvilualatex, cslatex, pdfcslat
 <p> The LaTeX home page is <a rel="nofollow" href="http://latex-project.org.">http://latex-project.org.</a><br />
  A list of some LaTeX tutorials is at <a rel="nofollow" href="http://www.tex.ac.uk/cgi-bin/texfaq2html?label=man-latex.">http://www.tex.ac.uk/cgi-bin/texfaq2html?label=man-latex.</a><br />
  An unofficial reference manual for LaTeX is at <a rel="nofollow" href="https://ctan.org/pkg/latex2e-help-texinfo.">https://ctan.org/pkg/latex2e-help-texinfo.</a> </p>
-<h2>Index</h2>

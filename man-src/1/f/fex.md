@@ -99,4 +99,3 @@ description: "fex – simple and powerful field extraction"
 <p> Patches, ideas, and other contributions by many, nice folks. See the <font SIZE="-1">CHANGELIST</font> file for who provided what.</p>
 <h2>AUTHOR</h2>
 <p> fex was written by Jordan Sissel. </p>
-<h2>Index</h2>

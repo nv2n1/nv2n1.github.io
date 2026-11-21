@@ -46,4 +46,3 @@ description: "radtest – send packets to a RADIUS server, show reply"
 <p> <a href="/docs/linux/man/8-radiusd/">radiusd</a>(8), <a href="/docs/linux/man/1-radclient/">radclient</a>(1).</p>
 <h2>AUTHOR</h2>
 <p> Miquel van Smoorenburg, miquels [at] cistron.nl. </p>
-<h2>Index</h2>

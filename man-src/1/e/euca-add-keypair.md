@@ -26,4 +26,3 @@ description: "euca-add-keypair – Eucalyptus tool: Creates a new key pair for u
 <p> <code>&#8211;version</code> Display the version of this tool. </p>
 <p> <code>&#8211;debug</code> Turn on debugging. </p>
 <p> Euca2ools will use the environment variables EC2_URL, EC2_ACCESS_KEY, EC2_SECRET_KEY, EC2_CERT, EC2_PRIVATE_KEY, S3_URL, EUCALYPTUS_CERT by default. </p>
-<h2>Index</h2>

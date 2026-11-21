@@ -110,4 +110,3 @@ description: "hwloc-bind – Launch a command that is bound to specific processo
 <p> hwloc-bind will return nonzero if any kind of error occurs, such as (but not limited to): failure to parse the command line, failure to retrieve process bindings, or lack of a command to execute.</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/7-hwloc/">hwloc</a>(7), lstopo(1), <a href="/docs/linux/man/1-hwloc-calc/">hwloc-calc</a>(1), <a href="/docs/linux/man/1-hwloc-distrib/">hwloc-distrib</a>(1) </p>
-<h2>Index</h2>

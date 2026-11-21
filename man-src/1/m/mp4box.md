@@ -518,4 +518,3 @@ description: "MP4Box – MPEG-4 Systems Toolbox"
 <p> Jean Le Feuvre &lt;jeanlf [at] users.sourceforge.net&gt; &#8211; GPAC (c) 2000-2005 &#8211; (c) Telecom ParisTech 2005-2011</p>
 <h2>SEE ALSO</h2>
 <p> <a href="/docs/linux/man/1-gpac/">GPAC</a>(1), <a href="/docs/linux/man/1-mp4client/">MP4Client</a>(1) </p>
-<h2>Index</h2>

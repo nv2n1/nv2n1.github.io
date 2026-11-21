@@ -29,4 +29,3 @@ description: "swapcontext – Swap out old context with new context"
 <p> <code><a href="/docs/linux/man/2-getcontext/">getcontext</a>(2),</code> <code><a href="/docs/linux/man/2-sigaction/">sigaction</a>(2),</code> <code><a href="/docs/linux/man/2-sigaltstack/">sigaltstack</a>(2),</code> <code><a href="/docs/linux/man/2-sigprocmask/">sigprocmask</a>(2)</code> </p>
 <h2>AUTHOR</h2>
 <p> Niki Rahimi </p>
-<h2>Index</h2>

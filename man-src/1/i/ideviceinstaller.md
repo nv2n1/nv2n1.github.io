@@ -77,4 +77,3 @@ description: "ideviceinstaller – Manage iDevice apps"
 </dl>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Martin Szulecki. </p>
-<h2>Index</h2>

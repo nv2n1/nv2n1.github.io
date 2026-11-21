@@ -30,4 +30,3 @@ description: "calibre-debug – run an embedded python interpreter for debug pur
 <dd> Migrate old database. Needs two arguments. Path to library1.db and path to new library folder.</dd></dl>
 <h2>AUTHOR</h2>
 <p> Created by Kovid Goyal &lt;kovid [at] kovidgoyal.net&gt; </p>
-<h2>Index</h2>

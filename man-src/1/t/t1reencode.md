@@ -94,4 +94,3 @@ description: "t1reencode – re-encode a PostScript Type 1 font"
 <p> <i>Adobe Type 1 Font Format</i>,</p>
 <h2>AUTHOR</h2>
 <p> Eddie Kohler (ekohler [at] gmail.com) </p>
-<h2>Index</h2>

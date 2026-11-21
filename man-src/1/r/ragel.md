@@ -395,4 +395,3 @@ description: "ragel – compile regular languages into executable state machines
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-re2c/">re2c</a></code>(1), <code><a href="/docs/linux/man/1-flex/">flex</a></code>(1) </p>
 <p> Homepage: <a rel="nofollow" href="http://www.complang.org/ragel/">http://www.complang.org/ragel/</a> </p>
-<h2>Index</h2>

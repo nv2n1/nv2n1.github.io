@@ -39,4 +39,3 @@ description: "fc-match – match available fonts"
 <p> The fontconfig user&#8217;s guide, in HTML format: <i>/usr/share/doc/fontconfig/fontconfig-user.html</i>.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was updated by Patrick Lam &lt;plam [at] csail.mit.edu&gt;. </p>
-<h2>Index</h2>

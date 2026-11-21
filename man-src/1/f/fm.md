@@ -61,4 +61,3 @@ description: "fm – control frequency, volume, mute/unmute of FM radio card"
 <dd> <code><a rel="nofollow" href="http://benpfaff.org/fmtools">http://benpfaff.org/fmtools</a></code></dd></dl>
 <h2>AUTHORS</h2>
 <p> Russell Kroll &lt;rkroll [at] exploits.org&gt;, now maintained by Ben Pfaff &lt;blp [at] cs.stanford.edu&gt;. Sleep time feature contributed by Dave Ulrick &lt;d-ulrick [at] insightbb.com&gt;. This manpage written by Ben Pfaff. </p>
-<h2>Index</h2>

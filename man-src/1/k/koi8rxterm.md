@@ -24,4 +24,3 @@ description: "koi8rxterm – X terminal emulator for KOI8-R environments"
 <p> <code>koi8rxterm</code> was written by Branden Robinson and is very heavily based on <code>uxterm</code>, by Thomas Dickey. The assistance of Jurij Smakov was invaluable in sanity-checking its operation.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-locale/">locale</a>(1),</code> <code><a href="/docs/linux/man/7-locale/">locale</a>(7),</code> <code><a href="/docs/linux/man/1-uxterm/">uxterm</a>(1),</code> <code><a href="/docs/linux/man/1-xterm/">xterm</a>(1)</code> </p>
-<h2>Index</h2>

@@ -139,4 +139,3 @@ description: "fvwm-menu-directory – builds a directory browsing menu for fvwm"
 <p> The script is distributed by the same terms as fvwm itself. See <font SIZE="-1">GNU</font> General Public License for details.</p>
 <h2>BUGS</h2>
 <p> Report bugs to fvwm-bug [at] fvwm.org. </p>
-<h2>Index</h2>

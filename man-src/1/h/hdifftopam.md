@@ -29,4 +29,3 @@ description: "hdifftopam – convert horizontal difference image to original PAM
 <p> <code><a href="/docs/linux/man/1-pamtohdiff/">pamtohdiff</a></code>(1) </p>
 <h2>AUTHOR</h2>
 <p> Bryan Henderson </p>
-<h2>Index</h2>

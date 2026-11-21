@@ -142,4 +142,3 @@ description: "systemd-inhibit – Execute a program with an inhibition lock take
 <dt>
 </dt><dd> <a rel="nofollow" href="https://www.freedesktop.org/wiki/Software/systemd/inhibit">https://www.freedesktop.org/wiki/Software/systemd/inhibit</a></dd></dl>
 </dl>
-<h2>Index</h2>

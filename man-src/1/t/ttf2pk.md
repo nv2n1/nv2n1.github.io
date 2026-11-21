@@ -71,4 +71,3 @@ description: "ttf2pk – convert a TrueType font into TeX’s PK format"
 <h2>AUTHORS</h2>
 <p> Werner LEMBERG<br />
  Fr&eacute;d&eacute;ric LOYER </p>
-<h2>Index</h2>

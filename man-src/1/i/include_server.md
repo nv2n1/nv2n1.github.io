@@ -120,4 +120,3 @@ description: "include_server.py – conservative approximation of include depend
 <p> You are free to use distcc. distcc (including this manual) may be copied, modified or distributed only under the terms of the GNU General Public Licence version 2 or later. distcc comes with absolutely no warrany. A copy of the GPL is included in the file COPYING. </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-distcc/">distcc</a></code>(1), <code><a href="/docs/linux/man/1-distccd/">distccd</a></code>(1), <code><a href="/docs/linux/man/1-include_server/">include_server</a></code>(1), and <code><a href="/docs/linux/man/1-gcc/">gcc</a></code>(1). <a rel="nofollow" href="http://code.google.com/p/distcc/">http://code.google.com/p/distcc/</a> <a href="http://ccache.samba.org/">http://ccache.samba.org/</a> </p>
-<h2>Index</h2>

@@ -82,4 +82,3 @@ or
 <dl><dt></dt><dd>netscape /usr/share/doc/gjots-0.8/gjots2.html
 </pre>
 </dd></dl>
-<h2>Index</h2>

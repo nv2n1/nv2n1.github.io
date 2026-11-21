@@ -29,4 +29,3 @@ description: "kmouth – A type-and-say front end for speech synthesizers"
 <p> KMouth was written by Gunnar Schmi Dt &lt;kmouth [at] schmi-dt.de&gt;. </p>
 <h2>AUTHOR</h2>
 <p> Lauri Watts. </p>
-<h2>Index</h2>

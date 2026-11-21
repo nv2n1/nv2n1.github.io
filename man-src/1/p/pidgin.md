@@ -305,4 +305,3 @@ description: "pidgin – Instant Messaging client"
 <p>&nbsp;<wbr>&nbsp;<wbr>Robert&nbsp;<wbr>&#8216;Robot101&#8217;&nbsp;<wbr>McQueen </p>
 <p>&nbsp;<wbr>&nbsp;<wbr>Benjamin Miller </p>
 <p> This manpage was originally written by Dennis Ristuccia &lt;<i>dennis [at] dennisr.net</i>&gt;. It has been updated and largely rewritten by Sean Egan &lt;<i>seanegan [at] gmail.com</i>&gt;, Ben Tegarden &lt;<i>tegarden [at] uclink.berkeley.edu</i>&gt;, and John Bailey &lt;<i>rekkanoryo [at] pidgin.im</i>&gt;. </p>
-<h2>Index</h2>

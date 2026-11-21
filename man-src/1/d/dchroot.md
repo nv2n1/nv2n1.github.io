@@ -205,4 +205,3 @@ description: "dchroot – enter a chroot environment"
 <p> is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</p>
 <h2>SEE ALSO</h2>
 <p> <code>schroot</code>(1), <code>sbuild</code>(1), <code><a href="/docs/linux/man/2-chroot/">chroot</a></code>(2), <code>schroot-setup</code>(5), <code>schroot.conf</code>(5). </p>
-<h2>Index</h2>

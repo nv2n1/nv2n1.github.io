@@ -162,4 +162,3 @@ xrdfs[--no - cwd] host[:port][command[args]] command : help, chmod, ls, locate, 
 <p> The <code>xrdfs</code> command is supported by the XRootD Collaboration. Contact information can be found at </p>
 <p> <center> <a rel="nofollow" href="http://xrootd.org/contact.html">http://xrootd.org/contact.html</a><br />
  </center> </p>
-<h2>Index</h2>

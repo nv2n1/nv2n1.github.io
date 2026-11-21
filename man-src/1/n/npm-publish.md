@@ -62,4 +62,3 @@ npm publish[&lt;tarball&gt; | &lt;folder&gt;][--tag&lt;tag&gt;][--access&lt;publ
 <dd> npm help profile </dd>
 </dl>
 </dl>
-<h2>Index</h2>

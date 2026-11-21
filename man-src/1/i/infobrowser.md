@@ -75,4 +75,3 @@ description: "info – read Info documents"
 <dt>
 </dt><dd> <code>info info</code></dd></dl>
 <p> should give you access to the complete manual. (Or, if you have Emacs, M-x info will lead to the manual.) </p>
-<h2>Index</h2>

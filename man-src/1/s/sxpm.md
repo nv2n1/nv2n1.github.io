@@ -62,4 +62,3 @@ description: "sxpm – Show an XPM (X PixMap) file and/or convert XPM 1 or 2 fil
 <p> Arnaud Le Hors (lehors [at] sophia.inria.fr)<br />
  Bull Research France<br />
  Copyright (C) 1989-95 by Groupe Bull. </p>
-<h2>Index</h2>

@@ -63,4 +63,3 @@ description: "gen_table – generate tables for use by mdrun"
 &nbsp;<wbr>Power for the repulsion potential&nbsp;<wbr>(with model AB1 or maaren) </p>
 <p> <code>-ndisp</code><i> int</i><code> 6</code><br />
 &nbsp;<wbr>Power for the dispersion potential&nbsp;<wbr>(with model AB1 or maaren) </p>
-<h2>Index</h2>

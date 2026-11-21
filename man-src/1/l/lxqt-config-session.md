@@ -19,4 +19,3 @@ description: "lxqt-config-session – Application settings of LXQt: The Lightwei
 <p> <code>startlxqt.1</code> LXQt session initialization and launch script (e.g. in <code>.xinitrc</code>) </p>
 <p> <code>lxqt-session.1</code> LXQt <i>overview</i> and complete session environment </p>
 <p> <code>lxqt-config.1</code> LXQt settings Configuration Center interface </p>
-<h2>Index</h2>

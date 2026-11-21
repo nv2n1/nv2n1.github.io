@@ -25,4 +25,3 @@ description: "wvdialconf – build a configuration file for"
 <p> Dave Coombs and Avery Pennarun for Net Integration Technologies.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-wvdial/">wvdial</a></code>(1), <code><a href="/docs/linux/man/5-wvdial-conf/">wvdial.conf</a></code>(5). </p>
-<h2>Index</h2>

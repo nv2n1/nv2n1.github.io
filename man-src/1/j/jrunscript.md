@@ -122,4 +122,3 @@ js &gt; t = new java.lang.Thread(function() { print('Hello World
 </pre>
 <h2>SEE ALSO</h2>
 <p> If JavaScript is used, then before it evaluates a user defined script, the <code>jrunscript</code> command initializes certain built-in functions and objects. These JavaScript built-ins are documented in JsDoc-Toolkit at <a rel="nofollow" href="http://code.google.com/p/jsdoc-toolkit/">http://code.google.com/p/jsdoc-toolkit/</a> </p>
-<h2>Index</h2>

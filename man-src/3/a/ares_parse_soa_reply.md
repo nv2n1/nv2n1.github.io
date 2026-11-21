@@ -43,4 +43,3 @@ struct ares_soa_reply {
 <p> This function was first introduced in c-ares version 1.9.0.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-ares_query/">ares_query</a></code>(3) <code><a href="/docs/linux/man/3-ares_free_data/">ares_free_data</a></code>(3) </p>
-<h2>Index</h2>

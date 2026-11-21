@@ -17,4 +17,3 @@ description: "get_vector_rotation_matrix, get_vector_rotation_matrix_f – Const
 <p> Constructs a transformation matrix which will rotate points around the specified x,y,z vector by the specified angle (given in binary, 256 degrees to a circle format). </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-apply_matrix/">apply_matrix</a></code>(3), <code><a href="/docs/linux/man/3-get_rotation_matrix/">get_rotation_matrix</a></code>(3), <code><a href="/docs/linux/man/3-get_align_matrix/">get_align_matrix</a></code>(3), <code><a href="/docs/linux/man/3-excamera/">excamera</a></code>(3) </p>
-<h2>Index</h2>

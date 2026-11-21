@@ -32,4 +32,3 @@ description: "CURLOPT_USERPWD – user name and password to use in authenticatio
 <p> Returns CURLE_OK on success or CURLE_OUT_OF_MEMORY if there was insufficient heap space.  </p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/3-CURLOPT_USERNAME/">CURLOPT_USERNAME</a></code>(3), <code><a href="/docs/linux/man/3-CURLOPT_PASSWORD/">CURLOPT_PASSWORD</a></code>(3), </p>
-<h2>Index</h2>

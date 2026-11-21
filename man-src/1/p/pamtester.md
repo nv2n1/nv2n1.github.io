@@ -76,4 +76,3 @@ description: "pamtester – test pluggable authentication module (PAM) facility"
 <p> Copyright &#169; 2004 &#8211; 2005 Moriyoshi Koizumi. All rights reserved.</p>
 <h2>SEE ALSO</h2>
 <p> <i><a href="/docs/linux/man/7-pam/">pam</a></i>(7) </p>
-<h2>Index</h2>

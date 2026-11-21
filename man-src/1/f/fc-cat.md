@@ -30,4 +30,3 @@ description: "fc-cat – read font information cache files"
 <p> The fontconfig user&#8217;s guide, in HTML format: <i>/usr/share/doc/fontconfig/fontconfig-user.html</i>.</p>
 <h2>AUTHOR</h2>
 <p> This manual page was written by Patrick Lam &lt;plam [at] mit.edu&gt;. </p>
-<h2>Index</h2>

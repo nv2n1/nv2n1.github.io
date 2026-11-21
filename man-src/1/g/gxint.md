@@ -41,4 +41,3 @@ description: "gxint – load and run an interactive GEANT application"
 <p> This manual page was written by Kevin McCarty &lt;kmccarty [at] debian.org&gt; for the Debian GNU/Linux system (but may be used by others).</p>
 <h2>COPYRIGHT</h2>
 <p> This manual page is (C) Copyright Kevin McCarty, 2002, 2003, 2004, 2005. </p>
-<h2>Index</h2>

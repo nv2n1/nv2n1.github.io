@@ -83,4 +83,3 @@ description: "perltex – enable LaTeX macros to be defined in terms of Perl cod
 <p> <code><a href="/docs/linux/man/1-latex/">latex</a></code>(1), <code><a href="/docs/linux/man/1-pdflatex/">pdflatex</a></code>(1), <code><a href="/docs/linux/man/1-perl/">perl</a></code>(1), <code><a href="/docs/linux/man/3pm-Safe/">Safe</a></code>(3pm), <code><a href="/docs/linux/man/3pm-Opcode/">Opcode</a></code>(3pm)  </p>
 <h2>AUTHOR</h2>
 <p> Scott Pakin, <i>scott+pt [at] pakin.org</i> </p>
-<h2>Index</h2>

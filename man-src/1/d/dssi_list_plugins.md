@@ -27,4 +27,3 @@ description: "dssi_list_plugins – list available DSSI plugins"
 <p> DSSI RFC version 1.0.</p>
 <h2>SEE ALSO</h2>
 <p> <code><a href="/docs/linux/man/1-dssi_analyse_plugin/">dssi_analyse_plugin</a></code>(1), <a rel="nofollow" href="http://dssi.sourceforge.net/">http://dssi.sourceforge.net/</a> </p>
-<h2>Index</h2>

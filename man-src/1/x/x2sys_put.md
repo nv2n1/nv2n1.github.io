@@ -49,4 +49,3 @@ gmt x2sys_put latest.tbf -F -V -TMGD77
 <p> <code>x2sys_binlist</code>, <code>x2sys_get</code></p>
 <h2>COPYRIGHT</h2>
 <p> 2015, P. Wessel, W. H. F. Smith, R. Scharroo, J. Luis, and F. Wobbe </p>
-<h2>Index</h2>

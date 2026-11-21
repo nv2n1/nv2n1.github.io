@@ -21,4 +21,3 @@ description: "rpmmd2solv – convert files in rpm-md format into a solv file"
 <p> <a href="/docs/linux/man/1-repomdxml2solv/">repomdxml2solv</a>(1), <a href="/docs/linux/man/1-mergesolv/">mergesolv</a>(1), <a href="/docs/linux/man/8-createrepo/">createrepo</a>(8)</p>
 <h2>AUTHOR</h2>
 <p> Michael Schroeder &lt;mls [at] suse.de&gt; </p>
-<h2>Index</h2>
