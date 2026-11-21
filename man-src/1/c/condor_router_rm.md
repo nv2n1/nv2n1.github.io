@@ -1,4 +1,5 @@
 ---
+
 title: "condor_router_rm(1)"
 name: "condor_router_rm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_router_rm/"
 description: "condor_router_rm Remove jobs being managed by the HTCondor Job Router"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_router_rm</i> Remove jobs being managed by the HTCondor Job Router </p>
 <h2>Synopsis</h2>
 <p> <i>condor_router_rm</i> [ <i>router_rm options</i> ] [ <i>condor_rm options</i> ] </p>

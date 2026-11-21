@@ -1,4 +1,5 @@
 ---
+
 title: "peicon(1)"
 name: "peicon"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-peicon/"
 description: "peicon — extract icon resources from PE files"
 ---
 
-<h2>Name</h2>
 <p> peicon &#8212; extract icon resources from PE files</p>
 <h2>Syntax</h2>
 <p> <code>peicon</code> [<code>-Llv] [-o</code> <i>virtual-shift</i>]</p>

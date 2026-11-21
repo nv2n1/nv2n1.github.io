@@ -1,4 +1,5 @@
 ---
+
 title: "notifyd(8)"
 name: "notifyd"
 section: "8"
@@ -8,7 +9,7 @@ description: "notifyd – Cyrus notification server"
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>Name</h2>
+
 <p>notifyd &#8211; Cyrus notification server</p>
 <h2>Synopsis</h2>
 <p><code>notifyd</code> [ <code>-C</code> <i>config-file</i> ] [ <code>-U</code> <i>uses</i> ] [ <code>-T</code> <i>timeout</i> ] </p>

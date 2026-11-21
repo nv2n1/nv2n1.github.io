@@ -1,4 +1,5 @@
 ---
+
 title: "javac-java-1(1)"
 name: "javac-java-1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-javac-java-1/"
 description: "javac – Java programming language compiler"
 ---
 
-<h2>Name</h2>
 <p> javac &#8211; Java programming language compiler </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

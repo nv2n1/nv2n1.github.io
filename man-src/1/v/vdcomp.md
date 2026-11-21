@@ -1,4 +1,5 @@
 ---
+
 title: "vdcomp(1)"
 name: "vdcomp"
 section: "1"
@@ -6,9 +7,7 @@ letter: "v"
 url: "/docs/linux/man/1-vdcomp/"
 ---
 
-<h2>Name</h2>
-
- <i>vdcomp</i> - decompress a compressed PDS image
+<i>vdcomp</i> - decompress a compressed PDS image
 
 <h2>Synopsis</h2>
 

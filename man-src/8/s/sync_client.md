@@ -1,4 +1,5 @@
 ---
+
 title: "sync_client(8)"
 name: "sync_client"
 section: "8"
@@ -8,7 +9,7 @@ description: "sync_client – client side of the synchronization (replication) e
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>Name</h2>
+
 <p>sync_client &#8211; client side of the synchronization (replication) engine</p>
 <h2>Synopsis</h2>
 <p><code>sync_client</code> [ <code>-v</code> ] [ <code>-l</code> ] [ <code>-z</code> ] [ <code>-C</code> <i>config-file</i> ] [ <code>-S</code> <i>servername</i> ] </p>

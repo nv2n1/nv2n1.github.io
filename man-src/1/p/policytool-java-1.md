@@ -1,4 +1,5 @@
 ---
+
 title: "policytool-java-1(1)"
 name: "policytool-java-1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-policytool-java-1/"
 description: "policytool – PolicyTool Administration GUI Utility"
 ---
 
-<h2>Name</h2>
 <p> policytool &#8211; PolicyTool Administration GUI Utility </p>
 <p> <code>policytool</code> reads and writes a plain text policy file based on user input via the utility GUI.</p>
 <h2>SYNOPSIS</h2>

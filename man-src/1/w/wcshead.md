@@ -1,4 +1,5 @@
 ---
+
 title: "wcshead(1)"
 name: "wcshead"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wcshead/"
 description: "wcshead – Print WCS part of FITS or IRAF image header"
 ---
 
-<h2>Name</h2>
 <p> wcshead &#8211; Print WCS part of FITS or IRAF image header</p>
 <h2>Synopsis</h2>
 <p> wcshead [-hrtvsz] FITS or IRAF file(s)</p>

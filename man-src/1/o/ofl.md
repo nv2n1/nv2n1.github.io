@@ -1,4 +1,5 @@
 ---
+
 title: "ofl(1)"
 name: "ofl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-ofl/"
 description: "ofl — open file lister"
 ---
 
-<h2>Name</h2>
 <p> ofl &#8212; open file lister</p>
 <h2>Syntax</h2>
 <p> <code>ofl</code> [<code>-P</code>] [<code>-k</code> <i>signalspec</i>] <i>path</i>[&#8230;]</p>

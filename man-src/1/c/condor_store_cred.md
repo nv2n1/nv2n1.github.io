@@ -1,4 +1,5 @@
 ---
+
 title: "condor_store_cred(1)"
 name: "condor_store_cred"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_store_cred/"
 description: "condor_store_cred securely stash a password"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_store_cred</i> securely stash a password </p>
 <h2>Synopsis</h2>
 <p> <i>condor_store_cred</i> [ <code>-help</code> ] </p>

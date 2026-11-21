@@ -1,4 +1,5 @@
 ---
+
 title: "mdu(1)"
 name: "mdu"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mdu/"
 description: "mdu – display the amount of space occupied by an MSDOS directory"
 ---
 
-<h2>Name</h2>
 <p> mdu &#8211; display the amount of space occupied by an MSDOS directory </p>
 <h2>Note of warning</h2>
 <p> This manpage has been automatically generated from mtools&#8217;s texinfo documentation, and may not be entirely accurate or complete. See the end of this man page for details. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "chk_cyrus(8)"
 name: "chk_cyrus"
 section: "8"
@@ -8,7 +9,7 @@ description: "chk_cyrus – perform a consistency check of the cyrus mailstore"
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>Name</h2>
+
 <p>chk_cyrus &#8211; perform a consistency check of the cyrus mailstore</p>
 <h2>Synopsis</h2>
 <p><code>chk_cyrus</code> [ <code>-C</code> <i>config-file</i> ] [ <code>-P</code> <i>partition</i> ] [ <code>-M</code> <i>mailbox</i> ]</p>

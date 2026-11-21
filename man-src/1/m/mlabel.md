@@ -1,4 +1,5 @@
 ---
+
 title: "mlabel(1)"
 name: "mlabel"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mlabel/"
 description: "mlabel – make an MSDOS volume label"
 ---
 
-<h2>Name</h2>
 <p> mlabel &#8211; make an MSDOS volume label </p>
 <h2>Note of warning</h2>
 <p> This manpage has been automatically generated from mtools&#8217;s texinfo documentation, and may not be entirely accurate or complete. See the end of this man page for details. </p>

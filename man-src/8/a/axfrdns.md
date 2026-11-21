@@ -1,4 +1,5 @@
 ---
+
 title: "axfrdns(8)"
 name: "axfrdns"
 section: "8"
@@ -6,7 +7,6 @@ letter: "a"
 url: "/docs/linux/man/8-axfrdns/"
 ---
 
-<h2>Synopsis</h2>
 <dl>
 <dt><code>axfrdns</code> [OPTIONS]</dt>
 <dd>

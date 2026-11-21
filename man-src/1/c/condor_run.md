@@ -1,4 +1,5 @@
 ---
+
 title: "condor_run(1)"
 name: "condor_run"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_run/"
 description: "condor_run Submit a shell command-line as an HTCondor job"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_run</i> Submit a shell command-line as an HTCondor job </p>
 <h2>Synopsis</h2>
 <p> <i>condor_run</i> [ <code>-u </code> <i>universe</i> ] [ <code>-a </code> <i>submitcmd</i> ] <i>shell command</i> </p>

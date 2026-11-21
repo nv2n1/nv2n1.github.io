@@ -1,4 +1,5 @@
 ---
+
 title: "smmapd(8)"
 name: "smmapd"
 section: "8"
@@ -8,7 +9,7 @@ description: "SMMAPD – Sendmail socket map daemon"
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>Name</h2>
+
 <p>SMMAPD &#8211; Sendmail socket map daemon</p>
 <h2>Synopsis</h2>
 <p><code>smmapd</code> [ <code>-C</code> <i>config-file</i> ] [ <code>-U</code> <i>uses</i> ] [ <code>-T</code> <i>timeout</i> ] </p>

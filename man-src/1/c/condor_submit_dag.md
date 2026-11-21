@@ -1,4 +1,5 @@
 ---
+
 title: "condor_submit_dag(1)"
 name: "condor_submit_dag"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_submit_dag/"
 description: "condor_submit_dag Manage and queue jobs within a specified DAG for execution on remote machines"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_submit_dag</i> Manage and queue jobs within a specified DAG for execution on remote machines </p>
 <h2>Synopsis</h2>
 <p> <i>condor_submit_dag</i> [ <code>-help | -version</code> ] </p>

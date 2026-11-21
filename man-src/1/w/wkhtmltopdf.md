@@ -1,4 +1,5 @@
 ---
+
 title: "wkhtmltopdf(1)"
 name: "wkhtmltopdf"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wkhtmltopdf/"
 description: "wkhtmltopdf – html to pdf converter"
 ---
 
-<h2>Name</h2>
 <p> wkhtmltopdf &#8211; html to pdf converter </p>
 <h2>Synopsis</h2>
 <p>&nbsp;<wbr>&nbsp;wkhtmltopdf&nbsp;[GLOBAL OPTION]&#8230;&nbsp;[OBJECT]&#8230;&nbsp;&lt;output file&gt; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "gidd_alloc(1)"
 name: "gidd_alloc"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gidd_alloc/"
 description: "gidd_alloc find a GID within the specified range which is not used by any process"
 ---
 
-<h2>Name</h2>
 <p> gidd_alloc find a GID within the specified range which is not used by any process </p>
 <h2>Synopsis</h2>
 <p> <code>gidd_alloc</code> <i>min-gid</i> <i>max-gid</i> </p>

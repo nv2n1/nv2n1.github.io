@@ -1,4 +1,5 @@
 ---
+
 title: "condor_rm(1)"
 name: "condor_rm"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_rm/"
 description: "condor_rm remove jobs from the HTCondor queue"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_rm</i> remove jobs from the HTCondor queue </p>
 <h2>Synopsis</h2>
 <p> <i>condor_rm</i> [ <code>-help -version</code> ] </p>

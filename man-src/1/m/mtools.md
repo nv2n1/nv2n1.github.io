@@ -1,4 +1,5 @@
 ---
+
 title: "mtools(1)"
 name: "mtools"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mtools/"
 description: "mtools – utilities to access DOS disks in Unix."
 ---
 
-<h2>Name</h2>
 <p> mtools &#8211; utilities to access DOS disks in Unix. </p>
 <h2>Introduction</h2>
 <p> Mtools is a collection of tools to allow Unix systems to manipulate MS-DOS files: read, write, and move around files on an MS-DOS file system (typically a floppy disk). Where reasonable, each program attempts to emulate the MS-DOS equivalent command. However, unnecessary restrictions and oddities of DOS are not emulated. For instance, it is possible to move subdirectories from one subdirectory to another. </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "condor_master(1)"
 name: "condor_master"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_master/"
 description: "condor_master The master HTCondor Daemon"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_master</i> The master HTCondor Daemon </p>
 <h2>Synopsis</h2>
 <p> <i>condor_master</i> </p>

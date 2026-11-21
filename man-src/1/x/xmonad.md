@@ -1,4 +1,5 @@
 ---
+
 title: "xmonad(1)"
 name: "xmonad"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xmonad/"
 description: "xmonad – a tiling window manager"
 ---
 
-<h2>Name</h2>
 <p> xmonad &#8211; a tiling window manager</p>
 <h2>Description</h2>
 <p> xmonad is a minimalist tiling window manager for X, written in Haskell. Windows are managed using automatic layout algorithms, which can be dynamically reconfigured. At any time windows are arranged so as to maximize the use of screen real estate. All features of the window manager are accessible purely from the keyboard: a mouse is entirely optional. xmonad is configured in Haskell, and custom layout algorithms may be implemented by the user in config files. A principle of xmonad is predictability: the user should know in advance precisely the window arrangement that will result from any action. </p>

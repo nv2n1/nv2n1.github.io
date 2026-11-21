@@ -1,4 +1,5 @@
 ---
+
 title: "minfo(1)"
 name: "minfo"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-minfo/"
 description: "minfo – print the parameters of a MSDOS filesystem"
 ---
 
-<h2>Name</h2>
 <p> minfo &#8211; print the parameters of a MSDOS filesystem </p>
 <h2>Note of warning</h2>
 <p> This manpage has been automatically generated from mtools&#8217;s texinfo documentation, and may not be entirely accurate or complete. See the end of this man page for details. </p>

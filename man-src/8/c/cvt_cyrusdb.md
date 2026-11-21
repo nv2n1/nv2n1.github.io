@@ -1,4 +1,5 @@
 ---
+
 title: "cvt_cyrusdb(8)"
 name: "cvt_cyrusdb"
 section: "8"
@@ -8,7 +9,7 @@ description: "cvt_cyrusdb – convert a database file between cyrus database for
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>Name</h2>
+
 <p>cvt_cyrusdb &#8211; convert a database file between cyrus database formats</p>
 <h2>Synopsis</h2>
 <p><code>cvt_cyrusdb</code> [ <code>-C</code> <i>config-file</i> ] &lt;old-file&gt; &lt;old-fileformat&gt; &lt;new-file&gt; &lt;new-file-format&gt;</p>

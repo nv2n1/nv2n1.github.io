@@ -1,4 +1,5 @@
 ---
+
 title: "condor_job_router_info(1)"
 name: "condor_job_router_info"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_job_router_info/"
 description: "condor_job_router_info Discover and display information related to job routing"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_job_router_info</i> Discover and display information related to job routing </p>
 <h2>Synopsis</h2>
 <p> <i>condor_job_router_info</i> [ <code>-help -version</code> ] </p>

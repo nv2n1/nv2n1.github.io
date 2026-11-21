@@ -1,4 +1,5 @@
 ---
+
 title: "jps-java-1(1)"
 name: "jps-java-1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jps-java-1/"
 description: "jps – Java Virtual Machine Process Status Tool"
 ---
 
-<h2>Name</h2>
 <p> jps &#8211; Java Virtual Machine Process Status Tool </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

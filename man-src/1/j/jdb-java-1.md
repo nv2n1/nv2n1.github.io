@@ -1,4 +1,5 @@
 ---
+
 title: "jdb-java-1(1)"
 name: "jdb-java-1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jdb-java-1/"
 description: "jdb – The Java Debugger"
 ---
 
-<h2>Name</h2>
 <p> jdb &#8211; The Java Debugger </p>
 <p> <code>jdb</code> helps you find and fix bugs in Java language programs. </p>
 <h2>SYNOPSIS</h2>

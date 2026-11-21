@@ -1,4 +1,5 @@
 ---
+
 title: "condor_hold(1)"
 name: "condor_hold"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_hold/"
 description: "condor_hold put jobs in the queue into the hold state"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_hold</i> put jobs in the queue into the hold state </p>
 <h2>Synopsis</h2>
 <p> <i>condor_hold</i> [ <code>-help -version</code> ] </p>

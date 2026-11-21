@@ -1,4 +1,5 @@
 ---
+
 title: "condor_stats(1)"
 name: "condor_stats"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_stats/"
 description: "condor_stats Display historical information about the HTCondor pool"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_stats</i> Display historical information about the HTCondor pool </p>
 <h2>Synopsis</h2>
 <p> <i>condor_stats</i> [ <code>-f </code> <i>filename</i> ] [ <code>-orgformat</code> ] [ <code>-pool </code> <i>centralmanagerhostname[:portnumber]</i> ] [ <code>time-range</code> ] <i>query-type</i> </p>

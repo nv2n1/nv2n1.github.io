@@ -1,4 +1,5 @@
 ---
+
 title: "condor_prio(1)"
 name: "condor_prio"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_prio/"
 description: "condor_prio change priority of jobs in the HTCondor queue"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_prio</i> change priority of jobs in the HTCondor queue </p>
 <h2>Synopsis</h2>
 <p> <i>condor_prio</i> <code>-p </code> <i>priority</i> <code>+ </code> <i>value</i> <code>&#8211; </code> <i>value</i> [ <code>-n </code> <i>schedd_name</i> ] <i>cluster | cluster.process | username | -a</i> </p>

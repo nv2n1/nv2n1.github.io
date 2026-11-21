@@ -1,4 +1,5 @@
 ---
+
 title: "condor_fetchlog(1)"
 name: "condor_fetchlog"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_fetchlog/"
 description: "condor_fetchlog Retrieve a daemon’s log file that is located on another computer"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_fetchlog</i> Retrieve a daemon&#8217;s log file that is located on another computer </p>
 <h2>Synopsis</h2>
 <p> <i>condor_fetchlog</i> [ <code>-help -version</code> ] </p>

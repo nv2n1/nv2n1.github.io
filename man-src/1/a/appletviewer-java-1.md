@@ -1,4 +1,5 @@
 ---
+
 title: "appletviewer-java-1(1)"
 name: "appletviewer-java-1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-appletviewer-java-1/"
 description: "appletviewer – The Java Applet Viewer."
 ---
 
-<h2>Name</h2>
 <p> appletviewer &#8211; The Java Applet Viewer. </p>
 <p> The <code>appletviewer</code> command allows you to run applets outside of a web browser. </p>
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "puppetca(8)"
 name: "puppetca"
 section: "8"
@@ -8,7 +9,7 @@ description: "–"
 ---
 
 <p>&nbsp;<wbr>&#8211;&nbsp;<wbr></p>
-<h2>Synopsis</h2>
+
 <p>Stand-alone certificate authority. Capable of generating certificates but mostly meant for signing certificate requests from puppet clients.</p>
 <h2>Usage</h2>
 <dl>

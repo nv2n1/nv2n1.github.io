@@ -1,4 +1,5 @@
 ---
+
 title: "jcmd-java-1(1)"
 name: "jcmd-java-1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-jcmd-java-1/"
 description: "jcmd – Sends diagnostic command requests to a running Java Virtual Machine"
 ---
 
-<h2>Name</h2>
 <p> jcmd &#8211; Sends diagnostic command requests to a running Java Virtual Machine </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

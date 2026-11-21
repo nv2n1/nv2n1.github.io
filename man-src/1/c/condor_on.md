@@ -1,4 +1,5 @@
 ---
+
 title: "condor_on(1)"
 name: "condor_on"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_on/"
 description: "condor_on Start up HTCondor daemons"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_on</i> Start up HTCondor daemons </p>
 <h2>Synopsis</h2>
 <p> <i>condor_on</i> [ <code>-help -version</code> ] </p>

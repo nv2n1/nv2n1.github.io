@@ -1,4 +1,5 @@
 ---
+
 title: "squatter(8)"
 name: "squatter"
 section: "8"
@@ -8,7 +9,7 @@ description: "squatter – create SQUAT indexes for mailboxes"
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>Name</h2>
+
 <p>squatter &#8211; create SQUAT indexes for mailboxes</p>
 <h2>Synopsis</h2>
 <p><code>squatter</code> [ <code>-C</code> <i>config-file</i> ] [ <code>-r</code> ] [ <code>-s</code> ] [ <code>-i</code> ] [ <code>-a</code> ] [ <code>-v</code> ] <i>mailbox</i>&#8230;</p>

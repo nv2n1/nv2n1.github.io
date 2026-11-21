@@ -1,4 +1,5 @@
 ---
+
 title: "condor_router_history(1)"
 name: "condor_router_history"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_router_history/"
 description: "condor_router_history Display the history for routed jobs"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_router_history</i> Display the history for routed jobs </p>
 <h2>Synopsis</h2>
 <p> <i>condor_router_history</i> [ &#8212; <code>h</code> ] </p>

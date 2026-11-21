@@ -1,4 +1,5 @@
 ---
+
 title: "mcat(1)"
 name: "mcat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mcat/"
 description: "mcat – dump raw disk image"
 ---
 
-<h2>Name</h2>
 <p> mcat &#8211; dump raw disk image </p>
 <h2>Note of warning</h2>
 <p> This manpage has been automatically generated from mtools&#8217;s texinfo documentation, and may not be entirely accurate or complete. See the end of this man page for details. </p>

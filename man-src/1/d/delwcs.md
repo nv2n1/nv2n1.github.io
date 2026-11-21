@@ -1,4 +1,5 @@
 ---
+
 title: "delwcs(1)"
 name: "delwcs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-delwcs/"
 description: "delwcs – Delete WCS in FITS and IRAF image files"
 ---
 
-<h2>Name</h2>
 <p> delwcs &#8211; Delete WCS in FITS and IRAF image files</p>
 <h2>Synopsis</h2>
 <p> delwcs [-v] FITS or IRAF file(s)</p>

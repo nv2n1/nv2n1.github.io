@@ -1,4 +1,5 @@
 ---
+
 title: "condor_ping(1)"
 name: "condor_ping"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_ping/"
 description: "condor_ping Attempt a security negotiation to determine if it succeeds"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_ping</i> Attempt a security negotiation to determine if it succeeds </p>
 <h2>Synopsis</h2>
 <p> <i>condor_ping</i> [ <code>-help -version</code> ] </p>

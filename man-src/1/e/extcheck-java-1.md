@@ -1,4 +1,5 @@
 ---
+
 title: "extcheck-java-1(1)"
 name: "extcheck-java-1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-extcheck-java-1/"
 description: "extcheck – A utility to detect jar conflicts"
 ---
 
-<h2>Name</h2>
 <p> extcheck &#8211; A utility to detect jar conflicts </p>
 <p> <code>extcheck</code> detects version conflicts between a target jar file and currently installed extension jar files. </p>
 <h2>SYNOPSIS</h2>

@@ -1,4 +1,5 @@
 ---
+
 title: "condor_history(1)"
 name: "condor_history"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_history/"
 description: "condor_history View log of HTCondor jobs completed to date"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_history</i> View log of HTCondor jobs completed to date </p>
 <h2>Synopsis</h2>
 <p> <i>condor_history</i> [ <code>-help</code> ] </p>

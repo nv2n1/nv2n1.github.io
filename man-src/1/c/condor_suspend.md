@@ -1,4 +1,5 @@
 ---
+
 title: "condor_suspend(1)"
 name: "condor_suspend"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_suspend/"
 description: "condor_suspend suspend jobs from the HTCondor queue"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_suspend</i> suspend jobs from the HTCondor queue </p>
 <h2>Synopsis</h2>
 <p> <i>condor_suspend</i> [ <code>-help -version</code> ] </p>

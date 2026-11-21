@@ -1,4 +1,5 @@
 ---
+
 title: "condor_config_val(1)"
 name: "condor_config_val"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_config_val/"
 description: "condor_config_val Query or set a given HTCondor configuration variable"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_config_val</i> Query or set a given HTCondor configuration variable </p>
 <h2>Synopsis</h2>
 <p> <i>condor_config_val</i> <i>&lt;help option&gt;</i> </p>

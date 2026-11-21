@@ -1,4 +1,5 @@
 ---
+
 title: "xjc-java-1(1)"
 name: "xjc-java-1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-xjc-java-1/"
 description: "xjc – Java(TM) Architecture for XML Binding Binding Compiler"
 ---
 
-<h2>Name</h2>
 <p> xjc &#8211; Java(TM) Architecture for XML Binding<br />
  Binding Compiler </p>
 <p> <code>Specification Version:</code> 2.1<br />

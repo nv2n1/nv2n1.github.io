@@ -1,4 +1,5 @@
 ---
+
 title: "setpix(1)"
 name: "setpix"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-setpix/"
 description: "setpix – Set FITS or IRAF image values"
 ---
 
-<h2>Name</h2>
 <p> setpix &#8211; Set FITS or IRAF image values</p>
 <h2>Synopsis</h2>
 <p> setpix [-vn] file.fts [x_range y_range value] [@valuefile]</p>

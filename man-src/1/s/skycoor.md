@@ -1,4 +1,5 @@
 ---
+
 title: "skycoor(1)"
 name: "skycoor"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-skycoor/"
 description: "skycoor – Convert coordinates"
 ---
 
-<h2>Name</h2>
 <p> skycoor &#8211; Convert coordinates</p>
 <h2>Synopsis</h2>
 <p> skycoor [-bdgjv] [-n ndec] ra1 dec1 sys1 &#8230; ran decn sysn<br />

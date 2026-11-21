@@ -1,4 +1,5 @@
 ---
+
 title: "sethead(1)"
 name: "sethead"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sethead/"
 description: "sethead – Set FITS or IRAF header keyword values"
 ---
 
-<h2>Name</h2>
 <p> sethead &#8211; Set FITS or IRAF header keyword values</p>
 <h2>Synopsis</h2>
 <p> sethead [-dknv][r letter] &lt;FITS or IRAF file&gt; kw1=val1 kw2=val2 &#8230; kwn=valuen</p>

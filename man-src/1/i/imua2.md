@@ -1,4 +1,5 @@
 ---
+
 title: "imua2(1)"
 name: "imua2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-imua2/"
 description: "imua2 – Find USNO-A2.0 stars in FITS or IRAF image files"
 ---
 
-<h2>Name</h2>
 <p> imua2 &#8211; Find USNO-A2.0 stars in FITS or IRAF image files</p>
 <h2>Synopsis</h2>
 <p> imua2 [options] FITS or IRAF file(s)</p>

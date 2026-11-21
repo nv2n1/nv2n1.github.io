@@ -1,5 +1,6 @@
 ---
 
+
 title: "dex(1)"
 name: "dex"
 section: "1"
@@ -9,7 +10,7 @@ description: "dex"
 ---
 
 <p> dex </p>
-<h2>SYNOPSIS</h2>
+
 <p> dex [-c command] [-t tag] [-r rcfile] [-V] [file]&#8230;</p>
 <h2>DESCRIPTION</h2>
 <p> A small and flexible text editor.</p>

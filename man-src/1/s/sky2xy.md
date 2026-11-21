@@ -1,4 +1,5 @@
 ---
+
 title: "sky2xy(1)"
 name: "sky2xy"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sky2xy/"
 description: "sky2xy – Compute X Y from RA Dec using WCS in FITS and IRAF image files"
 ---
 
-<h2>Name</h2>
 <p> sky2xy &#8211; Compute X Y from RA Dec using WCS in FITS and IRAF image files</p>
 <h2>Synopsis</h2>
 <p> sky2xy [-vbjg] file.fts ra1 dec1 &#8230; ran decn<br />

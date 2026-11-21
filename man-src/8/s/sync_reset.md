@@ -1,4 +1,5 @@
 ---
+
 title: "sync_reset(8)"
 name: "sync_reset"
 section: "8"
@@ -8,7 +9,7 @@ description: "sync_reset – Account reset utility. DANGER."
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>Name</h2>
+
 <p>sync_reset &#8211; Account reset utility. DANGER.</p>
 <h2>Synopsis</h2>
 <p><code>sync_reset</code> [ <code>-C</code> <i>config-file</i> ] [ <code>-v</code> ] [ <code>-f</code> ]</p>

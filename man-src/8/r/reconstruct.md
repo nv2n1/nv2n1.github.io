@@ -1,4 +1,5 @@
 ---
+
 title: "reconstruct(8)"
 name: "reconstruct"
 section: "8"
@@ -8,7 +9,7 @@ description: "reconstruct – reconstruct mailboxes"
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>Name</h2>
+
 <p>reconstruct &#8211; reconstruct mailboxes</p>
 <h2>Synopsis</h2>
 <p><code>reconstruct</code> [ <code>-C</code> <i>config-file</i> ] [ <code>-p</code> <i>partition</i> ] [ <code>-x</code> ] [ <code>-r</code> ] [ <code>-f</code> ] </p>

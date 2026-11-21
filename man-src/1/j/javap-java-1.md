@@ -1,4 +1,5 @@
 ---
+
 title: "javap-java-1(1)"
 name: "javap-java-1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-javap-java-1/"
 description: "javap – The Java Class File Disassembler"
 ---
 
-<h2>Name</h2>
 <p> javap &#8211; The Java Class File Disassembler </p>
 <p> Disassembles class files. </p>
 <h2>SYNOPSIS</h2>

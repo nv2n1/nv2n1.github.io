@@ -1,4 +1,5 @@
 ---
+
 title: "unopkg(1)"
 name: "unopkg"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-unopkg/"
 description: "unopkg – LibreOffice Extension Manager"
 ---
 
-<h2>Name</h2>
 <p> unopkg &#8211; LibreOffice Extension Manager</p>
 <h2>SYNOPSIS</h2>
 <p> <code>unopkg</code> [<code>add</code>] &lt;<i>options</i>&gt; <i>extension-path&#8230;</i><br />

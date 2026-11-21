@@ -1,4 +1,5 @@
 ---
+
 title: "pi(8)"
 name: "pi"
 section: "8"
@@ -8,7 +9,7 @@ url: "/docs/linux/man/8-pi/"
 
 &nbsp;<wbr>-&nbsp;<wbr>
 
-<h2>Synopsis</h2>
+
 
 Print help about puppet types on the console. Run with aq-haq to get detailed help.
 

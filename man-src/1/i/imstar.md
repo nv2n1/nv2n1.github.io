@@ -1,4 +1,5 @@
 ---
+
 title: "imstar(1)"
 name: "imstar"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-imstar/"
 description: "imstar – Find stars in FITS and IRAF image files"
 ---
 
-<h2>Name</h2>
 <p> imstar &#8211; Find stars in FITS and IRAF image files</p>
 <h2>Synopsis</h2>
 <p> imstar [options] [FITS or IRAF filename] or [@file of image file names]</p>

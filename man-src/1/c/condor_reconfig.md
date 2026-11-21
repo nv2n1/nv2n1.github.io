@@ -1,4 +1,5 @@
 ---
+
 title: "condor_reconfig(1)"
 name: "condor_reconfig"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_reconfig/"
 description: "condor_reconfig Reconfigure HTCondor daemons"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_reconfig</i> Reconfigure HTCondor daemons </p>
 <h2>Synopsis</h2>
 <p> <i>condor_reconfig</i> [ <code>-help -version</code> ] </p>

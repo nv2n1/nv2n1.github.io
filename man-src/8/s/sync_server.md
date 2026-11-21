@@ -1,4 +1,5 @@
 ---
+
 title: "sync_server(8)"
 name: "sync_server"
 section: "8"
@@ -8,7 +9,7 @@ description: "sync_server – server side of the synchronization (replication) e
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>Name</h2>
+
 <p>sync_server &#8211; server side of the synchronization (replication) engine</p>
 <h2>Synopsis</h2>
 <p><code>sync_server</code> [ <code>-C</code> <i>config-file</i> ] [ <code>-p</code> <i>ssf</i> ]</p>

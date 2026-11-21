@@ -1,4 +1,5 @@
 ---
+
 title: "mmd(1)"
 name: "mmd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mmd/"
 description: "mmd – make an MSDOS subdirectory"
 ---
 
-<h2>Name</h2>
 <p> mmd &#8211; make an MSDOS subdirectory </p>
 <h2>Note of warning</h2>
 <p> This manpage has been automatically generated from mtools&#8217;s texinfo documentation, and may not be entirely accurate or complete. See the end of this man page for details. </p>

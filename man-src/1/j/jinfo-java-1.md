@@ -1,4 +1,5 @@
 ---
+
 title: "jinfo-java-1(1)"
 name: "jinfo-java-1"
 section: "1"
@@ -6,7 +7,7 @@ letter: "j"
 url: "/docs/linux/man/1-jinfo-java-1/"
 description: "jinfo – Configuration Info"
 ---
-<h2>Name</h2>
+
 <p> jinfo - Configuration Info </p>
 <h2>SYNOPSIS</h2>
 <pre><code>

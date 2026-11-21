@@ -1,4 +1,5 @@
 ---
+
 title: "procd_ctl(1)"
 name: "procd_ctl"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-procd_ctl/"
 description: "procd_ctl command line interface to the condor_procd"
 ---
 
-<h2>Name</h2>
 <p> procd_ctl command line interface to the <i>condor_procd</i> </p>
 <h2>Synopsis</h2>
 <p> <code>procd_ctl</code> <code>-h</code> </p>

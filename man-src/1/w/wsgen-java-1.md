@@ -1,4 +1,5 @@
 ---
+
 title: "wsgen-java-1(1)"
 name: "wsgen-java-1"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-wsgen-java-1/"
 description: "wsgen – Java(TM) API for XML Web Services (JAX-WS) 2.0"
 ---
 
-<h2>Name</h2>
 <p> wsgen &#8211; Java(TM) API for XML Web Services (JAX-WS) 2.0 </p>
 <p> <code>Specification Version:</code> 2.1<br />
  <code>Implementation Version:</code> 2.1.1 </p>

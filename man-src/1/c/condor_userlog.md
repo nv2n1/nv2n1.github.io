@@ -1,4 +1,5 @@
 ---
+
 title: "condor_userlog(1)"
 name: "condor_userlog"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_userlog/"
 description: "condor_userlog Display and summarize job statistics from job log files."
 ---
 
-<h2>Name</h2>
 <p> <i>condor_userlog</i> Display and summarize job statistics from job log files. </p>
 <h2>Synopsis</h2>
 <p> <i>condor_userlog</i> [ <code>-help</code> ] [ <code>-total | -raw</code> ] [ <code>-debug</code> ] [ <code>-evict</code> ] [ <code>-j </code> <i>cluster | cluster.proc</i> ] [ <code>-all</code> ] [ <code>-hostname</code> ] <i>logfile &#8230; </i> </p>

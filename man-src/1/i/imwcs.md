@@ -1,4 +1,5 @@
 ---
+
 title: "imwcs(1)"
 name: "imwcs"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-imwcs/"
 description: "imwcs – Set WCS in FITS and IRAF image files"
 ---
 
-<h2>Name</h2>
 <p> imwcs &#8211; Set WCS in FITS and IRAF image files</p>
 <h2>Synopsis</h2>
 <p> imwcs [options] FITS or IRAF filename</p>

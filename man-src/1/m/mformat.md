@@ -1,4 +1,5 @@
 ---
+
 title: "mformat(1)"
 name: "mformat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mformat/"
 description: "mformat – add an MSDOS filesystem to a low-level formatted floppy disk"
 ---
 
-<h2>Name</h2>
 <p> mformat &#8211; add an MSDOS filesystem to a low-level formatted floppy disk </p>
 <h2>Note of warning</h2>
 <p> This manpage has been automatically generated from mtools&#8217;s texinfo documentation, and may not be entirely accurate or complete. See the end of this man page for details. </p>

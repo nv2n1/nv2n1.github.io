@@ -1,4 +1,5 @@
 ---
+
 title: "isnum(1)"
 name: "isnum"
 section: "1"
@@ -6,9 +7,7 @@ letter: "i"
 url: "/docs/linux/man/1-isnum/"
 ---
 
-<h2>Name</h2>
-
- isnum - Return code telling whether the input string is numerical
+isnum - Return code telling whether the input string is numerical
 
 <h2>Synopsis</h2>
 

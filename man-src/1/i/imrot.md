@@ -1,4 +1,5 @@
 ---
+
 title: "imrot(1)"
 name: "imrot"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-imrot/"
 description: "imrot – Rotate and/or Reflect FITS and IRAF image files"
 ---
 
-<h2>Name</h2>
 <p> imrot &#8211; Rotate and/or Reflect FITS and IRAF image files</p>
 <h2>Synopsis</h2>
 <p> imrot [options] Fits or IRAF file(s)</p>

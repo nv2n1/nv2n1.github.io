@@ -1,4 +1,5 @@
 ---
+
 title: "cyr_synclog(8)"
 name: "cyr_synclog"
 section: "8"
@@ -8,7 +9,7 @@ description: "cyr_synclog – add entries to the replication log"
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>Name</h2>
+
 <p>cyr_synclog &#8211; add entries to the replication log</p>
 <h2>Synopsis</h2>
 <p><code>cyr_synclog</code> [ <code>-C</code> <i>config-file</i> ] [ <code>-type</code> ] &lt;value&gt;</p>

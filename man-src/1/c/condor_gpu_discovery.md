@@ -1,4 +1,5 @@
 ---
+
 title: "condor_gpu_discovery(1)"
 name: "condor_gpu_discovery"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_gpu_discovery/"
 description: "condor_gpu_discovery Output GPU-related ClassAd attributes"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_gpu_discovery</i> Output GPU-related ClassAd attributes </p>
 <h2>Synopsis</h2>
 <p> <i>condor_gpu_discovery</i> <code>-help</code> </p>

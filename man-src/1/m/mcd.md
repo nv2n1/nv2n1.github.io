@@ -1,4 +1,5 @@
 ---
+
 title: "mcd(1)"
 name: "mcd"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-mcd/"
 description: "mcd – change MSDOS directory"
 ---
 
-<h2>Name</h2>
 <p> mcd &#8211; change MSDOS directory </p>
 <h2>Note of warning</h2>
 <p> This manpage has been automatically generated from mtools&#8217;s texinfo documentation, and may not be entirely accurate or complete. See the end of this man page for details. </p>

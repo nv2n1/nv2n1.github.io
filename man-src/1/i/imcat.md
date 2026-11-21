@@ -1,4 +1,5 @@
 ---
+
 title: "imcat(1)"
 name: "imcat"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-imcat/"
 description: "imcat – List catalog stars in FITS and IRAF image files"
 ---
 
-<h2>Name</h2>
 <p> imcat &#8211; List catalog stars in FITS and IRAF image files</p>
 <h2>Synopsis</h2>
 <p> imcat [options] FITS or IRAF file(s)</p>

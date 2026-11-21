@@ -1,4 +1,5 @@
 ---
+
 title: "condor_sos(1)"
 name: "condor_sos"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_sos/"
 description: "condor_sos Issue a command that will be service with a higher priority"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_sos</i> Issue a command that will be service with a higher priority </p>
 <h2>Synopsis</h2>
 <p> <i>condor_sos</i> [ <code>-help -version</code> ] </p>

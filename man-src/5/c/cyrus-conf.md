@@ -1,4 +1,5 @@
 ---
+
 title: "cyrus-conf(5)"
 name: "cyrus-conf"
 section: "5"
@@ -8,7 +9,7 @@ description: "cyrus.conf – Cyrus configuration file"
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>Name</h2>
+
 <p>cyrus.conf &#8211; Cyrus configuration file</p>
 <h2>Description</h2>
 <p><code>/etc/cyrus.conf</code> is the configuration file for the Cyrus <code>master</code> process. It defines the startup procedures, services and events to be spawned by <code>master</code>. </p>

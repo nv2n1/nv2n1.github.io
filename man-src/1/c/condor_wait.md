@@ -1,4 +1,5 @@
 ---
+
 title: "condor_wait(1)"
 name: "condor_wait"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_wait/"
 description: "condor_wait Wait for jobs to finish"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_wait</i> Wait for jobs to finish </p>
 <h2>Synopsis</h2>
 <p> <i>condor_wait</i> [ <code>-help -version</code> ] </p>

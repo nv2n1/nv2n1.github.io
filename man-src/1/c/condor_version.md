@@ -1,4 +1,5 @@
 ---
+
 title: "condor_version(1)"
 name: "condor_version"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_version/"
 description: "condor_version print HTCondor version and platform information"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_version</i> print HTCondor version and platform information </p>
 <h2>Synopsis</h2>
 <p> <i>condor_version</i> [ <code>-help</code> ] </p>

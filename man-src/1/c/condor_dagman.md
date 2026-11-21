@@ -1,4 +1,5 @@
 ---
+
 title: "condor_dagman(1)"
 name: "condor_dagman"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_dagman/"
 description: "condor_dagman meta scheduler of the jobs submitted as the nodes of a DAG or DAGs"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_dagman</i> meta scheduler of the jobs submitted as the nodes of a DAG or DAGs </p>
 <h2>Synopsis</h2>
 <p> <i>condor_dagman</i> <i>-f</i> <i>-t</i> <i>-l .</i> <code>-help</code> </p>

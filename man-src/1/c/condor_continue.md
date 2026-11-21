@@ -1,4 +1,5 @@
 ---
+
 title: "condor_continue(1)"
 name: "condor_continue"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_continue/"
 description: "condor_continue continue suspended jobs from the HTCondor queue"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_continue</i> continue suspended jobs from the HTCondor queue </p>
 <h2>Synopsis</h2>
 <p> <i>condor_continue</i> [ <code>-help -version</code> ] </p>

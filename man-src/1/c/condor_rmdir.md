@@ -1,4 +1,5 @@
 ---
+
 title: "condor_rmdir(1)"
 name: "condor_rmdir"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_rmdir/"
 description: "condor_rmdir Windows-only no-fail deletion of directories"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_rmdir</i> Windows-only no-fail deletion of directories </p>
 <h2>Synopsis</h2>
 <p> <i>condor_rmdir</i> [ <code>/HELP | /?</code> ] </p>

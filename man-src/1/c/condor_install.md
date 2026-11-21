@@ -1,4 +1,5 @@
 ---
+
 title: "condor_install(1)"
 name: "condor_install"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_install/"
 description: "condor_install Configure or install HTCondor"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_install</i> Configure or install HTCondor </p>
 <h2>Synopsis</h2>
 <p> <i>condor_configure</i> or <i>condor_install</i> [ &#8212; <code>help</code> ] [ &#8212; <code>usage</code> ] </p>

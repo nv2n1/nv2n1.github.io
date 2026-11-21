@@ -1,4 +1,5 @@
 ---
+
 title: "git-forest(1)"
 name: "git-forest"
 section: "1"
@@ -6,7 +7,6 @@ letter: "g"
 url: "/docs/linux/man/1-git-forest/"
 ---
 
-<h2>Name</h2>
 <dl>
 <dt>git-forest &#8212; display the commit history forest</dt>
 <dd></dd></dl>

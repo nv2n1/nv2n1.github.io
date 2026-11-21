@@ -1,4 +1,5 @@
 ---
+
 title: "sua2(1)"
 name: "sua2"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-sua2/"
 description: "Find USNO-A2.0 Catalog stars in a square on the sky"
 ---
 
-<h2>Name</h2>
 <p> Find USNO-A2.0 Catalog stars in a square on the sky</p>
 <h2>Synopsis</h2>
 <p> sua2 [options] ra dec system</p>

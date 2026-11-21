@@ -1,4 +1,5 @@
 ---
+
 title: "libsystem(3)"
 name: "libsystem"
 section: "3"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/3-libsystem/"
 description: "pm_system – run a Netpbm program with program input and output"
 ---
 
-<h2>Name</h2>
 <p> pm_system &#8211; run a Netpbm program with program input and output </p>
 <h2>Synopsis</h2>
 <pre><code>

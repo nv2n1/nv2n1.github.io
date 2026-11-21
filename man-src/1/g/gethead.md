@@ -1,4 +1,5 @@
 ---
+
 title: "gethead(1)"
 name: "gethead"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-gethead/"
 description: "gethead – Print FITS or IRAF header keyword values"
 ---
 
-<h2>Name</h2>
 <p> gethead &#8211; Print FITS or IRAF header keyword values</p>
 <h2>Synopsis</h2>
 <p> gethead [-hptv] [-d pathname] [-n num] &lt;FITS or IRAF file&gt; kw1 kw2 &#8230; kwn</p>

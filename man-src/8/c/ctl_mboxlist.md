@@ -1,4 +1,5 @@
 ---
+
 title: "ctl_mboxlist(8)"
 name: "ctl_mboxlist"
 section: "8"
@@ -8,7 +9,7 @@ description: "ctl_mboxlist – perform operations on the mailbox list database"
 ---
 
 <p>&nbsp;<wbr>*</p>
-<h2>Name</h2>
+
 <p>ctl_mboxlist &#8211; perform operations on the mailbox list database</p>
 <h2>Synopsis</h2>
 <p><code>ctl_mboxlist</code> [ <code>-C</code> <i>config-file</i> ] <code>-d</code> [ <code>-x</code> ] [ <code>-p </code><i>partition</i> ] </p>

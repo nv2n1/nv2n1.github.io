@@ -1,4 +1,5 @@
 ---
+
 title: "condor_release(1)"
 name: "condor_release"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-condor_release/"
 description: "condor_release release held jobs in the HTCondor queue"
 ---
 
-<h2>Name</h2>
 <p> <i>condor_release</i> release held jobs in the HTCondor queue </p>
 <h2>Synopsis</h2>
 <p> <i>condor_release</i> [ <code>-help -version</code> ] </p>

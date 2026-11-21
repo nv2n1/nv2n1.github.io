@@ -1,4 +1,5 @@
 ---
+
 title: "dccp(1)"
 name: "dccp"
 section: "1"
@@ -7,7 +8,6 @@ url: "/docs/linux/man/1-dccp/"
 description: "dccp – Copy a file from or to a dCache server."
 ---
 
-<h2>Name</h2>
 <p> dccp &#8211; Copy a file from or to a dCache server. </p>
 <h2>Synopsis</h2>
 <p> dccp [option&#8230;] &lt;sourceUrl&gt; &lt;destUrl&gt; </p>

@@ -1,4 +1,5 @@
 ---
+
 title: "sgiextensions(3)"
 name: "sgiextensions"
 section: "3"
@@ -8,7 +9,7 @@ description: "SGI –"
 ---
 
 <p>SGI &#8211;</p>
-<h2>Synopsis</h2>
+
 <h3>Classes</h3>
 <p>class <code>__gnu_cxx::binary_compose&lt; _Operation1, _Operation2, _Operation3 &gt;</code> </p>
 <p> struct <code>__gnu_cxx::constant_binary_fun&lt; _Result, _Arg1, _Arg2 &gt;</code> </p>

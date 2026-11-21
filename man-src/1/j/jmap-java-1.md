@@ -1,4 +1,5 @@
 ---
+
 title: "jmap-java-1(1)"
 name: "jmap-java-1"
 section: "1"
@@ -6,7 +7,7 @@ letter: "j"
 url: "/docs/linux/man/1-jmap-java-1/"
 description: "jmap – Memory Map"
 ---
-<h2>Name</h2>
+
 <p> jmap - Memory Map </p>
 <h2>SYNOPSIS</h2>
 <pre><code>
