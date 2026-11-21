@@ -1,5 +1,5 @@
 ---
-title: "Migrating from WordPress to GitHub Pages"
+title: "Migrating from WordPress to GitHub Pages: A Practical Guide"
 date: 2026-11-21
 slug: wordpress-to-github-pages
 url: /wordpress-to-github-pages/
@@ -10,45 +10,217 @@ tags:
   - wordpress
   - github-pages
   - hugo
+  - migration
+  - static-site
 ---
 
-## Why we left WordPress
+## Why migrate from WordPress to a static site on GitHub Pages
 
-The WordPress installation had become a liability. Between Q3 2025 and today, six distinct supply-chain or zero‑day vulnerabilities were disclosed affecting the platform and its most common extensions:
+### Maintenance burden eliminated
 
-* **Wordfence Q3 2025 report** – a series of remote‑code‑execution bugs in the free firewall plugin that affected over a million sites.
-* **GutenKit / Hunk Companion mass exploitation** – a bundled plugin flaw that allowed attackers to upload arbitrary files and gain admin control.
-* **Post SMTP CVE‑2025‑11833** – an SMTP‑relay issue that let anyone send mail from the domain without authentication.
-* **Alone theme CVE‑2025‑5394** – a template vulnerability enabling stored cross‑site scripting on every page view.
-* **Gravity Forms supply‑chain compromise** – a malicious update that injected a credit‑card skimmer into form submissions.
-* **Fluent Forms CVE‑2025‑9260** – another RCE vector in a popular contact‑form plugin.
+Running WordPress means constant upgrades (core, plugins, themes), backups, database monitoring, PHP version management, and server patching. A static site on GitHub Pages removes all of that:
 
-These disclosures, combined with the recurring cost of hosting, plugin licensing, and security‑monitoring time, made it clear that the WordPress approach was no longer sustainable.
+* **No upgrades** — Hugo is a single binary; updates are a one-line change in CI
+* **No database** — content is Markdown files in git; backups are `git push`
+* **No monitoring** — GitHub handles uptime, DDoS protection, and TLS
+* **No server costs** — GitHub Pages is free for public repos
 
-## From WordPress to static GitHub Pages
+### Security: the final push
 
-The migration path was:
+Between Q3 2025 and today, six supply-chain and zero-day vulnerabilities hit WordPress and its ecosystem:
 
-1. **Export all posts** from the WordPress dashboard as Markdown via the built‑in tool.
-2. **Clean the Markdown** – strip out shortcodes, inline styles, and any HTML that doesn’t translate to Hugo’s Markdown‑flavored syntax.
-3. **Map front‑matter** – each post’s `title`, `date`, `author`, and `canonical` URL were preserved. The `canonical` field (the SEO ground truth) became the source for Hugo’s `url:` front matter, guaranteeing zero URL drift across the 1,346 posts.
-4. **Taxonomy conversion** – WordPress categories and tags became Hugo taxonomy terms keyed from `data/topics.yml` and `data/authors.yml`. Permalinks were set to `/category/:slug/` and `/author/:slug/`, matching the old structure exactly.
-5. **Man‑page integration** – the ~56 000 Linux manual pages, previously built and deployed by a separate `man-site/` Hugo instance, were merged into the same site via `module.mounts` (`man-src → content/man`). A single `hugo --minify` step now produces both the blog and the man pages.
-6. **Sitemap and feed parity** – the blog sitemap (`/sitemap.xml`), the chunked man sitemap (`/docs/sitemap.xml`), and the Atom feed (`/feed.xml`) were all regenerated from the new Hugo data. A one‑line fix in `scripts/gen-man-sitemap.py` corrected a regression where the sitemap index had been pointing at `/docs/docs/sitemap-N.xml`.
-7. **Workflow replacement** – the old CI pipeline that ran `ruby/setup-ruby → gem install jekyll → two builds → artifact merge` was replaced with a single `hugo --minify` step, reducing build time from ~12 minutes to ~8 seconds and eliminating the Ruby dependency entirely.
+| Component | Vulnerability | Impact |
+|-----------|---------------|--------|
+| Wordfence (free firewall) | Q3 2025 RCE series | 1M+ sites affected |
+| GutenKit / Hunk Companion | Bundled plugin flaw | Arbitrary file upload, admin takeover |
+| Post SMTP | CVE‑2025‑11833 | Unauthenticated mail relay |
+| Alone theme | CVE‑2025‑5394 | Stored XSS on every page |
+| Gravity Forms | Supply-chain compromise | Credit-card skimmer in forms |
+| Fluent Forms | CVE‑2025‑9260 | RCE via contact form |
 
-## Blog‑post count: 1,346 not 1,376
+Combined with Linux kernel vulnerabilities requiring prompt patching, the attack surface of a dynamic PHP stack was no longer acceptable. Static sites have virtually zero runtime attack surface — no database, no PHP, no plugin architecture to exploit.
 
-An earlier draft stated “1,376 blog posts.” The live count, verified against the Jekyll baseline URL set (1,447 entries including archives, redirects, and taxonomies), is **1,346** actual posts. The discrepancy of 30 entries comes from three static pages (`about.md`, `archive.md`, `license.md`) and a handful of stub pages that the old WordPress install counted as “posts” but are not part of the regular publishing flow. The Hugo migration makes this count explicit: the blog section now contains exactly 1,346 entries, and the sitemap/feed outputs reflect that number.
+## How to migrate: step-by-step
 
-## Hugo end‑state
+This is the exact process we used for SysTutorials (1,346 posts, ~56k Linux man pages).
 
-After the PR (#62) is merged, the site runs one Hugo binary and one configuration file. There is no separate Jekyll build, no artifact‑copy step, and no `man-site/` directory. The Linux manual pages live under `/docs/linux/man/` in the same repo, served with the same CI job that publishes the blog. All permalinks, taxonomies, and URLs are derived from the existing Jekyll front matter, so existing links continue to resolve without redirects.
+### 1. Export from WordPress
 
-## Rollback
+Use the built-in **Tools → Export** to get a WordPress XML (WXR) file. For large sites, split by author or date range to avoid timeouts.
 
-Because the Jekyll source (`_site_ref`, the old `_layouts/`, `_config.yml`, and the WordPress export) remains untouched on the `remove-empty-index-headings-2` branch, a rollback is a matter of reverting this one PR. The dual‑build pipeline can be restarted immediately.
+### 2. Convert WXR to Markdown with front matter
 
---
+We wrote a Python script that:
 
-*Posted as part of the Hugo‑migration PR (#62).*
+* Parses the WXR XML
+* Converts HTML body → Markdown (using `html2text` with custom rules)
+* Extracts `title`, `date`, `author`, `categories`, `tags`
+* Preserves the **canonical URL** — this is critical for SEO parity
+
+```python
+# Key: canonical URL becomes Hugo's url: front matter
+# This guarantees zero URL drift
+front_matter["url"] = front_matter["canonical"]
+```
+
+### 3. Clean the Markdown
+
+WordPress exports contain shortcodes (`[gallery]`, `[caption]`, etc.), inline styles, and HTML that won't render in Hugo. Strip or convert them:
+
+```bash
+# Remove WordPress shortcodes
+sed -i 's/\[caption.*\]//g' *.md
+sed -i 's/\[\/caption\]//g' *.md
+# Convert [gallery] to simple markdown lists
+# ... custom rules per site
+```
+
+### 4. Organize content structure
+
+```
+content/
+  posts/           # all blog posts (YYYY-MM-DD-slug.md)
+  _index.md        # home page
+  archive/         # year/month archives (auto-generated by Hugo)
+  tools/           # static tool pages (e.g., BBCode editor)
+  man/             # mounted from man-src/ (see step 7)
+data/
+  authors.yml      # author slug → display name
+  topics.yml       # category taxonomy metadata
+static/
+  files/           # uploaded assets (images, PDFs)
+  docs/linux/man/man.css
+```
+
+### 5. Configure Hugo taxonomies and permalinks
+
+`hugo.toml` key sections:
+
+```toml
+[taxonomies]
+  category = "categories"
+  author = "authors"
+
+[permalinks.term]
+  categories = "/category/:slug/"
+  authors = "/author/:slug/"
+
+[frontmatter]
+  lastmod = ["modified", "date"]
+```
+
+This mirrors WordPress's `/category/slug/` and `/author/slug/` URLs exactly.
+
+### 6. Preserve canonical URLs for every post
+
+Every post **must** have both `url:` and `canonical:` in front matter:
+
+```yaml
+---
+title: "Post Title"
+date: 2026-01-15
+url: /my-canonical-slug/
+canonical: /my-canonical-slug/
+---
+```
+
+The `url:` field tells Hugo where to render the page. The `canonical:` field is used in `<link rel="canonical">` and Open Graph tags. We derived both from the original WordPress permalink.
+
+### 7. Merge separate sites with module mounts
+
+SysTutorials had a separate `man-site/` Hugo instance for ~56k Linux man pages. We merged it into the main site:
+
+```toml
+[module]
+  [[module.mounts]]
+    source = "man-src"
+    target = "content/man"
+```
+
+Now one `hugo --minify` builds everything. The man pages keep their `/docs/linux/man/` URLs.
+
+### 8. Sitemaps and feeds
+
+* **Blog sitemap**: custom template at `layouts/sitemap.xml` (excludes `/docs/`)
+* **Man sitemap**: chunked index via `scripts/gen-man-sitemap.py` (50k URL limit per file)
+* **Atom feed**: `layouts/index.feed.xml` from 10 most recent posts
+
+Fix: the man sitemap index had a bug pointing to `/docs/docs/sitemap-N.xml` — corrected to `/docs/sitemap-N.xml`.
+
+### 9. CI/CD: one build step
+
+GitHub Actions workflow (`.github/workflows/pages.yml`):
+
+```yaml
+- uses: peaceiris/actions-hugo@v3
+  with:
+    hugo-version: 'latest'
+- run: python3 scripts/gen-man-page-length.py man-src data
+- run: hugo --minify
+- run: python3 scripts/gen-man-sitemap.py public/docs public/docs
+- run: touch public/.nojekyll
+```
+
+**Result**: ~8 seconds vs 12 minutes previously. No Ruby, no Jekyll, no artifact merging.
+
+## Tools and configuration summary
+
+| Tool | Purpose |
+|------|---------|
+| Hugo (extended) | Static site generator |
+| Python scripts | WXR→Markdown, man-page length tagging, chunked sitemap |
+| GitHub Actions | CI/CD (free for public repos) |
+| GitHub Pages | Hosting (free, TLS, CDN) |
+| Git | Version control + backup |
+
+Key config files to copy/adapt:
+
+* `hugo.toml` — site config, taxonomies, permalinks, module mounts
+* `layouts/_default/baseof.html` — site chrome (header, footer, GA4, ads)
+* `layouts/posts/single.html` — post template (breadcrumbs, meta, ads)
+* `layouts/_default/term.html` — category/author listing pages
+* `data/authors.yml` — author slug → display name mapping
+* `data/topics.yml` — category metadata (title, academy, path)
+* `scripts/gen-man-sitemap.py` — chunked sitemap for >50k URLs
+* `.github/workflows/pages.yml` — CI pipeline
+
+## AI-assisted migration
+
+This entire migration was driven by **OpenCode** with **GLM 5.3 / 5.3-Flash** (via Z.AI's coding plan). The AI handled:
+
+* WXR parsing and Markdown conversion logic
+* Hugo template porting from Jekyll originals (1:1 visual parity)
+* Taxonomy and permalink configuration
+* URL parity verification (1,447 URLs matched exactly)
+* Internal link audit across 57k pages
+* Sitemap/feed parity checks
+* PR authoring and conflict resolution
+
+Human role: strategic decisions (URL structure, taxonomy design), final review, and `gh pr create`.
+
+## Verification checklist
+
+Before going live:
+
+- [ ] URL parity: `diff <(jekyll_urls) <(hugo_urls)` → 0 diff
+- [ ] Sitemap URLs match (minus static assets)
+- [ ] Feed entry IDs and order identical
+- [ ] 10+ representative pages HTML-diff clean
+- [ ] Internal links: 0 new broken
+- [ ] `hugo --minify` completes without errors
+
+## Rollback plan
+
+Keep the old Jekyll source on a branch (`remove-empty-index-headings-2` in our case). Rollback = revert the migration PR + push the old branch to Pages. Zero data loss because content is in git.
+
+## Result
+
+* **1,346 posts** (not 1,376 — the higher count included static pages and stubs)
+* **56,253 man pages** in the same build
+* **Single binary, single config, single CI job**
+* **Zero URL drift** — all canonical URLs preserved
+* **Free hosting, zero server maintenance, static security**
+
+---
+
+*This post documents the migration that landed in PR [#62](https://github.com/nv2n1/nv2n1.github.io/pull/62). The blog post itself was added in PR [#66](https://github.com/nv2n1/nv2n1.github.io/pull/66).*
