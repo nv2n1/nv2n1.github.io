@@ -25,7 +25,7 @@ The fastest solution is to recreate the default network definition. If you have 
 sudo virsh net-dumpxml default > default.xml
 ```
 
-On the affected host, edit `default.xml` and remove the `<uuid>` element — libvirt will generate a new one:
+On the affected host, edit `default.xml` and remove the `<uuid>` element: libvirt will generate a new one:
 
 ``` xml
 <network>
@@ -133,12 +133,12 @@ ping 192.168.122.1
 
 When troubleshooting network connectivity:
 
-- ping host – Test basic connectivity
-- traceroute host – Trace the path packets take
-- ss -tulpn – Show listening ports
-- ip addr show – Display network interfaces
-- nmcli device status – NetworkManager device status
-- curl -I url – Check HTTP headers
+- ping host: Test basic connectivity
+- traceroute host: Trace the path packets take
+- ss -tulpn: Show listening ports
+- ip addr show: Display network interfaces
+- nmcli device status: NetworkManager device status
+- curl -I url: Check HTTP headers
 
 ## Quick Reference
 

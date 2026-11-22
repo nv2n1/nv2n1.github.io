@@ -50,7 +50,7 @@ You can also inspect the disk partition table to identify the boot mode:
 sudo parted -l | grep -i "Partition Table"
 ```
 
-UEFI systems typically use GPT (GUID Partition Table), while BIOS systems use MBR (Master Boot Record). However, this isn’t foolproof—modern BIOS systems can boot from GPT, and UEFI systems can technically use MBR.
+UEFI systems typically use GPT (GUID Partition Table), while BIOS systems use MBR (Master Boot Record). However, this isn’t foolproof: modern BIOS systems can boot from GPT, and UEFI systems can technically use MBR.
 
 ## Check `/proc/cmdline`
 
@@ -113,11 +113,11 @@ Package management issues often stem from stale caches. Run dnf clean all on Fed
 
 These commands are frequently used alongside the tools discussed in this article:
 
-- systemctl status service-name – Check if a service is running
-- journalctl -u service-name -f – Follow service logs in real time
-- rpm -qi package-name – Query installed package information
-- dnf history – View package transaction history
-- top or htop – Monitor system resource usage
+- systemctl status service-name: Check if a service is running
+- journalctl -u service-name -f: Follow service logs in real time
+- rpm -qi package-name: Query installed package information
+- dnf history: View package transaction history
+- top or htop: Monitor system resource usage
 
 ## Quick Verification
 

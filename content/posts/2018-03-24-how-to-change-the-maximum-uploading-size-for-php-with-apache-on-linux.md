@@ -82,7 +82,7 @@ php_value max_execution_time 300
 php_value max_input_time 300
 ```
 
-This requires `AllowOverride Options` or `AllowOverride All` in your Apache virtual host configuration. It doesn’t work with PHP-FPM or nginx — only with mod_php.
+This requires `AllowOverride Options` or `AllowOverride All` in your Apache virtual host configuration. It doesn’t work with PHP-FPM or nginx: only with mod_php.
 
 \## Nginx Configuration
 
@@ -122,7 +122,7 @@ sudo systemctl restart php8.3-fpm
 
 For files larger than a few hundred MB, consider alternative approaches:
 
-\*\*Chunked uploads\*\* — break files into smaller pieces on the client side:
+\*\*Chunked uploads\*\*: break files into smaller pieces on the client side:
 
 ```wp-block-code
 // JavaScript (client)
@@ -137,13 +137,13 @@ for (let start = 0; start < file.size; start += CHUNK_SIZE) {
 }
 ```
 
-\*\*Resumable uploads\*\* — use libraries like tus.io or Dropzone.js for production upload handling with progress, retry, and resume support.
+\*\*Resumable uploads\*\*: use libraries like tus.io or Dropzone.js for production upload handling with progress, retry, and resume support.
 
 \## Troubleshooting
 
 \*\*Upload silently fails:\*\*
 
-Check all three size limits — the most common issue is `post_max_size` being smaller than `upload_max_filesize`.
+Check all three size limits: the most common issue is `post_max_size` being smaller than `upload_max_filesize`.
 
 \*\*Error 413 from nginx:\*\*
 

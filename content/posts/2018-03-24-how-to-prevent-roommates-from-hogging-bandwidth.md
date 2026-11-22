@@ -16,11 +16,11 @@ Sharing a router with roommates means dealing with bandwidth conflicts. When som
 
 Before implementing technical controls, talk to your roommates. Most P2P and download applications have built-in rate limiting. Asking someone to cap their upload/download speeds at reasonable levels (e.g., 1-2 Mbps upload) solves the problem for everyone without friction.
 
-If you’re on a 10 Mbps ADSL connection with 4 people, ask whoever’s downloading to keep it under 2-3 Mbps. Document the issue first—show them bandwidth usage graphs from your router so it’s not accusatory.
+If you’re on a 10 Mbps ADSL connection with 4 people, ask whoever’s downloading to keep it under 2-3 Mbps. Document the issue first: show them bandwidth usage graphs from your router so it’s not accusatory.
 
 ## Port-based blocking and QoS
 
-When conversation fails, configure Quality of Service (QoS) and firewall rules on your router. Most modern routers—TP-Link, ASUS, Netgear, Ubiquiti—support this natively.
+When conversation fails, configure Quality of Service (QoS) and firewall rules on your router. Most modern routers (TP-Link, ASUS, Netgear, Ubiquiti) support this natively.
 
 **Block non-standard ports**: P2P applications often communicate on high-numbered ports (6881-6999 for BitTorrent, random high ports for other protocols). Blocking everything except essential services can slow them down significantly.
 
@@ -71,7 +71,7 @@ Set a rule like: “All devices max 5 Mbps” or “Device X max 2 Mbps”. This
 
 ## Deep packet inspection (advanced)
 
-Some routers and third-party firmware (OpenWrt, Tomato, DD-WRT) support DPI to identify application types—not just port-based detection. This catches P2P even on obscured ports.
+Some routers and third-party firmware (OpenWrt, Tomato, DD-WRT) support DPI to identify application types: not just port-based detection. This catches P2P even on obscured ports.
 
 If running OpenWrt on a compatible device:
 
@@ -88,10 +88,10 @@ Then configure `/etc/config/qos` to identify and throttle P2P traffic by applica
 
 If your router is ancient or doesn’t support these features, consider:
 
-- **Upgrading to a modern router** (ASUS RT-AX88U, Netgear Nighthawk, UniFi Dream Machine)—good QoS is table stakes in 2026
+- **Upgrading to a modern router** (ASUS RT-AX88U, Netgear Nighthawk, UniFi Dream Machine): good QoS is table stakes in 2026
 - **Mesh systems with client management** (Ubiquiti, Eero, TP-Link Deco) often have better QoS per-device
-- **Wired connection for yourself** while roommates use WiFi—wired gets priority on most routers
-- **Network segregation**—put roommates on a separate SSID with bandwidth caps
+- **Wired connection for yourself** while roommates use WiFi: wired gets priority on most routers
+- **Network segregation**: put roommates on a separate SSID with bandwidth caps
 
 ## The last resort
 

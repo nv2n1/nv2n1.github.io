@@ -110,9 +110,9 @@ If the `<pre>` and `<code>` tags appear in the published comment, your filter is
 
 For technical blogs or sites with heavy code discussion, consider dedicated plugins:
 
-- **Syntax Highlighter Code Fence** — Block-based code formatting with language detection
-- **Code Snippets** — Manages code snippets with built-in security handling
-- **Prism.js** — Lightweight syntax highlighting (add manually via theme)
+- **Syntax Highlighter Code Fence**: Block-based code formatting with language detection
+- **Code Snippets**: Manages code snippets with built-in security handling
+- **Prism.js**: Lightweight syntax highlighting (add manually via theme)
 
 These handle escaping and styling automatically, reducing the maintenance burden on custom code.
 

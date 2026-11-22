@@ -10,13 +10,13 @@ canonical: /io-microscopy-tasks-disk-io-information-high-accuracy/
 url: /io-microscopy-tasks-disk-io-information-high-accuracy/
 ---
 
-Most popular task monitoring tools (top, iotop, procfs) sample disk I/O information at granularity limited by kernel timer frequency—typically once per second. This sampling rate misses short-lived I/O bursts and makes it difficult to accurately measure which tasks are truly I/O bound. eBPF and kernel tracepoints let you capture microsecond-level accuracy without heavy overhead.
+Most popular task monitoring tools (top, iotop, procfs) sample disk I/O information at granularity limited by kernel timer frequency: typically once per second. This sampling rate misses short-lived I/O bursts and makes it difficult to accurately measure which tasks are truly I/O bound. eBPF and kernel tracepoints let you capture microsecond-level accuracy without heavy overhead.
 
 ## Why Sampling Isn’t Enough
 
 Standard Linux task accounting collects I/O statistics via kernel timer interrupts. On most systems, this means updates happen every 10ms at best, but often only once per second. Tools reading `/proc/[pid]/io` or using the taskstats interface inherit this limitation.
 
-Consider a workload where a task performs many small I/O operations in quick succession—perhaps a database table scan or a log aggregation pipeline. A 1Hz sample rate will miss most activity. You need to measure the actual time tasks spend blocked waiting for disk I/O completion.
+Consider a workload where a task performs many small I/O operations in quick succession: perhaps a database table scan or a log aggregation pipeline. A 1Hz sample rate will miss most activity. You need to measure the actual time tasks spend blocked waiting for disk I/O completion.
 
 ## Defining I/O Utilization Accurately
 

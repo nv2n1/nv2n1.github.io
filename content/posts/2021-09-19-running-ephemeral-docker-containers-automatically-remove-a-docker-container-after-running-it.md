@@ -12,7 +12,7 @@ url: /running-ephemeral-docker-containers-automatically-remove-a-docker-containe
 
 Docker containers persist on disk even after they exit. For quick testing and one-off tasks, you don’t need that leftover cruft. Use the `--rm` flag to automatically delete containers when they stop.
 
-## The –rm Flag
+## The --rm Flag
 
 The `--rm` option tells Docker to remove the container as soon as it exits. This is useful for:
 
@@ -55,7 +55,7 @@ Exit the container:
 root@a1b2c3d4e5f6:/# exit
 ```
 
-Verify it’s gone—even with `-a` to show stopped containers:
+Verify it’s gone: even with `-a` to show stopped containers:
 
 ``` bash
 docker ps -a
@@ -135,7 +135,7 @@ docker ps -a | wc -l
 
 No increase in container count means `--rm` cleaned up correctly.
 
-## When NOT to Use –rm
+## When NOT to Use --rm
 
 Don’t use `--rm` if you need to:
 

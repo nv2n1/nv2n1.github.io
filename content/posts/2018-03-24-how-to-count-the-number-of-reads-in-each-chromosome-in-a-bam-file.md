@@ -10,7 +10,7 @@ canonical: /how-to-count-the-number-of-reads-in-each-chromosome-in-a-bam-file/
 url: /how-to-count-the-number-of-reads-in-each-chromosome-in-a-bam-file/
 ---
 
-BAM files store aligned sequence reads in a compressed binary format. Counting reads by chromosome is a common task in genomics workflows—useful for quality control, coverage analysis, and identifying potential sequencing biases.
+BAM files store aligned sequence reads in a compressed binary format. Counting reads by chromosome is a common task in genomics workflows: useful for quality control, coverage analysis, and identifying potential sequencing biases.
 
 ## Using samtools idxstats
 

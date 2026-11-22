@@ -16,16 +16,16 @@ The x86-64 architecture on Linux follows the System V AMD64 ABI calling conventi
 
 Integer and pointer arguments use these registers in order:
 
-- `RDI` — first argument
-- `RSI` — second argument
-- `RDX` — third argument
-- `RCX` — fourth argument
-- `R8` — fifth argument
-- `R9` — sixth argument
+- `RDI`: first argument
+- `RSI`: second argument
+- `RDX`: third argument
+- `RCX`: fourth argument
+- `R8`: fifth argument
+- `R9`: sixth argument
 
 Floating-point arguments use XMM registers:
 
-- `XMM0` through `XMM7` — floating-point arguments
+- `XMM0` through `XMM7`: floating-point arguments
 
 If a function takes both integer and floating-point arguments, they occupy their respective registers independently. The first integer argument still uses `RDI` even if floating-point arguments are present.
 
@@ -33,8 +33,8 @@ Additional arguments beyond the sixth integer or eighth floating-point argument 
 
 ## Return values
 
-- `RAX` — return value (also `RDX:RAX` for 128-bit returns)
-- `XMM0` and `XMM1` — floating-point return values
+- `RAX`: return value (also `RDX:RAX` for 128-bit returns)
+- `XMM0` and `XMM1`: floating-point return values
 
 ## System calls
 

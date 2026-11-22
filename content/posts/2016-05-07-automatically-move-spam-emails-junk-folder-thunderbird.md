@@ -35,7 +35,7 @@ Now pressing the Junk button or using the **J** keyboard shortcut immediately mo
 
 ## Training the filter effectively
 
-The junk filter requires active training to work well. Mark obvious spam consistently during your first week or two — the filter learns message characteristics and improves accuracy over time. Most users see significant improvement after training on 50-100+ messages.
+The junk filter requires active training to work well. Mark obvious spam consistently during your first week or two: the filter learns message characteristics and improves accuracy over time. Most users see significant improvement after training on 50-100+ messages.
 
 Check your Junk folder regularly for false positives (legitimate emails incorrectly flagged). Select any misclassified message and press **Shift+J** to unmark it as junk. This reverse feedback is essential for reducing false positives.
 
@@ -49,7 +49,7 @@ This approach lets you whitelist important senders without disabling the overall
 
 ## Server-side vs. client-side filtering
 
-**IMAP accounts** (Gmail, Proton Mail, Fastmail, Outlook): Most IMAP providers handle spam filtering server-side. Moving messages to Junk creates unnecessary network traffic and duplicates their native filtering efforts. Check your provider’s spam settings first — you’re often better off using their tools instead of Thunderbird’s client-side filter. Many providers also sync their spam folder with Thunderbird anyway, so enabling both can be redundant.
+**IMAP accounts** (Gmail, Proton Mail, Fastmail, Outlook): Most IMAP providers handle spam filtering server-side. Moving messages to Junk creates unnecessary network traffic and duplicates their native filtering efforts. Check your provider’s spam settings first: you’re often better off using their tools instead of Thunderbird’s client-side filter. Many providers also sync their spam folder with Thunderbird anyway, so enabling both can be redundant.
 
 **POP3 accounts**: Thunderbird’s junk filter works effectively since all mail is downloaded locally and your provider’s server-side filtering is less relevant.
 

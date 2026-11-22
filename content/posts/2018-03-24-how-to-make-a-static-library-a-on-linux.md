@@ -16,7 +16,7 @@ Start by compiling your C source files into object files:
 gcc -c lib1.c lib2.c
 ```
 
-This produces `lib1.o` and `lib2.o`. You can use any compiler flags here—`-Wall`, `-O2`, `-fPIC`, etc.—that match your build requirements. Position-independent code (`-fPIC`) isn’t strictly required for static libraries but is good practice if you anticipate reusing these objects elsewhere.
+This produces `lib1.o` and `lib2.o`. You can use any compiler flags here (`-Wall`, `-O2`, `-fPIC`, etc.), that match your build requirements. Position-independent code (`-fPIC`) isn’t strictly required for static libraries but is good practice if you anticipate reusing these objects elsewhere.
 
 ## Creating the static library with ar
 
@@ -28,9 +28,9 @@ ar -cvq libmy.a lib1.o lib2.o
 
 The flags mean:
 
-- `-c` — create the archive (don’t warn if it doesn’t exist yet)
-- `-v` — verbose output
-- `-q` — quickly append files
+- `-c`: create the archive (don’t warn if it doesn’t exist yet)
+- `-v`: verbose output
+- `-q`: quickly append files
 
 After creation, you can inspect the library’s contents:
 
@@ -89,7 +89,7 @@ If your library depends on other libraries, link them in order:
 gcc -o p p.c libmy.a -lpthread -lm
 ```
 
-Order matters—the linker processes left to right, so dependent libraries should come after the libraries that depend on them.
+Order matters: the linker processes left to right, so dependent libraries should come after the libraries that depend on them.
 
 ## Using modern build tools
 

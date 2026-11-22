@@ -12,7 +12,7 @@ url: /how-to-read-file-to-string-in-php/
 
 PHP provides multiple approaches to read file contents into a string, ranging from simple one-liners to streaming methods for large files. Your choice depends on file size, memory constraints, and whether you need line-by-line processing.
 
-## file_get_contents() — The Standard Approach
+## file_get_contents(): The Standard Approach
 
 The simplest and most common method is `file_get_contents()`:
 
@@ -23,7 +23,7 @@ echo $content;
 
 This reads the entire file into a string in a single operation. It’s efficient for files under a few megabytes and handles the majority of real-world use cases. The function returns `false` on failure, which you should always check.
 
-## file() — Processing Lines as an Array
+## file(): Processing Lines as an Array
 
 When you need to work with individual lines while keeping them in memory:
 
@@ -62,9 +62,9 @@ while (($line = fgets($file, 4096)) !== false) {
 fclose($file);
 ```
 
-Reading in 4096-byte chunks avoids memory exhaustion on large files. The key is checking `!== false` rather than just `!feof()` — an empty line is still valid data. Never use `feof()` in the loop condition before calling `fgets()`, as it’s unreliable.
+Reading in 4096-byte chunks avoids memory exhaustion on large files. The key is checking `!== false` rather than just `!feof()`: an empty line is still valid data. Never use `feof()` in the loop condition before calling `fgets()`, as it’s unreliable.
 
-## SplFileObject — Object-Oriented Approach
+## SplFileObject: Object-Oriented Approach
 
 For modern PHP (7.4+), use SPL classes for cleaner syntax:
 
@@ -102,7 +102,7 @@ if ($content === false) {
 echo $content;
 ```
 
-Throwing exceptions is preferable to `trigger_error()` in modern PHP — it’s clearer and easier to handle at the application level.
+Throwing exceptions is preferable to `trigger_error()` in modern PHP: it’s clearer and easier to handle at the application level.
 
 ## Security: User-Supplied Filenames
 
@@ -156,7 +156,7 @@ if ($content === false) {
 curl_close($ch);
 ```
 
-cURL gives you explicit control over timeouts, SSL verification, redirects, and headers — essential for reliability in production.
+cURL gives you explicit control over timeouts, SSL verification, redirects, and headers: essential for reliability in production.
 
 ## Performance Summary
 

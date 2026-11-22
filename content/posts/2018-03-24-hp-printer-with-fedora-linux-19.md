@@ -55,7 +55,7 @@ For network printers, you can skip USB detection entirely and just provide the p
 
 **Printer not detected:** Make sure the printer is powered on and connected. For USB printers, check the connection with `lsusb`. For network printers, verify connectivity with `ping <printer-ip>`.
 
-**“Rendering Completed” but no output:** This typically means the print queue is stuck with a broken job. Remove the printer completely and add it again through HP Device Manager. The old printer entry will still exist — delete it separately.
+**“Rendering Completed” but no output:** This typically means the print queue is stuck with a broken job. Remove the printer completely and add it again through HP Device Manager. The old printer entry will still exist: delete it separately.
 
 **Plugin download fails:** If `hp-plugin` times out or fails, download the full HPLIP installer manually and run it with sudo. This is more reliable than the automated plugin downloader.
 

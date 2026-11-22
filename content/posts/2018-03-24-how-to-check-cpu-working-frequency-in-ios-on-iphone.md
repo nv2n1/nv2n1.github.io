@@ -10,7 +10,7 @@ canonical: /how-to-check-cpu-working-frequency-in-ios-on-iphone/
 url: /how-to-check-cpu-working-frequency-in-ios-on-iphone/
 ---
 
-iOS deliberately restricts direct access to CPU clock speeds through its public APIs — Apple treats this as implementation detail rather than user-facing information. That said, there are legitimate approaches depending on your needs.
+iOS deliberately restricts direct access to CPU clock speeds through its public APIs: Apple treats this as implementation detail rather than user-facing information. That said, there are legitimate approaches depending on your needs.
 
 ## Xcode Instruments for Developers
 
@@ -60,7 +60,7 @@ sysctl hw.thermal.level
 
 Values typically range from 0 (normal) to 3-4 (throttled). When thermal.level increases, the OS reduces frequency across cores and may also limit display refresh rate and background processing.
 
-**Dynamic Workload Scheduling**: The kernel continuously evaluates whether to use P-cores or E-cores for each thread. You won’t get a single “CPU frequency” number — it’s granular per-core and per-thread, changing hundreds of times per second.
+**Dynamic Workload Scheduling**: The kernel continuously evaluates whether to use P-cores or E-cores for each thread. You won’t get a single “CPU frequency” number: it’s granular per-core and per-thread, changing hundreds of times per second.
 
 ## Practical Monitoring Without Jailbreak
 

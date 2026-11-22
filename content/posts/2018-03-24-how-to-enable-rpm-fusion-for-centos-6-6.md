@@ -126,11 +126,11 @@ killall gnome-software
 
 Common packages people install from RPM Fusion:
 
-- `ffmpeg` — Video/audio processing
-- `VLC` — Media player
-- `akmod-nvidia` — Nvidia proprietary driver
-- `steam` — Gaming platform
-- `chromium-ffmpeg` — Additional codecs for Chromium
+- `ffmpeg`: Video/audio processing
+- `VLC`: Media player
+- `akmod-nvidia`: Nvidia proprietary driver
+- `steam`: Gaming platform
+- `chromium-ffmpeg`: Additional codecs for Chromium
 
 ## RPM Fusion on Rocky Linux vs RHEL
 

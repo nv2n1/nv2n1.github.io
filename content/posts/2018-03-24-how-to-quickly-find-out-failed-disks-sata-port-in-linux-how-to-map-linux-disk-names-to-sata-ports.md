@@ -133,7 +133,7 @@ lsscsi -t
 1.  **Identify the failing disk**: Check system logs or monitoring tools for I/O errors
 2.  **Get device name**: Use `dmesg`, `smartctl`, or `syslog` to confirm which `/dev/sdX` is problematic
 3.  **Map to physical port**: Use the sysfs method above to correlate with SATA port
-4.  **Cross-reference with BIOS**: Many servers allow viewing SATA port assignments in BIOS—compare with Linux findings
+4.  **Cross-reference with BIOS**: Many servers allow viewing SATA port assignments in BIOS: compare with Linux findings
 5.  **Document the mapping**: Create a server inventory sheet with physical port → Linux device name correlation
 
 When swapping failed disks, physically label each SATA port on your server for future reference. This saves troubleshooting time on subsequent failures.

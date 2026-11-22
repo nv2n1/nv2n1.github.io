@@ -48,7 +48,7 @@ This gives you predictable line breaks for plain text recipients without forcing
 
 ## Understanding Format=Flowed
 
-Thunderbird uses RFC 2646 format=flowed for plain text emails, which allows soft line breaks that receiving clients can reflow. Disabling wrapping in Thunderbird only prevents *your client* from inserting breaks—receiving mail clients may still reflow your text for display.
+Thunderbird uses RFC 2646 format=flowed for plain text emails, which allows soft line breaks that receiving clients can reflow. Disabling wrapping in Thunderbird only prevents *your client* from inserting breaks: receiving mail clients may still reflow your text for display.
 
 If you need hard line breaks that won’t be reflowed by recipients:
 

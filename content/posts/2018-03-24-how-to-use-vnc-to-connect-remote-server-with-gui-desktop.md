@@ -65,7 +65,7 @@ Edit the VNC server configuration file at `~/.vnc/config` (create it if it doesn
     localhost
     alwaysshared
 
-The `localhost` option restricts VNC to local connections only—essential for security. Always run VNC through an SSH tunnel rather than exposing it directly to the network.
+The `localhost` option restricts VNC to local connections only: essential for security. Always run VNC through an SSH tunnel rather than exposing it directly to the network.
 
 ## Starting the VNC Server
 

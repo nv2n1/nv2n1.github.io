@@ -83,7 +83,7 @@ xdotool recognizes both symbolic names and keysyms. Common ones include:
 
 ## Display-specific considerations
 
-xdotool works with X11. On Wayland systems, it won’t function—you’ll need `ydotool` instead, which requires a running daemon:
+xdotool works with X11. On Wayland systems, it won’t function: you’ll need `ydotool` instead, which requires a running daemon:
 
 ``` bash
 ydotool key a:1 b:1 c:1 d:1 sleep 1000 a:0 b:0 c:0 d:0

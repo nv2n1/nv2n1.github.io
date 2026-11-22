@@ -20,7 +20,7 @@ You have multiple form types (Laptop, Mobile, Tablet) with different fields. A n
 
 Use a three-table approach: one for the items being submitted, one for the attribute definitions, and one to store the actual values.
 
-**items table** — stores one row per form submission
+**items table**: stores one row per form submission
 
 ``` sql
 CREATE TABLE items (
@@ -31,7 +31,7 @@ CREATE TABLE items (
 );
 ```
 
-**forms table** — defines available form types
+**forms table**: defines available form types
 
 ``` sql
 CREATE TABLE forms (
@@ -41,7 +41,7 @@ CREATE TABLE forms (
 );
 ```
 
-**form_attributes table** — junction table connecting forms to available attributes
+**form_attributes table**: junction table connecting forms to available attributes
 
 ``` sql
 CREATE TABLE form_attributes (
@@ -53,7 +53,7 @@ CREATE TABLE form_attributes (
 );
 ```
 
-**attributes table** — defines the attribute names and their data types
+**attributes table**: defines the attribute names and their data types
 
 ``` sql
 CREATE TABLE attributes (
@@ -63,7 +63,7 @@ CREATE TABLE attributes (
 );
 ```
 
-**item_attributes table** — stores the actual values submitted by users
+**item_attributes table**: stores the actual values submitted by users
 
 ``` sql
 CREATE TABLE item_attributes (

@@ -24,9 +24,9 @@ The list view groups events by date, making it easy to scan your schedule quickl
 
 iOS 7 Calendar offers three main views:
 
-- **Year** — Full year overview showing months. Tap a month to zoom in to month view.
-- **Month** — Shows dots on each day indicating events. Tap a day to see its events.
-- **Day/List** — Toggle between a day timeline and a full chronological event list using the list icon in the toolbar.
+- **Year**: Full year overview showing months. Tap a month to zoom in to month view.
+- **Month**: Shows dots on each day indicating events. Tap a day to see its events.
+- **Day/List**: Toggle between a day timeline and a full chronological event list using the list icon in the toolbar.
 
 To switch between year, month, and day views, pinch outward to zoom in (year to month, month to day) or pinch inward to zoom out. The gesture-based navigation was new in iOS 7.
 
@@ -73,7 +73,7 @@ If you have several calendars (work, personal, shared, subscribed):
 3.  Each calendar can have a different color for easy identification
 4.  Tap the **i** button next to a calendar to change its color or sharing settings
 
-Hidden calendars don’t appear in any view — list, day, or month. This is useful for temporarily hiding a busy shared calendar when you need to focus on your own schedule.
+Hidden calendars don’t appear in any view: list, day, or month. This is useful for temporarily hiding a busy shared calendar when you need to focus on your own schedule.
 
 ## Calendar Sync and Accounts
 

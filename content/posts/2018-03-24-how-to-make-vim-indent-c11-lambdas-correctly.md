@@ -54,10 +54,10 @@ setlocal cino=j1,(0,ws,Ws
 
 The critical setting is `cino=j1,(0,ws,Ws`. Here’s what each part does:
 
-- `j1` — Handle anonymous classes (including lambdas) with one level of indentation. This is the core fix; it tells Vim to treat lambda bodies like Java anonymous classes.
-- `(0` — Arguments in parentheses are not indented relative to the opening paren.
-- `ws` — Allow extra indentation for continuation lines if they already have indent.
-- `Ws` — Similar to `ws` but for outer scope.
+- `j1`: Handle anonymous classes (including lambdas) with one level of indentation. This is the core fix; it tells Vim to treat lambda bodies like Java anonymous classes.
+- `(0`: Arguments in parentheses are not indented relative to the opening paren.
+- `ws`: Allow extra indentation for continuation lines if they already have indent.
+- `Ws`: Similar to `ws` but for outer scope.
 
 With this configuration, the code formats correctly:
 
@@ -101,10 +101,10 @@ setlocal cino=j1,(0,ws,Ws
 
 If you need further customization, common additions include:
 
-- `i{N}` — Indent case labels by N spaces (e.g., `i2` for 2-space indent).
-- `:N` — Indent case statements by N spaces.
-- `g{N}` — Indent C++ scope declarations (public, private) by N spaces.
-- `E{N}` — Add N spaces when opening braces are not followed by a value.
+- `i{N}`: Indent case labels by N spaces (e.g., `i2` for 2-space indent).
+- `:N`: Indent case statements by N spaces.
+- `g{N}`: Indent C++ scope declarations (public, private) by N spaces.
+- `E{N}`: Add N spaces when opening braces are not followed by a value.
 
 Experiment with these values to match your team’s style guide. Run `:help cinoptions` in Vim for the full reference.
 

@@ -13,7 +13,7 @@ url: /a-posix_spawn-example-in-c-to-create-child-process-on-linux/
 The traditional fork-exec pattern works, but it’s error-prone. `posix_spawn()` handles process creation in a single call with several advantages:
 
 - **Atomic operation**: Spawn and exec happen atomically, eliminating race conditions between fork and exec
-- **No fork quirks**: You don’t need conditional logic for parent vs. child code paths — exec happens immediately in the child
+- **No fork quirks**: You don’t need conditional logic for parent vs. child code paths: exec happens immediately in the child
 - **Direct error handling**: Errors from exec are returned as errno values directly to the parent, not buried in exit status
 - **Clearer control flow**: One function call beats fork/exec/wait logic and reduces accidental parent code execution in children
 
@@ -253,7 +253,7 @@ if (status != 0) {
     fprintf(stderr, "posix_spawn failed: %s\n", strerror(status));
     return;
 }
-// Parent code only — child is already executing
+// Parent code only: child is already executing
 waitpid(pid, &status, 0);
 ```
 
@@ -297,7 +297,7 @@ if (WIFEXITED(child_status)) {
 }
 ```
 
-Don’t confuse the `posix_spawn()` return value with the child’s exit code — they’re completely separate values.
+Don’t confuse the `posix_spawn()` return value with the child’s exit code: they’re completely separate values.
 
 ## Practical Considerations
 

@@ -22,7 +22,7 @@ Install the necessary packages:
 sudo dnf install compiz ccsm fusion-icon emerald emerald-themes libcompizconfig compizconfig-python compiz-plugins-main compiz-plugins-extra
 ```
 
-Package availability can vary by Fedora version. If any package fails, it may no longer be in the repos — check `dnf search compiz` to see what’s currently available.
+Package availability can vary by Fedora version. If any package fails, it may no longer be in the repos: check `dnf search compiz` to see what’s currently available.
 
 On newer Fedora versions (38+), you may need the `compiz-core` meta-package instead of individual packages. DNF will handle dependency resolution, so the above command should pull in most requirements automatically.
 
@@ -69,7 +69,7 @@ This GUI tool lets you enable/disable plugins and tweak behavior. Key settings t
 - **Input:** Mouse and keyboard bindings
 - **General:** Rendering and performance tuning
 
-Be cautious with visual effects if you’re using integrated graphics or older hardware — enable selectively and monitor performance.
+Be cautious with visual effects if you’re using integrated graphics or older hardware: enable selectively and monitor performance.
 
 ## Common Issues
 

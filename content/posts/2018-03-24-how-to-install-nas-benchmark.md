@@ -16,10 +16,10 @@ The NAS Parallel Benchmarks (NPB) remain a standard tool for evaluating HPC syst
 
 Before installing NPB, you’ll need:
 
-- **Fortran compiler** — gfortran is the standard choice on most systems
-- **MPI implementation** — OpenMPI or Intel MPI (MPICH works but is less common in modern clusters)
-- **Make** — standard build tools
-- **Python 3** — some build scripts and utilities require it
+- **Fortran compiler**: gfortran is the standard choice on most systems
+- **MPI implementation**: OpenMPI or Intel MPI (MPICH works but is less common in modern clusters)
+- **Make**: standard build tools
+- **Python 3**: some build scripts and utilities require it
 
 Install on Ubuntu/Debian:
 
@@ -90,9 +90,9 @@ make suite SUITE=BT NPROCS=4 CLASS=A
 
 Build options:
 
-- **NPROCS** — number of MPI processes (must be a perfect square for most benchmarks)
-- **CLASS** — problem size (S, W, A, B, C, D, E, F in increasing size)
-- **SUITE** — specific benchmark (BT, CG, EP, FT, IS, LU, MG, SP, UA)
+- **NPROCS**: number of MPI processes (must be a perfect square for most benchmarks)
+- **CLASS**: problem size (S, W, A, B, C, D, E, F in increasing size)
+- **SUITE**: specific benchmark (BT, CG, EP, FT, IS, LU, MG, SP, UA)
 
 Compiled binaries end up in `bin/` directory.
 
@@ -151,10 +151,10 @@ apptainer exec npb.sif mpirun -np 4 bt.A.4
 
 NPB remains useful for comparative analysis, but consider pairing it with:
 
-- **HPCG** — tests sustained performance on modern hardware
-- **Stream** — memory bandwidth benchmark (single-node focus)
-- **OSU Micro-benchmarks** — latency and bandwidth for MPI operations
-- **Linpack/LINPACK** — for Top500 comparisons (largely obsolete)
+- **HPCG**: tests sustained performance on modern hardware
+- **Stream**: memory bandwidth benchmark (single-node focus)
+- **OSU Micro-benchmarks**: latency and bandwidth for MPI operations
+- **Linpack/LINPACK**: for Top500 comparisons (largely obsolete)
 
 Install Stream for quick memory bandwidth testing:
 
@@ -166,19 +166,19 @@ gcc -O2 -fopenmp stream.c -o stream
 
 ## Troubleshooting
 
-**“mpif77: command not found”** — Ensure MPI is in PATH:
+**“mpif77: command not found”**: Ensure MPI is in PATH:
 
 ``` bash
 export PATH=$PATH:/usr/lib64/openmpi/bin
 ```
 
-**Compilation errors with gfortran** — Add `-ffixed-form` flag if needed for older Fortran code:
+**Compilation errors with gfortran**: Add `-ffixed-form` flag if needed for older Fortran code:
 
 ``` bash
 echo "FFLAGS = -O3 -ffixed-form" >> config/make.def
 ```
 
-**Performance inconsistencies** — Disable CPU frequency scaling during benchmarks:
+**Performance inconsistencies**: Disable CPU frequency scaling during benchmarks:
 
 ``` bash
 echo performance | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor

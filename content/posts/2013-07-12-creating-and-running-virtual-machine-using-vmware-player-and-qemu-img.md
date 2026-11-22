@@ -22,9 +22,9 @@ qemu-img create -f qcow2 ubuntu-22.04.qcow2 20G
 
 Common formats:
 
-- **qcow2** — Default for QEMU/KVM. Supports snapshots, compression, and copy-on-write. Use this for most cases.
-- **vmdk** — VMware format. Still compatible with QEMU, useful if you need VMware Player compatibility.
-- **raw** — Unformatted. Fastest but inflexible. Only use if you need direct disk access.
+- **qcow2**: Default for QEMU/KVM. Supports snapshots, compression, and copy-on-write. Use this for most cases.
+- **vmdk**: VMware format. Still compatible with QEMU, useful if you need VMware Player compatibility.
+- **raw**: Unformatted. Fastest but inflexible. Only use if you need direct disk access.
 
 For a production VM, allocate appropriate resources. A modern Linux desktop needs at least 20GB; servers typically need 50GB+.
 

@@ -32,9 +32,9 @@ Replace `YOUR_SEARCH_ENGINE_ID` with your actual cx value from the CSE dashboard
 
 The rewrite rule works as follows:
 
-- `RewriteCond %{QUERY_STRING} ^s=(.*)$` — matches requests with `s=` parameter and captures everything after it
-- `%1` — backreference to the captured search query
-- `[R=301,L]` — 301 permanent redirect with last rule flag
+- `RewriteCond %{QUERY_STRING} ^s=(.*)$`: matches requests with `s=` parameter and captures everything after it
+- `%1`: backreference to the captured search query
+- `[R=301,L]`: 301 permanent redirect with last rule flag
 
 ## Alternative: using PHP redirect
 

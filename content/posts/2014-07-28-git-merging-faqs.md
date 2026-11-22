@@ -34,7 +34,7 @@ git rebase main
 
 ## Fast-Forward Merges
 
-When your main branch hasn’t changed since you created your feature branch, Git can fast-forward — it simply moves the main branch pointer forward without creating a merge commit.
+When your main branch hasn’t changed since you created your feature branch, Git can fast-forward: it simply moves the main branch pointer forward without creating a merge commit.
 
 ``` bash
 git merge feature-branch
@@ -190,7 +190,7 @@ git cherry-pick --continue
 git cherry-pick --abort
 ```
 
-Cherry-pick is useful for backporting bug fixes, but avoid it for large feature branches — use merge instead. Overusing cherry-pick creates duplicate commits and makes history harder to follow.
+Cherry-pick is useful for backporting bug fixes, but avoid it for large feature branches: use merge instead. Overusing cherry-pick creates duplicate commits and makes history harder to follow.
 
 ## Replacing an Entire Branch
 
@@ -214,7 +214,7 @@ Force-push this change (only if you own the branch):
 git push origin feature-branch --force-with-lease
 ```
 
-Always use `--force-with-lease` instead of `--force` — it’s safer because it checks that no one else pushed changes in the meantime.
+Always use `--force-with-lease` instead of `--force`: it’s safer because it checks that no one else pushed changes in the meantime.
 
 ## Practical Feature Branch Workflow
 
@@ -255,11 +255,11 @@ git rebase -i HEAD~3
 
 This opens your editor with a list of commits. Common commands:
 
-- `pick` — use commit as-is
-- `squash` (or `s`) — merge commit into the previous one
-- `reword` (or `r`) — change commit message
-- `drop` (or `d`) — discard commit
-- `fixup` (or `f`) — like squash, but discard commit message
+- `pick`: use commit as-is
+- `squash` (or `s`): merge commit into the previous one
+- `reword` (or `r`): change commit message
+- `drop` (or `d`): discard commit
+- `fixup` (or `f`), like squash, but discard commit message
 
 After editing and saving, Git will reapply the commits in the new order. This is powerful for cleaning up local history before opening a pull request.
 

@@ -82,7 +82,7 @@ For a Windows VNC server you control and maintain:
 
 1.  **Choose UltraVNC** if you need active development and Windows optimizations
 2.  **Choose TightVNC** if you prefer minimal overhead on older hardware
-3.  **Combine with a VPN** (WireGuard, OpenVPN) for secure access over untrusted networks — don’t expose VNC directly to the internet
+3.  **Combine with a VPN** (WireGuard, OpenVPN) for secure access over untrusted networks: don’t expose VNC directly to the internet
 4.  **Use strong authentication:** Set VNC passwords to 8+ characters; consider certificate-based authentication if available
 5.  **Restrict access:** Use Windows Firewall rules to allow VNC only from specific subnets
 

@@ -124,7 +124,7 @@ curl -v http://localhost:8080/
 
 **CAfile errors**: If using a custom certificate, ensure it’s properly installed in Zimbra’s keystore and the configuration points to it correctly.
 
-Document any non-standard port assignments in your runbooks — future troubleshooting will be easier when ports are explicitly noted rather than assumed.
+Document any non-standard port assignments in your runbooks: future troubleshooting will be easier when ports are explicitly noted rather than assumed.
 
 ## Additional Tips and Best Practices
 

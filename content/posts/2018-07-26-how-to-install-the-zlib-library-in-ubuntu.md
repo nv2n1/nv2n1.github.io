@@ -78,10 +78,10 @@ View all available options:
 
 Key configuration flags include:
 
-- `--static` — build only static libraries (`libz.a`)
-- `--shared` — build only shared libraries (`libz.so`; default behavior)
-- `--64` — optimize for 64-bit systems (usually auto-detected)
-- `--disable-shared` — disable shared library compilation if you only need static linking
+- `--static`: build only static libraries (`libz.a`)
+- `--shared`: build only shared libraries (`libz.so`; default behavior)
+- `--64`: optimize for 64-bit systems (usually auto-detected)
+- `--disable-shared`: disable shared library compilation if you only need static linking
 
 ## Build and install
 
@@ -99,8 +99,8 @@ make install
 
 By default, `make install` places files at:
 
-- **Libraries**: `/usr/local/lib/` — contains `libz.a` (static) and `libz.so` (shared)
-- **Headers**: `/usr/local/include/` — contains `zlib.h` and `zconf.h`
+- **Libraries**: `/usr/local/lib/`: contains `libz.a` (static) and `libz.so` (shared)
+- **Headers**: `/usr/local/include/`: contains `zlib.h` and `zconf.h`
 - **pkg-config**: `/usr/local/lib/pkgconfig/zlib.pc`
 
 ## Update the dynamic linker cache
@@ -325,7 +325,7 @@ make install
 
 ### Conflicts with system zlib
 
-If both system zlib and a custom build are installed, they typically coexist without issues — the dynamic linker prioritizes `/usr/local/lib` over `/usr/lib` by default. To verify which library your program uses:
+If both system zlib and a custom build are installed, they typically coexist without issues: the dynamic linker prioritizes `/usr/local/lib` over `/usr/lib` by default. To verify which library your program uses:
 
 ``` bash
 ldd ./program | grep libz

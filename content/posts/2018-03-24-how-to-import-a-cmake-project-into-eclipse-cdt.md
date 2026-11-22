@@ -10,7 +10,7 @@ canonical: /how-to-import-a-cmake-project-into-eclipse-cdt/
 url: /how-to-import-a-cmake-project-into-eclipse-cdt/
 ---
 
-Eclipse CDT has evolved to handle CMake projects effectively. The key is understanding which approach fits your workflow — native CMake integration (recommended for 2023+ versions) or generating build files.
+Eclipse CDT has evolved to handle CMake projects effectively. The key is understanding which approach fits your workflow: native CMake integration (recommended for 2023+ versions) or generating build files.
 
 ## Native CMake Integration (Recommended)
 
@@ -43,7 +43,7 @@ Then in Eclipse:
 1.  File → Open Projects from File System
 2.  Select your project root directory
 3.  Eclipse will detect the CMakeLists.txt and offer to configure it
-4.  Accept the configuration — CDT will set up build directory handling
+4.  Accept the configuration: CDT will set up build directory handling
 
 **If you have a pre-generated build directory:**
 
@@ -69,7 +69,7 @@ For consistency across IDEs and machines, prefer `cmake --build .` over specific
 
 ## Generator Selection
 
-The legacy “Eclipse CDT4 – Unix Makefiles” generator still works but is outdated. For modern projects:
+The legacy “Eclipse CDT4: Unix Makefiles” generator still works but is outdated. For modern projects:
 
 **Using Ninja (faster, more reliable):**
 

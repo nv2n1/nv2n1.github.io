@@ -14,7 +14,7 @@ mpv is a powerful media player for Linux that supports looping videos with minim
 
 ## Loop a Single Video
 
-The simplest way — use the `--loop` flag:
+The simplest way: use the `--loop` flag:
 
 ```wp-block-code
 mpv --fullscreen --loop video.mp4
@@ -71,14 +71,14 @@ save-position-on-quit=yes  # Remember where you stopped
 
 During playback, these shortcuts control looping:
 
-- **l** — Set/clear A-B loop points
-- **Shift+l** — Toggle infinite file loop
-- **Shift+L** — Toggle playlist loop
-- **LEFT/RIGHT** — Seek 5 seconds
-- **UP/DOWN** — Seek 60 seconds
-- **f** — Toggle fullscreen
-- **ESC** — Exit fullscreen
-- **q** — Quit
+- **l**: Set/clear A-B loop points
+- **Shift+l**: Toggle infinite file loop
+- **Shift+L**: Toggle playlist loop
+- **LEFT/RIGHT**: Seek 5 seconds
+- **UP/DOWN**: Seek 60 seconds
+- **f**: Toggle fullscreen
+- **ESC**: Exit fullscreen
+- **q**: Quit
 
 ## Loop with Audio Visualization
 

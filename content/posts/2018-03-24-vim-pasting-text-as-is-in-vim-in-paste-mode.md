@@ -102,7 +102,7 @@ If you’re working with code regularly, consider these alternatives:
   "+p
   ```
 
-- **Configure your shell properly** — if you’re SSHing into a remote server, ensure you’re using a terminal with proper clipboard support (like tmux with `set-clipboard on`).
+- **Configure your shell properly**: if you’re SSHing into a remote server, ensure you’re using a terminal with proper clipboard support (like tmux with `set-clipboard on`).
 
 Most modern Vim configurations support bracketed paste automatically, so explicit paste mode toggling has become less critical. However, knowing how to control it remains essential for edge cases and when working on older systems.
 

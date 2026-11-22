@@ -10,13 +10,13 @@ canonical: /understanding-tpm-2-0-and-platform-configuration-registers-pcrs/
 url: /understanding-tpm-2-0-and-platform-configuration-registers-pcrs/
 ---
 
-The Trusted Platform Module (TPM) 2.0 is a cryptographic coprocessor—either as discrete hardware or firmware—that provides hardware-rooted security. It’s the foundation for features like Windows Hello, BitLocker, macOS FileVault, and Linux dm-crypt integration with hardware key binding. On modern systems, TPM 2.0 is nearly universal: integrated into recent Intel (PTT), AMD (fTPM), and ARM processors, or available as discrete chips on enterprise hardware.
+The Trusted Platform Module (TPM) 2.0 is a cryptographic coprocessor (either as discrete hardware or firmware), that provides hardware-rooted security. It’s the foundation for features like Windows Hello, BitLocker, macOS FileVault, and Linux dm-crypt integration with hardware key binding. On modern systems, TPM 2.0 is nearly universal: integrated into recent Intel (PTT), AMD (fTPM), and ARM processors, or available as discrete chips on enterprise hardware.
 
-Unlike TPM 1.2, TPM 2.0 uses stronger cryptography (SHA-256 and later), supports more complex policies, and is genuinely recoverable if locked out—critical for production systems.
+Unlike TPM 1.2, TPM 2.0 uses stronger cryptography (SHA-256 and later), supports more complex policies, and is genuinely recoverable if locked out: critical for production systems.
 
 ## Platform Configuration Registers (PCRs)
 
-Platform Configuration Registers are protected memory banks inside the TPM that store cryptographic digests of system components. Each PCR is a hash value (typically SHA-256), and once written, it can only be extended—new values are hashed with the existing PCR value, making modification impossible without reboot.
+Platform Configuration Registers are protected memory banks inside the TPM that store cryptographic digests of system components. Each PCR is a hash value (typically SHA-256), and once written, it can only be extended: new values are hashed with the existing PCR value, making modification impossible without reboot.
 
 The standard PCR assignments are:
 
@@ -39,7 +39,7 @@ Measured boot is a chain of trust: each component measures and extends the next,
 1.  **Pre-boot**: Firmware verifies its own signature, measures itself into PCR 0, then measures the bootloader.
 2.  **Bootloader**: The bootloader (e.g., GRUB, systemd-boot) measures kernel and initramfs, extending PCR 4 and PCR 8–9.
 3.  **Kernel**: The Linux kernel extends PCR 10 with IMA measurements of loaded binaries.
-4.  **Attestation**: The TPM can prove—via a signed quote—that each PCR matches an expected value, proving the system booted cleanly.
+4.  **Attestation**: The TPM can prove (via a signed quote), that each PCR matches an expected value, proving the system booted cleanly.
 
 If malware modifies the bootloader or kernel, the PCR hash changes. Systems configured with PCR policies will then refuse to unseal encryption keys, preventing both boot and decryption.
 
@@ -100,7 +100,7 @@ If PCR values differ, `tpm2_unseal` fails, leaving the secret inaccessible. This
 systemd-cryptenroll /dev/sda1 --tpm2-device=auto --tpm2-pcrs=0,4,7
 ```
 
-**Remote Attestation**: Cloud platforms (AWS, Azure, GCP) and Kubernetes clusters verify TPM attestation before admitting nodes. A node proves—via a signed PCR quote—that it’s running approved firmware and kernel versions.
+**Remote Attestation**: Cloud platforms (AWS, Azure, GCP) and Kubernetes clusters verify TPM attestation before admitting nodes. A node proves (via a signed PCR quote), that it’s running approved firmware and kernel versions.
 
 ``` bash
 tpm2_quote -c 0x81000001 -l sha256:0,4,7,10 -m attest.out -s sig.out

@@ -65,7 +65,7 @@ You can also reference menu entries by index number instead of name. The first l
 GRUB_DEFAULT="1>2"
 ```
 
-This boots the 3rd entry (index 2) in the 2nd menu (index 1). However, this approach is fragile—if you install new kernels, the indexes shift. The named approach is more reliable.
+This boots the 3rd entry (index 2) in the 2nd menu (index 1). However, this approach is fragile: if you install new kernels, the indexes shift. The named approach is more reliable.
 
 ## Updating GRUB configuration
 

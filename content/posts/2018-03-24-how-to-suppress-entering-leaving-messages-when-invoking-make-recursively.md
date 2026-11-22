@@ -55,7 +55,7 @@ make[1]: Leaving directory '/home/user/project/src'
 
 Each level of recursion adds a bracketed number (`make[1]`, `make[2]`, etc.) indicating the depth.
 
-## Using –print-directory Selectively
+## Using --print-directory Selectively
 
 If you want directory messages for some sub-makes but not others, use `--print-directory` to re-enable them:
 
@@ -110,18 +110,18 @@ Or use modern build systems like `CMake`, `Meson`, or `Ninja` that handle subdir
 
 ## Other Useful Make Flags
 
-- `-j N` — Run N parallel jobs (use `-j$(nproc)` for all cores)
-- `-B` — Unconditionally rebuild all targets
-- `-n` — Dry run (show commands without executing)
-- `-k` — Continue building after errors (for finding all errors at once)
-- `--warn-undefined-variables` — Warn when using undefined variables
-- `--debug=v` — Show why make decides to rebuild each target
+- `-j N`: Run N parallel jobs (use `-j$(nproc)` for all cores)
+- `-B`: Unconditionally rebuild all targets
+- `-n`: Dry run (show commands without executing)
+- `-k`: Continue building after errors (for finding all errors at once)
+- `--warn-undefined-variables`: Warn when using undefined variables
+- `--debug=v`: Show why make decides to rebuild each target
 
 ## Quick Reference
 
-- `make --no-print-directory` — Suppress entering/leaving messages
-- `MAKEFLAGS=--no-print-directory` — Environment variable approach
-- `.MAKEFLAGS: --no-print-directory` — Makefile directive
+- `make --no-print-directory`: Suppress entering/leaving messages
+- `MAKEFLAGS=--no-print-directory`: Environment variable approach
+- `.MAKEFLAGS: --no-print-directory`: Makefile directive
 
 ## Make Parallel Builds
 

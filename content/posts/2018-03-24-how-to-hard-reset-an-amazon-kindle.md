@@ -16,7 +16,7 @@ A hard reset (also called a force restart) clears the device’s RAM and stops a
 
 1.  Locate the power button on your device (usually on the bottom edge or side, depending on model)
 2.  Press and hold the power button for 20–30 seconds without releasing
-3.  Keep holding even if you see a “Power off” prompt — don’t tap it
+3.  Keep holding even if you see a “Power off” prompt: don’t tap it
 4.  Release the button once the screen goes completely black
 5.  Wait 5–10 seconds, then press the power button briefly to turn it back on
 6.  The device will show a progress bar and boot normally

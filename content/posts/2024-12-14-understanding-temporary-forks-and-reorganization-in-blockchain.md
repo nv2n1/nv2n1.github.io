@@ -21,7 +21,7 @@ The sequence looks like this:
 
 ## Chain Selection: Longest vs. Heaviest
 
-Bitcoin resolves forks using the **Longest Chain Rule** — nodes follow the chain with the most accumulated proof-of-work. The block from the losing fork becomes an “orphan block” or “stale block” and is discarded.
+Bitcoin resolves forks using the **Longest Chain Rule**: nodes follow the chain with the most accumulated proof-of-work. The block from the losing fork becomes an “orphan block” or “stale block” and is discarded.
 
 Proof-of-Stake networks like Ethereum use the **Heaviest Chain Rule**, which selects chains based on accumulated stake weight rather than computational work. The principle is identical: the chain with the most economic backing wins.
 
@@ -29,9 +29,9 @@ On Bitcoin, shallow forks (1-2 blocks) occur every few days as a normal network 
 
 ## Understanding Reorganizations (Reorgs)
 
-A reorganization happens when the blockchain abandons one chain for another longer or heavier competing chain. From the perspective of an observer on the losing fork, blocks they saw get “unmined” — transactions are rolled back, and the ledger state changes.
+A reorganization happens when the blockchain abandons one chain for another longer or heavier competing chain. From the perspective of an observer on the losing fork, blocks they saw get “unmined”: transactions are rolled back, and the ledger state changes.
 
-For Bitcoin: The historical advice to wait for 6 confirmations before considering a transaction final came from the assumption that deeper reorgs were practically impossible without controlling 51% of hash power. However, this isn’t a guarantee — it’s a probabilistic statement.
+For Bitcoin: The historical advice to wait for 6 confirmations before considering a transaction final came from the assumption that deeper reorgs were practically impossible without controlling 51% of hash power. However, this isn’t a guarantee: it’s a probabilistic statement.
 
 For Ethereum and other PoS chains: The situation is different and depends on the validator set. A successful reorg requires either corrupting a large portion of active validators or exploiting protocol vulnerabilities.
 
@@ -53,6 +53,6 @@ Instead of the outdated “wait for 6 confirmations” heuristic, modern practic
 
 ## Practical Implications
 
-When building applications, treat finalized blocks as immutable. Unfinalized blocks should be handled carefully — display them as “pending confirmation” to users, and prepare to revert any state changes if a reorg occurs.
+When building applications, treat finalized blocks as immutable. Unfinalized blocks should be handled carefully: display them as “pending confirmation” to users, and prepare to revert any state changes if a reorg occurs.
 
 Monitor your node’s logs for unexpected reorgs. A single reorg of 2-3 blocks is noise; repeated deep reorgs indicate either network issues or a local sync problem. Reorgs deeper than the finality window indicate a serious protocol failure or active attack.

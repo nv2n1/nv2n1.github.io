@@ -51,30 +51,30 @@ You can customize the sidebar text widget directly by editing it in **Appearance
 
 RGBlite was tested with older plugin versions but functions with modern plugins. For optimal results, consider these:
 
-- **WordPress Popular Posts** — displays trending content on the homepage
-- **Yoast SEO** or **Rank Math** — modern SEO tools (replacing older sitemap generators)
-- **Jetpack** — provides performance monitoring and security features
+- **WordPress Popular Posts**: displays trending content on the homepage
+- **Yoast SEO** or **Rank Math**: modern SEO tools (replacing older sitemap generators)
+- **Jetpack**: provides performance monitoring and security features
 
 ## Important Limitations
 
 RGBlite has several drawbacks in 2026:
 
-- **No longer maintained** — last updated in 2012
-- **Missing modern standards** — lacks block editor (Gutenberg) support, lacks proper schema markup
-- **Performance issues** — outdated code patterns don’t align with modern WordPress optimization
-- **Security concerns** — no active security patches or compatibility updates
-- **Mobile responsiveness** — not built with mobile-first design principles
-- **Accessibility gaps** — predates modern WCAG 2.1 standards
+- **No longer maintained**: last updated in 2012
+- **Missing modern standards**: lacks block editor (Gutenberg) support, lacks proper schema markup
+- **Performance issues**: outdated code patterns don’t align with modern WordPress optimization
+- **Security concerns**: no active security patches or compatibility updates
+- **Mobile responsiveness**: not built with mobile-first design principles
+- **Accessibility gaps**: predates modern WCAG 2.1 standards
 
 ## Modern Alternatives
 
 For new projects, consider these actively maintained alternatives:
 
-- **Astra** — lightweight, highly customizable, excellent performance
-- **OceanWP** — good balance of features and speed, strong Elementor integration
-- **Neve** — minimal, fast-loading, excellent Core Web Vitals scores
-- **GeneratePress** — highly optimized, great for custom child theme development
-- **Underscores (\_s)** — starter theme for developers building custom themes
+- **Astra**: lightweight, highly customizable, excellent performance
+- **OceanWP**: good balance of features and speed, strong Elementor integration
+- **Neve**: minimal, fast-loading, excellent Core Web Vitals scores
+- **GeneratePress**: highly optimized, great for custom child theme development
+- **Underscores (\_s)**: starter theme for developers building custom themes
 
 ## Removing RGBlite
 

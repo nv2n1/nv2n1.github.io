@@ -22,13 +22,13 @@ From a user perspective, this is invisible. The separation happens at the protoc
 
 ## Concrete Fee Impact
 
-A typical non-SegWit transaction consuming 250 bytes of block space costs roughly 4x more than a SegWit transaction doing the same work. With mempool congestion, the difference is substantial—paying 50+ satoshi per vbyte for legacy transactions versus 10-20 for SegWit during busy periods is common.
+A typical non-SegWit transaction consuming 250 bytes of block space costs roughly 4x more than a SegWit transaction doing the same work. With mempool congestion, the difference is substantial: paying 50+ satoshi per vbyte for legacy transactions versus 10-20 for SegWit during busy periods is common.
 
 The fee reduction scales with transaction complexity. A single-input, single-output transaction saves ~30% with SegWit. Multi-signature transactions save 40%+.
 
 ## Transaction Malleability Fix
 
-Before SegWit, the transaction ID (txid) could be altered before confirmation through witness data manipulation. This broke downstream protocols relying on predictable transaction IDs—specifically, it made payment channels impossible to build safely. SegWit fixed this by moving mutable data outside the txid calculation, enabling the entire Lightning Network ecosystem.
+Before SegWit, the transaction ID (txid) could be altered before confirmation through witness data manipulation. This broke downstream protocols relying on predictable transaction IDs: specifically, it made payment channels impossible to build safely. SegWit fixed this by moving mutable data outside the txid calculation, enabling the entire Lightning Network ecosystem.
 
 ## Current Address Formats
 
@@ -55,6 +55,6 @@ SegWit adoption accelerated after 2021 when Taproot launched, which builds on Se
 
 ## Migration Considerations
 
-If you’re holding coins in legacy addresses, they remain secure—SegWit is not a security upgrade, it’s a data structure optimization. However, spending from legacy addresses incurs higher fees. Most modern wallets handle this automatically, consolidating legacy UTXOs to SegWit addresses during normal use.
+If you’re holding coins in legacy addresses, they remain secure: SegWit is not a security upgrade, it’s a data structure optimization. However, spending from legacy addresses incurs higher fees. Most modern wallets handle this automatically, consolidating legacy UTXOs to SegWit addresses during normal use.
 
 For new transactions, always use SegWit or Taproot addresses. The fee savings are immediate and compound significantly over time if you transact frequently. Taproot offers marginal additional benefits for complex scripts and privacy applications, but native SegWit is sufficient for standard sends and receives.

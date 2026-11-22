@@ -16,9 +16,9 @@ BuddyPress themes extend WordPress’s community features with member profiles, 
 
 Several repositories host BuddyPress-compatible themes:
 
-- **WordPress.org Theme Directory** — Filter by the “buddypress” tag at wordpress.org/themes/
-- **Third-party theme shops** — Marketplaces like ThemeForest, StudioPress, and GeneratePress offer premium BuddyPress options
-- **Plugin-bundled themes** — Some community plugins include their own theme variants
+- **WordPress.org Theme Directory**: Filter by the “buddypress” tag at wordpress.org/themes/
+- **Third-party theme shops**: Marketplaces like ThemeForest, StudioPress, and GeneratePress offer premium BuddyPress options
+- **Plugin-bundled themes**: Some community plugins include their own theme variants
 
 When evaluating themes, verify compatibility with your active BuddyPress version and WordPress version. Check the theme’s documentation or changelog for the minimum required versions.
 
@@ -26,7 +26,7 @@ When evaluating themes, verify compatibility with your active BuddyPress version
 
 Modern BuddyPress (1.7+) uses a flexible template system that works with most WordPress themes without code modification. Any WordPress theme can display BuddyPress content using default base templates included in the plugin.
 
-**BuddyPress-specific themes** go further — they customize or enhance the included base templates for better member profile layouts, activity feeds, and group displays. If a theme is tagged as a “BuddyPress theme,” it means the developer has added custom styling or template overrides rather than relying solely on defaults.
+**BuddyPress-specific themes** go further: they customize or enhance the included base templates for better member profile layouts, activity feeds, and group displays. If a theme is tagged as a “BuddyPress theme,” it means the developer has added custom styling or template overrides rather than relying solely on defaults.
 
 ## Installing a BuddyPress Theme
 
@@ -58,10 +58,10 @@ Copy template files from the BuddyPress plugin (`/wp-content/plugins/buddypress/
 
 Common template files to override:
 
-- `members/` — Member directory and profile pages
-- `activity/` — Activity streams and feeds
-- `groups/` — Group directory and group pages
-- `messages/` — Private messaging interface
+- `members/`: Member directory and profile pages
+- `activity/`: Activity streams and feeds
+- `groups/`: Group directory and group pages
+- `messages/`: Private messaging interface
 
 ## Post-Installation Setup
 

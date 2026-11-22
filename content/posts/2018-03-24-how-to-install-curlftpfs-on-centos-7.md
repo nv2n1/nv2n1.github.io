@@ -71,11 +71,11 @@ fusermount -u ~/ftp-mount
 
 ## Useful Options
 
-- `-o allow_other` — Allow other users to access the mount
-- `-o direct_io` — Disable caching for real-time file updates
-- `-o entry_timeout=N` — Set directory entry cache timeout (seconds)
-- `-o attr_timeout=N` — Set attribute cache timeout (seconds)
-- `-o use_ioctl` — Enable IOCTL support for certain operations
+- `-o allow_other`: Allow other users to access the mount
+- `-o direct_io`: Disable caching for real-time file updates
+- `-o entry_timeout=N`: Set directory entry cache timeout (seconds)
+- `-o attr_timeout=N`: Set attribute cache timeout (seconds)
+- `-o use_ioctl`: Enable IOCTL support for certain operations
 
 Example with multiple options:
 
@@ -100,9 +100,9 @@ sudo mount /mnt/ftp
 
 Storing credentials in URLs or `/etc/fstab` is a security risk. Consider using:
 
-1.  **SSH keys for SFTP** — Use key-based authentication instead of passwords
-2.  **Credential files** — Store credentials in a file with restricted permissions (mode 600) and reference it via a script
-3.  **SSH tunneling** — Use SSH to forward the FTP connection through an encrypted tunnel
+1.  **SSH keys for SFTP**: Use key-based authentication instead of passwords
+2.  **Credential files**: Store credentials in a file with restricted permissions (mode 600) and reference it via a script
+3.  **SSH tunneling**: Use SSH to forward the FTP connection through an encrypted tunnel
 
 Example with SSH tunneling:
 
@@ -133,9 +133,9 @@ Some servers require passive mode. curlftpfs uses passive by default, but if you
 
 For modern setups, consider:
 
-- **rclone** — More active development, better performance, broader protocol support
-- **sshfs** — For SFTP, simpler setup, no separate tool needed
-- **lftp** — Command-line FTP client with built-in scripting (alternative to mounting)
+- **rclone**: More active development, better performance, broader protocol support
+- **sshfs**: For SFTP, simpler setup, no separate tool needed
+- **lftp**: Command-line FTP client with built-in scripting (alternative to mounting)
 
 curlftpfs remains useful for legacy FTP setups but newer projects may benefit from these alternatives.
 

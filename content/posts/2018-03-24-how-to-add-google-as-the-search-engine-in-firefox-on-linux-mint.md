@@ -18,7 +18,7 @@ Open Firefox and navigate to `about:preferences#search` in the address bar, or g
 
 ## Set Google as Default
 
-Under the “Default Search Engine” section, you’ll see a dropdown menu. Click it and select **Google** from the list. If Google isn’t visible, it likely means your Firefox build doesn’t have it pre-installed—you’ll need to add it manually (see below).
+Under the “Default Search Engine” section, you’ll see a dropdown menu. Click it and select **Google** from the list. If Google isn’t visible, it likely means your Firefox build doesn’t have it pre-installed: you’ll need to add it manually (see below).
 
 Firefox will immediately apply this change, and all searches from the address bar and search box will use Google.
 
@@ -53,17 +53,17 @@ The default search engine cannot be deleted, only changed.
 
 ## Verify Your Changes Persist
 
-Search settings sync across devices if you’re logged into a Firefox Account. If you’re not syncing, your preferences stay local to that profile. Test by searching from the address bar—results should come from Google immediately.
+Search settings sync across devices if you’re logged into a Firefox Account. If you’re not syncing, your preferences stay local to that profile. Test by searching from the address bar: results should come from Google immediately.
 
 ## Related Linux Commands
 
 These related commands are often used alongside the tools discussed in this article:
 
-- man command-name – Read the manual page for any command
-- which command-name – Find the location of an executable
-- rpm -qa or dpkg -l – List installed packages
-- journalctl -u service-name – Check service logs
-- ss -tulpn – List listening ports and services
+- man command-name: Read the manual page for any command
+- which command-name: Find the location of an executable
+- rpm -qa or dpkg -l: List installed packages
+- journalctl -u service-name: Check service logs
+- ss -tulpn: List listening ports and services
 
 ## Quick Reference
 

@@ -48,11 +48,11 @@ linkchecker --recursive --output=html > report.html https://example.com
 
 Useful flags:
 
-- `--timeout=10` — Set connection timeout in seconds
-- `--threads=4` — Run 4 simultaneous checks (speeds up crawling)
-- `--user-agent="Mozilla/5.0..."` — Spoof user agent for picky servers
-- `--ignore-url=^https://external-domain` — Skip checking external domains
-- `--no-status-messages` — Suppress progress output in cron jobs
+- `--timeout=10`: Set connection timeout in seconds
+- `--threads=4`: Run 4 simultaneous checks (speeds up crawling)
+- `--user-agent="Mozilla/5.0..."`: Spoof user agent for picky servers
+- `--ignore-url=^https://external-domain`: Skip checking external domains
+- `--no-status-messages`: Suppress progress output in cron jobs
 
 ## muffet
 
@@ -87,14 +87,14 @@ This catches broken links before they hit production.
 
 ## For WordPress
 
-If you’re running WordPress, the **Broken Link Checker** plugin (search it in your plugin directory) automates the process. It monitors links in posts, pages, and comments, flagging broken ones with visual indicators. Note that it runs background scans and can impact performance on large sites—consider running checks on a staging environment first.
+If you’re running WordPress, the **Broken Link Checker** plugin (search it in your plugin directory) automates the process. It monitors links in posts, pages, and comments, flagging broken ones with visual indicators. Note that it runs background scans and can impact performance on large sites: consider running checks on a staging environment first.
 
 ## Performance Considerations
 
 Large sites need careful tuning:
 
 - Use threading/concurrency flags to speed up crawling
-- Skip external domains unless necessary—checking third-party sites slows things down and may trigger rate limits
+- Skip external domains unless necessary: checking third-party sites slows things down and may trigger rate limits
 - Schedule checks during low-traffic windows
 - Cache results between runs to avoid redundant checks
 - Respect robots.txt and rate-limit yourself to avoid hammering servers
@@ -103,7 +103,7 @@ Large sites need careful tuning:
 
 For ongoing monitoring, integrate link checks into your uptime monitoring stack. Services like Uptimerobot or custom Nagios checks can run LinkChecker periodically and alert you when broken links appear.
 
-Regular link audits keep your site healthy. Pick a tool that fits your workflow—for quick checks, use the online tools; for automation and CI/CD, go with LinkChecker or muffet.
+Regular link audits keep your site healthy. Pick a tool that fits your workflow, for quick checks, use the online tools; for automation and CI/CD, go with LinkChecker or muffet.
 
 ## 2026 Comprehensive Guide: Best Practices
 

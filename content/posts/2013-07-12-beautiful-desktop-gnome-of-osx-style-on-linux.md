@@ -34,10 +34,10 @@ sudo pacman -S gnome-tweaks    # Arch
 
 Popular macOS-inspired GTK themes for modern GNOME:
 
-- **Orchis** – Clean, minimal design with macOS influences
-- **Lavanda** – Light and dark variants with smooth aesthetics
-- **McMojave** – Direct macOS Mojave inspiration
-- **BigSur** – Based on macOS Big Sur design language
+- **Orchis**: Clean, minimal design with macOS influences
+- **Lavanda**: Light and dark variants with smooth aesthetics
+- **McMojave**: Direct macOS Mojave inspiration
+- **BigSur**: Based on macOS Big Sur design language
 
 Download themes to `~/.local/share/themes/`:
 
@@ -61,9 +61,9 @@ cd Orchis-theme
 
 Icon themes worth exploring:
 
-- **MacOS Big Sur Icons** – Direct ports, available on GitHub
-- **Papirus** – Modern, highly customizable
-- **Tela Icon Theme** – Excellent macOS styling options
+- **MacOS Big Sur Icons**: Direct ports, available on GitHub
+- **Papirus**: Modern, highly customizable
+- **Tela Icon Theme**: Excellent macOS styling options
 
 Install icons to `~/.local/share/icons/` and activate in Tweaks.
 
@@ -86,9 +86,9 @@ Set high-quality wallpapers through Settings → Background or right-click your 
 
 Recommended sources for minimal/macOS-style wallpapers:
 
-- **Unsplash** – searchable, high resolution
-- **Pexels** – free stock photography
-- **Wallpaper Engine** (Wine) – if you want dynamic backgrounds
+- **Unsplash**: searchable, high resolution
+- **Pexels**: free stock photography
+- **Wallpaper Engine** (Wine): if you want dynamic backgrounds
 
 ## KDE Plasma Configuration
 
@@ -105,9 +105,9 @@ Install additional themes via System Settings → Get New → Global Themes and 
 
 macOS commonly uses San Francisco or system fonts. Equivalent recommendations for Linux:
 
-- **Inter** – modern, clean sans-serif
-- **Ubuntu Font Family** – well-hinted for screen display
-- **Roboto** – Google’s widely-supported alternative
+- **Inter**: modern, clean sans-serif
+- **Ubuntu Font Family**: well-hinted for screen display
+- **Roboto**: Google’s widely-supported alternative
 
 Change system fonts in GNOME Tweaks (Fonts section) or KDE System Settings.
 
@@ -117,8 +117,8 @@ Neither GNOME nor KDE provides native docks matching macOS by default.
 
 **GNOME options:**
 
-- **Dash to Dock** extension – simulates macOS dock behavior
-- **Dash to Panel** – taskbar-style alternative
+- **Dash to Dock** extension: simulates macOS dock behavior
+- **Dash to Panel**: taskbar-style alternative
 
 ``` bash
 # Install via GNOME Extensions or manual download
@@ -129,8 +129,8 @@ make
 
 **KDE options:**
 
-- **Latte Dock** – highly customizable, panel/dock hybrid
-- **Application Menu** widget – built-in
+- **Latte Dock**: highly customizable, panel/dock hybrid
+- **Application Menu** widget: built-in
 
 ## Configuration Tips
 

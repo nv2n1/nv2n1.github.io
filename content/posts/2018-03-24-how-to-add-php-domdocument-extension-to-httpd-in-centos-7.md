@@ -14,7 +14,7 @@ If you’re seeing PHP errors like `Class 'DOMDocument' not found`, your PHP ins
 
 ## Install php-xml
 
-The solution is straightforward — install the `php-xml` package:
+The solution is straightforward: install the `php-xml` package:
 
 ``` bash
 sudo dnf install php-xml
@@ -95,9 +95,9 @@ try {
 
 If your application uses other XML processing functions, you might also need:
 
-- **php-xsl** (included in php-xml) — for XSLT transformations
-- **php-simplexml** — usually included in base PHP, provides SimpleXML functions
-- **php-xmlrpc** — if you’re doing XML-RPC calls (less common in modern stacks)
+- **php-xsl** (included in php-xml), for XSLT transformations
+- **php-simplexml**: usually included in base PHP, provides SimpleXML functions
+- **php-xmlrpc**: if you’re doing XML-RPC calls (less common in modern stacks)
 
 Check what’s already installed:
 

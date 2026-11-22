@@ -19,7 +19,7 @@ The `ErrorDocument` directive in Apache accepts two formats:
     ErrorDocument code /path/to/file.html
     ErrorDocument code https://example.com/path/to/file.html
 
-The first serves a local file relative to your document root (preferred — faster and more reliable). The second redirects to an external URL, which can break if the external server is unavailable.
+The first serves a local file relative to your document root (preferred: faster and more reliable). The second redirects to an external URL, which can break if the external server is unavailable.
 
 ### Setup in .htaccess
 
@@ -157,7 +157,7 @@ On Debian/Ubuntu, Apache runs as `www-data`. On RHEL/CentOS, it’s `apache`. Wr
 **Absolute paths required**: Use paths relative to your document root with a leading slash:
 
     ErrorDocument 404 /404.html    # correct
-    ErrorDocument 404 404.html     # avoid — ambiguous
+    ErrorDocument 404 404.html     # avoid: ambiguous
 
 **Verifying in logs**: Check your access logs to confirm requests hit your error handler:
 

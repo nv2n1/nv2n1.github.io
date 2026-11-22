@@ -29,7 +29,7 @@ if value is not None:
     print(f"Key exists with value: {value}")
 ```
 
-Be careful here — if the key legitimately maps to `None`, this check fails. Use a sentinel value instead:
+Be careful here: if the key legitimately maps to `None`, this check fails. Use a sentinel value instead:
 
 ``` python
 _missing = object()
@@ -85,7 +85,7 @@ Useful for configuration hierarchies or layered data sources.
 - `in` operator: O(1) average, highly optimized
 - `get()`: Same O(1) performance, just syntactically different
 - `setdefault()`: O(1) but modifies the dict
-- Avoid checking then accessing separately — use `in` then direct access, or use `get()` with a default
+- Avoid checking then accessing separately: use `in` then direct access, or use `get()` with a default
 
 ## Common Mistake
 
@@ -120,11 +120,11 @@ For system scripting, prefer the subprocess module over os.system for better con
 
 These complementary Python tools and commands are useful for daily development workflows:
 
-- python3 -m venv myenv – Create an isolated virtual environment
-- pip list –outdated – Check which packages need updating
-- python3 -m py_compile script.py – Check syntax without running
-- black script.py – Auto-format code to PEP 8 standards
-- mypy script.py – Static type checking for Python code
+- python3 -m venv myenv: Create an isolated virtual environment
+- pip list --outdated: Check which packages need updating
+- python3 -m py_compile script.py: Check syntax without running
+- black script.py: Auto-format code to PEP 8 standards
+- mypy script.py: Static type checking for Python code
 
 ## Quick Verification
 

@@ -33,7 +33,7 @@ If Google Code is no longer available, you’ll need to work from a local copy o
 
 ### 2. Create a new repository on GitHub
 
-Go to GitHub and create a new empty repository. Don’t initialize it with a README, .gitignore, or license — you want it completely empty to avoid merge conflicts.
+Go to GitHub and create a new empty repository. Don’t initialize it with a README, .gitignore, or license: you want it completely empty to avoid merge conflicts.
 
 ### 3. Update the remote URL
 

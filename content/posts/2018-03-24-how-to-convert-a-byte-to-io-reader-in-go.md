@@ -39,7 +39,7 @@ func main() {
 }
 ```
 
-`bytes.NewReader` returns a `*bytes.Reader` that implements `io.Reader`. It’s efficient—no copying occurs; the reader maintains an internal position and reads from the original slice.
+`bytes.NewReader` returns a `*bytes.Reader` that implements `io.Reader`. It’s efficient: no copying occurs; the reader maintains an internal position and reads from the original slice.
 
 ## Using bytes.NewBuffer
 
@@ -102,7 +102,7 @@ func main() {
 
 ## Handling Large Data
 
-For large byte slices, avoid unnecessary copies. `bytes.NewReader` doesn’t copy the data—it reads directly from the slice. If you’re building data incrementally, use `bytes.Buffer`:
+For large byte slices, avoid unnecessary copies. `bytes.NewReader` doesn’t copy the data: it reads directly from the slice. If you’re building data incrementally, use `bytes.Buffer`:
 
 ``` go
 package main

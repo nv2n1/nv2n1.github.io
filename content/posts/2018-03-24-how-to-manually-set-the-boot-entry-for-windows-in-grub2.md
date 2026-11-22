@@ -10,7 +10,7 @@ canonical: /how-to-manually-set-the-boot-entry-for-windows-in-grub2/
 url: /how-to-manually-set-the-boot-entry-for-windows-in-grub2/
 ---
 
-If you need to boot Windows from the GRUB2 command line—whether during troubleshooting, recovery, or when your boot configuration is broken—you can do it with a few commands. This guide covers both BIOS and UEFI systems.
+If you need to boot Windows from the GRUB2 command line (whether during troubleshooting, recovery, or when your boot configuration is broken) you can do it with a few commands. This guide covers both BIOS and UEFI systems.
 
 ## Quick boot for BIOS systems
 
@@ -46,9 +46,9 @@ GRUB2 uses `(hdX,Y)` notation where:
 
 Examples:
 
-- `(hd0,1)` — first disk, first partition
-- `(hd0,2)` — first disk, second partition
-- `(hd1,3)` — second disk, third partition
+- `(hd0,1)`: first disk, first partition
+- `(hd0,2)`: first disk, second partition
+- `(hd1,3)`: second disk, third partition
 
 ## UEFI systems
 

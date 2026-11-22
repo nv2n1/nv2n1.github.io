@@ -135,7 +135,7 @@ fi
 ### Best practices
 
 - Quote variables: `ssh "$i"` prevents word splitting issues
-- Use `$(...)` instead of backticks for command substitution — it’s POSIX and nests properly
+- Use `$(...)` instead of backticks for command substitution: it’s POSIX and nests properly
 - Always use `wait` if subsequent steps depend on completion
 - Monitor system load with `watch 'ps aux | grep ssh'` when running many parallel jobs
 - For complex parallelization, consider GNU Parallel or modern tools like `async` in shells that support it

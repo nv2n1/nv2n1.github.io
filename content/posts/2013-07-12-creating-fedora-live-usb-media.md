@@ -12,11 +12,11 @@ url: /creating-fedora-live-usb-media/
 
 A Fedora Live USB lets you boot directly into a Fedora environment without modifying your hard drive. You can use it to test Fedora, troubleshoot your system, or perform a fresh installation. This guide covers modern tools and workflows for creating bootable USB media.
 
-**Back up any data on your USB stick first — the creation process will overwrite everything.**
+**Back up any data on your USB stick first: the creation process will overwrite everything.**
 
 ## Download the ISO
 
-Get the Live ISO from <a href="https://fedoraproject.org/workstation/download/" rel="nofollow noopener" target="_blank">Fedora’s download page</a>. You’ll find options for Fedora Workstation (GNOME desktop), Fedora KDE Plasma, Fedora Server, and other variants. Choose the architecture matching your hardware — most modern systems use x86_64.
+Get the Live ISO from <a href="https://fedoraproject.org/workstation/download/" rel="nofollow noopener" target="_blank">Fedora’s download page</a>. You’ll find options for Fedora Workstation (GNOME desktop), Fedora KDE Plasma, Fedora Server, and other variants. Choose the architecture matching your hardware: most modern systems use x86_64.
 
 If you want a smaller download, grab the netinst ISO instead. It’s a minimal installer that fetches packages during installation, useful for slow connections or when disk space is tight.
 
@@ -36,7 +36,7 @@ First, identify your USB device:
 lsblk
 ```
 
-Look for your USB stick in the output. It’ll be something like `/dev/sdc` or `/dev/sdd` — the key is that it’s a device name, not a partition (so `sdc` not `sdc1`).
+Look for your USB stick in the output. It’ll be something like `/dev/sdc` or `/dev/sdd`: the key is that it’s a device name, not a partition (so `sdc` not `sdc1`).
 
 Unmount the device if it’s already mounted:
 
@@ -55,7 +55,7 @@ sudo dd if=Fedora-Workstation-Live-x86_64-*.iso of=/dev/sdX bs=4M status=progres
 Key parameters:
 
 - `if=` input file (your ISO)
-- `of=` output file (your USB device — use the device name like `/dev/sdc`, not a partition like `/dev/sdc1`)
+- `of=` output file (your USB device: use the device name like `/dev/sdc`, not a partition like `/dev/sdc1`)
 - `bs=4M` block size of 4MB (speeds up the copy)
 - `status=progress` shows the operation’s progress
 - `sync` ensures all data is written to disk before returning

@@ -103,11 +103,11 @@ echo 1 > /sys/power/pm_trace
 
 The PM clock framework (`drivers/base/power/clock_ops.c`) manages device clocks during power state transitions:
 
-- `pm_clk_add()` — Register a clock for PM management by connection ID
-- `__pm_clk_add()` — Internal function to register a clock by pointer
-- `pm_clk_remove()` — Unregister a clock from PM management
-- `pm_clk_suspend()` — Disable all managed clocks during suspend
-- `pm_clk_resume()` — Re-enable all managed clocks during resume
+- `pm_clk_add()`: Register a clock for PM management by connection ID
+- `__pm_clk_add()`: Internal function to register a clock by pointer
+- `pm_clk_remove()`: Unregister a clock from PM management
+- `pm_clk_suspend()`: Disable all managed clocks during suspend
+- `pm_clk_resume()`: Re-enable all managed clocks during resume
 
 The framework ensures that device clocks are properly gated during suspend and restored during resume, preventing power leaks and ensuring correct device initialization after wakeup.
 
@@ -155,9 +155,9 @@ sudo pm-suspend-hybrid --quirk-test-mode
 
 The PM clock framework interacts with several other kernel subsystems:
 
-- **GenPD (Generic Power Domains)** — Manages power domains that group multiple devices
-- **Runtime PM** — Dynamically powers devices on/off based on usage
-- **CLK framework** — The underlying clock management that PM clocks build on
-- **Device tree** — Clock definitions are often specified in device tree bindings
+- **GenPD (Generic Power Domains)**: Manages power domains that group multiple devices
+- **Runtime PM**: Dynamically powers devices on/off based on usage
+- **CLK framework**: The underlying clock management that PM clocks build on
+- **Device tree**: Clock definitions are often specified in device tree bindings
 
 When debugging PM issues, check all these layers. A clock not being properly managed by `__pm_clk_add()` can cascade into device initialization failures after resume.

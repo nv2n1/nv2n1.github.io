@@ -14,7 +14,7 @@ Google stopped updating the PageRank toolbar in 2016 and fully deprecated the pu
 
 ## The PageRank Story
 
-PageRank was Google’s original link-based ranking signal — a score from 0-10 displayed in the toolbar that showed how “important” a page was based on inbound links. It made sense in 1998 when the web was smaller. The toolbar was last updated in December 2013 and officially retired years ago. The data isn’t publicly available anymore, and chasing it would be wasted effort.
+PageRank was Google’s original link-based ranking signal: a score from 0-10 displayed in the toolbar that showed how “important” a page was based on inbound links. It made sense in 1998 when the web was smaller. The toolbar was last updated in December 2013 and officially retired years ago. The data isn’t publicly available anymore, and chasing it would be wasted effort.
 
 Why did Google kill it? Because a single number couldn’t capture the complexity of modern search ranking. Google’s algorithms now evaluate hundreds of signals, most of which are never publicly disclosed. Obsessing over a retired metric tells you nothing about why your site ranks where it does.
 
@@ -26,7 +26,7 @@ Since 2021, these three metrics have been primary ranking factors:
 
 - **Largest Contentful Paint (LCP)**: How fast the main content loads. Target under 2.5 seconds.
 - **Interaction to Next Paint (INP)**: How responsive your site is to user input. Target under 200ms.
-- **Cumulative Layout Shift (CLS)**: Visual stability — how much content shifts around while loading. Target under 0.1.
+- **Cumulative Layout Shift (CLS)**: Visual stability: how much content shifts around while loading. Target under 0.1.
 
 Check your Core Web Vitals with Google PageSpeed Insights or via the API:
 
@@ -36,7 +36,7 @@ curl "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=example.com
 
 **E-E-A-T Signals**
 
-Experience, Expertise, Authoritativeness, Trustworthiness. Google’s systems now evaluate whether content is written by someone who actually knows the subject. This matters especially for YMYL (Your Money, Your Life) content — anything touching health, finance, or legal advice. An article about medical treatments written by a cardiologist will outrank one written by a generalist, all else equal.
+Experience, Expertise, Authoritativeness, Trustworthiness. Google’s systems now evaluate whether content is written by someone who actually knows the subject. This matters especially for YMYL (Your Money, Your Life) content: anything touching health, finance, or legal advice. An article about medical treatments written by a cardiologist will outrank one written by a generalist, all else equal.
 
 **Backlink Quality Over Quantity**
 
@@ -73,7 +73,7 @@ Built into Chrome DevTools. Run audits locally before deploying changes. Covers 
 Similar to Search Console but for Bing traffic. Useful if you care about Bing visibility.
 
 **Third-party SEO tools**
-Tools like Semrush, Ahrefs, and Moz provide backlink analysis, keyword research, and rank tracking, but none of them have access to Google’s actual ranking algorithm — they’re making educated guesses based on public signals.
+Tools like Semrush, Ahrefs, and Moz provide backlink analysis, keyword research, and rank tracking, but none of them have access to Google’s actual ranking algorithm: they’re making educated guesses based on public signals.
 
 ## The Practical Approach
 
@@ -86,4 +86,4 @@ Stop looking backward. PageRank was a useful concept for 2011. Modern ranking fa
 5.  Good site structure and crawlability
 6.  HTTPS and security signals
 
-If your site follows these principles, algorithm updates won’t blindside you. These aren’t gaming tactics — they’re just building a site that works well and serves users properly.
+If your site follows these principles, algorithm updates won’t blindside you. These aren’t gaming tactics: they’re just building a site that works well and serves users properly.

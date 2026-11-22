@@ -22,7 +22,7 @@ with open('file.txt', 'r') as f:
         print(line.strip())
 ```
 
-This is efficient because Python reads the file in chunks rather than loading the entire contents into memory. Each iteration yields the next line, including the trailing newline character — that’s why `strip()` is typically needed.
+This is efficient because Python reads the file in chunks rather than loading the entire contents into memory. Each iteration yields the next line, including the trailing newline character: that’s why `strip()` is typically needed.
 
 ## Using pathlib (Modern Alternative)
 
@@ -100,7 +100,7 @@ with open('file.txt', 'r') as f:
 
 The standard `with open()` iterator is optimized in CPython and typically reads 8KB chunks internally. This is almost always faster than manually calling `readline()` in a loop. For most real-world use cases, stick with the iterator approach.
 
-If you’re processing millions of lines, benchmarking different approaches on your actual data is worthwhile — I/O patterns and your CPU work per line matter more than the reading method itself.
+If you’re processing millions of lines, benchmarking different approaches on your actual data is worthwhile: I/O patterns and your CPU work per line matter more than the reading method itself.
 
 ## Common Pitfalls and Best Practices
 
@@ -112,11 +112,11 @@ For system scripting, prefer the subprocess module over os.system for better con
 
 These complementary Python tools and commands are useful for daily development workflows:
 
-- python3 -m venv myenv – Create an isolated virtual environment
-- pip list –outdated – Check which packages need updating
-- python3 -m py_compile script.py – Check syntax without running
-- black script.py – Auto-format code to PEP 8 standards
-- mypy script.py – Static type checking for Python code
+- python3 -m venv myenv: Create an isolated virtual environment
+- pip list --outdated: Check which packages need updating
+- python3 -m py_compile script.py: Check syntax without running
+- black script.py: Auto-format code to PEP 8 standards
+- mypy script.py: Static type checking for Python code
 
 ## Quick Verification
 

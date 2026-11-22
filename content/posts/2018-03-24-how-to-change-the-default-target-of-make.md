@@ -79,7 +79,7 @@ clean:
     find . -type f -name "*.pyc" -delete
 ```
 
-Using `.PHONY` declarations is essential — it tells `make` these are not file targets, preventing conflicts if files with those names exist.
+Using `.PHONY` declarations is essential: it tells `make` these are not file targets, preventing conflicts if files with those names exist.
 
 For a C/C++ project with multiple build configurations:
 

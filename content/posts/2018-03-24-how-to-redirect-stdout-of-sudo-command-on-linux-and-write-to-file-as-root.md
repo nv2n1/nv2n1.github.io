@@ -21,7 +21,7 @@ This happens because the shell processes the redirection operator `>` *before* s
 
 ## Solution 1: Use sudo bash -c to wrap the entire command
 
-Pass the full command—including redirection—to bash as root:
+Pass the full command (including redirection) to bash as root:
 
 ``` bash
 sudo bash -c 'echo "echo hello" > /usr/local/bin/hello'
@@ -35,7 +35,7 @@ Use double quotes if you need variable expansion in the command:
 sudo bash -c "echo 'hello world' > /usr/local/bin/hello"
 ```
 
-Be careful with escaping—variables in double-quoted strings are expanded by your current shell, not the root shell.
+Be careful with escaping: variables in double-quoted strings are expanded by your current shell, not the root shell.
 
 ## Solution 2: Use tee to write to the file
 
@@ -79,7 +79,7 @@ Don’t chain multiple sudos like this:
 sudo echo "hello" | sudo tee /usr/local/bin/hello
 ```
 
-The pipe `|` happens outside sudo, so the second sudo sees stdin already created by your unprivileged shell. This can work but is redundant—only the second sudo (on `tee`) actually needs root privileges.
+The pipe `|` happens outside sudo, so the second sudo sees stdin already created by your unprivileged shell. This can work but is redundant: only the second sudo (on `tee`) actually needs root privileges.
 
 ## Which should you use?
 

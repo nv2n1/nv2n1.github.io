@@ -53,7 +53,7 @@ sudo apt install gddrescue  # or brew install ddrescue on macOS
 sudo ddrescue --force -D --zeroise -b 4M Windows.iso /dev/sdX
 ```
 
-Replace `/dev/sdX` with your actual USB device identifier. Double-check this—using the wrong device will overwrite data.
+Replace `/dev/sdX` with your actual USB device identifier. Double-check this: using the wrong device will overwrite data.
 
 **With `pv` for detailed progress:**
 

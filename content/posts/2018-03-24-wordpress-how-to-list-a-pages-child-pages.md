@@ -38,7 +38,7 @@ Note the shift from global `$id` to `get_the_ID()`. The global `$id` variable is
 `wp_list_pages()` accepts an array of arguments. Here are the most useful ones:
 
 - **title_li**: Sets the list item wrapper (empty string `''` removes it)
-- **child_of**: Parent page ID — use `get_the_ID()` for the current page
+- **child_of**: Parent page ID: use `get_the_ID()` for the current page
 - **sort_column**: Order by `menu_order`, `post_title`, `post_date`, etc.
 - **exclude**: Comma-separated page IDs to exclude
 - **echo**: Set to `false` to return the HTML instead of echoing it

@@ -18,14 +18,14 @@ DDL statements define and modify the structure of your database schema itself. T
 
 Common DDL commands:
 
-- `CREATE TABLE` — defines a new table with columns and constraints
-- `ALTER TABLE` — modifies table structure (add/drop columns, constraints, indexes)
-- `DROP TABLE` — removes a table and its data
-- `CREATE INDEX` — creates an index for query optimization
-- `CREATE DATABASE` — creates a new database
-- `TRUNCATE TABLE` — removes all rows from a table (faster than DELETE, non-recoverable in most systems)
+- `CREATE TABLE`: defines a new table with columns and constraints
+- `ALTER TABLE`: modifies table structure (add/drop columns, constraints, indexes)
+- `DROP TABLE`: removes a table and its data
+- `CREATE INDEX`: creates an index for query optimization
+- `CREATE DATABASE`: creates a new database
+- `TRUNCATE TABLE`: removes all rows from a table (faster than DELETE, non-recoverable in most systems)
 
-DDL statements are **auto-committed** by default in most database systems — the changes take effect immediately and cannot be rolled back within a transaction. This is critical to understand when writing schema migration scripts.
+DDL statements are **auto-committed** by default in most database systems: the changes take effect immediately and cannot be rolled back within a transaction. This is critical to understand when writing schema migration scripts.
 
 Example:
 
@@ -47,13 +47,13 @@ DML statements work with the data inside those structures. They insert, update, 
 
 Common DML commands:
 
-- `SELECT` — retrieves data from one or more tables
-- `INSERT` — adds new rows to a table
-- `UPDATE` — modifies existing data
-- `DELETE` — removes specific rows
-- `MERGE` — combines INSERT and UPDATE operations (useful for upserts)
+- `SELECT`: retrieves data from one or more tables
+- `INSERT`: adds new rows to a table
+- `UPDATE`: modifies existing data
+- `DELETE`: removes specific rows
+- `MERGE`: combines INSERT and UPDATE operations (useful for upserts)
 
-Unlike DDL, DML statements **are transactional** — you can wrap them in a transaction, make changes, and rollback if something goes wrong.
+Unlike DDL, DML statements **are transactional**: you can wrap them in a transaction, make changes, and rollback if something goes wrong.
 
 Example:
 
@@ -96,7 +96,7 @@ If either statement fails, both are rolled back, keeping your data consistent.
 
 Two other command categories exist:
 
-- **DCL (Data Control Language)** — controls permissions: `GRANT`, `REVOKE`
-- **TCL (Transaction Control Language)** — manages transactions: `COMMIT`, `ROLLBACK`, `SAVEPOINT`
+- **DCL (Data Control Language)**: controls permissions: `GRANT`, `REVOKE`
+- **TCL (Transaction Control Language)**: manages transactions: `COMMIT`, `ROLLBACK`, `SAVEPOINT`
 
 Understanding these distinctions helps you write safer, more predictable database code and makes troubleshooting schema and data issues much easier.

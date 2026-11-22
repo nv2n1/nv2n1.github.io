@@ -20,7 +20,7 @@ The simplest approach is to run strace and filter for file-related syscalls:
 strace -e trace=open,openat,openat2 cat ~/.bashrc 2>&1
 ```
 
-This shows which files the program tries to open. On modern Linux kernels, `openat()` and `openat2()` are the primary syscalls—`open()` is rarely used now. Including all three ensures you catch everything.
+This shows which files the program tries to open. On modern Linux kernels, `openat()` and `openat2()` are the primary syscalls: `open()` is rarely used now. Including all three ensures you catch everything.
 
 The output looks like:
 
@@ -55,7 +55,7 @@ strace -o /tmp/trace.log cat ~/.bashrc
 less /tmp/trace.log
 ```
 
-This reveals memory mapping, library loading, signal handlers, and exit status—useful for debugging permission issues or missing dependencies.
+This reveals memory mapping, library loading, signal handlers, and exit status: useful for debugging permission issues or missing dependencies.
 
 ### Following child processes
 
@@ -137,5 +137,5 @@ The `-c` flag shows a summary of syscall counts and time spent in each.
 - strace requires the same user as the target process or root privileges
 - File descriptor numbers are local to each process
 - `openat2()` requires Linux 5.1+; older kernels use `openat()` exclusively
-- strace output is verbose—filter by syscall type to reduce overhead
+- strace output is verbose: filter by syscall type to reduce overhead
 - For production debugging, prefer `lsof` over `strace` to minimize performance impact

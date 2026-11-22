@@ -22,7 +22,7 @@ Use MapReduce if you’re:
 - Needing predictable resource isolation and allocation guarantees via YARN
 - Working with teams already experienced with MapReduce internals
 
-For anything else—new projects, real-time processing, interactive queries, or machine learning—evaluate Spark, Flink, or managed services first.
+For anything else (new projects, real-time processing, interactive queries, or machine learning) evaluate Spark, Flink, or managed services first.
 
 ## MapReduce Architecture Basics
 

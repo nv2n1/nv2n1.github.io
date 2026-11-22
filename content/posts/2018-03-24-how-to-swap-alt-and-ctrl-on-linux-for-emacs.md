@@ -73,9 +73,9 @@ gsettings set org.gnome.desktop.input-sources xkb-options "['ctrl:swap_lalt_lctl
 
 Available options:
 
-- `ctrl:swap_lalt_lctl` — swap left Alt and left Ctrl
-- `ctrl:swap_ralt_rctl` — swap right Alt and right Ctrl
-- `ctrl:swapcaps` — swap Caps Lock and Ctrl (useful alternative)
+- `ctrl:swap_lalt_lctl`: swap left Alt and left Ctrl
+- `ctrl:swap_ralt_rctl`: swap right Alt and right Ctrl
+- `ctrl:swapcaps`: swap Caps Lock and Ctrl (useful alternative)
 
 To verify the setting:
 

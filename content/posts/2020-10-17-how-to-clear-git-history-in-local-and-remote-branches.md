@@ -10,13 +10,13 @@ canonical: /how-to-clear-git-history-in-local-and-remote-branches/
 url: /how-to-clear-git-history-in-local-and-remote-branches/
 ---
 
-Git tracks every commit, allowing you to inspect the full change history of a repository. However, this history accumulates storage overhead—especially problematic when large files were accidentally committed. If you need to discard all history and keep only the current code state, you can rebuild a branch with a single commit.
+Git tracks every commit, allowing you to inspect the full change history of a repository. However, this history accumulates storage overhead, especially problematic when large files were accidentally committed. If you need to discard all history and keep only the current code state, you can rebuild a branch with a single commit.
 
 This approach works by creating an orphaned branch, committing current files to it, and replacing the original branch. It’s commonly needed for accidentally-versioned large binaries, credentials, or when migrating a repository to a fresh state.
 
 ## Clear the Master (or Main) Branch
 
-Start in your cloned repository. First, identify which branch you want to clear—most modern repos use `main` instead of `master`.
+Start in your cloned repository. First, identify which branch you want to clear: most modern repos use `main` instead of `master`.
 
 ``` bash
 git checkout --orphan tmp-clean

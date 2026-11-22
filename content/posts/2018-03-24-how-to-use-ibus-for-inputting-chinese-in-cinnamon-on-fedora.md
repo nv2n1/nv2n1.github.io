@@ -26,7 +26,7 @@ You need the `imsettings-cinnamon` package to bridge ibus and Cinnamon:
 sudo dnf install imsettings-cinnamon
 ```
 
-Use `dnf` instead of the older `yum` command — it’s the current package manager on Fedora.
+Use `dnf` instead of the older `yum` command: it’s the current package manager on Fedora.
 
 ## Configure ibus as your input method
 
@@ -95,11 +95,11 @@ If you see permission errors, ensure your user is in the right groups or restart
 
 These related commands are often used alongside the tools discussed in this article:
 
-- man command-name – Read the manual page for any command
-- which command-name – Find the location of an executable
-- rpm -qa or dpkg -l – List installed packages
-- journalctl -u service-name – Check service logs
-- ss -tulpn – List listening ports and services
+- man command-name: Read the manual page for any command
+- which command-name: Find the location of an executable
+- rpm -qa or dpkg -l: List installed packages
+- journalctl -u service-name: Check service logs
+- ss -tulpn: List listening ports and services
 
 ## Quick Reference
 

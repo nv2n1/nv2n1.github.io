@@ -41,7 +41,7 @@ If you use dune projects, utop integrates seamlessly:
 dune utop
 ```
 
-utop reads your `.ocamlinit` file and respects your existing toplevel configuration. For most developers, this is the clear winner — the productivity gains from completion and colors alone justify the small overhead.
+utop reads your `.ocamlinit` file and respects your existing toplevel configuration. For most developers, this is the clear winner: the productivity gains from completion and colors alone justify the small overhead.
 
 ## rlwrap: Minimal Wrapper Approach
 
@@ -104,7 +104,7 @@ rlwrap -f ~/.rlwrap/ocaml_completions ocaml
 | Colors           | No            | No       | Yes               |
 | Completion       | No            | Basic    | Full              |
 | Type Information | N/A           | No       | Yes (with Merlin) |
-| Setup Time       | —             | \< 1 min | \< 1 min          |
+| Setup Time       |:             | \< 1 min | \< 1 min          |
 
 ## Practical Recommendation
 

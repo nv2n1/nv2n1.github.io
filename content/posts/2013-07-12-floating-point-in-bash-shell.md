@@ -10,11 +10,11 @@ canonical: /floating-point-in-bash-shell/
 url: /floating-point-in-bash-shell/
 ---
 
-Bash has no native floating point support. The `(( ))` and `$(( ))` arithmetic expansions only handle integers. For decimals, you need external tools — primarily `bc`, `awk`, or `dc`.
+Bash has no native floating point support. The `(( ))` and `$(( ))` arithmetic expansions only handle integers. For decimals, you need external tools: primarily `bc`, `awk`, or `dc`.
 
 ## bc: Arbitrary Precision Calculator
 
-`bc` is the standard choice for floating point math in shell scripts. It’s POSIX-compliant, available on every Unix-like system, and handles arbitrary precision — critical for financial calculations where rounding errors accumulate.
+`bc` is the standard choice for floating point math in shell scripts. It’s POSIX-compliant, available on every Unix-like system, and handles arbitrary precision: critical for financial calculations where rounding errors accumulate.
 
 ### Basic Syntax
 
@@ -178,7 +178,7 @@ If your script already uses Python, invoke it for math:
 python3 -c "print(1.2 + 8.2)"           # 10.0
 ```
 
-Don’t import Python just for arithmetic — `bc` is lighter and faster.
+Don’t import Python just for arithmetic: `bc` is lighter and faster.
 
 ## When to Use What
 

@@ -10,7 +10,7 @@ canonical: /x86-64-instructions-for-floating-point-comparisons/
 url: /x86-64-instructions-for-floating-point-comparisons/
 ---
 
-The x86-64 ISA provides `ucomiss` and `ucomisd` for comparing SSE floating-point values. These instructions compute S1 – S2 and set the EFLAGS register (ZF, PF, CF) based on the result.
+The x86-64 ISA provides `ucomiss` and `ucomisd` for comparing SSE floating-point values. These instructions compute S1: S2 and set the EFLAGS register (ZF, PF, CF) based on the result.
 
 | Instruction | Operands | Purpose                                  |
 |-------------|----------|------------------------------------------|
@@ -62,7 +62,7 @@ The `v`-prefixed instructions accept the same flag semantics and conditional bra
 
 ## Handling NaN Values
 
-Unordered comparisons—when either operand is NaN—set ZF, PF, and CF all to 1. Always check for NaN in security-sensitive code or when processing untrusted floating-point data:
+Unordered comparisons (when either operand is NaN) set ZF, PF, and CF all to 1. Always check for NaN in security-sensitive code or when processing untrusted floating-point data:
 
 ``` asm
 ucomisd %xmm1, %xmm0

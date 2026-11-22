@@ -38,7 +38,7 @@ for file in *.tif; do
 done
 ```
 
-Or using `mogrify` to convert files in place (use with caution — test on copies first):
+Or using `mogrify` to convert files in place (use with caution: test on copies first):
 
 ``` bash
 mogrify -colorspace CMYK -compress LZW *.tif
@@ -66,11 +66,11 @@ If a profile exists, conversion may already be embedded.
 
 Common compression methods for TIFF files:
 
-- **LZW** — Lossless, widely compatible, good compression
-- **Zip** — Similar to LZW, also lossless
-- **JPEG** — Lossy, not recommended for print work
-- **None** — No compression (largest file size)
-- **Group4** — For bilevel (black and white) images only
+- **LZW**: Lossless, widely compatible, good compression
+- **Zip**: Similar to LZW, also lossless
+- **JPEG**: Lossy, not recommended for print work
+- **None**: No compression (largest file size)
+- **Group4**: For bilevel (black and white) images only
 
 ``` bash
 convert from.tif -colorspace CMYK -compress Zip to.tif
@@ -120,11 +120,11 @@ Package management issues often stem from stale caches. Run dnf clean all on Fed
 
 These commands are frequently used alongside the tools discussed in this article:
 
-- systemctl status service-name – Check if a service is running
-- journalctl -u service-name -f – Follow service logs in real time
-- rpm -qi package-name – Query installed package information
-- dnf history – View package transaction history
-- top or htop – Monitor system resource usage
+- systemctl status service-name: Check if a service is running
+- journalctl -u service-name -f: Follow service logs in real time
+- rpm -qi package-name: Query installed package information
+- dnf history: View package transaction history
+- top or htop: Monitor system resource usage
 
 ## Quick Verification
 

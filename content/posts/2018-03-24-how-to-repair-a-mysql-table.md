@@ -22,10 +22,10 @@ CHECK TABLE mybb_sessions;
 
 This returns detailed information about corruption. Common status values:
 
-- `OK` — Table is healthy
-- `error` — Table has structural issues
-- `corrupt` — Data corruption detected
-- `crashed` — Table crashed and needs repair
+- `OK`: Table is healthy
+- `error`: Table has structural issues
+- `corrupt`: Data corruption detected
+- `crashed`: Table crashed and needs repair
 
 ## Repairing via MySQL CLI
 

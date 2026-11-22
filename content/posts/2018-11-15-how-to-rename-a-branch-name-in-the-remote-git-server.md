@@ -109,7 +109,7 @@ git branch -u origin/new-name new-name
 
 If your repository has branch protection rules that prevent force pushes or require pull request reviews, branch renames may be restricted at the repository level. Check your repository settings to see if branch rename operations are allowed for your role.
 
-If you can’t rename via the command line due to protection rules, use the web UI — most platforms allow administrators and maintainers to rename protected branches through the settings panel.
+If you can’t rename via the command line due to protection rules, use the web UI: most platforms allow administrators and maintainers to rename protected branches through the settings panel.
 
 ## Renaming across multiple remotes
 

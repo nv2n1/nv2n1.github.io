@@ -12,7 +12,7 @@ url: /unified-xen-domu-configuration-file/
 
 Xen remains in production use across several platforms (AWS EC2, Citrix Hypervisor), though KVM has become the default hypervisor for most Linux distributions. This approach is most relevant if you’re managing legacy Xen infrastructure or working with providers that standardize on it.
 
-When managing multiple Xen DomU virtual machines with similar configurations, creating individual configuration files for each VM introduces unnecessary overhead and maintenance burden. The typical pattern—where each file differs only in VM name, memory allocation, and disk image path—leads to repetitive duplication and makes cluster-wide changes cumbersome.
+When managing multiple Xen DomU virtual machines with similar configurations, creating individual configuration files for each VM introduces unnecessary overhead and maintenance burden. The typical pattern (where each file differs only in VM name, memory allocation, and disk image path) leads to repetitive duplication and makes cluster-wide changes cumbersome.
 
 A unified configuration file with parameterized values solves this problem. Instead of maintaining separate files, you define a single template with validation logic and pass VM-specific parameters at creation time.
 

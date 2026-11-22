@@ -34,17 +34,17 @@ This prevents coredumps from being stored permanently while still logging crash 
 
 The `Storage=` directive in `coredump.conf` controls where crashes are saved:
 
-– `none` — Logs crashes but discards dumps immediately
-– `external` — Stores dumps in `/var/lib/systemd/coredump/` (default)
-– `journal` — Stores dumps in the systemd journal with rotation
-– `both` — Stores in both external storage and journal
+– `none`: Logs crashes but discards dumps immediately
+– `external`: Stores dumps in `/var/lib/systemd/coredump/` (default)
+– `journal`: Stores dumps in the systemd journal with rotation
+– `both`: Stores in both external storage and journal
 
 Other useful directives:
 
-– `Compress=yes` — Compress stored coredumps (default on most distributions)
-– `ProcessSizeMax=2G` — Maximum size of core dumps to process
-– `MaxUse=` — Maximum disk space for stored dumps
-– `KeepFree=` — Minimum free disk space to maintain
+– `Compress=yes`: Compress stored coredumps (default on most distributions)
+– `ProcessSizeMax=2G`: Maximum size of core dumps to process
+– `MaxUse=`: Maximum disk space for stored dumps
+– `KeepFree=`: Minimum free disk space to maintain
 
 \## Common Scenarios
 

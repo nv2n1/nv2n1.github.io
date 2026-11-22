@@ -10,7 +10,7 @@ canonical: /how-to-configure-scanner-in-a-hp-all-in-one-printer-on-linux/
 url: /how-to-configure-scanner-in-a-hp-all-in-one-printer-on-linux/
 ---
 
-Configuring an HP all-in-one printer’s scanner on Linux requires HPLIP (HP Linux Imaging and Printing) for device support and SANE (Scanner Access Now Easy) for scanning functionality. The main gotcha is that a working printer doesn’t guarantee a working scanner — they use different subsystems and need separate configuration.
+Configuring an HP all-in-one printer’s scanner on Linux requires HPLIP (HP Linux Imaging and Printing) for device support and SANE (Scanner Access Now Easy) for scanning functionality. The main gotcha is that a working printer doesn’t guarantee a working scanner: they use different subsystems and need separate configuration.
 
 ## Installing Required Packages
 
@@ -65,7 +65,7 @@ If nothing appears, your scanner isn’t detected. Check user permissions:
 sudo usermod -aG scanner,lp $USER
 ```
 
-Log out completely and back in — group membership changes require a fresh login session. Simply opening a new terminal won’t work.
+Log out completely and back in: group membership changes require a fresh login session. Simply opening a new terminal won’t work.
 
 ## Checking for Proprietary Plugins
 

@@ -10,7 +10,7 @@ canonical: /gcc-may-save-you-some-recursive-functions-calls-an-analysis-of-a-fun
 url: /gcc-may-save-you-some-recursive-functions-calls-an-analysis-of-a-function-call-stack-length-example/
 ---
 
-GCC applies sophisticated optimizations to recursive functions, and recursive inlining is one of the most dramatic. When the compiler can’t use simple tail-call optimization—because a function has side effects like `printf` that reference stack parameters—it often unrolls multiple recursion iterations into a single function body. Understanding this behavior matters for performance tuning, debugging, and predicting stack usage.
+GCC applies sophisticated optimizations to recursive functions, and recursive inlining is one of the most dramatic. When the compiler can’t use simple tail-call optimization (because a function has side effects like `printf` that reference stack parameters), it often unrolls multiple recursion iterations into a single function body. Understanding this behavior matters for performance tuning, debugging, and predicting stack usage.
 
 ## The Problem: Why Tail-Call Optimization Fails
 
@@ -65,7 +65,7 @@ The `-fno-stack-protector` flag removes stack canaries, making assembly easier t
     stack: 0x7fff3690664c
     stack: 0x7fff3690662c
 
-Stack addresses decrease consistently by `0x20` bytes per call—one frame per recursion level. The assembly for -O0 is straightforward:
+Stack addresses decrease consistently by `0x20` bytes per call: one frame per recursion level. The assembly for -O0 is straightforward:
 
 ``` asm
 000000000000064a <RecursiveFunction>:
@@ -93,7 +93,7 @@ Stack addresses decrease consistently by `0x20` bytes per call—one frame per r
   68c:   c3                      retq
 ```
 
-Each call allocates `0x20` bytes: `0x8` for the saved RBP, `0x10` for locals, and `0x8` pushed by the `callq` instruction. `-O1` and `-O2` follow the same pattern—multiple frames, one per recursion level.
+Each call allocates `0x20` bytes: `0x8` for the saved RBP, `0x10` for locals, and `0x8` pushed by the `callq` instruction. `-O1` and `-O2` follow the same pattern: multiple frames, one per recursion level.
 
 ### Results: -O3 (Recursive Inlining)
 
@@ -197,7 +197,7 @@ This limits the compiler to only two levels of recursion before stopping the unr
 
 ## Practical Implications and Trade-offs
 
-Recursive inlining exchanges code size for reduced function call overhead. For deep recursion, the benefit is substantial—each call eliminated saves register setup, argument marshaling, and return instruction cycles.
+Recursive inlining exchanges code size for reduced function call overhead. For deep recursion, the benefit is substantial: each call eliminated saves register setup, argument marshaling, and return instruction cycles.
 
 However, there are real downsides:
 

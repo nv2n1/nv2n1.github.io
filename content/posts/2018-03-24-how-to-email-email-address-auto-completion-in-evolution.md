@@ -29,7 +29,7 @@ To see what address books Evolution is currently using, navigate to **Contacts**
 3.  Look for the option **“Check for recipients in external address books”** and ensure it’s enabled
 4.  In the same section, you can control which address books Evolution searches during composition
 
-If you’re using Evolution 3.50 or later, there’s also a search ranking option that weights which address books to check first—useful when you have multiple sources.
+If you’re using Evolution 3.50 or later, there’s also a search ranking option that weights which address books to check first: useful when you have multiple sources.
 
 ## Sync Contacts from Online Accounts
 
@@ -61,7 +61,7 @@ Common LDAP configuration:
 
 **Auto-completion is slow:** This typically happens with large address books or when querying remote LDAP servers. Evolution caches results, so the first search is slower but subsequent ones are faster.
 
-**Contacts not appearing:** Verify the address book is actually synced. Check **Contacts** sidebar—if a source shows zero entries, the sync failed. Try disconnecting and re-adding the account in GNOME Online Accounts.
+**Contacts not appearing:** Verify the address book is actually synced. Check **Contacts** sidebar: if a source shows zero entries, the sync failed. Try disconnecting and re-adding the account in GNOME Online Accounts.
 
 **Duplicate suggestions:** If Evolution suggests the same contact multiple times, you likely have duplicates across address books. Use the **Contacts** application to merge duplicates before re-enabling auto-completion.
 
@@ -73,7 +73,7 @@ If you’re using Microsoft Exchange, Evolution’s native EWS (Exchange Web Ser
 
 - Keep your primary address book under 5000 contacts for snappy auto-completion
 - If using multiple LDAP servers, disable ones you rarely query
-- Evolution’s auto-completion is single-threaded, so very large LDAP queries can briefly freeze the compose window—this is expected behavior
+- Evolution’s auto-completion is single-threaded, so very large LDAP queries can briefly freeze the compose window: this is expected behavior
 
 ## 2026 Comprehensive Guide: Best Practices
 

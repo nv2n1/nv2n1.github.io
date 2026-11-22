@@ -145,7 +145,7 @@ def safe_write_operation(file_path, content):
 
 **Effective vs. real permissions**: On Unix systems, `os.access()` checks effective permissions (what the current process can do). Use `stat()` to check actual file mode bits if you need the raw mode information.
 
-**Windows differences**: Windows doesn’t use Unix-style permission bits. File access is determined by ACLs. `os.access()` still works but behaves differently—use the try-except approach for cross-platform code.
+**Windows differences**: Windows doesn’t use Unix-style permission bits. File access is determined by ACLs. `os.access()` still works but behaves differently: use the try-except approach for cross-platform code.
 
 ## Type-hinted helper function
 

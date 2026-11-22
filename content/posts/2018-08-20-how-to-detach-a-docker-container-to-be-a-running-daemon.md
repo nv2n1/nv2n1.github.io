@@ -131,7 +131,7 @@ healthcheck:
   start_period: 40s
 ```
 
-Docker runs the test command every 30 seconds. After 3 consecutive failures, the container is marked unhealthy. The `start_period` delays checks while the application initializes—useful for slow-starting services.
+Docker runs the test command every 30 seconds. After 3 consecutive failures, the container is marked unhealthy. The `start_period` delays checks while the application initializes: useful for slow-starting services.
 
 For shell-based checks:
 
@@ -187,7 +187,7 @@ podman logs -f my-service
 podman stats my-service
 ```
 
-Podman has no daemon process—it directly manages containers. It’s ideal for multi-tenant systems, development machines, and environments where privilege escalation is forbidden. Rootless mode has limitations with certain network configurations and privileged operations, so test your specific use case.
+Podman has no daemon process: it directly manages containers. It’s ideal for multi-tenant systems, development machines, and environments where privilege escalation is forbidden. Rootless mode has limitations with certain network configurations and privileged operations, so test your specific use case.
 
 ## Scaling Beyond Single Hosts
 

@@ -10,7 +10,7 @@ canonical: /changing-mac-address-in-linux-aka-mac-spoofing/
 url: /changing-mac-address-in-linux-aka-mac-spoofing/
 ---
 
-MAC stands for Media Access Control — a six-byte identifier (usually written as twelve hexadecimal digits) that uniquely identifies a network interface on a LAN. The Address Resolution Protocol (ARP) maps IP addresses to MAC addresses at layer 2.
+MAC stands for Media Access Control: a six-byte identifier (usually written as twelve hexadecimal digits) that uniquely identifies a network interface on a LAN. The Address Resolution Protocol (ARP) maps IP addresses to MAC addresses at layer 2.
 
 You might need to change your MAC address to:
 
@@ -119,7 +119,7 @@ iw dev wlan0 link
 
 ## Checking Valid MAC Addresses
 
-Real MAC addresses follow patterns — the first octet’s least significant bit indicates unicast (even) vs. multicast (odd), and the second-least significant bit indicates universally administered (0) vs. locally administered (1).
+Real MAC addresses follow patterns: the first octet’s least significant bit indicates unicast (even) vs. multicast (odd), and the second-least significant bit indicates universally administered (0) vs. locally administered (1).
 
 For testing, use locally administered unicast addresses (second hex digit is even and has bit 1 set):
 

@@ -10,7 +10,7 @@ canonical: /designing-posters-systutorials-qa/
 url: /designing-posters-systutorials-qa/
 ---
 
-If you’re creating posters—whether for conferences, events, or general communication—you’ll want the right tools and guidance. Here’s a practical breakdown of what works.
+If you’re creating posters (whether for conferences, events, or general communication) you’ll want the right tools and guidance. Here’s a practical breakdown of what works.
 
 ### Design Software
 
@@ -24,7 +24,7 @@ sudo apt install inkscape
 sudo dnf install inkscape
 ```
 
-**GIMP** handles raster image editing—photo retouching, layer composition, and pixel-level work. It’s not a layout tool, but it’s essential for preparing images before placing them in your poster.
+**GIMP** handles raster image editing: photo retouching, layer composition, and pixel-level work. It’s not a layout tool, but it’s essential for preparing images before placing them in your poster.
 
 ``` bash
 # Install on Debian/Ubuntu
@@ -52,7 +52,7 @@ For most posters, the practical approach is:
 2.  Prepare photos in GIMP (color correction, sizing, cropping)
 3.  Assemble everything in Scribus for final layout and printing
 
-Alternatively, if your poster is mostly graphics-heavy with minimal text, Inkscape alone may be sufficient—it supports text and image placement reasonably well.
+Alternatively, if your poster is mostly graphics-heavy with minimal text, Inkscape alone may be sufficient: it supports text and image placement reasonably well.
 
 ### Design Principles
 

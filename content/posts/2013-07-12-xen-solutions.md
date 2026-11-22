@@ -10,7 +10,7 @@ canonical: /xen-solutions/
 url: /xen-solutions/
 ---
 
-Xen remains a critical hypervisor in production environments—AWS EC2, Citrix Hypervisor, and other cloud platforms rely on it—but most Linux distributions now default to KVM for general-purpose virtualization. If you’re working with Xen specifically, this guide covers Dom0 and DomU setup on modern distributions.
+Xen remains a critical hypervisor in production environments (AWS EC2, Citrix Hypervisor, and other cloud platforms rely on it), but most Linux distributions now default to KVM for general-purpose virtualization. If you’re working with Xen specifically, this guide covers Dom0 and DomU setup on modern distributions.
 
 ## When to Use Xen
 
@@ -54,7 +54,7 @@ Verify the hypervisor is running:
 sudo xl info
 ```
 
-This outputs hypervisor version, available cores, and memory—confirm your system is running under Xen.
+This outputs hypervisor version, available cores, and memory: confirm your system is running under Xen.
 
 ### Configuring Dom0 CPU and Memory
 
@@ -122,7 +122,7 @@ virt-install --paravirt --virt-type xen --name vm1 \
   --network bridge=xenbr0
 ```
 
-Unmodified Fedora 41 kernels work with Xen HVM and PV domains using pv_ops drivers—no Xenified kernel needed for the guest.
+Unmodified Fedora 41 kernels work with Xen HVM and PV domains using pv_ops drivers: no Xenified kernel needed for the guest.
 
 ## Managing DomU VMs
 

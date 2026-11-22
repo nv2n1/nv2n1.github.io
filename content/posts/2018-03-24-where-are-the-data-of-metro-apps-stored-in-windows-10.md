@@ -18,16 +18,16 @@ UWP app data lives here:
 
     C:\Users\<YourUsername>\AppData\Local\Packages\<AppPackageName>
 
-The `<AppPackageName>` is a unique identifier assigned by Windows—typically a long alphanumeric string like `Microsoft.WindowsCalculator_8wekyb3d8bbwe`. This naming convention ensures apps from different publishers don’t collide.
+The `<AppPackageName>` is a unique identifier assigned by Windows: typically a long alphanumeric string like `Microsoft.WindowsCalculator_8wekyb3d8bbwe`. This naming convention ensures apps from different publishers don’t collide.
 
 ## Directory Structure Within Packages
 
 Inside each package folder, you’ll typically find:
 
-- **LocalState/** — app settings, caches, and local data
-- **RoamingState/** — data that syncs across devices (if the app supports it)
-- **AC/** — application cache
-- **TempState/** — temporary files (safe to delete)
+- **LocalState/**: app settings, caches, and local data
+- **RoamingState/**: data that syncs across devices (if the app supports it)
+- **AC/**: application cache
+- **TempState/**: temporary files (safe to delete)
 
 Some apps create additional subdirectories for specific data types (databases, logs, etc.).
 
@@ -98,7 +98,7 @@ Remove-Item -Path $packagePath -Recurse -Force
 - Windows 11 uses the same structure as Windows 10, so these paths remain consistent
 - Some enterprise-managed systems may have different permissions or storage policies
 - OneDrive integration can sync some app data; check app settings for cloud backup options
-- Portable or sideloaded apps may store data differently—check their documentation
+- Portable or sideloaded apps may store data differently: check their documentation
 
 ## 2026 Best Practices and Advanced Techniques
 

@@ -84,7 +84,7 @@ The `-print0` flag outputs filenames separated by NUL bytes instead of newlines,
 rsync -avz --delete "/home/user/my project/" backup.server:/backups/my-project/
 ```
 
-The trailing slash after the source path is important — it tells rsync to copy the contents, not the directory itself.
+The trailing slash after the source path is important: it tells rsync to copy the contents, not the directory itself.
 
 ## Remote paths with spaces
 
@@ -98,7 +98,7 @@ Wrap both local and remote paths in quotes.
 
 ## Common pitfalls
 
-**Don’t forget quotes in scripts** — even in bash scripts, use quotes. Unquoted variables and globs expand before rsync receives them:
+**Don’t forget quotes in scripts**: even in bash scripts, use quotes. Unquoted variables and globs expand before rsync receives them:
 
 ``` bash
 # Wrong
@@ -108,7 +108,7 @@ rsync -av $source_path remote:/backup/
 rsync -av "$source_path" remote:/backup/
 ```
 
-**Be careful with glob patterns** — if your path contains wildcards, single quotes prevent them from expanding:
+**Be careful with glob patterns**: if your path contains wildcards, single quotes prevent them from expanding:
 
 ``` bash
 # This expands the glob before rsync sees it
@@ -118,7 +118,7 @@ rsync -av /home/user/my *files/ remote:/backup/
 rsync -av '/home/user/my *files/' remote:/backup/
 ```
 
-**Verify your paths** — test with `rsync --dry-run` first:
+**Verify your paths**: test with `rsync --dry-run` first:
 
 ``` bash
 rsync -avz --dry-run "/home/user/my documents/" remote:/backup/

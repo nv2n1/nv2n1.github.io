@@ -10,7 +10,7 @@ canonical: /setting-up-lvm-backed-xen-domu/
 url: /setting-up-lvm-backed-xen-domu/
 ---
 
-LVM logical volumes are a practical choice for Xen guest storage. They support dynamic resizing, snapshots, and efficient cloning — capabilities that make capacity management and guest provisioning straightforward compared to fixed disk images.
+LVM logical volumes are a practical choice for Xen guest storage. They support dynamic resizing, snapshots, and efficient cloning: capabilities that make capacity management and guest provisioning straightforward compared to fixed disk images.
 
 This guide covers creating and configuring LVM-backed virtual block devices (VBDs) for Xen DomU instances.
 
@@ -57,7 +57,7 @@ For initial domain installation with a kernel and ramdisk:
     on_reboot='restart'
     on_crash='restart'
 
-Replace `/path/to/` with the actual location of your installation kernel and initrd — typically in `/boot/` on the dom0 or in a dedicated installation directory.
+Replace `/path/to/` with the actual location of your installation kernel and initrd: typically in `/boot/` on the dom0 or in a dedicated installation directory.
 
 ## Domain parameters explained
 

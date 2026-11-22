@@ -127,7 +127,7 @@ These capture system calls in real-time with minimal performance impact.
 
 ### Practical Considerations
 
-**Advisory vs Mandatory Locks**: Linux primarily uses advisory locks—the kernel doesn’t enforce them unless all applications cooperate. Mandatory locks require mount-time configuration and are rarely used in modern systems.
+**Advisory vs Mandatory Locks**: Linux primarily uses advisory locks: the kernel doesn’t enforce them unless all applications cooperate. Mandatory locks require mount-time configuration and are rarely used in modern systems.
 
 **Race Conditions**: Between checking lock status and performing operations, another process might acquire the lock. Always use atomic locking mechanisms (fcntl, flock) rather than checking then writing.
 

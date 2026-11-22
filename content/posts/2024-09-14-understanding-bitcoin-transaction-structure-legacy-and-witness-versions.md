@@ -49,7 +49,7 @@ The 2017 SegWit upgrade separated signature data from the transaction structure:
 
 **Address Format**: SegWit v0 addresses use Bech32 encoding starting with `bc1q`. These are P2WPKH (Pay to Witness PubKey Hash) and P2WSH (Pay to Witness Script Hash).
 
-**Backward Compatibility**: Nodes updated gradually. Old nodes could still verify SegWit transactions but couldn’t validate the witness data—a deliberate design choice to avoid hard forks.
+**Backward Compatibility**: Nodes updated gradually. Old nodes could still verify SegWit transactions but couldn’t validate the witness data: a deliberate design choice to avoid hard forks.
 
 SegWit adoption solved the technical groundwork for Lightning Network, allowing reliable payment channels.
 
@@ -71,15 +71,15 @@ Today, Taproot dominates new address generation:
 
 **Adoption Rate**: Most wallets and exchanges have migrated primary addresses to P2TR. Legacy addresses still function but are considered outdated.
 
-**Fee Efficiency**: Transaction batching—combining dozens or hundreds of outputs into a single transaction—is standard practice for exchanges. A batch withdrawal of 100 users costs roughly the same as sending 2-3 individual transactions, significantly reducing per-user fees.
+**Fee Efficiency**: Transaction batching (combining dozens or hundreds of outputs into a single transaction) is standard practice for exchanges. A batch withdrawal of 100 users costs roughly the same as sending 2-3 individual transactions, significantly reducing per-user fees.
 
 **Block Space Demand**: With a 4MB effective block size (1MB base + 3MB witness), the network handles roughly 5-7 transactions per second on average, with peaks during high-volume trading or inscription activity.
 
-**Ordinal Inscriptions**: Since 2023, significant block space has been used for Ordinals—arbitrary data stored in witness sections. These immutable on-chain records compete with payment transactions for block space, pushing base-layer fees higher during active inscription periods.
+**Ordinal Inscriptions**: Since 2023, significant block space has been used for Ordinals: arbitrary data stored in witness sections. These immutable on-chain records compete with payment transactions for block space, pushing base-layer fees higher during active inscription periods.
 
 ## Examining Transaction Details
 
-Use `bitcoin-cli getrawtransaction <txid> true` to inspect transaction structure in JSON format. The `vin` (inputs) array shows previous outputs being spent. The `vout` (outputs) array lists destinations. For SegWit transactions, look for the `witness` field in each input—legacy transactions won’t have this.
+Use `bitcoin-cli getrawtransaction <txid> true` to inspect transaction structure in JSON format. The `vin` (inputs) array shows previous outputs being spent. The `vout` (outputs) array lists destinations. For SegWit transactions, look for the `witness` field in each input: legacy transactions won’t have this.
 
 Example Taproot transaction from 2026:
 

@@ -14,7 +14,7 @@ Facebook’s engineering team has long been vocal about their heavy reliance on 
 
 ## Storage Engine Philosophy
 
-Facebook treats MySQL as a generic data manipulation and storage engine rather than a monolithic application database. This architectural mindset is crucial — they abstract away the complexity of how data is stored and retrieved, focusing instead on reliability and efficiency at scale.
+Facebook treats MySQL as a generic data manipulation and storage engine rather than a monolithic application database. This architectural mindset is crucial: they abstract away the complexity of how data is stored and retrieved, focusing instead on reliability and efficiency at scale.
 
 The InnoDB storage engine proved to be the critical component here. The B+tree indexing structure and MVCC (Multi-Version Concurrency Control) implementation in InnoDB provided Facebook with efficient disk-based data retrieval patterns that would have been difficult to engineer from scratch. InnoDB’s crash recovery mechanisms and transaction support also aligned with Facebook’s consistency requirements.
 
@@ -44,9 +44,9 @@ When sharding MySQL at scale, consider:
 
 ## Modern Considerations
 
-While Facebook’s architecture was built on MySQL, the landscape has evolved. Modern alternatives like CockroachDB, TiDB, or cloud-managed solutions like Google Cloud Spanner handle distributed transactions more transparently. However, MySQL remains a solid choice when you’re willing to handle distribution complexity at the application layer — which gives you more control and often better performance characteristics than trying to hide distribution behind a database abstraction.
+While Facebook’s architecture was built on MySQL, the landscape has evolved. Modern alternatives like CockroachDB, TiDB, or cloud-managed solutions like Google Cloud Spanner handle distributed transactions more transparently. However, MySQL remains a solid choice when you’re willing to handle distribution complexity at the application layer, which gives you more control and often better performance characteristics than trying to hide distribution behind a database abstraction.
 
-For most organizations, Facebook’s core lesson isn’t “use MySQL” — it’s “design your database architecture for distribution from day one.” Whether you use MySQL, PostgreSQL, or a specialized distributed database, the principles of sharding, caching, and eventual consistency remain relevant for systems serving millions of users.
+For most organizations, Facebook’s core lesson isn’t “use MySQL”: it’s “design your database architecture for distribution from day one.” Whether you use MySQL, PostgreSQL, or a specialized distributed database, the principles of sharding, caching, and eventual consistency remain relevant for systems serving millions of users.
 
 ## 2026 Comprehensive Guide: Best Practices
 

@@ -63,7 +63,7 @@ If the user enters `ff`:
     Enter a hexadecimal integer: ff
     You entered: 255
 
-Note that `std::cin >> std::hex >> x` accepts input with or without the `0x` prefix — both `ff` and `0xff` parse correctly as 255.
+Note that `std::cin >> std::hex >> x` accepts input with or without the `0x` prefix: both `ff` and `0xff` parse correctly as 255.
 
 ## Understanding Stream State Persistence
 

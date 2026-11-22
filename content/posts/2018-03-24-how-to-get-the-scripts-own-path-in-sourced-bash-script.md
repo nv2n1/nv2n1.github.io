@@ -10,7 +10,7 @@ canonical: /how-to-get-the-scripts-own-path-in-sourced-bash-script/
 url: /how-to-get-the-scripts-own-path-in-sourced-bash-script/
 ---
 
-When you source a script using `. script.sh` or `source script.sh`, the `$0` variable doesn’t point to the sourced script—it stays as the path of the parent shell or calling script. This creates a problem if you need the sourced script to know its own location.
+When you source a script using `. script.sh` or `source script.sh`, the `$0` variable doesn’t point to the sourced script: it stays as the path of the parent shell or calling script. This creates a problem if you need the sourced script to know its own location.
 
 ## The solution: use `${BASH_SOURCE[0]}`
 
@@ -26,8 +26,8 @@ echo "Script location: $script_dir"
 
 ## Understanding `${BASH_SOURCE[0]}` vs `$0`
 
-- `$0` — the name or path used to invoke the shell (stays constant from the parent shell)
-- `${BASH_SOURCE[0]}` — the name of the currently executing script (changes in each script file)
+- `$0`: the name or path used to invoke the shell (stays constant from the parent shell)
+- `${BASH_SOURCE[0]}`: the name of the currently executing script (changes in each script file)
 
 When you source a script:
 
@@ -41,7 +41,7 @@ Inside `helper.sh`:
 - `$0` would be `parent.sh` or whatever invoked the parent
 - `${BASH_SOURCE[0]}` would be `helper.sh`
 
-## `${BASH_SOURCE[@]}` — the call stack
+## `${BASH_SOURCE[@]}`: the call stack
 
 For more complex scenarios with multiple levels of sourcing, use the array form `${BASH_SOURCE[@]}`:
 

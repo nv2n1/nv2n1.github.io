@@ -14,7 +14,7 @@ CalDAV and CardDAV are open, internet-based standards for syncing calendar and c
 
 ## What CalDAV Does
 
-CalDAV handles calendar synchronization—events, tasks, reminders, and availability data. Add an event on your phone, and it propagates to your laptop, desktop, and any other connected client within seconds. CalDAV supports recurring events, timezone handling, free/busy information, and attendee management, making it suitable for everything from personal scheduling to shared team calendars.
+CalDAV handles calendar synchronization: events, tasks, reminders, and availability data. Add an event on your phone, and it propagates to your laptop, desktop, and any other connected client within seconds. CalDAV supports recurring events, timezone handling, free/busy information, and attendee management, making it suitable for everything from personal scheduling to shared team calendars.
 
 ## What CardDAV Does
 
@@ -32,7 +32,7 @@ CardDAV synchronizes contacts and address books. Update a phone number once on y
 
 **Nextcloud** remains the most popular choice for self-hosted CalDAV/CardDAV. It’s a full collaboration platform with web UI, mobile apps, and extensive third-party integrations.
 
-**Radicale** is lightweight—a single Python application that requires minimal resources. Good for small deployments or systems with tight constraints.
+**Radicale** is lightweight: a single Python application that requires minimal resources. Good for small deployments or systems with tight constraints.
 
 **Baïkal** is a lightweight alternative with a simpler codebase than Nextcloud but more features than Radicale.
 
@@ -68,4 +68,4 @@ Import your existing calendars as `.ics` files into your server, or use tools li
 
 **Backup strategy**: Your calendar and contact data becomes critical. Automate regular backups, maintain offsite copies, and test restore procedures.
 
-CalDAV and CardDAV aren’t new—they’ve been around for nearly two decades—but they’re increasingly relevant as organizations prioritize privacy and interoperability over convenience.
+CalDAV and CardDAV aren’t new (they’ve been around for nearly two decades), but they’re increasingly relevant as organizations prioritize privacy and interoperability over convenience.

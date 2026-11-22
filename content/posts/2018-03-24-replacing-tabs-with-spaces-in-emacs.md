@@ -22,7 +22,7 @@ Select all content, then run `untabify`:
 
     C-x h M-x untabify
 
-`C-x h` selects the whole buffer. If you prefer `C-a`, note that it moves point to the start without selecting—use `C-a C-x C-x` to mark from start to end instead.
+`C-x h` selects the whole buffer. If you prefer `C-a`, note that it moves point to the start without selecting: use `C-a C-x C-x` to mark from start to end instead.
 
 ## Convert Spaces Back to Tabs
 
@@ -68,7 +68,7 @@ Use file-local variables at the end of your file to override global settings:
     # tab-width: 4
     # End:
 
-(Use the appropriate comment syntax for your language—`//` for C, `--` for Lua, etc.)
+(Use the appropriate comment syntax for your language: `//` for C, `--` for Lua, etc.)
 
 Emacs prompts you to apply these settings when opening or saving. This is essential when collaborating on projects with mixed indentation standards.
 
@@ -88,7 +88,7 @@ find . -name "*.py" -type f -exec sed -i 's/\t/    /g' {} +
 
 This replaces each tab with four spaces in all Python files recursively. Adjust the pattern and spaces to match your project’s style guide.
 
-For more complex scenarios—like preserving indentation consistency across a codebase—consider using tools like `black` (Python) or `rustfmt` (Rust), which handle formatting automatically and eliminate tab-versus-space debates altogether.
+For more complex scenarios (like preserving indentation consistency across a codebase) consider using tools like `black` (Python) or `rustfmt` (Rust), which handle formatting automatically and eliminate tab-versus-space debates altogether.
 
 ## Essential Editor Configuration
 

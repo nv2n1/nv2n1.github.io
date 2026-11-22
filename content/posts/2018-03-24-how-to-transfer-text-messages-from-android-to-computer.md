@@ -75,7 +75,7 @@ If you have hundreds of messages, exporting through cloud storage avoids USB cab
 - **Automated ongoing backups**: Google One, Samsung Cloud (if using Samsung), or third-party app with cloud sync
 - **Maximum control**: ADB database extraction (advanced users, may need root)
 
-Most users won’t need root access or complex database tools—Google Messages covers daily needs, and SMS Backup & Restore handles occasional full backups without any technical hassle.
+Most users won’t need root access or complex database tools: Google Messages covers daily needs, and SMS Backup & Restore handles occasional full backups without any technical hassle.
 
 ## 2026 Comprehensive Guide: Best Practices
 

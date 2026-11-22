@@ -94,7 +94,7 @@ WHERE column_name LIKE '%old%';
 ## Performance Notes
 
 - Add indexes on columns being searched. For the `LIKE` clause to use an index efficiently, avoid leading wildcards.
-- The `WHERE LIKE` condition is crucial for large tables — scanning an entire table with millions of rows is expensive.
+- The `WHERE LIKE` condition is crucial for large tables: scanning an entire table with millions of rows is expensive.
 - For very large tables with frequent updates, consider scheduled batch jobs during off-peak hours.
 - Monitor the slow query log if replacements take longer than expected:
 

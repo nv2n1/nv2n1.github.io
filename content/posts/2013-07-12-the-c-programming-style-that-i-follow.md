@@ -34,7 +34,7 @@ Always prevent multiple inclusion. Use the standard `#ifndef` pattern:
 #endif // MATH_UTILS_H
 ```
 
-Avoid leading underscores in guard names — identifiers starting with underscore followed by an uppercase letter are reserved by the C standard. Use `MATH_UTILS_H` instead of `_MATH_UTILS_H`.
+Avoid leading underscores in guard names: identifiers starting with underscore followed by an uppercase letter are reserved by the C standard. Use `MATH_UTILS_H` instead of `_MATH_UTILS_H`.
 
 Modern alternative: `#pragma once` is non-standard but supported by all major compilers (GCC, Clang, MSVC). It’s simpler and avoids naming collisions:
 
@@ -117,7 +117,7 @@ extern int max_connections;
 int max_connections = 100;
 ```
 
-Global variables are a code smell — they complicate testing, threading, and reasoning about program state. Prefer passing data through function parameters or returning values. When globals are unavoidable (configuration constants, logging state), keep them limited, document their purpose clearly, and consider wrapping them in accessor functions for thread safety.
+Global variables are a code smell: they complicate testing, threading, and reasoning about program state. Prefer passing data through function parameters or returning values. When globals are unavoidable (configuration constants, logging state), keep them limited, document their purpose clearly, and consider wrapping them in accessor functions for thread safety.
 
 ## Include Order Convention
 

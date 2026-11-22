@@ -14,7 +14,7 @@ Converting Word documents to PDF is a fundamental task in most workflows. Modern
 
 ### Native PDF Export (Modern Office)
 
-If you’re using Office 2010 or later, PDF export is built into the application—no add-ons required. Open your Word document and use **File \> Export \> Create PDF/XPS** or simply **File \> Save As** and choose PDF from the format dropdown.
+If you’re using Office 2010 or later, PDF export is built into the application: no add-ons required. Open your Word document and use **File \> Export \> Create PDF/XPS** or simply **File \> Save As** and choose PDF from the format dropdown.
 
 For older Office 2007 installations, Microsoft provides the free **2007 Microsoft Office Add-in: Microsoft Save as PDF or XPS**, which adds this functionality. Download it from Microsoft’s website if needed.
 
@@ -75,7 +75,7 @@ done
 
 ### Choosing Your Approach
 
-Use **native Office export** for one-off conversions—it’s the most reliable and requires no extra tools. Use **LibreOffice** for batch processing or when Office isn’t available. Use **Pandoc** when you need format flexibility or plan further document processing. Use **PowerShell automation** when integrating into Windows-centric workflows.
+Use **native Office export** for one-off conversions: it’s the most reliable and requires no extra tools. Use **LibreOffice** for batch processing or when Office isn’t available. Use **Pandoc** when you need format flexibility or plan further document processing. Use **PowerShell automation** when integrating into Windows-centric workflows.
 
 For most sysadmins, having both LibreOffice and Pandoc in your toolkit covers nearly every conversion scenario without vendor lock-in.
 

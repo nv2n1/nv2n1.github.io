@@ -24,7 +24,7 @@ For example, a miner might hash millions of nonce values per second until findin
 
     00000000000c9c07f0b50c8600fbcd4eff194cc27be09057be656a914307c89e
 
-This is purely brute force. There’s no shortcut—no way to compute the answer without trying combinations. Once a miner finds a valid hash, other nodes instantly verify it (which is trivial), and the block is added to the chain.
+This is purely brute force. There’s no shortcut: no way to compute the answer without trying combinations. Once a miner finds a valid hash, other nodes instantly verify it (which is trivial), and the block is added to the chain.
 
 **Difficulty Adjustment**
 
@@ -40,7 +40,7 @@ Mining is now an industrial operation. A single miner costs \$3,000–\$8,000 an
 
 **Immense Economic Cost to Attack**
 
-Attacking Bitcoin requires controlling 51% of the network’s hashrate. Current total hashrate exceeds 600 exahashes per second. The hardware alone would cost tens of billions of dollars, plus ongoing electricity costs. An attacker would need to sustain this for long enough to rewrite history—but the network can simply fork away from the attack. Bitcoin’s security is enforced by thermodynamics and economic reality, not assumptions about human behavior.
+Attacking Bitcoin requires controlling 51% of the network’s hashrate. Current total hashrate exceeds 600 exahashes per second. The hardware alone would cost tens of billions of dollars, plus ongoing electricity costs. An attacker would need to sustain this for long enough to rewrite history, but the network can simply fork away from the attack. Bitcoin’s security is enforced by thermodynamics and economic reality, not assumptions about human behavior.
 
 **Continuous Expenditure Required**
 
@@ -48,13 +48,13 @@ Unlike Proof of Stake (where stake is locked and earns passive rewards), PoW min
 
 **Resistance to Centralization Pressure**
 
-While ASIC manufacturers do create centralization vectors, the fundamental requirement for energy decouples mining from traditional capital concentration. A miner in Iceland with cheap geothermal energy can compete with a wealthy miner using expensive grid power. Wealth alone doesn’t secure a PoW network—energy access does.
+While ASIC manufacturers do create centralization vectors, the fundamental requirement for energy decouples mining from traditional capital concentration. A miner in Iceland with cheap geothermal energy can compete with a wealthy miner using expensive grid power. Wealth alone doesn’t secure a PoW network: energy access does.
 
 ## Real Costs and Trade-offs
 
 **Energy Consumption**
 
-Bitcoin mining consumes roughly 120–150 terawatt-hours annually (as of 2026), comparable to Argentina’s total electricity usage. This is not a bug—it’s the price of security. But the narrative has shifted:
+Bitcoin mining consumes roughly 120–150 terawatt-hours annually (as of 2026), comparable to Argentina’s total electricity usage. This is not a bug: it’s the price of security. But the narrative has shifted:
 
 - Major mining operations now source 40–80% of their power from renewable sources (hydro, wind, solar, geothermal)
 - Miners act as flexible loads that absorb stranded renewable energy that cannot be stored or sold at competitive rates
@@ -67,7 +67,7 @@ ASIC design and manufacturing is concentrated among a few companies. Mining pool
 
 **Transaction Speed**
 
-Bitcoin processes ~7 transactions per second with ~10-minute finality. This is intentional—PoW sacrifices throughput for security. Higher-layer solutions (Lightning Network, sidechains) and alternative chains handle payments at scale while using Bitcoin as a security anchor.
+Bitcoin processes ~7 transactions per second with ~10-minute finality. This is intentional: PoW sacrifices throughput for security. Higher-layer solutions (Lightning Network, sidechains) and alternative chains handle payments at scale while using Bitcoin as a security anchor.
 
 ## PoW vs. Proof of Stake: A Practical Comparison
 

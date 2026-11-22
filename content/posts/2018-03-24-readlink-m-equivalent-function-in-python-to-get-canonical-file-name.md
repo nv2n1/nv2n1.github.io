@@ -117,7 +117,7 @@ For Windows compatibility, both methods handle backslashes correctly on Windows 
 
 **Comparisons**: Comparing two paths? Canonicalize first to reliably detect if they point to the same file.
 
-Use `pathlib.Path.resolve()` for new code—it’s clearer, more Pythonic, and integrates better with modern Python practices.
+Use `pathlib.Path.resolve()` for new code: it’s clearer, more Pythonic, and integrates better with modern Python practices.
 
 ## 2026 Best Practices and Advanced Techniques
 

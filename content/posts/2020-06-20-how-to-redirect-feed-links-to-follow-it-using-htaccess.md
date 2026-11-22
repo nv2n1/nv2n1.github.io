@@ -12,7 +12,7 @@ url: /how-to-redirect-feed-links-to-follow-it-using-htaccess/
 
 Google shut down Feedburner’s management interface, leaving it in indefinite maintenance mode. While RSS remains a critical format for feed distribution across platforms like WordPress and other CMS software, you need an alternative service for feed management and subscriber tracking.
 
-follow.it is a solid Feedburner replacement that handles RSS feeds, subscriptions, and analytics. This guide shows how to redirect your feed URLs to follow.it using .htaccess — a method that works regardless of your CMS or hosting setup.
+follow.it is a solid Feedburner replacement that handles RSS feeds, subscriptions, and analytics. This guide shows how to redirect your feed URLs to follow.it using .htaccess: a method that works regardless of your CMS or hosting setup.
 
 ## How the Redirect Works
 
@@ -40,7 +40,7 @@ Replace `https://follow.it/systut` with your actual follow.it feed URL. The `[NC
 
 **Key points:**
 
-- The `RewriteCond` for `HTTP_USER_AGENT` uses `!` to negate — meaning “if the User-Agent does NOT contain follow.it”
+- The `RewriteCond` for `HTTP_USER_AGENT` uses `!` to negate: meaning “if the User-Agent does NOT contain follow.it”
 - The pattern `^feed/?.*$` matches `/feed`, `/feed/`, and any feed variants like `/feed/json`
 - Use `R=302` (temporary redirect) rather than `R=301` (permanent) until you’re confident the redirect works correctly
 

@@ -167,4 +167,4 @@ done
 
 For complex documents with extensive code, combine approaches: extract code blocks from LibreOffice’s output to fix formatting issues, then manually integrate into Pandoc’s Markdown version for the best result.
 
-Both tools handle large ODT files efficiently. Choose based on your workflow—if you’re archiving, Markdown preserves more information. If you’re extracting text for processing, plain text from LibreOffice avoids formatting noise.
+Both tools handle large ODT files efficiently. Choose based on your workflow: if you’re archiving, Markdown preserves more information. If you’re extracting text for processing, plain text from LibreOffice avoids formatting noise.

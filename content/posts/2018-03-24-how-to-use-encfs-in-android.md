@@ -60,7 +60,7 @@ mkfs.ext4 /dev/mapper/encrypted_sd
 mount /dev/mapper/encrypted_sd /mnt/encrypted
 ```
 
-This provides stronger encryption than EncFS and works reliably on rooted devices. However, rooting voids warranties and creates security risks—only consider this if you have specific requirements Cryptomator can’t meet.
+This provides stronger encryption than EncFS and works reliably on rooted devices. However, rooting voids warranties and creates security risks: only consider this if you have specific requirements Cryptomator can’t meet.
 
 ### Signal for Encrypted Files
 

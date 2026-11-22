@@ -35,10 +35,10 @@ Look for messages containing USB device information. A typical USB storage devic
 
 The key indicators are:
 
-- `new high-speed USB device` — device detected
-- `[sdX]` — the block device assigned (sde, sdf, etc.)
-- Partition information like `sde1` — partitions found on the device
-- Capacity information — useful for identifying the correct device
+- `new high-speed USB device`: device detected
+- `[sdX]`: the block device assigned (sde, sdf, etc.)
+- Partition information like `sde1`: partitions found on the device
+- Capacity information: useful for identifying the correct device
 
 Filter for recent USB events specifically:
 
@@ -121,6 +121,6 @@ This blocks until a new device appears, making it useful for automation scripts.
 
 - Always run `lsblk` before and after USB insertion to clearly identify the new device
 - On multi-USB systems with many devices, use `dmesg` to correlate device insertion time with the block device assignment
-- The `RM` flag in `lsblk` is definitive for identifying removable media — don’t rely on device naming alone
+- The `RM` flag in `lsblk` is definitive for identifying removable media: don’t rely on device naming alone
 - Never assume a device based on naming; always verify size and other properties match your expectations
 - If the USB device doesn’t appear after 10-15 seconds, check `dmesg` for errors like “device not responding” or “reset failed”

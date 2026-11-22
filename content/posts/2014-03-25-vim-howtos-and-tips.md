@@ -117,7 +117,7 @@ Alternatively, use `vim-vinegar` or `nvim-tree` for a better file browsing exper
 
 ## Neovim-specific features
 
-Neovim 0.9+ includes native LSP support—no complex setup required. Install the `nvim-lspconfig` plugin and enable LSP for your languages:
+Neovim 0.9+ includes native LSP support: no complex setup required. Install the `nvim-lspconfig` plugin and enable LSP for your languages:
 
 ``` lua
 -- init.lua
@@ -163,4 +163,4 @@ vim.keymap.set('n', '<leader>w', ':w<CR>', { noremap = true })
 - `vimtutor` is a built-in interactive tutorial (run it from the terminal)
 - Browse community configurations at `github.com/dotfiles/dotfiles` for configuration inspiration
 - `vim.fandom.com` covers advanced techniques and edge cases
-- Practice with real work rather than drills—muscle memory develops faster with actual editing tasks
+- Practice with real work rather than drills: muscle memory develops faster with actual editing tasks

@@ -18,8 +18,8 @@ The official documentation is the authoritative source for Xen hypervisor parame
 
 **Official Xen documentation:**
 
-- <a href="https://xenbits.xen.org/docs/unstable/misc/xen-command-line.html" rel="nofollow noopener" target="_blank">Xen Hypervisor Command Line Options</a> — comprehensive reference for unstable/development releases
-- <a href="https://xen.org/help/documentation.html" rel="nofollow noopener" target="_blank">Xen Project Documentation</a> — version-specific docs for stable releases
+- <a href="https://xenbits.xen.org/docs/unstable/misc/xen-command-line.html" rel="nofollow noopener" target="_blank">Xen Hypervisor Command Line Options</a>: comprehensive reference for unstable/development releases
+- <a href="https://xen.org/help/documentation.html" rel="nofollow noopener" target="_blank">Xen Project Documentation</a>: version-specific docs for stable releases
 
 Always check the documentation matching your Xen version, as command line options change between releases.
 
@@ -47,16 +47,16 @@ Edit `/boot/grub/menu.lst` and add options directly on the `module` line for Xen
 
 ## Common Xen Hypervisor Options
 
-- `dom0_mem=<memory>` — Memory allocated to dom0 (dom0_mem=1G,max:2G reserves 1GB initially, up to 2GB max)
-- `dom0_max_vcpus=<number>` — Virtual CPUs assigned to dom0
-- `sched=<scheduler>` — Scheduling algorithm: `credit`, `credit2`, or `arinc653`
-- `loglevel=<level>` — Logging verbosity (0-7)
-- `console=dtuart` or `console=vga` — Where to send console output
-- `iommu=on` — Enable IOMMU for device passthrough
-- `tmem=on` — Enable transcendent memory
-- `cpufreq=<option>` — CPU frequency scaling control
-- `nmi=fatal` — Treat NMI as fatal (useful for debugging)
-- `vga=mode-0x119` — VGA mode for dom0
+- `dom0_mem=<memory>`: Memory allocated to dom0 (dom0_mem=1G,max:2G reserves 1GB initially, up to 2GB max)
+- `dom0_max_vcpus=<number>`: Virtual CPUs assigned to dom0
+- `sched=<scheduler>`: Scheduling algorithm: `credit`, `credit2`, or `arinc653`
+- `loglevel=<level>`: Logging verbosity (0-7)
+- `console=dtuart` or `console=vga`: Where to send console output
+- `iommu=on`: Enable IOMMU for device passthrough
+- `tmem=on`: Enable transcendent memory
+- `cpufreq=<option>`: CPU frequency scaling control
+- `nmi=fatal`: Treat NMI as fatal (useful for debugging)
+- `vga=mode-0x119`: VGA mode for dom0
 
 ## Viewing Current Hypervisor Options
 
@@ -117,7 +117,7 @@ While the core commands and methods described in this article work well for most
 
 ## Troubleshooting Common Issues
 
-When encountering problems, follow a systematic debugging approach. Start with the simplest possible test case to isolate the issue. Check logs and error messages carefully—they often contain direct hints about what went wrong. For system-level issues, verify dependencies are correctly installed and configured before attempting complex workarounds.
+When encountering problems, follow a systematic debugging approach. Start with the simplest possible test case to isolate the issue. Check logs and error messages carefully: they often contain direct hints about what went wrong. For system-level issues, verify dependencies are correctly installed and configured before attempting complex workarounds.
 
 ## Performance Optimization Tips
 
@@ -135,7 +135,7 @@ These complementary tools and commands are frequently used alongside the topic o
 - File operations: find, locate, fd for efficient searching
 - Network diagnostics: ping, traceroute, mtr, ss for connectivity checks
 - Log analysis: journalctl, dmesg, tail for real-time log monitoring
-- Package management: dnf history, apt list –installed, rpm -qa for inventory
+- Package management: dnf history, apt list --installed, rpm -qa for inventory
 
 ## Integration with Modern Workflows
 

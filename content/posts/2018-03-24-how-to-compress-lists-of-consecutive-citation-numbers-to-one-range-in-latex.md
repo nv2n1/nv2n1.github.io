@@ -89,7 +89,7 @@ Advantages of biblatex:
 - `biblatex` uses Biber (more robust for complex bibliographies)
 - Biber handles UTF-8 better and offers more advanced sorting options
 
-**Package conflicts**: Don’t load `cite` and `natbib` together—they conflict. Choose one approach and stick with it.
+**Package conflicts**: Don’t load `cite` and `natbib` together: they conflict. Choose one approach and stick with it.
 
 ## Complete Working Example
 

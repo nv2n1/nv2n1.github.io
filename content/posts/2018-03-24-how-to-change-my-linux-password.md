@@ -26,11 +26,11 @@ You’ll be prompted for:
 2.  Your new password
 3.  Confirmation of the new password
 
-The password input won’t display characters as you type — this is normal for security reasons.
+The password input won’t display characters as you type: this is normal for security reasons.
 
 ### What happens if you don’t know your current password
 
-If you’ve forgotten your password, you can’t use `passwd` to change it yourself. Contact your system administrator — they have the ability to reset passwords using `passwd username` with root privileges.
+If you’ve forgotten your password, you can’t use `passwd` to change it yourself. Contact your system administrator: they have the ability to reset passwords using `passwd username` with root privileges.
 
 ### Password requirements
 
@@ -55,11 +55,11 @@ This skips the old password verification step. Useful for administrators, but ne
 
 ### Password best practices
 
-- Use passphrases (multiple words) rather than complex single words — they’re both stronger and more memorable
+- Use passphrases (multiple words) rather than complex single words: they’re both stronger and more memorable
 - Avoid reusing passwords across systems
 - Don’t share your password with colleagues, even temporarily; use `sudo` delegation instead
 - Change your password immediately if you suspect compromise
-- Consider using SSH keys instead of password authentication for remote access — they’re more secure and eliminate password entry altogether
+- Consider using SSH keys instead of password authentication for remote access: they’re more secure and eliminate password entry altogether
 
 ### Troubleshooting passwd issues
 
@@ -71,11 +71,11 @@ If you’re changing passwords remotely over SSH and the connection drops mid-op
 
 These related commands are often used alongside the tools discussed in this article:
 
-- man command-name – Read the manual page for any command
-- which command-name – Find the location of an executable
-- rpm -qa or dpkg -l – List installed packages
-- journalctl -u service-name – Check service logs
-- ss -tulpn – List listening ports and services
+- man command-name: Read the manual page for any command
+- which command-name: Find the location of an executable
+- rpm -qa or dpkg -l: List installed packages
+- journalctl -u service-name: Check service logs
+- ss -tulpn: List listening ports and services
 
 ## Quick Reference
 

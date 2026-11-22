@@ -104,7 +104,7 @@ Return to the GUI:
 
 For Ubuntu 24.04 LTS and newer, if the above doesn’t resolve the issue, consider these alternatives:
 
-**Use XFCE instead of GNOME** — it’s significantly lighter on legacy hardware:
+**Use XFCE instead of GNOME**: it’s significantly lighter on legacy hardware:
 
 ``` bash
 sudo apt install xubuntu-desktop
@@ -112,17 +112,17 @@ sudo apt install xubuntu-desktop
 
 Then select Xfce from the login screen.
 
-**Disable Wayland and force X11** — Edit `/etc/gdm3/custom.conf` and uncomment:
+**Disable Wayland and force X11**: Edit `/etc/gdm3/custom.conf` and uncomment:
 
     WaylandEnable=false
 
-**Install a minimal window manager** — For maximum performance, use a tiling window manager:
+**Install a minimal window manager**: For maximum performance, use a tiling window manager:
 
 ``` bash
 sudo apt install openbox
 ```
 
-**Check for BIOS settings** — Ensure integrated graphics is enabled (if applicable) and try disabling any power-saving features that might throttle GPU performance.
+**Check for BIOS settings**: Ensure integrated graphics is enabled (if applicable) and try disabling any power-saving features that might throttle GPU performance.
 
 ## Verifying hardware acceleration
 

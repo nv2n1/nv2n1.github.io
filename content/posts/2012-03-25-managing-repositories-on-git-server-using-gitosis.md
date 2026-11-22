@@ -21,7 +21,7 @@ ssh-keygen -t rsa -b 4096 -f ~/.ssh/id_rsa
 cat ~/.ssh/id_rsa.pub
 ```
 
-The user shares their public key (the contents of `id_rsa.pub`) with the administrator through a secure channel—email, secure file transfer, or direct message. The administrator saves this to a temporary location:
+The user shares their public key (the contents of `id_rsa.pub`) with the administrator through a secure channel: email, secure file transfer, or direct message. The administrator saves this to a temporary location:
 
 ``` bash
 # Administrator receives the key and saves it

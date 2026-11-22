@@ -36,10 +36,10 @@ journalctl -b -k -o json-pretty
 
 Format options include:
 
-- `short` — default human-readable format
-- `short-iso` — ISO 8601 format with timezone
-- `json` or `json-pretty` — structured output
-- `verbose` — includes all metadata
+- `short`: default human-readable format
+- `short-iso`: ISO 8601 format with timezone
+- `json` or `json-pretty`: structured output
+- `verbose`: includes all metadata
 
 ## Working with Raw dmesg Output
 
@@ -51,7 +51,7 @@ dmesg | sed 's/^\[[ 0-9.]*\]//' | while IFS= read -r line; do
 done
 ```
 
-This is crude and inaccurate—don’t rely on it for critical debugging.
+This is crude and inaccurate: don’t rely on it for critical debugging.
 
 A better approach uses the boot time:
 
@@ -116,7 +116,7 @@ journalctl -b -k -g "thermal|hwmon|error" -o short-iso
 
 This filters kernel messages matching the pattern and displays them with ISO timestamps.
 
-Use `journalctl` for new systems and production environments—it integrates with the rest of the systemd ecosystem. Fall back to `dmesg -T` for quick, one-off checks on systems where journal access is restricted.
+Use `journalctl` for new systems and production environments: it integrates with the rest of the systemd ecosystem. Fall back to `dmesg -T` for quick, one-off checks on systems where journal access is restricted.
 
 ## 2026 Comprehensive Guide: Best Practices
 

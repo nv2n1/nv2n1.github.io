@@ -111,7 +111,7 @@ When preparing plots for papers or presentations where size reduction is unavoid
 - Start with larger base font sizes (14-16pt for titles, 12-13pt for axis labels)
 - Use monospace fonts like `Courier` for data-heavy plots or `Helvetica`/`Verdana` for cleaner appearance
 - Test the actual reduction ratio and adjust accordingly
-- Consider using `set terminal pdfcairo` for vector output instead of raster formats — PDFs scale without quality loss
+- Consider using `set terminal pdfcairo` for vector output instead of raster formats: PDFs scale without quality loss
 
 ## Common Font Names
 

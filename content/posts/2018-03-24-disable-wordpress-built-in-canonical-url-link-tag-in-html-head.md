@@ -10,7 +10,7 @@ canonical: /disable-wordpress-built-in-canonical-url-link-tag-in-html-head/
 url: /disable-wordpress-built-in-canonical-url-link-tag-in-html-head/
 ---
 
-WordPress has included automatic canonical URL generation since version 2.9. While this is usually beneficial for SEO, certain scenarios require disabling it — for example, when forum plugins generate incorrect canonical URLs that point all threads to a single page.
+WordPress has included automatic canonical URL generation since version 2.9. While this is usually beneficial for SEO, certain scenarios require disabling it, for example, when forum plugins generate incorrect canonical URLs that point all threads to a single page.
 
 ## The Problem
 
@@ -108,9 +108,9 @@ This ensures each forum thread has its own unique canonical URL instead of all p
 
 After modifying canonical URL behavior:
 
-1.  **Check the page source** — inspect the HTML head for the canonical link tag to verify it’s present or absent as intended
-2.  **Validate with Search Console** — upload your sitemap and monitor coverage reports to ensure Google properly indexes all pages
-3.  **Use SEO tools** — tools like Screaming Frog or Ahrefs can identify canonical tag issues across your site
+1.  **Check the page source**: inspect the HTML head for the canonical link tag to verify it’s present or absent as intended
+2.  **Validate with Search Console**: upload your sitemap and monitor coverage reports to ensure Google properly indexes all pages
+3.  **Use SEO tools**: tools like Screaming Frog or Ahrefs can identify canonical tag issues across your site
 
 ## SEO Considerations
 

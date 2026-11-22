@@ -44,7 +44,7 @@ window.onload = function() {
 }
 ```
 
-This works but becomes fragile when you have multiple scripts doing the same thing — you’re only preserving one level of nesting.
+This works but becomes fragile when you have multiple scripts doing the same thing: you’re only preserving one level of nesting.
 
 ## Solution 2: Use addEventListener (Recommended)
 

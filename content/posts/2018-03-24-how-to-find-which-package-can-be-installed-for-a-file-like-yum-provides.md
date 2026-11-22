@@ -104,7 +104,7 @@ g++
 
 ## When to Use Each Method
 
-- **DNF/YUM**: Use the `dnf provides` syntax — it’s faster than `apt-file` because it queries live repository metadata without needing a pre-downloaded file list.
+- **DNF/YUM**: Use the `dnf provides` syntax: it’s faster than `apt-file` because it queries live repository metadata without needing a pre-downloaded file list.
 - **APT-file**: Requires an initial `apt-file update` step. The tradeoff is that it can search packages not currently in your configured repos, but the data can get stale.
 
 Both methods answer the same question: “Which package do I need to install to get this file?”

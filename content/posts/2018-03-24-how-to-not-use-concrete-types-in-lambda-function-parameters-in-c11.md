@@ -10,7 +10,7 @@ canonical: /how-to-not-use-concrete-types-in-lambda-function-parameters-in-c11/
 url: /how-to-not-use-concrete-types-in-lambda-function-parameters-in-c11/
 ---
 
-In C++11, lambda parameters required concrete types. Creating a truly generic lambda meant wrapping the logic in a template struct — awkward and verbose. C++14 introduced generic lambdas using `auto` for parameter deduction, eliminating this friction entirely.
+In C++11, lambda parameters required concrete types. Creating a truly generic lambda meant wrapping the logic in a template struct: awkward and verbose. C++14 introduced generic lambdas using `auto` for parameter deduction, eliminating this friction entirely.
 
 ## Basic Generic Lambda Syntax
 
@@ -31,7 +31,7 @@ double result2 = add(2.5, 3.7);  // 6.2
 auto result3 = add(std::string("hello"), std::string(" world"));  // "hello world"
 ```
 
-The compiler generates specialized code for each type combination you actually use. This is zero-overhead abstraction — no virtual dispatch, no runtime penalty.
+The compiler generates specialized code for each type combination you actually use. This is zero-overhead abstraction: no virtual dispatch, no runtime penalty.
 
 ## Using Concepts for Type Constraints (C++20)
 

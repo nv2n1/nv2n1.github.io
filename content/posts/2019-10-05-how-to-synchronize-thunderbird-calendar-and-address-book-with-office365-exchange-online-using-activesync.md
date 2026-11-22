@@ -12,8 +12,8 @@ url: /how-to-synchronize-thunderbird-calendar-and-address-book-with-office365-ex
 
 Thunderbird’s built-in calendar support (Lightning) handles local calendars, but you need two extensions to sync with Exchange Online:
 
-- **TbSync** — manages cloud account synchronization for contacts, calendars, and tasks
-- **Provider for Exchange ActiveSync** — adds ActiveSync protocol support to TbSync
+- **TbSync**: manages cloud account synchronization for contacts, calendars, and tasks
+- **Provider for Exchange ActiveSync**: adds ActiveSync protocol support to TbSync
 
 Install both from Thunderbird’s Add-ons Manager:
 
@@ -32,9 +32,9 @@ After installation, add your Exchange account:
 
 In the dialog, enter:
 
-- **Email address** — your Office 365 email (e.g., `user@yourdomain.com`)
-- **Password** — your Office 365 app password (see MFA section below)
-- **Server URL** — leave blank for autodiscovery
+- **Email address**: your Office 365 email (e.g., `user@yourdomain.com`)
+- **Password**: your Office 365 app password (see MFA section below)
+- **Server URL**: leave blank for autodiscovery
 
 Click **Autodiscover settings** and TbSync will query Microsoft’s autodiscovery service to configure your account automatically. This usually completes in seconds.
 
@@ -57,9 +57,9 @@ Once the account is added, expand it in TbSync to see available resources:
 1.  Check the box next to your account name to enable it
 2.  Click the dropdown arrow to expand resource options
 3.  Enable what you need:
-    - **Contacts** — your Office 365 address book
-    - **Calendars** — Exchange calendars (including shared calendars you have access to)
-    - **Tasks** — Exchange task lists (optional)
+    - **Contacts**: your Office 365 address book
+    - **Calendars**: Exchange calendars (including shared calendars you have access to)
+    - **Tasks**: Exchange task lists (optional)
 4.  Click **Synchronize now** for the initial sync
 
 ## Configure Automatic Synchronization
@@ -115,7 +115,7 @@ If automatic detection doesn’t work, manually enter the Exchange Online server
 **Sync timeouts or hangs**
 
 - Increase the periodic synchronization interval to 30+ minutes
-- Check your internet connection — ActiveSync is sensitive to latency
+- Check your internet connection: ActiveSync is sensitive to latency
 - Disable unused resources (like Tasks) to reduce sync payload
 - Check Thunderbird’s error console (Menu → Tools → Developer Tools → Browser Console) for detailed errors
 

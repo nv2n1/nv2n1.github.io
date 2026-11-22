@@ -14,7 +14,7 @@ MPlayer reached end-of-life years ago. Its active fork, **mpv**, maintains all s
 
 ## Enable Screenshot Support
 
-Screenshot support is built into mpv by default — no filter loading required. However, you can customize behavior by adding configuration to `~/.config/mpv/mpv.conf`:
+Screenshot support is built into mpv by default: no filter loading required. However, you can customize behavior by adding configuration to `~/.config/mpv/mpv.conf`:
 
 ``` ini
 screenshot-format=png
@@ -87,10 +87,10 @@ mpv video.mp4 --screenshot-format=jpg --screenshot-jpeg-quality=90
 
 The `--screenshot-template` option controls naming. Available tokens:
 
-- `%n` — sequence number (zero-padded)
-- `%f` — current filename (without extension)
-- `%wH`, `%wM`, `%wS` — hours, minutes, seconds into video
-- `%{now}` — current system time
+- `%n`: sequence number (zero-padded)
+- `%f`: current filename (without extension)
+- `%wH`, `%wM`, `%wS`: hours, minutes, seconds into video
+- `%{now}`: current system time
 
 Example:
 

@@ -35,7 +35,7 @@ To inspect a .deb file before installing it:
 dpkg-deb -c package.deb
 ```
 
-This shows the file listing with permissions, ownership, and size — similar to `tar -tvf` output. The format shows:
+This shows the file listing with permissions, ownership, and size: similar to `tar -tvf` output. The format shows:
 
 – File permissions (drwxr-xr-x for directories, -rw-r–r– for files)
 – Owner and group
@@ -155,8 +155,8 @@ dpkg -L package-name | grep bin/
 
 Quick reference for the most common operations:
 
-– `dpkg -L pkg` — list files from installed package
-– `dpkg-deb -c file.deb` — list files in .deb archive
-– `dpkg -S /path` — find which package owns a file
-– `dpkg -V pkg` — verify installed files
-– `apt-file list pkg` — list files from remote package
+– `dpkg -L pkg`: list files from installed package
+– `dpkg-deb -c file.deb`: list files in .deb archive
+– `dpkg -S /path`: find which package owns a file
+– `dpkg -V pkg`: verify installed files
+– `apt-file list pkg`: list files from remote package

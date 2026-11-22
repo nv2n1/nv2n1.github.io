@@ -38,26 +38,26 @@ pkill -f "node.*worker"      # signal by command line pattern
 
 **Selection criteria:**
 
-- `-u euid` – match by effective user ID (name or number)
-- `-U uid` – match by real user ID
-- `-g pgrp` – match by process group ID
-- `-G gid` – match by group ID (name or number)
-- `-P ppid` – match by parent process ID
-- `-t term` – match by controlling terminal (e.g., `pts/0`)
-- `-s sid` – match by session ID
+- `-u euid`: match by effective user ID (name or number)
+- `-U uid`: match by real user ID
+- `-g pgrp`: match by process group ID
+- `-G gid`: match by group ID (name or number)
+- `-P ppid`: match by parent process ID
+- `-t term`: match by controlling terminal (e.g., `pts/0`)
+- `-s sid`: match by session ID
 
 **Matching:**
 
-- `-f` – match against full command line, not just process name. Crucial for scripts with generic names
-- `-x` – exact match only (no substring matching)
-- `-v` – invert match (exclude matching processes)
+- `-f`: match against full command line, not just process name. Crucial for scripts with generic names
+- `-x`: exact match only (no substring matching)
+- `-v`: invert match (exclude matching processes)
 
 **Process selection:**
 
-- `-n` – select only the newest matching process
-- `-o` – select only the oldest matching process
-- `-l` – list process names alongside PIDs (pgrep only)
-- `-d delimiter` – change output delimiter (pgrep only)
+- `-n`: select only the newest matching process
+- `-o`: select only the oldest matching process
+- `-l`: list process names alongside PIDs (pgrep only)
+- `-d delimiter`: change output delimiter (pgrep only)
 
 **Signals (pkill):**
 
@@ -106,7 +106,7 @@ pgrep -o java           # oldest Java process
 ## Important Behavior
 
 - `pgrep` and `pkill` never match themselves
-- Process names are limited to 15 characters in `/proc/[pid]/stat` — use `-f` to match against the full `/proc/[pid]/cmdline`
+- Process names are limited to 15 characters in `/proc/[pid]/stat`: use `-f` to match against the full `/proc/[pid]/cmdline`
 - Extended Regular Expressions are supported in patterns
 - Exit status: 0 if matches found, 1 if no matches, 2 for syntax error, 3 for fatal error
 
@@ -144,9 +144,9 @@ pgrep -u root,daemon   # owned by root OR daemon
 
 ## Related Commands
 
-- `ps(1)` – detailed process listing
-- `kill(1)` – signal a process by PID
-- `killall(1)` – similar to pkill but doesn’t support regex
-- `systemctl(1)` – preferred for managing services on systemd systems
+- `ps(1)`: detailed process listing
+- `kill(1)`: signal a process by PID
+- `killall(1)`: similar to pkill but doesn’t support regex
+- `systemctl(1)`: preferred for managing services on systemd systems
 
 `pgrep` and `pkill` outperform grepping `ps` output because they’re atomic operations that avoid race conditions and handle edge cases properly. Use them consistently in scripts rather than shell pipelines for robustness.

@@ -42,7 +42,7 @@ ipcrm -m <shmid>
 
 You need write permissions on the segment or be root. If a process still has the segment attached, the removal is deferred until the last process detaches.
 
-To forcefully remove all System V shared memory (dangerous — only do this if you know what you’re doing):
+To forcefully remove all System V shared memory (dangerous: only do this if you know what you’re doing):
 
 ``` bash
 ipcrm -a m
@@ -68,7 +68,7 @@ Check for segments with no attached processes:
 ipcs -m | awk '$6 == 0 {print $2}'
 ```
 
-This lists the SHMIDs of segments with zero attachments — safe candidates for deletion.
+This lists the SHMIDs of segments with zero attachments: safe candidates for deletion.
 
 ## Modern Alternatives: POSIX Shared Memory and /dev/shm
 

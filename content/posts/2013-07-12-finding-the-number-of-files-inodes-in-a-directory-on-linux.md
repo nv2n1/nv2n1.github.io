@@ -10,7 +10,7 @@ canonical: /finding-the-number-of-files-inodes-in-a-directory-on-linux/
 url: /finding-the-number-of-files-inodes-in-a-directory-on-linux/
 ---
 
-Every file on Linux consumes an inode. When you exhaust your inode allocation, you can’t create new files even if disk space remains. This is a real constraint on systems handling millions of small files—email servers, web caches, log rotators, container registries.
+Every file on Linux consumes an inode. When you exhaust your inode allocation, you can’t create new files even if disk space remains. This is a real constraint on systems handling millions of small files: email servers, web caches, log rotators, container registries.
 
 ## Quick inode checks
 
@@ -42,7 +42,7 @@ If you need speed on large directories, use `fd`:
 fd --type file . /path/to/dir | wc -l
 ```
 
-`fd` is notably faster than `find` on modern systems—it’s worth having in your toolkit.
+`fd` is notably faster than `find` on modern systems: it’s worth having in your toolkit.
 
 For just the immediate directory without recursion:
 
@@ -94,7 +94,7 @@ tune2fs -l /dev/sdX1 | grep -i "inode size"
 
 **XFS** creates inodes on-demand by default, so inode exhaustion is uncommon. XFS is the better choice for workloads with unpredictable file counts.
 
-**Btrfs** and **ZFS** use dynamic inode allocation—they don’t have a preset limit, making inode planning unnecessary for these filesystems.
+**Btrfs** and **ZFS** use dynamic inode allocation: they don’t have a preset limit, making inode planning unnecessary for these filesystems.
 
 ## Practical example: clearing space when inodes are full
 

@@ -45,7 +45,7 @@ If you’re stuck in scaled mode and the keyboard shortcut isn’t working:
 
 1.  Make sure you’re using the correct Ctrl key (right side of keyboard)
 2.  Ensure the VM window has focus before trying the shortcut
-3.  Try the View menu instead — it’s always accessible
+3.  Try the View menu instead: it’s always accessible
 4.  If Guest Additions aren’t installed, some shortcuts may not work properly; install them for better integration
 
 Guest Additions also improve mouse integration and allow seamless mode, so it’s worth installing even if you’re just using basic windowed mode.

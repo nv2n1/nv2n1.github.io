@@ -120,7 +120,7 @@ ln -s /etc/xen/vm-10.0.1.235.cfg /etc/xen/auto/
 
 **For direct device assignment (PCI passthrough)**: Add `pci=['slot,slot,...']` but ensure IOMMU is enabled on the host.
 
-Always test configuration changes in non-production first. Invalid syntax causes `xl create` to fail with clear error messages—check `/var/log/xen/` for detailed logs.
+Always test configuration changes in non-production first. Invalid syntax causes `xl create` to fail with clear error messages: check `/var/log/xen/` for detailed logs.
 
 ## 2026 Best Practices and Advanced Techniques
 

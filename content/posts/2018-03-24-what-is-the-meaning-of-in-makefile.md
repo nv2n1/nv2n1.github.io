@@ -43,7 +43,7 @@ Running this shows only the command’s output:
 
 Use `@` to clean up output when running echo statements, info messages, or other verbose commands. This is especially useful for user-facing targets or build summaries where you want a polished appearance.
 
-Avoid `@` when you need visibility into what’s actually executing—particularly in CI/CD pipelines, during debugging, or when running commands with side effects that you want to verify.
+Avoid `@` when you need visibility into what’s actually executing, particularly in CI/CD pipelines, during debugging, or when running commands with side effects that you want to verify.
 
 ## Common patterns
 
@@ -110,7 +110,7 @@ test:
 
 - Use `@` liberally in targets that produce their own meaningful output (echo, printf, or tool output you want users to see)
 - Be selective in multi-command targets: hide housekeeping commands but show the actual work
-- Never use `@` on commands that might fail silently—always let errors surface visibly
+- Never use `@` on commands that might fail silently: always let errors surface visibly
 - In CI/CD environments, consider using conditional `@` based on verbosity flags rather than suppressing all output
 - Document expected output in your Makefile comments so users know what to expect from each target
 

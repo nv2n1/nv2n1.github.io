@@ -10,7 +10,7 @@ canonical: /how-to-kick-off-a-user-on-a-linux-box/
 url: /how-to-kick-off-a-user-on-a-linux-box/
 ---
 
-When managing a Linux system remotely, you sometimes need to terminate all sessions for a specific user—whether they’re logged in locally at the console, via SSH, through X11 forwarding, VNC, or any other method. Here’s how to do it.
+When managing a Linux system remotely, you sometimes need to terminate all sessions for a specific user, whether they’re logged in locally at the console, via SSH, through X11 forwarding, VNC, or any other method. Here’s how to do it.
 
 ## Quick Answer
 
@@ -26,11 +26,11 @@ This kills every process owned by that user across all login sessions simultaneo
 
 A user can be logged in through multiple channels:
 
-- **Local console** — directly at the physical display with X server
-- **SSH shell** — standard remote command-line access
-- **SSH with X11 forwarding** — remote session with GUI applications (`ssh -X`)
-- **VNC session** — remote desktop protocol connection
-- **tmux/screen sessions** — persistent terminal multiplexer sessions
+- **Local console**: directly at the physical display with X server
+- **SSH shell**: standard remote command-line access
+- **SSH with X11 forwarding**: remote session with GUI applications (`ssh -X`)
+- **VNC session**: remote desktop protocol connection
+- **tmux/screen sessions**: persistent terminal multiplexer sessions
 
 The `killall -u bob` command terminates the user’s processes regardless of which method they used to log in. Since all login shells and applications run as processes owned by that user, killing them all disconnects them from every session type at once.
 
@@ -108,10 +108,10 @@ This locks the password without deleting the account. Unlock with `usermod -U bo
 
 ## See Also
 
-- `man killall` — comprehensive killall options
-- `man pkill` — pattern-based process killing
-- `man loginctl` — session management on systemd systems
-- `man w` — show logged-in users and their sessions
+- `man killall`: comprehensive killall options
+- `man pkill`: pattern-based process killing
+- `man loginctl`: session management on systemd systems
+- `man w`: show logged-in users and their sessions
 
 ## 2026 Best Practices and Advanced Techniques
 

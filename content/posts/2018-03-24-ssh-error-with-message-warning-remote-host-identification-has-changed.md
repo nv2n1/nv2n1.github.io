@@ -19,7 +19,7 @@ When you SSH to a server and see the warning below, your SSH client has detected
     Someone could be eavesdropping on you right now (man-in-the-middle attack)!
     It is also possible that a host key has just been changed.
 
-This happens when the server’s host key changes — which is legitimate in certain scenarios but also a potential security concern.
+This happens when the server’s host key changes, which is legitimate in certain scenarios but also a potential security concern.
 
 ## Why the Host Key Changes
 
@@ -91,7 +91,7 @@ If you’re running scripts or automation that SSH to servers, add this to your 
 ssh -o StrictHostKeyChecking=accept-new user@host
 ```
 
-The `accept-new` option accepts new keys automatically but still rejects changed keys, which is safer than `no`. However, this only works if you trust the host is legitimate — never use it against untrusted networks.
+The `accept-new` option accepts new keys automatically but still rejects changed keys, which is safer than `no`. However, this only works if you trust the host is legitimate: never use it against untrusted networks.
 
 Better practice: pre-populate known_hosts before running automation:
 
@@ -105,7 +105,7 @@ If you weren’t expecting the key to change, investigate:
 
 - Confirm the server was intentionally rebuilt or reconfigured
 - Check if DNS changed or if you’re hitting a different server
-- Verify the hostname/IP is correct — typos are common
+- Verify the hostname/IP is correct: typos are common
 - Contact your infrastructure team to confirm
 
 If you can’t explain why the key changed and weren’t notified of maintenance, treat it as a potential security incident and escalate before connecting.

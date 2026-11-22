@@ -20,7 +20,7 @@ Understanding block states in HDFS is essential for cluster health. The distinct
 
 ## Block Categories and What They Mean
 
-**Corrupt replica blocks** contain at least one replica that failed checksum validation, but the block also has at least one healthy replica available. Data isn’t currently lost, but redundancy is reduced—if another replica fails, you lose data. These blocks should trigger investigation but aren’t emergencies.
+**Corrupt replica blocks** contain at least one replica that failed checksum validation, but the block also has at least one healthy replica available. Data isn’t currently lost, but redundancy is reduced: if another replica fails, you lose data. These blocks should trigger investigation but aren’t emergencies.
 
 **Missing blocks** occur when none of a block’s replicas are accessible or valid. All replicas are either unavailable (DataNodes down), corrupt, or deleted. Missing blocks mean data is currently inaccessible and require immediate action.
 
@@ -46,7 +46,7 @@ To focus on a specific directory:
 hdfs fsck /user/hive/warehouse -files -blocks
 ```
 
-The output shows block IDs, replica locations, and which replicas are corrupt. Note the pool IDs and DataNode addresses—you’ll need these.
+The output shows block IDs, replica locations, and which replicas are corrupt. Note the pool IDs and DataNode addresses: you’ll need these.
 
 ## Root Causes and Diagnostics
 

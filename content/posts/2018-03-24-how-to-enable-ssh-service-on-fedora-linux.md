@@ -130,7 +130,7 @@ Or manually if `ssh-copy-id` isn’t available:
 cat ~/.ssh/id_ed25519.pub | ssh username@fedora-host-ip "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
 ```
 
-Test the connection — you should log in without a password prompt.
+Test the connection: you should log in without a password prompt.
 
 \## SELinux Considerations
 

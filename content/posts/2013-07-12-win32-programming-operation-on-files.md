@@ -78,7 +78,7 @@ bool CopyFolder(const char *srcPath, const char *dstPath)
 }
 ```
 
-By default, `recursive` preserves file permissions and timestamps—important for backups. To skip existing files instead of overwriting:
+By default, `recursive` preserves file permissions and timestamps: important for backups. To skip existing files instead of overwriting:
 
 ``` cpp
 std::filesystem::copy(
@@ -143,7 +143,7 @@ bool DeleteFolder(const char *folderPath)
 }
 ```
 
-`remove_all` returns the count of removed items, useful for verification. This operation is thorough and recursive—use carefully.
+`remove_all` returns the count of removed items, useful for verification. This operation is thorough and recursive: use carefully.
 
 To delete selectively (preserving certain files):
 
@@ -264,11 +264,11 @@ bool SmartCopyFile(const char *src, const char *dst)
 
 Stick with `std::filesystem` unless you need Windows-specific functionality:
 
-- **Alternate Data Streams (ADS)** — NTFS-specific metadata
-- **Extended file attributes** — Windows property systems
-- **Security descriptors** — Fine-grained ACL control
-- **UNC paths with authentication** — Complex network share access
-- **File change notifications** — Real-time monitoring via `ReadDirectoryChangesW`
+- **Alternate Data Streams (ADS)**: NTFS-specific metadata
+- **Extended file attributes**: Windows property systems
+- **Security descriptors**: Fine-grained ACL control
+- **UNC paths with authentication**: Complex network share access
+- **File change notifications**: Real-time monitoring via `ReadDirectoryChangesW`
 
 For these cases, use Win32 functions directly (`CreateFileA`, `ReadFile`, `WriteFile`, etc.), but manage file handles explicitly with RAII wrappers to prevent leaks:
 

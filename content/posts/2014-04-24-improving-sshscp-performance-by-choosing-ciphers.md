@@ -18,15 +18,15 @@ Modern OpenSSH (7.4+) has deprecated or removed weak ciphers. Here’s what’s 
 
 **Secure and performant:**
 
-- `chacha20-poly1305@openssh.com` — Best choice for most workloads. Software-based, no hardware dependency, ~400-600 MB/s on modern CPUs.
-- `aes256-gcm@openssh.com` / `aes128-gcm@openssh.com` — Hardware-accelerated via AES-NI when available, ~300-500 MB/s.
-- `aes256-ctr` / `aes128-ctr` — Fallback for systems without AES-NI support, slower but universally compatible.
+- `chacha20-poly1305@openssh.com`: Best choice for most workloads. Software-based, no hardware dependency, ~400-600 MB/s on modern CPUs.
+- `aes256-gcm@openssh.com` / `aes128-gcm@openssh.com`: Hardware-accelerated via AES-NI when available, ~300-500 MB/s.
+- `aes256-ctr` / `aes128-ctr`: Fallback for systems without AES-NI support, slower but universally compatible.
 
 **Avoid entirely:**
 
-- `arcfour`, `rc4` — Cryptographically broken; removed from OpenSSH 7.4+.
-- `blowfish-cbc` — 64-bit block size, practical security weaknesses.
-- `3des` — Obsolete, too slow.
+- `arcfour`, `rc4`: Cryptographically broken; removed from OpenSSH 7.4+.
+- `blowfish-cbc`: 64-bit block size, practical security weaknesses.
+- `3des`: Obsolete, too slow.
 
 ## Check Your Hardware
 
@@ -75,8 +75,8 @@ sshd -t && sudo systemctl reload sshd
 
 Compression helps on slow WAN links but wastes CPU on fast LANs. General rules:
 
-- **Disable for LAN/datacenter transfers** — Disk and network I/O will be the bottleneck, not encryption.
-- **Enable selectively for slow links** — Useful for high-latency or bandwidth-constrained connections.
+- **Disable for LAN/datacenter transfers**: Disk and network I/O will be the bottleneck, not encryption.
+- **Enable selectively for slow links**: Useful for high-latency or bandwidth-constrained connections.
 
 If enabling compression, set `CompressionLevel 6` for a reasonable compression-ratio-to-CPU tradeoff. Levels 7-9 add diminishing returns in compression with significant CPU cost.
 
@@ -125,13 +125,13 @@ On modern hardware with chacha20-poly1305 or AES-GCM, expect 300+ MB/s over giga
 
 ## Common Pitfalls
 
-**Mismatched client and server ciphers** — If the server doesn’t list a cipher the client prefers, SSH falls back to the next compatible option. Always ensure both sides have overlapping algorithm lists.
+**Mismatched client and server ciphers**: If the server doesn’t list a cipher the client prefers, SSH falls back to the next compatible option. Always ensure both sides have overlapping algorithm lists.
 
-**Compression enabled by default for all hosts** — Legacy configurations sometimes enable global compression. Disable it and enable only where needed.
+**Compression enabled by default for all hosts**: Legacy configurations sometimes enable global compression. Disable it and enable only where needed.
 
-**Using RSA key exchange** — Older systems may default to `diffie-hellman-group14-sha1` or worse. Explicitly set `KexAlgorithms` to enforce modern alternatives.
+**Using RSA key exchange**: Older systems may default to `diffie-hellman-group14-sha1` or worse. Explicitly set `KexAlgorithms` to enforce modern alternatives.
 
-**ED25519 host keys** — Faster and stronger than RSA for authentication. If your system supports it (OpenSSH 6.3+), consider switching:
+**ED25519 host keys**: Faster and stronger than RSA for authentication. If your system supports it (OpenSSH 6.3+), consider switching:
 
 ``` bash
 sudo ssh-keygen -A
@@ -141,4 +141,4 @@ This generates ED25519 and other key types. Ensure `HostKeyAlgorithms` includes 
 
 ## Summary
 
-Start with `chacha20-poly1305@openssh.com` as your primary cipher paired with modern key exchange algorithms. Disable compression globally and enable it only for high-latency links. Test in your environment—network conditions, hardware capabilities, and file sizes all affect real-world throughput. On current hardware, you should easily saturate gigabit links with encryption overhead below 10%.
+Start with `chacha20-poly1305@openssh.com` as your primary cipher paired with modern key exchange algorithms. Disable compression globally and enable it only for high-latency links. Test in your environment: network conditions, hardware capabilities, and file sizes all affect real-world throughput. On current hardware, you should easily saturate gigabit links with encryption overhead below 10%.

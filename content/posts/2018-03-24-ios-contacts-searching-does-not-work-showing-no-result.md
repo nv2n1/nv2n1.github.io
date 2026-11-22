@@ -22,7 +22,7 @@ The quickest fix is to trigger a fresh sync:
 
 1.  Go to **Settings \> \[Your Name\] \> iCloud** (or **Settings \> Mail \> Accounts** for other account types)
 2.  Toggle **Contacts** off, wait 10 seconds, then toggle it back on
-3.  Force a sync by going to **Settings \> General \> Transfer or Reset \> Reset** and select **Reset Location & Privacy** — this forces all services to resync without deleting data
+3.  Force a sync by going to **Settings \> General \> Transfer or Reset \> Reset** and select **Reset Location & Privacy**: this forces all services to resync without deleting data
 4.  Alternatively, simply toggle Airplane Mode on for 10 seconds, then off
 
 Wait a few minutes for the sync to complete. Contacts search should now work.
@@ -49,7 +49,7 @@ Sometimes contacts become hidden or duplicated:
 
 1.  In the Contacts app, go to **Groups** (top left)
 2.  Make sure all contact sources are checked/visible
-3.  Look for hidden groups — tap to ensure they’re visible
+3.  Look for hidden groups: tap to ensure they’re visible
 
 ## If Using Multiple Accounts
 
@@ -71,4 +71,4 @@ If nothing else works, a full reset will resolve the issue:
 
 This typically resolves deep corruption but should only be used after other methods fail.
 
-The most common cause is a stale sync state — toggling the account off and on usually fixes it within minutes. If you’re dealing with a particularly old backup or migration, forcing a rebuild through iCloud groups ensures your contacts are properly indexed for the search function.
+The most common cause is a stale sync state: toggling the account off and on usually fixes it within minutes. If you’re dealing with a particularly old backup or migration, forcing a rebuild through iCloud groups ensures your contacts are properly indexed for the search function.

@@ -17,11 +17,11 @@ Fedora upgrades are straightforward with `dnf system-upgrade`, the standard tool
 Before starting any upgrade:
 
 - **Update your current system**: `sudo dnf upgrade`
-- **Back up critical data** — especially `/etc`, home directories, and application configs
+- **Back up critical data**: especially `/etc`, home directories, and application configs
 - **Check the release notes** at <a href="https://docs.fedoraproject.org/en-US/docs/" rel="nofollow noopener" target="_blank">https://docs.fedoraproject.org/en-US/docs/</a>
 - **Review the Fedora wiki** for known issues with your target release
 - **Verify disk space**: at least 2-3 GB free in `/var` and `/usr`
-- **Ensure stable network connectivity** — upgrades can be 1-2 GB depending on installed packages
+- **Ensure stable network connectivity**: upgrades can be 1-2 GB depending on installed packages
 - **Disable unnecessary services** that might interfere (optional but recommended)
 
 ## Handling Third-Party Repositories
@@ -46,7 +46,7 @@ sudo dnf config-manager --set-disabled repo-id
 sudo dnf remove @repo-id  # if using module-based repos
 ```
 
-Common problem repositories include those for proprietary software (Chrome, Nvidia drivers, multimedia codecs). Check their documentation for compatibility with your target Fedora version — many need reinstallation after major upgrades anyway.
+Common problem repositories include those for proprietary software (Chrome, Nvidia drivers, multimedia codecs). Check their documentation for compatibility with your target Fedora version: many need reinstallation after major upgrades anyway.
 
 ## Preparation: Download Upgrade Packages
 
@@ -62,7 +62,7 @@ Then download all packages for your target version without applying changes:
 sudo dnf system-upgrade download --releasever=42
 ```
 
-Replace `42` with your target Fedora version. This step is safe to interrupt and resume — if your connection drops, just run the command again.
+Replace `42` with your target Fedora version. This step is safe to interrupt and resume: if your connection drops, just run the command again.
 
 Watch for any dependency conflicts or unresolvable packages during download. Address these before proceeding. The download typically takes 10-30 minutes depending on your system and connection speed.
 
@@ -74,7 +74,7 @@ Once the download completes successfully:
 sudo dnf system-upgrade reboot
 ```
 
-Your system reboots into a special upgrade environment. The upgrade process runs automatically at boot and typically takes 15-30 minutes. **Do not interrupt this process** — a failed upgrade mid-transaction can leave your system in an inconsistent state.
+Your system reboots into a special upgrade environment. The upgrade process runs automatically at boot and typically takes 15-30 minutes. **Do not interrupt this process**: a failed upgrade mid-transaction can leave your system in an inconsistent state.
 
 Monitor progress by watching the boot messages. You’ll see package installation progress and any errors that occur.
 

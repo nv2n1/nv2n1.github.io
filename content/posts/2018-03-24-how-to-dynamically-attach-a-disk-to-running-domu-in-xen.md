@@ -33,7 +33,7 @@ xl block-attach <Domain> <BackendDevice> <FrontendDevice> [<Mode>] [<BackendDoma
 Parameters:
 
 - **Domain**: The target DomU name or ID
-- **BackendDevice**: The source on Dom0 — can be a logical volume (`phy:vg_name/lv_name`), physical device (`/dev/sdX`), or file-backed loop device (`file:/path/to/img`)
+- **BackendDevice**: The source on Dom0: can be a logical volume (`phy:vg_name/lv_name`), physical device (`/dev/sdX`), or file-backed loop device (`file:/path/to/img`)
 - **FrontendDevice**: Device name as it appears in the guest (e.g., `xvdb`, `xvdc`)
 - **Mode**: `r` for read-only, `w` for read-write (default is `w`)
 - **BackendDomain**: Advanced option; usually omitted (defaults to Dom0)

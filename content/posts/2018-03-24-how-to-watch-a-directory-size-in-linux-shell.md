@@ -99,7 +99,7 @@ This checks hourly and emails alerts when thresholds are exceeded.
 
 ## Performance considerations
 
-For very large directories (millions of files), `du` becomes slow. Use `ncdu` for interactive analysis or consider hardware-backed solutions like quotas. On production systems, avoid running `du -s` too frequently—cache results or increase `watch` intervals to every 30 seconds or more.
+For very large directories (millions of files), `du` becomes slow. Use `ncdu` for interactive analysis or consider hardware-backed solutions like quotas. On production systems, avoid running `du -s` too frequently: cache results or increase `watch` intervals to every 30 seconds or more.
 
 ## 2026 Best Practices and Advanced Techniques
 

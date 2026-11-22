@@ -141,6 +141,6 @@ This allows 5 kernel versions to coexist, so you can test a new kernel before re
 
 **dnf vs yum**: On RHEL 8+, CentOS 8+, and Fedora 22+, dnf is the default package manager. The syntax is largely compatible, but use dnf commands on those systems. yum on newer systems is typically a wrapper around dnf anyway.
 
-**Configuration Reload**: Changes to `/etc/dnf/dnf.conf` or `/etc/yum.conf` take effect immediately on the next update command—no service restart needed.
+**Configuration Reload**: Changes to `/etc/dnf/dnf.conf` or `/etc/yum.conf` take effect immediately on the next update command: no service restart needed.
 
 **Testing First**: Always test kernel updates and dependency changes in a non-production environment before deploying to production systems, especially if you’re excluding packages from updates.

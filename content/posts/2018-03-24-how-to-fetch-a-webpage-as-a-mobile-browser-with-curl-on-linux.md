@@ -66,13 +66,13 @@ curl -A "Mozilla/5.0 (iPhone; CPU iPhone OS 18_1 like Mac OS X) AppleWebKit/605.
 
 **Flag reference:**
 
-- `-A` — Sets the User-Agent string
-- `-H` — Add custom headers to match browser behavior
-- `-L` — Follow redirects (many sites redirect mobile traffic differently)
-- `-i` — Include response headers in output
-- `-v` — Verbose mode (shows headers, SSL handshake, timing)
-- `-o <file>` — Save output to file
-- `-D <file>` — Save cookies to file (for stateful requests)
+- `-A`: Sets the User-Agent string
+- `-H`: Add custom headers to match browser behavior
+- `-L`: Follow redirects (many sites redirect mobile traffic differently)
+- `-i`: Include response headers in output
+- `-v`: Verbose mode (shows headers, SSL handshake, timing)
+- `-o <file>`: Save output to file
+- `-D <file>`: Save cookies to file (for stateful requests)
 
 ## Verify what the server received
 

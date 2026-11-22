@@ -26,10 +26,10 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 Here’s what each parameter does:
 
-- `intel_idle.max_cstate=0` — Disables C-state transitions in the intel_idle driver, preventing the CPU from entering deep sleep states
-- `processor.max_cstate=0` — Disables C-state transitions via the acpi-cpufreq driver as a fallback
-- `idle=poll` — Forces the CPU to busy-poll instead of entering sleep states when idle. This keeps the core hot and responsive but consumes more power
-- `intel_pstate=disable` — Disables the intel_pstate driver in favor of the traditional acpi-cpufreq driver, which gives you better control over frequency scaling in virtualized workloads
+- `intel_idle.max_cstate=0`: Disables C-state transitions in the intel_idle driver, preventing the CPU from entering deep sleep states
+- `processor.max_cstate=0`: Disables C-state transitions via the acpi-cpufreq driver as a fallback
+- `idle=poll`: Forces the CPU to busy-poll instead of entering sleep states when idle. This keeps the core hot and responsive but consumes more power
+- `intel_pstate=disable`: Disables the intel_pstate driver in favor of the traditional acpi-cpufreq driver, which gives you better control over frequency scaling in virtualized workloads
 
 The tradeoff is clear: lower latency and better performance for guest VMs at the cost of higher power consumption and CPU heat.
 
@@ -59,7 +59,7 @@ This reloads the module with default parameters (PLE enabled).
 
 ## How idle=poll Affects PLE
 
-When `idle=poll` is set, vCPUs execute NOP instructions in a spin-loop when idle instead of sleeping. If PLE is enabled, the hypervisor detects this spinning pattern and potentially yields the physical CPU — defeating the purpose of poll-based idling. For maximum latency-sensitive performance, you’ll typically want to disable PLE when using `idle=poll`.
+When `idle=poll` is set, vCPUs execute NOP instructions in a spin-loop when idle instead of sleeping. If PLE is enabled, the hypervisor detects this spinning pattern and potentially yields the physical CPU: defeating the purpose of poll-based idling. For maximum latency-sensitive performance, you’ll typically want to disable PLE when using `idle=poll`.
 
 ## Checking Current Settings
 
@@ -87,7 +87,7 @@ cat /sys/devices/system/cpu/cpu*/cpuidle/state*/time_in_state
 
 This configuration is appropriate for:
 
-- **Low-latency workloads** — trading power efficiency for predictable response times
+- **Low-latency workloads**: trading power efficiency for predictable response times
 - **Real-time applications** running in VMs
 - **High-throughput, CPU-bound workloads** where guests have exclusive vCPU pinning
 - **Database servers or in-memory caches** where context switching is expensive

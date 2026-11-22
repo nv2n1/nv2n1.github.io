@@ -80,7 +80,7 @@ case "$string" in
 esac
 ```
 
-This works in any POSIX shell but doesn’t support regex—only glob patterns.
+This works in any POSIX shell but doesn’t support regex: only glob patterns.
 
 ## Performance comparison
 

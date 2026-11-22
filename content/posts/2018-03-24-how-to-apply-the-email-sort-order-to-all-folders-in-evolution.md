@@ -61,7 +61,7 @@ If you want to completely reset Evolution’s sort configuration:
     rm ~/.local/share/evolution/mail/local/system/
     ```
 
-3.  Reopen Evolution — all folders will revert to the default sort order
+3.  Reopen Evolution: all folders will revert to the default sort order
 
 This is a nuclear option and will reset all folder-specific customizations, so use it only when necessary.
 

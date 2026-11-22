@@ -97,7 +97,7 @@ openssl enc -base64 -in signature.bin -out signature.b64
 
 While ECDSA remains dominant, Ed25519 (Edwards-curve Digital Signature Algorithm) is increasingly preferred for new systems:
 
-- **Deterministic signing**: No random number generation needed during signature creation—eliminates entire classes of implementation vulnerabilities that have caused wallet hacks
+- **Deterministic signing**: No random number generation needed during signature creation: eliminates entire classes of implementation vulnerabilities that have caused wallet hacks
 - **Side-channel resistance**: Designed to resist timing attacks without constant-time programming burden
 - **Performance**: Comparable or faster than ECDSA with better security margins
 

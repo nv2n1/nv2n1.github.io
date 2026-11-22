@@ -94,7 +94,7 @@ find . -mmin -60
 
 ## Filesystem Considerations
 
-Modern Linux filesystems (ext4, XFS, Btrfs) all track mtime at the second granularity by default. For nanosecond-precision timestamps, ensure your filesystem supports it—most modern configurations do.
+Modern Linux filesystems (ext4, XFS, Btrfs) all track mtime at the second granularity by default. For nanosecond-precision timestamps, ensure your filesystem supports it: most modern configurations do.
 
 If you’re running high-performance systems with heavy I/O, mounting with `noatime` or `relatime` reduces unnecessary metadata writes:
 
@@ -138,7 +138,7 @@ stat -c '%n %Y' src/* > .build_state
 # Later: compare new mtimes against stored values
 ```
 
-Use `stat` for scripting and automation—it’s precise, portable, and doesn’t depend on locale settings like `ls` does.
+Use `stat` for scripting and automation: it’s precise, portable, and doesn’t depend on locale settings like `ls` does.
 
 ## 2026 Best Practices and Advanced Techniques
 

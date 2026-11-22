@@ -124,7 +124,7 @@ iptables -t nat -F
 iptables -t mangle -F
 ```
 
-Then reapply your rules. Be cautious—flushing rules exposes your gateway. Always rebuild security rules immediately.
+Then reapply your rules. Be cautious: flushing rules exposes your gateway. Always rebuild security rules immediately.
 
 ## Client-Side Configuration
 

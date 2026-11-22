@@ -32,8 +32,8 @@ GitHub now requires Personal Access Tokens instead of passwords. This is the qui
 1.  Go to **Settings → Developer settings → Personal access tokens → Tokens (classic)**
 2.  Click **Generate new token (classic)**
 3.  Select scopes:
-    - `repo` — full repository access
-    - `workflow` — if you use GitHub Actions
+    - `repo`: full repository access
+    - `workflow`: if you use GitHub Actions
 4.  Copy the token immediately (you won’t see it again)
 
 ### Configure Git to Use the Token
@@ -75,7 +75,7 @@ sudo dnf install pass
 git config --global credential.helper pass
 ```
 
-The `pass` helper is more secure — it encrypts credentials.
+The `pass` helper is more secure: it encrypts credentials.
 
 ## Solution 2: SSH Keys (Recommended)
 

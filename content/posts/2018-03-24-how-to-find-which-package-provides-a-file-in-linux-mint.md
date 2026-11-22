@@ -89,11 +89,11 @@ apt-file search libssl.so.3
 
 ## Troubleshooting
 
-**“dpkg-query: no path found matching pattern”** — The file isn’t installed. Use `apt-file` instead, or check the file path for typos.
+**“dpkg-query: no path found matching pattern”**: The file isn’t installed. Use `apt-file` instead, or check the file path for typos.
 
-**“which: command not found”** — The command doesn’t exist in your PATH. Verify it’s installed with `apt list --installed | grep package-name`.
+**“which: command not found”**: The command doesn’t exist in your PATH. Verify it’s installed with `apt list --installed | grep package-name`.
 
-**apt-file searches are slow** — The metadata cache may be outdated. Run `sudo apt-file update` again. On first run, this downloads significant metadata and takes time.
+**apt-file searches are slow**: The metadata cache may be outdated. Run `sudo apt-file update` again. On first run, this downloads significant metadata and takes time.
 
 Both `dpkg` and `apt-file` are standard tools on Debian-based systems and work identically across Ubuntu, Linux Mint, Elementary OS, and other derivatives.
 
@@ -101,11 +101,11 @@ Both `dpkg` and `apt-file` are standard tools on Debian-based systems and work i
 
 These related commands are often used alongside the tools discussed in this article:
 
-- man command-name – Read the manual page for any command
-- which command-name – Find the location of an executable
-- rpm -qa or dpkg -l – List installed packages
-- journalctl -u service-name – Check service logs
-- ss -tulpn – List listening ports and services
+- man command-name: Read the manual page for any command
+- which command-name: Find the location of an executable
+- rpm -qa or dpkg -l: List installed packages
+- journalctl -u service-name: Check service logs
+- ss -tulpn: List listening ports and services
 
 ## Quick Reference
 

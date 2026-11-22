@@ -14,7 +14,7 @@ The `.mbox` format stores email messages as plain text in a single file, with ea
 
 ## Using Thunderbird
 
-Thunderbird remains a solid option for viewing `.mbox` files with a graphical interface. Drop your `.mbox` file into Thunderbird’s Local Folders directory and restart the application — it will automatically index the messages and display them.
+Thunderbird remains a solid option for viewing `.mbox` files with a graphical interface. Drop your `.mbox` file into Thunderbird’s Local Folders directory and restart the application: it will automatically index the messages and display them.
 
 Find your Local Folders path in Thunderbird by opening **Edit → Preferences → Files and Folders** and looking for the Local Folders location. On Linux, it’s typically:
 

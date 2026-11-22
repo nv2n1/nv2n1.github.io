@@ -45,9 +45,9 @@ If you don’t see the menu, press \*\*F10\*\* to show it, or right-click the ti
 The preferences dialog in gThumb 3.4+ provides several configuration sections:
 
 \*\*General settings:\*\*
-– Startup directory — choose whether to open the last visited folder or a specific location
-– Thumbnail size — adjust preview quality vs. speed
-– File properties — configure which metadata to display
+– Startup directory: choose whether to open the last visited folder or a specific location
+– Thumbnail size: adjust preview quality vs. speed
+– File properties: configure which metadata to display
 
 \*\*Viewer settings:\*\*
 – Image quality for zooming
@@ -65,22 +65,22 @@ The preferences dialog in gThumb 3.4+ provides several configuration sections:
 
 Instead of navigating menus, you can use keyboard shortcuts:
 
-– \*\*Ctrl+P\*\* — Open preferences (in some gThumb versions)
-– \*\*F10\*\* — Show/hide the application menu
-– \*\*Shift+F10\*\* — Show context menu
+– \*\*Ctrl+P\*\*: Open preferences (in some gThumb versions)
+– \*\*F10\*\*: Show/hide the application menu
+– \*\*Shift+F10\*\*: Show context menu
 
 \## gThumb Extensions
 
 Beyond the preferences dialog, gThumb’s real power comes from its extensions. Access them via \*\*Edit\*\* → \*\*Extensions\*\* (or the equivalent menu path for your version):
 
 \*\*Useful extensions to enable:\*\*
-– \*\*Image Viewer\*\* — Enhanced zoom and pan controls
-– \*\*Rename Files\*\* — Batch renaming with patterns
-– \*\*Convert Format\*\* — Batch image conversion (JPEG, PNG, WebP)
-– \*\*Resize Images\*\* — Batch resize with custom dimensions or percentages
-– \*\*Contact Sheet\*\* — Generate thumbnail grids from selected images
-– \*\*Photo Importer\*\* — Import from cameras and mobile devices
-– \*\*Web Albums\*\* — Upload to online services
+– \*\*Image Viewer\*\*: Enhanced zoom and pan controls
+– \*\*Rename Files\*\*: Batch renaming with patterns
+– \*\*Convert Format\*\*: Batch image conversion (JPEG, PNG, WebP)
+– \*\*Resize Images\*\*: Batch resize with custom dimensions or percentages
+– \*\*Contact Sheet\*\*: Generate thumbnail grids from selected images
+– \*\*Photo Importer\*\*: Import from cameras and mobile devices
+– \*\*Web Albums\*\*: Upload to online services
 
 To install additional extensions on Fedora:
 
@@ -114,15 +114,15 @@ mv ~/.config/gthumb ~/.config/gthumb.bak
 gthumb
 ```
 
-This resets all preferences to defaults. Your image files are not affected — only gThumb’s settings.
+This resets all preferences to defaults. Your image files are not affected: only gThumb’s settings.
 
 \## Version Differences
 
 gThumb has changed significantly over versions:
 
-– \*\*gThumb 3.4\*\* — Uses traditional Edit menu on most desktops
-– \*\*gThumb 3.10+\*\* — Uses GNOME-style application menu in the top bar
-– \*\*gThumb 3.12+\*\* — Modern header bar with integrated preferences access
+– \*\*gThumb 3.4\*\*: Uses traditional Edit menu on most desktops
+– \*\*gThumb 3.10+\*\*: Uses GNOME-style application menu in the top bar
+– \*\*gThumb 3.12+\*\*: Modern header bar with integrated preferences access
 
 Check your version:
 

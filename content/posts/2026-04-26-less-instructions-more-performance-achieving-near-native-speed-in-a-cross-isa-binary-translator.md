@@ -10,7 +10,7 @@ canonical: /less-instructions-more-performance-achieving-near-native-speed-in-a-
 url: /less-instructions-more-performance-achieving-near-native-speed-in-a-cross-isa-binary-translator/
 ---
 
-Cross-ISA dynamic binary translation (DBT) is a foundational technique for running executables compiled for one instruction set architecture on a host with a different ISA. It powers widely-used emulators like <a href="https://www.qemu.org/" rel="nofollow noopener" target="_blank">QEMU</a>, enabling everything from ARM-to-x86 mobile app emulation to legacy system preservation. Unlike static binary translation, DBT translates code *at runtime* — converting guest instructions to host instructions on demand, caching the results for reuse.
+Cross-ISA dynamic binary translation (DBT) is a foundational technique for running executables compiled for one instruction set architecture on a host with a different ISA. It powers widely-used emulators like <a href="https://www.qemu.org/" rel="nofollow noopener" target="_blank">QEMU</a>, enabling everything from ARM-to-x86 mobile app emulation to legacy system preservation. Unlike static binary translation, DBT translates code *at runtime*: converting guest instructions to host instructions on demand, caching the results for reuse.
 
 The central challenge in DBT is `translation overhead`: a single source instruction typically expands into multiple host instructions, and the translation framework adds its own bookkeeping (operand mapping, branch resolution, trampoline dispatch). In tight compute loops, this overhead compounds dramatically, making translated code orders of magnitude slower than native execution.
 
@@ -18,7 +18,7 @@ This post presents a concrete, hands-on walkthrough of optimizing a cross-ISA bi
 
 > Z. Ma, Z. Sheng, and L. Gu, *“<a href="https://www.computer.org/csdl/journal/tc/2014/09/06509870/13rRUxBa55r" rel="nofollow noopener" target="_blank">DVM: A Big Virtual Machine for Cloud Computing</a>,”* IEEE Transactions on Computers, vol. 63, no. 9, pp. 2245–2258, Sept. 2014. DVM aggregates a cluster of physical machines into a single large virtual machine, presenting a unified memory space and computing interface to applications. Binary translation is used to intercept and redirect system calls and memory operations across the distributed system.
 
-Using a simple CPU integer benchmark, we show how an unoptimized translation runs `4.7× slower` than native code, and then apply a series of incremental optimizations — each targeting a specific source of overhead — to bring performance to within `2% of native speed`.
+Using a simple CPU integer benchmark, we show how an unoptimized translation runs `4.7× slower` than native code, and then apply a series of incremental optimizations (each targeting a specific source of overhead) to bring performance to within `2% of native speed`.
 
 ## Background: Why Cross-ISA Translation Is Hard
 
@@ -57,7 +57,7 @@ GCC translates the loop into a tight 5-instruction sequence:
     cmpq    %r13, %rbx  # compare i < test_limit
     jl      .L5         # loop if less
 
-This is about as efficient as it gets: two instructions for the loop body (add + increment), one comparison, and one conditional branch. No memory accesses — everything stays in registers.
+This is about as efficient as it gets: two instructions for the loop body (add + increment), one comparison, and one conditional branch. No memory accesses: everything stays in registers.
 
 ## Unoptimized Binary Translation (147 seconds)
 
@@ -68,7 +68,7 @@ The source architecture uses its own ISA. The unoptimized binary translator maps
     add:sq  i, $1, i                # i += 1
     br:j    loop_start              # unconditional jump back
 
-Four source instructions — similar in structure to the native assembly. But the translated code tells a very different story.
+Four source instructions: similar in structure to the native assembly. But the translated code tells a very different story.
 
 ### Translated Code: Branch Instruction
 
@@ -89,7 +89,7 @@ A single `br:le` instruction expands to `11 native instructions`, including two 
     movq    sys_trampoline_handler, %rax
     jmpq    *%rax                   # dispatch to handler
 
-Every branch goes through a `trampoline` — a small code stub that calls a system handler to resolve the target. This is necessary because at translation time, the target block may not yet be translated. But it means every conditional branch costs ~11 instructions plus a function call, even for a simple loop.
+Every branch goes through a `trampoline`: a small code stub that calls a system handler to resolve the target. This is necessary because at translation time, the target block may not yet be translated. But it means every conditional branch costs ~11 instructions plus a function call, even for a simple loop.
 
 ### Translated Code: Add Instruction
 
@@ -100,11 +100,11 @@ The `add:sq` instruction fares no better. Loading operands from memory, computin
     leaq    (%rsi, %rdi), %rdi      # compute a + i
     movq    %reg 1, %oprreg 4       # store 'a' back to memory
 
-Four native instructions for a single addition — and two of them are memory loads/stores through an operand register map.
+Four native instructions for a single addition, and two of them are memory loads/stores through an operand register map.
 
 ### Why It’s Slow
 
-The unoptimized translation runs in `147 seconds` — 4.7× slower than native. The overhead comes from:
+The unoptimized translation runs in `147 seconds`: 4.7× slower than native. The overhead comes from:
 
 - `Memory-based operands`: Every instruction loads and stores operands from/to a memory map, even though the values could live in registers
 - `Trampoline dispatch`: Every branch (including the loop back-edge) routes through an indirect jump → trampoline → system handler chain
@@ -139,7 +139,7 @@ Conditional branches (`br:le`, `br:l`, etc.) compare two registers. The unoptimi
     # After: compare directly using mapped registers
     cmpq    %oprreg 5, %oprreg 7
 
-This saves two instructions per iteration but only shaves off about 1 second (94s → `93s`). The bottleneck has shifted — the trampoline dispatch is now the dominant cost.
+This saves two instructions per iteration but only shaves off about 1 second (94s → `93s`). The bottleneck has shifted: the trampoline dispatch is now the dominant cost.
 
 ## Optimization 3: In-Place Trampoline Patching (69 seconds)
 
@@ -178,9 +178,9 @@ For unconditional branches (`br:j`), replacing the trampoline with a direct `jmp
 
 ## Optimization 5: Jump Table for Native Address Lookup (32 seconds)
 
-The final optimization targets the `find_native_code_address` function, which maps source instruction addresses to translated native code addresses. The original implementation uses a linear scan or hash lookup. Replacing this with a `jump table` — a direct-indexed array — makes the lookup O(1).
+The final optimization targets the `find_native_code_address` function, which maps source instruction addresses to translated native code addresses. The original implementation uses a linear scan or hash lookup. Replacing this with a `jump table` (a direct-indexed array) makes the lookup O(1).
 
-With all optimizations combined, the final runtime is `32 seconds` — within 2% of the native GCC time of 31.5 seconds.
+With all optimizations combined, the final runtime is `32 seconds`: within 2% of the native GCC time of 31.5 seconds.
 
 ## Summary
 
@@ -200,7 +200,7 @@ With all optimizations combined, the final runtime is `32 seconds` — within 2%
 - `Eliminate indirection`: Trampolines are necessary for correctness (targets may not be translated yet), but they must be patched to direct jumps on the hot path.
 - `Use the ISA effectively`: x86-64’s rich addressing modes (`leaq`) and conditional branches can replace multi-instruction sequences with single instructions.
 - `Profile-guided optimization`: Many of these optimizations only apply after the first execution reveals branch targets and register usage patterns.
-- `32 seconds from 147 seconds` — a 4.6× speedup — brings binary-translated code to within 2% of native performance, demonstrating that careful instruction-level optimization can nearly eliminate translation overhead.
+- `32 seconds from 147 seconds` (a 4.6× speedup) brings binary-translated code to within 2% of native performance, demonstrating that careful instruction-level optimization can nearly eliminate translation overhead.
 
 ## References
 

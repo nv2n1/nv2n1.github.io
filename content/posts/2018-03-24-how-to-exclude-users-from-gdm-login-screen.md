@@ -85,7 +85,7 @@ sudo systemctl restart gdm
 - These settings apply only to the GDM login screen, not system user listings elsewhere
 - Users with admin access can still view system user information through other means (e.g., `getent passwd`)
 - The `disable-user-list` setting is more reliable than `exclude-users` across different GNOME versions
-- Always run `sudo dconf update` after editing dconf files—this compiles the database and is required for changes to take effect
+- Always run `sudo dconf update` after editing dconf files: this compiles the database and is required for changes to take effect
 - Behavior varies slightly between distributions and GNOME versions; check your distro’s documentation if settings don’t apply
 
 ## Troubleshooting
@@ -93,9 +93,9 @@ sudo systemctl restart gdm
 **Settings aren’t taking effect:**
 
 - Ensure you’re editing `/etc/dconf/db/gdm.d/` (system-wide GDM settings), not user-level dconf directories
-- Run `sudo dconf update` after every change—this is required
+- Run `sudo dconf update` after every change: this is required
 - Restart GDM: `sudo systemctl restart gdm`
-- Check file syntax—dconf is strict about formatting (proper quotes, commas between list items)
+- Check file syntax: dconf is strict about formatting (proper quotes, commas between list items)
 - Verify the file is readable: `sudo cat /etc/dconf/db/gdm.d/01-mysettings`
 
 **Syntax errors:**

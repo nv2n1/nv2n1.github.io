@@ -10,7 +10,7 @@ canonical: /inline-assembly-with-gcc-on-linux/
 url: /inline-assembly-with-gcc-on-linux/
 ---
 
-GCC allows you to embed assembly code directly in C/C++ programs through inline assembly (`asm` and `__asm__`). This is useful when you need fine-grained control over processor execution—forcing variables into specific registers, reading CPU state efficiently, or hand-optimizing critical sections verified by profiling.
+GCC allows you to embed assembly code directly in C/C++ programs through inline assembly (`asm` and `__asm__`). This is useful when you need fine-grained control over processor execution: forcing variables into specific registers, reading CPU state efficiently, or hand-optimizing critical sections verified by profiling.
 
 ## Basic Syntax
 
@@ -28,10 +28,10 @@ asm("instruction" : output_operands : input_operands : clobber_list);
 
 The colons separate four sections:
 
-1.  **Assembly instructions** — what code to emit
-2.  **Output operands** — variables modified by the assembly
-3.  **Input operands** — variables read by the assembly
-4.  **Clobber list** — registers or flags the assembly modifies that aren’t explicit outputs
+1.  **Assembly instructions**: what code to emit
+2.  **Output operands**: variables modified by the assembly
+3.  **Input operands**: variables read by the assembly
+4.  **Clobber list**: registers or flags the assembly modifies that aren’t explicit outputs
 
 ## Simple Example
 
@@ -54,10 +54,10 @@ int main() {
 
 Breaking this down:
 
-- `"addl %2, %0"` — AT&T syntax: add `%2` (b) into `%0` (result)
-- `"=r" (result)` — output operand: result lives in a register, `=` means write-only
-- `"0" (a)` — input operand: a uses the same register as output operand 0
-- `"r" (b)` — input operand: b in any general-purpose register
+- `"addl %2, %0"`: AT&T syntax: add `%2` (b) into `%0` (result)
+- `"=r" (result)`: output operand: result lives in a register, `=` means write-only
+- `"0" (a)`: input operand: a uses the same register as output operand 0
+- `"r" (b)`: input operand: b in any general-purpose register
 
 ## Operand Constraints
 
@@ -74,9 +74,9 @@ The constraint letter specifies where a variable can live:
 
 Output modifiers:
 
-- `=` — write-only (output)
-- `+` — read-write (input and output)
-- `&` — early-clobber (modified before inputs are read)
+- `=`: write-only (output)
+- `+`: read-write (input and output)
+- `&`: early-clobber (modified before inputs are read)
 
 ## Clobber List
 
@@ -174,7 +174,7 @@ void cpuid(int code, int *a, int *b, int *c, int *d) {
 }
 ```
 
-**Reading a Model-Specific Register (MSR) — kernel context:**
+**Reading a Model-Specific Register (MSR): kernel context:**
 
 ``` c
 unsigned long read_msr(unsigned int msr) {

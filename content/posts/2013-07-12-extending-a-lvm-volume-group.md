@@ -130,7 +130,7 @@ Run `vgdisplay` before and after to confirm free space is consumed as expected.
 
 **Online extension:** Both LVM logical volume and filesystem resize operations can typically run on mounted, in-use filesystems, though XFS is more robust for this than ext4. Test in non-production first.
 
-**Device naming:** If your new disk appears as `/dev/nvme0n1` (NVMe) instead of `/dev/sdX`, the process is identical — just substitute the correct device name.
+**Device naming:** If your new disk appears as `/dev/nvme0n1` (NVMe) instead of `/dev/sdX`, the process is identical: just substitute the correct device name.
 
 **Partitioning:** It’s generally good practice to partition new disks before adding them to LVM, even if using the entire disk. This gives you flexibility for future changes and makes device boundaries clearer.
 

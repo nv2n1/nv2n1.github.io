@@ -28,7 +28,7 @@ console.log(getExtension('.htaccess'));          // ''
 console.log(getExtension('filename'));           // ''
 ```
 
-This handles edge cases like `.htaccess` or files with no extension by checking if the dot is at position 0 or doesn’t exist. Use `substring()` instead of the older `substr()` — it’s the standard string method.
+This handles edge cases like `.htaccess` or files with no extension by checking if the dot is at position 0 or doesn’t exist. Use `substring()` instead of the older `substr()`: it’s the standard string method.
 
 ### With `split()` for Simplicity
 

@@ -22,14 +22,14 @@ mpv --vf=stereo3d=sbsl:arced your-3d-movie.mkv
 
 Common stereo3d filter options:
 
-- `sbsl` – Side-by-side left (input is side-by-side, left image on left)
-- `sbsr` – Side-by-side right
-- `abl` – Anaglyph blue-line (depth separation)
-- `arcd` – Anaglyph red-cyan dubois (best quality anaglyph)
-- `arce` – Anaglyph red-cyan edge (faster, lower quality)
-- `gmcd` – Anaglyph green-magenta dubois
-- `ml` – Monoscopic left (extract left eye only)
-- `mr` – Monoscopic right (extract right eye only)
+- `sbsl`: Side-by-side left (input is side-by-side, left image on left)
+- `sbsr`: Side-by-side right
+- `abl`: Anaglyph blue-line (depth separation)
+- `arcd`: Anaglyph red-cyan dubois (best quality anaglyph)
+- `arce`: Anaglyph red-cyan edge (faster, lower quality)
+- `gmcd`: Anaglyph green-magenta dubois
+- `ml`: Monoscopic left (extract left eye only)
+- `mr`: Monoscopic right (extract right eye only)
 
 The anaglyph red-cyan mode (`arcd`) generally produces the best results for viewing with color-filtered glasses:
 
@@ -84,7 +84,7 @@ The `arce` (edge) variant is faster than dubois at the cost of color separation 
 - Use red-cyan, green-magenta, or blue-amber colored glasses
 - Adjust color brightness if one eye appears much dimmer
 - View from a normal distance (not too close) for better depth perception
-- Take breaks—anaglyph viewing causes more eye strain than native 3D
+- Take breaks: anaglyph viewing causes more eye strain than native 3D
 
 MPlayer’s deprecated `gl_stereo` output is not recommended for new workflows. Use mpv or FFmpeg’s stereo3d filter for modern Linux distributions and better maintained codebases.
 

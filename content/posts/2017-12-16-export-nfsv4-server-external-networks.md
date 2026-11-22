@@ -55,10 +55,10 @@ On the NFS server (10.2.2.2), edit `/etc/exports` and add the external network s
 
 Key export options explained:
 
-- `rw` — read/write access
-- `sync` — force synchronous writes (safer than async, standard for production)
-- `no_root_squash` — allows root user on clients to have root privileges on the server (use carefully)
-- `no_subtree_check` — disables subtree checking, improving performance
+- `rw`: read/write access
+- `sync`: force synchronous writes (safer than async, standard for production)
+- `no_root_squash`: allows root user on clients to have root privileges on the server (use carefully)
+- `no_subtree_check`: disables subtree checking, improving performance
 
 Apply the configuration:
 
@@ -137,4 +137,4 @@ Network-based access control via IP ranges provides minimal security. For extern
 - Host-based firewall rules limiting client access
 - Regular auditing of NFS access logs
 
-Using `no_root_squash` is generally unsafe — consider root_squash (default) unless you have specific requirements for root access from clients.
+Using `no_root_squash` is generally unsafe: consider root_squash (default) unless you have specific requirements for root access from clients.

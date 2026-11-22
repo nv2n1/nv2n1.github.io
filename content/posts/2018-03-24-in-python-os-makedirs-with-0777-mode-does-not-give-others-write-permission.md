@@ -42,7 +42,7 @@ os.makedirs('/tmp/test_dir', mode=0o777)
 os.umask(current_umask)
 ```
 
-However, changing the umask process-wide is rarely the right solution—it affects all subsequent file creation in your process.
+However, changing the umask process-wide is rarely the right solution: it affects all subsequent file creation in your process.
 
 ## Better Approaches
 
@@ -66,7 +66,7 @@ os.makedirs('/tmp/test_dir', mode=0o700, exist_ok=True)
 os.chmod('/tmp/test_dir', 0o777)
 ```
 
-This is safer—the directory starts private, then gets opened up only when needed.
+This is safer: the directory starts private, then gets opened up only when needed.
 
 **Use context manager for temporary umask changes**:
 
@@ -127,11 +127,11 @@ For system scripting, prefer the subprocess module over os.system for better con
 
 These complementary Python tools and commands are useful for daily development workflows:
 
-- python3 -m venv myenv – Create an isolated virtual environment
-- pip list –outdated – Check which packages need updating
-- python3 -m py_compile script.py – Check syntax without running
-- black script.py – Auto-format code to PEP 8 standards
-- mypy script.py – Static type checking for Python code
+- python3 -m venv myenv: Create an isolated virtual environment
+- pip list --outdated: Check which packages need updating
+- python3 -m py_compile script.py: Check syntax without running
+- black script.py: Auto-format code to PEP 8 standards
+- mypy script.py: Static type checking for Python code
 
 ## Quick Verification
 

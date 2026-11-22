@@ -12,7 +12,7 @@ url: /formatting-code-shortcuts-in-eclipse/
 
 The primary keyboard shortcut for formatting code in Eclipse is **Ctrl + Shift + F**. This reformats your entire active file according to your configured code style settings without requiring any text selection.
 
-When you press Ctrl + Shift + F, Eclipse adjusts indentation, spacing, line breaks, and bracket placement across the file. To format only a specific section, select the lines first, then press Ctrl + Shift + F—the formatter applies rules only to the selected region.
+When you press Ctrl + Shift + F, Eclipse adjusts indentation, spacing, line breaks, and bracket placement across the file. To format only a specific section, select the lines first, then press Ctrl + Shift + F: the formatter applies rules only to the selected region.
 
 Other related shortcuts worth knowing:
 

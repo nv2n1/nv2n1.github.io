@@ -24,7 +24,7 @@ Start with “Apache Hadoop YARN: Yet Another Resource Negotiator” by Vinod Ku
 
 **Official documentation**
 
-The <a href="https://hadoop.apache.org/docs/current/hadoop-yarn/" rel="nofollow noopener" target="_blank">Apache Hadoop YARN documentation</a> provides comprehensive API references and configuration details. Treat it as reference material rather than a tutorial—use it once you understand the core concepts.
+The <a href="https://hadoop.apache.org/docs/current/hadoop-yarn/" rel="nofollow noopener" target="_blank">Apache Hadoop YARN documentation</a> provides comprehensive API references and configuration details. Treat it as reference material rather than a tutorial: use it once you understand the core concepts.
 
 ## Core Architecture Components
 
@@ -34,7 +34,7 @@ The Resource Manager (RM) is the cluster-level authority allocating resources gl
 
 **Application Master**
 
-Each YARN application spawns an Application Master (AM) that negotiates resources with the RM and orchestrates task execution. Unlike Hadoop 1.x’s centralized JobTracker, the AM pattern is distributed—each application handles its own scheduling logic. This allows frameworks like Spark and Flink to implement custom scheduling strategies.
+Each YARN application spawns an Application Master (AM) that negotiates resources with the RM and orchestrates task execution. Unlike Hadoop 1.x’s centralized JobTracker, the AM pattern is distributed: each application handles its own scheduling logic. This allows frameworks like Spark and Flink to implement custom scheduling strategies.
 
 **Containers**
 
@@ -76,9 +76,9 @@ Misconfiguring these limits prevents applications from requesting sufficient res
 
 YARN ships with two primary schedulers:
 
-**Capacity Scheduler** — partitions cluster capacity into queues with guaranteed minimums. Use this for multi-tenant environments where different teams or applications need resource isolation. Supports queue hierarchies and priority levels.
+**Capacity Scheduler**: partitions cluster capacity into queues with guaranteed minimums. Use this for multi-tenant environments where different teams or applications need resource isolation. Supports queue hierarchies and priority levels.
 
-**Fair Scheduler** — allocates resources dynamically based on application demand, ensuring no application starves. Better for batch processing where jobs have variable duration and resource needs.
+**Fair Scheduler**: allocates resources dynamically based on application demand, ensuring no application starves. Better for batch processing where jobs have variable duration and resource needs.
 
 Check which scheduler is active:
 
@@ -119,4 +119,4 @@ After understanding these fundamentals:
 4.  Enable log aggregation to centralize application logs across nodes
 5.  Monitor long-term resource usage and adjust node capacity accordingly
 
-YARN’s flexibility comes from understanding resource negotiation. Invest time in observing how containers are allocated during actual job execution—the web UI and logs reveal far more than documentation alone.
+YARN’s flexibility comes from understanding resource negotiation. Invest time in observing how containers are allocated during actual job execution: the web UI and logs reveal far more than documentation alone.

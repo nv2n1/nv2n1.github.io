@@ -30,7 +30,7 @@ func main() {
 }
 ```
 
-The `os.Hostname()` function returns a string containing the hostname and an error value. Always check the error—it can fail if the hostname cannot be determined, particularly in restricted environments.
+The `os.Hostname()` function returns a string containing the hostname and an error value. Always check the error: it can fail if the hostname cannot be determined, particularly in restricted environments.
 
 ## Behavior in Container Environments
 

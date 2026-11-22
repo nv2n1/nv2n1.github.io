@@ -52,7 +52,7 @@ Navigate to your Office 2007 installation media and run the setup:
 WINEPREFIX=~/.wine-office2007 wine setup.exe
 ```
 
-Follow the installer prompts. Installation typically takes 10-15 minutes. Note the installation path — by default it goes to `.wine-office2007/drive_c/Program Files/Microsoft Office/Office12/`.
+Follow the installer prompts. Installation typically takes 10-15 minutes. Note the installation path: by default it goes to `.wine-office2007/drive_c/Program Files/Microsoft Office/Office12/`.
 
 ## Running Office Applications
 
@@ -127,10 +127,10 @@ ppt2k7 ./presentation.ppt
 
 Before committing to Office 2007 under Wine, evaluate these options:
 
-- **LibreOffice** — handles most .doc, .xls, and .ppt files natively with good fidelity
-- **OnlyOffice** — proprietary but excellent Microsoft format compatibility
-- **Microsoft 365 Online** — cloud-based Office works in any browser
-- **Collabora Online** — open-source cloud office suite
+- **LibreOffice**: handles most .doc, .xls, and .ppt files natively with good fidelity
+- **OnlyOffice**: proprietary but excellent Microsoft format compatibility
+- **Microsoft 365 Online**: cloud-based Office works in any browser
+- **Collabora Online**: open-source cloud office suite
 
 These avoid the complexity and potential stability issues of running legacy Windows software through Wine.
 

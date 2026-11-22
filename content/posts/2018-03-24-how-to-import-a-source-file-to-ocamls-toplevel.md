@@ -86,10 +86,10 @@ This automatically compiles your libraries and makes them available in the tople
 
 ## Related directives
 
-- `#mod_use "file";;` — Like `#use`, but wraps the file’s content in a module
-- `#load "file.cmo";;` — Load precompiled bytecode objects
-- `#directory "path";;` — Add a directory to the search path for `#load`
-- `#show_val name;;` — Display the type and value of a binding
+- `#mod_use "file";;`: Like `#use`, but wraps the file’s content in a module
+- `#load "file.cmo";;`: Load precompiled bytecode objects
+- `#directory "path";;`: Add a directory to the search path for `#load`
+- `#show_val name;;`: Display the type and value of a binding
 
 ## Troubleshooting
 

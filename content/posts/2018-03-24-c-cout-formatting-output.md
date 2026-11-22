@@ -151,6 +151,6 @@ Most use cases are better served by the manipulators, but this approach is usefu
 ### Common Pitfalls
 
 - `std::setw()` only affects the next output operation
-- Many manipulators persist — change them back explicitly or save/restore the stream state
+- Many manipulators persist: change them back explicitly or save/restore the stream state
 - `std::setprecision()` behaves differently depending on whether `std::fixed` is active
 - For currency, padding with zeros typically requires both `std::setfill('0')` and careful positioning of symbols

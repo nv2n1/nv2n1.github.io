@@ -74,7 +74,7 @@ If a VM is hung or unresponsive to graceful shutdown:
 vboxmanage controlvm ubuntu-server poweroff
 ```
 
-This immediately terminates the VM without warning—use only when necessary to avoid data corruption.
+This immediately terminates the VM without warning: use only when necessary to avoid data corruption.
 
 ## Pause and resume a VM
 

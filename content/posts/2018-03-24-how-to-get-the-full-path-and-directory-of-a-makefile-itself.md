@@ -25,9 +25,9 @@ target:
 
 Breaking this down:
 
-- `$(lastword $(MAKEFILE_LIST))` — gets the last makefile in the list (your current Makefile)
-- `$(abspath ...)` — converts it to an absolute path
-- `$(dir ...)` — extracts just the directory portion
+- `$(lastword $(MAKEFILE_LIST))`: gets the last makefile in the list (your current Makefile)
+- `$(abspath ...)`: converts it to an absolute path
+- `$(dir ...)`: extracts just the directory portion
 
 ## Practical Examples
 

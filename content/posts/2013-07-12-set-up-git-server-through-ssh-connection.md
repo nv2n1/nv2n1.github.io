@@ -108,7 +108,7 @@ git push
 
 ## Git Server Behind a Gateway (Port-Forwarded)
 
-When your Git server is inside a private network accessed through a gateway with port forwarding (e.g., port 22111 on `gate.example.org` forwards to `vm111:22`), the setup is nearly identical—only the SSH connection details change.
+When your Git server is inside a private network accessed through a gateway with port forwarding (e.g., port 22111 on `gate.example.org` forwards to `vm111:22`), the setup is nearly identical: only the SSH connection details change.
 
 **Server-side setup is unchanged**, but configure using the gateway:
 

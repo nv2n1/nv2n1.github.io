@@ -10,7 +10,7 @@ canonical: /linux-flushing-file-system-caches/
 url: /linux-flushing-file-system-caches/
 ---
 
-Dropping file system caches reclaims memory for applications. Linux kernels 2.6.16+ provide a `/proc/sys/vm/drop_caches` interface to trigger cache eviction. This is safe — the kernel only frees clean cache pages and unreferenced inodes/dentries. Dirty data stays in memory until explicitly synced to disk.
+Dropping file system caches reclaims memory for applications. Linux kernels 2.6.16+ provide a `/proc/sys/vm/drop_caches` interface to trigger cache eviction. This is safe: the kernel only frees clean cache pages and unreferenced inodes/dentries. Dirty data stays in memory until explicitly synced to disk.
 
 ## Two-Step Cache Drop Process
 
@@ -22,7 +22,7 @@ Before dropping caches, flush any pending writes to storage:
 sync
 ```
 
-This ensures dirty buffers and metadata reach the disk. Omitting this step means those pages won’t be freed by `drop_caches` — they’ll remain in memory until later writes occur.
+This ensures dirty buffers and metadata reach the disk. Omitting this step means those pages won’t be freed by `drop_caches`: they’ll remain in memory until later writes occur.
 
 ### Step 2: Drop the Caches
 

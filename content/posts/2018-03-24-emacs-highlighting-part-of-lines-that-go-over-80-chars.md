@@ -101,7 +101,7 @@ Bind it to a key for quick access:
 
 **For temporary checks:** Use `highlight-lines-matching-regexp` when auditing existing code or testing specific patterns without modifying your permanent configuration.
 
-Most development teams benefit from combining approaches—use the fill column indicator as a constant visual guide with `whitespace-mode` enabled selectively in languages with strict line limits (Python, Go, shell scripts).
+Most development teams benefit from combining approaches: use the fill column indicator as a constant visual guide with `whitespace-mode` enabled selectively in languages with strict line limits (Python, Go, shell scripts).
 
 ## Essential Editor Configuration
 

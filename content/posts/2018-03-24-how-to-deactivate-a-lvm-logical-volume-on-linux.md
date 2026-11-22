@@ -10,7 +10,7 @@ canonical: /how-to-deactivate-a-lvm-logical-volume-on-linux/
 url: /how-to-deactivate-a-lvm-logical-volume-on-linux/
 ---
 
-You may need to deactivate a LVM volume group to make it unknown to the kernel — typically before removing disks, migrating storage, or performing maintenance. The `vgchange` command handles this with the `-a` (or `--activate`) flag.
+You may need to deactivate a LVM volume group to make it unknown to the kernel: typically before removing disks, migrating storage, or performing maintenance. The `vgchange` command handles this with the `-a` (or `--activate`) flag.
 
 ## Basic deactivation
 
@@ -101,11 +101,11 @@ Package management issues often stem from stale caches. Run dnf clean all on Fed
 
 These commands are frequently used alongside the tools discussed in this article:
 
-- systemctl status service-name – Check if a service is running
-- journalctl -u service-name -f – Follow service logs in real time
-- rpm -qi package-name – Query installed package information
-- dnf history – View package transaction history
-- top or htop – Monitor system resource usage
+- systemctl status service-name: Check if a service is running
+- journalctl -u service-name -f: Follow service logs in real time
+- rpm -qi package-name: Query installed package information
+- dnf history: View package transaction history
+- top or htop: Monitor system resource usage
 
 ## Quick Verification
 

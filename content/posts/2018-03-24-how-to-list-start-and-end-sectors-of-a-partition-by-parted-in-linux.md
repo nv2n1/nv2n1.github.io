@@ -20,14 +20,14 @@ The `unit` subcommand in parted sets the display unit for locations and sizes. T
 
 The available units are:
 
-- `s` — sectors
-- `B` — bytes
-- `kB`, `MB`, `GB`, `TB` — decimal units
-- `KiB`, `MiB`, `GiB`, `TiB` — binary units
-- `%` — percentage of device size
-- `cyl` — cylinders
-- `chs` — cylinders, heads, sectors
-- `compact` — megabytes for input, human-friendly output
+- `s`: sectors
+- `B`: bytes
+- `kB`, `MB`, `GB`, `TB`: decimal units
+- `KiB`, `MiB`, `GiB`, `TiB`: binary units
+- `%`: percentage of device size
+- `cyl`: cylinders
+- `chs`: cylinders, heads, sectors
+- `compact`: megabytes for input, human-friendly output
 
 ## Example: viewing sectors
 

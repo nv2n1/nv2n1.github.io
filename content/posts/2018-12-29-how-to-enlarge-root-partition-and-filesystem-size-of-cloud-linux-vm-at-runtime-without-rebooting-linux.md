@@ -85,7 +85,7 @@ Verify the partition grew:
 lsblk
 ```
 
-The partition size should now match the underlying block device. If `growpart` reports `NOCHANGE`, the partition is already using the full block device size — proceed to the filesystem resize.
+The partition size should now match the underlying block device. If `growpart` reports `NOCHANGE`, the partition is already using the full block device size: proceed to the filesystem resize.
 
 ## Resize the Filesystem
 
@@ -256,7 +256,7 @@ partprobe /dev/nvme0n1
 
 - This procedure requires root privileges.
 - Test on non-production systems first whenever possible.
-- The filesystem resize happens online while mounted — no reboot needed.
+- The filesystem resize happens online while mounted: no reboot needed.
 - Partition table changes are safe on modern systems; the kernel rereads the updated table without reboot.
 - For LVM setups, expand the physical volume and logical volume after growing the partition.
 - This works on AWS EC2, Google Cloud, Azure, DigitalOcean, and most major cloud providers, as long as they’ve expanded the underlying block device.

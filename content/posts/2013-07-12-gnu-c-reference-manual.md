@@ -10,7 +10,7 @@ canonical: /gnu-c-reference-manual/
 url: /gnu-c-reference-manual/
 ---
 
-The GNU C Reference Manual is the authoritative resource for C as implemented by GCC. It’s a pure reference—not a tutorial—covering every linguistic construct, GCC-specific extensions, and implementation details you’ll encounter when compiling C code.
+The GNU C Reference Manual is the authoritative resource for C as implemented by GCC. It’s a pure reference (not a tutorial) covering every linguistic construct, GCC-specific extensions, and implementation details you’ll encounter when compiling C code.
 
 ## What the Manual Covers
 
@@ -130,7 +130,7 @@ When debugging compiler behavior or questioning whether code invokes undefined b
 
 2.  Check the manual’s index for the specific construct or keyword
 
-3.  Review GCC’s warning messages—they often cite the manual section
+3.  Review GCC’s warning messages: they often cite the manual section
 
 4.  For POSIX compliance questions, reference the POSIX specification (many Linux systems include `man 7 posix` as a starting point)
 

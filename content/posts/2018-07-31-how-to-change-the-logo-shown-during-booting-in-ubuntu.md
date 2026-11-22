@@ -36,7 +36,7 @@ If the default themes don’t suit you, install alternatives:
 sudo apt install plymouth-theme-ubuntu-text
 ```
 
-The Ubuntu repositories include several built-in options. Third-party themes exist on GitHub and other sources, though the standard themes usually provide reliable boot experiences. Community themes may lack maintenance—stick with official or well-maintained options if you want stability.
+The Ubuntu repositories include several built-in options. Third-party themes exist on GitHub and other sources, though the standard themes usually provide reliable boot experiences. Community themes may lack maintenance: stick with official or well-maintained options if you want stability.
 
 ## Select the active theme
 
@@ -142,7 +142,7 @@ If it still shows the old path, the `update-alternatives` command may not have c
 
 **Encrypted disk (LUKS) password prompt overlays the splash:**
 
-This is expected behavior with encrypted systems. Plymouth displays a password prompt over the splash screen. Some themes handle this better than others—the `ubuntu-text` theme typically provides a cleaner experience for encrypted disks.
+This is expected behavior with encrypted systems. Plymouth displays a password prompt over the splash screen. Some themes handle this better than others: the `ubuntu-text` theme typically provides a cleaner experience for encrypted disks.
 
 **Stuck on splash screen during boot:**
 

@@ -97,7 +97,7 @@ This is simpler but less precise than `Unix.times()` for short operations.
 
 Be aware that:
 
-- Small timing values (\<10ms) are unreliable due to system noise—run multiple iterations
+- Small timing values (\<10ms) are unreliable due to system noise: run multiple iterations
 - First run may be slower due to JIT compilation or cache effects
 - Wall-clock time includes garbage collection pauses; use profiling tools for detailed analysis
 

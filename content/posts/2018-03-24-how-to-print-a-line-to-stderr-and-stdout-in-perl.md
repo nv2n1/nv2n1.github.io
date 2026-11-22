@@ -10,7 +10,7 @@ canonical: /how-to-print-a-line-to-stderr-and-stdout-in-perl/
 url: /how-to-print-a-line-to-stderr-and-stdout-in-perl/
 ---
 
-Perl gives you straightforward ways to send output to both standard output and standard error. Understanding the difference matters — STDOUT handles normal program output, while STDERR carries diagnostics, warnings, and error messages. Separating them lets users redirect, log, or suppress errors independently.
+Perl gives you straightforward ways to send output to both standard output and standard error. Understanding the difference matters: STDOUT handles normal program output, while STDERR carries diagnostics, warnings, and error messages. Separating them lets users redirect, log, or suppress errors independently.
 
 ## Basic Output Methods
 

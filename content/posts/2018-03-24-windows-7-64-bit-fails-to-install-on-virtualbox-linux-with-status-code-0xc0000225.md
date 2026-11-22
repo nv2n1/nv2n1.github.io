@@ -52,7 +52,7 @@ Windows 7 reached end-of-life in 2020 and receives no security updates. Running 
 
 If you’re setting up multiple Windows 7 VMs, consider creating a clean base image after successful installation and enabling snapshots before major changes. This speeds up testing workflows and allows rollback if issues occur.
 
-Test the installation in safe mode first by pressing F8 during boot — if IO APIC was the issue, safe mode should start without errors. If the VM still fails to boot normally after safe mode works, check for missing SATA/chipset drivers in Device Manager.
+Test the installation in safe mode first by pressing F8 during boot: if IO APIC was the issue, safe mode should start without errors. If the VM still fails to boot normally after safe mode works, check for missing SATA/chipset drivers in Device Manager.
 
 ## Troubleshooting Common Issues
 
@@ -65,7 +65,7 @@ If you encounter problems during installation, check these common solutions:
 
 ## Verification Steps
 
-After installation, verify everything is working correctly by checking the installed version and running basic functionality tests. Most command-line tools respond to the –version or -v flag to display their version information.
+After installation, verify everything is working correctly by checking the installed version and running basic functionality tests. Most command-line tools respond to the --version or -v flag to display their version information.
 
 ## Keeping Your Installation Updated
 

@@ -19,7 +19,7 @@ The most direct approach is to lower the JPEG quality setting within XSANE itsel
 1.  Open XSANE and load your scanned image
 2.  Go to **File** → **Save As**
 3.  Select JPEG as the output format
-4.  Before saving, look for quality/compression options — typically a slider between 0-100
+4.  Before saving, look for quality/compression options: typically a slider between 0-100
 5.  Set a lower value (70-80 is usually a good balance between quality and file size)
 6.  Save the file
 

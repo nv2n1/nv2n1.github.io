@@ -14,7 +14,7 @@ SSH port forwarding lets you tunnel network traffic through an encrypted connect
 
 ## Local Forwarding
 
-Local forwarding listens on your local machine and relays connections through the SSH tunnel to a remote service. The SSH server acts as a relay—the destination service can be any machine reachable from the SSH server’s network.
+Local forwarding listens on your local machine and relays connections through the SSH tunnel to a remote service. The SSH server acts as a relay: the destination service can be any machine reachable from the SSH server’s network.
 
 ``` bash
 ssh -L 8080:remote-server:3306 user@ssh-server
@@ -186,7 +186,7 @@ ss -tnp | grep ssh
 
 The `restrict` keyword disables port/agent/X11 forwarding for that key (OpenSSH 8.2+). `command="/bin/false"` prevents command execution.
 
-- **Only forward what you need.** The SSH server can see unencrypted traffic between itself and the destination—don’t over-expose services
+- **Only forward what you need.** The SSH server can see unencrypted traffic between itself and the destination: don’t over-expose services
 - **Avoid binding to 0.0.0.0** unless absolutely necessary
 - **Audit active tunnels regularly:**
 

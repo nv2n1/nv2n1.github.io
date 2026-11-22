@@ -81,9 +81,9 @@ This approach requires Windows PowerShell and manual mounting but gives fine-gra
 ## Best Practices
 
 - **Always use `-o ro` (read-only) flags** when mounting from any tool
-- **Verify the partition is ext4** before mounting — incorrect driver selection corrupts the disk
+- **Verify the partition is ext4** before mounting: incorrect driver selection corrupts the disk
 - **Eject properly** through the Ext2Fsd GUI or `umount` command to flush any cached metadata
-- **Don’t mix tools** — mount a partition with only one driver at a time
+- **Don’t mix tools**: mount a partition with only one driver at a time
 - **Keep Windows and ext4 on separate disks** whenever possible to avoid accidental writes
 
 ## Checking if a Partition is Ext4
@@ -94,7 +94,7 @@ In Windows PowerShell:
 Get-Disk | Get-Partition
 ```
 
-Look for partitions with unknown filesystem types — these are likely ext4 and need a driver.
+Look for partitions with unknown filesystem types: these are likely ext4 and need a driver.
 
 In Linux (before booting Windows), verify with:
 

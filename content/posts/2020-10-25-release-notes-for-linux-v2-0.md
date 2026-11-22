@@ -36,7 +36,7 @@ If your system uses LILO and you have `ramdisk=0` in your configuration, comment
 
 ## C Library Compatibility
 
-The stable libc-5.2.18 release introduces changes that can break some utilities—notably GNU make. Read the release notes before upgrading from libc-5.0.9 or earlier.
+The stable libc-5.2.18 release introduces changes that can break some utilities: notably GNU make. Read the release notes before upgrading from libc-5.0.9 or earlier.
 
 The beta libc-5.3.12 release fixes a dirent structure bug and resolves an rlogin security vulnerability. However, it breaks programs that incorrectly call `free()` on pointers not returned by `malloc()`. Some GNU packages (including older make versions) depend on the buggy behavior and require patching.
 

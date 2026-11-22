@@ -44,9 +44,9 @@ Save with `C-x C-s`.
 
 Verify which line ending style a file uses by checking the mode line at the bottom of the Emacs window. The coding system appears in parentheses:
 
-- `(Unix)` — LF line endings
-- `(DOS)` — CRLF line endings
-- `(Mac)` — CR-only endings (legacy, rarely seen)
+- `(Unix)`: LF line endings
+- `(DOS)`: CRLF line endings
+- `(Mac)`: CR-only endings (legacy, rarely seen)
 
 You can also query the coding system interactively:
 
@@ -93,7 +93,7 @@ Configure your project’s `.gitattributes` to enforce consistent line endings a
     *.bat text eol=crlf
     *.ps1 text eol=crlf
 
-The `text=auto` setting lets Git detect text files automatically. Specific rules override it — `.sh` files always use LF, `.bat` and PowerShell scripts use CRLF. This prevents line ending issues in version control regardless of each developer’s OS.
+The `text=auto` setting lets Git detect text files automatically. Specific rules override it: `.sh` files always use LF, `.bat` and PowerShell scripts use CRLF. This prevents line ending issues in version control regardless of each developer’s OS.
 
 ## Configure Emacs for Consistent Defaults
 
@@ -125,10 +125,10 @@ If you work with files that have mixed UTF-8/UTF-16 or inconsistent line endings
 
 Emacs will display available coding systems. Most common options:
 
-- `utf-8-unix` — UTF-8 with LF
-- `utf-8-dos` — UTF-8 with CRLF
-- `utf-16-le` — UTF-16 little-endian
-- `iso-8859-1` — Latin-1
+- `utf-8-unix`: UTF-8 with LF
+- `utf-8-dos`: UTF-8 with CRLF
+- `utf-16-le`: UTF-16 little-endian
+- `iso-8859-1`: Latin-1
 
 After converting, save with `C-x C-s`.
 

@@ -145,21 +145,21 @@ Focus your browser window and the refresh will run automatically. Press Ctrl+C t
 
 ## Critical Limitations
 
-**Window focus is essential** — Input goes to whatever window has focus when the command runs. If the user switches windows, your script will type into the wrong place. Always verify the target window is active before sending input. This makes xvkbd unsuitable for unattended automation.
+**Window focus is essential**: Input goes to whatever window has focus when the command runs. If the user switches windows, your script will type into the wrong place. Always verify the target window is active before sending input. This makes xvkbd unsuitable for unattended automation.
 
-**X11 only** — xvkbd doesn’t work on Wayland. Modern systems increasingly use Wayland, making xvkbd less viable for new deployments.
+**X11 only**: xvkbd doesn’t work on Wayland. Modern systems increasingly use Wayland, making xvkbd less viable for new deployments.
 
-**Hard-coded delays are fragile** — If the system is slow or an application takes longer to respond than expected, timing breaks. There’s no reliable way to detect when a window is ready for input with xvkbd alone.
+**Hard-coded delays are fragile**: If the system is slow or an application takes longer to respond than expected, timing breaks. There’s no reliable way to detect when a window is ready for input with xvkbd alone.
 
-**Application-dependent behavior** — Terminal emulators, web browsers, and text editors all handle keyboard input differently. Testing is mandatory for each target application.
+**Application-dependent behavior**: Terminal emulators, web browsers, and text editors all handle keyboard input differently. Testing is mandatory for each target application.
 
-**Security risk** — Never embed passwords or API keys in xvkbd scripts. This creates a serious vulnerability. Use credential managers, environment variables, or secure vaults instead.
+**Security risk**: Never embed passwords or API keys in xvkbd scripts. This creates a serious vulnerability. Use credential managers, environment variables, or secure vaults instead.
 
 ## Better Alternatives
 
 For most automation needs, use these more reliable tools:
 
-### xdotool — Mature keyboard/mouse automation
+### xdotool: Mature keyboard/mouse automation
 
 ``` bash
 xdotool type "hello"
@@ -170,7 +170,7 @@ xdotool getactivewindow
 
 xdotool is more mature than xvkbd and handles complex sequences better. It also has better Wayland support through XWayland.
 
-### Python with pynput — Complex cross-platform automation
+### Python with pynput: Complex cross-platform automation
 
 ``` python
 from pynput.keyboard import Controller, Key
@@ -191,11 +191,11 @@ mouse.click(Button.left)
 
 pynput is better for complex logic and works across Linux, macOS, and Windows.
 
-### Window manager keybindings — Native tiling WM automation
+### Window manager keybindings: Native tiling WM automation
 
 If automating i3, Sway, or other tiling window managers, use native configuration instead of simulating keypresses. This is far more reliable and doesn’t depend on focus or timing.
 
-### Desktop environment APIs — DBus for GNOME/KDE
+### Desktop environment APIs: DBus for GNOME/KDE
 
 GNOME and KDE expose DBus interfaces for specific tasks like opening applications, controlling media, or managing windows. This is more reliable than simulating keypresses:
 
@@ -204,7 +204,7 @@ GNOME and KDE expose DBus interfaces for specific tasks like opening application
 dbus-send --session --print-reply --dest=org.freedesktop.DBus /org/freedesktop/DBus org.freedesktop.DBus.ListNames
 ```
 
-### Ansible or configuration management — System-wide automation
+### Ansible or configuration management: System-wide automation
 
 For automating tasks across multiple machines, use proper orchestration tools like Ansible, Puppet, or Chef instead of keyboard simulation.
 

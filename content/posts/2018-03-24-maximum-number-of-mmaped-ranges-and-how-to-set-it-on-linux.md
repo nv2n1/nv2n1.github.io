@@ -12,7 +12,7 @@ url: /maximum-number-of-mmaped-ranges-and-how-to-set-it-on-linux/
 
 When a process mmaps and mprotects many memory ranges, you’ll eventually hit the kernel limit and start seeing `ENOMEM` errors from mprotect() calls. This happens because Linux maintains internal kernel structures for each mapped range, and there’s a hard ceiling on how many the kernel will track per process.
 
-The culprit is the `vm.max_map_count` sysctl parameter. When you exceed this limit, the kernel can’t allocate new VMA (virtual memory area) structures, even though you have plenty of physical memory available. This is why you’re seeing “Internal kernel structures could not be allocated” — it’s not about RAM, it’s about the VMA limit.
+The culprit is the `vm.max_map_count` sysctl parameter. When you exceed this limit, the kernel can’t allocate new VMA (virtual memory area) structures, even though you have plenty of physical memory available. This is why you’re seeing “Internal kernel structures could not be allocated”: it’s not about RAM, it’s about the VMA limit.
 
 ## Checking your current limit
 
@@ -66,7 +66,7 @@ The `/etc/sysctl.d/` approach is cleaner because it keeps custom settings separa
 
 ## How high should you go?
 
-There’s no hard upper limit — you can set it to 2147483647 (max int) if needed. However, consider:
+There’s no hard upper limit: you can set it to 2147483647 (max int) if needed. However, consider:
 
 - **Memory overhead**: Each VMA costs roughly 288 bytes of kernel memory. 655,300 VMAs ≈ 190 MB.
 - **Practical limit**: Most workloads never need more than 655,300. If you’re approaching millions, redesign your allocation strategy.

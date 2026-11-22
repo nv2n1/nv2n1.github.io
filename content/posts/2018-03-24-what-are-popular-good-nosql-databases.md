@@ -18,7 +18,7 @@ NoSQL databases have matured considerably and now handle a significant portion o
 
 **CouchDB** and its fork **Apache PouchDB** excel in distributed scenarios with built-in replication. CouchDB works well when you need offline-first applications or peer-to-peer sync capabilities. It’s lighter than MongoDB and requires less operational overhead.
 
-**PostgreSQL with JSONB** deserves mention here—if you’re already running Postgres, its native JSON support is genuinely competitive for document workloads. You get transactions, complex queries, and strong consistency without adding another system.
+**PostgreSQL with JSONB** deserves mention here: if you’re already running Postgres, its native JSON support is genuinely competitive for document workloads. You get transactions, complex queries, and strong consistency without adding another system.
 
 ### Wide-Column Stores
 
@@ -52,7 +52,7 @@ NoSQL databases have matured considerably and now handle a significant portion o
 
 **Evaluate operational burden**: MongoDB and DynamoDB are managed solutions that reduce ops overhead. Cassandra and self-hosted solutions require more careful deployment and tuning.
 
-**Consider licensing**: Several databases shifted licensing in recent years. Review current terms for your use case—particularly for commercial deployments.
+**Consider licensing**: Several databases shifted licensing in recent years. Review current terms for your use case, particularly for commercial deployments.
 
 **Test at scale**: Small datasets hide real problems. Benchmark with your actual query patterns and expected traffic before committing.
 

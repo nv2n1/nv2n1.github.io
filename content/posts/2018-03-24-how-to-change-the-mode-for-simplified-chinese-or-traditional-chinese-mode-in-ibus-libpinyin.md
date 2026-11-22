@@ -89,13 +89,13 @@ ibus restart
 
 ## Understanding Full-Width vs Half-Width Punctuation
 
-The Ctrl+. shortcut toggles punctuation width, which is separate from script conversion. Full-width (全角) punctuation consumes the entire character cell width—standard for Chinese documents. Half-width (半角) uses single-byte ASCII punctuation, useful in terminals and code editors.
+The Ctrl+. shortcut toggles punctuation width, which is separate from script conversion. Full-width (全角) punctuation consumes the entire character cell width: standard for Chinese documents. Half-width (半角) uses single-byte ASCII punctuation, useful in terminals and code editors.
 
 When full-width is active, a comma appears as `，` (full width) rather than `,` (half width). The ibus panel typically displays a small indicator showing the current mode. Many users prefer full-width for documents but switch to half-width when working in terminals or writing code.
 
 ## Persistent Configuration
 
-Changes made through `ibus setup` are saved automatically. If you edit `user.conf` manually, ensure the syntax is correct—malformed entries may be silently ignored or reset on daemon restart. Keep a backup of your configuration before making changes:
+Changes made through `ibus setup` are saved automatically. If you edit `user.conf` manually, ensure the syntax is correct: malformed entries may be silently ignored or reset on daemon restart. Keep a backup of your configuration before making changes:
 
 ``` bash
 cp ~/.config/ibus/libpinyin/user.conf ~/.config/ibus/libpinyin/user.conf.bak
@@ -127,7 +127,7 @@ While the core commands and methods described in this article work well for most
 
 ## Troubleshooting Common Issues
 
-When encountering problems, follow a systematic debugging approach. Start with the simplest possible test case to isolate the issue. Check logs and error messages carefully—they often contain direct hints about what went wrong. For system-level issues, verify dependencies are correctly installed and configured before attempting complex workarounds.
+When encountering problems, follow a systematic debugging approach. Start with the simplest possible test case to isolate the issue. Check logs and error messages carefully: they often contain direct hints about what went wrong. For system-level issues, verify dependencies are correctly installed and configured before attempting complex workarounds.
 
 ## Performance Optimization Tips
 
@@ -145,7 +145,7 @@ These complementary tools and commands are frequently used alongside the topic o
 - File operations: find, locate, fd for efficient searching
 - Network diagnostics: ping, traceroute, mtr, ss for connectivity checks
 - Log analysis: journalctl, dmesg, tail for real-time log monitoring
-- Package management: dnf history, apt list –installed, rpm -qa for inventory
+- Package management: dnf history, apt list --installed, rpm -qa for inventory
 
 ## Integration with Modern Workflows
 

@@ -73,11 +73,11 @@ Local data remains intact. To delete all sync data from your account entirely, y
 
 **Sync not starting**: Check your internet connection and ensure you’re using the correct Firefox Account credentials. Try signing out and back in.
 
-**Password sync not working**: Verify that “Passwords” is enabled in sync settings. On some systems, OS-level credential managers may interfere—check Firefox’s password manager settings.
+**Password sync not working**: Verify that “Passwords” is enabled in sync settings. On some systems, OS-level credential managers may interfere: check Firefox’s password manager settings.
 
 **Data not appearing on new device**: Wait a few minutes for the initial sync to complete. If devices don’t sync within 10 minutes, sign out and sign back in on the problem device.
 
-**Device verification fails**: Check your email for verification messages. Spam filters sometimes catch these—whitelist accounts@firefox.com.
+**Device verification fails**: Check your email for verification messages. Spam filters sometimes catch these: whitelist accounts@firefox.com.
 
 ### Security Considerations
 

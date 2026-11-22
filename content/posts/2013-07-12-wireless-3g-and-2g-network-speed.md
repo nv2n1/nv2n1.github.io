@@ -97,7 +97,7 @@ The performance gap between 2G and modern networks drove the global transition t
 - Setting realistic expectations for IoT devices operating on older protocols
 - Analyzing degradation patterns when devices fall back to older standards
 
-For sysadmins managing infrastructure that still interfaces with legacy networks, keep in mind that 2G and 3G sunsetting timelines vary by region—some carriers have deactivated them, while others maintain them for backward compatibility through 2026 and beyond.
+For sysadmins managing infrastructure that still interfaces with legacy networks, keep in mind that 2G and 3G sunsetting timelines vary by region: some carriers have deactivated them, while others maintain them for backward compatibility through 2026 and beyond.
 
 ## 2026 Best Practices and Advanced Techniques
 

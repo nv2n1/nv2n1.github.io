@@ -14,7 +14,7 @@ When the kernel migrates a process from one CPU’s runqueue to another, the Com
 
 ## How vruntime Adjustment Works
 
-The kernel stores `min_vruntime` for each runqueue — a monotonically increasing value that tracks the minimum vruntime of all processes that have run on that CPU. This prevents vruntime from wrapping around and causing scheduling anomalies.
+The kernel stores `min_vruntime` for each runqueue: a monotonically increasing value that tracks the minimum vruntime of all processes that have run on that CPU. This prevents vruntime from wrapping around and causing scheduling anomalies.
 
 When a process migrates:
 

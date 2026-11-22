@@ -10,7 +10,7 @@ canonical: /whats-wrong-with-the-messages-like-unrecovdata-10b8b-badcrc-and-fail
 url: /whats-wrong-with-the-messages-like-unrecovdata-10b8b-badcrc-and-failed-command-read-fpdma-queued-on-linux/
 ---
 
-These kernel messages from the libata driver indicate SATA link-layer errors between your drive and controller. They look alarming, but they’re usually fixable — and the fix is typically hardware-related, not a software or drive firmware issue.
+These kernel messages from the libata driver indicate SATA link-layer errors between your drive and controller. They look alarming, but they’re usually fixable, and the fix is typically hardware-related, not a software or drive firmware issue.
 
 ## What These Error Messages Mean
 
@@ -28,10 +28,10 @@ Here’s what’s happening:
 - **UnrecovData**: The interface detected a data integrity error that it couldn’t recover from.
 - **10B8B**: An encoding error in the 8B/10B link protocol (used by SATA).
 - **READ FPDMA QUEUED**: The command that was executing when the error occurred (FPDMA = First Party Direct Memory Access, a Native Command Queuing operation).
-- **Emask 0x10**: ATA bus error (not a drive command error — a hardware communication problem).
+- **Emask 0x10**: ATA bus error (not a drive command error: a hardware communication problem).
 - **hard resetting link**: The driver is attempting to recover by resetting the SATA link.
 
-The key thing: **SMART shows no errors** because these are not disk faults — they’re communication faults between the drive and controller.
+The key thing: **SMART shows no errors** because these are not disk faults: they’re communication faults between the drive and controller.
 
 ## Why SMART Checks Pass
 
@@ -77,7 +77,7 @@ The second most common cause, especially if you see these errors sporadically:
 
 ### 3. Incompatible Drive/Controller Negotiation
 
-Some drive and controller combinations have issues negotiating the SATA speed. The log shows `SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)` — your drive supports 6 Gbps but is running at 3 Gbps, which suggests a fallback has already occurred.
+Some drive and controller combinations have issues negotiating the SATA speed. The log shows `SATA 3.1, 6.0 Gb/s (current: 3.0 Gb/s)`: your drive supports 6 Gbps but is running at 3 Gbps, which suggests a fallback has already occurred.
 
 **Fix**:
 

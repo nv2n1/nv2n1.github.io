@@ -116,7 +116,7 @@ openssl s_client -connect mail.example.com:993 -crlf
 # A003 SEARCH ALL
 ```
 
-Or simply check in your mail client’s IMAP folder—new messages should appear within seconds.
+Or simply check in your mail client’s IMAP folder: new messages should appear within seconds.
 
 ## Troubleshooting
 

@@ -22,10 +22,10 @@ find ./ -name ".svn" -type d | xargs rm -rf
 
 Breaking this down:
 
-- `find ./` — search from current directory
-- `-name ".svn"` — match directories named `.svn`
-- `-type d` — match only directories (important to avoid false matches)
-- `xargs rm -rf` — pass results to `rm -rf` in batches for speed
+- `find ./`: search from current directory
+- `-name ".svn"`: match directories named `.svn`
+- `-type d`: match only directories (important to avoid false matches)
+- `xargs rm -rf`: pass results to `rm -rf` in batches for speed
 
 The `-type d` flag is crucial. Without it, `find` could match files named `.svn`, which would then fail to delete properly.
 

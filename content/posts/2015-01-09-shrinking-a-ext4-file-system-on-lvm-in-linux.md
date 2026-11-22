@@ -10,7 +10,7 @@ canonical: /shrinking-a-ext4-file-system-on-lvm-in-linux/
 url: /shrinking-a-ext4-file-system-on-lvm-in-linux/
 ---
 
-Shrinking an ext4 filesystem on LVM is riskier than expanding—it requires the filesystem offline and careful size planning. The operation can take hours on large volumes, and mistakes can destroy data. This guide walks through the safe path with verification at each step.
+Shrinking an ext4 filesystem on LVM is riskier than expanding: it requires the filesystem offline and careful size planning. The operation can take hours on large volumes, and mistakes can destroy data. This guide walks through the safe path with verification at each step.
 
 ## Prerequisites
 
@@ -19,7 +19,7 @@ Before starting:
 - **Backup everything**. A full backup of the data being resized is mandatory. Test the backup restoration.
 - **Calculate actual usage**: Run `df -h` and `du -sh` to see what’s actually consuming space. Identify files to delete if the filesystem is too full.
 - **Leave breathing room**: Never shrink to exactly the size of your data. Plan for 10–20% free space after the operation completes.
-- **Schedule downtime**: Block out time—this can take hours on filesystems larger than 500GB.
+- **Schedule downtime**: Block out time: this can take hours on filesystems larger than 500GB.
 - **Check for errors first**: Run `fsck.ext4 -n /dev/vg/lv_data` while mounted (read-only check) to catch corruption before shrinking.
 
 ## The Safe Shrink Procedure
@@ -63,7 +63,7 @@ Use `lvresize` with `--resizefs` to handle both operations atomically:
 lvresize --resizefs --size 200G /dev/vg/lv_data
 ```
 
-The `--resizefs` flag is critical—it automatically runs `resize2fs` before shrinking the LV, preventing size mismatches that can corrupt the filesystem. Avoid running `resize2fs` and `lvresize` separately unless you have a specific reason.
+The `--resizefs` flag is critical: it automatically runs `resize2fs` before shrinking the LV, preventing size mismatches that can corrupt the filesystem. Avoid running `resize2fs` and `lvresize` separately unless you have a specific reason.
 
 Expected output:
 

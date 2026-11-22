@@ -54,7 +54,7 @@ Open your `.rc` or `.rc2` file and add this line:
 
     1 24 MOVEABLE PURE "res/myapp.exe.manifest"
 
-Adjust the path to match your manifest filename. The `24` is the resource type identifier for manifests. Perform a clean rebuild—the manifest will be embedded as a resource in the final executable.
+Adjust the path to match your manifest filename. The `24` is the resource type identifier for manifests. Perform a clean rebuild: the manifest will be embedded as a resource in the final executable.
 
 ### Font Optimization
 

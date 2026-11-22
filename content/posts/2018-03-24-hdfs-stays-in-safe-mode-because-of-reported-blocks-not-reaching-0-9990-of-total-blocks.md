@@ -20,13 +20,13 @@ When a NameNode restarts, it enters safe mode to rebuild its understanding of bl
 
 The NameNode’s startup sequence works like this:
 
-1.  **Reads FSImage and edits log** — recovers all known files and block metadata from persistent storage
-2.  **Waits for Initial Block Reports** — each DataNode reports which blocks it holds
-3.  **Checks the threshold** — verifies that at least `dfs.namenode.safemode.threshold-pct` (default 0.9990) of known blocks have been reported by at least `dfs.namenode.replication.min` (default 1) DataNode
+1.  **Reads FSImage and edits log**: recovers all known files and block metadata from persistent storage
+2.  **Waits for Initial Block Reports**: each DataNode reports which blocks it holds
+3.  **Checks the threshold**: verifies that at least `dfs.namenode.safemode.threshold-pct` (default 0.9990) of known blocks have been reported by at least `dfs.namenode.replication.min` (default 1) DataNode
 
 Once the threshold is met, the NameNode waits an additional `dfs.namenode.safemode.extension` seconds (default 30), then exits safe mode and begins replication operations.
 
-If the threshold isn’t reached, the NameNode intentionally stays in safe mode. This is safety-by-design: Hadoop won’t automatically delete blocks or trigger aggressive re-replication when DataNodes are missing or offline. A human should investigate first — entire racks might be down, network issues could exist, or disk corruption may have occurred.
+If the threshold isn’t reached, the NameNode intentionally stays in safe mode. This is safety-by-design: Hadoop won’t automatically delete blocks or trigger aggressive re-replication when DataNodes are missing or offline. A human should investigate first: entire racks might be down, network issues could exist, or disk corruption may have occurred.
 
 ## Diagnosing the Problem
 
@@ -38,11 +38,11 @@ tail -f /var/log/hadoop/hdfs/namenode.log | grep -i "safe mode"
 
 Common causes:
 
-- **DataNodes still starting** — legitimate, just need to wait longer
-- **DataNode disk problems** — check DataNode logs for I/O errors
-- **Network partitioning** — DataNodes can’t reach the NameNode
-- **Misconfigured replication factor** — blocks expecting more replicas than available DataNodes
-- **Missing DataNodes** — nodes that held blocks are permanently offline
+- **DataNodes still starting**: legitimate, just need to wait longer
+- **DataNode disk problems**: check DataNode logs for I/O errors
+- **Network partitioning**: DataNodes can’t reach the NameNode
+- **Misconfigured replication factor**: blocks expecting more replicas than available DataNodes
+- **Missing DataNodes**: nodes that held blocks are permanently offline
 
 ## Safe Ways to Exit Safe Mode
 
@@ -116,9 +116,9 @@ hdfs fsck / -move
   </property>
   ```
 
-- **Keep adequate replication** — if you only have 2 DataNodes but configured replication factor 3, you’ll struggle with safe mode
+- **Keep adequate replication**: if you only have 2 DataNodes but configured replication factor 3, you’ll struggle with safe mode
 
-- **Review logs proactively** — NameNode and DataNode logs contain early warnings about connectivity or disk issues
+- **Review logs proactively**: NameNode and DataNode logs contain early warnings about connectivity or disk issues
 
 - **Test failover procedures** in non-production environments first to understand behavior
 

@@ -155,7 +155,7 @@ This only removes the libvirt definition; your logical volumes remain intact on 
 
 ## Performance Considerations
 
-- Use `type='raw'` for VM disks in LVM pools—it provides better performance than `qcow2`
+- Use `type='raw'` for VM disks in LVM pools: it provides better performance than `qcow2`
 - Consider using `cache='directsync'` or `cache='none'` for the disk cache mode if you’re not using filesystem-level caching
 - LVM snapshots consume space in your VG; monitor available space regularly with `vgs` and `lvs`
 

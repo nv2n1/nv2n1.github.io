@@ -10,7 +10,7 @@ canonical: /outlook-style-email-reply-header-thunderbird/
 url: /outlook-style-email-reply-header-thunderbird/
 ---
 
-Thunderbird’s default reply headers are minimal—just a simple line showing who sent what and when. If you need detailed formatted headers showing From, To, Cc, Subject, and Date for compliance, audits, or professional correspondence, you’ll need to add an extension or configure a template.
+Thunderbird’s default reply headers are minimal: just a simple line showing who sent what and when. If you need detailed formatted headers showing From, To, Cc, Subject, and Date for compliance, audits, or professional correspondence, you’ll need to add an extension or configure a template.
 
 ## ReplyWithHeader Extension
 
@@ -72,11 +72,11 @@ Your Name
 
 **Common template variables:**
 
-- `%from()` – sender information
-- `%to()` – primary recipients
-- `%cc()` – carbon copy recipients
-- `%subject%` – email subject
-- `%X:=sent%` – sent timestamp with formatting options
+- `%from()`: sender information
+- `%to()`: primary recipients
+- `%cc()`: carbon copy recipients
+- `%subject%`: email subject
+- `%X:=sent%`: sent timestamp with formatting options
 
 You can also use conditional syntax: text wrapped in `[[ ]]` displays only if that field contains data. For example:
 
@@ -86,11 +86,11 @@ This displays “To: user1@example.com” if CC is empty, or includes the CC lin
 
 ## Which Extension to Use
 
-**ReplyWithHeader** – Best for most users. Install and go; no configuration needed.
+**ReplyWithHeader**: Best for most users. Install and go; no configuration needed.
 
-**ReplyWithHeader + ReFwdFormatter** – Best for HTML-heavy workflows. Eliminates quote artifacts and formatting inconsistencies.
+**ReplyWithHeader + ReFwdFormatter**: Best for HTML-heavy workflows. Eliminates quote artifacts and formatting inconsistencies.
 
-**SmartTemplate4** – Best if you need pixel-perfect styling, want to embed company logos, or include legal disclaimers in reply headers.
+**SmartTemplate4**: Best if you need pixel-perfect styling, want to embed company logos, or include legal disclaimers in reply headers.
 
 ## Testing Before Deployment
 

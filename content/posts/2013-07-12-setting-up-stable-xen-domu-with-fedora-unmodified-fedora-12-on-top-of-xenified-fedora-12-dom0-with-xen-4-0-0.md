@@ -14,7 +14,7 @@ Xen remains production-grade virtualization for specific use cases (AWS EC2, Cit
 
 ## Storage Setup
 
-Create a file-backed virtual block device (VBD) for your DomU. File-backed storage simplifies cloning but carries higher I/O overhead—use LVM or raw partitions for I/O-intensive workloads.
+Create a file-backed virtual block device (VBD) for your DomU. File-backed storage simplifies cloning but carries higher I/O overhead: use LVM or raw partitions for I/O-intensive workloads.
 
 Create a 20GB sparse file:
 
@@ -103,11 +103,11 @@ File-backed VBDs introduce measurable I/O latency due to Dom0 filesystem overhea
 
 - Use **LVM-backed VBDs** (`phy:` instead of `file:`) for better I/O performance
 - Consider **raw disk partitions** for maximum throughput
-- Monitor Dom0 CPU usage—file-backed I/O is CPU-intensive
+- Monitor Dom0 CPU usage: file-backed I/O is CPU-intensive
 
 ## Duplication and Scaling
 
-Clone existing DomU instances by copying the VBD file and creating new configuration files with different names/IPs. This approach is practical for test environments but less suitable for production infrastructure management—use configuration management tools (Ansible, Puppet) or Xen-specific orchestration (OpenStack) at scale.
+Clone existing DomU instances by copying the VBD file and creating new configuration files with different names/IPs. This approach is practical for test environments but less suitable for production infrastructure management: use configuration management tools (Ansible, Puppet) or Xen-specific orchestration (OpenStack) at scale.
 
 ## Modern Alternatives
 

@@ -10,7 +10,7 @@ canonical: /the-wordpress-desktop-client-lekhonee/
 url: /the-wordpress-desktop-client-lekhonee/
 ---
 
-Desktop clients for WordPress have largely fallen out of favor in recent years, but they still serve a niche purpose for users who prefer offline writing and batch publishing. Lekhonee was one such tool — a GNOME-based WordPress client that provided a lightweight alternative to the web interface.
+Desktop clients for WordPress have largely fallen out of favor in recent years, but they still serve a niche purpose for users who prefer offline writing and batch publishing. Lekhonee was one such tool: a GNOME-based WordPress client that provided a lightweight alternative to the web interface.
 
 **Important context:** Lekhonee is no longer actively maintained. The Fedora project discontinued hosting on Fedora Hosted (which shut down in 2019), and the project hasn’t seen updates since the mid-2010s. This post documents it for historical reference only. For modern workflows, consider alternatives like the official WordPress web editor, Markdown-based static site generators, or text editor plugins.
 

@@ -22,18 +22,18 @@ If that text is difficult to access, **“Transactional Memory” (2nd edition)*
 
 Start with these IEEE and ACM publications:
 
-- “Transactional Locking II” (Dice et al., 2006) — practical STM implementation
-- “Software Transactional Memory for Dynamic-Sized Data Structures” (Fraser & Harris, 2007) — handles scalability challenges
+- “Transactional Locking II” (Dice et al., 2006): practical STM implementation
+- “Software Transactional Memory for Dynamic-Sized Data Structures” (Fraser & Harris, 2007): handles scalability challenges
 - Recent papers from the ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming (PPoPP)
 
 ### Practical Implementation Learning
 
 Study actual TM implementations to understand real-world constraints:
 
-- **Intel TSX** — x86 hardware transactional memory with limited transaction size and abort callbacks
-- **Java’s concurrent utilities** — while not pure TM, `java.util.concurrent` demonstrates lock-free patterns that complement TM thinking
-- **Scala STM** — provides a pragmatic STM library for JVM languages with manageable syntax
-- **GCC’s libitm** — GNU’s software transactional memory library with compiler support via `_Pragma("omp atomic")`
+- **Intel TSX**: x86 hardware transactional memory with limited transaction size and abort callbacks
+- **Java’s concurrent utilities**: while not pure TM, `java.util.concurrent` demonstrates lock-free patterns that complement TM thinking
+- **Scala STM**: provides a pragmatic STM library for JVM languages with manageable syntax
+- **GCC’s libitm**: GNU’s software transactional memory library with compiler support via `_Pragma("omp atomic")`
 
 ### Hands-On Approach
 
@@ -78,11 +78,11 @@ Compile with: `gcc -fgnu-tm program.c -o program`
 
 Before diving deep, ensure you understand:
 
-- **Atomicity vs. isolation** — what guarantees TM actually provides
-- **Conflict detection** — how the system knows when transactions collide
-- **Abort and retry semantics** — why transactions fail and recovery strategies
-- **Composability** — how to nest transactions and handle deadlocks
-- **Performance characteristics** — when TM outperforms locks and when it doesn’t
+- **Atomicity vs. isolation**: what guarantees TM actually provides
+- **Conflict detection**: how the system knows when transactions collide
+- **Abort and retry semantics**: why transactions fail and recovery strategies
+- **Composability**: how to nest transactions and handle deadlocks
+- **Performance characteristics**: when TM outperforms locks and when it doesn’t
 
 ### Modern Context (2026)
 

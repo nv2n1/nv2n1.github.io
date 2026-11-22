@@ -126,7 +126,7 @@ icacls C:\Users\USERNAME\.ssh /inheritance:r /grant:r "$env:USERNAME`:F"
 icacls C:\Users\USERNAME\.ssh\authorized_keys /inheritance:r /grant:r "$env:USERNAME`:F"
 ```
 
-OpenSSH on Windows enforces strict permission checking—overly permissive ACLs on `.ssh` or `authorized_keys` will cause authentication to fail silently.
+OpenSSH on Windows enforces strict permission checking: overly permissive ACLs on `.ssh` or `authorized_keys` will cause authentication to fail silently.
 
 ## Disabling Password Authentication
 

@@ -16,7 +16,7 @@ The server/client architecture solves this: start an Emacs server once, then spa
 
 ## How Server/Client Architecture Works
 
-Emacs can run as a persistent daemon listening for client connections on a Unix socket (or TCP socket for remote access). The first client connection initializes the server—slow, but happens only once. Subsequent clients attach to the running server and inherit its state: loaded packages, buffers, customizations, everything.
+Emacs can run as a persistent daemon listening for client connections on a Unix socket (or TCP socket for remote access). The first client connection initializes the server: slow, but happens only once. Subsequent clients attach to the running server and inherit its state: loaded packages, buffers, customizations, everything.
 
 The `emacsclient` command includes a `-a` flag designed exactly for this. When you run `emacsclient -a "" file.txt`, it says: “Connect to the running server. If none exists, start `emacs --daemon` first, then connect.” This automation means you don’t manage the server lifecycle manually.
 
@@ -51,7 +51,7 @@ Now `em file.txt` opens a new frame connected to your server.
 
 ## Understanding the Flags
 
-**`-c` (create frame)**: Creates a new window frame. Without it, `emacsclient` tries to reuse an existing Emacs window—not what you want in terminal workflows. The `-c` flag ensures each invocation opens a fresh frame in your current terminal.
+**`-c` (create frame)**: Creates a new window frame. Without it, `emacsclient` tries to reuse an existing Emacs window: not what you want in terminal workflows. The `-c` flag ensures each invocation opens a fresh frame in your current terminal.
 
 **`-a ""` (alternate editor)**: If no server is running, use the empty string as the fallback command. Emacs interprets this specially: start `emacs --daemon` and retry the connection. Other values like `-a vim` would launch that editor instead.
 
@@ -137,7 +137,7 @@ Shut down cleanly with:
 emacsclient -e '(server-shutdown)'
 ```
 
-This saves all modified buffers before killing the server—safer than `pkill emacs`.
+This saves all modified buffers before killing the server: safer than `pkill emacs`.
 
 ### Shell Aliases
 

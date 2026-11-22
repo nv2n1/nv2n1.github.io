@@ -63,7 +63,7 @@ For ext4 filesystems specifically:
 sudo e2fsck -f /dev/sda2
 ```
 
-The `-f` flag forces a check even if the filesystem appears clean. **Do not run fsck on mounted filesystems** — this will cause corruption. Unmount first:
+The `-f` flag forces a check even if the filesystem appears clean. **Do not run fsck on mounted filesystems**: this will cause corruption. Unmount first:
 
 ``` bash
 sudo umount /dev/sda2

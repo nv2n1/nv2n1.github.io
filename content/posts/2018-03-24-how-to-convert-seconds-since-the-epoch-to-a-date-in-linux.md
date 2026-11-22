@@ -40,15 +40,15 @@ Output:
 
 Common format specifiers:
 
-- `%Y` — 4-digit year
-- `%m` — 2-digit month (01–12)
-- `%d` — 2-digit day
-- `%H` — hour (00–23)
-- `%M` — minute (00–59)
-- `%S` — second (00–59)
-- `%z` — timezone offset
-- `%Z` — timezone name
-- `%s` — seconds since epoch (reverse conversion)
+- `%Y`: 4-digit year
+- `%m`: 2-digit month (01–12)
+- `%d`: 2-digit day
+- `%H`: hour (00–23)
+- `%M`: minute (00–59)
+- `%S`: second (00–59)
+- `%z`: timezone offset
+- `%Z`: timezone name
+- `%s`: seconds since epoch (reverse conversion)
 
 ### Timezone Considerations
 

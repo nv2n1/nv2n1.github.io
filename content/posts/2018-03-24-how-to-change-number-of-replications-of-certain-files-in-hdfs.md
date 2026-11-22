@@ -10,7 +10,7 @@ canonical: /how-to-change-number-of-replications-of-certain-files-in-hdfs/
 url: /how-to-change-number-of-replications-of-certain-files-in-hdfs/
 ---
 
-HDFS uses the `dfs.replication` property in `hdfs-site.xml` to set a global default replication factor for all blocks. However, you can override this on a per-file or per-directory basis using the `hdfs dfs -setrep` command — useful for frequently accessed “hot” files that need higher availability.
+HDFS uses the `dfs.replication` property in `hdfs-site.xml` to set a global default replication factor for all blocks. However, you can override this on a per-file or per-directory basis using the `hdfs dfs -setrep` command: useful for frequently accessed “hot” files that need higher availability.
 
 ## Basic syntax
 
@@ -48,7 +48,7 @@ The `-R` flag enables recursive mode. All files under `/path/to/dir/` and its su
 hdfs dfs -setrep -w 2 /path/to/file
 ```
 
-**No impact on existing blocks**: The replication factor change only affects new blocks or when blocks are re-replicated. Existing block placements won’t immediately change — they’ll be adjusted when blocks are read, written, or undergo normal rebalancing.
+**No impact on existing blocks**: The replication factor change only affects new blocks or when blocks are re-replicated. Existing block placements won’t immediately change: they’ll be adjusted when blocks are read, written, or undergo normal rebalancing.
 
 **Checking current replication**: View the current replication factor of a file with:
 

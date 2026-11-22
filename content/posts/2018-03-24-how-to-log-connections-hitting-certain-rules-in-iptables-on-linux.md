@@ -118,7 +118,7 @@ echo "-192.168.1.50" > /proc/net/ipt_recent/SSH
 - If you’re running a service (like fail2ban), coordinate rate limiting to avoid conflicts.
 - Consider IP whitelisting for trusted administrative access to avoid locking yourself out.
 - Test rules in a non-production environment first, especially if managing remotely.
-- On systems with many IPs hitting SSH, monitor `/proc/net/ipt_recent/SSH` size — it grows with each tracked IP and uses memory.
+- On systems with many IPs hitting SSH, monitor `/proc/net/ipt_recent/SSH` size: it grows with each tracked IP and uses memory.
 
 ## 2026 Comprehensive Guide: Best Practices
 

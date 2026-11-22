@@ -43,7 +43,7 @@ user    0m19.341s
 sys     0m4.782s
 ```
 
-The differences are marginal — all three take roughly 80-90 seconds. Measure raw I/O performance:
+The differences are marginal: all three take roughly 80-90 seconds. Measure raw I/O performance:
 
 ``` bash
 $ time dd if=largefile.bin of=/dev/null bs=1M
@@ -55,7 +55,7 @@ user    0m0.202s
 sys     0m7.091s
 ```
 
-The disk I/O alone accounts for 80 seconds. The checksum computation is nearly invisible. On spinning disk or SATA SSD, disk I/O is the bottleneck — not the algorithm.
+The disk I/O alone accounts for 80 seconds. The checksum computation is nearly invisible. On spinning disk or SATA SSD, disk I/O is the bottleneck: not the algorithm.
 
 ## CPU-Limited Benchmarking
 
@@ -163,7 +163,7 @@ If you’re computing checksums on multi-terabyte datasets frequently:
 
 **Use parallel processing.** Leverage multiple CPU cores for independent files. The `parallel` command or GNU `xargs -P` scales naturally.
 
-**Choose BLAKE2b or BLAKE3.** These provide 2-3x better throughput than SHA-256 on modern CPUs without sacrificing cryptographic security. BLAKE3 is particularly attractive for new projects—it’s even faster than BLAKE2b and supports parallel hashing of large files.
+**Choose BLAKE2b or BLAKE3.** These provide 2-3x better throughput than SHA-256 on modern CPUs without sacrificing cryptographic security. BLAKE3 is particularly attractive for new projects: it’s even faster than BLAKE2b and supports parallel hashing of large files.
 
 For very large single files on modern NVMe, consider BLAKE3’s native parallel mode:
 

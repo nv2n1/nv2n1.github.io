@@ -10,7 +10,7 @@ canonical: /how-to-resolve-a-domain-name-from-a-specific-dns-server-instead-of-t
 url: /how-to-resolve-a-domain-name-from-a-specific-dns-server-instead-of-the-configured-one-in-linux/
 ---
 
-When you need to check DNS records from a particular server—especially to verify changes on authoritative nameservers before they propagate through cached resolvers—use `dig` with the `@` syntax to specify the target DNS server.
+When you need to check DNS records from a particular server (especially to verify changes on authoritative nameservers before they propagate through cached resolvers) use `dig` with the `@` syntax to specify the target DNS server.
 
 ## Basic Syntax
 

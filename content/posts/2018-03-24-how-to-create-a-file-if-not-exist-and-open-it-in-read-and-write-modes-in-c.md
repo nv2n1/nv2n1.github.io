@@ -35,9 +35,9 @@ std::getline(file, line);
 
 The flags work as follows:
 
-- `std::ios::in` — open for reading
-- `std::ios::out` — open for writing
-- `std::ios::app` — append mode (write at end of file)
+- `std::ios::in`: open for reading
+- `std::ios::out`: open for writing
+- `std::ios::app`: append mode (write at end of file)
 
 However, this approach has a limitation: `std::fstream` won’t automatically create the file if it doesn’t exist when using `std::ios::in`. To handle file creation reliably, you need to check if the file exists first:
 
@@ -83,10 +83,10 @@ close(fd);
 
 The flags mean:
 
-- `O_RDWR` — open for reading and writing
-- `O_CREAT` — create file if it doesn’t exist
-- `O_CLOEXEC` — close file descriptor on exec (prevents descriptor leaks in child processes)
-- `0644` — file permissions (rw-r–r–)
+- `O_RDWR`: open for reading and writing
+- `O_CREAT`: create file if it doesn’t exist
+- `O_CLOEXEC`: close file descriptor on exec (prevents descriptor leaks in child processes)
+- `0644`: file permissions (rw-r–r–)
 
 Always specify the third argument (permissions) when using `O_CREAT`. Without it, the actual permissions depend on your process’s umask, which can lead to overly permissive files.
 

@@ -37,7 +37,7 @@ If you’re parsing a file with `::|::` as a delimiter:
 awk -F '::\|::' '{print $1; print $3}' data.txt
 ```
 
-Note the escaped pipe character — awk’s `-F` interprets the argument as an extended regular expression, so special regex characters need escaping.
+Note the escaped pipe character: awk’s `-F` interprets the argument as an extended regular expression, so special regex characters need escaping.
 
 ### Using FPAT for Complex Patterns
 

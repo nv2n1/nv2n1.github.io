@@ -14,7 +14,7 @@ Redis is an in-memory data structure store designed for speed and simplicity. Un
 
 ## Core Architecture
 
-Redis operates as a single-threaded, event-driven server that uses an in-memory data store with optional persistence. The single-threaded nature simplifies reasoning about concurrent access — all commands execute atomically without locks, making race conditions impossible at the Redis level.
+Redis operates as a single-threaded, event-driven server that uses an in-memory data store with optional persistence. The single-threaded nature simplifies reasoning about concurrent access: all commands execute atomically without locks, making race conditions impossible at the Redis level.
 
 The server handles multiple client connections using multiplexing, typically via epoll on Linux or similar mechanisms on other systems. This allows Redis to serve thousands of concurrent clients efficiently despite the single-threaded execution model.
 
@@ -27,7 +27,7 @@ You can combine both mechanisms or use neither, depending on your consistency re
 
 ## Data Structures and Operations
 
-Redis supports atomic operations on rich data structures: strings, hashes, lists, sets, sorted sets, streams, and others. Each operation on these structures is atomic — there’s no partial state visible to other clients.
+Redis supports atomic operations on rich data structures: strings, hashes, lists, sets, sorted sets, streams, and others. Each operation on these structures is atomic: there’s no partial state visible to other clients.
 
 For example, INCR on a counter is guaranteed to be atomic, as is LPUSH on a list. However, operations spanning multiple keys require Lua scripting or transactions for consistency guarantees.
 

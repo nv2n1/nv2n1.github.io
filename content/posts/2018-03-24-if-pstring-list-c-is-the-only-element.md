@@ -94,7 +94,7 @@ let safe_head s = match s with
   | _ -> None    (* not a single-element list *)
 ```
 
-The key takeaway: always bind variables through pattern matching. Trying to reference `c` before it’s bound in a match expression is what causes the error. The pattern `[c]` doesn’t check if `c` equals something—it *binds* whatever element is in that position to the name `c`.
+The key takeaway: always bind variables through pattern matching. Trying to reference `c` before it’s bound in a match expression is what causes the error. The pattern `[c]` doesn’t check if `c` equals something: it *binds* whatever element is in that position to the name `c`.
 
 ## 2026 Best Practices and Advanced Techniques
 

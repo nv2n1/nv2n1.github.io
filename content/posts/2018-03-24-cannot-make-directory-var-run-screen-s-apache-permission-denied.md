@@ -21,7 +21,7 @@ $ ls -la $(which screen)
 -rwxr-sr-x 1 root screen 474288 Aug 28 18:59 /usr/bin/screen
 ```
 
-The key detail is the `s` in the group permission field (the fourth position) — this setgid bit allows screen to create directories owned by the `screen` group.
+The key detail is the `s` in the group permission field (the fourth position): this setgid bit allows screen to create directories owned by the `screen` group.
 
 Check the `/var/run/screen` directory:
 
@@ -91,7 +91,7 @@ $ sudo -u apache screen -S test -X quit
 
 ## Additional considerations
 
-If you’re running apache under a different user (not the default `apache`), replace it with the actual username. The group permission issue is the most common cause — screen relies on the `screen` group to manage the runtime directory, and without proper setgid permissions, unprivileged users can’t create their session directories.
+If you’re running apache under a different user (not the default `apache`), replace it with the actual username. The group permission issue is the most common cause: screen relies on the `screen` group to manage the runtime directory, and without proper setgid permissions, unprivileged users can’t create their session directories.
 
 On modern systems with systemd, `/var/run` is mounted as a tmpfs that gets recreated on boot. If permissions reset after reboot, create a tmpfiles.d configuration:
 

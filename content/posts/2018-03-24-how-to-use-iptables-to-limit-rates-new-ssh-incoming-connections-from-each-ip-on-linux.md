@@ -10,7 +10,7 @@ canonical: /how-to-use-iptables-to-limit-rates-new-ssh-incoming-connections-from
 url: /how-to-use-iptables-to-limit-rates-new-ssh-incoming-connections-from-each-ip-on-linux/
 ---
 
-Rate-limiting SSH brute-force attempts is essential for any server exposed to the internet. Using iptables with the `recent` module, you can drop connections from IPs that exceed a threshold in a given time window—for example, blocking IPs that attempt more than 6 connections in 60 seconds.
+Rate-limiting SSH brute-force attempts is essential for any server exposed to the internet. Using iptables with the `recent` module, you can drop connections from IPs that exceed a threshold in a given time window, for example, blocking IPs that attempt more than 6 connections in 60 seconds.
 
 ## Using iptables
 
@@ -34,7 +34,7 @@ done
 
 1.  The first rule allows traffic for established connections, so legitimate users won’t be affected mid-session.
 2.  The second rule drops packets from IPs that have hit the threshold (6 connections within 60 seconds). The `--rsource` flag tracks by source IP only (ignoring destination ports).
-3.  The third rule records each new SSH connection attempt and allows it through—this is how the `recent` module counts attempts.
+3.  The third rule records each new SSH connection attempt and allows it through: this is how the `recent` module counts attempts.
 4.  The final rules reject everything else.
 
 The `recent` module maintains state in `/proc/net/xt_recent/SSH` on most systems. You can check active entries:
@@ -76,7 +76,7 @@ firewall-cmd --permanent --direct --add-rule ipv6 filter INPUT_direct 1 -p tcp -
 firewall-cmd --reload
 ```
 
-The rule numbers (0, 1) determine execution order—lower numbers run first.
+The rule numbers (0, 1) determine execution order: lower numbers run first.
 
 ## Important considerations
 

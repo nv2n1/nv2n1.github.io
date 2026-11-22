@@ -28,7 +28,7 @@ std::ios::sync_with_stdio(false);
 
 This disables the synchronization with C stdio, allowing `cin` to use its own buffering strategy without coordination constraints.
 
-You must call this before performing any I/O—ideally near the start of `main()`.
+You must call this before performing any I/O: ideally near the start of `main()`.
 
 ## Benchmark Comparison
 

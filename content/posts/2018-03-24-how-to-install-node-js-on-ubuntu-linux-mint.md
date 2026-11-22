@@ -10,7 +10,7 @@ canonical: /how-to-install-node-js-on-ubuntu-linux-mint/
 url: /how-to-install-node-js-on-ubuntu-linux-mint/
 ---
 
-Node.js installation on Ubuntu and Linux Mint has evolved significantly. The approach depends on your use case — whether you need the latest stable version, multiple Node versions for different projects, or just a quick setup.
+Node.js installation on Ubuntu and Linux Mint has evolved significantly. The approach depends on your use case, whether you need the latest stable version, multiple Node versions for different projects, or just a quick setup.
 
 ## Using the NodeSource Repository (Recommended)
 

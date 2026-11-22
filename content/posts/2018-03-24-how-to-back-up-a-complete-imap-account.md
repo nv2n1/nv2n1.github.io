@@ -14,13 +14,13 @@ Backing up a complete IMAP account with thousands of messages across nested fold
 
 ## Choosing your backup tool
 
-**offlineimap** — Most flexible for complex folder structures and label handling. Active maintenance resumed, widely packaged.
+**offlineimap**: Most flexible for complex folder structures and label handling. Active maintenance resumed, widely packaged.
 
-**mbsync (isync)** — Lightweight and fast, excellent for large accounts (500k+ messages). Minimal configuration, efficient sync algorithm.
+**mbsync (isync)**: Lightweight and fast, excellent for large accounts (500k+ messages). Minimal configuration, efficient sync algorithm.
 
-**doveadm** — Built-in to Dovecot servers, useful if backing up directly from your mail server. Best for local or nearby systems.
+**doveadm**: Built-in to Dovecot servers, useful if backing up directly from your mail server. Best for local or nearby systems.
 
-**imapync** — Simple one-way sync, good for straightforward backups, but less flexible for folder mapping.
+**imapync**: Simple one-way sync, good for straightforward backups, but less flexible for folder mapping.
 
 This guide uses offlineimap for its maturity and control, but includes mbsync alternatives where applicable.
 
@@ -86,11 +86,11 @@ timeout = 30
 
 Key configuration points:
 
-- `readonly = true` — Prevents accidental writes to the IMAP server during backup
-- `ssl = yes` — Required for modern servers; verify your CA certificate path
-- `createfolders = yes` — Creates local directories matching remote folder structure
-- `socktimeout = 30` — Prevents hangs on slow connections
-- `keepalive = 60` — Maintains connection stability; increase to 120 for large syncs
+- `readonly = true`: Prevents accidental writes to the IMAP server during backup
+- `ssl = yes`: Required for modern servers; verify your CA certificate path
+- `createfolders = yes`: Creates local directories matching remote folder structure
+- `socktimeout = 30`: Prevents hangs on slow connections
+- `keepalive = 60`: Maintains connection stability; increase to 120 for large syncs
 
 ## Secure credential handling
 
@@ -109,7 +109,7 @@ echo "your_actual_password" > ~/.config/offlineimap/password
 chmod 600 ~/.config/offlineimap/password
 ```
 
-For OAuth2 or app-specific passwords, use the same approach — offlineimap accepts any credential string in the password file.
+For OAuth2 or app-specific passwords, use the same approach: offlineimap accepts any credential string in the password file.
 
 ## Running your first backup
 

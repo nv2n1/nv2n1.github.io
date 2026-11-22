@@ -33,13 +33,13 @@ These latency figures represent the raw cost of fundamental operations. Understa
 | Read 1 MB sequentially over network | 10,000,000 ns  |
 | Intercontinental round trip         | 150,000,000 ns |
 
-Modern hardware has shifted absolute numbers—compression algorithms like Zstd outpace older options, and SSDs have become the standard storage tier. But the relative relationships between layers remain your actual guide for design decisions.
+Modern hardware has shifted absolute numbers: compression algorithms like Zstd outpace older options, and SSDs have become the standard storage tier. But the relative relationships between layers remain your actual guide for design decisions.
 
 ## Why These Relationships Matter
 
 **Cache locality is non-negotiable.** The 200x difference between L1 and main memory access means algorithmic efficiency measured in CPU cycles translates directly to wall-clock performance. A cache miss in a tight loop will outweigh algorithmic cleverness in most real workloads. This is why memory-efficient data structures and access patterns matter more than theoretical algorithm complexity at the CPU level.
 
-**Network I/O dominates system design.** Once you cross the datacenter boundary, a single request costs as much as millions of CPU operations. This fundamental asymmetry drives distributed systems architecture entirely—batching, caching, connection pooling, and replication exist primarily to minimize network round trips. Even within a datacenter, that 500 microsecond round trip multiplies quickly. At 10,000 requests per second, you’re consuming 5 seconds of latency per second just on network overhead.
+**Network I/O dominates system design.** Once you cross the datacenter boundary, a single request costs as much as millions of CPU operations. This fundamental asymmetry drives distributed systems architecture entirely: batching, caching, connection pooling, and replication exist primarily to minimize network round trips. Even within a datacenter, that 500 microsecond round trip multiplies quickly. At 10,000 requests per second, you’re consuming 5 seconds of latency per second just on network overhead.
 
 **Disk seeks remain catastrophic.** A rotational disk handles roughly 100 random I/O operations per second. This hasn’t changed materially in decades, which explains:
 
@@ -48,7 +48,7 @@ Modern hardware has shifted absolute numbers—compression algorithms like Zstd 
 - Write-ahead logs are sequential by design
 - Database indices exist to eliminate seeks
 
-**Memory bandwidth is a real constraint.** Reading 1 MB from memory takes 250 microseconds. This limits streaming throughput and explains why compression trades CPU cycles for reduced bandwidth—almost always a winning trade. You can compress data faster than you can move uncompressed data across the network or from slower storage.
+**Memory bandwidth is a real constraint.** Reading 1 MB from memory takes 250 microseconds. This limits streaming throughput and explains why compression trades CPU cycles for reduced bandwidth: almost always a winning trade. You can compress data faster than you can move uncompressed data across the network or from slower storage.
 
 ## Practical Application
 
@@ -64,7 +64,7 @@ When designing a system, work through this decision tree:
 
 These numbers compound dramatically. A service handling 100,000 requests per second that adds 100 microseconds of unnecessary latency through poor I/O is consuming 10 seconds of system resources per second. Across a fleet of 50 machines, that’s equivalent to idling 8+ additional servers doing nothing but burning through that one mistake.
 
-A single extra database round trip per request in a 1 million request-per-second system becomes 1,000 seconds of round-trip time happening simultaneously—enough latency overhead to require significant additional infrastructure.
+A single extra database round trip per request in a 1 million request-per-second system becomes 1,000 seconds of round-trip time happening simultaneously: enough latency overhead to require significant additional infrastructure.
 
 ## Modern Context (2026)
 

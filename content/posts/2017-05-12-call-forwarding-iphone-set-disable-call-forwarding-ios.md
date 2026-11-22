@@ -20,7 +20,7 @@ Call forwarding redirects incoming calls to another number when you’re unavail
 4.  Enter the phone number where calls should forward
 5.  Tap back to confirm
 
-Once active, you’ll see a small forwarding icon in the status bar. Verify it’s working by calling your number from another device—the call should ring on the forwarded number instead of your iPhone.
+Once active, you’ll see a small forwarding icon in the status bar. Verify it’s working by calling your number from another device: the call should ring on the forwarded number instead of your iPhone.
 
 ## Change the forwarding number
 
@@ -42,7 +42,7 @@ The status bar icon will disappear once disabled, and calls will resume ringing 
 
 Call forwarding is a carrier feature, not an iOS feature. Not all carriers support it, and some charge monthly fees. Contact your carrier to confirm availability and any associated costs before relying on it for business or critical calls.
 
-You can forward to landlines, mobile numbers, or VoIP services—whatever your carrier permits. International forwarding may work but could incur additional charges depending on your plan and destination.
+You can forward to landlines, mobile numbers, or VoIP services: whatever your carrier permits. International forwarding may work but could incur additional charges depending on your plan and destination.
 
 ## How caller ID works with forwarding
 
@@ -50,7 +50,7 @@ When a call is forwarded, the person receiving it typically sees your original n
 
 ## Call forwarding vs. Do Not Disturb
 
-These are separate features. Do Not Disturb silences notifications locally but calls still ring through to your iPhone. Call forwarding sends calls to a different number entirely. You can enable both simultaneously—for example, forwarding calls to a work number while Do Not Disturb prevents local notifications.
+These are separate features. Do Not Disturb silences notifications locally but calls still ring through to your iPhone. Call forwarding sends calls to a different number entirely. You can enable both simultaneously, for example, forwarding calls to a work number while Do Not Disturb prevents local notifications.
 
 ## WiFi calling and sequential forwarding
 

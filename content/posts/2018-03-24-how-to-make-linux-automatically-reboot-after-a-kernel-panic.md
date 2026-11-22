@@ -82,13 +82,13 @@ sysctl kernel.panic
 
 While `kernel.panic` handles the reboot timing, consider these related settings:
 
-- `kernel.panic_on_oops` — Set to 1 to trigger a kernel panic on an Oops condition, forcing a reboot. Useful for unattended systems:
+- `kernel.panic_on_oops`: Set to 1 to trigger a kernel panic on an Oops condition, forcing a reboot. Useful for unattended systems:
 
 ``` bash
 echo "kernel.panic_on_oops = 1" | sudo tee -a /etc/sysctl.conf
 ```
 
-- `kernel.panic_on_rcu_stall` — Forces panic on RCU stall detection (useful for detecting kernel deadlocks).
+- `kernel.panic_on_rcu_stall`: Forces panic on RCU stall detection (useful for detecting kernel deadlocks).
 
 Apply these via `sysctl -p` after editing.
 
@@ -168,7 +168,7 @@ This causes an immediate kernel panic and tests the auto-reboot mechanism.
 
 ## Best Practices
 
-- Set `kernel.panic` to a value between 10-30 seconds on production systems — enough time for disk I/O to flush but not so long that the system appears hung.
+- Set `kernel.panic` to a value between 10-30 seconds on production systems: enough time for disk I/O to flush but not so long that the system appears hung.
 - Always test panic recovery in a staging environment before deploying to production.
 - Combine auto-reboot with centralized logging (syslog, journald) to capture panic details before the reboot.
 - Monitor consecutive reboots; multiple panics in quick succession indicate a deeper issue requiring investigation.

@@ -20,7 +20,7 @@ The simplest and most common approach:
 value = my_dict.get('key', 'default_value')
 ```
 
-This returns the value if the key exists, or the default value if it doesn’t. The default argument is optional—if omitted, it returns `None`:
+This returns the value if the key exists, or the default value if it doesn’t. The default argument is optional: if omitted, it returns `None`:
 
 ``` python
 my_dict = {'a': 1, 'b': 2}

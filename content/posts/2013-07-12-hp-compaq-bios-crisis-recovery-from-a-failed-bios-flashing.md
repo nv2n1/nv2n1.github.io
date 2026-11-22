@@ -10,7 +10,7 @@ canonical: /hp-compaq-bios-crisis-recovery-from-a-failed-bios-flashing/
 url: /hp-compaq-bios-crisis-recovery-from-a-failed-bios-flashing/
 ---
 
-A failed BIOS flash can leave your HP Compaq laptop completely unresponsive — white screen, no boot, just LED blinking. Before declaring it dead, try HP’s built-in crisis recovery mechanism. This procedure has recovered many laptops that appeared permanently bricked.
+A failed BIOS flash can leave your HP Compaq laptop completely unresponsive: white screen, no boot, just LED blinking. Before declaring it dead, try HP’s built-in crisis recovery mechanism. This procedure has recovered many laptops that appeared permanently bricked.
 
 The process works even when CMOS corruption prevents normal startup. You’ll need a USB flash drive and a second computer with internet access to download the BIOS image.
 
@@ -54,7 +54,7 @@ Extract the BIOS executable without running the installer. Use 7-Zip, WinRAR, or
 7z x hp-bios-update.exe
 ```
 
-Locate the `.FD` or `.bin` files inside. These are the actual BIOS images. The filename pattern indicates variants — for example, `306DF15.FD` and `306EF15.FD` represent different CQ35 versions.
+Locate the `.FD` or `.bin` files inside. These are the actual BIOS images. The filename pattern indicates variants, for example, `306DF15.FD` and `306EF15.FD` represent different CQ35 versions.
 
 If you’re unsure which file matches your model, consult HP’s README within the package or check archived BIOS setup screens documentation. The wrong file can prevent recovery.
 
@@ -154,4 +154,4 @@ Crisis recovery exists because failed flashes happen. Prevent them:
 - Flash BIOS only when battery is fully charged
 - Close unnecessary applications and disable antivirus temporarily
 
-If recovery doesn’t restore the system after multiple attempts with different images and USB drives, contact HP service or a professional technician — the motherboard may have a deeper issue.
+If recovery doesn’t restore the system after multiple attempts with different images and USB drives, contact HP service or a professional technician: the motherboard may have a deeper issue.

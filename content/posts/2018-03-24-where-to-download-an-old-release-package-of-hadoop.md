@@ -10,7 +10,7 @@ canonical: /where-to-download-an-old-release-package-of-hadoop/
 url: /where-to-download-an-old-release-package-of-hadoop/
 ---
 
-Sometimes you need an older version of Hadoop — for compatibility with existing jobs, to reproduce bugs, or to match a specific cluster environment. The Apache Hadoop project maintains an archive of all past releases.
+Sometimes you need an older version of Hadoop, for compatibility with existing jobs, to reproduce bugs, or to match a specific cluster environment. The Apache Hadoop project maintains an archive of all past releases.
 
 ## From the Apache Archive
 

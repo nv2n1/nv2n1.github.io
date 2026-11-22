@@ -16,13 +16,13 @@ Trading across decentralized exchanges requires navigating fragmented liquidity 
 
 The distinction matters operationally:
 
-**Routers** are smart contracts that execute the actual trade logic. They determine the path a swap takes — whether directly from Token A to Token B or through intermediate tokens to achieve better rates. Uniswap Router, Balancer Router, and Curve’s routing contracts all serve this function. A router is limited to the liquidity and protocols it’s designed to access.
+**Routers** are smart contracts that execute the actual trade logic. They determine the path a swap takes, whether directly from Token A to Token B or through intermediate tokens to achieve better rates. Uniswap Router, Balancer Router, and Curve’s routing contracts all serve this function. A router is limited to the liquidity and protocols it’s designed to access.
 
 **Aggregators** are abstraction layers sitting above multiple routers and liquidity sources. They query dozens of protocols simultaneously, compare execution prices in real-time, and construct optimal trade routes. 1inch, ParaSwap, CowSwap, and Jupiter (on Solana) are user-facing aggregators that handle the complexity of finding best execution without requiring users to manually compare venues.
 
 ## Execution Optimization Techniques
 
-**Split routing** breaks a single trade into fragments across multiple liquidity sources. Instead of executing a full swap on one DEX where slippage may be high, an aggregator splits the order across Uniswap, Curve, Balancer, and others simultaneously. This reduces price impact and minimizes slippage — the gap between expected and executed price.
+**Split routing** breaks a single trade into fragments across multiple liquidity sources. Instead of executing a full swap on one DEX where slippage may be high, an aggregator splits the order across Uniswap, Curve, Balancer, and others simultaneously. This reduces price impact and minimizes slippage: the gap between expected and executed price.
 
 **MEV protection** has become standard in production aggregators. Advanced systems use private mempools, encrypted transactions, or intent-based architectures to prevent front-running bots from extracting value. CowSwap pioneered “batch auctions” where transactions settle simultaneously, eliminating the transaction ordering that MEV bots exploit.
 
@@ -63,6 +63,6 @@ For very large orders (whales), consider using aggregators with private pool acc
 
 ## Implementation Notes
 
-Most aggregators expose REST APIs and contract ABIs for developers. Query the aggregator’s latest swap quote before executing, as liquidity and prices shift rapidly. Always set a reasonable `minAmountOut` (slippage tolerance) based on asset volatility — typically 0.5% to 2% for stable pairs, up to 5% for volatile assets.
+Most aggregators expose REST APIs and contract ABIs for developers. Query the aggregator’s latest swap quote before executing, as liquidity and prices shift rapidly. Always set a reasonable `minAmountOut` (slippage tolerance) based on asset volatility: typically 0.5% to 2% for stable pairs, up to 5% for volatile assets.
 
 For Ethereum and EVM chains, construct transactions through the aggregator’s API, then sign and broadcast with your wallet. Solana’s versioned transactions on Jupiter require importing their SDK if building custom integrations.

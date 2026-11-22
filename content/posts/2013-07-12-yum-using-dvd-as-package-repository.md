@@ -29,7 +29,7 @@ Verify the mount and check that packages exist:
 ls /media/dvd/Packages/ | head
 ```
 
-On systems with automatic mounting (systemd-based), the DVD may already be mounted at `/run/media/$USER/` — adjust your paths accordingly.
+On systems with automatic mounting (systemd-based), the DVD may already be mounted at `/run/media/$USER/`: adjust your paths accordingly.
 
 ## Configuring the DNF Repository
 
@@ -173,7 +173,7 @@ file /media/dvd/RPM-GPG-KEY-*
 
 If the key is missing, set `gpgcheck=0` temporarily, then investigate what the actual key filename is.
 
-**Limited packages:** DVD media contains far fewer packages than online repositories. You can enable multiple repositories simultaneously — keep the DVD enabled and re-enable a network repo for packages not on the disc:
+**Limited packages:** DVD media contains far fewer packages than online repositories. You can enable multiple repositories simultaneously: keep the DVD enabled and re-enable a network repo for packages not on the disc:
 
 ``` bash
 sudo dnf config-manager --set-enabled baseos

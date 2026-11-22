@@ -36,7 +36,7 @@ dmesg | grep -i "HZ"
 
 ## Rebuilding the Kernel
 
-Changing CONFIG_HZ requires recompiling the kernel—there’s no runtime adjustment. Here’s the process:
+Changing CONFIG_HZ requires recompiling the kernel: there’s no runtime adjustment. Here’s the process:
 
 ### 1. Obtain Kernel Sources
 

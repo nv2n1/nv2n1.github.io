@@ -16,7 +16,7 @@ This document preserves the historical release notes for Linux v0.95 (March 7, 1
 
 Linux 0.95 is copyrighted under the GNU General Public License (GPL). You may freely copy and redistribute Linux in whole or in part, provided you make source code available at no more than copying cost. Any modifications you distribute fall automatically under the GPL.
 
-The unistd library functions (system call interface) are exempt from this restriction—you may use them freely in binary applications without GPL obligations. Most other library components retain their original copyrights or remain in the public domain; see source files for specifics.
+The unistd library functions (system call interface) are exempt from this restriction: you may use them freely in binary applications without GPL obligations. Most other library components retain their original copyrights or remain in the public domain; see source files for specifics.
 
 ## Installation
 
@@ -61,7 +61,7 @@ Examples:
 
 **3) Allocate a primary partition.** DOS fdisk often creates only two partitions (one primary, one extended). Use alternative partitioning tools if necessary. Linux fdisk currently displays partition info only; it doesn’t modify the disk.
 
-**Warning:** Extended partition support in 0.95 is untested. Avoid using extended partitions unless you can verify correct setup—incorrect handling could overwrite other partitions.
+**Warning:** Extended partition support in 0.95 is untested. Avoid using extended partitions unless you can verify correct setup: incorrect handling could overwrite other partitions.
 
 **4) Create a filesystem.** After confirming the new partition appears in `fdisk`, create a filesystem:
 
@@ -80,7 +80,7 @@ for i in bin dev etc usr tmp; do
 done
 ```
 
-Avoid `cp -r / /mnt` — this creates an infinite loop.
+Avoid `cp -r / /mnt`: this creates an infinite loop.
 
 **6) Sync before rebooting.** Always sync the filesystem before shutdown:
 
@@ -91,7 +91,7 @@ sync
 
 Wait for completion, then press `Ctrl+Alt+Delete`. **Never skip this step.** Failure to sync may corrupt the filesystem.
 
-**7) Update the boot disk.** Modify the boot image to specify your root partition. See `INSTALL-0.11` for the procedure—the relevant offset is 508 bytes into the image.
+**7) Update the boot disk.** Modify the boot image to specify your root partition. See `INSTALL-0.11` for the procedure: the relevant offset is 508 bytes into the image.
 
 **8) Migrate additional software.** Once running on your hard disk, mount the older rootimage-0.12 from a floppy to copy additional utilities:
 
@@ -126,9 +126,9 @@ Version 0.95 allows symlinks to point to other symlinks, with a maximum depth of
 
 Memory management is more robust: no more lockups, and swapping works both to dedicated partitions and regular files. Two utilities manage swapping:
 
-**mkswap** — Initialize a swap area
+**mkswap**: Initialize a swap area
 
-**swapon** — Enable swapping
+**swapon**: Enable swapping
 
 To create a swap file:
 

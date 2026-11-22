@@ -45,10 +45,10 @@ The output should display `go1.23.4.linux-amd64.tar.gz: OK`.
 
 For other architectures, adjust the filename accordingly:
 
-- `linux-arm64` — ARM64 systems (common for Raspberry Pi 4+, Apple Silicon via native builds)
-- `linux-armv6l` — older ARM boards (Raspberry Pi Zero, Pi 1/2)
-- `linux-ppc64le` — PowerPC systems
-- `linux-s390x` — IBM Z systems
+- `linux-arm64`: ARM64 systems (common for Raspberry Pi 4+, Apple Silicon via native builds)
+- `linux-armv6l`: older ARM boards (Raspberry Pi Zero, Pi 1/2)
+- `linux-ppc64le`: PowerPC systems
+- `linux-s390x`: IBM Z systems
 
 ## Extract and install
 
@@ -178,7 +178,7 @@ go build ./...
 
 ## Troubleshooting
 
-**Go still points to the old version**: Check your shell’s startup files. Bash reads `~/.bashrc` and zsh reads `~/.zshrc` — ensure no conflicting `PATH` definitions override `/etc/profile.d/`. Verify with:
+**Go still points to the old version**: Check your shell’s startup files. Bash reads `~/.bashrc` and zsh reads `~/.zshrc`: ensure no conflicting `PATH` definitions override `/etc/profile.d/`. Verify with:
 
 ``` bash
 echo $PATH

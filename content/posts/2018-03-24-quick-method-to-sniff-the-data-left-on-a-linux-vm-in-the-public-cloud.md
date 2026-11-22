@@ -67,7 +67,7 @@ You’ll need the passphrase or keyfile, which somewhat defeats the purpose of a
 
 **Modern cloud defaults**: Major providers (AWS with EBS encryption, Azure Disk Encryption, GCP persistent disks) now encrypt storage by default. Your results will be unreadable unless you have the encryption keys.
 
-**VM lifecycle**: Check your cloud provider’s documentation—many now guarantee cryptographic erasure or secure reallocation. AWS EC2 instances, for example, go through decommissioning procedures that reduce exposure.
+**VM lifecycle**: Check your cloud provider’s documentation: many now guarantee cryptographic erasure or secure reallocation. AWS EC2 instances, for example, go through decommissioning procedures that reduce exposure.
 
 **Audit trail**: Running these commands on shared infrastructure may trigger security alerts or compliance violations. Verify you have authorization before attempting recovery.
 
@@ -101,7 +101,7 @@ If you’re concerned about data leakage in the opposite direction (protecting y
 - Securely wipe filesystems before decommissioning: `shred -vfz -n 3 /path/to/file` or use `blkdiscard` on SSDs
 - Request secure erasure certificates from your provider
 
-For compliance-critical workloads, never rely on VM deletion alone—always verify your provider’s data handling policies independently.
+For compliance-critical workloads, never rely on VM deletion alone: always verify your provider’s data handling policies independently.
 
 ## 2026 Comprehensive Guide: Best Practices
 

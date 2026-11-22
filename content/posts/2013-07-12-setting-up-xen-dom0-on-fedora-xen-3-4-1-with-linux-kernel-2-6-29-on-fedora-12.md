@@ -102,10 +102,10 @@ sudo grubby --set-default-index=0
 
 Key Dom0 kernel parameters:
 
-- `dom0_mem=1024M,max:4096M` — Allocate 1GB initially, cap at 4GB
-- `iommu=1` — Enable IOMMU for device passthrough
-- `console=vga` — Use VGA for early boot output
-- `loglevel=debug` — Increase verbosity for troubleshooting
+- `dom0_mem=1024M,max:4096M`: Allocate 1GB initially, cap at 4GB
+- `iommu=1`: Enable IOMMU for device passthrough
+- `console=vga`: Use VGA for early boot output
+- `loglevel=debug`: Increase verbosity for troubleshooting
 
 Reboot into Xen:
 

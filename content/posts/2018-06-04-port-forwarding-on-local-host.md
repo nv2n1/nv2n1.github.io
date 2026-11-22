@@ -14,7 +14,7 @@ Local port forwarding on the same host requires understanding how netfilter proc
 
 ## The core problem
 
-When you forward UDP port 500 to port 2500 on localhost, you need rules in both chains. Add only a PREROUTING rule and local applications connecting to port 500 will bypass it entirely — they skip PREROUTING and hit OUTPUT instead.
+When you forward UDP port 500 to port 2500 on localhost, you need rules in both chains. Add only a PREROUTING rule and local applications connecting to port 500 will bypass it entirely: they skip PREROUTING and hit OUTPUT instead.
 
 ``` bash
 # This alone won't work for local traffic

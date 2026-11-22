@@ -18,9 +18,9 @@ By default, when you call mmap() with MAP_ANONYMOUS or a file-backed mapping, th
 
 The kernel enforces this through the overcommit accounting system, configurable via `/proc/sys/vm/overcommit_memory`:
 
-- 0 (default): Heuristic overcommit — reservations are enforced but allow some flexibility
-- 1: Always allow — no reservations, potential OOM killer invocations
-- 2: Strict — reserves based on configured ratio
+- 0 (default): Heuristic overcommit: reservations are enforced but allow some flexibility
+- 1: Always allow: no reservations, potential OOM killer invocations
+- 2: Strict: reserves based on configured ratio
 
 ## Using MAP_NORESERVE
 
@@ -72,7 +72,7 @@ gcc -o mmap_noreserve mmap_noreserve.c
 
 ## Important Considerations
 
-**Risk of OOM Kill**: Without swap reservation, if you actually populate the pages and memory becomes exhausted, the kernel’s OOM killer will terminate your process or others. MAP_NORESERVE doesn’t prevent OOM — it just defers the problem until pages are accessed.
+**Risk of OOM Kill**: Without swap reservation, if you actually populate the pages and memory becomes exhausted, the kernel’s OOM killer will terminate your process or others. MAP_NORESERVE doesn’t prevent OOM: it just defers the problem until pages are accessed.
 
 **Sparse Access Patterns**: This flag is most practical when you genuinely use only a small fraction of the mapped range. A 10TB mapping where you access 100MB of scattered pages makes sense. A 10TB mapping where you access most pages defeats the purpose.
 
@@ -84,7 +84,7 @@ void *addr = mmap(NULL, file_size, PROT_READ | PROT_WRITE,
                    MAP_SHARED | MAP_NORESERVE, fd, 0);
 ```
 
-**Checking System Limits**: Use `cat /proc/meminfo` to see MemAvailable and SwapFree. Check `/proc/sys/vm/max_map_count` (default 65536) if you’re creating many mappings — hitting this limit will fail mmap() regardless of memory availability.
+**Checking System Limits**: Use `cat /proc/meminfo` to see MemAvailable and SwapFree. Check `/proc/sys/vm/max_map_count` (default 65536) if you’re creating many mappings: hitting this limit will fail mmap() regardless of memory availability.
 
 ## Alternative: Overcommit Settings
 
@@ -118,4 +118,4 @@ This pattern is safe: only the accessed portion consumes memory.
 
 ## Summary
 
-MAP_NORESERVE is a tool for specific scenarios where you know your access pattern is sparse and you accept the OOM risk. It’s not a solution for genuinely needing terabytes of memory — it’s a way to reserve virtual address space cheaply. Use it deliberately, document why, and monitor your system for memory pressure.
+MAP_NORESERVE is a tool for specific scenarios where you know your access pattern is sparse and you accept the OOM risk. It’s not a solution for genuinely needing terabytes of memory: it’s a way to reserve virtual address space cheaply. Use it deliberately, document why, and monitor your system for memory pressure.

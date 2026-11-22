@@ -248,7 +248,7 @@ On the NameNode, format the namespace:
 hdfs namenode -format
 ```
 
-This initializes the HDFS directory structure. Do this only once—formatting an existing cluster erases all data.
+This initializes the HDFS directory structure. Do this only once: formatting an existing cluster erases all data.
 
 ### Start HDFS
 

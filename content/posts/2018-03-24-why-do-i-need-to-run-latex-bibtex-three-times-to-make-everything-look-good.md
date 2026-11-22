@@ -23,7 +23,7 @@ This seems redundant, but there’s a solid reason for it.
 
 ## How the Three-Pass Workflow Works
 
-**First LaTeX pass:** LaTeX processes your document and writes all `\cite{}` commands to the `.aux` file. At this point, it doesn’t know what labels those citations should have—it just records that citations exist.
+**First LaTeX pass:** LaTeX processes your document and writes all `\cite{}` commands to the `.aux` file. At this point, it doesn’t know what labels those citations should have: it just records that citations exist.
 
 **BibTeX pass:** BibTeX reads the `.aux` file to see which bibliography entries are cited. It pulls those entries from your `.bib` file, sorts them (alphabetically, by appearance, or by a custom order depending on your style), and writes formatted entries to the `.bbl` file.
 
@@ -46,7 +46,7 @@ pdflatex main.tex
 pdflatex main.tex
 ```
 
-While this still requires multiple passes, `biblatex` with `biber` is more robust and handles Unicode better. The real advantage is flexibility—you can configure citation styles directly in your preamble rather than relying on `.bst` files.
+While this still requires multiple passes, `biblatex` with `biber` is more robust and handles Unicode better. The real advantage is flexibility: you can configure citation styles directly in your preamble rather than relying on `.bst` files.
 
 For an even smoother workflow, use `latexmk`:
 
@@ -54,11 +54,11 @@ For an even smoother workflow, use `latexmk`:
 latexmk -pdf main.tex
 ```
 
-`latexmk` automatically determines how many passes are needed and runs them for you. It watches for changes in your `.aux` and `.bbl` files and stops once everything stabilizes. This is the standard approach in 2026—it handles the complexity invisibly.
+`latexmk` automatically determines how many passes are needed and runs them for you. It watches for changes in your `.aux` and `.bbl` files and stops once everything stabilizes. This is the standard approach in 2026: it handles the complexity invisibly.
 
 ## Stabilization During Development
 
-During document preparation, you’ll recompile many times anyway. Your citations and cross-references stabilize naturally as you edit. The three-pass requirement only matters if you’re creating a final PDF from scratch—and even then, `latexmk` removes the burden of thinking about it.
+During document preparation, you’ll recompile many times anyway. Your citations and cross-references stabilize naturally as you edit. The three-pass requirement only matters if you’re creating a final PDF from scratch, and even then, `latexmk` removes the burden of thinking about it.
 
 ## When You Might Still See Instability
 

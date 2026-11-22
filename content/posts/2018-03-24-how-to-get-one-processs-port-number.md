@@ -98,7 +98,7 @@ kubectl get svc <service_name> -o wide
 kubectl get pods <pod_name> -o jsonpath='{.spec.containers[*].ports}'
 ```
 
-If you need to see ports from inside a container, the same `ss` and `lsof` commands work—just exec in:
+If you need to see ports from inside a container, the same `ss` and `lsof` commands work: just exec in:
 
 ``` bash
 docker exec <container_id> ss -tlnp
@@ -134,7 +134,7 @@ watch -n 1 'ss -tnp | grep :8080'
 
 ## Why ss Over netstat
 
-`ss` is significantly faster than the deprecated `netstat` on systems with thousands of connections. It queries `/proc` directly and scales better with modern workloads. If you’re still using `netstat`, migrate to `ss`—the command syntax is nearly identical.
+`ss` is significantly faster than the deprecated `netstat` on systems with thousands of connections. It queries `/proc` directly and scales better with modern workloads. If you’re still using `netstat`, migrate to `ss`: the command syntax is nearly identical.
 
 ## 2026 Best Practices and Advanced Techniques
 

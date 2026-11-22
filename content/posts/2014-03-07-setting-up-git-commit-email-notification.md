@@ -10,7 +10,7 @@ canonical: /setting-up-git-commit-email-notification/
 url: /setting-up-git-commit-email-notification/
 ---
 
-Sending email notifications when commits are pushed to a central Git repository helps teams stay coordinated and maintains audit trails. This is handled through Git hooks—scripts triggered by repository events.
+Sending email notifications when commits are pushed to a central Git repository helps teams stay coordinated and maintains audit trails. This is handled through Git hooks: scripts triggered by repository events.
 
 ## How Post-Receive Hooks Work
 
@@ -39,7 +39,7 @@ sudo dnf install heirloom-mailx
 sudo apt install heirloom-mailx
 ```
 
-Use `heirloom-mailx` specifically—default alternatives lack options like `-r` (sender address) that hook scripts need.
+Use `heirloom-mailx` specifically: default alternatives lack options like `-r` (sender address) that hook scripts need.
 
 If you don’t have a local mail service running, the hook can use SMTP directly instead (covered in the SMTP section below).
 
@@ -118,7 +118,7 @@ chmod 755 /opt/git-hooks/post-receive
 ln -sf /opt/git-hooks/post-receive /path/to/repo.git/hooks/post-receive
 ```
 
-The script must be executable. If permissions are wrong, the hook silently fails—always test after installation.
+The script must be executable. If permissions are wrong, the hook silently fails: always test after installation.
 
 ## Configuring Repository Settings
 
@@ -256,7 +256,7 @@ journalctl -u postfix -f
 - Use a dedicated sender email address for Git notifications to avoid spoofing concerns
 - Filter these notifications into a separate mailbox to prevent team inbox noise
 - For large teams, use a mailing list service instead of individual email addresses
-- Store SMTP credentials securely—never hardcode passwords in hook scripts; use `.mailrc` or environment variables
+- Store SMTP credentials securely: never hardcode passwords in hook scripts; use `.mailrc` or environment variables
 - Test hooks after any changes in a non-production repository first
 - Log hook execution to syslog for audit purposes: `logger "Git hook executed for $REPO_NAME"`
 - Consider adding rate limiting if your team pushes very frequently to avoid notification spam

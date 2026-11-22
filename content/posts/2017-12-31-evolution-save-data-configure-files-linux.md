@@ -32,7 +32,7 @@ All Evolution configuration lives under `$HOME/.config/evolution/`. This is the 
 
 ### Account Settings and Sources
 
-Account configurations—including IMAP, POP, Exchange, and CalDAV settings—are stored in:
+Account configurations (including IMAP, POP, Exchange, and CalDAV settings) are stored in:
 
     $HOME/.config/evolution/sources/
 
@@ -73,16 +73,16 @@ gsettings get org.gnome.evolution.mail show-preview
 
 ## Data Files
 
-User data—emails, contacts, calendar events, and tasks—lives in:
+User data (emails, contacts, calendar events, and tasks) lives in:
 
     $HOME/.local/share/evolution/
 
 This directory structure typically includes:
 
-- `calendar/` — calendar events and task lists
-- `contacts/` — address book entries
-- `mail/` — email messages (for local accounts and IMAP caches)
-- `tasks/` — standalone tasks
+- `calendar/`: calendar events and task lists
+- `contacts/`: address book entries
+- `mail/`: email messages (for local accounts and IMAP caches)
+- `tasks/`: standalone tasks
 
 ### Understanding Mail Storage
 

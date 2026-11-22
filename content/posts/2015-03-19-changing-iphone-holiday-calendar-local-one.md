@@ -10,7 +10,7 @@ canonical: /changing-iphone-holiday-calendar-local-one/
 url: /changing-iphone-holiday-calendar-local-one/
 ---
 
-If you’re using an iPhone set to English but living outside the US, you’ve probably noticed US holidays cluttering your Calendar app. This happens because iOS ties holiday calendars directly to your region setting — not your language preference.
+If you’re using an iPhone set to English but living outside the US, you’ve probably noticed US holidays cluttering your Calendar app. This happens because iOS ties holiday calendars directly to your region setting: not your language preference.
 
 ## Why US Holidays Appear by Default
 
@@ -22,7 +22,7 @@ The key point: iOS treats language and region as separate settings. You can keep
 
 **Step 1: Open Language & Region settings**
 
-Go to Settings \> General \> Language & Region. Note your current region — it’s probably set to “United States.”
+Go to Settings \> General \> Language & Region. Note your current region: it’s probably set to “United States.”
 
 **Step 2: Select your local region**
 
@@ -30,11 +30,11 @@ Tap “Region” and search for your country. iOS supports hundreds of regions i
 
 **Step 3: Refresh the Calendar app**
 
-Switch to Calendar and pull down on the calendar list to force a refresh. Within a few seconds, your holiday calendar will update. You’ll now see your local equivalent — “CA Holidays” instead of “US Holidays,” “AU Holidays,” “DE Holidays,” etc.
+Switch to Calendar and pull down on the calendar list to force a refresh. Within a few seconds, your holiday calendar will update. You’ll now see your local equivalent: “CA Holidays” instead of “US Holidays,” “AU Holidays,” “DE Holidays,” etc.
 
 ## The Trade-off: Date and Time Formatting
 
-Changing your region also changes system-wide date and time formats. If you select Australia, your dates flip from MM/DD/YYYY to DD/MM/YYYY, and time shifts to 24-hour format. This applies everywhere on your device — Calendar, Mail, Messages, Clock, and all other apps.
+Changing your region also changes system-wide date and time formats. If you select Australia, your dates flip from MM/DD/YYYY to DD/MM/YYYY, and time shifts to 24-hour format. This applies everywhere on your device: Calendar, Mail, Messages, Clock, and all other apps.
 
 If this formatting change breaks your workflow, you have three workarounds:
 
@@ -54,6 +54,6 @@ Go to Calendar \> Calendars \> Edit and tap the plus button to create a new loca
 
 Open Calendar and tap the Calendars button. Scroll to “Subscribed Calendars” to see which holiday calendar is active. You can toggle any holiday calendar on or off here.
 
-If you’ve changed regions but the holiday calendar hasn’t updated, restart your iPhone. iOS sometimes caches calendar data and needs a restart to reflect region changes. If that doesn’t work, check that you’re running the latest iOS version — go to Settings \> General \> Software Update.
+If you’ve changed regions but the holiday calendar hasn’t updated, restart your iPhone. iOS sometimes caches calendar data and needs a restart to reflect region changes. If that doesn’t work, check that you’re running the latest iOS version: go to Settings \> General \> Software Update.
 
 You can also verify your current region by returning to Settings \> General \> Language & Region and confirming the “Region” field shows your selected country.

@@ -251,7 +251,7 @@ Older server BIOS versions may have incomplete or buggy xHCI implementations. Fi
 
 1.  Check your motherboard manufacturer’s support page for BIOS/firmware updates
 2.  Download the firmware file
-3.  Flash via BIOS menu (typically F2, Del, or F12 at boot—check your system’s prompt)
+3.  Flash via BIOS menu (typically F2, Del, or F12 at boot: check your system’s prompt)
 4.  Reboot and verify with `dmesg | grep xhci` that initialization messages have changed
 
 ### Test with Different Port

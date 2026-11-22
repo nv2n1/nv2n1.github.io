@@ -123,7 +123,7 @@ If you see rotation metadata, you can copy the video without re-encoding and onl
 ffmpeg -i input.mov -c copy -metadata:s:v rotate=0 output.mp4
 ```
 
-However, this only modifies the metadata tag—it doesn’t visually rotate the frames. Many players still won’t display it correctly. The transpose filter method is more reliable because it performs actual frame rotation that works everywhere.
+However, this only modifies the metadata tag: it doesn’t visually rotate the frames. Many players still won’t display it correctly. The transpose filter method is more reliable because it performs actual frame rotation that works everywhere.
 
 ## Arbitrary Rotation Angles
 

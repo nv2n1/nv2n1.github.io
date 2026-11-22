@@ -166,21 +166,21 @@ ps aux | grep vncserver
 
 ## Security Best Practices
 
-- **Always tunnel through SSH** — never expose VNC directly to the network
+- **Always tunnel through SSH**: never expose VNC directly to the network
 
-- **Use strong VNC passwords** — treat them like SSH passphrases
+- **Use strong VNC passwords**: treat them like SSH passphrases
 
-- **Disable password SSH authentication** — use key-based authentication instead:
+- **Disable password SSH authentication**: use key-based authentication instead:
 
   ``` bash
   ssh -i ~/.ssh/id_ed25519 -L 5901:localhost:5901 user@your.server.com -N
   ```
 
-- **Restrict SSH access** — use firewall rules or security groups to limit SSH connections
+- **Restrict SSH access**: use firewall rules or security groups to limit SSH connections
 
-- **Monitor logs** — check `~/.vnc/localhost:*.log` and `/var/log/auth.log` regularly
+- **Monitor logs**: check `~/.vnc/localhost:*.log` and `/var/log/auth.log` regularly
 
-- **Set VNC display timeout** — add `-SecurityTypes VncAuth` to require authentication and consider using VNC-only mode with limited idle timeouts
+- **Set VNC display timeout**: add `-SecurityTypes VncAuth` to require authentication and consider using VNC-only mode with limited idle timeouts
 
 ## Multiple Concurrent Sessions
 

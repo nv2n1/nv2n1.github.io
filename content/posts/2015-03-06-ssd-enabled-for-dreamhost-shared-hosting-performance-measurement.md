@@ -12,7 +12,7 @@ url: /ssd-enabled-for-dreamhost-shared-hosting-performance-measurement/
 
 SSD storage is standard across modern hosting providers. DreamHost and competitors have shifted entirely to SSD-backed shared hosting. The marketing claim of “200% faster page loads” deserves skepticism, but SSD-backed hosting does deliver measurable I/O improvements for realistic workloads.
 
-This post covers practical performance measurement techniques on a shared hosting account where you lack root access — the actual constraint most shared hosting users face.
+This post covers practical performance measurement techniques on a shared hosting account where you lack root access: the actual constraint most shared hosting users face.
 
 ## Testing Constraints on Shared Hosting
 
@@ -87,7 +87,7 @@ This produces:
 - **Write throughput**: 58.0 MB/s (via `dd` with `oflag=direct`)
 - **Read throughput**: 111.8 MB/s (537 MB ÷ 4.802s)
 
-The `oflag=direct` flag forces unbuffered I/O, so 58 MB/s represents actual SSD write speed under contention on a shared system. The higher read speed reflects cached performance — the kernel buffers recently written data in memory.
+The `oflag=direct` flag forces unbuffered I/O, so 58 MB/s represents actual SSD write speed under contention on a shared system. The higher read speed reflects cached performance: the kernel buffers recently written data in memory.
 
 ## Testing Random I/O Performance
 
@@ -107,7 +107,7 @@ $ time for i in {1..100}; do dd if=./testfile of=/dev/null bs=4K count=1 iflag=d
 real    0m0.543s
 ```
 
-This suggests ~5.4ms average latency per random 4KB read — acceptable for shared hosting but much slower than NVMe-backed systems (\< 0.5ms).
+This suggests ~5.4ms average latency per random 4KB read: acceptable for shared hosting but much slower than NVMe-backed systems (\< 0.5ms).
 
 ## Interpreting the Numbers
 
@@ -141,7 +141,7 @@ Where you’ll still hit limits:
 
 ## Practical Testing Recommendations
 
-Run tests at different times of day — shared hosting I/O performance varies with overall server load. Early morning typically shows higher throughput than peak hours.
+Run tests at different times of day: shared hosting I/O performance varies with overall server load. Early morning typically shows higher throughput than peak hours.
 
 Test your own application under realistic load instead of relying on synthetic benchmarks. Profile your actual PHP/Node.js/Python application with tools like `strace`, `py-spy`, or `perf` (if available) to identify actual bottlenecks.
 

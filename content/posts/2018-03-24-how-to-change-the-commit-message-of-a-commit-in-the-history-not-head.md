@@ -20,7 +20,7 @@ The core approach is `git rebase -i` with the commit hash. Say your target commi
 git rebase -i 2b8ed^
 ```
 
-The `^` means “the parent of this commit” — rebase will start from there and let you modify `2b8ed` itself.
+The `^` means “the parent of this commit”: rebase will start from there and let you modify `2b8ed` itself.
 
 Your editor will open with a list of commits. Find the line with `2b8ed` and change `pick` to `edit`:
 

@@ -10,7 +10,7 @@ canonical: /how-to-enable-user-themes-in-ubuntu-18-04/
 url: /how-to-enable-user-themes-in-ubuntu-18-04/
 ---
 
-By default, GNOME Shell restricts theme customization to GTK application themes. To modify the shell itself — the top bar, Activities overview, lock screen, and system UI elements — you need the User Themes extension. This remains the primary method for shell theming across Ubuntu and GNOME.
+By default, GNOME Shell restricts theme customization to GTK application themes. To modify the shell itself (the top bar, Activities overview, lock screen, and system UI elements) you need the User Themes extension. This remains the primary method for shell theming across Ubuntu and GNOME.
 
 ## Installation and Setup
 
@@ -40,9 +40,9 @@ gnome-extensions list | grep user-theme
 
 Shell themes are available from:
 
-- **GNOME Look** (gnome-look.org) — the primary repository for shell themes, GTK themes, and icon sets
-- **System repositories** — some distros package popular themes directly
-- **GitHub** — many theme developers host projects there with installation instructions
+- **GNOME Look** (gnome-look.org): the primary repository for shell themes, GTK themes, and icon sets
+- **System repositories**: some distros package popular themes directly
+- **GitHub**: many theme developers host projects there with installation instructions
 
 Download theme archives and extract them to the user themes directory:
 
@@ -59,7 +59,7 @@ After placing a theme, refresh it in GNOME Tweaks. On X11, press Alt+F2, type `r
 
 **Libadwaita and GTK4:** Since GNOME 40, core applications use Libadwaita, which enforces a standardized appearance. This means third-party shell themes may look visually inconsistent with native apps like Settings, Calendar, and Files. Libadwaita intentionally ignores legacy GTK3 theme customizations for these applications.
 
-**Native Accent Colors (GNOME 47+):** Ubuntu 24.10 and later include native system accent color support. Instead of installing a full shell theme, you can change your desktop’s color scheme directly in Settings → Appearance → Style. This applies consistently across the shell and Libadwaita applications without compatibility issues — a cleaner approach for most users.
+**Native Accent Colors (GNOME 47+):** Ubuntu 24.10 and later include native system accent color support. Instead of installing a full shell theme, you can change your desktop’s color scheme directly in Settings → Appearance → Style. This applies consistently across the shell and Libadwaita applications without compatibility issues: a cleaner approach for most users.
 
 **Wayland Compatibility:** If running GNOME on Wayland (default in Ubuntu 22.04+), some older shell themes may render incorrectly due to Wayland’s stricter graphics compositing requirements. Check GNOME Look’s comments for Wayland compatibility notes before downloading. Test themes on your system before committing to them.
 

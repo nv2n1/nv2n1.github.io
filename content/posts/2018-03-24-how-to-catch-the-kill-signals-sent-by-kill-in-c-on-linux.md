@@ -16,17 +16,17 @@ When a process receives a signal from `kill` or `pkill`, it needs a signal handl
 
 The `kill` command sends signals to processes. By default, it sends SIGTERM (signal 15), requesting graceful termination. Common signals include:
 
-- **SIGTERM (15)**: Termination signal — processes should clean up and exit
-- **SIGKILL (9)**: Kill signal — cannot be caught or ignored; terminates immediately
-- **SIGHUP (1)**: Hangup signal — traditionally signals configuration reload
+- **SIGTERM (15)**: Termination signal: processes should clean up and exit
+- **SIGKILL (9)**: Kill signal: cannot be caught or ignored; terminates immediately
+- **SIGHUP (1)**: Hangup signal: traditionally signals configuration reload
 - **SIGUSR1 (10) and SIGUSR2 (12)**: User-defined signals for custom handling
-- **SIGPIPE (13)**: Broken pipe — common in network daemons
+- **SIGPIPE (13)**: Broken pipe: common in network daemons
 
 Send specific signals with `kill -SIGNAL pid` or `pkill -SIGNAL progname`.
 
 ## Basic Signal Handler with sigaction()
 
-Use `sigaction()` instead of the older `signal()` function — it’s more reliable and portable for long-running processes.
+Use `sigaction()` instead of the older `signal()` function: it’s more reliable and portable for long-running processes.
 
 ``` c
 #include <stdio.h>
@@ -87,7 +87,7 @@ The older `signal()` function has platform-specific behavior and unreliable sema
 - **sa_mask**: Additional signals to block during handler execution
 - **sa_flags**: Behavior flags like `SA_RESTART` to automatically restart interrupted system calls
 
-The `SA_RESTART` flag is critical — it prevents `read()`, `write()`, `select()`, and other blocking calls from failing with `EINTR` when interrupted by signals.
+The `SA_RESTART` flag is critical: it prevents `read()`, `write()`, `select()`, and other blocking calls from failing with `EINTR` when interrupted by signals.
 
 ## Handling Multiple Signals Safely
 
@@ -139,7 +139,7 @@ Alternatively, use `MSG_NOSIGNAL` with `send()` on individual socket operations.
 
 ## SIGKILL Cannot Be Caught
 
-SIGKILL (9) is special — it cannot be caught, blocked, or ignored. The kernel terminates the process immediately. If graceful shutdown fails, SIGKILL is the last resort:
+SIGKILL (9) is special: it cannot be caught, blocked, or ignored. The kernel terminates the process immediately. If graceful shutdown fails, SIGKILL is the last resort:
 
 ``` bash
 kill -SIGTERM pid      # Request graceful shutdown
@@ -229,10 +229,10 @@ kill -SIGHUP $(pgrep daemon)  # Trigger reload
 
 ## Key Takeaways
 
-- Use `sigaction()` for all signal handling — never `signal()`
+- Use `sigaction()` for all signal handling: never `signal()`
 - Keep `sa_flags = SA_RESTART` to avoid `EINTR` errors
 - Use `volatile sig_atomic_t` for shared state
 - Keep handlers minimal; only set flags and exit
 - Ignore SIGPIPE in network daemons
-- SIGKILL cannot be caught — only SIGTERM matters for graceful shutdown
+- SIGKILL cannot be caught: only SIGTERM matters for graceful shutdown
 - systemd expects clean SIGTERM handling within 90 seconds

@@ -10,7 +10,7 @@ canonical: /speeding-up-the-site-with-apache-gzip-compression/
 url: /speeding-up-the-site-with-apache-gzip-compression/
 ---
 
-HTTP compression reduces bandwidth usage and improves load times for clients. Apache’s mod_deflate and mod_brotli handle this transparently—the server compresses content before sending it, and modern browsers decompress it automatically.
+HTTP compression reduces bandwidth usage and improves load times for clients. Apache’s mod_deflate and mod_brotli handle this transparently: the server compresses content before sending it, and modern browsers decompress it automatically.
 
 ## Enabling Compression via .htaccess
 

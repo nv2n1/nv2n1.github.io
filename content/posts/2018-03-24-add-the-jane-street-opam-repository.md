@@ -23,8 +23,8 @@ opam repo add js opam-repository
 
 Replace `core-branch` with the actual branch you need. Common branches include:
 
-- `core-branch` — the main Jane Street packages branch
-- `main` — the default branch (may not contain all Jane Street-specific packages)
+- `core-branch`: the main Jane Street packages branch
+- `main`: the default branch (may not contain all Jane Street-specific packages)
 
 After adding the repository, update your OPAM package index:
 

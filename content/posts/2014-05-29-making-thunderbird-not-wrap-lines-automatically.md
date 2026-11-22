@@ -10,7 +10,7 @@ canonical: /making-thunderbird-not-wrap-lines-automatically/
 url: /making-thunderbird-not-wrap-lines-automatically/
 ---
 
-Thunderbird wraps lines at 72 characters by default—a sensible standard from the SMTP era, but one that can break formatting when sending code, logs, or plain text that needs to stay on single lines. The fix is straightforward: tell Thunderbird to let the recipient’s client handle line breaking instead.
+Thunderbird wraps lines at 72 characters by default: a sensible standard from the SMTP era, but one that can break formatting when sending code, logs, or plain text that needs to stay on single lines. The fix is straightforward: tell Thunderbird to let the recipient’s client handle line breaking instead.
 
 ## Access the Config Editor
 
@@ -25,11 +25,11 @@ A warning dialog appears. Click through it to access the advanced configuration 
 
 Search for these two preferences in the config editor and modify them:
 
-**`mail.compose.wrap_to_window_width`** — Set to `true`
+**`mail.compose.wrap_to_window_width`**: Set to `true`
 
 This wraps text *visually* to your composer window width during editing for readability, but doesn’t insert hard line breaks into the message. This is purely a visual convenience while you’re drafting.
 
-**`mailnews.wraplength`** — Set to `0`
+**`mailnews.wraplength`**: Set to `0`
 
 This prevents hard line breaks from being inserted when the message is sent. A value of `0` disables wrapping entirely; the default is `72`. This is the critical setting for preserving long lines.
 

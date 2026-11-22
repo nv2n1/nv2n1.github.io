@@ -10,7 +10,7 @@ canonical: /how-to-attach-and-mount-xen-domus-disk-to-dom0/
 url: /how-to-attach-and-mount-xen-domus-disk-to-dom0/
 ---
 
-There are times when you need direct access to a DomU’s disk from Dom0—for recovery, backup, or maintenance. This is straightforward with Xen’s block device tools, though the commands have evolved depending on your Xen version.
+There are times when you need direct access to a DomU’s disk from Dom0, for recovery, backup, or maintenance. This is straightforward with Xen’s block device tools, though the commands have evolved depending on your Xen version.
 
 ### Attaching the Disk
 
@@ -30,10 +30,10 @@ xm block-attach Domain-0 phy:vg_xen/vm-10.1.1.228 xvda w
 
 The format is:
 
-- `phy:` — physical device backend
-- `/dev/vg_xen/vm-10.1.1.228` — LVM volume path (or raw partition like `/dev/sda1`)
-- `xvda` — device name as it will appear in Dom0
-- `w` — read-write mode (`r` for read-only)
+- `phy:`: physical device backend
+- `/dev/vg_xen/vm-10.1.1.228`: LVM volume path (or raw partition like `/dev/sda1`)
+- `xvda`: device name as it will appear in Dom0
+- `w`: read-write mode (`r` for read-only)
 
 ### Discovering Attached Partitions
 

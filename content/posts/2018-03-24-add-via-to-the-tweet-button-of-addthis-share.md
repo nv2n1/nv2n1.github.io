@@ -36,12 +36,12 @@ The `tw:via` attribute adds “via @YourTwitterHandle” to the pre-filled tweet
 
 AddThis supports several Twitter-specific attributes:
 
-- `tw:via="handle"` — Attribution account (without @)
-- `tw:related="handle1,handle2"` — Suggested follow accounts
-- `tw:text="Custom text"` — Override the default tweet text
-- `tw:url="https://example.com"` — Override the shared URL
-- `tw:count="horizontal|vertical|none"` — Count box position
-- `tw:lang="en"` — Language for the tweet button interface
+- `tw:via="handle"`: Attribution account (without @)
+- `tw:related="handle1,handle2"`: Suggested follow accounts
+- `tw:text="Custom text"`: Override the default tweet text
+- `tw:url="https://example.com"`: Override the shared URL
+- `tw:count="horizontal|vertical|none"`: Count box position
+- `tw:lang="en"`: Language for the tweet button interface
 
 ## Using Twitter’s Native Share Button
 
@@ -68,21 +68,21 @@ You can also create a simple share link without any JavaScript:
 
 Parameters for the intent URL:
 
-- `text` — Pre-filled tweet text (URL-encoded)
-- `url` — URL to share (URL-encoded)
-- `via` — Attribution handle (without @)
-- `related` — Comma-separated suggested follow handles
-- `hashtags` — Comma-separated hashtags (without \#)
-- `in_reply_to` — Tweet ID to reply to
+- `text`: Pre-filled tweet text (URL-encoded)
+- `url`: URL to share (URL-encoded)
+- `via`: Attribution handle (without @)
+- `related`: Comma-separated suggested follow handles
+- `hashtags`: Comma-separated hashtags (without \#)
+- `in_reply_to`: Tweet ID to reply to
 
 ## AddThis Alternatives (2026)
 
 AddThis was shut down by Oracle in May 2023. If you’re still using AddThis code, it no longer works. Here are modern alternatives:
 
-- **ShareThis** — Similar sharing widget, free tier available
-- **AddToAny** — Lightweight sharing buttons with wide platform support
-- **Native share buttons** — Use each platform’s official button (best performance)
-- **Web Share API** — Browser-native sharing dialog for mobile: `navigator.share({title, text, url})`
+- **ShareThis**: Similar sharing widget, free tier available
+- **AddToAny**: Lightweight sharing buttons with wide platform support
+- **Native share buttons**: Use each platform’s official button (best performance)
+- **Web Share API**: Browser-native sharing dialog for mobile: `navigator.share({title, text, url})`
 
 For most sites in 2026, using native platform buttons or the Web Share API provides better performance and privacy than third-party sharing widgets.
 
@@ -107,7 +107,7 @@ if (navigator.share) {
 }
 ```
 
-Browser support is excellent in 2026 — all major mobile browsers and most desktop browsers support it. For browsers that don’t, provide a clipboard fallback.
+Browser support is excellent in 2026: all major mobile browsers and most desktop browsers support it. For browsers that don’t, provide a clipboard fallback.
 
 ## Migrating from AddThis
 
@@ -140,4 +140,4 @@ For better social sharing across all platforms, add Open Graph meta tags to your
 <meta name="twitter:site" content="@YourHandle">
 ```
 
-These tags control how your page appears when shared on Twitter, Facebook, LinkedIn, and other platforms — regardless of which sharing button implementation you use.
+These tags control how your page appears when shared on Twitter, Facebook, LinkedIn, and other platforms: regardless of which sharing button implementation you use.

@@ -10,7 +10,7 @@ canonical: /a-simple-makefile-for-latex/
 url: /a-simple-makefile-for-latex/
 ---
 
-Compiling LaTeX documents with BibTeX involves multiple passes—typically three runs of `latex` followed by one `bibtex` run to resolve citations. This sequence is identical across most documents, making it perfect for automation with a Makefile.
+Compiling LaTeX documents with BibTeX involves multiple passes: typically three runs of `latex` followed by one `bibtex` run to resolve citations. This sequence is identical across most documents, making it perfect for automation with a Makefile.
 
 ## Basic Makefile Template
 
@@ -91,7 +91,7 @@ make clean && make
 
 ## Handling Bibliography Entries
 
-The Makefile assumes you have a `.bib` file referenced in your LaTeX document via `\bibliography{}`. BibTeX generates `.bbl` and `.blg` files that persist between runs, which is why `make clean` removes them—forcing a full rebuild on the next `make` call.
+The Makefile assumes you have a `.bib` file referenced in your LaTeX document via `\bibliography{}`. BibTeX generates `.bbl` and `.blg` files that persist between runs, which is why `make clean` removes them: forcing a full rebuild on the next `make` call.
 
 If your document doesn’t use BibTeX, remove these lines:
 
@@ -129,7 +129,7 @@ Or use dedicated tools like `latexmk`, which intelligently detects when recompil
 latexmk -pdf -pvc main.tex
 ```
 
-The advantage of a custom Makefile is simplicity and explicit control—you see exactly what happens on each run, making debugging easier when compilation fails.
+The advantage of a custom Makefile is simplicity and explicit control: you see exactly what happens on each run, making debugging easier when compilation fails.
 
 ## Practical Tips and Common Gotchas
 

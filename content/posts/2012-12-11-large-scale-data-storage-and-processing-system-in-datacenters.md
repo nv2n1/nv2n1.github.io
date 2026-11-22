@@ -74,6 +74,6 @@ When building distributed storage and processing pipelines today:
 - **Evaluate Kubernetes** before Mesos for new cluster deployments
 - **Use managed services** (BigQuery, DuckDB, Snowflake) instead of building custom systems when scaling permits
 - **Start with stream processing** (Kafka, Flink, or Spark Structured Streaming) if your workload has temporal structure
-- **Separate storage from compute** to scale each independently—object storage (S3, GCS) with query engines (DuckDB, Presto) is often simpler than tightly coupled systems
+- **Separate storage from compute** to scale each independently: object storage (S3, GCS) with query engines (DuckDB, Presto) is often simpler than tightly coupled systems
 
 The principles from these foundational papers remain relevant: replication for fault tolerance, separation of concerns, and embracing node failures as expected events rather than exceptions.

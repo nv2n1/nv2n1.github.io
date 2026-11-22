@@ -150,7 +150,7 @@ base="${filename%.[0-9]*}"
 base="${filename%%.[0-9]*}"
 ```
 
-Choose the method that best fits your use case — parameter expansion for speed and simplicity, regex for complex patterns, and external tools when portability or one-liners are priorities.
+Choose the method that best fits your use case: parameter expansion for speed and simplicity, regex for complex patterns, and external tools when portability or one-liners are priorities.
 
 ## 2026 Comprehensive Guide: Best Practices
 

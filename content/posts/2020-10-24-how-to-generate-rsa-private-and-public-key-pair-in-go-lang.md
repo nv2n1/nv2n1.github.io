@@ -12,13 +12,13 @@ url: /how-to-generate-rsa-private-and-public-key-pair-in-go-lang/
 
 Go’s standard library provides everything needed to generate RSA key pairs and save them in PEM format. Here are the essential packages:
 
-**crypto/rsa** — Implements RSA encryption per PKCS \#1 and RFC 8017. The `GenerateKey()` function creates a keypair of specified bit size.
+**crypto/rsa**: Implements RSA encryption per PKCS \#1 and RFC 8017. The `GenerateKey()` function creates a keypair of specified bit size.
 
-**crypto/rand** — Provides `Reader`, a cryptographically secure random source. On Linux, it uses `getrandom(2)` when available, falling back to `/dev/urandom`.
+**crypto/rand**: Provides `Reader`, a cryptographically secure random source. On Linux, it uses `getrandom(2)` when available, falling back to `/dev/urandom`.
 
-**crypto/x509** — Handles key serialization. `MarshalPKCS1PrivateKey()` converts RSA private keys to PKCS \#1 ASN.1 DER format, and `MarshalPKIXPublicKey()` handles public keys in PKIX format.
+**crypto/x509**: Handles key serialization. `MarshalPKCS1PrivateKey()` converts RSA private keys to PKCS \#1 ASN.1 DER format, and `MarshalPKIXPublicKey()` handles public keys in PKIX format.
 
-**encoding/pem** — Encodes DER data into PEM blocks, the text format commonly used for key files.
+**encoding/pem**: Encodes DER data into PEM blocks, the text format commonly used for key files.
 
 ## Basic Key Generation
 

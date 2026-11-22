@@ -74,7 +74,7 @@ After uploading, verify the file exists in HDFS with its correct name:
 hdfs dfs -ls /hdfs/path/
 ```
 
-The output shows the exact filename stored in HDFS. If spaces are present in the listing, they’ll appear clearly — confirming the upload preserved the filename as intended.
+The output shows the exact filename stored in HDFS. If spaces are present in the listing, they’ll appear clearly: confirming the upload preserved the filename as intended.
 
 ## Batch Processing with Find
 
@@ -94,7 +94,7 @@ The variable `$file` is quoted, preserving spaces within the filename during the
 
 **Mixing quotes inconsistently**: Ensure the entire filename is quoted consistently. Partial quoting like `"my file".txt` may not work as expected depending on the shell.
 
-**Assuming HDFS normalizes names**: HDFS stores filenames exactly as provided. If you upload “my file.txt”, it remains “my file.txt” in HDFS — spaces are not stripped or normalized.
+**Assuming HDFS normalizes names**: HDFS stores filenames exactly as provided. If you upload “my file.txt”, it remains “my file.txt” in HDFS: spaces are not stripped or normalized.
 
 ## Working with Hadoop Configuration
 

@@ -25,7 +25,7 @@ The most straightforward approach is clearing all cached data:
 7.  Ensure “Cached images and files” is checked
 8.  Tap **Clear browsing data** to confirm
 
-This works but is overly broad—you’ll lose cached data for all sites, which defeats the purpose of caching for legitimate use.
+This works but is overly broad: you’ll lose cached data for all sites, which defeats the purpose of caching for legitimate use.
 
 ## Developer-Friendly Workarounds
 

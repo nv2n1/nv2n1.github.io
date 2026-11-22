@@ -10,7 +10,7 @@ canonical: /how-to-install-flash-player-plugin-on-centos-7/
 url: /how-to-install-flash-player-plugin-on-centos-7/
 ---
 
-Adobe Flash Player reached End of Life on December 31, 2020, and Adobe blocked all Flash content from executing in 2021. Installing Flash Player on CentOS 7 in 2026 is neither practical nor recommended—the plugin won’t execute Flash content anyway, and doing so introduces security vulnerabilities to your system.
+Adobe Flash Player reached End of Life on December 31, 2020, and Adobe blocked all Flash content from executing in 2021. Installing Flash Player on CentOS 7 in 2026 is neither practical nor recommended: the plugin won’t execute Flash content anyway, and doing so introduces security vulnerabilities to your system.
 
 If you’re still running CentOS 7, you’re also operating an EOL distribution that no longer receives security updates. A migration to Rocky Linux or AlmaLinux should be your priority for production systems.
 
@@ -19,7 +19,7 @@ If you’re still running CentOS 7, you’re also operating an EOL distribution 
 Flash Player reached genuine EOL because:
 
 - **Execution blocked**: Adobe permanently blocked Flash content from running after 2020
-- **Browser incompatibility**: No modern browser—Chrome, Firefox, Edge—supports NPAPI plugins or Flash
+- **Browser incompatibility**: No modern browser (Chrome, Firefox, Edge) supports NPAPI plugins or Flash
 - **Security risk**: Flash had a long history of critical vulnerabilities; maintaining it post-EOL is a liability
 - **Web standards replaced it**: HTML5 video, Canvas, and WebAssembly handle everything Flash once did
 

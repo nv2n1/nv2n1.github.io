@@ -10,7 +10,7 @@ canonical: /how-to-balance-the-two-columns-of-text-on-the-last-page-of-a-latex-d
 url: /how-to-balance-the-two-columns-of-text-on-the-last-page-of-a-latex-doc/
 ---
 
-When using two-column layouts, the last page often ends with uneven column heights—one column noticeably longer than the other. This looks sloppy in formal documents. Two main packages solve this: `balance` and `flushend`.
+When using two-column layouts, the last page often ends with uneven column heights: one column noticeably longer than the other. This looks sloppy in formal documents. Two main packages solve this: `balance` and `flushend`.
 
 ## Using the balance package
 
@@ -22,7 +22,7 @@ Add to your preamble:
 \usepackage{balance}
 ```
 
-Then insert this command where you want columns balanced—typically before the last section or at the very end of your document body:
+Then insert this command where you want columns balanced: typically before the last section or at the very end of your document body:
 
 ``` latex
 \balance
@@ -58,7 +58,7 @@ Add to your preamble:
 \usepackage{flushend}
 ```
 
-That’s all—it handles balancing automatically. This works well for most documents and requires no manual intervention.
+That’s all: it handles balancing automatically. This works well for most documents and requires no manual intervention.
 
 Example:
 
@@ -88,7 +88,7 @@ Use `flushend` if you:
 
 ## Important considerations
 
-Both packages work best with the `twocolumn` document class option or the `multicol` environment. If using `multicol`, note that `flushend` won’t affect it—`multicol` has its own column spacing parameters like `\columnsep` and `\columnseprule`.
+Both packages work best with the `twocolumn` document class option or the `multicol` environment. If using `multicol`, note that `flushend` won’t affect it: `multicol` has its own column spacing parameters like `\columnsep` and `\columnseprule`.
 
 Test your output carefully. Column balancing can interact unexpectedly with floats (figures, tables) or custom spacing. If balancing creates awkward gaps or forces content in undesirable ways:
 
@@ -97,7 +97,7 @@ Test your output carefully. Column balancing can interact unexpectedly with floa
 - Adjust `\raggedbottom` if columns have excessive vertical spacing
 - Increase `\tolerance` and `\emergencystretch` to improve line breaking before resorting to manual fixes
 
-For complex documents with many floats, try `flushend` first—it’s often more robust. If that doesn’t work well, switch to `balance` with manual placement for finer control.
+For complex documents with many floats, try `flushend` first: it’s often more robust. If that doesn’t work well, switch to `balance` with manual placement for finer control.
 
 ## Combining with other packages
 

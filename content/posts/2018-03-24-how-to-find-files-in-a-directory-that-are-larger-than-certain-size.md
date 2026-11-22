@@ -10,7 +10,7 @@ canonical: /how-to-find-files-in-a-directory-that-are-larger-than-certain-size/
 url: /how-to-find-files-in-a-directory-that-are-larger-than-certain-size/
 ---
 
-Finding large files is something you end up doing a lot — disk fills up, you need to track down what’s eating space, or you’re auditing a directory before archiving. The `find` command handles this cleanly.
+Finding large files is something you end up doing a lot: disk fills up, you need to track down what’s eating space, or you’re auditing a directory before archiving. The `find` command handles this cleanly.
 
 ## Basic usage
 
@@ -70,11 +70,11 @@ ncdu -q /path/to/directory
 
 `find` supports these size suffixes:
 
-- `c` — bytes
-- `k` — kilobytes (1024 bytes)
-- `M` — megabytes
-- `G` — gigabytes
-- `T` — terabytes
+- `c`: bytes
+- `k`: kilobytes (1024 bytes)
+- `M`: megabytes
+- `G`: gigabytes
+- `T`: terabytes
 
 To find files between 100MB and 1GB:
 
@@ -124,7 +124,7 @@ This finds files larger than 500MB modified in the last 7 days. Use `-mmin -60` 
 
 ## Bulk operations with xargs
 
-If you want to do something with the results — like delete, move, or compress them — pipe into `xargs`:
+If you want to do something with the results (like delete, move, or compress them) pipe into `xargs`:
 
 ``` bash
 find . -type f -size +500M -print0 | xargs -0 ls -lh

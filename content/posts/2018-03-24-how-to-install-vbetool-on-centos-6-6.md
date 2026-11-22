@@ -17,10 +17,10 @@ vbetool is a utility for executing real-mode x86 BIOS calls, commonly used for p
 
 vbetool communicates with the video BIOS through the Video BIOS Extensions (VBE) interface. It can:
 
-– \*\*Change display modes\*\* — Switch resolutions on legacy VGA outputs
-– \*\*Power management\*\* — Control monitor power states (DPMS standby, suspend, off)
-– \*\*Save/restore video state\*\* — Preserve and restore the VGA register state across operations
-– \*\*Post video cards\*\* — Re-initialize a video BIOS after certain hardware changes
+– \*\*Change display modes\*\*: Switch resolutions on legacy VGA outputs
+– \*\*Power management\*\*: Control monitor power states (DPMS standby, suspend, off)
+– \*\*Save/restore video state\*\*: Preserve and restore the VGA register state across operations
+– \*\*Post video cards\*\*: Re-initialize a video BIOS after certain hardware changes
 
 This makes it particularly useful for headless servers that need occasional display management, or legacy systems where the kernel video drivers don’t fully support power management.
 
@@ -39,7 +39,7 @@ On some systems, you may also need:
 sudo dnf install kernel-devel
 ```
 
-If you’re on Rocky Linux 8 or CentOS Stream, the same packages apply — just replace `dnf` with `yum` if needed.
+If you’re on Rocky Linux 8 or CentOS Stream, the same packages apply: just replace `dnf` with `yum` if needed.
 
 \## Download and Prepare the Source
 
@@ -172,7 +172,7 @@ If it shows `integrity` or `confidentiality`, vbetool won't work unless you disa
 
 vbetool is primarily designed for legacy BIOS systems with classic VGA hardware. Here's what to consider on modern hardware:
 
-\- \*\*UEFI systems\*\* typically don't need vbetool — the GOP (Graphics Output Protocol) handles display initialization
+\- \*\*UEFI systems\*\* typically don't need vbetool: the GOP (Graphics Output Protocol) handles display initialization
 \- \*\*Kernel mode setting (KMS)\*\* manages display power states on most modern drivers (i915, amdgpu, nouveau)
 \- \*\*systemd-logind\*\* handles lid-switch-based display power management automatically
 \- For display brightness control on modern systems, use `xrandr` or write to `/sys/class/backlight/` instead

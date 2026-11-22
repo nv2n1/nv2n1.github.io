@@ -10,7 +10,7 @@ canonical: /a-free-personal-wordpress-blog-solution/
 url: /a-free-personal-wordpress-blog-solution/
 ---
 
-Self-hosting WordPress gives you control over your domain, design, content, and monetization—something you don’t get with WordPress.com or other hosted solutions. The reality: it’s feasible on a tight budget, but free hosting isn’t the answer.
+Self-hosting WordPress gives you control over your domain, design, content, and monetization: something you don’t get with WordPress.com or other hosted solutions. The reality: it’s feasible on a tight budget, but free hosting isn’t the answer.
 
 ## Why Self-Host?
 
@@ -156,7 +156,7 @@ tar -czf wordpress_$(date +%Y%m%d).tar.gz /var/www/html
 scp wordpress_$(date +%Y%m%d).* user@backup-server:/backups/
 ```
 
-**Test restore procedures quarterly**. A backup you’ve never tested is worse than useless—it gives false confidence.
+**Test restore procedures quarterly**. A backup you’ve never tested is worse than useless: it gives false confidence.
 
 ## SSL Certificates
 
@@ -235,4 +235,4 @@ Premature VPS upgrades waste money. Use a performance monitoring tool like Query
 
 ## Summary
 
-A self-hosted WordPress blog on a \$5/month hosting plan with a \$12 domain gives you full control, security, and growth potential for about \$72 annually (\$60 hosting + \$12 domain). Skip free hosting entirely—the hidden costs (lost traffic, setup time, migration headaches) outweigh any savings. Invest minimally, monitor performance, and upgrade only when data shows you need it.
+A self-hosted WordPress blog on a \$5/month hosting plan with a \$12 domain gives you full control, security, and growth potential for about \$72 annually (\$60 hosting + \$12 domain). Skip free hosting entirely: the hidden costs (lost traffic, setup time, migration headaches) outweigh any savings. Invest minimally, monitor performance, and upgrade only when data shows you need it.

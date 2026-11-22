@@ -10,13 +10,13 @@ canonical: /jailbreaking-apple-ipod-touch-with-spirit-in-linux/
 url: /jailbreaking-apple-ipod-touch-with-spirit-in-linux/
 ---
 
-This post documents jailbreaking procedures for legacy iOS devices (iPod Touch, early iPhone) using Spirit—an untethered jailbreak tool from the late 2000s. Modern iOS devices (2010 and later) use entirely different security models and jailbreak methods. This information is preserved for historical reference only and has no practical application to current iOS versions.
+This post documents jailbreaking procedures for legacy iOS devices (iPod Touch, early iPhone) using Spirit: an untethered jailbreak tool from the late 2000s. Modern iOS devices (2010 and later) use entirely different security models and jailbreak methods. This information is preserved for historical reference only and has no practical application to current iOS versions.
 
 ## About Spirit and legacy iOS jailbreaking
 
 Spirit was an untethered jailbreak available for iPad, iPhone, and iPod Touch running iOS 3.1.2 through 3.2. The tool allowed installation of unsigned applications and system modifications on these early devices. Spirit required iTunes 9.0–9.1.x and specific firmware versions to function.
 
-If you have a modern iOS device, current jailbreak information and tools are maintained by the jailbreak community on dedicated platforms—Spirit is entirely obsolete.
+If you have a modern iOS device, current jailbreak information and tools are maintained by the jailbreak community on dedicated platforms: Spirit is entirely obsolete.
 
 ## Requirements for Spirit jailbreaking (historical reference)
 
@@ -66,7 +66,7 @@ Connect the iPod Touch via USB cable and run Spirit:
 ./spirit
 ```
 
-The tool will detect the connected device and begin the jailbreak process. The device will reboot automatically—wait several minutes for the process to complete. The home screen will display the Cydia icon once jailbreaking finishes.
+The tool will detect the connected device and begin the jailbreak process. The device will reboot automatically: wait several minutes for the process to complete. The home screen will display the Cydia icon once jailbreaking finishes.
 
 ### 4. Post-jailbreak configuration
 
@@ -79,7 +79,7 @@ passwd
 
 ## Why this is obsolete
 
-iOS evolved significantly after version 3.2. Apple introduced Code Signing, Secure Boot, and ASLR protections that made Spirit’s approach unworkable. Modern jailbreaks use entirely different techniques—exploiting kernel vulnerabilities rather than relying on iTunes synchronization exploits.
+iOS evolved significantly after version 3.2. Apple introduced Code Signing, Secure Boot, and ASLR protections that made Spirit’s approach unworkable. Modern jailbreaks use entirely different techniques: exploiting kernel vulnerabilities rather than relying on iTunes synchronization exploits.
 
 Legacy devices running iOS 3.x are no longer functional for most modern services (app stores, security updates, TLS certificates expired years ago). While jailbreaking historical devices remains interesting from a technical perspective, there’s no practical reason to do so today.
 

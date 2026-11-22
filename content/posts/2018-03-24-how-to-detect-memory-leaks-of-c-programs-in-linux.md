@@ -10,7 +10,7 @@ canonical: /how-to-detect-memory-leaks-of-c-programs-in-linux/
 url: /how-to-detect-memory-leaks-of-c-programs-in-linux/
 ---
 
-Memory leak detection is critical for C program reliability. Several tools work at different stages of development—compile time, runtime, and production scenarios. Your choice depends on performance tolerance, integration needs, and how much detail you require.
+Memory leak detection is critical for C program reliability. Several tools work at different stages of development: compile time, runtime, and production scenarios. Your choice depends on performance tolerance, integration needs, and how much detail you require.
 
 ## AddressSanitizer (ASan)
 
@@ -29,7 +29,7 @@ Run the binary:
 ./your_program
 ```
 
-ASan instruments the binary at compile time and runs with roughly 2-3x slowdown—acceptable for development and testing. It catches heap overflows, use-after-free, double-free errors, and memory leaks in one pass.
+ASan instruments the binary at compile time and runs with roughly 2-3x slowdown: acceptable for development and testing. It catches heap overflows, use-after-free, double-free errors, and memory leaks in one pass.
 
 For detailed output:
 
@@ -126,7 +126,7 @@ This catches use-after-free and null pointer dereferences statically but won’t
 
 ## Practical Workflow
 
-Start with AddressSanitizer during development—compile once with `-fsanitize=address -fsanitize=leak -g`, run tests, and fix issues immediately. The fast feedback loop catches most problems early.
+Start with AddressSanitizer during development: compile once with `-fsanitize=address -fsanitize=leak -g`, run tests, and fix issues immediately. The fast feedback loop catches most problems early.
 
 When ASan misses something or you need deep investigation, switch to Valgrind. Create a suppression file for third-party library leaks so you focus on your code.
 
@@ -141,4 +141,4 @@ CFLAGS="-g -fsanitize=address -fsanitize=leak -O1"
 make clean && make
 ```
 
-Test with realistic data. Memory leaks often only appear under specific conditions—edge cases, large datasets, or particular access patterns. Your test suite should exercise these scenarios.
+Test with realistic data. Memory leaks often only appear under specific conditions: edge cases, large datasets, or particular access patterns. Your test suite should exercise these scenarios.

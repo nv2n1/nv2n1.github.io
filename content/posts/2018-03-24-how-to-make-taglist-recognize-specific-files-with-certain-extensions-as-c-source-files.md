@@ -130,11 +130,11 @@ set expandtab
 
 ## Quick Reference
 
-- `autocmd BufRead,BufNewFile *.ext set filetype=c` — .vimrc method
-- `~/.vim/ftdetect/*.vim` — Clean detection rules
-- `/* vim: set ft=c: */` — Per-file modeline
-- `:set filetype?` — Check current filetype
-- `vim.filetype.add()` — Neovim Lua method
+- `autocmd BufRead,BufNewFile *.ext set filetype=c`: .vimrc method
+- `~/.vim/ftdetect/*.vim`: Clean detection rules
+- `/* vim: set ft=c: */`: Per-file modeline
+- `:set filetype?`: Check current filetype
+- `vim.filetype.add()`: Neovim Lua method
 
 ## Debugging Filetype Detection
 
@@ -153,8 +153,8 @@ If Vim isn’t detecting your file type correctly, debug the detection chain:
 
 Common issues:
 
-- Multiple rules conflict — last loaded rule wins. Check script load order with `:scriptnames`
-- Modelines are disabled — ensure `set modeline` is in your config
+- Multiple rules conflict: last loaded rule wins. Check script load order with `:scriptnames`
+- Modelines are disabled: ensure `set modeline` is in your config
 - The file extension matches a different filetype rule built into Vim
 
 To force detection order, load your ftdetect file after the default rules by naming it to sort last alphabetically (e.g., `zz_my_c.vim`).

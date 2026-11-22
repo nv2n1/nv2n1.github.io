@@ -23,7 +23,7 @@ exit();
 ?>
 ```
 
-The `exit()` call is critical—it stops script execution immediately, preventing any additional output that could interfere with the HTTP response.
+The `exit()` call is critical: it stops script execution immediately, preventing any additional output that could interfere with the HTTP response.
 
 For explicit control (useful in older PHP versions or debugging scenarios), set the status line first:
 
@@ -136,10 +136,10 @@ If you hit “headers already sent” errors, check these first.
 
 **Status code selection:**
 
-- **301**: Permanent redirect—use for restructured pages, domain migrations
-- **302**: Temporary redirect—use for maintenance or short-term changes
+- **301**: Permanent redirect: use for restructured pages, domain migrations
+- **302**: Temporary redirect: use for maintenance or short-term changes
 - **307/308**: Preserve HTTP method on POST requests
-- **410**: Gone—signal that content was permanently deleted (no redirect)
+- **410**: Gone: signal that content was permanently deleted (no redirect)
 
 **HTTPS enforcement:** Always redirect to HTTPS unless you have specific requirements otherwise. Modern browsers and search engines penalize HTTP-only sites.
 

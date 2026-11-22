@@ -10,7 +10,7 @@ canonical: /how-to-check-the-dns-i-am-using-on-linux/
 url: /how-to-check-the-dns-i-am-using-on-linux/
 ---
 
-When you run `cat /etc/resolv.conf` on a modern Linux system, you’ll often see `nameserver 127.0.0.1` or `127.0.1.1` pointing to localhost. This doesn’t mean you’re actually using your ISP’s DNS directly — it usually means your system is running a local DNS stub resolver or caching service like systemd-resolved or dnsmasq. To find out which actual upstream DNS servers you’re using, you need to look elsewhere.
+When you run `cat /etc/resolv.conf` on a modern Linux system, you’ll often see `nameserver 127.0.0.1` or `127.0.1.1` pointing to localhost. This doesn’t mean you’re actually using your ISP’s DNS directly: it usually means your system is running a local DNS stub resolver or caching service like systemd-resolved or dnsmasq. To find out which actual upstream DNS servers you’re using, you need to look elsewhere.
 
 ## Using systemd-resolved (Most Common)
 
@@ -125,11 +125,11 @@ Package management issues often stem from stale caches. Run dnf clean all on Fed
 
 These commands are frequently used alongside the tools discussed in this article:
 
-- systemctl status service-name – Check if a service is running
-- journalctl -u service-name -f – Follow service logs in real time
-- rpm -qi package-name – Query installed package information
-- dnf history – View package transaction history
-- top or htop – Monitor system resource usage
+- systemctl status service-name: Check if a service is running
+- journalctl -u service-name -f: Follow service logs in real time
+- rpm -qi package-name: Query installed package information
+- dnf history: View package transaction history
+- top or htop: Monitor system resource usage
 
 ## Quick Verification
 

@@ -10,7 +10,7 @@ canonical: /colossus-successor-to-google-file-system-gfs/
 url: /colossus-successor-to-google-file-system-gfs/
 ---
 
-Colossus is Google’s successor to the Google File System (GFS), designed to handle the massive scale of data storage across Google’s infrastructure. While GFS was documented in detail in the 2003 SOSP paper, Colossus information remains sparse in academic literature—much of what we know comes from talks and interviews with Google engineers. Colossus serves as the underlying storage layer for systems like Spanner, Google’s globally distributed database.
+Colossus is Google’s successor to the Google File System (GFS), designed to handle the massive scale of data storage across Google’s infrastructure. While GFS was documented in detail in the 2003 SOSP paper, Colossus information remains sparse in academic literature: much of what we know comes from talks and interviews with Google engineers. Colossus serves as the underlying storage layer for systems like Spanner, Google’s globally distributed database.
 
 ## Why Colossus Replaced GFS
 
@@ -27,7 +27,7 @@ Colossus introduced a fundamentally different architecture to address these issu
 
 ### Metadata Layer: Curators
 
-The most critical innovation in Colossus is the decentralized metadata system built on Curators—a horizontally scalable metadata service layered on top of NoSQL databases like BigTable.
+The most critical innovation in Colossus is the decentralized metadata system built on Curators: a horizontally scalable metadata service layered on top of NoSQL databases like BigTable.
 
 Unlike GFS’s single master, Curators enable:
 
@@ -49,7 +49,7 @@ This pushes complexity into clients where it can be customized per application, 
 
 ### Storage Servers: D Servers and Custodians
 
-**D Servers** are simple network-attached disk devices with minimal intelligence—just enough to store and retrieve data.
+**D Servers** are simple network-attached disk devices with minimal intelligence: just enough to store and retrieve data.
 
 **Custodians** are background storage managers that handle:
 
@@ -115,4 +115,4 @@ When designing large-scale distributed storage systems:
 5.  **Tiered storage**: Match data temperature to hardware cost and performance characteristics
 6.  **Distributed namespace**: Hide distribution complexity from applications through abstraction
 
-Colossus represents the natural evolution of GFS given Google’s scale. Its design principles—client-driven coordination, horizontally scalable metadata, and cost-aware storage—have influenced subsequent distributed storage systems across the industry.
+Colossus represents the natural evolution of GFS given Google’s scale. Its design principles (client-driven coordination, horizontally scalable metadata, and cost-aware storage) have influenced subsequent distributed storage systems across the industry.

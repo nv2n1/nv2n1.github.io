@@ -32,7 +32,7 @@ The `-aid` option takes a 1-based track number. Use `mplayer -identify video.mkv
 
 ### Modern alternatives
 
-mplayer is largely unmaintained. Consider **mpv** instead — it’s actively developed, handles MKV better, and offers superior codec support:
+mplayer is largely unmaintained. Consider **mpv** instead: it’s actively developed, handles MKV better, and offers superior codec support:
 
 ``` bash
 mpv video.mkv
@@ -100,7 +100,7 @@ vlc video.mkv
 | ffmpeg     | N/A          | N/A           | `-map 0:a:1`     |
 | mkvtoolnix | N/A          | `mkvpropedit` | `mkvextract`     |
 
-For most workflows, **mpv is the best choice** — it’s modern, actively maintained, and handles complex containers reliably.
+For most workflows, **mpv is the best choice**: it’s modern, actively maintained, and handles complex containers reliably.
 
 ## Quick Reference
 

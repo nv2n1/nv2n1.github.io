@@ -10,7 +10,7 @@ canonical: /favorite-sayings-by-john-ousterhout-precious-experience-and-advice-f
 url: /favorite-sayings-by-john-ousterhout-precious-experience-and-advice-for-building-systems/
 ---
 
-John Ousterhout, a professor of computer science at Stanford, maintains a collection of “Favorite Sayings” grounded in decades of building real systems—RAMCloud, Tcl, and extensive work in distributed systems. These aren’t abstract principles. They’re lessons that apply directly to the work of building, debugging, and shipping software at scale.
+John Ousterhout, a professor of computer science at Stanford, maintains a collection of “Favorite Sayings” grounded in decades of building real systems: RAMCloud, Tcl, and extensive work in distributed systems. These aren’t abstract principles. They’re lessons that apply directly to the work of building, debugging, and shipping software at scale.
 
 ## Optimize After Measurement, Not Before
 
@@ -18,7 +18,7 @@ The most dangerous instinct in software engineering is premature optimization. O
 
 > Most real-world programs run plenty fast enough on today’s machines without any particular attention to performance. The real challenges are getting programs completed quickly, ensuring their quality, and managing the complexity of large applications. Thus the primary design criterion for software should be simplicity, not speed.
 
-The mechanism is clear: optimizing during initial construction adds complexity, delays delivery, and usually doesn’t help. Algorithms with better big-O complexity often carry larger constant factors. They’re slower on realistic problem sizes until you reach the scale where they matter—which you probably won’t reach without measurement telling you so.
+The mechanism is clear: optimizing during initial construction adds complexity, delays delivery, and usually doesn’t help. Algorithms with better big-O complexity often carry larger constant factors. They’re slower on realistic problem sizes until you reach the scale where they matter, which you probably won’t reach without measurement telling you so.
 
 The discipline is unforgiving:
 
@@ -28,7 +28,7 @@ This applies everywhere: kernel tuning, application profiling, database queries,
 
 ## Intuition Is Pattern-Matching, Not Prophecy
 
-Intuition has real value—it’s distilled experience, the pattern-matching that comes from seeing many similar problems. But it’s also easy to mistake confidence for accuracy:
+Intuition has real value: it’s distilled experience, the pattern-matching that comes from seeing many similar problems. But it’s also easy to mistake confidence for accuracy:
 
 > Intuition is wonderful once you have acquired knowledge and experience. You get gut-level feelings about the right way to handle situations, and these can save time and effort. However, it’s easy to become overconfident and assume intuition is infallible, which leads to mistakes.
 
@@ -42,7 +42,7 @@ Understanding doesn’t come from first principles alone:
 
 > Before you can appreciate or develop a concept you need to observe a large number of facts related to the concept. This has implications both for teaching and for working in unfamiliar areas.
 
-This is why junior engineers struggle when asked to optimize unfamiliar code—they lack the foundation of observed behavior. No metrics. No logs. No understanding of how the system actually behaves under load. It’s also why cargo-cult configuration management fails: teams copy patterns from other deployments without understanding what the metrics actually show, then wonder why the copy doesn’t work in their environment.
+This is why junior engineers struggle when asked to optimize unfamiliar code: they lack the foundation of observed behavior. No metrics. No logs. No understanding of how the system actually behaves under load. It’s also why cargo-cult configuration management fails: teams copy patterns from other deployments without understanding what the metrics actually show, then wonder why the copy doesn’t work in their environment.
 
 Build your foundation in facts first. Logs. Traces. Metrics. Then concepts become actionable.
 
@@ -76,8 +76,8 @@ The difference isn’t the initial implementation. It’s sustained investment i
 
 **On intermittent failures:** “The only thing worse than a problem that happens all the time is a problem that doesn’t happen all the time.” Bugs that appear randomly are almost always concurrency issues or environmental sensitivity. They require different debugging tools and more careful reasoning about system state.
 
-**On credibility:** “If you admit that you don’t know the answer, or that you made a mistake, you build credibility. People are more likely to trust you when you say that you do have the answer, because they have seen that you don’t make things up.” This applies directly to incident response and operational work—your team will trust your analysis more if you’ve admitted uncertainty before.
+**On credibility:** “If you admit that you don’t know the answer, or that you made a mistake, you build credibility. People are more likely to trust you when you say that you do have the answer, because they have seen that you don’t make things up.” This applies directly to incident response and operational work: your team will trust your analysis more if you’ve admitted uncertainty before.
 
-**On system coherence:** “Coherent systems often have advantages of efficiency, which is why humans gravitate towards them. Unfortunately, coherent systems are unstable: if a problem arises it can wipe out the whole system very quickly.” Elegance and fragility often travel together. Sometimes resilience requires accepting some incoherence in your design—redundancy that seems wasteful, circuit breakers that seem crude, rate limiting that seems blunt.
+**On system coherence:** “Coherent systems often have advantages of efficiency, which is why humans gravitate towards them. Unfortunately, coherent systems are unstable: if a problem arises it can wipe out the whole system very quickly.” Elegance and fragility often travel together. Sometimes resilience requires accepting some incoherence in your design: redundancy that seems wasteful, circuit breakers that seem crude, rate limiting that seems blunt.
 
 The full collection is worth returning to regularly as you work through your own systems problems.

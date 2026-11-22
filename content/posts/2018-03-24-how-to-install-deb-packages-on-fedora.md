@@ -43,7 +43,7 @@ Converting packages across distributions isn’t seamless. Alien does basic depe
 - Dependencies listed in the original .deb may not map correctly to Fedora package names
 - Pre/post-install scripts may fail or behave unexpectedly
 - Library versions and paths can differ between Debian and Fedora systems
-- Alien doesn’t resolve transitive dependencies — you’ll need to install them manually
+- Alien doesn’t resolve transitive dependencies: you’ll need to install them manually
 
 Always inspect what alien is doing before committing:
 

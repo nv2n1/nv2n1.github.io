@@ -20,7 +20,7 @@ Before starting, verify your current configuration and plan the new directory lo
 grep -A2 "dfs.namenode.name.dir" $HADOOP_HOME/etc/hadoop/hdfs-site.xml
 ```
 
-The new directory should be on a physically separate disk from your existing metadata directory. If both directories are on the same disk, you gain no reliability benefit. Ensure the target disk has adequate free space—the new directory will be a full copy of your existing metadata.
+The new directory should be on a physically separate disk from your existing metadata directory. If both directories are on the same disk, you gain no reliability benefit. Ensure the target disk has adequate free space: the new directory will be a full copy of your existing metadata.
 
 ## Step 1: Back Up Existing NameNode Metadata
 
@@ -88,7 +88,7 @@ Edit your hdfs-site.xml to include both directories. The NameNode will maintain 
 </property>
 ```
 
-Note: Use commas without spaces between paths, or include spaces consistently—HDFS is sensitive to formatting here.
+Note: Use commas without spaces between paths, or include spaces consistently: HDFS is sensitive to formatting here.
 
 Distribute this updated configuration to all NameNode and Secondary NameNode hosts if you have them. Use your configuration management tool (Ansible, Puppet, etc.) if available:
 
@@ -125,7 +125,7 @@ ls -lh /home/hadoop/hdfs/current/
 ls -lh /home/hadoop/hdfs2/current/
 ```
 
-Both should have identical `fsimage_*` and `edits_*` files with matching timestamps. If one directory is empty or outdated, there’s a configuration problem—stop the NameNode and investigate before proceeding.
+Both should have identical `fsimage_*` and `edits_*` files with matching timestamps. If one directory is empty or outdated, there’s a configuration problem: stop the NameNode and investigate before proceeding.
 
 ## Monitoring and Troubleshooting
 
@@ -139,4 +139,4 @@ If you need to remove a directory later, update hdfs-site.xml with only the desi
 
 ## Performance Note
 
-Maintaining multiple metadata directories has a small I/O cost—each metadata update is written to all configured directories. In 2026 deployments with modern SSDs, this is typically negligible, but high-frequency metadata operations (millions of files) may show slight latency increases. Monitor your NameNode’s write latency before and after adding the secondary directory.
+Maintaining multiple metadata directories has a small I/O cost: each metadata update is written to all configured directories. In 2026 deployments with modern SSDs, this is typically negligible, but high-frequency metadata operations (millions of files) may show slight latency increases. Monitor your NameNode’s write latency before and after adding the secondary directory.

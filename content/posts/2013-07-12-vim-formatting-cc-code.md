@@ -58,11 +58,11 @@ autocmd FileType c,cpp setlocal expandtab
 
 Key options explained:
 
-- `cindent` — C-style indentation (context-aware, superior to `autoindent`)
-- `cinoptions` — fine-tune behavior (`:0` aligns case labels, `l1` aligns continuation lines, `t0` preserves return type indentation, `g0` aligns C++ scope declarations)
-- `shiftwidth` — spaces per indent level (used by `<<` and `>>`)
-- `tabstop` — display width of tab characters
-- `expandtab` — insert spaces instead of tabs
+- `cindent`: C-style indentation (context-aware, superior to `autoindent`)
+- `cinoptions`: fine-tune behavior (`:0` aligns case labels, `l1` aligns continuation lines, `t0` preserves return type indentation, `g0` aligns C++ scope declarations)
+- `shiftwidth`: spaces per indent level (used by `<<` and `>>`)
+- `tabstop`: display width of tab characters
+- `expandtab`: insert spaces instead of tabs
 
 For stricter control, add `cindent` options like `(0,W2s` to control parameter alignment in function calls.
 
@@ -83,9 +83,9 @@ gg!Gclang-format<CR>    format entire file (alternative method)
 
 Common alternatives:
 
-- **clang-format** — LLVM project standard, reads `.clang-format` config files
-- **astyle** — flexible, good for legacy codebases
-- **uncrustify** — highly configurable, supports many languages
+- **clang-format**: LLVM project standard, reads `.clang-format` config files
+- **astyle**: flexible, good for legacy codebases
+- **uncrustify**: highly configurable, supports many languages
 
 Check your project for `.clang-format`, `.astylerc`, or similar config files to ensure Vim matches team standards. If your project uses a formatter, configure it in `formatprg` to avoid style conflicts.
 

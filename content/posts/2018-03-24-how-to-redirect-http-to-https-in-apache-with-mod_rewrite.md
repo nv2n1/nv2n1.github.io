@@ -20,10 +20,10 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 The key parts:
 
-- `RewriteCond %{HTTPS} off` — matches only HTTP requests
-- `^(.*)$` — matches any request
-- `https://%{HTTP_HOST}%{REQUEST_URI}` — rebuilds the URL with HTTPS
-- `[L,R=301]` — uses a permanent redirect (301) and stops processing further rules
+- `RewriteCond %{HTTPS} off`: matches only HTTP requests
+- `^(.*)$`: matches any request
+- `https://%{HTTP_HOST}%{REQUEST_URI}`: rebuilds the URL with HTTPS
+- `[L,R=301]`: uses a permanent redirect (301) and stops processing further rules
 
 ## Redirect specific domains only
 

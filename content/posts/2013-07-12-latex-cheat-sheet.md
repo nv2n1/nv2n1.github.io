@@ -32,11 +32,11 @@ Your content here.
 
 Common document classes:
 
-- `article` — reports, papers, short documents
-- `report` — longer documents with chapters
-- `book` — book-length documents with front/back matter
-- `beamer` — slide presentations
-- `letter` — formal correspondence
+- `article`: reports, papers, short documents
+- `report`: longer documents with chapters
+- `book`: book-length documents with front/back matter
+- `beamer`: slide presentations
+- `letter`: formal correspondence
 
 Add packages with `\usepackage{}` before `\begin{document}`. The `inputenc` package with UTF-8 encoding is standard for modern systems and ensures proper handling of non-ASCII characters.
 
@@ -52,7 +52,7 @@ Basic formatting commands:
 \underline{underlined text}
 ```
 
-Use `\emph{}` for semantic emphasis—it toggles italic (or returns to roman if already italic), making it preferred over raw formatting for emphasis. Combine multiple formats with nesting:
+Use `\emph{}` for semantic emphasis: it toggles italic (or returns to roman if already italic), making it preferred over raw formatting for emphasis. Combine multiple formats with nesting:
 
 ``` latex
 \textbf{\textit{bold italic text}}
@@ -179,11 +179,11 @@ Create tables with the `tabular` environment:
 
 Format specifiers:
 
-- `l` — left-aligned
-- `c` — centered
-- `r` — right-aligned
-- `|` — vertical lines
-- `p{width}` — fixed-width column
+- `l`: left-aligned
+- `c`: centered
+- `r`: right-aligned
+- `|`: vertical lines
+- `p{width}`: fixed-width column
 
 Separate columns with `&` and rows with `\\`. Use `\hline` for horizontal lines.
 
@@ -225,9 +225,9 @@ Insert images with the `graphicx` package:
 
 Width options:
 
-- `width=0.8\textwidth` — 80% of page width
-- `height=5cm` — fixed height (maintains aspect ratio)
-- `scale=0.7` — scale by factor
+- `width=0.8\textwidth`: 80% of page width
+- `height=5cm`: fixed height (maintains aspect ratio)
+- `scale=0.7`: scale by factor
 
 Reference with `\ref{fig:myfigure}` or `\autoref{fig:myfigure}`.
 
@@ -334,7 +334,7 @@ latexmk -pdf -pvc document.tex
 latexmk -c document.tex
 ```
 
-Use `latexmk` for documents with bibliography, cross-references, or indexes—it automatically runs multiple passes to resolve all references. Configure it with a `.latexmkrc` file in your project directory for consistent behavior across systems.
+Use `latexmk` for documents with bibliography, cross-references, or indexes: it automatically runs multiple passes to resolve all references. Configure it with a `.latexmkrc` file in your project directory for consistent behavior across systems.
 
 **For Unicode and system fonts**, use `xelatex` instead:
 

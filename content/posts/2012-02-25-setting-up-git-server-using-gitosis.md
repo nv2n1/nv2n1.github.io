@@ -118,10 +118,10 @@ Define user groups in `conf/gitolite.conf`:
 
 Permissions:
 
-- `R` – read
-- `W` – write (non-forced)
-- `+` – force-push and delete
-- `-` – deny (useful to exclude users from groups)
+- `R`: read
+- `W`: write (non-forced)
+- `+`: force-push and delete
+- `-`: deny (useful to exclude users from groups)
 
 Branch-level control:
 

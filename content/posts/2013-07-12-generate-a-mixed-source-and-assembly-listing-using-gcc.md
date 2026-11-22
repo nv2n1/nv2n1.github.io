@@ -138,7 +138,7 @@ gcc -g -O3 source.c -o binary_O3
 objdump -S binary_O3 > opt3.txt
 ```
 
-At `-O0`, you’ll see obvious one-to-one source-to-instruction mapping. At `-O2` and `-O3`, the compiler reorders instructions, eliminates dead code, inlines functions, and restructures loops—sometimes making single source lines compile to dozens of instructions or disappear entirely.
+At `-O0`, you’ll see obvious one-to-one source-to-instruction mapping. At `-O2` and `-O3`, the compiler reorders instructions, eliminates dead code, inlines functions, and restructures loops: sometimes making single source lines compile to dozens of instructions or disappear entirely.
 
 ## Filtering Large Outputs
 

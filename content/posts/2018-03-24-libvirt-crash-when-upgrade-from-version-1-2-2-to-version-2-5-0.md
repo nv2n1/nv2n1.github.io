@@ -76,7 +76,7 @@ sudo systemctl enable virtlogd libvirtd
 sudo systemctl start virtlogd libvirtd
 ```
 
-This ensures proper dependency ordering — `libvirtd` will wait for `virtlogd` to be ready before initializing.
+This ensures proper dependency ordering: `libvirtd` will wait for `virtlogd` to be ready before initializing.
 
 ## Debugging Connection Issues
 

@@ -49,13 +49,13 @@ print(formatted)  # 2021-01-01 00:00:00
 
 Common format codes:
 
-- `%Y` – 4-digit year
-- `%m` – 2-digit month
-- `%d` – 2-digit day
-- `%H` – 2-digit hour (24-hour)
-- `%M` – 2-digit minute
-- `%S` – 2-digit second
-- `%z` – UTC offset (e.g., +0000)
+- `%Y`: 4-digit year
+- `%m`: 2-digit month
+- `%d`: 2-digit day
+- `%H`: 2-digit hour (24-hour)
+- `%M`: 2-digit minute
+- `%S`: 2-digit second
+- `%z`: UTC offset (e.g., +0000)
 
 ## Handling Milliseconds and Microseconds
 

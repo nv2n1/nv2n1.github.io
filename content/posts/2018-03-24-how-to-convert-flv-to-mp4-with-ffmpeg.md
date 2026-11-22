@@ -28,8 +28,8 @@ ffmpeg -i input.flv -vcodec copy -acodec copy output.mp4
 
 This is much faster since it doesn’t re-encode. However, it only works if the codecs inside the FLV are compatible with MP4 containers. Common issues include:
 
-- FLV with Sorenson Spark video codec (incompatible with MP4) — requires re-encoding
-- FLV with unusual audio codecs — may need conversion
+- FLV with Sorenson Spark video codec (incompatible with MP4): requires re-encoding
+- FLV with unusual audio codecs: may need conversion
 
 If the copy method fails, FFmpeg will tell you and you’ll need to re-encode.
 

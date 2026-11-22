@@ -18,7 +18,7 @@ OCaml is a practical functional language with strong static typing and pattern m
 
 **Introduction to Objective Caml** by Jason Hickey provides solid theoretical foundations with clear explanations of functional concepts. It bridges imperative and functional thinking effectively if you’re transitioning from C-style languages.
 
-**The OCaml Manual** at <a href="https://ocaml.org/manual/" rel="nofollow noopener" target="_blank">https://ocaml.org/manual/</a> is authoritative for language semantics, the standard library, and compiler toolchain. Check this when behavior isn’t obvious—OCaml’s type system and module system have nuances worth understanding deeply.
+**The OCaml Manual** at <a href="https://ocaml.org/manual/" rel="nofollow noopener" target="_blank">https://ocaml.org/manual/</a> is authoritative for language semantics, the standard library, and compiler toolchain. Check this when behavior isn’t obvious: OCaml’s type system and module system have nuances worth understanding deeply.
 
 ## Structured Learning Paths
 
@@ -122,9 +122,9 @@ Check <a href="https://ocaml.org/" rel="nofollow noopener" target="_blank">https
 
 Start with `utop` for interactive exploration. Build incrementally:
 
-- Pattern matching exercises — implement recursive list operations like `map`, `filter`, and `fold`
-- Type-driven programs — write a simple calculator that parses and evaluates expressions
-- Interpreters or type checkers — these are where OCaml truly shines and force you to think about language semantics
+- Pattern matching exercises: implement recursive list operations like `map`, `filter`, and `fold`
+- Type-driven programs: write a simple calculator that parses and evaluates expressions
+- Interpreters or type checkers: these are where OCaml truly shines and force you to think about language semantics
 
 ### Expression Evaluator Example
 
@@ -178,15 +178,15 @@ let sum = fold (fun acc x -> acc + x) 0 numbers
 
 ## Real-World Usage
 
-Jane Street publishes OCaml content regularly on their tech blog (<a href="https://blog.janestreet.com" rel="nofollow noopener" target="_blank">https://blog.janestreet.com</a>). They use OCaml for production trading systems at scale—their posts on performance, tooling, and design patterns reflect constraints you’ll face in real projects.
+Jane Street publishes OCaml content regularly on their tech blog (<a href="https://blog.janestreet.com" rel="nofollow noopener" target="_blank">https://blog.janestreet.com</a>). They use OCaml for production trading systems at scale: their posts on performance, tooling, and design patterns reflect constraints you’ll face in real projects.
 
 ## Tradeoffs to Consider
 
 OCaml isn’t a universal solution. Before committing it to a production project:
 
-- **Community size** — smaller than Python or Rust means fewer libraries for niche domains
-- **Module system** — powerful but has a steep learning curve
-- **Imperative features** — exist but fighting against them indicates a design mismatch
-- **Hiring** — functional programming expertise is less common than OOP or procedural skills
+- **Community size**: smaller than Python or Rust means fewer libraries for niche domains
+- **Module system**: powerful but has a steep learning curve
+- **Imperative features**: exist but fighting against them indicates a design mismatch
+- **Hiring**: functional programming expertise is less common than OOP or procedural skills
 
-Verify that libraries exist for your specific needs and that your team can handle functional-first thinking. The learning curve is real, but the payoff—typesafe, maintainable code with strong guarantees—justifies it for domains like compilers, formal verification, financial systems, and symbolic computation.
+Verify that libraries exist for your specific needs and that your team can handle functional-first thinking. The learning curve is real, but the payoff (typesafe, maintainable code with strong guarantees) justifies it for domains like compilers, formal verification, financial systems, and symbolic computation.

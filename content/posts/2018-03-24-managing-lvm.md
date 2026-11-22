@@ -180,7 +180,7 @@ lvmdevices --adddev /dev/sdd1
 ## Practical Considerations
 
 - Always take snapshots before major operations
-- Monitor free space in volume groups—when a VG runs full, add more PVs with `vgextend`
+- Monitor free space in volume groups, when a VG runs full, add more PVs with `vgextend`
 - For production systems, consider mirrored or RAID-backed LVs for redundancy
 - Use consistent naming conventions (e.g., `vg_prod`, `vg_test`)
 - Keep LVM metadata backups: `vgcfgbackup` and `vgcfgrestore` can recover from metadata corruption

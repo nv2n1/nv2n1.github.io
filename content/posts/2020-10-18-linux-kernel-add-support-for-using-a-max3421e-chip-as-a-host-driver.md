@@ -79,7 +79,7 @@ The driver maps MAX3421E error codes (`HRSL` register) to standard Linux error c
 - `MAX3421_HRSL_BABBLE`: Device talked too long (returns `-EOVERFLOW`)
 - CRC/packet errors: Retried up to `USB_MAX_RETRIES` times before reporting error
 
-Toggle bit handling is automatic—the driver reads toggle state from `HRSL` and saves it per endpoint when switching to a new device.
+Toggle bit handling is automatic: the driver reads toggle state from `HRSL` and saves it per endpoint when switching to a new device.
 
 ### Configuration and Probe
 

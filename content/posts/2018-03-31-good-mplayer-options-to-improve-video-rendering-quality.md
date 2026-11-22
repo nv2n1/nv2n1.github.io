@@ -10,7 +10,7 @@ canonical: /good-mplayer-options-to-improve-video-rendering-quality/
 url: /good-mplayer-options-to-improve-video-rendering-quality/
 ---
 
-MPlayer reached end-of-life in 2010 and hasn’t received updates since. If you’re still using it, you’re missing years of improvements in video decoding, filtering, and performance. For new projects, use **mpv** instead—it’s the maintained fork that incorporates MPlayer’s codebase with significant enhancements.
+MPlayer reached end-of-life in 2010 and hasn’t received updates since. If you’re still using it, you’re missing years of improvements in video decoding, filtering, and performance. For new projects, use **mpv** instead: it’s the maintained fork that incorporates MPlayer’s codebase with significant enhancements.
 
 That said, if you’re stuck maintaining legacy MPlayer setups, here’s how to optimize rendering quality.
 

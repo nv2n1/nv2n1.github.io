@@ -16,17 +16,17 @@ GNOME 3 and later versions include built-in screenshot functionality accessible 
 
 These shortcuts save to `~/Pictures/` by default.
 
-- **Print** — Full screen
-- **Shift+Print** — Selected area (interactive selection box appears)
-- **Alt+Print** — Active window only
+- **Print**: Full screen
+- **Shift+Print**: Selected area (interactive selection box appears)
+- **Alt+Print**: Active window only
 
 ## Copy screenshots to clipboard
 
 Add Ctrl to the above shortcuts to copy instead of save:
 
-- **Ctrl+Print** — Full screen to clipboard
-- **Ctrl+Shift+Print** — Selected area to clipboard
-- **Ctrl+Alt+Print** — Active window to clipboard
+- **Ctrl+Print**: Full screen to clipboard
+- **Ctrl+Shift+Print**: Selected area to clipboard
+- **Ctrl+Alt+Print**: Active window to clipboard
 
 After copying, paste directly into image editors, chat applications, or documents using Ctrl+V.
 
@@ -64,10 +64,10 @@ gsettings list-recursively org.gnome.gnome-screenshot
 
 For more advanced needs, consider these tools:
 
-- **Flameshot** — Powerful screenshot tool with annotation and editing
-- **Spectacle** — KDE’s screenshot utility (works on GNOME too)
-- **scrot** — Lightweight CLI tool: `scrot ~/screenshot.png`
-- **maim** — Similar to scrot with better compositing support
+- **Flameshot**: Powerful screenshot tool with annotation and editing
+- **Spectacle**: KDE’s screenshot utility (works on GNOME too)
+- **scrot**: Lightweight CLI tool: `scrot ~/screenshot.png`
+- **maim**: Similar to scrot with better compositing support
 
 ## Troubleshooting missing screenshots
 

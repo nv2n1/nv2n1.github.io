@@ -10,7 +10,7 @@ canonical: /two-gnome-easter-eggs-free-the-fish-and-gegls-from-outer-space/
 url: /two-gnome-easter-eggs-free-the-fish-and-gegls-from-outer-space/
 ---
 
-GNOME has hidden a few playful easter eggs in its desktop environment over the years. Two of the most well-known are “Free the Fish” and “Wanda the Fish” — small animated features that surprise unsuspecting users.
+GNOME has hidden a few playful easter eggs in its desktop environment over the years. Two of the most well-known are “Free the Fish” and “Wanda the Fish”: small animated features that surprise unsuspecting users.
 
 ## Free the Fish (GNOME 2)
 
@@ -56,7 +56,7 @@ gegls from outer space
 
 This launched a simple game where small alien creatures (gegls) would appear on your desktop and you could click on them. The game referenced GEGL (Generic Graphics Library), the image processing framework used by GIMP.
 
-The gegls game was a simple reflex-clicking challenge — aliens would appear at random positions on the screen and you’d try to click them before they disappeared. It kept score of how many you caught.
+The gegls game was a simple reflex-clicking challenge: aliens would appear at random positions on the screen and you’d try to click them before they disappeared. It kept score of how many you caught.
 
 ## Modern GNOME (3.x and Later)
 
@@ -72,10 +72,10 @@ However, GNOME 3 has its own lesser-known features:
 
 Desktop easter eggs are a tradition in software development. They show that developers have a sense of humor and make the software feel more human. Famous examples include:
 
-- **Google’s “do a barrel roll”** — search for it and the page rotates 360 degrees
-- **Firefox’s “about:robots”** — displays a robot-themed page
-- **Chrome’s dinosaur game** — press Space when offline to play
-- **apt-get moo** — displays an ASCII cow in Debian/Ubuntu
+- **Google’s “do a barrel roll”**: search for it and the page rotates 360 degrees
+- **Firefox’s “about:robots”**: displays a robot-themed page
+- **Chrome’s dinosaur game**: press Space when offline to play
+- **apt-get moo**: displays an ASCII cow in Debian/Ubuntu
 
 These hidden features have become less common in modern software as companies focus on security and professional appearance. But they remain a beloved part of computing culture and open-source tradition.
 
@@ -92,4 +92,4 @@ sudo apt install gnome-tweaks    # Ubuntu/Debian
 
 **Extension management:** Visit <a href="https://extensions.gnome.org" rel="nofollow noopener" target="_blank">extensions.gnome.org</a> to browse and install community extensions that add functionality to GNOME Shell.
 
-**D-Bus inspector:** Use `d-feet` to explore the D-Bus interfaces that GNOME applications expose — useful for scripting desktop interactions.
+**D-Bus inspector:** Use `d-feet` to explore the D-Bus interfaces that GNOME applications expose: useful for scripting desktop interactions.

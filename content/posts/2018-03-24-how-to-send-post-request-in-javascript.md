@@ -112,7 +112,7 @@ However, jQuery is rarely added to new projects today.
 
 ## Key Considerations
 
-**Error Handling**: Fetch doesn’t reject on HTTP error status codes (4xx, 5xx) — you must check `response.ok` or `response.status`. Axios rejects the promise automatically, making it easier to catch errors.
+**Error Handling**: Fetch doesn’t reject on HTTP error status codes (4xx, 5xx): you must check `response.ok` or `response.status`. Axios rejects the promise automatically, making it easier to catch errors.
 
 **Content-Type**: Always explicitly set the `Content-Type` header when sending JSON to avoid issues with some servers. Fetch defaults to `application/x-www-form-urlencoded` if you don’t set it.
 
@@ -139,7 +139,7 @@ fetch("/fileview", {
 
 Axios handles timeouts natively: `axios.post(url, data, { timeout: 5000 })`
 
-**Recommendation**: Use Fetch for new projects — it’s a standard API with no dependencies. Choose Axios if you’re already using it or need its convenience features. Avoid jQuery.post() for new code.
+**Recommendation**: Use Fetch for new projects: it’s a standard API with no dependencies. Choose Axios if you’re already using it or need its convenience features. Avoid jQuery.post() for new code.
 
 ## 2026 Best Practices and Advanced Techniques
 

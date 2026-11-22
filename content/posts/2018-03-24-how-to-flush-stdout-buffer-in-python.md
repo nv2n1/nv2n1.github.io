@@ -10,7 +10,7 @@ canonical: /how-to-flush-stdout-buffer-in-python/
 url: /how-to-flush-stdout-buffer-in-python/
 ---
 
-By default, Python buffers stdout when it’s not connected to a terminal — typically when you redirect output to a file, pipe to another command, or run inside a container. This buffering can hide output until the buffer fills or the program exits, making debugging and log monitoring difficult.
+By default, Python buffers stdout when it’s not connected to a terminal: typically when you redirect output to a file, pipe to another command, or run inside a container. This buffering can hide output until the buffer fills or the program exits, making debugging and log monitoring difficult.
 
 ## Using the flush parameter
 
@@ -47,7 +47,7 @@ Run Python with the `-u` flag to disable all buffering:
 python3 -u script.py
 ```
 
-This affects stdout, stderr, and stdin — everything runs unbuffered. Useful for scripts called from other tools, cron jobs, or CI/CD pipelines.
+This affects stdout, stderr, and stdin: everything runs unbuffered. Useful for scripts called from other tools, cron jobs, or CI/CD pipelines.
 
 ## Environment variable approach
 
@@ -67,7 +67,7 @@ CMD ["python3", "app.py"]
 
 ## Using the logging module
 
-For production applications, avoid relying on `print()` entirely. Use the `logging` module instead — it handles buffering, formatting, and output levels automatically:
+For production applications, avoid relying on `print()` entirely. Use the `logging` module instead: it handles buffering, formatting, and output levels automatically:
 
 ``` python
 import logging

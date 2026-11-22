@@ -46,7 +46,7 @@ man screen | grep -A5 "split"
 
 ## Modern Alternatives to Consider
 
-While Screen remains widely used, **tmux** is now the more common choice in many environments. It offers similar functionality with a more intuitive configuration system. If you’re starting fresh, tmux might be worth considering instead. That said, Screen is still valuable to know—it’s installed on more systems by default and is often the fallback when tmux isn’t available.
+While Screen remains widely used, **tmux** is now the more common choice in many environments. It offers similar functionality with a more intuitive configuration system. If you’re starting fresh, tmux might be worth considering instead. That said, Screen is still valuable to know: it’s installed on more systems by default and is often the fallback when tmux isn’t available.
 
 ## Practical Learning Strategy
 

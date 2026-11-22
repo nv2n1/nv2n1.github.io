@@ -10,7 +10,7 @@ canonical: /running-a-command-upon-files-or-directories-changes-on-linux/
 url: /running-a-command-upon-files-or-directories-changes-on-linux/
 ---
 
-Watching for filesystem changes and triggering actions is essential for development workflows—recompiling after source edits, restarting services when configs update, or running tests during coding. Linux’s inotify subsystem provides kernel-level file monitoring, and `inotifywait` makes it accessible from the command line.
+Watching for filesystem changes and triggering actions is essential for development workflows: recompiling after source edits, restarting services when configs update, or running tests during coding. Linux’s inotify subsystem provides kernel-level file monitoring, and `inotifywait` makes it accessible from the command line.
 
 ## Installation
 
@@ -253,9 +253,9 @@ done
 
 For complex scenarios, consider these specialized tools:
 
-- **entr** — Simpler syntax, better for one-off automation
-- **watchexec** — Rust-based, built-in debouncing and process management
-- **nodemon** — Originally for Node.js but works for any language, includes file exclusion patterns
-- **systemd path units** — Native integration without external tools
+- **entr**: Simpler syntax, better for one-off automation
+- **watchexec**: Rust-based, built-in debouncing and process management
+- **nodemon**: Originally for Node.js but works for any language, includes file exclusion patterns
+- **systemd path units**: Native integration without external tools
 
 These handle rapid successive changes and edge cases more elegantly, though `inotifywait` is sufficient for most use cases and requires no additional dependencies beyond inotify-tools.

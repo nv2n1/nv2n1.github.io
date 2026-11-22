@@ -10,7 +10,7 @@ canonical: /duplicating-lvm-backed-xen-domu/
 url: /duplicating-lvm-backed-xen-domu/
 ---
 
-LVM snapshots provide an efficient way to duplicate virtual machines in seconds rather than minutes. Instead of copying an entire filesystem, snapshots leverage copy-on-write semantics—physical blocks are only duplicated when the source or snapshot is modified. This approach works well for any LVM-backed virtualization platform, though Xen is used here as an example.
+LVM snapshots provide an efficient way to duplicate virtual machines in seconds rather than minutes. Instead of copying an entire filesystem, snapshots leverage copy-on-write semantics: physical blocks are only duplicated when the source or snapshot is modified. This approach works well for any LVM-backed virtualization platform, though Xen is used here as an example.
 
 **Note**: Xen remains in production use (AWS EC2, Citrix Hypervisor), but KVM has become the default hypervisor for most Linux distributions. Modern alternatives include KVM with libvirt, QEMU, or container solutions like Docker and Kubernetes. The snapshot principles here apply to any LVM-backed hypervisor.
 

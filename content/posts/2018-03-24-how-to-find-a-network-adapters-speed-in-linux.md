@@ -10,7 +10,7 @@ canonical: /how-to-find-a-network-adapters-speed-in-linux/
 url: /how-to-find-a-network-adapters-speed-in-linux/
 ---
 
-When you need to verify the current link speed of a network interface — whether it’s running at 10Mbps, 100Mbps, 1Gbps, or higher — `ethtool` is the standard tool for the job.
+When you need to verify the current link speed of a network interface (whether it’s running at 10Mbps, 100Mbps, 1Gbps, or higher) `ethtool` is the standard tool for the job.
 
 ## Using ethtool to check interface speed
 
@@ -80,13 +80,13 @@ done
 
 - **Speed**: The negotiated link speed (1000Mb/s = 1Gbps)
 - **Duplex**: Full duplex is standard; half duplex is rare and usually indicates a problem
-- **Link detected**: yes/no — whether the cable is connected
+- **Link detected**: yes/no, whether the cable is connected
 - **Auto-negotiation**: Whether speed was automatically negotiated with the switch
 - **Supported link modes**: The speeds this adapter *can* run at
 
 ## Important: Link speed vs actual throughput
 
-The speed shown by `ethtool` is the **hardware link speed** — the negotiated connection between your NIC and the switch. This is not the same as actual throughput. You’ll see lower real-world speeds due to:
+The speed shown by `ethtool` is the **hardware link speed**: the negotiated connection between your NIC and the switch. This is not the same as actual throughput. You’ll see lower real-world speeds due to:
 
 - Protocol overhead (TCP/IP headers, Ethernet frames)
 - Network congestion
@@ -122,7 +122,7 @@ If your interface is negotiating at 100Mbps or 10Mbps when it should be faster:
     sudo ip link set eth0 up
     ```
 
-4.  Verify the cable and switch port — bad cables or faulty switch ports are common causes
+4.  Verify the cable and switch port: bad cables or faulty switch ports are common causes
 
 Make permanent speed settings in `/etc/network/interfaces` (Debian/Ubuntu) or NetworkManager configuration files rather than using command-line flags, which don’t persist across reboots.
 

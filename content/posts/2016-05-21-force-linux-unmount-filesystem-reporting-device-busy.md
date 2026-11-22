@@ -10,7 +10,7 @@ canonical: /force-linux-unmount-filesystem-reporting-device-busy/
 url: /force-linux-unmount-filesystem-reporting-device-busy/
 ---
 
-When you try to unmount a filesystem with `umount`, Linux may report “device is busy.” This is a safety mechanism — the kernel blocks unmounting when processes or kernel threads are actively accessing the partition or holding open files on it. Forcing an unmount without understanding what’s using the filesystem risks data corruption and data loss.
+When you try to unmount a filesystem with `umount`, Linux may report “device is busy.” This is a safety mechanism: the kernel blocks unmounting when processes or kernel threads are actively accessing the partition or holding open files on it. Forcing an unmount without understanding what’s using the filesystem risks data corruption and data loss.
 
 ## Identify What’s Using the Filesystem
 
@@ -31,7 +31,7 @@ Output looks like:
     sshd      18901  root  txt   REG    253,2  123456       5 /mnt/data/app
     postgres  19045  postgres 3u REG    253,2 5242880   12345 /mnt/data/base/13909
 
-Each line shows a process accessing the mount. Review the list carefully — killing the wrong thing is worse than leaving the mount alone.
+Each line shows a process accessing the mount. Review the list carefully: killing the wrong thing is worse than leaving the mount alone.
 
 ### Using fuser
 
@@ -173,7 +173,7 @@ Use this only as a last resort. Force unmounting can:
 - Leave the filesystem in an inconsistent state
 - Leave orphaned processes in D state (uninterruptible sleep)
 
-It’s primarily meant for unreachable NFS systems where lazy unmount isn’t sufficient. On local filesystems, force unmount should almost never be necessary — lazy unmount handles nearly all real-world scenarios.
+It’s primarily meant for unreachable NFS systems where lazy unmount isn’t sufficient. On local filesystems, force unmount should almost never be necessary: lazy unmount handles nearly all real-world scenarios.
 
 ## NFS-Specific Handling
 
@@ -271,6 +271,6 @@ A value of `1` means it’s fully enabled. A value of `0` means it’s disabled 
 5.  **Attempt normal unmount**: `umount /mnt/data`
 6.  **Use lazy unmount for unresponsive or NFS mounts**: `umount -l /mnt/data`
 7.  **Force unmount only as absolute last resort**: `umount -f /mnt/data`
-8.  **Document why lazy or force unmounting was required** — it usually indicates a configuration or service shutdown issue worth fixing
+8.  **Document why lazy or force unmounting was required**: it usually indicates a configuration or service shutdown issue worth fixing
 
 The majority of “device is busy” problems can be solved with `lsof`, cleanly stopping services, and a lazy unmount if needed. Jumping to force unmount is almost always wrong and indicates you need to investigate your service shutdown procedures.

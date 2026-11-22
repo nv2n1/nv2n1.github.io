@@ -58,11 +58,11 @@ The `-c` flag specifies the conversion configuration file. OpenCC ships with sev
 
 OpenCC provides multiple conversion configurations beyond simple SC↔TC conversion:
 
-- `zhs2zht.ini` — Simplified Chinese to Traditional Chinese
-- `zht2zhs.ini` — Traditional Chinese to Simplified Chinese
-- `zhs2zht_tw.ini` — Simplified to Traditional (Taiwan standard)
-- `zhs2zht_hk.ini` — Simplified to Traditional (Hong Kong standard)
-- `zht2zhs_s.ini` — Traditional to Simplified (mainland standard)
+- `zhs2zht.ini`: Simplified Chinese to Traditional Chinese
+- `zht2zhs.ini`: Traditional Chinese to Simplified Chinese
+- `zhs2zht_tw.ini`: Simplified to Traditional (Taiwan standard)
+- `zhs2zht_hk.ini`: Simplified to Traditional (Hong Kong standard)
+- `zht2zhs_s.ini`: Traditional to Simplified (mainland standard)
 
 Choose the appropriate profile based on your target region’s conventions.
 

@@ -10,7 +10,7 @@ canonical: /udp-programming-on-linux/
 url: /udp-programming-on-linux/
 ---
 
-UDP (User Datagram Protocol) defined in RFC 768 provides a lightweight alternative to TCP. Unlike TCP’s stream-oriented approach, UDP delivers discrete packets — each `recvfrom()` or `recvmsg()` call returns one complete datagram. The tradeoff is real: you gain speed and lower overhead, but lose automatic reliability guarantees. Your application must handle packet loss, reordering, and out-of-order delivery.
+UDP (User Datagram Protocol) defined in RFC 768 provides a lightweight alternative to TCP. Unlike TCP’s stream-oriented approach, UDP delivers discrete packets: each `recvfrom()` or `recvmsg()` call returns one complete datagram. The tradeoff is real: you gain speed and lower overhead, but lose automatic reliability guarantees. Your application must handle packet loss, reordering, and out-of-order delivery.
 
 ## Basic UDP Socket Implementation
 
@@ -96,7 +96,7 @@ UDP doesn’t retransmit lost packets automatically. If you need reliability:
 
 - Implement application-level acknowledgments: send an ACK back when data arrives.
 - Use retransmission timers on the sender side.
-- Keep datagrams small — under 512 bytes for maximum compatibility, under 1,472 bytes on typical Ethernet — to avoid IP-layer fragmentation.
+- Keep datagrams small (under 512 bytes for maximum compatibility, under 1,472 bytes on typical Ethernet) to avoid IP-layer fragmentation.
 
 Fragmentation at the IP layer increases packet loss risk significantly. Prefer many small packets over one large one.
 

@@ -75,10 +75,10 @@ journalctl -b <boot-id>
 
 The `--list-boots` output shows the boot offset, boot ID, and timestamp:
 
-    -5 a1b2c3d4e5f6g7h8 Mon 2026-01-10 14:32:15 UTC—Mon 2026-01-10 16:45:22 UTC
-    -4 f7g8h9i0j1k2l3m4 Mon 2026-01-11 08:10:05 UTC—Mon 2026-01-11 12:30:18 UTC
-    -1 xyz789abc123def0 Sat 2026-01-15 09:15:42 UTC—Sat 2026-01-15 10:42:08 UTC
-     0 m4n5o6p7q8r9s0t1 Sat 2026-01-15 10:42:15 UTC—Sat 2026-01-15 17:30:45 UTC
+    -5 a1b2c3d4e5f6g7h8 Mon 2026-01-10 14:32:15 UTC: Mon 2026-01-10 16:45:22 UTC
+    -4 f7g8h9i0j1k2l3m4 Mon 2026-01-11 08:10:05 UTC: Mon 2026-01-11 12:30:18 UTC
+    -1 xyz789abc123def0 Sat 2026-01-15 09:15:42 UTC: Sat 2026-01-15 10:42:08 UTC
+     0 m4n5o6p7q8r9s0t1 Sat 2026-01-15 10:42:15 UTC: Sat 2026-01-15 17:30:45 UTC
 
 ## Filter and Search Boot Logs
 

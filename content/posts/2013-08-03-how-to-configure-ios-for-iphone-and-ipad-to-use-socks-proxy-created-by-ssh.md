@@ -29,11 +29,11 @@ ssh -D 0.0.0.0:1080 -f -C -q -N user@remote-host
 
 This opens port 1080 on all interfaces. The flags mean:
 
-- `-D 0.0.0.0:1080` — bind SOCKS proxy to all interfaces on port 1080
-- `-f` — fork to background
-- `-C` — enable compression
-- `-q` — quiet mode
-- `-N` — don’t execute a remote command
+- `-D 0.0.0.0:1080`: bind SOCKS proxy to all interfaces on port 1080
+- `-f`: fork to background
+- `-C`: enable compression
+- `-q`: quiet mode
+- `-N`: don’t execute a remote command
 
 For better security, use the server’s `GatewayPorts` SSH option instead of binding to 0.0.0.0, or restrict to specific IPs with firewall rules.
 

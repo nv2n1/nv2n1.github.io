@@ -33,11 +33,11 @@ openssl req -new -key ssl.key -out req.pem \
 
 Replace the subject fields with your actual values:
 
-- `C` — Country code (2 letters)
-- `ST` — State or province
-- `L` — Locality/city
-- `O` — Organization name
-- `CN` — Common Name (your domain)
+- `C`: Country code (2 letters)
+- `ST`: State or province
+- `L`: Locality/city
+- `O`: Organization name
+- `CN`: Common Name (your domain)
 
 ### Adding Subject Alternative Names
 
@@ -101,7 +101,7 @@ Both commands should produce identical MD5 hashes if the CSR was generated from 
 
 ### Key Points
 
-- Keep your private key secure during this process — never send it to your CA
+- Keep your private key secure during this process: never send it to your CA
 - The CSR can be regenerated multiple times from the same private key if needed
 - Match your CSR domain exactly to what the CA expects
 - Save both your private key and CSR in a version-controlled or backed-up location

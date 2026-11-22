@@ -153,9 +153,9 @@ sudo journalctl -u iptables -n 20
 
 Common issues include:
 
-- **Invalid rule syntax** in `/etc/sysconfig/iptables` — verify with `sudo iptables-restore < /etc/sysconfig/iptables`
-- **Permission problems** — ensure root can read the rule files: `sudo chmod 600 /etc/sysconfig/iptables*`
-- **Service conflicts** — confirm firewalld is disabled: `sudo systemctl is-active firewalld` should return `inactive`
+- **Invalid rule syntax** in `/etc/sysconfig/iptables`: verify with `sudo iptables-restore < /etc/sysconfig/iptables`
+- **Permission problems**: ensure root can read the rule files: `sudo chmod 600 /etc/sysconfig/iptables*`
+- **Service conflicts**: confirm firewalld is disabled: `sudo systemctl is-active firewalld` should return `inactive`
 
 ## Important notes for modern systems
 

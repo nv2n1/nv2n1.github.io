@@ -14,7 +14,7 @@ GPT (GUID Partition Table) is required for disks larger than 2TB. The older MBR 
 
 ## Why GPT Matters
 
-Any disk over 2TB needs GPT. This includes modern SSDs, large RAID arrays, and cloud storage volumes. If you run `fdisk` on a 6TB disk, it will either warn you or silently limit usable space to 2TB—a frustrating gotcha in production.
+Any disk over 2TB needs GPT. This includes modern SSDs, large RAID arrays, and cloud storage volumes. If you run `fdisk` on a 6TB disk, it will either warn you or silently limit usable space to 2TB: a frustrating gotcha in production.
 
 ## Basic Workflow: Creating a Single Partition
 

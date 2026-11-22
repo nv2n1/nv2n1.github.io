@@ -27,11 +27,11 @@ grep -n "^dhcp-" /etc/dnsmasq.conf
 
 Common DHCP directives you might encounter include:
 
-- `dhcp-range` — defines the IP range for DHCP leases
-- `dhcp-host` — static DHCP assignments
-- `dhcp-option` — DHCP options (gateway, DNS, etc.)
-- `dhcp-lease-max` — maximum concurrent leases
-- `dhcp-leasefile` — location of the lease database
+- `dhcp-range`: defines the IP range for DHCP leases
+- `dhcp-host`: static DHCP assignments
+- `dhcp-option`: DHCP options (gateway, DNS, etc.)
+- `dhcp-lease-max`: maximum concurrent leases
+- `dhcp-leasefile`: location of the lease database
 
 Edit `/etc/dnsmasq.conf` and comment out these lines with `#`:
 
@@ -116,7 +116,7 @@ sudo journalctl -u dnsmasq -n 20
 - Keep DHCP-related lines in a separate file (e.g., `/etc/dnsmasq.d/dhcp.conf`) and disable it entirely by renaming to `.bak` rather than scattering disables across multiple files
 - Use the `no-dhcp-interface=*` directive as an explicit “disable all DHCP” statement if you want belt-and-suspenders redundancy
 - Test DNS resolution from other machines on your network if dnsmasq is serving as a network-wide resolver
-- Document your configuration — comment why you disabled DHCP and what service provides it instead (if applicable)
+- Document your configuration: comment why you disabled DHCP and what service provides it instead (if applicable)
 
 ## 2026 Best Practices and Advanced Techniques
 

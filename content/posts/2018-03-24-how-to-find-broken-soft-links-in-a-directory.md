@@ -42,7 +42,7 @@ If you prefer explicit removal with `rm`:
 find /path/to/directory -xtype l -exec rm -f {} \;
 ```
 
-Note the `\;` at the end—it terminates the `-exec` command. Alternatively, use `+` instead of `\;` for better performance on large link counts:
+Note the `\;` at the end: it terminates the `-exec` command. Alternatively, use `+` instead of `\;` for better performance on large link counts:
 
 ``` bash
 find /path/to/directory -xtype l -exec rm -f {} +

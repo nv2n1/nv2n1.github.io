@@ -10,7 +10,7 @@ canonical: /how-to-remove-adsense-ads-for-mobile-devices-while-keep-them-for-des
 url: /how-to-remove-adsense-ads-for-mobile-devices-while-keep-them-for-desktops/
 ---
 
-If you’re running Google AdSense on your site, you might want to show ads only to desktop visitors and hide them on mobile devices. This reduces clutter on smaller screens and can sometimes improve user experience—though test your bounce rates to confirm it actually helps your metrics.
+If you’re running Google AdSense on your site, you might want to show ads only to desktop visitors and hide them on mobile devices. This reduces clutter on smaller screens and can sometimes improve user experience, though test your bounce rates to confirm it actually helps your metrics.
 
 ## Using CSS Media Queries
 
@@ -38,8 +38,8 @@ Here’s the basic pattern:
 Replace `ca-pub-xxxxxxxxxx` with your actual AdSense publisher ID and `1234567890` with your ad slot ID. The key points:
 
 - **Set a breakpoint** that matches your mobile threshold. Common choices are `768px`, `640px`, or `480px`. Adjust based on where your layout actually breaks.
-- **Don’t include `style="display:block;"` on the `<ins>` tag** if you’re using CSS to control visibility—it can override your media query.
-- **Use `display: none`** rather than `visibility: hidden`—this removes the ad entirely from the layout, not just visually.
+- **Don’t include `style="display:block;"` on the `<ins>` tag** if you’re using CSS to control visibility: it can override your media query.
+- **Use `display: none`** rather than `visibility: hidden`: this removes the ad entirely from the layout, not just visually.
 
 ## Alternative Breakpoints
 
@@ -85,7 +85,7 @@ This approach is more reliable than CSS if you want to prevent the ad code from 
 ## Things to Check
 
 - Verify your changes don’t violate Google AdSense policies. Hiding ads through CSS is allowed; artificially inflating impressions is not.
-- Test on actual devices, not just browser dev tools—some mobile browsers handle media queries differently.
+- Test on actual devices, not just browser dev tools: some mobile browsers handle media queries differently.
 - Monitor your AdSense revenue and bounce rates after implementing this. Sometimes the math works better with some mobile ads than none.
 - If using a WordPress site, many ad management plugins like AdSense Manager or Elementor offer built-in breakpoint controls without coding.
 

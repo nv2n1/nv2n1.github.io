@@ -10,9 +10,9 @@ canonical: /changing-linux-users-password-in-one-command-line/
 url: /changing-linux-users-password-in-one-command-line/
 ---
 
-The `passwd` command is designed for interactive use—it prompts for input rather than accepting passwords via stdin by default. When you need to set passwords programmatically (bulk user provisioning, CI/CD automation, remote administration), you need methods that bypass the interactive prompt.
+The `passwd` command is designed for interactive use: it prompts for input rather than accepting passwords via stdin by default. When you need to set passwords programmatically (bulk user provisioning, CI/CD automation, remote administration), you need methods that bypass the interactive prompt.
 
-## Using passwd with –stdin
+## Using passwd with --stdin
 
 The `--stdin` flag tells `passwd` to read the new password from standard input:
 
@@ -20,7 +20,7 @@ The `--stdin` flag tells `passwd` to read the new password from standard input:
 echo "newpassword" | passwd --stdin username
 ```
 
-This works on most modern distributions (RHEL/CentOS, Fedora, Debian/Ubuntu, AlmaLinux, Rocky Linux). However, some systems disable `--stdin` via PAM configuration for security reasons. If you get “passwd: unrecognized option ‘–stdin’”, use an alternative method.
+This works on most modern distributions (RHEL/CentOS, Fedora, Debian/Ubuntu, AlmaLinux, Rocky Linux). However, some systems disable `--stdin` via PAM configuration for security reasons. If you get “passwd: unrecognized option ‘--stdin’”, use an alternative method.
 
 ## Piping Multiple Inputs
 
@@ -128,13 +128,13 @@ Non-interactive password methods should only be used when:
 
 ## Secure Alternatives
 
-**SSH key-based authentication** — Eliminates password use entirely:
+**SSH key-based authentication**: Eliminates password use entirely:
 
 ``` bash
 ssh-copy-id -i ~/.ssh/id_rsa.pub user@remotehost
 ```
 
-**Force password change on first login** — Use `chage` to expire the initial password:
+**Force password change on first login**: Use `chage` to expire the initial password:
 
 ``` bash
 chage -d 0 newuser
@@ -142,7 +142,7 @@ chage -d 0 newuser
 
 This sets the password change date to epoch, forcing a password change at next login.
 
-**Configuration management tools** — Ansible, Terraform, and Puppet support secure credential handling with vaults, encrypted variables, and secret backends:
+**Configuration management tools**: Ansible, Terraform, and Puppet support secure credential handling with vaults, encrypted variables, and secret backends:
 
 ``` bash
 # Ansible with vault
@@ -150,9 +150,9 @@ ansible-vault create group_vars/webservers/vault.yml
 # Then reference: {{ vault_password }}
 ```
 
-**Centralized authentication** — LDAP, Active Directory, FreeIPA, or RADIUS offload password management and policy enforcement to dedicated servers.
+**Centralized authentication**: LDAP, Active Directory, FreeIPA, or RADIUS offload password management and policy enforcement to dedicated servers.
 
-**Credential vaults** — HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, or 1Password for Business:
+**Credential vaults**: HashiCorp Vault, AWS Secrets Manager, Azure Key Vault, or 1Password for Business:
 
 ``` bash
 # HashiCorp Vault example

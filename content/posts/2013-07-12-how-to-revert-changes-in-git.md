@@ -10,7 +10,7 @@ canonical: /how-to-revert-changes-in-git/
 url: /how-to-revert-changes-in-git/
 ---
 
-Mistakes happen during development. Git provides several commands to undo changes at different stages—before committing, after committing, or in specific files. Understanding which tool to use depends on where you are in the workflow.
+Mistakes happen during development. Git provides several commands to undo changes at different stages: before committing, after committing, or in specific files. Understanding which tool to use depends on where you are in the workflow.
 
 ## Revert the entire working tree before committing
 
@@ -20,7 +20,7 @@ If you’ve made changes to multiple files and want to discard everything back t
 git reset --hard HEAD
 ```
 
-This restores all tracked files to their committed state. Untracked files remain untouched—use `git clean -f` if you want to remove those too.
+This restores all tracked files to their committed state. Untracked files remain untouched: use `git clean -f` if you want to remove those too.
 
 **Warning:** `--hard` is destructive. Once executed, unsaved changes are gone. If there’s any chance you’ll need the changes later, use `git stash` instead:
 
@@ -44,7 +44,7 @@ Or the shorter form (though less explicit):
 git restore working_file
 ```
 
-`git restore` is the modern approach introduced in Git 2.23 and is preferred for clarity—it’s explicit about restoring files rather than switching branches.
+`git restore` is the modern approach introduced in Git 2.23 and is preferred for clarity: it’s explicit about restoring files rather than switching branches.
 
 ## Remove a file from the staging area
 
@@ -163,7 +163,7 @@ Use `-d` to also remove untracked directories:
 git clean -fd
 ```
 
-Be careful—untracked files can’t be recovered this way.
+Be careful: untracked files can’t be recovered this way.
 
 ## View and checkout older versions
 

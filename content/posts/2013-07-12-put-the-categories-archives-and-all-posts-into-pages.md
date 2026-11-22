@@ -14,7 +14,7 @@ Consolidating categories, archives, and post listings into a dedicated page keep
 
 ## Create the Custom Page Template
 
-WordPress doesn’t provide built-in templates for comprehensive archive displays, so you’ll create a custom page template. Add a new file to your theme directory — typically `wp-content/themes/your-theme/template-archives.php`:
+WordPress doesn’t provide built-in templates for comprehensive archive displays, so you’ll create a custom page template. Add a new file to your theme directory: typically `wp-content/themes/your-theme/template-archives.php`:
 
 ``` php
 <?php

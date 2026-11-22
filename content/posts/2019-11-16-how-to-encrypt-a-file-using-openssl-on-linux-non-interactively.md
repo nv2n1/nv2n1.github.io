@@ -10,7 +10,7 @@ canonical: /how-to-encrypt-a-file-using-openssl-on-linux-non-interactively/
 url: /how-to-encrypt-a-file-using-openssl-on-linux-non-interactively/
 ---
 
-OpenSSL’s `enc` command supports passing passphrases programmatically rather than prompting interactively. This is essential for automation—cron jobs, CI/CD pipelines, backup scripts, and batch processing.
+OpenSSL’s `enc` command supports passing passphrases programmatically rather than prompting interactively. This is essential for automation: cron jobs, CI/CD pipelines, backup scripts, and batch processing.
 
 ## Basic encryption with environment variables
 
@@ -52,7 +52,7 @@ openssl enc -aes-256-cbc -in file.tgz -out file.tgz.enc -pass file:/path/to/pass
 openssl enc -aes-256-cbc -in file.tgz -out file.tgz.enc -pass pass:examplepass
 ```
 
-Avoid the `pass:` method in production—process arguments are visible to other users on the system via `ps` and `/proc/[pid]/cmdline`.
+Avoid the `pass:` method in production: process arguments are visible to other users on the system via `ps` and `/proc/[pid]/cmdline`.
 
 ## Strengthening OpenSSL enc encryption
 
@@ -153,7 +153,7 @@ openssl enc -aes-256-cbc -in file.tgz -out file.tgz.enc -pass file:"$PASS_TEMP"
 shred -ufz "$PASS_TEMP"
 ```
 
-The `shred` command overwrites the file multiple times before deletion, preventing recovery via filesystem forensics. On systems with journaling filesystems (ext4, XFS, Btrfs), physical recovery may still be possible—for highly sensitive data, consider full-disk encryption instead.
+The `shred` command overwrites the file multiple times before deletion, preventing recovery via filesystem forensics. On systems with journaling filesystems (ext4, XFS, Btrfs), physical recovery may still be possible, for highly sensitive data, consider full-disk encryption instead.
 
 ## Verifying encrypted files
 

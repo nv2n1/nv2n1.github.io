@@ -78,20 +78,20 @@ This must run before memory-intensive or long-running operations. Note that some
 
 Some applications define their own memory handling:
 
-**WordPress** — Add to `wp-config.php`:
+**WordPress**: Add to `wp-config.php`:
 
 ``` php
 define('WP_MEMORY_LIMIT', '256M');
 define('WP_MEMORY_POST_LIMIT', '512M');  // For uploads
 ```
 
-**Drupal** — Adjust in `settings.php`:
+**Drupal**: Adjust in `settings.php`:
 
 ``` php
 ini_set('memory_limit', '256M');
 ```
 
-**Composer** — Increase memory for dependency resolution:
+**Composer**: Increase memory for dependency resolution:
 
 ``` bash
 COMPOSER_MEMORY_LIMIT=-1 composer install
@@ -119,10 +119,10 @@ If a script regularly hits the memory limit, the issue is usually a leak or inef
 
 Beyond memory and execution time:
 
-- `max_input_vars` — Number of POST/GET variables (default 1000)
-- `post_max_size` — Request body size limit (must be larger than `upload_max_filesize`)
-- `upload_max_filesize` — Single file upload limit
-- `default_socket_timeout` — Database/network operation timeout
+- `max_input_vars`: Number of POST/GET variables (default 1000)
+- `post_max_size`: Request body size limit (must be larger than `upload_max_filesize`)
+- `upload_max_filesize`: Single file upload limit
+- `default_socket_timeout`: Database/network operation timeout
 
 All are configured the same way: in php.ini, .htaccess, or via `ini_set()`.
 

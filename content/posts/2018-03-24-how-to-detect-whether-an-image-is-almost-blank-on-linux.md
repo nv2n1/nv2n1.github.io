@@ -36,7 +36,7 @@ echo "Mean luminance: $mean_value"
 
 ### Better detection with threshold
 
-The mean alone isn’t always reliable—a nearly blank image might have a few bright pixels or slight noise. Use a more robust approach:
+The mean alone isn’t always reliable: a nearly blank image might have a few bright pixels or slight noise. Use a more robust approach:
 
 ``` bash
 function isBlank() {
@@ -58,7 +58,7 @@ This counts bright pixels and compares against a threshold, which scales better 
 
 ### Using standard deviation
 
-Another reliable metric is standard deviation—a blank image has very low variation:
+Another reliable metric is standard deviation: a blank image has very low variation:
 
 ``` bash
 function isBlank() {

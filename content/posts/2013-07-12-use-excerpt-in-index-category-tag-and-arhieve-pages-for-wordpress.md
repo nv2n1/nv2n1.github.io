@@ -18,14 +18,14 @@ Using excerpts instead improves page load times, reduces crawl budget waste, con
 
 Search engines treat identical content on multiple URLs as potential duplication. Archive pages with full post bodies signal low-value content to crawlers, fragmenting ranking power across pages instead of concentrating it on single post URLs. This wastes crawl budget and compounds the problem on sites with deep archives.
 
-Excerpts also reduce page weight significantly. A blog with 10 posts rendered in full might exceed 2MB. The same archive with excerpts typically stays under 300KB. This improves Core Web Vitals—particularly Largest Contentful Paint (LCP)—and benefits mobile users with slower connections.
+Excerpts also reduce page weight significantly. A blog with 10 posts rendered in full might exceed 2MB. The same archive with excerpts typically stays under 300KB. This improves Core Web Vitals, particularly Largest Contentful Paint (LCP), and benefits mobile users with slower connections.
 
 ## How WordPress generates excerpts
 
 WordPress creates excerpts using this priority:
 
-1.  **Custom excerpt** — explicitly set in the post editor’s excerpt field
-2.  **Auto-generated excerpt** — first 55 words of post content, ending with `[...]`
+1.  **Custom excerpt**: explicitly set in the post editor’s excerpt field
+2.  **Auto-generated excerpt**: first 55 words of post content, ending with `[...]`
 
 The default `[...]` terminator isn’t functional. Most sites replace it with a clickable “Read More” link for better UX and conversion rates.
 
@@ -39,10 +39,10 @@ ls -la wp-content/themes/
 
 WordPress uses this template hierarchy for listings:
 
-- `home.php` — blog index (highest priority)
-- `index.php` — fallback for any listing
-- `archive.php` — category, tag, date, custom post type archives
-- `search.php` — search results
+- `home.php`: blog index (highest priority)
+- `index.php`: fallback for any listing
+- `archive.php`: category, tag, date, custom post type archives
+- `search.php`: search results
 
 If a specific template doesn’t exist, WordPress falls back to the next option. Verify which template is active by checking template debug information:
 

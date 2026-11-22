@@ -26,9 +26,9 @@ script_dir=$(dirname "$(readlink -f "$0")")
 
 Breaking this down:
 
-- `readlink -f "$0"` — resolves all symlinks and returns the absolute path to the actual script file
-- `dirname ...` — extracts the directory portion of that path
-- `script_dir=...` — stores the result in a variable
+- `readlink -f "$0"`: resolves all symlinks and returns the absolute path to the actual script file
+- `dirname ...`: extracts the directory portion of that path
+- `script_dir=...`: stores the result in a variable
 
 ## Handling Sourced Scripts
 

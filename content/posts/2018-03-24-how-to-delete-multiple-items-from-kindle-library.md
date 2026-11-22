@@ -43,7 +43,7 @@ const interval = setInterval(() => {
 }, 500); // 500ms delay between deletions to avoid rate limiting
 ```
 
-The delay between clicks is important — Amazon’s interface needs time to process each deletion and reload the list. If you get errors, increase the delay to 800 or 1000ms.
+The delay between clicks is important: Amazon’s interface needs time to process each deletion and reload the list. If you get errors, increase the delay to 800 or 1000ms.
 
 ### Selective Deletion
 
@@ -76,7 +76,7 @@ items.forEach((item, index) => {
 
 **Pagination.** The Kindle Library loads items in batches. Scripts only affect currently visible items. If you have thousands of books, you may need to run the script multiple times as new batches load.
 
-**Confirm deletions carefully.** Amazon will prompt you to confirm each deletion. Some scripts can auto-confirm, but this is risky — double-check your selection criteria.
+**Confirm deletions carefully.** Amazon will prompt you to confirm each deletion. Some scripts can auto-confirm, but this is risky: double-check your selection criteria.
 
 ### Troubleshooting
 

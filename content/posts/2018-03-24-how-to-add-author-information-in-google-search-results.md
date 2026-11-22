@@ -10,7 +10,7 @@ canonical: /how-to-add-author-information-in-google-search-results/
 url: /how-to-add-author-information-in-google-search-results/
 ---
 
-Google no longer displays author information in search results the way it did when Google+ existed. However, you can still control how your content appears in search results by using schema markup—specifically the `author` property in JSON-LD structured data.
+Google no longer displays author information in search results the way it did when Google+ existed. However, you can still control how your content appears in search results by using schema markup: specifically the `author` property in JSON-LD structured data.
 
 ## Current best practice: schema.org markup
 
@@ -130,7 +130,7 @@ Note that Google doesn’t guarantee author names will display in search results
 
 ## Avoiding common mistakes
 
-- Don’t use generic placeholder author names—Google may ignore vague authorship
+- Don’t use generic placeholder author names: Google may ignore vague authorship
 - Ensure your author URL is a real page (even a simple author bio page works)
 - Use consistent author names across your site
 - Update the `dateModified` timestamp when you edit posts; this signals freshness

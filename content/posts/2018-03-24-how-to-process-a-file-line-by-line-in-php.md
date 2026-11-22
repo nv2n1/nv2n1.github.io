@@ -146,7 +146,7 @@ proc_close($process);
 
 ## Avoid These Approaches
 
-Don’t use `file()` or `file_get_contents()` for large files—they load the entire file into memory:
+Don’t use `file()` or `file_get_contents()` for large files: they load the entire file into memory:
 
 ``` php
 // Avoid for large files

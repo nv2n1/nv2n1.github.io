@@ -36,7 +36,7 @@ sudo system-switch-displaymanager
 
 This will present an interactive menu showing available display managers. Select your choice and confirm. The tool updates the necessary systemd symlinks automatically.
 
-After switching, log out completely (or restart for safety) to load the new display manager. You don’t need to restart the X server — just exit your current session.
+After switching, log out completely (or restart for safety) to load the new display manager. You don’t need to restart the X server: just exit your current session.
 
 ## Manual method: Using systemd
 
@@ -77,10 +77,10 @@ sudo systemctl reboot
 
 ## Common display managers available on Fedora
 
-- **SDDM** (KDE Plasma) — lightweight, modern, highly configurable
-- **LightDM** — minimal, compositable, used by XFCE and LXDE
-- **GDM** (GNOME) — feature-rich, wayland-native, default on Fedora
-- **LXDM** — very lightweight, good for older hardware
+- **SDDM** (KDE Plasma): lightweight, modern, highly configurable
+- **LightDM**: minimal, compositable, used by XFCE and LXDE
+- **GDM** (GNOME): feature-rich, wayland-native, default on Fedora
+- **LXDM**: very lightweight, good for older hardware
 
 ## Troubleshooting
 
@@ -105,11 +105,11 @@ This shows the symlink target and confirms what’s configured.
 
 These related commands are often used alongside the tools discussed in this article:
 
-- man command-name – Read the manual page for any command
-- which command-name – Find the location of an executable
-- rpm -qa or dpkg -l – List installed packages
-- journalctl -u service-name – Check service logs
-- ss -tulpn – List listening ports and services
+- man command-name: Read the manual page for any command
+- which command-name: Find the location of an executable
+- rpm -qa or dpkg -l: List installed packages
+- journalctl -u service-name: Check service logs
+- ss -tulpn: List listening ports and services
 
 ## Quick Reference
 

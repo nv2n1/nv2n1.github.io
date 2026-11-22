@@ -67,14 +67,14 @@ sshfs -o allow_other,default_permissions username@server:/path/to/folder /path/t
 
 Useful options:
 
-- `allow_other` — allows other users to access the mount
-- `default_permissions` — enforces standard Unix permissions
-- `IdentityFile=/path/to/key` — use a specific SSH key
-- `port=2222` — connect to non-standard SSH port
-- `compression=yes` — enable SSH compression (useful for slow links)
-- `reconnect` — automatically reconnect on connection loss
-- `ServerAliveInterval=15` — send keepalive packets every 15 seconds
-- `uid=1000,gid=1000` — set ownership of mounted files
+- `allow_other`: allows other users to access the mount
+- `default_permissions`: enforces standard Unix permissions
+- `IdentityFile=/path/to/key`: use a specific SSH key
+- `port=2222`: connect to non-standard SSH port
+- `compression=yes`: enable SSH compression (useful for slow links)
+- `reconnect`: automatically reconnect on connection loss
+- `ServerAliveInterval=15`: send keepalive packets every 15 seconds
+- `uid=1000,gid=1000`: set ownership of mounted files
 
 Example with multiple options:
 

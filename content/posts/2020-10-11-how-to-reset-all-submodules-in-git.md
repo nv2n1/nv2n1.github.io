@@ -10,7 +10,7 @@ canonical: /how-to-reset-all-submodules-in-git/
 url: /how-to-reset-all-submodules-in-git/
 ---
 
-Git submodules let you keep a Git repository as a subdirectory of another Git repository. When they get into a bad state—detached HEAD, local changes, merge conflicts—you need a clean reset.
+Git submodules let you keep a Git repository as a subdirectory of another Git repository. When they get into a bad state (detached HEAD, local changes, merge conflicts) you need a clean reset.
 
 ## The complete deinit and reinit method
 
@@ -28,7 +28,7 @@ What’s happening:
 
 The `-f` flag is necessary if submodules have uncommitted changes. Without it, Git will refuse to deinit and ask you to clean up first.
 
-This approach is best when submodules are in a genuinely broken state—refs you can’t reason about, corrupted metadata, or you just want a guaranteed clean checkout.
+This approach is best when submodules are in a genuinely broken state: refs you can’t reason about, corrupted metadata, or you just want a guaranteed clean checkout.
 
 ## The update-only method
 
@@ -72,15 +72,15 @@ git submodule update --init --recursive
 
 Submodules remain useful, but consider these patterns depending on your needs:
 
-**Git subtree** — Embeds dependency history directly into your repository. No detached HEAD concerns, but larger repository size and trickier merges:
+**Git subtree**: Embeds dependency history directly into your repository. No detached HEAD concerns, but larger repository size and trickier merges:
 
 ``` bash
 git subtree add --prefix path/to/dep https://github.com/user/repo.git branch
 ```
 
-**Monorepo** — Keep all related code in a single repository. Eliminates the coordination problem entirely but requires more discipline on access control.
+**Monorepo**: Keep all related code in a single repository. Eliminates the coordination problem entirely but requires more discipline on access control.
 
-**Package managers** — For true dependencies (libraries, frameworks, tools), let npm, pip, conan, or language-native package managers handle versioning. Reserve submodules for tightly coupled codebases you control.
+**Package managers**: For true dependencies (libraries, frameworks, tools), let npm, pip, conan, or language-native package managers handle versioning. Reserve submodules for tightly coupled codebases you control.
 
 ## Checking submodule status
 

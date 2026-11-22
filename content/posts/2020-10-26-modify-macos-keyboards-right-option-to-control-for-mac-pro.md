@@ -89,7 +89,7 @@ You should see the key respond as Control (⌃).
 
 ## Which Method to Choose
 
-Use **native remapping** if you exclusively need Control and rarely use Option for anything else — it’s simpler and requires no additional software.
+Use **native remapping** if you exclusively need Control and rarely use Option for anything else: it’s simpler and requires no additional software.
 
 Use **Karabiner-Elements** if you need both Control and Option functional, work across multiple modifiers, or want per-application rules. The added complexity pays off for shell-heavy workflows.
 

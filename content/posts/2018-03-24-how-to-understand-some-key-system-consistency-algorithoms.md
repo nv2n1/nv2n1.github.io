@@ -10,7 +10,7 @@ canonical: /how-to-understand-some-key-system-consistency-algorithoms/
 url: /how-to-understand-some-key-system-consistency-algorithoms/
 ---
 
-Distributed systems need consensus — a way for multiple nodes to agree on state despite failures and network partitions. Understanding the key algorithms behind consensus is essential for anyone designing reliable systems.
+Distributed systems need consensus: a way for multiple nodes to agree on state despite failures and network partitions. Understanding the key algorithms behind consensus is essential for anyone designing reliable systems.
 
 ## Paxos and Its Variants
 
@@ -72,4 +72,4 @@ Choose based on your requirements:
 
 For implementation, study existing systems: etcd and Consul for Raft, Zookeeper for Paxos variants, or Redis Cluster for quorum-based approaches.
 
-The best way to understand these algorithms is through papers combined with reading production implementations. Start with Raft’s paper and the etcd codebase — both are more accessible than classical Paxos literature.
+The best way to understand these algorithms is through papers combined with reading production implementations. Start with Raft’s paper and the etcd codebase: both are more accessible than classical Paxos literature.

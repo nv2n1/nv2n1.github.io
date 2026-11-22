@@ -41,19 +41,19 @@ Replace `https://feeds.feedburner.com/systutorials` with your actual Feedburner 
 
 ### What This Matches
 
-- `/feed/` — main post feed
-- `/feed/comments/` — comments feed
+- `/feed/`: main post feed
+- `/feed/comments/`: comments feed
 - `/sitemap.xml` and any other XML feeds
 - Feed requests from browsers and generic readers
 
 ### Rule Breakdown
 
-- `RewriteCond %{REQUEST_URI}` — matches feed and XML URLs
-- `RewriteCond %{HTTP_USER_AGENT} !FeedBurner` — excludes FeedBurner’s crawler
-- `RewriteRule ^(.*)$` — redirects everything else to Feedburner
-- `[L,R=301]` — use permanent (301) redirects for proper SEO and caching
+- `RewriteCond %{REQUEST_URI}`: matches feed and XML URLs
+- `RewriteCond %{HTTP_USER_AGENT} !FeedBurner`: excludes FeedBurner’s crawler
+- `RewriteRule ^(.*)$`: redirects everything else to Feedburner
+- `[L,R=301]`: use permanent (301) redirects for proper SEO and caching
 
-Use 301 (permanent) rather than 302 redirects — it preserves ranking signals and tells crawlers this is permanent.
+Use 301 (permanent) rather than 302 redirects: it preserves ranking signals and tells crawlers this is permanent.
 
 ## Testing the Rules
 
@@ -146,10 +146,10 @@ The `.htaccess` method remains more efficient for high-traffic sites since redir
 
 Google deprecated standalone Feedburner in 2021 and fully shut it down in 2024. If you’re still relying on it, migrate to:
 
-- **Substack** — built-in newsletter distribution and paid content support
-- **Ghost** — self-hosted or managed, native email lists and analytics
-- **Mailchimp** — RSS-to-email automation with list management
-- **Convertkit** — author-focused newsletter platform with automation
-- **Self-hosted** — RSS plugins like Mailpoet or direct email integrations
+- **Substack**: built-in newsletter distribution and paid content support
+- **Ghost**: self-hosted or managed, native email lists and analytics
+- **Mailchimp**: RSS-to-email automation with list management
+- **Convertkit**: author-focused newsletter platform with automation
+- **Self-hosted**: RSS plugins like Mailpoet or direct email integrations
 
 If you maintain Feedburner redirects for legacy reasons, test periodically to ensure they still function before visitors encounter breakage.

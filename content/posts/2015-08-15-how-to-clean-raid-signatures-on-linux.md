@@ -12,7 +12,7 @@ url: /how-to-clean-raid-signatures-on-linux/
 
 When you repurpose disks from one RAID array to another system, Linux keeps the old RAID metadata intact as a safety measure. This prevents accidental data corruption, but it also blocks you from reusing the disk until the signatures are cleared.
 
-RAID metadata isn’t stored in one place — it’s scattered across the disk by controllers, making cleanup trickier than a simple format. This guide walks through practical methods to identify and remove it, from safest to most aggressive.
+RAID metadata isn’t stored in one place: it’s scattered across the disk by controllers, making cleanup trickier than a simple format. This guide walks through practical methods to identify and remove it, from safest to most aggressive.
 
 **Warning:** These procedures destroy all data on the target disk. Verify the correct device name multiple times before proceeding. Use `lsblk`, `fdisk -l`, or `nvme list` to confirm.
 
@@ -57,7 +57,7 @@ mdadm --manage --stop /dev/md0
 mdadm --manage --stop /dev/md*
 ```
 
-This works cleanly when nothing is using the device. If you see “Device or resource busy,” the disk is still mounted or in use — unmount it and try again.
+This works cleanly when nothing is using the device. If you see “Device or resource busy,” the disk is still mounted or in use: unmount it and try again.
 
 ## Method 2: Erase Metadata with dmraid
 
@@ -135,7 +135,7 @@ mdadm --examine /dev/sdb
 
 Should show no superblock found.
 
-If metadata still appears, repeat the dd step with larger counts — some arrays store redundant copies.
+If metadata still appears, repeat the dd step with larger counts: some arrays store redundant copies.
 
 ## Reinitialize the Disk
 
@@ -176,7 +176,7 @@ dd if=/dev/zero of=$DEVICE bs=1M count=4 conv=fsync
 dd if=/dev/zero of=$DEVICE bs=1M seek=$((SECTORS/2048 - 4)) count=4 conv=fsync
 ```
 
-On very large disks (8TB+), increase the zero regions accordingly — use 8MB or 16MB instead of 4MB.
+On very large disks (8TB+), increase the zero regions accordingly: use 8MB or 16MB instead of 4MB.
 
 ## Troubleshooting
 

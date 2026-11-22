@@ -47,12 +47,12 @@ htlatex myfile.tex "html5,mathml,pic-align"
 
 Common options:
 
-- `html5` — Generate HTML5 output (recommended over older XHTML)
-- `mathml` — Use MathML for equation rendering (semantic, no JavaScript required)
-- `mathjax` — Use MathJax for equations (requires JavaScript, better for complex math)
-- `pic-align` — Align figures properly relative to text
-- `pic-m` — Convert figures to inline graphics
-- `charset=utf-8` — Specify character encoding explicitly
+- `html5`: Generate HTML5 output (recommended over older XHTML)
+- `mathml`: Use MathML for equation rendering (semantic, no JavaScript required)
+- `mathjax`: Use MathJax for equations (requires JavaScript, better for complex math)
+- `pic-align`: Align figures properly relative to text
+- `pic-m`: Convert figures to inline graphics
+- `charset=utf-8`: Specify character encoding explicitly
 
 ## Handling Figures
 

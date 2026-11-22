@@ -79,7 +79,7 @@ opam switch 5.1.1            # Activate a switch
 eval $(opam env)             # Load the switch environment
 ```
 
-Each switch is independent—packages installed in one switch don’t affect others. This is useful for testing across compiler versions or maintaining legacy projects.
+Each switch is independent: packages installed in one switch don’t affect others. This is useful for testing across compiler versions or maintaining legacy projects.
 
 ## Dune: The Build System
 

@@ -12,7 +12,7 @@ url: /hadoop-installation-tutorial-hadoop-2-x/
 
 Hadoop 2.x reached end-of-life in 2016. This guide covers setup for learning purposes and legacy system maintenance only. For production deployments, use Hadoop 3.x or later, which includes performance improvements, better YARN scheduling, HDFS erasure coding, and improved security. Cloud-managed options like AWS EMR, Google Dataproc, and Azure HDInsight eliminate most operational overhead.
 
-This guide walks through setting up a three-node cluster (hofstadter, snell, biot) with hofstadter as the NameNode/ResourceManager. Hadoop 2.x introduced YARN (Yet Another Resource Negotiator), decoupling resource management from MapReduce job scheduling — a significant architectural change from 1.x.
+This guide walks through setting up a three-node cluster (hofstadter, snell, biot) with hofstadter as the NameNode/ResourceManager. Hadoop 2.x introduced YARN (Yet Another Resource Negotiator), decoupling resource management from MapReduce job scheduling: a significant architectural change from 1.x.
 
 ## Prerequisites
 
@@ -129,7 +129,7 @@ hadoop version
 
 ## Configuration
 
-All configuration files live in `$HADOOP_COMMON_HOME/etc/hadoop/`. Edit `.xml` files directly with a text editor — do not rely on shell scripts to modify them, as manual edits may be lost.
+All configuration files live in `$HADOOP_COMMON_HOME/etc/hadoop/`. Edit `.xml` files directly with a text editor: do not rely on shell scripts to modify them, as manual edits may be lost.
 
 ### core-site.xml
 
@@ -206,7 +206,7 @@ Configure YARN resource management:
 </property>
 ```
 
-Adjust memory values based on actual available RAM. A common formula: (total_ram – 2GB_system_overhead) = `yarn.nodemanager.resource.memory-mb`. If a node has 8GB RAM, set this to 6144 MB.
+Adjust memory values based on actual available RAM. A common formula: (total_ram: 2GB_system_overhead) = `yarn.nodemanager.resource.memory-mb`. If a node has 8GB RAM, set this to 6144 MB.
 
 ### mapred-site.xml
 

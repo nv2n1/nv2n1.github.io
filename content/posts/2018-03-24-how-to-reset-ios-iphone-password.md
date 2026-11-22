@@ -22,7 +22,7 @@ This method works on iPhones running iOS 5 and later:
 
 **On your iPhone:**
 
-1.  Power off your device completely — hold the Side button (or Sleep/Wake button on older models) and slide to power off.
+1.  Power off your device completely: hold the Side button (or Sleep/Wake button on older models) and slide to power off.
 2.  Disconnect all cables.
 
 **Connect to your computer:**
@@ -51,7 +51,7 @@ This approach doesn’t require a computer with iTunes or Finder, making it fast
 
 ## Device Disabled After Multiple Wrong Attempts
 
-If you’ve entered the wrong passcode multiple times, your iPhone will display “iPhone is disabled.” Recovery mode is still your solution — follow the steps above to erase and restore it.
+If you’ve entered the wrong passcode multiple times, your iPhone will display “iPhone is disabled.” Recovery mode is still your solution: follow the steps above to erase and restore it.
 
 ## For iPhone 15 and Later Models
 

@@ -36,7 +36,7 @@ The `tree` command respects the system’s locale and character encoding setting
 
     1 directory, 3 files
 
-## Using –charset for Consistent Output
+## Using --charset for Consistent Output
 
 Force consistent output with the `--charset` flag:
 
@@ -45,7 +45,7 @@ tree --charset=ascii
 tree --charset=utf-8
 ```
 
-The ASCII option is more portable and reliable across heterogeneous environments—embedded systems, older terminals, CI/CD logs, and equipment with limited UTF-8 support will all render it correctly.
+The ASCII option is more portable and reliable across heterogeneous environments: embedded systems, older terminals, CI/CD logs, and equipment with limited UTF-8 support will all render it correctly.
 
 ## Making It Your Default
 
@@ -135,11 +135,11 @@ Package management issues often stem from stale caches. Run dnf clean all on Fed
 
 These commands are frequently used alongside the tools discussed in this article:
 
-- systemctl status service-name – Check if a service is running
-- journalctl -u service-name -f – Follow service logs in real time
-- rpm -qi package-name – Query installed package information
-- dnf history – View package transaction history
-- top or htop – Monitor system resource usage
+- systemctl status service-name: Check if a service is running
+- journalctl -u service-name -f: Follow service logs in real time
+- rpm -qi package-name: Query installed package information
+- dnf history: View package transaction history
+- top or htop: Monitor system resource usage
 
 ## Quick Verification
 

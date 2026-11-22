@@ -50,7 +50,7 @@ Check the current binary log position:
 SHOW MASTER STATUS;
 ```
 
-Note the `File` and `Position` values — you’ll need these when setting up replicas.
+Note the `File` and `Position` values: you’ll need these when setting up replicas.
 
 ## Replica server configuration
 
@@ -166,7 +166,7 @@ Check replica lag periodically:
 SHOW REPLICA STATUS\G
 ```
 
-Monitor `Seconds_Behind_Master` — if it’s consistently high, investigate slow queries or network latency. Use `Performance_Schema` tables for deeper analysis:
+Monitor `Seconds_Behind_Master`: if it’s consistently high, investigate slow queries or network latency. Use `Performance_Schema` tables for deeper analysis:
 
 ``` sql
 SELECT * FROM performance_schema.replication_applier_status_by_worker;
@@ -184,4 +184,4 @@ SELECT * FROM performance_schema.replication_applier_status_by_worker;
 SET GLOBAL replica_parallel_workers = 4;
 ```
 
-Run regular backups on replicas using `mysqldump` or `Percona XtraBackup` — replication is not a backup strategy.
+Run regular backups on replicas using `mysqldump` or `Percona XtraBackup`: replication is not a backup strategy.

@@ -14,7 +14,7 @@ C++ remains a foundational language for systems programming and performance-crit
 
 ## Zero-Cost Abstraction
 
-This is C++’s defining characteristic. You get high-level language features—classes, templates, standard library containers—without paying runtime overhead. The compiler eliminates abstraction layers during compilation. This means you can write clean, maintainable code without sacrificing the performance of hand-optimized C.
+This is C++’s defining characteristic. You get high-level language features (classes, templates, standard library containers) without paying runtime overhead. The compiler eliminates abstraction layers during compilation. This means you can write clean, maintainable code without sacrificing the performance of hand-optimized C.
 
 Example: A `std::vector` provides dynamic arrays with bounds checking and memory management, but generates machine code nearly identical to a manually-managed C array. Template instantiation happens at compile-time, not runtime.
 
@@ -46,7 +46,7 @@ These domains need performance, hardware control, and predictable behavior. C++ 
 
 Microcontrollers, IoT devices, and embedded Linux systems often run C++. You get:
 
-- Static linking—deploy a single binary without runtime dependencies
+- Static linking: deploy a single binary without runtime dependencies
 - Minimal memory footprint with compile-time polymorphism (templates instead of virtual functions when appropriate)
 - Fine-grained control over what gets linked in
 

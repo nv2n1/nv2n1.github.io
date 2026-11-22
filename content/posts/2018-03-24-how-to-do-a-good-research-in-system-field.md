@@ -28,7 +28,7 @@ Before diving into specific research, understand the modern Linux landscape:
 
 **Read primary sources.** The kernel source code, man pages (`man 7 kernel-namespaces`, `man 2 syscalls`), and RFC documents are authoritative. Linux mailing lists and GitHub issues often contain context that blog posts skip. Familiarize yourself with `git log` and `git blame` to trace why code decisions were made.
 
-**Test edge cases.** Systems research often fails at the boundaries—high concurrency, memory pressure, disk full scenarios, or network latency. Use tools like `stress-ng` for load testing, `tc` (traffic control) for network simulation, and `fallocate` or `dd` to fill disks deliberately.
+**Test edge cases.** Systems research often fails at the boundaries: high concurrency, memory pressure, disk full scenarios, or network latency. Use tools like `stress-ng` for load testing, `tc` (traffic control) for network simulation, and `fallocate` or `dd` to fill disks deliberately.
 
 ## Documentation and Security Practices
 
@@ -36,17 +36,17 @@ Before diving into specific research, understand the modern Linux landscape:
 
 **Prioritize security in your test environment.** Don’t test privilege escalation or vulnerability patches in shared systems. Use dedicated VMs, keep them isolated, and destroy them after research. Use `sudo` sparingly and audit its usage with `sudo journalctl SYSLOG_IDENTIFIER=sudo`.
 
-**Containerize test workloads.** Podman or Docker isolates your research from the host, making cleanup trivial and results reproducible. Version control your container definitions—store Dockerfiles and compose files in git.
+**Containerize test workloads.** Podman or Docker isolates your research from the host, making cleanup trivial and results reproducible. Version control your container definitions: store Dockerfiles and compose files in git.
 
 ## Useful Tools and Commands
 
-- `perf` – CPU profiling, flame graphs, and event tracing
-- `bpftrace` – Write custom kernel probes in minutes
-- `systemd-analyze` – Debug boot performance and service dependencies
-- `strace` – Still useful for system call tracing, especially with `-e trace=` filters
-- `lsof` – Find open files and network connections
-- `vmstat`, `iostat`, `mpstat` – Quick system metrics snapshots
+- `perf`: CPU profiling, flame graphs, and event tracing
+- `bpftrace`: Write custom kernel probes in minutes
+- `systemd-analyze`: Debug boot performance and service dependencies
+- `strace`: Still useful for system call tracing, especially with `-e trace=` filters
+- `lsof`: Find open files and network connections
+- `vmstat`, `iostat`, `mpstat`: Quick system metrics snapshots
 
 ## Staying Current
 
-Systems research evolves as Linux does. Follow Linux kernel news through `lwn.net`, subscribe to distribution release notes, and monitor security advisories via `linux-distros-security@lists.linux.dev` or your vendor’s channels. Test changes in staging environments first—never assume research findings transfer directly to production.
+Systems research evolves as Linux does. Follow Linux kernel news through `lwn.net`, subscribe to distribution release notes, and monitor security advisories via `linux-distros-security@lists.linux.dev` or your vendor’s channels. Test changes in staging environments first: never assume research findings transfer directly to production.

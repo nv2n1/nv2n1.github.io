@@ -72,9 +72,9 @@ driver.delete_all_cookies()  # Clear all cookies for the domain
 
 For frequent cookie management, consider:
 
-- **Cookie Editor** — Visual cookie manager with import/export
-- **uBlock Origin** — Blocks cookies by default with granular control
-- **Privacy Badger** — Automatically handles tracking cookies
+- **Cookie Editor**: Visual cookie manager with import/export
+- **uBlock Origin**: Blocks cookies by default with granular control
+- **Privacy Badger**: Automatically handles tracking cookies
 
 ### Browser-level cookie settings
 

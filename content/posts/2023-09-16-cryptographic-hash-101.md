@@ -10,7 +10,7 @@ canonical: /cryptographic-hash-101/
 url: /cryptographic-hash-101/
 ---
 
-A cryptographic hash function is a mathematical algorithm that takes any input—a file, password, transaction, or string of any length—and produces a fixed-length output called a “hash” or “digest.” The output is always the same size regardless of input size. SHA-256, for example, always produces a 256-bit (64 hexadecimal character) output.
+A cryptographic hash function is a mathematical algorithm that takes any input (a file, password, transaction, or string of any length) and produces a fixed-length output called a “hash” or “digest.” The output is always the same size regardless of input size. SHA-256, for example, always produces a 256-bit (64 hexadecimal character) output.
 
 ## Core Properties
 
@@ -18,13 +18,13 @@ A cryptographic hash function is a mathematical algorithm that takes any input�
 The same input always produces identical output. This is foundational: if hashing isn’t deterministic, it’s not cryptographically secure.
 
 **One-Way (Preimage Resistance)**
-Given a hash, you cannot feasibly compute the original input. This is computationally irreversible—trying to reverse it requires brute force across an astronomically large keyspace.
+Given a hash, you cannot feasibly compute the original input. This is computationally irreversible: trying to reverse it requires brute force across an astronomically large keyspace.
 
 **Avalanche Effect (Sensitivity)**
 A single bit change in input produces a completely different hash. Change one character in a file, and the hash becomes unrecognizable. This property catches tampering immediately.
 
 **Collision Resistance**
-Two different inputs should never produce the same hash. A strong hash function makes finding collisions computationally infeasible. This is critical for security—if collisions exist, an attacker could forge transactions or files.
+Two different inputs should never produce the same hash. A strong hash function makes finding collisions computationally infeasible. This is critical for security: if collisions exist, an attacker could forge transactions or files.
 
 ## Common Cryptographic Hash Functions
 
@@ -54,12 +54,12 @@ sha256sum -c file.sha256
 Hash passwords with a salt (random data) so identical passwords produce different hashes. Never store plaintext passwords. Modern approach uses Argon2 or bcrypt with salt:
 
 ``` bash
-# Don't use plain SHA-256 for passwords—use bcrypt or Argon2
+# Don't use plain SHA-256 for passwords: use bcrypt or Argon2
 python3 -c "import bcrypt; print(bcrypt.hashpw(b'password', bcrypt.gensalt()).decode())"
 ```
 
 **Blockchain and Distributed Systems**
-Bitcoin uses SHA-256 to secure transactions and create the immutable ledger. Changing a single transaction requires recalculating every subsequent block’s hash—computationally prohibitive. Ethereum uses Keccak-256 similarly.
+Bitcoin uses SHA-256 to secure transactions and create the immutable ledger. Changing a single transaction requires recalculating every subsequent block’s hash: computationally prohibitive. Ethereum uses Keccak-256 similarly.
 
 **Certificate Pinning and TLS**
 Hash values of public certificates are pinned in applications to prevent MITM attacks. If a certificate changes, the hash changes, triggering an alert.
@@ -96,7 +96,7 @@ Systems like IPFS use content hashes as immutable identifiers. Files are stored 
 
 - Use **SHA-256 or SHA-3** for new systems requiring cryptographic security.
 - Use **BLAKE3** for performance-critical applications.
-- Use **Argon2** or **bcrypt** for password hashing—never plain SHA.
+- Use **Argon2** or **bcrypt** for password hashing: never plain SHA.
 - Always use **HMAC** for authenticated messages requiring both integrity and authenticity.
 - Include **salt** when hashing passwords; regenerate per password.
 - Verify hash values over **separate, secure channels** to avoid man-in-the-middle attacks.

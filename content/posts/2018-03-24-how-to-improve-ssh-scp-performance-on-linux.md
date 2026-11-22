@@ -34,9 +34,9 @@ ssh -c aes128-ctr user@hostA iperf3 -c hostA -t 10
 
 Recommended ciphers in order of speed:
 
-- **aes128-ctr** — fastest, hardware-accelerated, ideal for most cases
-- **aes256-ctr** — still fast with AES-NI, better security margin
-- **chacha20-poly1305@openssh.com** — excellent for systems without AES-NI, competitive with AES on modern CPUs
+- **aes128-ctr**: fastest, hardware-accelerated, ideal for most cases
+- **aes256-ctr**: still fast with AES-NI, better security margin
+- **chacha20-poly1305@openssh.com**: excellent for systems without AES-NI, competitive with AES on modern CPUs
 
 Configure in `~/.ssh/config`:
 

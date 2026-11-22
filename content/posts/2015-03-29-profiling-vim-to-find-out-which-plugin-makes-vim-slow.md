@@ -81,7 +81,7 @@ This defers loading until the command is explicitly called or a mapped key is pr
 
 ## Profile Runtime Operations
 
-Startup profiling only catches initialization costs. To find what slows Vim during actual use—like when saving files, switching buffers, or triggering completions—use runtime profiling:
+Startup profiling only catches initialization costs. To find what slows Vim during actual use (like when saving files, switching buffers, or triggering completions) use runtime profiling:
 
 ```vim
 :profile start profile.log
@@ -119,7 +119,7 @@ Example output:
 - **TOTAL TIME** shows which function chains consumed the most time overall (including nested calls).
 - **SELF TIME** reveals where the CPU actually spent time without nested calls.
 
-In this example, `SyntasticMake()` took 127 seconds—a linting plugin doing expensive work on save. The solution is to either disable it for that filetype or replace it with a faster async alternative.
+In this example, `SyntasticMake()` took 127 seconds: a linting plugin doing expensive work on save. The solution is to either disable it for that filetype or replace it with a faster async alternative.
 
 ## Narrowing Down the Culprit
 

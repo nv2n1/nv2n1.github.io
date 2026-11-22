@@ -10,7 +10,7 @@ canonical: /how-to-cat-a-text-file-out-from-a-tar-archive-without-having-to-extr
 url: /how-to-cat-a-text-file-out-from-a-tar-archive-without-having-to-extracting-it/
 ---
 
-You don’t need to fully extract a `.tar` archive just to read one file inside it. The `tar` command can stream individual files directly to stdout, which saves time and disk space—especially useful for large archives.
+You don’t need to fully extract a `.tar` archive just to read one file inside it. The `tar` command can stream individual files directly to stdout, which saves time and disk space, especially useful for large archives.
 
 ## Basic syntax
 
@@ -42,7 +42,7 @@ tar -xOf archive.tar.zst path/to/file.txt
 tar -xJOf archive.tar.xz path/to/file.txt
 ```
 
-The `-z`, `-j`, `-J` and other compression flags are often optional—`tar` can auto-detect compression in many cases with `tar -xOf` alone—but being explicit is safer in scripts and guarantees consistent behavior across systems.
+The `-z`, `-j`, `-J` and other compression flags are often optional (`tar` can auto-detect compression in many cases with `tar -xOf` alone), but being explicit is safer in scripts and guarantees consistent behavior across systems.
 
 ## Finding files in the archive first
 
@@ -126,7 +126,7 @@ Streaming saves both time and disk I/O, especially with large archives:
 - No temporary disk space needed for extraction
 - Useful in CI/CD pipelines where you need to inspect archive contents without bloating the runner
 
-However, sequential access has limits. You can’t randomly seek within a gzip stream efficiently—tar must read from the start. For large archives where you need multiple files, full extraction to disk may actually be faster overall since you’ll avoid reading through archive headers repeatedly.
+However, sequential access has limits. You can’t randomly seek within a gzip stream efficiently: tar must read from the start. For large archives where you need multiple files, full extraction to disk may actually be faster overall since you’ll avoid reading through archive headers repeatedly.
 
 ## Limitations and edge cases
 

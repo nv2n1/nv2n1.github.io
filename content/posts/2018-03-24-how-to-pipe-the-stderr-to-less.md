@@ -18,7 +18,7 @@ When you need to page through error output from a command, you’ll run into the
 make 2>&1 | less
 ```
 
-The `2>&1` redirects stderr (fd 2) to stdout (fd 1), merging both streams. This is the most common use case — you want to see everything in one pageable view.
+The `2>&1` redirects stderr (fd 2) to stdout (fd 1), merging both streams. This is the most common use case: you want to see everything in one pageable view.
 
 ### View only stderr
 

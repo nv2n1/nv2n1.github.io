@@ -27,7 +27,7 @@ mkdir -p ~/.screen
 chmod 700 ~/.screen
 ```
 
-The `700` permissions (read, write, execute for owner only) are important — screen enforces strict permissions on its socket directory for security reasons and will refuse to work if permissions are too loose.
+The `700` permissions (read, write, execute for owner only) are important: screen enforces strict permissions on its socket directory for security reasons and will refuse to work if permissions are too loose.
 
 ## Configuring screen to use the custom directory
 
@@ -75,11 +75,11 @@ You should see socket files like `S-username` (a directory) or individual socket
 
 ## Troubleshooting
 
-**“Socket directory must have 700 permissions”** — Make sure you ran `chmod 700 ~/.screen`. Screen will not work with world-readable or group-readable socket directories.
+**“Socket directory must have 700 permissions”**: Make sure you ran `chmod 700 ~/.screen`. Screen will not work with world-readable or group-readable socket directories.
 
-**“Cannot connect to existing session”** — If you set `SCREENDIR` in one terminal but not another, screen won’t find your existing sessions. Ensure the variable is set consistently in all shells where you want to access screen.
+**“Cannot connect to existing session”**: If you set `SCREENDIR` in one terminal but not another, screen won’t find your existing sessions. Ensure the variable is set consistently in all shells where you want to access screen.
 
-**Permission denied when reattaching** — If you’re switching users or the directory permissions changed, recreate it: `rm -rf ~/.screen && mkdir -p ~/.screen && chmod 700 ~/.screen`.
+**Permission denied when reattaching**: If you’re switching users or the directory permissions changed, recreate it: `rm -rf ~/.screen && mkdir -p ~/.screen && chmod 700 ~/.screen`.
 
 ## Alternative: Using tmux
 

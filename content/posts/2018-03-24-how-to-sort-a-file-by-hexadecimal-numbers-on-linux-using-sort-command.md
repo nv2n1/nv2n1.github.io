@@ -20,7 +20,7 @@ Given a file with hex addresses:
     200000020   reg1
     20400001000 status
 
-Running `sort -n` will misorder these because “2” comes before “4” alphabetically, placing `200000020` after entries starting with “4”—the opposite of the correct numeric order.
+Running `sort -n` will misorder these because “2” comes before “4” alphabetically, placing `200000020` after entries starting with “4”: the opposite of the correct numeric order.
 
 ## Solution: Convert Hex to Decimal Before Sorting
 
@@ -103,7 +103,7 @@ time perl -ane 'printf "%d %s\n", hex($F[0]), $_' huge_file.txt | sort -n | cut 
 
 ## Edge Cases
 
-**Leading zeros in hex values** — `strtonum()` and `hex()` both handle them correctly:
+**Leading zeros in hex values**: `strtonum()` and `hex()` both handle them correctly:
 
 ``` bash
 awk '{print strtonum("0x" $1), $0}' file.txt
@@ -111,7 +111,7 @@ awk '{print strtonum("0x" $1), $0}' file.txt
 # 0xFF also converts to 255
 ```
 
-**Mixed case hex** (A-F vs a-f) — both work fine:
+**Mixed case hex** (A-F vs a-f): both work fine:
 
 ``` bash
 # All valid
@@ -120,7 +120,7 @@ strtonum("0xabcd")   # 43981
 strtonum("0xAbCd")   # 43981
 ```
 
-**Negative hex values** — if you need to sort signed hex, use `strtonum()` with explicit sign handling or convert differently depending on your bit-width interpretation.
+**Negative hex values**: if you need to sort signed hex, use `strtonum()` with explicit sign handling or convert differently depending on your bit-width interpretation.
 
 ## 2026 Comprehensive Guide: Best Practices
 

@@ -68,12 +68,12 @@ This provides detailed information about block distribution and replication stat
 
 The `-stat` command supports several useful format specifiers beyond `%r`:
 
-- `%b` — file size in bytes
-- `%n` — filename
-- `%o` — block size
-- `%r` — replication factor
-- `%u` — owner
-- `%g` — group
+- `%b`: file size in bytes
+- `%n`: filename
+- `%o`: block size
+- `%r`: replication factor
+- `%u`: owner
+- `%g`: group
 
 Combine them for custom output:
 

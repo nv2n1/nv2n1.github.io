@@ -166,12 +166,12 @@ If the dry-run succeeds, apply for real. If it reports failures, check that `-p`
 
 ## Common issues
 
-**“patch: \*\*** malformed patch”\*\* — The file isn’t a valid diff. Verify it was created with `diff -u` and hasn’t been corrupted.
+**“patch: \*\*** malformed patch”\*\*: The file isn’t a valid diff. Verify it was created with `diff -u` and hasn’t been corrupted.
 
-**“Hunk FAILED”** — The patch doesn’t match the target file. This happens when the file has been modified since the patch was created. Use `--verbose` to see what `patch` is trying to match, or use `fuzz` to be more lenient:
+**“Hunk FAILED”**: The patch doesn’t match the target file. This happens when the file has been modified since the patch was created. Use `--verbose` to see what `patch` is trying to match, or use `fuzz` to be more lenient:
 
 ``` bash
 patch -p1 --fuzz=2 < file.patch
 ```
 
-**“patch: \*\*** can’t find file to patch”\*\* — The `-p` level is wrong. Test with `--dry-run` and adjust the number of path components.
+**“patch: \*\*** can’t find file to patch”\*\*: The `-p` level is wrong. Test with `--dry-run` and adjust the number of path components.

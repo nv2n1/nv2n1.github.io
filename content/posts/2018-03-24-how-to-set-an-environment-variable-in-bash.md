@@ -95,7 +95,7 @@ DEBUG=1 ./my-script.sh
 NODE_ENV=production PORT=3000 node server.js
 ```
 
-This is the preferred pattern for passing configuration to scripts and daemons — the variable doesn’t pollute your shell environment.
+This is the preferred pattern for passing configuration to scripts and daemons: the variable doesn’t pollute your shell environment.
 
 ## Special Variable Syntax
 
@@ -162,16 +162,16 @@ echo "Parent: $MY_VAR"
 # Parent: parent
 ```
 
-This is a common gotcha when trying to set variables from inside a pipeline or subshell — the parent shell won’t see the change.
+This is a common gotcha when trying to set variables from inside a pipeline or subshell: the parent shell won’t see the change.
 
 ## Quick Reference
 
-- `VAR=value` — Set for current shell
-- `export VAR=value` — Set and export to children
-- `VAR=value command` — Set for single command only
-- `~/.bashrc` — Persist per-user
-- `/etc/profile.d/` — Persist system-wide
-- `unset VAR` — Remove variable
+- `VAR=value`: Set for current shell
+- `export VAR=value`: Set and export to children
+- `VAR=value command`: Set for single command only
+- `~/.bashrc`: Persist per-user
+- `/etc/profile.d/`: Persist system-wide
+- `unset VAR`: Remove variable
 
 ## Integer and Array Variables
 

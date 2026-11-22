@@ -10,7 +10,7 @@ canonical: /how-to-disable-and-enable-laptop-keyboard-in-linux/
 url: /how-to-disable-and-enable-laptop-keyboard-in-linux/
 ---
 
-When you dock a laptop with an external USB keyboard, the built-in keyboard becomes a nuisance—it’s too easy to brush keys while typing and trigger unwanted input. Rather than disabling the keyboard at the BIOS level or physically disconnecting it, you can use the `xinput` tool to disable and re-enable it from within your Linux session.
+When you dock a laptop with an external USB keyboard, the built-in keyboard becomes a nuisance: it’s too easy to brush keys while typing and trigger unwanted input. Rather than disabling the keyboard at the BIOS level or physically disconnecting it, you can use the `xinput` tool to disable and re-enable it from within your Linux session.
 
 ## Prerequisites
 
@@ -75,7 +75,7 @@ Replace `<ID>` with your laptop keyboard’s ID. For example:
 xinput float 10
 ```
 
-The `float` command detaches the device from its master, effectively disabling it. You should immediately stop receiving input from the laptop keyboard. Test by pressing keys—they won’t register.
+The `float` command detaches the device from its master, effectively disabling it. You should immediately stop receiving input from the laptop keyboard. Test by pressing keys: they won’t register.
 
 ## Re-enabling the Keyboard
 
@@ -158,4 +158,4 @@ You can bind these scripts to keyboard shortcuts in your desktop environment for
 
 ## Alternatives
 
-If you prefer permanent solutions, check your laptop’s BIOS settings—many allow disabling internal keyboards entirely. Alternatively, use your desktop environment’s accessibility settings under “Physical Keyboard” if available, though `xinput` is more reliable and reversible.
+If you prefer permanent solutions, check your laptop’s BIOS settings: many allow disabling internal keyboards entirely. Alternatively, use your desktop environment’s accessibility settings under “Physical Keyboard” if available, though `xinput` is more reliable and reversible.

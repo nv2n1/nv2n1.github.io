@@ -14,7 +14,7 @@ GNOME Shell’s clean, minimal design works well for many users, but the extensi
 
 ## AlternateTab
 
-Changes Alt-Tab behavior from application-grouped switching to per-window switching — more like traditional window managers. If GNOME’s default grouping feels disruptive, this restores predictable window cycling.
+Changes Alt-Tab behavior from application-grouped switching to per-window switching: more like traditional window managers. If GNOME’s default grouping feels disruptive, this restores predictable window cycling.
 
 Installation via package manager:
 
@@ -27,7 +27,7 @@ Alternatively, grab it from <a href="https://extensions.gnome.org" rel="nofollow
 
 ## Dash to Dock
 
-Converts the Activities overview dash into a persistent side dock — useful if you frequently launch applications and want faster access than clicking Activities repeatedly. Works especially well on ultrawide displays where you have horizontal space to spare.
+Converts the Activities overview dash into a persistent side dock: useful if you frequently launch applications and want faster access than clicking Activities repeatedly. Works especially well on ultrawide displays where you have horizontal space to spare.
 
 The dock auto-hides by default but supports various positioning options (left, right, bottom, top). Configure visibility behavior, icon sizing, and app preview behavior through the extension preferences. You can also set it to show only when the Activities overview is visible, or always show when you’re on a specific workspace.
 
@@ -58,7 +58,7 @@ Alt+F2, then type 'r' and press Enter
 
 GNOME removed clipboard history years ago, so extensions fill the gap. Clipboard Indicator maintains a searchable clipboard history accessible from the top panel. Configure retention limits (number of entries and time-based expiration) through preferences.
 
-Useful if you’re frequently copying multiple items in sequence — search history instead of cycling through repeated pastes. This is particularly handy during code reviews or documentation work where you’re juggling multiple snippets.
+Useful if you’re frequently copying multiple items in sequence: search history instead of cycling through repeated pastes. This is particularly handy during code reviews or documentation work where you’re juggling multiple snippets.
 
 ## Caffeine
 
@@ -102,7 +102,7 @@ gsettings get org.gnome.shell enabled-extensions
 
 ## Compatibility and Performance
 
-Always verify GNOME version compatibility before installing — not all extensions support every release. Check the extension page on extensions.gnome.org for version requirements. Extensions that worked in GNOME 44 may break in GNOME 45 or later due to API changes.
+Always verify GNOME version compatibility before installing: not all extensions support every release. Check the extension page on extensions.gnome.org for version requirements. Extensions that worked in GNOME 44 may break in GNOME 45 or later due to API changes.
 
 Review what permissions each extension requests. Disable unused extensions to minimize performance impact and reduce system noise. Extensions run in the same process as GNOME Shell, so a misbehaving extension can degrade the entire desktop environment.
 
@@ -112,6 +112,6 @@ Test extensions one at a time if you’re troubleshooting stability issues. If G
 gsettings set org.gnome.shell enabled-extensions "[]"
 ```
 
-Then selectively re-enable them to identify the culprit. After identifying a problematic extension, report the issue on its GitHub repository or the GNOME Extensions website — maintainers often fix compatibility problems quickly.
+Then selectively re-enable them to identify the culprit. After identifying a problematic extension, report the issue on its GitHub repository or the GNOME Extensions website: maintainers often fix compatibility problems quickly.
 
 Monitor extension maintenance status on extensions.gnome.org. Active extensions with recent updates are more likely to remain compatible with future GNOME releases. Abandoned extensions are liabilities; they may break unexpectedly and leave you with an unstable desktop.

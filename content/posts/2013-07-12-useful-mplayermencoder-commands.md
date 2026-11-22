@@ -167,11 +167,11 @@ find . -name "*.avi" | parallel ffmpeg -i {} -c:v libx264 -crf 23 -c:a aac {.}.m
 
 ## Common Codec Reference
 
-- **H.264**: `libx264` – widely compatible, good compression
-- **H.265/HEVC**: `libx265` – better compression, less compatible
-- **VP9**: `libvpx-vp9` – open source, YouTube compatible
-- **Audio AAC**: `aac` – widely supported
-- **Audio Opus**: `libopus` – modern, efficient
+- **H.264**: `libx264`: widely compatible, good compression
+- **H.265/HEVC**: `libx265`: better compression, less compatible
+- **VP9**: `libvpx-vp9`: open source, YouTube compatible
+- **Audio AAC**: `aac`: widely supported
+- **Audio Opus**: `libopus`: modern, efficient
 
 For production work, prefer H.264 with AAC audio in MP4 container for maximum compatibility.
 

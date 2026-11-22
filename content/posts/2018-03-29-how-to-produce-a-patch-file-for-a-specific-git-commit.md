@@ -80,7 +80,7 @@ git am --abort
 
 ## Using git send-email for mailing lists
 
-Projects using email-based code review—primarily the Linux kernel and related projects—typically send patches via `git send-email`. First, configure your SMTP settings:
+Projects using email-based code review (primarily the Linux kernel and related projects) typically send patches via `git send-email`. First, configure your SMTP settings:
 
 ``` bash
 git config --global sendemail.smtpServer smtp.gmail.com
@@ -119,7 +119,7 @@ git apply --stat 0001-*.patch
 
 ## When to use patch files vs. pull requests
 
-Pull requests remain the standard on GitHub, GitLab, and Gitea—most teams prefer the integrated review and CI workflows. However, use patch files when:
+Pull requests remain the standard on GitHub, GitLab, and Gitea: most teams prefer the integrated review and CI workflows. However, use patch files when:
 
 - Submitting to projects with email-based patch management (Linux kernel, LLVM, musl libc)
 - Exchanging code without shared repository access

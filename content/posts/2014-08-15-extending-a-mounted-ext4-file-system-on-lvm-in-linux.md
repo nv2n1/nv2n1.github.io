@@ -68,7 +68,7 @@ Confirm the volume group now shows available space:
 vgdisplay vg
 ```
 
-Check the `Free PE / Size` line—this is what you can allocate.
+Check the `Free PE / Size` line: this is what you can allocate.
 
 ## Step 3: Extend the Logical Volume and Filesystem
 

@@ -108,7 +108,7 @@ If you encounter problems during installation, check these common solutions:
 
 ## Verification Steps
 
-After installation, verify everything is working correctly by checking the installed version and running basic functionality tests. Most command-line tools respond to the –version or -v flag to display their version information.
+After installation, verify everything is working correctly by checking the installed version and running basic functionality tests. Most command-line tools respond to the --version or -v flag to display their version information.
 
 ## Keeping Your Installation Updated
 

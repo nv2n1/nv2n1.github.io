@@ -20,17 +20,17 @@ The Widget Logic plugin was the historical standard, but it’s no longer active
 
 WordPress provides conditional tags to detect the current page context:
 
-- `is_single()` — Single post page
-- `is_page()` — Static page
-- `is_home()` — Blog home
-- `is_archive()` — Archive page (category, tag, author, custom post type)
-- `is_category()` — Category archive
-- `is_tag()` — Tag archive
-- `is_search()` — Search results
-- `is_404()` — 404 error page
-- `is_user_logged_in()` — Current user is authenticated
-- `is_singular( 'post' )` — Single post (more specific than `is_single()`)
-- `is_front_page()` — Site homepage
+- `is_single()`: Single post page
+- `is_page()`: Static page
+- `is_home()`: Blog home
+- `is_archive()`: Archive page (category, tag, author, custom post type)
+- `is_category()`: Category archive
+- `is_tag()`: Tag archive
+- `is_search()`: Search results
+- `is_404()`: 404 error page
+- `is_user_logged_in()`: Current user is authenticated
+- `is_singular( 'post' )`: Single post (more specific than `is_single()`)
+- `is_front_page()`: Site homepage
 
 ## Method 1: Filtering Sidebars at Widget Render Time
 
@@ -227,9 +227,9 @@ Use your browser’s developer tools to inspect the HTML comment.
 
 ## Where to Place Your Code
 
-- **Must-use plugin** (recommended): `wp-content/mu-plugins/widget-conditions.php` — loads before regular plugins
-- **Theme functions**: `wp-content/themes/your-theme/functions.php` — loads with theme
-- **Custom plugin**: Standard plugin in `wp-content/plugins/` — easier to maintain separately
+- **Must-use plugin** (recommended): `wp-content/mu-plugins/widget-conditions.php`: loads before regular plugins
+- **Theme functions**: `wp-content/themes/your-theme/functions.php`: loads with theme
+- **Custom plugin**: Standard plugin in `wp-content/plugins/`: easier to maintain separately
 
 ## Key Advantages
 

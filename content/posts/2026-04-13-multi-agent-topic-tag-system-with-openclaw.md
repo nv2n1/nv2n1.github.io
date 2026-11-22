@@ -56,10 +56,10 @@ Configure topic-based isolation in OpenClaw configuration:
 
 Key settings explained:
 
-- **dmPolicy: “pairing”** — New users must pair via QR code or invite link
-- **groupPolicy: “open”** — The OpenClaw bot can join and work in the group
-- **topics.policy: “allowlist”** — Only specified topics are allowed for agent operations
-- **topics.allowlist** — Array of allowed topic names for your agents
+- **dmPolicy: “pairing”**: New users must pair via QR code or invite link
+- **groupPolicy: “open”**: The OpenClaw bot can join and work in the group
+- **topics.policy: “allowlist”**: Only specified topics are allowed for agent operations
+- **topics.allowlist**: Array of allowed topic names for your agents
 
 #### Step 4: Create Topics in Telegram Group
 
@@ -73,11 +73,11 @@ Manually create the topics you specified in OpenClaw configuration:
 
 Each OpenClaw agent is configured to work in a specific topic. This is done in the agent’s configuration:
 
-- **\#general** — General conversations and coordination
-- **\#blog** — Blog post creation and updates
-- **\#academy** — Academy and hub management tasks
-- **\#news** — News articles and announcements
-- **\#analytics** — Statistics, reporting, and monitoring
+- **\#general**: General conversations and coordination
+- **\#blog**: Blog post creation and updates
+- **\#academy**: Academy and hub management tasks
+- **\#news**: News articles and announcements
+- **\#analytics**: Statistics, reporting, and monitoring
 
 When an agent sends a message to its assigned topic, it only responds to messages in that topic. Messages from other topics are ignored by default.
 

@@ -64,9 +64,9 @@ gs -q -dNOPAUSE -dBATCH -dSAFER \
 
 Replace `300x300` with your desired DPI. The `tiff32nc` device produces 32-bit uncompressed TIFF; alternatives include:
 
-- `tiff24nc` – 24-bit color
-- `tiff32nc` – 32-bit with alpha channel
-- `tiffg4` – black and white (CCITT Group 4 compression)
+- `tiff24nc`: 24-bit color
+- `tiff32nc`: 32-bit with alpha channel
+- `tiffg4`: black and white (CCITT Group 4 compression)
 
 ## LibreOffice Impress Alternative
 

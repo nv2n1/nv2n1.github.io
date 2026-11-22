@@ -58,7 +58,7 @@ Fixed incorrect refcounting logic in the usbtv driver that could cause premature
 
 ### Connection state management
 
-Fixed a regression in `hci_encrypt_cfm()` that caused incorrect connection state updates. The condition for updating connection state was inverted—the status should be updated only when no status is currently set. This fixes connection state flapping issues reported with Bluetooth headsets.
+Fixed a regression in `hci_encrypt_cfm()` that caused incorrect connection state updates. The condition for updating connection state was inverted: the status should be updated only when no status is currently set. This fixes connection state flapping issues reported with Bluetooth headsets.
 
 ### Encryption handling consolidation
 

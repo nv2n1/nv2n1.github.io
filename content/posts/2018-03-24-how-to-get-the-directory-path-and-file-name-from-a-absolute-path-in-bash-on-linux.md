@@ -22,7 +22,7 @@ dirname "$p"    # Output: /foo/bar
 basename "$p"   # Output: baz.txt
 ```
 
-Note the quotes around `$p` — this is important if your paths contain spaces or special characters.
+Note the quotes around `$p`: this is important if your paths contain spaces or special characters.
 
 ## Practical examples
 

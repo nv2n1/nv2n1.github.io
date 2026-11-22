@@ -10,7 +10,7 @@ canonical: /how-to-check-whether-a-file-of-a-given-path-is-a-block-device-in-pyt
 url: /how-to-check-whether-a-file-of-a-given-path-is-a-block-device-in-python/
 ---
 
-In Linux, everything is a file—including hardware devices. Block devices like disks, SSDs, and USB drives appear as files in /dev and handle I/O in fixed-size blocks. You need reliable ways to detect them in your Python scripts, especially when automating storage operations.
+In Linux, everything is a file, including hardware devices. Block devices like disks, SSDs, and USB drives appear as files in /dev and handle I/O in fixed-size blocks. You need reliable ways to detect them in your Python scripts, especially when automating storage operations.
 
 ## Using pathlib (Recommended)
 

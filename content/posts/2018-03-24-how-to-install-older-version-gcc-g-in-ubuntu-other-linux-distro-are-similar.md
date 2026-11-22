@@ -35,7 +35,7 @@ You can install as many versions as needed. The `multilib` packages (`gcc-9-mult
 
 ## Register versions with update-alternatives
 
-Use `update-alternatives` to create a switchable set of symlinks. The priority number (last argument) determines which version is default—higher numbers take precedence:
+Use `update-alternatives` to create a switchable set of symlinks. The priority number (last argument) determines which version is default: higher numbers take precedence:
 
 ``` bash
 sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 90
@@ -90,7 +90,7 @@ sudo apt-get update
 sudo apt-get install gcc-7 g++-7
 ```
 
-Alternatively, compile GCC from source if the version isn’t packaged. Avoid creating manual symlinks in `/usr/bin` as shown in older guides—`update-alternatives` handles this correctly and tracks changes properly.
+Alternatively, compile GCC from source if the version isn’t packaged. Avoid creating manual symlinks in `/usr/bin` as shown in older guides: `update-alternatives` handles this correctly and tracks changes properly.
 
 ## Project-specific approach
 

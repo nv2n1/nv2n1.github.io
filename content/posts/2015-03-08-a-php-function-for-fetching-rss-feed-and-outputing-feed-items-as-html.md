@@ -118,12 +118,12 @@ output_rss_feed('https://example.com/feed.xml', 10, true, true, 200, 2);
 
 **Parameters:**
 
-- `$feed_url` – URL to the RSS feed
-- `$item_count` – Number of items to display (default: 10)
-- `$show_description` – Include item descriptions (default: true)
-- `$show_pubdate` – Include publication dates (default: true)
-- `$description_length` – Character limit for descriptions (default: 200)
-- `$cache_hours` – Cache duration in hours (default: 1)
+- `$feed_url`: URL to the RSS feed
+- `$item_count`: Number of items to display (default: 10)
+- `$show_description`: Include item descriptions (default: true)
+- `$show_pubdate`: Include publication dates (default: true)
+- `$description_length`: Character limit for descriptions (default: 200)
+- `$cache_hours`: Cache duration in hours (default: 1)
 
 ## Handling Different Feed Formats
 

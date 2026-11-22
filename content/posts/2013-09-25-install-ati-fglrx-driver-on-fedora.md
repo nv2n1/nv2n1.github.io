@@ -10,7 +10,7 @@ canonical: /install-ati-fglrx-driver-on-fedora/
 url: /install-ati-fglrx-driver-on-fedora/
 ---
 
-The proprietary fglrx driver reached end-of-life in 2015 and is incompatible with current Fedora releases. For modern AMD GPUs, use AMDGPU—AMD’s actively maintained open-source driver that supports Wayland, current kernel versions, and both desktop and compute workloads.
+The proprietary fglrx driver reached end-of-life in 2015 and is incompatible with current Fedora releases. For modern AMD GPUs, use AMDGPU: AMD’s actively maintained open-source driver that supports Wayland, current kernel versions, and both desktop and compute workloads.
 
 ## GPU Compatibility
 
@@ -267,7 +267,7 @@ lspci | grep -i radeon
 lsmod | grep radeon
 ```
 
-No additional installation is needed. The module loads automatically at boot. Basic 3D acceleration works out-of-the-box, though performance and feature support are limited. For better performance and modern features, install AMDGPU instead—it’s backward compatible with GCN-era cards.
+No additional installation is needed. The module loads automatically at boot. Basic 3D acceleration works out-of-the-box, though performance and feature support are limited. For better performance and modern features, install AMDGPU instead: it’s backward compatible with GCN-era cards.
 
 ## Why Not fglrx?
 

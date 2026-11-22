@@ -16,7 +16,7 @@ Proof of Stake is a consensus mechanism that secures blockchain networks by havi
 
 **Staking and Validators**
 
-To validate transactions, you must lock up a minimum amount of the network’s native token. Ethereum requires 32 ETH per validator. This stake ensures validators have genuine financial risk—they can’t act maliciously without losing money.
+To validate transactions, you must lock up a minimum amount of the network’s native token. Ethereum requires 32 ETH per validator. This stake ensures validators have genuine financial risk: they can’t act maliciously without losing money.
 
 **Selection and Block Proposal**
 
@@ -39,7 +39,7 @@ The severity varies by offense. Minor infractions might result in 1% stake loss;
 
 **Accessibility**: Liquid staking protocols (Lido, Rocket Pool, Eigenlayer) let you stake fractional amounts without running infrastructure. Staking pools distribute risk across hundreds or thousands of participants.
 
-**Economic Security**: The network’s security is directly tied to the asset’s value. An attacker must control a majority stake—which would crash the token’s price, destroying their own collateral. This makes 51% attacks economically irrational.
+**Economic Security**: The network’s security is directly tied to the asset’s value. An attacker must control a majority stake, which would crash the token’s price, destroying their own collateral. This makes 51% attacks economically irrational.
 
 ## Disadvantages and Real Challenges
 
@@ -47,7 +47,7 @@ The severity varies by offense. Minor infractions might result in 1% stake loss;
 
 **Implementation Complexity**: PoS protocols are significantly more complex than PoW. Edge cases in validator selection, slashing logic, and fork choice rules have caused real financial losses. Inexperienced solo stakers occasionally trigger involuntary slashing.
 
-**Centralization of Infrastructure**: A handful of providers (Coinbase, Kraken, Lido) now control 30%+ of total staked ETH. This creates operational risk—a single provider’s outage affects network finality. It also enables potential regulatory capture since large providers are identifiable and regulated.
+**Centralization of Infrastructure**: A handful of providers (Coinbase, Kraken, Lido) now control 30%+ of total staked ETH. This creates operational risk: a single provider’s outage affects network finality. It also enables potential regulatory capture since large providers are identifiable and regulated.
 
 **“Nothing at Stake” Risk**: On some designs, validators could costlessly attest to competing chains during forks. Modern systems solve this with strict slashing conditions, but the problem requires careful protocol design.
 
@@ -55,7 +55,7 @@ The severity varies by offense. Minor infractions might result in 1% stake loss;
 
 **Restaking and Dual Security**
 
-Restaking (pioneered by EigenLayer) lets validators use already-staked ETH to secure additional services—bridges, oracles, sidechains—without depositing more capital. This multiplies the economic security of established networks across the ecosystem. It also creates new slashing vectors, as restaked funds face penalties from multiple protocols simultaneously.
+Restaking (pioneered by EigenLayer) lets validators use already-staked ETH to secure additional services (bridges, oracles, sidechains) without depositing more capital. This multiplies the economic security of established networks across the ecosystem. It also creates new slashing vectors, as restaked funds face penalties from multiple protocols simultaneously.
 
 **Shared Security Models**
 
@@ -63,7 +63,7 @@ Newer chains no longer build validator networks from scratch. Cosmos and Polkado
 
 **Institutional Infrastructure**
 
-Bitcoin spot ETFs and Ethereum staking derivatives (stETH, rETH) attracted large institutional capital. Professional staking operators now provide multi-signature custody, insurance, and compliance—moving the ecosystem toward traditional financial infrastructure patterns. This improves reliability but increases counterparty risk.
+Bitcoin spot ETFs and Ethereum staking derivatives (stETH, rETH) attracted large institutional capital. Professional staking operators now provide multi-signature custody, insurance, and compliance: moving the ecosystem toward traditional financial infrastructure patterns. This improves reliability but increases counterparty risk.
 
 **Solo Staking Still Viable**
 
@@ -75,7 +75,7 @@ Before staking, understand:
 
 - **Lock-up periods**: Unstaking takes weeks. You won’t access your principal quickly.
 - **Tax implications**: Staking rewards are typically taxable income in most jurisdictions.
-- **Hardware requirements**: A home validator needs 16GB RAM, SSD storage, and stable internet. Bandwidth matters—connectivity failures trigger penalties.
+- **Hardware requirements**: A home validator needs 16GB RAM, SSD storage, and stable internet. Bandwidth matters: connectivity failures trigger penalties.
 - **MEV risks**: Validators can extract value from transaction ordering. Centralized protocols that hide this create hidden liability.
 
 Proof of Stake has proven durable across billions in total value staked. It remains more efficient and practical than Proof of Work for most use cases, though both mechanisms have legitimate trade-offs depending on network priorities.

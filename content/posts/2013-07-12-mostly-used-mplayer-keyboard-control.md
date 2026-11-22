@@ -75,7 +75,7 @@ MPlayer uses a fully configurable keyboard control layer. Most of these shortcut
 **( )**
 : Adjust audio balance (favor left or right channel).
 
-**+ –**
+**+ -**
 : Adjust audio delay by ±0.1 seconds.
 
 ## Audio and Subtitle Tracks

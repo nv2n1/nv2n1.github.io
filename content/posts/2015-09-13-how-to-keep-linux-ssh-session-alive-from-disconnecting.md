@@ -10,7 +10,7 @@ canonical: /how-to-keep-linux-ssh-session-alive-from-disconnecting/
 url: /how-to-keep-linux-ssh-session-alive-from-disconnecting/
 ---
 
-SSH connections dropping during idle periods is a persistent issue in production environments. Both client and server configurations provide built-in keep-alive mechanisms designed specifically for this problem. Stop running `while true; do uptime; sleep 30; done` — there are proper solutions.
+SSH connections dropping during idle periods is a persistent issue in production environments. Both client and server configurations provide built-in keep-alive mechanisms designed specifically for this problem. Stop running `while true; do uptime; sleep 30; done`: there are proper solutions.
 
 ## Client-side configuration
 
@@ -22,7 +22,7 @@ Add to `~/.ssh/config`:
         ServerAliveInterval 60
         ServerAliveCountMax 3
 
-`ServerAliveInterval 60` sends a keep-alive packet every 60 seconds. `ServerAliveCountMax 3` means the connection drops after 3 missed responses (180 seconds total), preventing hung sessions. Adjust the interval based on your firewall’s idle timeout — common values are 60, 120, or 300 seconds.
+`ServerAliveInterval 60` sends a keep-alive packet every 60 seconds. `ServerAliveCountMax 3` means the connection drops after 3 missed responses (180 seconds total), preventing hung sessions. Adjust the interval based on your firewall’s idle timeout: common values are 60, 120, or 300 seconds.
 
 For a single connection without editing config:
 
@@ -42,7 +42,7 @@ Individual user configs in `~/.ssh/config` override these system-wide settings.
 
 ## Server-side configuration
 
-Server-side configuration is the better approach in most environments — it works regardless of client configuration and requires no per-user setup.
+Server-side configuration is the better approach in most environments: it works regardless of client configuration and requires no per-user setup.
 
 Edit `/etc/ssh/sshd_config`:
 
@@ -63,7 +63,7 @@ Verify the syntax without reloading:
 sudo sshd -t
 ```
 
-Existing connections retain their original parameters — only new connections pick up the new settings.
+Existing connections retain their original parameters: only new connections pick up the new settings.
 
 ## Choosing intervals based on network conditions
 
@@ -73,11 +73,11 @@ Existing connections retain their original parameters — only new connections p
 
 **Long-running commands**: Keep-alive messages don’t interfere with active sessions. The interval only matters during idle time.
 
-**Jump hosts/bastion servers**: Configure keep-alive on both the bastion’s sshd and your client config — multiple network hops compound connection instability.
+**Jump hosts/bastion servers**: Configure keep-alive on both the bastion’s sshd and your client config: multiple network hops compound connection instability.
 
 ## Troubleshooting
 
-**Connection still drops despite configuration**: Your firewall or NAT gateway may have a lower idle timeout than your SSH keep-alive interval. Lower the interval below the gateway’s timeout — if it’s 5 minutes, use 4 minutes (240 seconds).
+**Connection still drops despite configuration**: Your firewall or NAT gateway may have a lower idle timeout than your SSH keep-alive interval. Lower the interval below the gateway’s timeout: if it’s 5 minutes, use 4 minutes (240 seconds).
 
 **TCPKeepAlive vs ServerAliveInterval**: `TCPKeepAlive` (enabled by default) relies on OS-level TCP keep-alive, which varies across networks. `ServerAliveInterval` sends SSH-level packets and is more reliable. Use `ServerAliveInterval` for predictable results across different environments.
 
@@ -99,7 +99,7 @@ Alternatively, use tcpdump to verify packets are actually being sent:
 sudo tcpdump -i any 'tcp port 22' -n
 ```
 
-Look for traffic during periods of inactivity — packets at your configured interval indicate keep-alive is working.
+Look for traffic during periods of inactivity: packets at your configured interval indicate keep-alive is working.
 
 ## Production recommendations
 

@@ -23,12 +23,12 @@ Use Emacs’s built-in package manager:
 
 In the package list buffer:
 
-- **i** — mark for install
-- **d** — mark for delete
-- **U** — mark all upgradable packages
-- **x** — execute marked actions
-- **g** — refresh the package list
-- **h** — show help
+- **i**: mark for install
+- **d**: mark for delete
+- **U**: mark all upgradable packages
+- **x**: execute marked actions
+- **g**: refresh the package list
+- **h**: show help
 
 ## Upgrade from Elisp
 
@@ -143,15 +143,15 @@ For more control over package versions, `straight.el` uses git directly instead 
 ;; Lockfile at ~/.emacs.d/straight/versions/default.el
 ```
 
-This gives you reproducible builds — every machine gets the exact same package versions from the lockfile.
+This gives you reproducible builds: every machine gets the exact same package versions from the lockfile.
 
 ## Quick Reference
 
-- `M-x list-packages` → **U** → **x** — Interactive upgrade
-- `package-refresh-contents` — Update package list
-- `package-install-selected-packages` — Install/update selected packages
-- `auto-package-update` — Automatic weekly upgrades
-- `straight.el` — Reproducible git-based package management
+- `M-x list-packages` → **U** → **x**: Interactive upgrade
+- `package-refresh-contents`: Update package list
+- `package-install-selected-packages`: Install/update selected packages
+- `auto-package-update`: Automatic weekly upgrades
+- `straight.el`: Reproducible git-based package management
 
 ## Cleaning Up Old Package Versions
 

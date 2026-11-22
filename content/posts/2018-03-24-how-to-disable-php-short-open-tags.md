@@ -117,7 +117,7 @@ If you inherit a large codebase with short tags enabled everywhere, consider:
 
 3.  **AST-based tools**: Use tools like PHP-Parser for safer refactoring of complex codebases
 
-Always verify your application works after disabling short open tags—this surfaces incompatible code before it reaches production.
+Always verify your application works after disabling short open tags: this surfaces incompatible code before it reaches production.
 
 ## Additional Tips and Best Practices
 

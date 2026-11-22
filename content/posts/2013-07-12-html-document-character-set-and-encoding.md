@@ -29,7 +29,7 @@ Modern HTML5 documents should always declare UTF-8 encoding:
 </html>
 ```
 
-This declaration allows you to type most characters directly in your source file. You can write © or € directly without entity references, and your editor will handle the underlying byte representation. UTF-8 is universal—virtually every modern text editor, server, and browser handles it correctly.
+This declaration allows you to type most characters directly in your source file. You can write © or € directly without entity references, and your editor will handle the underlying byte representation. UTF-8 is universal: virtually every modern text editor, server, and browser handles it correctly.
 
 ## When to Use Character Entities
 
@@ -37,11 +37,11 @@ Character entities serve specific purposes. Don’t use them reflexively; use th
 
 **Always use entities for reserved HTML characters:**
 
-- `&lt;` — less than: `<`
-- `&gt;` — greater than: `>`
-- `&amp;` — ampersand: `&`
-- `&quot;` — quotation mark: `"`
-- `&apos;` — apostrophe: `'`
+- `&lt;`: less than: `<`
+- `&gt;`: greater than: `>`
+- `&amp;`: ampersand: `&`
+- `&quot;`: quotation mark: `"`
+- `&apos;`: apostrophe: `'`
 
 These prevent accidental syntax conflicts. For example, `<script>` inside text content must be `&lt;script&gt;` to avoid being interpreted as a tag.
 
@@ -84,9 +84,9 @@ Hexadecimal is generally preferred because Unicode code points are documented in
 
 **Online resources:**
 
-- <a href="https://developer.mozilla.org/en-US/docs/Glossary/Entity" rel="nofollow noopener" target="_blank">MDN Web Docs HTML Entity Reference</a> — comprehensive named entity listing
-- <a href="https://www.unicode.org/cgi-bin/UnicodeSearch.pl" rel="nofollow noopener" target="_blank">Unicode.org Character Database</a> — official lookups with detailed properties
-- <a href="https://unicode-table.com/" rel="nofollow noopener" target="_blank">Unicode Character Code Lookup</a> — quick reference tool with copy-paste
+- <a href="https://developer.mozilla.org/en-US/docs/Glossary/Entity" rel="nofollow noopener" target="_blank">MDN Web Docs HTML Entity Reference</a>: comprehensive named entity listing
+- <a href="https://www.unicode.org/cgi-bin/UnicodeSearch.pl" rel="nofollow noopener" target="_blank">Unicode.org Character Database</a>: official lookups with detailed properties
+- <a href="https://unicode-table.com/" rel="nofollow noopener" target="_blank">Unicode Character Code Lookup</a>: quick reference tool with copy-paste
 
 **In your editor:**
 
@@ -122,7 +122,7 @@ printf '\U0001f600'               # Emoji in bash
 
 ## Special Cases
 
-**Zero-width characters** like `&#8203;` (zero-width space) and `&#8205;` (zero-width joiner) can be useful for controlling text wrapping and emoji sequences, but are easy to accidentally insert—use them deliberately.
+**Zero-width characters** like `&#8203;` (zero-width space) and `&#8205;` (zero-width joiner) can be useful for controlling text wrapping and emoji sequences, but are easy to accidentally insert: use them deliberately.
 
 **Control characters** like tab (`&#9;`) or newline (`&#10;`) should rarely appear in HTML; most white space handling is better done with CSS.
 

@@ -10,7 +10,7 @@ canonical: /release-notes-for-linux-v0-95a/
 url: /release-notes-for-linux-v0-95a/
 ---
 
-This document covers the Linux v0.95a root diskette release from March 17, 1992. It documents the changes between v0.95/0.12 and v0.95a. For context on the base 0.95 release, read RELNOTES-0.95 first — this only covers the delta.
+This document covers the Linux v0.95a root diskette release from March 17, 1992. It documents the changes between v0.95/0.12 and v0.95a. For context on the base 0.95 release, read RELNOTES-0.95 first: this only covers the delta.
 
 ## Changes to the Root Diskette
 
@@ -40,15 +40,15 @@ Multiple utilities moved from `/usr/bin` to `/bin` to align with the Linux Direc
 - `fdisk` improved to correctly report extended partitions
 - `/dev` directory completed more thoroughly than previous releases
 - `/etc/issue` and `/etc/motd` made more informative
-- `chgrp` removed — `chown` could replicate its functionality
+- `chgrp` removed: `chown` could replicate its functionality
 
 **Installation support**
 
 A new `/INSTALL` directory was added with three shell scripts to simplify hard drive installation:
 
-- `mktree` — creates the directory tree on a mounted device
-- `mkdev` — generates standard device files in the target `/dev` directory
-- `install` — copies root diskette programs to a mounted device
+- `mktree`: creates the directory tree on a mounted device
+- `mkdev`: generates standard device files in the target `/dev` directory
+- `install`: copies root diskette programs to a mounted device
 
 These were typically invoked as `<script_name> /mnt`.
 
@@ -56,18 +56,18 @@ These were typically invoked as `<script_name> /mnt`.
 
 The following changes were being considered for future versions:
 
-- **Shared libraries** — in alpha testing to save additional space on the root floppy
-- **mtools** — generic DOS/Windows file access utilities
-- **Improved fdisk** — a single unified tool that wouldn’t require knowing drive geometry
-- **Enhanced shell** — fixing backspace issues, adding job control, integrating GNU readline
-- **Smaller utilities** — particularly seeking a compact text editor
-- **Refined installation** — better documentation and more robust installation scripts
+- **Shared libraries**: in alpha testing to save additional space on the root floppy
+- **mtools**: generic DOS/Windows file access utilities
+- **Improved fdisk**: a single unified tool that wouldn’t require knowing drive geometry
+- **Enhanced shell**: fixing backspace issues, adding job control, integrating GNU readline
+- **Smaller utilities**: particularly seeking a compact text editor
+- **Refined installation**: better documentation and more robust installation scripts
 
 ## Historical Context
 
 This release marked early standardization efforts in Linux. Discussions on `alt.os.linux` and the Linux Standards group drove many changes. The focus on fitting functional tools onto single floppy disks demonstrates the storage constraints of early 1990s systems. Moving critical utilities to `/bin` and system tools to `/etc` established patterns still used in modern Linux directory layouts.
 
-The questions and feedback routes mentioned — posting to `alt.os.linux` or mailing maintainers directly — reflected the era before centralized package management and bug tracking systems.
+The questions and feedback routes mentioned (posting to `alt.os.linux` or mailing maintainers directly) reflected the era before centralized package management and bug tracking systems.
 
 ## 2026 Comprehensive Guide: Best Practices
 

@@ -20,7 +20,7 @@ Start by installing the core HPLIP packages:
 sudo dnf install hplip hplip-gui hpijs
 ```
 
-On older CentOS 7 systems, use `yum` instead of `dnf`. HPLIP may prompt you to install additional dependencies — allow these installations to proceed. Some printer models require proprietary plugins that won’t function without the complete package set.
+On older CentOS 7 systems, use `yum` instead of `dnf`. HPLIP may prompt you to install additional dependencies: allow these installations to proceed. Some printer models require proprietary plugins that won’t function without the complete package set.
 
 ### Install printer plugins
 
@@ -110,7 +110,7 @@ If you encounter problems during installation, check these common solutions:
 
 ## Verification Steps
 
-After installation, verify everything is working correctly by checking the installed version and running basic functionality tests. Most command-line tools respond to the –version or -v flag to display their version information.
+After installation, verify everything is working correctly by checking the installed version and running basic functionality tests. Most command-line tools respond to the --version or -v flag to display their version information.
 
 ## Keeping Your Installation Updated
 
@@ -120,11 +120,11 @@ Regularly update your system to receive security patches and bug fixes. On Fedor
 
 These related commands are often used alongside the tools discussed in this article:
 
-- man command-name – Read the manual page for any command
-- which command-name – Find the location of an executable
-- rpm -qa or dpkg -l – List installed packages
-- journalctl -u service-name – Check service logs
-- ss -tulpn – List listening ports and services
+- man command-name: Read the manual page for any command
+- which command-name: Find the location of an executable
+- rpm -qa or dpkg -l: List installed packages
+- journalctl -u service-name: Check service logs
+- ss -tulpn: List listening ports and services
 
 ## Quick Reference
 

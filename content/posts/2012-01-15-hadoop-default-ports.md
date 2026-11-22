@@ -88,7 +88,7 @@ When running Hadoop behind a firewall or NAT, expose these port ranges:
 
 - **Clients to cluster**: 8020 (HDFS), 8032 (YARN RM)
 - **Web UI access**: 9870 (Namenode), 8088 (ResourceManager), 19888 (Job History)
-- **Cluster-internal communication**: 9866-9867 (Datanode), 8040 (NodeManager) — restrict to cluster subnet only
+- **Cluster-internal communication**: 9866-9867 (Datanode), 8040 (NodeManager): restrict to cluster subnet only
 
 For production deployments, bind IPC ports to specific interfaces rather than `0.0.0.0`. Bind web UIs to `0.0.0.0` or a management network interface.
 

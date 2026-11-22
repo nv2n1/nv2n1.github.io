@@ -32,7 +32,7 @@ Combine both in one command:
 git checkout -b feature-name
 ```
 
-In Git 2.23+, the `switch` command is the preferred approach—it’s cleaner and more explicit than `checkout`, which conflates multiple operations:
+In Git 2.23+, the `switch` command is the preferred approach: it’s cleaner and more explicit than `checkout`, which conflates multiple operations:
 
 ``` bash
 git switch -c feature-name
@@ -183,7 +183,7 @@ git push origin --all
 
 ## Deleting Branches
 
-Delete a local branch (safe—only works if merged):
+Delete a local branch (safe: only works if merged):
 
 ``` bash
 git branch -d feature-name

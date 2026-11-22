@@ -10,7 +10,7 @@ canonical: /squeezing-space-in-latex-systutorials-qa/
 url: /squeezing-space-in-latex-systutorials-qa/
 ---
 
-When you’re fighting page limits — conference submissions, journal requirements, or just fitting content on a poster — reducing LaTeX’s default spacing is essential. Here are the practical approaches, from gentle to aggressive.
+When you’re fighting page limits (conference submissions, journal requirements, or just fitting content on a poster) reducing LaTeX’s default spacing is essential. Here are the practical approaches, from gentle to aggressive.
 
 ## Basic Spacing Adjustments
 
@@ -75,7 +75,7 @@ Switching fonts can reduce overall document size. `times` or `newtxtext` are den
 \setstretch{0.95}  % Slightly reduced line spacing
 ```
 
-Avoid setting line spacing below 0.9 unless your reviewers won’t notice — it damages readability.
+Avoid setting line spacing below 0.9 unless your reviewers won’t notice: it damages readability.
 
 ## Additional Space Savers
 
@@ -102,7 +102,7 @@ Avoid setting line spacing below 0.9 unless your reviewers won’t notice — it
 
 ## Reality Check
 
-Most journals and conferences have explicit formatting guidelines. Check before aggressively squeezing space — some enforce minimum margins or line spacing that will override your settings. If you’re 1–2 pages over, targeted spacing reduction works. If you’re 5+ pages over, you likely need to cut content instead.
+Most journals and conferences have explicit formatting guidelines. Check before aggressively squeezing space: some enforce minimum margins or line spacing that will override your settings. If you’re 1–2 pages over, targeted spacing reduction works. If you’re 5+ pages over, you likely need to cut content instead.
 
 The Cambridge University guide linked in older versions of this article is no longer maintained, but the principles remain: every \setlength change compounds. Test incrementally and preserve document readability.
 

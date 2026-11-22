@@ -16,7 +16,7 @@ A cryptocurrency is a digital currency secured by cryptography and typically bui
 
 **Store of Value & Currency**
 
-Bitcoin (BTC) remains the dominant example, designed as a hedge against inflation with a hard cap of 21 million coins. It functions as “digital gold” — useful for long-term holding rather than frequent transactions. Other coins like Monero prioritize privacy if regulatory constraints aren’t a concern.
+Bitcoin (BTC) remains the dominant example, designed as a hedge against inflation with a hard cap of 21 million coins. It functions as “digital gold”: useful for long-term holding rather than frequent transactions. Other coins like Monero prioritize privacy if regulatory constraints aren’t a concern.
 
 **Smart Contract Platforms**
 
@@ -42,11 +42,11 @@ Users control two keys: a public key (your wallet address, safe to share) and a 
 
 **Consensus Mechanisms**
 
-Proof of Work (PoW) — Bitcoin’s approach — requires computational work to validate blocks. It’s secure but energy-intensive.
+Proof of Work (PoW) (Bitcoin’s approach) requires computational work to validate blocks. It’s secure but energy-intensive.
 
-Proof of Stake (PoS) — used by Ethereum since 2022 — requires validators to lock up cryptocurrency as collateral. Misbehavior results in financial penalties (slashing). Much more energy-efficient than PoW.
+Proof of Stake (PoS) (used by Ethereum since 2022) requires validators to lock up cryptocurrency as collateral. Misbehavior results in financial penalties (slashing). Much more energy-efficient than PoW.
 
-Delegated Proof of Stake (DPoS) — used by Solana — lets token holders vote for validators, reducing the number of nodes while maintaining decentralization.
+Delegated Proof of Stake (DPoS) (used by Solana) lets token holders vote for validators, reducing the number of nodes while maintaining decentralization.
 
 ## The 2026 Landscape
 
@@ -60,7 +60,7 @@ Spot Bitcoin and Ethereum ETFs launched in the US (2024-2025) and are now held b
 
 **Real-World Assets (RWAs)**
 
-Traditional assets — treasury bonds, commodities, real estate — are increasingly tokenized on blockchains. This enables 24/7 trading, fractional ownership, and settlement without traditional intermediaries. Major financial institutions are experimenting with RWA platforms.
+Traditional assets (treasury bonds, commodities, real estate) are increasingly tokenized on blockchains. This enables 24/7 trading, fractional ownership, and settlement without traditional intermediaries. Major financial institutions are experimenting with RWA platforms.
 
 ## Advantages
 
@@ -99,7 +99,7 @@ If you’re exploring crypto for actual use cases rather than speculation:
 - Start with small amounts on established networks (Bitcoin, Ethereum)
 - Use reputable custodians (Kraken, Coinbase) or hardware wallets for longer-term holding
 - For payments or trading, prefer stablecoins to reduce volatility
-- Understand tax reporting in your jurisdiction — most countries now require it
+- Understand tax reporting in your jurisdiction: most countries now require it
 - Avoid leverage trading and complex derivatives until you understand liquidation mechanics
 
 Cryptocurrency has matured from speculation into legitimate financial infrastructure. It’s no longer purely an alternative to traditional finance; it’s increasingly embedded within it.

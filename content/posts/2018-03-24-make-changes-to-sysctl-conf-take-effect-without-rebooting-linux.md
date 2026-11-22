@@ -86,7 +86,7 @@ sudo sysctl -p 2>&1 | grep -i error
 
 - Use `/etc/sysctl.d/` for custom parameters rather than editing `/etc/sysctl.conf` directly. This keeps your changes separate from distribution defaults.
 - Name files descriptively: `/etc/sysctl.d/50-network-tuning.conf`
-- Document why you’re changing parameters—kernel tuning often requires explanation for future maintainers.
+- Document why you’re changing parameters: kernel tuning often requires explanation for future maintainers.
 - Test changes in a non-production environment first, especially for networking or memory parameters that can impact system stability.
 
 ## Quick Reference

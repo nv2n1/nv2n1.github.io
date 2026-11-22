@@ -34,11 +34,11 @@ window.open(url, "popup", "width=800,height=600,left=100,top=100");
 
 Common window feature parameters include:
 
-- `width` and `height` — dimensions in pixels
-- `left` and `top` — position on screen
-- `menubar`, `toolbar`, `location`, `status` — show/hide browser UI elements (values: `yes` or `no`)
-- `scrollbars` — enable scrollbars if content exceeds window size
-- `resizable` — allow user to resize the window
+- `width` and `height`: dimensions in pixels
+- `left` and `top`: position on screen
+- `menubar`, `toolbar`, `location`, `status`: show/hide browser UI elements (values: `yes` or `no`)
+- `scrollbars`: enable scrollbars if content exceeds window size
+- `resizable`: allow user to resize the window
 
 **Important note:** Modern browsers ignore many of these parameters for security reasons. Parameters like `modal` and `alwaysRaised` have no effect in current browser versions. The `width` and `height` parameters still work but respect minimum dimensions for usability.
 
@@ -104,9 +104,9 @@ window.addEventListener("message", (event) => {
 
 For most use cases, consider these alternatives before using `window.open()`:
 
-- **Links with `target="_blank"`** — simpler, more accessible, respects user preferences
-- **Fetch API or `XMLHttpRequest`** — when you need background requests
-- **`window.location`** — when you want to navigate the current window
+- **Links with `target="_blank"`**: simpler, more accessible, respects user preferences
+- **Fetch API or `XMLHttpRequest`**: when you need background requests
+- **`window.location`**: when you want to navigate the current window
 
 If you just need to open a link in a new tab, using an anchor element is usually the better choice:
 

@@ -14,7 +14,7 @@ Cron is a minimal execution environment. Unlike your interactive shell, cron run
 
 ## The Problem
 
-If your cron job depends on environment variables—custom `PATH` entries, API keys, database credentials, or application-specific settings—the job will fail silently or behave unexpectedly. You might see `command not found` errors or applications failing because they can’t locate dependencies.
+If your cron job depends on environment variables (custom `PATH` entries, API keys, database credentials, or application-specific settings), the job will fail silently or behave unexpectedly. You might see `command not found` errors or applications failing because they can’t locate dependencies.
 
 ``` bash
 # This won't work if my-command needs variables from your shell profile
@@ -37,7 +37,7 @@ For bash-specific environments, you can source `.bashrc` instead:
 
 ## Better Approaches
 
-Sourcing your entire profile works but isn’t always ideal—it can slow down execution and load unnecessary variables.
+Sourcing your entire profile works but isn’t always ideal: it can slow down execution and load unnecessary variables.
 
 **Set variables directly in crontab:**
 

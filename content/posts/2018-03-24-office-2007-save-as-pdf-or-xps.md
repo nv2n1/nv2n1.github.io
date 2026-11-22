@@ -40,9 +40,9 @@ The XPS format (XML Paper Specification) was Microsoft’s alternative to PDF bu
 
 **Office 2007 is obsolete.** If you’re still using it, consider upgrading to a modern Office version or switching to free alternatives:
 
-- **LibreOffice** — Full PDF export support built-in, works across Windows, macOS, and Linux
-- **Microsoft 365** — Current Office subscription with native PDF export and superior formatting
-- **Google Workspace** — Web-based alternative with PDF download options
+- **LibreOffice**: Full PDF export support built-in, works across Windows, macOS, and Linux
+- **Microsoft 365**: Current Office subscription with native PDF export and superior formatting
+- **Google Workspace**: Web-based alternative with PDF download options
 
 Modern Office versions (2010 and later) include native PDF export without requiring add-ins.
 

@@ -136,8 +136,8 @@ conntrack -L
 
 This iptables-based approach avoids VPN encryption overhead, making it faster for high-throughput scenarios. However:
 
-- No encryption — all traffic is sent in plaintext
-- No authentication — relies on network isolation
+- No encryption: all traffic is sent in plaintext
+- No authentication: relies on network isolation
 - Requires manual route management at scale
 - Gateway becomes a single point of failure per cluster
 

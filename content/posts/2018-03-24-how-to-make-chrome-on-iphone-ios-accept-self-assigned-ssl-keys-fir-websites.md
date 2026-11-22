@@ -14,7 +14,7 @@ Chrome on iOS has a fundamental limitation: it cannot accept self-signed SSL cer
 
 ## Why This Limitation Exists
 
-iOS enforces strict security policies where all apps—including Chrome, Safari, and Firefox—must use Apple’s certificate validation framework. This means the browser can only trust certificates signed by CAs already installed in the iOS system keychain. Self-signed certificates and internal CAs will always be rejected at the system level, regardless of the app you’re using.
+iOS enforces strict security policies where all apps (including Chrome, Safari, and Firefox) must use Apple’s certificate validation framework. This means the browser can only trust certificates signed by CAs already installed in the iOS system keychain. Self-signed certificates and internal CAs will always be rejected at the system level, regardless of the app you’re using.
 
 ## Practical Solutions
 

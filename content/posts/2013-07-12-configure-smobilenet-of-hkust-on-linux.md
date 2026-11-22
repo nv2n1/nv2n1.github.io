@@ -32,7 +32,7 @@ Configure the following parameters in NetworkManager:
 
 **Certificate:**
 
-- CA certificate: (None) — ignore any certificate warnings
+- CA certificate: (None): ignore any certificate warnings
 
 ## Configuring via GUI
 
@@ -85,7 +85,7 @@ Navigate to “Edit a connection” → “Add” → “Wi-Fi”, then enter th
 - Check that PEAP is set to “Automatic” and inner auth is “MSCHAPv2”
 
 **CA certificate warning:**
-This is expected behavior with sMobileNet. The warning is safe to ignore — the connection will still function properly.
+This is expected behavior with sMobileNet. The warning is safe to ignore: the connection will still function properly.
 
 **No PEAP option available:**
 Ensure you have the required packages installed:

@@ -20,8 +20,8 @@ On Linux, the convention is simple: **0 means success, 1–255 means failure**. 
 
 System error codes are declared in:
 
-- `/usr/include/asm-generic/errno-base.h` — base errors (1–34)
-- `/usr/include/asm-generic/errno.h` — extended errors
+- `/usr/include/asm-generic/errno-base.h`: base errors (1–34)
+- `/usr/include/asm-generic/errno.h`: extended errors
 
 View them directly:
 
@@ -245,11 +245,11 @@ Note: `GetLastError()` is thread-local and gets cleared by many operations, so c
 
 When writing portable applications:
 
-1.  **Don’t assume error codes match** — EACCES (13 on Unix) is `ERROR_ACCESS_DENIED` (5 on Windows)
-2.  **Test on both platforms** — error handling logic may differ significantly
-3.  **Use wrapper libraries** — Boost.System (C++), `errno` module (Python), or custom abstraction layers normalize error codes
-4.  **Document platform-specific behavior** — if your code handles errors differently on each platform, make it explicit
-5.  **Prefer exceptions over error codes** — languages like Python handle this better than C-style errno
+1.  **Don’t assume error codes match**: EACCES (13 on Unix) is `ERROR_ACCESS_DENIED` (5 on Windows)
+2.  **Test on both platforms**: error handling logic may differ significantly
+3.  **Use wrapper libraries**: Boost.System (C++), `errno` module (Python), or custom abstraction layers normalize error codes
+4.  **Document platform-specific behavior**: if your code handles errors differently on each platform, make it explicit
+5.  **Prefer exceptions over error codes**: languages like Python handle this better than C-style errno
 
 For shell scripts targeting both systems, use conditional logic based on the platform:
 

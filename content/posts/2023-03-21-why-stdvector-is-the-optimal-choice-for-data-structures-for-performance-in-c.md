@@ -10,7 +10,7 @@ canonical: /why-stdvector-is-the-optimal-choice-for-data-structures-for-performa
 url: /why-stdvector-is-the-optimal-choice-for-data-structures-for-performance-in-c/
 ---
 
-std::vector is the right default choice for almost every container need in C++. It’s the foundation of high-performance applications—game engines, financial systems, data processing pipelines—because it aligns with how modern CPUs actually work.
+std::vector is the right default choice for almost every container need in C++. It’s the foundation of high-performance applications (game engines, financial systems, data processing pipelines), because it aligns with how modern CPUs actually work.
 
 ## Cache Locality Drives Performance
 
@@ -26,7 +26,7 @@ A simple iteration benchmark on modern hardware shows std::vector can be 10-20x 
 
 ## Amortized O(1) Growth
 
-When you push_back() to a full vector, it reallocates—doubling capacity, copying elements to the new block. This sounds expensive, but it happens rarely enough that the amortized cost per insertion is still O(1). If you insert n elements, you do O(n) total work, not O(n²).
+When you push_back() to a full vector, it reallocates: doubling capacity, copying elements to the new block. This sounds expensive, but it happens rarely enough that the amortized cost per insertion is still O(1). If you insert n elements, you do O(n) total work, not O(n²).
 
 The growth factor matters. Most standard libraries use factor 2, which gives you ~log(n) reallocations for n insertions. Some embedded or resource-constrained environments tune this differently, but 2 is the safe default.
 
@@ -42,7 +42,7 @@ for (auto& source : data_source) {
 }
 ```
 
-Calling reserve() once prevents repeated allocations. If you don’t know the final size, the doubling strategy still works—just less efficiently.
+Calling reserve() once prevents repeated allocations. If you don’t know the final size, the doubling strategy still works: just less efficiently.
 
 **Reclaim memory after heavy deletion:**
 
@@ -77,7 +77,7 @@ std::vector isn’t always optimal. Use alternatives only when you have specific
 - **std::unordered_map / std::map**: When you need key-value lookup. Not a sequence container.
 - **std::string**: For text (specialized vector for char with useful string operations).
 
-Don’t use std::list or std::deque “just in case”—profiling shows vector wins in the vast majority of cases.
+Don’t use std::list or std::deque “just in case”: profiling shows vector wins in the vast majority of cases.
 
 ## Modern CPU Architecture Matters
 

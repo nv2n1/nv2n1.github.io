@@ -31,7 +31,7 @@ This creates a secp256k1 key (Bitcoin/Ethereum standard). Substitute `prime256v1
 openssl ec -in private.pem -pubout -out public.pem
 ```
 
-The `-pubout` flag is essential — it outputs the public key in PKCS#8 format, compatible with most modern tools and libraries.
+The `-pubout` flag is essential: it outputs the public key in PKCS#8 format, compatible with most modern tools and libraries.
 
 ### View key details
 

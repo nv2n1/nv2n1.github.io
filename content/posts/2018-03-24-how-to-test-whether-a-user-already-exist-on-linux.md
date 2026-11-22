@@ -29,7 +29,7 @@ Breaking this down:
 
 - `id "$user"` queries the user’s UID and group information
 - `&>/dev/null` redirects both stdout and stderr to null
-- The exit code becomes the condition — 0 means success (user exists), non-zero means failure
+- The exit code becomes the condition: 0 means success (user exists), non-zero means failure
 
 For a one-liner that captures the exit code:
 
@@ -68,7 +68,7 @@ This is preferable to grepping `/etc/passwd` directly since it respects NSS (Nam
 
 ### Practical example: conditional user creation
 
-Here’s a common use case — creating a user only if it doesn’t already exist:
+Here’s a common use case: creating a user only if it doesn’t already exist:
 
 ``` bash
 username="appuser"
@@ -99,11 +99,11 @@ Package management issues often stem from stale caches. Run dnf clean all on Fed
 
 These commands are frequently used alongside the tools discussed in this article:
 
-- systemctl status service-name – Check if a service is running
-- journalctl -u service-name -f – Follow service logs in real time
-- rpm -qi package-name – Query installed package information
-- dnf history – View package transaction history
-- top or htop – Monitor system resource usage
+- systemctl status service-name: Check if a service is running
+- journalctl -u service-name -f: Follow service logs in real time
+- rpm -qi package-name: Query installed package information
+- dnf history: View package transaction history
+- top or htop: Monitor system resource usage
 
 ## Quick Verification
 

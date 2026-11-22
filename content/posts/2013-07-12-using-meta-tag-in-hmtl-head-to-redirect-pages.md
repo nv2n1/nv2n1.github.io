@@ -169,7 +169,7 @@ Meta refresh works across modern browsers and mobile browsers. However:
 
 - Some older accessibility tools may not trigger the redirect
 - Instantaneous redirects (0 second delay) without visible feedback confuse users
-- Test on actual devices—emulators can miss edge cases
+- Test on actual devices: emulators can miss edge cases
 - Use a reasonable delay (3–5 seconds) if showing a notice
 
 Set `content="0"` only when you have no choice. A brief delay with clear messaging improves user experience and reduces support requests.

@@ -24,7 +24,7 @@ For iterative development, use watch mode:
 sbt ~package
 ```
 
-This rebuilds the JAR after every source change. However, this JAR only contains your project’s code—not its dependencies. Use it for publishing to repositories where dependency management is handled separately.
+This rebuilds the JAR after every source change. However, this JAR only contains your project’s code: not its dependencies. Use it for publishing to repositories where dependency management is handled separately.
 
 ## Standalone JAR with Dependencies
 
@@ -42,7 +42,7 @@ Then build the assembly:
 sbt assembly
 ```
 
-This produces `target/scala-2.x.y/projectname-assembly-x.y.jar`—a single JAR with everything bundled.
+This produces `target/scala-2.x.y/projectname-assembly-x.y.jar`: a single JAR with everything bundled.
 
 Run it with:
 
@@ -90,10 +90,10 @@ assembly / assemblyMergeStrategy := {
 
 Common strategies:
 
-- `MergeStrategy.discard` — ignore the file
-- `MergeStrategy.first` — keep the first occurrence
-- `MergeStrategy.concat` — merge text files (useful for configs)
-- `MergeStrategy.filterDistinctLines` — combine and deduplicate lines
+- `MergeStrategy.discard`: ignore the file
+- `MergeStrategy.first`: keep the first occurrence
+- `MergeStrategy.concat`: merge text files (useful for configs)
+- `MergeStrategy.filterDistinctLines`: combine and deduplicate lines
 
 If a particular dependency causes conflicts, you can also exclude it entirely:
 
@@ -158,7 +158,7 @@ du -h projectname-assembly-x.y.jar
 
 ## Publishing vs Distribution
 
-Use plain `sbt package` when publishing to Maven Central or a private repository—the dependency manager will resolve transitive dependencies at install time.
+Use plain `sbt package` when publishing to Maven Central or a private repository: the dependency manager will resolve transitive dependencies at install time.
 
 Use `sbt assembly` when building a final application for distribution, especially if the end user doesn’t manage Scala dependencies themselves or when you need a standalone executable.
 

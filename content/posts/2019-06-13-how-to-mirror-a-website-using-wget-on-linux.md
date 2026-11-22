@@ -10,7 +10,7 @@ canonical: /how-to-mirror-a-website-using-wget-on-linux/
 url: /how-to-mirror-a-website-using-wget-on-linux/
 ---
 
-Wget is a reliable command-line tool for downloading entire websites for offline viewing, archival, or testing. It preserves the full site structure—HTML, images, CSS, JavaScript—and maintains the original directory layout.
+Wget is a reliable command-line tool for downloading entire websites for offline viewing, archival, or testing. It preserves the full site structure (HTML, images, CSS, JavaScript) and maintains the original directory layout.
 
 ## Basic Mirroring Command
 
@@ -229,12 +229,12 @@ du -sh ./example.com
 
 ## Alternatives
 
-**ArchiveBox** — Modern, self-hosted archival with search indexing, screenshots, and multiple backend support (wget, headless Chrome, etc.). Better for complex, dynamic sites. Requires more setup but worth it for serious archival work.
+**ArchiveBox**: Modern, self-hosted archival with search indexing, screenshots, and multiple backend support (wget, headless Chrome, etc.). Better for complex, dynamic sites. Requires more setup but worth it for serious archival work.
 
-**HTTrack** — Graphical and CLI tool with built-in duplicate detection and project management. Easier learning curve than wget but less scriptable for automation.
+**HTTrack**: Graphical and CLI tool with built-in duplicate detection and project management. Easier learning curve than wget but less scriptable for automation.
 
-**wpCli with Custom Scripts** — For WordPress sites specifically, wp-cli can export content more reliably than crawling.
+**wpCli with Custom Scripts**: For WordPress sites specifically, wp-cli can export content more reliably than crawling.
 
-**Headless Browser Crawlers** (Puppeteer, Playwright, Selenium) — Essential for modern JavaScript-heavy sites. More resource-intensive but handles SPAs and API-driven content.
+**Headless Browser Crawlers** (Puppeteer, Playwright, Selenium): Essential for modern JavaScript-heavy sites. More resource-intensive but handles SPAs and API-driven content.
 
 Use wget for simplicity and scriptability on straightforward, static HTML sites. Reach for ArchiveBox or headless browser solutions when dealing with dynamic content, JavaScript rendering, or large-scale archival projects.

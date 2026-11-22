@@ -24,10 +24,10 @@ Open GNOME Tweaks and navigate to:
 
 1.  **Appearance** section
 2.  Under “Fonts”, you’ll find options for:
-    - **Interface Text** — Font used in GNOME Shell UI elements
-    - **Document Text** — Default font for documents
-    - **Monospace Text** — Fixed-width font for terminal and code
-    - **Legacy Window Title Text** — Title bar font (for non-headerbar apps)
+    - **Interface Text**: Font used in GNOME Shell UI elements
+    - **Document Text**: Default font for documents
+    - **Monospace Text**: Fixed-width font for terminal and code
+    - **Legacy Window Title Text**: Title bar font (for non-headerbar apps)
 
 Change the Interface Text font to affect GNOME Shell’s top bar, calendar, notifications, and system dialogs.
 
@@ -119,11 +119,11 @@ dconf read /org/gnome/shell/extensions/user-theme/name
 
 ## Quick Reference
 
-- `gnome-tweaks` — GUI font configuration
-- `dconf write .../font-name "'Font Name 11'"` — Set font via CLI
-- `~/.local/share/fonts/` — User font directory
-- `fc-cache -fv` — Rebuild font cache
-- `fc-list | grep FontName` — Verify font is installed
+- `gnome-tweaks`: GUI font configuration
+- `dconf write .../font-name "'Font Name 11'"`: Set font via CLI
+- `~/.local/share/fonts/`: User font directory
+- `fc-cache -fv`: Rebuild font cache
+- `fc-list | grep FontName`: Verify font is installed
 
 ## Per-Application Font Override
 

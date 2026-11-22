@@ -10,7 +10,7 @@ canonical: /php-photo-gallery-scripts-requiring-no-database/
 url: /php-photo-gallery-scripts-requiring-no-database/
 ---
 
-Self-hosting a photo gallery gives you control over your content. If you want to skip database management entirely, a handful of PHP solutions still work—though most are unmaintained. This post covers what’s still functional, where the limits are, and when you should choose something else instead.
+Self-hosting a photo gallery gives you control over your content. If you want to skip database management entirely, a handful of PHP solutions still work, though most are unmaintained. This post covers what’s still functional, where the limits are, and when you should choose something else instead.
 
 ## Static File-Based Gallery Scripts
 
@@ -30,7 +30,7 @@ This is literally one PHP file that lives in your photos directory. It generates
 **Cons:**
 
 - Performance tanks with large collections (thumbnail generation is CPU-intensive on every request)
-- No thumbnail caching—every visitor triggers regeneration
+- No thumbnail caching: every visitor triggers regeneration
 - Very basic styling; customization is limited
 - Code is old; verify compatibility with PHP 8.2+
 
@@ -173,8 +173,8 @@ If you need any of these, invest the setup time in a lightweight solution:
 
 **Better alternatives:**
 
-- **Lychee** – Modern, actively maintained, uses SQLite (single-file database), mobile-responsive
-- **Piwigo** – Feature-rich, actively developed, supports both database and file-based metadata
-- **Immich** – Self-hosted photo management with AI features, modern stack
+- **Lychee**: Modern, actively maintained, uses SQLite (single-file database), mobile-responsive
+- **Piwigo**: Feature-rich, actively developed, supports both database and file-based metadata
+- **Immich**: Self-hosted photo management with AI features, modern stack
 
 For anything beyond a basic personal photo dump, database-backed solutions require less setup workaround code than trying to bolt features onto flat-file systems. The maintenance burden shifts to your backup strategy, not hand-rolled locking logic.

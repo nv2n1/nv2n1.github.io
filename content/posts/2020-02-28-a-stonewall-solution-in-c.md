@@ -20,11 +20,11 @@ For example, with heights `[8, 8, 5, 7, 9, 8, 7, 6, 5]`, you need to find the mi
 
 ## Why This Matters
 
-This isn’t just interview trivia—understanding the stack-based approach teaches you how to recognize LIFO patterns in real problems. Similar logic applies to problems like removing duplicate letters, simplifying paths, and validating parentheses.
+This isn’t just interview trivia: understanding the stack-based approach teaches you how to recognize LIFO patterns in real problems. Similar logic applies to problems like removing duplicate letters, simplifying paths, and validating parentheses.
 
 ## The Key Insight
 
-As you move left to right through the heights, you only need to track which heights could potentially be reused later. When you encounter a height lower than your current maximum, all taller walls become blocked—they can’t extend further and will never be reused.
+As you move left to right through the heights, you only need to track which heights could potentially be reused later. When you encounter a height lower than your current maximum, all taller walls become blocked: they can’t extend further and will never be reused.
 
 This LIFO (Last In, First Out) pattern is exactly what a stack solves.
 
@@ -77,9 +77,9 @@ The stack maintains a strict increasing order. This invariant ensures:
 
 ## Complexity Analysis
 
-**Time: O(N)** — Each element is pushed exactly once and popped exactly once across all iterations. Despite the nested loop, the total work is linear.
+**Time: O(N)**: Each element is pushed exactly once and popped exactly once across all iterations. Despite the nested loop, the total work is linear.
 
-**Space: O(N)** — Worst case when heights are strictly increasing, the stack holds all N elements. Typically much smaller.
+**Space: O(N)**: Worst case when heights are strictly increasing, the stack holds all N elements. Typically much smaller.
 
 ## Worked Example
 
@@ -109,7 +109,7 @@ Input: `[8, 8, 5, 7, 9, 8, 7, 6, 5]`
 
 **Strictly decreasing**: Returns N (each position needs its own stone as the stack empties).
 
-**Repeated consecutive heights**: Handled efficiently—we skip the push when `h == heights.top()`, avoiding duplicate counting.
+**Repeated consecutive heights**: Handled efficiently: we skip the push when `h == heights.top()`, avoiding duplicate counting.
 
 ## Production Considerations
 

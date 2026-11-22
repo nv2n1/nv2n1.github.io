@@ -44,12 +44,12 @@ lp -o media=a4 -o cpi=12 -o lpi=7.2 \
 
 Common options:
 
-- `media=a4|letter|legal` — paper size
-- `cpi=10|12|17` — characters per inch
-- `lpi=6|8|7.2` — lines per inch
-- `page-left|right|top|bottom=N` — margins in points
-- `sides=one-sided|two-sided-long-edge|two-sided-short-edge` — duplex printing
-- `number-up=2|4|6|9|16` — multiple logical pages per sheet
+- `media=a4|letter|legal`: paper size
+- `cpi=10|12|17`: characters per inch
+- `lpi=6|8|7.2`: lines per inch
+- `page-left|right|top|bottom=N`: margins in points
+- `sides=one-sided|two-sided-long-edge|two-sided-short-edge`: duplex printing
+- `number-up=2|4|6|9|16`: multiple logical pages per sheet
 
 Print on both sides with 2-up layout:
 
@@ -105,13 +105,13 @@ lp output.ps
 
 Common `enscript` options:
 
-- `-B` — suppress header banner
-- `-2` — print 2 logical pages per physical page
-- `-4` — print 4 logical pages per physical page
-- `-E` — enable syntax highlighting for C, C++, and Python
-- `-p <file>` — write PostScript to file (use `-p -` for stdout)
-- `-f fontname` — change font
-- `-M <margins>` — set margins (format: top:bottom:left:right)
+- `-B`: suppress header banner
+- `-2`: print 2 logical pages per physical page
+- `-4`: print 4 logical pages per physical page
+- `-E`: enable syntax highlighting for C, C++, and Python
+- `-p <file>`: write PostScript to file (use `-p -` for stdout)
+- `-f fontname`: change font
+- `-M <margins>`: set margins (format: top:bottom:left:right)
 
 Pipe directly to printer:
 
@@ -216,7 +216,7 @@ If the `lpadmin` group addition doesn’t resolve the issue, check that the CUPS
 ls -l /run/cups/cups.sock
 ```
 
-The socket should have group `lpadmin` with read/write permissions. If permissions are wrong, CUPS may not have started properly—restart it:
+The socket should have group `lpadmin` with read/write permissions. If permissions are wrong, CUPS may not have started properly: restart it:
 
 ``` bash
 sudo systemctl restart cups

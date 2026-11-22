@@ -149,7 +149,7 @@ log.info("Application started")
 
 ## Performance Note
 
-Calling `os.getppid()` is very lightweight — it’s a simple syscall that returns cached kernel data. There’s no performance concern with frequent calls. However, using `psutil.Process()` to fetch additional information does involve more system overhead, so avoid repeated calls in tight loops if possible.
+Calling `os.getppid()` is very lightweight: it’s a simple syscall that returns cached kernel data. There’s no performance concern with frequent calls. However, using `psutil.Process()` to fetch additional information does involve more system overhead, so avoid repeated calls in tight loops if possible.
 
 ## 2026 Best Practices and Advanced Techniques
 

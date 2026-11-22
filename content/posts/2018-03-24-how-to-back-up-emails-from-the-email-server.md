@@ -10,7 +10,7 @@ canonical: /how-to-back-up-emails-from-the-email-server/
 url: /how-to-back-up-emails-from-the-email-server/
 ---
 
-If you’re syncing emails with tools like offlineimap, you might notice a problem: when an email is deleted from the server, it’s also deleted locally. That’s by design—offlineimap performs *synchronization*, not backup.
+If you’re syncing emails with tools like offlineimap, you might notice a problem: when an email is deleted from the server, it’s also deleted locally. That’s by design: offlineimap performs *synchronization*, not backup.
 
 For actual backups, you need a tool that retrieves emails without deleting the originals. This post covers the best approaches in 2026.
 

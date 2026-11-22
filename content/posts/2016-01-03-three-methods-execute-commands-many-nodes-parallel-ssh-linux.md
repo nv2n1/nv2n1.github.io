@@ -10,7 +10,7 @@ canonical: /three-methods-execute-commands-many-nodes-parallel-ssh-linux/
 url: /three-methods-execute-commands-many-nodes-parallel-ssh-linux/
 ---
 
-Running commands across multiple servers is fundamental to cluster management and infrastructure automation. While orchestration tools like Ansible and Terraform dominate modern deployments, sometimes you need lightweight solutions that work without dependencies—or you’re already invested in SSH-based infrastructure.
+Running commands across multiple servers is fundamental to cluster management and infrastructure automation. While orchestration tools like Ansible and Terraform dominate modern deployments, sometimes you need lightweight solutions that work without dependencies, or you’re already invested in SSH-based infrastructure.
 
 When managing clusters, you typically work in two modes: serial execution (one node at a time) and parallel execution (multiple nodes simultaneously). Serial execution is straightforward to debug; parallel execution is faster and better for time-sensitive operations.
 

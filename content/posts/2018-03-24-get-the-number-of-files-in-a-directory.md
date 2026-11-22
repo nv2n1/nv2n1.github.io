@@ -22,11 +22,11 @@ This counts only regular files (not directories or symlinks) and handles edge ca
 
 The common `ls | wc -l` command has several problems:
 
-- **Hidden files excluded by default** — dotfiles won’t be counted unless you use `ls -a`
-- **Directory entries counted** — `.` and `..` get included with `-a`, inflating your count by 2
-- **Fails on special characters** — filenames with newlines (possible in Unix) break the count
-- **Spawns unnecessary processes** — pipes create subprocess overhead, mattering at scale
-- **Unsorted output variability** — different shells and systems may behave differently
+- **Hidden files excluded by default**: dotfiles won’t be counted unless you use `ls -a`
+- **Directory entries counted**: `.` and `..` get included with `-a`, inflating your count by 2
+- **Fails on special characters**: filenames with newlines (possible in Unix) break the count
+- **Spawns unnecessary processes**: pipes create subprocess overhead, mattering at scale
+- **Unsorted output variability**: different shells and systems may behave differently
 
 Use `ls | wc -l` only if you’re counting in a carefully controlled environment and understand its limitations.
 
@@ -118,19 +118,19 @@ stat -c %h .
 
 On ext4/btrfs, this returns the link count of the directory, which can indicate file count (though it’s not always exact). Not portable across filesystems.
 
-**Cache the count in application logic** — if you’re checking frequently, maintain a counter in your monitoring or backup system rather than recounting every time.
+**Cache the count in application logic**: if you’re checking frequently, maintain a counter in your monitoring or backup system rather than recounting every time.
 
 ## Common Pitfalls
 
-**Forgetting `-maxdepth 1` with `find`** — you’ll get a recursive count across all subdirectories, which is usually not what you want.
+**Forgetting `-maxdepth 1` with `find`**: you’ll get a recursive count across all subdirectories, which is usually not what you want.
 
-**Using `-a` with `ls` and forgetting about `.` and `..`** — subtract 2 from the result, or use `ls -A` (capital A) which excludes them:
+**Using `-a` with `ls` and forgetting about `.` and `..`**: subtract 2 from the result, or use `ls -A` (capital A) which excludes them:
 
 ``` bash
 ls -A | wc -l
 ```
 
-**Globbing with no matches** — without `nullglob` in bash, `echo *.txt | wc -w` echoes the literal `*.txt` if no files match. Always enable `shopt -s nullglob` or check for matches first.
+**Globbing with no matches**: without `nullglob` in bash, `echo *.txt | wc -w` echoes the literal `*.txt` if no files match. Always enable `shopt -s nullglob` or check for matches first.
 
 ## Summary
 

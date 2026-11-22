@@ -30,7 +30,7 @@ For plain hex without ASCII or addresses, use `-p`:
 xxd -p file.txt
 ```
 
-This outputs continuous hex—useful for piping to other tools or processing:
+This outputs continuous hex: useful for piping to other tools or processing:
 
 ``` bash
 xxd -p file.bin | tr -d '\n'  # Remove newlines for one long hex string

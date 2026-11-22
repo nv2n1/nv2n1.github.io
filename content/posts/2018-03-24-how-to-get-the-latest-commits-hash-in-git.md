@@ -12,7 +12,7 @@ url: /how-to-get-the-latest-commits-hash-in-git/
 
 When you need the commit hash of the latest commit, there are several ways to get it. The most direct approach is using `git log` with format options rather than parsing output with grep.
 
-## Using git log with –format
+## Using git log with --format
 
 The cleanest method is to use `git log` with the `--format` option:
 

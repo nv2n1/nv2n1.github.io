@@ -75,7 +75,7 @@ Bonnie++ output format includes sequential and random I/O metrics, file creation
     Block Read: 150–159 MB/s (15–16% CPU)
     Random Seeks: 248–266 ops/sec
 
-**LVM-backed VBD (fresh snapshot – early runs)**
+**LVM-backed VBD (fresh snapshot: early runs)**
 
 Immediately after snapshot creation, write performance drops significantly:
 

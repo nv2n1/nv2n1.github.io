@@ -10,7 +10,7 @@ canonical: /git-submodule-cheat-sheet/
 url: /git-submodule-cheat-sheet/
 ---
 
-Git submodules let you keep external repositories as subdirectories within your project while maintaining separate commit histories. They’re useful for managing dependencies, shared libraries, or multi-repo projects—but they require explicit commands to work properly.
+Git submodules let you keep external repositories as subdirectories within your project while maintaining separate commit histories. They’re useful for managing dependencies, shared libraries, or multi-repo projects, but they require explicit commands to work properly.
 
 ## Adding a Submodule
 
@@ -171,7 +171,7 @@ git checkout main
 cd ..
 ```
 
-**Uncommitted submodule changes**: Modifications inside a submodule stay in that submodule’s repo—they don’t affect the parent repo unless you explicitly push from within the submodule. Always remember to commit and push submodule changes separately.
+**Uncommitted submodule changes**: Modifications inside a submodule stay in that submodule’s repo: they don’t affect the parent repo unless you explicitly push from within the submodule. Always remember to commit and push submodule changes separately.
 
 **`.gitmodules` merge conflicts**: If two branches modify submodule entries differently, manually resolve the conflict in `.gitmodules`, then:
 

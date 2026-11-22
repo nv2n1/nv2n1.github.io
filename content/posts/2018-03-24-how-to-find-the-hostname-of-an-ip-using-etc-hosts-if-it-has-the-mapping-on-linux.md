@@ -10,7 +10,7 @@ canonical: /how-to-find-the-hostname-of-an-ip-using-etc-hosts-if-it-has-the-mapp
 url: /how-to-find-the-hostname-of-an-ip-using-etc-hosts-if-it-has-the-mapping-on-linux/
 ---
 
-When you need to reverse-lookup an IP address against your local `/etc/hosts` file, several tools can help. This is different from a full DNS reverse lookup — you’re checking only against the static mappings on your local system.
+When you need to reverse-lookup an IP address against your local `/etc/hosts` file, several tools can help. This is different from a full DNS reverse lookup: you’re checking only against the static mappings on your local system.
 
 ## Why this matters
 

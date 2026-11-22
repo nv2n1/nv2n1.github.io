@@ -66,7 +66,7 @@ Apply the configuration:
 sudo ldapmodify -Y EXTERNAL -H ldapi:/// -f /tmp/ldap-config.ldif
 ```
 
-Note: The mdb backend is the modern default — it’s faster and more reliable than the older bdb backend.
+Note: The mdb backend is the modern default: it’s faster and more reliable than the older bdb backend.
 
 ### Create Directory Structure
 
@@ -165,9 +165,9 @@ Edit `/etc/exports`:
 
 **Option reference:**
 
-- `rw` — read/write access
-- `sync` — writes are committed immediately (required for data consistency)
-- `no_root_squash` — allows root on clients to write as root on server
+- `rw`: read/write access
+- `sync`: writes are committed immediately (required for data consistency)
+- `no_root_squash`: allows root on clients to write as root on server
 
 For tighter security in production, use `root_squash` and add `anonuid=1000,anongid=1000` to map root requests to a regular unprivileged user instead.
 
@@ -251,7 +251,7 @@ sudo systemctl enable autofs
 sudo systemctl start autofs
 ```
 
-Test automounting by accessing a user’s home directory — it should mount on demand:
+Test automounting by accessing a user’s home directory: it should mount on demand:
 
 ``` bash
 ls /home/sample

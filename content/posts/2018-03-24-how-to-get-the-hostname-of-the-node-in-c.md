@@ -32,7 +32,7 @@ int main() {
 }
 ```
 
-The function takes two arguments: a character buffer and its size. It returns 0 on success, -1 on error. Always check the return value — the most common error is the buffer being too small, though 256 bytes is typically sufficient for real-world hostnames (POSIX limits to 255 characters).
+The function takes two arguments: a character buffer and its size. It returns 0 on success, -1 on error. Always check the return value: the most common error is the buffer being too small, though 256 bytes is typically sufficient for real-world hostnames (POSIX limits to 255 characters).
 
 ### Buffer Size Considerations
 

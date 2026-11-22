@@ -48,7 +48,7 @@ Usage:
 w3m https://example.com
 ```
 
-Navigate with arrow keys, press `Enter` for links, `B` to go back, `Shift+U` for a new URL, `q` to quit. If your terminal supports image rendering, w3m will display them inline — useful for news sites and image-heavy content.
+Navigate with arrow keys, press `Enter` for links, `B` to go back, `Shift+U` for a new URL, `q` to quit. If your terminal supports image rendering, w3m will display them inline: useful for news sites and image-heavy content.
 
 ## elinks
 
@@ -120,7 +120,7 @@ curl -s https://example.com | html2text
 
 None of these handle modern JavaScript-heavy sites well. For those, you’d need a headless browser like Chromium in headless mode or Selenium, but that’s outside the scope of terminal browsing.
 
-Install a couple and try them against your use case — terminal browsers have different strengths depending on the sites you visit.
+Install a couple and try them against your use case: terminal browsers have different strengths depending on the sites you visit.
 
 ## 2026 Comprehensive Guide: Best Practices
 

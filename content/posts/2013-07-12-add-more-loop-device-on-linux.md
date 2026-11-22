@@ -99,7 +99,7 @@ ls /dev/loop* | wc -l
 
 ## Practical Considerations
 
-**Device naming:** Modern systems use dynamic loop device allocation. You don’t need to manually create `/dev/loop*` devices — `losetup` will assign the next available device automatically.
+**Device naming:** Modern systems use dynamic loop device allocation. You don’t need to manually create `/dev/loop*` devices: `losetup` will assign the next available device automatically.
 
 **Per-container limits:** If running containers, individual container runtimes (Docker, Podman, etc.) may have their own loop device limits. Check the runtime configuration if you’re hitting limits despite system-wide increases.
 
@@ -123,11 +123,11 @@ Package management issues often stem from stale caches. Run dnf clean all on Fed
 
 These commands are frequently used alongside the tools discussed in this article:
 
-- systemctl status service-name – Check if a service is running
-- journalctl -u service-name -f – Follow service logs in real time
-- rpm -qi package-name – Query installed package information
-- dnf history – View package transaction history
-- top or htop – Monitor system resource usage
+- systemctl status service-name: Check if a service is running
+- journalctl -u service-name -f: Follow service logs in real time
+- rpm -qi package-name: Query installed package information
+- dnf history: View package transaction history
+- top or htop: Monitor system resource usage
 
 ## Quick Verification
 

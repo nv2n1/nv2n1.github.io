@@ -10,7 +10,7 @@ canonical: /how-to-flush-a-cached-redirect-by-chrome/
 url: /how-to-flush-a-cached-redirect-by-chrome/
 ---
 
-Chrome aggressively caches HTTP redirects—especially 301 (permanent) and 308 redirects—as a performance optimization. The cache persists across browser sessions, which causes real problems when you’ve updated redirect rules and need to test them immediately.
+Chrome aggressively caches HTTP redirects (especially 301 (permanent) and 308 redirects) as a performance optimization. The cache persists across browser sessions, which causes real problems when you’ve updated redirect rules and need to test them immediately.
 
 ## Understanding Chrome’s Redirect Cache Behavior
 
@@ -58,8 +58,8 @@ This bypasses the cache for a single page load but doesn’t permanently clear t
 
 The most reliable approach is to avoid permanent redirects altogether. Use temporary status codes during development:
 
-- **301/308**: Permanent redirects—Chrome caches indefinitely. Avoid during active development.
-- **302/307**: Temporary redirects—Chrome caches per-session only. Use these while testing.
+- **301/308**: Permanent redirects: Chrome caches indefinitely. Avoid during active development.
+- **302/307**: Temporary redirects: Chrome caches per-session only. Use these while testing.
 
 For example, temporarily redirect with a 302 instead of a 301:
 

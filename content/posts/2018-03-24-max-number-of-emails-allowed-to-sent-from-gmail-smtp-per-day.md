@@ -21,21 +21,21 @@ Google’s official documentation on sending limits is at <a href="https://suppo
 - **Account recovery**: Disabled accounts typically re-enable within 24 hours
 - **Undeliverable message penalties**: Sending excessive numbers of bounced messages also triggers restrictions
 
-These limits apply to standard Gmail accounts. Google Workspace accounts have different quotas — typically 2,000 outbound emails per day for business users, though this varies by plan.
+These limits apply to standard Gmail accounts. Google Workspace accounts have different quotas: typically 2,000 outbound emails per day for business users, though this varies by plan.
 
 ## Safe Operating Parameters
 
 Staying well below the hard limits is essential. A practical approach:
 
-- **Target 20 emails per hour** as a safe sustained rate — this keeps you at roughly 480 emails per day, just under the 500-recipient threshold
+- **Target 20 emails per hour** as a safe sustained rate: this keeps you at roughly 480 emails per day, just under the 500-recipient threshold
 - **Implement exponential backoff** when you encounter 429 (Too Many Requests) or 535 (Authentication failed) responses
 - **Monitor bounce rates** and immediately investigate undeliverable addresses; sustained high bounce rates trigger account suspension
-- **Use Cc/Bcc carefully** — all recipients count toward the 500-recipient daily limit
+- **Use Cc/Bcc carefully**: all recipients count toward the 500-recipient daily limit
 - **Batch processing**: Split large sends across multiple calendar days if possible
 
 ## Important Notes on From Address
 
-When using SMTP, your Gmail account credentials authenticate the connection, but the `From:` header doesn’t have to be your Gmail address — it can be an alias or custom domain address. However, Gmail adds an additional `Reply-To` or `Sent-By` header showing your actual Gmail account for transparency and security.
+When using SMTP, your Gmail account credentials authenticate the connection, but the `From:` header doesn’t have to be your Gmail address: it can be an alias or custom domain address. However, Gmail adds an additional `Reply-To` or `Sent-By` header showing your actual Gmail account for transparency and security.
 
 ## Limits for Other Providers
 
@@ -55,7 +55,7 @@ When building an SMTP client for Gmail:
 
 1.  **Use TLS on port 587** (STARTTLS) rather than port 465 (deprecated implicit TLS)
 2.  **Enable “Less secure app access”** if using a non-Google app, or better yet, use <a href="https://developers.google.com/gmail/imap_smtp" rel="nofollow noopener" target="_blank">OAuth2 with Gmail API</a> for better security
-3.  **Implement request queuing** with delays between sends — don’t burst all 500 emails immediately
+3.  **Implement request queuing** with delays between sends: don’t burst all 500 emails immediately
 4.  **Log all rejections** and investigate bounce codes (5xx = permanent, 4xx = temporary)
 5.  **Test with a small recipient list first** before scaling to your full audience
 

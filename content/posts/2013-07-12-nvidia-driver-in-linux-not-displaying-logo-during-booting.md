@@ -40,7 +40,7 @@ If you’re running X11 with a custom xorg.conf (common on older systems or spec
         Option         "NoLogo" "true"
     EndSection
 
-The option value can be either `"true"` or simply omitted — both disable the logo. If your xorg.conf doesn’t exist, X11 will auto-generate it on most distributions, so manual creation is rarely necessary.
+The option value can be either `"true"` or simply omitted: both disable the logo. If your xorg.conf doesn’t exist, X11 will auto-generate it on most distributions, so manual creation is rarely necessary.
 
 ## Complete xorg.conf Example (X11)
 

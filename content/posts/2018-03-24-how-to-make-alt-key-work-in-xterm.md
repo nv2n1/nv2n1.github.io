@@ -25,7 +25,7 @@ xrdb -merge ~/.Xresources
 xterm &
 ```
 
-This tells xterm to send the ESC prefix when Alt is pressed, which is the standard escape sequence most terminal applications expect. You can verify it’s working by running `cat` and pressing Alt+a — you should see `^[a` (where `^[` is the escape character).
+This tells xterm to send the ESC prefix when Alt is pressed, which is the standard escape sequence most terminal applications expect. You can verify it’s working by running `cat` and pressing Alt+a: you should see `^[a` (where `^[` is the escape character).
 
 If you want Alt to work *without* sending escape sequences (some applications prefer this), use instead:
 
@@ -41,7 +41,7 @@ Once configured, test with:
 :set term?
 
 # In Bash, test Alt+b (backward word)
-# Type: hello world [Alt+b] — cursor should move back one word
+# Type: hello world [Alt+b]: cursor should move back one word
 
 # With cat, see raw escape sequences
 cat
@@ -52,7 +52,7 @@ cat
 
 If you’re starting fresh, consider alternatives that handle Alt key bindings more intuitively:
 
-**Alacritty** — GPU-accelerated, fast, minimal config (YAML):
+**Alacritty**: GPU-accelerated, fast, minimal config (YAML):
 
 ``` yaml
 # ~/.config/alacritty/alacritty.toml
@@ -62,16 +62,16 @@ animation = "EaseOutExpo"
 
 Alt keys work out of the box without additional configuration.
 
-**Kitty** — Full-featured with image support, ligatures, and protocol extensions:
+**Kitty**: Full-featured with image support, ligatures, and protocol extensions:
 
 ``` ini
 # ~/.config/kitty/kitty.conf
 enable_ligatures = yes
 ```
 
-**Ghostty** — Modern terminal with native macOS/Linux support, ligatures, and sane defaults.
+**Ghostty**: Modern terminal with native macOS/Linux support, ligatures, and sane defaults.
 
-**Foot** — Lightweight Wayland-native terminal with excellent Unicode and emoji support.
+**Foot**: Lightweight Wayland-native terminal with excellent Unicode and emoji support.
 
 All of these handle Alt key sequences correctly by default and let you rebind them in their config files without escape sequence trickery.
 
@@ -81,7 +81,7 @@ If Alt still doesn’t work in xterm after applying `metaSendsEscape`:
 
 1.  Check that your resource file was loaded: `xrdb -query | grep metaSendsEscape`
 2.  Ensure you’re not overriding it elsewhere in `~/.Xdefaults` or global X resource files
-3.  Some window managers reset X resources at startup — add the command to your WM’s startup script instead
+3.  Some window managers reset X resources at startup: add the command to your WM’s startup script instead
 4.  Test with a specific key in your application: in Vim, `:imap <M-a> hello` and press Alt+a in insert mode
 
 For shell keybindings, verify readline recognizes Alt keys by checking `bind -P | grep meta`.

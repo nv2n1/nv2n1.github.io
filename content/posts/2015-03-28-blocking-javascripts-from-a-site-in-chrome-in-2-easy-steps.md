@@ -10,7 +10,7 @@ canonical: /blocking-javascripts-from-a-site-in-chrome-in-2-easy-steps/
 url: /blocking-javascripts-from-a-site-in-chrome-in-2-easy-steps/
 ---
 
-Blocking JavaScript per-site in Chrome lets you stop intrusive scripts, malicious content, or resource-heavy trackers without disabling JavaScript globally. This gives you surgical control—some sites work fine without JS, while others need it.
+Blocking JavaScript per-site in Chrome lets you stop intrusive scripts, malicious content, or resource-heavy trackers without disabling JavaScript globally. This gives you surgical control: some sites work fine without JS, while others need it.
 
 ## Access the JavaScript exceptions page
 
@@ -24,10 +24,10 @@ Alternatively, go through the menu: **Settings \> Privacy and security \> Site S
 
 In the “Hostname pattern” field, enter the domain you want to block. Chrome accepts these formats:
 
-- `example.com` — blocks JavaScript only on that exact domain (not subdomains)
-- `[*.]example.com` — blocks JavaScript on example.com and all subdomains (www.example.com, api.example.com, mail.example.com, etc.)
-- `https://example.com` — blocks JavaScript specifically on HTTPS; HTTP version still gets JS
-- `cdn.example.com` — blocks only that specific subdomain
+- `example.com`: blocks JavaScript only on that exact domain (not subdomains)
+- `[*.]example.com`: blocks JavaScript on example.com and all subdomains (www.example.com, api.example.com, mail.example.com, etc.)
+- `https://example.com`: blocks JavaScript specifically on HTTPS; HTTP version still gets JS
+- `cdn.example.com`: blocks only that specific subdomain
 
 Select **Block** from the “Behavior” dropdown and click **Add**.
 
@@ -50,9 +50,9 @@ Select **Block** from the “Behavior” dropdown and click **Add**.
 
 ## Verify the block is working
 
-Visit the blocked site and open DevTools with **F12** or **Ctrl+Shift+I**. Check the **Console** tab—you’ll see CSP (Content Security Policy) violations or blocked script errors confirming the browser blocked those resources.
+Visit the blocked site and open DevTools with **F12** or **Ctrl+Shift+I**. Check the **Console** tab: you’ll see CSP (Content Security Policy) violations or blocked script errors confirming the browser blocked those resources.
 
-Open the **Network** tab to see which scripts were blocked—they’ll appear with a red X or blocked status.
+Open the **Network** tab to see which scripts were blocked: they’ll appear with a red X or blocked status.
 
 ## Remove or modify a blocked domain
 
@@ -69,11 +69,11 @@ Chrome’s per-site JavaScript blocking doesn’t work on:
 
 It only blocks external scripts and scripts from other domains.
 
-For more granular control—including inline script blocking, regex patterns, and element filtering—use content blocking extensions:
+For more granular control (including inline script blocking, regex patterns, and element filtering) use content blocking extensions:
 
-- **uBlock Origin** — blocks scripts, ads, and trackers with regex support
-- **NoScript** — whitelist-based JavaScript control with fine-grained permissions
-- **Ghostery** — tracker blocking with detailed reports
+- **uBlock Origin**: blocks scripts, ads, and trackers with regex support
+- **NoScript**: whitelist-based JavaScript control with fine-grained permissions
+- **Ghostery**: tracker blocking with detailed reports
 
 These extensions also block resource-intensive third-party content beyond just JavaScript, improving page load times on bloated sites.
 
@@ -81,12 +81,12 @@ These extensions also block resource-intensive third-party content beyond just J
 
 Chrome’s Site Settings menu lets you manage other content per-domain:
 
-- **Cookies** — allow, block, or auto-clear after session
-- **Images** — block images from specific domains
-- **Popups** — prevent popup windows
-- **Plugins** — control Flash and other legacy plugins
-- **Autoplay** — silence video and audio autoplay
-- **Third-party cookies** — block tracking cookies from external sources
+- **Cookies**: allow, block, or auto-clear after session
+- **Images**: block images from specific domains
+- **Popups**: prevent popup windows
+- **Plugins**: control Flash and other legacy plugins
+- **Autoplay**: silence video and audio autoplay
+- **Third-party cookies**: block tracking cookies from external sources
 
 If you frequently block content on the same sites, extensions are faster than repeatedly modifying Chrome’s exceptions list.
 

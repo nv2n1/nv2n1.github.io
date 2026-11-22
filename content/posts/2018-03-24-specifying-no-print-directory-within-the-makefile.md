@@ -24,7 +24,7 @@ This assignment adds the flag to `MAKEFLAGS`, which make reads to determine its 
 
 `MAKEFLAGS` is a special variable that make examines at startup. Any flags set in this variable apply to the current make invocation and are also inherited by recursive make calls (those invoked via `$(MAKE)` in recipe lines). This inheritance is particularly useful in projects with subdirectories that each have their own Makefile.
 
-When you set `MAKEFLAGS` in a Makefile, it affects that Makefile and any recursive invocations. However, it does not affect make invocations from parent shells or unrelated processes — only those spawned by the current make instance.
+When you set `MAKEFLAGS` in a Makefile, it affects that Makefile and any recursive invocations. However, it does not affect make invocations from parent shells or unrelated processes: only those spawned by the current make instance.
 
 ## Practical Example
 
@@ -88,7 +88,7 @@ This approach works with GNU make (the standard on Linux systems) and is the rec
 
 ## 2026 Best Practices and Advanced Techniques
 
-For Using \`–no-print-directory\` in Makefiles, understanding both the fundamentals and modern practices ensures you can work efficiently and avoid common pitfalls. This guide extends the core article with practical advice for 2026 workflows.
+For Using \`--no-print-directory\` in Makefiles, understanding both the fundamentals and modern practices ensures you can work efficiently and avoid common pitfalls. This guide extends the core article with practical advice for 2026 workflows.
 
 ## Troubleshooting and Debugging
 

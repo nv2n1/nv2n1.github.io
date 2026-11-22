@@ -10,7 +10,7 @@ canonical: /how-to-create-a-reader-from-a-string-in-go/
 url: /how-to-create-a-reader-from-a-string-in-go/
 ---
 
-Many Go functions accept an `io.Reader` interface. To pass a string to these functions, use `strings.NewReader`, which wraps the string without copying it—the data is read directly from the original string.
+Many Go functions accept an `io.Reader` interface. To pass a string to these functions, use `strings.NewReader`, which wraps the string without copying it: the data is read directly from the original string.
 
 ## Basic Usage
 
@@ -165,9 +165,9 @@ reader := bytes.NewReader(copyData)
 
 ## Key Differences Between Reader Types
 
-- `strings.NewReader` — use when you have a `string` type; zero-copy
-- `bytes.NewReader` — use when you have a `[]byte` type; supports seeking
-- `bytes.Buffer` — use when you need a reader *and* writer on the same data; more overhead
+- `strings.NewReader`: use when you have a `string` type; zero-copy
+- `bytes.NewReader`: use when you have a `[]byte` type; supports seeking
+- `bytes.Buffer`: use when you need a reader *and* writer on the same data; more overhead
 
 All three implement `io.Reader`, and `strings.NewReader` and `bytes.NewReader` additionally implement `io.ReaderAt` and `io.Seeker` for random access.
 

@@ -10,7 +10,7 @@ canonical: /install-ns-2-and-ns-3-on-fedora-linux/
 url: /install-ns-2-and-ns-3-on-fedora-linux/
 ---
 
-ns (Network Simulator) is a discrete-event simulator used primarily for research and educational purposes in networking. The two major versions—ns-2 and ns-3—are substantially different in architecture and usage patterns. This guide covers installation on current Fedora systems.
+ns (Network Simulator) is a discrete-event simulator used primarily for research and educational purposes in networking. The two major versions (ns-2 and ns-3) are substantially different in architecture and usage patterns. This guide covers installation on current Fedora systems.
 
 ## Installing ns-2 on Fedora
 

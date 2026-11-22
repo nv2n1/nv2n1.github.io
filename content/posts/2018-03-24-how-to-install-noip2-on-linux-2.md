@@ -39,7 +39,7 @@ make
 sudo make install
 ```
 
-The installer will prompt you for your No-IP credentials and configuration options. Keep track of the installation path—it typically installs to `/usr/local/bin/noip2`.
+The installer will prompt you for your No-IP credentials and configuration options. Keep track of the installation path: it typically installs to `/usr/local/bin/noip2`.
 
 ## Configuration
 

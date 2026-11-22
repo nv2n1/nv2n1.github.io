@@ -239,4 +239,4 @@ Bash provides multiple clean patterns for control flow:
 - **State machines** for complex workflows
 - **Early returns** to bail out of deep call stacks
 
-These patterns are standard in bash, produce maintainable code, and scale well. Avoid eval-based workarounds entirely—they create more problems than they solve. When you feel the need for goto, stop and ask what control flow pattern actually solves your problem.
+These patterns are standard in bash, produce maintainable code, and scale well. Avoid eval-based workarounds entirely: they create more problems than they solve. When you feel the need for goto, stop and ask what control flow pattern actually solves your problem.

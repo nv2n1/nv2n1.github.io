@@ -95,7 +95,7 @@ python3 -m pip install pypdf
 
 ### Recommendation
 
-Start with **Okular** for basic workflows—it’s lightweight and handles everyday annotations without friction. Switch to **Master PDF Editor** if you need professional-grade features like stamps or advanced comments. Reserve Wine solutions for legacy workflows that specifically require Foxit Reader.
+Start with **Okular** for basic workflows: it’s lightweight and handles everyday annotations without friction. Switch to **Master PDF Editor** if you need professional-grade features like stamps or advanced comments. Reserve Wine solutions for legacy workflows that specifically require Foxit Reader.
 
 ## 2026 Best Practices and Advanced Techniques
 

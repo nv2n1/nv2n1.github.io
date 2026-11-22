@@ -14,7 +14,7 @@ When SSH fails but the daemon still runs, or when kernel panics strike, you need
 
 ## Force a reboot when SSH is unresponsive
 
-If a server stops responding to SSH commands but the daemon is still listening—usually due to memory exhaustion, runaway processes, or system load—the Linux magic SysRq interface provides kernel-level access when normal system calls fail.
+If a server stops responding to SSH commands but the daemon is still listening (usually due to memory exhaustion, runaway processes, or system load), the Linux magic SysRq interface provides kernel-level access when normal system calls fail.
 
 Enable SysRq and trigger an immediate reboot:
 
@@ -24,10 +24,10 @@ ssh root@server 'echo 1 > /proc/sys/kernel/sysrq; echo b > /proc/sysrq-trigger'
 
 The `b` command forces an immediate reboot without syncing filesystems. Use this only when the system is truly unresponsive. Other useful SysRq commands:
 
-- `s` – sync all filesystems
-- `e` – terminate all processes
-- `i` – kill all processes
-- `u` – remount filesystems read-only
+- `s`: sync all filesystems
+- `e`: terminate all processes
+- `i`: kill all processes
+- `u`: remount filesystems read-only
 
 For a more graceful approach, attempt to sync data first:
 
@@ -78,10 +78,10 @@ sysctl -p /etc/sysctl.d/99-panic.conf
 
 What each parameter does:
 
-- `kernel.panic` – seconds to wait before rebooting after panic (0 disables it)
-- `kernel.panic_on_oops` – reboot on kernel oops (recoverable errors that become fatal)
-- `kernel.panic_on_io_nmi` – reboot on I/O-related non-maskable interrupts
-- `kernel.panic_on_hung_task` – reboot if kernel detects a task stuck in D state (uninterruptible sleep)
+- `kernel.panic`: seconds to wait before rebooting after panic (0 disables it)
+- `kernel.panic_on_oops`: reboot on kernel oops (recoverable errors that become fatal)
+- `kernel.panic_on_io_nmi`: reboot on I/O-related non-maskable interrupts
+- `kernel.panic_on_hung_task`: reboot if kernel detects a task stuck in D state (uninterruptible sleep)
 
 Set different timeouts for different environments. Production might use 10 seconds, while development uses 60 to allow log capture. Use 0 to disable any parameter.
 

@@ -180,12 +180,12 @@ If it returns `wayland`, use one of these approaches:
 **Conflicting with application-level bindings:**
 
 - Emacs users should verify `M-x` and `C-x` work correctly
-- Some applications (browsers, terminals) may have hardcoded Alt behavior—test in your primary use cases
+- Some applications (browsers, terminals) may have hardcoded Alt behavior: test in your primary use cases
 - If conflicts occur, adjust your xkb symbols file rather than relying on application settings
 
 **Partial remapping not working:**
 
-- Keycodes vary by keyboard layout and hardware—always run `xmodmap -pke` to find your actual keycodes
+- Keycodes vary by keyboard layout and hardware: always run `xmodmap -pke` to find your actual keycodes
 - Some laptop keyboards have special firmware-level key handling that bypasses userspace remapping
 
 Test your final configuration in Emacs, your terminal, and text editor before considering it production-ready.

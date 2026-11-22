@@ -119,7 +119,7 @@ Lower values preserve swap for emergencies; higher values use it more readily. M
 
     vm.swappiness=10
 
-**Zram alternative**: On systems with limited storage, consider `zram` instead—compressed in-memory swap that’s faster than disk-based swap. This is configured differently and doesn’t use a partition.
+**Zram alternative**: On systems with limited storage, consider `zram` instead: compressed in-memory swap that’s faster than disk-based swap. This is configured differently and doesn’t use a partition.
 
 ## 2026 Best Practices and Advanced Techniques
 

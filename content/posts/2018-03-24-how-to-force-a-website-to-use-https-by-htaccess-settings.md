@@ -24,14 +24,14 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 This performs a permanent 301 redirect from HTTP to HTTPS. The conditions and rules work as follows:
 
-- `RewriteEngine On` — enables the rewrite module
-- `RewriteCond %{HTTPS} !=on` — matches requests where HTTPS is not already on
-- `RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]` — rewrites the request URL to use HTTPS, preserves the domain and request URI, and sends a 301 permanent redirect
+- `RewriteEngine On`: enables the rewrite module
+- `RewriteCond %{HTTPS} !=on`: matches requests where HTTPS is not already on
+- `RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]`: rewrites the request URL to use HTTPS, preserves the domain and request URI, and sends a 301 permanent redirect
 
 The `[L,R=301]` flags mean:
 
-- `L` — last rule (stops processing further rules)
-- `R=301` — external redirect with 301 status code
+- `L`: last rule (stops processing further rules)
+- `R=301`: external redirect with 301 status code
 
 ## Alternative: redirect specific domains
 
@@ -57,7 +57,7 @@ RewriteCond %{HTTP_HOST} !^www\.example\.com$ [NC]
 RewriteRule ^ https://www.example.com%{REQUEST_URI} [L,R=301]
 ```
 
-This handles three cases: HTTP without www, HTTPS without www, and HTTP with www — all redirect to `https://www.example.com`.
+This handles three cases: HTTP without www, HTTPS without www, and HTTP with www: all redirect to `https://www.example.com`.
 
 ## Removing www while forcing HTTPS
 
@@ -74,10 +74,10 @@ RewriteRule ^ https://example.com%{REQUEST_URI} [L,R=301]
 
 Before deploying this in `.htaccess`:
 
-1.  **Verify `mod_rewrite` is enabled** — check with your hosting provider or run `apache2ctl -M | grep rewrite` on your server
-2.  **Ensure your SSL certificate is installed** — test at <a href="https://yoursite.com" rel="nofollow noopener" target="_blank">https://yoursite.com</a> to confirm the certificate loads without errors
-3.  **Test the redirect** — use `curl -I http://yoursite.com` to verify it returns a 301 response
-4.  **Check for mixed content** — after enabling HTTPS, audit your site for resources (images, scripts, stylesheets) still loading via HTTP
+1.  **Verify `mod_rewrite` is enabled**: check with your hosting provider or run `apache2ctl -M | grep rewrite` on your server
+2.  **Ensure your SSL certificate is installed**: test at <a href="https://yoursite.com" rel="nofollow noopener" target="_blank">https://yoursite.com</a> to confirm the certificate loads without errors
+3.  **Test the redirect**: use `curl -I http://yoursite.com` to verify it returns a 301 response
+4.  **Check for mixed content**: after enabling HTTPS, audit your site for resources (images, scripts, stylesheets) still loading via HTTP
 
 ## Why 301 redirects matter
 
@@ -95,11 +95,11 @@ This tells browsers to always use HTTPS for your domain, even on the first visit
 
 ## Common issues
 
-**Infinite redirect loop** — ensure your SSL certificate is valid and installed. An invalid cert can cause the server to reject HTTPS, creating a loop.
+**Infinite redirect loop**: ensure your SSL certificate is valid and installed. An invalid cert can cause the server to reject HTTPS, creating a loop.
 
-**Not working at all** — `mod_rewrite` may be disabled, or `.htaccess` files may not be processed (check `AllowOverride All` in your Apache configuration).
+**Not working at all**: `mod_rewrite` may be disabled, or `.htaccess` files may not be processed (check `AllowOverride All` in your Apache configuration).
 
-**Slow redirects** — 301 redirects are cached aggressively by browsers. If you need to test multiple times, use incognito/private mode or clear your browser cache.
+**Slow redirects**: 301 redirects are cached aggressively by browsers. If you need to test multiple times, use incognito/private mode or clear your browser cache.
 
 ## 2026 Comprehensive Guide: Best Practices
 

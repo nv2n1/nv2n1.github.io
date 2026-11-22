@@ -63,7 +63,7 @@ If you’re experiencing headphone mic recording issues on an older kernel, upgr
 
 ### Related Realtek Codec Issues
 
-The ALC256 has required several other fixes over the years for proper microphone detection and routing. Always check the kernel release notes if you’re troubleshooting audio issues with Realtek codecs—many fixes are codec-specific and may require kernel updates rather than userspace configuration changes.
+The ALC256 has required several other fixes over the years for proper microphone detection and routing. Always check the kernel release notes if you’re troubleshooting audio issues with Realtek codecs: many fixes are codec-specific and may require kernel updates rather than userspace configuration changes.
 
 ## 2026 Best Practices and Advanced Techniques
 

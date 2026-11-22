@@ -10,7 +10,7 @@ canonical: /in-linux-how-to-kill-a-process-and-all-its-child-processes/
 url: /in-linux-how-to-kill-a-process-and-all-its-child-processes/
 ---
 
-When a Bash script spawns child processes—say script A starts B, which starts C, which runs rsync—you need a way to terminate the entire process tree cleanly. Simply killing the parent leaves orphaned children running in the background.
+When a Bash script spawns child processes (say script A starts B, which starts C, which runs rsync) you need a way to terminate the entire process tree cleanly. Simply killing the parent leaves orphaned children running in the background.
 
 The most reliable approach uses session IDs (SID). By default, child processes inherit the same session ID as the parent script. You can leverage this to identify and terminate the entire process group at once.
 

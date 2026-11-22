@@ -73,28 +73,28 @@ browser.link.open_newwindow.restriction = 0
 
 Master these shortcuts to manage tabs efficiently:
 
-- `Ctrl+T` — New tab
-- `Ctrl+W` — Close current tab
-- `Ctrl+Shift+T` — Reopen last closed tab (works multiple times!)
-- `Ctrl+Tab` — Switch to next tab
-- `Ctrl+Shift+Tab` — Switch to previous tab
-- `Ctrl+1` through `Ctrl+9` — Switch to specific tab by position (9 goes to last tab)
-- `Ctrl+L` — Focus address bar
-- `Alt+Enter` — Open address bar content in new tab
-- `Middle-click` on a tab — Close it
-- `Middle-click` on a link — Open in new tab
-- `Ctrl+click` on a link — Open in new tab (foreground)
-- `Ctrl+Shift+click` on a link — Open in new tab and switch to it
+- `Ctrl+T`: New tab
+- `Ctrl+W`: Close current tab
+- `Ctrl+Shift+T`: Reopen last closed tab (works multiple times!)
+- `Ctrl+Tab`: Switch to next tab
+- `Ctrl+Shift+Tab`: Switch to previous tab
+- `Ctrl+1` through `Ctrl+9`: Switch to specific tab by position (9 goes to last tab)
+- `Ctrl+L`: Focus address bar
+- `Alt+Enter`: Open address bar content in new tab
+- `Middle-click` on a tab: Close it
+- `Middle-click` on a link: Open in new tab
+- `Ctrl+click` on a link: Open in new tab (foreground)
+- `Ctrl+Shift+click` on a link: Open in new tab and switch to it
 
 ## Tab Management Extensions
 
 Firefox extensions that enhance tab handling:
 
-- **Tab Session Manager** — Save and restore tab sessions across restarts
-- **OneTab** — Convert all open tabs into a shareable list to save memory
-- **Tree Style Tab** — Display tabs in a vertical tree hierarchy in the sidebar
-- **Sidebery** — Modern vertical tab bar with bookmarks and containers
-- **Multi-account Containers** — Mozilla’s official extension for isolating tabs by context (work, personal, banking)
+- **Tab Session Manager**: Save and restore tab sessions across restarts
+- **OneTab**: Convert all open tabs into a shareable list to save memory
+- **Tree Style Tab**: Display tabs in a vertical tree hierarchy in the sidebar
+- **Sidebery**: Modern vertical tab bar with bookmarks and containers
+- **Multi-account Containers**: Mozilla’s official extension for isolating tabs by context (work, personal, banking)
 
 ## Firefox Container Tabs
 
@@ -111,16 +111,16 @@ Right-click the New Tab button or use the Containers extension to open a tab in 
 
 If you tend to accumulate tabs, Firefox has built-in memory management:
 
-- **Tab unload** — Firefox automatically unloads tabs you haven’t viewed recently, freeing memory while keeping them visible
-- **about:unloads** — Manually see which tabs are loaded and unload specific ones
-- **about:performance** — See which tabs and extensions are using the most resources
+- **Tab unload**: Firefox automatically unloads tabs you haven’t viewed recently, freeing memory while keeping them visible
+- **about:unloads**: Manually see which tabs are loaded and unload specific ones
+- **about:performance**: See which tabs and extensions are using the most resources
 
 For extreme tab hoarders (100+ tabs), consider using bookmarks instead. `Ctrl+D` bookmarks the current tab, and you can organize bookmarks into folders for later access.
 
 ## Quick Reference
 
-- `about:config` → `browser.tabs.closeWindowWithLastTab` → `false` — Prevent close
-- `Ctrl+Shift+T` — Undo close tab
-- `Ctrl+W` — Close tab
-- `about:performance` — Check tab resource usage
-- `user.js` — Persist settings across restarts
+- `about:config` → `browser.tabs.closeWindowWithLastTab` → `false`: Prevent close
+- `Ctrl+Shift+T`: Undo close tab
+- `Ctrl+W`: Close tab
+- `about:performance`: Check tab resource usage
+- `user.js`: Persist settings across restarts

@@ -57,7 +57,7 @@ Understanding instruction latencies and throughput is critical for performance-s
 
 The **System V AMD64 ABI** specification defines calling conventions, register usage, stack layout, and ELF binary format for x86-64 Unix-like systems. Essential when writing assembly that interoperates with C/C++.
 
-On Windows, the **Microsoft x64 calling convention** differs significantly—different register preservation rules, parameter passing mechanism, and shadow space on the stack. Always verify your target platform’s ABI before writing assembly.
+On Windows, the **Microsoft x64 calling convention** differs significantly: different register preservation rules, parameter passing mechanism, and shadow space on the stack. Always verify your target platform’s ABI before writing assembly.
 
 Key differences to remember:
 
@@ -72,10 +72,10 @@ Key differences to remember:
 
 **Disassemblers and debuggers**:
 
-- `objdump -d` — quick binary disassembly
-- `lldb` / `gdb` — instruction-level stepping and register inspection
-- **Ghidra** — advanced static analysis and decompilation
-- **Radare2** — scriptable reverse engineering framework
+- `objdump -d`: quick binary disassembly
+- `lldb` / `gdb`: instruction-level stepping and register inspection
+- **Ghidra**: advanced static analysis and decompilation
+- **Radare2**: scriptable reverse engineering framework
 
 ## Practical Workflow
 
@@ -92,6 +92,6 @@ Key differences to remember:
 - **System V AMD64 ABI**: <a href="https://refspecs.linuxbase.org/elf/x86_64-abi-0.99.pdf" rel="nofollow noopener" target="_blank">https://refspecs.linuxbase.org/elf/x86_64-abi-0.99.pdf</a>
 - **Agner Fog’s optimization guides**: <a href="https://www.agner.org/optimize/" rel="nofollow noopener" target="_blank">https://www.agner.org/optimize/</a>
 - **Godbolt**: <a href="https://godbolt.org/" rel="nofollow noopener" target="_blank">https://godbolt.org/</a>
-- *Computer Systems: A Programmer’s Perspective* (CS:APP) — comprehensive textbook with assembly throughout
+- *Computer Systems: A Programmer’s Perspective* (CS:APP): comprehensive textbook with assembly throughout
 
 When you hit a performance wall or need clarification on instruction behavior, the official manuals are your authority. Agner Fog’s tables and optimization guides are faster for quick lookups. Godbolt is your best tool for understanding how C compiles to assembly and building intuition.

@@ -172,7 +172,7 @@ distcc is a program to distribute compilation of C/C++/Objective code between se
 
 ### References
 
-- Dean, J. and Ghemawat, S. 2004. MapReduce: simplified data processing on large clusters. In Proceedings of the 6th Conference on Symposium on Operating Systems Design & Implementation – Volume 6 (San Francisco, CA, December 06 – 08, 2004).
+- Dean, J. and Ghemawat, S. 2004. MapReduce: simplified data processing on large clusters. In Proceedings of the 6th Conference on Symposium on Operating Systems Design & Implementation: Volume 6 (San Francisco, CA, December 06 – 08, 2004).
 - Hadoop project. <a href="http://hadoop.apache.org" rel="nofollow noopener" target="_blank">http://hadoop.apache.org</a>
 - mrcc project. <a href="https://www.ericzma.com/projects/mrcc/" rel="nofollow noopener" target="_blank">http://www.ericzma.com/projects/mrcc/</a>
 - Hadoop 0.20.1. <a href="https://hadoop.apache.org/releases.html" rel="nofollow noopener" target="_blank">http://hadoop.apache.org/common/releases.html#Download</a>

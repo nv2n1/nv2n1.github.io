@@ -10,7 +10,7 @@ canonical: /qemukvm-network-mechanisms/
 url: /qemukvm-network-mechanisms/
 ---
 
-QEMU/KVM networking operates across multiple layers — TAP devices, QEMU’s packet queuing, virtio descriptors, and kernel bypass mechanisms. Understanding this stack is essential for debugging connectivity issues and tuning performance in production environments.
+QEMU/KVM networking operates across multiple layers: TAP devices, QEMU’s packet queuing, virtio descriptors, and kernel bypass mechanisms. Understanding this stack is essential for debugging connectivity issues and tuning performance in production environments.
 
 ## TAP Device Fundamentals
 
@@ -32,7 +32,7 @@ Key flags explained:
 
 - `-netdev tap,id=hn0,ifname=tap0`: Creates a TAP device named tap0 on the host
 - `script=no,downscript=no`: Skips automatic setup scripts; you configure the TAP interface manually
-- `-device virtio-net-pci`: Uses virtio (paravirtualized) NIC instead of emulated hardware — significantly faster
+- `-device virtio-net-pci`: Uses virtio (paravirtualized) NIC instead of emulated hardware: significantly faster
 
 Before starting the VM, prepare the TAP interface:
 

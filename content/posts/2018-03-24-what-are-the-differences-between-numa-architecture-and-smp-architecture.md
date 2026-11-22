@@ -14,7 +14,7 @@ url: /what-are-the-differences-between-numa-architecture-and-smp-architecture/
 
 ### Memory Access Latency
 
-In **SMP**, all processors have equal latency when accessing any memory location. Every CPU communicates with RAM through a shared bus or interconnect, so the distance to memory is uniform—hence “symmetric.” This simplicity made SMP the standard for smaller systems, but it doesn’t scale well. As you add more processors, contention on the shared memory bus becomes a bottleneck.
+In **SMP**, all processors have equal latency when accessing any memory location. Every CPU communicates with RAM through a shared bus or interconnect, so the distance to memory is uniform: hence “symmetric.” This simplicity made SMP the standard for smaller systems, but it doesn’t scale well. As you add more processors, contention on the shared memory bus becomes a bottleneck.
 
 In **NUMA**, each processor (or group of processors) has local memory attached directly to it. A processor can access its own local memory quickly, but accessing memory attached to another processor incurs higher latency. Memory is physically distributed and partitioned asymmetrically across the system.
 
@@ -35,7 +35,7 @@ Your intuition about cache being part of the memory hierarchy is correct, but it
 - In SMP, cache coherency is simpler because all processors see the same memory bus
 - In NUMA, you still have cache coherency (using protocols like MESIF or MOESI), but cache coherency traffic travels across NUMA interconnects, adding latency
 
-So modern systems are best described as **“NUMA with coherent caches”** rather than “SMP+NUMA hybrid.” The cache hierarchy doesn’t change whether you’re SMP or NUMA—it’s orthogonal.
+So modern systems are best described as **“NUMA with coherent caches”** rather than “SMP+NUMA hybrid.” The cache hierarchy doesn’t change whether you’re SMP or NUMA: it’s orthogonal.
 
 ### Practical Implications for System Administration
 

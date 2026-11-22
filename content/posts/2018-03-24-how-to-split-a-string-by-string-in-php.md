@@ -124,11 +124,11 @@ Output:
 
 ## Common regex patterns
 
-- `\s+` — one or more whitespace characters
-- `[,;:]` — any of these delimiter characters
-- `,+` — one or more commas
-- `\s*[,;]\s*` — delimiter with optional surrounding spaces
-- `/[\s,]+/` — whitespace or commas (one or more)
+- `\s+`: one or more whitespace characters
+- `[,;:]`: any of these delimiter characters
+- `,+`: one or more commas
+- `\s*[,;]\s*`: delimiter with optional surrounding spaces
+- `/[\s,]+/`: whitespace or commas (one or more)
 
 ## Performance considerations
 

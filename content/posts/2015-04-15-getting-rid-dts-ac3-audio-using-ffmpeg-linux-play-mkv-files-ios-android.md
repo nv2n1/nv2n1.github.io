@@ -10,7 +10,7 @@ canonical: /getting-rid-dts-ac3-audio-using-ffmpeg-linux-play-mkv-files-ios-andr
 url: /getting-rid-dts-ac3-audio-using-ffmpeg-linux-play-mkv-files-ios-android/
 ---
 
-MKV files encoded with AC3 or DTS audio won’t play sound on most iOS and Android devices. These are proprietary formats with licensing restrictions—mobile players either don’t support them or refuse to decode them by default. The video plays fine, but you get silence.
+MKV files encoded with AC3 or DTS audio won’t play sound on most iOS and Android devices. These are proprietary formats with licensing restrictions: mobile players either don’t support them or refuse to decode them by default. The video plays fine, but you get silence.
 
 The solution is straightforward: re-encode the audio track to AAC or MP3 while keeping the video stream intact. This takes just a few seconds per file.
 
@@ -24,11 +24,11 @@ ffmpeg -i input.mkv -c:v copy -c:a aac -b:a 128k output.mkv
 
 Breaking this down:
 
-- `-c:v copy` — copy the video stream unchanged (no re-encoding)
-- `-c:a aac` — encode audio to AAC codec
-- `-b:a 128k` — set audio bitrate to 128 kbps (use 192k or 256k for higher quality)
+- `-c:v copy`: copy the video stream unchanged (no re-encoding)
+- `-c:a aac`: encode audio to AAC codec
+- `-b:a 128k`: set audio bitrate to 128 kbps (use 192k or 256k for higher quality)
 
-AAC is preferred for mobile devices—it delivers better quality at lower bitrates than MP3. If you need MP3 for older device compatibility:
+AAC is preferred for mobile devices: it delivers better quality at lower bitrates than MP3. If you need MP3 for older device compatibility:
 
 ``` bash
 ffmpeg -i input.mkv -c:v copy -c:a libmp3lame -b:a 192k output.mkv

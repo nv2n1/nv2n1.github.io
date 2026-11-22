@@ -55,7 +55,7 @@ export HADOOP_CLASSPATH=$(yarn classpath)
 javac -cp $HADOOP_CLASSPATH MyMapReduceJob.java
 ```
 
-You can add this to your `.bashrc` or `.bash_profile` if you work with Hadoop frequently, but be aware that `HADOOP_CLASSPATH` has special meaning in Hadoop — it’s the user classpath that gets prepended to the system classpath at runtime. For compilation purposes, `yarn classpath` is more appropriate.
+You can add this to your `.bashrc` or `.bash_profile` if you work with Hadoop frequently, but be aware that `HADOOP_CLASSPATH` has special meaning in Hadoop: it’s the user classpath that gets prepended to the system classpath at runtime. For compilation purposes, `yarn classpath` is more appropriate.
 
 ## Verifying and debugging classpath issues
 
@@ -122,7 +122,7 @@ When you actually submit a MapReduce job to the cluster, use `hadoop jar`:
 hadoop jar MyJob.jar com.example.MyJobClass input/ output/
 ```
 
-The `hadoop jar` command automatically includes the correct runtime classpath. You don’t need to manually specify it for job submission — the cluster handles classpath management through the Hadoop configuration.
+The `hadoop jar` command automatically includes the correct runtime classpath. You don’t need to manually specify it for job submission: the cluster handles classpath management through the Hadoop configuration.
 
 The `yarn classpath` command is primarily useful for development-time compilation. At runtime, Hadoop manages the classpath internally based on the installed version and configuration.
 

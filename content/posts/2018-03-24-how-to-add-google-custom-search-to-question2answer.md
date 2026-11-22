@@ -27,7 +27,7 @@ Before implementing Google Custom Search, you’ll need:
 2.  Click “Create” to set up a new search engine
 3.  Enter your Question2Answer site’s domain in the “Sites to search” field
 4.  Complete the setup wizard
-5.  Once created, find your **Search Engine ID (cx)** in the Setup tab — you’ll need this for the plugin
+5.  Once created, find your **Search Engine ID (cx)** in the Setup tab: you’ll need this for the plugin
 
 ## Installing a Google Custom Search Plugin
 

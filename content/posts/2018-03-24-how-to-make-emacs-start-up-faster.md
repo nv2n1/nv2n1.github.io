@@ -193,4 +193,4 @@ Combine these strategies for the best results:
 5.  **Enable native compilation** if using Emacs 28+
 6.  **Profile startup** with `benchmark-init` if it still feels slow
 
-With this setup, opening a file is effectively instant—the daemon is already running, and emacsclient connects in milliseconds.
+With this setup, opening a file is effectively instant: the daemon is already running, and emacsclient connects in milliseconds.

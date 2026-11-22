@@ -20,10 +20,10 @@ An SPF record is a TXT record in DNS that lists authorized mail servers for your
 
 Breaking this down:
 
-- `v=spf1` — SPF version (always version 1)
-- `include:` — references another domain’s SPF record
-- `~all` — soft fail for non-matching servers (use `-all` for hard fail)
-- `+all` — allow all (not recommended; use only for testing)
+- `v=spf1`: SPF version (always version 1)
+- `include:`: references another domain’s SPF record
+- `~all`: soft fail for non-matching servers (use `-all` for hard fail)
+- `+all`: allow all (not recommended; use only for testing)
 
 ## Adding an SPF Record in DreamHost
 
@@ -94,17 +94,17 @@ SPF works best alongside DKIM and DMARC. While SPF validates the sending server�
 
 For production email systems, implement all three:
 
-- **SPF** — Authorizes mail servers
-- **DKIM** — Cryptographically signs messages
-- **DMARC** — Enforces SPF/DKIM alignment and reporting
+- **SPF**: Authorizes mail servers
+- **DKIM**: Cryptographically signs messages
+- **DMARC**: Enforces SPF/DKIM alignment and reporting
 
 This combination significantly improves email deliverability and protects against domain spoofing.
 
 ## Common Mistakes
 
-- Using a hard fail (`-all`) before thoroughly testing — use soft fail (`~all`) initially
-- Exceeding the 10-include lookup limit — consolidate includes or use DNS flattening services
-- Setting overly permissive records (`+all`) — this defeats the purpose of SPF
+- Using a hard fail (`-all`) before thoroughly testing: use soft fail (`~all`) initially
+- Exceeding the 10-include lookup limit: consolidate includes or use DNS flattening services
+- Setting overly permissive records (`+all`): this defeats the purpose of SPF
 - Forgetting to update SPF when adding new mail service providers
 
 After configuration, monitor your email delivery and check DMARC aggregate reports (if implemented) to verify your SPF setup is working correctly.

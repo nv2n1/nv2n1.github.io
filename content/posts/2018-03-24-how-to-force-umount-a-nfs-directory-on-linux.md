@@ -20,7 +20,7 @@ The solution is to use `umount -l` (lazy unmount), which immediately detaches th
 umount -l /mnt/store
 ```
 
-The `-l` flag tells the kernel to remove the mount immediately from the namespace, even though the actual cleanup happens asynchronously. This is safe and won’t cause data loss for any open file handles — the kernel manages the transition gracefully.
+The `-l` flag tells the kernel to remove the mount immediately from the namespace, even though the actual cleanup happens asynchronously. This is safe and won’t cause data loss for any open file handles: the kernel manages the transition gracefully.
 
 ## Verify the unmount worked
 

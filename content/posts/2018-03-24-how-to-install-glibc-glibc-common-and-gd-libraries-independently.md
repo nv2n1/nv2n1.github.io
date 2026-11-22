@@ -14,7 +14,7 @@ If you already have PHP and nginx running on Rocky Linux 9 and need to add or up
 
 ### Understanding the dependencies
 
-- **glibc**: The GNU C Library — the core runtime library for nearly all C programs on Linux
+- **glibc**: The GNU C Library: the core runtime library for nearly all C programs on Linux
 - **glibc-common**: Common files and utilities for glibc
 - **php-gd**: PHP extension for image manipulation using the GD graphics library
 
@@ -28,7 +28,7 @@ On Rocky Linux 9, use `dnf` (the successor to yum) to install these packages:
 sudo dnf install glibc glibc-common php-gd
 ```
 
-This is safe to run even if the packages are already installed — dnf will simply update them to the latest available version or confirm they’re current.
+This is safe to run even if the packages are already installed: dnf will simply update them to the latest available version or confirm they’re current.
 
 ### Checking what’s already installed
 
@@ -77,7 +77,7 @@ php -v
 php-config --configure-options | grep -i gd
 ```
 
-If GD support is missing from your compilation, you’ll need to recompile PHP with the `--with-gd` flag. In that case, the system glibc and php-gd package won’t help — you need to rebuild PHP itself.
+If GD support is missing from your compilation, you’ll need to recompile PHP with the `--with-gd` flag. In that case, the system glibc and php-gd package won’t help: you need to rebuild PHP itself.
 
 ### Post-installation checks
 
@@ -95,7 +95,7 @@ curl http://localhost/phpinfo.php | grep -i "gd support"
 
 ### Troubleshooting
 
-If you encounter conflicts or broken dependencies during installation, dnf will report them clearly. Rarely, you might see package conflicts from third-party repositories — ensure you’re not mixing repositories designed for different OS versions.
+If you encounter conflicts or broken dependencies during installation, dnf will report them clearly. Rarely, you might see package conflicts from third-party repositories: ensure you’re not mixing repositories designed for different OS versions.
 
 To see what would be installed without actually installing:
 

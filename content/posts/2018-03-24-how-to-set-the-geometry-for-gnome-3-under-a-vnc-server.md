@@ -20,7 +20,7 @@ This works fine with GNOME 2 and window managers like `twm`, but GNOME 3 ignores
 
 ## Why GNOME 3 Overrides VNC Geometry
 
-GNOME 3’s display server remembers and restores the previous session’s resolution settings. When you connect via VNC, GNOME applies the saved resolution rather than respecting the VNC server’s geometry parameter. This is a design choice — GNOME prioritizes user preferences over server-specified constraints.
+GNOME 3’s display server remembers and restores the previous session’s resolution settings. When you connect via VNC, GNOME applies the saved resolution rather than respecting the VNC server’s geometry parameter. This is a design choice: GNOME prioritizes user preferences over server-specified constraints.
 
 ## Solution: Set Resolution Inside the Session
 
@@ -101,7 +101,7 @@ While the core commands and methods described in this article work well for most
 
 ## Troubleshooting Common Issues
 
-When encountering problems, follow a systematic debugging approach. Start with the simplest possible test case to isolate the issue. Check logs and error messages carefully—they often contain direct hints about what went wrong. For system-level issues, verify dependencies are correctly installed and configured before attempting complex workarounds.
+When encountering problems, follow a systematic debugging approach. Start with the simplest possible test case to isolate the issue. Check logs and error messages carefully: they often contain direct hints about what went wrong. For system-level issues, verify dependencies are correctly installed and configured before attempting complex workarounds.
 
 ## Performance Optimization Tips
 
@@ -119,7 +119,7 @@ These complementary tools and commands are frequently used alongside the topic o
 - File operations: find, locate, fd for efficient searching
 - Network diagnostics: ping, traceroute, mtr, ss for connectivity checks
 - Log analysis: journalctl, dmesg, tail for real-time log monitoring
-- Package management: dnf history, apt list –installed, rpm -qa for inventory
+- Package management: dnf history, apt list --installed, rpm -qa for inventory
 
 ## Integration with Modern Workflows
 

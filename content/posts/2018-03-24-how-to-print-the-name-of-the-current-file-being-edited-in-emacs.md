@@ -114,13 +114,13 @@ Use this pattern in any function that depends on an actual file:
 
 ## Related variables and functions
 
-- `buffer-name` — The name of the current buffer (independent of file association)
-- `default-directory` — The working directory for the current buffer
-- `default-file-name-coding-system` — Character encoding used for file paths
-- `expand-file-name` — Convert relative paths to absolute paths
-- `file-truename` — Resolve symlinks and get the true file path
-- `locate-file` — Search for a file in a list of directories
-- `dired-current-directory` — In Dired mode, the directory being browsed
+- `buffer-name`: The name of the current buffer (independent of file association)
+- `default-directory`: The working directory for the current buffer
+- `default-file-name-coding-system`: Character encoding used for file paths
+- `expand-file-name`: Convert relative paths to absolute paths
+- `file-truename`: Resolve symlinks and get the true file path
+- `locate-file`: Search for a file in a list of directories
+- `dired-current-directory`: In Dired mode, the directory being browsed
 
 ## Example: Insert file path at cursor
 

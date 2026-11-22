@@ -147,7 +147,7 @@ git cherry-pick --continue
 git cherry-pick --abort
 ```
 
-Cherry-picking is useful for backporting critical fixes or applying specific changes to multiple branches. However, avoid it in team workflows—it duplicates commits and creates confusion. Prefer rebasing or merging for shared work.
+Cherry-picking is useful for backporting critical fixes or applying specific changes to multiple branches. However, avoid it in team workflows: it duplicates commits and creates confusion. Prefer rebasing or merging for shared work.
 
 ## Rebase for linear history
 

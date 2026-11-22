@@ -17,7 +17,7 @@ For example, you might see:
     Received: from [192.168.1.2] (example.com [1.2.3.4])
         by mail.example.com (Postfix) with ESMTPSA id 92CD297DEA;
 
-The `[192.168.1.2]` is your private IP leaking through. The public IP (`1.2.3.4`) is expected and fine — that’s what the server actually sees. But the private IP shouldn’t be there.
+The `[192.168.1.2]` is your private IP leaking through. The public IP (`1.2.3.4`) is expected and fine: that’s what the server actually sees. But the private IP shouldn’t be there.
 
 ## Why This Happens
 
@@ -56,8 +56,8 @@ You can find the exact key by searching for `smtpserver` in the config editor an
 
 You don’t have to use `localhost`. Other options include:
 
-- `localhost` — Generic, widely accepted
-- `mail.example.com` — If you own a domain (more convincing but less private)
+- `localhost`: Generic, widely accepted
+- `mail.example.com`: If you own a domain (more convincing but less private)
 - Any FQDN that resolves to something reasonable
 
 Using `localhost` is usually the safest bet. It’s a valid hostname that doesn’t leak information about your network or location.

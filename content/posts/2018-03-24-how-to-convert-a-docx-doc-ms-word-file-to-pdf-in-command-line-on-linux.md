@@ -20,7 +20,7 @@ The standard command is:
 libreoffice --headless --convert-to pdf --outdir /path/to/output/ /path/to/file.docx
 ```
 
-This works well on systems with X11 available. However, on truly headless servers, `--headless` doesn’t fully suppress X11 requirements—LibreOffice will still fail without a display server, even though it won’t render anything visually.
+This works well on systems with X11 available. However, on truly headless servers, `--headless` doesn’t fully suppress X11 requirements: LibreOffice will still fail without a display server, even though it won’t render anything visually.
 
 For headless environments, use `xvfb-run` to provide a virtual X server:
 
@@ -128,11 +128,11 @@ Package management issues often stem from stale caches. Run dnf clean all on Fed
 
 These commands are frequently used alongside the tools discussed in this article:
 
-- systemctl status service-name – Check if a service is running
-- journalctl -u service-name -f – Follow service logs in real time
-- rpm -qi package-name – Query installed package information
-- dnf history – View package transaction history
-- top or htop – Monitor system resource usage
+- systemctl status service-name: Check if a service is running
+- journalctl -u service-name -f: Follow service logs in real time
+- rpm -qi package-name: Query installed package information
+- dnf history: View package transaction history
+- top or htop: Monitor system resource usage
 
 ## Quick Verification
 

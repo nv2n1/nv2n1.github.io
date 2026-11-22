@@ -22,7 +22,7 @@ Internet Explorer depends on a stack of Windows-specific components that Wine’
 - **System services**: Modern IE versions (especially IE 11) require Windows services and COM objects that Wine can’t emulate
 - **Cascading failures**: Updates to Wine, graphics drivers, or system libraries break working installations
 
-The tools that once made this feasible—ies4linux (dead since 2009), PlayOnLinux IE packages (abandoned), and Lutris community recipes—are all unmaintained. Even if you get IE installed, it will break unpredictably.
+The tools that once made this feasible (ies4linux (dead since 2009), PlayOnLinux IE packages (abandoned), and Lutris community recipes) are all unmaintained. Even if you get IE installed, it will break unpredictably.
 
 ## Practical Alternatives
 
@@ -48,7 +48,7 @@ For automated or manual testing without infrastructure overhead:
 - **Azure VM gallery**: Rent Windows instances pre-loaded with IE for short-term testing
 - **AWS EC2**: Windows AMIs with IE 11 already configured
 
-This approach scales well for CI/CD pipelines—you pay per test rather than maintaining VMs.
+This approach scales well for CI/CD pipelines: you pay per test rather than maintaining VMs.
 
 ### Headless Automation
 
@@ -105,8 +105,8 @@ You’ll lose 4-8 hours and achieve nothing.
 
 ## The Real Solution
 
-**Use a VM or cloud platform.** Modern virtualization is fast—KVM with nested virtualization runs Windows nearly at native speed on Linux. The hourly cost of cloud testing is cheaper than the engineering time you’d waste fighting Wine.
+**Use a VM or cloud platform.** Modern virtualization is fast: KVM with nested virtualization runs Windows nearly at native speed on Linux. The hourly cost of cloud testing is cheaper than the engineering time you’d waste fighting Wine.
 
 If you’re doing this for client testing or quality assurance, cloud platforms like BrowserStack integrate directly into CI/CD pipelines and cost less than maintaining infrastructure.
 
-If you’re doing this for yourself because you’re curious—just set up a KVM instance. It takes 20 minutes and will work reliably for years.
+If you’re doing this for yourself because you’re curious: just set up a KVM instance. It takes 20 minutes and will work reliably for years.

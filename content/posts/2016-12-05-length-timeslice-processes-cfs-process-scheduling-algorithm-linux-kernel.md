@@ -10,7 +10,7 @@ canonical: /length-timeslice-processes-cfs-process-scheduling-algorithm-linux-ke
 url: /length-timeslice-processes-cfs-process-scheduling-algorithm-linux-kernel/
 ---
 
-CFS (Completely Fair Scheduling) is the default process scheduler in modern Linux kernels. Understanding actual timeslice allocation—how long a process runs before being context-switched out—is essential for performance debugging, verifying fairness assumptions, and identifying scheduling anomalies. The challenge is that /proc interfaces and ps commands show scheduling policy but not the actual on-CPU duration per scheduling event.
+CFS (Completely Fair Scheduling) is the default process scheduler in modern Linux kernels. Understanding actual timeslice allocation (how long a process runs before being context-switched out) is essential for performance debugging, verifying fairness assumptions, and identifying scheduling anomalies. The challenge is that /proc interfaces and ps commands show scheduling policy but not the actual on-CPU duration per scheduling event.
 
 ## Why Timeslice Measurement Matters
 
@@ -87,7 +87,7 @@ echo "" > /sys/kernel/debug/tracing/set_event
 
 ## Using eBPF and BCC Tools (Production Recommended)
 
-eBPF is the modern approach for production systems—efficient, no kernel recompilation, lower overhead:
+eBPF is the modern approach for production systems: efficient, no kernel recompilation, lower overhead:
 
 ``` bash
 # Install bcc tools
@@ -175,7 +175,7 @@ cat /proc/sys/kernel/sched_latency_ns
 cat /proc/sys/kernel/sched_wakeup_granularity_ns
 ```
 
-On a system with 4 runnable processes and default settings, each expects roughly 1.5ms of CPU per scheduling cycle. On a 2GHz CPU, that’s 3 million instruction cycles per timeslice—significant for latency-critical workloads.
+On a system with 4 runnable processes and default settings, each expects roughly 1.5ms of CPU per scheduling cycle. On a 2GHz CPU, that’s 3 million instruction cycles per timeslice: significant for latency-critical workloads.
 
 Adjust for latency-sensitive workloads (requires testing):
 

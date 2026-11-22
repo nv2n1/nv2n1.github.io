@@ -59,17 +59,17 @@ This patch was marked for stable kernels given its impact on production systems,
 - Long-running CIFS mounts that may experience transient connection failures
 - Memory-constrained systems where leaks accumulate visibly
 
-The change is minimal and safe — it only adds cleanup before reallocation, following standard kernel resource management patterns. Systems without reconnection events are unaffected.
+The change is minimal and safe: it only adds cleanup before reallocation, following standard kernel resource management patterns. Systems without reconnection events are unaffected.
 
 ## Related Linux Commands
 
 These related commands are often used alongside the tools discussed in this article:
 
-- man command-name – Read the manual page for any command
-- which command-name – Find the location of an executable
-- rpm -qa or dpkg -l – List installed packages
-- journalctl -u service-name – Check service logs
-- ss -tulpn – List listening ports and services
+- man command-name: Read the manual page for any command
+- which command-name: Find the location of an executable
+- rpm -qa or dpkg -l: List installed packages
+- journalctl -u service-name: Check service logs
+- ss -tulpn: List listening ports and services
 
 ## Quick Reference
 

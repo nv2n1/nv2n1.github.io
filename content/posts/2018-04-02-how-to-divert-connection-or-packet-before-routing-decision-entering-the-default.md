@@ -16,11 +16,11 @@ Intercepting traffic before normal routing decisions requires understanding pack
 
 When a packet arrives at your system, it traverses these chains in order:
 
-1.  **PREROUTING** – Executes before the kernel’s routing decision. This is where you redirect traffic.
-2.  **Routing decision** – Kernel determines if the packet is destined for a local process or should be forwarded through the system.
-3.  **INPUT** – Processes packets bound for local applications.
-4.  **FORWARD** – Processes packets the kernel will route through the system.
-5.  **POSTROUTING** – Executes after routing decision, before transmission.
+1.  **PREROUTING**: Executes before the kernel’s routing decision. This is where you redirect traffic.
+2.  **Routing decision**: Kernel determines if the packet is destined for a local process or should be forwarded through the system.
+3.  **INPUT**: Processes packets bound for local applications.
+4.  **FORWARD**: Processes packets the kernel will route through the system.
+5.  **POSTROUTING**: Executes after routing decision, before transmission.
 
 To force packets into FORWARD instead of INPUT, modify the destination address in PREROUTING. This changes the routing decision so the kernel treats the packet as forwarded traffic.
 

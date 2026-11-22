@@ -14,12 +14,12 @@ I/O schedulers in Linux sit between application requests and physical disk hardw
 
 ### Work-Conserving Schedulers
 
-A work-conserving scheduler must dispatch a pending I/O request whenever one exists, regardless of physical disk positioning. If requests are queued, something gets sent to the disk immediately — there’s no idle waiting.
+A work-conserving scheduler must dispatch a pending I/O request whenever one exists, regardless of physical disk positioning. If requests are queued, something gets sent to the disk immediately: there’s no idle waiting.
 
 Examples of work-conserving schedulers:
 
-- **Deadline** — prioritizes requests by deadline, processes pending work aggressively
-- **NOOP** — simple FIFO queue with minimal overhead
+- **Deadline**: prioritizes requests by deadline, processes pending work aggressively
+- **NOOP**: simple FIFO queue with minimal overhead
 
 The advantage is straightforward: the disk is never idle if work exists. This maximizes raw throughput and prevents unnecessary latency buildup.
 
@@ -29,10 +29,10 @@ Non-work-conserving schedulers deliberately introduce idle periods, betting that
 
 Examples include:
 
-- **Anticipatory Scheduler (AS)** — waits briefly after read completion, hoping the same process will issue a nearby follow-up request
-- **CFQ (Completely Fair Queuing)** — attempts to maintain per-process I/O locality and fairness, which sometimes means delaying dispatches
+- **Anticipatory Scheduler (AS)**: waits briefly after read completion, hoping the same process will issue a nearby follow-up request
+- **CFQ (Completely Fair Queuing)**: attempts to maintain per-process I/O locality and fairness, which sometimes means delaying dispatches
 
-The rationale is workload-dependent. For workloads with strong spatial locality — where sequential or nearby requests arrive predictably — waiting for them can reduce disk head movement and improve overall throughput.
+The rationale is workload-dependent. For workloads with strong spatial locality (where sequential or nearby requests arrive predictably) waiting for them can reduce disk head movement and improve overall throughput.
 
 ### Real-World Performance Impact
 
@@ -50,7 +50,7 @@ In controlled tests, Deadline can nearly double throughput compared to CFQ on a 
 Non-work-conserving schedulers shine here. They maintain per-process fairness and exploit locality from multiple sources. CFQ ensures one process doesn’t starve others while still grouping related requests together.
 
 **Highly fragmented filesystem data:**
-When files are scattered across the disk (common on ext4 with many small files or long-running systems), anticipatory scheduling provides diminishing returns. AS assumes nearby blocks will be requested soon — but if they’re actually distant, waiting wastes time.
+When files are scattered across the disk (common on ext4 with many small files or long-running systems), anticipatory scheduling provides diminishing returns. AS assumes nearby blocks will be requested soon, but if they’re actually distant, waiting wastes time.
 
 ### Practical Considerations
 

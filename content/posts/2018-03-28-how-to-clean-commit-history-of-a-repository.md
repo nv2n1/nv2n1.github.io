@@ -10,7 +10,7 @@ canonical: /how-to-clean-commit-history-of-a-repository/
 url: /how-to-clean-commit-history-of-a-repository/
 ---
 
-“Cleaning” history usually means rewriting it to remove large files, sensitive data, or to squash messy commits into logical units. This is destructive—it rewrites history and affects anyone who’s cloned the repo. Only do this on branches you control or coordinate with your team first.
+“Cleaning” history usually means rewriting it to remove large files, sensitive data, or to squash messy commits into logical units. This is destructive: it rewrites history and affects anyone who’s cloned the repo. Only do this on branches you control or coordinate with your team first.
 
 ## git filter-repo: The Standard Tool
 
@@ -73,11 +73,11 @@ git rebase -i HEAD~5
 
 This opens your editor with the last 5 commits. Commands available:
 
-- `pick` — use this commit
-- `squash` (or `s`) — meld into previous commit
-- `reword` (or `r`) — keep changes, edit the message
-- `fixup` (or `f`) — like squash, but discard the log message
-- `drop` (or `d`) — remove the commit
+- `pick`: use this commit
+- `squash` (or `s`): meld into previous commit
+- `reword` (or `r`): keep changes, edit the message
+- `fixup` (or `f`), like squash, but discard the log message
+- `drop` (or `d`): remove the commit
 
 After editing, save and exit. Git will apply the changes. If conflicts occur, resolve them and run `git rebase --continue`.
 

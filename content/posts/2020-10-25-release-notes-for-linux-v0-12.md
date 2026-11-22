@@ -35,7 +35,7 @@ Installation for v0.12 closely parallels v0.11. You’ll need:
 
 **1. Verify partition availability**
 
-Ensure at least one free primary partition exists. DOS `fdisk` typically creates only 2 partitions (one primary, one extended). Use alternative partitioning software if necessary. Note the partition size—this helps identify the correct device node.
+Ensure at least one free primary partition exists. DOS `fdisk` typically creates only 2 partitions (one primary, one extended). Use alternative partitioning software if necessary. Note the partition size: this helps identify the correct device node.
 
 **2. Create the Linux filesystem**
 
@@ -67,7 +67,7 @@ sync
 # Wait for sync to complete
 ```
 
-Press `Ctrl+Alt+Del` to reboot. The sync operation is critical—never power down without flushing buffers.
+Press `Ctrl+Alt+Del` to reboot. The sync operation is critical: never power down without flushing buffers.
 
 **5. Configure the boot disk**
 

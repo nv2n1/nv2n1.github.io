@@ -41,7 +41,7 @@ cp "$email" "$1" && rm -f "$email"
 
 Key points:
 
-- The `--nofork` flag is critical—without it, Konsole returns immediately and KMail won’t wait for your edits
+- The `--nofork` flag is critical: without it, Konsole returns immediately and KMail won’t wait for your edits
 - Adding `.eml` extension enables Vim’s email syntax highlighting automatically
 - The script uses proper quoting around `$1` and `$email` to handle filenames with spaces
 - `--geometry 1000x600` sets a reasonable window size; adjust to your preference
@@ -64,7 +64,7 @@ That’s the entire command. KMail will pass the temporary email file as the fir
 
 ## In Practice
 
-When you compose or reply to a message, KMail opens a dialog. Triggering the external editor (usually a button or menu option) launches Konsole with Vim. Edit normally—your full Vim configuration applies, including custom mappings, abbreviations, and filetype plugins. When you `:wq` or `:x` Vim, Konsole closes automatically, KMail reads the modified file, and you’re back in the composer with your text ready to send.
+When you compose or reply to a message, KMail opens a dialog. Triggering the external editor (usually a button or menu option) launches Konsole with Vim. Edit normally: your full Vim configuration applies, including custom mappings, abbreviations, and filetype plugins. When you `:wq` or `:x` Vim, Konsole closes automatically, KMail reads the modified file, and you’re back in the composer with your text ready to send.
 
 ## Alternative: Direct Terminal Usage
 

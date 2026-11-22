@@ -29,10 +29,10 @@ This returns a sorted list with commit counts and author names:
 
 ## Breaking Down the Command
 
-- `git log --format='%aN'` — Extract author names from commit history. The `%aN` format shows the author’s name (not email).
-- `sort` — Group identical names together.
-- `uniq -c` — Count occurrences of each name.
-- `sort -rn` — Sort numerically in reverse order (highest counts first).
+- `git log --format='%aN'`: Extract author names from commit history. The `%aN` format shows the author’s name (not email).
+- `sort`: Group identical names together.
+- `uniq -c`: Count occurrences of each name.
+- `sort -rn`: Sort numerically in reverse order (highest counts first).
 
 ## Including Email Addresses
 

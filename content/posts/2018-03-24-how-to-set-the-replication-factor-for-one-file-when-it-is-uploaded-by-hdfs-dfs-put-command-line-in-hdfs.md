@@ -46,7 +46,7 @@ hdfs dfs -Ddfs.replication=1 -put /local/data/* /hdfs/bulk-import/
 
 **Rebalancing:** After the upload completes, HDFS may trigger rebalancing if the new replication factor differs significantly from the cluster default. Monitor this with `hdfs dfsadmin -report`.
 
-**Write Pipeline:** The replication factor affects the write pipeline. Lower values reduce latency but increase risk. A factor of 1 means no fault tolerance—use only for truly temporary or regenerable data.
+**Write Pipeline:** The replication factor affects the write pipeline. Lower values reduce latency but increase risk. A factor of 1 means no fault tolerance: use only for truly temporary or regenerable data.
 
 **Existing Files:** This flag only applies during the upload. To change the replication factor of existing files, use:
 

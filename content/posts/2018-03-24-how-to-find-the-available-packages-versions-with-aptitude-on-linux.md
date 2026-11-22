@@ -10,7 +10,7 @@ canonical: /how-to-find-the-available-packages-versions-with-aptitude-on-linux/
 url: /how-to-find-the-available-packages-versions-with-aptitude-on-linux/
 ---
 
-When managing packages on Ubuntu or Debian systems, knowing what versions are available—and which one will be installed—is essential for dependency management and system stability. The `aptitude` command provides several ways to inspect package versions.
+When managing packages on Ubuntu or Debian systems, knowing what versions are available (and which one will be installed) is essential for dependency management and system stability. The `aptitude` command provides several ways to inspect package versions.
 
 ## Check all available versions of a package
 
@@ -38,7 +38,7 @@ Before committing to an installation, simulate the operation to see exactly whic
 aptitude install -V -s package-name
 ```
 
-The `-V` flag increases verbosity to show version details, and `-s` performs a dry-run without making changes. This is particularly useful when multiple versions exist in different repositories—you can verify the resolver’s choice matches your expectations.
+The `-V` flag increases verbosity to show version details, and `-s` performs a dry-run without making changes. This is particularly useful when multiple versions exist in different repositories: you can verify the resolver’s choice matches your expectations.
 
 Add `-y` to the command if you want to see what would happen with automatic yes-to-prompts:
 

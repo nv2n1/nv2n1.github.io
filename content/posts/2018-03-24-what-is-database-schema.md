@@ -10,7 +10,7 @@ canonical: /what-is-database-schema/
 url: /what-is-database-schema/
 ---
 
-A database schema is the blueprint that defines how data is organized and stored in a database. Think of it as the architectural plan for your database—it specifies tables, columns, data types, relationships, constraints, and rules that govern how data can be stored and accessed.
+A database schema is the blueprint that defines how data is organized and stored in a database. Think of it as the architectural plan for your database: it specifies tables, columns, data types, relationships, constraints, and rules that govern how data can be stored and accessed.
 
 ## Core Components of a Schema
 

@@ -70,7 +70,7 @@ On Windows or files with mixed line endings, you may encounter `^M` (carriage re
 - `C-x RET c` to list available coding systems
 - Choose `utf-8-unix` for LF-only line endings or `utf-8-dos` for CRLF
 
-Verify the current line ending style in the mode line — it shows `(Unix)`, `(DOS)`, or `(Mac)`.
+Verify the current line ending style in the mode line: it shows `(Unix)`, `(DOS)`, or `(Mac)`.
 
 ## Batch replacements across files
 
@@ -86,7 +86,7 @@ This avoids opening and replacing in each file manually.
 
 ## Common pitfalls
 
-- Don’t confuse `C-j` (newline/LF) with `C-m` (carriage return/CR) — use `C-j` for modern Unix-style line endings
+- Don’t confuse `C-j` (newline/LF) with `C-m` (carriage return/CR): use `C-j` for modern Unix-style line endings
 - In regex mode, `.` doesn’t match newlines; use `\s-` or explicit patterns to match whitespace including newlines if needed
 - When replacing in large buffers, `query-replace` is safer than `replace-string` to avoid unintended matches
 

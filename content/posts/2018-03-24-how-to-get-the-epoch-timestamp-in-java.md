@@ -60,7 +60,7 @@ long nanoStart = System.nanoTime();
 long nanoElapsed = System.nanoTime() - nanoStart;
 ```
 
-Note that `System.nanoTime()` is strictly for measuring elapsed time—it doesn’t return an epoch value and isn’t comparable across system reboots.
+Note that `System.nanoTime()` is strictly for measuring elapsed time: it doesn’t return an epoch value and isn’t comparable across system reboots.
 
 ## Parsing epoch values
 

@@ -98,9 +98,9 @@ The mask is hexadecimal. For a 4-CPU system, `0xf` means all CPUs, `0x1` means C
 
 High interrupt rates on a single CPU can cause:
 
-- **CPU starvation** — threads don’t get scheduled
-- **Cache thrashing** — context switching overhead
-- **Latency spikes** — time-sensitive applications suffer
+- **CPU starvation**: threads don’t get scheduled
+- **Cache thrashing**: context switching overhead
+- **Latency spikes**: time-sensitive applications suffer
 
 Compare before and after snapshots:
 
@@ -115,9 +115,9 @@ Look for IRQs with rapidly increasing counts or unbalanced distribution across C
 
 ## Tools for Deep Analysis
 
-- **`irqstat`** — Part of `sysstat`, shows interrupt rates per second
-- **`perf`** — Record interrupt samples: `sudo perf record -e irq:* -ag sleep 5`
-- **`systemtap`** — Write custom probes for interrupt behavior (deprecated on newer kernels; prefer bpftrace)
+- **`irqstat`**: Part of `sysstat`, shows interrupt rates per second
+- **`perf`**: Record interrupt samples: `sudo perf record -e irq:* -ag sleep 5`
+- **`systemtap`**: Write custom probes for interrupt behavior (deprecated on newer kernels; prefer bpftrace)
 
 ## Practical Troubleshooting
 

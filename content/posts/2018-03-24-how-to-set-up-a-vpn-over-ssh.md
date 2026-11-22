@@ -14,7 +14,7 @@ SSH tunneling and port forwarding work well for specific traffic, but they don�
 
 ## sshuttle on Linux and macOS
 
-sshuttle is the standard tool for Linux and macOS users. It creates a transparent proxy over SSH without requiring administrative access on the remote server or VPN software installation—just standard SSH access.
+sshuttle is the standard tool for Linux and macOS users. It creates a transparent proxy over SSH without requiring administrative access on the remote server or VPN software installation: just standard SSH access.
 
 ### Installation
 
@@ -60,7 +60,7 @@ sshuttle will prompt for your SSH password (or use your SSH key automatically if
 
 ### Selective routing
 
-Often you don’t want everything tunneled—just specific subnets. To route only traffic destined for `10.0.0.0/8`:
+Often you don’t want everything tunneled: just specific subnets. To route only traffic destined for `10.0.0.0/8`:
 
 ``` bash
 sshuttle -r username@remotehost 10.0.0.0/8
@@ -213,7 +213,7 @@ ssh-copy-id -i ~/.ssh/sshuttle_key username@remotehost
 
 **Traffic visibility:**
 
-sshuttle’s traffic is encrypted end-to-end by SSH itself. However, the remote server sees all your traffic—only use servers you trust. If you’re relying on anonymity, verify the server operator’s privacy policy.
+sshuttle’s traffic is encrypted end-to-end by SSH itself. However, the remote server sees all your traffic: only use servers you trust. If you’re relying on anonymity, verify the server operator’s privacy policy.
 
 **Verify DNS leaks:**
 

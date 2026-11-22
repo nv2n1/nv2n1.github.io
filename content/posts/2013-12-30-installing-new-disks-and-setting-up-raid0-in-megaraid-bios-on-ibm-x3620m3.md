@@ -16,7 +16,7 @@ RAID0 (striping) on enterprise RAID controllers like Broadcom MegaRAID is used t
 
 - Physical or IPMI/console access to the server BIOS
 - New disk(s) physically installed and detected by the controller
-- Clear understanding that RAID0 offers zero fault tolerance — any single disk failure destroys all data on the array
+- Clear understanding that RAID0 offers zero fault tolerance: any single disk failure destroys all data on the array
 - Controller firmware up to date (check Broadcom’s support site for your specific model)
 
 ## Step 1: Initialize Disks to Unconfigured Good Status
@@ -31,7 +31,7 @@ New disks arrive in an unconfigured state and must be initialized before RAID co
 4.  Choose **Make Unconf Good** or **Initialize Disk**
 5.  Confirm the operation
 
-The disk status should now display as “Unconf Good” or “Online (Unconfigured)”. Verify disk details—capacity, model, firmware version—in this view. Some newer firmware versions auto-initialize new disks; consult your controller’s release notes if disks appear ready without manual intervention.
+The disk status should now display as “Unconf Good” or “Online (Unconfigured)”. Verify disk details (capacity, model, firmware version) in this view. Some newer firmware versions auto-initialize new disks; consult your controller’s release notes if disks appear ready without manual intervention.
 
 ## Step 2: Create the RAID0 Array
 
@@ -52,7 +52,7 @@ Once disks show “Unconf Good” status, configure them into a RAID group.
     - **Write-Through**: safest, no data loss on power failure but slower writes
     - **Write-Back**: faster writes, requires capacitor-backed cache or battery backup
 9.  Review the final summary showing all disk assignments and click **Accept**
-10. Confirm initialization — the controller writes RAID metadata to all disks
+10. Confirm initialization: the controller writes RAID metadata to all disks
 
 The array initializes in the background. Monitor progress from the Home screen. Initialization time varies with disk size, typically 10-30 minutes. Performance may be reduced during initialization if the init rate is set aggressively.
 
@@ -137,9 +137,9 @@ sudo megacli -PDList -a0 | grep "Firmware state"
 
 Watch for:
 
-- **Offline** or **Failed** physical disks — immediate data loss in RAID0
-- **Predictive Failures** — replace disks before failure
-- High temperature warnings — verify cooling
+- **Offline** or **Failed** physical disks: immediate data loss in RAID0
+- **Predictive Failures**: replace disks before failure
+- High temperature warnings: verify cooling
 
 Set up alerting through your monitoring system (Prometheus, Nagios, etc.) to notify on disk state changes.
 

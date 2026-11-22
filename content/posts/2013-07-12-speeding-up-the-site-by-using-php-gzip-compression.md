@@ -10,11 +10,11 @@ canonical: /speeding-up-the-site-by-using-php-gzip-compression/
 url: /speeding-up-the-site-by-using-php-gzip-compression/
 ---
 
-Compressing HTTP responses with gzip reduces bandwidth usage and improves page load times. However, **server-level compression should be your first choice**—PHP-level compression is a workaround for constrained hosting environments.
+Compressing HTTP responses with gzip reduces bandwidth usage and improves page load times. However, **server-level compression should be your first choice**: PHP-level compression is a workaround for constrained hosting environments.
 
 ## How GZIP Compression Works
 
-When a browser sends a request with `Accept-Encoding: gzip` in its headers, the server can compress the response body before transmission. The browser automatically decompresses it—the process is transparent to end users.
+When a browser sends a request with `Accept-Encoding: gzip` in its headers, the server can compress the response body before transmission. The browser automatically decompresses it: the process is transparent to end users.
 
 ## Check If Your Server Already Compresses
 
@@ -149,7 +149,7 @@ Text-based content (HTML, JSON, CSS, JavaScript) typically compresses to 20-40% 
 ## Best Practices
 
 - **Prefer server-level compression** with proper `Vary: Accept-Encoding` headers
-- **Don’t compress binary formats** (JPEG, PNG, WebP, video) in PHP—they’re already compressed
-- **Cache aggressively**—compressed responses should be cached in HTTP caches and CDNs
-- **Monitor after deployment**—watch CPU usage and response times, not just bandwidth savings
-- **Test with real clients**—use curl, Firefox DevTools, or Chrome DevTools to verify the `Content-Encoding` header is present
+- **Don’t compress binary formats** (JPEG, PNG, WebP, video) in PHP: they’re already compressed
+- **Cache aggressively**: compressed responses should be cached in HTTP caches and CDNs
+- **Monitor after deployment**: watch CPU usage and response times, not just bandwidth savings
+- **Test with real clients**: use curl, Firefox DevTools, or Chrome DevTools to verify the `Content-Encoding` header is present

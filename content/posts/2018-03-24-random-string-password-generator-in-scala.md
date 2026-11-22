@@ -27,7 +27,7 @@ def randomString(len: Int): String = {
 println(randomString(12))  // Example output: "aB3xKp9mN2Lq"
 ```
 
-This pulls random characters from the alphanumeric set and concatenates them. You can easily modify the `chars` string to include or exclude specific character types—add special characters like `!@#$%` if your system requires them, or restrict to lowercase only if needed.
+This pulls random characters from the alphanumeric set and concatenates them. You can easily modify the `chars` string to include or exclude specific character types: add special characters like `!@#$%` if your system requires them, or restrict to lowercase only if needed.
 
 **Why not use nanoTime seeding?** The original example seeded with `System.nanoTime`, but `scala.util.Random()` already seeds itself adequately for non-cryptographic purposes. Don’t add custom seeding unless you have a specific reason.
 
@@ -77,7 +77,7 @@ object PasswordGenerator {
 }
 ```
 
-This generates raw random bytes and converts them to base-36 (alphanumeric). It’s slightly different from character-by-character selection—useful if you want maximum entropy density.
+This generates raw random bytes and converts them to base-36 (alphanumeric). It’s slightly different from character-by-character selection: useful if you want maximum entropy density.
 
 ## Practical considerations
 

@@ -42,7 +42,7 @@ Once installed, compile C programs against musl instead of glibc using the `musl
 musl-gcc -static -o myapp myapp.c
 ```
 
-The `-static` flag creates a fully self-contained binary with no libc dependencies—useful for containers, serverless environments, or distribution across systems.
+The `-static` flag creates a fully self-contained binary with no libc dependencies: useful for containers, serverless environments, or distribution across systems.
 
 For more complex projects using autoconf:
 
@@ -132,11 +132,11 @@ Package management issues often stem from stale caches. Run dnf clean all on Fed
 
 These commands are frequently used alongside the tools discussed in this article:
 
-- systemctl status service-name – Check if a service is running
-- journalctl -u service-name -f – Follow service logs in real time
-- rpm -qi package-name – Query installed package information
-- dnf history – View package transaction history
-- top or htop – Monitor system resource usage
+- systemctl status service-name: Check if a service is running
+- journalctl -u service-name -f: Follow service logs in real time
+- rpm -qi package-name: Query installed package information
+- dnf history: View package transaction history
+- top or htop: Monitor system resource usage
 
 ## Quick Verification
 

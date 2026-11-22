@@ -151,11 +151,11 @@ sudo systemctl restart httpd
 
 ## Quick Reference
 
-- `sudo dnf install httpd php php-fpm` — Install
-- `php -v` — Check PHP version
-- `/etc/php.ini` — PHP configuration
-- `/etc/httpd/conf.d/` — Apache site configs
-- `sudo systemctl restart httpd php-fpm` — Apply changes
+- `sudo dnf install httpd php php-fpm`: Install
+- `php -v`: Check PHP version
+- `/etc/php.ini`: PHP configuration
+- `/etc/httpd/conf.d/`: Apache site configs
+- `sudo systemctl restart httpd php-fpm`: Apply changes
 
 ## PHP Version Management on Fedora
 

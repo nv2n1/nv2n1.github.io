@@ -29,7 +29,7 @@ For more comprehensive testing, use Responsive Design Mode (**Ctrl+Shift+M** on 
 
 1.  Open Responsive Design Mode
 2.  In the toolbar, find the **“Device Pixel Ratio”** section or settings menu
-3.  Many print preview tools are integrated here — you can simulate different viewport sizes while keeping print styles active
+3.  Many print preview tools are integrated here: you can simulate different viewport sizes while keeping print styles active
 4.  This is useful for testing how print stylesheets behave at different breakpoints
 
 ## Common Print Style Debugging Tasks
@@ -101,7 +101,7 @@ DevTools media emulation is faster for iteration, but the print dialog preview i
 
 ## Tips for Print-Friendly Design
 
-- Always test with actual printer settings — different paper sizes, margins, and color modes affect output
+- Always test with actual printer settings: different paper sizes, margins, and color modes affect output
 - Use `@page` CSS to control margins, headers, and footers (though browser support varies)
 - Test in both Firefox and Chrome, as their print engines differ slightly
 - Avoid fixed-width layouts; responsive designs print better

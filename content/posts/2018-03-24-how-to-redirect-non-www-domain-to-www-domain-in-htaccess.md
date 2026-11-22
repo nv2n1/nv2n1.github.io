@@ -125,7 +125,7 @@ sudo systemctl restart apache2
 
 **Query strings**: The rules above preserve query strings automatically, but test with URLs like `example.com/page?param=value` to confirm.
 
-**Subdomain preservation**: The rules work correctly with subdomains—`api.example.com` becomes `www.api.example.com`. If you want to exclude subdomains from redirects, add this condition:
+**Subdomain preservation**: The rules work correctly with subdomains: `api.example.com` becomes `www.api.example.com`. If you want to exclude subdomains from redirects, add this condition:
 
 ``` apache
 RewriteCond %{HTTP_HOST} ^[^.]+\.[^.]+$ [NC]

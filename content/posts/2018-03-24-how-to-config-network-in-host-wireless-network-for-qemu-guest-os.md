@@ -14,7 +14,7 @@ When your host machine connects to the network via WiFi, giving QEMU guests netw
 
 ## Understanding your options
 
-**NAT mode** is the simplest approach—the host acts as a router, translating between guest traffic and the wireless network. This works out of the box with modern QEMU but has limitations: guests can’t be reached from the host or other machines on the network, and port forwarding becomes necessary for inbound connections.
+**NAT mode** is the simplest approach: the host acts as a router, translating between guest traffic and the wireless network. This works out of the box with modern QEMU but has limitations: guests can’t be reached from the host or other machines on the network, and port forwarding becomes necessary for inbound connections.
 
 **User mode networking** is even simpler and requires no setup, but it’s slower and has stricter limitations on what protocols work.
 

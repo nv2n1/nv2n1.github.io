@@ -16,10 +16,10 @@ systutorials.com runs on WordPress with the Twenty Fourteen theme (now legacy) a
 
 If starting fresh today, Twenty Fourteen is outdated. Modern alternatives include:
 
-- **Twenty Twenty-Five** — the current WordPress default, lightweight and well-maintained
-- **Underscores** — minimal starter theme with solid hook structure
-- **Sage** — opinionated but powerful, good for developers who want build tooling
-- **Generate Press** — lightweight, customizable, and popular for technical sites
+- **Twenty Twenty-Five**: the current WordPress default, lightweight and well-maintained
+- **Underscores**: minimal starter theme with solid hook structure
+- **Sage**: opinionated but powerful, good for developers who want build tooling
+- **Generate Press**: lightweight, customizable, and popular for technical sites
 
 ### Customization Without Breaking Updates
 
@@ -61,10 +61,10 @@ The admin panel lets you swap themes without filesystem access, which is safer f
 
 Rather than accumulating plugins, consider:
 
-- **Custom post types** — for structured content (e.g., tutorials, code snippets)
-- **Theme hooks** — most themes expose action/filter hooks for extending functionality
-- **Must-use plugins** (mu-plugins) — lightweight, site-specific code that loads automatically
-- **Selective plugins** — each adds memory and database overhead; consolidate when possible
+- **Custom post types**: for structured content (e.g., tutorials, code snippets)
+- **Theme hooks**: most themes expose action/filter hooks for extending functionality
+- **Must-use plugins** (mu-plugins): lightweight, site-specific code that loads automatically
+- **Selective plugins**: each adds memory and database overhead; consolidate when possible
 
 A site-specific must-use plugin avoids the plugin directory overhead:
 
@@ -85,10 +85,10 @@ This loads before regular plugins and doesn’t appear in the admin plugin list.
 
 Separate concerns clearly:
 
-- **Theme** — presentation and markup
-- **Plugins** — discrete features (caching, SEO, security)
-- **Custom code** — site-specific logic in mu-plugins or functions.php
-- **Content** — posts, pages, custom post types
+- **Theme**: presentation and markup
+- **Plugins**: discrete features (caching, SEO, security)
+- **Custom code**: site-specific logic in mu-plugins or functions.php
+- **Content**: posts, pages, custom post types
 
 This structure makes audits easier, reduces conflicts, and keeps the codebase readable as the site grows.
 

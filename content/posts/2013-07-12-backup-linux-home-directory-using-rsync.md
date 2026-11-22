@@ -26,7 +26,7 @@ Breaking down the flags:
 
 - `-a` (archive mode): Preserves permissions, timestamps, ownership, and recursively copies directories
 - `-v` (verbose): Shows files being transferred
-- `-x` (one-file-system): Doesn’t cross filesystem boundaries — useful for excluding mounted volumes like `/dev`, `/proc`, `/sys`
+- `-x` (one-file-system): Doesn’t cross filesystem boundaries: useful for excluding mounted volumes like `/dev`, `/proc`, `/sys`
 - `-P`: Combines `--progress` (shows transfer progress) and `--partial` (keeps incomplete files if interrupted, allowing resumption)
 
 ## Practical Example
@@ -37,7 +37,7 @@ To back up your home directory to an external drive mounted at `/mnt/backup`:
 rsync -avxP ~/. /mnt/backup/home-backup/
 ```
 
-Note the trailing slash on the source — this copies the *contents* of your home directory rather than the directory itself.
+Note the trailing slash on the source: this copies the *contents* of your home directory rather than the directory itself.
 
 ## Handling Deletions
 
@@ -47,7 +47,7 @@ By default, rsync preserves files in the destination that no longer exist in the
 rsync -avxP --delete ~/. /mnt/backup/home-backup/
 ```
 
-Use this carefully — it’s permanent.
+Use this carefully: it’s permanent.
 
 ## Additional Useful Flags
 
@@ -102,6 +102,6 @@ If backing up as a non-root user, rsync preserves whatever permissions you can r
 sudo rsync -avxP --delete ~/. /mnt/backup/home-backup/
 ```
 
-However, be careful with sudo and rsync — always double-check your source and destination paths.
+However, be careful with sudo and rsync: always double-check your source and destination paths.
 
 rsync is resilient and handles interrupted transfers gracefully. If a backup is interrupted, re-running the same command resumes where it left off, transferring only the remaining portions of incomplete files.

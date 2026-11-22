@@ -12,7 +12,7 @@ url: /how-to-compressuncompress-files-in-linux-using-gzip-bzip2-7z-rar-and-zip/
 
 File compression is a routine task in Linux administration. You’ll encounter several tools, each with different tradeoffs between compression ratio, speed, and compatibility. This guide covers the most common compression formats: gzip, bzip2, 7z, xz, and zip.
 
-The examples below assume you’re compressing a directory called `dir`. Each tool supports compression level options — you can use maximum compression (slower, smaller files) or faster compression (larger files). The commands shown use maximum compression; strip those flags if you prefer speed over size.
+The examples below assume you’re compressing a directory called `dir`. Each tool supports compression level options: you can use maximum compression (slower, smaller files) or faster compression (larger files). The commands shown use maximum compression; strip those flags if you prefer speed over size.
 
 ## gzip
 

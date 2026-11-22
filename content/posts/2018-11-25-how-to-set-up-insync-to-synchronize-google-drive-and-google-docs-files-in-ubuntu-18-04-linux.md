@@ -10,7 +10,7 @@ canonical: /how-to-set-up-insync-to-synchronize-google-drive-and-google-docs-fil
 url: /how-to-set-up-insync-to-synchronize-google-drive-and-google-docs-files-in-ubuntu-18-04-linux/
 ---
 
-Google Drive remains the dominant cloud storage platform, but Linux users still lack an official client. Insync fills this gap—it’s a third-party sync tool that actually works well and maintains local file access rather than relying on virtual filesystems.
+Google Drive remains the dominant cloud storage platform, but Linux users still lack an official client. Insync fills this gap: it’s a third-party sync tool that actually works well and maintains local file access rather than relying on virtual filesystems.
 
 ## Why Insync Over Alternatives
 
@@ -100,7 +100,7 @@ Launch Insync from your application menu or run:
 insync start
 ```
 
-The first time, you’ll see the authentication window. Click to authorize access to your Google account. Insync only requests Google Drive permissions—it doesn’t ask for full account access.
+The first time, you’ll see the authentication window. Click to authorize access to your Google account. Insync only requests Google Drive permissions: it doesn’t ask for full account access.
 
 Once authorized, Insync begins syncing immediately. By default, it creates an `~/Insync` folder containing your Drive contents mirrored locally.
 
@@ -167,6 +167,6 @@ sudo sysctl -p
 
 ## Alternatives Worth Considering
 
-**Rclone** is a lightweight command-line option for syncing Google Drive without a GUI or daemon—good if you only need periodic backups. **Nextcloud** works well if you self-host. **GNOME Online Accounts** is built-in but limited to read-only virtual mounts.
+**Rclone** is a lightweight command-line option for syncing Google Drive without a GUI or daemon: good if you only need periodic backups. **Nextcloud** works well if you self-host. **GNOME Online Accounts** is built-in but limited to read-only virtual mounts.
 
 For active editing workflows where you need real files and want Google Docs integration, Insync remains the most complete solution for Linux.

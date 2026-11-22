@@ -34,7 +34,7 @@ int main(const char *filename) {
 }
 ```
 
-Always check the return value — `stat()` returns -1 on error and sets `errno`. Use `perror()` or check `errno` directly for debugging.
+Always check the return value: `stat()` returns -1 on error and sets `errno`. Use `perror()` or check `errno` directly for debugging.
 
 ### Using `fstat()` with a File Descriptor
 

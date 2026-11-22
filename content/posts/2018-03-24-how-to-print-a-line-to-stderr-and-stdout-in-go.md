@@ -43,7 +43,7 @@ func main() {
 }
 ```
 
-The `Fprintln` and `Fprintf` functions accept an `io.Writer` as the first argument, allowing you to direct output to any writer—including files, network connections, or buffers.
+The `Fprintln` and `Fprintf` functions accept an `io.Writer` as the first argument, allowing you to direct output to any writer, including files, network connections, or buffers.
 
 ## Using the log Package
 
@@ -146,13 +146,13 @@ When running this in a shell, you can capture each stream separately:
 
 ## Best Practices
 
-**Use STDOUT for normal operation output** — data your application intentionally produces that users or downstream processes need. In container environments, this flows to standard logging systems (Docker logs, Kubernetes logs, journald).
+**Use STDOUT for normal operation output**: data your application intentionally produces that users or downstream processes need. In container environments, this flows to standard logging systems (Docker logs, Kubernetes logs, journald).
 
-**Use STDERR for diagnostics and errors** — warnings, errors, debug information, and status messages that don’t belong in application output. Separating these streams allows operators to filter or handle them differently.
+**Use STDERR for diagnostics and errors**: warnings, errors, debug information, and status messages that don’t belong in application output. Separating these streams allows operators to filter or handle them differently.
 
-**Avoid mixing concerns** — don’t write error messages to STDOUT. This breaks log parsing and makes it harder for monitoring systems to distinguish problems from normal operation.
+**Avoid mixing concerns**: don’t write error messages to STDOUT. This breaks log parsing and makes it harder for monitoring systems to distinguish problems from normal operation.
 
-**Consider structured logging** — for production applications, use packages like `slog` (Go 1.21+) or third-party libraries like `zap` or `logrus`. They support JSON output, structured fields, and log levels, which are critical in cloud and containerized deployments:
+**Consider structured logging**: for production applications, use packages like `slog` (Go 1.21+) or third-party libraries like `zap` or `logrus`. They support JSON output, structured fields, and log levels, which are critical in cloud and containerized deployments:
 
 ``` go
 package main

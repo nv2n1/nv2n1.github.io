@@ -242,7 +242,7 @@ async def main():
 
 ## WebSockets vs Server-Sent Events
 
-WebSockets provide bidirectional communication—useful when clients request specific metrics or adjust collection intervals. Server-Sent Events (SSE) work for unidirectional streams and use simpler HTTP, with better load-balancer compatibility.
+WebSockets provide bidirectional communication: useful when clients request specific metrics or adjust collection intervals. Server-Sent Events (SSE) work for unidirectional streams and use simpler HTTP, with better load-balancer compatibility.
 
 Use SSE if you only need one-way data flow:
 
@@ -296,7 +296,7 @@ eventSource.onerror = () => {
 - Validate all incoming requests and reject unknown message types
 - Set Content Security Policy headers to prevent XSS: `Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' cdn.jsdelivr.net`
 - Rate-limit metric requests per client to prevent resource exhaustion
-- Audit who accesses metrics—they reveal infrastructure topology and capacity
+- Audit who accesses metrics: they reveal infrastructure topology and capacity
 
 ## Collection Intervals and Performance
 
@@ -361,8 +361,8 @@ Track these metrics on your monitoring system:
 - Backend CPU/memory usage per connected client
 - Message queue depth if buffering metrics
 
-Set alerts on unexpected disconnects or high reconnection rates—they indicate network issues or backend problems.
+Set alerts on unexpected disconnects or high reconnection rates: they indicate network issues or backend problems.
 
 ## Advantages Over Legacy Approaches
 
-Java Applets required browser plugins, failed silently on permission denial, incurred JVM startup overhead, and introduced attack surface through outdated security models. Modern web stacks run natively in browsers, deploy instantly without installation, use standardized TLS security and CORS headers, and scale to hundreds of concurrent clients efficiently. Development is simpler—no need for Java expertise alongside web development.
+Java Applets required browser plugins, failed silently on permission denial, incurred JVM startup overhead, and introduced attack surface through outdated security models. Modern web stacks run natively in browsers, deploy instantly without installation, use standardized TLS security and CORS headers, and scale to hundreds of concurrent clients efficiently. Development is simpler: no need for Java expertise alongside web development.

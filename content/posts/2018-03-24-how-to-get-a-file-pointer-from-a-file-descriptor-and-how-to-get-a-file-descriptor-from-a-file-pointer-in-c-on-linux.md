@@ -40,9 +40,9 @@ fclose(file);  // This also closes fd
 **Important points:**
 
 - The mode string (`"r"`, `"w"`, `"a"`, etc.) must be compatible with how the descriptor was originally opened
-- Don’t close the file descriptor separately after calling `fdopen()` — `fclose()` on the `FILE` pointer will close both
+- Don’t close the file descriptor separately after calling `fdopen()`: `fclose()` on the `FILE` pointer will close both
 - If mode compatibility is wrong (e.g., `fdopen(fd, "w")` on a read-only descriptor), `fdopen()` succeeds but subsequent I/O will fail
-- The `FILE` stream doesn’t own the descriptor — if `fdopen()` fails, you must close the descriptor yourself
+- The `FILE` stream doesn’t own the descriptor: if `fdopen()` fails, you must close the descriptor yourself
 
 ## Getting a File Descriptor from a FILE Pointer
 
@@ -75,7 +75,7 @@ fclose(file);
 **Important points:**
 
 - `fileno()` returns -1 on error (though failure is rare with valid `FILE` pointers)
-- The descriptor remains owned by the `FILE` stream — don’t close it directly
+- The descriptor remains owned by the `FILE` stream: don’t close it directly
 - Closing the `FILE` pointer will close the descriptor
 - Changes made via the descriptor (seek position, flags) affect the `FILE` stream and vice versa
 

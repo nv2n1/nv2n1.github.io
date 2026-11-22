@@ -28,7 +28,7 @@ To list all branches on the remote server, use the `-r` flag:
 git branch -r
 ```
 
-This displays remote-tracking branches — local references to branches that exist on the remote repository. These are read-only pointers that track the state of branches on the remote.
+This displays remote-tracking branches: local references to branches that exist on the remote repository. These are read-only pointers that track the state of branches on the remote.
 
 ### All branches (local and remote)
 

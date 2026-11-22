@@ -10,7 +10,7 @@ canonical: /how-to-move-rss-readling-list-from-feedly-to-follow-it/
 url: /how-to-move-rss-readling-list-from-feedly-to-follow-it/
 ---
 
-RSS feed readers have become essential for staying on top of content from multiple sources. If you’re switching from Feedly to Follow.it, the migration is straightforward — both services support OPML (Outline Processor Markup Language), a standard format for exporting and importing feed lists.
+RSS feed readers have become essential for staying on top of content from multiple sources. If you’re switching from Feedly to Follow.it, the migration is straightforward: both services support OPML (Outline Processor Markup Language), a standard format for exporting and importing feed lists.
 
 ## Export Your Feed List from Feedly
 
@@ -51,7 +51,7 @@ Follow.it’s import process is equally straightforward:
 1.  Log into your Follow.it account
 2.  Navigate to the Discovery section or go directly to `https://follow.it/mass-follow`
 3.  Click on the “Mass Follow” tab
-4.  Look for the OPML upload option — you can either drag and drop your file or click to browse
+4.  Look for the OPML upload option: you can either drag and drop your file or click to browse
 5.  Select your exported Feedly OPML file
 6.  Follow.it will process the file and begin subscribing to all feeds
 
@@ -85,7 +85,7 @@ grep -oP 'xmlUrl="\K[^"]+' feedly.opml > feeds.txt
 
 This creates a simple list of URLs that Follow.it can also import, useful if you need to filter or edit feeds before importing.
 
-The OPML standard ensures you’re never locked into a single reader — switching services is always possible as long as both support this format.
+The OPML standard ensures you’re never locked into a single reader: switching services is always possible as long as both support this format.
 
 ## 2026 Comprehensive Guide: Best Practices
 

@@ -10,7 +10,7 @@ canonical: /gnome-style-shiki-colorsgnome-colors/
 url: /gnome-style-shiki-colorsgnome-colors/
 ---
 
-This guide documents theme configuration for GNOME 2 and early KDE environments. If you’re running GNOME 40+, KDE Plasma 5, or later, refer to your desktop’s modern theming systems instead—most of these packages and configuration methods no longer apply.
+This guide documents theme configuration for GNOME 2 and early KDE environments. If you’re running GNOME 40+, KDE Plasma 5, or later, refer to your desktop’s modern theming systems instead: most of these packages and configuration methods no longer apply.
 
 ## Historical Context
 

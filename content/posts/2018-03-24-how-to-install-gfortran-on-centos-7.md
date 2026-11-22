@@ -26,7 +26,7 @@ On CentOS 7 (EOL since June 2024), the older yum package manager still works:
 sudo yum install gcc-gfortran
 ```
 
-However, **CentOS 7 is no longer supported**. If you’re still running it, plan a migration to Rocky Linux or AlmaLinux — they provide binary compatibility and continued security updates.
+However, **CentOS 7 is no longer supported**. If you’re still running it, plan a migration to Rocky Linux or AlmaLinux: they provide binary compatibility and continued security updates.
 
 ### Verify Installation
 
@@ -75,7 +75,7 @@ sudo yum groupinstall "Development Tools"
 
 For scientific computing with multiple compiler versions, MPI libraries, or BLAS/LAPACK dependencies, use a package manager designed for HPC:
 
-**Spack** — manages complex dependency trees and multiple compiler toolchains:
+**Spack**: manages complex dependency trees and multiple compiler toolchains:
 
 ``` bash
 git clone https://github.com/spack/spack.git
@@ -85,7 +85,7 @@ spack install gcc@13.2.0
 spack install openmpi %gcc@13.2.0
 ```
 
-**EasyBuild** — provides pre-configured recipes for scientific software:
+**EasyBuild**: provides pre-configured recipes for scientific software:
 
 ``` bash
 pip install easybuild
@@ -121,11 +121,11 @@ sudo dnf install blas-devel lapack-devel
 
 When building Fortran code, you’ll often use:
 
-- `-O2` or `-O3` — optimization levels
-- `-Wall` — enable warnings
-- `-g` — debug symbols
-- `-fcheck=all` — runtime bounds checking
-- `-fopenmp` — OpenMP parallelization support
+- `-O2` or `-O3`: optimization levels
+- `-Wall`: enable warnings
+- `-g`: debug symbols
+- `-fcheck=all`: runtime bounds checking
+- `-fopenmp`: OpenMP parallelization support
 
 Example:
 
@@ -143,11 +143,11 @@ Package management issues often stem from stale caches. Run dnf clean all on Fed
 
 These commands are frequently used alongside the tools discussed in this article:
 
-- systemctl status service-name – Check if a service is running
-- journalctl -u service-name -f – Follow service logs in real time
-- rpm -qi package-name – Query installed package information
-- dnf history – View package transaction history
-- top or htop – Monitor system resource usage
+- systemctl status service-name: Check if a service is running
+- journalctl -u service-name -f: Follow service logs in real time
+- rpm -qi package-name: Query installed package information
+- dnf history: View package transaction history
+- top or htop: Monitor system resource usage
 
 ## Quick Verification
 

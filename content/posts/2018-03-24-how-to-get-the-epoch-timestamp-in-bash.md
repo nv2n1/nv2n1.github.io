@@ -96,7 +96,7 @@ By default, `date +%s` always returns UTC epoch (regardless of your local timezo
 TZ=America/New_York date +%s
 ```
 
-This doesn’t change what epoch represents — it’s always UTC — but it affects how you interpret local time conversions.
+This doesn’t change what epoch represents (it’s always UTC), but it affects how you interpret local time conversions.
 
 ## Performance Considerations
 

@@ -10,7 +10,7 @@ canonical: /how-to-change-an-attachments-parent-post-in-wordpress/
 url: /how-to-change-an-attachments-parent-post-in-wordpress/
 ---
 
-Attachments in WordPress are tied to specific posts through a parent-child relationship stored in the database. This matters more than you’d think — attachment metadata, URLs, and admin filtering all depend on that parent assignment. Sometimes you need to reassign an image or document to a different post, whether because of organizational restructuring, post merging, or just fixing a mess from bulk uploads.
+Attachments in WordPress are tied to specific posts through a parent-child relationship stored in the database. This matters more than you’d think: attachment metadata, URLs, and admin filtering all depend on that parent assignment. Sometimes you need to reassign an image or document to a different post, whether because of organizational restructuring, post merging, or just fixing a mess from bulk uploads.
 
 ## Direct Database Approach
 
@@ -55,21 +55,21 @@ This is idempotent and respects WordPress hooks, making it safer than raw SQL fo
 
 Several plugins provide a UI for this task. They’re worth using if you’re handling occasional reassignments or need to hand this off to less technical team members:
 
-- **Change Media Parent** — adds a simple link in the media library to reassign parent posts
-- **MediaPress** — full media management with parent reassignment among other features
-- **Bulk Media Reassign** — handles batch operations across multiple attachments
+- **Change Media Parent**: adds a simple link in the media library to reassign parent posts
+- **MediaPress**: full media management with parent reassignment among other features
+- **Bulk Media Reassign**: handles batch operations across multiple attachments
 
 Install via the admin dashboard, activate, and look for parent reassignment options in the Media library interface.
 
 ## Important Considerations
 
-**Post type** — Verify you’re reassigning to an actual post. Attachments can technically have pages, custom post types, or even other attachments as parents.
+**Post type**: Verify you’re reassigning to an actual post. Attachments can technically have pages, custom post types, or even other attachments as parents.
 
-**Hooks and plugins** — Using the admin UI or WP-CLI respects WordPress hooks, which matters if you have custom post actions or logging. Raw SQL bypasses these entirely.
+**Hooks and plugins**: Using the admin UI or WP-CLI respects WordPress hooks, which matters if you have custom post actions or logging. Raw SQL bypasses these entirely.
 
-**URLs** — Changing the parent doesn’t automatically update attachment URLs if your site uses date-based or hierarchical structures. Regenerate permalinks if needed: **Settings \> Permalinks \> Save Changes**.
+**URLs**: Changing the parent doesn’t automatically update attachment URLs if your site uses date-based or hierarchical structures. Regenerate permalinks if needed: **Settings \> Permalinks \> Save Changes**.
 
-**Gutenberg blocks** — If you’re using block-based posts, changing parents won’t break existing image blocks, but the attachment’s relationship to the post will be updated in the backend.
+**Gutenberg blocks**: If you’re using block-based posts, changing parents won’t break existing image blocks, but the attachment’s relationship to the post will be updated in the backend.
 
 For one-off changes, use the admin UI or a plugin. For scripted bulk operations or automation, WP-CLI or direct SQL is more efficient. Always test on staging first, especially with raw database queries.
 

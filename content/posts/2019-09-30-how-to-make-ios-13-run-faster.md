@@ -14,7 +14,7 @@ If your iPhone feels sluggish after a major iOS update, you’re running into re
 
 ## Disable Haptic Feedback
 
-Haptic feedback—the vibrations on every touch and gesture—processes continuously and consumes CPU cycles plus battery power. For most users, it’s redundant confirmation that adds latency without real value.
+Haptic feedback (the vibrations on every touch and gesture) processes continuously and consumes CPU cycles plus battery power. For most users, it’s redundant confirmation that adds latency without real value.
 
 **Steps:**
 
@@ -33,7 +33,7 @@ Background App Refresh lets apps pull data when you’re not using them. This di
 1.  Settings → General → Background App Refresh
 2.  Disable globally or toggle off individual apps
 
-**Better approach:** Keep it enabled only for apps that genuinely need it—Mail, Messages, Maps, Weather—and kill it for social media, shopping apps, and games. This granular control maximizes performance while preserving notifications that matter.
+**Better approach:** Keep it enabled only for apps that genuinely need it (Mail, Messages, Maps, Weather) and kill it for social media, shopping apps, and games. This granular control maximizes performance while preserving notifications that matter.
 
 ## Reduce Motion and Transparency Effects
 
@@ -71,7 +71,7 @@ Keep iCloud Keychain and Find My enabled if you use them. Disabling photo librar
 
 ## Turn Off Motion & Fitness Tracking
 
-Continuous motion tracking consumes CPU and battery. This doesn’t break fitness apps—they just won’t run background motion processing.
+Continuous motion tracking consumes CPU and battery. This doesn’t break fitness apps: they just won’t run background motion processing.
 
 **Steps:**
 
@@ -101,7 +101,7 @@ Safe to do regularly if performance degrades. Do this monthly as preventive main
 
 ## Free Up Storage Space
 
-iOS performance tanks when storage is nearly full—the system can’t write temporary files efficiently. Maintain at least 15% free space.
+iOS performance tanks when storage is nearly full: the system can’t write temporary files efficiently. Maintain at least 15% free space.
 
 **Steps:**
 
@@ -116,6 +116,6 @@ Offloading removes the app binary but keeps your data; reinstalling later restor
 
 Most users see 15–25% improvement in app responsiveness after disabling haptics and background refresh. Battery life typically extends 5–10% depending on which apps were refreshing in the background.
 
-The trade-off: reduced notification freshness and loss of haptic feedback. Choose based on your actual needs, not default settings. iOS optimization is about priorities—keep features that matter to your workflow, disable everything else.
+The trade-off: reduced notification freshness and loss of haptic feedback. Choose based on your actual needs, not default settings. iOS optimization is about priorities: keep features that matter to your workflow, disable everything else.
 
 Test changes one at a time and revert anything that breaks your experience. Results vary significantly by device age, app count, and usage patterns. A cluttered iPhone with many background processes will see more dramatic improvement than a fresh device.

@@ -20,7 +20,7 @@ Consider renaming files by appending `.bak` to each filename. You might try:
 echo "myfile.txt" | xargs mv {} {}.bak
 ```
 
-This fails because `xargs` doesn’t expand `{}` — it’s just literal text. The `mv` command receives `myfile.txt {} {}.bak`, which isn’t valid syntax.
+This fails because `xargs` doesn’t expand `{}`: it’s just literal text. The `mv` command receives `myfile.txt {} {}.bak`, which isn’t valid syntax.
 
 ## Solution: Use -I with a Placeholder
 

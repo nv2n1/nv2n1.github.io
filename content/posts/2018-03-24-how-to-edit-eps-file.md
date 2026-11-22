@@ -87,7 +87,7 @@ This only makes sense if you’re comfortable with PostScript syntax and need to
 - **Always keep backups** of original EPS files before editing
 - **Test exports** thoroughly, especially if the EPS contains embedded fonts or will be printed
 - **For papers**, validate that your edited EPS renders correctly in your PDF compiler (pdflatex, xelatex, etc.)
-- **If the EPS came from matplotlib or R**, consider regenerating it from the source code instead of editing the file directly — it’s often faster and more reproducible
+- **If the EPS came from matplotlib or R**, consider regenerating it from the source code instead of editing the file directly: it’s often faster and more reproducible
 
 ## Troubleshooting Import Issues
 

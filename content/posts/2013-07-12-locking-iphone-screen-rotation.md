@@ -17,7 +17,7 @@ iPhone’s automatic screen rotation is useful most of the time, but it gets ann
 The fastest way to lock screen rotation on any modern iPhone:
 
 1.  Swipe down from the top-right corner (Face ID) or up from the bottom (Touch ID) to open Control Center
-2.  Find the Portrait Orientation Lock icon—a lock with a circular arrow
+2.  Find the Portrait Orientation Lock icon: a lock with a circular arrow
 3.  Tap it to enable; the icon highlights when active
 
 When active, your display stays in portrait mode regardless of device rotation. Tap again to restore automatic rotation.
@@ -26,11 +26,11 @@ The lock applies device-wide, not per-app. Some apps like video players and game
 
 ## For Older iOS Versions
 
-If you’re still on iOS 11-15, the process is identical—swipe for Control Center and tap the orientation lock icon. Versions before iOS 11 accessed it differently through the app switcher, but these are out of support and should be upgraded.
+If you’re still on iOS 11-15, the process is identical: swipe for Control Center and tap the orientation lock icon. Versions before iOS 11 accessed it differently through the app switcher, but these are out of support and should be upgraded.
 
 ## App-Specific Orientation Control
 
-If you want finer control than a global lock, some apps let you configure orientation preferences in their own settings. Check the app’s settings menu—this is more reliable than relying on accessibility features for app-specific behavior.
+If you want finer control than a global lock, some apps let you configure orientation preferences in their own settings. Check the app’s settings menu: this is more reliable than relying on accessibility features for app-specific behavior.
 
 Go to **Settings \> Accessibility \> Display & Text Size** if you want to adjust motion-related settings that might affect how apps handle rotation, though this is more about reducing animation than orientation control itself.
 
@@ -44,7 +44,7 @@ Go to **Settings \> Accessibility \> Display & Text Size** if you want to adjust
 
 **The orientation still changes despite enabling the lock:**
 
-- Some full-screen apps genuinely override this setting—it’s by design. Games and video players are common examples
+- Some full-screen apps genuinely override this setting: it’s by design. Games and video players are common examples
 - Check if you enabled the lock correctly; the icon should remain highlighted in Control Center
 - Verify you’re tapping the Portrait Orientation Lock icon, not another Control Center button
 
@@ -62,7 +62,7 @@ Go to **Settings \> Accessibility \> Display & Text Size** if you want to adjust
 - Apps with poor landscape UI
 - Preventing accidental rotation during specific tasks
 
-If you find yourself toggling it frequently, consider whether an app’s own settings offer per-app orientation control instead—many modern apps include this directly rather than relying on the system-wide lock.
+If you find yourself toggling it frequently, consider whether an app’s own settings offer per-app orientation control instead: many modern apps include this directly rather than relying on the system-wide lock.
 
 ## 2026 Comprehensive Guide: Best Practices
 

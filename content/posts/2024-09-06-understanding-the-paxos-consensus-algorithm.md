@@ -53,7 +53,7 @@ When a quorum accepts, the value is chosen. Learners are notified asynchronously
 - These two quorums overlap (that’s the math behind requiring a majority)
 - The overlapping node will force round N+1 to use the value from round N
 
-**Liveness**: Progress happens as long as a stable quorum can communicate. If two proposers keep increasing proposal numbers, neither makes progress—this is why leader election matters in practice.
+**Liveness**: Progress happens as long as a stable quorum can communicate. If two proposers keep increasing proposal numbers, neither makes progress: this is why leader election matters in practice.
 
 ## The Complexity Problem
 
@@ -79,7 +79,7 @@ The algorithm is sound, but the engineering is error-prone. Many production syst
 
 Google Chubby (distributed lock service) uses a Paxos variant for replicating the lock state across data centers.
 
-Etcd, widely used for Kubernetes coordination, implements Raft instead—a consensus algorithm explicitly designed to be more understandable than Paxos while maintaining similar properties.
+Etcd, widely used for Kubernetes coordination, implements Raft instead: a consensus algorithm explicitly designed to be more understandable than Paxos while maintaining similar properties.
 
 CockroachDB uses a Paxos-inspired approach for range consensus to replicate database state.
 
@@ -95,4 +95,4 @@ Paxos (or a variant) makes sense if you need:
 
 If you can tolerate eventual consistency, simpler replication (like gossip or primary-backup) is more practical. If you need Byzantine fault tolerance (malicious nodes), use algorithms like PBFT or Tendermint instead.
 
-For new systems, seriously consider Raft first—it’s easier to understand, implement, and debug. Paxos remains valuable for understanding distributed consensus theory and for inheriting systems built on it.
+For new systems, seriously consider Raft first: it’s easier to understand, implement, and debug. Paxos remains valuable for understanding distributed consensus theory and for inheriting systems built on it.

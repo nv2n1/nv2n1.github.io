@@ -26,8 +26,8 @@ The issue stems from how Bash interprets command separators. The `&` and `;` cha
 
 When Bash encounters `&;`, it interprets this as:
 
-1.  `&` — run the previous command in the background
-2.  `;` — terminate the current command and start a new one
+1.  `&`: run the previous command in the background
+2.  `;`: terminate the current command and start a new one
 
 However, the semicolon expects a command to follow it. Since there’s nothing between `&` and the next command, Bash tries to execute an empty command, which is invalid syntax.
 
@@ -71,16 +71,16 @@ ssh host1 hostname & ssh host2 hostname; wait
 { ssh host1 hostname; ssh host2 hostname; } &
 ```
 
-The `wait` command is useful when backgrounding multiple commands — it pauses until all background processes complete.
+The `wait` command is useful when backgrounding multiple commands: it pauses until all background processes complete.
 
 ## When You Might Confuse Separators
 
 The confusion often arises when mixing foreground and background commands. Here are the key differences:
 
-- `command1 & command2` — runs command1 in background, command2 in foreground
-- `command1; command2` — runs both in foreground, sequentially
-- `command1 && command2` — runs command2 only if command1 succeeds
-- `command1 || command2` — runs command2 only if command1 fails
+- `command1 & command2`: runs command1 in background, command2 in foreground
+- `command1; command2`: runs both in foreground, sequentially
+- `command1 && command2`: runs command2 only if command1 succeeds
+- `command1 || command2`: runs command2 only if command1 fails
 
 Never put both `&` and `;` together expecting Bash to understand your intent. The shell will always interpret `&;` as “background operator followed by empty command,” which is a syntax error.
 

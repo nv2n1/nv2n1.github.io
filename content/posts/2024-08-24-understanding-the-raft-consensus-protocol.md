@@ -16,21 +16,21 @@ Raft is a consensus algorithm designed to be more understandable than alternativ
 
 Raft splits consensus into three areas:
 
-**Leader Election** — Exactly one leader exists per term. If the leader fails or becomes unreachable, the cluster elects a replacement.
+**Leader Election**: Exactly one leader exists per term. If the leader fails or becomes unreachable, the cluster elects a replacement.
 
-**Log Replication** — The leader accepts client commands, appends them to its log, and replicates entries across followers. All committed entries eventually exist on all nodes.
+**Log Replication**: The leader accepts client commands, appends them to its log, and replicates entries across followers. All committed entries eventually exist on all nodes.
 
-**Safety** — Logs remain consistent across nodes despite failures. Uncommitted entries may be lost, but committed entries are never lost or overwritten.
+**Safety**: Logs remain consistent across nodes despite failures. Uncommitted entries may be lost, but committed entries are never lost or overwritten.
 
 ## Node Roles
 
 Every Raft node is in exactly one of three states:
 
-**Leader** — Accepts client requests, replicates log entries, sends periodic heartbeats. There’s one leader per term.
+**Leader**: Accepts client requests, replicates log entries, sends periodic heartbeats. There’s one leader per term.
 
-**Follower** — Receives AppendEntries RPCs from the leader and RequestVote RPCs from candidates. Followers are passive—they don’t initiate communication.
+**Follower**: Receives AppendEntries RPCs from the leader and RequestVote RPCs from candidates. Followers are passive: they don’t initiate communication.
 
-**Candidate** — A follower that initiates an election. It increments the term, votes for itself, and requests votes from peers.
+**Candidate**: A follower that initiates an election. It increments the term, votes for itself, and requests votes from peers.
 
 ## Leader Election
 
@@ -47,7 +47,7 @@ A node grants its vote to the first candidate requesting it within a term. It de
 
 A candidate wins the election by receiving votes from a majority of the cluster. On winning, it becomes the leader and sends heartbeat AppendEntries RPCs to all followers to suppress further elections.
 
-If the candidate doesn’t win (split vote), it waits for a new election timeout and tries again. The randomized timeouts prevent repeated splits—statistically, one candidate will timeout first and win before others can start an election.
+If the candidate doesn’t win (split vote), it waits for a new election timeout and tries again. The randomized timeouts prevent repeated splits: statistically, one candidate will timeout first and win before others can start an election.
 
 ## Log Replication
 
@@ -66,19 +66,19 @@ If a follower is slow or crashes, the leader retries AppendEntries indefinitely 
 
 Raft maintains consistency through several mechanisms:
 
-**Term Numbers** — Each term is uniquely numbered and monotonically increases. A node always uses the highest term it has seen. If a candidate or leader receives a higher term from any peer, it immediately becomes a follower. This prevents old leaders from committing entries.
+**Term Numbers**: Each term is uniquely numbered and monotonically increases. A node always uses the highest term it has seen. If a candidate or leader receives a higher term from any peer, it immediately becomes a follower. This prevents old leaders from committing entries.
 
-**Log Matching Property** — If two log entries exist with the same index and term on different servers, they are identical, and all entries before them are identical.
+**Log Matching Property**: If two log entries exist with the same index and term on different servers, they are identical, and all entries before them are identical.
 
-**Leader Completeness** — A newly elected leader is guaranteed to contain all entries committed in previous terms. This is enforced by vote restrictions—a candidate only wins if its log is at least as up-to-date as a majority of voters.
+**Leader Completeness**: A newly elected leader is guaranteed to contain all entries committed in previous terms. This is enforced by vote restrictions: a candidate only wins if its log is at least as up-to-date as a majority of voters.
 
 ## Failure Scenarios
 
-**Follower Failure** — If a follower crashes, the leader detects this when AppendEntries RPCs fail. The leader continues operating as long as a majority remains healthy. When the follower recovers, the leader replicates missing entries to bring it up-to-date.
+**Follower Failure**: If a follower crashes, the leader detects this when AppendEntries RPCs fail. The leader continues operating as long as a majority remains healthy. When the follower recovers, the leader replicates missing entries to bring it up-to-date.
 
-**Leader Failure** — If the leader crashes, followers detect this via missing heartbeats. After an election timeout, one follower becomes a candidate and starts an election. The cluster elects a new leader and continues. Uncommitted entries from the old leader may be lost, but committed entries are preserved—the new leader contains all committed entries by the Leader Completeness property.
+**Leader Failure**: If the leader crashes, followers detect this via missing heartbeats. After an election timeout, one follower becomes a candidate and starts an election. The cluster elects a new leader and continues. Uncommitted entries from the old leader may be lost, but committed entries are preserved: the new leader contains all committed entries by the Leader Completeness property.
 
-**Network Partition** — Raft handles arbitrary network delays and message loss. Only the partition containing a majority of nodes can elect a leader. The minority partition cannot commit new entries (its leader candidates fail to achieve majority votes). When the partition heals, the minority partition catches up. This sacrifices availability in the minority partition to ensure consistency.
+**Network Partition**: Raft handles arbitrary network delays and message loss. Only the partition containing a majority of nodes can elect a leader. The minority partition cannot commit new entries (its leader candidates fail to achieve majority votes). When the partition heals, the minority partition catches up. This sacrifices availability in the minority partition to ensure consistency.
 
 ## Practical Considerations
 
@@ -86,7 +86,7 @@ Raft is widely used in systems like etcd, Consul, and LiteFS. When implementing 
 
 - Election timeouts directly impact recovery time but must be high enough to avoid spurious elections on slow networks. 150-300ms is common for LAN deployments; adjust for higher latency networks.
 - Batch AppendEntries RPCs to reduce network load and improve throughput.
-- Persist term and vote state to disk before responding to RPCs—this ensures safety across restarts.
+- Persist term and vote state to disk before responding to RPCs: this ensures safety across restarts.
 - The state machine applies committed entries sequentially. If your application requires strong linearizability, apply entries in order and use request deduplication to handle retries.
 - Monitor leader election frequency and log replication lag. High election rates indicate timeout mistuning.
 

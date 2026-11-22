@@ -37,7 +37,7 @@ Edit `/etc/sysconfig/nfs` and add these assignments:
     MOUNTD_PORT=892
     STATD_PORT=662
 
-These port numbers follow IANA conventions and avoid conflicts with standard services. Ensure no spaces surround the equals signs—the parser is strict about whitespace.
+These port numbers follow IANA conventions and avoid conflicts with standard services. Ensure no spaces surround the equals signs: the parser is strict about whitespace.
 
 ### Debian/Ubuntu Systems
 

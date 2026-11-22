@@ -155,7 +155,7 @@ Recording a specific window (not the whole screen) works well with GNOME built-i
 
 **Permissions**
 
-GNOME handles permissions automatically. Flatpak apps (including Kooha) may prompt for screen casting permissions on first use—grant them.
+GNOME handles permissions automatically. Flatpak apps (including Kooha) may prompt for screen casting permissions on first use: grant them.
 
 ## Choosing the Right Tool
 

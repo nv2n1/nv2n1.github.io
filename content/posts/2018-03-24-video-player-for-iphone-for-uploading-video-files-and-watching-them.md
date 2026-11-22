@@ -45,7 +45,7 @@ Not all codecs work smoothly on iOS. If videos won’t play, transcode to H.264 
 ffmpeg -i input.mkv -c:v libx264 -preset medium -crf 23 -c:a aac -b:a 128k output.mp4
 ```
 
-The `-crf` value controls quality (18-20 for high quality, 26-28 for smaller files; 23 is middle ground). `-preset medium` balances speed and compression—use `fast` if you’re in a hurry or `slow` for maximum compression.
+The `-crf` value controls quality (18-20 for high quality, 26-28 for smaller files; 23 is middle ground). `-preset medium` balances speed and compression: use `fast` if you’re in a hurry or `slow` for maximum compression.
 
 **Batch convert a directory:**
 

@@ -48,7 +48,7 @@ bash -xn script.sh
 bash -v script.sh
 ```
 
-Use this when `-x` output is too verbose—it shows the raw script lines instead of expanded commands.
+Use this when `-x` output is too verbose: it shows the raw script lines instead of expanded commands.
 
 ## Static Analysis with ShellCheck
 
@@ -143,7 +143,7 @@ bash -x script.sh 2>&1 | grep -E '^\+' | head -20
 
 The latter filters for just the trace lines (prefixed with `+` by default).
 
-Combining these approaches—static checks, targeted tracing, and interactive debugging—covers most debugging scenarios without needing external tools beyond ShellCheck.
+Combining these approaches (static checks, targeted tracing, and interactive debugging) covers most debugging scenarios without needing external tools beyond ShellCheck.
 
 ## 2026 Comprehensive Guide: Best Practices
 

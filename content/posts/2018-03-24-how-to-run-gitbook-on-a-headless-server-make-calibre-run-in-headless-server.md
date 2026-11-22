@@ -59,7 +59,7 @@ ebook-convert --version
 
 ## Why this works better than patching GitBook directly
 
-GitBook (or any other tool) has no idea it’s using a wrapper — it just calls `ebook-convert` normally. When you upgrade GitBook, your changes persist because you’re not modifying the application itself. The wrapper is transparent to all callers.
+GitBook (or any other tool) has no idea it’s using a wrapper: it just calls `ebook-convert` normally. When you upgrade GitBook, your changes persist because you’re not modifying the application itself. The wrapper is transparent to all callers.
 
 ## For containerized deployments
 

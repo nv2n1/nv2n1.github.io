@@ -58,7 +58,7 @@ You can also use the numeric index (starting from 0):
 
     GRUB_DEFAULT=0
 
-Using the entry name is more reliable — numeric indices can shift if you add or remove boot entries.
+Using the entry name is more reliable: numeric indices can shift if you add or remove boot entries.
 
 After editing, regenerate the GRUB2 configuration:
 
@@ -143,7 +143,7 @@ Older systems using legacy GRUB (rarely encountered now) store settings in `/boo
         root (hd0,0)
         kernel /vmlinuz
 
-The `default=0` means boot the first entry. Edit this file directly and don’t regenerate — legacy GRUB doesn’t use mkconfig.
+The `default=0` means boot the first entry. Edit this file directly and don’t regenerate: legacy GRUB doesn’t use mkconfig.
 
 ## 2026 Best Practices and Advanced Techniques
 
