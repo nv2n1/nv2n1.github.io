@@ -11,9 +11,6 @@ The site started in 2010 as a WordPress blog and was recently migrated to
 a static site (Hugo + GitHub Pages), developed in the open at
 [github.com/nv2n1/nv2n1.github.io](https://github.com/nv2n1/nv2n1.github.io).
 
-To leave comments or report issues, please create a PR or report an issue
-at [github.com/nv2n1/nv2n1.github.io](https://github.com/nv2n1/nv2n1.github.io).
-
 ## Topics Covered
 
 - **Linux & Unix**: System administration, shell scripting, kernel, distributions
