@@ -3,18 +3,23 @@
   <header class="post-header">
     {{ $cat := "" }}{{ with .Params.categories }}{{ $cat = index . 0 }}{{ end }}
     {{ $topic := index .Site.Data.topics.categories $cat }}
-    {{ if $topic }}
-    {{ $pathMeta := "" }}
-    {{ with $topic.path }}{{ $pathMeta = index $.Site.Data.topics.paths . }}{{ end }}
-    {{ $academyRef := $topic.academy }}
-    {{ with $pathMeta }}{{ $academyRef = .academy }}{{ end }}
-    {{ $academyMeta := index $.Site.Data.topics.academies $academyRef }}
     <nav class="crumbs">
+      {{ if $topic }}
+      {{ $pathMeta := "" }}
+      {{ with $topic.path }}{{ $pathMeta = index $.Site.Data.topics.paths . }}{{ end }}
+      {{ $academyRef := $topic.academy }}
+      {{ with $pathMeta }}{{ $academyRef = .academy }}{{ end }}
+      {{ $academyMeta := index $.Site.Data.topics.academies $academyRef }}
       <a href="{{ $academyMeta.url }}">{{ $academyMeta.title }}</a>
       {{ with $pathMeta }} &rsaquo; <a href="{{ .url }}">{{ .title }}</a>{{ end }}
       &rsaquo; <a href="/category/{{ $cat }}/">{{ $topic.title }}</a>
+      {{ else }}
+      {{/* Category not mapped in data/topics.yml: fall back to
+           All Posts &rsaquo; Category so the breadcrumb never disappears */}}
+      <a href="/">All Posts</a>
+      {{ with $cat }} &rsaquo; <a href="/category/{{ . }}/">{{ . | humanize }}</a>{{ end }}
+      {{ end }}
     </nav>
-    {{ end }}
     <h1>{{ .Title }}</h1>
     <time class="post-date" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date | time.Format "January 2, 2006" }}</time>{{ with .Params.author }}{{ $slug := "" }}{{ with $.Params.authors }}{{ $slug = index . 0 }}{{ end }} <span class="post-author">&middot; {{ if $slug }}<a href="/author/{{ $slug }}/">{{ . }}</a>{{ else }}{{ . }}{{ end }} and Community</span>{{ end }}{{ with .Params.modified }}{{ $pd := $.Date.Format "2006-01-02" }}{{ $md := (time .).Format "2006-01-02" }}{{ if ne $md $pd }} <span class="post-updated">&middot; updated {{ (time .) | time.Format "January 2, 2006" }}</span>{{ end }}{{ end }}
   </header>
